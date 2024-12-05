@@ -2,24 +2,28 @@
 title: Stimuleer soorten publiek met SQL
 description: Leer hoe u de SQL-publieksextensie in Adobe Experience Platform Data Distiller kunt gebruiken voor het maken, beheren en publiceren van soorten publiek met SQL-opdrachten. In deze handleiding worden alle aspecten van de levenscyclus van de doelgroep behandeld, zoals het maken, bijwerken en verwijderen van profielen en het gebruik van gegevensgestuurde publieksdefinities voor doelbestemmingen op basis van bestanden.
 exl-id: c35757c1-898e-4d65-aeca-4f7113173473
-source-git-commit: cce576c00823a0c02e4b639f0888a466a5af6a0c
+source-git-commit: 7db055f598e3fa7d5a50214a0cfa86e28e5bfe47
 workflow-type: tm+mt
-source-wordcount: '1163'
+source-wordcount: '1479'
 ht-degree: 0%
 
 ---
 
-# Stimuleer soorten publiek met SQL
+# Stimuleer publiek met SQL
 
-In dit document wordt beschreven hoe u de SQL-publieksextensie in Adobe Experience Platform Data Distiller kunt gebruiken voor het maken, beheren en publiceren van soorten publiek met SQL-opdrachten.
+Gebruik de SQL publieksuitbreiding om publiek met gegevens van het gegevensmeer, met inbegrip van om het even welke bestaande afmetingsentiteiten (zoals klantenattributen of productinformatie) te bouwen.
 
-Gebruik de SQL publieksuitbreiding om publiek met gegevens van het gegevensmeer, met inbegrip van om het even welke bestaande afmetingsentiteiten te bouwen. Met deze extensie kunt u publiekssegmenten rechtstreeks met SQL definiëren, zodat u over flexibiliteit beschikt zonder dat u onbewerkte gegevens in uw profielen nodig hebt. Het publiek dat met deze methode wordt gecreeerd wordt automatisch geregistreerd in de werkruimte van het Publiek, waar u hen aan op dossier-gebaseerde bestemmingen kunt verder richten.
+Het gebruik van deze SQL-extensie verbetert de mogelijkheid om een publiek te maken omdat u geen onbewerkte gegevens in uw profielen nodig hebt wanneer u publiekssegmenten definieert. Het publiek dat met deze methode wordt gecreeerd wordt automatisch geregistreerd in de werkruimte van het Publiek, waar u hen aan op dossier-gebaseerde bestemmingen kunt verder richten.
 
 ![ Infographic die het SQL werkschema van de publieksuitbreiding tonen. De stadia omvatten; het bouwen van publiek met de Dienst van de Vraag die SQL bevelen gebruiken, die hen in Platform UI beheren, om hen in op dossier-gebaseerde bestemmingen te activeren.](../images/data-distiller/sql-audiences/sql-audience-extension-workflow.png)
 
+In dit document wordt beschreven hoe u de SQL-publieksextensie in Adobe Experience Platform Data Distiller kunt gebruiken voor het maken, beheren en publiceren van soorten publiek met SQL-opdrachten.
+
 ## Levenscyclus voor het maken van publiek in Data Distiller {#audience-creation-lifecycle}
 
-Voer de volgende stappen uit om uw publiek effectief te beheren. Gemaakt publiek integreert naadloos in de publieksstroom, waardoor u segmenten van deze basispubliek en doelbestandsgebaseerde doelen voor klantgerichtheid kunt bouwen. Gebruik de volgende SQL bevelen om ](#create-audience) tot stand te brengen [ ](#add-profiles-to-audience) wijzigen, en [ schrappen ](#delete-audience) publiek binnen Adobe Experience Platform.[
+Voer de volgende stappen uit om uw publiek te maken, te beheren en te activeren. Gemaakt publiek integreert naadloos in de &#39;publieksstroom&#39;, zodat u segmenten kunt maken van het basispubliek en doelbestandsgebaseerde doelen (bijvoorbeeld CSV-uploads of cloudopslaglocaties) voor klantenservice. De &quot;stroom van het publiek&quot;verwijst naar het volledige proces om, publiek tot stand te brengen te leiden en te activeren, die naadloze integratie over bestemmingen verzekeren.
+
+Als deel van uw &quot;publieksstroom,&quot;gebruik de volgende SQL bevelen om ](#create-audience) tot stand te brengen, [ wijzigen ](#add-profiles-to-audience), en [ schrapt ](#delete-audience) publiek binnen Adobe Experience Platform.[
 
 ### Een publiek maken {#create-audience}
 
@@ -27,7 +31,7 @@ Gebruik de opdracht `CREATE AUDIENCE AS SELECT` om een nieuw publiek te definië
 
 ```sql
 CREATE AUDIENCE table_name  
-WITH (primary_identity='IdentitycolName', identity_namespace='Namespace for the identity used', [schema='target_schema_title']) 
+WITH (primary_identity='IdentitycolName', identity_namespace='Namespace for the identity used', [schema='target_schema_title'])
 AS (select_query)
 ```
 
@@ -40,35 +44,40 @@ Gebruik deze parameters om uw SQL vraag van de publieksverwezenlijking te bepale
 | `schema` | Optioneel. Bepaalt het schema XDM voor de dataset die door de vraag wordt gecreeerd. |
 | `table_name` | Naam van de tabel en het publiek. |
 | `primary_identity` | Hiermee geeft u de primaire identiteitskolom voor het publiek op. |
-| `identity_namespace` | Naamruimte van de identiteit. |
+| `identity_namespace` | Naamruimte van de identiteit. U kunt een bestaande naamruimte gebruiken of een nieuwe naamruimte maken. Gebruik de opdracht `SHOW NAMESPACE` om beschikbare naamruimten weer te geven. Gebruik `CREATE NAMESPACE` om een nieuwe naamruimte te maken. Bijvoorbeeld: `CREATE NAMESPACE lumaCrmId WITH (code='testns', TYPE='Email')` . |
 | `select_query` | Een SELECT-instructie die het publiek definieert. De syntaxis van de UITGEZOCHTE vraag kan in de [ UITGEZOCHTE vragen ](../sql/syntax.md#select-queries) sectie worden gevonden. |
 
 {style="table-layout:auto"}
+
+>[!NOTE]
+>
+>Om complexe gegevensstructuren flexibeler te maken, kunt u verrijkte kenmerken nesten bij het definiëren van soorten publiek. Verrijkte kenmerken, zoals `orders` , `total_revenue` , `recency` , `frequency` en `monetization` , kunnen zo nodig worden gebruikt om het publiek te filteren.
 
 **Voorbeeld:**
 
 In het volgende voorbeeld wordt getoond hoe u de query voor het maken van uw SQL-publiek kunt structureren:
 
 ```sql
-CREATE Audience aud_test 
-WITH (primary_identity=month, identity_namespace=queryService) 
-AS SELECT month FROM profile_dim_date LIMIT 5;
+CREATE Audience aud_test
+WITH (primary_identity=userId, identity_namespace=lumaCrmId)
+AS SELECT userId, orders, total_revenue, recency, frequency, monetization FROM profile_dim_customer;
 ```
+
+In dit voorbeeld wordt de kolom `userId` geïdentificeerd als de identiteitskolom, en een aangewezen namespace (`lumaCrmId`) wordt toegewezen. De resterende kolommen (`orders`, `total_revenue`, `recency`, `frequency` en `monetization`) zijn verrijkte kenmerken die extra context voor het publiek bieden.
 
 **Beperkingen:**
 
 Houd rekening met de volgende beperkingen wanneer u SQL gebruikt voor het maken van publiek:
 
-- De primaire identiteitskolom **moet** op het wortelniveau zijn.
-- De nieuwe partijen beschrijven bestaande datasets; toevoegt functionaliteit is momenteel niet gesteund.
-- Geneste kenmerken worden momenteel niet ondersteund.
+- De primaire identiteitskolom **moet** op het hoogste niveau van de dataset zijn, zonder wordt genesteld binnen andere attributen of categorieën.
+- Het externe publiek dat met SQL-opdrachten wordt gemaakt, heeft een retentieperiode van 30 dagen. Na 30 dagen worden deze doelgroepen automatisch verwijderd. Dit is een belangrijke overweging bij het plannen van strategieën voor het beheer van het publiek.
 
 ### Profielen toevoegen aan een bestaand publiek {#add-profiles-to-audience}
 
-Gebruik de opdracht `INSERT INTO` om profielen toe te voegen aan een bestaand publiek.
+Gebruik de opdracht `INSERT INTO` om profielen (of volledige doelgroepen) toe te voegen aan een bestaand publiek.
 
 ```sql
-INSERT INTO table_name 
+INSERT INTO table_name
 SELECT select_query
 ```
 
@@ -88,8 +97,80 @@ In de volgende tabel worden de parameters beschreven die voor de opdracht `INSER
 In het volgende voorbeeld wordt getoond hoe u profielen aan een bestaand publiek kunt toevoegen met de opdracht `INSERT INTO` :
 
 ```sql
-INSERT INTO Audience aud_test 
-SELECT month FROM profile_dim_date LIMIT 10;
+INSERT INTO Audience aud_test
+SELECT userId, orders, total_revenue, recency, frequency, monetization FROM customer_ds;
+```
+
+### Voorbeeld van publiek van RFM-model {#rfm-model-audience-example}
+
+In het volgende voorbeeld ziet u hoe u een publiek maakt met behulp van het model Recency, Frequency en Monetization (RFM). Dit voorbeeld segmenteert klanten die op hun recentie, frequentie, en monetisatiescores worden gebaseerd om zeer belangrijke groepen, zoals loyale klanten, nieuwe klanten, en high-value klanten te identificeren.
+
+<!--  Q) Since the focus of this document is on external audiences, or should I just include this temporarily? We could simply provide a link to the separate RFM modeling documentation rather than including the full example here. (Add link to new RFM document when it is published) -->
+
+Met de volgende query wordt een schema voor het RFM-publiek gemaakt. De instructie stelt velden zo in dat deze klantgegevens bevatten, zoals `userId` , `days_since_last_purchase` , `orders` , `total_revenue` , enzovoort.
+
+```sql
+CREATE Audience adls_rfm_profile
+WITH (primary_identity=userId, identity_namespace=lumaCrmId) AS
+SELECT
+    cast(NULL AS string) userId,
+    cast(NULL AS integer) days_since_last_purchase,
+    cast(NULL AS integer) orders,
+    cast(NULL AS decimal(18,2)) total_revenue,
+    cast(NULL AS integer) recency,
+    cast(NULL AS integer) frequency,
+    cast(NULL AS integer) monetization,
+    cast(NULL AS string) rfm_model
+WHERE false;
+```
+
+Nadat u het publiek hebt gemaakt, vult u het met klantgegevens en segmenteert u de profielen op basis van hun RFM-scores. De SQL-instructie hieronder gebruikt de functie `NTILE(4)` om klanten te rangschikken in kwartielen op basis van hun RFM-scores (Recency, Frequency, Monetization). Deze scores categoriseren klanten in zes segmenten, zoals &#39;Kern,&#39; &#39;Koninklijk&#39; en &#39;Walvissen&#39;. De gesegmenteerde klantgegevens worden dan opgenomen in de publiekstabel `adls_rfm_profile`.&quot;
+
+```sql
+INSERT INTO Audience adls_rfm_profile
+SELECT
+    userId,
+    days_since_last_purchase,
+    orders,
+    total_revenue,
+    recency,
+    frequency,
+    monetization,
+    CASE
+        WHEN Recency=1 AND Frequency=1 AND Monetization=1 THEN '1. Core - Your Best Customers'
+        WHEN Recency IN(1,2,3,4) AND Frequency=1 AND Monetization IN (1,2,3,4) THEN '2. Loyal - Your Most Loyal Customers'
+        WHEN Recency IN(1,2,3,4) AND Frequency IN (1,2,3,4) AND Monetization=1 THEN '3. Whales - Your Highest Paying Customers'
+        WHEN Recency IN(1,2,3,4) AND Frequency IN(1,2,3) AND Monetization IN(2,3,4) THEN '4. Promising - Faithful Customers'
+        WHEN Recency=1 AND Frequency=4 AND Monetization IN (1,2,3,4) THEN '5. Rookies - Your Newest Customers'
+        WHEN Recency IN (2,3,4) AND Frequency=4 AND Monetization IN (1,2,3,4) THEN '6. Slipping - Once Loyal, Now Gone'
+    END AS rfm_model
+FROM (
+    SELECT
+        userId,
+        days_since_last_purchase,
+        orders,
+        total_revenue,
+        NTILE(4) OVER (ORDER BY days_since_last_purchase) AS recency,
+        NTILE(4) OVER (ORDER BY orders DESC) AS frequency,
+        NTILE(4) OVER (ORDER BY total_revenue DESC) AS monetization
+    FROM (
+        SELECT
+            userid,
+            DATEDIFF(current_date, MAX(purchase_date)) AS days_since_last_purchase,
+            COUNT(purchaseid) AS orders,
+            CAST(SUM(total_revenue) AS double) AS total_revenue
+        FROM (
+            SELECT DISTINCT
+                ENDUSERIDS._EXPERIENCE.EMAILID.ID AS userid,
+                commerce.`ORDER`.purchaseid AS purchaseid,
+                commerce.`ORDER`.pricetotal AS total_revenue,
+                TO_DATE(timestamp) AS purchase_date
+            FROM sample_data_for_ootb_templates
+            WHERE commerce.`ORDER`.purchaseid IS NOT NULL
+        ) AS b
+        GROUP BY userId
+    )
+);
 ```
 
 ### Een publiek verwijderen (DROP-PUBLIEK) {#delete-audience}
@@ -120,9 +201,11 @@ In het volgende voorbeeld ziet u hoe u een publiek verwijdert met de opdracht DR
 DROP AUDIENCE IF EXISTS aud_test;
 ```
 
-### Soorten publiek automatisch publiceren {#auto-publish-audiences}
+### Automatische publieksregistratie en beschikbaarheid {#registration-and-availability}
 
-Soorten publiek dat met de SQL-extensie is gemaakt, registreren zich automatisch onder Data Distiller in de werkruimte Publiek. Zodra geregistreerd, zijn deze publiek beschikbaar voor het richten en kunnen in op dossier-gebaseerde bestemmingen worden gebruikt, die uw segmentatie en het richten van strategieën verbeteren.
+Soorten publiek dat is gemaakt met de SQL-extensie, worden automatisch geregistreerd onder de Data Distiller [!UICONTROL Origin] in de werkruimte Publiek. Zodra geregistreerd, zijn deze publiek beschikbaar voor het richten in op dossier-gebaseerde bestemmingen, die segmentatie en het richten strategieën verbeteren. Dit proces vereist geen extra configuratie, die publieksbeheer stroomlijnt. Voor meer details op hoe te om, publiek binnen het Platform UI te bekijken te beheren en tot stand te brengen, zie het [ Poortoverzicht van het Poort van het Publiek ](../../segmentation/ui/audience-portal.md).
+
+<!-- Q) Do you know how long it takes for the audience to register? This info would help manage user expectations. -->
 
 ![ de werkruimte van het Publiek in Adobe Experience Platform, die het publiek van Distiller van Gegevens toont automatisch gepubliceerd en klaar voor gebruik.](../images/data-distiller/sql-audiences/audiences.png)
 
@@ -190,7 +273,7 @@ Ja, u kunt een publiek van publiek tot stand brengen dat een publiek van Gegeven
 
 +++Antwoord
 
-Het publiek van de gegevensdistilleerder is momenteel niet beschikbaar in Adobe Journey Optimizer. U moet een nieuw publiek maken in de Adobe Journey Optimizer-ontwikkelaar voor regels die beschikbaar zijn in Adobe Journey Optimizer.
+Distiller-doelgroepen voor gegevens zijn ook beschikbaar in Adobe Journey Optimizer. U kunt het publiek van Gegevens Distiller in Adobe Journey Optimizer gebruiken en de resultaten filtreren die op de verrijkte attributen worden gebaseerd.
 
 +++
 
@@ -211,3 +294,4 @@ Vervolgens kunt u de volgende documentatie lezen om uw publieksbeheerstrategieë
 - **Onderzoek de Evaluatie van het publiek**: Leer over de [ methodes van de publieksevaluatie in Adobe Experience Platform ](../../segmentation/home.md#evaluate-segments): het stromen segmentatie voor updates in real time, partijsegmentatie voor geplande of verwerking op bestelling, en randsegmentatie voor onmiddellijke evaluatie op de Edge Network.
 - **integreer met Doelen**: Lees de gids op hoe te [ dossiers op bestelling uitvoeren aan partijbestemmingen ](../../destinations/ui/export-file-now.md) gebruikend de Doelen UI van het Platform.
 - **Prestaties van het publiek van het Overzicht**: Analyseer hoe uw SQL-bepaald publiek over verschillende kanalen presteert. Gebruik gegevensinzichten om uw publieksdefinities en doelstrategieën aan te passen en te verbeteren. Lees het document op [ de inzichten van het Publiek ](../../dashboards/insights/audiences.md) om te leren hoe te om tot de SQL vragen voor publieksinzichten in Adobe Real-Time CDP toegang te hebben en aan te passen. Vervolgens kunt u uw eigen inzichten maken en onbewerkte gegevens transformeren in activeerbare informatie door het dashboard Soorten publiek aan te passen en deze inzichten effectief te visualiseren en te gebruiken voor een betere besluitvorming.
+
