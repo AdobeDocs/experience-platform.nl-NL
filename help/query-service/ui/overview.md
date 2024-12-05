@@ -4,7 +4,7 @@ solution: Experience Platform
 title: UI-gids voor zoekservice
 description: Adobe Experience Platform Query Service biedt een gebruikersinterface die kan worden gebruikt om query's te schrijven en uit te voeren, eerder uitgevoerde query's weer te geven en query's te openen die zijn opgeslagen door gebruikers binnen uw organisatie.
 exl-id: 99ad25e4-0ca4-4bd1-b701-ab463197930b
-source-git-commit: ab611e33c82bf5b727b855877ee8f686f90bbfff
+source-git-commit: 3b36148aee490554672ee9e76db4e03c430dfae6
 workflow-type: tm+mt
 source-wordcount: '2149'
 ht-degree: 0%
@@ -175,3 +175,4 @@ Op het tabblad **[!UICONTROL Credentials]** worden uw verlopen en niet-verlopen 
 ## Volgende stappen
 
 Nu u met het gebruikersinterface van de Dienst van de Vraag op [!DNL Platform] vertrouwd bent, kunt u tot de Redacteur van de Vraag toegang hebben beginnen uw eigen vraagprojecten te creëren om met andere gebruikers in uw organisatie te delen. Voor meer informatie over het schrijven van en het runnen van vragen in de Redacteur van de Vraag, zie de [ gebruikersgids van de Redacteur van de Vraag ](./user-guide.md).
+
