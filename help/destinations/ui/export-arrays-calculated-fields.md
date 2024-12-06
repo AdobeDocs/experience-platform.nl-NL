@@ -3,7 +3,7 @@ title: Berekende velden gebruiken om arrays als tekenreeksen te exporteren
 type: Tutorial
 description: Leer hoe u berekende velden kunt gebruiken om arrays van Real-Time CDP naar cloudopslagdoelen als tekenreeksen te exporteren.
 exl-id: ff13d8b7-6287-4315-ba71-094e2270d039
-source-git-commit: 849d42e36921e60b6ac3a5e89336b954e64a35d7
+source-git-commit: 9b64e39d25ad94aa834c8e207396b37c2a121243
 workflow-type: tm+mt
 source-wordcount: '1549'
 ht-degree: 0%
@@ -21,7 +21,7 @@ ht-degree: 0%
 
 >[!AVAILABILITY]
 >
->* De functionaliteit voor het exporteren van arrays via berekende velden is over het algemeen beschikbaar.
+>De functionaliteit voor het exporteren van arrays via berekende velden is over het algemeen beschikbaar.
 
 Leer hoe te om series door berekende gebieden van Real-Time CDP naar [ wolkenopslagbestemmingen ](/help/destinations/catalog/cloud-storage/overview.md) als koorden uit te voeren. Lees dit document om te begrijpen welke gebruiksgevallen door deze functie worden ingeschakeld.
 

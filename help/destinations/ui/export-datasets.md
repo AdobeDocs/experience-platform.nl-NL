@@ -3,9 +3,9 @@ title: Datasets exporteren naar cloudopslagdoelen
 type: Tutorial
 description: Leer hoe u gegevenssets van Adobe Experience Platform naar de gewenste locatie voor cloudopslag exporteert.
 exl-id: e89652d2-a003-49fc-b2a5-5004d149b2f4
-source-git-commit: 74dcaff91a264062feec262784e056a296072fd7
+source-git-commit: 9b64e39d25ad94aa834c8e207396b37c2a121243
 workflow-type: tm+mt
-source-wordcount: '2538'
+source-wordcount: '2547'
 ht-degree: 0%
 
 ---
@@ -293,54 +293,54 @@ Houd in mening de volgende beperkingen voor de algemene beschikbaarheidsversie v
 
 **kunnen wij een dossier zonder een omslag produceren als wij enkel bij `/` als omslagweg bewaren? Ook, als wij geen omslagweg vereisen, hoe dossiers met dubbele namen in een omslag of een plaats worden geproduceerd?**
 
-+++
++++Antwoord
 Vanaf de release van september 2024 kunt u de mapnaam aanpassen en zelfs `/` gebruiken voor het exporteren van bestanden voor alle gegevenssets in dezelfde map. De Adobe adviseert dit niet voor bestemmingen die veelvoudige datasets uitvoeren, aangezien de systeem-geproduceerde filenames die tot verschillende datasets behoren in de zelfde omslag zullen worden gemengd.
 +++
 
 **kunt u het manifestdossier aan één omslag en gegevensdossiers in een andere omslag leiden?**
 
-+++
++++Antwoord
 Nee, het manifestbestand kan niet naar een andere locatie worden gekopieerd.
 +++
 
 **kunnen wij het rangschikken of timing van dossierlevering controleren?**
 
-+++
++++Antwoord
 Er zijn opties voor het plannen van het exporteren. Er zijn geen opties om de kopie van de bestanden te vertragen of in volgorde te zetten. Ze worden naar de opslaglocatie gekopieerd zodra ze worden gegenereerd.
 +++
 
 **Welke formaten zijn beschikbaar voor het manifestdossier?**
 
-+++
++++Antwoord
 Het manifestbestand heeft de indeling .json.
 +++
 
 **is er API beschikbaarheid voor het duidelijke dossier?**
 
-+++
++++Antwoord
 Er is geen API beschikbaar voor het manifestbestand, maar het bevat wel een lijst met bestanden die de export omvatten.
 +++
 
 **kunnen wij extra details aan het manifestdossier (d.w.z., verslagtelling) toevoegen? Zo ja, hoe?**
 
-+++
++++Antwoord
 Er is geen mogelijkheid om aanvullende informatie aan het manifestbestand toe te voegen. Het aantal records is beschikbaar via de entiteit `flowRun` (kan worden opgevraagd via de API). Lees meer in bestemmingen controle.
 +++
 
 **Hoe worden de gegevensdossiers verdeeld? Hoeveel verslagen per dossier?**
 
-+++
++++Antwoord
 Gegevensbestanden worden gesplitst volgens de standaardpartitionering in het gegevenspeer van het Experience Platform. Grotere datasets hebben een hoger aantal verdelingen. Standaard het verdelen is niet configureerbaar door de gebruiker aangezien het voor lezing wordt geoptimaliseerd.
 +++
 
 **kunnen wij een drempel (aantal verslagen per dossier) plaatsen?**
 
-+++
++++Antwoord
 Nee, dat is niet mogelijk.
 +++
 
 **hoe wij opnieuw een gegevensreeks in de gebeurtenis sturen dat de aanvankelijke verzendt slecht is?**
 
-+++
++++Antwoord
 Voor de meeste typen systeemfouten worden automatisch opnieuw opgestart.
 +++
