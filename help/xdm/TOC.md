@@ -5,10 +5,10 @@ breadcrumb-title: Handleiding voor Experience Data Model (XDM)
 user-guide-description: Verken een overzicht van het systeem van Experience Data Model (XDM) binnen het Experience Platform en leer hoe u klassen en schemaveldgroepen kunt gebruiken om ervaringsgegevens te standaardiseren.
 feature: Schemas
 role: Developer
-source-git-commit: 15de9351203f6b43653042ab73ede17781486160
+source-git-commit: d2baf74bb5fd87045f5d25b2996911c7bce36f36
 workflow-type: tm+mt
-source-wordcount: '636'
-ht-degree: 8%
+source-wordcount: '718'
+ht-degree: 7%
 
 ---
 
@@ -29,6 +29,53 @@ ht-degree: 8%
       * [Gezondheidszorg](./schema/industries/healthcare.md)
       * [Telecommunicatie](./schema/industries/telecom.md)
       * [Reizen en gastvrijheid](./schema/industries/travel-hospitality.md)
+   * Gegevensmodel gezondheidszorg V2 {#health-care-data-model-v2}
+      * [Gezondheidszorg V2](./schema/industries/healthcare-v2.md)
+      * Klassen {#health-care-classes}
+         * [Locatie](./classes/location.md)
+      * Veldgroepen {#health-care-v2-field-groups}
+         * Afzonderlijk XDM-profiel {#health-care-v2-profile}
+            * [Gezondheidszorgaccount](./field-groups/profile/healthcare-account.md)
+            * [Zorgplan voor gezondheidszorg](./field-groups/profile/healthcare-care-plan.md)
+            * [Gezondheidszorg](./field-groups/profile/healthcare-goal.md)
+            * [Gezondheidsorganisatie](./field-groups/profile/healthcare-organization.md)
+            * [Patiënt gezondheidszorg](./field-groups/profile/healthcare-patient.md)
+            * [Werkgever voor gezondheidszorg](./field-groups/profile/healthcare-practioner.md)
+            * [Gezondheidszorgschema](./field-groups/profile/healthcare-schedule.md)
+         * XDM Experience Event {#health-care-v2-event}
+            * [Immunisatie in de gezondheidszorg](./field-groups/event/healthcare-immunization.md)
+         * Locatie {#health-care-v2-location}
+            * [Locatie van gezondheidszorg](./field-groups/location/healthcare-location.md)
+         * Medicatie {#health-care-v2-medication}
+            * [Afstotingen in de gezondheidszorg](./field-groups/medication/healthcare-medication-dispense.md)
+            * [Aanvraag voor geneesmiddelen voor gezondheidszorg](./field-groups/medication/healthcare-medication-request.md)
+            * [Geneesmiddelen voor gezondheidszorg](./field-groups/medication/healthcare-medication-v2.md)
+         * Abonnementen {#health-care-v2-plans}
+            * [Gezondheidszorg](./field-groups/plan/healthcare-coverage.md)
+      * Gegevenstypen {#health-care-v2-data-types}
+         * [Adres](./data-types/healthcare/address.md)
+         * [Aantekening](./data-types/healthcare/annotation.md)
+         * [Beschikbaarheid](./data-types/healthcare/availability.md)
+         * [Codeable Concept](./data-types/healthcare/codeable-concept.md)
+         * [Codeerbare referentie](./data-types/healthcare/codeable-reference.md)
+         * [Codering](./data-types/healthcare/coding.md)
+         * [Contactpunt](./data-types/healthcare/contact-point.md)
+         * [Dosering](./data-types/healthcare/dosage.md)
+         * [Duur](./data-types/healthcare/duration.md)
+         * [Uitgebreide contactgegevens](./data-types/healthcare/extended-contact-detail.md)
+         * [Menselijke naam](./data-types/healthcare/human-name.md)
+         * [Id](./data-types/healthcare/identifier.md)
+         * [Geld](./data-types/healthcare/money.md)
+         * [Periode](./data-types/healthcare/period.md)
+         * [Persoon](./data-types/healthcare/person.md)
+         * [Aantal](./data-types/healthcare/quantity.md)
+         * [Bereik](./data-types/healthcare/range.md)
+         * [Verhouding](./data-types/healthcare/ratio.md)
+         * [Referentie](./data-types/healthcare/reference.md)
+         * [Herhalen](./data-types/healthcare/repeat.md)
+         * [Eenvoudig aantal](./data-types/healthcare/simple-quantity.md)
+         * [Timing](./data-types/healthcare/timing.md)
+         * [Virtuele service](./data-types/healthcare/virtual-service-detail.md)
    * [XDM-veldwoordenboek](schema/field-dictionary.md)
 * Klassen {#classes}
    * [Afzonderlijk XDM-profiel](./classes/individual-profile.md)
@@ -54,9 +101,9 @@ ht-degree: 8%
    * Afzonderlijk XDM-profiel {#profile}
       * [Inhoud en voorkeuren](./field-groups/profile/consents.md)
       * [Demografische details](./field-groups/profile/demographic-details.md)
+      * [Gegevens van het lid in de gezondheidszorg](./field-groups/profile/healthcare-member-details.md)
       * [IAB TCF 2.0 Toestemming](./field-groups/profile/iab.md)
       * [IdentityMap](./field-groups/profile/identitymap.md)
-      * [Gegevens van het lid in de gezondheidszorg](./field-groups/profile/healthcare-member-details.md)
       * [Loyalty-details](./field-groups/profile/loyalty-details.md)
       * [Persoonlijke contactgegevens](./field-groups/profile/personal-contact-details.md)
       * [Verbetering van profielpartner (voorbeeld)](./field-groups/profile/profile-partner-enrichment.md)
@@ -236,7 +283,7 @@ ht-degree: 8%
    * [Een XDM-veld in de API verwijderen](tutorials/field-deprecation-api.md)
    * [Een schemarelatie definiëren in de gebruikersinterface](tutorials/relationship-ui.md)
    * [Een schemarelatie definiëren in de API](tutorials/relationship-api.md)
-   * [Een schemarelatie definiëren in Real-Time CDP B2B Edition](tutorials/relationship-b2b.md)
+   * [Een schemarelatie definiëren in Real-Time CDP B2B edition](tutorials/relationship-b2b.md)
    * [De labels voor gegevensgebruik voor een schema beheren](tutorials/labels.md)
    * [Een ad-hocschema maken](tutorials/ad-hoc.md)
 * [Handleiding voor probleemoplossing](troubleshooting-guide.md)
