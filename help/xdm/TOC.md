@@ -5,9 +5,9 @@ breadcrumb-title: Handleiding voor Experience Data Model (XDM)
 user-guide-description: Verken een overzicht van het systeem van Experience Data Model (XDM) binnen het Experience Platform en leer hoe u klassen en schemaveldgroepen kunt gebruiken om ervaringsgegevens te standaardiseren.
 feature: Schemas
 role: Developer
-source-git-commit: d2baf74bb5fd87045f5d25b2996911c7bce36f36
+source-git-commit: 670b8ed3abd0e6e9ab35a15ae47a524a2528eb44
 workflow-type: tm+mt
-source-wordcount: '718'
+source-wordcount: '704'
 ht-degree: 7%
 
 ---
@@ -29,30 +29,30 @@ ht-degree: 7%
       * [Gezondheidszorg](./schema/industries/healthcare.md)
       * [Telecommunicatie](./schema/industries/telecom.md)
       * [Reizen en gastvrijheid](./schema/industries/travel-hospitality.md)
-   * Gegevensmodel gezondheidszorg V2 {#health-care-data-model-v2}
-      * [Gezondheidszorg V2](./schema/industries/healthcare-v2.md)
-      * Klassen {#health-care-classes}
+   * Gegevensmodel gezondheidszorg V2 {#healthcare}
+      * [Gezondheidszorg V2](./schema/healthcare-v2.md)
+      * Klassen {#classes}
          * [Locatie](./classes/location.md)
-      * Veldgroepen {#health-care-v2-field-groups}
-         * Afzonderlijk XDM-profiel {#health-care-v2-profile}
-            * [Gezondheidszorgaccount](./field-groups/profile/healthcare-account.md)
-            * [Zorgplan voor gezondheidszorg](./field-groups/profile/healthcare-care-plan.md)
-            * [Gezondheidszorg](./field-groups/profile/healthcare-goal.md)
-            * [Gezondheidsorganisatie](./field-groups/profile/healthcare-organization.md)
-            * [Patiënt gezondheidszorg](./field-groups/profile/healthcare-patient.md)
-            * [Werkgever voor gezondheidszorg](./field-groups/profile/healthcare-practioner.md)
-            * [Gezondheidszorgschema](./field-groups/profile/healthcare-schedule.md)
-         * XDM Experience Event {#health-care-v2-event}
-            * [Immunisatie in de gezondheidszorg](./field-groups/event/healthcare-immunization.md)
-         * Locatie {#health-care-v2-location}
-            * [Locatie van gezondheidszorg](./field-groups/location/healthcare-location.md)
-         * Medicatie {#health-care-v2-medication}
-            * [Afstotingen in de gezondheidszorg](./field-groups/medication/healthcare-medication-dispense.md)
-            * [Aanvraag voor geneesmiddelen voor gezondheidszorg](./field-groups/medication/healthcare-medication-request.md)
-            * [Geneesmiddelen voor gezondheidszorg](./field-groups/medication/healthcare-medication-v2.md)
-         * Abonnementen {#health-care-v2-plans}
-            * [Gezondheidszorg](./field-groups/plan/healthcare-coverage.md)
-      * Gegevenstypen {#health-care-v2-data-types}
+      * Veldgroepen {#field-groups}
+         * Afzonderlijk XDM-profiel {#profile}
+            * [Account](./field-groups/profile/healthcare-account.md)
+            * [Zorgplan](./field-groups/profile/healthcare-care-plan.md)
+            * [Goal](./field-groups/profile/healthcare-goal.md)
+            * [Organisatie](./field-groups/profile/healthcare-organization.md)
+            * [Patiënt](./field-groups/profile/healthcare-patient.md)
+            * [Praktijkster](./field-groups/profile/healthcare-practioner.md)
+            * [Schema](./field-groups/profile/healthcare-schedule.md)
+         * XDM Experience Event {#event}
+            * [Immunisatie](./field-groups/event/healthcare-immunization.md)
+         * Locatie {#location}
+            * [Locatie](./field-groups/location/healthcare-location.md)
+         * Medicatie {#medication}
+            * [Geneesmiddelenverlies](./field-groups/medication/healthcare-medication-dispense.md)
+            * [Aanvraag voor geneesmiddelen](./field-groups/medication/healthcare-medication-request.md)
+            * [Geneesmiddelen](./field-groups/medication/healthcare-medication-v2.md)
+         * Overzicht {#plan}
+            * [Dekking](./field-groups/plan/healthcare-coverage.md)
+      * Gegevenstypen {#data-types}
          * [Adres](./data-types/healthcare/address.md)
          * [Aantekening](./data-types/healthcare/annotation.md)
          * [Beschikbaarheid](./data-types/healthcare/availability.md)
