@@ -5,9 +5,9 @@ breadcrumb-title: Handleiding voor Experience Data Model (XDM)
 user-guide-description: Verken een overzicht van het systeem van Experience Data Model (XDM) binnen het Experience Platform en leer hoe u klassen en schemaveldgroepen kunt gebruiken om ervaringsgegevens te standaardiseren.
 feature: Schemas
 role: Developer
-source-git-commit: 670b8ed3abd0e6e9ab35a15ae47a524a2528eb44
+source-git-commit: 3071d16b6b98040ea3f2e3a34efffae517253b8e
 workflow-type: tm+mt
-source-wordcount: '704'
+source-wordcount: '695'
 ht-degree: 7%
 
 ---
@@ -30,52 +30,47 @@ ht-degree: 7%
       * [Telecommunicatie](./schema/industries/telecom.md)
       * [Reizen en gastvrijheid](./schema/industries/travel-hospitality.md)
    * Gegevensmodel gezondheidszorg V2 {#healthcare}
-      * [Gezondheidszorg V2](./schema/healthcare-v2.md)
+      * [Gezondheidszorg V2](./schema/healthcare/healthcare-v2.md)
       * Klassen {#classes}
-         * [Locatie](./classes/location.md)
+         * [Locatie](./schema/healthcare/classes/location.md)
       * Veldgroepen {#field-groups}
-         * Afzonderlijk XDM-profiel {#profile}
-            * [Account](./field-groups/profile/healthcare-account.md)
-            * [Zorgplan](./field-groups/profile/healthcare-care-plan.md)
-            * [Goal](./field-groups/profile/healthcare-goal.md)
-            * [Organisatie](./field-groups/profile/healthcare-organization.md)
-            * [Patiënt](./field-groups/profile/healthcare-patient.md)
-            * [Praktijkster](./field-groups/profile/healthcare-practioner.md)
-            * [Schema](./field-groups/profile/healthcare-schedule.md)
-         * XDM Experience Event {#event}
-            * [Immunisatie](./field-groups/event/healthcare-immunization.md)
-         * Locatie {#location}
-            * [Locatie](./field-groups/location/healthcare-location.md)
-         * Medicatie {#medication}
-            * [Geneesmiddelenverlies](./field-groups/medication/healthcare-medication-dispense.md)
-            * [Aanvraag voor geneesmiddelen](./field-groups/medication/healthcare-medication-request.md)
-            * [Geneesmiddelen](./field-groups/medication/healthcare-medication-v2.md)
-         * Overzicht {#plan}
-            * [Dekking](./field-groups/plan/healthcare-coverage.md)
+         * [Account](./schema/healthcare/field-groups/account.md)
+         * [Zorgplan](./schema/healthcare/field-groups/care-plan.md)
+         * [Dekking](./schema/healthcare/field-groups/coverage.md)
+         * [Goal](./schema/healthcare/field-groups/goal.md)
+         * [Immunisatie](./schema/healthcare/field-groups/immunization.md)
+         * [Locatie](./schema/healthcare/field-groups/location.md)
+         * [Geneesmiddelen](./schema/healthcare/field-groups/medication.md)
+         * [Geneesmiddelenverlies](./schema/healthcare/field-groups/medication-dispense.md)
+         * [Aanvraag voor geneesmiddelen](./schema/healthcare/field-groups/medication-request.md)
+         * [Organisatie](./schema/healthcare/field-groups/organization.md)
+         * [Patiënt](./schema/healthcare/field-groups/patient.md)
+         * [Praktijkster](./schema/healthcare/field-groups/practioner.md)
+         * [ Programma ](./schema/healthcare/field-groups/schedule.md)
       * Gegevenstypen {#data-types}
-         * [Adres](./data-types/healthcare/address.md)
-         * [Aantekening](./data-types/healthcare/annotation.md)
-         * [Beschikbaarheid](./data-types/healthcare/availability.md)
-         * [Codeable Concept](./data-types/healthcare/codeable-concept.md)
-         * [Codeerbare referentie](./data-types/healthcare/codeable-reference.md)
-         * [Codering](./data-types/healthcare/coding.md)
-         * [Contactpunt](./data-types/healthcare/contact-point.md)
-         * [Dosering](./data-types/healthcare/dosage.md)
-         * [Duur](./data-types/healthcare/duration.md)
-         * [Uitgebreide contactgegevens](./data-types/healthcare/extended-contact-detail.md)
-         * [Menselijke naam](./data-types/healthcare/human-name.md)
-         * [Id](./data-types/healthcare/identifier.md)
-         * [Geld](./data-types/healthcare/money.md)
-         * [Periode](./data-types/healthcare/period.md)
-         * [Persoon](./data-types/healthcare/person.md)
-         * [Aantal](./data-types/healthcare/quantity.md)
-         * [Bereik](./data-types/healthcare/range.md)
-         * [Verhouding](./data-types/healthcare/ratio.md)
-         * [Referentie](./data-types/healthcare/reference.md)
-         * [Herhalen](./data-types/healthcare/repeat.md)
-         * [Eenvoudig aantal](./data-types/healthcare/simple-quantity.md)
-         * [Timing](./data-types/healthcare/timing.md)
-         * [Virtuele service](./data-types/healthcare/virtual-service-detail.md)
+         * [Adres](./schema/healthcare/data-types/address.md)
+         * [Aantekening](./schema/healthcare/data-types/annotation.md)
+         * [Beschikbaarheid](./schema/healthcare/data-types/availability.md)
+         * [Codeable Concept](./schema/healthcare/data-types/codeable-concept.md)
+         * [Codeerbare referentie](./schema/healthcare/data-types/codeable-reference.md)
+         * [Codering](./schema/healthcare/data-types/coding.md)
+         * [Contactpunt](./schema/healthcare/data-types/contact-point.md)
+         * [Dosering](./schema/healthcare/data-types/dosage.md)
+         * [Duur](./schema/healthcare/data-types/duration.md)
+         * [Uitgebreide contactgegevens](./schema/healthcare/data-types/extended-contact-detail.md)
+         * [Menselijke naam](./schema/healthcare/data-types/human-name.md)
+         * [Id](./schema/healthcare/data-types/identifier.md)
+         * [Geld](./schema/healthcare/data-types/money.md)
+         * [Periode](./schema/healthcare/data-types/period.md)
+         * [Persoon](./schema/healthcare/data-types/person.md)
+         * [Aantal](./schema/healthcare/data-types/quantity.md)
+         * [Bereik](./schema/healthcare/data-types/range.md)
+         * [Verhouding](./schema/healthcare/data-types/ratio.md)
+         * [Referentie](./schema/healthcare/data-types/reference.md)
+         * [Herhalen](./schema/healthcare/data-types/repeat.md)
+         * [Eenvoudig aantal](./schema/healthcare/data-types/simple-quantity.md)
+         * [Timing](./schema/healthcare/data-types/timing.md)
+         * [Virtuele service](./schema/healthcare/data-types/virtual-service-detail.md)
    * [XDM-veldwoordenboek](schema/field-dictionary.md)
 * Klassen {#classes}
    * [Afzonderlijk XDM-profiel](./classes/individual-profile.md)
