@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Schema's maken en bewerken in de gebruikersinterface
 description: Leer de grondbeginselen van om schema's in het gebruikersinterface van het Experience Platform tot stand te brengen en uit te geven.
 exl-id: be83ce96-65b5-4a4a-8834-16f7ef9ec7d1
-source-git-commit: f530e4ff755ac89141ee67bef80700b46acf0868
+source-git-commit: 02b709c01347c1d03f870132dff437b97f239a9c
 workflow-type: tm+mt
-source-wordcount: '3703'
+source-wordcount: '3888'
 ht-degree: 0%
 
 ---
@@ -37,7 +37,7 @@ Selecteer in de werkruimte [!UICONTROL Schemas] de optie **[!UICONTROL Create sc
 
 Het dialoogvenster [!UICONTROL Create a schema] wordt weergegeven. In dit dialoogvenster kunt u kiezen of u handmatig een schema wilt maken door velden en veldgroepen toe te voegen, of u kunt een CSV-bestand uploaden en XML-algoritmen gebruiken om een schema te genereren. Selecteer een workflow voor het maken van een schema in het dialoogvenster.
 
-![ creeer een schemadialoog met de werkschemaopties en selecteer benadrukt.](../../images/tutorials/create-schema/create-a-schema-dialog.png)
+![ creeer een schemadialoog met de werkschemaopties en selecteer benadrukt.](../../images/ui/resources/schemas/create-a-schema-dialog.png)
 
 ### [!BADGE  Beta ] {type=Informative} Handboek of ML-bijgestaan schemaverwezenlijking {#manual-or-assisted}
 
@@ -49,15 +49,35 @@ De [!UICONTROL Create schema] -workflow wordt weergegeven. U kunt een basisklass
 
 ![ het [!UICONTROL Create schema] werkschema met de drie klassenopties en [!UICONTROL Next] benadrukte.](../../images/ui/resources/schemas/schema-class-options.png)
 
+Wanneer u **[!UICONTROL Other]** kiest, wordt een lijst met beschikbare klassen weergegeven. Hier kunt u door bestaande klassen bladeren en deze filteren.
+
+![ het [!UICONTROL Create schema] werkschema met [!UICONTROL Other] die in de [!UICONTROL Schema details] sectie wordt benadrukt.](../../images/ui/resources/schemas/other-schema-details.png)
+
+Selecteer een keuzerondje om de klassen te filteren op basis van het feit of ze aangepaste of standaardklassen zijn. U kunt de beschikbare resultaten ook filteren op basis van hun industrie of naar een specifieke klasse zoeken met het zoekveld.
+
+![ het [!UICONTROL Create schema] werkschema met de onderzoeksbar, [!UICONTROL Custom], en [!UICONTROL Industries] benadrukte.](../../images/ui/resources/schemas/filter-and-search.png)
+
+Om u te helpen beslissen over de aangewezen klasse, zijn er info en voorproefpictogrammen voor elke klasse. Het infopictogram (![ Info pictogram.](/help/images/icons/info.png) ) opent een dialoogvenster met een beschrijving van de klasse en de industrie waaraan deze is gekoppeld.
+
+![ het infopictogram en tooltip van de geselecteerde benadrukte klasse.](../../images/ui/resources/schemas/class-info.png)
+
+Het voorproefpictogram (![ een voorproefpictogram.](/help/images/icons/preview.png)) opent een voorproefdialoog voor de klasse die een schemadiagram en zijn eigenschappen bevat.
+
+![ een voorproef van de geselecteerde klasse met het schemadiagram en klasseneigenschappen.](../../images/ui/resources/schemas/class-preview.png)
+
+Selecteer een willekeurige rij om een klasse te kiezen en selecteer vervolgens **[!UICONTROL Next]** om uw keuze te bevestigen.
+
+![ het [!UICONTROL Create schema] werkschema met een klasse die van de lijst van beschikbare klassen wordt geselecteerd en [!UICONTROL Next] benadrukt.](../../images/ui/resources/schemas/select-class.png)
+
 Nadat u een klasse hebt geselecteerd, wordt de sectie [!UICONTROL Name and review] weergegeven. In deze sectie geeft u een naam en beschrijving op om uw schema te identificeren. &#x200B;De basisstructuur van het schema (verstrekt door de klasse) wordt getoond in het canvas voor u om uw geselecteerde klasse en schemastructuur te herzien en te verifiëren.
 
 Voer in het tekstveld een mensvriendelijke [!UICONTROL Schema display name] in. Voer vervolgens een geschikte beschrijving in om uw schema te identificeren. Wanneer u de schemastructuur hebt herzien en met uw montages gelukkig bent, uitgezocht **[!UICONTROL Finish]** om uw schema tot stand te brengen.
 
 ![ de [!UICONTROL Name and review] sectie van het [!UICONTROL Create schema] werkschema met [!UICONTROL Schema display name], [!UICONTROL Description], en [!UICONTROL Finish] benadrukte.](../../images/ui/resources/schemas/name-and-review.png)
 
-Het tabblad [!UICONTROL Schema] [!UICONTROL Browse] wordt weergegeven. Het schema dat u onlangs hebt gemaakt, wordt nu weergegeven in de Schemabibliotheek en is beschikbaar voor bewerking in de [!DNL Schema Editor] .
+De Schema-editor wordt weergegeven, waarbij de structuur van het schema op het canvas wordt weergegeven. Indien gewenst, kunt u [ nu beginnen toevoegend gebieden aan de klasse ](../../ui/resources/classes.md#add-fields).
 
-![ De werkruimte van Schema doorbladert lusje het tonen van uw onlangs gecreeerd schema.](../../images/ui/resources/schemas/example-schema.png)
+![ de Redacteur van het Schema met de structuur van het schema die in het canvas wordt getoond.](../../images/ui/resources/schemas/edit.png)
 
 ## Een bestaand schema bewerken {#edit}
 
@@ -75,7 +95,7 @@ Met de zoek- en filtermogelijkheden van de werkruimte kunt u het schema gemakkel
 
 Nadat u een schema hebt geselecteerd, wordt de [!DNL Schema Editor] weergegeven met de structuur van het schema die op het canvas wordt weergegeven. U kunt [ gebiedsgroepen ](#add-field-groups) aan het schema nu toevoegen (of [ individuele gebieden ](#add-individual-fields) van die groepen toevoegen), [ uitgeeft de namen van de gebiedsvertoning ](#display-names), of [ uitgeeft bestaande groepen van het douaneveld ](./field-groups.md#edit) als het schema om het even welk aanwendt.
 
-## Meer handelingen {#more}
+## Meer acties {#more}
 
 Binnen de Redacteur van het Schema kunt u snelle acties ook voeren om de structuur JSON van het schema te kopiëren of het schema te schrappen als het niet voor het Profiel van de Klant in real time of bijbehorende datasets is toegelaten. Selecteer [!UICONTROL More] boven aan de weergave om een vervolgkeuzelijst met snelle acties weer te geven.
 

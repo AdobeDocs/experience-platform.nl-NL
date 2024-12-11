@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Klassen maken en bewerken in de gebruikersinterface
 description: Leer hoe u klassen maakt en bewerkt in de gebruikersinterface van het Experience Platform.
 exl-id: 1b4c3996-2319-45dd-9edd-a5bcad46578b
-source-git-commit: 15de9351203f6b43653042ab73ede17781486160
+source-git-commit: 02b709c01347c1d03f870132dff437b97f239a9c
 workflow-type: tm+mt
-source-wordcount: '1469'
+source-wordcount: '1560'
 ht-degree: 0%
 
 ---
@@ -20,7 +20,7 @@ ht-degree: 0%
 
 In Adobe Experience Platform definieert de klasse van een schema de gedragsaspecten van de gegevens die het schema zal bevatten (record of tijdreeks). Bovendien beschrijven de klassen het kleinste aantal gemeenschappelijke eigenschappen die alle die schema&#39;s op die klasse worden gebaseerd zouden moeten omvatten en een manier verstrekken om veelvoudige compatibele datasets worden samengevoegd.
 
-Adobe biedt verschillende standaard (&quot;core&quot;) XDM-klassen (Experience Data Model), waaronder XDM Individual Profile en XDM ExperienceEvent. Naast deze kernklassen kunt u ook uw eigen aangepaste klassen maken om specifieke gebruiksgevallen voor uw organisatie te beschrijven.
+Adobe verstrekt verscheidene standaard (&quot;kern&quot;) klassen van de Gegevens van de Ervaring Model (XDM), met inbegrip van [ XDM Individueel Profiel ](../../classes/individual-profile.md) en [ XDM ExperienceEvent ](../../classes/experienceevent.md). Naast deze kernklassen kunt u ook uw eigen aangepaste klassen maken om specifieke gebruiksgevallen voor uw organisatie te beschrijven.
 
 Dit document biedt een overzicht van het maken, bewerken en beheren van aangepaste klassen in de gebruikersinterface van het Experience Platform.
 
@@ -34,6 +34,8 @@ Terwijl niet vereist voor deze gids, wordt het geadviseerd dat u ook het leerpro
 
 Selecteer in de gebruikersinterface van het platform de optie **[!UICONTROL Schemas]** in de linkernavigatie om de [!UICONTROL Schemas] -werkruimte te openen en selecteer vervolgens het tabblad **[!UICONTROL Classes]** . Er wordt een lijst met beschikbare klassen weergegeven.
 
+![ De van klassen binnen het [!UICONTROL Classes] lusje van de [!UICONTROL Schemas] benadrukte werkruimte [!UICONTROL Classes] en [!UICONTROL Schemas].](../../images/ui/resources/classes/available-classes.png)
+
 ## Filterklassen {#filter}
 
 De lijst met klassen wordt automatisch gefilterd op basis van de manier waarop ze zijn gemaakt. Met de standaardinstelling worden de klassen weergegeven die door Adobe worden gedefinieerd. U kunt de lijst ook filteren om de lijsten weer te geven die door uw organisatie zijn gemaakt. Selecteer het keuzerondje dat u wilt kiezen tussen de opties [!UICONTROL Standard] en [!UICONTROL Custom] . De optie [!UICONTROL Standard] toont entiteiten die zijn gemaakt door Adobe en de optie [!UICONTROL Custom] geeft entiteiten weer die binnen uw organisatie zijn gemaakt.
@@ -46,11 +48,15 @@ De lijst met klassen wordt automatisch gefilterd op basis van de manier waarop z
 
 ## Een nieuwe klasse maken {#create}
 
-Er zijn twee methoden om een klasse te maken in de gebruikersinterface van het platform. Selecteer **[!UICONTROL Create schema]** op een willekeurig tabblad in de [!UICONTROL Classes] -werkruimte of selecteer **[!UICONTROL Create class]** op het tabblad [!UICONTROL Schemas] .
+Er zijn twee methoden om een klasse te maken in de gebruikersinterface van het platform, tot en met **[!UICONTROL Create class]** of **[!UICONTROL Create schema]** .
 
-![ het [!UICONTROL Classes] lusje van de [!UICONTROL Schemas] werkruimte met [!UICONTROL Create schema] en [!UICONTROL Create class] benadrukte ](../../images/ui/resources/classes/create-class-methods.png)
+### Klasse maken
 
-Als u **[!UICONTROL Create class]** selecteert, wordt het dialoogvenster [!UICONTROL Create class] weergegeven. Voer een [!UICONTROL Display name] en [!UICONTROL Description] in voor de klasse en kies het bedoelde gedrag van de klasse met de keuzerondjes. Klassen kunnen van het type, de recordreeks of de tijdreeks zijn. Selecteer **[!UICONTROL Create]** om uw keuzes te bevestigen en terug te keren naar het tabblad [!UICONTROL Classes] .
+Selecteer **[!UICONTROL Create class]** op het tabblad [!UICONTROL Classes] in de werkruimte van [!UICONTROL Schemas] .
+
+![ het [!UICONTROL Classes] lusje van de [!UICONTROL Schemas] werkruimte met [!UICONTROL Create class] benadrukte ](../../images/ui/resources/classes/create-class.png)
+
+Het dialoogvenster [!UICONTROL Create class] wordt weergegeven. Voer een [!UICONTROL Display name] en [!UICONTROL Description] in voor de klasse en kies het bedoelde gedrag van de klasse met de keuzerondjes. Klassen kunnen van het type [!UICONTROL Record] of [!UICONTROL Time-series] zijn. Selecteer **[!UICONTROL Create]** om uw keuzes te bevestigen en terug te keren naar het tabblad [!UICONTROL Classes] .
 
 ![ de [!UICONTROL Create class] dialoog met [!UICONTROL Create] benadrukte.](../../images/ui/resources/classes/create-class-dialog.png)
 
@@ -58,9 +64,13 @@ De klasse die u hebt gemaakt, is beschikbaar en wordt weergegeven in de weergave
 
 ![ het [!UICONTROL Classes] lusje van de [!UICONTROL Schemas] werkruimte met de onlangs gecreeerd benadrukte klasse.](../../images/ui/resources/classes/new-class-listing.png)
 
-### Een klasse maken of bewerken {#create-or-edit}
+### Schema maken
 
-Als u handmatig een schema wilt maken, kunt u ook een bestaande klasse maken of bewerken als onderdeel van die workflow. Selecteer **[!UICONTROL Create schema]** gevolgd door **[!UICONTROL Manual]** in het dialoogvenster [!UICONTROL Create a schema] dat wordt weergegeven.
+U kunt ook een klasse maken door handmatig een schema te maken. Selecteer **[!UICONTROL Create schema]** op het tabblad [!UICONTROL Classes] in de werkruimte van [!UICONTROL Schemas] .
+
+![ het [!UICONTROL Classes] lusje van de [!UICONTROL Schemas] werkruimte met [!UICONTROL Create schema] benadrukte ](../../images/ui/resources/classes/create-schema.png)
+
+Selecteer **[!UICONTROL Manual]** in het dialoogvenster [!UICONTROL Create a schema] dat wordt weergegeven.
 
 >[!NOTE]
 >
@@ -68,41 +78,27 @@ Als u handmatig een schema wilt maken, kunt u ook een bestaande klasse maken of 
 
 ![ creeer een schemadialoog met de werkschemaopties en selecteer benadrukt.](../../images/ui/resources/classes/manually-create-a-schema.png)
 
-De workflow voor het maken van schema&#39;s wordt weergegeven. Selecteer **[!UICONTROL Other]** in de sectie [!UICONTROL Schema details] . Er wordt een lijst met beschikbare klassen weergegeven. Vanaf dit punt kunt u door bestaande klassen bladeren en filteren waarop u de nieuwe klasse wilt baseren.
-
->[!NOTE]
->
->Alleen aangepaste klassen die door uw organisatie zijn gedefinieerd, kunnen volledig worden bewerkt en aangepast. Voor kernklassen die door Adobe worden gedefinieerd, kunnen alleen de weergavenamen voor hun velden worden bewerkt binnen de context van afzonderlijke schema&#39;s. Zie de sectie op [ het uitgeven vertoningsnamen voor schemagebieden ](./schemas.md#display-names) voor details.
->
->Als een aangepaste klasse eenmaal is opgeslagen en in gegevensinvoer is gebruikt, kunnen er daarna alleen additieve wijzigingen in worden aangebracht. Zie de [ regels van schemaevolutie ](../../schema/composition.md#evolution) voor meer informatie.
+De workflow voor het maken van schema&#39;s wordt weergegeven. Selecteer **[!UICONTROL Other]** in de sectie [!UICONTROL Schema details] . Er wordt een lijst met beschikbare klassen weergegeven. Selecteer **[!UICONTROL Create class]**.
 
 ![ het [!UICONTROL Create schema] werkschema met [!UICONTROL Other] die in de [!UICONTROL Schema details] sectie wordt benadrukt.](../../images/ui/resources/classes/other-schema-details.png)
 
-Selecteer een keuzerondje om de klassen te filteren op basis van het feit of ze aangepaste of standaardklassen zijn. U kunt de beschikbare resultaten ook filteren op basis van hun industrie of naar een specifieke klasse zoeken met het zoekveld.
+Het dialoogvenster [!UICONTROL Create class] wordt weergegeven. Voer een [!UICONTROL Display name] en [!UICONTROL Description] in voor de klasse en kies het bedoelde gedrag van de klasse met de keuzerondjes. Klassen kunnen van het type [!UICONTROL Record] of [!UICONTROL Time-series] zijn. Selecteer **[!UICONTROL Create]** om uw keuzes te bevestigen en terug te keren naar het tabblad [!UICONTROL Classes] .
 
-![ het [!UICONTROL Create schema] werkschema met de onderzoeksbar, [!UICONTROL Custom], en [!UICONTROL Industries] benadrukte.](../../images/ui/resources/classes/filter-and-search.png)
+![ de [!UICONTROL Create class] dialoog met [!UICONTROL Create] benadrukte.](../../images/ui/resources/classes/create-class-from-schema.png)
 
-Om u te helpen op de aangewezen klasse beslissen, zijn er info (![ een infopictogram.](/help/images/icons/info.png)) en voorproef (![ een voorproefpictogram.](/help/images/icons/preview.png) ) voor elke klasse. Het infopictogram opent een dialoogvenster met een beschrijving van de klasse en de industrie waaraan deze is gekoppeld. Het voorproefpictogram opent een voorproefdialoog voor de klasse die een schemadiagram en zijn eigenschappen bevat.
+De lijst met klassen wordt vernieuwd in de sectie [!UICONTROL Schema details] en de nieuwe klasse wordt automatisch geselecteerd. Selecteer **[!UICONTROL Next]** om door te gaan met het maken van uw schema.
 
-![ een voorproef van de geselecteerde klasse met het schemadiagram en de benadrukte klasseneigenschappen.](../../images/ui/resources/classes/class-preview.png)
+![ de [!UICONTROL Schema details] sectie met de nieuwe geselecteerde klasse en [!UICONTROL Next] benadrukte.](../../images/ui/resources/classes/select-new-class.png)
 
-Selecteer een willekeurige rij om een klasse te kiezen en selecteer vervolgens **[!UICONTROL Next]** om uw keuze te bevestigen.
+Nadat u een klasse hebt geselecteerd, wordt de sectie [!UICONTROL Name and review] weergegeven. In deze sectie geeft u een naam en beschrijving op om uw schema te identificeren. &#x200B;De basisstructuur van het schema (verstrekt door de klasse) wordt getoond in het canvas voor u om uw geselecteerde klasse en schemastructuur te herzien en te verifiëren.
 
-![ het [!UICONTROL Create schema] werkschema met een klasse die van de lijst van beschikbare klassen wordt geselecteerd en [!UICONTROL Next] benadrukt.](../../images/ui/resources/classes/select-class.png)
+Voer in het tekstveld een mensvriendelijke [!UICONTROL Schema display name] in. Voer vervolgens een geschikte beschrijving in om uw schema te identificeren. Wanneer u de schemastructuur hebt herzien en met uw montages gelukkig bent, uitgezocht **[!UICONTROL Finish]** om uw schema tot stand te brengen.
 
-Het gedeelte [!UICONTROL Name and review] van de workflow wordt weergegeven. Geef in deze sectie een naam en beschrijving op om uw schema te identificeren. &#x200B;De basisstructuur van het schema (verstrekt door de klasse) wordt getoond in het canvas voor u om uw geselecteerde klasse en schemastructuur te herzien en te verifiëren.
-
-Voer in het tekstveld [!UICONTROL Schema display name] een korte, beschrijvende, unieke en gebruikersvriendelijke naam in voor de klasse. Voer vervolgens een geschikte beschrijving in om het gedrag te identificeren van de gegevens die in het schema worden gedefinieerd. Wanneer u de schemastructuur hebt herzien en met uw montages gelukkig bent, uitgezocht **[!UICONTROL Finish]** om uw schema tot stand te brengen.
-
-![ de [!UICONTROL Name and review] sectie van het [!UICONTROL Create schema] werkschema met [!UICONTROL Schema display name], [!UICONTROL Description], en [!UICONTROL Finish] benadrukte.](../../images/ui/resources/classes/name-and-review-class.png)
-
-De Schema-editor wordt weergegeven, waarbij de structuur van het schema op het canvas wordt weergegeven. U kunt [ nu beginnen toevoegend gebieden aan de klasse ](#add-fields).
-
-![ de Redacteur van het Schema met de structuur van het schema die in het canvas wordt getoond.](../../images/ui/resources/classes/edit.png)
+![ de [!UICONTROL Name and review] sectie van het [!UICONTROL Create schema] werkschema met [!UICONTROL Schema display name], [!UICONTROL Description], en [!UICONTROL Finish] benadrukte.](../../images/ui/resources/classes/schema-details.png)
 
 ## Velden aan een klasse toevoegen {#add-fields}
 
-Als u een schema hebt waarin een aangepaste klasse wordt gebruikt die is geopend in [!UICONTROL Schema Editor] , kunt u beginnen met het toevoegen van velden aan de klasse. Om een nieuw gebied toe te voegen, selecteer **plus (+)** pictogram naast de naam van het schema.
+Als u een schema hebt waarin een aangepaste klasse wordt gebruikt die is geopend in de Schema-editor, kunt u beginnen met het toevoegen van velden aan de klasse. Om een nieuw gebied toe te voegen, selecteer **plus (+)** pictogram naast de naam van het schema.
 
 >[!IMPORTANT]
 >
@@ -116,13 +112,42 @@ Als u een schema hebt waarin een aangepaste klasse wordt gebruikt die is geopend
 
 Er verschijnt een tijdelijke aanduiding **[!UICONTROL Untitled Field]** in het canvas en de rechterrails worden bijgewerkt om besturingselementen weer te geven waarmee de eigenschappen van het veld worden geconfigureerd. Selecteer onder **[!UICONTROL Assign to]** de optie **[!UICONTROL Class]** .
 
-![ een naamloos gebied op het canvas van de schemaredacteur met Assign aan het gebied van de Klasse wordt geselecteerd en wordt benadrukt die.](../../images/ui/resources/classes/assign-to-class.png)
+![ een naamloos gebied op het canvas van de Redacteur van het Schema met Toewijzen aan [!UICONTROL Class] geselecteerd en benadrukt gebiedsbezit 1}.](../../images/ui/resources/classes/assign-to-class.png)
 
 Zie de gids op [ definiërend gebieden in UI ](../fields/overview.md#define) voor specifieke stappen op om het gebied aan de klasse te vormen en toe te voegen. Ga door met het toevoegen van zoveel velden als nodig zijn voor de klasse. Als u klaar bent, selecteert u **[!UICONTROL Save]** om zowel het schema als de klasse op te slaan.
 
 ![ het onlangs gecreeerd schema op het canvas van de Redacteur van het Schema, met [!UICONTROL Save] benadrukte.](../../images/ui/resources/classes/save.png)
 
 Als u eerder schema&#39;s hebt gecreeerd die deze klasse gebruiken, zullen de onlangs toegevoegde gebieden automatisch in die schema&#39;s verschijnen.
+
+## Een klasse bewerken (#edit-a-class)
+
+>[!NOTE]
+>
+>Alleen aangepaste klassen die door uw organisatie zijn gedefinieerd, kunnen volledig worden bewerkt en aangepast. Voor kernklassen die door Adobe worden gedefinieerd, kunnen alleen de weergavenamen voor hun velden worden bewerkt binnen de context van afzonderlijke schema&#39;s. Zie de sectie op [ het uitgeven vertoningsnamen voor schemagebieden ](./schemas.md#display-names) voor details.
+>
+>Als een aangepaste klasse eenmaal is opgeslagen en in gegevensinvoer is gebruikt, kunnen er daarna alleen additieve wijzigingen in worden aangebracht. Zie de [ regels van schemaevolutie ](../../schema/composition.md#evolution) voor meer informatie.
+
+U kunt een klasse bewerken via de schemaworkflow door een bestaand schema te bewerken dat de klasse uitbreidt of door handmatig een schema te maken. Het is niet mogelijk een klasse rechtstreeks te bewerken. Selecteer een bestaande klasse of **[!UICONTROL Create a schema]** vanuit het tabblad [!UICONTROL Browse] in de [!UICONTROL Schemas] -werkruimte.
+
+![ de Redacteur van het Schema met een bestaande klasse en [!UICONTROL Create a schema] benadrukte.](../../images/ui/resources/classes/edit-class-options.png)
+
+Als u verkiest om een nieuw schema tot stand te brengen, zie de sectie op [ creërend een schema ](#create-schema) voor details. Zodra u klaar bent met het creëren van het schema (of na het selecteren van een bestaand schema) zal de Redacteur van het Schema verschijnen. Als u een bestaand klasseveld wilt bijwerken, selecteert u het veld in de schemastructuur. De informatie van het veld zal in de rechterspoorlijn worden weergegeven. Zorg ervoor dat de [!UICONTROL Assign to]
+optie **[!UICONTROL Class]** is geselecteerd of uw updates hebben geen invloed op de klasse.
+
+![ de Redacteur van het Schema met een geselecteerd en benadrukt gebied, en het juiste spoor blootgesteld, die [!UICONTROL Assign to] benadrukken.](../../images/ui/resources/classes/edit-existing-field.png)
+
+Breng de gewenste wijzigingen in het veld aan en schuif omlaag in de rechterrails om **[!UICONTROL Apply]** te selecteren om uw wijzigingen op te slaan.
+
+>[!IMPORTANT]
+>
+> Om het even welke updates u aan gebieden aanbrengt zullen in alle schema&#39;s worden toegepast die die klasse, na de [ regels van schemaevolutie ](../../schema/composition.md#evolution) gebruiken.
+
+![ de Redacteur van het Schema met een geselecteerd gebied en het juiste spoor blootgesteld, die [!UICONTROL Apply] benadrukken.](../../images/ui/resources/classes/save-changes.png)
+
+Om nieuwe gebieden toe te voegen, volg [ gebieden aan een klasse ](#add-fields-to-a-class) gids toevoegen. Als u klaar bent, selecteert u **[!UICONTROL Save]** om zowel het schema als de klasse op te slaan.
+
+![ de Redacteur van het Schema met [!UICONTROL Save] benadrukte.](../../images/ui/resources/classes/save-schema.png)
 
 ## De klasse van een schema wijzigen {#schema}
 
