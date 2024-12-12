@@ -136,7 +136,7 @@ Met labels voor gegevensgebruik, toegepast op schemaniveau, kunt u gegevenssets 
 Elke dataset heeft de capaciteit om klantenprofielen met zijn ingebedde gegevens te verrijken. Hiervoor moet het schema dat de dataset naleeft, compatibel zijn voor gebruik in [!DNL Real-Time Customer Profile]. Een compatibel schema voldoet aan de volgende vereisten:
 
 * Het schema heeft minstens één die attribuut als identiteitseigenschap wordt gespecificeerd.
-* Het schema heeft een identiteitseigenschap die wordt gedefinieerd als de primaire identiteit.
+* Het schema heeft een identiteitseigenschap die als primaire identiteit wordt bepaald.
 
 Voor meer informatie bij het toelaten van een schema voor [!DNL Profile], zie de [ gebruikersgids van de Redacteur van het Schema ](../../xdm/tutorials/create-schema-ui.md).
 
@@ -182,15 +182,15 @@ Als u het dialoogvenster [!UICONTROL Set data retention] wilt openen, selecteert
 
 ![ het Browse lusje van de werkruimte van Datasets met de ellips en de Vastgestelde benadrukte optie van het beleid van het gegevensbehoud.](../images/datasets/user-guide/set-data-retention-policy-dropdown.png)
 
-Het dialoogvenster [!UICONTROL Set data retention] wordt weergegeven. Het dialoogvenster toont de gebruiksmetriek op sandboxniveau, de gegevens op datasetniveau en de instellingen van het datameer. Deze metrics laten uw gebruik zien in vergelijking met uw rechten. De gegevenssetdetails omvatten de naam van de gegevensset, het type, de status van de Profielenactivering en het huidige gebruik van de gegevensmeeropslag.
+Het dialoogvenster [!UICONTROL Set data retention] wordt weergegeven. Het dialoogvenster toont de gebruiksmaatstaven voor licenties op sandboxniveau, de gegevens op gegevensniveau en de instellingen voor gegevenslagen. Deze cijfers tonen uw gebruik in vergelijking met uw rechten. De gegevens van de dataset omvatten de naam, het type, de status van de Activering van het Profiel, en het huidige gebruik van de gegevensmeeropslag.
 
 >[!NOTE]
 >
->De gegevensmeeropslagmetrics op sandboxniveau zijn nog in ontwikkeling en niet beschikbaar.
+>De gegevens voor de opslag van gegevens op het niveau van de zandbak zijn nog in ontwikkeling en niet beschikbaar.
 
 ![ de Vastgestelde dialoog van het gegevensbehoud.](../images/datasets/user-guide/set-data-retention-dialog.png)
 
-Voordat u het beleid voor gegevenssetretentie configureert, wordt in het dialoogvenster aanbevolen retentie-instellingen weergegeven. Een maand is de standaard aanbevolen retentieperiode. Als u het standaardretentiebeleid wilt aanpassen, selecteert en werkt u het nummer bij en kiest u de gewenste tijdsperiode (dagen, maanden, jaren). U kunt uw bewaarmontages voor de gegevens vormen het meer en de Dienst van het Profiel onafhankelijk.
+Alvorens u het beleid van het gegevenssetbehoud vormt, toont de dialoog geadviseerde bewaarmontages. Eén maand is de aanbevolen standaardretentieperiode. Als u het standaardretentiebeleid wilt aanpassen, selecteert en werkt u het nummer bij en kiest u de gewenste tijdsperiode (dagen, maanden, jaren). U kunt uw bewaarmontages voor de gegevens vormen het meer en de Dienst van het Profiel onafhankelijk.
 
 >[!NOTE]
 > 
@@ -229,7 +229,7 @@ Het dialoogvenster [!UICONTROL Move] Gegevensset naar map wordt weergegeven. Sel
 
 >[!TIP]
 >
->U kunt mappen ook rechtstreeks maken vanuit het dialoogvenster Gegevensset verplaatsen. Om een omslag tot stand te brengen, selecteer het creeer omslagpictogram (![ creeer omslagpictogram.](/help/images/icons/folder-add.png)) rechtsboven in het dialoogvenster.
+>U kunt mappen ook rechtstreeks maken vanuit het dialoogvenster Gegevensset verplaatsen. Om een omslag tot stand te brengen, selecteer het creeer omslagpictogram (![ creeer omslagpictogram.](/help/images/icons/folder-add.png) ) rechtsboven in het dialoogvenster.
 >
 >![ de [!UICONTROL Move] dialoog van de dataset met creeer benadrukt omslagpictogram.](/help/catalog/images/datasets/user-guide/create-folder.png)
 
@@ -273,15 +273,15 @@ De lijst met toegepaste filters wordt boven de gefilterde resultaten weergegeven
 
 ### Systeemgegevenssets tonen {#show-system-datasets}
 
-Door gebrek, slechts worden de datasets die u gegevens hebt ingebed in getoond. Als u de door het systeem gegenereerde gegevenssets wilt zien, schakelt u het selectievakje **[!UICONTROL Yes]** in de sectie [!UICONTROL Show system datasets] in. System-generated datasets worden slechts gebruikt om andere componenten te verwerken. De door het systeem gegenereerde gegevensset voor profielexport wordt bijvoorbeeld gebruikt om het profieldashboard te verwerken.
+Door gebrek, slechts worden de datasets die u gegevens hebt ingebed in getoond. Als u de door het systeem gegenereerde gegevenssets wilt zien, schakelt u het selectievakje **[!UICONTROL Yes]** in de sectie [!UICONTROL Show system datasets] in. Door het systeem gegenereerde gegevenssets worden alleen gebruikt om andere componenten te verwerken. De door het systeem gegenereerde profielexportgegevensset wordt bijvoorbeeld gebruikt om het profieldashboard te verwerken.
 
-![ de filteropties van de Datasets werkruimte met de [!UICONTROL Show system datasets] benadrukte sectie.](../images/datasets/user-guide/show-system-datasets.png)
+![ de filteropties van de werkruimte van Datasets met de [!UICONTROL Show system datasets] benadrukte sectie.](../images/datasets/user-guide/show-system-datasets.png)
 
-### Datasets met filterprofiel {#filter-profile-enabled-datasets}
+### Gegevenssets voor filterprofiel {#filter-profile-enabled-datasets}
 
-De datasets die zijn ingeschakeld voor profielgegevens worden gebruikt om klantprofielen te vullen nadat gegevens zijn opgenomen. Zie de sectie op [ toelatend datasets voor Profiel ](#enable-profile) om meer te leren.
+De datasets die voor de gegevens van het Profiel zijn toegelaten worden gebruikt om klantenprofielen te bevolken nadat de gegevens zijn opgenomen. Zie de sectie op [ toelatend datasets voor Profiel ](#enable-profile) om meer te leren.
 
-Als u uw gegevensset wilt filteren op basis van het feit of de gegevensset is ingeschakeld voor Profiel, schakelt u het selectievakje [!UICONTROL Yes] in bij de filteropties.
+Als u uw gegevensset wilt filteren op basis van de vraag of deze zijn ingeschakeld voor Profiel, schakelt u het selectievakje [!UICONTROL Yes] in bij de filteropties.
 
 ![ de filteropties van de werkruimte van Datasets met de [!UICONTROL Included in Profile] benadrukte sectie.](../images/datasets/user-guide/included-in-profile.png)
 
@@ -369,9 +369,9 @@ De stap **[!UICONTROL Add data]** wordt weergegeven. Upload het CSV-bestand door
 
 ## Gegevens bijhouden
 
-Selecteer in de gebruikersinterface van [!DNL Experience Platform] de optie **[!UICONTROL Monitoring]** in de navigatie links. Met het dashboard van **[!UICONTROL Monitoring]** kunt u de status van binnenkomende gegevens van batchgewijze of streaming opname bekijken. Selecteer **[!UICONTROL Batch end-to-end]** of **[!UICONTROL Streaming end-to-end]** als u de status van afzonderlijke batches wilt weergeven. De dashboards geven een overzicht van alle batch- of streaming-invoegbewerkingen, inclusief de stappen die zijn gelukt, mislukt of nog in uitvoering zijn. Elke lijst verstrekt details van de partij, met inbegrip van partijidentiteitskaart, de naam van de doeldataset, en het aantal opgenomen verslagen. Als de doelgegevensset is ingeschakeld voor [!DNL Profile] , wordt ook het aantal opgenomen identiteits- en profielrecords weergegeven.
+Selecteer **[!UICONTROL Monitoring]** in de gebruikersinterface van [!DNL Experience Platform] in de linkernavigatie. Met het dashboard **[!UICONTROL Monitoring]** kunt u de status van binnenkomende gegevens van batch- of streaming invoer bekijken. Als u de status van afzonderlijke batches wilt weergeven, selecteert u **[!UICONTROL Batch end-to-end]** of **[!UICONTROL Streaming end-to-end]** . De dashboards maken een lijst van alle partij of het stromen ingangen, met inbegrip van die die succesvol zijn, ontbroken, of nog lopend. Elke lijst verstrekt details van de partij, met inbegrip van partijidentiteitskaart, de naam van de doeldataset, en het aantal verslagen die worden opgenomen. Als de doeldataset voor [!DNL Profile] wordt toegelaten, wordt het aantal ingebedde identiteit en profielverslagen ook getoond.
 
-![ het controlebatch scherm van begin tot eind wordt getoond. Zowel worden de controle als partij-aan-partij benadrukt.](../images/datasets/user-guide/batch-listing.png)
+![ het controlerende batch scherm van begin tot eind wordt getoond. Zowel worden de controle als partij-aan-partij benadrukt.](../images/datasets/user-guide/batch-listing.png)
 
 U kunt op een individu **[!UICONTROL Batch ID]** selecteren om toegang te krijgen tot het **[!UICONTROL Batch overview]** -dashboard en details voor de batch bekijken, inclusief foutlogboeken als de batch niet wordt opgenomen.
 

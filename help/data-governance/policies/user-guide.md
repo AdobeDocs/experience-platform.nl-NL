@@ -51,11 +51,11 @@ Selecteer een vermeld beleid om zijn beschrijving en type te bekijken. Als een d
 
 ## Een aangepast beleid maken {#create-policy}
 
-Als u een nieuw aangepast beleid voor gegevensgebruik wilt maken, selecteert u **[!UICONTROL Create policy]** in de rechterbovenhoek van het tabblad **[!UICONTROL Browse]** in de **[!UICONTROL Policies]** -werkruimte.
+Als u een nieuw beleid voor aangepast gegevensgebruik wilt maken, selecteert u **[!UICONTROL Create policy]** in de rechterbovenhoek van het tabblad **[!UICONTROL Browse]** in de werkruimte van **[!UICONTROL Policies]** .
 
 ![](../images/policies/create-policy-button.png)
 
-Afhankelijk van of u deel uitmaakt van de bètaversie voor toestemmingsbeleid, vindt een van de volgende situaties plaats:
+Afhankelijk van of u deel uitmaakt van de bètaversie voor het toestemmingsbeleid, komt een van de volgende situaties voor:
 
 * Als u geen deel van bèta bent, wordt u onmiddellijk gebracht aan het werkschema voor [ creërend een gegeven governancebeleid ](#create-governance-policy).
 * Als u deel van bèta uitmaakt, verstrekt een dialoog een extra optie om [ een toestemmingsbeleid ](#consent-policy) tot stand te brengen.
@@ -65,11 +65,11 @@ Afhankelijk van of u deel uitmaakt van de bètaversie voor toestemmingsbeleid, v
 
 >[!NOTE]
 >
->Het toestemmingsbeleid is momenteel alleen beschikbaar voor organisaties die een Adobe hebben aangeschaft voor het Health Care Shield of het Adobe Privacy &amp; Security Shield.
+>Het beleid voor toestemming is momenteel alleen beschikbaar voor organisaties die een Adobe Healthcare Shield of Adobe Privacy &amp; Security Shield hebben aangeschaft.
 
-Beleid met governance en toestemming kan samen worden gebruikt om robuuste regels te creëren voor het besturen van doelgroepen die aan een bestemming zijn toegewezen. Toestemmingsbeleid is inclusief van aard, wat betekent dat ze bepalen welke profielen kunnen worden opgenomen in elke marketingervaring. Omgekeerd sluit het beleid het gebruik van specifieke gelabelde kenmerken uit van configuratie voor activering.
+Het beleid van bestuur en toestemming kan samen worden gebruikt om robuuste regels te creëren voor het besturen van publiek dat aan een bestemming wordt toegewezen. Het beleid van de toestemming is inclusief van aard, wat betekent zij dicteren welke profielen in elke marketing ervaring kunnen worden omvat. Omgekeerd sluit het governancebeleid het gebruik van specifieke gelabelde kenmerken uit dat dit voor activering wordt geconfigureerd.
 
-Door dit gedrag te gebruiken, kunt u een combinatie van beleid en toestemmingsregels opzetten die de correcte profielen omvatten, maar verhindert u gegevens op te nemen die tegen uw vastgestelde organisatorische regels indruisen. Een voorbeeldscenario zou zijn, waarbij u gevoelige gegevens wilt uitsluiten van opname, maar toch gebruikers met toestemming kunt targeten voor marketing via social media. De benodigde stappen voor dit scenario worden in de onderstaande infographic beschreven.
+Door dit gedrag te gebruiken, kunt u opstelling een combinatie beleid en toestemmingsregels die de correcte profielen omvatten, maar u verhindert om gegevens te omvatten die tegen uw vastgestelde organisatorische regels gaan. Een voorbeeldscenario zou zijn, waarbij u gevoelige gegevens wilt uitsluiten van opname, maar nog wel geconverteerde gebruikers voor marketing via sociale media kunt aanwijzen. De noodzakelijke stappen voor dit scenario worden geschetst in hieronder informatie.
 
 ![ een infographic die de stappen schetst om governance en toestemmingsbeleid samen te gebruiken om robuuste regels voor het besturen van publiek tot stand te brengen.](../images/policies/governance-and-consent-policies-infographic.png)
 
@@ -169,25 +169,25 @@ Het toestemmingsbeleid wordt nu gecreeerd, en zijn status wordt geplaatst aan [!
 
 #### Beleidshandhaving verifiëren
 
-Nadat u een toestemmingsbeleid hebt gemaakt en ingeschakeld, kunt u een voorvertoning weergeven van de invloed die dit heeft op uw goedgekeurde doelgroepen wanneer u segmenten activeert naar bestemmingen. Zie de sectie over [ evaluatie van het toestemmingsbeleid ](../enforcement/auto-enforcement.md#consent-policy-evaluation) voor meer informatie.
+Nadat u een toestemmingsbeleid hebt gecreeerd en toegelaten, kunt u voorproef hoe het uw toegelaten publiek wanneer het activeren van segmenten aan bestemmingen beïnvloedt. Zie de sectie over [ evaluatie van het toestemmingsbeleid ](../enforcement/auto-enforcement.md#consent-policy-evaluation) voor meer informatie.
 
 ## Een beleid in- of uitschakelen {#enable}
 
 Alle beleidsregels voor gegevensgebruik (inclusief kernbeleidsregels die door Adobe worden verschaft) zijn standaard uitgeschakeld. Voor een individueel beleid dat voor handhaving moet worden overwogen, moet u dat beleid manueel toelaten door API of UI.
 
-U kunt het beleid in- of uitschakelen via het tabblad **[!UICONTROL Browse]** in de **[!UICONTROL Policies]** -werkruimte. Selecteer een aangepast beleid in de lijst om de details ervan rechts weer te geven. Selecteer onder **[!UICONTROL Status]** de schakelknop om het beleid in of uit te schakelen.
+U kunt beleid in- of uitschakelen op het tabblad **[!UICONTROL Browse]** in de **[!UICONTROL Policies]** -werkruimte. Selecteer een aangepast beleid in de lijst om de details ervan rechts weer te geven. Selecteer onder **[!UICONTROL Status]** de schakelknop om het beleid in of uit te schakelen.
 
 ![](../images/policies/enable-policy.png)
 
 ## Marketingacties weergeven {#view-marketing-actions}
 
-Selecteer in de **[!UICONTROL Policies]** -werkruimte het tabblad **[!UICONTROL Marketing actions]** om een lijst weer te geven met beschikbare marketingacties die zijn gedefinieerd door de Adobe en uw eigen organisatie.
+Selecteer in de werkruimte **[!UICONTROL Policies]** het tabblad **[!UICONTROL Marketing actions]** om een lijst weer te geven met beschikbare marketingacties die door de Adobe en uw eigen organisatie zijn gedefinieerd.
 
 ![](../images/policies/marketing-actions.png)
 
 ## Een marketingactie maken {#create-marketing-action}
 
-Als u een nieuwe aangepaste marketingactie wilt maken, selecteert u **[!UICONTROL Create marketing action]** in de rechterbovenhoek van het tabblad **[!UICONTROL Marketing actions]** in de **[!UICONTROL Policies]** -werkruimte.
+Als u een nieuwe aangepaste marketingactie wilt maken, selecteert u **[!UICONTROL Create marketing action]** in de rechterbovenhoek van de tab **[!UICONTROL Marketing actions]** in de werkruimte van **[!UICONTROL Policies]** .
 
 ![](../images/policies/create-marketing-action.png)
 
@@ -205,7 +205,7 @@ De nieuwe handeling wordt weergegeven op het tabblad **[!UICONTROL Marketing act
 >
 >Alleen aangepaste marketingacties die door uw organisatie zijn gedefinieerd, kunnen worden bewerkt. Marketingacties die door Adobe worden gedefinieerd, kunnen niet worden gewijzigd of verwijderd.
 
-Selecteer in de werkruimte **[!UICONTROL Policies]** het tabblad **[!UICONTROL Marketing actions]** om een lijst weer te geven met beschikbare marketingacties die door de Adobe en uw eigen organisatie zijn gedefinieerd. Selecteer een aangepaste marketingactie in de lijst en bewerk vervolgens de details van de marketingactie met behulp van de beschikbare velden in de rechtersectie.
+Selecteer in de werkruimte **[!UICONTROL Policies]** het tabblad **[!UICONTROL Marketing actions]** om een lijst weer te geven met beschikbare marketingacties die door de Adobe en uw eigen organisatie zijn gedefinieerd. Selecteer een aangepaste marketingactie in de lijst en gebruik vervolgens de beschikbare velden in de rechtersectie om de details van de marketingactie te bewerken.
 
 ![](../images/policies/edit-marketing-action.png)
 
@@ -213,7 +213,7 @@ Als de marketingactie niet wordt gebruikt door een bestaand gebruiksbeleid, kunt
 
 >[!NOTE]
 >
->Als u probeert een marketingactie te verwijderen die door een bestaand beleid wordt gebruikt, verschijnt een foutbericht om aan te geven dat de verwijderpoging is mislukt.
+>Wanneer wordt geprobeerd een marketingactie te verwijderen die door een bestaand beleid wordt gebruikt, verschijnt een foutbericht dat aangeeft dat de verwijderpoging is mislukt.
 
 ![](../images/policies/delete-marketing-action.png)
 
@@ -221,6 +221,6 @@ Als de marketingactie niet wordt gebruikt door een bestaand gebruiksbeleid, kunt
 
 Dit document biedt een overzicht van het beheer van beleidsregels voor gegevensgebruik in de gebruikersinterface van [!DNL Experience Platform] . Voor stappen op hoe te om beleid te beheren gebruikend [!DNL Policy Service API], zie de [ ontwikkelaarsgids ](../api/getting-started.md). Voor informatie over hoe te om het beleid van het gegevensgebruik af te dwingen, zie het [ overzicht van de beleidshandhaving ](../enforcement/overview.md).
 
-De volgende video laat zien hoe u met het gebruiksbeleid kunt werken in de gebruikersinterface van [!DNL Experience Platform] :
+In de volgende video wordt een demonstratie gegeven van het werken met gebruiksbeleid in de gebruikersinterface van [!DNL Experience Platform] :
 
 >[!VIDEO](https://video.tv.adobe.com/v/32977?quality=12&learn=on)

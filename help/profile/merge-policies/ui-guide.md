@@ -15,7 +15,7 @@ ht-degree: 0%
 
 Met Adobe Experience Platform kunt u gegevensfragmenten uit meerdere bronnen samenvoegen en combineren om een volledig beeld van elk van uw individuele klanten te krijgen. Wanneer u deze gegevens samenbrengt, zijn samenvoegbeleidsregels de regels die [!DNL Platform] gebruikt om te bepalen hoe de prioriteit van gegevens wordt bepaald en welke gegevens worden gecombineerd om de verenigde weergave te maken.
 
-Met behulp van RESTful-API&#39;s of de gebruikersinterface kunt u een nieuw samenvoegbeleid maken, het bestaande beleid beheren en een standaardsamenvoegbeleid voor uw organisatie instellen. Deze handleiding bevat stapsgewijze instructies voor het werken met samenvoegbeleidsregels met behulp van de Adobe Experience Platform-gebruikersinterface (UI).
+Gebruikend RESTful APIs of het gebruikersinterface, kunt u nieuw samenvoegbeleid tot stand brengen, bestaand beleid beheren, en een standaardsamenvoegbeleid voor uw organisatie plaatsen. Deze handleiding bevat stapsgewijze instructies voor het werken met samenvoegbeleidsregels via de gebruikersinterface van Adobe Experience Platform (UI).
 
 Om meer over samenvoegingsbeleid te leren en zij rol zij binnen Experience Platform spelen, gelieve te beginnen door het [ overzicht van het fusiebeleid ](overview.md) te lezen.
 
@@ -23,7 +23,7 @@ Om meer over samenvoegingsbeleid te leren en zij rol zij binnen Experience Platf
 
 Deze handleiding vereist een goed begrip van verschillende belangrijke functies van [!DNL Experience Platform] . Lees de documentatie voor de volgende services voordat u deze handleiding volgt:
 
-* [ Real-Time Klantprofiel ](../home.md): Verstrekt een verenigd, real-time consumentenprofiel dat op samengevoegde gegevens van veelvoudige bronnen wordt gebaseerd.
+* [ Real-Time Profiel van de Klant ](../home.md): Verstrekt een verenigd, real-time consumentenprofiel dat op samengevoegde gegevens van veelvoudige bronnen wordt gebaseerd.
 * [ de Dienst van de Identiteit van Adobe Experience Platform ](../../identity-service/home.md): Laat Real-Time het Profiel van de Klant toe door identiteiten van ongelijke gegevensbronnen te overbruggen die in [!DNL Platform] worden opgenomen.
 * [ Model van de Gegevens van de Ervaring (XDM) ](../../xdm/home.md): Het gestandaardiseerde kader waardoor [!DNL Platform] gegevens van de klantenervaring organiseert.
 
@@ -60,12 +60,12 @@ De eerste stap in het werkschema staat u toe om uw samenvoegbeleid te vormen doo
 
 * **[!UICONTROL Name]**: De naam van het samenvoegbeleid moet beschrijvend maar beknopt zijn.
 * **[!UICONTROL Schema class]**: De XDM-schemaklasse die aan het samenvoegbeleid is gekoppeld. This specifies the schema class for which this merge policy is created. Organisaties kunnen meerdere samenvoegbeleidsregels per schemaklasse maken. Momenteel is alleen de klasse [!UICONTROL XDM Individual Profile] beschikbaar in de gebruikersinterface. U kunt een voorbeeld van het samenvoegingsschema voor de schemaklasse bekijken door **[!UICONTROL View Union Schema]** te selecteren. Voor meer informatie, zie de sectie over [ het bekijken van het unieschema ](#view-union-schema) dat volgt.
-* **[!UICONTROL ID stitching]**: In dit veld wordt gedefinieerd hoe u de verwante identiteiten van een klant kunt bepalen. Er zijn twee mogelijke waarden voor identiteitsstitching, en het is belangrijk om te begrijpen hoe het type identiteitsstitching dat u selecteert uw gegevens zal beïnvloeden. Om meer te leren, te verwijzen gelieve naar het [ overzicht van het samenvoegingsbeleid ](overview.md).
-   * **[!UICONTROL None]**: geen identiteitsstitching uitvoeren.
+* **[!UICONTROL ID stitching]**: In dit veld wordt gedefinieerd hoe de verwante identiteiten van een klant worden bepaald. Er zijn twee mogelijke waarden voor identiteitsstitching, en het is belangrijk om te begrijpen hoe het type van identiteitsstitching dat u selecteert uw gegevens zal beïnvloeden. Om meer te leren, te verwijzen gelieve naar het [ overzicht van het samenvoegbeleid ](overview.md).
+   * **[!UICONTROL None]**: voer geen identiteitsstitching uit.
    * **[!UICONTROL Private Graph]**: identiteitsstitching uitvoeren op basis van uw persoonlijke identiteitsgrafiek.
 * **[!UICONTROL Default merge policy]**: Een schakelknop waarmee u kunt bepalen of dit samenvoegbeleid al dan niet de standaardinstelling voor uw organisatie is. Als de kiezer is ingeschakeld, wordt een waarschuwing weergegeven met de vraag of u het standaardsamenvoegbeleid van uw organisatie wilt wijzigen. Zie het [ overzicht van het samenvoegingsbeleid ](overview.md) om meer over standaardsamenvoegingsbeleid te leren.
   ![ popover A die verklaart wat gebeurt wanneer het fusiebeleid als standaardsamenvoegbeleid wordt geplaatst.](../images/merge-policies/create-make-default.png)
-* **[!UICONTROL Active-On-Edge Merge Policy]**: Een schakelknop waarmee u kunt bepalen of dit samenvoegbeleid al dan niet actief is aan de rand. Om ervoor te zorgen dat alle profielgebruikers met dezelfde weergave aan de randen werken, kan het samenvoegbeleid als actief aan de rand worden gemarkeerd. Een publiek kan alleen aan de rand worden geactiveerd (gemarkeerd als een randpubliek) als het is gekoppeld aan een samenvoegbeleid dat als actief aan de rand is gemarkeerd. Als een publiek **niet** gebonden aan een fusiebeleid is dat als actief op rand wordt gemerkt, zal het publiek niet als actief op rand worden gemerkt, en zal als het stromen publiek worden gemerkt. Bovendien, kan elke zandbak in een Organisatie **slechts één** fusiebeleid hebben dat op rand actief is.
+* **[!UICONTROL Active-On-Edge Merge Policy]**: Een schakelknop waarmee u kunt bepalen of dit samenvoegbeleid al dan niet actief is aan de rand. Om ervoor te zorgen dat alle profielgebruikers met dezelfde weergave aan de randen werken, kan het samenvoegbeleid als actief aan de rand worden gemarkeerd. Een publiek kan alleen aan de rand worden geactiveerd (gemarkeerd als een randpubliek) als het is gekoppeld aan een samenvoegbeleid dat als actief aan de rand is gemarkeerd. Als een publiek **niet** gebonden aan een fusiebeleid is dat als actief op rand duidelijk is, zal het publiek niet als actief op rand worden gemerkt, en zal als het stromen publiek worden gemerkt. Bovendien, kan elke zandbak in een Organisatie **slechts één** fusiebeleid hebben dat op rand actief is.
 
 Nadat de vereiste velden zijn voltooid, kunt u **[!UICONTROL Next]** selecteren om door te gaan met de workflow.
 
@@ -77,7 +77,7 @@ Wanneer u een samenvoegbeleid maakt of bewerkt, kunt u het samenvoegingsschema v
 
 ![ de &quot;knoop van het Schema van de Unie van de Mening&quot;wordt benadrukt op het Nieuwe werkschema van het fusiebeleid.](../images/merge-policies/view-union-schema.png)
 
-Hiermee opent u het dialoogvenster [!UICONTROL View Union Schema] met alle schema&#39;s, identiteiten en relaties die bij het samenvoegingsschema horen. U kunt het dialoogvenster gebruiken om het samenvoegingsschema te verkennen op dezelfde manier als u zou doen door het tabblad [!UICONTROL Union Schema] in de sectie [!UICONTROL Profiles] van de gebruikersinterface van het platform te openen.
+Hiermee opent u het dialoogvenster [!UICONTROL View Union Schema] waarin alle bijdragende schema&#39;s, identiteiten en relaties worden weergegeven die aan het samenvoegingsschema zijn gekoppeld. U kunt het dialoogvenster gebruiken om het samenvoegingsschema te verkennen op dezelfde manier als u zou doen door het tabblad [!UICONTROL Union Schema] in de sectie [!UICONTROL Profiles] van de gebruikersinterface van het platform te openen.
 
 Voor gedetailleerde informatie over unieschema&#39;s, met inbegrip van hoe te met hen in het [!UICONTROL Union Schema] lusje of de [!UICONTROL View Union Schema] dialoog in het werkschema van het fusiebeleid wordt getoond, gelieve de [ gids UI van het unieschema ](../ui/union-schema.md) te bezoeken.
 
@@ -113,9 +113,9 @@ U kunt tot 50 datasets van de datasetlijst selecteren om in het fusiebeleid te o
 >
 >Het getal tussen haakjes naast **[!UICONTROL Profile datasets]** (bijvoorbeeld `(37)` in de weergegeven afbeelding) geeft het totale aantal profielgegevenssets weer dat beschikbaar is voor selectie.
 
-Als datasets zijn geselecteerd, worden deze toegevoegd aan de sectie **[!UICONTROL Select datasets]** , zodat u de gegevenssets kunt slepen en neerzetten en volgens de gewenste prioriteit kunt rangschikken. Aangezien de datasets in de lijst worden aangepast, zal de rangschikking (1, 2, 3, enz.) naast de dataset bijwerken, tonend prioriteit (1 die de hoogste prioriteit wordt gegeven, dan 2, en verder).
+Als datasets zijn geselecteerd, worden deze toegevoegd aan de sectie **[!UICONTROL Select datasets]** , zodat u de gegevenssets kunt slepen en neerzetten en volgens de gewenste prioriteit kunt rangschikken. Aangezien de datasets in de lijst worden aangepast, zal rangschikken (1, 2, 3, enz.) naast de dataset bijwerken, tonend prioriteit (1 die de hoogste prioriteit wordt gegeven, dan 2, en verder).
 
-Als u een gegevensset selecteert, wordt ook de sectie **[!UICONTROL Union schema]** bijgewerkt, waarin de velden in het samenvoegingsschema worden weergegeven waaraan elke gegevensset gegevens bijdraagt. Voor meer informatie over unieschema&#39;s, met inbegrip van hoe te met de visualisaties in UI in wisselwerking te staan, te verwijzen gelieve de [ gids UI van het unieschema ](../ui/union-schema.md)
+Als u een gegevensset selecteert, wordt ook de sectie **[!UICONTROL Union schema]** bijgewerkt, waarin de velden in het samenvoegingsschema worden weergegeven waaraan elke gegevensset gegevens levert. Voor meer informatie over verenigingsschema&#39;s, met inbegrip van hoe te met de visualisaties in UI in wisselwerking te staan, gelieve de [ gids van het uniesschema UI ](../ui/union-schema.md) te verwijzen
 
 ![ een beeld dat de datasetbelangrijkheid toont die, samen met de overeenkomstige montages wordt geselecteerd u moet kiezen als die optie wordt geselecteerd.](../images/merge-policies/dataset-precedence.png)
 
@@ -123,11 +123,11 @@ Als u een gegevensset selecteert, wordt ook de sectie **[!UICONTROL Union schema
 
 ## [!UICONTROL Select ExperienceEvent datasets] {#select-experienceevent-datasets}
 
-In de volgende stap in de workflow moet u ExperienceEvent-gegevenssets selecteren. Dit scherm wordt beïnvloed door de samenvoegingsmethode die u op het [[!UICONTROL Select Profile datasets]](#select-profile-datasets) scherm hebt geselecteerd.
+De volgende stap in het werkschema vereist u om datasets te selecteren ExperienceEvent. Dit scherm wordt beïnvloed door de fusiemethode die u op het [[!UICONTROL Select Profile datasets]](#select-profile-datasets) scherm selecteerde.
 
 >[!BEGINTABS]
 
->[!TAB  Geordende Tijd stempel ]
+>[!TAB  geordende timestamp ]
 
 Als u **[!UICONTROL Timestamp ordered]** als samenvoegmethode voor de datasets van het Profiel selecteerde, zullen de attributen van de onlangs bijgewerkte datasets ExperienceEvent ook hier belangrijkheid nemen.
 
@@ -179,9 +179,9 @@ Selecteer **[!UICONTROL Finish]** om een nieuw samenvoegbeleid te maken.
 
 Als u **[!UICONTROL Dataset precedence]** als samenvoegmethode voor uw samenvoegbeleid selecteerde, omvatten de lijsten van Profiel en de datasets ExperienceEvent slechts de datasets van het Profiel en van ExperienceEvent die u tijdens het creatiewerkschema selecteerde, respectievelijk. De volgorde van de profielgegevenssets moet overeenkomen met de prioriteit die u tijdens het maken hebt opgegeven. Als dit niet het geval is, gebruikt u de knop [!UICONTROL Back] om terug te keren naar de vorige workflowstappen en de prioriteit aan te passen.
 
-In de tabel **[!UICONTROL Preview data]** worden voorbeeldprofielrecords weergegeven die gebruikmaken van de geselecteerde gegevenssets. Zo kunt u een voorvertoning bekijken van hoe een klantprofiel eruitziet voordat u uw samenvoegingsbeleid opslaat.
+In de tabel **[!UICONTROL Preview data]** worden voorbeeldprofielrecords weergegeven die de geselecteerde gegevenssets gebruiken. Zo kunt u een voorvertoning bekijken van een klantprofiel voordat u het samenvoegbeleid opslaat.
 
-Selecteer **[!UICONTROL Finish]** om uw nieuwe samenvoegingsbeleid te maken.
+Selecteer **[!UICONTROL Finish]** om een nieuw samenvoegbeleid te maken.
 
 ![ de pagina van het Overzicht wordt getoond. Op deze pagina kunt u de details van het zojuist gemaakte samenvoegbeleid controleren.](../images/merge-policies/dataset-precedence-review.png)
 

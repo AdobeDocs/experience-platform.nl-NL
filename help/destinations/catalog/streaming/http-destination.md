@@ -19,13 +19,13 @@ ht-degree: 0%
 >
 > Deze bestemming is beschikbaar slechts aan [ Adobe Real-time Customer Data Platform Ultimate ](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform.html) klanten.
 
-De HTTP API-bestemming is een [!DNL Adobe Experience Platform] streamingbestemming waarmee u profielgegevens kunt verzenden naar HTTP-eindpunten van derden.
+De HTTP API-bestemming is een [!DNL Adobe Experience Platform] streamingbestemming die u helpt profielgegevens naar HTTP-eindpunten van derden te verzenden.
 
 Om profielgegevens naar eindpunten van HTTP te verzenden, moet u eerst [ met de bestemming ](#connect-destination) in [!DNL Adobe Experience Platform] verbinden.
 
 ## Gebruiksscenario’s {#use-cases}
 
-Met de HTTP API-bestemming kunt u XDM-profielgegevens en -doelgroepen exporteren naar algemene HTTP-eindpunten. Daar kunt u uw eigen analyses uitvoeren of andere bewerkingen uitvoeren die u nodig hebt voor profielgegevens die uit het Experience Platform zijn geëxporteerd.
+Met de HTTP API-bestemming kunt u XDM-profielgegevens en -publiek exporteren naar algemene HTTP-eindpunten. Daar kunt u uw eigen analyses uitvoeren of andere bewerkingen uitvoeren die u nodig hebt voor profielgegevens die uit het Experience Platform zijn geëxporteerd.
 
 De eindpunten van HTTP kunnen of de systemen van klanten of derdeoplossingen zijn.
 
@@ -125,11 +125,11 @@ Om met deze bestemming te verbinden, volg de stappen die in het [ leerprogramma 
 >title="Type clientgegevens"
 >abstract="Selecteer **Gecodeerde Vorm van het Lichaam** om cliëntidentiteitskaart en cliëntgeheim in het lichaam van het verzoek te omvatten of **Basisvergunning** om cliëntidentiteitskaart en cliëntgeheim in een vergunningskopbal te omvatten. Voorbeelden weergeven in de documentatie."
 
-#### Tokenverificatie aan toonder {#bearer-token-authentication}
+#### Toekennerverificatie {#bearer-token-authentication}
 
-Als u het **[!UICONTROL Bearer token]** -verificatietype selecteert om te verbinden met uw HTTP-eindpunt, voert u de onderstaande velden in en selecteert u **[!UICONTROL Connect to destination]** :
+Als u het verificatietype **[!UICONTROL Bearer token]** selecteert om verbinding te maken met het HTTP-eindpunt, voert u de onderstaande velden in en selecteert u **[!UICONTROL Connect to destination]** :
 
-![ Beeld van het scherm UI waar u met de bestemming van HTTP kunt verbinden API, gebruikend toonder tokenauthentificatie.](../../assets/catalog/http/http-api-authentication-bearer.png)
+![ Beeld van het scherm UI waar u met de bestemming van HTTP API kunt verbinden, gebruikend toventokenauthentificatie.](../../assets/catalog/http/http-api-authentication-bearer.png)
 
 * **[!UICONTROL Bearer token]**: voeg het token voor toonder in om te verifiëren bij uw HTTP-locatie.
 
@@ -143,9 +143,9 @@ Wanneer u deze verificatie opent, hoeft u alleen **[!UICONTROL Connect to destin
 
 #### OAuth 2 Password authentication {#oauth-2-password-authentication}
 
-Als u het **[!UICONTROL OAuth 2 Password]** -verificatietype selecteert om te verbinden met uw HTTP-eindpunt, voert u de onderstaande velden in en selecteert u **[!UICONTROL Connect to destination]** :
+Als u het verificatietype **[!UICONTROL OAuth 2 Password]** selecteert om verbinding te maken met het HTTP-eindpunt, voert u de onderstaande velden in en selecteert u **[!UICONTROL Connect to destination]** :
 
-![ Beeld van het scherm UI waar u met de bestemming van HTTP kunt verbinden API, gebruikend OAuth 2 met de authentificatie van het Wachtwoord.](../../assets/catalog/http/http-api-authentication-oauth2-password.png)
+![ Beeld van het scherm UI waar u met de bestemming van HTTP API kunt verbinden, gebruikend OAuth 2 met de authentificatie van het Wachtwoord.](../../assets/catalog/http/http-api-authentication-oauth2-password.png)
 
 * **[!UICONTROL Access Token URL]**: De URL aan uw zijde die toegangstokens uitgeeft en, naar keuze, tokens vernieuwt.
 * **[!UICONTROL Client ID]**: De [!DNL client ID] die uw systeem toewijst aan Adobe Experience Platform.
@@ -226,27 +226,27 @@ In de [[!UICONTROL Select attributes]](../../ui/activate-streaming-profile-desti
 
 ## Exportgedrag profiel {#profile-export-behavior}
 
-Experience Platform optimaliseert het profielexportgedrag naar uw HTTP API-bestemming, zodat alleen gegevens worden geëxporteerd naar uw API-eindpunt wanneer relevante updates voor een profiel zijn opgetreden na een doelgroepkwalificatie of andere belangrijke gebeurtenissen. In de volgende situaties worden profielen naar uw doel geëxporteerd:
+Experience Platform optimaliseert het gedrag van de profieluitvoer naar uw bestemming van HTTP API, om gegevens naar uw API eindpunt slechts uit te voeren wanneer de relevante updates aan een profiel na publiekskwalificatie of andere significante gebeurtenissen zijn voorgekomen. In de volgende situaties worden profielen naar uw doel geëxporteerd:
 
-* De profielupdate is bepaald door een wijziging in het lidmaatschap van de doelgroep voor ten minste een van de doelgroepen die aan de bestemming zijn toegewezen. Het profiel is bijvoorbeeld gekwalificeerd voor een van de soorten publiek die aan de bestemming zijn toegewezen of heeft een van de soorten publiek afgesloten die aan de bestemming zijn toegewezen.
+* De profielupdate werd bepaald door een wijziging in het publiekslidmaatschap voor ten minste een van de doelgroepen. Het profiel is bijvoorbeeld gekwalificeerd voor een van de soorten publiek die aan de bestemming zijn toegewezen of heeft een van de soorten publiek afgesloten die aan de bestemming zijn toegewezen.
 * De profielupdate werd bepaald door een verandering in de [ identiteitskaart ](/help/xdm/field-groups/profile/identitymap.md). Een profiel dat bijvoorbeeld al was gekwalificeerd voor een van de soorten publiek dat aan de bestemming is toegewezen, is toegevoegd aan een nieuwe identiteit in het kenmerk Naamplaatje.
 * De profielupdate is bepaald door een wijziging in kenmerken voor ten minste een van de kenmerken die aan de bestemming zijn toegewezen. Een van de kenmerken die in de toewijzingsstap aan het doel is toegewezen, wordt bijvoorbeeld aan een profiel toegevoegd.
 
-In alle hierboven beschreven gevallen worden alleen de profielen waarin relevante updates zijn opgetreden, naar uw bestemming geëxporteerd. Als een publiek dat is toegewezen aan de doelstroom bijvoorbeeld honderd leden heeft en vijf nieuwe profielen in aanmerking komen voor het segment, wordt het exporteren naar uw bestemming steeds opnieuw gestart en worden alleen de vijf nieuwe profielen opgenomen.
+In alle hierboven beschreven gevallen worden alleen de profielen waarin relevante updates zijn opgetreden, naar uw bestemming geëxporteerd. Bijvoorbeeld, als een publiek dat aan de bestemmingsstroom in kaart wordt gebracht honderd leden heeft, en vijf nieuwe profielen voor het segment kwalificeren, is de uitvoer naar uw bestemming incrementeel en omvat slechts de vijf nieuwe profielen.
 
-Alle toegewezen kenmerken worden geëxporteerd voor een profiel, ongeacht de locatie van de wijzigingen. In het voorbeeld hierboven worden alle toegewezen kenmerken voor die vijf nieuwe profielen geëxporteerd, zelfs als de kenmerken zelf niet zijn gewijzigd.
+Alle toegewezen kenmerken worden geëxporteerd voor een profiel, ongeacht de locatie van de wijzigingen. In het voorbeeld hierboven worden alle toegewezen kenmerken voor deze vijf nieuwe profielen geëxporteerd, zelfs als de kenmerken zelf niet zijn gewijzigd.
 
-### Wat bepaalt een gegevensexport en wat er in de export wordt opgenomen {#what-determines-export-what-is-included}
+### Wat bepaalt een gegevensexport en wat wordt opgenomen in de export? {#what-determines-export-what-is-included}
 
 Met betrekking tot het gegeven dat voor een bepaald profiel wordt uitgevoerd, is het belangrijk om de twee verschillende concepten *te begrijpen wat een gegevensuitvoer aan uw bestemming van HTTP API* en *bepaalt welke gegevens in de uitvoer* inbegrepen zijn.
 
 | Wat bepaalt de doelexport | Wat is inbegrepen in de doelexport |
 |---------|----------|
-| <ul><li>Toegewezen kenmerken en doelgroepen fungeren als actiepunt voor het exporteren van een bestemming. Dit betekent dat als een toegewezen publiek de status wijzigt (van `null` in `realized` of van `realized` in `exiting` ) of dat toegewezen kenmerken worden bijgewerkt, een doelexport wordt uitgeschakeld.</li><li>Omdat identiteiten momenteel niet aan de bestemmingen van HTTP kunnen worden in kaart gebracht API, bepalen de veranderingen in om het even welke identiteit op een bepaald profiel ook bestemmingsuitvoer.</li><li>Een wijziging voor een kenmerk wordt gedefinieerd als een update voor het kenmerk, ongeacht of het dezelfde waarde heeft of niet. Dit houdt in dat een overschrijven van een kenmerk als een wijziging wordt beschouwd, zelfs als de waarde zelf niet is gewijzigd.</li></ul> | <ul><li>Het `segmentMembership` -object bevat de doelgroep die is toegewezen in de activeringsgegevens, waarvoor de status van het profiel is gewijzigd na een kwalificatiegebeurtenis of een afsluitgebeurtenis voor de doelgroep. Merk op dat andere niet in kaart gebrachte doelgroepen waarvoor het profiel geschikt voor deel van de bestemmingsuitvoer kan zijn, als deze doelgroepen tot het zelfde [ samenvoegingsbeleid ](/help/profile/merge-policies/overview.md) zoals het publiek behoren dat in activeringsdataflow in kaart wordt gebracht. </li><li>Alle identiteiten in het `identityMap` -object zijn ook opgenomen (Experience Platform ondersteunt momenteel geen identiteitstoewijzing in de HTTP API-bestemming).</li><li>Alleen de toegewezen kenmerken worden opgenomen in de doelexport.</li></ul> |
+| <ul><li>Toegewezen kenmerken en doelgroepen fungeren als actiepunt voor het exporteren van een bestemming. Dit betekent dat als een toegewezen publiek de status wijzigt (van `null` in `realized` of van `realized` in `exiting` ) of dat toegewezen kenmerken worden bijgewerkt, een doelexport wordt uitgeschakeld.</li><li>Omdat identiteiten momenteel niet aan de bestemmingen van HTTP kunnen worden in kaart gebracht API, bepalen de veranderingen in om het even welke identiteit op een bepaald profiel ook bestemmingsuitvoer.</li><li>Een wijziging voor een kenmerk wordt gedefinieerd als een update voor het kenmerk, ongeacht of het dezelfde waarde heeft of niet. Dit houdt in dat een overschrijven van een kenmerk als een wijziging wordt beschouwd, zelfs als de waarde zelf niet is gewijzigd.</li></ul> | <ul><li>Het `segmentMembership` -object bevat het publiek dat is toegewezen in de activeringsgegevensstroom, waarvoor de status van het profiel is gewijzigd na een afsluitgebeurtenis voor kwalificatie of publiek. Merk op dat andere niet in kaart gebrachte publiek waarvoor het profiel dat voor wordt gekwalificeerd deel van de bestemmingsuitvoer kan uitmaken, als deze doelgroepen tot het zelfde [ fusiebeleid ](/help/profile/merge-policies/overview.md) zoals het publiek behoren dat in activeringsdataflow in kaart wordt gebracht. </li><li>Alle identiteiten in het `identityMap` -object worden ook opgenomen (Experience Platform ondersteunt momenteel geen identiteitstoewijzing in de HTTP API-bestemming).</li><li>Alleen de toegewezen kenmerken worden opgenomen in de doelexport.</li></ul> |
 
 {style="table-layout:fixed"}
 
-Neem bijvoorbeeld deze gegevensstroom naar een HTTP-bestemming waar drie doelgroepen zijn geselecteerd in de gegevensstroom en vier kenmerken zijn toegewezen aan de bestemming.
+Bijvoorbeeld, overweeg dit dataflow aan een bestemming van HTTP waar drie publiek in dataflow wordt geselecteerd, en vier attributen worden in kaart gebracht aan de bestemming.
 
 ![ een voorbeeld van een HTTP API bestemmingsdataflow.](/help/destinations/assets/catalog/http/profile-export-example-dataflow.png)
 
@@ -254,7 +254,7 @@ Een profieluitvoer naar de bestemming kan door een profiel worden bepaald dat vo
 
 Vanuit het oogpunt van profielkenmerken bepalen wijzigingen in de vier bovenstaande kenmerken de doelexport en zijn alle vier toegewezen kenmerken in het profiel aanwezig in de gegevensexport.
 
-## Historische back-up van gegevens {#historical-data-backfill}
+## Back-up van historische gegevens {#historical-data-backfill}
 
 Wanneer u een nieuw publiek aan een bestaande bestemming toevoegt, of wanneer u een nieuw doel en kaartpubliek aan het creeert, voert het Experience Platform historische gegevens van de publiekskwalificatie naar de bestemming uit. Profielen die voor het publiek *kwalificeerden alvorens* het publiek aan de bestemming werd toegevoegd worden uitgevoerd naar de bestemming binnen ongeveer één uur.
 
