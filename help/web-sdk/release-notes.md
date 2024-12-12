@@ -3,9 +3,9 @@ title: Opmerkingen bij de release Adobe Experience Platform Web SDK
 description: De nieuwste aanvullende informatie voor de Adobe Experience Platform Web SDK.
 keywords: Adobe Experience Platform Web SDK;Platform Web SDK;Web SDK;release notes;
 exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
-source-git-commit: 3dacc991fd7760c1c358bec07aca83ffeb4f4f4d
+source-git-commit: 3a50468a7596b9ba870920a8188ae50b40aaef69
 workflow-type: tm+mt
-source-wordcount: '2042'
+source-wordcount: '2085'
 ht-degree: 5%
 
 ---
@@ -13,8 +13,14 @@ ht-degree: 5%
 
 # Aanvullende informatie
 
-In dit document worden de releaseopmerkingen voor de Adobe Experience Platform Web SDK besproken.
+In dit document worden de opmerkingen bij de release voor de Adobe Experience Platform Web SDK besproken.
 Voor de recentste versienota&#39;s op de de markeringsuitbreiding van SDK van het Web, zie de [ nota&#39;s van de de marktextensie van SDK van het Web ](../tags/extensions/client/web-sdk/web-sdk-ext-release-notes.md).
+
+## Versie 2.24.1 - zaterdag 6 december 2024
+
+**Vaste en verbeteringen**
+
+- Oplossing van een gebiedsdeelkwestie met betrekking tot [ de Motor van de Regels van Adobe Experience Platform ](https://github.com/adobe/aepsdk-rulesengine-typescript/), die fouten in sommige klantenintegratie veroorzaakte. SDK van het Web vereist nu ](https://github.com/adobe/aepsdk-rulesengine-typescript/) versie 2.0.3 van de Motor van de Regels van 0} Adobe Experience Platform of later.[
 
 ## Versie 2.24.0 - vrijdag 31 oktober 2024
 
@@ -44,7 +50,7 @@ Voor de recentste versienota&#39;s op de de markeringsuitbreiding van SDK van he
 
 **Bevestigingen en verbeteringen**
 
-- Probleem verholpen waarbij cookies niet correct werden geschreven tijdens het lokaal uitvoeren van de Web SDK.
+- Probleem verholpen waarbij cookies niet correct werden geschreven wanneer de Web SDK lokaal werd uitgevoerd.
 
 ## Versie 2.2.2.0 - 22 augustus 2024
 
@@ -90,7 +96,7 @@ Voor de recentste versienota&#39;s op de de markeringsuitbreiding van SDK van he
 
 - Probleem verholpen waarbij identiteitsfouten andere fouten maskeerden en identiteitsfouten veranderden in waarschuwingen.
 - Probleem verholpen waarbij de onderzijde van pagina-aanroepen nooit zouden worden verzonden wanneer de bovenkant van de pagina-aanroep was ingesteld op `renderDecisions` `false` .
-- Probleem verholpen waarbij de web SDK geen interdomeinidentiteiten kon lezen als er meerdere `adobe_mc` queryreeksparameters waren.
+- Probleem verholpen waarbij Web SDK geen interdomein-identiteiten kon lezen als er meerdere `adobe_mc` query-tekenreeksparameters waren.
 
 ## Versie 2.19.1 - zaterdag 10 november 2023
 
@@ -121,7 +127,7 @@ Voor de recentste versienota&#39;s op de de markeringsuitbreiding van SDK van he
 **Bevestigingen en verbeteringen**
 
 - Afsluitkoppelingen kwamen niet in aanmerking omdat het domein deel uitmaakte van een query. Dit probleem is nu opgelost.
-- Vervangen `edgeConfigId` in de Web SDK-configuratie door `datastreamId` .
+- `edgeConfigId` vervangen door `datastreamId` in de Web SDK-configuratie.
 
 ## Versie 2.17.0 - donderdag 17 mei 2023
 
@@ -264,10 +270,10 @@ Voor de recentste versienota&#39;s op de de markeringsuitbreiding van SDK van he
 - De opdracht [`getIdentity`](/help/web-sdk/commands/getidentity.md) retourneert nu de id van het randgebied naast de identiteit.
 - Waarschuwingen en fouten die van de server zijn ontvangen, zijn verbeterd en worden op een geschiktere manier afgehandeld.
 - Toegevoegde ondersteuning voor de norm Consent 2.0 van de Adobe voor de opdracht [`setConsent`](/help/web-sdk/commands/setconsent.md) .
-- De voorkeur van de toestemming, wanneer ontvangen, wordt gehakt en in lokale opslag voor een geoptimaliseerde integratie onder CMPs, het Web SDK van het Platform, en de Edge Network van het Platform opgeslagen. Als u toestemmingsvoorkeur verzamelt, moedigen wij u nu aan om `setConsent` op elke paginading te roepen.
+- Wanneer u de voorkeuren voor toestemming ontvangt, worden deze gehashed en opgeslagen in lokale opslag voor een geoptimaliseerde integratie tussen CMP&#39;s, Platform Web SDK en Platform Edge Network. Als u toestemmingsvoorkeur verzamelt, moedigen wij u nu aan om `setConsent` op elke paginading te roepen.
 - Twee [ controlerende haken ](https://github.com/adobe/alloy/wiki/Monitoring-Hooks), `onCommandResolved` en `onCommandRejected`, zijn toegevoegd.
 - Bug Fix: de gebeurtenissen van het de interactiebericht van Personalization zouden dubbele informatie over de zelfde activiteit bevatten wanneer een gebruiker aan een nieuwe single-page toepassingsmening, terug naar de originele mening navigeerde, en een element in aanmerking voor omzetting klikte.
-- Opgeloste problemen: als voor de eerste gebeurtenis die door de SDK wordt verzonden `documentUnloading` is ingesteld op `true` , wordt [`sendBeacon` ](https://developer.mozilla.org/en-US/docs/Web/API/Navigator/sendBeacon) gebruikt om de gebeurtenis te verzenden, wat resulteert in een fout betreffende een identiteit die niet wordt vastgesteld.
+- Opgeloste problemen: als voor de eerste gebeurtenis die door de SDK wordt verzonden `documentUnloading` is ingesteld op `true` , [`sendBeacon` ](https://developer.mozilla.org/en-US/docs/Web/API/Navigator/sendBeacon) , wordt de gebeurtenis verzonden, wat resulteert in een fout met betrekking tot een identiteit die niet wordt vastgesteld.
 
 ## Versie 2.3.0 - november 2020
 
@@ -277,12 +283,12 @@ Voor de recentste versienota&#39;s op de de markeringsuitbreiding van SDK van he
 - Bug Fix: `sendBeacon` werd niet gebruikt toen `documentUnloading` was ingesteld op `true` of wanneer de koppelingenklikken automatisch werden bijgehouden.
 - Bug Fix: Een koppeling wordt niet automatisch bijgehouden als het ankerelement HTML-inhoud bevat.
 - Bug Fix: Bepaalde browserfouten die een alleen-lezen `message` eigenschap bevatten, zijn niet correct verwerkt, waardoor een andere fout aan de klant wordt gemeld.
-- Bug Fix: Als de SDK binnen een iframe wordt uitgevoerd, treedt een fout op als de HTML-pagina van het iframe afkomstig is uit een ander subdomein dan de HTML van het bovenliggende venster.
+- Bug Fix: Als de SDK binnen een iframe wordt uitgevoerd, treedt een fout op als de HTML-pagina van het iframe afkomstig is uit een ander subdomein dan de HTML-pagina van het bovenliggende venster.
 
 ## Versie 2.2.0 - oktober 2020
 
 - Bug Fix: Het Opt-in-object blokkeerde Web SDK om aanroepen uit te voeren wanneer `idMigrationEnabled` `true` is.
-- Bug Fix: Maak Web SDK zich van verzoeken bewust die verpersoonlijkingsaanbiedingen zouden moeten terugkeren om een het flikkeren kwestie te verhinderen.
+- Bug Fix: Maak het Web SDK zich bewust van verzoeken die verpersoonlijkingsaanbiedingen zouden moeten terugkeren om een het flikkeren kwestie te verhinderen.
 
 ## Versie 2.1.0 - augustus 2020
 
