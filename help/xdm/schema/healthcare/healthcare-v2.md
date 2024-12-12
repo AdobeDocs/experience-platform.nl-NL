@@ -5,9 +5,9 @@ badgePrivateBeta: label="Private Beta" type="Informative"
 hide: true
 hidefromtoc: true
 exl-id: a796b58b-b36f-4277-870b-0d3939af8061
-source-git-commit: 36f1a443eda47917d5b6bd84d4765ff044b5093a
+source-git-commit: 8eaff2361e76a7856b3371156ed9fe5c542fec28
 workflow-type: tm+mt
-source-wordcount: '536'
+source-wordcount: '518'
 ht-degree: 1%
 
 ---
@@ -18,179 +18,13 @@ ht-degree: 1%
 
 De volgende lijst schetst de geadviseerde klassen en de groepen van het schemagebied voor verscheidene gemeenschappelijke gevallen van het gezondheidszorggebruik.
 
-<table>
-  <thead>
-    <tr>
-      <th>Gebruiksscenario’s</th>
-      <th>Veldgroepen</th>
-      <th>Compatibele klassen</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><strong> creeer/werk patiënt </strong> bij: Wanneer een patiënt bij de ziekenhuisvoordesk aankomt, wordt een patiëntenverslag gevestigd, met inbegrip van demografische details zoals (facultatief) herkenningsteken, de patiëntennaam, hun geboortedatum, hun geslacht, en hun adres. Dit is een essentieel onderdeel van IT in de gezondheidszorg.</td>
-      <td><a href="./field-groups/patient.md">Patiënt</a></td>
-      <td>
-        <li><a href="../../classes/individual-profile.md">Afzonderlijk XDM-profiel</a></li>
-      </td>
-    </tr>
-    <tr>
-      <td rowspan="6"><strong> Vaccinatie </strong>: Faciliterend het vaccinatieproces, het beheren van de dossiers van de patiëntenimmunisatie, en het integreren van EMRs met de Systemen van het Beheer van Vaccins.</td>
-      <td><a href="./field-groups/immunization.md">Immunisatie</a></td>
-      <td>
-        <li><a href="../../classes/experienceevent.md">XDM Experience Event</a></li>
-      </td>
-    </tr>
-    <tr>
-      <td><a href="./field-groups/patient.md">Patiënt</a></td>
-      <td>
-        <li><a href="../../classes/individual-profile.md">Afzonderlijk XDM-profiel</a></li>
-      </td>
-    </tr>
-    <tr>
-      <td><a href="./field-groups/location.md">Locatie</a></td>
-      <td>
-        <li><a href="./classes/location.md">Locatie</a></li>
-      </td>
-    </tr>
-    <tr>
-      <td><a href="./field-groups/medication.md">Geneesmiddelen</a></td>
-      <td>
-        <li><a href="../../classes/medication.md">Geneesmiddelen</a></li>
-      </td>
-    </tr>
-    <tr>
-      <td><a href="./field-groups/medication-dispense.md">Geneesmiddelenverlies</a></td>
-      <td>
-        <li><a href="../../classes/medication.md">Geneesmiddelen</a></li>
-        <li><a href="../../classes/individual-profile.md">Afzonderlijk XDM-profiel</a></li>
-        <li><a href="../../classes/provider.md">Provider</a></li>
-      </td>
-    </tr>
-    <tr>
-      <td><a href="./field-groups/medication-request.md">Aanvraag voor geneesmiddelen</a></td>
-      <td>
-        <li><a href="../../classes/medication.md">Geneesmiddelen</a></li>
-        <li><a href="../../classes/individual-profile.md">Afzonderlijk XDM-profiel</a></li>
-        <li><a href="../../classes/provider.md">Provider</a></li>
-      </td>
-    </tr>
-    <tr>
-      <td rowspan="4"><strong> Aanhandiging na de zorg </strong>: Motivering van patiënten en verzorgers om hun behandelingsplannen te voltooien en de overmakingspercentages te verminderen.</td>
-      <td><a href="./field-groups/patient.md">Patiënt</a></td>
-      <td>
-        <li><a href="../../classes/individual-profile.md">Afzonderlijk XDM-profiel</a></li>
-      </td>
-    </tr>
-    <tr>
-      <td><a href="./field-groups/location.md">Locatie</a></td>
-      <td>
-        <li><a href="./classes/location.md">Locatie</a></li>
-      </td>
-    </tr>
-    <tr>
-      <td><a href="./field-groups/care-plan.md">Zorgplan</a></td>
-      <td>
-        <li><a href="../../classes/individual-profile.md">Afzonderlijk XDM-profiel</a></li>
-      </td>
-    </tr>
-    <tr>
-      <td><a href="./field-groups/goal.md">Goal</a></td>
-      <td>
-        <li><a href="../../classes/individual-profile.md">Afzonderlijk XDM-profiel</a></li>
-        <li><a href="../../classes/provider.md">Provider</a></li>
-      </td>
-    </tr>
-    <tr>
-      <td rowspan="7"><strong> de ervaring van de consument voor verzekering </strong>: Verbeter digitale verwerving en ervaringen onder consumenten die voor verzekering winkelen. Voorbeelden zijn: 
-        <li> Werken met consumentengedrag om speciale e-mails of doeladvertenties van derden te verzenden naar mensen die pagina's met algemene informatie openen (zoals plannen, plannamen/lagen, medicaid- of welzijnsprogramma's)
-        </li> 
-        <li> Het verzenden van vaccingerelateerde informatie over hartgezondheid om merkbekendheid te creëren of verzoeken om vaccins te plannen aan mensen die op zoek zijn naar hartgezondheid en vaccininformatie.
-        </li>
-      </td>
-      <td><a href="./field-groups/patient.md">Patiënt</a></td>
-      <td>
-        <li><a href="../../classes/individual-profile.md">Afzonderlijk XDM-profiel</a></li>
-      </td>
-    </tr>
-    <tr>
-      <td><a href="./field-groups/coverage.md">Dekking</a></td>
-      <td>
-        <li><a href="../../classes/plan.md">Plan</a></li>
-      </td>
-    </tr>
-    <tr>
-      <td><a href="./field-groups/account.md">Account</a></td>
-      <td>
-        <li><a href="../../classes/individual-profile.md">Afzonderlijk XDM-profiel</a></li>
-        <li><a href="../../classes/provider.md">Provider</a></li>
-      </td>
-    </tr>
-    <tr>
-      <td><a href="./field-groups/location.md">Locatie</a></td>
-      <td>
-        <li><a href="./classes/location.md">Locatie</a></li>
-      </td>
-    </tr>
-      <tr>
-      <td><a href="./field-groups/medication.md">Geneesmiddelen</a></td>
-      <td>
-        <li><a href="../../classes/medication.md">Geneesmiddelen</a></li>
-      </td>
-    </tr>
-    <tr>
-      <td><a href="./field-groups/medication-dispense.md">Geneesmiddelenverlies</a></td>
-      <td>
-        <li><a href="../../classes/medication.md">Geneesmiddelen</a></li>
-        <li><a href="../../classes/individual-profile.md">Afzonderlijk XDM-profiel</a></li>
-        <li><a href="../../classes/provider.md">Provider</a></li>
-      </td>
-    </tr>
-    <tr>
-      <td><a href="./field-groups/medication-request.md">Aanvraag voor geneesmiddelen</a></td>
-      <td>
-        <li><a href="../../classes/medication.md">Geneesmiddelen</a></li>
-        <li><a href="../../classes/individual-profile.md">Afzonderlijk XDM-profiel</a></li>
-        <li><a href="../../classes/provider.md">Provider</a></li>
-      </td>
-    </tr>
-    <tr>
-      <td rowspan="5"><strong> Verbeterde leverancierservaring </strong>: Het gebruiken van leveranciersgegevens van het systeem EMR om alternatieve leveranciers voor te stellen die op benoemingsbeschikbaarheid, plaats, en specialiteit worden gebaseerd. <br> <br> het verbeteren van leveranciersonderzoeken om resultaten met gewenste beschikbaarheid te tonen, controlerend dat de geselecteerde leverancier deel van het loonnetwerk uitmaakt, en het verstrekken van kostenramingen.
-      </td>
-      <td><a href="./field-groups/patient.md">Patiënt</a></td>
-      <td>
-        <li><a href="../../classes/individual-profile.md">Afzonderlijk XDM-profiel</a></li>
-      </td>
-    </tr>
-    <tr>
-      <td><a href="./field-groups/location.md">Locatie</a></td>
-      <td>
-        <li><a href="./classes/location.md">Locatie</a></li>
-      </td>
-    </tr>
-    <tr>
-      <td><a href="./field-groups/organization.md">Organisatie</a></td>
-      <td>
-        <li><a href="../../classes/individual-profile.md">Afzonderlijk XDM-profiel</a></li>
-        <li><a href="../../classes/provider.md">Provider</a></li>
-      </td>
-    </tr>
-    <tr>
-      <td><a href="./field-groups/practioner.md">Praktijkster</a></td>
-      <td>
-        <li><a href="../../classes/individual-profile.md">Afzonderlijk XDM-profiel</a></li>
-        <li><a href="../../classes/provider.md">Provider</a></li>
-      </td>
-    </tr>
-    <tr>
-      <td><a href="./field-groups/schedule.md">Schema</a></td>
-      <td>
-        <li><a href="../../classes/individual-profile.md">Afzonderlijk XDM-profiel</a></li>
-        <li><a href="../../classes/provider.md">Provider</a></li>
-      </td>
-    </tr>
-  </tbody>
-</table>
+| Gebruiksscenario | Veldgroepen en compatibele klassen |
+| --- | --- |
+| **creeer/werk patiënt** bij: Wanneer een patiënt bij de ziekenhuisvoordesk aankomt, wordt een patiëntenverslag gevestigd, met inbegrip van demografische details zoals (facultatief) herkenningsteken, de patiëntennaam, hun geboortedatum, hun geslacht, en hun adres. Dit is een essentieel onderdeel van IT in de gezondheidszorg. | <ul><li>**[individuele Profielen XDM](../../classes/individual-profile.md)**:<ul><li>[ Patiënt ](./field-groups/patient.md)</li></ul></li></ul> |
+| **Vaccinatie**: Faciliterend het vaccinatieproces, het beheren van de dossiers van de patiëntenimmunisatie, en het integreren van EMRs met de Systemen van het Beheer van Vaccins. | <ul><li>**[XDM ExperienceEvent](../../classes/experienceevent.md)**:<ul><li>[ Immunisatie ](./field-groups/immunization.md)</li></ul></li><li>**[XDM Individueel Profiel](../../classes/individual-profile.md)**:<ul><li>[ de Aflossing van de Geneeskunde ](./field-groups/medication-dispense.md)</li><li>[ Verzoek van de Geneesmiddelen ](./field-groups/medication-request.md)</li><li>[ Patiënt ](./field-groups/patient.md)</li></ul></li><li>**[Plaats](./classes/location.md)**:<ul><li>[ Plaats ](./field-groups/location.md)</li></ul><li>**[Geneesmiddel](../../classes/medication.md)**:<ul><li>[ Geneesmiddel ](./field-groups/medication.md)</li><li>[ de Aflossing van de Geneeskunde ](./field-groups/medication-dispense.md)</li><li>[ Verzoek van de Geneesmiddelen ](./field-groups/medication-request.md)</li></ul></li><li>**[Leverancier](../../classes/provider.md)**:<ul><li>[ de Aflossing van de Geneeskunde ](./field-groups/medication-dispense.md)</li><li>[ Verzoek van de Geneesmiddelen ](./field-groups/medication-request.md)</li></ul></li></ul> |
+| **Aanhandiging na de zorg**: Motivering van patiënten en verzorgers om hun behandelingsplannen te voltooien en de overmakingspercentages te verminderen. | <ul><li>**[XDM Individueel Profiel](../../classes/individual-profile.md)**:<ul><li>[ Plan van de Zorg ](./field-groups/care-plan.md)</li><li>[ Doel ](./field-groups/goal.md)</li><li>[ Patiënt ](./field-groups/patient.md)</li></ul></li><li>**[Plaats](./classes/location.md)**:<ul><li>[ Plaats ](./field-groups/location.md)</li></ul><li>**[Leverancier](../../classes/provider.md)**:<ul><li>[ Doel ](./field-groups/goal.md)</li></ul></li></ul> |
+| **de ervaring van de consument voor verzekering**: Verbeter digitale verwerving en ervaringen onder consumenten die voor verzekering winkelen. Voorbeelden zijn: <li> Werken met consumentengedrag om speciale e-mails of doeladvertenties van derden te verzenden naar mensen die pagina&#39;s met algemene informatie openen (zoals plannen, plannamen/lagen, medicaid- of welzijnsprogramma&#39;s)</li><li> Het verzenden van vaccingerelateerde informatie over hartgezondheid om merkbekendheid te creëren of verzoeken om vaccins te plannen aan mensen die op zoek zijn naar hartgezondheid en vaccininformatie. </li> | <ul><li>**[XDM Individueel Profiel](../../classes/individual-profile.md)**:<ul><li>[ Rekening ](./field-groups/account.md)</li><li>[ de Aflossing van de Geneeskunde ](./field-groups/medication-dispense.md)</li><li>[ Verzoek van de Geneesmiddelen ](./field-groups/medication-request.md)</li><li>[ Patiënt ](./field-groups/patient.md)</li></ul></li><li>**[Plaats](./classes/location.md)**:<ul><li>[ Plaats ](./field-groups/location.md)</li></ul><li>**[Geneesmiddel](../../classes/medication.md)**:<ul><li>[ Geneesmiddel ](./field-groups/medication.md)</li><li>[ de Aflossing van de Geneeskunde ](./field-groups/medication-dispense.md)</li><li>[ Verzoek van de Geneesmiddelen ](./field-groups/medication-request.md)</li></ul></li><li>**[Leverancier](../../classes/provider.md)**:<ul><li>[ Rekening ](./field-groups/account.md)</li><li>[ de Aflossing van de Geneeskunde ](./field-groups/medication-dispense.md)</li><li>[ Verzoek van de Geneesmiddelen ](./field-groups/medication-request.md)</li></ul><li>**[Plan](../../classes/plan.md)**:<ul><li>[ Doel ](./field-groups/coverage.md)</li></ul></li></ul> |
+| **Verbeterde leverancierservaring**: Het gebruiken van leveranciersgegevens van het systeem EMR om alternatieve leveranciers voor te stellen die op benoemingsbeschikbaarheid, plaats, en specialiteit worden gebaseerd. <br> <br> verbeterend leveranciersonderzoeken om resultaten met gewenste beschikbaarheid te tonen, controlerend dat de geselecteerde leverancier deel van het loonnetwerk uitmaakt, en het verstrekken van kostenramingen. | <ul><li>**[individuele Profielen XDM](../../classes/individual-profile.md)**:<ul><li>[ Organisatie ](./field-groups/organization.md)</li><li>[ Patiënt ](./field-groups/patient.md)</li><li>[ Praktijk ](./field-groups/practioner.md)</li><li>[ Programma ](./field-groups/schedule.md)</li></ul></li><li>**[Plaats](./classes/location.md)**:<ul><li>[ Plaats ](./field-groups/location.md)</li></ul><li>**[Leverancier](../../classes/provider.md)**:<ul><li>[ Organisatie ](./field-groups/organization.md)</li><li>[ Praktijk ](./field-groups/practioner.md)</li><li>[ Programma ](./field-groups/schedule.md)</li></ul></li></ul> |
 
 ## Datatypen {#data-types}
 
