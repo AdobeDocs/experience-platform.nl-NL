@@ -2,10 +2,10 @@
 title: Opmerkingen bij de release Core Extension
 description: De nieuwste release bevat informatie over de Core-extensie in Adobe Experience Platform.
 exl-id: a049b2d5-7a00-435d-bcc7-112658a53a1e
-source-git-commit: 4f75bbfee6b550552d2c9947bac8540a982297eb
+source-git-commit: 1ce579fc1f8548d1eb5c01d63e9fa4e8b32e2a4f
 workflow-type: tm+mt
-source-wordcount: '1632'
-ht-degree: 1%
+source-wordcount: '1651'
+ht-degree: 4%
 
 ---
 
@@ -13,9 +13,15 @@ ht-degree: 1%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch is omgedoopt tot een reeks technologieën voor gegevensverzameling in Adobe Experience Platform. Diverse terminologische wijzigingen zijn als gevolg hiervan in de productdocumentatie doorgevoerd. Gelieve te verwijzen naar het volgende [ document ](../../../term-updates.md) voor een geconsolideerde verwijzing van de terminologieveranderingen.
+>Adobe Experience Platform Launch is omgedoopt tot een reeks technologieën voor dataverzameling in Adobe Experience Platform.  Als gevolg hiervan zijn er verschillende terminologiewijzigingen in de productdocumentatie doorgevoerd. Raadpleeg het volgende [ document ](../../../term-updates.md) voor een geconsolideerde referentie van de terminologiewijzigingen.
 
-## donderdag 29 maart 2023
+## donderdag 23 oktober 2024
+
+v3.4.2
+
+* Schema-validatiefout voor formulier corrigeren -> Gebeurtenis wijzigen wanneer &quot;en bepaalde eigenschapswaarden hebben..&quot; actief is.
+
+## 29 maart 2023
 
 v3.4.1
 
@@ -48,13 +54,13 @@ v3.2.2
 * Het JSON-schema voor voorwaardelijke-waardengegevens corrigeren voor alle beschikbare operatoren.
 * https://github.com/adobe/reactor-extension-core/issues/64 herstellen.
 
-## 23 september 2021
+## vrijdag 23 september 2021
 
 v3.2.1
 
 * Probleem verholpen waarbij de initialisatie van de weergave van het element met voorwaardelijke waarde niet goed werkte als de veldwaarden 0 waren.
 
-## 23 september 2021
+## vrijdag 23 september 2021
 
 v3.2.0
 
@@ -64,13 +70,13 @@ De volgende wijzigingen zijn aangebracht in het gegevenselement Voorwaardelijke 
 * Getalwaarden worden weergegeven als getallen in het instellingenobject.
 * Voorwaardelijke waarde is niet meer vereist, zodat deze zich op dezelfde manier kan gedragen als de terugvalwaarde.
 
-## 17 september 2021
+## zaterdag 17 september 2021
 
 v3.1.1
 
 * Corrigeer een JS-fout waardoor de weergave van de datumbereikvoorwaarde niet kon worden geladen.
 
-## 16 september 2021
+## vrijdag 16 september 2021
 
 v3.1.0
 
@@ -177,7 +183,7 @@ v1.6.2
 
 * **Nieuw &quot;Constant&quot;Type van Element van Gegevens** - de uitbreiding van de Kern omvat nu een nieuw genoemd type van gegevenselement `Constant`.  Dit kan worden gebruikt wanneer u een constante waarde wilt opslaan waarnaar in diverse voorwaarden, handelingen of aangepaste code wordt verwezen. Hartelijk dank aan Jan Exner voor deze bijdrage.
 
-## 11 september 2019
+## donderdag 11 september 2019
 
 v1.6.1
 
@@ -206,7 +212,7 @@ v1.4.2
 * **gebeurtenis van de Gebeurtenis van de Douane** - de Gebeurtenissen van de Douane kunnen contextuele gegevens nu bevatten die binnen van voorwaarden en acties kunnen worden gebruikt.
 * **klik gebeurtenis** - wanneer u een verbindingsvertraging op de gebeurtenis van de Klik plaatst, die nu behoorlijk voor nakomelingen van het anker en niet alleen op het anker zelf zal registreren.
 
-## 8 november 2018
+## vrijdag 8 november 2018
 
 * **de optie van de Cohort van de Persistent** - de optie om een cohort voort te zetten is toegevoegd aan de Voorwaarde van de Steekproef. Dit heeft het effect dat een gebruiker in- of uitgaat van de voorbeeldcohort tijdens sessies. Als bijvoorbeeld het selectievakje &#39;persnel blijven&#39; is ingeschakeld en de voorwaarde de eerste keer true retourneert wanneer deze voor een bepaalde bezoeker wordt uitgevoerd, retourneert deze waarde true op alle volgende reeksen van de voorwaarde voor dezelfde bezoeker. Op dezelfde manier als het selectievakje &#39;persnel blijven&#39; is ingeschakeld en de voorwaarde de eerste keer dat deze voor een bepaalde bezoeker wordt uitgevoerd false retourneert, retourneert deze false op alle volgende reeksen van de voorwaarde voor dezelfde bezoeker.
 * **Bug Fix** - Vaste een kwestie waar een regel die een gebeurtenis van de Onderkant van de Pagina en een actie van de Code van de Douane op een pagina gebruikt waar de markeringen synchroon maar incorrect werden geladen (geen vraag aan `_satellite.pageBottom()`) website inhoud zou ontruimen.
