@@ -2,7 +2,7 @@
 description: Leer over de IP adressen die u aan uw lijst van gewenste personen moet toevoegen om de bronnen van Adobe Experience Platform met succes te gebruiken.
 title: IP de Lijst van gewenste personen van het Adres voor Bronnen
 exl-id: 40093c80-dbdb-4dc1-97bb-81a8200b731f
-source-git-commit: 2c069df7552b5f03f3edbbf0bccd4ba7cbe397d3
+source-git-commit: bb0e84ff26027e92d617b7fd0b85979dff501a7d
 workflow-type: tm+mt
 source-wordcount: '210'
 ht-degree: 0%
@@ -40,6 +40,11 @@ U moet de volgende IP adressen aan uw lijst van gewenste personen toevoegen om v
 - `20.232.89.104/29`
 - `20.98.195.172/32`
 - `172.210.218.144/28`
+- `48.211.4.136/29`
+- `48.211.4.144/28`
+- `48.211.4.160/29`
+- `40.84.85.144/28`
+- `40.84.85.192/28`
 
 >[!TAB  NLD2: Europa ]
 
@@ -65,6 +70,8 @@ U moet de volgende IP adressen aan uw lijst van gewenste personen toevoegen om v
 - `20.53.46.0/26`
 - `40.79.163.80/28`
 - `40.79.171.160/28`
+- `20.213.194.144/29`
+- `20.227.120.32/27`
 
 >[!TAB  CAN2: Canada ]
 
