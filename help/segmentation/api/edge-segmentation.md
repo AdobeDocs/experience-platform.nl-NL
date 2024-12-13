@@ -4,9 +4,9 @@ title: Edge Segmentation using the API
 description: Dit document bevat voorbeelden over het gebruik van randsegmentatie met de Adobe Experience Platform Segmentation Service API.
 role: Developer
 exl-id: effce253-3d9b-43ab-b330-943fb196180f
-source-git-commit: a1c9003a1b219325daf8fa38cda8bb1a019a55c6
+source-git-commit: e6e9abc7ffe27a2ff9c4ccf4ca243cabdae3d631
 workflow-type: tm+mt
-source-wordcount: '783'
+source-wordcount: '808'
 ht-degree: 0%
 
 ---
@@ -46,7 +46,7 @@ Opdat een segment wordt geëvalueerd gebruikend randsegmentatie, moet de vraag a
 | Eén gebeurtenis binnen een tijdsvenster van minder dan 24 uur | Elke segmentdefinitie die verwijst naar één binnenkomende gebeurtenis binnen een tijdvenster van minder dan 24 uur. |
 | Alleen profiel | Elke segmentdefinitie die alleen naar een profielkenmerk verwijst. |
 | Eén gebeurtenis met een profielkenmerk binnen een relatief tijdvenster van minder dan 24 uur | Elke segmentdefinitie die verwijst naar één binnenkomende gebeurtenis, met een of meer profielkenmerken, en die optreedt binnen een relatief tijdvenster van minder dan 24 uur. |
-| Segment van segmenten | Elke segmentdefinitie die een of meer batch- of streaming segmenten bevat. **Nota:** als een segment van segmenten wordt gebruikt, zal de profielontzetting **elke 24 uren** gebeuren. |
+| Segment van segmenten | Elke segmentdefinitie die een of meer batch- of streaming segmentdefinities bevat. **Nota:** als het segment van segmenten met **partij** segmentdefinities wordt gebruikt, kan de profielontzetting **tot 24 uren** nemen om voor te komen. Als het segment van segmenten met **het stromen** segmentdefinities wordt gebruikt, zal de profielontzetting op een het stromen manier voorkomen. |
 | Meerdere gebeurtenissen met een profielkenmerk | Om het even welke segmentdefinitie die naar veelvoudige gebeurtenissen **binnen de laatste 24 uren** verwijst en (naar keuze) heeft één of meerdere profielattributen. |
 
 Bovendien, moet het segment **** aan een fusiebeleid worden gebonden dat op rand actief is. Voor meer informatie over samenvoegingsbeleid, te lezen gelieve de [ gids van het samenvoegingsbeleid ](../../profile/api/merge-policies.md).

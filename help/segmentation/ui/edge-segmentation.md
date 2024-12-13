@@ -3,9 +3,9 @@ solution: Experience Platform
 title: UI-gids Edge Segmentation
 description: Leer hoe te om randsegmentatie te gebruiken om segmentdefinities in Platform onmiddellijk op de rand te evalueren, toelatend de zelfde pagina en volgende de gebruikscituaties van de paginagrootte.
 exl-id: eae948e6-741c-45ce-8e40-73d10d5a88f1
-source-git-commit: 057db1432493a8443eb91b0fc371d0bdffb3de86
+source-git-commit: e6e9abc7ffe27a2ff9c4ccf4ca243cabdae3d631
 workflow-type: tm+mt
-source-wordcount: '569'
+source-wordcount: '594'
 ht-degree: 0%
 
 ---
@@ -41,7 +41,7 @@ Een vraag kan met randsegmentatie worden geëvalueerd als het aan om het even we
 | Eén gebeurtenis met een tijdvenster | Elke segmentdefinitie die verwijst naar één binnenkomende gebeurtenis met een tijdvenster. |
 | Alleen profiel | Elke segmentdefinitie die alleen naar een profielkenmerk verwijst. |
 | Eén gebeurtenis met een profielkenmerk binnen een relatief tijdvenster van minder dan 24 uur | Elke segmentdefinitie die verwijst naar één binnenkomende gebeurtenis, met een of meer profielkenmerken, en die optreedt binnen een relatief tijdvenster van minder dan 24 uur. |
-| Segment van segmenten | Elke segmentdefinitie die een of meer batch- of streaming segmenten bevat. **Nota:** als een segment van segmenten wordt gebruikt, zal de profielontzetting **elke 24 uren** gebeuren. |
+| Segment van segmenten | Elke segmentdefinitie die een of meer batch- of streaming segmentdefinities bevat. **Nota:** als het segment van segmenten met **partij** segmentdefinities wordt gebruikt, kan de profielontzetting **tot 24 uren** nemen om voor te komen. Als het segment van segmenten met **het stromen** segmentdefinities wordt gebruikt, zal de profielontzetting op een het stromen manier voorkomen. |
 | Meerdere gebeurtenissen met een profielkenmerk | Om het even welke segmentdefinitie die naar veelvoudige gebeurtenissen **binnen de laatste 24 uren** verwijst en (naar keuze) heeft één of meerdere profielattributen. |
 
 Een segmentdefinitie zal **** niet voor randsegmentatie in het volgende scenario worden toegelaten:

@@ -2,9 +2,9 @@
 title: Overzicht van publiek portal
 description: Leer hoe u het publiek in Adobe Experience Platform kunt bekijken, beheren en een publiek kunt maken.
 exl-id: 505ac22e-05f3-423a-a9a0-7f3470af8945
-source-git-commit: a48df00b61fd5736cfb6fd29c60cf73a02342451
+source-git-commit: 1aa10d9cbde66a174ddc64ba9ce11149436393c1
 workflow-type: tm+mt
-source-wordcount: '4337'
+source-wordcount: '4347'
 ht-degree: 0%
 
 ---
@@ -236,6 +236,7 @@ Bij het selecteren van doelgroepen voor een flexibele publieksevaluatie gelden d
 - Al publiek **moet** een oorsprong van de &quot;Dienst van de Segmentatie&quot;hebben.
 - Al publiek **moet** worden geëvalueerd gebruikend partijsegmentatie.
 - Al publiek **moet** op mensen-gebaseerd publiek zijn.
+- Het publiek kan **slechts** aan bestemmingen in Platform worden geactiveerd.
 - U kunt maximaal 20 soorten publiek selecteren.
 
 ![ het publiek dat u flexibele publieksevaluatie wilt gebruiken wordt geselecteerd.](../images/ui/audience-portal/evaluate-audiences.png)

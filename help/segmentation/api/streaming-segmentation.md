@@ -4,9 +4,9 @@ title: Evalueer Gebeurtenissen in Bijna Echt - tijd met het stromen Segmentatie
 description: Dit document bevat voorbeelden over het gebruik van streamingsegmentatie met de Adobe Experience Platform Segmentation Service-API.
 role: Developer
 exl-id: 119508bd-5b2e-44ce-8ebf-7aef196abd7a
-source-git-commit: a1c9003a1b219325daf8fa38cda8bb1a019a55c6
+source-git-commit: e6e9abc7ffe27a2ff9c4ccf4ca243cabdae3d631
 workflow-type: tm+mt
-source-wordcount: '2027'
+source-wordcount: '2052'
 ht-degree: 0%
 
 ---
@@ -76,7 +76,7 @@ Opdat een segmentdefinitie wordt geëvalueerd die het stromen segmentatie gebrui
 | Eén gebeurtenis binnen een tijdsvenster van minder dan 24 uur | Elke segmentdefinitie die verwijst naar één binnenkomende gebeurtenis binnen een tijdvenster van minder dan 24 uur. |
 | Alleen profiel | Elke segmentdefinitie die alleen naar een profielkenmerk verwijst. |
 | Eén gebeurtenis met een profielkenmerk binnen een relatief tijdvenster van minder dan 24 uur | Elke segmentdefinitie die verwijst naar één binnenkomende gebeurtenis, met een of meer profielkenmerken, en die optreedt binnen een relatief tijdvenster van minder dan 24 uur. |
-| Segment van segmenten | Elke segmentdefinitie die een of meer batch- of streaming segmenten bevat. **Nota:** als een segment van segmenten wordt gebruikt, zal de profielontzetting **elke 24 uren** gebeuren. |
+| Segment van segmenten | Elke segmentdefinitie die een of meer batch- of streaming segmentdefinities bevat. **Nota:** als het segment van segmenten met **partij** segmentdefinities wordt gebruikt, kan de profielontzetting **tot 24 uren** nemen om voor te komen. Als het segment van segmenten met **het stromen** segmentdefinities wordt gebruikt, zal de profielontzetting op een het stromen manier voorkomen. |
 | Meerdere gebeurtenissen met een profielkenmerk | Om het even welke segmentdefinitie die naar veelvoudige gebeurtenissen **binnen de laatste 24 uren** verwijst en (naar keuze) heeft één of meerdere profielattributen. |
 
 Een segmentdefinitie zal **** niet voor het stromen segmentatie in de volgende scenario&#39;s worden toegelaten:
