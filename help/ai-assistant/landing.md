@@ -2,9 +2,9 @@
 title: AI Assistant in Adobe Experience Platform-productdocumentatie
 description: Ga aan de slag met AI Assistant in Adobe Experience Platform.
 exl-id: bcb86a41-d5d8-4c1a-a86d-79fa0c167bc7
-source-git-commit: d2de642b7e84d3c4fad57cf0052afa67878dcac0
+source-git-commit: 26232fbf67418e0a75fe489b6e34890058cd4d81
 workflow-type: tm+mt
-source-wordcount: '688'
+source-wordcount: '629'
 ht-degree: 1%
 
 ---
@@ -77,57 +77,37 @@ Raadpleeg de onderstaande video&#39;s voor meer informatie over AI Assistant-mog
 
 Bekijk de volgende video voor een overzicht van AI Assistant.
 
-+++Selecteren om een overzichtsvideo van AI Assistant weer te geven
-
 >[!VIDEO](https://video.tv.adobe.com/v/3429845?learn=on)
 
 Voor meer informatie, lees de [ AI Hulp UI gids ](ui-guide.md).
-
-+++
 
 ### Toegang tot AI Assistant verkrijgen
 
 Bekijk de volgende video om te leren hoe u toegang tot AI Assistant voor uw organisaties en gebruikers kunt configureren.
 
-+++Selecteer om een video te bekijken over hoe u toegang krijgt tot AI Assistant
-
 >[!VIDEO](https://video.tv.adobe.com/v/3436470/?learn=on)
 
 Voor meer informatie, lees de [ AI Hulp toegangsgids ](access.md).
-
-+++
 
 ### De AI Hulp productkennis van het gebruik om onboarding tijd te verminderen
 
 Bekijk de volgende video om te leren hoe u de kennis van producten van AI Assistant kunt gebruiken om de instaptijd te verkorten.
 
-+++Selecteer om een video weer te geven over het gebruik van AI Assistant om de instaptijd te verkorten
-
 >[!VIDEO](https://video.tv.adobe.com/v/3438032/?learn=on)
 
 Voor meer informatie, lees over [ productkennis in AI Medewerker ](home.md#product-knowledge)
-
-+++
 
 ### AI Assistant gebruiken om uw publiek te ontwarren
 
 Bekijk de volgende video voor informatie over het gebruik van AI Assistant om het publiek te defragmenteren en uw marketingbewerkingen te optimaliseren.
 
-+++Selecteer om een video te bekijken over hoe u met de AI Assistant het publiek overzichtelijk kunt houden
-
 >[!VIDEO](https://video.tv.adobe.com/v/3435532?learn=on)
-
-+++
 
 ### Gebruik het deelvenster voor ontdekkingsmogelijkheden om u aan de slag te helpen
 
 Bekijk de volgende video om meer te leren over het deelvenster voor ontdekkingsmogelijkheden in AI Assistant en hoe u dit kunt gebruiken om aan de slag te gaan met AI Assistant
 
-+++Selecteer om een video over ontdekkingsmogelijkheden te bekijken
-
 >[!VIDEO](https://video.tv.adobe.com/v/3440962/?learn=on)
-
-+++
 
 ## AI Assistant-casebibliotheek
 
@@ -150,7 +130,7 @@ Bekijk de volgende video&#39;s voor extra voorbeelden van AI Assistant-gebruikss
 
 >[!ENDTABS]
 
-## Aanvullende bronnen {#additional-resources}
+## Aanvullende bronnen
 
 >[!BEGINSHADEBOX]
 
