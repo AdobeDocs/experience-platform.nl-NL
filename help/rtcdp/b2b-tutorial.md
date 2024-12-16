@@ -1,21 +1,21 @@
 ---
-keywords: RTCDP;CDP;B2B Edition;Real-time Customer Data Platform;real-time platform voor klantgegevens;real-time cdp;b2b;cdp
+keywords: RTCDP;CDP;B2B edition;Real-time Customer Data Platform;real-time platform voor klantgegevens;real-time cdp;b2b;cdp
 solution: Experience Platform
-title: Aan de slag met Real-time Customer Data Platform B2B Edition
-description: Gebruik dit voorbeeldscenario als voorbeeld bij het instellen van uw implementatie van Adobe Real-time Customer Data Platform B2B Edition.
+title: Aan de slag met Real-time Customer Data Platform B2B edition
+description: Gebruik dit voorbeeldscenario als voorbeeld bij het instellen van uw implementatie van Adobe Real-time Customer Data Platform B2B edition.
 feature: Get Started, B2B
-badgeB2B: label="B2B Edition" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
+badgeB2B: label="B2B edition" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
 exl-id: ad9ace46-9915-4b8f-913a-42e735859edf
-source-git-commit: 8a487d948d2eb7db167298b61045ef8dd2099da6
+source-git-commit: 90323c32833b0d8a2b4feb88b8eb851bc767c2f8
 workflow-type: tm+mt
 source-wordcount: '1164'
 ht-degree: 0%
 
 ---
 
-# Aan de slag met Real-time Customer Data Platform B2B Edition
+# Aan de slag met Real-time Customer Data Platform B2B edition
 
-Dit document biedt een end-to-end workflow op hoog niveau om aan de slag te gaan met Real-time Customer Data Platform (CDP) B2B Edition, waarbij een voorbeeld wordt gebruikt voor het illustreren van belangrijke concepten.
+Dit document biedt een end-to-end workflow op hoog niveau om aan de slag te gaan met Real-time Customer Data Platform (CDP) B2B edition, waarbij een voorbeeld wordt gebruikt voor het illustreren van belangrijke concepten.
 
 Het technologiebedrijf Bodea wil persoon en rekeningsgegevens van verschillende gesiloed gegevensbronnen combineren om klanten effectief met een e-mail en een de advertentiecampagne van LinkedIn voor zijn nieuw product te richten. Bodea gebruikt Marketo Engage als zijn platform van de marketing automatisering en moet een B2B-specifiek publiek van veelvoudige CRMs segmenteren die klantengegevens bevatten.
 
@@ -23,10 +23,10 @@ Het technologiebedrijf Bodea wil persoon en rekeningsgegevens van verschillende 
 
 Deze zelfstudie is gebaseerd op verschillende Adobe Experience Platform-services als onderdeel van de demonstratie. Als u wilt volgen wordt het geadviseerd om een goed inzicht in de volgende diensten te hebben:
 
-- [Experience Data Modal (XDM)](../xdm/home.md)
+- [Experience-datamodel (XDM)](../xdm/home.md)
 - [Bronnen](../sources/home.md)
 - [Segmentatie](../segmentation/home.md)
-- [Doelen](../destinations/home.md)
+- [Bestemmingen](../destinations/home.md)
 
 ## Schema&#39;s maken voor uw gegevens
 
@@ -58,7 +58,7 @@ In realtime klantprofiel worden gegevens uit verschillende bronnen samengevoegd 
 
 ## Gegevens in Experience Platform plaatsen
 
-Daarna, gebruikt de telleraar Bodea de [ schakelaar van het Marketo Engage ](../sources/connectors/adobe-applications/marketo/marketo.md) om gegevens in Platform voor gebruik in stroomafwaartse diensten in te voeren. U kunt ook gegevens invoeren door een van de goedgekeurde bronnen voor Real-Time CDP B2B Edition te gebruiken.
+Daarna, gebruikt de telleraar Bodea de [ schakelaar van het Marketo Engage ](../sources/connectors/adobe-applications/marketo/marketo.md) om gegevens in Platform voor gebruik in stroomafwaartse diensten in te voeren. U kunt ook gegevens invoeren met een van de goedgekeurde bronnen voor Real-Time CDP B2B edition.
 
 >[!NOTE]
 > 
@@ -86,7 +86,7 @@ In dit voorbeeld vindt het publiek alle mensen die in de verkoopafdeling werken 
 
 >[!NOTE]
 > 
->Voor instructies op hoe te om publiek tot stand te brengen om uw gegevens te evalueren zie de [ gids UI van de Bouwer van het Segment ](../segmentation/ui/segment-builder.md). Voor specifiekere B2B het gebruiksgevallen van de segmentatie, verwijs naar het [ segmentatieoverzicht voor de Uitgave van Real-Time CDP B2B ](./segmentation/b2b.md).
+>Voor instructies op hoe te om publiek tot stand te brengen om uw gegevens te evalueren zie de [ gids UI van de Bouwer van het Segment ](../segmentation/ui/segment-builder.md). Voor specifiekere B2B het gebruiksgevallen van de segmentatie, verwijs naar het [ segmentatieoverzicht voor Real-Time CDP B2B edition ](./segmentation/b2b.md).
 
 De Bouwer van het Segment staat u toe om een verhandelbaar publiek van de gegevens van het Profiel van de Klant in real time tot stand te brengen en ramingen van uw prospectief publiek te bekijken die op de combinatie attributen, gebeurtenissen, en bestaand publiek worden gebaseerd u bepaalde.
 
@@ -106,4 +106,4 @@ De Bodea-markeerteken activeert het publiek naar de Marketo-bestemming, zodat he
 
 ## Volgende stappen
 
-Door deze zelfstudie te volgen, hebt u de verschillende Adobe Experience Platform-services benut die door Real-Time CDP B2B Edition worden gebruikt. Dientengevolge, hebt u geleerd om uw B2B gegevens in te voeren, te segmenteren, te evalueren en uit te voeren als actionable publiek dat over verschillende kanalen kan worden betrokken.
+Door deze zelfstudie te volgen, hebt u de verschillende Adobe Experience Platform-services die Real-Time CDP B2B edition gebruikt, met succes benut. Dientengevolge, hebt u geleerd om uw B2B gegevens in te voeren, te segmenteren, te evalueren en uit te voeren als actionable publiek dat over verschillende kanalen kan worden betrokken.
