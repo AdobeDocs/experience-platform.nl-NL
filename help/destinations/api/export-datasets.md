@@ -4,7 +4,7 @@ title: De datasets van de uitvoer door de Dienst API van de Stroom te gebruiken
 description: Leer hoe te om de Dienst API van de Stroom te gebruiken om datasets naar uitgezochte bestemmingen uit te voeren.
 type: Tutorial
 exl-id: f23a4b22-da04-4b3c-9b0c-790890077eaa
-source-git-commit: c32d2801fe38183225d24f38284b42e3d78e2631
+source-git-commit: 3bce663866e7a6e8288444121331fc931a74076a
 workflow-type: tm+mt
 source-wordcount: '5126'
 ht-degree: 0%
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 >[!AVAILABILITY]
 >
->* Deze functionaliteit is beschikbaar voor klanten die het Real-Time CDP-pakket Premier en Ultimate, Adobe Journey Optimizer of Customer Journey Analytics hebben aangeschaft. Neem contact op met uw Adobe voor meer informatie.
+>* Deze functionaliteit is beschikbaar voor klanten die het Real-Time CDP Prime- en Ultimate-pakket, Adobe Journey Optimizer of Customer Journey Analytics hebben aangeschaft. Neem contact op met uw Adobe voor meer informatie.
 
 >[!IMPORTANT]
 >
@@ -38,7 +38,7 @@ Dit artikel verklaart het werkschema wordt vereist om [!DNL Flow Service API] te
 
 ## Beschikbare gegevensbestanden voor exporteren {#datasets-to-export}
 
-De gegevenssets die u kunt exporteren, zijn afhankelijk van de toepassing Experience Platform (Real-Time CDP, Adobe Journey Optimizer), de laag (Premier of Ultimate) en alle invoegtoepassingen die u hebt aangeschaft (bijvoorbeeld Data Distiller).
+De gegevenssets die u kunt exporteren, zijn afhankelijk van de toepassing Experience Platform (Real-Time CDP, Adobe Journey Optimizer), de laag (Prime of Ultimate) en alle invoegtoepassingen die u hebt aangeschaft (bijvoorbeeld Data Distiller).
 
 Verwijs naar de [ lijst op de pagina van het UI leerprogramma ](/help/destinations/ui/export-datasets.md#datasets-to-export) om te begrijpen welke datasets u kunt uitvoeren.
 
@@ -996,7 +996,11 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 --header 'x-sandbox-name: <SANDBOX-NAME>' \
 --header 'Content-Type: application/json' \
 --data-raw '{
-  "name": "Data Landing Zone(DLZ) Base Connection"
+  "name": "Data Landing Zone Base Connection",
+  "connectionSpec": {
+    "id": "3567r537-2a7b-4583-ac39-ed38d4b848e8",
+    "version": "1.0"
+  }
 }'
 ```
 
