@@ -2,9 +2,9 @@
 title: AI Assistant in Adobe Experience Platform-productdocumentatie
 description: Ga aan de slag met AI Assistant in Adobe Experience Platform.
 exl-id: bcb86a41-d5d8-4c1a-a86d-79fa0c167bc7
-source-git-commit: 26232fbf67418e0a75fe489b6e34890058cd4d81
+source-git-commit: 4d89ac33843acd536fbadc85a07bee90a50e6407
 workflow-type: tm+mt
-source-wordcount: '629'
+source-wordcount: '657'
 ht-degree: 1%
 
 ---
@@ -88,6 +88,14 @@ Bekijk de volgende video om te leren hoe u toegang tot AI Assistant voor uw orga
 >[!VIDEO](https://video.tv.adobe.com/v/3436470/?learn=on)
 
 Voor meer informatie, lees de [ AI Hulp toegangsgids ](access.md).
+
+### Productkennis in AI Assistant
+
+Bekijk de volgende video voor meer informatie over productkennis in AI Assistant.
+
+>[!VIDEO](https://video.tv.adobe.com/v/3441024?learn=on)
+
+Voor meer informatie, lees over [ productkennis in AI Medewerker ](home.md#product-knowledge)
 
 ### De AI Hulp productkennis van het gebruik om onboarding tijd te verminderen
 
