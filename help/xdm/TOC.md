@@ -5,9 +5,9 @@ breadcrumb-title: Handleiding voor Experience Data Model (XDM)
 user-guide-description: Verken een overzicht van het systeem van Experience Data Model (XDM) binnen het Experience Platform en leer hoe u klassen en schemaveldgroepen kunt gebruiken om ervaringsgegevens te standaardiseren.
 feature: Schemas
 role: Developer
-source-git-commit: 3071d16b6b98040ea3f2e3a34efffae517253b8e
+source-git-commit: 25d74df335e3d7930b7f3a4f4836bd20556780ed
 workflow-type: tm+mt
-source-wordcount: '695'
+source-wordcount: '696'
 ht-degree: 7%
 
 ---
@@ -35,6 +35,7 @@ ht-degree: 7%
          * [Locatie](./schema/healthcare/classes/location.md)
       * Veldgroepen {#field-groups}
          * [Account](./schema/healthcare/field-groups/account.md)
+         * [Aanstelling](./schema/healthcare/field-groups/appointment.md)
          * [Zorgplan](./schema/healthcare/field-groups/care-plan.md)
          * [Dekking](./schema/healthcare/field-groups/coverage.md)
          * [Goal](./schema/healthcare/field-groups/goal.md)
