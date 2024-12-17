@@ -5,9 +5,9 @@ user-guide-description: Activeer uw bekende en onbekende gegevens voor cross-cha
 description: In dit document wordt de inhoudsopgave voor Adobe Experience Platform-doelen weergegeven
 feature: Destinations
 role: Admin,User
-source-git-commit: 3a66902ab169c555a52741e3630d2b9f50149155
+source-git-commit: cc9c6f476a2b50e09cc14df915fc4dfa851a3bb9
 workflow-type: tm+mt
-source-wordcount: '1262'
+source-wordcount: '1267'
 ht-degree: 1%
 
 ---
@@ -174,7 +174,9 @@ ht-degree: 1%
       * [[!DNL Salesforce Marketing Cloud Account Engagement]](./catalog/email-marketing/salesforce-marketing-cloud-account-engagement.md)
       * [SendGrid-verbinding](./catalog/email-marketing/sendgrid.md)
    * Extensies labelen {#launch-extensions}
-      * [ overzicht van de de uitbreidingsuitbreiding van de Markering ](./catalog/launch-extensions/overview.md)
+      * [Overzicht van de extensie Tag](./catalog/launch-extensions/overview.md)
+   * Marketing automatiseren {#marketing-automation}
+      * [ Profielen van de Deelnemer RainFocus ](/help/destinations/catalog/marketing-automation/rainfocus.md)
    * Mobiele betrokkenheidsdoelen {#mobile-engagement}
       * [Overzicht van mobiele betrokkenheidsdoelen](./catalog/mobile-engagement/overview.md)
       * [Koppeling met kenmerken van het luchtschip](./catalog/mobile-engagement/airship-attributes.md)
