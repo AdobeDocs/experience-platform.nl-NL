@@ -3,9 +3,9 @@ title: Datasets exporteren naar cloudopslagdoelen
 type: Tutorial
 description: Leer hoe u gegevenssets van Adobe Experience Platform naar de gewenste locatie voor cloudopslag exporteert.
 exl-id: e89652d2-a003-49fc-b2a5-5004d149b2f4
-source-git-commit: 9b64e39d25ad94aa834c8e207396b37c2a121243
+source-git-commit: 5624dab337bcd27e28b4153459bb4e85fab22d6f
 workflow-type: tm+mt
-source-wordcount: '2547'
+source-wordcount: '2529'
 ht-degree: 0%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 >[!AVAILABILITY]
 >
->* Deze functionaliteit is beschikbaar voor klanten die het Real-Time CDP Premiere of Ultimate-pakket, Adobe Journey Optimizer of Customer Journey Analytics hebben aangeschaft. Neem contact op met uw Adobe voor meer informatie.
+>* Deze functionaliteit is beschikbaar voor klanten die het Real-Time CDP Prime- of Ultimate-pakket, Adobe Journey Optimizer of Customer Journey Analytics hebben aangeschaft. Neem contact op met uw Adobe voor meer informatie.
 
 Dit artikel verklaart het werkschema dat wordt vereist om [ datasets ](/help/catalog/datasets/overview.md) van Adobe Experience Platform naar uw aangewezen plaats van de wolkenopslag, zoals [!DNL Amazon S3], plaatsen SFTP, of [!DNL Google Cloud Storage] uit te voeren door het Experience Platform UI te gebruiken.
 
@@ -22,7 +22,7 @@ U kunt de Experience Platform APIs ook gebruiken om datasets uit te voeren. Lees
 
 ## Beschikbare gegevensbestanden voor exporteren {#datasets-to-export}
 
-De gegevenssets die u kunt exporteren, variëren op basis van de toepassing van het Experience Platform (Real-Time CDP, Adobe Journey Optimizer), de laag (Premier of Ultimate) en alle invoegtoepassingen die u hebt aangeschaft (bijvoorbeeld Data Distiller).
+De datasets die u kunt uitvoeren variëren gebaseerd op de toepassing van het Experience Platform (Real-Time CDP, Adobe Journey Optimizer), de rij (Prime of Ultimate), en om het even welke toe:voegen-ons die u (bijvoorbeeld: Gegevens Distiller) kocht.
 
 Gebruik de onderstaande tabel om te begrijpen welke gegevenstypen u kunt exporteren, afhankelijk van uw toepassing, productlaag en eventuele aangeschafte invoegtoepassingen:
 
@@ -37,26 +37,26 @@ Gebruik de onderstaande tabel om te begrijpen welke gegevenstypen u kunt exporte
 <tbody>
   <tr>
     <td rowspan="2">Real-Time CDP</td>
-    <td>Eerste</td>
-    <td>De datasets van de Gebeurtenis van het profiel en van de Ervaring die in de Experience Platform UI na het opnemen van of het verzamelen van gegevens door Bronnen, Web SDK, Mobiele SDK, de Schakelaar van Gegevens van de Analyse, en Audience Manager worden gecreeerd.</td>
+    <td>Prime</td>
+    <td>De datasets van de Gebeurtenis van het profiel en van de Ervaring die in de Experience Platform UI na het opnemen van of het verzamelen van gegevens door Bronnen, het Web SDK, Mobiele SDK, de Schakelaar van Gegevens van de Analyse, en Audience Manager worden gecreeerd.</td>
   </tr>
   <tr>
-    <td>Ultieme</td>
-    <td><ul><li>De datasets van de Gebeurtenis van het profiel en van de Ervaring die in de Experience Platform UI na het opnemen van of het verzamelen van gegevens door Bronnen, Web SDK, Mobiele SDK, de Schakelaar van Gegevens van de Analyse, en Audience Manager worden gecreeerd.</li><li> <a href="https://experienceleague.adobe.com/docs/experience-platform/dashboards/query.html#profile-attribute-datasets"> systeem-geproduceerde dataset van de Momentopname van het Profiel </a>.</li></td>
+    <td>Ultimate</td>
+    <td><ul><li>De datasets van de Gebeurtenis van het profiel en van de Ervaring die in de Experience Platform UI na het opnemen van of het verzamelen van gegevens door Bronnen, het Web SDK, Mobiele SDK, de Schakelaar van Gegevens van de Analyse, en Audience Manager worden gecreeerd.</li><li> <a href="https://experienceleague.adobe.com/docs/experience-platform/dashboards/query.html#profile-attribute-datasets"> systeem-geproduceerde dataset van de Momentopname van het Profiel </a>.</li></td>
   </tr>
   <tr>
     <td rowspan="2">Adobe Journey Optimizer</td>
-    <td>Eerste</td>
+    <td>Prime</td>
     <td>Raadpleeg de <a href="https://experienceleague.adobe.com/docs/journey-optimizer/using/data-management/datasets/export-datasets.html#datasets"> documentatie van Adobe Journey Optimizer </a> .</td>
   </tr>
   <tr>
-    <td>Ultieme</td>
+    <td>Ultimate</td>
     <td>Raadpleeg de <a href="https://experienceleague.adobe.com/docs/journey-optimizer/using/data-management/datasets/export-datasets.html#datasets"> documentatie van Adobe Journey Optimizer </a> .</td>
   </tr>
   <tr>
     <td>Customer Journey Analytics</td>
     <td>Alles</td>
-    <td> De datasets van de Gebeurtenis van het profiel en van de Ervaring die in de Experience Platform UI na het opnemen van of het verzamelen van gegevens door Bronnen, Web SDK, Mobiele SDK, de Schakelaar van Gegevens van de Analyse, en Audience Manager worden gecreeerd.</td>
+    <td> De datasets van de Gebeurtenis van het profiel en van de Ervaring die in de Experience Platform UI na het opnemen van of het verzamelen van gegevens door Bronnen, het Web SDK, Mobiele SDK, de Schakelaar van Gegevens van de Analyse, en Audience Manager worden gecreeerd.</td>
   </tr>
   <tr>
     <td>Data Distiller</td>
@@ -271,7 +271,7 @@ Om datasets uit een bestaande gegevensstroom te verwijderen, volg de stappen hie
 
 Raadpleeg de productbeschrijvingsdocumenten om te begrijpen hoeveel gegevens u per jaar voor elke Experience Platform-toepassing mag exporteren. Bijvoorbeeld, kunt u de Beschrijving van het Product van Real-Time CDP [ hier ](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html) bekijken.
 
-De gegevensuitvoerrechten voor verschillende aanvragen zijn niet additief. Dit betekent bijvoorbeeld dat als u Real-Time CDP Ultimate en Adobe Journey Optimizer Ultimate koopt, de uitvoerrechten voor profielen de hoogste van de twee rechten zijn, zoals beschreven in de productbeschrijvingen. Uw volumeregelingen worden berekend door het totale aantal gelicentieerde profielen te nemen en te vermenigvuldigen met 500 kB voor Real-Time CDP Premium of 700 kB voor Real-Time CDP Ultimate om te bepalen hoeveel gegevensvolume u hebt.
+De gegevensuitvoerrechten voor verschillende aanvragen zijn niet additief. Dit betekent bijvoorbeeld dat als u Real-Time CDP Ultimate en Adobe Journey Optimizer Ultimate koopt, de uitvoerrechten voor profielen de hoogste van de twee rechten zijn, zoals beschreven in de productbeschrijvingen. Uw volumeregelingen worden berekend door het totale aantal gelicentieerde profielen te nemen en te vermenigvuldigen met 500 kB voor Real-Time CDP Prime of 700 kB voor Real-Time CDP Ultimate om te bepalen hoeveel hoeveelheid gegevens u hebt.
 
 Anderzijds, als u toe:voegen-ons zoals Gegevens Distiller kocht, vertegenwoordigt de grens van de gegevensuitvoer die u gerechtigd bent om te zijn de som van de productrij en de toe:voegen-op.
 
@@ -281,7 +281,6 @@ U kunt uw profieluitvoer tegen uw contractuele grenzen in het [ dashboard van he
 
 Houd in mening de volgende beperkingen voor de algemene beschikbaarheidsversie van de uitvoer van datasets:
 
-* Momenteel, kunt u stijgende dossiers slechts uitvoeren en een einddatum kan niet voor uw datasetuitvoer worden geselecteerd.
 * Experience Platform kan veelvoudige dossiers zelfs voor kleine datasets uitvoeren. Dataset exporteren is ontworpen voor systeemintegratie en geoptimaliseerd voor prestaties. Het aantal geëxporteerde bestanden kan daarom niet worden aangepast.
 * De geëxporteerde bestandsnamen kunnen momenteel niet worden aangepast.
 * Datasets die via API zijn gemaakt, zijn momenteel niet beschikbaar voor export.

@@ -4,9 +4,9 @@ title: De datasets van de uitvoer door de Dienst API van de Stroom te gebruiken
 description: Leer hoe te om de Dienst API van de Stroom te gebruiken om datasets naar uitgezochte bestemmingen uit te voeren.
 type: Tutorial
 exl-id: f23a4b22-da04-4b3c-9b0c-790890077eaa
-source-git-commit: 3bce663866e7a6e8288444121331fc931a74076a
+source-git-commit: 6f8922f972546d8cceeba63e1bb4d1a75f7ef5c3
 workflow-type: tm+mt
-source-wordcount: '5126'
+source-wordcount: '5134'
 ht-degree: 0%
 
 ---
@@ -2469,6 +2469,10 @@ Houd rekening met het verschil in bestandsindeling tussen de twee bestandstypen 
 ## API-foutafhandeling {#api-error-handling}
 
 De API-eindpunten in deze zelfstudie volgen de algemene beginselen van het API-foutbericht voor Experience Platforms. Verwijs naar [ API statuscodes ](/help/landing/troubleshooting.md#api-status-codes) en [ de fouten van de verzoekkopbal ](/help/landing/troubleshooting.md#request-header-errors) in de het oplossen van problemengids van het Platform voor meer informatie bij het interpreteren van foutenreacties.
+
+## Bekende beperkingen {#known-limitations}
+
+Bekende beperkingen van de mening [ ](/help/destinations/ui/export-datasets.md#known-limitations) over datasetuitvoer.
 
 ## Veelgestelde vragen {#faq}
 
