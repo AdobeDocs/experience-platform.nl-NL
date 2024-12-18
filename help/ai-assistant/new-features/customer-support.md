@@ -2,7 +2,8 @@
 title: AI-assistent voor Klantenondersteuning
 description: Leer hoe u AI Medewerker kunt gebruiken om het oplossen van problemen en het proces van het etiketteren van de klantensteun te stroomlijnen.
 badge: Alpha
-source-git-commit: 746c40902a052f99db28a629a8e9c4da0559037f
+exl-id: 263b8a44-8902-42b9-8390-d7da8e9b5129
+source-git-commit: 88c4ba5fd7d5cd4fdd1e1da3f2eac43b03149e5e
 workflow-type: tm+mt
 source-wordcount: '349'
 ht-degree: 0%
@@ -36,7 +37,7 @@ Krijg onmiddellijke reacties op gemeenschappelijke steunvragen die uit deskundig
 * **juridische documentatie van het Product** die nauwkeurige en verlenen van vergunningen-georiënteerde informatie verstrekt.
    * Voorbeeldvragen:
       * &quot;Wat is de limiet voor batchsegmentatietaken bij Adobe Experience Platform Activation?&quot;
-&quot;Wat is de gemiddelde rijkheidsgrens van het profiel in de Activering van Adobe Experience Platform?&quot;
+      * &quot;Wat is de gemiddelde rijkheidsgrens van het profiel in de Activering van Adobe Experience Platform?&quot;
 
 ## Ondersteuning voor het maken van hoofdletters
 

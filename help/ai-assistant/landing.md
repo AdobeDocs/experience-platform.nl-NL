@@ -2,9 +2,9 @@
 title: AI Assistant in Adobe Experience Platform-productdocumentatie
 description: Ga aan de slag met AI Assistant in Adobe Experience Platform.
 exl-id: bcb86a41-d5d8-4c1a-a86d-79fa0c167bc7
-source-git-commit: 4d89ac33843acd536fbadc85a07bee90a50e6407
+source-git-commit: 38ce83fe0d1c5c558a2e03e0057ac4996097409b
 workflow-type: tm+mt
-source-wordcount: '657'
+source-wordcount: '712'
 ht-degree: 1%
 
 ---
@@ -66,6 +66,14 @@ U kunt de natuurlijke mogelijkheden van de taalraming van AI Assistant gebruiken
 U kunt de Medewerker van AI gebruiken om uw ontdekking van de gebieden van de Gegevens van de Ervaring te helpen (XDM) die u kunt dan gebruiken om doelpubliek binnen Experience Platform tot stand te brengen.
 
 [![afbeelding](../rtcdp/assets/do-not-localize/learn-more-button.svg)](./new-features/xdm-field-discovery.md)
+
+>[!TAB  AI Medewerker voor de Steun van de Klant ]
+
+### AI-assistent voor Klantenondersteuning
+
+U kunt AI Assistant gebruiken voor Klantenondersteuning om probleemloos problemen op te lossen zonder uw workflows te verlaten. Ondersteuningsbeheerders kunnen nu, indien nodig, de AI Assistant voor Klantenondersteuning gebruiken om ondersteuningstickets te maken, compleet met context- en sessiedetails van uw interacties met AI Assistant.
+
+[![afbeelding](../rtcdp/assets/do-not-localize/learn-more-button.svg)](./new-features/customer-support.md)
 
 >[!ENDTABS]
 
