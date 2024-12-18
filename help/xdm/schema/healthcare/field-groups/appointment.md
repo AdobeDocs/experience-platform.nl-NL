@@ -4,7 +4,8 @@ description: Leer meer over de het gebiedsgroep van het Schema van de Benoeming.
 badgePrivateBeta: label="Private Beta" type="Informative"
 hide: true
 hidefromtoc: true
-source-git-commit: 2a58f6f1663e95c1c7576cd4909fa937b41ae099
+exl-id: 8224a2ee-51ac-4512-b0e4-5f1ab6bfddc4
+source-git-commit: cb39966de77846758c16153f78fcf521f6a421e3
 workflow-type: tm+mt
 source-wordcount: '1089'
 ht-degree: 0%
@@ -120,3 +121,4 @@ Raadpleeg de openbare XDM-opslagplaats voor meer informatie over de veldgroep:
 | [!UICONTROL nth Week Of Month] | `nthWeekOfMonth` | [[!UICONTROL Coding]](../data-types/coding.md) | Geeft de nde week van de maand aan waarin de afspraak opnieuw moet plaatsvinden. |
 | [!UICONTROL Day Of Month] | `dayOfMonth` | Geheel | Geeft aan dat benoemingen moeten plaatsvinden op deze specifieke dag van de maand. |
 | [!UICONTROL Month Interval] | `monthInterval` | Geheel | Geeft aan dat terugkerende benoemingen elke maand moeten plaatsvinden. |
+

@@ -5,7 +5,7 @@ badgePrivateBeta: label="Private Beta" type="Informative"
 hide: true
 hidefromtoc: true
 exl-id: a796b58b-b36f-4277-870b-0d3939af8061
-source-git-commit: 8520be2a000edfd2d92bfbc6ebed41b1536fffc1
+source-git-commit: cb39966de77846758c16153f78fcf521f6a421e3
 workflow-type: tm+mt
 source-wordcount: '520'
 ht-degree: 1%
@@ -57,3 +57,4 @@ In de volgende tabel worden de gegevenstypen weergegeven die volgens de [!DNL HL
 | [[!UICONTROL Simple Quantity]](./data-types/simple-quantity.md) | Een gemeten of meetbare hoeveelheid. |
 | [[!UICONTROL Timing]](./data-types/timing.md) | Informatie over een gebeurtenis die meerdere keren kan plaatsvinden. |
 | [[!UICONTROL Virtual Service Detail]](./data-types/virtual-service-detail.md) | Contactgegevens van de virtuele service. |
+
