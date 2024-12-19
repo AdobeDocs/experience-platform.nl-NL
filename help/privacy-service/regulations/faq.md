@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Veelgestelde vragen over privacyregels
 description: In dit document worden antwoorden gegeven op veelgestelde vragen over ondersteunde wettelijke privacyregels en de toepassing ervan in Adobe Experience Cloud.
 exl-id: ec553e53-664b-4e18-abb1-4e4063fdd2c9
-source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
+source-git-commit: d643b2aeadd4080fa89d6a7b0f84a9f6882d7b89
 workflow-type: tm+mt
-source-wordcount: '1631'
+source-wordcount: '1606'
 ht-degree: 0%
 
 ---
@@ -87,7 +87,7 @@ Ervan uitgaande dat het bedrijf persoonlijke informatie heeft verzameld en dat h
 | Verordening | Te reageren tijdsbestek | Notities |
 | --- | --- | --- |
 | CCPA (Californië) | 45 dagen | |
-| GDPR (EU) | 30 dagen | Indien het verzoek ingewikkeld is of meerdere verzoeken van dezelfde betrokkene zijn ingediend, kan het verzoek worden verlengd tot 60 dagen. |
+| GDPR (EU) | 30 dagen | |
 | LGPD (Brazilië) | 15 dagen | |
 | PDPA (Thailand) | 30 dagen | Als een onderneming niet binnen het nalevingsvenster op het verzoek van een betrokkene kan reageren, krijgt de onderneming een extra termijn van 30 dagen vanaf de datum waarop zij het verzoek om schriftelijk aan de betrokkene te antwoorden niet kon inwilligen. |
 
