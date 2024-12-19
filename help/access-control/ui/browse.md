@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;home;populaire onderwerpen
+keywords: Experience Platform;startpagina;populaire onderwerpen
 solution: Experience Platform
 title: Selecteer een productprofiel om toegangsbeheermachtigingen te bewerken
 description: In dit document worden de stappen beschreven die nodig zijn om door de werkruimte voor toegangsbeheer te bladeren. Om toegangsbeheer voor Experience Platform door Adobe Admin Console te vormen, moet u een beheerder voor een organisatie zijn die een abonnement op Experience Platform heeft.
 exl-id: 1d3c894e-b412-43ba-ba91-ddfa35303d73
-source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
+source-git-commit: ca204a6bdbf867268e774d5db6f8e5941d38f0ae
 workflow-type: tm+mt
 source-wordcount: '296'
-ht-degree: 0%
+ht-degree: 2%
 
 ---
 
@@ -30,3 +30,4 @@ Deze gebruikershandleiding is vooral gericht op het gebruik van [!DNL Admin Cons
 ## Volgende stappen
 
 Zodra u de werkruimte van de toegangscontrole hebt genavigeerd, ga aan de volgende stap te werk [ tot een nieuw productprofiel ](create-profile.md) leiden
+
