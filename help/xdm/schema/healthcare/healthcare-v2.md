@@ -5,7 +5,7 @@ badgePrivateBeta: label="Private Beta" type="Informative"
 hide: true
 hidefromtoc: true
 exl-id: a796b58b-b36f-4277-870b-0d3939af8061
-source-git-commit: cb39966de77846758c16153f78fcf521f6a421e3
+source-git-commit: 6d1745b93d2ad7cf6ef96510bd5128a43de9ef03
 workflow-type: tm+mt
 source-wordcount: '520'
 ht-degree: 1%
@@ -26,7 +26,7 @@ De volgende lijst schetst de geadviseerde klassen en de groepen van het schemage
 | **de ervaring van de consument voor verzekering**: Verbeter digitale verwerving en ervaringen onder consumenten die voor verzekering winkelen. Voorbeelden zijn: <li> Werken met consumentengedrag om speciale e-mails of doeladvertenties van derden te verzenden naar mensen die pagina&#39;s met algemene informatie openen (zoals plannen, plannamen/lagen, medicaid- of welzijnsprogramma&#39;s)</li><li> Het verzenden van vaccingerelateerde informatie over hartgezondheid om merkbekendheid te creëren of verzoeken om vaccins te plannen aan mensen die op zoek zijn naar hartgezondheid en vaccininformatie. </li> | <ul><li>**[XDM Individueel Profiel](../../classes/individual-profile.md)**:<ul><li>[ Rekening ](./field-groups/account.md)</li><li>[ de Aflossing van de Geneeskunde ](./field-groups/medication-dispense.md)</li><li>[ Verzoek van de Geneesmiddelen ](./field-groups/medication-request.md)</li><li>[ Patiënt ](./field-groups/patient.md)</li></ul></li><li>**[Plaats](./classes/location.md)**:<ul><li>[ Plaats ](./field-groups/location.md)</li></ul><li>**[Geneesmiddel](../../classes/medication.md)**:<ul><li>[ Geneesmiddel ](./field-groups/medication.md)</li><li>[ de Aflossing van de Geneeskunde ](./field-groups/medication-dispense.md)</li><li>[ Verzoek van de Geneesmiddelen ](./field-groups/medication-request.md)</li></ul></li><li>**[Leverancier](../../classes/provider.md)**:<ul><li>[ Rekening ](./field-groups/account.md)</li><li>[ de Aflossing van de Geneeskunde ](./field-groups/medication-dispense.md)</li><li>[ Verzoek van de Geneesmiddelen ](./field-groups/medication-request.md)</li></ul><li>**[Plan](../../classes/plan.md)**:<ul><li>[ Doel ](./field-groups/coverage.md)</li></ul></li></ul> |
 | **Verbeterde leverancierservaring**: Het gebruiken van leveranciersgegevens van het systeem EMR om alternatieve leveranciers voor te stellen die op benoemingsbeschikbaarheid, plaats, en specialiteit worden gebaseerd. <br> <br> verbeterend leveranciersonderzoeken om resultaten met gewenste beschikbaarheid te tonen, controlerend dat de geselecteerde leverancier deel van het loonnetwerk uitmaakt, en het verstrekken van kostenramingen. | <ul><li>**[individuele Profielen XDM](../../classes/individual-profile.md)**:<ul><li>[ Benoeming ](./field-groups/appointment.md)</li><li>[ Organisatie ](./field-groups/organization.md)</li><li>[ Patiënt ](./field-groups/patient.md)</li><li>[ Praktijk ](./field-groups/practioner.md)</li><li>[ Programma ](./field-groups/schedule.md)</li></ul></li><li>**[Plaats](./classes/location.md)**:<ul><li>[ Plaats ](./field-groups/location.md)</li></ul><li>**[Leverancier](../../classes/provider.md)**:<ul><li>[ Benoeming ](./field-groups/appointment.md)</li><li>[ Organisatie ](./field-groups/organization.md)</li><li>[ Praktijk ](./field-groups/practioner.md)</li><li>[ Programma ](./field-groups/schedule.md)</li></ul></li></ul> |
 
-{style="table-layout:auto"}
+{style="table-layout:fixed"}
 
 ## Datatypen {#data-types}
 
