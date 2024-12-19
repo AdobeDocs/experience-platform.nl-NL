@@ -3,9 +3,9 @@ keywords: Experience Platform;thuis;populaire onderwerpen;de dienst van de vraag
 title: SSL-opties voor Query Service
 description: Leer meer over SSL-ondersteuning voor verbindingen van derden met Adobe Experience Platform Query Service en hoe u verbinding maakt via de SSL-modus Volledig controleren.
 exl-id: 41b0a71f-165e-49a2-8a7d-d809f5f683ae
-source-git-commit: 229ce98da8f1c97e421ef413826b0d23754d16df
+source-git-commit: 37c30fc1a040efbce0c221c10b36e105d5b1a962
 workflow-type: tm+mt
-source-wordcount: '1017'
+source-wordcount: '1008'
 ht-degree: 0%
 
 ---
@@ -30,8 +30,8 @@ De verschillende `sslmode` -parameterwaarden bieden verschillende beveiligingsni
 
 | sslmode | Afvalbeveiliging | MITM-beveiliging | Beschrijving |
 |---|---|---|---|
-| `allow` | Gedeeltelijk | Nee | Veiligheid is geen prioriteit, snelheid en een lage verwerkingsoverhead zijn belangrijker. Deze modus kiest alleen voor codering als de server erop staat. |
-| `prefer` | Gedeeltelijk | Nee | Codering is niet vereist, maar de communicatie wordt gecodeerd als de server dit ondersteunt. |
+| `allow` | Ja | Nee | Codering is vereist voor alle communicatie. Het netwerk wordt vertrouwd om met de correcte server te verbinden. |
+| `prefer` | Ja | Nee | Codering is vereist voor alle communicatie. Het netwerk wordt vertrouwd om met de correcte server te verbinden. |
 | `require` | Ja | Nee | Codering is vereist voor alle communicatie. Het netwerk wordt vertrouwd om met de correcte server te verbinden. ServerSSL-certificaatvalidatie is niet vereist. |
 | `verify-ca` | Ja | Afhankelijk van CA-beleid | Codering is vereist voor alle communicatie. Servervalidatie is vereist voordat gegevens worden gedeeld. Hiervoor moet u een basiscertificaat instellen in de [!DNL PostgreSQL] -thuismap. [ de Details worden verstrekt hieronder ](#instructions) |
 | `verify-full` | Ja | Ja | Codering is vereist voor alle communicatie. Servervalidatie is vereist voordat gegevens worden gedeeld. Hiervoor moet u een basiscertificaat instellen in de [!DNL PostgreSQL] -thuismap. [ Details worden verstrekt hieronder ](#instructions). |
