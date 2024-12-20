@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Identiteitsvelden definiëren in de gebruikersinterface
 description: Leer hoe u een identiteitsveld definieert in de gebruikersinterface van het Experience Platform.
 exl-id: 11a53345-4c3f-4537-b3eb-ee7a5952df2a
-source-git-commit: d1b571fe72208cf2f2ae339273f05cc38dda9845
+source-git-commit: 6020f1c294f123cbf57629405128580efc5642ec
 workflow-type: tm+mt
 source-wordcount: '601'
 ht-degree: 0%
@@ -59,3 +59,4 @@ Als u een primaire identiteit voor het schema bepaalde, kunt u nu te werk gaan [
 Deze gids besprak hoe te om een identiteitsgebied in UI te bepalen. Aangezien het gegeven gebruikend dit schema wordt opgenomen, zullen de grafieken van uw klantenidentiteit worden bijgewerkt om op de de identiteitsgebieden van het schema te wijzen. Zie de gids op de [ kijker van de identiteitsgrafiek ](../../../identity-service/features/identity-graph-viewer.md) leren hoe te om de privé grafiek van uw organisatie in UI te onderzoeken.
 
 Zie het overzicht op [ bepalende gebieden in UI ](./overview.md#special) leren hoe te om andere XDM gebiedstypes in [!DNL Schema Editor] te bepalen.
+
