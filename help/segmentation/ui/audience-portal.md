@@ -2,9 +2,9 @@
 title: Overzicht van publiek portal
 description: Leer hoe u het publiek in Adobe Experience Platform kunt bekijken, beheren en een publiek kunt maken.
 exl-id: 505ac22e-05f3-423a-a9a0-7f3470af8945
-source-git-commit: 1aa10d9cbde66a174ddc64ba9ce11149436393c1
+source-git-commit: 260d63d5eebd62cc5a617fccc189af52fd4d0b09
 workflow-type: tm+mt
-source-wordcount: '4347'
+source-wordcount: '4358'
 ht-degree: 0%
 
 ---
@@ -249,7 +249,7 @@ Nadat u hebt bevestigd dat het juiste publiek wordt vermeld, kunt u doorgaan met
 
 >[!NOTE]
 >
-Als u flexibele publieksevaluatie op publiek in werking stelt die reeds om [ na segmentevaluatie ](../../destinations/ui/activate-batch-profile-destinations.md#export-full-files) worden geactiveerd, zullen de doelgroepen worden geactiveerd zodra de flexibele baan van de publieksevaluatie, ongeacht om het even welke vorige dagelijkse activeringstaken eindigt.
+Als u een flexibele publieksevaluatie uitvoert, moet u ervoor zorgen dat de frequentie is ingesteld op **[!UICONTROL After segment evaluation]** . Het in werking stellen van flexibele publieksevaluatie op publiek die reeds om [ na segmentevaluatie ](../../destinations/ui/activate-batch-profile-destinations.md#export-full-files) worden geactiveerd, zal publiek activeren zodra de flexibele baan van de publieksevaluatie, ongeacht om het even welke vorige dagelijkse activeringstaken beëindigt.
 
 ## Details publiek {#audience-details}
 

@@ -3,9 +3,9 @@ title: API-eindpunt voor soorten publiek
 description: Gebruik het publiek eindpunt in de API van de Dienst van de Segmentatie van Adobe Experience Platform om, publiek voor uw organisatie programmatically tot stand te brengen te beheren en bij te werken.
 role: Developer
 exl-id: cb1a46e5-3294-4db2-ad46-c5e45f48df15
-source-git-commit: 9c50ca0db55ce4b21978273d7b4d1de9b5f9338d
+source-git-commit: 260d63d5eebd62cc5a617fccc189af52fd4d0b09
 workflow-type: tm+mt
-source-wordcount: '1438'
+source-wordcount: '1452'
 ht-degree: 0%
 
 ---
@@ -45,6 +45,7 @@ De volgende vraagparameters kunnen worden gebruikt wanneer het terugwinnen van e
 | `property` | Een filter dat u toestaat om publiek te specificeren dat **precies** de waarde van een attribuut aanpast. Dit wordt geschreven in de indeling `property=` | `property=audienceId==test-audience-id` |
 | `name` | Een filter dat u toestaat om publiek te specificeren de waarvan namen **** bevatten de verstrekte waarde. Deze waarde is niet hoofdlettergevoelig. | `name=Sample` |
 | `description` | Een filter dat u toestaat om publiek te specificeren de waarvan beschrijvingen **** bevatten de verstrekte waarde. Deze waarde is niet hoofdlettergevoelig. | `description=Test Description` |
+| `entityType` | Een filter waarmee u het type publiek kunt opgeven dat u zoekt. | `entityType=_xdm.context.account` |
 
 **Verzoek**
 

@@ -4,9 +4,9 @@ description: Leer hoe u accountpubliek kunt maken en gebruiken om accountprofiel
 badgeB2B: label="B2B edition" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
 badgeB2P: label="B2P Edition" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html newtab=true"
 exl-id: 047930d6-939f-4418-bbcb-8aafd2cf43ba
-source-git-commit: fd0a495d68d6a09ccca66c400993d2e72673321c
+source-git-commit: 260d63d5eebd62cc5a617fccc189af52fd4d0b09
 workflow-type: tm+mt
-source-wordcount: '1488'
+source-wordcount: '1465'
 ht-degree: 0%
 
 ---
@@ -195,10 +195,6 @@ In de volgende sectie vindt u aanvullende informatie over het accountpubliek.
 >abstract="Het publiek schendt een beperking. Lees het gekoppelde document voor meer informatie."
 
 Wanneer het gebruiken van rekeningspubliek, moet het publiek **** aan de volgende beperkingen voldoen:
-
->[!NOTE]
->
->De volgende lijst toont de **standaard** beperkingen voor rekeningspubliek. Deze waarden **kunnen** veranderen, afhankelijk van de montages die door de beheerder van uw organisatie worden uitgevoerd.
 
 - Het maximumterugkijkvenster voor de Gebeurtenissen van de Ervaring is **30 dagen**.
 - De maximumdiepte van genestelde containers is **5**.
