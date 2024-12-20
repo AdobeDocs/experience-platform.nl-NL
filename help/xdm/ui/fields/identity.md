@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Identiteitsvelden definiëren in de gebruikersinterface
 description: Leer hoe u een identiteitsveld definieert in de gebruikersinterface van het Experience Platform.
 exl-id: 11a53345-4c3f-4537-b3eb-ee7a5952df2a
-source-git-commit: 6020f1c294f123cbf57629405128580efc5642ec
+source-git-commit: 0d16bbbaf81b2057c6b3518a5b8a8698920c36f7
 workflow-type: tm+mt
-source-wordcount: '601'
+source-wordcount: '643'
 ht-degree: 0%
 
 ---
@@ -43,6 +43,10 @@ Aanvullende besturingselementen worden weergegeven nadat u het selectievakje heb
 Gebruik onder **[!UICONTROL Identity namespace]** het vervolgkeuzemenu om de juiste naamruimte voor het naamveld te selecteren. De standaardnaamruimten die door de Adobe worden verschaft, worden samen met aangepaste naamruimten weergegeven die door uw organisatie zijn gedefinieerd.
 
 Als u klaar bent, selecteert u **[!UICONTROL Apply]** om de wijziging toe te passen op het schema.
+
+>[!IMPORTANT]
+>
+>Als er al een primair identiteitsveld is ingesteld, kunt u het primaire identiteitsveld in uw schema wijzigen door de bovenstaande stappen uit te voeren. Nochtans, moet u om het even welke bijbehorende datasets in het profiel voor de verandering onbruikbaar maken en dan opnieuw toelaten om te nemen beïnvloeden.
 
 ![](../../images/ui/fields/special/identity-config.png)
 
