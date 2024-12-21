@@ -3,9 +3,9 @@ solution: Experience Platform
 title: UI-gids Edge Segmentation
 description: Leer hoe te om randsegmentatie te gebruiken om segmentdefinities in Platform onmiddellijk op de rand te evalueren, toelatend de zelfde pagina en volgende de gebruikscituaties van de paginagrootte.
 exl-id: eae948e6-741c-45ce-8e40-73d10d5a88f1
-source-git-commit: e6e9abc7ffe27a2ff9c4ccf4ca243cabdae3d631
+source-git-commit: 828a586f0264147676da5c43c73d3b3b9d50b9c2
 workflow-type: tm+mt
-source-wordcount: '594'
+source-wordcount: '595'
 ht-degree: 0%
 
 ---
@@ -42,7 +42,7 @@ Een vraag kan met randsegmentatie worden geëvalueerd als het aan om het even we
 | Alleen profiel | Elke segmentdefinitie die alleen naar een profielkenmerk verwijst. |
 | Eén gebeurtenis met een profielkenmerk binnen een relatief tijdvenster van minder dan 24 uur | Elke segmentdefinitie die verwijst naar één binnenkomende gebeurtenis, met een of meer profielkenmerken, en die optreedt binnen een relatief tijdvenster van minder dan 24 uur. |
 | Segment van segmenten | Elke segmentdefinitie die een of meer batch- of streaming segmentdefinities bevat. **Nota:** als het segment van segmenten met **partij** segmentdefinities wordt gebruikt, kan de profielontzetting **tot 24 uren** nemen om voor te komen. Als het segment van segmenten met **het stromen** segmentdefinities wordt gebruikt, zal de profielontzetting op een het stromen manier voorkomen. |
-| Meerdere gebeurtenissen met een profielkenmerk | Om het even welke segmentdefinitie die naar veelvoudige gebeurtenissen **binnen de laatste 24 uren** verwijst en (naar keuze) heeft één of meerdere profielattributen. |
+| Meerdere gebeurtenissen met een profielkenmerk | Om het even welke segmentdefinitie die naar veelvoudige niet opeenvolgende gebeurtenissen **binnen de laatste 24 uren** verwijst en (naar keuze) heeft één of meerdere profielattributen. |
 
 Een segmentdefinitie zal **** niet voor randsegmentatie in het volgende scenario worden toegelaten:
 
