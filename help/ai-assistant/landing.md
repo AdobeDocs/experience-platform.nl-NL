@@ -2,9 +2,9 @@
 title: AI Assistant in Adobe Experience Platform-productdocumentatie
 description: Ga aan de slag met AI Assistant in Adobe Experience Platform.
 exl-id: bcb86a41-d5d8-4c1a-a86d-79fa0c167bc7
-source-git-commit: 38ce83fe0d1c5c558a2e03e0057ac4996097409b
+source-git-commit: 9a8b1527f932e8b0091af7fb999ed638e28de2d0
 workflow-type: tm+mt
-source-wordcount: '712'
+source-wordcount: '790'
 ht-degree: 1%
 
 ---
@@ -125,6 +125,20 @@ Bekijk de volgende video om meer te leren over het deelvenster voor ontdekkingsm
 
 >[!VIDEO](https://video.tv.adobe.com/v/3440962/?learn=on)
 
+### AI Assistant gebruiken om reacties te valideren
+
+Bekijk de volgende video om te leren hoe u de reacties kunt verifiëren en valideren met AI Assistant.
+
+>[!VIDEO](https://video.tv.adobe.com/v/3441738/?learn=on)
+
+Voor meer informatie, lees de documentatie over [ verifieert AI Hulp antwoorden ](ui-guide.md#verify-operational-insights-responses).
+
+### AI Assistant gebruiken voor effectanalyse
+
+Bekijk de volgende video om te leren hoe u met AI Assistant een effectievere effectanalyse kunt uitvoeren voordat er wijzigingen in uw gegevensobjecten worden aangebracht.
+
+>[!VIDEO](https://video.tv.adobe.com/v/3441680/?learn=on)
+
 ## AI Assistant-casebibliotheek
 
 >[!BEGINTABS]
@@ -136,6 +150,7 @@ Lees het volgende voor voorbeelden van AI Assistant-gebruiksscenario&#39;s:
 * [ Verminder onboarding tijd voor nieuwe leden van uw team ](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-blogs/onboard-new-team-members-in-less-than-half-the-time-with-ai/ba-p/706153)
 * [ ontmoedig uw publiek en optimaliseer uw marketing verrichtingen ](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-blogs/ai-assistant-helps-optimize-marketing-operations-by-de/ba-p/696002)
 * [ Controle gebiedsdelen en minimaliseer risico tijdens gegevensupdates ](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-blogs/ai-assistant-minimizes-risk-during-data-updates-by-checking/ba-p/713364)
+* [ minimaliseer risico tijdens gegevensupdates door gebiedsdelen in seconden te controleren ](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-blogs/ai-assistant-minimizes-risk-during-data-updates-by-checking/ba-p/713364)
 
 >[!TAB  Extra videoinhoud ]
 
