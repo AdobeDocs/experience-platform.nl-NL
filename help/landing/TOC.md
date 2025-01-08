@@ -3,9 +3,9 @@ audience: user
 user-guide-title: Overzicht van Adobe Experience Platform
 breadcrumb-title: Overzicht van Experience Platform
 user-guide-description: Ontdek hoe u met Experience Platform uw klanten in real time persoonlijke ervaringen kunt bieden met handleidingen, documentatie en zelfstudies.
-source-git-commit: dde5c1367706d015308ebea687d7f2a41947fb20
+source-git-commit: 37a94874d2c104c753b0f1efbae20c1cce0b29f3
 workflow-type: tm+mt
-source-wordcount: '282'
+source-wordcount: '288'
 ht-degree: 18%
 
 ---
@@ -71,6 +71,8 @@ ht-degree: 18%
       * [Een Azure Key Vault configureren](./governance-privacy-security/customer-managed-keys/azure-key-vault-config.md)
       * [De API gebruiken om CMK in te stellen](./governance-privacy-security/customer-managed-keys/api-set-up.md)
       * [De gebruikersinterface gebruiken om CMK in te stellen](./governance-privacy-security/customer-managed-keys/ui-set-up.md)
+   * Key Management Service {#key-management-service}
+      * [Key Management Service](./governance-privacy-security/key-management-service/overview.md)
 * Licentiegebruik en instructies {#license}
    * [ De beste praktijken van de het beheersvergunning van Gegevens best ](./license-usage-and-guardrails/data-management-best-practices.md)
    * [Het gebruiksdashboard voor licenties](./license-usage-and-guardrails/license-usage-dashboard.md)

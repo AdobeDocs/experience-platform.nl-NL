@@ -4,9 +4,9 @@ description: Leer hoe u uw eigen coderingssleutels instelt voor gegevens die in 
 role: Developer
 feature: Privacy
 exl-id: cd33e6c2-8189-4b68-a99b-ec7fccdc9b91
-source-git-commit: c0eb5b5c3a1968cae2bc19b7669f70a97379239b
+source-git-commit: f2737355ca0652f434bd5f86acc65139f767e56f
 workflow-type: tm+mt
-source-wordcount: '743'
+source-wordcount: '819'
 ht-degree: 0%
 
 ---
@@ -14,6 +14,10 @@ ht-degree: 0%
 # Door de klant beheerde sleutels in Adobe Experience Platform
 
 Gegevens die op Adobe Experience Platform zijn opgeslagen, worden in rust gecodeerd met systeemtoetsen. Als u een toepassing gebruikt die bovenop Platform wordt gebouwd, kunt u verkiezen om uw eigen encryptiesleutels in plaats daarvan te gebruiken, die u grotere controle over uw gegevensveiligheid geven.
+
+>[!AVAILABILITY]
+>
+>Als uw implementatie van Experience Platform wordt uitgevoerd op Amazon Web Services (AWS), kunt u de Key Management Service (KMS) gebruiken voor gegevensversleuteling van het platform. Experience Platform dat op AWS wordt uitgevoerd, is momenteel beschikbaar voor een beperkt aantal klanten. Meer over de gesteunde infrastructuur van het Experience Platform leren, zie het [ Experience Platform multi-cloud overzicht ](https://experienceleague.adobe.com/en/docs/experience-platform/landing/multi-cloud). Om over encryptie zeer belangrijke verwezenlijking en beheer in AWS KMS te leren, verwijs naar de [ handleiding van de gegevensencryptie van AWS KMS ](../key-management-service/overview.md).
 
 >[!NOTE]
 >
