@@ -3,10 +3,10 @@ audience: user
 user-guide-title: Overzicht van Adobe Experience Platform
 breadcrumb-title: Overzicht van Experience Platform
 user-guide-description: Ontdek hoe u met Experience Platform uw klanten in real time persoonlijke ervaringen kunt bieden met handleidingen, documentatie en zelfstudies.
-source-git-commit: 37a94874d2c104c753b0f1efbae20c1cce0b29f3
+source-git-commit: b3fe3f50c133a819921aef05ee5b00af16b7f58f
 workflow-type: tm+mt
-source-wordcount: '288'
-ht-degree: 18%
+source-wordcount: '290'
+ht-degree: 17%
 
 ---
 
@@ -15,6 +15,7 @@ ht-degree: 18%
 
 * [Overzicht van platform](home.md)
 * [Overzicht van platform (video)](video/platform-overview.md)
+* [Overzicht van meerdere wolken](multi-cloud.md)
 * [ Zelfstudies van het Platform ](https://experienceleague.adobe.com/docs/platform-learn/tutorials/overview.html)
 * [Een klantervaring aangedreven door Platform (video)](video/customer-experience.md)
 * [Achter de schermen van een klantervaring met behulp van Platform (video)](video/customer-experience-bts.md)
