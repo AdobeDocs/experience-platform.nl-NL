@@ -4,14 +4,18 @@ solution: Experience Platform
 title: Marketo Engage-aansluiting
 description: Dit document biedt een overzicht van de bronconnector van het Marketo Engage, inclusief informatie over verificatie, toewijzing en gegevenslatentie.
 exl-id: 063ec5d9-d643-4141-bf6d-878273f22b33
-source-git-commit: 0c695e11e7d7c14ef7e047cd007668e1099bf127
+source-git-commit: 37e23b060c34c628b2be80256cffd1480c899ce7
 workflow-type: tm+mt
-source-wordcount: '683'
+source-wordcount: '728'
 ht-degree: 0%
 
 ---
 
 # [!DNL Marketo Engage] -connector
+
+>[!IMPORTANT]
+>
+>U kunt nu de [!DNL Marketo Engage] -bron gebruiken wanneer u Adobe Experience Platform uitvoert op Amazon Web Services (AWS). Experience Platform dat op AWS wordt uitgevoerd, is momenteel beschikbaar voor een beperkt aantal klanten. Meer over de gesteunde infrastructuur van het Experience Platform leren, zie het [ Experience Platform multi-cloud overzicht ](../../../../landing/multi-cloud.md).
 
 Adobe Experience Platform staat toe dat gegevens uit externe bronnen worden opgenomen terwijl u de mogelijkheid krijgt om inkomende gegevens te structureren, te labelen en te verbeteren met behulp van de platformservices. U kunt gegevens uit diverse bronnen invoeren, zoals toepassingen voor Adobe, opslag in de cloud, databases en vele andere.
 
@@ -21,7 +25,7 @@ Met de [!DNL Marketo Engage] bronconnector kunt u B2B-gegevens van [!DNL Marketo
 
 >[!IMPORTANT]
 >
->U moet toegang tot [ Adobe Real-time Customer Data Platform B2B Uitgave ](../../../../rtcdp/b2b-overview.md) hebben om alle datasets van Marketo voor segmentatie met het [ Real-Time Profiel van de Klant ](../../../../profile/home.md) te gebruiken. Zonder Real-Time CDP B2B Edition kunt u nog steeds de Marketo-bron gebruiken om gegevens van de personen- en activiteitengegevenssets naar Real-Time klantprofiel te verzenden voor segmentatie.
+>U moet toegang tot [ Adobe Real-time Customer Data Platform B2B edition ](../../../../rtcdp/b2b-overview.md) hebben om alle datasets van Marketo voor segmentatie met het [ Real-Time Profiel van de Klant ](../../../../profile/home.md) te gebruiken. Zonder Real-Time CDP B2B edition kunt u nog steeds de Marketo-bron gebruiken om gegevens van de personen- en activiteitengegevenssets over te brengen naar het realtime-klantprofiel voor segmentatie.
 
 Dit document verstrekt een overzicht van de [!DNL Marketo Engage] bronschakelaar, met inbegrip van informatie over hoe te om de schakelaar voor authentiek te verklaren, hoe te om [!DNL Marketo Engage] gebieden aan het Model van de Gegevens van de Ervaring (XDM) in kaart te brengen, en de gegevenslatentie van de schakelaar.
 
@@ -39,7 +43,7 @@ Zie de stappen die in [ worden geschetst verifieer uw van de bron Marketo schake
 
 Gebruik vervolgens de B2B-naamruimte en het schema auto-generation hulpprogramma om uw Platform Developer Console en Postman-omgeving in te stellen. Hierdoor kunt u uw B2B-naamruimten en -schema&#39;s automatisch vullen. Voor gedetailleerde instructies, zie de gids bij [ vestiging uw B2B namespaces en schema auto-generatienut ](./marketo-namespaces.md)
 
-## Experience Data Model (XDM)
+## Experience-datamodel (XDM)
 
 XDM is een openbaar gedocumenteerde specificatie die gemeenschappelijke structuren en definities verstrekt die u toestaan om gegevens van derdebronnen voor gebruik in de stroomafwaartse diensten van het Platform in te voeren.
 
@@ -68,7 +72,7 @@ Zie het volgende voor gedetailleerde informatie over de regels voor het in kaart
 
 In de volgende tabel wordt de verwachte vertraging voor het overbrengen van [!DNL Marketo Engage] -gegevens naar het platform weergegeven op basis van de aard van de opname en het gewenste doel:
 
-| Doel | Verwachte vertraging |
+| Bestemming | Verwachte vertraging |
 | ----------- | ---------------- |
 | [!DNL Real-Time Customer Profile] | &lt; 10 minuten |
 | Gegevensmeer | &lt; 60 minuten |
