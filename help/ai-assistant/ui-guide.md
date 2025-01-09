@@ -2,9 +2,9 @@
 title: AI Assistant in Adobe Experience Platform
 description: Leer hoe u met AI Assistant door Experience Platform- en Real-time Customer Data Platform-concepten kunt navigeren en deze kunt begrijpen, en hoe u informatie over uw objecten kunt gebruiken.
 exl-id: 3fed2b1d-75fc-47ce-98d1-a811eb8a1d8e
-source-git-commit: 6f95cae48b0f4c304eb3dbd2d95e01e00e0f01c9
+source-git-commit: 0ee9135b2b303f4abcc4d5e5c7345e2bff9332f3
 workflow-type: tm+mt
-source-wordcount: '1464'
+source-wordcount: '1718'
 ht-degree: 0%
 
 ---
@@ -75,10 +75,6 @@ AI Assistant werkt de interface bij en biedt koppelingen naar documentatie die d
 
 ![ drop-down menu van A van de citaties die AI Medewerker voor conceptenvragen verstrekt.](./images/citations.png)
 
-U kunt ook de suggesties die AI Assistant onder **[!UICONTROL Related suggestions]** biedt, gebruiken om verder te zoeken naar onderwerpen die betrekking hebben op uw oorspronkelijke vraag.
-
-![ een lijst van suggesties die door AI Medewerker worden verstrekt.](./images/related-suggestions.png)
-
 +++
 
 ### Operationele inzichten {#operational-insights}
@@ -127,9 +123,9 @@ Wanneer gevraagd met een operationele inzichten vraag, verstrekt AI Assistant ee
 
 +++
 
-### Automatisch aanvullen gebruiken {#use-auto-complete}
+### Entiteiten automatisch aanvullen {#use-entity-auto-complete}
 
-Met de functie Automatisch aanvullen kunt u een lijst met gegevensobjecten ontvangen die in uw sandbox staan. De aanbevelingen van Autocomplete zijn beschikbaar voor de volgende domeinen: publiek, schema&#39;s, datasets, bronnen, en bestemmingen.
+Met de functie Automatisch aanvullen kunt u een lijst met gegevensobjecten ontvangen die in uw sandbox staan. Er zijn aanbevelingen voor automatisch aanvullen beschikbaar voor de volgende domeinen: publiek, schema&#39;s, datasets, reizen, bronnen en bestemmingen.
 
 +++Select om een voorbeeld van automatisch aanvullen te bekijken
 
@@ -176,6 +172,44 @@ Selecteer het pictogram met de gloeilamp in de bovenste koptekst van de AI Assis
 Selecteer vervolgens een categorie en selecteer vervolgens een vraag in de opgegeven lijst. U kunt deze functie gebruiken om een beter idee te krijgen van de typen vragen die AI Assistant kan beantwoorden. U kunt de reeds bestaande herinneringen met specifieke details ook bijwerken die tot uw zandbak gebruikend vrije tekst of [ autocomplete ](#use-auto-complete) behoren.
 
 ![ de Hulp AI herinneringen in ontdekkingsbaarheid.](./images/prompt.png)
+
++++
+
+### Vraag automatisch aanvullen {#use-question-autocomplete}
+
+Met de functie voor automatisch aanvullen van vragen van AI Assistant kunt u een vraag selecteren in een lijst met aanbevelingen van AI Assistant.
+
++++Selecteren om een voorbeeld weer te geven van een vraag die automatisch is voltooid
+
+Als u het deelvenster met voorgestelde vragen wilt weergeven, typt u ten minste 7 (7) tekens in het invoervak. Selecteer vervolgens de vraag die voor u relevant is in het menu dat wordt weergegeven.
+
+![ het pop-up paneel met voorgestelde vragen van AI Medewerker.](./images/suggested_questions.png)
+
+Mogelijk moet u tijdelijke aanduidingen bijwerken in sommige gevallen waarin een voorgestelde vraag betrekking heeft op operationele inzichten. U moet bijvoorbeeld mogelijk de specifieke naam van een gegevensset of een publiek toevoegen als de suggestie van AI Assistant plaatsaanduidingen bevat.
+
+![ een suggestie van AI Medewerker die placeholders omvat.](./images/placeholder.png)
+
+Plaatsaanduidingen worden in blauw gemarkeerd. Selecteer de tijdelijke aanduiding om de waarde ervan bij te werken. Voor de beste resultaten bij numerieke plaatsaanduidingen moet u ervoor zorgen dat u cijfers in plaats van tekst gebruikt. U kunt ook de functie voor automatisch aanvullen van de entiteit gebruiken om de waarden van de plaatsaanduiding bij te werken. U kunt geen vraag verzenden die niet-ingevulde plaatsaanduidingen heeft.
+
+**NOTA**: De suggesties worden toegelaten door gebrek. Selecteer de schakeloptie **[!UICONTROL Suggest ideas]** om de functie uit te schakelen.
+
+![ een suggestie van AI Medewerker met bijgewerkte placeholders.](./images/updated_placeholder.png)
+
++++
+
+### Verwante suggesties gebruiken {#use-related-suggestions}
+
+U kunt de verwante suggesties sectie van elke AI Hulp- reactie gebruiken om uw gesprek voort te zetten.
+
++++Selecteren om voorbeeld van verwante suggesties weer te geven
+
+Verwante suggesties worden geretourneerd bij elke reactie van AI Assistant. Om uw gesprek voort te zetten, selecteer om het even welke suggesties in de verwante suggesties sectie.
+
+![ een lijst van verwante suggesties van AI Medewerker.](./images/related_suggestions.png)
+
+Net als voor plaatsaanduidingen in kwestie die automatisch zijn voltooid, moet u plaatsaanduidingen bijwerken die zijn opgenomen in verwante suggesties voordat u de query kunt verzenden.
+
+![ een vraag van verwante suggesties met bijgewerkte placeholders.](./images/related_suggestions_placeholder.png)
 
 +++
 
