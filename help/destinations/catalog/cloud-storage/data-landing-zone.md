@@ -3,9 +3,9 @@ title: Bestemming landingszone gegevens
 description: Leer hoe u verbinding maakt met Data Landing Zone om het publiek te activeren en gegevenssets te exporteren.
 last-substantial-update: 2023-07-26T00:00:00Z
 exl-id: 40b20faa-cce6-41de-81a0-5f15e6c00e64
-source-git-commit: 5362690047be6dd1f2d8f6f18d633e0a903807d2
+source-git-commit: cc7c8c14fe5ee4bb9001cae84d28a385a3b4b448
 workflow-type: tm+mt
-source-wordcount: '1551'
+source-wordcount: '1915'
 ht-degree: 0%
 
 ---
@@ -19,13 +19,13 @@ ht-degree: 0%
 
 ## Overzicht {#overview}
 
-[!DNL Data Landing Zone] is een [!DNL Azure Blob] -opslaginterface die door Adobe Experience Platform is ingericht en u toegang biedt tot een veilige, op de cloud gebaseerde opslagfaciliteit voor het opslaan van bestanden om bestanden van het platform te exporteren. U hebt toegang tot één [!DNL Data Landing Zone] container per sandbox en het totale gegevensvolume voor alle containers is beperkt tot de totale gegevens die worden geleverd bij uw Platform Products and Services-licentie. Alle klanten van Platform en de bijbehorende toepassingen, zoals [!DNL Customer Journey Analytics] , [!DNL Journey Orchestration] , [!DNL Intelligent Services] en [!DNL Real-Time Customer Data Platform] , beschikken over één [!DNL Data Landing Zone] container per sandbox. U kunt bestanden lezen en schrijven naar uw container via [!DNL Azure Storage Explorer] of de opdrachtregelinterface.
-
-[!DNL Data Landing Zone] biedt ondersteuning voor verificatie op basis van SAS en de bijbehorende gegevens zijn in rust en onderweg beveiligd met standaard [!DNL Azure Blob] -opslagbeveiligingsmechanismen. SAS staat voor [ gedeelde toegangshandtekening ](https://learn.microsoft.com/en-us/azure/ai-services/translator/document-translation/how-to-guides/create-sas-tokens?tabs=Containers).
-
-Met verificatie op basis van SAS hebt u via een openbare internetverbinding veilig toegang tot uw [!DNL Data Landing Zone] -container. Er zijn geen netwerkwijzigingen vereist voor toegang tot uw [!DNL Data Landing Zone] -container. Dit betekent dat u geen lijsten van gewenste personen of instellingen voor meerdere regio&#39;s voor uw netwerk hoeft te configureren.
+[!DNL Data Landing Zone] is een interface voor cloudopslag die door Adobe Experience Platform is ingericht en waarmee u toegang hebt tot een veilige, op de cloud gebaseerde opslagfaciliteit voor het opslaan van bestanden om bestanden van het platform te exporteren. U hebt toegang tot één [!DNL Data Landing Zone] container per sandbox en het totale gegevensvolume voor alle containers is beperkt tot de totale gegevens die worden geleverd bij uw Platform Products and Services-licentie. Alle klanten van Platform en de bijbehorende toepassingen, zoals [!DNL Customer Journey Analytics] , [!DNL Journey Orchestration] , [!DNL Intelligent Services] en [!DNL Real-Time Customer Data Platform] , beschikken over één [!DNL Data Landing Zone] container per sandbox.
 
 Het platform dwingt een strikte tijd-aan-levende (TTL) zeven dagen op alle dossiers af die aan een [!DNL Data Landing Zone] container worden geupload. Alle bestanden worden na zeven dagen verwijderd.
+
+De [!DNL Data Landing Zone] doelconnector is beschikbaar voor klanten die de Azure- of Amazon Web Service-cloudondersteuning gebruiken. Het authentificatiemechanisme is verschillend gebaseerd op de wolk waarin de bestemming provisioned is, zijn al het andere over de bestemming en zijn gebruiksgevallen het zelfde. Lees meer over de twee verschillende authentificatiemechanismen in de secties [ voor authentiek verklaren aan de Gegevens Landing Zone die in Azure Blob ] wordt voorzien en [ voor authentiek verklaart aan de AWS-provisioned Gegeven Landing Zone ](#authenticate-dlz-aws).
+
+![ Diagram die tonen hoe de implementatie van de bestemmings van de Gebied van Gegevens verschillend is gebaseerd op de wolkensteun.](/help/destinations/assets/catalog/cloud-storage/data-landing-zone/dlz-workflow-based-on-cloud-implementation.png)
 
 ## Verbinding maken met uw [!UICONTROL Data Landing Zone] -opslag via API of UI {#connect-api-or-ui}
 
@@ -67,9 +67,17 @@ Wanneer het uitvoeren van *publieksgegevens*, leidt het Platform tot een `.csv`,
 
 Wanneer het uitvoeren van *datasets*, leidt het Platform tot een `.parquet` of `.json` dossier in de opslagplaats die u verstrekte. Voor meer informatie over de dossiers, zie [ succesvolle datasetuitvoer ](../../ui/export-datasets.md#verify) sectie in het de uitvoerdatasetleerprogramma verifiëren.
 
-## Vereisten {#prerequisites}
+## Verifieer aan de Gebied van Gegevens die in Azure Blob wordt verstrekt {#authenticate-dlz-azure}
 
-Aan de volgende voorwaarden moet worden voldaan voordat u het doel van [!DNL Data Landing Zone] kunt gebruiken.
+>[!AVAILABILITY]
+>
+>Deze sectie is van toepassing op implementaties van Experience Platform die op Microsoft Azure lopen. Meer over de gesteunde infrastructuur van het Experience Platform leren, zie het [ Experience Platform multi-cloud overzicht ](https://experienceleague.adobe.com/en/docs/experience-platform/landing/multi-cloud).
+
+U kunt bestanden lezen en schrijven naar uw container via [!DNL Azure Storage Explorer] of de opdrachtregelinterface.
+
+[!DNL Data Landing Zone] biedt ondersteuning voor verificatie op basis van SAS en de bijbehorende gegevens zijn in rust en onderweg beveiligd met standaard [!DNL Azure Blob] -opslagbeveiligingsmechanismen. SAS staat voor [ gedeelde toegangshandtekening ](https://learn.microsoft.com/en-us/azure/ai-services/translator/document-translation/how-to-guides/create-sas-tokens?tabs=Containers).
+
+Met verificatie op basis van SAS hebt u via een openbare internetverbinding veilig toegang tot uw [!DNL Data Landing Zone] -container. Er zijn geen netwerkwijzigingen vereist voor toegang tot uw [!DNL Data Landing Zone] -container. Dit betekent dat u geen lijsten van gewenste personen of instellingen voor meerdere regio&#39;s voor uw netwerk hoeft te configureren.
 
 ### Sluit de [!DNL Data Landing Zone] -container aan op [!DNL Azure Storage Explorer]
 
@@ -197,6 +205,76 @@ Een geslaagde verbinding werkt de gebruikersinterface van [!DNL Azure Storage Ex
 ![ Samenvatting van de DLZ gebruikerscontainer die in Azure UI wordt benadrukt.](/help/sources/images/tutorials/create/dlz/dlz-user-container.png)
 
 Als de [!DNL Data Landing Zone] -container is aangesloten op [!DNL Azure Storage Explorer] , kunt u nu bestanden van het Experience Platform naar de [!DNL Data Landing Zone] -container exporteren. Als u bestanden wilt exporteren, moet u een verbinding tot stand brengen met de [!DNL Data Landing Zone] -bestemming in de gebruikersinterface van het Experience Platform, zoals beschreven in de onderstaande sectie.
+
+## Verifiëren voor de AWS-provisioned Data Landing Zone {#authenticate-dlz-aws}
+
+>[!AVAILABILITY]
+>
+>Deze sectie is van toepassing op implementaties van Experience Platform dat op Amazon Web Services (AWS) loopt. Experience Platform dat op AWS wordt uitgevoerd, is momenteel beschikbaar voor een beperkt aantal klanten. Meer over de gesteunde infrastructuur van het Experience Platform leren, zie het [ Experience Platform multi-cloud overzicht ](https://experienceleague.adobe.com/en/docs/experience-platform/landing/multi-cloud).
+
+Voer hieronder de verrichtingen uit om geloofsbrieven aan uw instantie van de Landing van de Zone van Gegevens te krijgen provisioned op AWS. Dan, gebruik een cliënt van keus om met uw Data Landing Zone instantie te verbinden.
+
+>[!BEGINSHADEBOX]
+
+### De referenties voor uw [!DNL Data Landing Zone] ophalen {#retrieve-dlz-credentials-aws}
+
+U moet de platform-API&#39;s gebruiken om uw [!DNL Data Landing Zone] -referenties op te halen. De API-aanroep om uw referenties op te halen wordt hieronder beschreven. Voor informatie over het krijgen van de vereiste waarden voor uw kopballen, verwijs [ Begonnen het worden met Adobe Experience Platform APIs ](/help/landing/api-guide.md) gids.
+
+**API formaat**
+
+```http
+GET /data/foundation/connectors/landingzone/credentials?type=dlz_destination'
+```
+
+| Query-parameters | Beschrijving |
+| --- | --- |
+| `dlz_destination` | Met het type `dlz_destination` kan de API een doelcontainer van de landingszone onderscheiden van de andere typen containers die voor u beschikbaar zijn. |
+
+{style="table-layout:auto"}
+
+**Verzoek**
+
+In het volgende aanvraagvoorbeeld worden de gegevens voor een bestaande landingszone opgehaald.
+
+```shell
+curl --request GET \
+  --url 'https://platform.adobe.io/data/foundation/connectors/landingzone/credentials?type=dlz_destination' \
+  --header 'Authorization: Bearer ***' \
+  --header 'Content-Type: application/json' \
+  --header 'x-api-key: your_api_key' \
+  --header 'x-gw-ims-org-id: yourorg@AdobeOrg'
+```
+
+**Reactie**
+
+De volgende reactie retourneert de referentie-informatie voor de landingszone, inclusief de huidige `awsAccessKeyId` , `awsSecretAccessKey` en andere informatie.
+
+```json
+{
+    "credentials": {
+        "awsAccessKeyId": "ABCDW3MEC6HE2T73ZVKP",
+        "awsSecretAccessKey": "A1B2Zdxj6y4xfR0QZGtf/phj/hNMAbOGtzM/JNeE",
+        "awsSessionToken": "***"
+    },
+    "dlzPath": {
+        "bucketName": "your-bucket-name",
+        "dlzFolder": "dlz-destination"
+    },
+    "dlzProvider": "Amazon S3",
+    "expiryTime": 1734494017
+}
+```
+
+| Eigenschap | Beschrijving |
+| --- | --- |
+| `credentials` | Dit object bevat de tags `awsAccessKeyId` , `awsSecretAccessKey` en `awsSessionToken` die Experience Platform gebruikt om bestanden te exporteren naar de ingericht-landingslocatie voor gegevens. |
+| `dlzPath` | Dit object bevat het pad op de AWS-locatie met Adobe-provisioning waar geëxporteerde bestanden worden gedeponeerd. |
+| `dlzProvider` | Geeft aan dat dit een Amazon S3-provisioned Data Landing Zone is. |
+| `expiryTime` | Geeft aan wanneer de referenties in het bovenstaande object verlopen. U kunt deze verfrissen door de vraag opnieuw te maken. |
+
+{style="table-layout:auto"}
+
+>[!ENDSHADEBOX]
 
 ## Verbinden met de bestemming {#connect}
 
