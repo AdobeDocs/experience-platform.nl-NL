@@ -3,9 +3,9 @@ keywords: gekoppeld in verbinding;gekoppeld in verbinding;gekoppeld in doelen;ge
 title: Koppeling in verbinding met passend publiek
 description: Activeer profielen voor uw LinkedIn-campagnes voor doelgroepen, personalisatie en onderdrukking op basis van gehakte e-mails.
 exl-id: 74c233e9-161a-4e4a-98ef-038a031feff0
-source-git-commit: 74d7c48042b0d2b938705b588c185f3c3f96f1cd
+source-git-commit: 4f82aab78e74cb7cdd76b603a1e182fbd7fe627c
 workflow-type: tm+mt
-source-wordcount: '1058'
+source-wordcount: '1158'
 ht-degree: 0%
 
 ---
@@ -118,6 +118,22 @@ In de onderstaande video ziet u ook de stappen voor het configureren van een [!D
 2. Selecteer **[!UICONTROL Connect to destination]**.
    ![ verifieer aan LinkedIn ](/help/destinations/assets/catalog/social/linkedin/authenticate-linkedin-destination.png)
 3. Ga uw geloofsbrieven van LinkedIn in en selecteer **Login**.
+
+### Verificatiegegevens vernieuwen {#refresh-authentication-credentials}
+
+LinkedIn-tokens verlopen elke 60 dagen. Zodra het teken is verlopen, de gegevensuitvoer naar de bestemming houdt op werkend. Om deze situatie te verhinderen, verifieer opnieuw door de volgende stappen uit te voeren:
+
+1. Ga naar **[!UICONTROL Destinations]** > **[!UICONTROL Accounts]**
+2. (Optioneel) Gebruik de beschikbare filters op de pagina om alleen LinkedIn-accounts weer te geven.
+   ![ Filter om slechts de rekeningen van LinkedIn te tonen ](/help/destinations/assets/catalog/social/linkedin/refresh-oauth-filters.png)
+3. Selecteer de account die u wilt vernieuwen, selecteer de ellips en selecteer **[!UICONTROL Edit details]** .
+   ![ uitgezocht geef detailcontrole ](/help/destinations/assets/catalog/social/linkedin/refresh-oauth-edit-details.png) uit
+4. Selecteer **[!UICONTROL Reconnect OAuth]** in het modaal venster en verifieer het opnieuw met uw LinkedIn-referenties.
+   ![ Modal venster met Opnieuw verbinden optie OAuth ](/help/destinations/assets/catalog/social/linkedin/reconnect-oauth-control.png)
+
+>[!SUCCESS]
+> 
+>Uw verificatiereferenties worden vernieuwd en de vervaltijd wordt ingesteld op 60 dagen.
 
 ### Doelgegevens invullen {#destination-details}
 

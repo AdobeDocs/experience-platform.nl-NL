@@ -2,9 +2,9 @@
 title: Verbinding met pinterest Customer List
 description: Maak een publiek op basis van uw klantlijsten, personen die uw site hebben bezocht of personen die al met uw inhoud hebben gewerkt op Pinterest.
 exl-id: e601f75f-0d40-4cd0-93ca-54d7439f1db7
-source-git-commit: 8a48ce4185f8044b8563d0435dcec17030b90830
+source-git-commit: 83e2c014e62509fee2843505d7975cde368665ef
 workflow-type: tm+mt
-source-wordcount: '698'
+source-wordcount: '798'
 ht-degree: 1%
 
 ---
@@ -67,11 +67,27 @@ Om met deze bestemming te verbinden, volg de stappen die in het [ leerprogramma 
 
 ### Verbindingsparameters {#parameters}
 
-Terwijl [ vestiging ](../../ui/connect-destination.md) deze bestemming, u de volgende informatie moet verstrekken:
+Wanneer [ vestiging ](../../ui/connect-destination.md) deze bestemming, u de volgende informatie moet verstrekken:
 
 * **[!UICONTROL Name]**: Een naam waarmee u dit doel in de toekomst herkent.
 * **[!UICONTROL Description]**: Een beschrijving die u zal helpen deze bestemming in de toekomst identificeren.
 * **[!UICONTROL Ad Account ID]**: Je Pinterest-advertentie-id.
+
+### Verificatiegegevens vernieuwen {#refresh-authentication-credentials}
+
+Pinterest-tokens verlopen elke 30 dagen. Zodra het teken is verlopen, de gegevensuitvoer naar de bestemming houdt op werkend. Om deze situatie te verhinderen, verifieer opnieuw door de volgende stappen uit te voeren:
+
+1. Ga naar **[!UICONTROL Destinations]** > **[!UICONTROL Accounts]**
+2. (Optioneel) Gebruik de beschikbare filters op de pagina om alleen Pinterest-accounts weer te geven.
+   ![ Filter om slechts de rekeningen van Pinterest te tonen ](/help/destinations/assets/catalog/advertising/pinterest-customer-list/refresh-oauth-filters.png)
+3. Selecteer de account die u wilt vernieuwen, selecteer de ellips en selecteer **[!UICONTROL Edit details]** .
+   ![ uitgezocht geef detailcontrole ](/help/destinations/assets/catalog/advertising/pinterest-customer-list/refresh-oauth-edit-details.png) uit
+4. Selecteer **[!UICONTROL Reconnect OAuth]** in het modaal venster en verifieer het opnieuw met uw Pinterest-referenties.
+   ![ Modal venster met Opnieuw verbinden optie OAuth ](/help/destinations/assets/catalog/advertising/pinterest-customer-list/reconnect-oauth-control.png)
+
+>[!SUCCESS]
+> 
+>Uw verificatiereferenties worden vernieuwd en de vervaltijd wordt ingesteld op 30 dagen.
 
 ### Waarschuwingen inschakelen {#enable-alerts}
 

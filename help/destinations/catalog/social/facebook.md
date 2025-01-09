@@ -3,9 +3,9 @@ keywords: facebook-verbinding;facebook-verbinding;facebook-bestemmingen;facebook
 title: Facebook-verbinding
 description: Activeer profielen voor uw Facebook-campagnes voor doelgroepen, personalisatie en onderdrukking op basis van gehakte e-mails.
 exl-id: 51e8c8f0-5e79-45b9-afbc-110bae127f76
-source-git-commit: 742801c31a0371feb42df2c98b3a4ddb63ae2f48
+source-git-commit: 83e2c014e62509fee2843505d7975cde368665ef
 workflow-type: tm+mt
-source-wordcount: '1942'
+source-wordcount: '2042'
 ht-degree: 0%
 
 ---
@@ -151,6 +151,22 @@ In de onderstaande video ziet u ook de stappen voor het configureren van een [!D
 2. Selecteer **[!UICONTROL Connect to destination]**.
    ![ verifieer aan de stap van Facebook die in het activeringswerkschema wordt getoond.](/help/destinations/assets/catalog/social/facebook/authenticate-facebook-destination.png)
 3. Ga uw geloofsbrieven van Facebook in en selecteer **Login**.
+
+### Verificatiegegevens vernieuwen {#refresh-authentication-credentials}
+
+Facebook-tokens verlopen elke 60 dagen. Zodra het teken is verlopen, de gegevensuitvoer naar de bestemming houdt op werkend. Om deze situatie te verhinderen, verifieer opnieuw door de volgende stappen uit te voeren:
+
+1. Ga naar **[!UICONTROL Destinations]** > **[!UICONTROL Accounts]**
+2. (Optioneel) Gebruik de beschikbare filters op de pagina om alleen Facebook-accounts weer te geven.
+   ![ Filter om slechts de rekeningen van Facebook te tonen ](/help/destinations/assets/catalog/social/facebook/refresh-oauth-filters.png)
+3. Selecteer de account die u wilt vernieuwen, selecteer de ellips en selecteer **[!UICONTROL Edit details]** .
+   ![ uitgezocht geef detailcontrole ](/help/destinations/assets/catalog/social/facebook/refresh-oauth-edit-details.png) uit
+4. Selecteer **[!UICONTROL Reconnect OAuth]** in het modaal venster en verifieer het opnieuw met uw Facebook-referenties.
+   ![ Modal venster met Opnieuw verbinden optie OAuth ](/help/destinations/assets/catalog/social/facebook/reconnect-oauth-control.png)
+
+>[!SUCCESS]
+> 
+>Uw verificatiereferenties worden vernieuwd en de vervaltijd wordt ingesteld op 60 dagen.
 
 ### Doelgegevens invullen {#destination-details}
 
