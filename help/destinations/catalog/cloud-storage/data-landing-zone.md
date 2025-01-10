@@ -3,9 +3,9 @@ title: Bestemming landingszone gegevens
 description: Leer hoe u verbinding maakt met Data Landing Zone om het publiek te activeren en gegevenssets te exporteren.
 last-substantial-update: 2023-07-26T00:00:00Z
 exl-id: 40b20faa-cce6-41de-81a0-5f15e6c00e64
-source-git-commit: cc7c8c14fe5ee4bb9001cae84d28a385a3b4b448
+source-git-commit: 5f932f3de2b875d77904582dfb320e0b6ce17afd
 workflow-type: tm+mt
-source-wordcount: '1915'
+source-wordcount: '1927'
 ht-degree: 0%
 
 ---
@@ -23,9 +23,9 @@ ht-degree: 0%
 
 Het platform dwingt een strikte tijd-aan-levende (TTL) zeven dagen op alle dossiers af die aan een [!DNL Data Landing Zone] container worden geupload. Alle bestanden worden na zeven dagen verwijderd.
 
-De [!DNL Data Landing Zone] doelconnector is beschikbaar voor klanten die de Azure- of Amazon Web Service-cloudondersteuning gebruiken. Het authentificatiemechanisme is verschillend gebaseerd op de wolk waarin de bestemming provisioned is, zijn al het andere over de bestemming en zijn gebruiksgevallen het zelfde. Lees meer over de twee verschillende authentificatiemechanismen in de secties [ voor authentiek verklaren aan de Gegevens Landing Zone die in Azure Blob ] wordt voorzien en [ voor authentiek verklaart aan de AWS-provisioned Gegeven Landing Zone ](#authenticate-dlz-aws).
+De [!DNL Data Landing Zone] doelconnector is beschikbaar voor klanten die de Azure- of Amazon Web Service-cloudondersteuning gebruiken. Het authentificatiemechanisme is verschillend gebaseerd op de wolk waarin de bestemming provisioned is, zijn al het andere over de bestemming en zijn gebruiksgevallen het zelfde. Lees meer over de twee verschillende authentificatiemechanismen in de secties [ voor authentiek verklaren aan de Gegevens Landing Zone die in Azure Blob ](#authenticate-dlz-azure) wordt voorzien en [ voor authentiek verklaart aan de AWS-provisioned Gegeven Landing Zone ](#authenticate-dlz-aws).
 
-![ Diagram die tonen hoe de implementatie van de bestemmings van de Gebied van Gegevens verschillend is gebaseerd op de wolkensteun.](/help/destinations/assets/catalog/cloud-storage/data-landing-zone/dlz-workflow-based-on-cloud-implementation.png)
+![ Diagram die tonen hoe de implementatie van de bestemmings van de Gebied van Gegevens verschillend is gebaseerd op de wolkensteun.](/help/destinations/assets/catalog/cloud-storage/data-landing-zone/dlz-workflow-based-on-cloud-implementation.png " Gegevens Landing Zone bestemmingsimplementatie door wolkensteun "){zoomable="yes"}
 
 ## Verbinding maken met uw [!UICONTROL Data Landing Zone] -opslag via API of UI {#connect-api-or-ui}
 
@@ -77,7 +77,7 @@ U kunt bestanden lezen en schrijven naar uw container via [!DNL Azure Storage Ex
 
 [!DNL Data Landing Zone] biedt ondersteuning voor verificatie op basis van SAS en de bijbehorende gegevens zijn in rust en onderweg beveiligd met standaard [!DNL Azure Blob] -opslagbeveiligingsmechanismen. SAS staat voor [ gedeelde toegangshandtekening ](https://learn.microsoft.com/en-us/azure/ai-services/translator/document-translation/how-to-guides/create-sas-tokens?tabs=Containers).
 
-Met verificatie op basis van SAS hebt u via een openbare internetverbinding veilig toegang tot uw [!DNL Data Landing Zone] -container. Er zijn geen netwerkwijzigingen vereist voor toegang tot uw [!DNL Data Landing Zone] -container. Dit betekent dat u geen lijsten van gewenste personen of instellingen voor meerdere regio&#39;s voor uw netwerk hoeft te configureren.
+Als u uw gegevens via een openbare internetverbinding wilt beveiligen, gebruikt u SAS-verificatie voor een veilige toegang tot uw [!DNL Data Landing Zone] -container. Er zijn geen netwerkwijzigingen vereist voor toegang tot uw [!DNL Data Landing Zone] -container. Dit betekent dat u geen lijsten van gewenste personen of instellingen voor meerdere regio&#39;s voor uw netwerk hoeft te configureren.
 
 ### Sluit de [!DNL Data Landing Zone] -container aan op [!DNL Azure Storage Explorer]
 
@@ -212,7 +212,7 @@ Als de [!DNL Data Landing Zone] -container is aangesloten op [!DNL Azure Storage
 >
 >Deze sectie is van toepassing op implementaties van Experience Platform dat op Amazon Web Services (AWS) loopt. Experience Platform dat op AWS wordt uitgevoerd, is momenteel beschikbaar voor een beperkt aantal klanten. Meer over de gesteunde infrastructuur van het Experience Platform leren, zie het [ Experience Platform multi-cloud overzicht ](https://experienceleague.adobe.com/en/docs/experience-platform/landing/multi-cloud).
 
-Voer hieronder de verrichtingen uit om geloofsbrieven aan uw instantie van de Landing van de Zone van Gegevens te krijgen provisioned op AWS. Dan, gebruik een cliënt van keus om met uw Data Landing Zone instantie te verbinden.
+Voer de onderstaande bewerkingen uit om referenties naar uw [!DNL Data Landing Zone] -instantie te verkrijgen die is ingericht op AWS. Gebruik vervolgens een keuzerondje om verbinding te maken met de instantie [!DNL Data Landing Zone] .
 
 >[!BEGINSHADEBOX]
 
@@ -228,7 +228,7 @@ GET /data/foundation/connectors/landingzone/credentials?type=dlz_destination'
 
 | Query-parameters | Beschrijving |
 | --- | --- |
-| `dlz_destination` | Met het type `dlz_destination` kan de API een doelcontainer van de landingszone onderscheiden van de andere typen containers die voor u beschikbaar zijn. |
+| `dlz_destination` | Voeg de `dlz_destination` vraagparameter toe om te specificeren dat u het [!DNL Data Landing Zone] *bestemmings* type van containergeloofsbrieven wilt worden teruggewonnen. Om geloofsbrieven voor een Gegevens te verbinden en terug te winnen die Zone ** aanvoeren, bekijk de [ documentatie van bronnen ](/help/sources/connectors/cloud-storage/data-landing-zone.md). |
 
 {style="table-layout:auto"}
 
@@ -270,7 +270,7 @@ De volgende reactie retourneert de referentie-informatie voor de landingszone, i
 | `credentials` | Dit object bevat de tags `awsAccessKeyId` , `awsSecretAccessKey` en `awsSessionToken` die Experience Platform gebruikt om bestanden te exporteren naar de ingericht-landingslocatie voor gegevens. |
 | `dlzPath` | Dit object bevat het pad op de AWS-locatie met Adobe-provisioning waar geëxporteerde bestanden worden gedeponeerd. |
 | `dlzProvider` | Geeft aan dat dit een Amazon S3-provisioned Data Landing Zone is. |
-| `expiryTime` | Geeft aan wanneer de referenties in het bovenstaande object verlopen. U kunt deze verfrissen door de vraag opnieuw te maken. |
+| `expiryTime` | Geeft aan wanneer de referenties in het `credentials` -object verlopen. Voer de aanvraag opnieuw uit om de voorwaarden te vernieuwen. |
 
 {style="table-layout:auto"}
 

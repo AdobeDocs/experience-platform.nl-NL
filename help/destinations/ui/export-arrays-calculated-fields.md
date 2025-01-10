@@ -1,16 +1,16 @@
 ---
-title: Berekende velden gebruiken om arrays als tekenreeksen te exporteren
+title: Array-objecten van Real-Time CDP naar cloudopslagdoelen exporteren
 type: Tutorial
 description: Leer hoe u berekende velden kunt gebruiken om arrays van Real-Time CDP naar cloudopslagdoelen als tekenreeksen te exporteren.
 exl-id: ff13d8b7-6287-4315-ba71-094e2270d039
-source-git-commit: 9b64e39d25ad94aa834c8e207396b37c2a121243
+source-git-commit: a99fc58b8296b2b9ce6e30d14857529570cd3e8a
 workflow-type: tm+mt
-source-wordcount: '1549'
+source-wordcount: '1613'
 ht-degree: 0%
 
 ---
 
-# Berekende velden gebruiken om arrays als tekenreeksen te exporteren{#use-calculated-fields-to-export-arrays-as-strings}
+# Array-objecten van Real-Time CDP naar cloudopslagdoelen exporteren {#export-arrays-cloud-storage}
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_export_arrays_flat_files"
@@ -21,22 +21,16 @@ ht-degree: 0%
 
 >[!AVAILABILITY]
 >
->De functionaliteit voor het exporteren van arrays via berekende velden is over het algemeen beschikbaar.
+>De functionaliteit om arrays naar cloudopslagdoelen te exporteren is over het algemeen beschikbaar.
 
-Leer hoe te om series door berekende gebieden van Real-Time CDP naar [ wolkenopslagbestemmingen ](/help/destinations/catalog/cloud-storage/overview.md) als koorden uit te voeren. Lees dit document om te begrijpen welke gebruiksgevallen door deze functie worden ingeschakeld.
+Leer hoe te om series van Real-Time CDP naar [ wolkenopslagbestemmingen ](/help/destinations/catalog/cloud-storage/overview.md) uit te voeren. Lees dit document om inzicht te krijgen in de exportworkflow, de gebruiksgevallen die door deze functionaliteit worden ingeschakeld en de bekende beperkingen.
 
-Krijg uitgebreide informatie over berekende gebieden - wat deze zijn en waarom zij belangrijk zijn. Lees de pagina&#39;s die hieronder zijn gekoppeld voor een inleiding tot berekende velden in Data Prep en meer informatie over alle beschikbare functies:
+Arrays moeten momenteel als tekenreeksen worden geëxporteerd met de functie `array_to_string` .
+
+Om series uit te voeren, moet u de berekende gebiedsfunctionaliteit in de afbeeldingsstap van het de uitvoerwerkschema gebruiken, *tenzij u [ individuele elementen van een serie](#index-based-array-access)* uitvoert. Ga voor meer informatie over berekende velden naar de onderstaande pagina&#39;s. Deze omvatten een inleiding aan berekende gebieden in de Prep van Gegevens en meer informatie over alle beschikbare functies:
 
 * [UI-gids en -overzicht](/help/data-prep/ui/mapping.md#calculated-fields)
 * [Functies Data Prep](/help/data-prep/functions.md)
-
-<!--
-
->[!IMPORTANT]
->
->Not all functions listed above are supported *when exporting fields to cloud storage destinations* using the calculated fields functionality. See the [supported functions section](#supported-functions) further below for more information.
-
--->
 
 ## Arrays en andere objecttypen in Platform {#arrays-strings-other-objects}
 
@@ -259,6 +253,10 @@ johndoe@acme.org,"5"
 ```
 
 ### Arraytoegang op basis van index {#index-based-array-access}
+
+>[!IMPORTANT]
+>
+>In tegenstelling tot de andere die functies op deze pagina worden beschreven, om individuele elementen van een serie uit te voeren, te hoeven u *niet* om de **[!UICONTROL Calculated fields]** controle in UI te gebruiken.
 
 U kunt toegang krijgen tot een index van een array om één item uit de array te exporteren. Als u bijvoorbeeld, net als in het bovenstaande voorbeeld voor de functie `size_of` , alleen de eerste keer dat een klant een bepaald product heeft aangeschaft, toegang wilt tot dit bestand en het bestand wilt exporteren, kunt u `purchaseTime[0]` gebruiken om het eerste element van de tijdstempel te exporteren, `purchaseTime[1]` om het tweede element van de tijdstempel te exporteren, `purchaseTime[2]` om het derde element van de tijdstempel te exporteren, enzovoort.
 
