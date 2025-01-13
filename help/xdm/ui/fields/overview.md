@@ -4,9 +4,9 @@ solution: Experience Platform
 title: XDM-velden definiëren in de UI
 description: Leer hoe u XDM-velden definieert in de gebruikersinterface van het Experience Platform.
 exl-id: 2adb03d4-581b-420e-81f8-e251cf3d9fb9
-source-git-commit: 807ce0b0304fd73a455f228529d75cfc68769bf5
+source-git-commit: 0360d0eb9f4a01e12ce8619e8d2c5bac9301631f
 workflow-type: tm+mt
-source-wordcount: '1518'
+source-wordcount: '1517'
 ht-degree: 1%
 
 ---
@@ -52,7 +52,7 @@ In de rechterrail onder **[!UICONTROL Field properties]** kunt u de details van 
 
 | Field, eigenschap | Beschrijving |
 | --- | --- |
-| [!UICONTROL Field name] | Een unieke, beschrijvende naam voor het veld. De naam van het veld kan niet worden gewijzigd nadat het schema is opgeslagen. Deze waarde wordt gebruikt om het gebied in code en in andere stroomafwaartse toepassingen te identificeren en van verwijzingen te voorzien <br><br> De naam zou idealiter in camelCase moeten worden geschreven. Het kan alfanumerieke, streepje, of onderstrepingstekens bevatten, maar het **kan niet** met een onderstrepingsteken beginnen.<ul><li>**Correct**: `fieldName`</li><li>**Acceptable:** `field_name2`, `Field-Name`, `field-name_3`</li><li>**Onjuist**: `_fieldName`</li></ul> |
+| [!UICONTROL Field name] | Een unieke, beschrijvende naam voor het veld. De naam van het veld kan niet worden gewijzigd nadat het schema is opgeslagen. Deze waarde wordt gebruikt om het gebied in code en in andere stroomafwaartse toepassingen te identificeren en van verwijzingen te voorzien <br><br> De naam zou idealiter in camelCase moeten worden geschreven. Het kan alfanumerieke of onderstrepingstekens bevatten, maar het **kan niet** met een onderstrepingsteken beginnen.<ul><li>**Correct**: `fieldName`</li><li>**Acceptable:** `field_name2`, `fieldName_3`</li><li>**Onjuist**: `_fieldName`</li></ul> |
 | [!UICONTROL Display name] | Een weergavenaam voor het veld. Dit is de naam die wordt gebruikt om het veld in het canvas van de Schema-editor weer te geven. De gebiedsnaam kan in de vertoningsnaam worden veranderd gebruikend de [ knevel van de vertoningsnaam ](../resources/schemas.md#display-name-toggle). |
 | [!UICONTROL Type] | Het type gegevens dat het veld zal bevatten. Van dit drop-down menu, kunt u één van de [ standaard scalaire types ](../../schema/field-constraints.md) selecteren die door XDM, of één van de multi-gebied [ gegevenstypes ](../resources/data-types.md) worden gesteund die eerder in [!DNL Schema Registry] zijn bepaald.<br> Nota: Als u het gegevenstype van de Kaart selecteert, dan verschijnt het [!UICONTROL Map value type] bezit.<br><br> u kunt **[!UICONTROL Advanced type search]** ook selecteren om bestaande gegevenstypes te zoeken en te filtreren en van het gewenste type gemakkelijker de plaats te bepalen. |
 | [!UICONTROL Map value type] | Deze waarde is vereist als u [!UICONTROL Map] selecteert als gegevenstype voor het veld. Beschikbare waarden voor de kaart zijn [!UICONTROL String] en [!UICONTROL Integer] . Selecteer een waarde in de vervolgkeuzelijst met beschikbare opties.<br> om meer over [ type-specifieke gebiedseigenschappen ](#type-specific-properties) te leren, zie het bepalen gebiedsoverzicht. |
