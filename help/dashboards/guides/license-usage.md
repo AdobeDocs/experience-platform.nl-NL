@@ -4,9 +4,9 @@ title: Licentiegebruiksdashboard
 description: Adobe Experience Platform biedt een dashboard waarmee u belangrijke informatie kunt bekijken over het gebruik van licenties voor uw organisatie.
 type: Documentation
 exl-id: 143d16bb-7dc3-47ab-9b93-9c16683b9f3f
-source-git-commit: 5d40af5c0645e9e4ee44f0c0c2133f3b3153bcb1
+source-git-commit: 7605ccef8553fc775ea5496c73971f92ed4c06ab
 workflow-type: tm+mt
-source-wordcount: '2773'
+source-wordcount: '2812'
 ht-degree: 0%
 
 ---
@@ -46,6 +46,14 @@ ht-degree: 0%
 >id="platform_dashboards_licenseusage_predictedusage_computehours"
 >title="Verwachte rekenuren"
 >abstract="Uw gebruik kan het gelicentieerde bedrag bereiken. Als u de computeruren wilt beoordelen of beperken, navigeert u naar Query&#39;s > Logboek om de querygeschiedenis te bekijken. Neem contact op met de beheerder als u geen machtigingen hebt om de werkruimte Query&#39;s te openen."
+>additional-url="https://experience.adobe.com/#/platform/query/log" text="Zoeklogwerkruimte"
+
+>[!CONTEXTUALHELP]
+>id="platform_dashboards_licenseusage_predictedusage_addressableaudience"
+>title="Voorspeld adresseerbaar publiek"
+>abstract="Uw gebruik kan het gelicentieerde bedrag bereiken. Om gebruik te verminderen, kunt u dataset of pseudoniem de gegevensvervalsing van profielgegevens voor zandbakken en datasets vormen."
+>additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/profile/event-expirations" text="Verlopen van gebeurtenissen beleven"
+>additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/profile/pseudonymous-profiles" text="Verlopen gegevens van pseudoniem-profielen"
 
 U kunt belangrijke informatie over het gebruik van licenties voor uw organisatie bekijken via het Adobe Experience Platform [!UICONTROL License usage] -dashboard. De informatie die hier wordt weergegeven, wordt vastgelegd tijdens een dagelijkse momentopname van uw platforminstantie.
 
