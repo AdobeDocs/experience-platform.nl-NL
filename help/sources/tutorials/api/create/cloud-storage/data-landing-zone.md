@@ -1,13 +1,10 @@
 ---
-keywords: Experience Platform;thuis;populaire onderwerpen;
-solution: Experience Platform
 title: Gegevenslandingszone verbinden met Adobe Experience Platform met behulp van de Flow Service API
-type: Tutorial
 description: Leer hoe u Adobe Experience Platform verbindt met Data Landing Zone met behulp van de Flow Service API.
 exl-id: bdb60ed3-7c63-4a69-975a-c6f1508f319e
-source-git-commit: 521bfd29405d30c0e35c4095b1ba2bf29f840e8a
+source-git-commit: 527e62e5fb90bc32ef3788f261e0a24b680f29c0
 workflow-type: tm+mt
-source-wordcount: '1326'
+source-wordcount: '1375'
 ht-degree: 1%
 
 ---
@@ -29,9 +26,9 @@ Deze handleiding vereist een goed begrip van de volgende onderdelen van het Expe
 * [ Bronnen ](../../../../home.md): Experience Platform staat gegevens toe om van diverse bronnen worden opgenomen terwijl het voorzien van u van de capaciteit om, inkomende gegevens te structureren te etiketteren en te verbeteren gebruikend de diensten van het Platform.
 * [ Sandboxes ](../../../../../sandboxes/home.md): Experience Platform verstrekt virtuele zandbakken die één enkele instantie van het Platform in afzonderlijke virtuele milieu&#39;s verdelen helpen digitale ervaringstoepassingen ontwikkelen en ontwikkelen.
 
-De volgende secties bevatten aanvullende informatie die u moet weten om een [!DNL Data Landing Zone] -bronverbinding met de [!DNL Flow Service] API te kunnen maken.
-
 Dit leerprogramma vereist u ook om de gids te lezen over [ begonnen wordt met Platform APIs ](../../../../../landing/api-guide.md) om te leren hoe te aan Platform APIs voor authentiek te verklaren en de voorbeeldvraag te interpreteren die in de documentatie wordt verstrekt.
+
+De volgende secties bevatten aanvullende informatie die u moet weten om een [!DNL Data Landing Zone] -bronverbinding met de [!DNL Flow Service] API te kunnen maken.
 
 ## Een bruikbare landingszone ophalen
 
@@ -63,7 +60,11 @@ curl -X GET \
 
 **Reactie**
 
-De volgende reactie retourneert informatie over een landingszone, inclusief de corresponderende `containerName` en `containerTTL` .
+Afhankelijk van uw leverancier retourneert een succesvol verzoek het volgende:
+
+>[!BEGINTABS]
+
+>[!TAB  Reactie op Azure ]
 
 ```json
 {
@@ -76,6 +77,26 @@ De volgende reactie retourneert informatie over een landingszone, inclusief de c
 | --- | --- |
 | `containerName` | De naam van de landingszone die u hebt opgehaald. |
 | `containerTTL` | De vervaltijd (in dagen) die op uw gegevens binnen de landingszone wordt toegepast. Alle gegevens binnen een bepaalde landingszone worden na zeven dagen verwijderd. |
+
+
+>[!TAB  Reactie op AWS ]
+
+```json
+{
+  "dlzPath": {
+    "bucketName": "dlz-prod-sandboxName",
+    "dlzFolder": "dlz-adf-connectors"
+  },
+  "dataTTL": {
+    "timeUnit": "days",
+    "timeQuantity": 7
+  },
+  "dlzProvider": "Amazon S3"
+}
+```
+
+>[!ENDTABS]
+
 
 ## [!DNL Data Landing Zone] gebruikersgegevens ophalen
 
@@ -103,7 +124,11 @@ curl -X GET \
 
 **Reactie**
 
-De volgende reactie retourneert de referentie-informatie voor de landingszone van uw gegevens, inclusief de huidige `SASToken` , `SASUri` , `storageAccountName` en vervaldatum.
+Afhankelijk van uw leverancier retourneert een succesvol verzoek het volgende:
+
+>[!BEGINTABS]
+
+>[!TAB  Reactie op Azure ]
 
 ```json
 {
@@ -117,10 +142,43 @@ De volgende reactie retourneert de referentie-informatie voor de landingszone va
 
 | Eigenschap | Beschrijving |
 | --- | --- |
-| `containerName` | De naam van uw landingszone. |
-| `SASToken` | Het token voor gedeelde toegangshandtekeningen voor uw landingszone. Deze tekenreeks bevat alle informatie die nodig is om een aanvraag te autoriseren. |
-| `SASUri` | De URI van de gedeelde toegangshandtekening voor uw landingszone. Deze tekenreeks is een combinatie van de URI naar de landingszone waarvoor u geauthenticeerd wordt en de bijbehorende SAS-token, |
-| `expiryDate` | De datum waarop uw SAS-token verloopt. U moet uw token vernieuwen vóór de vervaldatum om het te kunnen blijven gebruiken in uw toepassing voor het uploaden van gegevens naar de landingszone van gegevens. Als u niet manueel uw teken vóór de verklaarde vervaldatum vernieuwt, dan zal het automatisch verfrissen en een nieuw teken verstrekken wanneer de geloofsbrieven van de GET worden uitgevoerd. |
+| `containerName` | De naam van de [!DNL Data Landing Zone] . |
+| `SASToken` | Het token voor gedeelde toegangshandtekeningen voor uw [!DNL Data Landing Zone] . Deze tekenreeks bevat alle informatie die nodig is om een aanvraag te autoriseren. |
+| `storageAccountName` | De naam van uw opslagaccount. |
+| `SASUri` | De URI voor de gedeelde toegangshandtekening voor uw [!DNL Data Landing Zone] . Deze tekenreeks is een combinatie van de URI naar de [!DNL Data Landing Zone] waarnaar u wordt geverifieerd en de bijbehorende SAS-token. |
+| `expiryDate` | De datum waarop uw SAS-token verloopt. U moet uw token vernieuwen vóór de vervaldatum om deze te kunnen blijven gebruiken in uw toepassing voor het uploaden van gegevens naar de [!DNL Data Landing Zone] . Als u niet manueel uw teken vóór de verklaarde vervaldatum vernieuwt, dan zal het automatisch verfrissen en een nieuw teken verstrekken wanneer de geloofsbrieven van de GET worden uitgevoerd. |
+
+>[!TAB  Reactie op AWS ]
+
+```json
+{
+  "credentials": {
+    "clientId": "example-client-id",
+    "awsAccessKeyId": "example-access-key-id",
+    "awsSecretAccessKey": "example-secret-access-key",
+    "awsSessionToken": "example-session-token"
+  },
+  "dlzPath": {
+    "bucketName": "dlz-prod-sandboxName",
+    "dlzFolder": "user_drop_zone"
+  },
+  "dlzProvider": "Amazon S3",
+  "expiryTime": 1735689599
+}
+```
+
+| Eigenschap | Beschrijving |
+| --- | --- |
+| `credentials.clientId` | De client-id van uw [!DNL Data Landing Zone] in AWS. |
+| `credentials.awsAccessKeyId` | De toegangs belangrijkste identiteitskaart van uw [!DNL Data Landing Zone] in AWS. |
+| `credentials.awsSecretAccessKey` | De geheime toegangssleutel van uw [!DNL Data Landing Zone] in AWS. |
+| `credentials.awsSessionToken` | Uw AWS-sessietoken. |
+| `dlzPath.bucketName` | De naam van je AWS emmertje. |
+| `dlzPath.dlzFolder` | De map [!DNL Data Landing Zone] die u opent. |
+| `dlzProvider` | De [!DNL Data Landing Zone] -provider die u gebruikt. Voor Amazon is dit [!DNL Amazon S3] . |
+| `expiryTime` | De vervaltijd in unieke tijd. |
+
+>[!ENDTABS]
 
 ### De vereiste velden ophalen met behulp van API&#39;s
 
