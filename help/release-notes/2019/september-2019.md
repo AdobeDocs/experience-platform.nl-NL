@@ -1,18 +1,18 @@
 ---
-title: Adobe Experience Platform Release Notes september 2019
-description: De release van september 2019 bevat notities voor Adobe Experience Platform.
+title: Aanvullende informatie van september 2019 voor Adobe Experience Platform
+description: Aanvullende informatie voor de versie van september 2019 voor Adobe Experience Platform.
 doc-type: release notes
 last-update: September 13, 2019
 author: ens28527
 exl-id: 7f503046-a3b4-4fdb-833c-4205b6e9fa04
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 863889984e5e77770638eb984e129e720b3d4458
 workflow-type: tm+mt
 source-wordcount: '531'
-ht-degree: 1%
+ht-degree: 6%
 
 ---
 
-# Opmerkingen bij de release van Adobe Experience Platform
+# Aanvullende informatie voor Adobe Experience Platform
 
 **Releasedatum: woensdag 10 september 2019**
 
@@ -26,7 +26,7 @@ Updates voor bestaande functies in Adobe Experience Platform:
 
 Adobe Experience Platform biedt een uitgebreide reeks functies voor het invoeren van elk type en elke vertraging van gegevens. Adobe Experience Platform [!DNL Data Ingestion] biedt meerdere alternatieven voor het opnemen van gegevens, zoals batch-API&#39;s, streaming API&#39;s, native Adobe-connectors, partners voor gegevensintegratie of de Adobe Experience Platform-interface.
 
-**Nieuwe eigenschappen**
+**Nieuwe functies**
 
 | Functie | Beschrijving |
 | ----------- | ---------- |
@@ -38,7 +38,7 @@ Voor meer informatie, bezoek de [ documentatie van de Ingestie van Gegevens ](..
 
 Adobe Experience Platform [!DNL Data Science Workspace] is een volledig beheerde service binnen [!DNL Experience Platform] waarmee wetenschappers gegevens op naadloze wijze inzichten kunnen genereren op basis van gegevens en inhoud in oplossingen voor Adoben en systemen van derden door modellen voor het leren van machines te maken en te exploiteren. [!DNL Data Science Workspace] is nauw geïntegreerd met [!DNL Platform] en maakt de levenscyclus van de end-to-end gegevenswetenschap mogelijk, inclusief de exploratie en voorbereiding van XDM-gegevens, gevolgd door de ontwikkeling en de exploitatie van Modellen om [!DNL Real-Time Customer Profile] automatisch te verrijken met Inzichten voor het leren van machines.
 
-**Nieuwe eigenschappen**
+**Nieuwe functies**
 
 | Functie | Beschrijving |
 | -----------| ---------- |
@@ -48,7 +48,7 @@ Adobe Experience Platform [!DNL Data Science Workspace] is een volledig beheerde
 
 **Bekende kwesties**
 
-* Er is momenteel geen toegankelijke manier in [!DNL Service Gallery] om een bestaande service te verwijderen. Ondertussen, gelieve te verwijzen naar de [ het Leren API van de Machine van Sensei verwijzing ](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sensei-ml-api.yaml) om een bestaande Dienst door API vraag te schrappen.
+* Er is momenteel geen toegankelijke manier in [!DNL Service Gallery] om een bestaande service te verwijderen. Ondertussen, gelieve te verwijzen naar de [ het Leren API van de Machine van Sensei verwijzing ](https://developer.adobe.com/experience-platform-apis/references/sensei-machine-learning/) om een bestaande Dienst door API vraag te schrappen.
 * [!DNL Service Gallery] heeft geen pagineringssteun om de opleiding en het scoring looppas van de Dienst te filtreren.
 * Wanneer u de geplande training of scoring configureert, wordt de frequentie op uur ingesteld, zodat het programma niet wordt toegepast. [!DNL Service Gallery]
 
@@ -60,7 +60,7 @@ Voor meer informatie, bezoek het [ Overzicht van Workspace van de Wetenschap van
 
 Met [!DNL Query Service] kunt u gegevensanalysecosystemen samenstellen, zodat u een beeld krijgt van klanten in hun verschillende interactiekanalen. Deze kanalen kunnen verkooppuntsystemen, web-, mobiele of CRM-systemen omvatten.
 
-**Nieuwe eigenschappen**
+**Nieuwe functies**
 
 | Functie | Beschrijving |
 | -----------| ---------- |

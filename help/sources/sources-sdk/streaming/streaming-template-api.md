@@ -3,7 +3,7 @@ title: Zelfservicesjabloon voor documentatie voor Streaming SDK API
 description: Leer hoe u streaminggegevens van een bron naar Adobe Experience Platform kunt overbrengen met behulp van de Flow Service API.
 exl-id: a06384a2-cd99-456d-9f00-babcf3f7b7d9
 badge: Beta
-source-git-commit: 256857103b4037b2cd7b5b52d6c5385121af5a9f
+source-git-commit: 863889984e5e77770638eb984e129e720b3d4458
 workflow-type: tm+mt
 source-wordcount: '1638'
 ht-degree: 0%
@@ -47,7 +47,7 @@ Voor meer informatie over deze geloofsbrieven, zie *JONGE* authentificatiedocume
 
 ### Integreer *JUURSOURCE* met uw webhaak
 
-*het stromen SDK vereist uw bron om websites te kunnen steunen om met Experience Platform te communiceren. In deze sectie, moet u de stappen verstrekken die uw gebruikers zullen moeten volgen om Uw BRON met een webhaak te integreren.*
+*het stromen SDK vereist uw bron om webhaken te kunnen steunen om met Experience Platform te communiceren. In deze sectie, moet u de stappen verstrekken die uw gebruikers zullen moeten volgen om Uw BRON met een webhaak te integreren.*
 
 ## Verbind *UW BRON* met Platform gebruikend [!DNL Flow Service] API
 
@@ -117,7 +117,7 @@ Voor gedetailleerde stappen op hoe te om een doelXDM schema tot stand te brengen
 
 ### Een doelgegevensset maken {#target-dataset}
 
-Een doeldataset kan worden gecreeerd door een verzoek van de POST aan de [ Dienst API van de Catalogus uit te voeren ](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml), verstrekkend identiteitskaart van het doelschema binnen de nuttige lading.
+Een doeldataset kan worden gecreeerd door een verzoek van de POST aan de [ Dienst API van de Catalogus uit te voeren ](https://developer.adobe.com/experience-platform-apis/references/catalog/), verstrekkend identiteitskaart van het doelschema binnen de nuttige lading.
 
 Voor gedetailleerde stappen op hoe te om een doeldataset tot stand te brengen, zie het leerprogramma op [ het creëren van een dataset gebruikend API ](https://experienceleague.adobe.com/docs/experience-platform/catalog/api/create-dataset.html).
 

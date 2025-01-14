@@ -5,7 +5,7 @@ title: API-handleiding voor Sensei Machine Learning
 description: Met de API voor leren van Sensei Machine Learning kunnen ontwikkelaars CRUD-bewerkingen uitvoeren op verschillende Data Science Workspace-bronnen. Volg deze gids voor het uitvoeren van de belangrijkste bewerkingen met de API.
 role: Developer
 exl-id: d51d0eb2-b1e9-4cc1-889a-9487395703b0
-source-git-commit: 5d98dc0cbfaf3d17c909464311a33a03ea77f237
+source-git-commit: 863889984e5e77770638eb984e129e720b3d4458
 workflow-type: tm+mt
 source-wordcount: '255'
 ht-degree: 5%
@@ -22,7 +22,7 @@ ht-degree: 5%
 
 De API van [!DNL Sensei Machine Learning] verstrekt een mechanisme voor gegevenswetenschappers om machine het leren diensten te organiseren en te beheren, van algoritme op het instappen door experimenteren en aan de dienstplaatsing.
 
-Deze ontwikkelaarsgids verstrekt stappen om u te helpen beginnen te gebruiken [ het Leren API van de Machine van Sensei ](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sensei-ml-api.yaml), en toont API vraag voor het uitvoeren van verrichtingen CRUD op diverse middelen van Workspace van de Wetenschap van Gegevens aan.
+Deze ontwikkelaarsgids verstrekt stappen om u te helpen beginnen te gebruiken [ het Leren API van de Machine van Sensei ](https://developer.adobe.com/experience-platform-apis/references/sensei-machine-learning/), en toont API vraag voor het uitvoeren van verrichtingen CRUD op diverse middelen van Workspace van de Wetenschap van Gegevens aan.
 
 ## Aan de slag
 

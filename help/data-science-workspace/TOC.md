@@ -6,7 +6,7 @@ user-guide-description: Gebruik machine learning om modellen en recepten te ontw
 feature: Data Science Workspace
 solution: Experience Platform
 role: User, Developer
-source-git-commit: e828485ad5b0904c9dc66b43d1cdb3c4707885b1
+source-git-commit: 863889984e5e77770638eb984e129e720b3d4458
 workflow-type: tm+mt
 source-wordcount: '225'
 ht-degree: 15%
@@ -43,7 +43,7 @@ ht-degree: 15%
 * Modellen ontwerpen {#authoring}
    * [Model Authoring SDK](authoring/sdk.md)
    * [Een functiepijpleiding maken](authoring/feature-pipeline.md)
-   * [Model authoring met de Platform SDK (Python)](authoring/platform-sdk.md)
+   * [Model authoring met Platform SDK (Python)](authoring/platform-sdk.md)
    * [Toegang tot Python-gegevens](authoring/python.md)
    * [Toegang tot Vonk](authoring/spark.md)
 * Zelfstudies over modellen en recept {#models-recipes}
@@ -64,5 +64,5 @@ ht-degree: 15%
    * [Publish a model as a service (API)](models-recipes/publish-model-service-api.md)
    * [Geautomatiseerde training en scoring op een service (UI) plannen](models-recipes/schedule-models-ui.md)
 * [Handleiding voor probleemoplossing](troubleshooting-guide.md)
-* [ API verwijzing ](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sensei-ml-api.yaml)
+* [ API verwijzing ](https://developer.adobe.com/experience-platform-apis/references/sensei-machine-learning/)
 * [ de versienota&#39;s van het Platform ](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)

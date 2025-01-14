@@ -5,7 +5,7 @@ badge: Beta
 hide: true
 hidefromtoc: true
 exl-id: 293a3ec9-38ea-4b71-a923-1f4e28a41236
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: 863889984e5e77770638eb984e129e720b3d4458
 workflow-type: tm+mt
 source-wordcount: '2265'
 ht-degree: 0%
@@ -143,7 +143,7 @@ curl -X GET \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
->[!TAB  voeg Groepen toe]
+>[!TAB  voeg Groepen ] toe
 
 Voor [!DNL Pinterest Ads] wordt de waarde voor `{SOURCE_PARAMS}` doorgegeven als `{"ad_account_id":"123456789000","object_ids":"000123456789,100123456789","object_type":"ad_groups"}` wanneer de API voor Advertentiegroepen Analytics wordt gebruikt. Wanneer gecodeerd in base64 komt deze overeen met `eyJhZF9hY2NvdW50X2lkIjoiMTIzNDU2Nzg5MDAwIiwib2JqZWN0X2lkcyI6IjAwMDEyMzQ1Njc4OSwxMDAxMjM0NTY3ODkiLCJvYmplY3RfdHlwZSI6ImFkX2dyb3VwcyJ9` zoals hieronder weergegeven.
 
@@ -248,7 +248,7 @@ Een geslaagde reactie retourneert de gegevensstructuur van de overeenkomende [!D
 }
 ```
 
->[!TAB  voeg Groepen  toe]
+>[!TAB  voeg Groepen ] toe
 
 ```json
 {
@@ -493,7 +493,7 @@ curl -X POST \
 | `params.object_type` | Aangezien het eindpunt van de API voor campagneanalyse van [!DNL Pinterest] is vereist, is de waarde `campaigns` . |
 | `params.object_ids` | De door komma&#39;s gescheiden lijst met [!DNL Pinterest] campagne-id&#39;s. |
 
->[!TAB  voeg Groepen  toe]
+>[!TAB  voeg Groepen ] toe
 
 ```shell
 curl -X POST \
@@ -596,7 +596,7 @@ Voor gedetailleerde stappen op hoe te om een doelXDM schema tot stand te brengen
 
 ### Een doelgegevensset maken {#target-dataset}
 
-Een doeldataset kan worden gecreeerd door een verzoek van de POST aan de [ Dienst API van de Catalogus uit te voeren ](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml), verstrekkend identiteitskaart van het doelschema binnen de nuttige lading.
+Een doeldataset kan worden gecreeerd door een verzoek van de POST aan de [ Dienst API van de Catalogus uit te voeren ](https://developer.adobe.com/experience-platform-apis/references/catalog/), verstrekkend identiteitskaart van het doelschema binnen de nuttige lading.
 
 Voor gedetailleerde stappen op hoe te om een doeldataset tot stand te brengen, zie het leerprogramma op [ het creëren van een dataset gebruikend API ](https://experienceleague.adobe.com/docs/experience-platform/catalog/api/create-dataset.html).
 

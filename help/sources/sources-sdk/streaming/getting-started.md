@@ -1,9 +1,9 @@
 ---
 title: Aan de slag met Self-Serve Bronnen (Streaming SDK)
-description: Dit document biedt een inleiding op de vereiste informatie die u moet weten voordat u een nieuwe bron probeert te maken met Self-Serve Sources (Streaming SDK).
+description: Dit document biedt een inleiding op de vereiste informatie die u moet weten voordat u probeert een nieuwe bron te maken met behulp van Self-Serve Sources (Streaming SDK).
 exl-id: 6cc13279-ce0b-45bc-ad25-e2e6aafc2af0
 badge: Beta
-source-git-commit: 256857103b4037b2cd7b5b52d6c5385121af5a9f
+source-git-commit: 863889984e5e77770638eb984e129e720b3d4458
 workflow-type: tm+mt
 source-wordcount: '543'
 ht-degree: 0%
@@ -14,9 +14,9 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->Self-Serve Sources Streaming SDK bevindt zich in bèta. Gelieve te lezen het [ overzicht van bronnen ](../../home.md#terms-and-conditions) voor meer informatie bij het gebruiken van bèta-geëtiketteerde bronnen.
+>Self-Serve Sources Streaming SDK is in bèta. Gelieve te lezen het [ overzicht van bronnen ](../../home.md#terms-and-conditions) voor meer informatie bij het gebruiken van bèta-geëtiketteerde bronnen.
 
-Met Self-Serve Sources (Streaming SDK) kunt u uw eigen bron integreren en streaming gegevens naar Adobe Experience Platform overbrengen. Dit document verstrekt een inleiding aan de kernconcepten u moet kennen alvorens te proberen om vraag aan [[!DNL Flow Service]  API ](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml) te maken.
+Met Self-Serve Sources (Streaming SDK) kunt u uw eigen bron integreren en streaming gegevens naar Adobe Experience Platform overbrengen. Dit document verstrekt een inleiding aan de kernconcepten u moet kennen alvorens te proberen om vraag aan [[!DNL Flow Service]  API ](https://developer.adobe.com/experience-platform-apis/references/flow-service/) te maken.
 
 ## Proces op hoog niveau
 
@@ -24,7 +24,7 @@ Het stapsgewijze proces voor het configureren van uw bron in Experience Platform
 
 ### Integratie
 
-* [ creeer een nieuwe verbindingsspecificatie voor het stromen SDK ](create.md).
+* [ creeer een nieuwe verbindingsspecificatie voor het Streamen SDK ](create.md).
 * [ werk de het stromen stroomspecificatie met uw nieuwe identiteitskaart van de verbindingsspecificatie ](update-flow-specs.md) bij.
 * [ Test en leg uw het stromen bron ](submit.md) voor.
 
@@ -33,8 +33,8 @@ Het stapsgewijze proces voor het configureren van uw bron in Experience Platform
 * Begin documenterend uw bron, lees het [ overzicht bij het creëren van documentatie voor Zelfbediening Bronnen ](../documentation/doc-overview.md).
 * Lees de gids op [ gebruikend de het Webinterface van GitHub ](../documentation/github.md) voor stappen op hoe te om documentatie tot stand te brengen die GitHub gebruikt.
 * Lees de gids op [ gebruikend een tekstredacteur ](../documentation/text-editor.md) voor stappen op hoe te om documentatie tot stand te brengen gebruikend uw lokale machine.
-* [ Gebruik het Streamen SDK API documentatiesjabloon om uw bron in API ](streaming-template-api.md) te documenteren.
-* [ gebruik het het stromen SDK UI documentatiemalplaatje om uw bron in UI ](streaming-template-ui.md) te documenteren.
+* [ Gebruik het Streaming SDK API documentatiesjabloon om uw bron in API ](streaming-template-api.md) te documenteren.
+* [ gebruik het het stromen de documentatiemalplaatje van SDK UI om uw bron in UI ](streaming-template-ui.md) te documenteren.
 
 U kunt ook de onderstaande documentatiesjablonen downloaden:
 

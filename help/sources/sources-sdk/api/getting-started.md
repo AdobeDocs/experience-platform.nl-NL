@@ -1,19 +1,19 @@
 ---
 keywords: Experience Platform;thuis;populaire onderwerpen;bronnen;connectors;bronconnectors;bronnen sdk;sdk;SDK
 solution: Experience Platform
-title: Aan de slag met Self-Serve Sources (Batch SDK)
-description: Dit document verstrekt een inleiding aan de eerste vereiste informatie u moet kennen alvorens te proberen om een nieuwe bron tot stand te brengen gebruikend Zelfbediening Bronnen (de Band SDK).
+title: Aan de slag met Self-Serve Bronnen (Batch SDK)
+description: Dit document verstrekt een inleiding aan de eerste vereiste informatie u moet kennen alvorens om een nieuwe bron te proberen tot stand te brengen gebruikend Zelfbediening Bronnen (Batch SDK).
 exl-id: ba131442-ff20-4854-87fe-918aa313382d
-source-git-commit: 2a5d545db18a5dd33c5ff2ac5c543ec35db4ca00
+source-git-commit: 863889984e5e77770638eb984e129e720b3d4458
 workflow-type: tm+mt
 source-wordcount: '375'
 ht-degree: 0%
 
 ---
 
-# Aan de slag met Self-Serve Sources (Batch SDK)
+# Aan de slag met Self-Serve Bronnen (Batch SDK)
 
-Met Self-Serve Sources (Batch SDK) kunt u uw eigen REST-gebaseerde bron integreren en batchgegevens naar Adobe Experience Platform overbrengen. Dit document verstrekt een inleiding aan de kernconcepten u moet kennen alvorens te proberen om vraag aan [[!DNL Flow Service]  API ](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml) te maken.
+Met Self-Serve Sources (Batch SDK) kunt u uw eigen REST-gebaseerde bron integreren om batchgegevens naar Adobe Experience Platform over te brengen. Dit document verstrekt een inleiding aan de kernconcepten u moet kennen alvorens te proberen om vraag aan [[!DNL Flow Service]  API ](https://developer.adobe.com/experience-platform-apis/references/flow-service/) te maken.
 
 ## Vereisten
 
@@ -26,7 +26,7 @@ Deze handleiding vereist ook een goed begrip van de volgende onderdelen van Adob
 
 ## API-voorbeeldaanroepen lezen
 
-De Self-Serve Bronnen (Batch SDK) en de [!DNL Flow Service] API-documentatie bieden voorbeeld-API-aanroepen om aan te tonen hoe uw verzoeken moeten worden opgemaakt. Dit zijn paden, vereiste kopteksten en correct opgemaakte ladingen voor aanvragen. Voorbeeld-JSON die wordt geretourneerd in API-reacties, wordt ook verschaft. Voor informatie over de overeenkomsten die in documentatie voor steekproef API vraag worden gebruikt, zie de sectie op [ hoe te om voorbeeld API vraag ](../../../landing/troubleshooting.md#how-do-i-format-an-api-request) in de het oplossen van problemengids van het Experience Platform te lezen.
+De Self-Serve Bronnen (Batch SDK) en de [!DNL Flow Service] API-documentatie bieden voorbeeld-API-aanroepen om aan te tonen hoe uw aanvragen moeten worden opgemaakt. Dit zijn paden, vereiste kopteksten en correct opgemaakte ladingen voor aanvragen. Voorbeeld-JSON die wordt geretourneerd in API-reacties, wordt ook verschaft. Voor informatie over de overeenkomsten die in documentatie voor steekproef API vraag worden gebruikt, zie de sectie op [ hoe te om voorbeeld API vraag ](../../../landing/troubleshooting.md#how-do-i-format-an-api-request) in de het oplossen van problemengids van het Experience Platform te lezen.
 
 ## Waarden verzamelen voor vereiste koppen
 
