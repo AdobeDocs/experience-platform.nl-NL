@@ -3,7 +3,7 @@ title: Aanvullende informatie voor Adobe Experience Platform, november 2024
 description: Aanvullende informatie voor Adobe Experience platform, november 2024.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
 source-git-commit: 3f43e120225bcca640cc46ebdce1e4d61100ad45
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '850'
 ht-degree: 100%
 
