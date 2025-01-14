@@ -5,9 +5,9 @@ product: experience platform
 type: Documentation
 description: Leer over prestaties en door systemen afgedwongen richtlijnen voor profielgegevens en segmentatie. Zo zorgt u voor optimaal gebruik van de functie Real-Time CDP.
 exl-id: 33ff0db2-6a75-4097-a9c6-c8b7a9d8b78c
-source-git-commit: 6962bb0ba4968ed4860e95819ac2e949bf744d79
+source-git-commit: 22daff3f422cd4ec5bbf5c77583e24dac6c53c76
 workflow-type: tm+mt
-source-wordcount: '2459'
+source-wordcount: '2470'
 ht-degree: 1%
 
 ---
@@ -67,7 +67,7 @@ De volgende instructies bieden aanbevolen limieten bij het modelleren van gegeve
 | JSON-diepte voor id-veld gebruikt in relatie met meerdere entiteiten | 4 | Prestatiegerichting | De aanbevolen maximale JSON-diepte voor een id-veld in relaties met meerdere entiteiten is 4. Dit betekent dat in een hoogst genest schema, gebieden die meer dan 4 niveaus diep worden genesteld niet als gebied van identiteitskaart in een verhouding zouden moeten worden gebruikt. |
 | Arraycardinaliteit in een profielfragment | &lt;=500 | Prestatiegerichting | De optimale arraycardinaliteit in een profielfragment (tijdonafhankelijke gegevens) is &lt;=500. |
 | Array-kardinaliteit in ExperienceEvent | &lt;=10 | Prestatiegerichting | De optimale arraycardinaliteit in een ExperienceEvent (tijdreeksgegevens) is &lt;=10. |
-| Identiteitstelling voor individueel profiel Identiteitsgrafiek | 50 | Door het systeem afgedwongen geleiding | **het maximumaantal identiteiten in een Grafiek van de Identiteit voor een individueel profiel is 50.** Profielen met meer dan 50 identiteiten zijn uitgesloten van segmentatie, export en zoekopdrachten. |
+| Identiteitstelling voor individueel profiel Identiteitsgrafiek | 50 | Door het systeem afgedwongen geleiding | **het maximumaantal identiteiten in een Grafiek van de Identiteit voor een individueel profiel is 50.** Profielen met meer dan 50 identiteiten zijn uitgesloten van segmentatie, export en zoekopdrachten. Voor meer informatie, lees de gids over [ het begrip logica van de identiteitsschrapping ](../identity-service/guardrails.md#understanding-the-deletion-logic-when-an-identity-graph-at-capacity-is-updated). |
 
 {style="table-layout:auto"}
 
@@ -186,6 +186,6 @@ Raadpleeg de volgende documentatie voor meer informatie over andere Experience P
 
 * [Real-Time CDP guardrails](/help/rtcdp/guardrails/overview.md)
 * [ De diagrammen van de latentie van begin tot eind ](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/deployment/guardrails.html?lang=en#end-to-end-latency-diagrams) voor diverse diensten van het Experience Platform.
-* [ Real-time Customer Data Platform (B2C Uitgave - Primaire en Ultimate Pakketten) ](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)
-* [ Real-time Customer Data Platform (B2P - Primaire en Ultimate Pakketten) ](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html)
-* [ Real-time Customer Data Platform (B2B - Primaire en Ultimate Pakketten) ](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html)
+* [ Real-time Customer Data Platform (B2C Uitgave - de Pakketten van Prime en van Ultimate) ](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)
+* [ Real-time Customer Data Platform (B2P - de Pakketten van Prime en van Ultimate) ](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html)
+* [ Real-time Customer Data Platform (B2B - de Pakketten van Prime en van Ultimate) ](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html)
