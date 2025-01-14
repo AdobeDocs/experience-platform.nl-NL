@@ -1,12 +1,12 @@
 ---
 keywords: Google klant match;Google klant match;Google Customer Match
 title: Google Customer Match-verbinding
-description: Met Google Customer Match kunt u uw online- en offline gegevens gebruiken om klanten te bereiken en opnieuw contact op te nemen met andere Google, zoals Zoeken, Winkelen, Gmail en YouTube.
+description: Met Google Customer Match kunt u uw online- en offline gegevens gebruiken om klanten te bereiken en opnieuw contact op te nemen met andere door Google bediende en bediende eigendommen, zoals Zoeken, Winkelen en Gmail.
 exl-id: 8209b5eb-b05c-4ef7-9fdc-22a528d5f020
-source-git-commit: 25dc27d890cb2e0e23f8fa797ac9edea929164fd
+source-git-commit: bbf48bb3478e90c1502083d0ea97e3cc0aef1bb9
 workflow-type: tm+mt
-source-wordcount: '2058'
-ht-degree: 1%
+source-wordcount: '2098'
+ht-degree: 2%
 
 ---
 
@@ -22,7 +22,11 @@ ht-degree: 1%
 ><br/>
 >De klanten die geen Adobe Privacy &amp; het Schild van de Veiligheid hebben gekocht moeten de ](../../../segmentation/home.md#segment-definitions) mogelijkheden van de segmentdefinitie [ binnen [ de Bouwer van het Segment ](../../../segmentation/ui/segment-builder.md) gebruiken om uit niet-goedgekeurde profielen te filtreren, om de bestaande bestemmingen van Real-Time CDP Google zonder onderbreking te blijven gebruiken.
 
-[[!DNL Google Customer Match] ](https://support.google.com/google-ads/answer/6379332?hl=en) laat u uw online en off-line gegevens gebruiken om met uw klanten over Google bezeten en in werking gestelde eigenschappen, zoals: [!DNL Search], [!DNL Shopping], [!DNL Gmail], en [!DNL YouTube] te bereiken en opnieuw in dienst te nemen.
+[[!DNL Google Customer Match] ](https://support.google.com/google-ads/answer/6379332?hl=en) laat u uw online en off-line gegevens gebruiken om met uw klanten over Google bezeten en in werking gestelde eigenschappen, zoals: [!DNL Search], [!DNL Shopping], en [!DNL Gmail] te bereiken en opnieuw in dienst te nemen.
+
+>[!TIP]
+>
+>Om klanten op [!DNL YouTube] inventaris te bereiken, gebruik de [ Gelijke van de Klant van Google + bestemming DV360 ](/help/destinations/catalog/advertising/google-customer-match-dv360.md), die de Partner API van het Publiek van Google gebruikt.
 
 ![ de Klant van Google de bestemming van de Gelijke in Adobe Experience Platform UI.](../../assets/catalog/advertising/google-customer-match/catalog.png)
 
@@ -35,6 +39,10 @@ Om u beter te helpen begrijpen hoe en wanneer om de [!DNL Google Customer Match]
 Een atletisch merkje wil bestaande klanten bereiken via [!DNL Google Search] en [!DNL Google Shopping] om aanbiedingen en objecten aan te passen op basis van hun eerdere aankopen en browsergeschiedenis. Het merk apparel kan e-mailadressen van hun eigen CRM aan Experience Platform opnemen, en publiek van hun eigen off-line gegevens bouwen. Vervolgens kunnen ze deze soorten publiek naar [!DNL Google Customer Match] sturen voor gebruik in [!DNL Search] en [!DNL Shopping] , zodat hun advertentie-uitgaven worden geoptimaliseerd.
 
 ### Hoofdletters gebruiken #2
+
+>[!TIP]
+>
+>Om dit gebruiksgeval op [!DNL YouTube] inventaris uit te voeren, gebruik de nieuwe [ Gelijke van de Klant van Google + bestemming DV360 ](/help/destinations/catalog/advertising/google-customer-match-dv360.md), die de Partner API van het Publiek van Google gebruikt.
 
 Een vooraanstaande technologiebedrijf lanceerde een nieuwe telefoon. Om dit nieuwe telefoonmodel te bevorderen, kijken zij om bewustzijn van de nieuwe eigenschappen en de functionaliteit van de telefoon aan klanten te drijven die vorige modellen van hun telefoons bezitten.
 
@@ -222,7 +230,7 @@ Na het verbinden met de bestemming en het vestigen van een bestemmingsdataflow, 
 
 >[!IMPORTANT]
 >
-> Vanaf oktober 2024 wordt door Adobe een update uitgevoerd om de rapportnauwkeurigheid voor streamingdoelen te verbeteren. Deze verbetering zorgt voor een betere afstemming tussen het Experience Platform en de doelplatforms die rapporteren.
+> Vanaf oktober 2024 brengt Adobe een update uit om de rapportagenauwkeurigheid voor streamingbestemmingen te verbeteren. Deze verbetering zorgt voor een betere afstemming tussen het Experience Platform en de doelplatforms die rapporteren.
 >
 > Vóór deze update heeft **[!UICONTROL Identities failed]** alle activeringspogingen opgenomen. Na deze update wordt alleen de laatste activeringspoging opgenomen in het totale aantal.
 >
