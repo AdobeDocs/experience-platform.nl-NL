@@ -2,9 +2,9 @@
 title: Overzicht Salesforce Source Connector
 description: Leer hoe u Salesforce met Adobe Experience Platform kunt verbinden via API's of de gebruikersinterface.
 exl-id: 597778ad-3cf8-467c-ad5b-e2850967fdeb
-source-git-commit: ee659ded9701132b12d5b93672b4c958e9720028
+source-git-commit: f62e13e97cc82fef759d06b94337f4cc25d4fb10
 workflow-type: tm+mt
-source-wordcount: '1528'
+source-wordcount: '1533'
 ht-degree: 0%
 
 ---
@@ -14,7 +14,6 @@ ht-degree: 0%
 >[!IMPORTANT]
 >
 >U kunt nu de [!DNL Salesforce] -bron gebruiken wanneer u Adobe Experience Platform uitvoert op Amazon Web Services (AWS). Experience Platform dat op AWS wordt uitgevoerd, is momenteel beschikbaar voor een beperkt aantal klanten. Meer over de gesteunde infrastructuur van het Experience Platform leren, zie het [ Experience Platform multi-cloud overzicht ](../../../landing/multi-cloud.md).
-
 
 Adobe Experience Platform staat toe dat gegevens uit externe bronnen worden opgenomen terwijl u de mogelijkheid krijgt om inkomende gegevens te structureren, te labelen en te verbeteren met behulp van de platformservices. U kunt gegevens uit diverse bronnen invoeren, zoals toepassingen voor Adobe, opslag in de cloud, databases en vele andere.
 
@@ -50,6 +49,8 @@ Als u de [!DNL Salesforce] bron wilt gebruiken als onderdeel van [!DNL B2B-CDP] 
 
 Met een platformontwikkelaarsconsole en [!DNL Postman] -configuratie kunt u nu de juiste omgevingswaarden toepassen op uw [!DNL Postman] -omgeving.
 
++++De hulplijn van de variabele tabel weergeven
+
 De volgende tabel bevat voorbeeldwaarden en aanvullende informatie over het vullen van de [!DNL Postman] -omgeving:
 
 | Variabele | Beschrijving | Voorbeeld |
@@ -73,6 +74,8 @@ De volgende tabel bevat voorbeeldwaarden en aanvullende informatie over het vull
 | `has_msi` | Een booleaanse waarde die aangeeft of u bent geabonneerd op [!DNL Marketo Sales Insight] . | `false` |
 
 {style="table-layout:auto"}
+
++++
 
 ### Scripts uitvoeren
 
@@ -124,7 +127,7 @@ openssl req -newkey rsa:4096 -new -nodes -x509 -days 3650 -keyout key.pem -out c
 4. Schakel het vak voor [!DNL Enable OAuth Settings] in.
 5. Stel een callback-URL in. Omdat deze optie niet wordt gebruikt voor JWT, kunt u `https://localhost` gebruiken.
 6. Schakel het vak voor [!DNL Use Digital Signatures] in.
-7. Upload het bestand cert.perm dat eerder is gemaakt.
+7. Upload het bestand cert.pem dat eerder is gemaakt.
 
 #### Vereiste machtigingen toevoegen
 
