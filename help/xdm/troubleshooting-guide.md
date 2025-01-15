@@ -4,9 +4,9 @@ solution: Experience Platform
 title: XDM System Troubleshooting Guide
 description: Hier vindt u antwoorden op veelgestelde vragen over het XDM (Experience Data Model), inclusief stappen voor het oplossen van veelvoorkomende API-fouten.
 exl-id: a0c7c661-bee8-4f66-ad5c-f669c52c9de3
-source-git-commit: ae98a185fdfad5b6ba787e78ad17296928216d08
+source-git-commit: b345330595aadcfe2380dd1795802470b249cb4a
 workflow-type: tm+mt
-source-wordcount: '2380'
+source-wordcount: '2337'
 ht-degree: 0%
 
 ---
@@ -142,13 +142,7 @@ Het schema wordt niet automatisch toegelaten voor het Profiel van de Klant in re
 
 U kunt geen schema schrappen nadat het voor het Profiel van de Klant in real time is toegelaten. Als een schema eenmaal is ingeschakeld voor Profiel, kan het niet worden uitgeschakeld of verwijderd en kunnen velden niet uit het schema worden verwijderd. Daarom is het essentieel om de schemaconfiguratie zorgvuldig te plannen en te verifiëren alvorens het voor Profiel toe te laten. U kunt een profiel-Toegelaten dataset echter schrappen. Hier vindt u informatie: <https://experienceleague.adobe.com/en/docs/experience-platform/catalog/datasets/user-guide#delete-a-profile-enabled-dataset>
 
->[!IMPORTANT]
->
->Om een profiel-toegelaten schema te verwijderen zou u de hulp van het Team van de Steun van het Platform van XDM nodig hebben en moet deze stappen volgen:
->
-> 1. Alle datasets verwijderen die zijn gekoppeld aan het schema (dat is ingeschakeld voor Profiel)
-> 2. Verwijder de profielexportmomentopname uit de sandbox (hiervoor is de hulp van het XDM Platform Support Team vereist)
-> 3. Schema verwijderen van de sandbox forceren (dit kan alleen worden gedaan door het XDM Platform Support Team)
+Als u niet meer voor een profiel-toegelaten schema wenst te worden gebruikt, adviseert het om het schema anders te noemen om **te omvatten** of **niet Inactief** gebruiken.
 
 ## Wijziging en beperkingen van het schema
 
