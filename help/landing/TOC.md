@@ -3,9 +3,9 @@ audience: user
 user-guide-title: Overzicht van Adobe Experience Platform
 breadcrumb-title: Overzicht van Experience Platform
 user-guide-description: Ontdek hoe u met Experience Platform uw klanten in real time persoonlijke ervaringen kunt bieden met handleidingen, documentatie en zelfstudies.
-source-git-commit: b3fe3f50c133a819921aef05ee5b00af16b7f58f
+source-git-commit: 90b8a3253e8298a634c0deaf82ac8be05f478622
 workflow-type: tm+mt
-source-wordcount: '290'
+source-wordcount: '304'
 ht-degree: 17%
 
 ---
@@ -67,13 +67,15 @@ ht-degree: 17%
          * [Gebeurtenissen](./governance-privacy-security/audit-logs/api/events.md)
          * [Exporteren](./governance-privacy-security/audit-logs/api/export.md)
    * [Gegevenscodering](./governance-privacy-security/encryption.md)
-   * Door de klant beheerde sleutels {#customer-managed-keys}
-      * [Door de klant beheerde sleutels](./governance-privacy-security/customer-managed-keys/overview.md)
-      * [Een Azure Key Vault configureren](./governance-privacy-security/customer-managed-keys/azure-key-vault-config.md)
-      * [De API gebruiken om CMK in te stellen](./governance-privacy-security/customer-managed-keys/api-set-up.md)
-      * [De gebruikersinterface gebruiken om CMK in te stellen](./governance-privacy-security/customer-managed-keys/ui-set-up.md)
-   * Key Management Service {#key-management-service}
-      * [Key Management Service](./governance-privacy-security/key-management-service/overview.md)
+   * Door de klant beheerde toetsen {#customer-managed-keys}
+      * [Door de klant beheerde toetsen](./governance-privacy-security/customer-managed-keys/overview.md)
+      * Azure {#azure}
+         * [Een Azure Key Vault configureren](./governance-privacy-security/customer-managed-keys/azure/azure-key-vault-config.md)
+         * [De API gebruiken om CMK in te stellen](./governance-privacy-security/customer-managed-keys/azure/api-set-up.md)
+         * [De gebruikersinterface gebruiken om CMK in te stellen](./governance-privacy-security/customer-managed-keys/azure/ui-set-up.md)
+      * Amazon Web Services {#aws}
+         * [AWS KMS voor CMK configureren](./governance-privacy-security/customer-managed-keys/aws/configure-kms.md)
+         * [De gebruikersinterface gebruiken om CMK in te stellen op AWS](./governance-privacy-security/customer-managed-keys/aws/ui-set-up.md)
 * Licentiegebruik en instructies {#license}
    * [ De beste praktijken van de het beheersvergunning van Gegevens best ](./license-usage-and-guardrails/data-management-best-practices.md)
    * [Het gebruiksdashboard voor licenties](./license-usage-and-guardrails/license-usage-dashboard.md)
