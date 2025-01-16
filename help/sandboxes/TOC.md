@@ -4,10 +4,10 @@ user-guide-title: Sandboxes in Adobe Experience Platform Help
 breadcrumb-title: Handleiding voor sandboxes
 user-guide-description: Leer meer over het functioneren van sandboxes en verdeel een exemplaar van het platform in partities in virtuele omgevingen voor het ontwikkelen, testen en implementeren van applicaties.
 feature: Sandboxes
-source-git-commit: 868800de5dc6dde6654ff5256c91bddc2997b11b
+source-git-commit: ecace5503fcd054ef992763044304b03b9661b3b
 workflow-type: tm+mt
-source-wordcount: '74'
-ht-degree: 50%
+source-wordcount: '82'
+ht-degree: 45%
 
 ---
 
@@ -33,6 +33,9 @@ ht-degree: 50%
    * [Pakketten](sandbox-tooling-api/packages.md)
    * [Tools](sandbox-tooling-api/tools.md)
    * [Bijlage](sandbox-tooling-api/appendix.md)
+* Gevallen gebruiken {#use-cases}
+   * [Back-upobjectconfiguraties](use-cases/backup-object-configuration.md)
+   * [Uitstekingscentrum](use-cases/center-of-excellence.md)
 * [Handleiding voor probleemoplossing](troubleshooting-guide.md)
 * [ API verwijzing ](https://www.adobe.io/experience-platform-apis/references/sandbox)
 * [ de versienota&#39;s van het Platform ](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)
