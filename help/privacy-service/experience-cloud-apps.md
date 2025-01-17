@@ -1,12 +1,12 @@
 ---
-keywords: Experience Platform;home;populaire onderwerpen
+keywords: Experience Platform;startpagina;populaire onderwerpen
 solution: Experience Platform
 title: Toepassingen voor Privacy Service en Experience Cloud
 description: Dit document bevat een referentie voor het configureren van verschillende Experiencen Cloud voor bewerkingen met betrekking tot privacy.
 exl-id: da21c15f-0b99-4eb7-ac9a-f0fe5e3ba842
-source-git-commit: 46ca46460de9211c3e876454c986d030b964646e
+source-git-commit: a1ac1f56a22b279aca6607a53dd1e44ffccd1877
 workflow-type: tm+mt
-source-wordcount: '822'
+source-wordcount: '900'
 ht-degree: 4%
 
 ---
@@ -39,9 +39,10 @@ Hieronder volgt een lijst met [!DNL Experience Cloud] -toepassingen die zijn ge�
 | Adobe Campaign Standard | ✓ | ✓ | De opgeslagen gegevens van de betrokkene worden uit het systeem verwijderd. | <ul><li>[ toegang/schrapt documentatie ](https://helpx.adobe.com/nl/campaign/kb/campaign-privacy.html)</li><li>[ Opt-out documentatie ](../segmentation/consents.md)</li></ul> |
 | Klantkenmerken van de Adobe (CRS) | ✓ | N.v.t. | De kenmerken van de betrokkene worden uit het systeem verwijderd. | <ul><li>[ toegang/schrappingsdocumentatie voor GDPR ](https://experienceleague.adobe.com/docs/core-services/interface/customer-attributes/gdpr.html)</li><li>[ toegang/schrap documentatie voor CCPA ](https://experienceleague.adobe.com/docs/core-services/interface/customer-attributes/ccpa.html)</li><li>Kenmerken van klanten kunnen geen gegevens overdragen en daarom zijn aanvragen om te weigeren niet van toepassing.</li></ul> |
 | Adobe Experience Platform | ✓ | ✓ | Wanneer het Experience Platform een schrappingsverzoek van Privacy Service ontvangt, verzendt het Platform bevestiging aan Privacy Service dat het verzoek is ontvangen en de beïnvloede gegevens voor schrapping duidelijk zijn gemaakt. De records worden vervolgens verwijderd uit het Data Lake- of Profile Store nadat de privacytaak is voltooid. Voordat de taak wordt voltooid, worden de gegevens via de elektronische weg verwijderd en zijn ze daarom niet toegankelijk voor een willekeurige platformservice. | <ul><li>[ toegang/schrap documentatie voor het meer van Gegevens ](../catalog/privacy.md)</li><li>[ toegang/schrap documentatie voor de Dienst van de Identiteit ](../identity-service/privacy.md)</li><li>[ toegang/schrap documentatie voor het Profiel van de Klant in real time ](../profile/privacy.md)</li><li>[!DNL Experience Platform] houdt rekening met [ opt-out verzoeken om publiekssegmenten ](../segmentation/consents.md).</li></ul> |
-| Adobe Journey Optimizer | ✓ | N.v.t. | De opgeslagen gegevens van de betrokkene worden uit het systeem verwijderd. | <ul><li>[ toegang/schrapt documentatie ](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/privacy/requests)</li></ul> |
+| Adobe Journey Optimizer | ✓ | N.v.t. | De opgeslagen gegevens van de betrokkene worden uit het systeem verwijderd. | <ul><li>[ toegang/schrapt documentatie ](https://experienceleague.adobe.com/nl/docs/journey-optimizer/using/privacy/requests)</li></ul> |
 | Adobe Pass-verificatie | ✓ | N.v.t. | De opgeslagen gegevens van de betrokkene worden uit het systeem verwijderd. | <ul><li>[ toegang/schrapt documentatie ](https://tve.helpdocsonline.com/how-to-make-a-privacy-request)</li><li>Pass beschikt niet over de mogelijkheid om gegevens over te dragen, zodat aanvragen om niet in de handel te worden genomen niet van toepassing zijn.</li></ul> |
 | Adobe Target | ✓ | N.v.t. | Alle gegevens die aan de id van de betrokkene zijn gekoppeld, worden uit het profiel van de bezoeker verwijderd. Geaggregeerde of geanonimiseerde gegevens die de individuele persoon niet identificeren of die anderszins niet gerelateerd zijn (zoals inhoudsgegevens), zijn niet van toepassing op verzoeken tot verwijderen. | <ul><li>[ toegang/schrapt documentatie ](https://experienceleague.adobe.com/docs/target/using/implement-target/before-implement/privacy/cmp-privacy-and-general-data-protection-regulation.html)</li><li>[!DNL Target] beschikt niet over de mogelijkheid om gegevens over te dragen. Daarom zijn aanvragen om te weigeren van toepassing.</li></ul> |
+| Commerce (Personalization) | ✓ | N.v.t. | Privacy Service verwijdert [!DNL Commerce] -gegevens die in Commerce SaaS-services zijn opgeslagen voor marketingdoeleinden. Dit houdt in dat profielen en orders van betrokkenen niet langer naar Adobe marketingtoepassingen worden verzonden voor gebruik in campagnes en klantreizen. Privacy Service verwijdert echter geen gegevens uit de [!DNL Commerce] -toepassing, omdat deze mogelijk nog wel vereist zijn voor zakelijke transactionele behoeften. Handelaars zijn verantwoordelijk voor alle aanvragen voor het verwijderen van gegevens/toegang in de [!DNL Commerce] -toepassing. | <ul><li>[ toegang/schrappingsdocumentatie voor Commerce ](https://experienceleague.adobe.com/en/docs/commerce-merchant-services/data-connection/handle-privacy-request)</li></ul> |
 | Marketo Engage | ✓ | N.v.t. | De opgeslagen gegevens van de betrokkene worden uit het systeem verwijderd. | <ul><li>[ toegang/schrapt documentatie ](https://experienceleague.adobe.com/docs/marketo/using/product-docs/core-marketo-concepts/miscellaneous/privacy-requests.html)</li><li>[!DNL Marketo] beschikt niet over de mogelijkheid om gegevens over te dragen. Daarom zijn aanvragen om te weigeren van toepassing.</li></ul> |
 
 {style="table-layout:auto"}
@@ -54,7 +55,7 @@ Hieronder volgt een lijst met [!DNL Experience Cloud] -toepassingen die niet zij
 | ------- | ----------- |
 | [ Adobe Experience Manager ](https://experienceleague.adobe.com/docs/experience-manager-64/managing/data-protection/data-protection-and-privacy.html) | Een overzicht van hoe een beheerder van de klantenprivacy of AEM beheerder GDPR- verzoeken kan behandelen. |
 | [ Adobe Experience Manager Livefyre ](https://experienceleague.adobe.com/docs/livefyre/using/settings-other/privacy-requests/c-gdpr-compliance.html) | Stappen voor het maken van GDPR toegang en schrappingsverzoeken gebruikend Livefyre. |
-| [ Magento ](https://devdocs.magento.com/compliance/industry-compliance.html) | Zorg ervoor dat uw Magento&#39;s Commerce voldoen aan de vereisten van specifieke privacywetgeving. |
+| [ Adobe Commerce ](https://experienceleague.adobe.com/en/docs/commerce-operations/security-and-compliance/overview) | Zorg ervoor dat uw Adobe Commerce-installaties voldoen aan de vereisten van specifieke privacywetgeving. |
 | [ Markeringen in Adobe Experience Platform ](../tags/ui/client-side/consent.md) | Hoe ontwikkelaars uitbreidingen en de regelbouwer kunnen gebruiken om opt-in en opt-out oplossingen te bepalen. |
 | [ Workfront ](https://www.workfront.com/privacy-notice) | Leer hoe Workfront persoonlijke gegevens verzamelt en hoe een betrokkene een privacyaanvraag kan indienen via een formulier. |
 
