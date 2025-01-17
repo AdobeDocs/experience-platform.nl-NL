@@ -5,9 +5,9 @@ type: Documentation
 description: Met Adobe Experience Platform kunt u een gegevensset of batch verwijderen uit de profielopslag om gegevens van het realtime-klantprofiel te verwijderen die niet meer nodig zijn of die ten onrechte zijn toegevoegd. Hiervoor moet u de profiel-API gebruiken om een profielsysteemtaak te maken of een aanvraag te verwijderen.
 role: Developer
 exl-id: 75ddbf2f-9a54-424d-8569-d6737e9a590e
-source-git-commit: 3664d3d1f6433bce4678ab8b17c008c064d8e943
+source-git-commit: 16778d0edbad4539a4ff5084a2f22ca5f08e83ec
 workflow-type: tm+mt
-source-wordcount: '1977'
+source-wordcount: '2020'
 ht-degree: 0%
 
 ---
@@ -64,6 +64,8 @@ GET /system/jobs?{QUERY_PARAMETERS}
 
 >[!TAB  Microsoft Azure ]
 
++++ Een voorbeeldverzoek om de systeemtaken te bekijken.
+
 ```shell
 curl -X GET https://platform.adobe.io/data/core/ups/system/jobs \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
@@ -72,11 +74,15 @@ curl -X GET https://platform.adobe.io/data/core/ups/system/jobs \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
 ```
 
++++
+
 >[!TAB  Amazon Web Services (AWS) ]
 
 >[!IMPORTANT]
 >
 >U **moet** de `x-sandbox-id` verzoekkopbal in plaats van de `x-sandbox-name` verzoekkopbal gebruiken wanneer het gebruiken van dit eindpunt met AWS.
+
++++ Een voorbeeldverzoek om de systeemtaken te bekijken.
 
 ```shell
 curl -X GET https://platform.adobe.io/data/core/ups/system/jobs \
@@ -85,6 +91,8 @@ curl -X GET https://platform.adobe.io/data/core/ups/system/jobs \
   -H 'x-gw-ims-org-id: {ORG_ID}' \
   -H 'x-sandbox-id: {SANDBOX_ID}' \
 ```
+
++++
 
 >[!ENDTABS]
 
@@ -133,8 +141,6 @@ Een geslaagde reactie bevat een array &#39;children&#39; met een object voor elk
 }
 ```
 
-+++
-
 | Eigenschap | Beschrijving |
 | -------- | ----------- |
 | `_page.count` | Het totale aantal aanvragen. Deze reactie is afgebroken voor de ruimte. |
@@ -142,6 +148,8 @@ Een geslaagde reactie bevat een array &#39;children&#39; met een object voor elk
 | `jobType` | Het type taak dat wordt gemaakt. In dit geval wordt altijd `"DELETE"` geretourneerd. |
 | `status` | De status van de verwijderaanvraag. Mogelijke waarden zijn `"NEW"` , `"PROCESSING"` , `"COMPLETED"` en `"ERROR"` . |
 | `metrics` | Een voorwerp dat het aantal verslagen omvat die zijn verwerkt (`"recordsProcessed"`) en de tijd in seconden dat het verzoek is verwerkt, of hoe lang het verzoek om (`"timeTakenInSec"`) nam te voltooien. |
+
++++
 
 >[!TAB  Amazon Web Services (AWS) ]
 
@@ -222,6 +230,8 @@ POST /system/jobs
 
 >[!TAB  Microsoft Azure ]
 
++++ Een steekproefverzoek om een dataset te schrappen.
+
 ```shell
 curl -X POST \
   https://platform.adobe.io/data/core/ups/system/jobs \
@@ -235,6 +245,8 @@ curl -X POST \
       }'
 ```
 
++++
+
 | Eigenschap | Beschrijving |
 | -------- | ----------- |
 | `dataSetId` | De id van de gegevensset die u wilt verwijderen. |
@@ -244,6 +256,8 @@ curl -X POST \
 >[!IMPORTANT]
 >
 >U **moet** de `x-sandbox-id` verzoekkopbal in plaats van de `x-sandbox-name` verzoekkopbal gebruiken wanneer het gebruiken van dit eindpunt met AWS.
+
++++ Een steekproefverzoek om een dataset te schrappen.
 
 ```shell
 curl -X POST \
@@ -257,6 +271,8 @@ curl -X POST \
         "dataSetId": "5c802d3cd83fc114b741c4b5"
       }'
 ```
+
++++
 
 | Eigenschap | Beschrijving |
 | -------- | ----------- |
@@ -290,12 +306,12 @@ Een geslaagde reactie retourneert de details van het nieuwe verwijderingsverzoek
 }
 ```
 
-+++
-
 | Eigenschap | Beschrijving |
 | -------- | ----------- |
 | `id` | De unieke, door het systeem gegenereerde, alleen-lezen-id van de verwijderaanvraag. |
 | `dataSetId` | Identiteitskaart van de dataset, zoals die in het verzoek van de POST wordt gespecificeerd. |
+
++++
 
 >[!TAB  Amazon Web Services (AWS) ]
 
@@ -322,14 +338,14 @@ Een succesvolle reactie keert de details van het onlangs gecreeerde systeemverzo
 }
 ```
 
-+++
-
 | Eigenschap | Beschrijving |
 | -------- | ----------- |
 | `requestId` | De id van de systeemtaak. |
 | `requestType` | Het type systeemtaak. Mogelijke waarden zijn `BACKFILL_TTL` , `DELETE_EE_BATCH` en `TRUNCATE_DATASET` . |
 | `status` | De status van de systeemtaak. Mogelijke waarden zijn `NEW` , `SUCCESS` , `ERROR` , `FAILED` en `IN-PROGRESS` . |
 | `properties` | Een voorwerp dat partij en/of dataset IDs van de systeembaan bevat. |
+
++++
 
 >[!ENDTABS]
 
@@ -359,6 +375,8 @@ POST /system/jobs
 
 >[!TAB  Microsoft Azure ]
 
++++ Een voorbeeldaanvraag om een batch te verwijderen.
+
 ```shell
 curl -X POST \
   https://platform.adobe.io/data/core/ups/system/jobs \
@@ -373,6 +391,8 @@ curl -X POST \
       }'
 ```
 
++++
+
 | Eigenschap | Beschrijving |
 | -------- | ----------- |
 | `datasetId` | De id van de gegevensset voor de batch die u wilt verwijderen. |
@@ -383,6 +403,8 @@ curl -X POST \
 >[!IMPORTANT]
 >
 >U **moet** de `x-sandbox-id` verzoekkopbal in plaats van de `x-sandbox-name` verzoekkopbal gebruiken wanneer het gebruiken van dit eindpunt met AWS.
+
++++ Een voorbeeldaanvraag om een batch te verwijderen.
 
 ```shell
 curl -X POST \
@@ -398,13 +420,14 @@ curl -X POST \
       }'
 ```
 
++++
+
 | Eigenschap | Beschrijving |
 | -------- | ----------- |
 | `datasetId` | De id van de gegevensset voor de batch die u wilt verwijderen. |
 | `batchId` | De id van de batch die u wilt verwijderen. |
 
 >[!ENDTABS]
-
 
 **Reactie**
 
@@ -417,6 +440,8 @@ curl -X POST \
 >[!TAB  Microsoft Azure ]
 
 Een geslaagde reactie retourneert de details van het nieuwe verwijderingsverzoek, inclusief een unieke, door het systeem gegenereerde, alleen-lezen-id voor de aanvraag. Dit kan worden gebruikt om het verzoek op te zoeken en zijn status te controleren. De `"status"` voor de aanvraag op het moment dat deze wordt gemaakt, is `"NEW"` totdat deze wordt verwerkt. De `"batchId"` -waarde in het antwoord moet overeenkomen met de `"batchId"` -waarde die in de aanvraag wordt verzonden.
+
++++ Een geslaagde reactie voor het maken van een verwijderaanvraag.
 
 ```json
 {
@@ -436,6 +461,8 @@ Een geslaagde reactie retourneert de details van het nieuwe verwijderingsverzoek
 | `id` | De unieke, door het systeem gegenereerde, alleen-lezen-id van de verwijderaanvraag. |
 | `datasetId` | De id van de opgegeven gegevensset. |
 | `batchId` | De id van de batch, zoals opgegeven in het verzoek om POST. |
+
++++
 
 >[!TAB  Amazon Web Services (AWS) ]
 
@@ -462,14 +489,14 @@ Een succesvolle reactie keert de details van het onlangs gecreeerde systeemverzo
 }
 ```
 
-+++
-
 | Eigenschap | Beschrijving |
 | -------- | ----------- |
 | `requestId` | De id van de systeemtaak. |
 | `requestType` | Het type systeemtaak. Mogelijke waarden zijn `BACKFILL_TTL` , `DELETE_EE_BATCH` en `TRUNCATE_DATASET` . |
 | `status` | De status van de systeemtaak. Mogelijke waarden zijn `NEW` , `SUCCESS` , `ERROR` , `FAILED` en `IN-PROGRESS` . |
 | `properties` | Een voorwerp dat partij en/of dataset IDs van de systeembaan bevat. |
+
++++
 
 >[!ENDTABS]
 
@@ -517,13 +544,17 @@ GET /system/jobs/{DELETE_REQUEST_ID}
 
 >[!TAB  Microsoft Azure ]
 
++++ Een voorbeeldverzoek om een profieltaak weer te geven.
+
 ```shell
 curl -X GET https://platform.adobe.io/data/core/ups/system/jobs/9c2018e2-cd04-46a4-b38e-89ef7b1fcdf4 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {ORG_ID}' \
-  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
+
++++
 
 >[!TAB  Amazon Web Services (AWS) ]
 
@@ -531,13 +562,17 @@ curl -X GET https://platform.adobe.io/data/core/ups/system/jobs/9c2018e2-cd04-46
 >
 >U **moet** de `x-sandbox-id` verzoekkopbal in plaats van de `x-sandbox-name` verzoekkopbal gebruiken wanneer het gebruiken van dit eindpunt met AWS.
 
++++ Een voorbeeldverzoek om een profieltaak weer te geven.
+
 ```shell
 curl -X GET https://platform.adobe.io/data/core/ups/system/jobs/9c2018e2-cd04-46a4-b38e-89ef7b1fcdf4 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {ORG_ID}' \
-  -H 'x-sandbox-id: {SANDBOX_ID}' \
+  -H 'x-sandbox-id: {SANDBOX_ID}'
 ```
+
++++
 
 >[!ENDTABS]
 
@@ -553,6 +588,8 @@ curl -X GET https://platform.adobe.io/data/core/ups/system/jobs/9c2018e2-cd04-46
 >[!TAB  Microsoft Azure ]
 
 In het antwoord worden de details van het verwijderingsverzoek weergegeven, inclusief de bijgewerkte status. De id van de verwijderaanvraag in de reactie (de `"id"` -waarde) moet overeenkomen met de id die in het aanvraagpad is verzonden.
+
++++ Een geslaagde reactie voor het weergeven van een verwijderingsaanvraag.
 
 ```json
 {
@@ -572,6 +609,8 @@ In het antwoord worden de details van het verwijderingsverzoek weergegeven, incl
 | `jobType` | Het type taak dat wordt gemaakt, in dit geval retourneert deze altijd `"DELETE"` . |
 | `status` | De status van de verwijderaanvraag. Mogelijke waarden zijn `NEW` , `PROCESSING` , `COMPLETED` en `ERROR` . |
 | `metrics` | Een serie die het aantal verslagen omvat die zijn verwerkt (`"recordsProcessed"`) en de tijd in seconden dat het verzoek verwerking is geweest, of hoe lang het verzoek om (`"timeTakenInSec"`) nam te voltooien. |
+
++++
 
 >[!TAB  Amazon Web Services (AWS) ]
 
@@ -598,14 +637,14 @@ Een succesvolle reactie keert de details van het gespecificeerde systeemverzoek 
 }
 ```
 
-+++
-
 | Eigenschap | Beschrijving |
 | -------- | ----------- |
 | `requestId` | De id van de systeemtaak. |
 | `requestType` | Het type systeemtaak. Mogelijke waarden zijn `BACKFILL_TTL` , `DELETE_EE_BATCH` en `TRUNCATE_DATASET` . |
 | `status` | De status van de systeemtaak. Mogelijke waarden zijn `NEW` , `SUCCESS` , `ERROR` , `FAILED` en `IN-PROGRESS` . |
 | `properties` | Een voorwerp dat partij en/of dataset IDs van de systeembaan bevat. |
+
++++
 
 >[!ENDTABS]
 
@@ -626,45 +665,18 @@ DELETE /system/jobs/{DELETE_REQUEST_ID}
 ```
 
 | Parameter | Beschrijving |
-|---|---|
+| --------- | ----------- |
 | {DELETE_REQUEST_ID} | De id van de verwijderaanvraag die u wilt verwijderen. |
 
 **Verzoek**
 
->[!IMPORTANT]
->
->Het volgende verzoek verschilt tussen de Azure- en AWS-instanties.
-
->[!BEGINTABS]
-
->[!TAB  Microsoft Azure ]
-
 ```shell
-curl -X POST \
-  https://platform.adobe.io/data/core/ups/system/jobs/9c2018e2-cd04-46a4-b38e-89ef7b1fcdf4 \
+curl -X POST https://platform.adobe.io/data/core/ups/system/jobs/9c2018e2-cd04-46a4-b38e-89ef7b1fcdf4 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {ORG_ID}' \
-  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
-
->[!TAB  Amazon Web Services (AWS) ]
-
->[!IMPORTANT]
->
->U **moet** de `x-sandbox-id` verzoekkopbal in plaats van de `x-sandbox-name` verzoekkopbal gebruiken wanneer het gebruiken van dit eindpunt met AWS.
-
-```shell
-curl -X POST \
-  https://platform.adobe.io/data/core/ups/system/jobs/9c2018e2-cd04-46a4-b38e-89ef7b1fcdf4 \
-  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-  -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {ORG_ID}' \
-  -H 'x-sandbox-id: {SANDBOX_ID}' \
-```
-
->[!ENDTABS]
-
 
 **Reactie**
 
