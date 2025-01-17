@@ -3,9 +3,9 @@ keywords: Experience Platform;huis;populaire onderwerpen;bronnen;schakelaars;bro
 title: Een Adobe Campaign Managed Cloud Services-bronverbinding maken met behulp van platforminterface
 description: Leer hoe u verbinding maakt met Adobe Experience Platform via de gebruikersinterface van het platform.
 exl-id: 067ed558-b239-4845-8c85-3bf9b1d4caed
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 77d755e4ebf97521efa1dfdfe9ee40312800ad28
 workflow-type: tm+mt
-source-wordcount: '1105'
+source-wordcount: '1141'
 ht-degree: 0%
 
 ---
@@ -101,6 +101,8 @@ Platform biedt intelligente aanbevelingen voor automatisch toegewezen velden op 
 >[!IMPORTANT]
 >
 >Wanneer u uw bronvelden toewijst aan doel-XDM-velden, moet u ervoor zorgen dat u het toegewezen primaire identiteitsveld toewijst aan het juiste doel-XDM-veld.
+>
+>Voor elk publiek kunt u maximaal 20 velden toevoegen om toe te wijzen aan Adobe Campaign. U kunt deze limiet wijzigen door de waarde van de optie `NmsCdp_Aep_Sources_Max_Columns` bij te werken in de map Beheer > Platform > Opties van Campagneverkenner.
 
 Selecteer **[!UICONTROL Next]** wanneer de brongegevens correct zijn toegewezen.
 
