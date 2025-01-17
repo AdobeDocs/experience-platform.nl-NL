@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Aanbevolen procedures voor gegevensmodellering
 description: Dit document verstrekt een inleiding aan de schema's van het Gegevensmodel van de Ervaring (XDM) en de bouwstenen, de beginselen, en beste praktijken voor het samenstellen van schema's die in Adobe Experience Platform moeten worden gebruikt.
 exl-id: 2455a04e-d589-49b2-a3cb-abb5c0b4e42f
-source-git-commit: fed8502afad1dfcb0b4dc91141dd621eacda720c
+source-git-commit: b144a93374fc627f9001b80695cad3f17e28a6fe
 workflow-type: tm+mt
-source-wordcount: '3214'
+source-wordcount: '3201'
 ht-degree: 0%
 
 ---
@@ -28,24 +28,24 @@ Aangezien deze gids zich uitsluitend op zeer belangrijke overwegingen betreffend
 De aanbevolen aanpak voor het ontwerpen van uw gegevensmodel voor gebruik in Experience Platform kan als volgt worden samengevat:
 
 1. Begrijp de zaken van het bedrijfsgebruik voor uw gegevens.
-1. Identificeer de primaire gegevensbronnen die in [!DNL Platform] moeten worden gebracht om die gebruiksgevallen te behandelen.
-1. Identificeer om het even welke secundaire gegevensbronnen die ook van belang kunnen zijn. Als momenteel bijvoorbeeld slechts één bedrijfseenheid in uw organisatie geïnteresseerd is in het verzenden van gegevens naar [!DNL Platform] , heeft een vergelijkbare bedrijfseenheid mogelijk ook belangstelling voor het verzenden van vergelijkbare gegevens in de toekomst. Het overwegen van deze secundaire bronnen helpt het gegevensmodel over uw volledige organisatie te standaardiseren.
+1. Identificeer de primaire gegevensbronnen die in Platform moeten worden gebracht om die gebruiksgevallen te behandelen.
+1. Identificeer om het even welke secundaire gegevensbronnen die ook van belang kunnen zijn. Bijvoorbeeld, als momenteel slechts één bedrijfseenheid in uw organisatie in het uitvoeren van hun gegevens aan Platform geinteresseerd is, zou een gelijkaardige bedrijfseenheid ook in het uitvoeren van gelijkaardige gegevens in de toekomst kunnen geinteresseerd zijn. Het overwegen van deze secundaire bronnen helpt het gegevensmodel over uw volledige organisatie te standaardiseren.
 1. Creeer een diagram van de entiteitverhouding op hoog niveau (ERD) voor de gegevensbronnen die zijn geïdentificeerd.
-1. Zet de ERD op hoog niveau om in een [!DNL Platform] -centric ERD (inclusief profielen, Experience Events en lookup-entiteiten).
+1. Converteer de ERD op hoog niveau naar een platformgerichte ERD (inclusief profielen, ervaringsgebeurtenissen en opzoekentiteiten).
 
-De stappen met betrekking tot het identificeren van de toepasselijke gegevensbronnen die worden vereist om uw zaken van het bedrijfsgebruik uit te voeren variëren van organisatie tot organisatie. Hoewel de overige secties in dit document zich richten op de laatste stappen voor het organiseren en samenstellen van een ERD nadat de gegevensbronnen zijn geïdentificeerd, kunnen de toelichtingen bij de verschillende componenten van het diagram u informeren over welke van uw gegevensbronnen naar [!DNL Platform] moeten worden gemigreerd.
+De stappen met betrekking tot het identificeren van de toepasselijke gegevensbronnen die worden vereist om uw zaken van het bedrijfsgebruik uit te voeren variëren van organisatie tot organisatie. Hoewel de overige secties in dit document zich richten op de laatste stappen voor het organiseren en samenstellen van een ERD nadat de gegevensbronnen zijn geïdentificeerd, kunnen de toelichtingen bij de verschillende componenten van het diagram uw beslissingen over welke van uw gegevensbronnen naar Platform moeten worden gemigreerd, toelichten.
 
 ## Een ERD op hoog niveau maken {#create-an-erd}
 
-Zodra u de gegevensbronnen hebt bepaald die u in [!DNL Platform] wilt brengen, creeer een ERD op hoog niveau helpen het proces begeleiden om uw gegevens aan schema&#39;s toe te wijzen XDM.
+Zodra u de gegevensbronnen hebt bepaald die u in Platform wilt brengen, creeer een ERD op hoog niveau helpen het proces begeleiden om uw gegevens aan schema&#39;s toe te wijzen XDM.
 
-In het onderstaande voorbeeld ziet u een vereenvoudigde ERD voor een bedrijf dat gegevens wil importeren in [!DNL Platform] . Het diagram benadrukt de essentiële entiteiten die in klassen XDM, met inbegrip van klantenrekeningen, hotels, adressen, en verscheidene gemeenschappelijke e-commercegebeurtenissen zouden moeten worden gesorteerd.
+In het onderstaande voorbeeld wordt een vereenvoudigde ERD voorgesteld voor een bedrijf dat gegevens in Platform wil opnemen. Het diagram benadrukt de essentiële entiteiten die in klassen XDM, met inbegrip van klantenrekeningen, hotels, en verscheidene gemeenschappelijke e-commercegebeurtenissen zouden moeten worden gesorteerd.
 
 ![ een entiteitrelationeel diagram dat de essentiële entiteiten benadrukt die in klassen XDM voor gegevensopname zouden moeten worden gesorteerd.](../images/best-practices/erd.png)
 
 ## Entiteiten sorteren in profiel-, zoekopdracht- en gebeurteniscategorieën {#sort-entities}
 
-Nadat u een ERD hebt gemaakt om de essentiële entiteiten te identificeren die u in [!DNL Platform] wilt plaatsen, moeten deze entiteiten worden gesorteerd in profiel-, zoekopdracht- en gebeurteniscategorieën:
+Nadat u een ERD hebt gemaakt om de essentiële entiteiten te identificeren die u in Platform wilt opnemen, moeten deze entiteiten worden gesorteerd in profiel-, zoekopdracht- en gebeurteniscategorieën:
 
 | Categorie | Beschrijving |
 | --- | --- |
@@ -79,7 +79,7 @@ Als een entiteit kenmerken bevat die betrekking hebben op een individuele klant,
 
 #### Gegevens bijhouden over een bepaalde tijd {#track-data}
 
-Als u wilt analyseren hoe bepaalde kenmerken binnen een entiteit in de loop der tijd veranderen, is het waarschijnlijk een gebeurtenisentiteit. Als u bijvoorbeeld productitems aan een winkelwagentje toevoegt, kunt u dit traceren als add-to-cart-gebeurtenissen in [!DNL Platform] :
+Als u wilt analyseren hoe bepaalde kenmerken binnen een entiteit in de loop der tijd veranderen, is het waarschijnlijk een gebeurtenisentiteit. Bijvoorbeeld, kan het toevoegen van productpunten aan een karretje als toe:voegen-aan-kartgebeurtenissen in Platform worden gevolgd:
 
 | Klant-id | Type | Product-id | Aantal | Tijdstempel |
 | --- | --- | --- | --- | --- |
@@ -113,7 +113,7 @@ Een bedrijf wil bijvoorbeeld een publiek maken op basis van het aantal winkels. 
 
 >[!CAUTION]
 >
->Experience Platform voert momenteel geen automatische waardecodering uit, hoewel dit voor toekomstige versies gepland is. Als u ervoor kiest geaggregeerde waarden te gebruiken, moet u de berekeningen extern uitvoeren voordat u de gegevens naar [!DNL Platform] verzendt.
+>Experience Platform voert momenteel geen automatische waardecodering uit, hoewel dit voor toekomstige versies gepland is. Als u ervoor kiest samengevoegde waarden te gebruiken, moet u de berekeningen extern uitvoeren voordat u de gegevens naar Platform verzendt.
 
 #### Kardinaal {#cardinality}
 
@@ -127,9 +127,9 @@ In de volgende tabel worden enkele gemeenschappelijke entiteitsrelaties en de ca
 
 | Relatie | Kardinaal | Categorieën entiteiten |
 | --- | --- | --- |
-| Klanten en winkelwagentjes | Eén naar vele | Eén klant kan veel winkelwagentjes hebben, dit zijn gebeurtenissen die in de loop der tijd kunnen worden bijgehouden. Klanten zouden daarom een profielentiteit zijn, terwijl winkelwagentjes een gebeurtenisentiteit zouden zijn. |
-| Klanten en klantenaccounts | Eén op één | Één enkele klant kan slechts één loyaliteitsrekening hebben, en een loyaliteitsrekening kan slechts tot één klant behoren. Aangezien de relatie één-op-één is, vertegenwoordigen zowel Klanten als Loyalty&#39;s profielentiteiten. |
-| Klanten en abonnementen | Eén naar vele | Eén klant kan vele abonnementen hebben. Aangezien het bedrijf slechts met de huidige abonnementen van een klant betrokken is, zijn de Klanten een profielentiteit, terwijl de Abonnementen een raadplegingsentiteit is. |
+| Afhandeling door klant en winkelwagentje | Eén naar vele | Eén klant kan veel winkelwagentjes hebben, dit zijn gebeurtenissen die in de loop der tijd kunnen worden bijgehouden. De klant zou daarom een profielentiteit zijn, terwijl Afhandeling starten een gebeurtenisentiteit zou zijn. |
+| Klant- en klantenrekening | Eén op één | Één enkele klant kan slechts één loyaliteitsrekening hebben, en een loyaliteitsrekening kan slechts tot één klant behoren. Aangezien de relatie één-op-één is, vertegenwoordigen zowel de klant als de Loyalty- Rekening profielentiteiten. |
+| Klant en abonnement | Eén naar vele | Eén klant kan vele abonnementen hebben. Aangezien het bedrijf alleen betrokken is bij de huidige abonnementen van een klant, is de klant een profielentiteit, terwijl het abonnement een opzoekentiteit is. |
 
 {style="table-layout:auto"}
 
@@ -146,9 +146,9 @@ In dit scenario, heeft het bedrijf twee potentiële opties om de abonnementen va
 
 #### Aanpak 1: Profielkenmerken gebruiken {#profile-approach}
 
-De eerste benadering zou zijn om een array van abonnementen als attributen binnen de profielentiteit voor Klanten te omvatten. Objecten in deze array bevatten velden voor `category` , `status` , `planName` , `startDate` en `endDate` .
+De eerste methode zou zijn om een array van `subscriptionID` in de profielentiteit voor de Klant op te nemen.
 
-![ het schema van Klanten in de Redacteur van het Schema met de benadrukte klasse en structuur ](../images/best-practices/profile-schema.png)
+![ het schema van de Klant in de Redacteur van het Schema met de benadrukte klasse en structuur ](../images/best-practices/profile-schema.png)
 
 **Pros**
 
@@ -162,9 +162,9 @@ De eerste benadering zou zijn om een array van abonnementen als attributen binne
 
 #### Aanpak 2: Gebeurtenisentiteiten gebruiken {#event-approach}
 
-De tweede benadering zou gebeurtenisschema&#39;s moeten gebruiken om abonnementen te vertegenwoordigen. Dit betekent dat u dezelfde abonnementsvelden als de eerste aanpak moet invoeren, plus een abonnement-id, een klant-id en een tijdstempel van wanneer de abonnementsgebeurtenis heeft plaatsgevonden.
+De tweede benadering zou gebeurtenisschema&#39;s moeten gebruiken om een abonnementsgebeurtenis te vertegenwoordigen. Dit omvat de abonnement-id naast een klant-id en een tijdstempel van het tijdstip waarop de abonnementsgebeurtenis plaatsvond.
 
-![ een diagram van het schema van de Gebeurtenissen van het Abonnement met de benadrukte klassen van de Gebeurtenis van de Ervaring XDM en abonnementenstructuur.](../images/best-practices/event-schema.png)
+![ een diagram van het schema van de Gebeurtenis van de Abonnement met de benadrukte klassen van de Gebeurtenis van de Ervaring XDM en abonnementenstructuur.](../images/best-practices/event-schema.png)
 
 **Pros**
 
@@ -192,7 +192,7 @@ De categorie waarop een entiteit is gesorteerd, moet de XDM-klasse bepalen waaro
 >
 >Hoewel gebeurtenisentiteiten bijna altijd worden vertegenwoordigd door afzonderlijke schema&#39;s, kunnen entiteiten in de profiel- of opzoekcategorieën worden gecombineerd in één XDM-schema, afhankelijk van hun kardinaliteit.
 >
->Aangezien de entiteit Klanten bijvoorbeeld een één-op-één relatie heeft met de entiteit LoyaltyAccounts, kan het schema voor de entiteit Klanten ook een `LoyaltyAccount` -object bevatten dat de juiste loyaliteitsvelden voor elke klant bevat. Als de relatie echter één op vele is, kan de entiteit die de &quot;vele&quot;vertegenwoordigt door een afzonderlijk schema of een serie van profielattributen, afhankelijk van zijn ingewikkeldheid worden vertegenwoordigd.
+>Aangezien de entiteit van de Klant bijvoorbeeld een één-op-één relatie heeft met de entiteit LoyaltyAccount, kan het schema voor de entiteit van de Klant ook een `LoyaltyAccount` -object bevatten dat de juiste loyaliteitsvelden voor elke klant bevat. Als de relatie echter één op vele is, kan de entiteit die de &quot;vele&quot;vertegenwoordigt door een afzonderlijk schema of een serie van profielattributen, afhankelijk van zijn ingewikkeldheid worden vertegenwoordigd.
 
 De onderstaande secties bieden algemene richtlijnen voor het samenstellen van schema&#39;s op basis van uw ERD.
 
