@@ -2,7 +2,7 @@
 title: Stimuleer soorten publiek met SQL
 description: Leer hoe u de SQL-publieksextensie in Adobe Experience Platform Data Distiller kunt gebruiken voor het maken, beheren en publiceren van soorten publiek met SQL-opdrachten. In deze handleiding worden alle aspecten van de levenscyclus van de doelgroep behandeld, zoals het maken, bijwerken en verwijderen van profielen en het gebruik van gegevensgestuurde publieksdefinities voor doelbestemmingen op basis van bestanden.
 exl-id: c35757c1-898e-4d65-aeca-4f7113173473
-source-git-commit: 7db055f598e3fa7d5a50214a0cfa86e28e5bfe47
+source-git-commit: c66a7cf779c1b6e55ace86916985087dfaa3363b
 workflow-type: tm+mt
 source-wordcount: '1479'
 ht-degree: 0%
@@ -44,7 +44,7 @@ Gebruik deze parameters om uw SQL vraag van de publieksverwezenlijking te bepale
 | `schema` | Optioneel. Bepaalt het schema XDM voor de dataset die door de vraag wordt gecreeerd. |
 | `table_name` | Naam van de tabel en het publiek. |
 | `primary_identity` | Hiermee geeft u de primaire identiteitskolom voor het publiek op. |
-| `identity_namespace` | Naamruimte van de identiteit. U kunt een bestaande naamruimte gebruiken of een nieuwe naamruimte maken. Gebruik de opdracht `SHOW NAMESPACE` om beschikbare naamruimten weer te geven. Gebruik `CREATE NAMESPACE` om een nieuwe naamruimte te maken. Bijvoorbeeld: `CREATE NAMESPACE lumaCrmId WITH (code='testns', TYPE='Email')` . |
+| `identity_namespace` | Naamruimte van de identiteit. U kunt een bestaande naamruimte gebruiken of een nieuwe naamruimte maken. Gebruik de opdracht `SHOW NAMESPACES` om beschikbare naamruimten weer te geven. Gebruik `CREATE NAMESPACE` om een nieuwe naamruimte te maken. Bijvoorbeeld: `CREATE NAMESPACE lumaCrmId WITH (code='testns', TYPE='Email')` . |
 | `select_query` | Een SELECT-instructie die het publiek definieert. De syntaxis van de UITGEZOCHTE vraag kan in de [ UITGEZOCHTE vragen ](../sql/syntax.md#select-queries) sectie worden gevonden. |
 
 {style="table-layout:auto"}
