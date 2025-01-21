@@ -3,7 +3,7 @@ title: AI Assistant in Adobe Experience Platform-productdocumentatie
 description: Ga aan de slag met AI Assistant in Adobe Experience Platform.
 feature: AI Assistant
 exl-id: bcb86a41-d5d8-4c1a-a86d-79fa0c167bc7
-source-git-commit: 676466184e84dabfeb52947c3d3a777032ca728f
+source-git-commit: fcda4dc3ecdd4ae9272f1cc65cabb20b6236c71a
 workflow-type: tm+mt
 source-wordcount: '821'
 ht-degree: 1%
@@ -31,7 +31,7 @@ Begin met het lezen van het materiaal in de koppelingen hieronder om uzelf vertr
     <div><strong> verbeter uw het leren </strong><br/> ontdekt, problemen oplost, en versterkt uw begrip van productkennis zonder uw werkschema's te onderbreken.</div>
     </td>
     <td>
-    <a href="https://experienceleague.adobe.com/en/playlists/experience-platform-get-started-with-ai-assistant"><img src="./assets/landing/ai-videos.png" style="width:100%;max-height:100%"><a>
+    <a href="https://experienceleague.adobe.com/en/playlists/experience-platform-get-started-with-ai-assistant"><img src="./assets/landing/ai-videos.png" style="width:100%;max-height:100%"></a>
     <div><strong> Bezoek de AI Hulp videoplaylist </strong><br/> Leer over de vele verschillende uitdagingen en gebruiksgevallen die u met AI Medewerker kunt richten.</div>
     </td>
   </tr>
