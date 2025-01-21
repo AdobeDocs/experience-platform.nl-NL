@@ -3,9 +3,9 @@ title: AI Assistant in Adobe Experience Platform-productdocumentatie
 description: Ga aan de slag met AI Assistant in Adobe Experience Platform.
 feature: AI Assistant
 exl-id: bcb86a41-d5d8-4c1a-a86d-79fa0c167bc7
-source-git-commit: 3c100042ab828e10326d314fcaa00278cc8eb694
+source-git-commit: 676466184e84dabfeb52947c3d3a777032ca728f
 workflow-type: tm+mt
-source-wordcount: '790'
+source-wordcount: '821'
 ht-degree: 1%
 
 ---
@@ -23,17 +23,22 @@ Begin met het lezen van het materiaal in de koppelingen hieronder om uzelf vertr
 <table style="table-layout:fixed">
   <tr style="border: 0;">
     <td>
-    <a href="./home.md#operational-insights"><img src="./assets/landing/ai-get-started.png" style="width:" 100%;max-height: 100%"></a>
+    <a href="./home.md#operational-insights"><img src="./assets/landing/ai-get-started.png" style"="width:100%;max-height:100%&quot;"></a>
     <div><strong> Begrijp uw gegevensvoorwerpen </strong><br/> terugwinnen operationele inzichten met betrekking tot uw gegevensvoorwerpen voor een betere mening over hun statussen, gebruik, en lijneffect.</div>
     </td>
     <td>
-    <a href="./home.md#product-knowledge"><img src="./assets/landing/ai-audience.png" style="width:" 100%;max-height: 100%"></a>
+    <a href="./home.md#product-knowledge"><img src="./assets/landing/ai-audience.png"  style="width:100%;max-height:100%"></a>
     <div><strong> verbeter uw het leren </strong><br/> ontdekt, problemen oplost, en versterkt uw begrip van productkennis zonder uw werkschema's te onderbreken.</div>
+    </td>
+    <td>
+    <a href="https://experienceleague.adobe.com/en/playlists/experience-platform-get-started-with-ai-assistant"><img src="./assets/landing/ai-videos.png" style="width:100%;max-height:100%"><a>
+    <div><strong> Bezoek de AI Hulp videoplaylist </strong><br/> Leer over de vele verschillende uitdagingen en gebruiksgevallen die u met AI Medewerker kunt richten.</div>
     </td>
   </tr>
   <tr style="border: 0;">
     <td align="center"><a href="./home.md"><img src="../rtcdp/assets/do-not-localize/learn-more-button.svg"></a></td>
     <td align="center"><a href="./home.md#product-knowledge"><img src="../rtcdp/assets/do-not-localize/learn-more-button.svg"></a></td>
+    <td align="center"><a href="https://experienceleague.adobe.com/en/playlists/experience-platform-get-started-with-ai-assistant"><img src="../rtcdp/assets/do-not-localize/learn-more-button.svg"></a></td>
     </tr>
 </table>
 
@@ -152,6 +157,7 @@ Lees het volgende voor voorbeelden van AI Assistant-gebruiksscenario&#39;s:
 * [ ontmoedig uw publiek en optimaliseer uw marketing verrichtingen ](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-blogs/ai-assistant-helps-optimize-marketing-operations-by-de/ba-p/696002)
 * [ Controle gebiedsdelen en minimaliseer risico tijdens gegevensupdates ](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-blogs/ai-assistant-minimizes-risk-during-data-updates-by-checking/ba-p/713364)
 * [ minimaliseer risico tijdens gegevensupdates door gebiedsdelen in seconden te controleren ](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-blogs/ai-assistant-minimizes-risk-during-data-updates-by-checking/ba-p/713364)
+* [ ontdekt en stelt sneller nieuwe eigenschappen ](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-blogs/discover-and-deploy-new-features-faster-with-ai-assistant-in/ba-p/731125) op
 
 >[!TAB  Extra videoinhoud ]
 
