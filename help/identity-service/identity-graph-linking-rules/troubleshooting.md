@@ -2,9 +2,9 @@
 title: De Gids van het oplossen van problemen voor de Regels van de Verbinding van de Grafiek van de Identiteit
 description: Leer hoe te om gemeenschappelijke kwesties in identiteitsgrafiek problemen op te lossen die regels verbinden.
 exl-id: 98377387-93a8-4460-aaa6-1085d511cacc
-source-git-commit: b50633a8518f32051549158b23dfc503db255a82
+source-git-commit: 79efdff6f6068af4768fc4bad15c0521cca3ed2a
 workflow-type: tm+mt
-source-wordcount: '3328'
+source-wordcount: '3279'
 ht-degree: 0%
 
 ---
@@ -149,12 +149,8 @@ Er zijn verschillende redenen die ertoe bijdragen waarom uw ervaringsfragmenten 
 * [ de bevestigingsmislukking van A kan op Profiel ](../../xdm/classes/experienceevent.md) zijn voorgekomen.
    * Een ervaringsgebeurtenis moet bijvoorbeeld zowel een `_id` als een `timestamp` bevatten.
    * Bovendien moet `_id` uniek zijn voor elke gebeurtenis (record).
-* De naamruimte met de hoogste prioriteit is een lege tekenreeks.
 
-In de context van namespace prioriteit, zal het Profiel verwerpen:
-
-* Elke gebeurtenis die twee of meer identiteiten met de hoogste naamruimteprioriteit bevat. Als GAID bijvoorbeeld niet is gemarkeerd als een unieke naamruimte en als er twee identiteiten zijn binnengekomen met een GAID-naamruimte en er verschillende identiteitswaarden zijn binnengekomen, worden de gebeurtenissen niet opgeslagen in Profiel.
-* Elke gebeurtenis waarbij de naamruimte met de hoogste prioriteit een lege tekenreeks is.
+In de context van naamruimteprioriteit weigert Profiel elke gebeurtenis die twee of meer identiteiten met de hoogste naamruimteprioriteit bevat. Als GAID bijvoorbeeld niet is gemarkeerd als een unieke naamruimte en als er twee identiteiten zijn binnengekomen met een GAID-naamruimte en er verschillende identiteitswaarden zijn binnengekomen, worden de gebeurtenissen niet opgeslagen in Profiel.
 
 **de stappen van het Oplossen van problemen**
 
@@ -175,16 +171,7 @@ Als uw gegevens worden verzonden naar gegevens het meer, maar niet het Profiel, 
   FROM dataset_name)) WHERE col.id != _testimsorg.identification.core.email and key = 'Email' 
 ```
 
-U kunt ook de volgende query uitvoeren om te controleren of er geen inname naar profiel plaatsvindt vanwege de hoogste naamruimte met een lege tekenreeks:
-
-```sql
-  SELECT identityMap, key, col.id as identityValue, _testimsorg.identification.core.email, _id, timestamp 
-  FROM (SELECT key, explode(value), * 
-  FROM (SELECT explode(identityMap), * 
-  FROM dataset_name)) WHERE (col.id = '' or _testimsorg.identification.core.email = '') and key = 'Email' 
-```
-
-Deze twee vragen gaan ervan uit dat:
+Bij deze query wordt ervan uitgegaan dat:
 
 * Eén identiteit wordt verzonden vanuit de identityMap en een andere identiteit wordt verzonden vanuit een identiteitsbeschrijving. **NOTA**: In de schema&#39;s van het Gegevensmodel van de Ervaring (XDM), is de identiteitsbeschrijver het gebied duidelijk als identiteit.
 * De CRMID wordt verzonden via identityMap. Als de CRMID als gebied wordt verzonden, verwijder `key='Email'` uit WHERE clausule.
@@ -225,7 +212,7 @@ Als u de identiteitswaarde van uw cookie-id niet kent en u wilt zoeken naar een 
 
 >[!BEGINTABS]
 
->[!TAB  implementatie van SDK van het Web ]
+>[!TAB  de implementatie van SDK van het Web ]
 
 ```sql
   SELECT identityMap['ECID'][0]['id'], count(distinct identityMap['CRMID'][0]['id']) as crmidCount FROM dataset_name GROUP BY identityMap['ECID'][0]['id'] ORDER BY crmidCount desc 
@@ -245,7 +232,7 @@ Nu u de cookiewaarden hebt geïdentificeerd verbonden aan veelvoudige persoon ID
 
 >[!BEGINTABS]
 
->[!TAB  implementatie van SDK van het Web ]
+>[!TAB  de implementatie van SDK van het Web ]
 
 ```sql
   SELECT identityMap['CRMID'][0]['id'] as personEntity, * 

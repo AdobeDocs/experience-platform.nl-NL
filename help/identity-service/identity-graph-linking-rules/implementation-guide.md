@@ -2,9 +2,9 @@
 title: Implementatiegids voor koppelingsregels voor identiteitsgrafieken
 description: Leer de aanbevolen stappen die u moet volgen wanneer u uw gegevens implementeert met configuraties van regels voor identiteitsgrafieken.
 exl-id: 368f4d4e-9757-4739-aaea-3f200973ef5a
-source-git-commit: 720ffa1ca0ee69cfc802cd50aef26b6f38d2142c
+source-git-commit: 79efdff6f6068af4768fc4bad15c0521cca3ed2a
 workflow-type: tm+mt
-source-wordcount: '1656'
+source-wordcount: '1573'
 ht-degree: 0%
 
 ---
@@ -119,31 +119,6 @@ Tijdens uw pre-implementatieproces, moet u ervoor zorgen dat de voor authentiek 
 
 
 >[!ENDTABS]
-
-Verzend geen lege tekenreeks als identiteitswaarde wanneer u gebeurtenissen verzendt met behulp van XDM-ervaringsgebeurtenissen. Als de identiteitswaarde van namespace met hoogste namespaceprioriteit een leeg koord is, zal het verslag van het Profiel van de Klant in real time worden genegeerd. Dit geldt zowel voor identityMap als voor velden die zijn gemarkeerd als een identiteit.
-
-+++Selecteren om een voorbeeld weer te geven van een lading met een lege tekenreeks
-
-In het volgende voorbeeld wordt een fout geretourneerd omdat de identiteitswaarde voor `Phone` wordt verzonden als een lege tekenreeks.
-
-```json
-    "identityMap": {
-        "ECID": [
-            {
-                "id": "24165048599243194405404369473457348936",
-                "primary": false
-            }
-        ],
-        "Phone": [
-            {
-                "id": "",
-                "primary": true
-            }
-        ]
-    }
-```
-
-+++
 
 U moet ervoor zorgen dat u een volledig gekwalificeerde identiteit hebt wanneer u gebeurtenissen verzendt die XDM ervaringsgebeurtenissen gebruiken.
 
