@@ -3,9 +3,9 @@ title: Opmerkingen bij de release Adobe Experience Platform Web SDK
 description: De nieuwste aanvullende informatie voor de Adobe Experience Platform Web SDK.
 keywords: Adobe Experience Platform Web SDK;Platform Web SDK;Web SDK;release notes;
 exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
-source-git-commit: 3a50468a7596b9ba870920a8188ae50b40aaef69
+source-git-commit: 08b07aa874b9ca9b5ea76850d6c0320bddddc85e
 workflow-type: tm+mt
-source-wordcount: '2085'
+source-wordcount: '2149'
 ht-degree: 5%
 
 ---
@@ -15,6 +15,18 @@ ht-degree: 5%
 
 In dit document worden de opmerkingen bij de release voor de Adobe Experience Platform Web SDK besproken.
 Voor de recentste versienota&#39;s op de de markeringsuitbreiding van SDK van het Web, zie de [ nota&#39;s van de de marktextensie van SDK van het Web ](../tags/extensions/client/web-sdk/web-sdk-ext-release-notes.md).
+
+## Versie 2.25.0 - woensdag 23 januari 2024 {#2-25-0}
+
+**Vaste en verbeteringen**
+
+- Geldigheid van optie is toegevoegd aan de opdracht `setDebug` .
+- Er is een waarschuwing toegevoegd tijdens het configureren van een functie `onBeforeLinkClickSend` of een koppelingskwalificatie voor downloadkoppelingen wanneer de functie voor klikken is uitgeschakeld.
+- Oplossing voor een probleem waarbij gerenderde voorstellingen niet in weergavemeldingen waren opgenomen
+
+**Nieuwe Eigenschappen**
+
+- Implementeerde een fallback naar het geconfigureerde Edge-domein wanneer cookies van derden zijn ingeschakeld en aanvragen naar adobedc.demdex.net worden geblokkeerd.
 
 ## Versie 2.24.1 - zaterdag 6 december 2024
 
