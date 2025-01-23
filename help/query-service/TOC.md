@@ -5,10 +5,10 @@ breadcrumb-title: Gids voor Query Service
 user-guide-description: Gebruik standaard SQL om gegevens te doorzoeken binnen de data lake in Experience Platform.
 feature: Queries
 role: User,Developer
-source-git-commit: c3065710e5f50541b074fc493df07130221d8078
+source-git-commit: 20869e76976ff3868f1d4dbc7c6d97b58682e5c3
 workflow-type: tm+mt
-source-wordcount: '382'
-ht-degree: 12%
+source-wordcount: '397'
+ht-degree: 11%
 
 ---
 
@@ -50,6 +50,7 @@ Modellen implementeren {#implement-models}
       - [Classificatie](advanced-statistics/implement-models/classification.md)
       - [ het Groeperen ](advanced-statistics/implement-models/clustering.md)
 Voorbeelden {#examples}
+      - [Bot filteren met behulp van statistieken en machinaal leren](advanced-statistics/examples/statistics-and-ml-bot-filtering.md)
       - [Klantenvertrouwen voorspellen met behulp van op SQL gebaseerde logistieke regressie](advanced-statistics/examples/predict-customer-churn.md)
 - Distiller-publiek voor gegevens {#data-distiller-audiences}
    - [Extern publiek opbouwen met SQL](data-distiller-audiences/overview.md)
@@ -58,6 +59,7 @@ Voorbeelden {#examples}
    - [Verlaten browsers](use-cases/abandoned-browse.md)
    - [Attributieanalyse](use-cases/attribution-analysis.md)
    - [Bot filteren](use-cases/bot-filtering.md)
+   - [Bot filteren met behulp van statistieken en introductie van machinaal leren](use-cases/statistics-and-ml-bot-filtering-stub.md)
    - [Een trended-rapport van gebeurtenissen maken](use-cases/trended-report-of-events.md)
    - [Conceptanalyse](use-cases/consent-analysis.md)
    - [Levensduurwaarde van klant](use-cases/customer-lifetime-value.md)
