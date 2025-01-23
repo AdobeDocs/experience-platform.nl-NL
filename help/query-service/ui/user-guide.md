@@ -4,9 +4,9 @@ solution: Experience Platform
 title: UI-gids voor zoekprogramma
 description: De redacteur van de Vraag is een interactief hulpmiddel dat door de Dienst van de Vraag van Adobe Experience Platform wordt verstrekt, die u toestaat om, vragen voor klantenervaringsgegevens binnen het gebruikersinterface van het Experience Platform te schrijven te bevestigen en in werking te stellen. De Redacteur van de vraag steunt het ontwikkelen van vragen voor analyse en gegevensexploratie, en staat u toe om interactieve vragen voor ontwikkelingsdoeleinden evenals niet-interactieve vragen in werking te stellen om datasets in Experience Platform te bevolken.
 exl-id: d7732244-0372-467d-84e2-5308f42c5d51
-source-git-commit: e66f3540d22a441089916183538921ea5654b312
+source-git-commit: 4c11a35ce914cd0b1aa0084368f5a5929f883963
 workflow-type: tm+mt
-source-wordcount: '2761'
+source-wordcount: '2725'
 ht-degree: 0%
 
 ---
@@ -217,12 +217,9 @@ Elke dataset bevat in [ uw geselecteerde gegevensbestand ](#database-dropdown) i
 
 Het schema dat in de objectbrowser wordt weergegeven, is een waarneembaar schema. Dit betekent dat u het kunt gebruiken om veranderingen en updates in echt te controleren - tijd aangezien de veranderingen onmiddellijk zichtbaar zijn. De waarneembare schema&#39;s helpen gegevenssynchronisatie verzekeren en helpen bij het zuiveren of analytische taken.
 
-#### Huidige beperkingen {#current-limitations}
+#### Huidige beperking {#current-limitation}
 
-Hieronder volgt een lijst met huidige beperkingen:
-
-- Opeenvolgende uitvoering van query: Er kan slechts één query tegelijk worden uitgevoerd. Terwijl een vraag lopend is, kunnen geen extra lijsten in de linkernavigatie worden geopend, aangezien de vragen opeenvolgend worden verwerkt.
-- Extra rijen in vraaglogboeken: U kunt extra vragen ontmoeten die als &quot;TOONTABELLEN&quot;worden geëtiketteerd in de logboeken. Deze worden in toekomstige versies verwijderd.
+Het systeem verwerkt opeenvolgend vragen, betekenend slechts één vraag kan tegelijkertijd lopen. Terwijl een vraag lopend is, kunnen de extra lijsten niet in de linkernavigatie worden betreden.
 
 #### Metagegevens van tabellen openen {#table-metadata}
 

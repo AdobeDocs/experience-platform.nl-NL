@@ -5,9 +5,9 @@ breadcrumb-title: Gids voor Query Service
 user-guide-description: Gebruik standaard SQL om gegevens te doorzoeken binnen de data lake in Experience Platform.
 feature: Queries
 role: User,Developer
-source-git-commit: 83d15e8d6488a400a87f111ec97f06401431b339
+source-git-commit: c3065710e5f50541b074fc493df07130221d8078
 workflow-type: tm+mt
-source-wordcount: '369'
+source-wordcount: '382'
 ht-degree: 12%
 
 ---
@@ -42,13 +42,15 @@ ht-degree: 12%
 - Distiller-statistieken over gegevens en leren van machines {#advanced-statistics}
    - [Overzicht](advanced-statistics/overview.md)
    - [Functietechniek](advanced-statistics/feature-engineering.md)
-   - [ Modellen ](advanced-statistics/models.md)
+   - [Modellen](advanced-statistics/models.md)
+   - [ transformatie van de Eigenschap ](advanced-statistics/feature-transformation.md)
 Modellen implementeren {#implement-models}
       - [Modellen implementeren](advanced-statistics/implement-models/implement-models.md)
       - [Regressie](advanced-statistics/implement-models/regression.md)
       - [Classificatie](advanced-statistics/implement-models/classification.md)
-      - [Clustering](advanced-statistics/implement-models/clustering.md)
-   - [Eigenschaptransformatie](advanced-statistics/feature-transformation.md)
+      - [ het Groeperen ](advanced-statistics/implement-models/clustering.md)
+Voorbeelden {#examples}
+      - [Klantenvertrouwen voorspellen met behulp van op SQL gebaseerde logistieke regressie](advanced-statistics/examples/predict-customer-churn.md)
 - Distiller-publiek voor gegevens {#data-distiller-audiences}
    - [Extern publiek opbouwen met SQL](data-distiller-audiences/overview.md)
 - Voorbeelden {#use-cases}
@@ -64,6 +66,7 @@ Modellen implementeren {#implement-models}
    - [Fuzzy match](use-cases/fuzzy-match.md)
    - [De paginaweergaven van een gebruiker weergeven](use-cases/list-visitor-sessions.md)
    - [Bezoekers weergeven op hun paginaweergaven](use-cases/visitors-by-number-of-page-views.md)
+   - [Klantenvertrouwen voorspellen met SQL](use-cases/predict-customer-churn-stub.md)
    - [Propensiteitsscore](use-cases/propensity-score.md)
    - [Verdien gelijkbare verslagen met hogere orde functies](use-cases/retrieve-similar-records.md)
    - [Commerciële variabelen uit analysegegevens retourneren en gebruiken](use-cases/merchandising-variables.md)
