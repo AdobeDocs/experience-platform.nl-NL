@@ -2,9 +2,9 @@
 title: Identiteitsgrafiekkoppelingsregels
 description: Leer over identiteitsgrafiek die regels in de Dienst van de Identiteit verbindt.
 exl-id: 317df52a-d3ae-4c21-bcac-802dceed4e53
-source-git-commit: 5092421ed8d0ff61fb3ed7f0849d2271f1fa144c
+source-git-commit: af36856dbf37e69cbc5c6952c583f583fd5b8e96
 workflow-type: tm+mt
-source-wordcount: '1424'
+source-wordcount: '1440'
 ht-degree: 0%
 
 ---
@@ -34,6 +34,11 @@ De volgende documenten zijn essentieel voor het begrijpen van identiteitsgrafiek
 Deze sectie schetst voorbeeldscenario&#39;s die u kunt overwegen wanneer het vormen van identiteitsgrafiek die regels verbindt.
 
 ### Gedeeld apparaat
+
+>[!CONTEXTUALHELP]
+>id="platform_identities_graphcollapsescenarios"
+>title="Grafieksamenvouwscenario&#39;s"
+>abstract="Er zijn meerdere redenen waarom grafieken kunnen &#39;samenvouwen&#39; of meerdere personen-entiteiten kunnen vertegenwoordigen."
 
 Er zijn gevallen waarin meerdere aanmeldingen op één apparaat kunnen plaatsvinden:
 
@@ -117,7 +122,7 @@ U moet een unieke naamruimte configureren om het algoritme voor identiteitsoptim
 
 De prioriteit Namespace verwijst naar het relatieve belang van namespaces in vergelijking met elkaar. De prioriteit Namespace is configureerbaar door UI en u kunt namespaces in een bepaalde identiteitsgrafiek rangschikken.
 
-Één manier waarin namespace prioriteit wordt gebruikt is in het bepalen van de primaire identiteit van de fragmenten van de ervaringsgebeurtenis (gebruikersgedrag) in het Profiel van de Klant in real time. Als de prioritaire montages worden gevormd, dan zal het primaire identiteit plaatsen op Web SDK niet meer worden gebruikt om te bepalen welke profielfragmenten worden opgeslagen.
+Één manier waarin namespace prioriteit wordt gebruikt is in het bepalen van de primaire identiteit van de fragmenten van de ervaringsgebeurtenis (gebruikersgedrag) in het Profiel van de Klant in real time. Als prioritaire montages worden gevormd, dan zal het primaire identiteitsplaatsen op Web SDK niet meer worden gebruikt om te bepalen welke profielfragmenten worden opgeslagen.
 
 Unieke naamruimten en naamruimteprioriteiten kunnen beide worden geconfigureerd in de gebruikersinterface voor identiteitsinstellingen. De effecten van hun configuraties zijn echter anders:
 

@@ -2,9 +2,9 @@
 title: UI-gids voor grafieksimulatie
 description: Leer hoe te om de Simulatie van de Grafiek in de Dienst UI van de Identiteit te gebruiken.
 exl-id: 89f0cf6e-c43f-40ec-859a-f3b73a6da8c8
-source-git-commit: cfe0181104f09bfd91b22d165c23154a15cd5344
+source-git-commit: af36856dbf37e69cbc5c6952c583f583fd5b8e96
 workflow-type: tm+mt
-source-wordcount: '1403'
+source-wordcount: '1452'
 ht-degree: 0%
 
 ---
@@ -50,6 +50,12 @@ Gesimuleerde grafiekviewer: de gesimuleerde grafiekviewer geeft de resulterende 
 >[!ENDTABS]
 
 ## Gebeurtenissen toevoegen {#add-events}
+
+>[!CONTEXTUALHELP]
+>id="platform_identities_graphsimulation"
+>title="Gebeurtenissen toevoegen"
+>abstract="Simuleer grafieken om te begrijpen hoe Identiteitsdienst identiteiten verbindt, en hoe het algoritme van de identiteitsoptimalisering werkt."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/data-governance/labels/overview.html#understanding-data-usage-labels" text="Overzicht van labels voor gegevensgebruik"
 
 Selecteer eerst **[!UICONTROL Add events]** .
 
@@ -126,6 +132,16 @@ Als u een gebeurtenis wilt verwijderen, selecteert u de ovalen (`...`) naast een
 ![ het geselecteerde pictogram van de schrappingsgebeurtenis.](../images/graph-simulation/delete.png)
 
 ## Algoritme configureren {#configure-algorithm}
+
+>[!CONTEXTUALHELP]
+>id="platform_identities_algorithmconfiguration"
+>title="Algorithm Configuration"
+>abstract="Vorm unieke namespace en namespace prioriteit die aan uw ingebedde identiteiten wordt aangepast."
+
+>[!CONTEXTUALHELP]
+>id="platform_identities_namespacepriority"
+>title="Algorithm Configuration"
+>abstract="De prioriteit Namespace bepaalt hoe de verbindingen uit de identiteitsgrafiek worden verwijderd."
 
 >[!IMPORTANT]
 >

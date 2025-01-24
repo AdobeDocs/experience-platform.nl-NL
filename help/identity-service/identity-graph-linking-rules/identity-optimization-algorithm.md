@@ -2,9 +2,9 @@
 title: Algoritme voor identiteitsoptimalisatie
 description: Leer over het Algoritme van de Optimalisering van de Identiteit in de Dienst van de Identiteit.
 exl-id: 5545bf35-3f23-4206-9658-e1c33e668c98
-source-git-commit: cfe0181104f09bfd91b22d165c23154a15cd5344
+source-git-commit: f067f8d4628d76b4a87b9dd97d1d703c54688871
 workflow-type: tm+mt
-source-wordcount: '1528'
+source-wordcount: '1560'
 ht-degree: 0%
 
 ---
@@ -22,6 +22,11 @@ Het algoritme voor identiteitsoptimalisatie is een grafiekalgoritme voor Identit
 Lees deze sectie voor informatie over unieke naamruimten en namespace prioriteit. Deze twee concepten fungeren als invoerparameters die door het algoritme voor identiteitsoptimalisatie worden vereist.
 
 ### Unieke naamruimte {#unique-namespace}
+
+>[!CONTEXTUALHELP]
+>id="platform_identities_uniquenamespace"
+>title="Algorithm Configuration"
+>abstract="Een grafiek kan geen twee identiteiten met een unieke naamruimte hebben. Als een grafiek probeert deze limiet te overschrijden, blijven de meest recente koppelingen behouden en worden de oudste koppelingen verwijderd."
 
 Een unieke naamruimte bepaalt de koppelingen die worden verwijderd als de grafiek samenvouwt.
 
