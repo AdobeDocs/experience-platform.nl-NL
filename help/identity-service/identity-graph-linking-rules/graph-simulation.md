@@ -2,9 +2,9 @@
 title: UI-gids voor grafieksimulatie
 description: Leer hoe te om de Simulatie van de Grafiek in de Dienst UI van de Identiteit te gebruiken.
 exl-id: 89f0cf6e-c43f-40ec-859a-f3b73a6da8c8
-source-git-commit: af36856dbf37e69cbc5c6952c583f583fd5b8e96
+source-git-commit: a9fcc93f4bc82880a52cc43179484a30e485369c
 workflow-type: tm+mt
-source-wordcount: '1452'
+source-wordcount: '1447'
 ht-degree: 0%
 
 ---
@@ -55,7 +55,6 @@ Gesimuleerde grafiekviewer: de gesimuleerde grafiekviewer geeft de resulterende 
 >id="platform_identities_graphsimulation"
 >title="Gebeurtenissen toevoegen"
 >abstract="Simuleer grafieken om te begrijpen hoe Identiteitsdienst identiteiten verbindt, en hoe het algoritme van de identiteitsoptimalisering werkt."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/data-governance/labels/overview.html#understanding-data-usage-labels" text="Overzicht van labels voor gegevensgebruik"
 
 Selecteer eerst **[!UICONTROL Add events]** .
 
