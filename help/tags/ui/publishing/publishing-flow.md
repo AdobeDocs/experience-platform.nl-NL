@@ -2,18 +2,23 @@
 title: Publishing Flow
 description: Leer meer over het maken van bibliotheken, het testen van builds en het goedkeuren van deze voor productie in Adobe Experience Platform.
 exl-id: 4885f60b-6401-4ec7-aa1a-29c135087847
-source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
+source-git-commit: 2d71eafb00098d958c8cff9350caa27bd3f0260d
 workflow-type: tm+mt
-source-wordcount: '1388'
-ht-degree: 0%
+source-wordcount: '1407'
+ht-degree: 3%
 
 ---
 
-# Publicatiestroom
+# Publicatiestroom {#publishing-flow}
+
+>[!CONTEXTUALHELP]
+>id="platform_tags_publishing_flow"
+>title="Publicatiestroom"
+>abstract="Begrijp de niveaus van gebruikerstoestemmingen die voor de het publiceren stroom, met inbegrip van Ontwikkelen, goedkeuren, en de rechten van Publish worden vereist."
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch is omgedoopt tot een reeks technologieën voor gegevensverzameling in Adobe Experience Platform. Diverse terminologische wijzigingen zijn als gevolg hiervan in de productdocumentatie doorgevoerd. Gelieve te verwijzen naar het volgende [ document ](../../term-updates.md) voor een geconsolideerde verwijzing van de terminologieveranderingen.
+>Adobe Experience Platform Launch is omgedoopt tot een reeks technologieën voor dataverzameling in Adobe Experience Platform.  Als gevolg hiervan zijn er verschillende terminologiewijzigingen in de productdocumentatie doorgevoerd. Raadpleeg het volgende [ document ](../../term-updates.md) voor een geconsolideerde referentie van de terminologiewijzigingen.
 
 De publicatiestroom voor tags in Adobe Experience Platform verwijst naar het proces van het maken van bibliotheken, het testen van builds en het goedkeuren van deze voor productie.
 

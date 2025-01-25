@@ -2,14 +2,19 @@
 title: Machtigingsbeheer voor gegevensverzameling in Experience Platform
 description: Een overzicht op hoog niveau van hoe te om toestemmingen te beheren en toegang tot de eigenschappen van de gegevensinzameling in Adobe Experience Platform te controleren.
 exl-id: 8426d54b-ec1d-475a-a769-f45a8c924fe7
-source-git-commit: 60590a77859320891717244eec58b556935354b5
+source-git-commit: 2d71eafb00098d958c8cff9350caa27bd3f0260d
 workflow-type: tm+mt
-source-wordcount: '1315'
+source-wordcount: '1333'
 ht-degree: 1%
 
 ---
 
-# Machtigingsbeheer voor gegevensverzameling in Experience Platform
+# Machtigingsbeheer voor gegevensverzameling in Experience Platform {#permission-management}
+
+>[!CONTEXTUALHELP]
+>id="platform_tags_permissions"
+>title="Machtigingen"
+>abstract="Begrijp de belangrijkste toestemmingen die voor het werken met gegevensstromen, schema&#39;s, identiteiten, en zandbakken binnen Adobe Experience Platform worden vereist."
 
 [ de inzameling van Gegevens in Adobe Experience Platform ](./home.md) wordt samengesteld van verscheidene verschillende technologieën die samenwerken om uw gegevens te verzamelen en over te brengen. De toegang tot deze technologieën wordt gecontroleerd door granulaire op rol-gebaseerde toestemmingen in Adobe Admin Console.
 
