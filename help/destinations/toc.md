@@ -5,9 +5,9 @@ user-guide-description: Activeer uw bekende en onbekende gegevens voor cross-cha
 description: In dit document wordt de inhoudsopgave voor Adobe Experience Platform-doelen weergegeven
 feature: Destinations
 role: Admin,User
-source-git-commit: c5543997747daa336b0a5bb40c46aa720e8bcadd
+source-git-commit: 6210f78e79c6c528296378756c9d11e35d092736
 workflow-type: tm+mt
-source-wordcount: '1273'
+source-wordcount: '1271'
 ht-degree: 1%
 
 ---
@@ -67,7 +67,7 @@ ht-degree: 1%
       * [(Beta) Marketo Engage Person Sync verbinding](./catalog/adobe/marketo-engage-person-sync.md)
       * [Marketo Measure Ultimate-verbinding](./catalog/adobe/marketo-measure-ultimate.md)
       * [ Experience Platform publiek het delen ](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html)
-      * [ Federated de verbinding van de Samenstelling van het publiek (Beperkte beschikbaarheid) ](https://www.adobe.com/go/destinations-federated-audience-composition)
+      * [ Federated de verbinding van de Samenstelling van het publiek ](https://www.adobe.com/go/destinations-federated-audience-composition)
    * Advertising-bestemmingen {#advertising}
       * [(Beta) Acxiom Audience Distribution](./catalog/advertising/acxiom-audience-distribution.md)
       * [Overzicht Advertising-bestemmingen](./catalog/advertising/overview.md)

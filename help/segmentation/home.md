@@ -3,9 +3,9 @@ solution: Experience Platform
 title: Overzicht van segmentatieservice
 description: Leer over de Dienst van de Segmentatie van Adobe Experience Platform en de rol het in het ecosysteem van het Platform speelt.
 exl-id: 2c18a806-88ed-4659-bdfd-2377f5a09a1a
-source-git-commit: 515a7cc3ba12afe14aab3e882b7fd55d5cc09069
+source-git-commit: 4ef3f6dc07cb5d17146d48c7a41e3745fd9a3a58
 workflow-type: tm+mt
-source-wordcount: '1700'
+source-wordcount: '1679'
 ht-degree: 1%
 
 ---
@@ -55,10 +55,6 @@ Voor informatie bij de bouw van segmentdefinities die API gebruiken, zie het lee
 ### Samenstelling van Federated-doelgroep {#fac}
 
 Naast publiekssamenstellingen en segmentdefinities, kunt u Adobe Federated Audience Composition gebruiken om nieuwe doelgroepen van ondernemingsdatasets te bouwen zonder onderliggende gegevens te kopiëren en die doelgroepen op te slaan in het Portaal van het Publiek van Adobe Experience Platform. U kunt bestaande soorten publiek in Adobe Experience Platform ook verrijken door samengestelde publieksgegevens te gebruiken die van het entrepot van ondernemingsgegevens zijn gefedereerd. Gelieve te lezen de gids op [ Federated de Samenstelling van het Publiek ](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/home).
-
->[!AVAILABILITY]
->
->Federated Audience Composition is momenteel alleen beschikbaar voor een set organisaties (beperkte beschikbaarheid). Neem voor meer informatie contact op met uw Adobe-vertegenwoordiger.
 
 ## Soorten publiek evalueren {#evaluate-segments}
 

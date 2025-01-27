@@ -3,9 +3,9 @@ keywords: bestemmingen;ervaring cloudoplossingen; doel;doelbestemming; en wolk; 
 title: Overzicht van Adobe doelen
 description: Beheer uw klantervaring door uw gegevens in Platform te verbinden met andere Adobe Experience Cloud-oplossingen voor doelgerichte toepassingen, personalisatie, automatisering van marketing en meer
 exl-id: 15a22a93-b4d6-4b94-bc6c-3634920c7689
-source-git-commit: 515a7cc3ba12afe14aab3e882b7fd55d5cc09069
+source-git-commit: 6210f78e79c6c528296378756c9d11e35d092736
 workflow-type: tm+mt
-source-wordcount: '231'
+source-wordcount: '229'
 ht-degree: 0%
 
 ---
@@ -30,7 +30,7 @@ Om het verschil tussen verbindingen en uitbreidingen te begrijpen, zie [ Verbind
 * [(Beta) Experience Cloud publiek](/help/destinations/catalog/adobe/experience-cloud-audiences.md)
 * [Verbinding met Marketo Engage](/help/destinations/catalog/adobe/marketo-engage.md)
 * [Marketo Measure Ultimate-verbinding](/help/destinations/catalog/adobe/marketo-measure-ultimate.md)
-* [ Federated de verbinding van de Samenstelling van het publiek ](https://www.adobe.com/go/destinations-federated-audience-composition) {target="_blank"} (Beperkte beschikbaarheid)
+* [ Federated de verbinding van de Samenstelling van het publiek ](https://www.adobe.com/go/destinations-federated-audience-composition) {target="_blank"}
 
 ### Extensies
 
@@ -42,7 +42,7 @@ Om het verschil tussen verbindingen en uitbreidingen te begrijpen, zie [ Verbind
 * [Audience Manager DIL-extensie](../data-management/aam-dil-extension.md)
 * [Experience Cloud ID Service-extensie](../personalization/adobe-ecid.md)
 * [Marketo-extensie](../email/marketo.md)
-* [Marketo Munchkin-extensie](../email/marketo-munchkin.md)
+* [Marketo Munchkin Extension](../email/marketo-munchkin.md)
 * [Marketo Web Personalization-extensie](../personalization/marketo-web-personalization.md)
 
 ## Experience Platform publiek delen

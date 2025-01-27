@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Overzicht gebruikersinterface Experience Platform
 description: Adobe Experience Platform
 exl-id: 47f9a3fb-731d-4ade-8069-faaa18f224dc
-source-git-commit: 9844a7bf5e7198e7d5112ec924220aba71cdc14b
+source-git-commit: 6210f78e79c6c528296378756c9d11e35d092736
 workflow-type: tm+mt
-source-wordcount: '1880'
+source-wordcount: '1857'
 ht-degree: 0%
 
 ---
@@ -157,7 +157,7 @@ In de sectie **[!UICONTROL Queries]** kunt u query&#39;s maken en beheren, SQL-q
 
 In de sectie **[!UICONTROL Monitoring]** kunt u de opname via batches en streaming controleren. U kunt meer informatie over controle in de [ controlerende gids van de gebruikers van de gegevensopname ](../ingestion/quality/monitor-data-ingestion.md) vinden.
 
-### [!UICONTROL Federated data] (beperkte beschikbaarheid)
+### [!UICONTROL Federated data]
 
 In de sectie **[!UICONTROL Models]** kunt u gegevensmodellen en -schema&#39;s ontwerpen en maken die de structuur, relaties en beperkingen van uw gegevens definiëren. U kunt meer informatie over de gegevensmodellen en de schema&#39;s in de [ Federated de gebruikersgids van de Samenstelling van de Auditie ](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/config/datamodel/schemas) vinden.
 
@@ -165,10 +165,6 @@ De sectie **[!UICONTROL Audit trail]** biedt een gedetailleerd en chronologisch 
 
 
 Met de sectie **[!UICONTROL Federated databases]** kunt u Adobe Experience Platform verbinden met uw zakelijke gegevenspakhuis. U kunt meer informatie over verbinding aan gefederaliseerde gegevensbestanden in de [ Federated de gebruikersgids van de Samenstelling van de Auditie ](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/config/federated-db) vinden.
-
->[!AVAILABILITY]
->
->Federated Audience Composition is momenteel alleen beschikbaar voor een set organisaties (beperkte beschikbaarheid). Neem voor meer informatie contact op met uw Adobe-vertegenwoordiger.
 
 ### [!UICONTROL Decisioning]
 

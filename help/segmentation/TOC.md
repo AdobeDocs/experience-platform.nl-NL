@@ -5,10 +5,10 @@ breadcrumb-title: Gids voor Segmentation Service
 user-guide-description: Stel doelgroepen samen op basis van uw gegevens voor realtimeklantprofielen met behulp van door Adobe Experience Platform gegenereerde segmentdefinities of externe bronnen.
 feature: Segments
 role: User
-source-git-commit: 0bbee2100ed6fdc0f40457965e195d07de6eb2a1
+source-git-commit: 4ef3f6dc07cb5d17146d48c7a41e3745fd9a3a58
 workflow-type: tm+mt
-source-wordcount: '194'
-ht-degree: 21%
+source-wordcount: '192'
+ht-degree: 24%
 
 ---
 
@@ -36,8 +36,8 @@ ht-degree: 21%
    - [Poort publiek](ui/audience-portal.md)
    - [Samenstelling publiek](ui/audience-composition.md)
    - [Segment Builder](ui/segment-builder.md)
-   - [ Federated Audience Composition (Beperkte beschikbaarheid) ](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/home)
-   - [Accountpubliek](ui/account-audiences.md)
+   - [Samenstelling van Federated-doelgroep](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/home)
+   - [Accountdoelgroepen](ui/account-audiences.md)
    - [Soortgelijk publiek](ui/lookalike-audiences.md)
    - [Doelgroepen](ui/prospect-audience.md)
    - [Edge-segmentatie](ui/edge-segmentation.md)

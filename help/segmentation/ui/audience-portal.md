@@ -2,9 +2,9 @@
 title: Overzicht van publiek portal
 description: Leer hoe u het publiek in Adobe Experience Platform kunt bekijken, beheren en een publiek kunt maken.
 exl-id: 505ac22e-05f3-423a-a9a0-7f3470af8945
-source-git-commit: 260d63d5eebd62cc5a617fccc189af52fd4d0b09
+source-git-commit: 4ef3f6dc07cb5d17146d48c7a41e3745fd9a3a58
 workflow-type: tm+mt
-source-wordcount: '4358'
+source-wordcount: '4356'
 ht-degree: 0%
 
 ---
@@ -25,7 +25,7 @@ Binnen het Portaal van de Publiek, kunt u de volgende taken verwezenlijken:
 - [Een publiek maken](#create-audience)
    - [Gebruik Segment Builder om een publiek te maken](#segment-builder)
    - [Gebruik Audience Composition om een publiek te maken](#audience-composition)
-   - [ De Federatieve Samenstelling van het publiek van het Gebruik om een publiek tot stand te brengen gebruikend gegevens van uw bestaand gegevenspakhuis ](#fac) (Beperkte beschikbaarheid)
+   - [De Federale Samenstelling van de Publiek van het gebruik om een publiek tot stand te brengen gebruikend gegevens van uw bestaand gegevenspakhuis](#fac)
 - [Extern gegenereerde doelgroepen importeren](#import-audience)
 
 Als u Poort publiek wilt openen, selecteert u het tabblad **[!UICONTROL Browse]** in de sectie Segmentatie.
