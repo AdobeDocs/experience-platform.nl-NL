@@ -1,7 +1,8 @@
 ---
 title: Back-ups maken van objectconfiguraties met behulp van sandboxgereedschappen
 description: Als u sandboxen veilig wilt herstellen en ondersteuning voor versiebeheer wilt toevoegen, maakt u een back-up van objectconfiguraties (of metagegevens) met behulp van gereedschapspakketten van de sandbox. De reserve pakketten verhinderen het verlies van kritieke configuraties zoals schema's, datasets, en publiek, vooral tijdens ontwikkeliteraties.
-source-git-commit: f0cbee2663682f0afae6d7e4b174f250fcb3df53
+exl-id: cccbaaf1-ee68-4a00-9a44-aa5db4a83a14
+source-git-commit: 2a700788d9b59bcdb4195e34d77eccd278803d42
 workflow-type: tm+mt
 source-wordcount: '1154'
 ht-degree: 0%
