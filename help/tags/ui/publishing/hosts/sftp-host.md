@@ -2,9 +2,9 @@
 title: SFTP-hosts
 description: Leer hoe u tags in Adobe Experience Platform configureert om bibliotheekbuilds te leveren aan een beveiligde, zelfgehoste SFTP-server.
 exl-id: 3c1dc43b-291c-4df4-94f7-a03b25dbb44c
-source-git-commit: 85bd78928b1b503bbb6bbc44075ed0f66e046a4c
+source-git-commit: b3c3bf0a39a30e8c9baf81ec20945497acef5465
 workflow-type: tm+mt
-source-wordcount: '792'
+source-wordcount: '791'
 ht-degree: 5%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 5%
 >
 >Adobe Experience Platform Launch is omgedoopt tot een reeks technologieën voor dataverzameling in Adobe Experience Platform.  Als gevolg hiervan zijn er verschillende terminologiewijzigingen in de productdocumentatie doorgevoerd. Raadpleeg het volgende [ document ](../../../term-updates.md) voor een geconsolideerde referentie van de terminologiewijzigingen.
 
-Met Adobe Experience Platform kunt u bouwen van tagbibliotheken leveren aan een beveiligde SFTP-server die u host, zodat u meer controle hebt over de manier waarop uw builds worden opgeslagen en beheerd. Deze gids behandelt hoe te opstelling een gastheer SFTP voor een markeringsbezit in de UI van het Experience Platform of UI van de Inzameling van Gegevens.
+Met Experience Platform kunt u de build van de tagbibliotheek leveren aan een beveiligde SFTP-server die u host, zodat u meer controle hebt over de manier waarop uw builds worden opgeslagen en beheerd. Deze gids behandelt hoe te opstelling een gastheer SFTP voor een markeringsbezit in de UI van het Experience Platform of UI van de Inzameling van Gegevens.
 
 >[!NOTE]
 >
