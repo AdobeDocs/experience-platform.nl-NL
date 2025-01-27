@@ -2,7 +2,7 @@
 title: UI-gids voor grafieksimulatie
 description: Leer hoe te om de Simulatie van de Grafiek in de Dienst UI van de Identiteit te gebruiken.
 exl-id: 89f0cf6e-c43f-40ec-859a-f3b73a6da8c8
-source-git-commit: a9fcc93f4bc82880a52cc43179484a30e485369c
+source-git-commit: c1aaad7d7169e63c49d62ab8a7a06c4c11c85cb4
 workflow-type: tm+mt
 source-wordcount: '1447'
 ht-degree: 0%
@@ -53,8 +53,9 @@ Gesimuleerde grafiekviewer: de gesimuleerde grafiekviewer geeft de resulterende 
 
 >[!CONTEXTUALHELP]
 >id="platform_identities_graphsimulation"
->title="Gebeurtenissen toevoegen"
+>title="Grafieksimulatie"
 >abstract="Simuleer grafieken om te begrijpen hoe Identiteitsdienst identiteiten verbindt, en hoe het algoritme van de identiteitsoptimalisering werkt."
+>text="Learn more in documentation"
 
 Selecteer eerst **[!UICONTROL Add events]** .
 
@@ -139,7 +140,7 @@ Als u een gebeurtenis wilt verwijderen, selecteert u de ovalen (`...`) naast een
 
 >[!CONTEXTUALHELP]
 >id="platform_identities_namespacepriority"
->title="Algorithm Configuration"
+>title="Prioriteit naamruimte"
 >abstract="De prioriteit Namespace bepaalt hoe de verbindingen uit de identiteitsgrafiek worden verwijderd."
 
 >[!IMPORTANT]

@@ -2,7 +2,7 @@
 title: Algoritme voor identiteitsoptimalisatie
 description: Leer over het Algoritme van de Optimalisering van de Identiteit in de Dienst van de Identiteit.
 exl-id: 5545bf35-3f23-4206-9658-e1c33e668c98
-source-git-commit: f067f8d4628d76b4a87b9dd97d1d703c54688871
+source-git-commit: c1aaad7d7169e63c49d62ab8a7a06c4c11c85cb4
 workflow-type: tm+mt
 source-wordcount: '1560'
 ht-degree: 0%
@@ -25,7 +25,7 @@ Lees deze sectie voor informatie over unieke naamruimten en namespace prioriteit
 
 >[!CONTEXTUALHELP]
 >id="platform_identities_uniquenamespace"
->title="Algorithm Configuration"
+>title="Unieke naamruimte"
 >abstract="Een grafiek kan geen twee identiteiten met een unieke naamruimte hebben. Als een grafiek probeert deze limiet te overschrijden, blijven de meest recente koppelingen behouden en worden de oudste koppelingen verwijderd."
 
 Een unieke naamruimte bepaalt de koppelingen die worden verwijderd als de grafiek samenvouwt.

@@ -2,7 +2,7 @@
 title: Identiteitsgrafiekkoppelingsregels
 description: Leer over identiteitsgrafiek die regels in de Dienst van de Identiteit verbindt.
 exl-id: 317df52a-d3ae-4c21-bcac-802dceed4e53
-source-git-commit: af36856dbf37e69cbc5c6952c583f583fd5b8e96
+source-git-commit: c1aaad7d7169e63c49d62ab8a7a06c4c11c85cb4
 workflow-type: tm+mt
 source-wordcount: '1440'
 ht-degree: 0%
@@ -37,7 +37,7 @@ Deze sectie schetst voorbeeldscenario&#39;s die u kunt overwegen wanneer het vor
 
 >[!CONTEXTUALHELP]
 >id="platform_identities_graphcollapsescenarios"
->title="Grafieksamenvouwscenario&#39;s"
+>title="Grafiek vouwscenario&#39;s"
 >abstract="Er zijn meerdere redenen waarom grafieken kunnen &#39;samenvouwen&#39; of meerdere personen-entiteiten kunnen vertegenwoordigen."
 
 Er zijn gevallen waarin meerdere aanmeldingen op één apparaat kunnen plaatsvinden:
