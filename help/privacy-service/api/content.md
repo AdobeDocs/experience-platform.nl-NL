@@ -2,20 +2,15 @@
 title: API-eindpunt voor inhoud
 description: Leer hoe u uw toegangsgegevens kunt ophalen met de Privacy Service-API.
 role: Developer
-badgePrivateBeta: label="Private Beta" type="Informative"
 exl-id: b3b7ea0f-957d-4e51-bf92-121e9ae795f5
-source-git-commit: e3a453ad166fe244b82bd1f90e669579fcf09d17
+source-git-commit: ac54398ae8e9e06ea3581baf867ab1cf650042a2
 workflow-type: tm+mt
-source-wordcount: '696'
+source-wordcount: '669'
 ht-degree: 0%
 
 ---
 
 # Inhoudseindpunt
-
->[!IMPORTANT]
->
->Het eindpunt van `/content` is momenteel in bèta en uw organisatie heeft er nog geen toegang tot. De functionaliteit en documentatie kunnen worden gewijzigd.
 
 Gebruik het `/content` eindpunt om *toegangsinformatie* veilig terug te winnen (de informatie die een privacyonderwerp kan met recht verzoeken om toegang) voor uw klanten. De download-URL in het antwoord op een `/jobs/{JOB_ID}` GET-aanvraag verwijst naar een Adobe-servicedetail. U kunt vervolgens een GET-aanvraag indienen bij `/jobs/:JOB_ID/content` om uw klantgegevens in JSON-indeling te retourneren. Deze toegangsmethode voert veelvoudige lagen van authentificatie en toegangsbeheer uit om veiligheid te verbeteren.
 
