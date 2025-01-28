@@ -2,14 +2,20 @@
 title: Prioriteit naamruimte
 description: Leer over namespace prioriteit in de Dienst van de Identiteit.
 exl-id: bb04f02e-3826-45af-b935-752ea7e6ed7c
-source-git-commit: 3efbb9614f08a74ad33eb1fbb4861c34c762b66b
+source-git-commit: 0c5924b4e47cf4afcf76080a10d142b3e280c4d8
 workflow-type: tm+mt
-source-wordcount: '1788'
+source-wordcount: '1804'
 ht-degree: 1%
 
 ---
 
-# Prioriteit naamruimte
+# Prioriteit naamruimte {#namespace-priority}
+
+>[!CONTEXTUALHELP]
+>id="platform_identities_namespacepriority"
+>title="Prioriteit naamruimte"
+>abstract="De prioriteit Namespace bepaalt hoe de verbindingen uit de identiteitsgrafiek worden verwijderd."
+>additional-url="http://www.adobe.com/go/identity-namespace-priority" text="Meer informatie"
 
 >[!AVAILABILITY]
 >
@@ -77,7 +83,7 @@ Voor relatief complexe grafiekstructuren speelt naamruimteprioriteit een belangr
 * Zodra u identiteitsmontages voor een bepaalde zandbak hebt gevormd, zal de primaire identiteit voor ervaringsgebeurtenissen door de hoogste namespace prioriteit in de configuratie worden bepaald.
    * Dit komt omdat ervaringsgebeurtenissen dynamisch van aard zijn. Een identiteitskaart kan drie of meer identiteiten bevatten, en namespace prioriteit zorgt ervoor dat belangrijkste namespace aan de ervaringsgebeurtenis wordt geassocieerd.
 * Dientengevolge, zullen de volgende configuraties **niet meer door Real-Time Profiel van de Klant** worden gebruikt:
-   * De primaire identiteitsconfiguratie (`primary=true`) wanneer het verzenden van identiteiten in identityMap die het Web SDK, Mobiele SDK, of de Server API van de Edge Network gebruiken (identiteit namespace en identiteitswaarde zullen in Profiel blijven worden gebruikt). **Nota**: De diensten buiten het Profiel van de Klant in real time zoals de opslag van het gegevensmeer of Adobe Target zullen de primaire identiteitsconfiguratie blijven gebruiken (`primary=true`).
+   * De primaire identiteitsconfiguratie (`primary=true`) wanneer het verzenden van identiteiten in identityMap gebruikend het Web SDK, Mobiele SDK, of de Server API van de Edge Network (identiteitsnamespace en identiteitswaarde zullen in Profiel verder worden gebruikt). **Nota**: De diensten buiten het Profiel van de Klant in real time zoals de opslag van het gegevensmeer of Adobe Target zullen de primaire identiteitsconfiguratie blijven gebruiken (`primary=true`).
    * Alle velden die als primaire identiteit zijn gemarkeerd in een schema van de klasse Event van de XDM-ervaring.
    * Standaard primaire identiteitsinstellingen in de Adobe Analytics-bronconnector (ECID of AID).
 * Anderzijds, **namespace de prioriteit bepaalt geen primaire identiteit voor profielverslagen**.
@@ -155,7 +161,7 @@ Als identiteitsinstellingen zijn ingeschakeld, gebruiken berekende kenmerken naa
 
 ### Gegevensmeer
 
-Het opnemen van gegevens aan gegevens zal meer de primaire identiteitsmontages blijven respecteren die op [ worden gevormd SDK van het Web ](../../tags/extensions/client/web-sdk/data-element-types.md#identity-map) en schema&#39;s.
+Het opnemen van gegevens aan gegevens zal meer de primaire identiteitsmontages blijven respecteren die op [ SDK van het Web ](../../tags/extensions/client/web-sdk/data-element-types.md#identity-map) en schema&#39;s worden gevormd.
 
 Het meer van gegevens zal geen primaire identiteit bepalen die op namespaceprioriteit wordt gebaseerd. Bijvoorbeeld, zal Adobe Customer Journey Analytics waarden in de identiteitskaart blijven gebruiken zelfs nadat namespace de prioriteit wordt toegelaten (zoals, toevoegend een dataset aan een nieuwe verbinding), omdat de Customer Journey Analytics hun gegevens van gegevens meer verbruikt.
 

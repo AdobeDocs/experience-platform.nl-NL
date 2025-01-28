@@ -2,14 +2,20 @@
 title: Algoritme voor identiteitsoptimalisatie
 description: Leer over het Algoritme van de Optimalisering van de Identiteit in de Dienst van de Identiteit.
 exl-id: 5545bf35-3f23-4206-9658-e1c33e668c98
-source-git-commit: c1aaad7d7169e63c49d62ab8a7a06c4c11c85cb4
+source-git-commit: 0c5924b4e47cf4afcf76080a10d142b3e280c4d8
 workflow-type: tm+mt
-source-wordcount: '1560'
+source-wordcount: '1563'
 ht-degree: 0%
 
 ---
 
-# Algoritme voor identiteitsoptimalisatie
+# Algoritme voor identiteitsoptimalisatie {#identity-optimization-algorithm}
+
+>[!CONTEXTUALHELP]
+>id="platform_identities_uniquenamespace"
+>title="Unieke naamruimte"
+>abstract="Een grafiek kan geen twee identiteiten met een unieke naamruimte hebben. Als een grafiek probeert deze limiet te overschrijden, blijven de meest recente koppelingen behouden en worden de oudste koppelingen verwijderd."
+>additional-url="http://www.adobe.com/go/identity-ido-algo" text="Meer informatie"
 
 >[!AVAILABILITY]
 >
@@ -22,11 +28,6 @@ Het algoritme voor identiteitsoptimalisatie is een grafiekalgoritme voor Identit
 Lees deze sectie voor informatie over unieke naamruimten en namespace prioriteit. Deze twee concepten fungeren als invoerparameters die door het algoritme voor identiteitsoptimalisatie worden vereist.
 
 ### Unieke naamruimte {#unique-namespace}
-
->[!CONTEXTUALHELP]
->id="platform_identities_uniquenamespace"
->title="Unieke naamruimte"
->abstract="Een grafiek kan geen twee identiteiten met een unieke naamruimte hebben. Als een grafiek probeert deze limiet te overschrijden, blijven de meest recente koppelingen behouden en worden de oudste koppelingen verwijderd."
 
 Een unieke naamruimte bepaalt de koppelingen die worden verwijderd als de grafiek samenvouwt.
 

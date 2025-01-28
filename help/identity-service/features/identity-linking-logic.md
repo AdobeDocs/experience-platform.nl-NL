@@ -2,14 +2,20 @@
 title: Identity Service Linking Logic
 description: Leer hoe de Dienst van de Identiteit verschillende identiteiten verbindt om een uitvoerige mening van een klant tot stand te brengen.
 exl-id: 1c958c0e-0777-48db-862c-eb12b2e7a03c
-source-git-commit: f067f8d4628d76b4a87b9dd97d1d703c54688871
+source-git-commit: 627b2e5ecde28b26e7d4717e13713c38c3c09651
 workflow-type: tm+mt
-source-wordcount: '968'
+source-wordcount: '971'
 ht-degree: 0%
 
 ---
 
-# Identity Service linking-logica
+# Identity Service linking-logica {#identity-service-linking-logic}
+
+>[!CONTEXTUALHELP]
+>id="platform_identities_simulatedgraph"
+>title="Gesimuleerde grafiek"
+>abstract="Identiteiten zijn gekoppeld wanneer de naamruimte en de waarde van de identiteit overeenkomen."
+>additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/identity/features/identity-linking-logic" text="Meer informatie"
 
 Er wordt een koppeling tussen twee identiteiten tot stand gebracht wanneer de naamruimte van de identiteit en de identiteitswaarden overeenkomen.
 
@@ -29,12 +35,7 @@ Een identiteit vertegenwoordigt een echte entiteit. Als er een verband tussen tw
 | Een eindgebruiker meldt zich aan gebruikend Google Chrome, en toen Firefox. | CRMID is gekoppeld aan twee verschillende ECID&#39;s. | Een persoon (CRMID) wordt geassocieerd aan 2 Webbrowsers (**Nota**: Elke browser zal zijn eigen ECID hebben). |
 | Een gegevensingenieur neemt een verslag van CRM op dat twee gebieden duidelijk als identiteit omvat: CRMID en E-mail. | CRMID en e-mail zijn gekoppeld. | Een persoon (CRMID) is gekoppeld aan het e-mailadres. |
 
-## Understanding the Identity Service linking logic {#identity-linking-logic}
-
->[!CONTEXTUALHELP]
->id="platform_identities_simulatedgraph"
->title="Gesimuleerde grafiek"
->abstract="Identiteiten zijn gekoppeld wanneer de naamruimte en de waarde van de identiteit overeenkomen."
+## Understanding the Identity Service linking logic
 
 Een identiteit bestaat uit een naamruimte van een identiteit en een identiteitswaarde.
 

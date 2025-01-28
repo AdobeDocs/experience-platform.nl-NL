@@ -2,14 +2,20 @@
 title: UI-gids voor grafieksimulatie
 description: Leer hoe te om de Simulatie van de Grafiek in de Dienst UI van de Identiteit te gebruiken.
 exl-id: 89f0cf6e-c43f-40ec-859a-f3b73a6da8c8
-source-git-commit: c1aaad7d7169e63c49d62ab8a7a06c4c11c85cb4
+source-git-commit: 0c5924b4e47cf4afcf76080a10d142b3e280c4d8
 workflow-type: tm+mt
-source-wordcount: '1447'
+source-wordcount: '1424'
 ht-degree: 0%
 
 ---
 
-# [!DNL Graph Simulation] UI-hulplijn
+# [!DNL Graph Simulation] UI-hulplijn {#graph-simulation}
+
+>[!CONTEXTUALHELP]
+>id="platform_identities_graphsimulation"
+>title="Grafieksimulatie"
+>abstract="Simuleer grafieken om te begrijpen hoe Identiteitsdienst identiteiten verbindt, en hoe het algoritme van de identiteitsoptimalisering werkt."
+>additional-url="http://www.adobe.com/go/identity-graph-simulation" text="Meer informatie"
 
 >[!AVAILABILITY]
 >
@@ -50,12 +56,6 @@ Gesimuleerde grafiekviewer: de gesimuleerde grafiekviewer geeft de resulterende 
 >[!ENDTABS]
 
 ## Gebeurtenissen toevoegen {#add-events}
-
->[!CONTEXTUALHELP]
->id="platform_identities_graphsimulation"
->title="Grafieksimulatie"
->abstract="Simuleer grafieken om te begrijpen hoe Identiteitsdienst identiteiten verbindt, en hoe het algoritme van de identiteitsoptimalisering werkt."
->text="Learn more in documentation"
 
 Selecteer eerst **[!UICONTROL Add events]** .
 
@@ -132,16 +132,6 @@ Als u een gebeurtenis wilt verwijderen, selecteert u de ovalen (`...`) naast een
 ![ het geselecteerde pictogram van de schrappingsgebeurtenis.](../images/graph-simulation/delete.png)
 
 ## Algoritme configureren {#configure-algorithm}
-
->[!CONTEXTUALHELP]
->id="platform_identities_algorithmconfiguration"
->title="Algorithm Configuration"
->abstract="Vorm unieke namespace en namespace prioriteit die aan uw ingebedde identiteiten wordt aangepast."
-
->[!CONTEXTUALHELP]
->id="platform_identities_namespacepriority"
->title="Prioriteit naamruimte"
->abstract="De prioriteit Namespace bepaalt hoe de verbindingen uit de identiteitsgrafiek worden verwijderd."
 
 >[!IMPORTANT]
 >
