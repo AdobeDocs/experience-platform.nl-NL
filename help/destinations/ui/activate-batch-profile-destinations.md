@@ -3,9 +3,9 @@ title: Soorten publiek activeren om exportdoelen voor batchprofielen te gebruike
 type: Tutorial
 description: Leer hoe u het publiek in Adobe Experience Platform activeert door het naar batchbestemmingen te sturen.
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
-source-git-commit: fdb92a0c03ce6a0d44cfc8eb20c2e3bd1583b1ce
+source-git-commit: de9c838c8a9d07165b4cc8a602df0c627a8b749c
 workflow-type: tm+mt
-source-wordcount: '3981'
+source-wordcount: '4225'
 ht-degree: 1%
 
 ---
@@ -431,14 +431,31 @@ Als deduplicatie wordt verondersteld met de samengestelde sleutel `personalEmail
 
 Adobe raadt u aan een naamruimte voor identiteiten, zoals een [!DNL CRM ID] - of e-mailadres, te selecteren als deduplicatietoets om ervoor te zorgen dat alle profielrecords op unieke wijze worden geïdentificeerd.
 
->[!NOTE]
-> 
->Als er labels voor gegevensgebruik zijn toegepast op bepaalde velden in een gegevensset (in plaats van op de gehele gegevensset), wordt de toepassing van die labels op veldniveau bij activering uitgevoerd onder de volgende voorwaarden:
->
->* De velden worden gebruikt in de definitie van het publiek.
->* De velden worden geconfigureerd als geprojecteerde kenmerken voor de doelbestemming.
->
-> Als het veld `person.name.firstName` bijvoorbeeld bepaalde labels voor gegevensgebruik heeft die conflicteren met de marketingactie van de bestemming, wordt in de revisiestap een schending van het gegevensgebruiksbeleid weergegeven. Voor meer informatie, zie [ de Governance van Gegevens in Adobe Experience Platform ](../../rtcdp/privacy/data-governance-overview.md#destinations).
+### Gedrag van deduplicatie voor profielen met dezelfde tijdstempel {#deduplication-same-timestamp}
+
+Wanneer u profielen exporteert naar op een bestand gebaseerde doelen, zorgt deduplicatie ervoor dat slechts één profiel wordt geëxporteerd wanneer meerdere profielen dezelfde deduplicatietoets en dezelfde tijdstempel hebben. Deze tijdstempel geeft aan op welk moment het publiekslidmaatschap of de identiteitsgrafiek van een profiel voor het laatst is bijgewerkt. Voor meer informatie over hoe de profielen worden bijgewerkt en worden uitgevoerd, zie het [ document van de profieluitvoer ](https://experienceleague.adobe.com/en/docs/experience-platform/destinations/how-destinations-work/profile-export-behavior#what-determines-a-data-export-and-what-is-included-in-the-export-2).
+
+#### Belangrijkste overwegingen
+
+* **Deterministische selectie**: Wanneer de veelvoudige profielen identieke deduplicatietoetsen en zelfde verwijzingstimestamp hebben, bepaalt de deduplicatielogica welk profiel aan uitvoer door de waarden van andere geselecteerde kolommen (exclusief complexe types zoals series, kaarten, of voorwerpen) te sorteren. De gesorteerde waarden worden in lexicografische volgorde geëvalueerd en het eerste profiel wordt geselecteerd.
+
+* **scenario van het Voorbeeld**:\
+  Bekijk de volgende gegevens, waarbij de deduplicatietoets de `Email` -kolom is:\
+  |E-mail*|first_name|last_name|timestamp|\
+  |—|—|—|—|\
+  |test1@test.com|John|Morris|2024-10-12T09:50|\
+  |test1@test.com|Jan|Doe|2024-10-12T09:50|\
+  |test2@test.com|Frank|Smith|2024-10-12T09:50|
+
+  Na deduplicatie bevat het exportbestand:\
+  |E-mail*|first_name|last_name|timestamp|\
+  |—|—|—|—|\
+  |test1@test.com|Jan|Doe|2024-10-12T09:50|\
+  |test2@test.com|Frank|Smith|2024-10-12T09:50|
+
+  **Verklaring**: Voor `test1@test.com`, delen beide profielen de zelfde deduplicatiesleutel en timestamp. De algoritme sorteert de kolomwaarden `first_name` en `last_name` lexicografisch. Aangezien de voornamen identiek zijn, wordt de tijd opgelost met behulp van de kolom `last_name` , waarbij &quot;Doe&quot; voor &quot;Morris&quot; komt.
+
+* **Verbeterde betrouwbaarheid**: Dit bijgewerkte deduplicatieproces zorgt ervoor dat de opeenvolgende looppas met de zelfde coördinaten altijd de zelfde resultaten zal veroorzaken, verbeterend consistentie.
 
 ### [!BADGE  Beta ] {type=Informative} de series van de Uitvoer door berekende gebieden {#export-arrays-calculated-fields}
 
@@ -552,6 +569,15 @@ Als u een extern publiek naar uw doelen wilt activeren zonder kenmerken te expor
 Selecteer **[!UICONTROL Next]** om aan de [ 2} stap van het Overzicht {te bewegen.](#review)
 
 ## Controleren {#review}
+
+>[!NOTE]
+> 
+Als er labels voor gegevensgebruik zijn toegepast op bepaalde velden in een gegevensset (in plaats van op de gehele gegevensset), wordt de toepassing van die labels op veldniveau bij activering uitgevoerd onder de volgende voorwaarden:
+>
+* De velden worden gebruikt in de definitie van het publiek.
+* De velden worden geconfigureerd als geprojecteerde kenmerken voor de doelbestemming.
+>
+Als het veld `person.name.firstName` bijvoorbeeld bepaalde labels voor gegevensgebruik heeft die conflicteren met de marketingactie van de bestemming, wordt in de revisiestap een schending van het gegevensgebruiksbeleid weergegeven. Voor meer informatie, zie [ de Governance van Gegevens in Adobe Experience Platform ](../../rtcdp/privacy/data-governance-overview.md#destinations).
 
 Op de pagina **[!UICONTROL Review]** ziet u een overzicht van uw selectie. Selecteer **[!UICONTROL Cancel]** om de stroom te verbreken, **[!UICONTROL Back]** om uw instellingen te wijzigen of **[!UICONTROL Finish]** om uw selectie te bevestigen en gegevens naar de bestemming te verzenden.
 
