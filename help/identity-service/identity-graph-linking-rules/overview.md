@@ -2,9 +2,9 @@
 title: Identiteitsgrafiekkoppelingsregels
 description: Leer over identiteitsgrafiek die regels in de Dienst van de Identiteit verbindt.
 exl-id: 317df52a-d3ae-4c21-bcac-802dceed4e53
-source-git-commit: 42c2b2afff49422a539d573280e9bc3f30369c3f
+source-git-commit: 048d915d33a19a9d50a4951e165b5ade1b9d9734
 workflow-type: tm+mt
-source-wordcount: '1443'
+source-wordcount: '1436'
 ht-degree: 0%
 
 ---
@@ -29,17 +29,16 @@ De volgende documenten zijn essentieel voor het begrijpen van identiteitsgrafiek
 * [UI voor grafieksimulatie](./graph-simulation.md)
 * [Gebruikersinterface voor identiteitsinstellingen](./identity-settings-ui.md)
 
-## Voorbeeldscenario&#39;s waarbij een grafiek kan samenvouwen {#example-scenarios-where-graph-collapse-could-happen}
-
-Deze sectie schetst voorbeeldscenario&#39;s die u kunt overwegen wanneer het vormen van identiteitsgrafiek die regels verbindt.
-
-### Gedeeld apparaat {#shared-device}
+## Grafieksamenvouwscenario&#39;s {#graph-collapse-scenarios}
 
 >[!CONTEXTUALHELP]
 >id="platform_identities_graphcollapsescenarios"
 >title="Grafiek vouwscenario&#39;s"
 >abstract="Er zijn meerdere redenen waarom grafieken kunnen &#39;samenvouwen&#39; of meerdere personen-entiteiten kunnen vertegenwoordigen."
->additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/identity/features/identity-graph-linking-rules/overview" text="Meer informatie"
+
+Deze sectie schetst voorbeeldscenario&#39;s die u kunt overwegen wanneer het vormen van identiteitsgrafiek die regels verbindt.
+
+### Gedeeld apparaat
 
 Er zijn gevallen waarin meerdere aanmeldingen op één apparaat kunnen plaatsvinden:
 

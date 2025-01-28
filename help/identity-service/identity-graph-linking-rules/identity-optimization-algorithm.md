@@ -2,9 +2,9 @@
 title: Algoritme voor identiteitsoptimalisatie
 description: Leer over het Algoritme van de Optimalisering van de Identiteit in de Dienst van de Identiteit.
 exl-id: 5545bf35-3f23-4206-9658-e1c33e668c98
-source-git-commit: 0c5924b4e47cf4afcf76080a10d142b3e280c4d8
+source-git-commit: 048d915d33a19a9d50a4951e165b5ade1b9d9734
 workflow-type: tm+mt
-source-wordcount: '1563'
+source-wordcount: '1560'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,6 @@ ht-degree: 0%
 >id="platform_identities_uniquenamespace"
 >title="Unieke naamruimte"
 >abstract="Een grafiek kan geen twee identiteiten met een unieke naamruimte hebben. Als een grafiek probeert deze limiet te overschrijden, blijven de meest recente koppelingen behouden en worden de oudste koppelingen verwijderd."
->additional-url="http://www.adobe.com/go/identity-ido-algo" text="Meer informatie"
 
 >[!AVAILABILITY]
 >

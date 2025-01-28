@@ -2,9 +2,9 @@
 title: Identity Service Linking Logic
 description: Leer hoe de Dienst van de Identiteit verschillende identiteiten verbindt om een uitvoerige mening van een klant tot stand te brengen.
 exl-id: 1c958c0e-0777-48db-862c-eb12b2e7a03c
-source-git-commit: 627b2e5ecde28b26e7d4717e13713c38c3c09651
+source-git-commit: 048d915d33a19a9d50a4951e165b5ade1b9d9734
 workflow-type: tm+mt
-source-wordcount: '971'
+source-wordcount: '968'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,6 @@ ht-degree: 0%
 >id="platform_identities_simulatedgraph"
 >title="Gesimuleerde grafiek"
 >abstract="Identiteiten zijn gekoppeld wanneer de naamruimte en de waarde van de identiteit overeenkomen."
->additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/identity/features/identity-linking-logic" text="Meer informatie"
 
 Er wordt een koppeling tussen twee identiteiten tot stand gebracht wanneer de naamruimte van de identiteit en de identiteitswaarden overeenkomen.
 
