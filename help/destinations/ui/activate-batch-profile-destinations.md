@@ -3,10 +3,10 @@ title: Soorten publiek activeren om exportdoelen voor batchprofielen te gebruike
 type: Tutorial
 description: Leer hoe u het publiek in Adobe Experience Platform activeert door het naar batchbestemmingen te sturen.
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
-source-git-commit: de9c838c8a9d07165b4cc8a602df0c627a8b749c
+source-git-commit: b4b185cab4defbf9559089e5152075674dab52d1
 workflow-type: tm+mt
-source-wordcount: '4225'
-ht-degree: 1%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -439,25 +439,32 @@ Wanneer u profielen exporteert naar op een bestand gebaseerde doelen, zorgt dedu
 
 * **Deterministische selectie**: Wanneer de veelvoudige profielen identieke deduplicatietoetsen en zelfde verwijzingstimestamp hebben, bepaalt de deduplicatielogica welk profiel aan uitvoer door de waarden van andere geselecteerde kolommen (exclusief complexe types zoals series, kaarten, of voorwerpen) te sorteren. De gesorteerde waarden worden in lexicografische volgorde geëvalueerd en het eerste profiel wordt geselecteerd.
 
-* **scenario van het Voorbeeld**:\
-  Bekijk de volgende gegevens, waarbij de deduplicatietoets de `Email` -kolom is:\
-  |E-mail*|first_name|last_name|timestamp|\
-  |—|—|—|—|\
-  |test1@test.com|John|Morris|2024-10-12T09:50|\
-  |test1@test.com|Jan|Doe|2024-10-12T09:50|\
-  |test2@test.com|Frank|Smith|2024-10-12T09:50|
+* **scenario van het Voorbeeld**
 
-  Na deduplicatie bevat het exportbestand:\
-  |E-mail*|first_name|last_name|timestamp|\
-  |—|—|—|—|\
-  |test1@test.com|Jan|Doe|2024-10-12T09:50|\
-  |test2@test.com|Frank|Smith|2024-10-12T09:50|
+Bekijk de volgende gegevens, waarbij de deduplicatietoets de `Email` -kolom is:
 
-  **Verklaring**: Voor `test1@test.com`, delen beide profielen de zelfde deduplicatiesleutel en timestamp. De algoritme sorteert de kolomwaarden `first_name` en `last_name` lexicografisch. Aangezien de voornamen identiek zijn, wordt de tijd opgelost met behulp van de kolom `last_name` , waarbij &quot;Doe&quot; voor &quot;Morris&quot; komt.
+| E-mail* | first_name | last_name | tijdstempel |
+|---|---|---|---|  
+| `test1@test.com` | John | Morris | 2024-10-12T09:50 |
+| `test1@test.com` | John | Doe | 2024-10-12T09:50 |
+| `test2@test.com` | Frank | Smith | 2024-10-12T09:50 |
 
-* **Verbeterde betrouwbaarheid**: Dit bijgewerkte deduplicatieproces zorgt ervoor dat de opeenvolgende looppas met de zelfde coördinaten altijd de zelfde resultaten zal veroorzaken, verbeterend consistentie.
+{style="table-layout:auto"}
 
-### [!BADGE  Beta ] {type=Informative} de series van de Uitvoer door berekende gebieden {#export-arrays-calculated-fields}
+Na deduplicatie bevat het exportbestand:
+
+| E-mail* | first_name | last_name | tijdstempel |
+|---|---|---|---|  
+| `test1@test.com` | John | Doe | 2024-10-12T09:50 |
+| `test2@test.com` | Frank | Smith | 2024-10-12T09:50 |
+
+{style="table-layout:auto"}
+
+**Verklaring**: Voor `test1@test.com`, delen beide profielen de zelfde deduplicatiesleutel en timestamp. De algoritme sorteert de kolomwaarden `first_name` en `last_name` lexicografisch. Aangezien de voornamen identiek zijn, wordt de tijd opgelost met behulp van de kolom `last_name` , waarbij &quot;Doe&quot; voor &quot;Morris&quot; komt.
+
+**Verbeterde betrouwbaarheid**: Dit bijgewerkte deduplicatieproces zorgt ervoor dat de opeenvolgende looppas met de zelfde coördinaten altijd de zelfde resultaten zal veroorzaken, verbeterend consistentie.
+
+### Arrays via berekende velden exporteren {#export-arrays-calculated-fields}
 
 Selecteer bèta-klanten kunnen arrayobjecten van Experience Platform naar cloudopslagdoelen exporteren. Lees meer over [ het uitvoeren van series en berekende gebieden ](/help/destinations/ui/export-arrays-calculated-fields.md) en contacteer uw vertegenwoordiger van de Adobe om toegang tot de functionaliteit te krijgen.
 
@@ -474,10 +481,10 @@ Vanwege een bekende beperking kunt u momenteel het venster **[!UICONTROL Select 
 
 >[!NOTE]
 >
-Voor de bestemmingen van de wolkenopslag, worden de volgende attributen toegevoegd aan de afbeelding door gebrek:
+>Voor de bestemmingen van de wolkenopslag, worden de volgende attributen toegevoegd aan de afbeelding door gebrek:
 >
-* `segmentMembership.seg_namespace.seg_id.status`
-* `segmentMembership.seg_namespace.seg_id.lastQualificationTime`
+>* `segmentMembership.seg_namespace.seg_id.status`
+>* `segmentMembership.seg_namespace.seg_id.lastQualificationTime`
 
 Het exporteren van bestanden kan op de volgende manieren variëren, afhankelijk van het feit of `segmentMembership.seg_namespace.seg_id.status` is geselecteerd:
 
@@ -500,9 +507,9 @@ Als tijdelijke oplossing kunt u:
 
 >[!IMPORTANT]
 > 
-Alle bestemmingen voor cloudopslag in de catalogus kunnen een verbeterde [[!UICONTROL Mapping] stap ](#mapping) weergeven die de stap **[!UICONTROL Select attributes]** vervangt die in deze sectie wordt beschreven.
+>Alle bestemmingen voor cloudopslag in de catalogus kunnen een verbeterde [[!UICONTROL Mapping] stap ](#mapping) weergeven die de stap **[!UICONTROL Select attributes]** vervangt die in deze sectie wordt beschreven.
 >
-Deze **[!UICONTROL Select attributes]** stap wordt nog getoond voor Adobe Campaign, Oracle Responsys, Oracle Eloqua, en de Marketing Cloud e-mailmarketing bestemmingen van Salesforce.
+>Deze **[!UICONTROL Select attributes]** stap wordt nog getoond voor Adobe Campaign, Oracle Responsys, Oracle Eloqua, en de Marketing Cloud e-mailmarketing bestemmingen van Salesforce.
 
 Voor op profiel gebaseerde bestemmingen, moet u de profielattributen selecteren die u naar de doelbestemming wilt verzenden.
 
@@ -522,15 +529,15 @@ Voor op profiel gebaseerde bestemmingen, moet u de profielattributen selecteren 
 
 >[!NOTE]
 >
-Adobe Experience Platform vult uw selectie voor met vier aanbevolen, veelgebruikte kenmerken uit uw schema: `person.name.firstName` , `person.name.lastName` , `personalEmail.address` , `segmentMembership.seg_namespace.seg_id.status` .
+> Adobe Experience Platform vult uw selectie voor met vier aanbevolen, veelgebruikte kenmerken uit uw schema: `person.name.firstName` , `person.name.lastName` , `personalEmail.address` , `segmentMembership.seg_namespace.seg_id.status` .
 
 ![ Beeld dat vooraf ingevulde geadviseerde attributen in de afbeeldingsstap van het werkschema van de publiekactivering toont.](../assets/ui/activate-batch-profile-destinations/prefilled-fields.png)
 
 >[!IMPORTANT]
 >
-Vanwege een bekende beperking kunt u momenteel het venster **[!UICONTROL Select field]** niet gebruiken om `segmentMembership.seg_namespace.seg_id.status` toe te voegen aan het exporteren van bestanden. In plaats daarvan moet u de waarde `xdm: segmentMembership.seg_namespace.seg_id.status` handmatig in het schemaveld plakken, zoals hieronder wordt weergegeven.
+>Vanwege een bekende beperking kunt u momenteel het venster **[!UICONTROL Select field]** niet gebruiken om `segmentMembership.seg_namespace.seg_id.status` toe te voegen aan het exporteren van bestanden. In plaats daarvan moet u de waarde `xdm: segmentMembership.seg_namespace.seg_id.status` handmatig in het schemaveld plakken, zoals hieronder wordt weergegeven.
 >
-![ opname die van het Scherm de werkruimte van het publiekslidmaatschap in de afbeeldingsstap van het activeringswerkschema toont.](..//assets/ui/activate-batch-profile-destinations/segment-membership.gif)
+>![ opname die van het Scherm de werkruimte van het publiekslidmaatschap in de afbeeldingsstap van het activeringswerkschema toont.](..//assets/ui/activate-batch-profile-destinations/segment-membership.gif)
 
 Het exporteren van bestanden kan op de volgende manieren variëren, afhankelijk van het feit of `segmentMembership.seg_namespace.seg_id.status` is geselecteerd:
 * Als het veld `segmentMembership.seg_namespace.seg_id.status` is geselecteerd, bevatten geëxporteerde bestanden **[!UICONTROL Active]** leden in de eerste volledige momentopname en **[!UICONTROL Active]** en **[!UICONTROL Expired]** leden in volgende incrementele exportbewerkingen.
@@ -538,14 +545,14 @@ Het exporteren van bestanden kan op de volgende manieren variëren, afhankelijk 
 
 ## Verrijkingskenmerken selecteren {#select-enrichment-attributes}
 
-[!CONTEXTUALHELP]
-id="platform_destinations_activate_exclude_enrichment_attributes"
-title="Verrijkingskenmerken uitsluiten"
-abstract="Schakel deze optie in om de profielen van het geselecteerde aangepaste geüploade publiek naar uw bestemming te exporteren, zonder alle kenmerken ervan uit te sluiten."
+>[!CONTEXTUALHELP]
+>id="platform_destinations_activate_exclude_enrichment_attributes"
+>title="Verrijkingskenmerken uitsluiten"
+>abstract="Schakel deze optie in om de profielen van het geselecteerde aangepaste geüploade publiek naar uw bestemming te exporteren, zonder alle kenmerken ervan uit te sluiten."
 
 >[!IMPORTANT]
 >
-Deze stap wordt getoond slechts als u **[!UICONTROL Custom upload]** publiek tijdens de [ stap van de publieksselectie ](#select-audiences) selecteerde.
+>Deze stap wordt getoond slechts als u **[!UICONTROL Custom upload]** publiek tijdens de [ stap van de publieksselectie ](#select-audiences) selecteerde.
 
 Verrijkingskenmerken komen overeen met het aangepaste geüploade publiek dat in het Experience Platform wordt opgenomen als **[!UICONTROL Custom uploads]** . In deze stap kunt u voor elk geselecteerd extern publiek selecteren welke kenmerken u wilt exporteren naar uw doel.
 
@@ -572,12 +579,12 @@ Selecteer **[!UICONTROL Next]** om aan de [ 2} stap van het Overzicht {te bewege
 
 >[!NOTE]
 > 
-Als er labels voor gegevensgebruik zijn toegepast op bepaalde velden in een gegevensset (in plaats van op de gehele gegevensset), wordt de toepassing van die labels op veldniveau bij activering uitgevoerd onder de volgende voorwaarden:
+>Als er labels voor gegevensgebruik zijn toegepast op bepaalde velden in een gegevensset (in plaats van op de gehele gegevensset), wordt de toepassing van die labels op veldniveau bij activering uitgevoerd onder de volgende voorwaarden:
 >
-* De velden worden gebruikt in de definitie van het publiek.
-* De velden worden geconfigureerd als geprojecteerde kenmerken voor de doelbestemming.
+>* De velden worden gebruikt in de definitie van het publiek.
+>* De velden worden geconfigureerd als geprojecteerde kenmerken voor de doelbestemming.
 >
-Als het veld `person.name.firstName` bijvoorbeeld bepaalde labels voor gegevensgebruik heeft die conflicteren met de marketingactie van de bestemming, wordt in de revisiestap een schending van het gegevensgebruiksbeleid weergegeven. Voor meer informatie, zie [ de Governance van Gegevens in Adobe Experience Platform ](../../rtcdp/privacy/data-governance-overview.md#destinations).
+> Als het veld `person.name.firstName` bijvoorbeeld bepaalde labels voor gegevensgebruik heeft die conflicteren met de marketingactie van de bestemming, wordt in de revisiestap een schending van het gegevensgebruiksbeleid weergegeven. Voor meer informatie, zie [ de Governance van Gegevens in Adobe Experience Platform ](../../rtcdp/privacy/data-governance-overview.md#destinations).
 
 Op de pagina **[!UICONTROL Review]** ziet u een overzicht van uw selectie. Selecteer **[!UICONTROL Cancel]** om de stroom te verbreken, **[!UICONTROL Back]** om uw instellingen te wijzigen of **[!UICONTROL Finish]** om uw selectie te bevestigen en gegevens naar de bestemming te verzenden.
 
@@ -585,10 +592,10 @@ Op de pagina **[!UICONTROL Review]** ziet u een overzicht van uw selectie. Selec
 
 ### Goedkeuring van het beleid {#consent-policy-evaluation}
 
-[!CONTEXTUALHELP]
-id="platform_governance_policies_viewApplicableConsentPolicies"
-title="Toepasselijk toestemmingsbeleid weergeven"
-abstract="Als uw organisatie **het Schild van de Gezondheidszorg van de Adobe** of **de Privacy &amp; het Schild van de Veiligheid van de Adobe** kocht, selecteer **[!UICONTROL View applicable consent policies]** om te zien welk toestemmingsbeleid wordt toegepast en hoeveel profielen in de activering als resultaat van hen inbegrepen zijn. Deze controle is gehandicapt als uw bedrijf geen toegang tot hierboven vermelde SKUs heeft."
+>[!CONTEXTUALHELP]
+>id="platform_governance_policies_viewApplicableConsentPolicies"
+>title="Toepasselijk toestemmingsbeleid weergeven"
+>abstract="Als uw organisatie **het Schild van de Gezondheidszorg van de Adobe** of **de Privacy &amp; het Schild van de Veiligheid van de Adobe** kocht, selecteer **[!UICONTROL View applicable consent policies]** om te zien welk toestemmingsbeleid wordt toegepast en hoeveel profielen in de activering als resultaat van hen inbegrepen zijn. Deze controle is gehandicapt als uw bedrijf geen toegang tot hierboven vermelde SKUs heeft."
 
 Als uw organisatie **het Schild van de Gezondheidszorg van de Adobe** of **de Privacy &amp; het Schild van de Veiligheid van de Adobe** kocht, selecteer **[!UICONTROL View applicable consent policies]** om te zien welk toestemmingsbeleid wordt toegepast en hoeveel profielen in de activering als resultaat van hen inbegrepen zijn. Lees over [ evaluatie van het toestemmingsbeleid ](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) voor meer informatie.
 
