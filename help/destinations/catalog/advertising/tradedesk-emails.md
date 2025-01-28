@@ -1,30 +1,28 @@
 ---
-title: (Beta) Trade Desk - CRM connection
+title: De Trade Desk - CRM-verbinding
 description: Activeer profielen aan uw rekening van het Bureau van de Handel voor publiek gericht en onderdrukking die op de gegevens van CRM wordt gebaseerd.
-last-substantial-update: 2023-01-25T00:00:00Z
+last-substantial-update: 2025-01-16T00:00:00Z
 exl-id: e09eaede-5525-4a51-a0e6-00ed5fdc662b
-source-git-commit: 3c645ccf5b9dd17e4c3cc1267b60a9c4f1131668
+source-git-commit: a189a86749996c0ee7b6146bcd030d8495745e12
 workflow-type: tm+mt
-source-wordcount: '1114'
+source-wordcount: '1083'
 ht-degree: 0%
 
 ---
 
-# (Beta) De [!DNL Trade Desk] - CRM-verbinding
+# De [!DNL Trade Desk] - CRM-verbinding
 
 >[!IMPORTANT]
->
->[!DNL The Trade Desk - CRM] -doel in Platform is momenteel in bèta. De documentatie en functionaliteit kunnen worden gewijzigd.
 >
 >Met de versie van EUID (Europese Verenigde identiteitskaart), ziet u nu twee [!DNL The Trade Desk - CRM] bestemmingen in de [ bestemmingscatalogus ](/help/destinations/catalog/overview.md).
 >* Gebruik de **[!DNL The Trade Desk - CRM (EU)]** -bestemming als u gegevens in de EU levert.
 >* Gebruik het doel **[!DNL The Trade Desk - CRM (NAMER & APAC)]** als u gegevens in de APAC- of NAMER-gebieden bront.
 >
->Beide bestemmingen in Experience Platform zijn momenteel in bèta. Deze doelconnector en documentatiepagina worden gemaakt en onderhouden door het team van *[!DNL Trade Desk]* . Neem voor vragen of verzoeken om updates contact op met uw [!DNL Trade Desk] -vertegenwoordiger. De documentatie en functionaliteit kunnen worden gewijzigd.
+>Deze doelconnector en documentatiepagina worden gemaakt en onderhouden door het team van *[!DNL Trade Desk]* . Neem contact op met uw [!DNL Trade Desk] vertegenwoordiger voor meer informatie of verzoeken om updates.
 
 ## Overzicht {#overview}
 
-Dit document is ontworpen om u te helpen profielen naar uw [!DNL Trade Desk] -account activeren voor publiek dat zich richt op en onderdrukt op basis van CRM-gegevens.
+Begrijp hoe u profielen aan uw [!DNL Trade Desk] rekening voor publiek activeert richt en onderdrukking die op de gegevens van CRM wordt gebaseerd.
 
 Deze schakelaar verzendt gegevens naar het [!DNL The Trade Desk] eerste partijeindpunt. De integratie tussen Adobe Experience Platform en [!DNL The Trade Desk] biedt geen ondersteuning voor het exporteren van gegevens naar het eindpunt van derden voor [!DNL The Trade Desk] .
 
@@ -36,7 +34,9 @@ Deze schakelaar verzendt gegevens naar het [!DNL The Trade Desk] eerste partijei
 
 ## Vereisten {#prerequisites}
 
-Voordat u het publiek naar [!DNL The Trade Desk] kunt activeren, moet u contact opnemen met uw [!DNL The Trade Desk] -accountmanager om het CRM-instapcontract te ondertekenen. [!DNL The Trade Desk] geeft vervolgens toestemming en deelt uw adverteerder-id om uw bestemming te configureren.
+>[!IMPORTANT]
+>
+>Voordat u het publiek naar de handelsbank kunt activeren, moet u contact opnemen met uw accountmanager van [!DNL Trade Desk] om het CRM-instapcontract te ondertekenen. [!DNL The Trade Desk] maakt het gebruik van UID2/EUID mogelijk en deelt andere gegevens om u te helpen uw bestemming te configureren.
 
 ## Vereisten voor ID-afstemming {#id-matching-requirements}
 

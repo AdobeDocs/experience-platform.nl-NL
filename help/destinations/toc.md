@@ -5,9 +5,9 @@ user-guide-description: Activeer uw bekende en onbekende gegevens voor cross-cha
 description: In dit document wordt de inhoudsopgave voor Adobe Experience Platform-doelen weergegeven
 feature: Destinations
 role: Admin,User
-source-git-commit: 6210f78e79c6c528296378756c9d11e35d092736
+source-git-commit: e916488be3d10e47193e66c1f9516cb5da93c3a7
 workflow-type: tm+mt
-source-wordcount: '1271'
+source-wordcount: '1270'
 ht-degree: 1%
 
 ---
@@ -103,7 +103,7 @@ ht-degree: 1%
       * [PubMatic Connect-verbinding](./catalog/advertising/pubmatic.md)
       * [Verbinding Snapchat Ads](./catalog/advertising/snap-inc.md)
       * [De verbinding van de handelsbureau](./catalog/advertising/tradedesk.md)
-      * [(Beta) De Trade Desk CRM-verbinding](./catalog/advertising/tradedesk-emails.md)
+      * [De Trade Desk CRM-verbinding](./catalog/advertising/tradedesk-emails.md)
       * [Twitter van Universal Website Tag-extensie](./catalog/advertising/twitter-uwt.md)
       * [Yahoo/Verizon DataX-verbinding](./catalog/advertising/datax.md)
    * Analytische doelen {#analytics}
