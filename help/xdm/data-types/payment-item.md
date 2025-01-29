@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Gegevenstype betalingsobject
 description: Meer informatie over het gegevenstype Data Model (XDM) van het betalingsitemervaringsgegevensmodel.
 exl-id: d25a358b-73c1-468b-a9c5-808385689932
-source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
+source-git-commit: e028fbb82b37b3940b308a860c26f8b5f9884d3a
 workflow-type: tm+mt
-source-wordcount: '135'
+source-wordcount: '140'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 [!UICONTROL Payment Item] is een standaard XDM-gegevenstype (Experience Data Model) waarmee een betaling wordt beschreven voor een bestelling die het type betaling, het bedrag en de bijbehorende valuta definieert.
 
-<img src="../images/data-types/payment-item.PNG" width="400" /><br />
+{het beeld van het 0} betalingspunt ](../images/data-types/payment-item.PNG) {width= 400}![
 
 | Eigenschap | Gegevenstype | Beschrijving |
 | --- | --- | --- |

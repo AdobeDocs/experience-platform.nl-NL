@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Gegevenstype toepassing
 description: Leer over het gegevenstype van het Model van de Gegevens van de Ervaring van de Toepassing (XDM).
 exl-id: ac7d6761-7b58-4e0d-85e7-6f157fb2eea5
-source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
+source-git-commit: e028fbb82b37b3940b308a860c26f8b5f9884d3a
 workflow-type: tm+mt
-source-wordcount: '407'
+source-wordcount: '411'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 [!UICONTROL Application] is een standaard XDM-gegevenstype (Experience Data Model) dat details beschrijft met betrekking tot interacties die door een toepassing worden gegenereerd. Een toepassing verwijst naar een softwareervaring, zoals een mobiele toepassing of bureaubladtoepassing die door een eindgebruiker kan worden geïnstalleerd, uitgevoerd, gesloten of verwijderd. De eigenschappen voor dit gegevenstype zijn niet bedoeld voor het beschrijven van agents zoals chatbots, browsergebaseerde plug-ins of andere ervaringen die niet van toepassing zijn op toepassingen.
 
-<img src="../images/data-types/application.PNG" width="500" /><br />
+![ toepassingsbeeld ](../images/data-types/application.PNG) {width= 500}
 
 | Eigenschap | Gegevenstype | Beschrijving |
 | --- | --- | --- |

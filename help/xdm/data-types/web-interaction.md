@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Gegevenstype webinteractie
 description: Meer informatie over het gegevenstype Data Model (XDM) van het webinteractieervaringsgegevensmodel.
 exl-id: 772d96c5-9fa3-4fed-8b38-16b8e7101743
-source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
+source-git-commit: e028fbb82b37b3940b308a860c26f8b5f9884d3a
 workflow-type: tm+mt
-source-wordcount: '159'
+source-wordcount: '164'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 [!UICONTROL Web interaction] is een standaard XDM-gegevenstype (Experience Data Model) dat informatie beschrijft over interacties die op een webpagina zijn uitgevoerd nadat het laden van de eerste pagina was voltooid. Het is bedoeld voor het opnemen van interacties in veelzijdige webtoepassingen die geen nieuwe pagina&#39;s laden, zoals webapps van één pagina (SPA).
 
-<img src="../images/data-types/web-interaction.PNG" width="500" /><br />
+![ beeld van de Webinteractie ](../images/data-types/web-interaction.PNG) {width= 500}
 
 | Eigenschap | Gegevenstype | Beschrijving |
 | --- | --- | --- |

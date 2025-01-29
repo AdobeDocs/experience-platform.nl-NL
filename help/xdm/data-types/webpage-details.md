@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Gegevenstype webpagina Details
 description: Meer informatie over het gegevenstype Experience Data Model (XDM) van de webpagina.
 exl-id: 31108e57-d416-485b-a6c3-4ebc4f5b1152
-source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
+source-git-commit: e028fbb82b37b3940b308a860c26f8b5f9884d3a
 workflow-type: tm+mt
-source-wordcount: '376'
+source-wordcount: '379'
 ht-degree: 0%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 0%
 
 Het gegevenstype is bedoeld voor alle paginagegevens en voor het eerst laden van webtoepassingen van één pagina (SPA). Voor interactie die op een geladen pagina gebeuren die geen nieuwe paginading teweegbrengt, zie het ](./web-interaction.md) gegevenstype van de 0} Webinteractie {.[
 
-<img src="../images/data-types/web-page-details.PNG" width="500" /><br />
+![ Web-pagina details ](../images/data-types/web-page-details.PNG){width="500"}
 
 | Eigenschap | Gegevenstype | Beschrijving |
 | --- | --- | --- |

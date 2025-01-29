@@ -6,9 +6,9 @@ title: Problemen met Attribution AI oplossen
 description: Zoek antwoorden op veelvoorkomende fouten in Attribution AI.
 type: Documentation
 exl-id: c2ff700a-1e36-4ba2-876c-9f8b56344241
-source-git-commit: 07a110f6d293abff38804b939014e28f308e3b30
+source-git-commit: e028fbb82b37b3940b308a860c26f8b5f9884d3a
 workflow-type: tm+mt
-source-wordcount: '167'
+source-wordcount: '171'
 ht-degree: 0%
 
 ---
@@ -21,7 +21,7 @@ Dit document geeft antwoorden op veelgestelde vragen over Attribution AI.
 
 Er treden laadfouten op in de incognitomodus Google Chrome vanwege updates in de beveiligingsinstellingen van de incognitomodus Google Chrome. Dit probleem wordt momenteel actief besproken met Chrome om experience.adobe.com tot een vertrouwd domein te maken.
 
-<img src="./images/faq/error.PNG" width="500" /><br />
+![ beeld van de Fout ](./images/faq/error.PNG) {width= 500}
 
 ### Aanbevolen correctie
 

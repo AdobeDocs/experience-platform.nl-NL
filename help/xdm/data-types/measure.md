@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Gegevenstype meten
 description: Leer over het gegevenstype van het Gegevensmodel van de Ervaring van de Meetlat (XDM).
 exl-id: 5d6cc15d-63cf-4af5-9ae9-12c886dd6735
-source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
+source-git-commit: e028fbb82b37b3940b308a860c26f8b5f9884d3a
 workflow-type: tm+mt
-source-wordcount: '202'
+source-wordcount: '206'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 [!UICONTROL Measure] is een standaardgegevenstype van het Gegevensmodel van de Ervaring (XDM) dat een beton kwantificeerbaar gegevenspunt van bepaalde metrisch bevat. Een maat bestaat uit een unieke id en een waarde.
 
-<img src="../images/data-types/measure.PNG" width="500" /><br />
+![ meetbeeld ](../images/data-types/measure.PNG) {width= 500}
 
 | Eigenschap | Gegevenstype | Beschrijving |
 | --- | --- | --- |

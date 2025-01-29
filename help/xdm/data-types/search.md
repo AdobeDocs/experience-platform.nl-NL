@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Gegevenstype zoeken
 description: Leer over het het gegevenstype van de Gegevens van de Ervaring van het Onderzoek Model (XDM).
 exl-id: 9893cb67-b0c7-4f91-a0d4-96f7b87d9510
-source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
+source-git-commit: e028fbb82b37b3940b308a860c26f8b5f9884d3a
 workflow-type: tm+mt
-source-wordcount: '158'
+source-wordcount: '162'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 [!UICONTROL Search] is een standaard XDM-gegevenstype (Experience Data Model) dat informatie bevat over zoekactiviteiten op het web.
 
-<img src="../images/data-types/search.PNG" width="500" /><br />
+![ onderzoeksbeeld ](../images/data-types/search.PNG) {width= 500}
 
 | Eigenschap | Gegevenstype | Beschrijving |
 | --- | --- | --- |
