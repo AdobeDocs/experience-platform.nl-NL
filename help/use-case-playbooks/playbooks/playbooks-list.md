@@ -4,9 +4,9 @@ title: Beschikbare Use Case Playbooks voor Real-time Customer Data Platform en A
 description: Een lijst met alle afspeelboeken in Real-time Customer Data Platform en Adobe Journey Optimizer.
 role: User
 exl-id: 00f16761-3759-4de0-882d-b77e18f7c1fe
-source-git-commit: 5b1209ed96c78810b6bd7489825b19496d8b0b6a
+source-git-commit: 0cfe3e87ae4f9e8dc9ad53e9acb096efb590b72d
 workflow-type: tm+mt
-source-wordcount: '965'
+source-wordcount: '955'
 ht-degree: 0%
 
 ---
@@ -65,9 +65,9 @@ Lees deze pagina voor een overzicht van alle beschikbare afspeelboeken die u kun
 
 | Naam van afspeelboek | Beschrijving |
 | ------------- | ----------- |
-| Verlaten bladeren: Merchandise—voor activering | Zoek ventilatoren opnieuw nadat ze uw website of app hebben verlaten nadat ze de artikelen aan het winkelwagentje hebben toegevoegd. |
-| Verlaten browser: product—voor activering | Winkelaars ophalen nadat ze uw website of app hebben verlaten nadat ze de producten aan de winkelwagen hebben toegevoegd. |
-| Verlaten bladeren: reservering—voor activering | Gasten opnieuw oppakken nadat ze uw website of app hebben verlaten en een nieuwe reservering aan het winkelwagentje hebben toegevoegd. |
+| Verlaten bladeren: Merchandise—voor activering | Zoek ventilatoren opnieuw nadat ze uw website of app hebben verlaten nadat ze door artikelen zijn gebladerd. |
+| Verlaten browser: product—voor activering | Winkelaars opnieuw oppakken nadat ze uw website of app hebben verlaten nadat ze door een product hebben gebladerd. |
+| Verlaten bladeren: reservering—voor activering | Gasten opnieuw oppakken nadat ze uw website of app hebben verlaten nadat ze door een mogelijk reservering hebben gebladerd. |
 | Afgewezen winkelwagentje: Merchandise—voor activering | Zoek fans op nadat ze uw website of app hebben verlaten nadat ze de sportartikelen aan het winkelwagentje hebben toegevoegd. |
 | Afgewezen winkelwagen: product—voor activering | Winkelaars ophalen nadat ze uw website of app hebben verlaten nadat ze producten aan de winkelwagen hebben toegevoegd. |
 | Afgewezen winkelwagentje: reservering—voor activering | Gasten opnieuw oppakken nadat ze uw website of app hebben verlaten en een nieuwe reservering aan het winkelwagentje hebben toegevoegd. |
