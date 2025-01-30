@@ -4,13 +4,13 @@ description: Leer hoe te om dynamische configuraties tot stand te brengen datast
 hide: true
 hidefromtoc: true
 badge: label="Beta" type="Informative"
-source-git-commit: 615318744c233930fb9bc20e55ff42c3a396e651
+exl-id: 528ddf89-ad87-4021-b5a6-8e25b4469ac4
+source-git-commit: 39e65f1f74b95fffffb3c5400ce1b7e60aa81bad
 workflow-type: tm+mt
-source-wordcount: '556'
+source-wordcount: '621'
 ht-degree: 0%
 
 ---
-
 
 # Dynamische gegevensstroomconfiguraties maken
 
@@ -30,6 +30,14 @@ Om een dynamische configuratie voor uw gegevensstroom tot stand te brengen, zijn
 * U moet *minstens* hebben één die de dienst van het Experience Cloud aan uw gegevensstroom wordt toegevoegd. Zie de documentatie over hoe te [ om de dienst ](configure.md#add-services) aan een datastream voor gedetailleerde informatie toe te voegen.
 
 Nadat u een datastream hebt gecreeerd en de dienst van het Experience Cloud aan het toegevoegd, kunt u dan [ een dynamische configuratie ](#create-dynamic-configuration) creëren.
+
+## Dynamische gegevensstroomconfiguraties versus gegevensstroomconfiguratie overschrijft {#dynamic-versus-overrides}
+
+De dynamische configuraties van de gegevensstroom en [ datastream configuratietreedt met voeten ](overrides.md) zijn wederzijds exclusieve functies.
+
+Dit betekent dat u geen dynamische configuraties van de gegevensstroom samen met de configuratieoverschrijvingen van de gegevensstroom kunt gebruiken. U moet een van beide kiezen.
+
+Als u zowel dynamische configuraties van de gegevensstroom als de configuratieoverschrijvingen van de gegevensstroom toelaat, zullen de configuratieoverschrijvingen belangrijkheid nemen en de dynamische regels van de gegevensstroomconfiguratie zullen worden genegeerd.
 
 ## Een dynamische gegevensstroomconfiguratie maken {#create-dynamic-configuration}
 
