@@ -3,9 +3,9 @@ keywords: Experience Platform;huis;populaire onderwerpen;toegangsbeheer;op attri
 title: Op kenmerken gebaseerde toegangsbeheerfuncties voor rolmachtigingen beheren
 description: Dit document bevat informatie over het configureren van machtigingen voor een rol via de interface voor machtigingen in Adobe Experience Cloud
 exl-id: 8acd2bb6-eef8-4b23-8fd8-3566c7508fe7
-source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
+source-git-commit: 0c275dc18dac101455f77aa58d33f0808122b77f
 workflow-type: tm+mt
-source-wordcount: '919'
+source-wordcount: '1381'
 ht-degree: 0%
 
 ---
@@ -26,7 +26,7 @@ Onmiddellijk nadat [ creërend een nieuwe rol ](#create-a-new-role), bent u teru
 
 Selecteer het kanaalpictogram (![ pictogram van de Filter ](/help/images/icons/filter.png)) om een lijst van filtercontroles te tonen om smalle resultaten te helpen.
 
-![ flc-filters ](../../images/flac-ui/flac-filters.png)
+![ het dashboard van Rollen in Toestemmingen UI met de benadrukte sectie van filterrollen.](../../images/flac-ui/flac-filters.png)
 
 De volgende filters zijn beschikbaar voor rollen in UI:
 
@@ -39,133 +39,151 @@ De volgende filters zijn beschikbaar voor rollen in UI:
 
 Als u een filter wilt verwijderen, selecteert u de &quot;X&quot; op het vulpictogram voor het desbetreffende filter of selecteert u **[!UICONTROL Clear all]** om alle filters te verwijderen.
 
-![ flc-duidelijk-filters ](../../images/flac-ui/flac-clear-filters.png)
+![ het dashboard van Rollen in Toestemmingen UI met X en ontruim alle selecties die op de gekozen filters worden benadrukt.](../../images/flac-ui/flac-clear-filters.png)
 
 ## Roldetails
 
-Selecteer de rol op het tabblad **[!UICONTROL Roles]** , waarop de pagina met details voor de rol wordt geopend.
+Selecteer de rol op het tabblad **[!UICONTROL Roles]** , waarop het [!UICONTROL Details] -dashboard van de rol wordt geopend.
 
-![ flac-details ](../../images/flac-ui/flac-details.png)
+![ De werkruimte van Details voor de geselecteerde rol wordt getoond met de benadrukte overzichtsinformatie.](../../images/flac-ui/flac-details.png)
 
-Het tabblad Details geeft een overzicht van de rol. Het overzicht toont de rolnaam, rolbeschrijving, de naam van de gebruiker die de rol creeerde en wijzigde, toen de rol werd gecreeerd en, en de toestemmingen verbonden aan de rol werd gewijzigd. De rolnaam en rolbeschrijving kunnen indien nodig worden gewijzigd.
+Het dashboard van [!UICONTROL Details] biedt een overzicht van de rol. In het overzicht worden de naam van de rol, de beschrijving, de maker en de laatste modifier weergegeven, samen met de datum waarop de rol is gemaakt en gewijzigd. Ook worden de machtigingen weergegeven die zijn gekoppeld aan de rol en de lijst met toegewezen sandboxen. De rolnaam en beschrijving kunnen, indien nodig, worden gewijzigd.
 
 ## Labels voor een rol beheren
 
-Selecteer het tabblad **[!UICONTROL Labels]** om de pagina met rollabels te openen en selecteer vervolgens **[!UICONTROL Add labels]** om labels aan de rol toe te wijzen.
+Selecteer het tabblad **[!UICONTROL Labels]** om de werkruimte voor rollabels te openen en selecteer vervolgens **[!UICONTROL Add labels]** om labels aan de rol toe te wijzen.
 
-![ fc-labels ](../../images/flac-ui/flac-labels.png)
+![ de werkruimte van de Etiketten van de rol wordt getoond met het lusje van Etiketten en voegt Gemarkeerde knoop van Etiketten toe.](../../images/flac-ui/flac-labels.png)
 
-Labels worden weergegeven op deze pagina. In de lijst staan de labelnaam, de vriendelijke naam, de categorie en de beschrijving.
+Het dialoogvenster **[!UICONTROL Apply Access and Data Governance Labels]** wordt weergegeven en geeft een lijst met labels weer. In de lijst staan de labelnaam, de vriendelijke naam, de categorie en de beschrijving.
 
 Selecteer de labels in de lijst die u aan de rol wilt toevoegen en selecteer vervolgens **[!UICONTROL Save]**
 
-![ flc-toe:voegen-etiketten ](../../images/flac-ui/flac-add-labels.png)
+![ toepassen de dialoog van de Etiketten van de Toegang en van het Beleid van Gegevens met een geselecteerd etiket.](../../images/flac-ui/flac-add-labels.png)
 
 Toegevoegde labels worden weergegeven onder **[!UICONTROL Labels]** tab.
 
-![ flc-toegevoegde-etiketten ](../../images/flac-ui/flac-added-labels.png)
+![ de werkruimte van de Etiketten van de rol met het toegevoegde benadrukte etiket.](../../images/flac-ui/flac-added-labels.png)
 
-Om een etiket uit een rol te verwijderen, selecteer het **X** pictogram naast de naam van de etiketten.
+Als u een label uit een rol wilt verwijderen, selecteert u het label en vervolgens **[!UICONTROL Remove Labels]** .
 
-![ fc-schrapping-etiketten ](../../images/flac-ui/flac-delete-labels.png)
+![ de werkruimte van de Etiketten van de rol met een geselecteerde rol en de Remove benadrukte etiketten optie.](../../images/flac-ui/flac-delete-labels.png)
 
-## Sandboxen beheren voor rol
+## Sandboxen beheren voor een rol
 
-Selecteer het tabblad **[!UICONTROL Sandboxes]** om de pagina Rollensandboxen te openen. Hier ziet u een lijst met sandboxen die aan de rol zijn toegevoegd.
+Selecteer de tab **[!UICONTROL Details]** en navigeer naar de sectie **[!UICONTROL Sandboxes]** . Selecteer **[!UICONTROL View All]** om de volledige lijst met sandboxen weer te geven die aan de rol zijn toegevoegd.
 
-![ flc-zandbakken ](../../images/flac-ui/flac-sandboxes.png)
+![ de werkruimte van Details van de rol met de benadrukte sectie Sandboxes.](../../images/flac-ui/flac-sandboxes.png)
 
-Als u meer sandboxen aan een rol wilt toevoegen, selecteert u **[!UICONTROL Edit]** .
+Als u meer sandboxen aan een rol wilt toevoegen, selecteert u **[!UICONTROL Edit]** rechtsboven in de gebruikersinterface.
 
-![ flc-toe:voegen-zandbakken ](../../images/flac-ui/flac-add-sandboxes.png)
+![ de werkruimte van Details van de rol met de Edit benadrukte optie.](../../images/flac-ui/flac-add-sandboxes.png)
 
-Het volgende scherm zet u ertoe aan om te kiezen welke middeltoestemmingen die in zandbakken bestaan om in de rol te omvatten gebruikend dropdown. Selecteer **[!UICONTROL Save and exit]** als u klaar bent.
+In het volgende scherm wordt u gevraagd welke sandboxbronnen u in de rol wilt opnemen via het vervolgkeuzemenu. Als u klaar bent, selecteert u **[!UICONTROL Save]** en vervolgens **[!UICONTROL Close]** .
 
-![ fc-toe:voegen-rol-toestemming ](../../images/flac-ui/flac-add-role-permission.png)
+![ het dashboard van Middelen van de rol met het benadrukt drop-down menu van zandbakmiddelen.](../../images/flac-ui/flac-add-role-permission.png)
 
-## Gebruikers beheren voor rol
+## Gebruikers voor een rol beheren
 
-Selecteer het tabblad **[!UICONTROL Users]** om de pagina Rollengebruikers te openen en selecteer vervolgens **[!UICONTROL Add Users]** om gebruikers aan de rol toe te wijzen.
+Selecteer het tabblad **[!UICONTROL Users]** om de rollen [!UICONTROL Users] -werkruimte te openen en selecteer vervolgens **[!UICONTROL Add Users]** om gebruikers aan de rol toe te wijzen.
 
-![ flc-users ](../../images/flac-ui/flac-users.png)
+![ de werkruimte van de Gebruikers van de rol wordt getoond met het lusje van Gebruikers en de Add benadrukte optie van Gebruikers.](../../images/flac-ui/flac-users.png)
 
-Selecteer de gebruikers in de lijst die u aan de rol wilt toevoegen. U kunt ook de zoekbalk gebruiken om naar de gebruiker te zoeken door de naam of het e-mailadres in te voeren en vervolgens **[!UICONTROL Save]** te selecteren.
+Het dialoogvenster **[!UICONTROL Add Users]** wordt weergegeven. Selecteer de gebruikers in de lijst die u aan de rol wilt toevoegen. U kunt ook de zoekbalk gebruiken om naar de gebruiker te zoeken door de naam of het e-mailadres in te voeren en vervolgens **[!UICONTROL Save]** te selecteren.
 
-![ flc-toe:voegen-gebruikers ](../../images/flac-ui/flac-add-users.png)
+![ Add de dialoog van Gebruikers met een geselecteerde gebruiker en de onderzoeksbar en sparen benadrukte optie.](../../images/flac-ui/flac-add-users.png)
 
 Toegevoegde gebruikers worden weergegeven onder **[!UICONTROL Users]** tab.
 
-![ fc-toegevoegde-gebruikers ](../../images/flac-ui/flac-added-users.png)
+![ de werkruimte van de Gebruikers van de rol die de gebruikers tonen aan de rol worden toegevoegd.](../../images/flac-ui/flac-added-users.png)
 
-Om een gebruiker uit een rol te verwijderen, selecteer het **X** pictogram naast de gebruikersnaam.
+Om een gebruiker uit een rol te verwijderen, selecteer het **X** pictogram naast de naam van de gebruiker.
 
-![ flc-remove-users ](../../images/flac-ui/flac-remove-users.png)
+![ de werkruimte van de Gebruikers van de rol die een gebruiker met de benadrukte optie van X toont.](../../images/flac-ui/flac-remove-users.png)
 
 De volgende video is bedoeld om uw begrip van het creëren van een nieuwe rol en het leiden van gebruikers voor die rol te steunen.
 
 >[!VIDEO](https://video.tv.adobe.com/v/336081/?learn=on)
 
-## API-referenties voor rol beheren {#manage-api-credentials-for-role}
+## API-referenties voor een rol beheren {#manage-api-credentials-for-role}
 
-Selecteer het tabblad **[!UICONTROL API credentials]** om de pagina met API-referenties voor rollen te openen en selecteer vervolgens **[!UICONTROL Add API credentials]** om API-referenties aan de rol toe te wijzen.
+>[!IMPORTANT]
+>
+> Gebruikers moeten over beheerdersrechten voor het systeem beschikken om API-referenties te kunnen gebruiken en beheren in [!UICONTROL Permissions] .
 
-![ fc-api-geloofsbrieven ](../../images/flac-ui/flac-api-credentials.png)
+Om Experience Platform APIs als gebruiker of ontwikkelaar te gebruiken, moet een systeembeheerder API geloofsbrieven toevoegen naast een rol gegeven reeks toestemmingen. Voor een volledige gids bij het creëren van en het toewijzen van API geloofsbrieven, evenals de toestemmingen nodig, verwijs naar het geleidelijke leerprogramma in [ voor authentiek verklaren en toegang Experience Platform APIs ](../../../landing/api-authentication.md#generate-credentials).
 
-Selecteer de API-referenties in de lijst die u aan de rol wilt toevoegen en selecteer vervolgens **[!UICONTROL Save]**
+Selecteer het tabblad **[!UICONTROL API credentials]** om de werkruimte met API-referenties voor rollen te openen en selecteer vervolgens **[!UICONTROL Add API credentials]** om API-referenties aan de rol toe te wijzen.
 
-![ fc-add-api-credentials ](../../images/flac-ui/flac-add-api-credentials.png)
+![ de geloofsbrieven van de rol API met de Add benadrukte geloofsbrieven optie.](../../images/flac-ui/flac-api-credentials.png)
+
+Het dialoogvenster **[!UICONTROL Add API credentials]** wordt weergegeven. Selecteer API-referenties in de lijst om aan de rol toe te voegen en selecteer vervolgens **[!UICONTROL Save]**
+
+![ Add API geloofsdialoog met geselecteerde referentie en sparen benadrukte optie.](../../images/flac-ui/flac-add-api-credentials.png)
 
 Toegevoegde API-referenties worden weergegeven onder **[!UICONTROL API credentials]** tab.
 
-![ fc-added-api-geloofsbrieven ](../../images/flac-ui/flac-added-api-credentials.png)
+![ de geloofsbrieven van de rol API met de toegevoegde getoonde geloofsbrieven.](../../images/flac-ui/flac-added-api-credentials.png)
 
-Om een API geloofsbrieven van een rol te verwijderen, selecteer het **X** pictogram naast de API credentienaam.
+Om een API referentie uit een rol te verwijderen, selecteer het **X** pictogram naast de API referentie naam.
 
-![ fc-remove-api-geloofsbrieven ](../../images/flac-ui/flac-remove-api-credentials.png)
+![ de geloofsbrieven van de rol API met de optie van X om een benadrukt referentie te verwijderen.](../../images/flac-ui/flac-remove-api-credentials.png)
 
-Het dialoogvenster **[!UICONTROL Remove API credentials]** verschijnt waarin u wordt gevraagd het verwijderen te bevestigen.
+Het dialoogvenster **[!UICONTROL Remove API credentials]** verschijnt waarin u wordt gevraagd het verwijderen te bevestigen. Selecteer **[!UICONTROL Confirm]** om het verwijderen van de geselecteerde referentie te voltooien.
 
-![ fc-confirm-api-credentials-delete ](../../images/flac-ui/flac-confirm-api-credentials-delete.png)
+![ verwijdert Credentials pop-over ertoe aanzettend u om het verwijderen van de referentie te bevestigen wordt benadrukt.](../../images/flac-ui/flac-confirm-api-credentials-delete.png)
 
 U wordt teruggestuurd naar het tabblad **[!UICONTROL API credentials]** .
 
-## Gebruikersgroepen voor rollen beheren
+## Gebruikersgroepen beheren voor een rol
 
 Gebruikersgroepen zijn meerdere gebruikers die zijn gegroepeerd en die toegang hebben om dezelfde functies uit te voeren.
 
-Selecteer het tabblad **[!UICONTROL User groups]** om de pagina Rollengebruikersgroepen te openen en selecteer vervolgens **[!UICONTROL Add Groups]** om gebruikersgroepen aan de rol toe te wijzen.
+Selecteer het tabblad **[!UICONTROL User groups]** om de werkruimte van de gebruikersgroepen voor de rol te openen en selecteer vervolgens **[!UICONTROL Add Groups]** om gebruikersgroepen aan de rol toe te wijzen.
 
-![ fc-user-groups ](../../images/flac-ui/flac-user-groups.png)
+![ De de groepenwerkruimte van de Gebruiker van de rol met de Add optie van Groepen ](../../images/flac-ui/flac-user-groups.png)
 
-Selecteer de gebruikersgroepen in de lijst die u aan de rol wilt toevoegen. U kunt ook de zoekbalk gebruiken om naar de gebruikersgroep te zoeken door de naam van de groep in te voeren en vervolgens **[!UICONTROL Save]** te selecteren
+Het dialoogvenster **[!UICONTROL Add Groups]** wordt weergegeven. Selecteer de gebruikersgroepen in de lijst die u aan de rol wilt toevoegen. U kunt ook de zoekbalk gebruiken om naar de gebruikersgroep te zoeken door de naam van de groep in te voeren en vervolgens **[!UICONTROL Save]** te selecteren
 
-![ fc-toe:voegen-gebruiker-groepen ](../../images/flac-ui/flac-add-user-groups.png)
+![ het Add dialoog van Groepen met een geselecteerde gebruikersgroep en het onderzoek en sparen optie benadrukte.](../../images/flac-ui/flac-add-user-groups.png)
 
 Toegevoegde gebruikersgroepen worden weergegeven onder **[!UICONTROL User groups]** tab.
 
-![ fc-toegevoegde-gebruiker-groepen ](../../images/flac-ui/flac-added-user-groups.png)
+![ de de groepenwerkruimte van de Gebruiker van de rol tonend de lijst van toegevoegde gebruikersgroepen.](../../images/flac-ui/flac-added-user-groups.png)
 
 Om een gebruikersgroep uit een rol te verwijderen, selecteer het **X** pictogram naast de naam van de gebruikersgroep.
 
-![ fc-remove-user-groups ](../../images/flac-ui/flac-remove-user-groups.png)
+![ de groepswerkruimte van de Gebruiker van de rol met de optie van X om een specifieke benadrukte gebruikersgroep te verwijderen.](../../images/flac-ui/flac-remove-user-groups.png)
 
-Het dialoogvenster **[!UICONTROL Remove user group]** verschijnt waarin u wordt gevraagd het verwijderen te bevestigen.
+Het dialoogvenster **[!UICONTROL Remove user group]** verschijnt waarin u wordt gevraagd het verwijderen te bevestigen. Selecteer **[!UICONTROL Confirm]** om de geselecteerde gebruikersgroep te verwijderen.
 
-![ fc-confirm-user-groups-delete ](../../images/flac-ui/flac-confirm-user-groups-delete.png)
+![ popover voor het verwijderen van een gebruikersgroep wordt getoond en benadrukt.](../../images/flac-ui/flac-confirm-user-groups-delete.png)
 
 U wordt teruggestuurd naar het tabblad **[!UICONTROL User groups]** .
 
-## Gebruikers aan Experience Platform toevoegen via een rol
+## Gebruikers aan Experience Platform toevoegen
 
-Als u een gebruiker aan een rol wilt toevoegen, meldt u zich aan bij de Admin Console en selecteert u **[!UICONTROL Add users]**
+Als systeembeheerder, kunt u ontwikkelaartoegang tot een gebruiker verlenen zodat kunnen zij [ tot integratie ](../../../landing/api-authentication.md#generate-credentials) in Adobe Developer Console leiden.
 
-![ product-profiel-toe:voegen-gebruikers ](../../images/flac-ui/product-profile-add-users.png)
+Om een Experience Platform van de gebruiker toe te voegen, login aan de [ Admin Console ](https://adminconsole.adobe.com) en selecteer **[!UICONTROL Add users]**.
 
-Het dialoogvenster **[!UICONTROL Add users to your team]** wordt weergegeven. Voer het e-mailadres, de voornaam (optioneel) en de achternaam (optioneel) van de gebruiker in.
+![ het dashboard van Adobe Admin Console met de Add benadrukte gebruikersoptie.](../../images/flac-ui/product-profile-add-users.png)
 
-Selecteer het potloodpictogram om producten en gebruikersgroepen te selecteren, selecteer **[!UICONTROL Adobe Experience Platform]**, selecteer **[!UICONTROL AEP-Default-All-Users]** en selecteer vervolgens **[!UICONTROL Save]** .
+Het dialoogvenster **[!UICONTROL Add users to your team]** wordt weergegeven. Voer het e-mailadres, de voornaam (optioneel) en de achternaam (optioneel) van de gebruiker in. Selecteer vervolgens **[!UICONTROL Products]** .
 
-![ product-profiel ](../../images/flac-ui/product-profile.png)
+![ Add gebruikers aan uw teamdialoog met de benadrukte gebruikersgebieden en optie van Producten.](../../images/flac-ui/product-profile-add-users-to-your-team.png)
+
+Het dialoogvenster **[!UICONTROL Select products]** wordt weergegeven. Selecteer **[!UICONTROL Adobe Experience Platform]**.
+
+![ de uitgezochte dialoog van producten met Adobe Experience Platform benadrukte.](../../images/flac-ui/product-profile-select-product.png)
+
+Het dialoogvenster **[!UICONTROL Select product profiles]** wordt weergegeven. Selecteer **[!UICONTROL AEP-Default-All-Users]** en selecteer vervolgens **[!UICONTROL Save]** .
+
+![ de Uitgezochte dialoog van productprofielen met AEP-gebrek-Alle-Gebruikers selecteerde en van toepassing benadrukt.](../../images/flac-ui/product-profile-select-product-profiles.png)
+
+Controleer de gegevens en selecteer vervolgens **[!UICONTROL Save]** om de gebruiker toe te voegen.
+
+![ Add gebruikers aan uw teamdialoog met de gebruikersinformatie en gekozen geselecteerde geselecteerde geselecteerde geselecteerde selecties en sparen benadrukte optie, ](../../images/flac-ui/product-profile-save-user.png)
 
 ## Volgende stappen
 
