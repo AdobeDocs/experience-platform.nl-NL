@@ -1,7 +1,8 @@
 ---
 title: Een expertisecentrum inschakelen met behulp van sandboxgereedschappen
 description: Schakel een expertisecentrum in met behulp van sandboxgereedschappen door een 'gouden sandbox'-pakket te maken waarmee u de aanbevolen procedures voor meerdere sandboxen kunt standaardiseren.
-source-git-commit: f0cbee2663682f0afae6d7e4b174f250fcb3df53
+exl-id: 6f242ad5-bb02-4a6d-b255-d196dd5fe4b8
+source-git-commit: d4df5606228347b5fb69fdaa24c637c329099895
 workflow-type: tm+mt
 source-wordcount: '880'
 ht-degree: 0%
@@ -12,7 +13,7 @@ ht-degree: 0%
 
 Schakel een expertisecentrum in met behulp van sandboxgereedschappen door een &#39;gouden sandbox&#39;-pakket te maken waarmee u de aanbevolen procedures voor meerdere sandboxen kunt standaardiseren.
 
-![ Overzicht van het uitvoeren van pakketten over verschillende organisaties ](../images/use-cases/packages-across-orgs.png)
+![ Overzicht van het uitvoeren van pakketten over verschillende organisaties ](../images/use-cases/packages-across-orgs.png){zoomable="yes"}
 
 ## Waarom dit gebruiksgeval overwegen {#why-this-use-case}
 

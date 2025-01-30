@@ -2,9 +2,9 @@
 title: Back-ups maken van objectconfiguraties met behulp van sandboxgereedschappen
 description: Als u sandboxen veilig wilt herstellen en ondersteuning voor versiebeheer wilt toevoegen, maakt u een back-up van objectconfiguraties (of metagegevens) met behulp van gereedschapspakketten van de sandbox. De reserve pakketten verhinderen het verlies van kritieke configuraties zoals schema's, datasets, en publiek, vooral tijdens ontwikkeliteraties.
 exl-id: cccbaaf1-ee68-4a00-9a44-aa5db4a83a14
-source-git-commit: 2a700788d9b59bcdb4195e34d77eccd278803d42
+source-git-commit: d4df5606228347b5fb69fdaa24c637c329099895
 workflow-type: tm+mt
-source-wordcount: '1154'
+source-wordcount: '1152'
 ht-degree: 0%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 Als u sandboxen veilig wilt herstellen en ondersteuning voor versiebeheer wilt toevoegen, maakt u een back-up van objectconfiguraties (of metagegevens) met behulp van gereedschapspakketten van de sandbox. De reserve pakketten verhinderen het verlies van kritieke configuraties zoals schema&#39;s, datasets, en publiek, vooral tijdens ontwikkeliteraties.
 
-![ Overzicht die de voordelen van zandbak toont tooling ](../images/use-cases/tooling-overview.png)
+![ Overzicht die de voordelen van zandbak toont tooling ](../images/use-cases/tooling-overview.png){zoomable="yes"}
 
 ## Waarom dit gebruiksgeval overwegen {#why-this-use-case}
 
@@ -63,9 +63,9 @@ Voordat u begint met het maken van uw back-uppakket, moet u rekening houden met 
 >
 > Als u overweegt het steunen van uw zandbak om het terug te stellen, ben zich bewust van de [ beperkingen ](../ui/user-guide.md#reset-a-sandbox) omringend het terugstellen zandbakken.
 
-### Uw gekozen metagegevens exporteren naar een pakket
+### De gekozen metagegevens exporteren naar een pakket
 
-U kunt nu een back-up van uw sandbox maken via de gebruikersinterface van de sandbox met gereedschappen. In deze stap worden zowel back-ups van een volledige sandbox als back-ups van specifieke objecten gemaakt.
+U kunt nu een back-up van uw sandbox maken via de gebruikersinterface van de sandbox met gereedschappen. In deze stap wordt zowel het maken van een back-up van een volledige sandbox als het maken van een back-up van specifieke objecten behandeld.
 
 >[!NOTE]
 >
