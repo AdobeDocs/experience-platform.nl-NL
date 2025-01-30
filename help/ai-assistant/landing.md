@@ -3,9 +3,9 @@ title: AI Assistant in Adobe Experience Platform-productdocumentatie
 description: Ga aan de slag met AI Assistant in Adobe Experience Platform.
 feature: AI Assistant
 exl-id: bcb86a41-d5d8-4c1a-a86d-79fa0c167bc7
-source-git-commit: 8022195e755df92b7ceacea52214f81593994e2a
+source-git-commit: 96e138cc12fdedaa73e3aaf69341806271413680
 workflow-type: tm+mt
-source-wordcount: '810'
+source-wordcount: '851'
 ht-degree: 1%
 
 ---
@@ -144,6 +144,14 @@ Voor meer informatie, lees de documentatie over [ verifieert AI Hulp antwoorden 
 Bekijk de volgende video om te leren hoe u met AI Assistant een effectievere effectanalyse kunt uitvoeren voordat er wijzigingen in uw gegevensobjecten worden aangebracht.
 
 >[!VIDEO](https://video.tv.adobe.com/v/3441680/?learn=on)
+
+### AI-assistent gebruiken voor Klantenondersteuning
+
+Bekijk de volgende video om te leren hoe u de AI Assistant voor Klantenondersteuning kunt gebruiken om probleemloos problemen op te lossen zonder uw workflows te verlaten.
+
+>[!VIDEO](https://video.tv.adobe.com/v/3443183?learn=on)
+
+Voor meer informatie, lees de documentatie op [ gebruikend AI Medewerker voor de Steun van de Klant ](./new-features/customer-support.md).
 
 ## AI Assistant-casebibliotheek
 
