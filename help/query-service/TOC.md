@@ -5,9 +5,9 @@ breadcrumb-title: Gids voor Query Service
 user-guide-description: Gebruik standaard SQL om gegevens te doorzoeken binnen de data lake in Experience Platform.
 feature: Queries
 role: User,Developer
-source-git-commit: 20869e76976ff3868f1d4dbc7c6d97b58682e5c3
+source-git-commit: e63ecbd14db2e9e4f35fb89aaaa406a4c584416a
 workflow-type: tm+mt
-source-wordcount: '397'
+source-wordcount: '402'
 ht-degree: 11%
 
 ---
@@ -23,6 +23,7 @@ ht-degree: 11%
 - Data Distiller {#data-distiller}
    - [Overzicht](data-distiller/overview.md)
    - [Licentiegebruik](data-distiller/license-usage.md)
+   - [Knopinfo voor maximale waarde](data-distiller/top-tips-to-maximize-value.md)
    - Afgeleide gegevenssets {#derived-datasets}
       - [Overzicht](data-distiller/derived-datasets/overview.md)
       - [Afgeleide datasets maken met SQL](data-distiller/derived-datasets/create-derived-datasets-with-sql.md)
@@ -43,13 +44,13 @@ ht-degree: 11%
    - [Overzicht](advanced-statistics/overview.md)
    - [Functietechniek](advanced-statistics/feature-engineering.md)
    - [Modellen](advanced-statistics/models.md)
-   - [ transformatie van de Eigenschap ](advanced-statistics/feature-transformation.md)
-Modellen implementeren {#implement-models}
+   - [Eigenschaptransformatie](advanced-statistics/feature-transformation.md)
+   - Modellen implementeren {#implement-models}
       - [Modellen implementeren](advanced-statistics/implement-models/implement-models.md)
       - [Regressie](advanced-statistics/implement-models/regression.md)
       - [Classificatie](advanced-statistics/implement-models/classification.md)
-      - [ het Groeperen ](advanced-statistics/implement-models/clustering.md)
-Voorbeelden {#examples}
+      - [Clustering](advanced-statistics/implement-models/clustering.md)
+   - Voorbeelden {#examples}
       - [Bot filteren met behulp van statistieken en machinaal leren](advanced-statistics/examples/statistics-and-ml-bot-filtering.md)
       - [Klantenvertrouwen voorspellen met behulp van op SQL gebaseerde logistieke regressie](advanced-statistics/examples/predict-customer-churn.md)
 - Distiller-publiek voor gegevens {#data-distiller-audiences}
