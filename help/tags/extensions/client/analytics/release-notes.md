@@ -2,10 +2,10 @@
 title: Opmerkingen bij de release Adobe Analytics Extension
 description: De meest recente release bevat informatie over de Adobe Analytics-tagextensie in Adobe Experience Platform.
 exl-id: 3c7b4ec0-4b81-4ef4-b15f-6ad102525840
-source-git-commit: c783906b20db2b86d58aea7b3a94bde007c0a465
+source-git-commit: 5f4e157a39bf927b3821931d55f968862b2ed16d
 workflow-type: tm+mt
-source-wordcount: '1451'
-ht-degree: 1%
+source-wordcount: '1524'
+ht-degree: 2%
 
 ---
 
@@ -16,6 +16,14 @@ Hieronder volgt een lijst met releaseopmerkingen voor de Adobe Analytics-tagexte
 >[!NOTE]
 >
 >De de markeringsuitbreiding van de Analyse als vaak bijgewerkt in antwoord op updates aan de [ bibliotheek van JavaScript van het AppMeasurement ](https://experienceleague.adobe.com/docs/analytics/implementation/js/overview.html). Verwijs naar de [ nota&#39;s van de de versieversie van het AppMeasurement ](https://experienceleague.adobe.com/docs/analytics/implementation/appmeasurement-updates.html) voor details op de specifieke hieronder vermelde versies.
+
+## dinsdag 28 oktober 2024
+
+**Uitbreiding 1.9.6 van Adobe Analytics**
+
+**Eigenschappen**:
+
+* Toegevoegd een nieuwe eigenschap om gebruikers toe te staan om een versie JSON van de [ Vastgestelde Actie van Variabelen ](https://experienceleague.adobe.com/en/docs/experience-platform/tags/extensions/client/analytics/overview#set-variables) te bekijken en uit te geven. De uitbreiding van SDK van het Web van de Adobe omvat ook een actie om [ een analytische variabele ](https://experienceleague.adobe.com/en/docs/experience-platform/tags/extensions/client/web-sdk/data-element-types) te bevolken door JSON te verstrekken. Door JSON-gegevens te kopiëren van de extensie AA naar de extensie Web SDK, kunnen migrerende klanten eenvoudig meerdere instellingen tegelijk overdragen in plaats van elke variabele handmatig toe te voegen.
 
 ## dinsdag 12 augustus 2024
 
@@ -33,7 +41,7 @@ Hieronder volgt een lijst met releaseopmerkingen voor de Adobe Analytics-tagexte
 
 * Geüpgraded aan [ AppMeasurement aan v2.26.0 ](https://github.com/adobe/appmeasurement/releases/tag/v2.26.0).
 
-## 15 september 2023
+## zaterdag 15 september 2023
 
 **Uitbreiding 1.9.3 van Adobe Analytics**
 
@@ -56,7 +64,7 @@ Hieronder volgt een lijst met releaseopmerkingen voor de Adobe Analytics-tagexte
 * Toegevoegde extra fout behandeling voor browsers met gebrek high-entropy [ gebruiker-Agent cliëntwenken ](https://experienceleague.adobe.com/docs/analytics/technotes/client-hints.html) API&#39;s.
 * Veranderde [ POST ](https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods/POST) inhoud-Type kopbal aan gebruik `x-www-form-urlencoded` door gebrek.
 
-## 23 september 2022
+## zaterdag 23 september 2022
 
 **Uitbreiding 1.9.1 van Adobe Analytics**
 
@@ -65,7 +73,7 @@ Hieronder volgt een lijst met releaseopmerkingen voor de Adobe Analytics-tagexte
 * Bijgewerkt naar AppMeasurement v2.23.0.
 * De uitbreiding kan high-entropy [ gebruiker-agent cliëntwenken ](https://developer.mozilla.org/en-US/docs/Web/HTTP/Client_hints#user-agent_client_hints) nu verzamelen zoals gesteund door de recentste versie van AppMeasurement.
 
-## 28 februari 2022
+## dinsdag 28 februari 2022
 
 **Uitbreiding 1.9.0 van Adobe Analytics**
 
@@ -73,7 +81,7 @@ Hieronder volgt een lijst met releaseopmerkingen voor de Adobe Analytics-tagexte
 
 * Enkele foutopsporingsinstructies in het AppMeasurement zijn verwijderd.
 
-## 29 november 2021
+## dinsdag 29 november 2021
 
 **Uitbreiding 1.8.8 van Adobe Analytics**
 
@@ -81,7 +89,7 @@ Hieronder volgt een lijst met releaseopmerkingen voor de Adobe Analytics-tagexte
 
 * Bijgewerkt AppMeasurement naar v2.2.3.
 
-## 16 september 2021
+## vrijdag 16 september 2021
 
 **Uitbreiding 1.8.7 van Adobe Analytics**
 
@@ -156,7 +164,7 @@ Hieronder volgt een lijst met releaseopmerkingen voor de Adobe Analytics-tagexte
 * Selectievakje toegevoegd in de sectie &#39;Cookies&#39; van de extensieconfiguratie waarmee u beveiligde cookies kunt schrijven
 * Drie nieuwe configuraties aan de module van de Audience Manager toegevoegd. Een instelling toegevoegd voor het inschakelen van logbestanden, voor het inschakelen van URL-doelen en voor het inschakelen van cookie-doelen
 
-## 13 november 2019
+## donderdag 13 november 2019
 
 **Uitbreiding 1.8.1 van Adobe Analytics**
 
@@ -164,7 +172,7 @@ Hieronder volgt een lijst met releaseopmerkingen voor de Adobe Analytics-tagexte
 
 * Probleem verholpen waarbij premiumgebeurtenissen en -props niet konden worden opgeslagen.
 
-## 1 november 2019
+## zaterdag 1 november 2019
 
 **Uitbreiding 1.8.0 van Adobe Analytics**
 
@@ -178,7 +186,7 @@ Hieronder volgt een lijst met releaseopmerkingen voor de Adobe Analytics-tagexte
 * Hiermee sorteert u gebeurtenissen, regeleinden en gebeurtenissen numeriek in de weergave Extensie
 * Wijzigingen in het achtergrondschema aangebracht ter ondersteuning van Magento-contextgegevens
 
-## 6 september 2019
+## zaterdag 6 september 2019
 
 **Uitbreiding 1.7.8 van Adobe Analytics**
 
@@ -187,7 +195,7 @@ Hieronder volgt een lijst met releaseopmerkingen voor de Adobe Analytics-tagexte
 * Probleem verholpen waarbij sommige gebruikers de opties van de rapportsuite niet zagen in de vervolgkeuzelijst
 * Probleem verholpen waarbij gebeurtenissen niet correct werden geactiveerd
 
-## 5 september 2019
+## vrijdag 5 september 2019
 
 **Uitbreiding 1.7.7 van Adobe Analytics**
 
@@ -262,7 +270,7 @@ Hieronder volgt een lijst met releaseopmerkingen voor de Adobe Analytics-tagexte
 
 * De extensie werd teruggedraaid naar versie 1.6 nadat een bug in versie 1.7 werd gevonden.
 
-## 11 februari 2019
+## dinsdag 11 februari 2019
 
 **Uitbreiding 1.6 van Adobe Analytics**
 
@@ -275,7 +283,7 @@ Hieronder volgt een lijst met releaseopmerkingen voor de Adobe Analytics-tagexte
 
 * Oplossing voor een conflict met Prototype JS. De extensie Analytics ondersteunt nu standaard prototype.js-bibliotheken.
 
-## 9 november 2018
+## zaterdag 9 november 2018
 
 **Uitbreiding 1.5.1 van Adobe Analytics**
 
@@ -283,7 +291,7 @@ Hieronder volgt een lijst met releaseopmerkingen voor de Adobe Analytics-tagexte
 
 * De DIL-module is gedowngraded naar 7.0 om een probleem op te lossen dat problemen veroorzaakte met analysatiebakens die niet werden geactiveerd
 
-## 5 november 2018
+## dinsdag 5 november 2018
 
 **Uitbreiding 1.5 van Adobe Analytics**
 
@@ -333,7 +341,7 @@ Hieronder volgt een lijst met releaseopmerkingen voor de Adobe Analytics-tagexte
 * Updates AppMeasurement.js tot 2.8.0
 * Voegt steun voor server-kant door:sturen toe
 
-## 8 februari 2018
+## vrijdag 8 februari 2018
 
 **Uitbreiding 1.1 van Adobe Analytics**
 
