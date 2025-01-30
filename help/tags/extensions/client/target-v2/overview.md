@@ -2,10 +2,10 @@
 title: Overzicht van Adobe Target v2-extensie
 description: Meer informatie over de Adobe Target v2-tagextensie in Adobe Experience Platform.
 exl-id: 8f491d67-86da-4e27-92bf-909cd6854be1
-source-git-commit: 88939d674c0002590939004e0235d3da8b072118
+source-git-commit: 5b88692117c984cd6331e7886d5bf0846309acee
 workflow-type: tm+mt
-source-wordcount: '1314'
-ht-degree: 0%
+source-wordcount: '1347'
+ht-degree: 3%
 
 ---
 
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch is omgedoopt tot een reeks technologieën voor gegevensverzameling in Adobe Experience Platform. Diverse terminologische wijzigingen zijn als gevolg hiervan in de productdocumentatie doorgevoerd. Gelieve te verwijzen naar het volgende [ document ](../../../term-updates.md) voor een geconsolideerde verwijzing van de terminologieveranderingen.
+>Adobe Experience Platform Launch is omgedoopt tot een reeks technologieën voor dataverzameling in Adobe Experience Platform.  Als gevolg hiervan zijn er verschillende terminologiewijzigingen in de productdocumentatie doorgevoerd. Raadpleeg het volgende [ document ](../../../term-updates.md) voor een geconsolideerde referentie van de terminologiewijzigingen.
 
 Gebruik deze verwijzing voor informatie over de beschikbare opties wanneer het gebruiken van deze uitbreiding om een regel te bouwen.
 
@@ -69,11 +69,13 @@ Voeg deze actie aan uw markeringsregel toe waar het zinvol is om Doel in de cont
 
 Er is geen configuratie nodig.
 
-### Doel laden met apparaatdefinitie
+### Doel laden met apparaatbeslissingen
 
-Voeg deze actie aan uw markeringsregel toe waar het zinvol is om Doel met [ op-apparatenbeslissing ](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/on-device-decisioning/on-device-decisioning.html) te laden die in de context van uw regel wordt toegelaten. Hierdoor wordt de bibliotheek at.js geladen met apparaatbesluitvorming ingeschakeld op de pagina. In de meeste implementaties moet Doel op elke pagina van uw site worden geladen. De Adobe adviseert gebruikend het Doel van de Lading met de Beslissing van het Apparaat slechts als het door een vraag van het Doel wordt voorafgegaan. Anders, zou u op kwesties zoals de vraag van Analytics kunnen lopen die wordt vertraagd.
+Voeg deze actie aan uw markeringsregel toe waar het zinvol is om Doel met [ op-apparatenbeslissing ](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/on-device-decisioning/on-device-decisioning.html) te laden die in de context van uw regel wordt toegelaten. Hierdoor wordt de bibliotheek at.js geladen met apparaatbesluitvorming ingeschakeld op de pagina. In de meeste implementaties moet Doel op elke pagina van uw site worden geladen. De Adobe adviseert gebruikend het Doel van de Lading met op-apparaat beslissingsactie slechts als het door een vraag van het Doel wordt voorafgegaan. Anders, zou u op kwesties zoals de vraag van Analytics kunnen lopen die wordt vertraagd.
 
-Er is geen configuratie nodig.
+>[!IMPORTANT]
+>
+>Gebruik alleen een verzoek om pagina te laden met een beslissing op het apparaat als dit al is geconfigureerd. Als u deze handeling aan uw regel toevoegt, wordt de definitieve opstarthakkel groter omdat deze de engine voor de beslissingsregels voor apparaten bevat.
 
 ### Params toevoegen aan alle aanvragen
 
