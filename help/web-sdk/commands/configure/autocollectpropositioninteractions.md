@@ -2,7 +2,7 @@
 title: autoCollectPropositionInteractions
 description: Leer hoe te om het Web SDK van het Experience Platform te vormen om verbindingsgegevens automatisch te verzamelen.
 exl-id: c70db76a-3f2f-45a6-86ab-36efcb18d20f
-source-git-commit: 405f161dee633b7230be944cd17093616826e27f
+source-git-commit: 55c656e7fd08e98b75c20f0688a6697baf533291
 workflow-type: tm+mt
 source-wordcount: '593'
 ht-degree: 0%
@@ -123,11 +123,11 @@ alloy("sendEvent", {
 ## Automatische voorstellingen en interacties inschakelen en klikken op bijhouden via de Web SDK-tagextensie {#tag-extension}
 
 1. Login aan [ experience.adobe.com ](https://experience.adobe.com) gebruikend uw referentie van Adobe ID.
-2. Navigeer aan **de Inzameling van Gegevens** > **Markeringen**.
-3. Selecteer de gewenste eigenschap voor tags.
-4. Navigeer aan **Uitbreidingen**, dan selecteren **** op de kaart van SDK van het Web van Adobe Experience Platform vormt.
-5. De rol neer aan de **[!UICONTROL Data Collection]** sectie, dan selecteert checkbox **laat voorstellingen en interactie het volgen** toe.
-6. Selecteer **sparen**, dan publiceer uw veranderingen.
+1. Navigeer aan **de Inzameling van Gegevens** > **Markeringen**.
+1. Selecteer de gewenste eigenschap voor tags.
+1. Navigeer aan **Uitbreidingen**, dan selecteren **** op de kaart van SDK van het Web van Adobe Experience Platform vormt.
+1. De rol neer aan de **[!UICONTROL Data Collection]** sectie, dan selecteert checkbox **laat voorstellingen en interactie het volgen** toe.
+1. Selecteer **sparen**, dan publiceer uw veranderingen.
 
 ## Automatische proposities en interactiekoppelingen bijhouden inschakelen via de Web SDK JavaScript-bibliotheek {#library}
 
