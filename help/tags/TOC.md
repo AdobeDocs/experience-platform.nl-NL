@@ -6,9 +6,9 @@ user-guide-description: Leer analyses, marketing en advertenties te implementere
 feature: Tags
 solution: Data Collection
 role: Developer
-source-git-commit: 82d6d2e7d0d7f0f9484c4ebcd34339fd63e04b59
+source-git-commit: 1b2f8e5a9cc85887efe9d623baa346956ae5d93d
 workflow-type: tm+mt
-source-wordcount: '778'
+source-wordcount: '775'
 ht-degree: 15%
 
 ---
@@ -100,7 +100,7 @@ ht-degree: 15%
          * [Overzicht](./extensions/client/platform-demo/overview.md)
       * Adobe Experience Platform Web SDK {#web-sdk}
          * [Overzicht](./extensions/client/web-sdk/overview.md)
-         * [De webSDK-tagextensie configureren](./extensions/client/web-sdk/web-sdk-extension-configuration.md)
+         * [De Web SDK-tagextensie configureren](./extensions/client/web-sdk/web-sdk-extension-configuration.md)
          * [Gebeurtenistypen](./extensions/client/web-sdk/event-types.md)
          * [Typen handelingen](./extensions/client/web-sdk/action-types.md)
          * [Gegevenstelelementtypen](./extensions/client/web-sdk/data-element-types.md)
@@ -206,9 +206,8 @@ ht-degree: 15%
       * [ de Playback van Vimeo ](https://exchange.adobe.com/apps/ec/108937)
       * [ de VELLINGEN van het Web ](https://exchange.adobe.com/apps/ec/106769)
       * [ XDM Composer ](https://exchange.adobe.com/apps/ec/106062)
-      * [ Yahoo Dot ](https://exchange.adobe.com/apps/ec/106062)
       * [ Yext Omzetting die ](https://exchange.adobe.com/apps/ec/103174) volgt
-      * [[!DNL Youtube]  Playback ](https://exchange.adobe.com/apps/ec/103174)
+      * [[!DNL Youtube]  Playback ](https://exchange.adobe.com/apps/ec/104160)
       * [!DNL YouTube] video bijhouden {#youtube}
          * [Overzicht](./extensions/client/youtube/overview.md)
          * [Aanvullende informatie](./extensions/client/youtube/release-notes.md)
