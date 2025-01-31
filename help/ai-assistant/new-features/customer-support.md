@@ -3,9 +3,9 @@ title: AI-assistent voor Klantenondersteuning
 description: Leer hoe u AI Medewerker kunt gebruiken om het oplossen van problemen en het proces van het etiketteren van de klantensteun te stroomlijnen.
 badge: Alpha
 exl-id: 263b8a44-8902-42b9-8390-d7da8e9b5129
-source-git-commit: 88c4ba5fd7d5cd4fdd1e1da3f2eac43b03149e5e
+source-git-commit: e224716f8fba59529c5d7634d4b4a3013a0986a3
 workflow-type: tm+mt
-source-wordcount: '349'
+source-wordcount: '374'
 ht-degree: 0%
 
 ---
@@ -56,3 +56,8 @@ Naadloos de status van steunkwesties volgen.
    * &quot;Wat is de update op ticket E-67890?&quot;
 
 Neem contact op met het accountteam van uw Adobe om toegang te krijgen tot AI Assistant voor Klantenondersteuning.
+
+Bekijk de volgende video voor meer informatie over het gebruik van AI Assistant voor Klantenondersteuning om probleemloos problemen op te lossen zonder uw workflows te verlaten.
+
+>[!VIDEO](https://video.tv.adobe.com/v/3443183?learn=on)
+
