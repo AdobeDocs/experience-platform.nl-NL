@@ -1,16 +1,16 @@
 ---
 title: Amazon Adds
 description: Amazon Ads biedt verschillende opties om geregistreerde verkopers, verkopers, verkopers van boeken, Kindle Direct Publishing-auteurs (KDP), ontwikkelaars van apps en/of bureaus te helpen uw reclamedoelstellingen te bereiken. De integratie van Amazon Ads met Adobe Experience Platform biedt kant-en-klare integratie voor Amazon Ads-producten, waaronder de Amazon DSP (ADSP). Met de Amazon Ads-bestemming in Adobe Experience Platform kunnen gebruikers adverteerdersoorten definiëren voor doelwitten en activering op de Amazon-DSP.
-last-substantial-update: 2024-09-20T00:00:00Z
+last-substantial-update: 2025-01-07T00:00:00Z
 exl-id: 724f3d32-65e0-4612-a882-33333e07c5af
-source-git-commit: 2b84b5106105339ab243a9f4412b47692caedf3c
+source-git-commit: 8543f76565f22b8cdfb0be71a1332696bc079ec7
 workflow-type: tm+mt
-source-wordcount: '1718'
-ht-degree: 0%
+source-wordcount: '1784'
+ht-degree: 1%
 
 ---
 
-# (Beta) Amazon Ads-verbinding {#amazon-ads}
+# Amazon Ads-verbinding {#amazon-ads}
 
 ## Overzicht {#overview}
 
@@ -24,7 +24,7 @@ AMC verenigt unieke signalen van Amazon-eigendommen en -bediende eigenschappen d
 
 >[!IMPORTANT]
 >
->Deze doelconnector en documentatiepagina worden gemaakt en onderhouden door het team van *[!DNL Amazon Ads]* . Dit is momenteel een bètaproduct en de functionaliteit kan worden gewijzigd. Voor vragen of verzoeken om updates kunt u rechtstreeks contact opnemen via *`amc-support@amazon.com`.*
+>Deze doelconnector en documentatiepagina worden gemaakt en onderhouden door het team van *[!DNL Amazon Ads]* . Voor vragen of verzoeken om updates kunt u rechtstreeks contact opnemen via *`amc-support@amazon.com`.*
 
 ## Gebruiksscenario’s {#use-cases}
 
@@ -85,8 +85,6 @@ Als u voor verificatie bij het doel wilt zorgen, vult u de vereiste velden in en
 
 U gaat naar de verbindingsinterface van [!DNL Amazon Ads] waar u eerst de adverteerderaccounts selecteert waarmee u verbinding wilt maken. Als er verbinding is, wordt u weer omgeleid naar Adobe Experience Platform met een nieuwe verbinding, die wordt geleverd met de id van het door u geselecteerde Advertiser-account. Selecteer de juiste Advertiser-account op het scherm met de doelconfiguratie om door te gaan.
 
-* **[!UICONTROL Bearer token]**: vul de token aan voor de toonder om te verifiëren bij het doel.
-
 ### Doelgegevens invullen {#destination-details}
 
 Als u details voor de bestemming wilt configureren, vult u de vereiste en optionele velden hieronder in. Een sterretje naast een veld in de gebruikersinterface geeft aan dat het veld verplicht is.
@@ -101,9 +99,13 @@ Als u details voor de bestemming wilt configureren, vult u de vereiste en option
 
 * **[!UICONTROL Advertiser Region]**: selecteer het juiste gebied waarin uw adverteerder wordt gehost. Voor meer informatie over de markten die door elk gebied worden gesteund, bezoek de [ documentatie van Amazon Ads ](https://advertising.amazon.com/API/docs/en-us/info/api-overview#api-endpoints).
 
+>[!IMPORTANT]
+>
+>De update die de **[!UICONTROL Amazon Ads Consent Signal]** moet bevatten, wordt gepland voor 7 februari 2025.
 
+* **[!UICONTROL Amazon Ads Consent Signal]**: Bevestig dat alle gegevens die via deze verbinding worden verzonden, hebben ingestemd met het gebruik van persoonsgegevens voor reclamedoeleinden. &quot;GRANTED&quot; geeft aan dat Amazon ermee instemt de persoonsgegevens van de klant te gebruiken voor reclame. De toegestane waarden zijn &quot;GRANTED&quot; en &quot;DENIED&quot;. Alle records die via verbindingen met &quot;DENIED&quot; worden verzonden, worden geweigerd voor verder gebruik in Amazon Ads.
 
-![ vorm nieuwe bestemming ](../../assets/catalog/advertising/amazon_ads_image_4.png)
+![ vorm nieuwe bestemming ](../../assets/catalog/advertising/amazon-ads/amazon_ads_consent_input.png)
 
 ### Waarschuwingen inschakelen {#enable-alerts}
 
@@ -124,7 +126,7 @@ Lees [ activeer profielen en publiek aan het stromen publiek uitvoerbestemmingen
 
 De verbinding van [!DNL Amazon Ads] steunt gehakt e-mailadres en gehashte telefoonaantallen voor overeenstemmende identiteit. In de onderstaande schermafbeelding ziet u een voorbeeld dat overeenkomt met de [!DNL Amazon Ads] -verbinding:
 
-![ Adobe aan de afbeelding van Advertenties van Amazon ](../../assets/catalog/advertising/amazon_ads_image_2.png)
+![ Adobe aan de afbeelding van Advertenties van Amazon ](../../assets/catalog/advertising/amazon-ads/amazon_ads_image_2.png)
 
 * Als u gehashte e-mailadressen wilt toewijzen, selecteert u de naamruimte `Email_LC_SHA256` identity als bronveld.
 * Als u gehashte telefoonnummers wilt toewijzen, selecteert u de naamruimte `Phone_SHA256` identity als bronveld.
@@ -143,7 +145,7 @@ Nadat u het publiek hebt geüpload, kunt u controleren of het publiek correct is
 
 Navigeer naar uw **[!UICONTROL Advertiser ID]** > **[!UICONTROL Audiences]** > **[!UICONTROL Advertiser Audiences]** . Als het publiek is gemaakt en het minimale aantal publieksleden bereikt, wordt de status `Active` weergegeven. Meer informatie over de grootte en het bereik van uw publiek vindt u in het deelvenster Voorspeld Bereik aan de rechterkant van de gebruikersinterface van Amazon DSP.
 
-![ Amazon DSP de bevestiging van de publieksverwezenlijking ](../../assets/catalog/advertising/amazon_ads_image_3.png)
+![ Amazon DSP de bevestiging van de publieksverwezenlijking ](../../assets/catalog/advertising/amazon-ads/amazon_ads_image_3.png)
 
 **Voor[!DNL Amazon Marketing Cloud]**
 
@@ -151,8 +153,7 @@ Zoek in de linkerschemabrowser naar uw publiek onder **[!UICONTROL Advertiser Up
 
 `select count(user_id) from adobeexperienceplatf_audience_view_000xyz where external_audience_segment_name = '1234567'`
 
-![ de bevestiging van de de publieksverwezenlijking van de Marketing Cloud van Amazon ](../../assets/catalog/advertising/amazon_ads_image_5.png)
-
+![ de bevestiging van de de publieksverwezenlijking van de Marketing Cloud van Amazon ](../../assets/catalog/advertising/amazon-ads/amazon_ads_image_5.png)
 
 ## Gegevensgebruik en -beheer {#data-usage-governance}
 
@@ -172,7 +173,8 @@ Deze sectie vangt de functionaliteit en de significante documentatieupdates aan 
 
 | Releasedatum | Type bijwerken | Beschrijving |
 |---|---|---|
-| Mei 2024 | Bijwerken van functionaliteit en documentatie | De toewijzingsoptie voor het exporteren van de parameter `countryCode` naar Amazon Ads is toegevoegd. Gebruik `countryCode` in de [ kaartstap ](#map) om uw tarieven van de identiteitsgelijke met Amazon te verbeteren. |
+| Februari 2025 | De vereiste om **[!UICONTROL Amazon Ads Consent Signal]** toe te voegen aan het exporteren van gegevens is toegevoegd en de bestemming van bèta naar algemeen beschikbaar bevorderd. |
+| Mei 2024 | Bijwerken van functionaliteit en documentatie | De toewijzingsoptie voor het exporteren van de parameter `countryCode` naar Amazon Ads is toegevoegd. Gebruik `countryCode` in de [toewijzingsstap](#map) om uw afstemmingspercentages voor identiteiten met Amazon te verbeteren. |
 | Maart 2024 | Bijwerken van functionaliteit en documentatie | De optie voor het exporteren van soorten publiek die in [!DNL Amazon Marketing Cloud] (AMC) moeten worden gebruikt, is toegevoegd. |
 | Mei 2023 | Bijwerken van functionaliteit en documentatie | <ul><li>Toegevoegde steun voor de selectie van het Gebied Advertiser in het [ werkschema van de bestemmingsverbinding ](#destination-details).</li><li>Bijgewerkte documentatie waarin de toevoeging van de selectie van het advertentiegebied wordt weergegeven. Voor meer informatie bij het selecteren van het correcte Gebied Advertiser, zie de [ documentatie van Amazon ](https://advertising.amazon.com/API/docs/en-us/info/api-overview#api-endpoints).</li></ul> |
 | Maart 2023 | Eerste release | Eerste doelversie en documentatie gepubliceerd. |
