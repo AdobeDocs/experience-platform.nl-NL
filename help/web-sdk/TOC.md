@@ -6,7 +6,7 @@ breadcrumb-title: Handleiding voor Web SDK
 user-guide-description: Interactie met Experience Cloud-services via het Edge-netwerk.
 feature: Web SDK
 role: Developer
-source-git-commit: 7231d3a5ad9553707392c32004d02e355e3c919f
+source-git-commit: d5bf1b207900009829454d0b7aa095a08c1e1718
 workflow-type: tm+mt
 source-wordcount: '229'
 ht-degree: 19%
@@ -20,13 +20,13 @@ ht-degree: 19%
 * [Aanvullende informatie](release-notes.md)
 * Web SDK-installatie {#install}
    * [Overzicht](install/overview.md)
-   * [De SDK van het web installeren met de tagextensie](install/extension.md)
-   * [De SDK van het web installeren met de JavaScript-bibliotheek](install/library.md)
-   * [De SDK van het web installeren met behulp van het NPM-pakket](install/npm.md)
+   * [Web SDK installeren met de tagextensie](install/extension.md)
+   * [Web SDK installeren met de JavaScript-bibliotheek](install/library.md)
+   * [De Web SDK installeren met het NPM-pakket](install/npm.md)
 * Opdrachten {#commands}
    * configure {#configure}
       * [Overzicht](commands/configure/overview.md)
-      * [autoTrackPropositionInteractionsEnabled](commands/configure/autotrackpropositioninteractionsenabled.md)
+      * [autoCollectPropositionInteractions](commands/configure/autocollectpropositioninteractions.md)
       * [clickCollectionEnabled](commands/configure/clickcollectionenabled.md)
       * [clickCollection](commands/configure/clickcollection.md)
       * [context](commands/configure/context.md)
@@ -81,7 +81,7 @@ ht-degree: 19%
       * [Implementatie van één pagina](personalization/adobe-target/spa-implementation.md)
       * [Toegang krijgen tot reactietokens](personalization/adobe-target/accessing-response-tokens.md)
       * [Dbox-id van derden gebruiken](personalization/adobe-target/using-mbox-3rdpartyid.md)
-      * [Het vergelijken van de bibliotheek at.js met het Web SDK](personalization/adobe-target/web-sdk-atjs-comparison.md)
+      * [De bibliotheek at.js vergelijken met de Web SDK](personalization/adobe-target/web-sdk-atjs-comparison.md)
       * Analytics for Target (A4T) logging {#a4t}
          * [Overzicht](personalization/adobe-target/analytics-logging/overview.md)
          * [Logboekregistratie op de client](personalization/adobe-target/analytics-logging/client-side.md)
