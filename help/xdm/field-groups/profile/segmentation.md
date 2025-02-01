@@ -3,9 +3,9 @@ solution: Experience Platform
 title: Segment Membership Details Schema Field Group
 description: Leer over de het schemagebiedgroep van de Details van het Lidmaatschap van het Segment.
 exl-id: 4d463f3a-2247-4307-8afe-9527e7fd72a7
-source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
+source-git-commit: 1d1224b263b55b290d2cac9c07dfd1b852c4cef5
 workflow-type: tm+mt
-source-wordcount: '392'
+source-wordcount: '396'
 ht-degree: 0%
 
 ---
@@ -23,7 +23,7 @@ ht-degree: 0%
 >
 >Hoewel het veld `segmentMembership` handmatig aan het profielschema moet worden toegevoegd met behulp van deze veldgroep, mag u niet handmatig proberen dit veld te vullen of bij te werken. Het systeem werkt automatisch de `segmentMembership` -kaart voor elk profiel bij terwijl segmentatietaken worden uitgevoerd.
 
-<img src="../../images/data-types/profile-segmentation.png" width="400" /><br />
+![ profielsegmentatie ](../../images/data-types/profile-segmentation.png) {width= 400}
 
 | Eigenschap | Gegevenstype | Beschrijving |
 | --- | --- | --- |

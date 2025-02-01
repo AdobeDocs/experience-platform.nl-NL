@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Gegevenstype interessdetails
 description: Meer informatie over het XDM-gegevenstype Point of Interest Details.
 exl-id: cab5463b-97a0-400d-a00c-0cd8bf9301a5
-source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
+source-git-commit: 1d1224b263b55b290d2cac9c07dfd1b852c4cef5
 workflow-type: tm+mt
-source-wordcount: '168'
+source-wordcount: '170'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 [!UICONTROL Point of interest details] is een standaard XDM-gegevenstype dat de geografische gegevens beschrijft waar een gebeurtenis werd waargenomen.
 
-<img src="../images/data-types/poi-details.png" width="550" /><br />
+![](../images/data-types/poi-details.png){width=550}
 
 | Eigenschap | Gegevenstype | Beschrijving |
 | --- | --- | --- |

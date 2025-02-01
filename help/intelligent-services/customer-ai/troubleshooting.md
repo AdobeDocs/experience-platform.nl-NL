@@ -6,9 +6,9 @@ title: Probleemoplossing van AI-fouten van klant
 description: Zoek antwoorden op algemene fouten in Customer AI.
 type: Documentation
 exl-id: 37ff4e85-da92-41ca-afd4-b7f3555ebd43
-source-git-commit: e028fbb82b37b3940b308a860c26f8b5f9884d3a
+source-git-commit: 1d1224b263b55b290d2cac9c07dfd1b852c4cef5
 workflow-type: tm+mt
-source-wordcount: '1716'
+source-wordcount: '1720'
 ht-degree: 0%
 
 ---
@@ -21,7 +21,7 @@ De AI van de klant toont fouten wanneer de modelopleiding, het scoren, en de con
 
 Als **[!UICONTROL Failed]** of **[!UICONTROL Training issue]** wordt weergegeven, kunt u de uitvoerstatus selecteren om een zijpaneel te openen. Het zijpaneel bevat de **[!UICONTROL Last run status]** en **[!UICONTROL Last run details]** . **[!UICONTROL Last run details]** bevat informatie over de reden waarom de uitvoering is mislukt. Als de AI van de Klant geen details over uw fout kan verstrekken, contacteer steun met de foutencode die verstrekt wordt.
 
-<img src="./images/errors/last-run-details.png" width="300" /><br />
+![](./images/errors/last-run-details.png){width=300}
 
 ## Kan geen toegang krijgen tot Customer AI in Chrome-incognito
 
@@ -39,7 +39,7 @@ Als u dit probleem wilt oplossen, moet u experience.adobe.com toevoegen als een 
 
 Als u de fout &quot;[!UICONTROL Model Quality is poor. We recommend creating a new app with the modified configuration]&quot; ontvangt. Volg de onderstaande aanbevolen stappen om problemen op te lossen.
 
-<img src="./images/errors/model-quality.png" width="300" /><br />
+![](./images/errors/model-quality.png){width=300}
 
 ### Aanbevolen correctie
 

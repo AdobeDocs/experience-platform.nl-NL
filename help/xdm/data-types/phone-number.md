@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Gegevenstype telefoonnummer
 description: Leer over het het gegevenstype van het Aantal van de Telefoon XDM.
 exl-id: b84e48f9-bbb4-4b8b-9476-4bc1c455ecfd
-source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
+source-git-commit: 1d1224b263b55b290d2cac9c07dfd1b852c4cef5
 workflow-type: tm+mt
-source-wordcount: '183'
+source-wordcount: '185'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 [!UICONTROL Phone number] is een standaard XDM gegevenstype dat de details van een telefoonaantal beschrijft.
 
-<img src="../images/data-types/phone-number.png" width="600" /><br />
+![](../images/data-types/phone-number.png){width=600}
 
 | Eigenschap | Beschrijving |
 | --- | --- |

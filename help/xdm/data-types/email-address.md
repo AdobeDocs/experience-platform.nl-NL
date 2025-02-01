@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Gegevenstype e-mailadres
 description: Leer over het E-mailadres XDM gegevenstype.
 exl-id: 1364df42-f89f-4f48-bcda-5332f3828326
-source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
+source-git-commit: 1d1224b263b55b290d2cac9c07dfd1b852c4cef5
 workflow-type: tm+mt
-source-wordcount: '203'
+source-wordcount: '205'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 [!UICONTROL Email address] is een standaard XDM-gegevenstype (Experience Data Model) waarmee de details van een e-mailadres worden beschreven.
 
-<img src="../images/data-types/email-address.png" width="450" /><br />
+![](../images/data-types/email-address.png){width=450}
 
 | Eigenschap | Beschrijving |
 | --- | --- |

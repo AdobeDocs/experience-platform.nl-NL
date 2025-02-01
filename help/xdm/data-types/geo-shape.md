@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Gegevenstype Geo-vorm
 description: Leer meer over het gegevenstype Geo Shape XDM.
 exl-id: 50b9d783-a555-45eb-b154-7dc71389e224
-source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
+source-git-commit: 1d1224b263b55b290d2cac9c07dfd1b852c4cef5
 workflow-type: tm+mt
-source-wordcount: '228'
+source-wordcount: '230'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 [!UICONTROL Geo Shape] is een standaard XDM gegevenstype dat de vorm van een geografisch gebied beschrijft. Dit gegevenstype is gebaseerd op de openbare die specificatie op [ wordt gedocumenteerd schema.org ](https://schema.org/GeoShape).
 
-<img src="../images/data-types/geo-shape.png" width="500" /><br />
+![](../images/data-types/geo-shape.png){width=500}
 
 | Eigenschap | Gegevenstype | Beschrijving |
 | --- | --- | --- |

@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Gegevenstype Geo-coördinaten
 description: Meer informatie over het gegevenstype Geo Coordinates XDM.
 exl-id: 3c80eb44-852f-4a95-bd13-b6197ffe62da
-source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
+source-git-commit: 1d1224b263b55b290d2cac9c07dfd1b852c4cef5
 workflow-type: tm+mt
-source-wordcount: '118'
+source-wordcount: '120'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 [!UICONTROL Geo Coordinates] is een standaard XDM gegevenstype dat de geografische coördinaten van een plaats beschrijft. Dit gegevenstype is gebaseerd op de openbare die specificatie op [ wordt gedocumenteerd schema.org ](https://schema.org/GeoCoordinates).
 
-<img src="../images/data-types/geo-coordinates.png" width="400" /><br />
+![](../images/data-types/geo-coordinates.png){width=400}
 
 | Eigenschap | Gegevenstype | Beschrijving |
 | --- | --- | --- |

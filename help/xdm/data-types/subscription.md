@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Gegevenstype abonnement
 description: Leer over het gegevenstype van het Gegevensmodel van de Ervaring van de Abonnement (XDM).
 exl-id: 6fd1e073-441b-45f0-bb4f-54f51ab18694
-source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
+source-git-commit: 1d1224b263b55b290d2cac9c07dfd1b852c4cef5
 workflow-type: tm+mt
-source-wordcount: '383'
+source-wordcount: '385'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 [!UICONTROL Subscription] is een standaardgegevenstype van het Gegevensmodel van de Ervaring (XDM) dat vergunning gegeven aanspraken op software, de diensten, of goederen beschrijft die op tijd of gebruik worden gebruikt.
 
-<img src="../images/data-types/subscription-data-type.png" width="500" /><br />
+![](../images/data-types/subscription-data-type.png){width=500}
 
 | Eigenschap | Gegevenstype | Beschrijving |
 | --- | --- | --- |

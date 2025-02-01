@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Detailsveldgroep eindgebruiker - ID
 description: Meer informatie over de veldgroep Eindgebruikersdetails van het detailschema.
 exl-id: ff5b74f4-7700-4d10-821e-b50f80ea8c05
-source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
+source-git-commit: 1d1224b263b55b290d2cac9c07dfd1b852c4cef5
 workflow-type: tm+mt
-source-wordcount: '192'
+source-wordcount: '194'
 ht-degree: 0%
 
 ---
@@ -20,7 +20,7 @@ ht-degree: 0%
 
 [!UICONTROL End User ID Details] is een standaardgroep van het schemagebied voor de [[!DNL XDM ExperienceEvent]  klasse ](../../classes/experienceevent.md), die wordt gebruikt om de identiteitsinformatie van een individu over verscheidene toepassingen van de Adobe te beschrijven. De veldgroep biedt een `endUserIDs` -object op hoofdniveau dat zelf een `_experience` -veld met het kenmerk Alleen-lezen bevat waarvan de waarden automatisch worden bijgewerkt terwijl er gegevens worden ingevoerd.
 
-<img src="../../images/field-groups/enduserids.png" width="700" /><br />
+![](../../images/field-groups/enduserids.png){width=700}
 
 | Eigenschap | Gegevenstype | Beschrijving |
 | --- | --- | --- |

@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Privacy-taken beheren in de gebruikersinterface van de Privacy Service
 description: Leer hoe u de gebruikersinterface van de Privacy Service gebruikt om privacyverzoeken in verschillende Experiencen Cloud te coördineren en te controleren.
 exl-id: aa8b9f19-3e47-4679-9679-51add1ca2ad9
-source-git-commit: c870b6be603073d6dd909b272c619deb5b246f05
+source-git-commit: 1d1224b263b55b290d2cac9c07dfd1b852c4cef5
 workflow-type: tm+mt
-source-wordcount: '1668'
+source-wordcount: '1684'
 ht-degree: 0%
 
 ---
@@ -159,29 +159,29 @@ Selecteer **[!UICONTROL Create Request]** onder de widget Statusrapport aan de r
 
 Het dialoogvenster **[!UICONTROL Create Request]** wordt geopend met de beschikbare opties voor het indienen van een aanvraag voor een privacytaak voor het momenteel geselecteerde regulatietype.
 
-<img src="../images/user-guide/request-builder.png" width="500" /><br/>
+![](../images/user-guide/request-builder.png){width=500}
 
 Selecteer de **[!UICONTROL Job Type]** van de aanvraag (&quot;Verwijderen&quot; of &quot;Toegang&quot;) en een of meer beschikbare producten in de lijst.
 
 Privacy Service ondersteunt twee soorten taakaanvragen voor persoonlijke gegevens: [!UICONTROL Access] (lezen) en/of [!UICONTROL Delete] . U kunt een verzoek indienen om alle informatie in het product te ontvangen die betrekking heeft op het onderwerp van het onderzoek, of u kunt verzoeken om alle informatie te schrappen die betrekking heeft op het onderwerp van het onderzoek.
 
-<img src="../images/user-guide/type-and-products.png" width="500" /><br/>
+![](../images/user-guide/type-and-products.png){width=500}
 
 Selecteer onder **[!UICONTROL Namespace type]** het juiste naamruimtetype voor de klant-id&#39;s die naar [!DNL Privacy Service] worden verzonden.
 
-<img src="../images/user-guide/namespace-type.png" width="500" /><br/>
+![](../images/user-guide/namespace-type.png){width=500}
 
 Wanneer het gebruiken van het standaard namespace type, selecteer een namespace van het drop-down menu (e-mail, ECID, of STEUN), dan typ de waarden van identiteitskaart in textbox aan het recht, drukkend **\ &lt;enter>** voor elke identiteitskaart om het aan de lijst toe te voegen.
 
-<img src="../images/user-guide/standard-namespace.png" width="500" /><br/>
+![](../images/user-guide/standard-namespace.png){width=500}
 
 Wanneer u het aangepaste naamruimtetype gebruikt, moet u de naamruimte handmatig typen voordat u de onderstaande id-waarden opgeeft.
 
-<img src="../images/user-guide/custom-namespace.png" width="500" /><br/>
+![](../images/user-guide/custom-namespace.png){width=500}
 
 Selecteer **[!UICONTROL Create]** als u klaar bent.
 
-<img src="../images/user-guide/request-builder-create.png" width="500" /><br/>
+![](../images/user-guide/request-builder-create.png){width=500}
 
 Het dialoogvenster verdwijnt en de nieuwe taak (of taken) worden samen met de huidige verwerkingsstatus weergegeven in de widget Taakverzoeken.
 
@@ -195,12 +195,12 @@ Selecteer de pijl naast **[!UICONTROL Create Request]** onder de widget Statusra
 
 Het dialoogvenster **[!UICONTROL Upload JSON]** wordt weergegeven en geeft u een venster waarin u uw JSON-bestand kunt slepen en neerzetten.
 
-<img src="../images/user-guide/upload-json.png" width="500" /><br/>
+![](../images/user-guide/upload-json.png){width=500}
 
 Als u geen JSON-bestand hebt om te uploaden, selecteert u **[!UICONTROL Download Adobe-GDPR-Request.json]** om een sjabloon te downloaden die u kunt vullen op basis van de waarden die u van de betrokkenen hebt verzameld.
 
 
-<img src="../images/user-guide/privacy-template.png" width="500" /><br/>
+![](../images/user-guide/privacy-template.png){width=500}
 
 
 Zoek het JSON-bestand op uw computer en sleep het naar het dialoogvenster. Als het uploaden is voltooid, wordt de bestandsnaam weergegeven in het dialoogvenster. U kunt desgewenst meer JSON-bestanden toevoegen door deze naar het dialoogvenster te slepen.

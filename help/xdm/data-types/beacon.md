@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Gegevenstype baken
 description: Meer informatie over de klasse XDM Individual Profile.
 exl-id: a3767c8d-a009-49b4-81a4-b084b6e5101a
-source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
+source-git-commit: 1d1224b263b55b290d2cac9c07dfd1b852c4cef5
 workflow-type: tm+mt
-source-wordcount: '230'
+source-wordcount: '232'
 ht-degree: 1%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 1%
 
 [!UICONTROL Beacon] is een standaard XDM gegevenstype dat het draadloze apparaat beschrijft dat identiteitsinformatie aan mobiele toepassingen meedeelt aangezien de mobiele apparaten binnen waaier vallen.
 
-<img src="../images/data-types/beacon.png" width="450" /><br />
+![](../images/data-types/beacon.png){width=450}
 
 | Eigenschap | Gegevenstype | Beschrijving |
 | --- | --- | --- |

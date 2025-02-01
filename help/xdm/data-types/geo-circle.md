@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Gegevenstype Geo-cirkel
 description: Meer informatie over het gegevenstype Geo Circle XDM.
 exl-id: fa041f4f-9955-44e9-b235-a643e07d402c
-source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
+source-git-commit: 1d1224b263b55b290d2cac9c07dfd1b852c4cef5
 workflow-type: tm+mt
-source-wordcount: '118'
+source-wordcount: '120'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 [!UICONTROL Geo Circle] is een standaard XDM gegevenstype dat cirkelvormig geografisch gebied beschrijft, gegeven een bepaalde straal gecentreerd op een specifieke reeks coördinaten. Dit gegevenstype is gebaseerd op de openbare die specificatie op [ wordt gedocumenteerd schema.org ](https://schema.org/GeoCircle).
 
-<img src="../images/data-types/geo-circle.png" width="400" /><br />
+![](../images/data-types/geo-circle.png){width=400}
 
 | Eigenschap | Gegevenstype | Beschrijving |
 | --- | --- | --- |

@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Gegevenstype naam persoon
 description: Meer informatie over het XDM-gegevenstype Personaam.
 exl-id: 5cf55fb1-b6b0-4d1c-93c3-7e2b7766599e
-source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
+source-git-commit: 1d1224b263b55b290d2cac9c07dfd1b852c4cef5
 workflow-type: tm+mt
-source-wordcount: '226'
+source-wordcount: '228'
 ht-degree: 0%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 0%
 
 Daarnaast biedt het gegevenstype een aantal optionele eigenschappen die kunnen worden gebruikt in situaties die alleen een fragment met de volledige naam vereisen, zoals het maken van een formele of informele begroeting.
 
-<img src="../images/data-types/person-name.png" width="500" /><br />
+![](../images/data-types/person-name.png){width=500}
 
 | Eigenschap | Beschrijving |
 | --- | --- |

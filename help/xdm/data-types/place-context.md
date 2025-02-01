@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Contextgegevenstype plaatsen
 description: Meer informatie over het XDM-gegevenstype Context plaatsen.
 exl-id: d7cf7366-0136-49ee-84d2-ec663db66eb4
-source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
+source-git-commit: 1d1224b263b55b290d2cac9c07dfd1b852c4cef5
 workflow-type: tm+mt
-source-wordcount: '147'
+source-wordcount: '149'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 [!UICONTROL Place context] is een standaard XDM-gegevenstype dat de locatie van een waargenomen gebeurtenis beschrijft, inclusief informatie over punten en geografische coördinaten.
 
-<img src="../images/data-types/place-context.png" width="500" /><br />
+![](../images/data-types/place-context.png){width=500}
 
 | Eigenschap | Gegevenstype | Beschrijving |
 | --- | --- | --- |
