@@ -2,10 +2,10 @@
 title: Snelstartgids
 description: Leer hoe u snel aan de slag kunt met tags in Adobe Experience Platform.
 exl-id: 490ee344-3b18-4189-9293-2378f86fb10d
-source-git-commit: 60d88be5d710314cdc6900f4b63643c740b91fa6
+source-git-commit: 8c881d99554a8694da79bdc29ad30ebbc870db20
 workflow-type: tm+mt
 source-wordcount: '1517'
-ht-degree: 0%
+ht-degree: 3%
 
 ---
 
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch is omgedoopt tot een reeks technologieën voor gegevensverzameling in Adobe Experience Platform. Diverse terminologische wijzigingen zijn als gevolg hiervan in de productdocumentatie doorgevoerd. Gelieve te verwijzen naar het volgende [ document ](../term-updates.md) voor een geconsolideerde verwijzing van de terminologieveranderingen.
+>Adobe Experience Platform Launch is omgedoopt tot een reeks technologieën voor dataverzameling in Adobe Experience Platform.  Als gevolg hiervan zijn er verschillende terminologiewijzigingen in de productdocumentatie doorgevoerd. Raadpleeg het volgende [ document ](../term-updates.md) voor een geconsolideerde referentie van de terminologiewijzigingen.
 
 Tags zijn Adobe Experience Platform van de volgende generatie technologie voor tagbeheer. Het wordt van de grond opgebouwd om een open en duurzaam ecosysteem te steunen waar iedereen zijn eigen integraties kan bouwen die de klanten van de Adobe aan hun plaatsen kunnen opstellen. Het is een eerste API-toepassing, dus alles wat u via de UI kunt doen, kunt u ook via programmacode doen via een API.
 
@@ -134,6 +134,6 @@ Voor meer informatie over de verschillende staten en de opties beschikbaar tijde
 
 Raadpleeg de volgende bronnen voor meer informatie over tags:
 
-* **[Gemeenschap van de Inzameling van Gegevens ](https://forums.adobe.com/community/experience-cloud/platform/launch)**: Vraag en beantwoord vragen, voorlegt ideeën, stem op de ideeën van anderen. Meld u aan bij uw Adobe ID.
+* **[Gemeenschap van de Inzameling van Gegevens ](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-data/ct-p/adobe-launch-community)**: Vraag en beantwoord vragen, voorlegt ideeën, stem op de ideeën van anderen. Meld u aan bij uw Adobe ID.
 * **[Docs van de Ontwikkelaar](../api/overview.md)**: Krijg betrokken met de gemeenschap van de markeringsontwikkelaar om uitbreidingen te bouwen of de markeringen APIs te gebruiken
 * **[Tutorials Overzicht ](https://experienceleague.adobe.com/docs/core-services-learn/tutorials/overview.html)**: Deze documenten introduceren u aan markeringsconcepten met inbegrip van gebeurtenis door:sturen en Mobiele SDK in de Apps van Android.
