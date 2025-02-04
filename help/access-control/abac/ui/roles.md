@@ -3,9 +3,9 @@ keywords: Experience Platform;huis;populaire onderwerpen;toegangsbeheer;op attri
 title: Toegangsbeheer op basis van kenmerken maakt een rol
 description: Dit document bevat informatie over het beheer van rollen via de interface voor machtigingen in Adobe Experience Cloud
 exl-id: 85699716-339d-4992-8390-95563c7ea7fe
-source-git-commit: d8f72bb5ae56daf5a41c763f821ca6306514bc48
+source-git-commit: 74980c6108a32ec6736ab5892d89590e04e8a500
 workflow-type: tm+mt
-source-wordcount: '506'
+source-wordcount: '593'
 ht-degree: 0%
 
 ---
@@ -14,7 +14,14 @@ ht-degree: 0%
 
 De rollen bepalen de toegang die een beheerder, een specialist, of een eindgebruiker aan middelen in uw organisatie moet hebben. In een op rol-gebaseerd milieu van het toegangsbeheer, is de levering van de gebruikerstoegang groepering door gemeenschappelijke verantwoordelijkheden en behoeften. Een rol heeft een bepaalde reeks toestemmingen en de leden van uw organisatie kunnen aan één of meerdere rollen, afhankelijk van het werkingsgebied van mening worden toegewezen of toegang schrijven zij nodig hebben.
 
-## Een nieuwe rol maken
+## Een nieuwe rol maken {#create-new-role}
+
+>[!CONTEXTUALHELP]
+>id="platform_permissions_roles_about_create"
+>title="Nieuwe rol maken"
+>abstract="Creeer nieuwe rollen om gebruikers beter te categoriseren die met uw instantie van het Platform in wisselwerking staan. U kunt bijvoorbeeld een rol maken voor een intern marketingteam en het label Gereglementeerde gezondheidsgegevens (RHD) op die rol toepassen, zodat uw interne marketingteam toegang krijgt tot de beschermde gezondheidsinformatie (PHI). Alternatief, kunt u een rol voor een extern agentschap ook tot stand brengen en die roltoegang tot PHI gegevens ontkennen door het etiket RHD op die rol niet toe te passen."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/access-control/abac/permissions-ui/roles.html" text="Rollen beheren"
+>additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/access-control/abac/end-to-end-guide#label-roles" text="Labels op een rol toepassen"
 
 Als u een nieuwe rol wilt maken, selecteert u de tab **[!UICONTROL Roles]** in het zijpaneel en selecteert u **[!UICONTROL Create Role]** .
 

@@ -3,14 +3,20 @@ keywords: Experience Platform;huis;populaire onderwerpen;toegangsbeheer;op attri
 title: Op kenmerken gebaseerde toegangsbeheerfuncties voor rolmachtigingen beheren
 description: Dit document bevat informatie over het configureren van machtigingen voor een rol via de interface voor machtigingen in Adobe Experience Cloud
 exl-id: 8acd2bb6-eef8-4b23-8fd8-3566c7508fe7
-source-git-commit: 0c275dc18dac101455f77aa58d33f0808122b77f
+source-git-commit: 207317d16a21cc2461ebd3f7867735735227c173
 workflow-type: tm+mt
-source-wordcount: '1381'
+source-wordcount: '1513'
 ht-degree: 0%
 
 ---
 
-# Machtigingen voor een rol beheren
+# Machtigingen voor een rol beheren {#manage-role-permissions}
+
+>[!CONTEXTUALHELP]
+>id="platform_permissions_roles_about"
+>title="Wat zijn rollen?"
+>abstract="De rollen bepalen de toegang die een beheerder, een specialist, of een eindgebruiker aan middelen in uw organisatie moet hebben. Zij categoriseren de gebruikers die met uw instantie van het Platform in wisselwerking staan en zijn de bouwstenen van het beleid van de toegangscontrole. Een rol heeft een bepaalde reeks toestemmingen en de leden van uw organisatie kunnen aan één of meerdere rollen, afhankelijk van het werkingsgebied van mening worden toegewezen of toegang schrijven zij nodig hebben."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/access-control/abac/permissions-ui/roles.html" text="Rollen beheren"
 
 >[!IMPORTANT]
 >
@@ -41,7 +47,14 @@ Als u een filter wilt verwijderen, selecteert u de &quot;X&quot; op het vulpicto
 
 ![ het dashboard van Rollen in Toestemmingen UI met X en ontruim alle selecties die op de gekozen filters worden benadrukt.](../../images/flac-ui/flac-clear-filters.png)
 
-## Roldetails
+## Roldetails {#role-details}
+
+>[!CONTEXTUALHELP]
+>id="platform_permissions_roles_details"
+>title="Roloverzicht"
+>abstract="In het dialoogvenster Roloverzicht worden de details van de rol weergegeven, inclusief de bronnen en sandboxen waartoe een bepaalde rol toegang heeft. U kunt labels, gebruikers, gebruikersgroepen en API-referenties voor de rol beheren door naar het bijbehorende tabblad te navigeren in de werkruimte van de rol."
+>additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/access-control/abac/permissions-ui/permissions#manage-labels-for-a-role" text="Labels voor een rol beheren"
+>additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/access-control/abac/permissions-ui/permissions#manage-users-for-a-role" text="Gebruikers voor een rol beheren"
 
 Selecteer de rol op het tabblad **[!UICONTROL Roles]** , waarop het [!UICONTROL Details] -dashboard van de rol wordt geopend.
 

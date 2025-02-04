@@ -4,9 +4,9 @@ title: Op attributen-Gebaseerde Gids van de Controle van de Toegang van begin to
 description: Dit document verstrekt een gids van begin tot eind op op attribuut-gebaseerde toegangsbeheer in Adobe Experience Platform
 role: Developer
 exl-id: 7e363adc-628c-4a66-a3bd-b5b898292394
-source-git-commit: 5b9200b9e534519ce2f3c1a529a30b032642ab7f
+source-git-commit: 74980c6108a32ec6736ab5892d89590e04e8a500
 workflow-type: tm+mt
-source-wordcount: '1713'
+source-wordcount: '1512'
 ht-degree: 1%
 
 ---
@@ -66,31 +66,8 @@ De werkruimte voor machtigingen voor de gebruikersinterface van het platform wor
 >[!CONTEXTUALHELP]
 >id="platform_permissions_labels_about"
 >title="Wat zijn labels?"
->abstract="Met labels kunt u gegevenssets en velden categoriseren op basis van het gebruiksbeleid dat op die gegevens van toepassing is. Het platform biedt verschillende Adobe-definieert &quot;kern&quot;gegevensgebruiksetiketten, die een grote verscheidenheid aan gemeenschappelijke beperkingen omvatten die van toepassing zijn op gegevensbeheer. Met gevoelige &quot;S&quot;-labels zoals RHD (Gereglementeerde gezondheidsgegevens) kunt u bijvoorbeeld gegevens categoriseren die verwijzen naar beschermde gezondheidsinformatie (PHI). U kunt ook uw eigen aangepaste labels definiëren die aan de behoeften van uw organisatie voldoen."
+>abstract="Met labels kunt u gegevenssets en velden categoriseren op basis van het gebruiksbeleid en het toegangsbeleid dat op die gegevens van toepassing is. Het platform verstrekt verscheidene Adobe-bepaalde <strong> kern </strong> etiketten van het gegevensgebruik, die een brede verscheidenheid van gemeenschappelijke beperkingen van toepassing op gegevensbeheer behandelen. Bijvoorbeeld, de Gevoelige </strong> etiketten van 0} S {zoals RHD (Gereglementeerde Gegevens van de Gezondheid) staan u toe om gegevens te categoriseren die naar de Beschermde Informatie van de Gezondheid (PHI) verwijzen. <strong> U kunt ook uw eigen aangepaste labels definiëren die aan de behoeften van uw organisatie voldoen."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/data-governance/labels/overview.html#understanding-data-usage-labels" text="Overzicht van labels voor gegevensgebruik"
-
->[!CONTEXTUALHELP]
->id="platform_permissions_labels_about_create"
->title="Nieuw label maken"
->abstract="U kunt uw eigen aangepaste labels maken die aansluiten op de behoeften van uw organisatie. De etiketten van de douane kunnen worden gebruikt om zowel gegevensbeheer als toegangsbeheerconfiguraties op uw gegevens toe te passen."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/data-governance/labels/overview.html#manage-labels" text="Aangepaste labels beheren"
-
->[!CONTEXTUALHELP]
->id="platform_permissions_roles_about"
->title="Wat zijn rollen?"
->abstract="Rollen zijn manieren om de soorten gebruikers te categoriseren die met uw instantie van het Platform in wisselwerking staan en bouwstenen van toegangsbeheerbeleid zijn. Een rol heeft een bepaalde reeks toestemmingen en de leden van uw organisatie kunnen aan één of meerdere rollen, afhankelijk van het werkingsgebied van mening worden toegewezen of toegang schrijven zij nodig hebben."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/access-control/abac/permissions-ui/roles.html" text="Rollen beheren"
-
->[!CONTEXTUALHELP]
->id="platform_permissions_roles_about_create"
->title="Nieuwe rol maken"
->abstract="U kunt een nieuwe rol tot stand brengen om gebruikers beter te categoriseren die tot uw instantie van het Platform toegang hebben. Bijvoorbeeld, kunt u een rol voor een Intern Team van de Marketing tot stand brengen en het etiket RHD op die rol toepassen, toestaand uw Intern Team van de Marketing om tot de Beschermde Informatie van de Gezondheid (PHI) toegang te hebben. Alternatief, kunt u een rol voor een Extern Agentschap ook tot stand brengen en die roltoegang tot PHI gegevens ontkennen door het etiket RHD op die rol niet toe te passen."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/access-control/abac/permissions-ui/roles.html#create-a-new-role" text="Een nieuwe rol maken"
-
->[!CONTEXTUALHELP]
->id="platform_permissions_roles_details"
->title="Roloverzicht"
->abstract="In het dialoogvenster Roloverzicht worden de bronnen en sandboxen weergegeven waartoe een bepaalde rol toegang heeft."
 
 Rollen zijn manieren om de soorten gebruikers te categoriseren die met uw instantie van het Platform in wisselwerking staan en zijn bouwstenen van toegangsbeheerbeleid. Een rol heeft een bepaalde reeks toestemmingen, en de leden van uw organisatie kunnen aan één of meerdere rollen, afhankelijk van het werkingsgebied van toegang worden toegewezen zij nodig hebben.
 
