@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Schema's maken en bewerken in de gebruikersinterface
 description: Leer de grondbeginselen van om schema's in het gebruikersinterface van het Experience Platform tot stand te brengen en uit te geven.
 exl-id: be83ce96-65b5-4a4a-8834-16f7ef9ec7d1
-source-git-commit: 02b709c01347c1d03f870132dff437b97f239a9c
+source-git-commit: 24b26e256fb346ccd1a03984f3e0d199c640159c
 workflow-type: tm+mt
-source-wordcount: '3888'
+source-wordcount: '3899'
 ht-degree: 0%
 
 ---
@@ -354,7 +354,7 @@ Onthoud dat de weergavenamen van velden die tot standaardklassen of -veldgroepen
 >
 Zodra u veranderingen de vertoningsnamen voor de gebieden van een schema aanbrengt, worden die veranderingen onmiddellijk weerspiegeld in om het even welke bestaande datasets die op dat schema worden gebaseerd.
 
-Als u de weergavenaam van een schemaveld wilt bewerken, selecteert u het veld op het canvas. Geef in de rechtertrack de nieuwe naam onder **[!UICONTROL Display name]** .
+Wijzig de veldnamen in de weergavenamen door in te schakelen **[!UICONTROL Show display names for fields]** . Als u de weergavenaam van een schemaveld wilt bewerken, selecteert u het veld op het canvas. Geef in de rechtertrack de nieuwe naam onder **[!UICONTROL Display name]** .
 
 ![](../../images/ui/resources/schemas/display-name.png)
 
