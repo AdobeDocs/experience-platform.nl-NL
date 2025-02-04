@@ -2,9 +2,9 @@
 title: Data Landing Zone Source
 description: Leer hoe u Data Landing Zone kunt verbinden met Adobe Experience Platform
 exl-id: bdc10095-7de4-4183-bfad-a7b5c89197e3
-source-git-commit: 1530d7b9815688ab58fb6349ef77e92124741883
+source-git-commit: b9a409db2f1aee852faf9038a25236b78f76d4dd
 workflow-type: tm+mt
-source-wordcount: '1178'
+source-wordcount: '1282'
 ht-degree: 0%
 
 ---
@@ -19,11 +19,15 @@ ht-degree: 0%
 
 [!DNL Data Landing Zone] biedt ondersteuning voor verificatie op basis van SAS en de bijbehorende gegevens zijn in rust en onderweg beveiligd met standaard [!DNL Azure Blob] -opslagbeveiligingsmechanismen. Met verificatie op basis van SAS hebt u via een openbare internetverbinding veilig toegang tot uw [!DNL Data Landing Zone] -container. Er zijn geen netwerkwijzigingen vereist voor toegang tot uw [!DNL Data Landing Zone] -container. Dit betekent dat u geen lijsten van gewenste personen of instellingen voor meerdere regio&#39;s voor uw netwerk hoeft te configureren. Experience Platform past een strikte vervaltijd van zeven dagen toe op alle bestanden en mappen die naar een [!DNL Data Landing Zone] -container zijn geüpload. Alle bestanden en mappen worden na zeven dagen verwijderd.
 
+## Uw [!DNL Data Landing Zone] source instellen voor Experience Platform op Azure {#azure}
+
+Volg de onderstaande stappen om te leren hoe u uw [!DNL Data Landing Zone] -account kunt instellen voor Experience Platform in Azure.
+
 >[!NOTE]
 >
 >Als u [!DNL Data Landing Zone] van [!DNL Azure Data Factory] wilt toegang hebben, dan moet u de verbonden dienst voor [!DNL Data Landing Zone] tot stand brengen gebruikend de [ SAS geloofsbrieven ](../../tutorials/ui/create/cloud-storage/data-landing-zone.md#retrieve-your-data-landing-zone-credentials) die door Experience Platform worden verstrekt. Nadat u de gekoppelde service hebt gemaakt, kunt u de [!DNL Data Landing Zone] verkennen door het containerpad te selecteren in plaats van het standaardhoofdpad.
 
-## Naamgevingsbeperkingen voor bestanden en mappen
+### Naamgevingsbeperkingen voor bestanden en mappen
 
 Hieronder volgt een lijst met beperkingen waarmee u rekening moet houden bij het benoemen van bestanden of mappen voor cloudopslag.
 
@@ -34,17 +38,17 @@ Hieronder volgt een lijst met beperkingen waarmee u rekening moet houden bij het
 - Ongeldige URL-padtekens niet toegestaan. Codepunten zoals `\uE000` zijn weliswaar geldig in NTFS-bestandsnamen, maar zijn geen geldige Unicode-tekens. Bovendien zijn sommige ASCII- of Unicode-tekens, zoals besturingstekens (zoals `0x00` tot en met `0x1F` , `\u0081` enzovoort), niet toegestaan. Voor regels die de koorden van Unicode in HTTP/1.1 bepalen zie [ RFC 2616, Sectie 2.2: BasisRegels ](https://www.ietf.org/rfc/rfc2616.txt) en [ RFC 3987 ](https://www.ietf.org/rfc/rfc3987.txt).
 - De volgende bestandsnamen zijn niet toegestaan: LPT1, LPT2, LPT3, LPT4, LPT5, LPT6, LPT7, LPT8, LPT9, COM1, COM2, COM3, COM4, COM5, COM6, COM7, COM8, COM9, PRN, AUX, NUL, CON, CLOCK$, puntteken (.) en twee stippen ( ...).
 
-## De inhoud van uw gegevenslandingszone beheren{#manage-the-contents-of-your-data-landing-zone}
+### De inhoud van uw gegevenslandingszone beheren{#manage-the-contents-of-your-data-landing-zone}
 
 U kunt [[!DNL Azure Storage Explorer] gebruiken ](https://azure.microsoft.com/en-us/features/storage-explorer/) om de inhoud van uw [!DNL Data Landing Zone] container te beheren.
 
 Selecteer in de gebruikersinterface van [!DNL Azure Storage Explorer] het verbindingspictogram in de linkernavigatie. Het **Uitgezochte venster van het Middel** verschijnt, die u van opties voorzien om met te verbinden. Selecteer **[!DNL Blob container]** om verbinding te maken met [!DNL Data Landing Zone] .
 
-![ selecteren-middel ](../../images/tutorials/create/dlz/select-resource.png)
+![ de uitgezochte middelwerkruimte op Azure Explorer.](../../images/tutorials/create/dlz/select-resource.png)
 
 Daarna, selecteer **Gedeelde toegangshandtekening URL (SAS)** als uw verbindingsmethode, en selecteer dan **daarna**.
 
-![ selecteren-verbinding-methode ](../../images/tutorials/create/dlz/select-connection-method.png)
+![ de uitgezochte verbindingsmethode op Azure Explorer, met gedeelde geselecteerde toegangshandtekening.](../../images/tutorials/create/dlz/select-connection-method.png)
 
 Na het selecteren van uw verbindingsmethode, moet u a **vertoningsnaam** en **[!DNL Blob]container SAS URL** daarna verstrekken die met uw [!DNL Data Landing Zone] container beantwoordt.
 
@@ -54,19 +58,19 @@ Na het selecteren van uw verbindingsmethode, moet u a **vertoningsnaam** en **[!
 
 Verstrek uw [!DNL Data Landing Zone] SAS URL en selecteer dan **daarna**
 
-![ enter-connection-info ](../../images/tutorials/create/dlz/enter-connection-info.png)
+![ gaat de werkruimte van verbindingsinfo op Azure Explorer in waar de vertoningsnaam en SAS URL worden ingevoerd.](../../images/tutorials/create/dlz/enter-connection-info.png)
 
 Het **Summiere** venster verschijnt, die u van een overzicht van uw montages, met inbegrip van informatie over uw [!DNL Blob] eindpunt en toestemmingen voorzien. Wanneer klaar, uitgezochte **verbindt**.
 
-![ samenvatting ](../../images/tutorials/create/dlz/summary.png)
+![ de Azure summiere werkruimte van de Ontdekkingsreiziger die de montages van uw middelverbinding opnieuw overlapt.](../../images/tutorials/create/dlz/summary.png)
 
 Een geslaagde verbinding werkt de gebruikersinterface van [!DNL Azure Storage Explorer] bij met uw [!DNL Data Landing Zone] -container.
 
-![ dlz-gebruiker-container ](../../images/tutorials/create/dlz/dlz-user-container.png)
+![ de gegevens landende de navigatiewerkruimte van de streek op Azure Explorer.](../../images/tutorials/create/dlz/dlz-user-container.png)
 
 Als de [!DNL Data Landing Zone] -container is aangesloten op [!DNL Azure Storage Explorer] , kunt u nu bestanden uploaden naar de [!DNL Data Landing Zone] -container. Om te uploaden, **te selecteren uploadt** en dan **selecteert uploadt Dossiers**.
 
-![ upload ](../../images/tutorials/create/dlz/upload.png)
+![ uploadt de werkruimte van dossiers van Azure Explorer.](../../images/tutorials/create/dlz/upload.png)
 
 Wanneer u het bestand hebt geselecteerd dat u wilt uploaden, moet u vervolgens het [!DNL Blob] type identificeren dat u het wilt uploaden als en de gewenste doelmap. Wanneer gebeëindigd, uitgezochte **uploadt**.
 
@@ -75,9 +79,9 @@ Wanneer u het bestand hebt geselecteerd dat u wilt uploaden, moet u vervolgens h
 | Blok [!DNL Blob] | Blok [!DNL Blobs] is geoptimaliseerd voor het efficiënt uploaden van grote hoeveelheden gegevens. Blok [!DNL Blobs] is de standaardoptie voor [!DNL Data Landing Zone] . |
 | Toevoegen [!DNL Blob] | Toevoegen [!DNL Blobs] is geoptimaliseerd voor het toevoegen van gegevens aan het einde van het bestand. |
 
-![ upload-dossiers ](../../images/tutorials/create/dlz/upload-files.png)
+![ uploadt het venster van dossiers van Azure Explorer waar de geselecteerde dossiers, het type van Blob, en bestemmingscategorie worden getoond.](../../images/tutorials/create/dlz/upload-files.png)
 
-## Bestanden uploaden naar de [!DNL Data Landing Zone] via de opdrachtregelinterface
+### Bestanden uploaden naar de [!DNL Data Landing Zone] via de opdrachtregelinterface
 
 U kunt ook de opdrachtregelinterface van uw apparaat gebruiken en bestanden uploaden naar uw [!DNL Data Landing Zone] .
 

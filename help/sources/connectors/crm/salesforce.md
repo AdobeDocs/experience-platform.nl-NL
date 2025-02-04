@@ -2,9 +2,9 @@
 title: Overzicht Salesforce Source Connector
 description: Leer hoe u Salesforce met Adobe Experience Platform kunt verbinden via API's of de gebruikersinterface.
 exl-id: 597778ad-3cf8-467c-ad5b-e2850967fdeb
-source-git-commit: f62e13e97cc82fef759d06b94337f4cc25d4fb10
+source-git-commit: 77941e08df893fab6dfdaf987c56c4d5a3fd4757
 workflow-type: tm+mt
-source-wordcount: '1533'
+source-wordcount: '1560'
 ht-degree: 0%
 
 ---
@@ -19,11 +19,15 @@ Adobe Experience Platform staat toe dat gegevens uit externe bronnen worden opge
 
 Experience Platform biedt ondersteuning voor het opnemen van gegevens van een CRM-systeem van derden. Tot de ondersteuning voor CRM-providers behoren [!DNL Salesforce] .
 
-## IP adres lijst van gewenste personen
+## Uw [!DNL Salesforce] source instellen voor Experience Platform op Azure {#azure}
+
+Volg de onderstaande stappen om te leren hoe u uw [!DNL Salesforce] -account kunt instellen voor Experience Platform in Azure.
+
+### IP adres lijst van gewenste personen
 
 Een lijst van IP adressen moet aan een lijst van gewenste personen worden toegevoegd alvorens met bronschakelaars te werken. Het niet toevoegen van uw regio-specifieke IP adressen aan uw lijst van gewenste personen kan tot fouten of niet-prestaties leiden wanneer het gebruiken van bronnen. Zie de ](../../ip-address-allow-list.md) pagina van de lijst van gewenste personen van het 0} IP adres {voor meer informatie.[
 
-## Veldtoewijzing van [!DNL Salesforce] naar XDM
+### Veldtoewijzing van [!DNL Salesforce] naar XDM
 
 Om een bronverbinding tussen [!DNL Salesforce] en Platform tot stand te brengen, moeten de [!DNL Salesforce] brongegevensgebieden aan hun aangewezen doelXDM gebieden worden in kaart gebracht alvorens in Platform wordt opgenomen.
 
@@ -38,7 +42,7 @@ Zie het volgende voor gedetailleerde informatie over de regels voor het in kaart
 - [Campagneleden](../adobe-applications/mapping/salesforce.md#campaign-member)
 - [Contactpersoon account](../adobe-applications/mapping/salesforce.md#account-contact-relation)
 
-## Het hulpprogramma voor automatisch genereren van naamruimten en schema [!DNL Salesforce] instellen
+### Het hulpprogramma voor automatisch genereren van naamruimten en schema [!DNL Salesforce] instellen
 
 Als u de [!DNL Salesforce] bron wilt gebruiken als onderdeel van [!DNL B2B-CDP] , moet u eerst een hulpprogramma [!DNL Postman] instellen om automatisch uw [!DNL Salesforce] naamruimten en schema&#39;s te genereren. In de volgende documentatie vindt u aanvullende informatie over het instellen van het hulpprogramma [!DNL Postman] :
 
@@ -271,7 +275,7 @@ Nadat u de vereiste configuratie voor uw [!DNL Salesforce] -account hebt voltooi
 
 In de onderstaande documentatie vindt u informatie over het tot stand brengen van een verbinding tussen [!DNL Salesforce] en Platform via API&#39;s of de gebruikersinterface:
 
-- [Een Salesforce-basisverbinding maken met de Flow Service API](../../tutorials/api/create/crm/salesforce.md)
+- [Salesforce verbinden met Experience Platform met behulp van de Flow Service API](../../tutorials/api/create/crm/salesforce.md)
 - [Gegevenstabellen verkennen met de Flow Service API](../../tutorials/api/explore/tabular.md)
 - [Een gegevensstroom maken voor een CRM-bron met behulp van de Flow Service API](../../tutorials/api/collect/crm.md)
 
