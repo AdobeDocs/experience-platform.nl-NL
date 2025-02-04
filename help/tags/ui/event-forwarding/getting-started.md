@@ -3,10 +3,10 @@ title: Aan de slag met het doorsturen van gebeurtenissen
 description: Volg deze stapsgewijze zelfstudie om te beginnen met het doorsturen van gebeurtenissen in Adobe Experience Platform.
 feature: Event Forwarding
 exl-id: f82bfac9-dc2d-44de-a308-651300f107df
-source-git-commit: 0a95d09eb1ce59e45d52372c4b08725c009001c3
+source-git-commit: e9f98e1f94aa6ae2ecf29940912d296813611d4c
 workflow-type: tm+mt
 source-wordcount: '849'
-ht-degree: 1%
+ht-degree: 7%
 
 ---
 
@@ -14,11 +14,11 @@ ht-degree: 1%
 
 >[!NOTE]
 >
->Het door:sturen van gebeurtenissen is een betaalde eigenschap die als deel van het de Verbindingen van Adobe Real-time Customer Data Platform, eerste, of Ultimate dienstenaanbod inbegrepen is.
+>Het door:sturen van gebeurtenissen is een betaalde eigenschap die als deel van het aanbod van de Verbindingen van Adobe Real-time Customer Data Platform, Prime, of Ultimate inbegrepen is.
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch is omgedoopt tot een reeks technologieën voor gegevensverzameling in Adobe Experience Platform. Diverse terminologische wijzigingen zijn als gevolg hiervan in de productdocumentatie doorgevoerd. Gelieve te verwijzen naar het volgende [ document ](../../term-updates.md) voor een geconsolideerde verwijzing van de terminologieveranderingen.
+>Adobe Experience Platform Launch is omgedoopt tot een reeks technologieën voor dataverzameling in Adobe Experience Platform.  Als gevolg hiervan zijn er verschillende terminologiewijzigingen in de productdocumentatie doorgevoerd. Raadpleeg het volgende [ document ](../../term-updates.md) voor een geconsolideerde referentie van de terminologiewijzigingen.
 
 Als u gebeurtenissen wilt doorsturen in Adobe Experience Platform, moeten gegevens naar Adobe Experience Platform Edge Network worden verzonden met een of meer van de volgende drie opties:
 
@@ -27,13 +27,13 @@ Als u gebeurtenissen wilt doorsturen in Adobe Experience Platform, moeten gegeve
 * [Edge Network Server API](/help/server-api/overview.md)
 
 >[!NOTE]
->De Platform Web SDK en Platform Mobile SDK vereisen geen plaatsing door markeringen in Adobe Experience Platform. Het gebruik van labels voor de implementatie van deze SDK&#39;s wordt echter aanbevolen.
+>Voor Platform Web SDK en Platform Mobile SDK is geen implementatie via tags in Adobe Experience Platform vereist. Het gebruik van labels voor de implementatie van deze SDK&#39;s wordt echter aanbevolen.
 
 Nadat u gegevens naar het netwerk van Edge verzendt, kunt u Adobe oplossingen van een knevel voorzien om gegevens daar te verzenden. Om gegevens naar een niet-Adobe oplossing te verzenden, plaats die opstelling in gebeurtenis door:sturen.
 
 ## Vereisten
 
-* Adobe Real-Time CDP Connections, Prime of Ultimate (neem contact op met het accountteam van uw Adobe voor prijsstelling)
+* Adobe Real-Time CDP Connections, Prime of Ultimate (Neem contact op met uw Adobe-accountteam voor prijzen)
 * Gebeurtenis doorsturen in Adobe Experience Platform
 * Adobe Experience Platform Web SDK, Mobile SDK of Edge Network Server API geconfigureerd voor het verzenden van gegevens naar Edge Network
 * Gegevens toewijzen aan XDM (Experience Data Model) (voor deze toewijzing kunt u codes gebruiken)
@@ -82,7 +82,7 @@ De beschrijving helpt om configuraties in een lijst van verscheidene configurati
 
 1. Selecteer **[!UICONTROL Save]**.
 
-## Gebeurtenis doorsturen inschakelen
+## Gebeurtenis doorsturen inschakelen {#enable-event-forwarding}
 
 Daarna, vorm Edge Network om gegevens naar gebeurtenis te verzenden door:sturen, en aan andere producten van de Adobe.
 
@@ -102,15 +102,15 @@ Na het vormen, neem nota van milieu IDs voor het nieuwe bezit.
 
 ## Vorm de uitbreiding van SDK van het Web van het Platform om gegevens naar eerder gecreeerd datastream te verzenden
 
-Maak uw eigenschap in de **[!UICONTROL Tags]** -werkruimte en navigeer naar **[!UICONTROL Extensions]** en selecteer de extensie Web SDK van het Experience Platform in de catalogus om deze te configureren en installeren.
+Maak uw eigenschap in de **[!UICONTROL Tags]** -werkruimte en navigeer naar **[!UICONTROL Extensions]** en selecteer de extensie Web SDK Experience Platform in de catalogus om deze te configureren en installeren.
 
 Zie de [ de uitbreidingsdocumentatie van SDK van het Web ](../../extensions/client/web-sdk/overview.md) voor details op configuratieopties.
 
-## Creeer een markeringsregel om gegevens naar het Web SDK van het Platform te verzenden
+## Een labelregel maken om gegevens naar Platform Web SDK te verzenden
 
 Nadat het bovenstaande op zijn plaats is, bouwt gegevensdefinities, regels, etc., die gebeurtenis het door:sturen en markeringen gebruiken, maar die slechts één enkel verzoek van de pagina vereisen.
 
-Creeer een regel van de paginading gebruikend de uitbreiding van SDK van het Web van het Platform en het &quot;Send Event&quot;actietype:
+Maak een regel voor het laden van pagina&#39;s met de extensie Platform Web SDK en het actietype &quot;Send Event&quot;:
 
 1. Open het tabblad **[!UICONTROL Rules]** en selecteer vervolgens **[!UICONTROL Create New Rule]** .
 

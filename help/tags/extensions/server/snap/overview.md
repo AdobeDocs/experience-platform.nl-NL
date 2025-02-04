@@ -1,23 +1,26 @@
 ---
-title: Adobe Snapchat Conversion API-extensie Integratie
-description: Met deze Adobe Experience Platform-API voor webgebeurtenissen kunt u interacties van websites rechtstreeks delen met Snapchat.
+title: Overzicht van de extensie Snapchat Conversion API
+description: Gebruik de Snapchat-conversie om gebeurtenisgegevens op de server naar Snap te verzenden.
 last-substantial-update: 2025-01-20T00:00:00Z
-source-git-commit: 6403c339b2407410e282a25a0382845214bb6a95
+source-git-commit: 79e19b12dd39208827c215094b6c8ec9163d6624
 workflow-type: tm+mt
-source-wordcount: '922'
+source-wordcount: '919'
 ht-degree: 0%
 
 ---
 
-# Overzicht van conversies-API [!DNL Snapchat]
+# [!DNL Snapchat] Overzicht van conversie-API
 
 De [!DNL Snap] Uitbreiding van de Omzetting API is een veilige [ API van de Server van de Edge Network ](/help/server-api/overview.md) interface die u toestaat om informatie met [!DNL Snapchat] over gebruikersacties op uw websites direct te delen. U kunt de regels voor het doorsturen van gebeurtenissen gebruiken om gegevens van **[!DNL Adobe Experience Platform Edge Network]** naar **[!DNL Snapchat]** te verzenden met de API-extensie **[!DNL Snap]** Conversion.
 
 ## [!DNL Snapchat] voorwaarden {#prerequisites}
 
-Om [!DNL Snapchat] Conversies API te gebruiken, moet u een [ Gebeurtenis hebben die bezit ](https://experienceleague.adobe.com/en/docs/experience-platform/tags/event-forwarding/getting-started) opstelling in Adobe Experience Platform en [ vereiste toestemmingen ](https://experienceleague.adobe.com/en/docs/experience-platform/collection/permissions) door:sturen om het bezit uit te geven.
+De API voor conversies van [!DNL Snapchat] gebruiken:
 
-Creeer a [ Datastream ](/help/tags/ui/event-forwarding/getting-started.md) en voeg de [ Gebeurtenis toe die dienst ](/help/tags/ui/event-forwarding/getting-started#enable-event-forwarding) door:sturen aan het.
+* U moet een [ Gebeurtenis hebben door:sturen bezit ](/help/tags/ui/event-forwarding/getting-started.md) opstelling in Adobe Experience Platform.
+* U moet ook de [ vereiste toestemmingen ](/help/collection/permissions.md) hebben om het bezit uit te geven.
+
+Creeer a [ Datastream ](/help/tags/ui/event-forwarding/getting-started.md) en voeg de [ Gebeurtenis toe die dienst ](/help/tags/ui/event-forwarding/getting-started.md#enable-event-forwarding) door:sturen aan het.
 
 Een **[!DNL Snapchat]** [ BedrijfsManager ](https://business.snapchat.com/) rekening wordt vereist om Conversies API te gebruiken. Met Business Manager kunnen adverteerders de marketinginspanningen van **[!DNL Snapchat]** integreren in hun hele bedrijf en met externe partners. Zie **[!DNL Snapchat]** [ hulp centreert artikel ](https://businesshelp.snapchat.com/s/article/get-started?language=en_US) bij het creëren van een rekening van BedrijfsManager als u geen hebt.
 
@@ -34,7 +37,7 @@ Voer de volgende stappen uit als de gewenste eigenschap is geselecteerd:
 1. Selecteer **[!UICONTROL Extensions]** in het navigatievenster aan de linkerkant.
 2. Zoek naar **[!UICONTROL Snap Conversion API Extension]** en selecteer **[!UICONTROL Install]**.
 
-   ![ Beeld dat installeert knoop ](../../../images/extensions/server/snap/install.png) toont.
+   ![ Beeld die installatieknoop tonen ](../../../images/extensions/server/snap/install.png)
 
 3. Voer in het configuratiescherm de volgende waarden in:
 
@@ -43,17 +46,17 @@ Voer de volgende stappen uit als de gewenste eigenschap is geselecteerd:
 
 Selecteer **[!UICONTROL Save]** als u klaar bent.
 
-![ Beeld dat identiteitskaart van het Pixel en API symbolenknoop ](../../../images/extensions/server/snap/configure.png) toont.
+![ Beeld dat identiteitskaart van het Pixel en API symbolische knoop toont ](../../../images/extensions/server/snap/configure.png)
 <!-- 
 ![[!DNL Snap] configuration screen for the [!DNL Snap] conversion API extension.](../../../images/extensions/server/snap/configure.png) -->
 
 ## Gegevenselementen maken {#create-data-elements}
 
-Om gegevenspunten als parameters tot de [!DNL Snapchat] API uitbreiding van Conversies over te gaan, moet u [ gegevenselementen ](https://experienceleague.adobe.com/en/docs/platform-learn/implement-web-sdk/event-forwarding/setup-event-forwarding#create-an-event-forwarding-data-element) voor elk gegevenspunt tot stand brengen. Voer de volgende stappen uit:
+Om gegevens naar de [!DNL Snapchat] API uitbreiding van Conversies te verzenden, creeer [ gegevenselementen ](https://experienceleague.adobe.com/en/docs/platform-learn/implement-web-sdk/event-forwarding/setup-event-forwarding#create-an-event-forwarding-data-element) voor elke gegevensparameter. Voer de volgende stappen uit:
 
 1. Navigeer aan **[!UICONTROL Authoring]**> **[!UICONTROL Data Elements]** in het scherm van uw bezit **[!UICONTROL Property Info]**, en selecteer dan **[!UICONTROL Add Data Element]**.
 
-   ![ Beeld die tonen voegt de knoop van het gegevenselement ](../../../images/extensions/server/snap/add_data_element.png) toe.
+   ![ Beeld dat toevoegt gegevenselement knoop ](../../../images/extensions/server/snap/add_data_element.png) toont
 
 2. Voer een naam in voor het gegevenselement.
 
@@ -61,19 +64,19 @@ Om gegevenspunten als parameters tot de [!DNL Snapchat] API uitbreiding van Conv
 
 4. Selecteer in het keuzemenu het juiste item en vul het veld [!UICONTROL Path] in het rechterdeelvenster in om naar de gewenste gegevens in het schema te verwijzen.
 
-   ![ Beeld die tot het scherm van het gegevenselement tonen leidt ](../../../images/extensions/server/snap/create_data_element.png).
+   ![ Beeld dat creeert het scherm van het gegevenselement toont ](../../../images/extensions/server/snap/create_data_element.png)
 
 Als u bijvoorbeeld een gegevenselement maakt dat verwijst naar `snapClickId` in het hieronder weergegeven schema:
 
-![ Beeld die schema tonen ](../../../images/extensions/server/snap/schema.png).
+![ Afbeelding met schema ](../../../images/extensions/server/snap/schema.png)
 
 U moet het gegevenselement configureren, omdat `snapClickId` zich onder `_snap.inc.exchange` in het XDM-schema bevindt.
 
-![ Beeld dat uitgeeft het scherm van het gegevenselement ](../../../images/extensions/server/snap/edit_data_element.png).
+![ Beeld dat uitgeeft het scherm van het gegevenselement ](../../../images/extensions/server/snap/edit_data_element.png) toont
 
-Zie de [ Gebeurtenis door:sturen eigenschappen documentatie ](/help/tags/ui/event-forwarding/overview#data-elements.md) voor meer details bij het creëren van gegevenselementen.
+Zie de [ Gebeurtenis door:sturen eigenschappen documentatie ](/help/tags/ui/event-forwarding/overview.md#data-elements) voor meer details bij het creëren van gegevenselementen.
 
-## Maak regels om conversiegebeurtenissen naar magnetische uitlijning te verzenden {#create-snap-rules}
+## Regels maken om conversiegebeurtenissen naar Magnetisch te verzenden {#create-snap-rules}
 
 [ Regels ](https://experienceleague.adobe.com/en/docs/platform-learn/implement-web-sdk/event-forwarding/setup-event-forwarding#create-an-event-forwarding-rule) worden gebruikt om uitbreidingen in Platform teweeg te brengen. Deze sectie schetst hoe te om regels binnen uw gebeurtenis tot stand te brengen die bezit door:sturen om omzettingsgebeurtenissen naar Breuk te verzenden gebruikend de uitbreiding van Conversies API.
 
@@ -81,11 +84,11 @@ Zie de [ Gebeurtenis door:sturen eigenschappen documentatie ](/help/tags/ui/even
 
 1. Navigeer naar uw eigenschap voor het doorsturen van gebeurtenissen en selecteer **[!UICONTROL Rules]** in het menu Ontwerpen. Klik vervolgens op **[!UICONTROL Create New Rule]** .
 
-   ![ Beeld dat regels in linkernavigatie ](../../../images/extensions/server/snap/create_new_rule.png) toont.
+   ![ Beeld dat regels in linkernavigatie toont ](../../../images/extensions/server/snap/create_new_rule.png)
 
 2. Geef de regel een naam en configureer een voorwaarde voor het activeren van de gebeurtenis Snap. Als u bijvoorbeeld een gebeurtenis `PURCHASE` wilt verzenden wanneer een gebeurtenis een ordernummer bevat, stelt u een voorwaarde in om te controleren of de gebruikersinteractie een geldig inkoopordernummer bevat.
 
-   ![ Beeld dat het scherm van de voorwaardenconfiguratie ](../../../images/extensions/server/snap/action_configuration.png) toont.
+   ![ Beeld dat het scherm van de voorwaardenconfiguratie toont ](../../../images/extensions/server/snap/action_configuration.png)
 
 3. Nadat u de voorwaarde hebt opgeslagen, voegt u een handeling toe waarmee de magnetische conversie-API wordt geactiveerd. In het linkerpaneel:
 
@@ -95,7 +98,7 @@ Zie de [ Gebeurtenis door:sturen eigenschappen documentatie ](/help/tags/ui/even
 
    * Geef de regel dienovereenkomstig een naam.
 
-   ![ Beeld dat actieconfiguratiescherm ](../../../images/extensions/server/snap/action_configuration.png) toont.
+   ![ Beeld dat actieconfiguratiescherm ](../../../images/extensions/server/snap/action_configuration.png) toont
 
 4. Vorm de [ de parameterwaarden van CAPI ](https://developers.snap.com/api/marketing-api/Conversions-API/Parameters) u voor de gebeurtenis in de **[!UICONTROL Data Bindings]** sectie op het rechterpaneel wilt verzenden. De velden in de extensie worden toegewezen aan CAPI-parameters, zoals hieronder wordt weergegeven. Zie de [ documentatie van de Conversies API van de Snapchat ](https://developers.snap.com/api/marketing-api/Conversions-API/Parameters) voor meer informatie over elke parameter.
 
@@ -136,17 +139,15 @@ Zie de [ Gebeurtenis door:sturen eigenschappen documentatie ](/help/tags/ui/even
 | Beperkt gegevensgebruik | `data_processing_options` |
 | URL pagina | `event_source_url` |
 
+{style="table-layout:auto"}
+
 ### Vereiste en optionele velden
 
-* Vereiste velden:
+Voor elke gebeurtenis is `event_source` vereist, die altijd is ingesteld op `WEB.` Voor overeenkomende gebeurtenissen is ook ten minste een van de volgende velden of combinaties vereist:
 
-   * Voor alle gebeurtenissen wordt `event_source` ingesteld op `WEB` .
-
-   * Voor overeenkomsten is ten minste een van de volgende velden of combinaties vereist:
-
-      * E-mail
-      * Telefoonnummer
-      * IP-adres en gebruikersagent
+* E-mail
+* Telefoonnummer
+* IP-adres en gebruikersagent
 
 **Extra nota&#39;s:**
 
@@ -175,21 +176,21 @@ Voorbeeld:
 }
 ```
 
-Om [ waarde van douaneomzettingen en ROAS te gebruiken die ](https://businesshelp.snapchat.com/s/article/custom-conversions-value-roas?language=en_US) melden, omvat relevante parameters op het `contents` gebied. Bijvoorbeeld `brand` , `item_price` , `id` .
+Om [ waarde van douaneomzettingen en ROAS te gebruiken die ](https://businesshelp.snapchat.com/s/article/custom-conversions-value-roas?language=en_US) melden, omvat relevante parameters op het `contents` gebied. Een voorbeeldconfiguratie voor een aankoopgebeurtenis kan er als volgt uitzien: `brand`, `item_price`, `id` .
 
 Voorbeeldconfiguratie voor een `Purchase` -gebeurtenis:
 
-[Afbeelding met gegevensbindingen](../../../images/extensions/server/snap/data_bindings.png)
+![ Beeld dat gegevensbanden toont ](../../../images/extensions/server/snap/data_bindings.png)
 
 De optionele velden kunnen worden ingesteld als weergegeven:
 
-[Afbeelding met optionele velden](../../../images/extensions/server/snap/optional_fields.png)
+![ Beeld die facultatieve gebieden tonen ](../../../images/extensions/server/snap/optional_fields.png)
 
 Zodra u de naam, de voorwaarde en de actie van de regel zoals hierboven beschreven plaatst, sparen de regel en zorg ervoor het wordt toegelaten.
 
-[Afbeelding met ingeschakelde regel](../../../images/extensions/server/snap/enabled_rule.png)
+![ Beeld die toegelaten regel tonen ](../../../images/extensions/server/snap/enabled_rule.png)
 
-U kunt deze wijzigingen nu publiceren naar uw eigenschap. Gelieve te zien de documentatie over [ het publiceren stroom ](https://experienceleague.adobe.com/en/docs/experience-platform/tags/publish/overview) voor meer informatie.
+U kunt deze wijzigingen nu publiceren naar uw eigenschap. Zie de documentatie bij [ het publiceren stroom ](/help/tags/ui/publishing/overview.md) (https://experienceleague.adobe.com/en/docs/experience-platform/tags/publish/overview) voor meer informatie.
 
 ## Problemen oplossen {#troubleshoot}
 
