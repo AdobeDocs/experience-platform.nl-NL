@@ -2,7 +2,7 @@
 title: Identiteitsgegevens in Web SDK
 description: Leer hoe u Adobe Experience Cloud-id's (ECID's) kunt ophalen en beheren met de Adobe Experience Platform Web SDK.
 exl-id: 03060cdb-becc-430a-b527-60c055c2a906
-source-git-commit: c99831cf2bb1b862d65851701b38c6d3dfe99000
+source-git-commit: 3724c43090e37d21384e9dfe45e60ee2eec68a81
 workflow-type: tm+mt
 source-wordcount: '1553'
 ht-degree: 0%
@@ -14,18 +14,18 @@ ht-degree: 0%
 
 Het Web SDK van Adobe Experience Platform gebruikt [ Adobe Experience Cloud IDs (ECIDs) ](../../identity-service/features/ecid.md) om bezoekersgedrag te volgen. Met [!DNL ECIDs] kunt u ervoor zorgen dat elk apparaat een unieke id heeft die tijdens meerdere sessies kan blijven bestaan, zodat alle resultaten die tijdens en tussen websessies optreden, worden gekoppeld aan een specifiek apparaat.
 
-Dit document biedt een overzicht van het beheren van [!DNL ECIDs] en [!DNL CORE IDs] met de SDK van het Web.
+Dit document biedt een overzicht van het beheren van [!DNL ECIDs] en [!DNL CORE IDs] met de Web SDK.
 
 ## ECID&#39;s bijhouden met Web SDK {#tracking-ecids-web-sdk}
 
-De SDK van het Web wijst en volgt [!DNL ECIDs] door koekjes, met veelvoudige beschikbare methodes toe te gebruiken om te vormen hoe deze koekjes worden geproduceerd.
+Het Web SDK wijst en volgt [!DNL ECIDs] toe door koekjes te gebruiken, met veelvoudige beschikbare methodes om te vormen hoe deze koekjes worden geproduceerd.
 
 Wanneer een nieuwe gebruiker op uw website aankomt, probeert de [ Dienst van de Identiteit van Adobe Experience Cloud ](../../identity-service/home.md) om een koekje van de apparatenidentificatie voor die gebruiker te plaatsen.
 
 * Voor nieuwe bezoekers wordt een [!DNL ECID] gegenereerd en geretourneerd in de eerste reactie van de Edge Network van het Experience Platform.
 * Voor het retourneren van bezoekers wordt [!DNL ECID] opgehaald uit het `kndctr_{YOUR-ORG-ID}_AdobeOrg_identity` -cookie en door de Edge Network toegevoegd aan de payload van de aanvraag.
 
-Nadat het cookie met [!DNL ECID] is ingesteld, bevat elke volgende aanvraag die door de Web SDK wordt gegenereerd, een gecodeerde [!DNL ECID] in het `kndctr_{YOUR-ORG-ID}_AdobeOrg_identity` -cookie.
+Nadat de cookie met [!DNL ECID] is ingesteld, bevat elke volgende aanvraag die door de Web SDK wordt gegenereerd, een gecodeerde [!DNL ECID] in het `kndctr_{YOUR-ORG-ID}_AdobeOrg_identity` -cookie.
 
 Wanneer u cookies gebruikt voor apparaatidentificatie, hebt u twee manieren om te werken met de Edge Network:
 
@@ -171,9 +171,9 @@ Als u het veld `identityMap` gebruikt om apparaten of gebruikers te identificere
 
 Wanneer u migreert vanuit de Bezoeker-API, kunt u ook bestaande AMCV-cookies migreren. Als u ECID-migratie wilt inschakelen, stelt u de parameter `idMigrationEnabled` in de configuratie in. Bij ID-migratie zijn de volgende gebruiksgevallen mogelijk:
 
-* Wanneer sommige pagina&#39;s van een domein de bezoeker-API gebruiken en andere pagina&#39;s deze SDK gebruiken. Ter ondersteuning van dit geval leest de SDK bestaande AMCV-cookies en schrijft hij een nieuw cookie met de bestaande ECID. De SDK schrijft ook AMCV-cookies zodat, als de ECID als eerste wordt verkregen op een pagina die van instrumenten is voorzien met de SDK, de volgende pagina&#39;s die van instrumenten zijn voorzien met de Bezoeker-API dezelfde ECID hebben.
-* Wanneer de SDK van het Web van Adobe Experience Platform opstelling op een pagina is die ook bezoeker API heeft. Ter ondersteuning van dit geval zoekt de SDK, als het AMCV-cookie niet is ingesteld, naar de Bezoeker-API op de pagina en roept deze aan om de ECID op te halen.
-* Wanneer de hele site gebruikmaakt van Adobe Experience Platform Web SDK en geen API voor bezoekers heeft, is het handig om de ECID&#39;s te migreren zodat de geretourneerde bezoekersinformatie behouden blijft. Nadat de SDK gedurende een tijd is geïmplementeerd met `idMigrationEnabled` , zodat het merendeel van de cookies van de bezoeker wordt gemigreerd, kan de instelling worden uitgeschakeld.
+* Wanneer sommige pagina&#39;s van een domein de bezoeker-API gebruiken en andere pagina&#39;s deze SDK gebruiken. Ter ondersteuning van dit geval leest de SDK bestaande AMCV-cookies en schrijft een nieuwe cookie met de bestaande ECID. Bovendien schrijft de SDK de cookies van AMCV zodanig dat als de ECID als eerste wordt verkregen op een pagina die van instrumenten is voorzien met de SDK, de volgende pagina&#39;s die van instrumenten voorzien zijn met de API van de Bezoeker dezelfde ECID hebben.
+* Als Adobe Experience Platform Web SDK is ingesteld op een pagina die ook de Bezoeker-API heeft. Ter ondersteuning van dit geval zoekt de SDK op de pagina naar de Bezoeker-API en roept deze op om de ECID op te halen als het AMCV-cookie niet is ingesteld.
+* Wanneer de hele site Adobe Experience Platform Web SDK gebruikt en geen API voor bezoekers heeft, is het handig om de ECID&#39;s te migreren zodat de informatie van de geretourneerde bezoeker behouden blijft. Nadat de SDK gedurende een tijd is geïmplementeerd met `idMigrationEnabled` , zodat de meeste cookies van de bezoeker worden gemigreerd, kan de instelling worden uitgeschakeld.
 
 ### Functies voor migratie bijwerken
 
@@ -181,4 +181,4 @@ Wanneer gegevens met XDM-indeling naar Audience Manager worden verzonden, moeten
 
 ## Gebruiken in gebeurtenis door:sturen
 
-Als u momenteel [ gebeurtenis door:sturen ](../../tags/ui/event-forwarding/overview.md) toegelaten hebt en `appmeasurement.js` en `visitor.js` gebruikt, kunt u toegelaten gebeurtenis-door:sturen eigenschap houden en dit zal geen kwesties veroorzaken. Op het achterste eind, haalt de Adobe om het even welke AAM segmenten en voegt hen aan de vraag aan Analytics toe. Als de vraag aan Analytics die segmenten bevat, zal Analytics geen Audience Manager roepen om het even welke gegevens door:sturen, zodat is er geen dubbele gegevensinzameling. Er is ook geen behoefte aan de Hint van de Plaats wanneer het gebruiken van SDK van het Web omdat de zelfde segmentatie eindpunten in het achtereind worden geroepen.
+Als u momenteel [ gebeurtenis door:sturen ](../../tags/ui/event-forwarding/overview.md) toegelaten hebt en `appmeasurement.js` en `visitor.js` gebruikt, kunt u toegelaten gebeurtenis-door:sturen eigenschap houden en dit zal geen kwesties veroorzaken. Op het achterste eind, haalt de Adobe om het even welke AAM segmenten en voegt hen aan de vraag aan Analytics toe. Als de vraag aan Analytics die segmenten bevat, zal Analytics geen Audience Manager roepen om het even welke gegevens door:sturen, zodat is er geen dubbele gegevensinzameling. Er is ook geen behoefte aan de Hint van de Plaats wanneer het gebruiken van het Web SDK omdat de zelfde segmentatie eindpunten in het achterste eind worden geroepen.
