@@ -2,9 +2,9 @@
 title: Overzicht van geavanceerd gegevenslevenscyclusbeheer
 description: Met Advanced Data Lifecycle Management kunt u de levenscyclus van uw gegevens beheren door verouderde of onjuiste gegevens bij te werken of te wissen.
 exl-id: 104a2bb8-3242-4a20-b98d-ad6df8071a16
-source-git-commit: 1f82403d4f8f5639f6a9181a7ea98bd27af54904
+source-git-commit: 6ef09957d1eb2c07e5607105c782c36f20344bfa
 workflow-type: tm+mt
-source-wordcount: '625'
+source-wordcount: '817'
 ht-degree: 0%
 
 ---
@@ -38,24 +38,30 @@ Voor gedetailleerde stappen bij het beheren van de taken van de gegevenslevenscy
 
 De gebruikersinterface van [!UICONTROL Data Lifecycle] is gebaseerd op de API voor gegevenshygiëne, waarvan de eindpunten direct beschikbaar zijn voor u als u uw activiteiten tijdens de levenscyclus van gegevens liever wilt automatiseren. Zie de [ gids van de Hygiëne API van Gegevens ](./api/overview.md) voor meer informatie.
 
-## Tijdlijnen en transparantie
+## Tijdlijnen en transparantie {#timelines-and-transparency}
 
 [ schrapt het Verslag ](./ui/record-delete.md) en de verzoeken van de datasetvervalsing elk hun eigen verwerkingschronologie hebben en transparantie updates op zeer belangrijke punten in hun respectieve werkschema&#39;s verstrekken.
-
-<!-- ### Dataset expirations {#dataset-expiration-transparency} -->
 
 Het volgende vindt plaats wanneer het verzoek van de a [ datasetvervaldatum ](./ui/dataset-expiration.md) wordt gecreeerd:
 
 | Stadium | Tijd na geplande vervaldatum | Beschrijving |
 | --- | --- | --- |
 | Verzoek is ingediend | 0 uur | Een gegevensbeheerder of privacyanalist dient een verzoek in om een dataset op een bepaald tijdstip te laten verlopen. Het verzoek is zichtbaar in [!UICONTROL Data Lifecycle UI] nadat het is voorgelegd, en blijft in een hangende status tot de geplande vervaltijd, waarna het verzoek zal uitvoeren. |
-| Gegevensset wordt verwijderd | 1 uur | De dataset wordt gelaten vallen van de [ pagina van de datasetinventaris ](../catalog/datasets/user-guide.md) in UI. De gegevens in het datumpeer worden slechts zachte geschrapt, en zullen zo tot het eind van het proces blijven, waarna het hard zal worden geschrapt. |
+| Gegevensset is gemarkeerd voor verwijdering | 0-2 uur | Zodra het verzoek wordt uitgevoerd, wordt de dataset gemarkeerd voor schrapping. Als u Amazon Web Services (AWS)-gegevensopslag gebruikt, duurt dit proces maximaal twee uur. Tijdens deze tijd, sluiten de verrichtingen zoals partij en het stromen segmentatie, voorproef of schatting, de uitvoer, en de toegang deze dataset. |
+| Gegevensset wordt verwijderd | 3 uur | **Één uur nadat de dataset voor schrapping** wordt gemarkeerd, wordt het volledig verwijderd uit het systeem. Op dit punt, wordt de dataset gelaten vallen van de [ pagina van de datasetinventaris ](../catalog/datasets/user-guide.md) in UI. De gegevens in het datumpigment worden echter in dit stadium slechts weinig verwijderd en blijven dat zo totdat het proces voor het verwijderen van harde gegevens is voltooid. |
 | Aantal profielen bijgewerkt | 30 uur | Afhankelijk van de inhoud van de dataset die wordt geschrapt, kunnen sommige profielen uit het systeem worden verwijderd als alle hun componentenattributen aan die dataset worden gebonden. 30 uren nadat de dataset wordt geschrapt, worden om het even welke resulterende veranderingen in algemene profieltellingen weerspiegeld in [ dashboard widgets ](../dashboards/guides/profiles.md#profile-count-trend) en andere rapporten. |
 | Soorten publiek bijgewerkt | 48 uur | Zodra alle beïnvloede profielen worden bijgewerkt, worden alle verwante [ publiek ](../segmentation/home.md) bijgewerkt om op hun nieuwe grootte te wijzen. Afhankelijk van de gegevensset die is verwijderd en de kenmerken waarop u segmenteert, kan de grootte van elk publiek toenemen of afnemen als gevolg van de verwijdering. |
 | Reizen en bestemmingen bijgewerkt | 50 uur | [ de Reizen ](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/about-journeys/journey.html), [ campagnes ](https://experienceleague.adobe.com/docs/journey-optimizer/using/campaigns/get-started-with-campaigns.html), en [ bestemmingen ](../destinations/home.md) worden bijgewerkt volgens veranderingen in verwante segmenten. |
 | Harde verwijdering voltooid | 15 dagen | Alle gegevens met betrekking tot de gegevensset zijn hard verwijderd uit het datumpeer. De [ status van de baan van de gegevenslevenscyclus ](./ui/browse.md#view-details) die de dataset schrapte wordt bijgewerkt om dit te weerspiegelen. |
 
 {style="table-layout:auto"}
+
+>[!IMPORTANT]
+>
+>Verwijderingen van gegevenssets in Amazon Web Services (AWS) moeten zo&#39;n drie uur duren voordat de wijzigingen volledig worden toegepast. Dit omvat tot twee uren voor de dataset die voor schrapping moet worden gemarkeerd, die door een extra uur wordt gevolgd alvorens het volledig van het systeem wordt gelaten vallen. In tegenstelling, leiden de schrappingsverzoeken voor de instanties van het Platform die de instanties van de Gegevens van Azure gebruiken in directe veranderingen over bedrijfsfuncties.
+>
+>Voor AWS-gebruikers kan deze vertraging invloed hebben op batchsegmentatie, streamingsegmentatie, voorvertoningen, schattingen, export en gegevenstoegang. Deze latentie is alleen van invloed op klanten die AWS gebruiken, aangezien Azure Data Lake-gebruikers directe updates ervaren. Voor AWS-gebruikers kan het maximaal drie uur duren voordat verzoeken tot verwijdering volledig zijn doorgevoerd in alle betrokken systemen. Pas uw verwachtingen dienovereenkomstig aan.
+
 
 <!-- ### Record deletes {#record-delete-transparency}
 
