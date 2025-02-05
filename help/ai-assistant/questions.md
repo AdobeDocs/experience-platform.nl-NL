@@ -2,10 +2,10 @@
 title: Vraag voor AI-assistent
 description: Lees dit document om voorbeeldvragen te leren die u kunt gebruiken wanneer het vragen van AI Medewerker.
 exl-id: d16d1262-cc2d-45c9-94c4-b86132183442
-source-git-commit: 0926a0e8c7ae560bf5f4f9ff6853b191af047738
+source-git-commit: 7268895d0b1924f9d3e7cee24e549c79245ef099
 workflow-type: tm+mt
-source-wordcount: '1519'
-ht-degree: 0%
+source-wordcount: '2105'
+ht-degree: 1%
 
 ---
 
@@ -60,7 +60,7 @@ De volgende vragen worden gegroepeerd door gegevensvoorwerpen en als of [ operat
    * Welke schema&#39;s worden niet gebruikt in om het even welke datasets?
    * Hoeveel datasets heb ik?
 * **Doelen - Operationele inzichten**
-   * Welke bestemmingen zijn in een actieve staat?
+   * Welke bestemmingen zijn actief?
    * Welke bestemmingsrekeningen hebben 0 publiek geactiveerd?
    * Hoeveel publiek wordt geactiveerd voor elke bestemming?
    * Welke bestemmingen hebben het hoogste aantal geactiveerde doelgroepen?
@@ -69,20 +69,20 @@ De volgende vragen worden gegroepeerd door gegevensvoorwerpen en als of [ operat
    * Welke reizen zijn gemaakt in {RELATIVE_DATE} (bijvoorbeeld de laatste week) of {RELATIVE_DATE} (bijvoorbeeld voor/na/op een bepaalde datum)?
    * Geef me de lijst met reizen weer die zijn gewijzigd in {RELATIVE_DATE} (bijvoorbeeld de laatste week) of {RELATIVE_DATE} (bijvoorbeeld voor/na/op een bepaalde datum)?
    * Maak een lijst van de levende reizen die ik heb.
-   * Geef een overzicht van de soorten publiek die worden gebruikt voor rechtstreekse reizen.
+   * Geef een overzicht van de doelgroepen die worden gebruikt voor live journeys.
 * **Bronnen - Operationele inzichten**
    * Welke bronnen zijn actief?
    * Welke bronschakelaar wordt geassocieerd met dataset {USE_AUTO_COMPLETE_TO_FILL_DATASET_NAME}.
    * Welke bronschakelaar heeft het hoogste aantal bijbehorende rekeningen?
    * Toon me de gegevensstromen en hun bijbehorende bronschakelaars.
 * **Aangewezen het leren - de kennis van het Product (Real-Time CDP en Journey Optimizer)**
-   * Wat zijn gewone kijkers?
+   * Wat zijn lookalike doelgroepen?
    * Hoe zijn Gebruikersgroepen verwant aan Rollen?
    * Wanneer moet ik een gegevenstype versus een veldgroep gebruiken?
    * Wat is het verschil tussen een identiteit en een primaire of buitenlandse sleutel?
 * **het Oplossen van problemen - de kennis van het Product (Real-Time CDP en Journey Optimizer)**
    * Waarmee kan AI Assistant helpen?
-   * Kan ik een profiel schrappen toegelaten schema nadat de gegevens worden opgenomen?
+   * Kan ik een schema verwijderen dat voor een profiel is ingeschakeld nadat gegevens zijn opgenomen?
    * Waarom kan ik geen publiek verwijderen?
    * Hoe lang duurt het voordat het publiek wordt geëvalueerd en de resultaten beschikbaar zijn om doelgericht te zijn?
 
@@ -115,6 +115,75 @@ In de volgende tabellen worden de aanbevolen werkwijzen beschreven die u kunt vo
 | Criteria of parameters weglaten. | Toon me gegevenssets. |
 
 {style="table-layout:auto"}
+
+## Waarneming gegevensset {#dataset-observability}
+
+De Medewerker van AI kan vragen over specifieke datasetmetriek zoals opslaggrootte en rijtelling nu beantwoorden.
+
+* Wat zijn mijn grootste datasets door grootte?
+* Wat zijn mijn grootste dataset door rijen?
+* Hoeveel datasets zijn leeg?
+* Welke datasets zijn leeg?
+
+Bovendien kunt u een vergelijkbare intentie overbrengen door een aantal verschillende variaties aan te brengen op de vier bovenstaande vragen.
+
++++Selecteer om geaccepteerde variaties van de vragen van de datasetwaarneming te bekijken
+
+* Wat zijn de hoogste vijf datasets door grootte?
+* Welke dataset heeft het grootste aantal rijen?
+* Hoeveel datasets hebben geen gegevens in hen?
+* Geef de datasets weer met grootte > 10 MB?
+* Maak een lijst van de datasets met rijen minder dan 10.
+* Kun je me de gegevenssets laten zien die volledig leeg zijn?
+* Welke dataset is grootste door opslaggrootte?
+* Wat is de kleinste dataset in termen van rijtelling?
+* Hoeveel van mijn datasets hebben gegevens en hoeveel leeg zijn?
+* Wat is het rijaantal voor dataset genoemd {DATASET_NAME}?
+* Hoe vergelijk de grootte van {DATASET_NAME} met mijn andere datasets?
+* Wat is de grootte van {DATASET_NAME}?
+* Hoeveel rijen heeft {DATASET_NAME}?
+* Wat is de grootte en het aantal rijen van {DATASET_NAME}?
+* Kunt u de grootste en kleinste datasets door opslaggrootte opsommen?
+
++++
+
+U kunt uw vragen van de gegevenswaarneembaarheid met een kwalificatie ook verfijnen om uw vraag door een bepaalde tijdspanne te filtreren:
+
+* Datasets die batches ontvangen in de afgelopen (x) dagen
+* Datasets die de afgelopen (x) dagen geen batches ontvangen
+* Datasets met de meest gegevens die in de afgelopen (x) dagen zijn ingevoerd
+* Aantal records voor een specifieke gegevensset in de laatste (x) dagen
+
++++Selecteer om geaccepteerde variaties van de vragen van de datasetwaarneming te bekijken
+
+* Hoeveel datasets ontvingen partijen in de laatste (x) dagen?
+* Welke datasets hebben partijen in de afgelopen (x) dagen ontvangen?
+* Kunt u een lijst maken van de datasets die gegevens in de laatste (x) dagen werden opgenomen?
+* Hoeveel datasets ontvingen nieuwe partijen in de vorige (x) dagen?
+* Wat zijn de datasets die met nieuwe gegevens in de laatste (x) dagen werden bijgewerkt?
+* Lijst datasets die partijactiviteit binnen de laatste (x) dagen hadden.
+* Hoeveel datasets ontvingen geen partijen in de laatste (x) dagen?
+* Welke datasets hebben geen partijen in de afgelopen (x) dagen ontvangen?
+* Kunt u gegevenssets identificeren zonder gegevensinvoer in de laatste (x) dagen?
+* Hoeveel datasets ontvingen geen updates in de laatste (x) dagen?
+* Welke datasets zijn de afgelopen (x) dagen inactief geweest?
+* De datasets van de lijst die geen nieuwe partijen in de laatste (x) dagen kregen.
+* Wanneer was de laatste tijd toen de gegevens op dataset (x) werden opgenomen?
+* Wat zijn Top 10 datasets waarin de meeste gegevens in laatste (x) dagen werden opgenomen?
+* Wat zijn de hoogste 10 datasets door gegevensvolume dat in de laatste (x) dagen wordt opgenomen?
+* Welke 10 datasets hadden de grootste gegevensopname in de laatste (x) dagen?
+* Toon de top 10 datasets met de hoogste gegevensopname in de vorige (x) dagen.
+* Wat zijn de hoogste datasets door gegevens die in de laatste (x) dagen worden ontvangen?
+* Maak een lijst van de hoogste 10 datasets die de meeste gegevens in de afgelopen (x) dagen opnamen.
+* Hoeveel verslagen werden ontvangen in dataset (x), in de laatste (y) dagen?
+* Hoeveel verslagen ontving dataset (x) in de laatste (y) dagen?
+* Wat is het recordaantal dat voor dataset (x) in de afgelopen (y) dagen wordt opgenomen?
+* Kan u het aantal verslagen verstrekken die aan dataset (x) in de laatste (y) dagen worden toegevoegd?
+* Hoeveel gegevens werden ontvangen door dataset (x) in de laatste (y) dagen?
+* Wat is het volume van verslagen die voor dataset (x) in de vorige (y) dagen worden opgenomen?
+
++++
+
 
 ## Voorbeelden van niet-ondersteunde vragen {#unsupported-questions}
 
