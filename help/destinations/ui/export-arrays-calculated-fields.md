@@ -3,9 +3,9 @@ title: Array-objecten van Real-Time CDP naar cloudopslagdoelen exporteren
 type: Tutorial
 description: Leer hoe u berekende velden kunt gebruiken om arrays van Real-Time CDP naar cloudopslagdoelen als tekenreeksen te exporteren.
 exl-id: ff13d8b7-6287-4315-ba71-094e2270d039
-source-git-commit: a99fc58b8296b2b9ce6e30d14857529570cd3e8a
+source-git-commit: 6b182df562ea59d537050aa26e3c813fc2007e9f
 workflow-type: tm+mt
-source-wordcount: '1613'
+source-wordcount: '1689'
 ht-degree: 0%
 
 ---
@@ -72,6 +72,11 @@ Let op de volgende bekende beperkingen die momenteel van toepassing zijn op deze
 ## Berekende velden exporteren {#how-to-export-calculated-fields}
 
 >[!CONTEXTUALHELP]
+>id="platform_destinations_export_arrays_maps_objects"
+>title="Hiërarchisch uitvoerschema inschakelen"
+>abstract="<p> Wissel dit het plaatsen **op** om de uitvoer van series, kaarten, en voorwerpen aan JSON of de dossiers van het Parket toe te laten.</p><p>Met deze schakeloptie kunt u de optie Berekende velden gebruiken bij het activeren van het publiek, maar u kunt geen arrays, kaarten en objecten exporteren naar JSON- of Parquet-bestanden</p>"
+
+>[!CONTEXTUALHELP]
 >id="platform_destinations_export_arrays_control"
 >title="Hiërarchisch uitvoerschema inschakelen"
 >abstract="Schakel in of u hiërarchische structuren zoals arrays wilt exporteren."
@@ -79,7 +84,7 @@ Let op de volgende bekende beperkingen die momenteel van toepassing zijn op deze
 >[!CONTEXTUALHELP]
 >id="platform_destinations_export_arrays_calculated_field_disabled"
 >title="Berekende velden uitgeschakeld toevoegen"
->abstract="Dit besturingselement is uitgeschakeld omdat u hebt geselecteerd om platte structuren te exporteren wanneer u verbinding maakt met het doel."
+>abstract="Deze controle wordt onbruikbaar gemaakt omdat u de **series van de Uitvoer, kaarten, voorwerpen** knevel ** wanneer vestiging deze bestemmingsverbinding selecteerde. Om berekende gebieden en de functies te gebruiken beschikbaar binnen, opstelling een nieuwe bestemmingsverbinding met de **series van de Uitvoer, kaarten, voorwerpen** knevel *weg*."
 
 Selecteer **[!UICONTROL Add calculated field]** in de toewijzingsstap van de activeringsworkflow voor bestemmingen voor cloudopslag.
 
