@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Overzicht van gegevensverzameling
 description: Meer informatie over de verschillende technologieën die u nodig hebt om gegevens te verzamelen over de ervaringen van klanten in Adobe Experience Platform.
 exl-id: 03ce5339-e68d-4adf-8c3c-82846a626dad
-source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
+source-git-commit: b8332686043311c4dd3afeff12300fbd2827498c
 workflow-type: tm+mt
-source-wordcount: '489'
-ht-degree: 2%
+source-wordcount: '472'
+ht-degree: 3%
 
 ---
 
@@ -38,7 +38,7 @@ Deze gids verstrekt een inleiding op hoog niveau aan gegevensinzameling en hoe h
 
 ## Tags, Web SDK en Mobile SDK
 
-De Platform Web SDK en Platform Mobile SDK doen ineenstorten en comprimeren alle bibliotheken van het product van de Adobe in één enkele ontwikkelingskit voor Web en mobiele platforms respectievelijk. Deze kunnen worden uitgevoerd gebruikend ruwe code of gebruikend [ markeringen ](../tags/home.md) door de Inzameling UI van Gegevens of UI UI UI van Adobe Experience Platform.
+Het Platform Web SDK en Platform Mobile SDK vouwen en comprimeren alle bibliotheken van het Adobe product in één enkele ontwikkelingskit voor respectievelijk Web en Mobiele platforms. Deze kunnen worden uitgevoerd gebruikend ruwe code of gebruikend [ markeringen ](../tags/home.md) door de Inzameling UI van Gegevens of UI UI UI van Adobe Experience Platform.
 
 Het samenpersen van deze bibliotheken versnelt gegevensinzameling en consolideert verrichtingen in één enkele stroom van cliënt-zijapparaten aan de Edge Network van het Platform.
 
@@ -52,10 +52,6 @@ Bovendien zijn de gegevensstromen geïntegreerd met verscheidene mogelijkheden v
 
 ![ Datastreams en de oplossingen van de Adobe ](./images/home/adobe-solutions.png)
 
->[!NOTE]
->
->Voor een inleiding op hoog niveau aan de Edge Network van het Platform, verwijs naar de volgende [ interactieve producttour ](https://adobe-ideacloud.forgedx.com/adobe-adobe-edge-collection/adobe-experience-edge/public/mx?SUID=hgb1a48ICSCpbM6MzBYHbxnsh9DgjUy1).
-
 ## Gebeurtenis doorsturen
 
 [ Gebeurtenis door:sturen ](../tags/ui/event-forwarding/overview.md) kan in om het even welke gegevensstroom van het Experience Platform tikken, toestaand u om, gegevens aan om het even welke niet Adobe bestemming met extreme lage latentie te transformeren en te verzenden en zonder enige derdecode aan het cliëntapparaat toe te voegen.
@@ -64,7 +60,7 @@ Bovendien zijn de gegevensstromen geïntegreerd met verscheidene mogelijkheden v
 
 >[!NOTE]
 >
->Het door:sturen van gebeurtenissen is een betaalde eigenschap die als deel van het de Verbindingen van Adobe Real-time Customer Data Platform, eerste, of Ultimate dienstenaanbod inbegrepen is.
+>Het door:sturen van gebeurtenissen is een betaalde eigenschap die als deel van het aanbod van de Verbindingen van Adobe Real-time Customer Data Platform, Prime, of Ultimate inbegrepen is.
 
 ## Volgende stappen
 
