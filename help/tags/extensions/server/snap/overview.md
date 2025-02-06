@@ -2,9 +2,10 @@
 title: Overzicht van de extensie Snapchat Conversion API
 description: Gebruik de Snapchat-conversie om gebeurtenisgegevens op de server naar Snap te verzenden.
 last-substantial-update: 2025-01-20T00:00:00Z
-source-git-commit: 79e19b12dd39208827c215094b6c8ec9163d6624
+exl-id: 1c2d7243-5bcd-40a0-8515-9ab72613c5f3
+source-git-commit: 7cece312a2f019d48653dbd208cc8b7593ab0ee3
 workflow-type: tm+mt
-source-wordcount: '919'
+source-wordcount: '918'
 ht-degree: 0%
 
 ---
@@ -24,7 +25,7 @@ Creeer a [ Datastream ](/help/tags/ui/event-forwarding/getting-started.md) en vo
 
 Een **[!DNL Snapchat]** [ BedrijfsManager ](https://business.snapchat.com/) rekening wordt vereist om Conversies API te gebruiken. Met Business Manager kunnen adverteerders de marketinginspanningen van **[!DNL Snapchat]** integreren in hun hele bedrijf en met externe partners. Zie **[!DNL Snapchat]** [ hulp centreert artikel ](https://businesshelp.snapchat.com/s/article/get-started?language=en_US) bij het creëren van een rekening van BedrijfsManager als u geen hebt.
 
-Er moet een **[!DNL Snap Pixel]** (https://businesshelp.snapchat.com/s/article/pixel-website-install?language=en_US) zijn ingesteld in Snapchat Ads Manager en u moet toegang hebben om `Pixel ID` te kunnen bekijken. `Pixel ID` vindt u in de sectie **[!UICONTROL Events Manager]** https://businesshelp.snapchat.com/s/article/events-manager?language=en_US.
+Er moet een [!DNL [Snap Pixel]](https://businesshelp.snapchat.com/s/article/pixel-website-install?language=en_US) zijn ingesteld in Snapchat Ads Manager en u moet toegang hebben om `Pixel ID` te kunnen bekijken. `Pixel ID` vindt u in de sectie [!UICONTROL [Events Manager]](https://businesshelp.snapchat.com/s/article/events-manager?language=en_US) .
 
 U hebt een statisch, langdurig API-token nodig. Zie [[!DNL Snapchat]  Conversies API documentatie ](https://developers.snap.com/api/marketing-api/Conversions-API/GetStarted#access-token) om dit teken te verkrijgen.
 
@@ -190,7 +191,7 @@ Zodra u de naam, de voorwaarde en de actie van de regel zoals hierboven beschrev
 
 ![ Beeld die toegelaten regel tonen ](../../../images/extensions/server/snap/enabled_rule.png)
 
-U kunt deze wijzigingen nu publiceren naar uw eigenschap. Zie de documentatie bij [ het publiceren stroom ](/help/tags/ui/publishing/overview.md) (https://experienceleague.adobe.com/en/docs/experience-platform/tags/publish/overview) voor meer informatie.
+U kunt deze wijzigingen nu publiceren naar uw eigenschap. Zie de documentatie bij [ het publiceren stroom ](/help/tags/ui/publishing/overview.md) voor meer informatie.
 
 ## Problemen oplossen {#troubleshoot}
 
