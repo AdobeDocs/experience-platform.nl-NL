@@ -2,9 +2,9 @@
 title: Overzicht van AI Assistant
 description: Leer meer over AI Assistant, de nuances en gebruiksgevallen en hoe u deze kunt gebruiken om uw workflow met Adobe Experience Platform en Real-time Customer Data Platform te versnellen.
 exl-id: cfd4ac22-fff3-4b50-bbc2-85b6328f603c
-source-git-commit: 1910ac68be2c154467d250a614d0d13d62ef6875
+source-git-commit: 9a10db0da1985c5ccaaeb84e040eea9e76ec1ae4
 workflow-type: tm+mt
-source-wordcount: '938'
+source-wordcount: '950'
 ht-degree: 8%
 
 ---
@@ -91,6 +91,10 @@ U kunt AI Assistant-vragen stellen over uw operationele inzichten in de volgende
 {style="table-layout:auto"}
 
 Voor vragen over operationele inzichten weerspiegelen de antwoorden mogelijk niet de huidige status van de gebruikersinterface. De gegevens die deze vragen ondersteunen, worden om de 24 uur bijgewerkt. Zo worden wijzigingen die gebruikers overdag aanbrengen in Real-Time CDP gesynchroniseerd met de gegevensopslag &#39;s nachts, waarna ze &#39;s ochtends beschikbaar komen voor vragen van gebruikers. U moet zich aanmelden bij een sandbox voor informatie over specifieke gegevens die betrekking hebben op objecten.
+
+Bekijk de volgende video voor aanvullende informatie over operationele inzichten van AI Assistant:
+
+>[!VIDEO](https://video.tv.adobe.com/v/3444031?learn=on&enablevpops)
 
 ### Functiebereik {#feature-scope}
 

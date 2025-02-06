@@ -3,9 +3,9 @@ title: AI Assistant in Adobe Experience Platform-productdocumentatie
 description: Ga aan de slag met AI Assistant in Adobe Experience Platform.
 feature: AI Assistant
 exl-id: bcb86a41-d5d8-4c1a-a86d-79fa0c167bc7
-source-git-commit: 96e138cc12fdedaa73e3aaf69341806271413680
+source-git-commit: 9a10db0da1985c5ccaaeb84e040eea9e76ec1ae4
 workflow-type: tm+mt
-source-wordcount: '851'
+source-wordcount: '899'
 ht-degree: 1%
 
 ---
@@ -109,7 +109,15 @@ Bekijk de volgende video voor meer informatie over productkennis in AI Assistant
 
 >[!VIDEO](https://video.tv.adobe.com/v/3441024?learn=on)
 
-Voor meer informatie, lees over [ productkennis in AI Medewerker ](home.md#product-knowledge)
+Voor meer informatie, lees over [ productkennis in AI Medewerker ](home.md#product-knowledge).
+
+### Operationele inzichten in AI Assistant
+
+Bekijk de volgende video om te leren hoe u AI Assistant kunt gebruiken om uw operationele inzichten op te halen en een uitgebreide weergave van uw gegevensobjecten te krijgen.
+
+>[!VIDEO](https://video.tv.adobe.com/v/3444031?learn=on&enablevpops)
+
+Voor meer informatie, lees over [ operationele inzichten in AI Medewerker ](home.md#operational-insights).
 
 ### De AI Hulp productkennis van het gebruik om onboarding tijd te verminderen
 
@@ -165,6 +173,7 @@ Lees het volgende voor voorbeelden van AI Assistant-gebruiksscenario&#39;s:
 * [ ontmoedig uw publiek en optimaliseer uw marketing verrichtingen ](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-blogs/ai-assistant-helps-optimize-marketing-operations-by-de/ba-p/696002)
 * [ Controle gebiedsdelen en minimaliseer risico tijdens gegevensupdates ](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-blogs/ai-assistant-minimizes-risk-during-data-updates-by-checking/ba-p/713364)
 * [ ontdekt en stelt sneller nieuwe eigenschappen ](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-blogs/discover-and-deploy-new-features-faster-with-ai-assistant-in/ba-p/731125) op
+* [ Revolutioneer klantensteun met Medewerker AI ](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-blogs/ai-assistant-in-adobe-experience-platform-revolutionizing/ba-p/735416)
 
 >[!TAB  Extra videoinhoud ]
 
