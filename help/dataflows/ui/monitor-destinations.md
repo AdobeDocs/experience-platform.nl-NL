@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Dataflows voor Doelen in UI controleren
 type: Tutorial
 exl-id: 8eb7bb3c-f2dc-4dbc-9cf5-3d5d3224f5f1
-source-git-commit: 25dc27d890cb2e0e23f8fa797ac9edea929164fd
+source-git-commit: f10706fbbde9cef112460f5431af24d09b0e0460
 workflow-type: tm+mt
-source-wordcount: '3470'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
@@ -97,15 +97,15 @@ Elke individuele dataflow run toont de volgende details:
 
   >[!IMPORTANT]
   >
-  > Vanaf oktober 2024 wordt door Adobe een update uitgevoerd om de rapportnauwkeurigheid voor streamingdoelen te verbeteren. Deze verbetering zorgt voor een betere afstemming tussen het Experience Platform en de doelplatforms die rapporteren.
+  > Vanaf oktober 2024 brengt Adobe een update uit om de rapportagenauwkeurigheid voor streamingbestemmingen te verbeteren. Deze verbetering zorgt voor een betere afstemming tussen het Experience Platform en de doelplatforms die rapporteren.
   >
   > Vóór deze update heeft **[!UICONTROL Identities failed]** alle activeringspogingen opgenomen. Na deze update wordt alleen de laatste activeringspoging opgenomen in het totale aantal.
   > 
   > Deze verhoging is momenteel van toepassing op de [ Klant van Google de bestemming ](../../destinations/catalog/advertising/google-customer-match.md) maar zal geleidelijk aan andere Experience Platform die bestemmingen stromen worden uitgevoerd.
-  > Na deze verhoging, kunnen de gebruikers van de [ bestemming van de Gelijke van de Klant van Google ](../../destinations/catalog/advertising/google-customer-match.md) een verwachte daling in hun **[!UICONTROL Identities failed]** telling zien.
+  > Na deze verbetering kunnen de gebruikers van de [Google Customer Match-bestemming](../../destinations/catalog/advertising/google-customer-match.md) een verwachte daling in hun totale aantal **[!UICONTROL Identities failed]** zien.
 
 
-- **[!UICONTROL Activation rate]**: Het percentage ontvangen identiteiten dat is geactiveerd of overgeslagen. De volgende formule laat zien hoe deze waarde wordt berekend:
+- **[!UICONTROL Activation rate]**: Het percentage ontvangen identiteiten dat is geactiveerd. De volgende formule laat zien hoe deze waarde wordt berekend:
   ![ formule van het het tarief van de Activering.](../assets/ui/monitor-destinations/activation-rate-formula.png)
 - **[!UICONTROL Status]**: geeft de status aan waarin de gegevensstroom zich bevindt: [!UICONTROL Completed] of [!UICONTROL Processing] . [!UICONTROL Completed] betekent dat alle identiteiten voor de overeenkomstige dataflow-run binnen de periode van één uur zijn geëxporteerd. [!UICONTROL Processing] betekent dat de uitvoering van de gegevensstroom nog niet is voltooid.
 
