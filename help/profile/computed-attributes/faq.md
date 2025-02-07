@@ -2,9 +2,9 @@
 title: Berekende kenmerken Veelgestelde vragen
 description: Ontdek antwoorden op veelgestelde vragen over het gebruik van berekende kenmerken.
 exl-id: a4d3c06a-d135-453b-9637-4f98e62737a7
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: 7d515401eb49ffd2ad5cf0bd074896b274c4fb05
 workflow-type: tm+mt
-source-wordcount: '1083'
+source-wordcount: '1091'
 ht-degree: 0%
 
 ---
@@ -49,7 +49,7 @@ Aangezien berekende kenmerken worden gemaakt met de velden Experience Event en z
 
 ## Zijn er grenzen aan het aantal gegevens verwerkte attributen ik kan creëren?
 
-Ja, er geldt een limiet voor het aantal berekende kenmerken dat u kunt maken. Raadpleeg de productbeschrijving of neem contact op met het accountteam van de Adobe voor meer informatie.
+Ja, er geldt een limiet voor het aantal berekende kenmerken dat u kunt maken. Deze grens is slechts op **actief** gegevens verwerkte attributen van toepassing. Raadpleeg de productbeschrijving of neem contact op met het accountteam van de Adobe voor meer informatie.
 
 ## Zijn er om het even welke stroomafwaartse implicaties voor het onbruikbaar maken van een gegevens verwerkt attribuut?
 

@@ -2,16 +2,16 @@
 title: Real-Time overzicht van klantprofiel
 description: In real-time klantprofiel worden gegevens uit verschillende bronnen samengevoegd en krijgt toegang tot die gegevens in de vorm van individuele klantprofielen en gerelateerde tijdreeksgebeurtenissen. Met deze functie kunnen marketers op meerdere kanalen hun publiek gecoördineerde, consistente en relevante ervaringen bieden.
 exl-id: c93d8d78-b215-4559-a806-f019c602c4d2
-source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
+source-git-commit: 7d515401eb49ffd2ad5cf0bd074896b274c4fb05
 workflow-type: tm+mt
 source-wordcount: '1821'
-ht-degree: 0%
+ht-degree: 1%
 
 ---
 
 # [!DNL Real-Time Customer Profile]-overzicht
 
-Met Adobe Experience Platform kunt u zorgen voor gecoördineerde, consistente en relevante ervaringen voor uw klanten, ongeacht waar of wanneer ze met uw merk communiceren. Met [!DNL Real-Time Customer Profile], kunt u een holistische mening van elke individuele klant zien door gegevens van veelvoudige kanalen, met inbegrip van online, off-line, CRM, en derde te combineren. Met [!DNL Profile] kunt u uw klantgegevens consolideren in een uniforme weergave die een actief, tijdstempelaccount voor elke interactie van de klant biedt. Dit overzicht geeft inzicht in de rol en het gebruik van [!DNL Real-Time Customer Profile] in [!DNL Experience Platform] .
+Met Adobe Experience Platform kunt u uw klanten gecoördineerde, consistente en relevante ervaringen bieden, ongeacht waar of wanneer ze met uw merk in aanraking komen. Met [!DNL Real-Time Customer Profile], kunt u een holistische mening van elke individuele klant zien door gegevens van veelvoudige kanalen, met inbegrip van online, off-line, CRM, en derde te combineren. Met [!DNL Profile] kunt u uw klantgegevens consolideren in een uniforme weergave die een actief, tijdstempelaccount voor elke interactie van de klant biedt. Dit overzicht geeft inzicht in de rol en het gebruik van [!DNL Real-Time Customer Profile] in [!DNL Experience Platform] .
 
 ## [!DNL Profile] in Experience Platform
 
@@ -49,7 +49,7 @@ De profielopslag gebruikt een Microsoft Azure Cosmos DB-infrastructuur en het Pl
 
 ### Profielhulplijnen
 
-Het Experience Platform verstrekt een reeks gidsen om u te helpen vermijden creërend [ schema&#39;s van de Gegevens van de Ervaring van het Model (XDM) ](../xdm/home.md) die het Profiel van de Klant in real time niet kan steunen. Dit omvat zachte grenzen die in prestatiesdegradatie zullen resulteren, evenals harde grenzen die in fouten en systeembreuken zullen resulteren. Voor meer informatie, met inbegrip van een lijst van richtlijnen en de gevallen van het voorbeeldgebruik, gelieve te lezen de [ guardrails van het Profiel ](guardrails.md) documentatie.
+Het Experience Platform verstrekt een reeks gidsen om u te helpen vermijden creërend [ schema&#39;s van de Gegevens van de Ervaring van het Model (XDM) ](../xdm/home.md) die het Profiel van de Klant in real time niet kan steunen. Dit omvat zachte grenzen die in prestatiesvermindering zullen resulteren, evenals harde grenzen die in fouten en systeembreuken zullen resulteren. Voor meer informatie, met inbegrip van een lijst van richtlijnen en de gevallen van het voorbeeldgebruik, gelieve te lezen de [ guardrails van het Profiel ](guardrails.md) documentatie.
 
 ### Profieldashboard {#profile-dashboard}
 
