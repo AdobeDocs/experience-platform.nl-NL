@@ -2,9 +2,9 @@
 title: Gegevenslandingszone verbinden met platform via de gebruikersinterface
 description: Leer hoe te om een van de Bron van de Gebied van Gegevens te creëren die de gebruikersinterface van het Platform gebruiken.
 exl-id: 653c9958-5d89-4b0c-af3d-a3e74aa47a08
-source-git-commit: 22f3b76c02e641d2f4c0dd7c0e5cc93038782836
+source-git-commit: cdcce07a5adf08bf9d5e6a08d6bc965d37458a5d
 workflow-type: tm+mt
-source-wordcount: '710'
+source-wordcount: '737'
 ht-degree: 0%
 
 ---
@@ -27,6 +27,10 @@ Deze zelfstudie vereist een goed begrip van de volgende onderdelen van Adobe Exp
 * [ Sandboxes ](../../../../../sandboxes/home.md): Experience Platform verstrekt virtuele zandbakken die één enkele instantie van het Platform in afzonderlijke virtuele milieu&#39;s verdelen helpen digitale ervaringstoepassingen ontwikkelen en ontwikkelen.
 
 ## Breng uw bestanden van [!DNL Data Landing Zone] naar het platform
+
+>[!IMPORTANT]
+>
+> Als u verbinding wilt maken met de bron, hebt u de toegangsbeheermachtigingen **[!UICONTROL View Sources]** en **[!UICONTROL Manage Sources]** nodig. Lees het [ overzicht van de toegangscontrole ](../../../../../access-control/home.md) of contacteer uw productbeheerder om de vereiste toestemmingen te verkrijgen.
 
 Selecteer in de gebruikersinterface van het platform de optie **[!UICONTROL Sources]** in de linkernavigatie voor toegang tot de werkruimte van [!UICONTROL Sources] . In het scherm [!UICONTROL Catalog] worden diverse bronnen weergegeven waarmee u een account kunt maken.
 

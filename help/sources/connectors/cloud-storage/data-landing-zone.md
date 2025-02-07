@@ -2,9 +2,9 @@
 title: Data Landing Zone Source
 description: Leer hoe u Data Landing Zone kunt verbinden met Adobe Experience Platform
 exl-id: bdc10095-7de4-4183-bfad-a7b5c89197e3
-source-git-commit: b9a409db2f1aee852faf9038a25236b78f76d4dd
+source-git-commit: 1d4dd60180ef2a3cbf6dcd565c2f09dd575716b9
 workflow-type: tm+mt
-source-wordcount: '1282'
+source-wordcount: '1312'
 ht-degree: 0%
 
 ---
@@ -299,6 +299,12 @@ Navigeer ten slotte naar de gegenereerde URL om u rechtstreeks aan te melden bij
 
 ## Verbinden [!DNL Data Landing Zone] met Experience Platform
 
+>[!IMPORTANT]
+>
+>- Als u verbinding wilt maken met de bron, hebt u de toegangsbeheermachtigingen **[!UICONTROL View Sources]** en **[!UICONTROL Manage Sources]** nodig. Voor meer informatie, lees het [ overzicht van de toegangscontrole ](../../../access-control/home.md) of contacteer uw productbeheerder om de vereiste toestemmingen te verkrijgen.
+>
+>- Privékoppelingen worden momenteel niet ondersteund wanneer verbinding wordt gemaakt met een Experience Platform via de [!DNL Data Landing Zone] . De enige gesteunde methodes voor toegang zijn de hier vermelde methodes [ ](#manage-the-contents-of-your-data-landing-zone).
+
 In de onderstaande documentatie vindt u informatie over het overbrengen van gegevens van uw [!DNL Data Landing Zone] -container naar Adobe Experience Platform met behulp van API&#39;s of de gebruikersinterface.
 
 ### API&#39;s gebruiken
@@ -310,8 +316,4 @@ In de onderstaande documentatie vindt u informatie over het overbrengen van gege
 
 - [Verbind  [!DNL Data Landing Zone]  met Platform gebruikend UI](../../tutorials/ui/create/cloud-storage/data-landing-zone.md)
 - [Een gegevensstroom maken voor een verbinding voor cloudopslag in de gebruikersinterface](../../tutorials/ui/dataflow/batch/cloud-storage.md)
-
->[!IMPORTANT]
->
->Privékoppelingen worden momenteel niet ondersteund wanneer verbinding wordt gemaakt met een Experience Platform via de [!DNL Data Landing Zone] . De enige gesteunde methodes voor toegang zijn de hier vermelde methodes [ ](#manage-the-contents-of-your-data-landing-zone).
 
