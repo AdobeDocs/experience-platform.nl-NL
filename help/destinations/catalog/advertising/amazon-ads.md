@@ -1,11 +1,11 @@
 ---
 title: Amazon Adds
-description: Amazon Ads biedt verschillende opties om geregistreerde verkopers, verkopers, verkopers van boeken, Kindle Direct Publishing-auteurs (KDP), ontwikkelaars van apps en/of bureaus te helpen uw reclamedoelstellingen te bereiken. De integratie van Amazon Ads met Adobe Experience Platform biedt kant-en-klare integratie voor Amazon Ads-producten, waaronder de Amazon DSP (ADSP). Met de Amazon Ads-bestemming in Adobe Experience Platform kunnen gebruikers adverteerdersoorten definiëren voor doelwitten en activering op de Amazon-DSP.
+description: Amazon Ads biedt verschillende opties om geregistreerde verkopers, verkopers, verkopers van boeken, Kindle Direct Publishing-auteurs (KDP), ontwikkelaars van apps en/of bureaus te helpen uw reclamedoelstellingen te bereiken. De integratie van Amazon Ads met Adobe Experience Platform biedt kant-en-klare integratie voor Amazon Ads-producten, waaronder de Amazon DSP (ADSP). Met de Amazon Ads-bestemming in Adobe Experience Platform kunnen gebruikers adverteerdersoorten definiëren voor doelwitten en activering op de Amazon DSP.
 last-substantial-update: 2025-01-07T00:00:00Z
 exl-id: 724f3d32-65e0-4612-a882-33333e07c5af
-source-git-commit: 8543f76565f22b8cdfb0be71a1332696bc079ec7
+source-git-commit: 546ef0f9a5a9c37de3891aba02491540a5c6f8c9
 workflow-type: tm+mt
-source-wordcount: '1784'
+source-wordcount: '1770'
 ht-degree: 1%
 
 ---
@@ -18,9 +18,9 @@ ht-degree: 1%
 
 De [!DNL Amazon Ads] -integratie met Adobe Experience Platform biedt kant-en-klare integratie voor [!DNL Amazon Ads] -producten, waaronder de Amazon DSP (ADSP) en Amazon Marketing Cloud (AMC).
 
-Met behulp van de [!DNL Amazon Ads] -bestemming in Adobe Experience Platform kunnen gebruikers adverteerdersoorten definiëren voor activering en doelversie op de Amazon-DSP.  Bovendien kunnen gebruikers hun gegevens uploaden naar [!DNL Amazon Marketing Cloud] om de prestaties per publiek te begrijpen, door adverteerders opgegeven dimensies, het lidmaatschap van Amazon-segmenten of andere signalen die beschikbaar zijn in AMC. Na het uploaden van adverteerders naar AMC, kunnen gebruikers [!DNL Amazon Marketing Cloud] gebruiken om leden van het publiek te wijzigen, te verbeteren of toe te voegen met Amazon-signalen vanuit [!DNL Amazon Marketing Cloud] .
+Met de [!DNL Amazon Ads] -bestemming in Adobe Experience Platform kunnen gebruikers adverteerdersoorten definiëren voor activering en doelversie op de Amazon DSP.  Bovendien kunnen gebruikers hun gegevens uploaden naar [!DNL Amazon Marketing Cloud] om de prestaties per publiek te begrijpen, door adverteerders opgegeven dimensies, het lidmaatschap van Amazon-segmenten of andere signalen die beschikbaar zijn in AMC. Na het uploaden van adverteerders naar AMC, kunnen gebruikers [!DNL Amazon Marketing Cloud] gebruiken om leden van het publiek te wijzigen, te verbeteren of toe te voegen met Amazon-signalen vanuit [!DNL Amazon Marketing Cloud] .
 
-AMC verenigt unieke signalen van Amazon-eigendommen en -bediende eigenschappen die zich uitstrekken over verschillende media, waaronder display, video, streaming TV, audio en gesponsorde advertenties. Gebruikers kunnen eenvoudig curated segments van Adobe Experience Platform naar AMC verzenden om het leren te verbeteren, zoals in-market groepen van het publiek, levensstijlcohorten en merkbetrokkenheidspatronen. De gebogen segmenten kunnen dan worden gebruikt om media activering in de DSP van Amazon te optimaliseren.
+AMC verenigt unieke signalen van Amazon-eigendommen en -bediende eigenschappen die zich uitstrekken over verschillende media, waaronder display, video, streaming TV, audio en gesponsorde advertenties. Gebruikers kunnen eenvoudig curated segments van Adobe Experience Platform naar AMC verzenden om het leren te verbeteren, zoals in-market groepen van het publiek, levensstijlcohorten en merkbetrokkenheidspatronen. De Augmented segmenten kunnen dan worden gebruikt om media activering in Amazon DSP te optimaliseren.
 
 >[!IMPORTANT]
 >
@@ -32,7 +32,7 @@ Om u beter te helpen begrijpen hoe en wanneer u de *[!DNL Amazon Ads]* bestemmin
 
 ### Activering en doelversie {#activation-and-targeting}
 
-Dankzij deze integratie met Amazon DSP kunnen [!DNL Amazon Ads] -adverteerders CDP-soorten voor adverteerders doorgeven van Adobe Experience Platform naar Amazon-DSP om adverteerders te maken die adverteerders aanspreken. In de Amazon-DSP kunnen doelgroepen worden geselecteerd voor positieve doelgerichtheid en voor negatieve doelgerichtheid (onderdrukking).
+Dankzij deze integratie met Amazon DSP kunnen [!DNL Amazon Ads] -adverteerders CDP-advertenties doorgeven van Adobe Experience Platform naar Amazon DSP om adverteerders te maken die adverteerders promoten. In de Amazon DSP kunnen doelgroepen worden geselecteerd voor positieve doelgerichtheid en voor negatieve doelgerichtheid (onderdrukking).
 
 ### Analyse en meting {#analytics-and-measurement}
 
@@ -40,18 +40,18 @@ Dankzij deze integratie met [!DNL Amazon Marketing Cloud] (AMC) kunnen [!DNL Ama
 
 ### Advertising optimaliseren
 
-Dankzij deze integratie met [!DNL Amazon Marketing Cloud] (AMC) kunnen adverteerders hun eigen klantlijsten uploaden en met [!DNL Amazon Marketing Cloud] SQL overlappende analyses, onderdrukkingen, toevoegingen of optimalisaties voor het publiek uitvoeren op een terugkerende basis voordat ze een publiek maken dat klaar is voor activering in Amazon-DSP voor doelversie.
+Dankzij deze integratie met [!DNL Amazon Marketing Cloud] (AMC) kunnen adverteerders hun eigen klantlijsten uploaden en met [!DNL Amazon Marketing Cloud] SQL overlappende analyses, onderdrukkingen, toevoegingen of optimalisaties voor het publiek uitvoeren op een terugkerende basis voordat ze een publiek maken dat klaar is voor activering in Amazon DSP voor het opgeven van doelen.
 
 ## Vereisten {#prerequisites}
 
 Als u de [!DNL Amazon Ads] -verbinding met Adobe Experience Platform wilt gebruiken, moeten gebruikers eerst toegang hebben tot een Amazon DSP Advertiser-account of een [!DNL Amazon Marketing Cloud] -instantie. Ga naar de volgende pagina op de [!DNL Amazon Ads] -website om deze instanties op te geven:
 
-* [ worden begonnen met de DSP van Amazon ](https://advertising.amazon.com/solutions/products/amazon-dsp)
-* [ worden begonnen met de Marketing Cloud van Amazon ](https://advertising.amazon.com/solutions/products/amazon-marketing-cloud)
+* [ worden begonnen met Amazon DSP ](https://advertising.amazon.com/solutions/products/amazon-dsp)
+* [ worden begonnen met Amazon Marketing Cloud ](https://advertising.amazon.com/solutions/products/amazon-marketing-cloud)
 
 ## Ondersteunde identiteiten {#supported-identities}
 
-De *[!DNL Amazon Ads]* -verbinding ondersteunt de activering van identiteiten die in de onderstaande tabel worden beschreven. Leer meer over [ identiteiten ](/help/identity-service//features/namespaces.md). Voor meer details over de identiteiten die door [!DNL Amazon Ads] worden gesteund, bezoek het [ Centrum van de Steun van de DSP van Amazon ](https://advertising.amazon.com/dsp/help/ss/en/audiences#GA6BC9BW52YFXBNE).
+De *[!DNL Amazon Ads]* -verbinding ondersteunt de activering van identiteiten die in de onderstaande tabel worden beschreven. Leer meer over [ identiteiten ](/help/identity-service//features/namespaces.md). Voor meer details over de identiteiten die door [!DNL Amazon Ads] worden gesteund, bezoek het [ Centrum van de Steun van DSP van Amazon ](https://advertising.amazon.com/dsp/help/ss/en/audiences#GA6BC9BW52YFXBNE).
 
 | Doelidentiteit | Beschrijving | Overwegingen |
 |---|---|---|
@@ -99,10 +99,6 @@ Als u details voor de bestemming wilt configureren, vult u de vereiste en option
 
 * **[!UICONTROL Advertiser Region]**: selecteer het juiste gebied waarin uw adverteerder wordt gehost. Voor meer informatie over de markten die door elk gebied worden gesteund, bezoek de [ documentatie van Amazon Ads ](https://advertising.amazon.com/API/docs/en-us/info/api-overview#api-endpoints).
 
->[!IMPORTANT]
->
->De update die de **[!UICONTROL Amazon Ads Consent Signal]** moet bevatten, wordt gepland voor 7 februari 2025.
-
 * **[!UICONTROL Amazon Ads Consent Signal]**: Bevestig dat alle gegevens die via deze verbinding worden verzonden, hebben ingestemd met het gebruik van persoonsgegevens voor reclamedoeleinden. &quot;GRANTED&quot; geeft aan dat Amazon ermee instemt de persoonsgegevens van de klant te gebruiken voor reclame. De toegestane waarden zijn &quot;GRANTED&quot; en &quot;DENIED&quot;. Alle records die via verbindingen met &quot;DENIED&quot; worden verzonden, worden geweigerd voor verder gebruik in Amazon Ads.
 
 ![ vorm nieuwe bestemming ](../../assets/catalog/advertising/amazon-ads/amazon_ads_consent_input.png)
@@ -141,11 +137,11 @@ U wordt ten zeerste aangeraden om zoveel velden in kaart te brengen als u hebt. 
 
 Nadat u het publiek hebt geüpload, kunt u controleren of het publiek correct is gemaakt en geüpload door de volgende stappen uit te voeren:
 
-**voor de DSP van Amazon**
+**voor Amazon DSP**
 
-Navigeer naar uw **[!UICONTROL Advertiser ID]** > **[!UICONTROL Audiences]** > **[!UICONTROL Advertiser Audiences]** . Als het publiek is gemaakt en het minimale aantal publieksleden bereikt, wordt de status `Active` weergegeven. Meer informatie over de grootte en het bereik van uw publiek vindt u in het deelvenster Voorspeld Bereik aan de rechterkant van de gebruikersinterface van Amazon DSP.
+Navigeer naar uw **[!UICONTROL Advertiser ID]** > **[!UICONTROL Audiences]** > **[!UICONTROL Advertiser Audiences]** . Als het publiek is gemaakt en het minimale aantal publieksleden bereikt, wordt de status `Active` weergegeven. Meer informatie over de grootte en het bereik van uw publiek vindt u in het deelvenster Voorspelde resultaten rechts van de Amazon DSP-gebruikersinterface.
 
-![ Amazon DSP de bevestiging van de publieksverwezenlijking ](../../assets/catalog/advertising/amazon-ads/amazon_ads_image_3.png)
+![ de bevestiging van de het publieksverwezenlijking van Amazon DSP ](../../assets/catalog/advertising/amazon-ads/amazon_ads_image_3.png)
 
 **Voor[!DNL Amazon Marketing Cloud]**
 
@@ -153,7 +149,7 @@ Zoek in de linkerschemabrowser naar uw publiek onder **[!UICONTROL Advertiser Up
 
 `select count(user_id) from adobeexperienceplatf_audience_view_000xyz where external_audience_segment_name = '1234567'`
 
-![ de bevestiging van de de publieksverwezenlijking van de Marketing Cloud van Amazon ](../../assets/catalog/advertising/amazon-ads/amazon_ads_image_5.png)
+![ de bevestiging van de het publieksverwezenlijking van Amazon Marketing Cloud ](../../assets/catalog/advertising/amazon-ads/amazon_ads_image_5.png)
 
 ## Gegevensgebruik en -beheer {#data-usage-governance}
 
@@ -163,7 +159,7 @@ Alle [!DNL Adobe Experience Platform] -doelen zijn compatibel met het beleid voo
 
 Raadpleeg de volgende [!DNL Amazon Ads] Help-bronnen voor aanvullende Help-documentatie:
 
-* [ Amazon DSP het Centrum van de Hulp ](https://www.amazon.com/ap/signin?openid.pape.max_auth_age=28800&amp;openid.return_to=https%3A%2F%2Fadvertising.amazon.com%2Fdsp%2Fhelp%2Fss%2Fen%2Faudiences&amp;openid.identity=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&amp;openid.assoc_handle=amzn_bt_desktop_us&amp;openid.mode=checkid_setup&amp;openid.claimed_id=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&amp;openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0)
+* [ Amazon DSP Help Center ](https://www.amazon.com/ap/signin?openid.pape.max_auth_age=28800&amp;openid.return_to=https%3A%2F%2Fadvertising.amazon.com%2Fdsp%2Fhelp%2Fss%2Fen%2Faudiences&amp;openid.identity=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&amp;openid.assoc_handle=amzn_bt_desktop_us&amp;openid.mode=checkid_setup&amp;openid.claimed_id=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&amp;openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0)
 
 ## Changelog {#changelog}
 

@@ -3,9 +3,9 @@ title: Array-objecten van Real-Time CDP naar cloudopslagdoelen exporteren
 type: Tutorial
 description: Leer hoe u berekende velden kunt gebruiken om arrays van Real-Time CDP naar cloudopslagdoelen als tekenreeksen te exporteren.
 exl-id: ff13d8b7-6287-4315-ba71-094e2270d039
-source-git-commit: 6b182df562ea59d537050aa26e3c813fc2007e9f
+source-git-commit: 546ef0f9a5a9c37de3891aba02491540a5c6f8c9
 workflow-type: tm+mt
-source-wordcount: '1689'
+source-wordcount: '1721'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 0%
 >[!CONTEXTUALHELP]
 >id="platform_destinations_export_arrays_flat_files"
 >title="Ondersteuning van exportarrays"
->abstract="<p>Gebruik **voegt berekende gebied** controle toe om series van int, koord, booleaanse, en objecten waarden van Experience Platform aan uw gewenste bestemming van de wolkenopslag uit te voeren.</p><p> Arrays moeten als tekenreeksen worden geëxporteerd met de functie `array_to_string` . Raadpleeg de documentatie voor uitgebreide voorbeelden en meer ondersteunde functies.</p>"
+>abstract="<p>Gebruik **voegt berekende gebied** controle toe om series van int, koord, booleaanse, en objecten waarden van Experience Platform naar uw gewenste bestemming van de wolkenopslag uit te voeren.</p><p> Arrays moeten als tekenreeksen worden geëxporteerd met de functie `array_to_string` . Raadpleeg de documentatie voor uitgebreide voorbeelden en meer ondersteunde functies.</p>"
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/export-arrays-calculated-fields.html#examples" text="Voorbeelden"
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/export-arrays-calculated-fields.html#known-limitations" text="Bekende beperkingen"
 
@@ -34,9 +34,9 @@ Om series uit te voeren, moet u de berekende gebiedsfunctionaliteit in de afbeel
 
 ## Arrays en andere objecttypen in Platform {#arrays-strings-other-objects}
 
-In Experience Platform, kunt u [ schema&#39;s XDM ](/help/xdm/home.md) gebruiken om verschillende gebiedstypes te beheren. Voordat ondersteuning voor arrayexportbewerkingen werd toegevoegd, kon u eenvoudige sleutelwaardepaartypevelden, zoals tekenreeksen, uit Experience Platform exporteren naar de gewenste doelen. Een voorbeeld van zulk een gebied dat voor de uitvoer eerder werd gesteund is `personalEmail.address`:`johndoe@acme.org`.
+In Experience Platform, kunt u [ schema&#39;s XDM ](/help/xdm/home.md) gebruiken om verschillende gebiedstypes te beheren. Voordat ondersteuning voor het exporteren van arrays werd toegevoegd, kon u eenvoudige sleutelwaardepaartypevelden, zoals tekenreeksen, uit Experience Platform exporteren naar de gewenste doelen. Een voorbeeld van zulk een gebied dat voor de uitvoer eerder werd gesteund is `personalEmail.address`:`johndoe@acme.org`.
 
-Andere veldtypen in Experience Platform zijn arrayvelden. Lees meer over [ het beheren van seriegebieden in het Experience Platform UI ](/help/xdm/ui/fields/array.md). Naast de eerder ondersteunde veldtypen kunt u nu arrayobjecten zoals het onderstaande voorbeeld exporteren. Deze objecten worden samengevoegd tot een tekenreeks met de functie `array_to_string` .
+Andere veldtypen in Experience Platform zijn arrayvelden. Lees meer over [ het beheren van seriegebieden in Experience Platform UI ](/help/xdm/ui/fields/array.md). Naast de eerder ondersteunde veldtypen kunt u nu arrayobjecten zoals het onderstaande voorbeeld exporteren. Deze objecten worden samengevoegd tot een tekenreeks met de functie `array_to_string` .
 
 ```
 organizations = [{
@@ -73,8 +73,8 @@ Let op de volgende bekende beperkingen die momenteel van toepassing zijn op deze
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_export_arrays_maps_objects"
->title="Hiërarchisch uitvoerschema inschakelen"
->abstract="<p> Wissel dit het plaatsen **op** om de uitvoer van series, kaarten, en voorwerpen aan JSON of de dossiers van het Parket toe te laten.</p><p>Met deze schakeloptie kunt u de optie Berekende velden gebruiken bij het activeren van het publiek, maar u kunt geen arrays, kaarten en objecten exporteren naar JSON- of Parquet-bestanden</p>"
+>title="Arrays, kaarten en objecten exporteren"
+>abstract="<p> Wissel dit het plaatsen <b> op </b> om de uitvoer van series, kaarten, en voorwerpen aan JSON of de dossiers van het Parket toe te laten. U kunt deze objecttypen selecteren in de weergave Bronveld van de toewijzingsstap.</p><p>Met deze knevel <b> weg </b>, kunt u de berekende veldoptie gebruiken en diverse functies van de gegevenstransformatie toepassen wanneer het activeren van publiek. Nochtans, kunt u <i> niet </i> uitvoeren series, kaarten, en voorwerpen aan JSON of de dossiers van het Pakket en moet een afzonderlijke bestemming voor dat doel vormen.</p>"
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_export_arrays_control"
