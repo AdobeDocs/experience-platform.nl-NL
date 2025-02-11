@@ -2,7 +2,7 @@
 keywords: Experience Platform;home;populaire onderwerpen;api;API;XDM;XDM systeem;ervaringsgegevensmodel;gegevensmodel;ui;werkruimte;veldgroep;veldgroepen;
 solution: Experience Platform
 title: Groep met schemavelden maken en bewerken in de gebruikersinterface
-description: Leer hoe u groepen met schemavelden maakt en bewerkt in de gebruikersinterface van het Experience Platform.
+description: Leer hoe u in de Experience Platform-gebruikersinterface groepen met schemavelden maakt en bewerkt.
 exl-id: 928d70a6-0468-4fb7-a53a-6686ac77f2a3
 source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
 workflow-type: tm+mt
@@ -16,7 +16,7 @@ ht-degree: 0%
 >[!CONTEXTUALHELP]
 >id="platform_schemas_fieldgroup_filter"
 >title="Standaardfilter of aangepast veldgroepfilter"
->abstract="De lijst met beschikbare veldgroepen wordt vooraf gefilterd op basis van de manier waarop ze zijn gemaakt. Selecteer het keuzerondje dat u wilt kiezen tussen de opties Standaard en Aangepast. De optie Standaard toont entiteiten die zijn gemaakt door Adobe en de optie Aangepast geeft entiteiten weer die binnen uw organisatie zijn gemaakt. Raadpleeg de documentatie voor meer informatie over het maken en bewerken van veldgroepen."
+>abstract="De lijst met beschikbare veldgroepen wordt vooraf gefilterd op basis van de manier waarop ze zijn gemaakt. Selecteer het keuzerondje dat u wilt kiezen tussen de opties Standaard en Aangepast. De optie Standaard toont entiteiten die door Adobe zijn gemaakt en de optie Aangepast geeft entiteiten weer die binnen uw organisatie zijn gemaakt. Raadpleeg de documentatie voor meer informatie over het maken en bewerken van veldgroepen."
 
 In het Model van Gegevens van de Ervaring (XDM), zijn de groepen van het schemagebied herbruikbare componenten die één of meerdere gebieden bepalen die bepaalde functies zoals persoonlijke details, hotelvoorkeur, of adres uitvoeren. Veldgroepen moeten worden opgenomen als onderdeel van een schema dat een compatibele klasse implementeert.
 
@@ -26,7 +26,7 @@ Adobe Experience Platform biedt een groot aantal standaardveldgroepen die een gr
 
 ## Vereisten {#prerequisites}
 
-Deze handleiding vereist een goed begrip van XDM System. Verwijs naar het [ XDM overzicht ](../../home.md) voor een inleiding aan de rol van XDM binnen het Experience Platform ecosysteem, en de [ grondbeginselen van schemacompositie ](../../schema/composition.md) voor hoe de gebiedsgroepen tot XDM schema&#39;s bijdragen.
+Deze handleiding vereist een goed begrip van XDM System. Verwijs naar het [ XDM overzicht ](../../home.md) voor een inleiding aan de rol van XDM binnen het ecosysteem van Experience Platform, en de [ grondbeginselen van schemacompositie ](../../schema/composition.md) voor hoe de gebiedsgroepen aan schema&#39;s bijdragen XDM.
 
 Terwijl niet vereist voor deze gids, wordt het geadviseerd dat u ook het leerprogramma volgt op [ samenstellend een schema in UI ](../../tutorials/create-schema-ui.md) om zich met de diverse mogelijkheden van [!DNL Schema Editor] vertrouwd te maken.
 
@@ -48,7 +48,7 @@ De lus [!DNL Schema Editor] verschijnt weer, terwijl de nieuwe veldgroep in de l
 
 ## Veldgroepen filteren {#filter}
 
-De lijst met beschikbare veldgroepen wordt vooraf gefilterd op basis van de manier waarop ze zijn gemaakt. Met de standaardinstelling worden de veldgroepen weergegeven die door Adobe worden gedefinieerd. Nochtans, kunt u de lijst ook filtreren om die te tonen die door uw organisatie worden gecreeerd. Selecteer het keuzerondje dat u wilt kiezen tussen de opties [!UICONTROL Standard] en [!UICONTROL Custom] . De optie [!UICONTROL Standard] toont entiteiten die zijn gemaakt door Adobe en de optie [!UICONTROL Custom] geeft entiteiten weer die binnen uw organisatie zijn gemaakt.
+De lijst met beschikbare veldgroepen wordt vooraf gefilterd op basis van de manier waarop ze zijn gemaakt. Met de standaardinstelling worden de door Adobe gedefinieerde veldgroepen weergegeven. Nochtans, kunt u de lijst ook filtreren om die te tonen die door uw organisatie worden gecreeerd. Selecteer het keuzerondje dat u wilt kiezen tussen de opties [!UICONTROL Standard] en [!UICONTROL Custom] . De optie [!UICONTROL Standard] geeft entiteiten weer die door Adobe zijn gemaakt en de optie [!UICONTROL Custom] geeft entiteiten weer die binnen uw organisatie zijn gemaakt.
 
 ![ het [!UICONTROL Field groups] lusje van de [!UICONTROL Schemas] werkruimte met [!UICONTROL Standard] en [!UICONTROL Custom] benadrukte.](../../images/ui/resources/field-groups/standard-and-custom-field-groups.png)
 
@@ -56,7 +56,7 @@ De lijst met beschikbare veldgroepen wordt vooraf gefilterd op basis van de mani
 
 >[!NOTE]
 >
->Alleen aangepaste veldgroepen die door uw organisatie zijn gedefinieerd, kunnen volledig worden bewerkt en aangepast. Voor de belangrijkste veldgroepen die door Adobe worden gedefinieerd, kunnen alleen de weergavenamen voor de bijbehorende velden worden bewerkt binnen de context van de afzonderlijke schema&#39;s. Zij worden vermeld in de Redacteur van het Schema door een hangslotpictogram (![ A hangslotpictogram.](/help/images/icons/lock-closed.png)). Zie de sectie op [ het uitgeven vertoningsnamen voor schemagebieden ](./schemas.md#display-names) voor details.
+>Alleen aangepaste veldgroepen die door uw organisatie zijn gedefinieerd, kunnen volledig worden bewerkt en aangepast. Voor kernveldgroepen die door Adobe worden gedefinieerd, kunnen alleen de weergavenamen voor hun velden worden bewerkt in de context van afzonderlijke schema&#39;s. Zij worden vermeld in de Redacteur van het Schema door een hangslotpictogram (![ A hangslotpictogram.](/help/images/icons/lock-closed.png)). Zie de sectie op [ het uitgeven vertoningsnamen voor schemagebieden ](./schemas.md#display-names) voor details.
 >
 >Nadat een aangepaste veldgroep is opgeslagen en in een schema voor gegevensinvoer is gebruikt, kunnen daarna alleen additieve wijzigingen in de veldgroep worden aangebracht. Zie de [ regels van schemaevolutie ](../../schema/composition.md#evolution) voor meer informatie.
 

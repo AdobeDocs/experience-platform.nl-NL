@@ -1,7 +1,7 @@
 ---
 keywords: gekoppeld in verbinding;gekoppeld in verbinding;gekoppeld in doelen;gekoppeld in;
 title: Koppeling in verbinding met passend publiek
-description: Activeer profielen voor uw LinkedIn-campagnes voor doelgroepen, personalisatie en onderdrukking op basis van gehakte e-mails.
+description: Activeer profielen voor uw campagnes LinkedIn voor publiek gericht, verpersoonlijking, en onderdrukking, die op gehakte e-mails worden gebaseerd.
 exl-id: 74c233e9-161a-4e4a-98ef-038a031feff0
 source-git-commit: 4f82aab78e74cb7cdd76b603a1e182fbd7fe627c
 workflow-type: tm+mt
@@ -16,7 +16,7 @@ ht-degree: 0%
 
 Activeer profielen voor uw [!DNL LinkedIn] -campagnes voor doelgroepen, personalisatie en onderdrukking op basis van gehakte e-mails en mobiele id&#39;s.
 
-![ bestemming van LinkedIn in Adobe Experience Platform UI ](../../assets/catalog/social/linkedin/catalog.png)
+![ LinkedIn bestemming in Adobe Experience Platform UI ](../../assets/catalog/social/linkedin/catalog.png)
 
 ## Gebruiksscenario’s
 
@@ -42,7 +42,7 @@ In deze sectie wordt beschreven welke soorten publiek u naar dit doel kunt expor
 
 | Oorsprong publiek | Ondersteund | Beschrijving |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | ✓ | Het publiek produceerde door de Dienst van de Segmentatie van het Experience Platform [ ](../../../segmentation/home.md). |
+| [!DNL Segmentation Service] | ✓ | Het publiek produceerde door de Dienst van de Segmentatie van Experience Platform [ ](../../../segmentation/home.md). |
 | Aangepaste uploads | ✓ | Het publiek [ ingevoerde ](../../../segmentation/ui/audience-portal.md#import-audience) in Experience Platform van Csv- dossiers. |
 
 {style="table-layout:auto"}
@@ -58,11 +58,11 @@ Raadpleeg de onderstaande tabel voor informatie over het exporttype en de export
 
 {style="table-layout:auto"}
 
-## Voorwaarden voor linkedIn-accounts {#LinkedIn-account-prerequisites}
+## Voorwaarden voor LinkedIn-accounts {#LinkedIn-account-prerequisites}
 
 Voordat u het doel van [!UICONTROL LinkedIn Matched Audience] kunt gebruiken, moet u ervoor zorgen dat uw [!DNL LinkedIn Campaign Manager] -account het machtigingsniveau [!DNL Creative Manager] of hoger heeft.
 
-Leren hoe te om uw [!DNL LinkedIn Campaign Manager] gebruikerstoestemmingen uit te geven, zie [ toevoegen, uitgeven, en verwijderen de Toestemmingen van de Gebruiker op de Rekeningen van Advertising ](https://www.linkedin.com/help/lms/answer/5753) in de documentatie van LinkedIn.
+Leren hoe te om uw [!DNL LinkedIn Campaign Manager] gebruikerstoestemmingen uit te geven, zie [ toevoegen, uitgeven, en verwijderen de Toestemmingen van de Gebruiker op de Rekeningen van Advertising ](https://www.linkedin.com/help/lms/answer/5753) in de documentatie LinkedIn.
 
 ## Vereisten voor id-afstemming {#id-matching-requirements}
 
@@ -72,7 +72,7 @@ Afhankelijk van het type id&#39;s dat u in Adobe Experience Platform invoert, mo
 
 ## E-mailhashingvereisten {#email-hashing-requirements}
 
-U kunt e-mailadressen hashen alvorens hen in Adobe Experience Platform op te nemen, of e-mailadressen gebruiken duidelijk in Experience Platform, en [!DNL Platform] hen hebben hakt bij activering.
+U kunt e-mailadressen hashen alvorens hen in Adobe Experience Platform op te nemen, of e-mailadressen gebruiken duidelijk in Experience Platform, en [!DNL Platform] hen hebben geknoeid op activering.
 
 Om over het opnemen van e-mailadressen in Experience Platform te leren, zie het [ overzicht van de partijopname ](/help/ingestion/batch-ingestion/overview.md) en [ het stromen ingestitieoverzicht ](/help/ingestion/streaming-ingestion/overview.md).
 
@@ -110,25 +110,25 @@ In de onderstaande video ziet u ook de stappen voor het configureren van een [!D
 
 >[!NOTE]
 >
->De gebruikersinterface van het Experience Platform wordt vaak bijgewerkt en kan sinds de opname van deze video zijn veranderd. Voor de meest bijgewerkte informatie, verwijs naar het [ leerprogramma van de bestemmingsconfiguratie ](../../ui/connect-destination.md).
+>De Experience Platform-gebruikersinterface wordt vaak bijgewerkt en kan zijn gewijzigd sinds de opname van deze video. Voor de meest bijgewerkte informatie, verwijs naar het [ leerprogramma van de bestemmingsconfiguratie ](../../ui/connect-destination.md).
 
 ### Verifiëren voor bestemming {#authenticate}
 
 1. Zoek het doel [!DNL LinkedIn Matched Audiences] in de doelcatalogus en selecteer **[!UICONTROL Set Up]** .
 2. Selecteer **[!UICONTROL Connect to destination]**.
    ![ verifieer aan LinkedIn ](/help/destinations/assets/catalog/social/linkedin/authenticate-linkedin-destination.png)
-3. Ga uw geloofsbrieven van LinkedIn in en selecteer **Login**.
+3. Ga uw geloofsbrieven LinkedIn in en selecteer **Login**.
 
 ### Verificatiegegevens vernieuwen {#refresh-authentication-credentials}
 
-LinkedIn-tokens verlopen elke 60 dagen. Zodra het teken is verlopen, de gegevensuitvoer naar de bestemming houdt op werkend. Om deze situatie te verhinderen, verifieer opnieuw door de volgende stappen uit te voeren:
+LinkedIn tokens verlopen elke 60 dagen. Zodra het teken is verlopen, de gegevensuitvoer naar de bestemming houdt op werkend. Om deze situatie te verhinderen, verifieer opnieuw door de volgende stappen uit te voeren:
 
 1. Ga naar **[!UICONTROL Destinations]** > **[!UICONTROL Accounts]**
 2. (Optioneel) Gebruik de beschikbare filters op de pagina om alleen LinkedIn-accounts weer te geven.
-   ![ Filter om slechts de rekeningen van LinkedIn te tonen ](/help/destinations/assets/catalog/social/linkedin/refresh-oauth-filters.png)
+   ![ Filter om slechts rekeningen te tonen LinkedIn ](/help/destinations/assets/catalog/social/linkedin/refresh-oauth-filters.png)
 3. Selecteer de account die u wilt vernieuwen, selecteer de ellips en selecteer **[!UICONTROL Edit details]** .
    ![ uitgezocht geef detailcontrole ](/help/destinations/assets/catalog/social/linkedin/refresh-oauth-edit-details.png) uit
-4. Selecteer **[!UICONTROL Reconnect OAuth]** in het modaal venster en verifieer het opnieuw met uw LinkedIn-referenties.
+4. Selecteer **[!UICONTROL Reconnect OAuth]** in het modale venster en verifieer het opnieuw met uw LinkedIn-referenties.
    ![ Modal venster met Opnieuw verbinden optie OAuth ](/help/destinations/assets/catalog/social/linkedin/reconnect-oauth-control.png)
 
 >[!SUCCESS]
@@ -140,7 +140,7 @@ LinkedIn-tokens verlopen elke 60 dagen. Zodra het teken is verlopen, de gegevens
 >[!CONTEXTUALHELP]
 >id="platform_destinations_connect_linkedin_accountid"
 >title="Account-id"
->abstract="Je account-id voor LinkedIn Campagne Manager. U kunt deze id vinden in uw LinkedIn Campaign Manager-account."
+>abstract="Uw LinkedIn-account-id van Campagnebeheer. U kunt deze id vinden in uw LinkedIn Campaign Manager-account."
 
 Als u details voor de bestemming wilt configureren, vult u de vereiste en optionele velden hieronder in. Een sterretje naast een veld in de gebruikersinterface geeft aan dat het veld verplicht is.
 

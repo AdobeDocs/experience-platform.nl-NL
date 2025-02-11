@@ -16,12 +16,12 @@ ht-degree: 4%
 >[!CONTEXTUALHELP]
 >id="platform_audits_privacyconsole_actions"
 >title="Bovenste handelingen"
->abstract="Deze widget geeft de belangrijkste soorten acties weer die binnen de geselecteerde tijdlijn in het Experience Platform zijn uitgevoerd. Om de volledige lijst van geregistreerde acties in Platform te zien, selecteer **Controles** in de linkernavigatie."
+>abstract="Deze widget geeft de belangrijkste soorten acties weer die binnen de geselecteerde tijdlijn in Experience Platform zijn uitgevoerd. Om de volledige lijst van geregistreerde acties in Platform te zien, selecteer **Controles** in de linkernavigatie."
 
 >[!CONTEXTUALHELP]
 >id="platform_audits_privacyconsole_users"
 >title="Belangrijkste gebruikers"
->abstract="Deze widget geeft de gebruikers weer die de meeste handelingen in het Experience Platform binnen de geselecteerde tijdlijn hebben uitgevoerd. Om de volledige lijst van geregistreerde acties in Platform te zien, selecteer **Controles** in de linkernavigatie."
+>abstract="Deze widget toont de gebruikers die de meeste handelingen in Experience Platform binnen de geselecteerde tijdlijn hebben uitgevoerd. Om de volledige lijst van geregistreerde acties in Platform te zien, selecteer **Controles** in de linkernavigatie."
 
 >[!CONTEXTUALHELP]
 >id="platform_privacyConsole_audits_description"
@@ -46,7 +46,7 @@ In de volgende tabel wordt aangegeven op welke acties de middelen in de auditlog
 | --- | --- |
 | [ het controlebeleid van de Toegang (attribuut gebaseerd toegangsbeheer) ](../../../access-control/home.md) | <ul><li>Maken</li><li>Bijwerken</li><li>Verwijderen</li></ul> |
 | [ Rekening (Adobe) ](../../../sources/connectors/tutorials/ui/../../../tutorials/ui/update.md) | <ul><li>Maken</li><li>Bijwerken</li><li>Verwijderen</li></ul> |
-| [ instantie van de Attribution AI ](../../../intelligent-services/attribution-ai/overview.md) | <ul><li>Maken</li><li>Bijwerken</li><li>Verwijderen</li><li>Inschakelen</li><li>Uitschakelen</li></ul> |
+| [ instantie van AI van de Attributie ](../../../intelligent-services/attribution-ai/overview.md) | <ul><li>Maken</li><li>Bijwerken</li><li>Verwijderen</li><li>Inschakelen</li><li>Uitschakelen</li></ul> |
 | [ Logboeken van de Controle ](../../../landing/governance-privacy-security/audit-logs/overview.md) | <ul><li>Exporteren</li></ul> |
 | [ Klasse ](../../../xdm/schema/composition.md#class) | <ul><li>Maken</li><li>Bijwerken</li><li>Verwijderen</li></ul> |
 | Berekend kenmerk | <ul><li>Maken</li><li>Bijwerken</li><li>Verwijderen</li></ul> |
@@ -83,7 +83,7 @@ Als u controlelogboeken wilt weergeven en exporteren, moet u de toegangsbeheerma
 >title="Instructies"
 >abstract="<ul><li>Selecteer <b> Controles </b> in de linkernavigatie. De werkruimte Audits toont een lijst van geregistreerde logboeken, door gebrek dat van meest recente aan minst recente wordt gesorteerd.</li>   <li> OPMERKING: auditlogboeken worden 365 dagen bewaard waarna ze uit het systeem worden verwijderd. Daarom kun je slechts 365 dagen teruggaan. Als u terug op gegevens moet kijken ouder dan 365 dagen, zou u logboeken bij een regelmatige kring moeten uitvoeren om aan uw interne beleidsvereisten te voldoen. </li><li>Selecteer een gebeurtenis in de lijst om de details in de rechtertrack weer te geven. </li><li>Selecteer het trechter-pictogram om een lijst met filterbesturingselementen weer te geven om de resultaten te beperken. Alleen de laatste 1000 records worden weergegeven, ongeacht de geselecteerde filters. </li><li>Om de huidige lijst van controlelogboeken uit te voeren, selecteer **logboek van de Download**.</li><li>Voor meer hulp met deze eigenschap, zie het <a href="https://experienceleague.adobe.com/docs/experience-platform/landing/governance-privacy-security/audit-logs/overview.html"> overzicht van controlelogboeken </a> op Experience League.</li></ul>"
 
-U kunt controlelogboeken voor verschillende eigenschappen van het Experience Platform bekijken binnen de **[!UICONTROL Audits]** werkruimte in de UI van het Platform. De werkruimte bevat een lijst met opgenomen logbestanden, die standaard van de meest recente naar de minst recente logbestanden worden gesorteerd.
+U kunt controlelogboeken voor verschillende Experience Platform-functies weergeven in de **[!UICONTROL Audits]** -werkruimte in de gebruikersinterface van het platform. De werkruimte bevat een lijst met opgenomen logbestanden, die standaard van de meest recente naar de minst recente logbestanden worden gesorteerd.
 
 ![ het dashboard van Audits die Audits in het linkermenu benadrukken.](../../images/audit-logs/audits.png)
 
@@ -166,8 +166,8 @@ Leren hoe te om controlelogboeken voor activiteiten in Adobe Admin Console te be
 
 ## Volgende stappen en extra bronnen
 
-Deze gids besprak hoe te om controlelogboeken in Experience Platform te beheren. Voor meer informatie over hoe te om de activiteiten van het Platform te controleren, zie de documentatie over [ de Inzichten van de Waarneming ](../../../observability/home.md) en [ controle gegevensopname ](../../../ingestion/quality/monitor-data-ingestion.md).
+In deze handleiding wordt beschreven hoe u de auditlogs in Experience Platform kunt beheren. Voor meer informatie over hoe te om de activiteiten van het Platform te controleren, zie de documentatie over [ de Inzichten van de Waarneming ](../../../observability/home.md) en [ controle gegevensopname ](../../../ingestion/quality/monitor-data-ingestion.md).
 
-Bekijk de volgende video om uw inzicht in auditlogs in Experience Platform te versterken:
+Bekijk de volgende video om meer inzicht te krijgen in auditlogs in Experience Platform:
 
 >[!VIDEO](https://video.tv.adobe.com/v/341450?quality=12&learn=on)

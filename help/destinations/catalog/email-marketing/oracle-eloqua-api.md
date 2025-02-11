@@ -1,6 +1,6 @@
 ---
 title: (API) Oracle Eloqua-verbinding
-description: Met de Eloqua-bestemming (API) van het Oracle kunt u uw accountgegevens exporteren en activeren binnen Oracle Eloqua voor uw bedrijfsbehoeften.
+description: Met de (API) Oracle Eloqua-bestemming kunt u uw accountgegevens exporteren en activeren binnen Oracle Eloqua voor uw zakelijke behoeften.
 last-substantial-update: 2023-03-14T00:00:00Z
 exl-id: 97ff41a2-2edd-4608-9557-6b28e74c4480
 source-git-commit: 5aefa362d7a7d93c12f9997d56311127e548497e
@@ -25,11 +25,11 @@ De marketingafdeling van een onlineplatform wil een marketingcampagne op basis v
 
 ## Vereisten {#prerequisites}
 
-### Voorwaarden voor Experience Platforms {#prerequisites-in-experience-platform}
+### Experience Platform-voorwaarden {#prerequisites-in-experience-platform}
 
 Alvorens gegevens aan de [!DNL Oracle Eloqua] bestemming te activeren, moet u a [ schema ](/help/xdm/schema/composition.md), a [ dataset ](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html) hebben, en [ segmenten ](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html) die in [!DNL Experience Platform] worden gecreeerd.
 
-Verwijs naar de documentatie van het Experience Platform voor [ het schemagroep van de Details van het Lidmaatschap van het Publiek ](/help/xdm/field-groups/profile/segmentation.md) als u begeleiding op publiekstoestanden nodig hebt.
+Verwijs naar de documentatie van Experience Platform voor [ het schemagroep van de Details van het Lidmaatschap van de Publiek ](/help/xdm/field-groups/profile/segmentation.md) als u begeleiding op publieksstatus nodig hebt.
 
 ### [!DNL Oracle Eloqua] voorwaarden {#prerequisites-destination}
 
@@ -58,7 +58,7 @@ Verwijs naar [ het Ondertekenen binnen aan  [!DNL Oracle Eloqua] ](https://docs.
 
 * [!DNL Oracle Eloqua] heeft een maximale limiet van 250 aangepaste contactvelden.
 * Voordat u nieuwe doelgroepen exporteert, moet u ervoor zorgen dat het aantal doelgroepen van het platform en het aantal bestaande doelgroepen binnen [!DNL Oracle Eloqua] deze limiet niet overschrijden.
-* Als deze limiet wordt overschreden, treedt er een fout op in het Experience Platform. Dit is omdat [!DNL Oracle Eloqua] API er niet in slaagt om het verzoek te bevestigen, en met a - *400 antwoordt: Er was een bevestigingsfout* - foutenmelding beschrijvend de kwestie.
+* Als deze limiet wordt overschreden, treedt er een fout op in Experience Platform. Dit is omdat [!DNL Oracle Eloqua] API er niet in slaagt om het verzoek te bevestigen, en met a - *400 antwoordt: Er was een bevestigingsfout* - foutenmelding beschrijvend de kwestie.
 * Als u de hierboven opgegeven limiet hebt bereikt, moet u bestaande toewijzingen verwijderen van uw bestemming en de bijbehorende aangepaste contactvelden in uw [!DNL Oracle Eloqua] -account verwijderen voordat u meer segmenten kunt exporteren.
 
 * Verwijs naar [[!DNL Oracle Eloqua]  Creërend de pagina van de Gebieden van het Contact ](https://docs.oracle.com/en/cloud/saas/marketing/eloqua-user/Help/ContactFields/Tasks/CreatingContactFields.htm) voor informatie over extra grenzen.
@@ -97,7 +97,7 @@ Kies in **[!UICONTROL Destinations]** > **[!UICONTROL Catalog]** Zoeken naar [!D
 >[!CONTEXTUALHELP]
 >id="platform_destinations_apioracleeloqua_companyname_username"
 >title="Bedrijfsnaam\Gebruikersnaam"
->abstract="Vul dit gebied met uw bedrijfsnaam en gebruikersbenaming van Oracle Eloqua in de vorm `{COMPANY_NAME}\{USERNAME}` in"
+>abstract="Vul dit veld in met uw bedrijfsnaam en gebruikersnaam in de vorm Oracle Eloqua `{COMPANY_NAME}\{USERNAME}`"
 
 Vul de vereiste velden hieronder in. Verwijs naar de [ Gather  [!DNL Oracle Eloqua]  geloofsbrieven ](#gather-credentials) sectie voor om het even welke begeleiding.
 * **[!UICONTROL Password]**: Het wachtwoord van uw [!DNL Oracle Eloqua] -account.
@@ -113,7 +113,7 @@ Als de opgegeven gegevens geldig zijn, geeft de gebruikersinterface de status **
 >[!CONTEXTUALHELP]
 >id="platform_destinations_apioracleeloqua_pod"
 >title="Pod"
->abstract="Meld u aan bij Eloqua Oracle om uw podnummer te vinden. Noteer de URL in uw browser nadat u zich hebt aangemeld. "
+>abstract="Meld u aan bij Oracle Eloqua om uw podnummer te vinden. Noteer de URL in uw browser nadat u zich hebt aangemeld. "
 
 <!-- >additional-url="https://support.oracle.com/knowledge/Oracle%20Cloud/2307176_1.html" text="Oracle Knowledge base - find out your Pod number" -->
 
@@ -208,7 +208,7 @@ Volg onderstaande stappen om te controleren of u de bestemming correct hebt inge
 
 1. Meld u aan bij de [!DNL Oracle Eloqua] -website en navigeer naar de **[!UICONTROL Contacts Overview]** -pagina om te controleren of de profielen van het publiek zijn toegevoegd. Blader omlaag naar een **[!UICONTROL Contact Detail]** -pagina en controleer of het contactveld met de naam van het geselecteerde publiek als voorvoegsel is gemaakt om de publieksstatus weer te geven.
 
-{het schermschot UI van het Oracle Eloqua die de pagina van de Details van het Contact met het gebied van het douanecontract toont met de publieksnaam wordt gecreeerd.](../../assets/catalog/email-marketing/oracle-eloqua-api/contact.png)![
+{het schermschot van 0} Oracle Eloqua UI die de pagina van de Details van het Contact met het gebied van het douanecontract toont dat met de publieksnaam wordt gecreeerd.](../../assets/catalog/email-marketing/oracle-eloqua-api/contact.png)![
 
 ## Gegevensgebruik en -beheer {#data-usage-governance}
 
@@ -225,8 +225,8 @@ Verwijs naar de [[!DNL Oracle Eloqua]  de statuscodes van HTTP ](https://docs.or
 
 Zie de documentatie van [!DNL Oracle Eloqua] voor meer informatie:
 
-* [ de Automatisering van de Marketing van Eloqua van het Oracle ](https://docs.oracle.com/en/cloud/saas/marketing/eloqua.html)
-* [ REST API voor de Dienst van de Marketing Cloud van de Oracle Eloqua ](https://docs.oracle.com/en/cloud/saas/marketing/eloqua-rest-api/rest-endpoints.html)
+* [ Oracle Eloqua Marketing Automation ](https://docs.oracle.com/en/cloud/saas/marketing/eloqua.html)
+* [ REST API voor de Dienst van Marketing Cloud van Oracle Eloqua ](https://docs.oracle.com/en/cloud/saas/marketing/eloqua-rest-api/rest-endpoints.html)
 
 ### Changelog
 
@@ -236,7 +236,7 @@ Deze sectie vangt de functionaliteit en de significante documentatieupdates aan 
 
 | Releasedatum | Type bijwerken | Beschrijving |
 |---|---|---|
-| April 2023 | Documentatie bijwerken | <ul><li>Wij hebben de [ gebruik-gevallen ](#use-cases) sectie met een duidelijker voorbeeld bijgewerkt van wanneer de klanten van het gebruiken van deze bestemming zouden profiteren.</li> <li>Wij hebben de [ afbeelding ](#mapping-considerations-example) sectie met duidelijke voorbeelden van zowel verplichte als facultatieve afbeeldingen bijgewerkt.</li> <li>Wij hebben [ bijgewerkt verbind met de bestemmings ](#connect) sectie met een voorbeeld op hoe te om de samengevoegde waarde voor het **[!UICONTROL Username]** gebied te construeren gebruikend de [!DNL Oracle Eloqua] Naam van het Bedrijf en [!DNL Oracle Eloqua] Gebruikersnaam. (PLATIR-28343)</li><li>Wij hebben de  [!DNL Oracle Eloqua]  geloofsbrieven ](#gather-credentials) van de Vergroting [ bijgewerkt en [ vullen in de secties van bestemmingsdetails ](#destination-details) met begeleiding op [!DNL Oracle Eloqua] **[!UICONTROL Pod]** selectie. De *&quot;Pod&quot;* waarde wordt gebruikt door de bestemming om de basis URL voor de API vraag te construeren. De [[!DNL Oracle Eloqua]  eerste vereisten ](#prerequisites-destination) sectie werd ook bijgewerkt met begeleiding bij het toewijzen van *&quot;Geavanceerde Gebruikers - de toestemmingen van de Marketing&quot;* als vereiste *&quot;Groepen van de Veiligheid&quot;* voor uw [!DNL Oracle Eloqua] instantie.</li></ul> |
+| April 2023 | Documentatie bijgewerkt | <ul><li>Wij hebben de [ gebruik-gevallen ](#use-cases) sectie met een duidelijker voorbeeld bijgewerkt van wanneer de klanten van het gebruiken van deze bestemming zouden profiteren.</li> <li>Wij hebben de [ afbeelding ](#mapping-considerations-example) sectie met duidelijke voorbeelden van zowel verplichte als facultatieve afbeeldingen bijgewerkt.</li> <li>Wij hebben [ bijgewerkt verbind met de bestemmings ](#connect) sectie met een voorbeeld op hoe te om de samengevoegde waarde voor het **[!UICONTROL Username]** gebied te construeren gebruikend de [!DNL Oracle Eloqua] Naam van het Bedrijf en [!DNL Oracle Eloqua] Gebruikersnaam. (PLATIR-28343)</li><li>Wij hebben de  [!DNL Oracle Eloqua]  geloofsbrieven ](#gather-credentials) van de Vergroting [ bijgewerkt en [ vullen in de secties van bestemmingsdetails ](#destination-details) met begeleiding op [!DNL Oracle Eloqua] **[!UICONTROL Pod]** selectie. De *&quot;Pod&quot;* waarde wordt gebruikt door de bestemming om de basis URL voor de API vraag te construeren. De [[!DNL Oracle Eloqua]  eerste vereisten ](#prerequisites-destination) sectie werd ook bijgewerkt met begeleiding bij het toewijzen van *&quot;Geavanceerde Gebruikers - de toestemmingen van de Marketing&quot;* als vereiste *&quot;Groepen van de Veiligheid&quot;* voor uw [!DNL Oracle Eloqua] instantie.</li></ul> |
 | Maart 2023 | Eerste release | Oorspronkelijke doelversie en documentatie publiceren. |
 
 {style="table-layout:auto"}

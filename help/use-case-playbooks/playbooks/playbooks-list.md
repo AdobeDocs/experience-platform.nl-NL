@@ -1,7 +1,7 @@
 ---
 solution: Experience Platform
-title: Beschikbare Use Case Playbooks voor Real-time Customer Data Platform en Adobe Journey Optimizer.
-description: Een lijst met alle afspeelboeken in Real-time Customer Data Platform en Adobe Journey Optimizer.
+title: Beschikbare Use Case Playbooks voor Real-Time Customer Data Platform en Adobe Journey Optimizer.
+description: Een lijst met alle afspeelboeken in Real-Time Customer Data Platform en Adobe Journey Optimizer.
 role: User
 exl-id: 00f16761-3759-4de0-882d-b77e18f7c1fe
 source-git-commit: 0cfe3e87ae4f9e8dc9ad53e9acb096efb590b72d
@@ -20,7 +20,7 @@ Lees deze pagina voor een overzicht van alle beschikbare afspeelboeken die u kun
 >[!CONTEXTUALHELP]
 >id="platform_playbooks_list"
 >title="Beschikbare afspeelboeken"
->abstract="Een lijst met alle afspeelboeken in Real-time Customer Data Platform en Adobe Journey Optimizer."
+>abstract="Een lijst met alle afspeelboeken in Real-Time Customer Data Platform en Adobe Journey Optimizer."
 
 | Naam van afspeelboek | Beschrijving |
 | ------------- |  ----------- |
@@ -61,7 +61,7 @@ Lees deze pagina voor een overzicht van alle beschikbare afspeelboeken die u kun
 
 {style="table-layout:auto"}
 
-## Hoofdletters gebruiken in Real-time Customer Data Platform {#rtcdp-playbooks}
+## Hoofdletters gebruiken in Real-Time Customer Data Platform {#rtcdp-playbooks}
 
 | Naam van afspeelboek | Beschrijving |
 | ------------- | ----------- |

@@ -6,7 +6,7 @@ exl-id: e93f1bd5-9d29-43a1-a9a6-8933f9d85150
 source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
 workflow-type: tm+mt
 source-wordcount: '1077'
-ht-degree: 0%
+ht-degree: 3%
 
 ---
 
@@ -14,13 +14,13 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
-> Google geeft veranderingen in de [ Adds API van Google ](https://developers.google.com/google-ads/api/docs/start), [ Overeenkomst van de Klant ](https://ads-developers.googleblog.com/2023/10/updates-to-customer-match-conversion.html) vrij, en [ Vertoning &amp; Video 360 API ](https://developers.google.com/display-video/api/guides/getting-started/overview) om de naleving en toestemmings-gerelateerde vereisten te steunen die onder de [ Wet van de Markten ](https://digital-markets-act.ec.europa.eu/index_en) (DMA) worden bepaald in de Europese Unie ([ EU het Beleid van de Toestemming van de Gebruiker ](https://www.google.com/about/company/user-consent-policy/)). De handhaving van deze wijzigingen in de toestemmingsvereisten is vanaf 6 maart 2024 van kracht.
+> Google geeft veranderingen in de [ Adds API van Google ](https://developers.google.com/google-ads/api/docs/start), [ Overeenkomst van de Klant ](https://ads-developers.googleblog.com/2023/10/updates-to-customer-match-conversion.html) vrij, en [ Vertoning &amp; Video 360 API ](https://developers.google.com/display-video/api/guides/getting-started/overview) om de naleving en toestemmings-gerelateerde vereisten te steunen die onder de [ Wet van de Markten ](https://digital-markets-act.ec.europa.eu/index_nl) (DMA) worden bepaald in de Europese Unie ([ EU het Beleid van de Toestemming van de Gebruiker ](https://www.google.com/about/company/user-consent-policy/)). De handhaving van deze wijzigingen in de toestemmingsvereisten is vanaf 6 maart 2024 van kracht.
 ><br/>
->Om zich aan het EU-beleid inzake instemming van gebruikers te houden en door te gaan met het opstellen van publiekslijsten voor gebruikers in de Europese Economische Ruimte (EER), moeten adverteerders en partners ervoor zorgen dat zij toestemming van de eindgebruiker geven bij het uploaden van publieksgegevens. Als Google-partner beschikt Adobe over de benodigde instrumenten om te voldoen aan deze toestemmingsvereisten in het kader van de DMA in de Europese Unie.
+>Om zich aan het EU-beleid inzake instemming van gebruikers te houden en door te gaan met het opstellen van publiekslijsten voor gebruikers in de Europese Economische Ruimte (EER), moeten adverteerders en partners ervoor zorgen dat zij toestemming van de eindgebruiker geven bij het uploaden van publieksgegevens. Als Google-partner beschikt Adobe over de benodigde tools om te voldoen aan deze toestemmingsvereisten in het kader van de DMA in de Europese Unie.
 ><br/>
->De klanten die de Privacy &amp; het Schild van de Veiligheid van de Adobe hebben gekocht en het beleid van de a [ toestemming ](../../../data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) gevormd om niet-goedgekeurde profielen uit te filteren hoeven geen actie te ondernemen.
+>De klanten die de Privacy &amp; het Schild van de Veiligheid van Adobe hebben gekocht en het beleid van de a [ toestemming ](../../../data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) gevormd om niet-goedgekeurde profielen uit te filteren hoeven geen actie te ondernemen.
 ><br/>
->De klanten die geen Adobe Privacy &amp; het Schild van de Veiligheid hebben gekocht moeten de ](../../../segmentation/home.md#segment-definitions) mogelijkheden van de segmentdefinitie [ binnen [ de Bouwer van het Segment ](../../../segmentation/ui/segment-builder.md) gebruiken om uit niet-goedgekeurde profielen te filtreren, om de bestaande bestemmingen van Real-Time CDP Google zonder onderbreking te blijven gebruiken.
+>De klanten die geen de Privacy &amp; het Schild van de Veiligheid van Adobe hebben gekocht moeten de ](../../../segmentation/home.md#segment-definitions) mogelijkheden van de segmentdefinitie [ binnen [ de Bouwer van het Segment ](../../../segmentation/ui/segment-builder.md) aan filter uit niet-goedgekeurde profielen gebruiken, om de bestaande bestemmingen van Real-Time CDP Google zonder onderbreking te blijven gebruiken.
 
 
 [!DNL Google Ad Manager], voorheen bekend als [!DNL DoubleClick for Publishers] (DFP) of [!DNL DoubleClick AdX] , is een platform voor advertentie in [!DNL Google] dat uitgevers de mogelijkheid biedt om de weergave van advertenties op hun websites, via video en in mobiele apps te beheren.
@@ -42,7 +42,7 @@ Let op de volgende details die specifiek zijn voor [!DNL Google Ad Manager] doel
 |---|---|---|
 | GAID | [!DNL Google Advertising ID] |  |
 | IDFA | [!DNL Apple ID for Advertisers] |  |
-| AAM UUID | [ Adobe Audience Manager  [!DNL Unique User ID] ](https://experienceleague.adobe.com/docs/audience-manager/user-guide/reference/ids-in-aam.html), ook gekend als [!DNL Device ID]. Een numerieke apparaat-id van 38 cijfers waarmee de Audience Manager werkt. | Google gebruikt [ AAM UUID ](https://experienceleague.adobe.com/docs/audience-manager/user-guide/reference/ids-in-aam.html) aan doelgebruikers in Californië, en identiteitskaart van de Koekje van Google voor alle andere gebruikers. |
+| AAM UUID | [ Adobe Audience Manager  [!DNL Unique User ID] ](https://experienceleague.adobe.com/docs/audience-manager/user-guide/reference/ids-in-aam.html), ook gekend als [!DNL Device ID]. Een numerieke, 38-cijferige apparaat-id die Audience Manager koppelt aan elk apparaat waarmee het werkt. | Google gebruikt [ AAM UUID ](https://experienceleague.adobe.com/docs/audience-manager/user-guide/reference/ids-in-aam.html) aan doelgebruikers in Californië, en identiteitskaart van de Koekje van Google voor alle andere gebruikers. |
 | [!DNL Google] cookie-id | [!DNL Google] cookie-id | [!DNL Google] gebruikt deze id om gebruikers buiten Californië als doel in te stellen. |
 | RIDA | Roku-id voor Advertising. Deze id identificeert unieke Roku-apparaten. |  |
 | GEMAAKT | Microsoft Advertising ID. Deze id identificeert apparaten waarop Windows 10 wordt uitgevoerd op unieke wijze. |  |
@@ -56,7 +56,7 @@ In deze sectie wordt beschreven welke soorten publiek u naar dit doel kunt expor
 
 | Oorsprong publiek | Ondersteund | Beschrijving |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | ✓ | Het publiek produceerde door de Dienst van de Segmentatie van het Experience Platform [ ](../../../segmentation/home.md). |
+| [!DNL Segmentation Service] | ✓ | Het publiek produceerde door de Dienst van de Segmentatie van Experience Platform [ ](../../../segmentation/home.md). |
 | Aangepaste uploads | ✓ | Het publiek [ ingevoerde ](../../../segmentation/ui/audience-portal.md#import-audience) in Experience Platform van Csv- dossiers. |
 
 {style="table-layout:auto"}
@@ -74,13 +74,13 @@ Raadpleeg de onderstaande tabel voor informatie over het exporttype en de export
 
 ## Vereisten {#prerequisites}
 
-Als u uw eerste bestemming met [!DNL Google Ad Manager] wilt tot stand brengen en niet de [ functionaliteit van de Synchronisatie van identiteitskaart ](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/idsync.html) in de Dienst van identiteitskaart van het Experience Cloud in het verleden (met Audience Manager of andere toepassingen) hebt toegelaten, gelieve uit te reiken aan Adobe Consulting of de Zorg van de Klant om de syncs van identiteitskaart toe te laten. Als u eerder [!DNL Google] -integratie hebt ingesteld in Audience Manager, worden de id-syncs die u hebt ingesteld, overgedragen naar Platform.
+Als u uw eerste bestemming met [!DNL Google Ad Manager] wilt tot stand brengen en niet de [ functionaliteit van de Synchronisatie van identiteitskaart ](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/idsync.html) in de Dienst van identiteitskaart van Experience Cloud in het verleden (met Audience Manager of andere toepassingen) hebt toegelaten, te bereiken gelieve uit aan Adobe Consulting of de Zorg van de Klant om de syncs van identiteitskaart toe te laten. Als u eerder [!DNL Google] -integraties hebt ingesteld in Audience Manager, worden de id-synchronisaties die u hebt ingesteld, overgedragen naar Platform.
 
 ### Aanbieding toestaan {#allow-listing}
 
 Aanbieding toestaan is verplicht voordat u de eerste [!DNL Google Ad Manager] -bestemming in Platform instelt. Voltooi de hieronder beschreven procedure voor het aanbieden van objecten in een geldige plaats voordat je de bestemming maakt.
 
-1. Volg de stappen in de [ documentatie van de Manager van Google en van de Manager ](https://support.google.com/admanager/answer/3289669?hl=en) worden beschreven om Adobe als verbonden Platform van het Beheer van Gegevens toe te voegen (DMP).
+1. Volg de stappen in [ worden beschreven Google en de documentatie van de Manager ](https://support.google.com/admanager/answer/3289669?hl=en) om Adobe als verbonden Platform van het Beheer van Gegevens toe te voegen (DMP) die.
 2. Ga in de interface [!DNL Google Ad Manager] naar **[!UICONTROL Admin]** > **[!UICONTROL Global Settings]** > **[!UICONTROL Network Settings]** en schakel de schuifregelaar **[!UICONTROL API Access]** in.
 
 ## Verbinden met de bestemming {#connect}
@@ -96,7 +96,7 @@ Om met deze bestemming te verbinden, volg de stappen die in het [ leerprogramma 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_gam_appendSegmentID"
 >title="Id van publiek toevoegen aan publieksnaam"
->abstract="Selecteer deze optie als u in Google Ad Manager de gebruikers-id uit het Experience Platform wilt opnemen, bijvoorbeeld: `Audience Name (Audience ID)`"
+>abstract="Selecteer deze optie als u de volgende gebruikers-id uit Experience Platform wilt laten opnemen in de naam van het publiek in Google Ad Manager: `Audience Name (Audience ID)`"
 
 Terwijl [ vestiging ](../../ui/connect-destination.md) deze bestemming, u de volgende informatie moet verstrekken:
 
@@ -106,11 +106,11 @@ Terwijl [ vestiging ](../../ui/connect-destination.md) deze bestemming, u de vol
 * **[!UICONTROL Account Type]**: Selecteer een optie, afhankelijk van uw account bij Google:
    * `DFP by Google` gebruiken voor [!DNL DoubleClick] voor uitgevers
    * `AdX buyer` gebruiken voor [!DNL Google AdX]
-* **[!UICONTROL Append audience ID to audience name]**: Selecteer deze optie als u in Google Ad Manager de gebruikers-id uit het Experience Platform wilt opnemen, bijvoorbeeld: `Audience Name (Audience ID)` .
+* **[!UICONTROL Append audience ID to audience name]**: Selecteer deze optie als u in Google Ad Manager de gebruikers-id van Experience Platform wilt opnemen, bijvoorbeeld: `Audience Name (Audience ID)` .
 
 >[!NOTE]
 >
->Wanneer u een [!DNL Google Ad Manager] -bestemming instelt, werkt u samen met uw [!DNL Google Account Manager] - of Adobe-medewerker om te begrijpen welk accounttype u hebt.
+>Wanneer u een [!DNL Google Ad Manager] -bestemming instelt, werkt u samen met uw [!DNL Google Account Manager] - of Adobe-vertegenwoordiger om te weten welk accounttype u hebt.
 
 ### Waarschuwingen inschakelen {#enable-alerts}
 
@@ -132,9 +132,9 @@ Controleer uw [!DNL Google Ad Manager] -account om te controleren of gegevens na
 
 ## Problemen oplossen {#troubleshooting}
 
-Voor het geval u om het even welke fouten terwijl het gebruiken van deze bestemming tegenkomt en moet uit naar of Adobe of Google reiken, houd de volgende IDs bij.
+Als u tijdens het gebruik van dit doel fouten tegenkomt en naar Adobe of Google moet reiken, moet u de volgende id&#39;s bij de hand houden.
 
-Dit zijn Google-account-id&#39;s van Adobe:
+Dit zijn Adobe Google-account-id&#39;s:
 
 * **[!UICONTROL Account ID]**: 87933855
 * **[!UICONTROL Customer ID]**: 89690775

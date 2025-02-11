@@ -57,15 +57,15 @@ ht-degree: 0%
 
 U kunt belangrijke informatie over het gebruik van licenties voor uw organisatie bekijken via het Adobe Experience Platform [!UICONTROL License usage] -dashboard. De informatie die hier wordt weergegeven, wordt vastgelegd tijdens een dagelijkse momentopname van uw platforminstantie.
 
-De gebruiksrapporten van de vergunning verstrekken een hoge graad van granulariteit over uw metriek van het vergunningsgebruik. Het dashboard biedt gebruiksmetriek voor elk aangeschaft product (en de bijbehorende invoegtoepassingen), het geconsolideerde gebruik van metriek in alle productie- of ontwikkelingssandboxen en de gebruikstemetriek van een specifieke sandbox. De volgende Experience Platforms kunnen met gebruiksmetriek worden gevolgd: Real-time Customer Data Platform, Adobe Journey Optimizer, en Customer Journey Analytics.
+De gebruiksrapporten van de vergunning verstrekken een hoge graad van granulariteit over uw metriek van het vergunningsgebruik. Het dashboard biedt gebruiksmetriek voor elk aangeschaft product (en de bijbehorende invoegtoepassingen), het geconsolideerde gebruik van metriek in alle productie- of ontwikkelingssandboxen en de gebruikstemetriek van een specifieke sandbox. De volgende Experience Platform-toepassingen kunnen worden bijgehouden met maatstaven voor gebruik: Real-Time Customer Data Platform, Adobe Journey Optimizer en Customer Journey Analytics.
 
 Deze gids schetst hoe te om tot en met het dashboard van het vergunningsgebruik in UI toegang te hebben en te werken en verstrekt meer informatie betreffende de visualisaties die in het dashboard worden getoond.
 
-Voor een algemeen overzicht van Platform UI, verwijs naar de [ gids UI van het Experience Platform ](../../landing/ui-guide.md).
+Voor een algemeen overzicht van Platform UI, verwijs naar de [ gids UI van Experience Platform ](../../landing/ui-guide.md).
 
 ## [!UICONTROL License usage] dashboardgegevens
 
-Het dashboard van [!UICONTROL License usage] toont een lijst van alle producten van het Experience Platform die u en om het even welke toe:voegen-ons voor die producten hebt gekocht. Van dit dashboard, kunt u een momentopname van de vergunning-verwante gegevens van uw organisatie voor Experience Platform over om het even welke bijbehorende zandbak vinden.
+Op het dashboard van [!UICONTROL License usage] wordt een lijst weergegeven met alle Experience Platform-producten die u hebt aangeschaft en alle invoegtoepassingen voor die producten. Vanuit dit dashboard kunt u een momentopname vinden van de licentiegerelateerde gegevens van uw organisatie voor Experience Platform in elke bijbehorende sandbox.
 
 De gegevens in dit dashboard worden precies zo weergegeven als op het specifieke tijdstip waarop de momentopname is gemaakt. Met andere woorden, de momentopname is geen benadering of voorbeeld van de gegevens en het dashboard wordt niet in real-time bijgewerkt.
 
@@ -93,7 +93,7 @@ Het [!UICONTROL License Usage] dashboard toont twee afzonderlijke lijsten: **de 
 
 | Kolomnaam | Beschrijving |
 |---|---|
-| **[!UICONTROL Product]** | De oplossing van de Adobe die door uw organisatie wordt vergunning gegeven. |
+| **[!UICONTROL Product]** | De Adobe-oplossing waarvoor uw organisatie een licentie heeft. |
 | **[!UICONTROL Primary Metric]** | De primaire metrisch die voor het volgen binnen dat product wordt gebruikt. |
 | **[!UICONTROL License Amount]** | De gecontracteerde waarde voor het maximale bedrag van de primaire metrische waarde zoals overeengekomen in uw productlicentieovereenkomst. |
 | **[!UICONTROL Usage]** | De hoeveelheid primaire metrisch die wordt gebruikt. Deze waarde geeft het totale gebruik van die metrische waarde voor alle sandboxen aan, productie of ontwikkeling. |
@@ -111,14 +111,14 @@ De lijsten wijzen op primaire metrisch voor elk product, aangezien elk product t
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_licenseUsage_prediction"
 >title="Voorspeld gebruik"
->abstract="De voorspellingen zijn gebaseerd op het gebruik in de afgelopen 6-7 maanden en worden gegenereerd op de 15e van elke maand. Houd er rekening mee dat voorspelling van het licentiegebruik benaderingen zijn die zijn gebaseerd op gebruik in het verleden. U bent verantwoordelijk voor het begrijpen van het daadwerkelijke gebruik van uw organisatie en ervoor te zorgen dat het gebruik niet verder gaat dan het bereik van de licentie van uw organisatie met Adobe. Om gebruik te verminderen, kunt u dataset of pseudoniem de gegevensvervalsing van profielgegevens voor zandbakken en datasets vormen."
+>abstract="De voorspellingen zijn gebaseerd op het gebruik in de afgelopen 6-7 maanden en worden gegenereerd op de 15e van elke maand. Houd er rekening mee dat voorspelling van het licentiegebruik benaderingen zijn die zijn gebaseerd op gebruik in het verleden. U bent verantwoordelijk voor het begrijpen van het daadwerkelijke gebruik van uw organisatie en ervoor te zorgen dat het gebruik niet verder gaat dan het bereik van de licentie van uw organisatie voor Adobe. Om gebruik te verminderen, kunt u dataset of pseudoniem de gegevensvervalsing van profielgegevens voor zandbakken en datasets vormen."
 >additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/data-lifecycle/ui/dataset-expiration" text="Verlopen van geautomatiseerde gegevenssets"
 >additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/profile/pseudonymous-profiles" text="Verlopen gegevens van pseudoniem-profielen"
 
 >[!CONTEXTUALHELP]
 >id="platform_licenseusage_prediction"
 >title="Voorspeld gebruik"
->abstract="De voorspellingen zijn gebaseerd op het gebruik in de afgelopen 6-7 maanden en worden gegenereerd op de 15e van elke maand. Houd er rekening mee dat voorspelling van het licentiegebruik benaderingen zijn die zijn gebaseerd op gebruik in het verleden. U bent verantwoordelijk voor het begrijpen van het daadwerkelijke gebruik van uw organisatie en ervoor te zorgen dat het gebruik niet verder gaat dan het bereik van de licentie van uw organisatie met Adobe. Om gebruik te verminderen, kunt u dataset of pseudoniem de gegevensvervalsing van profielgegevens voor zandbakken en datasets vormen."
+>abstract="De voorspellingen zijn gebaseerd op het gebruik in de afgelopen 6-7 maanden en worden gegenereerd op de 15e van elke maand. Houd er rekening mee dat voorspelling van het licentiegebruik benaderingen zijn die zijn gebaseerd op gebruik in het verleden. U bent verantwoordelijk voor het begrijpen van het daadwerkelijke gebruik van uw organisatie en ervoor te zorgen dat het gebruik niet verder gaat dan het bereik van de licentie van uw organisatie voor Adobe. Om gebruik te verminderen, kunt u dataset of pseudoniem de gegevensvervalsing van profielgegevens voor zandbakken en datasets vormen."
 >additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/data-lifecycle/ui/dataset-expiration" text="Verlopen van geautomatiseerde gegevenssets"
 >additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/profile/pseudonymous-profiles" text="Verlopen gegevens van pseudoniem-profielen"
 
@@ -136,7 +136,7 @@ Het tabblad Samenvatting wordt weergegeven. U kunt de korrelige voorspellingen o
 
 >[!NOTE]
 >
->Houd er rekening mee dat voorspelling van het licentiegebruik benaderingen zijn die zijn gebaseerd op gebruik in het verleden. U bent verantwoordelijk voor het begrijpen van het daadwerkelijke gebruik van uw organisatie en ervoor te zorgen dat het gebruik niet verder gaat dan het bereik van de licentie van uw organisatie met Adobe.
+>Houd er rekening mee dat voorspelling van het licentiegebruik benaderingen zijn die zijn gebaseerd op gebruik in het verleden. U bent verantwoordelijk voor het begrijpen van het daadwerkelijke gebruik van uw organisatie en ervoor te zorgen dat het gebruik niet verder gaat dan het bereik van de licentie van uw organisatie voor Adobe.
 
 ![ de summiere mening van een Product van het Platform met de voorspelde benadrukte gebruikskolom.](../images/license-usage/summary-predicted-usage.png)
 
@@ -216,7 +216,7 @@ U kunt ook **[!UICONTROL Custom date]** selecteren om de tijdsperiode te kiezen 
 
 >[!IMPORTANT]
 >
->Beginnend 20th Augustus, zagen de klanten met rechten voor &#39;[!UICONTROL Average Profile Richness]&#39; en &#39;[!UICONTROL Total Storage]&#39; in plaats daarvan &#39;[!UICONTROL Total Data Volume]&#39; in het Dashboard van het Gebruik van de Vergunning. Er was geen wijziging in de rechten van de klant, alleen een vereenvoudiging van de meetwaarden. [!UICONTROL Total Data Volume] geeft de gegevens weer die beschikbaar zijn in de Adobe Experience Platform Profile Service voor workflows voor betrokkenheid en personalisatie. Deze vereenvoudigde maatstaf verbeterde het beheer en de meting van het gebruik van de profielservice. Klanten werden aangespoord contact op te nemen met hun Adobe voor meer informatie over deze wijziging.
+>Beginnend 20th Augustus, zagen de klanten met rechten voor &#39;[!UICONTROL Average Profile Richness]&#39; en &#39;[!UICONTROL Total Storage]&#39; in plaats daarvan &#39;[!UICONTROL Total Data Volume]&#39; in het Dashboard van het Gebruik van de Vergunning. Er was geen wijziging in de rechten van de klant, alleen een vereenvoudiging van de meetwaarden. [!UICONTROL Total Data Volume] geeft de gegevens weer die beschikbaar zijn in de Adobe Experience Platform Profile Service voor workflows voor betrokkenheid en personalisatie. Deze vereenvoudigde maatstaf verbeterde het beheer en de meting van het gebruik van de profielservice. Klanten werden aangemoedigd contact op te nemen met hun Adobe-vertegenwoordiger voor meer informatie over deze wijziging.
 
 Het dashboard van het vergunningsgebruik rapporteert over verscheidene unieke metriek die op veelvoudige producten in de organisatie van toepassing zijn. De beschikbare meetwaarden zijn:
 
@@ -226,15 +226,15 @@ Het dashboard van het vergunningsgebruik rapporteert over verscheidene unieke me
 | [!UICONTROL Addressable Audience] | De som van de rechten van uw zakelijke publiek en de rechten van het consumentenpubliek. Een publiek voor de consument wordt gedefinieerd als het aantal personenprofielen dat op de verkooporder als &quot;Consumentenpubliek&quot; wordt aangeduid. Een zakelijk publiek wordt gedefinieerd als het aantal bedrijfspersoonprofielen dat als &quot;BedrijfsPubliek&quot;op de verkooporde wordt geïdentificeerd. |
 | [!UICONTROL Adhoc Query Service Users Packs] | Een add-on om uw geautoriseerde machtiging voor gelijktijdige gebruikers van Query Service te verhogen met vijf extra gelijktijdige gebruikers van Query Service en één extra query tegelijk voor ad-hocquery per pakket. Er kan een licentie worden verleend voor meerdere extra Ad hoc Query User-pakketten. |
 | [!UICONTROL Average profile richness] | **Vervangen** - de som van alle productiegegevens die binnen de Dienst van het Profiel van de Hub op om het even welk punt in tijd worden opgeslagen, die door vijf keer het aantal erkende bedrijfspersoonprofielen wordt verdeeld. [!UICONTROL Average profile richness] is een gedeelde functie. |
-| [!UICONTROL CJA Rows Available] | De dagelijkse gemiddelde rijen van gegevens beschikbaar voor analyse binnen Customer Journey Analytics. |
+| [!UICONTROL CJA Rows Available] | De dagelijkse gemiddelde rijen gegevens die beschikbaar zijn voor analyse binnen Customer Journey Analytics. |
 | [!UICONTROL Computed Attributes] | Het totale aantal geaggregeerde gedragsgegevens van het profiel. Geaggregeerde gedragsgegevens voor profielen zijn gebaseerd op ervaringsgebeurtenissen die worden omgezet in een profielkenmerk en kunnen worden opgenomen in een persoonprofiel of bedrijfspersoonprofiel. |
 | [!UICONTROL Consumer Audience] | Het aantal personenprofielen dat op de verkooporder als &quot;Consumer Audience&quot; is geïdentificeerd. |
 | [!UICONTROL Data Export Size] | De hoeveelheid gegevens die via gegevenssetactivering in een jaar wordt verzonden. |
-| [!UICONTROL Data Exports] | De totale omvang van gegevenssets die (direct of indirect) naar een niet-Adobe oplossing in een jaar kunnen worden uitgevoerd. |
+| [!UICONTROL Data Exports] | De totale omvang van gegevenssets die (direct of indirect) naar een niet-Adobe-oplossing in een jaar kunnen worden geëxporteerd. |
 | [!UICONTROL Data Lake Storage] | De hoeveelheid die in Adobe Experience Platform wordt gebruikt voor de opslag van analysegegevens. |
 | [!UICONTROL Engageable Audience] | Deze maatstaf verwijst naar het publiek van controleerbare profielen. Een aanspreekbaar profiel is een record met informatie die een individu vertegenwoordigt en wordt weergegeven in de profielservice. Deze records zijn profielen die u in de afgelopen 12 maanden hebt proberen te gebruiken voor het schrijven, beslissen, leveren, experimenteren of orchestreren van Journey Optimizer. |
 | [!UICONTROL Look-alike Audiences] | Het aantal doelgroepen dat wordt gegenereerd door een bestaand publiek voor consumenten te modelleren om te bepalen welke personenprofielen vergelijkbaar zijn met het bestaande publiek voor consumenten. |
-| [!UICONTROL Number of AMM Models] | Een telling van het machine het leren model (ingebouwde Adobe Mix Modeler) dat wordt gebruikt om een gespecificeerd resultaat te meten en/of te voorspellen die op uw investeringen wordt gebaseerd. |
+| [!UICONTROL Number of AMM Models] | Een telling van het model voor machinaal leren (gebouwd in Adobe Mix Modeler) dat wordt gebruikt om een bepaald resultaat te meten en/of te voorspellen die op uw investeringen wordt gebaseerd. |
 | [!UICONTROL Number of Sandboxes] | Het aantal logische scheidingen binnen uw instantie van om het even welke Adobe On-demand Dienst die tot Adobe Experience Platform toegang heeft isolerend gegevens en verrichtingen. |
 | [!UICONTROL Profile Richness No of Packs] | Een toename in uw geautoriseerde totale gegevensvolume met 25 kB per profiel voor elk extra rijvaardigheidspakket van het Profiel. |
 | [!UICONTROL Query Service Compute Hours] | Een maatregel van de hoeveelheid tijd die door de motoren van de Dienst van de Vraag wordt genomen om, gegevens terug in het gegevensmeer te lezen te verwerken en te schrijven wanneer een partijvraag wordt uitgevoerd. |
@@ -252,8 +252,8 @@ De beschikbaarheid van deze cijfers en de specifieke definitie van elk van deze 
 | Licentie | Productbeschrijving |
 | --- | --- |
 | <ul><li>ADOBE EXPERIENCE PLATFORM:OD LITE</li><li>ADOBE EXPERIENCE PLATFORM:OD STANDARD</li><li>ADOBE EXPERIENCE PLATFORM:OD HEAVY</li></ul> | [ Adobe Experience Platform ](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-platform.html) |
-| <ul><li>ADOBE EXPERIENCE PLATFORM:OD</li></ul> | [ Experience Platform, de Diensten van de App, en de Intelligente Diensten ](https://helpx.adobe.com/legal/product-descriptions/exp-platform-app-svcs.html) |
-| <ul><li>RT-KLANTENGEGEVENSPLATFORM:OD</li><li>RT KLANTENGEGEVENSPLATFORM:OD PRFL NAAR 10M</li><li>RT KLANTENGEGEVENSPLATFORM:OD PRFL NAAR 50M</li></ul> | [ Adobe Real-time Customer Data Platform ](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform.html) |
+| <ul><li>ADOBE EXPERIENCE PLATFORM:OD</li></ul> | [ Experience Platform, de Diensten van App, en de Intelligente Diensten ](https://helpx.adobe.com/legal/product-descriptions/exp-platform-app-svcs.html) |
+| <ul><li>RT-KLANTENGEGEVENSPLATFORM:OD</li><li>RT KLANTENGEGEVENSPLATFORM:OD PRFL NAAR 10M</li><li>RT KLANTENGEGEVENSPLATFORM:OD PRFL NAAR 50M</li></ul> | [ Adobe Real-Time Customer Data Platform ](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform.html) |
 | <ul><li>AEP:OD ACTIVATION</li><li>AEP:OD ACTIVATION PRFL NAAR 10M</li><li>AEP:OD ACTIVATION PRFL TOT 50M</li></ul> | [ de Activering van Adobe Experience Platform ](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-platform0.html) |
 | <ul><li>AEP:OD INTELLIGENCE</li></ul> | [ Intelligentie van Adobe Experience Platform ](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-platform-intelligence---product-description.html) |
 | <ul><li>JOURNEY OPTIMIZER SELECT:OD</li><li>JOURNEY OPTIMIZER PRIME:OD</li><li>JOURNEY OPTIMIZER ULTIMATE:OD</li><li>UNP AJO PRIME STARTER:OD</li><li>UNP AJO ULTIMATE STARTER:OD</li><li>UNP Real-Time CDP:OD PROFILE ORCHESTRATION</li></ul> | [ Adobe Journey Optimizer ](https://helpx.adobe.com/legal/product-descriptions/adobe-journey-optimizer.html) |
@@ -266,4 +266,4 @@ De beschikbaarheid van deze cijfers en de specifieke definitie van elk van deze 
 
 Nadat u dit document hebt gelezen, kunt u het dashboard voor het licentiegebruik vinden en de gebruiksgegevens voor elk aangeschaft product, voor alle productie- of ontwikkelingssandboxen en voor een specifieke sandbox bekijken. Meer informatie over de beschikbare metriek voor uw organisatie vindt u op basis van de licentie die uw organisatie heeft aangeschaft.
 
-Meer over andere eigenschappen leren beschikbaar in het Experience Platform UI, verwijs naar de [ gids UI van het Platform ](../../landing/ui-guide.md).
+Meer over andere eigenschappen leren beschikbaar in Experience Platform UI, verwijs naar de [ gids UI van het Platform ](../../landing/ui-guide.md).

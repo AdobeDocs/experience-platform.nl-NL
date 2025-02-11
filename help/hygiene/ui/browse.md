@@ -65,7 +65,7 @@ De volgende filters zijn van toepassing op verzoeken om gegevenssetvervaldatum:
 >[!CONTEXTUALHELP]
 >id="platform_hygiene_statusbyservice"
 >title="Status per service"
->abstract="Aanvragen voor de levenscyclus van gegevens worden onafhankelijk verwerkt door meerdere services van Experience Platforms. Deze sectie schetst de huidige verwerkingsstatus van het verzoek voor elke respectieve dienst. Raadpleeg de gebruikershandleiding bij de levenscyclus van gegevens voor meer informatie."
+>abstract="Aanvragen voor de levenscyclus van gegevens worden onafhankelijk verwerkt door meerdere Experience Platform-services. Deze sectie schetst de huidige verwerkingsstatus van het verzoek voor elke respectieve dienst. Raadpleeg de gebruikershandleiding bij de levenscyclus van gegevens voor meer informatie."
 
 >[!CONTEXTUALHELP]
 >id="platform_hygiene_numberofidentities"

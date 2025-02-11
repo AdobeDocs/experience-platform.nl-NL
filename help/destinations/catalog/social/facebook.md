@@ -1,5 +1,5 @@
 ---
-keywords: facebook-verbinding;facebook-verbinding;facebook-bestemmingen;facebook;instagram;messenger;facebook-boodschapper
+keywords: facebook-verbinding;facebook-verbinding;facebook-bestemmingen;facebook;instagram;messenger;facebook-messenger
 title: Facebook-verbinding
 description: Activeer profielen voor uw Facebook-campagnes voor doelgroepen, personalisatie en onderdrukking op basis van gehakte e-mails.
 exl-id: 51e8c8f0-5e79-45b9-afbc-110bae127f76
@@ -18,7 +18,7 @@ Activeer profielen voor uw [!DNL Facebook] -campagnes voor doelgroepen, personal
 
 U kunt deze bestemming gebruiken voor doelgroepen in [!DNL Facebook's] -apps die worden ondersteund door [!DNL Custom Audiences] , inclusief [!DNL Facebook] , [!DNL Instagram] , [!DNL Audience Network] en [!DNL Messenger] . De selectie van de app waarop u de campagne wilt uitvoeren, wordt aangegeven op het plaatsingsniveau in [!DNL Facebook Ads Manager] .
 
-![ bestemming van Facebook in Adobe Experience Platform UI.](../../assets/catalog/social/facebook/catalog.png)
+![ bestemming Facebook in Adobe Experience Platform UI.](../../assets/catalog/social/facebook/catalog.png)
 
 ## Gebruiksscenario’s
 
@@ -54,7 +54,7 @@ In deze sectie wordt beschreven welke soorten publiek u naar dit doel kunt expor
 
 | Oorsprong publiek | Ondersteund | Beschrijving |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | ✓ | Het publiek produceerde door de Dienst van de Segmentatie van het Experience Platform [ ](../../../segmentation/home.md). |
+| [!DNL Segmentation Service] | ✓ | Het publiek produceerde door de Dienst van de Segmentatie van Experience Platform [ ](../../../segmentation/home.md). |
 | Aangepaste uploads | ✓ | Het publiek [ ingevoerde ](../../../segmentation/ui/audience-portal.md#import-audience) in Experience Platform van Csv- dossiers. |
 
 {style="table-layout:auto"}
@@ -70,20 +70,20 @@ Raadpleeg de onderstaande tabel voor informatie over het exporttype en de export
 
 {style="table-layout:auto"}
 
-## Voorwaarden voor facebook-accounts {#facebook-account-prerequisites}
+## Voorwaarden voor Facebook-accounts {#facebook-account-prerequisites}
 
 Voordat u uw publiek naar [!DNL Facebook] kunt sturen, moet u controleren of aan de volgende vereisten is voldaan:
 
 * Uw [!DNL Facebook] -gebruikersaccount moet volledige toegang hebben tot [!DNL Facebook Business Account] , dat eigenaar is van het Advertentieverkeer dat u gebruikt.
 * Voor uw [!DNL Facebook] -gebruikersaccount moet de **[!DNL Manage campaigns]** -machtiging zijn ingeschakeld voor de advertentieaccount die u wilt gebruiken.
-* De **Adobe Experience Cloud** bedrijfsrekening moet als advertentiepartner in uw [!DNL Facebook Ad Account] worden toegevoegd. Gebruik `business ID=206617933627973` . Zie [ Partners aan Uw BedrijfsManager ](https://www.facebook.com/business/help/1717412048538897) in de documentatie van Facebook voor details toevoegen.
+* De **Adobe Experience Cloud** bedrijfsrekening moet als advertentiepartner in uw [!DNL Facebook Ad Account] worden toegevoegd. Gebruik `business ID=206617933627973` . Zie [ Partners aan Uw BedrijfsManager ](https://www.facebook.com/business/help/1717412048538897) in de documentatie Facebook voor details toevoegen.
   >[!IMPORTANT]
   >
   > Wanneer het vormen van de toestemmingen voor Adobe Experience Cloud, moet u **toelaten leidt campagnes** toestemming. De machtiging is vereist voor de [!DNL Adobe Experience Platform] -integratie.
 * Lees en onderteken de [!DNL Facebook Custom Audiences] Servicevoorwaarden. Ga hiertoe naar `https://business.facebook.com/ads/manage/customaudiences/tos/?act=[accountID]&business_id=206617933627973` , waar `accountID` uw [!DNL Facebook Ad Account ID] is. Zorg ervoor dat de sectie `business_id=206617933627973` aanwezig is in de URL wanneer u de Servicevoorwaarden ondertekent.
   >[!IMPORTANT]
   >
-  >Wanneer u de servicevoorwaarden van [!DNL Facebook Custom Audiences] ondertekent, moet u dezelfde gebruikersaccount gebruiken als waarmee u zich in de Facebook API hebt geverifieerd.
+  >Wanneer u de Servicevoorwaarden van [!DNL Facebook Custom Audiences] ondertekent, moet u dezelfde gebruikersaccount gebruiken als waarmee u zich in de Facebook-API hebt geverifieerd.
 
 ## Vereisten voor id-afstemming {#id-matching-requirements}
 
@@ -104,7 +104,7 @@ Er zijn twee methoden om telefoonnummers te activeren in [!DNL Facebook] :
 
 ## E-mailhashingvereisten {#email-hashing-requirements}
 
-U kunt e-mailadressen hashen alvorens hen in Adobe Experience Platform op te nemen, of e-mailadressen gebruiken duidelijk in Experience Platform, en [!DNL Platform] hen hebben hakt bij activering.
+U kunt e-mailadressen hashen alvorens hen in Adobe Experience Platform op te nemen, of e-mailadressen gebruiken duidelijk in Experience Platform, en [!DNL Platform] hen hebben geknoeid op activering.
 
 Om over het opnemen van e-mailadressen in Experience Platform te leren, zie het [ overzicht van de partijopname ](/help/ingestion/batch-ingestion/overview.md) en [ het stromen ingestitieoverzicht ](/help/ingestion/streaming-ingestion/overview.md).
 
@@ -143,7 +143,7 @@ In de onderstaande video ziet u ook de stappen voor het configureren van een [!D
 
 >[!NOTE]
 >
->De gebruikersinterface van het Experience Platform wordt vaak bijgewerkt en kan sinds de opname van deze video zijn veranderd. Voor de meest bijgewerkte informatie, verwijs naar het [ leerprogramma van de bestemmingsconfiguratie ](../../ui/connect-destination.md).
+>De Experience Platform-gebruikersinterface wordt vaak bijgewerkt en kan zijn gewijzigd sinds de opname van deze video. Voor de meest bijgewerkte informatie, verwijs naar het [ leerprogramma van de bestemmingsconfiguratie ](../../ui/connect-destination.md).
 
 ### Verifiëren voor bestemming {#authenticate}
 
@@ -173,7 +173,7 @@ Facebook-tokens verlopen elke 60 dagen. Zodra het teken is verlopen, de gegevens
 >[!CONTEXTUALHELP]
 >id="platform_destinations_connect_facebook_accountid"
 >title="Account-id"
->abstract="Je Facebook-account-id. Je kunt deze id vinden in je Facebook Ads Manager account. Geef bij het invoeren van deze id altijd een voorvoegsel `act_` op."
+>abstract="Je Facebook advertentie-account-id. U kunt deze id vinden in uw Facebook Ads Manager-account. Geef bij het invoeren van deze id altijd een voorvoegsel `act_` op."
 
 Als u details voor de bestemming wilt configureren, vult u de vereiste en optionele velden hieronder in. Een sterretje naast een veld in de gebruikersinterface geeft aan dat het veld verplicht is.
 
@@ -192,7 +192,7 @@ Wanneer u klaar bent met het opgeven van details voor uw doelverbinding, selecte
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activate_facebook_originofaudience"
 >title="Oorsprong van het publiek"
->abstract="Kies hoe de klantgegevens in het publiek oorspronkelijk zijn verzameld. De gegevens worden in Facebook weergegeven wanneer een gebruiker voor het segment is ingesteld"
+>abstract="Kies hoe de klantgegevens in het publiek oorspronkelijk zijn verzameld. De gegevens worden op Facebook weergegeven wanneer een gebruiker op het segment valt"
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activate_facebook_originofaudience_customers"
@@ -218,7 +218,7 @@ Zie [ publieksgegevens aan het stromen publiek de uitvoerbestemmingen ](../../ui
 
 In de stap **[!UICONTROL Segment schedule]** moet u de instructie [!UICONTROL Origin of audience] opgeven wanneer u een publiek verzendt naar [!DNL Facebook Custom Audiences] .
 
-![ Oorsprong van Publiek dropdown die in de de activeringsstap van Facebook wordt getoond.](../../assets/catalog/social/facebook/facebook-origin-audience.png)
+![ Oorsprong van Publiek dropdown die in de Facebook activeringsstap wordt getoond.](../../assets/catalog/social/facebook/facebook-origin-audience.png)
 
 ### Voorbeeld van toewijzing: publieksgegevens activeren in [!DNL Facebook Custom Audience] {#example-facebook}
 
@@ -271,6 +271,6 @@ Deze fout treedt op wanneer klanten nieuwe accounts gebruiken en de machtigingen
 >
 >Zorg ervoor u [!DNL Facebook Custom Audience Terms of Service] onder `business ID 206617933627973` goedkeurt, zoals aangetoond in het malplaatje URL in de [ sectie van de rekeningseerste vereisten ](#facebook-account-prerequisites).
 
-Als u het `400 Bad Request` foutenbericht na de stappen in [ de rekeningseerste vereisten van Facebook ](#facebook-account-prerequisites) ontvangt, sta een paar dagen voor de [!DNL Facebook] toestemmingen toe om van kracht te worden.
+Als u het `400 Bad Request` foutenbericht na het volgen van de stappen in [ de rekeningseerste vereisten van Facebook ](#facebook-account-prerequisites) ontvangt, sta een paar dagen voor de [!DNL Facebook] toestemmingen toe om van kracht te worden.
 
 

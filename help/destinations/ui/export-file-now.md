@@ -1,7 +1,7 @@
 ---
-title: De dossiers van de uitvoer op bestelling aan partijbestemmingen gebruikend Experience Platform UI
+title: Bestanden op aanvraag exporteren naar batchbestemmingen met de gebruikersinterface van Experience Platform
 type: Tutorial
-description: Leer hoe u bestanden op aanvraag exporteert naar batchbestemmingen met behulp van de interface van het Experience Platform.
+description: Leer hoe u bestanden op aanvraag exporteert naar batchbestemmingen met de gebruikersinterface van Experience Platform.
 exl-id: 0cbe5089-b73d-4584-8451-2fc34d47c357
 source-git-commit: 47d0e2a7fae973edfda035d046f66c88d34bf8b2
 workflow-type: tm+mt
@@ -11,7 +11,7 @@ ht-degree: 0%
 ---
 
 
-# De dossiers van de uitvoer op bestelling aan partijbestemmingen gebruikend Experience Platform UI
+# Bestanden op aanvraag exporteren naar batchbestemmingen met de gebruikersinterface van Experience Platform
 
 >[!IMPORTANT]
 > 
@@ -22,13 +22,13 @@ ht-degree: 0%
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activationchaining_activatenow"
 >title="Bestand nu exporteren"
->abstract="Selecteer deze controle om een volledige dossieruitvoer naast om het even welke eerder geplande uitvoer te leveren. De bestandsuitvoer wordt onmiddellijk geactiveerd en de meest recente resultaten worden opgehaald uit de gesegmenteerde Experience Platforms."
+>abstract="Selecteer deze controle om een volledige dossieruitvoer naast om het even welke eerder geplande uitvoer te leveren. Het exporteren van het bestand wordt direct geactiveerd en de meest recente resultaten worden opgehaald uit Experience Platform-segmentatiebewerkingen."
 
-Dit artikel verklaart hoe te om het Experience Platform UI te gebruiken om dossiers op bestelling naar partijbestemmingen zoals [ wolkenopslag ](/help/destinations/catalog/cloud-storage/overview.md) en [ e-mailmarketing ](/help/destinations/catalog/email-marketing/overview.md) bestemmingen uit te voeren.
+Dit artikel verklaart hoe te om Experience Platform UI te gebruiken om dossiers op bestelling naar partijbestemmingen zoals [ wolkenopslag ](/help/destinations/catalog/cloud-storage/overview.md) en [ e-mailmarketing ](/help/destinations/catalog/email-marketing/overview.md) bestemmingen uit te voeren.
 
-Met het besturingselement **[!UICONTROL Export file now]** kunt u een volledig bestand exporteren zonder het huidige exportschema van een eerder gepland publiek te onderbreken. Deze exportbewerking wordt uitgevoerd naast de eerder geplande exportbewerkingen en heeft geen invloed op de exportfrequentie van het publiek. De bestandsuitvoer wordt onmiddellijk geactiveerd en de meest recente resultaten worden opgehaald uit de gesegmenteerde Experience Platforms.
+Met het besturingselement **[!UICONTROL Export file now]** kunt u een volledig bestand exporteren zonder het huidige exportschema van een eerder gepland publiek te onderbreken. Deze exportbewerking wordt uitgevoerd naast de eerder geplande exportbewerkingen en heeft geen invloed op de exportfrequentie van het publiek. Het exporteren van het bestand wordt direct geactiveerd en de meest recente resultaten worden opgehaald uit Experience Platform-segmentatiebewerkingen.
 
-U kunt hiervoor ook de Experience Platform-API&#39;s gebruiken. Lees hoe te [ publiek op bestelling aan partijbestemmingen via ad-hoc activering API ](/help/destinations/api/ad-hoc-activation-api.md) activeren.
+U kunt hiervoor ook de Experience Platform API&#39;s gebruiken. Lees hoe te [ publiek op bestelling aan partijbestemmingen via ad-hoc activering API ](/help/destinations/api/ad-hoc-activation-api.md) activeren.
 
 ## Vereisten {#prerequisites}
 
@@ -77,5 +77,5 @@ Wanneer u het besturingselement **[!UICONTROL Export file now]** gebruikt, kunne
 
 ## Verwante informatie {#related-information}
 
-* [Het publiek op aanvraag naar batchbestemmingen activeren met de Experience Platform-API&#39;s](/help/destinations/api/ad-hoc-activation-api.md)
+* [Het publiek op aanvraag naar batchbestemmingen activeren met de Experience Platform API&#39;s](/help/destinations/api/ad-hoc-activation-api.md)
 * [Gebruikersgegevens activeren om exportdoelen voor batchprofielen te maken](/help/destinations/ui/activate-batch-profile-destinations.md)

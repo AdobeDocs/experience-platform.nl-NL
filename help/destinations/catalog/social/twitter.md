@@ -1,5 +1,5 @@
 ---
-title: Verbinding Aangepast publiek twitters
+title: Aangepaste doelpubliek Twitter-verbinding
 description: Richt uw bestaande volgers en klanten in Twitter en creeer relevante re-marketing campagnes door uw publiek te activeren dat binnen Adobe Experience Platform wordt gebouwd
 exl-id: fd244e58-cd94-4de7-81e4-c321eb673b65
 source-git-commit: ba9b59a24079b61a0f5d6076f3acfd83fc8f4092
@@ -17,10 +17,10 @@ Richt uw bestaande volgers en klanten in Twitter en creeer relevante re-marketin
 
 ## Vereisten {#prerequisites}
 
-Voordat u de [!DNL Twitter Custom Audiences] -bestemming configureert, moet u controleren of aan de volgende Twitter is voldaan.
+Voordat u de [!DNL Twitter Custom Audiences] -bestemming configureert, moet u controleren of aan de volgende Twitter-voorwaarden is voldaan.
 
 1. Uw [!DNL Twitter Ads] -account moet in aanmerking komen voor advertenties. Nieuwe [!DNL Twitter Ads] -accounts komen de eerste twee weken nadat ze zijn gemaakt niet in aanmerking voor reclame.
-2. Voor uw Twitter-gebruikersaccount waarvoor u in [!DNL Twitter Audience Manager] toegang hebt geoorloofd, moet de machtiging *[!DNL Partner Audience Manager]* zijn ingeschakeld.
+2. Voor uw Twitter-gebruikersaccount waarvoor u toegang hebt toegestaan in [!DNL Twitter Audience Manager] , moet de machtiging *[!DNL Partner Audience Manager]* zijn ingeschakeld.
 
 ## Ondersteunde identiteiten {#supported-identities}
 
@@ -39,7 +39,7 @@ In deze sectie wordt beschreven welke soorten publiek u naar dit doel kunt expor
 
 | Oorsprong publiek | Ondersteund | Beschrijving |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | ✓ | Het publiek produceerde door de Dienst van de Segmentatie van het Experience Platform [ ](../../../segmentation/home.md). |
+| [!DNL Segmentation Service] | ✓ | Het publiek produceerde door de Dienst van de Segmentatie van Experience Platform [ ](../../../segmentation/home.md). |
 | Aangepaste uploads | ✓ | Het publiek [ ingevoerde ](../../../segmentation/ui/audience-portal.md#import-audience) in Experience Platform van Csv- dossiers. |
 
 {style="table-layout:auto"}
@@ -50,7 +50,7 @@ Raadpleeg de onderstaande tabel voor informatie over het exporttype en de export
 
 | Item | Type | Notities |
 ---------|----------|---------|
-| Exporttype | **[!UICONTROL Audience export]** | U exporteert alle leden van een publiek met de id&#39;s die worden gebruikt in de bestemming Aangepast publiek voor Twitter. |
+| Exporttype | **[!UICONTROL Audience export]** | U exporteert alle leden van een publiek met de id&#39;s die worden gebruikt in de bestemming Aangepast publiek van Twitter. |
 | Exportfrequentie | **[!UICONTROL Streaming]** | Streaming doelen zijn &quot;altijd aan&quot; API-verbindingen. Zodra een profiel in Experience Platform wordt bijgewerkt dat op publieksevaluatie wordt gebaseerd, verzendt de schakelaar de update stroomafwaarts naar het bestemmingsplatform. Lees meer over [ het stromen bestemmingen ](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
@@ -61,7 +61,7 @@ Om u beter te helpen begrijpen hoe en wanneer u de [!DNL Twitter Custom Audience
 
 ### Hoofdletters en kleine letters gebruiken 1
 
-Richt uw bestaande volgers en klanten in Twitter en creeer relevante re-marketing campagnes door uw publiek te activeren dat binnen Adobe Experience Platform als [!DNL List Custom Audiences] in Twitter wordt gebouwd.
+Richt uw bestaande volgers en klanten in Twitter en creeer relevante re-marketing campagnes door uw publiek te activeren dat in Adobe Experience Platform als [!DNL List Custom Audiences] in Twitter wordt gebouwd.
 
 ## Verbinden met doel {#connect}
 
@@ -76,14 +76,14 @@ Om met deze bestemming te verbinden, volg de stappen die in het [ leerprogramma 
 1. Zoek het doel [!DNL Twitter Custom Audiences] in de doelcatalogus en selecteer **[!UICONTROL Set Up]** .
 2. Selecteer **[!UICONTROL Connect to destination]**.
    ![ verifieer aan LinkedIn ](/help/destinations/assets/catalog/social/twitter/authenticate-twitter-destination.png)
-3. Ga uw geloofsbrieven van de Twitter in en selecteer **Login**.
+3. Ga uw geloofsbrieven Twitter in en selecteer **Login**.
 
 ### Doelgegevens invullen {#destination-details}
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_connect_twitter_accountid"
 >title="Account-id"
->abstract="Je account-id voor Twitter Adds. Dit vindt u in de instellingen voor advertenties voor Twitters."
+>abstract="Je account-id voor Twitter Adds. Dit vindt u in de instellingen voor Twitter-advertenties."
 
 Als u details voor de bestemming wilt configureren, vult u de vereiste en optionele velden hieronder in. Een sterretje naast een veld in de gebruikersinterface geeft aan dat het veld verplicht is.
 
@@ -93,7 +93,7 @@ Als u details voor de bestemming wilt configureren, vult u de vereiste en option
 
 >[!IMPORTANT]
 >
->Gebruik geen speciale tekens (+ &amp; , % : ; @ / = ? $ \n) in namen voor publiek, beschrijving en publiekstoewijzing. Als de publieksnaam van het Experience Platform deze tekens bevat, verwijdert u deze voordat u het publiek toewijst aan een Twitter.
+>Gebruik geen speciale tekens (+ &amp; , % : ; @ / = ? $ \n) in namen voor publiek, beschrijving en publiekstoewijzing. Als de naam van uw Experience Platform-publiek deze tekens bevat, verwijdert u deze voordat u het publiek toewijst aan een Twitter-bestemming.
 
 ### Waarschuwingen inschakelen {#enable-alerts}
 
@@ -112,7 +112,7 @@ Lees [ activeer profielen en publiek aan het stromen publiek uitvoerbestemmingen
 
 ### Toewijzingsoverwegingen {#mapping-considerations}
 
-Wanneer het publiek aan Twitter in kaart brengen, verstrek mens-leesbare namen van de publiekstoewijzing. Wij adviseren gebruikend de zelfde naam die u voor de segmenten van het Experience Platform gebruikte.
+Wanneer u doelgroepen toewijst aan Twitter, geeft u voor mensen leesbare toewijzingsnamen voor de doelgroep op. We raden u aan dezelfde naam te gebruiken als voor de Experience Platform-segmenten.
 
 ## Gegevensgebruik en -beheer {#data-usage-governance}
 
@@ -120,4 +120,4 @@ Alle [!DNL Adobe Experience Platform] -doelen zijn compatibel met het beleid voo
 
 ## Aanvullende bronnen {#additional-resources}
 
-Meer informatie over [!DNL List Custom Audiences] in Twitter kan in de [ documentatie van de Twitter ](https://business.twitter.com/en/help/campaign-setup/campaign-targeting/custom-audiences/lists.html) worden gevonden.
+Meer informatie over [!DNL List Custom Audiences] in Twitter kan in de [ documentatie Twitter ](https://business.twitter.com/en/help/campaign-setup/campaign-targeting/custom-audiences/lists.html) worden gevonden.

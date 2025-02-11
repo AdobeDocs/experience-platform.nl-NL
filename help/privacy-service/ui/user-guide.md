@@ -1,8 +1,8 @@
 ---
 keywords: Experience Platform;home;populaire onderwerpen;exporteren;Exporteren
 solution: Experience Platform
-title: Privacy-taken beheren in de gebruikersinterface van de Privacy Service
-description: Leer hoe u de gebruikersinterface van de Privacy Service gebruikt om privacyverzoeken in verschillende Experiencen Cloud te coördineren en te controleren.
+title: Privacy-taken beheren in de gebruikersinterface van Privacy Service
+description: Leer hoe u de Privacy Service-gebruikersinterface gebruikt om privacyverzoeken in verschillende Experience Cloud-toepassingen te coördineren en te controleren.
 exl-id: aa8b9f19-3e47-4679-9679-51add1ca2ad9
 source-git-commit: 1d1224b263b55b290d2cac9c07dfd1b852c4cef5
 workflow-type: tm+mt
@@ -11,7 +11,7 @@ ht-degree: 0%
 
 ---
 
-# Privacy-taken beheren in de gebruikersinterface van de Privacy Service {#user-guide}
+# Privacy-taken beheren in de gebruikersinterface van Privacy Service {#user-guide}
 
 >[!CONTEXTUALHELP]
 >id="platform_privacyConsole_requests_description"
@@ -22,9 +22,9 @@ Dit document bevat stappen voor het maken en beheren van privacyverzoeken via de
 
 >[!IMPORTANT]
 >
->Privacy Service is alleen bedoeld voor betrokkenen en verzoeken om consumentenrechten. Elk ander gebruik van Privacy Service voor het opschonen of onderhouden van gegevens wordt niet ondersteund of toegestaan. Adobe is wettelijk verplicht deze tijdig te vervullen. Als zodanig is het testen van belasting op Privacy Service niet toegestaan, omdat dit een productieomgeving is en een onnodige achterstand oplevert bij geldige privacyverzoeken.
+>Privacy Service is alleen bedoeld voor de betrokkenen en verzoeken om consumentenrechten. Elk ander gebruik van Privacy Service voor het opschonen of onderhouden van gegevens wordt niet ondersteund of toegestaan. Adobe is wettelijk verplicht deze tijdig te vervullen. Daarom is het testen van belasting op Privacy Service niet toegestaan, omdat dit een productieomgeving is en een onnodige achterstand oplevert bij geldige privacyverzoeken.
 >
->Er is nu een vaste uploadlimiet voor dagelijks gebruik om misbruik van de service te voorkomen. Gebruikers die misbruik van het systeem kunnen maken, hebben toegang tot de service uitgeschakeld. Daarna zal er een vergadering met hen worden gehouden om hun acties te bespreken en te bespreken of Privacy Service aanvaardbaar is.
+>Er is nu een vaste uploadlimiet voor dagelijks gebruik om misbruik van de service te voorkomen. Gebruikers die misbruik van het systeem kunnen maken, hebben toegang tot de service uitgeschakeld. Daarna zal er een vergadering met hen worden gehouden om hun acties te bespreken en te bespreken hoe Privacy Service zich kan inzetten.
 
 ## Door het [!DNL Privacy Service] UI-dashboard bladeren
 
@@ -75,7 +75,7 @@ Waiting:
 
 Taken voor elk type regelgeving worden afzonderlijk bijgehouden. Als u wilt schakelen tussen regelgevingstypen, selecteert u het vervolgkeuzemenu **[!UICONTROL Regulation Type]** en selecteert u de gewenste regeling in de lijst.
 
-![ de console van de Privacy Service met het Regeltype dropdown.](../images/user-guide/regulation.png)
+![ de console van Privacy Service met het drop-down Type van Reglement.](../images/user-guide/regulation.png)
 
 Als u het regulatietype wijzigt, wordt het dashboard bijgewerkt en worden alle bewerkingen, filters, widgets en dialoogvensters voor het creëren van werkgelegenheid weergegeven die van toepassing zijn op de geselecteerde verordening.
 
@@ -136,7 +136,7 @@ Als u de volledige taakgegevens als CSV-bestand wilt downloaden, selecteert u **
 >[!CONTEXTUALHELP]
 >id="platform_privacyConsole_requests_instructions"
 >title="Instructies"
->abstract="<ul><li>Selecteer <a href="https://experienceleague.adobe.com/docs/experience-platform/privacy/ui/overview.html#logging-in-from-experience-platform"> Verzoeken </a> in de linkernavigatie om Ul van de Privacy te openen, dan uitgezocht <b> creeer Verzoek </b>.</li><li>Vanaf hier kunt u de aanvraagbuilder gebruiken of een JSON-bestand van betrokkenen uploaden.</li><li>Als u de aanvraagbuilder gebruikt, selecteert u het taaktype (toegang en/of verwijderen) en kiest u het type identiteit dat u opgeeft (e-mail, ECID of AID), of voert u een naamruimte voor een aangepaste identiteit in. Ga de aangewezen identiteitswaarden voor de klanten in en selecteer <b> creëren </b> wanneer gebeëindigd.</li><li>Als u een JSON-bestand uploadt, selecteert u de pijl naast Verzoek maken. Van de lijst van opties, uitgezochte <b> uploadt JSON </b> en uploadt uw dossier. Als u geen JSON- dossier hebt om te uploaden, uitgezochte <b> download Adobe-GDPR-Request.json </b> om een malplaatje te downloaden dat u kunt bevolken. Upload JSON en selecteer <b> creëren </b> wanneer gebeëindigd.</li><li>Voor meer hulp met deze eigenschap, verwijs naar de <a href="https://experienceleague.adobe.com/docs/experience-platform/privacy/ui/user-guide.html"> gebruikersgids van de Privacy Service </a> op Experience League.</li></ul>"
+>abstract="<ul><li>Selecteer <a href="https://experienceleague.adobe.com/docs/experience-platform/privacy/ui/overview.html#logging-in-from-experience-platform"> Verzoeken </a> in de linkernavigatie om Ul van de Privacy te openen, dan uitgezocht <b> creeer Verzoek </b>.</li><li>Vanaf hier kunt u de aanvraagbuilder gebruiken of een JSON-bestand van betrokkenen uploaden.</li><li>Als u de aanvraagbuilder gebruikt, selecteert u het taaktype (toegang en/of verwijderen) en kiest u het type identiteit dat u opgeeft (e-mail, ECID of AID), of voert u een naamruimte voor een aangepaste identiteit in. Ga de aangewezen identiteitswaarden voor de klanten in en selecteer <b> creëren </b> wanneer gebeëindigd.</li><li>Als u een JSON-bestand uploadt, selecteert u de pijl naast Verzoek maken. Van de lijst van opties, uitgezochte <b> uploadt JSON </b> en uploadt uw dossier. Als u geen JSON- dossier hebt om te uploaden, uitgezochte <b> Download Adobe-GDPR-Request.json </b> om een malplaatje te downloaden dat u kunt bevolken. Upload JSON en selecteer <b> creëren </b> wanneer gebeëindigd.</li><li>Voor meer hulp met deze eigenschap, verwijs naar de <a href="https://experienceleague.adobe.com/docs/experience-platform/privacy/ui/user-guide.html"> gebruikersgids van Privacy Service </a> op Experience League.</li></ul>"
 
 >[!NOTE]
 >

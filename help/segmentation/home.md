@@ -54,7 +54,7 @@ Voor informatie bij de bouw van segmentdefinities die API gebruiken, zie het lee
 
 ### Samenstelling van Federated-doelgroep {#fac}
 
-Naast publiekssamenstellingen en segmentdefinities, kunt u Adobe Federated Audience Composition gebruiken om nieuwe doelgroepen van ondernemingsdatasets te bouwen zonder onderliggende gegevens te kopiëren en die doelgroepen op te slaan in het Portaal van het Publiek van Adobe Experience Platform. U kunt bestaande soorten publiek in Adobe Experience Platform ook verrijken door samengestelde publieksgegevens te gebruiken die van het entrepot van ondernemingsgegevens zijn gefedereerd. Gelieve te lezen de gids op [ Federated de Samenstelling van het Publiek ](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/home).
+Naast publiekssamenstellingen en segmentdefinities kunt u Adobe Federated Audience Composition gebruiken om nieuwe soorten publiek te maken van bedrijfsgegevenssets zonder onderliggende gegevens te kopiëren en die soorten publiek op te slaan in Adobe Experience Platform Audience Portal. U kunt bestaande soorten publiek in Adobe Experience Platform ook verrijken door samengestelde publieksgegevens te gebruiken die van het entrepot van ondernemingsgegevens zijn gefedereerd. Gelieve te lezen de gids op [ Federated de Samenstelling van het Publiek ](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/home).
 
 ## Soorten publiek evalueren {#evaluate-segments}
 
@@ -93,10 +93,10 @@ Het batchpubliek wordt automatisch elke 24 uur geëvalueerd. Als u een partijpub
 >[!CONTEXTUALHELP]
 >id="platform_segments_evaluation_edge"
 >title="Edge-evaluatie"
->abstract="De segmentatie van Edge is de capaciteit om segmenten in Platform onmiddellijk op de Edge Network te evalueren, toelatend zelfde-pagina en volgende-pagina het gebruikscase van de verpersoonlijking."
+>abstract="Edge-segmentatie is de mogelijkheid om segmenten in Platform direct op de Edge Network te evalueren, zodat gebruikers van dezelfde pagina en van volgende pagina&#39;s kunnen gebruikmaken van gevallen voor personalisatiegebruik."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/ui/edge-segmentation.html" text="Handleiding Edge-segmenteringsinterface"
 
-De segmentatie van Edge is de capaciteit om segmenten in Platform onmiddellijk [ op de Edge Network ](../web-sdk/home.md) te evalueren, toelatend zelfde-pagina en volgende-pagina verpersoonlijkingsgebruiksgevallen.
+De segmentatie van Edge is de capaciteit om segmenten in Platform onmiddellijk [ op Edge Network ](../web-sdk/home.md) te evalueren, toelatend zelfde-pagina en volgende-pagina verpersoonlijkingsgebruiksgevallen.
 
 Meer over randsegmentatie leren, te lezen gelieve of de [ API documentatie ](./api/edge-segmentation.md) of de [ documentatie UI ](./ui/edge-segmentation.md).
 

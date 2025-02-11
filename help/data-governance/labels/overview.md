@@ -16,7 +16,7 @@ ht-degree: 0%
 >[!CONTEXTUALHELP]
 >id="platform_privacyConsole_dataUsageLabels_description"
 >title="Toegang tot gevoelige en beveiligde gegevens beheren"
->abstract="<h2>Beschrijving</h2><p>De toegang van de controle tot specifieke gegevensattributen en/of segmenten, die u toestaan om flexibele werkschema&#39;s voor de diverse persona&#39;s en teams te ontwerpen die Experience Platform gebruiken gevallen.</p>"
+>abstract="<h2>Beschrijving</h2><p>De toegang tot specifieke gegevensattributen en/of segmenten controleren, die u toestaan om flexibele werkschema&#39;s voor de diverse personen en teams te ontwerpen die Experience Platform gebruiken gevallen.</p>"
 
 Adobe Experience Platform staat u toe om de etiketten van het gegevensgebruik op datasets en gebieden toe te passen, die elk categoriseren volgens verwant [ beleid van het gegevensbeheer ](../policies/overview.md) en [ toegangsbeheerbeleid ](../../access-control/abac/ui/policies.md).
 
@@ -30,7 +30,7 @@ De etiketten van het gebruik van gegevens die op het datasetniveau worden toegep
 
 [!DNL Platform] biedt verschillende &#39;core&#39; labels voor gegevensgebruik buiten de box, die een groot aantal algemene beperkingen bestrijken die van toepassing zijn op gegevensbeheer. Voor meer informatie over deze etiketten en het governancebeleid zij vertegenwoordigen, zie de gids op [ de etiketten van het het kerngegevensgebruik ](reference.md).
 
-Naast de labels die door de Adobe worden verschaft, kunt u ook uw eigen aangepaste labels voor uw organisatie definiëren. Zie de sectie op [ het leiden etiketten ](#manage-labels) voor meer informatie.
+Naast de labels die Adobe biedt, kunt u ook uw eigen aangepaste labels voor uw organisatie definiëren. Zie de sectie op [ het leiden etiketten ](#manage-labels) voor meer informatie.
 
 ## Labelovererving voor publiekssegmenten
 
@@ -42,9 +42,9 @@ Voor meer informatie over hoe de automatische handhaving in Platform werkt, zie 
 
 ### Overerving van Adobe Audience Manager Data Export Controls
 
-[!DNL Experience Platform] heeft de mogelijkheid om segmenten te delen met Adobe Audience Manager. Om het even welke Controles van de Uitvoer van Gegevens die op de segmenten van de Audience Manager zijn toegepast worden vertaald in gelijkwaardige etiketten en marketing acties die door [!DNL Experience Platform] de Governance van Gegevens worden erkend.
+[!DNL Experience Platform] heeft de mogelijkheid om segmenten te delen met Adobe Audience Manager. Alle besturingselementen voor gegevensexport die zijn toegepast op Audience Manager-segmenten, worden omgezet in equivalente labels en marketingacties die worden herkend door [!DNL Experience Platform] Data Governance.
 
-Voor een verwijzing op hoe de specifieke Controles van de Uitvoer van Gegevens aan de etiketten van het gegevensgebruik in [!DNL Platform] in kaart brengen, gelieve te verwijzen naar de [ documentatie van de Audience Manager ](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html#aam-data-export-control-in-aep).
+Voor een verwijzing op hoe de specifieke Controles van de Uitvoer van Gegevens aan de etiketten van het gegevensgebruik in [!DNL Platform] in kaart brengen, gelieve te verwijzen naar de [ documentatie van Audience Manager ](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html#aam-data-export-control-in-aep).
 
 ## Labels voor gegevensgebruik beheren in [!DNL Experience Platform] {#manage-labels}
 

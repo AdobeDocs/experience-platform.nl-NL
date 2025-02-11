@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;populaire onderwerpen;gegevensbeheer;label api voor gegevensgebruik;beleidservice-api;ondersteunde labels voor gegevensgebruik;contractlabels;identiteitslabels;gevoelige labels
+keywords: Experience Platform;home;populaire onderwerpen;gegevensbeheer;gegevensgebruikslabel api;beleidsservice-api;ondersteunde gegevensgebruikslabels;contractlabels;identiteitslabels;gevoelige labels
 solution: Experience Platform
 title: Woordenlijst met gegevensverbruikslabels
 description: Dit document bevat een overzicht van alle labels voor gegevensgebruik die momenteel door Adobe Experience Platform worden ondersteund.
@@ -16,12 +16,12 @@ ht-degree: 0%
 >[!CONTEXTUALHELP]
 >id="platform_policies_labeltype"
 >title="Labeltypen"
->abstract="Er zijn verschillende categorieën labels voor gegevensgebruik. Adobe-bepaalde etiketten omvatten contractetiketten, identiteitslabels, en gevoelige etiketten. De etiketten die door uw organisatie worden bepaald zijn gecategoriseerd als douanelabels."
+>abstract="Er zijn verschillende categorieën labels voor gegevensgebruik. Adobe-gedefinieerde labels bevatten contractlabels, identiteitslabels en gevoelige labels. De etiketten die door uw organisatie worden bepaald zijn gecategoriseerd als douanelabels."
 >text="See the data usage labels glossary for more information on these label types."
 
 De etiketten van het gebruik van gegevens staan u toe om datasets en gebieden volgens [ governance beleid ](../policies/overview.md) en [ toegangsbeheerbeleid ](../../access-control/abac/overview.md) te categoriseren dat op die gegevens van toepassing is. Adobe Experience Platform biedt verschillende basislabels voor gegevensgebruik die u kunt gebruiken om uw gegevens te categoriseren.
 
-In dit document worden de basislabels voor gegevensgebruik beschreven die momenteel door het Experience Platform worden geleverd.
+In dit document worden de basislabels voor gegevensgebruik beschreven die momenteel door Experience Platform worden geleverd.
 
 ## Contractlabels {#contract}
 
@@ -61,8 +61,8 @@ Eén type gegevens dat u mogelijk als gevoelig beschouwt, kan verschillende type
 | --- | --- |
 | **S1** | Gegevens die breedte- en lengtegraad aangeven die kunnen worden gebruikt om de precieze locatie van een apparaat te bepalen. |
 | **S2** | Gegevens die kunnen worden gebruikt om een breed gedefinieerd geofence-gebied te bepalen. |
-| **PSPD** | De toegelaten Gevoelige Persoonsgegevens (PSPD) verwijst naar gegevens die u door Adobe contractueel wordt toegelaten om te uploaden die &quot;gevoelig&quot;, &quot;speciale categorie van gegevens&quot;worden geacht, of een gelijkaardige term die door toepasselijke wetten wordt gebruikt. Dit sluit specifiek beschermde gezondheidsinformatie (PHI) en andere gereglementeerde gezondheidsgegevens uit. |
-| **RHD** | Gegevens die verwijzen naar beschermde gezondheidsinformatie (PHI) of informatie over een patiënt die u contractueel door de Adobe mag uploaden. |
+| **PSPD** | De toegelaten Gevoelige Persoonlijke Gegevens (PSPD) verwijst naar gegevens die u door Adobe contractueel wordt toegelaten om te uploaden die &quot;gevoelig&quot;wordt geacht, &quot;speciale categorie van gegevens&quot;, of een gelijkaardige term die door toepasselijke wetten wordt gebruikt. Dit sluit specifiek beschermde gezondheidsinformatie (PHI) en andere gereglementeerde gezondheidsgegevens uit. |
+| **RHD** | Gegevens die verwijzen naar beschermde gezondheidsinformatie (PHI) of informatie over een patiënt die door Adobe contractueel mag worden geüpload. |
 
 ## Partnerecosysteemlabels {#partner}
 
@@ -110,31 +110,31 @@ Het gebruik van gegevens buiten de locatie alleen voor doelgerichte doeleinden z
 
 Het toewijzen van inhoud of advertenties die alleen gegevens ter plaatse gebruiken, zou echter doorgaans niet worden aangemerkt als doelgerichte actie op basis van interesse. Het on-site richten die anders niet als op rente-gebaseerd richten kwalificeert wordt behandeld als twee verschillende etiketten. Specifiek, richt het Etiket C6 de onsite en richt zich en het melden en spreekt specifiek aan de selectie, levering, en het melden van, en Etiket C7 adressen on-site inhoudselectie, levering, en het melden (de inhoud die van de plaats richt zich).
 
-Uiteindelijk is de interpretatie van het label en hoe gegevens met dat label worden gebruikt aan u. Ter referentie worden de IAB- en DAA-kaderregelingen hieronder vermeld:
+Uiteindelijk is de interpretatie van het label en hoe gegevens met dat label worden gebruikt aan u. Ter referentie worden de IAB- en DAA-frameworks hieronder gegeven:
 
 IAB: Personalization. Het verzamelen en verwerken van informatie over uw gebruik van deze service om reclame en/of inhoud voor u in andere contexten, zoals op andere websites of apps, in de loop van tijd te personaliseren. Doorgaans wordt de inhoud van de site of app gebruikt om conclusies te trekken over uw belangen die de toekomstige selectie van advertenties en/of inhoud van uw website beïnvloeden.
 
-DAA: Online gedragsreclame. Gegevens van een bepaalde computer of een bepaald apparaat verzamelen met betrekking tot webweergavegedrag in de loop van de tijd en op niet-gelieerde websites, met als doel deze gegevens te gebruiken om gebruikersvoorkeuren of -belangen te voorspellen voor het aanbieden van reclame op die computer of dat apparaat op basis van voorkeuren of interesses die uit dergelijk webviewergedrag zijn afgeleid.
+DAA: online gedragsreclame. Gegevens van een bepaalde computer of een bepaald apparaat verzamelen met betrekking tot webweergavegedrag in de loop van de tijd en op niet-gelieerde websites, met als doel deze gegevens te gebruiken om gebruikersvoorkeuren of -belangen te voorspellen voor het aanbieden van reclame op die computer of dat apparaat op basis van voorkeuren of interesses die uit dergelijk webviewergedrag zijn afgeleid.
 
 #### C6 {#c6}
 
 Advertenties zijn berichten of meldingen, met inbegrip van tekst en afbeeldingen, die op een website of app verschijnen en die voornamelijk bedoeld zijn om de verkoop van goederen of diensten te bevorderen. Het is aan u om het doel van dergelijke berichten of berichten te bepalen. Adds zijn gescheiden van inhoud ter plaatse, die door etiket [ C7 ](#c7) wordt behandeld. Gegevens met een C6-label kunnen niet worden gebruikt voor on-site advertenties, zoals de selectie en levering van advertenties op de websites of apps van uw organisatie, of om de levering en doeltreffendheid van dergelijke advertenties te meten. Dit omvat het gebruik van eerder verzamelde onsite gegevens over de belangen van de gebruikers om advertenties te selecteren, gegevens te verwerken over welke advertenties werden getoond, wanneer en waar deze werden getoond en of de gebruikers actie hebben ondernomen in verband met de advertentie, zoals het selecteren van een advertentie of het kopen van een advertentie. Doorgaans zou het maken van conclusies over de voorkeuren van gebruikers op basis van de onsite activiteiten van die gebruikers en het vervolgens gebruiken van deze voorkeuren in on-site advertenties niet worden aangemerkt als een op rente gebaseerde gerichte actie (ook wel personalisatie genoemd), aangezien deze niet voldoet aan alle drie de vereisten die vereist zijn voor op rente gebaseerde doelwitten. *[zie etiket C5 voor deze vereisten.](#c5)*
 
-Uiteindelijk is de interpretatie van het label en hoe gegevens met dat label worden gebruikt aan u. Ter referentie worden de IAB- en DAA-kaderregelingen hieronder vermeld:
+Uiteindelijk is de interpretatie van het label en hoe gegevens met dat label worden gebruikt aan u. Ter referentie worden de IAB- en DAA-frameworks hieronder gegeven:
 
 IAB: 3. Selectie, levering, rapportage: De verzameling van informatie, en combinatie met eerder verzamelde informatie, om advertenties voor u te selecteren en te leveren, en om de levering en doeltreffendheid van dergelijke advertenties te meten. Hieronder valt het gebruik van eerder verzamelde informatie over uw belangen bij het selecteren van advertenties, het verwerken van gegevens over de getoonde advertenties, hoe vaak deze werden getoond, wanneer en waar ze werden getoond en of u acties hebt ondernomen in verband met de advertentie, zoals het selecteren van een advertentie of het kopen van een advertentie. Dit geldt niet voor Personalization, dat bestaat uit het verzamelen en verwerken van informatie over uw gebruik van deze service om uw reclame en/of inhoud in andere contexten, zoals websites of apps, in de loop der tijd aan te passen.
 
-DAA: Online Behavioral Adverting omvat niet de activiteiten van Eerste Partijen, Ad Delivery of Ad Reporting, of contextuele reclame (d.w.z. reclame op basis van de inhoud van de te bezoeken webpagina, het huidige bezoek van een consument aan een webpagina of een zoekopdracht).
+DAA: Online gedragsreclame omvat niet de activiteiten van Eerste Partijen, Ad Delivery of Ad Reporting, of contextuele reclame (d.w.z. reclame op basis van de inhoud van de te bezoeken webpagina, het huidige bezoek van een consument aan een webpagina of een zoekopdracht).
 
 #### C7 {#c7}
 
 Onsite inhoud is tekst en afbeeldingen die zijn ontworpen om te informeren, te onderwijzen of te vermaken, en die niet zijn gemaakt om de verkoop van goederen of diensten te bevorderen. Het is aan u om het doel van de inhoud te bepalen, met inbegrip van of de inhoud als inheemse reclame zou kwalificeren. Het C7 etiket is niet bedoeld om onsite advertenties te behandelen, die door etiket [ C6 ](#c6) worden behandeld. Gegevens met een C7-label kunnen niet worden gebruikt voor het aanwijzen van inhoud op locatie, zoals de selectie en levering van inhoud op de websites of apps van uw organisatie, of om de levering en doeltreffendheid van dergelijke inhoud te meten. Dit omvat eerder verzamelde informatie over gebruikersbelangen in geselecteerde inhoud, het verwerken van gegevens over welke inhoud werd getoond, hoe vaak of hoe lang het werd getoond, wanneer en waar het werd getoond, en of de gebruikers om het even welke acties met betrekking tot de inhoud, met inbegrip van bijvoorbeeld, het selecteren van inhoud hebben ondernomen. Doorgaans wordt het maken van conclusies over de voorkeuren van gebruikers op basis van de onsite activiteiten van die gebruikers en het vervolgens gebruiken van deze voorkeuren bij het zoeken naar inhoud op locatie niet beschouwd als een op rente gebaseerde keuze (ook wel personalisatie genoemd), omdat het niet voldoet aan alle drie de vereisten die vereist zijn voor het maken van doelwitbestanden. *[zie etiket C5 voor deze vereisten.](#c5)*
 
-Uiteindelijk is de interpretatie van het label en hoe gegevens met dat label worden gebruikt aan u. Ter referentie worden de IAB- en DAA-kaderregelingen hieronder vermeld:
+Uiteindelijk is de interpretatie van het label en hoe gegevens met dat label worden gebruikt aan u. Ter referentie worden de IAB- en DAA-frameworks hieronder gegeven:
 
 IAB: 4. Selectie, levering, rapportage van inhoud: de verzameling van informatie, en combinatie met eerder verzamelde informatie, om inhoud voor u te selecteren en te leveren, en om de levering en doeltreffendheid van dergelijke inhoud te meten. Dit omvat het gebruik van eerder verzamelde informatie over uw belangen om inhoud te selecteren, het verwerken van gegevens over welke inhoud werd getoond, hoe vaak of hoe lang het werd getoond, wanneer en waar het werd getoond, en of u om het even welke actie met betrekking tot de inhoud, met inbegrip van bijvoorbeeld het selecteren van inhoud nam. Dit geldt niet voor Personalization. Dit is het verzamelen en verwerken van informatie over uw gebruik van deze service om inhoud en/of reclame later in de loop van de tijd voor u te personaliseren in andere contexten, zoals websites of apps.
 
-DAA: Online gedragsreclame omvat niet de activiteiten van Eerste Partijen, Ad Delivery of Ad Reporting, of contextuele reclame (d.w.z. reclame op basis van de inhoud van de webpagina die wordt bezocht, het huidige bezoek van een consument aan een webpagina of een zoekopdracht).
+DAA: Online gedragsreclame omvat niet de activiteiten van Eerste Partijen, Ad Delivery of Ad Reporting, of contextuele reclame (d.w.z. reclame op basis van de inhoud van de webpagina die wordt bezocht, het huidige bezoek van een consument aan een Web-pagina of een zoekopdracht).
 
 #### C8 {#c8}
 

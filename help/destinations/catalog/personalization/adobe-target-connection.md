@@ -39,7 +39,7 @@ Bekijk de onderstaande video voor een kort overzicht van het configureren van de
 
 De lijst toont hieronder de gesteunde gebruiksgevallen voor de bestemming van Adobe Target, die op uw implementatietype wordt gebaseerd, met of zonder [ SDK van het Web ](/help/web-sdk/home.md) en met of zonder [ toegelaten randsegmentatie ](/help/segmentation/home.md#edge).
 
-| Adobe Target implementatie *zonder* SDK van het Web | Adobe Target implementatie *met* Web SDK | De implementatie van Adobe Target *met* Web SDK *en* randsegmentatie van |
+| Adobe Target-implementatie *zonder* Web SDK | Adobe Target implementatie *met* SDK van het Web | De implementatie van Adobe Target *met* SDK van het Web *en* randsegmentatie van |
 |---|---|---|
 | <ul><li>Een gegevensstroom is niet vereist. Adobe Target kan door [ at.js ](https://experienceleague.adobe.com/docs/target-dev/developer/client-side/at-js-implementation/overview.html), [ server-kant ](https://experienceleague.adobe.com/docs/target-dev/developer/overview.html#server-side-implementation), of [ hybride ](https://experienceleague.adobe.com/docs/target-dev/developer/overview.html#hybrid-implementation) implementatiemethodes worden opgesteld.</li><li>[ de segmentatie van Edge ](../../../segmentation/ui/edge-segmentation.md) wordt niet gesteund.</li><li>[ Zelfde-pagina en volgende-pagina verpersoonlijking ](../../ui/activate-edge-personalization-destinations.md) worden niet gesteund.</li><li>U kunt publiek en profielattributen aan de verbinding van Adobe Target voor de *standaardproductiestandaard* en niet-standaardzandbakken delen.</li><li>Om volgende-zittingsverpersoonlijking te vormen zonder een gegevensstroomidentiteitskaart te gebruiken, gebruik [ at.js ](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/at-js/how-atjs-works.html).</li></ul> | <ul><li>Een gegevensstroom met Adobe Target en Experience Platform die als diensten wordt gevormd wordt vereist.</li><li>Edge-segmentatie werkt zoals verwacht.</li><li>[ zelfde-pagina en volgende-pagina verpersoonlijking ](../../ui/activate-edge-personalization-destinations.md#use-cases) worden gesteund.</li><li>Het delen van publiek- en profielkenmerken van andere sandboxen wordt ondersteund.</li></ul> | <ul><li>Een gegevensstroom met Adobe Target en Experience Platform die als diensten wordt gevormd wordt vereist.</li><li>Wanneer [ vormend de datastream ](/help/destinations/ui/activate-edge-personalization-destinations.md#configure-datastream), selecteer niet het **de segmentatie van Edge** checkbox.</li><li>[ volgende-zittingsverpersoonlijking ](../../ui/activate-edge-personalization-destinations.md#next-session) wordt gesteund.</li><li>Het delen van publiek- en profielkenmerken van andere sandboxen wordt ondersteund.</li></ul> |
 
@@ -48,13 +48,13 @@ De lijst toont hieronder de gesteunde gebruiksgevallen voor de bestemming van Ad
 
 ### DataStream-id {#datastream-id}
 
-Wanneer het vormen van de verbinding van Adobe Target aan [ gebruik een gegevensstroomidentiteitskaart ](#parameters), moet u [ het Web SDK van Adobe Experience Platform ](/help/web-sdk/home.md) hebben uitgevoerd.
+Wanneer het vormen van de verbinding van Adobe Target aan [ gebruik een gegevensstroomidentiteitskaart ](#parameters), moet u de [ uitgevoerde SDK van het Web van Adobe Experience Platform ](/help/web-sdk/home.md) hebben.
 
-Als u de Adobe Target-verbinding configureert zonder een gegevensstroom-id te gebruiken, hoeft u de Web SDK niet te implementeren.
+Als u de Adobe Target-verbinding configureert zonder een gegevensstroom-id te gebruiken, hoeft u Web SDK niet te implementeren.
 
 >[!IMPORTANT]
 >
->Alvorens een [!DNL Adobe Target] verbinding tot stand te brengen, leest de gids op hoe te [ verpersoonlijkingsbestemmingen voor zelfde-pagina en volgende-pagina verpersoonlijking ](../../ui/activate-edge-personalization-destinations.md) vormen. Deze gids neemt u door de vereiste configuratiestappen voor zelfde-pagina en volgende-paginagrootte het gebruiksgevallen van het verpersoonlijkingsgebruik, over veelvoudige Experience Platform componenten. Als u gebruikstoepassingen van dezelfde pagina en volgende pagina wilt maken, moet u een gegevensstroom-id gebruiken wanneer u de Adobe Target-verbinding configureert.
+>Alvorens een [!DNL Adobe Target] verbinding tot stand te brengen, leest de gids op hoe te [ verpersoonlijkingsbestemmingen voor zelfde-pagina en volgende-pagina verpersoonlijking ](../../ui/activate-edge-personalization-destinations.md) vormen. Deze handleiding begeleidt u door de vereiste configuratiestappen voor het gebruik van dezelfde pagina en volgende pagina&#39;s voor personalisatie, voor meerdere Experience Platform-componenten. Als u gebruikstoepassingen van dezelfde pagina en volgende pagina wilt maken, moet u een gegevensstroom-id gebruiken wanneer u de Adobe Target-verbinding configureert.
 
 ### Vereisten in Adobe Target {#prerequisites-in-adobe-target}
 
@@ -78,7 +78,7 @@ In deze sectie wordt beschreven welke soorten publiek u naar dit doel kunt expor
 
 | Oorsprong publiek | Ondersteund | Beschrijving |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | ✓ | Het publiek produceerde door de Dienst van de Segmentatie van het Experience Platform [ ](../../../segmentation/home.md). |
+| [!DNL Segmentation Service] | ✓ | Het publiek produceerde door de Dienst van de Segmentatie van Experience Platform [ ](../../../segmentation/home.md). |
 | Aangepaste uploads | X | Het publiek [ ingevoerde ](../../../segmentation/ui/audience-portal.md#import-audience) in Experience Platform van Csv- dossiers. |
 
 {style="table-layout:auto"}
@@ -115,7 +115,7 @@ Adobe Experience Platform maakt automatisch verbinding met het Adobe Target-exem
 >[!CONTEXTUALHELP]
 >id="platform_destinations_target_workspace"
 >title="Informatie over Adobe Target Workspaces"
->abstract="Selecteer de Adobe Target-werkruimte waarin het publiek wordt gedeeld. U kunt één werkruimte selecteren voor elke Adobe Target-verbinding. Bij activering worden doelgroepen naar de geselecteerde werkruimte gerouteerd terwijl ze de toepasselijke labels voor gegevensgebruik in het Experience Platform volgen."
+>abstract="Selecteer de Adobe Target-werkruimte waarin het publiek wordt gedeeld. U kunt één werkruimte selecteren voor elke Adobe Target-verbinding. Na activering worden doelgroepen naar de geselecteerde werkruimte gerouteerd terwijl ze de toepasselijke Experience Platform-labels voor gegevensgebruik volgen."
 >additional-url="https://experienceleague.adobe.com/docs/target-learn/tutorials/administration/set-up-workspaces.html" text="Meer informatie over Adobe Target-werkruimten"
 
 Terwijl [ vestiging ](../../ui/connect-destination.md) deze bestemming, u de volgende informatie moet verstrekken:
@@ -129,13 +129,13 @@ Terwijl [ vestiging ](../../ui/connect-destination.md) deze bestemming, u de vol
   >De gegevensstroom-id is uniek voor elke Adobe Target-doelverbinding. U kunt niet dezelfde gegevensstroom-id gebruiken voor meerdere Adobe Target-doelverbindingen.
   >Als u het zelfde publiek aan veelvoudige gegevensstromen in kaart moet brengen, moet u [ een nieuwe bestemmingsverbinding ](../../ui/connect-destination.md) voor elke gegevensstroom identiteitskaart tot stand brengen, en door de [ stroom van de publiekactivering ](#activate) gaan.
 
-   * **[!UICONTROL None]**: Selecteer deze optie als u de verpersoonlijking van Adobe Target moet vormen maar u kunt niet [ SDK van het Web van het Experience Platform ](/help/web-sdk/home.md) uitvoeren. Wanneer u deze optie gebruikt, worden soorten publiek die van Experience Platform naar Doel zijn geëxporteerd, alleen ondersteuning voor verpersoonlijking in de volgende sessie en wordt randsegmentatie uitgeschakeld. Verwijzing de lijst in de [ gesteunde gebruikscase ](#supported-use-cases) sectie voor een vergelijking van beschikbare gebruiksgevallen per implementatietype.
+   * **[!UICONTROL None]**: Selecteer deze optie als u de verpersoonlijking van Adobe Target moet vormen maar u kunt niet [ SDK van het Web van Experience Platform ](/help/web-sdk/home.md) uitvoeren. Als u deze optie gebruikt, bieden doelgroepen die van Experience Platform naar Target zijn geëxporteerd, alleen ondersteuning voor verpersoonlijking in de volgende sessie en wordt randsegmentatie uitgeschakeld. Verwijzing de lijst in de [ gesteunde gebruikscase ](#supported-use-cases) sectie voor een vergelijking van beschikbare gebruiksgevallen per implementatietype.
 
-  | Adobe Target implementatie *zonder* SDK van het Web | Adobe Target implementatie *met* Web SDK | De implementatie van Adobe Target *met* Web SDK *en* randsegmentatie van |
+  | Adobe Target-implementatie *zonder* Web SDK | Adobe Target implementatie *met* SDK van het Web | De implementatie van Adobe Target *met* SDK van het Web *en* randsegmentatie van |
   |---|---|---|
   | <ul><li>Een gegevensstroom is niet vereist. Adobe Target kan door [ at.js ](https://experienceleague.adobe.com/docs/target-dev/developer/client-side/at-js-implementation/overview.html), [ server-kant ](https://experienceleague.adobe.com/docs/target-dev/developer/overview.html#server-side-implementation), of [ hybride ](https://experienceleague.adobe.com/docs/target-dev/developer/overview.html#hybrid-implementation) implementatiemethodes worden opgesteld.</li><li>[ de segmentatie van Edge ](../../../segmentation/ui/edge-segmentation.md) wordt niet gesteund.</li><li>[ Zelfde-pagina en volgende-pagina verpersoonlijking ](../../ui/activate-edge-personalization-destinations.md) worden niet gesteund.</li><li>U kunt publiek en profielattributen aan de verbinding van Adobe Target voor de *standaardproductiestandaard* en niet-standaardzandbakken delen.</li><li>Om volgende-zittingsverpersoonlijking te vormen zonder een gegevensstroomidentiteitskaart te gebruiken, gebruik [ at.js ](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/at-js/how-atjs-works.html).</li></ul> | <ul><li>Een gegevensstroom met Adobe Target en Experience Platform die als diensten wordt gevormd wordt vereist.</li><li>Edge-segmentatie werkt zoals verwacht.</li><li>[ zelfde-pagina en volgende-pagina verpersoonlijking ](../../ui/activate-edge-personalization-destinations.md#use-cases) worden gesteund.</li><li>Het delen van publiek- en profielkenmerken van andere sandboxen wordt ondersteund.</li></ul> | <ul><li>Een gegevensstroom met Adobe Target en Experience Platform die als diensten wordt gevormd wordt vereist.</li><li>Wanneer [ vormend de datastream ](/help/destinations/ui/activate-edge-personalization-destinations.md#configure-datastream), selecteer niet het **de segmentatie van Edge** checkbox.</li><li>[ volgende-zittingsverpersoonlijking ](../../ui/activate-edge-personalization-destinations.md#next-session) wordt gesteund.</li><li>Het delen van publiek- en profielkenmerken van andere sandboxen wordt ondersteund.</li></ul> |
 
-* **Workspace**: Selecteer de Adobe Target [ werkruimte ](https://experienceleague.adobe.com/docs/target-learn/tutorials/administration/set-up-workspaces.html) waaraan het publiek zal worden gedeeld. U kunt één werkruimte selecteren voor elke Adobe Target-verbinding. Op activering, worden het publiek verpletterd aan de geselecteerde werkruimte terwijl het volgen van de toepasselijke [ etiketten van het het gegevensgebruik van het Experience Platform ](../../../data-governance/labels/overview.md).
+* **Workspace**: Selecteer de Adobe Target [ werkruimte ](https://experienceleague.adobe.com/docs/target-learn/tutorials/administration/set-up-workspaces.html) waaraan het publiek zal worden gedeeld. U kunt één werkruimte selecteren voor elke Adobe Target-verbinding. Op activering, worden het publiek verpletterd aan de geselecteerde werkruimte terwijl het volgen van de toepasselijke [ etiketten van het gegevensgebruik van Experience Platform ](../../../data-governance/labels/overview.md).
 
 >[!NOTE]
 >
@@ -169,7 +169,7 @@ Als het publiek niet wordt gebruikt in een activiteit, gaat u naar **[!UICONTROL
 
 ## Geëxporteerde gegevens {#exported-data}
 
-Adobe Target *leest* profielgegevens van de Edge Network van Adobe Experience Platform, zodat worden geen gegevens uitgevoerd.
+Adobe Target *leest* profielgegevens van Adobe Experience Platform Edge Network, zodat worden geen gegevens uitgevoerd.
 
 ## Gegevensgebruik en -beheer {#data-usage-governance}
 

@@ -1,7 +1,7 @@
 ---
-keywords: Experience Platform;publiceer een model;De Wetenschap van Gegevens Workspace;populaire onderwerpen;score een dienst
+keywords: Experience Platform;publiceer een model;Data Science Workspace;populaire onderwerpen;score een service
 solution: Experience Platform
-title: Publish a Model as a Service in the Data Science Workspace UI
+title: Publiceer een Model als Dienst in de UI van Workspace van de Wetenschap van Gegevens
 type: Tutorial
 description: Met Adobe Experience Platform Data Science Workspace kunt u uw getrainde en geëvalueerde Model als service publiceren, zodat gebruikers binnen uw organisatie gegevens kunnen scoren zonder dat ze zelf modellen hoeven te maken.
 exl-id: ebbec1b1-20d3-43b5-82d3-89c79757625a
@@ -12,7 +12,7 @@ ht-degree: 0%
 
 ---
 
-# Publish a model as a service in the Data Science Workspace UI {#publish-a-model-as-a-service}
+# Een model publiceren als service in de gebruikersinterface van Data Science Workspace {#publish-a-model-as-a-service}
 
 >[!NOTE]
 >
@@ -22,7 +22,7 @@ ht-degree: 0%
 
 >[!CONTEXTUALHELP]
 >id="platform_intelligentservices_publishmodel"
->title="Publish a Model as a Service"
+>title="Een model publiceren als service"
 >abstract=""
 
 Met Adobe Experience Platform Data Science Workspace kunt u uw getrainde en geëvalueerde Model als service publiceren, zodat gebruikers binnen uw organisatie gegevens kunnen scoren zonder dat ze zelf modellen hoeven te maken.
@@ -35,7 +35,7 @@ Voor deze zelfstudie is een bestaand model met een geslaagde trainingsuitvoering
 
 Als u verkiest om een Model te publiceren door het Leren APIs van de Machine van Sensei te gebruiken, verwijs naar het [ API leerprogramma ](./publish-model-service-api.md).
 
-## Publish a Model {#publish-a-model}
+## Een model publiceren {#publish-a-model}
 
 Selecteer in Adobe Experience Platform de optie **[!UICONTROL Models]** in de linkernavigatiekolom en selecteer vervolgens de tab **[!UICONTROL Browse]** om alle bestaande modellen weer te geven. Selecteer de naam van het model dat u als service wilt publiceren.
 

@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;populaire onderwerpen;sandboxgebruikersgids;sandboxhulplijn
+keywords: Experience Platform;home;populaire onderwerpen;sandbox-gebruikershandleiding;sandbox-hulplijn
 solution: Experience Platform
 title: Gebruiksaanwijzing voor sandbox
 description: Dit document bevat stappen voor het uitvoeren van verschillende bewerkingen met betrekking tot sandboxen in de Adobe Experience Platform-gebruikersinterface.
@@ -17,7 +17,7 @@ Dit document bevat stappen voor het uitvoeren van verschillende bewerkingen met 
 
 ## Sandboxen weergeven
 
-Selecteer in de gebruikersinterface van het Experience Platform de optie **[!UICONTROL Sandboxes]** in de linkernavigatie en selecteer vervolgens de tab **[!UICONTROL Browse]** om het dashboard van [!UICONTROL Sandboxes] te openen. In het dashboard worden alle beschikbare sandboxen voor uw organisatie vermeld, inclusief de respectievelijke typen (productie of ontwikkeling).
+Selecteer in de gebruikersinterface van Experience Platform de optie **[!UICONTROL Sandboxes]** in de linkernavigatie en selecteer vervolgens de tab **[!UICONTROL Browse]** om het dashboard van [!UICONTROL Sandboxes] te openen. In het dashboard worden alle beschikbare sandboxen voor uw organisatie vermeld, inclusief de respectievelijke typen (productie of ontwikkeling).
 
 ![ het zandbakendashboard met het doorbladerlusje selecteerde dat een lijst van beschikbare zandbakken toont.](../images/ui/view-sandboxes.png)
 
@@ -45,7 +45,7 @@ Als een sandbox is geselecteerd, wordt het scherm vernieuwd en wordt de door u g
 >[!CONTEXTUALHELP]
 >id="platform_sandboxes_sandboxtitle"
 >title="Sandbox-titel"
->abstract="De sandboxtitel is de weergavenaam die de sandbox in menu&#39;s en vervolgkeuzelijsten in de gehele interface van het Experience Platform vertegenwoordigt."
+>abstract="De sandboxtitel is de weergavenaam die de sandbox in menu&#39;s en vervolgkeuzelijsten in de gehele Experience Platform-gebruikersinterface vertegenwoordigt."
 
 >[!WARNING]
 >
@@ -138,6 +138,6 @@ Voer in het laatste bevestigingsvenster de naam van de sandbox in het dialoogven
 
 ## Volgende stappen
 
-Dit document laat zien hoe u sandboxen beheert in de gebruikersinterface van het Experience Platform. Nu u weet hoe te om zandbakken te beheren, leer hoe te om configuratienauwkeurigheid over zandbakken te verbeteren en naadloos zandbakconfiguraties tussen zandbakken met de [ zandbak tooling eigenschap](./sandbox-tooling.md) gids uit te voeren en in te voeren.
+Dit document laat zien hoe u sandboxen beheert in de gebruikersinterface van Experience Platform. Nu u weet hoe te om zandbakken te beheren, leer hoe te om configuratienauwkeurigheid over zandbakken te verbeteren en naadloos zandbakconfiguraties tussen zandbakken met de [ zandbak tooling eigenschap](./sandbox-tooling.md) gids uit te voeren en in te voeren.
 
 Voor informatie over hoe te om zandbakken te beheren gebruikend zandbak API, zie de [ gids van de zandbakontwikkelaar ](../api/getting-started.md).

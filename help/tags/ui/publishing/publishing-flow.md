@@ -14,7 +14,7 @@ ht-degree: 3%
 >[!CONTEXTUALHELP]
 >id="platform_tags_publishing_flow"
 >title="Publicatiestroom"
->abstract="Begrijp de niveaus van gebruikerstoestemmingen die voor de het publiceren stroom, met inbegrip van Ontwikkelen, goedkeuren, en de rechten van Publish worden vereist."
+>abstract="Begrijp de niveaus van gebruikerstoestemmingen die voor de het publiceren stroom worden vereist, met inbegrip van Ontwikkelen, goedkeuren, en publicatierechten."
 
 >[!NOTE]
 >
@@ -68,7 +68,7 @@ In de volgende tabel worden de beschikbare acties voor een bibliotheek in de sta
 | [!UICONTROL Submit for Approval] | Wijs de bibliotheek niet toe vanuit de ontwikkelomgeving en verplaats de bibliotheek naar de kolom [!UICONTROL Submitted] , zodat een gebruiker met goedkeuringsmachtigingen eraan kan werken. Deze optie is alleen ingeschakeld als de meest recente build voor de bibliotheek is gelukt. |
 | [!UICONTROL Submit & Build to Staging] | Dit kan alleen worden uitgevoerd door een gebruiker met zowel de rechten Ontwikkelen als Goedkeuren. Deze actie verwijdert de toewijzing van de bibliotheek uit de ontwikkelomgeving, verplaatst de bibliotheek naar de status [!UICONTROL Submitted] en bouwt de bibliotheek naar de testomgeving. Deze optie is alleen ingeschakeld als de meest recente build voor de bibliotheek is gelukt. |
 | [!UICONTROL Approve for Publishing] | Dit kan alleen worden uitgevoerd door een gebruiker met zowel de rechten Ontwikkelen als Goedkeuren. Deze actie verwijdert de toewijzing van de bibliotheek uit de ontwikkelomgeving en verplaatst deze naar de status [!UICONTROL Approved] (de testomgeving en de status [!UICONTROL Submitted] worden volledig overgeslagen). Deze optie is alleen ingeschakeld als de meest recente build voor de bibliotheek is gelukt. |
-| [!UICONTROL Approve & Publish to Production] | Dit kan alleen worden uitgevoerd door een gebruiker met de rechten Ontwikkelen, Goedkeuren en Publish. Met deze handeling wordt de toewijzing van de bibliotheek aan de ontwikkelomgeving ongedaan gemaakt, verplaatst naar de status [!UICONTROL Approved] en gepubliceerd naar productie. Nadat de productiebuild is voltooid, wordt de bibliotheek naar de status [!UICONTROL Published] verplaatst. Deze optie is alleen ingeschakeld als de meest recente build voor de bibliotheek is gelukt. |
+| [!UICONTROL Approve & Publish to Production] | Dit kan alleen worden uitgevoerd door een gebruiker met de rechten Ontwikkelen, Goedkeuren en Publiceren. Met deze handeling wordt de toewijzing van de bibliotheek aan de ontwikkelomgeving ongedaan gemaakt, verplaatst naar de status [!UICONTROL Approved] en gepubliceerd naar productie. Nadat de productiebuild is voltooid, wordt de bibliotheek naar de status [!UICONTROL Published] verplaatst. Deze optie is alleen ingeschakeld als de meest recente build voor de bibliotheek is gelukt. |
 | [!UICONTROL Delete] | Verwijder de bibliotheek van het systeem. Hierdoor wordt de build niet uit de omgeving verwijderd. |
 
 ### [!UICONTROL Submitted] {#submitted}
@@ -82,7 +82,7 @@ In de volgende tabel worden de beschikbare acties voor een bibliotheek in de sta
 | [!UICONTROL Open] | De inhoud van de bibliotheek weergeven. Wijzigingen zijn niet toegestaan voor bibliotheken buiten de kolom [!UICONTROL Development] . Als er wijzigingen nodig zijn, moet de bibliotheek worden afgewezen zodat er wijzigingen kunnen worden aangebracht in [!UICONTROL Development] . |
 | [!UICONTROL Build for Staging] | Bouw de bibliotheek in het opvoeren milieu voor plaatsing. |
 | [!UICONTROL Approve for Publishing] | Verplaats de bibliotheek naar de kolom [!UICONTROL Approved] zodat een gebruiker met publicatiemachtigingen eraan kan werken. |
-| [!UICONTROL Approve & Publish to Production] | Dit kan alleen worden uitgevoerd door een gebruiker met zowel de rechten Goedkeuren als Publish. Met deze handeling wordt de toewijzing van de bibliotheek aan de testomgeving ongedaan gemaakt, verplaatst naar de status [!UICONTROL Approved] en gepubliceerd naar productie. Nadat de productiebuild is voltooid, wordt de bibliotheek naar de status [!UICONTROL Published] verplaatst. Dit kan met ons zonder een succesvolle bouwstijl in het opvoeren van milieu worden uitgevoerd. |
+| [!UICONTROL Approve & Publish to Production] | Dit kan alleen worden uitgevoerd door een gebruiker met zowel Goedkeuren als Publicatierechten. Met deze handeling wordt de toewijzing van de bibliotheek aan de testomgeving ongedaan gemaakt, verplaatst naar de status [!UICONTROL Approved] en gepubliceerd naar productie. Nadat de productiebuild is voltooid, wordt de bibliotheek naar de status [!UICONTROL Published] verplaatst. Dit kan met ons zonder een succesvolle bouwstijl in het opvoeren van milieu worden uitgevoerd. |
 | [!UICONTROL Reject] | Wijs de bibliotheek niet toe vanuit de testomgeving en verplaats de bibliotheek terug naar de kolom [!UICONTROL Development] voor verdere wijzigingen. |
 
 ### [!UICONTROL Approved] {#approved}

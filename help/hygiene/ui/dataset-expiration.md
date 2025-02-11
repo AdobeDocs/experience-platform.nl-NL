@@ -14,7 +14,7 @@ ht-degree: 0%
 >[!CONTEXTUALHELP]
 >id="platform_privacyConsole_scheduleDatasetExpiration_description"
 >title="Ongewenste of verlopen klantenverslagen en datasets verwijderen"
->abstract="<h2>Beschrijving</h2><p>Om de levenscyclus van uw gegevens van het Experience Platform niet met regelgevende naleving te beheren, kunt u consumentenverslagen en planningsvervaldata voor datasets schrappen. Zie het gebruiksgevalblok &#39;Privacy-aanvragen van betrokkenen respecteren&#39; voor het maken of beheren van verzoeken om gegevens over onderwerpen.</p>"
+>abstract="<h2>Beschrijving</h2><p>Als u de levenscyclus van uw Experience Platform-gegevens wilt beheren die niet gerelateerd zijn aan de naleving van de regelgeving, kunt u de consumentengegevens en de vervaldatums voor gegevenssets verwijderen. Zie het gebruiksgevalblok &#39;Privacy-aanvragen van betrokkenen respecteren&#39; voor het maken of beheren van verzoeken om gegevens over onderwerpen.</p>"
 
 De [[!UICONTROL Data Lifecycle] werkruimte ](./overview.md) in Adobe Experience Platform UI staat u toe om termijnen voor datasets te plannen. Wanneer een dataset zijn vervaldatum bereikt, beginnen het gegevens meer, de Dienst van de Identiteit, en het Profiel van de Klant in real time afzonderlijke processen om de inhoud van de dataset uit hun respectieve diensten te verwijderen. Zodra de gegevens van alle drie de diensten worden geschrapt, wordt de vervaldatum duidelijk volledig.
 
@@ -26,7 +26,7 @@ In dit document wordt beschreven hoe u gegevenssetvervaldatums in de gebruikersi
 
 >[!NOTE]
 >
->Gegevens worden momenteel niet verwijderd uit de Adobe Experience Platform-Edge Network. Er is echter geen mogelijkheid dat gegevens binnen de Edge Network blijven nadat de gegevensset is ingesteld op verlopen. Dit komt doordat de 15-daagse licentieovereenkomst voor Dataset Expiration overlapt met de periode van 14 dagen waarin gegevens binnen de Edge Network bestaan voordat ze worden verwijderd.
+>Gegevens worden momenteel niet verwijderd uit de Adobe Experience Platform Edge Network. Er is echter geen mogelijkheid dat gegevens binnen de Edge Network blijven nadat de gegevensset is ingesteld op verlopen. Dit komt doordat de 15-daagse licentieovereenkomst voor Dataset Expiration overlapt met de periode van 14 dagen waarin gegevens in de Edge Network aanwezig zijn voordat ze worden verwijderd.
 
 Het geavanceerde Beheer van de Levenscyclus van Gegevens steunt datasetschrappingen door het [ eindpunt van de gegevenssetvervalsing ](../api/dataset-expiration.md) en identiteitskaart schrappingen (rij-vlakke gegevens) gebruikend primaire identiteiten via het [ werkordeeindpunt ](../api/workorder.md). U kunt datasetvervalingen en [ verslagschrappingen ](./record-delete.md) door Platform UI ook beheren. Raadpleeg de gekoppelde documentatie voor meer informatie.
 
@@ -45,7 +45,7 @@ Als u een aanvraag wilt maken, selecteert u **[!UICONTROL Create request]** op d
 
 >[!IMPORTANT]
 >
->Real-Time CDP, Adobe Journey Optimizer, en de gebruikers van de Customer Journey Analytics hebben 20 in afwachting van geplande dataset het werkorden van de vervaldatum. Gebruikers van het gezondheidsschild en het privacyschild hebben 50 geplande werkorders voor het aflopen van gegevenssets in behandeling. Dit betekent dat u 20 of 50 datasets kunt hebben die om op elk ogenblik worden gepland worden geschrapt.<br> Bijvoorbeeld, als u 20 geplande datasettermijnen hebt en één dataset morgen moet worden geschrapt, kunt u geen meer vervalsingen plaatsen tot nadat die dataset is geschrapt.
+>Real-Time CDP-, Adobe Journey Optimizer- en Customer Journey Analytics-gebruikers hebben 20 opdrachten voor geplande vervaldatums van gegevenssets in behandeling. Gebruikers van het gezondheidsschild en het privacyschild hebben 50 geplande werkorders voor het aflopen van gegevenssets in behandeling. Dit betekent dat u 20 of 50 datasets kunt hebben die om op elk ogenblik worden gepland worden geschrapt.<br> Bijvoorbeeld, als u 20 geplande datasettermijnen hebt en één dataset morgen moet worden geschrapt, kunt u geen meer vervalsingen plaatsen tot nadat die dataset is geschrapt.
 
 ![ de [!UICONTROL Data Lifecycle] werkruimte met [!UICONTROL Create request] benadrukte.](../images/ui/ttl/create-request-button.png)
 
@@ -89,6 +89,6 @@ Op de detailspagina van de datasetvervaldatum, toont de juiste spoorstaaf contro
 
 ## Volgende stappen
 
-Dit document behandelde hoe te om datasettermijnen in Experience Platform UI te plannen. Voor informatie over hoe te om andere taken van de gegevensminimalisering in UI uit te voeren, verwijs naar het [ overzicht van de gegevenslevenscyclus UI van de gegevenslevenscyclus ](./overview.md).
+In dit document wordt beschreven hoe u gegevenssetvervaldatums in de gebruikersinterface van Experience Platform kunt plannen. Voor informatie over hoe te om andere taken van de gegevensminimalisering in UI uit te voeren, verwijs naar het [ overzicht van de gegevenslevenscyclus UI van de gegevenslevenscyclus ](./overview.md).
 
 Leren hoe te om datasetvervalingen te plannen gebruikend de gegevenshygiëne API, verwijs naar de [ gids van het de eindpuntverloopeindpunt van de dataset ](../api/dataset-expiration.md).

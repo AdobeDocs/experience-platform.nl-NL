@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;home;populaire onderwerpen
+keywords: Experience Platform;startpagina;populaire onderwerpen
 solution: Experience Platform
-title: Overzicht gebruikersinterface Privacy Service
-description: Ga aan de slag met de gebruikersinterface van de Privacy Service om privacyverzoeken in verschillende Experiencen Cloud te coördineren en te controleren.
+title: Overzicht Privacy Service UI
+description: Ga aan de slag met de Privacy Service-gebruikersinterface om privacyverzoeken in verschillende Experience Cloud-toepassingen te coördineren en te controleren.
 exl-id: 5624691f-0b9a-4565-8277-ea273a0d239a
 source-git-commit: dbdeabf9036f1736a5b43d9057e77b82baf915cd
 workflow-type: tm+mt
 source-wordcount: '223'
-ht-degree: 0%
+ht-degree: 2%
 
 ---
 
@@ -16,13 +16,13 @@ ht-degree: 0%
 >[!CONTEXTUALHELP]
 >id="platform_privacy_privacyconsole_requests"
 >title="Verzoeken om informatie"
->abstract="Deze widget geeft het aantal verzonden en voltooide verzoeken voor het gegevenssubject weer dat gedurende een bepaalde dag door de Privacy Service is verwerkt. Voor meer informatie over uw processen van de Privacy Service, uitgezochte **Verzoeken** in de linkernavigatie."
+>abstract="Deze widget toont het aantal verzonden en voltooide verzoeken voor gegevenssubjecten die Privacy Service voor een bepaalde dag heeft verwerkt. Voor meer informatie over uw processen van Privacy Service, uitgezochte **Verzoeken** in de linkernavigatie."
 
-Met de gebruikersinterface van de Privacy Service kunt u privacy- en compatibiliteitsverzoeken in verschillende Adobe Experience Cloud-toepassingen coördineren.
+Met de gebruikersinterface van Privacy Service kunt u privacy- en compatibiliteitsverzoeken in verschillende Adobe Experience Cloud-toepassingen coördineren.
 
 >[!NOTE]
 >
->Voor informatie bij het beheren van nalevingsverzoeken programmatically gebruikend Privacy Service API, gelieve te zien de [ Privacy Service API gids ](../api/overview.md). Zie het document geen [ het beheren van de toestemmingen van de Privacy Service ](../permissions.md) voor meer informatie.
+>Voor informatie bij het beheren van nalevingsverzoeken programmatically gebruikend Privacy Service API, gelieve te zien de [ gids van Privacy Service API ](../api/overview.md). Zie het document geen [ het beheren van de toestemmingen van Privacy Service ](../permissions.md) voor meer informatie.
 
 ## Aanmelden bij de gebruikersinterface van [!DNL Privacy Service]
 
@@ -32,7 +32,7 @@ Met de gebruikersinterface van de Privacy Service kunt u privacy- en compatibili
 
 Om tot UI toegang te hebben, login aan [ Adobe Experience Cloud ](https://experience.adobe.com/) en selecteer **[!UICONTROL Privacy UI]** onder het snelle toegangsmenu.
 
-![ het dashboard van het Experience Cloud met benadrukte Privacy UI.](../images/ui-overview/quick-access.png)
+![ het dashboard van Experience Cloud met benadrukte UI van de Privacy.](../images/ui-overview/quick-access.png)
 
 
 ### Aanmelden vanuit [!DNL Experience Platform]

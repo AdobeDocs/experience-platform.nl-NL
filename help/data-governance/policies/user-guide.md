@@ -2,7 +2,7 @@
 keywords: Experience Platform;home;populaire onderwerpen;gegevensbeheer;gebruikershandleiding voor gegevensgebruiksbeleid
 solution: Experience Platform
 title: Beleid voor gegevensgebruik beheren in de gebruikersinterface
-description: Adobe Experience Platform Data Governance biedt een gebruikersinterface waarmee u beleidsregels voor gegevensgebruik kunt maken en beheren. Dit document biedt een overzicht van de acties die u kunt uitvoeren in de werkruimte Beleid in de gebruikersinterface van het Experience Platform.
+description: Adobe Experience Platform Data Governance biedt een gebruikersinterface waarmee u beleidsregels voor gegevensgebruik kunt maken en beheren. Dit document biedt een overzicht van de acties die u kunt uitvoeren in de werkruimte Beleid in de gebruikersinterface van Experience Platform.
 exl-id: 29434dc1-02c2-4267-a1f1-9f73833e76a0
 source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
 workflow-type: tm+mt
@@ -26,7 +26,7 @@ In dit document wordt beschreven hoe u de **[!UICONTROL Policies]** -werkruimte 
 
 >[!IMPORTANT]
 >
->Alle beleidsregels voor gegevensgebruik (inclusief kernbeleidsregels die door Adobe worden verschaft) zijn standaard uitgeschakeld. Om een individueel beleid voor handhaving te overwegen, moet u dat beleid manueel toelaten. Zie de sectie op [ toelatend beleid ](#enable) voor stappen op hoe te om dit in UI te doen.
+>Alle beleidsregels voor gegevensgebruik (inclusief basisbeleid van Adobe) zijn standaard uitgeschakeld. Om een individueel beleid voor handhaving te overwegen, moet u dat beleid manueel toelaten. Zie de sectie op [ toelatend beleid ](#enable) voor stappen op hoe te om dit in UI te doen.
 
 ## Vereisten
 
@@ -65,7 +65,7 @@ Afhankelijk van of u deel uitmaakt van de bètaversie voor het toestemmingsbelei
 
 >[!NOTE]
 >
->Het beleid voor toestemming is momenteel alleen beschikbaar voor organisaties die een Adobe Healthcare Shield of Adobe Privacy &amp; Security Shield hebben aangeschaft.
+>Het beleid voor toestemming is momenteel alleen beschikbaar voor organisaties die Adobe Healthcare Shield of Adobe Privacy &amp; Security Shield hebben aangeschaft.
 
 Het beleid van bestuur en toestemming kan samen worden gebruikt om robuuste regels te creëren voor het besturen van publiek dat aan een bestemming wordt toegewezen. Het beleid van de toestemming is inclusief van aard, wat betekent zij dicteren welke profielen in elke marketing ervaring kunnen worden omvat. Omgekeerd sluit het governancebeleid het gebruik van specifieke gelabelde kenmerken uit dat dit voor activering wordt geconfigureerd.
 
@@ -104,11 +104,11 @@ Het tabblad **[!UICONTROL Browse]** wordt opnieuw weergegeven. Hierin wordt nu h
 >[!CONTEXTUALHELP]
 >id="platform_privacyConsole_dataUsagePolicies_instructions"
 >title="Instructies"
->abstract="<ul><li>Zorg ervoor dat u voorkeursgegevens in uw verenigingsschema&#39;s via de OneTrust bronschakelaar of het standaard XDM schema voor toestemming opneemt.</li><li>Selecteer <a href="https://experienceleague.adobe.com/docs/experience-platform/data-governance/policies/overview.html"> Beleid </a> in de linkernavigatie, dan uitgezocht <a href="https://experienceleague.adobe.com/docs/experience-platform/data-governance/policies/user-guide.html#create-governance-policy"> creeer Beleid </a>.</li><li>Onder <b> als </b> sectie, beschrijf de voorwaarden of de acties die de beleidscontrole zullen teweegbrengen.</li><li>Onder <b> toen </b> sectie, ga de toestemmingsattributen in die voor een profiel moeten aanwezig zijn om in de actie worden omvat die het beleid teweegbracht.</li><li>Selecteer <b> sparen </b> om het beleid tot stand te brengen. Om het beleid toe te laten, selecteer de </b> knevel van de Status <b> in het juiste spoor.</li><li>Het Experience Platform dwingt automatisch uw toegelaten toestemmingsbeleid af wanneer u segmenten aan bestemmingen activeert, en verstrekt details over hoe elk beleid uw publieksgrootte beïnvloedt.</li><li>Voor meer hulp met deze eigenschap, zie de gids bij <a href="https://experienceleague.adobe.com/docs/experience-platform/data-governance/policies/user-guide.html#consent-policy"> het creëren van toestemmingsbeleid </a> op Experience League.</li></ul>"
+>abstract="<ul><li>Zorg ervoor dat u voorkeursgegevens in uw verenigingsschema&#39;s via de OneTrust bronschakelaar of het standaard XDM schema voor toestemming opneemt.</li><li>Selecteer <a href="https://experienceleague.adobe.com/docs/experience-platform/data-governance/policies/overview.html"> Beleid </a> in de linkernavigatie, dan uitgezocht <a href="https://experienceleague.adobe.com/docs/experience-platform/data-governance/policies/user-guide.html#create-governance-policy"> creeer Beleid </a>.</li><li>Onder <b> als </b> sectie, beschrijf de voorwaarden of de acties die de beleidscontrole zullen teweegbrengen.</li><li>Onder <b> toen </b> sectie, ga de toestemmingsattributen in die voor een profiel moeten aanwezig zijn om in de actie worden omvat die het beleid teweegbracht.</li><li>Selecteer <b> sparen </b> om het beleid tot stand te brengen. Om het beleid toe te laten, selecteer de </b> knevel van de Status <b> in het juiste spoor.</li><li>Experience Platform dwingt automatisch uw toegelaten toestemmingsbeleid af wanneer u segmenten aan bestemmingen activeert, en verstrekt details over hoe elk beleid uw publieksgrootte beïnvloedt.</li><li>Voor meer hulp met deze eigenschap, zie de gids bij <a href="https://experienceleague.adobe.com/docs/experience-platform/data-governance/policies/user-guide.html#consent-policy"> het creëren van toestemmingsbeleid </a> op Experience League.</li></ul>"
 
 >[!IMPORTANT]
 >
->Het toestemmingsbeleid is slechts beschikbaar voor organisaties die **het Schild van de Gezondheidszorg van de Adobe** of **de Privacy en het Schild van de Adobe** hebben gekocht.
+>Het toestemmingsbeleid is slechts beschikbaar voor organisaties die **het Schild van de Gezondheidszorg van Adobe** of **Privacy &amp; het Schild van de Veiligheid van Adobe** hebben gekocht.
 
 Als u verkoos om een toestemmingsbeleid tot stand te brengen, verschijnt een nieuw scherm dat u toestaat om het nieuwe beleid te vormen.
 
@@ -173,7 +173,7 @@ Nadat u een toestemmingsbeleid hebt gecreeerd en toegelaten, kunt u voorproef ho
 
 ## Een beleid in- of uitschakelen {#enable}
 
-Alle beleidsregels voor gegevensgebruik (inclusief kernbeleidsregels die door Adobe worden verschaft) zijn standaard uitgeschakeld. Voor een individueel beleid dat voor handhaving moet worden overwogen, moet u dat beleid manueel toelaten door API of UI.
+Alle beleidsregels voor gegevensgebruik (inclusief basisbeleid van Adobe) zijn standaard uitgeschakeld. Voor een individueel beleid dat voor handhaving moet worden overwogen, moet u dat beleid manueel toelaten door API of UI.
 
 U kunt beleid in- of uitschakelen op het tabblad **[!UICONTROL Browse]** in de **[!UICONTROL Policies]** -werkruimte. Selecteer een aangepast beleid in de lijst om de details ervan rechts weer te geven. Selecteer onder **[!UICONTROL Status]** de schakelknop om het beleid in of uit te schakelen.
 
@@ -181,7 +181,7 @@ U kunt beleid in- of uitschakelen op het tabblad **[!UICONTROL Browse]** in de *
 
 ## Marketingacties weergeven {#view-marketing-actions}
 
-Selecteer in de werkruimte **[!UICONTROL Policies]** het tabblad **[!UICONTROL Marketing actions]** om een lijst weer te geven met beschikbare marketingacties die door de Adobe en uw eigen organisatie zijn gedefinieerd.
+Selecteer in de werkruimte **[!UICONTROL Policies]** het tabblad **[!UICONTROL Marketing actions]** om een lijst weer te geven met beschikbare marketingacties die door Adobe en uw eigen organisatie zijn gedefinieerd.
 
 ![](../images/policies/marketing-actions.png)
 
@@ -203,9 +203,9 @@ De nieuwe handeling wordt weergegeven op het tabblad **[!UICONTROL Marketing act
 
 >[!NOTE]
 >
->Alleen aangepaste marketingacties die door uw organisatie zijn gedefinieerd, kunnen worden bewerkt. Marketingacties die door Adobe worden gedefinieerd, kunnen niet worden gewijzigd of verwijderd.
+>Alleen aangepaste marketingacties die door uw organisatie zijn gedefinieerd, kunnen worden bewerkt. Door Adobe gedefinieerde marketingacties kunnen niet worden gewijzigd of verwijderd.
 
-Selecteer in de werkruimte **[!UICONTROL Policies]** het tabblad **[!UICONTROL Marketing actions]** om een lijst weer te geven met beschikbare marketingacties die door de Adobe en uw eigen organisatie zijn gedefinieerd. Selecteer een aangepaste marketingactie in de lijst en gebruik vervolgens de beschikbare velden in de rechtersectie om de details van de marketingactie te bewerken.
+Selecteer in de werkruimte **[!UICONTROL Policies]** het tabblad **[!UICONTROL Marketing actions]** om een lijst weer te geven met beschikbare marketingacties die door Adobe en uw eigen organisatie zijn gedefinieerd. Selecteer een aangepaste marketingactie in de lijst en gebruik vervolgens de beschikbare velden in de rechtersectie om de details van de marketingactie te bewerken.
 
 ![](../images/policies/edit-marketing-action.png)
 

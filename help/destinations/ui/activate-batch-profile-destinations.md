@@ -5,8 +5,8 @@ description: Leer hoe u het publiek in Adobe Experience Platform activeert door 
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
 source-git-commit: b4b185cab4defbf9559089e5152075674dab52d1
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '4217'
+ht-degree: 1%
 
 ---
 
@@ -63,9 +63,9 @@ Als u het publiek dat u wilt activeren naar het doel wilt selecteren, gebruikt u
 
 U kunt kiezen uit meerdere soorten publiek, afhankelijk van de oorsprong:
 
-* **[!UICONTROL Segmentation Service]**: publiek dat binnen Experience Platform door de Segmenteringsdienst wordt geproduceerd. Zie de [ segmentatiedocumentatie ](../../segmentation/ui/overview.md) voor meer details.
-* **[!UICONTROL Custom upload]**: buiten het Experience Platform gegenereerde soorten publiek die als CSV-bestanden naar Platform worden geüpload. Meer over extern publiek leren, zie de documentatie bij [ het invoeren van een publiek ](../../segmentation/ui/audience-portal.md#import-audience).
-* Andere soorten publiek, afkomstig van andere oplossingen voor Adobe, zoals [!DNL Audience Manager] .
+* **[!UICONTROL Segmentation Service]**: publiek dat in Experience Platform wordt gegenereerd door de Segmentation Service. Zie de [ segmentatiedocumentatie ](../../segmentation/ui/overview.md) voor meer details.
+* **[!UICONTROL Custom upload]**: buiten Experience Platform gegenereerde soorten publiek die als CSV-bestanden in Platform worden geüpload. Meer over extern publiek leren, zie de documentatie bij [ het invoeren van een publiek ](../../segmentation/ui/audience-portal.md#import-audience).
+* Andere soorten publiek, afkomstig van andere Adobe-oplossingen, zoals [!DNL Audience Manager] .
 
 ![ getoonde Selectievakjes wanneer het selecteren van één of veelvoudige publiek om te activeren.](../assets/ui/activate-batch-profile-destinations/select-audiences.png)
 
@@ -92,7 +92,7 @@ Experience Platform stelt automatisch een standaardschema in voor elke bestandsu
 
 Als u meerdere schema&#39;s tegelijk wilt bewerken, selecteert u het publiek met de selectievakjes aan de linkerkant van het scherm en selecteert u vervolgens **[!UICONTROL Edit schedule]** . Het schema u vormt zal dan op alle uitgevoerde dossiers voor het geselecteerde publiek worden toegepast.
 
-![ Beeld van het gebruikersinterface van het Experience Platform die uitgeeft planningsoptie voor veelvoudige geselecteerde publiek tonen.](../assets/ui/activate-batch-profile-destinations/edit-schedule.png)
+![ Beeld van het gebruikersinterface van Experience Platform die uitgeeft planningsoptie voor veelvoudige geselecteerde publiek tonen.](../assets/ui/activate-batch-profile-destinations/edit-schedule.png)
 
 >[!TIP]
 >
@@ -142,7 +142,7 @@ Selecteer **[!UICONTROL Export full files]** om het exporteren van een bestand m
    <!-- Batch segmentation currently runs at {{insert time of day}} and lasts for an average {{x hours}}. Adobe reserves the right to modify this schedule. -->
 
    ![ Beeld die de Latere optie van de segmentevaluatie in de activeringsstroom voor partijbestemmingen benadrukt.](../assets/ui/activate-batch-profile-destinations/after-segment-evaluation-option.png)
-Gebruik de optie **[!UICONTROL Scheduled]** om de activeringstaak op een vast tijdstip uit te voeren. Met deze optie zorgt u ervoor dat gegevens in het profiel Experience Platform elke dag op hetzelfde tijdstip worden geëxporteerd. De profielen die u exporteert, zijn echter mogelijk niet de meest actuele, afhankelijk van het feit of de batchsegmentatietaak is voltooid voordat de activeringstaak wordt uitgeschakeld.
+Gebruik de optie **[!UICONTROL Scheduled]** om de activeringstaak op een vast tijdstip uit te voeren. Deze optie zorgt ervoor dat Experience Platform-profielgegevens elke dag op hetzelfde tijdstip worden geëxporteerd. De profielen die u exporteert, zijn echter mogelijk niet de meest actuele, afhankelijk van het feit of de batchsegmentatietaak is voltooid voordat de activeringstaak wordt uitgeschakeld.
 
    ![ Beeld dat de Geplande optie in de activeringsstroom voor partijbestemmingen benadrukt en de tijdselecteur toont.](../assets/ui/activate-batch-profile-destinations/scheduled-option.png)
 
@@ -214,14 +214,14 @@ De doelnaam en de gebruikers-id kunnen niet uit bestandsnamen worden verwijderd.
 | **[!UICONTROL Custom text]** | Alle aangepaste tekst die u aan de bestandsnamen wilt toevoegen. |
 | **[!UICONTROL Destination ID]** | De id van de doelgegevensstroom die u gebruikt om het publiek te exporteren. |
 | **[!UICONTROL Destination name]** | De naam van de bestemmingsgegevensstroom u gebruikt om het publiek uit te voeren. |
-| **[!UICONTROL Organization name]** | Uw organisatienaam binnen Experience Platform. |
+| **[!UICONTROL Organization name]** | Uw organisatienaam in Experience Platform. |
 | **[!UICONTROL Sandbox name]** | De id van de sandbox die u gebruikt om het publiek te exporteren. |
 
 {style="table-layout:auto"}
 
 Als u meerdere bestandsnamen tegelijk wilt bewerken, selecteert u het publiek met de selectievakjes aan de linkerkant van het scherm en selecteert u vervolgens **[!UICONTROL Edit file name]** . De bestandsnaamopties die u configureert, worden vervolgens toegepast op alle geëxporteerde bestanden voor het geselecteerde publiek.
 
-![ Beeld van het gebruikersinterface van het Experience Platform die uitgeeft dossier - noem optie voor veelvoudige geselecteerde publiek tonen.](../assets/ui/activate-batch-profile-destinations/edit-file-name.png)
+![ Beeld van het gebruikersinterface van Experience Platform die uitgeeft dossier - noem optie voor veelvoudige geselecteerde publiek tonen.](../assets/ui/activate-batch-profile-destinations/edit-file-name.png)
 
 Selecteer **[!UICONTROL Apply changes]** om uw selectie te bevestigen.
 
@@ -466,7 +466,7 @@ Na deduplicatie bevat het exportbestand:
 
 ### Arrays via berekende velden exporteren {#export-arrays-calculated-fields}
 
-Selecteer bèta-klanten kunnen arrayobjecten van Experience Platform naar cloudopslagdoelen exporteren. Lees meer over [ het uitvoeren van series en berekende gebieden ](/help/destinations/ui/export-arrays-calculated-fields.md) en contacteer uw vertegenwoordiger van de Adobe om toegang tot de functionaliteit te krijgen.
+Selecteer bètaklanten om arrayobjecten van Experience Platform naar cloudopslagdoelen te exporteren. Lees meer over [ het uitvoeren van series en berekende gebieden ](/help/destinations/ui/export-arrays-calculated-fields.md) en contacteer uw vertegenwoordiger van Adobe om toegang tot de functionaliteit te krijgen.
 
 ### Bekende beperkingen {#known-limitations}
 
@@ -501,7 +501,7 @@ Het selecteren van naamruimten voor exporteren, zoals wordt weergegeven in de on
 
 Als tijdelijke oplossing kunt u:
 * Gebruik de oude opslagdoelen van de cloud voor de dataflows waar u naamruimten wilt opnemen in de exportbewerkingen
-* Upload identiteiten als attributen in Experience Platform, dan voer hen naar uw bestemmingen van de wolkenopslag uit.
+* Upload identiteiten als kenmerken naar Experience Platform en exporteer ze vervolgens naar de opslaglocaties van uw cloud.
 
 ## Profielkenmerken selecteren {#select-attributes}
 
@@ -509,7 +509,7 @@ Als tijdelijke oplossing kunt u:
 > 
 >Alle bestemmingen voor cloudopslag in de catalogus kunnen een verbeterde [[!UICONTROL Mapping] stap ](#mapping) weergeven die de stap **[!UICONTROL Select attributes]** vervangt die in deze sectie wordt beschreven.
 >
->Deze **[!UICONTROL Select attributes]** stap wordt nog getoond voor Adobe Campaign, Oracle Responsys, Oracle Eloqua, en de Marketing Cloud e-mailmarketing bestemmingen van Salesforce.
+>Deze **[!UICONTROL Select attributes]** -stap wordt nog steeds weergegeven voor de e-mailmarketingdoelen Adobe Campaign, Oracle Responsys, Oracle Eloqua en Salesforce Marketing Cloud.
 
 Voor op profiel gebaseerde bestemmingen, moet u de profielattributen selecteren die u naar de doelbestemming wilt verzenden.
 
@@ -554,7 +554,7 @@ Het exporteren van bestanden kan op de volgende manieren variëren, afhankelijk 
 >
 >Deze stap wordt getoond slechts als u **[!UICONTROL Custom upload]** publiek tijdens de [ stap van de publieksselectie ](#select-audiences) selecteerde.
 
-Verrijkingskenmerken komen overeen met het aangepaste geüploade publiek dat in het Experience Platform wordt opgenomen als **[!UICONTROL Custom uploads]** . In deze stap kunt u voor elk geselecteerd extern publiek selecteren welke kenmerken u wilt exporteren naar uw doel.
+Verrijkingskenmerken komen overeen met het aangepaste geüploade publiek dat in Experience Platform wordt opgenomen als **[!UICONTROL Custom uploads]** . In deze stap kunt u voor elk geselecteerd extern publiek selecteren welke kenmerken u wilt exporteren naar uw doel.
 
 ![ beeld UI die de de selectiestap van de verrijkingsattributen toont.](../assets/ui/activate-batch-profile-destinations/select-enrichment-attributes-step.png)
 
@@ -595,13 +595,13 @@ Op de pagina **[!UICONTROL Review]** ziet u een overzicht van uw selectie. Selec
 >[!CONTEXTUALHELP]
 >id="platform_governance_policies_viewApplicableConsentPolicies"
 >title="Toepasselijk toestemmingsbeleid weergeven"
->abstract="Als uw organisatie **het Schild van de Gezondheidszorg van de Adobe** of **de Privacy &amp; het Schild van de Veiligheid van de Adobe** kocht, selecteer **[!UICONTROL View applicable consent policies]** om te zien welk toestemmingsbeleid wordt toegepast en hoeveel profielen in de activering als resultaat van hen inbegrepen zijn. Deze controle is gehandicapt als uw bedrijf geen toegang tot hierboven vermelde SKUs heeft."
+>abstract="Als uw organisatie **het Schild van de Gezondheidszorg van Adobe** of **de Privacy &amp; het Schild van de Veiligheid van Adobe** kocht, selecteer **[!UICONTROL View applicable consent policies]** om te zien welk toestemmingsbeleid wordt toegepast en hoeveel profielen in de activering als resultaat van hen inbegrepen zijn. Deze controle is gehandicapt als uw bedrijf geen toegang tot hierboven vermelde SKUs heeft."
 
-Als uw organisatie **het Schild van de Gezondheidszorg van de Adobe** of **de Privacy &amp; het Schild van de Veiligheid van de Adobe** kocht, selecteer **[!UICONTROL View applicable consent policies]** om te zien welk toestemmingsbeleid wordt toegepast en hoeveel profielen in de activering als resultaat van hen inbegrepen zijn. Lees over [ evaluatie van het toestemmingsbeleid ](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) voor meer informatie.
+Als uw organisatie **het Schild van de Gezondheidszorg van Adobe** of **de Privacy &amp; het Schild van de Veiligheid van Adobe** kocht, selecteer **[!UICONTROL View applicable consent policies]** om te zien welk toestemmingsbeleid wordt toegepast en hoeveel profielen in de activering als resultaat van hen inbegrepen zijn. Lees over [ evaluatie van het toestemmingsbeleid ](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) voor meer informatie.
 
 ### Controle van het gegevensgebruiksbeleid {#data-usage-policy-checks}
 
-In de stap **[!UICONTROL Review]** controleert het Experience Platform ook op overtredingen van het gegevensgebruiksbeleid. Hieronder ziet u een voorbeeld waarin een beleid wordt overtreden. U kunt de workflow voor publieksactivering pas voltooien nadat u de schending hebt opgelost. Voor informatie over hoe te om beleidsschendingen op te lossen, lees over [ schendingen van het beleid van het gegevensgebruik ](/help/data-governance/enforcement/auto-enforcement.md#data-usage-violation) in de de documentatiesectie van het gegevensbeheer.
+In de stap **[!UICONTROL Review]** controleert Experience Platform ook op overtredingen van het gegevensgebruiksbeleid. Hieronder ziet u een voorbeeld waarin een beleid wordt overtreden. U kunt de workflow voor publieksactivering pas voltooien nadat u de schending hebt opgelost. Voor informatie over hoe te om beleidsschendingen op te lossen, lees over [ schendingen van het beleid van het gegevensgebruik ](/help/data-governance/enforcement/auto-enforcement.md#data-usage-violation) in de de documentatiesectie van het gegevensbeheer.
 
 ![ een voorbeeld van de de schending van het gegevensbeleid van A in het activeringswerkschema wordt getoond.](../assets/common/data-policy-violation.png)
 

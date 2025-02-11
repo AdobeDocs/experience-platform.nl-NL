@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;huis;populaire onderwerpen;toegangsbeheer;op attribuut-gebaseerde toegangscontrole;
+keywords: Experience Platform;home;populaire onderwerpen;toegangsbeheer;op kenmerk-gebaseerde toegangscontrole;
 title: Op attributen-Gebaseerde Gids van de Controle van de Toegang van begin tot eind
 description: Dit document verstrekt een gids van begin tot eind op op attribuut-gebaseerde toegangsbeheer in Adobe Experience Platform
 role: Developer
@@ -25,7 +25,7 @@ Met deze functionaliteit kunt u schemavelden, publiek, enzovoort categoriseren m
 
 Deze zelfstudie vereist een goed begrip van de volgende platformcomponenten:
 
-* [[!DNL Experience Data Model (XDM)]  Systeem ](../../xdm/home.md): Het gestandaardiseerde kader waardoor het Experience Platform gegevens van de klantenervaring organiseert.
+* [[!DNL Experience Data Model (XDM)]  Systeem ](../../xdm/home.md): Het gestandaardiseerde kader waardoor Experience Platform gegevens van de klantenervaring organiseert.
    * [ Grondbeginselen van schemacompositie ](../../xdm/schema/composition.md): Leer over de basisbouwstenen van schema&#39;s XDM, met inbegrip van zeer belangrijke principes en beste praktijken in schemacompositie.
    * [ het leerprogramma van de Redacteur van het Schema ](../../xdm/tutorials/create-schema-ui.md): Leer hoe te om douaneschema&#39;s tot stand te brengen gebruikend de Redacteur UI van het Schema.
 * [ de Dienst van de Segmentatie van Adobe Experience Platform ](../../segmentation/home.md): De segmenteringsmotor binnen [!DNL Platform] wordt gebruikt om publiekssegmenten van uw klantenprofielen tot stand te brengen die op klantengedrag en attributen worden gebaseerd.
@@ -49,13 +49,13 @@ U zult:
 
 ## Machtigingen
 
-[!UICONTROL Permissions] is het gebied van Experience Cloud waar de beheerders gebruikersrollen en beleid kunnen bepalen om toestemmingen voor eigenschappen en voorwerpen binnen een producttoepassing te beheren.
+[!UICONTROL Permissions] is het gebied van Experience Cloud waar beheerders gebruikersrollen en beleid kunnen bepalen om toestemmingen voor eigenschappen en voorwerpen binnen een producttoepassing te beheren.
 
 Via [!UICONTROL Permissions] kunt u rollen maken en beheren en de gewenste resourcemachtigingen voor deze rollen toewijzen. Met [!UICONTROL Permissions] kunt u ook de labels, sandboxen en gebruikers beheren die aan een specifieke rol zijn gekoppeld.
 
 Neem contact op met de systeembeheerder als u geen beheerdersrechten hebt.
 
-Zodra u admin voorrechten hebt, ga naar [ Adobe Experience Cloud ](https://experience.adobe.com/) en teken binnen gebruikend uw geloofsbrieven van de Adobe. Nadat u zich hebt aangemeld, wordt de pagina **[!UICONTROL Overview]** weergegeven voor uw organisatie waarvoor u beheerdersrechten hebt. Deze pagina toont de producten uw organisatie aan, samen met andere controles wordt geabonneerd om gebruikers en beheerders aan de organisatie toe te voegen. Selecteer **[!UICONTROL Permissions]** om de werkruimte voor uw platformintegratie te openen.
+Zodra u admin voorrechten hebt, ga naar [ Adobe Experience Cloud ](https://experience.adobe.com/) en teken binnen gebruikend uw geloofsbrieven van Adobe. Nadat u zich hebt aangemeld, wordt de pagina **[!UICONTROL Overview]** weergegeven voor uw organisatie waarvoor u beheerdersrechten hebt. Deze pagina toont de producten uw organisatie aan, samen met andere controles wordt geabonneerd om gebruikers en beheerders aan de organisatie toe te voegen. Selecteer **[!UICONTROL Permissions]** om de werkruimte voor uw platformintegratie te openen.
 
 ![ Beeld dat het product toont van Toestemmingen dat in Adobe Experience Cloud wordt geselecteerd ](../images/flac-ui/flac-select-product.png)
 
@@ -66,7 +66,7 @@ De werkruimte voor machtigingen voor de gebruikersinterface van het platform wor
 >[!CONTEXTUALHELP]
 >id="platform_permissions_labels_about"
 >title="Wat zijn labels?"
->abstract="Met labels kunt u gegevenssets en velden categoriseren op basis van het gebruiksbeleid en het toegangsbeleid dat op die gegevens van toepassing is. Het platform verstrekt verscheidene Adobe-bepaalde <strong> kern </strong> etiketten van het gegevensgebruik, die een brede verscheidenheid van gemeenschappelijke beperkingen van toepassing op gegevensbeheer behandelen. Bijvoorbeeld, de Gevoelige </strong> etiketten van 0} S {zoals RHD (Gereglementeerde Gegevens van de Gezondheid) staan u toe om gegevens te categoriseren die naar de Beschermde Informatie van de Gezondheid (PHI) verwijzen. <strong> U kunt ook uw eigen aangepaste labels definiëren die aan de behoeften van uw organisatie voldoen."
+>abstract="Met labels kunt u gegevenssets en velden categoriseren op basis van het gebruiksbeleid en het toegangsbeleid dat op die gegevens van toepassing is. Het platform verstrekt verscheidene Adobe-bepaalde <strong> de etiketten van het kern </strong> gegevensgebruik, die een brede verscheidenheid van gemeenschappelijke beperkingen van toepassing op gegevensbeheer behandelen. Bijvoorbeeld, de Gevoelige </strong> etiketten van 0} S {zoals RHD (Gereglementeerde Gegevens van de Gezondheid) staan u toe om gegevens te categoriseren die naar de Beschermde Informatie van de Gezondheid (PHI) verwijzen. <strong> U kunt ook uw eigen aangepaste labels definiëren die aan de behoeften van uw organisatie voldoen."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/data-governance/labels/overview.html#understanding-data-usage-labels" text="Overzicht van labels voor gegevensgebruik"
 
 Rollen zijn manieren om de soorten gebruikers te categoriseren die met uw instantie van het Platform in wisselwerking staan en zijn bouwstenen van toegangsbeheerbeleid. Een rol heeft een bepaalde reeks toestemmingen, en de leden van uw organisatie kunnen aan één of meerdere rollen, afhankelijk van het werkingsgebied van toegang worden toegewezen zij nodig hebben.
@@ -93,7 +93,7 @@ Nu u een gebruikersrol met het [!UICONTROL RHD] etiket hebt gevormd, moet de vol
 
 Van de hoogste navigatie, selecteer **toepassingsschakelaar**, die door het ![ wordt vertegenwoordigd toepassings schakelaar ](/help/images/icons/apps.png) pictogram en selecteer dan **[!UICONTROL Experience Platform]**.
 
-![ Beeld dat Experience Platform toont dat van het drop-down menu van de toepassingsschakelaar wordt geselecteerd ](../images/abac-end-to-end-user-guide/abac-select-experience-platform.png)
+![ Beeld dat Experience Platform toont die van het drop-down menu van de toepassingsschakelaar wordt geselecteerd ](../images/abac-end-to-end-user-guide/abac-select-experience-platform.png)
 
 Selecteer **[!UICONTROL Schemas]** in de linkernavigatie en selecteer vervolgens **[!UICONTROL ACME Healthcare]** in de lijst met schema&#39;s die worden weergegeven.
 

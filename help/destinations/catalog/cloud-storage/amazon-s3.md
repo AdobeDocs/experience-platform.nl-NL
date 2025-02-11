@@ -19,7 +19,7 @@ ht-degree: 0%
 | Releasedatum | Type bijwerken | Beschrijving |
 |---|---|---|
 | Januari 2024 | Bijwerken van functionaliteit en documentatie | De Amazon S3 bestemmingsschakelaar steunt nu een nieuw verondersteld rolauthentificatietype. Lees meer over het in de [ authentificatiesectie ](#assumed-role-authentication). |
-| Juli 2023 | Bijwerken van functionaliteit en documentatie | Met de release van het Experience Platform van juli 2023 biedt de [!DNL Amazon S3] -bestemming nieuwe functionaliteit, zoals hieronder wordt weergegeven: <br><ul><li>[ de uitvoersteun van de Dataset ](/help/destinations/ui/export-datasets.md)</li><li>Aanvullende [ dossier noemende opties ](/help/destinations/ui/activate-batch-profile-destinations.md#scheduling).</li><li>Mogelijkheid om de kopballen van het douanedossier in uw uitgevoerde dossiers via de [ verbeterde toewijzingsstap ](/help/destinations/ui/activate-batch-profile-destinations.md#mapping) te plaatsen.</li><li>[ Mogelijkheid om het formatteren van uitgevoerde CSV gegevensdossiers ](/help/destinations/ui/batch-destinations-file-formatting-options.md) aan te passen.</li></ul> |
+| Juli 2023 | Bijwerken van functionaliteit en documentatie | Met de Experience Platform-release van juli 2023 biedt de [!DNL Amazon S3] -bestemming nieuwe functionaliteit, zoals hieronder wordt weergegeven: <br><ul><li>[ de uitvoersteun van de Dataset ](/help/destinations/ui/export-datasets.md)</li><li>Aanvullende [ dossier noemende opties ](/help/destinations/ui/activate-batch-profile-destinations.md#scheduling).</li><li>Mogelijkheid om de kopballen van het douanedossier in uw uitgevoerde dossiers via de [ verbeterde toewijzingsstap ](/help/destinations/ui/activate-batch-profile-destinations.md#mapping) te plaatsen.</li><li>[ Mogelijkheid om het formatteren van uitgevoerde CSV gegevensdossiers ](/help/destinations/ui/batch-destinations-file-formatting-options.md) aan te passen.</li></ul> |
 
 {style="table-layout:auto"}
 
@@ -36,7 +36,7 @@ In deze sectie wordt beschreven welke soorten publiek u naar dit doel kunt expor
 
 | Oorsprong publiek | Ondersteund | Beschrijving |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | ✓ | Het publiek produceerde door de Dienst van de Segmentatie van het Experience Platform [ ](../../../segmentation/home.md). |
+| [!DNL Segmentation Service] | ✓ | Het publiek produceerde door de Dienst van de Segmentatie van Experience Platform [ ](../../../segmentation/home.md). |
 | Aangepaste uploads | ✓ | Het publiek [ ingevoerde ](../../../segmentation/ui/audience-portal.md#import-audience) in Experience Platform van Csv- dossiers. |
 
 {style="table-layout:auto"}
@@ -103,15 +103,15 @@ Gebruik deze verificatiemethode als u de Amazon S3-toegangstoets en de geheime s
 >[!CONTEXTUALHELP]
 >id="platform_destinations_connect_s3_assumed_role"
 >title="Veronderstelde rolauthentificatie"
->abstract="Gebruik dit verificatietype als u accountsleutels en geheime sleutels niet met Adobe wilt delen. In plaats daarvan maakt Experience Platform verbinding met uw Amazon S3-locatie via op rollen gebaseerde toegang. Plak de ARN van de rol die u in AWS voor de Adobe gebruiker hebt gemaakt. Het patroon is vergelijkbaar met `arn:aws:iam::800873819705:role/destinations-role-customer` "
+>abstract="Gebruik dit verificatietype als u accountsleutels en geheime sleutels niet wilt delen met Adobe. Experience Platform maakt in plaats daarvan verbinding met uw Amazon S3-locatie via op rollen gebaseerde toegang. Plak de ARN van de rol die u in AWS voor de Adobe-gebruiker hebt gemaakt. Het patroon is vergelijkbaar met `arn:aws:iam::800873819705:role/destinations-role-customer` "
 
 ![ Beeld van de vereiste gebieden wanneer het selecteren van veronderstelde rolauthentificatie.](/help/destinations/assets/catalog/cloud-storage/amazon-s3/assumed-role-authentication.png)
 
-Gebruik dit verificatietype als u accountsleutels en geheime sleutels niet met Adobe wilt delen. In plaats daarvan maakt Experience Platform verbinding met uw Amazon S3-locatie via op rollen gebaseerde toegang.
+Gebruik dit verificatietype als u accountsleutels en geheime sleutels niet wilt delen met Adobe. Experience Platform maakt in plaats daarvan verbinding met uw Amazon S3-locatie via op rollen gebaseerde toegang.
 
-Om dit te doen, moet u in de console van AWS een veronderstelde gebruiker voor Adobe met het [ recht vereiste toestemmingen ](#minimum-permissions-iam-user) tot stand brengen om aan uw emmers van Amazon S3 te schrijven. Maak een **[!UICONTROL Trusted entity]** in AWS met het Adobe account **[!UICONTROL 670664943635]** . Voor meer informatie, verwijs naar de [ documentatie van AWS bij het creëren van rollen ](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_create_for-user.html).
+Om dit te doen, moet u in de console van AWS een veronderstelde gebruiker voor Adobe met het [ recht vereiste toestemmingen ](#minimum-permissions-iam-user) tot stand brengen om aan uw emmers van Amazon S3 te schrijven. Maak een **[!UICONTROL Trusted entity]** in AWS met de Adobe-account **[!UICONTROL 670664943635]** . Voor meer informatie, verwijs naar de [ documentatie van AWS bij het creëren van rollen ](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_create_for-user.html).
 
-* **[!DNL Role]**: plak de ARN van de rol die u in AWS voor de Adobe gebruiker hebt gemaakt. Het patroon is vergelijkbaar met `arn:aws:iam::800873819705:role/destinations-role-customer` .
+* **[!DNL Role]**: plak de ARN van de rol die u in AWS voor de Adobe-gebruiker hebt gemaakt. Het patroon is vergelijkbaar met `arn:aws:iam::800873819705:role/destinations-role-customer` .
 * **[!UICONTROL Encryption key]**: U kunt desgewenst een openbare sleutel met RSA-indeling toevoegen om versleuteling toe te voegen aan uw geëxporteerde bestanden. Bekijk een voorbeeld van een correct opgemaakte coderingssleutel in de onderstaande afbeelding.
 
 ### Doelgegevens invullen {#destination-details}
@@ -133,7 +133,7 @@ Als u details voor de bestemming wilt configureren, vult u de vereiste en option
 * **[!UICONTROL Description]**: voer een beschrijving van dit doel in.
 * **[!UICONTROL Bucket name]**: voer de naam in van het [!DNL Amazon S3] emmertje dat door dit doel moet worden gebruikt.
 * **[!UICONTROL Folder path]**: voer het pad in naar de doelmap waarin de geëxporteerde bestanden worden opgeslagen.
-* **[!UICONTROL File type]**: selecteer het Experience Platform voor de indeling die u voor de geëxporteerde bestanden wilt gebruiken. Wanneer het selecteren van de [!UICONTROL CSV] optie, kunt u ook [ de dossier het formatteren opties ](../../ui/batch-destinations-file-formatting-options.md) vormen.
+* **[!UICONTROL File type]**: selecteer de indeling die Experience Platform moet gebruiken voor de geëxporteerde bestanden. Wanneer het selecteren van de [!UICONTROL CSV] optie, kunt u ook [ de dossier het formatteren opties ](../../ui/batch-destinations-file-formatting-options.md) vormen.
 * **[!UICONTROL Compression format]**: Selecteer het compressietype dat Experience Platform moet gebruiken voor de geëxporteerde bestanden.
 * **[!UICONTROL Include manifest file]**: Schakel deze optie in als u wilt dat bij het exporteren een manifest-JSON-bestand wordt opgenomen dat informatie bevat over de exportlocatie, de exportgrootte en meer. Het manifest wordt genoemd gebruikend het formaat `manifest-<<destinationId>>-<<dataflowRunId>>.json`. Bekijk a [ steekproef manifestdossier ](/help/destinations/assets/common/manifest-d0420d72-756c-4159-9e7f-7d3e2f8b501e-0ac8f3c0-29bd-40aa-82c1-f1b7e0657b19.json). Het manifestbestand bevat de volgende velden:
    * `flowRunId`: De [ dataflow looppas ](/help/dataflows/ui/monitor-destinations.md#dataflow-runs-for-batch-destinations) die het uitgevoerde dossier produceerde.
@@ -220,4 +220,4 @@ Om te controleren of gegevens zijn geëxporteerd, controleert u de [!DNL Amazon 
 
 ## IP adres lijst van gewenste personen {#ip-address-allow-list}
 
-Verwijs naar het ](ip-address-allow-list.md) artikel van de lijst van gewenste personen van het 0} IP adres als u Adobe IPs aan een lijst van gewenste personen moet toevoegen.[
+Verwijs naar het ](ip-address-allow-list.md) artikel van de lijst van gewenste personen van het 0} IP adres {als u Adobe IPs aan een lijst van gewenste personen moet toevoegen.[

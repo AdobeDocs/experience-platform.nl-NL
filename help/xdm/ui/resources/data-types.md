@@ -1,9 +1,9 @@
 ---
-keywords: Experience Platform;thuis;populaire onderwerpen;ui;XDM;XDM systeem;ervaringsgegevensmodel;Ervaring gegevensmodel;Gegevensmodel;Gegevensmodel;Gegevensmodel;Schemaregister;Schema;Schema;schema's;Schema's;Schema's;creëren;gegevenstype;gegevenstypen;
+keywords: Experience Platform;home;populaire onderwerpen;ui;XDM;XDM-systeem;ervaringsgegevensmodel;Experience gegevensmodel;Experience Data Model;Gegevensmodel;Gegevensmodel;Schema-register;Schema-register;Schema;Schema;Schema's;Schema's;Maken;gegevenstype;gegevenstypen;
 solution: Experience Platform
 title: Gegevenstypen maken en bewerken met de gebruikersinterface
 type: Tutorial
-description: Leer hoe u gegevenstypen maakt en bewerkt in de gebruikersinterface van het Experience Platform.
+description: Leer hoe u gegevenstypen maakt en bewerkt in de Experience Platform-gebruikersinterface.
 exl-id: 2c917154-c425-463c-b8c8-04ba37d9247b
 source-git-commit: c04e5a49f2a4e90345ca20ecd0547d02b5004fcf
 workflow-type: tm+mt
@@ -17,7 +17,7 @@ ht-degree: 0%
 >[!CONTEXTUALHELP]
 >id="platform_schemas_datatype_filter"
 >title="Standaardfilter of aangepast gegevenstype"
->abstract="De lijst met beschikbare gegevenstypen wordt vooraf gefilterd op basis van de manier waarop ze zijn gemaakt. Selecteer het keuzerondje dat u wilt kiezen tussen de opties Standaard en Aangepast. De optie Standaard toont entiteiten die zijn gemaakt door Adobe en de optie Aangepast geeft entiteiten weer die binnen uw organisatie zijn gemaakt. Raadpleeg de documentatie voor meer informatie over het maken en bewerken van gegevenstypen."
+>abstract="De lijst met beschikbare gegevenstypen wordt vooraf gefilterd op basis van de manier waarop ze zijn gemaakt. Selecteer het keuzerondje dat u wilt kiezen tussen de opties Standaard en Aangepast. De optie Standaard toont entiteiten die door Adobe zijn gemaakt en de optie Aangepast geeft entiteiten weer die binnen uw organisatie zijn gemaakt. Raadpleeg de documentatie voor meer informatie over het maken en bewerken van gegevenstypen."
 
 In het Model van Gegevens van de Ervaring (XDM), zijn de gegevenstypes herbruikbare gebieden die veelvoudige subfields bevatten. Terwijl gelijkaardig aan de groepen van het schemagebied in zoverre zij voor het verenigbare gebruik van een multi-gebiedstructuur toestaan, zijn de gegevenstypes flexibeler omdat zij overal in de schemastructuur kunnen worden omvat terwijl de gebiedsgroepen slechts op het wortelniveau kunnen worden toegevoegd.
 
@@ -31,13 +31,13 @@ Deze zelfstudie behandelt de stappen voor het maken en bewerken van aangepaste g
 
 ## Vereisten {#prerequisites}
 
-Deze handleiding vereist een goed begrip van XDM System. Verwijs naar het [ XDM overzicht ](../../home.md) voor een inleiding aan de rol van XDM binnen het Experience Platform ecosysteem, en de [ grondbeginselen van schemacompositie ](../../schema/composition.md) voor hoe de gegevenstypes tot XDM schema&#39;s bijdragen.
+Deze handleiding vereist een goed begrip van XDM System. Verwijs naar het [ XDM overzicht ](../../home.md) voor een inleiding aan de rol van XDM binnen het ecosysteem van Experience Platform, en de [ grondbeginselen van schemacompositie ](../../schema/composition.md) voor hoe de gegevenstypes aan schema&#39;s bijdragen XDM.
 
 Terwijl niet vereist voor deze gids, wordt het geadviseerd dat u ook het leerprogramma volgt op [ samenstellend een schema in UI ](../../tutorials/create-schema-ui.md) om zich met de diverse mogelijkheden van [!DNL Schema Editor] vertrouwd te maken.
 
 ## Open de lus [!DNL Schema Editor] voor een gegevenstype {#data-type}
 
-Selecteer in de gebruikersinterface van het platform de optie **[!UICONTROL Schemas]** in de linkernavigatie om de [!UICONTROL Schemas] -werkruimte te openen en selecteer vervolgens het tabblad **[!UICONTROL Data types]** . Er wordt een lijst met beschikbare gegevenstypen weergegeven. De lijst met gegevenstypen wordt automatisch gefilterd op basis van de manier waarop ze zijn gemaakt. Met de standaardinstelling worden de gegevenstypen weergegeven die door de Adobe worden gedefinieerd. U kunt de lijst ook filteren om de lijsten weer te geven die door uw organisatie zijn gemaakt.
+Selecteer in de gebruikersinterface van het platform de optie **[!UICONTROL Schemas]** in de linkernavigatie om de [!UICONTROL Schemas] -werkruimte te openen en selecteer vervolgens het tabblad **[!UICONTROL Data types]** . Er wordt een lijst met beschikbare gegevenstypen weergegeven. De lijst met gegevenstypen wordt automatisch gefilterd op basis van de manier waarop ze zijn gemaakt. Met de standaardinstelling worden de gegevenstypen weergegeven die door Adobe zijn gedefinieerd. U kunt de lijst ook filteren om de lijsten weer te geven die door uw organisatie zijn gemaakt.
 
 ![ de [!UICONTROL Schemas] werkruimte met [!UICONTROL Schemas] in de linkernavigatie en [!UICONTROL Data types] benadrukte.](../../images/ui/resources/data-types/data-types-tab.png)
 
@@ -63,7 +63,7 @@ Van hier, kunt u vooruit aan de [ volgende sectie ](#add-fields) overslaan begin
 
 ### Gegevenstypen filteren {#filter}
 
-De lijst met beschikbare gegevenstypen wordt vooraf gefilterd op basis van de manier waarop ze zijn gemaakt. Selecteer het keuzerondje dat u wilt kiezen tussen de opties [!UICONTROL Standard] en [!UICONTROL Custom] . De optie [!UICONTROL Standard] toont entiteiten die zijn gemaakt door Adobe en de optie [!UICONTROL Custom] geeft entiteiten weer die binnen uw organisatie zijn gemaakt.
+De lijst met beschikbare gegevenstypen wordt vooraf gefilterd op basis van de manier waarop ze zijn gemaakt. Selecteer het keuzerondje dat u wilt kiezen tussen de opties [!UICONTROL Standard] en [!UICONTROL Custom] . De optie [!UICONTROL Standard] geeft entiteiten weer die door Adobe zijn gemaakt en de optie [!UICONTROL Custom] geeft entiteiten weer die binnen uw organisatie zijn gemaakt.
 
 ![ het [!UICONTROL Data types] lusje van de [!UICONTROL Schemas] werkruimte met [!UICONTROL Standard] en [!UICONTROL Custom] benadrukte.](../../images/ui/resources/data-types/standard-and-custom-data-types.png)
 

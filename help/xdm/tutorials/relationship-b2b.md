@@ -1,6 +1,6 @@
 ---
-title: Een relatie definiëren tussen twee schema's in Real-time Customer Data Platform B2B edition
-description: Leer hoe u een vele-op-één relatie tussen twee schema's in Adobe Real-time Customer Data Platform B2B edition definieert.
+title: Een relatie definiëren tussen twee schema's in Real-Time Customer Data Platform B2B edition
+description: Leer hoe u een vele-op-één relatie tussen twee schema's in Adobe Real-Time Customer Data Platform B2B edition definieert.
 exl-id: 14032754-c7f5-46b6-90e6-c6e99af1efba
 source-git-commit: 85d6cf10599d153a15c1bd56067f57439ddd0133
 workflow-type: tm+mt
@@ -9,14 +9,14 @@ ht-degree: 0%
 
 ---
 
-# Een veel-op-een relatie definiëren tussen twee schema&#39;s in Real-time Customer Data Platform B2B edition {#relationship-b2b}
+# Een veel-op-een relatie definiëren tussen twee schema&#39;s in Real-Time Customer Data Platform B2B edition {#relationship-b2b}
 
 >[!CONTEXTUALHELP]
 >id="platform_xdm_b2b_reference_schema"
 >title="Referentieschema"
 >abstract="Selecteer het schema u een verband met wilt vestigen. Afhankelijk van de klasse van het schema, kan het bestaande verhoudingen met andere entiteiten in de context B2B ook hebben. Zie de documentatie om te leren hoe de B2B schemaklassen op elkaar betrekking hebben."
 
-Adobe Real-time Customer Data Platform B2B edition verstrekt verscheidene klassen van de Gegevens van de Ervaring Model (XDM) die fundamentele B2B gegevensentiteiten, met inbegrip van [ rekeningen ](../classes/b2b/business-account.md), [ kansen ](../classes/b2b/business-opportunity.md), [ campagnes ](../classes/b2b/business-campaign.md), en meer vangen. Door schema&#39;s te bouwen die op deze klassen worden gebaseerd en hen toe te laten voor gebruik in [ Real-Time Profiel van de Klant ](../../profile/home.md), kunt u gegevens van ongelijksoortige bronnen in een verenigde vertegenwoordiging samenvoegen genoemd een unieschema.
+Adobe Real-Time Customer Data Platform B2B edition verstrekt verscheidene klassen van de Gegevens van de Ervaring Model (XDM) die fundamentele B2B gegevensentiteiten, met inbegrip van [ rekeningen ](../classes/b2b/business-account.md), [ kansen ](../classes/b2b/business-opportunity.md), [ campagnes ](../classes/b2b/business-campaign.md), en meer vangen. Door schema&#39;s te bouwen die op deze klassen worden gebaseerd en hen toe te laten voor gebruik in [ Real-Time Profiel van de Klant ](../../profile/home.md), kunt u gegevens van ongelijksoortige bronnen in een verenigde vertegenwoordiging samenvoegen genoemd een unieschema.
 
 Unieschema&#39;s kunnen echter alleen velden bevatten die zijn vastgelegd door schema&#39;s die dezelfde klasse delen. Dit is waar schemaverhoudingen binnen komen. Door relaties in uw B2B-schema&#39;s uit te voeren, kunt u beschrijven hoe deze bedrijfsentiteiten met elkaar verband houden en kunt u kenmerken van meerdere klassen in downstreamgevallen van segmentatiegebruik opnemen.
 
@@ -28,7 +28,7 @@ Deze zelfstudie behandelt de stappen voor het definiëren van een vele-op-één 
 
 >[!NOTE]
 >
->Als u geen Real-time Customer Data Platform B2B edition gebruikt of een één-aan-één verhouding wilt tot stand brengen, zie de gids op [ creërend een één-aan-één verhouding ](./relationship-ui.md) in plaats daarvan.
+>Als u geen Real-Time Customer Data Platform B2B edition gebruikt of een één-aan-één verhouding wilt tot stand brengen, zie de gids op [ creërend een één-aan-één verhouding ](./relationship-ui.md) in plaats daarvan.
 >
 >Dit leerprogramma concentreert zich op hoe te om relaties tussen B2B- schema&#39;s in het Platform UI manueel te vestigen. Als u gegevens van een B2B bronverbinding brengt, kunt u een auto-generatienut gebruiken om de vereiste schema&#39;s, identiteiten, en verhoudingen in plaats daarvan tot stand te brengen. Zie de brondocumentatie op B2B namespaces en schema&#39;s voor meer informatie over [ gebruikend het auto-generatienut ](../../sources/connectors/adobe-applications/marketo/marketo-namespaces.md).
 
@@ -61,7 +61,7 @@ Om dit te verklaren, bevatten alle standaardB2B klassen &quot;zeer belangrijke&q
 
 >[!NOTE]
 >
->Wanneer [ plaatsend een XDM gebied als identiteit ](../ui/fields/identity.md), moet u een identiteit verstrekken namespace om de identiteit te bepalen onder. Dit kan een standaardnaamruimte zijn die door de Adobe wordt geboden of een aangepaste naamruimte die door uw organisatie wordt gedefinieerd. In de praktijk is de naamruimte gewoon een contextafhankelijke tekenreeks en kan deze worden ingesteld op elke gewenste waarde, mits deze voor uw organisatie van belang is voor het categoriseren van het identiteitstype. Zie het overzicht op [ identiteit namespaces ](../../identity-service/features/namespaces.md) voor meer informatie.
+>Wanneer [ plaatsend een XDM gebied als identiteit ](../ui/fields/identity.md), moet u een identiteit verstrekken namespace om de identiteit te bepalen onder. Dit kan een standaardnaamruimte zijn die door Adobe wordt verschaft of een aangepaste naamruimte die door uw organisatie wordt gedefinieerd. In de praktijk is de naamruimte gewoon een contextafhankelijke tekenreeks en kan deze worden ingesteld op elke gewenste waarde, mits deze voor uw organisatie van belang is voor het categoriseren van het identiteitstype. Zie het overzicht op [ identiteit namespaces ](../../identity-service/features/namespaces.md) voor meer informatie.
 
 Voor verwijzingsdoeleinden, beschrijven de volgende secties de structuur van elk schema dat in dit leerprogramma wordt gebruikt alvorens een verhouding is bepaald. Let op waar de primaire identiteiten zijn gedefinieerd in de schemastructuur en de aangepaste naamruimten die ze gebruiken.
 

@@ -39,10 +39,10 @@ De volgende zelfstudie biedt stappen voor het gebruik van sjablonen in de gebrui
 
 ## Aan de slag
 
-Deze zelfstudie vereist een goed begrip van de volgende onderdelen van het Experience Platform:
+Deze zelfstudie vereist een goed begrip van de volgende onderdelen van Experience Platform:
 
 * [ Bronnen ](../../home.md): Experience Platform staat gegevens toe om van diverse bronnen worden opgenomen terwijl het voorzien van u van de capaciteit om, inkomende gegevens te structureren te etiketteren en te verbeteren gebruikend de diensten van het Platform.
-* [[!DNL Experience Data Model (XDM)]  Systeem ](../../../xdm/home.md): Het gestandaardiseerde kader waardoor het Experience Platform gegevens van de klantenervaring organiseert.
+* [[!DNL Experience Data Model (XDM)]  Systeem ](../../../xdm/home.md): Het gestandaardiseerde kader waardoor Experience Platform gegevens van de klantenervaring organiseert.
 * [ Sandboxes ](../../../sandboxes/home.md): Experience Platform verstrekt virtuele zandbakken die één enkele instantie van het Platform in afzonderlijke virtuele milieu&#39;s verdelen helpen digitale ervaringstoepassingen ontwikkelen en ontwikkelen.
 
 ## Sjablonen gebruiken in de gebruikersinterface van het platform {#use-templates-in-the-platform-ui}
@@ -50,16 +50,16 @@ Deze zelfstudie vereist een goed begrip van de volgende onderdelen van het Exper
 >[!CONTEXTUALHELP]
 >id="platform_sources_templates_accounttype"
 >title="Bedrijfstype selecteren"
->abstract="Selecteer het juiste bedrijfstype voor uw gebruiksscenario. De toegang hangt af van uw Real-time Customer Data Platform-abonnementaccount."
+>abstract="Selecteer het juiste bedrijfstype voor uw gebruiksscenario. De toegang hangt af van uw Real-Time Customer Data Platform-abonnementaccount."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html" text="Real-Time CDP-overzicht"
 
-Selecteer in de gebruikersinterface van het platform **[!UICONTROL Sources]** in de linkernavigatie voor toegang tot de werkruimte van [!UICONTROL Sources] en bekijk een catalogus met bronnen die beschikbaar zijn in het Experience Platform.
+Selecteer in de gebruikersinterface van het platform **[!UICONTROL Sources]** in de linkernavigatie voor toegang tot de werkruimte van [!UICONTROL Sources] en bekijk een catalogus met bronnen die beschikbaar zijn in Experience Platform.
 
 Gebruik het menu *[!UICONTROL Categories]* om bronnen op categorie te filteren. U kunt ook een bronnaam invoeren in de zoekbalk om een specifieke bron uit de catalogus te zoeken.
 
 Ga naar de categorie [!UICONTROL Adobe applications] om de [!DNL Marketo Engage] bronkaart te zien en selecteer vervolgens [!UICONTROL Add data] om te beginnen.
 
-![ een catalogus van de bronwerkruimte met de benadrukte bron van het Marketo Engage.](../../images/tutorials/templates/catalog.png)
+![ een catalogus van de bronwerkruimte met de benadrukte bron van Marketo Engage.](../../images/tutorials/templates/catalog.png)
 
 Er verschijnt een pop-upvenster met de optie om sjablonen te doorbladeren of bestaande schema&#39;s en gegevenssets te gebruiken.
 
@@ -237,7 +237,7 @@ U kunt de mening van de schemaredacteur gebruiken om updates aan uw auto-geprodu
 >
 >![ een lijst van bestaande dataflows in de dataflows catalogus van de bronwerkruimte.](../../images/tutorials/templates/dataflows.png)
 
-### Publish, uw gegevensstroom
+### Uw gegevensstroom publiceren
 
 Begin met het publicatieproces door de bronworkflow te doorlopen. Nadat u [!UICONTROL Update dataflow] hebt geselecteerd, gaat u naar de *[!UICONTROL Add data]* -stap van de workflow. Selecteer **[!UICONTROL Next]** om door te gaan.
 
