@@ -1,15 +1,15 @@
 ---
-title: Bestemming Marketo Engage
+title: Marketo Engage-bestemming
 description: Marketo Engage is de enige CXM-oplossing (end-to-end Customer Experience Management) voor marketing, reclame, analyse en handel. Hiermee kunt u activiteiten automatiseren en beheren van CRM-beheer en de betrokkenheid van klanten tot marketing en inkomstentoewijzing op basis van account.
 exl-id: 5ae5f114-47ba-4ff6-8e42-f8f43eb079f7
-source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
+source-git-commit: 58be4f2f44312116a3aa2e8f5a7889424000fd9f
 workflow-type: tm+mt
-source-wordcount: '846'
+source-wordcount: '864'
 ht-degree: 0%
 
 ---
 
-# Marketo Engage bestemming {#beta-marketo-engage-destination}
+# Marketo Engage-bestemming {#beta-marketo-engage-destination}
 
 ## Doelwijziging {#changelog}
 
@@ -49,7 +49,7 @@ De bestemming laat marketers toe om publiek te duwen dat in Adobe Experience Pla
 
 ### Ondersteunde kenmerken {#supported-attributes}
 
-U kunt kenmerken van het Experience Platform toewijzen aan alle kenmerken waartoe uw organisatie toegang heeft in Marketo. In Marketo, kunt u [ gebruiken beschrijf API verzoek ](https://developers.marketo.com/rest-api/lead-database/leads/#describe) om de attributengebieden terug te winnen die uw organisatie toegang heeft tot.
+U kunt kenmerken van Experience Platform toewijzen aan alle kenmerken waartoe uw organisatie in Marketo toegang heeft. In Marketo, kunt u [ gebruiken beschrijf API verzoek ](https://developers.marketo.com/rest-api/lead-database/leads/#describe) om de attributengebieden terug te winnen die uw organisatie toegang heeft tot.
 
 ## Ondersteunde doelgroepen {#supported-audiences}
 
@@ -57,7 +57,7 @@ In deze sectie wordt beschreven welke soorten publiek u naar dit doel kunt expor
 
 | Oorsprong publiek | Ondersteund | Beschrijving |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | ✓ | Het publiek produceerde door de Dienst van de Segmentatie van het Experience Platform [ ](../../../segmentation/home.md). |
+| [!DNL Segmentation Service] | ✓ | Het publiek produceerde door de Dienst van de Segmentatie van Experience Platform [ ](../../../segmentation/home.md). |
 | Aangepaste uploads | ✓ | Het publiek [ ingevoerde ](../../../segmentation/ui/audience-portal.md#import-audience) in Experience Platform van Csv- dossiers. |
 
 {style="table-layout:auto"}
@@ -88,8 +88,8 @@ In de onderstaande video ziet u ook de stappen voor het configureren van een Mar
 >
 >De video weerspiegelt niet volledig de huidige mogelijkheden. Voor de meest actuele informatie raadpleegt u de bovenstaande handleiding. De volgende delen van de video zijn verouderd:
 > 
->* De doelkaart die u moet gebruiken in de gebruikersinterface van het Experience Platform is **[!UICONTROL Marketo V2]** .
->* De video geeft het nieuwe selectieveld **[!UICONTROL Person creation]** niet weer in de workflow Verbinding maken met doel.
+>* De doelkaart die u in de gebruikersinterface van Experience Platform moet gebruiken, is **[!UICONTROL Marketo V2]**.
+>* De video geeft het nieuwe selectieveld **[!UICONTROL Person creation]** niet weer in de workflow Verbinding maken met doel. Als u dat veld wilt gebruiken, moet u zowel de voornaam als de achternaam toewijzen tijdens de stap voor kenmerktoewijzing.
 >* De twee beperkingen die in de video worden aangeroepen, zijn niet meer van toepassing. U kunt nu veel andere profielkenmerkvelden toewijzen naast de lidmaatschapsgegevens voor het publiek die werden ondersteund op het moment dat de video werd opgenomen. U kunt ook publieksleden exporteren naar Marketo die nog niet in uw statische Marketo-lijsten voorkomen. Deze personen worden toegevoegd aan de lijsten.
 >* In **[!UICONTROL Schedule audience step]** van de activeringsworkflow moest u in Marketo V1 handmatig een **[!UICONTROL Mapping ID]** toevoegen om gegevens te kunnen exporteren naar Marketo. Deze handmatige stap is niet meer vereist in Marketo V2.
 
