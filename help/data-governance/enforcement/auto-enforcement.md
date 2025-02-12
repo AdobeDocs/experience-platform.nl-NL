@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Automatische beleidscontrole
 description: In dit document wordt beschreven hoe beleidsregels voor gegevensgebruik automatisch worden toegepast wanneer gebruikers naar bestemmingen in Experience Platform worden geactiveerd.
 exl-id: c6695285-77df-48c3-9b4c-ccd226bc3f16
-source-git-commit: b0c4a26c2e8bb90a3494fcd6eb76c4d0d7421219
+source-git-commit: f9072a0fc287c8061a3d28972096577317a0a2c9
 workflow-type: tm+mt
-source-wordcount: '2096'
+source-wordcount: '2094'
 ht-degree: 0%
 
 ---
@@ -19,7 +19,7 @@ Om uw organisatie tegen potentiële risico&#39;s en verplichtingen te helpen bes
 
 >[!IMPORTANT]
 >
->Het beleid van de toestemming en de automatische handhaving van het toestemmingsbeleid zijn slechts beschikbaar voor organisaties die **het Schild van de Gezondheidszorg van de Adobe** of **de Privacy &amp; het Schild van de Adobe** hebben gekocht.
+>Het beleid van de toestemming en de automatische handhaving van het toestemmingsbeleid zijn slechts beschikbaar voor organisaties die **het Schild van de Gezondheidszorg van Adobe** of **Privacy &amp; het Schild van de Veiligheid van Adobe** hebben gekocht.
 
 Dit document richt zich op de handhaving van het beleid inzake gegevensbeheer en instemming. Voor informatie over toegangsbeheerbeleid, verwijs naar de documentatie over [ op attribuut-gebaseerde toegangsbeheer ](../../access-control/abac/overview.md).
 
@@ -46,7 +46,7 @@ Wanneer een publiek voor het eerst wordt geactiveerd, controleert [!DNL Policy S
 
 >[!NOTE]
 >
->Als er gegevensgebruikslabels zijn die slechts op bepaalde gebieden binnen een dataset (eerder dan de volledige dataset) zijn toegepast, komt de handhaving van die gebieden-vlakke etiketten op activering slechts onder de volgende voorwaarden voor:
+>Als er gegevensgebruikslabels zijn die alleen op bepaalde velden zijn toegepast, wordt de handhaving van die veldniveaulabels bij activering alleen uitgevoerd als aan ten minste een van de volgende voorwaarden is voldaan:
 >
 >* De velden worden gebruikt in het publiek.
 >* De velden worden geconfigureerd als geprojecteerde kenmerken voor de doelbestemming.
@@ -57,7 +57,7 @@ De lijn van gegevens speelt een zeer belangrijke rol in hoe het beleid in Platfo
 
 In de context van het Beleid van Gegevens, laat lijn gegevensgebruiksetiketten toe om van schema&#39;s aan stroomafwaartse diensten te verspreiden die hun gegevens, zoals het Profiel van de Klant in real time en Doelen verbruiken. Hierdoor kan het beleid op verschillende belangrijke punten in de gegevensreis door Platform worden geëvalueerd en afgedwongen, en wordt de gegevensconsument een context geboden waarin hij kan zien waarom een beleidsovertreding heeft plaatsgevonden.
 
-In Experience Platform gaat het bij de beleidshandhaving om de volgende begrotingslijn:
+In Experience Platform gaat het bij de handhaving van het beleid om het volgende traject:
 
 1. Het gegeven wordt opgenomen in Platform en opgeslagen in **datasets**.
 1. De profielen van de klant worden geïdentificeerd en worden geconstrueerd van die datasets door gegevensfragmenten volgens het **fusiebeleid** samen te voegen.
@@ -71,7 +71,7 @@ Elke fase in de bovenstaande tijdlijn vertegenwoordigt een entiteit die kan bijd
 | Gegevensset | Datasets bevatten gegevensgebruikslabels (toegepast op het niveau van het schemagebied of het volledige datasetniveau) die bepalen welke gebruiksgevallen de volledige dataset of specifieke gebieden kunnen worden gebruikt voor. Beleidsovertredingen treden op als een dataset of veld met bepaalde labels wordt gebruikt voor een doel dat door een beleid wordt beperkt.<br><br> om het even welke toestemmingsattributen die van uw klanten worden verzameld worden ook opgeslagen in datasets. Als u toegang tot toestemmingsbeleid hebt, zullen om het even welke profielen die niet aan de vereisten van de toestemmingsattributen van uw beleid voldoen van publiek worden uitgesloten die aan een bestemming worden geactiveerd. |
 | Samenvoegbeleid | Het beleid van de fusie is de regels die het Platform gebruikt om te bepalen hoe de gegevens voorrang zullen worden gegeven wanneer het samenvoegen van fragmenten van veelvoudige datasets. De schendingen van het beleid zullen voorkomen als uw samenvoegbeleid wordt gevormd zodat de datasets met beperkte etiketten aan een bestemming worden geactiveerd. Zie het [ overzicht van het samenvoegingsbeleid ](../../profile/merge-policies/overview.md) voor meer informatie. |
 | Doelgroep | De regels van de segmentatie bepalen welke attributen van klantenprofielen zouden moeten worden omvat. Afhankelijk van de velden die een segmentdefinitie bevat, neemt het publiek alle toegepaste gebruikslabels voor die velden over. Beleidsovertredingen treden op als u een publiek probeert te activeren waarvan de geërfte labels worden beperkt door het toepasselijke beleid van de doelbestemming, op basis van de Gebruiksscenario&#39;s voor marketingdoeleinden. |
-| Doel | Bij het instellen van een bestemming kan een marketingactie (ook wel een marketingcase genoemd) worden gedefinieerd. Dit gebruiksgeval correleert met een marketingactie zoals gedefinieerd in een beleid. Met andere woorden, de marketingactie die u voor een bestemming definieert, bepaalt welk beleid voor gegevensgebruik en toestemmingsbeleid van toepassing zijn op die bestemming.<br><br> de schendingen van het het gebruiksbeleid van Gegevens komen voor als u probeert om een publiek te activeren de waarvan gebruiksetiketten voor de marketing van de doelbestemming actie beperkt zijn.<br><br> (Beta) Wanneer een publiek wordt geactiveerd, worden profielen die niet de vereiste toestemmingskenmerken voor de marketingactie bevatten (zoals gedefinieerd in uw toestemmingsbeleid), uitgesloten van het geactiveerde publiek. |
+| Bestemming | Bij het instellen van een bestemming kan een marketingactie (ook wel een marketingcase genoemd) worden gedefinieerd. Dit gebruiksgeval correleert met een marketingactie zoals gedefinieerd in een beleid. Met andere woorden, de marketingactie die u voor een bestemming definieert, bepaalt welk beleid voor gegevensgebruik en toestemmingsbeleid van toepassing zijn op die bestemming.<br><br> de schendingen van het het gebruiksbeleid van Gegevens komen voor als u probeert om een publiek te activeren de waarvan gebruiksetiketten voor de marketing van de doelbestemming actie beperkt zijn.<br><br> (Beta) Wanneer een publiek wordt geactiveerd, worden profielen die niet de vereiste toestemmingskenmerken voor de marketingactie bevatten (zoals gedefinieerd in uw toestemmingsbeleid), uitgesloten van het geactiveerde publiek. |
 
 >[!IMPORTANT]
 >
@@ -126,7 +126,7 @@ Wanneer het activeren van een publiek aan een bestemming, kunt u zien hoe uw [ t
 
 >[!NOTE]
 >
->Het beleid van de toestemming is slechts beschikbaar voor organisaties die het Schild van de Gezondheidszorg van de Adobe of Adobe Privacy &amp; het Schild van de Veiligheid hebben gekocht.
+>Beleid voor toestemming is alleen beschikbaar voor organisaties die Adobe Healthcare Shield of Adobe Privacy &amp; Security Shield hebben aangeschaft.
 
 #### Verbetering van het beleid voor goedkeuring voor betaalde media {#consent-policy-enhancement}
 
