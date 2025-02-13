@@ -3,10 +3,10 @@ audience: user
 user-guide-title: Overzicht van Adobe Experience Platform
 breadcrumb-title: Overzicht van Experience Platform
 user-guide-description: Ontdek hoe u met Experience Platform uw klanten in real time persoonlijke ervaringen kunt bieden met handleidingen, documentatie en zelfstudies.
-source-git-commit: 90b8a3253e8298a634c0deaf82ac8be05f478622
+source-git-commit: 08a63fb854fe1c2aa83e7a7f74df4c02580e4d4c
 workflow-type: tm+mt
-source-wordcount: '304'
-ht-degree: 17%
+source-wordcount: '309'
+ht-degree: 16%
 
 ---
 
@@ -16,6 +16,7 @@ ht-degree: 17%
 * [Overzicht van platform](home.md)
 * [Overzicht van platform (video)](video/platform-overview.md)
 * [Overzicht van meerdere wolken](multi-cloud.md)
+* [Edge Network- en hubvergelijking](./edge-and-hub-comparison.md)
 * [ Zelfstudies van het Platform ](https://experienceleague.adobe.com/docs/platform-learn/tutorials/overview.html)
 * [Een klantervaring aangedreven door Platform (video)](video/customer-experience.md)
 * [Achter de schermen van een klantervaring met behulp van Platform (video)](video/customer-experience-bts.md)
@@ -25,13 +26,13 @@ ht-degree: 17%
    * [Hoofdgebruik (video)](video/platform-use-cases.md)
    * [Platformarchitectuur (video)](video/platform-architecture.md)
    * [Rollen en projectfasen (video)](video/roles-project-phases.md)
-* Interface van Experience Platform {#platform-ui}
+* Experience Platform-gebruikersinterface {#platform-ui}
    * [Handleiding voor platforminterface](ui-guide.md)
    * [Platform UI tour (video)](video/platform-ui.md)
    * [Handleiding Workflows-gebruikersinterface](workflows.md)
    * [Browserondersteuning en taalondersteuning](browser-language-support.md)
    * [Zelfidentificatie-enquête](self-identification.md)
-* Experience Platform-API&#39;s {#platform-apis}
+* Experience Platform API&#39;s {#platform-apis}
    * [Aan de slag met platform-API&#39;s](api-guide.md)
    * [Platform-API&#39;s verifiëren en openen](api-authentication.md)
    * [API-basisbeginselen](api-fundamentals.md)
@@ -42,7 +43,7 @@ ht-degree: 17%
    * [Taalondersteuning](documentation/language-support.md)
 * Toepassingen gebaseerd op platform {#ecosystem}
    * [Overzicht](application-services.md)
-   * [ Adobe Real-time Customer Data Platform (alle uitgaven) ](https://experienceleague.adobe.com/docs/real-time-customer-data-platform.html)
+   * [ Adobe Real-Time Customer Data Platform (alle uitgaven) ](https://experienceleague.adobe.com/docs/real-time-customer-data-platform.html)
    * [Application and Intelligent Services (video)](video/application-intelligent-services.md)
    * [Customer Journey Analytics](https://experienceleague.adobe.com/docs/customer-journey-analytics.html)
    * [ Adobe Journey Optimizer ](https://experienceleague.adobe.com/docs/journey-optimizer.html)
@@ -52,7 +53,7 @@ ht-degree: 17%
 * Beheer, privacy en beveiliging {#governance-privacy-security}
    * [Overzicht](./governance-privacy-security/overview.md)
    * Toestemmingsbeheer {#consent}
-      * Adobe standaard {#adobe}
+      * Adobe-standaard {#adobe}
          * [Overzicht](./governance-privacy-security/consent/adobe/overview.md)
          * [Een gegevensset configureren om toestemmings- en voorkeursgegevens vast te leggen](./governance-privacy-security/consent/adobe/dataset.md)
       * IAB TCF 2.0 {#iab}
@@ -81,7 +82,7 @@ ht-degree: 17%
    * [Het gebruiksdashboard voor licenties](./license-usage-and-guardrails/license-usage-dashboard.md)
    * [Totaal gegevensvolume](./license-usage-and-guardrails/total-data-volume.md)
    * [ de guardrails van Adobe Journey Optimizer ](https://experienceleague.adobe.com/docs/journey-optimizer/using/get-started/guardrails.html)
-   * [ Customer Journey Analytics guardrails ](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-admin/guardrails.html)
+   * [ de guardrails van Customer Journey Analytics ](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-admin/guardrails.html)
    * [ de guardrails van Real-Time CDP ](https://experienceleague.adobe.com/docs/experience-platform/rtcdp/guardrails/overview.html)
 * [Handleiding voor probleemoplossing](troubleshooting.md)
 * [Gen2-gegevensmeermigratie](adls2-gen2-migration.md)
