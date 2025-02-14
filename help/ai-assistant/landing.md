@@ -3,18 +3,18 @@ title: AI Assistant in Adobe Experience Platform-productdocumentatie
 description: Ga aan de slag met AI Assistant in Adobe Experience Platform.
 feature: AI Assistant
 exl-id: bcb86a41-d5d8-4c1a-a86d-79fa0c167bc7
-source-git-commit: 9a10db0da1985c5ccaaeb84e040eea9e76ec1ae4
+source-git-commit: 49c06a1dfb3431ce8fe416d35a22567ce614107a
 workflow-type: tm+mt
-source-wordcount: '899'
-ht-degree: 1%
+source-wordcount: '902'
+ht-degree: 0%
 
 ---
 
 # AI Assistant in Adobe Experience Platform-productdocumentatie
 
-AI Assistant in Adobe Experience Platform is een conversatieprogramma dat u kunt gebruiken om uw workflows te versnellen met toepassingen en services voor Experience Platforms. De Medewerker van AI van het gebruik om uw algemene productiviteit te verhogen, uw inzicht in productkennis en operationele inzichten te versterken, evenals aanbevelingen te verzamelen relevant voor uw vragen en zaken van het bedrijfsgebruik.
+AI Assistant in Adobe Experience Platform is een gespreksinstrument waarmee u uw workflows kunt versnellen met Experience Platform-toepassingen en -services. De Medewerker van AI van het gebruik om uw algemene productiviteit te verhogen, uw inzicht in productkennis en operationele inzichten te versterken, evenals aanbevelingen te verzamelen relevant voor uw vragen en zaken van het bedrijfsgebruik.
 
-AI Assistant biedt ondersteuning voor Experience Platform, Real-Time CDP, Adobe Journey Optimizer en Customer Journey Analytics.
+AI Assistant ondersteunt Experience Platform, Real-Time CDP, Adobe Journey Optimizer en Customer Journey Analytics.
 
 ## Aan de slag
 
@@ -42,10 +42,9 @@ Begin met het lezen van het materiaal in de koppelingen hieronder om uzelf vertr
     </tr>
 </table>
 
-
 ## Nieuwe functies
 
-Bekijk een overzicht van de nieuwste verbeteringen in AI Assistant, waaronder de mogelijkheden die zich momenteel in de Alpha- of Beta-fase bevinden.
+Bekijk een overzicht van de nieuwste verbeteringen in AI Assistant, inclusief de mogelijkheden die momenteel in de Alpha- of Beta-fasen worden gebruikt.
 
 >[!BEGINTABS]
 
@@ -69,7 +68,7 @@ U kunt de natuurlijke mogelijkheden van de taalraming van AI Assistant gebruiken
 
 ### XDM-velden detecteren voor het maken van doelgroepen
 
-U kunt de Medewerker van AI gebruiken om uw ontdekking van de gebieden van de Gegevens van de Ervaring te helpen (XDM) die u kunt dan gebruiken om doelpubliek binnen Experience Platform tot stand te brengen.
+U kunt AI Assistant gebruiken om uw kennis van XDM-velden (Experience Data Model) te verbeteren. U kunt deze velden dan gebruiken om doelsoorten te maken in Experience Platform.
 
 [![afbeelding](../rtcdp/assets/do-not-localize/learn-more-button.svg)](./new-features/xdm-field-discovery.md)
 
@@ -82,6 +81,21 @@ U kunt AI Assistant gebruiken voor Klantenondersteuning om probleemloos probleme
 [![afbeelding](../rtcdp/assets/do-not-localize/learn-more-button.svg)](./new-features/customer-support.md)
 
 >[!ENDTABS]
+
+## Beveiligingskenmerken van AI Assistant {#security}
+
+
+Bekijk de volgende video voor meer informatie over de beveiligingsfuncties van AI Assistant:
+
+>[!VIDEO](https://video.tv.adobe.com/v/3441066/?learn=on)
+
+>[!BEGINSHADEBOX]
+
+**las het AI Hulpblad van het veiligheidsfeit**
+
+Voor meer informatie over AI Medewerker, lees het [ veiligheidsinformatieblad voor AI Medewerker in Adobe Experience Platform ](https://www.adobe.com/content/dam/cc/en/trust-center/ungated/whitepapers/experience-cloud/adobe-ai-assistant-in-aep-security-fact-sheet.pdf).
+
+>[!ENDSHADEBOX]
 
 ## Videobibliotheek
 
@@ -183,20 +197,6 @@ Bekijk de volgende video&#39;s voor extra voorbeelden van AI Assistant-gebruikss
 * [ krijg om AI Medewerker voor Soorten van publiek te kennen ](https://www.youtube.com/live/DYsyii7ldck)
 
 >[!ENDTABS]
-
-## Aanvullende bronnen
-
->[!BEGINSHADEBOX]
-
-**las het AI Hulpblad van het veiligheidsfeit**
-
-Voor meer informatie over AI Medewerker, lees het [ veiligheidsinformatieblad voor AI Medewerker in Adobe Experience Platform ](https://www.adobe.com/content/dam/cc/en/trust-center/ungated/whitepapers/experience-cloud/adobe-ai-assistant-in-aep-security-fact-sheet.pdf).
-
->[!ENDSHADEBOX]
-
-Bekijk de volgende video voor meer informatie over de beveiligingsfuncties van AI Assistant:
-
->[!VIDEO](https://video.tv.adobe.com/v/3441066/?learn=on)
 
 Blader naar de onderstaande koppelingen voor meer inzicht in AIR Assistant-gebruiksgevallen, -mogelijkheden en nog veel meer.
 
