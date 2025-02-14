@@ -1,12 +1,12 @@
 ---
-keywords: Experience Platform;home;populaire onderwerpen
+keywords: Experience Platform;startpagina;populaire onderwerpen
 title: Privacy Request-verwerking in Identity-service
 description: Adobe Experience Platform Privacy Service verwerkt verzoeken van klanten om toegang te krijgen, te weigeren of hun persoonlijke gegevens te verwijderen, zoals gedefinieerd in een groot aantal privacyregels. Dit document behandelt essentiële concepten met betrekking tot de verwerking van privacyverzoeken voor identiteitsdiensten.
 exl-id: ab84450b-1a4b-4fdd-b77d-508c86bbb073
-source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
+source-git-commit: a75a5603eacc1b4625a19adfddbb2f4bb81f66d3
 workflow-type: tm+mt
-source-wordcount: '1014'
-ht-degree: 0%
+source-wordcount: '998'
+ht-degree: 1%
 
 ---
 
@@ -18,9 +18,9 @@ In dit document worden de belangrijkste concepten besproken die betrekking hebbe
 
 >[!NOTE]
 >
->In deze handleiding wordt alleen uitgelegd hoe u privacyaanvragen voor de opslag van identiteitsgegevens in Experience Platform kunt indienen. Als u ook van plan bent om privacyverzoeken voor het de gegevensmeer of [!DNL Real-Time Customer Profile] van het Platform te maken, verwijs naar de gids op [ verwerking van het privacyverzoek in het gegevens meer ](../catalog/privacy.md) en naar de gids op [ verwerking van het privacyverzoek voor Profiel ](../profile/privacy.md) naast dit leerprogramma.
+>In deze handleiding wordt alleen uitgelegd hoe u privacyaanvragen kunt indienen voor de opslag van identiteitsgegevens in Experience Platform. Als u ook van plan bent om privacyverzoeken voor het de gegevensmeer of [!DNL Real-Time Customer Profile] van het Platform te maken, verwijs naar de gids op [ verwerking van het privacyverzoek in het gegevens meer ](../catalog/privacy.md) en naar de gids op [ verwerking van het privacyverzoek voor Profiel ](../profile/privacy.md) naast dit leerprogramma.
 >
->Voor stappen op hoe te om privacyverzoeken voor andere toepassingen van Adobe Experience Cloud te maken, verwijs naar de [ documentatie van de Privacy Service ](../privacy-service/experience-cloud-apps.md).
+>Voor stappen op hoe te om privacyverzoeken voor andere toepassingen van Adobe Experience Cloud te maken, verwijs naar de [ documentatie van Privacy Service ](../privacy-service/experience-cloud-apps.md).
 
 ## Aan de slag
 
@@ -32,7 +32,7 @@ U wordt aangeraden eerst de volgende [!DNL Experience Platform] -services te ler
 
 ## Naamruimten voor identiteiten {#namespaces}
 
-Adobe Experience Platform [!DNL Identity Service] biedt een brug tussen identiteitsgegevens van klanten op systemen en apparaten. [!DNL Identity Service] gebruikt **identiteit namespaces** om context aan identiteitswaarden te verstrekken door hen op hun systeem van oorsprong met elkaar in verband te brengen. Een naamruimte kan een algemeen concept vertegenwoordigen, zoals een e-mailadres (&quot;e-mail&quot;) of de identiteit koppelen aan een specifieke toepassing, zoals een Adobe Advertising Cloud-id (&quot;AdCloud&quot;) of een Adobe Target-id (&quot;TNTID&quot;).
+Adobe Experience Platform [!DNL Identity Service] biedt een brug tussen identiteitsgegevens van klanten op systemen en apparaten. [!DNL Identity Service] gebruikt **identiteit namespaces** om context aan identiteitswaarden te verstrekken door hen op hun systeem van oorsprong met elkaar in verband te brengen. Een naamruimte kan een algemeen concept vertegenwoordigen, zoals een e-mailadres (&quot;E-mail&quot;) of de identiteit koppelen aan een specifieke toepassing, zoals een Adobe Advertising Cloud-id (&quot;AdCloud&quot;) of een Adobe Target-id (&quot;TNTID&quot;).
 
 De Dienst van de identiteit handhaaft een opslag van globaal bepaalde (standaard) en user-defined (douane) identiteitsnamespaces. Standaard naamruimten zijn beschikbaar voor alle organisaties (bijvoorbeeld E-mail en ECID), terwijl uw organisatie aangepaste naamruimten kan maken die aan de specifieke behoeften voldoen.
 
@@ -40,7 +40,7 @@ Voor meer informatie over identiteit namespaces in [!DNL Experience Platform], z
 
 ## Verzoeken indienen {#submit}
 
-In de onderstaande secties wordt beschreven hoe u privacyverzoeken voor [!DNL Identity Service] kunt indienen met de API of UI van [!DNL Privacy Service] . Alvorens deze secties te lezen, wordt het sterk geadviseerd dat u de [ Privacy Service API ](../privacy-service/api/getting-started.md) of [ Privacy Service UI ](../privacy-service/ui/overview.md) documentatie voor volledige stappen op bekijkt hoe te om een privacybaan voor te leggen, met inbegrip van hoe te om gebruikersgegevens in verzoekladingen behoorlijk te formatteren.
+In de onderstaande secties wordt beschreven hoe u privacyverzoeken voor [!DNL Identity Service] kunt indienen met de API of UI van [!DNL Privacy Service] . Alvorens deze secties te lezen, adviseert men sterk dat u [ Privacy Service API ](../privacy-service/api/getting-started.md) of [ Privacy Service UI ](../privacy-service/ui/overview.md) documentatie voor volledige stappen op bekijkt hoe te om een privacybaan voor te leggen, met inbegrip van hoe te om gebruikersgegevens in verzoeklading behoorlijk te formatteren.
 
 ### De API gebruiken
 
@@ -52,7 +52,7 @@ Met het volgende verzoek wordt een nieuwe privacytaak onder de GDPR gemaakt voor
 
 >[!TIP]
 >
->Wanneer u een aangepaste naamruimte verwijdert met behulp van de API, moet u het identiteitssymbool opgeven als de naamruimte in plaats van de weergavenaam.
+>U moet het identiteitssymbool opgeven als naamruimte in plaats van de weergavenaam wanneer u identiteiten verwijdert met GDPR-verwijderingsfunctie.
 
 ```shell
 curl -X POST \
@@ -96,7 +96,7 @@ curl -X POST \
 
 >[!TIP]
 >
->Wanneer u een aangepaste naamruimte verwijdert via de gebruikersinterface, moet u het identiteitssymbool opgeven als de naamruimte in plaats van de weergavenaam. Bovendien kunt u geen aangepaste naamruimten in de gebruikersinterface verwijderen voor niet-productiesandboxen.
+>U moet het identiteitssymbool opgeven als naamruimte in plaats van de weergavenaam wanneer u identiteiten verwijdert met GDPR-verwijderingsfunctie.
 
 Wanneer u taakaanvragen maakt in de gebruikersinterface, moet u **[!UICONTROL Identity]** onder **[!UICONTROL Products]** selecteren om taken voor gegevens te verwerken die zijn opgeslagen in [!DNL Identity Service] .
 

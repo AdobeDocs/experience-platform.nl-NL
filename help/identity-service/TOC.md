@@ -5,9 +5,9 @@ breadcrumb-title: Gids Platform Identity Service
 user-guide-description: Overbrug klantidentiteiten op verschillende apparaten en systemen om gepersonaliseerde digitale ervaringen te bieden.
 feature: Identities
 role: Admin,Developer
-source-git-commit: 6cdb622e76e953c42b58363c98268a7c46c98c99
+source-git-commit: cbdfa76d546be631a8c1fa588896648835d2a159
 workflow-type: tm+mt
-source-wordcount: '146'
+source-wordcount: '143'
 ht-degree: 19%
 
 ---
@@ -44,7 +44,6 @@ ht-degree: 19%
    - [Een aangepaste naamruimte maken](api/create-custom-namespace.md)
    - [Native id weergeven voor een identiteit](api/list-native-id.md)
    - [ API verwijzing ](https://www.adobe.io/experience-platform-apis/references/identity-service)
-- [Gedeelde apparaatdetectie](shared-device-detection.md)
 - [Identiteitsvelden definiëren in de gebruikersinterface](label-identities.md)
 - [Verwerking van privacyverzoeken](privacy.md)
 - [Handleiding voor probleemoplossing](troubleshooting-guide.md)
