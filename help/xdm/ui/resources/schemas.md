@@ -1,10 +1,10 @@
 ---
-keywords: Experience Platform;thuis;populaire onderwerpen;api;API;XDM;XDM systeem;ervaringsgegevensmodel;gegevensmodel;ui;werkruimte;schema;schema's;
+keywords: Experience Platform;home;populaire onderwerpen;api;API;XDM;XDM systeem;ervaringsgegevensmodel;gegevensmodel;ui;werkruimte;schema;schema's;
 solution: Experience Platform
 title: Schema's maken en bewerken in de gebruikersinterface
-description: Leer de grondbeginselen van om schema's in het gebruikersinterface van het Experience Platform tot stand te brengen en uit te geven.
+description: Leer de basisbeginselen van het maken en bewerken van schema's in de Experience Platform-gebruikersinterface.
 exl-id: be83ce96-65b5-4a4a-8834-16f7ef9ec7d1
-source-git-commit: 24b26e256fb346ccd1a03984f3e0d199c640159c
+source-git-commit: 9691ce1ca560acce7a9512df7eb92e61962bc467
 workflow-type: tm+mt
 source-wordcount: '3899'
 ht-degree: 0%
@@ -23,7 +23,7 @@ Deze handleiding biedt een overzicht van het maken, bewerken en beheren van XDM-
 
 ## Vereisten {#prerequisites}
 
-Deze handleiding vereist een goed begrip van XDM System. Verwijs naar het [ XDM overzicht ](../../home.md) voor een inleiding aan de rol van XDM binnen het Experience Platform ecosysteem, en de [ grondbeginselen van schemacompositie ](../../schema/composition.md) voor een overzicht van hoe schema&#39;s worden geconstrueerd.
+Deze handleiding vereist een goed begrip van XDM System. Verwijs naar het [ XDM overzicht ](../../home.md) voor een inleiding aan de rol van XDM binnen het ecosysteem van Experience Platform, en de [ grondbeginselen van schemacompositie ](../../schema/composition.md) voor een overzicht van hoe schema&#39;s worden geconstrueerd.
 
 ## Een nieuw schema maken {#create}
 
@@ -159,7 +159,7 @@ De [!DNL Schema Editor] wordt weer weergegeven met de velden die door de veldgro
 
 >[!NOTE]
 >
-Binnen de Redacteur van het Schema, worden de standaard (Adobe-geproduceerde) klassen en de gebiedsgroepen vermeld met het hangslotpictogram (![ A hangslotpictogram.](/help/images/icons/lock-closed.png). Het hangslot verschijnt in de linkerspoorstaaf naast de klasse of de naam van de gebiedsgroep, evenals naast om het even welk gebied in het schemadiagram dat een deel van een systeem-geproduceerde middel is.
+Binnen de Redacteur van het Schema, worden de standaard (Adobe-geproduceerde) klassen en de gebiedsgroepen vermeld met het hangslotpictogram ![ A hangslotpictogram.](/help/images/icons/lock-closed.png). Het hangslot verschijnt in de linkerspoorstaaf naast de klasse of de naam van de gebiedsgroep, evenals naast om het even welk gebied in het schemadiagram dat een deel van een systeem-geproduceerde middel is.
 >
 ![ de Redacteur van het Schema met het gemarkeerde hangslotpictogram ](../../images/ui/explore/schema-editor-padlock-icon.png)
 
@@ -374,7 +374,7 @@ Als u een klasse opnieuw wilt toewijzen, selecteert u **[!UICONTROL Assign]** li
 
 ![](../../images/ui/resources/schemas/assign-class-button.png)
 
-Een dialoog verschijnt die een lijst van alle beschikbare klassen, met inbegrip van om het even welke die door uw organisatie (de eigenaar die &quot; [!UICONTROL Customer]&quot;is) wordt bepaald en standaardklassen toont door Adobe worden bepaald.
+Een dialoog verschijnt die een lijst van alle beschikbare klassen, met inbegrip van om het even welke die door uw organisatie (de eigenaar wordt &quot;[!UICONTROL Customer]&quot;) wordt bepaald en standaardklassen toont door Adobe worden bepaald.
 
 Selecteer een klasse in de lijst om de beschrijving ervan rechts in het dialoogvenster weer te geven. U kunt ook **[!UICONTROL Preview class structure]** selecteren om de velden en metagegevens weer te geven die aan de klasse zijn gekoppeld. Selecteer **[!UICONTROL Assign class]** om door te gaan.
 
