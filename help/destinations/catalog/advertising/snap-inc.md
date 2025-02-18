@@ -2,9 +2,9 @@
 title: Magnetische Inc-verbinding
 description: Leer hoe u verbinding maakt met het Snapchat Ads Platform en uw publiek exporteert vanuit Experience Platform.
 exl-id: 1f0f2dc0-5f3d-424b-9b22-b1a14ac30039
-source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
+source-git-commit: 9a80a9b49b1983e8e488d11b114c02130b045686
 workflow-type: tm+mt
-source-wordcount: '983'
+source-wordcount: '1034'
 ht-degree: 0%
 
 ---
@@ -21,7 +21,7 @@ ht-degree: 0%
 
 ## Gebruiksscenario’s {#use-cases}
 
-Met deze bestemming kunnen marketers gebruikerssoorten die in Experience Platform zijn gemaakt, importeren in Snapchat Advertenties en deze gebruiken om hun advertenties te activeren.
+Op deze bestemming kunnen marketers gebruikersgroepen die in Experience Platform zijn gemaakt, importeren in Snapchat-advertenties en deze gebruiken om hun advertenties als doel in te stellen.
 
 ## Vereisten {#prerequisites}
 
@@ -59,13 +59,25 @@ Alle herkenningstekens die naar de *Magnetische bestemming Inc* worden verzonden
 
 {style="table-layout:auto"}
 
+## Ondersteunde doelgroepen {#supported-audiences}
+
+In deze sectie wordt beschreven welke soorten publiek u naar dit doel kunt exporteren.
+
+| Oorsprong publiek | Ondersteund | Beschrijving |
+|---------|----------|----------|
+| [!DNL Segmentation Service] | ✓ | Het publiek produceerde door de Dienst van de Segmentatie van Experience Platform [ ](../../../segmentation/home.md). |
+| Aangepaste uploads | ✓ | Het publiek [ ingevoerde ](../../../segmentation/ui/audience-portal.md#import-audience) in Experience Platform van Csv- dossiers. |
+| [!DNL Federated Audience Composition] | ✓ | Het publiek werd ingevoerd in Experience Platform door [ Federated Samenstelling van het Publiek ](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/start/audiences). |
+
+{style="table-layout:auto"}
+
 ## Type en frequentie exporteren {#export-type-frequency}
 
 Raadpleeg de onderstaande tabel voor informatie over het exporttype en de exportfrequentie van de bestemming.
 
 | Item | Type | Notities |
 ---------|----------|---------|
-| Exporttype | **[!UICONTROL Audience export]** | U voert alle leden van een publiek met de herkenningstekens (naam, telefoonaantal, of anderen) uit die in *worden gebruikt JUISTE* bestemming. |
+| Exporttype | **[!UICONTROL Audience export]** | U exporteert alle leden van een publiek met de id&#39;s (naam, telefoonnummer of andere) die in de Inc-bestemming magnetisch worden gebruikt. |
 | Exportfrequentie | **[!UICONTROL Streaming]** | Streaming doelen zijn &quot;altijd aan&quot; API-verbindingen. Zodra een profiel in Experience Platform wordt bijgewerkt dat op publieksevaluatie wordt gebaseerd, verzendt de schakelaar de update stroomafwaarts naar het bestemmingsplatform. Lees meer over [ het stromen bestemmingen ](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
@@ -128,7 +140,7 @@ Na het activeren van publiek aan de *Magnetische bestemming Inc.*, zult u het pu
 
 ![Doelgroepen](/help/destinations/assets/catalog/advertising/snapchat-ads/audiences.png)
 
-Houd er rekening mee dat wanneer een publiek van een Adobe voor het eerst wordt geactiveerd op Snap Inc., dit eerst als een leeg publiek wordt weergegeven. Adobe Experience Platform exporteert ledengegevens namelijk pas naar Snap Inc als het publiek wordt geëvalueerd. Voor meer informatie over hoe het publiek in Experience Platform wordt geëvalueerd, gelieve te verwijzen naar het [ overzicht van de Dienst van de Segmentatie ](https://experienceleague.adobe.com/docs/experience-platform/segmentation/home.html#evaluate-segments).
+Houd er rekening mee dat wanneer een Adobe-publiek voor het eerst wordt geactiveerd op Snap Inc, dit eerst als een leeg publiek wordt weergegeven. Adobe Experience Platform exporteert ledengegevens namelijk pas naar Snap Inc als het publiek wordt geëvalueerd. Voor meer informatie over hoe het publiek in Experience Platform wordt geëvalueerd, gelieve te verwijzen naar het [ overzicht van de Dienst van de Segmentatie ](https://experienceleague.adobe.com/docs/experience-platform/segmentation/home.html#evaluate-segments).
 
 ## Gegevensgebruik en -beheer {#data-usage-governance}
 

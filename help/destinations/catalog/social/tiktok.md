@@ -1,11 +1,11 @@
 ---
 title: TikTok-verbinding
-description: Bouw een aangepast publiek op TikTok met uw gegevens voor doelgerichte advertentiecampagnes. Dit soort publiek zou kunnen bestaan uit mensen die uw website hebben bezocht of interactie hebben gehad met uw inhoud. Snel en veilig het gewenste publiek van Adobe Experience Platform naar TikTok duwen met behulp van de realtime integratie van Adobe met TikTok Ads Manager.
+description: Bouw een aangepast publiek op TikTok met uw gegevens voor doelgerichte advertentiecampagnes. Dit soort publiek zou kunnen bestaan uit mensen die uw website hebben bezocht of interactie hebben gehad met uw inhoud. Snel en veilig het gewenste publiek van Adobe Experience Platform naar TikTok duwen met Adobe in real-time integratie met TikTok Ads Manager.
 last-substantial-update: 2023-03-20T00:00:00Z
 exl-id: 7b12d17f-7d9a-4615-9830-92bffe3f6927
-source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
+source-git-commit: 9a80a9b49b1983e8e488d11b114c02130b045686
 workflow-type: tm+mt
-source-wordcount: '998'
+source-wordcount: '1048'
 ht-degree: 1%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 1%
 
 ## Overzicht {#overview}
 
-Bouw een aangepast publiek op TikTok met uw gegevens voor doelgerichte advertentiecampagnes. Dit soort publiek zou kunnen bestaan uit mensen die uw website hebben bezocht of interactie hebben gehad met uw inhoud. Snel en veilig het gewenste publiek van Adobe Experience Platform naar TikTok duwen met behulp van de realtime integratie van Adobe met TikTok Ads Manager. Bezoek [ TikTok bedrijfs hulpcentrum ](https://ads.tiktok.com/help/article/audiences) voor meer informatie.
+Bouw een aangepast publiek op TikTok met uw gegevens voor doelgerichte advertentiecampagnes. Dit soort publiek zou kunnen bestaan uit mensen die uw website hebben bezocht of interactie hebben gehad met uw inhoud. Snel en veilig het gewenste publiek van Adobe Experience Platform naar TikTok duwen met Adobe in real-time integratie met TikTok Ads Manager. Bezoek [ TikTok bedrijfs hulpcentrum ](https://ads.tiktok.com/help/article/audiences) voor meer informatie.
 
 >[!IMPORTANT]
 >
@@ -32,7 +32,7 @@ Een atletisch merk kledingartikelen wil bestaande klanten bereiken via hun socia
 
 U moet [!DNL Admin] of [!DNL Operator] toegang hebben tot de TikTok Ads Manager-account waarnaar u het publiek wilt sturen. Meer instructies kunnen op het [ Centrum van de Hulp van TikTok ](https://ads.tiktok.com/help/article/add-users-tiktok-business-center) worden gevonden.
 
-Voordat u gegevens naar uw TikTok Ads Manager-account kunt verzenden, moet u Adobe Experience Platform toestemming geven om toegang te krijgen tot uw advertentieaccount voor `Audience Management` . Deze toestemming kan door [ worden verleend ingaat uw identiteitskaart van de Manager van Advertenties ](#authenticate) in het Experience Platform UI en het verlenen van de toestemming na wordt opnieuw gericht aan uw Rekening van de Manager van de Advertentie van TikTok.
+Voordat u gegevens naar uw TikTok Ads Manager-account kunt verzenden, moet u Adobe Experience Platform toestemming geven om toegang te krijgen tot uw advertentieaccount voor `Audience Management` . Deze toestemming kan door [ worden verleend ingaat uw identiteitskaart van de Manager van Advertenties ](#authenticate) in Experience Platform UI en het verlenen van de toestemming na wordt opnieuw gericht aan uw Rekening van de Manager van de Advertentie van TikTok.
 
 ## Ondersteunde identiteiten {#supported-identities}
 
@@ -44,6 +44,18 @@ TikTok ondersteunt de activering van identiteiten die in de onderstaande tabel w
 | IDFA | Apple-id voor adverteerders | Selecteer de IDFA doelidentiteit wanneer uw bronidentiteit een IDFA namespace is. |
 | Telefoonnummer | Telefoonnummers die zijn hashed met het SHA256-algoritme | Onbewerkte tekst en gehashte telefoonnummers van SHA256 worden ondersteund door Adobe Experience Platform en moeten de indeling E.164 hebben. Wanneer het bronveld hashingkenmerken bevat, schakelt u de optie **[!UICONTROL Apply transformation]** in om de gegevens automatisch te laten hashen bij activering door [!DNL Platform] . |
 | Email | E-mailadressen die met het algoritme SHA256 worden gehasht | Adobe Experience Platform biedt ondersteuning voor zowel platte tekst- als SHA256-e-mailadressen met hashing. Wanneer het bronveld hashingkenmerken bevat, schakelt u de optie **[!UICONTROL Apply transformation]** in om de gegevens automatisch te laten hashen bij activering door [!DNL Platform] . |
+
+{style="table-layout:auto"}
+
+## Ondersteunde doelgroepen {#supported-audiences}
+
+In deze sectie wordt beschreven welke soorten publiek u naar dit doel kunt exporteren.
+
+| Oorsprong publiek | Ondersteund | Beschrijving |
+|---------|----------|----------|
+| [!DNL Segmentation Service] | ✓ | Het publiek produceerde door de Dienst van de Segmentatie van Experience Platform [ ](../../../segmentation/home.md). |
+| Aangepaste uploads | ✓ | Het publiek [ ingevoerde ](../../../segmentation/ui/audience-portal.md#import-audience) in Experience Platform van Csv- dossiers. |
+| [!DNL Federated Audience Composition] | ✓ | Het publiek werd ingevoerd in Experience Platform door [ Federated Samenstelling van het Publiek ](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/start/audiences). |
 
 {style="table-layout:auto"}
 
@@ -68,7 +80,7 @@ Om met deze bestemming te verbinden, volg de stappen die in het [ leerprogramma 
 
 ### Verifiëren voor bestemming {#authenticate}
 
-Als u zich wilt verifiëren naar de bestemming, wordt u omgeleid naar uw [!DNL TikTok Ads Manager] -account en wordt u gemachtigd om het publiek namens u te beheren.
+Als u zich wilt verifiëren bij de bestemming, wordt u omgeleid naar uw [!DNL TikTok Ads Manager] -account en geeft u Adobe toestemming om namens u het publiek te beheren.
 
 ](/help/destinations/assets/catalog/social/tiktok/tiktok-authenticate-destination.png " Beeld van de toestemmingsselectie van TikTok van TikTok UI voor het selecteren van toestemmingen ")![
 
@@ -115,7 +127,7 @@ Doelvelden selecteren:
 
 ## Geëxporteerde gegevens {#exported-data}
 
-Controleer uw [!DNL TikTok Ads Manager] rekening (onder **Assets > Soorten publiek**) om te verifiëren of uw publiek van het Experience Platform met succes werd uitgevoerd. Het publiek wordt gevuld met het type publiek: `Partner Audience` .
+Controleer uw [!DNL TikTok Ads Manager] rekening (onder **Assets > Soorten publiek**) om te verifiëren of uw publiek van Experience Platform met succes werd uitgevoerd. Het publiek wordt gevuld met het type publiek: `Partner Audience` .
 
 ## Gegevensgebruik en -beheer {#data-usage-governance}
 
