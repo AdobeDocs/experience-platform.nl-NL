@@ -1,23 +1,23 @@
 ---
-description: Leer hoe u dataflows voor uw bestemmingen kunt controleren gebruikend het gebruikersinterface van het Experience Platform.
+description: Leer hoe u de gegevensstromen voor uw bestemmingen kunt controleren gebruikend de gebruikersinterface van Experience Platform.
 solution: Experience Platform
 title: Dataflows voor Doelen in UI controleren
 type: Tutorial
 exl-id: 8eb7bb3c-f2dc-4dbc-9cf5-3d5d3224f5f1
-source-git-commit: f10706fbbde9cef112460f5431af24d09b0e0460
+source-git-commit: b814becaed88ce23527dc58f7ec056c05a48379f
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '3468'
+ht-degree: 1%
 
 ---
 
 # Dataflows voor doelen in de UI controleren
 
-Gebruik de diverse bestemmingen in de catalogus van het Experience Platform om uw gegevens van Platform aan ontelbare externe partners te activeren. Platform maakt het proces om de stroom van gegevens aan uw bestemmingen gemakkelijker te volgen door transparantie van gegevensstromen te verstrekken.
+Gebruik de verschillende doelen in de Experience Platform-catalogus om uw gegevens van Platform te activeren voor talloze externe partners. Platform maakt het proces om de stroom van gegevens aan uw bestemmingen gemakkelijker te volgen door transparantie van gegevensstromen te verstrekken.
 
 Het controledashboard voorziet u van een visuele vertegenwoordiging van de reis van een dataflow, met inbegrip van de bestemming die de gegevens worden geactiveerd aan, het type gegevens dat u bekijkt, uitgevoerde gegevens per dataflow looppas, en veel meer.
 
-Dit leerprogramma verstrekt instructies op hoe u of dataflows direct in de bestemmingswerkruimte kunt controleren of het controledashboard gebruiken om dataflows voor uw bestemmingen te controleren gebruikend het gebruikersinterface van het Experience Platform.
+Dit leerprogramma verstrekt instructies op hoe u of dataflows direct in de bestemmingswerkruimte kunt controleren of het controledashboard gebruiken om dataflows voor uw bestemmingen te controleren gebruikend het gebruikersinterface van Experience Platform.
 
 ## Aan de slag {#getting-started}
 
@@ -86,7 +86,7 @@ Er wordt een lijst met afzonderlijke reeksen en de bijbehorende maatstaven weerg
 
 Elke individuele dataflow run toont de volgende details:
 
-- **[!UICONTROL Dataflow run start]**: De tijd waarop de gegevensstroom is gestart. Voor het stromen dataflow looppas, vangt het Experience Platform metriek op het begin van dataflow looppas, in de vorm van uurmetriek wordt gebaseerd. Dit betekent dat voor het stromen dataflow looppas, als een dataflow looppas bijvoorbeeld bij 10:30PM begon, metrisch de begintijd als 10:00 PM in UI toont.
+- **[!UICONTROL Dataflow run start]**: De tijd waarop de gegevensstroom is gestart. Voor het stromen dataflow looppas, legt Experience Platform metriek op het begin van dataflow looppas, in de vorm van uurmetriek vast. Dit betekent dat voor het stromen dataflow looppas, als een dataflow looppas bijvoorbeeld bij 10:30PM begon, metrisch de begintijd als 10:00 PM in UI toont.
 - **[!UICONTROL Processing time]**: De hoeveelheid tijd die nodig was voor het uitvoeren van de gegevensstroom om te verwerken.
    - Bij **[!UICONTROL completed]** -uitvoering wordt bij de verwerkingstijd altijd een uur gemeten.
    - Voor dataflow-run die nog steeds de status **[!UICONTROL processing]** heeft, blijft het venster om alle metriek vast te leggen langer dan een uur open om alle metriek te verwerken die overeenkomen met de dataflow-run. Bijvoorbeeld, zou een dataflow looppas die bij 9:30 AM begon in een verwerkingsstaat één uur en dertig minuten kunnen blijven om alle metriek te vangen en te verwerken. Dan, zodra het verwerkingsvenster sluit en het statuut van de dataflow looppas updates aan **voltooide**, wordt de getoonde verwerkingstijd veranderd in één uur.
@@ -97,11 +97,11 @@ Elke individuele dataflow run toont de volgende details:
 
   >[!IMPORTANT]
   >
-  > Vanaf oktober 2024 brengt Adobe een update uit om de rapportagenauwkeurigheid voor streamingbestemmingen te verbeteren. Deze verbetering zorgt voor een betere afstemming tussen het Experience Platform en de doelplatforms die rapporteren.
+  > Vanaf oktober 2024 brengt Adobe een update uit om de rapportagenauwkeurigheid voor streamingbestemmingen te verbeteren. Deze verbetering zorgt voor een betere afstemming tussen de Experience Platform en de doelplatforms die rapporteren.
   >
   > Vóór deze update heeft **[!UICONTROL Identities failed]** alle activeringspogingen opgenomen. Na deze update wordt alleen de laatste activeringspoging opgenomen in het totale aantal.
   > 
-  > Deze verhoging is momenteel van toepassing op de [ Klant van Google de bestemming ](../../destinations/catalog/advertising/google-customer-match.md) maar zal geleidelijk aan andere Experience Platform die bestemmingen stromen worden uitgevoerd.
+  > Deze verhoging is momenteel van toepassing op de [ Klant van Google de bestemming ](../../destinations/catalog/advertising/google-customer-match.md) maar zal geleidelijk aan andere het stromen bestemmingen van Experience Platform worden uitgevoerd.
   > Na deze verbetering kunnen de gebruikers van de [Google Customer Match-bestemming](../../destinations/catalog/advertising/google-customer-match.md) een verwachte daling in hun totale aantal **[!UICONTROL Identities failed]** zien.
 
 
@@ -121,7 +121,12 @@ Op de detailpagina wordt ook een lijst met mislukte identiteiten en identiteiten
 
 #### (Beta) Publiek-niveau dataflow run monitoring voor streamingdoelen {#audience-level-dataflow-runs-for-streaming-destinations}
 
-U kunt informatie bekijken over de geactiveerde, uitgesloten of mislukte identiteiten uitgesplitst op publieksniveau, voor elk publiek dat deel van dataflow uitmaakt. De publiek-vlakke controle voor het stromen bestemmingen is momenteel beschikbaar voor de [[!DNL Google Customer Match + Display & Video 360]  bestemming ](/help/destinations/catalog/advertising/google-customer-match-dv360.md) slechts.
+U kunt informatie bekijken over de geactiveerde, uitgesloten of mislukte identiteiten uitgesplitst op publieksniveau, voor elk publiek dat deel van dataflow uitmaakt.
+
+De controle op het niveau van het publiek voor het stromen bestemmingen is momenteel beschikbaar slechts voor de volgende bestemmingen:
+
+- [[!DNL Google Customer Match + Display & Video 360]](/help/destinations/catalog/advertising/google-customer-match-dv360.md)
+- [[!DNL Marketo Engage]](/help/destinations/catalog/adobe/marketo-engage.md)
 
 ![ publiek-vlakke controle voor het stromen bestemmingen.](/help/dataflows/assets/ui/monitor-destinations/audience-level-monitoring-streaming.png)
 
