@@ -1,10 +1,10 @@
 ---
 title: AI Assistant in Adobe Experience Platform
-description: Leer hoe u met AI Assistant door Experience Platform- en Real-time Customer Data Platform-concepten kunt navigeren en deze kunt begrijpen, en hoe u informatie over uw objecten kunt gebruiken.
+description: Leer hoe u met AI Assistant door Experience Platform- en Real-Time Customer Data Platform-concepten kunt navigeren en deze kunt begrijpen, en hoe u informatie over uw objecten kunt gebruiken.
 exl-id: 3fed2b1d-75fc-47ce-98d1-a811eb8a1d8e
-source-git-commit: 0ee9135b2b303f4abcc4d5e5c7345e2bff9332f3
+source-git-commit: 4fd40d66ecc2fe7604e157fcd230883c6c48d761
 workflow-type: tm+mt
-source-wordcount: '1718'
+source-wordcount: '1693'
 ht-degree: 0%
 
 ---
@@ -13,11 +13,11 @@ ht-degree: 0%
 
 Lees deze handleiding voor meer informatie over het gebruik van AI Assistant in de gebruikersinterface van Adobe Experience Platform.
 
-## De Hulp van AI van de toegang in de UI van het Experience Platform
+## AI-assistent openen in de gebruikersinterface van Experience Platform
 
-Als u AI Assistant wilt starten, selecteert u de **[!UICONTROL AI Assistant icon]** in de bovenste koptekst van de gebruikersinterface van het Experience Platform.
+Als u AI Assistant wilt starten, selecteert u de **[!UICONTROL AI Assistant icon]** in de bovenste koptekst van de gebruikersinterface van Experience Platform.
 
-![ de homepage van het Experience Platform, met het AI Hulp geselecteerde pictogram en de AI Hulp open interface.](./images/ai-assistant-full-icon.png)
+![ de homepage van Experience Platform, met het AI Hulp geselecteerde pictogram en de AI Hulp open interface.](./images/ai-assistant-full-icon.png)
 
 De interface AI Assistant wordt weergegeven en bevat direct informatie die u nodig hebt om aan de slag te gaan. U kunt de opties onder [!UICONTROL Ideas to get started] gebruiken om vragen en opdrachten te beantwoorden, zoals:
 
@@ -29,7 +29,7 @@ De interface AI Assistant wordt weergegeven en bevat direct informatie die u nod
 
 >[!NOTE]
 >
->De volgende workflow is een voorbeeld waarin het proces voor het maken van een ervaringsgebeurtenisschema wordt gebruikt om te laten zien hoe u AI Assistant kunt gebruiken wanneer u de gebruikersinterface van het Experience Platform gebruikt.
+>De volgende workflow is een voorbeeld waarin het proces voor het maken van een ervaringsgebeurtenisschema wordt gebruikt om te laten zien hoe u AI Assistant kunt gebruiken wanneer u de gebruikersinterface van Experience Platform gebruikt.
 
 Overweeg een gebruiksgeval waarin u de Handel van het a **Apparaat in het Schema van de Gebeurtenis** creeert. Tijdens het maken van het gebeurtenisschema komt u tegen het veld `eventType` . &quot;Op dit punt, hebt u de optie om of uw werkschema weg te gaan en naar de [ grondbeginselen van een schemacompositie ](../xdm/schema/composition.md) documentatie te verwijzen, of u kunt AI Medewerker gebruiken om antwoorden aan uw vragen terug te winnen en extra middelen door de documentatiekoppelingen te vinden die door AI Medewerker worden geadviseerd.&quot;
 
@@ -45,7 +45,7 @@ Nadat u een reactie hebt ontvangen van AI Assistant, kunt u een aantal opties se
 
 ### AI Assistant-functies {#features}
 
-In deze sectie worden de verschillende functies van AI Assistant beschreven die u kunt gebruiken tijdens uw workflows op het Experience Platform.
+In deze sectie worden de verschillende functies van AI Assistant beschreven die u kunt gebruiken tijdens uw workflows op Experience Platform.
 
 ### Operationele gegevensobjecten weergeven {#view-operational-data-objects}
 
@@ -87,7 +87,7 @@ In het voorbeeld hieronder, wordt AI Medewerker gevraagd de volgende vraag: **&q
 
 ![ een vraag over operationele inzichten.](./images/op-insights-question.png)
 
-AI Assistant reageert vervolgens met een tabel waarin uw gegevens en de bijbehorende id&#39;s worden vermeld. Als u de hele tabel met gegevens wilt weergeven, selecteert u het pictogram voor uitvouwen rechtsboven.
+AI Assistant reageert vervolgens met een tabel waarin uw gegevens en de bijbehorende id&#39;s worden vermeld. Selecteer het downloadpictogram (![ pictogram van de Download ](/help/images/icons/download.png)) om de lijst als Csv- dossier te downloaden. Om de volledige lijst te bekijken, selecteer uitvouwen pictogram (![ breid pictogram ](/help/images/icons/expand.png) uit).
 
 ![ een operationeel inzicht antwoord ](./images/op-insights-answer.png)
 
@@ -100,10 +100,6 @@ Als deze wordt gevraagd om een vraag over operationele inzichten, geeft AI Assis
 ![ AI Medewerker die een verklaring op verstrekt hoe het zijn antwoord gegevens verwerkt.](./images/answer-explained.png)
 
 U kunt ook filters en wijzigingen in uw vragen opgeven en u kunt de AI Assistant de opdracht geven zijn bevindingen te genereren op basis van de filters die u opneemt. Bijvoorbeeld, kunt u AI Medewerker vragen om u een trend van de telling van segmentdefinities in de orde van hun gecreeerde datum te tonen, segmentdefinities met nul totale profielen te verwijderen, en maandnamen in plaats van gehelen te gebruiken wanneer het tonen van de gegevens.
-
-**Nota:** De operationele inzichten antwoorden zijn momenteel in bèta. Selecteer het knopinfo-pictogram in de gebruikersinterface van de AI-assistent om de Beta-kennisgeving weer te geven en voor een koppeling naar de documentatie.
-
-![ AI Hulp geselecteerd tooltip pictogram.](./images/op-insights-beta-note.png)
 
 +++
 

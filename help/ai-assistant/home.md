@@ -1,11 +1,11 @@
 ---
 title: Overzicht van AI Assistant
-description: Leer meer over AI Assistant, de nuances en gebruiksgevallen en hoe u deze kunt gebruiken om uw workflow met Adobe Experience Platform en Real-time Customer Data Platform te versnellen.
+description: Leer meer over AI Assistant, de nuances en gebruiksgevallen en hoe u deze kunt gebruiken om uw workflow met Adobe Experience Platform en Real-Time Customer Data Platform te versnellen.
 exl-id: cfd4ac22-fff3-4b50-bbc2-85b6328f603c
-source-git-commit: 9a10db0da1985c5ccaaeb84e040eea9e76ec1ae4
+source-git-commit: e90333d09585c8aa0ef176dcfc4717e86364fd54
 workflow-type: tm+mt
-source-wordcount: '950'
-ht-degree: 8%
+source-wordcount: '927'
+ht-degree: 9%
 
 ---
 
@@ -43,19 +43,19 @@ De [!DNL Knowledge Graph] bestaat uit subgrafieken waarnaar wordt verwezen wanne
 
 * Operationele inzichten van de klant.
 * Operationele inzichten van de klant in verschillende meta-winkels.
-* Documentatie Experience League.
+* Experience League-documentatie.
 
 Er zijn twee klassen vragen om te overwegen alvorens AI Medewerker te vragen:
 
 ### Productkennis {#product-knowledge}
 
-De kennis van het product verwijst naar concepten en onderwerpen die in de documentatie van het Experience League worden gebaseerd. Vragen over productkennis kunnen nader worden omschreven in de volgende subgroepen:
+Productkennis verwijst naar concepten en onderwerpen die zijn gebaseerd op Experience League-documentatie. Vragen over productkennis kunnen nader worden omschreven in de volgende subgroepen:
 
 | Productkennis | Voorbeelden |
 | --- | --- |
 | Aanbevolen lessen | <ul><li>Wat is het verschil tussen een identiteit en een primaire of buitenlandse sleutel?</li><li>Wat zijn lookalike doelgroepen?</li></ul> |
 | Openbare detectie | <ul><li>Hoe kan ik deze dataset uitvoeren?</li><li>Zijn er regelingen voor klanten in de gezondheidszorg?</li></ul> |
-| Problemen oplossen | <ul><li>Waarom kan ik geen schema aanzetten dat door Adobe voor profiel wordt bezeten?</li><li>Waarom kan ik een segment niet verwijderen?</li></ul> |
+| Problemen oplossen | <ul><li>Waarom kan ik geen schema inschakelen dat eigendom is van Adobe voor profiel?</li><li>Waarom kan ik een segment niet verwijderen?</li></ul> |
 
 {style="table-layout:auto"}
 
@@ -64,10 +64,6 @@ Bekijk de volgende video voor aanvullende informatie over productkennis van AI A
 >[!VIDEO](https://video.tv.adobe.com/v/3438032/?learn=on)
 
 ### Operationele inzichten {#operational-insights}
-
->[!IMPORTANT]
->
->De antwoorden van de operationele inzichten zijn in bèta. Iedereen die toegang tot de **toestemming heeft van de Mening Operationele Inzichten** {zal toegang tot operationele inzichten antwoorden hebben.
 
 De operationele inzichten verwijzen naar antwoorden AI Medewerker produceert over uw voorwerpen van meta- gegevens (attributen, publiek, dataflows, datasets, bestemmingen, reizen, schema&#39;s, en bronnen), met inbegrip van tellingen, raadplegingen, en lijneffect. Er worden geen gegevens in de sandbox weergegeven.
 
@@ -100,7 +96,7 @@ Bekijk de volgende video voor aanvullende informatie over operationele inzichten
 
 Momenteel is het bereik van AI Assistant als volgt:
 
-* [ de kennis van het Product ](./home.md#product-knowledge): De Medewerker van AI kan de vragen van de productkennis voor Experience Platform, Real-time Customer Data Platform en Adobe Journey Optimizer beantwoorden. U kunt ook in de onderwerpen van de productkennis voor Customer Journey Analytics, maar slechts door de Customer Journey Analytics UI delven.
+* [ de kennis van het Product ](./home.md#product-knowledge): De Medewerker van AI kan de vragen van de productkennis voor Experience Platform, Real-Time Customer Data Platform en Adobe Journey Optimizer beantwoorden. U kunt ook onderwerpen over productkennis voor Customer Journey Analytics bespreken, maar alleen via de interface van Customer Journey Analytics.
 * [ Operationele inzichten ](./home.md#operational-insights): U kunt AI Medewerker met vragen over operationele inzichten op de volgende gegevensvoorwerpen vragen: attributen, publiek, dataflows, datasets, bestemmingen, reizen, schema&#39;s, en bronnen.
 
 ## Volgende stappen
