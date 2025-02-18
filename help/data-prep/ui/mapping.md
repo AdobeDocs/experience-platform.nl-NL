@@ -1,18 +1,18 @@
 ---
-keywords: Experience Platform;home;populaire onderwerpen;map csv;map csv-bestand;map csv-bestand toewijzen aan xdm;map csv aan xdm;ui guide;mapper;mapping;data prep;data voorbereiden;voorbereiden van gegevens;
+keywords: Experience Platform;home;populaire onderwerpen;map csv;map csv-bestand;map csv-bestand toewijzen aan xdm;map csv aan xdm;ui-gids;mapper;mapping;data prep;gegevens voorbereiden;gegevens voorbereiden;
 title: UI-gids voor gegevenprepress
-description: Dit document biedt aanwijzingen voor het gebruik van functies voor gegevensvoorvoegsel in de gebruikersinterface van het platform om CSV-bestanden toe te wijzen aan een XDM-schema.
+description: Leer hoe u functies voor gegevensvoorvoegsels in de gebruikersinterface van Experience Platform gebruikt om CSV-bestanden toe te wijzen aan een XDM-schema.
 exl-id: fafa4aca-fb64-47ff-a97d-c18e58ae4dae
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: 06aa84aaccf3aeb45bfe19f8741b6bca96258d89
 workflow-type: tm+mt
-source-wordcount: '1739'
+source-wordcount: '1371'
 ht-degree: 0%
 
 ---
 
 # UI-gids voor gegevenprepress
 
-Dit document biedt aanwijzingen voor het gebruik van functies voor gegevensvoorvoegsels in de Adobe Experience Platform-gebruikersinterface om CSV-bestanden toe te wijzen aan een XDM-schema.
+Lees deze gids om te leren hoe te om [ gegevens prep ](../home.md) kaartfuncties in het gebruikersinterface van Adobe Experience Platform te gebruiken om dossiers in kaart te brengen CSV aan een [ Model van de Gegevens van de Ervaring (XDM) schema ](../../xdm/home.md).
 
 ## Aan de slag
 
@@ -25,63 +25,22 @@ Deze zelfstudie vereist een goed begrip van de volgende platformcomponenten:
 * [[!DNL Real-Time Customer Profile]](../../profile/home.md): biedt een uniform, real-time consumentenprofiel dat is gebaseerd op geaggregeerde gegevens van meerdere bronnen.
 * [ Bronnen ](../../sources/home.md): Experience Platform staat gegevens toe om van diverse bronnen worden opgenomen terwijl het voorzien van u van de capaciteit om, inkomende gegevens te structureren te etiketteren en te verbeteren gebruikend de diensten van het Platform.
 
-## Gegevens
+## Toegang tot de toewijzingsinterface in de gebruikersinterface
 
->[!TIP]
->
->U kunt tot gegevens toegang hebben die door om het even welke bron van de broncatalogus te selecteren. Voor meer informatie, zie het [ overzicht van bronnen ](../../sources/home.md).
+U kunt tot de toewijzingsinterface in UI door twee verschillende wegen toegang hebben.
 
-Voordat u uw CSV-gegevens kunt toewijzen aan een XDM-schema, moet u eerst de details van de gegevensstroom vaststellen.
+1. Selecteer in de gebruikersinterface van Experience Platform de optie **[!UICONTROL Workflows]** in de linkernavigatie en selecteer vervolgens **[!UICONTROL Map CSV to XDM schema]** . Geef vervolgens uw gegevens op over de gegevensstroom en selecteer de gegevens die u wilt invoeren. Wanneer gebeëindigd, wordt u genomen aan de toewijzingsinterface waar u afbeelding tussen uw brongegevens en een schema XDM kunt vormen.
+2. U kunt tot de toewijzingsinterface door de bronwerkruimte ook toegang hebben.
 
-De [!UICONTROL Dataflow detail] pagina staat u toe om te selecteren of u uw gegevens CSV in een bestaande doeldataset of een nieuwe doeldataset wilt opnemen. Een bestaande dataset komt met een vooraf gebouwd doelschema om uw gegevens aan in kaart te brengen, terwijl een nieuwe dataset u vereist om een bestaand schema te selecteren, of een nieuw schema tot stand te brengen, om uw gegevens aan in kaart te brengen.
+## CSV-bestanden toewijzen aan een XDM-schema
 
-### Een bestaande doelgegevensset gebruiken
+Gebruik de toewijzingsinterface en de uitgebreide toolset die het verstrekt om gegevensgebieden van uw bronschema aan hun aangewezen doelXDM gebieden in het doelschema met succes in kaart te brengen.
 
-Als u uw CSV-gegevens in een bestaande gegevensset wilt opnemen, selecteert u **[!UICONTROL Existing dataset]** . U kunt of een bestaande dataset terugwinnen gebruikend de [!UICONTROL Advanced search] optie of door door de lijst van bestaande datasets in het dropdown menu te scrollen.
-
-Selecteer een gegevensset en geef een naam op voor de gegevensstroom en een optionele beschrijving.
-
-Tijdens dit proces kunt u ook [!UICONTROL Error diagnostics] en [!UICONTROL Partial ingestion] inschakelen. In [!UICONTROL Error diagnostics] kunnen gedetailleerde foutberichten worden gegenereerd voor onjuiste records in de gegevensstroom, terwijl u in [!UICONTROL Partial ingestion] gegevens met fouten kunt invoeren tot een bepaalde drempel die u handmatig definieert. Zie het [ gedeeltelijke overzicht van partijingestie ](../../ingestion/batch-ingestion/partial.md) voor meer informatie.
-
-![ bestaand-dataset ](../images/ui/mapping/existing-dataset.png)
-
-### Een nieuwe doelgegevensset gebruiken
-
-Als u uw CSV-gegevens in een nieuwe gegevensset wilt opnemen, selecteert u **[!UICONTROL New dataset]** en geeft u vervolgens een naam voor de uitvoergegevensset en een optionele beschrijving op. Selecteer vervolgens het schema dat u wilt toewijzen met de optie [!UICONTROL Advanced search] of door door de lijst met bestaande schema&#39;s in het vervolgkeuzemenu te bladeren.
-
-Selecteer een schema, geef een naam voor de gegevensstroom en een optionele beschrijving op en pas vervolgens de [!UICONTROL Error diagnostics] - en [!UICONTROL Partial ingestion] -instellingen toe die u voor de gegevensstroom wilt gebruiken. Selecteer **[!UICONTROL Next]** als u klaar bent.
-
-![ nieuw-dataset ](../images/ui/mapping/new-dataset.png)
-
-## Gegevens selecteren
-
-De stap [!UICONTROL Select data] wordt weergegeven, zodat u een interface hebt om uw lokale bestanden te uploaden en een voorvertoning van de structuur en inhoud ervan weer te geven. Selecteer **[!UICONTROL Choose files]** om een CSV-bestand van uw lokale systeem te uploaden. U kunt ook het CSV-bestand dat u wilt uploaden naar het deelvenster [!UICONTROL Drag and drop files] slepen.
-
->[!TIP]
->
->Momenteel worden alleen CSV-bestanden ondersteund door lokale bestanden te uploaden. De maximale bestandsgrootte voor elk bestand is 1 GB.
-
-![ kiezen-dossiers ](../images/ui/mapping/choose-files.png)
-
-Nadat het bestand is geüpload, wordt de voorbeeldinterface bijgewerkt en worden de inhoud en de structuur van het bestand weergegeven.
-
-![ voorproef-steekproef-gegevens ](../images/ui/mapping/preview-sample-data.png)
-
-Afhankelijk van het bestand kunt u een kolomscheidingsteken selecteren, zoals tabs, komma&#39;s, pijpen of een aangepast kolomscheidingsteken voor de brongegevens. Selecteer de vervolgkeuzepijl **[!UICONTROL Delimiter]** en selecteer vervolgens het juiste scheidingsteken in het menu.
-
-Selecteer **[!UICONTROL Next]** als u klaar bent.
-
-![ delimiter ](../images/ui/mapping/delimiter.png)
-
-## Toewijzing
-
-De interface **[!UICONTROL mapping]** voorziet u van een uitvoerig hulpmiddel om brongebieden van uw bronschema aan hun aangewezen doelXDM gebieden in het doelschema in kaart te brengen.
-
-![ kaart-csv-aan-xdm ](../images/ui/mapping/map-csv-to-xdm.png)
+![ de toewijzingsinterface in Experience Platform UI.](../images/ui/mapping/base_mapping.png)
 
 ### De toewijzingsinterface {#mapping-interface}
 
-De toewijzingsinterface bevat een dashboard dat informatie verschaft over de status van uw toewijzingsvelden binnen de context van de innameworkflow. Op het dashboard worden de volgende gegevens over de toewijzingsvelden weergegeven:
+Verwijs naar het dashboard bij de bovenkant van de interface voor informatie over de gezondheid van uw kaartgebieden binnen de context van de innamewerkschema. Op het dashboard worden de volgende gegevens over de toewijzingsvelden weergegeven:
 
 | Eigenschap | Beschrijving |
 | --- | --- |
@@ -90,38 +49,24 @@ De toewijzingsinterface bevat een dashboard dat informatie verschaft over de sta
 | [!UICONTROL Identity fields] | Hiermee geeft u het totale aantal toewijzingsvelden weer dat als identiteit is gedefinieerd. Deze toewijzingsvelden worden aangegeven met een vingerafdrukpictogram. |
 | [!UICONTROL Errors] | Geeft het aantal onjuiste toewijzingsvelden weer. |
 
-![ top-panel ](../images/ui/mapping/top-panel.png)
+{style="table-layout:auto"}
 
-De toewijzingsinterface biedt ook een deelvenster met opties die u kunt kiezen om beter te communiceren of door de toewijzingsvelden te filteren.
+Vervolgens kunt u de opties in de koptekst gebruiken om beter te communiceren met of te filteren op de toewijzingsvelden.
 
-![ tweede-paneel ](../images/ui/mapping/second-panel.png)
-
-Als u naar een bepaalde toewijzingsset wilt zoeken, selecteert u **[!UICONTROL Search source fields]** en voert u de naam in van de brongegevens die u wilt isoleren.
-
-![ onderzoek ](../images/ui/mapping/search.png)
-
-Selecteer **[!UICONTROL All source fields]** om een vervolgkeuzemenu met filteropties weer te geven, zodat u de weergave van de toewijzingsinterface beter omlaag kunt versmallen.
-
-De filteropties zijn:
-
-| Source-velden | Beschrijving |
+| Optie | Beschrijving |
 | --- | --- |
-| [!UICONTROL All source fields] | Met deze optie worden alle bronvelden van het bronschema weergegeven. Deze optie wordt standaard weergegeven. |
-| [!UICONTROL Required fields] | Met deze optie filtert u het bronschema zodat alleen de velden worden weergegeven die nodig zijn om de toewijzing te voltooien. |
-| [!UICONTROL Identity fields] | Met deze optie filtert u het bronschema zodat alleen de velden worden weergegeven die zijn gemarkeerd voor Identiteit. |
-| [!UICONTROL Mapped fields] | Met deze optie filtert u het bronschema zodat alleen de velden worden weergegeven die al zijn toegewezen. |
-| [!UICONTROL Unmapped fields] | Met deze optie filtert u het bronschema zodat alleen de velden worden weergegeven die nog moeten worden toegewezen. |
-| [!UICONTROL Fields with recommendation] | Met deze optie filtert u het bronschema om alleen de velden weer te geven die toewijzingsaanbevelingen bevatten. |
+| [!UICONTROL Search source fields] | Gebruik de zoekbalk om naar een specifiek bronveld te navigeren. |
+| [!UICONTROL All fields] | Selecteer **[!UICONTROL All fields]** om een vervolgkeuzemenu met opties weer te geven waarmee u de toewijzingen wilt filteren. De beschikbare filteropties omvatten:<ul><li>**[!UICONTROL Required fields]**: Filtert de interface zodat alleen velden worden weergegeven die vereist zijn om de workflow te voltooien.</li><li> **[!UICONTROL Identity fields]**: filtert de interface zodat alleen velden worden weergegeven die zijn gemarkeerd als id&#39;s.</li><li>**[!UICONTROL Mapped fields]**: filtert de interface zodat alleen velden worden weergegeven die al zijn toegewezen.</li><li>**[!UICONTROL Unmapped fields]**: Filtert de interface zodat alleen velden worden weergegeven die nog moeten worden toegewezen.</li><li>**[!UICONTROL Fields with errors]**: filtert de interface zodat alleen velden met fouten worden weergegeven.</li></ul> |
+| [!UICONTROL New field type] | Selecteer **[!UICONTROL New field type]** om een nieuw veld of een berekend veld toe te voegen. Voor meer informatie, lees de sectie op [ toevoegend een nieuw gebiedstype ](#add-a-new-field-type). |
+| [!UICONTROL Import mappings] | Selecteer **[!UICONTROL Import mappings]** om toewijzingen te importeren uit een bestaand bestand of een bestaande gegevensstroom. Voor meer informatie, lees de sectie over [ het invoeren van afbeeldingen ](#import-mapping). |
+| [!UICONTROL Validate] | Selecteer **[!UICONTROL Validate]** om te controleren op fouten in uw toewijzingen. |
+| [!UICONTROL Download template] | Selecteer **[!UICONTROL Download template]** om een CSV-bestand met uw toewijzingen te exporteren en te downloaden. |
+| [!UICONTROL Preview data] | Selecteer **[!UICONTROL Preview data]** om het voorproefpaneel te gebruiken en de structuur en de inhoud van uw brondataset te inspecteren. |
+| [!UICONTROL Clear all] | Selecteer **[!UICONTROL Clear all]** om alle toewijzingen in de interface te verwijderen. |
 
-Selecteer **[!UICONTROL Fields with errors]** om alle toewijzingsvelden met fouten weer te geven.
+{style="table-layout:auto"}
 
-![ filter ](../images/ui/mapping/filter.png)
-
-Er wordt een geïsoleerde weergave van onjuiste toewijzingsvelden weergegeven, zodat u fouten kunt verhelpen met intelligente toewijzingsaanbevelingen of met de handmatige toewijzingsstructuur.
-
-![ gebieden-met-fouten ](../images/ui/mapping/fields-with-errors.png)
-
-### Een nieuw veldtype toevoegen
+### Een nieuw veldtype toevoegen {#add-a-new-field-type}
 
 U kunt een nieuw toewijzingsveld of een berekend veld toevoegen door **[!UICONTROL New field type]** te selecteren.
 
@@ -129,23 +74,19 @@ U kunt een nieuw toewijzingsveld of een berekend veld toevoegen door **[!UICONTR
 
 Als u een nieuw toewijzingsveld wilt toevoegen, selecteert u **[!UICONTROL New field type]** en selecteert u **[!UICONTROL Add new field]** in het vervolgkeuzemenu dat wordt weergegeven.
 
-![ toe:voegen-nieuw-gebied ](../images/ui/mapping/add-new-field.png)
+![ de toewijzingsinterface met &quot;voeg nieuw gebied&quot;geselecteerde knoop toe.](../images/ui/mapping/add_new_field.png)
 
 Selecteer vervolgens het bronveld dat u wilt toevoegen in het bronschema dat wordt weergegeven en selecteer **[!UICONTROL Select]** .
 
-![ selecteren-nieuw-gebied ](../images/ui/mapping/select-new-field.png)
+![ het bronschema met &quot;land&quot;geselecteerd als extra nieuw gebied.](../images/ui/mapping/source_field.png)
 
 De toewijzingsinterface wordt bijgewerkt met het bronveld dat u hebt geselecteerd en een leeg doelveld. Selecteer **[!UICONTROL Map target field]** om het nieuwe bronveld toe te wijzen aan het juiste doel-XDM-veld.
 
-![ kaart-doel-gebied ](../images/ui/mapping/map-target-field.png)
+![ de kaartinterface met een nieuw en unmapped brongebied.](../images/ui/mapping/new_field_added.png)
 
 Er wordt een interactieve doelschemastructuur weergegeven, waarmee u handmatig door het doelschema kunt bladeren en het juiste doel-XDM-veld voor uw bronveld kunt vinden.
 
-![ hand-afbeelding ](../images/ui/mapping/manual-mapping.png)
-
-Wanneer gebeëindigd, selecteer het schemapictogram om de interface van het doelschema te sluiten.
-
-![ schema-boom ](../images/ui/mapping/schema-tree.png)
+![ de interactieve boom van het doelschema met een nieuw geselecteerd doelgebied.](../images/ui/mapping/add_target_field.png)
 
 #### Berekende velden {#calculated-fields}
 
@@ -153,9 +94,9 @@ Met berekende velden kunnen waarden worden gemaakt op basis van de kenmerken in 
 
 Als u een berekend veld wilt maken, selecteert u **[!UICONTROL New field type]** en selecteert u vervolgens **[!UICONTROL Add calculated field]**
 
-![ toe:voegen-berekend-gebied ](../images/ui/mapping/add-calculated-field.png)
+![ de kaartinterface met &quot;voeg berekende geselecteerde gebied&quot;knoop toe.](../images/ui/mapping/new_calculated_field.png)
 
-Het deelvenster **[!UICONTROL Create calculated field]** wordt weergegeven. Het linkerdialoogvenster bevat de velden, functies en operatoren die in berekende velden worden ondersteund. Selecteer een van de tabbladen om functies, velden of operatoren toe te voegen aan de expressie-editor.
+Het venster **[!UICONTROL Create calculated field]** wordt weergegeven. Gebruik de interface om de berekende velden in te voeren en naar het dialoogvenster links te verwijzen voor ondersteunde velden, functies en operatoren.
 
 | Tabtoets | Beschrijving |
 | --- | ----------- |
@@ -163,83 +104,59 @@ Het deelvenster **[!UICONTROL Create calculated field]** wordt weergegeven. Het 
 | [!UICONTROL Field] | Het tabblad Veld bevat velden en kenmerken die beschikbaar zijn in het bronschema. |
 | [!UICONTROL Operator] | Het tabblad Operatoren bevat een lijst met operatoren die beschikbaar zijn om de gegevens te transformeren. |
 
-![ lusjes ](../images/ui/mapping/tabs.png)
+![ De berekende gebiedsinterface ](../images/ui/mapping/calculated_field.png)
 
 U kunt handmatig velden, functies en operatoren toevoegen met de expressieeditor in het midden. Selecteer de editor om een expressie te maken. Als u klaar bent, selecteert u **[!UICONTROL Save]** om door te gaan.
 
-![ creeer-berekend-gebied ](../images/ui/mapping/create-calculated-field.png)
+### Toewijzing importeren {#import-mapping}
 
-### Toewijzing importeren {#import}
+U kunt de handmatige configuratietijd van het gegevensinvoerproces verminderen en fouten beperken door de functionaliteit voor het toewijzen van gegevens aan prep te gebruiken. U kunt toewijzingen importeren vanuit een bestaande flow of uit een geëxporteerd bestand.
 
-U kunt de afbeelding van een bestaande gegevensstroom opnieuw gebruiken om de handmatige configuratietijd van uw gegevensinvoer te verminderen en fouten te beperken. Selecteer **[!UICONTROL Import mapping]** om een bestaande toewijzing opnieuw te gebruiken.
+>[!BEGINTABS]
 
-![ invoer-afbeelding ](../images/ui/mapping/import-mapping.png)
+>[!TAB  de afbeelding van de Invoer van stroom ]
 
-Het venster [!UICONTROL Import mapping] wordt weergegeven en bevat een lijst met gegevensstromen waaruit u kunt kiezen.
+Als u verscheidene gegevensstromen hebt die op gelijkaardige brondossiers en doelschema&#39;s worden gebaseerd, dan kunt u bestaande afbeelding invoeren en hen voor nieuwe gegevensstromen opnieuw gebruiken.
 
-Selecteer het voorvertoningspictogram om een voorvertoning weer te geven van de toewijzing van de gegevensstroom die u hebt geselecteerd.
+Als u toewijzingen wilt importeren uit een bestaande gegevensstroom, selecteert u **[!UICONTROL Import mappings]** en selecteert u vervolgens **[!UICONTROL Import mapping from flow]** .
 
-![ lijst-afbeelding ](../images/ui/mapping/list-mapping.png)
+![ de kaartinterface met &quot;de invoerafbeelding&quot;en &quot;de invoerafbeelding van stroom&quot;selecteerde.](../images/ui/mapping/import_from_flow.png)
 
-In het voorvertoningsvenster kunt u bestaande toewijzingen controleren voordat u deze importeert naar uw gegevensstroom. Nadat u de toewijzing hebt geverifieerd, kunt u **[!UICONTROL Back]** selecteren om terug te keren naar de lijst met gegevensstromen en een andere set toewijzingen te inspecteren. U kunt ook **[!UICONTROL Select]** selecteren om door te gaan.
+Vervolgens gebruikt u het pop-upvenster om de gegevensstroom te zoeken waarvan u de toewijzing wilt importeren. Tijdens deze stap, kunt u de onderzoeksfunctie ook gebruiken om een specifieke gegevensstroom te isoleren en het terug te winnen het in kaart brengt. Selecteer **[!UICONTROL Select]** als u klaar bent.
 
-![ voorproef-afbeelding ](../images/ui/mapping/preview-mapping.png)
+![ een lijst van bestaande gegevensstromen de waarvan overeenkomstige afbeeldingen kunnen worden ingevoerd.](../images/ui/mapping/import_flow_window.png)
 
-U kunt ook de toewijzing selecteren die u wilt importeren in de lijst met gegevensstromen. Selecteer de gegevensstroom die de afbeelding bevat die u wilt importeren en selecteer vervolgens **[!UICONTROL Select]** om verder te gaan.
+>[!TAB  de afbeelding van de Invoer van dossier ]
 
-![ selecteren-afbeelding ](../images/ui/mapping/select-mapping.png)
+In sommige gevallen moet u mogelijk een groot aantal toewijzingen voor uw gegevens implementeren. U kunt dit handmatig doen met de toewijzingsinterface, maar u kunt ook uw toewijzingssjabloon exporteren en uw toewijzingen op een offline werkblad configureren om tijd te besparen en gebruikerstijden op Experience Platform te voorkomen.
 
-De interface wordt bijgewerkt met de toewijzing u invoerde.
+Als u toewijzingen wilt importeren uit een geëxporteerd bestand, selecteert u **[!UICONTROL Import mappings]** en selecteert u vervolgens **[!UICONTROL Import mapping from file]** .
 
->[!NOTE]
->
->Om het even welke bestaande bijstellingsreeksen die u vestigt of de kaartaanbevelingen van ML worden vervangen door de afbeelding die u uit een bestaande dataflow invoerde.
+![ de afbeeldingsinterface met &quot;invoer afbeelding&quot;en &quot;invoer afbeelding van dossier&quot;selecteerde.](../images/ui/mapping/import_from_file.png)
 
-![ afbeelding-ingevoerde ](../images/ui/mapping/mapping-imported.png)
+Gebruik vervolgens het venster [!UICONTROL Upload template] om een CSV-kopie van uw toewijzingen te downloaden. Vervolgens kunt u uw toewijzingen lokaal op uw apparaat configureren met behulp van software die het bewerken van CSV-bestandstypen ondersteunt. Tijdens deze stap, moet u ervoor zorgen dat u slechts de gebieden gebruikt die in uw brondossier en doelschema worden verstrekt.
 
-Selecteer **[!UICONTROL Preview data]** om toewijzingsresultaten van maximaal 100 rijen met steekproefgegevens van de geselecteerde dataset te zien.
+![ uploadt malplaatjevenster dat opties toont om een uitgevoerd csv- dossier van de afbeeldingen te downloaden en te uploaden.](../images/ui/mapping/upload_template.png)
 
-![ voorproef-gegevens ](../images/ui/mapping/preview-data.png)
++++Selecteren om een voorbeeld van een geëxporteerd toewijzingsbestand weer te geven
 
-Tijdens de voorvertoning krijgt de identiteitskolom de prioriteit als het eerste veld, omdat dit de belangrijkste informatie is die nodig is voor het valideren van toewijzingsresultaten. Selecteer **[!UICONTROL Close]** als u klaar bent.
+![ het gedownloade csv- dossier van het kaartmalplaatje.](../images/ui/mapping/mapping_csv_file.png)
 
-![ voorproef-scherm ](../images/ui/mapping/preview-screen.png)
++++
 
-Selecteer **[!UICONTROL Clear all mappings]** als u alle toewijzingsvelden wilt verwijderen.
+Als u klaar bent, selecteert u **[!UICONTROL Upload file]** en selecteert u het bijgewerkte CSV-bestand van uw toewijzingen. Wacht een korte tijd tot het systeem is verwerkt en selecteer vervolgens **[!UICONTROL Done]** .
 
-![ duidelijk-allen ](../images/ui/mapping/clear-all.png)
+![ uploadt malplaatjevenster met een nieuw geupload dossier.](../images/ui/mapping/upload_successful.png)
 
-### De toewijzingsinterface gebruiken
+>[!ENDTABS]
 
-Het platform verstrekt automatisch intelligente aanbevelingen voor auto-in kaart gebrachte gebieden die op het doelschema of de dataset worden gebaseerd dat u selecteerde. U kunt toewijzingsregels handmatig aanpassen aan uw gebruikscase of gedupliceerde toewijzingsvelden corrigeren om eventuele fouten te wissen.
+Als de toewijzingen zijn voltooid, kunt u nu **[!UICONTROL Finish]** selecteren en doorgaan naar de volgende stap om de gegevensstroom te voltooien.
 
-![ afbeelding-interface ](../images/ui/mapping/mapping-interface.png)
-
-Selecteer het gloeilamppictogram in het doelveld dat u wilt aanpassen.
-
-![ afbeelding-recc ](../images/ui/mapping/mapping-recc.png)
-
-Het pop-upvenster [!UICONTROL Mapping recommendations] wordt weergegeven met een lijst aanbevolen doelvelden die aan een bepaald bronveld kunnen worden toegewezen. Standaard wordt de eerste aanbeveling automatisch toegepast.
-
-Soms is er meer dan één aanbeveling beschikbaar voor het bronschema. Wanneer dit gebeurt, toont de kaart de meest prominente aanbeveling, die door een pictogram wordt gevolgd dat het aantal extra beschikbare aanbevelingen bevat. Als u het gloeilamppictogram selecteert, wordt een lijst met aanvullende aanbevelingen weergegeven. U kunt één van de afwisselende aanbevelingen kiezen door checkbox naast de aanbeveling te selecteren u aan in plaats daarvan wilt in kaart brengen.
-
-Hier kunt u het geselecteerde doelveld wijzigen om een fout te corrigeren of het te gebruiken geval te laten overeenkomen.
-
-U kunt ook **[!UICONTROL Select manually]** selecteren om handmatig de interactieve toewijzingsstructuur van het doelschema te gebruiken.
-
-![ recc-paneel ](../images/ui/mapping/recc-panel.png)
-
-De toewijzingsinterface van het doelschema verschijnt in de zelfde mening zoals uw toewijzingsgebieden, toestaand u om kaartparen binnen het zelfde scherm te wijzigen. Selecteer het doelveld dat bij uw gebruikscase past of corrigeer de fouten.
-
-![ selecteren-doel-gebied ](../images/ui/mapping/select-target-field.png)
-
-Als u klaar bent, selecteert u **[!UICONTROL Finish]** om door te gaan.
-
-![ beëindigen ](../images/ui/mapping/finish.png)
+![ de kaartinterface met een volledige reeks afbeeldingen.](../images/ui/mapping/completed_mappings.png)
 
 ## Volgende stappen
 
-Door dit document te lezen, hebt u een CSV-bestand met succes toegewezen aan een doel-XDM-schema met behulp van de toewijzingsinterface in de interface van het Platform. Raadpleeg de volgende documenten voor meer informatie:
+U kunt nu een CSV-bestand met succes toewijzen aan een doel-XDM-schema met behulp van de toewijzingsinterface in de gebruikersinterface van Experience Platform. Lees de volgende documenten voor meer informatie:
 
 * [Overzicht van Data Prep](../home.md)
 * [Overzicht van bronnen](../../sources/home.md)
