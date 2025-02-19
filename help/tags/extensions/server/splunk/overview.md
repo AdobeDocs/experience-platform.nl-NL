@@ -2,7 +2,7 @@
 title: Overzicht van gesplitste extensie
 description: Leer over de uitbreiding Splunk voor gebeurtenis door:sturen in Adobe Experience Platform.
 exl-id: 653b5897-493b-44f2-aeea-be492da2b108
-source-git-commit: bfbad3c11df64526627e4ce2d766b527df678bca
+source-git-commit: 0d98183838125fac66768b94bc1993bde9a374b5
 workflow-type: tm+mt
 source-wordcount: '958'
 ht-degree: 0%
@@ -11,7 +11,7 @@ ht-degree: 0%
 
 # Overzicht van splitsingsextensie
 
-[ Splunk ](https://www.splunk.com) is een observiteitsplatform dat onderzoek, analyse, en visualisatie voor actionable inzichten op uw gegevens verstrekt. De Splunk [ gebeurtenis die ](../../../ui/event-forwarding/overview.md) uitbreidingshefboomwerkingen [ de Inzameling van de Gebeurtenis van HTTP van de Splunk ](https://docs.splunk.com/Documentation/Splunk/8.2.5/Data/HECRESTendpoints) door:sturen gebeurtenissen van de Edge Network van Adobe Experience Platform naar de [ Verzameling van de Gebeurtenis van HTTP van de Splunk ](https://docs.splunk.com/Documentation/Splunk/8.2.5/Data/UsetheHTTPEventCollector).
+[ Splunk ](https://www.splunk.com) is een observiteitsplatform dat onderzoek, analyse, en visualisatie voor actionable inzichten op uw gegevens verstrekt. De Splunk [ gebeurtenis die ](../../../ui/event-forwarding/overview.md) uitbreidingshefboomwerkingen [ de Inzameling van de Gebeurtenis van HTTP van de Splunk ](https://docs.splunk.com/Documentation/Splunk/8.2.5/Data/HECRESTendpoints) door:sturen gebeurtenissen van Adobe Experience Platform Edge Network naar de [ Verzameling van de Gebeurtenis van HTTP van de Splunk ](https://docs.splunk.com/Documentation/Splunk/8.2.5/Data/UsetheHTTPEventCollector).
 
 Splunk gebruikt dragertokens als authentificatiemechanisme om met de Verzameling API van de Gebeurtenis van de Splunk te communiceren.
 
@@ -38,6 +38,7 @@ U moet ook de volgende technische waarden hebben om de extensie te configureren:
 
 * Een [ teken van de Collector van de Gebeurtenis ](https://docs.splunk.com/Documentation/Splunk/8.2.5/Data/UsetheHTTPEventCollector#Create_an_Event_Collector_token_on_Splunk_Cloud_Platform). Tokens hebben doorgaans de volgende UUIDv4-indeling: `12345678-1234-1234-1234-1234567890AB`.
 * Het adres en de haven van de de platforminstantie van Splunk voor uw organisatie. Het adres en de poort van een platforminstantie hebben doorgaans de volgende indeling: `mysplunkserver.example.com:443`.
+
   >[!IMPORTANT]
   >
   > Splunk-eindpunten waarnaar wordt verwezen in het doorsturen van gebeurtenissen, mogen alleen poort `443` gebruiken. Niet-standaard havens worden momenteel niet gesteund in gebeurtenis die implementaties door:sturen.
@@ -84,7 +85,7 @@ De volgende stap bestaat uit het toewijzen van de Splunk-gebeurteniseigenschappe
 
 ### Gegevens valideren in Splunk {#validate}
 
-Nadat het creëren van en het uitvoeren van de gebeurtenis door:sturen regel, bevestig of de gebeurtenis die naar Splunk API wordt verzonden zoals verwacht in Splunk UI wordt getoond. Als de gebeurtenisinzameling en de integratie van het Experience Platform succesvol waren, zult u gebeurtenissen binnen de console van de Splunk als zo zien zien:
+Nadat het creëren van en het uitvoeren van de gebeurtenis door:sturen regel, bevestig of de gebeurtenis die naar Splunk API wordt verzonden zoals verwacht in Splunk UI wordt getoond. Als de gebeurtenisinzameling en de integratie van Experience Platform succesvol waren, zult u gebeurtenissen binnen de console van de Splunk als zo zien:
 
 ![ gegevens die van de Gebeurtenis in Splunk UI tijdens bevestiging verschijnen ](../../../images/extensions/server/splunk/splunk-data.png)
 

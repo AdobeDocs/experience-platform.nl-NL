@@ -3,7 +3,7 @@ title: Extensie Google Ads Enhanced Conversies
 description: Meer informatie over de extensie Google Ads Enhanced Conversions voor het doorsturen van gebeurtenissen in Adobe Experience Platform.
 exl-id: 65cdff40-276f-4481-9621-6c6861dbd412
 last-substantial-update: 2022-11-23T00:00:00Z
-source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
+source-git-commit: 0d98183838125fac66768b94bc1993bde9a374b5
 workflow-type: tm+mt
 source-wordcount: '1188'
 ht-degree: 0%
@@ -47,7 +47,7 @@ In de volgende video wordt een inleiding gegeven op de extensie [!DNL Enhanced C
 
 ### De extensie [!DNL Google Global Site Tag] configureren en installeren
 
-Navigeer naar de gebruikersinterface van [!UICONTROL Data Collection] of het Experience Platform en selecteer **[!UICONTROL Tags]** in de linkernavigatie. Selecteer de eigenschap tag waarop u de extensie wilt installeren en selecteer vervolgens **[!UICONTROL Extensions]** in de linkernavigatie. Zoek onder het tabblad **[!UICONTROL Catalog]** de extensie [!UICONTROL Google Global Site Tag (gtag)] en selecteer **[!UICONTROL Install]** .
+Navigeer naar de gebruikersinterface van [!UICONTROL Data Collection] of Experience Platform en selecteer **[!UICONTROL Tags]** in de linkernavigatie. Selecteer de eigenschap tag waarop u de extensie wilt installeren en selecteer vervolgens **[!UICONTROL Extensions]** in de linkernavigatie. Zoek onder het tabblad **[!UICONTROL Catalog]** de extensie [!UICONTROL Google Global Site Tag (gtag)] en selecteer **[!UICONTROL Install]** .
 
 ![ de [!UICONTROL Google Global Site Tag (gtag)] uitbreiding die onder de [!UICONTROL Extensions] mening in [!UICONTROL Data Collection] UI wordt geselecteerd.](../../../images/extensions/server/google-ads-enhanced-conversions/install-gtag-extension.png)
 
@@ -74,6 +74,7 @@ Er verschijnen extra besturingselementen waarmee u de gebeurtenis [!DNL gtag] ku
 1. **[!UICONTROL Event Name (Action)]**: voer `conversion` in als de waarde.
 1. Voeg een nieuw gebied toe waar de sleutel `transaction_id` is en de waarde a [ gegevenselement ](../../../ui/managing-resources/data-elements.md) is dat de [ waarde van identiteitskaart van de transactie ](https://support.google.com/google-ads/answer/6386790) bevat.
 1. **[!UICONTROL Conversion Label]**: voer het juiste conversielabel vanuit uw [!DNL Google Ads] -account in. Als u deze waarde wilt zoeken, meldt u zich aan bij Google Ads en navigeert u naar **[!DNL Tools and Settings]** > **[!DNL Conversions]** > **[!DNL Select a conversion action]** > **[!DNL Tag Setup]** > **[!DNL Use Google Tag Manager]** . Het conversielabel vindt u onder [!DNL Instructions] .
+
    >[!IMPORTANT]
    >
    >Zorg dat de uitgebreide conversies zijn ingeschakeld terwijl u zich in het instellingsgebied voor tags van uw [!DNL Google Ads] -account bevindt. Hiervoor controleert u de Servicevoorwaarden en accepteert u **[!DNL Turn on enhanced conversions]** en **[!DNL API]** als implementatiemethode.

@@ -3,7 +3,7 @@ keywords: facebook-verbinding;facebook-verbinding;facebook-bestemmingen;facebook
 title: Facebook-verbinding
 description: Activeer profielen voor uw Facebook-campagnes voor doelgroepen, personalisatie en onderdrukking op basis van gehakte e-mails.
 exl-id: 51e8c8f0-5e79-45b9-afbc-110bae127f76
-source-git-commit: 83e2c014e62509fee2843505d7975cde368665ef
+source-git-commit: 0d98183838125fac66768b94bc1993bde9a374b5
 workflow-type: tm+mt
 source-wordcount: '2042'
 ht-degree: 0%
@@ -77,10 +77,13 @@ Voordat u uw publiek naar [!DNL Facebook] kunt sturen, moet u controleren of aan
 * Uw [!DNL Facebook] -gebruikersaccount moet volledige toegang hebben tot [!DNL Facebook Business Account] , dat eigenaar is van het Advertentieverkeer dat u gebruikt.
 * Voor uw [!DNL Facebook] -gebruikersaccount moet de **[!DNL Manage campaigns]** -machtiging zijn ingeschakeld voor de advertentieaccount die u wilt gebruiken.
 * De **Adobe Experience Cloud** bedrijfsrekening moet als advertentiepartner in uw [!DNL Facebook Ad Account] worden toegevoegd. Gebruik `business ID=206617933627973` . Zie [ Partners aan Uw BedrijfsManager ](https://www.facebook.com/business/help/1717412048538897) in de documentatie Facebook voor details toevoegen.
+
   >[!IMPORTANT]
   >
   > Wanneer het vormen van de toestemmingen voor Adobe Experience Cloud, moet u **toelaten leidt campagnes** toestemming. De machtiging is vereist voor de [!DNL Adobe Experience Platform] -integratie.
+
 * Lees en onderteken de [!DNL Facebook Custom Audiences] Servicevoorwaarden. Ga hiertoe naar `https://business.facebook.com/ads/manage/customaudiences/tos/?act=[accountID]&business_id=206617933627973` , waar `accountID` uw [!DNL Facebook Ad Account ID] is. Zorg ervoor dat de sectie `business_id=206617933627973` aanwezig is in de URL wanneer u de Servicevoorwaarden ondertekent.
+
   >[!IMPORTANT]
   >
   >Wanneer u de Servicevoorwaarden van [!DNL Facebook Custom Audiences] ondertekent, moet u dezelfde gebruikersaccount gebruiken als waarmee u zich in de Facebook-API hebt geverifieerd.

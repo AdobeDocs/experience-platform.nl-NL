@@ -2,10 +2,10 @@
 title: Een Exchange-aanbieding voor een extensie maken
 description: Leer hoe u uw extensie toevoegt aan de openbare catalogus in Adobe Experience Platform.
 exl-id: 0395fc99-5e2b-46d6-a067-f8f167733e02
-source-git-commit: fcc586034317fb31122721fa9754b580c761a1da
+source-git-commit: 0d98183838125fac66768b94bc1993bde9a374b5
 workflow-type: tm+mt
 source-wordcount: '1193'
-ht-degree: 0%
+ht-degree: 3%
 
 ---
 
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch is omgedoopt tot een reeks technologieën voor gegevensverzameling in Adobe Experience Platform. Diverse terminologische wijzigingen zijn als gevolg hiervan in de productdocumentatie doorgevoerd. Gelieve te verwijzen naar het volgende [ document ](../../term-updates.md) voor een geconsolideerde verwijzing van de terminologieveranderingen.
+>Adobe Experience Platform Launch is omgedoopt tot een reeks technologieën voor dataverzameling in Adobe Experience Platform.  Als gevolg hiervan zijn er verschillende terminologiewijzigingen in de productdocumentatie doorgevoerd. Raadpleeg het volgende [ document ](../../term-updates.md) voor een geconsolideerde referentie van de terminologiewijzigingen.
 
 Adobe Experience Platform heeft één enkele verenigde catalogus waar de gebruikers markeringsuitbreidingen kunnen bekijken die voor installatie beschikbaar zijn. Deze catalogus is beschikbaar in het product en bevat extensies van drie typen:
 
@@ -21,7 +21,7 @@ Adobe Experience Platform heeft één enkele verenigde catalogus waar de gebruik
 1. **Privé uitbreidingen**: Deze voltooide uitbreidingen die voor productie worden ontworpen, maar door andere gebruikers in uw bedrijf werden ontwikkeld en slechts beschikbaar aan gebruikers binnen uw bedrijf zijn.
 1. **uitbreidingen van de Ontwikkeling**: Deze uitbreidingen zijn onder actieve ontwikkeling en zijn slechts beschikbaar binnen uw bedrijf en slechts op een bezit dat specifiek als bezit van de Ontwikkeling wordt aangewezen.
 
-Afzonderlijk van de uitbreidingen in de productcatalogus, hebben de openbare uitbreidingen ook lijsten in de [ Marketplace van de App van de Uitwisseling van het Experience Cloud App ](https://exchange.adobe.com/apps/browse/ec).
+Afzonderlijk van de uitbreidingen in de productcatalogus, hebben de openbare uitbreidingen ook lijsten in de [ Marketplace van de Uitwisseling van Experience Cloud App ](https://exchange.adobe.com/apps/browse/ec).
 
 Met deze aanbiedingen kunnen extensieontwikkelaars beschrijvingen van functies plaatsen, koppelingen naar aanvullende ondersteuning en documentatie aanbieden en extensies op de markt brengen voor toekomstige gebruikers die wellicht niet op de hoogte zijn van uw bedrijf of de functionaliteit van uw extensie. Op deze markt heeft uw extensie een openbare aanbieding die kan worden weergegeven zonder dat de gebruiker is geverifieerd bij Platform. Voor openbare extensies is het maken van deze Exchange-lijst een vereiste stap.
 
@@ -37,14 +37,15 @@ Als u reeds een bedrijfrekening hebt, of als u geen lijst van de Uitwisseling (p
 
 >[!NOTE]
 >
->Hieronder wordt beschreven hoe u een toepassingslijst maakt in het programma Adobe Exchange. Dit is de term die wordt gebruikt voor de verschillende integraties en extensies in Adobe Experience Platform.
+>Hieronder wordt beschreven hoe u een toepassingslijst maakt in het Adobe Exchange-programma. Dit is de term die wordt gebruikt voor de verschillende integraties en extensies in Adobe Experience Platform.
 
-![ de verbindingsplaats van de Manager van de Toepassing van het Experience Cloud ](../images/getting-started/app-mgr-link.png)
+![ de verbindingsplaats van de Manager van de Experience Cloud App ](../images/getting-started/app-mgr-link.png)
 
 1. Teken binnen aan de [ plaats van de Partner van de Uitwisseling ](https://partners.adobe.com/exchangeprogram/experiencecloud). Zodra ondertekend binnen, selecteer de **verbinding van de Manager van de App** naast uw naam.
 1. Selecteer **Nieuwe Toepassing** tabel creëren, en selecteer dan **Nieuwe App** voor een aangepaste oplossing creëren, of een toepasselijk malplaatje selecteren.
 1. Geef je objectgegevens op. Voor gedetailleerde informatie over de controle van de Manager van de App uit het volledige [ artikel ](https://adobeexchangeec.zendesk.com/hc/en-us/articles/360024197931). De informatie van de lijst zou zeer duidelijk moeten zijn over wat de uitbreiding doet en waarom het nuttig is. Deze aanbieding fungeert als marketingruimte voor uw app. Promoot hier uw extensie met duidelijke beschrijvingen, koppelingen naar bestemmingspagina&#39;s op uw site, koppelingen naar Help-documenten of ondersteuning van e-mailadressen enzovoort. Hoewel de ruimte in uitbreidingsmeningen beperkt is, biedt de lijst van de Uitwisseling een kans om zowel uw uitbreiding als uw bedrijf te bevorderen. Hieronder volgen suggesties om de uitbreiding beter te promoten:
    - **Pictogram van de Toepassing** - zorg ervoor het pictogram voor de lijst van de Uitwisseling de aangewezen dimensies, 512 x 512 voor png of 1:1 aspectverhouding voor jpg heeft.
+
      >[!NOTE]
      >
      >Dit is een andere bestandsindeling dan de extensiecode. De uitbreiding zelf zal een svg- dossier als [ pictogram ](../manifest.md) bevatten.
@@ -54,8 +55,8 @@ Als u reeds een bedrijfrekening hebt, of als u geen lijst van de Uitwisseling (p
    - **de Instructies van de Configuratie** - Informeer klanten hoe te om uw uitbreiding van Adobe Experience Platform te vormen. Zorg ervoor zij om het even welke vereiste montages en volgende stappen begrijpen wanneer uw [ configuratiemening ](../configuration.md) onmiddellijk na het installeren van uw uitbreiding in een bezit verschijnt.
    - **Markeringen** - op de eerste pagina van het uitgeven van uw lijst, gelieve te zijn zeker om het woord &quot;Lancering&quot;in het gebied van de Markeringen van de Douane te omvatten. Zo wordt je aanbieding weergegeven in zoekopdrachten naar tags op de Exchange-markt:
      ![](../images/getting-started/custom-tags.jpg)
-   - **Sandboxen** - Uw toegang tot de Oplossingen van de Adobe is door een rekening Sandbox waar u toegang tot een volledig werkende versie van Adobe Experience Platform hebt. Deze Sandbox-accounts worden aangevraagd terwijl u uw toepassingslijst maakt. In de **sectie van Verbindingen** selecteert de specifieke verbindingen die voor de toepassing van toepassing zijn u creeerde (uw markeringsuitbreiding), en wanneer u **sparen** raakt, zal het zandbakverzoek indien nodig worden geproduceerd.
-1. Verzend je aanbieding. Het team van de Adobe Exchange zal uw toepassing evalueren en zal terugkoppelen als de updates worden vereist. Als u **merkt publiceer onmiddellijk** checkbox wanneer u uw lijst indient, zal het onmiddellijk op goedkeuring worden gepubliceerd. Als u de toepassing later wilt publiceren, schakelt u het selectievakje uit. Wanneer uw uitbreidingslijst wordt goedgekeurd, zal een blauwe **Publish** knoop naast het op uw app (uitbreiding) lijstenpagina verschijnen.
+   - **Sandboxes** - Uw toegang tot de Oplossingen van Adobe is door een rekening van Sandbox waar u toegang tot een volledig werkende versie van Adobe Experience Platform hebt. Deze Sandbox-accounts worden aangevraagd terwijl u uw toepassingslijst maakt. In de **sectie van Verbindingen** selecteert de specifieke verbindingen die voor de toepassing van toepassing zijn u creeerde (uw markeringsuitbreiding), en wanneer u **sparen** raakt, zal het zandbakverzoek indien nodig worden geproduceerd.
+1. Verzend je aanbieding. Het Adobe Exchange-team evalueert uw toepassing en geeft feedback als updates vereist zijn. Als u **merkt publiceer onmiddellijk** checkbox wanneer u uw lijst indient, zal het onmiddellijk op goedkeuring worden gepubliceerd. Als u de toepassing later wilt publiceren, schakelt u het selectievakje uit. Wanneer uw uitbreidingslijst wordt goedgekeurd, zal een blauwe **publiceren** knoop naast het op uw app (uitbreiding) lijstenpagina verschijnen.
 
 ### Een effectieve aanbieding maken
 
@@ -63,13 +64,13 @@ Gelieve te nemen een blik bij de [ Richtsnoer van de Indiening van de Toepassing
 
 #### Na het verzenden van je aanbieding op de beurs
 
-Na verzending zal het team van de Adobe Exchange de toepassing beoordelen en zal of de toepassing goedkeuren, of met commentaren over veranderingen antwoorden. Dit proces wordt beschreven in de richtlijnen voor het indienen van toepassingen.
+Na verzending zal het Adobe Exchange-team de toepassing beoordelen en de toepassing goedkeuren of reageren met opmerkingen over wijzigingen. Dit proces wordt beschreven in de richtlijnen voor het indienen van toepassingen.
 
 Als u geen login aan de plaats van de Uitwisseling hebt, zorg ervoor dat uw e-mail voor het programma van de Uitwisseling door de instructies in de [ Gids van de Registratie van het Programma te volgen ](https://partners.adobe.com/content/mcp/us/en/home/reg-guide.html) wordt geregistreerd. Elke gebruiker moet zijn e-mail met de partnerrekening voor hun bedrijf associëren. Vragen over dit proces kunnen via e-mail naar <ExchangeHelpEC@adobe.com> worden gestuurd.
 
 #### Je ruilaanbieding bijwerken na eerste goedkeuring
 
-Wanneer u uw uitbreiding bijwerkt, of enkel uw lijst van de Uitwisseling moet bijwerken, login aan het [ Portaal van de Partner ](https://partners.adobe.com/exchangeprogram/experiencecloud), en de knoop van de Manager van de App naast uw naam selecteren. Selecteer vervolgens uw toepassing en volg de bovenstaande flow die oorspronkelijk is gebruikt om de aanbieding te maken. Nadat de wijzigingen opnieuw zijn verzonden, controleert het team van Adoben Exchange de wijzigingen en keurt het de wijzigingen goed of reageert het met opmerkingen over de wijzigingen.
+Wanneer u uw uitbreiding bijwerkt, of enkel uw lijst van de Uitwisseling moet bijwerken, login aan het [ Portaal van de Partner ](https://partners.adobe.com/exchangeprogram/experiencecloud), en de knoop van de Manager van de App naast uw naam selecteren. Selecteer vervolgens uw toepassing en volg de bovenstaande flow die oorspronkelijk is gebruikt om de aanbieding te maken. Nadat het Adobe Exchange-team opnieuw is verzonden, controleert het de wijzigingen en keurt het de wijzigingen goed of reageert het met opmerkingen over de wijzigingen.
 
 ## Het extensiepakket aan je aanbieding koppelen
 
