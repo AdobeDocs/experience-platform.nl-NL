@@ -1,18 +1,24 @@
 ---
-keywords: Experience Platform;huis;populaire onderwerpen;toegangsbeheer;op attribuut-gebaseerde toegangscontrole;ABAC
+keywords: Experience Platform;home;populaire onderwerpen;toegangsbeheer;op attributen-gebaseerd toegangsbeheer;ABAC
 title: Op kenmerken gebaseerde sandboxen voor toegangsbeheer
 description: Dit document bevat informatie over het beheer van sandboxen via de machtigingsinterface in Adobe Experience Cloud
 exl-id: c21eb319-fc0d-442a-b778-bbfa2d6bb22d
-source-git-commit: 9e44e647e4647a323fa9d1af55266d6f32b5ccb9
+source-git-commit: afd883c530ab1b335888e79b5f4075e774fced4b
 workflow-type: tm+mt
-source-wordcount: '215'
+source-wordcount: '257'
 ht-degree: 0%
 
 ---
 
-# Sandboxen beheren
+# Sandboxen beheren {#mange-sandboxes}
 
-Sandboxen zijn virtuele partities binnen één exemplaar van het Experience Platform, die naadloze integratie met het ontwikkelingsproces van uw digitale ervaringstoepassingen mogelijk maken. Alle inhoud en handelingen die in een sandbox worden uitgevoerd, blijven beperkt tot alleen die sandbox en hebben geen invloed op andere sandboxen. Voor meer informatie over zandbakken, zie het [ overzicht van Sandboxen ](../../../sandboxes/home.md).
+>[!CONTEXTUALHELP]
+>id="platform_permissions_sandboxes_about"
+>title="Wat zijn sandboxen?"
+>abstract="Sandboxen zijn virtuele partities binnen één instantie van Platform. Alle inhoud en handelingen die in een sandbox worden uitgevoerd, worden beperkt tot die sandbox en hebben geen invloed op andere sandboxen. De toegang tot sandboxen wordt beheerd via rollen."
+>additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/sandbox/home" text="Overzicht van sandboxen"
+
+Sandboxen zijn virtuele partities binnen één exemplaar van Experience Platform, die naadloze integratie met het ontwikkelingsproces van uw digitale ervaringstoepassingen mogelijk maken. Alle inhoud en handelingen die in een sandbox worden uitgevoerd, blijven beperkt tot alleen die sandbox en hebben geen invloed op andere sandboxen. Voor meer informatie over zandbakken, zie het [ overzicht van Sandboxen ](../../../sandboxes/home.md).
 
 ## Sandboxen configureren
 

@@ -1,16 +1,22 @@
 ---
-keywords: Experience Platform;huis;populaire onderwerpen;toegangsbeheer;op attribuut-gebaseerde toegangscontrole;ABAC
+keywords: Experience Platform;home;populaire onderwerpen;toegangsbeheer;op attributen-gebaseerd toegangsbeheer;ABAC
 title: Toegangsbeheer op basis van kenmerken Gebruikers beheren
 description: Dit document bevat informatie over het beheer van gebruikers en gebruikersgroepen via de machtigingsinterface in Adobe Experience Cloud
 exl-id: 16450867-040a-4be1-a6c0-f03d0a1b90ba
-source-git-commit: d410e7ea635471f2bbc93c9d332ad7e2f619d054
+source-git-commit: afd883c530ab1b335888e79b5f4075e774fced4b
 workflow-type: tm+mt
-source-wordcount: '252'
+source-wordcount: '280'
 ht-degree: 0%
 
 ---
 
-# Gebruikers beheren
+# Gebruikers beheren {#manage-users}
+
+>[!CONTEXTUALHELP]
+>id="platform_permissions_users_about"
+>title="Wat zijn gebruikers?"
+>abstract="Gebruikers zijn de personen die toegang hebben tot Experience Platform. De toegang van een individuele gebruiker tot de middelen van een organisatie wordt beheerd door rollen."
+>additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/access-control/abac/permissions-ui/roles" text="Rollen beheren"
 
 Als u gebruikersdetails en rollen wilt bekijken zij aan worden toegewezen, selecteer **[!UICONTROL Users]** tabel.
 

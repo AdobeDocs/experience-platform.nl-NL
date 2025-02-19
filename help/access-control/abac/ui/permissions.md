@@ -1,11 +1,11 @@
 ---
-keywords: Experience Platform;huis;populaire onderwerpen;toegangsbeheer;op attribuut-gebaseerde toegangscontrole;ABAC
+keywords: Experience Platform;home;populaire onderwerpen;toegangsbeheer;op attributen-gebaseerd toegangsbeheer;ABAC
 title: Op kenmerken gebaseerde toegangsbeheerfuncties voor rolmachtigingen beheren
 description: Dit document bevat informatie over het configureren van machtigingen voor een rol via de interface voor machtigingen in Adobe Experience Cloud
 exl-id: 8acd2bb6-eef8-4b23-8fd8-3566c7508fe7
-source-git-commit: 207317d16a21cc2461ebd3f7867735735227c173
+source-git-commit: afd883c530ab1b335888e79b5f4075e774fced4b
 workflow-type: tm+mt
-source-wordcount: '1513'
+source-wordcount: '1604'
 ht-degree: 0%
 
 ---
@@ -22,7 +22,7 @@ ht-degree: 0%
 >
 >Het toegangsbeheer gebruikt gebruiker - identiteitskaart (een interne unieke identiteitskaart die aan een gebruiker wordt toegewezen) voor het verlenen van toestemmingen. Wanneer een organisatie van Adobe ID naar bedrijfs-id wordt gemigreerd, gaan alle machtigingen die voor de gebruikers zijn ingesteld, verloren omdat de gebruikers-id wordt gewijzigd en het toegangsbeheer de nieuwe gebruikers-id gebruikt. Als uw organisatie is gemigreerd naar bedrijfs-id, neemt u contact op met uw Adobe-vertegenwoordiger om uw gebruikersnaam te migreren van Adobe ID naar bedrijfs-id.
 
-De toestemmingen zijn het gebied van Experience Cloud waar de beheerders gebruikersrollen en toegangsbeleid kunnen bepalen om toegangstoestemmingen voor eigenschappen en voorwerpen binnen een producttoepassing te beheren.
+Machtigingen zijn het gebied van Experience Cloud waar beheerders gebruikersrollen en toegangsbeleid kunnen definiëren om toegangsmachtigingen voor functies en objecten binnen een producttoepassing te beheren.
 
 Door Toestemmingen, kunt u rollen tot stand brengen en beheren, evenals de gewenste middeltoestemmingen voor deze rollen toewijzen. Met machtigingen kunt u ook de labels, sandboxen en gebruikers beheren die aan een specifieke rol zijn gekoppeld.
 
@@ -120,6 +120,12 @@ De volgende video is bedoeld om uw begrip van het creëren van een nieuwe rol en
 
 ## API-referenties voor een rol beheren {#manage-api-credentials-for-role}
 
+>[!CONTEXTUALHELP]
+>id="platform_permissions_apicredentials_about"
+>title="Wat zijn API-referenties?"
+>abstract="API geloofsbrieven worden toegewezen aan rollen om gebruikers en ontwikkelaars toegang tot Platform APIs te verlenen. Met platform-API&#39;s kunt u via programmacode elementaire CRUD-bewerkingen (Maken, Lezen, Bijwerken, Verwijderen) uitvoeren op gegevens, zoals het configureren van berekende kenmerken, het openen van gegevens/entiteiten, het exporteren van gegevens, het verwijderen van overbodige gegevens of batches en meer."
+>additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/landing/platform-apis/api-guide" text="Platform API-handleiding"
+
 >[!IMPORTANT]
 >
 > Gebruikers moeten over beheerdersrechten voor het systeem beschikken om API-referenties te kunnen gebruiken en beheren in [!UICONTROL Permissions] .
@@ -148,7 +154,13 @@ Het dialoogvenster **[!UICONTROL Remove API credentials]** verschijnt waarin u w
 
 U wordt teruggestuurd naar het tabblad **[!UICONTROL API credentials]** .
 
-## Gebruikersgroepen beheren voor een rol
+## Gebruikersgroepen beheren voor een rol {#manage-user-groups}
+
+>[!CONTEXTUALHELP]
+>id="platform_permissions_usergroups_about"
+>title="Wat zijn gebruikersgroepen?"
+>abstract="Gebruikersgroepen zijn verzamelingen van meerdere gebruikers die toegang tot dezelfde functies delen. De toegang tot middelen binnen een organisatie wordt beheerd door rollen die aan gebruikersgroepen worden toegewezen."
+>additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/access-control/abac/permissions-ui/roles" text="Rollen beheren"
 
 Gebruikersgroepen zijn meerdere gebruikers die zijn gegroepeerd en die toegang hebben om dezelfde functies uit te voeren.
 
@@ -178,7 +190,7 @@ U wordt teruggestuurd naar het tabblad **[!UICONTROL User groups]** .
 
 Als systeembeheerder, kunt u ontwikkelaartoegang tot een gebruiker verlenen zodat kunnen zij [ tot integratie ](../../../landing/api-authentication.md#generate-credentials) in Adobe Developer Console leiden.
 
-Om een Experience Platform van de gebruiker toe te voegen, login aan de [ Admin Console ](https://adminconsole.adobe.com) en selecteer **[!UICONTROL Add users]**.
+Om een gebruiker Experience Platform toe te voegen, login aan [ Admin Console ](https://adminconsole.adobe.com) en selecteer **[!UICONTROL Add users]**.
 
 ![ het dashboard van Adobe Admin Console met de Add benadrukte gebruikersoptie.](../../images/flac-ui/product-profile-add-users.png)
 
