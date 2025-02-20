@@ -3,9 +3,9 @@ solution: Experience Platform
 title: UI-gids voor soorten publiek
 description: De Samenstelling van het publiek in Adobe Experience Platform UI verstrekt een rijke werkruimte die u toestaat om met de gegevenselementen van het Profiel in wisselwerking te staan. De werkruimte biedt intuïtieve besturingselementen voor het maken en bewerken van soorten publiek voor uw organisatie.
 exl-id: 0dda0cb1-49e0-478b-8004-84572b6cf625
-source-git-commit: 3c0fdab5d7561238a64e79e5bab5fd4843fccb0a
+source-git-commit: 65871f307468428ee0e3b67c1a6577e913f3a312
 workflow-type: tm+mt
-source-wordcount: '1840'
+source-wordcount: '2116'
 ht-degree: 0%
 
 ---
@@ -36,7 +36,17 @@ Het canvas met publiekscompositie bestaat uit vier verschillende typen blokken: 
 
 ## [!UICONTROL Audience] {#audience-block}
 
-Met het bloktype **[!UICONTROL Audience]** kunt u subpubliek toevoegen dat u wilt samenstellen voor een groter publiek. Standaard wordt een **[!UICONTROL Audience]** -blok boven aan het compositicanvas weergegeven.
+>[!CONTEXTUALHELP]
+>id="platform_segmentation_ao_audience"
+>title="Poortblok"
+>abstract="Met het blok Publiek kunt u het subpubliek bereiken dat u wilt gebruiken om het nieuwe publiek samen te stellen."
+
+>[!CONTEXTUALHELP]
+>id="platform_segmentation_ao_merge_types"
+>title="Typen samenvoegen"
+>abstract="De fusietypes bepalen hoe de geselecteerde sub-publiek wordt gecombineerd. Tot de ondersteunde waarden behoren Vereniging, Doorsnede en Overlap uitsluiten."
+
+Met het bloktype **[!UICONTROL Audience]** kunt u de subsoorten toevoegen die u wilt gebruiken om uw nieuwe, grotere doelgroep samen te stellen. Standaard wordt een **[!UICONTROL Audience]** -blok boven aan het compositicanvas weergegeven.
 
 Wanneer u het blok **[!UICONTROL Audience]** selecteert, worden in de rechtertrack besturingselementen weergegeven voor het labelen van het publiek, het toevoegen van een publiek aan het blok en het maken van aangepaste regels voor het blok publiek.
 
@@ -88,6 +98,16 @@ Nadat u een aangepaste regel hebt toegevoegd, selecteert u **[!UICONTROL Save]**
 
 ## [!UICONTROL Exclude] {#exclude-block}
 
+>[!CONTEXTUALHELP]
+>id="platform_segmentation_ao_exclude"
+>title="Blok uitsluiten"
+>abstract="Met het blok Uitsluiten kunt u opgegeven soorten publiek of kenmerken uitsluiten van uw compositie."
+
+>[!CONTEXTUALHELP]
+>id="platform_segmentation_ao_exclude_type"
+>title="Type uitsluiten"
+>abstract="U kunt profielen uitsluiten die tot een specifiek publiek behoren (uitsluiten door het publiek) of profielen uitsluiten die op een specifiek kenmerk zijn gebaseerd (uitsluiten door kenmerk)."
+
 Met het bloktype **[!UICONTROL Exclude]** kunt u een opgegeven subpubliek of kenmerken uitsluiten van een nieuw, groter publiek.
 
 Als u een **[!UICONTROL Exclude]** -blok wilt toevoegen, selecteert u het pictogram **+** , gevolgd door **[!UICONTROL Exclude]** .
@@ -127,6 +147,26 @@ Er wordt een lijst met profielkenmerken weergegeven. Selecteer het kenmerktype d
 >Wanneer exclusief door attribuut, kunt u **slechts één** waarde specificeren om uit te sluiten. Als u een scheidingsteken gebruikt, zoals een komma of puntkomma, wordt die exacte waarde alleen uitgesloten. Bijvoorbeeld, zal het plaatsen van de waarde als `red, blue` in het uitsluiten van de termijn `red, blue` van de attributen resulteren, maar zal **** niet in het uitsluiten van of de termijn `red` of `blue` resulteren.
 
 ## [!UICONTROL Enrich] {#enrich-block}
+
+>[!CONTEXTUALHELP]
+>id="platform_segmentation_ao_enrich"
+>title="Blok vergroten"
+>abstract="Met het blok Verrijken kunt u het publiek verrijken met extra kenmerken die afkomstig zijn uit Adobe Experience Platform-gegevenssets."
+
+>[!CONTEXTUALHELP]
+>id="platform_segmentation_ao_dataset"
+>title="Verrijkingsgegevens"
+>abstract="De verrijkingsdataset bevat de gegevens u met de samenstelling wilt associëren."
+
+>[!CONTEXTUALHELP]
+>id="platform_segmentation_ao_enrich_criteria"
+>title="Verrijkingscriteria"
+>abstract="De verrijkingscriteria omvatten de Source-verbindingssleutel en de samenvoegingsdataset. Deze twee sleutels combineren de brondataset en de verrijkingsdataset."
+
+>[!CONTEXTUALHELP]
+>id="platform_segmentation_ao_enrich_attributes"
+>title="Verrijkingskenmerken"
+>abstract="De verrijkingskenmerken zijn de kenmerken die u aan de compositie wilt koppelen."
 
 >[!IMPORTANT]
 >
@@ -206,6 +246,16 @@ Your selected audiences now appear within the right rail when the **[!UICONTROL 
 
 ## [!UICONTROL Rank] {#rank-block}
 
+>[!CONTEXTUALHELP]
+>id="platform_segmentation_ao_ranking"
+>title="Rank blok"
+>abstract="Met het blok Rank kunt u profielen rangschikken op basis van een specifiek kenmerk en deze opnemen in uw compositie."
+
+>[!CONTEXTUALHELP]
+>id="platform_segmentation_ao_rank_profilelimit_text"
+>title="Profiellimiet toevoegen"
+>abstract="Met de schakeloptie Profielbeperking toevoegen kunt u een maximumaantal profielen opgeven dat u wilt opnemen in de rangschikking."
+
 Met het bloktype **[!UICONTROL Rank]** kunt u profielen rangschikken en sorteren op basis van een opgegeven kenmerk en deze gerangschikte profielen opnemen in uw compositie.
 
 Als u een **[!UICONTROL Rank]** -blok wilt toevoegen, selecteert u het pictogram **+** , gevolgd door **[!UICONTROL Rank]** .
@@ -231,6 +281,21 @@ Bovendien kunt u het aantal geretourneerde profielen beperken door de schakelopt
 ![ de Add knevel van de profielgrens wordt benadrukt, die u het aantal teruggekeerde profielen laat beperken.](../images/ui/audience-composition/add-profile-limit.png)
 
 ## [!UICONTROL Split] {#split-block}
+
+>[!CONTEXTUALHELP]
+>id="platform_segmentation_ao_split"
+>title="Blok splitsen"
+>abstract="Met het gesplitste blok kunt u de compositie opsplitsen in meerdere paden."
+
+>[!CONTEXTUALHELP]
+>id="platform_segmentation_ao_split_type"
+>title="Tekst splitsen"
+>abstract="U kunt uw compositie splitsen op basis van de splitsing Percentage of Kenmerk. Percentage van de splitsing splitst willekeurig profielen in meerdere paden. Met de splitsing van kenmerken kunt u profielen splitsen op basis van een opgegeven kenmerk."
+
+>[!CONTEXTUALHELP]
+>id="platform_segmentation_ao_split_otherprofiles_text"
+>title="Andere profielen"
+>abstract="Met de schakeloptie Andere profielen kunt u een extra pad maken met de resterende profielen die niet overeenkomen met de opgegeven voorwaarden van de andere paden."
 
 Met het bloktype **[!UICONTROL Split]** kunt u uw nieuwe publiek opsplitsen in verschillende deelsoorten. U kunt dit publiek splitsen op basis van een percentage of op basis van een kenmerk. Wanneer het splitsen van uw publiek in sub-publiek, is deze splitsing **niet** blijvend. Dit betekent dat de profielen voor elke evaluatie in verschillende deelsoorten kunnen worden gebruikt.
 
@@ -274,11 +339,11 @@ Bovendien kunt u de schakeloptie **[!UICONTROL Other profiles]** inschakelen om 
 
 Nadat u de compositie hebt gemaakt, kunt u deze opslaan en publiceren door **[!UICONTROL Publish]** te selecteren.
 
-![ de knoop van Publish wordt benadrukt, tonend u om uw samenstelling te bewaren en te publiceren.](../images/ui/audience-composition/publish.png)
+![ de Publish knoop wordt benadrukt, tonend u om uw samenstelling te bewaren en te publiceren.](../images/ui/audience-composition/publish.png)
 
 Als er fouten optreden bij het maken van het publiek, verschijnt er een waarschuwing met de informatie over het oplossen van het probleem.
 
-![ de knoop van Publish wordt benadrukt, tonend u om uw samenstelling te bewaren en te publiceren.](../images/ui/audience-composition/audience-alert.png)
+![ de Publish knoop wordt benadrukt, tonend u om uw samenstelling te bewaren en te publiceren.](../images/ui/audience-composition/audience-alert.png)
 
 ## Volgende stappen
 
