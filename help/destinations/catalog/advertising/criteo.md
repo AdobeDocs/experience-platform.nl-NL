@@ -3,20 +3,20 @@ keywords: reclame; criteria;
 title: Criteverbinding
 description: Criteo biedt vertrouwde en ondoordachte reclame de mogelijkheid om meer ervaring op te doen voor elke consument op het open internet. Met 's werelds grootste set handelsgegevens en de best-in-class AI zorgt Criteo ervoor dat elk touchpoint over de winkelreis gepersonaliseerd is om klanten met de juiste en juiste advertentie op het juiste moment te bereiken.
 exl-id: e6f394b2-ab82-47bb-8521-1cf9d01a203b
-source-git-commit: c3ef732ee82f6c0d56e89e421da0efc4fbea2c17
+source-git-commit: e594e473ac78663203c9254623fe8e324985fa39
 workflow-type: tm+mt
-source-wordcount: '1011'
+source-wordcount: '998'
 ht-degree: 1%
 
 ---
 
-# (Beta) Creditverbinding
+# Criteverbinding
 
 ## Overzicht {#overview}
 
 >[!IMPORTANT]
 >
->Deze bestemmingsschakelaar en documentatiepagina worden gecreeerd en door Criteo gehandhaafd. Dit is momenteel een bètaproduct en de functionaliteit kan worden gewijzigd. Voor om het even welke onderzoeken of updateverzoeken, gelieve direct contactCiteo [ ](mailto:criteoTechnicalPartnerships@criteo.com).
+>Deze bestemmingsschakelaar en documentatiepagina worden gecreeerd en door Criteo gehandhaafd. Voor om het even welke onderzoeken of updateverzoeken, gelieve direct contactCiteo [ ](mailto:criteoTechnicalPartnerships@criteo.com).
 
 Criteo biedt vertrouwde en ondoordachte reclame de mogelijkheid om meer ervaring op te doen voor elke consument op het open internet. Met &#39;s werelds grootste set handelsgegevens en de best-in-class AI zorgt Criteo ervoor dat elk touchpoint over de winkelreis gepersonaliseerd is om klanten met de juiste en juiste advertentie op het juiste moment te bereiken.
 
@@ -57,11 +57,11 @@ Voor een beter inzicht in het gebruik van de [!DNL Criteo] -bestemming zijn er e
 
 ### Gebruik geval 1: Krijg verkeer
 
-Laat uw bedrijf zien met relevante productaanbiedingen en flexibele creatieve producten. Met intelligente productaanbevelingen zullen uw advertenties automatisch de producten bevatten die het meest waarschijnlijk bezoeken en betrokkenheid zullen veroorzaken. Flexibele het richten staat u toe om publiek van de handelgegevens van Criteo of van uw eigen perspectieflijsten en Adobe CDP segmenten te bouwen.
+Laat uw bedrijf zien met relevante productaanbiedingen en flexibele creatieve producten. Met intelligente productaanbevelingen zullen uw advertenties automatisch de producten bevatten die het meest waarschijnlijk bezoeken en betrokkenheid zullen veroorzaken. Dankzij de flexibele manier van toewijzen kunt u een publiek maken op basis van de gegevensset Handelsgegevens van Criteo of op basis van uw eigen perspectieflijsten en Adobe CDP-segmenten.
 
 ### Hoofdlettergebruik 2: website-conversies verhogen
 
-Wanneer bezoekers uw website verlaten, herinner hen wat zij met het herrichten van advertenties missen die omzettingen door speciale overeenkomsten en hyper-relevante aanbiedingen te tonen verhogen, waar zij ook gaan. Verbind uw Adobe CDP publiek om bestaande klanten opnieuw in dienst te nemen of consumenten te richten gelijkend op uw meest loyale kopers.
+Wanneer bezoekers uw website verlaten, herinner hen wat zij met het herrichten van advertenties missen die omzettingen door speciale overeenkomsten en hyper-relevante aanbiedingen te tonen verhogen, waar zij ook gaan. Sluit uw Adobe CDP-publiek aan om bestaande klanten opnieuw aan te trekken of richt zich op klanten die vergelijkbaar zijn met uw meest loyale klanten.
 
 ## Verbinding maken met website {#connect}
 

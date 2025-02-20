@@ -5,9 +5,9 @@ user-guide-description: Activeer uw bekende en onbekende gegevens voor cross-cha
 description: In dit document wordt de inhoudsopgave voor Adobe Experience Platform-doelen weergegeven
 feature: Destinations
 role: Admin,User
-source-git-commit: e2dfa2ee23d854ff3a8ecba4a1cf3e4a1e72f0f7
+source-git-commit: f6fb88cbc89d419e3dbb39c9cc8958f9455b2953
 workflow-type: tm+mt
-source-wordcount: '1269'
+source-wordcount: '1268'
 ht-degree: 1%
 
 ---
@@ -46,8 +46,8 @@ ht-degree: 1%
       * [Het publiek activeren op gekrulde doelen op basis van LiveRamp-id&#39;s](./ui/activate-curated-destinations.md)
       * [Activeren het potentiële publiek aan bestemmingen](./ui/activate-prospect-audiences.md)
       * [Accountpubliek naar doelen activeren](./ui/activate-account-audiences.md)
-      * [De dossiers van de uitvoer op bestelling aan partijbestemmingen gebruikend Experience Platform UI](./ui/export-file-now.md)
-      * [Gegevenssets exporteren met de interface van het Experience Platform](./ui/export-datasets.md)
+      * [Bestanden op aanvraag exporteren naar batchbestemmingen met de gebruikersinterface van Experience Platform](./ui/export-file-now.md)
+      * [Gegevenssets exporteren met de gebruikersinterface van Experience Platform](./ui/export-datasets.md)
       * [(Beta) Gebruik het laatste XDM-attribuut voor kwalificatietijd in de nieuwe bètawolkenopslagdoelen](./ui/activate-last-qualification-time.md)
       * [Berekende velden gebruiken om arrays als tekenreeksen te exporteren](/help/destinations/ui/export-arrays-calculated-fields.md)
    * [Doelgegevens weergeven](./ui/destination-details-page.md)
@@ -60,28 +60,28 @@ ht-degree: 1%
    * [Abonneren op in-context-bestemmingswaarschuwingen](ui/alerts.md)
 * Doelcatalogus {#catalog}
    * [Overzicht van de doelcatalogus](./catalog/overview.md)
-   * Adobe bestemmingen {#adobe}
-      * [Overzicht van Adobe doelen](./catalog/adobe/overview.md)
-      * [Experience Cloud publiek](/help/destinations/catalog/adobe/experience-cloud-audiences.md)
-      * [Verbinding met Marketo Engage](./catalog/adobe/marketo-engage.md)
+   * Adobe-bestemmingen {#adobe}
+      * [Overzicht Adobe-bestemmingen](./catalog/adobe/overview.md)
+      * [Experience Cloud-publiek](/help/destinations/catalog/adobe/experience-cloud-audiences.md)
+      * [Marketo Engage-verbinding](./catalog/adobe/marketo-engage.md)
       * [(Beta) Marketo Engage Person Sync verbinding](./catalog/adobe/marketo-engage-person-sync.md)
       * [Marketo Measure Ultimate-verbinding](./catalog/adobe/marketo-measure-ultimate.md)
-      * [ Experience Platform publiek het delen ](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html)
+      * [ het publiek dat van Experience Platform ](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html) deelt
       * [ Federated de verbinding van de Samenstelling van het publiek ](https://www.adobe.com/go/destinations-federated-audience-composition)
    * Advertising-bestemmingen {#advertising}
       * [(Beta) Acxiom Audience Distribution](./catalog/advertising/acxiom-audience-distribution.md)
       * [Overzicht Advertising-bestemmingen](./catalog/advertising/overview.md)
-      * [Adobe Advertising Cloud-verbinding](./catalog/advertising/adobe-advertising-cloud-connection.md)
-      * [Adobe Advertising Cloud-extensie](./catalog/advertising/adobe-advertising-cloud.md)
+      * [Cloud-verbinding voor Adobe Advertising](./catalog/advertising/adobe-advertising-cloud-connection.md)
+      * [Adobe Advertising Cloud Extension](./catalog/advertising/adobe-advertising-cloud.md)
       * [Amazon Ads-verbinding](./catalog/advertising/amazon-ads.md)
       * [Awin Advertiser Conversion Tag-extensie](./catalog/advertising/awin-conversiontag.md)
       * [Awin Advertiser Mastertag extension](./catalog/advertising/awin-mastertag.md)
       * [De extensie Bing Ads Universal Event Tracking (UET)](./catalog/advertising/bing-ads.md)
       * [Vertakkingsextensie](./catalog/advertising/branch.md)
-      * [(Beta) Creditverbinding](./catalog/advertising/criteo.md)
+      * [Criteverbinding](./catalog/advertising/criteo.md)
       * [Demandbase-verbinding](./catalog/advertising/demandbase.md)
       * [DoubleClick Floodlight-extensie (Beta)](./catalog/advertising/doubleclick-floodlight.md)
-      * [Facebook Pixel-extensie](./catalog/advertising/facebook-pixel.md)
+      * [Facebook Pixel Extension](./catalog/advertising/facebook-pixel.md)
       * [OneTag-extensie knipperen](./catalog/advertising/flashtalking.md)
       * [Google Ads-verbinding](./catalog/advertising/google-ads-destination.md)
       * [Google Ads-extensie](./catalog/advertising/google-ads-extension.md)
@@ -91,20 +91,20 @@ ht-degree: 1%
       * [(Beta) Google Customer Match + DV360-verbinding](./catalog/advertising/google-customer-match-dv360.md)
       * [Google Display &amp; Video 360-verbinding](./catalog/advertising/google-dv360.md)
       * [Google-tag-extensie](./catalog/advertising/gtag-advertising.md)
-      * [LinkedIn Insight Tag-extensie](./catalog/advertising/linkedin.md)
+      * [LinkedIn Insight-tagextensie](./catalog/advertising/linkedin.md)
       * [LiveRamp - Verbinding aan boord](./catalog/advertising/liveramp-onboarding.md)
       * [LiveRamp - Distribution-verbinding](./catalog/advertising/liveramp-distribution.md)
       * [Magnite Batch](/help/destinations/catalog/advertising/magnite-batch.md)
       * [Magnite Streaming Real-time verbinding](/help/destinations/catalog/advertising/magnite-streaming.md)
       * [Microsoft Bing-verbinding](./catalog/advertising/bing.md)
       * [Pinterest Conversion Tracking-extensie](./catalog/advertising/pinterest-extension.md)
-      * [Verbinding met pinterest Customer List](./catalog/advertising/pinterest.md)
+      * [Verbinding met Pinterest Customer List](./catalog/advertising/pinterest.md)
       * [Pinterest-verbindingsupgrade](./catalog/advertising/pinterest-upgrade.md)
       * [PubMatic Connect-verbinding](./catalog/advertising/pubmatic.md)
       * [Verbinding Snapchat Ads](./catalog/advertising/snap-inc.md)
       * [De verbinding van de handelsbureau](./catalog/advertising/tradedesk.md)
       * [De Trade Desk CRM-verbinding](./catalog/advertising/tradedesk-emails.md)
-      * [Twitter van Universal Website Tag-extensie](./catalog/advertising/twitter-uwt.md)
+      * [Twitter Universal Website Tag-extensie](./catalog/advertising/twitter-uwt.md)
       * [Yahoo/Verizon DataX-verbinding](./catalog/advertising/datax.md)
    * Analytische doelen {#analytics}
       * [Overzicht van analysedoelen](./catalog/analytics/overview.md)
@@ -147,7 +147,7 @@ ht-degree: 1%
       * [Zendesk-verbinding](catalog/crm/zendesk.md)
    * Doelen van het Platform voor gegevensbeheer {#data-management}
       * [Overzicht van bestemmingen in het Data Management Platform (DMP)](./catalog/data-management/overview.md)
-      * [Audience Manager DIL-extensie](./catalog/data-management/aam-dil-extension.md)
+      * [Audience Manager DIL Extension](./catalog/data-management/aam-dil-extension.md)
       * [Zeta Marketing Platform](/help/destinations/catalog/data-management/zeta-marketing-platform.md)
    * Partner voor gegevens en identiteit {#data-partner}
       * [Acxiom-perspectiefonderdrukking](./catalog/data-partner/acxiom-prospect-suppression.md)
@@ -169,9 +169,9 @@ ht-degree: 1%
       * [Mailchimp-tags](./catalog/email-marketing/mailchimp-tags.md)
       * [(API) Oracle Eloqua-verbinding](./catalog/email-marketing/oracle-eloqua-api.md)
       * [(Bestanden) Oracle Eloqua-verbinding](./catalog/email-marketing/oracle-eloqua.md)
-      * [Verbinding oracle Responsys](./catalog/email-marketing/oracle-responsys.md)
-      * [(API) Salesforce-verbinding voor Marketing Cloud](./catalog/email-marketing/salesforce-marketing-cloud-exact-target.md)
-      * [(Bestanden) Salesforce Marketing Cloud verbinding](./catalog/email-marketing/salesforce-marketing-cloud.md)
+      * [Oracle Responsys-verbinding](./catalog/email-marketing/oracle-responsys.md)
+      * [(API) Salesforce Marketing Cloud-verbinding](./catalog/email-marketing/salesforce-marketing-cloud-exact-target.md)
+      * [(Bestanden) Salesforce Marketing Cloud-verbinding](./catalog/email-marketing/salesforce-marketing-cloud.md)
       * [[!DNL Salesforce Marketing Cloud Account Engagement]](./catalog/email-marketing/salesforce-marketing-cloud-account-engagement.md)
       * [SendGrid-verbinding](./catalog/email-marketing/sendgrid.md)
    * Extensies labelen {#launch-extensions}
@@ -205,7 +205,7 @@ ht-degree: 1%
       * [Overzicht van sociale bestemmingen](./catalog/social/overview.md)
       * [Facebook-verbinding](./catalog/social/facebook.md)
       * [(Bedrijven) LinkedIn-verbinding voor passend publiek](./catalog/social/linkedin-b2b.md)
-      * [LinkedIn-verbinding voor passend publiek](./catalog/social/linkedin.md)
+      * [Verbinding LinkedIn met soorten publiek](./catalog/social/linkedin.md)
       * [TikTok-verbinding](./catalog/social/tiktok.md)
       * [[!DNL Twitter Custom Audiences] verbinding](./catalog/social/twitter.md)
    * Streaming doelen {#streaming}
@@ -254,9 +254,9 @@ ht-degree: 1%
       * [Het beperken van snelheid en herprobeert beleid voor het stromen bestemmingen](./destination-sdk/functionality/rate-limiting-retry-policy.md)
       * [Metagegevensbeheer voor het publiek](./destination-sdk/functionality/audience-metadata-management.md)
    * Hulplijnen {#guides}
-      * [Gebruik Destination SDK om een streamingbestemming te configureren](./destination-sdk/guides/configure-destination-instructions.md)
-      * [Gebruik Destination SDK om een op een bestand gebaseerde bestemming te configureren](./destination-sdk/guides/configure-file-based-destination-instructions.md)
-      * [Ter controle een bestemming verzenden die is geschreven in Destination SDK](./destination-sdk/guides/submit-destination.md)
+      * [Destination SDK gebruiken om een streamingbestemming te configureren](./destination-sdk/guides/configure-destination-instructions.md)
+      * [Destination SDK gebruiken om een bestandsgebaseerde bestemming te configureren](./destination-sdk/guides/configure-file-based-destination-instructions.md)
+      * [Ter controle verzenden naar een bestemming die is geschreven in Destination SDK](./destination-sdk/guides/submit-destination.md)
       * Bestandsgebaseerde doelen configureren {#configure-file-based-destinations}
          * [ vorm dossier het formatteren opties ](/help/destinations/destination-sdk/guides/batch/configure-file-formatting-options.md)
          * [Een Amazon S3-bestemming configureren met vooraf gedefinieerde opties voor bestandsindeling en aangepaste configuratie van bestandsnaam](../destinations/destination-sdk/guides/batch/configure-amazon-s3-destination-with-predefined-file-formatting.md)
