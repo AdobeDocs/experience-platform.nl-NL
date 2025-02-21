@@ -2,10 +2,10 @@
 title: Aanvullende informatie voor Adobe Experience Platform van februari 2025
 description: Aanvullende informatie voor Adobe Experience Platform van februari 2025.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: b29c63942b00fdf597ebfd3ab105519a6b05a476
+source-git-commit: 8786ac8ab42d2b9e0c43000bbc6604462ea06f64
 workflow-type: tm+mt
-source-wordcount: '1375'
-ht-degree: 22%
+source-wordcount: '1474'
+ht-degree: 21%
 
 ---
 
@@ -74,7 +74,7 @@ Gebruik gegevensvoorbereiding om gegevens toe te wijzen, te transformeren en te 
 
 Voor meer informatie, lees het [ Overzicht van de Prep van Gegevens ](../../data-prep/home.md).
 
-## Bestemmingen {#destinations}
+## Doelen (bijgewerkt op 20 februari) {#destinations}
 
 [!DNL Destinations] zijn pre-built integraties met bestemmingsplatforms die de naadloze activering van gegevens van Adobe Experience Platform mogelijk maken. U kunt bestemmingen gebruiken om uw bekende en onbekende gegevens te activeren voor cross-channel marketingcampagnes, e-mailcampagnes, gerichte advertenties en vele andere gebruiksscenario&#39;s.
 
@@ -97,6 +97,7 @@ Voor meer informatie, lees het [ Overzicht van de Prep van Gegevens ](../../data
 | De toegangslabels van het gebruik om gebruikerstoegang tot bestemmingsdataflows te beheren | Als deel van de [[!UICONTROL attribute-based access control]](/help/access-control/abac/overview.md) functionaliteit in Real-Time CDP, kunt u toegangslabels op [ bestemmingsdataflows ](/help/dataflows/ui/monitor-destinations.md) nu toepassen. Op deze manier kunt u ervoor zorgen dat alleen een subset van gebruikers in uw organisatie toegang krijgt tot specifieke doelgegevens. <br> **Belangrijk**: Wanneer het zoeken naar bestemmingsdataflows gebruikend de onderzoeksdoos bij de bovenkant van het gebruikersinterface van Experience Platform, kunnen de resultaten bestemmingsdataflows omvatten die uw etiketten van de gebruikerstoegang u van het zien beperken. Dit gedrag wordt in een toekomstige update gecorrigeerd. |
 | [ publiek-niveau die ](/help/dataflows/ui/monitor-destinations.md#audience-level-dataflow-runs-for-streaming-destinations) voor de [ verbinding van Marketo Engage ](/help/destinations/catalog/adobe/marketo-engage.md) melden | U kunt [ informatie ](/help/dataflows/ui/monitor-destinations.md#audience-level-dataflow-runs-for-streaming-destinations) over de geactiveerde, uitgesloten, of ontbroken identiteiten nu bekijken die op een publieksniveau, voor elk publiek worden verdeeld dat deel van de dataflows voor deze bestemming uitmaakt. |
 | De externe publiekssteun voor [ TikTok ](/help/destinations/catalog/social/tiktok.md) en [ Breuk Inc ](/help/destinations/catalog/advertising/snap-inc.md) verbindingen | U kunt extern publiek aan deze bestemmingen van [ douane activeren uploadt ](../../segmentation/ui/audience-portal.md#import-audience) en [ Federatieve Samenstelling van het Publiek ](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/start/audiences). |
+| Arrays, kaarten en objecten exporteren naar cloudopslagdoelen | Door de nieuwe **[!UICONTROL Export arrays, maps, objects]** -schakeloptie te gebruiken wanneer u verbinding maakt met een bestemming voor cloudopslag, kunt u nieuwe complexe objecten exporteren om doelen te selecteren. [Meer informatie](/help/destinations/ui/export-arrays-calculated-fields.md) over de nieuwe functionaliteit. |
 
 {style="table-layout:auto"}
 
@@ -104,6 +105,9 @@ Voor meer informatie, lees het [ Overzicht van de Prep van Gegevens ](../../data
 
 - Een probleem met de Destination SDK-testgereedschappen is opgelost. Sommige klanten of partners kwamen kwesties met het [ hulpmiddel van de de generatie van het steekproefprofiel ](/help/destinations/destination-sdk/testing-api/streaming-destinations/sample-profile-generation-api.md) toe te schrijven aan een niet gestaafd formaat wanneer het schema dat voor het produceren van profielen werd gebruikt gegevenstypes met a `No format` selecteur omvatte.
 - Een probleem met het bijwerken van de `targetConnection` -specificatie van doelen met de Flow Service API is opgelost. In sommige gevallen zou de PATCH-bewerking zich op dezelfde manier gedragen als een POST-bewerking, waardoor bestaande gegevensstromen zouden worden beschadigd. Dit probleem is nu opgelost en alle klanten kunnen de Flow Service API gebruiken om hun `targetConnection` specificatie bij te werken. [Meer informatie](/help/destinations/api/edit-destination.md#patch-target-connection).
+- Wanneer u profielen exporteert naar op een bestand gebaseerde doelen, zorgt deduplicatie ervoor dat slechts één profiel wordt geëxporteerd wanneer meerdere profielen dezelfde deduplicatietoets en dezelfde tijdstempel hebben. Deze release bevat een update van het deduplicatieproces, waarbij ervoor wordt gezorgd dat opeenvolgende uitvoeringen met dezelfde coördinaten altijd dezelfde resultaten opleveren, hetgeen de consistentie ten goede komt. [Meer informatie](/help/destinations/ui/activate-batch-profile-destinations.md#deduplication-same-timestamp).
+
+Voor meer informatie raadpleegt u het [overzicht van bestemmingen](../../destinations/home.md).
 
 ## Bronnen {#sources}
 

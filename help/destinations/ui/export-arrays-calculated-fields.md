@@ -1,42 +1,38 @@
 ---
-title: Array-objecten van Real-Time CDP naar cloudopslagdoelen exporteren
+title: Arrays, kaarten en objecten van Real-Time CDP naar cloudopslagdoelen exporteren
 type: Tutorial
-description: Leer hoe u berekende velden kunt gebruiken om arrays van Real-Time CDP naar cloudopslagdoelen als tekenreeksen te exporteren.
+description: Leer hoe u arrays, kaarten en objecten van Real-Time CDP naar cloudopslagdoelen exporteert.
 exl-id: ff13d8b7-6287-4315-ba71-094e2270d039
-source-git-commit: 546ef0f9a5a9c37de3891aba02491540a5c6f8c9
+source-git-commit: 6122ddc078101c26061e8662de3fcdcb1cb65992
 workflow-type: tm+mt
-source-wordcount: '1721'
+source-wordcount: '873'
 ht-degree: 0%
 
 ---
 
-# Array-objecten van Real-Time CDP naar cloudopslagdoelen exporteren {#export-arrays-cloud-storage}
-
->[!CONTEXTUALHELP]
->id="platform_destinations_export_arrays_flat_files"
->title="Ondersteuning van exportarrays"
->abstract="<p>Gebruik **voegt berekende gebied** controle toe om series van int, koord, booleaanse, en objecten waarden van Experience Platform naar uw gewenste bestemming van de wolkenopslag uit te voeren.</p><p> Arrays moeten als tekenreeksen worden geëxporteerd met de functie `array_to_string` . Raadpleeg de documentatie voor uitgebreide voorbeelden en meer ondersteunde functies.</p>"
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/export-arrays-calculated-fields.html#examples" text="Voorbeelden"
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/export-arrays-calculated-fields.html#known-limitations" text="Bekende beperkingen"
+# Arrays, kaarten en objecten van Real-Time CDP naar cloudopslagdoelen exporteren {#export-arrays-cloud-storage}
 
 >[!AVAILABILITY]
 >
->De functionaliteit om arrays naar cloudopslagdoelen te exporteren is over het algemeen beschikbaar.
+>De functionaliteit voor het exporteren van arrays naar cloudopslagdoelen is over het algemeen beschikbaar voor de volgende doelen: [[!DNL Azure Data Lake Storage Gen2]](../../destinations/catalog/cloud-storage/adls-gen2.md), [[!DNL Data Landing Zone]](../../destinations/catalog/cloud-storage/data-landing-zone.md), [[!DNL Google Cloud Storage]](../../destinations/catalog/cloud-storage/google-cloud-storage.md), [[!DNL Amazon S3]](../../destinations/catalog/cloud-storage/amazon-s3.md), [[!DNL Azure Blob]](../../destinations/catalog/cloud-storage/azure-blob.md), [[!DNL SFTP]](../../destinations/catalog/cloud-storage/sftp.md),
 
 Leer hoe te om series van Real-Time CDP naar [ wolkenopslagbestemmingen ](/help/destinations/catalog/cloud-storage/overview.md) uit te voeren. Lees dit document om inzicht te krijgen in de exportworkflow, de gebruiksgevallen die door deze functionaliteit worden ingeschakeld en de bekende beperkingen.
 
-Arrays moeten momenteel als tekenreeksen worden geëxporteerd met de functie `array_to_string` .
+Bekijk deze pagina voor alles wat u wilt weten over het exporteren van arrays, kaarten en andere objecttypen uit Experience Platform.
 
-Om series uit te voeren, moet u de berekende gebiedsfunctionaliteit in de afbeeldingsstap van het de uitvoerwerkschema gebruiken, *tenzij u [ individuele elementen van een serie](#index-based-array-access)* uitvoert. Ga voor meer informatie over berekende velden naar de onderstaande pagina&#39;s. Deze omvatten een inleiding aan berekende gebieden in de Prep van Gegevens en meer informatie over alle beschikbare functies:
+## Onderste regel naar boven
 
-* [UI-gids en -overzicht](/help/data-prep/ui/mapping.md#calculated-fields)
-* [Functies Data Prep](/help/data-prep/functions.md)
+Haal de belangrijkste informatie over de functionaliteit in deze sectie op en ga verder onder de andere secties in het document voor meer informatie.
+
+* De capaciteit om series, kaarten, en voorwerpen uit te voeren hangt van uw selectie van de **series van de Uitvoer af, kaarten, voorwerpen** knevel. Lees meer over het [ verder neer op de pagina ](#export-arrays-maps-objects-toggle).
+* U kunt arrays, toewijzingen en objecten alleen exporteren naar cloudopslagdoelen, in `JSON` - en `Parquet` -bestanden. Personen en potentiële doelgroepen worden ondersteund, accountpubliek niet.
+* U *kunt* series, kaarten, en voorwerpen naar Csv- dossiers uitvoeren, maar slechts door de berekende gebiedsfunctionaliteit te gebruiken en hen in een koord door te schakelen te gebruiken `array_to_string` functie.
 
 ## Arrays en andere objecttypen in Platform {#arrays-strings-other-objects}
 
 In Experience Platform, kunt u [ schema&#39;s XDM ](/help/xdm/home.md) gebruiken om verschillende gebiedstypes te beheren. Voordat ondersteuning voor het exporteren van arrays werd toegevoegd, kon u eenvoudige sleutelwaardepaartypevelden, zoals tekenreeksen, uit Experience Platform exporteren naar de gewenste doelen. Een voorbeeld van zulk een gebied dat voor de uitvoer eerder werd gesteund is `personalEmail.address`:`johndoe@acme.org`.
 
-Andere veldtypen in Experience Platform zijn arrayvelden. Lees meer over [ het beheren van seriegebieden in Experience Platform UI ](/help/xdm/ui/fields/array.md). Naast de eerder ondersteunde veldtypen kunt u nu arrayobjecten zoals het onderstaande voorbeeld exporteren. Deze objecten worden samengevoegd tot een tekenreeks met de functie `array_to_string` .
+Andere veldtypen in Experience Platform zijn arrayvelden. Lees meer over [ het beheren van seriegebieden in Experience Platform UI ](/help/xdm/ui/fields/array.md). U kunt nu matrixobjecten exporteren, zoals het onderstaande voorbeeld.
 
 ```
 organizations = [{
@@ -59,253 +55,90 @@ organizations = [{
 
 Zie verder onder [ uitgebreide voorbeelden ](#examples) van hoe u diverse functies kunt gebruiken om tot elementen van series, transformatie en filterseries toegang te hebben, arrayelementen in een koord, en meer aansluiten.
 
-## Bekende beperkingen {#known-limitations}
-
-Let op de volgende bekende beperkingen die momenteel van toepassing zijn op deze functionaliteit:
-
-* De uitvoer naar JSON of de dossiers van het Pakket *met hiërarchische schema&#39;s* wordt niet gesteund op dit ogenblik. U kunt series naar CSV, JSON, en de dossiers van het Pakket *als koorden slechts* uitvoeren, door de `array_to_string` functie te gebruiken.
+Naast arrays kunt u ook kaarten en objecten van Experience Platform naar de gewenste bestemming voor cloudopslag exporteren. Lees meer over [ kaarten ](/help/xdm/ui/fields/map.md) en [ voorwerpen ](/help/xdm/ui/fields/object.md) in Experience Platform.
 
 ## Vereisten {#prerequisites}
 
-[ verbindt ](/help/destinations/ui/connect-destination.md) met een gewenste bestemming van de wolkenopslag, vooruitgang door de [ activeringsstappen voor de bestemmingen van de wolkenopslag ](/help/destinations/ui/activate-batch-profile-destinations.md) en krijgt aan de [ in kaart brengende ](/help/destinations/ui/activate-batch-profile-destinations.md#mapping) stap.
+[ verbindt ](/help/destinations/ui/connect-destination.md) met een gewenste bestemming van de wolkenopslag, vooruitgang door de [ activeringsstappen voor de bestemmingen van de wolkenopslag ](/help/destinations/ui/activate-batch-profile-destinations.md) en krijgt aan de [ in kaart brengende ](/help/destinations/ui/activate-batch-profile-destinations.md#mapping) stap. Wanneer u verbinding maakt met de gewenste wolkenbestemming, moet u de schakeloptie **[!UICONTROL Export arrays, maps, objects]** inschakelen. Meer informatie vindt u in de onderstaande sectie.
 
-## Berekende velden exporteren {#how-to-export-calculated-fields}
+## Arrays, kaarten, objecten in-/uitschakelen {#export-arrays-maps-objects-toggle}
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_export_arrays_maps_objects"
 >title="Arrays, kaarten en objecten exporteren"
->abstract="<p> Wissel dit het plaatsen <b> op </b> om de uitvoer van series, kaarten, en voorwerpen aan JSON of de dossiers van het Parket toe te laten. U kunt deze objecttypen selecteren in de weergave Bronveld van de toewijzingsstap.</p><p>Met deze knevel <b> weg </b>, kunt u de berekende veldoptie gebruiken en diverse functies van de gegevenstransformatie toepassen wanneer het activeren van publiek. Nochtans, kunt u <i> niet </i> uitvoeren series, kaarten, en voorwerpen aan JSON of de dossiers van het Pakket en moet een afzonderlijke bestemming voor dat doel vormen.</p>"
+>abstract="<p> Wissel dit het plaatsen <b> op </b> om de uitvoer van series, kaarten, en voorwerpen aan JSON of de dossiers van het Parket toe te laten. U kunt deze objecttypen selecteren in de weergave Bronveld van de toewijzingsstap. Als de schakeloptie is ingeschakeld, kunt u de optie Berekende velden niet gebruiken in de toewijzingsstap.</p><p>Met deze knevel <b> weg </b>, kunt u de berekende gebiedsoptie gebruiken en diverse functies van de gegevenstransformatie toepassen wanneer het activeren van publiek. Nochtans, kunt u <i> niet </i> uitvoeren series, kaarten, en voorwerpen aan JSON of de dossiers van het Pakket en moet een afzonderlijke bestemming voor dat doel vormen.</p>"
 
->[!CONTEXTUALHELP]
->id="platform_destinations_export_arrays_control"
->title="Hiërarchisch uitvoerschema inschakelen"
->abstract="Schakel in of u hiërarchische structuren zoals arrays wilt exporteren."
+Wanneer u verbinding maakt met een locatie voor cloudopslag, kunt u de schakeloptie **[!UICONTROL Export arrays, maps, objects]** in- of uitschakelen.
 
->[!CONTEXTUALHELP]
->id="platform_destinations_export_arrays_calculated_field_disabled"
->title="Berekende velden uitgeschakeld toevoegen"
->abstract="Deze controle wordt onbruikbaar gemaakt omdat u de **series van de Uitvoer, kaarten, voorwerpen** knevel ** wanneer vestiging deze bestemmingsverbinding selecteerde. Om berekende gebieden en de functies te gebruiken beschikbaar binnen, opstelling een nieuwe bestemmingsverbinding met de **series van de Uitvoer, kaarten, voorwerpen** knevel *weg*."
+![ de series van de Uitvoer, kaarten, voorwerpen knevel getoond met aan of van het plaatsen, evenals het benadrukken van popover.](/help/destinations/assets/ui/export-arrays-calculated-fields/export-objects-toggle.gif)
 
-Selecteer **[!UICONTROL Add calculated field]** in de toewijzingsstap van de activeringsworkflow voor bestemmingen voor cloudopslag.
+Wissel dit het plaatsen **op** om de uitvoer van series, kaarten, en voorwerpen aan JSON of de dossiers van het Parket toe te laten. U kunt deze objecten types in de brongebiedmening van de [ toewijzingsstap ](/help/destinations/ui/activate-batch-profile-destinations.md#mapping) selecteren wanneer het activeren van publiek aan de bestemmingen van de wolkenopslag. Als deze instelling is ingeschakeld, kunt u de optie Berekende velden echter niet gebruiken om gegevens bij activering te transformeren.
 
-![ voeg berekend gebied toe dat in de afbeeldingsstap van het werkschema van de partijactivering wordt benadrukt.](/help/destinations/assets/ui/export-arrays-calculated-fields/add-calculated-fields.png)
+Met deze knevel **weg**, kunt u de berekende gebiedsoptie gebruiken en diverse functies van de gegevenstransformatie toepassen wanneer het activeren van publiek. U kunt echter geen arrays, kaarten en objecten exporteren naar JSON- of Parquet-bestanden en moet daarvoor een aparte bestemming configureren.
 
-Dit opent een modaal venster waar u functies en gebieden kunt selecteren om attributen uit Experience Platform uit te voeren.
+## De series van de uitvoer, kaarten, voorwerpen schakelen *op* {#export-arrays-maps-objects-toggle-on}
 
-![ Modal venster van de berekende gebiedsfunctionaliteit zonder nog geselecteerde functie.](/help/destinations/assets/ui/export-arrays-calculated-fields/add-calculated-fields-2.png)
+Als deze instelling is ingeschakeld, kunt u volledige objecten (bijvoorbeeld `person.name` ) en arrays exporteren door deze via de bronveldkiezer te selecteren in de toewijzingsstap van de activeringsworkflow.
 
-Gebruik bijvoorbeeld de functie `array_to_string` in het veld `organizations` , zoals hieronder wordt weergegeven, om de array met organisaties te exporteren als een tekenreeks in een CSV-bestand. Bekijk [ meer informatie over dit en andere voorbeelden verder onder ](#array-to-string-function-export-arrays).
+![ Uitgezochte voorwerpen via de selecteur van het brongebied in de afbeeldingsstap van het activeringswerkschema.](/help/destinations/assets/ui/export-arrays-calculated-fields/select-object.gif)
 
-![ Modal venster van de berekende gebiedsfunctionaliteit met de serie-aan-koord geselecteerde functie.](/help/destinations/assets/ui/export-arrays-calculated-fields/add-calculated-fields-3.png)
+Als deze optie is geselecteerd, voorkomt de gebruikersinterface dat gebruikers berekende velden gebruiken en is het besturingselement **[!UICONTROL Add calculated fields]** uitgeschakeld, zoals hieronder wordt weergegeven. Als u berekende velden wilt gebruiken voor gegevenstransformaties, stelt u een doelverbinding in met de schakeloptie uit.
 
-Selecteer **[!UICONTROL Save]** om het berekende veld te behouden en terug te keren naar de toewijzingsstap.
+![ Berekende gehandicapte gebiedscontrole.](/help/destinations/assets/ui/export-arrays-calculated-fields/calculated-fields-disabled.png)
 
-![ Modal venster van de berekende gebiedsfunctionaliteit met de serie-aan-koord geselecteerde functie en sparen benadrukte controle.](/help/destinations/assets/ui/export-arrays-calculated-fields/save-calculated-field.png)
+## De series van de uitvoer, kaarten, voorwerpen schakelen *weg* {#export-arrays-maps-objects-toggle-off}
 
-Vul de **[!UICONTROL Target field]** weer in de toewijzingsstap van de workflow met een waarde in de kolomkop die u voor dit veld wilt gebruiken in de geëxporteerde bestanden.
+Met deze optie die aan *wordt geplaatst weg*, kunt u de berekende gebiedsoptie gebruiken en diverse functies van de gegevenstransformatie toepassen wanneer het activeren van publiek. U kunt echter geen arrays, kaarten en objecten exporteren naar JSON- of Parquet-bestanden en moet daarvoor een aparte bestemming configureren.
 
-![ Afbeeldingsstap met het benadrukte doelgebied.](/help/destinations/assets/ui/export-arrays-calculated-fields/fill-in-target-field.png)
+U *kunt* series, kaarten, en voorwerpen naar Csv- dossiers uitvoeren door de berekende gebiedsfunctionaliteit te gebruiken en hen in een koord aaneenschakelen door de `array_to_string` functie te gebruiken. [ las meer ](#array-to-string-function-export-arrays) over het gebruiken van die functie.
 
-![ Uitgezochte doelgebied 2 ](/help/destinations/assets/ui/export-arrays-calculated-fields/target-field-filled-in.png)
+Lees meer over het werken met berekende gebieden om [ transformaties op gegevens uit te voeren die naar de bestemmingen van de wolkenopslag ](/help/destinations/ui/data-transformations-calculated-fields.md) worden uitgevoerd.
 
-Als u klaar bent, selecteert u **[!UICONTROL Next]** om door te gaan naar de volgende stap van de activeringsworkflow.
+## Voorbeeld van geëxporteerde bestanden {#sample-exported-files}
 
-![ de stap van de afbeelding met het benadrukte doelgebied en een doelwaarde die binnen wordt gevuld.](/help/destinations/assets/ui/export-arrays-calculated-fields/select-next-to-proceed.png)
+Met deze functie kunt u Parquet- en JSON-bestanden exporteren waarin de structuur van Experience Platform behouden blijft. Onder een voorbeeld van een geëxporteerd JSON-bestand weergeven.
 
-## Voorbeeld van ondersteunde functies voor het exporteren van arrays {#supported-functions}
++++ Selecteer deze optie om het geëxporteerde JSON-bestand weer te geven.
 
-Alle gedocumenteerde [ functies van de Prep van Gegevens ](/help/data-prep/functions.md) worden gesteund wanneer het activeren van gegevens aan op dossier-gebaseerde bestemmingen.
-
-De functies hieronder, specifiek voor het behandelen van de uitvoer van series, zijn gedocumenteerd samen met voorbeelden.
-
-* `array_to_string`
-* `flattenArray`
-* `filterArray`
-* `transformArray`
-* `coalesce`
-* `size_of`
-* `iif`
-* `index-based array access`
-* `add_to_array`
-* `to_array`
-* `first`
-* `last`
-
-## Voorbeelden van functies die worden gebruikt om arrays te exporteren {#examples}
-
-Zie voorbeelden en verdere informatie in de onderstaande secties voor enkele van de bovenstaande functies. Voor de rest van de vermelde functies, verwijs naar de [ algemene functiedocumentatie in de sectie van de Prep van Gegevens ](/help/data-prep/functions.md).
-
-### `array_to_string` functie om arrays te exporteren {#array-to-string-function-export-arrays}
-
-Gebruik de functie `array_to_string` om de elementen van een array te koppelen in een tekenreeks, met behulp van een gewenst scheidingsteken, zoals `_` of `|` .
-
-U kunt bijvoorbeeld de volgende XDM-velden hieronder combineren, zoals wordt weergegeven in het toewijzingsraster dat is opgenomen met een `array_to_string('_',organizations)` -syntaxis:
-
-* `organizations` array
-* `person.name.firstName` tekenreeks
-* `person.name.lastName` tekenreeks
-* `personalEmail.address` tekenreeks
-
-![ het Voorbeeld van de Toewijzing met inbegrip van de serie_to_string functie.](/help/destinations/assets/ui/export-arrays-calculated-fields/mapping-array-to-string-function.png)
-
-In dit geval ziet het uitvoerbestand er hieronder uit. U ziet hoe de elementen van de array met het teken `_` worden samengevoegd tot één tekenreeks.
-
-```
-First_Name,Last_Name,Personal_Email,Organization
-John,Doe,johndoe@acme.org, "{'id':123,'orgName':'Acme Inc','founded':1990,'latestInteraction':1708041600000}_{'id':456,'orgName':'Superstar Inc','founded':2004,'latestInteraction':1692921600000}_{'id':789,'orgName':'Energy Corp','founded':2021,'latestInteraction':1725753600000}"
+```json
+{
+  "person_name_firstName": "John",
+  "person_name_lastName": "Smith",
+  "_acmeinc_customer_hs_main_address_scalar": "Oak Avenue No 12",
+  "_acmeinc_customer_hs_locations_array": [
+    "home address 12",
+    "office address 12"
+  ],
+  "_acmeinc_customer_hs_date_array": [
+    "2024-11-14",
+    "2024-11-15"
+  ],
+  "_acmeinc_customer_hs_customer_obj_emails_array0": "john.smith@example.com",
+  "_acmeinc_customer_hs_customer_obj": {
+    "emails_array": [
+      "john.smith@example.com",
+      "j.smith@example.com"
+    ],
+    "name_scalar": "John Smith"
+  },
+  "_acmeinc_customer_hs_addresses_array_obj": [
+    {
+      "is_primary": true,
+      "streetName_scalar": "Maple Street",
+      "streetNo_int": 12
+    },
+    {
+      "is_primary": false,
+      "streetName_scalar": "Pine Road",
+      "streetNo_int": 45
+    }
+  ],
+  "_acmeinc_customer_hs_addresses_array_obj0": {
+    "is_primary": true,
+    "streetName_scalar": "Maple Street",
+    "streetNo_int": 12
+  }
+}
 ```
 
-### `filterArray` functie voor het exporteren van gefilterde arrays
-
-Gebruik de functie `filterArray` om de elementen van een geëxporteerde array te filteren. U kunt deze functie combineren met de functie `array_to_string` die hierboven verder wordt beschreven.
-
-Als u doorgaat met het array-object `organizations` van boven, kunt u een functie als `array_to_string('_', filterArray(organizations, org -> org.founded > 2021))` schrijven, die de organisaties in 2021 of hoger met een waarde voor `founded` retourneert.
-
-![ Voorbeeld van de filterArray functie.](/help/destinations/assets/ui/export-arrays-calculated-fields/filter-array-function.png)
-
-In dit geval ziet het uitvoerbestand er hieronder uit. De twee elementen van de array die aan het criterium voldoen, worden met het teken `_` samengevoegd tot één tekenreeks.
-
-```
-John,Doe,johndoe@acme.org, "{'id':123,'orgName':'Acme Inc','founded':1990,'latestInteraction':1708041600000}_{'id':789,'orgName':'Energy Corp','founded':2021,'latestInteraction':1725753600000}"
-```
-
-### `transformArray` functie om getransformeerde arrays te exporteren
-
-Gebruik de functie `transformArray` om de elementen van een geëxporteerde array te transformeren. U kunt deze functie combineren met de functie `array_to_string` die hierboven verder wordt beschreven.
-
-Als u doorgaat met het array-object `organizations` van bovenaf, kunt u een functie als `array_to_string('_', transformArray(organizations, org -> ucase(org.orgName)))` schrijven die de namen retourneert van de organisaties die in hoofdletters zijn omgezet.
-
-![ Voorbeeld van de functie transformArray.](/help/destinations/assets/ui/export-arrays-calculated-fields/transform-array-function.png)
-
-In dit geval ziet het uitvoerbestand er hieronder uit. De drie elementen van de array worden getransformeerd en samengevoegd tot één tekenreeks met het teken `_` .
-
-```
-John,Doe,johndoe@acme.org,ACME INC_SUPERSTAR INC_ENERGY CORP
-```
-
-### `iif` functie om arrays te exporteren {#iif-function-export-arrays}
-
-Gebruik de functie `iif` om elementen van een array onder bepaalde omstandigheden te exporteren. Als u bijvoorbeeld verdergaat met het array-object `organizations` van boven, kunt u een eenvoudige voorwaardelijke functie schrijven, zoals `iif(organizations[0].equals("Marketing"), "isMarketing", "isNotMarketing")` .
-
-![ het Voorbeeld van de Toewijzing met inbegrip van de functie iif.](/help/destinations/assets/ui/export-arrays-calculated-fields/mapping-iif-function.png)
-
-In dit geval ziet het uitvoerbestand er hieronder uit. In dit geval, is het eerste element van de serie Marketing, zodat is de persoon lid van de marketing afdeling.
-
-```
-`First_Name,Last_Name, Personal_Email, Is_Member_Of_Marketing_Dept
-John,Doe, johndoe@acme.org, "isMarketing"
-```
-
-### `add_to_array` functie om arrays te exporteren {#add-to-array-function-export-arrays}
-
-Gebruik de functie `add_to_array` om elementen aan een geëxporteerde array toe te voegen. U kunt deze functie combineren met de functie `array_to_string` die hierboven verder wordt beschreven.
-
-Als u doorgaat met het array-object `organizations` van bovenaf, kunt u een functie als `source: array_to_string('_', add_to_array(organizations,"2023"))` schrijven, die de organisaties retourneert waarvan een persoon lid is in 2023.
-
-![ Voorbeeld van de Afbeelding met inbegrip van de add_to_array functie.](/help/destinations/assets/ui/export-arrays-calculated-fields/mapping-add-to-array-function.png)
-
-In dit geval ziet het uitvoerbestand er hieronder uit. De drie elementen van de array worden samengevoegd tot één tekenreeks met het teken `_` en 2023 wordt ook toegevoegd aan het einde van de tekenreeks.
-
-```
-`First_Name,Last_Name,Personal_Email,Organization_Member_2023
-John,Doe, johndoe@acme.org,"Marketing_Sales_Finance_2023"
-```
-
-### `flattenArray` functie voor het exporteren van samengevoegde arrays
-
-Gebruik de functie `flattenArray` om een geëxporteerde multidimensionale array samen te voegen. U kunt deze functie combineren met de functie `array_to_string` die hierboven verder wordt beschreven.
-
-Als u doorgaat met het array-object `organizations` van bovenaf, kunt u een functie zoals `array_to_string('_', flattenArray(organizations))` schrijven. De functie `array_to_string` voegt de invoerarray standaard samen tot een tekenreeks.
-
-De resulterende uitvoer is gelijk aan die voor de functie `array_to_string` die verderop wordt beschreven.
-
-### `coalesce` functie om arrays te exporteren {#coalesce-function-export-arrays}
-
-Gebruik de functie `coalesce` om het eerste element van een array met een andere waarde dan null te benaderen en te exporteren naar een tekenreeks.
-
-U kunt bijvoorbeeld de volgende XDM-velden hieronder combineren, zoals wordt getoond in het toewijzingsraster, door een `coalesce(subscriptions.hasPromotion)` syntaxis te gebruiken om de eerste `true` of `false` -waarde in de array te retourneren:
-
-* `"subscriptions.hasPromotion": [null, true, null, false, true]` array
-* `person.name.firstName` tekenreeks
-* `person.name.lastName` tekenreeks
-* `personalEmail.address` tekenreeks
-
-![ het Voorbeeld van de afbeelding met inbegrip van de kaalkrachtfunctie.](/help/destinations/assets/ui/export-arrays-calculated-fields/mapping-coalesce-function.png)
-
-In dit geval ziet het uitvoerbestand er hieronder uit. De eerste niet-null `true` waarde in de array wordt geëxporteerd naar het bestand.
-
-```
-First_Name,Last_Name,hasPromotion
-John,Doe,true
-```
-
-### `size_of` functie om arrays te exporteren {#sizeof-function-export-arrays}
-
-Gebruik de functie `size_of` om aan te geven hoeveel elementen er in een array zijn. Als u bijvoorbeeld een array-object `purchaseTime` met meerdere tijdstempels hebt, kunt u met de functie `size_of` aangeven hoeveel afzonderlijke aankopen een persoon heeft gedaan.
-
-U kunt bijvoorbeeld de volgende XDM-velden hieronder combineren, zoals in de schermafbeelding wordt getoond.
-
-* `"purchaseTime": ["1538097126","1569633126,"1601255526","1632791526","1664327526"]` array die vijf afzonderlijke aankooptijden door de klant aangeeft
-* `personalEmail.address` tekenreeks
-
-![ Voorbeeld van het Toewijzen met inbegrip van size_of functie.](/help/destinations/assets/ui/export-arrays-calculated-fields/mapping-size-of-function.png)
-
-In dit geval ziet het uitvoerbestand er hieronder uit. De tweede kolom geeft het aantal elementen in de array aan, overeenkomend met het aantal afzonderlijke aankopen dat de klant heeft gedaan.
-
-```
-`Personal_Email,Times_Purchased
-johndoe@acme.org,"5"
-```
-
-### Arraytoegang op basis van index {#index-based-array-access}
-
->[!IMPORTANT]
->
->In tegenstelling tot de andere die functies op deze pagina worden beschreven, om individuele elementen van een serie uit te voeren, te hoeven u *niet* om de **[!UICONTROL Calculated fields]** controle in UI te gebruiken.
-
-U kunt toegang krijgen tot een index van een array om één item uit de array te exporteren. Als u bijvoorbeeld, net als in het bovenstaande voorbeeld voor de functie `size_of` , alleen de eerste keer dat een klant een bepaald product heeft aangeschaft, toegang wilt tot dit bestand en het bestand wilt exporteren, kunt u `purchaseTime[0]` gebruiken om het eerste element van de tijdstempel te exporteren, `purchaseTime[1]` om het tweede element van de tijdstempel te exporteren, `purchaseTime[2]` om het derde element van de tijdstempel te exporteren, enzovoort.
-
-![ het Voorbeeld dat van de afbeelding toont hoe een element van een serie kan worden betreden.](/help/destinations/assets/ui/export-arrays-calculated-fields/mapping-index.png)
-
-In dit geval ziet het uitvoerbestand er als volgt uit: de eerste keer dat de klant een aankoop heeft gedaan, wordt geëxporteerd:
-
-```
-`Personal_Email,First_Purchase
-johndoe@acme.org,"1538097126"
-```
-
-### `first` - en `last` -functies om arrays te exporteren {#first-and-last-functions-export-arrays}
-
-Gebruik de functies `first` en `last` om het eerste of laatste element in een array te exporteren. Als u bijvoorbeeld doorgaat met het array-object `purchaseTime` met meerdere tijdstempels uit de vorige voorbeelden, kunt u deze gebruiken om de eerste of laatste aanschaftijd die door een persoon is gemaakt, te exporteren.
-
-![ Voorbeeld van het Toewijzen met inbegrip van de eerste en laatste functies.](/help/destinations/assets/ui/export-arrays-calculated-fields/mapping-first-last-functions.png)
-
-In dit geval ziet uw uitvoerbestand er als volgt uit: u exporteert de eerste en laatste keer dat de klant een aankoop heeft gedaan:
-
-```
-`Personal_Email,First_Purchase, Last_Purchase
-johndoe@acme.org,"1538097126","1664327526"
-```
-
-<!--
-
-### Hashing functions {#hashing-functions}
-
-In addition to the functions specific for exporting arrays or elements from an array, you can use hashing functions to hash attributes in the exported files. For example, if you have any personally identifiable information in attributes, you can hash those fields when exporting them. 
-
-You can hash string values directly, for example `md5(personalEmail.address)`. If desired, you can also hash individual elements of array fields, assuming elements in the array are strings, like this: `md5(purchaseTime[0])`
-
-The supported hashing functions are:
-
-|Function | Sample expression |
-|---------|----------|
-| `sha1` | `sha1(organizations[0])` |
-| `sha256` | `sha256(organizations[0])` |
-| `sha512` | `sha512(organizations[0])` |
-| `hash` | `hash("crc32", organizations[0], "UTF-8")` |
-| `md5` |  `md5(organizations[0], "UTF-8")` |
-| `crc32` | `crc32(organizations[0])` |
-
-{style="table-layout:auto"}
-
--->
++++
