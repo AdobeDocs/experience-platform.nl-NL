@@ -1,17 +1,17 @@
 ---
 keywords: gegevensbeheer rtcdp;rtcdp gegevensbeheer;realtime gegevensprofielbeheer van klanten;privacy rtcdp;rtcdp privacy
-title: Privacy in Real-time Customer Data Platform
-description: Met Adobe Real-time Customer Data Platform kunt u het proces stroomlijnen waarbij uw gegevensbewerkingen voldoen aan de privacyregels.
+title: Privacy in Real-Time Customer Data Platform
+description: Met Adobe Real-Time Customer Data Platform kunt u het proces stroomlijnen waarbij uw gegevensbewerkingen voldoen aan de privacyregels.
 feature: Get Started, Privacy
 exl-id: bcb0e42e-4549-4952-bb69-5534aee353f8
-source-git-commit: 82535ec3ac2dd27e685bb591fdf661d3ab5dd2c9
+source-git-commit: adc6d50f2784fe665d0590c3af053a057f8e4e38
 workflow-type: tm+mt
 source-wordcount: '386'
 ht-degree: 0%
 
 ---
 
-# Privacy in Real-time Customer Data Platform
+# Privacy in Real-Time Customer Data Platform
 
 [!DNL Adobe Real-Time Customer Data Platform] ([!DNL Real-Time CDP]) helpt marketers gegevens van veelvoudige ondernemingssystemen samen te brengen, die hen toestaan om, hun klanten beter te identificeren te begrijpen en te betrekken. Adobe beschouwt de privacy van consumentengegevens als een fundamenteel ontwerpbeginsel en biedt verschillende controles om marketers te helpen de privacy van gegevens van hun klanten te beheren.
 
@@ -29,7 +29,7 @@ Wettelijke privacyregels zoals de [!DNL General Data Protection Regulation] (GDP
 
 Met [!DNL Real-Time CDP] kunnen klanten ervoor kiezen hun persoonlijke gegevens niet op te nemen in gevallen waarin segmentatie wordt gebruikt. De voorkeuren voor de optie-uit van klanten worden vastgelegd en opgeslagen door [!DNL Real-Time Customer Profile] en kunnen worden afgedwongen door gebruikers uit te sluiten die met behulp van de Booleaanse logica (&quot;AND NOT&quot;) in de segmentvoorspelling hebben gekozen voor een publiek.
 
-Zie het document op [ het ontvangen opt-out verzoeken ](../../segmentation/consents.md) in de documentatie van de Dienst van de Segmentatie van Adobe Experience Platform voor meer informatie.
+Zie het document op [ het ontvangen opt-out verzoeken ](../../segmentation/tutorials/consents.md) in de documentatie van de Dienst van de Segmentatie van Adobe Experience Platform voor meer informatie.
 
 ## IAB TCF 2.0-ondersteuning
 

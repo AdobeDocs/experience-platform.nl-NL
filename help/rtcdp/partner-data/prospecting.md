@@ -3,7 +3,7 @@ title: Nieuwe klanten aantrekken en aanschaffen zonder afhankelijk te zijn van c
 description: Leer hoe u nieuwe klanten kunt aantrekken en aanwerven via het zoeken naar gebruiksgevallen, zonder te vertrouwen op cookies van derden.
 feature: Use Cases, Customer Acquisition
 exl-id: b9e7b3af-2a13-4904-bd12-e3ed05a1988e
-source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
+source-git-commit: e7c0551276d31d6809ace096c00e0dc2665090e6
 workflow-type: tm+mt
 source-wordcount: '2027'
 ht-degree: 1%
@@ -14,7 +14,7 @@ ht-degree: 1%
 
 >[!AVAILABILITY]
 >
->* Deze functionaliteit is beschikbaar voor klanten die een licentie hebben verkregen voor Real-Time CDP (App Service), Adobe Experience Platform Activation, Real-Time CDP, Real-Time CDP Premiere, Real-Time CDP Ultimate. Lees meer over deze pakketten in de [ productbeschrijvingen ](https://helpx.adobe.com/legal/product-descriptions.html) en contacteer uw vertegenwoordiger van de Adobe voor meer informatie.
+>* Deze functionaliteit is beschikbaar voor klanten met een licentie voor Real-Time CDP (App Service), Adobe Experience Platform Activation, Real-Time CDP, Real-Time CDP Prime, Real-Time CDP Ultimate. Lees meer over deze pakketten in de [ productbeschrijvingen ](https://helpx.adobe.com/legal/product-descriptions.html) en contacteer uw vertegenwoordiger van Adobe voor meer informatie.
 
 Gebruik gegevensondersteuning van derden in Real-Time CDP om uw profielbasis uit te breiden met perspectiefprofielen van gegevenspartners en met hen in gesprek te gaan om nieuwe klanten te verkrijgen of te bereiken.
 
@@ -24,7 +24,7 @@ Gebruik gegevensondersteuning van derden in Real-Time CDP om uw profielbasis uit
 
 Merken worden tegelijkertijd geconfronteerd met enorme uitdagingen van verantwoord het uitvoeren van top-of-the-funnel gebruiksgevallen van de klantenverwerving zonder afhankelijkheid van derdekoekjes, beperkte begrotingen, en hogere vraag naar transparantie en terugkeer op ad-uitgavenpost.
 
-Adobe Real-time Customer Data Platform kan merken helpen hun door DMP (Data Management Platform) ondersteunde gebruiksscenario&#39;s veilig om te zetten in alternatieven waarvoor geen cookie nodig is, en dit op een manier die de volledige verfijning en kracht van zelfserversegmentatie, publieksbeperking en activering in één systeem brengt. Dit alles zonder afbreuk te doen aan de onafgebroken aandacht van de Adobe voor een verantwoord gebruik van gegevens via een geoctrooieerd kader voor gegevensbeheer en instemming.
+Adobe Real-Time Customer Data Platform kan merken helpen hun door DMP ondersteunde gebruiksgevallen veilig over te zetten naar alternatieven zonder cookie, en dit op een manier die de volledige complexiteit en kracht van zelfzuchtige segmentatie, publieksbeperking en activering in één systeem brengt. Dit alles zonder afbreuk te doen aan de onvoorwaardelijke nadruk die Adobe legt op een verantwoord gebruik van gegevens via een geoctrooieerd kader voor gegevensbeheer en instemming.
 
 Volg bijvoorbeeld de stappen die in dit gebruiksgeval worden beschreven wanneer u een campagne moet uitvoeren om vooruitzichten aan te trekken om gebruikers of bekende klanten te worden.
 
@@ -71,12 +71,12 @@ Wanneer u de stappen voor het implementeren van het gebruiksscenario uitvoert, m
 * [Gegevenssets](/help/catalog/datasets/overview.md)
 * [Bronnen](/help/sources/home.md)
 * [Prospectieprofielen](/help/profile/ui/prospect-profile.md)
-* [Doelgroepen](/help/segmentation/ui/prospect-audience.md)
-* [Doelen](/help/destinations/home.md)
+* [Doelgroepen](/help/segmentation/types/prospect-audiences.md)
+* [Bestemmingen](/help/destinations/home.md)
 
 ### De details van het het profielprofiel van de vergunning derde van de partner {#license-profiles-from-partner}
 
-Deze stap wordt behandeld in de [ eerste vereisten ](#prerequisites-and-planning) en de Adobe veronderstelt dat u de juiste contractuele overeenkomsten op zijn plaats met vertrouwde op gegevensverkopers hebt om perspectiefprofielen in te voeren die door de gegevenspartner worden verstrekt.
+Deze stap wordt behandeld in de [ eerste vereisten ](#prerequisites-and-planning) en Adobe veronderstelt dat u de juiste contractuele overeenkomsten op zijn plaats met vertrouwde op gegevensverkopers hebt om perspectiefprofielen in te voeren die door de gegevenspartner worden verstrekt.
 
 ### Breid uw profielgegevens en governancemodel uit om partner-verstrekte perspectiefprofielen aan te passen {#extend-governance-model}
 
@@ -96,7 +96,7 @@ Begin door een nieuw identiteitstype voor de profielen te creëren die u van de 
 ![ creeer een nieuwe identiteitskaart van identiteitskaart van de Partner namespace.](/help/rtcdp/assets/partner-data/prospecting/create-partner-identity-namespace.png)
 
 * Lees meer over identiteitskaart van de Partner namespaces in de [ sectie van identiteitstypes ](/help/identity-service/features/namespaces.md).
-* Lees over [ hoe te om identiteitsgebieden ](/help/xdm/ui/fields/identity.md) in het gebruikersinterface van het Experience Platform te bepalen.
+* Lees over [ hoe te om identiteitsgebieden ](/help/xdm/ui/fields/identity.md) in het gebruikersinterface van Experience Platform te bepalen.
 
 #### Een nieuw schema maken met de klasse **[!UICONTROL XDM Individual Prospect Profile]**
 
@@ -168,7 +168,7 @@ Als u een bestand wilt laden dat u van de partner hebt ontvangen in de gegevenss
 
 ![ voeg dossier aan dataset toe.](/help/rtcdp/assets/partner-data/prospecting/add-file-to-dataset.png)
 
-Na het laden van de lijst van profielen van de gegevenspartner in Real-Time CDP, ga aan [ Inspect te werk de geladen sectie van perspectiefprofielen ](#inspect-profiles) om te controleren dat de perspectiefprofielen in UI bevolken.
+Na het laden van de lijst van profielen van de gegevenspartner in Real-Time CDP, ga aan [ te werk inspecteer de geladen sectie van de perspectiefprofielen ](#inspect-profiles) om te controleren dat de perspectiefprofielen in UI bevolken.
 
 #### Opzienbare gegevens door bronschakelaars
 
@@ -181,7 +181,7 @@ Sommige geadviseerde bronschakelaars voor dit doel zijn vermeld hieronder maar m
 
 Na het laden van de lijst met profielen van de gegevenspartner in Real-Time CDP, ga aan de volgende sectie te werk om te controleren dat de perspectiefprofielen in UI bevolken.
 
-#### De geladen perspectiefprofielen Inspect {#inspect-profiles}
+#### De geladen perspectiefprofielen controleren {#inspect-profiles}
 
 Als u de lijst met perspectiefprofielen wilt weergeven, navigeert u naar **[!UICONTROL Prospects]** > **[!UICONTROL Profiles]** in de linkertrack.
 
@@ -213,7 +213,7 @@ Merk op dat de ervaring van de publieksopbouw voor perspectiefprofielen van de e
 * Alleen batchprofielevaluatie.
 * Steunt niet het bouwen van publiek dat op tijd-reeksgebeurtenissen wordt gebaseerd.
 
-Lees meer over [ perspectiefpubliek ](/help/segmentation/ui/prospect-audience.md).
+Lees meer over [ perspectiefpubliek ](/help/segmentation/types/prospect-audiences.md).
 
 ### Activeren perspectiefprofielen aan bestemmingen {#activate-to-destinations}
 

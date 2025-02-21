@@ -3,9 +3,9 @@ solution: Experience Platform
 title: UI-gids voor segmentBuilder
 description: De segmentbouwer in Adobe Experience Platform UI verstrekt een rijke werkruimte die u toestaat om met de gegevenselementen van het Profiel in wisselwerking te staan. De werkruimte biedt intuïtieve besturingselementen voor het maken en bewerken van regels, zoals tegels voor slepen en neerzetten die worden gebruikt om gegevenseigenschappen te vertegenwoordigen.
 exl-id: b27516ea-8749-4b44-99d0-98d3dc2f4c65
-source-git-commit: e74d04119593dddcaf6a5c710b685c606f5998d6
+source-git-commit: e7c0551276d31d6809ace096c00e0dc2665090e6
 workflow-type: tm+mt
-source-wordcount: '4868'
+source-wordcount: '4889'
 ht-degree: 0%
 
 ---
@@ -108,7 +108,7 @@ Zodra de rapportsuites in kaart zijn gebracht, kunt u deze onlangs in kaart gebr
 | Scenario | Unieschema-ervaring | Segmentatie generieke variabele | Aan segment toegewezen variabele |
 | -------- | ----------------------- | ----------------------------- | ---------------------------- |
 | Single-rapportenpakket | Beschrijvende naam wordt opgenomen in algemene variabelen. <br><br>**Voorbeeld:** Naam van de Pagina (eVar2) | <ul><li>Beschrijvende naam opgenomen met algemene variabelen</li><li>De vraag gebruikt gegevens van de specifieke dataset, aangezien het de enige is</li></ul> | Query&#39;s kunnen gebruikmaken van Adobe Analytics-gegevens en mogelijk andere bronnen. |
-| Meerdere rapportsuites | Bij generieke variabelen worden geen beschrijvingen van vriendelijke namen opgenomen. <br><br>**Voorbeeld:** eVar2 | <ul><li>Elk veld met meerdere beschrijvingen wordt algemeen weergegeven. Dit betekent dat er geen vriendelijke namen worden weergegeven in de gebruikersinterface.</li><li>De vragen kunnen gegevens van om het even welke datasets gebruiken die de eVar bevatten, die in gemengde of onjuiste resultaten kunnen resulteren.</li></ul> | De vraag gebruikt correct gecombineerde resultaten van veelvoudige datasets. |
+| Meerdere rapportsuites | Bij generieke variabelen worden geen beschrijvingen van vriendelijke namen opgenomen. <br><br>**Voorbeeld:** eVar2 | <ul><li>Elk veld met meerdere beschrijvingen wordt algemeen weergegeven. Dit betekent dat er geen vriendelijke namen worden weergegeven in de gebruikersinterface.</li><li>De vragen kunnen gegevens van om het even welke datasets gebruiken die eVar bevatten, die in gemengde of onjuiste resultaten kunnen resulteren.</li></ul> | De vraag gebruikt correct gecombineerde resultaten van veelvoudige datasets. |
 
 ### Doelgroepen
 
@@ -121,7 +121,7 @@ Zodra de rapportsuites in kaart zijn gebracht, kunt u deze onlangs in kaart gebr
 >
 >Voor publiek dat binnen Platform wordt gecreeerd, slechts zal het publiek dat het **zelfde** fusiebeleid heeft worden getoond.
 
-Het tabblad **[!UICONTROL Audiences]** bevat een lijst met alle soorten publiek die zijn geïmporteerd uit externe bronnen, zoals Adobe Audience Manager of Customer Journey Analytics, en alle soorten publiek die zijn gemaakt in [!DNL Experience Platform] .
+Het tabblad **[!UICONTROL Audiences]** bevat een lijst met alle soorten publiek die zijn geïmporteerd uit externe bronnen, zoals Adobe Audience Manager of Customer Journey Analytics, en met soorten publiek dat is gemaakt in [!DNL Experience Platform] .
 
 Op het tabblad **[!UICONTROL Audiences]** kunt u alle beschikbare bronnen weergeven als een groep mappen. Terwijl u de mappen selecteert, zijn de beschikbare submappen en doelgroepen zichtbaar. Bovendien kunt u het mappictogram (zoals weergegeven in de afbeelding uiterst rechts) selecteren om de mapstructuur weer te geven (een vinkje geeft de map aan die u momenteel in hebt) en eenvoudig terug te navigeren door de mappen door de naam van een map in de boomstructuur te selecteren.
 
@@ -241,6 +241,10 @@ Met tijdbeperkingen kunt u tijdbeperkingen toepassen op op tijd gebaseerde kenme
 >[!IMPORTANT]
 >
 >Als u een segmentdefinitie met &quot;Deze maand&quot;of &quot;Dit jaar&quot;tijdbeperkingen voorafgaand aan Juni 2024 creeerde, zult u uw segmentdefinities moeten opnieuw opslaan. Vóór juni 2024 was &quot;Deze maand&quot; gebaseerd op 30 dagen en &quot;Dit jaar&quot; op 365 dagen.
+
+>[!NOTE]
+>
+>Zowel [ negeren de beperking van de jaartijd ](./ignore-year.md) en [ regel-vlakke tijdbeperkingen ](./segment-refactoring.md) eerder refactored, met meer informatie beschikbaar in de verbonden overzichten.
 
 De lijst van beschikbare tijdbeperkingen is als volgt:
 
@@ -394,7 +398,7 @@ Terwijl u de segmentdefinitie verder ontwikkelt, kunt u een gepagineerde voorver
 
 U kunt ook uw evaluatiemethode selecteren. Als u weet welke evaluatiemethode u wilt gebruiken, kunt u de gewenste evaluatiemethode selecteren of gebruikend dropdown lijst. Als u wilt weten welke evaluatietypen deze segmentdefinitie voor kwalificeert, kunt u het doorbladerpictogram ![ omslagpictogram met een vergrootglas ](/help/images/icons/folder-search.png) selecteren om een lijst van de beschikbare de evaluatiemethodes van de segmentdefinitie te zien.
 
-De pop-up [!UICONTROL Evaluation method eligibility] wordt weergegeven. Deze popover toont de beschikbare evaluatiemethodes, die partij, het stromen, en rand zijn. Uit de pop-up blijkt welke evaluatiemethoden subsidiabel en niet-subsidiabel zijn. Afhankelijk van de parameters u in uw segmentdefinitie gebruikte, kan het niet voor bepaalde evaluatiemethodes kwalificeren. Voor meer informatie over de vereisten voor elke evaluatiemethode, te lezen gelieve de [ het stromen segmentatie ](./streaming-segmentation.md#query-types) of de [ randsegmentatie ](./edge-segmentation.md#query-types) overzichten.
+De pop-up [!UICONTROL Evaluation method eligibility] wordt weergegeven. Deze popover toont de beschikbare evaluatiemethodes, die partij, het stromen, en rand zijn. Uit de pop-up blijkt welke evaluatiemethoden subsidiabel en niet-subsidiabel zijn. Afhankelijk van de parameters u in uw segmentdefinitie gebruikte, kan het niet voor bepaalde evaluatiemethodes kwalificeren. Voor meer informatie over de vereisten voor elke evaluatiemethode, te lezen gelieve de [ het stromen segmentatie ](../methods/streaming-segmentation.md#query-types) of de [ randsegmentatie ](../methods/edge-segmentation.md#query-types) overzichten.
 
 U kunt de evaluatiemethode van de segmentdefinitie ook veranderen nadat u klaar bent met het creëren van het. Als u de evaluatiemethode van Edge of het Streamen in Partij verandert, zult u **** niet het terug naar Edge of het Streamen kunnen veranderen. De verandering in de evaluatiemethode zal **slechts** van kracht worden zodra u **[!UICONTROL Save]** in popover selecteert. Het annuleren van de dialoog zal **** de originele evaluatiemethode handhaven.
 

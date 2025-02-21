@@ -2,8 +2,8 @@
 title: Aanvullende informatie voor Adobe Experience Platform van februari 2024
 description: Aanvullende informatie voor Adobe Experience Platform van februari 2024.
 exl-id: 7e4b76b7-4027-4890-b869-1dbb79670c3e
-source-git-commit: aa33f7006b1a3abf7d19ffe3e0d5e5ee39fe9a5d
-workflow-type: ht
+source-git-commit: 02f2082e695d157415c9e0c59ca5d371c94bb991
+workflow-type: tm+mt
 source-wordcount: '1243'
 ht-degree: 100%
 
@@ -66,7 +66,7 @@ For more information on Data Prep, read the [Data Prep overview](../../data-prep
 
 ## Bestemmingen {#destinations}
 
-[!DNL Destinations] zijn pre-built integraties met bestemmingsplatforms voor naadloze activering van gegevens van Adobe Experience Platform. U kunt bestemmingen gebruiken om uw bekende en onbekende gegevens te activeren voor cross-channel marketingcampagnes, e-mailcampagnes, gerichte advertenties en vele andere gebruiksscenario&#39;s.
+[!DNL Destinations] zijn pre-built integraties met bestemmingsplatforms die de naadloze activering van gegevens van Adobe Experience Platform mogelijk maken. U kunt bestemmingen gebruiken om uw bekende en onbekende gegevens te activeren voor cross-channel marketingcampagnes, e-mailcampagnes, gerichte advertenties en vele andere gebruiksscenario&#39;s.
 
 **Nieuwe bestemmingen** {#new-destinations}
 
@@ -109,13 +109,13 @@ Voor meer informatie over sandboxes, raadpleegt u het [Overzicht van sandboxes](
 
 ## Segmentatieservice {#segmentation}
 
-Met [!DNL Segmentation Service] kunt u gegevens die zijn opgeslagen in [!DNL Experience Platform] en die betrekking hebben op personen (zoals klanten, prospects, gebruikers of organisaties) segmenteren in doelgroepen. U kunt een doelgroep maken via segmentdefinities of andere bronnen op basis van uw [!DNL Real-Time Customer Profile]-gegevens. Deze doelgroepen worden centraal geconfigureerd en onderhouden op [!DNL Platform] en zijn eenvoudig toegankelijk via elke Adobe-oplossing.
+Met [!DNL Segmentation Service] kunt u gegevens die zijn opgeslagen in [!DNL Experience Platform] en die betrekking hebben op personen (zoals klanten, prospects, gebruikers of organisaties) segmenteren in doelgroepen. U kunt doelgroepen maken via segmentdefinities of andere bronnen op basis van uw [!DNL Real-Time Customer Profile]-gegevens. Deze doelgroepen worden centraal geconfigureerd en onderhouden op [!DNL Platform] en zijn eenvoudig toegankelijk via elke Adobe-oplossing.
 
 **Nieuwe functie**
 
 | Functie | Beschrijving |
 | ------- | ----------- |
-| Accountdoelgroepen | Accountdoelgroepen zijn nu algemeen beschikbaar! U kunt nu accountsegmentatie gebruiken om het volledige gemak en de verfijning van de marketingsegmentatie-ervaring van op mensen gebaseerde doelgroepen naar op accounts gebaseerde doelgroepen te brengen in zowel de B2B- als de B2P-editie van het Real-Time Customer Platform. Met deze release kunt u op personen gebaseerde doelgroepen gebruiken als basis voor op accounts gebaseerde doelgroepen. Ook worden er zoekmogelijkheden toegevoegd, wordt het gebruik van aangepaste entiteiten ondersteund en voldoet de release aan datagovernance. Voor meer informatie over deze functie, raadpleegt u het [overzicht van accountdoelgroepen](../../segmentation/ui/account-audiences.md). |
+| Accountdoelgroepen | Accountdoelgroepen zijn nu algemeen beschikbaar! U kunt nu accountsegmentatie gebruiken om het volledige gemak en de verfijning van de marketingsegmentatie-ervaring van op mensen gebaseerde doelgroepen naar op accounts gebaseerde doelgroepen te brengen in zowel de B2B- als de B2P-editie van het Real-Time Customer Platform. Met deze release kunt u op personen gebaseerde doelgroepen gebruiken als basis voor op accounts gebaseerde doelgroepen. Ook worden er zoekmogelijkheden toegevoegd, wordt het gebruik van aangepaste entiteiten ondersteund en voldoet de release aan datagovernance. Voor meer informatie over deze functie, raadpleegt u het [overzicht van accountdoelgroepen](../../segmentation/types/account-audiences.md). |
 
 {style="table-layout:auto"}
 

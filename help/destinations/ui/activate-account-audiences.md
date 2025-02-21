@@ -5,7 +5,7 @@ description: Leer hoe u het publiek van een account activeert voor doelen
 badgeB2B: label="B2B edition" type="Informative" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=en#rtcdp-editions newtab=true"
 badgeB2P: label="B2P Edition" type="Positive" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=en#rtcdp-editions newtab=true"
 exl-id: ad69d0a8-bf5b-42ac-97a3-401eadda62cd
-source-git-commit: 1c31dd978298191dd10500b60eb446d2ca37139c
+source-git-commit: 4afb2c76f2022423e8f1fa29c91d02b43447ba90
 workflow-type: tm+mt
 source-wordcount: '789'
 ht-degree: 0%
@@ -16,13 +16,13 @@ ht-degree: 0%
 
 >[!AVAILABILITY]
 >
->De functionaliteit om rekeningspubliek aan bestemmingen te activeren is beschikbaar voor bedrijven die [ zaken-aan-Zaken ](/help/rtcdp/overview.md#rtcdp-b2b) en [ zaken-aan-Persoon ](/help/rtcdp/overview.md#rtcdp-b2p) uitgaven van Real-time Customer Data Platform kopen.
+>De functionaliteit om rekeningspubliek aan bestemmingen te activeren is beschikbaar voor bedrijven die [ zaken-aan-Zaken ](/help/rtcdp/overview.md#rtcdp-b2b) en [ zaken-aan-Persoon ](/help/rtcdp/overview.md#rtcdp-b2p) uitgaven van Real-Time Customer Data Platform kopen.
 
-Dit artikel verklaart het werkschema wordt vereist om [ rekeningspubliek ](/help/segmentation/ui/account-audiences.md) van Adobe Experience Platform naar uw aangewezen bestemming uit te voeren dat.
+Dit artikel verklaart het werkschema wordt vereist om [ rekeningspubliek ](/help/segmentation/types/account-audiences.md) van Adobe Experience Platform naar uw aangewezen bestemming uit te voeren dat.
 
 ## Ondersteunde doelen {#supported-destinations}
 
-Ga naar **[!UICONTROL Connections]** > **[!UICONTROL Destinations]** en selecteer de tab **[!UICONTROL Catalog]** . Gebruik het filter **[!UICONTROL Data types]** en selecteer **[!UICONTROL Accounts]** om de doelen weer te geven die activering van accountsoorten ondersteunen. Momenteel, is het uitvoeren van rekeningspubliek beschikbaar slechts aan bepaalde bestemmingen van de wolkenopslag ([ Amazon S3 ](/help/destinations/catalog/cloud-storage/amazon-s3.md), [ ADLS Gen 2 ](/help/destinations/catalog/cloud-storage/adls-gen2.md), [ Azure BlobOpslag ](/help/destinations/catalog/cloud-storage/azure-blob.md), [ Gegevens Landing Zone ](/help/destinations/catalog/cloud-storage/data-landing-zone.md), en [ SFTP ](/help/destinations/catalog/cloud-storage/sftp.md)) en [ Demandbase ](/help/destinations/catalog/advertising/demandbase.md) en [ (Bedrijven) LinkedIn Gematcheerd publiek ces ](/help/destinations/catalog/social/linkedin-b2b.md) streamingdoel.
+Ga naar **[!UICONTROL Connections]** > **[!UICONTROL Destinations]** en selecteer de tab **[!UICONTROL Catalog]** . Gebruik het filter **[!UICONTROL Data types]** en selecteer **[!UICONTROL Accounts]** om de doelen weer te geven die activering van accountsoorten ondersteunen. Momenteel, is het uitvoeren van rekeningspubliek beschikbaar slechts aan bepaalde wolkenopslagbestemmingen ([ Amazon S3 ](/help/destinations/catalog/cloud-storage/amazon-s3.md), [ ADLS Gen 2 ](/help/destinations/catalog/cloud-storage/adls-gen2.md), [ Azure BlobOpslag ](/help/destinations/catalog/cloud-storage/azure-blob.md), [ Gegevens Landing Zone ](/help/destinations/catalog/cloud-storage/data-landing-zone.md), en [ SFTP ](/help/destinations/catalog/cloud-storage/sftp.md)) en [ Demandbase ](/help/destinations/catalog/advertising/demandbase.md) en [ (Bedrijven) LinkedIn De gestroomde bestemming van het publiek ](/help/destinations/catalog/social/linkedin-b2b.md) stromen.
 
 ![ Doelen die rekeningspubliek steunen.](/help/destinations/assets/ui/activate-account-audiences/data-types-filter.png)
 
@@ -34,7 +34,7 @@ Bekijk de onderstaande video voor een overzicht van het maken en activeren van a
 
 ## Vereisten {#prerequisites}
 
-* U moet eerst [ rekeningsprofielen ](/help/rtcdp/accounts/account-profile-overview.md) opnemen en [ rekeningspubliek ](/help/segmentation/ui/account-audiences.md) creëren alvorens u hen aan stroomafwaartse bestemmingen kunt activeren.
+* U moet eerst [ rekeningsprofielen ](/help/rtcdp/accounts/account-profile-overview.md) opnemen en [ rekeningspubliek ](/help/segmentation/types/account-audiences.md) creëren alvorens u hen aan stroomafwaartse bestemmingen kunt activeren.
 * Als u het publiek van een account naar bestemmingen wilt activeren, moet u verbinding hebben met een doel. Als u dit niet reeds hebt gedaan, ga naar de [ bestemmingscatalogus ](../catalog/overview.md), doorblader de gesteunde bestemmingen, en vorm de bestemming die u wilt gebruiken. Lees het leerprogramma UI op [ verbindend met bestemmingen ](./connect-destination.md) voor meer informatie.
 
 ### Vereiste machtigingen {#permissions}
@@ -91,7 +91,7 @@ Let op de volgende belangrijke callouts en bekende beperkingen voor de algemene 
 
 Houd er bij het activeren van het accountpubliek naar het **[!UICONTROL (Companies) LinkedIn Matched Audiences]** -doel rekening mee dat de volgende twee toewijzingsparen verplicht zijn om gegevens te exporteren:
 
-![ de afbeelding van LinkedIn vereiste gebieden.](/help/destinations/assets/ui/activate-account-audiences/linkedin-mapping-required-fields.png)
+![ LinkedIn afbeelding vereiste gebieden.](/help/destinations/assets/ui/activate-account-audiences/linkedin-mapping-required-fields.png)
 
 | Source-veld | Doelveld |
 |---------|----------|

@@ -3,7 +3,7 @@ title: Activeren het potentiële publiek aan bestemmingen
 type: Tutorial
 description: Leer hoe te om perspectiefpubliek aan bestemmingen te activeren
 exl-id: 3e034a14-09d0-4b08-b171-5afb62ae4b62
-source-git-commit: fbc2a6c81682797af4674adabff358a62d973007
+source-git-commit: e7c0551276d31d6809ace096c00e0dc2665090e6
 workflow-type: tm+mt
 source-wordcount: '596'
 ht-degree: 0%
@@ -14,9 +14,9 @@ ht-degree: 0%
 
 >[!AVAILABILITY]
 >
->Deze functionaliteit is beschikbaar voor klanten die het Real-Time CDP-pakket Premier en Ultimate hebben aangeschaft. Neem contact op met uw Adobe voor meer informatie.
+>Deze functionaliteit is beschikbaar voor klanten die het pakket Real-Time CDP Prime en Ultimate hebben aangeschaft. Neem contact op met uw Adobe-vertegenwoordiger voor meer informatie.
 
-Dit artikel verklaart het werkschema wordt vereist om [ perspectiefpubliek ](/help/segmentation/ui/prospect-audience.md) van Adobe Experience Platform naar uw aangewezen bestemming uit te voeren dat.
+Dit artikel verklaart het werkschema wordt vereist om [ perspectiefpubliek ](/help/segmentation/types/prospect-audiences.md) van Adobe Experience Platform naar uw aangewezen bestemming uit te voeren dat.
 
 ## Ondersteunde doelen {#supported-destinations}
 
@@ -26,7 +26,7 @@ Ga naar **[!UICONTROL Connections]** > **[!UICONTROL Destinations]** en selectee
 
 ## Vereisten {#prerequisites}
 
-* U moet [ perspectiefprofielen ](/help/profile/ui/prospect-profile.md) eerst opnemen en [ perspectiefpubliek ](/help/segmentation/ui/prospect-audience.md) creëren alvorens u hen aan stroomafwaartse bestemmingen kunt activeren.
+* U moet [ perspectiefprofielen ](/help/profile/ui/prospect-profile.md) eerst opnemen en [ perspectiefpubliek ](/help/segmentation/types/prospect-audiences.md) creëren alvorens u hen aan stroomafwaartse bestemmingen kunt activeren.
 * Om perspectiefpubliek aan bestemmingen te activeren, moet u met succes met een bestemming verbonden hebben. Als u dit niet reeds hebt gedaan, ga naar de [ bestemmingscatalogus ](../catalog/overview.md), doorblader de gesteunde bestemmingen, en vorm de bestemming die u wilt gebruiken. Lees het leerprogramma UI op [ verbindend met bestemmingen ](./connect-destination.md) voor meer informatie.
 
 ### Vereiste machtigingen {#permissions}

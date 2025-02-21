@@ -3,7 +3,7 @@ solution: Experience Platform
 title: UI-gids voor segmentatieservice
 description: Leer hoe u publiek- en segmentdefinities kunt maken en beheren in de gebruikersinterface van Adobe Experience Platform.
 exl-id: 0a2e8d82-281a-4c67-b25b-08b7a1466300
-source-git-commit: 9844a7bf5e7198e7d5112ec924220aba71cdc14b
+source-git-commit: 276fd7c532843c9589e1d51b0bc7a76cb5c3eb9f
 workflow-type: tm+mt
 source-wordcount: '1025'
 ht-degree: 0%
@@ -31,7 +31,7 @@ U moet ook de volgende belangrijke termen begrijpen die in dit document worden g
 
 ## Overzicht
 
-Selecteer in de gebruikersinterface van het Experience Platform de optie **[!UICONTROL Audiences]** in de linkernavigatie om het tabblad **[!UICONTROL Overview]** met het dashboard van [!UICONTROL Audiences] te openen.
+Selecteer in de gebruikersinterface van Experience Platform de optie **[!UICONTROL Audiences]** in de linkernavigatie om het tabblad **[!UICONTROL Overview]** met het dashboard van [!UICONTROL Audiences] te openen.
 
 >[!NOTE]
 >
@@ -90,9 +90,9 @@ Als u wilt zien hoe de doelgroep wordt samengesteld, selecteert u de naam van ee
 
 De pagina van de Samenstelling van het Publiek verschijnt met de bouwstenen die uw publiek vormen. Voor meer details over hoe te om de Samenstelling van het Publiek te gebruiken, te lezen gelieve de [ gids UI van de Samenstelling van het Publiek ](./audience-composition.md).
 
-## Federale compositie publiek {#fac}
+## Samenstelling van Federated-doelgroep {#fac}
 
-Naast publiekssamenstellingen en segmentdefinities, kunt u Adobe Federated Audience Composition gebruiken om nieuwe doelgroepen van ondernemingsdatasets te bouwen zonder onderliggende gegevens te kopiëren en die doelgroepen op te slaan in het Portaal van het Publiek van Adobe Experience Platform. U kunt bestaande soorten publiek in Adobe Experience Platform ook verrijken door samengestelde publieksgegevens te gebruiken die van het entrepot van ondernemingsgegevens zijn gefedereerd. Gelieve te lezen de gids op [ Federated de Samenstelling van het Publiek ](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/home).
+Naast publiekssamenstellingen en segmentdefinities kunt u Adobe Federated Audience Composition gebruiken om nieuwe soorten publiek te maken van bedrijfsgegevenssets zonder onderliggende gegevens te kopiëren en die soorten publiek op te slaan in Adobe Experience Platform Audience Portal. U kunt bestaande soorten publiek in Adobe Experience Platform ook verrijken door samengestelde publieksgegevens te gebruiken die van het entrepot van ondernemingsgegevens zijn gefedereerd. Gelieve te lezen de gids op [ Federated de Samenstelling van het Publiek ](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/home).
 
 ![ een lijst van publiek dat in Federatieve Samenstelling van het Publiek voor uw organisatie wordt gecreeerd.](../images/ui/overview/federated-audience-composition.png)
 
@@ -100,7 +100,7 @@ Naast publiekssamenstellingen en segmentdefinities, kunt u Adobe Federated Audie
 
 Streaming segmentatie is de mogelijkheid om segmentatie uit te voeren op [!DNL Platform] in bijna real-time, terwijl de nadruk ligt op gegevensrijkheid. Met streamingsegmentatie gebeurt er nu segmentering als gegevens in [!DNL Platform] terechtkomen, waardoor de noodzaak om segmentatietaken te plannen en uit te voeren, wordt verminderd.
 
-Meer informatie over het stromen segmentatie kan in de [ het stromen gebruikershandleiding van de segmentatie ](./streaming-segmentation.md) worden gevonden.
+Meer informatie over het stromen segmentatie kan in de [ het stromen gebruikershandleiding van de segmentatie ](../methods/streaming-segmentation.md) worden gevonden.
 
 >[!NOTE]
 >
@@ -110,7 +110,7 @@ Meer informatie over het stromen segmentatie kan in de [ het stromen gebruikersh
 
 Edge-segmentatie is de mogelijkheid om het publiek in Platform ogenblikkelijk aan de rand te evalueren, zodat dezelfde pagina en de volgende pagina-personalisatie gebruikstoepassingen mogelijk maken.
 
-Meer informatie over randsegmentatie kan in de [ gids van de randsegmentatie UI worden gevonden ](./edge-segmentation.md)
+Meer informatie over randsegmentatie kan in de [ gids van de randsegmentatie UI worden gevonden ](../methods/edge-segmentation.md)
 
 ## Beleidsovertredingen
 

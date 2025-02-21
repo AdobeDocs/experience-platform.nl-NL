@@ -2,8 +2,9 @@
 solution: Experience Platform
 title: De Gids van de Beperkingen UI van de Tijd van de Vervorming van de Refactoring
 description: De Bouwer van het segment verstrekt een rijke werkruimte die u toestaat om met de gegevenselementen van het Profiel in wisselwerking te staan. De werkruimte biedt intuïtieve besturingselementen voor het maken en bewerken van regels, zoals tegels voor slepen en neerzetten die worden gebruikt om gegevenseigenschappen te vertegenwoordigen.
+hidefromtoc: true
 exl-id: 3a352d46-829f-4a58-b676-73c3147f792c
-source-git-commit: 665bbd1904e857336a4fb677230389d7977f6b60
+source-git-commit: c7d71113ddcef6aca8b2637814b46e589a6b7fdf
 workflow-type: tm+mt
 source-wordcount: '352'
 ht-degree: 0%

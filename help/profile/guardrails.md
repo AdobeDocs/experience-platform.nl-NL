@@ -5,7 +5,7 @@ product: experience platform
 type: Documentation
 description: Leer over prestaties en door systemen afgedwongen richtlijnen voor profielgegevens en segmentatie. Zo zorgt u voor optimaal gebruik van de functie Real-Time CDP.
 exl-id: 33ff0db2-6a75-4097-a9c6-c8b7a9d8b78c
-source-git-commit: 1f682fc5c109f3dc8a7ed8513260a1a3c3108bbb
+source-git-commit: 1150b7726a7cabe6df6bbc7a850fb4d48afa208e
 workflow-type: tm+mt
 source-wordcount: '2509'
 ht-degree: 1%
@@ -28,7 +28,7 @@ Dit document biedt standaardgebruiks- en tarieflimieten om u te helpen uw profie
 
 ## Aan de slag
 
-De volgende services van het Experience Platform zijn betrokken bij het modelleren van realtime gegevens van het klantprofiel:
+De volgende Experience Platform-services zijn betrokken bij het modelleren van realtime-klantprofielgegevens:
 
 * [[!DNL Real-Time Customer Profile]](home.md): Maak uniforme consumentenprofielen met behulp van gegevens uit meerdere bronnen.
 * [ Identiteiten ](../identity-service/home.md): De identiteiten van Bridge van verschillende gegevensbronnen aangezien zij in Platform worden opgenomen.
@@ -41,7 +41,7 @@ Dit document bevat twee typen standaardlimieten:
 
 | Het type Guardrail | Beschrijving |
 | -------------- | ----------- |
-| **Gegarandeerde van Prestaties (Zachte grens)** | Prestatiegaranties zijn gebruikslimieten die betrekking hebben op het bereik van uw gebruiksgevallen. Als u de prestatiegaranties overschrijdt, kan de prestaties achteruitgaan en de latentie vertragen. Adobe is niet verantwoordelijk voor een dergelijke verslechtering van de prestaties. Klanten die een prestatiegarantie consequent overschrijden, kunnen ervoor kiezen om extra capaciteit te licentiëren om prestatievermindering te voorkomen. |
+| **Gegarandeerde van Prestaties (Zachte grens)** | Prestatiegaranties zijn gebruikslimieten die betrekking hebben op het bereik van uw gebruiksgevallen. Als u de prestatiegaranties overschrijdt, kan de prestaties achteruitgaan en de latentie vertragen. Adobe is niet verantwoordelijk voor deze verslechtering van de prestaties. Klanten die een prestatiegarantie consequent overschrijden, kunnen ervoor kiezen om extra capaciteit te licentiëren om prestatievermindering te voorkomen. |
 | **systeem-afgedwongen grails (Harde grens)** | De door het systeem afgedwongen instructies worden afgedwongen door de gebruikersinterface of API van Real-Time CDP. Dit zijn grenzen die u niet kunt overschrijden aangezien UI en API u zal tegenhouden dit te doen of een fout zal terugkeren. |
 
 {style="table-layout:auto"}
@@ -71,7 +71,7 @@ De volgende instructies bieden aanbevolen limieten bij het modelleren van gegeve
 
 {style="table-layout:auto"}
 
-### Garanties voor entiteiten van Dimension
+### Garanties van Dimension-entiteiten
 
 | Guardrail | Limiet | Limiettype | Beschrijving |
 | --------- | ----- | ---------- | ----------- |
@@ -102,13 +102,13 @@ De volgende instructies verwijzen naar de gegevensgrootte en bieden aanbevolen l
 
 {style="table-layout:auto"}
 
-### Garanties voor entiteiten van Dimension
+### Garanties van Dimension-entiteiten
 
 | Guardrail | Limiet | Limiettype | Beschrijving |
 | --------- | ----- | ---------- | ----------- |
 | Totale grootte voor alle dimensionale entiteiten | 5 GB | Prestatiegerichting | De aanbevolen totale grootte voor alle dimensionale entiteiten is 5 GB. Het inzetten van entiteiten met een grote dimensie kan van invloed zijn op de systeemprestaties. Het wordt bijvoorbeeld niet aanbevolen een productcatalogus van 10 GB als een dimensie-entiteit te laden. |
 | Datasets per dimensionaal eenheidschema | 5 | Prestatiegerichting | Het wordt aanbevolen maximaal vijf datasets toe te voegen aan elk dimensionaal eenheidschema. Bijvoorbeeld, als u een schema voor &quot;producten&quot;creeert en vijf bijdragende datasets toevoegt, zou u geen zesde dataset moeten creëren verbonden aan het productschema. |
-| Per dag ingenomen partijen van een Dimension-entiteit | 4 per entiteit | Prestatiegerichting | Het aanbevolen maximumaantal per dag ingeslikte batches voor dimensieentiteiten is 4 per entiteit. U kunt bijvoorbeeld updates van een productcatalogus tot vier keer per dag invoeren. Het invoeren van extra dimensieentiteitsbatches voor dezelfde entiteit kan de systeemprestaties beïnvloeden. |
+| Per dag ingenomen partijen van Dimension-entiteit | 4 per entiteit | Prestatiegerichting | Het aanbevolen maximumaantal per dag ingeslikte batches voor dimensieentiteiten is 4 per entiteit. U kunt bijvoorbeeld updates van een productcatalogus tot vier keer per dag invoeren. Het invoeren van extra dimensieentiteitsbatches voor dezelfde entiteit kan de systeemprestaties beïnvloeden. |
 
 {style="table-layout:auto"}
 
@@ -119,12 +119,12 @@ De instructies in deze sectie hebben betrekking op het aantal en de aard van de 
 | Guardrail | Limiet | Limiettype | Beschrijving |
 | --------- | ----- | ---------- | ----------- |
 | Soorten publiek per sandbox | 4000 | Prestatiegerichting | U kunt tot 4000 **actieve** publiek per zandbak hebben. U kunt meer dan 4000 zandbakken per organisatie hebben, zolang er minder dan 4000 publiek in elke **individuele** zandbak zijn. Dit is inclusief publiek in batch, streaming en edge. Pogingen om extra publiek te creëren kunnen systeemprestaties beïnvloeden. Lees meer over [ creërend publiek ](/help/segmentation/ui/segment-builder.md) door de segmentbouwer. |
-| Edge-publiek per sandbox | 150 | Prestatiegerichting | U kunt tot 150 **actieve** randpubliek per zandbak hebben. U kunt meer dan 150 randpubliek per organisatie hebben, zolang er minder dan 150 randpubliek in elke **individuele** zandbak zijn. Poging om extra randpubliek te maken kan van invloed zijn op de systeemprestaties. Lees meer over [ randpubliek ](/help/segmentation/ui/edge-segmentation.md). |
-| Edge-doorvoer door alle sandboxen | 1500 RPS | Prestatiegerichting | De segmentatie van Edge steunt een piekwaarde van 1500 binnenkomende gebeurtenissen per seconde die de Edge Network van Adobe Experience Platform ingaan. Edge-segmentatie kan tot 350 milliseconden duren om een binnenkomende gebeurtenis te verwerken nadat deze de Adobe Experience Platform-Edge Network is binnengekomen. Lees meer over [ randpubliek ](/help/segmentation/ui/edge-segmentation.md). |
-| Streaming publiek per sandbox | 500 | Prestatiegerichting | U kunt tot 500 **actieve** het stromen publiek per zandbak hebben. U kunt meer dan 500 het stromen publiek per organisatie hebben, zolang er minder dan 500 het stromen publiek in elke **individuele** zandbak zijn. Dit geldt zowel voor streaming als voor randpubliek. Het maken van extra streaming publiek kan van invloed zijn op de systeemprestaties. Lees meer over [ het stromen publiek ](/help/segmentation/ui/streaming-segmentation.md). |
-| Doorvoer streamen voor alle sandboxen | 1500 RPS | Prestatiegerichting | Streaming segmentatie ondersteunt een piekwaarde van 1500 inkomende gebeurtenissen per seconde. Het kan tot 5 minuten duren voordat streamingsegmentatie in aanmerking komt voor een profiel voor segmentlidmaatschap. Lees meer over [ het stromen publiek ](/help/segmentation/ui/streaming-segmentation.md). |
+| Edge-publiek per sandbox | 150 | Prestatiegerichting | U kunt tot 150 **actieve** randpubliek per zandbak hebben. U kunt meer dan 150 randpubliek per organisatie hebben, zolang er minder dan 150 randpubliek in elke **individuele** zandbak zijn. Poging om extra randpubliek te maken kan van invloed zijn op de systeemprestaties. Lees meer over [ randpubliek ](/help/segmentation/methods/edge-segmentation.md). |
+| Edge-doorvoer door alle sandboxen | 1500 RPS | Prestatiegerichting | Edge-segmentatie ondersteunt een piekwaarde van 1500 inkomende gebeurtenissen per seconde die de Adobe Experience Platform Edge Network binnenkomen. Edge-segmentatie kan tot 350 milliseconden duren om een binnenkomende gebeurtenis te verwerken nadat deze de Adobe Experience Platform Edge Network is binnengekomen. Lees meer over [ randpubliek ](/help/segmentation/methods/edge-segmentation.md). |
+| Streaming publiek per sandbox | 500 | Prestatiegerichting | U kunt tot 500 **actieve** het stromen publiek per zandbak hebben. U kunt meer dan 500 het stromen publiek per organisatie hebben, zolang er minder dan 500 het stromen publiek in elke **individuele** zandbak zijn. Dit geldt zowel voor streaming als voor randpubliek. Het maken van extra streaming publiek kan van invloed zijn op de systeemprestaties. Lees meer over [ het stromen publiek ](/help/segmentation/methods/streaming-segmentation.md). |
+| Doorvoer streamen voor alle sandboxen | 1500 RPS | Prestatiegerichting | Streaming segmentatie ondersteunt een piekwaarde van 1500 inkomende gebeurtenissen per seconde. Het kan tot 5 minuten duren voordat streamingsegmentatie in aanmerking komt voor een profiel voor segmentlidmaatschap. Lees meer over [ het stromen publiek ](/help/segmentation/methods/streaming-segmentation.md). |
 | Batchpubliek per sandbox | 4000 | Prestatiegerichting | U kunt tot 4000 **actieve** partijpubliek per zandbak hebben. U kunt meer dan 4000 partijpubliek per organisatie hebben, zolang er minder dan 4000 partijpubliek in elke **individuele** zandbak zijn. Het maken van extra batchdoelgroepen kan van invloed zijn op de systeemprestaties. |
-| Accountsoorten per sandbox | 50 | Door het systeem afgedwongen geleiding | U kunt maximaal 50 accountsoorten gebruiken in een sandbox. Wanneer u 50 soorten publiek bereikt in een sandbox, wordt het besturingselement **[!UICONTROL Create audience]** uitgeschakeld wanneer u een nieuw publiek voor een account probeert te maken. Lees meer over [ rekeningspubliek ](/help/segmentation/ui/account-audiences.md). |
+| Accountsoorten per sandbox | 50 | Door het systeem afgedwongen geleiding | U kunt maximaal 50 accountsoorten gebruiken in een sandbox. Wanneer u 50 soorten publiek bereikt in een sandbox, wordt het besturingselement **[!UICONTROL Create audience]** uitgeschakeld wanneer u een nieuw publiek voor een account probeert te maken. Lees meer over [ rekeningspubliek ](/help/segmentation/types/account-audiences.md). |
 | Gepubliceerde composities per sandbox | 10 | Prestatiegerichting | U kunt maximaal 10 gepubliceerde composities in een sandbox hebben. Lees meer over [ publiekssamenstelling in de gids UI ](/help/segmentation/ui/audience-composition.md). |
 | Maximale doelgrootte | 30% | Prestatiegerichting | Het geadviseerde maximum lidmaatschap van een publiek is 30 percent van het totale aantal profielen in het systeem. Het is mogelijk een publiek te maken met meer dan 30% van de profielen als leden of met meerdere grote doelgroepen, maar dit heeft gevolgen voor de systeemprestaties. |
 
@@ -158,13 +158,13 @@ Tijdonafhankelijke kenmerken, ook wel &#39;recordgegevens&#39; genoemd, worden g
 
 ![ Infographic die de verschillen tussen verslaggegevens en tijd-reeksen gegevens schetsen.](images/guardrails/profile-entity.png)
 
-#### Dimension-entiteit
+#### Dimension
 
-Hoewel de profielgegevensopslag het handhaven van profielgegevens geen relationele opslag is, staat het Profiel integratie met kleine afmetingsentiteiten toe om publiek op een vereenvoudigde en intuïtieve manier tot stand te brengen. Deze integratie is gekend als [ multi-entiteitsegmentatie ](../segmentation/multi-entity-segmentation.md).
+Hoewel de profielgegevensopslag het handhaven van profielgegevens geen relationele opslag is, staat het Profiel integratie met kleine afmetingsentiteiten toe om publiek op een vereenvoudigde en intuïtieve manier tot stand te brengen. Deze integratie is gekend als [ multi-entiteitsegmentatie ](../segmentation/tutorials/multi-entity-segmentation.md).
 
 Uw organisatie kan ook klassen XDM bepalen om dingen buiten individuen, zoals opslag, producten, of eigenschappen te beschrijven. Deze niet- [!DNL XDM Individual Profile] schema&#39;s worden genoemd &quot;afmetingsentiteiten&quot;(die ook als &quot;raadplegingsentiteiten&quot;worden bekend) en bevatten geen tijd-reeksgegevens. De schema&#39;s die afmetingsentiteiten vertegenwoordigen zijn verbonden met profielentiteiten door het gebruik van [ schemaverhoudingen ](../xdm/tutorials/relationship-ui.md).
 
-De entiteiten van het Dimension verstrekken raadplegingsgegevens die helpen en multi-entiteitsegmentdefinities vereenvoudigen en moeten zo klein zijn dat de segmenteringsmotor de volledige gegevensreeks in geheugen voor optimale verwerking (snelle puntraadpleging) kan laden.
+Dimension-entiteiten bieden opzoekgegevens die de definities van segmenten met meerdere entiteiten ondersteunen en vereenvoudigen. Deze moeten zo klein zijn dat de segmenteringsengine de volledige gegevensset in het geheugen kan laden voor optimale verwerking (snelle puntzoekopdracht).
 
 ![ Infographic die toont dat een profielentiteit uit afmetingsentiteiten bestaat.](images/guardrails/profile-and-dimension-entities.png)
 
@@ -182,10 +182,10 @@ De veelvoudige rapportsuites kunnen voor Profiel worden toegelaten zolang alle g
 
 ## Volgende stappen
 
-Raadpleeg de volgende documentatie voor meer informatie over andere Experience Platforms services guardrails, over end-to-end latentie-informatie en licentiegegevens uit Real-Time CDP Product Description-documenten:
+Raadpleeg de volgende documentatie voor meer informatie over andere Experience Platform Services-instructies, informatie over end-to-end latentie en licentiegegevens uit Real-Time CDP Product Description-documenten:
 
 * [Real-Time CDP guardrails](/help/rtcdp/guardrails/overview.md)
-* [ De diagrammen van de latentie van begin tot eind ](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/deployment/guardrails.html?lang=en#end-to-end-latency-diagrams) voor diverse diensten van het Experience Platform.
-* [ Real-time Customer Data Platform (B2C Uitgave - de Pakketten van Prime en van Ultimate) ](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)
-* [ Real-time Customer Data Platform (B2P - de Pakketten van Prime en van Ultimate) ](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html)
-* [ Real-time Customer Data Platform (B2B - de Pakketten van Prime en van Ultimate) ](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html)
+* [ de diagrammen van de de latentie van begin tot eind ](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/deployment/guardrails.html?lang=en#end-to-end-latency-diagrams) voor diverse diensten van Experience Platform.
+* [ Real-Time Customer Data Platform (B2C Uitgave - de Pakketten van Prime en van Ultimate) ](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)
+* [ Real-Time Customer Data Platform (B2P - de Pakketten van Prime en van Ultimate) ](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html)
+* [ Real-Time Customer Data Platform (B2B - de Pakketten van Prime en van Ultimate) ](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html)

@@ -3,7 +3,7 @@ keywords: doelen;doel;doeltypen
 title: Doeltypen en -categorieën
 description: Leer meer over de verschillende typen en categorieën bestemmingen in Adobe Experience Platform.
 exl-id: 7826d1e2-bd6b-4f65-9da9-0a3b3e8bb93b
-source-git-commit: 322510055bd8b8803292a2b4af9df9e1dbee7ffb
+source-git-commit: 4afb2c76f2022423e8f1fa29c91d02b43447ba90
 workflow-type: tm+mt
 source-wordcount: '800'
 ht-degree: 0%
@@ -32,7 +32,7 @@ Ten slotte kan ook een onderscheid worden gemaakt tussen openbare bestemmingen d
 
 ## Profielexportdoelen {#profile-export}
 
-Profielexportdoelen ontvangen onbewerkte gegevens, vaak met e-mailadres als primaire sleutel. Experience Platform ondersteunt momenteel twee typen exportdoelen voor profielen:
+Profielexportdoelen ontvangen onbewerkte gegevens, vaak met e-mailadres als primaire sleutel. Experience Platform biedt momenteel ondersteuning voor twee typen exportdoelen voor profielen:
 
 * [Batchbestemmingen (op basis van bestanden)](#file-based)
 * [Geavanceerde zakelijke doelen (streamingprofielexportdoelen)](#advanced-enterprise-destinations)
@@ -41,11 +41,11 @@ Profielexportdoelen ontvangen onbewerkte gegevens, vaak met e-mailadres als prim
 
 >[!IMPORTANT]
 >
->De geavanceerde ondernemingsbestemmingen, of het stromen de uitvoerbestemmingen van het profiel, zijn beschikbaar aan [ Adobe Real-time Customer Data Platform Ultimate ](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform.html) slechts klanten.
+>De geavanceerde ondernemingsbestemmingen, of het stromen de uitvoerbestemmingen van het profiel, zijn beschikbaar aan [ Adobe Real-Time Customer Data Platform Ultimate ](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform.html) slechts klanten.
 
-Gebruik de geavanceerde gegevensconnectors voor bedrijfsdoelgegevens om Adobe Real-time Customer Data Platform-profielen in bijna realtime te leveren aan interne systemen of aan andere systemen van derden voor gegevenssynchronisatie, analyse en verdere gebruiksscenario&#39;s voor profielverrijking.
+Gebruik de geavanceerde gegevensconnectors voor bedrijfsdoelgegevens om Adobe Real-Time Customer Data Platform-profielen in bijna realtime te leveren aan interne systemen of aan andere systemen van derden voor gegevenssynchronisatie, analyse en verdere gebruiksscenario&#39;s voor profielverrijking.
 
-Deze doelen ontvangen publiek- en profielgegevens als gegevensstromen van Experience Platforms.
+Deze doelen ontvangen publiek- en profielgegevens als Experience Platform-gegevensstromen.
 
 De geavanceerde ondernemingsbestemmingen omvatten:
 
@@ -59,7 +59,7 @@ Bestandsdoelen ontvangen `.csv` -bestanden met profielen en/of kenmerken. [ Amaz
 
 ## Streaming doelpubliek exporteren {#streaming-destinations}
 
-De de uitvoerbestemmingen van het publiek van het publiek ontvangen de gegevens van het Experience Platform. Deze doelen gebruiken gebruikers-id&#39;s of gebruikers-id&#39;s. Advertising en sociale bestemmingen zoals [[!DNL Google Display & Video 360]](catalog/advertising/google-dv360.md), [[!DNL Google Ads]](catalog/advertising/google-ads-destination.md), of [ Facebook ](catalog/social/facebook.md) zijn voorbeelden van dergelijke bestemmingen.
+De de uitvoerbestemmingen van het publiek ontvangen de gegevens van het Experience Platform publiek. Deze doelen gebruiken gebruikers-id&#39;s of gebruikers-id&#39;s. Advertising en sociale bestemmingen zoals [[!DNL Google Display & Video 360]](catalog/advertising/google-dv360.md), [[!DNL Google Ads]](catalog/advertising/google-ads-destination.md), of [ Facebook ](catalog/social/facebook.md) zijn voorbeelden van dergelijke bestemmingen.
 
 ## Edge-verpersoonlijkingsdoelen {#edge-personalization-destinations}
 
@@ -75,13 +75,13 @@ In de onderstaande video worden de bijzonderheden van de twee soorten doelen uit
 
 ## Typen geëxporteerde soorten publiek {#exported-audiences-types}
 
-U kunt drie soorten publiek van Experience Platform naar diverse bestemmingen uitvoeren:
+U kunt drie soorten publiek vanuit Experience Platform exporteren naar verschillende doelen:
 
 * Personen
-* Accountpubliek
+* Accountdoelgroepen
 * Doelgroepen
 
-Leer meer over de [ diverse publiekstypes ](/help/segmentation/ui/account-audiences.md#terminology).
+Leer meer over de [ diverse publiekstypes ](/help/segmentation/types/account-audiences.md#terminology).
 
 Een symbool op de doelkaart geeft aan welke soorten publiek u naar elk doel kunt exporteren.
 

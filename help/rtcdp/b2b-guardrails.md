@@ -1,25 +1,25 @@
 ---
-keywords: profiel;real-time profiel van de klant;het oplossen van problemen;gidsen;grens;entiteit;primaire entiteit;dimensie-entiteit;RTCDP;CDP;B2B Edition;Real-time Customer Data Platform;real-time platform van de klantengegevens;real-time cdp;b2b;cdp;
-title: Standaardhulplijnen voor Real-time Customer Data Platform B2B Edition
+keywords: profiel;real-time profiel van de klant;het oplossen van problemen;gidsen;grens;entiteit;primaire entiteit;dimensie entiteit;RTCDP;CDP;B2B edition;Real-Time Customer Data Platform;real-time platform van de klantengegevens;real-time cdp;b2b;cdp;
+title: Standaardhulplijnen voor Real-Time Customer Data Platform B2B edition
 type: Documentation
-description: Adobe Experience Platform gebruikt een sterk gedenormaliseerd hybride gegevensmodel dat verschilt van het traditionele relationele gegevensmodel. Dit document biedt standaardgebruiks- en tarieflimieten om u te helpen uw gegevens te modelleren voor optimale systeemprestaties met Adobe Real-time Customer Data Platform B2B Edition.
-badgeB2B: label="B2B Edition" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
+description: Adobe Experience Platform gebruikt een sterk gedenormaliseerd hybride gegevensmodel dat verschilt van het traditionele relationele gegevensmodel. Dit document biedt standaardgebruiks- en tarieflimieten om u te helpen uw gegevens te modelleren voor optimale systeemprestaties met Adobe Real-Time Customer Data Platform B2B edition.
+badgeB2B: label="B2B edition" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
 feature: Guardrails, B2B
 exl-id: 8eff8c3f-a250-4aec-92a1-719ce4281272
-source-git-commit: 5d6b70e397a252e037589c3200053ebcb7eb8291
+source-git-commit: bc399f3af0524232671af780ea1380f1a71a5b7e
 workflow-type: tm+mt
 source-wordcount: '1817'
 ht-degree: 1%
 
 ---
 
-# Standaardhulplijnen voor Real-time Customer Data Platform B2B Edition
+# Standaardhulplijnen voor Real-Time Customer Data Platform B2B edition
 
 >[!NOTE]
 >
->De limieten die in dit document worden beschreven, vertegenwoordigen de wijzigingen die door Real-time Customer Data Platform B2B Edition worden ingeschakeld. Voor een volledige lijst van standaardgrenzen voor de Uitgave van Real-Time CDP B2B, combineer deze grenzen met de algemene die grenzen van Adobe Experience Platform in de [ graadlijnen voor de gegevensdocumentatie van het Profiel van de Klant in real time ](../profile/guardrails.md) worden geschetst.
+>De limieten die in dit document worden beschreven, vertegenwoordigen de wijzigingen die door Real-Time Customer Data Platform B2B edition zijn ingeschakeld. Voor een volledige lijst van standaardgrenzen voor Real-Time CDP B2B edition, combineer deze grenzen met de algemene grenzen van Adobe Experience Platform die in de [ garanties voor de gegevensdocumentatie van het Profiel van de Klant in real time ](../profile/guardrails.md) worden geschetst.
 
-Met Real-time Customer Data Platform B2B Edition kunt u persoonlijke kanaalervaringen op basis van gedragsinzichten en klantkenmerken aanbieden in de vorm van realtime profielen van klanten en accountprofielen. Om deze nieuwe benadering van profielen te steunen, gebruikt Experience Platform een hoogst gedenormaliseerd hybride gegevensmodel dat van het traditionele relationele gegevensmodel verschilt.
+Met Real-Time Customer Data Platform B2B edition kunt u persoonlijke kanaalervaringen bieden op basis van gedragsinzichten en klantkenmerken in de vorm van realtime-klantprofielen en accountprofielen. Om deze nieuwe benadering van profielen te steunen, gebruikt Experience Platform een hoogst gedenormaliseerd hybride gegevensmodel dat van het traditionele relationele gegevensmodel verschilt.
 
 >[!IMPORTANT]
 >
@@ -37,7 +37,7 @@ Dit document bevat twee typen standaardlimieten:
 
 | Het type Guardrail | Beschrijving |
 | -------------- | ----------- |
-| **Gegarandeerde van Prestaties (Zachte grens)** | Prestatiegaranties zijn gebruikslimieten die betrekking hebben op het bereik van uw gebruiksgevallen. Als u de prestatiegaranties overschrijdt, kan de prestaties achteruitgaan en de latentie vertragen. Adobe is niet verantwoordelijk voor een dergelijke verslechtering van de prestaties. Klanten die een prestatiegarantie consequent overschrijden, kunnen ervoor kiezen om extra capaciteit te licentiëren om prestatievermindering te voorkomen. |
+| **Gegarandeerde van Prestaties (Zachte grens)** | Prestatiegaranties zijn gebruikslimieten die betrekking hebben op het bereik van uw gebruiksgevallen. Als u de prestatiegaranties overschrijdt, kan de prestaties achteruitgaan en de latentie vertragen. Adobe is niet verantwoordelijk voor deze verslechtering van de prestaties. Klanten die een prestatiegarantie consequent overschrijden, kunnen ervoor kiezen om extra capaciteit te licentiëren om prestatievermindering te voorkomen. |
 | **systeem-afgedwongen grails (Harde grens)** | De door het systeem afgedwongen instructies worden afgedwongen door de gebruikersinterface of API van Real-Time CDP. Dit zijn grenzen die u niet kunt overschrijden aangezien UI en API u zal tegenhouden dit te doen of een fout zal terugkeren. |
 
 >[!INFO]
@@ -52,20 +52,20 @@ De volgende instructies bieden aanbevolen limieten bij het modelleren van gegeve
 
 >[!NOTE]
 >
->De limieten van het gegevensmodel die in deze sectie worden beschreven, vertegenwoordigen de wijzigingen die door Real-time Customer Data Platform B2B Edition worden ingeschakeld. Voor een volledige lijst van standaardgrenzen voor de Uitgave van Real-Time CDP B2B, combineer deze grenzen met de algemene die grenzen van Adobe Experience Platform in de [ graadlijnen voor de gegevensdocumentatie van het Profiel van de Klant in real time ](../profile/guardrails.md) worden geschetst.
+>De limieten van het gegevensmodel die in deze sectie worden beschreven, vertegenwoordigen de wijzigingen die door Real-Time Customer Data Platform B2B edition zijn ingeschakeld. Voor een volledige lijst van standaardgrenzen voor Real-Time CDP B2B edition, combineer deze grenzen met de algemene grenzen van Adobe Experience Platform die in de [ garanties voor de gegevensdocumentatie van het Profiel van de Klant in real time ](../profile/guardrails.md) worden geschetst.
 
 | Guardrail | Limiet | Limiettype | Beschrijving |
 | --------- | ----- | ---------- | ----------- |
-| Real-Time CDP B2B Edition standaard XDM-klassegegevenssets | 60 | Prestatiegerichting | Een maximum van 60 datasets die hefboomwerking de standaardklassen van de Gegevens van de Ervaring (XDM) door de Uitgave van Real-Time CDP B2B wordt verstrekt wordt geadviseerd. Voor een volledige lijst van standaardklassen XDM voor B2B gebruiksgevallen, verwijs naar de [ schema&#39;s in de documentatie van de Uitgave van Real-Time CDP B2B ](schemas/b2b.md). <br/><br/>*Nota: Wegens de aard van Experience Platform gedenormaliseerde hybride gegevensmodel, overschrijden de meeste klanten deze grens niet. Voor vragen over hoe te om uw gegevens te modelleren, of als u meer over douanelimieten zou willen leren, gelieve uw vertegenwoordiger van de klantenzorg te contacteren.* |
+| Real-Time CDP B2B edition standaard XDM-klassegegevenssets | 60 | Prestatiegerichting | Een maximum van 60 datasets die hefboomwerking de klassen standaard van de Gegevens van de Ervaring (XDM) door Real-Time CDP B2B edition worden verstrekt wordt geadviseerd. Voor een volledige lijst van standaardXDM klassen voor B2B gebruiksgevallen, verwijs naar de [ schema&#39;s in de documentatie van Real-Time CDP B2B edition ](schemas/b2b.md). <br/><br/>*Nota: Wegens de aard van Experience Platform gedenormaliseerde hybride gegevensmodel, overschrijden de meeste klanten deze grens niet. Voor vragen over hoe te om uw gegevens te modelleren, of als u meer over douanelimieten zou willen leren, gelieve uw vertegenwoordiger van de klantenzorg te contacteren.* |
 | Identiteitstelling voor individuele account in een identiteitsgrafiek | 50 | Prestatiegerichting | Het maximumaantal identiteiten in een identiteitsgrafiek voor een individuele rekening is 50. Profielen met meer dan 50 identiteiten worden uitgesloten van segmentatie, export en lookups. |
 | Verouderde relaties met meerdere entiteiten | 20 | Prestatiegerichting | Er wordt aanbevolen maximaal 20 relaties tussen primaire entiteiten en dimensie-entiteiten te definiëren. Aanvullende relatietoewijzingen moeten pas worden gemaakt wanneer een bestaande relatie is verwijderd of uitgeschakeld. |
 | Veel-op-één relaties per XDM-klasse | 2 | Prestatiegerichting | Het wordt aanbevolen maximaal twee vele-op-één relaties te definiëren per XDM-klasse. Er dient geen aanvullende relatie te worden gelegd totdat een bestaande relatie is verwijderd of uitgeschakeld. Voor stappen op hoe te om een verband tussen twee schema&#39;s tot stand te brengen, verwijs naar het leerprogramma op [ bepalend B2B schemaverhoudingen ](../xdm/tutorials/relationship-b2b.md). |
 
-### Garanties voor entiteiten van Dimension
+### Garanties van Dimension-entiteiten
 
 >[!NOTE]
 >
->De limieten van het gegevensmodel die in deze sectie worden beschreven, vertegenwoordigen de wijzigingen die door Real-time Customer Data Platform B2B Edition worden ingeschakeld. Voor een volledige lijst van standaardgrenzen voor de Uitgave van Real-Time CDP B2B, combineer deze grenzen met de algemene die grenzen van Adobe Experience Platform in de [ graadlijnen voor de gegevensdocumentatie van het Profiel van de Klant in real time ](../profile/guardrails.md) worden geschetst.
+>De limieten van het gegevensmodel die in deze sectie worden beschreven, vertegenwoordigen de wijzigingen die door Real-Time Customer Data Platform B2B edition zijn ingeschakeld. Voor een volledige lijst van standaardgrenzen voor Real-Time CDP B2B edition, combineer deze grenzen met de algemene grenzen van Adobe Experience Platform die in de [ garanties voor de gegevensdocumentatie van het Profiel van de Klant in real time ](../profile/guardrails.md) worden geschetst.
 
 | Guardrail | Limiet | Limiettype | Beschrijving |
 | --------- | ----- | ---------- | ----------- |
@@ -86,23 +86,23 @@ De volgende instructies verwijzen naar de gegevensgrootte en bieden aanbevolen l
 
 >[!NOTE]
 >
->De limieten voor gegevensgrootte die in deze sectie worden beschreven, vertegenwoordigen de wijzigingen die door Real-time Customer Data Platform B2B Edition worden ingeschakeld. Voor een volledige lijst van standaardgrenzen voor de Uitgave van Real-Time CDP B2B, combineer deze grenzen met de algemene die grenzen van Adobe Experience Platform in de [ graadlijnen voor de gegevensdocumentatie van het Profiel van de Klant in real time ](../profile/guardrails.md) worden geschetst.
+>De limieten voor gegevensgrootte die in deze sectie worden beschreven, vertegenwoordigen de wijzigingen die door Real-Time Customer Data Platform B2B edition zijn ingeschakeld. Voor een volledige lijst van standaardgrenzen voor Real-Time CDP B2B edition, combineer deze grenzen met de algemene grenzen van Adobe Experience Platform die in de [ garanties voor de gegevensdocumentatie van het Profiel van de Klant in real time ](../profile/guardrails.md) worden geschetst.
 
 | Guardrail | Limiet | Limiettype | Beschrijving |
 | --------- | ----- | ---------- | ----------- |
 | Batches die per XDM-klasse per dag worden ingevoerd | 45 | Prestatiegerichting | Het totale aantal batches dat elke dag per XDM-klasse wordt ingevoerd, mag niet groter zijn dan 45. Door extra batches in te zetten, kunnen optimale prestaties worden voorkomen. |
 
-### Garanties voor entiteiten van Dimension
+### Garanties van Dimension-entiteiten
 
 >[!NOTE]
 >
->De limieten voor gegevensgrootte die in deze sectie worden beschreven, vertegenwoordigen de wijzigingen die door Real-time Customer Data Platform B2B Edition worden ingeschakeld. Voor een volledige lijst van standaardgrenzen voor de Uitgave van Real-Time CDP B2B, combineer deze grenzen met de algemene die grenzen van Adobe Experience Platform in de [ graadlijnen voor de gegevensdocumentatie van het Profiel van de Klant in real time ](../profile/guardrails.md) worden geschetst.
+>De limieten voor gegevensgrootte die in deze sectie worden beschreven, vertegenwoordigen de wijzigingen die door Real-Time Customer Data Platform B2B edition zijn ingeschakeld. Voor een volledige lijst van standaardgrenzen voor Real-Time CDP B2B edition, combineer deze grenzen met de algemene grenzen van Adobe Experience Platform die in de [ garanties voor de gegevensdocumentatie van het Profiel van de Klant in real time ](../profile/guardrails.md) worden geschetst.
 
 | Guardrail | Limiet | Limiettype | Beschrijving |
 | --------- | ----- | ---------- | ----------- |
 | Totale grootte voor alle dimensionale entiteiten | 5 GB | Prestatiegerichting | De aanbevolen totale grootte voor alle dimensionale entiteiten is 5 GB. Het inzetten van entiteiten met een grote dimensie kan van invloed zijn op de systeemprestaties. Het wordt bijvoorbeeld niet aanbevolen een productcatalogus van 10 GB als een dimensie-entiteit te laden. |
 | Datasets per dimensionaal eenheidschema | 5 | Prestatiegerichting | Het wordt aanbevolen maximaal vijf datasets toe te voegen aan elk dimensionaal eenheidschema. Bijvoorbeeld, als u een schema voor &quot;producten&quot;creeert en vijf bijdragende datasets toevoegt, zou u geen zesde dataset moeten creëren verbonden aan het productschema. |
-| Per dag ingenomen partijen van een Dimension-entiteit | 4 per entiteit | Prestatiegerichting | Het aanbevolen maximumaantal per dag ingeslikte batches voor dimensieentiteiten is 4 per entiteit. U kunt bijvoorbeeld updates van een productcatalogus tot vier keer per dag invoeren. Het invoeren van extra dimensieentiteitsbatches voor dezelfde entiteit kan de systeemprestaties beïnvloeden. |
+| Per dag ingenomen partijen van Dimension-entiteit | 4 per entiteit | Prestatiegerichting | Het aanbevolen maximumaantal per dag ingeslikte batches voor dimensieentiteiten is 4 per entiteit. U kunt bijvoorbeeld updates van een productcatalogus tot vier keer per dag invoeren. Het invoeren van extra dimensieentiteitsbatches voor dezelfde entiteit kan de systeemprestaties beïnvloeden. |
 
 ## Segmenteringsgeleiding
 
@@ -110,7 +110,7 @@ De instructies in deze sectie hebben betrekking op het aantal en de aard van de 
 
 >[!NOTE]
 >
->De segmentatielimieten die in deze sectie worden beschreven, vertegenwoordigen de wijzigingen die door Real-time Customer Data Platform B2B Edition worden ingeschakeld. Voor een volledige lijst van standaardgrenzen voor de Uitgave van Real-Time CDP B2B, combineer deze grenzen met de algemene die grenzen van Adobe Experience Platform in de [ graadlijnen voor de gegevensdocumentatie van het Profiel van de Klant in real time ](../profile/guardrails.md) worden geschetst.
+>De segmentatielimieten die in deze sectie worden beschreven, vertegenwoordigen de wijzigingen die door Real-Time Customer Data Platform B2B edition zijn ingeschakeld. Voor een volledige lijst van standaardgrenzen voor Real-Time CDP B2B edition, combineer deze grenzen met de algemene grenzen van Adobe Experience Platform die in de [ garanties voor de gegevensdocumentatie van het Profiel van de Klant in real time ](../profile/guardrails.md) worden geschetst.
 
 | Guardrail | Limiet | Limiettype | Beschrijving |
 | --------- | ----- | ---------- | ----------- |
@@ -118,7 +118,7 @@ De instructies in deze sectie hebben betrekking op het aantal en de aard van de 
 
 ## Volgende stappen
 
-De limieten die in dit document worden beschreven, vertegenwoordigen de wijzigingen die door Real-time Customer Data Platform B2B Edition worden ingeschakeld. Voor een volledige lijst van standaardgrenzen voor de Uitgave van Real-Time CDP B2B, combineer deze grenzen met de algemene die grenzen van Adobe Experience Platform in de [ graadlijnen voor de gegevensdocumentatie van het Profiel van de Klant in real time ](../profile/guardrails.md) worden geschetst.
+De limieten die in dit document worden beschreven, vertegenwoordigen de wijzigingen die door Real-Time Customer Data Platform B2B edition zijn ingeschakeld. Voor een volledige lijst van standaardgrenzen voor Real-Time CDP B2B edition, combineer deze grenzen met de algemene grenzen van Adobe Experience Platform die in de [ garanties voor de gegevensdocumentatie van het Profiel van de Klant in real time ](../profile/guardrails.md) worden geschetst.
 
 ## Bijlage
 
@@ -136,12 +136,12 @@ Tijdonafhankelijke kenmerken, ook wel &#39;recordgegevens&#39; genoemd, worden g
 
 ![ Infographic die de verschillen tussen verslaggegevens en tijd-reeksen gegevens schetsen.](../profile/images/guardrails/profile-entity.png)
 
-#### Dimension-entiteit
+#### Dimension
 
-Hoewel de profielgegevensopslag het handhaven van profielgegevens geen relationele opslag is, staat het Profiel integratie met kleine afmetingsentiteiten toe om publiek op een vereenvoudigde en intuïtieve manier tot stand te brengen. Deze integratie is gekend als [ multi-entiteitsegmentatie ](../segmentation/multi-entity-segmentation.md).
+Hoewel de profielgegevensopslag het handhaven van profielgegevens geen relationele opslag is, staat het Profiel integratie met kleine afmetingsentiteiten toe om publiek op een vereenvoudigde en intuïtieve manier tot stand te brengen. Deze integratie is gekend als [ multi-entiteitsegmentatie ](../segmentation/tutorials/multi-entity-segmentation.md).
 
 Uw organisatie kan ook klassen XDM bepalen om dingen buiten individuen, zoals opslag, producten, of eigenschappen te beschrijven. Deze niet- [!DNL XDM Individual Profile] schema&#39;s worden genoemd &quot;afmetingsentiteiten&quot;(die ook als &quot;raadplegingsentiteiten&quot;worden bekend) en bevatten geen tijd-reeksgegevens. De schema&#39;s die afmetingsentiteiten vertegenwoordigen zijn verbonden met profielentiteiten door het gebruik van [ schemaverhoudingen ](../xdm/tutorials/relationship-ui.md).
 
-De entiteiten van het Dimension verstrekken raadplegingsgegevens die helpen en multi-entiteitsegmentdefinities vereenvoudigen en moeten zo klein zijn dat de segmenteringsmotor de volledige gegevensreeks in geheugen voor optimale verwerking (snelle puntraadpleging) kan laden.
+Dimension-entiteiten bieden opzoekgegevens die de definities van segmenten met meerdere entiteiten ondersteunen en vereenvoudigen. Deze moeten zo klein zijn dat de segmenteringsengine de volledige gegevensset in het geheugen kan laden voor optimale verwerking (snelle puntzoekopdracht).
 
 ![ Infographic die toont dat een profielentiteit uit afmetingsentiteiten bestaat.](../profile/images/guardrails/profile-and-dimension-entities.png)

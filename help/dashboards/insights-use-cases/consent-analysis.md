@@ -2,7 +2,7 @@
 title: Constante analyse en tracering
 description: Leer hoe u een dashboard voor de toestemmingsanalyse kunt maken om te controleren hoe de toestemming van de gebruiker in de loop der tijd is verlopen.
 exl-id: 34accae5-8b4f-4281-8333-187a91db8199
-source-git-commit: ddf886052aedc025ff125c03ab63877cb049583d
+source-git-commit: adc6d50f2784fe665d0590c3af053a057f8e4e38
 workflow-type: tm+mt
 source-wordcount: '1804'
 ht-degree: 0%
@@ -11,7 +11,7 @@ ht-degree: 0%
 
 # Analyse en reeksspatiëring van toestemming
 
-In het huidige marketinglandschap moet u de voorkeuren voor toestemming van klanten begrijpen en respecteren. Adobe Real-time Customer Data Platform biedt marketers de mogelijkheid om de toestemming van klanten te analyseren om vertrouwen op te bouwen, privacyregels na te leven en meer persoonlijke ervaringen te bieden.
+In het huidige marketinglandschap moet u de voorkeuren voor toestemming van klanten begrijpen en respecteren. Adobe Real-Time Customer Data Platform biedt marketers de mogelijkheid om de toestemming van klanten te analyseren om vertrouwen op te bouwen, privacyregels na te leven en meer persoonlijke ervaringen te bieden.
 
 In dit document wordt beschreven hoe u een toestemmingsdashboard kunt maken voor verschillende gevallen van marketinggebruik voor Real-Time CDP-gegevens. Specifiek, concentreert het zich op hoe te om een publiek met de aangewezen attributen voor uw bedrijfsbehoeften tot stand te brengen, en dan de inzichten te verbruiken door het gebruik van pre-gevormde widgets in Adobe Experience Platform UI. Er wordt ook een alternatieve methode voorgesteld om uw eigen aangepaste widget samen te stellen met de door de gebruiker gedefinieerde dashboardfunctie.
 
@@ -24,7 +24,7 @@ De in deze handleiding behandelde gevallen van gebruik zijn het trenderen van de
 
 ## Goedgekeurd publiek maken {#create-consent-audiences}
 
-Om een toestemmingsdashboard te bouwen, moet u eerst een publiek van alle profielen tot stand brengen die aan contact hebben goedgekeurd. Als u naar de Real-time Customer Data Platform Segment Builder wilt navigeren, selecteert u **[!UICONTROL Audiences]** in de linkernavigatie van de gebruikersinterface van het platform. Selecteer op het tabblad [!UICONTROL Customer] van het [!UICONTROL Audiences] dashboard **[!UICONTROL Create audience]** in de rechterbovenhoek van de weergave en vervolgens **[!UICONTROL Build rules]** .
+Om een toestemmingsdashboard te bouwen, moet u eerst een publiek van alle profielen tot stand brengen die aan contact hebben goedgekeurd. Als u naar de Real-Time Customer Data Platform Segment Builder wilt navigeren, selecteert u **[!UICONTROL Audiences]** in de linkernavigatie van de gebruikersinterface van het platform. Selecteer op het tabblad [!UICONTROL Customer] van het [!UICONTROL Audiences] dashboard **[!UICONTROL Create audience]** in de rechterbovenhoek van de weergave en vervolgens **[!UICONTROL Build rules]** .
 
 ![ het [!UICONTROL Audiences] dashboard met [!UICONTROL Customer], [!UICONTROL Audiences], en [!UICONTROL Create segment] benadrukte.](../images/insights-use-cases/consent-analysis/create-audience.png)
 
@@ -36,9 +36,9 @@ Zoek uw toestemmingskenmerken uit de beschikbare opties. Selecteer **[!UICONTROL
 
 >[!NOTE]
 >
->Als u uw toestemming van de gebruiker in een attribuut verschillend aan de Adobe geadviseerde gebiedsgroep hebt gehandhaafd, dan moet u die attributen in plaats van hieronder getoond selecteren.
+>Als u de toestemming van de gebruiker hebt behouden voor een ander kenmerk dan de door Adobe aanbevolen veldgroep, moet u die kenmerken selecteren in plaats van de hieronder getoonde kenmerken.
 
-Meer informatie kan op de [ behandeling van toestemming in segmentatie ](../../segmentation/consents.md#handling-consent-in-segmentation) documentatie worden gevonden.
+Meer informatie kan op de [ behandeling van toestemming in segmentatie ](../../segmentation/tutorials/consents.md#handling-consent-in-segmentation) documentatie worden gevonden.
 
 ![ de Bouwer van het Segment met de [!UICONTROL Consent and Preferences] benadrukte attributenomslag.](../images/insights-use-cases/consent-analysis/consent-and-preferences.png)
 
@@ -155,7 +155,7 @@ De toestemmingsdashboards die u creeert vangen de **distributie van toestemmings
 
 >[!NOTE]
 >
->Voor klanten van **het Schild van de Gezondheidszorg van de Adobe** of **de Privacy &amp; het Schild van de Veiligheid van de Adobe**, wijzen deze dashboards **niet** op het volgen van toestemmingsbeleid. Beschikbaar volgen omvat het aantal gecreeerd, toegelaten beleid, en de invloed op publiekslidmaatschap.
+>Voor klanten van **het Schild van de Gezondheidszorg van Adobe** of **de Privacy &amp; het Schild van de Veiligheid van Adobe**, wijzen deze dashboards **niet** op het volgen van toestemmingsbeleid. Beschikbaar volgen omvat het aantal gecreeerd, toegelaten beleid, en de invloed op publiekslidmaatschap.
 
 ## Volgende stappen
 

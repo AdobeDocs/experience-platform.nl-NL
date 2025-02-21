@@ -3,7 +3,7 @@ title: Prospectieprofielen
 description: Leer hoe te om perspectiefprofielen tot stand te brengen en te gebruiken om informatie over onbekende klanten te verzamelen gebruikend derdeinformatie.
 type: Documentation
 exl-id: 194d25d6-88ae-4a7a-9b79-39120bced5c7
-source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
+source-git-commit: e7c0551276d31d6809ace096c00e0dc2665090e6
 workflow-type: tm+mt
 source-wordcount: '388'
 ht-degree: 0%
@@ -56,10 +56,10 @@ Het dialoogvenster [!UICONTROL View JSON] wordt weergegeven. De kenmerken van he
 
 ## Aanbevolen gebruiksgevallen {#use-cases}
 
-Lees de volgende documentatie over het gebruiksscenario voor meer informatie over het gebruik van de functie voor perspectiefprofielen in Experience Platform in combinatie met andere platformfuncties:
+Lees de volgende gebruiksdocumentatie voor informatie over het gebruik van de functie voor perspectiefprofielen in Experience Platform in combinatie met andere platformfuncties:
 
 - [Nieuwe klanten aantrekken en aanschaffen via de prospectieve functionaliteit](../../rtcdp/partner-data/prospecting.md)
 
 ## Volgende stappen
 
-Na het lezen van deze handleiding begrijpt u nu hoe perspectiefprofielen kunnen worden gebruikt in Adobe Experience Platform. Leren hoe deze perspectiefprofielen in publiek kunnen worden gebruikt, gelieve de [ gids van het vooruitgangspubliek ](../../segmentation/ui/prospect-audience.md) te lezen.
+Na het lezen van deze handleiding begrijpt u nu hoe perspectiefprofielen kunnen worden gebruikt in Adobe Experience Platform. Leren hoe deze perspectiefprofielen in publiek kunnen worden gebruikt, gelieve de [ gids van het vooruitgangspubliek ](../../segmentation/types/prospect-audiences.md) te lezen.

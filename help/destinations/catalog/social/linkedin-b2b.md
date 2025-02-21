@@ -1,28 +1,29 @@
 ---
-title: (Bedrijven) LinkedIn-verbinding
-description: Gebruik dit doel om uw accountdoelgroepen te activeren voor gebruiksscenario's van Account-Based Marketing (ABM). Activeer profielen voor uw LinkedIn-campagnes voor doelgroepen, personalisatie en onderdrukking op basis van gehakte e-mails.
+title: (Bedrijven) LinkedIn connection
+description: Gebruik dit doel om uw accountdoelgroepen te activeren voor gebruiksscenario's van Account-Based Marketing (ABM). Activeer profielen voor uw campagnes LinkedIn voor publiek gericht, verpersoonlijking, en onderdrukking, die op gehakte e-mails worden gebaseerd.
 badgeB2B: label="B2B edition" type="Informative" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=en#rtcdp-editions newtab=true"
 badgeB2P: label="B2P Edition" type="Positive" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=en#rtcdp-editions newtab=true"
-source-git-commit: e45c50a6447be4a60145eea6956d30d51166e675
+exl-id: 68d2cca3-952b-49d0-8ea2-e776a233b752
+source-git-commit: e7c0551276d31d6809ace096c00e0dc2665090e6
 workflow-type: tm+mt
 source-wordcount: '650'
 ht-degree: 2%
 
 ---
 
-# (Bedrijven) LinkedIn-verbinding voor iedereen {#companies-linkedin}
+# (Bedrijven) LinkedIn Identieke verbinding van publiek {#companies-linkedin}
 
 >[!AVAILABILITY]
 >
->De functionaliteit om rekeningspubliek aan de (Bedrijven) bestemming van LinkedIn te activeren is beschikbaar voor bedrijven die [ zaken-aan-Zaken ](/help/rtcdp/overview.md#rtcdp-b2b) en [ zaken-aan-Persoon ](/help/rtcdp/overview.md#rtcdp-b2p) uitgaven van Real-time Customer Data Platform kopen.
+>De functionaliteit om rekeningspubliek aan (Bedrijven) te activeren LinkedIn bestemming is beschikbaar voor bedrijven die [ zaken-aan-Zaken ](/help/rtcdp/overview.md#rtcdp-b2b) en [ zaken-aan-persoon ](/help/rtcdp/overview.md#rtcdp-b2p) uitgaven van Real-Time Customer Data Platform kopen.
 
-Gebruik deze bestemming om uw [ rekeningspubliek ](/help/segmentation/ui/account-audiences.md) voor Account-Based Marketing (ABM) gebruiksgevallen te activeren. Adverteer relevante personen en rollen in uw doelaccounts via de **[!UICONTROL (Companies) LinkedIn]** business-to-business bestemming. Bezoek de documentatie van LinkedIn aan [ meer over rekening het richten ](https://business.linkedin.com/marketing-solutions/cx/21/10/ad-targeting/account-targeting) op het platform van LinkedIn leren.
+Gebruik deze bestemming om uw [ rekeningspubliek ](/help/segmentation/types/account-audiences.md) voor Account-Based Marketing (ABM) gebruiksgevallen te activeren. Adverteer relevante personen en rollen in uw doelaccounts via de **[!UICONTROL (Companies) LinkedIn]** business-to-business bestemming. Bezoek de documentatie LinkedIn aan [ leren meer over rekening richtend ](https://business.linkedin.com/marketing-solutions/cx/21/10/ad-targeting/account-targeting) op het platform LinkedIn.
 
 >[!TIP]
 >
->Voor individueel-niveau (of zaken-aan-consument) gebruiksgevallen, adviseert de Adobe dat u de [ LinkedIn Gelijke bestemming van het publiek ](/help/destinations/catalog/social/linkedin.md) gebruikt.
+>Voor individueel-niveau (of zaken-aan-consument) gebruiksgevallen, adviseert Adobe dat u [ LinkedIn Gelijke 1} bestemming van het Publiek gebruikt.](/help/destinations/catalog/social/linkedin.md)
 
-![ de rekeningsbestemming van LinkedIn die in het Experience Platform UI wordt getoond.](/help/destinations/assets/catalog/social/linkedin-b2b/linkedin-b2b-destination.png)
+![ LinkedIn rekeningsbestemming die in Experience Platform UI wordt getoond.](/help/destinations/assets/catalog/social/linkedin-b2b/linkedin-b2b-destination.png)
 
 ## Ondersteunde doelgroepen {#supported-audiences}
 
@@ -30,7 +31,7 @@ In deze sectie wordt beschreven welk type publiek u naar dit doel kunt exportere
 
 | Oorsprong publiek | Ondersteund | Beschrijving |
 ---------|----------|----------|
-| [!DNL Segmentation Service] | ✓ | Het publiek produceerde door de Dienst van de Segmentatie van het Experience Platform [ ](../../../segmentation/home.md). |
+| [!DNL Segmentation Service] | ✓ | Het publiek produceerde door de Dienst van de Segmentatie van Experience Platform [ ](../../../segmentation/home.md). |
 | Aangepaste uploads | X | Het publiek [ ingevoerde ](../../../segmentation/ui/overview.md#import-audience) in Experience Platform van Csv- dossiers. |
 
 {style="table-layout:auto"}
@@ -50,11 +51,11 @@ Raadpleeg de onderstaande tabel voor informatie over het exporttype en de export
 
 Zorg ervoor dat u aan de onderstaande voorwaarden voldoet om accountpubliek naar LinkedIn te exporteren:
 
-### Voorwaarden voor linkedIn-accounts {#LinkedIn-account-prerequisites}
+### Voorwaarden voor LinkedIn-accounts {#LinkedIn-account-prerequisites}
 
 Voordat u het doel van [!UICONTROL (Companies) LinkedIn Matched Audience] kunt gebruiken, moet u ervoor zorgen dat uw [!DNL LinkedIn Campaign Manager] -account het machtigingsniveau [!DNL Creative Manager] of hoger heeft.
 
-Leren hoe te om uw [!DNL LinkedIn Campaign Manager] gebruikerstoestemmingen uit te geven, zie [ toevoegen, uitgeven, en verwijderen de Toestemmingen van de Gebruiker op de Rekeningen van Advertising ](https://www.linkedin.com/help/lms/answer/5753) in de documentatie van LinkedIn.
+Leren hoe te om uw [!DNL LinkedIn Campaign Manager] gebruikerstoestemmingen uit te geven, zie [ toevoegen, uitgeven, en verwijderen de Toestemmingen van de Gebruiker op de Rekeningen van Advertising ](https://www.linkedin.com/help/lms/answer/5753) in de documentatie LinkedIn.
 
 ## Verbinden met de bestemming {#connect}
 
@@ -69,9 +70,9 @@ Om met deze bestemming te verbinden, volg de stappen die in het [ leerprogramma 
 1. Zoek het doel [!DNL (Companies) LinkedIn Matched Audiences] in de doelcatalogus en selecteer **[!UICONTROL Set Up]** .
 2. Selecteer **[!UICONTROL Connect to destination]**.
    ![ verifieer aan LinkedIn ](/help/destinations/assets/catalog/social/linkedin-b2b/authenticate-linkedin-destination.png)
-3. Ga uw geloofsbrieven van LinkedIn in en selecteer **Login**.
+3. Ga uw geloofsbrieven LinkedIn in en selecteer **Login**.
 
-Nadat u het aanmeldingsproces met LinkedIn hebt voltooid, kunt u verdergaan met de volgende stap.
+Nadat u het aanmeldingsproces met LinkedIn hebt voltooid, kunt u doorgaan naar de volgende stap.
 
 ### Doelgegevens invullen {#destination-details}
 
@@ -81,7 +82,7 @@ Als u details voor de bestemming wilt configureren, vult u de vereiste en option
 * **[!UICONTROL Description]**: Een beschrijving die u zal helpen deze bestemming in de toekomst identificeren.
 * **[!UICONTROL Account ID]**: Uw [!DNL LinkedIn Campaign Manager Account ID] . U kunt deze id vinden in uw [!DNL LinkedIn Campaign Manager] -account.
 
-U kunt nu accountsoorten activeren voor LinkedIn.
+U kunt nu het accountpubliek activeren naar LinkedIn.
 
 ## Soorten publiek naar dit doel activeren {#activate}
 
@@ -96,7 +97,7 @@ Lees [ activeer rekeningspubliek ](/help/destinations/ui/activate-account-audien
 
 Houd er bij het activeren van het accountpubliek naar het **[!UICONTROL (Companies) LinkedIn Matched Audiences]** -doel rekening mee dat de volgende twee toewijzingsparen verplicht zijn om gegevens te exporteren:
 
-![ de afbeelding van LinkedIn vereiste gebieden.](/help/destinations/assets/ui/activate-account-audiences/linkedin-mapping-required-fields.png)
+![ LinkedIn afbeelding vereiste gebieden.](/help/destinations/assets/ui/activate-account-audiences/linkedin-mapping-required-fields.png)
 
 | Source-veld | Doelveld |
 |---------|----------|

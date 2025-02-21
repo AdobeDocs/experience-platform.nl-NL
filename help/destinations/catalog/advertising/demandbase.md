@@ -1,30 +1,30 @@
 ---
 title: Demandbase-verbinding
-description: Gebruik deze bestemming om gebruikers van je account te activeren voor gebruik van Account-Based Marketing (ABM). Adverteer aan relevante personen en rollen in uw doelrekeningen via het B2B-Demand Side Platform (DSP) van DemandBase. Doelaccounts kunnen ook worden verrijkt met gegevens van derden over demandbase, voor andere downstreamtoepassingen bij marketing en verkoop.
-badgeB2B: label="B2B Edition" type="Informative" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=en#rtcdp-editions newtab=true"
+description: Gebruik dit doel om uw accountdoelgroepen te activeren voor gebruiksscenario's van Account-Based Marketing (ABM). Adverteer aan relevante personen en rollen in uw doelaccounts via het B2B Demand Side Platform (DSP) van DemandBase. Doelaccounts kunnen ook worden verrijkt met gegevens van derden van Demandbase, voor andere downstreamgebruiksscenario's in marketing en verkoop.
+badgeB2B: label="B2B edition" type="Informative" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=en#rtcdp-editions newtab=true"
 badgeB2P: label="B2P Edition" type="Positive" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=en#rtcdp-editions newtab=true"
 last-substantial-update: 2024-09-30T00:00:00Z
-source-git-commit: 92abae6bc63c13f1103364ae82cc9c04459ce00f
+exl-id: a84609a2-f1d3-4998-9db4-ad59c0a0b631
+source-git-commit: 08c2c7f5080f0e6afb7be53aad9f88ba0fccf923
 workflow-type: tm+mt
 source-wordcount: '671'
-ht-degree: 0%
+ht-degree: 15%
 
 ---
-
 
 # Demandbase-verbinding {#demandbase}
 
 >[!AVAILABILITY]
 >
->>De functionaliteit om rekeningspubliek aan de bestemming van de Demandbase te activeren is beschikbaar voor bedrijven die [ zaken-aan-Zaken ](/help/rtcdp/overview.md#rtcdp-b2b) en [ zaken-aan-Persoon ](/help/rtcdp/overview.md#rtcdp-b2p) uitgaven van Real-time Customer Data Platform kopen.
+>>De functionaliteit om rekeningspubliek aan de bestemming van de Demandbase te activeren is beschikbaar voor bedrijven die [ zaken-aan-Zaken ](/help/rtcdp/overview.md#rtcdp-b2b) en [ zaken-aan-Persoon ](/help/rtcdp/overview.md#rtcdp-b2p) uitgaven van Real-Time Customer Data Platform kopen.
 
-Activeer profielen voor uw campagnes van de Demandase voor publiek het richten, verpersoonlijking, en onderdrukking, die op [ worden gebaseerd rekeningspubliek ](/help/segmentation/ui/account-audiences.md).
+Activeer profielen voor uw campagnes van de Demandase voor publiek het richten, verpersoonlijking, en onderdrukking, die op [ worden gebaseerd rekeningspubliek ](/help/segmentation/types/account-audiences.md).
 
 ## Gebruiksscenario {#use-case}
 
-Gebruik deze bestemming om gebruikers van je account te activeren voor gebruik van Account-Based Marketing (ABM). Adverteer aan relevante personen en rollen in uw doelrekeningen via het B2B-Demand Side Platform (DSP) van DemandBase. Doelaccounts kunnen ook worden verrijkt met gegevens van derden over demandbase, voor andere downstreamtoepassingen bij marketing en verkoop.
+Gebruik dit doel om uw accountdoelgroepen te activeren voor gebruiksscenario&#39;s van Account-Based Marketing (ABM). Adverteer aan relevante personen en rollen in uw doelaccounts via het B2B Demand Side Platform (DSP) van DemandBase. Doelaccounts kunnen ook worden verrijkt met gegevens van derden van Demandbase, voor andere downstreamgebruiksscenario&#39;s in marketing en verkoop.
 
-Bijvoorbeeld, hefboomwerking de ad-tech DSP van Demandbase om specifieke persona&#39;s of rollen binnen zeer belangrijke rekeningen voor de productie van de top-of-funnel lood te richten, of creeer en kweek koopgroepen. Gebruik de bestemming Demandbase om andere gebruiksgevallen te onderzoeken om uw rekeningen effectief te richten.
+Bijvoorbeeld, hefboomwerking de ad-tech DSP van Demandbase om specifieke persona&#39;s of rollen binnen zeer belangrijke rekeningen voor de productie van de top-of-funnel lood, of creeer en kweek koopgroepen. Gebruik de bestemming Demandbase om andere gebruiksgevallen te onderzoeken om uw rekeningen effectief te richten.
 
 Met deze integratie kunt u de ervaring van de website ook personaliseren door accountinformatie in real-time op te zoeken om de betrokkenheid te optimaliseren.
 
@@ -34,7 +34,7 @@ In deze sectie wordt beschreven welk type publiek u naar dit doel kunt exportere
 
 | Oorsprong publiek | Ondersteund | Beschrijving |
 ---------|----------|----------|
-| [!DNL Segmentation Service] | ✓ | Het publiek produceerde door de Dienst van de Segmentatie van het Experience Platform [ ](../../../segmentation/home.md). |
+| [!DNL Segmentation Service] | ✓ | Het publiek produceerde door de Dienst van de Segmentatie van Experience Platform [ ](../../../segmentation/home.md). |
 | Aangepaste uploads | X | Het publiek [ ingevoerde ](../../../segmentation/ui/overview.md#import-audience) in Experience Platform van Csv- dossiers. |
 
 {style="table-layout:auto"}
@@ -97,4 +97,4 @@ Lees [ activeer rekeningspubliek ](/help/destinations/ui/activate-account-audien
 ## Aanvullende opmerkingen en belangrijke bijschriften {#additional-notes}
 
 * Als een accountpubliek met dezelfde naam eerder is geactiveerd voor Demandbase, kunt u dit niet opnieuw activeren via een andere gegevensstroom naar de bestemming Demandbase.
-* Als u het publiek naar Demandbase hebt geëxporteerd en de exportbewerkingen in Experience Platform zijn gelukt, maar niet alle gegevens in de Demandbase-indeling zijn bereikt, kan het zijn dat de API-vertraging aan de demandbase-zijde is opgetreden. Neem ze ter verduidelijking.
+* Als u het publiek naar de Demandbase hebt geëxporteerd en de exportbewerkingen in Experience Platform zijn geslaagd, maar niet alle gegevens in de Demandbase-indeling zijn bereikt, kan het zijn dat de API-vertraging aan de demandbase-zijde is opgetreden. Neem ze ter verduidelijking.

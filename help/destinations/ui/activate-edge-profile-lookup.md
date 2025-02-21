@@ -1,18 +1,18 @@
 ---
 title: Kenmerken van randprofielen in real-time opzoeken
-description: Leer hoe u Edge-profielkenmerken in real-time kunt opzoeken met de API voor aangepaste Personalization-doelen en -Edge Network
+description: Leer hoe u Edge-profielkenmerken in real-time opzoekt met de aangepaste Personalization-bestemming en de Edge Network-API
 type: Tutorial
-source-git-commit: 6414168c1deb047af30d8636ef8d61316f56aecf
+exl-id: e185d741-af30-4706-bc8f-d880204d9ec7
+source-git-commit: 276fd7c532843c9589e1d51b0bc7a76cb5c3eb9f
 workflow-type: tm+mt
 source-wordcount: '1832'
 ht-degree: 0%
 
 ---
 
-
 # Profielkenmerken aan de rand in real-time opzoeken
 
-Adobe Experience Platform gebruikt het [ Real-Time Profiel van de Klant ](../../profile/home.md) als enige bron van waarheid voor alle profielgegevens. Voor snelle, real time gegevensherwinning, gebruikt het [ randprofielen ](../../profile/edge-profiles.md), die lichtgewichtprofielen zijn die door de [ Edge Network ](../../collection/home.md#edge) worden verdeeld. Dit maakt het mogelijk snel en realtime gebruik te maken van personalisatie.
+Adobe Experience Platform gebruikt het [ Real-Time Profiel van de Klant ](../../profile/home.md) als enige bron van waarheid voor alle profielgegevens. Voor snelle, real time gegevensherwinning, gebruikt het [ randprofielen ](../../profile/edge-profiles.md), die lichtgewichtprofielen zijn die door [ Edge Network ](../../collection/home.md#edge) worden verdeeld. Dit maakt het mogelijk snel en realtime gebruik te maken van personalisatie.
 
 ## Gebruiksscenario’s {#use-cases}
 
@@ -27,16 +27,16 @@ Deze pagina beschrijft de stappen die u moet volgen om de gegevens van het randp
 
 Wanneer het vormen van het gebruiksgeval in deze pagina wordt beschreven, zult u de volgende componenten van het Platform gebruiken:
 
-* [ Datastreams ](../../datastreams/overview.md): Een gegevensstroom ontvangt inkomende gebeurtenisgegevens van Web SDK en antwoordt met de gegevens van het randprofiel.
+* [ Datastreams ](../../datastreams/overview.md): Een gegevensstroom ontvangt inkomende gebeurtenisgegevens van het Web SDK en antwoordt met de gegevens van het randprofiel.
 * [ het Beleid van de Fusie ](../../segmentation/ui/segment-builder.md#merge-policies): U zult een [!UICONTROL Active-On-Edge] fusiebeleid creëren om ervoor te zorgen dat de randprofielen de correcte profielgegevens gebruiken.
-* [ de verbinding van Personalization van de Douane ](../catalog/personalization/custom-personalization.md): U zult een nieuwe verbinding van de douaneverpersoonlijking vormen die de profielattributen naar de Edge Network zal verzenden.
+* [ de verbinding van Personalization van de Douane ](../catalog/personalization/custom-personalization.md): U zult een nieuwe verbinding van de douaneverpersoonlijking vormen die de profielattributen naar Edge Network zal verzenden.
 * [ Edge Network API ](../../server-api/overview.md): U zult de Edge Network API [ interactieve functionaliteit van de gegevensinzameling ](../../server-api/interactive-data-collection.md) gebruiken om profielattributen van de randprofielen snel terug te winnen.
 
 ## Prestatiegerichten {#guardrails}
 
-Voor het opzoeken van Edge-profielen gelden de specifieke prestatieaanwijzingen die in de onderstaande tabel worden beschreven. Voor meer details betreffende de Edge Network API begeleiding, zie de guardrails [ documentatiepagina ](https://developer.adobe.com/data-collection-apis/docs/getting-started/guardrails/).
+Voor het opzoeken van Edge-profielen gelden de specifieke prestatieaanwijzingen die in de onderstaande tabel worden beschreven. Voor meer details betreffende de handleidingen van Edge Network API, zie de guardrails [ documentatiepagina ](https://developer.adobe.com/data-collection-apis/docs/getting-started/guardrails/).
 
-| Edge Network-service | Edge-segmentatie | Verzoeken per seconde |
+| Edge Network Service | Edge-segmentatie | Verzoeken per seconde |
 |---------|----------|---------|
 | [ de verpersoonlijkingsbestemming van de Douane ](../catalog/personalization/custom-personalization.md) via [ Edge Network API ](https://developer.adobe.com/data-collection-apis/docs/api/) | Ja | 1500 |
 | [ de verpersoonlijkingsbestemming van de Douane ](../catalog/personalization/custom-personalization.md) via [ Edge Network API ](https://developer.adobe.com/data-collection-apis/docs/api/) | Nee | 1500 |
@@ -61,7 +61,7 @@ Volg de stappen in de ](../../datastreams/configure.md#create-a-datastream) docu
 
 Wanneer u profielkenmerken op de rand wilt opzoeken, moet uw publiek zijn geconfigureerd voor randevaluatie.
 
-Zorg ervoor het publiek dat u van plan bent te activeren heeft het [ actief-op-Edge Beleid van de Fusie ](../../segmentation/ui/segment-builder.md#merge-policies) geplaatst als gebrek. Het [!DNL Active-On-Edge] fusiebeleid zorgt ervoor dat het publiek constant [ op de rand ](../../segmentation/ui/edge-segmentation.md) wordt geëvalueerd en beschikbaar voor de gevallen van het verpersoonlijkingsgebruik in real time is.
+Zorg ervoor het publiek dat u van plan bent te activeren heeft het [ actief-op-Edge Beleid van de Fusie ](../../segmentation/ui/segment-builder.md#merge-policies) geplaatst als gebrek. Het [!DNL Active-On-Edge] fusiebeleid zorgt ervoor dat het publiek constant [ op de rand ](../../segmentation/methods/edge-segmentation.md) wordt geëvalueerd en beschikbaar voor de gevallen van het verpersoonlijkingsgebruik in real time is.
 
 Volg de instructies op [ creërend een fusiebeleid ](../../profile/merge-policies/ui-guide.md#create-a-merge-policy), en zorg ervoor om **[!UICONTROL Active-On-Edge Merge Policy]** knevel toe te laten.
 
@@ -69,9 +69,9 @@ Volg de instructies op [ creërend een fusiebeleid ](../../profile/merge-policie
 >
 >Als uw publiek een ander samenvoegbeleid gebruikt, kunt u geen profielkenmerken van de rand ophalen en kunt u het zoeken van het randprofiel niet uitvoeren.
 
-## Stap 3: Verzend profielkenmerkgegevens naar de Edge Network{#configure-custom-personalization-connection}
+## Stap 3: gegevens van profielkenmerken naar de Edge Network verzenden{#configure-custom-personalization-connection}
 
-Als u Edge-profielen, waaronder kenmerken en lidmaatschapsgegevens voor het publiek, in realtime wilt opzoeken, moeten de gegevens op de Edge Network beschikbaar worden gesteld. Hiertoe moet u een verbinding met een **[!UICONTROL Custom Personalization With Attributes]** -doel maken en het publiek activeren, inclusief de kenmerken die u wilt opzoeken in de randprofielen.
+Als u Edge-profielen, waaronder kenmerken en lidmaatschapsgegevens voor het publiek, in real-time wilt opzoeken, moeten de gegevens op de Edge Network beschikbaar worden gesteld. Hiertoe moet u een verbinding met een **[!UICONTROL Custom Personalization With Attributes]** -doel maken en het publiek activeren, inclusief de kenmerken die u wilt opzoeken in de randprofielen.
 
 +++ Een aangepaste Personalization met kenmerkverbinding configureren
 
@@ -95,7 +95,7 @@ Nadat u een **[!UICONTROL Custom Personalization With Attributes]** -verbinding 
 
 1. Ga naar **[!UICONTROL Connections > Destinations]** en selecteer de tab **[!UICONTROL Catalog]** .
 
-   ![ het lusje van de Catalogus van de Bestemming dat in het Experience Platform UI wordt benadrukt.](../assets/ui/activate-edge-personalization-destinations/catalog-tab.png)
+   ![ het lusje van de Catalogus van de Bestemming dat in Experience Platform wordt benadrukt UI.](../assets/ui/activate-edge-personalization-destinations/catalog-tab.png)
 
 1. Zoek de **[!UICONTROL Custom Personalization With Attributes]** doelkaart en selecteer vervolgens **[!UICONTROL Activate audiences]** , zoals in de onderstaande afbeelding wordt getoond.
 
@@ -109,9 +109,9 @@ Nadat u een **[!UICONTROL Custom Personalization With Attributes]** -verbinding 
 
    U kunt kiezen uit meerdere soorten publiek, afhankelijk van de oorsprong:
 
-   * **[!UICONTROL Segmentation Service]**: publiek dat binnen Experience Platform door de Segmenteringsdienst wordt geproduceerd. Zie de [ segmentatiedocumentatie ](../../segmentation/ui/overview.md) voor meer details.
-   * **[!UICONTROL Custom upload]**: buiten het Experience Platform gegenereerde soorten publiek die als CSV-bestanden naar Platform worden geüpload. Meer over extern publiek leren, zie de documentatie bij [ het invoeren van een publiek ](../../segmentation/ui/overview.md#import-audience).
-   * Andere soorten publiek, afkomstig van andere oplossingen voor Adobe, zoals [!DNL Audience Manager] .
+   * **[!UICONTROL Segmentation Service]**: publiek dat in Experience Platform wordt gegenereerd door de Segmentation Service. Zie de [ segmentatiedocumentatie ](../../segmentation/ui/overview.md) voor meer details.
+   * **[!UICONTROL Custom upload]**: buiten Experience Platform gegenereerde soorten publiek die als CSV-bestanden in Platform worden geüpload. Meer over extern publiek leren, zie de documentatie bij [ het invoeren van een publiek ](../../segmentation/ui/overview.md#import-audience).
+   * Andere soorten publiek, afkomstig van andere Adobe-oplossingen, zoals [!DNL Audience Manager] .
 
      ![ Uitgezochte publieksstap van het activeringswerkschema met verscheidene benadrukte publiek.](../assets/ui/activate-edge-personalization-destinations/select-audiences.png)
 
@@ -137,11 +137,11 @@ Op de pagina **[!UICONTROL Review]** ziet u een overzicht van uw selectie. Selec
 
 +++Beleidsevaluatie met instemming
 
-Als uw organisatie **het Schild van de Gezondheidszorg van de Adobe** of **de Privacy &amp; het Schild van de Veiligheid van de Adobe** kocht, selecteer **[!UICONTROL View applicable consent policies]** om te zien welk toestemmingsbeleid wordt toegepast en hoeveel profielen in de activering als resultaat van hen inbegrepen zijn. Lees over [ evaluatie van het toestemmingsbeleid ](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) voor meer informatie.
+Als uw organisatie **het Schild van de Gezondheidszorg van Adobe** of **de Privacy &amp; het Schild van de Veiligheid van Adobe** kocht, selecteer **[!UICONTROL View applicable consent policies]** om te zien welk toestemmingsbeleid wordt toegepast en hoeveel profielen in de activering als resultaat van hen inbegrepen zijn. Lees over [ evaluatie van het toestemmingsbeleid ](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) voor meer informatie.
 
 **de controles van het het gebruiksbeleid van Gegevens**
 
-In de stap **[!UICONTROL Review]** controleert het Experience Platform ook op overtredingen van het gegevensgebruiksbeleid. Hieronder ziet u een voorbeeld waarin een beleid wordt overtreden. U kunt de workflow voor publieksactivering pas voltooien nadat u de schending hebt opgelost. Voor informatie over hoe te om beleidsschendingen op te lossen, lees over [ schendingen van het beleid van het gegevensgebruik ](/help/data-governance/enforcement/auto-enforcement.md#data-usage-violation) in de de documentatiesectie van het gegevensbeheer.
+In de stap **[!UICONTROL Review]** controleert Experience Platform ook op overtredingen van het gegevensgebruiksbeleid. Hieronder ziet u een voorbeeld waarin een beleid wordt overtreden. U kunt de workflow voor publieksactivering pas voltooien nadat u de schending hebt opgelost. Voor informatie over hoe te om beleidsschendingen op te lossen, lees over [ schendingen van het beleid van het gegevensgebruik ](/help/data-governance/enforcement/auto-enforcement.md#data-usage-violation) in de de documentatiesectie van het gegevensbeheer.
 
 ![ een voorbeeld van een schending van het gegevensbeleid.](../assets/common/data-policy-violation.png)
 
@@ -160,13 +160,13 @@ Als u tevreden bent met de selectie en er zijn geen beleidsovertredingen gevonde
 
 ## Stap 4: De profielkenmerken van de rand opzoeken {#configure-edge-profile-lookup}
 
-Tegen nu zou u [ het vormen van uw datastream ](#create-datastream) moeten gebeëindigd hebben, hebt u [ een nieuwe Personalization van de Douane met de bestemmingsverbinding van Attributen ](#configure-destination) gecreeerd, en u hebt deze verbinding gebruikt [ de profielattributen ](#activate-audiences) te verzenden die u aan de Edge Network zult kunnen opzoeken.
+Tegen nu zou u [ het vormen van uw datastream ](#create-datastream) moeten gebeëindigd hebben, hebt u [ een nieuwe Personalization van de Douane met de bestemmingsverbinding van Attributen ](#configure-destination) gecreeerd, en u hebt deze verbinding gebruikt [ de profielattributen ](#activate-audiences) te verzenden die u aan Edge Network zult kunnen opzoeken.
 
 De volgende stap bestaat uit het configureren van uw personalisatieoplossing om profielkenmerken op te halen uit de randprofielen.
 
 >[!IMPORTANT]
 >
->Profielkenmerken kunnen vertrouwelijke gegevens bevatten. Om deze gegevens te beschermen, moet u de profielattributen door [ Edge Network API ](../../server-api/overview.md) terugwinnen. Voorts moet u de profielattributen via de Edge Network API [ interactieve het eindpunt van de gegevensinzameling ](../../server-api/interactive-data-collection.md) terugwinnen, opdat de API vraag voor authentiek wordt verklaard.
+>Profielkenmerken kunnen vertrouwelijke gegevens bevatten. Om deze gegevens te beschermen, moet u de profielattributen door [ Edge Network API ](../../server-api/overview.md) terugwinnen. Voorts moet u de profielattributen via het Edge Network API [ interactieve eindpunt van de gegevensinzameling ](../../server-api/interactive-data-collection.md) terugwinnen, opdat de API vraag voor authentiek wordt verklaard.
 ><br>Als u de bovenstaande vereisten niet opvolgt, wordt de personalisatie alleen gebaseerd op het lidmaatschap van het publiek en zijn de profielkenmerken niet beschikbaar voor u.
 
 De gegevensstroom die u in [ stap 1 ](#create-datastream) vormde is nu klaar om inkomende gebeurtenisgegevens goed te keuren en met de informatie van het randprofiel te antwoorden.

@@ -3,7 +3,7 @@ title: Onsite ervaringen voor onbekende bezoekers personaliseren met de erkennin
 description: Leer hoe u bezoekerserkenning met ondersteuning van partners kunt gebruiken om uw bezoekers op de site een persoonlijke ervaring te bieden.
 feature: Use Cases, Personalization, Customer Acquisition
 exl-id: 99677988-1df8-47b1-96b1-0ef6db818a1d
-source-git-commit: 5b37b51308dc2097c05b0e763293467eb12a2f21
+source-git-commit: 02f2082e695d157415c9e0c59ca5d371c94bb991
 workflow-type: tm+mt
 source-wordcount: '2565'
 ht-degree: 1%
@@ -14,9 +14,9 @@ ht-degree: 1%
 
 >[!AVAILABILITY]
 >
->Deze functionaliteit is beschikbaar voor klanten die een licentie hebben verkregen voor Real-Time CDP (App Service), Adobe Experience Platform Activation, Real-Time CDP, Real-Time CDP Premiere, Real-Time CDP Ultimate. Lees meer over deze pakketten in de [ productbeschrijvingen ](https://helpx.adobe.com/legal/product-descriptions.html) en contacteer uw vertegenwoordiger van de Adobe voor meer informatie.
+>Deze functionaliteit is beschikbaar voor klanten met een licentie voor Real-Time CDP (App Service), Adobe Experience Platform Activation, Real-Time CDP, Real-Time CDP Prime, Real-Time CDP Ultimate. Lees meer over deze pakketten in de [ productbeschrijvingen ](https://helpx.adobe.com/legal/product-descriptions.html) en contacteer uw vertegenwoordiger van Adobe voor meer informatie.
 
-Leer hoe u met partnerondersteunde erkenning persoonlijke ervaringen kunt bieden aan bezoekers van webeigenschappen. Gebruik deze zelfstudie om inzicht te krijgen in de implementatiereeks van verschillende elementen in Experience Platform en andere oplossingen voor Experiencen Cloud en om een gepersonaliseerde ervaring weer te geven voor geverifieerde en niet-geverifieerde bezoekers.
+Leer hoe u met partnerondersteunde erkenning persoonlijke ervaringen kunt bieden aan bezoekers van webeigenschappen. Gebruik deze zelfstudie om inzicht te krijgen in de implementatiereeks van verschillende elementen in Experience Platform en andere Experience Cloud-oplossingen en om een persoonlijke ervaring weer te geven voor geverifieerde en niet-geverifieerde bezoekers.
 
 ![ een infographic die beschrijft hoe te om partner-verstrekte attributen te gebruiken om gepersonaliseerde ervaringen aan uw bezoekers te leveren.](/help/rtcdp/assets/partner-data/onsite-personalization/onsite-personalization-overview.png)
 
@@ -24,7 +24,7 @@ Leer hoe u met partnerondersteunde erkenning persoonlijke ervaringen kunt bieden
 
 De versnippering van digitale ervaringen als consumenten op allerlei manieren met merken communiceren, is zeer reëel en wordt steeds moeilijker op te lossen. De beste strategieën van de klantenovereenkomst voor samenhangende ervaringen, gerichte aanbevelingen, en op maat-gemaakte interactie worden allen beperkt door gebruikerserkenning.
 
-Dit is waar partnergerichte erkenning in real time een zinvol verschil kan maken. Adobe staat identiteitspartners toe om in ons verfijnde cliënt-zijgegevensinzameling en de markt-leidende het optimaliseringsdienstenaanbod van de ervaring te stoppen, om de bar op ervaringslevering vanaf het eerste bezoek effectief te verhogen, zonder vroegere geschiedenis of authentificatie.
+Dit is waar partnergerichte erkenning in real time een zinvol verschil kan maken. Adobe staat identiteitspartners toe om in ons verfijnde cliënt-zijgegevensinzameling en de markt-leidende aanbiedingen van de ervaringsuitoptimalisering te stoppen, om de bar op ervaringslevering vanaf het eerste bezoek effectief te verhogen, zonder vroegere geschiedenis of authentificatie.
 
 Dit is vooral waardevol aan toppen die lage authentificatiecijfers, zoals de Verpakte Goederen van de Consumenten, online kleinhandel, en meer hebben.
 
@@ -42,9 +42,9 @@ Wanneer het van plan zijn om partner-verstrekte attributen te gebruiken om geper
 * In hoeverre bent u comfortabel om personalisatie op verschillende kanalen en voor verschillende gebruiksgevallen te leveren die op voorwaardelijk afgeleide datasets, tegenover deterministisch bevestigde attributen worden gebaseerd?
 * Hoe moet de ervaring van een vooraf geverifieerde maar herkende bezoeker veranderen wanneer ze worden geverifieerd?
 
-### UI-functionaliteit, platformcomponenten en Experiencen Cloud die u wilt gebruiken {#ui-functionality-and-elements}
+### UI-functionaliteit, platformcomponenten en Experience Cloud-producten die u wilt gebruiken {#ui-functionality-and-elements}
 
-Als u dit geval met succes wilt implementeren, moet u meerdere gebieden van Real-time Customer Data Platform en andere oplossingen voor Experiencen Cloud gebruiken. Zorg ervoor dat u de noodzakelijke [ op attributen-gebaseerde toegangsbeheertoestemmingen ](/help/access-control/abac/overview.md) voor al deze gebieden hebt, of vraag uw systeembeheerder om u de noodzakelijke toestemmingen te verlenen.
+Als u dit geval wilt gebruiken, moet u meerdere gebieden van Real-Time Customer Data Platform en andere Experience Cloud-oplossingen gebruiken. Zorg ervoor dat u de noodzakelijke [ op attributen-gebaseerde toegangsbeheertoestemmingen ](/help/access-control/abac/overview.md) voor al deze gebieden hebt, of vraag uw systeembeheerder om u de noodzakelijke toestemmingen te verlenen.
 
 * Dataverzameling
    * [Adobe Experience Platform Web SDK](/help/web-sdk/home.md)
@@ -56,7 +56,7 @@ Als u dit geval met succes wilt implementeren, moet u meerdere gebieden van Real
    * [Labels voor gegevensgebruik](/help/data-governance/labels/overview.md)
    * [Gegevenssets](/help/catalog/datasets/overview.md)
 * Webeigenschappen aanpassen
-   * [Edge-segmentatie](/help/segmentation/ui/edge-segmentation.md)
+   * [Edge-segmentatie](/help/segmentation/methods/edge-segmentation.md)
    * [Edge Personalization-bestemmingen](/help/destinations/destination-types.md#edge-personalization-destinations)
    * [ Adobe Target ](/help/destinations/catalog/personalization/adobe-target-connection.md) (of een verpersoonlijkingsplatform van uw keus. In deze zelfstudie wordt Adobe Target gemarkeerd als een personalisatie-engine.
 
@@ -71,7 +71,7 @@ Bekijk de videozelfstudie hieronder voor een analyse van hoe u onsite ervaringen
 ![ een infographic die beschrijft hoe te om partner-verstrekte attributen te gebruiken om gepersonaliseerde ervaringen aan uw bezoekers te leveren.](/help/rtcdp/assets/partner-data/onsite-personalization/onsite-personalization-steps.png)
 
 1. Als a **klant**, vergunning u van de **gegevenspartner** de capaciteit om inzichten in real time op anders anonieme websitebezoekers te halen.
-2. Als a **klant**, stelt u cliënt-zijbibliotheken op uw eigenschappen op om **partner** APIs te roepen en u vormt Web SDK of Mobiele SDK om partner-Geleide signalen naar Real-Time CDP te verzenden.
+2. Als a **klant**, stelt u cliënt-zijbibliotheken op uw eigenschappen op om **partner** APIs te roepen en u vormt SDK van het Web of Mobiele SDK om partner-Geleide signalen naar Real-Time CDP te verzenden.
 3. Wanneer het doorbladeren van uw website of app, wordt de **bezoeker** waarschijnlijk erkend door de **partner**, die attributen samen met een identiteitskaart terugkeert.
 4. Real-Time CDP stelt randsegmentatie in werking om inkomende gebeurtenisklappen te evalueren en handhaaft resultaten tegen het [ ECID herkenningsteken ](https://experienceleague.adobe.com/docs/id-service/using/home.html).
 5. Adobe Target gebruikt de uitvoer van de randsegmentatie om de ervaring terug naar de **bezoeker** voor in-zittingsverpersoonlijking terug te geven.
@@ -95,7 +95,7 @@ Lees meer over hoe te [ tot een identiteit van partneridentiteitskaart te leiden
 
 #### Een schema maken
 
-Maak vervolgens een [!UICONTROL Experience Event] -schema voor de tijdreeksgegevens die u later wilt verzamelen van uw wegeigenschappen en gebruik [!UICONTROL XDM ExperienceEvent] als basisklasse voor het schema. Lees over hoe te [ een schema creëren gebruikend het Experience Platform UI ](/help/xdm/ui/resources/schemas.md#create).
+Maak vervolgens een [!UICONTROL Experience Event] -schema voor de tijdreeksgegevens die u later wilt verzamelen van uw wegeigenschappen en gebruik [!UICONTROL XDM ExperienceEvent] als basisklasse voor het schema. Lees over hoe te [ een schema creëren gebruikend Experience Platform UI ](/help/xdm/ui/resources/schemas.md#create).
 
 ![ de werkruimte van Schema&#39;s met Create schema, en de benadrukte gebeurtenis van de Ervaring XDM.](/help/rtcdp/assets/partner-data/onsite-personalization/create-experience-event-schema.png)
 
@@ -115,7 +115,7 @@ Net als bij de stap bij het maken van een schema moet u ervoor zorgen dat de geg
 
 ### Verzameling van gebeurtenisgegevens implementeren in uw webeigenschap {#implement-data-collection}
 
-Na vestiging moet uw configuratie van het gegevensbeheer, u nu gebeurtenis in real time [ gegevensinzameling ](/help/collection/home.md) op uw Webbezit uitvoeren. U moet de Adobe van uw eigenschap voorzien van de gegevensverzamelingsbibliotheek - [!UICONTROL Web SDK] - om gebeurtenisaanroepen in real time te verzamelen en deze terug te sturen naar Real-Time CDP. Dit item bestaat uit een paar afzonderlijke taken voor een paar componenten van gegevensverzameling.
+Na vestiging moet uw configuratie van het gegevensbeheer, u nu gebeurtenis in real time [ gegevensinzameling ](/help/collection/home.md) op uw Webbezit uitvoeren. U moet de Adobe-bibliotheek voor gegevensverzameling ( [!UICONTROL Web SDK] ) gebruiken om realtime-gebeurtenisaanroepen te verzamelen en deze terug te sturen naar Real-Time CDP. Dit item bestaat uit een paar afzonderlijke taken voor een paar componenten van gegevensverzameling.
 
 >[!IMPORTANT]
 >
@@ -135,7 +135,7 @@ Het gedeelte **[!UICONTROL Data Collection]** van de gebruikersinterface ziet er
 
 #### Gegevensstroom maken
 
-Als eerste stap in de sectie van de gegevensinzameling, [ creeer een nieuwe datastream ](/help/datastreams/configure.md). De gegevensstroom is de basis van hoe gegevens worden verzameld en correct worden gerouteerd naar de juiste Adobe-app, in dit geval Experience Platform.
+Als eerste stap in de sectie van de gegevensinzameling, [ creeer een nieuwe datastream ](/help/datastreams/configure.md). De gegevensstroom vormt de basis voor de manier waarop gegevens worden verzameld en correct worden gerouteerd naar de juiste Adobe-app, in dit geval Experience Platform.
 
 Terwijl u de gegevensstroom maakt, selecteert u in het veld **[!UICONTROL Event schema]** het schema dat u eerder hebt gemaakt.
 
@@ -169,17 +169,17 @@ De extensie [!UICONTROL Core] is al geïnstalleerd. U moet nog twee extensies in
 
 #### Web SDK-extensie installeren
 
-In deze zelfstudie wordt aangegeven hoe u uw website kunt voorzien van een Web SDK. U kunt [ Mobiele SDK ](https://developer.adobe.com/client-sdks/documentation/) op uw app ook gebruiken om de ervaring aan uw toepassingsbezoekers te personaliseren.
+In deze zelfstudie wordt aangegeven hoe u uw website kunt besturen met Web SDK. U kunt [ Mobiele SDK ](https://developer.adobe.com/client-sdks/documentation/) op uw app ook gebruiken om de ervaring aan uw toepassingsbezoekers te personaliseren.
 
 ![ Mening van de uitbreiding van SDK van het Web in de uitbreidingscatalogus.](/help/rtcdp/assets/partner-data/onsite-personalization/web-sdk-extension.png)
 
-In het scherm om Web SDK te vormen, navigeer neer aan de **[!UICONTROL Datastreams]** sectie en verstrek informatie over de zandbak van het Experience Platform die u gebruikt. Selecteer de desbetreffende sandbox en de gegevensstroom die u in de vorige stappen van de volgende vervolgkeuzelijst hebt gemaakt. U kunt dezelfde sandbox- en gegevensstroomwaarden kiezen voor alle andere omgevingen. Laat de andere instellingen ongewijzigd en selecteer **[!UICONTROL Save]** .
+Navigeer in het scherm om Web SDK te configureren naar de sectie **[!UICONTROL Datastreams]** en geef informatie over de Experience Platform-sandbox die u gebruikt. Selecteer de desbetreffende sandbox en de gegevensstroom die u in de vorige stappen van de volgende vervolgkeuzelijst hebt gemaakt. U kunt dezelfde sandbox- en gegevensstroomwaarden kiezen voor alle andere omgevingen. Laat de andere instellingen ongewijzigd en selecteer **[!UICONTROL Save]** .
 
-Krijg volledige informatie over [ hoe te om Web SDK ](https://experienceleague.adobe.com/docs/platform-learn/implement-web-sdk/tags-configuration/install-web-sdk.html) te installeren.
+Krijg volledige informatie over [ hoe te om het Web SDK ](https://experienceleague.adobe.com/docs/platform-learn/implement-web-sdk/tags-configuration/install-web-sdk.html) te installeren.
 
 #### ID-serviceversie installeren
 
-Gebruik de [ uitbreiding van de Dienst van identiteitskaart van het Experience Cloud ](/help/tags/extensions/client/id-service/overview.md) om een unieke op apparaat-gebaseerde eerste partijidentiteit voor bezoekers over alle oplossingen van het Experience Cloud tot stand te brengen. Zoek naar **[!UICONTROL ID Service]** in de extensiecatalogus en installeer deze. Houd alle standaardinstellingen wanneer u de extensie installeert.
+Gebruik de [ uitbreiding van de Dienst van identiteitskaart van Experience Cloud ](/help/tags/extensions/client/id-service/overview.md) om een unieke op apparaat-gebaseerde eerste-partijidentiteit voor bezoekers over alle oplossingen van Experience Cloud tot stand te brengen. Zoek naar **[!UICONTROL ID Service]** in de extensiecatalogus en installeer deze. Houd alle standaardinstellingen wanneer u de extensie installeert.
 
 ![ Mening van de uitbreiding van de Dienst van identiteitskaart in de uitbreidingscatalogus.](/help/rtcdp/assets/partner-data/onsite-personalization/id-service-extension.png)
 
@@ -191,7 +191,7 @@ Selecteer het vakpictogram rechts voor de ontwikkelomgeving en kopieer de standa
 
 ![ Uitgezochte vakje pictogram dat in de sectie van Milieu&#39;s van UI van de Inzameling van Gegevens wordt benadrukt.](/help/rtcdp/assets/partner-data/onsite-personalization/select-box-icon.png)
 
-U moet dit codefragment helemaal boven aan uw website toevoegen. Als gevolg hiervan roept uw website het Adobe Edge Network aan om JavaScript-logica op te halen die op de pagina wordt geladen en uitgevoerd. Dit staat voor functionaliteit zoals de generatie van bezoekersidentiteitskaart, gegevensinzameling, en de ervarings in real time verpersoonlijking toe om te werken.
+U moet dit codefragment helemaal boven aan uw website toevoegen. Als gevolg hiervan belt uw website naar Adobe Edge Network om JavaScript-logica op te halen die op de pagina wordt geladen en uitgevoerd. Dit staat voor functionaliteit zoals de generatie van bezoekersidentiteitskaart, gegevensinzameling, en de ervarings in real time verpersoonlijking toe om te werken.
 
 #### Gegevenselementen instellen
 
@@ -215,7 +215,7 @@ Van het schema, selecteer de derdeattributen die aan de waarden beantwoorden die
 
 #### Regels instellen
 
-In de sectie **[!UICONTROL Rules]** kunt u uw website zo configureren dat een aanvraag voor een aanpassing wordt verzonden naar de Adobe met de kenmerken die zijn geladen in de gegevenselementen die u net hebt gemaakt. Lees meer over [ het creëren van regels ](/help/tags/ui/managing-resources/rules.md).
+In de sectie **[!UICONTROL Rules]** kunt u uw website zo configureren dat deze een aanvraag voor een personalisatie naar Adobe verzendt met de kenmerken die zijn geladen in de gegevenselementen die u zojuist hebt gemaakt. Lees meer over [ het creëren van regels ](/help/tags/ui/managing-resources/rules.md).
 
 Selecteer **[!UICONTROL Create new Rule]**. Noem deze regel **[!UICONTROL Personalize]** en selecteer + teken naast **[!UICONTROL Events]**. Selecteer **[!UICONTROL Page Bottom]** als de gebeurtenis en sla deze op.
 
@@ -247,7 +247,7 @@ Selecteer **[!UICONTROL Add all Changed Resources]** , geef de bibliotheek een n
 
 #### Uw website testen
 
-Op dit punt, zou uw website volledig van instrumenten voorzien met Web SDK moeten zijn. Om te testen dat de gegevensinzameling zoals verwacht werkt, kunt u aan uw website navigeren en de ontwikkelaarshulpmiddelen van uw browser gebruiken om netwerkverkeer te inspecteren.
+Op dit moment moet uw website volledig van instrumenten zijn voorzien met Web SDK. Om te testen dat de gegevensinzameling zoals verwacht werkt, kunt u aan uw website navigeren en de ontwikkelaarshulpmiddelen van uw browser gebruiken om netwerkverkeer te inspecteren.
 
 Voer `interact` in het zoekvak in, vernieuw de pagina en u ziet netwerkaanroepen van uw website naar het Adobe Edge-netwerk dat gevuld is.
 
@@ -263,13 +263,13 @@ Navigeer in de gebruikersinterface van het platform naar **[!UICONTROL Customer]
 
 ![ Mening van hoe te aan publiek te navigeren.](/help/rtcdp/assets/partner-data/onsite-personalization/navigate-to-audiences.png)
 
-U moet opstelling uw publiek met [ randsegmentatie ](/help/segmentation/ui/edge-segmentation.md) zodat wordt het publieksenlidmaatschap van uw bezoekers geëvalueerd in real time, aangezien zij uw Webbezit bezoeken.
+U moet opstelling uw publiek met [ randsegmentatie ](/help/segmentation/methods/edge-segmentation.md) zodat wordt het publieksenlidmaatschap van uw bezoekers geëvalueerd in real time, aangezien zij uw Webbezit bezoeken.
 
 Zorg ervoor aan opstelling ook een [ actief-op-rand samenvoegbeleid ](/help/destinations/ui/activate-edge-personalization-destinations.md#create-merge-policy) voor het randpubliek.
 
 #### Integreren met Adobe Target of een andere aangepaste personalisatiebestemming
 
-U kunt nu integreren met een aanpassingsengine om persoonlijke inhoud weer te geven voor uw website of app-bezoekers. De Adobe adviseert gebruikend de [ bestemming van Adobe Target ](/help/destinations/catalog/personalization/adobe-target-connection.md) voor dit doel.
+U kunt nu integreren met een aanpassingsengine om persoonlijke inhoud weer te geven voor uw website of app-bezoekers. Adobe adviseert het gebruiken van de [ bestemming van Adobe Target ](/help/destinations/catalog/personalization/adobe-target-connection.md) voor dit doel.
 
 >[!IMPORTANT]
 >

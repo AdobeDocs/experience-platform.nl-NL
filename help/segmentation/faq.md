@@ -2,16 +2,16 @@
 title: Publiek Veelgestelde vragen
 description: Ontdek antwoorden op veelgestelde vragen over publiek en andere op segmentatie betrekking hebbende concepten.
 exl-id: 79d54105-a37d-43f7-adcb-97f2b8e4249c
-source-git-commit: 29d9445e6e71c60f4b596a5e645a56d2b70e133c
+source-git-commit: 4afb2c76f2022423e8f1fa29c91d02b43447ba90
 workflow-type: tm+mt
-source-wordcount: '4215'
+source-wordcount: '4810'
 ht-degree: 0%
 
 ---
 
 # Veelgestelde vragen
 
-Adobe Experience Platform [!DNL Segmentation Service] biedt een gebruikersinterface en de RESTful-API waarmee u een publiek kunt maken via segmentdefinities of andere bronnen op basis van uw [!DNL Real-Time Customer Profile] -gegevens. Dit publiek wordt centraal gevormd en gehandhaafd op Platform, en gemakkelijk toegankelijk door om het even welke oplossing van de Adobe. Hieronder volgt een lijst met veelgestelde vragen over publiek en segmentatie.
+Adobe Experience Platform [!DNL Segmentation Service] biedt een gebruikersinterface en de RESTful-API waarmee u een publiek kunt maken via segmentdefinities of andere bronnen op basis van uw [!DNL Real-Time Customer Profile] -gegevens. Dit publiek wordt centraal gevormd en gehandhaafd op Platform, en gemakkelijk toegankelijk door om het even welke oplossing van Adobe. Hieronder volgt een lijst met veelgestelde vragen over publiek en segmentatie.
 
 ## Poort publiek
 
@@ -19,7 +19,7 @@ De volgende sectie maakt een lijst van vragen met betrekking tot de Portaal van 
 
 ### Heb ik toegang tot het Portaal van het Publiek en de Samenstelling van het Publiek?
 
-Poort van publiek en Audience Composition zijn beschikbaar voor alle klanten van Real-Time CDP Premier en Ultimate (B2C, B2B en B2P Editions) en Journey Optimizer Select, Prime, Ultimate Starter en Ultimate.
+Poort van publiek en Audience Composition zijn beschikbaar voor alle Real-Time CDP Prime- en Ultimate-klanten (B2C, B2B en B2P Editions) en Journey Optimizer Select-, Prime-, Ultimate Starter- en Ultimate-klanten.
 
 Op dit moment worden alleen op profielen gebaseerde soorten publiek ondersteund. Ondersteuning voor publiek op basis van account wordt in een latere release toegevoegd.
 
@@ -358,6 +358,16 @@ In de volgende sectie worden vragen over het lidmaatschap voor het publiek weerg
 
 Ga naar de pagina met profieldetails van het profiel dat u wilt bevestigen om het publiekslidmaatschap van een profiel te bevestigen. Selecteer **[!UICONTROL Attributes]** , gevolgd door **[!UICONTROL View JSON]** , en u kunt bevestigen dat het `segmentMembership` -object de id van het publiek bevat.
 
+### Kan het lidmaatschap van het publiek verschuiven tussen ideaal en daadwerkelijk lidmaatschap?
+
+Ja, kan het publiekslidmaatschap tussen ideaal en werkelijk lidmaatschap afglijden als een publiek gebruikend het stromen segmentatie **wordt geëvalueerd en** dat het publiek uit een geëvalueerd publiek gebruikend partijsegmentatie gebaseerd is.
+
+Bijvoorbeeld, als het Publiek A van Publiek B wordt gebaseerd, en Publiek B wordt geëvalueerd gebruikend partijsegmentatie, aangezien Publiek B slechts om de 24 uur bijwerkt, zal Publiek A zich verder van de daadwerkelijke gegevens bewegen tot het met de updates van het Publiek B re-synchroniseert.
+
+## Batchsegmentatie {#batch-segmentation}
+
+In de volgende sectie worden vragen over batchsegmentatie weergegeven.
+
 ### Hoe verhelpt batchsegmentatie profiellidmaatschap?
 
 De soorten publiek die worden geëvalueerd met behulp van batchsegmentatie worden dagelijks opgelost, waarbij de resultaten van het doellidmaatschap worden opgenomen in het kenmerk `segmentMembership` van het profiel. De raadplegingen van het profiel produceren een verse versie van het profiel in de tijd van de raadpleging, maar het **** verfrist niet de resultaten van de partijsegmentatie.
@@ -380,3 +390,44 @@ Het kan maximaal drie uur duren voordat streaminggegevens beschikbaar zijn in wo
 
 Bijvoorbeeld, als een baan van de partijsegmentatie bij 9PM loopt, wordt het gegarandeerd om het stromen ingebedde gegevens **tot** 6PM te bevatten. Het stromen ingebedde gegevens die na 6PM maar vóór 9PM **werden opgenomen kunnen** worden omvat.
 
+## Edge-segmentatie {#edge-segmentation}
+
+In de volgende sectie worden vragen over randsegmentatie weergegeven.
+
+### Hoe lang duurt het voordat een segmentdefinitie beschikbaar is op de Edge Network?
+
+Het duurt maximaal een uur voordat een segmentdefinitie beschikbaar is op de Edge Network.
+
+## Streaming segmentering {#streaming-segmentation}
+
+In de volgende sectie worden vragen over streamingsegmentatie weergegeven.
+
+### Vindt streaming segmentatie ook &#39;onkwalificatie&#39; plaats in real-time?
+
+Doorgaans gebeurt een onkwalificatie van streamingsegmentatie in real-time. Nochtans, die segmenten stromen die segmenten van segmenten gebruiken **niet** in real time niet kwalificeren, in plaats daarvan het niet kwalificeren na 24 uren.
+
+### Aan welke gegevens werkt streaming segmentatie?
+
+Streaming segmentatie werkt op alle gegevens die via een streaming bron zijn ingeslikt. Gegevens die worden ingevoerd met behulp van een op batch gebaseerde bron worden elke avond geëvalueerd, zelfs als deze in aanmerking komen voor streamingsegmentatie. Gebeurtenissen die naar het systeem worden gestreamd met een tijdstempel die ouder is dan 24 uur, worden verwerkt in de volgende batchtaak.
+
+### Hoe worden segmenten gedefinieerd als batch- of streaming-segmentatie?
+
+Een segmentdefinitie wordt gedefinieerd als batch, streaming of randsegmentatie op basis van een combinatie van het type query en de duur van de gebeurtenisgeschiedenis. Een lijst waarvan de segmenten als het stromen segmentdefinitie zullen worden geëvalueerd kan in de [ het stromen sectie van de segmenteringsvraagtypes ](#query-types) worden gevonden.
+
+Gelieve te merken op dat als een segmentdefinitie **zowel** een `inSegment` uitdrukking als een directe enige-gebeurtenisketting bevat, het niet voor het stromen segmentatie kan kwalificeren. Als u deze segmentdefinitie voor het stromen segmentatie wilt kwalificeren, zou u de directe enige-gebeurtenisketen zijn eigen segment moeten maken.
+
+### Waarom blijft het aantal &quot;totaal gekwalificeerde&quot;segmenten stijgen terwijl het aantal onder &quot;Laatste X dagen&quot;nul binnen de sectie van de segmentdefinitiedetails blijft?
+
+Het aantal in totaal gekwalificeerde segmenten wordt ontleend aan de dagelijkse segmentatietaak, die publiek omvat dat voor zowel partij als het stromen segmenten kwalificeert. Deze waarde wordt weergegeven voor zowel batch- als streaming segmenten.
+
+Het aantal onder de &quot;Laatste dagen van X&quot;**slechts** omvat publiek dat in het stromen segmentatie wordt gekwalificeerd, en **slechts** verhogingen als u gegevens in het systeem hebt gestroomd en het telt naar die het stromen definitie. Deze waarde is **slechts** getoond voor het stromen segmenten. Dientengevolge, kan deze waarde **** als 0 voor partijsegmenten tonen.
+
+Dientengevolge, als u ziet dat het aantal onder &quot;Laatste dagen van X&quot;nul is, en de lijngrafiek ook nul meldt, hebt u **** gestroomd geen profielen in het systeem dat voor dat segment zou kwalificeren.
+
+### Hoe lang duurt het voordat een segmentdefinitie beschikbaar is?
+
+Het duurt tot één uur voordat een segmentdefinitie beschikbaar is.
+
+### Zijn er beperkingen aan de gegevens waarin wordt gestreamd?
+
+Opdat de gestroomde gegevens in het stromen segmentatie worden gebruikt, moet **** het uit elkaar plaatsen tussen de gebeurtenissen zijn die binnen worden gestroomd. Als er te veel gebeurtenissen binnen dezelfde seconde worden gestreamd, behandelt Platform deze gebeurtenissen als door beide gegenereerde gegevens en worden ze genegeerd. Als beste praktijken, zou u **minstens** vijf seconden tussen gebeurtenisgegevens moeten hebben om ervoor te zorgen dat het gegeven behoorlijk wordt gebruikt.

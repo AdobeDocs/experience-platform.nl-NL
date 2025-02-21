@@ -3,7 +3,7 @@ keywords: Experience Platform;profiel;real-time klantprofiel;problemen;API;veren
 title: Gebruikersgids voor realtime gebruikersprofiel
 description: Het profiel van de Klant in real time leidt tot een holistische mening van elk van uw individuele klanten, die gegevens van veelvoudige kanalen met inbegrip van online, off-line, CRM, en derdegegevens combineren. Dit document fungeert als richtlijn voor de interactie met Real-Time Klantprofiel in de Adobe Experience Platform-gebruikersinterface.
 exl-id: 792a3a73-58a4-4163-9212-4d43d24c2770
-source-git-commit: dc31258dad5cf03a8f4f60db4d4aefc29e8157c8
+source-git-commit: 4afb2c76f2022423e8f1fa29c91d02b43447ba90
 workflow-type: tm+mt
 source-wordcount: '2128'
 ht-degree: 0%
@@ -24,7 +24,7 @@ Deze UI-gids vereist inzicht in de verschillende [!DNL Experience Platform] -ser
 
 ## [!UICONTROL Overview]
 
-Selecteer in de gebruikersinterface van het Experience Platform de optie **[!UICONTROL Profiles]** in de linkernavigatie om het tabblad **[!UICONTROL Overview]** met het profieldashboard te openen.
+Selecteer in de gebruikersinterface van Experience Platform de optie **[!UICONTROL Profiles]** in de linkernavigatie om het tabblad **[!UICONTROL Overview]** met het profieldashboard te openen.
 
 >[!NOTE]
 >
@@ -54,7 +54,7 @@ Naast deze metriek, verstrekt deze sectie een laatste bijgewerkte datum en tijd,
 
 ### Aantal profielen {#profile-count}
 
-Het aantal profielen geeft het totale aantal profielen weer dat uw organisatie binnen het Experience Platform heeft, nadat het standaardsamenvoegbeleid van uw organisatie profielfragmenten heeft samengevoegd tot één profiel voor elke individuele klant. Met andere woorden, uw organisatie kan veelvoudige profielfragmenten met betrekking tot één enkele klant hebben die met uw merk over verschillende kanalen interactie heeft, maar deze fragmenten zouden samen (volgens het standaard fusiebeleid) worden samengevoegd en een telling van &quot;1&quot;profiel terugkeren omdat zij allen met het zelfde individu verwant zijn.
+Het aantal profielen geeft het totale aantal profielen weer dat uw organisatie in Experience Platform heeft, nadat het standaardsamenvoegbeleid van uw organisatie profielfragmenten heeft samengevoegd tot één profiel voor elke afzonderlijke klant. Met andere woorden, uw organisatie kan veelvoudige profielfragmenten met betrekking tot één enkele klant hebben die met uw merk over verschillende kanalen interactie heeft, maar deze fragmenten zouden samen (volgens het standaard fusiebeleid) worden samengevoegd en een telling van &quot;1&quot;profiel terugkeren omdat zij allen met het zelfde individu verwant zijn.
 
 Het aantal profielen omvat ook zowel profielen met kenmerken (recordgegevens) als profielen die alleen tijdreeksgegevens (gebeurtenisgegevens) bevatten, zoals Adobe Analytics-profielen. Het aantal profielen wordt regelmatig vernieuwd om een up-to-date totaal aantal profielen binnen Platform te bieden.
 
@@ -171,11 +171,11 @@ Gebeurtenissen kunnen ook als een JSON-object worden weergegeven door op **[!UIC
 
 Op het tabblad **[!UICONTROL Audience membership]** wordt een lijst weergegeven met de naam en beschrijving van het publiek waartoe het individuele klantprofiel momenteel behoort. Deze lijst wordt automatisch bijgewerkt wanneer het profiel in aanmerking komt of vervalt bij het publiek. Het totale aantal soorten publiek waarvoor het profiel momenteel is gekwalificeerd, wordt aan de rechterkant van het tabblad weergegeven.
 
-Voor meer informatie over segmentatie in Experience Platform, gelieve te verwijzen naar de [ documentatie van de Dienst van de Segmentatie van het Experience Platform van Adoben ](../../segmentation/home.md).
+Voor meer informatie over segmentatie in Experience Platform, gelieve te verwijzen naar de [ documentatie van de Dienst van de Segmentatie van Adobe Experience Platform ](../../segmentation/home.md).
 
 ![ het lusje van het lidmaatschap van de Publiek wordt benadrukt. De details van het publiekslidmaatschap van het profiel worden getoond.](../images/user-guide/audience-membership.png)
 
-Selecteer **[!UICONTROL Edge]** in de kiezer voor de gegevenslocatie om het publiekslidmaatschap van de profielen op de Edge weer te geven. Meer informatie over randsegmentatie kan in de [ gids van de randsegmentatie ](../../segmentation/ui/edge-segmentation.md) worden gevonden.
+Selecteer **[!UICONTROL Edge]** in de kiezer voor de gegevenslocatie om het publiekslidmaatschap van de profielen op de Edge weer te geven. Meer informatie over randsegmentatie kan in de [ gids van de randsegmentatie ](../../segmentation/methods/edge-segmentation.md) worden gevonden.
 
 ![ de selecteur van de gegevensplaats binnen het lusje van het publiekslidmaatschap wordt benadrukt.](../images/user-guide/audience-membership-select.png)
 
@@ -205,4 +205,4 @@ Voor meer informatie over gegevens verwerkte attributen, te lezen gelieve [ gege
 
 ## Volgende stappen
 
-Door deze gids te lezen, weet u hoe te om de het profielgegevens van uw organisatie te bekijken en te beheren gebruikend de UI van het Experience Platform. Voor informatie over hoe te met profielgegevens werken gebruikend Experience Platform APIs, gelieve te verwijzen naar de [ Realtime gids van het Profiel van de Klant API ](../api/overview.md).
+Door deze handleiding te lezen, weet u hoe u de profielgegevens van uw organisatie kunt bekijken en beheren met de gebruikersinterface van Experience Platform. Voor informatie over hoe te met profielgegevens werken gebruikend Experience Platform APIs, gelieve te verwijzen naar de [ Realtime gids van het Profiel van de Klant API ](../api/overview.md).

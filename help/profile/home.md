@@ -2,7 +2,7 @@
 title: Real-Time overzicht van klantprofiel
 description: In real-time klantprofiel worden gegevens uit verschillende bronnen samengevoegd en krijgt toegang tot die gegevens in de vorm van individuele klantprofielen en gerelateerde tijdreeksgebeurtenissen. Met deze functie kunnen marketers op meerdere kanalen hun publiek gecoördineerde, consistente en relevante ervaringen bieden.
 exl-id: c93d8d78-b215-4559-a806-f019c602c4d2
-source-git-commit: 7d515401eb49ffd2ad5cf0bd074896b274c4fb05
+source-git-commit: fc53d1b32eb3fc0251f307d5b2f076b1153a2931
 workflow-type: tm+mt
 source-wordcount: '1821'
 ht-degree: 1%
@@ -15,7 +15,7 @@ Met Adobe Experience Platform kunt u uw klanten gecoördineerde, consistente en 
 
 ## [!DNL Profile] in Experience Platform
 
-De verhouding tussen het Profiel van de Klant in real time en andere diensten binnen Experience Platform wordt benadrukt in het volgende diagram:
+Het verband tussen het Real-Time Profiel van de Klant en andere diensten binnen Experience Platform wordt benadrukt in het volgende diagram:
 
 ![ het verband tussen het Profiel van de Klant in real time en andere diensten in Adobe Experience Platform. Dit diagram toont aan dat het Profiel één van de kerncomponenten van Adobe Experience Platform is.](images/profile-overview/profile-in-platform.png)
 
@@ -49,11 +49,11 @@ De profielopslag gebruikt een Microsoft Azure Cosmos DB-infrastructuur en het Pl
 
 ### Profielhulplijnen
 
-Het Experience Platform verstrekt een reeks gidsen om u te helpen vermijden creërend [ schema&#39;s van de Gegevens van de Ervaring van het Model (XDM) ](../xdm/home.md) die het Profiel van de Klant in real time niet kan steunen. Dit omvat zachte grenzen die in prestatiesvermindering zullen resulteren, evenals harde grenzen die in fouten en systeembreuken zullen resulteren. Voor meer informatie, met inbegrip van een lijst van richtlijnen en de gevallen van het voorbeeldgebruik, gelieve te lezen de [ guardrails van het Profiel ](guardrails.md) documentatie.
+Experience Platform verstrekt een reeks gidsen om u te helpen vermijden creërend [ schema&#39;s van de Gegevens van de Ervaring van het Model (XDM) ](../xdm/home.md) die het Profiel van de Klant in real time niet kan steunen. Dit omvat zachte grenzen die in prestatiesvermindering zullen resulteren, evenals harde grenzen die in fouten en systeembreuken zullen resulteren. Voor meer informatie, met inbegrip van een lijst van richtlijnen en de gevallen van het voorbeeldgebruik, gelieve te lezen de [ guardrails van het Profiel ](guardrails.md) documentatie.
 
 ### Profieldashboard {#profile-dashboard}
 
-De interface van het Experience Platform biedt een dashboard waardoor u belangrijke informatie over uw gegevens van het Profiel van de Klant in real time kunt bekijken, zoals die tijdens een dagelijkse momentopname wordt gevangen. Leren hoe te om met het [!DNL Profile] dashboard in UI toegang te hebben en te werken, en gedetailleerde informatie betreffende de metriek die in het dashboard wordt getoond, verwijs naar de [ gids UI van het dashboard van het Profiel ](ui/profile-dashboard.md).
+De gebruikersinterface van Experience Platform biedt een dashboard waarmee u belangrijke informatie over uw gegevens van het profiel van de Klant in real time kunt bekijken, zoals vastgelegd tijdens een dagelijkse momentopname. Leren hoe te om met het [!DNL Profile] dashboard in UI toegang te hebben en te werken, en gedetailleerde informatie betreffende de metriek die in het dashboard wordt getoond, verwijs naar de [ gids UI van het dashboard van het Profiel ](ui/profile-dashboard.md).
 
 ### Profielfragmenten versus samengevoegde profielen {#profile-fragments-vs-merged-profiles}
 
@@ -111,7 +111,7 @@ Invoer in realtime wordt mogelijk gemaakt via een proces dat streaming opname wo
 
 >[!NOTE]
 >
->Gegevens die met behulp van Adobe-oplossingen zijn verzameld, zoals [!DNL Analytics Cloud] , [!DNL Marketing Cloud] en [!DNL Advertising Cloud] , lopen over in [!DNL Experience Platform] en worden opgenomen in [!DNL Profile] .
+>Gegevens die met Adobe-oplossingen zijn verzameld, zoals [!DNL Analytics Cloud] , [!DNL Marketing Cloud] en [!DNL Advertising Cloud] , lopen door in [!DNL Experience Platform] en worden opgenomen in [!DNL Profile] .
 
 ### Metrische gegevens voor het opnemen van profielen
 
@@ -135,8 +135,8 @@ Gegevensbeheer wordt op verschillende punten beheerd. Deze omvatten het bepalen 
 
 ### Verzoeken om opt-out en privacy van gegevens afhandelen
 
-Met [!DNL Experience Platform] kunnen uw klanten aanvragen voor een opt-out verzenden voor het gebruik en de opslag van hun gegevens binnen [!DNL Real-Time Customer Profile] . Voor meer informatie over hoe opt-out verzoeken worden behandeld, gelieve de documentatie over [ het behandelen van opt-out verzoeken ](../segmentation/consents.md).
+Met [!DNL Experience Platform] kunnen uw klanten aanvragen voor een opt-out verzenden voor het gebruik en de opslag van hun gegevens binnen [!DNL Real-Time Customer Profile] . Voor meer informatie over hoe opt-out verzoeken worden behandeld, gelieve de documentatie over [ het behandelen van opt-out verzoeken ](../segmentation/tutorials/consents.md).
 
 ## Volgende stappen en extra bronnen
 
-Meer leren over het werken met de gegevens van het Profiel van de Klant in real time gebruikend het Experience Platform UI of het Profiel API, gelieve te beginnen door de [ gids van het Profiel UI ](ui/user-guide.md) of [ API ontwikkelaarsgids ](api/overview.md) te lezen, respectievelijk.
+Om meer over het werken met de gegevens van het Profiel van de Klant in real time te leren gebruikend Experience Platform UI of het Profiel API, gelieve te beginnen door de [ gids van het Profiel UI ](ui/user-guide.md) of [ API ontwikkelaarsgids ](api/overview.md) te lezen, respectievelijk.

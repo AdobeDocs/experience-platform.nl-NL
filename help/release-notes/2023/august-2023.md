@@ -2,7 +2,7 @@
 title: Aanvullende informatie van augustus 2023 voor Adobe Experience Platform
 description: Aanvullende informatie van augustus 2023 voor Adobe Experience Platform.
 exl-id: c67dca3a-eccb-427e-8ab3-b69c51b57938
-source-git-commit: d6e306294d0a119108e2de7ba03ebed4f633fba1
+source-git-commit: 4afb2c76f2022423e8f1fa29c91d02b43447ba90
 workflow-type: tm+mt
 source-wordcount: '1715'
 ht-degree: 40%
@@ -29,7 +29,7 @@ Updates voor bestaande functies in Adobe Experience Platform:
 
 ## Real-Time Customer Data Platform {#rtcdp}
 
-Real-time Customer Data Platform ([!DNL Real-Time CDP]) is gebaseerd op Experience Platform en helpt bedrijven bekende en onbekende gegevens bijeen te brengen om klantprofielen te activeren door middel van intelligente beslissingen tijdens de reis van de klant.
+Real-Time Customer Data Platform ([!DNL Real-Time CDP]) is gebaseerd op Experience Platform en helpt bedrijven bekende en onbekende gegevens samen te brengen om klantprofielen te activeren door middel van intelligente beslissingen gedurende de hele reis van de klant.
 
 [!DNL Real-Time CDP] combineert meerdere bedrijfsgegevensbronnen om klantprofielen in real-time te maken. Segmenten die op basis van deze profielen zijn samengesteld, kunnen vervolgens naar downstreambestemmingen worden verzonden om gepersonaliseerde één-op-één klantervaringen te bieden via alle kanalen en apparaten.
 
@@ -82,7 +82,7 @@ Adobe Experience Platform biedt een reeks technologieën waarmee u klantervaring
 
 | Type | Functie | Beschrijving |
 | --- | --- | --- |
-| Tags en gebeurtenis doorsturen | [ de Markeringen van het Experience Platform (China) ](/help/tags/ui/publishing/premium-cdn.md) | De nieuwe functie Tags voor Experience Platforms (China) verbetert de betrouwbaarheid en latentie van websites, waardoor klanten die tags implementeren op websites in China sneller kunnen reageren. Klanten kunnen nu de JavaScript-code in de tagbibliotheek gebruiken wanneer ze websites in China implementeren. Deze eigenschap is ook toegevoegd aan het Verenigde Protocol van de Levering (UPP), toestaand productplaatsing om na aankoop worden geautomatiseerd. |
+| Tags en gebeurtenis doorsturen | [ de Markeringen van Experience Platform (China) ](/help/tags/ui/publishing/premium-cdn.md) | De nieuwe functie Experience Platform Tags (China) verbetert de betrouwbaarheid en latentie van websites, waardoor klanten die tags implementeren op websites in China sneller kunnen reageren. Klanten kunnen nu de JavaScript-code in de tagbibliotheek gebruiken wanneer ze websites in China implementeren. Deze eigenschap is ook toegevoegd aan het Verenigde Protocol van de Levering (UPP), toestaand productplaatsing om na aankoop worden geautomatiseerd. |
 
 {style="table-layout:auto"}
 
@@ -156,7 +156,7 @@ Met Adobe Experience Platform Identity Service krijgt u een compleet beeld van u
 
 | Functie | Beschrijving |
 | --- | --- |
-| Wijzigingen in limieten van identiteitsgrafieken | Eind september zal de identiteitsgrafiek veranderen in 50 identiteiten per grafiek, en de recentste identiteit zal worden opgenomen. Als gevolg hiervan wordt de oudste identiteit verwijderd op basis van de tijdstempel en het type identiteit van de inname, waarbij de identiteitstypen van cookies eerst worden verwijderd. Tegenwoordig geldt voor identiteitsgrafieken een limiet van 150 identiteiten per grafiek. Zodra deze limiet is bereikt, worden grafieken niet meer bijgewerkt. Neem contact op met uw accountvertegenwoordiger om een wijziging in het type identiteit aan te vragen als uw productiessandbox het volgende bevat: <ul><li>een aangepaste naamruimte waarin de personen-id&#39;s (zoals CRM-id&#39;s) zijn geconfigureerd als cookie-/apparaatidentiteitstype.</li><li>een aangepaste naamruimte waarin cookie-/apparaat-id&#39;s zijn geconfigureerd als identiteitstype voor verschillende apparaten.</li></ul> Deze aanvragen worden handmatig verwerkt door Adobe-engineering. Voor meer informatie, lees de [ gidsen voor de gegevens van de Dienst van de Identiteit ](../../identity-service/guardrails.md). |
+| Wijzigingen in limieten van identiteitsgrafieken | Eind september zal de identiteitsgrafiek veranderen in 50 identiteiten per grafiek, en de recentste identiteit zal worden opgenomen. Als gevolg hiervan wordt de oudste identiteit verwijderd op basis van de tijdstempel en het type identiteit van de inname, waarbij de identiteitstypen van cookies eerst worden verwijderd. Tegenwoordig geldt voor identiteitsgrafieken een limiet van 150 identiteiten per grafiek. Zodra deze limiet is bereikt, worden grafieken niet meer bijgewerkt. Neem contact op met uw accountvertegenwoordiger om een wijziging in het type identiteit aan te vragen als uw productiessandbox het volgende bevat: <ul><li>een aangepaste naamruimte waarin de personen-id&#39;s (zoals CRM-id&#39;s) zijn geconfigureerd als cookie-/apparaatidentiteitstype.</li><li>een aangepaste naamruimte waarin cookie-/apparaat-id&#39;s zijn geconfigureerd als identiteitstype voor verschillende apparaten.</li></ul> Adobe-engineering verwerkt deze aanvragen handmatig. Voor meer informatie, lees de [ gidsen voor de gegevens van de Dienst van de Identiteit ](../../identity-service/guardrails.md). |
 
 Voor meer informatie, te lezen gelieve het [ overzicht van de Dienst van de Identiteit ](../../identity-service/home.md).
 
@@ -168,7 +168,7 @@ Met [!DNL Segmentation Service] kunt u gegevens die zijn opgeslagen in [!DNL Exp
 
 | Functie | Beschrijving |
 | --- | --- |
-| Zichtbare soorten publiek (beperkte beschikbaarheid) | Het publiek van look-alike verstrekt intelligente inzichten op elk van uw publiek, leveraging machine-leert-gebaseerde inzichten om high-value klanten met uw marketing campagnes te identificeren en te richten. Met look-alike soorten publiek, kunt u uitgebreide soorten publiek tot stand brengen die klanten gelijkend op uw hoog presterende publiek of doelklanten gelijkend op eerder omgezette publiek richten. Voor meer informatie over blik-alike publiek, te lezen gelieve [ blik-alike publiek overzicht ](../../segmentation/ui/lookalike-audiences.md). |
+| Zichtbare soorten publiek (beperkte beschikbaarheid) | Het publiek van look-alike verstrekt intelligente inzichten op elk van uw publiek, leveraging machine-leert-gebaseerde inzichten om high-value klanten met uw marketing campagnes te identificeren en te richten. Met look-alike soorten publiek, kunt u uitgebreide soorten publiek tot stand brengen die klanten gelijkend op uw hoog presterende publiek of doelklanten gelijkend op eerder omgezette publiek richten. Voor meer informatie over blik-alike publiek, te lezen gelieve [ blik-alike publiek overzicht ](../../segmentation/types/account-audiences.md). |
 
 {style="table-layout:auto"}
 
@@ -182,7 +182,7 @@ Experience Platform biedt een RESTful-API en een interactieve gebruikersinterfac
 
 | Functie | Beschrijving |
 | --- | --- |
-| Algemene beschikbaarheid van [!DNL SugarCRM] | [!DNL SugarCRM] -bronnen zijn nu beschikbaar. Gebruik de bronnen [!DNL SugarCRM Accounts & Contacts] en [!DNL SugarCRM Events] om gegevens van uw [!DNL SugarCRM] -account naar het Experience Platform te verzenden. Voor meer informatie, lees het [[!DNL SugarCRM]  overzicht ](../../sources/connectors/crm/sugarcrm.md). |
+| Algemene beschikbaarheid van [!DNL SugarCRM] | [!DNL SugarCRM] -bronnen zijn nu beschikbaar. Gebruik [!DNL SugarCRM Accounts & Contacts] en de [!DNL SugarCRM Events] -bronnen om gegevens van uw [!DNL SugarCRM] -account over te brengen naar Experience Platform. Voor meer informatie, lees het [[!DNL SugarCRM]  overzicht ](../../sources/connectors/crm/sugarcrm.md). |
 | Ondersteuning voor inname op aanvraag voor gegevensstromen van bronnen in de gebruikersinterface | U kunt stroomlooppas nu op bestelling voor een bestaande brondataflow in UI tot stand brengen. Voor meer informatie, lees de gids op [ creërend een stroom op bestelling voor bronnen gebruikend UI ](../../sources/tutorials/ui/on-demand-ingestion.md). |
 | Ondersteuning voor nieuw veld `correlationID` voor Adobe Analytics | Het veld `_experience.decisioning.propositions.scopeDetails.correlationID` is nu beschikbaar in het Adobe Analytics-bronverbindingsschema. Dit veld wordt gebruikt ter ondersteuning van A4T-classificaties en wordt vanaf september 2023 ingevuld. |
 

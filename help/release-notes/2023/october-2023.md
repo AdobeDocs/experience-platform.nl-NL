@@ -1,8 +1,8 @@
 ---
-title: Opmerkingen bij de release van Adobe Experience Platform, oktober 2023
-description: Aanvullende informatie voor de versie van oktober 2023 voor Adobe Experience Platform.
+title: Aanvullende informatie van oktober 2023 voor Adobe Experience Platform
+description: Aanvullende informatie van oktober 2023 voor Adobe Experience Platform.
 exl-id: e9cf5299-8350-4b40-8f56-05e598846875
-source-git-commit: d6e306294d0a119108e2de7ba03ebed4f633fba1
+source-git-commit: 4afb2c76f2022423e8f1fa29c91d02b43447ba90
 workflow-type: tm+mt
 source-wordcount: '1048'
 ht-degree: 38%
@@ -44,8 +44,8 @@ Adobe Experience Platform biedt een reeks technologieën waarmee u klantervaring
 
 | Type | Functie | Beschrijving |
 | --- | --- | --- |
-| Extensies | [!DNL Meta] Verbetering van conversie-API | Er zijn drie verhogingen aan de [ Conversies API van Meta ](/help/tags/extensions/server/meta/overview.md) uitbreiding: <ul><li>Integratie met [[!DNL Meta Business Extension (MBE)]](/help/tags/extensions/server/meta/overview.md#integration-with-meta-business-extension-mbe): maakt een naadloze aanmeldervaring doordat u uw pixelID en toegangstoken kunt delen voor de integratie van conversie-API met Adobe.</li><li>Integratie met [[!DNL Event Match Quality Score (EMQ)]](/help/tags/extensions/server/meta/overview.md#integration-with-event-quality-match-score-emq): hiermee kunt u reclame maken voor mensen die een gewenste actie waarschijnlijk uitvoeren en de actie weer koppelen aan de geleverde advertenties.</li><li>Integratie met [[!DNL LiveRamp (Alpha)]](/help/tags/extensions/server/meta/overview.md#integration-with-liveramp-alpha): hiermee kunt u de RampID van LiveRamp in het CIP-veld doorgeven, zodat u geen PII rechtstreeks met partners of Meta hoeft te delen. </li></ul> |
-| Extensies | [!DNL LinkedIn] Conversies-API | De [[!DNL LinkedIn]  Conversies API ](../../tags/extensions/server/linkedin/overview.md) uitbreiding staat u toe om de doeltreffendheid van uw LinkedIn marketing campagnes te evalueren door de gebeurtenisgegevens van het Experience Platform aan LinkedIn door:sturen. |
+| Extensies | [!DNL Meta] Verbetering van conversie-API | Er zijn drie verhogingen aan de [ Conversies API van Meta ](/help/tags/extensions/server/meta/overview.md) uitbreiding: <ul><li>Integratie met [[!DNL Meta Business Extension (MBE)]](/help/tags/extensions/server/meta/overview.md#integration-with-meta-business-extension-mbe): maakt een naadloze aanmeldervaring doordat u uw pixelID en toegangstoken kunt delen voor de integratie van Conversies-API met Adobe.</li><li>Integratie met [[!DNL Event Match Quality Score (EMQ)]](/help/tags/extensions/server/meta/overview.md#integration-with-event-quality-match-score-emq): hiermee kunt u reclame maken voor mensen die een gewenste actie waarschijnlijk uitvoeren en de actie weer koppelen aan de geleverde advertenties.</li><li>Integratie met [[!DNL LiveRamp (Alpha)]](/help/tags/extensions/server/meta/overview.md#integration-with-liveramp-alpha): hiermee kunt u de RampID van LiveRamp in het CIP-veld doorgeven, zodat u geen PII rechtstreeks met partners of Meta hoeft te delen. </li></ul> |
+| Extensies | [!DNL LinkedIn] Conversies-API | De [[!DNL LinkedIn]  Conversies API ](../../tags/extensions/server/linkedin/overview.md) uitbreiding staat u toe om de doeltreffendheid van uw LinkedIn marketing campagnes te evalueren door de gebeurtenisgegevens van Experience Platform aan LinkedIn door:sturen. |
 | Geheim | [!DNL LinkedIn] OAuth 2 Secret | [[!DNL LinkedIn]  OAuth 2 Geheim ](../../tags/ui/event-forwarding/secrets.md#linkedin-oauth-2) staat u toe om server-server interactie naar [!DNL LinkedIn] in gebeurtenis te verzenden die door:sturen. |
 | Gebeurtenis doorsturen | Bijwerken naar tags en doorsturen van gebeurtenissen | Om [ Markeringen ](https://experienceleague.adobe.com/docs/experience-platform/tags/home.html?lang=nl) en [ Gebeurtenis te bewaren die ](https://experienceleague.adobe.com/docs/experience-platform/tags/event-forwarding/overview.html) prestaties in Platform door:sturen, slechts zullen de meest recente Ontwikkeling en het Stadium bouwt, zowel succesvol als niet succesvol, worden behouden. Alle builds die niet meer in gebruik zijn, worden verwijderd. Bovendien is het vertragen en het tarief beperken uitgevoerd om ervoor te zorgen dat een paar zwaar gebruik van API de prestaties van API voor anderen niet degraderen. |
 | Extensies | Elementen, regels en extensies | [ Elementen, regels, en uitbreidingen ](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/overview.html) worden nu gesorteerd in de bibliotheekoutput om meer consistentie tussen veelvoudige bouwt en plaatsingen van de zelfde bibliotheek te verzekeren. |
@@ -60,7 +60,7 @@ Voor meer informatie over gegevensinzameling, te lezen gelieve het [ overzicht v
 
 | Bestemming | Nieuw of Bijgewerkt | Beschrijving |
 | ----------- |----------------|----------- |
-| [[!DNL MoEngage]](/help/destinations/catalog/mobile-engagement/moengage.md) | Nieuw | Gebruik de bestemming van de Moweer om uw gegevens van de Adobe (gebruikersattributen, segmenten en gebeurtenissen) aan MoEngage in real time te verbinden en in kaart te brengen. Klanten kunnen vervolgens op deze gegevens reageren en persoonlijke, doelgerichte ervaringen bieden. |
+| [[!DNL MoEngage]](/help/destinations/catalog/mobile-engagement/moengage.md) | Nieuw | Gebruik de bestemming van de Moweer om uw gegevens van Adobe (gebruikersattributen, segmenten en gebeurtenissen) aan MoEngage in real time te verbinden en in kaart te brengen. Klanten kunnen vervolgens op deze gegevens reageren en persoonlijke, doelgerichte ervaringen bieden. |
 | [[!DNL Qualtrics Automations]](/help/destinations/catalog/survey/qualtrics-automations.md) | Nieuw | Gebruik de samenvoeging van meerdere bronnen van operationele gegevens in Adobe Experience Platform als input in de Qualtrics Experience ID om uw klanten beter te begrijpen en gerichte outreach toe te laten om de kloof te dichten wanneer het aankomt op het begrijpen van intent, emotie en ervaringsstuurprogramma&#39;s. |
 
 {style="table-layout:auto"}
@@ -70,7 +70,7 @@ Voor meer informatie over gegevensinzameling, te lezen gelieve het [ overzicht v
 | Functionaliteit | Beschrijving |
 | ----------- | ----------- |
 | (Beta) Ondersteuning voor hashfuncties in berekende velden | Naast de functies specifiek voor [ het uitvoeren van series ](../../destinations/ui/export-arrays-calculated-fields.md) of elementen van een serie, kunt u extra [ het hakken functies ](../../destinations/ui/export-arrays-calculated-fields.md#hashing-functions) aan knoeiboelattributen in de uitgevoerde dossiers nu gebruiken. De ondersteunde hashingfuncties zijn: `sha`, `sha256`, `sha512`, `hash`, `md5` en `crc32` . |
-| (Beperkte GA) Accountpubliek naar bepaalde bestemmingen activeren | De klanten van Real-Time CDP B2B kunnen [ rekeningspubliek ](../../segmentation/ui/account-audiences.md) aan bepaalde bestemmingen nu activeren. Voor meer informatie over deze eigenschap, gelieve te lezen [ de leerprogramma van het rekeningspubliek activeert ](/help/destinations/ui/activate-account-audiences.md). |
+| (Beperkte GA) Accountpubliek naar bepaalde bestemmingen activeren | De klanten van Real-Time CDP B2B kunnen [ rekeningspubliek ](../../segmentation/types/account-audiences.md) aan bepaalde bestemmingen nu activeren. Voor meer informatie over deze eigenschap, gelieve te lezen [ de leerprogramma van het rekeningspubliek activeert ](/help/destinations/ui/activate-account-audiences.md). |
 
 {style="table-layout:auto"}
 
@@ -98,7 +98,7 @@ Met [!DNL Segmentation Service] kunt u gegevens die zijn opgeslagen in [!DNL Exp
 
 | Functie | Beschrijving |
 | ------- | ----------- |
-| Accountpubliek (beperkt GA) | In Real-time Customer Data Platform B2B edition kunt u nu de segmentatie van uw account gebruiken om het hele gemak en de verfijning van de segmentatieervaring van marketingmedewerkers te vergroten van een publiek dat op mensen is gebaseerd naar een publiek in een account. Voor meer informatie over deze functie, raadpleegt u het [overzicht van accountdoelgroepen](../../segmentation/ui/account-audiences.md). |
+| Accountpubliek (beperkt GA) | In Real-Time Customer Data Platform B2B edition kunt u nu de segmentatie van uw account gebruiken om het hele gemak en de verfijning van de segmentatieervaring van marketingmedewerkers te vergroten van een publiek dat op mensen is gebaseerd naar een publiek in een account. Voor meer informatie over deze functie, raadpleegt u het [overzicht van accountdoelgroepen](../../segmentation/types/account-audiences.md). |
 
 Om meer over de Dienst van de Segmentatie te leren, te lezen gelieve het [ overzicht van de Dienst van de Segmentatie ](../../segmentation/home.md).
 

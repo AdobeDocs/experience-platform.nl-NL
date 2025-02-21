@@ -3,9 +3,9 @@ solution: Experience Platform
 title: Overzicht van segmentatieservice
 description: Leer over de Dienst van de Segmentatie van Adobe Experience Platform en de rol het in het ecosysteem van het Platform speelt.
 exl-id: 2c18a806-88ed-4659-bdfd-2377f5a09a1a
-source-git-commit: 4ef3f6dc07cb5d17146d48c7a41e3745fd9a3a58
+source-git-commit: acc0c1b3f088e412c68557a4a7310889f2ad65a7
 workflow-type: tm+mt
-source-wordcount: '1679'
+source-wordcount: '1665'
 ht-degree: 1%
 
 ---
@@ -67,7 +67,6 @@ Naast publiekssamenstellingen en segmentdefinities kunt u Adobe Federated Audien
 >id="platform_segments_evaluation_streaming"
 >title="Streaming evaluatie"
 >abstract="Streaming segmentatie is een doorlopend proces voor gegevensselectie dat uw publiek bijwerkt als reactie op gebruikersactiviteit."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/api/streaming-segmentation.html" text="Evalueer gebeurtenissen in bijna real time met het stromen segmentatie"
 
 Het platform biedt momenteel ondersteuning voor drie methoden om het publiek te evalueren: streamingsegmentatie, batchsegmentatie en randsegmentatie.
 
@@ -75,7 +74,7 @@ Het platform biedt momenteel ondersteuning voor drie methoden om het publiek te 
 
 Streaming segmentatie is een doorlopend proces voor gegevensselectie dat uw publiek bijwerkt als reactie op gebruikersactiviteit. Nadat een publiek is samengesteld en opgeslagen, wordt de segmentdefinitie toegepast op binnenkomende gegevens in [!DNL Real-Time Customer Profile] . Toevoegingen en verwijderingen voor het publiek worden regelmatig verwerkt, zodat het doelpubliek relevant blijft.
 
-Meer over het stromen segmentatie leren, te lezen gelieve de [ het stromen segmentatiedocumentatie ](./api/streaming-segmentation.md).
+Meer over het stromen segmentatie leren, te lezen gelieve de [ het stromen segmentatiedocumentatie ](./methods/streaming-segmentation.md).
 
 ### Batchsegmentatie {#batch}
 
@@ -94,11 +93,10 @@ Het batchpubliek wordt automatisch elke 24 uur geëvalueerd. Als u een partijpub
 >id="platform_segments_evaluation_edge"
 >title="Edge-evaluatie"
 >abstract="Edge-segmentatie is de mogelijkheid om segmenten in Platform direct op de Edge Network te evalueren, zodat gebruikers van dezelfde pagina en van volgende pagina&#39;s kunnen gebruikmaken van gevallen voor personalisatiegebruik."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/ui/edge-segmentation.html" text="Handleiding Edge-segmenteringsinterface"
 
-De segmentatie van Edge is de capaciteit om segmenten in Platform onmiddellijk [ op Edge Network ](../web-sdk/home.md) te evalueren, toelatend zelfde-pagina en volgende-pagina verpersoonlijkingsgebruiksgevallen.
+De segmentatie van Edge is de capaciteit om segmenten in Platform onmiddellijk [ op Edge Network ](../landing/edge-and-hub-comparison.md) te evalueren, toelatend zelfde-pagina en volgende-pagina verpersoonlijkingsgebruiksgevallen.
 
-Meer over randsegmentatie leren, te lezen gelieve of de [ API documentatie ](./api/edge-segmentation.md) of de [ documentatie UI ](./ui/edge-segmentation.md).
+Meer over randsegmentatie leren, te lezen gelieve of de [ API documentatie ](./methods/edge-segmentation.md) of de [ documentatie UI ](./methods/edge-segmentation.md).
 
 ## Toegang tot segmenteringsresultaten
 
@@ -165,7 +163,7 @@ Door een variabele toe te wijzen aan het attribuut van de koopstaat, vereenvoudi
 
 ### Segmentatie van meerdere entiteiten {#multi-entity}
 
-Met de geavanceerde segmentatiefunctie voor meerdere entiteiten kunt u [!DNL Real-Time Customer Profile] -gegevens uitbreiden met aanvullende gegevens die zijn gebaseerd op producten, winkels of andere personen, ook wel &#39;dimensie&#39;-entiteiten genoemd. Als gevolg hiervan heeft [!DNL Segmentation Service] tijdens de segmentdefinitie toegang tot aanvullende velden, alsof deze native zijn in de [!DNL Profile] -gegevensopslag. De segmentatie van meerdere entiteiten verstrekt flexibiliteit wanneer het identificeren van publiek dat op gegevens wordt gebaseerd relevant voor uw unieke bedrijfsbehoeften. Voor meer informatie, met inbegrip van gebruiksgevallen en werkschema&#39;s, verwijs naar de [ gids van de multi-entiteitsegmentatie ](multi-entity-segmentation.md).
+Met de geavanceerde segmentatiefunctie voor meerdere entiteiten kunt u [!DNL Real-Time Customer Profile] -gegevens uitbreiden met aanvullende gegevens die zijn gebaseerd op producten, winkels of andere personen, ook wel &#39;dimensie&#39;-entiteiten genoemd. Als gevolg hiervan heeft [!DNL Segmentation Service] tijdens de segmentdefinitie toegang tot aanvullende velden, alsof deze native zijn in de [!DNL Profile] -gegevensopslag. De segmentatie van meerdere entiteiten verstrekt flexibiliteit wanneer het identificeren van publiek dat op gegevens wordt gebaseerd relevant voor uw unieke bedrijfsbehoeften. Voor meer informatie, met inbegrip van gebruiksgevallen en werkschema&#39;s, verwijs naar de [ gids van de multi-entiteitsegmentatie ](./tutorials/multi-entity-segmentation.md).
 
 ## [!DNL Segmentation Service] gegevenstypen
 
