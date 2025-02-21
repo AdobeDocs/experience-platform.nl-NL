@@ -3,9 +3,9 @@ solution: Experience Platform
 title: Overzicht van segmentatieservice
 description: Leer over de Dienst van de Segmentatie van Adobe Experience Platform en de rol het in het ecosysteem van het Platform speelt.
 exl-id: 2c18a806-88ed-4659-bdfd-2377f5a09a1a
-source-git-commit: acc0c1b3f088e412c68557a4a7310889f2ad65a7
+source-git-commit: f981b26a468a1d5ab9931a9cce59b176cd0fd9b3
 workflow-type: tm+mt
-source-wordcount: '1665'
+source-wordcount: '1678'
 ht-degree: 1%
 
 ---
@@ -67,6 +67,7 @@ Naast publiekssamenstellingen en segmentdefinities kunt u Adobe Federated Audien
 >id="platform_segments_evaluation_streaming"
 >title="Streaming evaluatie"
 >abstract="Streaming segmentatie is een doorlopend proces voor gegevensselectie dat uw publiek bijwerkt als reactie op gebruikersactiviteit."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/methods/streaming-segmentation.html" text="Evalueer gebeurtenissen in bijna real time met het stromen segmentatie"
 
 Het platform biedt momenteel ondersteuning voor drie methoden om het publiek te evalueren: streamingsegmentatie, batchsegmentatie en randsegmentatie.
 
@@ -93,6 +94,7 @@ Het batchpubliek wordt automatisch elke 24 uur geëvalueerd. Als u een partijpub
 >id="platform_segments_evaluation_edge"
 >title="Edge-evaluatie"
 >abstract="Edge-segmentatie is de mogelijkheid om segmenten in Platform direct op de Edge Network te evalueren, zodat gebruikers van dezelfde pagina en van volgende pagina&#39;s kunnen gebruikmaken van gevallen voor personalisatiegebruik."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/methods/edge-segmentation.html" text="Edge-segmentatiegids"
 
 De segmentatie van Edge is de capaciteit om segmenten in Platform onmiddellijk [ op Edge Network ](../landing/edge-and-hub-comparison.md) te evalueren, toelatend zelfde-pagina en volgende-pagina verpersoonlijkingsgebruiksgevallen.
 

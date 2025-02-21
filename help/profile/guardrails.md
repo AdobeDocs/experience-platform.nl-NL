@@ -5,9 +5,9 @@ product: experience platform
 type: Documentation
 description: Leer over prestaties en door systemen afgedwongen richtlijnen voor profielgegevens en segmentatie. Zo zorgt u voor optimaal gebruik van de functie Real-Time CDP.
 exl-id: 33ff0db2-6a75-4097-a9c6-c8b7a9d8b78c
-source-git-commit: 1150b7726a7cabe6df6bbc7a850fb4d48afa208e
+source-git-commit: 5d972b6b4f59ca58ff3c4b76383db9ee7667dba3
 workflow-type: tm+mt
-source-wordcount: '2509'
+source-wordcount: '2521'
 ht-degree: 1%
 
 ---
@@ -118,7 +118,7 @@ De instructies in deze sectie hebben betrekking op het aantal en de aard van de 
 
 | Guardrail | Limiet | Limiettype | Beschrijving |
 | --------- | ----- | ---------- | ----------- |
-| Soorten publiek per sandbox | 4000 | Prestatiegerichting | U kunt tot 4000 **actieve** publiek per zandbak hebben. U kunt meer dan 4000 zandbakken per organisatie hebben, zolang er minder dan 4000 publiek in elke **individuele** zandbak zijn. Dit is inclusief publiek in batch, streaming en edge. Pogingen om extra publiek te creëren kunnen systeemprestaties beïnvloeden. Lees meer over [ creërend publiek ](/help/segmentation/ui/segment-builder.md) door de segmentbouwer. |
+| Soorten publiek per sandbox | 4000 | Prestatiegerichting | U kunt tot 4000 **actieve** publiek per zandbak hebben. U kunt meer dan 4000 soorten publiek per organisatie hebben, zolang er minder dan 4000 soorten publiek in elke **individuele** zandbak zijn. Dit is inclusief publiek in batch, streaming en edge. Pogingen om extra publiek te creëren kunnen systeemprestaties beïnvloeden. Lees meer over [ creërend publiek ](/help/segmentation/ui/segment-builder.md) door de segmentbouwer. |
 | Edge-publiek per sandbox | 150 | Prestatiegerichting | U kunt tot 150 **actieve** randpubliek per zandbak hebben. U kunt meer dan 150 randpubliek per organisatie hebben, zolang er minder dan 150 randpubliek in elke **individuele** zandbak zijn. Poging om extra randpubliek te maken kan van invloed zijn op de systeemprestaties. Lees meer over [ randpubliek ](/help/segmentation/methods/edge-segmentation.md). |
 | Edge-doorvoer door alle sandboxen | 1500 RPS | Prestatiegerichting | Edge-segmentatie ondersteunt een piekwaarde van 1500 inkomende gebeurtenissen per seconde die de Adobe Experience Platform Edge Network binnenkomen. Edge-segmentatie kan tot 350 milliseconden duren om een binnenkomende gebeurtenis te verwerken nadat deze de Adobe Experience Platform Edge Network is binnengekomen. Lees meer over [ randpubliek ](/help/segmentation/methods/edge-segmentation.md). |
 | Streaming publiek per sandbox | 500 | Prestatiegerichting | U kunt tot 500 **actieve** het stromen publiek per zandbak hebben. U kunt meer dan 500 het stromen publiek per organisatie hebben, zolang er minder dan 500 het stromen publiek in elke **individuele** zandbak zijn. Dit geldt zowel voor streaming als voor randpubliek. Het maken van extra streaming publiek kan van invloed zijn op de systeemprestaties. Lees meer over [ het stromen publiek ](/help/segmentation/methods/streaming-segmentation.md). |
@@ -162,7 +162,7 @@ Tijdonafhankelijke kenmerken, ook wel &#39;recordgegevens&#39; genoemd, worden g
 
 Hoewel de profielgegevensopslag het handhaven van profielgegevens geen relationele opslag is, staat het Profiel integratie met kleine afmetingsentiteiten toe om publiek op een vereenvoudigde en intuïtieve manier tot stand te brengen. Deze integratie is gekend als [ multi-entiteitsegmentatie ](../segmentation/tutorials/multi-entity-segmentation.md).
 
-Uw organisatie kan ook klassen XDM bepalen om dingen buiten individuen, zoals opslag, producten, of eigenschappen te beschrijven. Deze niet- [!DNL XDM Individual Profile] schema&#39;s worden genoemd &quot;afmetingsentiteiten&quot;(die ook als &quot;raadplegingsentiteiten&quot;worden bekend) en bevatten geen tijd-reeksgegevens. De schema&#39;s die afmetingsentiteiten vertegenwoordigen zijn verbonden met profielentiteiten door het gebruik van [ schemaverhoudingen ](../xdm/tutorials/relationship-ui.md).
+Uw organisatie kan ook klassen XDM bepalen om dingen buiten individuen, zoals opslag, producten, of eigenschappen te beschrijven. Deze schema&#39;s, die gebruikend klassen XDM buiten de individuele klasse van het Profiel XDM worden gemodelleerd, worden genoemd &quot;afmetingsentiteiten&quot;(die ook als &quot;raadplegingsentiteiten&quot;worden bekend) en bevatten geen tijd-reeksgegevens. De schema&#39;s die afmetingsentiteiten vertegenwoordigen zijn verbonden met profielentiteiten door het gebruik van [ schemaverhoudingen ](../xdm/tutorials/relationship-ui.md).
 
 Dimension-entiteiten bieden opzoekgegevens die de definities van segmenten met meerdere entiteiten ondersteunen en vereenvoudigen. Deze moeten zo klein zijn dat de segmenteringsengine de volledige gegevensset in het geheugen kan laden voor optimale verwerking (snelle puntzoekopdracht).
 
