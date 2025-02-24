@@ -2,9 +2,9 @@
 title: Aanvullende informatie voor Adobe Experience Platform van februari 2025
 description: Aanvullende informatie voor Adobe Experience Platform van februari 2025.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 8786ac8ab42d2b9e0c43000bbc6604462ea06f64
+source-git-commit: 300be2f922f81f0666a794815cb27777802efb60
 workflow-type: tm+mt
-source-wordcount: '1474'
+source-wordcount: '1535'
 ht-degree: 94%
 
 ---
@@ -39,14 +39,13 @@ AI-assistent in Adobe Experience Platform is een gesprekservaring waarmee u uw w
 
 | Functie | Beschrijving |
 | --- | --- |
+| Algemene beschikbaarheid van operationele inzichten | De operationele inzichten in AI-assistent bevinden zich nu in GA. Operationele inzichten zijn antwoorden die de AI-assistent genereert over uw metadata-objecten (attributen, doelgroepen, gegevensstromen, datasets, bestemmingen, trajecten, schema&#39;s en bronnen), waaronder aantallen, opzoekacties en impact van herkomst. Operationele inzichten kijkt niet naar gegevens in de sandbox. Voor meer informatie, raadpleegt u de [handleiding voor de gebruikersinterface van de AI-assistent](../../ai-assistant/ui-guide.md). |
 | Ondersteuning voor automatisch aanvullen van vragen | Als u een vraag aan AI-assistent stelt, kunt u nu kiezen uit een lijst met aanbevolen vragen die AI-assistent biedt. Gebruik deze functie om uw workflows met AI-assistent verder te versnellen. Voor meer informatie, raadpleegt u de handleiding over [het automatisch aanvullen van vragen met de AI-assistent](../../ai-assistant/ui-guide.md#use-question-autocomplete). |
 | Ondersteuning voor de waarneming van datasets | U kunt nu AI-assistent gebruiken om vragen te beantwoorden over specifieke dataset-statistieken, zoals opslaggroottes en rijaantallen. Vragen over de observatie van gegevens ondersteunen kwalificaties waarmee u uw query&#39;s kunt filteren op een bepaalde periode. Voor meer informatie, raadpleegt u de [vragenhandleiding voor AI-assistent](../../ai-assistant/questions.md). |
 
 {style="table-layout:auto"}
 
 Voor meer informatie, raadpleegt u het [overzicht van de AI-assistent](../../ai-assistant/home.md).
-
-<!-- | General availability of operational insights | Operational insights in AI Assistant are now in GA. Operational insights refer to answers AI Assistant generates about your metadata objects (attributes, audiences, dataflows, datasets, destinations, journeys, schemas, and sources), including counts, lookups, and lineage impact. Operational insights does not look at any data within the sandbox. For more information, read the [AI Assistant UI guide](../../ai-assistant/ui-guide.md). | -->
 
 ## Catalogusservice {#catalog-service}
 
