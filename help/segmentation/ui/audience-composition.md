@@ -3,9 +3,9 @@ solution: Experience Platform
 title: UI-gids voor soorten publiek
 description: De Samenstelling van het publiek in Adobe Experience Platform UI verstrekt een rijke werkruimte die u toestaat om met de gegevenselementen van het Profiel in wisselwerking te staan. De werkruimte biedt intuïtieve besturingselementen voor het maken en bewerken van soorten publiek voor uw organisatie.
 exl-id: 0dda0cb1-49e0-478b-8004-84572b6cf625
-source-git-commit: 65871f307468428ee0e3b67c1a6577e913f3a312
+source-git-commit: f2abd9445c6b725c166f031407e330a2c15e9edb
 workflow-type: tm+mt
-source-wordcount: '2116'
+source-wordcount: '2230'
 ht-degree: 0%
 
 ---
@@ -39,7 +39,7 @@ Het canvas met publiekscompositie bestaat uit vier verschillende typen blokken: 
 >[!CONTEXTUALHELP]
 >id="platform_segmentation_ao_audience"
 >title="Poortblok"
->abstract="Met het blok Publiek kunt u het subpubliek bereiken dat u wilt gebruiken om het nieuwe publiek samen te stellen."
+>abstract="Met het blok Publiek kunt u het subpubliek toevoegen dat u wilt gebruiken om uw nieuwe publiek samen te stellen."
 
 >[!CONTEXTUALHELP]
 >id="platform_segmentation_ao_merge_types"
@@ -83,6 +83,11 @@ Het geselecteerde publiek wordt nu weergegeven in de rechtertrack wanneer het **
 | [!UICONTROL Exclude overlap] | Het publiek wordt gecombineerd, met slechts het publiek dat in **wordt gedeeld, maar niet allen** van hen die worden toegevoegd. Dit is het equivalent van een XOR-bewerking. |
 
 ### [!UICONTROL Build rule] {#build-rule}
+
+>[!CONTEXTUALHELP]
+>id="platform_segmentation_ao_rule_builder"
+>title="Segment Builder"
+>abstract="U kunt de Bouwer van het Segment gebruiken om een douaneregel voor uw samenstelling toe te voegen."
 
 Selecteer **[!UICONTROL Build rule]** als u een aangepaste regel wilt toevoegen aan het blok Publiek.
 
@@ -134,7 +139,12 @@ Er wordt een lijst met doelgroepen weergegeven. Selecteer **[!UICONTROL Add]** o
 
 ### Uitsluiten op kenmerk {#exclude-attribute}
 
-Als u door attribuut uitsluit, kunt u selecteren welke attributen u wilt uitsluiten door het ![ filter ](/help/images/icons/project-edit.png) pictogram binnen de **[!UICONTROL Exclusion rule]** sectie te selecteren.
+>[!CONTEXTUALHELP]
+>id="platform_segmentation_ao_exclude_attribute"
+>title="Uitsluiten op kenmerk"
+>abstract="Wanneer u per attribuut uitsluit, kunt u specifieke profielen uitsluiten van verschijnen in uw samenstelling die op de geselecteerde attributen wordt gebaseerd."
+
+Als u door attribuut uitsluit, kunt u selecteren welke attributen u wilt uitsluiten door het ![ filter ](/help/images/icons/project-edit.png) pictogram binnen de **[!UICONTROL Exclusion rule]** sectie te selecteren. Door het kenmerk uit te sluiten, kunt u elk profiel dat dit kenmerk bevat, uitsluiten van het resulterende publiek.
 
 ![ de attributensectie wordt benadrukt, tonend u waar te selecteren om de attributen te kiezen om uit te sluiten.](../images/ui/audience-composition/exclude-attribute.png)
 
@@ -307,6 +317,16 @@ Wanneer u het publiek splitst, kunt u splitsen op percentage of splitsen op kenm
 
 ### Splitsen op percentage {#split-percentage}
 
+>[!CONTEXTUALHELP]
+>id="platform_segmentation_ao_split_percentage"
+>title="Splitsen op percentage"
+>abstract="U kunt het publiek willekeurig opsplitsen in meerdere soorten publiek op basis van het aantal beschikbare paden en percentages."
+
+>[!CONTEXTUALHELP]
+>id="platform_segmentation_ao_split_persistent"
+>title="Blijvende splitsing"
+>abstract="U kunt de percentagesplitsing blijvend maken door deze optie in te schakelen en te selecteren welke naamruimte de gesplitste blijft gebruiken."
+
 Bij het splitsen naar percentage worden de doelgroepen willekeurig gesplitst op basis van het aantal beschikbare paden en percentages.
 
 U kunt bijvoorbeeld drie paden hebben, elk met een ander percentage profielen.
@@ -331,7 +351,12 @@ Bovendien kunt u de schakeloptie **[!UICONTROL Other profiles]** inschakelen om 
 
 ![ de Andere profielknevel wordt benadrukt.](../images/ui/audience-composition/split-other-profiles.png)
 
-## Uw publiek publiceren
+## Uw publiek publiceren {#publish}
+
+>[!CONTEXTUALHELP]
+>id="platform_segmentation_ao_publish"
+>title="Publiceren"
+>abstract="U kunt uw compositie publiceren om het(de) resulterende publiek(en) in Adobe Experience Platform te maken."
 
 >[!IMPORTANT]
 >
