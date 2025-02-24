@@ -1,21 +1,17 @@
 ---
-keywords: Experience Platform;thuis;populaire onderwerpen;de redacteur van de vraag;de vraagredacteur;de dienst van de vraag;de vraagdienst;
+keywords: Experience Platform;home;populaire onderwerpen;Query-editor;query-editor;Query-service;query-service;
 solution: Experience Platform
 title: UI-gids voor zoekprogramma
-description: De redacteur van de Vraag is een interactief hulpmiddel dat door de Dienst van de Vraag van Adobe Experience Platform wordt verstrekt, die u toestaat om, vragen voor klantenervaringsgegevens binnen het gebruikersinterface van het Experience Platform te schrijven te bevestigen en in werking te stellen. De Redacteur van de vraag steunt het ontwikkelen van vragen voor analyse en gegevensexploratie, en staat u toe om interactieve vragen voor ontwikkelingsdoeleinden evenals niet-interactieve vragen in werking te stellen om datasets in Experience Platform te bevolken.
+description: De Query Editor is een interactief hulpmiddel dat wordt geleverd door de Adobe Experience Platform Query Service en waarmee u query's voor gegevens voor klantenervaring kunt schrijven, valideren en uitvoeren in de Experience Platform-gebruikersinterface. De Redacteur van de vraag steunt het ontwikkelen van vragen voor analyse en gegevensexploratie, en staat u toe om interactieve vragen voor ontwikkelingsdoeleinden evenals niet-interactieve vragen in werking te stellen om datasets in Experience Platform te bevolken.
 exl-id: d7732244-0372-467d-84e2-5308f42c5d51
-source-git-commit: 4c11a35ce914cd0b1aa0084368f5a5929f883963
+source-git-commit: e1ecdb5d701093d9c73b6a05dad9a4dd848e0083
 workflow-type: tm+mt
-source-wordcount: '2725'
+source-wordcount: '2663'
 ht-degree: 0%
 
 ---
 
 # Handleiding voor de Query Editor
-
->[!NOTE]
->
->Op 24 mei 2024 is de erfenisredacteur afgekeurd. Het is niet meer toegankelijk voor gebruik. U kunt [ Uitgebreide Redacteur van de Vraag ](#enhanced-editor-toggle) nu gebruiken om, uw vragen te schrijven te bevestigen en in werking te stellen
 
 De Redacteur van de vraag is een interactief hulpmiddel dat door de Dienst van de Vraag van Adobe Experience Platform wordt verstrekt, die u toestaat om, vragen voor klantenervaringsgegevens te schrijven te bevestigen en in werking te stellen binnen het [!DNL Experience Platform] gebruikersinterface. De Redacteur van de vraag steunt het ontwikkelen van vragen voor analyse en gegevensexploratie, en staat u toe om interactieve vragen voor ontwikkelingsdoeleinden evenals niet-interactieve vragen in werking te stellen om datasets in [!DNL Experience Platform] te bevolken.
 
@@ -42,10 +38,6 @@ De redacteur van de Vraag neemt een paar seconden om met de Dienst van de Vraag 
 De vragen die van de Redacteur van de Vraag worden uitgevoerd stellen interactief in werking. Dit betekent dat als u browser sluit of weg navigeert, de vraag wordt geannuleerd. Het zelfde is waar voor vragen die worden gemaakt om datasets van vraagoutput te produceren.
 
 ## Query schrijven met de Uitgebreide Query Editor {#query-authoring}
-
->[!NOTE]
->
->Op 24 mei 2024 is de erfenisredacteur afgekeurd. Het is niet meer toegankelijk voor gebruik. U kunt de Uitgebreide Redacteur van de Vraag nu gebruiken om, uw vragen te schrijven te bevestigen en in werking te stellen.
 
 Gebruikend de Redacteur van de Vraag, kunt u schrijven, uitvoeren en sparen vragen voor de gegevens van de klantenervaring. Alle uitgevoerde vragen, of opgeslagen in de Redacteur van de Vraag zijn beschikbaar aan alle gebruikers in uw organisatie met toegang tot de Dienst van de Vraag.
 
@@ -101,11 +93,11 @@ Er wordt een bevestigingsvenster weergegeven. Selecteer **[!UICONTROL Confirm]**
 
 ### Resultaattelling {#result-count}
 
-De redacteur van de Vraag heeft een maximum 50.000 rijoutput. U kunt het aantal rijen kiezen die tegelijkertijd in de console van de Redacteur van de Vraag worden getoond. Als u het aantal rijen wilt wijzigen dat in de console wordt weergegeven, selecteert u het vervolgkeuzemenu **[!UICONTROL Result count]** en selecteert u een van de opties 50, 100, 150, 300 en 500.
+De redacteur van de Vraag heeft een maximum 50.000 rijoutput. U kunt het aantal rijen kiezen die tegelijkertijd in de console van de Redacteur van de Vraag worden getoond. Als u het aantal rijen wilt wijzigen dat in de console wordt weergegeven, selecteert u het vervolgkeuzemenu **[!UICONTROL Result count]** en selecteert u een van de opties 50, 100, 150, 300, 500 en 1000.
 
 >[!NOTE]
 >
->Aangezien de interface van het Platform slechts tot 500 rijen kan steunen, wordt het overgaan van een waarde LIMIT meer dan 500 genegeerd.
+>Aangezien de interface van het Platform tot 1000 rijen kan steunen, wordt het overgaan van een waarde LIMIT meer dan 1000 genegeerd.
 
 ![ de Redacteur van de Vraag met de benadrukte drop-down van de resultaattelling.](../images/ui/query-editor/result-count.png)
 
@@ -204,8 +196,8 @@ Als een query was gepland, biedt het tabblad [!UICONTROL Scheduled Queries] bete
 
 >[!AVAILABILITY]
 >
-De dataset navigation rail is alleen beschikbaar voor Distiller-klanten van Data. Uw platforminterface bevat mogelijk niet de linkergegevenssetnavigatiespoor. Andere afbeeldingen in dit document weerspiegelen mogelijk niet de dataset navigation rail. Neem contact op met uw Adobe voor meer informatie.<br>
-De browser van objecten is momenteel beschikbaar slechts in a **beperkte versie**. Neem contact op met uw Adobe voor vroege toegang tot de site.
+De dataset navigation rail is alleen beschikbaar voor Distiller-klanten van Data. Uw platforminterface bevat mogelijk niet de linkergegevenssetnavigatiespoor. Andere afbeeldingen in dit document weerspiegelen mogelijk niet de dataset navigation rail. Neem contact op met uw Adobe-vertegenwoordiger voor meer informatie.<br>
+De browser van objecten is momenteel beschikbaar slechts in a **beperkte versie**. Neem contact op met uw Adobe-vertegenwoordiger voor toegang in een vroeg stadium.
 
 Gebruik objecten browser aan gemakkelijk onderzoek en filterdatasets. De objecten browser vermindert de tijd besteed het zoeken naar lijsten en datasets in grote milieu&#39;s met talrijke datasets. Met gestroomlijnde toegang tot relevante gegevens en meta-gegevens, kunt u zich meer op vraag creatie en minder op navigatie concentreren.
 
@@ -249,7 +241,7 @@ De console toont slechts fouten die uit de uitvoering van een vraag resulteerden
 
 ### Zoekresultaten {#query-results}
 
-Nadat een query is voltooid, worden de resultaten weergegeven op het tabblad **[!UICONTROL Results]** , naast het tabblad **[!UICONTROL Console]** . Deze mening toont de tabelvormige output van uw vraag, die tussen 50 en 500 rijen van resultaten afhankelijk van uw gekozen [ resultaattelling ](#result-count) toont. In deze weergave kunt u controleren of de query de verwachte uitvoer oplevert. Om een dataset met uw vraag te produceren, verwijder grenzen op teruggekeerde rijen, en stel de vraag met `CREATE TABLE tablename AS SELECT` in werking om een dataset met de output te produceren. Zie [ het produceren datasetleerprogramma ](./create-datasets.md) voor instructies op hoe te om een dataset van vraagresultaten in de Redacteur van de Vraag te produceren.
+Nadat een query is voltooid, worden de resultaten weergegeven op het tabblad **[!UICONTROL Results]** , naast het tabblad **[!UICONTROL Console]** . Deze mening toont de tabelvormige output van uw vraag, die tussen 50 en 1000 rijen van resultaten afhankelijk van uw gekozen [ resultaattelling ](#result-count) toont. In deze weergave kunt u controleren of de query de verwachte uitvoer oplevert. Om een dataset met uw vraag te produceren, verwijder grenzen op teruggekeerde rijen, en stel de vraag met `CREATE TABLE tablename AS SELECT` in werking om een dataset met de output te produceren. Zie [ het produceren datasetleerprogramma ](./create-datasets.md) voor instructies op hoe te om een dataset van vraagresultaten in de Redacteur van de Vraag te produceren.
 
 ![ het lusje van Resultaten van de console die van de Redacteur van de Vraag de resultaten van een vraaglooppas toont.](../images/ui/query-editor/query-results.png)
 
@@ -261,7 +253,7 @@ De Dienst van de vraag verstrekt oplossingen aan een verscheidenheid van gebruik
 
 ## De vragen van de looppas met de zelfstudie van de Dienst van de Vraag {#query-tutorial-video}
 
-In de volgende video ziet u hoe u query&#39;s uitvoert in de Adobe Experience Platform-interface en in een PSQL-client. De video demonstreert ook het gebruik van individuele eigenschappen in een XDM-object, Adobe-gedefinieerde functies en hoe u CREATE TABLE AS SELECT (CTAS)-query&#39;s gebruikt.
+In de volgende video ziet u hoe u query&#39;s uitvoert in de Adobe Experience Platform-interface en in een PSQL-client. De video demonstreert ook het gebruik van individuele eigenschappen in een XDM-object, door Adobe gedefinieerde functies en hoe u query&#39;s CREATE TABLE AS SELECT (CTAS) gebruikt.
 
 >[!NOTE]
 >
