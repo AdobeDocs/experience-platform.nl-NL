@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Toewijzingsvelden voor de Adobe Analytics Source Connector
 description: Wijs Adobe Analytics-velden toe aan XDM-velden met behulp van de Analytics Source Connector.
 exl-id: 15dc1368-5cf1-42e1-9683-d5158f8aa2db
-source-git-commit: 15d63db308ea9d2daf7660b463785d04ff94e296
+source-git-commit: ae8a54f8e9fafe782cb24e54e5b638d83d468e3a
 workflow-type: tm+mt
 source-wordcount: '2415'
 ht-degree: 0%
@@ -188,7 +188,7 @@ Selecteer velden die afkomstig zijn van ADC moeten worden getransformeerd, waarb
 
 Selecteer velden (ook wel &quot;postwaarden&quot; genoemd) die gegevens bevatten nadat Adobe de waarden ervan heeft aangepast met de verwerkingsregels, de VISTA-regels en de opzoektabellen. De meeste postwaarden hebben een vooraf verwerkte tegenhanger.
 
-De bronschakelaar van de Analyse verzendt pre-verwerkte gegevens naar een dataset in Experience Platform. U kunt deze gegevens met transformaties omzetten in een postoperatieve tegenhanger. Meer leren over het uitvoeren van deze transformaties gebruikend de Dienst van de Vraag, zie [ Adobe-bepaalde functies ](/help/query-service/sql/adobe-defined-functions.md) in de de gebruikersgids van de Dienst van de Vraag.
+De bronschakelaar van de Analyse verzendt pre-verwerkte gegevens naar een dataset in Experience Platform. U kunt deze gegevens met transformaties omzetten in de nabewerkte tegenhanger. Meer leren over het uitvoeren van deze transformaties gebruikend de Dienst van de Vraag, zie [ Adobe-bepaalde functies ](/help/query-service/sql/adobe-defined-functions.md) in de de gebruikersgids van de Dienst van de Vraag.
 
 Meer leren over het uitvoeren van deze transformaties gebruikend de Dienst van de Vraag, zie [ Adobe-bepaalde functies ](/help/query-service/sql/adobe-defined-functions.md) in de de gebruikersgids van de Dienst van de Vraag.
 
