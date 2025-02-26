@@ -6,9 +6,9 @@ user-guide-description: Leer analyses, marketing en advertenties te implementere
 feature: Tags
 solution: Data Collection
 role: Developer
-source-git-commit: 18690a72c8a84c6426677b3e8993d8453a8e7cf1
+source-git-commit: 77432a559009d29711a8afa4ca6d8f6ea11d70cf
 workflow-type: tm+mt
-source-wordcount: '772'
+source-wordcount: '776'
 ht-degree: 15%
 
 ---
@@ -69,7 +69,7 @@ ht-degree: 15%
    * Extensies labelen (client-side) {#client}
       * [Overzicht](./extensions/client/overview.md)
       * [ Toegankelijke Metriek van de Snelheid van de Plaats ](https://exchange.adobe.com/apps/ec/103053)
-      * [ Klanzer van de Activity Map ](https://exchange.adobe.com/apps/ec/101531)
+      * [ de Klanzer van Activity Map ](https://exchange.adobe.com/apps/ec/101531)
       * [ de Pagina van de Actie verfrist zich ](https://exchange.adobe.com/apps/ec/102848)
       * [ het Volgen van de Website van Adform ](https://exchange.adobe.com/apps/ec/103195)
       * [ Adobe Advertising Cloud ](https://exchange.adobe.com/apps/ec/100155)
@@ -87,10 +87,12 @@ ht-degree: 15%
       * [ Adobe Analytics via het Web SDK van Adobe Experience Platform ](https://exchange.adobe.com/apps/ec/108985/search-discovery-for-adobe-analytics-via-aep-web-sdk)
       * Adobe Audience Manager {#audience-manager}
          * [Overzicht](./extensions/client/audience-manager/overview.md)
-      * Gegevenslaag client Adoben {#client-data-layer}
+      * Adobe Client Data Layer {#client-data-layer}
          * [Overzicht](./extensions/client/client-data-layer/overview.md)
          * [Aanvullende informatie](./extensions/client/client-data-layer/release-notes.md)
-      * ContextHub Adobe {#contexthub}
+      * Adobe Content Analytics {#contentanalytics}
+         * [Overzicht](./extensions/client/content-analytics/overview.md)
+      * Adobe ContextHub {#contexthub}
          * [Overzicht](./extensions/client/contexthub/overview.md)
       * [ Adobe Experience Manager Forms ](https://exchange.adobe.com/apps/ec/107493)
       * Adobe Experience Cloud-id-service {#id-service}
@@ -118,9 +120,9 @@ ht-degree: 15%
       * Adobe Media Analytics (3.x SDK) {#media-analytics-3x}
          * [Overzicht](./extensions/client/media-analytics-3x/overview.md)
          * [Aanvullende informatie](./extensions/client/media-analytics-3x/release-notes.md)
-      * Privacy Adoben {#privacy}
+      * Adobe Privacy {#privacy}
          * [Overzicht](./extensions/client/privacy/overview.md)
-      * [ de Selecteur van het Rapport van de Reeks van de Adobe ](https://exchange.adobe.com/apps/ec/100640)
+      * [ de Selecteur van de Reeks van het Rapport van Adobe ](https://exchange.adobe.com/apps/ec/100640)
       * Adobe Target {#target}
          * [Overzicht](./extensions/client/target/overview.md)
          * [Aanvullende informatie](./extensions/client/target/release-notes.md)
@@ -129,7 +131,7 @@ ht-degree: 15%
          * [Aanvullende informatie](./extensions/client/target-v2/release-notes.md)
       * [ Toolkit van Adobe Target ](https://exchange.adobe.com/apps/ec/100640)
       * [Advertising Cloud](https://exchange.adobe.com/apps/ec/100640)
-      * [ AEM de Inzichten van Activa ](https://exchange.adobe.com/apps/ec/103406)
+      * [ de Inzicht van Activa van AEM ](https://exchange.adobe.com/apps/ec/103406)
       * [ Airrem JS Notifier ](https://exchange.adobe.com/apps/ec/103342)
       * [ Amplitude ](https://exchange.adobe.com/apps/ec/108010)
       * [ Apollo QAX ](https://exchange.adobe.com/apps/ec/105068)
@@ -161,7 +163,7 @@ ht-degree: 15%
       * [ Decibel ](https://exchange.adobe.com/apps/ec/100913)
       * [ Demandbase ](https://exchange.adobe.com/apps/ec/101605)
       * [ Differentiële Privacy ](https://exchange.adobe.com/apps/ec/104535)
-      * [ de Kijkers van Dynamic Media ](https://exchange.adobe.com/apps/ec/103048)
+      * [ Dynamische Kijkers van Media ](https://exchange.adobe.com/apps/ec/103048)
       * [ EDDL Helper ](https://exchange.adobe.com/apps/ec/107691)
       * [ Flashtalk OneTag ](https://exchange.adobe.com/apps/ec/101392)
       * [ ForeSee ](https://exchange.adobe.com/apps/ec/100164)
@@ -220,7 +222,7 @@ ht-degree: 15%
          * [Overzicht](./extensions/server/aws/overview.md)
       * [!DNL Braze] {#braze}
          * [Overzicht](./extensions/server/braze/overview.md)
-      * [ Verbinding van de Wolk voor Googles Analytics ](https://exchange.adobe.com/apps/ec/106542)
+      * [ Verbinding van de Wolk voor Google Analytics ](https://exchange.adobe.com/apps/ec/106542)
       * Kern {#core}
          * [Overzicht](./extensions/server/core/overview.md)
       * [ Epsilon Event API ](https://exchange.adobe.com/apps/ec/109127)
