@@ -1,27 +1,27 @@
 ---
-description: Deze pagina maakt een lijst en beschrijft de stappen om een op dossier-gebaseerde bestemming te vormen gebruikend Destination SDK.
-title: Gebruik Destination SDK om een op een bestand gebaseerde bestemming te configureren
+description: Deze pagina bevat een overzicht en beschrijving van de stappen voor het configureren van een bestandsgebaseerde bestemming met Destination SDK.
+title: Destination SDK gebruiken om een bestandsgebaseerde bestemming te configureren
 exl-id: 84d73452-88e4-4e0f-8fc7-d0d8e10f9ff5
-source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
+source-git-commit: 804370a778a4334603f3235df94edaa91b650223
 workflow-type: tm+mt
 source-wordcount: '732'
 ht-degree: 0%
 
 ---
 
-# Gebruik Destination SDK om een op een bestand gebaseerde bestemming te configureren
+# Destination SDK gebruiken om een bestandsgebaseerde bestemming te configureren
 
 ## Overzicht {#overview}
 
-Deze pagina beschrijft hoe te om de informatie in [ opties van de Configuratie in Doelen SDK ](../functionality/configuration-options.md) en in andere Destination SDK functionaliteit en API verwijzingsdocumenten te gebruiken om a [ op dossier-gebaseerde bestemming ](../../destination-types.md#file-based) te vormen. De stappen worden in de onderstaande volgorde weergegeven.
+Deze pagina beschrijft hoe te om de informatie in [ opties van de Configuratie in Doelen SDK ](../functionality/configuration-options.md) en in andere functionaliteit van Destination SDK en API verwijzingsdocumenten te gebruiken om a [ op dossier-gebaseerde bestemming ](../../destination-types.md#file-based) te vormen. De stappen worden in de onderstaande volgorde weergegeven.
 
 ## Vereisten {#prerequisites}
 
-Alvorens aan de hieronder getoonde stappen vooruit te gaan, te lezen gelieve [ Destination SDK begonnen ](../getting-started.md) pagina voor informatie over het verkrijgen van de noodzakelijke de authentificatiegeloofsbrieven van de Adobe I/O en andere eerste vereisten om met Destination SDK APIs te werken.
+Alvorens aan de hieronder getoonde stappen vooruit te gaan, te lezen gelieve [ Destination SDK begonnen ](../getting-started.md) pagina voor informatie over het verkrijgen van de noodzakelijke de authentificatiegeloofsbrieven van Adobe I/O en andere eerste vereisten om met Destination SDK APIs te werken.
 
 ## Stappen om de configuratieopties in Destination SDK aan opstelling te gebruiken uw bestemming {#steps}
 
-![ geïllustreerde stappen van het gebruiken van Destination SDK eindpunten ](../assets/guides/destination-sdk-steps-batch.png)
+![ geïllustreerde stappen om eindpunten van Destination SDK te gebruiken ](../assets/guides/destination-sdk-steps-batch.png)
 
 ## Stap 1: Een server- en bestandsconfiguratie maken {#create-server-file-configuration}
 
@@ -345,11 +345,13 @@ Als u een configuratie van publieksmeta-gegevens gebruikt, moet u het met de bes
             "destinationServerId": "eec25bde-4f56-4c02-a830-9aa9ec73ee9d"
         }
     ],
+    "segmentMappingConfig":{
+        "mapExperiencePlatformSegmentName":false,
+        "mapExperiencePlatformSegmentId":false,
+        "mapUserInput":false
+    },
     "audienceMetadataConfig":{
-    "mapExperiencePlatformSegmentName":false,
-    "mapExperiencePlatformSegmentId":false,
-    "mapUserInput":false,
-    "audienceTemplateId":"cbf90a70-96b4-437b-86be-522fbdaabe9c"
+        "audienceTemplateId":"cbf90a70-96b4-437b-86be-522fbdaabe9c"
     },   
     "schemaConfig": {
         "profileRequired": true,
@@ -418,18 +420,18 @@ Afhankelijk van of u `"authenticationRule": "CUSTOMER_AUTHENTICATION"` of `"auth
 
 Na vestiging kunt uw bestemming die de configuratieeindpunten in de vorige stappen gebruiken, u het [ bestemmings testende hulpmiddel ](../testing-api/batch-destinations/file-based-destination-testing-overview.md) gebruiken om de integratie tussen Adobe Experience Platform en uw bestemming te testen.
 
-Als deel van het proces om uw bestemming te testen, moet u het Experience Platform UI gebruiken om publiek tot stand te brengen, dat u aan uw bestemming zult activeren. Raadpleeg de twee onderstaande bronnen voor instructies voor het maken van publiek in Experience Platform:
+Als onderdeel van het proces om uw bestemming te testen, moet u Experience Platform UI gebruiken om publiek tot stand te brengen, dat u aan uw bestemming zult activeren. Raadpleeg de twee onderstaande bronnen voor instructies voor het maken van soorten publiek in Experience Platform:
 
 * [Een publiek maken - documentatiepagina](/help/segmentation/ui/audience-portal.md#create-audience)
 * [ creeer een publiek - videoanalyse ](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html)
 
-## Stap 6: Publish uw bestemming {#publish-destination}
+## Stap 6: Uw doel publiceren {#publish-destination}
 
 >[!NOTE]
 >
 >Deze stap wordt niet vereist als u een privé bestemming voor uw eigen gebruik creeert, en kijkt niet om het in de catalogus van bestemmingen voor andere te gebruiken klanten te publiceren.
 
-Na het vormen van en het testen van uw bestemming, gebruik [ bestemmings het publiceren API ](../publishing-api/create-publishing-request.md) om uw configuratie aan Adobe voor overzicht voor te leggen.
+Na het vormen van en het testen van uw bestemming, gebruik [ bestemmings het publiceren API ](../publishing-api/create-publishing-request.md) om uw configuratie voor overzicht naar Adobe voor te leggen.
 
 ## Stap 7: Documenteer uw bestemming {#document-destination}
 
@@ -437,12 +439,12 @@ Na het vormen van en het testen van uw bestemming, gebruik [ bestemmings het pub
 >
 >Deze stap wordt niet vereist als u een privé bestemming voor uw eigen gebruik creeert, en kijkt niet om het in de catalogus van bestemmingen voor andere te gebruiken klanten te publiceren.
 
-Als u een Onafhankelijke Verkoper van de Software (ISV) of Integrator van het Systeem (SI) creërend a [ geproduceerde integratie ](../overview.md#productized-custom-integrations) bent, gebruik het [ zelfbedienings documentatieproces ](../docs-framework/documentation-instructions.md) om een pagina van de productdocumentatie voor uw bestemming in de [ catalogus van de bestemmingen van het Experience Platform ](/help/destinations/catalog/overview.md) tot stand te brengen.
+Als u een Onafhankelijke Verkoper van de Software (ISV) of Integrator van het Systeem (SI) creërend a [ geproduceerde integratie ](../overview.md#productized-custom-integrations) bent, gebruik het [ zelfbedienings documentatieproces ](../docs-framework/documentation-instructions.md) om een pagina van de productdocumentatie voor uw bestemming in de [ de bestemmingscatalogus van Experience Platform ](/help/destinations/catalog/overview.md) tot stand te brengen.
 
-## Stap 8: Plaats verzenden voor revisie door Adobe {#submit-for-review}
+## Stap 8: Doel verzenden voor Adobe-revisie {#submit-for-review}
 
 >[!NOTE]
 >
 >Deze stap wordt niet vereist als u een privé bestemming voor uw eigen gebruik creeert, en kijkt niet om het in de catalogus van bestemmingen voor andere te gebruiken klanten te publiceren.
 
-Tot slot vóór de bestemming in de catalogus van het Experience Platform kan worden gepubliceerd en aan alle klanten van het Experience Platform zichtbaar, moet u de bestemming officieel voorleggen voor overzicht van de Adobe. Vind volledige informatie over hoe te [ voor overzicht voorleggen een geproduceerde die bestemming in Destination SDK ](../guides/submit-destination.md) wordt geschreven.
+Tot slot alvorens de bestemming in de catalogus van Experience Platform kan worden gepubliceerd en aan alle klanten van Experience Platform zichtbaar, moet u de bestemming officieel voorleggen voor de controle van Adobe. Vind volledige informatie over hoe te [ voor overzicht voorleggen een geproduceerde die bestemming in Destination SDK ](../guides/submit-destination.md) wordt authored.
