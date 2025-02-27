@@ -2,7 +2,7 @@
 title: appendIdentityToUrl
 description: Lever persoonlijke ervaringen nauwkeuriger tussen apps, het Web, en over domeinen.
 exl-id: 09dd03bd-66d8-4d53-bda8-84fc4caadea6
-source-git-commit: 153c5bae42c027c25a38a8b63070249d1b1a8f01
+source-git-commit: 7c262e5819f8e3488c5ddd5a0221d1c52c28c029
 workflow-type: tm+mt
 source-wordcount: '368'
 ht-degree: 1%
@@ -11,15 +11,15 @@ ht-degree: 1%
 
 # `appendIdentityToUrl`
 
-Met de opdracht `appendIdentityToUrl` kunt u een gebruiker-id aan de URL toevoegen als een queryreeks. Met deze actie kunt u de identiteit van een bezoeker tussen domeinen dragen, waardoor dubbele bezoekersaantallen voor datasets met zowel domeinen als kanalen worden voorkomen. Het is beschikbaar op versies 2.11.0 van SDK van het Web of later.
+Met de opdracht `appendIdentityToUrl` kunt u een gebruiker-id aan de URL toevoegen als een queryreeks. Met deze actie kunt u de identiteit van een bezoeker tussen domeinen dragen, waardoor dubbele bezoekersaantallen voor datasets met zowel domeinen als kanalen worden voorkomen. Het is beschikbaar op het Web SDK versie 2.11.0 of later.
 
-De querytekenreeks die wordt gegenereerd en aan de URL wordt toegevoegd, is `adobe_mc` . Als de Web SDK geen ECID kan vinden, roept het `/acquire` eindpunt om te produceren.
+De querytekenreeks die wordt gegenereerd en aan de URL wordt toegevoegd, is `adobe_mc` . Als het Web SDK geen ECID kan vinden, roept het het `/acquire` eindpunt om te produceren.
 
 >[!NOTE]
 >
 >Als er geen toestemming is gegeven, wordt de URL van deze methode ongewijzigd geretourneerd. Deze opdracht wordt onmiddellijk uitgevoerd; er wordt niet gewacht op een toestemmingsupdate.
 
-## Identiteit aan URL toevoegen met de extensie Web SDK {#extension}
+## Identiteit toevoegen aan URL met de extensie Web SDK {#extension}
 
 Het toevoegen van een identiteit aan een URL wordt uitgevoerd als een actie binnen een regel in de interface van de markeringen van de Inzameling van Gegevens van Adobe Experience Platform.
 
@@ -77,7 +77,11 @@ Voeg de identiteit toe aan de URL.
 Voer de opdracht `appendIdentityToUrl` uit met een URL als parameter. De methode retourneert een URL waarvan de id als queryreeks is toegevoegd.
 
 ```js
-alloy("appendIdentityToUrl",document.location);
+alloy("appendIdentityToUrl",
+  {
+    url: document.location.href
+  }
+);
 ```
 
 U kunt een gebeurtenislistener toevoegen voor alle klikken die op de pagina worden ontvangen en controleren of de URL overeenkomt met de gewenste domeinen. Als dit het geval is, voegt u de identiteit toe aan de URL en leidt u de gebruiker om.
