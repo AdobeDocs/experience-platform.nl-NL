@@ -2,22 +2,22 @@
 title: Gegevensvoorvoegsel voor gegevensverzameling
 description: Leer hoe u uw gegevens aan een XDM-gebeurtenisschema (Experience Data Model) toewijst bij het configureren van een gegevensstroom voor Adobe Experience Platform Web en Mobile SDK's.
 exl-id: 87a70d56-1093-445c-97a5-b8fa72a28ad0
-source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
+source-git-commit: e90bd5abe502a7638ae54fca5eb0f051a925a2d8
 workflow-type: tm+mt
-source-wordcount: '1155'
+source-wordcount: '1171'
 ht-degree: 0%
 
 ---
 
 # Gegevensvoorvoegsel voor gegevensverzameling
 
-Prep van gegevens is de dienst van Adobe Experience Platform die u toestaat om, gegevens in kaart te brengen en te bevestigen aan en van [ het Model van Gegevens van de Ervaring (XDM) ](../xdm/home.md). Wanneer het vormen van een platform-toegelaten [ datastream ](./overview.md), kunt u de mogelijkheden van de Prep van Gegevens gebruiken om uw brongegevens aan XDM in kaart te brengen wanneer het verzenden van het naar de Edge Network van het Platform.
+Prep van gegevens is de dienst van Adobe Experience Platform die u toestaat om, gegevens in kaart te brengen en te bevestigen aan en van [ het Model van Gegevens van de Ervaring (XDM) ](../xdm/home.md). Wanneer het vormen van een platform-toegelaten [ datastream ](./overview.md), kunt u de mogelijkheden van de Prep van Gegevens gebruiken om uw brongegevens aan XDM in kaart te brengen wanneer het verzenden van het naar Platform Edge Network.
 
-Alle gegevens die vanaf een webpagina worden verzonden, moeten als XDM in Experience Platform worden geplaatst. Er zijn 3 manieren om gegevens van een op pagina gegevenslaag aan XDM te vertalen die door Experience Platform wordt goedgekeurd:
+Alle gegevens die vanaf een webpagina worden verzonden, moeten in Experience Platform als XDM worden geland. Er zijn drie manieren om gegevens van een op pagina gegevenslaag te vertalen naar de XDM die door Experience Platform wordt geaccepteerd:
 
 1. Hervorm de gegevenslaag in XDM op de Web-pagina zelf.
 2. Met de functionaliteit voor eigen gegevenselementen van tags kunt u de bestaande indeling van een webpagina voor gegevenslagen opnieuw opmaken in XDM.
-3. De bestaande indeling van de gegevenslaag van een webpagina via de Edge Network opnieuw indelen in XDM met Gegevensvoorinstelling voor gegevensverzameling.
+3. De bestaande indeling van een gegevenslaag van een webpagina via de Edge Network opnieuw indelen in XDM, met Data Prep voor gegevensverzameling.
 
 Deze handleiding is gericht op de derde optie.
 
@@ -25,10 +25,10 @@ Deze handleiding is gericht op de derde optie.
 
 Er zijn twee gebruiksgevallen waarin Data Prep voor gegevensverzameling nuttig is:
 
-1. De website heeft een goed gevormde, beheerde en onderhouden gegevenslaag en er is een voorkeur voor het rechtstreeks naar de Edge Network verzenden in plaats van JavaScript-bewerking te gebruiken om deze naar XDM op de pagina te converteren (ofwel via Tags-gegevenselementen of via handmatige JavaScript-manipulatie).
+1. De website heeft een goed gevormde, bestuurde en onderhouden gegevenslaag en er is een voorkeur voor het rechtstreeks naar de Edge Network verzenden van de laag in plaats van JavaScript-bewerking te gebruiken om de laag om te zetten in XDM op de pagina (ofwel via de gegevenselementen van tags of via handmatige JavaScript-manipulatie).
 2. Op de site wordt een ander coderingssysteem dan Tags geïmplementeerd.
 
-## Verzend een bestaande gegevenslaag naar de Edge Network via WebSDK {#send-datalayer-via-websdk}
+## Een bestaande gegevenslaag via WebSDK naar de Edge Network verzenden {#send-datalayer-via-websdk}
 
 De bestaande gegevenslaag moet worden verzonden met het object [`data`](/help/web-sdk/commands/sendevent/data.md) binnen de opdracht `sendEvent` .
 
@@ -166,6 +166,10 @@ De stap **[!UICONTROL Mapping]** wordt weergegeven, zodat u de velden in uw bron
 
 * [ creeer toewijzingsregels ](#create-mapping) voor deze gegevensstroom door een handproces.
 * [ de toewijzingsregels van de Invoer ](#import-mapping) van een bestaande datastream.
+
+>[!IMPORTANT]
+>
+>Gegevensprep-toewijzing heeft voorrang op `identityMap` XDM-ladingen, wat invloed kan hebben op profielovereenkomsten met Real-Time CDP-doelgroepen.
 
 ### Toewijzingsregels maken {#create-mapping}
 
