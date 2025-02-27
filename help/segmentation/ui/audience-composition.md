@@ -3,9 +3,9 @@ solution: Experience Platform
 title: UI-gids voor soorten publiek
 description: De Samenstelling van het publiek in Adobe Experience Platform UI verstrekt een rijke werkruimte die u toestaat om met de gegevenselementen van het Profiel in wisselwerking te staan. De werkruimte biedt intuïtieve besturingselementen voor het maken en bewerken van soorten publiek voor uw organisatie.
 exl-id: 0dda0cb1-49e0-478b-8004-84572b6cf625
-source-git-commit: f2abd9445c6b725c166f031407e330a2c15e9edb
+source-git-commit: c4064771a384a90d94903ba1761fc9ee20f47747
 workflow-type: tm+mt
-source-wordcount: '2230'
+source-wordcount: '2210'
 ht-degree: 0%
 
 ---
@@ -60,7 +60,7 @@ Wanneer u het blok **[!UICONTROL Audience]** selecteert, worden in de rechtertra
 
 Om publiek aan het blok van het Publiek toe te voegen. Selecteer **[!UICONTROL Add Audience]** .
 
-![ Add publieksknoop wordt benadrukt.](../images/ui/audience-composition/add-audience.png)
+![ Add publieksknoop wordt benadrukt.](../images/ui/audience-composition/select-add-audience.png)
 
 >[!IMPORTANT]
 >
@@ -91,7 +91,7 @@ Het geselecteerde publiek wordt nu weergegeven in de rechtertrack wanneer het **
 
 Selecteer **[!UICONTROL Build rule]** als u een aangepaste regel wilt toevoegen aan het blok Publiek.
 
-![ wordt de knoop van de bouwstijlregel benadrukt.](../images/ui/audience-composition/build-rule.png)
+![ wordt de knoop van de bouwstijlregel benadrukt.](../images/ui/audience-composition/select-build-rule.png)
 
 De Segment Builder wordt weergegeven. U kunt de Bouwer van het Segment gebruiken om een douaneregel tot stand te brengen voor het publiek te volgen. Meer informatie over het gebruiken van de Bouwer van het Segment kan in de [ gids van de Bouwer van het Segment ](./segment-builder.md) worden gevonden.
 
@@ -196,7 +196,7 @@ Om de dataset te selecteren om het publiek met te verrijken, selecteer het ![ fi
 
 De pop-up **[!UICONTROL Select dataset]** wordt weergegeven. Selecteer de dataset die u voor verrijking wilt toevoegen, die door **[!UICONTROL Select]** wordt gevolgd om de dataset voor verrijking toe te voegen.
 
-![ de gekozen dataset wordt geselecteerd.](../images/ui/audience-composition/enrich-dataset-selected.png)
+![ de gekozen dataset wordt geselecteerd.](../images/ui/audience-composition/select-dataset.png)
 
 >[!IMPORTANT]
 >
@@ -212,27 +212,21 @@ Het gedeelte **[!UICONTROL Enrichment criteria]** wordt nu weergegeven op de rec
 
 Om **[!UICONTROL Source join key]** te selecteren, selecteer het ![ filter ](/help/images/icons/project-edit.png) pictogram.
 
-![ het filterpictogram voor [!UICONTROL Source join key] wordt benadrukt.](../images/ui/audience-composition/enrich-select-source-join-key.png)
-
 De pop-up **[!UICONTROL Select a profile attribute]** wordt weergegeven. Selecteer het profielkenmerk dat u als de bronverbindingssleutel wilt gebruiken, gevolgd door **[!UICONTROL Select]** om dat kenmerk als uw bronverbindingssleutel te kiezen.
 
-![ het attribuut u als bron wilt gebruiken toetreedt sleutel wordt benadrukt.](../images/ui/audience-composition/enrich-select-profile-attribute.png)
+![ het attribuut u als bron wilt gebruiken toetreedt sleutel wordt benadrukt.](../images/ui/audience-composition/select-source-join-key.png)
 
 Om **[!UICONTROL Enrichment dataset join key]** te selecteren, selecteer het ![ filter ](/help/images/icons/project-edit.png) pictogram.
 
-![ het filterpictogram voor [!UICONTROL Enrichment dataset join key] wordt benadrukt.](../images/ui/audience-composition/enrich-select-enrichment-dataset-join-key.png)
-
 De pop-up **[!UICONTROL Enrichment attributes]** wordt weergegeven. Selecteer het attribuut u als de de verbindingssleutel van de verrijkingsdataset wilt gebruiken, die door **[!UICONTROL Select]** wordt gevolgd om dat attribuut te kiezen aangezien uw de verbindingssleutel van de verrijkingsdataset.
 
-![ het attribuut u wilt gebruiken aangezien de de toetreden van de verrijkingsdataset sleutel wordt benadrukt.](../images/ui/audience-composition/enrich-select-enrichment-dataset-attribute.png)
+![ het attribuut u wilt gebruiken aangezien de de toetreden van de verrijkingsdataset sleutel wordt benadrukt.](../images/ui/audience-composition/select-enrichment-dataset-join-key.png)
 
 Nu u beide verbindingssleutels hebt toegevoegd, wordt de sectie **[!UICONTROL Enrichment attributes]** weergegeven. U kunt nu het kenmerk toevoegen waarmee u het publiek wilt verfraaien. Selecteer **[!UICONTROL Add attribute]** als u deze kenmerken wilt toevoegen.
 
-![ wordt de [!UICONTROL Add attribute] knoop benadrukt.](../images/ui/audience-composition/enrich-select-add-attribute.png)
-
 De pop-up **[!UICONTROL Enrichment attributes]** wordt weergegeven. U kunt de attributen van de dataset selecteren om uw publiek met te verrijken, gevolgd door **[!UICONTROL Select]** om de attributen aan uw publiek toe te voegen.
 
-![ de verrijkingsattributen u wilt toevoegen worden benadrukt.](../images/ui/audience-composition/enrich-add-enrichment-attributes.png)
+![ de verrijkingsattributen u wilt toevoegen worden benadrukt.](../images/ui/audience-composition/select-enrichment-attribute.png)
 
 <!-- ## [!UICONTROL Join] {#join-block}
 
@@ -282,13 +276,13 @@ Om te selecteren welk attribuut om het publiek door te rangschikken, selecteer h
 
 Er wordt een lijst met profielkenmerken weergegeven. Op deze popover, kunt u het attributentype selecteren u uw publiek door wilt rangschikken. Selecteer **[!UICONTROL Select]** om het aan uw rangtelblok toe te voegen. Gelieve te merken op dat het geselecteerde attribuut **slechts** aantallen kan zijn.
 
-![ A lijst van attributen wordt getoond.](../images/ui/audience-composition/select-attribute-rank.png)
+![ A lijst van attributen wordt getoond.](../images/ui/audience-composition/rank-attribute.png)
 
 Na het selecteren van de attributen, kunt u de orde selecteren om het door te rangschikken. Dit gebeurt in oplopende (van laagste naar hoogste) of aflopende (van hoogste naar laagste) volgorde.
 
 Bovendien kunt u het aantal geretourneerde profielen beperken door de schakeloptie **[!UICONTROL Add profile limit]** in te schakelen. Wanneer deze schakeloptie is ingeschakeld, kunt u het maximumaantal profielen instellen dat wordt geretourneerd binnen het veld **[!UICONTROL Included profiles]** .
 
-![ de Add knevel van de profielgrens wordt benadrukt, die u het aantal teruggekeerde profielen laat beperken.](../images/ui/audience-composition/add-profile-limit.png)
+![ de Add knevel van de profielgrens wordt benadrukt, die u het aantal teruggekeerde profielen laat beperken.](../images/ui/audience-composition/add-profile-limit-rank.png)
 
 ## [!UICONTROL Split] {#split-block}
 
@@ -307,7 +301,7 @@ Bovendien kunt u het aantal geretourneerde profielen beperken door de schakelopt
 >title="Andere profielen"
 >abstract="Met de schakeloptie Andere profielen kunt u een extra pad maken met de resterende profielen die niet overeenkomen met de opgegeven voorwaarden van de andere paden."
 
-Met het bloktype **[!UICONTROL Split]** kunt u uw nieuwe publiek opsplitsen in verschillende deelsoorten. U kunt dit publiek splitsen op basis van een percentage of op basis van een kenmerk. Wanneer het splitsen van uw publiek in sub-publiek, is deze splitsing **niet** blijvend. Dit betekent dat de profielen voor elke evaluatie in verschillende deelsoorten kunnen worden gebruikt.
+Met het bloktype **[!UICONTROL Split]** kunt u uw nieuwe publiek opsplitsen in verschillende deelsoorten. U kunt dit publiek splitsen op basis van een percentage of op basis van een kenmerk.
 
 Als u een **[!UICONTROL Split]** -blok wilt toevoegen, selecteert u het pictogram **+** , gevolgd door **[!UICONTROL Split]** .
 
@@ -325,23 +319,25 @@ Wanneer u het publiek splitst, kunt u splitsen op percentage of splitsen op kenm
 >[!CONTEXTUALHELP]
 >id="platform_segmentation_ao_split_persistent"
 >title="Blijvende splitsing"
->abstract="U kunt de percentagesplitsing blijvend maken door deze optie in te schakelen en te selecteren welke naamruimte de gesplitste blijft gebruiken."
+>abstract="U kunt de percentagesplitsing blijvend maken door deze optie in te schakelen en een naamruimte voor identiteit te selecteren."
 
 Bij het splitsen naar percentage worden de doelgroepen willekeurig gesplitst op basis van het aantal beschikbare paden en percentages.
 
-U kunt bijvoorbeeld drie paden hebben, elk met een ander percentage profielen.
+![ de percentenverdeling wordt benadrukt.](../images/ui/audience-composition/split-by-percentage.png)
 
-![ de uitsplitsing in aantal bewaard publiek en percentages wordt getoond.](../images/ui/audience-composition/percentages.png)
+U kunt ook een identiteit opgeven, waardoor de op percentage gebaseerde splitsing blijvend wordt. Tot de beschikbare identiteitstypen behoren alle naamruimten die beschikbaar zijn in uw organisatie.
+
+![ Splitsen door identiteitskaart wordt checkbox benadrukt. Bovendien, wordt dropdown die u met identiteit laat selecteren door wordt gespleten benadrukt.](../images/ui/audience-composition/split-by-identity.png)
 
 ### Splitsen op kenmerk {#split-attribute}
 
 Bij splitsen op kenmerk wordt het publiek gesplitst op basis van de opgegeven kenmerken. Om de attributen te selecteren door te splitsen, selecteer het **[!UICONTROL Split]** blok, dat door het ![ filter ](/help/images/icons/project-edit.png) pictogram wordt gevolgd.
 
-![ de filterknoop wordt geselecteerd, tonend hoe te door attribuut te filtreren.](../images/ui/audience-composition/select-split-attribute.png)
+![ de filterknoop wordt geselecteerd, tonend hoe te door attribuut te filtreren.](../images/ui/audience-composition/split-by-attribute.png)
 
 Er wordt een lijst met profielkenmerken weergegeven. Selecteer het kenmerktype, gevolgd door **[!UICONTROL Select]** om het aan uw gesplitste blok toe te voegen.
 
-![ A lijst van attributen wordt getoond.](../images/ui/audience-composition/select-attribute-exclude.png)
+![ A lijst van attributen wordt getoond.](../images/ui/audience-composition/select-attribute.png)
 
 Nadat u het kenmerk hebt geselecteerd, kunt u kiezen tot welke profielen u wilt behoren door de waarden in het veld **[!UICONTROL Values]** toe te voegen.
 

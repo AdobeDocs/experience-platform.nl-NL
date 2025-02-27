@@ -1,10 +1,11 @@
 ---
 title: Aanvullende informatie voor Adobe Experience Platform van februari 2025
 description: Aanvullende informatie voor Adobe Experience Platform van februari 2025.
-source-git-commit: 300be2f922f81f0666a794815cb27777802efb60
+exl-id: 734a9484-516e-4dd7-9503-8fcdc50cbaac
+source-git-commit: c4064771a384a90d94903ba1761fc9ee20f47747
 workflow-type: tm+mt
-source-wordcount: '1535'
-ht-degree: 94%
+source-wordcount: '1638'
+ht-degree: 92%
 
 ---
 
@@ -22,6 +23,7 @@ Updates van bestaande functies en documentatie in Adobe Experience Platform:
 - [Catalogusservice](#catalog-service)
 - [Gegevensvoorbereiding](#data-prep)
 - [Bestemmingen](#destinations)
+- [Segmentatieservice](#segmentation)
 - [Bronnen](#sources)
 - [Documentatie-updates](#documentation-updates)
    - [Edge network- en hubvergelijking](#edge)
@@ -107,6 +109,17 @@ Voor meer informatie, raadpleegt u het [Overzicht van Gegevensvoorbereiding](../
 
 Voor meer informatie raadpleegt u het [overzicht van bestemmingen](../../destinations/home.md).
 
+## Segmentatieservice {#segmentation-service}
+
+[!DNL Segmentation Service] definieert een specifieke subset van profielen door de criteria te beschrijven die een groep personen aan wie marketing kan worden aangeboden binnen uw klantenbestand onderscheiden. Segmenten kunnen worden gebaseerd op recordgegevens (zoals demografische informatie) of tijdreeksgebeurtenissen die klantinteracties met uw merk vertegenwoordigen.
+
+**Nieuwe of bijgewerkte functies**
+
+| Functie | Beschrijving |
+| ------- | ----------- |
+| Blijvende splitsing | Audience Composition ondersteunt nu permanente splitsingen. U kunt uw gesplitste publiek constant laten blijven wanneer het verdelen door profiel door een identiteitsnamespace aan uw Gesplitste blok toe te voegen. Meer informatie over deze eigenschap kan in de [ documentatie van de Samenstelling van het Publiek ](../../segmentation/ui/audience-composition.md) worden gevonden. |
+
+Voor meer informatie over [!DNL Segmentation Service], raadpleegt u het [overzicht van segmentatie](../../segmentation/home.md).
 
 ## Bronnen {#sources}
 

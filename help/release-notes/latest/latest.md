@@ -2,10 +2,10 @@
 title: Aanvullende informatie voor Adobe Experience Platform van februari 2025
 description: Aanvullende informatie voor Adobe Experience Platform van februari 2025.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 300be2f922f81f0666a794815cb27777802efb60
+source-git-commit: c4064771a384a90d94903ba1761fc9ee20f47747
 workflow-type: tm+mt
-source-wordcount: '1535'
-ht-degree: 94%
+source-wordcount: '1638'
+ht-degree: 92%
 
 ---
 
@@ -24,6 +24,7 @@ Updates van bestaande functies en documentatie in Adobe Experience Platform:
 - [Gegevensvoorbereiding](#data-prep)
 - [Bestemmingen](#destinations)
 - [Bronnen](#sources)
+- [Segmentatieservice](#segmentation)
 - [Documentatie-updates](#documentation-updates)
    - [Edge network- en hubvergelijking](#edge)
    - [Uitgebreide Flow Service API voor bronnen](#flow-service)
@@ -107,6 +108,18 @@ Voor meer informatie, raadpleegt u het [Overzicht van Gegevensvoorbereiding](../
 - Wanneer u profielen exporteert naar op een bestand gebaseerde doelen, zorgt deduplicatie ervoor dat slechts één profiel wordt geëxporteerd wanneer meerdere profielen dezelfde deduplicatietoets en dezelfde tijdstempel hebben. Deze release bevat een update van het deduplicatieproces, waarbij ervoor wordt gezorgd dat opeenvolgende uitvoeringen met dezelfde coördinaten altijd dezelfde resultaten opleveren, hetgeen de consistentie ten goede komt. [Meer informatie](/help/destinations/ui/activate-batch-profile-destinations.md#deduplication-same-timestamp).
 
 Voor meer informatie raadpleegt u het [overzicht van bestemmingen](../../destinations/home.md).
+
+## Segmentatieservice {#segmentation-service}
+
+[!DNL Segmentation Service] definieert een specifieke subset van profielen door de criteria te beschrijven die een groep personen aan wie marketing kan worden aangeboden binnen uw klantenbestand onderscheiden. Segmenten kunnen worden gebaseerd op recordgegevens (zoals demografische informatie) of tijdreeksgebeurtenissen die klantinteracties met uw merk vertegenwoordigen.
+
+**Nieuwe of bijgewerkte functies**
+
+| Functie | Beschrijving |
+| ------- | ----------- |
+| Blijvende splitsing | Audience Composition ondersteunt nu permanente splitsingen. U kunt uw gesplitste publiek constant laten blijven wanneer het verdelen door profiel door een identiteitsnamespace aan uw Gesplitste blok toe te voegen. Meer informatie over deze eigenschap kan in de [ documentatie van de Samenstelling van het Publiek ](../../segmentation/ui/audience-composition.md) worden gevonden. |
+
+Voor meer informatie over [!DNL Segmentation Service], raadpleegt u het [overzicht van segmentatie](../../segmentation/home.md).
 
 ## Bronnen {#sources}
 
