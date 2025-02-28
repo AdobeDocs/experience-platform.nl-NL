@@ -1,14 +1,15 @@
 ---
 title: PubMatic Connect
 description: PubMatic maximaliseert klantenwaarde door de programmatic digitale marketing leveringsketen van de toekomst te leveren. PubMatic Connect combineert platformtechnologie en toegewijde service om te verbeteren hoe inventarisatie en gegevens worden verpakt en getransformeerd.
-last-substantial-update: 2023-12-14T00:00:00Z
+last-substantial-update: 2025-02-12T00:00:00Z
 exl-id: 21e07d2c-9a6a-4cfa-a4b8-7ca48613956c
-source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
+source-git-commit: 2041c06e660e24f63d4c44adc0e8f3082bb007ae
 workflow-type: tm+mt
-source-wordcount: '886'
+source-wordcount: '1019'
 ht-degree: 0%
 
 ---
+
 
 # PubMatic Connect-doel {#pubmatic-connect}
 
@@ -16,11 +17,21 @@ ht-degree: 0%
 
 Gebruik [!DNL PubMatic Connect] om de waarde van klanten te maximaliseren door de programmatische digitale distributieketen van de toekomst te leveren. [!DNL PubMatic Connect] combineert platformtechnologie en toegewijde service om te verbeteren hoe inventarisatie en gegevens worden verpakt en getransformeerd.
 
-Gebruik deze bestemming om publieksgegevens naar het [!DNL PubMatic Connect] -platform te verzenden.
+Er zijn twee beschikbare doelen waarmee u publieksgegevens naar het PubMatic Connect-platform kunt verzenden. De functionaliteit van de componenten verschilt enigszins:
+
+1. PubMatic Connect
+
+   Tijdens de eerste activering registreert deze bestemming automatisch het publiek in het PubMatic-platform en gebruikt deze de interne Adobe Experience Platform-id voor toewijzing.
+
+2. PubMatic Connect (Custom Audience ID Mapping)
+
+   Met deze bestemming kunt u handmatig een toewijzings-id toevoegen tijdens de activeringsworkflow. Gebruik deze bestemming wanneer de gegevens naar bestaand publiek in het platform moeten worden verzonden PubMatic of als een douane &quot;identiteitskaart van het Publiek van Source&quot;wordt vereist.
+
+![ zij aan zij mening van twee schakelaars PubMatic in de catalogus van bestemmingen.](/help/destinations/assets/catalog/advertising/pubmatic/two-pubmatic-connectors-side-by-side.png)
 
 >[!IMPORTANT]
 >
->De doelconnector en documentatiepagina worden gemaakt en onderhouden door het team van [!DNL PubMatic] . Voor vragen of updateverzoeken kunt u rechtstreeks contact opnemen via `support@pubmatic.com` .
+> De doelconnector en documentatiepagina worden gemaakt en onderhouden door het team van [!DNL PubMatic] . Voor vragen of updateverzoeken kunt u rechtstreeks contact opnemen via `support@pubmatic.com` .
 
 ## Gebruiksscenario’s {#use-cases}
 
@@ -39,7 +50,7 @@ Neem contact op met uw accountmanager van [!DNL PubMatic] om te controleren of u
 [!DNL PubMatic Connect] ondersteunt de activering van identiteiten die in de onderstaande tabel worden beschreven. Leer meer over [ identiteiten ](/help/identity-service/features/namespaces.md).
 
 | Doelidentiteit | Beschrijving | Overwegingen |
-| --------------- | ------ | --- |
+| --------------- | ------------------------ | ------------------------------------------------------------------------------- |
 | GAID | GOOGLE ADVERTISING ID | Selecteer de GAID doelidentiteit wanneer uw bronidentiteit een GAID-naamruimte is. |
 | IDFA | Apple-id voor adverteerders | Selecteer de IDFA doelidentiteit wanneer uw bronidentiteit een IDFA namespace is. |
 | extern_id | Aangepaste gebruikers-id&#39;s | Selecteer deze doelidentiteit wanneer uw bronidentiteit een aangepaste naamruimte is. |
@@ -51,8 +62,8 @@ Neem contact op met uw accountmanager van [!DNL PubMatic] om te controleren of u
 In deze sectie wordt beschreven welk type publiek u naar dit doel kunt exporteren.
 
 | Oorsprong publiek | Ondersteund | Beschrijving |
-| --- | --------- | ------ |
-| [!DNL Segmentation Service] | ✓ | Het publiek produceerde door de Dienst van de Segmentatie van het Experience Platform [ ](../../../segmentation/home.md). |
+| --------------------------- | --------- | -------------------------------------------------------------------------------------------------------------------------- |
+| [!DNL Segmentation Service] | ✓ | Het publiek produceerde door de Dienst van de Segmentatie van Experience Platform [ ](../../../segmentation/home.md). |
 | Aangepaste uploads | ✓ | Het publiek [ ingevoerde ](../../../segmentation/ui/audience-portal.md#import-audience) in Experience Platform van Csv- dossiers. |
 
 {style="table-layout:auto"}
@@ -62,9 +73,9 @@ In deze sectie wordt beschreven welk type publiek u naar dit doel kunt exportere
 Raadpleeg de onderstaande tabel voor informatie over het exporttype en de exportfrequentie van de bestemming.
 
 | Item | Type | Notities |
-| --- | --- | --- |
+| ---------------- | ------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Exporttype | **[!UICONTROL Segment export]** | U exporteert alle leden van een segment (publiek) met de id&#39;s (naam, telefoonnummer of andere) die worden gebruikt in de PubMatic Connect-bestemming. |
-| Exportfrequentie | **[!UICONTROL Streaming]** | Streaming doelen zijn &quot;altijd aan&quot; API-verbindingen. Wanneer een profiel in Experience Platform wordt bijgewerkt dat op segmentevaluatie wordt gebaseerd, verzendt de schakelaar de update stroomafwaarts naar het bestemmingsplatform. Lees meer over [ het stromen bestemmingen ](/help/destinations/destination-types.md#streaming-destinations). |
+| Exportfrequentie | **[!UICONTROL Streaming]** | Streaming doelen zijn &quot;altijd aan&quot; API-verbindingen. Wanneer een profiel in Experience Platform wordt bijgewerkt die op segmentevaluatie wordt gebaseerd, verzendt de schakelaar de update stroomafwaarts naar het bestemmingsplatform. Lees meer over [ het stromen bestemmingen ](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
 
@@ -124,10 +135,16 @@ Bronvelden selecteren:
 
 Doelvelden selecteren:
 
-- Bespreek met uw accountmanager van [!DNL PubMatic] welke informatie over welk type UID tijdens deze stap correct zal zijn.
+- Bespreek met uw accountmanager van [!DNL PubMatic] welke informatie over welk UID-type tijdens deze stap correct zal zijn.
 - Selecteer het [!DNL PubMatic UID] typenummer dat overeenkomt met de id die u in de eerste stap hebt geselecteerd.
 
 ![ de attributen en de identiteiten van de Kaart ](../..//assets/catalog/advertising/pubmatic/export-identities-to-destination.png)
+
+### Publiek plannen
+
+Als u de bestemming PubMatic Connect (Custom Audience ID Mapping) gebruikt, moet u een toewijzings-id opgeven voor elk publiek dat overeenkomt met de &#39;Source Audience ID&#39; in het PubMatic-platform.
+
+![ Publiek dat ](../..//assets/catalog/advertising/pubmatic/audience-scheduling-mapping-id.png) plant
 
 ## Geëxporteerde gegevens/Gegevens valideren bij exporteren {#exported-data}
 
