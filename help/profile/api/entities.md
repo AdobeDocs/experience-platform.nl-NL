@@ -5,14 +5,18 @@ type: Documentation
 description: Met Adobe Experience Platform hebt u toegang tot realtime gegevens van het klantprofiel met RESTful-API's of de gebruikersinterface. In deze handleiding wordt beschreven hoe u met behulp van de profiel-API toegang krijgt tot entiteiten, beter bekend als "profielen".
 role: Developer
 exl-id: 06a1a920-4dc4-4468-ac15-bf4a6dc885d4
-source-git-commit: 9f9823a23c488e63b8b938cb885f050849836e36
+source-git-commit: efebf8e341b17fdd71586827753eadfe1c2cfa15
 workflow-type: tm+mt
-source-wordcount: '2181'
+source-wordcount: '1706'
 ht-degree: 0%
 
 ---
 
 # Het eindpunt van entiteiten (de toegang van het Profiel)
+
+>[!IMPORTANT]
+>
+>De zoekopdracht ExperienceEvent met de API voor toegang tot het profiel wordt afgekeurd. Gebruik functies zoals berekende kenmerken voor gebruiksgevallen die het opzoeken van ExperienceEvents vereisen. Neem voor meer informatie over deze wijziging contact op met de klantenservice van Adobe.
 
 Met Adobe Experience Platform hebt u toegang tot [!DNL Real-Time Customer Profile] -gegevens via RESTful API&#39;s of de gebruikersinterface. In deze handleiding wordt beschreven hoe u met de API toegang krijgt tot entiteiten die beter bekend staan als &quot;profielen&quot;. Voor meer informatie bij de toegang tot van profielen die [!DNL Platform] UI gebruiken, gelieve te verwijzen naar de [ de gebruikersgids van het Profiel ](../ui/user-guide.md).
 
@@ -22,7 +26,7 @@ Het API eindpunt dat in deze gids wordt gebruikt is een deel van [[!DNL Real-Tim
 
 ## Entiteiten ophalen {#retrieve-entity}
 
-U kunt of een entiteit van het Profiel of zijn tijdreeksgegevens terugwinnen door een verzoek van de GET aan het `/access/entities` eindpunt samen met de vereiste vraagparameters te doen.
+U kunt een entiteit van het Profiel terugwinnen door een GET verzoek aan het `/access/entities` eindpunt samen met de vereiste vraagparameters te doen.
 
 >[!BEGINTABS]
 
@@ -138,100 +142,6 @@ Een succesvolle reactie retourneert HTTP-status 200 met de aangevraagde entiteit
 >[!NOTE]
 >
 >Als een verwante grafiek meer dan 50 identiteiten verbindt, zal deze dienst status 422 van HTTP en het bericht &quot;Te veel verwante identiteiten&quot;terugkeren. Als deze fout optreedt, kunt u wellicht meer queryparameters toevoegen om uw zoekopdracht te beperken.
-
->[!TAB  de reeksgebeurtenis van de Tijd ]
-
-**API formaat**
-
-```http
-GET /access/entities?{QUERY_PARAMETERS}
-```
-
-De parameters van de vraag die in de verzoekweg worden verstrekt specificeren welke gegevens aan toegang. U kunt meerdere parameters opnemen, gescheiden door en-tekens (&amp;).
-
-Om tot de gegevens van de tijdreeksgebeurtenissen toegang te hebben, moet u **** de volgende vraagparameters verstrekken:
-
-- `schema.name`: De naam van het XDM-schema van de entiteit. In dit geval is deze waarde `schema.name=_xdm.context.experienceevent` .
-- `relatedSchema.name`: De naam van het verwante schema. Aangezien de schemanaam de Gebeurtenis van de Ervaring is, moet de waarde van dit **** zijn `relatedSchema.name=_xdm.context.profile`.
-- `relatedEntityId`: De id van de verwante entiteit.
-- `relatedEntityIdNS`: De naamruimte van de verwante entiteit. Deze waarde moet worden verstrekt als `relatedEntityId` **** geen XID is.
-
-Een volledige lijst van geldige parameters wordt verstrekt in de [ sectie van vraagparameters ](#query-parameters) van appendix.
-
-**Verzoek**
-
-In het volgende verzoek wordt een profielentiteit gezocht op id en worden de waarden voor de eigenschappen `endUserIDs`, `web` en `channel` opgehaald voor alle tijdreeksgebeurtenissen die aan de entiteit zijn gekoppeld.
-
-+++ Een voorbeeldverzoek om de aan een entiteit gekoppelde tijdreeksgebeurtenissen op te halen
-
-```shell
-curl -X GET 'https://platform.adobe.io/data/core/ups/access/entities?schema.name=_xdm.context.experienceevent&relatedSchema.name=_xdm.context.profile&relatedEntityId=89149270342662559642753730269986316900&relatedEntityIdNS=ECID&fields=endUserIDs,web,channel&startTime=1531260476000&endTime=1531260480000&limit=1' \
-  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-  -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {ORG_ID}' \
-  -H 'x-sandbox-name: {SANDBOX_NAME}'
-```
-
-+++
-
-**Reactie**
-
-Een succesvolle reactie keert status 200 van HTTP met een gepagineerde lijst van de gebeurtenissen van de tijdreeks en bijbehorende gebieden terug die in de parameters van de verzoekvraag werden gespecificeerd.
-
->[!NOTE]
->
->In het verzoek is een limiet van één opgegeven (`limit=1`). Daarom is `count` in het antwoord hieronder 1 en wordt slechts één entiteit geretourneerd.
-
-+++ Een voorbeeldreactie met de gevraagde gebeurtenisgegevens voor de tijdreeks
-
-```json
-{
-    "_page": {
-        "orderby": "timestamp",
-        "start": "c8d11988-6b56-4571-a123-b6ce74236036",
-        "count": 1,
-        "next": "c8d11988-6b56-4571-a123-b6ce74236037"
-    },
-    "children": [
-        {
-            "relatedEntityId": "A29cgveD5y64e2RixjUXNzcm",
-            "entityId": "c8d11988-6b56-4571-a123-b6ce74236036",
-            "timestamp": 1531260476000,
-            "entity": {
-                "endUserIDs": {
-                    "_experience": {
-                        "ecid": {
-                            "id": "89149270342662559642753730269986316900",
-                            "namespace": {
-                                "code": "ecid"
-                            }
-                        }
-                    }
-                },
-                "channel": {
-                    "_type": "web"
-                },
-                "web": {
-                    "webPageDetails": {
-                        "name": "Fernie Snow",
-                        "pageViews": {
-                            "value": 1
-                        }
-                    }
-                }
-            },
-            "lastModifiedAt": "2018-08-21T06:49:02Z"
-        }
-    ],
-    "_links": {
-        "next": {
-            "href": "/entities?start=c8d11988-6b56-4571-a123-b6ce74236037&orderby=timestamp&schema.name=_xdm.context.experienceevent&relatedSchema.name=_xdm.context.profile&relatedEntityId=89149270342662559642753730269986316900&relatedEntityIdNS=ECID&fields=endUserIDs,web,channel&startTime=1531260476000&endTime=1531260480000&limit=1"
-        }
-    }
-}
-```
-
-+++
 
 >[!TAB  B2B- Rekening ]
 
@@ -427,7 +337,7 @@ Een succesvolle reactie retourneert HTTP-status 200 met de aangevraagde entiteit
 
 ## Meerdere entiteiten ophalen {#retrieve-entities}
 
-U kunt meerdere profielentiteiten of tijdreeksgebeurtenissen ophalen door een POST aan te vragen bij het `/access/entities` -eindpunt en de identiteiten in de payload op te geven.
+U kunt veelvoudige entiteiten van het Profiel terugwinnen door een POST- verzoek aan het `/access/entities` eindpunt te doen en de identiteiten in de lading te verstrekken.
 
 >[!BEGINTABS]
 
@@ -648,290 +558,6 @@ Een geslaagde reactie retourneert HTTP-status 200 met de aangevraagde velden met
 ```
 
 +++
-
->[!TAB  de reeksgebeurtenissen van de Tijd ]
-
-**API formaat**
-
-```http
-POST /access/entities
-```
-
-**Verzoek**
-
-Met het volgende verzoek worden gebruikers-id&#39;s, lokale tijden en landcodes opgehaald voor tijdreeksgebeurtenissen die zijn gekoppeld aan een lijst met profiel-id&#39;s.
-
-+++ Een voorbeeldverzoek om de tijdreeksgegevens op te halen
-
-```shell
-curl -X POST https://platform.adobe.io/data/core/ups/access/entities \
-  -H 'Content-Type: application/json' \
-  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-  -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {ORG_ID}' \
-  -H 'x-sandbox-name: {SANDBOX_NAME}' \
-  -d '{
-    "schema": {
-        "name": "_xdm.context.experienceevent"
-    },
-    "relatedSchema": {
-        "name": "_xdm.context.profile"
-    },
-    "identities": [
-        {
-            "relatedEntityId": "GkouAW-yD9aoRCPhRYROJ-TetAFW"
-        }
-        {
-            "relatedEntityId": "GkouAW-2u-7iWt5vQ9u2wm40JOZY"
-        }
-    ],
-    "fields": [
-        "endUserIDs",
-        "placeContext.localTime",
-        "placeContext.geo.countryCode"
-    ],
-    
-    "timeFilter": {
-        "startTime": 11539838505
-        "endTime": 1539838510
-    },
-    "limit": 10,
-    "orderby": "-timestamp"
-}'
-```
-
-| Eigenschap | Type | Beschrijving |
-| -------- | ---- | ----------- |
-| `schema.name` | String | **(Vereist)** De naam van het XDM-schema tot de entiteit behoort. |
-| `relatedSchema.name` | String | Als `schema.name` `_xdm.context.experienceevent` is, moet deze waarde het schema opgeven voor de profielentiteit waarop de tijdreeksgebeurtenissen betrekking hebben. |
-| `identities` | Array | **(Vereist)** Een arraylijst van profielen om bijbehorende gebeurtenissen van de tijdreeks terug te winnen van. Elke ingang in de serie wordt geplaatst op één van twee manieren: <ol><li>Een volledig gekwalificeerde identiteit gebruiken die bestaat uit een ID-waarde en naamruimte</li><li>Een XID opgeven</li></ol> |
-| `fields` | String | De XDM-velden die moeten worden geretourneerd, als een array van tekenreeksen. Standaard worden alle velden geretourneerd. |
-| `orderby` | String | De sorteervolgorde van opgehaalde ervaringsgebeurtenissen op tijdstempel, geschreven als `(+/-)timestamp` met als standaardwaarde `+timestamp` . |
-| `timeFilter.startTime` | Geheel | Geef de begintijd op voor het filteren van tijdreeksobjecten (in milliseconden). Deze waarde wordt standaard ingesteld als het begin van de beschikbare tijd. |
-| `timeFilter.endTime` | Geheel | Geef de eindtijd op voor het filteren van tijdreeksobjecten (in milliseconden). Deze waarde wordt standaard ingesteld als het einde van de beschikbare tijd. |
-| `limit` | Geheel | Het maximumaantal records dat moet worden geretourneerd. Deze waarde is standaard ingesteld op 1.000. |
-
-+++
-
-**Reactie**
-
-Een geslaagde reactie retourneert HTTP-status 200 met een gepagineerde lijst van gebeurtenissen uit de tijdreeks die zijn gekoppeld aan de meerdere profielen die in de aanvraag zijn opgegeven.
-
-+++ Een voorbeeldreactie die de gebeurtenissen uit de tijdreeks bevat
-
-```json
-{
-    "GkouAW-yD9aoRCPhRYROJ-TetAFW": {
-        "_page": {
-            "orderby": "timestamp",
-            "start": "ee0fa8eb-f09c-4d72-a432-fea7f189cfcd",
-            "count": 10,
-            "next": "40cb2fb3-78cd-49d3-806f-9bdb22748226"
-        },
-        "children": [
-            {
-                "relatedEntityId": "GkouAW-yD9aoRCPhRYROJ-TetAFW",
-                "entityId": "ee0fa8eb-f09c-4d72-a432-fea7f189cfcd",
-                "timestamp": 1537275882000,
-                "entity": {
-                    "endUserIDs": {
-                        "_experience": {
-                            "mcid": {
-                                "id": "67971860962043911970658021809222795905",
-                                "namespace": {
-                                    "code": "ECID"
-                                }
-                            },
-                            "aacustomid": {
-                                "id": "50353446361742744826197433431642033796",
-                                "namespace": {
-                                    "code": "CRMID"
-                                },
-                                "primary": true
-                            },
-                            "acid": {
-                                "id": "2de32e9a00003314-2fd9c00000000026",
-                                "namespace": {
-                                    "code": "AVID"
-                                }
-                            }
-                        }
-                    },
-                    "placeContext": {
-                        "localTime": "2018-09-18T13:04:42Z",
-                        "geo": {
-                            "countryCode": "MX"
-                        }
-                    }
-                },
-                "lastModifiedAt": "2018-10-24T17:35:01Z"
-            },
-            {
-                "relatedEntityId": "GkouAW-yD9aoRCPhRYROJ-TetAFW",
-                "entityId": "a9e137b4-1348-4878-8167-e308af523d8b",
-                "timestamp": 1537275889000,
-                "entity": {
-                    "endUserIDs": {
-                        "_experience": {
-                            "mcid": {
-                                "id": "67971860962043911970658021809222795905",
-                                "namespace": {
-                                    "code": "ECID"
-                                }
-                            },
-                            "aacustomid": {
-                                "id": "50353446361742744826197433431642033796",
-                                "namespace": {
-                                    "code": "CRMID"
-                                },
-                                "primary": true
-                            },
-                            "acid": {
-                                "id": "2de32e9a00003314-2fd9c00000000026",
-                                "namespace": {
-                                    "code": "AVID"
-                                }
-                            }
-                        }
-                    },
-                    "placeContext": {
-                        "localTime": "2018-09-18T13:04:49Z",
-                        "geo": {
-                            "countryCode": "MX"
-                        }
-                    }
-                },
-                "lastModifiedAt": "2018-10-24T17:35:01Z"
-            }
-        ],
-        "_links": {
-            "next": {
-                "href": "/entities",
-                "payload": {
-                    "schema": {
-                        "name": "_xdm.context.experienceevent"
-                    },
-                    "relatedSchema": {
-                        "name": "_xdm.context.profile"
-                    },
-                    "timeFilter": {
-                        "startTime": 1537275882000
-                    },
-                    "fields": [
-                        "endUserIDs",
-                        "placeContext.localTime",
-                        "placeContext.geo.countryCode"
-                    ],
-                    "identities": [
-                        {
-                            "relatedEntityId": "GkouAW-yD9aoRCPhRYROJ-TetAFW",
-                            "start": "40cb2fb3-78cd-49d3-806f-9bdb22748226"
-                        }
-                    ],
-                    "limit": 10
-                }
-            }
-        }
-    },
-    "GkouAW-2u-7iWt5vQ9u2wm40JOZY": {
-        "_page": {
-            "orderby": "timestamp",
-            "start": "2746d0db-fa64-4e29-b67e-324bec638816",
-            "count": 9,
-            "next": ""
-        },
-        "children": [
-            {
-                "relatedEntityId": "GkouAW-2u-7iWt5vQ9u2wm40JOZY",
-                "entityId": "2746d0db-fa64-4e29-b67e-324bec638816",
-                "timestamp": 1537559483000,
-                "entity": {
-                    "endUserIDs": {
-                        "_experience": {
-                            "mcid": {
-                                "id": "76436745599328540420034822220063618863",
-                                "namespace": {
-                                    "code": "ECID"
-                                }
-                            },
-                            "aacustomid": {
-                                "id": "48593470048917738786405847327596263131",
-                                "namespace": {
-                                    "code": "CRMID"
-                                },
-                                "primary": true
-                            },
-                            "acid": {
-                                "id": "2de32e9a80007451-03da600000000028",
-                                "namespace": {
-                                    "code": "AVID"
-                                }
-                            }
-                        }
-                    },
-                    "placeContext": {
-                        "localTime": "2018-09-21T19:51:23Z",
-                        "geo": {
-                            "countryCode": "US"
-                        }
-                    }
-                },
-                "lastModifiedAt": "2018-10-24T17:34:58Z"
-            },
-            {
-                "relatedEntityId": "GkouAW-2u-7iWt5vQ9u2wm40JOZY",
-                "entityId": "9bf337a1-3256-431e-a38c-5c0d42d121d1",
-                "timestamp": 1537559486000,
-                "entity": {
-                    "endUserIDs": {
-                        "_experience": {
-                            "mcid": {
-                                "id": "76436745599328540420034822220063618863",
-                                "namespace": {
-                                    "code": "ECID"
-                                }
-                            },
-                            "aacustomid": {
-                                "id": "48593470048917738786405847327596263131",
-                                "namespace": {
-                                    "code": "CRMID"
-                                },
-                                "primary": true
-                            },
-                            "acid": {
-                                "id": "2de32e9a80007451-03da600000000028",
-                                "namespace": {
-                                    "code": "AVID"
-                                }
-                            }
-                        }
-                    },
-                    "placeContext": {
-                        "localTime": "2018-09-21T19:51:26Z",
-                        "geo": {
-                            "countryCode": "US"
-                        }
-                    }
-                },
-                "lastModifiedAt": "2018-10-24T17:34:58Z"
-            }
-        ],
-        "_links": {
-            "next": {
-                "href": ""
-            }
-        }
-    }
-}`
-```
-
-+++
-
->[!NOTE]
->
->In dit voorbeeldantwoord biedt het eerste weergegeven profiel (&quot;GkouAW-yD9aoRCPhRYROJ-TextAFW&quot;) een waarde voor `_links.next.payload`, wat betekent dat er extra resultatenpagina&#39;s zijn voor dit profiel.
->
->Om tot deze resultaten toegang te hebben, kunt u een extra verzoek van de POST aan het `/access/entities` eindpunt met de vermelde nuttige lading als verzoeklichaam uitvoeren.
 
 >[!TAB  B2B- Rekening ]
 
@@ -1468,7 +1094,7 @@ Een geslaagde reactie retourneert HTTP-status 200 met de aangevraagde entiteiten
 
 ### Een volgende pagina met resultaten openen
 
-Resultaten worden gepagineerd bij het ophalen van tijdreeksgebeurtenissen. Als er volgende pagina&#39;s met resultaten zijn, bevat de eigenschap `_page.next` een id. Daarnaast biedt de eigenschap `_links.next.href` een aanvraag-URI voor het ophalen van de volgende pagina. Als u de resultaten wilt ophalen, dient u een ander verzoek van de GET in bij het `/access/entities` eindpunt en vervangt u `/entities` door de waarde van de opgegeven URI.
+Resultaten worden gepagineerd bij het ophalen van tijdreeksgebeurtenissen. Als er volgende pagina&#39;s met resultaten zijn, bevat de eigenschap `_page.next` een id. Daarnaast biedt de eigenschap `_links.next.href` een aanvraag-URI voor het ophalen van de volgende pagina. Als u de resultaten wilt ophalen, dient u een ander GET-verzoek in bij het `/access/entities` eindpunt en vervangt u `/entities` door de waarde van de opgegeven URI.
 
 >[!NOTE]
 >
@@ -1558,7 +1184,7 @@ Als de reactie is gelukt, wordt de volgende pagina met resultaten geretourneerd.
 
 ## Entiteiten verwijderen {#delete-entity}
 
-U kunt een entiteit van de Opslag van het Profiel schrappen door een verzoek van de DELETE aan het `/access/entities` eindpunt samen met de vereiste vraagparameters te doen.
+U kunt een entiteit van de Opslag van het Profiel schrappen door een verzoek van DELETE aan het `/access/entities` eindpunt samen met de vereiste vraagparameters te doen.
 
 **API formaat**
 
@@ -1609,7 +1235,7 @@ De volgende parameters worden gebruikt in de weg voor GET- verzoeken aan het `/a
 
 | Parameter | Beschrijving | Voorbeeld |
 | --------- | ----------- | ------- |
-| `schema.name` | **(Vereist)** De naam van het schema XDM van de entiteit. | `schema.name=_xdm.context.experienceevent` |
+| `schema.name` | **(Vereist)** De naam van het schema XDM van de entiteit. | `schema.name=_xdm.context.profile` |
 | `relatedSchema.name` | Als `schema.name` `_xdm.context.experienceevent` is, moet deze waarde **** het schema voor de profielentiteit specificeren dat de gebeurtenissen van de tijdreeks met betrekking tot zijn. | `relatedSchema.name=_xdm.context.profile` |
 | `entityId` | **(Vereist)** identiteitskaart van de entiteit. Als de waarde van deze parameter geen XID is, moet een parameter van identiteitsnamespace (`entityIdNS`) ook worden verstrekt. | `entityId=janedoe@example.com` |
 | `entityIdNS` | Als `entityId` niet als XID wordt verstrekt, moet dit gebied **** de identiteit specificeren namespace. | `entityIdNS=email` |
