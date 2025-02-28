@@ -1,9 +1,10 @@
 ---
 title: Behoud de Dataset van de Gebeurtenis van de Ervaring in het meer van Gegevens beheren gebruikend TTL
 description: Leer hoe u het behoud van de Experience Event-gegevensset in het datumpomeer kunt evalueren, instellen en beheren met TL-configuraties (Time-to-Live) met Adobe Experience Platform API's. In deze handleiding wordt uitgelegd hoe de vervaldatum van TTL op rijniveau het beleid voor gegevensbewaring ondersteunt, de opslagefficiëntie optimaliseert en een effectief beheer van de levenscyclus van gegevens garandeert. Het verstrekt ook gebruiksgevallen en beste praktijken om u te helpen TTL effectief toepassen.
-source-git-commit: 74b6e5f10f7532745180760adf1d96bc57e7b590
+exl-id: d688d4d0-aa8b-4e93-a74c-f1a1089d2df0
+source-git-commit: affaeb0869423292a44eb7ada8343482bb163ca6
 workflow-type: tm+mt
-source-wordcount: '2105'
+source-wordcount: '2195'
 ht-degree: 0%
 
 ---
@@ -28,6 +29,12 @@ TTL is nuttig wanneer het beheren van tijd-gevoelige gegevens die relevantie in 
 - Verbeter vraagprestaties door irrelevante gegevens te minimaliseren.
 - Behoud de gegevenshygiëne door alleen relevante informatie te bewaren.
 - Optimaliseer het bewaren van gegevens om bedrijfsdoelstellingen te steunen.
+
+>[!NOTE]
+>
+>De Behoud van de Dataset van de Gebeurtenis van de ervaring is op gebeurtenisgegevens van toepassing die in het gegevensmeer worden opgeslagen. Als u behoud in Real-Time Customer Data Platform beheert, overweeg het gebruiken van [ Verlopen van de Gebeurtenis van de Ervaring ](../../profile/event-expirations.md) en [ de Zijdeloze Verlopen van het Profiel ](../../profile/pseudonymous-profiles.md) naast de montages van het het behoud van het gegevensmeer.
+>
+>De configuraties van TTL helpen u opslag optimaliseren die op aanspraken wordt gebaseerd. Hoewel gegevens uit de profielopslag (gebruikt in Real-Time CDP) na 30 dagen als &#39;stale&#39; en &#39;verwijder&#39; kunnen worden beschouwd, kunnen dezelfde gebeurtenisgegevens in het datumpomeer gedurende 12-13 maanden (of langer op basis van &#39;machtiging&#39;) beschikbaar blijven voor gebruik door Analytics en Data Distiller.
 
 ### Voorbeeld van industrie {#industry-example}
 
@@ -121,7 +128,7 @@ Een succesvolle reactie keert de configuratie van TTL voor de dataset, met inbeg
                 "rowExpiration": {
                     "defaultValue": "P12M",
                     "maxValue": "P12M",
-                    "minValue": "P7D"
+                    "minValue": "P30D"
                 }
             },
             "adobe_unifiedProfile": {  
@@ -254,7 +261,7 @@ Een succesvolle reactie toont de configuratie van TTL voor de dataset. Dit bevat
 | `extensions` | Een container voor aanvullende metagegevens die betrekking hebben op de gegevensset. |
 | `extensions.adobe_lakeHouse` | Specificeert montages met betrekking tot opslagarchitectuur, met inbegrip van rij-vlakke vervalconfiguraties |
 | `rowExpiration` | Het object bevat TTL-instellingen die de retentieperiode voor de gegevensset definiëren. |
-| `rowExpiration.ttlValue` | Bepaalt de duur alvorens de verslagen in de dataset automatisch worden verwijderd. Gebruikt de notatie ISO-8601 punt (bijvoorbeeld `P3M` gedurende 3 maanden of `P7D` gedurende één week). |
+| `rowExpiration.ttlValue` | Bepaalt de duur alvorens de verslagen in de dataset automatisch worden verwijderd. Gebruikt de notatie ISO-8601 punt (bijvoorbeeld `P3M` gedurende 3 maanden of `P30D` gedurende één week). |
 | `rowExpiration.valueStatus` | De tekenreeks geeft aan of de TTL-instelling een standaardsysteemwaarde is of een aangepaste waarde die door een gebruiker is ingesteld. Mogelijke waarden zijn: `default` , `custom` . |
 | `rowExpiration.setBy` | Geeft aan wie de TTL-instelling het laatst heeft gewijzigd. Mogelijke waarden zijn: `user` (handmatig ingesteld) of `service` (automatisch toegewezen). |
 | `rowExpiration.updated` | De tijdstempel van de laatste TTL-update. Deze waarde geeft aan wanneer de TTL-instelling voor het laatst is gewijzigd. |
@@ -418,4 +425,3 @@ Nu u hebt geleerd hoe te om de montages van TTL voor rij-vlakke afloop te behere
 - De banen van het behoud: Leer om datasettermijnen in het Platform UI met de [ gids UI van de de levenscyclus van gegevens te plannen en te automatiseren ](../../hygiene/ui/dataset-expiration.md), of de configuraties van het Behoud van de Dataset te controleren en te verifiëren dat de verlopen verslagen worden geschrapt.
 - [ het eindpuntgids van de Vervalsing API van de Dataset ](../../hygiene/api/dataset-expiration.md): Ontdek hoe te om volledige datasets eerder dan enkel rijen te schrappen. Leer hoe u het verlopen van gegevenssets kunt plannen, beheren en automatiseren met behulp van de API voor een efficiënte gegevensopslag.
 - [ overzicht van het het gebruiksbeleid van gegevens ](../../data-governance/policies/overview.md): Leer hoe te om uw strategie van het gegevensbehoud met bredere nalevingsvereisten en marketing gebruiksbeperkingen te richten.
-
