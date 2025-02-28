@@ -3,9 +3,9 @@ title: Verbinding maken
 description: Moconnect is een platform voor klantbetrokkenheid dat klantgerichte interacties tussen consumenten en merken in real time mogelijk maakt.
 last-substantial-update: 2023-10-11T00:00:00Z
 exl-id: 051f1a10-3c41-4c0a-b187-bf80de0565f0
-source-git-commit: c3ef732ee82f6c0d56e89e421da0efc4fbea2c17
+source-git-commit: 1e22ad63414876af45d156ed030b8103908de8a1
 workflow-type: tm+mt
-source-wordcount: '947'
+source-wordcount: '987'
 ht-degree: 0%
 
 ---
@@ -14,9 +14,9 @@ ht-degree: 0%
 
 ## Overzicht {#overview}
 
-Gebruik de [!DNL Moengage] bestemming om uw gegevens van de Adobe (gebruikersattributen, segmenten en gebeurtenissen) aan MoEngage in real time te verbinden en in kaart te brengen. Klanten kunnen vervolgens op deze gegevens reageren en persoonlijke, doelgerichte ervaringen bieden.
+Gebruik de [!DNL Moengage] -bestemming om uw Adobe-gegevens (gebruikerskenmerken, segmenten en gebeurtenissen) in real-time te verbinden en toe te wijzen aan MoEngage. Klanten kunnen vervolgens op deze gegevens reageren en persoonlijke, doelgerichte ervaringen bieden.
 
-Met Adobe is de integratie heel eenvoudig en intuïtief. Neem eenvoudig om het even welk gebruikersprofiel van de Adobe, en wijs het aan een MoEngage gebruikersattribuut in kaart.
+Met Adobe is de integratie heel eenvoudig en intuïtief. Neem eenvoudig een Adobe-gebruikersprofiel en wijs dit toe aan een MoEngage-gebruikerskenmerk.
 
 >[!IMPORTANT]
 >
@@ -143,7 +143,10 @@ Herhaal de vorige stappen om meer toewijzingen toe te voegen.
 
 ## Geëxporteerde gegevens/Gegevens valideren bij exporteren {#exported-data}
 
-Ga naar het gebruikersprofiel op uw [!DNL Moengage] -account om te controleren of gegevens zijn geëxporteerd naar de [!DNL Moengage] -bestemming. Er wordt een gebruikerskenmerk met de naam AEP Segment weergegeven.
+Ga naar het gebruikersprofiel in uw [!DNL Moengage] -account om te controleren of gegevens zijn geëxporteerd naar de [!DNL Moengage] -bestemming. Hier vindt u een gebruikerskenmerk met de naam `AEPSegments` dat automatisch wordt gemaakt en de andere aangepaste kenmerken die in de eerdere stappen in Adobe Experience Platform zijn toegewezen.
+
+`AEPSegments` is een kenmerk van het type array in [!DNL Moengage] . Hier worden alle Adobe-publieksnamen weergegeven waaraan de gebruiker is gekoppeld in Experience Platform.
+
 
 ![ de Volledige Afbeelding van de Bestemming van de Mohenal ](../../assets/catalog/mobile-engagement/moengage/validation.png)
 
