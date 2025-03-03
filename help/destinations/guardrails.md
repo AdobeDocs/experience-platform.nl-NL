@@ -6,9 +6,9 @@ product: experience platform
 type: Documentation
 description: Meer informatie over het standaardgebruik en de tarieflimieten van gegevensactivering.
 exl-id: a755f224-3329-42d6-b8a9-fadcf2b3ca7b
-source-git-commit: d01e9b6d64e9040df11c45750c784079a0289477
+source-git-commit: 818d751996cb84440f620ada50c6e6ec33cff40d
 workflow-type: tm+mt
-source-wordcount: '1710'
+source-wordcount: '1661'
 ht-degree: 1%
 
 ---
@@ -33,7 +33,7 @@ Dit document bevat twee typen standaardlimieten:
 
 | Het type Guardrail | Beschrijving |
 |----------|---------|
-| **Gegarandeerde van Prestaties (Zachte grens)** | Prestatiegaranties zijn gebruikslimieten die betrekking hebben op het bereik van uw gebruiksgevallen. Als u de prestatiegaranties overschrijdt, kan de prestaties achteruitgaan en de latentie vertragen. Adobe is niet verantwoordelijk voor een dergelijke verslechtering van de prestaties. Klanten die een prestatiegarantie consequent overschrijden, kunnen ervoor kiezen om extra capaciteit te licentiëren om prestatievermindering te voorkomen. |
+| **Gegarandeerde van Prestaties (Zachte grens)** | Prestatiegaranties zijn gebruikslimieten die betrekking hebben op het bereik van uw gebruiksgevallen. Als u de prestatiegaranties overschrijdt, kan de prestaties achteruitgaan en de latentie vertragen. Adobe is niet verantwoordelijk voor deze verslechtering van de prestaties. Klanten die een prestatiegarantie consequent overschrijden, kunnen ervoor kiezen om extra capaciteit te licentiëren om prestatievermindering te voorkomen. |
 | **systeem-afgedwongen grails (Harde grens)** | De door het systeem afgedwongen instructies worden afgedwongen door de gebruikersinterface of API van Real-Time CDP. Dit zijn grenzen die u niet kunt overschrijden aangezien UI en API u zal tegenhouden dit te doen of een fout zal terugkeren. |
 
 {style="table-layout:auto"}
@@ -53,7 +53,7 @@ De hieronder gidsen zijn over het algemeen van toepassing op activering door [ a
 | Maximumaantal kenmerken dat aan een doel is toegewezen | 50 | Prestatiegerichting | In het geval van verschillende bestemmingen en bestemmingstypen kunt u profielkenmerken en identiteiten selecteren die u wilt toewijzen voor export. Voor optimale prestaties, zou een maximum van 50 attributen in een dataflow aan een bestemming moeten worden in kaart gebracht. |
 | Maximum aantal bestemmingen | 100 | Door het systeem afgedwongen geleiding | U kunt een maximum van 100 bestemmingen tot stand brengen dat u gegevens kunt verbinden en activeren aan, *per zandbak*. [ de verpersoonlijkingsbestemmingen van Edge (de verpersoonlijking van de Douane) ](#edge-destinations-activation) kan omhoog een maximum van 10 van de 100 geadviseerde bestemmingen maken. |
 | Type gegevens die op bestemmingen worden geactiveerd | Profielgegevens, inclusief identiteiten en identiteitskaarten | Door het systeem afgedwongen geleiding | Momenteel, is het slechts mogelijk om *attributen van het profielverslag* naar bestemmingen uit te voeren. XDM-kenmerken die gebeurtenisgegevens beschrijven, worden momenteel niet ondersteund voor exporteren. |
-| Type gegevens geactiveerd voor doelen - ondersteuning voor array- en kaartkenmerken | Gedeeltelijk beschikbaar | Door het systeem afgedwongen geleiding | U kunt serieattributen naar [ op dossier-gebaseerde bestemmingen ](/help/destinations/destination-types.md#file-based) uitvoeren. U moet de functie `array_to_string` nog steeds gebruiken om de array af te vlakken in een tekenreeks in het doelbestand. [ las meer ](/help/release-notes/2024/october-2024.md#destinations-new-updated-functionality) over de functionaliteit. <br><br> Op dit ogenblik, is het **niet** mogelijk om *kaartattributen* naar bestemmingen uit te voeren. De uitzondering op deze regel is de [ identiteitskaart ](/help/xdm/field-groups/profile/identitymap.md), die in zowel het stromen als op dossier-gebaseerde actities wordt uitgevoerd. |
+| Type gegevens geactiveerd voor doelen - ondersteuning voor array- en kaartkenmerken | Gedeeltelijk beschikbaar | Door het systeem afgedwongen geleiding | U kunt serieattributen naar [ op dossier-gebaseerde bestemmingen ](/help/destinations/destination-types.md#file-based) uitvoeren. [Lees meer](/help/destinations/ui/export-arrays-calculated-fields.md) over de nieuwe functionaliteit. |
 
 {style="table-layout:auto"}
 
@@ -63,7 +63,7 @@ De hieronder gidsen zijn op activering door [ het stromen bestemmingen ](/help/d
 
 | Guardrail | Limiet | Limiettype | Beschrijving |
 | --- | --- | --- | --- |
-| Aantal activeringen (HTTP-berichten met profielexport) per seconde | N.v.t. | - | Er is momenteel geen grens aan het aantal berichten per seconde die van Experience Platform naar API eindpunten van partnerbestemmingen worden verzonden. <br> Om het even welke grenzen of latentie worden gedicteerd door het eindpunt waar het Experience Platform gegevens verzendt. Zorg ervoor om de [ catalogus ](/help/destinations/catalog/overview.md) pagina van de bestemming ook te controleren u verbindt en gegevens activeert aan. |
+| Aantal activeringen (HTTP-berichten met profielexport) per seconde | N.v.t. | - | Er is momenteel geen limiet voor het aantal berichten per seconde dat van Experience Platform naar API eindpunten van partnerbestemmingen wordt verzonden. <br> Om het even welke grenzen of latentie worden gedicteerd door het eindpunt waar Experience Platform gegevens verzendt. Zorg ervoor om de [ catalogus ](/help/destinations/catalog/overview.md) pagina van de bestemming ook te controleren u verbindt en gegevens activeert aan. |
 
 {style="table-layout:auto"}
 
@@ -173,11 +173,11 @@ Lees meer over [ het uitvoeren datasets ](/help/destinations/ui/export-datasets.
 
 ### Destination SDK guardrails {#destination-sdk-guardrails}
 
-[ Destination SDK ](/help/destinations/destination-sdk/overview.md) is een reeks van configuratie APIs die u toestaan om bestemmingsintegratiepatronen voor Experience Platform te vormen om publiek en profielgegevens aan uw eindpunt te leveren, die op gegevens en authentificatieformaten van uw keus wordt gebaseerd. De onderstaande instructies zijn van toepassing op de doelen die u configureert met behulp van Destination SDK.
+[ Destination SDK ](/help/destinations/destination-sdk/overview.md) is een reeks van configuratie APIs die u toestaan om de patronen van de bestemmingsintegratie voor Experience Platform te vormen om publiek en profielgegevens aan uw eindpunt te leveren, die op gegevens en authentificatieformaten van uw keus wordt gebaseerd. De onderstaande instructies zijn van toepassing op de doelen die u met Destination SDK configureert.
 
 | Guardrail | Limiet | Limiettype | Beschrijving |
 | --- | --- | --- | --- |
-| Maximum aantal [ privé douanebestemmingen ](/help/destinations/destination-sdk/overview.md#productized-custom-integrations) | 5 | Prestatiegerichting | U kunt maximaal vijf aangepaste streaming privédoelen of batchdoelen maken met behulp van Destination SDK. Neem contact op met een aangepaste zorgvertegenwoordiger als u meer dan vijf van dergelijke doelen moet maken. |
+| Maximum aantal [ privé douanebestemmingen ](/help/destinations/destination-sdk/overview.md#productized-custom-integrations) | 5 | Prestatiegerichting | Met Destination SDK kunt u maximaal vijf eigen streaming- of batchbestemmingen maken. Neem contact op met een aangepaste zorgvertegenwoordiger als u meer dan vijf van dergelijke doelen moet maken. |
 | Profielexportbeleid voor Destination SDK | <ul><li>`maxBatchAgeInSecs` (minimaal 1,800 en maximaal 3,600)</li><li>`maxNumEventsInBatch` (minimaal 1.000 en maximaal 10.000)</li></ul> | Door het systeem afgedwongen geleiding | Wanneer het gebruiken van de [ configureerbare samenvoeging ](destination-sdk/functionality/destination-configuration/aggregation-policy.md#configurable-aggregation) optie voor uw bestemming, houd rekening met de minimum en maximumwaarden die bepalen hoe vaak de berichten van HTTP naar uw op API-Gebaseerde bestemming worden verzonden en hoeveel profielen de berichten zouden moeten omvatten. |
 
 {style="table-layout:auto"}
@@ -188,16 +188,16 @@ Gegevens over drempelwaarden of beperkingen voor bepaalde bestemmingen. Deze sec
 
 | Type bestemming | Beschrijving |
 | --- | --- |
-| Enterprise-bestemmingen (HTTP-API, Amazon Kinesis, Azure EventHubs) | In 95 percent van de tijd, probeert het Experience Platform om een productietolerantie van minder dan 10 minuten voor met succes verzonden berichten met een tarief van minder dan 10.000 verzoeken per seconde voor elke dataflow aan een ondernemingsbestemming aan te bieden. <br> In het geval van ontbroken verzoeken aan uw ondernemingsbestemming, slaat het Experience Platform de ontbroken verzoeken op en probeert tweemaal om de verzoeken naar uw eindpunt te verzenden. |
+| Enterprise-bestemmingen (HTTP-API, Amazon Kinesis, Azure EventHubs) | In 95 percent van de tijd, probeert Experience Platform om een productietolerantie van minder dan 10 minuten voor met succes verzonden berichten met een tarief van minder dan 10.000 verzoeken per seconde voor elke dataflow aan een ondernemingsbestemming aan te bieden. <br> In het geval van mislukte verzoeken aan uw ondernemingsbestemming, slaat Experience Platform de ontbroken verzoeken op en probeert tweemaal om de verzoeken naar uw eindpunt te verzenden. |
 
 {style="table-layout:auto"}
 
 ## Volgende stappen
 
-Raadpleeg de volgende documentatie voor meer informatie over andere Experience Platforms services guardrails, over end-to-end latentie-informatie en licentiegegevens uit Real-Time CDP Product Description-documenten:
+Raadpleeg de volgende documentatie voor meer informatie over andere Experience Platform Services-instructies, informatie over end-to-end latentie en licentiegegevens uit Real-Time CDP Product Description-documenten:
 
 * [Real-Time CDP guardrails](/help/rtcdp/guardrails/overview.md)
-* [ De diagrammen van de latentie van begin tot eind ](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/deployment/guardrails.html?lang=en#end-to-end-latency-diagrams) voor diverse diensten van het Experience Platform.
-* [ Real-time Customer Data Platform (B2C Uitgave - Primaire en Ultimate Pakketten) ](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)
-* [ Real-time Customer Data Platform (B2P - Primaire en Ultimate Pakketten) ](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html)
-* [ Real-time Customer Data Platform (B2B - Primaire en Ultimate Pakketten) ](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html)
+* [ de diagrammen van de de latentie van begin tot eind ](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/deployment/guardrails.html?lang=en#end-to-end-latency-diagrams) voor diverse diensten van Experience Platform.
+* [ Real-Time Customer Data Platform (B2C Uitgave - de Pakketten van Prime en van Ultimate) ](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)
+* [ Real-Time Customer Data Platform (B2P - de Pakketten van Prime en van Ultimate) ](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html)
+* [ Real-Time Customer Data Platform (B2B - de Pakketten van Prime en van Ultimate) ](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html)
