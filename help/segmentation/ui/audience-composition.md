@@ -3,14 +3,24 @@ solution: Experience Platform
 title: UI-gids voor soorten publiek
 description: De Samenstelling van het publiek in Adobe Experience Platform UI verstrekt een rijke werkruimte die u toestaat om met de gegevenselementen van het Profiel in wisselwerking te staan. De werkruimte biedt intuïtieve besturingselementen voor het maken en bewerken van soorten publiek voor uw organisatie.
 exl-id: 0dda0cb1-49e0-478b-8004-84572b6cf625
-source-git-commit: c4064771a384a90d94903ba1761fc9ee20f47747
+source-git-commit: 758ec9de9bf3e6bb9853c9455c69e0b5ca7948d5
 workflow-type: tm+mt
-source-wordcount: '2210'
+source-wordcount: '2241'
 ht-degree: 0%
 
 ---
 
 # Handleiding voor compositie van publiek
+
+>[!AVAILABILITY]
+>
+>U moet over de volgende machtigingen beschikken om deze functie te kunnen gebruiken:
+>
+>- Segmenten beheren
+>- Profielen beheren
+>- Beleid voor samenvoegen beheren
+>
+>Meer informatie over toestemmingen binnen Platform kan in het [ overzicht van de toegangscontrole ](../../access-control/home.md#permissions) worden gevonden.
 
 >[!NOTE]
 >
