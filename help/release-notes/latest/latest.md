@@ -2,18 +2,14 @@
 title: Aanvullende informatie voor Adobe Experience Platform van februari 2025
 description: Aanvullende informatie voor Adobe Experience Platform van februari 2025.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 2d640b282feb783694276c69366b1fccadddfd78
+source-git-commit: e8c1d7d3b5cc205b9258b4fec5dc7fa68d0d3b27
 workflow-type: tm+mt
-source-wordcount: '1638'
+source-wordcount: '1621'
 ht-degree: 97%
 
 ---
 
 # Aanvullende informatie voor Adobe Experience Platform
-
->[!TIP]
->
->Deze release bevat verbeteringen aan de add-on Samenstelling van Federated-doelgroep. Raadpleeg voor meer informatie de [aanvullende informatie over Samenstelling van Federated-doelgroep](https://experienceleague.adobe.com/nl/docs/federated-audience-composition/using/release-notes).
 
 **Releasedatum: 18 februari 2025**
 
@@ -23,6 +19,7 @@ Updates van bestaande functies en documentatie in Adobe Experience Platform:
 - [Catalogusservice](#catalog-service)
 - [Gegevensvoorbereiding](#data-prep)
 - [Bestemmingen](#destinations)
+- [ Federated Audience Composition ](https://experienceleague.adobe.com/nl/docs/federated-audience-composition/using/release-notes) {target="_blank"}
 - [Bronnen](#sources)
 - [Segmentatieservice](#segmentation)
 - [Documentatie-updates](#documentation-updates)
