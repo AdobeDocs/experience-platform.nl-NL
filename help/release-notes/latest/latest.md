@@ -2,7 +2,7 @@
 title: Aanvullende informatie voor Adobe Experience Platform van februari 2025
 description: Aanvullende informatie voor Adobe Experience Platform van februari 2025.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: c4064771a384a90d94903ba1761fc9ee20f47747
+source-git-commit: 2d640b282feb783694276c69366b1fccadddfd78
 workflow-type: tm+mt
 source-wordcount: '1638'
 ht-degree: 97%
@@ -97,7 +97,7 @@ Voor meer informatie, raadpleegt u het [Overzicht van Gegevensvoorbereiding](../
 | Toegangslabels gebruiken om gebruikerstoegang tot bestemmingsgegevensstromen te beheren | Als deel van de [[!UICONTROL attribute-based access control]](/help/access-control/abac/overview.md)-functionaliteit in Real-Time CDP, kunt u nu toegangslabels op [bestemmingsgegevensstromen](/help/dataflows/ui/monitor-destinations.md) toepassen. Op deze manier kunt u ervoor zorgen dat alleen een subset van gebruikers in uw organisatie toegang krijgt tot specifieke bestemmingsgegevensstromen. <br> **Belangrijk**: Wanneer u met behulp van het zoekvak boven aan de gebruikersinterface van Experience Platform naar bestemmingsgegevensstromen zoekt, kunnen de resultaten bestemmingsgegevensstromen bevatten die u niet kunt zien vanwege uw gebruikerstoegangslabels. Dit gedrag wordt in een toekomstige update gecorrigeerd. |
 | [Rapportage op doelgroepniveau](/help/dataflows/ui/monitor-destinations.md#audience-level-dataflow-runs-for-streaming-destinations) voor de [Marketo Engage-verbinding](/help/destinations/catalog/adobe/marketo-engage.md) | U kunt nu [informatie weergeven](/help/dataflows/ui/monitor-destinations.md#audience-level-dataflow-runs-for-streaming-destinations) over de geactiveerde, uitgesloten of mislukte identiteiten, uitgesplitst op doelgroepniveau, voor elke doelgroep die deel uitmaakt van de gegevensstromen voor deze bestemming. |
 | Ondersteuning voor externe doelgroepen voor de verbindingen [TikTok](/help/destinations/catalog/social/tiktok.md) en [Snap Inc](/help/destinations/catalog/advertising/snap-inc.md) | U kunt externe doelgroepen activeren voor deze bestemmingen vanuit [aangepaste uploads](../../segmentation/ui/audience-portal.md#import-audience) en [samenstelling van Federated-doelgroep](https://experienceleague.adobe.com/nl/docs/federated-audience-composition/using/start/audiences). |
-| Arrays, toewijzingen en objecten exporteren naar cloudopslagbestemmingen | Door de nieuwe **[!UICONTROL Export arrays, maps, objects]**-schakeloptie te gebruiken wanneer u verbinding maakt met een bestemming voor cloudopslag, kunt u nieuwe complexe objecten exporteren om bestemmingen te selecteren. [Lees meer](/help/destinations/ui/export-arrays-calculated-fields.md) over de nieuwe functionaliteit. |
+| Arrays, toewijzingen en objecten exporteren naar cloudopslagbestemmingen | Door de nieuwe **[!UICONTROL Export arrays, maps, objects]**-schakeloptie te gebruiken wanneer u verbinding maakt met een bestemming voor cloudopslag, kunt u nieuwe complexe objecten exporteren om bestemmingen te selecteren. [Lees meer](/help/destinations/ui/export-arrays-maps-objects.md) over de nieuwe functionaliteit. |
 
 {style="table-layout:auto"}
 

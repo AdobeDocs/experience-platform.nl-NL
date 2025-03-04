@@ -3,9 +3,9 @@ title: Soorten publiek activeren om exportdoelen voor batchprofielen te gebruike
 type: Tutorial
 description: Leer hoe u het publiek in Adobe Experience Platform activeert door het naar batchbestemmingen te sturen.
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
-source-git-commit: b4b185cab4defbf9559089e5152075674dab52d1
+source-git-commit: 2d640b282feb783694276c69366b1fccadddfd78
 workflow-type: tm+mt
-source-wordcount: '4217'
+source-wordcount: '4204'
 ht-degree: 1%
 
 ---
@@ -433,7 +433,7 @@ Adobe raadt u aan een naamruimte voor identiteiten, zoals een [!DNL CRM ID] - of
 
 ### Gedrag van deduplicatie voor profielen met dezelfde tijdstempel {#deduplication-same-timestamp}
 
-Wanneer u profielen exporteert naar op een bestand gebaseerde doelen, zorgt deduplicatie ervoor dat slechts één profiel wordt geëxporteerd wanneer meerdere profielen dezelfde deduplicatietoets en dezelfde tijdstempel hebben. Deze tijdstempel geeft aan op welk moment het publiekslidmaatschap of de identiteitsgrafiek van een profiel voor het laatst is bijgewerkt. Voor meer informatie over hoe de profielen worden bijgewerkt en worden uitgevoerd, zie het [ document van de profieluitvoer ](https://experienceleague.adobe.com/en/docs/experience-platform/destinations/how-destinations-work/profile-export-behavior#what-determines-a-data-export-and-what-is-included-in-the-export-2).
+Wanneer u profielen exporteert naar bestandsgebaseerde bestemmingen en meerdere profielen dezelfde deduplicatiesleutel en dezelfde referentietijdstempel hebben, zorgt deduplicatie ervoor dat er slechts één profiel wordt geëxporteerd. Deze tijdstempel geeft aan op welk moment het publiekslidmaatschap of de identiteitsgrafiek van een profiel voor het laatst is bijgewerkt. Voor meer informatie over hoe de profielen worden bijgewerkt en worden uitgevoerd, zie het [ document van de profieluitvoer ](https://experienceleague.adobe.com/en/docs/experience-platform/destinations/how-destinations-work/profile-export-behavior#what-determines-a-data-export-and-what-is-included-in-the-export-2).
 
 #### Belangrijkste overwegingen
 
@@ -464,9 +464,9 @@ Na deduplicatie bevat het exportbestand:
 
 **Verbeterde betrouwbaarheid**: Dit bijgewerkte deduplicatieproces zorgt ervoor dat de opeenvolgende looppas met de zelfde coördinaten altijd de zelfde resultaten zal veroorzaken, verbeterend consistentie.
 
-### Arrays via berekende velden exporteren {#export-arrays-calculated-fields}
+### Transformaties van gegevens uitvoeren via berekende velden {#calculated-fields}
 
-Selecteer bètaklanten om arrayobjecten van Experience Platform naar cloudopslagdoelen te exporteren. Lees meer over [ het uitvoeren van series en berekende gebieden ](/help/destinations/ui/export-arrays-calculated-fields.md) en contacteer uw vertegenwoordiger van Adobe om toegang tot de functionaliteit te krijgen.
+U kunt de [ Berekende gebieden ](/help/destinations/ui/data-transformations-calculated-fields.md) controle gebruiken om diverse gegevenstransformaties op de gegevens uit te voeren die naar op dossier-gebaseerde bestemmingen worden uitgevoerd.
 
 ### Bekende beperkingen {#known-limitations}
 

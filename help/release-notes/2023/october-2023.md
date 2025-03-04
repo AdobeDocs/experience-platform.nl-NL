@@ -2,10 +2,10 @@
 title: Aanvullende informatie van oktober 2023 voor Adobe Experience Platform
 description: Aanvullende informatie van oktober 2023 voor Adobe Experience Platform.
 exl-id: e9cf5299-8350-4b40-8f56-05e598846875
-source-git-commit: 4afb2c76f2022423e8f1fa29c91d02b43447ba90
+source-git-commit: 2d640b282feb783694276c69366b1fccadddfd78
 workflow-type: tm+mt
 source-wordcount: '1048'
-ht-degree: 38%
+ht-degree: 39%
 
 ---
 
@@ -69,12 +69,12 @@ Voor meer informatie over gegevensinzameling, te lezen gelieve het [ overzicht v
 
 | Functionaliteit | Beschrijving |
 | ----------- | ----------- |
-| (Beta) Ondersteuning voor hashfuncties in berekende velden | Naast de functies specifiek voor [ het uitvoeren van series ](../../destinations/ui/export-arrays-calculated-fields.md) of elementen van een serie, kunt u extra [ het hakken functies ](../../destinations/ui/export-arrays-calculated-fields.md#hashing-functions) aan knoeiboelattributen in de uitgevoerde dossiers nu gebruiken. De ondersteunde hashingfuncties zijn: `sha`, `sha256`, `sha512`, `hash`, `md5` en `crc32` . |
+| (Beta) Ondersteuning voor hashfuncties in berekende velden | Naast de functies specifiek voor [ het uitvoeren van series ](../../destinations/ui/export-arrays-maps-objects.md) of elementen van een serie, kunt u extra [ het hakken functies ](../../destinations/ui/export-arrays-maps-objects.md#hashing-functions) aan knoeiboelattributen in de uitgevoerde dossiers nu gebruiken. De ondersteunde hashingfuncties zijn: `sha`, `sha256`, `sha512`, `hash`, `md5` en `crc32` . |
 | (Beperkte GA) Accountpubliek naar bepaalde bestemmingen activeren | De klanten van Real-Time CDP B2B kunnen [ rekeningspubliek ](../../segmentation/types/account-audiences.md) aan bepaalde bestemmingen nu activeren. Voor meer informatie over deze eigenschap, gelieve te lezen [ de leerprogramma van het rekeningspubliek activeert ](/help/destinations/ui/activate-account-audiences.md). |
 
 {style="table-layout:auto"}
 
-**Correcties en verhogingen** {#destinations-fixes-and-enhancements}
+**Opgeloste problemen en verbeteringen** {#destinations-fixes-and-enhancements}
 
 Voor meer algemene informatie over bestemmingen, raadpleegt u het [overzicht van bestemmingen](../../destinations/home.md).
 

@@ -6,7 +6,7 @@ product: experience platform
 type: Documentation
 description: Meer informatie over het standaardgebruik en de tarieflimieten van gegevensactivering.
 exl-id: a755f224-3329-42d6-b8a9-fadcf2b3ca7b
-source-git-commit: 818d751996cb84440f620ada50c6e6ec33cff40d
+source-git-commit: 2d640b282feb783694276c69366b1fccadddfd78
 workflow-type: tm+mt
 source-wordcount: '1661'
 ht-degree: 1%
@@ -53,7 +53,7 @@ De hieronder gidsen zijn over het algemeen van toepassing op activering door [ a
 | Maximumaantal kenmerken dat aan een doel is toegewezen | 50 | Prestatiegerichting | In het geval van verschillende bestemmingen en bestemmingstypen kunt u profielkenmerken en identiteiten selecteren die u wilt toewijzen voor export. Voor optimale prestaties, zou een maximum van 50 attributen in een dataflow aan een bestemming moeten worden in kaart gebracht. |
 | Maximum aantal bestemmingen | 100 | Door het systeem afgedwongen geleiding | U kunt een maximum van 100 bestemmingen tot stand brengen dat u gegevens kunt verbinden en activeren aan, *per zandbak*. [ de verpersoonlijkingsbestemmingen van Edge (de verpersoonlijking van de Douane) ](#edge-destinations-activation) kan omhoog een maximum van 10 van de 100 geadviseerde bestemmingen maken. |
 | Type gegevens die op bestemmingen worden geactiveerd | Profielgegevens, inclusief identiteiten en identiteitskaarten | Door het systeem afgedwongen geleiding | Momenteel, is het slechts mogelijk om *attributen van het profielverslag* naar bestemmingen uit te voeren. XDM-kenmerken die gebeurtenisgegevens beschrijven, worden momenteel niet ondersteund voor exporteren. |
-| Type gegevens geactiveerd voor doelen - ondersteuning voor array- en kaartkenmerken | Gedeeltelijk beschikbaar | Door het systeem afgedwongen geleiding | U kunt serieattributen naar [ op dossier-gebaseerde bestemmingen ](/help/destinations/destination-types.md#file-based) uitvoeren. [Lees meer](/help/destinations/ui/export-arrays-calculated-fields.md) over de nieuwe functionaliteit. |
+| Type gegevens geactiveerd voor doelen - ondersteuning voor array- en kaartkenmerken | Gedeeltelijk beschikbaar | Door het systeem afgedwongen geleiding | U kunt serieattributen naar [ op dossier-gebaseerde bestemmingen ](/help/destinations/destination-types.md#file-based) uitvoeren. [Lees meer](/help/destinations/ui/export-arrays-maps-objects.md) over de nieuwe functionaliteit. |
 
 {style="table-layout:auto"}
 

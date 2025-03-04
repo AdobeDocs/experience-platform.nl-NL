@@ -2,9 +2,10 @@
 title: Transformaties uitvoeren op gegevens die naar cloudopslagbestemmingen worden geëxporteerd met berekende velden
 type: Tutorial
 description: Begrijp hoe te om de berekende gebiedsfunctionaliteit te gebruiken om transformaties op gegevens uit te voeren die naar de bestemmingen van de wolkenopslag worden uitgevoerd
-source-git-commit: 6122ddc078101c26061e8662de3fcdcb1cb65992
+exl-id: 1e14f964-4c03-4d0c-be8d-c3dcb48a335a
+source-git-commit: 14c672ef57e0b0247020075552c782ed18db8484
 workflow-type: tm+mt
-source-wordcount: '1579'
+source-wordcount: '1574'
 ht-degree: 0%
 
 ---
@@ -15,8 +16,15 @@ ht-degree: 0%
 >id="platform_destinations_export_arrays_flat_files"
 >title="Berekende velden toevoegen"
 >abstract="<p>Gebruik **voegt berekende gebied** controle toe om diverse gegevenstransformaties op gegevens uit te voeren die naar de bestemmingen van de wolkenopslag worden uitgevoerd. U kunt bijvoorbeeld hashing toepassen op gegevens, arrays samenvoegen tot tekenreeksen, enzovoort."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/export-arrays-calculated-fields.html#examples" text="Voorbeelden"
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/export-arrays-calculated-fields.html#known-limitations" text="Bekende beperkingen"
+
+<!--
+
+disable additional URLs for a while
+
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/export-arrays-maps-objects.html#examples" text="Examples"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/export-arrays-maps-objects.html#known-limitations" text="Known limitations"
+
+-->
 
 >[!AVAILABILITY]
 >
@@ -31,7 +39,7 @@ Voor het uitvoeren van verschillende transformaties op gegevens die naar de best
 
 Berekende velden gebruiken voor gegevenstransformaties:
 
-1. [ verbind ](/help/destinations/ui/connect-destination.md) met een gewenste bestemming van de wolkenopslag. Wanneer het verbinden met de gewenste wolkenbestemming, knevel de **[!UICONTROL Export arrays, maps, objects]** [ optie weg ](/help/destinations/ui/export-arrays-calculated-fields.md##export-arrays-maps-objects-toggle).
+1. [ verbind ](/help/destinations/ui/connect-destination.md) met een gewenste bestemming van de wolkenopslag. Wanneer het verbinden met de gewenste wolkenbestemming, knevel de **[!UICONTROL Export arrays, maps, objects]** [ optie weg ](/help/destinations/ui/export-arrays-maps-objects.md##export-arrays-maps-objects-toggle).
 2. Ga door de [ activeringsstappen voor de bestemmingen van de wolkenopslag ](/help/destinations/ui/activate-batch-profile-destinations.md) en krijg aan de [ kaartings ](/help/destinations/ui/activate-batch-profile-destinations.md#mapping) stap.
 
 ## Werken met berekende velden {#how-to-export-calculated-fields}
@@ -50,7 +58,7 @@ Selecteer **[!UICONTROL Add calculated field]** in de toewijzingsstap van de act
 
 >[!TIP]
 >
->Het besturingselement **[!UICONTROL Add calculated field]** is uitgeschakeld voor doelverbindingen waarvoor het besturingselement **[!UICONTROL Export arrays, maps, and objects]** is uitgeschakeld. [Meer informatie](/help/destinations/ui/export-arrays-calculated-fields.md#export-arrays-maps-objects-toggle).
+>Het besturingselement **[!UICONTROL Add calculated field]** is uitgeschakeld voor doelverbindingen waarvoor het besturingselement **[!UICONTROL Export arrays, maps, and objects]** is uitgeschakeld. [Meer informatie](/help/destinations/ui/export-arrays-maps-objects.md#export-arrays-maps-objects-toggle).
 
 ![ voeg berekend gebied toe dat in de afbeeldingsstap van het werkschema van de partijactivering wordt benadrukt.](/help/destinations/assets/ui/export-arrays-calculated-fields/add-calculated-fields.png)
 
