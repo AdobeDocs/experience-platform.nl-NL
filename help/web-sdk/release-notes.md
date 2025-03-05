@@ -3,9 +3,9 @@ title: Opmerkingen bij de release Adobe Experience Platform Web SDK
 description: De nieuwste aanvullende informatie voor de Adobe Experience Platform Web SDK.
 keywords: Adobe Experience Platform Web SDK;Platform Web SDK;Web SDK;release notes;
 exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
-source-git-commit: 5bf69773d0502185bbe8db3b13cb2684d6d06ac4
+source-git-commit: 8fd86a170433c4eb07a7370dbd3aa2cb3ef10922
 workflow-type: tm+mt
-source-wordcount: '2149'
+source-wordcount: '2285'
 ht-degree: 5%
 
 ---
@@ -16,6 +16,18 @@ ht-degree: 5%
 In dit document worden de opmerkingen bij de release voor de Adobe Experience Platform Web SDK besproken.
 Voor de recentste versienota&#39;s op de de markeringsuitbreiding van SDK van het Web, zie de [ nota&#39;s van de de marktextensie van SDK van het Web ](../tags/extensions/client/web-sdk/web-sdk-ext-release-notes.md).
 
+## Versie 2.26.0 - 5 maart 2025
+
+**Nieuwe functies**
+
+- U kunt nu het Web SDK NPM-pakket gebruiken om aangepaste Web SDK-builds te maken en alleen de bibliotheekcomponenten te selecteren die u nodig hebt. Dit leidt tot een vermindering van de bibliotheekgrootte en geoptimaliseerde laadtijden. Zie de documentatie op hoe te [ tot een douaneSDK van het Web leiden gebruikend het pakket NPM ](install/create-custom-build.md).
+- De opdracht [`getIdentity`](commands/getidentity.md) leest de ECID nu automatisch rechtstreeks vanuit het `kndctr` -identiteitscookie. Als u `getIdentity` aanroept met de naamruimte `ECID` en er al een identiteitscookie is, vraagt Web SDK de Edge Network niet langer om de identiteit op te halen. Het leest nu de identiteit uit het cookie.
+
+**Bevestigingen en verbeteringen**
+
+- Probleem verholpen waarbij met `getIdentity` -opdrachten de identiteit niet werd geretourneerd nadat een `collect` -aanroep was verzonden.
+- Probleem verholpen waarbij het omleiden van inhoud tot flikkering leidde voordat de omleiding plaatsvond.
+
 ## Versie 2.25.0 - vrijdag 23 januari 2025
 
 **Vaste en verbeteringen**
@@ -24,7 +36,7 @@ Voor de recentste versienota&#39;s op de de markeringsuitbreiding van SDK van he
 - Er is een waarschuwing toegevoegd tijdens het configureren van een functie `onBeforeLinkClickSend` of een koppelingskwalificatie voor downloadkoppelingen wanneer de functie voor klikken is uitgeschakeld.
 - Probleem verholpen waarbij gerenderde voorstellingen niet waren opgenomen in weergavemeldingen.
 
-**Nieuwe Eigenschappen**
+**Nieuwe functies**
 
 - Implementeerde een fallback naar het geconfigureerde Edge-domein wanneer cookies van derden zijn ingeschakeld en aanvragen naar adobedc.demdex.net worden geblokkeerd.
 
@@ -45,8 +57,8 @@ Voor de recentste versienota&#39;s op de de markeringsuitbreiding van SDK van he
 **Bevestigingen en verbeteringen**
 
 - Wanneer meerdere in-app berichten worden geretourneerd, wordt alleen de berichten met de hoogste prioriteit weergegeven. De andere bestanden worden opgenomen als onderdrukt.
-- Lege gegevensstroomoverschrijvingen worden niet meer verzonden naar de Edge Network, waardoor potentiële conflicten met server-side routeringsconfiguraties worden verminderd.
-- De naam van de volgende logboekberichtcomponentennamen is gewijzigd, zodat deze kunnen worden uitgelijnd met andere Adobe-SDK&#39;s:
+- Lege gegevensstroomoverschrijvingen worden niet meer naar de Edge Network verzonden, waardoor potentiële conflicten met de routeringsconfiguraties aan de serverzijde worden verminderd.
+- De naam van de volgende logboekberichtcomponentnamen is gewijzigd, zodat deze kunnen worden uitgelijnd met andere Adobe SDK&#39;s:
    - `DecisioningEngine` is hernoemd naar `RulesEngine`
    - `LegacyMediaAnalytics` is hernoemd naar `MediaAnalyticsBridge`
    - `Privacy` is hernoemd naar `Consent`
@@ -145,7 +157,7 @@ Voor de recentste versienota&#39;s op de de markeringsuitbreiding van SDK van he
 
 **Bevestigingen en verbeteringen**
 
-- SDK van het Web codeert nu de de bestemmingswaarden van het koekje van de Audience Manager, gelijkend op de [ Data Integration Library (DIL) ](https://experienceleague.adobe.com/docs/audience-manager/user-guide/dil-api/dil-overview.html).
+- SDK van het Web codeert nu de het koekjesbestemmingswaarden van Audience Manager, gelijkend op [ Data Integration Library (DIL) ](https://experienceleague.adobe.com/docs/audience-manager/user-guide/dil-api/dil-overview.html).
 
 ## Versie 2.16.0 - 25 april 2023
 
@@ -172,7 +184,7 @@ Voor de recentste versienota&#39;s op de de markeringsuitbreiding van SDK van he
 **Bevestigingen en verbeteringen**
 
 - Probleem verholpen met aangepaste code-acties voor Adobe Target VEC waarbij de code op een andere locatie werd geïnjecteerd dan met [!DNL at.js] .
-- Probleem verholpen waarbij de koptekst van de &quot;referentie&quot; in sommige randgevallen niet correct was ingesteld op aanvragen bij de Edge Network.
+- Probleem verholpen waarbij in sommige randgevallen de koptekst van de &quot;referentie&quot; niet correct was ingesteld bij aanvragen bij de Edge Network.
 - Vaste een kwestie waar [ de wenk van de gebruikersagent ](/help/web-sdk/use-cases/client-hints.md) eigenschappen aan een onjuist type konden worden geplaatst.
 - Correctie van een probleem waarbij `placeContext.localTime` niet overeenkwam met het schema.
 
@@ -187,7 +199,7 @@ Voor de recentste versienota&#39;s op de de markeringsuitbreiding van SDK van he
 
 - Toegevoegde steun voor [ Pagina door Volledige Migratie van de Pagina ](home.md#migrating-to-web-sdk). Het Adobe Target-profiel blijft nu behouden wanneer een bezoeker zich tussen de pagina&#39;s at.js en Web SDK verplaatst.
 - Toegevoegde configureerbare steun voor [ high entropy gebruiker-Agent de Hints van de Cliënt ](/help/web-sdk/use-cases/client-hints.md).
-- Extra ondersteuning voor de opdracht [`applyResponse`](/help/web-sdk/commands/applyresponse.md) . Dit laat hybride verpersoonlijking via de [ Server API van de Edge Network ](../server-api/overview.md) toe.
+- Extra ondersteuning voor de opdracht [`applyResponse`](/help/web-sdk/commands/applyresponse.md) . Dit laat hybride verpersoonlijking via de [ Server API van Edge Network ](../server-api/overview.md) toe.
 - Koppelingen in de QA-modus werken nu op meerdere pagina&#39;s.
 
 **Bevestigingen en verbeteringen**
@@ -215,7 +227,7 @@ Voor de recentste versienota&#39;s op de de markeringsuitbreiding van SDK van he
 
 - Bijgewerkte cookie-instellingen die moeten worden gebruikt `sameSite="none"` en `secure` markering op [!DNL HTTPS] pagina&#39;s.
 - Correctie van een probleem waarbij gepersonaliseerde inhoud niet correct werd toegepast bij gebruik van de pseudo-kiezer van `eq` .
-- Het probleem waarbij `localTimezoneOffset` de validatie van het Experience Platform kon mislukken, is opgelost.
+- Correctie van een probleem waarbij `localTimezoneOffset` de validatie van Experience Platform kon mislukken.
 
 ## Versie 2.10.1 - woensdag 3 mei 2022
 
@@ -232,7 +244,7 @@ Voor de recentste versienota&#39;s op de de markeringsuitbreiding van SDK van he
 - De gebeurtenis view-change is geoptimaliseerd voor toepassingen op één pagina. Het weergavebericht wordt nu opgenomen in de gebeurtenis view-change wanneer persoonlijke ervaringen worden weergegeven.
 - Waarschuwing van console is verwijderd als er geen `eventType` aanwezig is.
 - Probleem verholpen waarbij de eigenschap `propositions` alleen werd geretourneerd van een `sendEvent` -opdracht wanneer er ervaringen werden opgevraagd of opgehaald uit de cache. De eigenschap `propositions` wordt nu altijd gedefinieerd als een array.
-- Probleem verholpen waarbij verborgen containers niet werden weergegeven als er een fout was geretourneerd van de Edge Network.
+- Probleem verholpen waarbij verborgen containers niet werden weergegeven als er een fout was geretourneerd door de Edge Network.
 - Probleem verholpen waarbij de interactieve gebeurtenissen niet in Adobe Target werden meegeteld. Dit probleem is opgelost door de weergavenaam toe te voegen aan de XDM op web.webPageDetails.viewName.
 - Los gebroken documentatiekoppelingen in consoleberichten op.
 
@@ -240,7 +252,7 @@ Voor de recentste versienota&#39;s op de de markeringsuitbreiding van SDK van he
 
 - Ondersteuning voor schaduw-DOM-kiezers voor personalisatie.
 - Naam gewijzigd in gebeurtenistypen voor personalisatie. (`display` en `click` worden `decisioning.propositionDisplay` en `decisioning.propositionInteract`)
-- Probleem verholpen waarbij HTML-aanbiedingen met inlinescripttags de scripttags twee keer aan de pagina hebben toegevoegd, ook al werd het script slechts één keer uitgevoerd.
+- Probleem verholpen waarbij HTML-aanbiedingen met inline scripttags de scripttags twee keer aan de pagina toevoegden, ook al werd het script slechts één keer uitgevoerd.
 
 ## Versie 2.7.0 - woensdag 26 oktober 2021
 
@@ -248,7 +260,7 @@ Voor de recentste versienota&#39;s op de de markeringsuitbreiding van SDK van he
 
 ## Versie 2.6.4 - 7 september 2021
 
-- Probleem verholpen waarbij de HTML Adobe Target-acties die waren ingesteld op het `head` -element de volledige `head` -inhoud hadden vervangen. Stel nu HTML-handelingen in die worden toegepast op het `head` -element, en die worden gewijzigd in HTML toevoegen.
+- Probleem verholpen waarbij de volledige `head` -inhoud werd vervangen door HTML Adobe Target-handelingen die waren ingesteld op het `head` -element. Stel nu HTML-handelingen in die worden toegepast op het element `head` , en die worden gewijzigd in HTML toevoegen.
 
 ## Versie 2.6.3 - 16 augustus 2021
 
@@ -281,8 +293,8 @@ Voor de recentste versienota&#39;s op de de markeringsuitbreiding van SDK van he
 - Er wordt nu een XDM-schemaveldgroep gebruikt in plaats van `meta.personalization` bij het verzenden van gebeurtenissen over gepersonaliseerde inhoud die wordt gerenderd of waarop wordt geklikt.
 - De opdracht [`getIdentity`](/help/web-sdk/commands/getidentity.md) retourneert nu de id van het randgebied naast de identiteit.
 - Waarschuwingen en fouten die van de server zijn ontvangen, zijn verbeterd en worden op een geschiktere manier afgehandeld.
-- Toegevoegde ondersteuning voor de norm Consent 2.0 van de Adobe voor de opdracht [`setConsent`](/help/web-sdk/commands/setconsent.md) .
-- Wanneer u de voorkeuren voor toestemming ontvangt, worden deze gehashed en opgeslagen in lokale opslag voor een geoptimaliseerde integratie tussen CMP&#39;s, Platform Web SDK en Platform Edge Network. Als u toestemmingsvoorkeur verzamelt, moedigen wij u nu aan om `setConsent` op elke paginading te roepen.
+- Toegevoegde ondersteuning voor de Adobe-standaard Goedkeuring 2.0 voor de opdracht [`setConsent`](/help/web-sdk/commands/setconsent.md) .
+- Wanneer u de voorkeuren voor toestemming ontvangt, worden deze gehasht en lokaal opgeslagen voor een geoptimaliseerde integratie tussen CMP&#39;s, Platform Web SDK en Platform Edge Network. Als u toestemmingsvoorkeur verzamelt, moedigen wij u nu aan om `setConsent` op elke paginading te roepen.
 - Twee [ controlerende haken ](https://github.com/adobe/alloy/wiki/Monitoring-Hooks), `onCommandResolved` en `onCommandRejected`, zijn toegevoegd.
 - Bug Fix: de gebeurtenissen van het de interactiebericht van Personalization zouden dubbele informatie over de zelfde activiteit bevatten wanneer een gebruiker aan een nieuwe single-page toepassingsmening, terug naar de originele mening navigeerde, en een element in aanmerking voor omzetting klikte.
 - Opgeloste problemen: als voor de eerste gebeurtenis die door de SDK wordt verzonden `documentUnloading` is ingesteld op `true` , [`sendBeacon` ](https://developer.mozilla.org/en-US/docs/Web/API/Navigator/sendBeacon) , wordt de gebeurtenis verzonden, wat resulteert in een fout met betrekking tot een identiteit die niet wordt vastgesteld.
@@ -295,7 +307,7 @@ Voor de recentste versienota&#39;s op de de markeringsuitbreiding van SDK van he
 - Bug Fix: `sendBeacon` werd niet gebruikt toen `documentUnloading` was ingesteld op `true` of wanneer de koppelingenklikken automatisch werden bijgehouden.
 - Bug Fix: Een koppeling wordt niet automatisch bijgehouden als het ankerelement HTML-inhoud bevat.
 - Bug Fix: Bepaalde browserfouten die een alleen-lezen `message` eigenschap bevatten, zijn niet correct verwerkt, waardoor een andere fout aan de klant wordt gemeld.
-- Bug Fix: Als de SDK binnen een iframe wordt uitgevoerd, treedt een fout op als de HTML-pagina van het iframe afkomstig is uit een ander subdomein dan de HTML-pagina van het bovenliggende venster.
+- Bug Fix: Als de SDK binnen een iframe wordt uitgevoerd, treedt een fout op als de HTML-pagina van het iframe zich in een ander subdomein bevindt dan de HTML-pagina van het bovenliggende venster.
 
 ## Versie 2.2.0 - oktober 2020
 

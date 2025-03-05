@@ -2,9 +2,9 @@
 title: Opmerkingen bij de release Adobe Experience Platform Web SDK
 description: Adobe Experience Platform Web SDK-tagextensie
 exl-id: 91de8c91-023a-45b6-9f67-ac75ee471e50
-source-git-commit: 5bf69773d0502185bbe8db3b13cb2684d6d06ac4
+source-git-commit: 8fd86a170433c4eb07a7370dbd3aa2cb3ef10922
 workflow-type: tm+mt
-source-wordcount: '2400'
+source-wordcount: '2567'
 ht-degree: 5%
 
 ---
@@ -12,6 +12,19 @@ ht-degree: 5%
 # Opmerkingen bij de release Adobe Experience Platform Web SDK
 
 In dit document worden de releaseopmerkingen voor de Adobe Experience Platform Web SDK-tagextensie besproken. Voor de recentste versienota&#39;s op SDK zelf, zie de [ de versienota&#39;s van SDK van het Web van het Platform ](/help/web-sdk/release-notes.md).
+
+## Versie 2.29.0 - 5 maart 2025
+
+**Nieuwe functies**
+
+- U kunt nu aangepaste Web SDK-builds maken en de benodigde componenten kiezen in de gebruikersinterface voor de tagextensie. Dit kan in kleinere bouwstijlen resulteren door ongebruikte componenten uit te sluiten. Zie de documentatie bij [ het creëren van een SDK van het douaneWeb bouwt ](web-sdk-extension-configuration.md#custom-build).
+- Bevat [ versie 2.26.0 ](../../../../web-sdk/release-notes.md#2-26-0) van het Web SDK van Adobe Experience Platform.
+
+**Bevestigingen en verbeteringen**
+
+- Toegevoegde graceful behandeling van ontbrekende gegevenselementen in [ update veranderlijke ](action-types.md#update-variable) acties. Eerder werd bij het bewerken van een actie voor een updatevariabele met een ontbrekend gegevenselement een foutbericht weergegeven. Nu kunt u een ander gegevenselement kiezen en worden alle instellingen voor de actie voor de updatevariabele nog steeds toegepast. Gegevenselementen kunnen ontbreken als ze worden verwijderd of als een eigenschap Codes wordt gedupliceerd.
+- Toegevoegde steun voor het openen van een nieuw lusje met [ richt met identiteit ](action-types.md#redirect-with-identity) actie opnieuw. Wanneer u de handeling gebruikt, wordt het kenmerk `target` van de ankertag gebruikt wanneer u de browser omleidt.
+- Probleem verholpen waarbij Adobe Audience Manager niet kon worden uitgeschakeld in configuratieoverschrijvingen.
 
 ## Versie 2.28.0 - vrijdag 23 januari 2025
 
@@ -21,7 +34,7 @@ In dit document worden de releaseopmerkingen voor de Adobe Experience Platform W
 - Probleem verholpen waarbij Data Stream config overschrijvingen uitgeschakeld werden tijdens de upgrade naar de meest recente versie.
 - Probleem verholpen waarbij gebruikers de instellingen voor automatisch klikken op doelverzameling niet konden opslaan.
 
-**Nieuwe Eigenschappen**
+**Nieuwe functies**
 
 - Er is een nieuwe functie toegevoegd om te schakelen tussen technische namen en weergavenamen in het XDM-object.
 - Bevat [ versie 2.25.0 ](../../../../web-sdk/release-notes.md#2-25-0) van het Web SDK van Adobe Experience Platform.
@@ -30,7 +43,7 @@ In dit document worden de releaseopmerkingen voor de Adobe Experience Platform W
 
 **Nieuwe functies**
 
-- [ DataStream treedt ](../web-sdk/web-sdk-extension-configuration.md#datastream-overrides) nu montages met voeten om de oplossingen van het Experience Cloud en de diensten van Adobe Experience Platform onbruikbaar te maken.
+- [ DataStream treedt ](../web-sdk/web-sdk-extension-configuration.md#datastream-overrides) nu montages met voeten om de oplossingen van Experience Cloud en de diensten van Adobe Experience Platform onbruikbaar te maken.
 - U kunt [ datastream overschrijvingen ](../web-sdk/web-sdk-extension-configuration.md) voor media zittingen nu tot stand brengen.
 
 Bevat versie 2.24.0 van Adobe Experience Platform Web SDK.
@@ -201,7 +214,7 @@ Bevat versie 2.14.0 van Adobe Experience Platform Web SDK.
 
 ## Versie 2.14.1 - vrijdag 13 oktober 2022
 
-- Probleem verholpen waarbij de Web SDK de id van de Experience Cloud-id-service niet naleeft.
+- Probleem verholpen waarbij de Web SDK de id van de Experience Cloud ID Service niet respecteerde.
 
 Bevat versie 2.13.1 van de Adobe Experience Platform Web SDK Library.
 
@@ -260,7 +273,7 @@ Bevat versie 2.8.0 van de Adobe Experience Platform Web SDK-bibliotheek.
 
 Bevat versie 2.7.0 van de Adobe Experience Platform Web SDK-bibliotheek.
 
-- Aanvullende informatie van de Edge Network is beschikbaar in de gebeurtenis Send Event Complete, inclusief `inferences` en `destinations` . Het formaat van deze eigenschappen kan veranderen aangezien deze eigenschappen momenteel als deel van een Beta uitrollen.
+- Aanvullende informatie van de Edge Network is beschikbaar in de gebeurtenis Send Event Complete, waaronder `inferences` en `destinations` . Het formaat van deze eigenschappen kan veranderen aangezien deze eigenschappen momenteel als deel van een Beta uitrollen.
 
 ## Versie 2.7.3 - 7 september 2021
 
@@ -310,7 +323,7 @@ Bevat versie 2.4.0 van de Adobe Experience Platform Web SDK-bibliotheek.
 - Toegevoegd [ &quot;Document het ontladen&quot;](/help/web-sdk/commands/sendevent/documentunloading.md) checkbox om de actie UI van de Gebeurtenis te verzenden.
 - Toegevoegde steun voor een `out` optie wanneer [ vormend standaardtoestemming ](/help/web-sdk/commands/configure/defaultconsent.md) die alle gebeurtenissen laat vallen tot de toestemming wordt ontvangen (de bestaande `pending` optie maakt gebeurtenissen een rij en verzendt hen zodra de toestemming wordt ontvangen).
 - Knopinfo is toegevoegd aan het veld Standaardtoestemming.
-- Toegevoegde ondersteuning voor de standaard Goedkeuring 2.0 van Adobe bij gebruik van de opdracht [`setConsent`](/help/web-sdk/commands/setconsent.md) .
+- Toegevoegde ondersteuning voor de standaard Adobe toestemming 2.0 bij gebruik van de opdracht [`setConsent`](/help/web-sdk/commands/setconsent.md) .
 - Er wordt nu een betere fout weergegeven in de gebruikersinterface van het XDM Object-gegevenselement als het toegangstoken van de gebruiker ongeldig is of niet correct is ingericht.
 - Probleem verholpen waarbij een kruisoorsprongfout (die geen invloed heeft op de werking van de extensie) is verholpen die tijdens het weergeven van een XDM Object-gegevenselement in de browserontwikkelingsconsole werd weergegeven.
 
