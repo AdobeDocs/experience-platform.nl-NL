@@ -2,9 +2,9 @@
 keywords: Experience Platform;home;populaire onderwerpen;gegevensinvoer;ingesloten gegevens;streaming;overzicht;streaming opname;latentie;streaming latentie;
 solution: Experience Platform
 title: Overzicht van streaming inscriptie
-description: Streaming opname voor Adobe Experience Platform biedt gebruikers een methode om gegevens van client- en serverapparaten in real-time naar het Experience Platform te verzenden.
+description: Streaming opname voor Adobe Experience Platform biedt gebruikers een methode om gegevens van client- en serverapparaten in real-time naar Experience Platform te verzenden.
 exl-id: 851f15fd-7ac5-4a9f-934d-6b907057da87
-source-git-commit: d6424e2a9afc046f4bff329797954fd43939a819
+source-git-commit: 9b2d0c8fad1ed328725129664be94cf1800f6631
 workflow-type: tm+mt
 source-wordcount: '424'
 ht-degree: 0%
@@ -35,15 +35,15 @@ Als u zeker weet dat uw gegevens schoon zijn, kunt u de gegevenssets inschakelen
 
 Voor meer informatie bij het toelaten van een dataset voor [!DNL Profile] en [!DNL Identity Service], te lezen gelieve [ een datasetgids ](../../profile/tutorials/dataset-configuration.md) vormen.
 
-## Wat is de verwachte latentie voor het stromen van opname op Experience Platform?
+## Wat is de verwachte latentie voor het stromen opname op Experience Platform?
 
 >[!IMPORTANT]
 >
 >Hulplijnen voor het opnemen van streaming worden berekend op organisatieniveau en niet op sandboxniveau. Dit betekent dat uw gegevensgebruik per sandbox is gebonden aan de totale gebruiksrechten voor licenties die overeenkomen met uw volledige organisatie. Daarnaast is het gebruik van gegevens in ontwikkelingssandboxen beperkt tot 10% van uw totale profielen. Voor meer informatie over de gebruiksrechten van de vergunning, lees de [ gids van de beste praktijken van het gegevensbeheer ](../../landing/license-usage-and-guardrails/data-management-best-practices.md).
 
-| Doel | Verwachte vertraging |
+| Bestemming | Verwachte vertraging |
 | --------- | ---------------- |
-| Klantprofiel in realtime | &lt; 15 minuten bij het 95e percentiel |
+| Realtime-klantenprofiel | &lt; 15 minuten bij het 95e percentiel |
 | Gegevensmeer | &lt; 60 minuten |
 
 ## Vraag per seconden (RPS) om hulp bij het streamen van opname
@@ -53,7 +53,7 @@ In de onderstaande tabel vindt u een overzicht van de aanvraag per seconden voor
 | RPS-limiet | Notities |
 | --- | --- |
 | 1000 verzoeken per seconde | Deze kunnen meerdere berichten bevatten wanneer het gebruiken van `/collection/batch` eindpunt. |
-| 10000 individuele berichten per seconde | De berichten kunnen in minder daadwerkelijke verzoeken worden gegroepeerd wanneer het gebruiken van het `/collection/batch` eindpunt. |
+| 10000 individuele berichten per seconde | De berichten kunnen in minder daadwerkelijke verzoeken worden gegroepeerd wanneer het gebruiken van het `/collection/` eindpunt. |
 
 >[!IMPORTANT]
 >
@@ -61,4 +61,4 @@ In de onderstaande tabel vindt u een overzicht van de aanvraag per seconden voor
 
 ## Adobe Experience Platform-extensie
 
-Met de Adobe Experience Platform-extensie kunt u een nieuwe streamingverbinding maken. De extensie [!DNL Experience Platform] biedt acties voor het verzenden van bakens die zijn opgemaakt in [!DNL Experience Data Model] (XDM) voor realtime invoer naar [!DNL Experience Platform] . Bezoek de ](../../tags/extensions/client/web-sdk/overview.md) documentatie van de Uitbreiding van het Experience Platform 0} {voor meer informatie.[
+Met de Adobe Experience Platform-extensie kunt u een nieuwe streamingverbinding maken. De extensie [!DNL Experience Platform] biedt acties voor het verzenden van bakens die zijn opgemaakt in [!DNL Experience Data Model] (XDM) voor realtime invoer naar [!DNL Experience Platform] . Bezoek de ](../../tags/extensions/client/web-sdk/overview.md) documentatie van de Uitbreiding van 0} Experience Platform {voor meer informatie.[
