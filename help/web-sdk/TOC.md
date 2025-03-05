@@ -6,10 +6,10 @@ breadcrumb-title: Handleiding voor Web SDK
 user-guide-description: Interactie met Experience Cloud-services via het Edge-netwerk.
 feature: Web SDK
 role: Developer
-source-git-commit: d5bf1b207900009829454d0b7aa095a08c1e1718
+source-git-commit: bed63cb9be1ffe39a538d1c3f8be9065ffb2ca28
 workflow-type: tm+mt
-source-wordcount: '229'
-ht-degree: 19%
+source-wordcount: '239'
+ht-degree: 18%
 
 ---
 
@@ -23,6 +23,7 @@ ht-degree: 19%
    * [Web SDK installeren met de tagextensie](install/extension.md)
    * [Web SDK installeren met de JavaScript-bibliotheek](install/library.md)
    * [De Web SDK installeren met het NPM-pakket](install/npm.md)
+   * [Een aangepaste Web SDK-build maken met behulp van het NPM-pakket](install/create-custom-build.md)
 * Opdrachten {#commands}
    * configure {#configure}
       * [Overzicht](commands/configure/overview.md)
@@ -86,7 +87,7 @@ ht-degree: 19%
          * [Overzicht](personalization/adobe-target/analytics-logging/overview.md)
          * [Logboekregistratie op de client](personalization/adobe-target/analytics-logging/client-side.md)
          * [Logboekregistratie op de server](personalization/adobe-target/analytics-logging/server-side.md)
-   * Offer decisioning {#offer-decisioning}
+   * Offer Decisioning {#offer-decisioning}
       * [Overzicht](personalization/offer-decisioning/offer-decisioning-overview.md)
    * Adobe Journey Optimizer {#ajo}
       * [Overzicht](personalization/ajo/overview.md)
