@@ -1,12 +1,12 @@
 ---
-keywords: Experience Platform;home;populaire onderwerpen;api;API;XDM;XDM systeem;ervaringsgegevensmodel;Experience gegevensmodel;Experience Data Model;Data Model;Schema Register;Schema Register;Descriptor;Descriptors;Descriptors;Identiteit;Vriendelijke naam;Alternatieve naam;AlternateInfo;Referentie;Referentie;Relatie;Relatie
+keywords: Experience Platform;home;populaire onderwerpen;api;API;XDM;XDM-systeem;ervaringsgegevensmodel;Experience gegevensmodel;Experience Data Model;Data Model;Schema Register;Schema Register;Descriptor;Descriptor;Descriptors;Identiteit;Vriendelijke naam;Alternatieve naam;AlternateDisplayInfo;Referentie;relatie;Relatie
 solution: Experience Platform
 title: Descriptors API-eindpunt
 description: Het /descriptors eindpunt in de Registratie API van het Schema staat u toe om XDM beschrijvers binnen uw ervaringstoepassing programmatically te beheren.
 exl-id: bda1aabd-5e6c-454f-a039-ec22c5d878d2
-source-git-commit: 866e00459c66ea4678cd98d119a7451fd8e78253
+source-git-commit: d6015125e3e29bdd6a6c505b5f5ad555bd17a0e0
 workflow-type: tm+mt
-source-wordcount: '1918'
+source-wordcount: '2190'
 ht-degree: 0%
 
 ---
@@ -23,11 +23,11 @@ Met het eindpunt `/descriptors` in de [!DNL Schema Registry] API kunt u beschrij
 
 ## Aan de slag
 
-Het eindpunt dat in deze gids wordt gebruikt maakt deel uit van [[!DNL Schema Registry]  API ](https://developer.adobe.com/experience-platform-apis/references/schema-registry/). Alvorens verder te gaan, te herzien gelieve [ begonnen gids ](./getting-started.md) voor verbindingen aan verwante documentatie, een gids aan het lezen van de steekproefAPI vraag in dit document, en belangrijke informatie betreffende vereiste kopballen die nodig zijn om vraag aan om het even welk Experience Platform API met succes te maken.
+Het eindpunt dat in deze gids wordt gebruikt maakt deel uit van [[!DNL Schema Registry]  API ](https://developer.adobe.com/experience-platform-apis/references/schema-registry/). Alvorens verder te gaan, te herzien gelieve [ begonnen gids ](./getting-started.md) voor verbindingen aan verwante documentatie, een gids aan het lezen van de steekproefAPI vraag in dit document, en belangrijke informatie betreffende vereiste kopballen die nodig zijn om vraag aan om het even welke Experience Platform API met succes te maken.
 
 ## Een lijst met descriptoren ophalen {#list}
 
-U kunt alle beschrijvingen weergeven die door uw organisatie zijn gedefinieerd door een aanvraag voor een GET in te dienen bij `/tenant/descriptors` .
+U kunt alle beschrijvingen weergeven die door uw organisatie zijn gedefinieerd door een GET-aanvraag in te dienen bij `/tenant/descriptors` .
 
 **API formaat**
 
@@ -86,7 +86,7 @@ Wanneer u de header `link` `Accept` gebruikt, wordt elke descriptor weergegeven 
 
 ## Een descriptor opzoeken {#lookup}
 
-Als u de details van een specifieke descriptor wilt bekijken, kunt u een afzonderlijke descriptor opzoeken (GET) met de bijbehorende `@id` .
+Als u de details van een specifieke descriptor wilt bekijken, kunt u een afzonderlijke descriptor opzoeken (GET) met behulp van de bijbehorende `@id` .
 
 **API formaat**
 
@@ -139,7 +139,7 @@ Een geslaagde reactie retourneert de details van de descriptor, inclusief de `@t
 
 ## Een descriptor maken {#create}
 
-U kunt een nieuwe beschrijver tot stand brengen door een verzoek van de POST aan het `/tenant/descriptors` eindpunt te doen.
+U kunt een nieuwe descriptor maken door een POST-aanvraag in te dienen bij het eindpunt van `/tenant/descriptors` .
 
 >[!IMPORTANT]
 >
@@ -215,7 +215,7 @@ Met dit verzoek wordt in feite de descriptor herschreven, zodat de aanvraaginsta
 
 >[!IMPORTANT]
 >
->Net als bij het maken van beschrijvingen met behulp van POST-aanvragen, vereist elk descriptortype dat de eigen specifieke velden worden verzonden in de ladingen voor verzoeken om PUT. Zie [ bijlage ](#defining-descriptors) voor een volledige lijst van beschrijvers en de gebieden noodzakelijk om hen te bepalen.
+>Net als bij het maken van beschrijvingen met POST-aanvragen, vereist elk descriptortype dat de eigen specifieke velden worden verzonden in PUT-aanvraagladingen. Zie [ bijlage ](#defining-descriptors) voor een volledige lijst van beschrijvers en de gebieden noodzakelijk om hen te bepalen.
 
 In het volgende voorbeeld wordt een identiteitsdescriptor bijgewerkt om naar een andere `xdm:sourceProperty` (`mobile phone` ) te verwijzen en wordt de waarde `xdm:namespace` in `Phone` gewijzigd.
 
@@ -248,11 +248,11 @@ Een geslaagde reactie retourneert HTTP-status 201 (Gemaakt) en de `@id` van de b
 }
 ```
 
-Het uitvoeren van a [ raadpleging (GET) verzoek ](#lookup) om de beschrijver te bekijken toont aan dat de gebieden nu zijn bijgewerkt om op de veranderingen te wijzen die in het verzoek van de PUT worden verzonden.
+Het uitvoeren van het verzoek van de a [ raadpleging (GET) ](#lookup) om de beschrijver te bekijken toont aan dat de gebieden nu zijn bijgewerkt om op de veranderingen te wijzen die in het verzoek van PUT worden verzonden.
 
 ## Een descriptor verwijderen {#delete}
 
-Soms moet u een descriptor verwijderen die u in de [!DNL Schema Registry] hebt gedefinieerd. Dit wordt gedaan door een verzoek van de DELETE te doen van verwijzingen `@id` van de beschrijver die u wenst te verwijderen.
+Soms moet u een descriptor verwijderen die u in de [!DNL Schema Registry] hebt gedefinieerd. Hiervoor doet u een DELETE-aanvraag die verwijst naar `@id` van de descriptor die u wilt verwijderen.
 
 **API formaat**
 
@@ -369,7 +369,7 @@ Met beschrijvingen van vriendschappelijke namen kan een gebruiker de waarden `ti
 
 {style="table-layout:auto"}
 
-#### Relatiebeschrijving
+#### Relatiebeschrijving {#relationship-descriptor}
 
 Relationship-descriptors beschrijven een relatie tussen twee verschillende schema&#39;s, die u hebt afgesloten op de eigenschappen die worden beschreven in `sourceProperty` en `destinationProperty` . Zie het leerprogramma op [ bepalend een verband tussen twee schema&#39;s ](../tutorials/relationship-api.md) voor meer informatie.
 
@@ -389,13 +389,49 @@ Relationship-descriptors beschrijven een relatie tussen twee verschillende schem
 
 | Eigenschap | Beschrijving |
 | --- | --- |
-| `@type` | Het type descriptor dat wordt gedefinieerd. Voor een relatiebeschrijver, moet deze waarde aan `xdm:descriptorOneToOne` worden geplaatst. |
+| `@type` | Het type descriptor dat wordt gedefinieerd. Voor een relatiebeschrijver, moet deze waarde aan `xdm:descriptorOneToOne` worden geplaatst, tenzij u toegang tot Real-Time CDP B2B edition hebt. Met B2B edition kunt u `xdm:descriptorOneToOne` of [`xdm:descriptorRelationship`](#b2b-relationship-descriptor) gebruiken. |
 | `xdm:sourceSchema` | De `$id` URI van het schema waarin de descriptor wordt gedefinieerd. |
 | `xdm:sourceVersion` | De belangrijkste versie van het bronschema. |
-| `xdm:sourceProperty` | Pad naar het veld in het bronschema waar de relatie wordt gedefinieerd. Moet beginnen met een &quot;/&quot; en niet eindigen met een &quot;/&quot;. Plaats geen &quot;eigenschappen&quot; in het pad (bijvoorbeeld &quot;/PersonalEmail/address&quot; in plaats van &quot;/properties/PersonalEmail/properties/address&quot;). |
+| `xdm:sourceProperty` | Pad naar het veld in het bronschema waar de relatie wordt gedefinieerd. Moet beginnen met een &quot;/&quot; en niet eindigen met &quot;/&quot;. Plaats geen &quot;eigenschappen&quot; in het pad (bijvoorbeeld &quot;/PersonalEmail/address&quot; in plaats van &quot;/properties/PersonalEmail/properties/address&quot;). |
 | `xdm:destinationSchema` | De `$id` URI van het verwijzingsschema deze beschrijver bepaalt een verhouding met. |
 | `xdm:destinationVersion` | De belangrijkste versie van het referentieschema. |
-| `xdm:destinationProperty` | Optioneel pad naar een doelveld binnen het referentieschema. Als deze eigenschap wordt weggelaten, wordt het doelveld afgeleid van velden die een overeenkomende ID-descriptor bevatten (zie hieronder). |
+| `xdm:destinationProperty` | (Optioneel) Pad naar een doelveld binnen het referentieschema. Als deze eigenschap wordt weggelaten, wordt het doelveld afgeleid van velden die een overeenkomende ID-descriptor bevatten (zie hieronder). |
+
+{style="table-layout:auto"}
+
+##### B2B-relatiebeschrijving {#B2B-relationship-descriptor}
+
+De Real-Time CDP B2B edition introduceert een alternatieve manier om relaties tussen schema&#39;s te definiëren, die vele-op-één relaties mogelijk maakt. Deze nieuwe relatie moet het `@type: xdm:descriptorRelationship` type hebben en de lading moet meer gebieden dan de `@type: xdm:descriptorOneToOne` verhouding omvatten. Zie het leerprogramma op [ bepalend een schemaverhouding voor B2B edition ](../tutorials/relationship-b2b.md) voor meer informatie.
+
+```json
+{
+   "@type": "xdm:descriptorRelationship",
+   "xdm:sourceSchema" : "https://ns.adobe.com/{TENANT_ID}/schemas/9f2b2f225ac642570a110d8fd70800ac0c0573d52974fa9a",
+   "xdm:sourceVersion" : 1,
+   "xdm:sourceProperty" : "/person-ref",
+   "xdm:destinationSchema" : "https://ns.adobe.com/{TENANT_ID/schemas/628427680e6b09f1f5a8f63ba302ee5ce12afba8de31acd7",
+   "xdm:destinationVersion" : 1,
+   "xdm:destinationProperty": "/personId",
+   "xdm:destinationNamespace" : "People", 
+   "xdm:destinationToSourceTitle" : "Opportunity Roles",
+   "xdm:sourceToDestinationTitle" : "People",
+   "xdm:cardinality": "M:1"
+}
+```
+
+| Eigenschap | Beschrijving |
+| --- | --- |
+| `@type` | Het type descriptor dat wordt gedefinieerd. Voor gebruik met de volgende velden moet de waarde worden ingesteld op `xdm:descriptorRelationship` . Voor informatie over extra types, zie de [ sectie van de relatiebeschrijvers ](#relationship-descriptor). |
+| `xdm:sourceSchema` | De `$id` URI van het schema waarin de descriptor wordt gedefinieerd. |
+| `xdm:sourceVersion` | De belangrijkste versie van het bronschema. |
+| `xdm:sourceProperty` | Pad naar het veld in het bronschema waar de relatie wordt gedefinieerd. Moet beginnen met een &quot;/&quot; en niet eindigen met &quot;/&quot;. Plaats geen &quot;eigenschappen&quot; in het pad (bijvoorbeeld &quot;/PersonalEmail/address&quot; in plaats van &quot;/properties/PersonalEmail/properties/address&quot;). |
+| `xdm:destinationSchema` | De `$id` URI van het verwijzingsschema deze beschrijver bepaalt een verhouding met. |
+| `xdm:destinationVersion` | De belangrijkste versie van het referentieschema. |
+| `xdm:destinationProperty` | (Optioneel) Pad naar een doelveld binnen het referentieschema, dat de primaire id van het schema moet zijn. Als deze eigenschap wordt weggelaten, wordt het doelveld afgeleid van velden die een overeenkomende ID-descriptor bevatten (zie hieronder). |
+| `xdm:destinationNamespace` | De naamruimte van de primaire id vanuit het referentieschema. |
+| `xdm:destinationToSourceTitle` | De vertoningsnaam van de verhouding van het verwijzingsschema aan het bronschema. |
+| `xdm:sourceToDestinationTitle` | De vertoningsnaam van de verhouding van het bronschema aan het verwijzingsschema. |
+| `xdm:cardinality` | De samengevoegde relatie tussen de schema&#39;s. Deze waarde moet worden ingesteld op `M:1` . Hierbij wordt verwezen naar een vele-op-één relatie. |
 
 {style="table-layout:auto"}
 
