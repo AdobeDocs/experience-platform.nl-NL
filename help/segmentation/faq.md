@@ -2,9 +2,9 @@
 title: Publiek Veelgestelde vragen
 description: Ontdek antwoorden op veelgestelde vragen over publiek en andere op segmentatie betrekking hebbende concepten.
 exl-id: 79d54105-a37d-43f7-adcb-97f2b8e4249c
-source-git-commit: 4afb2c76f2022423e8f1fa29c91d02b43447ba90
+source-git-commit: 16ffdd0e28687c04b4b8a2b33f10ddceea9ec03a
 workflow-type: tm+mt
-source-wordcount: '4810'
+source-wordcount: '4812'
 ht-degree: 0%
 
 ---
@@ -83,7 +83,7 @@ Het organisatiespecifieke standaard samenvoegingsbeleid wordt automatisch toegep
 
 ### Waar kan ik extern gegenereerde publiek activeren?
 
-Een extern gegenereerd publiek kan aan elke bestemming worden toegewezen en kan in Adobe Journey Optimizer-campagnes worden gebruikt.
+Een extern gegenereerd publiek kan aan elke bestemming worden toegewezen en kan worden gebruikt in Adobe Journey Optimizer-campagnes en -reizen.
 
 ### Kan ik een extern gegenereerd publiek verwijderen?
 
