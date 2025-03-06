@@ -1,24 +1,22 @@
 ---
-title: Een Amazon Redshift Base-verbinding maken met de Flow Service API
-description: Leer hoe u Adobe Experience Platform verbindt met Amazon Redshift met behulp van de Flow Service API.
-badgeUltimate: label="Ultieme" type="Positive"
+title: Connect AWS Opnieuw overschakelen naar Experience Platform met behulp van de Flow Service API
+description: Leer hoe u Adobe Experience Platform verbindt met AWS Redshift met behulp van de Flow Service API.
+badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 2728ce08-05c9-4dca-af1d-d2d1b266c5d9
-source-git-commit: a7c2c5e4add5c80e0622d5aeb766cec950d79dbb
+source-git-commit: dd9aee1ac887637d4761188d6dbcf55ad5bde407
 workflow-type: tm+mt
-source-wordcount: '500'
+source-wordcount: '721'
 ht-degree: 0%
 
 ---
 
-# Een [!DNL Amazon Redshift] basisverbinding maken met de [!DNL Flow Service] API
+# Verbinding maken met Experience Platform via de [!DNL Flow Service] API[!DNL AWS Redshift]
 
 >[!IMPORTANT]
 >
->De [!DNL Amazon Redshift] -bron is in de broncatalogus beschikbaar voor gebruikers die Real-time Customer Data Platform Ultimate hebben aangeschaft.
+>De [!DNL AWS Redshift] -bron is in de broncatalogus beschikbaar voor gebruikers die Real-Time Customer Data Platform Ultimate hebben aangeschaft.
 
-Een basisverbinding vertegenwoordigt de geverifieerde verbinding tussen een bron en Adobe Experience Platform.
-
-Dit leerprogramma begeleidt u door de stappen om een basisverbinding voor [!DNL Amazon Redshift] tot stand te brengen gebruikend [[!DNL Flow Service]  API ](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+Lees deze gids om te leren hoe u uw [!DNL AWS Redshift] bronrekening met Adobe Experience Platform kunt verbinden gebruikend [[!DNL Flow Service]  API ](https://developer.adobe.com/experience-platform-apis/references/flow-service/).
 
 ## Aan de slag
 
@@ -27,28 +25,29 @@ Deze handleiding vereist een goed begrip van de volgende onderdelen van Adobe Ex
 * [ Bronnen ](../../../../home.md): [!DNL Experience Platform] staat gegevens toe om van diverse bronnen worden opgenomen terwijl het voorzien van u van de capaciteit om, inkomende gegevens te structureren te etiketteren en te verbeteren gebruikend [!DNL Platform] diensten.
 * [ Sandboxen ](../../../../../sandboxes/home.md): [!DNL Experience Platform] verstrekt virtuele zandbakken die één enkele [!DNL Platform] instantie in afzonderlijke virtuele milieu&#39;s verdelen helpen digitale ervaringstoepassingen ontwikkelen en ontwikkelen.
 
-In de volgende secties vindt u aanvullende informatie die u moet weten voordat u verbinding kunt maken met [!DNL Amazon Redshift] via de [!DNL Flow Service] API.
-
-### Vereiste referenties verzamelen
-
-[!DNL Flow Service] kan alleen verbinding maken met [!DNL Amazon Redshift] als u de volgende verbindingseigenschappen opgeeft:
-
-| **Referentie** | **Beschrijving** |
-| -------------- | --------------- |
-| `server` | De server die aan uw [!DNL Amazon Redshift] account is gekoppeld. |
-| `port` | De TCP-poort die een [!DNL Amazon Redshift] -server gebruikt om te luisteren naar clientverbindingen. |
-| `username` | De gebruikersnaam die aan uw [!DNL Amazon Redshift] -account is gekoppeld. |
-| `password` | Het wachtwoord dat aan uw [!DNL Amazon Redshift] account is gekoppeld. |
-| `database` | De [!DNL Amazon Redshift] -database die u opent. |
-| `connectionSpec.id` | De verbindingsspecificatie keert de schakelaareigenschappen van een bron, met inbegrip van authentificatiespecificaties met betrekking tot het creëren van de basis en bronverbindingen terug. De verbindingsspecificatie-id voor [!DNL Amazon Redshift] is `3416976c-a9ca-4bba-901a-1f08f66978ff` . |
-
-Voor meer informatie over begonnen worden, verwijs naar dit [[!DNL Amazon Redshift]  document ](https://docs.aws.amazon.com/redshift/latest/gsg/getting-started.html).
-
 ### Platform-API&#39;s gebruiken
 
 Voor informatie over hoe te om vraag aan Platform APIs met succes te maken, zie de gids op [ begonnen wordt met Platform APIs ](../../../../../landing/api-guide.md).
 
-## Een basisverbinding maken
+## Verbind [!DNL AWS Redshift] met Experience Platform op Azure {#azure}
+
+Lees de onderstaande stappen voor informatie over hoe u uw [!DNL AWS Redshift] -bron kunt verbinden met Experience Platform on Azure.
+
+### Vereiste referenties verzamelen
+
+[!DNL Flow Service] kan alleen verbinding maken met [!DNL AWS Redshift] als u de volgende verbindingseigenschappen opgeeft:
+
+| Credentials | Beschrijving |
+| `server` | De servernaam van de [!DNL AWS Redshift] -instantie. |
+| `port` | De TCP-poort die een [!DNL AWS Redshift] -server gebruikt om te luisteren naar clientverbindingen. |
+| `username` | De gebruikersnaam die aan uw [!DNL AWS Redshift] -account is gekoppeld. |
+| `password` | Het wachtwoord dat overeenkomt met de gebruikersaccount. |
+| `database` | De [!DNL AWS Redshift] -database waaruit gegevens moeten worden opgehaald. |
+| `connectionSpec.id` | De verbindingsspecificatie keert de schakelaareigenschappen van een bron, met inbegrip van authentificatiespecificaties met betrekking tot het creëren van de basis en bronverbindingen terug. De verbindingsspecificatie-id voor [!DNL AWS Redshift] is `3416976c-a9ca-4bba-901a-1f08f66978ff` . |
+
+Voor meer informatie over begonnen worden, verwijs naar dit [[!DNL AWS Redshift]  document ](https://docs.aws.amazon.com/redshift/latest/gsg/new-user-serverless.html).
+
+### Creeer een basisverbinding voor [!DNL AWS Redshift] op Experience Platform op Azure [ #azure-base ]
 
 >[!NOTE]
 >
@@ -56,7 +55,7 @@ Voor informatie over hoe te om vraag aan Platform APIs met succes te maken, zie 
 
 Een basisverbinding behoudt informatie tussen uw bron en Platform, met inbegrip van de de authentificatiegeloofsbrieven van uw bron, de huidige staat van de verbinding, en uw unieke identiteitskaart van de basisverbinding. Met de ID van de basisverbinding kunt u bestanden verkennen en door bestanden navigeren vanuit uw bron en kunt u de specifieke items identificeren die u wilt opnemen, inclusief informatie over hun gegevenstypen en indelingen.
 
-Als u een basis-verbindings-id wilt maken, vraagt u een POST naar het `/connections` -eindpunt en geeft u de [!DNL Amazon Redshift] -verificatiegegevens op als onderdeel van de aanvraagparameters.
+Als u een basis-verbindings-id wilt maken, vraagt u een POST-aanvraag naar het `/connections` -eindpunt en geeft u de [!DNL AWS Redshift] -verificatiegegevens op als onderdeel van de aanvraagparameters.
 
 **API formaat**
 
@@ -66,7 +65,9 @@ POST /connections
 
 **Verzoek**
 
-Met de volgende aanvraag wordt een basisverbinding voor [!DNL Amazon Redshift] gemaakt:
++++Selecteren om voorbeeld weer te geven
+
+Met de volgende aanvraag wordt een basisverbinding voor [!DNL AWS Redshift] gemaakt:
 
 ```shell
 curl -X POST \
@@ -77,8 +78,8 @@ curl -X POST \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -H 'Content-Type: application/json' \
   -d '{
-      "name": "amazon-redshift base connection",
-      "description": "base connection for amazon-redshift,
+      "name": "AWS-redshift base connection",
+      "description": "base connection for AWS-redshift,
       "auth": {
           "specName": "Basic Authentication",
           "params": {
@@ -97,15 +98,19 @@ curl -X POST \
 ```
 
 | Eigenschap | Beschrijving |
-| ------------- | --------------- |
-| `auth.params.server` | Uw [!DNL Amazon Redshift] -server. |
-| `auth.params.port` | De TCP-poort die de [!DNL Amazon Redshift] -server gebruikt om te luisteren naar clientverbindingen. |
-| `auth.params.database` | De database die aan uw [!DNL Amazon Redshift] -account is gekoppeld. |
-| `auth.params.password` | Het wachtwoord dat aan uw [!DNL Amazon Redshift] account is gekoppeld. |
-| `auth.params.username` | De gebruikersnaam die aan uw [!DNL Amazon Redshift] -account is gekoppeld. |
-| `connectionSpec.id` | De [!DNL Amazon Redshift] connection specification ID: `3416976c-a9ca-4bba-901a-1f08f66978ff` |
+| --- | --- |
+| `auth.params.server` | De servernaam van de instantie [!DNL AWS Redshift] . |
+| `auth.params.port` | De TCP-poort die een [!DNL AWS Redshift] -server gebruikt om te luisteren naar clientverbindingen. |
+| `auth.params.username` | De gebruikersnaam die aan uw [!DNL AWS Redshift] -account is gekoppeld. |
+| `auth.params.password` | Het wachtwoord dat overeenkomt met de gebruikersaccount. |
+| `auth.params.database` | De [!DNL AWS Redshift] -database waaruit gegevens moeten worden opgehaald. |
+| `connectionSpec.id` | De [!DNL AWS Redshift] connection specification ID: `3416976c-a9ca-4bba-901a-1f08f66978ff` |
+
++++
 
 **Reactie**
+
++++Selecteren om voorbeeld weer te geven
 
 Een succesvolle reactie keert de pas gecreëerde verbinding, met inbegrip van zijn uniek herkenningsteken (`id`) terug. Deze id is vereist om uw gegevens te kunnen bekijken in de volgende zelfstudie.
 
@@ -116,9 +121,90 @@ Een succesvolle reactie keert de pas gecreëerde verbinding, met inbegrip van zi
 }
 ```
 
++++
+
+## Verbinding maken [!DNL AWS Redshift] met Experience Platform op AWS Web Services (AWS) {#aws}
+
+>[!AVAILABILITY]
+>
+>Deze sectie is op implementaties van Experience Platform van toepassing die op de Diensten van het Web van AWS (AWS) lopen. Experience Platform die op AWS wordt uitgevoerd, is momenteel beschikbaar voor een beperkt aantal klanten. Meer over de gesteunde infrastructuur van Experience Platform leren, zie het [ multi-wolkenoverzicht van Experience Platform ](../../../../../landing/multi-cloud.md).
+
+Lees de onderstaande stappen voor informatie over hoe u uw [!DNL AWS Redshift] -bron kunt verbinden met Experience Platform op AWS.
+
+### Een basisverbinding maken voor [!DNL AWS Redshift] op Experience Platform op AWS {#aws-base}
+
+**API formaat**
+
+```http
+POST /connections
+```
+
+**Verzoek**
+
+Met de volgende aanvraag wordt een basisverbinding voor [!DNL AWS Redshift] gemaakt:
+
++++Selecteren om voorbeeld weer te geven
+
+```shell
+curl -X POST \
+  'https://platform.adobe.io/data/foundation/flowservice/connections' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Content-Type: application/json' \
+  -d '{
+      "name": "AWS Redshift base connection for Experience Platform on AWS",
+      "description": "AWS Redshift base connection for Experience Platform on AWS",
+      "auth": {
+          "specName": "Basic Authentication",
+          "params": {
+              "server": "{SERVER}",
+              "port": "5439",
+              "username": "{USERNAME}",
+              "password": "{PASSWORD}",
+              "database": "{DATABASE}",
+              "schema": "{SCHEMA}"
+          }
+      },
+      "connectionSpec": {
+          "id": "3416976c-a9ca-4bba-901a-1f08f66978ff",
+          "version": "1.0"
+      }
+  }'
+```
+
+| Eigenschap | Beschrijving |
+| --- | --- |
+| `auth.params.server` | De servernaam van de instantie [!DNL AWS Redshift] . |
+| `auth.params.port` | De TCP-poort die een [!DNL AWS Redshift] -server gebruikt om te luisteren naar clientverbindingen. |
+| `auth.params.username` | De gebruikersnaam die aan uw [!DNL AWS Redshift] -account is gekoppeld. |
+| `auth.params.password` | Het wachtwoord dat overeenkomt met de gebruikersaccount. |
+| `auth.params.database` | De [!DNL AWS Redshift] -database waaruit gegevens moeten worden opgehaald. |
+| `auth.params.schema` | De naam van het schema dat aan uw [!DNL AWS Redshift] database is gekoppeld. U moet ervoor zorgen dat de gebruiker u gegevensbestandtoegang tot wilt geven, ook toegang tot dit schema heeft. |
+| `connectionSpec.id` | De [!DNL AWS Redshift] connection specification ID: `3416976c-a9ca-4bba-901a-1f08f66978ff` |
+
++++
+
+**Reactie**
+
+Een succesvolle reactie keert details van de pas gecreëerde verbinding, met inbegrip van zijn uniek herkenningsteken (`id`) terug. Deze id is vereist om uw opslag te verkennen in de volgende zelfstudie.
+
++++Selecteren om voorbeeld weer te geven
+
+```json
+{
+    "id": "4cb0c374-d3bb-4557-b139-5712880adc55",
+    "etag": "\"1700d77b-0000-0200-0000-5e3b41a10000\""
+}
+```
+
++++
+
+
 ## Volgende stappen
 
-Aan de hand van deze zelfstudie hebt u een [!DNL Amazon Redshift] basisverbinding gemaakt met de [!DNL Flow Service] API. U kunt deze basis verbindings-id in de volgende zelfstudies gebruiken:
+Aan de hand van deze zelfstudie hebt u een [!DNL AWS Redshift] basisverbinding gemaakt met de [!DNL Flow Service] API. U kunt deze basis verbindings-id in de volgende zelfstudies gebruiken:
 
 * [Onderzoek de structuur en de inhoud van uw gegevenslijsten gebruikend  [!DNL Flow Service]  API](../../explore/tabular.md)
 * [Creeer een dataflow om gegevensbestandgegevens aan Platform te brengen gebruikend  [!DNL Flow Service]  API](../../collect/database-nosql.md)
