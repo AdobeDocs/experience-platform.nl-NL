@@ -2,9 +2,9 @@
 title: Zoekplanningen
 description: Leer hoe te om geplande vraaglooppas te automatiseren, een vraagprogramma te schrappen of onbruikbaar te maken, en de beschikbare het plannen opties door de UI van Adobe Experience Platform te gebruiken.
 exl-id: 984d5ddd-16e8-4a86-80e4-40f51f37a975
-source-git-commit: c0d2f4b4f8e294d5a7b0a519ab9dad8b78558b26
+source-git-commit: db0ba3bb32b5458ab3a32525c3c63939fe804ab4
 workflow-type: tm+mt
-source-wordcount: '1972'
+source-wordcount: '1933'
 ht-degree: 0%
 
 ---
@@ -119,10 +119,6 @@ Voor een overzicht van alarm in Adobe Experience Platform, met inbegrip van de s
 
 ### Parameters instellen voor een geplande geparametereerde query {#set-parameters}
 
->[!IMPORTANT]
->
->De parameters bepaalde van vraagUI eigenschap is momenteel beschikbaar in a **beperkte versie slechts** en is niet beschikbaar aan alle klanten. Als u geen toegang tot de parameters bepaalde vragen hebt, ga op [ voort schrapt of maak een programma ](#delete-schedule) sectie onbruikbaar.
-
 Als u een geplande vraag voor een parameterized vraag creeert, moet u de parameterwaarden voor deze vraaglooppas nu plaatsen.
 
 ![ de sectie van de Details van het Programma van het werkschema van de programmaverwezenlijking met de benadrukte sectie van de Parameters van de Vraag.](../images/ui/query-schedules/scheduled-query-parameter.png)
@@ -147,7 +143,7 @@ Het spoor verwerkt uren die op het niveau van de vraaguitvoering voor uw CTAS/IT
 
 >[!AVAILABILITY]
 >
->De rekenmachine van Uren is exclusief aan gebruikers die [ Gegevens Distiller SKU ](../data-distiller/overview.md) hebben gekocht. Neem contact op met uw Adobe voor meer informatie.
+>De rekenmachine van Uren is exclusief aan gebruikers die [ Gegevens Distiller SKU ](../data-distiller/overview.md) hebben gekocht. Neem contact op met uw Adobe-vertegenwoordiger voor meer informatie.
 
 ![ de detailssectie van de Geplande werkruimte van Vragen met een lijst van vraaglooppas die voor een geplande vraag wordt benadrukt.](../images/ui/query-schedules/list-of-scheduled-runs.png)
 

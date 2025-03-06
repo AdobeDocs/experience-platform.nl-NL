@@ -4,9 +4,9 @@ solution: Experience Platform
 title: UI-gids voor zoekprogramma
 description: De Query Editor is een interactief hulpmiddel dat wordt geleverd door de Adobe Experience Platform Query Service en waarmee u query's voor gegevens voor klantenervaring kunt schrijven, valideren en uitvoeren in de Experience Platform-gebruikersinterface. De Redacteur van de vraag steunt het ontwikkelen van vragen voor analyse en gegevensexploratie, en staat u toe om interactieve vragen voor ontwikkelingsdoeleinden evenals niet-interactieve vragen in werking te stellen om datasets in Experience Platform te bevolken.
 exl-id: d7732244-0372-467d-84e2-5308f42c5d51
-source-git-commit: e1ecdb5d701093d9c73b6a05dad9a4dd848e0083
+source-git-commit: ae189e2f6d303043e32e6ca658161bcdf4c28dc6
 workflow-type: tm+mt
-source-wordcount: '2663'
+source-wordcount: '2600'
 ht-degree: 0%
 
 ---
@@ -192,12 +192,7 @@ Als een query was gepland, biedt het tabblad [!UICONTROL Scheduled Queries] bete
 >
 >Vragen die niet worden uitgevoerd, worden niet opgeslagen in het logbestand. De vraag om in de Dienst van de Vraag beschikbaar te zijn, moet het in de Redacteur van de Vraag in werking stellen of worden bewaard.
 
-### [!BADGE  Beperkte browser van de Objecten van de Beschikbaarheid ] {type=Informative} {#object-browser}
-
->[!AVAILABILITY]
->
-De dataset navigation rail is alleen beschikbaar voor Distiller-klanten van Data. Uw platforminterface bevat mogelijk niet de linkergegevenssetnavigatiespoor. Andere afbeeldingen in dit document weerspiegelen mogelijk niet de dataset navigation rail. Neem contact op met uw Adobe-vertegenwoordiger voor meer informatie.<br>
-De browser van objecten is momenteel beschikbaar slechts in a **beperkte versie**. Neem contact op met uw Adobe-vertegenwoordiger voor toegang in een vroeg stadium.
+### Objectbrowser {#object-browser}
 
 Gebruik objecten browser aan gemakkelijk onderzoek en filterdatasets. De objecten browser vermindert de tijd besteed het zoeken naar lijsten en datasets in grote milieu&#39;s met talrijke datasets. Met gestroomlijnde toegang tot relevante gegevens en meta-gegevens, kunt u zich meer op vraag creatie en minder op navigatie concentreren.
 
@@ -221,7 +216,7 @@ Naast snelle zoekopdrachten hebt u nu gemakkelijk toegang tot metagegevens voor 
 
 #### Onderliggende tabellen verkennen
 
-Als u onderliggende of gekoppelde tabellen wilt verkennen, selecteert u de vervolgkeuzepijl naast de tabelnaam in de lijst. Dit breidt de lijst uit om het even welke bijbehorende kindlijsten te tonen, en geeft een duidelijke mening van de gegevensstructuur en staat voor complexere vraagconstructies toe. Het pictogram naast de veldnaam geeft het gegevenstype van de kolom aan. to helpen u het tijdens complexe vragen identificeren.
+Als u onderliggende of gekoppelde tabellen wilt verkennen, selecteert u de vervolgkeuzepijl naast de tabelnaam in de lijst. Dit breidt de lijst uit om het even welke bijbehorende kindlijsten te tonen, en geeft een duidelijke mening van de gegevensstructuur en staat voor complexere vraagconstructies toe. Het pictogram naast de veldnaam geeft het gegevenstype van de kolom aan, zodat u deze kunt identificeren tijdens complexe query&#39;s.
 
 ![ de Redacteur van de Vraag met de gefiltreerde getoonde lijst.](../images/ui/query-editor/child-table-list.png)
 
@@ -237,7 +232,7 @@ De console verstrekt informatie over de status en de verrichting van de Dienst v
 
 >[!NOTE]
 >
-De console toont slechts fouten die uit de uitvoering van een vraag resulteerden. De code geeft niet de fouten van de queryvalidatie weer die optreden voordat een query wordt uitgevoerd.
+>De console toont slechts fouten die uit de uitvoering van een vraag resulteerden. De code geeft niet de fouten van de queryvalidatie weer die optreden voordat een query wordt uitgevoerd.
 
 ### Zoekresultaten {#query-results}
 
@@ -257,7 +252,7 @@ In de volgende video ziet u hoe u query&#39;s uitvoert in de Adobe Experience Pl
 
 >[!NOTE]
 >
-De interface die in de video wordt weergegeven, is verouderd, maar de logica die in de workflow wordt gebruikt, blijft ongewijzigd.
+>De interface die in de video wordt weergegeven, is verouderd, maar de logica die in de workflow wordt gebruikt, blijft ongewijzigd.
 
 >[!VIDEO](https://video.tv.adobe.com/v/29796?quality=12&learn=on)
 

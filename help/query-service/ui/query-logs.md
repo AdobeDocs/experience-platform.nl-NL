@@ -2,18 +2,14 @@
 title: Query-logbestanden
 description: Logboeken van de vraag worden automatisch geproduceerd telkens als een vraag wordt uitgevoerd en beschikbaar door UI om met het oplossen van problemen te helpen. Dit document schetst hoe te om de sectie van de Logboeken van de Dienst van de Vraag van UI te gebruiken en te navigeren.
 exl-id: 929e9fba-a9ba-4bf9-a363-ca8657a84f75
-source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
+source-git-commit: db0ba3bb32b5458ab3a32525c3c63939fe804ab4
 workflow-type: tm+mt
-source-wordcount: '962'
+source-wordcount: '901'
 ht-degree: 0%
 
 ---
 
 # Zoekopdrachtlogs
-
->[!IMPORTANT]
->
->Bepaalde functies voor querylogbestanden bevinden zich momenteel in een beperkte versie en zijn niet beschikbaar voor alle klanten. De gebruikersinterface kan er anders uitzien zonder een bewerkingspictogram. Het selecteren van een querynaam kan ook naar de Query Editor gaan in plaats van naar de weergave [!UICONTROL Query log details] .
 
 Adobe Experience Platform houdt een logboek bij van alle vraaggebeurtenissen die door zowel API als UI voorkomen. Deze informatie is beschikbaar in de gebruikersinterface van de Query-service op het tabblad [!UICONTROL Logs] .
 
@@ -52,10 +48,6 @@ In het deelvenster met loggegevens kunt u allerlei handelingen uitvoeren. U kunt
 >De optie voor [!UICONTROL Run as CTAS] is alleen beschikbaar voor een SELECT-query.
 
 ![ de werkruimte van het Logboek van Vragen met een geselecteerde rij, Looppas als CTAS, de vraag van de Schrapping en het benadrukte pictogram van exemplaar SQL.](../images/ui/query-log/edit-output-dataset.png)
-
->[!IMPORTANT]
->
->Bepaalde functies voor querylogbestanden bevinden zich momenteel in een beperkte versie en zijn niet beschikbaar voor alle klanten.
 
 U kunt ook een naam voor een querysjabloon selecteren in de kolom [!UICONTROL Name] om rechtstreeks naar de weergave [!UICONTROL Query log details] te navigeren.
 

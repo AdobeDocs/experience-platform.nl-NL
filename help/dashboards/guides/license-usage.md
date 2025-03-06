@@ -4,9 +4,9 @@ title: Licentiegebruiksdashboard
 description: Adobe Experience Platform biedt een dashboard waarmee u belangrijke informatie kunt bekijken over het gebruik van licenties voor uw organisatie.
 type: Documentation
 exl-id: 143d16bb-7dc3-47ab-9b93-9c16683b9f3f
-source-git-commit: 7605ccef8553fc775ea5496c73971f92ed4c06ab
+source-git-commit: 1c31ef58eec727638cab28202afc762da0e226a2
 workflow-type: tm+mt
-source-wordcount: '2812'
+source-wordcount: '2990'
 ht-degree: 0%
 
 ---
@@ -32,28 +32,63 @@ ht-degree: 0%
 >id="platform_dashboards_licenseUsage"
 >title="Het gebruiksdashboard voor licenties"
 >abstract="Het licentiedashboard biedt inzicht in de Adobe Experience Platform-producten die u hebt aangeschaft. In het dashboardoverzicht worden de primaire meetgegevens voor uw producten weergegeven, inclusief uw gebruik voor elk van de primaire meetgegevens en het bedrag van de gecontracteerde licentie. In de werkruimte Details wordt een uitsplitsing weergegeven van de meetgegevens voor elk product binnen specifieke sandboxen."
->additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/data-lifecycle/ui/dataset-expiration" text="Verlopen van geautomatiseerde gegevenssets"
->additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/profile/pseudonymous-profiles" text="Verlopen gegevens van pseudoniem-profielen"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/data-lifecycle/ui/dataset-expiration.html" text="Verlopen van geautomatiseerde gegevenssets"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/pseudonymous-profiles.html" text="Verlopen gegevens van pseudoniem-profielen"
 
 >[!CONTEXTUALHELP]
 >id="platform_licenseusage"
 >title="Het gebruiksdashboard voor licenties"
 >abstract="Het licentiedashboard biedt inzicht in de Adobe Experience Platform-producten die u hebt aangeschaft. In het dashboardoverzicht worden de primaire meetgegevens voor uw producten weergegeven, inclusief uw gebruik voor elk van de primaire meetgegevens en het bedrag van de gecontracteerde licentie. In de werkruimte Details wordt een uitsplitsing weergegeven van de meetgegevens voor elk product binnen specifieke sandboxen."
->additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/data-lifecycle/ui/dataset-expiration" text="Verlopen van geautomatiseerde gegevenssets"
->additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/profile/pseudonymous-profiles" text="Verlopen gegevens van pseudoniem-profielen"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/data-lifecycle/ui/dataset-expiration.html" text="Verlopen van geautomatiseerde gegevenssets"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/pseudonymous-profiles.html" text="Verlopen gegevens van pseudoniem-profielen"
 
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_licenseusage_predictedusage_computehours"
 >title="Verwachte rekenuren"
 >abstract="Uw gebruik kan het gelicentieerde bedrag bereiken. Als u de computeruren wilt beoordelen of beperken, navigeert u naar Query&#39;s > Logboek om de querygeschiedenis te bekijken. Neem contact op met de beheerder als u geen machtigingen hebt om de werkruimte Query&#39;s te openen."
->additional-url="https://experience.adobe.com/#/platform/query/log" text="Zoeklogwerkruimte"
+>additional-url="https://experience.adobe.com/#/platform/query/log.html" text="Zoeklogwerkruimte"
 
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_licenseusage_predictedusage_addressableaudience"
 >title="Voorspeld adresseerbaar publiek"
 >abstract="Uw gebruik kan het gelicentieerde bedrag bereiken. Om gebruik te verminderen, kunt u dataset of pseudoniem de gegevensvervalsing van profielgegevens voor zandbakken en datasets vormen."
->additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/profile/event-expirations" text="Verlopen van gebeurtenissen beleven"
->additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/profile/pseudonymous-profiles" text="Verlopen gegevens van pseudoniem-profielen"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/event-expirations.html" text="Verlopen van gebeurtenissen beleven"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/pseudonymous-profiles.html" text="Verlopen gegevens van pseudoniem-profielen"
+
+>[!CONTEXTUALHELP]
+>id="platform_dashboards_licenseusage_predictedusage_engageableprofiles"
+>title="Voorspelde inschrijfbare profielen"
+>abstract="Uw gebruik kan het gelicentieerde bedrag bereiken. Om gebruik te verminderen, kunt u dataset of pseudoniem de gegevensvervalsing van profielgegevens voor zandbakken en datasets vormen."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/event-expirations.html" text="Verlopen van gebeurtenissen beleven"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/pseudonymous-profiles.html" text="Verlopen gegevens van pseudoniem-profielen"
+
+>[!CONTEXTUALHELP]
+>id="platform_dashboards_licenseusage_predictedusage_businesspersonprofile"
+>title="Voorspeld profiel van een ondernemer"
+>abstract="Uw gebruik kan het gelicentieerde bedrag bereiken. Om gebruik te verminderen, kunt u dataset of pseudoniem de gegevensvervalsing van profielgegevens voor zandbakken en datasets vormen."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/event-expirations.html" text="Verlopen van gebeurtenissen beleven"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/pseudonymous-profiles.html" text="Verlopen gegevens van pseudoniem-profielen"
+
+>[!CONTEXTUALHELP]
+>id="platform_dashboards_licenseusage_predictedusage_corehours"
+>title="Voorspelde kernuren"
+>abstract="Uw gebruik kan het gelicentieerde bedrag bereiken. Om gebruik te verminderen, kunt u dataset of pseudoniem de gegevensvervalsing van profielgegevens voor zandbakken en datasets vormen."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/event-expirations.html" text="Verlopen van gebeurtenissen beleven"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/pseudonymous-profiles.html" text="Verlopen gegevens van pseudoniem-profielen"
+
+>[!CONTEXTUALHELP]
+>id="platform_dashboards_licenseusage_predictedusage_totaldatavolume"
+>title="Voorspeld totaal gegevensvolume"
+>abstract="Uw gebruik kan het gelicentieerde bedrag bereiken. Om gebruik te verminderen, kunt u dataset of pseudoniem de gegevensvervalsing van profielgegevens voor zandbakken en datasets vormen."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/event-expirations.html" text="Verlopen van gebeurtenissen beleven"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/pseudonymous-profiles.html" text="Verlopen gegevens van pseudoniem-profielen"
+
+>[!CONTEXTUALHELP]
+>id="platform_dashboards_licenseusage_predictedusage_cjaRowsAvailable"
+>title="Voorspelde CJA-rijen beschikbaar"
+>abstract="Uw gebruik kan het gelicentieerde bedrag bereiken. Om gebruik te verminderen, kunt u dataset of pseudoniem de gegevensvervalsing van profielgegevens voor zandbakken en datasets vormen."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/event-expirations.html" text="Verlopen van gebeurtenissen beleven"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/pseudonymous-profiles.html" text="Verlopen gegevens van pseudoniem-profielen"
 
 U kunt belangrijke informatie over het gebruik van licenties voor uw organisatie bekijken via het Adobe Experience Platform [!UICONTROL License usage] -dashboard. De informatie die hier wordt weergegeven, wordt vastgelegd tijdens een dagelijkse momentopname van uw platforminstantie.
 
@@ -112,15 +147,15 @@ De lijsten wijzen op primaire metrisch voor elk product, aangezien elk product t
 >id="platform_dashboards_licenseUsage_prediction"
 >title="Voorspeld gebruik"
 >abstract="De voorspellingen zijn gebaseerd op het gebruik in de afgelopen 6-7 maanden en worden gegenereerd op de 15e van elke maand. Houd er rekening mee dat voorspelling van het licentiegebruik benaderingen zijn die zijn gebaseerd op gebruik in het verleden. U bent verantwoordelijk voor het begrijpen van het daadwerkelijke gebruik van uw organisatie en ervoor te zorgen dat het gebruik niet verder gaat dan het bereik van de licentie van uw organisatie voor Adobe. Om gebruik te verminderen, kunt u dataset of pseudoniem de gegevensvervalsing van profielgegevens voor zandbakken en datasets vormen."
->additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/data-lifecycle/ui/dataset-expiration" text="Verlopen van geautomatiseerde gegevenssets"
->additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/profile/pseudonymous-profiles" text="Verlopen gegevens van pseudoniem-profielen"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/data-lifecycle/ui/dataset-expiration.html" text="Verlopen van geautomatiseerde gegevenssets"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/pseudonymous-profiles.html" text="Verlopen gegevens van pseudoniem-profielen"
 
 >[!CONTEXTUALHELP]
 >id="platform_licenseusage_prediction"
 >title="Voorspeld gebruik"
 >abstract="De voorspellingen zijn gebaseerd op het gebruik in de afgelopen 6-7 maanden en worden gegenereerd op de 15e van elke maand. Houd er rekening mee dat voorspelling van het licentiegebruik benaderingen zijn die zijn gebaseerd op gebruik in het verleden. U bent verantwoordelijk voor het begrijpen van het daadwerkelijke gebruik van uw organisatie en ervoor te zorgen dat het gebruik niet verder gaat dan het bereik van de licentie van uw organisatie voor Adobe. Om gebruik te verminderen, kunt u dataset of pseudoniem de gegevensvervalsing van profielgegevens voor zandbakken en datasets vormen."
->additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/data-lifecycle/ui/dataset-expiration" text="Verlopen van geautomatiseerde gegevenssets"
->additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/profile/pseudonymous-profiles" text="Verlopen gegevens van pseudoniem-profielen"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/data-lifecycle/ui/dataset-expiration.html" text="Verlopen van geautomatiseerde gegevenssets"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/pseudonymous-profiles.html" text="Verlopen gegevens van pseudoniem-profielen"
 
 Beheer en optimaliseer proactief uw licentiemiddelen op basis van inzichtelijke gebruiksvoorspellingen. De kolom [!UICONTROL Predicted Usage] voorspelt nauwkeurig toekomstig vergunningsgebruik op het zandbakniveau, over alle productie en ontwikkelingszandbakken, voor al uw gekochte producten. Deze alarmeringscapaciteit verstrekt een prognose van vergunningsgebruik voor zes weken in de toekomst, gebaseerd op uw gebruik tot de 15e van deze kalendermaand. Voorspellingen worden geleverd met een ondergrens &amp; bovengrens.
 
@@ -254,7 +289,7 @@ De beschikbaarheid van deze cijfers en de specifieke definitie van elk van deze 
 | <ul><li>ADOBE EXPERIENCE PLATFORM:OD LITE</li><li>ADOBE EXPERIENCE PLATFORM:OD STANDARD</li><li>ADOBE EXPERIENCE PLATFORM:OD HEAVY</li></ul> | [ Adobe Experience Platform ](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-platform.html) |
 | <ul><li>ADOBE EXPERIENCE PLATFORM:OD</li></ul> | [ Experience Platform, de Diensten van App, en de Intelligente Diensten ](https://helpx.adobe.com/legal/product-descriptions/exp-platform-app-svcs.html) |
 | <ul><li>RT-KLANTENGEGEVENSPLATFORM:OD</li><li>RT KLANTENGEGEVENSPLATFORM:OD PRFL NAAR 10M</li><li>RT KLANTENGEGEVENSPLATFORM:OD PRFL NAAR 50M</li></ul> | [ Adobe Real-Time Customer Data Platform ](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform.html) |
-| <ul><li>AEP:OD ACTIVATION</li><li>AEP:OD ACTIVATION PRFL NAAR 10M</li><li>AEP:OD ACTIVATION PRFL TOT 50M</li></ul> | [ de Activering van Adobe Experience Platform ](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-platform0.html) |
+| <ul><li>AEP:OD-ACTIVERING</li><li>AEP:OD ACTIVATION PRFL NAAR 10M</li><li>AEP:OD ACTIVATION PRFL TOT 50 M</li></ul> | [ de Activering van Adobe Experience Platform ](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-platform0.html) |
 | <ul><li>AEP:OD INTELLIGENCE</li></ul> | [ Intelligentie van Adobe Experience Platform ](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-platform-intelligence---product-description.html) |
 | <ul><li>JOURNEY OPTIMIZER SELECT:OD</li><li>JOURNEY OPTIMIZER PRIME:OD</li><li>JOURNEY OPTIMIZER ULTIMATE:OD</li><li>UNP AJO PRIME STARTER:OD</li><li>UNP AJO ULTIMATE STARTER:OD</li><li>UNP Real-Time CDP:OD PROFILE ORCHESTRATION</li></ul> | [ Adobe Journey Optimizer ](https://helpx.adobe.com/legal/product-descriptions/adobe-journey-optimizer.html) |
 
