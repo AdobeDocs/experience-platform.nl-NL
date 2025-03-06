@@ -2,9 +2,9 @@
 keywords: Experience Platform;home;populaire onderwerpen;gegevenstoegang;python sdk;spark sdk;gegevenstoegang api;export;Export
 solution: Experience Platform
 title: API-handleiding voor gegevenstoegang
-description: De API van de Toegang van Gegevens steunt Adobe Experience Platform door ontwikkelaars van een RESTful interface te voorzien die op de ontdekkingsbaarheid en de toegankelijkheid van ingebedde datasets binnen Experience Platform wordt geconcentreerd.
+description: De API van de Toegang van Gegevens steunt Adobe Experience Platform door ontwikkelaars van een RESTful interface te voorzien die op de ontdekkingsbaarheid en de toegankelijkheid van opgenomen datasets binnen Experience Platform wordt geconcentreerd.
 exl-id: 278ec322-dafa-4e3f-ae45-2d20459c5653
-source-git-commit: 804eeb4ec976cf41fdd450bd8f307499c3ebae03
+source-git-commit: 78dbb735bad70e2115cbbaabb6cf74bf38983460
 workflow-type: tm+mt
 source-wordcount: '566'
 ht-degree: 1%
@@ -154,7 +154,7 @@ curl -X GET https://platform.adobe.io/data/foundation/export/files/{FILE_ID} \
 
 | Eigenschap | Beschrijving |
 | -------- | ----------- |
-| `data.name` | De naam van het bestand (bijvoorbeeld `profiles.csv` ). |
+| `data.name` | De naam van het bestand (bijvoorbeeld `profiles.parquet` ). |
 | `data.length` | De bestandsgrootte (in bytes). |
 | `data._links.self.href` | De URL waarmee het bestand moet worden gedownload. |
 
@@ -201,7 +201,7 @@ Wanneer een map wordt geretourneerd, bevat deze een array van alle bestanden in 
 
 | Eigenschap | Beschrijving |
 | -------- | ----------- |
-| `data.name` | De naam van het bestand (bijvoorbeeld `profiles.csv` ). |
+| `data.name` | De naam van het bestand (bijvoorbeeld `profiles.parquet` ). |
 | `data._links.self.href` | De URL waarmee het bestand moet worden gedownload. |
 
 ## De inhoud van een bestand openen {#access-file-contents}
@@ -231,7 +231,7 @@ curl -X GET https://platform.adobe.io/data/foundation/export/files/{FILE_ID}?pat
 | Eigenschap | Beschrijving |
 | -------- | ----------- |
 | `{FILE_ID}` | De id van het bestand in een gegevensset. |
-| `{FILE_NAME}` | De volledige naam van het bestand (bijvoorbeeld `profiles.csv` ). |
+| `{FILE_NAME}` | De volledige naam van het bestand (bijvoorbeeld `profiles.parquet` ). |
 
 **Reactie**
 
@@ -243,4 +243,4 @@ Voor extra steekproeven, verwijs naar het [ leerprogramma van de gegevenstoegang
 
 ## Abonneren op gebeurtenissen voor gegevensinvoer {#subscribe-to-data-ingestion-events}
 
-U kunt aan specifieke high-value gebeurtenissen door [ Adobe Developer Console ](https://developer.adobe.com/console/) intekenen. U kunt bijvoorbeeld een abonnement nemen op gebeurtenissen voor het opnemen van gegevens om op de hoogte te worden gebracht van mogelijke vertragingen en mislukkingen. Zie het leerprogramma op [ intekenend aan de gebeurtenisberichten van de Adobe ](../observability/alerts/subscribe.md) voor meer informatie.
+U kunt aan specifieke high-value gebeurtenissen door [ Adobe Developer Console ](https://developer.adobe.com/console/) intekenen. U kunt bijvoorbeeld een abonnement nemen op gebeurtenissen voor het opnemen van gegevens om op de hoogte te worden gebracht van mogelijke vertragingen en mislukkingen. Zie het leerprogramma op [ intekenend aan de gebeurtenisberichten van Adobe ](../observability/alerts/subscribe.md) voor meer informatie.
