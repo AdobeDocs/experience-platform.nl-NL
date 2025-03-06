@@ -3,9 +3,9 @@ title: Opnieuw overschakelen naar Experience Platform via de gebruikersinterface
 description: Leer hoe u een AWS Redshift-account koppelt aan Experience Platform met behulp van de interface voor bronnen.
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 4faf3200-673b-4a20-8f94-d049e800444b
-source-git-commit: dd9aee1ac887637d4761188d6dbcf55ad5bde407
+source-git-commit: 8533aa3527bfb74a77f5b15dacf9ecfe622477d5
 workflow-type: tm+mt
-source-wordcount: '697'
+source-wordcount: '700'
 ht-degree: 1%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 1%
 >
 >De [!DNL AWS Redshift] -bron is in de broncatalogus beschikbaar voor gebruikers die Real-Time Customer Data Platform Ultimate hebben aangeschaft.
 
-Lees deze handleiding voor informatie over hoe u uw [!DNL AWS Redshift] -account kunt verbinden met Adobe Experience Platform via de gebruikersinterface.
+Lees deze handleiding voor informatie over hoe u uw [!DNL AWS Redshift] -account kunt verbinden met Adobe Experience Platform via de werkruimte voor bronnen in de gebruikersinterface.
 
 ## Aan de slag
 
