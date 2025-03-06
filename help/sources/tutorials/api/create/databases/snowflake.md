@@ -1,24 +1,22 @@
 ---
-title: Creeer een Verbinding van de Basis van de Snowflake gebruikend de Dienst API van de Stroom
-description: Leer hoe u Adobe Experience Platform met Snowflake kunt verbinden met behulp van de Flow Service API.
-badgeUltimate: label="Ultieme" type="Positive"
+title: Snowflake verbinden met Experience Platform via de Flow Service API
+description: Leer hoe u Adobe Experience Platform met Snowflake verbindt via de Flow Service API.
+badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 0ef34d30-7b4c-43f5-8e2e-cde05da05aa5
-source-git-commit: d89e0c81bd250e41a863b8b28d358cc6ddea1c37
+source-git-commit: cde31b692e9a11b15cf91a505133f75f69604cba
 workflow-type: tm+mt
-source-wordcount: '955'
-ht-degree: 2%
+source-wordcount: '1187'
+ht-degree: 1%
 
 ---
 
-# Een [!DNL Snowflake] basisverbinding maken met de [!DNL Flow Service] API
+# Verbinding maken met Experience Platform via de [!DNL Flow Service] API[!DNL Snowflake]
 
 >[!IMPORTANT]
 >
->De [!DNL Snowflake] -bron is in de broncatalogus beschikbaar voor gebruikers die Real-time Customer Data Platform Ultimate hebben aangeschaft.
+>De [!DNL Snowflake] -bron is in de broncatalogus beschikbaar voor gebruikers die Real-Time Customer Data Platform Ultimate hebben aangeschaft.
 
-Een basisverbinding vertegenwoordigt de geverifieerde verbinding tussen een bron en Adobe Experience Platform.
-
-Gebruik het volgende leerprogramma leren hoe te om een basisverbinding voor [!DNL Snowflake] tot stand te brengen gebruikend [[!DNL Flow Service]  API ](<https://www.adobe.io/experience-platform-apis/references/flow-service/>).
+Lees deze gids om te leren hoe u uw [!DNL Snowflake] bronrekening met Adobe Experience Platform kunt verbinden gebruikend [[!DNL Flow Service]  API ](https://developer.adobe.com/experience-platform-apis/references/flow-service/).
 
 ## Aan de slag
 
@@ -32,6 +30,10 @@ Deze handleiding vereist een goed begrip van de volgende onderdelen van Adobe Ex
 Voor informatie over hoe te om vraag aan Platform APIs met succes te maken, zie de gids op [ begonnen wordt met Platform APIs ](../../../../../landing/api-guide.md).
 
 In de volgende sectie vindt u aanvullende informatie die u moet weten als u verbinding wilt maken met [!DNL Snowflake] via de [!DNL Flow Service] API.
+
+## Verbind [!DNL Snowflake] met Experience Platform op Azure {#azure}
+
+Lees de onderstaande stappen voor informatie over hoe u uw [!DNL Snowflake] -bron kunt verbinden met Experience Platform on Azure.
 
 ### Vereiste referenties verzamelen
 
@@ -59,10 +61,10 @@ Als u sleutelparverificatie wilt gebruiken, moet u een 2048-bits RSA-sleutelpaar
 | --- | --- |
 | `account` | Een accountnaam vormt een unieke identificatie van een account binnen uw organisatie. In dit geval moet u een account op unieke wijze identificeren voor verschillende [!DNL Snowflake] -organisaties. Hiervoor moet u de naam van uw organisatie aan de accountnaam toevoegen. Bijvoorbeeld: `orgname-account_name` . Lees de gids bij [ het terugwinnen van uw  [!DNL Snowflake]  rekeningsherkenningsteken ](../../../../connectors/databases/snowflake.md#retrieve-your-account-identifier) voor extra begeleiding. Raadpleeg voor meer informatie de [[!DNL Snowflake] documentatie](https://docs.snowflake.com/en/user-guide/admin-account-identifier#format-1-preferred-account-name-in-your-organization). |
 | `username` | De gebruikersnaam van uw [!DNL Snowflake] -account. |
-| `privateKey` | De [!DNL Base64-] gecodeerde privé sleutel van uw [!DNL Snowflake] rekening. U kunt gecodeerde of niet-gecodeerde persoonlijke sleutels genereren. Als u een gecodeerde persoonlijke sleutel gebruikt, moet u ook een persoonlijke-sleutelwachtwoord opgeven wanneer u verificatie uitvoert op basis van een Experience Platform. Lees de gids op [ het terugwinnen van uw  [!DNL Snowflake]  privé sleutel ](../../../../connectors/databases/snowflake.md) voor meer informatie. |
+| `privateKey` | De [!DNL Base64-] gecodeerde privé sleutel van uw [!DNL Snowflake] rekening. U kunt gecodeerde of niet-gecodeerde persoonlijke sleutels genereren. Als u een gecodeerde persoonlijke sleutel gebruikt, moet u ook een persoonlijke-sleutelwachtwoord opgeven bij verificatie met behulp van Experience Platform. Lees de gids op [ het terugwinnen van uw  [!DNL Snowflake]  privé sleutel ](../../../../connectors/databases/snowflake.md) voor meer informatie. |
 | `privateKeyPassphrase` | Persoonlijke sleutel passphrase is een extra laag van veiligheid die u moet gebruiken wanneer het voor authentiek verklaren met een gecodeerde privé sleutel. U hoeft de wachtwoordzin niet op te geven als u een niet-gecodeerde persoonlijke sleutel gebruikt. |
-| `database` | De [!DNL Snowflake] -database die de gegevens bevat die u aan het Experience Platform wilt toevoegen. |
-| `warehouse` | Het [!DNL Snowflake] pakhuis beheert het proces van de vraaguitvoering voor de toepassing. Elk [!DNL Snowflake] -pakhuis is onafhankelijk van elkaar en moet afzonderlijk worden benaderd wanneer u gegevens naar het Experience Platform overbrengt. |
+| `database` | De [!DNL Snowflake] -database die de gegevens bevat die u aan Experience Platform wilt toevoegen. |
+| `warehouse` | Het [!DNL Snowflake] pakhuis beheert het proces van de vraaguitvoering voor de toepassing. Elk [!DNL Snowflake] -pakhuis is onafhankelijk van elkaar en moet afzonderlijk worden benaderd wanneer u gegevens naar Experience Platform overbrengt. |
 
 Voor meer informatie over deze waarden, verwijs de [[!DNL Snowflake]  sleutel-paar authentificatiegids ](https://docs.snowflake.com/en/user-guide/key-pair-auth.html).
 
@@ -70,13 +72,13 @@ Voor meer informatie over deze waarden, verwijs de [[!DNL Snowflake]  sleutel-pa
 
 >[!NOTE]
 >
->U moet de markering `PREVENT_UNLOAD_TO_INLINE_URL` instellen op `FALSE` om het verwijderen van gegevens uit uw [!DNL Snowflake] -database naar het Experience Platform toe te staan.
+>U moet de markering `PREVENT_UNLOAD_TO_INLINE_URL` instellen op `FALSE` om gegevens uit uw [!DNL Snowflake] -database te kunnen verwijderen naar Experience Platform.
 
-## Een basisverbinding maken
+### Een basisverbinding maken voor [!DNL Snowflake] op Experience Platform in Azure {#azure-base}
 
 Een basisverbinding behoudt informatie tussen uw bron en Platform, met inbegrip van de de authentificatiegeloofsbrieven van uw bron, de huidige staat van de verbinding, en uw unieke identiteitskaart van de basisverbinding. Met de ID van de basisverbinding kunt u bestanden verkennen en door bestanden navigeren vanuit uw bron en kunt u de specifieke items identificeren die u wilt opnemen, inclusief informatie over hun gegevenstypen en indelingen.
 
-Als u een basis-verbindings-id wilt maken, vraagt u een POST naar het `/connections` -eindpunt en geeft u de [!DNL Snowflake] -verificatiegegevens op als onderdeel van de aanvraaginstantie.
+Als u een basis-verbindings-id wilt maken, vraagt u een POST-aanvraag naar het `/connections` -eindpunt en geeft u de [!DNL Snowflake] -verificatiegegevens op als onderdeel van de aanvraagprocedure.
 
 **API formaat**
 
@@ -252,6 +254,85 @@ Een succesvolle reactie keert de pas gecreëerde verbinding, met inbegrip van zi
 +++
 
 >[!ENDTABS]
+
+## Verbinding maken [!DNL Snowflake] met Experience Platform op Amazon Web Services (AWS) {#aws}
+
+>[!AVAILABILITY]
+>
+>Deze sectie is van toepassing op implementaties van Experience Platform die op Amazon Web Services (AWS) worden uitgevoerd. Experience Platform die op AWS wordt uitgevoerd, is momenteel beschikbaar voor een beperkt aantal klanten. Meer over de gesteunde infrastructuur van Experience Platform leren, zie het [ multi-wolkenoverzicht van Experience Platform ](../../../../../landing/multi-cloud.md).
+
+Lees de onderstaande stappen voor informatie over hoe u uw [!DNL Snowflake] -bron kunt verbinden met Experience Platform op AWS.
+
+### Een basisverbinding maken voor [!DNL Snowflake] op Experience Platform in AWS {#aws-base}
+
+**API formaat**
+
+```http
+POST /connections
+```
+
+**Verzoek**
+
+Met de volgende aanvraag wordt een basisverbinding gemaakt voor [!DNL Snowflake] om datum in te voeren naar Experience Platform op AWS:
+
++++Selecteren om voorbeeld weer te geven
+
+```shell
+curl -X POST \
+  'https://platform.adobe.io/data/foundation/flowservice/connections' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Content-Type: application/json' \
+  -d '{
+      "name": "Snowflake base connection for Experience Platform on AWS",
+      "description": "Snowflake base connection for Experience Platform on AWS",
+      "auth": {
+          "specName": "Basic Authentication",
+          "params": {
+              "host": "acme.snowflakecomputing.com",
+              "port": "443",
+              "username": "acme-cj123",
+              "password": "{PASSWORD}",
+              "database": "ACME_DB",
+              "warehouse": "COMPUTE_WH",
+              "schema": "{SCHEMA}"
+          }
+      },
+      "connectionSpec": {
+          "id": "b2e08744-4f1a-40ce-af30-7abac3e23cf3",
+          "version": "1.0"
+      }
+  }'
+```
+
+| Eigenschap | Beschrijving |
+| --- | --- |
+| `auth.params.host` | De host-URL waarmee uw [!DNL Snowflake] -account verbinding maakt. |
+| `auth.params.port` | Het poortnummer dat door [!DNL Snowflake] wordt gebruikt wanneer verbinding wordt gemaakt met een server via internet. |
+| `auth.params.username` | De gebruikersnaam die aan uw [!DNL Snowflake] -account is gekoppeld. |
+| `auth.params.database` | De [!DNL Snowflake] -database vanwaar de gegevens worden opgehaald. |
+| `auth.params.password` | Het wachtwoord dat aan uw [!DNL Snowflake] account is gekoppeld. |
+| `auth.params.warehouse` | Het [!DNL Snowflake] -pakhuis dat u gebruikt. |
+| `auth.params.schema` | De naam van het schema dat aan uw [!DNL Snowflake] database is gekoppeld. U moet ervoor zorgen dat de gebruiker u gegevensbestandtoegang tot wilt geven, ook toegang tot dit schema heeft. |
+
++++
+
+**Reactie**
+
+Een succesvolle reactie keert details van de pas gecreëerde verbinding, met inbegrip van zijn uniek herkenningsteken (`id`) terug. Deze id is vereist om uw opslag te verkennen in de volgende zelfstudie.
+
++++Selecteren om voorbeeld weer te geven
+
+```json
+{
+    "id": "4cb0c374-d3bb-4557-b139-5712880adc55",
+    "etag": "\"1700d77b-0000-0200-0000-5e3b41a10000\""
+}
+```
+
++++
 
 Aan de hand van deze zelfstudie hebt u een [!DNL Snowflake] basisverbinding gemaakt met de [!DNL Flow Service] API. U kunt deze basis verbindings-id in de volgende zelfstudies gebruiken:
 
