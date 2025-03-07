@@ -5,9 +5,9 @@ breadcrumb-title: Gids voor Source Connectors
 user-guide-description: Neem gegevens uit diverse bronnen op. Leer hoe u opgenomen gegevens kunt structureren, labelen en verbeteren.
 feature: Sources
 role: Developer
-source-git-commit: b18f93078d3cdbd0498b5b282236ac9b7bad153c
+source-git-commit: b900ef8cbbab78071d462484f088e17eb20fe9b6
 workflow-type: tm+mt
-source-wordcount: '1043'
+source-wordcount: '1047'
 ht-degree: 6%
 
 ---
@@ -17,23 +17,23 @@ ht-degree: 6%
 
 - [Overzicht van bronnen](home.md)
 - Beschikbare bronconnectors {#connectors}
-   - Toepassingen Adoben {#adobe-applications}
+   - Adobe-toepassingen {#adobe-applications}
       - [Bron voor analytische classificaties](connectors/adobe-applications/classifications.md)
       - [Analysebron](connectors/adobe-applications/analytics.md)
-      - [Bron Audience Manager](connectors/adobe-applications/audience-manager.md)
+      - [Audience Manager-bron](connectors/adobe-applications/audience-manager.md)
       - [Adobe Campaign Managed Cloud Services-bron](connectors/adobe-applications/campaign.md)
       - [Adobe Commerce-bron](connectors/adobe-applications/commerce.md)
       - [Kenmerkbron van klant](connectors/adobe-applications/customer-attributes.md)
       - [Bron gegevensverzameling](connectors/adobe-applications/data-collection.md)
       - Veldtoewijzingen {#mapping}
          - [Toewijzingen van analytische velden](connectors/adobe-applications/mapping/analytics.md)
-         - [Veldtoewijzingen Audience Manager](connectors/adobe-applications/mapping/audience-manager.md)
-         - [Veldtoewijzingen Marketo Engage](connectors/adobe-applications/mapping/marketo.md)
+         - [Audience Manager-veldtoewijzingen](connectors/adobe-applications/mapping/audience-manager.md)
+         - [Marketo Engage-veldtoewijzingen](connectors/adobe-applications/mapping/marketo.md)
          - [Microsoft Dynamics-veldtoewijzingen](connectors/adobe-applications/mapping/dynamics.md)
-         - [Toewijzingen in Salesforce-veld](connectors/adobe-applications/mapping/salesforce.md)
+         - [Salesforce-veldtoewijzingen](connectors/adobe-applications/mapping/salesforce.md)
       - Marketo {#marketo}
-         - [Marketo Engage-aansluiting](connectors/adobe-applications/marketo/marketo.md)
-         - [Handleiding voor verificatie van Marketo&#39;s Engage](connectors/adobe-applications/marketo/marketo-auth.md)
+         - [Marketo Engage-connector](connectors/adobe-applications/marketo/marketo.md)
+         - [Marketo Engage-verificatiegids](connectors/adobe-applications/marketo/marketo-auth.md)
          - [B2B-naamruimten en -schema&#39;s](connectors/adobe-applications/marketo/marketo-namespaces.md)
          - [Gids voor migratie van ECID-toewijzing](connectors/adobe-applications/marketo/migration.md)
    - Advertising {#advertising}
@@ -62,13 +62,13 @@ ht-degree: 6%
       - [OneTrust-integratie](connectors/consent-and-preferences/onetrust.md)
    - CRM {#crm}
       - [Microsoft Dynamics-connector](connectors/crm/ms-dynamics.md)
-      - [Salesforce-aansluiting](connectors/crm/salesforce.md)
+      - [Salesforce-connector](connectors/crm/salesforce.md)
       - [SugarCRM-connector](connectors/crm/sugarcrm.md)
       - [Veeva CRM-connector](connectors/crm/veeva.md)
       - [Zoho CRM-aansluiting](connectors/crm/zoho.md)
    - Klantsucces {#customer-success}
-      - [Cloud oracle Service](connectors/customer-success/oracle-service-cloud.md)
-      - [Salesforce Service Cloud-aansluiting](connectors/customer-success/salesforce-service-cloud.md)
+      - [Oracle Service Cloud](connectors/customer-success/oracle-service-cloud.md)
+      - [Salesforce Service Cloud-connector](connectors/customer-success/salesforce-service-cloud.md)
       - [ServiceNow-connector](connectors/customer-success/servicenow.md)
       - [Zendesk-connector](connectors/customer-success/zendesk.md)
    - Databases {#databases}
@@ -76,7 +76,7 @@ ht-degree: 6%
       - [Apache Hive op Azure HDInsights-connector](connectors/databases/hive.md)
       - [Apache Spark op Azure HDInsights-connector](connectors/databases/spark.md)
       - [Azure Data Explorer-connector](connectors/databases/data-explorer.md)
-      - [Azure synapse Analytics-connector](connectors/databases/synapse-analytics.md)
+      - [Azure Synapse Analytics-connector](connectors/databases/synapse-analytics.md)
       - [Azure Table Storage-connector](connectors/databases/ats.md)
       - [Koppelaansluiting](connectors/databases/couchbase.md)
       - [Google BigQuery-connector](connectors/databases/bigquery.md)
@@ -86,11 +86,11 @@ ht-degree: 6%
       - [MariaDB-connector](connectors/databases/mariadb.md)
       - [Microsoft SQL Server-connector](connectors/databases/sql-server.md)
       - [MySQL-connector](connectors/databases/mysql.md)
-      - [Oracle-aansluiting](connectors/databases/oracle.md)
+      - [Oracle-connector](connectors/databases/oracle.md)
       - [Phoenix-aansluiting](connectors/databases/phoenix.md)
       - [PostgreSQL-connector](connectors/databases/postgres.md)
-      - [Snowflake Streaming-aansluiting](connectors/databases/snowflake-streaming.md)
-      - [Snowflake-aansluiting](connectors/databases/snowflake.md)
+      - [Snowflake Streaming-connector](connectors/databases/snowflake-streaming.md)
+      - [Snowflake-connector](connectors/databases/snowflake.md)
       - [Teradata Vantage-connector](connectors/databases/teradata-vantage.md)
    - Gegevens- en identiteitspartner {#data-partner}
       - [Acxiale gegevensinname](connectors/data-partners/acxiom-data-ingestion.md)
@@ -112,11 +112,11 @@ ht-degree: 6%
       - [Oracle NetSuite](connectors/marketing-automation/oracle-netsuite.md)
       - [Oracle Responsys-connector](connectors/marketing-automation/oracle-responsys.md)
       - [PathFactory](connectors/marketing-automation/pathfactory.md)
-      - [Salesforce-Marketing Cloud](connectors/marketing-automation/salesforce-marketing-cloud.md)
+      - [Salesforce Marketing Cloud](connectors/marketing-automation/salesforce-marketing-cloud.md)
    - Betalingen {#payments}
       - [PayPal-connector](connectors/payments/paypal.md)
       - [Vierkante connector](connectors/payments/square.md)
-      - [Stripe-aansluiting](connectors/payments/stripe.md)
+      - [Stripe-connector](connectors/payments/stripe.md)
    - Protocollen {#protocols}
       - [Generic OData-connector](connectors/protocols/odata.md)
       - [Algemene REST API-aansluiting](connectors/protocols/generic-rest.md)
@@ -154,7 +154,7 @@ ht-degree: 6%
          - [Veeva CRM](tutorials/api/create/crm/veeva.md)
          - [Zoho CRM](tutorials/api/create/crm/zoho.md)
       - Klantsucces {#customer-success}
-         - [Cloud oracle Service](tutorials/api/create/customer-success/oracle-service-cloud.md)
+         - [Oracle Service Cloud](tutorials/api/create/customer-success/oracle-service-cloud.md)
          - [Salesforce Service Cloud](tutorials/api/create/customer-success/salesforce-service-cloud.md)
          - [ServiceNow](tutorials/api/create/customer-success/servicenow.md)
          - [Zendesk](tutorials/api/create/customer-success/zendesk.md)
@@ -163,7 +163,7 @@ ht-degree: 6%
          - [Apache Hive op Azure HDInsights](tutorials/api/create/databases/hive.md)
          - [Apache Spark op Azure HDInsights](tutorials/api/create/databases/spark.md)
          - [Azure Data Explorer](tutorials/api/create/databases/data-explorer.md)
-         - [Azure synapse Analytics](tutorials/api/create/databases/synapse-analytics.md)
+         - [Azure Synapse Analytics](tutorials/api/create/databases/synapse-analytics.md)
          - [Azure Table Storage](tutorials/api/create/databases/ats.md)
          - [Couchbase](tutorials/api/create/databases/couchbase.md)
          - [Google BigQuery](tutorials/api/create/databases/bigquery.md)
@@ -175,7 +175,7 @@ ht-degree: 6%
          - [Oracle](tutorials/api/create/databases/oracle.md)
          - [Phoenix](tutorials/api/create/databases/phoenix.md)
          - [PostgreSQL](tutorials/api/create/databases/postgres.md)
-         - [Snowflake streaming](tutorials/api/create/databases/snowflake-streaming.md)
+         - [Snowflake Streaming](tutorials/api/create/databases/snowflake-streaming.md)
          - [Snowflake](tutorials/api/create/databases/snowflake.md)
          - [Teradata Vantage](tutorials/api/create/databases/teradata-vantage.md)
          - [SQL Server](tutorials/api/create/databases/sql-server.md)
@@ -194,7 +194,7 @@ ht-degree: 6%
          - [Oracle NetSuite-entiteiten](tutorials/api/create/marketing-automation/oracle-netsuite-entities.md)
          - [Oracle Responsys](tutorials/api/create/marketing-automation/oracle-responsys.md)
          - [PathFactory](tutorials/api/create/marketing-automation/pathfactory.md)
-         - [Salesforce-Marketing Cloud](tutorials/api/create/marketing-automation/salesforce-marketing-cloud.md)
+         - [Salesforce Marketing Cloud](tutorials/api/create/marketing-automation/salesforce-marketing-cloud.md)
       - Betalingen {#payments}
          - [PayPal](tutorials/api/create/payments/paypal.md)
          - [Vierkant](tutorials/api/create/payments/square.md)
@@ -238,7 +238,7 @@ ht-degree: 6%
    - [Een gegevensstroom opslaan als concept](tutorials/api/draft.md)
 - Zelfstudies voor gebruikersinterface {#ui-tutorials}
    - Een bronverbinding maken {#create}
-      - Toepassingen Adoben {#adobe-applications}
+      - Adobe-toepassingen {#adobe-applications}
          - [Adobe Analytics (rapportsuite-gegevens)](tutorials/ui/create/adobe-applications/analytics.md)
          - [Adobe Analytics (classificatiegegevens)](tutorials/ui/create/adobe-applications/classifications.md)
          - [Adobe Audience Manager](tutorials/ui/create/adobe-applications/audience-manager.md)
@@ -278,7 +278,7 @@ ht-degree: 6%
          - [Veeva CRM](tutorials/ui/create/crm/veeva.md)
          - [Zoho CRM](tutorials/ui/create/crm/zoho.md)
       - Klantsucces {#customer-success}
-         - [Cloud oracle Service](tutorials/ui/create/customer-success/oracle-service-cloud.md)
+         - [Oracle Service Cloud](tutorials/ui/create/customer-success/oracle-service-cloud.md)
          - [Salesforce Service Cloud](tutorials/ui/create/customer-success/salesforce-service-cloud.md)
          - [ServiceNow](tutorials/ui/create/customer-success/servicenow.md)
          - [Zendesk](tutorials/ui/create/customer-success/zendesk.md)
@@ -287,7 +287,7 @@ ht-degree: 6%
          - [Apache Hive op Azure HDInsights](tutorials/ui/create/databases/hive.md)
          - [Apache Spark op Azure HDInsights](tutorials/ui/create/databases/spark.md)
          - [Azure Data Explorer](tutorials/ui/create/databases/data-explorer.md)
-         - [Azure synapse Analytics](tutorials/ui/create/databases/synapse-analytics.md)
+         - [Azure Synapse Analytics](tutorials/ui/create/databases/synapse-analytics.md)
          - [Azure Table Storage](tutorials/ui/create/databases/ats.md)
          - [Couchbase](tutorials/ui/create/databases/couchbase.md)
          - [Google Big Query](tutorials/ui/create/databases/bigquery.md)
@@ -301,11 +301,13 @@ ht-degree: 6%
          - [Phoenix](tutorials/ui/create/databases/phoenix.md)
          - [PostgreSQL](tutorials/ui/create/databases/postgres.md)
          - [Snowflake](tutorials/ui/create/databases/snowflake.md)
-         - [Snowflake streaming](tutorials/ui/create/databases/snowflake-streaming.md)
+         - [Snowflake Streaming](tutorials/ui/create/databases/snowflake-streaming.md)
          - [Teradata Vantage](tutorials/ui/create/databases/teradata-vantage.md)
       - Gegevens- en identiteitspartner {#data-partner}
          - [Acxiale gegevensinname](tutorials/ui/create/data-partners/acxiom-data-ingestion.md)
          - [Importeren van Acrobat-perspectiefgegevens](tutorials/ui/create/data-partners/acxiom-prospecting-data-import.md)
+         - [Bombora-intentie](tutorials/ui/create/data-partners/bombora.md)
+         - [Demandbase-intentie](tutorials/ui/create/data-partners/demandbase.md)
          - [Merkury Enterprise Identity Resolution](tutorials/ui/create/data-partners/merkury.md)
       - eCommerce {#ecommerce}
          - [SAP COMMERCE](tutorials/ui/create/ecommerce/sap-commerce.md)
@@ -325,7 +327,7 @@ ht-degree: 6%
          - [Oracle NetSuite-entiteiten](tutorials/ui/create/marketing-automation/oracle-netsuite-entities.md)
          - [Oracle Responsys](tutorials/ui/create/marketing-automation/oracle-responsys.md)
          - [PathFactory](tutorials/ui/create/marketing-automation/pathfactory.md)
-         - [Salesforce-Marketing Cloud](tutorials/ui/create/marketing-automation/salesforce-marketing-cloud.md)
+         - [Salesforce Marketing Cloud](tutorials/ui/create/marketing-automation/salesforce-marketing-cloud.md)
       - Betalingen {#payments}
          - [PayPal](tutorials/ui/create/payments/paypal.md)
          - [Vierkant](tutorials/ui/create/payments/square.md)
@@ -366,8 +368,8 @@ ht-degree: 6%
       - [Verificatiespecificatie configureren](sources-sdk/config/authspec.md)
       - [Bronspecificatie configureren](sources-sdk/config/sourcespec.md)
       - [Specificatie voor nader onderzoek configureren](sources-sdk/config/explorespec.md)
-   - Zelfbedieningsbron (Batch SDK) API-handleiding {#self-serve-api}
-      - [API-overzicht Zelfbediening (Batch SDK)](sources-sdk/api/api-overview.md)
+   - Zelfbedieningsbronnen (Batch SDK) API-handleiding {#self-serve-api}
+      - [Zelfbedieningsbronnen (Batch SDK) API-overzicht](sources-sdk/api/api-overview.md)
       - [Aan de slag](sources-sdk/api/getting-started.md)
       - [Een verbindingsspecificatie maken](sources-sdk/api/create.md)
       - [Een verbindingsspecificatie bijwerken](sources-sdk/api/update-connection-specs.md)
