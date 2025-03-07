@@ -6,9 +6,9 @@ product: experience platform
 type: Documentation
 description: Meer informatie over het standaardgebruik en de tarieflimieten van gegevensactivering.
 exl-id: a755f224-3329-42d6-b8a9-fadcf2b3ca7b
-source-git-commit: 2d640b282feb783694276c69366b1fccadddfd78
+source-git-commit: 8a1ac01c503bd1e5b9873714514d438b22f45cfb
 workflow-type: tm+mt
-source-wordcount: '1661'
+source-wordcount: '1713'
 ht-degree: 1%
 
 ---
@@ -76,6 +76,7 @@ De hieronder gidsen zijn op activering door [ partij (op dossier-gebaseerde) bes
 | Activeringsfrequentie | Eén dagelijkse volledige export of frequentere incrementele export om de 3, 6, 8 of 12 uur. | Door het systeem afgedwongen geleiding | Lees de [ uitvoer volledige dossiers ](/help/destinations/ui/activate-batch-profile-destinations.md#export-full-files) en [ uitvoer stijgende dossiers ](/help/destinations/ui/activate-batch-profile-destinations.md#export-incremental-files) documentatiesecties voor meer informatie over de frequentieverhogingen voor partijuitvoer. |
 | Maximumaantal soorten publiek dat in een bepaald uur kan worden geëxporteerd | 100 | Prestatiegerichting | De aanbeveling moet een maximum van 100 publiek aan partijbestemmingsdataflows toevoegen. |
 | Maximumaantal rijen (records) per bestand dat moet worden geactiveerd | 5 miljoen | Door het systeem afgedwongen geleiding | Adobe Experience Platform splitst de geëxporteerde bestanden automatisch op 5 miljoen records (rijen) per bestand. Elke rij vertegenwoordigt één profiel. Namen van gesplitste bestanden worden toegevoegd met een getal dat aangeeft dat het bestand deel uitmaakt van een grotere exportbewerking: `filename.csv` , `filename_2.csv` , `filename_3.csv` . Voor meer informatie, leest de [ plannende sectie ](/help/destinations/ui/activate-batch-profile-destinations.md#scheduling) van het activerende partijbestemmingsleerprogramma. |
+| Maximumaantal aangepaste uploadsoorten dat in een gegevensstroom kan worden geactiveerd | 10 | Door het systeem afgedwongen geleiding | Wanneer het activeren van [ douane uploadt publiek ](/help/segmentation/ui/audience-portal.md#import-audience) aan op dossier-gebaseerde bestemmingen, is er een grens van 10 zulk publiek dat u in een dataflow kunt activeren. Lees meer over het werkschema om [ douane te activeren upload publiek aan op dossier-gebaseerde bestemmingen ](/help/destinations/ui/activate-batch-profile-destinations.md#select-audiences). |
 
 {style="table-layout:auto"}
 

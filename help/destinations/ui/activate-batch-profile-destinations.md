@@ -3,9 +3,9 @@ title: Soorten publiek activeren om exportdoelen voor batchprofielen te gebruike
 type: Tutorial
 description: Leer hoe u het publiek in Adobe Experience Platform activeert door het naar batchbestemmingen te sturen.
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
-source-git-commit: 2d640b282feb783694276c69366b1fccadddfd78
+source-git-commit: 8a1ac01c503bd1e5b9873714514d438b22f45cfb
 workflow-type: tm+mt
-source-wordcount: '4204'
+source-wordcount: '4235'
 ht-degree: 1%
 
 ---
@@ -64,18 +64,18 @@ Als u het publiek dat u wilt activeren naar het doel wilt selecteren, gebruikt u
 U kunt kiezen uit meerdere soorten publiek, afhankelijk van de oorsprong:
 
 * **[!UICONTROL Segmentation Service]**: publiek dat in Experience Platform wordt gegenereerd door de Segmentation Service. Zie de [ segmentatiedocumentatie ](../../segmentation/ui/overview.md) voor meer details.
-* **[!UICONTROL Custom upload]**: buiten Experience Platform gegenereerde soorten publiek die als CSV-bestanden in Platform worden geüpload. Meer over extern publiek leren, zie de documentatie bij [ het invoeren van een publiek ](../../segmentation/ui/audience-portal.md#import-audience).
+* **[!UICONTROL Custom upload]**: buiten Experience Platform gegenereerde soorten publiek die als CSV-bestanden in Platform worden geüpload. Meer over extern publiek leren, zie de documentatie bij [ het invoeren van een publiek ](../../segmentation/ui/audience-portal.md#import-audience). Het selecteren van publiek uit **[!UICONTROL Custom uploads]** laat automatisch de [ Uitgezochte verrijkingsattributen ](#select-enrichment-attributes) stap toe.
 * Andere soorten publiek, afkomstig van andere Adobe-oplossingen, zoals [!DNL Audience Manager] .
+
+>[!IMPORTANT]
+>
+>Wanneer u een aangepast uploadpubliek activeert naar bestemmingen die zijn gebaseerd op batchbestanden, geldt een limiet van 10 dergelijke doelgroepen die u in een gegevensstroom kunt activeren.
 
 ![ getoonde Selectievakjes wanneer het selecteren van één of veelvoudige publiek om te activeren.](../assets/ui/activate-batch-profile-destinations/select-audiences.png)
 
 >[!TIP]
 >
->Het selecteren van publiek uit **[!UICONTROL Custom uploads]** laat automatisch de [ Uitgezochte verrijkingsattributen ](#select-enrichment-attributes) stap toe.
-
->[!TIP]
->
->U kunt soorten publiek verwijderen uit bestaande activeringsstromen van de pagina **[!UICONTROL Activation data]** . Zie de [ specifieke documentatie ](../ui/destination-details-page.md#bulk-remove) voor details.
+>Als u het publiek wilt verwijderen uit bestaande activeringsstromen, gebruikt u de pagina **[!UICONTROL Activation data]** . Lees de sectie op hoe te [ om veelvoudige publiek uit activeringsstromen ](../ui/destination-details-page.md#bulk-remove) voor details te verwijderen.
 
 ## Het exporteren van publiek plannen {#scheduling}
 
