@@ -1,10 +1,10 @@
 ---
 title: On-demand-insluiting voor gegevensstromen van bronnen in UI
-description: Leer hoe te om gegevensstromen op bestelling voor uw bronverbindingen tot stand te brengen gebruikend het gebruikersinterface van het Experience Platform.
+description: Leer hoe u op aanvraag gegevensstromen voor uw bronverbindingen kunt maken via de Experience Platform-gebruikersinterface.
 exl-id: e5a70044-2484-416a-8098-48e6d99c2d98
-source-git-commit: 38da1c1d5e563ea3f66cc25a69ad726f709784d0
+source-git-commit: 7a287c8de3c3fd0670cbdf29cd58558b30982122
 workflow-type: tm+mt
-source-wordcount: '494'
+source-wordcount: '521'
 ht-degree: 0%
 
 ---
@@ -29,7 +29,7 @@ De looppas van de stroom vertegenwoordigt een geval van dataflow uitvoering. Bij
 >
 >Als u een flowuitvoering wilt maken, moet u eerst over de flow-id van een gegevensstroom beschikken die voor eenmalige invoer is gepland.
 
-Voor dit document is een goed begrip van de volgende onderdelen van het Experience Platform vereist:
+Voor dit document is een goed begrip van de volgende Experience Platform-componenten vereist:
 
 * [ Bronnen ](../../home.md): Experience Platform staat gegevens toe om van diverse bronnen worden opgenomen terwijl het voorzien van u van de capaciteit om, inkomende gegevens te structureren te etiketteren en te verbeteren gebruikend de diensten van het Platform.
 * [ Dataflows ](../../../dataflows/home.md): Een dataflow is een vertegenwoordiging van gegevensbanen die gegevens over Platform bewegen. Dataflows worden gevormd over de verschillende diensten, die gegevens van bronschakelaars aan doeldatasets, aan de Dienst van de Identiteit en het Profiel van de Klant in real time, en aan Doelen helpen verplaatsen.
@@ -57,7 +57,7 @@ Selecteer **[!UICONTROL Schedule]** en wacht even tot uw gegevensstroom op aanvr
 
 ![ het plannen configuratievenster voor op bestelling opnemen.](../../images/tutorials/on-demand/configure-schedule.png)
 
-Selecteer de naam van uw gegevensstroom om uw gegevensstroomactiviteit te bekijken. Hier ziet u een lijst van uw dataflow looppas die zijn verwerkt. Selecteer een dataflow-run en selecteer vervolgens **[!UICONTROL Retry]** in de rechterrail om opname opnieuw te proberen voor een geselecteerde dataflow-run-iteratie.
+Selecteer de naam van uw gegevensstroom om uw gegevensstroomactiviteit te bekijken. Hier ziet u een lijst van uw dataflow looppas die zijn verwerkt. U kunt individuele herhalingen van uw dataflow looppas opnieuw in werking stellen ongeacht of zij of succesvol zijn ontbroken. Voor mislukte herhalingen kunt u met **[!UICONTROL Retry]** de uitvoering opnieuw starten nadat u eventuele fouten tijdens het maken hebt gediagnosticeerd en verholpen.
 
 ![ een lijst van verwerkte stroomlooppas voor een geselecteerde dataflow.](../../images/tutorials/on-demand/processed.png)
 
