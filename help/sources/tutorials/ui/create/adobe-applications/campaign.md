@@ -1,11 +1,11 @@
 ---
-keywords: Experience Platform;huis;populaire onderwerpen;bronnen;schakelaars;bronschakelaars;campagne;campagne beheerde diensten
+keywords: Experience Platform;home;populaire onderwerpen;bronnen;connectors;bronconnectors;campagne;beheerde services voor campagne
 title: Een Adobe Campaign Managed Cloud Services-bronverbinding maken met behulp van platforminterface
 description: Leer hoe u verbinding maakt met Adobe Experience Platform via de gebruikersinterface van het platform.
 exl-id: 067ed558-b239-4845-8c85-3bf9b1d4caed
-source-git-commit: 77d755e4ebf97521efa1dfdfe9ee40312800ad28
+source-git-commit: 67f42c155bf34f2b8adc3b08536bb3310bb77390
 workflow-type: tm+mt
-source-wordcount: '1141'
+source-wordcount: '1189'
 ht-degree: 0%
 
 ---
@@ -16,10 +16,10 @@ Deze zelfstudie bevat stappen om een bronverbinding te maken waarmee uw Adobe Ca
 
 ## Aan de slag
 
-Deze handleiding vereist een goed begrip van de volgende onderdelen van het Experience Platform:
+Deze handleiding vereist een goed begrip van de volgende onderdelen van Experience Platform:
 
 * [ Bronnen ](../../../../home.md): Het platform staat gegevens toe om van diverse bronnen worden opgenomen terwijl het voorzien van u van de capaciteit om, inkomende gegevens te structureren te etiketteren en te verbeteren gebruikend de diensten van het Platform.
-* [[!DNL Experience Data Model (XDM)]  Systeem ](../../../../../xdm/home.md): Het gestandaardiseerde kader waardoor het Experience Platform gegevens van de klantenervaring organiseert.
+* [[!DNL Experience Data Model (XDM)]  Systeem ](../../../../../xdm/home.md): Het gestandaardiseerde kader waardoor Experience Platform gegevens van de klantenervaring organiseert.
    * [ Grondbeginselen van schemacompositie ](../../../../../xdm/schema/composition.md): Leer over de basisbouwstenen van schema&#39;s XDM, met inbegrip van zeer belangrijke principes en beste praktijken in schemacompositie.
    * [ het leerprogramma van de Redacteur van het Schema ](../../../../../xdm/tutorials/create-schema-ui.md): Leer hoe te om douaneschema&#39;s tot stand te brengen gebruikend de Redacteur UI van het Schema.
 * [ Sandboxes ](../../../../../sandboxes/home.md): Het platform verstrekt virtuele zandbakken die één enkele instantie van het Platform in afzonderlijke virtuele milieu&#39;s verdelen helpen digitale ervaringstoepassingen ontwikkelen en ontwikkelen.
@@ -136,6 +136,12 @@ De pagina met gegevenssetactiviteiten wordt weergegeven. Van hier, kunt u inform
 Deze pagina voorziet u ook van een interface om de meta-gegevensbeschrijving van uw gegevensstroom bij te werken, gedeeltelijke opname en foutendiagnostiek toe te laten, evenals nieuwe gegevens toe te voegen aan uw dataset.
 
 ![ een interface met grafieken die het innametarief van een geselecteerde dataset vertegenwoordigen.](../../../../images/tutorials/create/campaign/dataset-activity.png)
+
+
+>[!IMPORTANT]
+>
+>U kunt geen back-up maken van oude gebeurtenislogboeken met de Adobe Campaign Managed Cloud Services-bron. Als backfill vereist is, gebruikt u een aangepaste workflow of een aangepaste implementatie om gegevens te exporteren naar Amazon S3 of Azure Blob, of van Amazon S3 of Azure Blob naar een Adobe Experience Platform-gegevensset.
+
 
 ## Volgende stappen
 
