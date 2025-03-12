@@ -2,9 +2,9 @@
 title: Behoud de Dataset van de Gebeurtenis van de Ervaring in het meer van Gegevens beheren gebruikend TTL
 description: Leer hoe u het behoud van de Experience Event-gegevensset in het datumpomeer kunt evalueren, instellen en beheren met TL-configuraties (Time-to-Live) met Adobe Experience Platform API's. In deze handleiding wordt uitgelegd hoe de vervaldatum van TTL op rijniveau het beleid voor gegevensbewaring ondersteunt, de opslagefficiëntie optimaliseert en een effectief beheer van de levenscyclus van gegevens garandeert. Het verstrekt ook gebruiksgevallen en beste praktijken om u te helpen TTL effectief toepassen.
 exl-id: d688d4d0-aa8b-4e93-a74c-f1a1089d2df0
-source-git-commit: affaeb0869423292a44eb7ada8343482bb163ca6
+source-git-commit: 3b5fcc3eec6f2c2e749c86a7baf9995fb88b27d6
 workflow-type: tm+mt
-source-wordcount: '2195'
+source-wordcount: '2335'
 ht-degree: 0%
 
 ---
@@ -416,6 +416,20 @@ Historische rapportage van gegevenssetgebruik is momenteel niet beschikbaar.
 
 +++Antwoord
 Neen, zodra een bewaarbeleid wordt toegepast, worden om het even welke gegevens ouder dan de bewaarperiode permanent geschrapt en kunnen niet worden teruggekregen.
++++
+
+### Wat is minimum TTL I kan vormen op een dataset van de Gebeurtenis van de Ervaring van het gegevensmeer?
+
++++Antwoord
+De minimale TTL voor een gegevensmeerervaringsgegevensset is 30 dagen. Het datumpeer functioneert als verwerkings steun en terugwinningssysteem tijdens eerste opname en verwerking. Daarom moeten de gegevens in het datumpeer gedurende ten minste 30 dagen na inname bewaard blijven voordat ze kunnen verlopen.
++++
+
+### Wat als ik sommige gebieden van het gegevensmeer langer dan mijn beleid van TTL moet behouden?
+
++++Antwoord
+Gebruik Data Distiller om specifieke velden buiten de TTL van uw dataset te behouden terwijl u binnen uw gebruiksgrenzen blijft. Creeer een baan die regelmatig slechts de noodzakelijke gebieden aan een afgeleide dataset schrijft. Deze workflow zorgt voor compatibiliteit met een kortere TTL en bewaart kritieke gegevens voor uitgebreid gebruik.
+
+Voor meer details, zie [ afgeleide datasets met SQL gids ](../../query-service/data-distiller/derived-datasets/create-derived-datasets-with-sql.md) creëren.
 +++
 
 ## Volgende stappen {#next-steps}
