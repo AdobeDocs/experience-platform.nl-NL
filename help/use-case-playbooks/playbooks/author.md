@@ -4,14 +4,15 @@ title: Leer hoe u uw eigen afspeelboeken ontwerpt en deelt met de AI Assistant.
 description: Hoe te om uw eigen gebruiksdoosplaybooks te ontwerpen en te delen.
 role: User
 exl-id: 0bc49710-ad9e-4509-b7e6-55f9b9037aa9
-source-git-commit: f76db5c8d397c6c7b006c70147c054dc0a67be04
+source-git-commit: aa1e155fb8d71497958d0de1f6c10cf47e58dbf0
 workflow-type: tm+mt
-source-wordcount: '1091'
+source-wordcount: '1092'
 ht-degree: 0%
 
 ---
 
-# Auteur en deel uw eigen afspeelboeken
+
+# Auteur en deel uw eigen afspeelboeken (Beta)
 
 Met [!DNL Playbook Authoring Framework], aangedreven door AI Assistant in Adobe Experience Platform, kunt u op efficiënte wijze afspeelboeken maken, beheren en delen in Adobe Experience Platform.
 
