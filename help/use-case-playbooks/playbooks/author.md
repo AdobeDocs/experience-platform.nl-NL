@@ -1,19 +1,19 @@
 ---
 solution: Experience Platform
-title: AI Assistant for Use Case - Auteur en deel uw eigen afspeelboeken.
+title: Leer hoe u uw eigen afspeelboeken ontwerpt en deelt met de AI Assistant.
 description: Hoe te om uw eigen gebruiksdoosplaybooks te ontwerpen en te delen.
 role: User
-source-git-commit: f813db7599409a8fc048480f7803ed86c9f397fe
+exl-id: 0bc49710-ad9e-4509-b7e6-55f9b9037aa9
+source-git-commit: f76db5c8d397c6c7b006c70147c054dc0a67be04
 workflow-type: tm+mt
-source-wordcount: '1100'
+source-wordcount: '1091'
 ht-degree: 0%
 
 ---
 
-
 # Auteur en deel uw eigen afspeelboeken
 
-Het **Authoring Kader van het Playbook**, aangedreven door de Medewerker van Adobe AI, staat u toe om, playbooks efficiënt tot stand te brengen te beheren en te delen binnen Adobe Experience Platform.
+Met [!DNL Playbook Authoring Framework], aangedreven door AI Assistant in Adobe Experience Platform, kunt u op efficiënte wijze afspeelboeken maken, beheren en delen in Adobe Experience Platform.
 
 Het kader volgt een driestappenproces:
 
@@ -23,35 +23,33 @@ Het kader volgt een driestappenproces:
 
 3. **distributie van het Playbook**: De playbooks van het aandeel over verschillende organisaties. Zo kan het Martech Center of Excellence van ACME in Duitsland een &quot;gouden&quot; toneelboek maken en dit verspreiden onder regionale organisaties in Thailand, Australië, enz. om het gebruik van het geneesmiddel te helpen standaardiseren.
 
-## Een afspeelboek maken met Adobe AI Assistant
+## Een afspeelboek maken
+
+U kunt een afspeelboek op twee manieren maken: met de AI-assistent of handmatig. Lees de volgende secties voor meer informatie.
 
 ### Overzicht van afspeelboeken
 
-U kunt een afspeelboek op twee manieren maken: met Adobe AI Assistant of handmatig.
+Ga als volgt te werk om een afspeelboek te maken met de AI-assistent:
 
-Ga als volgt te werk om een afspeelboek te maken met Adobe AI Assistant:
-
-1. In de linkernavigatieruit, uitgezochte **Playbooks**.
+Selecteer **[!UICONTROL Playbooks]** in het navigatievenster aan de linkerkant.
 
 ![ &quot;Playbooks&quot;die in de linkernavigatieruit worden benadrukt in UI.](/help/use-case-playbooks/assets/playbooks/authoring/playbooks.png)
 
-1. Selecteer **Nieuw Playbook**, en selecteer dan **playbook met AI Medewerker** produceren.
+Selecteer **[!UICONTROL New Playbook]**, en selecteer dan **playbook met AI Medewerker** produceren.
 
-![ Uitgezochte &quot;Nieuwe knoop Playbook&quot;.](/help/use-case-playbooks/assets/playbooks/authoring/new-playbook.png)
+![ de playbook interface met &quot;produceer playbook met AI Medewerker&quot;geselecteerd.](/help/use-case-playbooks/assets/playbooks/authoring/generate-playbook.png)
 
-![ Uitgezochte &quot;produceer playbook met AI Medewerker&quot;benadrukte knoop.](/help/use-case-playbooks/assets/playbooks/authoring/generate-playbook.png)
-
-1. Beschrijf het gebruiksgeval in het veld Vraag.
+Beschrijf het gebruiksgeval in het veld Vraag.
 
 **Voorbeeld**: &quot;Neem ACME klanten in dienst die lopende schoenen doorbladeren maar niet de aankoop voltooiden.&quot;
 
-![ Uitgezochte &quot;playbook met AI Medewerker&quot;knoop produceren.](/help/use-case-playbooks/assets/playbooks/authoring/prompt.png)
+![ de playbook interface met het benadrukte webformuliergebied.](/help/use-case-playbooks/assets/playbooks/authoring/prompt.png)
 
-1. Selecteer **produceren** om de playbook meta-gegevens tot stand te brengen.
+Selecteer **[!UICONTROL Generate]** om de metagegevens voor de afspeelboek te maken.
 
 ![ het snelle gebied met &quot;produceer&quot;benadrukte playbook knoop.](/help/use-case-playbooks/assets/playbooks/authoring/generate.png)
 
-1. Als de code eenmaal is gegenereerd, selecteert u **[!UICONTROL Edit]** om de gegenereerde titel, beschrijving en metagegevens naar wens te wijzigen.
+Als de code eenmaal is gegenereerd, selecteert u **[!UICONTROL Edit]** om de gegenereerde titel, beschrijving en metagegevens naar wens te wijzigen.
 
 ![ geproduceerde playbook met de &quot;geef&quot;benadrukte knoop uit.](/help/use-case-playbooks/assets/playbooks/authoring/edit.png)
 
@@ -61,17 +59,15 @@ Vul de sectie **[!UICONTROL Playbook detail]** in om ervoor te zorgen dat de geg
 * **het publiek van het Doel**
 * **Marketing kanaal**
 
-![ benadrukte de detailsectie van het Playbook met &quot;geef&quot;knoop uit.](/help/use-case-playbooks/assets/playbooks/authoring/edit-details.png)
+![ de sectie van playbook details met &quot;geeft&quot;benadrukte knoop uit.](/help/use-case-playbooks/assets/playbooks/authoring/edit-details.png)
 
-Zodra de meta-gegevens worden geproduceerd, selecteer **uitgeeft de knoop van het reisoverzicht** om de stappen in de reiskaart zoals vereist aan te passen.
+Nadat de metagegevens zijn gegenereerd, selecteert u **[!UICONTROL Edit journey map]** om de stappen in het reisoverzicht naar wens aan te passen.
 
 ![ geef de knoop van het reisoverzicht uit.](/help/use-case-playbooks/assets/playbooks/authoring/edit-journey-map-button.png)
 
 ![ geeft de reiskaart uit zodra u de playbook meta-gegevens vangt.](/help/use-case-playbooks/assets/playbooks/authoring/edit-journey-map.png)
 
-Ga vervolgens verder met het koppelen van de afspeellijst aan technische elementen.
-
-Om een playbook manueel tot stand te brengen, creeer **playbook manueel**.
+Ga vervolgens verder met het koppelen van het afspeelboek aan technische elementen. Selecteer **[!UICONTROL Create playbook manually]** als u handmatig een afspeelboek wilt maken.
 
 ![ creeer manueel playbook ](/help/use-case-playbooks/assets/playbooks/authoring/create-manually.png)
 
@@ -79,13 +75,13 @@ Er wordt een lege afspeelboeksjabloon weergegeven. Vul details zoals **Titel** e
 
 ## Afspeelboek koppelen aan technische middelen
 
-Ongeacht of u handmatig een afspeelboek maakt of met de AI Assistant, moet u deze aan de vereiste technische elementen koppelen. Navigeer naar het tabblad **[!UICONTROL Technical Assets]** en selecteer het gewenste product. Kies voor dit voorbeeld **[!UICONTROL Journey Optimizer]** .
+Ongeacht of u handmatig een afspeelboek maakt of met de AI Assistant, moet u deze aan de vereiste technische elementen koppelen. Navigeer naar het tabblad **[!UICONTROL Technical Assets]** en selecteer het gewenste product. Selecteer **[!UICONTROL Journey Optimizer]** voor dit voorbeeld.
 
 >[!NOTE]
 >
-> Ondersteuning voor Real-Time Customer Data Platform wordt in een toekomstige release toegevoegd.
+> Ondersteuning voor Real-Time CDP wordt in een toekomstige release toegevoegd.
 
-![ Het tabblad &quot;Technische elementen&quot; en de knop &quot;Vereist product toevoegen&quot; zijn gemarkeerd. ](/help/use-case-playbooks/assets/playbooks/authoring/technical-assets-add-required-product.png)
+![ de &quot;Technische activa&quot;tabel en de &quot;Add vereiste benadrukte productknoop&quot;.](/help/use-case-playbooks/assets/playbooks/authoring/technical-assets-add-required-product.png)
 
 Kies **[!UICONTROL Select an Asset]** om dit afspeelboek te koppelen aan een reis zoals in de onderstaande afbeelding wordt getoond. Dan uitgezocht **publiceer playbook** om playbook te voltooien.
 
@@ -162,4 +158,4 @@ Als een afspeelboek wordt gemarkeerd voor onjuiste of aanstootgevende inhoud, wo
 
 ## Volgende stappen
 
-Nu u begrijpt om playbooks tot stand te brengen en te publiceren gebruikend de Medewerker van Adobe AI, leren hoe te beginnen met beschikbare playbooks en de juiste te kiezen voor uw gebruiksgeval van [ Lijst van Playbooks ](/help/use-case-playbooks/playbooks/choose.md).
+Nu u begrijpt hoe te om playbooks tot stand te brengen en te publiceren gebruikend de Medewerker AI, hoe te beginnen met de beschikbare playbooks en juiste te kiezen voor uw gebruiksgeval van [ Lijst van Playbooks ](/help/use-case-playbooks/playbooks/choose.md).
