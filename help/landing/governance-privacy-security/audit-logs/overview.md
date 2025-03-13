@@ -4,9 +4,9 @@ description: Leer hoe u met auditlogboeken kunt zien wie welke acties in Adobe E
 role: Admin,Developer
 feature: Audits
 exl-id: 00baf615-5b71-4e0a-b82a-ca0ce8566e7f
-source-git-commit: f6e413d2d8b644775b6714739113174f5d9cb0d9
+source-git-commit: acbd46b5810a491d838f1c4c3366d19c91c15d51
 workflow-type: tm+mt
-source-wordcount: '1358'
+source-wordcount: '1436'
 ht-degree: 4%
 
 ---
@@ -87,7 +87,9 @@ U kunt controlelogboeken voor verschillende Experience Platform-functies weergev
 
 ![ het dashboard van Audits die Audits in het linkermenu benadrukken.](../../images/audit-logs/audits.png)
 
-Auditlogboeken worden 365 dagen bewaard waarna ze uit het systeem worden verwijderd. Daarom kun je slechts 365 dagen teruggaan. Als u gegevens van meer dan 365 dagen vereist, zou u logboeken bij een regelmatige kast moeten uitvoeren om aan uw interne beleidsvereisten te voldoen.
+Auditlogboeken worden 365 dagen bewaard waarna ze uit het systeem worden verwijderd. Als u gegevens van meer dan 365 dagen vereist, zou u logboeken bij een regelmatige kast moeten uitvoeren om aan uw interne beleidsvereisten te voldoen.
+
+Uw methode om controlelogboeken te verzoeken verandert de toegestane tijdspanne en het aantal verslagen u toegang tot zult hebben. [ het Exporteren logboeken ](#export-audit-logs) staat u toe om terug 365 dagen (in 90 dagintervallen) naar een maximum van 1000 verslagen te gaan, waar als [ activiteitenlogboek UI ](#filter-audit-logs) in Experience Platform de afgelopen 90 dagen aan een maximum van 1000 verslagen toont.
 
 Selecteer een gebeurtenis in de lijst om de details in de rechtertrack weer te geven.
 
@@ -95,12 +97,11 @@ Selecteer een gebeurtenis in de lijst om de details in de rechtertrack weer te g
 
 ### Controllerlogboeken filteren
 
+Selecteer het kanaalpictogram (![ pictogram van de Filter ](/help/images/icons/filter.png)) om een lijst van filtercontroles te tonen om smalle resultaten te helpen.
+
 >[!NOTE]
 >
->Aangezien dit een nieuwe eigenschap is, gaan de getoonde gegevens slechts terug tot maart 2022. Afhankelijk van de geselecteerde bron kunnen eerdere gegevens beschikbaar zijn vanaf januari 2022.
-
-
-Selecteer het kanaalpictogram (![ pictogram van de Filter ](/help/images/icons/filter.png)) om een lijst van filtercontroles te tonen om smalle resultaten te helpen. Alleen de laatste 1000 records worden weergegeven, ongeacht de verschillende geselecteerde filters.
+>In de gebruikersinterface van Experience Platform worden alleen de afgelopen 90 dagen maximaal 1000 records weergegeven, ongeacht de toegepaste filters. Als u logboeken voorbij nodig hebt dat (tot een maximum van 365 dagen), zult u uw controlelogboeken [ moeten uitvoeren ](#export-audit-logs).
 
 ![ het dashboard van Audits met het gefiltreerde benadrukte activiteitenlogboek.](../../images/audit-logs/filters.png)
 
@@ -130,9 +131,13 @@ De teruggekeerde gegevens van het controlelogboek bevatten de volgende informati
 
 ![ het dashboard van Audits met het gefiltreerde benadrukte activiteitenlogboek.](../../images/audit-logs/filtered.png)
 
-### Controleverslagen exporteren
+### Controleverslagen exporteren {#export-audit-logs}
 
 Selecteer **[!UICONTROL Download log]** als u de huidige lijst met auditlogs wilt exporteren.
+
+>[!NOTE]
+>
+>Logbestanden kunnen in het verleden worden aangevraagd met tussenpozen van 90 dagen tot 365 dagen. De maximale hoeveelheid logbestanden die tijdens één exportbewerking kan worden geretourneerd, is echter 10.000.
 
 ![ het dashboard van Audits met [!UICONTROL Download log] benadrukte.](../../images/audit-logs/download.png)
 
