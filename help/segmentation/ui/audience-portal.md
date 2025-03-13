@@ -2,9 +2,9 @@
 title: Overzicht van publiek portal
 description: Leer hoe u het publiek in Adobe Experience Platform kunt bekijken, beheren en een publiek kunt maken.
 exl-id: 505ac22e-05f3-423a-a9a0-7f3470af8945
-source-git-commit: 9f4facebcd55dc15761db1bf744acfef9ccb15ff
+source-git-commit: a862e532382472eadf29aee2568c550b1a71211a
 workflow-type: tm+mt
-source-wordcount: '4384'
+source-wordcount: '4396'
 ht-degree: 0%
 
 ---
@@ -113,9 +113,9 @@ Als er een splitsing is geselecteerd, wordt in de weergave een staafgrafiek weer
 
 | Status | Beschrijving |
 | ------ | ----------- |
-| [!UICONTROL Realized] | De telling van profielen die **** voor het segment in de laatste 24 uren kwalificeerde sinds de laatste baan van het partijsegment liep. |
-| [!UICONTROL Existing] | De telling van profielen die **** in het segment in de laatste 24 uren sinds de laatste baan van het partijsegment bleven lopen. |
-| [!UICONTROL Exiting] | De telling van profielen die **** het segment in de laatste 24 uren sindsdien de laatste baan van het partijsegment verliet. |
+| [!UICONTROL Realized] | De telling van profielen die **** voor het publiek in de laatste 24 uren kwalificeerde sinds de laatste baan van het partijsegment liep. |
+| [!UICONTROL Existing] | De telling van profielen die **** in het publiek in de laatste 24 uren sinds de laatste baan van het partijsegment bleven lopen. Dit gebied wordt berekend **** en verschijnt niet in het `segmentMembership` voorwerp. |
+| [!UICONTROL Exiting] | De telling van profielen die **** het publiek in de laatste 24 uren sinds de laatste baan van het partijsegment verliet. |
 
 Nadat u de velden hebt geselecteerd die u wilt weergeven, kunt u ook de breedte van de weergegeven kolommen vergroten of verkleinen. U kunt of dit doen door het gebied tussen de kolommen te slepen of door het ![ pijlpictogram ](/help/images/icons/chevron-down.png) van de kolom te selecteren u wilt re-size, die door **[!UICONTROL Resize column]** wordt gevolgd.
 
