@@ -4,7 +4,7 @@ description: Leer hoe u met auditlogboeken kunt zien wie welke acties in Adobe E
 role: Admin,Developer
 feature: Audits
 exl-id: 00baf615-5b71-4e0a-b82a-ca0ce8566e7f
-source-git-commit: acbd46b5810a491d838f1c4c3366d19c91c15d51
+source-git-commit: 9bc80c2ee01e7a739db55cc7fc77ea19e609b265
 workflow-type: tm+mt
 source-wordcount: '1436'
 ht-degree: 4%
@@ -89,7 +89,7 @@ U kunt controlelogboeken voor verschillende Experience Platform-functies weergev
 
 Auditlogboeken worden 365 dagen bewaard waarna ze uit het systeem worden verwijderd. Als u gegevens van meer dan 365 dagen vereist, zou u logboeken bij een regelmatige kast moeten uitvoeren om aan uw interne beleidsvereisten te voldoen.
 
-Uw methode om controlelogboeken te verzoeken verandert de toegestane tijdspanne en het aantal verslagen u toegang tot zult hebben. [ het Exporteren logboeken ](#export-audit-logs) staat u toe om terug 365 dagen (in 90 dagintervallen) naar een maximum van 1000 verslagen te gaan, waar als [ activiteitenlogboek UI ](#filter-audit-logs) in Experience Platform de afgelopen 90 dagen aan een maximum van 1000 verslagen toont.
+Uw methode om controlelogboeken te verzoeken verandert de toegestane tijdspanne en het aantal verslagen u toegang tot zult hebben. [ het Exporteren logboeken ](#export-audit-logs) staat u toe om terug 365 dagen (in 90 dagintervallen) naar een maximum van 10.000 verslagen te gaan, waar als [ activiteitenlogboek UI ](#filter-audit-logs) in Experience Platform de afgelopen 90 dagen aan een maximum van 1000 verslagen toont.
 
 Selecteer een gebeurtenis in de lijst om de details in de rechtertrack weer te geven.
 
