@@ -2,7 +2,7 @@
 title: Voorbeelden van grafiekconfiguraties
 description: Leer over gemeenschappelijke grafiekscenario's die u zou kunnen ontmoeten wanneer het werken met identiteitsgrafiek die regels en identiteitsgegevens verbindt.
 exl-id: fd0afb0b-a368-45b9-bcdc-f2f3b7508cee
-source-git-commit: 048d915d33a19a9d50a4951e165b5ade1b9d9734
+source-git-commit: 7174c2c0d8c4ada8d5bba334492bad396c1cfb34
 workflow-type: tm+mt
 source-wordcount: '2796'
 ht-degree: 1%
@@ -18,7 +18,7 @@ ht-degree: 1%
 
 >[!AVAILABILITY]
 >
->Identiteitsgrafiek die regels verbindt is momenteel in Beperkte Beschikbaarheid. Neem contact op met het accountteam van de Adobe voor informatie over de toegang tot de functie in ontwikkelsandboxen.
+>De regels voor identiteitsgrafiekkoppelingen zijn momenteel in Beperkte Beschikbaarheid. Neem contact op met uw Adobe-accountteam voor informatie over hoe u toegang kunt krijgen tot de functie in ontwikkelingssandboxen.
 
 >[!NOTE]
 >

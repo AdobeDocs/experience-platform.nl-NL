@@ -2,7 +2,7 @@
 title: De Gids van het oplossen van problemen voor de Regels van de Verbinding van de Grafiek van de Identiteit
 description: Leer hoe te om gemeenschappelijke kwesties in identiteitsgrafiek problemen op te lossen die regels verbinden.
 exl-id: 98377387-93a8-4460-aaa6-1085d511cacc
-source-git-commit: 4d9954dd61b56125ae1e828432c8cc359806d280
+source-git-commit: 7174c2c0d8c4ada8d5bba334492bad396c1cfb34
 workflow-type: tm+mt
 source-wordcount: '3279'
 ht-degree: 0%
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 >[!AVAILABILITY]
 >
->Identiteitsgrafiek die regels verbindt is momenteel in Beperkte Beschikbaarheid. Neem contact op met het accountteam van de Adobe voor informatie over de toegang tot de functie in ontwikkelsandboxen.
+>De regels voor identiteitsgrafiekkoppelingen zijn momenteel in Beperkte Beschikbaarheid. Neem contact op met uw Adobe-accountteam voor informatie over hoe u toegang kunt krijgen tot de functie in ontwikkelingssandboxen.
 
 Wanneer u regels voor identiteitsgrafieken test en valideert, kan er een aantal problemen optreden die te maken hebben met gegevensinvoer en grafiekgedrag. Lees dit document om te leren hoe te om sommige gemeenschappelijke kwesties problemen op te lossen die u zou kunnen ontmoeten wanneer het werken met identiteitsgrafiek die regels verbindt.
 
@@ -26,7 +26,7 @@ Het volgende diagram is een vereenvoudigde weergave van hoe gegevens stromen naa
 Het is van belang de volgende factoren in aanmerking te nemen:
 
 * Voor het stromen gegevens, zal het Profiel van de Klant in real time, de Dienst van de Identiteit, en het gegevenspeer beginnen de gegevens te verwerken wanneer de gegevens worden verzonden. Nochtans, is de latentie om de verwerking van de gegevens te voltooien afhankelijk van de dienst. Doorgaans duurt het langer om gegevens in een meer gegevens te verwerken dan bij Profiel en Identiteit.
-   * Als de gegevens niet wanneer het runnen van een vraag tegen een dataset zelfs na een paar uren verschijnen, dan is het waarschijnlijk dat de gegevens niet in Experience Platform werden opgenomen.
+   * Als de gegevens niet verschijnen wanneer het runnen van een vraag tegen een dataset zelfs na een paar uren, dan is het waarschijnlijk dat de gegevens niet in Experience Platform werden opgenomen.
 * Voor partijgegevens, zullen alle gegevens eerst in gegevens meer stromen, dan zullen de gegevens aan Profiel en Identiteit worden verspreid als de dataset voor Profiel en Identiteit wordt toegelaten.
 * Voor op inname betrekking hebbende kwesties, is het belangrijk dat de kwestie op een dienst-niveau voor nauwkeurige het zuiveren en het oplossen van problemen wordt geïsoleerd. Er zijn drie mogelijke typen problemen die in overweging moeten worden genomen:
 
@@ -198,7 +198,7 @@ Eerst moet u de volgende informatie verzamelen:
 
 1. Het identiteitssymbool (namespaceCode) van de cookie-naamruimte (bijvoorbeeld ECID) en de naamruimte voor de persoon (bijvoorbeeld CRMID) die zijn verzonden.
 1.1. Voor de implementaties van SDK van het Web, zijn dit gewoonlijk namespaces inbegrepen in identityMap.
-1.2. Voor de implementaties van de bron van de Analytics, zijn dit de koekjesherkenningsteken inbegrepen in identityMap. De persoon-id is een eVar-veld dat als een identiteitsbewijs is gemarkeerd.
+1.2. Voor de implementaties van de bron van de Analytics, zijn dit de koekjesherkenningsteken inbegrepen in identityMap. De persoon-id is een eVar-veld dat als een identiteit is gemarkeerd.
 2. De dataset waarin de gebeurtenis in (dataset_name) werd verzonden.
 3. De identiteitswaarde van de cookie-naamruimte die moet worden opgezocht (identity_value).
 
@@ -250,7 +250,7 @@ WHERE identitymap['ECID'][0].id ='identity_value'
 ORDER BY timestamp desc 
 ```
 
-**Nota**: Dit voorbeeld veronderstelt dat `eVar10` als identiteit duidelijk is. Voor uw configuraties, moet u de eVar veranderen die op de implementatie van uw eigen organisatie wordt gebaseerd.
+**Nota**: Dit voorbeeld veronderstelt dat `eVar10` als identiteit duidelijk is. Voor uw configuraties moet u de eVar wijzigen op basis van de implementatie van uw eigen organisatie.
 
 >[!ENDTABS]
 
@@ -373,7 +373,7 @@ Er zijn twee &#39;emmers&#39; van naamruimten: naamruimten van personen en naamr
 
 ### Als het Profiel van de Klant in real time niet meer de &quot;primaire&quot;vlag op identityMap gebruikt, moet deze waarde nog worden verzonden?
 
-Ja, de &quot;primaire&quot;vlag op identityMap wordt gebruikt door andere diensten. Voor meer informatie, lees de gids op [ de implicaties van namespaceprioriteit op andere diensten van het Experience Platform ](../identity-graph-linking-rules/namespace-priority.md#implications-on-other-experience-platform-services).
+Ja, de &quot;primaire&quot;vlag op identityMap wordt gebruikt door andere diensten. Voor meer informatie, lees de gids op [ de implicaties van namespaceprioriteit op andere diensten van Experience Platform ](../identity-graph-linking-rules/namespace-priority.md#implications-on-other-experience-platform-services).
 
 ### Zal naamruimteprioriteit van toepassing zijn op de gegevenssets van het profielrecord in Real-Time Klantprofiel?
 

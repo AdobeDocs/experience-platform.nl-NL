@@ -2,9 +2,9 @@
 title: Gebruikersinterface Identiteitsinstellingen
 description: Leer hoe u de gebruikersinterface voor identiteitsinstellingen gebruikt.
 exl-id: 738b7617-706d-46e1-8e61-a34855ab976e
-source-git-commit: f2e2c094b42248369b4a59d0ad6f950e62e0a7c1
+source-git-commit: 7174c2c0d8c4ada8d5bba334492bad396c1cfb34
 workflow-type: tm+mt
-source-wordcount: '559'
+source-wordcount: '589'
 ht-degree: 0%
 
 ---
@@ -13,7 +13,9 @@ ht-degree: 0%
 
 >[!AVAILABILITY]
 >
->Identiteitsgrafiek die regels verbindt is momenteel in Beperkte Beschikbaarheid. Neem contact op met uw Adobe-accountteam voor informatie over hoe u toegang kunt krijgen tot de functie in ontwikkelingssandboxen.
+>* De regels voor identiteitsgrafiekkoppelingen zijn momenteel in Beperkte Beschikbaarheid. Neem contact op met uw Adobe-accountteam voor informatie over hoe u toegang kunt krijgen tot de functie in ontwikkelingssandboxen.
+>
+>* Uw rekening moet de **toestemming van de Grafiek van de Identiteit van de Mening hebben** om tot identiteitsmontages in UI toegang te hebben. Voor meer informatie, lees de [ gids op toestemmingen in op attributen-gebaseerde toegangscontrole ](../../access-control/abac/ui/permissions.md).
 
 Identiteitsinstellingen zijn een functie in de gebruikersinterface van de Adobe Experience Platform Identity Service die u kunt gebruiken om unieke naamruimten aan te wijzen en naamruimteprioriteit te configureren.
 

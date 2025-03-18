@@ -2,9 +2,9 @@
 title: Implementatiegids voor koppelingsregels voor identiteitsgrafieken
 description: Leer de aanbevolen stappen die u moet volgen wanneer u uw gegevens implementeert met configuraties van regels voor identiteitsgrafieken.
 exl-id: 368f4d4e-9757-4739-aaea-3f200973ef5a
-source-git-commit: 79efdff6f6068af4768fc4bad15c0521cca3ed2a
+source-git-commit: 7174c2c0d8c4ada8d5bba334492bad396c1cfb34
 workflow-type: tm+mt
-source-wordcount: '1573'
+source-wordcount: '1676'
 ht-degree: 0%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 >[!AVAILABILITY]
 >
->Identiteitsgrafiek die regels verbindt is momenteel in Beperkte Beschikbaarheid. Neem contact op met het accountteam van de Adobe voor informatie over de toegang tot de functie in ontwikkelsandboxen.
+>De regels voor identiteitsgrafiekkoppelingen zijn momenteel in Beperkte Beschikbaarheid. Neem contact op met uw Adobe-accountteam voor informatie over hoe u toegang kunt krijgen tot de functie in ontwikkelingssandboxen.
 
 Lees dit document voor een stapsgewijze uitleg die u kunt volgen bij het implementeren van uw gegevens met Adobe Experience Platform Identity Service.
 
@@ -26,7 +26,7 @@ Stapsgewijze omtrek:
 4. [Gebruik de interface voor identiteitsinstellingen om uw unieke naamruimten aan te wijzen en prioriteitscijfers voor uw naamruimten te configureren](#identity-settings)
 5. [Een XDM-schema (Experience Data Model) maken](#schema)
 6. [Een gegevensset maken](#dataset)
-7. [Gegevens naar Experience Platform verzenden](#ingest)
+7. [Gegevens aan Experience Platform toevoegen](#ingest)
 
 ## Vereisten voor de implementatie {#prerequisites-for-implementation}
 
@@ -60,7 +60,7 @@ Als u [ Adobe Analytics bronschakelaar ](../../sources/tutorials/ui/create/adobe
 
 ### XDM Experience-gebeurtenissen
 
-Tijdens uw pre-implementatieproces, moet u ervoor zorgen dat de voor authentiek verklaarde gebeurtenissen die uw systeem naar Experience Platform zal verzenden altijd een persoonsidentificatie, zoals CRMID bevatten.
+Zorg er tijdens het pre-implementatieproces voor dat de geverifieerde gebeurtenissen die uw systeem naar Experience Platform verzendt, altijd een personeels-id bevatten, zoals CRMID.
 
 >[!BEGINTABS]
 
@@ -120,26 +120,28 @@ Tijdens uw pre-implementatieproces, moet u ervoor zorgen dat de voor authentiek 
 
 >[!ENDTABS]
 
-U moet ervoor zorgen dat u een volledig gekwalificeerde identiteit hebt wanneer u gebeurtenissen verzendt die XDM ervaringsgebeurtenissen gebruiken.
+Tijdens uw pre-implementatieproces, moet u ervoor zorgen dat de voor authentiek verklaarde gebeurtenissen die uw systeem naar Experience Platform zal verzenden altijd a **enige** persoonsidentificatie, zoals een CRMID bevatten.
 
-+++Selecteren om een voorbeeld weer te geven van een gebeurtenis met een volledig gekwalificeerde identiteit
+* (Aanbevolen) Voor authentiek verklaarde gebeurtenissen met één persoonsidentificatie.
+* (Niet geadviseerd) Voor authentiek verklaarde gebeurtenissen met twee persoon herkenningstekens.
+* (Niet aanbevolen) Voor authentiek verklaarde gebeurtenissen zonder enige persoonsidentificatiecodes.
 
-```json
-    "identityMap": {
-        "ECID": [
-            {
-                "id": "24165048599243194405404369473457348936",
-                "primary": false
-            }
-        ]
-    }
-```
+Als uw systeem twee persoonsidentificators verzendt, kan de implementatie de single-person namespace vereiste ontbreken. Bijvoorbeeld, als identityMap in uw webSDK implementatie een CRMID, een customerID, en een ECID namespace bevat, dan kunnen twee individuen die een apparaat delen verkeerd geassocieerd met verschillende namespaces worden.
+
+Binnen de Dienst van de Identiteit, kan deze implementatie als kijken:
+
+* `timestamp1` = John Log in -> system capture `CRMID: John, ECID: 111` .
+* `timestamp2` = Jane login -> systeem vangt `customerID: Jane, ECID: 111`.
+
++++Weergave hoe de implementatie eruit kan zien in grafieksimulatie
+
+![ de grafieksimulatie UI met een getoonde voorbeeldgrafiek.](../images/implementation/example-graph.png)
 
 +++
 
 ## Machtigingen instellen {#set-permissions}
 
-De eerste stap in het implementatieproces voor Identity Service is ervoor te zorgen dat uw account voor Experience Platforms wordt toegevoegd aan een rol die is voorzien van de vereiste machtigingen. Uw beheerder kan machtigingen voor uw account configureren door naar de gebruikersinterface voor machtigingen in Adobe Experience Cloud te navigeren. Van daar, moet uw rekening aan een rol met de volgende toestemmingen worden toegevoegd:
+De eerste stap in het implementatieproces voor Identity Service is ervoor te zorgen dat uw Experience Platform-account wordt toegevoegd aan een rol die is voorzien van de vereiste machtigingen. Uw beheerder kan machtigingen voor uw account configureren door naar de gebruikersinterface voor machtigingen in Adobe Experience Cloud te navigeren. Van daar, moet uw rekening aan een rol met de volgende toestemmingen worden toegevoegd:
 
 * [!UICONTROL View Identity Settings]: pas deze machtiging toe om unieke naamruimten en naamruimtenprioriteit weer te geven in de pagina Bladeren naar naamruimte voor identiteiten.
 * [!UICONTROL Edit Identity Settings]: pas deze machtiging toe om uw identiteitsinstellingen te kunnen bewerken en opslaan.
@@ -190,11 +192,11 @@ Op dit punt, zou u het volgende moeten hebben:
 * Minstens één XDM-schema. (Afhankelijk van uw gegevens en het specifieke gebruiksgeval, kunt u zowel profiel als ervaringsschema&#39;s moeten tot stand brengen.)
 * Een dataset die van uw schema gebaseerd is.
 
-Zodra u alle hierboven vermelde punten hebt, kunt u beginnen uw gegevens aan Experience Platform in te voeren. U kunt gegevensinvoer op verschillende manieren uitvoeren. U kunt de volgende services gebruiken om uw gegevens naar het Experience Platform te brengen:
+Als je alle hierboven vermelde objecten hebt, kun je je gegevens aan Experience Platform doorgeven. U kunt gegevensinvoer op verschillende manieren uitvoeren. U kunt de volgende services gebruiken om uw gegevens over te brengen naar Experience Platform:
 
 * [ Partij en het stromen opname ](../../ingestion/home.md)
 * [Gegevensverzameling in Experience Platform](../../collection/home.md)
-* [Experience Platforms](../../sources/home.md)
+* [Experience Platform-bronnen](../../sources/home.md)
 
 >[!TIP]
 >

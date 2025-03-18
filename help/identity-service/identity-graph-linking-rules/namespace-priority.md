@@ -2,7 +2,7 @@
 title: Prioriteit naamruimte
 description: Leer over namespace prioriteit in de Dienst van de Identiteit.
 exl-id: bb04f02e-3826-45af-b935-752ea7e6ed7c
-source-git-commit: 048d915d33a19a9d50a4951e165b5ade1b9d9734
+source-git-commit: 7174c2c0d8c4ada8d5bba334492bad396c1cfb34
 workflow-type: tm+mt
 source-wordcount: '1801'
 ht-degree: 1%
@@ -18,7 +18,7 @@ ht-degree: 1%
 
 >[!AVAILABILITY]
 >
->Identiteitsgrafiek die regels verbindt is momenteel in Beperkte Beschikbaarheid. Neem contact op met het accountteam van de Adobe voor informatie over de toegang tot de functie in ontwikkelsandboxen.
+>De regels voor identiteitsgrafiekkoppelingen zijn momenteel in Beperkte Beschikbaarheid. Neem contact op met uw Adobe-accountteam voor informatie over hoe u toegang kunt krijgen tot de functie in ontwikkelingssandboxen.
 
 Elke klantenimplementatie is uniek en gemaakt om de doelstellingen van een bepaalde organisatie te ontmoeten, en als dusdanig, varieert het belang van bepaalde namespace van klant tot klant. Voorbeelden in de praktijk zijn:
 
@@ -82,7 +82,7 @@ Voor relatief complexe grafiekstructuren speelt naamruimteprioriteit een belangr
 * Zodra u identiteitsmontages voor een bepaalde zandbak hebt gevormd, zal de primaire identiteit voor ervaringsgebeurtenissen door de hoogste namespace prioriteit in de configuratie worden bepaald.
    * Dit komt omdat ervaringsgebeurtenissen dynamisch van aard zijn. Een identiteitskaart kan drie of meer identiteiten bevatten, en namespace prioriteit zorgt ervoor dat belangrijkste namespace aan de ervaringsgebeurtenis wordt geassocieerd.
 * Dientengevolge, zullen de volgende configuraties **niet meer door Real-Time Profiel van de Klant** worden gebruikt:
-   * De primaire identiteitsconfiguratie (`primary=true`) wanneer het verzenden van identiteiten in identityMap gebruikend het Web SDK, Mobiele SDK, of de Server API van de Edge Network (identiteitsnamespace en identiteitswaarde zullen in Profiel verder worden gebruikt). **Nota**: De diensten buiten het Profiel van de Klant in real time zoals de opslag van het gegevensmeer of Adobe Target zullen de primaire identiteitsconfiguratie blijven gebruiken (`primary=true`).
+   * De primaire identiteitsconfiguratie (`primary=true`) wanneer het verzenden van identiteiten in identityMap gebruikend het Web SDK, Mobiele SDK, of de Server API van Edge Network (identiteitsnamespace en identiteitswaarde zullen in Profiel verder worden gebruikt). **Nota**: De diensten buiten het Profiel van de Klant in real time zoals de opslag van het gegevensmeer of Adobe Target zullen de primaire identiteitsconfiguratie blijven gebruiken (`primary=true`).
    * Alle velden die als primaire identiteit zijn gemarkeerd in een schema van de klasse Event van de XDM-ervaring.
    * Standaard primaire identiteitsinstellingen in de Adobe Analytics-bronconnector (ECID of AID).
 * Anderzijds, **namespace de prioriteit bepaalt geen primaire identiteit voor profielverslagen**.
@@ -141,9 +141,9 @@ Als John en Jane een apparaat delen, dan brengt ECID (Webbrowser) van één pers
 
 Als de segmentkwalificatiecriteria uitsluitend gebaseerd waren op anonieme gebeurtenissen die tegen de ECID waren opgeslagen, zou Jane in aanmerking komen voor dat segment
 
-## Gevolgen voor andere diensten van de Experience Platform {#implications}
+## Gevolgen voor andere Experience Platform-services {#implications}
 
-In deze sectie wordt beschreven hoe naamruimteprioriteit van invloed kan zijn op andere services van Experience Platforms.
+In deze sectie wordt beschreven hoe naamruimteprioriteit van invloed kan zijn op andere Experience Platform-services.
 
 ### Geavanceerd beheer van de levenscyclus van gegevens
 
@@ -162,7 +162,7 @@ Als identiteitsinstellingen zijn ingeschakeld, gebruiken berekende kenmerken naa
 
 Het opnemen van gegevens aan gegevens zal meer de primaire identiteitsmontages blijven respecteren die op [ SDK van het Web ](../../tags/extensions/client/web-sdk/data-element-types.md#identity-map) en schema&#39;s worden gevormd.
 
-Het meer van gegevens zal geen primaire identiteit bepalen die op namespaceprioriteit wordt gebaseerd. Bijvoorbeeld, zal Adobe Customer Journey Analytics waarden in de identiteitskaart blijven gebruiken zelfs nadat namespace de prioriteit wordt toegelaten (zoals, toevoegend een dataset aan een nieuwe verbinding), omdat de Customer Journey Analytics hun gegevens van gegevens meer verbruikt.
+Het meer van gegevens zal geen primaire identiteit bepalen die op namespaceprioriteit wordt gebaseerd. Adobe Customer Journey Analytics zal bijvoorbeeld waarden in de identiteitskaart blijven gebruiken, zelfs nadat naamruimtenioriteit is ingeschakeld (zoals het toevoegen van een gegevensset aan een nieuwe verbinding), omdat Customer Journey Analytics gegevens uit het datumpeer gebruikt.
 
 ### Schema&#39;s voor Experience Data Model (XDM)
 
@@ -179,7 +179,7 @@ Wanneer u uw gegevens selecteert, moet u een naamruimte opgeven die wordt gebrui
 
 Deze configuratie resulteert in computerscores die alleen gebruikmaken van geverifieerde gebeurtenissen.
 
-Voor meer informatie, lees de documenten op [ Attribution AI ](../../intelligent-services/attribution-ai/overview.md) en [ Klant AI ](../../intelligent-services/customer-ai/overview.md).
+Voor meer informatie, lees de documenten op [ AI van de Attributie ](../../intelligent-services/attribution-ai/overview.md) en [ Klant AI ](../../intelligent-services/customer-ai/overview.md).
 
 ### Partner-gebouwde bestemmingen
 
@@ -192,7 +192,7 @@ Voor meer informatie over partner-gebouwde bestemmingen, lees het [ overzicht va
 
 ### Privacyservice
 
-[ de verzoeken van de schrapping van de Privacy Service ](../privacy.md) functie op de volgende manier, voor een bepaalde identiteit:
+[ Privacy Service schrappingsverzoeken ](../privacy.md) functie op de volgende manier, voor een bepaalde identiteit:
 
 * Klantprofiel in realtime: verwijdert elk profielfragment met de opgegeven identiteitswaarde als primaire identiteit. **De primaire identiteit op Profiel zal nu gebaseerd op namespace prioriteit worden bepaald.**
 * Gegevensmeer: hiermee verwijdert u alle records met de opgegeven identiteit als primaire of secundaire identiteit.
