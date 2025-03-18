@@ -3,9 +3,9 @@ title: Arrays, kaarten en objecten van Real-Time CDP naar cloudopslagdoelen expo
 type: Tutorial
 description: Leer hoe u arrays, kaarten en objecten van Real-Time CDP naar cloudopslagdoelen exporteert.
 exl-id: ff13d8b7-6287-4315-ba71-094e2270d039
-source-git-commit: 2d640b282feb783694276c69366b1fccadddfd78
+source-git-commit: 99093e0bbcd3c3560ebe201fdac72e83e67dae43
 workflow-type: tm+mt
-source-wordcount: '873'
+source-wordcount: '851'
 ht-degree: 0%
 
 ---
@@ -14,9 +14,9 @@ ht-degree: 0%
 
 >[!AVAILABILITY]
 >
->De functionaliteit voor het exporteren van arrays naar cloudopslagdoelen is over het algemeen beschikbaar voor de volgende doelen: [[!DNL Azure Data Lake Storage Gen2]](../../destinations/catalog/cloud-storage/adls-gen2.md), [[!DNL Data Landing Zone]](../../destinations/catalog/cloud-storage/data-landing-zone.md), [[!DNL Google Cloud Storage]](../../destinations/catalog/cloud-storage/google-cloud-storage.md), [[!DNL Amazon S3]](../../destinations/catalog/cloud-storage/amazon-s3.md), [[!DNL Azure Blob]](../../destinations/catalog/cloud-storage/azure-blob.md), [[!DNL SFTP]](../../destinations/catalog/cloud-storage/sftp.md),
+>De functionaliteit voor het exporteren van arrays en andere complexe objecten naar cloudopslagdoelen is over het algemeen beschikbaar voor de volgende doelen: [[!DNL Azure Data Lake Storage Gen2]](../../destinations/catalog/cloud-storage/adls-gen2.md), [[!DNL Data Landing Zone]](../../destinations/catalog/cloud-storage/data-landing-zone.md), [[!DNL Google Cloud Storage]](../../destinations/catalog/cloud-storage/google-cloud-storage.md), [[!DNL Amazon S3]](../../destinations/catalog/cloud-storage/amazon-s3.md), [[!DNL Azure Blob]](../../destinations/catalog/cloud-storage/azure-blob.md), [[!DNL SFTP]](../../destinations/catalog/cloud-storage/sftp.md),
 
-Leer hoe te om series van Real-Time CDP naar [ wolkenopslagbestemmingen ](/help/destinations/catalog/cloud-storage/overview.md) uit te voeren. Lees dit document om inzicht te krijgen in de exportworkflow, de gebruiksgevallen die door deze functionaliteit worden ingeschakeld en de bekende beperkingen.
+Leer hoe te om series, kaarten, en voorwerpen van Real-Time CDP naar [ wolkenopslagbestemmingen ](/help/destinations/catalog/cloud-storage/overview.md) uit te voeren. Lees dit document om inzicht te krijgen in de exportworkflow, de gebruiksgevallen die door deze functionaliteit worden ingeschakeld en de bekende beperkingen.
 
 Bekijk deze pagina voor alles wat u wilt weten over het exporteren van arrays, kaarten en andere objecttypen uit Experience Platform.
 
@@ -52,8 +52,6 @@ organizations = [{
   latestInteraction: "2024-09-08"
 }]
 ```
-
-Zie verder onder [ uitgebreide voorbeelden ](#examples) van hoe u diverse functies kunt gebruiken om tot elementen van series, transformatie en filterseries toegang te hebben, arrayelementen in een koord, en meer aansluiten.
 
 Naast arrays kunt u ook kaarten en objecten van Experience Platform naar de gewenste bestemming voor cloudopslag exporteren. Lees meer over [ kaarten ](/help/xdm/ui/fields/map.md) en [ voorwerpen ](/help/xdm/ui/fields/object.md) in Experience Platform.
 
