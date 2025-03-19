@@ -2,7 +2,7 @@
 title: Tips om de waarde te maximaliseren met Adobe Experience Platform Data Distiller - OS656
 description: Leer de waarde te maximaliseren met Adobe Experience Platform Data Distiller door gegevens van het Real-Time Klantprofiel te verrijken en inzichten in gedrag te gebruiken om doelgroepen op te bouwen. Dit middel omvat een steekproefdataset en een gevallenanalyse die aantonen hoe te om het model van Recency, Frequency, Monetair (RFM) voor klantensegmentatie toe te passen.
 exl-id: f3af4b9a-5024-471a-b740-a52fd226a985
-source-git-commit: 9eee0f65c4aa46c61b699b734aba9fe2deb0f44a
+source-git-commit: fac4ca20f15bdfd765b73fde9db8dd7e2fc1a149
 workflow-type: tm+mt
 source-wordcount: '3577'
 ht-degree: 0%
@@ -328,11 +328,11 @@ Het resultaat ziet er ongeveer hetzelfde uit als de volgende afbeelding, maar me
 Met de berekende RFM-scores kunnen klanten worden ingedeeld in de volgende zes prioritaire segmenten:
 
 1. `Core`: Beste klanten met een hoge recenentie, Frequentie en Monetaire waarde (Recency = 1, Frequency = 1, Monetary = 1).
-2. `Loyal`: Frequente klanten die wel consistent zijn, maar geen topspenders (Frequentie = 1).
-3. `Whales`: De hoogste uitschieters, ongeacht Recency en Frequency (Monetair = 1).
-4. `Promising`: Frequente maar onderste uitschieters (Frequentie = 1, 2, 3; Monetair = 2, 3, 4).
-5. `Rookies`: Nieuwe klanten met lage frequentie (Recency = 1, Frequency = 4).
-6. `Slipping`: Vroeger loyale klanten met verminderde activiteit (Recentie = 2, 3, 4; Frequentie = 4).
+1. `Loyal`: Frequente klanten die wel consistent zijn, maar geen topspenders (Frequentie = 1).
+1. `Whales`: De hoogste uitschieters, ongeacht Recency en Frequency (Monetair = 1).
+1. `Promising`: Frequente maar onderste uitschieters (Frequentie = 1, 2, 3; Monetair = 2, 3, 4).
+1. `Rookies`: Nieuwe klanten met lage frequentie (Recency = 1, Frequency = 4).
+1. `Slipping`: Vroeger loyale klanten met verminderde activiteit (Recentie = 2, 3, 4; Frequentie = 4).
 
 Als u toegang en hergebruik wilt stroomlijnen, maakt u een `VIEW` waarin de RFM-segmenten, -scores en -waarden worden opgeslagen.
 
