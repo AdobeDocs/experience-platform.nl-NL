@@ -5,9 +5,9 @@ breadcrumb-title: Gids voor Query Service
 user-guide-description: Gebruik standaard SQL om gegevens te doorzoeken binnen de data lake in Experience Platform.
 feature: Queries
 role: User,Developer
-source-git-commit: e63ecbd14db2e9e4f35fb89aaaa406a4c584416a
+source-git-commit: 9eee0f65c4aa46c61b699b734aba9fe2deb0f44a
 workflow-type: tm+mt
-source-wordcount: '402'
+source-wordcount: '400'
 ht-degree: 11%
 
 ---
@@ -23,7 +23,6 @@ ht-degree: 11%
 - Data Distiller {#data-distiller}
    - [Overzicht](data-distiller/overview.md)
    - [Licentiegebruik](data-distiller/license-usage.md)
-   - [Knopinfo voor maximale waarde](data-distiller/top-tips-to-maximize-value.md)
    - Afgeleide gegevenssets {#derived-datasets}
       - [Overzicht](data-distiller/derived-datasets/overview.md)
       - [Afgeleide datasets maken met SQL](data-distiller/derived-datasets/create-derived-datasets-with-sql.md)
@@ -40,6 +39,7 @@ ht-degree: 11%
       - [Engineer-functies voor ML](data-distiller/ml-feature-pipelines/feature-engineering.md)
       - [Gegevens exporteren naar XML-omgevingen](data-distiller/ml-feature-pipelines/export-data.md)
       - [Verrijking van end-to-end workflow voor de AI/ML-gegevenspijpleiding](data-distiller/ml-feature-pipelines/end-to-end-notebook-workflow.md)
+   - [Top 2025](data-distiller/top-tips-to-maximize-value.md)
 - Distiller-statistieken over gegevens en leren van machines {#advanced-statistics}
    - [Overzicht](advanced-statistics/overview.md)
    - [Functietechniek](advanced-statistics/feature-engineering.md)

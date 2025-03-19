@@ -1,17 +1,15 @@
 ---
-title: Tips bovenaan om waarde te maximaliseren met Adobe Experience Platform Data Distiller
+title: Tips om de waarde te maximaliseren met Adobe Experience Platform Data Distiller - OS656
 description: Leer de waarde te maximaliseren met Adobe Experience Platform Data Distiller door gegevens van het Real-Time Klantprofiel te verrijken en inzichten in gedrag te gebruiken om doelgroepen op te bouwen. Dit middel omvat een steekproefdataset en een gevallenanalyse die aantonen hoe te om het model van Recency, Frequency, Monetair (RFM) voor klantensegmentatie toe te passen.
-hide: true
-hidefromtoc: true
 exl-id: f3af4b9a-5024-471a-b740-a52fd226a985
-source-git-commit: c7a6a37679541dc37bdfed33b72d2396db7ce054
+source-git-commit: 9eee0f65c4aa46c61b699b734aba9fe2deb0f44a
 workflow-type: tm+mt
-source-wordcount: '3428'
+source-wordcount: '3577'
 ht-degree: 0%
 
 ---
 
-# Tips voor het maximaliseren van de waarde met Adobe Experience Platform Data Distiller
+# Knopinfo voor maximale waarde met Adobe Experience Platform Data Distiller - OS656
 
 Deze pagina bevat de voorbeelddataset voor u om toe te passen wat u in Adobe Summit zitting &quot;OS656 - Hoogste Tips leerde om Waarde met de Distiller van Gegevens van Adobe Experience Platform te maximaliseren&quot;. U leert hoe u de implementatie van Adobe Real-Time Customer Data Platform en Journey Optimizer kunt versnellen door de gegevens van het profiel Real-Time te verbeteren. Deze verrijking maakt gebruik van diepgaande inzichten in gedragspatronen van klanten om een publiek te maken voor het leveren en optimaliseren van ervaringen.
 
@@ -53,7 +51,7 @@ Voer de volgende stappen uit om een CSV-bestand te uploaden naar Adobe Experienc
 
 #### Een gegevensset maken van een CSV-bestand {#create-a-dataset}
 
-Navigeer in de gebruikersinterface van Experience Platform naar **[!UICONTROL Workflows]** in de linkernavigatieregel en selecteer **[!UICONTROL Create dataset from CSV file]** in de beschikbare opties. Rechts van het scherm verschijnt een nieuw zijpaneel. Selecteer **[!UICONTROL Launch]** .
+Selecteer in de gebruikersinterface van Experience Platform **[!UICONTROL Datasets]** in de linkernavigatieregel, gevolgd door **[!UICONTROL Create dataset]** . Selecteer vervolgens **[!UICONTROL Create dataset from CSV file]** uit de beschikbare opties.
 
 Het deelvenster [!UICONTROL Configure Dataset] wordt weergegeven. Voer in het veld **[!UICONTROL Name]** de naam van de gegevensset in als &quot;luma_web_data&quot; en selecteer **[!UICONTROL Next]** .
 
@@ -135,7 +133,7 @@ De volgende vragen tonen aan hoe te om geannuleerde orden van de dataset te iden
 Met deze eerste query worden alle aanschaf-id&#39;s geselecteerd die niet gelijk zijn aan null en worden deze met `GROUP BY` geaggregeerd. De resulterende aankoop-id&#39;s moeten van de gegevensset worden uitgesloten.
 
 ```sql
-CREATE OR replace VIEW orders_cancelled
+CREATE VIEW orders_cancelled
 AS
   SELECT purchase_id
   FROM   luma_web_data
@@ -241,7 +239,7 @@ De resultaten lijken op de onderstaande afbeelding.
 Om query-efficiëntie en herbruikbaarheid te verbeteren, maakt u een `VIEW` waarin de samengevoegde RFM-waarden worden opgeslagen.
 
 ```sql
-CREATE OR replace VIEW rfm_values
+CREATE VIEW rfm_values
 AS
   SELECT userid,
          DATEDIFF(current_date, MAX(purchase_date)) AS days_since_last_purchase,
@@ -258,7 +256,7 @@ Het resultaat lijkt op de volgende afbeelding, maar heeft een andere id.
 Nogmaals als beste praktijken, stel eenvoudig in werking onderzoeken vraag om de gegevens in de mening te inspecteren. Gebruik de volgende instructie.
 
 ```sql
-SELECT * FROM RFM_Values;
+SELECT * FROM rfm_values;
 ```
 
 De volgende schermafbeelding toont een voorbeeldresultaat van de query, waarbij de berekende RFM-waarden voor elke gebruiker worden weergegeven. Het resultaat komt overeen met de weergave-id van de query `CREATE VIEW` .
@@ -289,7 +287,7 @@ SELECT userid,
        NTILE(4)
          OVER (
            ORDER BY total_revenue DESC)                AS monetization
-FROM   rfm_val ues; 
+FROM rfm_values; 
 ```
 
 De resultaten lijken op de onderstaande afbeeldingen.
@@ -320,6 +318,10 @@ AS
              ORDER BY total_revenue DESC)                AS monetization
   FROM   rfm_values;
 ```
+
+Het resultaat ziet er ongeveer hetzelfde uit als de volgende afbeelding, maar met een andere weergave-id.
+
+![ de de resultaatdialoog van de Vraag voor de &quot;rfm_scores&quot;WEERGAVE.](../images/data-distiller/top-tips-to-maximize-value/rfm_score-view-result.png)
 
 #### Model-RFM-segmenten {#model-rfm-segments}
 
@@ -398,7 +400,7 @@ In de volgende schermafbeeldingen wordt een voorbeeldresultaat van de query `SEL
 
 ### Stap 4: Gebruik SQL om RFM-gegevens in real-time klantprofiel te plaatsen {#sql-batch-ingest-rfm-data}
 
-De partij neemt RFM-verrijkte klantengegevens in Real-Time Profiel van de Klant op. Begin door een profiel-Toegelaten dataset te creëren en de getransformeerde gegevens op te nemen gebruikend SQL.
+Daarna, partij neemt RFM-Verrijkte klantengegevens in het Profiel van de Klant in real time op. Begin door een profiel-Toegelaten dataset te creëren en de getransformeerde gegevens op te nemen gebruikend SQL.
 
 #### Een afgeleide gegevensset maken om RFM-kenmerken op te slaan {#create-a-derived-dataset}
 
@@ -426,7 +428,13 @@ In deze SQL-instructie:
 >
 >Voor meer informatie bij het bepalen van identiteitsgebieden en het werken met identiteit namespaces, verwijs naar de [ documentatie van de Dienst van de Identiteit ](../../identity-service/home.md) of de gids op [ het bepalen van een identiteitsgebied in Adobe Experience Platform UI ](../../xdm/ui/fields/identity.md).
 
-Met de volgende SQL-code wordt een tabel gemaakt waarin voor profielen kan worden opgeslagen.
+Aangezien de Redacteur van de Vraag opeenvolgende uitvoering steunt, kunt u de lijstverwezenlijking en de vragen van de gegevenstoevoeging in één enkele zitting omvatten. In de volgende SQL-instructie wordt eerst een tabel gemaakt waarin Profiel is ingeschakeld en waarin de RFM-kenmerken worden opgeslagen. Vervolgens worden door RFM verrijkte klantgegevens uit `rfm_model_segment` ingevoegd in de `adls_rfm_profile` -tabel, waarbij elke record wordt gerangschikt onder de naamruimte die specifiek is voor de gebruiker in realtime.
+
+Aangezien de Redacteur van de Vraag opeenvolgende uitvoering steunt, kunt u de lijstverwezenlijking en de vragen van de gegevenstoevoeging in één enkele zitting in werking stellen. In de volgende SQL-instructie wordt eerst een tabel gemaakt waarin Profiel is ingeschakeld en waarin de RFM-kenmerken worden opgeslagen. Daarna, neemt het RFM-Verrijkte klantengegevens van `rfm_model_segment` in de `adls_rfm_profile` lijst op, die ervoor zorgt dat elk verslag behoorlijk onder uw huurdersspecifieke namespace (`_{TENANT_ID}`) wordt gestructureerd. Deze naamruimte is essentieel voor opname in realtime van het klantprofiel en voor nauwkeurige identiteitsresolutie.
+
+>[!IMPORTANT]
+>
+>Vervang `_{TENANT_ID}` door de naamruimte voor huurders van uw organisatie. Deze naamruimte is uniek voor uw organisatie en zorgt ervoor dat alle opgenomen gegevens correct worden toegewezen in Adobe Experience Platform.
 
 ```sql
 CREATE TABLE IF NOT EXISTS adls_rfm_profile (
@@ -439,15 +447,20 @@ CREATE TABLE IF NOT EXISTS adls_rfm_profile (
     monetization INTEGER, -- Monetary score
     rfm_model TEXT -- RFM segment classification
 ) WITH (LABEL = 'PROFILE'); -- Enable the table for Real-Time Customer Profile
+
+INSERT INTO adls_rfm_profile
+SELECT STRUCT(userId, days_since_last_purchase, orders, total_revenue, recency,
+              frequency, monetization, rfm_model) _{TENANT_ID}
+FROM rfm_model_segment;
 ```
 
 Het resultaat van deze vraag lijkt op vorige dataset creaties in dit playbook maar met verschillende identiteitskaart
 
-Na het creëren van de dataset, navigeer aan Datasets > doorbladert > `adls_rfm_profile` om te verifiëren dat de dataset leeg is.
+Nadat u de gegevensset hebt gemaakt, navigeert u naar **[!UICONTROL Datasets]** > **[!UICONTROL Browse]** > `adls_rfm_profile` om te controleren of de gegevensset leeg is.
 
 ![ de datasetwerkruimte met de details van de &quot;adls_rfm_profile&quot;dataset getoond en de profiel-toegelaten knevel benadrukte.](../images/data-distiller/top-tips-to-maximize-value/profile-enabled-toggle.png)
 
-U kunt ook naar **[!UICONTROL Schemas]** > **[!UICONTROL Browse]** > `adls_rfm_profile` navigeren om het XDM-diagram Individueel profielschema van uw zojuist gemaakte gegevensset weer te geven. Het zijn aangepaste veldgroepen.
+U kunt ook naar **[!UICONTROL Schemas]** > **[!UICONTROL Browse]** > `adls_rfm_profile` navigeren om het XDM-diagram Individueel profielschema van uw zojuist gemaakte gegevensset en de bijbehorende aangepaste veldgroepen weer te geven.
 
 ![ de werkruimte XDM met het diagram &quot;adls_rfm_profile&quot;getoond in het schemacanvas.](../images/data-distiller/top-tips-to-maximize-value/xdm-individual-profile-schema.png)
 
@@ -459,12 +472,12 @@ Zorg ervoor dat de veldvolgorde in de `SELECT` -query van de `INSERT` -instructi
 
 >[!NOTE]
 >
->Deze query wordt uitgevoerd in de Batch-modus, waarvoor een cluster moet worden gedraaid om het proces uit te voeren. De verrichting leest gegevens van het gegevensmeer, verwerkt het binnen de cluster, en schrijft de resultaten terug naar het gegevensmeer.
+>Deze query wordt uitgevoerd in de batchmodus. Hiervoor moet een cluster worden gedraaid om het proces uit te voeren. De verrichting leest gegevens van het gegevensmeer, verwerkt het binnen de cluster, en schrijft de resultaten terug naar het gegevensmeer.
 
 ```sql
 INSERT INTO adls_rfm_profile
 SELECT Struct(userid, days_since_last_purchase, orders, total_revenue, recency,
-              frequency, monetization, rfm_model) _pfreportingonprod
+              frequency, monetization, rfm_model) _{TENANT_ID}
 FROM   rfm_model_segment; 
 ```
 
@@ -490,10 +503,10 @@ Voor meer details bij het plannen van vragen, verwijs naar de [ documentatie van
 
 De weergave [!UICONTROL Schedule details] wordt weergegeven. Van hier, input de volgende details om het programma te vormen:
 
-- **[!UICONTROL Execution Frequency]**: **jaarlijks**
-- **[!UICONTROL Day of Execution]**: **30 April**
-- **[!UICONTROL Schedule Execution Time]**: **11 PM UTC**
-- **[!UICONTROL Schedule Period]**: **1 April - 31 mei, 2024**
+- **[!UICONTROL Execution Frequency]**: **Wekelijks**
+- **[!UICONTROL Day of Execution]**: **Maandag &amp; Dinsdag**
+- **[!UICONTROL Schedule Execution Time]**: **10:10 AM UTC**
+- **[!UICONTROL Schedule Period]**: **Maart 17 - 30 april, 2025**
 
 Selecteer **[!UICONTROL Save]** om het schema te bevestigen.
 
@@ -518,11 +531,11 @@ Kies de benadering die het beste bij uw werkstroom past.
 
 Gebruik de opdracht `CREATE AUDIENCE AS SELECT` om een nieuw publiek te definiëren. Het gemaakte publiek wordt opgeslagen in een gegevensset en geregistreerd in de **[!UICONTROL Audiences]** -werkruimte onder **[!UICONTROL Data Distiller]** .
 
-Soorten publiek dat is gemaakt met de SQL-extensie, worden automatisch geregistreerd onder de oorsprong [!UICONTROL Data Distiller] in de werkruimte van [!UICONTROL Audiences] . Vanuit de gebruikersinterface van [!UICONTROL Audiences] kunt u naar wens uw publiek weergeven, beheren en activeren.
+Soorten publiek dat is gemaakt met de SQL-extensie, worden automatisch geregistreerd onder de oorsprong [!UICONTROL Data Distiller] in de werkruimte van [!UICONTROL Audiences] . Van [ Portaal van het Publiek ](../../segmentation/ui/audience-portal.md), kunt u, uw publiek bekijken beheren en activeren zoals nodig.
 
-![ de werkruimte van het publiek die beschikbare soorten publiek tonen.](../images/data-distiller/top-tips-to-maximize-value/audiences-workspace-1.png)
+![ het Portaal van het Publiek dat beschikbaar publiek toont.](../images/data-distiller/top-tips-to-maximize-value/audiences-workspace-1.png)
 
-![ de werkruimte van het publiek die beschikbare publiek met de geselecteerde filterzijbalk en Gegevens toont Distiller.](../images/data-distiller/top-tips-to-maximize-value/audiences-workspace-2.png)
+![ het Portaal van het Publiek dat beschikbaar publiek met de geselecteerde filterzijbalk en Gegevens Distiller toont.](../images/data-distiller/top-tips-to-maximize-value/audiences-workspace-2.png)
 
 Voor meer details op SQL publiek, verwijs naar de [ documentatie van het publiek van Gegevens Distiller ](../data-distiller-audiences/overview.md). Leren hoe te om publiek in UI te beheren, zie het [ Poortoverzicht van het publiek Poorten ](../../segmentation/ui/audience-portal.md#audience-list).
 
@@ -534,19 +547,19 @@ Als u een publiek wilt maken, gebruikt u de volgende SQL-opdrachten:
 -- Define an audience for best customers based on RFM scores
 CREATE AUDIENCE rfm_best_customer 
 WITH (
-    primary_identity = _pfreportingonprod.userId, 
+    primary_identity = _{TENANT_ID}.userId, 
     identity_namespace = queryService
 ) AS ( 
     SELECT * FROM adls_rfm_profile 
-    WHERE _pfreportingonprod.recency = 1 
-        AND _pfreportingonprod.frequency = 1 
-        AND _pfreportingonprod.monetization = 1 
+    WHERE _{TENANT_ID}.recency = 1 
+        AND _{TENANT_ID}.frequency = 1 
+        AND _{TENANT_ID}.monetization = 1 
 );
 
 -- Define an audience that includes all customers
 CREATE AUDIENCE rfm_all_customer 
 WITH (
-    primary_identity = _pfreportingonprod.userId, 
+    primary_identity = _{TENANT_ID}.userId, 
     identity_namespace = queryService
 ) AS ( 
     SELECT * FROM adls_rfm_profile 
@@ -555,33 +568,33 @@ WITH (
 -- Define an audience for core customers based on email identity
 CREATE AUDIENCE rfm_core_customer 
 WITH (
-    primary_identity = _pfreportingonprod.userId, 
+    primary_identity = _{TENANT_ID}.userId, 
     identity_namespace = Email
 ) AS ( 
     SELECT * FROM adls_rfm_profile 
-    WHERE _pfreportingonprod.recency = 1 
-        AND _pfreportingonprod.frequency = 1 
-        AND _pfreportingonprod.monetization = 1 
+    WHERE _{TENANT_ID}.recency = 1 
+        AND _{TENANT_ID}.frequency = 1 
+        AND _{TENANT_ID}.monetization = 1 
 );
 ```
 
 #### Een publiek invoegen {#insert-an-audience}
 
-Gebruik de opdracht `INSERT INTO` om profielen toe te voegen aan een bestaand publiek. Dit staat u toe om individuele profielen of volledige publiekssegmenten aan een bestaande publieksdataset toe te voegen.
+Gebruik de opdracht `INSERT INTO` om profielen toe te voegen aan een bestaand publiek. Dit staat u toe om individuele profielen of volledig publiek aan een bestaande publieksdataset toe te voegen.
 
 ```sql
 -- Insert profiles into the audience dataset
 INSERT INTO AUDIENCE adls_rfm_audience 
 SELECT 
-    _pfreportingonprod.userId, 
-    _pfreportingonprod.days_since_last_purchase, 
-    _pfreportingonprod.orders, 
-    _pfreportingonprod.total_revenue, 
-    _pfreportingonprod.recency, 
-    _pfreportingonprod.frequency, 
-    _pfreportingonprod.monetization 
+    _{TENANT_ID}.userId, 
+    _{TENANT_ID}.days_since_last_purchase, 
+    _{TENANT_ID}.orders, 
+    _{TENANT_ID}.total_revenue, 
+    _{TENANT_ID}.recency, 
+    _{TENANT_ID}.frequency, 
+    _{TENANT_ID}.monetization 
 FROM adls_rfm_profile 
-WHERE _pfreportingonprod.rfm_model = '6. Slipping - Once Loyal, Now Gone';
+WHERE _{TENANT_ID}.rfm_model = '6. Slipping - Once Loyal, Now Gone';
 ```
 
 #### Profielen toevoegen aan een publiek {#add-profiles-to-audience}
@@ -649,4 +662,4 @@ Als u een publiek wilt maken met gebruik van RFM-kenmerken, sleept u het kenmerk
 
 Als u het publiek wilt voltooien, selecteert u **[!UICONTROL Save and Publish]** in de rechterbovenhoek. Na het opslaan wordt het nieuwe publiek weergegeven in de [!UICONTROL Audiences] -werkruimte, waar u het overzicht en de kwalificatiecriteria kunt bekijken.
 
-Gebruik de segmentbouwer om tot de afgeleide attributen toegang te hebben van RFM en extra publiek te ontwerpen. Activeer het nieuwe SQL-publiek op basis van RFM-scores en stuur het naar een van de aangewezen doelen, waaronder Adobe Journey Optimizer.
+Gebruik de Bouwer van het Segment om tot de afgeleide attributen toegang te hebben RFM en extra publiek te ontwerpen. Activeer het nieuwe SQL-publiek op basis van RFM-scores en stuur het naar een van de aangewezen doelen, waaronder Adobe Journey Optimizer.
