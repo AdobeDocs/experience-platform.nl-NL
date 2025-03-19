@@ -2,9 +2,9 @@
 title: Tips om de waarde te maximaliseren met Adobe Experience Platform Data Distiller - OS656
 description: Leer de waarde te maximaliseren met Adobe Experience Platform Data Distiller door gegevens van het Real-Time Klantprofiel te verrijken en inzichten in gedrag te gebruiken om doelgroepen op te bouwen. Dit middel omvat een steekproefdataset en een gevallenanalyse die aantonen hoe te om het model van Recency, Frequency, Monetair (RFM) voor klantensegmentatie toe te passen.
 exl-id: f3af4b9a-5024-471a-b740-a52fd226a985
-source-git-commit: fac4ca20f15bdfd765b73fde9db8dd7e2fc1a149
+source-git-commit: cfa8395e68ed828be5095a979d5bf0ea6e9a9ae9
 workflow-type: tm+mt
-source-wordcount: '3577'
+source-wordcount: '3578'
 ht-degree: 0%
 
 ---
@@ -438,15 +438,15 @@ Aangezien de Redacteur van de Vraag opeenvolgende uitvoering steunt, kunt u de l
 
 ```sql
 CREATE TABLE IF NOT EXISTS adls_rfm_profile (
-    userId TEXT PRIMARY IDENTITY NAMESPACE 'Email', -- Primary identity field using the 'Email' namespace
-    days_since_last_purchase INTEGER, -- Days since the last purchase
-    orders INTEGER, -- Total number of orders
-    total_revenue DECIMAL(18, 2), -- Total revenue with two decimal precision
-    recency INTEGER, -- Recency score
-    frequency INTEGER, -- Frequency score
-    monetization INTEGER, -- Monetary score
-    rfm_model TEXT -- RFM segment classification
-) WITH (LABEL = 'PROFILE'); -- Enable the table for Real-Time Customer Profile
+    userId TEXT PRIMARY IDENTITY NAMESPACE 'Email',
+    days_since_last_purchase INTEGER,
+    orders INTEGER,
+    total_revenue DECIMAL(18, 2),
+    recency INTEGER,
+    frequency INTEGER,
+    monetization INTEGER,
+    rfm_model TEXT
+) WITH (LABEL = 'PROFILE');
 
 INSERT INTO adls_rfm_profile
 SELECT STRUCT(userId, days_since_last_purchase, orders, total_revenue, recency,
@@ -578,28 +578,9 @@ WITH (
 );
 ```
 
-#### Een publiek invoegen {#insert-an-audience}
+#### Een lege publieksgegevensset maken {#create-empty-audience-dataset}
 
-Gebruik de opdracht `INSERT INTO` om profielen toe te voegen aan een bestaand publiek. Dit staat u toe om individuele profielen of volledig publiek aan een bestaande publieksdataset toe te voegen.
-
-```sql
--- Insert profiles into the audience dataset
-INSERT INTO AUDIENCE adls_rfm_audience 
-SELECT 
-    _{TENANT_ID}.userId, 
-    _{TENANT_ID}.days_since_last_purchase, 
-    _{TENANT_ID}.orders, 
-    _{TENANT_ID}.total_revenue, 
-    _{TENANT_ID}.recency, 
-    _{TENANT_ID}.frequency, 
-    _{TENANT_ID}.monetization 
-FROM adls_rfm_profile 
-WHERE _{TENANT_ID}.rfm_model = '6. Slipping - Once Loyal, Now Gone';
-```
-
-#### Profielen toevoegen aan een publiek {#add-profiles-to-audience}
-
-Gebruik de volgende SQL-opdrachten om een publiek te maken en te vullen:
+Alvorens profielen toe te voegen, creeer een lege dataset om publieksverslagen op te slaan.
 
 ```sql
 -- Create an empty audience dataset
@@ -620,11 +601,28 @@ SELECT
 WHERE FALSE;
 ```
 
+#### Profielen invoegen in een bestaand publiek {#insert-an-audience}
+
+Als u profielen wilt toevoegen aan een bestaand publiek, gebruikt u de opdracht INSERT INTO. Dit staat u toe om individuele profielen of volledige publiekssegmenten aan een bestaande publieksdataset toe te voegen.
+
+```sql
+-- Insert profiles into the audience dataset
+INSERT INTO AUDIENCE adls_rfm_audience 
+SELECT 
+    _{TENANT_ID}.userId, 
+    _{TENANT_ID}.days_since_last_purchase, 
+    _{TENANT_ID}.orders, 
+    _{TENANT_ID}.total_revenue, 
+    _{TENANT_ID}.recency, 
+    _{TENANT_ID}.frequency, 
+    _{TENANT_ID}.monetization 
+FROM adls_rfm_profile 
+WHERE _{TENANT_ID}.rfm_model = '6. Slipping - Once Loyal, Now Gone';
+```
+
 #### Een publiek verwijderen {#delete-an-audience}
 
-Als u een bestaand publiek wilt verwijderen, gebruikt u de opdracht `DROP AUDIENCE` . Als het publiek niet bestaat, treedt een uitzondering op, tenzij `IF EXISTS` wordt opgegeven.
-
-Gebruik de volgende SQL-opdracht om een publiek te verwijderen:
+Om een bestaand publiek te schrappen, gebruik het bevel van het PUBLIEK DROP. Als het publiek niet bestaat, komt een uitzondering voor tenzij IF EXISTS wordt gespecificeerd.
 
 ```sql
 DROP AUDIENCE IF EXISTS adls_rfm_audience;
