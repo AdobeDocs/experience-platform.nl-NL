@@ -2,9 +2,9 @@
 title: Tips om de waarde te maximaliseren met Adobe Experience Platform Data Distiller - OS656
 description: Leer de waarde te maximaliseren met Adobe Experience Platform Data Distiller door gegevens van het Real-Time Klantprofiel te verrijken en inzichten in gedrag te gebruiken om doelgroepen op te bouwen. Dit middel omvat een steekproefdataset en een gevallenanalyse die aantonen hoe te om het model van Recency, Frequency, Monetair (RFM) voor klantensegmentatie toe te passen.
 exl-id: f3af4b9a-5024-471a-b740-a52fd226a985
-source-git-commit: cfa8395e68ed828be5095a979d5bf0ea6e9a9ae9
+source-git-commit: 30db967fc94d8f5b9ded22ce81da3d51001610af
 workflow-type: tm+mt
-source-wordcount: '3578'
+source-wordcount: '3624'
 ht-degree: 0%
 
 ---
@@ -18,6 +18,16 @@ Door het casestudy van de Luma, zult u gebruikersgedragsgegevens analyseren en a
 ## Voorwaarde
 
 Om dit gebruiksgeval uit te voeren, moet uw instantie van Adobe Experience Platform voor [ Gegevens Distiller ](./overview.md) worden vergunning gegeven. Neem contact op met uw Adobe-vertegenwoordiger voor meer informatie.
+
+U moet ook identiteitskaart van de huurder van uw **organisatie** kennen, die voor het uitvoeren van vragen wordt vereist. Uw huurder-id is het eerste deel van de URL wanneer u zich aanmeldt bij Experience Platform, dat direct na het symbool @ wordt weergegeven.
+
+Bijvoorbeeld in de volgende URL:
+
+```http
+https://experience.adobe.com/#/@pfreportingonprod/sname:prod/platform/home
+```
+
+De huurder-id is `pfreportingonprod` .
 
 ## Overzicht van het RFM-model {#rfm-overview}
 
