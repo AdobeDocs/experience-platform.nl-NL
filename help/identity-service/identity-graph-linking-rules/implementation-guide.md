@@ -2,9 +2,9 @@
 title: Implementatiegids voor koppelingsregels voor identiteitsgrafieken
 description: Leer de aanbevolen stappen die u moet volgen wanneer u uw gegevens implementeert met configuraties van regels voor identiteitsgrafieken.
 exl-id: 368f4d4e-9757-4739-aaea-3f200973ef5a
-source-git-commit: 7174c2c0d8c4ada8d5bba334492bad396c1cfb34
+source-git-commit: 9243da3ebe5e963ec457da5ae3e300e852787d37
 workflow-type: tm+mt
-source-wordcount: '1676'
+source-wordcount: '1713'
 ht-degree: 0%
 
 ---
@@ -58,7 +58,12 @@ Op basis van een unieke naamruimte (in dit geval een CRMID in plaats van twee ve
 
 Als u [ Adobe Analytics bronschakelaar ](../../sources/tutorials/ui/create/adobe-applications/analytics.md) gebruikt om gegevens in te voeren, dan moet u uw ECIDs een hogere prioriteit geven dan identiteitskaart van Adobe Analytics (HULP) omdat de Dienst van de Identiteit HULP blokkeert. Door ECID een prioriteit te geven, kunt u Real-Time Klantprofiel de opdracht geven om niet-geverifieerde gebeurtenissen op te slaan naar ECID in plaats van naar HULP.
 
-### XDM Experience-gebeurtenissen
+### XDM Experience-gebeurtenissen {#xdm-experience-events}
+
+>[!CONTEXTUALHELP]
+>id="platform_identities_linkingrules_xdm"
+>title="Zorg ervoor dat u één persoon-id hebt"
+>abstract="Tijdens uw pre-implementatieproces, moet u ervoor zorgen dat de voor authentiek verklaarde gebeurtenissen die uw systeem naar Experience Platform zal verzenden altijd a **enige** persoonsidentificatie, zoals een CRMID bevatten."
 
 Zorg er tijdens het pre-implementatieproces voor dat de geverifieerde gebeurtenissen die uw systeem naar Experience Platform verzendt, altijd een personeels-id bevatten, zoals CRMID.
 
