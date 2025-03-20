@@ -1,19 +1,19 @@
 ---
-keywords: Experience Platform;huis;populaire onderwerpen;de vraagdienst;de dienst van de Vraag;het oplossen van problemengids;faq;het oplossen van problemen;
+keywords: Experience Platform;home;populaire onderwerpen;queryservice;Query-service;gids voor probleemoplossing;faq;problemen oplossen;
 solution: Experience Platform
 title: Query Service en Data Distiller hebben vaak vragen gesteld
 description: Dit document bevat algemene vragen en antwoorden met betrekking tot Query Service en Data Distiller. De onderwerpen omvatten, het uitvoeren van gegevens, derdehulpmiddelen, en fouten PSQL.
 exl-id: 14cdff7a-40dd-4103-9a92-3f29fa4c0809
-source-git-commit: dc15ab9b94513d3acdf0e62ef0fec710c05a9fc9
+source-git-commit: ef4c7f20710f56ca0de7c0dfdb99751ff2fe8ebe
 workflow-type: tm+mt
-source-wordcount: '5037'
+source-wordcount: '5006'
 ht-degree: 0%
 
 ---
 
 # Query Service en Data Distiller hebben vaak vragen gesteld
 
-In dit document worden veelgestelde vragen over Query Service en Data Distiller beantwoord. Het omvat ook algemeen gezien foutencodes terwijl het gebruiken van het product van &quot;Vragen&quot;voor gegevensbevestiging of het schrijven van getransformeerde gegevens terug naar het gegevenspeer. Voor vragen en het oplossen van problemen andere diensten van Adobe Experience Platform, gelieve te verwijzen naar de [ gids van het oplossen van problemenprobleem van het Experience Platform ](../landing/troubleshooting.md).
+In dit document worden veelgestelde vragen over Query Service en Data Distiller beantwoord. Het omvat ook algemeen gezien foutencodes terwijl het gebruiken van het product van &quot;Vragen&quot;voor gegevensbevestiging of het schrijven van getransformeerde gegevens terug naar het gegevenspeer. Voor vragen en het oplossen van problemen andere diensten van Adobe Experience Platform, gelieve te verwijzen naar de [ het oplossen van problemengids van Experience Platform ](../landing/troubleshooting.md).
 
 Om te verduidelijken hoe de Dienst van de Vraag en Gegevens Distiller binnen Adobe Experience Platform samenwerken, zijn hier twee grondvragen.
 
@@ -86,17 +86,6 @@ In partijvragen, wordt het bijwerken van een rij binnen de dataset niet gesteund
 Nee. De gegevensgrootte is niet beperkt, maar er geldt een time-outlimiet van 10 minuten voor de query voor een interactieve sessie. Als de vraag als partij CTAS wordt uitgevoerd dan is een 10 minieme onderbreking niet van toepassing. Zie de begeleiding bij [ interactieve vraaguitvoering ](./best-practices/writing-queries.md#interactive-query-execution) voor meer details.
 +++
 
-### Hoe mijd ik de grens op het outputaantal rijen van een UITGEZOCHTE vraag?
-
-+++Antwoord
-Als u de limiet voor de uitvoerrij wilt overslaan, past u LIMIT 0 toe in de query. Bijvoorbeeld:
-
-```sql
-SELECT * FROM customers LIMIT 0;
-```
-
-+++
-
 ### Hoe kan ik voorkomen dat mijn vragen over 10 minuten worden uitgesteld?
 
 +++Antwoord
@@ -126,7 +115,7 @@ Er zijn bepaalde gereserveerde trefwoorden die niet als kolomnaam kunnen worden 
 +++Antwoord
 De volgende stappen beschrijven hoe te om een tabelmening van een dataset door UI, met inbegrip van alle genestelde gebieden en kolommen in een samengevoegde vorm te tonen.
 
-- Nadat u zich hebt aangemeld bij het Experience Platform, selecteert u **[!UICONTROL Datasets]** in de linkernavigatie van de gebruikersinterface om naar het [!UICONTROL Datasets] -dashboard te navigeren.
+- Nadat u zich hebt aangemeld bij Experience Platform, selecteert u **[!UICONTROL Datasets]** in de linkernavigatie van de gebruikersinterface om naar het [!UICONTROL Datasets] -dashboard te navigeren.
 - Het tabblad Gegevenssets [!UICONTROL Browse] wordt geopend. Met de zoekbalk kunt u de beschikbare opties verfijnen. Selecteer een dataset van de getoonde lijst.
 
 ![ het dashboard van Datasets in Platform UI met de onderzoeksbar en een benadrukt dataset.](./images/troubleshooting/dataset-selection.png)
@@ -153,20 +142,20 @@ Om de prestaties van vragen op datasets te verbeteren die series bevatten, zou u
 +++Antwoord
 Als de vraag lange tijd op een zeer kleine dataset heeft geduurd, gelieve klantensteun te contacteren.
 
-Een query kan om het even welk aantal redenen vastlopen tijdens de verwerking. Om de precieze oorzaak te bepalen, is een grondige analyse per geval nodig. [ de klantensteun van de Adobe van het Contact ](#customer-support) aan het zijn van dit proces.
+Een query kan om het even welk aantal redenen vastlopen tijdens de verwerking. Om de precieze oorzaak te bepalen, is een grondige analyse per geval nodig. [ de klantensteun van Adobe van het Contact ](#customer-support) aan zijn dit proces.
 +++
 
-### Hoe neem ik contact op met de klantenondersteuning van de Adobe? {#customer-support}
+### Hoe kan ik contact opnemen met de klantenondersteuning van Adobe? {#customer-support}
 
 +++Antwoord
-[ een volledige lijst van de telefoonaantallen van de klantensteun van de Adobe ](https://helpx.adobe.com/ca/contact/phone.html) is beschikbaar op de pagina van de Hulp van de Adobe. U kunt de Help ook online vinden door de volgende stappen uit te voeren:
+[ een volledige lijst van de telefoonaantallen van de klantensteun van Adobe ](https://helpx.adobe.com/ca/contact/phone.html) is beschikbaar op de de hulppagina van Adobe. U kunt de Help ook online vinden door de volgende stappen uit te voeren:
 
 - Navigeer aan [ https://www.adobe.com/ ](https://www.adobe.com/) in uw Webbrowser.
 - Selecteer **[!UICONTROL Sign In]** rechts van de bovenste navigatiebalk.
 
-![ de website van de Adobe met Onderteken binnen benadrukt.](./images/troubleshooting/adobe-sign-in.png)
+![ de website van Adobe met Onderteken binnen benadrukt.](./images/troubleshooting/adobe-sign-in.png)
 
-- Gebruik uw Adobe ID en wachtwoord die bij uw Adobe licentie zijn geregistreerd.
+- Gebruik uw Adobe ID en wachtwoord die bij uw Adobe-licentie zijn geregistreerd.
 - Selecteer **[!UICONTROL Help & Support]** in de bovenste navigatiebalk.
 
 ![ het hoogste drop-down menu van de navigatiebar met Hulp en steun, de steun van de Onderneming en het Contact ons benadrukte.](./images/troubleshooting/help-and-support.png)
@@ -202,9 +191,9 @@ Ja, u kunt vragen door het gebruik van voorbereide verklaringen templatiseren. B
 +++Antwoord
 Om foutenlogboeken voor een specifieke vraag terug te winnen, moet u eerst de Dienst API van de Vraag gebruiken om de details van het vraaglogboek te halen. De reactie van HTTP bevat vraag IDs die worden vereist om een vraagfout te onderzoeken.
 
-Gebruik het bevel van de GET om veelvoudige vragen terug te winnen. De informatie over hoe te om een vraag aan API te maken kan in de [ steekproefAPI vraagdocumentatie ](./api/queries.md#sample-api-calls) worden gevonden.
+Gebruik de opdracht GET om meerdere query&#39;s op te halen. De informatie over hoe te om een vraag aan API te maken kan in de [ steekproefAPI vraagdocumentatie ](./api/queries.md#sample-api-calls) worden gevonden.
 
-Van de reactie, identificeer de vraag u wilt onderzoeken en een ander verzoek van de GET doen gebruikend zijn `id` waarde. De volledige instructies kunnen in [ worden gevonden wint een vraag door identiteitskaart documentatie ](./api/queries.md#retrieve-a-query-by-id) terug.
+In de reactie identificeert u de query die u wilt onderzoeken en maakt u een andere GET-aanvraag met behulp van de `id` -waarde. De volledige instructies kunnen in [ worden gevonden wint een vraag door identiteitskaart documentatie ](./api/queries.md#retrieve-a-query-by-id) terug.
 
 Een geslaagde reactie retourneert HTTP-status 200 en bevat de array `errors` . De reactie is verkort vanwege de beknoptheid.
 
@@ -307,7 +296,7 @@ Deze functie is momenteel in uitvoering. De details zullen beschikbaar in [ vers
 De Dienst van de vraag verstrekt verscheidene ingebouwde SQL helperfuncties om SQL functionaliteit uit te breiden. Zie het document voor een volledige lijst van de [ SQL functies die door de Dienst van de Vraag ](./sql/spark-sql-functions.md) worden gesteund.
 +++
 
-### Worden alle native [!DNL Spark SQL] functies ondersteund of zijn gebruikers beperkt tot alleen de omvattende [!DNL Spark SQL] -functies die door de Adobe worden geboden?
+### Worden alle native [!DNL Spark SQL] functies ondersteund of zijn gebruikers beperkt tot alleen de omvattende [!DNL Spark SQL] -functies die door Adobe worden geboden?
 
 +++Antwoord
 Tot nu toe zijn niet alle open-source [!DNL Spark SQL] -functies getest op data Lake data. Nadat de tests en bevestigingen zijn uitgevoerd, worden ze toegevoegd aan de lijst met ondersteunde items. Gelieve te verwijzen de [ lijst van gesteunde  [!DNL Spark SQL]  functies ](./sql/spark-sql-functions.md) om voor een specifieke functie te controleren.
@@ -518,7 +507,7 @@ WHERE T2.ID IS NULL
 ### Kan ik een dataset tot stand brengen gebruikend een vraag CTAS met een dubbel onderstreeptekennaam zoals die getoond in UI? Bijvoorbeeld: `test_table_001` .
 
 +++Antwoord
-Nee, dit is een opzettelijke beperking in het hele Experience Platform die van toepassing is op alle Adobe-services, inclusief Query Service. Een naam met twee onderstrepingstekens is aanvaardbaar als schema en datasetnaam, maar de lijstnaam voor de dataset kan slechts één enkel onderstrepingsteken bevatten.
+Nee, dit is een opzettelijke beperking in Experience Platform die van toepassing is op alle Adobe-services, inclusief Query Service. Een naam met twee onderstrepingstekens is aanvaardbaar als schema en datasetnaam, maar de lijstnaam voor de dataset kan slechts één enkel onderstrepingsteken bevatten.
 +++
 
 ### Hoeveel gezamenlijke vragen kunt u tegelijkertijd lopen?
@@ -578,13 +567,13 @@ Er zijn drie manieren om de toegang te beperken. Deze zijn als volgt:
 
 - De Dienst van de vraag steunt op attribuut-gebaseerde toegangsbeheer. U kunt toegang tot gegevens op kolom/bladniveau en/of struct niveau beperken. Zie de documentatie om meer over op attribuut-gebaseerde toegangsbeheer te leren.
 
-### Kan ik een SSL-modus opgeven voor de verbinding met een externe client? Kan ik bijvoorbeeld &#39;verify-full&#39; gebruiken met Power BI?
+### Kan ik een SSL-modus opgeven voor de verbinding met een externe client? Kan ik bijvoorbeeld &#39;verify-full&#39; gebruiken bij Power BI?
 
 +++Antwoord
 Ja, SSL-modi worden ondersteund. Zie de [ SSL wijzedocumentatie ](./clients/ssl-modes.md) voor een uitsplitsing van de verschillende beschikbare SSL wijzen en het niveau van bescherming zij verstrekken.
 +++
 
-### Gebruiken wij TLS 1.2 voor alle verbindingen van Power BI cliënten aan de vraagdienst?
+### Gebruiken wij TLS 1.2 voor alle verbindingen van de cliënten van Power BI aan de vraagdienst?
 
 +++Antwoord
 Ja. Doorvoergegevens zijn altijd compatibel met HTTPS. De momenteel ondersteunde versie is TLS1.2.
@@ -765,10 +754,10 @@ Zie de documentatie voor meer informatie over hoe te [ met externe cliënten met
 Om het even welke derde SQL redacteur die PSQL of [!DNL Postgres] cliënt volgzaam is kan met de Redacteur van de Dienst van de Vraag worden verbonden. Zie de documentatie voor [ verbindend cliënten met de Dienst van de Vraag ](./clients/overview.md) voor een lijst van beschikbare instructies.
 +++
 
-### Kan ik het hulpmiddel van de Power BI met de Dienst van de Vraag verbinden?
+### Kan ik het Power BI-hulpprogramma verbinden met Query Service?
 
 +++Antwoord
-Ja, u kunt Power BI met de Dienst van de Vraag verbinden. Zie de documentatie voor [ instructies bij het aansluiten van de Desktop app van Power BI aan de Dienst van de Vraag ](./clients/power-bi.md).
+Ja, u kunt Power BI verbinden met Query Service. Zie de documentatie voor [ instructies bij het aansluiten van de Desktopapp van Power BI aan de Dienst van de Vraag ](./clients/power-bi.md).
 +++
 
 ### Waarom duurt het lang om de dashboards te laden wanneer verbonden met de Dienst van de Vraag?
@@ -776,7 +765,7 @@ Ja, u kunt Power BI met de Dienst van de Vraag verbinden. Zie de documentatie vo
 +++Antwoord
 Wanneer het systeem met de Dienst van de Vraag wordt verbonden, wordt het verbonden met een interactieve of partijverwerkingsmotor. Dit kan resulteren in langere laadtijden voor de verwerkte gegevens.
 
-Als u de reactietijden voor uw dashboards zou willen verbeteren, zou u een server van de Business Intelligence (BI) als caching laag tussen de Dienst van de Vraag en de hulpmiddelen van BI moeten uitvoeren. Over het algemeen, hebben de meeste hulpmiddelen van BI een extra aanbieding voor een server.
+Als u de reactietijden voor uw dashboards wilt verbeteren, zou u een server van Business Intelligence (BI) als caching laag tussen de Dienst van de Vraag en de hulpmiddelen van BI moeten uitvoeren. Over het algemeen, hebben de meeste hulpmiddelen van BI een extra aanbieding voor een server.
 
 Het doel om de laag van de geheim voorgeheugenserver toe te voegen is de gegevens van de Dienst van de Vraag in het voorgeheugen onder te brengen en het zelfde voor dashboards te gebruiken om de reactie te versnellen. Dit is mogelijk aangezien de resultaten voor vragen die worden uitgevoerd in het voorgeheugen onder zouden worden gebracht elke dag in de server van BI. De caching server dient dan deze resultaten voor om het even welke gebruiker met de zelfde vraag om latentie te verminderen. Raadpleeg de documentatie bij het hulpprogramma of het hulpprogramma van derden dat u gebruikt voor meer informatie over deze installatie.
 +++

@@ -2,7 +2,7 @@
 title: Inline sjablonen
 description: Leer hoe te om veelvoudige voorwaarden in talrijke vragen met gealigneerde malplaatjes opnieuw te gebruiken.
 exl-id: 78959070-f9e5-4736-b72a-a8ef518bfa4f
-source-git-commit: 37aeff5131b9f67dbc99f6199918403e699478c8
+source-git-commit: ef4c7f20710f56ca0de7c0dfdb99751ff2fe8ebe
 workflow-type: tm+mt
 source-wordcount: '486'
 ht-degree: 0%
@@ -42,7 +42,7 @@ Wanneer het uitvoeren van de vraag, vervangt de Dienst van de Vraag de malplaatj
 
 U kunt sjablonen gebruiken om een of meerdere voorwaarden op te slaan. Ze hoeven op zich geen volledige query te zijn. Als uw malplaatje een geldige vraag bevat, kunt u de vraag eenvoudig uitvoeren door de malplaatjenaam te roepen die met een knoeiboelsymbool wordt voorafgegaan. Als u `SELECT * FROM JUNE_2023_LOYALTY_MEMBERS;` bijvoorbeeld hebt opgeslagen als een sjabloon met de naam `JUNE_2023_LOYALTY_MEMBERS` , voert de opdracht `#JUNE_2023_LOYALTY_MEMBERS;` de geldige query uit die zich in de sjabloon bevindt.
 
->
+>[!NOTE]
 >
 >In de gebruikersinterface van Adobe Experience Platform worden inlinesjablonen in de vorm van geparameteriiseerde query&#39;s alleen op het hoofdniveau ondersteund. Dit betekent dat de parameters bepaalde vragen slechts werken wanneer gebruikt in het originele malplaatje. Het kindmalplaatje moet een statisch malplaatje zijn en kan geen dynamische parameters hebben. Zie de [ parameters bepaalde vragen documentatie ](../ui/parameterized-queries.md) om meer te leren.
 
