@@ -2,9 +2,9 @@
 title: Overzicht van publiek portal
 description: Leer hoe u het publiek in Adobe Experience Platform kunt bekijken, beheren en een publiek kunt maken.
 exl-id: 505ac22e-05f3-423a-a9a0-7f3470af8945
-source-git-commit: 5220fa9be3f567d72f864d35596f6b219f15fb9d
+source-git-commit: a0543777e9a72f3a9ed6ff19e8b11973eb647b6b
 workflow-type: tm+mt
-source-wordcount: '4396'
+source-wordcount: '4348'
 ht-degree: 0%
 
 ---
@@ -221,11 +221,6 @@ Wanneer u acties in grote hoeveelheden toepast op soorten publiek, gelden de vol
 - Als u een filter selecteert, zal het geselecteerde publiek **** terugstellen.
 
 #### [!BADGE  Beperkte beschikbaarheid ] {type=Informatieve} Flexibele publieksevaluatie {#flexible-audience-evaluation}
-
->[!CONTEXTUALHELP]
->id="platform_segmentation_browse_flexibleaudienceevaluation"
->title="Flexibele limieten voor publieksevaluatie"
-abstract="U kunt maximaal 20 soorten publiek evalueren in één flexibele evaluatieronde voor het publiek.<br/><br/> bovendien, terwijl de looppas van de evaluatietaak zo spoedig mogelijk is, kunnen er systeemvertragingen zijn die kunnen voorkomen aangezien de evaluaties op bestelling <b> niet </b> gelijktijdig met een andere op bestelling of partijevaluatie kunnen lopen."
 
 Dankzij de flexibele publieksevaluatie kunt u een segmentatietaak uitvoeren wanneer u dat wilt. Kies het publiek dat u wilt evalueren en selecteer **[!UICONTROL Evaluate audiences]** .
 
