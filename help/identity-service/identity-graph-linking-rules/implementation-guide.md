@@ -2,9 +2,9 @@
 title: Implementatiegids voor koppelingsregels voor identiteitsgrafieken
 description: Leer de aanbevolen stappen die u moet volgen wanneer u uw gegevens implementeert met configuraties van regels voor identiteitsgrafieken.
 exl-id: 368f4d4e-9757-4739-aaea-3f200973ef5a
-source-git-commit: 9243da3ebe5e963ec457da5ae3e300e852787d37
+source-git-commit: 2dadb3a0a79f4d187dd096177130802f511a6917
 workflow-type: tm+mt
-source-wordcount: '1713'
+source-wordcount: '1766'
 ht-degree: 0%
 
 ---
@@ -65,11 +65,16 @@ Als u [ Adobe Analytics bronschakelaar ](../../sources/tutorials/ui/create/adobe
 >title="Zorg ervoor dat u één persoon-id hebt"
 >abstract="Tijdens uw pre-implementatieproces, moet u ervoor zorgen dat de voor authentiek verklaarde gebeurtenissen die uw systeem naar Experience Platform zal verzenden altijd a **enige** persoonsidentificatie, zoals een CRMID bevatten."
 
-Zorg er tijdens het pre-implementatieproces voor dat de geverifieerde gebeurtenissen die uw systeem naar Experience Platform verzendt, altijd een personeels-id bevatten, zoals CRMID.
+Tijdens uw pre-implementatieproces, moet u ervoor zorgen dat de voor authentiek verklaarde gebeurtenissen die uw systeem naar Experience Platform zal verzenden altijd a **enige** persoonsidentificatie, zoals een CRMID bevatten.
+
+* (Aanbevolen) Voor authentiek verklaarde gebeurtenissen met één persoonsidentificatie.
+* (Niet geadviseerd) Voor authentiek verklaarde gebeurtenissen met twee persoon herkenningstekens.
+* (Niet aanbevolen) Voor authentiek verklaarde gebeurtenissen zonder enige persoonsidentificatiecodes.
+
 
 >[!BEGINTABS]
 
->[!TAB  Voor authentiek verklaarde gebeurtenissen met persoonsidentificatie ]
+>[!TAB  Voor authentiek verklaarde gebeurtenissen met één persoonsidentificatie ]
 
 ```json
 {
@@ -98,8 +103,57 @@ Zorg er tijdens het pre-implementatieproces voor dat de geverifieerde gebeurteni
 }
 ```
 
->[!TAB  Voor authentiek verklaarde gebeurtenissen zonder persoonsidentificatie ]
+>[!TAB  Voor authentiek verklaarde gebeurtenissen met twee persoonherkenningstekens ]
 
+Als uw systeem twee persoonsidentificators verzendt, kan de implementatie de single-person namespace vereiste ontbreken. Bijvoorbeeld, als identityMap in uw webSDK implementatie CRMID, een customerID, en een ECID namespace bevat, dan is er geen garantie dat elke enige gebeurtenis zowel CRMID als customerID zal bevatten.
+
+In het ideale geval moet u een lading verzenden die lijkt op het volgende:
+
+```json
+{
+  "_id": "test_id",
+  "identityMap": {
+      "ECID": [
+          {
+              "id": "62486695051193343923965772747993477018",
+              "primary": false
+          }
+      ],
+      "CRMID": [
+          {
+              "id": "John",
+              "primary": true
+          }
+      ],
+      "customerID": [
+          {
+            "id": "Jane",
+            "primary": false
+          }
+      ],
+  },
+  "timestamp": "2024-09-24T15:02:32+00:00",
+  "web": {
+      "webPageDetails": {
+          "URL": "https://business.adobe.com/",
+          "name": "Adobe Business"
+      }
+  }
+}
+```
+
+Het is echter belangrijk om op te merken dat u twee personen-id&#39;s kunt verzenden, maar er is geen garantie dat een ongewenste grafiekinstorting wordt voorkomen als gevolg van implementatiefouten of gegevensfouten. Overweeg het volgende scenario:
+
+* `timestamp1` = John Log in -> system capture `CRMID: John, ECID: 111` . `customerID: John` is echter niet aanwezig in deze gebeurtenislading.
+* `timestamp2` = Jane login -> systeem vangt `customerID: Jane, ECID: 111`. `CRMID: Jane` is echter niet aanwezig in deze gebeurtenislading.
+
+Daarom is het aan te raden slechts één persoon-id met uw geverifieerde gebeurtenissen te verzenden.
+
+In grafieksimulatie kan deze opname er als volgt uitzien:
+
+![ de grafieksimulatie UI met een getoonde voorbeeldgrafiek.](../images/implementation/example-graph.png)
+
+>[!TAB  Voor authentiek verklaarde gebeurtenissen zonder enige persoonherkenningstekens ]
 
 ```json
 {
@@ -122,27 +176,7 @@ Zorg er tijdens het pre-implementatieproces voor dat de geverifieerde gebeurteni
 }
 ```
 
-
 >[!ENDTABS]
-
-Tijdens uw pre-implementatieproces, moet u ervoor zorgen dat de voor authentiek verklaarde gebeurtenissen die uw systeem naar Experience Platform zal verzenden altijd a **enige** persoonsidentificatie, zoals een CRMID bevatten.
-
-* (Aanbevolen) Voor authentiek verklaarde gebeurtenissen met één persoonsidentificatie.
-* (Niet geadviseerd) Voor authentiek verklaarde gebeurtenissen met twee persoon herkenningstekens.
-* (Niet aanbevolen) Voor authentiek verklaarde gebeurtenissen zonder enige persoonsidentificatiecodes.
-
-Als uw systeem twee persoonsidentificators verzendt, kan de implementatie de single-person namespace vereiste ontbreken. Bijvoorbeeld, als identityMap in uw webSDK implementatie een CRMID, een customerID, en een ECID namespace bevat, dan kunnen twee individuen die een apparaat delen verkeerd geassocieerd met verschillende namespaces worden.
-
-Binnen de Dienst van de Identiteit, kan deze implementatie als kijken:
-
-* `timestamp1` = John Log in -> system capture `CRMID: John, ECID: 111` .
-* `timestamp2` = Jane login -> systeem vangt `customerID: Jane, ECID: 111`.
-
-+++Weergave hoe de implementatie eruit kan zien in grafieksimulatie
-
-![ de grafieksimulatie UI met een getoonde voorbeeldgrafiek.](../images/implementation/example-graph.png)
-
-+++
 
 ## Machtigingen instellen {#set-permissions}
 

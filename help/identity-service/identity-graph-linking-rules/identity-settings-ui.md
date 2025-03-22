@@ -2,9 +2,9 @@
 title: Gebruikersinterface Identiteitsinstellingen
 description: Leer hoe u de gebruikersinterface voor identiteitsinstellingen gebruikt.
 exl-id: 738b7617-706d-46e1-8e61-a34855ab976e
-source-git-commit: 7174c2c0d8c4ada8d5bba334492bad396c1cfb34
+source-git-commit: 0b4d9a493df6125decc6c46ddcd404f0bb1c9c6a
 workflow-type: tm+mt
-source-wordcount: '589'
+source-wordcount: '623'
 ht-degree: 0%
 
 ---
@@ -13,9 +13,7 @@ ht-degree: 0%
 
 >[!AVAILABILITY]
 >
->* De regels voor identiteitsgrafiekkoppelingen zijn momenteel in Beperkte Beschikbaarheid. Neem contact op met uw Adobe-accountteam voor informatie over hoe u toegang kunt krijgen tot de functie in ontwikkelingssandboxen.
->
->* Uw rekening moet de **toestemming van de Grafiek van de Identiteit van de Mening hebben** om tot identiteitsmontages in UI toegang te hebben. Voor meer informatie, lees de [ gids op toestemmingen in op attributen-gebaseerde toegangscontrole ](../../access-control/abac/ui/permissions.md).
+>De regels voor identiteitsgrafiekkoppelingen zijn momenteel in Beperkte Beschikbaarheid. Neem contact op met uw Adobe-accountteam voor informatie over hoe u toegang kunt krijgen tot de functie in ontwikkelingssandboxen.
 
 Identiteitsinstellingen zijn een functie in de gebruikersinterface van de Adobe Experience Platform Identity Service die u kunt gebruiken om unieke naamruimten aan te wijzen en naamruimteprioriteit te configureren.
 
@@ -31,6 +29,15 @@ Lees de volgende documenten voordat u begint te werken met identiteitsinstelling
 * [Voorbeelden van grafiekconfiguraties](./example-configurations.md)
 * [Prioriteit naamruimte](./namespace-priority.md)
 * [Grafieksimulatie](./graph-simulation.md)
+
+### Machtigingen instellen {#set-permissions}
+
+Vervolgens moet u ervoor zorgen dat voor uw account de volgende machtigingen gelden:
+
+* **[!UICONTROL View Identity Settings]**: Pas deze machtiging toe om unieke naamruimten en naamruimteprioriteit weer te geven in de pagina Bladeren naar naamruimte voor identiteit.
+* **[!UICONTROL Edit Identity Settings]**: Pas deze machtiging toe om uw identiteitsinstellingen te kunnen bewerken en opslaan.
+
+Neem contact op met de beheerder als u deze machtigingen niet hebt. Voor meer informatie, lees de [ toestemmingengids ](../../access-control/abac/ui/permissions.md).
 
 ## Uw identiteitsinstellingen configureren
 
