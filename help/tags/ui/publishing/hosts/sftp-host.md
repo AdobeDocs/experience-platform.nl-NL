@@ -2,9 +2,9 @@
 title: SFTP-hosts
 description: Leer hoe u tags in Adobe Experience Platform configureert om bibliotheekbuilds te leveren aan een beveiligde, zelfgehoste SFTP-server.
 exl-id: 3c1dc43b-291c-4df4-94f7-a03b25dbb44c
-source-git-commit: b3c3bf0a39a30e8c9baf81ec20945497acef5465
+source-git-commit: 5b362d28eb3be5e2a45464390c694f7ae59f899c
 workflow-type: tm+mt
-source-wordcount: '791'
+source-wordcount: '856'
 ht-degree: 5%
 
 ---
@@ -15,11 +15,11 @@ ht-degree: 5%
 >
 >Adobe Experience Platform Launch is omgedoopt tot een reeks technologieën voor dataverzameling in Adobe Experience Platform.  Als gevolg hiervan zijn er verschillende terminologiewijzigingen in de productdocumentatie doorgevoerd. Raadpleeg het volgende [ document ](../../../term-updates.md) voor een geconsolideerde referentie van de terminologiewijzigingen.
 
-Met Experience Platform kunt u de build van de tagbibliotheek leveren aan een beveiligde SFTP-server die u host, zodat u meer controle hebt over de manier waarop uw builds worden opgeslagen en beheerd. Deze gids behandelt hoe te opstelling een gastheer SFTP voor een markeringsbezit in de UI van het Experience Platform of UI van de Inzameling van Gegevens.
+Met Experience Platform kunt u bouwen van tagbibliotheken leveren aan een beveiligde SFTP-server die u host, zodat u meer controle hebt over de manier waarop uw builds worden opgeslagen en beheerd. In deze handleiding wordt uitgelegd hoe u een SFTP-host instelt voor een tag-eigenschap in de gebruikersinterface van Experience Platform of de gebruikersinterface voor gegevensverzameling.
 
 >[!NOTE]
 >
->U kunt er ook voor kiezen om een host te gebruiken die door Adobe wordt beheerd. Zie de gids op [ Adobe-geleide gastheren ](./managed-by-adobe-host.md) voor meer informatie.
+>U kunt er ook voor kiezen om een host te gebruiken die door Adobe wordt beheerd. Zie de gids op [ Adobe-Beheerde gastheren ](./managed-by-adobe-host.md) voor meer informatie.
 >
 >Voor informatie over de voordelen en de beperkingen van zelf-ontvangende bibliotheken, zie de [ zelf-ontvangende gids ](./self-hosting-libraries.md).
 
@@ -36,6 +36,22 @@ Er moet een combinatie van openbare/persoonlijke sleutels op uw SFTP-server zijn
 De persoonlijke sleutel wordt gebruikt om de openbare sleutel te coderen. U moet uw persoonlijke sleutel opgeven tijdens het maken van de SFTP-host. Zie de sectie over [ het coderen van waarden ](../../../api/guides/encrypting-values.md) in de Reactor API gids voor instructies bij het coderen van openbare sleutels. Gebruik de GPG-sleutel van de productieomgeving, tenzij u weet dat u een specifieke sleutel nodig hebt. Tot slot kunt u uw persoonlijke sleutel van om het even welke machine coderen, zodat te hoeven u niet om GPG op uw server te installeren om deze stap te voltooien.
 
 ### IP van het Platform van de Lijst van gewenste personen adressen
+
+>[!IMPORTANT]
+>
+> Op 23 juni 2025 werkt Adobe Launch externe IP-adressen bij die worden gebruikt ter ondersteuning van SFTP Host Type en Callback API-functionaliteit. Om één van beiden van deze eigenschappen verder te gebruiken, zorg ervoor uw firewallregels verkeer van de nieuwe IP adressen toestaan.
+>
+> Om ononderbroken toegang te handhaven, adviseren wij nu toevoegend nieuwe IPs en verwijderend oude degenen na 23 juni, 2025.
+>
+>**Oude IP adressen:**
+> * `184.72.239.68`
+> * `23.20.85.113`
+> * `54.226.193.184`
+>
+>**Nieuwe IP adressen:**
+> * `34.227.138.75 `
+> * `44.194.43.191`
+> * `3.215.163.18`
 
 Mogelijk moet u een set IP-adressen goedkeuren die binnen uw bedrijfsfirewall moet worden gebruikt, zodat Platform uw SFTP-server kan bereiken en er verbinding mee kan maken. Deze IP Adressen zijn:
 
@@ -70,7 +86,7 @@ Het dialoogvenster wordt uitgebreid en bevat aanvullende configuratieopties voor
 | [!UICONTROL Don't Use Symlinks] | Door gebrek, gebruiken alle gastheren SFTP symbolische verbindingen (symbolische verbindingen) om bibliotheek [ van verwijzingen te voorzien bouwt ](../builds.md) die aan de server worden bewaard. Niet alle servers ondersteunen echter het gebruik van symlinks. Als deze optie is geselecteerd, gebruikt de gastheer een kopieerbewerking om de build-elementen rechtstreeks bij te werken in plaats van gebruik te maken van symlinks. |
 | [!UICONTROL SFTP Server URL] | Het URL-basispad voor uw server. |
 | [!UICONTROL Path] | Het pad dat moet worden toegevoegd aan de URL van de basisserver voor deze host. |
-| [!UICONTROL Port] | De poort moet een van de volgende zijn:<ul><li>`21`</li><li>`22`</li><li>`201`</li><li>`200`</li><li>`2002`</li><li>`2018`</li><li>`2022`</li><li>`2200`</li><li>`2222`</li><li>`2333`</li><li>`2939`</li><li>`443`</li><li>`4343`</li><li>`80`</li><li>`8080`</li><li>`8888`</li></ul>Als veiligheid beste praktijken, beperkt de Adobe het aantal havens die voor uitgaand verkeer kunnen worden gebruikt. De geselecteerde havens worden algemeen toegestaan door collectieve firewalls en omvatten sommige waaiers voor flexibiliteit. |
+| [!UICONTROL Port] | De poort moet een van de volgende zijn:<ul><li>`21`</li><li>`22`</li><li>`201`</li><li>`200`</li><li>`2002`</li><li>`2018`</li><li>`2022`</li><li>`2200`</li><li>`2222`</li><li>`2333`</li><li>`2939`</li><li>`443`</li><li>`4343`</li><li>`80`</li><li>`8080`</li><li>`8888`</li></ul>Als veiligheid beste praktijken, beperkt Adobe het aantal havens die voor uitgaand verkeer kunnen worden gebruikt. De geselecteerde havens worden algemeen toegestaan door collectieve firewalls en omvatten sommige waaiers voor flexibiliteit. |
 | [!UICONTROL Username] | De gebruikersnaam die moet worden gebruikt wanneer de server wordt geopend. |
 | [!UICONTROL Encrypted Private Key] | De gecodeerde privé sleutel die u in a [ vorige stap ](#access-key) creeerde. |
 
