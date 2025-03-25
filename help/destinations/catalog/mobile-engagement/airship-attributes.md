@@ -1,22 +1,30 @@
 ---
 keywords: kenmerken van het luchtschip;bestemming van het luchtschip
 title: Koppeling met kenmerken van het luchtschip
-description: Geef naadloos de gegevens van het publiek van de Adobe door aan het luchtschip als kenmerken van het publiek voor doelwit binnen het luchtschip.
+description: Geef naadloos Adobe Audience Data door aan Airship als Audience Attributes voor Doelstelling binnen Airship.
 exl-id: bfc1b52f-2d68-40d6-9052-c2ee1e877961
-source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
+source-git-commit: 453884612e787439ea58f312d8080622ee0441f7
 workflow-type: tm+mt
-source-wordcount: '1001'
+source-wordcount: '1102'
 ht-degree: 0%
 
 ---
 
 # [!DNL Airship Attributes] verbinding {#airship-attributes-destination}
 
+>[!IMPORTANT]
+>
+>* Vanaf 25 maart 2025 ziet u twee [!DNL Airship Attributes] kaarten naast elkaar in de doelcatalogus. Dit is toe te schrijven aan een interne verbetering aan de bestemmingsdienst. De naam van de bestaande [!DNL Airship Attributes] doelconnector is gewijzigd in **[!UICONTROL (Deprecated) Airship Attributes]** en u hebt nu een nieuwe kaart met de naam **[!UICONTROL Airship Attributes]** beschikbaar.
+>* Gebruik de **[!UICONTROL Airship Attributes]** -verbinding in de catalogus voor nieuwe gegevensstromen voor activering. Als u actieve gegevens naar de **[!UICONTROL (Deprecated) Airship Attributes]** -bestemming hebt, worden deze automatisch bijgewerkt, zodat u geen actie hoeft te ondernemen.
+>* Als u dataflows door de [ Dienst API van de Stroom ](https://developer.adobe.com/experience-platform-apis/references/destinations/) creeert, moet u uw [!DNL flow spec ID] en [!DNL connection spec ID] aan de volgende waarden bijwerken:
+>   * Stroomspecificatie-id: `a862e0be-966e-4e5a-80d3-1bb566461986`
+>   * Verbindingsspecificatie-id: `594bc002-4a47-49b7-8a98-ac0d21045502`
+
 ## Overzicht {#overview}
 
 [!DNL Airship] is het toonaangevende platform voor betrokkenheid van klanten, waarmee u in elke fase van de levenscyclus van de klant betekenisvolle, gepersonaliseerde omnichannel berichten voor uw gebruikers kunt leveren.
 
-Deze integratie gaat profielgegevens van de Adobe in [!DNL Airship] als [ Attributen ](https://docs.airship.com/guides/audience/attributes/) voor het richten van of het teweegbrengen over.
+Deze integratie gaat het profielgegevens van Adobe in [!DNL Airship] als [ Attributen ](https://docs.airship.com/guides/audience/attributes/) voor het richten van of het teweegbrengen over.
 
 Meer over [!DNL Airship] leren, zie [ Dokken van het Luchtschip ](https://docs.airship.com).
 
@@ -41,7 +49,7 @@ In deze sectie wordt beschreven welke soorten publiek u naar dit doel kunt expor
 
 | Oorsprong publiek | Ondersteund | Beschrijving |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | ✓ | Het publiek produceerde door de Dienst van de Segmentatie van het Experience Platform [ ](../../../segmentation/home.md). |
+| [!DNL Segmentation Service] | ✓ | Het publiek produceerde door de Dienst van de Segmentatie van Experience Platform [ ](../../../segmentation/home.md). |
 | Aangepaste uploads | ✓ | Het publiek [ ingevoerde ](../../../segmentation/ui/audience-portal.md#import-audience) in Experience Platform van Csv- dossiers. |
 
 {style="table-layout:auto"}
@@ -69,7 +77,7 @@ Ga naar **[!UICONTROL Settings]**&quot; **[!UICONTROL APIs & Integrations]** in 
 
 Klik op **[!UICONTROL Create Token]**.
 
-Geef uw token een gebruikersvriendelijke naam, bijvoorbeeld Doel van kenmerken van Adobe en selecteer Alle toegang voor de rol.
+Geef uw token een gebruikersvriendelijke naam, bijvoorbeeld &quot;Doel Adobe-kenmerken&quot;, en selecteer &quot;All Access&quot; voor de rol.
 
 Klik op **[!UICONTROL Create Token]** en sla de details op als vertrouwelijk.
 
@@ -83,7 +91,7 @@ Gebruik profielgegevens die in Adobe Experience Platform zijn verzameld voor per
 
 ### Hoofdletters gebruiken #2
 
-Gebruik kenmerken van Adobe Experience Platform om [!DNL Airship] -profielen verder te verrijken en combineer deze met SDK of [!DNL Airship] voorspellende gegevens. Een detailhandelaar kan bijvoorbeeld een publiek met loyaliteitsstatus en locatiegegevens (kenmerken van Platform) en [!DNL Airship] maken dat gegevens naar verwachting zal doorsturen om zeer gerichte berichten te verzenden naar gebruikers in de status van gouden loyaliteit die in Las Vegas, NV wonen en die een grote kans hebben om te worden afgespeeld.
+Gebruik kenmerken van Adobe Experience Platform om [!DNL Airship] -profielen verder te verrijken en deze te combineren met SDK of [!DNL Airship] voorspellende gegevens. Een detailhandelaar kan bijvoorbeeld een publiek met loyaliteitsstatus en locatiegegevens (kenmerken van Platform) en [!DNL Airship] maken dat gegevens naar verwachting zal doorsturen om zeer gerichte berichten te verzenden naar gebruikers in de status van gouden loyaliteit die in Las Vegas, NV wonen en die een grote kans hebben om te worden afgespeeld.
 
 ## Verbinden met de bestemming {#connect}
 
@@ -131,7 +139,7 @@ Zie [ publieksgegevens aan het stromen publiek de uitvoerbestemmingen ](../../ui
 Voor herkenningstekens die aan een kanaal, d.w.z., een apparaat moeten worden in kaart gebracht, kaart aan het aangewezen kanaal dat op de bron wordt gebaseerd. De volgende afbeeldingen laten zien hoe twee toewijzingen worden gemaakt:
 
 * IDFA iOS Advertising ID to an [!DNL Airship] iOS channel
-* Kenmerk Adobe `fullName` naar kenmerk [!DNL Airship] &quot;Volledige naam&quot;
+* Adobe `fullName` -kenmerk naar [!DNL Airship] &quot;Full Name&quot;-kenmerk
 
 >[!NOTE]
 >
