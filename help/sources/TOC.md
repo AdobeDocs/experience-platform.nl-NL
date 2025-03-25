@@ -5,9 +5,9 @@ breadcrumb-title: Gids voor Source Connectors
 user-guide-description: Neem gegevens uit diverse bronnen op. Leer hoe u opgenomen gegevens kunt structureren, labelen en verbeteren.
 feature: Sources
 role: Developer
-source-git-commit: b900ef8cbbab78071d462484f088e17eb20fe9b6
+source-git-commit: 3ada2136e712abd1dad956cd579d6877b3e729c9
 workflow-type: tm+mt
-source-wordcount: '1047'
+source-wordcount: '1059'
 ht-degree: 6%
 
 ---
@@ -236,6 +236,7 @@ ht-degree: 6%
    - [Gegevensstromen verwijderen](tutorials/api/delete-dataflows.md)
    - [Gecodeerde gegevens verzamelen](tutorials/api/encrypt-data.md)
    - [Een gegevensstroom opslaan als concept](tutorials/api/draft.md)
+   - [Toegangslabels toepassen op een gegevensstroom](tutorials/api/labels.md)
 - Zelfstudies voor gebruikersinterface {#ui-tutorials}
    - Een bronverbinding maken {#create}
       - Adobe-toepassingen {#adobe-applications}
@@ -361,6 +362,7 @@ ht-degree: 6%
    - [Gegevensstromen verwijderen](tutorials/ui/delete.md)
    - [Abonneren op waarschuwingen voor bronnen](tutorials/ui/alerts.md)
    - [Een gegevensstroom opslaan als concept](tutorials/ui/draft.md)
+   - [Toegangslabels toepassen op een gegevensstroom](tutorials/ui/labels.md)
 - Self-Serve Sources (Batch SDK) {#sdk}
    - [Overzicht](sources-sdk/overview.md)
    - Uw verbindingsspecificatie configureren {#config}
