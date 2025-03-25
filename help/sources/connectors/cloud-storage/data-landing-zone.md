@@ -2,9 +2,9 @@
 title: Data Landing Zone Source
 description: Leer hoe u Data Landing Zone kunt verbinden met Adobe Experience Platform
 exl-id: bdc10095-7de4-4183-bfad-a7b5c89197e3
-source-git-commit: 1d4dd60180ef2a3cbf6dcd565c2f09dd575716b9
+source-git-commit: 719f1bca20d5118de14ebe324675bb0aab6161e8
 workflow-type: tm+mt
-source-wordcount: '1312'
+source-wordcount: '1358'
 ht-degree: 0%
 
 ---
@@ -19,9 +19,9 @@ ht-degree: 0%
 
 [!DNL Data Landing Zone] biedt ondersteuning voor verificatie op basis van SAS en de bijbehorende gegevens zijn in rust en onderweg beveiligd met standaard [!DNL Azure Blob] -opslagbeveiligingsmechanismen. Met verificatie op basis van SAS hebt u via een openbare internetverbinding veilig toegang tot uw [!DNL Data Landing Zone] -container. Er zijn geen netwerkwijzigingen vereist voor toegang tot uw [!DNL Data Landing Zone] -container. Dit betekent dat u geen lijsten van gewenste personen of instellingen voor meerdere regio&#39;s voor uw netwerk hoeft te configureren. Experience Platform past een strikte vervaltijd van zeven dagen toe op alle bestanden en mappen die naar een [!DNL Data Landing Zone] -container zijn geüpload. Alle bestanden en mappen worden na zeven dagen verwijderd.
 
-## Uw [!DNL Data Landing Zone] source instellen voor Experience Platform op Azure {#azure}
+## Stel uw [!DNL Data Landing Zone] source in voor Experience Platform on Azure {#azure}
 
-Volg de onderstaande stappen om te leren hoe u uw [!DNL Data Landing Zone] -account kunt instellen voor Experience Platform in Azure.
+Volg de onderstaande stappen om te leren hoe u uw [!DNL Data Landing Zone] -account voor Experience Platform on Azure kunt instellen.
 
 >[!NOTE]
 >
@@ -155,13 +155,17 @@ set srcFilePath=<PATH TO LOCAL FILE(S); WORKS WITH WILDCARD PATTERNS>
 azcopy copy "%srcFilePath%" "%sasUri%" --overwrite=true --recursive=true
 ```
 
-## De [!DNL Data Landing Zone] -bron instellen voor Experience Platform op Amazon Web Services {#aws}
+## De [!DNL Data Landing Zone] source voor Experience Platform instellen op Amazon Web Services {#aws}
 
 >[!AVAILABILITY]
 >
->Deze sectie is van toepassing op implementaties van Experience Platform dat op Amazon Web Services (AWS) loopt. Experience Platform dat op AWS wordt uitgevoerd, is momenteel beschikbaar voor een beperkt aantal klanten. Meer over de gesteunde infrastructuur van het Experience Platform leren, zie het [ Experience Platform multi-cloud overzicht ](https://experienceleague.adobe.com/en/docs/experience-platform/landing/multi-cloud).
+>Deze sectie is van toepassing op implementaties van Experience Platform die op Amazon Web Services (AWS) worden uitgevoerd. Experience Platform die op AWS wordt uitgevoerd, is momenteel beschikbaar voor een beperkt aantal klanten. Meer over de gesteunde infrastructuur van Experience Platform leren, zie het [ multi-wolkenoverzicht van Experience Platform ](https://experienceleague.adobe.com/en/docs/experience-platform/landing/multi-cloud).
 
-Volg de onderstaande stappen om te leren hoe u uw [!DNL Data Landing Zone] -account kunt instellen voor Experience Platform op Amazon Web Services (AWS).
+Volg de onderstaande stappen om te leren hoe u uw [!DNL Data Landing Zone] -account voor Experience Platform op Amazon Web Services (AWS) kunt instellen.
+
+### IP adres lijst van gewenste personen voor verbinding op AWS
+
+U moet gebied-specifieke IP adressen aan uw lijst van gewenste personen toevoegen alvorens uw bronnen aan Experience Platform op AWS aan te sluiten. Voor meer informatie, lees de gids op [ voegend op lijst van gewenste personen IP adressen om met Experience Platform op AWS ](../../ip-address-allow-list.md) voor meer informatie te verbinden.
 
 ### AWS CLI instellen en bewerkingen uitvoeren
 
@@ -303,7 +307,7 @@ Navigeer ten slotte naar de gegenereerde URL om u rechtstreeks aan te melden bij
 >
 >- Als u verbinding wilt maken met de bron, hebt u de toegangsbeheermachtigingen **[!UICONTROL View Sources]** en **[!UICONTROL Manage Sources]** nodig. Voor meer informatie, lees het [ overzicht van de toegangscontrole ](../../../access-control/home.md) of contacteer uw productbeheerder om de vereiste toestemmingen te verkrijgen.
 >
->- Privékoppelingen worden momenteel niet ondersteund wanneer verbinding wordt gemaakt met een Experience Platform via de [!DNL Data Landing Zone] . De enige gesteunde methodes voor toegang zijn de hier vermelde methodes [ ](#manage-the-contents-of-your-data-landing-zone).
+>- Privékoppelingen worden momenteel niet ondersteund wanneer verbinding wordt gemaakt met Experience Platform via [!DNL Data Landing Zone] . De enige gesteunde methodes voor toegang zijn de hier vermelde methodes [ ](#manage-the-contents-of-your-data-landing-zone).
 
 In de onderstaande documentatie vindt u informatie over het overbrengen van gegevens van uw [!DNL Data Landing Zone] -container naar Adobe Experience Platform met behulp van API&#39;s of de gebruikersinterface.
 

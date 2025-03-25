@@ -2,18 +2,20 @@
 description: Leer over de IP adressen die u aan uw lijst van gewenste personen moet toevoegen om de bronnen van Adobe Experience Platform met succes te gebruiken.
 title: IP de Lijst van gewenste personen van het Adres voor Bronnen
 exl-id: 40093c80-dbdb-4dc1-97bb-81a8200b731f
-source-git-commit: bb0e84ff26027e92d617b7fd0b85979dff501a7d
+source-git-commit: 719f1bca20d5118de14ebe324675bb0aab6161e8
 workflow-type: tm+mt
-source-wordcount: '210'
+source-wordcount: '242'
 ht-degree: 0%
 
 ---
 
 # IP adres lijst van gewenste personen
 
-U kunt besturingselementen voor netwerktoegang definiëren via uw netwerkfirewall. Door de aangewezen bronIP waaier te specificeren, kunt u verkeersstroom voor de dienst van de gegevensoverdracht laten. De volgende IP adressen moeten aan een lijst van gewenste personen worden toegevoegd alvorens met bronschakelaars te werken. Het niet toevoegen van uw regio-specifieke IP adressen aan uw lijst van gewenste personen kan tot fouten of niet-prestaties leiden wanneer het gebruiken van bronnen.
+U kunt besturingselementen voor netwerktoegang definiëren via uw netwerkfirewall. Door de aangewezen bronIP waaier te specificeren, kunt u verkeersstroom voor de dienst van de gegevensoverdracht laten. De volgende IP adressen moeten aan een lijst van gewenste personen worden toegevoegd alvorens met bronschakelaars te werken. Het nalaten om uw gebied-specifieke IP adressen aan uw lijst van gewenste personen toe te voegen kan tot fouten of niet-prestaties leiden wanneer het gebruiken van bronnen.
 
-## IP adres lijst van gewenste personen voor partijbronnen {#batch}
+## IP adressen lijst van gewenste personen voor bronnen die met Experience Platform verbinden op [!DNL Azure] {#azure}
+
+### Batchbronnen op Experience Platform [!DNL Azure] {#batch}
 
 U moet de volgende IP adressen aan uw lijst van gewenste personen toevoegen om verkeersstroom voor de dienst van de gegevensoverdracht voor partijbronnen te laten.
 
@@ -21,7 +23,7 @@ U moet de volgende IP adressen aan uw lijst van gewenste personen toevoegen om v
 
 >[!TAB  VA7: Noord-Amerika ]
 
-### VA7: Noord-Amerika
+#### VA7: Noord-Amerika
 
 - `20.42.2.0/23`
 - `20.42.4.0/26`
@@ -48,7 +50,7 @@ U moet de volgende IP adressen aan uw lijst van gewenste personen toevoegen om v
 
 >[!TAB  NLD2: Europa ]
 
-### NLD2: Europa
+#### NLD2: Europa
 
 - `13.69.67.192/28`
 - `13.69.107.112/28`
@@ -60,7 +62,7 @@ U moet de volgende IP adressen aan uw lijst van gewenste personen toevoegen om v
 
 >[!TAB  AUS5: Australië ]
 
-### AUS5: Australië
+#### AUS5: Australië
 
 - `13.70.74.144/28`
 - `20.37.193.0/25`
@@ -75,7 +77,7 @@ U moet de volgende IP adressen aan uw lijst van gewenste personen toevoegen om v
 
 >[!TAB  CAN2: Canada ]
 
-### CAN2: Canada
+#### CAN2: Canada
 
 - `13.71.175.80/28`
 - `20.38.147.224/28`
@@ -88,7 +90,7 @@ U moet de volgende IP adressen aan uw lijst van gewenste personen toevoegen om v
 
 >[!TAB  IND2: India ]
 
-### IND2: India
+#### IND2: India
 
 - `20.43.121.48/28`
 - `20.192.42.0/24`
@@ -102,15 +104,15 @@ U moet de volgende IP adressen aan uw lijst van gewenste personen toevoegen om v
 
 >[!ENDTABS]
 
-## IP adres lijst van gewenste personen voor het stromen bronnen {#streaming}
+### Bronnen streamen op Experience Platform op [!DNL Azure] {#streaming}
 
-U moet de volgende IP-adressen aan de lijst van gewenste personen toevoegen om verkeer voor de gegevensoverdrachtservice voor streamingbronnen zoals [[!DNL Amazon Kinesis]](./connectors/cloud-storage/kinesis.md) , [[!DNL Azure Event Hub]](./connectors/cloud-storage/eventhub.md) , [[!DNL Google PubSub]](./connectors/cloud-storage/google-pubsub.md) en [[!DNL Snowflake Streaming]](./connectors/databases/snowflake-streaming.md) mogelijk te maken.
+U moet de volgende IP adressen aan uw lijst van gewenste personen toevoegen om verkeer voor de dienst van de gegevensoverdracht voor het stromen bronnen zoals [[!DNL Amazon Kinesis]](./connectors/cloud-storage/kinesis.md), [[!DNL Azure Event Hub]](./connectors/cloud-storage/eventhub.md), [[!DNL Google PubSub]](./connectors/cloud-storage/google-pubsub.md), en [[!DNL Snowflake Streaming]](./connectors/databases/snowflake-streaming.md) te laten stromen.
 
 >[!BEGINTABS]
 
 >[!TAB  VA7: Noord-Amerika ]
 
-### VA7: Noord-Amerika
+#### VA7: Noord-Amerika
 
 - `52.254.106.240/28`
 - `52.254.107.144/28`
@@ -137,7 +139,7 @@ U moet de volgende IP-adressen aan de lijst van gewenste personen toevoegen om v
 
 >[!TAB  NLD2: Europa ]
 
-### NLD2: Europa
+#### NLD2: Europa
 
 - `51.138.17.0/28`
 - `51.138.16.176/28`
@@ -164,7 +166,7 @@ U moet de volgende IP-adressen aan de lijst van gewenste personen toevoegen om v
 
 >[!TAB  AUS5: Australië ]
 
-### AUS5: Australië
+#### AUS5: Australië
 
 - `20.40.188.194`
 - `20.53.206.128`
@@ -194,7 +196,7 @@ U moet de volgende IP-adressen aan de lijst van gewenste personen toevoegen om v
 
 >[!TAB  CAN2: Canada ]
 
-### CAN2: Canada
+#### CAN2: Canada
 
 - `20.200.70.240/28`
 - `20.200.94.116`
@@ -224,7 +226,7 @@ U moet de volgende IP-adressen aan de lijst van gewenste personen toevoegen om v
 
 >[!TAB  GBR9: Verenigd Koninkrijk ]
 
-### GBR9: Verenigd Koninkrijk
+#### GBR9: Verenigd Koninkrijk
 
 - `20.254.2.128/28`
 - `20.26.131.71`
@@ -254,7 +256,7 @@ U moet de volgende IP-adressen aan de lijst van gewenste personen toevoegen om v
 
 >[!TAB  IND2: India ]
 
-### IND2: India
+#### IND2: India
 
 - `4.224.74.0/28`
 - `20.244.79.80/28`
@@ -285,3 +287,9 @@ U moet de volgende IP-adressen aan de lijst van gewenste personen toevoegen om v
 - `4.188.4.138`
 
 >[!ENDTABS]
+
+## IP adressen aan lijst van gewenste personen voor bronverbinding aan Experience Platform op [!DNL Amazon Web Services] (AWS) {#aws}
+
+U moet het volgende IP adres aan uw lijst van gewenste personen toevoegen om uw bron aan Ervaring op AWS te verbinden:
+
+- `66.117.18.0/24`
