@@ -5,7 +5,7 @@ audience: user
 user-guide-title: Gids voor Real-time Customer Data Platform
 user-guide-description: Breng bekende en anonieme gegevens van meerdere bronnen van bedrijven bij elkaar om klantprofielen te maken, doelgroepsegmenten van die profielen te maken, en die segmenten voor externe doelen te activeren.
 role: Admin
-source-git-commit: 9327cf8545caa306acd8077d089041d50a30e556
+source-git-commit: 4c2431148f584f2ffd5de20b8880a6b4a10ff95e
 workflow-type: tm+mt
 source-wordcount: '301'
 ht-degree: 12%
@@ -13,7 +13,7 @@ ht-degree: 12%
 ---
 
 
-# Real-time Customer Data Platform Help {#rtcdp}
+# Real-Time Customer Data Platform Help {#rtcdp}
 
 * [Real-Time CDP-documentatie](home.md)
 * Aan de slag {#intro}
@@ -21,13 +21,13 @@ ht-degree: 12%
       * [Real-Time CDP-overzicht](overview.md)
       * [Aan de slag met Real-Time CDP](get-started.md)
       * [Homepage](home-page-dashboards.md)
-   * Real-Time CDP B2B Edition {#rtcdpb2b-intro}
-      * [Overzicht van Real-Time CDP B2B Edition](b2b-overview.md)
+   * Real-Time CDP B2B edition {#rtcdpb2b-intro}
+      * [Real-Time CDP B2B edition - overzicht](b2b-overview.md)
       * [Voorbeeld van gebruik](./b2b-use-case.md)
       * [Volledige zelfstudie](./b2b-tutorial.md)
-      * [Real-Time CDP B2B Edition-instructies](b2b-guardrails.md)
+      * [Real-Time CDP B2B edition guardrails](b2b-guardrails.md)
 * Audience Manager en Real-Time CDP {#evolution}
-   * [Evolutie van Audience Manager](aam-to-rtcdp.md)
+   * [Evolutie uit Audience Manager](aam-to-rtcdp.md)
 * Accountprofielen {#account}
    * [Overzicht van het accountprofiel](accounts/account-profile-overview.md)
    * [Gebruikersgids voor accountprofielen](accounts/account-profile-ui-guide.md)
@@ -35,15 +35,15 @@ ht-degree: 12%
    * [Overzicht van beheer](administration/admin-overview.md)
 * Soorten publiek en segmentatie {#segmentation}
    * [Overzicht van segmentatie](segmentation/segmentation-overview.md)
-   * [Handleiding Segment Builder](segmentation/segment-builder-guide.md)
-   * [Segmentering in Real-Time CDP B2B Edition](segmentation/b2b.md)
+   * [Handleiding Audience Builder](segmentation/audience-builder.md)
+   * [Segmentering in Real-Time CDP B2B edition](segmentation/b2b.md)
    * [Customer AI](segmentation/customer-ai.md)
 * Gegevenssets {#datasets}
    * [Gegevenssets](datasets/dataset.md)
    * [Gegevenskwaliteit op platform](datasets/data-quality.md)
 * Doelen {#destinations}
    * [Overzicht van doelen](destinations/overview.md)
-   * [Doelen in Real-Time CDP B2B Edition](destinations/b2b.md)
+   * [Doelen in Real-Time CDP B2B edition](destinations/b2b.md)
 * Guardrails {#guardrails}
    * [Overzicht van Real-Time CDP-instructies](guardrails/overview.md)
    * [ Guardrails voor gegevensopname ](https://experienceleague.adobe.com/docs/experience-platform/ingestion/guardrails.html) {target="_blank"}
@@ -62,7 +62,7 @@ ht-degree: 12%
 * Profielen {#profile}
    * [Profieloverzicht](profile/profile-overview.md)
    * [Bladeren door profiel](profile/profile-browse.md)
-* Real-Time CDP B2B Edition AI/ML-services {#b2b-cdp-ai-ml}
+* Real-Time CDP B2B edition AI/ML-services {#b2b-cdp-ai-ml}
    * [Verwante accounts](b2b-ai-ml-services/related-accounts.md)
    * [Overeenkomende lead-account](b2b-ai-ml-services/lead-to-account-matching.md)
    * Voorspelende lead en accountscoring {#predictive-lead-and-account-scoring-intro}
@@ -70,10 +70,10 @@ ht-degree: 12%
       * [Voorspelende leads en accountscoring beheren](b2b-ai-ml-services/manage-predictive-lead-and-account-scoring.md)
 * Schemas {#schemas}
    * [Overzicht van schema&#39;s](schemas/overview.md)
-   * [Schemas in Real-Time CDP B2B Edition](schemas/b2b.md)
+   * [Schemas in Real-Time CDP B2B edition](schemas/b2b.md)
 * Bronnen {#sources}
    * [Overzicht van bronnen](sources/sources-overview.md)
-   * [Bronnen in Real-Time CDP B2B Edition](sources/b2b.md)
+   * [Bronnen in Real-Time CDP B2B edition](sources/b2b.md)
 * Gebruiksscenario’s {#use-cases}
    * [Overzicht van voorbeelden](/help/rtcdp/use-case-guides/overview.md)
    * Klantenovername {#customer-acquisition}
@@ -86,5 +86,5 @@ ht-degree: 12%
       * [Evolueer eenmalig klantenwaarde aan levenwaarde](/help/rtcdp/use-case-guides/evolve-one-time-value-lifetime-value/evolve-one-time-value-to-lifetime-value.md)
       * [Neem op intelligente wijze uw klanten opnieuw aan](/help/rtcdp/use-case-guides/intelligent-re-engagement/intelligent-re-engagement.md)
       * [Neem op intelligente wijze contact op met uw klanten: Luma-voorbeelden](/help/rtcdp/use-case-guides/intelligent-re-engagement/use-cases-luma.md)
-* [ de nota&#39;s van de Versie van het Experience Platform ](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)
-* [ Verklarende woordenlijst van het Experience Platform ](https://www.adobe.com/go/platform-glossary-en)
+* [ de Nota&#39;s van de Versie van Experience Platform ](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)
+* [ Verklarende woordenlijst van Experience Platform ](https://www.adobe.com/go/platform-glossary-en)

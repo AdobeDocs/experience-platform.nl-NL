@@ -3,7 +3,7 @@ solution: Experience Platform
 title: UI-gids voor segmentBuilder
 description: De segmentbouwer in Adobe Experience Platform UI verstrekt een rijke werkruimte die u toestaat om met de gegevenselementen van het Profiel in wisselwerking te staan. De werkruimte biedt intuïtieve besturingselementen voor het maken en bewerken van regels, zoals tegels voor slepen en neerzetten die worden gebruikt om gegevenseigenschappen te vertegenwoordigen.
 exl-id: b27516ea-8749-4b44-99d0-98d3dc2f4c65
-source-git-commit: e7c0551276d31d6809ace096c00e0dc2665090e6
+source-git-commit: dc36c5e2eb109d1728f2290ee61e69f458929ba7
 workflow-type: tm+mt
 source-wordcount: '4889'
 ht-degree: 0%
@@ -322,7 +322,7 @@ De lijst van beschikbare tijdbeperkingen voor deze verrichting verschilt van de 
 
 +++
 
-## Containers
+## Containers {#containers}
 
 Segmentregels worden geëvalueerd in de volgorde waarin ze worden weergegeven. De containers staan controle over de orde van uitvoering door het gebruik van genestelde vragen toe.
 

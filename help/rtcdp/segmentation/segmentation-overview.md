@@ -1,10 +1,10 @@
 ---
 keywords: segmentatie; segmentatie rtcdp;realtime segmentering van klantgegevens
-title: Segmenteringsservice in Real-time Customer Data Platform
-description: Adobe Real-time Customer Data Platform is gebouwd op Adobe Experience Platform en maakt gebruik van veel services en functionaliteit voor Experience Platforms. Gebruikend de Dienst van de Segmentatie, kunt u op maat-gemaakte marketing verstrekken door uw klanten in kleinere groepen met gelijkaardige eigenschappen te verdelen.
+title: Segmenteringsservice in Real-Time Customer Data Platform
+description: Adobe Real-Time Customer Data Platform is gebouwd op Adobe Experience Platform en maakt gebruik van veel van de Experience Platform-services en -functionaliteit. Gebruikend de Dienst van de Segmentatie, kunt u op maat-gemaakte marketing verstrekken door uw klanten in kleinere groepen met gelijkaardige eigenschappen te verdelen.
 feature: Get Started, Audiences, Segments
 exl-id: 140667c0-e288-40c4-8c45-c275e348b84a
-source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
+source-git-commit: 96c5df4f172815d3b1904ab6614b1ce02d11dbaf
 workflow-type: tm+mt
 source-wordcount: '540'
 ht-degree: 0%
@@ -21,13 +21,13 @@ Real-Time CDP is gebouwd op Adobe Experience Platform en gebruikt veel van de [!
 
 De segmentatie is het proces om specifieke attributen of gedrag te bepalen die door een ondergroep van profielen van uw opslag van het Profiel worden gedeeld om een verhandelbare groep mensen van uw klantenbasis te onderscheiden. In een e-mailcampagne met de naam &quot;Hebt u vergeten uw gulders te kopen?&quot; wilt u bijvoorbeeld een publiek van alle gebruikers die in de afgelopen 30 dagen naar schoenen hebben gezocht, maar die geen aankoop hebben gedaan. Met behulp van verschillende segmentdefinities kunt u uw aandacht richten op uw verschillende doelgroepen en een meer aangepaste marketingervaring bieden.
 
-## [!DNL Segment Builder]
+## [!DNL Audience Builder]
 
-Met [!DNL Platform] kunt u eenvoudig segmentdefinities maken en openen en verschillende bouwstenen gebruiken om uw publiek verder te karakteriseren. Voor meer informatie over hoe te om de Bouwer van het Segment te gebruiken, te lezen gelieve de [ gids van de Bouwer van het Segment ](./segment-builder-guide.md).
+Met [!DNL Platform] kunt u eenvoudig segmentdefinities maken en openen en verschillende bouwstenen gebruiken om uw publiek verder te karakteriseren. Voor meer informatie over hoe te om de Bouwer van het Publiek te gebruiken, te lezen gelieve de [ gids van de Bouwer van het Publiek ](./audience-builder.md).
 
 ## Customer AI
 
-De AI van de klant, inbegrepen bij Real-time Customer Data Platform, voorziet u van de macht om klantenvoorspellingen op het individuele niveau met uitleg te produceren.
+De AI van de klant, inbegrepen bij Real-Time Customer Data Platform, voorziet u van de macht om klantenvoorspellingen op het individuele niveau met uitleg te produceren.
 
 Met behulp van invloedrijke factoren kan de AI van de Klant u vertellen wat een klant waarschijnlijk zal doen en waarom. Bovendien kunt u profiteren van de voorspellingen en inzichten van de Klant AI om de ervaringen van de Klant te personaliseren door de meest aangewezen aanbiedingen en het overseinen te dienen. Klantenservice-AI kan u helpen bij:
 
