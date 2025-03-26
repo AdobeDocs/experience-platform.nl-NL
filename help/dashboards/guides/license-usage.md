@@ -4,9 +4,9 @@ title: Licentiegebruiksdashboard
 description: Adobe Experience Platform biedt een dashboard waarmee u belangrijke informatie kunt bekijken over het gebruik van licenties voor uw organisatie.
 type: Documentation
 exl-id: 143d16bb-7dc3-47ab-9b93-9c16683b9f3f
-source-git-commit: 1c31ef58eec727638cab28202afc762da0e226a2
+source-git-commit: 7332b39b0e213632e595dc52eda390aa0b9a24ec
 workflow-type: tm+mt
-source-wordcount: '2990'
+source-wordcount: '3339'
 ht-degree: 0%
 
 ---
@@ -45,48 +45,90 @@ ht-degree: 0%
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_licenseusage_predictedusage_computehours"
 >title="Verwachte rekenuren"
->abstract="Uw gebruik kan het gelicentieerde bedrag bereiken. Als u de computeruren wilt beoordelen of beperken, navigeert u naar Query&#39;s > Logboek om de querygeschiedenis te bekijken. Neem contact op met de beheerder als u geen machtigingen hebt om de werkruimte Query&#39;s te openen."
+>abstract="De meting van Uren van de rekenmachine van de tijdVraag de motoren van de Dienst lezen, verwerken, en het schrijven gegevens wanneer het runnen van partijvragen.<br> Uw gebruik zou het vergunning gegeven bedrag kunnen bereiken. Als u het gebruik wilt beoordelen of verminderen, gaat u naar Query&#39;s > Logboek om uw querygeschiedenis te bekijken. Neem contact op met de beheerder als u geen toegang hebt tot de werkruimte Query&#39;s."
 >additional-url="https://experience.adobe.com/#/platform/query/log.html" text="Zoeklogwerkruimte"
 
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_licenseusage_predictedusage_addressableaudience"
 >title="Voorspeld adresseerbaar publiek"
->abstract="Uw gebruik kan het gelicentieerde bedrag bereiken. Om gebruik te verminderen, kunt u dataset of pseudoniem de gegevensvervalsing van profielgegevens voor zandbakken en datasets vormen."
+>abstract="Het adresseerbare publiek is de reeks personenprofielen in het profiel van de Klant in real time die uw organisatie mag aangaan. Dit omvat zowel direct identificeerbare als pseudoniem profielen.<br> Uw gebruik zou het vergunning gegeven bedrag kunnen bereiken. Om gebruik te verminderen, vorm dataset of de Pseudoniem gegevensvervalsing van het Profiel."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/event-expirations.html" text="Verlopen van gebeurtenissen beleven"
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/pseudonymous-profiles.html" text="Verlopen gegevens van pseudoniem-profielen"
 
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_licenseusage_predictedusage_engageableprofiles"
 >title="Voorspelde inschrijfbare profielen"
->abstract="Uw gebruik kan het gelicentieerde bedrag bereiken. Om gebruik te verminderen, kunt u dataset of pseudoniem de gegevensvervalsing van profielgegevens voor zandbakken en datasets vormen."
+>abstract="Inschakelbare profielen zijn persoonlijke profielen in Real-Time klantprofiel die uw organisatie in de afgelopen 12 maanden heeft geprobeerd te gebruiken met Journey Optimizer.<br> Uw gebruik zou het vergunning gegeven bedrag kunnen bereiken. Om gebruik te verminderen, vorm dataset of de Pseudoniem gegevensvervalsing van het Profiel."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/event-expirations.html" text="Verlopen van gebeurtenissen beleven"
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/pseudonymous-profiles.html" text="Verlopen gegevens van pseudoniem-profielen"
 
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_licenseusage_predictedusage_businesspersonprofile"
 >title="Voorspeld profiel van een ondernemer"
->abstract="Uw gebruik kan het gelicentieerde bedrag bereiken. Om gebruik te verminderen, kunt u dataset of pseudoniem de gegevensvervalsing van profielgegevens voor zandbakken en datasets vormen."
+>abstract="Profielen van zakelijke personen zijn records in realtime-klantprofiel die personen in een B2B-context vertegenwoordigen.<br> Uw gebruik zou het vergunning gegeven bedrag kunnen bereiken. Om gebruik te verminderen, vorm dataset of de Pseudoniem gegevensvervalsing van het Profiel."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/event-expirations.html" text="Verlopen van gebeurtenissen beleven"
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/pseudonymous-profiles.html" text="Verlopen gegevens van pseudoniem-profielen"
 
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_licenseusage_predictedusage_corehours"
 >title="Voorspelde kernuren"
->abstract="Uw gebruik kan het gelicentieerde bedrag bereiken. Om gebruik te verminderen, kunt u dataset of pseudoniem de gegevensvervalsing van profielgegevens voor zandbakken en datasets vormen."
+>abstract="De uren van de kern vertegenwoordigen verwerkingstijd die over de diensten van Experience Platform wordt verbruikt.<br> Uw gebruik zou het vergunning gegeven bedrag kunnen bereiken. Om gebruik te verminderen, vorm dataset of de Pseudoniem gegevensvervalsing van het Profiel."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/event-expirations.html" text="Verlopen van gebeurtenissen beleven"
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/pseudonymous-profiles.html" text="Verlopen gegevens van pseudoniem-profielen"
 
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_licenseusage_predictedusage_totaldatavolume"
 >title="Voorspeld totaal gegevensvolume"
->abstract="Uw gebruik kan het gelicentieerde bedrag bereiken. Om gebruik te verminderen, kunt u dataset of pseudoniem de gegevensvervalsing van profielgegevens voor zandbakken en datasets vormen."
+>abstract="Het totale gegevensvolume is de hoeveelheid gegevens die beschikbaar is in realtime klantprofiel voor gebruik in workflows voor betrokkenheid en personalisatie.<br> Uw gebruik zou het vergunning gegeven bedrag kunnen bereiken. Om gebruik te verminderen, vorm dataset of de Pseudoniem gegevensvervalsing van het Profiel."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/event-expirations.html" text="Verlopen van gebeurtenissen beleven"
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/pseudonymous-profiles.html" text="Verlopen gegevens van pseudoniem-profielen"
 
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_licenseusage_predictedusage_cjaRowsAvailable"
 >title="Voorspelde CJA-rijen beschikbaar"
->abstract="Uw gebruik kan het gelicentieerde bedrag bereiken. Om gebruik te verminderen, kunt u dataset of pseudoniem de gegevensvervalsing van profielgegevens voor zandbakken en datasets vormen."
+>abstract="CJA Rows Available heeft betrekking op de dagelijkse gemiddelde rijen gegevens die beschikbaar zijn voor analyse in Customer Journey Analytics.<br> Uw gebruik zou het vergunning gegeven bedrag kunnen bereiken. Om gebruik te verminderen, vorm dataset of de Pseudoniem gegevensvervalsing van het Profiel."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/event-expirations.html" text="Verlopen van gebeurtenissen beleven"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/pseudonymous-profiles.html" text="Verlopen gegevens van pseudoniem-profielen"
+
+>[!CONTEXTUALHELP]
+>id="platform_dashboards_licenseusage_exceededusage_addressableaudience"
+>title="Voorspeld adresseerbaar publiek"
+>abstract="Het adresseerbare publiek is de reeks personenprofielen in het profiel van de Klant in real time die uw organisatie mag aangaan. Dit omvat zowel direct identificeerbare als pseudoniem profielen.<br> Uw gebruik heeft het vergunning gegeven bedrag overschreden. Om gebruik te verminderen, vorm dataset of de Pseudoniem gegevensvervalsing van het Profiel."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/event-expirations.html" text="Verlopen van gebeurtenissen beleven"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/pseudonymous-profiles.html" text="Verlopen gegevens van pseudoniem-profielen"
+
+>[!CONTEXTUALHELP]
+>id="platform_dashboards_licenseusage_exceededusage_engageableprofiles"
+>title="Voorspelde inschrijfbare profielen"
+>abstract="Inschakelbare profielen zijn persoonlijke profielen in Real-Time klantprofiel die uw organisatie in de afgelopen 12 maanden heeft geprobeerd te gebruiken met Journey Optimizer.<br> Uw gebruik heeft het vergunning gegeven bedrag overschreden. Om gebruik te verminderen, vorm dataset of de Pseudoniem gegevensvervalsing van het Profiel."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/event-expirations.html" text="Verlopen van gebeurtenissen beleven"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/pseudonymous-profiles.html" text="Verlopen gegevens van pseudoniem-profielen"
+
+>[!CONTEXTUALHELP]
+>id="platform_dashboards_licenseusage_exceededusage_businesspersonprofile"
+>title="Voorspeld profiel van een ondernemer"
+>abstract="Profielen van zakelijke personen zijn records in realtime-klantprofiel die personen in een B2B-context vertegenwoordigen.<br> Uw gebruik heeft het vergunning gegeven bedrag overschreden. Om gebruik te verminderen, vorm dataset of de Pseudoniem gegevensvervalsing van het Profiel."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/event-expirations.html" text="Verlopen van gebeurtenissen beleven"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/pseudonymous-profiles.html" text="Verlopen gegevens van pseudoniem-profielen"
+
+>[!CONTEXTUALHELP]
+>id="platform_dashboards_licenseusage_exceededusage_corehours"
+>title="Voorspelde kernuren"
+>abstract="De uren van de kern vertegenwoordigen verwerkingstijd die over de diensten van Experience Platform wordt verbruikt.<br> Uw gebruik heeft het vergunning gegeven bedrag overschreden. Om gebruik te verminderen, vorm dataset of de Pseudoniem gegevensvervalsing van het Profiel."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/event-expirations.html" text="Verlopen van gebeurtenissen beleven"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/pseudonymous-profiles.html" text="Verlopen gegevens van pseudoniem-profielen"
+
+>[!CONTEXTUALHELP]
+>id="platform_dashboards_licenseusage_exceededusage_totaldatavolume"
+>title="Voorspeld totaal gegevensvolume"
+>abstract="Het totale gegevensvolume is de hoeveelheid gegevens die beschikbaar is in realtime klantprofiel voor gebruik in workflows voor betrokkenheid en personalisatie.<br> Uw gebruik heeft het vergunning gegeven bedrag overschreden. Om gebruik te verminderen, vorm dataset of de Pseudoniem gegevensvervalsing van het Profiel."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/event-expirations.html" text="Verlopen van gebeurtenissen beleven"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/pseudonymous-profiles.html" text="Verlopen gegevens van pseudoniem-profielen"
+
+>[!CONTEXTUALHELP]
+>id="platform_dashboards_licenseusage_exceededusage_cjaRowsAvailable"
+>title="Voorspelde CJA-rijen beschikbaar"
+>abstract="CJA Rows Available heeft betrekking op de dagelijkse gemiddelde rijen gegevens die beschikbaar zijn voor analyse in Customer Journey Analytics.<br> Uw gebruik heeft het vergunning gegeven bedrag overschreden. Om gebruik te verminderen, vorm dataset of de Pseudoniem gegevensvervalsing van het Profiel."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/event-expirations.html" text="Verlopen van gebeurtenissen beleven"
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/pseudonymous-profiles.html" text="Verlopen gegevens van pseudoniem-profielen"
 
@@ -146,22 +188,22 @@ De lijsten wijzen op primaire metrisch voor elk product, aangezien elk product t
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_licenseUsage_prediction"
 >title="Voorspeld gebruik"
->abstract="De voorspellingen zijn gebaseerd op het gebruik in de afgelopen 6-7 maanden en worden gegenereerd op de 15e van elke maand. Houd er rekening mee dat voorspelling van het licentiegebruik benaderingen zijn die zijn gebaseerd op gebruik in het verleden. U bent verantwoordelijk voor het begrijpen van het daadwerkelijke gebruik van uw organisatie en ervoor te zorgen dat het gebruik niet verder gaat dan het bereik van de licentie van uw organisatie voor Adobe. Om gebruik te verminderen, kunt u dataset of pseudoniem de gegevensvervalsing van profielgegevens voor zandbakken en datasets vormen."
+>abstract="De voorspellingen zijn gebaseerd op het gebruik in de afgelopen 6-7 maanden en worden elke vrijdag wekelijks gegenereerd. Houd er rekening mee dat voorspelling van het licentiegebruik benaderingen zijn die zijn gebaseerd op gebruik in het verleden. U bent verantwoordelijk voor het begrijpen van het daadwerkelijke gebruik van uw organisatie en ervoor te zorgen dat het gebruik niet verder gaat dan het bereik van de licentie van uw organisatie voor Adobe. Om het gebruik te verminderen, kunt u dataset of de Pseudoniem gegevensvervalsing van het Profiel voor zandbakken en datasets vormen."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/data-lifecycle/ui/dataset-expiration.html" text="Verlopen van geautomatiseerde gegevenssets"
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/pseudonymous-profiles.html" text="Verlopen gegevens van pseudoniem-profielen"
 
 >[!CONTEXTUALHELP]
 >id="platform_licenseusage_prediction"
 >title="Voorspeld gebruik"
->abstract="De voorspellingen zijn gebaseerd op het gebruik in de afgelopen 6-7 maanden en worden gegenereerd op de 15e van elke maand. Houd er rekening mee dat voorspelling van het licentiegebruik benaderingen zijn die zijn gebaseerd op gebruik in het verleden. U bent verantwoordelijk voor het begrijpen van het daadwerkelijke gebruik van uw organisatie en ervoor te zorgen dat het gebruik niet verder gaat dan het bereik van de licentie van uw organisatie voor Adobe. Om gebruik te verminderen, kunt u dataset of pseudoniem de gegevensvervalsing van profielgegevens voor zandbakken en datasets vormen."
+>abstract="De voorspellingen zijn gebaseerd op het gebruik in de afgelopen 6-7 maanden en worden gegenereerd op de 15e van elke maand. Houd er rekening mee dat voorspelling van het licentiegebruik benaderingen zijn die zijn gebaseerd op gebruik in het verleden. U bent verantwoordelijk voor het begrijpen van het daadwerkelijke gebruik van uw organisatie en ervoor te zorgen dat het gebruik niet verder gaat dan het bereik van de licentie van uw organisatie voor Adobe. Om het gebruik te verminderen, kunt u dataset of de Pseudoniem gegevensvervalsing van het Profiel voor zandbakken en datasets vormen."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/data-lifecycle/ui/dataset-expiration.html" text="Verlopen van geautomatiseerde gegevenssets"
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/pseudonymous-profiles.html" text="Verlopen gegevens van pseudoniem-profielen"
 
-Beheer en optimaliseer proactief uw licentiemiddelen op basis van inzichtelijke gebruiksvoorspellingen. De kolom [!UICONTROL Predicted Usage] voorspelt nauwkeurig toekomstig vergunningsgebruik op het zandbakniveau, over alle productie en ontwikkelingszandbakken, voor al uw gekochte producten. Deze alarmeringscapaciteit verstrekt een prognose van vergunningsgebruik voor zes weken in de toekomst, gebaseerd op uw gebruik tot de 15e van deze kalendermaand. Voorspellingen worden geleverd met een ondergrens &amp; bovengrens.
+Beheer en optimaliseer proactief uw licentiebronnen met nauwkeurige, actuele gebruiksvoorspelling. In de kolom [!UICONTROL Predicted Usage] wordt het toekomstige gebruik van licenties op sandboxniveau voor alle productie- en ontwikkelingssandboxen voor alle aangeschafte producten voorspeld. De voorspellingen worden nu wekelijks bijgewerkt en bieden een prognose van zes weken op basis van de meest recente gebruiksgegevens. Elke voorspelling omvat zowel een ondergrens als bovengrens om geïnformeerde planning te steunen.
 
 >[!IMPORTANT]
 >
->De voorspellingen worden maandelijks vernieuwd. De datum van verfrist zich is inbegrepen in een infopictogram (![ Dit infopictogram.](../images/license-usage/info-icon.png) ) boven de kolomtitel.
+>De voorspellingen worden elke vrijdag elke week vernieuwd. De datum van verfrist zich is inbegrepen in een infopictogram (![ Dit infopictogram.](../images/license-usage/info-icon.png) ) boven de kolomtitel.
 
 Als u een overzicht wilt zien van het gebruik van de rechten van een product, selecteert u een product in de tabel [!UICONTROL Core products] .
 
@@ -188,8 +230,10 @@ Het percentage van het voorspelde gebruik wordt als volgt bepaald:
 De voorspelde gebruiksfunctie ondersteunt de volgende meetgegevens:
 
 - [!UICONTROL Addressable audience]
+- [!UICONTROL Businessperson profiles]
 - [!UICONTROL Compute hours]
 - [!UICONTROL Customer Journey Audience number of rows]
+- [!UICONTROL Engageable profiles]
 - [!UICONTROL Total Data Volume]
 
 ## [!UICONTROL Summary] tab {#summary-tab}
@@ -251,30 +295,34 @@ U kunt ook **[!UICONTROL Custom date]** selecteren om de tijdsperiode te kiezen 
 
 >[!IMPORTANT]
 >
->Beginnend 20th Augustus, zagen de klanten met rechten voor &#39;[!UICONTROL Average Profile Richness]&#39; en &#39;[!UICONTROL Total Storage]&#39; in plaats daarvan &#39;[!UICONTROL Total Data Volume]&#39; in het Dashboard van het Gebruik van de Vergunning. Er was geen wijziging in de rechten van de klant, alleen een vereenvoudiging van de meetwaarden. [!UICONTROL Total Data Volume] geeft de gegevens weer die beschikbaar zijn in de Adobe Experience Platform Profile Service voor workflows voor betrokkenheid en personalisatie. Deze vereenvoudigde maatstaf verbeterde het beheer en de meting van het gebruik van de profielservice. Klanten werden aangemoedigd contact op te nemen met hun Adobe-vertegenwoordiger voor meer informatie over deze wijziging.
+>Beginnend 20th Augustus, zagen de klanten met rechten voor &#39;[!UICONTROL Average Profile Richness]&#39; en &#39;[!UICONTROL Total Storage]&#39; in plaats daarvan &#39;[!UICONTROL Total Data Volume]&#39; in het Dashboard van het Gebruik van de Vergunning. Er was geen wijziging in de rechten van de klant, alleen een vereenvoudiging van de meetwaarden. [!UICONTROL Total Data Volume] geeft de gegevens weer die beschikbaar zijn in Real-Time Klantprofiel voor service- en personalisatieworkflows. Deze vereenvoudigde metrisch verbeterde het beheer en de meting van het gebruik van het Profiel van de Klant in real time. Klanten werden aangemoedigd contact op te nemen met hun Adobe-vertegenwoordiger voor meer informatie over deze wijziging.
 
 Het dashboard van het vergunningsgebruik rapporteert over verscheidene unieke metriek die op veelvoudige producten in de organisatie van toepassing zijn. De beschikbare meetwaarden zijn:
 
 | Metrisch | Beschrijving |
 |---|---|
 | [!UICONTROL Audience Activation Size] | De totale grootte van profielen die in een jaar op een op een bestand gebaseerd doel zijn geactiveerd. Opmerking: hieronder vallen geen profielen die via streamingdoelen worden verzonden. |
-| [!UICONTROL Addressable Audience] | De som van de rechten van uw zakelijke publiek en de rechten van het consumentenpubliek. Een publiek voor de consument wordt gedefinieerd als het aantal personenprofielen dat op de verkooporder als &quot;Consumentenpubliek&quot; wordt aangeduid. Een zakelijk publiek wordt gedefinieerd als het aantal bedrijfspersoonprofielen dat als &quot;BedrijfsPubliek&quot;op de verkooporde wordt geïdentificeerd. |
+| [!UICONTROL Addressable Audience] | De reeks personenprofielen in het Profiel van de Klant in real time dat uw organisatie gerechtigd is in dienst te nemen, met inbegrip van zowel direct identificeerbare als Pseudoniem Profielen. Deze profielen kunnen kenmerken, gedrag, en de gegevens van het segmentlidmaatschap bevatten. Profielvolumes worden berekend met de standaard deterministische identiteitsgrafiek van Adobe Experience Platform en worden beschouwd als een gedeelde functie. |
 | [!UICONTROL Adhoc Query Service Users Packs] | Een add-on om uw geautoriseerde machtiging voor gelijktijdige gebruikers van Query Service te verhogen met vijf extra gelijktijdige gebruikers van Query Service en één extra query tegelijk voor ad-hocquery per pakket. Er kan een licentie worden verleend voor meerdere extra Ad hoc Query User-pakketten. |
 | [!UICONTROL Average profile richness] | **Vervangen** - de som van alle productiegegevens die binnen de Dienst van het Profiel van de Hub op om het even welk punt in tijd worden opgeslagen, die door vijf keer het aantal erkende bedrijfspersoonprofielen wordt verdeeld. [!UICONTROL Average profile richness] is een gedeelde functie. |
 | [!UICONTROL CJA Rows Available] | De dagelijkse gemiddelde rijen gegevens die beschikbaar zijn voor analyse binnen Customer Journey Analytics. |
-| [!UICONTROL Computed Attributes] | Het totale aantal geaggregeerde gedragsgegevens van het profiel. Geaggregeerde gedragsgegevens voor profielen zijn gebaseerd op ervaringsgebeurtenissen die worden omgezet in een profielkenmerk en kunnen worden opgenomen in een persoonprofiel of bedrijfspersoonprofiel. |
+| [!UICONTROL Computed Attributes] | Geaggregeerde profielgedragsgegevens op basis van ervaringsgebeurtenissen die zijn omgezet in een profielkenmerk en kunnen worden opgenomen in een personenprofiel. |
 | [!UICONTROL Consumer Audience] | Het aantal personenprofielen dat op de verkooporder als &quot;Consumer Audience&quot; is geïdentificeerd. |
 | [!UICONTROL Data Export Size] | De hoeveelheid gegevens die via gegevenssetactivering in een jaar wordt verzonden. |
 | [!UICONTROL Data Exports] | De totale omvang van gegevenssets die (direct of indirect) naar een niet-Adobe-oplossing in een jaar kunnen worden geëxporteerd. |
 | [!UICONTROL Data Lake Storage] | De hoeveelheid die in Adobe Experience Platform wordt gebruikt voor de opslag van analysegegevens. |
-| [!UICONTROL Engageable Audience] | Deze maatstaf verwijst naar het publiek van controleerbare profielen. Een aanspreekbaar profiel is een record met informatie die een individu vertegenwoordigt en wordt weergegeven in de profielservice. Deze records zijn profielen die u in de afgelopen 12 maanden hebt proberen te gebruiken voor het schrijven, beslissen, leveren, experimenteren of orchestreren van Journey Optimizer. |
-| [!UICONTROL Look-alike Audiences] | Het aantal doelgroepen dat wordt gegenereerd door een bestaand publiek voor consumenten te modelleren om te bepalen welke personenprofielen vergelijkbaar zijn met het bestaande publiek voor consumenten. |
+| [!UICONTROL Engageable Audience] | Een groep personenprofielen in het Profiel van de Klant in real time die u hebt geprobeerd om binnen de afgelopen 12 maanden te verbinden gebruikend het auteursrecht, het besluit, de levering, de experimentatie, of de mogelijkheden van de Orchestratie van Journey Optimizer. |
+| [!UICONTROL Look-alike Audiences] | Een publiek ziet-als publiek is een publiek dat door een bestaand publiek te modelleren van het Publiek van de Consumenten wordt geproduceerd om Profielen van Persoon met gelijkaardige attributen of gedrag te identificeren. |
 | [!UICONTROL Number of AMM Models] | Een telling van het model voor machinaal leren (gebouwd in Adobe Mix Modeler) dat wordt gebruikt om een bepaald resultaat te meten en/of te voorspellen die op uw investeringen wordt gebaseerd. |
 | [!UICONTROL Number of Sandboxes] | Het aantal logische scheidingen binnen uw instantie van om het even welke Adobe On-demand Dienst die tot Adobe Experience Platform toegang heeft isolerend gegevens en verrichtingen. |
 | [!UICONTROL Profile Richness No of Packs] | Een toename in uw geautoriseerde totale gegevensvolume met 25 kB per profiel voor elk extra rijvaardigheidspakket van het Profiel. |
 | [!UICONTROL Query Service Compute Hours] | Een maatregel van de hoeveelheid tijd die door de motoren van de Dienst van de Vraag wordt genomen om, gegevens terug in het gegevensmeer te lezen te verwerken en te schrijven wanneer een partijvraag wordt uitgevoerd. |
 | [!UICONTROL Streaming Segmentation No of Packs] | De pakketten werken segmentlidmaatschap voor een persoonprofiel bij aangezien de nieuwe gegevens de Dienst van de Segmentatie door een het stromen stroom ingaan. Het lidmaatschap van een segment wordt beoordeeld op basis van de kenmerken van het huidige personenprofiel en de waarde van de huidige gebeurtenis, zonder rekening te houden met het historische gedrag. Streaming segmentatie is een gedeelde functie. |
-| [!UICONTROL Total Data Volume] | De totale hoeveelheid gegevens die beschikbaar is voor Adobe Experience Platform Profile Service om te gebruiken in betrokkenheidsworkflows. Zie [ vaak gestelde vragen over het Totale Volume van Gegevens ](../../landing/license-usage-and-guardrails/total-data-volume.md) om meer te leren. |
+| [!UICONTROL Total Data Volume] | De totale hoeveelheid gegevens die beschikbaar is voor realtime-klantprofiel voor gebruik in workflows met betrokkenheid. Zie [ vaak gestelde vragen over het Totale Volume van Gegevens ](../../landing/license-usage-and-guardrails/total-data-volume.md) om meer te leren. |
+| [!UICONTROL Total Volume of Data Egress] | Het gecumuleerde jaarlijkse volume aan gegevens dat uit Adobe Experience Platform naar derde gegevensopslagcentra wordt uitgevoerd. |
+
+<!-- Approval needed on my revision above.
+Original PM version: | [!UICONTROL Total Volume of Data Egress] | The cumulative annual amount of data processed from third-party data warehouses. | -->
 
 <!-- |  [!UICONTROL Sandbox No of Packs] |  A logical separation within your instance of any Adobe On-demand Service that accesses Adobe Experience Platform isolating data and operations | -->
 
