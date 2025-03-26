@@ -2,9 +2,9 @@
 title: Bombora-intentie met Experience Platform verbinden via de gebruikersinterface
 description: Meer informatie over hoe u Bombora Intent kunt verbinden met Experience Platform
 exl-id: 76a4fed5-b2d5-46d5-9245-b52792a7d323
-source-git-commit: 9f6f84d16c30c1e32184007ebc2a401db5f8b9ac
+source-git-commit: 0a6a9fe759d71fd62e3eaf5c93a091614f3c76a0
 workflow-type: tm+mt
-source-wordcount: '918'
+source-wordcount: '931'
 ht-degree: 0%
 
 ---
@@ -20,6 +20,10 @@ Deze zelfstudie vereist een goed begrip van de volgende onderdelen van Experienc
 * [ Real-Time CDP B2B edition ](../../../../../rtcdp/b2b-overview.md): Real-Time CDP B2B edition is speciaal-gebouwd voor marketers die in een zaken-aan-zaken de dienstmodel werken. Het verenigt gegevens uit veelvoudige bronnen en combineert het in één enkele mening van mensen en rekeningsprofielen. Deze verenigde gegevens staan marketers toe om specifiek publiek nauwkeurig te richten en dat publiek over alle beschikbare kanalen in dienst te nemen.
 * [ Bronnen ](../../../../home.md): Experience Platform staat gegevens toe om van diverse bronnen worden opgenomen terwijl het voorzien van u van de capaciteit om, inkomende gegevens te structureren te etiketteren en te verbeteren gebruikend de diensten van Experience Platform.
 * [ Sandboxes ](../../../../../sandboxes/home.md): Experience Platform verstrekt virtuele zandbakken die één enkele instantie van Experience Platform in afzonderlijke virtuele milieu&#39;s verdelen helpen digitale ervaringstoepassingen ontwikkelen en ontwikkelen.
+
+### Vereisten
+
+Lees het [[!DNL Bombora Intent]  overzicht ](../../../../connectors/data-partners/bombora.md) voor informatie over hoe te om uw authentificatiegeloofsbrieven terug te winnen.
 
 ## Navigeren door de catalogus met bronnen
 

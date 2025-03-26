@@ -1,23 +1,23 @@
 ---
-keywords: Experience Platform;thuis;populaire onderwerpen;bronschakelaars;bronschakelaar;bronnen;gegevensbronnen;gegevensbron;gegevensbronverbinding
+keywords: Experience Platform;home;populaire onderwerpen;bronconnectors;bronaansluiting;bronnen;gegevensbronnen;gegevensbron;gegevensbronverbinding
 solution: Experience Platform
 title: Overzicht Source Connectors
-description: Adobe Experience Platform staat toe dat gegevens uit externe bronnen worden opgenomen terwijl u de mogelijkheid krijgt om inkomende gegevens te structureren, te labelen en te verbeteren met behulp van de platformservices. U kunt gegevens uit diverse bronnen invoeren, zoals toepassingen voor Adobe, opslag in de cloud, databases en vele andere.
+description: Adobe Experience Platform staat toe dat gegevens uit externe bronnen worden opgenomen terwijl u de mogelijkheid krijgt om inkomende gegevens te structureren, te labelen en te verbeteren met behulp van de platformservices. U kunt gegevens invoeren uit verschillende bronnen, zoals Adobe-toepassingen, opslag in de cloud, databases en vele andere.
 exl-id: efdbed4d-5697-43ef-a47a-a8bcf0f13237
-source-git-commit: 8541af0e2c0a2f5709f1621877ca204b0d3d64bd
+source-git-commit: 0a6a9fe759d71fd62e3eaf5c93a091614f3c76a0
 workflow-type: tm+mt
-source-wordcount: '1518'
+source-wordcount: '1522'
 ht-degree: 0%
 
 ---
 
 # Overzicht van Source-connectors
 
-Adobe Experience Platform staat toe dat gegevens uit externe bronnen worden opgenomen terwijl u de mogelijkheid krijgt om inkomende gegevens te structureren, te labelen en te verbeteren met behulp van de platformservices. U kunt gegevens uit diverse bronnen invoeren, zoals toepassingen voor Adobe, opslag in de cloud, databases en vele andere.
+Adobe Experience Platform staat toe dat gegevens uit externe bronnen worden opgenomen terwijl u de mogelijkheid krijgt om inkomende gegevens te structureren, te labelen en te verbeteren met behulp van de platformservices. U kunt gegevens invoeren uit verschillende bronnen, zoals Adobe-toepassingen, opslag in de cloud, databases en vele andere.
 
 [!DNL Flow Service] wordt gebruikt voor het verzamelen en centraliseren van klantgegevens uit verschillende bronnen binnen het platform. De service biedt een gebruikersinterface en RESTful API waarmee u eenvoudig bronverbindingen met verschillende gegevensproviders kunt instellen. Deze bronverbindingen laten u toe om uw derdesystemen voor authentiek te verklaren, tijden voor ingestitielooppas te plaatsen, en gegevensinvoer te beheren.
 
-Met Experience Platform, kunt u gegevens centraliseren u uit verschillende bronnen verzamelt en de inzichten gebruiken die uit het worden verkregen om meer te doen.
+Met Experience Platform kunt u gegevens die u uit verschillende bronnen verzamelt, centraliseren en de daaruit verkregen inzichten gebruiken om meer te doen.
 
 <div id="recs-overview-body-1"></div>
 <div id="recs-overview-body-2"></div>
@@ -28,7 +28,7 @@ Met Experience Platform, kunt u gegevens centraliseren u uit verschillende bronn
 
 ## Geavanceerde bedrijfsbronnen {#advanced-enterprise-sources}
 
-De volgende bronnen zijn beschikbaar aan [ Adobe Real-time Customer Data Platform Ultimate ](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html) slechts klanten.
+De volgende bronnen zijn beschikbaar aan [ Adobe Real-Time Customer Data Platform Ultimate ](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html) slechts klanten.
 
 - [[!DNL Amazon Kinesis]](connectors/cloud-storage/kinesis.md) [!BADGE  Streaming ]{type=Positive}
 - [[!DNL Amazon Redshift]](connectors/databases/redshift.md) [!BADGE  Partij ]{type=Informative}
@@ -39,19 +39,19 @@ De volgende bronnen zijn beschikbaar aan [ Adobe Real-time Customer Data Platfor
 - [[!DNL Snowflake]](connectors/databases/snowflake-streaming.md) [!BADGE  Streaming ]{type=Positive}
 - [[!DNL Snowflake]](connectors/databases/snowflake.md) [!BADGE  Partij ]{type=Informative}
 
-## Adobe-gebouwde en partner-gebouwde bronnen {#adobe-and-partner-built-sources}
+## Door Adobe gebouwde en door partners gebouwde bronnen {#adobe-and-partner-built-sources}
 
 Sommige schakelaars in de Experience Platform broncatalogus worden gebouwd en door Adobe gehandhaafd, terwijl anderen door partnerbedrijven worden gebouwd en worden gehandhaafd door [ Bronnen SDK ](/help/sources/sources-sdk/overview.md) te gebruiken. Een nota bij de bovenkant van de documentatiepagina voor elke partner-gebouwde schakelaarvraag uit als een bron door de partner wordt gecreeerd en gehandhaafd. Bijvoorbeeld, wordt de [ schakelaar van Amazon S3 ](/help/sources/connectors/cloud-storage/s3.md) gecreeerd door Adobe, terwijl de [ schakelaar RainFocus ](/help/sources/connectors/analytics/rainfocus.md) door het team RainFocus wordt gecreeerd en gehandhaafd.
 
-Voor partner-authored en onderhouden schakelaars, betekent dit dat de kwesties met de schakelaar door het partnerteam zouden kunnen moeten worden opgelost (contactmethode die in de nota in de documentatiepagina wordt verstrekt). Neem voor problemen met door de Adobe ontworpen en onderhouden connectors contact op met uw Adobe of de klantenservice.
+Voor partner-authored en onderhouden schakelaars, betekent dit dat de kwesties met de schakelaar door het partnerteam zouden kunnen moeten worden opgelost (contactmethode die in de nota in de documentatiepagina wordt verstrekt). Neem voor problemen met door Adobe ontworpen en onderhouden connectors contact op met uw Adobe-vertegenwoordiger of de klantenservice.
 
 ## Broncategorieën
 
-Bronnen in Experience Platform worden gegroepeerd in de volgende categorieën:
+Bronnen in Experience Platform zijn gegroepeerd in de volgende categorieën:
 
-### Adoben {#adobe-applications}
+### Adobe-toepassingen {#adobe-applications}
 
-Met Experience Platform kunnen gegevens uit andere Adobe-toepassingen, zoals Adobe Analytics en Adobe Audience Manager, worden ingevoerd. Zie de volgende verwante documenten voor meer informatie:
+Experience Platform staat toe dat gegevens worden ingevoerd van andere Adobe-toepassingen, zoals Adobe Analytics en Adobe Audience Manager. Zie de volgende verwante documenten voor meer informatie:
 
 - [Adobe Audience Manager-bronoverzicht](connectors/adobe-applications/audience-manager.md)
    - [Een Adobe Audience Manager-bronverbinding maken in de gebruikersinterface](./tutorials/ui/create/adobe-applications/audience-manager.md)
@@ -62,7 +62,7 @@ Met Experience Platform kunnen gegevens uit andere Adobe-toepassingen, zoals Ado
 - [Adobe Campaign Managed Cloud Services-bronoverzicht](connectors/adobe-applications/campaign.md)
    - [Een Adobe Campaign Managed Cloud Services-bronverbinding maken in de gebruikersinterface](./tutorials/ui/create/adobe-applications/campaign.md)
 - [Adobe Commerce-bronoverzicht](connectors/adobe-applications/commerce.md)
-- [Overzicht van de bron voor gegevensverzameling voor Adoben](connectors/adobe-applications/data-collection.md)
+- [Overzicht van Adobe-gegevensbron voor gegevensverzameling](connectors/adobe-applications/data-collection.md)
    - [Een bronverbinding voor klantkenmerken maken in de gebruikersinterface](./tutorials/ui/create/adobe-applications/customer-attributes.md)
 - [[!DNL Marketo Engage] bronoverzicht](connectors/adobe-applications/marketo/marketo.md)
    - [Creeer a [!DNL Marketo Engage]  bronverbinding in UI](./tutorials/ui/create/adobe-applications/marketo.md)
@@ -124,7 +124,7 @@ Experience Platform biedt ondersteuning voor het opnemen van gegevens van een to
 
 ### Database {#database}
 
-Experience Platform verleent steun voor het opnemen van gegevens van een derdegegevensbestand. Zie de volgende verwante documenten voor meer informatie over specifieke bronschakelaars:
+Experience Platform biedt ondersteuning voor het opnemen van gegevens uit een database van derden. Zie de volgende verwante documenten voor meer informatie over specifieke bronschakelaars:
 
 - [[!DNL Apache Hive on Azure HDInsights]](connectors/databases/hive.md) [!BADGE  Partij ]{type=Informative}
 - [[!DNL Apache Spark on Azure HDInsights]](connectors/databases/spark.md) [!BADGE  Partij ]{type=Informative}
@@ -144,10 +144,12 @@ Experience Platform verleent steun voor het opnemen van gegevens van een derdege
 
 ### Gegevens- en identiteitspartners {#data-partner}
 
-Experience Platform verleent steun voor het opnemen van gegevens van een derdegegevensbestand. Zie de volgende verwante documenten voor meer informatie over specifieke bronschakelaars:
+Experience Platform biedt ondersteuning voor het opnemen van gegevens van een data- en identiteitspartner. Zie de volgende verwante documenten voor meer informatie over specifieke bronschakelaars:
 
 - [[!DNL Acxiom Data Ingestion]](connectors/data-partners/acxiom-data-ingestion.md) [!BADGE  Partij ]{type=Informative}
 - [[!DNL Acxiom Prospecting Data Import]](connectors/data-partners/acxiom-prospecting-data-import.md) [!BADGE  Partij ]{type=Informative}
+- [[!DNL Bombora Intent]](connectors/data-partners/bombora.md) [!BADGE  Partij ]{type=Informative}
+- [[!DNL Demandbase Intent]](connectors/data-partners/demandbase.md) [!BADGE  Partij ]{type=Informative}
 - [[!DNL Merkury Enterprise Identity Resolution]](connectors/data-partners/merkury.md) [!BADGE  Partij ]{type=Informative}
 
 ### eCommerce {#ecommerce}
@@ -214,7 +216,7 @@ De volgende lijst schetst hoe UI zich gedraagt gebaseerd op verschillende combin
 | **[!UICONTROL Manage Sources]** Aan | Naast de functies die in **[!UICONTROL View Sources]** zijn opgenomen, verleent u toegang tot de optie **[!UICONTROL Connect Source]** in **[!UICONTROL Catalog]** en **[!UICONTROL Select Data]** in **[!UICONTROL Browse]** . Met **[!UICONTROL Manage Sources]** kunt u **[!UICONTROL DataFlows]** ook in- of uitschakelen en de schema&#39;s ervan bewerken. |
 | **[!UICONTROL View Sources]** Uit en **[!UICONTROL Manage Sources]** Uit | Alle toegang tot bronnen intrekken. |
 
-Voor meer informatie over de beschikbare toestemmingen die door de Toestemmingen van de Adobe worden verleend, lees het [ overzicht van de toegangscontrole ](../access-control/home.md).
+Voor meer informatie over de beschikbare toestemmingen die door de Toestemmingen van Adobe worden verleend, lees het [ overzicht van de toegangscontrole ](../access-control/home.md).
 
 ### Toegangsbeheer op basis van kenmerken
 
@@ -238,8 +240,8 @@ Voor meer informatie over op attribuut-gebaseerde toegangsbeheer, lees het [ op 
 
 Door om het even welke bronnen te gebruiken die als bèta (&quot;Beta&quot;) worden geëtiketteerd, bevestigt u hierbij dat Beta ***&quot;zoals is&quot;zonder enige garantie van welke aard*** wordt verstrekt.
 
-Adobe is niet verplicht de Beta te onderhouden, te corrigeren, bij te werken, te wijzigen, te wijzigen of anderszins te ondersteunen. U wordt aangeraden informatief te zijn en op geen enkele wijze te vertrouwen op de juiste werking of prestaties van dergelijke Beta en/of begeleidende materialen. De Beta wordt beschouwd als vertrouwelijke informatie over Adobe.
+Adobe is niet verplicht de Beta te onderhouden, te corrigeren, bij te werken, te wijzigen, te wijzigen of anderszins te ondersteunen. U wordt aangeraden informatief te zijn en op geen enkele wijze te vertrouwen op de juiste werking of prestaties van dergelijke Beta en/of begeleidende materialen. De Beta wordt beschouwd als vertrouwelijke informatie van Adobe.
 
-Elke &quot;feedback&quot; (informatie over de Beta, inclusief maar niet beperkt tot problemen of defecten die u tegenkomt bij het gebruik van de Beta, suggesties, verbeteringen en aanbevelingen) die u aan de Adobe verstrekt, wordt toegewezen aan de Adobe, inclusief alle rechten, titel en interesse in en voor dergelijke feedback.
+Alle &quot;Feedback&quot; (informatie over de Beta, inclusief maar niet beperkt tot problemen of defecten die u tegenkomt bij het gebruik van de Beta, suggesties, verbeteringen en aanbevelingen) die u aan Adobe verstrekt, worden hierbij aan Adobe toegewezen, inclusief alle rechten, titel en interesse in en voor dergelijke feedback.
 
 Verzend Open Feedback of maak een Support Ticket om uw suggesties te delen of een bug te melden en een functieverbetering te zoeken.
