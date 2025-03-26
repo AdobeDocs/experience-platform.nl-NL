@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Dataflows voor Doelen in UI controleren
 type: Tutorial
 exl-id: 8eb7bb3c-f2dc-4dbc-9cf5-3d5d3224f5f1
-source-git-commit: b814becaed88ce23527dc58f7ec056c05a48379f
+source-git-commit: 7f3560eaccecc8f42bbfa7d27b82ad71397df035
 workflow-type: tm+mt
-source-wordcount: '3468'
-ht-degree: 1%
+source-wordcount: '3451'
+ht-degree: 0%
 
 ---
 
@@ -97,12 +97,12 @@ Elke individuele dataflow run toont de volgende details:
 
   >[!IMPORTANT]
   >
-  > Vanaf oktober 2024 brengt Adobe een update uit om de rapportagenauwkeurigheid voor streamingbestemmingen te verbeteren. Deze verbetering zorgt voor een betere afstemming tussen de Experience Platform en de doelplatforms die rapporteren.
+  > Vanaf maart 2025 implementeert Adobe een update om de rapportnauwkeurigheid voor streamingdoelen te verbeteren. Deze verbetering zorgt voor een betere afstemming tussen de rapportage in Experience Platform en de doelplatforms.
   >
   > Vóór deze update heeft **[!UICONTROL Identities failed]** alle activeringspogingen opgenomen. Na deze update wordt alleen de laatste activeringspoging opgenomen in het totale aantal.
   > 
-  > Deze verhoging is momenteel van toepassing op de [ Klant van Google de bestemming ](../../destinations/catalog/advertising/google-customer-match.md) maar zal geleidelijk aan andere het stromen bestemmingen van Experience Platform worden uitgevoerd.
-  > Na deze verbetering kunnen de gebruikers van de [Google Customer Match-bestemming](../../destinations/catalog/advertising/google-customer-match.md) een verwachte daling in hun totale aantal **[!UICONTROL Identities failed]** zien.
+  > Deze verbetering is van toepassing op alle streamingdoelen.
+  > Na deze verbetering, kunnen de gebruikers van het stromen bestemmingen een verwachte daling in hun **[!UICONTROL Identities failed]** aantal zien.
 
 
 - **[!UICONTROL Activation rate]**: Het percentage ontvangen identiteiten dat is geactiveerd. De volgende formule laat zien hoe deze waarde wordt berekend:
