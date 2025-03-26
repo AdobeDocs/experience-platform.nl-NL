@@ -2,9 +2,9 @@
 title: Overzicht van publiek portal
 description: Leer hoe u het publiek in Adobe Experience Platform kunt bekijken, beheren en een publiek kunt maken.
 exl-id: 505ac22e-05f3-423a-a9a0-7f3470af8945
-source-git-commit: a0543777e9a72f3a9ed6ff19e8b11973eb647b6b
+source-git-commit: 9eb5ccc24db58a887473f61c66a83aa92e16efa7
 workflow-type: tm+mt
-source-wordcount: '4348'
+source-wordcount: '4106'
 ht-degree: 0%
 
 ---
@@ -220,33 +220,9 @@ Wanneer u acties in grote hoeveelheden toepast op soorten publiek, gelden de vol
 - U **kunt niet** een publiek schrappen dat in een bestemmingsactivering wordt gebruikt.
 - Als u een filter selecteert, zal het geselecteerde publiek **** terugstellen.
 
-#### [!BADGE  Beperkte beschikbaarheid ] {type=Informatieve} Flexibele publieksevaluatie {#flexible-audience-evaluation}
+#### Flexibele publieksevaluatie {#flexible-audience-evaluation}
 
-Dankzij de flexibele publieksevaluatie kunt u een segmentatietaak uitvoeren wanneer u dat wilt. Kies het publiek dat u wilt evalueren en selecteer **[!UICONTROL Evaluate audiences]** .
-
->[!IMPORTANT]
->
-Bij het selecteren van doelgroepen voor een flexibele publieksevaluatie gelden de volgende voorwaarden:
->
-- U kunt flexibele publieksevaluatie **tweemaal** per dag slechts gebruiken. Deze limiet wordt opnieuw ingesteld op middernacht (UTC).
-- U hebt a **maximum** van 50 flexibele de looppas van de publieksevaluatie per jaar.
-- Al publiek **moet** een oorsprong van de &quot;Dienst van de Segmentatie&quot;hebben.
-- Al publiek **moet** worden geëvalueerd gebruikend partijsegmentatie.
-- Al publiek **moet** op mensen-gebaseerd publiek zijn.
-- Het publiek kan **slechts** aan bestemmingen in Platform worden geactiveerd.
-- U kunt maximaal 20 soorten publiek selecteren.
-
-![ het publiek dat u flexibele publieksevaluatie wilt gebruiken wordt geselecteerd.](../images/ui/audience-portal/evaluate-audiences.png)
-
-Het pop-upmenu **[!UICONTROL Evaluate audiences on demand]** wordt weergegeven met de lijst met soorten publiek die worden geëvalueerd met de segmenttaak op aanvraag. Als een publiek niet in aanmerking komt om op verzoek te worden beoordeeld, zal het automatisch uit de evaluatietaak worden verwijderd. Bevestig dat het vermelde publiek het publiek is dat u wilt evalueren.
-
-![ het publiek dat kan worden geëvalueerd gebruikend de flexibele publieksevaluatie wordt getoond.](../images/ui/audience-portal/evaluate-audiences-modal.png)
-
-Nadat u hebt bevestigd dat het juiste publiek wordt vermeld, kunt u doorgaan met het verzoek en begint de flexibele publieksevaluatie. U kunt het statuut van deze publieksevaluatie in de [ controle van de evaluatietaak ](../../dataflows/ui/monitor-audiences.md#evaluation-job-details) bekijken.
-
->[!NOTE]
->
-Als u een flexibele publieksevaluatie uitvoert, moet u ervoor zorgen dat de frequentie is ingesteld op **[!UICONTROL After segment evaluation]** . Het in werking stellen van flexibele publieksevaluatie op publiek die reeds om [ na segmentevaluatie ](../../destinations/ui/activate-batch-profile-destinations.md#export-full-files) worden geactiveerd, zal publiek activeren zodra de flexibele baan van de publieksevaluatie, ongeacht om het even welke vorige dagelijkse activeringstaken beëindigt.
+Dankzij de flexibele publieksevaluatie kunt u een segmentatietaak uitvoeren wanneer u dat wilt. Meer over flexibele publieksevaluatie leren, lees de [ flexibele gids van de publieksevaluatie ](../methods/flexible-audience-evaluation.md).
 
 ## Details publiek {#audience-details}
 
@@ -302,7 +278,7 @@ Voor publiek en composities die via een platform worden gegenereerd, wordt in de
 
 >[!NOTE]
 >
-Het kan tot 30 minuten duren voordat het totale aantal gebruikers is bijgewerkt nadat de exporttaak is voltooid.
+>Het kan tot 30 minuten duren voordat het totale aantal gebruikers is bijgewerkt nadat de exporttaak is voltooid.
 
 Schattingen worden gegenereerd door gebruik te maken van een steekproefgrootte van de samplegegevens van die dag. Als uw profielarchief minder dan 1 miljoen entiteiten bevat, wordt de volledige gegevensset gebruikt; voor 1 tot 20 miljoen entiteiten worden 1 miljoen entiteiten gebruikt; en voor meer dan 20 miljoen entiteiten wordt 5% van de totale entiteiten gebruikt. Meer informatie over het produceren van ramingen kan in de [ sectie van de schatingengeneratie ](../tutorials/create-a-segment.md#estimate-and-preview-an-audience) van het leerprogramma van de publieksverwezenlijking worden gevonden.
 
@@ -312,7 +288,7 @@ Voor soorten publiek met de oorsprong **[!UICONTROL Custom upload]** geeft de se
 
 >[!NOTE]
 >
-Het kan tot 30 minuten na de exporttaak duren voordat het aantal profielen van het publiek volledig is bijgewerkt.
+>Het kan tot 30 minuten na de exporttaak duren voordat het aantal profielen van het publiek volledig is bijgewerkt.
 
 ![ de sectie van de ingangsdetails voor de pagina van publieksdetails wordt getoond.](../images/ui/audience-portal/audience-details-ingestion-details.png)
 
@@ -330,7 +306,7 @@ Het kan tot 30 minuten na de exporttaak duren voordat het aantal profielen van h
 
 >[!NOTE]
 >
-Het toepassen van labels voor gegevensgebruik op het schema is de beste manier. U **kunt niet** een etiket van het gegevensgebruik rechtstreeks op het publiek toepassen.
+>Het toepassen van labels voor gegevensgebruik op het schema is de beste manier. U **kunt niet** een etiket van het gegevensgebruik rechtstreeks op het publiek toepassen.
 
 ### Geactiveerde doelen {#activated-destinations}
 
@@ -338,7 +314,7 @@ In de sectie **[!UICONTROL Activated destinations]** ziet u de doelen waarvoor d
 
 >[!NOTE]
 >
-Doelen zijn een functie die beschikbaar is in [!DNL Adobe Real-Time Customer Data Platform] en waarmee u gegevens kunt exporteren naar externe platforms. Voor meer informatie over bestemmingen, te lezen gelieve het [ overzicht van bestemmingen ](../../destinations/home.md). Leren hoe te om een segment aan een bestemming te activeren, zie [ activeringsoverzicht ](../../destinations/ui/activation-overview.md).
+> Doelen zijn een functie die beschikbaar is in [!DNL Adobe Real-Time Customer Data Platform] en waarmee u gegevens kunt exporteren naar externe platforms. Voor meer informatie over bestemmingen, te lezen gelieve het [ overzicht van bestemmingen ](../../destinations/home.md). Leren hoe te om een segment aan een bestemming te activeren, zie [ activeringsoverzicht ](../../destinations/ui/activation-overview.md).
 
 ### Profielvoorbeelden {#profile-samples}
 
@@ -364,10 +340,10 @@ Meer gedetailleerde informatie over elke [!DNL Profile] kunt u zien door de [!DN
 
 ## Geplande segmentatie {#scheduled-segmentation}
 
-[!CONTEXTUALHELP]
-id="platform_segments_browse_addallsegmentstoschedule"
-title="Alle soorten publiek aan planning toevoegen"
-abstract="Schakel deze optie in om alle beoordeelde soorten publiek op te nemen met behulp van batchsegmentatie in de geplande dagelijkse update. Uitschakelen om alle soorten publiek uit de geplande update te verwijderen."
+>[!CONTEXTUALHELP]
+>id="platform_segments_browse_addallsegmentstoschedule"
+>title="Alle soorten publiek aan planning toevoegen"
+>abstract="Schakel deze optie in om alle beoordeelde soorten publiek op te nemen met behulp van batchsegmentatie in de geplande dagelijkse update. Uitschakelen om alle soorten publiek uit de geplande update te verwijderen."
 
 Zodra het publiek is gecreeerd, kunt u hen dan evalueren door op bestelling of geplande (ononderbroken) evaluatie. Evaluatie houdt in dat [!DNL Real-Time Customer Profile] -gegevens worden verplaatst door segmenttaken om het overeenkomstige publiek te produceren. Nadat het publiek is gemaakt, wordt het opgeslagen en opgeslagen zodat het kan worden geëxporteerd met API&#39;s van het type [!DNL Experience Platform] .
 
@@ -379,7 +355,7 @@ Het toelaten van uw publiek voor geplande evaluatie kan worden gedaan gebruikend
 
 >[!NOTE]
 >
-Een geplande evaluatie kan worden ingeschakeld voor sandboxen met maximaal vijf (5) samenvoegbeleidsregels voor [!DNL XDM Individual Profile] . Als uw organisatie meer dan vijf samenvoegbeleidsregels voor [!DNL XDM Individual Profile] heeft binnen één sandbox-omgeving, kunt u geen geplande evaluatie gebruiken.
+>Een geplande evaluatie kan worden ingeschakeld voor sandboxen met maximaal vijf (5) samenvoegbeleidsregels voor [!DNL XDM Individual Profile] . Als uw organisatie meer dan vijf samenvoegbeleidsregels voor [!DNL XDM Individual Profile] heeft binnen één sandbox-omgeving, kunt u geen geplande evaluatie gebruiken.
 
 Planningen kunnen momenteel alleen worden gemaakt met de API. Voor gedetailleerde stappen bij het creëren van, het uitgeven van, en het werken met programma&#39;s die API gebruiken, te volgen gelieve het leerprogramma voor het evalueren van en de toegang tot van segmenteringsresultaten, specifiek de sectie op [ geplande evaluatie gebruikend API ](../tutorials/evaluate-a-segment.md#scheduled-evaluation).
 
@@ -393,7 +369,7 @@ U kunt **[!UICONTROL Create audience]** selecteren om een publiek te maken.
 
 Er wordt een pop-up weergegeven, zodat u kunt kiezen tussen het samenstellen van een publiek of het samenstellen van regels.
 
-![ popover die de twee types toont of publiek dat u kunt maken.](../images/ui/audience-portal/create-audience-type.png)
+![ popover A die de twee soorten publiek toont u kunt tot stand brengen.](../images/ui/audience-portal/create-audience-type.png)
 
 ### Samenstelling publiek {#audience-composition}
 
@@ -417,7 +393,7 @@ Naast publiekssamenstellingen en segmentdefinities kunt u Adobe Federated Audien
 
 >[!IMPORTANT]
 >
-Om een extern geproduceerd publiek in te voeren, moet u **** de volgende toestemmingen hebben: [!UICONTROL View segments], [!UICONTROL Manage segments], en [!UICONTROL Import audience]. Voor meer informatie over deze toestemming, lees het [ overzicht van de toegangscontrole ](../../access-control/home.md#permissions).
+>Om een extern geproduceerd publiek in te voeren, moet u **** de volgende toestemmingen hebben: [!UICONTROL View segments], [!UICONTROL Manage segments], en [!UICONTROL Import audience]. Voor meer informatie over deze toestemming, lees het [ overzicht van de toegangscontrole ](../../access-control/home.md#permissions).
 
 U kunt **[!UICONTROL Import audience]** selecteren om een extern gegenereerd publiek te importeren.
 
@@ -429,11 +405,11 @@ De **[!UICONTROL Import audience CSV]** -workflow wordt weergegeven. U kunt een 
 
 >[!NOTE]
 >
-Het externe geproduceerde publiek **moet** in formaat CSV zijn, a **maximum** van 25 kolommen hebben, en zijn minder dan 1GB.
+>Het externe geproduceerde publiek **moet** in formaat CSV zijn, a **maximum** van 25 kolommen hebben, en zijn minder dan 1GB.
 >
-Bovendien, kunt u **niet** ruimten of streepjes in de eerste rij of de bijbehorende kolommen van CSV gebruiken.
+>Bovendien, kunt u **niet** ruimten of streepjes in de eerste rij of de bijbehorende kolommen van CSV gebruiken.
 >
-De waarde van de eerste rij kan bijvoorbeeld &quot;FirstName&quot; of &quot;First_Name&quot; zijn, maar dit kan niet &quot;First Name&quot; of &quot;First-Name&quot; zijn.
+>De waarde van de eerste rij kan bijvoorbeeld &quot;FirstName&quot; of &quot;First_Name&quot; zijn, maar dit kan niet &quot;First Name&quot; of &quot;First-Name&quot; zijn.
 
 Nadat u het CSV-bestand hebt geselecteerd dat u wilt importeren, wordt een lijst met voorbeeldgegevens weergegeven voor dit extern gegenereerde publiek. Selecteer **[!UICONTROL Next]** nadat u hebt bevestigd dat de voorbeeldgegevens juist zijn.
 
@@ -449,10 +425,10 @@ U kunt ook desgewenst extra details toevoegen aan uw extern gegenereerde publiek
 
 >[!NOTE]
 >
-Als u een aangepaste externe publieks-id gebruikt, moet deze aan de volgende richtlijnen voldoen:
+>Als u een aangepaste externe publieks-id gebruikt, moet deze aan de volgende richtlijnen voldoen:
 >
-- Het **moet** met een brief (a-z of a-z), onderstrepingsteken (_), of een dollarteken ($) beginnen.
-- Alle volgende tekens kunnen alfanumeriek zijn (a-z, A-Z, 0-9), onderstrepingstekens (_) of dollartekens ($).
+> - Het **moet** met een brief (a-z of a-z), onderstrepingsteken (_), of een dollarteken ($) beginnen.
+> - Alle volgende tekens kunnen alfanumeriek zijn (a-z, A-Z, 0-9), onderstrepingstekens (_) of dollartekens ($).
 
 Selecteer **[!UICONTROL Next]** nadat u de publieksdetails hebt ingevuld.
 
@@ -466,11 +442,11 @@ Nadat u hebt bevestigd dat de gegevens juist zijn, selecteert u **[!UICONTROL Fi
 
 >[!IMPORTANT]
 >
-Extern gegenereerde doelgroepen hebben standaard een gegevensvervaldatum van 30 dagen. De gegevensvervaldatum wordt opnieuw ingesteld als het publiek op om het even welke manier wordt bijgewerkt of gewijzigd.
+>Extern gegenereerde doelgroepen hebben standaard een gegevensvervaldatum van 30 dagen. De gegevensvervaldatum wordt opnieuw ingesteld als het publiek op om het even welke manier wordt bijgewerkt of gewijzigd.
 >
-Bovendien, als uw extern geproduceerd publiek gevoelige en/of op gezondheidszorg betrekking hebbende informatie bevat, moet u **** de noodzakelijke etiketten van het gegevensgebruik toepassen alvorens het aan om het even welke bestemming te activeren. Aangezien de variabelen van extern geproduceerd publiek in het gegevensmeer eerder dan binnen het Profiel van de Klant in real time worden opgeslagen, zou u **niet** toestemmingsgegevens binnen uw Csv- dossier moeten omvatten.
+>Bovendien, als uw extern geproduceerd publiek gevoelige en/of op gezondheidszorg betrekking hebbende informatie bevat, moet u **** de noodzakelijke etiketten van het gegevensgebruik toepassen alvorens het aan om het even welke bestemming te activeren. Aangezien de variabelen van extern geproduceerd publiek in het gegevensmeer eerder dan binnen het Profiel van de Klant in real time worden opgeslagen, zou u **niet** toestemmingsgegevens binnen uw Csv- dossier moeten omvatten.
 >
-Voor meer informatie bij het toepassen van de etiketten van het gegevensgebruik, te lezen gelieve de documentatie over [ het leiden etiketten ](../../access-control/abac/ui/labels.md). Om over de etiketten van het gegevensgebruik op Platform in het algemeen te leren, te lezen gelieve het [ overzicht van de etiketten van het gegevensgebruik ](../../data-governance/labels/overview.md). Om over te leren hoe de toestemming in extern geproduceerd publiek werkt, te lezen gelieve [ FAQ van het publiek ](../faq.md#consent).
+>Voor meer informatie bij het toepassen van de etiketten van het gegevensgebruik, te lezen gelieve de documentatie over [ het leiden etiketten ](../../access-control/abac/ui/labels.md). Om over de etiketten van het gegevensgebruik op Platform in het algemeen te leren, te lezen gelieve het [ overzicht van de etiketten van het gegevensgebruik ](../../data-governance/labels/overview.md). Om over te leren hoe de toestemming in extern geproduceerd publiek werkt, te lezen gelieve [ FAQ van het publiek ](../faq.md#consent).
 
 ## Volgende stappen
 

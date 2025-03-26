@@ -2,11 +2,9 @@
 title: Flexibele gids voor de evaluatie van het publiek
 description: Leer hoe te om flexibele publieksevaluatie te gebruiken om partijsegmentatietaken op bestelling in werking te stellen.
 role: Developer, User
-hide: true
-hidefromtoc: true
-source-git-commit: a0543777e9a72f3a9ed6ff19e8b11973eb647b6b
+source-git-commit: 5c86161a2f9442d99426f2c05fb762cf50004049
 workflow-type: tm+mt
-source-wordcount: '877'
+source-wordcount: '980'
 ht-degree: 0%
 
 ---
@@ -32,6 +30,10 @@ Houd rekening met de volgende voorwaarden wanneer u een flexibele publieksevalua
 - Al publiek **moet** worden geëvalueerd gebruikend partijsegmentatie.
 - Al publiek **moet** op mensen-gebaseerd publiek zijn.
 - U kunt maximaal 20 soorten publiek selecteren per flexibele uitvoering van de publieksevaluatie.
+
+>[!NOTE]
+>
+>U *kunt* extra flexibele de looppas van de publieksevaluatie kopen per jaar. Neem voor meer informatie contact op met de klantenservice van Adobe.
 
 ## Toegang {#access}
 
@@ -308,11 +310,17 @@ Nadat u hebt bevestigd dat het juiste publiek wordt vermeld, kunt u doorgaan met
 
 >[!NOTE]
 >
->Als u een flexibele publieksevaluatie uitvoert, moet u ervoor zorgen dat de frequentie is ingesteld op **[!UICONTROL After segment evaluation]** . Het in werking stellen van flexibele publieksevaluatie op publiek die reeds om [ na segmentevaluatie ](../../destinations/ui/activate-batch-profile-destinations.md#export-full-files) worden geactiveerd, zal publiek activeren zodra de flexibele baan van de publieksevaluatie, ongeacht om het even welke vorige dagelijkse activeringstaken beëindigt.
+>De status van de segmenttaak kan worden gerapporteerd als in de status &quot;In wachtrij&quot; in het dashboard voor bewaking. U kunt de meest bijgewerkte status van de segmentbaan bekijken door een GET- verzoek aan het `/segment/jobs` eindpunt te doen, die identiteitskaart van de segmentbaan in de verzoekweg verstrekken. Meer informatie over het gebruik van dit eindpunt vindt u op het tabblad API.
+>
+>Als u een flexibele publieksevaluatie uitvoert en de evaluatie het publiek naar een bestemming wilt activeren, moet u ervoor zorgen dat de frequentie is ingesteld op **[!UICONTROL After segment evaluation]** . Het in werking stellen van flexibele publieksevaluatie op publiek die reeds om [ na segmentevaluatie ](../../destinations/ui/activate-batch-profile-destinations.md#export-full-files) worden geactiveerd, zal publiek activeren zodra de flexibele baan van de publieksevaluatie, ongeacht om het even welke vorige dagelijkse activeringstaken beëindigt.
 
 >[!ENDTABS]
 
-## Volgende stappen {#next-steps}
+## Video {#video}
+
+In de volgende video ziet u hoe u een flexibele publieksevaluatie in Experience Platform kunt openen en gebruiken.
+
+>[!VIDEO](https://video.tv.adobe.com/v/3453640?)
 
 ## Veelgestelde vragen {#faq}
 

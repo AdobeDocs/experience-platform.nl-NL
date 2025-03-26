@@ -4,9 +4,9 @@ title: API-eindpunt segmenttaken
 description: Het eindpunt van segmentbanen in de API van de Dienst van de Segmentatie van Adobe Experience Platform staat u toe om segmentbanen voor uw organisatie programmatically te beheren.
 role: Developer
 exl-id: 105481c2-1c25-4f0e-8fb0-c6577a4616b3
-source-git-commit: f35fb6aae6aceb75391b1b615ca067a72918f4cf
+source-git-commit: 9eb5ccc24db58a887473f61c66a83aa92e16efa7
 workflow-type: tm+mt
-source-wordcount: '1648'
+source-wordcount: '1232'
 ht-degree: 0%
 
 ---
@@ -23,7 +23,7 @@ De eindpunten die in deze handleiding worden gebruikt, maken deel uit van de API
 
 ## Een lijst met segmenttaken ophalen {#retrieve-list}
 
-U kunt een lijst van alle segmentbanen voor uw organisatie terugwinnen door een verzoek van de GET tot het `/segment/jobs` eindpunt te richten.
+U kunt een lijst van alle segmentbanen voor uw organisatie terugwinnen door een GET- verzoek aan het `/segment/jobs` eindpunt te doen.
 
 **API formaat**
 
@@ -64,13 +64,7 @@ curl -X GET https://platform.adobe.io/data/core/ups/segment/jobs?status=SUCCEEDE
 
 **Reactie**
 
-Een succesvolle reactie keert status 200 van HTTP met een lijst van segmentbanen voor de gespecificeerde organisatie als JSON terug. Nochtans, zal de reactie, afhankelijk van het aantal segmentdefinities binnen de segmentbaan verschillen.
-
->[!BEGINTABS]
-
->[!TAB  minder dan of gelijk aan 1500 segmentdefinities in uw segmentbaan ]
-
-Als u minder dan 1500 segmentdefinities hebt die in uw segmentbaan in werking worden gesteld, zal een volledige lijst van alle segmentdefinities binnen de `children.segments` attributen worden getoond.
+Een succesvolle reactie keert status 200 van HTTP met een lijst van segmentbanen voor de gespecificeerde organisatie als JSON terug. Een volledige lijst van alle segmentdefinities zal binnen het `children.segments` attribuut worden getoond.
 
 >[!NOTE]
 >
@@ -178,105 +172,6 @@ Als u minder dan 1500 segmentdefinities hebt die in uw segmentbaan in werking wo
 }
 ```
 
-+++
-
->[!TAB  meer dan 1500 segmentdefinities ]
-
-Als u meer dan 1500 segmentdefinities hebt die in uw segmentbaan in werking worden gesteld, zal het `children.segments` attribuut `*` tonen die, erop wijzen dat alle segmentdefinities worden geëvalueerd.
-
->[!NOTE]
->
->De volgende reactie is afgebroken voor de ruimte en geeft alleen de eerste geretourneerde taak weer.
-
-+++ Een voorbeeldreactie bij het weergeven van een lijst met segmenttaken.
-
-```json
-{
-    "_page": {
-        "totalCount": 14,
-        "pageSize": 14
-    },
-    "children": [
-        {
-            "id": "b31aed3d-b3b1-4613-98c6-7d3846e8d48f",
-            "imsOrgId": "E95186D65A28ABF00A495D82@AdobeOrg",
-            "sandbox": {
-                "sandboxId": "28e74200-e3de-11e9-8f5d-7f27416c5f0d",
-                "sandboxName": "prod",
-                "type": "production",
-                "default": true
-            },
-            "profileInstanceId": "ups",
-            "source": "scheduler",
-            "status": "SUCCEEDED",
-            "batchId": "678f53bc-e21d-4c47-a7ec-5ad0064f8e4c",
-            "computeJobId": 8811,
-            "computeGatewayJobId": "9ea97b25-a0f5-410e-ae87-b2d85e58f399",
-            "segments": [
-                {
-                    "segmentId": "*",
-                }
-            ],
-            "metrics": {
-                "totalTime": {
-                    "startTimeInMs": 1573203617195,
-                    "endTimeInMs": 1573204395655,
-                    "totalTimeInMs": 778460
-                },
-                "profileSegmentationTime": {
-                    "startTimeInMs": 1573204266727,
-                    "endTimeInMs": 1573204395655,
-                    "totalTimeInMs": 128928
-                },
-                "totalProfiles": 13146432,
-                "segmentedProfileCounter":{
-                    "94509dba-7387-452f-addc-5d8d979f6ae8":1033
-                },
-                "segmentedProfileByNamespaceCounter":{
-                    "94509dba-7387-452f-addc-5d8d979f6ae8":{
-                        "tenantiduserobjid":1033,
-                        "campaign_profile_mscom_mkt_prod2":1033
-                    }
-                },
-                "segmentedProfileByStatusCounter":{
-                    "94509dba-7387-452f-addc-5d8d979f6ae8":{
-                        "exited":144646,
-                        "realized":2056
-                    }
-                },
-                "totalProfilesByMergePolicy":{
-                    "25c548a0-ca7f-4dcd-81d5-997642f178b9":13146432
-                }
-            },
-            "requestId": "4e538382-dbd8-449e-988a-4ac639ebe72b-1573203600264",
-            "schema": {
-                "name": "_xdm.context.profile"
-            },
-            "properties": {
-                "scheduleId": "4e538382-dbd8-449e-988a-4ac639ebe72b",
-                "runId": "e6c1308d-0d4b-4246-b2eb-43697b50a149"
-            },
-            "_links": {
-                "cancel": {
-                    "href": "/segment/jobs/b31aed3d-b3b1-4613-98c6-7d3846e8d48f",
-                    "method": "DELETE"
-                },
-                "checkStatus": {
-                    "href": "/segment/jobs/b31aed3d-b3b1-4613-98c6-7d3846e8d48f",
-                    "method": "GET"
-                }
-            },
-            "updateTime": 1573204395000,
-            "creationTime": 1573203600535,
-            "updateEpoch": 1573204395
-        }
-    ],
-    "_links": {
-        "next": {}
-    }
-}
-```
-
 | Eigenschap | Beschrijving |
 | -------- | ----------- |
 | `id` | Een door het systeem gegenereerde alleen-lezen-id voor de segmenttaak. |
@@ -294,23 +189,15 @@ Als u meer dan 1500 segmentdefinities hebt die in uw segmentbaan in werking word
 
 +++
 
->[!ENDTABS]
-
 ## Een nieuwe segmenttaak maken {#create}
 
-U kunt een nieuwe segmentbaan tot stand brengen door een verzoek van de POST aan het `/segment/jobs` eindpunt te doen en in het lichaam identiteitskaart van de segmentdefinitie te omvatten waarvan u een nieuw publiek zou willen tot stand brengen.
+U kunt een nieuwe segmentbaan tot stand brengen door een POST- verzoek aan het `/segment/jobs` eindpunt en met inbegrip van IDs van de segmentdefinitie in het verzoeklichaam te doen.
 
 **API formaat**
 
 ```http
 POST /segment/jobs
 ```
-
-Wanneer het creëren van een nieuwe segmentbaan, zullen het verzoek en de reactie afhankelijk van het aantal segmentdefinities binnen de segmentbaan verschillen.
-
->[!BEGINTABS]
-
->[!TAB  minder dan of gelijk aan 1500 segmenten in uw segmentbaan ]
 
 **Verzoek**
 
@@ -335,7 +222,7 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/jobs \
 
 | Eigenschap | Beschrijving |
 | -------- | ----------- |
-| `segmentId` | De id van de segmentdefinitie waarvoor u een segmenttaak wilt maken. Deze segmentdefinities kunnen tot verschillende samenvoegbeleidsregels behoren. Meer informatie over segmentdefinities kan in de [ gids van het eindpunt van de segmentdefinitie ](./segment-definitions.md) worden gevonden. |
+| `segmentId` | De id van de segmentdefinitie die u wilt evalueren. Deze segmentdefinities kunnen tot verschillende samenvoegbeleidsregels behoren. Meer informatie over segmentdefinities kan in de [ gids van het eindpunt van de segmentdefinitie ](./segment-definitions.md) worden gevonden. |
 
 +++
 
@@ -460,139 +347,9 @@ Een succesvolle reactie keert status 200 van HTTP met informatie over uw pas gec
 
 +++
 
->[!TAB  meer dan 1500 segmentdefinitie in uw segmentbaan ]
-
-**Verzoek**
-
->[!NOTE]
->
->Terwijl u een segmentbaan met meer dan 1500 segmentdefinities kunt tot stand brengen, wordt dit **hoogst geadviseerd niet**.
-
-+++ Een voorbeeldverzoek om een segmenttaak te maken.
-
-```shell
-curl -X POST https://platform.adobe.io/data/core/ups/segment/jobs \
- -H 'Authorization: Bearer {ACCESS_TOKEN}' \
- -H 'Content-Type: application/json' \
- -H 'x-gw-ims-org-id: {ORG_ID}' \
- -H 'x-api-key: {API_KEY}' \
- -H 'x-sandbox-name: {SANDBOX_NAME}' \
- -d '{
-    "schema": {
-        "name": "_xdm.context.profile"
-    },
-    "segments": [
-        {
-            "segmentId": "*"
-        }
-    ]
- }'
-```
-
-| Eigenschap | Beschrijving |
-| -------- | ----------- |
-| `schema.name` | De naam van het schema voor de segmentdefinities. |
-| `segments.segmentId` | Wanneer u een segmenttaak uitvoert met meer dan 1500 segmenten, moet u `*` als segment-id doorgeven om aan te geven dat u een segmentatietaak wilt uitvoeren met alle segmenten. |
-
-+++
-
-**Reactie**
-
-Een succesvolle reactie keert status 200 van HTTP met details van uw pas gecreëerde segmentbaan terug.
-
-+++ Een voorbeeldreactie bij het maken van een segmenttaak.
-
-```json
-{
-    "id": "b31aed3d-b3b1-4613-98c6-7d3846e8d48f",
-    "imsOrgId": "E95186D65A28ABF00A495D82@AdobeOrg",
-    "sandbox": {
-        "sandboxId": "28e74200-e3de-11e9-8f5d-7f27416c5f0d",
-        "sandboxName": "prod",
-        "type": "production",
-        "default": true
-    },
-    "profileInstanceId": "ups",
-    "source": "scheduler",
-    "status": "PROCESSING",
-    "batchId": "678f53bc-e21d-4c47-a7ec-5ad0064f8e4c",
-    "computeJobId": 8811,
-    "computeGatewayJobId": "9ea97b25-a0f5-410e-ae87-b2d85e58f399",
-    "segments": [
-        {
-            "segmentId": "*"
-        }
-    ],
-    "metrics": {
-        "totalTime": {
-            "startTimeInMs": 1573203617195,
-            "endTimeInMs": 1573204395655,
-            "totalTimeInMs": 778460
-        },
-        "profileSegmentationTime": {
-            "startTimeInMs": 1573204266727,
-            "endTimeInMs": 1573204395655,
-            "totalTimeInMs": 128928
-        },
-        "segmentedProfileCounter":{
-            "7863c010-e092-41c8-ae5e-9e533186752e":1033
-        },
-        "segmentedProfileByNamespaceCounter":{
-            "7863c010-e092-41c8-ae5e-9e533186752e":{
-                "tenantiduserobjid":1033,
-                "campaign_profile_mscom_mkt_prod2":1033
-            }
-        },
-        "segmentedProfileByStatusCounter":{
-            "7863c010-e092-41c8-ae5e-9e533186752e":{
-                "exited":144646,
-                "realized":2056
-            }
-        },
-        "totalProfiles":13146432,
-        "totalProfilesByMergePolicy":{
-            "25c548a0-ca7f-4dcd-81d5-997642f178b9":13146432
-        }
-    },
-    "requestId": "4e538382-dbd8-449e-988a-4ac639ebe72b-1573203600264",
-    "schema": {
-        "name": "_xdm.context.profile"
-    },
-    "properties": {
-        "scheduleId": "4e538382-dbd8-449e-988a-4ac639ebe72b",
-        "runId": "e6c1308d-0d4b-4246-b2eb-43697b50a149"
-    },
-    "_links": {
-        "cancel": {
-            "href": "/segment/jobs/b31aed3d-b3b1-4613-98c6-7d3846e8d48f",
-            "method": "DELETE"
-        },
-        "checkStatus": {
-            "href": "/segment/jobs/b31aed3d-b3b1-4613-98c6-7d3846e8d48f",
-            "method": "GET"
-        }
-    },
-    "updateTime": 1573204395000,
-    "creationTime": 1573203600535,
-    "updateEpoch": 1573204395
-}
-```
-
-| Eigenschap | Beschrijving |
-| -------- | ----------- |
-| `id` | Een door het systeem gegenereerde alleen-lezen-id voor de nieuwe segmenttaak. |
-| `status` | De huidige status voor de segmenttaak. Aangezien de segmenttaak pas is gemaakt, is de status altijd `NEW` . |
-| `segments` | Een object dat informatie bevat over de segmentdefinities waarop deze segmenttaak wordt uitgevoerd. |
-| `segments.segment.id` | `*` betekent dat deze segmentbaan voor alle segmentdefinities binnen uw organisatie loopt. |
-
-+++
-
->[!ENDTABS]
-
-
 ## Een specifieke segmenttaak ophalen {#get}
 
-U kunt gedetailleerde informatie over een specifieke segmentbaan terugwinnen door een verzoek van de GET aan het `/segment/jobs` eindpunt te doen en identiteitskaart van de segmentbaan te verstrekken u in de verzoekweg wenst terug te winnen.
+U kunt gedetailleerde informatie over een specifieke segmentbaan terugwinnen door een GET- verzoek aan het `/segment/jobs` eindpunt te doen en identiteitskaart van de segmentbaan te verstrekken u in de verzoekweg wenst terug te winnen.
 
 **API formaat**
 
@@ -620,13 +377,7 @@ curl -X GET https://platform.adobe.io/data/core/ups/segment/jobs/d3b4a50d-dfea-4
 
 **Reactie**
 
-Een succesvolle reactie keert status 200 van HTTP met gedetailleerde informatie over de gespecificeerde segmentbaan terug.  Nochtans, zal de reactie afhankelijk van het aantal segmentdefinities binnen de segmentbaan verschillen.
-
->[!BEGINTABS]
-
->[!TAB  minder dan of gelijk aan 1500 segmentdefinities in uw segmentbaan ]
-
-Als u minder dan 1500 segmentdefinities hebt die in uw segmentbaan in werking worden gesteld, zal een volledige lijst van alle segmentdefinities binnen de `children.segments` attributen worden getoond.
+Een succesvolle reactie keert status 200 van HTTP met gedetailleerde informatie over de gespecificeerde segmentbaan terug. Een volledige lijst van alle segmentdefinities zal binnen het `children.segments` attribuut worden getoond.
 
 +++ Een voorbeeldreactie voor het ophalen van een segmenttaak.
 
@@ -690,90 +441,6 @@ Als u minder dan 1500 segmentdefinities hebt die in uw segmentbaan in werking wo
 }
 ```
 
-+++
-
->[!TAB  meer dan 1500 segmentdefinities ]
-
-Als u meer dan 1500 segmentdefinities hebt die in uw segmentbaan in werking worden gesteld, zal het `children.segments` attribuut `*` tonen die, erop wijzen dat alle segmentdefinities worden geëvalueerd.
-
-+++ Een voorbeeldreactie voor het ophalen van een segmenttaak.
-
-```json
-{
-    "id": "b31aed3d-b3b1-4613-98c6-7d3846e8d48f",
-    "imsOrgId": "E95186D65A28ABF00A495D82@AdobeOrg",
-    "sandbox": {
-        "sandboxId": "28e74200-e3de-11e9-8f5d-7f27416c5f0d",
-        "sandboxName": "prod",
-        "type": "production",
-        "default": true
-    },
-    "profileInstanceId": "ups",
-    "source": "scheduler",
-    "status": "SUCCEEDED",
-    "batchId": "678f53bc-e21d-4c47-a7ec-5ad0064f8e4c",
-    "computeJobId": 8811,
-    "computeGatewayJobId": "9ea97b25-a0f5-410e-ae87-b2d85e58f399",
-    "segments": [
-        {
-            "segmentId": "*"
-        }
-    ],
-    "metrics": {
-        "totalTime": {
-            "startTimeInMs": 1573203617195,
-            "endTimeInMs": 1573204395655,
-            "totalTimeInMs": 778460
-        },
-        "profileSegmentationTime": {
-            "startTimeInMs": 1573204266727,
-            "endTimeInMs": 1573204395655,
-            "totalTimeInMs": 128928
-        },
-        "segmentedProfileCounter":{
-            "7863c010-e092-41c8-ae5e-9e533186752e":1033
-        },
-        "segmentedProfileByNamespaceCounter":{
-            "7863c010-e092-41c8-ae5e-9e533186752e":{
-                "tenantiduserobjid":1033,
-                "campaign_profile_mscom_mkt_prod2":1033
-            }
-        },
-        "segmentedProfileByStatusCounter":{
-            "7863c010-e092-41c8-ae5e-9e533186752e":{
-                "exited":144646,
-                "realized":2056
-            }
-        },
-        "totalProfiles":13146432,
-        "totalProfilesByMergePolicy":{
-            "25c548a0-ca7f-4dcd-81d5-997642f178b9":13146432
-        }
-    },
-    "requestId": "4e538382-dbd8-449e-988a-4ac639ebe72b-1573203600264",
-    "schema": {
-        "name": "_xdm.context.profile"
-    },
-    "properties": {
-        "scheduleId": "4e538382-dbd8-449e-988a-4ac639ebe72b",
-        "runId": "e6c1308d-0d4b-4246-b2eb-43697b50a149"
-    },
-    "_links": {
-        "cancel": {
-            "href": "/segment/jobs/b31aed3d-b3b1-4613-98c6-7d3846e8d48f",
-            "method": "DELETE"
-        },
-        "checkStatus": {
-            "href": "/segment/jobs/b31aed3d-b3b1-4613-98c6-7d3846e8d48f",
-            "method": "GET"
-        }
-    },
-    "updateTime": 1573204395000,
-    "creationTime": 1573203600535,
-    "updateEpoch": 1573204395
-}
-```
-
 | Eigenschap | Beschrijving |
 | -------- | ----------- |
 | `id` | Een door het systeem gegenereerde alleen-lezen-id voor de segmenttaak. |
@@ -789,7 +456,7 @@ Als u meer dan 1500 segmentdefinities hebt die in uw segmentbaan in werking word
 
 ## Ophaalsegmenttaken bulksgewijs opvragen {#bulk-get}
 
-U kunt gedetailleerde informatie over veelvoudige segmentbanen terugwinnen door een verzoek van de POST aan het `/segment/jobs/bulk-get` eindpunt te doen en de `id` waarden van de segmentbanen in het verzoeklichaam te verstrekken.
+U kunt gedetailleerde informatie over veelvoudige segmentbanen terugwinnen door een POST- verzoek aan het `/segment/jobs/bulk-get` eindpunt te doen en de `id` waarden van de segmentbanen in het verzoeklichaam te verstrekken.
 
 **API formaat**
 
@@ -824,7 +491,7 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/jobs/bulk-get \
 
 **Reactie**
 
-Een succesvolle reactie keert status 207 van HTTP met de gevraagde segmentbanen terug. De waarde van het kenmerk `children.segments` verschilt echter, afhankelijk van het feit of de segmenttaak wordt uitgevoerd voor meer dan 1500 segmentdefinities.
+Een succesvolle reactie keert status 207 van HTTP met de gevraagde segmentbanen terug.
 
 >[!NOTE]
 >
@@ -867,7 +534,20 @@ Een succesvolle reactie keert status 207 van HTTP met de gevraagde segmentbanen 
             "status": "SUCCEEDED",
             "segments": [
                 {
-                    "segmentId": "*"
+                    "segmentId": "30230300-d78c-48ad-8012-c5563a007069",
+                    "segment": {
+                        "id": "30230300-d78c-48ad-8012-c5563a007069",
+                        "expression": {
+                            "type": "PQL",
+                            "format": "pql/json",
+                            "value": "{PQL_EXPRESSION}"
+                        },
+                        "mergePolicyId": "b83185bb-0bc6-489c-9363-0075eb30b4c8",
+                        "mergePolicy": {
+                            "id": "b83185bb-0bc6-489c-9363-0075eb30b4c8",
+                            "version": 1
+                        }
+                    }
                 }
             ],
             "updateTime": 1573204395000,
@@ -890,7 +570,7 @@ Een succesvolle reactie keert status 207 van HTTP met de gevraagde segmentbanen 
 
 ## Een specifieke segmenttaak annuleren of verwijderen {#delete}
 
-U kunt een specifieke segmentbaan schrappen door een verzoek van DELETE aan het `/segment/jobs` eindpunt te doen en identiteitskaart van de segmentbaan te verstrekken u wenst om in de verzoekweg te schrappen.
+U kunt een specifieke segmentbaan schrappen door een DELETE- verzoek aan het `/segment/jobs` eindpunt te doen en identiteitskaart van de segmentbaan te verstrekken u wenst om in de verzoekweg te schrappen.
 
 >[!NOTE]
 >

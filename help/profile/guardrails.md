@@ -5,9 +5,9 @@ product: experience platform
 type: Documentation
 description: Leer over prestaties en door systemen afgedwongen richtlijnen voor profielgegevens en segmentatie. Zo zorgt u voor optimaal gebruik van de functie Real-Time CDP.
 exl-id: 33ff0db2-6a75-4097-a9c6-c8b7a9d8b78c
-source-git-commit: 5d972b6b4f59ca58ff3c4b76383db9ee7667dba3
+source-git-commit: 31f725fc30b8fd9a045c0aac5ee65832cd995363
 workflow-type: tm+mt
-source-wordcount: '2521'
+source-wordcount: '2609'
 ht-degree: 1%
 
 ---
@@ -127,6 +127,9 @@ De instructies in deze sectie hebben betrekking op het aantal en de aard van de 
 | Accountsoorten per sandbox | 50 | Door het systeem afgedwongen geleiding | U kunt maximaal 50 accountsoorten gebruiken in een sandbox. Wanneer u 50 soorten publiek bereikt in een sandbox, wordt het besturingselement **[!UICONTROL Create audience]** uitgeschakeld wanneer u een nieuw publiek voor een account probeert te maken. Lees meer over [ rekeningspubliek ](/help/segmentation/types/account-audiences.md). |
 | Gepubliceerde composities per sandbox | 10 | Prestatiegerichting | U kunt maximaal 10 gepubliceerde composities in een sandbox hebben. Lees meer over [ publiekssamenstelling in de gids UI ](/help/segmentation/ui/audience-composition.md). |
 | Maximale doelgrootte | 30% | Prestatiegerichting | Het geadviseerde maximum lidmaatschap van een publiek is 30 percent van het totale aantal profielen in het systeem. Het is mogelijk een publiek te maken met meer dan 30% van de profielen als leden of met meerdere grote doelgroepen, maar dit heeft gevolgen voor de systeemprestaties. |
+| Flexibele evaluatietests voor het publiek | 50 per jaar (productie zandbak) <br/> 100 per jaar (ontwikkelingszandbak) | Door het systeem afgedwongen geleiding | U hebt een maximum van 50 flexibele de looppas van de publieksevaluatie per jaar per **productie** zandbak. U hebt een maximum van 100 flexibele de looppas van de publieksevaluatie per jaar per **zandbak van de ontwikkelings**. |
+| Flexibele evaluatietests voor het publiek | 2 per dag | Door het systeem afgedwongen geleiding | U hebt maximaal 2 regels per dag per sandbox. |
+| Soorten publiek per flexibele evaluatieronde voor publiek | 20 | Door het systeem afgedwongen geleiding | U kunt maximaal 20 publiek per flexibele uitvoering van de publieksevaluatie hebben. |
 
 {style="table-layout:auto"}
 

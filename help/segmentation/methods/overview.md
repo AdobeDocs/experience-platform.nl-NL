@@ -1,13 +1,13 @@
 ---
 title: Methoden voor de evaluatie van het publiek
 description: Meer informatie over de verschillende soorten evaluatiemethoden die beschikbaar zijn op Adobe Experience Platform.
-source-git-commit: cffd7bad831f0f58bd2b62585bfd0b84280b1732
+exl-id: 54513369-42fa-4bab-803a-21d6dcd87660
+source-git-commit: 9eb5ccc24db58a887473f61c66a83aa92e16efa7
 workflow-type: tm+mt
-source-wordcount: '215'
+source-wordcount: '241'
 ht-degree: 0%
 
 ---
-
 
 # Methoden voor de evaluatie van het publiek
 
@@ -18,6 +18,10 @@ Adobe Experience Platform biedt diverse evaluatiemethoden voor het segmenteren v
 De segmentatie van de partij is een methode van de segmentatiebeoordeling die u kunt gebruiken om profielgegevens te bewegen allen in één keer om uw overeenkomstige publiek tot stand te brengen. U kunt batchsegmentatie gebruiken om gedetailleerde en rijke doelgroepen van profielen te maken.
 
 Voor meer informatie over partijsegmentatie, te lezen gelieve het [ overzicht van de partijsegmentatie ](./batch-segmentation.md).
+
+### Flexibele publieksevaluatie
+
+Dankzij de flexibele publieksevaluatie kunt u een batchsegmentatietaak op aanvraag uitvoeren. U kunt de [ flexibele gids van de publieksevaluatie ](./flexible-audience-evaluation.md) voor meer informatie lezen.
 
 ## Streaming segmentering
 
