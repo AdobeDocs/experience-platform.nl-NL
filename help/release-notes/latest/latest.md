@@ -2,7 +2,7 @@
 title: Aanvullende informatie van maart 2025 voor Adobe Experience Platform
 description: Aanvullende informatie van maart 2025 voor Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: b96e1186669c77530a10f1f177c1d99947c27f3b
+source-git-commit: 445bf302baadf478a39b0c11a31ccfe25d5dd726
 workflow-type: tm+mt
 source-wordcount: '1170'
 ht-degree: 27%
@@ -16,6 +16,7 @@ ht-degree: 27%
 Updates van bestaande functies en documentatie in Adobe Experience Platform:
 
 - [Aanvullende informatie voor Adobe Experience Platform](#adobe-experience-platform-release-notes)
+
    - [Dashboards](#dashboards)
    - [Bestemmingen](#destinations)
    - [Segmentatieservice](#segmentation-service)
