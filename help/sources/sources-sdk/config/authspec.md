@@ -1,16 +1,16 @@
 ---
-keywords: Experience Platform;thuis;populaire onderwerpen;bronnen;connectors;bronconnectors;bronnen sdk;sdk;SDK
-title: Verificatiespecificaties configureren voor Self-Serve Sources (Batch SDK)
-description: Dit document biedt een overzicht van de configuraties die u moet voorbereiden om Self-Serve Sources (Batch SDK) te kunnen gebruiken.
+keywords: Experience Platform;home;populaire onderwerpen;bronnen;connectors;bronconnectors;bronnen sdk;sdk;SDK
+title: Verificatiespecificaties configureren voor Self-Serve Bronnen (Batch SDK)
+description: Dit document biedt een overzicht van de configuraties die u moet voorbereiden voor het gebruik van Self-Serve Sources (Batch SDK).
 exl-id: 68ed22fe-1f22-46d2-9d58-72ad8a9e6b98
-source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
+source-git-commit: 984de21c134d2fc94ef7dc5f5e449f7a39732bc6
 workflow-type: tm+mt
-source-wordcount: '522'
+source-wordcount: '770'
 ht-degree: 0%
 
 ---
 
-# Verificatiespecificaties configureren voor Self-Serve Sources (Batch SDK)
+# Verificatiespecificaties configureren voor Self-Serve Bronnen (Batch SDK)
 
 De verificatiespecificaties bepalen hoe Adobe Experience Platform-gebruikers verbinding kunnen maken met uw bron.
 
@@ -18,11 +18,13 @@ De array `authSpec` bevat informatie over de verificatieparameters die zijn vere
 
 ## Verificatiespecificaties
 
-Self-Serve Bronnen (Batch SDK) steunt OAuth 2 verfrist codes en basisauthentificatie. Zie de lijsten hieronder voor begeleiding bij het gebruiken van OAuth 2 verfrist code en basisauthentificatie
+Self-Serve Bronnen (Batch SDK) ondersteunt OAuth 2 en vernieuwt codes en basisverificatie. Zie de lijsten hieronder voor begeleiding bij het gebruiken van OAuth 2 verfrist code en basisauthentificatie
 
 ### Code voor 2 vernieuwen
 
 OAuth 2 verfrist code voor veilige toegang tot een toepassing door een tijdelijk toegangstoken te produceren en een verfrist teken. Het toegangstoken staat u toe om tot uw middelen veilig toegang te hebben zonder het moeten andere geloofsbrieven verstrekken, terwijl verfrist het teken u toestaat om een nieuw toegangstoken te produceren, zodra het toegangstoken verloopt.
+
++++Voorbeeld van een OAuth 2 vernieuwt code
 
 ```json
 {
@@ -132,10 +134,13 @@ OAuth 2 verfrist code voor veilige toegang tot een toepassing door een tijdelijk
 
 {style="table-layout:auto"}
 
++++
 
 ### Basisverificatie
 
 Basisverificatie is een verificatietype waarmee u toegang krijgt tot uw toepassing door een combinatie van uw gebruikersnaam en wachtwoord voor uw account te gebruiken.
+
++++ Voorbeeld van basisverificatie weergeven
 
 ```json
 {
@@ -175,13 +180,109 @@ Basisverificatie is een verificatietype waarmee u toegang krijgt tot uw toepassi
 | `authSpec.spec.properties` | Bevat informatie over de geloofsbrieven die voor de authentificatie worden gebruikt. |
 | `authSpec.spec.properties.username` | De gebruikersnaam van de account die aan uw toepassing is gekoppeld. |
 | `authSpec.spec.properties.password` | Het accountwachtwoord dat aan uw toepassing is gekoppeld. |
-| `authSpec.spec.required` | Hiermee geeft u de velden op die vereist zijn als verplichte waarden die in het platform moeten worden ingevoerd. | `username` |
+| `authSpec.spec.required` | Hiermee geeft u de velden op die vereist zijn als verplichte waarden die in Experience Platform moeten worden ingevoerd. | `username` |
 
 {style="table-layout:auto"}
+
++++
+
+### API-sleutelverificatie {#api-key-authentication}
+
+API-sleutelverificatie is een veilige methode voor toegang tot API&#39;s door een API-sleutel en andere relevante verificatieparameters in aanvragen op te geven. Afhankelijk van uw specifieke API-informatie kunt u de API-sleutel verzenden als onderdeel van de aanvraagkoptekst, queryparameters of de hoofdtekst.
+
+De volgende parameters zijn doorgaans vereist wanneer API-sleutelverificatie wordt gebruikt:
+
+| Parameter | Type | Vereist | Beschrijving |
+| --- | --- | --- | --- |
+| `host` | string | Nee | De bron-URL. |
+| `authKey1` | string | Ja | De eerste vereiste verificatiesleutel voor API-toegang. Het wordt gewoonlijk verzonden in de verzoekkopbal of vraagparameters. |
+| `authKey2` | string | Optioneel | Een tweede verificatietoets. Indien vereist, wordt deze sleutel vaak gebruikt om verzoeken verder te bevestigen. |
+| `authKeyN` | string | Optioneel | Een extra verificatievariabele die naar wens kan worden gebruikt, maar de API. |
+
+{style="table-layout:auto"}
+
++++API-sleutelverificatie weergeven
+
+```json
+{
+  "name": "API Key Authentication",
+  "type": "KeyBased",
+  "spec": {
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "type": "object",
+    "description": "Define authentication parameters required for API access",
+    "properties": {
+      "host": {
+        "type": "string",
+        "description": "Enter resource URL host path"
+      },
+      "authKey1": {
+        "type": "string",
+        "format": "password",
+        "title": "Authentication Key 1",
+        "description": "Primary authentication key for accessing the API",
+        "restAttributes": {
+          "headerParamName": "X-Auth-Key1"
+        }
+      },
+      "authKey2": {
+        "type": "string",
+        "format": "password",
+        "title": "Authentication Key 2",
+        "description": "Secondary authentication key, if required",
+        "restAttributes": {
+          "headerParamName": "X-Auth-Key2"
+        }
+      },
+      ..
+      ..
+      "authKeyN": {
+        "type": "string",
+        "format": "password",
+        "title": "Additional Authentication Key",
+        "description": "Additional authentication keys as needed by the API",
+        "restAttributes": {
+          "headerParamName": "X-Auth-KeyN"
+        }
+      }
+    },
+    "required": [
+      "authKey1"
+    ]
+  }
+}
+```
+
++++
+
+### Verificatiegedrag
+
+U kunt de parameter `restAttributes` gebruiken om te bepalen hoe de API-sleutel in de aanvraag moet worden opgenomen. In het onderstaande voorbeeld geeft het kenmerk `headerParamName` bijvoorbeeld aan dat `X-Auth-Key1` als koptekst moet worden verzonden.
+
+```json
+  "restAttributes": {
+      "headerParamName": "X-Auth-Key1"
+  }
+```
+
+Elke verificatiesleutel (zoals `authKey1` , `authKey2` , enz.) kan aan `restAttributes` worden gekoppeld om te bepalen hoe deze als aanvraag wordt verzonden.
+
+Als `authKey1` `"headerParamName": "X-Auth-Key1"` heeft. Dit betekent dat de aanvraagheader `X-Auth-Key:{YOUR_AUTH_KEY1}` moet bevatten. Bovendien hoeven de sleutelnaam en `headerParamName` niet noodzakelijkerwijs hetzelfde te zijn. Bijvoorbeeld:
+
+* De `authKey1` kan `headerParamName: X-Custom-Auth-Key` hebben. Dit betekent dat de aanvraagheader `X-Custom-Auth-Key` in plaats van `authKey1` gebruikt.
+* Omgekeerd kan `authKey1` `headerParamName: authKey1` hebben. Dit betekent dat de naam van de aanvraagkoptekst ongewijzigd blijft.
+
+**Voorbeeld API formaat**
+
+```http
+GET /data?X-Auth-Key1={YOUR_AUTH_KEY1}&X-Auth-Key2={YOUR_AUTH_KEY2}
+```
 
 ## Voorbeeld van verificatiespecificatie
 
 Hieronder ziet u een voorbeeld van een voltooide verificatiespecificatie met een [[!DNL MailChimp Members]](../../tutorials/api/create/marketing-automation/mailchimp-members.md) -bron.
+
++++Specificatie van voorbeeldverificatie weergeven
 
 ```json
   "authSpec": [
@@ -234,6 +335,8 @@ Hieronder ziet u een voorbeeld van een voltooide verificatiespecificatie met een
     }
   ],
 ```
+
++++
 
 ## Volgende stappen
 
