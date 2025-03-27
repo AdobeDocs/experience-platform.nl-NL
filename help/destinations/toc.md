@@ -5,9 +5,9 @@ user-guide-description: Activeer uw bekende en onbekende gegevens voor cross-cha
 description: In dit document wordt de inhoudsopgave voor Adobe Experience Platform-doelen weergegeven
 feature: Destinations
 role: Admin,User
-source-git-commit: 9b9cecc9e1a6e5979fa8eb454cef677b8995f1b6
+source-git-commit: 9b41ec996c254840952ae3c45dfdddd8ac172085
 workflow-type: tm+mt
-source-wordcount: '1276'
+source-wordcount: '1278'
 ht-degree: 1%
 
 ---
@@ -78,6 +78,7 @@ ht-degree: 1%
       * [Awin Advertiser Conversion Tag-extensie](./catalog/advertising/awin-conversiontag.md)
       * [Awin Advertiser Mastertag extension](./catalog/advertising/awin-mastertag.md)
       * [De extensie Bing Ads Universal Event Tracking (UET)](./catalog/advertising/bing-ads.md)
+      * [Bombora-verbinding](./catalog/advertising/bombora.md)
       * [Vertakkingsextensie](./catalog/advertising/branch.md)
       * [Criteverbinding](./catalog/advertising/criteo.md)
       * [Demandbase-verbinding](./catalog/advertising/demandbase.md)
