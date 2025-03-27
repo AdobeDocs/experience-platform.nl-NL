@@ -5,9 +5,9 @@ user-guide-description: Activeer uw bekende en onbekende gegevens voor cross-cha
 description: In dit document wordt de inhoudsopgave voor Adobe Experience Platform-doelen weergegeven
 feature: Destinations
 role: Admin,User
-source-git-commit: 9b41ec996c254840952ae3c45dfdddd8ac172085
+source-git-commit: cbc626dbb12f69114c48a0920bf56ec2aabe13de
 workflow-type: tm+mt
-source-wordcount: '1278'
+source-wordcount: '1281'
 ht-degree: 1%
 
 ---
@@ -82,6 +82,7 @@ ht-degree: 1%
       * [Vertakkingsextensie](./catalog/advertising/branch.md)
       * [Criteverbinding](./catalog/advertising/criteo.md)
       * [Demandbase-verbinding](./catalog/advertising/demandbase.md)
+      * [Demandbase People-verbinding](./catalog/advertising/demandbase-people.md)
       * [DoubleClick Floodlight-extensie (Beta)](./catalog/advertising/doubleclick-floodlight.md)
       * [Facebook Pixel Extension](./catalog/advertising/facebook-pixel.md)
       * [OneTag-extensie knipperen](./catalog/advertising/flashtalking.md)
