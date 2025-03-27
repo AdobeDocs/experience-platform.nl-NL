@@ -4,9 +4,9 @@ title: Licentiegebruiksdashboard
 description: Adobe Experience Platform biedt een dashboard waarmee u belangrijke informatie kunt bekijken over het gebruik van licenties voor uw organisatie.
 type: Documentation
 exl-id: 143d16bb-7dc3-47ab-9b93-9c16683b9f3f
-source-git-commit: 7332b39b0e213632e595dc52eda390aa0b9a24ec
+source-git-commit: 03b35ecf940f9b1cb40d8b1243ff530f38bcdcd4
 workflow-type: tm+mt
-source-wordcount: '3339'
+source-wordcount: '3222'
 ht-degree: 0%
 
 ---
@@ -51,7 +51,7 @@ ht-degree: 0%
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_licenseusage_predictedusage_addressableaudience"
 >title="Voorspeld adresseerbaar publiek"
->abstract="Het adresseerbare publiek is de reeks personenprofielen in het profiel van de Klant in real time die uw organisatie mag aangaan. Dit omvat zowel direct identificeerbare als pseudoniem profielen.<br> Uw gebruik zou het vergunning gegeven bedrag kunnen bereiken. Om gebruik te verminderen, vorm dataset of de Pseudoniem gegevensvervalsing van het Profiel."
+>abstract="Het adresseerbare publiek is de reeks personenprofielen in het profiel van de Klant in real time die uw organisatie mag aangaan. Deze metrische waarde omvat zowel direct identificeerbare als Pseudoniem Profielen.<br> Uw gebruik zou het vergunning gegeven bedrag kunnen bereiken. Om gebruik te verminderen, vorm dataset of de Pseudoniem gegevensvervalsing van het Profiel."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/event-expirations.html" text="Verlopen van gebeurtenissen beleven"
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/pseudonymous-profiles.html" text="Verlopen gegevens van pseudoniem-profielen"
 
@@ -134,7 +134,7 @@ ht-degree: 0%
 
 U kunt belangrijke informatie over het gebruik van licenties voor uw organisatie bekijken via het Adobe Experience Platform [!UICONTROL License usage] -dashboard. De informatie die hier wordt weergegeven, wordt vastgelegd tijdens een dagelijkse momentopname van uw platforminstantie.
 
-De gebruiksrapporten van de vergunning verstrekken een hoge graad van granulariteit over uw metriek van het vergunningsgebruik. Het dashboard biedt gebruiksmetriek voor elk aangeschaft product (en de bijbehorende invoegtoepassingen), het geconsolideerde gebruik van metriek in alle productie- of ontwikkelingssandboxen en de gebruikstemetriek van een specifieke sandbox. De volgende Experience Platform-toepassingen kunnen worden bijgehouden met maatstaven voor gebruik: Real-Time Customer Data Platform, Adobe Journey Optimizer en Customer Journey Analytics.
+De gebruiksrapporten van de vergunning verstrekken een hoge graad van granulariteit. De meeste metriek worden gedeeld over veelvoudige producten en wijzen op bijeengevoegd gebruik over alle producten die hen, niet per-producttotalen gebruiken. Het dashboard biedt een geconsolideerd gebruik van deze metriek in alle productie- of ontwikkelingssandboxen en de metrische methode voor het gebruik van een specifieke sandbox. De volgende Experience Platform-toepassingen kunnen worden bijgehouden met maatstaven voor gebruik: Real-Time Customer Data Platform, Adobe Journey Optimizer en Customer Journey Analytics.
 
 Deze gids schetst hoe te om tot en met het dashboard van het vergunningsgebruik in UI toegang te hebben en te werken en verstrekt meer informatie betreffende de visualisaties die in het dashboard worden getoond.
 
@@ -152,36 +152,87 @@ De gegevens in dit dashboard worden precies zo weergegeven als op het specifieke
 
 ## Het dashboard voor licentiegebruik verkennen {#explore}
 
-Als u naar het dashboard voor licentiegebruik in de gebruikersinterface van het platform wilt navigeren, selecteert u **[!UICONTROL License usage]** in de linkertrack. Het tabblad [!UICONTROL Overview] wordt geopend en er wordt een lijst met beschikbare producten weergegeven.
+Als u naar het dashboard voor licentiegebruik in de gebruikersinterface van het platform wilt navigeren, selecteert u **[!UICONTROL License usage]** in de linkertrack. Het dashboard bevat twee tabbladen: **[!UICONTROL Metrics]** en **[!UICONTROL Products]** .
 
 >[!NOTE]
 >
->Het dashboard voor licentiegebruik is niet standaard ingeschakeld. Gebruikers moeten de machtiging &#39;Dashboard voor licentiegebruik weergeven&#39; hebben om het dashboard te kunnen weergeven. Voor stappen bij het verlenen van toegangstoestemmingen voor het bekijken van het dashboard van het vergunningsgebruik, verwijs naar de [ gids van de toestemmingen van het dashboard ](../permissions.md).
+>Het dashboard voor licentiegebruik is niet standaard ingeschakeld. Gebruikers moeten toestemming krijgen om het dashboard weer te geven via het &#39;Dashboard voor licentiegebruik weergeven&#39;. Voor stappen bij het verlenen van toegangstoestemmingen, verwijs naar de [ gids van de toestemmingen van het dashboard ](../permissions.md).
 
-![ het lusje van het Overzicht van het gebruiksdashboard van de Vergunning, met het gebruik van de Vergunning die in de linkernavigatiezijbalk wordt benadrukt.](../images/license-usage/dashboard-overview.png)
+## [!UICONTROL Metrics] tab {#metrics-tab}
 
-## [!UICONTROL Overview] tab {#overview-tab}
+Het tabblad **[!UICONTROL Metrics]** biedt een gecentraliseerde weergave van alle gegevens over het licentiegebruik in uw organisatie. Omdat de meeste metriek over producten worden gedeeld, is er geen afzonderlijke onderverdeling per product voor deze metriek.
 
-Het [!UICONTROL License Usage] dashboard toont twee afzonderlijke lijsten: **de producten van de Kern** en **toe:voegen-ons**.
+De metrietabel bevat de volgende kolommen:
 
-- **[!UICONTROL Core products]lijst**: Deze lijst maakt een lijst van de belangrijkste producten van Adobe Experience Platform die door uw organisatie worden vergunning gegeven. Elk kernproduct heeft zijn eigen metriek, gebruik het volgen, en boor-door meningen op het zandbakniveau. Deze kernproducten verstrekken de belangrijkste metriek voor het volgen, en om het even welke toe:voegen-ons zijn inbegrepen in deze metriek.
+| Kolomnaam | Beschrijving |
+|---|---|
+| **[!UICONTROL Metric Name]** | De naam van metrische code voor licentiegebruik. Elke ingang omvat een infopictogram (`ⓘ`) dat een beschrijving en een lijst van bijbehorende producten toont. |
+| **[!UICONTROL Licensed]** | Het aantal eenheden dat uw organisatie mag gebruiken, zoals gedefinieerd in uw contract. Dit metrisch is de zelfde waarde zoals het **Bedrag van de Vergunning** in het lusje van Producten. |
+| **[!UICONTROL Measured]** | De hoeveelheid metrisch die momenteel door uw organisatie wordt gebruikt. |
+| **[!UICONTROL Usage %]** | Het percentage van de waarde onder licentie dat momenteel wordt gebruikt. |
+| **[!UICONTROL Predicted Usage %]** | Het verwachte bereik van metrisch gebruik in de komende 6 weken. |
 
-- **[!UICONTROL Add-ons]lijst**: Deze lijst maakt een lijst van extra producten de waarvan vergunningsbedragen met de metriek worden gecombineerd die door de kernproducten wordt gesteund. Invoegtoepassingen hebben geen aparte metriek, maar verbeteren de gebruiksregistratie van de kernproducten waaraan zij zijn gekoppeld.
+Met de schakeloptie **[!UICONTROL Production]** of **[!UICONTROL Development]** kunt u de metriek filteren die door sandboxen wordt weergegeven.
+
+>[!NOTE]
+>
+>Consumptierapporten zijn cumulatief per type sandbox. Als u [!UICONTROL Production] of [!UICONTROL Development] selecteert, wordt het gecombineerde gebruik van alle sandboxen van dat type weergegeven.
+
+![ het lusje van de Metriek van het gebruiksdashboard van de Vergunning tonend een lijst van metriek, vergunningsbedragen, en gebruiksgegevens.](../images/license-usage/metrics-tab.png)
+
+>[!WARNING]
+>
+>Toestemming om het dashboard voor het gebruiksbewijs van licenties weer te geven, moet worden opgegeven op sandboxniveau. Voeg machtigingen toe aan elke afzonderlijke sandbox om deze in het dashboard weer te geven. Deze beperking wordt in een toekomstige release opgelost. Ondertussen is de volgende oplossing beschikbaar:
+>
+>1. Maak een productprofiel in de Adobe Admin Console.
+>2. Voeg onder Machtiging in de categorie Sandbox alle sandboxen toe die u wilt weergeven in het dashboard voor licentiegebruik.
+>3. Voeg onder de categorie Machtigingen voor het dashboard van de Gebruiker de machtiging &#39;Licentiegebruiksdashboard weergeven&#39; toe.
+
+### Metrische details weergeven {#view-metric-details}
+
+Als u gebruiksdetails voor een bepaalde metrische waarde wilt weergeven, selecteert u een metrische naam in de lijst. Er wordt een gedetailleerde weergave van de metrische waarde weergegeven, waaronder:
+
+- Een historische lijngrafiek die het gebruik in de tijd toont
+- Een vergelijking van in licentie gegeven en gemeten waarden
+- Gebruik door afzonderlijke sandbox
+- Een sandboxkiezer om gegevens te filteren
+- Een exportoptie voor CSV-download
+
+Met deze visualisatie kunt u trends volgen, begrijpen hoe elke sandbox bijdraagt aan het algemene gebruik en de gegevens exporteren voor offline analyse.
+
+Elk diagram bevat vervolgkeuzemenu&#39;s waarmee de gegevens worden gefilterd. Gebruik de vervolgkeuzelijst met datumbereiken om de terugzoekperiode aan te passen (standaard: laatste 30 dagen) of gebruik de vervolgkeuzelijst met sandboxen om het gebruik voor een specifieke productie- of ontwikkelingssandbox weer te geven.
+
+![ de Adresseerbare publiek metrische detailmening met historische gebruiksgrafiek, zandbaklijst, en de uitvoerknoop.](../images/license-usage/metric-details-view.png)
+
+U kunt ook een **[!UICONTROL Custom date]** selecteren om de weergegeven tijdsperiode te kiezen.
+
+![ het lusje van het Overzicht van het gebruiksdashboard van de Vergunning met de benadrukte opties van de de waaier van de douanedatum.](../images/license-usage/custom-date-range.png)
+
+### CSV-export {#export-metric-usage-data}
+
+U kunt historische gebruiksgegevens voor de geselecteerde metrische en sandbox rechtstreeks vanuit de gedetailleerde metrische weergave exporteren als een CSV-bestand. Selecteer het pictogram **[!UICONTROL Export]** om de gegevens van het diagram in tabelvorm te downloaden. Met de geëxporteerde CSV kunt u gemakkelijk trends offline analyseren of gebruiksinzichten delen tussen teams.
+
+## [!UICONTROL Products] tab {#products-tab}
+
+Het tabblad **[!UICONTROL Products]** bevat gebruiksgegevens voor licenties die zijn gegroepeerd op aangeschafte producten en eventuele bijbehorende invoegtoepassingen. Het tabblad [!UICONTROL Products] bevat twee tabellen:
+
+- **[!UICONTROL Core products]lijst**: Deze lijst maakt een lijst van de belangrijkste producten van Adobe Experience Platform die door uw organisatie worden vergunning gegeven. Elk product maakt een lijst van zijn primaire metrisch, gebruik het volgen, en voorspeld gebruik.
+- **[!UICONTROL Add-ons]table**: maakt een lijst van extra punten de waarvan vergunningsbedragen tot kernproductmetriek bijdragen. Invoegtoepassingen hebben geen aparte metriek, maar verbeteren de gebruiksregistratie van de kernproducten waaraan zij zijn gekoppeld.
 
 | Kolomnaam | Beschrijving |
 |---|---|
 | **[!UICONTROL Product]** | De Adobe-oplossing waarvoor uw organisatie een licentie heeft. |
 | **[!UICONTROL Primary Metric]** | De primaire metrisch die voor het volgen binnen dat product wordt gebruikt. |
-| **[!UICONTROL License Amount]** | De gecontracteerde waarde voor het maximale bedrag van de primaire metrische waarde zoals overeengekomen in uw productlicentieovereenkomst. |
-| **[!UICONTROL Usage]** | De hoeveelheid primaire metrisch die wordt gebruikt. Deze waarde geeft het totale gebruik van die metrische waarde voor alle sandboxen aan, productie of ontwikkeling. |
+| **[!UICONTROL License Amount]** | De gecontracteerde waarde voor het maximumbedrag van primaire metrisch. |
+| **[!UICONTROL Usage]** | De hoeveelheid primaire metrisch die wordt gebruikt. |
 | **[!UICONTROL Usage %]** | Het percentage van de primaire metrische waarde dat wordt gebruikt op basis van uw licentiehoeveelheid. |
-| **[!UICONTROL Prediction Usage]** | Het voorspelde gebruikspercentage van uw primaire metrisch volgens uw vergunningshoeveelheid. |
+| **[!UICONTROL Predicted Usage]** | Het voorspelde gebruikspercentage van uw primaire metrisch. |
 
 >[!NOTE]
 >
->Licentiebedragen voor invoegtoepassingen zijn opgenomen in de [!UICONTROL License Amount] van de kernproducten. Als u bijvoorbeeld een pakket van vijf sandboxen als invoegtoepassing koopt, wordt de hoeveelheid toegevoegd aan die van het basisproduct. De add-ons lijst toont [!UICONTROL License Amount] specifiek voor toe:voegen-op, maar het daadwerkelijke gebruik wordt gevolgd door het basisproduct.
+>De [!UICONTROL License Amount] voor invoegtoepassingen wordt opgenomen in de totale hoeveelheid licenties van het kernproduct. Invoegtoepassingen worden niet afzonderlijk bijgehouden, maar verbeteren de mogelijkheden van de bijbehorende producten. Als u bijvoorbeeld een pakket van vijf sandboxen als invoegtoepassing koopt, wordt de hoeveelheid toegevoegd aan die van het basisproduct. De add-ons lijst toont [!UICONTROL License Amount] specifiek voor toe:voegen-op, maar het daadwerkelijke gebruik wordt gevolgd door het basisproduct.
 
-De lijsten wijzen op primaire metrisch voor elk product, aangezien elk product talrijke metriek kan volgen.
+![ het lusje van de Producten van het gebruiksdashboard van de Vergunning met lijsten voor de producten van de Kern en toe:voegen-ons.](../images/license-usage/products-tab.png)
 
 ### Voorspeld gebruik {#predicted-usage}
 
@@ -205,17 +256,13 @@ Beheer en optimaliseer proactief uw licentiebronnen met nauwkeurige, actuele geb
 >
 >De voorspellingen worden elke vrijdag elke week vernieuwd. De datum van verfrist zich is inbegrepen in een infopictogram (![ Dit infopictogram.](../images/license-usage/info-icon.png) ) boven de kolomtitel.
 
-Als u een overzicht wilt zien van het gebruik van de rechten van een product, selecteert u een product in de tabel [!UICONTROL Core products] .
+Een overzicht weergeven van het gebruik van de rechten van een product op de tab [!UICONTROL Product] onder de tabel [!UICONTROL Core products] .
 
-![ [!UICONTROL License usage] [!UICONTROL Overview] met een product en de voorspelde benadrukte gebruikskolom.](../images/license-usage/product-predicted-usage.png)
-
-Het tabblad Samenvatting wordt weergegeven. U kunt de korrelige voorspellingen op de tabbladen [!UICONTROL Summary] en [!UICONTROL Details] gebruiken om ervoor te zorgen dat u op de hoogte bent van de besluitvorming en de licentie efficiënt kunt gebruiken.
+![ het [!UICONTROL License usage] [!UICONTROL Product] lusje met een product en de voorspelde benadrukte gebruikskolom.](../images/license-usage/product-predicted-usage.png)
 
 >[!NOTE]
 >
 >Houd er rekening mee dat voorspelling van het licentiegebruik benaderingen zijn die zijn gebaseerd op gebruik in het verleden. U bent verantwoordelijk voor het begrijpen van het daadwerkelijke gebruik van uw organisatie en ervoor te zorgen dat het gebruik niet verder gaat dan het bereik van de licentie van uw organisatie voor Adobe.
-
-![ de summiere mening van een Product van het Platform met de voorspelde benadrukte gebruikskolom.](../images/license-usage/summary-predicted-usage.png)
 
 Het percentage van het voorspelde gebruik wordt als volgt bepaald:
 
@@ -236,61 +283,6 @@ De voorspelde gebruiksfunctie ondersteunt de volgende meetgegevens:
 - [!UICONTROL Engageable profiles]
 - [!UICONTROL Total Data Volume]
 
-## [!UICONTROL Summary] tab {#summary-tab}
-
-Als u meer cijfers en gedetailleerd inzicht in het gebruik van uw productlicentie wilt bekijken, selecteert u een productnaam in de lijst. De weergave [!UICONTROL Summary] voor dat product wordt weergegeven. Alle beschikbare metriek worden weergegeven op het tabblad [!UICONTROL Summary] . De beschikbare maatstaven zijn afhankelijk van het product met licentie. Deze mening verstrekt **een geconsolideerde mening van alle metriek over alle productie of ontwikkelingszandbakken**. Hetzelfde analyseniveau geldt voor zowel productie- als ontwikkelingssandboxen.
-
-![ de summiere mening van een Product van het Platform dat alle beschikbare metriek voor dat product toont.](../images/license-usage/summary-tab.png)
-
-Op het tabblad Overzicht bevat de tabel de kolom [!UICONTROL Metric] . Deze beschrijvingen die leesbaar zijn voor mensen, geven alle metriek aan die voor dat type sandbox wordt gebruikt.
-
-### Een sandbox selecteren {#select-sandbox}
-
-Selecteer [!UICONTROL Production sandboxes] of [!UICONTROL Development sandboxes] als u de weergave tussen de typen productie- en ontwikkelingssandbox wilt wijzigen. Het geselecteerde type sandbox wordt aangegeven door het keuzerondje naast de naam van de sandbox.
-
-Consumptierapporten voor sandboxen zijn cumulatief voor alle sandboxen van hetzelfde type. Met andere woorden: als u [!UICONTROL Production] of [!UICONTROL Development] selecteert, worden verbruiksrapporten weergegeven voor respectievelijk alle productie- of ontwikkelingssandboxen.
-
-![ de summiere mening van een Product van het Platform met benadrukte zandbakken van de Productie en van de Ontwikkeling.](../images/license-usage/summary-tab-sandboxes.png)
-
->[!WARNING]
->
->Toestemming om het dashboard voor het gebruiksbewijs van licenties weer te geven, moet worden opgegeven op sandboxniveau. Voeg machtigingen toe aan elke afzonderlijke sandbox om deze in het dashboard weer te geven. Deze beperking wordt in een toekomstige release opgelost. Ondertussen is de volgende oplossing beschikbaar:
->
->1. Maak een productprofiel in de Adobe Admin Console.
->2. Voeg onder Machtiging in de categorie Sandbox alle sandboxen toe die u wilt weergeven in het dashboard voor licentiegebruik.
->3. Voeg onder de categorie Machtigingen voor het dashboard van de Gebruiker de machtiging &#39;Licentiegebruiksdashboard weergeven&#39; toe.
-
-## [!UICONTROL Details] tab {#details-tab}
-
-Om **een bepaald gebruik metrisch van een specifieke zandbak** te zien, navigeer aan het [!UICONTROL Details] lusje. Op het tabblad [!UICONTROL Details] worden alle beschikbare sandboxen weergegeven in de sandboxen Productie of Ontwikkeling.
-
-![ het lusje van Details van het het gebruiksdashboard van de Vergunning.](../images/license-usage/details-tab.png)
-
-Van deze mening, kunt u ![ selecteren inspecteert pictogram.](/help/images/icons/inspect.png) naast de naam van een sandbox om de visualisatie voor die metrische waarde weer te geven. Er wordt een dialoogvenster geopend met een visualisatie voor die metrische waarde.
-
-### Visualisaties {#visualizations}
-
-Elke visualisatiewidget bevat de volgende aspecten:
-
-- Een lijngrafiek die de metrische wijziging in de tijd volgt
-- Een sleutel voor de lijngrafiek
-- De naam van de sandbox
-- Een vervolgkeuzemenu voor het aanpassen van de tijdsperiode voor de lijngrafiek
-
-De lijngrafieken vergelijken de gebruiksaantallen voor uw organisatie met het totaal beschikbaar met de vergunning van uw organisatie en verstrekken een percentage van totaal gebruik.
-
-![ de visualisatie van metrisch.](../images/license-usage/visualization.png)
-
-De terugkijkperiode van analyse kan van het dropdown menu worden aangepast. De standaardwaarde van de laatste 30 dagen
-
-Als u een datumbereik wilt selecteren, selecteert u met de vervolgkeuzelijst voor het datumbereik de periode die u in het dashboard wilt weergeven. Er zijn meerdere opties beschikbaar, waaronder de standaardwaarde van de laatste 30 dagen.
-
-![ de visualisatiedialoog met de benadrukte drop-down van de datumwaaier.](../images/license-usage/date-range.png)
-
-U kunt ook **[!UICONTROL Custom date]** selecteren om de tijdsperiode te kiezen die wordt weergegeven.
-
-![ het lusje van het Overzicht van het gebruiksdashboard van de Vergunning met de benadrukte opties van de de waaier van de douanedatum.](../images/license-usage/custom-date-range.png)
-
 ## Beschikbare cijfers {#available-metrics}
 
 >[!IMPORTANT]
@@ -306,7 +298,7 @@ Het dashboard van het vergunningsgebruik rapporteert over verscheidene unieke me
 | [!UICONTROL Adhoc Query Service Users Packs] | Een add-on om uw geautoriseerde machtiging voor gelijktijdige gebruikers van Query Service te verhogen met vijf extra gelijktijdige gebruikers van Query Service en één extra query tegelijk voor ad-hocquery per pakket. Er kan een licentie worden verleend voor meerdere extra Ad hoc Query User-pakketten. |
 | [!UICONTROL Average profile richness] | **Vervangen** - de som van alle productiegegevens die binnen de Dienst van het Profiel van de Hub op om het even welk punt in tijd worden opgeslagen, die door vijf keer het aantal erkende bedrijfspersoonprofielen wordt verdeeld. [!UICONTROL Average profile richness] is een gedeelde functie. |
 | [!UICONTROL CJA Rows Available] | De dagelijkse gemiddelde rijen gegevens die beschikbaar zijn voor analyse binnen Customer Journey Analytics. |
-| [!UICONTROL Computed Attributes] | Geaggregeerde profielgedragsgegevens op basis van ervaringsgebeurtenissen die zijn omgezet in een profielkenmerk en kunnen worden opgenomen in een personenprofiel. |
+| [!UICONTROL Computed Attributes] | Geaggregeerde profielgedragsgegevens op basis van ervaringsgebeurtenissen die worden omgezet in een profielkenmerk en kunnen worden opgenomen in een personenprofiel. |
 | [!UICONTROL Consumer Audience] | Het aantal personenprofielen dat op de verkooporder als &quot;Consumer Audience&quot; is geïdentificeerd. |
 | [!UICONTROL Data Export Size] | De hoeveelheid gegevens die via gegevenssetactivering in een jaar wordt verzonden. |
 | [!UICONTROL Data Exports] | De totale omvang van gegevenssets die (direct of indirect) naar een niet-Adobe-oplossing in een jaar kunnen worden geëxporteerd. |
@@ -321,14 +313,11 @@ Het dashboard van het vergunningsgebruik rapporteert over verscheidene unieke me
 | [!UICONTROL Total Data Volume] | De totale hoeveelheid gegevens die beschikbaar is voor realtime-klantprofiel voor gebruik in workflows met betrokkenheid. Zie [ vaak gestelde vragen over het Totale Volume van Gegevens ](../../landing/license-usage-and-guardrails/total-data-volume.md) om meer te leren. |
 | [!UICONTROL Total Volume of Data Egress] | Het gecumuleerde jaarlijkse volume aan gegevens dat uit Adobe Experience Platform naar derde gegevensopslagcentra wordt uitgevoerd. |
 
-<!-- Approval needed on my revision above.
-Original PM version: | [!UICONTROL Total Volume of Data Egress] | The cumulative annual amount of data processed from third-party data warehouses. | -->
-
 <!-- |  [!UICONTROL Sandbox No of Packs] |  A logical separation within your instance of any Adobe On-demand Service that accesses Adobe Experience Platform isolating data and operations | -->
 
 >[!TIP]
 >
->U kunt uw licentierechten in uw verkooporder controleren om meetgegevens te berekenen, zoals uw &#39;opslagvergoeding&#39;.<br> Bijvoorbeeld,<ul><li>Opslagruimte = het aantal &quot;geoorloofde profielen&quot; in uw contract X Gemiddelde rijkheid van profiel</li></ul>
+>U kunt uw licentierechten in uw verkooporder controleren om meetgegevens te berekenen zoals uw &#39;opslagvergoeding&#39;.<br> Bijvoorbeeld,<ul><li>Opslagruimte = het aantal &quot;geoorloofde profielen&quot; in uw contract X Gemiddelde rijkheid van profiel</li></ul>
 
 De beschikbaarheid van deze cijfers en de specifieke definitie van elk van deze cijfers variëren afhankelijk van de licenties die uw organisatie heeft aangeschaft. Raadpleeg de desbetreffende documentatie bij de productbeschrijving voor gedetailleerde definities van elke metrische waarde:
 
