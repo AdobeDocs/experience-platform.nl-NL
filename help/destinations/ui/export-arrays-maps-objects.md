@@ -1,22 +1,36 @@
 ---
-title: Arrays, kaarten en objecten van Real-Time CDP naar cloudopslagdoelen exporteren
+title: Arrays, kaarten en objecten exporteren vanuit Real-Time CDP
 type: Tutorial
 description: Leer hoe u arrays, kaarten en objecten van Real-Time CDP naar cloudopslagdoelen exporteert.
 exl-id: ff13d8b7-6287-4315-ba71-094e2270d039
-source-git-commit: 99093e0bbcd3c3560ebe201fdac72e83e67dae43
+source-git-commit: 2d59a92d7ff1e0be7977a90df460190a3b417809
 workflow-type: tm+mt
-source-wordcount: '851'
+source-wordcount: '1080'
 ht-degree: 0%
 
 ---
 
-# Arrays, kaarten en objecten van Real-Time CDP naar cloudopslagdoelen exporteren {#export-arrays-cloud-storage}
+# Arrays, kaarten en objecten exporteren vanuit Real-Time CDP {#export-arrays-cloud-storage}
 
 >[!AVAILABILITY]
 >
->De functionaliteit voor het exporteren van arrays en andere complexe objecten naar cloudopslagdoelen is over het algemeen beschikbaar voor de volgende doelen: [[!DNL Azure Data Lake Storage Gen2]](../../destinations/catalog/cloud-storage/adls-gen2.md), [[!DNL Data Landing Zone]](../../destinations/catalog/cloud-storage/data-landing-zone.md), [[!DNL Google Cloud Storage]](../../destinations/catalog/cloud-storage/google-cloud-storage.md), [[!DNL Amazon S3]](../../destinations/catalog/cloud-storage/amazon-s3.md), [[!DNL Azure Blob]](../../destinations/catalog/cloud-storage/azure-blob.md), [[!DNL SFTP]](../../destinations/catalog/cloud-storage/sftp.md),
+>De functionaliteit voor het exporteren van arrays en andere complexe objecten naar cloudopslagdoelen is over het algemeen beschikbaar voor de volgende doelen: [[!DNL Azure Data Lake Storage Gen2]](../../destinations/catalog/cloud-storage/adls-gen2.md), [[!DNL Data Landing Zone]](../../destinations/catalog/cloud-storage/data-landing-zone.md), [[!DNL Google Cloud Storage]](../../destinations/catalog/cloud-storage/google-cloud-storage.md), [[!DNL Amazon S3]](../../destinations/catalog/cloud-storage/amazon-s3.md), [[!DNL Azure Blob]](../../destinations/catalog/cloud-storage/azure-blob.md), [[!DNL SFTP]](../../destinations/catalog/cloud-storage/sftp.md) .
+>
+>Bovendien, kunt u kaart-type gebieden naar de volgende bestemmingen uitvoeren: [ Amazon Kinesis ](/help/destinations/catalog/cloud-storage/amazon-kinesis.md), [ HTTP API ](/help/destinations/catalog/streaming/http-destination.md), [ Azure Event Hubs ](/help/destinations/catalog/cloud-storage/azure-event-hubs.md), [ Adobe Target ](/help/destinations/catalog/personalization/adobe-target-connection.md).
 
-Leer hoe te om series, kaarten, en voorwerpen van Real-Time CDP naar [ wolkenopslagbestemmingen ](/help/destinations/catalog/cloud-storage/overview.md) uit te voeren. Lees dit document om inzicht te krijgen in de exportworkflow, de gebruiksgevallen die door deze functionaliteit worden ingeschakeld en de bekende beperkingen.
+
+Leer hoe te om series, kaarten, en voorwerpen van Real-Time CDP naar [ wolkenopslagbestemmingen ](/help/destinations/catalog/cloud-storage/overview.md) uit te voeren. Bovendien, kunt u kaart-type gebieden naar [ ondernemingsbestemmingen ](/help/destinations/destination-types.md#advanced-enterprise-destinations) en beperkte [ de bestemmingen van de randverpersoonlijking ](/help/destinations/destination-types.md#edge-personalization-destinations) uitvoeren. Lees dit document om inzicht te krijgen in de exportworkflow, de gebruiksgevallen die door deze functionaliteit worden ingeschakeld en de bekende beperkingen. Bekijk de lijst hieronder om de functionaliteit te begrijpen beschikbaar per bestemmingstype.
+
+| Type bestemming | Mogelijkheid om arrays, kaarten en andere aangepaste objecten te exporteren |
+|---|---|
+| Adobe-authored cloudopslagbestemmingen (Amazon S3, Azure Blob, Azure Data Lake Storage Gen2, Data Landing Zone, Google Cloud Storage, SFTP) | Ja, met de schakeloptie Exporteren van arrays, kaarten en objecten inschakelen ingeschakeld bij het instellen van een doelverbinding. |
+| E-mailmarketingdoelen op basis van bestanden (Adobe Campaign, Oracle Eloqua, Oracle Responsys, Salesforce Marketing Cloud) | Nee |
+| Bestaande aangepaste, door partners samengestelde cloudopslagdoelen (aangepaste, op bestanden gebaseerde doelen die via Destination SDK zijn gemaakt) | Nee |
+| Enterprise-bestemmingen (Amazon Kinesis, Azure Event Hubs, HTTP API) | gedeeltelijk. In de toewijzingsstap van de activeringsworkflow kunt u objecten van het type map selecteren en exporteren. |
+| Streaming doelen (bijvoorbeeld: Facebook, Braze, Google Customer Match, enzovoort) | Nee |
+| Edge-personalisatiebestemmingen (Adobe Target) | gedeeltelijk. In de toewijzingsstap van de activeringsworkflow kunt u objecten van het type map selecteren en exporteren. |
+
+{style="table-layout:auto"}
 
 Bekijk deze pagina voor alles wat u wilt weten over het exporteren van arrays, kaarten en andere objecttypen uit Experience Platform.
 
@@ -24,9 +38,9 @@ Bekijk deze pagina voor alles wat u wilt weten over het exporteren van arrays, k
 
 Haal de belangrijkste informatie over de functionaliteit in deze sectie op en ga verder onder de andere secties in het document voor meer informatie.
 
-* De capaciteit om series, kaarten, en voorwerpen uit te voeren hangt van uw selectie van de **series van de Uitvoer af, kaarten, voorwerpen** knevel. Lees meer over het [ verder neer op de pagina ](#export-arrays-maps-objects-toggle).
-* U kunt arrays, toewijzingen en objecten alleen exporteren naar cloudopslagdoelen, in `JSON` - en `Parquet` -bestanden. Personen en potentiële doelgroepen worden ondersteund, accountpubliek niet.
-* U *kunt* series, kaarten, en voorwerpen naar Csv- dossiers uitvoeren, maar slechts door de berekende gebiedsfunctionaliteit te gebruiken en hen in een koord door te schakelen te gebruiken `array_to_string` functie.
+* Voor de bestemmingen van de wolkenopslag, hangt de capaciteit om series, kaarten, en voorwerpen uit uw selectie van de **series van de Uitvoer, kaarten, voorwerpen** knevel uit te voeren. Lees meer over het [ verder neer op de pagina ](#export-arrays-maps-objects-toggle).
+* U kunt arrays, toewijzingen en objecten exporteren naar cloudopslagdoelen in `JSON` - en `Parquet` -bestanden. Voor verpersoonlijkingsbestemmingen van de onderneming en van de rand, is het uitgevoerde gegevenstype `JSON`. Personen en potentiële doelgroepen worden ondersteund, accountpubliek niet.
+* Voor op dossier-gebaseerde de opslagbestemmingen van de wolk, kunt u *series, kaarten, en voorwerpen naar Csv- dossiers uitvoeren, maar slechts door de berekende gebiedsfunctionaliteit te gebruiken en hen in een koord te schakelen door de `array_to_string` functie te gebruiken.*
 
 ## Arrays en andere objecttypen in Platform {#arrays-strings-other-objects}
 
@@ -59,6 +73,10 @@ Naast arrays kunt u ook kaarten en objecten van Experience Platform naar de gewe
 
 [ verbindt ](/help/destinations/ui/connect-destination.md) met een gewenste bestemming van de wolkenopslag, vooruitgang door de [ activeringsstappen voor de bestemmingen van de wolkenopslag ](/help/destinations/ui/activate-batch-profile-destinations.md) en krijgt aan de [ in kaart brengende ](/help/destinations/ui/activate-batch-profile-destinations.md#mapping) stap. Wanneer u verbinding maakt met de gewenste wolkenbestemming, moet u de schakeloptie **[!UICONTROL Export arrays, maps, objects]** inschakelen. Meer informatie vindt u in de onderstaande sectie.
 
+>[!NOTE]
+>
+>Voor verpersoonlijkingsbestemmingen voor bedrijven en randapparaten is exportondersteuning voor kaartvelden beschikbaar zonder dat u een **[!UICONTROL Export arrays, maps, objects]** -schakeloptie hoeft te selecteren. Deze knevel is niet beschikbaar of vereist wanneer het verbinden met deze types van bestemmingen.
+
 ## Arrays, kaarten, objecten in-/uitschakelen {#export-arrays-maps-objects-toggle}
 
 >[!CONTEXTUALHELP]
@@ -66,7 +84,7 @@ Naast arrays kunt u ook kaarten en objecten van Experience Platform naar de gewe
 >title="Arrays, kaarten en objecten exporteren"
 >abstract="<p> Wissel dit het plaatsen <b> op </b> om de uitvoer van series, kaarten, en voorwerpen aan JSON of de dossiers van het Parket toe te laten. U kunt deze objecttypen selecteren in de weergave Bronveld van de toewijzingsstap. Als de schakeloptie is ingeschakeld, kunt u de optie Berekende velden niet gebruiken in de toewijzingsstap.</p><p>Met deze knevel <b> weg </b>, kunt u de berekende gebiedsoptie gebruiken en diverse functies van de gegevenstransformatie toepassen wanneer het activeren van publiek. Nochtans, kunt u <i> niet </i> uitvoeren series, kaarten, en voorwerpen aan JSON of de dossiers van het Pakket en moet een afzonderlijke bestemming voor dat doel vormen.</p>"
 
-Wanneer u verbinding maakt met een locatie voor cloudopslag, kunt u de schakeloptie **[!UICONTROL Export arrays, maps, objects]** in- of uitschakelen.
+Wanneer u verbinding maakt met een cloudopslagbestemming op basis van een bestand, kunt u de schakeloptie **[!UICONTROL Export arrays, maps, objects]** in- of uitschakelen.
 
 ![ de series van de Uitvoer, kaarten, voorwerpen knevel getoond met aan of van het plaatsen, evenals het benadrukken van popover.](/help/destinations/assets/ui/export-arrays-calculated-fields/export-objects-toggle.gif)
 
