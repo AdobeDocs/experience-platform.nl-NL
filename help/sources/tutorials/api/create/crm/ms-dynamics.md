@@ -2,9 +2,9 @@
 title: Een Microsoft Dynamics Base Connection maken met de Flow Service API
 description: Leer hoe u Platform kunt verbinden met een Microsoft Dynamics-account met behulp van de Flow Service API.
 exl-id: 423c6047-f183-4d92-8d2f-cc8cc26647ef
-source-git-commit: bda26fa4ecf4f54cb36ffbedf6a9aa13faf7a09d
+source-git-commit: 4e119056c0ab89cfc79eeb46e6f870c89356dc7d
 workflow-type: tm+mt
-source-wordcount: '1102'
+source-wordcount: '1330'
 ht-degree: 0%
 
 ---
@@ -264,6 +264,44 @@ Een geslaagde reactie retourneert de map [!DNL Dynamics] tables and views op het
 
 +++
 
+### De primaire sleutel gebruiken om gegevensexploratie te optimaliseren
+
+>[!NOTE]
+>
+>U kunt niet-lookup attributen slechts gebruiken wanneer het gebruiken van de primaire zeer belangrijke benadering van optimalisering.
+
+U kunt zoekopdrachten optimaliseren door `primaryKey` op te geven als onderdeel van de queryparameters. U moet de primaire sleutel van de tabel [!DNL Dynamics] opgeven wanneer u `primaryKey` opneemt als een queryparameter.
+
+**API formaat**
+
+```http
+GET /connections/{BASE_CONNECTION_ID}/explore?preview=true&object={OBJECT}&objectType={OBJECT_TYPE}&previewCount=10&primaryKey={PRIMARY_KEY}
+```
+
+| Query-parameters | Beschrijving |
+| --- | --- |
+| `{BASE_CONNECTION_ID}` | De id van de basisverbinding. Gebruik deze id om de inhoud en structuur van uw bron te verkennen. |
+| `preview` | Een Booleaanse waarde die gegevensvoorvertoning inschakelt. |
+| `{OBJECT}` | Het [!DNL Dynamics] -object dat u wilt verkennen. |
+| `{OBJECT_TYPE}` | Het type object. |
+| `previewCount` | Een beperking die de geretourneerde voorvertoning beperkt tot slechts een bepaald aantal records. |
+| `{PRIMARY_KEY}` | De primaire sleutel van de lijst die u voor voorproef terugwint. |
+
+**Verzoek**
+
++++Selecteren om aanvraagvoorbeeld weer te geven
+
+```shell
+curl -X GET \
+  'https://platform-stage.adobe.io/data/foundation/flowservice/connections/dd668808-25da-493f-8782-f3433b976d1e/explore?preview=true&object=lead&objectType=table&previewCount=10&primaryKey=leadid' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Content-Type: application/json' \
+```
+
++++
 
 ## De structuur van een tabel controleren
 
@@ -581,6 +619,74 @@ Een geslaagde reactie retourneert de zojuist gegenereerde bron-verbindings-id en
 ```
 
 +++
+
+### De primaire sleutel gebruiken om uw gegevensstroom te optimaliseren
+
+U kunt de gegevensstroom van [!DNL Dynamics] ook optimaliseren door de primaire sleutel als deel van uw parameters van het verzoeklichaam te specificeren.
+
+**API formaat**
+
+```http
+POST /sourceConnections
+```
+
+**Verzoek**
+
+Met de volgende aanvraag wordt een [!DNL Dynamics] bronverbinding gemaakt terwijl de primaire sleutel wordt opgegeven als `contactid` .
+
++++Selecteren om aanvraagvoorbeeld weer te geven
+
+```shell
+curl -X POST \
+  'https://platform.adobe.io/data/foundation/flowservice/sourceConnections' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Content-Type: application/json' \
+  -d '{
+      "name": "Dynamics Source Connection",
+      "description": "Dynamics Source Connection",
+      "baseConnectionId": "dd668808-25da-493f-8782-f3433b976d1e",
+      "data": {
+          "format": "tabular"
+      },
+      "params": {
+          "tableName": "contact",
+          "primaryKey": "contactid"
+      },
+      "connectionSpec": {
+          "id": "38ad80fe-8b06-4938-94f4-d4ee80266b07",
+          "version": "1.0"
+      }
+  }'
+```
+
+| Eigenschap | Beschrijving |
+| --- | --- |
+| `baseConnectionId` | De id van de basisverbinding. |
+| `data.format` | De indeling van de gegevens. |
+| `params.tableName` | De naam van de tabel in [!DNL Dynamics] . |
+| `params.primaryKey` | De primaire sleutel van de lijst die vragen zal optimaliseren. |
+| `connectionSpec.id` | De verbindingsspecificatie-id die overeenkomt met de bron [!DNL Dynamics] . |
+
++++
+
+**Reactie**
+
+Een geslaagde reactie retourneert de zojuist gegenereerde bron-verbindings-id en de bijbehorende tag.
+
++++Selecteren om reactievoorbeeld weer te geven
+
+```json
+{
+    "id": "e566bab3-1b58-428c-b751-86b8cc79a3b4",
+    "etag": "\"82009592-0000-0200-0000-678121030000\""
+}
+```
+
++++
+
 
 ## Volgende stappen
 
