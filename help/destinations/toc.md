@@ -5,9 +5,9 @@ user-guide-description: Activeer uw bekende en onbekende gegevens voor cross-cha
 description: In dit document wordt de inhoudsopgave voor Adobe Experience Platform-doelen weergegeven
 feature: Destinations
 role: Admin,User
-source-git-commit: 26125b0496b8b08443e9a1ccb13a384bf33ab4be
+source-git-commit: 9b9cecc9e1a6e5979fa8eb454cef677b8995f1b6
 workflow-type: tm+mt
-source-wordcount: '1274'
+source-wordcount: '1276'
 ht-degree: 1%
 
 ---
@@ -139,6 +139,7 @@ ht-degree: 1%
       * [Gegevenslandingszone](./catalog/cloud-storage/data-landing-zone.md)
       * [Google Cloud Storage](./catalog/cloud-storage/google-cloud-storage.md)
       * [SFTP-verbinding](./catalog/cloud-storage/sftp.md)
+      * [Snowflake-verbinding](./catalog/cloud-storage/snowflake.md)
       * [IP adres lijst van gewenste personen voor op dossier-gebaseerde cloudopslagbestemmingen](./catalog/cloud-storage/ip-address-allow-list.md)
    * CRM-bestemmingen (Customer Relationship Management) {#crm}
       * [Hubspot-verbinding](./catalog/crm/hubspot.md)
