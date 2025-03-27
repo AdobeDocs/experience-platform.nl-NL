@@ -1,28 +1,28 @@
 ---
-title: Een Google Big Query Source Connection maken in de gebruikersinterface
+title: Verbind  [!DNL Google BigQuery]  met Experience Platform gebruikend UI
 description: Leer hoe u een Google Big Query-bronverbinding maakt met de Adobe Experience Platform-gebruikersinterface.
-badgeUltimate: label="Ultieme" type="Positive"
+badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 3c0902de-48b9-42d8-a4bd-0213ca85fc7f
-source-git-commit: ae322ee421edd73cd5a3fb8499267cd417491318
+source-git-commit: 1900a8c6a3f3119c8b9049b12f5660cc9fd181a2
 workflow-type: tm+mt
-source-wordcount: '586'
+source-wordcount: '767'
 ht-degree: 0%
 
 ---
 
-# Een [!DNL Google BigQuery] bronverbinding maken in de gebruikersinterface
+# Verbinding maken [!DNL Google BigQuery] met Experience Platform via de gebruikersinterface
 
 >[!IMPORTANT]
 >
->De [!DNL Google BigQuery] -bron is in de broncatalogus beschikbaar voor gebruikers die Real-time Customer Data Platform Ultimate hebben aangeschaft.
+>De [!DNL Google BigQuery] -bron is in de broncatalogus beschikbaar voor gebruikers die Real-Time Customer Data Platform Ultimate hebben aangeschaft.
 
 Lees deze zelfstudie om te leren hoe u uw [!DNL Google BigQuery] -account kunt verbinden met Adobe Experience Platform via de gebruikersinterface.
 
 ## Aan de slag
 
-Deze zelfstudie vereist een goed begrip van de volgende onderdelen van het Experience Platform:
+Deze zelfstudie vereist een goed begrip van de volgende onderdelen van Experience Platform:
 
-* [[!DNL Experience Data Model (XDM)]  Systeem ](../../../../../xdm/home.md): Het gestandaardiseerde kader waardoor het Experience Platform gegevens van de klantenervaring organiseert.
+* [[!DNL Experience Data Model (XDM)]  Systeem ](../../../../../xdm/home.md): Het gestandaardiseerde kader waardoor Experience Platform gegevens van de klantenervaring organiseert.
    * [ Grondbeginselen van schemacompositie ](../../../../../xdm/schema/composition.md): Leer over de basisbouwstenen van schema&#39;s XDM, met inbegrip van zeer belangrijke principes en beste praktijken in schemacompositie.
    * [ het leerprogramma van de Redacteur van het Schema ](../../../../../xdm/tutorials/create-schema-ui.md): Leer hoe te om douaneschema&#39;s tot stand te brengen gebruikend de Redacteur UI van het Schema.
 * [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md): biedt een uniform, real-time consumentenprofiel dat is gebaseerd op geaggregeerde gegevens van meerdere bronnen.
@@ -31,33 +31,37 @@ Als u reeds een geldige [!DNL Google BigQuery] verbinding hebt, kunt u de rest v
 
 ### Vereiste referenties verzamelen
 
-Lees de [[!DNL Google BigQuery]  authentificatiegids ](../../../../connectors/databases/bigquery.md#generate-your-google-bigquery-credentials) voor gedetailleerde stappen bij het verzamelen van uw vereiste geloofsbrieven.
+Lees de [[!DNL Google BigQuery]  authentificatiegids ](../../../../connectors/databases/bigquery.md#prerequisites) voor gedetailleerde stappen bij het verzamelen van uw vereiste geloofsbrieven.
 
-## Sluit uw Google BigQuery-account aan
+## Navigeren door de catalogus met bronnen {#navigate}
 
-Selecteer in de gebruikersinterface van het platform de optie **[!UICONTROL Sources]** in de linkernavigatie voor toegang tot de werkruimte van [!UICONTROL Sources] . In het scherm [!UICONTROL Catalog] worden diverse bronnen weergegeven waarmee u een account kunt maken. U kunt de juiste categorie selecteren in de catalogus aan de linkerkant van het scherm. U kunt ook de specifieke bron vinden waarmee u wilt werken met de zoekbalk.
+Selecteer in de gebruikersinterface van Experience Platform de optie **[!UICONTROL Sources]** in de linkernavigatie voor toegang tot de werkruimte van *[!UICONTROL Sources]* . U kunt de juiste categorie selecteren in het deelvenster *[!UICONTROL Categories]*. U kunt ook de zoekbalk gebruiken om naar de specifieke bron te navigeren die u wilt gebruiken.
 
-Selecteer onder de categorie [!UICONTROL Databases] de optie **[!UICONTROL Google BigQuery]** en selecteer vervolgens **[!UICONTROL Add data]** .
+Als u [!DNL Google BigQuery] wilt gebruiken, selecteert u de **[!UICONTROL Google BigQuery]** bronkaart onder *[!UICONTROL Databases]* en selecteert u vervolgens **[!UICONTROL Add data]** .
 
 >[!TIP]
 >
->Bronnen in de catalogus met bronnen geven de optie **[!UICONTROL Set up]** weer wanneer een bepaalde bron nog geen geverifieerde account heeft. Zodra een geverifieerd account bestaat, verandert deze optie in **[!UICONTROL Add data]** .
+>Bronnen in de catalogus met bronnen geven de optie **[!UICONTROL Set up]** weer wanneer een bepaalde bron nog geen geverifieerde account heeft. Zodra een geverifieerd account is gemaakt, verandert deze optie in **[!UICONTROL Add data]** .
 
 ![ de broncatalogus met Google BigQuery selecteerde.](../../../../images/tutorials/create/google-big-query/catalog.png)
 
-De pagina **[!UICONTROL Connect to Google Big Query]** wordt weergegeven. Op deze pagina kunt u nieuwe of bestaande referenties gebruiken.
+## Een bestaande account gebruiken {#existing}
 
-### Bestaande account
-
-Als u een bestaande account wilt verbinden, selecteert u de [!DNL Google BigQuery] -account waarmee u verbinding wilt maken en selecteert u **[!UICONTROL Next]** om door te gaan.
+Als u een bestaande account wilt gebruiken, selecteert u de [!DNL Google BigQuery] -account waarmee u verbinding wilt maken en selecteert u **[!UICONTROL Next]** om door te gaan.
 
 ![ de bestaande rekeningspagina waar een lijst van bestaande rekeningen wordt voorgesteld.](../../../../images/tutorials/create/google-big-query/existing.png)
 
-### Nieuwe account
+## Een nieuwe account maken {#create}
 
-Als u een nieuwe account maakt, selecteert u **[!UICONTROL New account]** en geeft u een naam en een optionele beschrijving voor uw nieuwe [!DNL Google BigQuery] -account.
+Als u geen bestaand account hebt, moet u een nieuw account maken door de vereiste verificatiereferenties op te geven die overeenkomen met uw bron.
+
+Als u een nieuwe account wilt maken, selecteert u **[!UICONTROL New account]** en geeft u een naam op en voegt u desgewenst een beschrijving voor uw account toe.
 
 ![ de nieuwe rekeningsinterface in het bronwerkschema.](../../../../images/tutorials/create/google-big-query/new.png)
+
+### Verbinding maken met Experience Platform on Azure {#azure}
+
+U kunt uw [!DNL Google BigQuery] -account op Azure aan Experience Platform koppelen met behulp van basis- of serviceverificatie.
 
 >[!BEGINTABS]
 
@@ -65,17 +69,31 @@ Als u een nieuwe account maakt, selecteert u **[!UICONTROL New account]** en gee
 
 Om basisauthentificatie te gebruiken, selecteer **[!UICONTROL Basic Authentication]** en verstrek waarden voor uw [ project, cliënt identiteitskaart, cliëntgeheim, verfrist teken, en (facultatieve) identiteitskaart van de resultaatdataset ](../../../../connectors/databases/bigquery.md#generate-your-google-bigquery-credentials). Als u klaar bent, selecteert u **[!UICONTROL Connect to source]** en laat de verbinding enkele ogenblikken tot stand komen.
 
-![ de nieuwe rekeningsinterface waar de basisauthentificatie wordt geselecteerd.](../../../../images/tutorials/create/google-big-query/basic_auth.png)
+![ de nieuwe rekeningsinterface waar de basisauthentificatie wordt geselecteerd.](../../../../images/tutorials/create/google-big-query/basic-auth.png)
 
 >[!TAB  de dienstauthentificatie van het Gebruik ]
 
 Om de dienstauthentificatie te gebruiken, selecteer **[!UICONTROL Service Authentication]** en verstrek waarden voor uw [ project identiteitskaart, zeer belangrijke dossierinhoud, en (facultatieve) grote identiteitskaart van de resultaatdataset ](../../../../connectors/databases/bigquery.md#generate-your-google-bigquery-credentials). Als u klaar bent, selecteert u **[!UICONTROL Connect to source]** en laat de verbinding enkele ogenblikken tot stand komen.
 
-![ de nieuwe rekeningsinterface waar de dienstauthentificatie wordt geselecteerd.](../../../../images/tutorials/create/google-big-query/service_auth.png)
+![ de nieuwe rekeningsinterface waar de dienstauthentificatie wordt geselecteerd.](../../../../images/tutorials/create/google-big-query/service-auth.png)
 
 >[!ENDTABS]
 
-### Voorvertoning van voorbeeldgegevens overslaan {#skip-preview-of-sample-data}
+### Verbinding maken met Experience Platform op Amazon Web Services (AWS) {#aws}
+
+>[!AVAILABILITY]
+>
+>Deze sectie is van toepassing op implementaties van Experience Platform die op Amazon Web Services (AWS) worden uitgevoerd. Experience Platform die op AWS wordt uitgevoerd, is momenteel beschikbaar voor een beperkt aantal klanten. Meer over de gesteunde infrastructuur van Experience Platform leren, zie het [ multi-wolkenoverzicht van Experience Platform ](../../../../../landing/multi-cloud.md).
+
+Als u een nieuwe [!DNL Google BigQuery] -account wilt maken en verbinding wilt maken met Experience Platform op AWS, controleert u of u zich in een VA6-sandbox bevindt en geeft u vervolgens de vereiste gegevens voor verificatie op.
+
+* **identiteitskaart van het Project**: Projectidentiteitskaart die met uw [!DNL Google BigQuery] rekening beantwoordt.
+* **Zeer belangrijke dossierinhoud**: Het zeer belangrijke dossier dat wordt gebruikt om de de dienstrekening voor authentiek te verklaren. U kunt deze waarde van het [[!DNL Google Cloud service accounts]  dashboard ](https://console.cloud.google.com) terugwinnen. De inhoud van het sleutelbestand heeft de JSON-indeling. U moet dit coderen in [!DNL Base64] wanneer u autoriseert aan Experience Platform.
+* **identiteitskaart van de Dataset**: [!DNL Google BigQuery] dataset identiteitskaart Deze id geeft aan waar uw gegevenstabellen zich bevinden en moet vooraf zijn gemaakt om ondersteuning voor grote resultaatsets mogelijk te maken.
+
+![ de nieuwe rekeningsinterface voor een verbinding van AWS.](../../../../images/tutorials/create/google-big-query/aws.png)
+
+## Voorvertoning van voorbeeldgegevens overslaan {#skip-preview-of-sample-data}
 
 Tijdens de stap voor gegevensselectie kan er een time-out optreden wanneer u grote tabellen of bestanden met gegevens opgeeft. U kunt gegevensvoorvertoning overslaan om de time-out te omzeilen en toch uw schema weer te geven, zij het zonder voorbeeldgegevens. Als u de gegevensvoorvertoning wilt overslaan, schakelt u de schakeloptie **[!UICONTROL Skip previewing sample data]** in.
 

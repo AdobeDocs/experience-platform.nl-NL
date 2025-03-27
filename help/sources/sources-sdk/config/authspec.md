@@ -1,22 +1,22 @@
 ---
 keywords: Experience Platform;home;populaire onderwerpen;bronnen;connectors;bronconnectors;bronnen sdk;sdk;SDK
-title: Verificatiespecificaties configureren voor Self-Serve Bronnen (Batch SDK)
+title: Verificatiespecs voor Self-Serve Bronnen configureren (Batch SDK)
 description: Dit document biedt een overzicht van de configuraties die u moet voorbereiden voor het gebruik van Self-Serve Sources (Batch SDK).
 exl-id: 68ed22fe-1f22-46d2-9d58-72ad8a9e6b98
-source-git-commit: 984de21c134d2fc94ef7dc5f5e449f7a39732bc6
+source-git-commit: 8517532f991413a239e0da890bf53b1bf5b621f0
 workflow-type: tm+mt
 source-wordcount: '770'
 ht-degree: 0%
 
 ---
 
-# Verificatiespecificaties configureren voor Self-Serve Bronnen (Batch SDK)
+# Verificatiespecs voor Self-Serve Bronnen configureren (Batch SDK)
 
-De verificatiespecificaties bepalen hoe Adobe Experience Platform-gebruikers verbinding kunnen maken met uw bron.
+Verificatiespects bepalen hoe Adobe Experience Platform-gebruikers verbinding kunnen maken met uw bron.
 
 De array `authSpec` bevat informatie over de verificatieparameters die zijn vereist om een bron te verbinden met Platform. Om het even welke bepaalde bron kan veelvoudige verschillende types van authentificatie steunen.
 
-## Verificatiespecificaties
+## Verificatiespects
 
 Self-Serve Bronnen (Batch SDK) ondersteunt OAuth 2 en vernieuwt codes en basisverificatie. Zie de lijsten hieronder voor begeleiding bij het gebruiken van OAuth 2 verfrist code en basisauthentificatie
 

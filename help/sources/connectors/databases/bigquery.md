@@ -1,11 +1,11 @@
 ---
 title: Google BigQuery Source Connector - Overzicht
 description: Leer hoe u Google BigQuery via API's of de gebruikersinterface met Adobe Experience Platform kunt verbinden.
-badgeUltimate: label="Ultieme" type="Positive"
+badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 35c61382-a909-47f4-a937-15cb725ecbe3
-source-git-commit: 1fa79b31b5a257ebb3cbd60246b757d8a4a63d7c
+source-git-commit: 1900a8c6a3f3119c8b9049b12f5660cc9fd181a2
 workflow-type: tm+mt
-source-wordcount: '529'
+source-wordcount: '582'
 ht-degree: 0%
 
 ---
@@ -14,23 +14,21 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
->De [!DNL Google BigQuery] -bron is in de broncatalogus beschikbaar voor gebruikers die Real-time Customer Data Platform Ultimate hebben aangeschaft.
+>De [!DNL Google BigQuery] -bron is in de broncatalogus beschikbaar voor gebruikers die Real-Time Customer Data Platform Ultimate hebben aangeschaft.
 
-Adobe Experience Platform staat toe dat gegevens uit externe bronnen worden opgenomen terwijl u de mogelijkheid krijgt om inkomende gegevens te structureren, te labelen en te verbeteren met behulp van de platformservices. U kunt gegevens uit diverse bronnen invoeren, zoals toepassingen voor Adobe, opslag in de cloud, databases en vele andere.
-
-Lees dit document voor de vereiste stappen die u moet uitvoeren om uw [!DNL Google BigQuery] -account met Experience Platform te kunnen verbinden.
+Lees dit document voor de vereiste stappen die u moet uitvoeren om uw [!DNL Google BigQuery] -account met Adobe Experience Platform te kunnen verbinden op Azure of Amazon Web Services (AWS).
 
 ## Vereisten {#prerequisites}
 
-In de volgende sectie vindt u meer informatie over de vereiste configuratie voordat u een [!DNL Google BigQuery] bronverbinding kunt maken.
+Lees de volgende secties voor de vereiste configuratie die u moet voltooien voordat u uw [!DNL Google BigQuery] -account kunt verbinden met Experience Platform.
 
 ### IP adres lijst van gewenste personen
 
-Een lijst van IP adressen moet aan een lijst van gewenste personen worden toegevoegd alvorens met bronschakelaars te werken. Het niet toevoegen van uw regio-specifieke IP adressen aan uw lijst van gewenste personen kan tot fouten of niet-prestaties leiden wanneer het gebruiken van bronnen. Zie de ](../../ip-address-allow-list.md) pagina van de lijst van gewenste personen van het 0} IP adres {voor meer informatie.[
+U moet gebied-specifieke IP adressen aan uw lijst van gewenste personen toevoegen alvorens uw bronnen aan Experience Platform op of Azure of Amazon Web Services (AWS) aan te sluiten. Voor meer informatie, lees de gids op [ voegend op lijst van gewenste personen IP adressen om met Experience Platform op Azure en AWS ](../../ip-address-allow-list.md) voor meer informatie te verbinden.
 
-### Uw [!DNL Google BigQuery] gebruikersgegevens genereren {#credentials}
+### Verifiëren voor Experience Platform in Azure {#azure}
 
-Als u [!DNL Google BigQuery] wilt verbinden met Experience Platform, moet u waarden voor de volgende referenties genereren:
+U moet de volgende gegevens opgeven om uw [!DNL Google BigQuery] -account aan te sluiten op Experience Platform on Azure.
 
 >[!BEGINTABS]
 
@@ -64,9 +62,19 @@ Voor meer informatie bij het gebruiken van de dienstrekeningen in [!DNL Google B
 
 >[!ENDTABS]
 
-## Verbinden [!DNL Google BigQuery] met platform
+### Verifiëren voor Experience Platform op AWS {#aws}
 
-In de onderstaande documentatie vindt u informatie over het tot stand brengen van een verbinding tussen [!DNL Google BigQuery] en Platform via API&#39;s of de gebruikersinterface:
+U moet de volgende gegevens opgeven om uw [!DNL Google BigQuery] -account te verbinden met Experience Platform op AWS.
+
+| Credentials | Beschrijving |
+| --- | --- |
+| `projectId` | De id van de [!DNL Google BigQuery] waarnaar u wilt zoeken. |
+| `keyFileContent` | Het sleuteldossier dat wordt gebruikt om de de dienstrekening voor authentiek te verklaren. U kunt deze waarde van het [[!DNL Google Cloud service accounts]  dashboard ](https://console.cloud.google.com) terugwinnen. De inhoud van het sleutelbestand heeft de JSON-indeling. U moet dit coderen in [!DNL Base64] wanneer u autoriseert aan Experience Platform. |
+| `datasetId` | De [!DNL Google BigQuery] dataset-id. Deze id vertegenwoordigt de locatie van de gegevenstabellen. |
+
+## Verbinden [!DNL Google BigQuery] met Experience Platform
+
+In de onderstaande documentatie vindt u informatie over het tot stand brengen van een verbinding tussen [!DNL Google BigQuery] en Experience Platform via API&#39;s of de gebruikersinterface:
 
 ### API&#39;s gebruiken
 

@@ -1,47 +1,47 @@
 ---
-title: Een Google BigQuery Base-verbinding maken met de Flow Service API
+title: Google BigQuery met de Flow Service-API verbinden met Experience Platform
 description: Leer hoe u Adobe Experience Platform verbindt met Google BigQuery met behulp van de Flow Service API.
-badgeUltimate: label="Ultieme" type="Positive"
+badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 51f90366-7a0e-49f1-bd57-b540fa1d15af
-source-git-commit: 1fa79b31b5a257ebb3cbd60246b757d8a4a63d7c
+source-git-commit: 1900a8c6a3f3119c8b9049b12f5660cc9fd181a2
 workflow-type: tm+mt
-source-wordcount: '523'
+source-wordcount: '697'
 ht-degree: 0%
 
 ---
 
-# Een [!DNL Google BigQuery] basisverbinding maken met de [!DNL Flow Service] API
+# Verbinding maken met Experience Platform via de [!DNL Flow Service] API[!DNL Google BigQuery]
 
 >[!IMPORTANT]
 >
->De [!DNL Google BigQuery] -bron is in de broncatalogus beschikbaar voor gebruikers die Real-time Customer Data Platform Ultimate hebben aangeschaft.
+>De [!DNL Google BigQuery] -bron is in de broncatalogus beschikbaar voor gebruikers die Real-Time Customer Data Platform Ultimate hebben aangeschaft.
 
-Een basisverbinding vertegenwoordigt de geverifieerde verbinding tussen een bron en Adobe Experience Platform.
-
-Lees deze gids om te leren hoe te om een basisverbinding voor [!DNL Google BigQuery] tot stand te brengen gebruikend [[!DNL Flow Service]  API ](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+Lees deze gids om te leren hoe te om uw [!DNL Google BigQuery] gegevensbestand met Adobe Experience Platform te verbinden gebruikend [[!DNL Flow Service]  API ](https://developer.adobe.com/experience-platform-apis/references/flow-service/).
 
 ## Aan de slag
 
-Deze handleiding vereist een goed begrip van de volgende onderdelen van het Experience Platform:
+Deze handleiding vereist een goed begrip van de volgende onderdelen van Experience Platform:
 
 * [ Bronnen ](../../../../home.md): Experience Platform staat gegevens toe om van diverse bronnen worden opgenomen terwijl het voorzien van u van de capaciteit om, inkomende gegevens te structureren te etiketteren en te verbeteren gebruikend de diensten van het Platform.
 * [ Sandboxes ](../../../../../sandboxes/home.md): Experience Platform verstrekt virtuele zandbakken die één enkele instantie van het Platform in afzonderlijke virtuele milieu&#39;s verdelen helpen digitale ervaringstoepassingen ontwikkelen en ontwikkelen.
-
-In de volgende secties vindt u aanvullende informatie die u moet weten voordat u verbinding kunt maken met [!DNL Google BigQuery] via de [!DNL Flow Service] API.
-
-### Vereiste referenties verzamelen
-
-Lees de [[!DNL Google BigQuery]  authentificatiegids ](../../../../connectors/databases/bigquery.md#generate-your-google-bigquery-credentials) voor gedetailleerde stappen bij het verzamelen van uw vereiste geloofsbrieven.
 
 ### Platform-API&#39;s gebruiken
 
 Voor informatie over hoe te om vraag aan Platform APIs met succes te maken, zie de gids op [ begonnen wordt met Platform APIs ](../../../../../landing/api-guide.md).
 
-## Een basisverbinding maken
+### Vereiste referenties verzamelen
+
+Lees de [[!DNL Google BigQuery]  authentificatiegids ](../../../../connectors/databases/bigquery.md#prerequisites) voor gedetailleerde stappen bij het terugwinnen van uw [!DNL Google BigQuery] geloofsbrieven.
+
+## Verbind [!DNL Google BigQuery] met Experience Platform op Azure {#azure}
+
+Lees de onderstaande stappen voor informatie over hoe u uw [!DNL Google BigQuery] -bron kunt verbinden met Experience Platform on Azure.
+
+### Een basisverbinding maken voor [!DNL Google BigQuery] op Experience Platform in Azure {#azure-base}
 
 Een basisverbinding behoudt informatie tussen uw bron en Platform, met inbegrip van de de authentificatiegeloofsbrieven van uw bron, de huidige staat van de verbinding, en uw unieke identiteitskaart van de basisverbinding. Met de ID van de basisverbinding kunt u bestanden verkennen en door bestanden navigeren vanuit uw bron en kunt u de specifieke items identificeren die u wilt opnemen, inclusief informatie over hun gegevenstypen en indelingen.
 
-Als u een basis-verbindings-id wilt maken, vraagt u een POST naar het `/connections` -eindpunt en geeft u de [!DNL Google BigQuery] -verificatiegegevens op als onderdeel van de aanvraagparameters.
+Als u een basis-verbindings-id wilt maken, vraagt u een POST-aanvraag naar het `/connections` -eindpunt en geeft u de [!DNL Google BigQuery] -verificatiegegevens op als onderdeel van de aanvraagparameters.
 
 **API formaat**
 
@@ -53,9 +53,9 @@ POST /connections
 
 >[!TAB  Basisauthentificatie van het Gebruik ]
 
-**Verzoek**
++++verzoek
 
-Met de volgende aanvraag wordt een basisverbinding voor [!DNL Google BigQuery] gemaakt met behulp van basisverificatie:
+Met de volgende aanvraag wordt een basisverbinding voor [!DNL Google BigQuery] gemaakt met behulp van basisverificatie.
 
 ```shell
 curl -X POST \
@@ -93,7 +93,9 @@ curl -X POST \
 | `auth.params.refreshToken` | Het vernieuwingstoken dat u van [!DNL Google] hebt gekregen om toegang tot [!DNL Google BigQuery] te verlenen. |
 | `connectionSpec.id` | The [!DNL Google BigQuery] connection specification ID: `3c9b37f8-13a6-43d8-bad3-b863b941fedd` . |
 
-**Reactie**
++++
+
++++Response
 
 Een succesvolle reactie keert details van de pas gecreëerde verbinding, met inbegrip van zijn uniek herkenningsteken (`id`) terug. Deze id is vereist om uw gegevens te kunnen bekijken in de volgende zelfstudie.
 
@@ -104,37 +106,39 @@ Een succesvolle reactie keert details van de pas gecreëerde verbinding, met inb
 }
 ```
 
++++
+
 >[!TAB  de dienstauthentificatie van het Gebruik ]
 
 
-**Verzoek**
++++verzoek
 
 Met de volgende aanvraag wordt een basisverbinding voor [!DNL Google BigQuery] gemaakt met behulp van service-verificatie:
 
 ```shell
 curl -X POST \
-    'https://platform.adobe.io/data/foundation/flowservice/connections' \
-    -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-    -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {ORG_ID}' \
-    -H 'x-sandbox-name: {SANDBOX_NAME}' \
-    -H 'Content-Type: application/json' \
-    -d '{
-        "name": "Google BigQuery base connection with service account",
-        "description": "Google BigQuery connection with service account",
-        "auth": {
-            "specName": "Service Authentication",
-            "params": {
-                    "projectId": "{PROJECT_ID}",
-                    "keyFileContent": "{KEY_FILE_CONTENT},
-                    "largeResultsDataSetId": "{LARGE_RESULTS_DATASET_ID}"
-                }
-        },
-        "connectionSpec": {
-            "id": "3c9b37f8-13a6-43d8-bad3-b863b941fedd",
-            "version": "1.0"
-        }
-    }'
+  'https://platform.adobe.io/data/foundation/flowservice/connections' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Content-Type: application/json' \
+  -d '{
+      "name": "Google BigQuery base connection with service account",
+      "description": "Google BigQuery connection with service account",
+      "auth": {
+          "specName": "Service Authentication",
+          "params": {
+                  "projectId": "{PROJECT_ID}",
+                  "keyFileContent": "{KEY_FILE_CONTENT},
+                  "largeResultsDataSetId": "{LARGE_RESULTS_DATASET_ID}"
+              }
+      },
+      "connectionSpec": {
+          "id": "3c9b37f8-13a6-43d8-bad3-b863b941fedd",
+          "version": "1.0"
+      }
+  }'
 ```
 
 | Eigenschap | Beschrijving |
@@ -143,7 +147,9 @@ curl -X POST \
 | `auth.params.keyFileContent` | Het sleuteldossier dat wordt gebruikt om de de dienstrekening voor authentiek te verklaren. U moet de inhoud van het sleutelbestand coderen in [!DNL Base64] . |
 | `auth.params.largeResultsDataSetId` | (Optioneel) De vooraf gemaakte [!DNL Google BigQuery] dataset-id die vereist is om ondersteuning voor grote resultaatsets mogelijk te maken. |
 
-**Reactie**
++++
+
++++Response
 
 Een succesvolle reactie keert details van de pas gecreëerde verbinding, met inbegrip van zijn uniek herkenningsteken (`id`) terug. Deze id is vereist om uw gegevens te kunnen bekijken in de volgende zelfstudie.
 
@@ -154,8 +160,79 @@ Een succesvolle reactie keert details van de pas gecreëerde verbinding, met inb
 }
 ```
 
++++
+
 >[!ENDTABS]
 
+## Verbinding maken [!DNL Google BigQuery] met Experience Platform op Amazon Web Services (AWS) {#aws}
+
+Lees de onderstaande stappen voor informatie over hoe u uw [!DNL Google BigQuery] -database kunt verbinden met Experience Platform op AWS.
+
+### Een basisverbinding maken voor [!DNL Google BigQuery] op Experience Platform op AWS
+
+>[!AVAILABILITY]
+>
+>Deze sectie is van toepassing op implementaties van Experience Platform die op Amazon Web Services (AWS) worden uitgevoerd. Experience Platform die op AWS wordt uitgevoerd, is momenteel beschikbaar voor een beperkt aantal klanten. Meer over de gesteunde infrastructuur van Experience Platform leren, zie het [ multi-wolkenoverzicht van Experience Platform ](../../../../../landing/multi-cloud.md).
+
+**API formaat**
+
+```https
+POST /connections
+```
+
+**Verzoek**
+
+Met de volgende aanvraag wordt een basisverbinding gemaakt om [!DNL Google BigQuery] op AWS te verbinden met Experience Platform.
+
++++Selecteren om voorbeeld weer te geven
+
+```shell
+curl -X POST \
+  'https://platform.adobe.io/data/foundation/flowservice/connections' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Content-Type: application/json' \
+  -d '{
+      "name": "Google BigQuery base connection on AWS",
+      "description": "Google BigQuery base connection on AWS",
+      "auth": {
+          "specName": "Service Authentication",
+          "params": {
+                  "projectId": "{PROJECT_ID}",
+                  "keyFileContent": "{KEY_FILE_CONTENT},
+                  "datasetId": "{DATASET_ID}"
+      },
+      "connectionSpec": {
+          "id": "3c9b37f8-13a6-43d8-bad3-b863b941fedd",
+          "version": "1.0"
+      }
+  }'
+```
+
+| Eigenschap | Beschrijving |
+| --- | --- |
+| `auth.params.projectId` | De project-id van het standaard [!DNL Google BigQuery] -project waarop moet worden gezocht. tegen. |
+| `auth.params.keyFileContent` | Het sleuteldossier dat wordt gebruikt om de de dienstrekening voor authentiek te verklaren. U moet de inhoud van het sleutelbestand coderen in [!DNL Base64] . |
+| `auth.params.datasetId` | De gegevensset-id die overeenkomt met uw [!DNL Google BigQuery] -bron. Deze id geeft aan waar de gegevenstabellen zich bevinden. |
+
++++
+
+**Reactie**
+
+Een succesvolle reactie keert details van de pas gecreëerde verbinding, met inbegrip van zijn uniek herkenningsteken (`id`) terug. Deze id is vereist om uw opslag te verkennen in de volgende zelfstudie.
+
++++Selecteren om voorbeeld weer te geven
+
+```json
+{
+    "id": "6990abad-977d-41b9-a85d-17ea8cf1c0e4",
+    "etag": "\"ca00acbf-0000-0200-0000-60149e1e0000\""
+}
+```
+
++++
 
 ## Volgende stappen
 

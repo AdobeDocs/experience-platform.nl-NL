@@ -1,9 +1,8 @@
 ---
 title: Toegangslabels toepassen om gebruikerstoegang tot brongegevens in UI te beheren
 description: Leer hoe u de gebruikersinterface van Experience Platform gebruikt om toegangslabels toe te passen en gebruikerstoegang tot uw gegevensstromen van bronnen te beheren.
-hide: true
-hidefromtoc: true
-source-git-commit: 80fb60abdf33eb2a7ca691a9a48a811c632b34fc
+exl-id: 7aab9706-2f43-43c7-9878-1959d5a8a6b0
+source-git-commit: f57fa04e668fa9c61b9b15778e74969edffae0fa
 workflow-type: tm+mt
 source-wordcount: '486'
 ht-degree: 0%
