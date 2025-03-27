@@ -3,9 +3,9 @@ title: AI Assistant in Adobe Experience Platform-productdocumentatie
 description: Ga aan de slag met AI Assistant in Adobe Experience Platform.
 feature: AI Assistant
 exl-id: bcb86a41-d5d8-4c1a-a86d-79fa0c167bc7
-source-git-commit: b26a1f12c9ea07d4dd077f1f3c1578e6c69866a7
+source-git-commit: a34c3cae803c9e70530dbd382fbec2ece17fc71a
 workflow-type: tm+mt
-source-wordcount: '1059'
+source-wordcount: '1095'
 ht-degree: 0%
 
 ---
@@ -97,11 +97,9 @@ For more information about AI Assistant, read the [security fact sheet for AI As
 
 >[!ENDSHADEBOX] -->
 
-## Videobibliotheek
+## Basisbegrippen
 
-Bekijk de volgende video&#39;s om uw kennis over de mogelijkheden van AI Assistant en gebruiksgevallen verder te vergroten:
-
-### Basisbegrippen
+Bekijk de volgende video&#39;s voor meer informatie over enkele fundamentele aspecten van AI Assistant.
 
 <!-- START CARDS HTML - DO NOT MODIFY BY HAND -->
 <div class="columns">
@@ -252,7 +250,9 @@ Bekijk de volgende video&#39;s om uw kennis over de mogelijkheden van AI Assista
 </div>
 <!-- END CARDS HTML - DO NOT MODIFY BY HAND -->
 
-### Hoofdletterbibliotheek gebruiken
+## Hoofdletterbibliotheek gebruiken
+
+Bekijk de volgende video&#39;s voor meer informatie over het gebruik van AI Assistant.
 
 <!-- START CARDS HTML - DO NOT MODIFY BY HAND -->
 <div class="columns">
@@ -416,7 +416,7 @@ Bekijk de volgende video&#39;s om uw kennis over de mogelijkheden van AI Assista
 </div>
 <!-- END CARDS HTML - DO NOT MODIFY BY HAND -->
 
-## AI Assistant-casebibliotheek
+## Aanvullende gebruiksgevallen
 
 >[!BEGINTABS]
 
@@ -439,6 +439,14 @@ Bekijk de volgende video&#39;s voor extra voorbeelden van AI Assistant-gebruikss
 * [ ontgrendel operationele inzichten met Medewerker AI ](https://www.youtube.com/watch?v=fGgFwAOZle8)
 
 >[!ENDTABS]
+
+### Verhoog uw productiviteit met AI Assistant
+
+Lees het volgende voor een handleiding over hoe u uw productiviteit kunt verhogen met AI Assistant.
+
+* [Verhoog uw productiviteit met AI Assistant](./assets/landing/ai-assistant-lab-workbook.pdf)
+
+## Volgende stappen
 
 Blader naar de onderstaande koppelingen voor meer inzicht in AIR Assistant-gebruiksgevallen, -mogelijkheden en nog veel meer.
 
