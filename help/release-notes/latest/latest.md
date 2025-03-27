@@ -2,10 +2,10 @@
 title: Aanvullende informatie van maart 2025 voor Adobe Experience Platform
 description: Aanvullende informatie van maart 2025 voor Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 445bf302baadf478a39b0c11a31ccfe25d5dd726
+source-git-commit: 16056a35624b4a053e9f50acef0ec3f63254a065
 workflow-type: tm+mt
-source-wordcount: '1170'
-ht-degree: 27%
+source-wordcount: '1212'
+ht-degree: 26%
 
 ---
 
@@ -46,6 +46,8 @@ Voor meer informatie over dashboards, met inbegrip van hoe u toegangsrechten ver
 
 | Bestemming | Beschrijving |
 | --- | --- |
+| [ De verbinding van Mensen van de Vereis ](/help/destinations/catalog/advertising/demandbase-people.md) | Gebruik de verbinding [!DNL Demandbase People] om profielen voor uw Demandbase-campagnes voor doelgroepen, personalisatie en onderdrukking te activeren. |
+| [ Bombora rekeningsverbinding ](/help/destinations/catalog/advertising/bombora.md) | Gebruik de [!DNL Bombora] verbinding om profielen voor uw campagnes Bombora voor publiek te activeren richtend, verpersoonlijking, en onderdrukking, die op [ wordt gebaseerd rekeningspubliek ](/help/segmentation/types/account-audiences.md). |
 | [ Attributen van het Luchtschip ](/help/destinations/catalog/mobile-engagement/airship-attributes.md) verbetering | Vanaf 25 maart 2025 ziet u twee **[!UICONTROL Airship Attributes]** kaarten naast elkaar in de doelcatalogus. Dit is toe te schrijven aan een interne verbetering aan de bestemmingsdienst. De naam van de bestaande **[!UICONTROL Airship Attributes]** doelconnector is gewijzigd in **[!UICONTROL (Deprecated) Airship Attributes]** en u hebt nu een nieuwe kaart met de naam **[!UICONTROL Airship Attributes]** beschikbaar. <br> Gebruik de **[!UICONTROL Airship Attributes]** -verbinding in de catalogus voor nieuwe gegevensstromen voor activering. Als u actieve gegevens naar de [!DNL (Deprecated) Airship Attributes] -bestemming hebt, worden deze automatisch bijgewerkt, zodat u geen actie hoeft te ondernemen. <br> als u dataflows door de [ Dienst API van de Stroom ](https://developer.adobe.com/experience-platform-apis/references/destinations/) creeert, moet u uw [!DNL flow spec ID] en [!DNL connection spec ID] aan de volgende waarden bijwerken: <ul><li> Stroomspecificatie-id: `a862e0be-966e-4e5a-80d3-1bb566461986`</li><li> Verbindingsspecificatie-id: `594bc002-4a47-49b7-8a98-ac0d21045502`</li> </ul> |
 
 {style="table-layout:auto"}
