@@ -2,9 +2,9 @@
 title: Implementatiegids voor koppelingsregels voor identiteitsgrafieken
 description: Leer de aanbevolen stappen die u moet volgen wanneer u uw gegevens implementeert met configuraties van regels voor identiteitsgrafieken.
 exl-id: 368f4d4e-9757-4739-aaea-3f200973ef5a
-source-git-commit: 2dadb3a0a79f4d187dd096177130802f511a6917
+source-git-commit: 83815c4911f867329d5fb7731763141d950f85bf
 workflow-type: tm+mt
-source-wordcount: '1766'
+source-wordcount: '1807'
 ht-degree: 0%
 
 ---
@@ -67,10 +67,9 @@ Als u [ Adobe Analytics bronschakelaar ](../../sources/tutorials/ui/create/adobe
 
 Tijdens uw pre-implementatieproces, moet u ervoor zorgen dat de voor authentiek verklaarde gebeurtenissen die uw systeem naar Experience Platform zal verzenden altijd a **enige** persoonsidentificatie, zoals een CRMID bevatten.
 
-* (Aanbevolen) Voor authentiek verklaarde gebeurtenissen met één persoonsidentificatie.
-* (Niet geadviseerd) Voor authentiek verklaarde gebeurtenissen met twee persoon herkenningstekens.
-* (Niet aanbevolen) Voor authentiek verklaarde gebeurtenissen zonder enige persoonsidentificatiecodes.
-
+* (Aanbevolen) Voor authentiek verklaarde gebeurtenissen met één uniek persoonsidentificatie.
+* (Niet geadviseerd) Voor authentiek verklaarde gebeurtenissen met twee unieke persoonsidentificatiecodes. Als u meer dan één unieke persoon-id hebt, kan het zijn dat u een ongewenste grafiekinstorting tegenkomt.
+* (Niet geadviseerd) Voor authentiek verklaarde gebeurtenissen zonder enige unieke persoonsidentificatiecodes. Als u geen unieke persoon-id hebt, worden zowel niet-geverifieerde als geverifieerde gebeurtenissen opgeslagen op basis van de ECID.
 
 >[!BEGINTABS]
 
