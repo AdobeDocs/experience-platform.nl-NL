@@ -4,9 +4,9 @@ title: Licentiegebruiksdashboard
 description: Adobe Experience Platform biedt een dashboard waarmee u belangrijke informatie kunt bekijken over het gebruik van licenties voor uw organisatie.
 type: Documentation
 exl-id: 143d16bb-7dc3-47ab-9b93-9c16683b9f3f
-source-git-commit: 03b35ecf940f9b1cb40d8b1243ff530f38bcdcd4
+source-git-commit: 243a99748d31cddcb8a550d52f9bb390726644be
 workflow-type: tm+mt
-source-wordcount: '3222'
+source-wordcount: '3245'
 ht-degree: 0%
 
 ---
@@ -144,11 +144,11 @@ Voor een algemeen overzicht van Platform UI, verwijs naar de [ gids UI van Exper
 
 Op het dashboard van [!UICONTROL License usage] wordt een lijst weergegeven met alle Experience Platform-producten die u hebt aangeschaft en alle invoegtoepassingen voor die producten. Vanuit dit dashboard kunt u een momentopname vinden van de licentiegerelateerde gegevens van uw organisatie voor Experience Platform in elke bijbehorende sandbox.
 
-De gegevens in dit dashboard worden precies zo weergegeven als op het specifieke tijdstip waarop de momentopname is gemaakt. Met andere woorden, de momentopname is geen benadering of voorbeeld van de gegevens en het dashboard wordt niet in real-time bijgewerkt.
+De gegevens in dit dashboard worden precies zo weergegeven als op het specifieke tijdstip waarop de momentopname is gemaakt. Het is geen benadering of voorbeeld, maar het dashboard wordt niet in real time bijgewerkt.
 
 >[!NOTE]
 >
->Wijzigingen of updates die zijn aangebracht in de gegevens nadat de momentopname is gemaakt, worden pas in het dashboard weergegeven als de volgende momentopname is gemaakt.
+>De meeste metriek in het dashboard worden dagelijks bijgewerkt, gebaseerd op een momentopname van uw instantie van het Platform. [!UICONTROL CJA Rows Available] is een uitzondering en wordt maandelijks bijgewerkt. Metrische gegevens met de labels &quot;packages&quot;, zoals [!UICONTROL Adhoc Query Service Users Packs] , [!UICONTROL Profile Richness No of Packs] en [!UICONTROL Streaming Segmentation No of Packs] , weerspiegelen licentierechten voor add-on-aanbiedingen en houden geen gegevens bij van het huidige gebruik. Wijzigingen die na de opname worden aangebracht, zijn pas zichtbaar wanneer de volgende opname wordt gemaakt.
 
 ## Het dashboard voor licentiegebruik verkennen {#explore}
 
