@@ -3,7 +3,7 @@ solution: Experience Platform
 title: Inhoud en Voorkeuren voor schemaveldgroep
 description: Meer informatie over de veldgroep Inhoud en Voorkeuren.
 exl-id: ec592102-a9d3-4cac-8b94-58296a138573
-source-git-commit: b08c6cf12a38f79e019544dea91913a77bd6490a
+source-git-commit: be35c5398cd96cdfe424c5088db288ba4061ac4a
 workflow-type: tm+mt
 source-wordcount: '888'
 ht-degree: 0%
@@ -90,7 +90,7 @@ In het volgende JSON-voorbeeld ziet u het type gegevens dat de veldgroep [!UICON
 
 >[!TIP]
 >
->U kunt steekproefJSON gegevens voor om het even welk XDM schema produceren dat u in Experience Platform bepaalt helpen visualiseren hoe uw klantentoestemming en voorkeursgegevens zouden moeten in kaart worden gebracht. Raadpleeg de volgende documentatie voor meer informatie:
+>U kunt voorbeeld-JSON-gegevens genereren voor elk XDM-schema dat u in Experience Platform definieert om te helpen visualiseren hoe de toestemming en voorkeursgegevens van uw klant moeten worden toegewezen. Raadpleeg de volgende documentatie voor meer informatie:
 >
 >* [ produceer steekproefgegevens in UI ](../../ui/sample.md)
 >* [ produceer steekproefgegevens in API ](../../api/sample-data.md)
@@ -169,7 +169,7 @@ De `adID` toestemming geeft de toestemming van de klant weer om te bepalen of ee
 
 >[!NOTE]
 >
->Deze waarde wordt niet rechtstreeks ingesteld, aangezien de Adobe Experience Platform Mobile SDK deze waarde automatisch instelt wanneer dit van toepassing is.
+>Deze waarde wordt niet rechtstreeks ingesteld, omdat de Adobe Experience Platform Mobile SDK deze waarde automatisch instelt wanneer dit van toepassing is.
 
 ## Gegevens invoegen met de veldgroep {#ingest}
 
@@ -185,7 +185,7 @@ Zie het leerprogramma op [ creërend een schema in UI ](https://www.adobe.com/go
 
 ## Verwerking van toestemmings- en preferenties
 
-Wanneer een klant hun toestemmingen of voorkeur op uw website verandert, zouden deze veranderingen moeten worden verzameld en onmiddellijk worden afgedwongen gebruikend [ Adobe Experience Platform Web SDK ](../../../web-sdk/commands/setconsent.md). Als een klant ervoor kiest geen gegevens meer te verzamelen, moet de gegevensverzameling onmiddellijk worden beëindigd. Als een klant ervoor kiest geen personalisatie meer te gebruiken, dan is er geen personalisatie aanwezig op de volgende pagina die zij bezoeken.
+Wanneer een klant hun toestemmingen of voorkeur op uw website verandert, zouden deze veranderingen moeten worden verzameld en onmiddellijk worden afgedwongen gebruikend het [ Web SDK van Adobe Experience Platform ](../../../web-sdk/commands/setconsent.md). Als een klant ervoor kiest geen gegevens meer te verzamelen, moet de gegevensverzameling onmiddellijk worden beëindigd. Als een klant uit personalisatie kiest, dan zou er geen personalisatie op de volgende pagina moeten zijn die zij laden.
 
 ## Volgende stappen
 
