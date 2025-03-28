@@ -3,9 +3,9 @@ title: API-eindpunt voor soorten publiek
 description: Gebruik het publiek eindpunt in de API van de Dienst van de Segmentatie van Adobe Experience Platform om, publiek voor uw organisatie programmatically tot stand te brengen te beheren en bij te werken.
 role: Developer
 exl-id: cb1a46e5-3294-4db2-ad46-c5e45f48df15
-source-git-commit: 260d63d5eebd62cc5a617fccc189af52fd4d0b09
+source-git-commit: 7b1dedeab8df9678134474045cb87b27550f7fb6
 workflow-type: tm+mt
-source-wordcount: '1452'
+source-wordcount: '1590'
 ht-degree: 0%
 
 ---
@@ -20,7 +20,7 @@ De eindpunten die in deze handleiding worden gebruikt, maken deel uit van de API
 
 ## Een lijst met soorten publiek ophalen {#list}
 
-U kunt een lijst van alle soorten publiek voor uw organisatie terugwinnen door een verzoek van de GET tot het `/audiences` eindpunt te richten.
+U kunt een lijst van alle soorten publiek voor uw organisatie terugwinnen door een GET- verzoek aan het `/audiences` eindpunt te doen.
 
 **API formaat**
 
@@ -202,7 +202,7 @@ Een geslaagde reactie retourneert HTTP-status 200 met een lijst van soorten publ
 
 ## Een nieuw publiek maken {#create}
 
-U kunt een nieuw publiek tot stand brengen door een verzoek van de POST aan het `/audiences` eindpunt te doen.
+U kunt een nieuw publiek tot stand brengen door een POST- verzoek aan het `/audiences` eindpunt te doen.
 
 **API formaat**
 
@@ -325,7 +325,7 @@ Een succesvolle reactie keert status 200 van HTTP met informatie over uw pas gec
 
 ## Een bepaald publiek opzoeken {#get}
 
-U kunt gedetailleerde informatie over een specifiek publiek omhoog kijken door een verzoek van de GET tot het `/audiences` eindpunt te richten en identiteitskaart van het publiek te verstrekken u wenst om in de verzoekweg terug te winnen.
+U kunt gedetailleerde informatie over een specifiek publiek opzoeken door een GET-aanvraag in te dienen bij het `/audiences` eindpunt en de id op te geven van het publiek dat u wilt ophalen in het aanvraagpad.
 
 **API formaat**
 
@@ -422,9 +422,9 @@ Een succesvolle reactie keert status 200 van HTTP met informatie over het gespec
 
 +++
 
-## Een publiek bijwerken {#put}
+## Een publiek overschrijven {#put}
 
-U kunt een specifiek publiek bijwerken (overschrijven) door een verzoek van de PUT aan het `/audiences` eindpunt te richten en identiteitskaart van het publiek te verstrekken u wenst om in de verzoekweg bij te werken.
+U kunt een specifiek publiek bijwerken (overschrijven) door een PUT-aanvraag in te dienen bij het `/audiences` -eindpunt en de id op te geven van het publiek dat u wilt bijwerken in het aanvraagpad.
 
 **API formaat**
 
@@ -453,6 +453,11 @@ curl -X PUT https://platform.adobe.io/data/core/ups/audiences/4afe34ae-8c98-4513
     "namespace": "AEPSegments",
     "description": "Last 30 days",
     "type": "SegmentDefinition",
+    "expression": {
+        "type": "PQL",
+        "format": "pql/text",
+        "value": "workAddress.country=\"US\""
+    }
     "lifecycleState": "published",
     "datasetId": "6254cf3c97f8e31b639fb14d",
     "labels": [
@@ -468,6 +473,7 @@ curl -X PUT https://platform.adobe.io/data/core/ups/audiences/4afe34ae-8c98-4513
 | `namespace` | De naamruimte voor het publiek. |
 | `description` | Een beschrijving van het publiek. |
 | `type` | Een door het systeem gegenereerd veld dat weergeeft of het publiek door het platform wordt gegenereerd of dat een extern gegenereerd publiek is. Mogelijke waarden zijn `SegmentDefinition` en `ExternalSegment` . Een `SegmentDefinition` verwijst naar een publiek dat is gegenereerd in Platform, terwijl een `ExternalSegment` verwijst naar een publiek dat niet is gegenereerd in Platform. |
+| `expression` | Een object dat de PQL-expressie van het publiek bevat. |
 | `lifecycleState` | De status van het publiek. Mogelijke waarden zijn `draft` , `published` en `inactive` . `draft` vertegenwoordigt wanneer het publiek wordt gecreeerd, `published` wanneer het publiek wordt gepubliceerd, en `inactive` wanneer het publiek niet meer actief is. |
 | `datasetId` | De id van de dataset die de publieksgegevens kunnen worden gevonden. |
 | `labels` | Gegevensgebruik op objectniveau en op kenmerk gebaseerde toegangsbeheerlabels die relevant zijn voor het publiek. |
@@ -508,9 +514,84 @@ Een geslaagde reactie retourneert HTTP status 200 met details over uw onlangs bi
 
 +++
 
+## Een publiek bijwerken {#patch}
+
+U kunt een specifiek publiek bijwerken door een PATCH-aanvraag in te dienen bij het `/audiences` -eindpunt en de id op te geven van het publiek dat u wilt bijwerken in het aanvraagpad.
+
+**API formaat**
+
+```http
+PATCH /audiences/{AUDIENCE_ID}
+```
+
+| Parameter | Beschrijving |
+| --------- | ----------- |
+| `{AUDIENCE_ID}` | De id van het publiek dat u wilt bijwerken. Gelieve te merken op dat dit het `id` gebied is, en **niet** het `audienceId` gebied is. |
+
+**Verzoek**
+
++++ Een voorbeeldverzoek om een publiek bij te werken.
+
+```shell
+curl -X PATCH https://platform.adobe.io/data/core/ups/audiences/60ccea95-1435-4180-97a5-58af4aa285ab5
+ -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+ -H 'x-gw-ims-org-id: {ORG_ID}' \
+ -H 'x-api-key: {API_KEY}' \
+ -H 'x-sandbox-name: {SANDBOX_NAME}' \
+ -d '[
+    {
+        "op": "add",
+        "path": "/lifecycleState",
+        "value": "inactive"
+    }
+ ]'
+```
+
+| Eigenschap | Beschrijving |
+| -------- | ----------- |
+| `op` | Het type uitgevoerde PATCH-bewerking. Voor dit eindpunt, is deze waarde **altijd** `/add`. |
+| `path` | Het pad van het veld dat moet worden bijgewerkt. Systeem-geproduceerde gebieden, zoals `id`, `audienceId`, en `namespace` **kunnen niet** worden uitgegeven. |
+| `value` | De nieuwe waarde die wordt toegewezen aan de eigenschap die is opgegeven in `path` . |
+
++++
+
+**Reactie**
+
+Een geslaagde reactie retourneert HTTP-status 200 met het bijgewerkte publiek.
+
++++Een voorbeeldreactie bij het repareren van een veld in een publiek.
+
+```json
+{
+    "id": "60ccea95-1435-4180-97a5-58af4aa285ab5",
+    "audienceId": "test-platform-audience-id",
+    "name": "New Platform audience",
+    "namespace": "AEPSegments",
+    "imsOrgId": "{ORG_ID}",
+    "sandbox": {
+        "sandboxId": "6ed34f6f-fe21-4a30-934f-6ffe21fa3075",
+        "sandboxName": "prod",
+        "type": "production",
+        "default": true
+    },
+    "description": "Last 30 days",
+    "type": "SegmentDefinition",
+    "lifecycleState": "inactive",
+    "createdBy": "{CREATED_BY_ID}",
+    "datasetId": "6254cf3c97f8e31b639fb14d",
+    "_etag": "\"f4102699-0000-0200-0000-625cd61a0000\"",
+    "creationTime": 1650251290000,
+    "updateEpoch": 1650251290,
+    "updateTime": 1650251290000,
+    "createEpoch": 1650251290
+}
+```
+
++++
+
 ## Een publiek verwijderen {#delete}
 
-U kunt een specifiek publiek schrappen door een DELETE verzoek aan het `/audiences` eindpunt te doen en identiteitskaart van het publiek te verstrekken u wenst om in de verzoekweg te schrappen.
+U kunt een specifiek publiek verwijderen door een DELETE-aanvraag in te dienen bij het `/audiences` -eindpunt en de id op te geven van het publiek dat u wilt verwijderen in het aanvraagpad.
 
 **API formaat**
 
@@ -542,7 +623,7 @@ Een geslaagde reactie retourneert HTTP status 204 zonder bericht.
 
 ## Meerdere soorten publiek ophalen {#bulk-get}
 
-U kunt veelvoudige publiek terugwinnen door een verzoek van de POST aan het `/audiences/bulk-get` eindpunt te doen en identiteitskaarts van het publiek te verstrekken u wenst om terug te winnen.
+U kunt meerdere soorten publiek ophalen door een POST-aanvraag in te dienen bij het `/audiences/bulk-get` -eindpunt en de id&#39;s op te geven van het publiek dat u wilt ophalen.
 
 **API formaat**
 
