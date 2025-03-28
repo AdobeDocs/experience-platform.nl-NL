@@ -2,15 +2,19 @@
 title: Flexibele gids voor de evaluatie van het publiek
 description: Leer hoe te om flexibele publieksevaluatie te gebruiken om partijsegmentatietaken op bestelling in werking te stellen.
 role: Developer, User
-source-git-commit: 5c86161a2f9442d99426f2c05fb762cf50004049
+exl-id: b85bf735-be02-4bf7-bd63-8d74ae905e58
+source-git-commit: 71818ee273749bb5053286c5b8bbd07a4429c341
 workflow-type: tm+mt
-source-wordcount: '980'
+source-wordcount: '1033'
 ht-degree: 0%
 
 ---
 
-
 # Flexibele gids voor publieksevaluatie
+
+>[!AVAILABILITY]
+>
+>De flexibele publieksevaluatie is **slechts** beschikbaar op instanties van Experience Platform die op [!DNL Microsoft Azure] lopen. Meer over de gesteunde infrastructuur van Experience Platform leren, zie het [ multi-wolkenoverzicht van Experience Platform ](../../landing/multi-cloud.md).
 
 Dankzij de flexibele publieksevaluatie kunt u een batchsegmentatietaak op aanvraag uitvoeren. Met flexibele publieksevaluatie, kunt u ad hoc campagnelanceringen, just-in-time mededelingen, of andere tijd-gevoelige activiteiten in werking stellen.
 
@@ -33,7 +37,7 @@ Houd rekening met de volgende voorwaarden wanneer u een flexibele publieksevalua
 
 >[!NOTE]
 >
->U *kunt* extra flexibele de looppas van de publieksevaluatie kopen per jaar. Neem voor meer informatie contact op met de klantenservice van Adobe.
+>U kunt extra flexibele evaluatierondes voor het publiek per jaar aanschaffen. Neem voor meer informatie contact op met de klantenservice van Adobe.
 
 ## Toegang {#access}
 
@@ -326,6 +330,14 @@ In de volgende video ziet u hoe u een flexibele publieksevaluatie in Experience 
 
 In de volgende sectie worden vaak gestelde vragen over een flexibele publieksevaluatie weergegeven.
 
+### Hoe snel kan ik een publiek activeren met behulp van een flexibele publieksevaluatie?
+
++++ Antwoord
+
+U kunt een publiek onmiddellijk na het maken activeren met behulp van een flexibele publieksevaluatie.
+
++++
+
 ### Kan ik het plannen met flexibele publieksevaluatie in werking stellen?
 
 +++ Antwoord
@@ -373,4 +385,3 @@ Alleen publiek met de oorsprong van Segmentation Service wordt ondersteund voor 
 De flexibele de looppas van de publieksevaluatie die of gebruikend API of de telling UI naar de maximumgrens werden gecreeerd. Nochtans, draagt de dagelijkse de baanlooppas van de partijsegmentatie die op een nachtelijke basis loopt **niet** aan deze grens bij.
 
 +++
-
