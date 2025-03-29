@@ -2,9 +2,10 @@
 title: Demandbase-intentie
 description: Meer informatie over de Demandbase Intent-bron op Experience Platform.
 last-substantial-update: 2025-03-26T00:00:00Z
-source-git-commit: 0a6a9fe759d71fd62e3eaf5c93a091614f3c76a0
+exl-id: 62dd27e0-b846-4c04-977f-8a3ab99bc464
+source-git-commit: 78aae71ff48fc710aaaabf4ef71f6e50d2a8c12e
 workflow-type: tm+mt
-source-wordcount: '1484'
+source-wordcount: '1461'
 ht-degree: 0%
 
 ---
@@ -84,7 +85,7 @@ Het [!DNL Demandbase] schema wordt genoemd {de Intentie van het 1} Bedrijf Wekel
 
 ## Sluit uw [!DNL Demandbase] -account aan op Experience Platform in de gebruikersinterface
 
-Nu u de eerste vereiste opstelling voor [!DNL Demandbase] hebt voltooid, kunt u nu te werk gaan [uw [!DNL Demandbase] rekening met Experience Platform verbinden gebruikend UI]Zodra u uw eerste vereiste opstelling hebt voltooid, leest het leerprogramma op [ verbindend uw  [!DNL Demandbase]  rekening met Experience Platform ](../../tutorials/ui/create/data-partners/demandbase.md) om uw integratie te beginnen.
+Zodra u uw in de eerste plaats vereiste opstelling hebt voltooid, lees het leerprogramma op [ verbindend uw  [!DNL Demandbase]  rekening met Experience Platform ](../../tutorials/ui/create/data-partners/demandbase.md) om uw integratie te beginnen.
 
 ## Veelgestelde vragen {#faq}
 
