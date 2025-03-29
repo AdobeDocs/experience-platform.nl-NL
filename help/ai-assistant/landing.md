@@ -3,9 +3,9 @@ title: AI Assistant in Adobe Experience Platform-productdocumentatie
 description: Ga aan de slag met AI Assistant in Adobe Experience Platform.
 feature: AI Assistant
 exl-id: bcb86a41-d5d8-4c1a-a86d-79fa0c167bc7
-source-git-commit: a34c3cae803c9e70530dbd382fbec2ece17fc71a
+source-git-commit: eb62627e81f361d21026cba368802ebace4a8dde
 workflow-type: tm+mt
-source-wordcount: '1095'
+source-wordcount: '1156'
 ht-degree: 0%
 
 ---
@@ -441,6 +441,10 @@ Bekijk de volgende video&#39;s voor extra voorbeelden van AI Assistant-gebruikss
 >[!ENDTABS]
 
 ### Verhoog uw productiviteit met AI Assistant
+
+>[!NOTE]
+>
+>Dit werkboek is voor het laatst bijgewerkt op 31 maart 2025. Sindsdien zijn sommige mogelijkheden wellicht geëvolueerd of uitgebreid. Bovendien, kunnen een paar eigenschappen waarnaar in deze gids wordt verwezen nog in vroege toegang zijn. Als u iets tegenkomt dat nog niet beschikbaar is in uw omgeving en u geïnteresseerd bent in het verkennen ervan, neemt u contact op met uw Adobe-accountteam om vroege toegang aan te vragen.
 
 Lees het volgende voor een handleiding over hoe u uw productiviteit kunt verhogen met AI Assistant.
 

@@ -2,7 +2,7 @@
 title: Prioriteit naamruimte
 description: Leer over namespace prioriteit in de Dienst van de Identiteit.
 exl-id: bb04f02e-3826-45af-b935-752ea7e6ed7c
-source-git-commit: 7174c2c0d8c4ada8d5bba334492bad396c1cfb34
+source-git-commit: 8157eaf3d79523995fd50d02234e7873cffcea14
 workflow-type: tm+mt
 source-wordcount: '1801'
 ht-degree: 1%
@@ -73,11 +73,11 @@ Momenteel, beïnvloedt de nameprioriteit systeemgedrag van het Profiel van de Kl
 
 ![ een diagram van namespace prioritaire toepassingswerkingsgebied ](../images/namespace-priority/application-scope.png)
 
-### Identiteitsservice: algoritme voor identiteitsoptimalisatie
+## Identiteitsservice: algoritme voor identiteitsoptimalisatie
 
 Voor relatief complexe grafiekstructuren speelt naamruimteprioriteit een belangrijke rol bij het verwijderen van de juiste koppelingen wanneer de scenario&#39;s voor het samenvouwen van grafieken worden uitgevoerd. Voor meer informatie lees het [ overzicht van het algoritme van de identiteitsoptimalisering ](../identity-graph-linking-rules/identity-optimization-algorithm.md).
 
-### Klantprofiel in realtime: primaire identiteitsbepaling voor ervaringsgebeurtenissen
+## Klantprofiel in realtime: primaire identiteitsbepaling voor ervaringsgebeurtenissen
 
 * Zodra u identiteitsmontages voor een bepaalde zandbak hebt gevormd, zal de primaire identiteit voor ervaringsgebeurtenissen door de hoogste namespace prioriteit in de configuratie worden bepaald.
    * Dit komt omdat ervaringsgebeurtenissen dynamisch van aard zijn. Een identiteitskaart kan drie of meer identiteiten bevatten, en namespace prioriteit zorgt ervoor dat belangrijkste namespace aan de ervaringsgebeurtenis wordt geassocieerd.
@@ -122,7 +122,7 @@ Gezien de bovenstaande configuraties, zullen gebruikersacties en bepaling van de
 
 {style="table-layout:auto"}
 
-### Segmentatieservice: opslag van metagegevens voor segmentlidmaatschap
+## Segmentatieservice: opslag van metagegevens voor segmentlidmaatschap
 
 ![ A diagram van de opslag van het segmentlidmaatschap ](../images/namespace-priority/segment-membership-storage.png)
 
@@ -139,7 +139,7 @@ Stel dat er twee profielen zijn:
 
 Als John en Jane een apparaat delen, dan brengt ECID (Webbrowser) van één persoon aan een andere over. Nochtans, beïnvloedt dit niet de informatie van het segmentlidmaatschap die tegen John en Jane wordt opgeslagen.
 
-Als de segmentkwalificatiecriteria uitsluitend gebaseerd waren op anonieme gebeurtenissen die tegen de ECID waren opgeslagen, zou Jane in aanmerking komen voor dat segment
+Als de segmentkwalificatiecriteria uitsluitend gebaseerd waren op anonieme gebeurtenissen die tegen de ECID waren opgeslagen, zou Jane in aanmerking komen voor dat segment.
 
 ## Gevolgen voor andere Experience Platform-services {#implications}
 
