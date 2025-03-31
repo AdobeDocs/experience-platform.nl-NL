@@ -1,10 +1,10 @@
 ---
-keywords: Experience Platform;home;populaire onderwerpen;schema;Schema;veldgroep;Veldgroep;Veldgroepen;veldgroepen;gegevenstype;gegevenstypen;Gegevenstypen;Gegevenstype;schemaontwerp;datatype;Datatype;Gegevenstype;Schema's;Schema's;Schema-ontwerp;Kaart;Kaart;
+keywords: Experience Platform;home;populaire onderwerpen;schema;Schema;veldgroep;Veldgroep;Veldgroepen;Veldgroepen;Gegevenstype;Gegevenstypen;Gegevenstype;Schema-ontwerp;Datatype;Datatype;Gegevenstype;Schema's;Schema's;Schema-ontwerp;Kaart;Kaart;
 solution: Experience Platform
 title: Beperkingen voor XDM-veldtypen
 description: Een verwijzing voor gebiedstype beperkingen in het Model van Gegevens van de Ervaring (XDM), met inbegrip van de andere rangschikkingsformaten zij aan en kunnen worden in kaart gebracht hoe te om uw eigen gebiedstypes in API te bepalen.
 exl-id: 63839a28-6d26-46f1-8bbf-b524e82ac4df
-source-git-commit: eb1cf204e95591082b27dc97cd3c709a23b20b08
+source-git-commit: ca8859c7b71d1b0aad30880ff066d2b4b33b0a35
 workflow-type: tm+mt
 source-wordcount: '634'
 ht-degree: 0%
@@ -19,7 +19,7 @@ In schema&#39;s van het Model van Gegevens van de Ervaring (XDM), beperkt het ty
 
 Alvorens deze gids te gebruiken, te herzien gelieve de [ grondbeginselen van schemacompositie ](./composition.md) voor een inleiding aan schema XDM, klassen, en groepen van het schemagebied.
 
-Als u van plan bent om uw eigen gebiedstypes in API te bepalen, adviseert men sterk dat u met de [ de ontwikkelaarsgids van de Registratie van het Schema ](../api/getting-started.md) begint om te leren hoe te om gebiedsgroepen en gegevenstypes tot stand te brengen om uw douanegebieden in te omvatten. Als u het Experience Platform UI gebruikt om uw schema&#39;s tot stand te brengen, zie de gids op [ bepalend gebieden in UI ](../ui/fields/overview.md) hoe te leren om beperkingen op gebieden uit te voeren die u binnen de groepen van het douanegebied en gegevenstypes bepaalt.
+Als u van plan bent om uw eigen gebiedstypes in API te bepalen, adviseert men sterk dat u met de [ de ontwikkelaarsgids van de Registratie van het Schema ](../api/getting-started.md) begint om te leren hoe te om gebiedsgroepen en gegevenstypes tot stand te brengen om uw douanegebieden in te omvatten. Als u Experience Platform UI gebruikt om uw schema&#39;s tot stand te brengen, zie de gids op [ bepalende gebieden in UI ](../ui/fields/overview.md) leren hoe te om beperkingen op gebieden uit te voeren die u binnen de groepen van het douanegebied en gegevenstypes bepaalt.
 
 ## Basisstructuur en voorbeelden {#basic-types}
 
@@ -130,7 +130,7 @@ In de volgende tabel wordt beschreven hoe elk XDM-type wordt vertegenwoordigd in
       <td>[!UICONTROL Boolean]</td>
       <td>
         <pre class="JSON language-JSON hljs">
-{"type": "string"}</pre>
+{"type": "boolean"}</pre>
       </td>
       <td><code>true</code></td>
     </tr>
