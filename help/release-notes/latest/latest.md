@@ -2,9 +2,9 @@
 title: Aanvullende informatie van maart 2025 voor Adobe Experience Platform
 description: Aanvullende informatie van maart 2025 voor Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 16056a35624b4a053e9f50acef0ec3f63254a065
+source-git-commit: edcdf84a8cb954c15f7dd235fb14cf14e11e22c8
 workflow-type: tm+mt
-source-wordcount: '1212'
+source-wordcount: '1235'
 ht-degree: 26%
 
 ---
@@ -19,6 +19,7 @@ Updates van bestaande functies en documentatie in Adobe Experience Platform:
 
    - [Dashboards](#dashboards)
    - [Bestemmingen](#destinations)
+   - [Samenstelling van Federated-doelgroep](#federated-audience-composition)
    - [Segmentatieservice](#segmentation-service)
    - [Bronnen](#sources)
 
@@ -62,6 +63,10 @@ Voor meer informatie over dashboards, met inbegrip van hoe u toegangsrechten ver
 {style="table-layout:auto"}
 
 Voor meer informatie raadpleegt u het [overzicht van bestemmingen](../../destinations/home.md).
+
+## Samenstelling van Federated-doelgroep {#federated-audience-composition}
+
+Voor informatie over de recentste updates voor de Federatieve Samenstelling van het Publiek, lees [ specifieke versienota&#39;s ](https://experienceleague.adobe.com/nl/docs/federated-audience-composition/using/release-notes) hier.
 
 ## Segmentatieservice {#segmentation-service}
 
