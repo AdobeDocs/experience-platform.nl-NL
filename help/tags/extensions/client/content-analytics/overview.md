@@ -1,13 +1,11 @@
 ---
 title: Overzicht Adobe Content Analytics-extensie
 description: Meer informatie over de tagextensie Adobe Content Analytics in Adobe Experience Platform.
-hide: true
-hidefromtoc: true
 exl-id: fcc46c86-e765-4bc7-bfdf-b8b10e8afacc
-source-git-commit: 80bfaeb7fec229e77c83230a01b75a200cf37e29
+source-git-commit: 5f852b69b0eb0a5e6a9119f14eb9e1f51c8a2e33
 workflow-type: tm+mt
-source-wordcount: '598'
-ht-degree: 1%
+source-wordcount: '609'
+ht-degree: 0%
 
 ---
 
@@ -78,7 +76,8 @@ In de sectie **[!UICONTROL Experience Capture & Definition]** kunt u **[!UICONTR
 1. Schakel **[!UICONTROL Include experiences]** in.
 1. Optioneel. Geef de parameters op voor de weergave van inhoud op uw website. De parameters zijn nul of meer combinaties van a **[!UICONTROL Domain regular expression]** en **[!UICONTROL Query parameters]**.
    1. Voer een **[!UICONTROL Domain regular expression]** in, bijvoorbeeld `^(?!.*\b(store|help|admin)\b)` .
-   1. Geef een door komma&#39;s gescheiden lijst op van **[!UICONTROL Query parameters,]** bijvoorbeeld `outdoors, patio, kitchen` .
+   1. Geef bijvoorbeeld een door komma&#39;s gescheiden lijst op van **[!UICONTROL Query parameters]** . `outdoors, patio, kitchen`
+Gebruik ![ dicht ](./assets/CrossSize300.svg) om individuele parameters te schrappen, of **[!UICONTROL Clear all]** om alle parameters te schrappen.
 1. Selecteer **[!UICONTROL Remove]** als u een combinatie van de reguliere expressie van het domein en queryparameters wilt verwijderen.
 1. Selecteer **[!UICONTROL Add Regex]** als u een andere combinatie van een reguliere expressie en queryparameters wilt toevoegen.
 
