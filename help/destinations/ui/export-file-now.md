@@ -3,7 +3,7 @@ title: Bestanden op aanvraag exporteren naar batchbestemmingen met de gebruikers
 type: Tutorial
 description: Leer hoe u bestanden op aanvraag exporteert naar batchbestemmingen met de gebruikersinterface van Experience Platform.
 exl-id: 0cbe5089-b73d-4584-8451-2fc34d47c357
-source-git-commit: 47d0e2a7fae973edfda035d046f66c88d34bf8b2
+source-git-commit: d3bd76f5b36b6a6afcb67fe923eb8e4f3d7a9415
 workflow-type: tm+mt
 source-wordcount: '649'
 ht-degree: 0%
@@ -63,7 +63,7 @@ Om dossiers op bestelling naar partijbestemmingen uit te voeren, moet u met succ
 Houd rekening met het volgende wanneer u het besturingselement **[!UICONTROL Export file now]** gebruikt:
 
 * **[!UICONTROL Export file now]** werkt alleen voor publiek wiens schema in de batchactiveringsgegevens de huidige datum overlapt. Dit omvat publiek met programma&#39;s die geen einddatum (de uitvoerfrequentie van **[!UICONTROL Once]**) hebben, of waar de einddatum nog niet is overgegaan.
-* Wanneer u een publiek toevoegt aan een bestaande gegevensstroom, wacht u minstens 15 minuten tot u het besturingselement **[!UICONTROL Export file now]** gebruikt.
+* Wanneer het toevoegen van een publiek aan een bestaande dataflow, wacht minstens **één uur** alvorens de **[!UICONTROL Export file now]** controle te gebruiken.
 * Als u het samenvoegbeleid van een publiek verandert, of als u een publiek creeert dat een nieuw samenvoegbeleid gebruikt, wacht 24 uur tot het gebruiken van de **[!UICONTROL Export file now]** controle.
 
 ## UI-foutberichten {#ui-error-messages}

@@ -3,9 +3,9 @@ title: Soorten publiek activeren om exportdoelen voor batchprofielen te gebruike
 type: Tutorial
 description: Leer hoe u het publiek in Adobe Experience Platform activeert door het naar batchbestemmingen te sturen.
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
-source-git-commit: 8a1ac01c503bd1e5b9873714514d438b22f45cfb
+source-git-commit: f01a044d3d12ef457c6242a0b93acbfeeaf48588
 workflow-type: tm+mt
-source-wordcount: '4235'
+source-wordcount: '4282'
 ht-degree: 1%
 
 ---
@@ -145,6 +145,10 @@ Selecteer **[!UICONTROL Export full files]** om het exporteren van een bestand m
 Gebruik de optie **[!UICONTROL Scheduled]** om de activeringstaak op een vast tijdstip uit te voeren. Deze optie zorgt ervoor dat Experience Platform-profielgegevens elke dag op hetzelfde tijdstip worden geëxporteerd. De profielen die u exporteert, zijn echter mogelijk niet de meest actuele, afhankelijk van het feit of de batchsegmentatietaak is voltooid voordat de activeringstaak wordt uitgeschakeld.
 
    ![ Beeld dat de Geplande optie in de activeringsstroom voor partijbestemmingen benadrukt en de tijdselecteur toont.](../assets/ui/activate-batch-profile-destinations/scheduled-option.png)
+
+   >[!IMPORTANT]
+   >
+   >Wanneer het in kaart brengen van een publiek dat binnen de laatste 24 uren werd gecreeerd en door [ partijsegmentatie ](../../segmentation/methods/batch-segmentation.md) geëvalueerd, plaats uw dagelijkse uitvoerschema om de volgende dag bij het vroegst te beginnen. Zo weet u zeker dat de dagelijkse batchevaluatietaak eerst wordt uitgevoerd en dat u volledige publieksgegevens exporteert.
 
 3. Gebruik de kiezer van **[!UICONTROL Date]** om de dag of het interval te kiezen waarop het exporteren moet plaatsvinden. Voor dagelijkse exportbewerkingen kunt u het beste uw begin- en einddatum instellen zodat deze aansluiten op de duur van uw campagnes op de downstreamplatforms.
 

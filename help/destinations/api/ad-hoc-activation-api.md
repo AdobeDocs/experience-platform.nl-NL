@@ -5,7 +5,7 @@ title: Het publiek activeren naar batchbestemmingen via de API voor ad-hocactive
 description: Dit artikel illustreert de end-to-end workflow voor het activeren van het publiek via de API voor ad-hocactivering, inclusief de segmentatietaken die plaatsvinden vóór activering.
 type: Tutorial
 exl-id: 1a09f5ff-0b04-413d-a9f6-57911a92b4e4
-source-git-commit: deecaf0af269b64af507126dba0523d2b16a5721
+source-git-commit: f01a044d3d12ef457c6242a0b93acbfeeaf48588
 workflow-type: tm+mt
 source-wordcount: '1606'
 ht-degree: 0%
@@ -16,7 +16,7 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
->Na het voltooien van de Beta-fase is [!DNL ad-hoc activation API] nu algemeen beschikbaar voor alle klanten in de Experience Platform. In de GA-versie is de API bijgewerkt naar versie 2. Stap 4 ([ verkrijgt de recentste identiteitskaart van de publiekuitvoer ](#segment-export-id)) wordt niet meer vereist, aangezien API niet uitvoeridentiteitskaart meer vereist.
+>Na de Beta-fase is de [!DNL ad-hoc activation API] nu algemeen beschikbaar voor alle Experience Platform-klanten. In de GA-versie is de API bijgewerkt naar versie 2. Stap 4 ([ verkrijgt de recentste identiteitskaart van de publiekuitvoer ](#segment-export-id)) wordt niet meer vereist, aangezien API niet uitvoeridentiteitskaart meer vereist.
 >
 >Zie [ in werking stellen de ad-hoc activeringsbaan ](#activation-job) verder hieronder in dit leerprogramma voor meer informatie.
 
@@ -30,21 +30,19 @@ In het onderstaande diagram ziet u de end-to-end workflow voor het activeren van
 
 ![ ad-hoc-activering ](../assets/api/ad-hoc-activation/ad-hoc-activation-overview.png)
 
-
-
 ## Gebruiksscenario’s {#use-cases}
 
-### Verkoop of promoties van Flash
+### Flash-verkoop of -promoties
 
-Een online detailhandelaar bereidt een beperkte flitsverkoop voor en wil klanten op korte termijn op de hoogte brengen. Via de API voor ad-hocactivering van Experience Platforms kan het marketingteam op aanvraag soorten publiek exporteren en snel e-mails met speciale acties naar de klantenbasis sturen.
+Een online retailer bereidt een beperkte flash-verkoop voor en wil klanten op korte termijn op de hoogte stellen. Via de API voor ad-hocactivering van Experience Platform kan het marketingteam soorten publiek op aanvraag exporteren en snel e-mails met speciale acties naar de klantenbasis sturen.
 
 ### Actuele gebeurtenissen of het doorbreken van nieuws
 
-Een hotel verwacht het hoogteweer in de komende dagen en het team wil de aankomende gasten snel informeren, zodat ze dienovereenkomstig kunnen plannen. Het marketingteam kan de API voor ad-hocactivering van het Experience Platform gebruiken om het publiek op aanvraag te exporteren en de gasten op de hoogte te stellen.
+Een hotel verwacht het hoogteweer in de komende dagen en het team wil de aankomende gasten snel informeren, zodat ze dienovereenkomstig kunnen plannen. Het marketingteam kan de API voor ad-hocactivering van Experience Platform gebruiken om een publiek op aanvraag te exporteren en de gasten op de hoogte te stellen.
 
 ### Integratie testen
 
-IT-beheerders kunnen de API voor ad-hocactivering van Experience Platforms gebruiken om doelgroepen op aanvraag te exporteren, zodat ze hun aangepaste integratie met Adobe Experience Platform kunnen testen en kunnen controleren of alles correct werkt.
+IT-managers kunnen de API voor ad-hocactivering van Experience Platform gebruiken om soorten publiek op aanvraag te exporteren, zodat ze hun aangepaste integratie met Adobe Experience Platform kunnen testen en kunnen controleren of alles correct werkt.
 
 ## Guardrails {#guardrails}
 
@@ -68,7 +66,7 @@ Voordat u aanroepen kunt uitvoeren naar de Adobe Experience Platform API&#39;s, 
 
 ## Stap 2: Referenties verzamelen {#credentials}
 
-Om vraag aan Platform APIs te maken, moet u het [ authentificatieleerprogramma ](https://www.adobe.com/go/platform-api-authentication-en) eerst voltooien. Het voltooien van de autorisatiezelfstudie biedt de waarden voor elk van de vereiste headers in alle Experience Platform API-aanroepen, zoals hieronder wordt getoond:
+Om vraag aan Platform APIs te maken, moet u het [ authentificatieleerprogramma ](https://www.adobe.com/go/platform-api-authentication-en) eerst voltooien. Als u de zelfstudie over verificatie voltooit, krijgt u de waarden voor elk van de vereiste headers in alle Experience Platform API-aanroepen, zoals hieronder wordt getoond:
 
 * Autorisatie: Drager `{ACCESS_TOKEN}`
 * x-api-key: `{API_KEY}`
@@ -82,7 +80,7 @@ De middelen in Experience Platform kunnen aan specifieke virtuele zandbakken wor
 >
 >Voor meer informatie over zandbakken in Experience Platform, zie de [ documentatie van het zandbakoverzicht ](../../sandboxes/home.md).
 
-Alle verzoeken die een nuttige lading (POST, PUT, PATCH) bevatten vereisen een extra media type kopbal:
+Alle verzoeken die een lading (POST, PUT, PATCH) bevatten vereisen een extra media typekopbal:
 
 * Inhoudstype: `application/json`
 
@@ -126,7 +124,7 @@ Adobe Experience Platform voert elke 24 uur een geplande segmentatietaak uit. De
 
 >[!IMPORTANT]
 >
->Neem nota van de volgende éénmalige beperking: Alvorens een ad-hoc activeringsbaan in werking te stellen, zorg ervoor dat minstens 20 minuten van het moment zijn overgegaan dat het publiek eerst volgens het programma werd geactiveerd u in [ Stap 3 - creeer activeringsstroom in het Platform UI ](#activation-flow) plaatste.
+>Noteer de volgende eenmalige beperking: Alvorens een ad-hoc activeringsbaan in werking te stellen, zorg ervoor dat minstens één uur van het moment is overgegaan dat het publiek eerst volgens het programma werd geactiveerd u in [ Stap 3 - creeer activeringsstroom in het Platform UI ](#activation-flow) plaatste.
 
 Voordat u een ad-hocactiveringstaak uitvoert, moet u controleren of de geplande doeluitvoertaak voor uw publiek is voltooid. Zie [ bestemmingdataflow controle ](../../dataflows/ui/monitor-destinations.md) voor informatie over hoe te om het statuut van activeringsstromen te controleren. Als in uw activeringsgegevens bijvoorbeeld de status **[!UICONTROL Processing]** wordt weergegeven, wacht u tot deze is voltooid voordat de ad-hocactiveringstaak wordt uitgevoerd om een volledig bestand te exporteren.
 
@@ -239,7 +237,7 @@ Een geslaagde reactie retourneert HTTP-status 200.
 
 ## API-foutafhandeling {#api-error-handling}
 
-Destination SDK API-eindpunten volgen de algemene API-foutberichtbeginselen voor Experience Platforms. Verwijs naar [ API statuscodes ](../../landing/troubleshooting.md#api-status-codes) en [ de fouten van de verzoekkopbal ](../../landing/troubleshooting.md#request-header-errors) in de het oplossen van problemengids van het Platform.
+Destination SDK API-eindpunten volgen de algemene beginselen van Experience Platform API-foutberichten. Verwijs naar [ API statuscodes ](../../landing/troubleshooting.md#api-status-codes) en [ de fouten van de verzoekkopbal ](../../landing/troubleshooting.md#request-header-errors) in de het oplossen van problemengids van het Platform.
 
 ### API-foutcodes en specifieke berichten voor de API voor ad-hocactivering {#specific-error-messages}
 
@@ -253,4 +251,4 @@ Wanneer u de API voor ad-hocactivering gebruikt, kunt u foutberichten tegenkomen
 ## Verwante informatie {#related-information}
 
 * [Verbinden met batchbestemmingen en gegevens activeren met de Flow Service API](/help/destinations/api/connect-activate-batch-destinations.md)
-* [(Beta) Bestanden op aanvraag exporteren naar batchbestemmingen met behulp van de interface van het Experience Platform](/help/destinations/ui/export-file-now.md)
+* [(Beta) Bestanden op aanvraag exporteren naar batchbestemmingen met behulp van de interface van Experience Platform](/help/destinations/ui/export-file-now.md)
