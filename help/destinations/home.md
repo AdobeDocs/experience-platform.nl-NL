@@ -2,9 +2,9 @@
 title: Overzicht van doelen
 description: Doelen zijn vooraf gebouwde integraties met bestemmingsplatforms die het mogelijk maken gegevens van Adobe Experience Platform naadloos in te schakelen. Met Doelen in de Adobe Experience Platform kunt u bekende en onbekende gegevens activeren voor marketingcampagnes over meerdere kanalen, e-mailcampagnes, gerichte advertenties en vele andere gebruiksgevallen.
 exl-id: afd07ddc-652e-4e22-b298-feba27332462
-source-git-commit: 6d97f132788a249e0bf5c293e34d9d529325f099
+source-git-commit: 8d57694ffe0ac962b988ebcf9f35fbb7bf816c04
 workflow-type: tm+mt
-source-wordcount: '1162'
+source-wordcount: '1287'
 ht-degree: 3%
 
 ---
@@ -45,13 +45,13 @@ De controles in de [ werkruimte van bestemmingen ](./ui/destinations-workspace.m
 
 ## Doeltypen en -categorieën {#types-and-categories}
 
-Met Experience Platform, kunt u gegevens aan diverse soorten bestemmingen activeren, om aan uw activeringsgebruiksgevallen te voldoen. De bestemmingen variëren van op API-Gebaseerde integratie, tot integratie met dossierontvangstsystemen, de bestemmingen van de profielraadpleging, en meer. Voor gedetailleerde informatie over alle beschikbare bestemmingen, lees de [ bestemmingstypes en de categorieën overzicht ](./destination-types.md).
+Met Experience Platform kunt u gegevens activeren voor verschillende soorten doelen, zodat u tevreden bent met de gebruiksproblemen bij activering. De bestemmingen variëren van op API-Gebaseerde integratie, tot integratie met dossierontvangstsystemen, de bestemmingen van de profielraadpleging, en meer. Voor gedetailleerde informatie over alle beschikbare bestemmingen, lees de [ bestemmingstypes en de categorieën overzicht ](./destination-types.md).
 
-## Adobe-gebouwde en partner-gebouwde bestemmingen {#adobe-and-partner-built-destinations}
+## Door Adobe gebouwde en door partners gebouwde bestemmingen {#adobe-and-partner-built-destinations}
 
-Sommige schakelaars in de de bestemmingscatalogus van het Experience Platform worden gebouwd en door Adobe gehandhaafd, terwijl anderen door partnerondernemingen worden gebouwd en worden gehandhaafd gebruikend [ Destination SDK ](/help/destinations/destination-sdk/overview.md). Een nota bij de bovenkant van de documentatiepagina voor elke partner-gebouwde schakelaarvraag uit als een bestemming door de partner wordt gecreeerd en gehandhaafd. Bijvoorbeeld, wordt de [ schakelaar van Amazon S3 ](/help/destinations/catalog/cloud-storage/amazon-s3.md) gecreeerd door Adobe, terwijl de [ schakelaar van TikTok ](/help/destinations/catalog/social/tiktok.md) door het team van TikTok wordt gecreeerd en gehandhaafd.
+Sommige schakelaars in de de bestemmingscatalogus van Experience Platform worden gebouwd en door Adobe gehandhaafd, terwijl anderen door partnerbedrijven worden gebouwd en worden gehandhaafd gebruikend [ Destination SDK ](/help/destinations/destination-sdk/overview.md). Een nota bij de bovenkant van de documentatiepagina voor elke partner-gebouwde schakelaarvraag uit als een bestemming door de partner wordt gecreeerd en gehandhaafd. Bijvoorbeeld, wordt de [ schakelaar van Amazon S3 ](/help/destinations/catalog/cloud-storage/amazon-s3.md) gecreeerd door Adobe, terwijl de [ schakelaar van TikTok ](/help/destinations/catalog/social/tiktok.md) door het team van TikTok wordt gecreeerd en gehandhaafd.
 
-Voor partner-authored en onderhouden schakelaars, betekent dit dat de kwesties met de schakelaar door het partnerteam zouden kunnen moeten worden opgelost (contactmethode die in de nota in de documentatiepagina wordt verstrekt). Neem voor problemen met door de Adobe ontworpen en onderhouden connectors contact op met uw Adobe of de klantenservice.
+Voor partner-authored en onderhouden schakelaars, betekent dit dat de kwesties met de schakelaar door het partnerteam zouden kunnen moeten worden opgelost (contactmethode die in de nota in de documentatiepagina wordt verstrekt). Neem voor problemen met door Adobe ontworpen en onderhouden connectors contact op met uw Adobe-vertegenwoordiger of de klantenservice.
 
 ## Doelen en toegangscontroles {#access-controls}
 
@@ -61,7 +61,7 @@ De volgende lijst schetst de toestemmingen en toestemmingscombinaties die worden
 
 | Machtigingsniveau | Beschrijving |
 | ---- | ---- |
-| **[!UICONTROL View Destinations]** | Om tot het bestemmingslusje in het Experience Platform UI toegang te hebben, hebt u de **[!UICONTROL View Destinations]** [ toegangsbeheertoestemming ](/help/access-control/home.md#permissions) nodig. |
+| **[!UICONTROL View Destinations]** | Om tot het bestemmingslusje in Experience Platform UI toegang te hebben, hebt u de **[!UICONTROL View Destinations]** [ toegangsbeheertoestemming ](/help/access-control/home.md#permissions) nodig. |
 | **[!UICONTROL View Destinations]**, **[!UICONTROL Manage Destinations]** | Om met bestemmingen te verbinden, hebt u **[!UICONTROL View Destinations]** en **[!UICONTROL Manage Destinations]** [ toegangsbeheertoestemmingen ](/help/access-control/home.md#permissions) nodig. |
 | **[!UICONTROL View Destinations]** , **[!UICONTROL Activate Destinations]** , **[!UICONTROL View Profiles]** en **[!UICONTROL View Segments]** | Om publiek aan bestemmingen te activeren en de [ toewijzingsstap ](ui/activate-batch-profile-destinations.md#mapping) van het werkschema toe te laten, hebt u **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, en **[!UICONTROL View Segments]** [ toegangsbeheertoestemmingen ](/help/access-control/home.md#permissions) nodig. |
 | **[!UICONTROL View Destinations]** , **[!UICONTROL Activate Segments without Mapping]** , **[!UICONTROL View Profiles]** en **[!UICONTROL View Segments]** | Om publiek van bestaande dataflows toe te voegen of te verwijderen zonder toegang tot de [ toewijzingsstap ](ui/activate-batch-profile-destinations.md#mapping) van het werkschema te hebben, hebt u **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Segments without Mapping]**, **[!UICONTROL View Profiles]**, en **[!UICONTROL View Segments]** [ toegangsbeheertoestemmingen ](/help/access-control/home.md#permissions) nodig. |
@@ -83,6 +83,14 @@ Met toegangsbeheer op basis van kenmerken in Adobe Experience Platform kunnen be
 Met op attribuut-gebaseerde toegangsbeheer, kunt u toewijzingsconfiguraties op gebieden toepassen die u toestemmingen hebt. Bovendien kunt u geen gegevens naar een bestemming uitvoeren als u geen toegang tot alle gebieden in de dataset hebt.
 
 Voor meer informatie over hoe de bestemmingen met op attribuut-gebaseerde toegangscontroles werken, lees het [ op attribuut-gebaseerde overzicht van de toegangscontrole ](../access-control/abac/overview.md#destinations).
+
+## Profiel verwijderen van doelen {#profile-removal}
+
+Wanneer een profiel wordt verwijderd uit een publiek dat aan een bestemming wordt geactiveerd, wordt dat profiel ook verwijderd uit het overeenkomstige publiek in het bestemmingsplatform. Als bijvoorbeeld een profiel wordt verwijderd uit een publiek dat eerder is geactiveerd voor LinkedIn, wordt dat profiel verwijderd uit de gekoppelde [!UICONTROL LinkedIn Matched Audience] .
+
+Profielverwijdering van bestemmingen — ook wel segmentatie genoemd — vindt plaats op hetzelfde moment als segmentatie. Zodra een profiel uit een publiek in Experience Platform wordt verwijderd, weerspiegelt de volgende geplande gegevensstroom aan de bestemming die verandering en verwijdert het profiel uit het bestemmingspubliek.
+
+De werkelijke snelheid waarmee de profielverwijdering van kracht wordt op het doelplatform, kan variëren afhankelijk van de opname en het verwerkingsgedrag van de bestemming.
 
 ## Controle van de bestemmingen {#destinations-monitoring}
 
@@ -120,8 +128,8 @@ Zie de stap **[!UICONTROL Review]** in de volgende handleidingen voor meer infor
 
 Door om het even welke Doelen te gebruiken die als bèta (&quot;Beta&quot;) worden geëtiketteerd, bevestigt u hierbij dat Beta ***&quot;zoals is&quot;zonder enige garantie van welke aard*** wordt verstrekt.
 
-Adobe is niet verplicht de Beta te onderhouden, te corrigeren, bij te werken, te wijzigen, te wijzigen of anderszins te ondersteunen. U wordt aangeraden informatief te zijn en op geen enkele wijze te vertrouwen op de juiste werking of prestaties van dergelijke Beta en/of begeleidende materialen. De Beta wordt beschouwd als vertrouwelijke informatie over Adobe.
+Adobe is niet verplicht de Beta te onderhouden, te corrigeren, bij te werken, te wijzigen, te wijzigen of anderszins te ondersteunen. U wordt aangeraden informatief te zijn en op geen enkele wijze te vertrouwen op de juiste werking of prestaties van dergelijke Beta en/of begeleidende materialen. De Beta wordt beschouwd als vertrouwelijke informatie van Adobe.
 
-Elke &quot;feedback&quot; (informatie over de Beta, inclusief maar niet beperkt tot problemen of defecten die u tegenkomt bij het gebruik van de Beta, suggesties, verbeteringen en aanbevelingen) die u aan de Adobe verstrekt, wordt toegewezen aan de Adobe, inclusief alle rechten, titel en interesse in en voor dergelijke feedback.
+Alle &quot;Feedback&quot; (informatie over de Beta, inclusief maar niet beperkt tot problemen of defecten die u tegenkomt bij het gebruik van de Beta, suggesties, verbeteringen en aanbevelingen) die u aan Adobe verstrekt, worden hierbij aan Adobe toegewezen, inclusief alle rechten, titel en interesse in en voor dergelijke feedback.
 
 Verzend Open Feedback of maak een Support Ticket om uw suggesties te delen of een bug te melden en een functieverbetering te zoeken.
