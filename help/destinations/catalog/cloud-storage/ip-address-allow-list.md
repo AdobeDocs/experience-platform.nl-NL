@@ -3,9 +3,9 @@ title: IP adres lijst van gewenste personen voor op dossier-gebaseerde cloudopsl
 type: Documentation
 description: Deze pagina verstrekt IP waaiers die u aan uw lijst van gewenste personen kunt toevoegen, om gegevens van Experience Platform naar de bestemmingen van de wolkenopslag veilig uit te voeren.
 exl-id: 0b8086aa-786e-4244-b2a5-a3f57ad59a8b
-source-git-commit: ee4c42a2298c588590b1535524ed8f3dfe13b603
+source-git-commit: 7cf15550d7619e247052efc4d9b4c72c5d32641a
 workflow-type: tm+mt
-source-wordcount: '234'
+source-wordcount: '284'
 ht-degree: 0%
 
 ---
@@ -40,14 +40,14 @@ Adobe raadt u aan de volgende IP-bereiken aan een lijst van gewenste personen to
 ## Vereist voor alle klanten {#all-customers}
 
 * `52.247.108.70`
-<!-- 
-## US customers running on AWS {#aws}
 
-The IP range below applies to Experience Platform customers running on Amazon Web Services (AWS). See the [Experience Platform Multi-Cloud overview](../../../landing/multi-cloud.md) for more information.
+## Amerikaanse klanten die op AWS draaien {#aws}
+
+Het onderstaande IP-bereik is van toepassing op Experience Platform-klanten die op Amazon Web Services (AWS) draaien. Zie het [ overzicht van de Multi-Cloud van Experience Platform ](../../../landing/multi-cloud.md) voor meer informatie.
 
 >[!NOTE]
 >
->This IP range is not supported for customers running on AWS who use file-based destinations to export data to Amazon S3. -->
+>Dit IP-bereik wordt niet ondersteund voor klanten die op AWS actief zijn en bestandsgebaseerde doelen gebruiken om gegevens naar Amazon S3 te exporteren.
 
 * `66.117.18.0/24`
 

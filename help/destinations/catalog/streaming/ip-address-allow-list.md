@@ -4,9 +4,9 @@ title: IP adres lijst van gewenste personen voor het stromen bestemmingen
 type: Documentation
 description: Deze pagina verstrekt IP waaiers die u aan uw lijst van gewenste personen kunt toevoegen, om gegevens van Experience Platform veilig naar uw eindpunt van HTTP REST API, Amazon Kinesis, of de instantie van de Hubs van de Gebeurtenis te uitvoeren Azure.
 exl-id: f41303bd-c886-4c67-9e39-21efc3f5b768
-source-git-commit: ee4c42a2298c588590b1535524ed8f3dfe13b603
+source-git-commit: 7cf15550d7619e247052efc4d9b4c72c5d32641a
 workflow-type: tm+mt
-source-wordcount: '275'
+source-wordcount: '307'
 ht-degree: 0%
 
 ---
@@ -57,12 +57,12 @@ Adobe adviseert dat u de volgende IP waaiers aan een lijst van gewenste personen
 `52.254.107.0/28`
 `52.254.107.144/28`
 `20.22.83.112`
-<!-- 
-## VA6: US and Americas customers running on AWS {#aws}
 
-The IP range below applies to Experience Platform customers running on Amazon Web Services (AWS). See the [Experience Platform Multi-Cloud overview](../../../landing/multi-cloud.md) for more information.
+## VA6: Amerikaanse en Amerikaanse klanten die op AWS rijden {#aws}
 
-`66.117.18.0/24` -->
+Het onderstaande IP-bereik is van toepassing op Experience Platform-klanten die op Amazon Web Services (AWS) draaien. Zie het [ overzicht van de Multi-Cloud van Experience Platform ](../../../landing/multi-cloud.md) voor meer informatie.
+
+`66.117.18.0/24`
 
 ## NLD2: EMEA-klanten {#emea}
 
