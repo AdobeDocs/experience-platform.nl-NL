@@ -1,12 +1,12 @@
 ---
 keywords: streaming; HTTP-bestemming
 title: HTTP API-verbinding
-description: Gebruik de HTTP API bestemming in Adobe Experience Platform om profielgegevens naar derdeeindpunt van HTTP te verzenden om uw eigen analyses in werking te stellen of andere verrichtingen uit te voeren u op profielgegevens kunt nodig hebben die uit Experience Platform worden uitgevoerd.
-badgeUltimate: label="Ultieme" type="Positive"
+description: Gebruik de HTTP API-bestemming in Adobe Experience Platform om profielgegevens naar het HTTP-eindpunt van derden te verzenden om uw eigen analyses uit te voeren of andere bewerkingen uit te voeren die u nodig hebt voor profielgegevens die uit Experience Platform zijn geëxporteerd.
+badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 165a8085-c8e6-4c9f-8033-f203522bb288
-source-git-commit: fffeb2221c4e25bae8386419de1646c89aa93a06
+source-git-commit: 2fa6997c043ef7ff24b1383dd8626cfe1cca4f54
 workflow-type: tm+mt
-source-wordcount: '2580'
+source-wordcount: '2607'
 ht-degree: 0%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
-> Deze bestemming is beschikbaar slechts aan [ Adobe Real-time Customer Data Platform Ultimate ](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform.html) klanten.
+> Deze bestemming is beschikbaar slechts aan [ Adobe Real-Time Customer Data Platform Ultimate ](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform.html) klanten.
 
 De HTTP API-bestemming is een [!DNL Adobe Experience Platform] streamingbestemming die u helpt profielgegevens naar HTTP-eindpunten van derden te verzenden.
 
@@ -25,7 +25,7 @@ Om profielgegevens naar eindpunten van HTTP te verzenden, moet u eerst [ met de 
 
 ## Gebruiksscenario’s {#use-cases}
 
-Met de HTTP API-bestemming kunt u XDM-profielgegevens en -publiek exporteren naar algemene HTTP-eindpunten. Daar kunt u uw eigen analyses uitvoeren of andere bewerkingen uitvoeren die u nodig hebt voor profielgegevens die uit het Experience Platform zijn geëxporteerd.
+Met de HTTP API-bestemming kunt u XDM-profielgegevens en -publiek exporteren naar algemene HTTP-eindpunten. Daar kunt u uw eigen analyses uitvoeren of andere bewerkingen uitvoeren die u nodig hebt voor profielgegevens die uit Experience Platform zijn geëxporteerd.
 
 De eindpunten van HTTP kunnen of de systemen van klanten of derdeoplossingen zijn.
 
@@ -35,7 +35,7 @@ In deze sectie wordt beschreven welke soorten publiek u naar dit doel kunt expor
 
 | Oorsprong publiek | Ondersteund | Beschrijving |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | ✓ | Het publiek produceerde door de Dienst van de Segmentatie van het Experience Platform [ ](../../../segmentation/home.md). |
+| [!DNL Segmentation Service] | ✓ | Het publiek produceerde door de Dienst van de Segmentatie van Experience Platform [ ](../../../segmentation/home.md). |
 | Aangepaste uploads | ✓ | Het publiek [ ingevoerde ](../../../segmentation/ui/audience-portal.md#import-audience) in Experience Platform van Csv- dossiers. |
 
 {style="table-layout:auto"}
@@ -56,12 +56,12 @@ Raadpleeg de onderstaande tabel voor informatie over het exporttype en de export
 Als u de HTTP API-bestemming wilt gebruiken om gegevens uit Experience Platform te exporteren, moet u aan de volgende voorwaarden voldoen:
 
 * U moet een eindpunt van HTTP hebben dat REST API steunt.
-* Uw eindpunt van HTTP moet het het profielschema van het Experience Platform steunen. Transformatie naar een extern payload-schema wordt niet ondersteund in de HTTP API-bestemming. Verwijs naar de [ uitgevoerde gegevens ](#exported-data) sectie voor een voorbeeld van het schema van de Experience Platform output.
+* Het HTTP-eindpunt moet het Experience Platform-profielschema ondersteunen. Transformatie naar een extern payload-schema wordt niet ondersteund in de HTTP API-bestemming. Verwijs naar de [ uitgevoerde gegevens ](#exported-data) sectie voor een voorbeeld van het de outputschema van Experience Platform.
 * Uw eindpunt van HTTP moet kopballen steunen.
 
 >[!TIP]
 >
-> U kunt [ Adobe Experience Platform Destination SDK ](/help/destinations/destination-sdk/overview.md) aan opstelling ook gebruiken en de profielgegevens van het Experience Platform naar een eindpunt van HTTP verzenden.
+> U kunt [ Adobe Experience Platform Destination SDK ](/help/destinations/destination-sdk/overview.md) aan opstelling ook gebruiken en Experience Platform profielgegevens verzenden naar een eindpunt van HTTP.
 
 ## mTLS-protocolondersteuning en -certificaat {#mtls-protocol-support}
 
@@ -77,11 +77,11 @@ Als u [!DNL Common Name] (CN) en [!DNL Subject Alternative Names] (SAN) wilt con
 
 * [HTTP API mTLS, openbaar certificaat](../../../landing/images/governance-privacy-security/encryption/destinations-public-certificate.zip)
 
-U kunt openbare certificaten ook veilig terugwinnen door een verzoek van de GET tot het eindpunt MTLS te richten. Zie de [ openbare documentatie van het certificaateindpunt ](../../../data-governance/mtls-api/public-certificate-endpoint.md) voor meer informatie.
+U kunt openbare certificaten ook veilig terugwinnen door een verzoek van GET aan het eindpunt MTLS te doen. Zie de [ openbare documentatie van het certificaateindpunt ](../../../data-governance/mtls-api/public-certificate-endpoint.md) voor meer informatie.
 
 ## IP adres lijst van gewenste personen {#ip-address-allowlist}
 
-Om klanten&#39; veiligheid en nalevingsvereisten te ontmoeten, verstrekt het Experience Platform een lijst van statische IPs die u voor de bestemming van HTTP kunt lijsten van gewenste personen API. Verwijs naar [ IP adreslijst van gewenste personen voor het stromen bestemmingen ](/help/destinations/catalog/streaming/ip-address-allow-list.md) voor de volledige lijst van IPs aan lijst van gewenste personen.
+Experience Platform biedt een lijst met statische IP&#39;s die u voor de HTTP API-bestemming kunt lijsten van gewenste personen om aan de beveiligings- en compatibiliteitseisen van klanten te voldoen. Verwijs naar [ IP adreslijst van gewenste personen voor het stromen bestemmingen ](/help/destinations/catalog/streaming/ip-address-allow-list.md) voor de volledige lijst van IPs aan lijst van gewenste personen.
 
 ## Ondersteunde verificatietypen {#supported-authentication-types}
 
@@ -159,6 +159,10 @@ Als u het verificatietype **[!UICONTROL OAuth 2 Client Credentials]** selecteert
 
 ![ Beeld van het scherm UI waar u met de bestemming van HTTP API kunt verbinden, gebruikend OAuth 2 met de authentificatie van de Credentials van de Cliënt.](../../assets/catalog/http/http-api-authentication-oauth2-client-credentials.png)
 
+>[!WARNING]
+> 
+>Als u [!UICONTROL OAuth 2 Client Credentials] -verificatie gebruikt, kan [!UICONTROL Access Token URL] maximaal één queryparameter hebben. Het toevoegen van een [!UICONTROL Access Token URL] met meer vraagparameters kan tot problemen leiden wanneer het verbinden met uw eindpunt.
+
 * **[!UICONTROL Access Token URL]**: De URL aan uw zijde die toegangstokens uitgeeft en, naar keuze, tokens vernieuwt.
 * **[!UICONTROL Client ID]**: De [!DNL client ID] die uw systeem toewijst aan Adobe Experience Platform.
 * **[!UICONTROL Client Secret]**: De [!DNL client secret] die uw systeem toewijst aan Adobe Experience Platform.
@@ -222,11 +226,11 @@ Zie [ publieksgegevens aan het stromen van profieluitvoer bestemmingen ](../../u
 
 ### Doelkenmerken {#attributes}
 
-In de [[!UICONTROL Select attributes]](../../ui/activate-streaming-profile-destinations.md#select-attributes) stap, adviseert de Adobe dat u een uniek herkenningsteken van uw [ verenigingsschema ](../../../profile/home.md#profile-fragments-and-union-schemas) selecteert. Selecteer de unieke id en andere XDM-velden die u naar het doel wilt exporteren.
+In de [[!UICONTROL Select attributes]](../../ui/activate-streaming-profile-destinations.md#select-attributes) stap, adviseert Adobe dat u een uniek herkenningsteken van uw [ verenigingsschema ](../../../profile/home.md#profile-fragments-and-union-schemas) selecteert. Selecteer de unieke id en andere XDM-velden die u naar het doel wilt exporteren.
 
 ## Exportgedrag profiel {#profile-export-behavior}
 
-Experience Platform optimaliseert het gedrag van de profieluitvoer naar uw bestemming van HTTP API, om gegevens naar uw API eindpunt slechts uit te voeren wanneer de relevante updates aan een profiel na publiekskwalificatie of andere significante gebeurtenissen zijn voorgekomen. In de volgende situaties worden profielen naar uw doel geëxporteerd:
+Experience Platform optimaliseert het gedrag voor het exporteren van profielen naar uw HTTP API-bestemming, zodat alleen gegevens naar uw API-eindpunt worden geëxporteerd wanneer relevante updates naar een profiel zijn opgetreden na de kwalificatie van het publiek of andere belangrijke gebeurtenissen. In de volgende situaties worden profielen naar uw doel geëxporteerd:
 
 * De profielupdate werd bepaald door een wijziging in het publiekslidmaatschap voor ten minste een van de doelgroepen. Het profiel is bijvoorbeeld gekwalificeerd voor een van de soorten publiek die aan de bestemming zijn toegewezen of heeft een van de soorten publiek afgesloten die aan de bestemming zijn toegewezen.
 * De profielupdate werd bepaald door een verandering in de [ identiteitskaart ](/help/xdm/field-groups/profile/identitymap.md). Een profiel dat bijvoorbeeld al was gekwalificeerd voor een van de soorten publiek dat aan de bestemming is toegewezen, is toegevoegd aan een nieuwe identiteit in het kenmerk Naamplaatje.
@@ -256,7 +260,7 @@ Vanuit het oogpunt van profielkenmerken bepalen wijzigingen in de vier bovenstaa
 
 ## Back-up van historische gegevens {#historical-data-backfill}
 
-Wanneer u een nieuw publiek aan een bestaande bestemming toevoegt, of wanneer u een nieuw doel en kaartpubliek aan het creeert, voert het Experience Platform historische gegevens van de publiekskwalificatie naar de bestemming uit. Profielen die voor het publiek *kwalificeerden alvorens* het publiek aan de bestemming werd toegevoegd worden uitgevoerd naar de bestemming binnen ongeveer één uur.
+Wanneer u een nieuw publiek aan een bestaande bestemming toevoegt, of wanneer u een nieuw doel creeert en een publiek in kaart brengt aan het, exporteert Experience Platform historische publiekskwalificatiegegevens naar de bestemming. Profielen die voor het publiek *kwalificeerden alvorens* het publiek aan de bestemming werd toegevoegd worden uitgevoerd naar de bestemming binnen ongeveer één uur.
 
 ## Geëxporteerde gegevens {#exported-data}
 
@@ -358,6 +362,6 @@ Hieronder vindt u meer voorbeelden van geëxporteerde gegevens, afhankelijk van 
 
 ## Beperkingen en beleid opnieuw proberen {#limits-retry-policy}
 
-In 95 percent van de tijd, probeert het Experience Platform om een productietolerantie van minder dan 10 minuten voor met succes verzonden berichten met een tarief van minder dan 10.000 verzoeken per seconde voor elke dataflow aan een bestemming van HTTP aan te bieden.
+In 95 percent van de tijd, probeert Experience Platform om een productietolerantie van minder dan 10 minuten voor met succes verzonden berichten met een tarief van minder dan 10.000 verzoeken per seconde voor elke dataflow aan een bestemming van HTTP aan te bieden.
 
-In het geval van ontbroken verzoeken aan uw bestemming van HTTP API, slaat het Experience Platform de ontbroken verzoeken op en probeert tweemaal om de verzoeken naar uw eindpunt te verzenden.
+In het geval van mislukte verzoeken aan uw bestemming van HTTP API, slaat Experience Platform de ontbroken verzoeken op en probeert tweemaal om de verzoeken naar uw eindpunt te verzenden.
