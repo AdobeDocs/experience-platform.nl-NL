@@ -2,9 +2,9 @@
 title: Sandbox Tooling
 description: U kunt Sandboxconfiguraties naadloos exporteren en importeren tussen sandboxen.
 exl-id: f1199ab7-11bf-43d9-ab86-15974687d182
-source-git-commit: 85476ea8a667cf3e74cd7a24da07d81c635e1628
+source-git-commit: 3cedf019cff7ef0aa06da1242798a533196f9b2a
 workflow-type: tm+mt
-source-wordcount: '2264'
+source-wordcount: '2318'
 ht-degree: 0%
 
 ---
@@ -31,7 +31,7 @@ De onderstaande tabel bevat een lijst met [!DNL Adobe Real-Time Customer Data Pl
 | --- | --- | --- |
 | Klantgegevensplatform | Bronnen | De referenties van de bronaccount worden om beveiligingsredenen niet gerepliceerd in de doelsandbox en moeten handmatig worden bijgewerkt. De brongegevensstroom wordt standaard gekopieerd in een conceptstatus. |
 | Klantgegevensplatform | Doelgroepen | Alleen het **[!UICONTROL Customer Audience]** type **[!UICONTROL Segmentation service]** wordt ondersteund. Bestaande labels voor toestemming en bestuur worden in dezelfde importtaak gekopieerd. Het systeem zal automatisch het Standaard Beleid van de Fusie in doelzandbak met de zelfde klasse selecteren XDM wanneer het controleren van de gebiedsdelen van het fusiebeleid. |
-| Klantgegevensplatform | Identiteiten | Het systeem dedupliceert standaard identiteitsnaamruimten voor Adoben automatisch wanneer u deze maakt in de doelsandbox. Het publiek kan slechts worden gekopieerd wanneer alle attributen in publieksregels in het unieschema worden toegelaten. De noodzakelijke schema&#39;s moeten eerst voor verenigd profiel worden bewogen en worden toegelaten. |
+| Klantgegevensplatform | Identiteiten | Het systeem dedupliceert standaard Adobe-naamruimten automatisch wanneer u deze maakt in de doelsandbox. Het publiek kan slechts worden gekopieerd wanneer alle attributen in publieksregels in het unieschema worden toegelaten. De noodzakelijke schema&#39;s moeten eerst voor verenigd profiel worden bewogen en worden toegelaten. |
 | Klantgegevensplatform | Schema&#39;s | Bestaande labels voor toestemming en bestuur worden in dezelfde importtaak gekopieerd. De gebruiker heeft de flexibiliteit om schema&#39;s in te voeren zonder de Verenigde toegelaten optie van het Profiel. Het randgeval van de schema-relaties wordt niet opgenomen in het pakket. |
 | Klantgegevensplatform | Gegevenssets | Datasets worden gekopieerd met de instelling voor het uniforme profiel standaard uitgeschakeld. |
 | Klantgegevensplatform | Beleid inzake instemming en bestuur | Voeg aangepast beleid dat door een gebruiker is gemaakt, toe aan een pakket en verplaats het naar andere sandboxen. |
@@ -60,6 +60,7 @@ De onderstaande tabel bevat een lijst met [!DNL Adobe Journey Optimizer] -object
 | [!DNL Adobe Journey Optimizer] | Reis | Wanneer u een volledige reis aan een pakket toevoegt, kopieert u het grootste deel van de objecten waarop de reis is gebaseerd, inclusief publiek, schema&#39;s, gebeurtenissen en handelingen. |
 | [!DNL Adobe Journey Optimizer] | Inhoudssjabloon | Een inhoudssjabloon kan worden gekopieerd als een afhankelijk object van het reisobject. Met standalone sjablonen kunt u eenvoudig aangepaste inhoud hergebruiken voor Journey Optimizer-campagnes en -reizen. |
 | [!DNL Adobe Journey Optimizer] | Fragment | Een fragment kan worden gekopieerd als een afhankelijk object van het reisobject. Fragmenten zijn herbruikbare onderdelen waarnaar in een of meer e-mails van Journey Optimizer-campagnes en -reizen kan worden verwezen. |
+| [!DNL Adobe Journey Optimizer] | Campagnes | Campagnes kunnen samen met alle punten worden gekopieerd met betrekking tot het profiel, het publiek, het schema, de gealigneerde berichten, en afhankelijke voorwerpen. Sommige items worden niet gekopieerd, zoals besluitvormingsitems, labels voor gegevensgebruik en taalinstellingen. Voor een volledige lijst van voorwerpen die niet kunnen worden gekopieerd, verwijs de [ exporterende voorwerpen naar een andere zandbak ](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/configuration/copy-objects-to-sandbox) gids. |
 
 Oppervlakken (bijvoorbeeld voorinstellingen) worden niet overschreven. Het systeem selecteert automatisch de dichtstbijzijnde mogelijke overeenkomst op de bestemmingszandbak die op het berichttype en oppervlaknaam wordt gebaseerd. Als er geen oppervlakten op de doelzandbak worden gevonden, dan zal het oppervlakexemplaar ontbreken, veroorzakend het berichtexemplaar om te ontbreken omdat een bericht vereist een oppervlakte om voor opstelling beschikbaar te zijn. In dit geval moet ten minste één oppervlak worden gemaakt voor het rechterkanaal van het bericht, zodat de kopie kan werken.
 
@@ -120,7 +121,7 @@ De lijst met objecten die aan het pakket zijn toegevoegd, wordt weergegeven. Sel
 
 Selecteer **[!UICONTROL Publish]** om de publicatie van het pakket te bevestigen.
 
-![ de dialoog van de het pakketbevestiging van Publish, die de [!UICONTROL Publish] optie benadrukt.](../images/ui/sandbox-tooling/publish-package-confirmation.png)
+![ publiceer de dialoog van de pakketbevestiging, die de [!UICONTROL Publish] optie benadrukt.](../images/ui/sandbox-tooling/publish-package-confirmation.png)
 
 >[!NOTE]
 >
@@ -174,7 +175,7 @@ U wordt teruggestuurd naar de pagina [!UICONTROL Package object and dependencies
 
 >[!NOTE]
 >
->Momenteel worden alleen Real-time Customer Data Platform-objecten ondersteund bij het exporteren of importeren van een volledige sandbox. Adobe Journey Optimizer-objecten zoals reizen worden momenteel niet ondersteund.
+>Momenteel worden alleen Real-Time Customer Data Platform-objecten ondersteund bij het exporteren of importeren van een volledige sandbox. Adobe Journey Optimizer-objecten zoals reizen worden momenteel niet ondersteund.
 
 U kunt alle ondersteunde objecttypen exporteren naar een volledig sandboxpakket en het pakket vervolgens in verschillende sandboxen importeren om objectconfiguraties te repliceren. Met deze functionaliteit kunt u bijvoorbeeld:
 
@@ -261,6 +262,6 @@ De volgende video is bedoeld ter ondersteuning van uw begrip van gereedschappen 
 
 ## Volgende stappen
 
-In dit document wordt getoond hoe u de functie voor het gereedmaken van de sandbox in de gebruikersinterface van het Experience Platform kunt gebruiken. Voor informatie over zandbakken, zie de [ gids van de zandbakgebruiker ](../ui/user-guide.md).
+In dit document wordt getoond hoe u de functie voor het gereedmaken van de sandbox in de gebruikersinterface van Experience Platform kunt gebruiken. Voor informatie over zandbakken, zie de [ gids van de zandbakgebruiker ](../ui/user-guide.md).
 
 Voor stappen bij het uitvoeren van verschillende verrichtingen die Sandbox API gebruiken, zie de [ gids van de zandbakontwikkelaar ](../api/getting-started.md). Voor een overzicht op hoog niveau van zandbakken in Experience Platform, verwijs naar de [ overzichtsdocumentatie ](../home.md).
