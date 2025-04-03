@@ -1,13 +1,13 @@
 ---
 title: Typen soorten publiek
 description: Meer informatie over de verschillende soorten publiek die u op Adobe Experience Platform kunt maken.
-source-git-commit: c7d71113ddcef6aca8b2637814b46e589a6b7fdf
+exl-id: c95c6276-d1a4-4d92-95cf-60d895c3fe10
+source-git-commit: f6d700087241fb3a467934ae8e64d04f5c1d98fa
 workflow-type: tm+mt
-source-wordcount: '250'
+source-wordcount: '251'
 ht-degree: 0%
 
 ---
-
 
 # Typen soorten publiek
 
@@ -19,7 +19,7 @@ Een publiek van de mensen is een publiek dat gebruikend **klant** profielgegeven
 
 Voor meer gedetailleerde informatie over mensen publiek, gelieve het [ overzicht van het personenpubliek ](./people-audiences.md) te lezen.
 
-## [!BADGE  B2C Uitgave ] kijkt-als publiek
+## [!BADGE  B2C Edition ] kijkt-als publiek
 
 Een publiek met een vergelijkbare vormgeving is een publiek dat wordt gecreëerd door een publiek met een hoge waarde te analyseren met een model van &#39;look-alike machine learning&#39;. Met het model dat er op lijkt, kunt u een publiek maken dat overeenkomt met de drempel voor gelijkenis van het geanalyseerde publiek met een hoge waarde.
 
@@ -39,4 +39,4 @@ Voor meer gedetailleerde informatie over vooruitgangspubliek, te lezen gelieve h
 
 ## Volgende stappen
 
-Nadat u dit overzicht hebt gelezen, hebt u nu een beter inzicht in de verschillende typen of publiek beschikbaar op Platform. Om over de verschillende evaluatiemethodes te leren, te lezen gelieve het [ overzicht van de evaluatiemethode ](../methods/overview.md).
+Nadat u dit overzicht hebt gelezen, hebt u nu een beter inzicht in de verschillende typen of publiek beschikbaar op Experience Platform. Om over de verschillende evaluatiemethodes te leren, te lezen gelieve het [ overzicht van de evaluatiemethode ](../methods/overview.md).

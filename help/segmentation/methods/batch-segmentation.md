@@ -1,13 +1,13 @@
 ---
 title: Handleiding voor batchsegmentatie
 description: Leer over partijsegmentatie met inbegrip van wat het is, hoe te om een publiek tot stand te brengen dat gebruikend partijsegmentatie wordt geëvalueerd, en hoe te om uw publiek te bekijken dat gebruikend partijsegmentatie wordt gecreeerd.
-source-git-commit: cffd7bad831f0f58bd2b62585bfd0b84280b1732
+exl-id: b6fba2fb-8eec-4429-92fd-ece5c79d379d
+source-git-commit: f6d700087241fb3a467934ae8e64d04f5c1d98fa
 workflow-type: tm+mt
-source-wordcount: '539'
+source-wordcount: '540'
 ht-degree: 0%
 
 ---
-
 
 # Hulplijn voor batchsegmentatie
 
@@ -279,7 +279,7 @@ Ga binnen de beschikbare filters naar **[!UICONTROL Update frequency]** en selec
 
 ![ de updatefrequentie van de Partij wordt geselecteerd, tonend alle publiek in de organisatie die gebruikend partijsegmentatie worden geëvalueerd.](../images/methods/batch/filter-batch.png)
 
-Meer over het bekijken van publiek in Platform leren, gelieve de [ gids van het Portaal van het Publiek ](../ui/audience-portal.md) te lezen.
+Meer over het bekijken van publiek in Experience Platform leren, gelieve de [ gids van het Portaal van het Publiek ](../ui/audience-portal.md) te lezen.
 
 >[!ENDTABS]
 

@@ -3,9 +3,9 @@ solution: Experience Platform
 title: Soortgelijke soorten publiek
 description: Leer hoe u nieuwe hoogwaardige doelgroepen in Adobe Experience Platform kunt kiezen met behulp van look-alike-soorten publiek.
 exl-id: c43dac6c-18a0-482f-803e-b75e1b211e98
-source-git-commit: f981b26a468a1d5ab9931a9cce59b176cd0fd9b3
+source-git-commit: f6d700087241fb3a467934ae8e64d04f5c1d98fa
 workflow-type: tm+mt
-source-wordcount: '2157'
+source-wordcount: '2158'
 ht-degree: 0%
 
 ---
@@ -33,7 +33,7 @@ Zorg ervoor dat u de volgende concepten begrijpt voordat u aan de slag gaat met 
 
 Om blik-gelijke inzichten te gebruiken, moet het basispubliek **** aan de volgende toelatingscriteria voldoen:
 
-- Het basispubliek **moet** binnen Platform worden gecreeerd.
+- Het basispubliek **moet** binnen Experience Platform worden gecreeerd.
    - Extern-geproduceerd publiek is **niet** geschikt voor blik-gelijke inzichten.
 - Het basispubliek **moet** op het standaard fusiebeleid zijn.
 - Het basispubliek **moet** geen gebieden gebruiken die door gegevensbeheer worden beperkt.

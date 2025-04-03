@@ -4,7 +4,7 @@ title: Evalueer en de Resultaten van het Segment van de Toegang
 type: Tutorial
 description: Volg deze zelfstudie om te leren hoe u segmentatiedefinities en toegangssegmenteringsresultaten kunt evalueren met de Adobe Experience Platform Segmentation Service API.
 exl-id: 47702819-f5f8-49a8-a35d-034ecac4dd98
-source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
+source-git-commit: f6d700087241fb3a467934ae8e64d04f5c1d98fa
 workflow-type: tm+mt
 source-wordcount: '1594'
 ht-degree: 0%
@@ -22,25 +22,25 @@ Deze zelfstudie vereist een goed begrip van de verschillende [!DNL Adobe Experie
 - [[!DNL Real-Time Customer Profile]](../../profile/home.md): biedt een uniform, klantprofiel in real-time op basis van geaggregeerde gegevens van meerdere bronnen.
 - [[!DNL Adobe Experience Platform Segmentation Service]](../home.md): hiermee kunt u soorten publiek maken op basis van [!DNL Real-Time Customer Profile] -gegevens.
 - [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): Het gestandaardiseerde framework waarmee Platform gegevens voor klantervaring organiseert. Om het beste gebruik van Segmentatie te maken, gelieve te verzekeren uw gegevens als profielen en gebeurtenissen volgens de [ beste praktijken voor gegevens modellering ](../../xdm/schema/best-practices.md) worden opgenomen.
-- [ Sandboxen ](../../sandboxes/home.md): [!DNL Experience Platform] verstrekt virtuele zandbakken die één enkele [!DNL Platform] instantie in afzonderlijke virtuele milieu&#39;s verdelen helpen digitale ervaringstoepassingen ontwikkelen en ontwikkelen.
+- [ Sandboxen ](../../sandboxes/home.md): [!DNL Experience Platform] verstrekt virtuele zandbakken die één enkele [!DNL Experience Platform] instantie in afzonderlijke virtuele milieu&#39;s verdelen helpen digitale ervaringstoepassingen ontwikkelen en ontwikkelen.
 
 ### Vereiste koppen
 
-Dit leerprogramma vereist u ook om het [ authentificatieleerprogramma ](https://www.adobe.com/go/platform-api-authentication-en) te voltooien om vraag aan [!DNL Platform] APIs met succes te maken. Als u de zelfstudie over verificatie voltooit, krijgt u de waarden voor elk van de vereiste headers in alle API-aanroepen van [!DNL Experience Platform] , zoals hieronder wordt getoond:
+Dit leerprogramma vereist u ook om het [ authentificatieleerprogramma ](https://www.adobe.com/go/platform-api-authentication-en) te voltooien om vraag aan [!DNL Experience Platform] APIs met succes te maken. Als u de zelfstudie over verificatie voltooit, krijgt u de waarden voor elk van de vereiste headers in alle API-aanroepen van [!DNL Experience Platform] , zoals hieronder wordt getoond:
 
 - Autorisatie: Drager `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
 - x-gw-ims-org-id: `{ORG_ID}`
 
-Alle bronnen in [!DNL Experience Platform] zijn geïsoleerd naar specifieke virtuele sandboxen. Voor aanvragen van [!DNL Platform] API&#39;s is een header vereist die de naam aangeeft van de sandbox waarin de bewerking plaatsvindt:
+Alle bronnen in [!DNL Experience Platform] zijn geïsoleerd naar specifieke virtuele sandboxen. Voor aanvragen van [!DNL Experience Platform] API&#39;s is een header vereist die de naam aangeeft van de sandbox waarin de bewerking plaatsvindt:
 
 - x-sandbox-name: `{SANDBOX_NAME}`
 
 >[!NOTE]
 >
->Voor meer informatie over zandbakken in [!DNL Platform], zie de [ documentatie van het zandbakoverzicht ](../../sandboxes/home.md).
+>Voor meer informatie over zandbakken in [!DNL Experience Platform], zie de [ documentatie van het zandbakoverzicht ](../../sandboxes/home.md).
 
-Alle POST, PUT, en PATCH verzoeken vereisen een extra kopbal:
+Voor alle POST-, PUT- en PATCH-aanvragen is een extra header vereist:
 
 - Inhoudstype: application/json
 
@@ -62,19 +62,19 @@ Door geplande evaluatie, kan uw organisatie een terugkomende planning tot stand 
 
 ### Een schema maken
 
-Door een verzoek van de POST aan het `/config/schedules` eindpunt te doen, kunt u een programma tot stand brengen en de specifieke tijd omvatten wanneer het programma zou moeten worden teweeggebracht.
+Door een POST- verzoek aan het `/config/schedules` eindpunt te doen, kunt u een programma tot stand brengen en de specifieke tijd omvatten wanneer het programma zou moeten worden teweeggebracht.
 
 Meer gedetailleerde informatie over het gebruiken van dit eindpunt kan in de [ gids van het planningseindpunt ](../api/schedules.md#create) worden gevonden
 
 ### Een schema inschakelen
 
-Een schema is standaard niet actief wanneer het wordt gemaakt, tenzij de eigenschap `state` is ingesteld op `active` in de aanvraagtekst (POST) create. U kunt een schema inschakelen (stel `state` in op `active` ) door een PATCH-aanvraag in te dienen bij het `/config/schedules` -eindpunt en de id van het schema op te nemen in het pad.
+Een schema is standaard niet actief wanneer het wordt gemaakt, tenzij de eigenschap `state` is ingesteld op `active` in de aanvraagtekst (POST) van het document create. U kunt een schema inschakelen (stel `state` in op `active` ) door een PATCH-aanvraag in te dienen bij het `/config/schedules` -eindpunt en de id van het schema op te nemen in het pad.
 
 Meer gedetailleerde informatie over het gebruiken van dit eindpunt kan in de [ gids van het planningseindpunt ](../api/schedules.md#update-state) worden gevonden
 
 ### Werk de planningstijd bij
 
-De timing van het programma kan worden bijgewerkt door een verzoek van de PATCH aan het `/config/schedules` eindpunt en met inbegrip van identiteitskaart van het programma in de weg te doen.
+De timing van het programma kan worden bijgewerkt door een verzoek van PATCH aan het `/config/schedules` eindpunt en met inbegrip van identiteitskaart van het programma in de weg te doen.
 
 Meer gedetailleerde informatie over het gebruiken van dit eindpunt kan in de [ gids van het planningseindpunt ](../api/schedules.md#update-schedule) worden gevonden
 
@@ -86,7 +86,7 @@ De evaluatie op bestelling staat u toe om een segmentbaan tot stand te brengen o
 
 Een segmentbaan is een asynchroon proces dat tot een publiekssegment op bestelling leidt. Het verwijst naar een segmentdefinitie en naar elk samenvoegbeleid dat bepaalt hoe [!DNL Real-Time Customer Profile] overlappende kenmerken in uw profielfragmenten samenvoegt. Wanneer een segmentbaan met succes voltooit, kunt u diverse informatie over de segmentdefinitie, zoals om het even welke fouten verzamelen die tijdens verwerking en de uiteindelijke grootte van uw publiek kunnen zijn voorgekomen. Een segmentbaan moet in werking worden gesteld telkens als u het publiek wilt verfrissen dat de segmentdefinitie momenteel kwalificeert.
 
-U kunt een nieuwe segmenttaak maken door een aanvraag voor een POST in te dienen bij het eindpunt `/segment/jobs` in de [!DNL Real-Time Customer Profile] API.
+U kunt een nieuwe segmenttaak maken door een POST-aanvraag in te dienen bij het eindpunt `/segment/jobs` in de [!DNL Real-Time Customer Profile] API.
 
 De meer gedetailleerde informatie over het gebruiken van dit eindpunt kan in de [ gids van het segmentbaneneindpunt ](../api/segment-jobs.md#create) worden gevonden
 
@@ -98,7 +98,7 @@ De meer gedetailleerde informatie over het gebruiken van dit eindpunt kan in de 
 
 ## Resultaten van segmenttaken interpreteren
 
-Wanneer segmenttaken zijn uitgevoerd, wordt de `segmentMembership` -kaart bijgewerkt voor elk profiel dat is opgenomen in de segmentdefinitie. `segmentMembership` slaat ook vooraf beoordeelde soorten publiek op die in [!DNL Platform] worden opgenomen, zodat deze kunnen worden geïntegreerd met andere oplossingen, zoals [!DNL Adobe Audience Manager] .
+Wanneer segmenttaken zijn uitgevoerd, wordt de `segmentMembership` -kaart bijgewerkt voor elk profiel dat is opgenomen in de segmentdefinitie. `segmentMembership` slaat ook vooraf beoordeelde soorten publiek op die in [!DNL Experience Platform] worden opgenomen, zodat deze kunnen worden geïntegreerd met andere oplossingen, zoals [!DNL Adobe Audience Manager] .
 
 In het volgende voorbeeld wordt getoond hoe het kenmerk `segmentMembership` er uitziet voor elke afzonderlijke profielrecord:
 
@@ -212,13 +212,13 @@ Een succesvolle reactie keert een serie terug die read-only, systeem-geproduceer
 
 ### Profielen genereren voor publieksleden {#generate-profiles}
 
-Zodra u een unie-persisterende dataset hebt, kunt u een de uitvoerbaan tot stand brengen om de publieksleden aan de dataset door een verzoek van de POST aan het `/export/jobs` eindpunt in [!DNL Real-Time Customer Profile] API voort te zetten en de dataset ID en de informatie van de segmentdefinitie voor de segmentdefinities te verstrekken die u wenst uit te voeren.
+Zodra u een unie-persisterende dataset hebt, kunt u een de uitvoerbaan tot stand brengen om de publieksleden aan de dataset door een POST- verzoek aan het `/export/jobs` eindpunt in [!DNL Real-Time Customer Profile] API voort te zetten en de dataset ID en de informatie van de segmentdefinitie voor de segmentdefinities te verstrekken die u wenst uit te voeren.
 
 De meer gedetailleerde informatie over het gebruiken van dit eindpunt kan in de [ gids van het de baneneindpunt van de uitvoertaken ](../api/export-jobs.md#create) worden gevonden
 
 ### Exportvoortgang volgen
 
-Tijdens het uitvoeren van een exporttaak kunt u de status controleren door een aanvraag voor een GET in te dienen bij het eindpunt van `/export/jobs` en de `id` van de exporttaak op te nemen in het pad. De exporttaak is voltooid wanneer het veld `status` de waarde &quot;SUCCEEDED&quot; retourneert.
+Tijdens het uitvoeren van een exporttaak kunt u de status controleren door een GET-aanvraag in te dienen bij het `/export/jobs` -eindpunt en de `id` van de exporttaak op te nemen in het pad. De exporttaak is voltooid wanneer het veld `status` de waarde &quot;SUCCEEDED&quot; retourneert.
 
 De meer gedetailleerde informatie over het gebruiken van dit eindpunt kan in de [ gids van het de baneneindpunt van de uitvoertaken ](../api/export-jobs.md#get) worden gevonden
 

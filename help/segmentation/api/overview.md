@@ -3,9 +3,9 @@ title: API-handleiding voor segmentatieservice
 description: Met de segmentatieservice-API kunnen ontwikkelaars segmentatiebewerkingen in Adobe Experience Platform programmatisch beheren. Volg deze gids voor het uitvoeren van de belangrijkste bewerkingen met de API.
 role: Developer
 exl-id: cebecaf3-9746-4b0b-9c50-11789fba66c3
-source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
+source-git-commit: f6d700087241fb3a467934ae8e64d04f5c1d98fa
 workflow-type: tm+mt
-source-wordcount: '556'
+source-wordcount: '557'
 ht-degree: 2%
 
 ---
@@ -20,7 +20,7 @@ Om alle beschikbare eindpunten en verrichtingen te bekijken CRUD, gelieve te ver
 
 ## Doelgroepen
 
-Soorten publiek is een verzameling mensen met een vergelijkbaar gedrag en/of vergelijkbare kenmerken. Deze kunnen worden geproduceerd of door Platform of uit externe bronnen te gebruiken. U kunt het `/audiences` eindpunt gebruiken om alle publiek terug te winnen, een nieuw publiek tot stand te brengen, details van een specifiek publiek terug te winnen, een specifiek publiek bij te werken, of een specifiek publiek te schrappen.
+Soorten publiek is een verzameling mensen met een vergelijkbaar gedrag en/of vergelijkbare kenmerken. Deze kunnen worden gegenereerd met behulp van Experience Platform of van externe bronnen. U kunt het `/audiences` eindpunt gebruiken om alle publiek terug te winnen, een nieuw publiek tot stand te brengen, details van een specifiek publiek terug te winnen, een specifiek publiek bij te werken, of een specifiek publiek te schrappen.
 
 Voor meer informatie bij het gebruiken van dit eindpunt, te lezen gelieve de [ gids van het publiek eindpunt ](./audiences.md).
 
@@ -62,4 +62,4 @@ Het onderzoek van het segment wordt gebruikt om gebieden te zoeken die zich over
 
 ## Volgende stappen
 
-Om met [!DNL Segmentation Service] API te beginnen, herzie de verschillende eindpuntgidsen voor gedetailleerde stappen op hoe te om vraag aan de diverse eindpunten van de dienst te maken. Meer leren over het werken met segmenten gebruikend [!DNL Platform] UI, zie de [ gebruikersgids van de Segmentatie ](../ui/overview.md).
+Om met [!DNL Segmentation Service] API te beginnen, herzie de verschillende eindpuntgidsen voor gedetailleerde stappen op hoe te om vraag aan de diverse eindpunten van de dienst te maken. Meer leren over het werken met segmenten gebruikend [!DNL Experience Platform] UI, zie de [ gebruikersgids van de Segmentatie ](../ui/overview.md).

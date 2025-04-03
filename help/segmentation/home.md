@@ -1,18 +1,18 @@
 ---
 solution: Experience Platform
 title: Overzicht van segmentatieservice
-description: Leer over de Dienst van de Segmentatie van Adobe Experience Platform en de rol het in het ecosysteem van het Platform speelt.
+description: Meer informatie over de Adobe Experience Platform Segmentation Service en de rol die deze speelt in het ecosysteem van Experience Platform.
 exl-id: 2c18a806-88ed-4659-bdfd-2377f5a09a1a
-source-git-commit: f981b26a468a1d5ab9931a9cce59b176cd0fd9b3
+source-git-commit: 0a9028beca36b46d6228c0038366bbac5d32603c
 workflow-type: tm+mt
-source-wordcount: '1678'
+source-wordcount: '1679'
 ht-degree: 1%
 
 ---
 
 # [!DNL Segmentation Service]-overzicht
 
-Adobe Experience Platform [!DNL Segmentation Service] biedt een gebruikersinterface en de RESTful-API waarmee u een publiek kunt maken via segmentdefinities of andere bronnen op basis van uw [!DNL Real-Time Customer Profile] -gegevens. Deze doelgroepen worden centraal geconfigureerd en onderhouden op [!DNL Platform], en zijn gemakkelijk toegankelijk via elke Adobe-toepassing.
+Adobe Experience Platform [!DNL Segmentation Service] biedt een gebruikersinterface en de RESTful-API waarmee u een publiek kunt maken via segmentdefinities of andere bronnen op basis van uw [!DNL Real-Time Customer Profile] -gegevens. Deze doelgroepen worden centraal geconfigureerd en onderhouden op [!DNL Experience Platform], en zijn gemakkelijk toegankelijk via elke Adobe-toepassing.
 
 Dit document biedt een overzicht van [!DNL Segmentation Service] en de rol die het speelt in Adobe Experience Platform.
 
@@ -20,7 +20,7 @@ Dit document biedt een overzicht van [!DNL Segmentation Service] en de rol die h
 
 U moet de volgende belangrijke termen begrijpen die in dit document worden gebruikt:
 
-- **Publiek**: Een inzameling van mensen die gelijkaardig gedrag en/of kenmerken delen. Deze verzameling personen kan worden gegenereerd door Adobe Experience Platform met behulp van segmentdefinities (publiek dat door het platform wordt gegenereerd) of op basis van externe bronnen (publiek dat extern wordt gegenereerd).
+- **Publiek**: Een inzameling van mensen die gelijkaardig gedrag en/of kenmerken delen. Deze verzameling personen kan worden gegenereerd door Adobe Experience Platform met behulp van segmentdefinities (door Experience-Platform gegenereerde doelgroep) of op basis van externe bronnen (extern gegenereerde doelgroep).
 - **de definitie van het Segment**: De regelreeks Adobe Experience Platform gebruikt om zeer belangrijke kenmerken of gedrag van een doelpubliek te beschrijven.
 - **Segment**: Het besluit om Profielen in publiek te scheiden.
 
@@ -28,15 +28,15 @@ U moet de volgende belangrijke termen begrijpen die in dit document worden gebru
 
 De segmentatie is het proces om specifieke attributen of gedrag te bepalen die door een ondergroep van profielen van uw opslag van het Profiel worden gedeeld om een verhandelbare groep mensen van uw klantenbasis te onderscheiden. In een e-mailcampagne met de naam &quot;Hebt u vergeten uw gulders te kopen?&quot; wilt u bijvoorbeeld een publiek van alle gebruikers die in de afgelopen 30 dagen naar schoenen hebben gezocht, maar die geen aankoop hebben gedaan.
 
-Wanneer een publiek conceptueel is gedefinieerd, wordt het ingebouwd in [!DNL Experience Platform] . Doorgaans worden soorten publiek opgebouwd door de marketeter of publieksspecialist, hoewel sommige organisaties de voorkeur geven aan het maken ervan door hun marketingafdeling, in samenwerking met hun gegevensanalisten. Wanneer de gegevens die naar [!DNL Platform] worden verzonden worden gereviseerd, kan de gegevensanalist het publiek op twee manieren maken: door een segmentdefinitie te maken door te selecteren welke velden en waarden worden gebruikt om de regels of voorwaarden van het publiek te maken, of door een publiek samen te stellen met de compositie van het publiek.
+Wanneer een publiek conceptueel is gedefinieerd, wordt het ingebouwd in [!DNL Experience Platform] . Doorgaans worden soorten publiek opgebouwd door de marketeter of publieksspecialist, hoewel sommige organisaties de voorkeur geven aan het maken ervan door hun marketingafdeling, in samenwerking met hun gegevensanalisten. Wanneer de gegevens die naar [!DNL Experience Platform] worden verzonden worden gereviseerd, kan de gegevensanalist het publiek op twee manieren maken: door een segmentdefinitie te maken door te selecteren welke velden en waarden worden gebruikt om de regels of voorwaarden van het publiek te maken, of door een publiek samen te stellen met de compositie van het publiek.
 
 ## Soorten publiek maken
 
-Op Adobe Experience Platform kunnen soorten publiek op twee verschillende manieren tot stand worden gebracht: rechtstreeks samengesteld als publiek of door middel van op platform gebaseerde segmentdefinities.
+Op Adobe Experience Platform kunt u een publiek op meerdere manieren maken, bijvoorbeeld via composities, segmentdefinities, gefedereerde gegevens en Gegevens-Distiller.
 
 ### Samenstelling publiek
 
-Wanneer u een publiek rechtstreeks samenstelt op Platform, kunt u de Samenstelling van het publiek gebruiken. Leren hoe te om de Samenstelling van het Publiek te gebruiken om een publiek tot stand te brengen, gelieve de [ gids van de Samenstelling van het Publiek ](./ui/audience-composition.md) voor meer informatie te lezen.
+Wanneer u een publiek rechtstreeks samenstelt in Experience Platform, kunt u Audience Composition gebruiken. Leren hoe te om de Samenstelling van het Publiek te gebruiken om een publiek tot stand te brengen, gelieve de [ gids van de Samenstelling van het Publiek ](./ui/audience-composition.md) voor meer informatie te lezen.
 
 ### Segmentdefinities
 
@@ -61,7 +61,7 @@ Naast publiekssamenstellingen en segmentdefinities kunt u Adobe Federated Audien
 >[!CONTEXTUALHELP]
 >id="platform_segments_evaluation"
 >title="Evaluatiemethoden"
->abstract="Het platform biedt momenteel ondersteuning voor drie methoden om het publiek te evalueren: streamingsegmentatie, batchsegmentatie en randsegmentatie."
+>abstract="Experience Platform biedt momenteel ondersteuning voor drie methoden om het publiek te evalueren: streamingsegmentatie, batchsegmentatie en randsegmentatie."
 
 >[!CONTEXTUALHELP]
 >id="platform_segments_evaluation_streaming"
@@ -69,7 +69,7 @@ Naast publiekssamenstellingen en segmentdefinities kunt u Adobe Federated Audien
 >abstract="Streaming segmentatie is een doorlopend proces voor gegevensselectie dat uw publiek bijwerkt als reactie op gebruikersactiviteit."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/methods/streaming-segmentation.html" text="Evalueer gebeurtenissen in bijna real time met het stromen segmentatie"
 
-Het platform biedt momenteel ondersteuning voor drie methoden om het publiek te evalueren: streamingsegmentatie, batchsegmentatie en randsegmentatie.
+Experience Platform biedt momenteel ondersteuning voor drie methoden om het publiek te evalueren: streamingsegmentatie, batchsegmentatie en randsegmentatie.
 
 ### Streaming segmentering {#streaming}
 
@@ -93,12 +93,12 @@ Het batchpubliek wordt automatisch elke 24 uur geëvalueerd. Als u een partijpub
 >[!CONTEXTUALHELP]
 >id="platform_segments_evaluation_edge"
 >title="Edge-evaluatie"
->abstract="Edge-segmentatie is de mogelijkheid om segmenten in Platform direct op de Edge Network te evalueren, zodat gebruikers van dezelfde pagina en van volgende pagina&#39;s kunnen gebruikmaken van gevallen voor personalisatiegebruik."
+>abstract="Edge-segmentatie is de mogelijkheid om segmenten in Experience Platform ogenblikkelijk op de Edge Network te evalueren, zodat gebruikers van dezelfde pagina en van volgende pagina&#39;s met een eigen personalisatie kunnen werken."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/methods/edge-segmentation.html" text="Edge-segmentatiegids"
 
-De segmentatie van Edge is de capaciteit om segmenten in Platform onmiddellijk [ op Edge Network ](../landing/edge-and-hub-comparison.md) te evalueren, toelatend zelfde-pagina en volgende-pagina verpersoonlijkingsgebruiksgevallen.
+De segmentatie van Edge is de capaciteit om segmenten in Experience Platform onmiddellijk [ op Edge Network ](../landing/edge-and-hub-comparison.md) te evalueren, toelatend zelfde-pagina en volgende-pagina verpersoonlijkingsgebruiksgevallen.
 
-Meer over randsegmentatie leren, te lezen gelieve of de [ API documentatie ](./methods/edge-segmentation.md) of de [ documentatie UI ](./methods/edge-segmentation.md).
+Meer over randsegmentatie leren, te lezen gelieve het [ overzicht van de randsegmentatie ](./methods/edge-segmentation.md).
 
 ## Toegang tot segmenteringsresultaten
 
@@ -122,7 +122,7 @@ Wanneer u een nieuwe segmentdefinitie maakt, moet u een naam opgeven. De segment
 
 Het beleid van de fusie is regels die door [!DNL Profile] worden gebruikt om te bepalen hoe de gegevens aan voorrang zullen worden gegeven en in een verenigde mening onder bepaalde voorwaarden zullen worden gecombineerd.
 
-Als er geen samenvoegbeleid is gedefinieerd, wordt het standaard [!DNL Platform] samenvoegbeleid gebruikt. Als u liever een samenvoegingsbeleid wilt gebruiken dat specifiek is voor uw organisatie, kunt u uw eigen beleid maken en dit markeren als de standaardinstelling van uw organisatie.
+Als er geen samenvoegbeleid is gedefinieerd, wordt het standaard [!DNL Experience Platform] samenvoegbeleid gebruikt. Als u liever een samenvoegingsbeleid wilt gebruiken dat specifiek is voor uw organisatie, kunt u uw eigen beleid maken en dit markeren als de standaardinstelling van uw organisatie.
 
 Meer informatie over fusiebeleid kan in de [ gids van het samenvoegingsbeleid ](../profile/api/merge-policies.md) worden gevonden.
 
@@ -137,6 +137,7 @@ Naast naam- en samenvoegbeleid biedt [!DNL Segment Builder] u een extra metagege
 ## Geavanceerde segmentatiefuncties
 
 De definities van het segment kunnen worden gevormd om een publiek op een aan de gang zijnde basis voortdurend te produceren door [ het stromen gegevens te combineren ingebed ](../ingestion/streaming-ingestion/overview.md) met om het even welke volgende geavanceerde segmenteringseigenschappen:
+
 - [Opeenvolgende segmentatie](#sequential)
 - [Dynamische segmentatie](#dynamic)
 - [Segmentatie van meerdere entiteiten](#multi-entity)

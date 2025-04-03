@@ -5,9 +5,9 @@ description: Volg deze zelfstudie om te leren hoe u externe doelgroepen kunt geb
 exl-id: 56fc8bd3-3e62-4a09-bb9c-6caf0523f3fe
 hide: true
 hidefromtoc: true
-source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
+source-git-commit: f6d700087241fb3a467934ae8e64d04f5c1d98fa
 workflow-type: tm+mt
-source-wordcount: '1685'
+source-wordcount: '1693'
 ht-degree: 0%
 
 ---
@@ -18,7 +18,7 @@ ht-degree: 0%
 >
 >Deze documentatie bevat informatie uit een vorige versie van de documentatie van het publiek en is daarom verouderd.
 
-Adobe Experience Platform ondersteunt de mogelijkheid om extern publiek te importeren. Dit kan vervolgens worden gebruikt als componenten voor een nieuw publiek. Dit document bevat een zelfstudie voor het instellen van een Experience Platform voor het importeren en gebruiken van externe doelgroepen.
+Adobe Experience Platform ondersteunt de mogelijkheid om extern publiek te importeren. Dit kan vervolgens worden gebruikt als componenten voor een nieuw publiek. Dit document bevat een zelfstudie voor het instellen van Experience Platform voor het importeren en gebruiken van externe doelgroepen.
 
 ## Aan de slag
 
@@ -26,9 +26,9 @@ Deze zelfstudie vereist een goed begrip van de verschillende [!DNL Adobe Experie
 
 - [ de Dienst van de Segmentatie ](../home.md): Staat u toe om publiek van de gegevens van het Profiel van de Klant in real time te bouwen.
 - [ Real-Time Profiel van de Klant ](../../profile/home.md): Verstrekt een verenigd, real-time consumentenprofiel dat op samengevoegde gegevens van veelvoudige bronnen wordt gebaseerd.
-- [ Model van de Gegevens van de Ervaring (XDM) ](../../xdm/home.md): Het gestandaardiseerde kader waardoor het Platform gegevens van de klantenervaring organiseert. Om het beste gebruik van Segmentatie te maken, gelieve te verzekeren uw gegevens als profielen en gebeurtenissen volgens de [ beste praktijken voor gegevens modellering ](../../xdm/schema/best-practices.md) worden opgenomen.
+- [ Model van de Gegevens van de Ervaring (XDM) ](../../xdm/home.md): Het gestandaardiseerde kader waardoor Experience Platform gegevens van de klantenervaring organiseert. Om het beste gebruik van Segmentatie te maken, gelieve te verzekeren uw gegevens als profielen en gebeurtenissen volgens de [ beste praktijken voor gegevens modellering ](../../xdm/schema/best-practices.md) worden opgenomen.
 - [ Datasets ](../../catalog/datasets/overview.md): De opslag en beheersconstructie voor gegevenspersistentie in Experience Platform.
-- [ Streaming opname ](../../ingestion/streaming-ingestion/overview.md): Hoe het Experience Platform gegevens van cliënt en server-zijapparaten in real time opneemt en opslaat.
+- [ Streaming opname ](../../ingestion/streaming-ingestion/overview.md): Hoe Experience Platform gegevens van cliënt en server-zijapparaten in real time opneemt en opslaat.
 
 ### Publiek versus segmentdefinities
 
@@ -44,7 +44,7 @@ Segmentdefinities bevatten informatie zoals de naam, beschrijving, expressie (in
 
 ## Een naamruimte voor identiteit maken voor het externe publiek
 
-De eerste stap voor het gebruik van externe doelgroepen is het maken van een naamruimte voor identiteiten. Met naamruimten kan Platform aangeven waar een publiek vandaan komt.
+De eerste stap voor het gebruik van externe doelgroepen is het maken van een naamruimte voor identiteiten. Met naamruimten kan Experience Platform aangeven waar een publiek vandaan komt.
 
 Om een identiteit te creëren namespace, volg de instructies in de [ gids van identiteitskaart namespace ](../../identity-service/features/namespaces.md#manage-namespaces). Wanneer u uw naamruimte voor identiteiten maakt, voegt u de brongegevens toe aan de naamruimte identity en markeert u de naamruimte [!UICONTROL Type] als een **[!UICONTROL Non-people identifier]** .
 
@@ -70,7 +70,7 @@ Nadat u het veld `_id` hebt gemarkeerd als de primaire identiteit, selecteert u 
 
 ![ knevel om het schema voor Profiel toe te laten wordt benadrukt in de Redacteur van het Schema.](../images/tutorials/external-audiences/schema-profile.png)
 
-Dit schema is nu ingeschakeld voor Profiel, waarbij de primaire identificatie is toegewezen aan de naamruimte voor niet-persoonlijke identiteit die u hebt gemaakt. Dientengevolge, betekent dit dat de segmentmeta-gegevens die in Platform worden ingevoerd gebruikend dit schema in Profiel zullen worden opgenomen zonder met andere op mensen betrekking hebbende gegevens van het Profiel worden samengevoegd.
+Dit schema is nu ingeschakeld voor Profiel, waarbij de primaire identificatie is toegewezen aan de naamruimte voor niet-persoonlijke identiteit die u hebt gemaakt. Dit betekent dat segmentmetagegevens die met dit schema in Experience Platform zijn geïmporteerd, in het profiel worden opgenomen zonder te worden samengevoegd met andere gegevens van het profiel voor personen.
 
 ## Creeer een dataset voor het schema
 
@@ -86,7 +86,7 @@ Na het creëren van de dataset, ga na de instructies in de [ gids van de dataset
 
 ## Gebruikersgegevens instellen en importeren
 
-Met toegelaten dataset, kunnen de gegevens nu naar Platform of door UI of het gebruiken van Experience Platform APIs worden verzonden. U kunt deze gegevens via een batch- of streamingverbinding invoeren.
+Als de gegevensset is ingeschakeld, kunnen gegevens nu naar Experience Platform worden verzonden via de gebruikersinterface of met de Experience Platform API&#39;s. U kunt deze gegevens via een batch- of streamingverbinding invoeren.
 
 ### Gegevens opnemen met een batchverbinding
 
@@ -102,7 +102,7 @@ Nadat u een streamingverbinding hebt gemaakt, hebt u toegang tot het unieke stre
 
 ## Structuur van metagegevens voor het publiek
 
-Nadat u een verbinding hebt gemaakt, kunt u uw gegevens nu opnemen in Platform.
+Nadat u een verbinding hebt gemaakt, kunt u uw gegevens nu opnemen in Experience Platform.
 
 Hieronder ziet u een voorbeeld van de metagegevens van de externe doelgroep:
 
@@ -163,7 +163,7 @@ Nu u externe doelgroepen in uw segmenten kunt gebruiken, kunt u de Bouwer van he
 
 ## Bijlage
 
-Naast het gebruiken van ingevoerde externe publieksmeta-gegevens en het gebruiken van hen voor het creëren van segmenten, kunt u externe segmentlidmaatschap aan Platform ook invoeren.
+Naast het gebruik van geïmporteerde metagegevens voor het externe publiek en het gebruik ervan voor het maken van segmenten, kunt u ook externe segmentlidmaatschappen importeren naar Experience Platform.
 
 ### Een extern bestemmingsschema voor een segmentlidmaatschap instellen
 
@@ -193,7 +193,7 @@ Na het creëren van de dataset, ga na de instructies in de [ gids van de dataset
 
 ## Externe gegevens voor publieksleden instellen en importeren
 
-Met toegelaten dataset, kunnen de gegevens nu naar Platform of door UI of het gebruiken van Experience Platform APIs worden verzonden. U kunt deze gegevens via een batch- of streamingverbinding invoeren.
+Als de gegevensset is ingeschakeld, kunnen gegevens nu naar Experience Platform worden verzonden via de gebruikersinterface of met de Experience Platform API&#39;s. U kunt deze gegevens via een batch- of streamingverbinding invoeren.
 
 ### Gegevens opnemen met een batchverbinding
 
@@ -209,7 +209,7 @@ Nadat u een streamingverbinding hebt gemaakt, hebt u toegang tot het unieke stre
 
 ## Segmentlidmaatschapsstructuur
 
-Nadat u een verbinding hebt gemaakt, kunt u uw gegevens nu opnemen in Platform.
+Nadat u een verbinding hebt gemaakt, kunt u uw gegevens nu opnemen in Experience Platform.
 
 Hieronder ziet u een voorbeeld van de downloadbelasting voor het externe publiek:
 

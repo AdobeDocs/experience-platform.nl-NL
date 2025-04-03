@@ -2,9 +2,9 @@
 title: Methoden voor de evaluatie van het publiek
 description: Meer informatie over de verschillende soorten evaluatiemethoden die beschikbaar zijn op Adobe Experience Platform.
 exl-id: 54513369-42fa-4bab-803a-21d6dcd87660
-source-git-commit: 9eb5ccc24db58a887473f61c66a83aa92e16efa7
+source-git-commit: f6d700087241fb3a467934ae8e64d04f5c1d98fa
 workflow-type: tm+mt
-source-wordcount: '241'
+source-wordcount: '242'
 ht-degree: 0%
 
 ---
@@ -25,7 +25,7 @@ Dankzij de flexibele publieksevaluatie kunt u een batchsegmentatietaak op aanvra
 
 ## Streaming segmentering
 
-Streaming segmentatie is een segmentatiebeoordelingsmethode die u kunt gebruiken om het publiek in bijna real-time te evalueren terwijl u de nadruk legt op gegevensrijkdom. U kunt streaming segmentatie gebruiken om streaming gegevens snel te segmenteren terwijl deze in Platform worden geland.
+Streaming segmentatie is een segmentatiebeoordelingsmethode die u kunt gebruiken om het publiek in bijna real-time te evalueren terwijl u de nadruk legt op gegevensrijkdom. U kunt streaming segmentatie gebruiken om streaming gegevens snel te segmenteren terwijl deze in Experience Platform worden geland.
 
 Voor meer informatie bij het stromen segmentatie, te lezen gelieve [ het stromen segmentatieoverzicht ](./streaming-segmentation.md).
 

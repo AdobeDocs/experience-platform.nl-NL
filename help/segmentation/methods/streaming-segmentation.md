@@ -3,9 +3,9 @@ solution: Experience Platform
 title: Handleiding voor streaming segmentatie
 description: Leer over het stromen segmentatie met inbegrip van wat het is, hoe te om een publiek tot stand te brengen dat gebruikend het stromen segmentatie wordt geëvalueerd, en hoe te om uw publiek te bekijken die gebruikend het stromen segmentatie wordt gecreeerd.
 exl-id: cb9b32ce-7c0f-4477-8c49-7de0fa310b97
-source-git-commit: 3f0cfd6c36344f481751bf05236df4fb288eab60
+source-git-commit: f6d700087241fb3a467934ae8e64d04f5c1d98fa
 workflow-type: tm+mt
-source-wordcount: '1235'
+source-wordcount: '1238'
 ht-degree: 0%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 Streaming segmentering is de mogelijkheid om het publiek in Adobe Experience Platform in bijna realtime te evalueren en tegelijk de nadruk te leggen op gegevensrijkdom.
 
-Met het stromen segmentatie, gebeurt de publiekskwalificatie nu aangezien het stromen gegevens in Platform landen, die de behoefte verlichten om segmentatietaken te plannen en in werking te stellen. Hierdoor kunt u gegevens evalueren terwijl deze worden doorgegeven aan Platform, zodat het lidmaatschap van het publiek automatisch wordt bijgewerkt.
+Met streamingsegmentatie gebeurt de kwalificatie van het publiek nu terwijl streaming data naar Experience Platform landt, waardoor de noodzaak om segmentatietaken te plannen en uit te voeren, wordt verminderd. Op deze manier kunt u gegevens evalueren terwijl deze worden doorgegeven aan Experience Platform, zodat het lidmaatschap van het publiek automatisch wordt bijgewerkt.
 
 ## In aanmerking komende querytypen {#query-types}
 
@@ -312,7 +312,7 @@ Ga binnen de beschikbare filters naar **[!UICONTROL Update frequency]** en selec
 
 ![ de het stromen updatefrequentie wordt geselecteerd, tonend alle publiek in de organisatie die gebruikend het stromen segmentatie worden geëvalueerd.](../images/methods/streaming/filter-streaming.png)
 
-Meer over het bekijken van publiek in Platform leren, gelieve de [ gids van het Portaal van het Publiek ](../ui/audience-portal.md) te lezen.
+Meer over het bekijken van publiek in Experience Platform leren, gelieve de [ gids van het Portaal van het Publiek ](../ui/audience-portal.md) te lezen.
 
 >[!ENDTABS]
 

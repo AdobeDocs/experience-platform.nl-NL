@@ -4,9 +4,9 @@ description: Leer hoe u accountpubliek kunt maken en gebruiken om accountprofiel
 badgeB2B: label="B2B edition" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
 badgeB2P: label="B2P Edition" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html newtab=true"
 exl-id: 047930d6-939f-4418-bbcb-8aafd2cf43ba
-source-git-commit: 78cb7fd24b858859226c737affbb4e93783c884d
+source-git-commit: f6d700087241fb3a467934ae8e64d04f5c1d98fa
 workflow-type: tm+mt
-source-wordcount: '1464'
+source-wordcount: '1465'
 ht-degree: 0%
 
 ---
@@ -53,7 +53,7 @@ Selecteer **[!UICONTROL Create audience]** op de [!UICONTROL Browse] -pagina om 
 
 ![ de [!UICONTROL Create audience] knoop wordt benadrukt op het verslagpubliek doorbladert pagina.](../images/types/account/select-create-audience.png)
 
-De Segment Builder wordt weergegeven. De accountkenmerken en het publiek worden weergegeven op de linkernavigatiebalk. Onder het tabblad [!UICONTROL Attributes] kunt u zowel door het platform gemaakte als aangepaste kenmerken toevoegen.
+De Segment Builder wordt weergegeven. De accountkenmerken en het publiek worden weergegeven op de linkernavigatiebalk. Onder het tabblad [!UICONTROL Attributes] kunt u door Experience-Platform gemaakte en aangepaste kenmerken toevoegen.
 
 ![ de Bouwer van het Segment wordt getoond. Merk op dat slechts de attributen en het publiek worden getoond.](../images/types/account/segment-builder.png)
 
@@ -116,7 +116,7 @@ De pagina [!UICONTROL Activate destination] wordt weergegeven. Voor meer informa
 
 ## Volgende stappen {#next-steps}
 
-Na het lezen van deze handleiding hebt u nu een beter inzicht in hoe u uw accountpubliek kunt maken en gebruiken in Adobe Experience Platform. Leren hoe te om andere soorten publiek in Platform te gebruiken, te lezen gelieve het [ overzicht van het publiekstype ](./overview.md).
+Na het lezen van deze handleiding hebt u nu een beter inzicht in hoe u uw accountpubliek kunt maken en gebruiken in Adobe Experience Platform. Leren hoe te om andere soorten publiek in Experience Platform te gebruiken, te lezen gelieve het [ overzicht van het publiekstype ](./overview.md).
 
 ## Bijlage {#appendix}
 

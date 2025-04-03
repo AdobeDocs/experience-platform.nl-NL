@@ -3,9 +3,9 @@ solution: Experience Platform
 title: UI-gids voor soorten publiek
 description: De Samenstelling van het publiek in Adobe Experience Platform UI verstrekt een rijke werkruimte die u toestaat om met de gegevenselementen van het Profiel in wisselwerking te staan. De werkruimte biedt intuïtieve besturingselementen voor het maken en bewerken van soorten publiek voor uw organisatie.
 exl-id: 0dda0cb1-49e0-478b-8004-84572b6cf625
-source-git-commit: 758ec9de9bf3e6bb9853c9455c69e0b5ca7948d5
+source-git-commit: f6d700087241fb3a467934ae8e64d04f5c1d98fa
 workflow-type: tm+mt
-source-wordcount: '2241'
+source-wordcount: '2242'
 ht-degree: 0%
 
 ---
@@ -20,7 +20,7 @@ ht-degree: 0%
 >- Profielen beheren
 >- Beleid voor samenvoegen beheren
 >
->Meer informatie over toestemmingen binnen Platform kan in het [ overzicht van de toegangscontrole ](../../access-control/home.md#permissions) worden gevonden.
+>Meer informatie over toestemmingen binnen Experience Platform kan in het [ overzicht van de toegangscontrole ](../../access-control/home.md#permissions) worden gevonden.
 
 >[!NOTE]
 >
@@ -328,7 +328,7 @@ Wanneer u het publiek splitst, kunt u splitsen op percentage of splitsen op kenm
 
 >[!CONTEXTUALHELP]
 >id="platform_segmentation_ao_split_persistent"
->title="Blijvende splitsing"
+>title="Permanente splitsing"
 >abstract="U kunt de percentagesplitsing blijvend maken door deze optie in te schakelen en een naamruimte voor identiteit te selecteren."
 
 Bij het splitsen naar percentage worden de doelgroepen willekeurig gesplitst op basis van het aantal beschikbare paden en percentages.

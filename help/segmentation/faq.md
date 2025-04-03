@@ -2,16 +2,16 @@
 title: Publiek Veelgestelde vragen
 description: Ontdek antwoorden op veelgestelde vragen over publiek en andere op segmentatie betrekking hebbende concepten.
 exl-id: 79d54105-a37d-43f7-adcb-97f2b8e4249c
-source-git-commit: 16ffdd0e28687c04b4b8a2b33f10ddceea9ec03a
+source-git-commit: f6d700087241fb3a467934ae8e64d04f5c1d98fa
 workflow-type: tm+mt
-source-wordcount: '4812'
+source-wordcount: '4822'
 ht-degree: 0%
 
 ---
 
 # Veelgestelde vragen
 
-Adobe Experience Platform [!DNL Segmentation Service] biedt een gebruikersinterface en de RESTful-API waarmee u een publiek kunt maken via segmentdefinities of andere bronnen op basis van uw [!DNL Real-Time Customer Profile] -gegevens. Dit publiek wordt centraal gevormd en gehandhaafd op Platform, en gemakkelijk toegankelijk door om het even welke oplossing van Adobe. Hieronder volgt een lijst met veelgestelde vragen over publiek en segmentatie.
+Adobe Experience Platform [!DNL Segmentation Service] biedt een gebruikersinterface en de RESTful-API waarmee u een publiek kunt maken via segmentdefinities of andere bronnen op basis van uw [!DNL Real-Time Customer Profile] -gegevens. Deze soorten publiek zijn centraal geconfigureerd en onderhouden op Experience Platform en zijn gemakkelijk toegankelijk voor alle Adobe-oplossingen. Hieronder volgt een lijst met veelgestelde vragen over publiek en segmentatie.
 
 ## Poort publiek
 
@@ -35,7 +35,7 @@ Als u extern gegenereerde soorten publiek wilt uploaden, hebt u de machtigingen 
 
 Wanneer u een extern geproduceerd publiek uploadt, zal een dataset worden gecreeerd en binnen de datasetinventaris zichtbaar zijn. De naam van de dataset zal **het zelfde** zijn zoals de naam van het extern geproduceerde publiek u uploadde.
 
-### Wat is een extern gegenereerd publiek dat bestaat uit deze gegevens en wat gebeurt er met deze gegevens als het wordt geïmporteerd naar Platform?
+### Wat is een extern gegenereerd publiek dat bestaat en wat gebeurt er met deze gegevens als het naar Experience Platform wordt geïmporteerd?
 
 Tijdens de invoer externe publiekswerkschema, moet u specificeren welke kolom in het Csv- dossier met de **Primaire Identiteit** beantwoordt. Een voorbeeld van een primaire identiteit is e-mailadres, ECID of een naamruimte die specifiek is voor de organisatie.
 
@@ -45,9 +45,9 @@ Alle andere gegevens binnen het extern geproduceerde publiek worden beschouwd al
 
 Terwijl het extern geproduceerde publiek kan worden van verwijzingen voorzien wanneer het creëren van publiek gebruikend de Bouwer van het Segment, kunnen de individuele profielattributen **niet** worden gebruikt.
 
-### Kan ik extern gegenereerde publieksgegevens combineren met een bestaand profiel in Platform?
+### Kan ik extern gegenereerde publieksgegevens combineren met een bestaand profiel in Experience Platform?
 
-Ja, het extern gegenereerde publiek wordt samengevoegd met het bestaande profiel in Platform als de primaire id&#39;s overeenkomen. Het kan 24 uur duren voordat deze gegevens met elkaar in overeenstemming zijn. Als profielgegevens nog niet bestaan, wordt een nieuw profiel gemaakt wanneer de gegevens worden ingevoerd.
+Ja, het extern gegenereerde publiek wordt samengevoegd met het bestaande profiel in Experience Platform als de primaire id&#39;s overeenkomen. Het kan 24 uur duren voordat de gegevens met elkaar in overeenstemming zijn. Als profielgegevens nog niet bestaan, wordt een nieuw profiel gemaakt wanneer de gegevens worden ingevoerd.
 
 ### Hoe worden de voorkeur van de klantentoestemming voor extern geproduceerd publiek geëerd dat in het Portaal van het Publiek wordt ingevoerd?{#consent}
 
@@ -135,7 +135,7 @@ In het volgende diagram worden de verschillende levenscyclusstatussen beschreven
 | --- | --- | --- | --- | --- | --- | --- | --- | -- |
 | Concept | Een publiek in de **staat van het Ontwerp** is een publiek dat nog in ontwikkeling is en nog niet klaar om in andere diensten te worden gebruikt. | Ja, maar kan verborgen zijn. | Nee | Ja | Kan tijdens het verfproces worden geïmporteerd of bijgewerkt. | Evalueerd voor een nauwkeurige telling van het aantal uitgeverijen. | Ja, maar het wordt niet aanbevolen dit te gebruiken. | Ja |
 | Gepubliceerd | Een publiek in de **Gepubliceerde** staat is een publiek dat voor gebruik over alle stroomafwaartse diensten klaar is. | Ja | Ja | Ja | Kan worden geïmporteerd of bijgewerkt. | Evalueerd met batch-, streaming- of randsegmentatie. | Ja | Ja |
-| Inactief | Een publiek in de **Inactieve** staat is een publiek dat momenteel niet in gebruik is. Het bestaat nog binnen Platform, maar het zal **niet** bruikbaar zijn tot het als ontwerp of gepubliceerd duidelijk is. | Nee, maar kan wel worden weergegeven. | Nee | Nee | Niet meer bijgewerkt. | Niet meer geëvalueerd of bijgewerkt door Platform. | Nee | Ja |
+| Inactief | Een publiek in de **Inactieve** staat is een publiek dat momenteel niet in gebruik is. Het bestaat nog binnen Experience Platform, maar het zal **niet** bruikbaar zijn tot het als ontwerp of gepubliceerd duidelijk is. | Nee, maar kan wel worden weergegeven. | Nee | Nee | Niet meer bijgewerkt. | Niet meer geëvalueerd of bijgewerkt door Experience Platform. | Nee | Ja |
 | Verwijderd | Een publiek in de **Geschrapte** staat is een publiek dat is geschrapt. Het kan enkele minuten duren voordat de gegevens daadwerkelijk zijn verwijderd. | Nee | Nee | Nee | Onderliggende gegevens worden verwijderd. | Er vindt geen gegevensevaluatie of -uitvoering plaats nadat de verwijdering is voltooid. | Nee | Nee |
 
 ### In welke staten kan ik mijn publiek bewerken?
@@ -272,7 +272,7 @@ In de volgende sectie worden vragen over Audience Composition weergegeven.
 
 ### Wanneer zou ik de Samenstelling van het Publiek in tegenstelling tot het gebruiken van de Bouwer van het Segment moeten gebruiken?
 
-Zowel de Samenstelling van het publiek als de Bouwer van het Segment hebben belangrijke rollen in de verwezenlijking van het gebouwpubliek in Platform.
+Zowel Audience Composition als Segment Builder hebben een belangrijke rol bij het creëren van publiek in Experience Platform.
 
 De Bouwer van het Segment is geschikter voor publiek **verwezenlijking** (voor de bouw van een publiek van kras), terwijl de Samenstelling van het Publiek geschikter is voor publiek **curatie en verpersoonlijking** (voor het creëren van nieuw publiek dat op een bestaand publiek wordt gebaseerd).
 
@@ -376,9 +376,9 @@ Dientengevolge, wanneer de veranderingen in het profiel, zoals het samenvoegen v
 
 Bijvoorbeeld, zeggen u twee wederzijds exclusief publiek hebt gecreeerd: Publiek A is voor mensen die in Washington wonen en Publiek B is voor mensen die **niet** in Washington wonen. Er zijn twee profielen: profiel 1 voor een persoon die in Washington woont en profiel 2 voor een persoon die in Oregon woont.
 
-Wanneer de looppas van de partijsegmenteringsevaluatie, zal profiel 1 naar Publiek A gaan, terwijl profiel 2 naar Publiek B. Later zal gaan, maar vóór de de looppas van de de partijsegmenteringsevaluatietaak van de volgende dag, een gebeurtenis die de twee profielen aanpast Platform ingaat. Hierdoor wordt één samengevoegd profiel gemaakt dat de profielen 1 en 2 bevat.
+Wanneer de looppas van de partijsegmenteringsevaluatie, zal profiel 1 naar Publiek A gaan, terwijl profiel 2 naar Publiek B. Later, maar alvorens de de looppas van de de partijsegmenteringsevaluatietaak van de volgende dag zal gaan, een gebeurtenis die de twee profielen aanpast Experience Platform ingaat. Hierdoor wordt één samengevoegd profiel gemaakt dat de profielen 1 en 2 bevat.
 
-Tot de volgende baan van de de segmentbeoordeling van de partij in werking wordt gesteld, zal het nieuwe samengevoegde profiel publiekslidmaatschap in **zowel** profiel 1 als profiel 2 hebben. Dientengevolge, betekent dit het een lid van **zowel** Publiek A als Publiek B zal zijn, ondanks het feit dat deze publiek tegenstrijdige definities heeft. Voor de eindgebruiker, is dit de **nauwkeurige zelfde situatie** zoals alvorens de profielen werden verbonden, aangezien er altijd enkel betrokken één persoon was, en het Platform **** had enkel niet genoeg informatie om de twee profielen samen te verbinden.
+Tot de volgende baan van de de segmentbeoordeling van de partij in werking wordt gesteld, zal het nieuwe samengevoegde profiel publiekslidmaatschap in **zowel** profiel 1 als profiel 2 hebben. Dientengevolge, betekent dit het een lid van **zowel** Publiek A als Publiek B zal zijn, ondanks het feit dat deze publiek tegenstrijdige definities heeft. Voor de eindgebruiker, is dit de **nauwkeurige zelfde situatie** zoals alvorens de profielen werden verbonden, aangezien er altijd enkel betrokken één persoon was, en Experience Platform **** had enkel niet genoeg informatie om de twee profielen samen te verbinden.
 
 Als u profielraadpleging gebruikt om het onlangs gecreëerde profiel terug te winnen en zijn publiekslidmaatschap te bekijken, zal het tonen dat het een lid van **zowel** Publiek A als Publiek B is, ondanks het feit dat beide van deze soorten publiek tegenstrijdige definities hebben. Zodra de dagelijkse de evaluatietaak van de partijsegmentatie loopt, zal het publiekslidmaatschap worden bijgewerkt om op deze bijgewerkte staat van profielgegevens te wijzen.
 
@@ -430,4 +430,4 @@ Het duurt tot één uur voordat een segmentdefinitie beschikbaar is.
 
 ### Zijn er beperkingen aan de gegevens waarin wordt gestreamd?
 
-Opdat de gestroomde gegevens in het stromen segmentatie worden gebruikt, moet **** het uit elkaar plaatsen tussen de gebeurtenissen zijn die binnen worden gestroomd. Als er te veel gebeurtenissen binnen dezelfde seconde worden gestreamd, behandelt Platform deze gebeurtenissen als door beide gegenereerde gegevens en worden ze genegeerd. Als beste praktijken, zou u **minstens** vijf seconden tussen gebeurtenisgegevens moeten hebben om ervoor te zorgen dat het gegeven behoorlijk wordt gebruikt.
+Opdat de gestroomde gegevens in het stromen segmentatie worden gebruikt, moet **** het uit elkaar plaatsen tussen de gebeurtenissen zijn die binnen worden gestroomd. Als er te veel gebeurtenissen binnen dezelfde seconde worden gestreamd, behandelt Experience Platform deze gebeurtenissen als door beide gegenereerde gegevens en worden ze genegeerd. Als beste praktijken, zou u **minstens** vijf seconden tussen gebeurtenisgegevens moeten hebben om ervoor te zorgen dat het gegeven behoorlijk wordt gebruikt.

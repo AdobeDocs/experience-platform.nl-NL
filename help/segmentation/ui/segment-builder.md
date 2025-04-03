@@ -3,9 +3,9 @@ solution: Experience Platform
 title: UI-gids voor segmentBuilder
 description: De segmentbouwer in Adobe Experience Platform UI verstrekt een rijke werkruimte die u toestaat om met de gegevenselementen van het Profiel in wisselwerking te staan. De werkruimte biedt intuïtieve besturingselementen voor het maken en bewerken van regels, zoals tegels voor slepen en neerzetten die worden gebruikt om gegevenseigenschappen te vertegenwoordigen.
 exl-id: b27516ea-8749-4b44-99d0-98d3dc2f4c65
-source-git-commit: dc36c5e2eb109d1728f2290ee61e69f458929ba7
+source-git-commit: f6d700087241fb3a467934ae8e64d04f5c1d98fa
 workflow-type: tm+mt
-source-wordcount: '4889'
+source-wordcount: '4893'
 ht-degree: 0%
 
 ---
@@ -76,11 +76,11 @@ Standaard worden alleen gevulde schemavelden uit de gegevensopslag weergegeven. 
 
 U kunt gegevens uit één of meerdere Adobe Analytics-rapportreeksen gebruiken als gebeurtenissen binnen de segmentatie.
 
-Wanneer het gebruiken van gegevens van één enkele het rapportreeks van Analytics, zal Platform automatisch beschrijvers en vriendschappelijke namen aan Vars toevoegen, die het gemakkelijker maken om die gebieden binnen [!DNL Segment Builder] te vinden.
+Als Experience Platform gegevens uit één analytische rapportsuite gebruikt, worden automatisch beschrijvingen en vriendelijke namen aan Vars toegevoegd, zodat u die velden gemakkelijker kunt vinden in [!DNL Segment Builder] .
 
 ![ een beeld dat toont hoe generische variabelen (eVars) met een gebruikersvriendelijke naam in kaart worden gebracht.](../images/ui/segment-builder/single-report-suite.png)
 
-Wanneer het gebruiken van gegevens van de veelvoudige het rapportreeksen van de Analyse, kan het Platform **niet** automatisch beschrijvers of vriendschappelijke namen aan eVars toevoegen. Dientengevolge, alvorens de gegevens van Analytics rapportreeksen te gebruiken, moet u aan XDM gebieden in kaart brengen. Meer informatie over de variabelen van de afbeeldingsanalyse aan XDM kan in de [ bron van Adobe Analytics verbindingsgids ](../../sources/tutorials/ui/create/adobe-applications/analytics.md#mapping) worden gevonden.
+Wanneer het gebruiken van gegevens van de veelvoudige het rapportreeksen van de Analyse, Experience Platform **kan** automatisch geen beschrijvers of vriendschappelijke namen aan eVars toevoegen. Dientengevolge, alvorens de gegevens van Analytics rapportreeksen te gebruiken, moet u aan XDM gebieden in kaart brengen. Meer informatie over de variabelen van de afbeeldingsanalyse aan XDM kan in de [ bron van Adobe Analytics verbindingsgids ](../../sources/tutorials/ui/create/adobe-applications/analytics.md#mapping) worden gevonden.
 
 Neem bijvoorbeeld een situatie waarin u twee rapportsuites met de volgende variabelen had:
 
@@ -119,7 +119,7 @@ Zodra de rapportsuites in kaart zijn gebracht, kunt u deze onlangs in kaart gebr
 
 >[!NOTE]
 >
->Voor publiek dat binnen Platform wordt gecreeerd, slechts zal het publiek dat het **zelfde** fusiebeleid heeft worden getoond.
+>Voor publiek dat binnen Experience Platform wordt gecreeerd, slechts zal het publiek dat het **zelfde** fusiebeleid heeft worden getoond.
 
 Het tabblad **[!UICONTROL Audiences]** bevat een lijst met alle soorten publiek die zijn geïmporteerd uit externe bronnen, zoals Adobe Audience Manager of Customer Journey Analytics, en met soorten publiek dat is gemaakt in [!DNL Experience Platform] .
 
@@ -182,7 +182,7 @@ Er zijn maximaal 250 waarden toegestaan. Als u deze hoeveelheid overschrijdt, mo
 
 U kunt een publiek van het **[!UICONTROL Audience]** lusje op het canvas van de regelbouwer slepen en laten vallen om publiekslidmaatschap in de nieuwe segmentdefinitie te verwijzen. Dit staat u toe om publiekslidmaatschap als attribuut in de nieuwe regels van de segmentdefinitie te omvatten of uit te sluiten.
 
-Voor [!DNL Platform] publiek dat met [!DNL Segment Builder] wordt gecreeerd, krijgt u de optie om het publiek in de reeks regels om te zetten die in de segmentdefinitie voor dat publiek werden gebruikt. Deze omzetting maakt een exemplaar van de regellogica, die dan kan worden gewijzigd zonder de originele segmentdefinitie te beïnvloeden. Zorg ervoor dat u recente wijzigingen in de segmentdefinitie hebt opgeslagen voordat u deze omzet in regellogica.
+Voor [!DNL Experience Platform] publiek dat met [!DNL Segment Builder] wordt gecreeerd, krijgt u de optie om het publiek in de reeks regels om te zetten die in de segmentdefinitie voor dat publiek werden gebruikt. Deze omzetting maakt een exemplaar van de regellogica, die dan kan worden gewijzigd zonder de originele segmentdefinitie te beïnvloeden. Zorg ervoor dat u recente wijzigingen in de segmentdefinitie hebt opgeslagen voordat u deze omzet in regellogica.
 
 >[!NOTE]
 >
@@ -349,11 +349,11 @@ Nadat u **[!UICONTROL Unwrap container]** hebt geselecteerd, wordt de onderligge
 >[!CONTEXTUALHELP]
 >id="platform_segmentation_createSegment_segmentBuilder_mergePolicies"
 >title="Beleid samenvoegen"
->abstract="Met een samenvoegbeleid kunt u verschillende gegevenssets samenvoegen tot uw profiel. Platform heeft een standaardbeleid voor samenvoeging verschaft of u kunt een nieuw standaardbeleid voor samenvoegen maken in profielen. Kies een samenvoegbeleid dat overeenkomt met uw marketingdoel voor dit publiek."
+>abstract="Met een samenvoegbeleid kunt u verschillende gegevenssets samenvoegen tot uw profiel. Experience Platform heeft een standaardbeleid voor samenvoeging opgegeven of u kunt een nieuw standaardbeleid voor samenvoegen maken in profielen. Kies een samenvoegbeleid dat overeenkomt met uw marketingdoel voor dit publiek."
 
-Met [!DNL Experience Platform] kunt u gegevens uit meerdere bronnen samenvoegen en combineren om een volledige weergave van elk van uw individuele klanten weer te geven. Wanneer u deze gegevens samenbrengt, worden in [!DNL Platform] regels gebruikt voor het samenvoegen van gegevens om te bepalen hoe de prioriteit van gegevens wordt bepaald en welke gegevens worden gecombineerd om een profiel te maken.
+Met [!DNL Experience Platform] kunt u gegevens uit meerdere bronnen samenvoegen en combineren om een volledige weergave van elk van uw individuele klanten weer te geven. Wanneer u deze gegevens samenbrengt, worden in [!DNL Experience Platform] regels gebruikt voor het samenvoegen van gegevens om te bepalen hoe de prioriteit van gegevens wordt bepaald en welke gegevens worden gecombineerd om een profiel te maken.
 
-U kunt een samenvoegbeleid selecteren dat aansluit bij uw marketingdoel voor dit publiek of het standaardsamenvoegbeleid gebruiken dat wordt geboden door [!DNL Platform] . U kunt meerdere samenvoegbeleidsregels maken die uniek zijn voor uw organisatie, waaronder het maken van uw eigen standaardbeleid voor samenvoegen. Voor geleidelijke instructies bij het creëren van fusiebeleid voor uw organisatie, gelieve te beginnen door het [ overzicht van het samenvoegingsbeleid ](../../profile/merge-policies/overview.md) te lezen.
+U kunt een samenvoegbeleid selecteren dat aansluit bij uw marketingdoel voor dit publiek of het standaardsamenvoegbeleid gebruiken dat wordt geboden door [!DNL Experience Platform] . U kunt meerdere samenvoegbeleidsregels maken die uniek zijn voor uw organisatie, waaronder het maken van uw eigen standaardbeleid voor samenvoegen. Voor geleidelijke instructies bij het creëren van fusiebeleid voor uw organisatie, gelieve te beginnen door het [ overzicht van het samenvoegingsbeleid ](../../profile/merge-policies/overview.md) te lezen.
 
 Als u een samenvoegbeleid voor uw segmentdefinitie wilt selecteren, selecteert u het tandwielpictogram op het tabblad **[!UICONTROL Fields]** en selecteert u het samenvoegbeleid dat u wilt gebruiken in het vervolgkeuzemenu **[!UICONTROL Merge Policy]** .
 

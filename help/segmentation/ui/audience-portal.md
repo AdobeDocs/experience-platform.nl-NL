@@ -2,9 +2,9 @@
 title: Overzicht van publiek portal
 description: Leer hoe u het publiek in Adobe Experience Platform kunt bekijken, beheren en een publiek kunt maken.
 exl-id: 505ac22e-05f3-423a-a9a0-7f3470af8945
-source-git-commit: 9eb5ccc24db58a887473f61c66a83aa92e16efa7
+source-git-commit: c1f06b14cb33a0fc29a50a2851c1fb52ae82c45d
 workflow-type: tm+mt
-source-wordcount: '4106'
+source-wordcount: '4152'
 ht-degree: 0%
 
 ---
@@ -26,6 +26,7 @@ Binnen het Portaal van de Publiek, kunt u de volgende taken verwezenlijken:
    - [Gebruik Segment Builder om een publiek te maken](#segment-builder)
    - [Gebruik Audience Composition om een publiek te maken](#audience-composition)
    - [De Federale Samenstelling van de Publiek van het gebruik om een publiek tot stand te brengen gebruikend gegevens van uw bestaand gegevenspakhuis](#fac)
+   - [Data Distiller gebruiken om een publiek te maken](#data-distiller)
 - [Extern gegenereerde doelgroepen importeren](#import-audience)
 
 Als u Poort publiek wilt openen, selecteert u het tabblad **[!UICONTROL Browse]** in de sectie Segmentatie.
@@ -57,7 +58,7 @@ Naast elk publiek bevindt zich een ellipspictogram. Als u deze optie selecteert,
 | [!UICONTROL Edit] | Segmentatieservice | Opent de Bouwer van het Segment om uw publiek uit te geven. Gelieve te merken op dat als uw publiek door API werd gecreeerd, u **niet** het zal kunnen uitgeven gebruikend de Bouwer van het Segment. Voor meer informatie bij het gebruiken van de Bouwer van het Segment, te lezen gelieve de [ gids UI van de Bouwer van het Segment ](./segment-builder.md). |
 | [!UICONTROL Open composition] | Samenstelling publiek | Opent de samenstelling van het Publiek om uw publiek te zien. Voor meer informatie over de samenstelling van het Publiek, te lezen gelieve de [ gids UI van de publiekssamenstelling ](./audience-composition.md). |
 | [!UICONTROL Activate to destination] | Segmentatieservice | Hiermee activeert u het publiek naar een doel. Voor meer gedetailleerde informatie bij het activeren van een publiek aan een bestemming, gelieve het [ activeringsoverzicht ](../../destinations/ui/activation-overview.md) te lezen. |
-| [!UICONTROL Share with partners] | Auditie, Aangepaste upload, Segmentatieservice | Deelt uw publiek met andere gebruikers van het Platform. Voor meer informatie over deze eigenschap, te lezen gelieve het [ overzicht van de Gelijke van het Segment ](./segment-match/overview.md). |
+| [!UICONTROL Share with partners] | Auditie, Aangepaste upload, Segmentatieservice | Deelt uw publiek met andere gebruikers van Experience Platform. Voor meer informatie over deze eigenschap, te lezen gelieve het [ overzicht van de Gelijke van het Segment ](./segment-match/overview.md). |
 | [!UICONTROL Manage tags] | Auditie, Aangepaste upload, Segmentatieservice | Beheert de door de gebruiker gedefinieerde tags die bij het publiek horen. Voor meer informatie over deze eigenschap, te lezen gelieve de sectie over [ het filtreren en het etiketteren ](#manage-audiences). |
 | [!UICONTROL Move to folder] | Auditie, Aangepaste upload, Segmentatieservice | Beheert tot welke map het publiek behoort. Voor meer informatie over deze eigenschap, te lezen gelieve de sectie over [ het filtreren en het etiketteren ](#manage-audiences). |
 | [!UICONTROL Copy] | Segmentatieservice | Hiermee dupliceert u het geselecteerde publiek. Meer informatie over deze functie kan in [ Veelgestelde vragen van de Segmentatie worden gevonden ](../faq.md#copy). |
@@ -274,7 +275,7 @@ Als u **[!UICONTROL Edit properties]** selecteert, kunt u de basisgegevens van h
 
 ### Totaal publiek {#audience-total}
 
-Voor publiek en composities die via een platform worden gegenereerd, wordt in de sectie **[!UICONTROL Audience total]** het totale aantal profielen weergegeven dat voor het publiek in aanmerking komt.
+Voor publiek en composities die via Experience-Platform worden gegenereerd, geeft de sectie **[!UICONTROL Audience total]** het totale aantal profielen weer dat in aanmerking komt voor het publiek.
 
 >[!NOTE]
 >
@@ -297,7 +298,7 @@ Voor soorten publiek met de oorsprong **[!UICONTROL Custom upload]** geeft de se
 | Aantal profielen | Het totale aantal profielen dat voor het publiek in aanmerking komt. |
 | Naam gegevensset | De naam van de dataset waarin het publiek werd opgenomen. U kunt de naam van de dataset voor meer informatie over de dataset selecteren. Meer over datasets leren, leest de [ gids UI van de dataset ](../../catalog/datasets/user-guide.md). |
 | Gegevenssetbatch | De id van de gegevensset waarin het publiek werd ingesloten. U kunt de id van de batch selecteren voor meer informatie over de batch. Meer over partijen leren, lees de [ gids van de controlegegevensopname ](../../ingestion/quality/monitor-data-ingestion.md#viewing-batches). |
-| Profielbatch | De id van de batch waarmee de profielen op Platform zijn gemaakt. U kunt de id van de batch selecteren voor meer informatie over de batch. Meer over partijen leren, lees de [ gids van de controlegegevensopname ](../../ingestion/quality/monitor-data-ingestion.md#viewing-batches). |
+| Profielbatch | De id van de batch waarmee de profielen zijn gemaakt op Experience Platform. U kunt de id van de batch selecteren voor meer informatie over de batch. Meer over partijen leren, lees de [ gids van de controlegegevensopname ](../../ingestion/quality/monitor-data-ingestion.md#viewing-batches). |
 | Schema | De naam van het schema waartoe het publiek behoort. U kunt de naam van het schema selecteren om informatie over de structuur van het schema te bekijken en labels voor gegevensgebruik toe te passen. Voor meer informatie, lees [ de etiketten van het gegevensgebruik voor een schemagids ](../../xdm/tutorials/labels.md) leiden. |
 | Opgenomen records | Het aantal verslagen die in de dataset worden opgenomen. |
 | Records mislukt | Het aantal verslagen die niet in de dataset konden worden opgenomen. |
@@ -385,9 +386,17 @@ Als u **[!UICONTROL Build rule]** selecteert, gaat u naar de Segment Builder. De
 
 ### Samenstelling van Federated-doelgroep {#fac}
 
-Naast publiekssamenstellingen en segmentdefinities kunt u Adobe Federated Audience Composition gebruiken om nieuwe soorten publiek te maken van bedrijfsgegevenssets zonder onderliggende gegevens te kopiëren en die soorten publiek op te slaan in Adobe Experience Platform Audience Portal. U kunt bestaande soorten publiek in Adobe Experience Platform ook verrijken door samengestelde publieksgegevens te gebruiken die van het entrepot van ondernemingsgegevens zijn gefedereerd. Gelieve te lezen de gids op [ Federated de Samenstelling van het Publiek ](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/home).
+Met Adobe Federated Audience Composition kunt u nieuwe soorten publiek maken van bedrijfsgegevenssets zonder onderliggende gegevens te kopiëren en die soorten publiek op te slaan in Adobe Experience Platform Audience Portal.
+
+U kunt bestaande soorten publiek in Adobe Experience Platform ook verrijken door samengestelde publieksgegevens te gebruiken die van het entrepot van ondernemingsgegevens zijn gefedereerd. Gelieve te lezen de gids op [ Federated de Samenstelling van het Publiek ](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/home).
 
 ![ een lijst van publiek dat in Federatieve Samenstelling van het Publiek voor uw organisatie wordt gecreeerd.](../images/ui/overview/federated-audience-composition.png)
+
+### Data Distiller {#data-distiller}
+
+U kunt de uitbreiding van Distiller van Gegevens gebruiken SQL om publiek van het gegevensmeer te bouwen. Deze gegevens omvatten bestaande dimensie-entiteiten zoals klantkenmerken of productinformatie.
+
+Meer informatie over Gegevens Distiller kan in het [ bouwpubliek worden gevonden gebruikend SQL gids ](../../query-service/data-distiller-audiences/overview.md).
 
 ## Een publiek importeren {#import-audience}
 
@@ -446,7 +455,7 @@ Nadat u hebt bevestigd dat de gegevens juist zijn, selecteert u **[!UICONTROL Fi
 >
 >Bovendien, als uw extern geproduceerd publiek gevoelige en/of op gezondheidszorg betrekking hebbende informatie bevat, moet u **** de noodzakelijke etiketten van het gegevensgebruik toepassen alvorens het aan om het even welke bestemming te activeren. Aangezien de variabelen van extern geproduceerd publiek in het gegevensmeer eerder dan binnen het Profiel van de Klant in real time worden opgeslagen, zou u **niet** toestemmingsgegevens binnen uw Csv- dossier moeten omvatten.
 >
->Voor meer informatie bij het toepassen van de etiketten van het gegevensgebruik, te lezen gelieve de documentatie over [ het leiden etiketten ](../../access-control/abac/ui/labels.md). Om over de etiketten van het gegevensgebruik op Platform in het algemeen te leren, te lezen gelieve het [ overzicht van de etiketten van het gegevensgebruik ](../../data-governance/labels/overview.md). Om over te leren hoe de toestemming in extern geproduceerd publiek werkt, te lezen gelieve [ FAQ van het publiek ](../faq.md#consent).
+>Voor meer informatie bij het toepassen van de etiketten van het gegevensgebruik, te lezen gelieve de documentatie over [ het leiden etiketten ](../../access-control/abac/ui/labels.md). Om over de etiketten van het gegevensgebruik op Experience Platform in het algemeen te leren, te lezen gelieve het [ overzicht van de etiketten van het gegevensgebruik ](../../data-governance/labels/overview.md). Om over te leren hoe de toestemming in extern geproduceerd publiek werkt, te lezen gelieve [ FAQ van het publiek ](../faq.md#consent).
 
 ## Volgende stappen
 

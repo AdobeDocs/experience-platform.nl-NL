@@ -3,9 +3,9 @@ title: API-eindpunt voor soorten publiek
 description: Gebruik het publiek eindpunt in de API van de Dienst van de Segmentatie van Adobe Experience Platform om, publiek voor uw organisatie programmatically tot stand te brengen te beheren en bij te werken.
 role: Developer
 exl-id: cb1a46e5-3294-4db2-ad46-c5e45f48df15
-source-git-commit: 7b1dedeab8df9678134474045cb87b27550f7fb6
+source-git-commit: 2ec6bacb44dc9b31fcd5cb4c457ba109a921aa84
 workflow-type: tm+mt
-source-wordcount: '1590'
+source-wordcount: '1592'
 ht-degree: 0%
 
 ---
@@ -472,7 +472,7 @@ curl -X PUT https://platform.adobe.io/data/core/ups/audiences/4afe34ae-8c98-4513
 | `name` | De naam van het publiek. |
 | `namespace` | De naamruimte voor het publiek. |
 | `description` | Een beschrijving van het publiek. |
-| `type` | Een door het systeem gegenereerd veld dat weergeeft of het publiek door het platform wordt gegenereerd of dat een extern gegenereerd publiek is. Mogelijke waarden zijn `SegmentDefinition` en `ExternalSegment` . Een `SegmentDefinition` verwijst naar een publiek dat is gegenereerd in Platform, terwijl een `ExternalSegment` verwijst naar een publiek dat niet is gegenereerd in Platform. |
+| `type` | Een door het systeem gegenereerd veld dat weergeeft of het publiek door het platform wordt gegenereerd of dat een extern gegenereerd publiek is. Mogelijke waarden zijn `SegmentDefinition` en `ExternalSegment` . Een `SegmentDefinition` verwijst naar een publiek dat is gegenereerd in Experience Platform, terwijl een `ExternalSegment` verwijst naar een publiek dat niet is gegenereerd in Experience Platform. |
 | `expression` | Een object dat de PQL-expressie van het publiek bevat. |
 | `lifecycleState` | De status van het publiek. Mogelijke waarden zijn `draft` , `published` en `inactive` . `draft` vertegenwoordigt wanneer het publiek wordt gecreeerd, `published` wanneer het publiek wordt gepubliceerd, en `inactive` wanneer het publiek niet meer actief is. |
 | `datasetId` | De id van de dataset die de publieksgegevens kunnen worden gevonden. |
@@ -482,7 +482,7 @@ curl -X PUT https://platform.adobe.io/data/core/ups/audiences/4afe34ae-8c98-4513
 
 **Reactie**
 
-Een geslaagde reactie retourneert HTTP status 200 met details over uw onlangs bijgewerkte publiek. Houd er rekening mee dat de details van uw publiek verschillen, afhankelijk van het publiek dat door het platform wordt gegenereerd of een publiek dat extern wordt gegenereerd.
+Een geslaagde reactie retourneert HTTP status 200 met details over uw onlangs bijgewerkte publiek. Houd er rekening mee dat de details van uw publiek verschillen, afhankelijk van het publiek dat via een Experience-Platform wordt gegenereerd of een publiek dat extern wordt gegenereerd.
 
 +++A voorbeeldreactie wanneer het bijwerken van een volledig publiek.
 
@@ -490,7 +490,7 @@ Een geslaagde reactie retourneert HTTP status 200 met details over uw onlangs bi
 {
     "id": "4afe34ae-8c98-4513-8a1d-67ccaa54bc05",
     "audienceId": "test-platform-audience-id",
-    "name": "New Platform audience",
+    "name": "New Experience Platform audience",
     "namespace": "AEPSegments",
     "imsOrgId": "{ORG_ID}",
     "sandbox": {
@@ -565,7 +565,7 @@ Een geslaagde reactie retourneert HTTP-status 200 met het bijgewerkte publiek.
 {
     "id": "60ccea95-1435-4180-97a5-58af4aa285ab5",
     "audienceId": "test-platform-audience-id",
-    "name": "New Platform audience",
+    "name": "New Experience Platform audience",
     "namespace": "AEPSegments",
     "imsOrgId": "{ORG_ID}",
     "sandbox": {

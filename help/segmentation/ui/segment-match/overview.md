@@ -1,19 +1,19 @@
 ---
-keywords: Experience Platform;huis;populaire onderwerpen;segmentatie;Segmentatie;Segmentovereenkomst;segmentovereenkomst
+keywords: Experience Platform;home;populaire onderwerpen;segmentatie;Segmentering;Segmentovereenkomst;segmentovereenkomst
 solution: Experience Platform
 title: Overzicht van afstemming van segment
-description: Segment Match is een segment-delende dienst in Adobe Experience Platform die voor twee of meer gebruikers van het Platform toestaat om segmentgegevens op een veilige, beheerde, en privacy-vriendelijke manier uit te wisselen.
+description: Segment Match is een segment-delende dienst in Adobe Experience Platform die voor twee of meer gebruikers van Experience Platform toestaat om segmentgegevens op een veilige, beheerde, en privacy-vriendelijke manier uit te wisselen.
 exl-id: 4e6ec2e0-035a-46f4-b171-afb777c14850
-source-git-commit: b82bbdf7957e5a8d331d61f02293efdaf878971c
+source-git-commit: 0a9028beca36b46d6228c0038366bbac5d32603c
 workflow-type: tm+mt
-source-wordcount: '1889'
+source-wordcount: '1899'
 ht-degree: 0%
 
 ---
 
 # [!DNL Segment Match]-overzicht
 
-Adobe Experience Platform Segment Match is een segment-delende dienst die voor twee of meer gebruikers van het Platform toestaat om segmentgegevens op een veilige, beheerde, en privacy-vriendelijke manier uit te wisselen. [!DNL Segment Match] gebruikt de privacynormen van het Platform en persoonlijke herkenningstekens zoals gehakte e-mails, gehakte telefoonaantallen, en apparatenherkenningstekens zoals IDFAs en GAIDs.
+Adobe Experience Platform Segment Match is een segment-delende dienst die voor twee of meer gebruikers van Experience Platform toestaat om segmentgegevens op een veilige, beheerde, en privacy-vriendelijke manier uit te wisselen. In [!DNL Segment Match] worden Experience Platform-privacystandaarden en persoonlijke id&#39;s gebruikt, zoals gehashte e-mails, gehashte telefoonnummers en apparaat-id&#39;s, zoals id&#39;s en GAID&#39;s.
 
 Met [!DNL Segment Match] kunt u:
 
@@ -44,9 +44,9 @@ De lijst met ondersteunde naamruimten ziet er als volgt uit:
 
 | Naamruimte | Beschrijving |
 | --------- | ----------- |
-| E-mails (SHA256, verlaagd) | A namespace for pre-hashed email address. Waarden die in deze naamruimte worden opgegeven, worden omgezet in kleine letters voordat er een hash plaatsvindt met SHA256. De spaties aan het begin en aan het einde moeten worden bijgesneden alvorens een e-mailadres wordt genormaliseerd. Deze instelling kan niet met terugwerkende kracht worden gewijzigd. Het platform biedt twee methodes aan om het hakken op gegevensinzameling, door [`setCustomerIDs` ](https://experienceleague.adobe.com/docs/id-service/using/reference/hashing-support.html#hashing-support) en door [ gegevens prep ](../../../data-prep/functions.md#hashing) te steunen. |
+| E-mails (SHA256, verlaagd) | A namespace for pre-hashed email address. Waarden die in deze naamruimte worden opgegeven, worden omgezet in kleine letters voordat er een hash plaatsvindt met SHA256. De spaties aan het begin en aan het einde moeten worden bijgesneden alvorens een e-mailadres wordt genormaliseerd. Deze instelling kan niet met terugwerkende kracht worden gewijzigd. Experience Platform biedt twee methodes aan om het hakken op gegevensinzameling, door [`setCustomerIDs` ](https://experienceleague.adobe.com/docs/id-service/using/reference/hashing-support.html#hashing-support) en door [ gegevens prep ](../../../data-prep/functions.md#hashing) te steunen. |
 | Telefoon (SHA256_E.164) | A namespace that represents raw phone numbers that need to be hashed using both SHA256 and E.164 format. |
-| ECID | Een naamruimte die een ECID-waarde (Experience Cloud ID) vertegenwoordigt. Deze naamruimte kan ook worden aangeduid met de volgende aliassen: &quot;Adobe Marketing Cloud ID&quot;, &quot;Adobe Experience Cloud ID&quot;, &quot;Adobe Experience Platform ID&quot;. Zie het [ overzicht ECID ](../../../identity-service/features/ecid.md) voor meer informatie. |
+| ECID | Een naamruimte die een Experience Cloud ID-waarde (ECID) vertegenwoordigt. Deze naamruimte kan ook worden aangeduid met de volgende aliassen: &quot;Adobe Marketing Cloud ID&quot;, &quot;Adobe Experience Cloud ID&quot;, &quot;Adobe Experience Platform ID&quot;. Zie het [ overzicht ECID ](../../../identity-service/features/ecid.md) voor meer informatie. |
 | Apple IDFA (ID voor adverteerders) | Een naamruimte die Apple-id voor adverteerders vertegenwoordigt. Zie het volgende document op [ op rente-gebaseerde advertenties ](https://support.apple.com/en-us/HT202074) voor meer informatie. |
 | Google-ID | Een naamruimte die een Google Advertising-id vertegenwoordigt. Zie het volgende document op [ identiteitskaart van Google Advertising ](https://support.google.com/googleplay/android-developer/answer/6048248?hl=en) voor meer informatie. |
 
@@ -56,7 +56,7 @@ U moet een toestemmingsconfiguratie verstrekken en zijn standaardwaarde aan of `
 
 De controle van de opt-in en opt-out toestemming bepaalt of u met de toestemming kunt werken om gebruikersgegevens door gebrek te delen. Als de standaard voor de configuratie van de toestemming is ingesteld op `opt-out` , kunnen gebruikersgegevens worden gedeeld, tenzij een gebruiker dit expliciet weigert. Als de standaardwaarde is ingesteld op `opt-in` , kunnen gebruikersgegevens niet worden gedeeld, tenzij een gebruiker hier expliciet voor kiest.
 
-De standaard toestemmingsconfiguratie voor [!DNL Segment Match] wordt geplaatst aan `opt-out`. Als u een aanmeldingsmodel voor uw gegevens wilt afdwingen, stuurt u een e-mailverzoek naar het accountteam van uw Adobe.
+De standaard toestemmingsconfiguratie voor [!DNL Segment Match] wordt geplaatst aan `opt-out`. Stuur een e-mailaanvraag naar uw Adobe-accountteam om een aanmeldingsmodel voor uw gegevens af te dwingen.
 
 Voor meer informatie over het `share` attribuut dat wordt gebruikt om gegeven-delende toestemmingswaarde te plaatsen, zie de volgende documentatie over [ privacy en de groep van het toestemmingsgebied van toestemmingen ](../../../xdm/field-groups/profile/consents.md). Voor informatie over de specifieke gebiedsgroep die wordt gebruikt om de toestemming van de consument voor inzameling en gebruik van gegevens te vangen met betrekking tot privacy, verpersoonlijking en marketing voorkeur, zie de volgende [ Toestemming voor Privacy, Personalization en het Voorkeur GitHub voorbeeld van de Marketing ](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/consent/consent-preferences.schema.md).
 
@@ -64,7 +64,7 @@ Voor meer informatie over het `share` attribuut dat wordt gebruikt om gegeven-de
 
 De laatste voorwaarde u moet vestigen is een nieuw etiket van het gegevensgebruik te vormen om gegevens te verhinderen delend. Via labels voor gegevensgebruik kunt u bepalen welke gegevens mogen worden gedeeld via [!DNL Segment Match] .
 
-Met labels voor gegevensgebruik kunt u gegevenssets en velden categoriseren op basis van het gebruiksbeleid dat op die gegevens van toepassing is. Labels kunnen op elk gewenst moment worden toegepast, zodat u op flexibele wijze gegevens kunt beheren. De beste praktijken bevorderen etiketteringsgegevens zodra het in Experience Platform wordt opgenomen, of zodra de gegevens voor gebruik in Platform beschikbaar worden.
+Met labels voor gegevensgebruik kunt u gegevenssets en velden categoriseren op basis van het gebruiksbeleid dat op die gegevens van toepassing is. Labels kunnen op elk gewenst moment worden toegepast, zodat u op flexibele wijze gegevens kunt beheren. De beste praktijken bevorderen etiketteringsgegevens zodra het in Experience Platform wordt opgenomen, of zodra de gegevens voor gebruik in Experience Platform beschikbaar worden.
 
 [!DNL Segment Match] gebruikt het C11-label, een specifiek contractlabel voor [!DNL Segment Match] dat u handmatig kunt toevoegen aan gegevenssets of kenmerken om ervoor te zorgen dat deze worden uitgesloten van het [!DNL Segment Match] -partnerdelingsproces. Het label C11 geeft gegevens aan die niet mogen worden gebruikt in [!DNL Segment Match] -processen. Nadat u hebt bepaald welke datasets en/of gebieden u van [!DNL Segment Match] wilt uitsluiten en het etiket C11 dienovereenkomstig toevoegt, wordt het etiket automatisch afgedwongen door de [!DNL Segment Match] werkschema. [!DNL Segment Match] schakelt automatisch het [!UICONTROL Restrict data sharing] kernbeleid in. Voor specifieke instructies op hoe te om de etiketten van het gegevensgebruik op datasets toe te passen, zie het leerprogramma op [ het beheren van de etiketten van het gegevensgebruik in UI ](../../../data-governance/labels/user-guide.md).
 
@@ -87,7 +87,7 @@ Wanneer u uw identiteitsgegevens en naamruimten, configuratie van de toestemming
 
 ### Partner beheren
 
-Selecteer in de interface Platform de optie **[!UICONTROL Segments]** in de linkernavigatie en selecteer vervolgens **[!UICONTROL Feeds]** in de bovenste koptekst.
+Selecteer in de gebruikersinterface van Experience Platform **[!UICONTROL Segments]** in de linkernavigatie en selecteer vervolgens **[!UICONTROL Feeds]** in de bovenste koptekst.
 
 ![ segmenten-feed.png ](./images/segments-feed.png)
 
@@ -95,7 +95,7 @@ De pagina [!UICONTROL Feeds] bevat een lijst met feeds die zijn ontvangen van pa
 
 ![ leiden-partners.png ](./images/manage-partners.png)
 
-Een verbinding tussen twee partners is een &quot;bidirectionele handdruk&quot;die als zelfbediening methode voor gebruikers dienst doet om hun organisaties van het Platform samen op een zandbakniveau te verbinden. De verbinding is vereist om Platform op de hoogte te stellen van het feit dat er een overeenkomst is gesloten en dat Platform de services voor delen tussen u en uw partner(s) kan vergemakkelijken.
+Een verbinding tussen twee partners is een &quot;bidirectionele handdruk&quot;die als zelfbediening methode voor gebruikers dienst doet om hun organisaties van Experience Platform op een zandbakniveau samen te verbinden. De verbinding is vereist om Experience Platform te laten weten dat er een overeenkomst is gesloten en dat Experience Platform het delen van services tussen u en uw partner(s) kan vergemakkelijken.
 
 >[!NOTE]
 >
@@ -121,7 +121,7 @@ Als u een partner wilt verbinden met behulp van hun [!UICONTROL connect ID] , ty
 >abstract="Beperkte gevallen van marketinggebruik helpen uw partners te helpen ervoor te zorgen dat gedeelde segmenten correct worden gebruikt volgens uw beperkingen op het gebied van gegevensbeheer."
 >text="Learn more in documentation"
 
-A **voer** is een groepering van gegevens (segmenten), de regels voor hoe dat gegeven kan worden blootgesteld of worden gebruikt, en de configuraties die bepalen hoe uw gegevens tegen de gegevens van uw partners worden aangepast. Een feed kan onafhankelijk worden beheerd en via [!DNL Segment Match] worden uitgewisseld met andere platformgebruikers.
+A **voer** is een groepering van gegevens (segmenten), de regels voor hoe dat gegeven kan worden blootgesteld of worden gebruikt, en de configuraties die bepalen hoe uw gegevens tegen de gegevens van uw partners worden aangepast. Een feed kan onafhankelijk worden beheerd en via [!DNL Segment Match] worden uitgewisseld met andere Experience Platform-gebruikers.
 
 Als u een nieuwe feed wilt maken, selecteert u **[!UICONTROL Create feed]** in het [!UICONTROL Feeds] -dashboard.
 

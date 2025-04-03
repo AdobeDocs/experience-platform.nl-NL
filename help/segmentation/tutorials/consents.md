@@ -3,9 +3,9 @@ solution: Experience Platform
 title: Constante in segmentdefinities
 description: Leer hoe te om de voorkeur van de klantengoedkeuring voor het verzamelen van persoonlijke gegevens en het delen in segmenteringsverrichtingen na te leven.
 exl-id: fe851ce3-60db-4984-a73c-f9c5964bfbad
-source-git-commit: bf0e5065e771b748ee9d6ae3c431e76f08552983
+source-git-commit: f6d700087241fb3a467934ae8e64d04f5c1d98fa
 workflow-type: tm+mt
-source-wordcount: '625'
+source-wordcount: '627'
 ht-degree: 0%
 
 ---
@@ -24,7 +24,7 @@ Als een klant zijn toestemming voor het delen van persoonlijke gegevens heeft in
 
 Voor het respecteren van de waarden voor toestemming van klanten is een goed begrip van de verschillende services van [!DNL Adobe Experience Platform] vereist. Voordat u met deze zelfstudie begint, moet u de volgende services gebruiken:
 
-* [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): Het gestandaardiseerde framework waarmee Platform gegevens voor klantervaring organiseert.
+* [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): Het gestandaardiseerde raamwerk waarmee Experience Platform gegevens over de ervaring van klanten organiseert.
 * [[!DNL Real-Time Customer Profile]](../../profile/home.md): biedt een uniform, klantprofiel in real-time op basis van geaggregeerde gegevens van meerdere bronnen.
 * [[!DNL Adobe Experience Platform Segmentation Service]](../home.md): hiermee kunt u soorten publiek maken op basis van [!DNL Real-Time Customer Profile] -gegevens.
 
@@ -75,7 +75,7 @@ Als zowel de toestemmingswaarden **[!UICONTROL Data Collection]** als **[!UICONT
 
 Door deze zelfstudie te volgen, zou u nu een beter inzicht in moeten hebben hoe te om klantentoestemmingen en voorkeur te respecteren wanneer het bouwen van segmentdefinities in Experience Platform.
 
-Raadpleeg de volgende documentatie voor meer informatie over het beheer van toestemming in Platform:
+Raadpleeg de volgende documentatie voor meer informatie over het beheer van de toestemming in Experience Platform:
 
 * [Goedkeuring met gebruik van de Adobe-standaard](../../landing/governance-privacy-security/consent/adobe/overview.md)
 * [Goedkeuring verwerking gebruikend IAB TCF 2.0 norm](../../landing/governance-privacy-security/consent/iab/overview.md)

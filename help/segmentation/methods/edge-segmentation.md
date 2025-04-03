@@ -1,10 +1,10 @@
 ---
 title: Edge Segmentation Guide
-description: Leer hoe u Edge-segmentatie gebruikt om het publiek in Platform direct aan de rand te evalueren, zodat dezelfde pagina en de volgende pagina voor het aanpassen van de paginascheiding kunnen worden gebruikt.
+description: Leer hoe u Edge-segmentatie gebruikt om het publiek in Experience Platform direct aan de rand te evalueren, zodat dezelfde pagina en de volgende pagina voor het aanpassen van de paginascheiding kunnen worden gebruikt.
 exl-id: eae948e6-741c-45ce-8e40-73d10d5a88f1
-source-git-commit: 7ed92ed7573f82a2da2fc96f0868fe6f97a61899
+source-git-commit: f6d700087241fb3a467934ae8e64d04f5c1d98fa
 workflow-type: tm+mt
-source-wordcount: '1137'
+source-wordcount: '1139'
 ht-degree: 0%
 
 ---
@@ -302,7 +302,7 @@ Binnen de beschikbare filters, ga naar **frequentie van de Update** en selecteer
 
 ![ de updatefrequentie van Edge wordt geselecteerd, tonend alle publiek in de organisatie die gebruikend randsegmentatie worden geëvalueerd.](../images/methods/edge/filter-edge.png)
 
-Meer over het bekijken van publiek in Platform leren, gelieve de [ gids van het Portaal van het Publiek ](../ui/audience-portal.md) te lezen.
+Meer over het bekijken van publiek in Experience Platform leren, gelieve de [ gids van het Portaal van het Publiek ](../ui/audience-portal.md) te lezen.
 
 >[!ENDTABS]
 
