@@ -4,31 +4,31 @@ title: Op attributen-Gebaseerde Gids van de Controle van de Toegang van begin to
 description: Dit document verstrekt een gids van begin tot eind op op attribuut-gebaseerde toegangsbeheer in Adobe Experience Platform
 role: Developer
 exl-id: 7e363adc-628c-4a66-a3bd-b5b898292394
-source-git-commit: 74980c6108a32ec6736ab5892d89590e04e8a500
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '1512'
-ht-degree: 1%
+source-wordcount: '1522'
+ht-degree: 0%
 
 ---
 
 # Op attributen-gebaseerde toegangsbeheergids van begin tot eind
 
-Gebruik op kenmerken gebaseerde toegangscontrole op Adobe Experience Platform om uzelf en andere privacybewuste klanten meer flexibiliteit te bieden om gebruikerstoegang te beheren. De toegang tot individuele voorwerpen, zoals schemagebieden en publiek, kan met beleid worden verleend dat op de attributen en de rol van de objecten wordt gebaseerd. Met deze functie kunt u toegang tot individuele objecten verlenen of intrekken voor specifieke platformgebruikers in uw organisatie.
+Gebruik op kenmerken gebaseerde toegangscontrole op Adobe Experience Platform om uzelf en andere privacybewuste klanten meer flexibiliteit te bieden om gebruikerstoegang te beheren. De toegang tot individuele voorwerpen, zoals schemagebieden en publiek, kan met beleid worden verleend dat op de attributen en de rol van de objecten wordt gebaseerd. Met deze functie kunt u toegang tot afzonderlijke objecten verlenen of intrekken voor specifieke Experience Platform-gebruikers in uw organisatie.
 
 Met deze functionaliteit kunt u schemavelden, publiek, enzovoort categoriseren met labels die het bereik van organisatie- of gegevensgebruik definiëren. U kunt dezelfde labels toepassen op reizen, aanbiedingen en andere objecten in Adobe Journey Optimizer. Tegelijkertijd kunnen beheerders toegangsbeleid definiëren rondom XDM-schemavelden (Experience Data Model) en beter beheren welke gebruikers of groepen (interne, externe of externe gebruikers) toegang hebben tot deze velden.
 
 >[!NOTE]
 >
->Dit document concentreert zich op het gebruiksgeval van het beleid van de toegangscontrole. Als u aan opstellingsbeleid probeert om het **gebruik** van gegevens te regeren eerder dan welke gebruikers van het Platform toegang tot het hebben, zie in plaats daarvan de gids van begin tot eind op [ gegevensbeheer ](../../data-governance/e2e.md).
+>Dit document concentreert zich op het gebruiksgeval van het beleid van de toegangscontrole. Als u aan opstellingsbeleid probeert om het **gebruik** van gegevens te regeren eerder dan de gebruikers van Experience Platform toegang tot het hebben, zie in plaats daarvan de gids van begin tot eind op [ gegevensbeheer ](../../data-governance/e2e.md).
 
 ## Aan de slag
 
-Deze zelfstudie vereist een goed begrip van de volgende platformcomponenten:
+Deze zelfstudie vereist een goed begrip van de volgende Experience Platform-componenten:
 
 * [[!DNL Experience Data Model (XDM)]  Systeem ](../../xdm/home.md): Het gestandaardiseerde kader waardoor Experience Platform gegevens van de klantenervaring organiseert.
    * [ Grondbeginselen van schemacompositie ](../../xdm/schema/composition.md): Leer over de basisbouwstenen van schema&#39;s XDM, met inbegrip van zeer belangrijke principes en beste praktijken in schemacompositie.
    * [ het leerprogramma van de Redacteur van het Schema ](../../xdm/tutorials/create-schema-ui.md): Leer hoe te om douaneschema&#39;s tot stand te brengen gebruikend de Redacteur UI van het Schema.
-* [ de Dienst van de Segmentatie van Adobe Experience Platform ](../../segmentation/home.md): De segmenteringsmotor binnen [!DNL Platform] wordt gebruikt om publiekssegmenten van uw klantenprofielen tot stand te brengen die op klantengedrag en attributen worden gebaseerd.
+* [ de Dienst van de Segmentatie van Adobe Experience Platform ](../../segmentation/home.md): De segmenteringsmotor binnen [!DNL Experience Platform] wordt gebruikt om publiekssegmenten van uw klantenprofielen tot stand te brengen die op klantengedrag en attributen worden gebaseerd.
 
 ### Hoofdlettergebruik
 
@@ -55,21 +55,21 @@ Via [!UICONTROL Permissions] kunt u rollen maken en beheren en de gewenste resou
 
 Neem contact op met de systeembeheerder als u geen beheerdersrechten hebt.
 
-Zodra u admin voorrechten hebt, ga naar [ Adobe Experience Cloud ](https://experience.adobe.com/) en teken binnen gebruikend uw geloofsbrieven van Adobe. Nadat u zich hebt aangemeld, wordt de pagina **[!UICONTROL Overview]** weergegeven voor uw organisatie waarvoor u beheerdersrechten hebt. Deze pagina toont de producten uw organisatie aan, samen met andere controles wordt geabonneerd om gebruikers en beheerders aan de organisatie toe te voegen. Selecteer **[!UICONTROL Permissions]** om de werkruimte voor uw platformintegratie te openen.
+Zodra u admin voorrechten hebt, ga naar [ Adobe Experience Cloud ](https://experience.adobe.com/) en teken binnen gebruikend uw geloofsbrieven van Adobe. Nadat u zich hebt aangemeld, wordt de pagina **[!UICONTROL Overview]** weergegeven voor uw organisatie waarvoor u beheerdersrechten hebt. Deze pagina toont de producten uw organisatie aan, samen met andere controles wordt geabonneerd om gebruikers en beheerders aan de organisatie toe te voegen. Selecteer **[!UICONTROL Permissions]** om de werkruimte voor uw Experience Platform-integratie te openen.
 
 ![ Beeld dat het product toont van Toestemmingen dat in Adobe Experience Cloud wordt geselecteerd ](../images/flac-ui/flac-select-product.png)
 
-De werkruimte voor machtigingen voor de gebruikersinterface van het platform wordt geopend op de pagina **[!UICONTROL Overview]** .
+De werkruimte Machtigingen voor de gebruikersinterface van Experience Platform wordt geopend op de pagina **[!UICONTROL Overview]** .
 
 ## Labels op een rol toepassen {#label-roles}
 
 >[!CONTEXTUALHELP]
 >id="platform_permissions_labels_about"
 >title="Wat zijn labels?"
->abstract="Met labels kunt u gegevenssets en velden categoriseren op basis van het gebruiksbeleid en het toegangsbeleid dat op die gegevens van toepassing is. Het platform verstrekt verscheidene Adobe-bepaalde <strong> de etiketten van het kern </strong> gegevensgebruik, die een brede verscheidenheid van gemeenschappelijke beperkingen van toepassing op gegevensbeheer behandelen. Bijvoorbeeld, de Gevoelige </strong> etiketten van 0} S {zoals RHD (Gereglementeerde Gegevens van de Gezondheid) staan u toe om gegevens te categoriseren die naar de Beschermde Informatie van de Gezondheid (PHI) verwijzen. <strong> U kunt ook uw eigen aangepaste labels definiëren die aan de behoeften van uw organisatie voldoen."
+>abstract="Met labels kunt u gegevenssets en velden categoriseren op basis van het gebruiksbeleid en het toegangsbeleid dat op die gegevens van toepassing is. Adobe Experience Platform verstrekt verscheidene Adobe-bepaalde <strong> kern </strong> etiketten van het gegevensgebruik, die een brede verscheidenheid van gemeenschappelijke beperkingen van toepassing op gegevensbeheer behandelen. Bijvoorbeeld, de Gevoelige </strong> etiketten van 0} S {zoals RHD (Gereglementeerde Gegevens van de Gezondheid) staan u toe om gegevens te categoriseren die naar de Beschermde Informatie van de Gezondheid (PHI) verwijzen. <strong> U kunt ook uw eigen aangepaste labels definiëren die aan de behoeften van uw organisatie voldoen."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/data-governance/labels/overview.html#understanding-data-usage-labels" text="Overzicht van labels voor gegevensgebruik"
 
-Rollen zijn manieren om de soorten gebruikers te categoriseren die met uw instantie van het Platform in wisselwerking staan en zijn bouwstenen van toegangsbeheerbeleid. Een rol heeft een bepaalde reeks toestemmingen, en de leden van uw organisatie kunnen aan één of meerdere rollen, afhankelijk van het werkingsgebied van toegang worden toegewezen zij nodig hebben.
+Rollen zijn manieren om de typen gebruikers te categoriseren die met uw instantie van Experience Platform communiceren en zijn bouwstenen van het beleid van de toegangscontrole. Een rol heeft een bepaalde reeks toestemmingen, en de leden van uw organisatie kunnen aan één of meerdere rollen, afhankelijk van het werkingsgebied van toegang worden toegewezen zij nodig hebben.
 
 Selecteer **[!UICONTROL Roles]** in de linkernavigatie en selecteer vervolgens **[!UICONTROL ACME Business Group]** om aan de slag te gaan.
 
@@ -144,7 +144,7 @@ Herhaal bovenstaande stappen met **[!UICONTROL Insulin <50]** .
 
 ## Activeer het beleid van de toegangscontrole {#policy}
 
-Het standaardtoegangsbeheerbeleid zal hefboometiketten gebruiken om te bepalen welke gebruikersrollen toegang tot specifieke middelen van het Platform hebben. In dit voorbeeld wordt toegang tot schemavelden en publiek in alle sandboxen geweigerd voor gebruikers die zich niet in een rol bevinden die de bijbehorende labels in het schemaveld heeft.
+Het standaard toegangsbeheerbeleid zal hefboomstametiketten bepalen welke gebruikersrollen toegang tot specifieke middelen van Experience Platform hebben. In dit voorbeeld wordt toegang tot schemavelden en publiek in alle sandboxen geweigerd voor gebruikers die zich niet in een rol bevinden die de bijbehorende labels in het schemaveld heeft.
 
 Als u het toegangsbeheerbeleid wilt activeren, selecteert u [!UICONTROL Permissions] in de linkernavigatie en selecteert u vervolgens **[!UICONTROL Policies]** .
 
@@ -192,7 +192,7 @@ Er wordt een bevestiging van beleidsactivering ontvangen en u keert terug naar d
 >title="Edit conditions"
 >abstract="Apply conditional statements to your policy to configure user access to certain resources. Select match all to require users to have roles with the same labels as a resource to be permitted access. Select match any to require users to have a role with just one label matching a label on a resource. Labels can either be defined as core or custom labels, with core labels representing labels created and provided by Adobe and custom labels representing labels that you created for your organization."
 
-Access control policies leverage labels to define which user roles have access to specific Platform resources. Policies can either be local or global and can override other policies. In this example, access to schema fields and segments will be denied in all sandboxes for users who don't have the corresponding labels in the schema field.
+Access control policies leverage labels to define which user roles have access to specific Experience Platform resources. Policies can either be local or global and can override other policies. In this example, access to schema fields and segments will be denied in all sandboxes for users who don't have the corresponding labels in the schema field.
 
 >[!NOTE]
 >
@@ -218,7 +218,7 @@ The table below shows the conditions available when creating a policy:
 | The following being true| When 'Permit access to' is set, access will be permitted if the user meets the selected criteria. |
 | Matches any| The user has a label that matches any label applied to a resource. |
 | Matches all| The user has all labels that matches all labels applied to a resource. |
-| Core label| A core label is an Adobe-defined label that is available in all Platform instances.|
+| Core label| A core label is an Adobe-defined label that is available in all Experience Platform instances.|
 | Custom label| A custom label is a label that has been created by your organization.|
 
 Select **[!UICONTROL The following being false]** and then select **[!UICONTROL No attribute selected]**. Next, select the user **[!UICONTROL Core label]**, then select **[!UICONTROL Matches all]**. Select the resource **[!UICONTROL Core label]** and finally select **[!UICONTROL Add resource]**.

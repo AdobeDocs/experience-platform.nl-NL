@@ -4,16 +4,16 @@ solution: Experience Platform
 title: Dataflows voor Doelen in UI controleren
 type: Tutorial
 exl-id: 8eb7bb3c-f2dc-4dbc-9cf5-3d5d3224f5f1
-source-git-commit: 7f3560eaccecc8f42bbfa7d27b82ad71397df035
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '3451'
+source-wordcount: '3457'
 ht-degree: 0%
 
 ---
 
 # Dataflows voor doelen in de UI controleren
 
-Gebruik de verschillende doelen in de Experience Platform-catalogus om uw gegevens van Platform te activeren voor talloze externe partners. Platform maakt het proces om de stroom van gegevens aan uw bestemmingen gemakkelijker te volgen door transparantie van gegevensstromen te verstrekken.
+Gebruik de verschillende doelen in de Experience Platform-catalogus om uw gegevens vanuit Experience Platform te activeren voor talloze externe partners. Experience Platform maakt het proces om de stroom van gegevens aan uw bestemmingen gemakkelijker te volgen door transparantie van gegevensstromen te verstrekken.
 
 Het controledashboard voorziet u van een visuele vertegenwoordiging van de reis van een dataflow, met inbegrip van de bestemming die de gegevens worden geactiveerd aan, het type gegevens dat u bekijkt, uitgevoerde gegevens per dataflow looppas, en veel meer.
 
@@ -23,14 +23,14 @@ Dit leerprogramma verstrekt instructies op hoe u of dataflows direct in de beste
 
 Deze handleiding vereist een goed begrip van de volgende onderdelen van Adobe Experience Platform:
 
-- [ Dataflows ](../home.md): Dataflows zijn een vertegenwoordiging van gegevensbanen die gegevens over Platform bewegen. Dataflows worden geconfigureerd op verschillende services, waardoor gegevens van bronconnectors naar doelgegevenssets worden verplaatst, naar [!DNL Identity] en [!DNL Profile] en naar [!DNL Destinations] .
+- [ Dataflows ](../home.md): Dataflows zijn een vertegenwoordiging van gegevensbanen die gegevens over Experience Platform bewegen. Dataflows worden geconfigureerd op verschillende services, waardoor gegevens van bronconnectors naar doelgegevenssets worden verplaatst, naar [!DNL Identity] en [!DNL Profile] en naar [!DNL Destinations] .
    - [ looppas Dataflow ](../../sources/notifications.md): De looppas van Dataflow is de terugkomende geplande banen die op de frequentieconfiguratie van geselecteerde dataflows worden gebaseerd.
-- [ Doelen ](../../destinations/home.md): De bestemmingen zijn pre-gebouwde integratie met algemeen gebruikte toepassingen die voor de naadloze activering van gegevens van Platform voor dwars-kanaal marketing campagnes, e-mailcampagnes, gerichte reclame, en vele andere gebruiksgevallen toestaan.
-- [ Sandboxen ](../../sandboxes/home.md): [!DNL Experience Platform] verstrekt virtuele zandbakken die één enkele [!DNL Platform] instantie in afzonderlijke virtuele milieu&#39;s verdelen helpen digitale ervaringstoepassingen ontwikkelen en ontwikkelen.
+- [ Doelen ](../../destinations/home.md): De bestemmingen zijn pre-gebouwde integratie met algemeen gebruikte toepassingen die voor de naadloze activering van gegevens van Experience Platform voor kanaalmarketing campagnes, e-mailcampagnes, gerichte reclame, en vele andere gebruiksgevallen toestaan.
+- [ Sandboxen ](../../sandboxes/home.md): [!DNL Experience Platform] verstrekt virtuele zandbakken die één enkele [!DNL Experience Platform] instantie in afzonderlijke virtuele milieu&#39;s verdelen helpen digitale ervaringstoepassingen ontwikkelen en ontwikkelen.
 
 ## Gegevens controleren in de werkruimte Doelen {#monitor-dataflows-in-the-destinations-workspace}
 
-Navigeer in de **[!UICONTROL Destinations]** -werkruimte in de gebruikersinterface van het platform naar het tabblad **[!UICONTROL Browse]** en selecteer de naam van een doel dat u wilt weergeven.
+Navigeer in de **[!UICONTROL Destinations]** -werkruimte in de gebruikersinterface van Experience Platform naar het tabblad **[!UICONTROL Browse]** en selecteer de naam van een doel dat u wilt weergeven.
 
 ![ Uitgezochte bestemmingsmening met een benadrukte bestemmingsverbinding ](../assets/ui/monitor-destinations/select-destination.png)
 
@@ -97,7 +97,7 @@ Elke individuele dataflow run toont de volgende details:
 
   >[!IMPORTANT]
   >
-  > Vanaf maart 2025 implementeert Adobe een update om de rapportnauwkeurigheid voor streamingdoelen te verbeteren. Deze verbetering zorgt voor een betere afstemming tussen de rapportage in Experience Platform en de doelplatforms.
+  > Vanaf maart 2025 brengt Adobe een update uit om de rapportagenauwkeurigheid voor streamingbestemmingen te verbeteren. Deze verbetering zorgt voor een betere afstemming tussen de rapportage in Experience Platform en de doelplatforms.
   >
   > Vóór deze update heeft **[!UICONTROL Identities failed]** alle activeringspogingen opgenomen. Na deze update wordt alleen de laatste activeringspoging opgenomen in het totale aantal.
   > 
@@ -349,4 +349,4 @@ Als **[!UICONTROL Audiences]** is geselecteerd, wordt een lijst weergegeven met 
 
 ## Volgende stappen {#next-steps}
 
-Door deze gids te volgen, weet u nu hoe te om dataflows voor zowel partij als het stromen bestemmingen, met inbegrip van alle relevante informatie zoals verwerkingstijd, activeringstarief, en status te controleren. Meer over gegevens leren in Platform, lees het [ dataflows overzicht ](../home.md). Meer over bestemmingen leren, lees het [ overzicht van bestemmingen ](../../destinations/home.md).
+Door deze gids te volgen, weet u nu hoe te om dataflows voor zowel partij als het stromen bestemmingen, met inbegrip van alle relevante informatie zoals verwerkingstijd, activeringstarief, en status te controleren. Meer over gegevens leren in Experience Platform, lees het [ dataflows overzicht ](../home.md). Meer over bestemmingen leren, lees het [ overzicht van bestemmingen ](../../destinations/home.md).

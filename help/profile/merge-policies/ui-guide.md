@@ -3,9 +3,9 @@ title: UI-gids voor samenvoegingsbeleid
 type: Documentation
 description: Leer hoe u met samenvoegbeleid werkt via de Adobe Experience Platform-gebruikersinterface.
 exl-id: 0489217a-6a53-428c-a531-fd0a0e5bb71f
-source-git-commit: 400b20578e9a13fa2f41462b188707a34a462ea9
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '2331'
+source-wordcount: '2334'
 ht-degree: 0%
 
 ---
@@ -13,26 +13,26 @@ ht-degree: 0%
 
 # UI-gids voor samenvoegen
 
-Met Adobe Experience Platform kunt u gegevensfragmenten uit meerdere bronnen samenvoegen en combineren om een volledig beeld van elk van uw individuele klanten te krijgen. Wanneer u deze gegevens samenbrengt, zijn samenvoegbeleidsregels de regels die [!DNL Platform] gebruikt om te bepalen hoe de prioriteit van gegevens wordt bepaald en welke gegevens worden gecombineerd om de verenigde weergave te maken.
+Met Adobe Experience Platform kunt u gegevensfragmenten uit meerdere bronnen samenvoegen en combineren om een volledig beeld van elk van uw individuele klanten te krijgen. Wanneer u deze gegevens samenbrengt, zijn samenvoegbeleidsregels de regels die [!DNL Experience Platform] gebruikt om te bepalen hoe de prioriteit van gegevens wordt bepaald en welke gegevens worden gecombineerd om de verenigde weergave te maken.
 
 Gebruikend RESTful APIs of het gebruikersinterface, kunt u nieuw samenvoegbeleid tot stand brengen, bestaand beleid beheren, en een standaardsamenvoegbeleid voor uw organisatie plaatsen. Deze handleiding bevat stapsgewijze instructies voor het werken met samenvoegbeleidsregels via de gebruikersinterface van Adobe Experience Platform (UI).
 
-Om meer over samenvoegingsbeleid te leren en zij rol zij binnen Experience Platform spelen, gelieve te beginnen door het [ overzicht van het fusiebeleid ](overview.md) te lezen.
+Om meer over fusiebeleid te leren en zij rol zij binnen Experience Platform spelen, gelieve te beginnen door het [ overzicht van het fusiebeleid ](overview.md) te lezen.
 
 ## Aan de slag
 
 Deze handleiding vereist een goed begrip van verschillende belangrijke functies van [!DNL Experience Platform] . Lees de documentatie voor de volgende services voordat u deze handleiding volgt:
 
 * [ Real-Time Profiel van de Klant ](../home.md): Verstrekt een verenigd, real-time consumentenprofiel dat op samengevoegde gegevens van veelvoudige bronnen wordt gebaseerd.
-* [ de Dienst van de Identiteit van Adobe Experience Platform ](../../identity-service/home.md): Laat Real-Time het Profiel van de Klant toe door identiteiten van ongelijke gegevensbronnen te overbruggen die in [!DNL Platform] worden opgenomen.
-* [ Model van de Gegevens van de Ervaring (XDM) ](../../xdm/home.md): Het gestandaardiseerde kader waardoor [!DNL Platform] gegevens van de klantenervaring organiseert.
+* [ de Dienst van de Identiteit van Adobe Experience Platform ](../../identity-service/home.md): Laat Real-Time het Profiel van de Klant toe door identiteiten van ongelijke gegevensbronnen te overbruggen die in [!DNL Experience Platform] worden opgenomen.
+* [ Model van de Gegevens van de Ervaring (XDM) ](../../xdm/home.md): Het gestandaardiseerde kader waardoor [!DNL Experience Platform] gegevens van de klantenervaring organiseert.
 
 ## Samenvoegbeleid weergeven {#view-merge-policies}
 
 >[!CONTEXTUALHELP]
 >id="platform_errors_uplib_101221_404"
 >title="Samenvoegbeleid niet gevonden"
->abstract="Dit betekent dat Platform het gevraagde fusiebeleid niet kon vinden. Probeer een van de volgende oplossingen om deze fout op te lossen:<ul><li>Controleer of de juiste id voor het samenvoegbeleid in de URL wordt vermeld.</li><li>Zorg ervoor dat u de juiste organisatie- en sandboxcombinatie hebt voor het samenvoegbeleid waartoe u toegang probeert te krijgen.</li></ul>"
+>abstract="Dit betekent dat Experience Platform het gewenste samenvoegingsbeleid niet kon vinden. Probeer een van de volgende oplossingen om deze fout op te lossen:<ul><li>Controleer of de juiste id voor het samenvoegbeleid in de URL wordt vermeld.</li><li>Zorg ervoor dat u de juiste organisatie- en sandboxcombinatie hebt voor het samenvoegbeleid waartoe u toegang probeert te krijgen.</li></ul>"
 
 In de gebruikersinterface van [!DNL Experience Platform] kunt u beginnen met het gebruik van samenvoegingsbeleid door **[!UICONTROL Profiles]** te selecteren in de linkernavigatie en vervolgens het tabblad **[!UICONTROL Merge Policies]** te selecteren.
 
@@ -77,7 +77,7 @@ Wanneer u een samenvoegbeleid maakt of bewerkt, kunt u het samenvoegingsschema v
 
 ![ de &quot;knoop van het Schema van de Unie van de Mening&quot;wordt benadrukt op het Nieuwe werkschema van het fusiebeleid.](../images/merge-policies/view-union-schema.png)
 
-Hiermee opent u het dialoogvenster [!UICONTROL View Union Schema] waarin alle bijdragende schema&#39;s, identiteiten en relaties worden weergegeven die aan het samenvoegingsschema zijn gekoppeld. U kunt het dialoogvenster gebruiken om het samenvoegingsschema te verkennen op dezelfde manier als u zou doen door het tabblad [!UICONTROL Union Schema] in de sectie [!UICONTROL Profiles] van de gebruikersinterface van het platform te openen.
+Hiermee opent u het dialoogvenster [!UICONTROL View Union Schema] waarin alle bijdragende schema&#39;s, identiteiten en relaties worden weergegeven die aan het samenvoegingsschema zijn gekoppeld. U kunt het dialoogvenster gebruiken om het samenvoegingsschema te verkennen op dezelfde manier als u zou doen door het tabblad [!UICONTROL Union Schema] in het gedeelte [!UICONTROL Profiles] van de gebruikersinterface van Experience Platform te openen.
 
 Voor gedetailleerde informatie over unieschema&#39;s, met inbegrip van hoe te met hen in het [!UICONTROL Union Schema] lusje of de [!UICONTROL View Union Schema] dialoog in het werkschema van het fusiebeleid wordt getoond, gelieve de [ gids UI van het unieschema ](../ui/union-schema.md) te bezoeken.
 
@@ -207,7 +207,7 @@ Nadat u de benodigde wijzigingen hebt aangebracht, controleert u het samenvoegbe
 
 ## Schendingen van het beleid inzake gegevensbeheer
 
-Wanneer het creëren van of het bijwerken van een samenvoegbeleid, wordt een controle uitgevoerd om te bepalen als het fusiebeleid om het even welk beleid van het gegevensgebruik schendt dat door uw organisatie wordt bepaald. Het beleid voor gegevensgebruik maakt deel uit van Adobe Experience Platform Data Governance en is een regel die het soort marketingacties beschrijft dat u mag uitvoeren op of mag beperken tot specifieke [!DNL Platform] -gegevens.
+Wanneer het creëren van of het bijwerken van een samenvoegbeleid, wordt een controle uitgevoerd om te bepalen als het fusiebeleid om het even welk beleid van het gegevensgebruik schendt dat door uw organisatie wordt bepaald. Het beleid voor gegevensgebruik maakt deel uit van Adobe Experience Platform Data Governance en is een regel die het soort marketingacties beschrijft dat u mag uitvoeren op of mag beperken tot specifieke [!DNL Experience Platform] -gegevens.
 
 Bijvoorbeeld, als een fusiebeleid werd gebruikt om een publiek tot stand te brengen dat aan een derdebestemming activeerde, en uw organisatie een beleid van het gegevensgebruik had dat de uitvoer van specifieke gegevens naar derden verhindert, zou u een **[!UICONTROL Data governance policy violation detected]** bericht wanneer het proberen om uw fusiebeleid te bewaren ontvangen.
 
@@ -217,4 +217,4 @@ Meer over leren hoe het gegevensbeheer binnen Adobe Experience Platform wordt ui
 
 ## Volgende stappen
 
-Nu u samenvoegt beleid voor uw organisatie hebt gecreeerd en gevormd, kunt u hen gebruiken om de mening van klantenprofielen binnen Platform aan te passen en publiek van uw gegevens van het Profiel tot stand te brengen. Zie het [ segmentatieoverzicht ](../../segmentation/home.md) voor meer informatie over om met publiek tot stand te brengen en te werken gebruikend [!DNL Experience Platform] UI en APIs.
+Nu u samenvoegbeleid voor uw organisatie hebt gemaakt en geconfigureerd, kunt u deze gebruiken om de weergave van klantprofielen in Experience Platform aan te passen en om een publiek te maken op basis van uw profielgegevens. Zie het [ segmentatieoverzicht ](../../segmentation/home.md) voor meer informatie over om met publiek tot stand te brengen en te werken gebruikend [!DNL Experience Platform] UI en APIs.

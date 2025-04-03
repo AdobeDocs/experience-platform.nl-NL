@@ -3,9 +3,9 @@ keywords: Experience Platform;home;populaire onderwerpen;toegangsbeheer;op attri
 title: Op kenmerken gebaseerde sandboxen voor toegangsbeheer
 description: Dit document bevat informatie over het beheer van sandboxen via de machtigingsinterface in Adobe Experience Cloud
 exl-id: c21eb319-fc0d-442a-b778-bbfa2d6bb22d
-source-git-commit: afd883c530ab1b335888e79b5f4075e774fced4b
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '257'
+source-wordcount: '258'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 0%
 >[!CONTEXTUALHELP]
 >id="platform_permissions_sandboxes_about"
 >title="Wat zijn sandboxen?"
->abstract="Sandboxen zijn virtuele partities binnen één instantie van Platform. Alle inhoud en handelingen die in een sandbox worden uitgevoerd, worden beperkt tot die sandbox en hebben geen invloed op andere sandboxen. De toegang tot sandboxen wordt beheerd via rollen."
+>abstract="Sandboxen zijn virtuele partities binnen één instantie van Experience Platform. Alle inhoud en handelingen die in een sandbox worden uitgevoerd, worden beperkt tot die sandbox en hebben geen invloed op andere sandboxen. De toegang tot sandboxen wordt beheerd via rollen."
 >additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/sandbox/home" text="Overzicht van sandboxen"
 
 Sandboxen zijn virtuele partities binnen één exemplaar van Experience Platform, die naadloze integratie met het ontwikkelingsproces van uw digitale ervaringstoepassingen mogelijk maken. Alle inhoud en handelingen die in een sandbox worden uitgevoerd, blijven beperkt tot alleen die sandbox en hebben geen invloed op andere sandboxen. Voor meer informatie over zandbakken, zie het [ overzicht van Sandboxen ](../../../sandboxes/home.md).

@@ -2,20 +2,20 @@
 title: Een Source-verbinding voor een Mixpanel maken in de gebruikersinterface
 description: Leer hoe u een Mixpanel-bronverbinding maakt met de gebruikersinterface van Adobe Experience Platform.
 exl-id: 2a02f6a4-08ed-468c-8052-f5b7be82d183
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '775'
+source-wordcount: '783'
 ht-degree: 0%
 
 ---
 
 # Een [!DNL Mixpanel] bronverbinding maken in de gebruikersinterface
 
-Deze zelfstudie bevat stappen voor het maken van een [!DNL Mixpanel] -bronverbinding met behulp van de gebruikersinterface van Adobe Experience Platform Platform.
+Deze zelfstudie bevat stappen voor het maken van een [!DNL Mixpanel] -bronverbinding met de Adobe Experience Platform Experience Platform-gebruikersinterface.
 
 ## Aan de slag
 
-Deze zelfstudie vereist een goed begrip van de volgende onderdelen van het Experience Platform:
+Deze zelfstudie vereist een goed begrip van de volgende onderdelen van Experience Platform:
 
 * [[!DNL Experience Data Model (XDM)]  Systeem ](../../../../../xdm/home.md): Het gestandaardiseerde kader waardoor [!DNL Experience Platform] gegevens van de klantenervaring organiseert.
    * [ Grondbeginselen van schemacompositie ](../../../../../xdm/schema/composition.md): Leer over de basisbouwstenen van schema&#39;s XDM, met inbegrip van zeer belangrijke principes en beste praktijken in schemacompositie.
@@ -24,7 +24,7 @@ Deze zelfstudie vereist een goed begrip van de volgende onderdelen van het Exper
 
 ### Vereiste referenties verzamelen
 
-Als u [!DNL Mixpanel] wilt verbinden met Platform, moet u waarden opgeven voor de volgende verbindingseigenschappen:
+Als u [!DNL Mixpanel] wilt verbinden met Experience Platform, moet u waarden opgeven voor de volgende verbindingseigenschappen:
 
 | Credentials | Beschrijving | Voorbeeld |
 | --- | --- | --- |
@@ -37,7 +37,7 @@ Voor meer informatie bij het voor authentiek verklaren van uw [!DNL Mixpanel] br
 
 ## Sluit uw [!DNL Mixpanel] -account aan
 
-Selecteer in de gebruikersinterface van het platform **[!UICONTROL Sources]** in de linkernavigatiebalk voor toegang tot de werkruimte van [!UICONTROL Sources] . In het scherm [!UICONTROL Catalog] worden diverse bronnen weergegeven waarmee u een account kunt maken.
+Selecteer in de gebruikersinterface van Experience Platform de optie **[!UICONTROL Sources]** in de linkernavigatiebalk voor toegang tot de werkruimte van [!UICONTROL Sources] . In het scherm [!UICONTROL Catalog] worden diverse bronnen weergegeven waarmee u een account kunt maken.
 
 U kunt de juiste categorie selecteren in de catalogus aan de linkerkant van het scherm. U kunt ook de specifieke bron vinden waarmee u wilt werken met de zoekoptie.
 
@@ -64,12 +64,12 @@ Als u een nieuwe account maakt, selecteert u **[!UICONTROL New account]** en gee
 >[!CONTEXTUALHELP]
 >id="platform_sources_mixpanel_timezone"
 >title="Tijdzone instellen voor opnemen in Mixpanel"
->abstract="De tijdzone moet hetzelfde zijn als de tijdzone die u instelt voor uw Mixpanel-profiel, omdat Platform de toegewezen projecttijdzone gebruikt om relevante gegevens in te voeren vanuit Mixpanel. Mixpanel zal zijn timezone aanpassen om met uw projecttimezone te coördineren alvorens de gebeurtenis aan een Mixpanel gegevensopslag te registreren."
+>abstract="De tijdzone moet hetzelfde zijn als de tijdzone-instelling van uw Mixpanel-profiel, omdat Experience Platform de toegewezen projecttijdzone gebruikt om relevante gegevens in te voeren vanuit Mixpanel. Mixpanel zal zijn timezone aanpassen om met uw projecttimezone te coördineren alvorens de gebeurtenis aan een Mixpanel gegevensopslag te registreren."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/sources/ui-tutorials/create/analytics/mixpanel.html#project-id-and-timezone" text="Meer informatie in documentatie"
 
 Nadat de bron is geverifieerd, geeft u uw project-id en tijdzone op en selecteert u **[!UICONTROL Select]** .
 
-De tijdzone die u aanwijst voordat u uw [!DNL Mixpanel] -gegevens naar Platform importeert, moet gelijk zijn aan de instelling voor de tijdzone van uw [!DNL Mixpanel] -profiel. Om het even welke veranderingen in de tijdzone van uw gegevens zullen slechts op nieuwe gebeurtenissen worden toegepast en de oude gebeurtenissen zullen in timezone blijven die u eerder specificeerde. [!DNL Mixpanel] past zomertijd aan en past uw tijdstempel voor inname dienovereenkomstig aan. Voor meer informatie over hoe de tijdzones uw gegevens beïnvloeden, zie de [!DNL Mixpanel] gids over [ het beheren van tijdzones voor projecten ](https://help.mixpanel.com/hc/en-us/articles/115004547203-Manage-Timezones-for-Projects-in-Mixpanel).
+De tijdzone die u aanwijst voordat u uw [!DNL Mixpanel] -gegevens naar Experience Platform importeert, moet gelijk zijn aan de instelling voor de tijdzone van uw [!DNL Mixpanel] -profiel. Om het even welke veranderingen in de tijdzone van uw gegevens zullen slechts op nieuwe gebeurtenissen worden toegepast en de oude gebeurtenissen zullen in timezone blijven die u eerder specificeerde. [!DNL Mixpanel] past zomertijd aan en past uw tijdstempel voor inname dienovereenkomstig aan. Voor meer informatie over hoe de tijdzones uw gegevens beïnvloeden, zie de [!DNL Mixpanel] gids over [ het beheren van tijdzones voor projecten ](https://help.mixpanel.com/hc/en-us/articles/115004547203-Manage-Timezones-for-Projects-in-Mixpanel).
 
 Na enkele ogenblikken wordt de juiste interface bijgewerkt naar een voorvertoningsvenster, zodat u uw schema kunt inspecteren voordat u een gegevensstroom maakt. Selecteer **[!UICONTROL Next]** als u klaar bent.
 
@@ -77,7 +77,7 @@ Na enkele ogenblikken wordt de juiste interface bijgewerkt naar een voorvertonin
 
 ## Volgende stappen
 
-Aan de hand van deze zelfstudie hebt u een verbinding tot stand gebracht met uw [!DNL Mixpanel] -account. U kunt nu aan het volgende leerprogramma verdergaan en [ een dataflow vormen om analysegegevens in Platform ](../../dataflow/analytics.md) te brengen.
+Aan de hand van deze zelfstudie hebt u een verbinding tot stand gebracht met uw [!DNL Mixpanel] -account. U kunt nu aan het volgende leerprogramma verdergaan en [ een dataflow vormen om analysegegevens in Experience Platform ](../../dataflow/analytics.md) te brengen.
 
 ## Aanvullende bronnen {#additional-resources}
 
@@ -85,9 +85,9 @@ De onderstaande secties bevatten aanvullende bronnen waarnaar u kunt verwijzen w
 
 ### Validatie {#validation}
 
-In de volgende overzichtsstappen kunt u controleren of u de [!DNL Mixpanel] -bron hebt verbonden en of [!DNL Mixpanel] -gebeurtenissen worden opgenomen in Platform.
+In de volgende contourstappen kunt u controleren of u de [!DNL Mixpanel] -bron hebt verbonden en of [!DNL Mixpanel] -gebeurtenissen worden opgenomen in Experience Platform.
 
-Selecteer in de gebruikersinterface van het platform **[!UICONTROL Datasets]** in de linkernavigatiebalk voor toegang tot de werkruimte van [!UICONTROL Datasets] . In het scherm [!UICONTROL Dataset Activity] worden de details van uitvoeringen weergegeven.
+Selecteer in de gebruikersinterface van Experience Platform de optie **[!UICONTROL Datasets]** in de linkernavigatiebalk voor toegang tot de werkruimte van [!UICONTROL Datasets] . In het scherm [!UICONTROL Dataset Activity] worden de details van uitvoeringen weergegeven.
 
 ![ dataset-activiteit ](../../../../images/tutorials/create/mixpanel-export-events/dataset-activity.png)
 

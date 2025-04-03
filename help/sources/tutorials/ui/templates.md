@@ -3,9 +3,9 @@ description: Leer hoe u sjablonen in de gebruikersinterface van Adobe Experience
 title: Een gegevensstroom voor bronnen maken met sjablonen in de gebruikersinterface
 badge1: Beta
 exl-id: 48aa36ca-656d-4b9d-954c-48c8da9df1e9
-source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '2198'
+source-wordcount: '2207'
 ht-degree: 0%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 >[!CONTEXTUALHELP]
 >id="platform_sources_marketo_mapping"
->title="Sjablonen voor bronnen in platforminterface"
+>title="Sjablonen voor bronnen in gebruikersinterface van Experience Platform"
 >abstract="De malplaatjes omvatten auto-geproduceerde activa zoals schema&#39;s, datasets, identiteiten, toewijzingsregels, identiteitsnamespaces, en dataflows die u kunt gebruiken wanneer het brengen van gegevens van een bron aan Experience Platform. U kunt automatisch gegenereerde elementen bijwerken en deze aan uw wensen aanpassen."
 
 >[!IMPORTANT]
@@ -35,17 +35,17 @@ Met sjablonen kunt u:
 * Minimaliseer fouten die tijdens het proces van handmatige gegevensinvoer kunnen voorkomen.
 * Werk automatisch gegenereerde elementen op elk gewenst moment bij om deze aan te passen aan uw gebruiksgevallen.
 
-De volgende zelfstudie biedt stappen voor het gebruik van sjablonen in de gebruikersinterface van het platform.
+De volgende zelfstudie biedt stappen voor het gebruik van sjablonen in de gebruikersinterface van Experience Platform.
 
 ## Aan de slag
 
 Deze zelfstudie vereist een goed begrip van de volgende onderdelen van Experience Platform:
 
-* [ Bronnen ](../../home.md): Experience Platform staat gegevens toe om van diverse bronnen worden opgenomen terwijl het voorzien van u van de capaciteit om, inkomende gegevens te structureren te etiketteren en te verbeteren gebruikend de diensten van het Platform.
+* [ Bronnen ](../../home.md): Experience Platform staat gegevens toe om van diverse bronnen worden opgenomen terwijl het voorzien van u van de capaciteit om, inkomende gegevens te structureren te etiketteren en te verbeteren gebruikend de diensten van Experience Platform.
 * [[!DNL Experience Data Model (XDM)]  Systeem ](../../../xdm/home.md): Het gestandaardiseerde kader waardoor Experience Platform gegevens van de klantenervaring organiseert.
-* [ Sandboxes ](../../../sandboxes/home.md): Experience Platform verstrekt virtuele zandbakken die één enkele instantie van het Platform in afzonderlijke virtuele milieu&#39;s verdelen helpen digitale ervaringstoepassingen ontwikkelen en ontwikkelen.
+* [ Sandboxes ](../../../sandboxes/home.md): Experience Platform verstrekt virtuele zandbakken die één enkele instantie van Experience Platform in afzonderlijke virtuele milieu&#39;s verdelen helpen digitale ervaringstoepassingen ontwikkelen en ontwikkelen.
 
-## Sjablonen gebruiken in de gebruikersinterface van het platform {#use-templates-in-the-platform-ui}
+## Sjablonen gebruiken in de gebruikersinterface van Experience Platform {#use-templates-in-the-platform-ui}
 
 >[!CONTEXTUALHELP]
 >id="platform_sources_templates_accounttype"
@@ -53,7 +53,7 @@ Deze zelfstudie vereist een goed begrip van de volgende onderdelen van Experienc
 >abstract="Selecteer het juiste bedrijfstype voor uw gebruiksscenario. De toegang hangt af van uw Real-Time Customer Data Platform-abonnementaccount."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html" text="Real-Time CDP-overzicht"
 
-Selecteer in de gebruikersinterface van het platform **[!UICONTROL Sources]** in de linkernavigatie voor toegang tot de werkruimte van [!UICONTROL Sources] en bekijk een catalogus met bronnen die beschikbaar zijn in Experience Platform.
+Selecteer in de gebruikersinterface van Experience Platform **[!UICONTROL Sources]** in de linkernavigatie voor toegang tot de werkruimte van [!UICONTROL Sources] en bekijk een catalogus met bronnen die beschikbaar zijn in Experience Platform.
 
 Gebruik het menu *[!UICONTROL Categories]* om bronnen op categorie te filteren. U kunt ook een bronnaam invoeren in de zoekbalk om een specifieke bron uit de catalogus te zoeken.
 
@@ -267,8 +267,8 @@ Door dit leerprogramma te volgen, hebt u nu dataflows, evenals activa zoals sche
 
 Sjablonen worden ondersteund door Adobe Experience Platform Alerts en u kunt het deelvenster Meldingen gebruiken om updates over de status van uw middelen te ontvangen en ook om terug te gaan naar de overzichtspagina.
 
-Selecteer het berichtpictogram de hoogste kopbal van Platform UI en selecteer dan het statusalarm om de activa te zien die u wilt herzien.
+Selecteer het berichtpictogram in de bovenste koptekst van de gebruikersinterface van Experience Platform en selecteer vervolgens de statuswaarschuwing om de elementen weer te geven die u wilt controleren.
 
-![ het berichtenpaneel in Platform UI met een bericht alarmerend een ontbroken benadrukt dataflow.](../../images/tutorials/templates/notifications.png)
+![ het berichtenpaneel in Experience Platform UI met een bericht alarmerend een ontbroken benadrukt gegevensstroom.](../../images/tutorials/templates/notifications.png)
 
-U kunt de waakzame montages van uw malplaatjes bijwerken om zowel e-mail als in-Platform berichten over de status van uw gegevensstroom te ontvangen. Voor meer informatie bij het vormen van alarm, lees de gids op [ hoe te aan alarm voor brondataflows in te schrijven ](../ui/alerts.md).
+U kunt de waarschuwingsinstellingen van uw sjablonen bijwerken om zowel e-mailberichten als meldingen in Experience Platform over de status van uw gegevensstromen te ontvangen. Voor meer informatie bij het vormen van alarm, lees de gids op [ hoe te aan alarm voor brondataflows in te schrijven ](../ui/alerts.md).

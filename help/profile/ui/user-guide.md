@@ -3,9 +3,9 @@ keywords: Experience Platform;profiel;real-time klantprofiel;problemen;API;veren
 title: Gebruikersgids voor realtime gebruikersprofiel
 description: Het profiel van de Klant in real time leidt tot een holistische mening van elk van uw individuele klanten, die gegevens van veelvoudige kanalen met inbegrip van online, off-line, CRM, en derdegegevens combineren. Dit document fungeert als richtlijn voor de interactie met Real-Time Klantprofiel in de Adobe Experience Platform-gebruikersinterface.
 exl-id: 792a3a73-58a4-4163-9212-4d43d24c2770
-source-git-commit: 4afb2c76f2022423e8f1fa29c91d02b43447ba90
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '2128'
+source-wordcount: '2135'
 ht-degree: 0%
 
 ---
@@ -19,8 +19,8 @@ ht-degree: 0%
 Deze UI-gids vereist inzicht in de verschillende [!DNL Experience Platform] -services die bij het beheren van [!DNL Real-Time Customer Profiles] betrokken zijn. Voordat u deze handleiding leest of in de gebruikersinterface werkt, raadpleegt u de documentatie voor de volgende services:
 
 * [[!DNL Real-Time Customer Profile]  overzicht ](../home.md): Verstrekt een verenigd, in real time consumentenprofiel dat op samengevoegde gegevens van veelvoudige bronnen wordt gebaseerd.
-* [[!DNL Identity Service]](../../identity-service/home.md): schakelt [!DNL Real-Time Customer Profile] in door identiteiten te overbruggen van verschillende gegevensbronnen terwijl ze worden ingesloten in [!DNL Platform] .
-* [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): Het gestandaardiseerde framework waarmee [!DNL Platform] gegevens voor de klantervaring indeelt.
+* [[!DNL Identity Service]](../../identity-service/home.md): schakelt [!DNL Real-Time Customer Profile] in door identiteiten te overbruggen van verschillende gegevensbronnen terwijl ze worden ingesloten in [!DNL Experience Platform] .
+* [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): Het gestandaardiseerde framework waarmee [!DNL Experience Platform] gegevens voor de klantervaring indeelt.
 
 ## [!UICONTROL Overview]
 
@@ -28,7 +28,7 @@ Selecteer in de gebruikersinterface van Experience Platform de optie **[!UICONTR
 
 >[!NOTE]
 >
->Als uw organisatie nieuw is aan Platform en nog geen actieve datasets van het Profiel of gecreeerd samenvoegbeleid heeft, is het [!UICONTROL Profiles] dashboard niet zichtbaar. In plaats daarvan geeft het tabblad [!UICONTROL Overview] koppelingen en documentatie weer om u te helpen aan de slag te gaan met Real-Time Klantprofiel.
+>Als uw organisatie nieuw is voor Experience Platform en nog geen actieve profielgegevenssets of samenvoegbeleid heeft gemaakt, is het dashboard van [!UICONTROL Profiles] niet zichtbaar. In plaats daarvan geeft het tabblad [!UICONTROL Overview] koppelingen en documentatie weer om u te helpen aan de slag te gaan met Real-Time Klantprofiel.
 
 ### Profieldashboard {#profile-dashboard}
 
@@ -56,7 +56,7 @@ Naast deze metriek, verstrekt deze sectie een laatste bijgewerkte datum en tijd,
 
 Het aantal profielen geeft het totale aantal profielen weer dat uw organisatie in Experience Platform heeft, nadat het standaardsamenvoegbeleid van uw organisatie profielfragmenten heeft samengevoegd tot één profiel voor elke afzonderlijke klant. Met andere woorden, uw organisatie kan veelvoudige profielfragmenten met betrekking tot één enkele klant hebben die met uw merk over verschillende kanalen interactie heeft, maar deze fragmenten zouden samen (volgens het standaard fusiebeleid) worden samengevoegd en een telling van &quot;1&quot;profiel terugkeren omdat zij allen met het zelfde individu verwant zijn.
 
-Het aantal profielen omvat ook zowel profielen met kenmerken (recordgegevens) als profielen die alleen tijdreeksgegevens (gebeurtenisgegevens) bevatten, zoals Adobe Analytics-profielen. Het aantal profielen wordt regelmatig vernieuwd om een up-to-date totaal aantal profielen binnen Platform te bieden.
+Het aantal profielen omvat ook zowel profielen met kenmerken (recordgegevens) als profielen die alleen tijdreeksgegevens (gebeurtenisgegevens) bevatten, zoals Adobe Analytics-profielen. Het aantal profielen wordt regelmatig vernieuwd om een up-to-date totaal aantal profielen in Experience Platform te bieden.
 
 #### De metrische waarde voor het aantal profielen bijwerken
 
@@ -96,7 +96,7 @@ Selecteer **[!UICONTROL Profile ID]** als u de details van een van de voorbeeldp
 
 ![ de profielen van de Steekproef die het fusiebeleid aanpassen worden getoond.](../images/user-guide/sample-profiles.png)
 
-Meer over fusiebeleid en hun rol binnen Platform leren, zie het [ overzicht van het fusiebeleid ](../merge-policies/overview.md).
+Meer over samenvoegingsbeleid en hun rol binnen Experience Platform leren, zie het [ overzicht van het fusiebeleid ](../merge-policies/overview.md).
 
 ### Bladeren op [!UICONTROL Identity] {#browse-identity}
 
@@ -131,7 +131,7 @@ Wanneer een waarde is ingevoerd, selecteert u **[!UICONTROL View]** en geeft u �
 >[!CONTEXTUALHELP]
 >id="platform_errors_uplib_201001_404"
 >title="Entiteit niet gevonden"
->abstract="Dit betekent dat Platform de gevraagde entiteit niet kon vinden. Probeer een van de volgende oplossingen om deze fout op te lossen:<ul><li>Controleer of de juiste profiel-id wordt vermeld in de URL van de entiteit waartoe u toegang probeert te krijgen.</li><li>Zorg ervoor dat u beschikt over de juiste organisatie- en sandboxcombinatie voor de entiteit waartoe u toegang probeert te krijgen.</li></ul>"
+>abstract="Dit betekent dat Experience Platform de gevraagde entiteit niet kon vinden. Probeer een van de volgende oplossingen om deze fout op te lossen:<ul><li>Controleer of de juiste profiel-id wordt vermeld in de URL van de entiteit waartoe u toegang probeert te krijgen.</li><li>Zorg ervoor dat u beschikt over de juiste organisatie- en sandboxcombinatie voor de entiteit waartoe u toegang probeert te krijgen.</li></ul>"
 
 Nadat u een **[!UICONTROL Profile ID]** -tab hebt geselecteerd, wordt het tabblad **[!UICONTROL Detail]** geopend. De profielgegevens die op het tabblad **[!UICONTROL Detail]** worden weergegeven, zijn samengevoegd vanuit meerdere profielfragmenten en vormen één weergave van de individuele klant. Dit omvat klantgegevens zoals basiskenmerken, gekoppelde identiteiten en kanaalvoorkeuren.
 
@@ -149,7 +149,7 @@ Selecteer een van de andere beschikbare tabbladen om aanvullende informatie over
 
 Het tabblad **[!UICONTROL Attributes]** bevat een lijstweergave met een overzicht van alle kenmerken die betrekking hebben op één profiel, nadat het opgegeven samenvoegbeleid is toegepast.
 
-Deze kenmerken kunnen ook als een JSON-object worden weergegeven door op **[!UICONTROL View JSON]** te selecteren. Dit is handig voor gebruikers die beter willen begrijpen hoe de profielkenmerken worden opgenomen in Platform.
+Deze kenmerken kunnen ook als een JSON-object worden weergegeven door op **[!UICONTROL View JSON]** te selecteren. Dit is handig voor gebruikers die beter willen begrijpen hoe de profielkenmerken in Experience Platform worden ingevoerd.
 
 ![ het lusje van Attributen wordt benadrukt. De profielkenmerken worden weergegeven.](../images/user-guide/attributes.png)
 
@@ -163,7 +163,7 @@ Voor meer informatie over randprofielen, te lezen gelieve de [ documentatie van 
 
 Het tabblad **[!UICONTROL Events]** bevat gegevens van de 100 meest recente ExperienceEvents die aan de klant zijn gekoppeld. Deze gegevens kunnen het openen van e-mail, winkelwagentjes en paginaweergaven omvatten. Als u **[!UICONTROL View all]** selecteert voor een afzonderlijke gebeurtenis, worden aanvullende velden en waarden vastgelegd als onderdeel van de gebeurtenis.
 
-Gebeurtenissen kunnen ook als een JSON-object worden weergegeven door op **[!UICONTROL View JSON]** te klikken. Dit is handig als u wilt begrijpen hoe gebeurtenissen worden vastgelegd in Platform.
+Gebeurtenissen kunnen ook als een JSON-object worden weergegeven door op **[!UICONTROL View JSON]** te klikken. Dit is handig om te begrijpen hoe gebeurtenissen worden vastgelegd in Experience Platform.
 
 ![ het lusje van Gebeurtenissen wordt benadrukt. De profielgebeurtenissen worden getoond.](../images/user-guide/events.png)
 
@@ -201,7 +201,7 @@ Selecteer in het hoofdmenu **[!UICONTROL Profiles]** het tabblad **[!UICONTROL C
 
 ![ het Berekende attributenlusje wordt benadrukt.](../images/user-guide/computed-attributes.png)
 
-Voor meer informatie over gegevens verwerkte attributen, te lezen gelieve [ gegevens verwerkt attributenoverzicht ](../computed-attributes/overview.md). Voor meer informatie over hoe te om gegevens verwerkte attributen binnen het Platform UI te gebruiken, te lezen gelieve de [ gegevens verwerkte gids UI van attributen ](../computed-attributes/ui.md).
+Voor meer informatie over gegevens verwerkte attributen, te lezen gelieve [ gegevens verwerkt attributenoverzicht ](../computed-attributes/overview.md). Voor meer informatie over hoe te om gegevens verwerkte attributen binnen Experience Platform UI te gebruiken, te lezen gelieve de [ gegevens verwerkte gids UI van attributen ](../computed-attributes/ui.md).
 
 ## Volgende stappen
 

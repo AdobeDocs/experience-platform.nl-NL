@@ -1,28 +1,28 @@
 ---
-keywords: Experience Platform;thuis;populaire onderwerpen;monitoridentiteiten;monitordataflows;dataflows;identiteiten;
-description: De Adobe Experience Platform Identity Service biedt u een uitgebreid overzicht van uw klanten en hun gedrag door identiteiten over apparaten en systemen te overbruggen, zodat u in real-time een indrukwekkende, persoonlijke digitale ervaring kunt bieden. Deze zelfstudie bevat instructies voor het controleren van gegevensstromen met identiteiten via de gebruikersinterface van het Experience Platform.
+keywords: Experience Platform;home;populaire onderwerpen;monitor identiteiten;controleer gegevensstromen;dataflows;identiteiten;
+description: De Adobe Experience Platform Identity Service biedt u een uitgebreid overzicht van uw klanten en hun gedrag door identiteiten over apparaten en systemen te overbruggen, zodat u in real-time een indrukwekkende, persoonlijke digitale ervaring kunt bieden. Deze zelfstudie bevat instructies voor het controleren van gegevensstromen met identiteiten via de Experience Platform-gebruikersinterface.
 title: Gegevensstromen van de monitor voor Identiteiten in UI
 type: Tutorial
 exl-id: 735b0e52-74f6-47fe-98c6-e12a633b6f57
-source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1071'
-ht-degree: 0%
+source-wordcount: '1075'
+ht-degree: 3%
 
 ---
 
 # Dataflows for identity&#39;s in de UI controleren
 
-De Adobe Experience Platform Identity Service biedt u een uitgebreid overzicht van uw klanten en hun gedrag door identiteiten over apparaten en systemen te overbruggen, zodat u in real-time een indrukwekkende, persoonlijke digitale ervaring kunt bieden.
+Met Adobe Experience Platform Identity Service krijgt u een compleet beeld van uw klanten en hun gedrag door identiteiten op verschillende apparaten en systemen te koppelen. Zo kunt u in real-time impactvolle, persoonlijke digitale ervaringen bieden.
 
-Op het dashboard voor bewaking ziet u een visuele weergave van de activiteit van de gegevens binnen identiteiten, inclusief de status van de identiteiten van uw gegevens. Deze zelfstudie bevat instructies over hoe u het dashboard voor bewaking kunt gebruiken om de identiteiten van uw gegevens te controleren via de gebruikersinterface van het Experience Platform, zodat u de status van identiteitsverwerking kunt volgen.
+Op het dashboard voor bewaking ziet u een visuele weergave van de activiteit van de gegevens binnen identiteiten, inclusief de status van de identiteiten van uw gegevens. Deze zelfstudie bevat instructies over hoe u het dashboard voor bewaking kunt gebruiken om de identiteit van uw gegevens te controleren via de Experience Platform-gebruikersinterface, zodat u de status van identiteitsverwerking kunt bijhouden.
 
 ## Aan de slag {#getting-started}
 
-- [ Dataflows ](../home.md): Dataflows zijn een vertegenwoordiging van gegevensbanen die gegevens over Platform bewegen. Dataflows worden geconfigureerd op verschillende services, waardoor gegevens van bronconnectors naar doelgegevenssets worden verplaatst, naar [!DNL Identity] en [!DNL Profile] en naar [!DNL Destinations] .
+- [ Dataflows ](../home.md): Dataflows zijn een vertegenwoordiging van gegevensbanen die gegevens over Experience Platform bewegen. Dataflows worden geconfigureerd op verschillende services, waardoor gegevens van bronconnectors naar doelgegevenssets worden verplaatst, naar [!DNL Identity] en [!DNL Profile] en naar [!DNL Destinations] .
    - [ looppas Dataflow ](../../sources/notifications.md): De looppas van Dataflow is de terugkomende geplande banen die op de frequentieconfiguratie van geselecteerde dataflows worden gebaseerd.
 - [ Dienst van de Identiteit ](../../identity-service/home.md): Verkrijg een betere mening van individuele klanten en hun gedrag door identiteiten over apparaten en systemen te overbruggen.
-- [ Sandboxen ](../../sandboxes/home.md): [!DNL Experience Platform] verstrekt virtuele zandbakken die één enkele [!DNL Platform] instantie in afzonderlijke virtuele milieu&#39;s verdelen helpen digitale ervaringstoepassingen ontwikkelen en ontwikkelen.
+- [ Sandboxen ](../../sandboxes/home.md): [!DNL Experience Platform] verstrekt virtuele zandbakken die één enkele [!DNL Experience Platform] instantie in afzonderlijke virtuele milieu&#39;s verdelen helpen digitale ervaringstoepassingen ontwikkelen en ontwikkelen.
 
 ## Het dashboard voor het controleren van identiteiten {#identity-metrics}
 
@@ -54,7 +54,7 @@ De volgende metriek is beschikbaar voor deze dashboardmening:
 | Identiteitswaarden | Beschrijving |
 | ---------------- | ----------- |
 | **[!UICONTROL Records received]** | Het aantal records dat wordt ontvangen van data Lake. |
-| **[!UICONTROL Records failed]** | Het aantal verslagen die niet in Platform wegens fouten in de gegevens werden opgenomen. |
+| **[!UICONTROL Records failed]** | Het aantal records dat niet in Experience Platform is ingevoerd als gevolg van fouten in de gegevens. |
 | **[!UICONTROL Records skipped]** | Het aantal records dat is ingevoegd, maar niet in [!DNL Identity Service] omdat de recordrij slechts één id bevat. |
 | **[!UICONTROL Records ingested]** | Het aantal records dat in [!DNL Identity Service] wordt ingevoerd. |
 | **[!UICONTROL Identities added]** | Het aantal nieuwe id&#39;s dat netto wordt toegevoegd aan [!DNL Identity Service]. |
@@ -78,7 +78,7 @@ De volgende metriek is beschikbaar voor deze dashboardmening:
 | **[!UICONTROL Dataset]** | De naam van de dataset die dataflow opneemt aan. |
 | **[!UICONTROL Source name]** | De naam van de bron waartoe de gegevensstroom behoort. |
 | **[!UICONTROL Records received]** | Het aantal records dat wordt ontvangen van data Lake. |
-| **[!UICONTROL Records failed]** | Het aantal verslagen die niet in Platform wegens fouten in de gegevens werden opgenomen. |
+| **[!UICONTROL Records failed]** | Het aantal records dat niet in Experience Platform is ingevoerd als gevolg van fouten in de gegevens. |
 | **[!UICONTROL Records skipped]** | Het aantal records dat is ingevoegd, maar niet in [!DNL Identity Service] omdat de recordrij slechts één id bevat. |
 | **[!UICONTROL Records ingested]** | Het aantal records dat in [!DNL Identity Service] wordt ingevoerd. |
 | **[!UICONTROL Total records]** | Het totale aantal records, inclusief mislukte records, overgeslagen records, toegevoegde identiteiten en gedupliceerde records. |
@@ -100,7 +100,7 @@ De volgende metriek is beschikbaar voor deze dashboardmening:
 | Metrisch | Beschrijving |
 | -------| ----------- |
 | **[!UICONTROL Records received]** | Het aantal records dat wordt ontvangen van data Lake. |
-| **[!UICONTROL Records failed]** | Het aantal verslagen die niet in Platform wegens fouten in de gegevens werden opgenomen. |
+| **[!UICONTROL Records failed]** | Het aantal records dat niet in Experience Platform is ingevoerd als gevolg van fouten in de gegevens. |
 | **[!UICONTROL Records skipped]** | Het aantal records dat is ingevoegd, maar niet in [!DNL Identity Service] omdat de recordrij slechts één id bevat. |
 | **[!UICONTROL Records ingested]** | Het aantal records dat in [!DNL Identity Service] wordt ingevoerd. |
 | **[!UICONTROL Identities added]** | Het aantal nieuwe id&#39;s dat netto wordt toegevoegd aan [!DNL Identity Service]. |

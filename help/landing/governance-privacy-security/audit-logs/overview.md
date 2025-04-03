@@ -4,9 +4,9 @@ description: Leer hoe u met auditlogboeken kunt zien wie welke acties in Adobe E
 role: Admin,Developer
 feature: Audits
 exl-id: 00baf615-5b71-4e0a-b82a-ca0ce8566e7f
-source-git-commit: 9bc80c2ee01e7a739db55cc7fc77ea19e609b265
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1436'
+source-wordcount: '1446'
 ht-degree: 4%
 
 ---
@@ -16,19 +16,19 @@ ht-degree: 4%
 >[!CONTEXTUALHELP]
 >id="platform_audits_privacyconsole_actions"
 >title="Bovenste handelingen"
->abstract="Deze widget geeft de belangrijkste soorten acties weer die binnen de geselecteerde tijdlijn in Experience Platform zijn uitgevoerd. Om de volledige lijst van geregistreerde acties in Platform te zien, selecteer **Controles** in de linkernavigatie."
+>abstract="Deze widget geeft de belangrijkste soorten acties weer die binnen de geselecteerde tijdlijn in Experience Platform zijn uitgevoerd. Om de volledige lijst van geregistreerde acties in Experience Platform te zien, selecteer **Controles** in de linkernavigatie."
 
 >[!CONTEXTUALHELP]
 >id="platform_audits_privacyconsole_users"
 >title="Belangrijkste gebruikers"
->abstract="Deze widget toont de gebruikers die de meeste handelingen in Experience Platform binnen de geselecteerde tijdlijn hebben uitgevoerd. Om de volledige lijst van geregistreerde acties in Platform te zien, selecteer **Controles** in de linkernavigatie."
+>abstract="Deze widget toont de gebruikers die de meeste handelingen in Experience Platform binnen de geselecteerde tijdlijn hebben uitgevoerd. Om de volledige lijst van geregistreerde acties in Experience Platform te zien, selecteer **Controles** in de linkernavigatie."
 
 >[!CONTEXTUALHELP]
 >id="platform_privacyConsole_audits_description"
->title="Gebruikersactiviteiten in het platform bewaken"
->abstract="<h2>Beschrijving</h2><p>U kunt gebruikersactiviteit voor diverse diensten en mogelijkheden van het Platform in de vorm van controlelogboeken controleren. Deze logboeken vormen een controletraject dat <b> registreert die </b> <b> uitvoerde wat </b> actie en <b> wanneer </b>. De logboeken van de controle kunnen helpen bij het oplossen van problemenkwesties op Platform en helpen uw zaken effectief voldoen aan het beleid van het collectieve gegevensbeheer en regelgevende vereisten.</p>"
+>title="Gebruikersactiviteiten in Experience Platform controleren"
+>abstract="<h2>Beschrijving</h2><p>U kunt de gebruikersactiviteit voor diverse Experience Platform-services en -mogelijkheden in de vorm van auditlogboeken controleren. Deze logboeken vormen een controletraject dat <b> registreert die </b> <b> uitvoerde wat </b> actie en <b> wanneer </b>. De logboeken van de controle kunnen helpen bij het oplossen van problemenkwesties op Experience Platform en helpen uw zaken effectief voldoen aan het beleid van het collectieve gegevensbeheer en regelgevende vereisten.</p>"
 
-Om de transparantie en zichtbaarheid van de in het systeem uitgevoerde activiteiten te vergroten, kunt u in Adobe Experience Platform gebruikersactiviteiten voor verschillende services en mogelijkheden controleren in de vorm van &quot;auditlogs&quot;. Deze logboeken vormen een auditspoor dat met het oplossen van problemenkwesties op Platform kan helpen, en uw zaken helpen effectief aan het beleid van het collectieve gegevensbeheer en regelgevende vereisten voldoen.
+Om de transparantie en zichtbaarheid van de in het systeem uitgevoerde activiteiten te vergroten, kunt u in Adobe Experience Platform gebruikersactiviteiten voor verschillende services en mogelijkheden controleren in de vorm van &quot;auditlogs&quot;. Deze logboeken vormen een auditspoor dat kan helpen met het oplossen van problemenkwesties op Experience Platform, en uw zaken helpen effectief aan het beleid en de regelgevende vereisten van het collectieve gegevensbeheer voldoen.
 
 In een fundamentele betekenis, vertelt een controlelogboek **wie** **uitvoerde wat** actie, en **wanneer**. Elke actie die in een logboek wordt geregistreerd bevat meta-gegevens die op het actietype, datum en tijd, e-mailidentiteitskaart van de gebruiker die de actie, en extra attributen relevant voor het actietype uitvoerde.
 
@@ -36,7 +36,7 @@ In een fundamentele betekenis, vertelt een controlelogboek **wie** **uitvoerde w
 >
 > De meta-gegevens voor de acties **voegen gebruiker** toe en **verwijderen gebruiker** binnen het **5} middel van de Rol zal niet e-mailidentiteitskaart van de gebruiker bevatten die de actie uitvoerde.** In plaats daarvan worden in de logboeken de door het systeem gegenereerde e-mailadressen-id (system@adobe.com) weergegeven.
 
-Dit document behandelt controlelogboeken in Platform, met inbegrip van hoe te om hen in UI of API te bekijken en te beheren.
+Dit document behandelt controlelogboeken in Experience Platform, met inbegrip van hoe te om hen in UI of API te bekijken en te beheren.
 
 ## Gebeurtenistypen die zijn vastgelegd in auditlogboeken {#category}
 
@@ -74,7 +74,7 @@ In de volgende tabel wordt aangegeven op welke acties de middelen in de auditlog
 
 Wanneer de eigenschap voor uw organisatie wordt toegelaten, worden de controlelogboeken automatisch verzameld aangezien de activiteit voorkomt. U te hoeven niet om logboekinzameling manueel toe te laten.
 
-Als u controlelogboeken wilt weergeven en exporteren, moet u de toegangsbeheermachtiging van **[!UICONTROL View User Activity Log]** hebben (deze kunt u vinden onder de categorie [!UICONTROL Data Governance] ). Leren hoe te om individuele toestemmingen voor de eigenschappen van het Platform te beheren, gelieve te verwijzen naar de [ documentatie van de toegangscontrole ](../../../access-control/home.md).
+Als u controlelogboeken wilt weergeven en exporteren, moet u de toegangsbeheermachtiging van **[!UICONTROL View User Activity Log]** hebben (deze kunt u vinden onder de categorie [!UICONTROL Data Governance] ). Leren hoe te om individuele toestemmingen voor de eigenschappen van Experience Platform te beheren, gelieve te verwijzen naar de [ documentatie van de toegangscontrole ](../../../access-control/home.md).
 
 ## Het beheren van controlelogboeken in UI {#managing-audit-logs-in-the-ui}
 
@@ -83,7 +83,7 @@ Als u controlelogboeken wilt weergeven en exporteren, moet u de toegangsbeheerma
 >title="Instructies"
 >abstract="<ul><li>Selecteer <b> Controles </b> in de linkernavigatie. De werkruimte Audits toont een lijst van geregistreerde logboeken, door gebrek dat van meest recente aan minst recente wordt gesorteerd.</li>   <li> OPMERKING: auditlogboeken worden 365 dagen bewaard waarna ze uit het systeem worden verwijderd. Daarom kun je slechts 365 dagen teruggaan. Als u terug op gegevens moet kijken ouder dan 365 dagen, zou u logboeken bij een regelmatige kring moeten uitvoeren om aan uw interne beleidsvereisten te voldoen. </li><li>Selecteer een gebeurtenis in de lijst om de details in de rechtertrack weer te geven. </li><li>Selecteer het trechter-pictogram om een lijst met filterbesturingselementen weer te geven om de resultaten te beperken. Alleen de laatste 1000 records worden weergegeven, ongeacht de geselecteerde filters. </li><li>Om de huidige lijst van controlelogboeken uit te voeren, selecteer **logboek van de Download**.</li><li>Voor meer hulp met deze eigenschap, zie het <a href="https://experienceleague.adobe.com/docs/experience-platform/landing/governance-privacy-security/audit-logs/overview.html"> overzicht van controlelogboeken </a> op Experience League.</li></ul>"
 
-U kunt controlelogboeken voor verschillende Experience Platform-functies weergeven in de **[!UICONTROL Audits]** -werkruimte in de gebruikersinterface van het platform. De werkruimte bevat een lijst met opgenomen logbestanden, die standaard van de meest recente naar de minst recente logbestanden worden gesorteerd.
+U kunt controlelogboeken voor verschillende Experience Platform-functies weergeven in de **[!UICONTROL Audits]** -werkruimte in de Experience Platform-gebruikersinterface. De werkruimte bevat een lijst met opgenomen logbestanden, die standaard van de meest recente naar de minst recente logbestanden worden gesorteerd.
 
 ![ het dashboard van Audits die Audits in het linkermenu benadrukken.](../../images/audit-logs/audits.png)
 
@@ -171,7 +171,7 @@ Leren hoe te om controlelogboeken voor activiteiten in Adobe Admin Console te be
 
 ## Volgende stappen en extra bronnen
 
-In deze handleiding wordt beschreven hoe u de auditlogs in Experience Platform kunt beheren. Voor meer informatie over hoe te om de activiteiten van het Platform te controleren, zie de documentatie over [ de Inzichten van de Waarneming ](../../../observability/home.md) en [ controle gegevensopname ](../../../ingestion/quality/monitor-data-ingestion.md).
+In deze handleiding wordt beschreven hoe u de auditlogs in Experience Platform kunt beheren. Voor meer informatie over hoe te om de activiteiten van Experience Platform te controleren, zie de documentatie over [ de Inzichten van de Waarneming ](../../../observability/home.md) en [ controle gegevensopname ](../../../ingestion/quality/monitor-data-ingestion.md).
 
 Bekijk de volgende video om meer inzicht te krijgen in auditlogs in Experience Platform:
 

@@ -3,9 +3,9 @@ keywords: Experience Platform;home;populaire onderwerpen;toegangsbeheer;op attri
 title: Op kenmerken gebaseerde toegangsbeheerfuncties voor rolmachtigingen beheren
 description: Dit document bevat informatie over het configureren van machtigingen voor een rol via de interface voor machtigingen in Adobe Experience Cloud
 exl-id: 8acd2bb6-eef8-4b23-8fd8-3566c7508fe7
-source-git-commit: afd883c530ab1b335888e79b5f4075e774fced4b
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '1604'
+source-wordcount: '1608'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 0%
 >[!CONTEXTUALHELP]
 >id="platform_permissions_roles_about"
 >title="Wat zijn rollen?"
->abstract="De rollen bepalen de toegang die een beheerder, een specialist, of een eindgebruiker aan middelen in uw organisatie moet hebben. Zij categoriseren de gebruikers die met uw instantie van het Platform in wisselwerking staan en zijn de bouwstenen van het beleid van de toegangscontrole. Een rol heeft een bepaalde reeks toestemmingen en de leden van uw organisatie kunnen aan één of meerdere rollen, afhankelijk van het werkingsgebied van mening worden toegewezen of toegang schrijven zij nodig hebben."
+>abstract="De rollen bepalen de toegang die een beheerder, een specialist, of een eindgebruiker aan middelen in uw organisatie moet hebben. Zij categoriseren de gebruikers die met uw instantie van Experience Platform in wisselwerking staan en zijn de bouwstenen van toegangsbeheerbeleid. Een rol heeft een bepaalde reeks toestemmingen en de leden van uw organisatie kunnen aan één of meerdere rollen, afhankelijk van het werkingsgebied van mening worden toegewezen of toegang schrijven zij nodig hebben."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/access-control/abac/permissions-ui/roles.html" text="Rollen beheren"
 
 >[!IMPORTANT]
@@ -123,8 +123,8 @@ De volgende video is bedoeld om uw begrip van het creëren van een nieuwe rol en
 >[!CONTEXTUALHELP]
 >id="platform_permissions_apicredentials_about"
 >title="Wat zijn API-referenties?"
->abstract="API geloofsbrieven worden toegewezen aan rollen om gebruikers en ontwikkelaars toegang tot Platform APIs te verlenen. Met platform-API&#39;s kunt u via programmacode elementaire CRUD-bewerkingen (Maken, Lezen, Bijwerken, Verwijderen) uitvoeren op gegevens, zoals het configureren van berekende kenmerken, het openen van gegevens/entiteiten, het exporteren van gegevens, het verwijderen van overbodige gegevens of batches en meer."
->additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/landing/platform-apis/api-guide" text="Platform API-handleiding"
+>abstract="API-referenties worden toegewezen aan rollen om gebruikers en ontwikkelaars toegang te verlenen tot Experience Platform API&#39;s. Met Experience Platform API&#39;s kunt u via programmacode elementaire CRUD-bewerkingen (Maken, Lezen, Bijwerken, Verwijderen) uitvoeren op gegevens, zoals het configureren van berekende kenmerken, het openen van gegevens/entiteiten, het exporteren van gegevens, het verwijderen van overbodige gegevens of batches, enzovoort."
+>additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/landing/platform-apis/api-guide" text="Experience Platform API-handleiding"
 
 >[!IMPORTANT]
 >

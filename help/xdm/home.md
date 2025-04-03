@@ -4,9 +4,9 @@ solution: Experience Platform
 title: XDM-systeemoverzicht
 description: Standaardisering en interoperabiliteit zijn de belangrijkste concepten achter Adobe Experience Platform. Het Model van Gegevens van de ervaring (XDM), dat door Adobe wordt gedreven, is een inspanning om de gegevens van de klantenervaring te standaardiseren en schema's voor het beheer van de klantenervaring te bepalen.
 exl-id: 294d5f02-850f-47ea-9333-8b94a0bb291e
-source-git-commit: 442df54080b08b7fc3888e8bd5c7bd3e8f301240
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '2084'
+source-wordcount: '2095'
 ht-degree: 0%
 
 ---
@@ -15,9 +15,9 @@ ht-degree: 0%
 
 Standaardisering en interoperabiliteit zijn de belangrijkste concepten achter Adobe Experience Platform. Het Model van Gegevens van de ervaring (XDM), dat door Adobe wordt gedreven, is een inspanning om de gegevens van de klantenervaring te standaardiseren en schema&#39;s voor het beheer van de klantenervaring te bepalen.
 
-XDM is een openbaar gedocumenteerde specificatie die wordt ontworpen om de macht van digitale ervaringen te verbeteren. Het verstrekt gemeenschappelijke structuren en definities die om het even welke toepassing toestaan om met de diensten van het Platform te communiceren. Door zich aan de normen van XDM te houden, kunnen alle gegevens van de klantenervaring in een gemeenschappelijke vertegenwoordiging worden opgenomen die inzichten op een snellere, meer geïntegreerde manier kan leveren. U kunt waardevolle inzichten van klantenacties bereiken, klantenpubliek door segmenten bepalen, en klantenattributen voor verpersoonlijkingsdoeleinden uitdrukken.
+XDM is een openbaar gedocumenteerde specificatie die wordt ontworpen om de macht van digitale ervaringen te verbeteren. Het verstrekt gemeenschappelijke structuren en definities die om het even welke toepassing toestaan om met de diensten van Experience Platform te communiceren. Door zich aan de normen van XDM te houden, kunnen alle gegevens van de klantenervaring in een gemeenschappelijke vertegenwoordiging worden opgenomen die inzichten op een snellere, meer geïntegreerde manier kan leveren. U kunt waardevolle inzichten van klantenacties bereiken, klantenpubliek door segmenten bepalen, en klantenattributen voor verpersoonlijkingsdoeleinden uitdrukken.
 
-XDM is het basiskader dat Adobe Experience Cloud, aangedreven door Experience Platform, toestaat om het juiste bericht aan de juiste persoon, op het juiste kanaal, op het juiste moment te leveren. De methodologie waarop Experience Platform wordt gebouwd, XDM Systeem, stelt de Modelschema&#39;s van het Gegevensmodel van de Ervaring voor gebruik door de diensten van het Platform in werking.
+XDM is het basiskader dat Adobe Experience Cloud, aangedreven door Experience Platform, toestaat om het juiste bericht aan de juiste persoon, op het juiste kanaal, op het juiste moment te leveren. De methodologie waarop Experience Platform, het Systeem van XDM, wordt gebouwd exploiteert de Modelschema&#39;s van de Gegevens van de Ervaring voor gebruik door de diensten van Experience Platform.
 
 Meer informatie over de rol van XDM System in Experience Platform.
 
@@ -25,7 +25,7 @@ Meer informatie over de rol van XDM System in Experience Platform.
 
 Experience Platform gebruikt schema&#39;s om de gegevensstructuur op een consistente en herbruikbare manier te beschrijven. Door gegevens consistent in verschillende systemen te definiëren, wordt het eenvoudiger om betekenis te behouden en zo waarde te verkrijgen van gegevens.
 
-Voordat gegevens in Platform kunnen worden opgenomen, moet een schema worden samengesteld om de gegevensstructuur te beschrijven en beperkingen te bieden aan het type gegevens dat binnen elk veld kan worden opgenomen. De schema&#39;s bestaan uit een basisklasse en nul of meer groepen van het schemagebied.
+Voordat gegevens in Experience Platform kunnen worden ingevoerd, moet een schema zijn samengesteld om de gegevensstructuur te beschrijven en om beperkingen te bieden aan het type gegevens dat binnen elk veld kan worden opgenomen. De schema&#39;s bestaan uit een basisklasse en nul of meer groepen van het schemagebied.
 
 Voor meer informatie over het model van de schemacompositie, met inbegrip van ontwerpprincipes, en beste praktijken, zie de [ grondbeginselen van schemacompositie ](schema/composition.md).
 
@@ -33,7 +33,7 @@ Voor meer informatie over het model van de schemacompositie, met inbegrip van on
 
 XDM verstrekt een robuuste inzameling van standaardgebiedsgroepen en gegevenstypes, die bedoeld zijn om gemeenschappelijke concepten en gebruiksgevallen over verschillende industrieën te vangen. Met Experience Platform kunt u deze componenten filteren op branche, zodat u snel en op een betrouwbare manier schema&#39;s kunt maken die het beste uw specifieke bedrijfsbehoeften ondersteunen.
 
-Wanneer het construeren van schema&#39;s in Experience Platform UI, worden de vermelde gebiedsgroepen getoond met populariteit metrisch. Deze metrische waarde wordt bepaald door hoe vaak andere gebruikers van het Platform de gebiedsgroep in hun schema&#39;s in dienst nemen. Hoe hoger het getal, hoe populairder de veldgroep. Standaard worden de resultaten weergegeven van populairste tot minst populaire gegevens, zodat u op de hoogte blijft van trends in de modellering van gegevens in uw branche.
+Wanneer het construeren van schema&#39;s in Experience Platform UI, worden de vermelde gebiedsgroepen getoond met populariteit metrisch. Deze maatstaf wordt bepaald door hoe vaak andere Experience Platform-gebruikers de veldgroep in hun schema&#39;s gebruiken. Hoe hoger het getal, hoe populairder de veldgroep. Standaard worden de resultaten weergegeven van populairste tot minst populaire gegevens, zodat u op de hoogte blijft van trends in de modellering van gegevens in uw branche.
 
 ![ de populariteitskolom van de [!UICONTROL Add field group] dialoog.](./images/overview/popularity.png)
 
@@ -41,9 +41,9 @@ Wanneer het construeren van schema&#39;s in Experience Platform UI, worden de ve
 
 Experience Platform biedt een gebruikersinterface en RESTful-API waarmee u alle schemagerelateerde bronnen in de Experience Platform **[!DNL Schema Library]** kunt weergeven en beheren. [!DNL Schema Library] bevat standaard XDM componenten die door Adobe aan u ter beschikking worden gesteld, evenals middelen van de partners van Experience Platform en verkopers van wie toepassingen u gebruikt.
 
-U kunt ook nieuwe schema&#39;s en bronnen maken en beheren die uniek zijn voor uw organisatie met de [!DNL Schema Registry API] -werkruimte of de [!UICONTROL Schemas] -werkruimte in de gebruikersinterface van het platform.
+U kunt ook nieuwe schema&#39;s en bronnen maken en beheren die uniek zijn voor uw organisatie met de [!DNL Schema Registry API] - of [!UICONTROL Schemas] -werkruimte in de gebruikersinterface van Experience Platform.
 
-Raadpleeg de volgende documentatie voor meer informatie over het beheren van en werken met schema&#39;s in Platform:
+Raadpleeg de volgende documentatie voor meer informatie over het beheren van en werken met schema&#39;s in Experience Platform:
 
 * [XDM UI-hulplijn](./ui/overview.md)
 * [Handleiding Schema Registry API](./api/overview.md)
@@ -53,7 +53,7 @@ Raadpleeg de volgende documentatie voor meer informatie over het beheren van en 
 >[!CONTEXTUALHELP]
 >id="platform_schemas_behavior"
 >title="Gedrag van gegevens"
->abstract="Gegevens die bestemd zijn voor gebruik in Experience Platform, worden gegroepeerd in drie gedragstypen: record, tijdreeks en ad hoc. De schema&#39;s van het verslag verstrekken informatie over de attributen van een onderwerp, terwijl de tijdreeksregelingen een momentopname van het systeem vangen op het tijdstip een actie werd genomen. Ad hoc schema&#39;s vangen gebieden die namespaced voor gebruik slechts door één enkele dataset zijn. Zie de documentatie voor meer informatie over gegevensgedrag in Platform."
+>abstract="Gegevens die bestemd zijn voor gebruik in Experience Platform, worden gegroepeerd in drie gedragstypen: record, tijdreeks en ad hoc. De schema&#39;s van het verslag verstrekken informatie over de attributen van een onderwerp, terwijl de tijdreeksregelingen een momentopname van het systeem vangen op het tijdstip een actie werd genomen. Ad hoc schema&#39;s vangen gebieden die namespaced voor gebruik slechts door één enkele dataset zijn. Zie de documentatie voor meer informatie over gegevensgedrag in Experience Platform."
 
 Gegevens die bestemd zijn voor gebruik in Experience Platform worden gegroepeerd in drie gedragstypen:
 
@@ -67,7 +67,7 @@ Hoewel u uw eigen klassen binnen [!DNL Schema Registry] kunt definiëren, wordt 
 
 >[!NOTE]
 >
->Er zijn geen standaardklassen op basis van het ad-hocgedrag. Ad-hoc schema&#39;s worden automatisch geproduceerd door de processen van het Platform die hen gebruiken, maar zij kunnen ook [ manueel worden gecreeerd gebruikend de Registratie API van het Schema ](./tutorials/ad-hoc.md).
+>Er zijn geen standaardklassen op basis van het ad-hocgedrag. Ad-hoc schema&#39;s worden automatisch geproduceerd door de processen van Experience Platform die hen gebruiken, maar zij kunnen ook [ manueel worden gecreeerd gebruikend de Registratie API van het Schema ](./tutorials/ad-hoc.md).
 
 ### [!UICONTROL XDM Individual Profile] {#xdm-individual-profile}
 
@@ -93,13 +93,13 @@ Zie de [[!UICONTROL XDM ExperienceEvent] verwijzingsgids ](./classes/experiencee
 
 ## XDM-schema&#39;s en Experience Platform-services {#schemas-and-platform-services}
 
-Experience Platform is schema-agnostisch, betekenend dat om het even welk schema dat aan de norm voldoet XDM ter beschikking wordt gesteld aan de diensten van het Platform. De manieren waarop de verschillende diensten van het Platform schema&#39;s gebruiken worden hieronder meer in detail beschreven.
+Experience Platform is schema-agnostisch, betekenend dat om het even welk schema dat aan de norm voldoet XDM ter beschikking wordt gesteld aan de diensten van Experience Platform. De manieren waarop verschillende Experience Platform-services schema&#39;s gebruiken, worden hieronder nader beschreven.
 
 ### Catalogusservice, gegevensinsluiting en datumpeer {#ingestion-catalog-and-storage}
 
 Catalogusservice is het systeem van registratie voor Experience Platform-middelen en de bijbehorende schema&#39;s. Catalog bevat niet de feitelijke gegevensbestanden of directory&#39;s, maar wel de metagegevens en beschrijvingen van die bestanden en mappen.
 
-De gegevens van de catalogus worden opgeslagen in het gegevens meer, een hoogst korrelige gegevensopslag die alle gegevens bevat die door Platform, ongeacht oorsprong of dossierformaat worden beheerd.
+Catalogusgegevens worden opgeslagen in het datumpigment, een zeer granulaire gegevensopslag die alle gegevens bevat die door Experience Platform worden beheerd, ongeacht de oorsprong of bestandsindeling.
 
 Om met het opnemen van gegevens in Experience Platform te beginnen, kunt u de Dienst van de Catalogus gebruiken om een dataset tot stand te brengen. De dataset verwijst naar een XDM-schema dat de structuur van de gegevens beschrijft die moeten worden opgenomen. Als een dataset zonder een schema wordt gecreeerd, leidt Experience Platform een &quot;waargenomen schema&quot;af door het type en de inhoud van opgenomen gegevensgebieden te inspecteren. Datasets worden vervolgens bijgehouden in de Catalogusservice en opgeslagen in het datumpomeer naast de schema&#39;s en waargenomen schema&#39;s waarop ze zijn gebaseerd.
 

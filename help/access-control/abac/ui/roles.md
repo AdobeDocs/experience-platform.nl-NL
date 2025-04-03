@@ -1,11 +1,11 @@
 ---
-keywords: Experience Platform;huis;populaire onderwerpen;toegangsbeheer;op attribuut-gebaseerde toegangscontrole;ABAC
+keywords: Experience Platform;home;populaire onderwerpen;toegangsbeheer;op attributen-gebaseerd toegangsbeheer;ABAC
 title: Toegangsbeheer op basis van kenmerken maakt een rol
 description: Dit document bevat informatie over het beheer van rollen via de interface voor machtigingen in Adobe Experience Cloud
 exl-id: 85699716-339d-4992-8390-95563c7ea7fe
-source-git-commit: 74980c6108a32ec6736ab5892d89590e04e8a500
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '593'
+source-wordcount: '594'
 ht-degree: 0%
 
 ---
@@ -19,7 +19,7 @@ De rollen bepalen de toegang die een beheerder, een specialist, of een eindgebru
 >[!CONTEXTUALHELP]
 >id="platform_permissions_roles_about_create"
 >title="Nieuwe rol maken"
->abstract="Creeer nieuwe rollen om gebruikers beter te categoriseren die met uw instantie van het Platform in wisselwerking staan. U kunt bijvoorbeeld een rol maken voor een intern marketingteam en het label Gereglementeerde gezondheidsgegevens (RHD) op die rol toepassen, zodat uw interne marketingteam toegang krijgt tot de beschermde gezondheidsinformatie (PHI). Alternatief, kunt u een rol voor een extern agentschap ook tot stand brengen en die roltoegang tot PHI gegevens ontkennen door het etiket RHD op die rol niet toe te passen."
+>abstract="Maak nieuwe rollen om gebruikers die met uw Experience Platform-instantie werken beter te categoriseren. U kunt bijvoorbeeld een rol maken voor een intern marketingteam en het label Gereglementeerde gezondheidsgegevens (RHD) op die rol toepassen, zodat uw interne marketingteam toegang krijgt tot de beschermde gezondheidsinformatie (PHI). Alternatief, kunt u een rol voor een extern agentschap ook tot stand brengen en die roltoegang tot PHI gegevens ontkennen door het etiket RHD op die rol niet toe te passen."
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/access-control/abac/permissions-ui/roles.html" text="Rollen beheren"
 >additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/access-control/abac/end-to-end-guide#label-roles" text="Labels op een rol toepassen"
 

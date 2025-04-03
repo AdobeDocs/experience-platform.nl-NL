@@ -4,9 +4,9 @@ title: Profieldashboard
 description: Adobe Experience Platform biedt een dashboard waarmee u belangrijke informatie kunt bekijken over de gegevens van het realtime klantprofiel van uw organisatie.
 type: Documentation
 exl-id: 7b9752b2-460e-440b-a6f7-a1f1b9d22eeb
-source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '4669'
+source-wordcount: '4677'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 De gebruikersinterface van Adobe Experience Platform (UI) biedt een dashboard waarmee u belangrijke informatie over uw [!DNL Real-Time Customer Profile] gegevens kunt bekijken, zoals vastgelegd tijdens een dagelijkse momentopname. In deze handleiding wordt beschreven hoe u het dashboard Profielen in de gebruikersinterface kunt openen en gebruiken en wordt informatie gegeven over de metriek die in het dashboard wordt weergegeven.
 
-Verwijs naar de [ Realtime gids UI van het Profiel van de Klant ](../../profile/ui/user-guide.md) voor een overzicht van de eigenschappen van het Profiel binnen het gebruikersinterface van het Experience Platform.
+Verwijs naar de [ Realtime gids UI van het Profiel van de Klant ](../../profile/ui/user-guide.md) voor een overzicht van de eigenschappen van het Profiel binnen het gebruikersinterface van Experience Platform.
 
 ## Profieldashboardgegevens
 
@@ -29,13 +29,13 @@ De kenmerkgegevens in de momentopname geven de gegevens precies zo weer als op h
 
 ## Het dashboard Profielen verkennen {#explore-dashboard}
 
-Als u naar het dashboard Profielen in de gebruikersinterface van het platform wilt navigeren, selecteert u **[!UICONTROL Profiles]** in de linkertrack en selecteert u vervolgens het tabblad **[!UICONTROL Overview]** om het dashboard weer te geven.
+Als u naar het dashboard Profielen in de gebruikersinterface van Experience Platform wilt navigeren, selecteert u **[!UICONTROL Profiles]** in de linkertrack en selecteert u vervolgens het tabblad **[!UICONTROL Overview]** om het dashboard weer te geven.
 
 >[!NOTE]
 >
->Als uw organisatie nieuw aan Platform is en nog geen actieve datasets van het Profiel of gecreeerd samenvoegbeleid heeft, is het dashboard van Profielen niet zichtbaar. In plaats daarvan geeft het tabblad [!UICONTROL Overview] koppelingen en documentatie weer om u te helpen aan de slag te gaan met Real-Time Klantprofiel.
+>Als uw organisatie nieuw is voor Experience Platform en nog geen actieve profielgegevenssets of samenvoegbeleid is gemaakt, is het dashboard Profielen niet zichtbaar. In plaats daarvan geeft het tabblad [!UICONTROL Overview] koppelingen en documentatie weer om u te helpen aan de slag te gaan met Real-Time Klantprofiel.
 
-![ het dashboard van Profielen van het Experience Platform met Gemarkeerde Profielen en Overzicht.](../images/profiles/dashboard-overview.png)
+![ het dashboard van Profielen van Experience Platform met benadrukte Profielen en Overzicht.](../images/profiles/dashboard-overview.png)
 
 ### Het dashboard Profielen wijzigen {#modify-dashboard}
 
@@ -53,7 +53,7 @@ In de widgetbibliotheek kunt u bladeren door de selectie van standaard- en aange
 
 ### SQL weergeven {#view-sql}
 
-U kunt de SQL bekijken die de inzichten produceert die op uw dashboard met een knevel op de [!UICONTROL Overview] werkruimte worden visualiseerd. U kunt inspiratie putten uit de SQL van uw bestaande inzichten om nieuwe vragen tot stand te brengen die unieke inzichten uit de gegevens van het Platform voortbrengen die op uw bedrijfsbehoeften worden gebaseerd. Om meer over deze eigenschap te leren, zie de [ SQL gids van de Mening UI ](../view-sql.md).
+U kunt de SQL bekijken die de inzichten produceert die op uw dashboard met een knevel op de [!UICONTROL Overview] werkruimte worden visualiseerd. U kunt inspiratie putten uit de SQL van uw bestaande inzichten om nieuwe vragen tot stand te brengen die unieke inzichten van de gegevens van Experience Platform afleiden die op uw bedrijfsbehoeften worden gebaseerd. Om meer over deze eigenschap te leren, zie de [ SQL gids van de Mening UI ](../view-sql.md).
 
 <!-- ## (Beta) Profile efficacy insights {#profile-efficacy-insights}
 
@@ -117,10 +117,10 @@ De widget [!UICONTROL Channel preferences] geeft de communicatiekanalen weer waa
 
 De toestemming van de klant en de contactvoorkeur zijn complexe onderwerpen. Als u wilt weten hoe toestemmings- en contextvoorkeuren kunnen worden verzameld, verwerkt en gefilterd in Experience Platform, kunt u het beste de volgende documenten lezen:
 
-* Om over de groepen van het schemagebied te leren die worden vereist om [ toestemmingsgegevens volgens de norm van de Adobe ](../../landing/governance-privacy-security/consent/adobe/overview.md) te verzamelen, zie de documentatie over deze profiel-Toegelaten groepen van het schemagebied.
+* Om over de groepen van het schemagebied te leren die worden vereist om [ toestemmingsgegevens volgens de norm van Adobe ](../../landing/governance-privacy-security/consent/adobe/overview.md) te verzamelen, zie de documentatie over deze profiel-Toegelaten groepen van het schemagebied.
    * [[!UICONTROL Consent and Preference Details]](../../xdm/field-groups/profile/consents.md)
-   * [[!UICONTROL IdentityMap]](../../xdm/field-groups/profile/identitymap.md) (vereist als het gebruiken van het Web van het Platform of Mobiele SDK om toestemmingssignalen te verzenden)
-* Leren hoe te om klantentoestemming en voorkeursgegevens te verwerken gebruikend de norm van de Adobe, zie het overzicht over [ toestemmingsverwerking in Experience Platform ](../../landing/governance-privacy-security/consent/adobe/overview.md).
+   * [[!UICONTROL IdentityMap]](../../xdm/field-groups/profile/identitymap.md) (vereist als u toestemmingssignalen verzendt via het Experience Platform Web of Mobile SDK)
+* Leren hoe te om klantentoestemming en voorkeursgegevens te verwerken gebruikend de norm van Adobe, zie het overzicht over [ toestemmingsverwerking in Experience Platform ](../../landing/governance-privacy-security/consent/adobe/overview.md).
 * Een gecombineerd beleid voor gegevensbeheer en instemming kan worden gebruikt om profielen voor segmentatie te filteren op basis van hun voorkeuren voor toestemming en uw vastgestelde organisatorische regels. Leren om dit gecombineerde beleid tot stand te brengen en te gebruiken, zie de gebruikersgids over [ het beheren van het beleid van het gegevensgebruik ](../../data-governance/policies/user-guide.md#combine-policies).
 
 ### Widgets toevoegen {#add-widgets}
@@ -169,7 +169,7 @@ Het dashboard van [!UICONTROL Union Schema] toont het verenigingsschema voor een
 
 De schema&#39;s van de unie zijn samengesteld uit veelvoudige schema&#39;s die de zelfde klasse delen en voor Profiel toegelaten. Ze stellen u in staat om in één weergave een samenvoeging te zien van elk veld in elk schema dat dezelfde klasse deelt.
 
-Meer over [ het bekijken verenigingsschema&#39;s binnen het Platform UI ](../../profile/ui/union-schema.md#view-union-schemas) leren, verwijs naar de gids van het unieschema UI.
+Meer over [ het bekijken verenigingsschema&#39;s binnen Experience Platform UI ](../../profile/ui/union-schema.md#view-union-schemas) leren, verwijs naar de gids van het unieschema UI.
 
 ## Widgets en metriek
 
@@ -221,7 +221,7 @@ Het AI-model waarmee de densiteitsscores worden bepaald, wordt gekozen uit de ve
 
 Selecteer **[!UICONTROL View model details]** om naar de pagina met gedetailleerde inzichten voor het geselecteerde AI-model van de Klant te navigeren.
 
-![ het dashboard van het Soorten Soorten publiek van het Experience Platform met [!UICONTROL Customer AI distribution of scores] wordt benadrukt widget en [!UICONTROL View model details].](../images/segments/customer-ai-distribution-of-scores.png)
+![ het dashboard van het Soorten Soorten publiek van Experience Platform met [!UICONTROL Customer AI distribution of scores] wordt benadrukt widget en [!UICONTROL View model details].](../images/segments/customer-ai-distribution-of-scores.png)
 
 De gedetailleerde pagina met modelinzichten wordt weergegeven.
 
@@ -248,13 +248,13 @@ Het vervolgkeuzemenu onder de widgettitel bevat een lijst met alle geconfigureer
 >
 >Het totale aantal berekende profielen is afhankelijk van het gekozen samenvoegingsbeleid. Als u het gebruikte samenvoegingsbeleid wilt wijzigen, selecteert u de vervolgkeuzelijst direct onder het tabblad Overzicht. Zie de sectie over [ fusiebeleid ](#merge-policies) voor een korte beschrijving, of het [ overzicht van het fusiebeleid ](../../profile/merge-policies/overview.md) voor meer details.
 
-![ het dashboard van de Soorten Soorten Soorten publiek van het Experience Platform met de benadrukte het scoren van de Klant AI summiere widget.](../images/segments/customer-ai-scoring-summary.png)
+![ het dashboard van het publiek van Experience Platform met de benadrukte het scoren van de overzichtswidget van AI van de Klant.](../images/segments/customer-ai-scoring-summary.png)
 
 Selecteer **[!UICONTROL View model details]** om naar de pagina met gedetailleerde inzichten voor het geselecteerde AI-model van de Klant te navigeren. Meer informatie over Klant AI kan op [ worden gevonden ontdek de gids van inzicht UI ](../../intelligent-services/customer-ai/user-guide/discover-insights.md).
 
 ## Standaardwidgets {#standard-widgets}
 
-Adobe biedt meerdere standaardwidgets die u kunt gebruiken voor het visualiseren van verschillende meetgegevens die betrekking hebben op de profielgegevens. U kunt ook aangepaste widgets maken die u met uw organisatie wilt delen met de [!UICONTROL Widget library] . Meer leren over het creëren van douanewidgets, begin door het [ overzicht van de bibliotheek van Widget ](../customize/widget-library.md) te lezen.
+Adobe biedt meerdere standaardwidgets die u kunt gebruiken voor het visualiseren van verschillende meetgegevens die betrekking hebben op uw profielgegevens. U kunt ook aangepaste widgets maken die u met uw organisatie wilt delen met de [!UICONTROL Widget library] . Meer leren over het creëren van douanewidgets, begin door het [ overzicht van de bibliotheek van Widget ](../customize/widget-library.md) te lezen.
 
 Als u meer wilt weten over elk van de beschikbare standaardwidgets, selecteert u de naam van een widget in de volgende lijst:
 
@@ -293,7 +293,7 @@ Zie de [ sectie over samenvoegbeleid vroeger in dit document ](#merge-policies) 
 >
 >Een andere algemene reden is dat er verschillen zijn tussen de tijd waarop de dashboardmomentopname wordt gemaakt en de tijd waarop de voorbeeldtaak voor het tabblad [!UICONTROL Browse] wordt uitgevoerd. U kunt zien wanneer de [!UICONTROL Profile count] -widget voor het laatst is bijgewerkt door de tijdstempel op de widget te bekijken. Meer over leren hoe de steekproefbaan op het [!UICONTROL Browse] lusje wordt teweeggebracht, zie de [ sectie van de profieltelling in de Realtime gids UI van het Profiel van de Klant ](../../profile/ui/user-guide.md#profile-count).
 
-![ het dashboard van Profielen van het Experience Platform met benadrukte de tellings van het Profiel widget.](../images/profiles/profile-count.png)
+![ het dashboard van Profielen van Experience Platform met benadrukte de tellingswidget van het Profiel.](../images/profiles/profile-count.png)
 
 ### [!UICONTROL Profile count trend] {#profile-count-trend}
 
@@ -314,7 +314,7 @@ De **[!UICONTROL Profile count change]** -widget geeft het aantal samengevoegde 
 >
 >De [!UICONTROL Profile count change] widget wijst op het aantal toegevoegde profielen **na** de aanvankelijke profielopname en de opslagopstelling van het Profiel. Met andere woorden, als uw organisatie de opslag van het Profiel opstelde en 4.000.000 op Dag 1 innam, zou het dashboard binnen 24 uur beschikbaar zijn, nochtans [!UICONTROL Profile count change] widget aan 0 worden geplaatst. Deze telmethode wordt gebruikt om een piek te voorkomen die verband houdt met de eerste opname van profielen in het systeem. In de komende 30 dagen, neemt uw organisatie een extra 1.000.000 profielen in de opslag van het Profiel op. Nadat de volgende opname is gemaakt, geeft de [!UICONTROL Profile count change] -widget in totaal 1.000.000 toegevoegde profielen weer, terwijl de [!UICONTROL Profile count] -widget in totaal 5.000.000 profielen zou weergeven.
 
-![ het Platform UI Profielt dashboard met de benadrukte de veranderingswidget van het Aantal van het Profiel.](../images/profiles/profile-count-change.png)
+![ het dashboard van Profielen UI met de benadrukte de veranderingswidget van het Aantal van het Profiel.](../images/profiles/profile-count-change.png)
 
 ### [!UICONTROL Profiles count change trend] {#profiles-count-change-trend}
 
@@ -323,7 +323,7 @@ De **[!UICONTROL Profile count change]** -widget geeft het aantal samengevoegde 
 >title="Ontwikkeling van aantal profielen"
 >abstract="Deze widget geeft het aantal samengevoegde profielen weer dat de afgelopen 30 dagen, 90 dagen of 12 maanden dagelijks aan de profielopslag is toegevoegd. Het nummer hangt ook af van het geselecteerde samenvoegbeleid dat wordt toegepast op de profielgegevens."
 
-De **[!UICONTROL Profiles count change trend]** -widget geeft het totale aantal samengevoegde profielen weer dat de afgelopen 30 dagen, 90 dagen of 12 maanden dagelijks is toegevoegd aan de profielopslag. Dit aantal wordt bijgewerkt elke dag wanneer de momentopname wordt genomen, daarom als u profielen in Platform zou moeten opnemen, zou het aantal profielen niet worden weerspiegeld tot de volgende momentopname wordt genomen. Het aantal toegevoegde profielen is het resultaat van het geselecteerde samenvoegbeleid dat wordt toegepast op uw profielgegevens om profielfragmenten samen te voegen tot één profiel voor elke persoon.
+De **[!UICONTROL Profiles count change trend]** -widget geeft het totale aantal samengevoegde profielen weer dat de afgelopen 30 dagen, 90 dagen of 12 maanden dagelijks is toegevoegd aan de profielopslag. Dit aantal wordt bijgewerkt elke dag wanneer de momentopname wordt genomen, daarom als u profielen in Experience Platform zou moeten opnemen, zou het aantal profielen niet worden weerspiegeld tot de volgende momentopname wordt genomen. Het aantal toegevoegde profielen is het resultaat van het geselecteerde samenvoegbeleid dat wordt toegepast op uw profielgegevens om profielfragmenten samen te voegen tot één profiel voor elke persoon.
 
 Meer leren, verwijs naar de [ sectie over fusiebeleid vroeger in dit document ](#merge-policies).
 
@@ -478,7 +478,7 @@ Het dialoogvenster [!UICONTROL Audience overlap report] wordt weergegeven. Dit d
 >
 >Selecteer de kolomkop **[!UICONTROL Overlapping]** als u de volgorde van de resultaten wilt wijzigen van het hoogste naar het laagste en het laagste naar het hoogste.
 
-Als u het volledige rapport in de indeling PDF wilt downloaden, selecteert u het optiemenu (**`...`**) gevolgd door **[!UICONTROL Download]** .
+Als u het volledige rapport in PDF-indeling wilt downloaden, selecteert u het optiemenu (**`...`**) gevolgd door **[!UICONTROL Download]** .
 
 ![ het publiek overlapt rapportdialoog met de ellipsen en benadrukte optie van de Download.](../images/profiles/profiles-audience-overlap-report-dialog-download.png)
 
@@ -514,7 +514,7 @@ Deze widget gebruikt een Venn-diagram om de overlapping van twee geselecteerde d
 
 Aangezien widget de visuele oversteekplaats van segmentdefinities toont, kunt u uw segmenteringsstrategie optimaliseren door gelijkenissen tussen uw segmentdefinities te bestuderen.
 
-![ het Platform UI Profielen dashboard met de dropdown van het fusiebeleid en de benadrukte widgetpublieksdropdowns.](../images/profiles/audience-overlap-by-merge-policy.png)
+![ het dashboard van Profielen UI van Experience Platform met de dropdown van het fusiebeleid en de benadrukte widgetpublieksdropdowns.](../images/profiles/audience-overlap-by-merge-policy.png)
 
 
 <!-- ## (Beta) Profile efficacy widgets {#profile-efficacy-widgets}
@@ -587,4 +587,4 @@ The three levels of completeness are:
 
 ## Volgende stappen
 
-Als u dit document volgt, kunt u nu het dashboard voor profielen vinden en begrijpen welke maatstaven worden weergegeven in de beschikbare widgets. Meer over het werken met [!DNL Profile] gegevens in het Experience Platform UI leren, verwijs naar de [ gids UI van het Profiel van de Klant in real time ](../../profile/ui/user-guide.md).
+Als u dit document volgt, kunt u nu het dashboard voor profielen vinden en begrijpen welke maatstaven worden weergegeven in de beschikbare widgets. Meer over het werken met [!DNL Profile] gegevens in Experience Platform UI leren, verwijs naar de [ gids UI van het Profiel van de Klant in real time ](../../profile/ui/user-guide.md).

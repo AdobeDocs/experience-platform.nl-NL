@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Labels voor gegevensgebruik beheren in de gebruikersinterface
 description: In deze handleiding vindt u de stappen voor het werken met labels voor gegevensgebruik in de Adobe Experience Platform-gebruikersinterface.
 exl-id: aa44d5cc-416a-4ef2-be14-b4f32aec162c
-source-git-commit: a5efc45f0043cd6eb4a209737b9e430c85ea2f14
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1491'
+source-wordcount: '1495'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 >[!CONTEXTUALHELP]
 >id="platform_privacyConsole_dataGovernance_description"
->title="Gegevensgebruik in platform beheren"
+>title="Gegevensgebruik in Experience Platform beheren"
 >abstract="<h2>Beschrijving</h2><p>Met het gegevensbeheerkader in Experience Platform kunt u kenmerken en schema&#39;s labelen op basis van beperkingen voor gegevensgebruik en beleidsregels instellen die deze beperkingen voor specifieke marketingacties identificeren en naleven.</p>"
 
 In deze gebruikershandleiding worden de stappen beschreven voor het werken met labels voor gegevensgebruik in de gebruikersinterface van [!DNL Experience Platform] .
@@ -61,11 +61,11 @@ Er wordt een dialoogvenster weergegeven waarin u labels voor gegevensgebruik op 
 >[!CONTEXTUALHELP]
 >id="platform_privacyConsole_dataGovernance_instructions"
 >title="Instructies"
->abstract="<ol><li>Selecteer <a href="https://experienceleague.adobe.com/docs/experience-platform/data-governance/labels/user-guide.html"> Datasets </a> in de linkernavigatie, dan de dataset selecteren waarvan gegevens u wilt beperken.</li><li>Van de mening van de datasetdetails, selecteer het <b> beheer van Gegevens </b> tabel.</li><li>Selecteer de datasetgebieden die u wilt beperken, dan uitgezocht <b> geeft governance etiketten </b> uit om de gegevens te etiketteren die op gebruiksbeperkingen worden gebaseerd.</li><li>Na het etiketteren van uw gegevens, selecteer <a href="https://experienceleague.adobe.com/docs/experience-platform/data-governance/policies/overview.html"> Beleid </a> in de linkernavigatie, dan uitgezocht <b> leidt Beleid </b> tot.</li><li>Kies om het beleid van het Beheer van a <a href="https://experienceleague.adobe.com/docs/experience-platform/data-governance/policies/user-guide.html#create-governance-policy"> Gegevens </a> tot stand te brengen, dan de etiketten van het gegevensgebruik te selecteren dat het beleid op het beleid zal toepassen.</li><li>Selecteer de marketingactie(s) die het beleid zal weigeren voor gegevens die deze labels bevatten. Nadat het beleid is gemaakt, selecteert u het in de lijst en schakelt u het in met de schakeloptie in het rechterspoor.</li><li>Voor elk toegelaten beleid, verhindert het Platform om het even welke gegevens die de gespecificeerde etiketten bevatten voor de bepaalde marketing actie(s) worden gebruikt. Deze handhaving vindt automatisch plaats wanneer u probeert om geëtiketteerde gegevens aan een bestemming met bijbehorende marketing acties (gebruiksgevallen) te activeren.</li></ol>"
+>abstract="<ol><li>Selecteer <a href="https://experienceleague.adobe.com/docs/experience-platform/data-governance/labels/user-guide.html"> Datasets </a> in de linkernavigatie, dan de dataset selecteren waarvan gegevens u wilt beperken.</li><li>Van de mening van de datasetdetails, selecteer het <b> beheer van Gegevens </b> tabel.</li><li>Selecteer de datasetgebieden die u wilt beperken, dan uitgezocht <b> geeft governance etiketten </b> uit om de gegevens te etiketteren die op gebruiksbeperkingen worden gebaseerd.</li><li>Na het etiketteren van uw gegevens, selecteer <a href="https://experienceleague.adobe.com/docs/experience-platform/data-governance/policies/overview.html"> Beleid </a> in de linkernavigatie, dan uitgezocht <b> leidt Beleid </b> tot.</li><li>Kies om het beleid van het Beheer van a <a href="https://experienceleague.adobe.com/docs/experience-platform/data-governance/policies/user-guide.html#create-governance-policy"> Gegevens </a> tot stand te brengen, dan de etiketten van het gegevensgebruik te selecteren dat het beleid op het beleid zal toepassen.</li><li>Selecteer de marketingactie(s) die het beleid zal weigeren voor gegevens die deze labels bevatten. Nadat het beleid is gemaakt, selecteert u het in de lijst en schakelt u het in met de schakeloptie in het rechterspoor.</li><li>Voor elk ingeschakeld beleid voorkomt Experience Platform dat gegevens met de opgegeven labels worden gebruikt voor de gedefinieerde marketingactie(s). Deze handhaving vindt automatisch plaats wanneer u probeert om geëtiketteerde gegevens aan een bestemming met bijbehorende marketing acties (gebruiksgevallen) te activeren.</li></ol>"
 
 >[!IMPORTANT]
 >
->Labels kunnen niet meer worden toegepast op velden op het niveau van de gegevensset. Deze workflow is vervangen door labels op schemaniveau. Alle labels die eerder op het niveau van gegevenssetobjecten zijn toegepast, worden tot 31 mei 2024 nog steeds ondersteund via de interface van het platform. Om ervoor te zorgen dat uw etiketten over alle schema&#39;s verenigbaar zijn, moeten om het even welke etiketten die eerder aan gebieden op het datasetniveau worden vastgemaakt door u over het komende jaar worden gemigreerd aan het schemaniveau. Zie de documentatie voor instructies op [ hoe te om eerder toegepaste etiketten van de dataset aan het schemaniveau ](../e2e.md#migrate-labels) te migreren.
+>Labels kunnen niet meer worden toegepast op velden op het niveau van de gegevensset. Deze workflow is vervangen door labels op schemaniveau. Alle labels die eerder op het niveau van gegevenssetobjecten zijn toegepast, worden tot 31 mei 2024 nog steeds ondersteund via de gebruikersinterface van Experience Platform. Om ervoor te zorgen dat uw etiketten over alle schema&#39;s verenigbaar zijn, moeten om het even welke etiketten die eerder aan gebieden op het datasetniveau worden vastgemaakt door u over het komende jaar worden gemigreerd aan het schemaniveau. Zie de documentatie voor instructies op [ hoe te om eerder toegepaste etiketten van de dataset aan het schemaniveau ](../e2e.md#migrate-labels) te migreren.
 
 Labels kunnen worden toegepast op de gehele gegevensset vanaf het tabblad **[!UICONTROL Data Governance]** van de **[!UICONTROL Datasets]** -werkruimte. De werkruimte staat u toe om de etiketten van het gegevensgebruik op het datasetniveau te beheren.
 
@@ -120,7 +120,7 @@ De schakeloptie **[!UICONTROL Show Inherited Labels]** is standaard ingeschakeld
 >[!CONTEXTUALHELP]
 >id="platform_governance_createlabels"
 >title="Labels maken"
->abstract="Met labels kunt u gegevenssets en velden categoriseren op basis van het gebruiksbeleid dat op die gegevens van toepassing is. Platform biedt een standaardset labels die u kunt gebruiken, maar u kunt ook aangepaste labels maken die specifiek zijn voor uw organisatie."
+>abstract="Met labels kunt u gegevenssets en velden categoriseren op basis van het gebruiksbeleid dat op die gegevens van toepassing is. Experience Platform biedt een standaardset labels die u kunt gebruiken, maar u kunt ook aangepaste labels maken die specifiek zijn voor uw organisatie."
 
 U kunt uw eigen labels voor aangepast gebruik maken in de **[!UICONTROL Policies]** -werkruimte in de [!DNL Experience Platform] -gebruikersinterface. Selecteer **[!UICONTROL Policies]** in de linkernavigatie en selecteer **[!UICONTROL Labels]** om een lijst met bestaande labels weer te geven. Selecteer **[!UICONTROL Create label]** van hier.
 
