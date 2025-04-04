@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Metrics API Endpoint
 description: Leer hoe u meetgegevens voor waarneembaarheid in Experience Platform ophaalt met de API Observability Insights.
 exl-id: 08d416f0-305a-44e2-a2b7-d563b2bdd2d2
-source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
+source-git-commit: 3b217f7bcb60f762b5d380d82076cfb17d7a2d13
 workflow-type: tm+mt
-source-wordcount: '1278'
+source-wordcount: '1294'
 ht-degree: 1%
 
 ---
@@ -277,7 +277,7 @@ In de volgende tabel worden de verschillende foutcodes weergegeven die door de A
 
 | Foutcode | Titel | Beschrijving |
 | --- | --- | --- |
-| `INSGHT-1000-400` | Ongeldige payload verzoek | Er is iets mis met de lading van de aanvraag. Zorg ervoor dat u precies het nuttige lading formatteren zoals getoond [ hierboven ](#v2) aanpast. Om het even welke mogelijke redenen kunnen deze fout teweegbrengen:<ul><li>Vereiste velden ontbreken, zoals `aggregator`</li><li>Ongeldige meetgegevens</li><li>De aanvraag bevat een ongeldige aggregator</li><li>Een begindatum vindt plaats na een einddatum</li></ul> |
+| `INSGHT-1000-400` | Ongeldige payload verzoek | Er is iets mis met de lading van de aanvraag. Zorg ervoor dat u precies het nuttige lading formatteren zoals getoond [ hierboven ](#v2) aanpast. Om het even welke mogelijke redenen kunnen deze fout teweegbrengen:<ul><li>Vereiste velden ontbreken, zoals `aggregator`</li><li>Ongeldige meetgegevens</li><li>De aanvraag bevat een ongeldige aggregator</li><li>Een begindatum vindt plaats na een einddatum</li><li>Het verzoek heeft een tijdbereik (tussen begin- en einddatum) van meer dan 32 dagen</li></ul> |
 | `INSGHT-1001-400` | Metrische query mislukt | Er is een fout opgetreden bij het zoeken naar de metrische database, omdat een onjuiste aanvraag of de query zelf niet kan worden gescheiden. Zorg ervoor dat uw verzoek correct is geformatteerd alvorens opnieuw te proberen. |
 | `INSGHT-1001-500` | Metrische query mislukt | Er is een fout opgetreden tijdens het zoeken naar de metrieke-database vanwege een serverfout. Probeer het verzoek opnieuw. Neem contact op met de ondersteuning van Adobe als het probleem zich blijft voordoen. |
 | `INSGHT-1002-500` | Servicefout | De aanvraag kan niet worden verwerkt vanwege een interne fout. Probeer het verzoek opnieuw. Neem contact op met de ondersteuning van Adobe als het probleem zich blijft voordoen. |
