@@ -1,8 +1,8 @@
 ---
-source-git-commit: 163c6f6bacfd6f0928b1053bd146a2d4fc4c74d0
+source-git-commit: 67adfddf57d3b10bb80688cf0f0a109a704f4fa5
 workflow-type: tm+mt
-source-wordcount: '470'
-ht-degree: 55%
+source-wordcount: '351'
+ht-degree: 74%
 
 ---
 # Inhoud bijdragen
@@ -30,20 +30,6 @@ Kleine correcties of verduidelijkingen die u verzendt voor documentatie en codev
 ### Belangrijke wijzigingen of nieuwe artikelen van leden van de community
 
 Als u deel uitmaakt van de Adobe-community en een artikel wilt maken of belangrijke wijzigingen wilt indienen, klikt u op het tabblad **Problemen** in de GitHub-opslagplaats om een probleem in te dienen. Met deze indiening start u een gesprek met het documentatieteam. U moet samenwerken met de schrijver (of een andere Adobe-medewerker) om nieuwe content te publiceren.
-
-<!--
-If you submit a pull request with significant changes to documentation and code examples, you'll see a message in the pull request asking you to submit an online contribution license agreement (CLA). You must complete the online form before we can review your pull request.
--->
-
-### Belangrijke wijzigingen of nieuwe artikelen van Adobe-werknemers
-
-Als u een technisch schrijver, programmamanager, of ontwikkelaar van het productteam voor een oplossing van Adobe Experience Cloud bent, en het uw baan is om aan of auteur technische artikelen bij te dragen, zou u de privé bewaarplaats bij `https://git.corp.adobe.com/AdobeDocs` moeten gebruiken. Zie de [ Interne Gids van Collaboration ](https://experienceleague.adobe.com/docs/authoring-guide-exl/using/home.html) voor meer informatie.
-
-<!--Employees from other parts of the Adobe world should use the public repo for minor updates.-->
-
-## Verbinding maken met het Experience Platform-documentatieteam
-
-Zoals hierboven vermeld, kunnen leden van de Adobe-gemeenschap een kwestie indienen die aan de juiste schrijver zal worden toegewezen. Als u een Adobe-medewerker bent, kunt u een probleem verzenden of rechtstreeks contact opnemen met het Experience Platform-documentatieteam. Om loodschrijver voor een specifiek gebied van Experience Platform te vinden, zie de [ Documentatie wiki van Adobe Experience Platform ](https://wiki.corp.adobe.com/display/DMSArchitecture/Adobe+Experience+Platform+Documentation).
 
 ## Tools en instellingen
 
