@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Groep met schemavelden maken en bewerken in de gebruikersinterface
 description: Leer hoe u in de Experience Platform-gebruikersinterface groepen met schemavelden maakt en bewerkt.
 exl-id: 928d70a6-0468-4fb7-a53a-6686ac77f2a3
-source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '964'
+source-wordcount: '966'
 ht-degree: 0%
 
 ---
@@ -22,7 +22,7 @@ In het Model van Gegevens van de Ervaring (XDM), zijn de groepen van het schemag
 
 Een veldgroep definieert met welke klasse(n) het compatibel is, op basis van het gedrag van de gegevens die de veldgroep vertegenwoordigt (record- of tijdreeks). Dit betekent dat niet alle veldgroepen beschikbaar zijn voor gebruik met alle klassen.
 
-Adobe Experience Platform biedt een groot aantal standaardveldgroepen die een groot aantal gevallen van marketinggebruik bestrijken. U kunt echter ook uw eigen aangepaste veldgroepen maken en bewerken om aanvullende concepten voor uw bedrijf in uw XDM-schema&#39;s te definiëren. Deze handleiding biedt een overzicht van het maken, bewerken en beheren van aangepaste veldgroepen voor uw organisatie in de interface van het platform.
+Adobe Experience Platform biedt een groot aantal standaardveldgroepen die een groot aantal gevallen van marketinggebruik bestrijken. U kunt echter ook uw eigen aangepaste veldgroepen maken en bewerken om aanvullende concepten voor uw bedrijf in uw XDM-schema&#39;s te definiëren. Deze handleiding biedt een overzicht van het maken, bewerken en beheren van aangepaste veldgroepen voor uw organisatie in de gebruikersinterface van Experience Platform.
 
 ## Vereisten {#prerequisites}
 
@@ -92,6 +92,6 @@ Als dezelfde veldgroep al in andere schema&#39;s wordt gebruikt, worden de toege
 
 ## Volgende stappen {#next-steps}
 
-In deze handleiding wordt beschreven hoe u veldgroepen kunt maken en bewerken met behulp van de interface van het platform. Voor meer informatie over de mogelijkheden van de [!UICONTROL Schemas] werkruimte, zie het [[!UICONTROL Schemas] overzicht van de werkruimte ](../overview.md).
+In deze handleiding wordt beschreven hoe u veldgroepen kunt maken en bewerken met de gebruikersinterface van Experience Platform. Voor meer informatie over de mogelijkheden van de [!UICONTROL Schemas] werkruimte, zie het [[!UICONTROL Schemas] overzicht van de werkruimte ](../overview.md).
 
 Leren hoe te om gebiedsgroepen te beheren gebruikend [!DNL Schema Registry] API, zie de [ gids van het gebiedsgroepseindpunt van groepen ](../../api/field-groups.md).

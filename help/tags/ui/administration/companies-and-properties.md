@@ -2,10 +2,10 @@
 title: Properties
 description: Leer hoe uw extensies, omgevingen en bibliotheken zijn georganiseerd en gegroepeerd voor uw organisatie in Adobe Experience Platform.
 exl-id: e5b4a853-c23e-498c-9e20-e773ea1de88b
-source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1153'
-ht-degree: 0%
+source-wordcount: '1155'
+ht-degree: 4%
 
 ---
 
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch is omgedoopt tot een reeks technologieën voor gegevensverzameling in Adobe Experience Platform. Diverse terminologische wijzigingen zijn als gevolg hiervan in de productdocumentatie doorgevoerd. Gelieve te verwijzen naar het volgende [ document ](../../term-updates.md) voor een geconsolideerde verwijzing van de terminologieveranderingen.
+>Adobe Experience Platform Launch is omgedoopt tot een reeks technologieën voor dataverzameling in Adobe Experience Platform.  Als gevolg hiervan zijn er verschillende terminologiewijzigingen in de productdocumentatie doorgevoerd. Raadpleeg het volgende [ document ](../../term-updates.md) voor een geconsolideerde referentie van de terminologiewijzigingen.
 
 ## Web-eigenschappen
 
@@ -37,7 +37,7 @@ Houd rekening met het volgende wanneer u eigenschappen plant:
 
 ### Codestructuur
 
-Sites zijn gebaseerd op HTML, mobiele toepassingen op code.  Als de onderliggende sjablonen of codebases voor HTML voor meerdere sites en toepassingen gelijk zijn, kunt u overwegen één eigenschap voor tags te gebruiken om meerdere sites of apps te beheren.
+Sites zijn gebaseerd op HTML en mobiele toepassingen op code.  Als de onderliggende HTML-sjablonen of -codebases hetzelfde zijn voor meerdere sites en toepassingen, kunt u overwegen één tag-eigenschap te gebruiken om meerdere sites of apps te beheren.
 
 ### Gegevens
 
@@ -51,7 +51,7 @@ Als uw gegevensinzamelingsbehoeften voor elke plaats of toepassing uniek zijn, z
 
 Gelijkaardig aan gegevens, gaan de variabelen u in uw [!DNL Analytics] en andere uitbreidingen zeer gelijkaardig, enigszins gelijkaardig, of uniek plaatsen?
 
-Bijvoorbeeld, als eVar27 voor de zelfde bronwaarde over al uw websites of toepassingen wordt gebruikt, zou het steek kunnen zijn om die plaatsen of toepassingen samen te groeperen zodat kunt u die gemeenschappelijke variabelen in enkel één bezit plaatsen.
+Als eVar27 bijvoorbeeld wordt gebruikt voor dezelfde bronwaarde op al uw websites of toepassingen, is het verstandig om die sites of toepassingen te groeperen, zodat u die algemene variabelen in slechts één eigenschap kunt instellen.
 
 ### Extensies, codes en systemen
 
@@ -67,7 +67,7 @@ Als u bijvoorbeeld [!DNL Adobe Analytics] , [!DNL Target] en dezelfde extensies 
 
 Voor de personen, teams en organisaties die in Adobe Experience Platform werken, hebben ze toegang nodig tot al uw websites en toepassingen, sommige of slechts één.
 
-De eigenschappen van het Beheer van de Gebruiker staan u toe om verschillende rollen aan verschillende mensen voor elk van uw eigenschappen, of op een per-bezitsbasis toe te wijzen. Als iemand voldoende rechten heeft, kan die persoon administratieve acties uitvoeren over alle eigenschappen in die organisatie van het Platform. Alle andere rollen kunnen op een per-bezitsbasis worden toegewezen. U kunt zelfs een bezit voor bepaalde gebruikers (niet-admins) verbergen door hen geen rol in dat bezit te geven.
+De eigenschappen van het Beheer van de Gebruiker staan u toe om verschillende rollen aan verschillende mensen voor elk van uw eigenschappen, of op een per-bezitsbasis toe te wijzen. Als iemand voldoende rechten heeft, kan die persoon administratieve handelingen uitvoeren op alle eigenschappen in die Experience Platform-organisatie. Alle andere rollen kunnen op een per-bezitsbasis worden toegewezen. U kunt zelfs een bezit voor bepaalde gebruikers (niet-admins) verbergen door hen geen rol in dat bezit te geven.
 
 ## Eigenschappenpagina
 
@@ -123,7 +123,7 @@ Volg de instructies om een eigenschap mobile te maken.
 1. Vul de velden in:
 
    * **Naam:** De naam van uw bezit.
-   * **Privacy:** Door gebrek wordt het privacy plaatsen geplaatst aan Opted binnen, betekenend dat u voor SDK gegevens aan oplossingen zou willen verzamelen en verzenden. Als u Opted Out selecteert, verzendt de SDK standaard GEEN gegevens naar oplossingen. Als u Onbekend kiest als instelling, vereist de SDK dat de toepassing de gebruiker eerst vraagt om gegevensverzameling en -deling toe te staan.
+   * **Privacy:** Door gebrek wordt het privacy plaatsen geplaatst aan Opted binnen, betekenend dat u voor SDK gegevens zou willen verzamelen en verzenden naar oplossingen. Als u Opted Out selecteert, verzendt de SDK standaard GEEN gegevens naar oplossingen. Als u Onbekend kiest als instelling, vereist de SDK dat de toepassing de gebruiker eerst vraagt om gegevensverzameling en -deling toe te staan.
 
      >[!NOTE]
      >
@@ -133,7 +133,7 @@ Volg de instructies om een eigenschap mobile te maken.
 
 1. Selecteer **[!UICONTROL Save]**.
 
-Nadat uw bezit wordt gecreeerd, voegt het Platform automatisch een standaardgastheer, een reeks milieu&#39;s (Ontwikkeling, het Opvoeren, en Productie), en de standaarduitbreidingen toe.
+Nadat uw bezit wordt gecreeerd, voegt Experience Platform automatisch een standaardgastheer, een reeks milieu&#39;s (Ontwikkeling, het Opvoeren, en Productie), en de standaarduitbreidingen toe.
 
 ## Een eigenschap verwijderen
 

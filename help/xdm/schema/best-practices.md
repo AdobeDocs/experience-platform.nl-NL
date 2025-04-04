@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Aanbevolen procedures voor gegevensmodellering
 description: Dit document verstrekt een inleiding aan de schema's van het Gegevensmodel van de Ervaring (XDM) en de bouwstenen, de beginselen, en beste praktijken voor het samenstellen van schema's die in Adobe Experience Platform moeten worden gebruikt.
 exl-id: 2455a04e-d589-49b2-a3cb-abb5c0b4e42f
-source-git-commit: b144a93374fc627f9001b80695cad3f17e28a6fe
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '3201'
+source-wordcount: '3211'
 ht-degree: 0%
 
 ---
@@ -28,24 +28,24 @@ Aangezien deze gids zich uitsluitend op zeer belangrijke overwegingen betreffend
 De aanbevolen aanpak voor het ontwerpen van uw gegevensmodel voor gebruik in Experience Platform kan als volgt worden samengevat:
 
 1. Begrijp de zaken van het bedrijfsgebruik voor uw gegevens.
-1. Identificeer de primaire gegevensbronnen die in Platform moeten worden gebracht om die gebruiksgevallen te behandelen.
-1. Identificeer om het even welke secundaire gegevensbronnen die ook van belang kunnen zijn. Bijvoorbeeld, als momenteel slechts één bedrijfseenheid in uw organisatie in het uitvoeren van hun gegevens aan Platform geinteresseerd is, zou een gelijkaardige bedrijfseenheid ook in het uitvoeren van gelijkaardige gegevens in de toekomst kunnen geinteresseerd zijn. Het overwegen van deze secundaire bronnen helpt het gegevensmodel over uw volledige organisatie te standaardiseren.
+1. Identificeer de primaire gegevensbronnen die naar Experience Platform moeten worden gebracht om die gebruiksgevallen te behandelen.
+1. Identificeer om het even welke secundaire gegevensbronnen die ook van belang kunnen zijn. Als momenteel bijvoorbeeld slechts één bedrijfseenheid in uw organisatie geïnteresseerd is in het doorsturen van gegevens naar Experience Platform, is een vergelijkbare bedrijfseenheid wellicht ook geïnteresseerd in het doorsturen van vergelijkbare gegevens in de toekomst. Het overwegen van deze secundaire bronnen helpt het gegevensmodel over uw volledige organisatie te standaardiseren.
 1. Creeer een diagram van de entiteitverhouding op hoog niveau (ERD) voor de gegevensbronnen die zijn geïdentificeerd.
-1. Converteer de ERD op hoog niveau naar een platformgerichte ERD (inclusief profielen, ervaringsgebeurtenissen en opzoekentiteiten).
+1. Zet het ERD op hoog niveau om in een Experience Platform-centric ERD (inclusief profielen, Experience Events en lookup-entiteiten).
 
-De stappen met betrekking tot het identificeren van de toepasselijke gegevensbronnen die worden vereist om uw zaken van het bedrijfsgebruik uit te voeren variëren van organisatie tot organisatie. Hoewel de overige secties in dit document zich richten op de laatste stappen voor het organiseren en samenstellen van een ERD nadat de gegevensbronnen zijn geïdentificeerd, kunnen de toelichtingen bij de verschillende componenten van het diagram uw beslissingen over welke van uw gegevensbronnen naar Platform moeten worden gemigreerd, toelichten.
+De stappen met betrekking tot het identificeren van de toepasselijke gegevensbronnen die worden vereist om uw zaken van het bedrijfsgebruik uit te voeren variëren van organisatie tot organisatie. Hoewel de overige secties in dit document zich richten op de laatste stappen voor het organiseren en samenstellen van een ERD nadat de gegevensbronnen zijn geïdentificeerd, kunnen de toelichtingen bij de verschillende componenten van het diagram u informeren over de vraag welke van uw gegevensbronnen naar Experience Platform moet worden gemigreerd.
 
 ## Een ERD op hoog niveau maken {#create-an-erd}
 
-Zodra u de gegevensbronnen hebt bepaald die u in Platform wilt brengen, creeer een ERD op hoog niveau helpen het proces begeleiden om uw gegevens aan schema&#39;s toe te wijzen XDM.
+Zodra u de gegevensbronnen hebt bepaald die u in Experience Platform wilt brengen, creeer een ERD op hoog niveau helpen het proces begeleiden om uw gegevens aan schema&#39;s toe te wijzen XDM.
 
-In het onderstaande voorbeeld wordt een vereenvoudigde ERD voorgesteld voor een bedrijf dat gegevens in Platform wil opnemen. Het diagram benadrukt de essentiële entiteiten die in klassen XDM, met inbegrip van klantenrekeningen, hotels, en verscheidene gemeenschappelijke e-commercegebeurtenissen zouden moeten worden gesorteerd.
+In het onderstaande voorbeeld wordt een vereenvoudigde ERD voorgesteld voor een bedrijf dat gegevens in Experience Platform wil invoeren. Het diagram benadrukt de essentiële entiteiten die in klassen XDM, met inbegrip van klantenrekeningen, hotels, en verscheidene gemeenschappelijke e-commercegebeurtenissen zouden moeten worden gesorteerd.
 
 ![ een entiteitrelationeel diagram dat de essentiële entiteiten benadrukt die in klassen XDM voor gegevensopname zouden moeten worden gesorteerd.](../images/best-practices/erd.png)
 
 ## Entiteiten sorteren in profiel-, zoekopdracht- en gebeurteniscategorieën {#sort-entities}
 
-Nadat u een ERD hebt gemaakt om de essentiële entiteiten te identificeren die u in Platform wilt opnemen, moeten deze entiteiten worden gesorteerd in profiel-, zoekopdracht- en gebeurteniscategorieën:
+Nadat u een ERD hebt gemaakt om de essentiële entiteiten te identificeren die u in Experience Platform wilt plaatsen, moeten deze entiteiten worden gesorteerd in profiel-, zoekopdracht- en gebeurteniscategorieën:
 
 | Categorie | Beschrijving |
 | --- | --- |
@@ -79,7 +79,7 @@ Als een entiteit kenmerken bevat die betrekking hebben op een individuele klant,
 
 #### Gegevens bijhouden over een bepaalde tijd {#track-data}
 
-Als u wilt analyseren hoe bepaalde kenmerken binnen een entiteit in de loop der tijd veranderen, is het waarschijnlijk een gebeurtenisentiteit. Bijvoorbeeld, kan het toevoegen van productpunten aan een karretje als toe:voegen-aan-kartgebeurtenissen in Platform worden gevolgd:
+Als u wilt analyseren hoe bepaalde kenmerken binnen een entiteit in de loop der tijd veranderen, is het waarschijnlijk een gebeurtenisentiteit. Bijvoorbeeld, kan het toevoegen van productpunten aan een karretje als toe:voegen-aan-kartgebeurtenissen in Experience Platform worden gevolgd:
 
 | Klant-id | Type | Product-id | Aantal | Tijdstempel |
 | --- | --- | --- | --- | --- |
@@ -113,7 +113,7 @@ Een bedrijf wil bijvoorbeeld een publiek maken op basis van het aantal winkels. 
 
 >[!CAUTION]
 >
->Experience Platform voert momenteel geen automatische waardecodering uit, hoewel dit voor toekomstige versies gepland is. Als u ervoor kiest samengevoegde waarden te gebruiken, moet u de berekeningen extern uitvoeren voordat u de gegevens naar Platform verzendt.
+>Experience Platform voert momenteel geen automatische waardenaggregatie uit, hoewel deze voor toekomstige releases is gepland. Als u ervoor kiest geaggregeerde waarden te gebruiken, moet u de berekeningen extern uitvoeren voordat u de gegevens naar Experience Platform verzendt.
 
 #### Kardinaal {#cardinality}
 
@@ -204,34 +204,34 @@ Als u niet zeker bent of een bepaald gebied noodzakelijk is om in een schema te 
 
 ### Identiteitsvelden {#identity-fields}
 
-In Experience Platform, worden de gebieden XDM duidelijk als identiteiten gebruikt om informatie over individuele klanten te verbinden die uit veelvoudige gegevensbronnen komen. Hoewel een schema meerdere velden kan hebben die zijn gemarkeerd als identiteiten, moet één primaire identiteit worden gedefinieerd om het schema in te schakelen voor gebruik in [!DNL Real-Time Customer Profile] . Zie de sectie op [ identiteitsgebieden ](./composition.md#identity) in de grondbeginselen van schemacompositie voor meer gedetailleerde informatie over het gebruiksgeval van deze gebieden.
+In Experience Platform worden XDM-velden die als identiteiten zijn gemarkeerd, gebruikt om informatie over individuele klanten die uit meerdere gegevensbronnen afkomstig zijn, te koppelen. Hoewel een schema meerdere velden kan hebben die zijn gemarkeerd als identiteiten, moet één primaire identiteit worden gedefinieerd om het schema in te schakelen voor gebruik in [!DNL Real-Time Customer Profile] . Zie de sectie op [ identiteitsgebieden ](./composition.md#identity) in de grondbeginselen van schemacompositie voor meer gedetailleerde informatie over het gebruiksgeval van deze gebieden.
 
 Wanneer het ontwerpen van uw schema&#39;s, zijn om het even welke primaire sleutels in uw relationele gegevensbestandlijsten waarschijnlijk kandidaten voor primaire identiteiten. Andere voorbeelden van toepasselijke identiteitsgebieden zijn klant e-mailadressen, telefoonaantallen, rekening IDs, en [ ECID ](../../identity-service/features/ecid.md).
 
-### Toepassingsschema-veldgroepen Adoben {#adobe-application-schema-field-groups}
+### Adobe-toepassingsschemagroepen {#adobe-application-schema-field-groups}
 
-Experience Platform verstrekt verscheidene uit-van-de-doos groepen van het XDM- schemagebied voor het vangen van gegevens met betrekking tot de volgende toepassingen van de Adobe:
+Experience Platform biedt verschillende XDM-schemaveldgroepen voor het vastleggen van gegevens met betrekking tot de volgende Adobe-toepassingen.
 
 * Adobe Analytics
 * Adobe Audience Manager
 * Adobe Campaign
 * Adobe Target
 
-U kunt bijvoorbeeld de [[!UICONTROL Adobe Analytics ExperienceEvent Template] veldgroep ](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/analytics/experienceevent-all.schema.json) gebruiken om [!DNL Analytics] -specifieke velden toe te wijzen aan uw XDM-schema&#39;s. Afhankelijk van de toepassingen van de Adobe u met werkt, zou u deze Adobe-Geleide gebiedsgroepen in uw schema&#39;s moeten gebruiken.
+U kunt bijvoorbeeld de [[!UICONTROL Adobe Analytics ExperienceEvent Template] veldgroep ](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/analytics/experienceevent-all.schema.json) gebruiken om [!DNL Analytics] -specifieke velden toe te wijzen aan uw XDM-schema&#39;s. Afhankelijk van de Adobe-toepassingen waarmee u werkt, moet u deze door Adobe verschafte veldgroepen gebruiken in uw schema&#39;s.
 
 ![ het schemadiagram van A van [!UICONTROL Adobe Analytics ExperienceEvent Template].](../images/best-practices/analytics-field-group.png)
 
-Toepassingsveldgroepen Adoben wijzen automatisch een primaire standaardidentiteit toe via het gebruik van het veld `identityMap` . Dit is een door het systeem gegenereerd, alleen-lezen-object dat standaardidentiteitswaarden voor een individuele klant toewijst.
+Adobe-toepassingsveldgroepen wijzen automatisch een primaire standaardidentiteit toe via het gebruik van het veld `identityMap` . Dit is een door het systeem gegenereerd, alleen-lezen-object dat standaardidentiteitswaarden voor een individuele klant toewijst.
 
 Voor Adobe Analytics is ECID de primaire standaardidentiteit. Als een klant geen ECID-waarde opgeeft, wordt de primaire identiteit standaard ingesteld op AID.
 
 >[!IMPORTANT]
 >
->Wanneer u veldgroepen van Adoben-toepassingen gebruikt, mogen geen andere velden worden gemarkeerd als de primaire identiteit. Als er extra eigenschappen zijn die als identiteiten moeten worden gemerkt, moeten deze gebieden in plaats daarvan als secundaire identiteiten worden toegewezen.
+>Als u veldgroepen voor Adobe-toepassingen gebruikt, mogen geen andere velden worden gemarkeerd als de primaire identiteit. Als er extra eigenschappen zijn die als identiteiten moeten worden gemerkt, moeten deze gebieden in plaats daarvan als secundaire identiteiten worden toegewezen.
 
 ## Velden voor gegevensvalidatie {#data-validation-fields}
 
-Wanneer u gegevens in het gegevenspeer opneemt, wordt de gegevensbevestiging slechts afgedwongen voor beperkte gebieden. Als u een bepaald veld tijdens een batch-opname wilt valideren, moet u het veld markeren als beperkt in het XDM-schema. Om te voorkomen dat slechte gegevens in Platform worden opgenomen, wordt u aangeraden de criteria voor validatie op veldniveau te definiëren wanneer u uw schema&#39;s maakt.
+Wanneer u gegevens in het gegevenspeer opneemt, wordt de gegevensbevestiging slechts afgedwongen voor beperkte gebieden. Als u een bepaald veld tijdens een batch-opname wilt valideren, moet u het veld markeren als beperkt in het XDM-schema. Als u wilt voorkomen dat slechte gegevens in Experience Platform worden ingevoerd, kunt u het beste de criteria voor validatie op veldniveau definiëren wanneer u uw schema&#39;s maakt.
 
 >[!IMPORTANT]
 >
@@ -245,7 +245,7 @@ Als u beperkingen voor een bepaald veld wilt instellen, selecteert u het veld in
 
 Hieronder volgt een verzameling suggesties voor het behoud van gegevensintegriteit wanneer u een schema maakt.
 
-* **overweeg primaire identiteiten**: Voor de producten van de Adobe zoals Web SDK, mobiele SDK, Adobe Analytics, en Adobe Journey Optimizer, dient het `identityMap` gebied vaak als primaire identiteit. Wijs geen extra velden aan als primaire identiteiten voor dat schema.
+* **overweeg primaire identiteiten**: Voor de producten van Adobe zoals Web SDK, mobiele SDK, Adobe Analytics, en Adobe Journey Optimizer, dient het `identityMap` gebied vaak als primaire identiteit. Wijs geen extra velden aan als primaire identiteiten voor dat schema.
 * **verzeker `_id` niet als identiteit** wordt gebruikt: Het `_id` gebied in de schema&#39;s van de Gebeurtenis van de Ervaring kan niet als identiteit worden gebruikt aangezien het voor verslaguniciteit wordt bedoeld.
 * **vastgestelde lengtebeperkingen**: Het is beste praktijken om minimum en maximumlengten op gebieden te plaatsen duidelijk als identiteiten. Er wordt een waarschuwing weergegeven als u een aangepaste naamruimte wilt toewijzen aan een identiteitsveld zonder te voldoen aan de minimale en maximale lengte. Deze beperkingen helpen consistentie en gegevenskwaliteit te behouden.
 * **pas patronen voor verenigbare waarden** toe: Als uw identiteitswaarden een specifiek patroon volgen, zou u **[!UICONTROL Pattern]** het plaatsen moeten gebruiken om deze beperking af te dwingen. Deze instelling kan regels bevatten zoals alleen cijfers, hoofdletters of kleine letters of specifieke tekencombinaties. Gebruik reguliere expressies die overeenkomen met patronen in de tekenreeksen.

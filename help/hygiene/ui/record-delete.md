@@ -3,9 +3,9 @@ title: Records verwijderen
 description: Leer hoe u records verwijdert in de gebruikersinterface van Adobe Experience Platform.
 badgeBeta: label="Beta" type="Informative"
 exl-id: 5303905a-9005-483e-9980-f23b3b11b1d9
-source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1500'
+source-wordcount: '1507'
 ht-degree: 0%
 
 ---
@@ -25,17 +25,17 @@ Gebruik de [[!UICONTROL Data Lifecycle] werkruimte ](./overview.md) om records i
 
 Voor het verwijderen van records moet u goed begrijpen hoe identiteitsvelden in Experience Platform werken. Specifiek, moet u de waarden van identiteitsnamespace van de entiteiten kennen waarvan verslagen u wilt schrappen, afhankelijk van de dataset (of datasets) u hen van schrapt.
 
-Raadpleeg de volgende documentatie voor meer informatie over identiteiten in Platform:
+Raadpleeg de volgende documentatie voor meer informatie over identiteiten in Experience Platform:
 
 * [ Dienst van de Identiteit van Adobe Experience Platform ](../../identity-service/home.md): Brugshanden identiteiten over apparaten en systemen, die datasets verbinden samen op de identiteitsgebieden worden gebaseerd die door de schema&#39;s XDM worden bepaald zij met in overeenstemming zijn.
 * [ Identiteit namespaces ](../../identity-service/features/namespaces.md): Identiteitsnaamruimten bepalen de verschillende soorten identiteitsinformatie die op één enkele persoon kunnen betrekking hebben, en een vereiste component voor elk identiteitsgebied zijn.
 * [ Real-Time Profiel van de Klant ](../../profile/home.md): Gebruikt identiteitsgrafieken om verenigde consumentenprofielen te verstrekken die op samengevoegde gegevens van veelvoudige bronnen worden gebaseerd, in bijna-real-time wordt bijgewerkt.
-* [ Model van de Gegevens van de Ervaring (XDM) ](../../xdm/home.md): Verstrekt standaarddefinities en structuren voor de gegevens van het Platform door het gebruik van schema&#39;s. Alle datasets van het Platform zijn in overeenstemming met een specifiek schema XDM, en het schema bepaalt welke gebieden identiteiten zijn.
+* [ Model van de Gegevens van de Ervaring (XDM) ](../../xdm/home.md): Verstrekt standaarddefinities en structuren voor de gegevens van Experience Platform door het gebruik van schema&#39;s. Alle Experience Platform-gegevenssets voldoen aan een specifiek XDM-schema en het schema definieert welke velden id&#39;s zijn.
 * [ de gebieden van de Identiteit ](../../xdm/ui/fields/identity.md): Leer hoe een identiteitsgebied in een XDM schema wordt bepaald.
 
 ## Een aanvraag maken {#create-request}
 
-Selecteer **[!UICONTROL Data Lifecycle]** in de linkernavigatie van de gebruikersinterface van het platform om het proces te starten. De werkruimte van [!UICONTROL Data lifecycle requests] wordt weergegeven. Selecteer vervolgens **[!UICONTROL Create request]** op de hoofdpagina in de werkruimte.
+Selecteer **[!UICONTROL Data Lifecycle]** in de linkernavigatie van de gebruikersinterface van Experience Platform om het proces te starten. De werkruimte van [!UICONTROL Data lifecycle requests] wordt weergegeven. Selecteer vervolgens **[!UICONTROL Create request]** op de hoofdpagina in de werkruimte.
 
 ![ de [!UICONTROL Data lifecycle requests] werkruimte met [!UICONTROL Create request] geselecteerd.](../images/ui/record-delete/create-request-button.png)
 
@@ -75,13 +75,13 @@ Selecteer **[!UICONTROL All datasets]** als u records uit alle gegevenssets wilt
 >title="Primaire identiteitswaarde"
 >abstract="In deze kolom, moet u de waarde voor de identiteitsnamespace van het verslag verstrekken, die met het identiteitstype moet beantwoorden dat in de linkerkolom wordt verstrekt. Als het naamruimtetype van de identiteit `email` is, moet de waarde het e-mailadres van de record zijn. Raadpleeg de gebruikershandleiding bij de gegevenslevenscyclus voor meer informatie."
 
-Wanneer het schrappen van verslagen, moet u identiteitsinformatie verstrekken zodat kan het systeem bepalen welke verslagen moeten worden geschrapt. Voor om het even welke dataset in Platform, worden de verslagen geschrapt gebaseerd op het **identiteit namespace** gebied dat door het schema van de dataset wordt bepaald.
+Wanneer het schrappen van verslagen, moet u identiteitsinformatie verstrekken zodat kan het systeem bepalen welke verslagen moeten worden geschrapt. Voor om het even welke dataset in Experience Platform, worden de verslagen geschrapt gebaseerd op het **identiteit namespace** gebied dat door het schema van de dataset wordt bepaald.
 
-Als alle identiteitsgebieden in Platform, wordt een identiteit namespace samengesteld uit twee dingen: a **type** (soms bedoeld als identiteit namespace) en a **waarde**. Het identiteitstype biedt context voor de manier waarop een record in het veld wordt geïdentificeerd (bijvoorbeeld een e-mailadres). De waarde vertegenwoordigt de specifieke identiteit van een record voor dat type (bijvoorbeeld `jdoe@example.com` voor het `email` identiteitstype). Veelvoorkomende velden die als identiteiten worden gebruikt, zijn accountgegevens, apparaat-id&#39;s en cookie-id&#39;s.
+Zoals alle identiteitsgebieden in Experience Platform, wordt een identiteit namespace samengesteld uit twee dingen: a **type** (soms bedoeld als identiteit namespace) en a **waarde**. Het identiteitstype biedt context voor de manier waarop een record in het veld wordt geïdentificeerd (bijvoorbeeld een e-mailadres). De waarde vertegenwoordigt de specifieke identiteit van een record voor dat type (bijvoorbeeld `jdoe@example.com` voor het `email` identiteitstype). Veelvoorkomende velden die als identiteiten worden gebruikt, zijn accountgegevens, apparaat-id&#39;s en cookie-id&#39;s.
 
 >[!TIP]
 >
->Als u niet de identiteit namespace voor een bepaalde dataset kent, kunt u het in Platform UI vinden. Selecteer in de werkruimte **[!UICONTROL Datasets]** de desbetreffende gegevensset in de lijst. Op de detailspagina voor de dataset, houd over de naam van het schema van de dataset in het juiste spoor. De naamruimte voor identiteit wordt samen met de naam en beschrijving van het schema weergegeven.
+>Als u de naamruimte voor een bepaalde gegevensset niet kent, kunt u deze vinden in de gebruikersinterface van Experience Platform. Selecteer in de werkruimte **[!UICONTROL Datasets]** de desbetreffende gegevensset in de lijst. Op de detailspagina voor de dataset, houd over de naam van het schema van de dataset in het juiste spoor. De naamruimte voor identiteit wordt samen met de naam en beschrijving van het schema weergegeven.
 >
 >![ het dashboard van Datasets met een geselecteerde dataset, en een schemadialoog die van het paneel van de Details van de dataset wordt geopend. De primaire identiteitskaart van de dataset wordt benadrukt.](../images/ui/record-delete/dataset-primary-identity.png)
 
@@ -140,7 +140,7 @@ Nadat u de gewenste id&#39;s aan de aanvraag hebt toegevoegd, voert u onder **[!
 
 >[!IMPORTANT]
 > 
->Er zijn verschillende limieten voor het totale aantal unieke identiteitsrecords dat elke maand kan worden verzonden. Deze limieten zijn gebaseerd op uw licentieovereenkomst. Organisaties die alle edities van Adobe Real-time Customer Data Platform of Adobe Journey Optimizer hebben aangeschaft, kunnen maximaal 100.000 identiteitsgegevens verzenden en elke maand verwijderen. De organisaties die **het Schild van de Gezondheidszorg van de Adobe** of **de Privacy en het Schild van de Adobe** hebben gekocht kunnen tot 600.000 identiteitsverslag voorleggen schrapt elke maand.<br> één enkel verslag schrapt verzoek door UI staat u toe om 10.000 IDs in één keer voor te leggen. De [ API methode om verslagen ](../api/workorder.md#create) te schrappen staat voor de voorlegging van 100.000 IDs toe tegelijkertijd.<br> het is beste praktijken om zoveel mogelijk IDs per verzoek, tot uw grens van identiteitskaart voor te leggen. Wanneer u een hoog volume id&#39;s wilt verwijderen, moet u een laag volume of één id per record verwijderen.
+>Er zijn verschillende limieten voor het totale aantal unieke identiteitsrecords dat elke maand kan worden verzonden. Deze limieten zijn gebaseerd op uw licentieovereenkomst. Organisaties die alle edities van Adobe Real-Time Customer Data Platform of Adobe Journey Optimizer hebben aangeschaft, kunnen maximaal 100.000 identiteitsgegevens verzenden en elke maand verwijderen. De organisaties die **het Schild van de Gezondheidszorg van Adobe** of **de Privacy &amp; het Schild van de Veiligheid van Adobe** hebben gekocht kunnen tot 600.000 identiteitsverslag voorleggen schrapt elke maand.<br> één enkel verslag schrapt verzoek door UI staat u toe om 10.000 IDs in één keer voor te leggen. De [ API methode om verslagen ](../api/workorder.md#create) te schrappen staat voor de voorlegging van 100.000 IDs toe tegelijkertijd.<br> het is beste praktijken om zoveel mogelijk IDs per verzoek, tot uw grens van identiteitskaart voor te leggen. Wanneer u een hoog volume id&#39;s wilt verwijderen, moet u een laag volume of één id per record verwijderen.
 
 ![ het verzoek plaatst [!UICONTROL Name] en [!UICONTROL Description] gebieden met [!UICONTROL Submit] benadrukt.](../images/ui/record-delete/submit.png)
 
@@ -158,6 +158,6 @@ Nadat de aanvraag is verzonden, wordt een werkorder gemaakt en wordt deze weerge
 
 ## Volgende stappen
 
-In dit document wordt beschreven hoe records in de gebruikersinterface van het Experience Platform worden verwijderd. Voor informatie over hoe te om andere het beheerstaken van de gegevenslevenscyclus in UI uit te voeren, verwijs naar het [ overzicht UI van de Levenscyclus van Gegevens ](./overview.md).
+In dit document wordt beschreven hoe records in de gebruikersinterface van Experience Platform kunnen worden verwijderd. Voor informatie over hoe te om andere het beheerstaken van de gegevenslevenscyclus in UI uit te voeren, verwijs naar het [ overzicht UI van de Levenscyclus van Gegevens ](./overview.md).
 
 Leren hoe te om verslagen te schrappen gebruikend de Hygiëne API van Gegevens, verwijs naar de [ gids van het het ordeeindpunt van het werk ](../api/workorder.md).

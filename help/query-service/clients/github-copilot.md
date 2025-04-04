@@ -1,9 +1,10 @@
 ---
 title: Connect GitHub Copilot en Visual Studio Code aan de Dienst van de Vraag
 description: Leer hoe te om het Kopilot van GitHub en de Code van Visual Studio met de Dienst van de Vraag van Adobe Experience Platform te verbinden.
-source-git-commit: f0c5b311721497bf2a14ca49dc5f1c9653e85efc
+exl-id: c5b71cc8-1d30-48c0-a8e2-135445a66639
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1359'
+source-wordcount: '1371'
 ht-degree: 0%
 
 ---
@@ -12,7 +13,7 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
->Alvorens dit geïntegreerde hulpmiddel te gebruiken, moet u begrijpen welke gegevens met GitHub worden gedeeld. De gedeelde gegevens omvatten contextuele informatie over de code en de dossiers die (&quot;herinneringen&quot;) worden uitgegeven en details over gebruikersacties (&quot;gebruikersbetrokkenheidsgegevens&quot;).  Lees de privacyverklaring van [[!DNL GitHub Copilot] ](https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement#github-privacy-statement) voor meer informatie over de gegevens die ze verzamelen. U moet ook rekening houden met de gevolgen voor de beveiliging van het inschakelen van services van derden, aangezien u verantwoordelijk bent voor de naleving van het beleid voor gegevensbeheer van uw organisatie. De Adobe is niet verantwoordelijk voor eventuele bezorgdheid over gegevens of problemen die uit het gebruik van dit instrument kunnen voortvloeien. Raadpleeg de documentatie van GitHub voor meer informatie.
+>Alvorens dit geïntegreerde hulpmiddel te gebruiken, moet u begrijpen welke gegevens met GitHub worden gedeeld. De gedeelde gegevens omvatten contextuele informatie over de code en de dossiers die (&quot;herinneringen&quot;) worden uitgegeven en details over gebruikersacties (&quot;gebruikersbetrokkenheidsgegevens&quot;).  Lees de privacyverklaring van [[!DNL GitHub Copilot] ](https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement#github-privacy-statement) voor meer informatie over de gegevens die ze verzamelen. U moet ook rekening houden met de gevolgen voor de beveiliging van het inschakelen van services van derden, aangezien u verantwoordelijk bent voor de naleving van het beleid voor gegevensbeheer van uw organisatie. Adobe is niet verantwoordelijk voor eventuele bezorgdheid over gegevens of problemen die uit het gebruik van dit instrument kunnen voortvloeien. Raadpleeg de documentatie van GitHub voor meer informatie.
 
 [!DNL GitHub Copilot] , dat wordt aangestuurd door OpenAI Codex, is een door AI aangedreven hulpmiddel dat uw codeerervaring verbetert door codefragmenten en volledige functies direct binnen uw redacteur voor te stellen. [!DNL Copilot] is geïntegreerd met [!DNL Visual Studio Code] ([!DNL VS Code] ) en kan uw workflow aanzienlijk versnellen, vooral wanneer u werkt met complexe query&#39;s. Volg deze handleiding voor het maken van een verbinding tussen [!DNL GitHub Copilot] en [!DNL VS Code] en de Query Service om uw query&#39;s efficiënter te schrijven en te beheren. Voor meer informatie over [!DNL Copilot], bezoek [ GitHub het productpagina van de Kopilot van de Bezoeker ](https://github.com/pricing) en de [ officiële  [!DNL Copilot]  documentatie ](https://docs.github.com/en/copilot/about-github-copilot/what-is-github-copilot).
 
@@ -22,11 +23,11 @@ In dit document worden de stappen beschreven die zijn vereist om [!DNL GitHub Co
 
 Deze gids vereist dat u reeds toegang tot een rekening GitHub hebt en zich voor [!DNL GitHub Copilot] hebt aangemeld. U kunt [ omhoog van de website van GitHub ](https://github.com/github-copilot/signup) ondertekenen. U hebt ook [!DNL VS Code] nodig. U kunt [ downloaden  [!DNL VS Code]  van hun officiële website ](https://code.visualstudio.com/download).
 
-Nadat u [!DNL VS Code] hebt geïnstalleerd en uw [!DNL Copilot] -abonnement hebt geactiveerd, kunt u uw verbindingsgegevens voor het Experience Platform ophalen. Deze referenties bevinden zich op het tabblad [!UICONTROL Credentials] van de [!UICONTROL Queries] -werkruimte in de gebruikersinterface van het platform. Lees de geloofsbrieven gids aan [ leren hoe te om deze waarden in het Platform UI ](../ui/credentials.md) te vinden. Neem contact op met uw organisatiebeheerder als u momenteel geen toegang hebt tot de werkruimte van [!UICONTROL Queries] .
+Nadat u [!DNL VS Code] hebt geïnstalleerd en uw [!DNL Copilot] -abonnement hebt geactiveerd, verkrijgt u uw verbindingsgegevens voor Experience Platform. Deze referenties bevinden zich op het tabblad [!UICONTROL Credentials] van de [!UICONTROL Queries] -werkruimte in de gebruikersinterface van Experience Platform. Lees de geloofsbrieven gids aan [ leren hoe te om deze waarden in Experience Platform te vinden UI ](../ui/credentials.md). Neem contact op met uw organisatiebeheerder als u momenteel geen toegang hebt tot de werkruimte van [!UICONTROL Queries] .
 
 ### Vereiste [!DNL Visual Studio Code] extensies {#required-extensions}
 
-De volgende [!DNL Visual Studio Code] -extensies zijn vereist voor het effectief beheren van en het direct zoeken naar uw Platform SQL-databases in de code-editor. Download en installeer deze extensies.
+De volgende [!DNL Visual Studio Code] -extensies zijn vereist om uw Experience Platform SQL-databases effectief te beheren en er query&#39;s op uit te voeren, rechtstreeks in de code-editor. Download en installeer deze extensies.
 
 - [ SQLTools ](https://marketplace.visualstudio.com/items?itemName=mtxr.sqltools): Gebruik de uitbreiding SQLTools om veelvoudige SQL gegevensbestanden te beheren en te vragen. Het bevat functies zoals een queryfunctie, SQL-formatter en verbindingsverkenner, met ondersteuning voor extra stuurprogramma&#39;s om de productiviteit van ontwikkelaars te verhogen. Lees het overzicht op de Marketplace van Visual Studio voor meer details.
 - [ De Bestuurder van SQLTools PostgreSQL/Cockroach ](https://marketplace.visualstudio.com/items?itemName=mtxr.sqltools-driver-pg): Deze uitbreiding laat u toe om, gegevensbestanden te verbinden te vragen en te beheren PostgreSQL en CockroachDB direct binnen uw coderedacteur.
@@ -48,17 +49,17 @@ De lus **[!DNL Connection Assistant]** wordt weergegeven. Selecteer het database
 
 ### Invoerverbindingsinstellingen {#input-connection-settings}
 
-De weergave [!DNL Connection Settings] wordt weergegeven. Voer uw verbindingsgegevens voor het platform in de desbetreffende velden van de SQLTools [!DNL Connection Assistant] in. De vereiste waarden worden in de onderstaande tabel uitgelegd.
+De weergave [!DNL Connection Settings] wordt weergegeven. Voer uw Experience Platform-verbindingsgegevens in de desbetreffende velden van de SQLTools [!DNL Connection Assistant] in. De vereiste waarden worden in de onderstaande tabel uitgelegd.
 
 | Eigenschap | Beschrijving |
 | --- |--- |
 | [!DNL Connection name] | Verstrek &quot;[!DNL Connection name]&quot;als `Prod_MySQL_Server` die beschrijvend is en duidelijk zijn doel (bijvoorbeeld, een productiemilieu voor een server MySQL) wijst. De beste praktijken omvatten:<br><ul><li>Volg de naamgevingsconventies van uw organisatie om ervoor te zorgen dat deze binnen het systeem uniek is.</li><li>Houd het beknopt om duidelijkheid te behouden en verwarring met andere verbindingen te voorkomen.</li><li>Vermeld relevante details over de functie of omgeving van de verbinding in de naam.</li></ul> |
-| [!DNL Connect using] | Gebruik de optie **[!DNL Server and Port]** om het adres (hostnaam) van de server en het poortnummer op te geven voor een directe verbinding met het platform |
-| [!DNL Server address] | Voer de **[!UICONTROL Host]** -waarde in die u hebt opgegeven in de gegevens van uw platformen, zoals `acmeprod.platform-query.adobe.io` . |
-| [!DNL Port] | Deze waarde is doorgaans `80` voor platformservices. |
-| [!DNL Database] | Voer de **[!UICONTROL Database]** -waarde in die u hebt opgegeven in de gegevens van uw platformen, zoals `prod:all` . |
-| [!DNL Username] | Deze eigenschap verwijst naar uw organisatie-id. Voer de **[!UICONTROL Username]** -waarde in die u hebt opgegeven bij de gegevens van uw Platform Postgres. |
-| [!DNL Password] | Dit bezit is uw toegangstoken. Voer de **[!UICONTROL Password]** -waarde in die u hebt opgegeven bij de gegevens van uw Platform Postgres. |
+| [!DNL Connect using] | Gebruik de optie **[!DNL Server and Port]** om het adres (hostnaam) van de server en het poortnummer op te geven voor een directe verbinding met Experience Platform |
+| [!DNL Server address] | Voer de **[!UICONTROL Host]** -waarde in die u hebt opgegeven in uw Experience Platform Postgres-referenties, zoals `acmeprod.platform-query.adobe.io` . |
+| [!DNL Port] | Deze waarde is doorgaans `80` voor Experience Platform-services. |
+| [!DNL Database] | Voer de **[!UICONTROL Database]** -waarde in die u hebt opgegeven in uw Experience Platform Postgres-referenties, zoals `prod:all` . |
+| [!DNL Username] | Deze eigenschap verwijst naar uw organisatie-id. Voer de **[!UICONTROL Username]** -waarde in die in uw Experience Platform Postgres-referenties wordt opgegeven. |
+| [!DNL Password] | Dit bezit is uw toegangstoken. Voer de **[!UICONTROL Password]** -waarde in die in uw Experience Platform Postgres-referenties wordt opgegeven. |
 
 ![ De hulpwerkruimte van de Verbinding met verscheidene benadrukte montages.](../images/clients/github-copilot/connection-settings.png)
 
@@ -90,7 +91,7 @@ De werkruimte van [!DNL VS Code] wordt weergegeven met een suggestie van [!DNL G
 
 ## [!DNL GitHub Copilot] handleiding
 
-Nadat u verbinding hebt gemaakt met de instantie Platform, kunt u [!DNL Copilot] als AI-codeerassistent gebruiken om sneller en met meer vertrouwen code te schrijven. In deze sectie worden de belangrijkste functies en het gebruik ervan besproken.
+Nadat u verbinding hebt gemaakt met uw Experience Platform-instantie, kunt u [!DNL Copilot] gebruiken als AI-codeerassistent om sneller en betrouwbaarder code te schrijven. In deze sectie worden de belangrijkste functies en het gebruik ervan besproken.
 
 ## Aan de slag met [!DNL GitHub Copilot] {#get-started-with-copilot}
 
@@ -150,4 +151,4 @@ U kunt tot praatjegeschiedenis ook toegang hebben door het geschiedenispictogram
 
 ## Volgende stappen
 
-U kunt nu op efficiënte wijze rechtstreeks vanuit uw code-editor query&#39;s uitvoeren op uw platformdatabases en de door AIR aangedreven codesuggesties van [!DNL GitHub Copilot] gebruiken om het schrijven en optimaliseren van SQL-query&#39;s te stroomlijnen. Voor meer informatie over hoe te om vragen te schrijven en in werking te stellen, verwijs naar de [ begeleiding voor vraaguitvoering ](../best-practices/writing-queries.md).
+U kunt nu op efficiënte wijze rechtstreeks vanuit uw code-editor query&#39;s uitvoeren op uw Experience Platform-databases en de door AIR aangedreven codesuggesties van [!DNL GitHub Copilot] gebruiken om het schrijven en optimaliseren van SQL-query&#39;s te stroomlijnen. Voor meer informatie over hoe te om vragen te schrijven en in werking te stellen, verwijs naar de [ begeleiding voor vraaguitvoering ](../best-practices/writing-queries.md).

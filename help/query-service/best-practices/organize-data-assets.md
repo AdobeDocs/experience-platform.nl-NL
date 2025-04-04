@@ -2,9 +2,9 @@
 title: Beste praktijken voor de Organisatie van gegevensactiva in de Dienst van de Vraag
 description: Dit document schetst een logisch middel om gegevens voor gebruiksgemak met de Dienst van de Vraag te organiseren.
 exl-id: 12d6af99-035a-4f80-b7c0-c6413aa50697
-source-git-commit: 99cd69234006e6424be604556829b77236e92ad7
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '786'
+source-wordcount: '787'
 ht-degree: 0%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 Dit document biedt richtlijnen over aanbevolen procedures voor het ordenen van gegevenselementen, zoals gegevenssets, weergaven en tijdelijke tabellen voor gebruik met de Adobe Experience Platform Query Service. Hierin wordt beschreven hoe u uw gegevens kunt structureren en hoe u deze gegevens kunt openen, bijwerken en verwijderen.
 
-Het is belangrijk dat u uw gegevenselementen logisch ordent binnen het Platform [!DNL Data Lake] terwijl ze groeien. De Dienst van de vraag breidt SQL constructies uit die u toelaten om gegevensactiva binnen een zandbak logisch gezien te groeperen. Deze organisatiemethode staat voor het delen van gegevensactiva tussen schema&#39;s toe zonder de behoefte om hen fysiek te bewegen.
+Het is belangrijk om uw gegevenselementen logisch te ordenen binnen de Experience Platform [!DNL Data Lake] wanneer ze groeien. De Dienst van de vraag breidt SQL constructies uit die u toelaten om gegevensactiva binnen een zandbak logisch gezien te groeperen. Deze organisatiemethode staat voor het delen van gegevensactiva tussen schema&#39;s toe zonder de behoefte om hen fysiek te bewegen.
 
 ## Aan de slag
 

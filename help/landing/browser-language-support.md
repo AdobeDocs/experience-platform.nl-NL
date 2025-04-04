@@ -1,22 +1,22 @@
 ---
 solution: Experience Platform
-title: Ondersteuning voor browser en taal voor de gebruikersinterface van het Experience Platform
-description: Adobe Experience Platform is het krachtigste, meest flexibele en open systeem op de markt voor het ontwikkelen en beheren van volledige oplossingen die de ervaring van klanten stimuleren. Experience Platform stelt organisaties in staat om klantgegevens en -inhoud van elk systeem te centraliseren en te standaardiseren en datamateriaal en computerleren toe te passen om het ontwerp en de levering van rijke, gepersonaliseerde ervaringen drastisch te verbeteren.
+title: Browserondersteuning en taalondersteuning voor de gebruikersinterface van Experience Platform
+description: Adobe Experience Platform is het krachtigste, meest flexibele en open systeem op de markt voor het ontwikkelen en beheren van volledige oplossingen die de ervaring van klanten stimuleren. Experience Platform stelt organisaties in staat om klantgegevens en -inhoud van elk systeem te centraliseren en te standaardiseren en datamateriaal en computerleren toe te passen om het ontwerp en de levering van rijke, persoonlijke ervaringen drastisch te verbeteren.
 exl-id: 1b74aede-55df-4e81-8360-e49d1932b373
-source-git-commit: 9c46f2eeb563009da52acb629796ee9992136343
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '248'
+source-wordcount: '250'
 ht-degree: 3%
 
 ---
 
-# Browserondersteuning en taalondersteuning voor de gebruikersinterface van het Experience Platform
+# Browserondersteuning en taalondersteuning voor de gebruikersinterface van Experience Platform
 
 De gebruikersinterface van Adobe Experience Platform (UI) is ontworpen om veelvoudige browsers en talen te steunen.
 
 ## Browserondersteuning
 
-Het Platform UI wordt ontworpen om optimaal in de **recentste versies** van Google Chrome, Safari, Firefox, en Microsoft Edge te werken. Mogelijk kunt u problemen ondervinden bij het gebruik van bepaalde functies in oudere versies van browsers.
+Experience Platform UI wordt ontworpen om optimaal in de **recentste versies** van Google Chrome, Safari, Firefox, en Microsoft Edge te werken. Mogelijk kunt u problemen ondervinden bij het gebruik van bepaalde functies in oudere versies van browsers.
 
 | Besturingssysteem | Ondersteunde browsers |
 |---|---|
@@ -32,7 +32,7 @@ De volgende besturingssystemen en browsers worden niet ondersteund:
 
 ## Taalondersteuning
 
-De interface van het platform is momenteel beschikbaar in de volgende talen:
+De gebruikersinterface van Experience Platform is momenteel beschikbaar in de volgende talen:
 
 * Engels
 * Frans
@@ -51,7 +51,7 @@ De standaardtaal van de gebruikersinterface wordt bepaald door het gebied dat in
 
 De taal wijzigen:
 
-1. Meld u aan bij uw Experience Platform-account.
+1. Log in bij je Experience Platform account.
 1. Druk op `Ctrl + i` om het menu met accountgegevens te openen.
 1. Ga naar **[!UICONTROL Preferred Languages]** .
 1. Selecteer de voorkeuren voor de eerste en de tweede taal.

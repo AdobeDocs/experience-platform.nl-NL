@@ -3,10 +3,10 @@ keywords: personalisatie;Personalization
 title: Overzicht Personalization-bestemmingen
 description: Personalization-platforms verzamelen gegevens en inzichten uit individueel gedrag. Deze platforms kunnen marketers helpen anonieme gegevens te navigeren, aanbiedingen of advertenties te verzorgen op basis van eerdere activiteiten of als onderdeel van een publiek met vergelijkbare gewoonten.
 exl-id: 18a2b170-43d0-4d41-8afc-d2f0f9bfd7bb
-source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '150'
-ht-degree: 2%
+source-wordcount: '151'
+ht-degree: 1%
 
 ---
 
@@ -18,7 +18,7 @@ Personalization-platforms verzamelen gegevens en inzichten uit individueel gedra
 
 ## Ondersteunde verpersoonlijkingsbestemmingen {#supported-destinations}
 
-Momenteel, steunt het Platform de verpersoonlijkingsbestemmingen die hieronder worden vermeld. Voor informatie over hoe te met deze bestemmingen te verbinden, zie de individuele verbindingen:
+Experience Platform biedt momenteel ondersteuning voor de onderstaande personalisatiedoelen. Voor informatie over hoe te met deze bestemmingen te verbinden, zie de individuele verbindingen:
 
 **Verbindingen**
 

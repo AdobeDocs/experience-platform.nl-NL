@@ -2,16 +2,17 @@
 keywords: catalogusservice; vragen; vaak gestelde vragen; vk; datasets faq
 title: Veelgestelde vragen
 description: Antwoorden op de vaakst gestelde vragen over de Dienst en datasets van de Catalogus van Adobe Experience Platform.
-source-git-commit: 0bb10754e2f5bc289567368c803d4397cec77bf6
+exl-id: 70d2a352-75bd-4bbc-98e6-aeea16306f63
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '467'
+source-wordcount: '471'
 ht-degree: 1%
 
 ---
 
 # Veelgestelde vragen {#faq}
 
-Dit document geeft antwoorden op veelgestelde vragen over de Catalogusservice en gegevenssets van Adobe Experience Platform. Voor vragen en het oplossen van problemen met betrekking tot andere diensten van het Platform, met inbegrip van kwesties die over alle Platform APIs worden ontmoet, gelieve te verwijzen naar de [ gids van het oplossen van problemenoplossing van Experience Platforms ](../landing/troubleshooting.md).
+Dit document geeft antwoorden op veelgestelde vragen over de Catalogusservice en gegevenssets van Adobe Experience Platform. Voor vragen en het oplossen van problemen met betrekking tot andere diensten van Experience Platform, met inbegrip van kwesties die over alle Experience Platform APIs worden ontmoet, gelieve te verwijzen naar de [ het oplossen van problemengids van Experience Platform ](../landing/troubleshooting.md).
 
 ## Beleid en regels voor bewaring {#retention-policies-and-rules}
 
@@ -37,7 +38,7 @@ Ja, kunt u verschillende bewaarbeleid voor de gegevens toepassen meer en de Dien
 
 +++Antwoord
 
-Verlopen van gegevenssets worden wekelijks geëvalueerd en verwerkt, waarbij alle verlopen records worden verwijderd. Een gebeurtenis wordt als verlopen beschouwd als deze langer dan 30 dagen (innamedatum > 30 dagen) in Platform is ingeslikt en de datum van de gebeurtenis de gedefinieerde retentieperiode overschrijdt.
+Verlopen van gegevenssets worden wekelijks geëvalueerd en verwerkt, waarbij alle verlopen records worden verwijderd. Een gebeurtenis wordt als verlopen beschouwd als deze langer dan 30 dagen (innamedatum > 30 dagen) in Experience Platform is ingeslikt en de datum van de gebeurtenis de gedefinieerde retentieperiode overschrijdt.
 
 +++
 
@@ -45,7 +46,7 @@ Verlopen van gegevenssets worden wekelijks geëvalueerd en verwerkt, waarbij all
 
 +++Antwoord
 
-Nadat een retentiebeleid is ingesteld, worden bestaande gebeurtenissen onmiddellijk verwijderd uit Platform als de tijdstempel van de gebeurtenis de retentieperiode overschrijdt. Nieuwe gebeurtenissen worden verwijderd als de tijdstempel langer is dan de retentieperiode.
+Nadat een retentiebeleid is ingesteld, worden bestaande gebeurtenissen direct uit Experience Platform verwijderd als de tijdstempel van de gebeurtenis de retentieperiode overschrijdt. Nieuwe gebeurtenissen worden verwijderd als de tijdstempel langer is dan de retentieperiode.
 
 Als u bijvoorbeeld op 15 mei een vervalbeleid van 30 dagen toepast, gebeurt het volgende:
 
@@ -82,4 +83,3 @@ U kunt timestamp van de laatste baan van het gegevensbehoud in de [ configuratie
 Neen, zodra het bewaarbeleid wordt toegepast, worden om het even welke gegevens ouder dan de bewaarperiode permanent geschrapt en kunnen niet worden teruggekregen.
 
 +++
-

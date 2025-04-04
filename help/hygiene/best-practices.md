@@ -2,9 +2,9 @@
 title: Beste praktijken voor het Geavanceerde Beheer van de Levenscyclus van Gegevens
 description: Leer hoe u verzoeken voor gegevenshygiëne efficiënt kunt beheren in Adobe Experience Platform met de API voor geavanceerd gegevenslevenscyclusbeheer en gegevenshygiëne. Deze gids behandelt beste praktijken zoals het maximaliseren van identiteiten per verzoek, het specificeren van individuele datasets, en het bewust zijn van API het vertragen om vertragingen te verhinderen. Het document bevat richtlijnen voor het instellen van automatische gegevensset-opschoonbewerkingen, het controleren van de werkorderstatus en gedetailleerde methoden voor het ophalen van reacties. Volg deze procedures om de verwerking van uw verzoek te stroomlijnen en de reactietijden te optimaliseren.
 exl-id: 75e2a97b-ce6c-4ebd-8fc8-597887f77037
-source-git-commit: 5174529d606ac0186ff3193790ada70a46c7e274
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '769'
+source-wordcount: '771'
 ht-degree: 0%
 
 ---
@@ -45,9 +45,9 @@ Stel automatische gegevensset opschonen in voor gegevens van korte duur. Gebruik
 
 ## Bewaking van werkorder en vervalstatus van gegevensset {#monitor}
 
-U kunt de vooruitgang van uw beheer van de gegevenslevenscyclus efficiënt controleren door het gebruik van **I/O Gebeurtenissen**. Een I/O-gebeurtenis is een mechanisme voor het ontvangen van realtime meldingen over wijzigingen of updates in verschillende services binnen het platform.
+U kunt de vooruitgang van uw beheer van de gegevenslevenscyclus efficiënt controleren door het gebruik van **I/O Gebeurtenissen**. Een I/O-gebeurtenis is een mechanisme voor het ontvangen van realtime meldingen over wijzigingen of updates in verschillende services in Experience Platform.
 
-I/O-gebeurteniswaarschuwingen kunnen naar een geconfigureerde webhaak worden verzonden om de automatisering van activiteitencontrole mogelijk te maken. Als u waarschuwingen wilt ontvangen via een webhaak, moet u uw webhaak registreren voor Platformwaarschuwingen in de Adobe Developer Console. Zie de gids op [ het intekenen aan de berichten van de Gebeurtenis van Adobe I/O ](../observability/alerts/subscribe.md) voor de gedetailleerde instructies.
+I/O-gebeurteniswaarschuwingen kunnen naar een geconfigureerde webhaak worden verzonden om de automatisering van activiteitencontrole mogelijk te maken. Als u waarschuwingen wilt ontvangen via webhaak, moet u uw webhaak registreren voor Experience Platform-waarschuwingen in de Adobe Developer Console. Zie de gids op [ het intekenen aan de berichten van de Gebeurtenis van Adobe I/O ](../observability/alerts/subscribe.md) voor de gedetailleerde instructies.
 
 Gebruik de volgende methoden en richtlijnen voor de levenscyclus van gegevens om taakstatussen effectief op te halen en te controleren:
 
@@ -63,7 +63,7 @@ U kunt de voortgang van uw taken tijdens de levenscyclus van gegevens op effici�
 
 Voor diepgaande informatie over individuele werkorders, gebruik de volgende benadering:
 
-- Vraag het `/workorder/{work_order_id}` -eindpunt om een GET voor gedetailleerde reactiegegevens.
+- Voer een GET-aanvraag in bij het `/workorder/{work_order_id}` -eindpunt voor gedetailleerde reactiegegevens.
 - Haal productspecifieke reacties en succesberichten op.
 - Vermijd het gebruik van deze methode voor regelmatige opiniepeilingsactiviteiten.
 

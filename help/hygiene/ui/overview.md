@@ -2,9 +2,9 @@
 title: UI-gids voor gegevenslevenscyclus
 description: Leer hoe u taken in de levenscyclus van gegevens beheert in de Adobe Experience Platform-gebruikersinterface.
 exl-id: 7199151a-5390-4150-8a1d-daf53b7a1f5b
-source-git-commit: 566f1b6478cd0de0691cfb2301d5b86fbbfece52
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '219'
+source-wordcount: '221'
 ht-degree: 0%
 
 ---
@@ -23,11 +23,11 @@ ht-degree: 0%
 
 Met de werkruimte van **[!UICONTROL Data Lifecycle]** in de gebruikersinterface van Adobe Experience Platform kunt u verschillende beheertaken voor de gegevenslevenscyclus maken en controleren, zoals het verwijderen van records en het plannen van gegevenssetvervaldatums.
 
-In deze handleiding wordt beschreven hoe u taken in de levenscyclus van gegevens kunt beheren in de interface van het platform. Voor informatie over hoe te om deze taken uit te voeren gebruikend API vraag, zie de [ gids van de Hygiëne van Gegevens ](../api/overview.md).
+In deze handleiding wordt beschreven hoe u taken in de levenscyclus van gegevens kunt beheren in de gebruikersinterface van Experience Platform. Voor informatie over hoe te om deze taken uit te voeren gebruikend API vraag, zie de [ gids van de Hygiëne van Gegevens ](../api/overview.md).
 
 Om tot de werkruimte toegang te hebben, selecteer **Levenscyclus van Gegevens** in de linkernavigatie.
 
-![ de [!UICONTROL Data Lifecycle] werkruimte in Platform UI, met [!UICONTROL Data Lifecycle] benadrukt in de linkernavigatie.](../images/ui/overview/home.png)
+![ de [!UICONTROL Data Lifecycle] werkruimte in Experience Platform UI, met [!UICONTROL Data Lifecycle] benadrukt in de linkernavigatie.](../images/ui/overview/home.png)
 
 Van hier, kunt u bestaande het werkorden doorbladeren en nieuwe verrichtingen van de gegevenslevenscyclus vormen. Raadpleeg de volgende secties van deze handleiding voor meer informatie:
 

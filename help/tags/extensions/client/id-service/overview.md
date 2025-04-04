@@ -2,10 +2,10 @@
 title: Overzicht van Adobe Experience Cloud Identity Service
 description: Meer informatie over de extensie van de Adobe Experience Cloud Identity Service in Adobe Experience Platform.
 exl-id: 9bfcb666-a3f1-46ad-8678-2c63738da2b2
-source-git-commit: 88939d674c0002590939004e0235d3da8b072118
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '783'
-ht-degree: 0%
+source-wordcount: '784'
+ht-degree: 5%
 
 ---
 
@@ -13,17 +13,17 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch is omgedoopt tot een reeks technologieën voor gegevensverzameling in Adobe Experience Platform. Diverse terminologische wijzigingen zijn als gevolg hiervan in de productdocumentatie doorgevoerd. Gelieve te verwijzen naar het volgende [ document ](../../../term-updates.md) voor een geconsolideerde verwijzing van de terminologieveranderingen.
+>Adobe Experience Platform Launch is omgedoopt tot een reeks technologieën voor dataverzameling in Adobe Experience Platform.  Als gevolg hiervan zijn er verschillende terminologiewijzigingen in de productdocumentatie doorgevoerd. Raadpleeg het volgende [ document ](../../../term-updates.md) voor een geconsolideerde referentie van de terminologiewijzigingen.
 
 Gebruik deze verwijzing voor informatie over het vormen van de uitbreiding van identiteitskaart van Adobe Experience Cloud, en de opties beschikbaar wanneer het gebruiken van deze uitbreiding om een regel te bouwen.
 
-Gebruik deze uitbreiding om de Dienst van de Identiteit van het Experience Cloud met uw bezit te integreren. Met de Experience Cloud Identity Service kunt u unieke en permanente id&#39;s voor bezoekers van uw site maken en opslaan.
+Gebruik deze extensie om de Experience Cloud Identity Service te integreren met uw eigenschap. Met de Experience Cloud Identity Service kunt u unieke en permanente id&#39;s voor bezoekers van uw site maken en opslaan.
 
 ## De extensie Experience Cloud-id configureren
 
-Deze sectie bevat een verwijzing naar de beschikbare opties bij het configureren van de extensie Experience Cloud-id.
+Deze sectie bevat een verwijzing naar de opties die beschikbaar zijn wanneer u de extensie voor de Experience Cloud-id configureert.
 
-Als de extensie Experience Cloud-id nog niet is geïnstalleerd, opent u de eigenschap en selecteert u **[!UICONTROL Extensions > Catalog]** , plaatst u de aanwijzer boven de extensie Experience Cloud-id en selecteert u **[!UICONTROL Install]** .
+Als de extensie Experience Cloud-id nog niet is geïnstalleerd, opent u de eigenschap en selecteert u **[!UICONTROL Extensions > Catalog]** . Plaats de aanwijzer op de extensie Experience Cloud-id en selecteer **[!UICONTROL Install]** .
 
 Als u de extensie wilt configureren, opent u het tabblad Extensies, plaatst u de muisaanwijzer op de extensie en selecteert u **[!UICONTROL Configure]** .
 
@@ -31,9 +31,9 @@ Als u de extensie wilt configureren, opent u het tabblad Extensies, plaatst u de
 
 De volgende configuratieopties zijn beschikbaar:
 
-### Organisatie-id Experience Cloud
+### Experience Cloud-organisatie-id
 
-De id voor uw organisatie van Experiencen Cloud.
+De id voor je Experience Cloud-organisatie.
 
 De id bestaat uit een alfanumerieke tekenreeks van 24 tekens, gevolgd door `@AdobeOrg` . Als u deze id niet kent, neemt u contact op met de klantenservice.
 
@@ -49,7 +49,7 @@ Selecteer **[!UICONTROL Add]** om een ander pad uit te sluiten.
 
 Gebruik de opties bij Inschakelen om te bepalen of bezoekers moeten deelnemen aan Adobe-services op uw site, zoals of ze cookies moeten maken die bezoekersactiviteiten volgen.
 
-Opt In is het gecentraliseerde referentiepunt voor alle clientbibliotheken van de oplossing Platform om te bepalen of cookies kunnen worden gemaakt op het apparaat of de browser van een gebruiker wanneer deze uw site bezoekt. Opt In biedt geen ondersteuning voor het verzamelen of opslaan van voorkeuren voor gebruikersmachtigingen.
+Opt In is het centrale referentiepunt voor alle clientbibliotheken van de Experience Platform-oplossing om te bepalen of cookies op het apparaat of de browser van een gebruiker kunnen worden gemaakt wanneer deze uw site bezoeken. Opt In biedt geen ondersteuning voor het verzamelen of opslaan van voorkeuren voor gebruikersmachtigingen.
 
 **laat Opt binnen toe?**
 
@@ -89,9 +89,9 @@ Bepaal welke categorieën worden goedgekeurd of geweigerd wanneer geen voorkeur 
 
 ### Variabelen
 
-Stel naam-waardeparen in als Experience Cloud ID-instantie-eigenschappen. Gebruik de vervolgkeuzelijst om een variabele te selecteren en typ of selecteer een waarde. Voor informatie over elke variabele, verwijs naar de [ documentatie van de Dienst van de Identiteit van het Experience Cloud ](https://experiencecloud.adobe.com/resources/help/en_US/mcvid/mcvid-overview.html).
+Stel naam-waardeparen in als Experience Cloud ID-instantie-eigenschappen. Gebruik de vervolgkeuzelijst om een variabele te selecteren en typ of selecteer een waarde. Voor informatie over elke variabele, verwijs naar de [ documentatie van de Dienst van de Identiteit van Experience Cloud ](https://experiencecloud.adobe.com/resources/help/en_US/mcvid/mcvid-overview.html).
 
-## Handelingstypen voor extensie Experience Cloud-id
+## Handelingstypen voor Experience Cloud ID-extensie
 
 In deze sectie worden de actietypen beschreven die beschikbaar zijn in de extensie Experience Cloud-id.
 
@@ -103,7 +103,7 @@ Stel een of meer klant-id&#39;s in.
 
 1. Voer de integratiecode in.
 
-   De integratiecode moet de waarde bevatten die is ingesteld als gegevensbron in Audience Manager- of klantkenmerken.
+   De integratiecode moet de waarde bevatten die is ingesteld als gegevensbron in Audience Manager of Customer Attributes.
 
 1. Selecteer een waarde.
 

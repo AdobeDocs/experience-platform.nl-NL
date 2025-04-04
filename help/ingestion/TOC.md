@@ -5,10 +5,10 @@ breadcrumb-title: Gids voor gegevensopname
 user-guide-description: Breng uw gegevens naar Experience Platform via batch- of streamingopname.
 feature: Data Ingestion
 role: Developer
-source-git-commit: 1070c34bcd4577fcc5f0ac160196450db3aab9b0
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '142'
-ht-degree: 17%
+source-wordcount: '143'
+ht-degree: 20%
 
 ---
 
@@ -26,7 +26,7 @@ ht-degree: 17%
    - [API-ontwikkelaarsgids](batch-ingestion/api-overview.md)
    - [Gedeeltelijke batch ingestie](batch-ingestion/partial.md)
    - [Problemen oplossen](batch-ingestion/troubleshooting.md)
-- Tutorials {#tutorials}
+- Zelfstudies {#tutorials}
    - Een CSV-bestand toewijzen aan XDM {#map-csv}
       - [Overzicht](./tutorials/map-csv/overview.md)
       - [Een CSV-bestand toewijzen aan een bestaand schema](./tutorials/map-csv/existing-schema.md)
@@ -48,4 +48,4 @@ ht-degree: 17%
 - [Source-connectors](source-connectors.md)
 - [ Verwijzing van de Opname API van de Partij ](https://developer.adobe.com/experience-platform-apis/references/batch-ingestion/)
 - [ Streaming Ingestie API verwijzing ](https://developer.adobe.com/experience-platform-apis/references/streaming-ingestion/)
-- [ de versienota&#39;s van het Platform ](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)
+- [Releaseopmerkingen bij Experience Platform](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)

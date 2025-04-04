@@ -1,11 +1,11 @@
 ---
-title: Overzicht van Adobe Media-analyse voor audio- en videoextensie
+title: Overzicht van Adobe Media Analytics for Audio and Video Extension
 description: Meer informatie over de extensie Adobe Media Analytics for Audio and Video in Adobe Experience Platform.
 exl-id: 426cfd08-aead-4b35-824c-45494bca2fc8
-source-git-commit: d23f1cc9dd0155aceae78bf938d35463e9c38181
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '936'
-ht-degree: 0%
+source-wordcount: '937'
+ht-degree: 5%
 
 ---
 
@@ -13,14 +13,14 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch is omgedoopt tot een reeks technologieën voor gegevensverzameling in Adobe Experience Platform. Diverse terminologische wijzigingen zijn als gevolg hiervan in de productdocumentatie doorgevoerd. Gelieve te verwijzen naar het volgende [ document ](../../../term-updates.md) voor een geconsolideerde verwijzing van de terminologieveranderingen.
+>Adobe Experience Platform Launch is omgedoopt tot een reeks technologieën voor dataverzameling in Adobe Experience Platform.  Als gevolg hiervan zijn er verschillende terminologiewijzigingen in de productdocumentatie doorgevoerd. Raadpleeg het volgende [ document ](../../../term-updates.md) voor een geconsolideerde referentie van de terminologiewijzigingen.
 
-Gebruik deze documentatie voor informatie over het installeren, het vormen, en het uitvoeren van de Adobe Media Analytics voor Audio en Video uitbreiding (de uitbreiding van de Analyse van Media). Omvat zijn de opties beschikbaar wanneer het gebruiken van deze uitbreiding om een regel, samen met voorbeelden en verbindingen aan steekproeven te bouwen.
+Gebruik deze documentatie voor informatie over het installeren, configureren en implementeren van de extensie Adobe Media Analytics voor audio en video (extensie Media Analytics). Omvat zijn de opties beschikbaar wanneer het gebruiken van deze uitbreiding om een regel, samen met voorbeelden en verbindingen aan steekproeven te bouwen.
 
 De extensie Media Analytics (MA) voegt de core JavaScript Media SDK (Media 2.x SDK) toe. Deze extensie biedt de functionaliteit voor het toevoegen van de `MediaHeartbeat` tracker-instantie aan een tagsite of -project. De extensie MA vereist twee extra extensies:
 
 * [Extensie Analytics](../analytics/overview.md)
-* [Extensie Experience Cloud-id](../id-service/overview.md)
+* [Experience Cloud ID Extension](../id-service/overview.md)
 
 >[!IMPORTANT]
 >
@@ -53,7 +53,7 @@ Nadat u alle drie bovengenoemde uitbreidingen in uw markeringsproject hebt omvat
 | API&#39;s exporteren naar vensterobject | Het exporteren van media-API&#39;s voor analyse naar een algemeen bereik in- of uitschakelen |
 | Naam variabele | Een variabele die u gebruikt om Media Analytics API&#39;s te exporteren onder het `window` -object |
 
-**Herinnering:** de uitbreiding van MA vereist de [ Analytics ](../analytics/overview.md) en [ identiteitskaart van het Experience Cloud ](../id-service/overview.md) uitbreidingen. U moet deze uitbreidingen aan uw uitbreidingsbezit ook toevoegen en hen vormen.
+**Herinnering:** de uitbreiding van MA vereist de [ Analytics ](../analytics/overview.md) en [ identiteitskaart van Experience Cloud ](../id-service/overview.md) uitbreidingen. U moet deze uitbreidingen aan uw uitbreidingsbezit ook toevoegen en hen vormen.
 
 ## De extensie MA gebruiken
 
@@ -174,11 +174,11 @@ De extensie MA stelt de gedeelde `get-instance` en `media-heartbeat` modules bes
    ...
    ```
 
-1. Gebruikend de instantie van de Hartslag van Media, volg de [ documentatie van SDK van Media JS ](https://experienceleague.adobe.com/docs/media-analytics/using/legacy-implementations/legacy-media-sdks/setup-javascript/set-up-js-2.html) en [ JS API documentatie ](https://adobe-marketing-cloud.github.io/media-sdks/reference/javascript/index.html) om media het volgen uit te voeren.
+1. Gebruikend de instantie van de Hartslag van Media, volg de [ documentatie van SDK JS van Media ](https://experienceleague.adobe.com/docs/media-analytics/using/legacy-implementations/legacy-media-sdks/setup-javascript/set-up-js-2.html) en [ JS API documentatie ](https://adobe-marketing-cloud.github.io/media-sdks/reference/javascript/index.html) om media het volgen uit te voeren.
 
 >[!NOTE]
 >
->**het Testen:** voor deze versie, om uw uitbreiding te testen moet u het aan [ Platform ](../../../extension-dev/submit/upload-and-test.md) uploaden, waar u toegang tot alle afhankelijke uitbreidingen hebt.
+>**het Testen:** voor deze versie, om uw uitbreiding te testen moet u het aan [ Experience Platform ](../../../extension-dev/submit/upload-and-test.md) uploaden, waar u toegang tot alle afhankelijke uitbreidingen hebt.
 
 
 <!--

@@ -3,9 +3,9 @@ keywords: Experience Platform;home;populaire onderwerpen;bronnen;API;verkennen;f
 title: Een Source in tabelvorm verkennen met de Flow Service API
 description: Deze zelfstudie gebruikt de Flow Service API om de inhoud en structuur van een op tabellen gebaseerde bron te verkennen.
 exl-id: 0c7a5b8a-2071-4ac2-b2d1-c5534e7c7d9c
-source-git-commit: 3bdeec8284873b8d9368f833b24e9922ed489019
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '465'
+source-wordcount: '471'
 ht-degree: 1%
 
 ---
@@ -22,16 +22,16 @@ Deze zelfstudie biedt stappen voor het verkennen en voorvertonen van de structuu
 
 Deze handleiding vereist een goed begrip van de volgende onderdelen van Adobe Experience Platform:
 
-* [ Bronnen ](../../../home.md): [!DNL Experience Platform] staat gegevens toe om van diverse bronnen worden opgenomen terwijl het voorzien van u van de capaciteit om, inkomende gegevens te structureren te etiketteren en te verbeteren gebruikend [!DNL Platform] diensten.
-* [ Sandboxen ](../../../../sandboxes/home.md): [!DNL Experience Platform] verstrekt virtuele zandbakken die één enkele [!DNL Platform] instantie in afzonderlijke virtuele milieu&#39;s verdelen helpen digitale ervaringstoepassingen ontwikkelen en ontwikkelen.
+* [ Bronnen ](../../../home.md): [!DNL Experience Platform] staat gegevens toe om van diverse bronnen worden opgenomen terwijl het voorzien van u van de capaciteit om, inkomende gegevens te structureren te etiketteren en te verbeteren gebruikend [!DNL Experience Platform] diensten.
+* [ Sandboxen ](../../../../sandboxes/home.md): [!DNL Experience Platform] verstrekt virtuele zandbakken die één enkele [!DNL Experience Platform] instantie in afzonderlijke virtuele milieu&#39;s verdelen helpen digitale ervaringstoepassingen ontwikkelen en ontwikkelen.
 
-### Platform-API&#39;s gebruiken
+### Experience Platform API&#39;s gebruiken
 
-Voor informatie over hoe te om vraag aan Platform APIs met succes te maken, zie de gids op [ begonnen wordt met Platform APIs ](../../../../landing/api-guide.md).
+Voor informatie over hoe te om vraag aan Experience Platform APIs met succes te maken, zie de gids op [ begonnen wordt met Experience Platform APIs ](../../../../landing/api-guide.md).
 
 ## Uw gegevenstabellen verkennen
 
-U kunt informatie over de structuur van uw gegevenstabellen terugwinnen door een verzoek tot GET aan [!DNL Flow Service] API te richten terwijl het verstrekken van de identiteitskaart van de basisverbinding van uw bron.
+U kunt informatie over de structuur van uw gegevenstabellen ophalen door een GET-aanvraag in te dienen bij de [!DNL Flow Service] API en de basis-verbindings-id van uw bron op te geven.
 
 **API formaat**
 
@@ -56,7 +56,7 @@ curl -X GET \
 
 **Reactie**
 
-Een geslaagde reactie retourneert een array met tabellen uit uw bron. Zoek de tabel die u wilt opnemen in Platform en neem nota van de eigenschap `path` ervan, aangezien u deze in de volgende stap moet opgeven om de structuur te inspecteren.
+Een geslaagde reactie retourneert een array met tabellen uit uw bron. Zoek de tabel die u naar Experience Platform wilt brengen en neem nota van de eigenschap `path` ervan, aangezien u deze in de volgende stap moet verstrekken om de structuur te inspecteren.
 
 ```json
 [
@@ -77,9 +77,9 @@ Een geslaagde reactie retourneert een array met tabellen uit uw bron. Zoek de ta
 ]
 ```
 
-## De structuur van een tabel Inspect
+## De structuur van een tabel controleren
 
-Om de inhoud van uw gegevenslijsten te inspecteren, voer een verzoek van de GET aan [!DNL Flow Service] API uit terwijl het specificeren van de weg van een lijst als vraagparameter.
+Om de inhoud van uw gegevenslijsten te inspecteren, voer een verzoek van GET aan [!DNL Flow Service] API uit terwijl het specificeren van de weg van een lijst als vraagparameter.
 
 **API formaat**
 
@@ -188,7 +188,7 @@ Een geslaagde reactie retourneert informatie over de inhoud en structuur van de 
 
 ## Volgende stappen
 
-Door dit leerprogramma te volgen, hebt u informatie over de structuur en de inhoud van uw gegevenslijsten verzameld. Bovendien hebt u de weg aan de lijst teruggewonnen die u in Platform wilt opnemen. U kunt deze informatie gebruiken om een bronverbinding en een gegevensstroom tot stand te brengen om uw gegevens aan Platform te brengen. Zie de volgende zelfstudies voor specifieke stappen voor het maken van een bronverbinding en een gegevensstroom met de [!DNL Flow Service] API:
+Door dit leerprogramma te volgen, hebt u informatie over de structuur en de inhoud van uw gegevenslijsten verzameld. Bovendien hebt u het pad naar de tabel opgehaald dat u in Experience Platform wilt opnemen. Met deze informatie kunt u een bronverbinding en een gegevensstroom maken om uw gegevens over te brengen naar Experience Platform. Zie de volgende zelfstudies voor specifieke stappen voor het maken van een bronverbinding en een gegevensstroom met de [!DNL Flow Service] API:
 
 * [Advertising-bronnen](../collect/advertising.md)
 * [CRM-bronnen](../collect/crm.md)

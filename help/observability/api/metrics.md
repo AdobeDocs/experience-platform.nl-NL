@@ -2,9 +2,9 @@
 keywords: Experience Platform;startpagina;populaire onderwerpen
 solution: Experience Platform
 title: Metrics API Endpoint
-description: Leer hoe u meetgegevens voor waarneembaarheid in Experience Platform ophaalt met behulp van de API Observability Insights.
+description: Leer hoe u meetgegevens voor waarneembaarheid in Experience Platform ophaalt met de API Observability Insights.
 exl-id: 08d416f0-305a-44e2-a2b7-d563b2bdd2d2
-source-git-commit: bd5018a2d867d0483f3f2f0c45e356ea69a01801
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '1278'
 ht-degree: 1%
@@ -13,7 +13,7 @@ ht-degree: 1%
 
 # Metrisch eindpunt
 
-De metriek van de waarneming verstrekt inzicht in gebruiksstatistieken, historische tendensen, en prestatiesindicatoren voor diverse eigenschappen in Adobe Experience Platform. Het `/metrics` eindpunt in [!DNL Observability Insights API] staat u toe om metrische gegevens voor de activiteit van uw organisatie in programmatically terug te winnen [!DNL Platform].
+De metriek van de waarneming verstrekt inzicht in gebruiksstatistieken, historische tendensen, en prestatiesindicatoren voor diverse eigenschappen in Adobe Experience Platform. Het `/metrics` eindpunt in [!DNL Observability Insights API] staat u toe om metrische gegevens voor de activiteit van uw organisatie in programmatically terug te winnen [!DNL Experience Platform].
 
 >[!NOTE]
 >
@@ -25,7 +25,7 @@ Het API eindpunt dat in deze gids wordt gebruikt maakt deel uit van [[!DNL Obser
 
 ## Metrische waarden voor waarneembaarheid ophalen
 
-U kunt metrische gegevens terugwinnen door een verzoek van de POST aan het `/metrics` eindpunt te doen, specificerend de metriek u in de nuttige lading wenst terug te winnen.
+U kunt metrische gegevens terugwinnen door een POST- verzoek aan het `/metrics` eindpunt te doen, specificerend de metriek u wenst om in de nuttige lading terug te winnen.
 
 **API formaat**
 
@@ -175,7 +175,7 @@ Een succesvolle reactie keert de resulterende datapoints voor de metriek en de f
 | `metric` | De naam van een van de metriek die in de aanvraag wordt opgegeven. |
 | `filters` | De filterconfiguratie voor gespecificeerde metrisch. |
 | `datapoints` | Een array waarvan de objecten de resultaten van de opgegeven metrische waarde en filters vertegenwoordigen. Het aantal objecten in de array is afhankelijk van de filteropties in de aanvraag. Als er geen filters zijn opgegeven, bevat de array slechts één object dat alle gegevenssets vertegenwoordigt. |
-| `groupBy` | Als er meerdere gegevenssets zijn opgegeven in de eigenschap `filter` voor een metrische waarde en de optie `groupBy` is ingesteld op true in de aanvraag, bevat dit object de id van de gegevensset waarop de overeenkomende eigenschap `dps` van toepassing is.<br><br> als dit voorwerp leeg in de reactie lijkt, is het overeenkomstige `dps` bezit op alle datasets van toepassing die in de `filters` serie worden verstrekt (of alle datasets in [!DNL Platform] als geen filters werden verstrekt). |
+| `groupBy` | Als er meerdere gegevenssets zijn opgegeven in de eigenschap `filter` voor een metrische waarde en de optie `groupBy` is ingesteld op true in de aanvraag, bevat dit object de id van de gegevensset waarop de overeenkomende eigenschap `dps` van toepassing is.<br><br> als dit voorwerp leeg in de reactie lijkt, is het overeenkomstige `dps` bezit op alle datasets van toepassing die in de `filters` serie worden verstrekt (of alle datasets in [!DNL Experience Platform] als geen filters werden verstrekt). |
 | `dps` | De teruggekeerde gegevens voor bepaalde metrisch, filter, en tijdwaaier. Elke sleutel in dit object vertegenwoordigt een tijdstempel met een overeenkomende waarde voor de opgegeven metrische waarde. De tijdsperiode tussen elke datapoint is afhankelijk van de `granularity` -waarde die in de aanvraag is opgegeven. |
 
 {style="table-layout:auto"}
@@ -186,7 +186,7 @@ De volgende sectie bevat aanvullende informatie over het werken met het `/metric
 
 ### Beschikbare cijfers {#available-metrics}
 
-In de volgende tabellen worden alle metriek weergegeven die door [!DNL Observability Insights] worden weergegeven, uitgesplitst naar [!DNL Platform] -service. Elke metrische waarde bevat een beschrijving en geaccepteerde ID-queryparameter.
+In de volgende tabellen worden alle metriek weergegeven die door [!DNL Observability Insights] worden weergegeven, uitgesplitst naar [!DNL Experience Platform] -service. Elke metrische waarde bevat een beschrijving en geaccepteerde ID-queryparameter.
 
 >[!NOTE]
 >
@@ -279,8 +279,8 @@ In de volgende tabel worden de verschillende foutcodes weergegeven die door de A
 | --- | --- | --- |
 | `INSGHT-1000-400` | Ongeldige payload verzoek | Er is iets mis met de lading van de aanvraag. Zorg ervoor dat u precies het nuttige lading formatteren zoals getoond [ hierboven ](#v2) aanpast. Om het even welke mogelijke redenen kunnen deze fout teweegbrengen:<ul><li>Vereiste velden ontbreken, zoals `aggregator`</li><li>Ongeldige meetgegevens</li><li>De aanvraag bevat een ongeldige aggregator</li><li>Een begindatum vindt plaats na een einddatum</li></ul> |
 | `INSGHT-1001-400` | Metrische query mislukt | Er is een fout opgetreden bij het zoeken naar de metrische database, omdat een onjuiste aanvraag of de query zelf niet kan worden gescheiden. Zorg ervoor dat uw verzoek correct is geformatteerd alvorens opnieuw te proberen. |
-| `INSGHT-1001-500` | Metrische query mislukt | Er is een fout opgetreden tijdens het zoeken naar de metrieke-database vanwege een serverfout. Probeer het verzoek opnieuw. Neem contact op met de Adobe als het probleem zich blijft voordoen. |
-| `INSGHT-1002-500` | Servicefout | De aanvraag kan niet worden verwerkt vanwege een interne fout. Probeer het verzoek opnieuw. Neem contact op met de Adobe als het probleem zich blijft voordoen. |
+| `INSGHT-1001-500` | Metrische query mislukt | Er is een fout opgetreden tijdens het zoeken naar de metrieke-database vanwege een serverfout. Probeer het verzoek opnieuw. Neem contact op met de ondersteuning van Adobe als het probleem zich blijft voordoen. |
+| `INSGHT-1002-500` | Servicefout | De aanvraag kan niet worden verwerkt vanwege een interne fout. Probeer het verzoek opnieuw. Neem contact op met de ondersteuning van Adobe als het probleem zich blijft voordoen. |
 | `INSGHT-1003-401` | Validatiefout van sandbox | De aanvraag kan niet worden verwerkt vanwege een sandboxvalidatiefout. Zorg ervoor dat de naam van de sandbox die u in de header `x-sandbox-name` hebt opgegeven, een geldige, ingeschakelde sandbox voor uw organisatie vertegenwoordigt voordat u het verzoek opnieuw probeert. |
 
 {style="table-layout:auto"}

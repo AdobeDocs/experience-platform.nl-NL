@@ -3,31 +3,31 @@ keywords: Experience Platform;home;populaire onderwerpen;lokaal systeem;bestands
 solution: Experience Platform
 title: Een lokale Source-connector voor het uploaden van bestanden maken in de gebruikersinterface
 type: Tutorial
-description: Leer hoe u een bronverbinding maakt voor uw lokale systeem om lokale bestanden naar het platform te brengen
+description: Leer hoe u een bronverbinding maakt voor uw lokale systeem om lokale bestanden naar Experience Platform te brengen
 exl-id: 9ce15362-c30d-40cc-9d9c-caa650579390
-source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '725'
+source-wordcount: '732'
 ht-degree: 0%
 
 ---
 
 # Een lokale bronconnector voor het uploaden van bestanden maken in de gebruikersinterface
 
-Deze zelfstudie bevat stappen voor het maken van een lokale bronaansluiting voor het uploaden van bestanden om lokale bestanden in te voeren in Platform via de gebruikersinterface.
+Deze zelfstudie bevat stappen voor het maken van een lokale bronaansluiting voor het uploaden van bestanden om lokale bestanden via de gebruikersinterface in te voeren in Experience Platform.
 
 ## Aan de slag
 
-Deze zelfstudie vereist een goed begrip van de volgende componenten van Platform:
+Deze zelfstudie vereist een goed begrip van de volgende onderdelen van Experience Platform:
 
-* [[!DNL Experience Data Model (XDM)]  Systeem ](../../../../../xdm/home.md): Het gestandaardiseerde kader waardoor het Platform gegevens van de klantenervaring organiseert.
+* [[!DNL Experience Data Model (XDM)]  Systeem ](../../../../../xdm/home.md): Het gestandaardiseerde kader waardoor Experience Platform gegevens van de klantenervaring organiseert.
    * [ Grondbeginselen van schemacompositie ](../../../../../xdm/schema/composition.md): Leer over de basisbouwstenen van schema&#39;s XDM, met inbegrip van zeer belangrijke principes en beste praktijken in schemacompositie.
    * [ het leerprogramma van de Redacteur van het Schema ](../../../../../xdm/tutorials/create-schema-ui.md): Leer hoe te om douaneschema&#39;s tot stand te brengen gebruikend de Redacteur UI van het Schema.
 * [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md): biedt een uniform, real-time consumentenprofiel dat is gebaseerd op geaggregeerde gegevens van meerdere bronnen.
 
-## Lokale bestanden uploaden naar platform
+## Lokale bestanden uploaden naar Experience Platform
 
-Selecteer in de gebruikersinterface van het platform **[!UICONTROL Sources]** in de linkernavigatiebalk voor toegang tot de werkruimte van [!UICONTROL Sources] . In het scherm [!UICONTROL Catalog] worden diverse bronnen weergegeven waarvoor u een account kunt maken.
+Selecteer in de gebruikersinterface van Experience Platform de optie **[!UICONTROL Sources]** in de linkernavigatiebalk voor toegang tot de werkruimte van [!UICONTROL Sources] . In het scherm [!UICONTROL Catalog] worden diverse bronnen weergegeven waarvoor u een account kunt maken.
 
 U kunt de juiste categorie selecteren in de catalogus aan de linkerkant van het scherm. U kunt ook de specifieke bron vinden waarmee u wilt werken met de zoekoptie.
 
@@ -91,4 +91,4 @@ Nadat het CSV-bestand is toegewezen en gemaakt, kunt u de gegevens die ermee wor
 
 ## Volgende stappen
 
-Door deze zelfstudie te volgen, hebt u een vlak CSV-bestand toegewezen aan een XDM-schema en het ingepakt in Platform. Deze gegevens kunnen nu worden gebruikt door downstream [!DNL Platform] -services, zoals [!DNL Real-Time Customer Profile] . Zie het overzicht voor [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md) voor meer informatie.
+Aan de hand van deze zelfstudie hebt u een standaard CSV-bestand toegewezen aan een XDM-schema en het in Experience Platform opgenomen. Deze gegevens kunnen nu worden gebruikt door downstream [!DNL Experience Platform] -services, zoals [!DNL Real-Time Customer Profile] . Zie het overzicht voor [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md) voor meer informatie.

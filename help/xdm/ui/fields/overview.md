@@ -2,11 +2,11 @@
 keywords: Experience Platform;home;populaire onderwerpen;api;API;XDM;XDM systeem;ervaringsgegevensmodel;gegevensmodel;ui;werkruimte;field;
 solution: Experience Platform
 title: XDM-velden definiëren in de UI
-description: Leer hoe u XDM-velden definieert in de gebruikersinterface van het Experience Platform.
+description: Leer hoe u XDM-velden definieert in de Experience Platform-gebruikersinterface.
 exl-id: 2adb03d4-581b-420e-81f8-e251cf3d9fb9
-source-git-commit: 0360d0eb9f4a01e12ce8619e8d2c5bac9301631f
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1517'
+source-wordcount: '1518'
 ht-degree: 1%
 
 ---
@@ -17,7 +17,7 @@ Met [!DNL Schema Editor] in de Adobe Experience Platform-gebruikersinterface kun
 
 ## Vereisten
 
-Deze handleiding vereist een goed begrip van XDM System. Verwijs naar het [ XDM overzicht ](../../home.md) voor een inleiding aan de rol van XDM binnen het Experience Platform ecosysteem, en de [ grondbeginselen van schemacompositie ](../../schema/composition.md) om te leren hoe de klassen en de gebiedsgroepen gebieden aan XDM schema&#39;s bijdragen.
+Deze handleiding vereist een goed begrip van XDM System. Verwijs naar het [ XDM overzicht ](../../home.md) voor een inleiding aan de rol van XDM binnen het ecosysteem van Experience Platform, en de [ grondbeginselen van schemacompositie ](../../schema/composition.md) om te leren hoe de klassen en de gebiedsgroepen gebieden aan XDM schema&#39;s bijdragen.
 
 Terwijl niet vereist voor deze gids, wordt het geadviseerd dat u ook het leerprogramma volgt op [ samenstellend een schema in UI ](../../tutorials/create-schema-ui.md) om zich met de diverse mogelijkheden van [!DNL Schema Editor] vertrouwd te maken.
 
@@ -72,7 +72,7 @@ Selecteer **[!UICONTROL Apply]** nadat u de configuratie van het veld hebt volto
 
 ![ de [!UICONTROL Field properties] sectie van de Redacteur van het Schema wordt benadrukt.](../../images/ui/fields/overview/field-details.png)
 
-Het canvas wordt bijgewerkt om het nieuwe toegevoegde veld weer te geven dat zich binnen een object bevindt dat een naamruimte heeft naar uw unieke huurder-id (weergegeven als `_tenantId` in het onderstaande voorbeeld). Alle aangepaste velden die aan een schema worden toegevoegd, worden automatisch binnen deze naamruimte geplaatst om conflicten met andere velden van door de Adobe verschafte klassen en veldgroepen te voorkomen. Het rechterspoor geeft nu naast de andere eigenschappen ook het pad van het veld weer.
+Het canvas wordt bijgewerkt om het nieuwe toegevoegde veld weer te geven dat zich binnen een object bevindt dat een naamruimte heeft naar uw unieke huurder-id (weergegeven als `_tenantId` in het onderstaande voorbeeld). Alle aangepaste velden die aan een schema worden toegevoegd, worden automatisch binnen deze naamruimte geplaatst om conflicten te voorkomen met andere velden van door Adobe verschafte klassen en veldgroepen. Het rechterspoor geeft nu naast de andere eigenschappen ook het pad van het veld weer.
 
 ![ een nieuw gebied in het schemadiagram en zijn overeenkomstige weg in de [!UICONTROL Field properties] sectie wordt benadrukt.](../../images/ui/fields/overview/field-added.png)
 
@@ -102,7 +102,7 @@ Als u een nieuw veld definieert, kunnen er aanvullende configuratieopties worden
 
 ## Speciale veldtypen {#special}
 
-Het rechterspoor biedt verschillende selectievakjes voor het aanwijzen van speciale rollen voor het geselecteerde veld. De gebruiksgevallen voor sommige van deze opties vereisen belangrijke overwegingen met betrekking tot uw strategie voor het modelleren van gegevens en hoe u de downstream services van het Platform wilt gebruiken.
+Het rechterspoor biedt verschillende selectievakjes voor het aanwijzen van speciale rollen voor het geselecteerde veld. Bij het gebruik van sommige van deze opties moet u rekening houden met uw strategie voor het modelleren van gegevens en met de manier waarop u downstreamservices van Experience Platform wilt gebruiken.
 
 Raadpleeg de volgende documentatie voor meer informatie over deze speciale typen:
 

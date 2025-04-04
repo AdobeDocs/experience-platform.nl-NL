@@ -1,32 +1,32 @@
 ---
-description: Leer hoe u gegevens tijdens segmentatie kunt controleren gebruikend het gebruikersinterface van het Experience Platform.
+description: Leer hoe u de gegevensstromen tijdens segmentatie kunt controleren gebruikend de gebruikersinterface van Experience Platform.
 title: Gegevensstromen van de monitor voor publiek in UI
 type: Tutorial
 exl-id: 32fd2ba1-0ff0-4ea7-8d55-80d53eebc02f
-source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1708'
+source-wordcount: '1710'
 ht-degree: 0%
 
 ---
 
 # Dataflows for publiek in UI controleren
 
-Met de segmentatieservice kunt u een publiek maken via segmentdefinities of andere bronnen van uw [!DNL Real-Time Customer Profile] -gegevens. Het platform verstrekt gegevensstromen om deze stroom van gegevens van bronnen aan bestemmingen doorzichtig te volgen.
+Met de segmentatieservice kunt u een publiek maken via segmentdefinities of andere bronnen van uw [!DNL Real-Time Customer Profile] -gegevens. Experience Platform verstrekt gegevensstromen om deze stroom van gegevens van bronnen aan bestemmingen doorzichtig te volgen.
 
-Gebruik het controledashboard om een visuele vertegenwoordiging van de activiteit van de gegevens binnen een publiek, met inbegrip van de status van de segmentatie van uw gegevens te zien. Lees de zelfstudie voor instructies over hoe u het monitordashboard kunt gebruiken om de segmentatie van uw gegevens te controleren gebruikend het gebruikersinterface van het Experience Platform, die u toestaat om de status van publieksactivering, evaluatie, en de uitvoerbanen te volgen.
+Gebruik het controledashboard om een visuele vertegenwoordiging van de activiteit van de gegevens binnen een publiek, met inbegrip van de status van de segmentatie van uw gegevens te zien. Lees de zelfstudie voor instructies over hoe u het monitoringdashboard kunt gebruiken om de segmentatie van uw gegevens te controleren met behulp van de Experience Platform-gebruikersinterface, zodat u de status van activering, evaluatie en exporttaken van het publiek kunt bijhouden.
 
 ## Aan de slag {#getting-started}
 
 Deze handleiding vereist een goed begrip van de volgende onderdelen van Adobe Experience Platform:
 
-- [ Dataflows ](../home.md): Dataflows zijn een vertegenwoordiging van gegevensbanen die gegevens over Platform bewegen. Dataflows worden geconfigureerd op verschillende services, waardoor gegevens van bronconnectors naar doelgegevenssets worden verplaatst, naar [!DNL Identity] en [!DNL Profile] en naar [!DNL Destinations] .
+- [ Dataflows ](../home.md): Dataflows zijn een vertegenwoordiging van gegevensbanen die gegevens over Experience Platform bewegen. Dataflows worden geconfigureerd op verschillende services, waardoor gegevens van bronconnectors naar doelgegevenssets worden verplaatst, naar [!DNL Identity] en [!DNL Profile] en naar [!DNL Destinations] .
    - [ looppas Dataflow ](../../sources/notifications.md): De looppas van Dataflow is de terugkomende geplande banen die op de frequentieconfiguratie van geselecteerde dataflows worden gebaseerd.
 - [ Segmentatie ](../../segmentation/home.md): De segmentatie staat u toe om publiek van uw gegevens van het Profiel van de Klant in real time tot stand te brengen.
    - [ de banen van de Activering ](../../destinations/ui/activation-overview.md): Een activeringsbaan wordt gebruikt om uw publiek aan een gespecificeerde bestemming te activeren.
    - [ de banen van de Evaluatie ](../../segmentation/tutorials/evaluate-a-segment.md#evaluate-a-segment): Een evaluatietaak is een asynchroon proces dat het publiek evalueert.
    - [ de banen van de Uitvoer ](../../segmentation/api/export-jobs.md): Een uitvoerbaan is een asynchrone processen die worden gebruikt om publieksleden aan datasets voort te zetten.
-- [ Sandboxen ](../../sandboxes/home.md): [!DNL Experience Platform] verstrekt virtuele zandbakken die één enkele [!DNL Platform] instantie in afzonderlijke virtuele milieu&#39;s verdelen helpen digitale ervaringstoepassingen ontwikkelen en ontwikkelen.
+- [ Sandboxen ](../../sandboxes/home.md): [!DNL Experience Platform] verstrekt virtuele zandbakken die één enkele [!DNL Experience Platform] instantie in afzonderlijke virtuele milieu&#39;s verdelen helpen digitale ervaringstoepassingen ontwikkelen en ontwikkelen.
 
 ## Het dashboard voor publiek controleren {#monitoring-audiences-dashboard}
 

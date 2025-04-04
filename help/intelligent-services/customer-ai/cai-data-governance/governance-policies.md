@@ -4,16 +4,16 @@ feature: Customer AI
 title: Beleid inzake governance voor AI van de Klant
 description: Adobe Experience Platform biedt verschillende services en gereedschappen waarmee u uw verzamelde ervaringsgegevens op betrouwbare wijze kunt beheren.
 exl-id: be3eca3a-0ea1-4b84-9454-675a4f9ac71e
-source-git-commit: f28558d5939607cabf449cbc03b7e0f5406f6326
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '189'
+source-wordcount: '190'
 ht-degree: 0%
 
 ---
 
 # Beleid inzake beheer in AI van Klanten
 
-Zodra u het werkschema hebt voltooid om een model tot stand te brengen en de configuratie van het model voor te leggen, de [ beleidshandhavings ](/help/data-governance/enforcement/auto-enforcement.md) controles om te zien of zijn er om het even welke schendingen. Als een beleidsovertreding optreedt, wordt een pop-up weergegeven die aangeeft dat een of meer beleidsregels zijn overtreden. Zo zorgt u ervoor dat uw gegevensbewerkingen en marketingacties binnen het platform in overeenstemming zijn met het beleid voor gegevensgebruik.
+Zodra u het werkschema hebt voltooid om een model tot stand te brengen en de configuratie van het model voor te leggen, de [ beleidshandhavings ](/help/data-governance/enforcement/auto-enforcement.md) controles om te zien of zijn er om het even welke schendingen. Als een beleidsovertreding optreedt, wordt een pop-up weergegeven die aangeeft dat een of meer beleidsregels zijn overtreden. Zo zorgt u ervoor dat uw gegevensbewerkingen en marketingacties in Experience Platform in overeenstemming zijn met het beleid voor gegevensgebruik.
 
 ![ popover het tonen van informatie over de beleidsschending ](../images/user-guide/policy-violation-popover-cai.png).
 

@@ -2,9 +2,9 @@
 title: Een Exchange-aanbieding voor een extensie maken
 description: Leer hoe u uw extensie toevoegt aan de openbare catalogus in Adobe Experience Platform.
 exl-id: 0395fc99-5e2b-46d6-a067-f8f167733e02
-source-git-commit: 0d98183838125fac66768b94bc1993bde9a374b5
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1193'
+source-wordcount: '1194'
 ht-degree: 3%
 
 ---
@@ -23,7 +23,7 @@ Adobe Experience Platform heeft één enkele verenigde catalogus waar de gebruik
 
 Afzonderlijk van de uitbreidingen in de productcatalogus, hebben de openbare uitbreidingen ook lijsten in de [ Marketplace van de Uitwisseling van Experience Cloud App ](https://exchange.adobe.com/apps/browse/ec).
 
-Met deze aanbiedingen kunnen extensieontwikkelaars beschrijvingen van functies plaatsen, koppelingen naar aanvullende ondersteuning en documentatie aanbieden en extensies op de markt brengen voor toekomstige gebruikers die wellicht niet op de hoogte zijn van uw bedrijf of de functionaliteit van uw extensie. Op deze markt heeft uw extensie een openbare aanbieding die kan worden weergegeven zonder dat de gebruiker is geverifieerd bij Platform. Voor openbare extensies is het maken van deze Exchange-lijst een vereiste stap.
+Met deze aanbiedingen kunnen extensieontwikkelaars beschrijvingen van functies plaatsen, koppelingen naar aanvullende ondersteuning en documentatie aanbieden en extensies op de markt brengen voor toekomstige gebruikers die wellicht niet op de hoogte zijn van uw bedrijf of de functionaliteit van uw extensie. Op deze markt heeft je extensie een openbare aanbieding die kan worden weergegeven zonder dat de gebruiker op Experience Platform is geverifieerd. Voor openbare extensies is het maken van deze Exchange-lijst een vereiste stap.
 
 >[!TIP]
 >

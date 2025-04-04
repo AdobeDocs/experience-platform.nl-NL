@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Query Service en Data Distiller hebben vaak vragen gesteld
 description: Dit document bevat algemene vragen en antwoorden met betrekking tot Query Service en Data Distiller. De onderwerpen omvatten, het uitvoeren van gegevens, derdehulpmiddelen, en fouten PSQL.
 exl-id: 14cdff7a-40dd-4103-9a92-3f29fa4c0809
-source-git-commit: ef4c7f20710f56ca0de7c0dfdb99751ff2fe8ebe
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '5006'
+source-wordcount: '5011'
 ht-degree: 0%
 
 ---
@@ -118,7 +118,7 @@ De volgende stappen beschrijven hoe te om een tabelmening van een dataset door U
 - Nadat u zich hebt aangemeld bij Experience Platform, selecteert u **[!UICONTROL Datasets]** in de linkernavigatie van de gebruikersinterface om naar het [!UICONTROL Datasets] -dashboard te navigeren.
 - Het tabblad Gegevenssets [!UICONTROL Browse] wordt geopend. Met de zoekbalk kunt u de beschikbare opties verfijnen. Selecteer een dataset van de getoonde lijst.
 
-![ het dashboard van Datasets in Platform UI met de onderzoeksbar en een benadrukt dataset.](./images/troubleshooting/dataset-selection.png)
+![ het dashboard van Datasets in Experience Platform UI met de onderzoeksbar en een benadrukt dataset.](./images/troubleshooting/dataset-selection.png)
 
 - Het scherm [!UICONTROL Datasets activity] wordt weergegeven. Selecteer **[!UICONTROL Preview dataset]** om een dialoog van het schema XDM en tabelmening van samengevoegde gegevens van de geselecteerde dataset te openen. Meer details kunnen in de [ voorproef worden gevonden een documentatie van de dataset ](../catalog/datasets/user-guide.md#preview-a-dataset)
 
@@ -287,7 +287,7 @@ SELECT count(1) FROM myTableName
 ### Kan ik mijn gegevens bemonsteren?
 
 +++Antwoord
-Deze functie is momenteel in uitvoering. De details zullen beschikbaar in [ versienota&#39;s ](../release-notes/latest/latest.md) en door de dialogen van UI van het Platform worden gemaakt zodra de eigenschap klaar voor versie is.
+Deze functie is momenteel in uitvoering. De details zullen beschikbaar in [ versienota&#39;s ](../release-notes/latest/latest.md) en door de dialogen van UI van Experience Platform worden gemaakt zodra de eigenschap klaar voor versie is.
 +++
 
 ### Welke hulpfuncties worden gesteund door de Dienst van de Vraag?
@@ -522,7 +522,7 @@ Er is geen grens van de vraaggelijktijdig aangezien de partijvragen als achterst
 Er zijn controle en alarmeringsmogelijkheden om vraagactiviteiten en statussen te controleren. Zie de [ integratie van het de controlelogboek van de Dienst van de Vraag ](./data-governance/audit-log-guide.md) en [ vraaglogboeken ](./ui/overview.md#log) documenten voor meer informatie.
 +++
 
-### Is er een manier om updates terug te draaien? Bijvoorbeeld, als er een fout is of sommige berekeningen moeten aanpassen wanneer het schrijven van gegevens terug naar Platform, hoe zou dat scenario moeten worden behandeld?
+### Is er een manier om updates terug te draaien? Bijvoorbeeld, als er een fout is of sommige berekeningen moeten aanpassen wanneer het schrijven van gegevens terug naar Experience Platform, hoe zou dat scenario moeten worden behandeld?
 
 +++Antwoord
 Op dit moment ondersteunen we op die manier geen terugdraaiversies of updates.
@@ -563,7 +563,7 @@ Er zijn drie manieren om de toegang te beperken. Deze zijn als volgt:
 
 +++
 
-### Zodra de gegevens door de Dienst van de Vraag worden teruggegeven, zijn er om het even welke controles die door Platform kunnen worden in werking gesteld om ervoor te zorgen dat het geen beschermde gegevens heeft teruggegeven?
+### Zijn er controles die Experience Platform kan uitvoeren om te controleren of er geen beveiligde gegevens zijn geretourneerd nadat de gegevens door Query Service zijn geretourneerd?
 
 - De Dienst van de vraag steunt op attribuut-gebaseerde toegangsbeheer. U kunt toegang tot gegevens op kolom/bladniveau en/of struct niveau beperken. Zie de documentatie om meer over op attribuut-gebaseerde toegangsbeheer te leren.
 
@@ -652,7 +652,7 @@ De achtergrondinfrastructuur wordt constant verbeterd om het gebruik en de verwe
 ### De &quot;Create query&quot; zit vast &quot;Initializing connection...&quot; wanneer u probeert verbinding te maken met Query Service. Hoe los ik het probleem op?
 
 +++Antwoord
-Als de &quot;Create query&quot; vastzit op &quot;Initializing connection...&quot;, is dit waarschijnlijk een verbindings- of sessieprobleem. Vernieuw browser als u de UI van het Platform gebruikt en probeer opnieuw.
+Als de &quot;Create query&quot; vastzit op &quot;Initializing connection...&quot;, is dit waarschijnlijk een verbindings- of sessieprobleem. Vernieuw de browser als u de gebruikersinterface van Experience Platform gebruikt en probeer het opnieuw.
 +++
 
 ## Gegevenssetvoorbeelden

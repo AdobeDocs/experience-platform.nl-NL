@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Afzonderlijke XDM-profielklasse
 description: Meer informatie over de klasse XDM Individual Profile.
 exl-id: 83b22462-79ce-4024-aa50-a9bd800c0f81
-source-git-commit: ce937f1335283382189fa40f65aa268735c02715
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '524'
+source-wordcount: '525'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 [!DNL XDM Individual Profile] is een standaard XDM-klasse (Experience Data Model) die een enkelvoudige representatie (of profiel) van een individuele persoon vormt. Specifiek, vangen de klasse (en zijn compatibele gebiedsgroepen) de attributen en de belangen van zowel geïdentificeerde als gedeeltelijk geïdentificeerde individuen die met uw merk in wisselwerking staan.
 
-Profielen kunnen variëren van anonieme gedragssignalen (zoals browsercookies) tot sterk geïdentificeerde profielen met gedetailleerde informatie zoals naam, geboortedatum, locatie en e-mailadres. Naarmate een profiel groeit, wordt het een robuuste opslagplaats voor persoonlijke gegevens, identiteiten, contactgegevens en communicatievoorkeuren voor een individu. Voor meer informatie op hoog niveau over het gebruik van deze klasse in het ecosysteem van het Platform, verwijs naar het [ XDM overzicht ](../home.md#data-behaviors).
+Profielen kunnen variëren van anonieme gedragssignalen (zoals browsercookies) tot sterk geïdentificeerde profielen met gedetailleerde informatie zoals naam, geboortedatum, locatie en e-mailadres. Naarmate een profiel groeit, wordt het een robuuste opslagplaats voor persoonlijke gegevens, identiteiten, contactgegevens en communicatievoorkeuren voor een individu. Voor meer informatie op hoog niveau over het gebruik van deze klasse in het ecosysteem van Experience Platform, verwijs naar het [ XDM overzicht ](../home.md#data-behaviors).
 
 ![ het schemadiagram van A van de individuele klasse van het Profiel XDM.](../images/classes/individual-profile.png)
 
@@ -50,6 +50,6 @@ Adobe biedt verschillende standaardveldgroepen voor gebruik met de [!DNL XDM Ind
 * [[!UICONTROL XDM Business Person Components]](../field-groups/profile/business-person-components.md)\*
 * [[!UICONTROL XDM Business Person Details]](../field-groups/profile/business-person-details.md)\*
 
-*\*Deze gebiedsgroep is slechts beschikbaar aan organisaties met toegang tot B2B uitgave van Adobe Real-time Customer Data Platform.*
+*\*Deze veldgroep is alleen beschikbaar voor organisaties met toegang tot de B2B edition of Adobe Real-Time Customer Data Platform.*
 
 Voor een volledige lijst van alle compatibele gebiedsgroepen voor [!DNL XDM Individual Profile], verwijs naar [ XDM GitHub repo ](https://github.com/adobe/xdm/tree/master/components/fieldgroups/profile).

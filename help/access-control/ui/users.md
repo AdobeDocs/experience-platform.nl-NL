@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Gebruikers beheren voor een productprofiel
 description: In dit document wordt weergegeven hoe u gebruikers voor een productprofiel in de gebruikersinterface voor Adobe Experience Platform kunt beheren.
 exl-id: 1a35f2e4-cb33-4625-92ec-98e615607a8b
-source-git-commit: ea79ac7fecd980aba87d003c8c23f271c74ec23d
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '221'
+source-wordcount: '223'
 ht-degree: 0%
 
 ---
@@ -33,4 +33,4 @@ De volgende video is bedoeld als ondersteuning voor uw begrip van het beheren va
 
 ## Volgende stappen
 
-Nu u hebt geleerd hoe te om toegang tot de eigenschappen van het Platform door [!DNL Admin Console] te controleren, zie de bijlage sectie in het [ toegangsbeheeroverzicht ](../home.md) om meer over elke individuele toestemming en de functies van het Platform te leren zij toegang tot verlenen.
+Nu u hebt geleerd hoe te om toegang tot de eigenschappen van Experience Platform door [!DNL Admin Console] te controleren, zie de bijlage sectie in het [ toegangsbeheeroverzicht ](../home.md) om meer over elke individuele toestemming en de functies van Experience Platform te leren zij toegang tot verlenen.

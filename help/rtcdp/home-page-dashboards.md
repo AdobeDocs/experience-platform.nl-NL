@@ -4,9 +4,9 @@ title: Homepage van Real-Time Customer Data Platform en dashboards
 description: Krijg inzicht in diverse dashboards, de startpagina en de eerste gebruikerservaring van Adobe Real-Time CDP.
 feature: Dashboards, Get Started
 exl-id: ced5b69c-5bb5-4e06-9cb4-938e36e6e5cc
-source-git-commit: 2704184446f7945c744e7e2d2a8c3cda3fc12527
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '889'
+source-wordcount: '895'
 ht-degree: 4%
 
 ---
@@ -19,18 +19,18 @@ De Real-Time CDP-startpagina bevat een widget Aan de slag waarmee u snel toegang
 
 Dit document biedt een overzicht van de Real-Time CDP-startpagina en het dashboard voor meetgegevens.
 
-![ De homepage van Platform UI.](assets/platform-home/home.png)
+![ de homepage van UI van Experience Platform.](assets/platform-home/home.png)
 
 ## Aan de slag-widget
 
 De widget [!UICONTROL Getting started with Real-Time Customer Profile] bestaat uit vier secties:
 
-* **Samenvatting gegevens in Platform**: Deze widget leidt u aan de broncatalogus. Gebruik de broncatalogus om een bron te selecteren en uw gegevens in te voeren naar Experience Platform. Selecteer **[vormen bronnen]** om aan de broncatalogus te navigeren. Voor meer informatie, raadpleegt u het [overzicht van bronnen](../sources/home.md).
+* **Ingest gegevens in Experience Platform**: Deze widget leidt u aan de broncatalogus. Gebruik de broncatalogus om een bron te selecteren en uw gegevens in te voeren naar Experience Platform. Selecteer **[vormen bronnen]** om aan de broncatalogus te navigeren. Voor meer informatie, raadpleegt u het [overzicht van bronnen](../sources/home.md).
 * **Model gegevensstructuren**: Deze widget leidt u aan het schemaoverzicht. Gebruik het schemaoverzicht om naar bestaande schema&#39;s te doorbladeren of een blauwdruk tot stand te brengen die de structuur van uw gegevens beschrijven. Selecteer **[!UICONTROL Create schema]** om naar de interface voor het maken van het schema te navigeren. Voor meer informatie, lees het [ schema&#39;s overzicht ](../xdm/home.md).
 * **bouwt publiek**: Deze widget richt u aan de Bouwer van het Segment in UI. Gebruik de Bouwer van het Segment om met de gegevenselementen van het Profiel in wisselwerking te staan en de criteria voor uw segmentdefinitie te bepalen. Selecteer **[!UICONTROL Create audience]** om naar de Segment Builder te navigeren. Voor meer informatie, lees het [ overzicht van de Dienst van de Segmentatie ](../segmentation/home.md).
 * **verzendt gegevens naar bestemmingen**: Deze widget richt u aan de catalogus van bestemmingen. Gebruik de bestemmingscatalogus om een bestemming te selecteren die u dan met kunt verbinden en publiek naar verzenden. Selecteer **[!UICONTROL Set up destinations]** om naar de doelcatalogus te navigeren. Voor meer informatie raadpleegt u het [overzicht van bestemmingen](../destinations/home.md).
 
-![ de homepage UI van het Platform die het worden begonnen widget ](assets/platform-home/getting-started-widget.png) toont
+![ de homepage UI van Experience Platform die het worden begonnen widget ](assets/platform-home/getting-started-widget.png) toont
 
 ## Metrisch dashboard {#metrics-dashboard}
 
@@ -46,7 +46,7 @@ Op het dashboard Metrics wordt actuele informatie over uw Experience Platform-ge
 
 Het leaderboard toont het huidige totale aantal schema&#39;s, datasets, profielen en soorten publiek in uw organisatie en de meest recente updatedatum.
 
-![ de leaderboard sectie in de homepage van Platform UI.](assets/platform-home/leaderboard.png)
+![ de leaderboard sectie in de Experience Platform UI homepage.](assets/platform-home/leaderboard.png)
 
 * **Totale schema&#39;s**: De **Totale schema&#39;s** teller toont het aantal schema&#39;s in het systeem. Deze teller wordt bijgewerkt wanneer een schema wordt gecreeerd. Voor meer informatie, lees het [ schema&#39;s overzicht ](../xdm/home.md).
 * **Totale datasets**: De **Totale datasets** teller toont het aantal datasets in het systeem en de hoeveelheid gegevens in Experience Platform. Deze teller wordt bijgewerkt wanneer een dataset wordt gecreeerd. Voor meer informatie over datasets, lees het [ overzicht van datasets ](../catalog/datasets/overview.md).
@@ -57,7 +57,7 @@ Het leaderboard toont het huidige totale aantal schema&#39;s, datasets, profiele
 
 Recente items geven een overzicht van de meest recente wijzigingen in uw organisatie. In het onderstaande voorbeeld hebben de meest recente wijzigingen betrekking op gegevenssets, bronnen, doelgroepen en bestemmingen.
 
-![ de recente puntensectie in de homepage van UI van het Platform.](assets/platform-home/recent-items.png)
+![ de recente puntensectie in de homepage van UI van Experience Platform.](assets/platform-home/recent-items.png)
 
 * **Recente datasets**: De **[!UICONTROL Recent datasets]** kaart toont de vijf meest recente datasets die binnen de organisatie worden gecreeerd. Deze lijst wordt bijgewerkt wanneer een nieuwe dataset wordt gecreeerd. Selecteer een dataset om de details voor dat punt te bekijken, of **[!UICONTROL View all]** voor een lijst van datasets te selecteren. Van daar, kunt u een specifieke bron voor details selecteren. Voor meer informatie over datasets, zie het [ overzicht van datasets ](../catalog/datasets/overview.md).
 * **Recente bronnen**: De **[!UICONTROL Recent sources]** metrische kaart toont de vijf meest recente die bronnen binnen de organisatie worden gecreeerd. Deze lijst wordt bijgewerkt wanneer een nieuwe bron wordt gemaakt. Selecteer een bron om de details voor dat item weer te geven of selecteer **[!UICONTROL View all]** voor een lijst met bronnen. Van daar, kunt u een specifieke bron voor details selecteren. Voor meer informatie over bronnen, zie [ Overzicht van Bronnen ](../sources/home.md).
@@ -68,7 +68,7 @@ Recente items geven een overzicht van de meest recente wijzigingen in uw organis
 
 Tot slot verstrekt de middelen widget u van extra documentatiemiddelen die u kunt verwijzen. Deze omvatten:
 
-![ de middelensectie in de homepage UI van het Platform.](assets/platform-home/resources.png)
+![ de middelensectie in de homepage van UI van Experience Platform.](assets/platform-home/resources.png)
 
 * [Schema&#39;s begrijpen](../xdm/schema/composition.md)
 * [Bronnen verbinden](../sources/home.md)

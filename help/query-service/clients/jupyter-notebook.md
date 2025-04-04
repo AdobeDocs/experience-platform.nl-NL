@@ -2,9 +2,9 @@
 title: Verbind Jupyter Notitieboekje aan de Dienst van de Vraag
 description: Leer hoe u Jupyter-laptop kunt verbinden met Adobe Experience Platform Query Service.
 exl-id: 358eab67-538f-4ada-931f-783b92db4a1c
-source-git-commit: 1af89160cbf5b689396921869fec6c30a5bcfff0
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '559'
+source-wordcount: '562'
 ht-degree: 0%
 
 ---
@@ -17,7 +17,7 @@ In dit document worden de stappen beschreven die zijn vereist om [!DNL Jupyter N
 
 Deze handleiding vereist dat u al toegang hebt tot [!DNL Jupyter Notebook] en vertrouwd bent met de interface. Om [!DNL Jupyter Notebook] of voor meer informatie te downloaden, zie de [ officiële  [!DNL Jupyter Notebook]  documentatie ](https://jupyter.org/).
 
-U hebt toegang tot de [!UICONTROL Queries] -werkruimte in de gebruikersinterface van het platform nodig om de referenties te verkrijgen waarmee [!DNL Jupyter Notebook] verbinding kan maken met Experience Platform. Neem contact op met uw organisatiebeheerder als u momenteel geen toegang hebt tot de werkruimte van [!UICONTROL Queries] .
+U hebt toegang tot de [!UICONTROL Queries] -werkruimte in de gebruikersinterface van Experience Platform nodig om de vereiste gegevens voor het verbinden van [!DNL Jupyter Notebook] met Experience Platform te verkrijgen. Neem contact op met uw organisatiebeheerder als u momenteel geen toegang hebt tot de werkruimte van [!UICONTROL Queries] .
 
 >[!TIP]
 >
@@ -40,13 +40,13 @@ Voer op de eerste regel van de [!DNL Notebook] -editor de volgende waarde in: `p
 
 Importeer vervolgens een [!DNL PostgreSQL] databaseadapter voor [!DNL Python] . Voer de waarde in: `import psycopg2` en selecteer **[!DNL Run]** . Er is geen succesbericht voor dit proces. Ga door met de volgende stap als er geen foutbericht wordt weergegeven.
 
-U moet nu uw Adobe Experience Platform-gebruikersgegevens opgeven door de waarde `conn = psycopg2.connect("{YOUR_CREDENTIALS}")` in te voeren. De verbindingsgegevens vindt u in de sectie [!UICONTROL Queries] onder het tabblad [!UICONTROL Credentials] van de gebruikersinterface van het platform. Zie de documentatie op hoe te [ uw organisatiereferenties ](../ui/credentials.md) voor gedetailleerde instructies vinden.
+U moet nu uw Adobe Experience Platform-gebruikersgegevens opgeven door de waarde `conn = psycopg2.connect("{YOUR_CREDENTIALS}")` in te voeren. De verbindingsgegevens vindt u in de sectie [!UICONTROL Queries] onder het tabblad [!UICONTROL Credentials] van de gebruikersinterface van Experience Platform. Zie de documentatie op hoe te [ uw organisatiereferenties ](../ui/credentials.md) voor gedetailleerde instructies vinden.
 
 Het gebruik van niet-vervallende gegevens wordt aanbevolen wanneer u clients van derden gebruikt om de moeite te besparen dat u herhaaldelijk uw gegevens invoert. Zie de documentatie voor instructies op [ hoe te om niet-het verlopen geloofsbrieven ](../ui/credentials.md#non-expiring-credentials) te produceren en te gebruiken.
 
 >[!IMPORTANT]
 >
->Wanneer het kopiëren van geloofsbrieven van het Platform UI, is er geen behoefte aan extra het formatteren van de geloofsbrieven. Ze kunnen op één regel worden gegeven, met één spatie tussen de eigenschappen en waarden. De geloofsbrieven worden ingesloten in aanhalingstekens en **niet** komma-gescheiden.
+>Wanneer het kopiëren van geloofsbrieven van de UI van Experience Platform, is er geen behoefte aan extra het formatteren van de geloofsbrieven. Ze kunnen op één regel worden gegeven, met één spatie tussen de eigenschappen en waarden. De geloofsbrieven worden ingesloten in aanhalingstekens en **niet** komma-gescheiden.
 
 ```python
 conn = psycopg2.connect('''sslmode=require host=<YOUR_HOST_CREDENTIAL> port=80 dbname=prod:all user=<YOUR_ORGANIZATION_ID> password=<YOUR_PASSWORD>''')"

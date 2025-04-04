@@ -1,10 +1,10 @@
 ---
 title: Ondersteuning voor Web In-app Messaging in Web SDK configureren
-description: Leer hoe te om de de markeringsuitbreiding van SDK van het Web te vormen om het Overseinen van het Web in-app te steunen.
+description: Leer hoe u de Web SDK-tagextensie configureert voor ondersteuning van Web In-app Messaging.
 exl-id: 90a19ef4-e94c-4f16-a26a-8919ad2dbd6f
-source-git-commit: 8be502c9eea67119dc537a5d63a6c71e0bff1697
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '885'
+source-wordcount: '886'
 ht-degree: 0%
 
 ---
@@ -26,9 +26,9 @@ Door in-app berichten te gebruiken, kunt u effectief met uw publiek in gesprek g
 
 ## Vereisten {#prerequisites}
 
-### Web SDK-tagextensie {#extension-version}
+### Web SDK-extensie {#extension-version}
 
-Voor de functionaliteit voor berichten via Web in-app is de nieuwste versie van de Web SDK-tagextensie vereist.
+Voor de functionaliteit voor berichten via webtoepassingen is de nieuwste versie van de Web SDK-tagextensie vereist.
 
 ### Een CSP configureren voor web in-app berichten {#csp}
 
@@ -40,25 +40,25 @@ default-src  blob:;
 
 Voor meer informatie over het vormen van CSP, zie de [ specifieke documentatie ](../use-cases/configuring-a-csp.md).
 
-## Webberichten in de app configureren met de Web SDK-tagextensie {#tag-extension}
+## Webberichten in de app configureren met de SDK-tagextensie Web {#tag-extension}
 
-Verwijs naar de [ pagina van de de marktextensieconfiguratie van SDK van het Web ](../../tags/extensions/client/web-sdk/web-sdk-extension-configuration.md) om te begrijpen waar u de hieronder beschreven montages kunt vinden.
+Verwijs naar de [ pagina van de de agentenconfiguratie van SDK van het Web ](../../tags/extensions/client/web-sdk/web-sdk-extension-configuration.md) om te begrijpen waar u de hieronder beschreven montages kunt vinden.
 
-Nadat u [ ](../../tags/extensions/client/web-sdk/web-sdk-extension-configuration.md#install-the-web-sdk-tag-extension) de de markeringsuitbreiding van SDK van het Web hebt geïnstalleerd, volg de stappen hieronder om de uitbreiding voor het Berichten van het Web in-app te vormen.
+Nadat u [ ](../../tags/extensions/client/web-sdk/web-sdk-extension-configuration.md#install-the-web-sdk-tag-extension) de de markeringsuitbreiding van SDK van het Web hebt geïnstalleerd, volg de stappen hieronder om de uitbreiding voor Web in-app Overseinen te vormen.
 
-Schakel in de sectie **[!UICONTROL Personalization]** de optie **[!UICONTROL Enable personalization storage]** in. Deze optie staat SDK van het Web toe om spoor te houden van welke ervaringen door de gebruiker over paginaladingen zijn gezien.
+Schakel in de sectie **[!UICONTROL Personalization]** de optie **[!UICONTROL Enable personalization storage]** in. Met deze optie kan de SDK van het Web bijhouden welke ervaringen de gebruiker heeft gezien bij het laden van pagina&#39;s.
 
 ![ Beeld dat de optie van de verpersoonlijkingsopslag in de de configuratiepagina van de markeringsuitbreiding toont.](assets/web-in-app-messaging/enable-personalization-storage.png)
 
 
 Het Web in-app Overseinen steunt twee types van trekkers:
 
-* [Gegevens verzenden naar platform](#send-data-platform)
+* [Gegevens verzenden naar Experience Platform](#send-data-platform)
 * [De berichten handmatig activeren](#manual-trigger)
 
-Verwijs naar de volgende secties om de de marktextensie van SDK van het Web volgens de trekkers te vormen u wilt gebruiken.
+Raadpleeg de volgende secties om de Web SDK-tagextensie te configureren op basis van de triggers die u wilt gebruiken.
 
-### Configuratiestappen voor de trigger **[!UICONTROL Send data to Platform]** {#send-data-platform}
+### Configuratiestappen voor de trigger **[!UICONTROL Send data to Experience Platform]** {#send-data-platform}
 
 Selecteer het markeringsbezit dat uw uitbreiding van SDK van het Web bevat, en [ creeer een nieuwe regel ](../../tags/ui/managing-resources/rules.md##create-a-rule) met de volgende montages:
 
@@ -140,9 +140,9 @@ Nadat u de regel aan de bibliotheek hebt toegevoegd, selecteert u **[!UICONTROL 
 
 Het configuratieproces is nu voltooid en uw bericht is klaar om aan uw gebruikers te worden getoond.
 
-## Webberichten in de app configureren met de Web SDK JavaScript-bibliotheek {#js-library}
+## Webberichten in de app configureren met behulp van de Web SDK JavaScript-bibliotheek {#js-library}
 
-Als alternatief voor het gebruiken van de de markeringsuitbreiding van SDK van het Web, kunt u Web in-App Overseinen van het Web direct van de bibliotheek van SDK van het Web vormen JavaScript.
+Als alternatief voor het gebruiken van de de markeringsuitbreiding van SDK van het Web, kunt u Web in-App Overseinen direct van de bibliotheek van SDK van het Web vormen.
 
 
 
@@ -150,7 +150,7 @@ U kunt binnen-app berichten van Adobe Journey Optimizer op twee manieren weergev
 
 ### Methode 1: hiermee wordt de inhoud van de personalisatie automatisch opgehaald {#automatic}
 
-Als u wilt dat Web SDK de aanpassingsinhoud automatisch ophaalt bij het laden van de pagina, gebruikt u de opdracht `sendEvent` , zoals in het onderstaande voorbeeld wordt getoond.
+Als u wilt dat Web SDK de personalisatie-inhoud automatisch ophaalt bij het laden van de pagina, gebruikt u de opdracht `sendEvent` , zoals in het onderstaande voorbeeld wordt getoond.
 
 ```js
   alloy("sendEvent", {

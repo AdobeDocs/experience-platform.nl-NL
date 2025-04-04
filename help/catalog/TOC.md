@@ -4,10 +4,10 @@ user-guide-title: Handleiding voor catalogi en gegevenssets
 user-guide-description: Onderzoek oorsprong van data, metadata, bestandsbeschrijvingen, mappen en datasets binnen het Data Lake en leer meer over het Catalog Service-systeem.
 feature: Catalog
 role: Developer
-source-git-commit: 74b6e5f10f7532745180760adf1d96bc57e7b590
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '123'
-ht-degree: 24%
+source-wordcount: '124'
+ht-degree: 33%
 
 ---
 
@@ -34,8 +34,8 @@ ht-degree: 24%
    * [Een gegevensset maken en vullen met API&#39;s](datasets/create.md)
    * [Een gegevensset inschakelen voor profiel en identiteit](datasets/enable-for-profile.md)
    * [Een gegevensset inschakelen voor profielupdates (upsert)](datasets/enable-upsert.md)
-   * [De Dataset van de Gebeurtenis van de ervaring Behoud in het gegevenspeer](datasets/experience-event-dataset-retention-ttl-guide.md)
+   * [Retentie dataset Experience-gebeurtenis in data lake](datasets/experience-event-dataset-retention-ttl-guide.md)
 * [Behandeling van een privacyverzoek in het Data Lake](privacy.md)
 * [ API verwijzing ](https://www.adobe.io/experience-platform-apis/references/catalog/)
 * [Veelgestelde vragen](catalog-faq.md)
-* [ de versienota&#39;s van het Platform ](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)
+* [Releaseopmerkingen bij Experience Platform](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)

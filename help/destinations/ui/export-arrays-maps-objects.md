@@ -3,9 +3,9 @@ title: Arrays, kaarten en objecten exporteren vanuit Real-Time CDP
 type: Tutorial
 description: Leer hoe u arrays, kaarten en objecten van Real-Time CDP naar cloudopslagdoelen exporteert.
 exl-id: ff13d8b7-6287-4315-ba71-094e2270d039
-source-git-commit: 2d59a92d7ff1e0be7977a90df460190a3b417809
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1080'
+source-wordcount: '1081'
 ht-degree: 0%
 
 ---
@@ -42,7 +42,7 @@ Haal de belangrijkste informatie over de functionaliteit in deze sectie op en ga
 * U kunt arrays, toewijzingen en objecten exporteren naar cloudopslagdoelen in `JSON` - en `Parquet` -bestanden. Voor verpersoonlijkingsbestemmingen van de onderneming en van de rand, is het uitgevoerde gegevenstype `JSON`. Personen en potentiële doelgroepen worden ondersteund, accountpubliek niet.
 * Voor op dossier-gebaseerde de opslagbestemmingen van de wolk, kunt u *series, kaarten, en voorwerpen naar Csv- dossiers uitvoeren, maar slechts door de berekende gebiedsfunctionaliteit te gebruiken en hen in een koord te schakelen door de `array_to_string` functie te gebruiken.*
 
-## Arrays en andere objecttypen in Platform {#arrays-strings-other-objects}
+## Arrays en andere objecttypen in Experience Platform {#arrays-strings-other-objects}
 
 In Experience Platform, kunt u [ schema&#39;s XDM ](/help/xdm/home.md) gebruiken om verschillende gebiedstypes te beheren. Voordat ondersteuning voor het exporteren van arrays werd toegevoegd, kon u eenvoudige sleutelwaardepaartypevelden, zoals tekenreeksen, uit Experience Platform exporteren naar de gewenste doelen. Een voorbeeld van zulk een gebied dat voor de uitvoer eerder werd gesteund is `personalEmail.address`:`johndoe@acme.org`.
 

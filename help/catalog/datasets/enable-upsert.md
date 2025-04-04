@@ -4,9 +4,9 @@ title: Een gegevensset voor profielupdates inschakelen met behulp van API's
 type: Tutorial
 description: In deze zelfstudie wordt uitgelegd hoe u Adobe Experience Platform API's kunt gebruiken om een gegevensset met "upsert"-mogelijkheden in te schakelen om updates uit te voeren naar gegevens in het realtime profiel van klanten.
 exl-id: fc89bc0a-40c9-4079-8bfc-62ec4da4d16a
-source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '1067'
+source-wordcount: '1069'
 ht-degree: 0%
 
 ---
@@ -21,14 +21,14 @@ Deze zelfstudie behandelt het proces waarbij een dataset met &quot;upsert&quot;m
 
 ## Aan de slag
 
-Deze zelfstudie vereist een goed begrip van verschillende Adobe Experience Platform-services die betrokken zijn bij het beheer van voor profielen geschikte gegevenssets. Lees vóór het starten van deze zelfstudie de documentatie voor deze verwante [!DNL Platform] services:
+Deze zelfstudie vereist een goed begrip van verschillende Adobe Experience Platform-services die betrokken zijn bij het beheer van voor profielen geschikte gegevenssets. Lees vóór het starten van deze zelfstudie de documentatie voor deze verwante [!DNL Experience Platform] services:
 
 - [[!DNL Real-Time Customer Profile]](../../profile/home.md): biedt een uniform, real-time consumentenprofiel dat is gebaseerd op geaggregeerde gegevens van meerdere bronnen.
 - [[!DNL Catalog Service]](../../catalog/home.md): Een RESTful-API waarmee u gegevenssets kunt maken en configureren voor [!DNL Real-Time Customer Profile] en [!DNL Identity Service] .
-- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): Het gestandaardiseerde framework waarmee [!DNL Platform] gegevens voor de klantervaring indeelt.
+- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): Het gestandaardiseerde framework waarmee [!DNL Experience Platform] gegevens voor de klantervaring indeelt.
 - [ Inname van de Partij ](../../ingestion/batch-ingestion/overview.md): De Ingestie API van de Partij staat u toe om gegevens in Experience Platform als partijdossiers in te voeren.
 
-De volgende secties verstrekken extra informatie die u zult moeten weten om met succes vraag aan Platform APIs te maken.
+De volgende secties verstrekken extra informatie die u zult moeten weten om met succes vraag aan Experience Platform APIs te maken.
 
 ### API-voorbeeldaanroepen lezen
 
@@ -36,15 +36,15 @@ Deze zelfstudie biedt voorbeeld-API-aanroepen om aan te tonen hoe uw verzoeken m
 
 ### Waarden verzamelen voor vereiste koppen
 
-Om vraag aan [!DNL Platform] APIs te maken, moet u het [ authentificatieleerprogramma ](https://www.adobe.com/go/platform-api-authentication-en) eerst voltooien. Als u de zelfstudie over verificatie voltooit, krijgt u de waarden voor elk van de vereiste headers in alle API-aanroepen van [!DNL Experience Platform] , zoals hieronder wordt getoond:
+Om vraag aan [!DNL Experience Platform] APIs te maken, moet u het [ authentificatieleerprogramma ](https://www.adobe.com/go/platform-api-authentication-en) eerst voltooien. Als u de zelfstudie over verificatie voltooit, krijgt u de waarden voor elk van de vereiste headers in alle API-aanroepen van [!DNL Experience Platform] , zoals hieronder wordt getoond:
 
 - `Authorization: Bearer {ACCESS_TOKEN}`
 - `x-api-key: {API_KEY}`
 - `x-gw-ims-org-id: {ORG_ID}`
 
-Alle verzoeken die een nuttige lading (POST, PUT, PATCH) bevatten vereisen een extra `Content-Type` kopbal. De correcte waarde voor deze kopbal wordt getoond in de steekproefverzoeken waar nodig.
+Voor alle aanvragen die een payload (POST, PUT, PATCH) bevatten, is een extra `Content-Type` -header vereist. De correcte waarde voor deze kopbal wordt getoond in de steekproefverzoeken waar nodig.
 
-Alle bronnen in [!DNL Experience Platform] zijn geïsoleerd naar specifieke virtuele sandboxen. Alle aanvragen naar [!DNL Platform] API&#39;s vereisen een `x-sandbox-name` -header die de naam aangeeft van de sandbox waarin de bewerking plaatsvindt. Voor meer informatie over zandbakken in [!DNL Platform], zie de [ documentatie van het zandbakoverzicht ](../../sandboxes/home.md).
+Alle bronnen in [!DNL Experience Platform] zijn geïsoleerd naar specifieke virtuele sandboxen. Alle aanvragen naar [!DNL Experience Platform] API&#39;s vereisen een `x-sandbox-name` -header die de naam aangeeft van de sandbox waarin de bewerking plaatsvindt. Voor meer informatie over zandbakken in [!DNL Experience Platform], zie de [ documentatie van het zandbakoverzicht ](../../sandboxes/home.md).
 
 ## Een gegevensset maken die is ingeschakeld voor profielupdates
 
@@ -54,7 +54,7 @@ Wanneer het creëren van een nieuwe dataset, kunt u die dataset voor Profiel toe
 >
 >Om een nieuwe profiel-Toegelaten dataset tot stand te brengen, moet u identiteitskaart van een bestaand schema kennen XDM dat voor Profiel wordt toegelaten. Voor informatie over hoe te omhoog kijken of een profiel-Toegelaten schema tot stand brengen, zie het leerprogramma op [ creërend een schema gebruikend de Registratie API van het Schema ](../../xdm/tutorials/create-schema-api.md).
 
-Om een dataset tot stand te brengen die voor Profiel en updates wordt toegelaten, gebruik een verzoek van de POST aan het `/dataSets` eindpunt.
+Om een dataset tot stand te brengen die voor Profiel en updates wordt toegelaten, gebruik een POST- verzoek aan het `/dataSets` eindpunt.
 
 **API formaat**
 
@@ -179,7 +179,7 @@ Onder de eigenschap `tags` ziet u dat `unifiedProfile` aanwezig is met de waarde
 
 ### De gegevensset voor profiel uitschakelen
 
-Als u een voor profiel geschikte gegevensset wilt configureren voor updates, moet u eerst de tags `unifiedProfile` en `unifiedIdentity` uitschakelen en deze vervolgens weer inschakelen naast de tag `isUpsert` . Dit wordt gedaan gebruikend twee verzoeken van PATCH, één om onbruikbaar te maken en één om re-toe te laten.
+Als u een voor profiel geschikte gegevensset wilt configureren voor updates, moet u eerst de tags `unifiedProfile` en `unifiedIdentity` uitschakelen en deze vervolgens weer inschakelen naast de tag `isUpsert` . Dit wordt gedaan gebruikend twee verzoeken van PATCH, één om onbruikbaar te maken en één om opnieuw toe te laten.
 
 >[!WARNING]
 >
@@ -197,7 +197,7 @@ PATCH /dataSets/{DATASET_ID}
 
 **Verzoek**
 
-De eerste hoofdtekst van de PATCH-aanvraag bevat een lus `path` to `unifiedProfile` en een lus `path` to `unifiedIdentity` , waarbij de waarde `value` op `enabled:false` voor beide paden wordt ingesteld om de tags uit te schakelen.
+De eerste hoofdtekst van de PATCH-aanvraag bevat een lus `path` to `unifiedProfile` en een lus `path` to `unifiedIdentity` , waarbij de eigenschap `value` op `enabled:false` voor beide paden wordt ingesteld om de tags uit te schakelen.
 
 ```shell
 curl -X PATCH https://platform.adobe.io/data/foundation/catalog/dataSets/5b020a27e7040801dedbf46e \
@@ -222,7 +222,7 @@ curl -X PATCH https://platform.adobe.io/data/foundation/catalog/dataSets/5b020a2
 
 **Reactie**
 
-Een succesvol PATCH verzoek keert de Status 200 van HTTP (O.K.) en een serie terug die identiteitskaart van de bijgewerkte dataset bevatten. Deze id moet overeenkomen met de id die in de aanvraag voor PATCH is verzonden. De tags `unifiedProfile` en `unifiedIdentity` zijn nu uitgeschakeld.
+Een geslaagde PATCH-aanvraag retourneert HTTP Status 200 (OK) en een array met de id van de bijgewerkte dataset. Deze id moet overeenkomen met de id die in de PATCH-aanvraag is verzonden. De tags `unifiedProfile` en `unifiedIdentity` zijn nu uitgeschakeld.
 
 ```json
 [
@@ -236,7 +236,7 @@ Een bestaande dataset kan voor de updates van het Profiel en van attributen word
 
 >[!IMPORTANT]
 >
->Wanneer het toelaten van uw dataset voor Profiel, gelieve te verzekeren het schema de dataset met wordt geassocieerd is **ook** profiel-toegelaten. Als het schema niet profiel-toegelaten is, zal de dataset **niet** als profiel-toegelaten binnen Platform UI verschijnen.
+>Wanneer het toelaten van uw dataset voor Profiel, gelieve te verzekeren het schema de dataset met wordt geassocieerd is **ook** profiel-toegelaten. Als het schema niet profiel-toegelaten is, zal de dataset **niet** als profiel-toegelaten binnen Experience Platform UI verschijnen.
 
 **API formaat**
 
@@ -280,7 +280,7 @@ curl -X PATCH https://platform.adobe.io/data/foundation/catalog/dataSets/5b020a2
 
 **Reactie**
 
-Een succesvol PATCH verzoek keert de Status 200 van HTTP (O.K.) en een serie terug die identiteitskaart van de bijgewerkte dataset bevatten. Deze id moet overeenkomen met de id die in de aanvraag voor PATCH is verzonden. De tag `unifiedProfile` en de tag `unifiedIdentity` zijn nu ingeschakeld en geconfigureerd voor kenmerkupdates.
+Een geslaagde PATCH-aanvraag retourneert HTTP Status 200 (OK) en een array met de id van de bijgewerkte dataset. Deze id moet overeenkomen met de id die in de PATCH-aanvraag is verzonden. De tag `unifiedProfile` en de tag `unifiedIdentity` zijn nu ingeschakeld en geconfigureerd voor kenmerkupdates.
 
 ```json
 [

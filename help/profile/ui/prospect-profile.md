@@ -3,9 +3,9 @@ title: Prospectieprofielen
 description: Leer hoe te om perspectiefprofielen tot stand te brengen en te gebruiken om informatie over onbekende klanten te verzamelen gebruikend derdeinformatie.
 type: Documentation
 exl-id: 194d25d6-88ae-4a7a-9b79-39120bced5c7
-source-git-commit: e7c0551276d31d6809ace096c00e0dc2665090e6
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '388'
+source-wordcount: '389'
 ht-degree: 0%
 
 ---
@@ -56,7 +56,7 @@ Het dialoogvenster [!UICONTROL View JSON] wordt weergegeven. De kenmerken van he
 
 ## Aanbevolen gebruiksgevallen {#use-cases}
 
-Lees de volgende gebruiksdocumentatie voor informatie over het gebruik van de functie voor perspectiefprofielen in Experience Platform in combinatie met andere platformfuncties:
+Lees de volgende gebruiksdocumentatie voor meer informatie over het gebruik van de functie voor perspectiefprofielen in Experience Platform in combinatie met andere Experience Platform-functies:
 
 - [Nieuwe klanten aantrekken en aanschaffen via de prospectieve functionaliteit](../../rtcdp/partner-data/prospecting.md)
 

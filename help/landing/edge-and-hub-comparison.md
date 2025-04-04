@@ -2,21 +2,21 @@
 solution: Experience Platform
 title: Edge Network- en hubvergelijking
 description: Meer informatie over de verschillende verwerkingspaden die beschikbaar zijn voor Adobe Experience Platform.
-source-git-commit: 08a63fb854fe1c2aa83e7a7f74df4c02580e4d4c
+exl-id: 3e9c63d2-c798-44b4-870d-bf1551f29690
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '711'
-ht-degree: 0%
+source-wordcount: '713'
+ht-degree: 2%
 
 ---
 
-
 # Edge Network- en hubvergelijking
 
-Adobe Experience Platform is het krachtigste, meest flexibele en open systeem op de markt voor het ontwikkelen en beheren van volledige oplossingen die de ervaring van klanten stimuleren. U kunt Experience Platform gebruiken om klantgegevens en inhoud van elk systeem te centraliseren en te standaardiseren en om datamanagement en machinaal leren toe te passen om het ontwerp en de levering van rijke, gepersonaliseerde ervaringen drastisch te verbeteren. Het resultaat is dat Platform op verschillende manieren uw gegevens kan verwerken, zodat u uw gegevens op de best mogelijke manier kunt beoordelen.
+Adobe Experience Platform is het krachtigste, meest flexibele en open systeem op de markt voor het ontwikkelen en beheren van volledige oplossingen die de ervaring van klanten stimuleren. U kunt Experience Platform gebruiken om klantgegevens en inhoud van elk systeem te centraliseren en te standaardiseren en om datamanagement en machinaal leren toe te passen om het ontwerp en de levering van rijke, gepersonaliseerde ervaringen drastisch te verbeteren. Als gevolg hiervan kan Experience Platform uw gegevens op verschillende manieren verwerken, zodat u uw gegevens op de best mogelijke manier kunt beoordelen.
 
 ## Servertypen
 
-Op Platform kunnen gegevens op twee verschillende manieren worden verwerkt: Adobe Experience Platform-hub voor batch- en streaming-workflows en Edge Network voor real-time ervaringen.
+In Experience Platform kunnen gegevens op twee verschillende manieren worden verwerkt: Adobe Experience Platform-hub voor batch- en streaming-workflows en Edge Network voor real-time ervaringen.
 
 ### Adobe Experience Platform hub
 

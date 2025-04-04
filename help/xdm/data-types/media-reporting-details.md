@@ -2,9 +2,9 @@
 title: Gegevenstype voor Media die gegevens rapporteren
 description: Leer over Media die het gegevenstype van de Gegevens van de Ervaring van Gegevens van de Media melden Model (XDM).
 exl-id: e8bf20a9-9ac0-4339-8200-5d6d9328ce3b
-source-git-commit: 799a384556b43bc844782d8b67416c7eea77fbf0
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '452'
+source-wordcount: '453'
 ht-degree: 0%
 
 ---
@@ -19,7 +19,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->De onderstaande velden worden niet rechtstreeks gebruikt om aanvragen te maken. In plaats daarvan wordt de verzameling van velden die naar Adobe Experience Platform of Adobe Analytics worden verzonden, samengesteld op basis van uw aanvraaggegevens en worden metrische gegevens vervolgens opgenomen of verwerkt door de serverinfrastructuur. Terwijl Platform verschillende typen van uw gebruikersgebeurtenissen verzamelt, concentreren de rapporten die aan u worden teruggegeven zich op specifieke gebeurtenissen, zoals `media.sessionStart`, `media.adStart`, en `media.sessionComplete`. Dit betekent dat hoewel u 12 types van gebeurtenissen tijdens inzameling overbrengt, uw rapporten slechts onderverdelingen zullen voorstellen die op de vijf hieronder vermelde gebeurtenissen worden gebaseerd.
+>De onderstaande velden worden niet rechtstreeks gebruikt om aanvragen te maken. In plaats daarvan wordt de verzameling van velden die naar Adobe Experience Platform of Adobe Analytics worden verzonden, samengesteld op basis van uw aanvraaggegevens en worden metrische gegevens vervolgens opgenomen of verwerkt door de serverinfrastructuur. Hoewel Experience Platform verschillende typen gebruikersgebeurtenissen verzamelt, richten de geretourneerde rapporten zich op specifieke gebeurtenissen, zoals `media.sessionStart` , `media.adStart` en `media.sessionComplete` . Dit betekent dat hoewel u 12 types van gebeurtenissen tijdens inzameling overbrengt, uw rapporten slechts onderverdelingen zullen voorstellen die op de vijf hieronder vermelde gebeurtenissen worden gebaseerd.
 
 ++ + selecteren om een diagram van het gegevenstype [!UICONTROL Media Reporting Details] weer te geven.
 ![ een diagram van het [!UICONTROL Media Reporting Details] gegevenstype.](../images/data-types/media-reporting-details.png)

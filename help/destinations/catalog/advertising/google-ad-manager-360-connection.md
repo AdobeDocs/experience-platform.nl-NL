@@ -2,9 +2,9 @@
 title: (Beta)  [!DNL Google Ad Manager 360]  verbinding
 description: Google Ad Manager 360 is een advertentieplatform van Google dat uitgevers de middelen geeft om de weergave van advertenties op hun websites, via video en in mobiele apps te beheren.
 exl-id: 3251145a-3e4d-40aa-b120-d79c8c9c7cae
-source-git-commit: 21b76877e8b36d6b844d9c0726a2347b1fab170e
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1160'
+source-wordcount: '1164'
 ht-degree: 3%
 
 ---
@@ -74,7 +74,7 @@ Raadpleeg de onderstaande tabel voor informatie over het exporttype en de export
 
 ### Aanbieding toestaan {#allow-listing}
 
-Aanbieding toestaan is verplicht voordat u de eerste [!DNL Google Ad Manager 360] -bestemming in Platform instelt. Voltooi de hieronder beschreven procedure voor het aanbieden van objecten in een geldige plaats voordat je de bestemming maakt.
+Aanbieding toestaan is verplicht voordat u de eerste [!DNL Google Ad Manager 360] -bestemming in Experience Platform instelt. Voltooi de hieronder beschreven procedure voor het aanbieden van objecten in een geldige plaats voordat je de bestemming maakt.
 
 >[!NOTE]
 >
@@ -96,8 +96,8 @@ Om met deze bestemming te verbinden, volg de stappen die in het [ leerprogramma 
 
 Als u voor verificatie bij het doel wilt zorgen, vult u de vereiste velden in en selecteert u **[!UICONTROL Connect to destination]** .
 
-* **[!UICONTROL Access key ID]**: Een alfanumerieke tekenreeks van 61 tekens die wordt gebruikt om uw [!DNL Google Cloud Storage] -account te verifiëren bij Platform.
-* **[!UICONTROL Secret access key]**: Een tekenreeks met een basiscode van 40 tekens die wordt gebruikt voor het verifiëren van uw [!DNL Google Cloud Storage] -account bij Platform.
+* **[!UICONTROL Access key ID]**: Een alfanumerieke tekenreeks van 61 tekens die wordt gebruikt om uw [!DNL Google Cloud Storage] -account te verifiëren bij Experience Platform.
+* **[!UICONTROL Secret access key]**: Een tekenreeks met een basiscode van 40 tekens die wordt gebruikt om uw [!DNL Google Cloud Storage] -account te verifiëren bij Experience Platform.
 
 Voor meer informatie over deze waarden, zie de [ de sleutels van HMAC van de Opslag van de Wolk van Google HMAC ](https://cloud.google.com/storage/docs/authentication/hmackeys#overview) gids. Voor stappen op hoe te om uw eigen toegangs zeer belangrijke identiteitskaart en geheime toegangssleutel te produceren, verwijs naar het [[!DNL Google Cloud Storage]  bronoverzicht ](/help/sources/connectors/cloud-storage/google-cloud-storage.md).
 
@@ -139,7 +139,7 @@ In de stap voor identiteitstoewijzing kunt u de volgende vooraf ingevulde toewij
 
 | Vooraf ingevulde toewijzing | Beschrijving |
 |---------|----------|
-| `ECID` -> `ppid` | Dit is de enige door de gebruiker bewerkbare vooraf ingevulde toewijzing. U kunt al uw kenmerken of naamruimten selecteren in Platform en deze toewijzen aan `ppid` . |
+| `ECID` -> `ppid` | Dit is de enige door de gebruiker bewerkbare vooraf ingevulde toewijzing. U kunt al uw kenmerken of naamruimten selecteren in Experience Platform en deze toewijzen aan `ppid` . |
 | `metadata.segment.alias` -> `list_id` | Hiermee wijst u Experience Platform-publieksnamen toe aan gebruikers-id&#39;s in het Google-platform. |
 | `iif(${segmentMembership.ups.seg_id.status}=="exited", "1","0")` -> `delete` | Vertelt het Google-platform wanneer gediskwalificeerde gebruikers uit segmenten moeten worden verwijderd. |
 

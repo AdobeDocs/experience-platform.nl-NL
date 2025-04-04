@@ -3,9 +3,9 @@ keywords: Experience Platform;home;populaire onderwerpen;voorvoegsel van gegeven
 title: Gedeeltelijke rijupdates naar realtime klantprofiel verzenden met Data Prep
 description: Leer hoe u updates van gedeeltelijke rijen naar Real-Time klantprofiel verzendt met Data Prep.
 exl-id: f9f9e855-0f72-4555-a4c5-598818fc01c2
-source-git-commit: d62a61f44b27c0be882b5f29bfad5e423af7a1ca
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1360'
+source-wordcount: '1361'
 ht-degree: 0%
 
 ---
@@ -22,7 +22,7 @@ ht-degree: 0%
 
 Gebruik streaming upserts in [!DNL Data Prep] om gedeeltelijke rij-updates naar [!DNL Real-Time Customer Profile] -gegevens te verzenden en tegelijkertijd nieuwe identiteitskoppelingen te maken en tot stand te brengen met één API-aanvraag.
 
-Door upserts te streamen, kunt u het formaat van uw gegevens behouden terwijl het omzetten van die gegevens in [!DNL Real-Time Customer Profile] verzoeken van de PATCH tijdens opname. Op basis van de ingevoerde gegevens die u opgeeft, kunt u met [!DNL Data Prep] één API-payload verzenden en de gegevens omzetten naar zowel [!DNL Real-Time Customer Profile] PATCH als [!DNL Identity Service] CREATE-aanvragen.
+Door upserts te streamen, kunt u het formaat van uw gegevens behouden terwijl het omzetten van die gegevens in [!DNL Real-Time Customer Profile] PATCH verzoeken tijdens opname. Met [!DNL Data Prep] kunt u op basis van de ingevoerde gegevens één API-lading verzenden en de gegevens omzetten naar zowel [!DNL Real-Time Customer Profile] PATCH- als [!DNL Identity Service] CREATE-aanvragen.
 
 [!DNL Data Prep] gebruikt headerparameters om onderscheid te maken tussen invoegen en invoegen. Alle rijen die upserts gebruiken, moeten een kopbal hebben. U kunt updates met of zonder identiteitsbeschrijvingen gebruiken. Als u updates met identiteiten gebruikt, moet u de configuratiestappen volgen die in de sectie op [ worden geschetst vormend de identiteitsdataset ](#configure-the-identity-dataset). Als u updates zonder identiteiten gebruikt, dan te hoeven u niet om identiteitsconfiguraties in uw verzoek te verstrekken. Lees de sectie over [ het stromen upserts zonder identiteiten ](#payload-without-identity-configuration) voor meer informatie.
 
@@ -39,7 +39,7 @@ Voor dit overzicht is een goed begrip van de volgende Adobe Experience Platform-
 * [[!DNL Data Prep]](./home.md): [!DNL Data Prep] stelt gegevensengineers in staat gegevens toe te wijzen, te transformeren en te valideren van en naar het XDM-model (Experience Data Model).
 * [[!DNL Identity Service]](../identity-service/home.md): verbeter een beter beeld van individuele klanten en hun gedrag door identiteiten over apparaten en systemen te overbruggen.
 * [ Real-Time Profiel van de Klant ](../profile/home.md): Verstrekt een verenigd, klantenprofiel in real time gebaseerd op samengevoegde gegevens van veelvoudige bronnen.
-* [ Bronnen ](../sources/home.md): Experience Platform staat gegevens toe om van diverse bronnen worden opgenomen terwijl het voorzien van u van de capaciteit om, inkomende gegevens te structureren te etiketteren en te verbeteren gebruikend de diensten van het Platform.
+* [ Bronnen ](../sources/home.md): Experience Platform staat gegevens toe om van diverse bronnen worden opgenomen terwijl het voorzien van u van de capaciteit om, inkomende gegevens te structureren te etiketteren en te verbeteren gebruikend de diensten van Experience Platform.
 
 ## Streaming upserts gebruiken in [!DNL Data Prep] {#streaming-upserts-in-data-prep}
 

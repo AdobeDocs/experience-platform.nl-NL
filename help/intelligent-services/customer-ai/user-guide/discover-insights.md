@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;inzichten;klanten ai;populaire onderwerpen;klantenai inzichten
+keywords: Experience Platform;inzichten;klantenai;populaire onderwerpen;klantenai inzichten
 solution: Experience Platform, Real-Time Customer Data Platform
 feature: Customer AI
 title: Inzichten met Customer AI ontdekken
 description: Dit document fungeert als hulpmiddel bij de interactie met de inzichten van serviceversies in de Intelligent Services Customer AI-gebruikersinterface.
 exl-id: 8aaae963-4029-471e-be9b-814147a5f160
-source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '2035'
+source-wordcount: '2036'
 ht-degree: 1%
 
 ---
@@ -95,7 +95,7 @@ Het dialoogvenster Bewerken wordt weergegeven. In dit dialoogvenster kunt u de n
 
 ![ geef popover uit ](../images/insights/edit-instance.png)
 
-### Meer handelingen
+### Meer acties
 
 De knop **[!UICONTROL More actions]** bevindt zich in de navigatie rechtsboven naast **[!UICONTROL Edit]** . Als u **[!UICONTROL More actions]** selecteert, wordt een vervolgkeuzelijst geopend waarin u een van de volgende bewerkingen kunt selecteren:
 
@@ -164,7 +164,7 @@ De segmentbouwer wordt gebruikt om een segment te bepalen. Als u **[!UICONTROL C
 
 ![ de vulling van het segment in ](../images/insights/segment-saving.png)
 
-Als u het nieuwe segment wilt weergeven in de gebruikersinterface van het platform, selecteert u **[!UICONTROL Segments]** in de linkernavigatie. De pagina **[!UICONTROL Browse]** wordt weergegeven en alle beschikbare segmenten worden weergegeven.
+Als u het nieuwe segment wilt weergeven in de gebruikersinterface van Experience Platform, selecteert u **[!UICONTROL Segments]** in de linkernavigatie. De pagina **[!UICONTROL Browse]** wordt weergegeven en alle beschikbare segmenten worden weergegeven.
 
 ![ Al uw Segmenten ](../images/insights/Segments-dashboard.png)
 
@@ -225,7 +225,7 @@ De AUC weerspiegelt de sterkte van de verhouding tussen de rangschikking door sc
 
 ## Volgende stappen
 
-In dit document worden de inzichten geschetst die door een AI-serviceexemplaar van een klant worden verschaft. U kunt nu aan het leerprogramma op [ downloaden scores in Klant AI ](./download-scores.md) voortzetten of de andere [ Adobe Intelligente gidsen van de Diensten ](../../home.md) doorbladeren die worden aangeboden.
+In dit document worden de inzichten geschetst die door een AI-serviceexemplaar van een klant worden verschaft. U kunt nu aan het leerprogramma op [ downloaden scores in Klant AI ](./download-scores.md) voortzetten of de andere [ Intelligente Diensten van Adobe ](../../home.md) gidsen doorbladeren die worden aangeboden.
 
 ## Aanvullende bronnen
 

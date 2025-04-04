@@ -2,9 +2,9 @@
 title: Ontdek, los problemen op en verifieer Batchverwerking met SQL
 description: Leer hoe u het proces voor gegevensinvoer in Adobe Experience Platform begrijpt en beheert. In dit document wordt beschreven hoe u batches kunt verifiëren en ingesloten gegevens kunt opvragen.
 exl-id: 8f49680c-42ec-488e-8586-50182d50e900
-source-git-commit: 692a061e3b2facbfafc65f966832230187f5244d
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1146'
+source-wordcount: '1156'
 ht-degree: 0%
 
 ---
@@ -24,10 +24,10 @@ In dit document wordt uitgelegd hoe u records in ingesloten batches met SQL kunt
 
 Om uw begrip van de concepten te helpen die in dit document worden besproken, zou u kennis van de volgende onderwerpen moeten hebben:
 
-- **Inname van Gegevens**: Zie het [ overzicht van de gegevensopname ](../../ingestion/home.md) om de grondbeginselen te leren van hoe het gegeven in het Platform, met inbegrip van de verschillende methodes en processen in kwestie wordt opgenomen.
-- **Inname van de Partij**: Zie [ partij ingestition API overzicht ](../../ingestion/batch-ingestion/overview.md) om de basisconcepten van partijingestitie te leren. Specifiek, wat een &quot;partij&quot;is en hoe het binnen het proces van de gegevensopname van Platform functioneert.
+- **Inname van Gegevens**: Zie het [ overzicht van de gegevensopname ](../../ingestion/home.md) om de grondbeginselen te leren van hoe het gegeven in Experience Platform wordt opgenomen, met inbegrip van de verschillende methodes en processen in kwestie.
+- **Inname van de Partij**: Zie [ partij ingestition API overzicht ](../../ingestion/batch-ingestion/overview.md) om de basisconcepten van partijingestitie te leren. Specifiek, wat een &quot;partij&quot;is en hoe het binnen het proces van de gegevensopname van Experience Platform werkt.
 - **meta-gegevens van het Systeem in datasets**: Zie het [ overzicht van de Dienst van de Catalogus ](../../catalog/home.md) leren hoe de gebieden van systeemmeta-gegevens worden gebruikt om opgenomen gegevens te volgen en te vragen.
-- **Model van de Gegevens van de Ervaring (XDM)**: Zie het [ schema&#39;s overzicht UI ](../../xdm/ui/overview.md) en de [ basisbeginselen van schemacompositie&#39; ](../../xdm/schema/composition.md) om over XDM schema&#39;s te leren en hoe zij de structuur en het formaat van gegevens vertegenwoordigen en bevestigen die in Platform worden opgenomen.
+- **Model van de Gegevens van de Ervaring (XDM)**: Zie het [ schema&#39;s overzicht UI ](../../xdm/ui/overview.md) en de [ basisbeginselen van schemacompositie&#39; ](../../xdm/schema/composition.md) om over XDM schema&#39;s te leren en hoe zij de structuur en het formaat van gegevens vertegenwoordigen en bevestigen die in Experience Platform worden opgenomen.
 
 ## Batchmetagegevens voor toegang {#access-dataset-batch-metadata}
 
@@ -37,7 +37,7 @@ Als u vervolgens de systeemvelden van de gegevensset wilt weergeven, voert u een
 
 ![ DBVisualizer UI met de film_data lijst en zijn meta-gegevenskolommen die en worden benadrukt.](../images/use-cases/movie_data-table-with-metadata-columns.png)
 
-Wanneer het gegeven in Platform wordt opgenomen, wordt het toegewezen een logische verdeling die op de inkomende gegevens wordt gebaseerd. Deze logische partitie wordt vertegenwoordigd door `_acp_system_metadata.sourceBatchId` . Met deze id kunt u de gegevensbatches logisch groeperen en identificeren voordat ze worden verwerkt en opgeslagen.
+Wanneer gegevens in Experience Platform worden opgenomen, wordt er een logische partitie toegewezen op basis van de binnenkomende gegevens. Deze logische partitie wordt vertegenwoordigd door `_acp_system_metadata.sourceBatchId` . Met deze id kunt u de gegevensbatches logisch groeperen en identificeren voordat ze worden verwerkt en opgeslagen.
 
 Nadat de gegevens worden verwerkt en in het gegevenspeer worden opgenomen, wordt het toegewezen een fysieke verdeling die door `_ACP_BATCHID` wordt vertegenwoordigd. Deze id weerspiegelt de werkelijke opslagpartitie in het datumpeer waar de ingesloten gegevens zich bevinden.
 
@@ -56,7 +56,7 @@ De resultaten van deze zoekopdracht worden weergegeven in de onderstaande afbeel
 
 Deze resultaten tonen aan dat het aantal inputpartijen niet noodzakelijk het aantal outputpartijen aanpast, aangezien het systeem de meest efficiënte manier bepaalt om de gegevens in het gegevensmeer in batch te slaan en op te slaan.
 
-In dit voorbeeld wordt aangenomen dat u een CSV-bestand hebt ingesloten in Platform en een gegevensset met de naam `drug_checkout_data` hebt gemaakt.
+In dit voorbeeld wordt aangenomen dat u een CSV-bestand in Experience Platform hebt ingevoerd en een gegevensset met de naam `drug_checkout_data` hebt gemaakt.
 
 Het `drug_checkout_data` -bestand is een diepgeneste set van 35.000 records. Gebruik de SQL-instructie `SELECT * FROM drug_orders;` om een voorvertoning weer te geven van de eerste set records in de op JSON gebaseerde `drug_orders` -dataset.
 
@@ -92,19 +92,19 @@ Daarna, bevestig en verifieer de verslagen die in de dataset met SQL zijn opgeno
 
 >[!TIP]
 >
->Als u de batch-id en queryrecords wilt ophalen die aan die batch-id zijn gekoppeld, moet u eerst een batch maken in Platform. Als u het proces zelf wilt testen, kunt u CSV-gegevens invoeren in Platform. Lees de gids op hoe te [ een Csv- dossier aan een bestaand schema in kaart brengen XDM gebruikend AI-Gegenereerde aanbevelingen ](../../ingestion/tutorials/map-csv/recommendations.md).
+>Als u de batch-id en queryrecords die aan die batch-id zijn gekoppeld, wilt ophalen, moet u eerst een batch maken in Experience Platform. Als u het proces zelf wilt testen, kunt u CSV-gegevens invoeren in Experience Platform. Lees de gids op hoe te [ een Csv- dossier aan een bestaand schema in kaart brengen XDM gebruikend AI-Gegenereerde aanbevelingen ](../../ingestion/tutorials/map-csv/recommendations.md).
 
 Nadat u een batch hebt ingepakt, moet u naar de [!UICONTROL Datasets activity tab] navigeren voor de gegevensset waarin u gegevens hebt ingevoerd.
 
-Selecteer in de gebruikersinterface van het Experience Platform de optie **[!UICONTROL Datasets]** in de linkernavigatie om het dashboard van [!UICONTROL Datasets] te openen. Selecteer vervolgens de naam van de gegevensset op het tabblad [!UICONTROL Browse] voor toegang tot het scherm [!UICONTROL Dataset activity] .
+Selecteer in de gebruikersinterface van Experience Platform de optie **[!UICONTROL Datasets]** in de linkernavigatie om het dashboard van [!UICONTROL Datasets] te openen. Selecteer vervolgens de naam van de gegevensset op het tabblad [!UICONTROL Browse] voor toegang tot het scherm [!UICONTROL Dataset activity] .
 
-![ het dashboard van Datasets UI van het Platform met Datasets die in linkernavigatie worden benadrukt.](../images/use-cases/datasets-workspace.png)
+![ het dashboard van Datasets UI van Experience Platform met Datasets die in linkernavigatie worden benadrukt.](../images/use-cases/datasets-workspace.png)
 
 De weergave [!UICONTROL Dataset activity] wordt weergegeven. Deze mening bevat details van uw geselecteerde dataset. Het omvat om het even welke ingebedde partijen die in een lijstformaat worden getoond.
 
 Selecteer een batch in de lijst met beschikbare batches en kopieer de [!UICONTROL Batch ID] in het deelvenster Details aan de rechterkant.
 
-![ de Datasets UI van het Experience Platform die de ingebedde verslagen met een benadrukte partijidentiteitskaart tonen.](../images/use-cases/batch-id.png)
+![ de Datasets UI die van Experience Platform de ingebedde verslagen met een benadrukte partijidentiteitskaart tonen.](../images/use-cases/batch-id.png)
 
 Daarna, gebruik de volgende vraag om alle verslagen terug te winnen die in de dataset als deel van die partij werden omvat:
 
@@ -124,8 +124,8 @@ Wanneer u deze vraag in de Redacteur van de Vraag uitvoert, zijn de resultaten b
 
 ## Volgende stappen {#next-steps}
 
-Door dit document te lezen hebt u de belangrijkste elementen geleerd van het controleren en valideren van records in ingebedde batches als onderdeel van het gegevensinvoerproces. U verwierf ook inzichten in de toegang tot van de meta-gegevens van de gegevenssetpartij, begrip logische en fysieke verdelingen, en het vragen van specifieke partijen gebruikend SQL bevelen. Deze kennis kan u helpen de gegevensintegriteit te waarborgen en uw gegevensopslag op het platform te optimaliseren.
+Door dit document te lezen hebt u de belangrijkste elementen geleerd van het controleren en valideren van records in ingebedde batches als onderdeel van het gegevensinvoerproces. U verwierf ook inzichten in de toegang tot van de meta-gegevens van de gegevenssetpartij, begrip logische en fysieke verdelingen, en het vragen van specifieke partijen gebruikend SQL bevelen. Deze kennis kan u helpen de gegevensintegriteit te waarborgen en uw gegevensopslag op Experience Platform te optimaliseren.
 
-Daarna, zou u gegevensopname moeten oefenen om de geleerde concepten toe te passen. Maak een voorbeeld van een gegevensset in Platform met de voorbeeldbestanden of uw eigen gegevens. Als u dit niet reeds hebt gedaan, lees het leerprogramma op hoe te [ gegevens in Adobe Experience Platform ](../../ingestion/tutorials/ingest-batch-data.md) innemen.
+Daarna, zou u gegevensopname moeten oefenen om de geleerde concepten toe te passen. Maak een voorbeeld van een gegevensset in Experience Platform met de voorbeeldbestanden of uw eigen gegevens. Als u dit niet reeds hebt gedaan, lees het leerprogramma op hoe te [ gegevens in Adobe Experience Platform ](../../ingestion/tutorials/ingest-batch-data.md) innemen.
 
 Alternatief, kon u leren hoe te [ de Dienst van de Vraag met een verscheidenheid van de toepassingen van de Desktopcliënt ](../clients/overview.md) verbinden en verifiëren om uw mogelijkheden van de gegevensanalyse te verbeteren.

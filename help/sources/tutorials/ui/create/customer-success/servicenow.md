@@ -1,11 +1,11 @@
 ---
-keywords: Experience Platform;thuis;populaire onderwerpen;ServiceNow;serviceow
+keywords: Experience Platform;home;populaire onderwerpen;ServiceNow;servicenow
 solution: Experience Platform
 title: Een ServiceNow Source-verbinding maken in de gebruikersinterface
 type: Tutorial
 description: Leer hoe u een ServiceNow-bronverbinding maakt met de gebruikersinterface van Adobe Experience Platform.
 exl-id: 66c12f4d-8b0c-4bb2-910d-9e09fa364c94
-source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '433'
 ht-degree: 0%
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # Een [!DNL ServiceNow] bronverbinding maken in de gebruikersinterface
 
-Source-connectors in Adobe Experience Platform bieden de mogelijkheid om volgens een schema extern gesourceerde gegevens in te voeren. Deze zelfstudie bevat stappen voor het maken van een [!DNL ServiceNow] bronaansluiting met behulp van de gebruikersinterface van [!DNL Platform] .
+Source-connectors in Adobe Experience Platform bieden de mogelijkheid om volgens een schema extern gesourceerde gegevens in te voeren. Deze zelfstudie bevat stappen voor het maken van een [!DNL ServiceNow] bronaansluiting met behulp van de gebruikersinterface van [!DNL Experience Platform] .
 
 ## Aan de slag
 
@@ -29,7 +29,7 @@ Als u reeds een geldige [!DNL ServiceNow] verbinding hebt, kunt u de rest van di
 
 ### Vereiste referenties verzamelen
 
-Als u toegang wilt krijgen tot uw [!DNL ServiceNow] account op [!DNL Platform] , moet u de volgende waarden opgeven:
+Als u toegang wilt krijgen tot uw [!DNL ServiceNow] account op [!DNL Experience Platform] , moet u de volgende waarden opgeven:
 
 | Credentials | Beschrijving |
 | ---------- | ----------- |
@@ -41,7 +41,7 @@ Voor meer informatie over begonnen worden, verwijs naar [ dit  [!DNL ServiceNow]
 
 ## Sluit uw [!DNL ServiceNow] -account aan
 
-Nadat u de vereiste gegevens hebt verzameld, voert u de onderstaande stappen uit om uw [!DNL ServiceNow] -account te koppelen aan [!DNL Platform] .
+Nadat u de vereiste gegevens hebt verzameld, voert u de onderstaande stappen uit om uw [!DNL ServiceNow] -account te koppelen aan [!DNL Experience Platform] .
 
 Login aan [ Adobe Experience Platform ](https://platform.adobe.com) en selecteer dan **[!UICONTROL Sources]** van de linkernavigatiebar om tot de **[!UICONTROL Sources]** werkruimte toegang te hebben. In het scherm **[!UICONTROL Catalog]** worden diverse bronnen weergegeven waarmee u een account kunt maken.
 
@@ -67,4 +67,4 @@ Als u een bestaande account wilt verbinden, selecteert u de [!DNL ServiceNow] -a
 
 ## Volgende stappen
 
-Aan de hand van deze zelfstudie hebt u een verbinding tot stand gebracht met uw [!DNL ServiceNow] -account. U kunt nu aan het volgende leerprogramma verdergaan en [ een dataflow vormen om gegevens in  [!DNL Platform]](../../dataflow/customer-success.md) te brengen.
+Aan de hand van deze zelfstudie hebt u een verbinding tot stand gebracht met uw [!DNL ServiceNow] -account. U kunt nu aan het volgende leerprogramma verdergaan en [ een dataflow vormen om gegevens in  [!DNL Experience Platform]](../../dataflow/customer-success.md) te brengen.

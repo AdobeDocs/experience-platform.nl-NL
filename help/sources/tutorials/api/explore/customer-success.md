@@ -1,12 +1,12 @@
 ---
-keywords: Experience Platform;thuis;populaire onderwerpen;cs;CS;systeem van de klantensucces
+keywords: Experience Platform;home;populaire onderwerpen;cs;CS;systeem voor klantsucces
 solution: Experience Platform
 title: Ontdek een systeem met succes van de Klant met behulp van de Flow Service API
 description: In deze zelfstudie wordt de Flow Service API gebruikt om de systemen van Customer Success (CS) te verkennen.
 exl-id: 453be69d-3d72-4987-81cd-67fa3be7ee59
-source-git-commit: 90eb6256179109ef7c445e2a5a8c159fb6cbfe28
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '593'
+source-wordcount: '594'
 ht-degree: 0%
 
 ---
@@ -21,14 +21,14 @@ In deze zelfstudie wordt de [!DNL Flow Service] API gebruikt om de systemen voor
 
 Deze handleiding vereist een goed begrip van de volgende onderdelen van Adobe Experience Platform:
 
-* [ Bronnen ](../../../home.md): [!DNL Experience Platform] staat gegevens toe om van diverse bronnen worden opgenomen terwijl het voorzien van u van de capaciteit om, inkomende gegevens te structureren te etiketteren en te verbeteren gebruikend [!DNL Platform] diensten.
-* [ Sandboxen ](../../../../sandboxes/home.md): [!DNL Experience Platform] verstrekt virtuele zandbakken die één enkele [!DNL Platform] instantie in afzonderlijke virtuele milieu&#39;s verdelen helpen digitale ervaringstoepassingen ontwikkelen en ontwikkelen.
+* [ Bronnen ](../../../home.md): [!DNL Experience Platform] staat gegevens toe om van diverse bronnen worden opgenomen terwijl het voorzien van u van de capaciteit om, inkomende gegevens te structureren te etiketteren en te verbeteren gebruikend [!DNL Experience Platform] diensten.
+* [ Sandboxen ](../../../../sandboxes/home.md): [!DNL Experience Platform] verstrekt virtuele zandbakken die één enkele [!DNL Experience Platform] instantie in afzonderlijke virtuele milieu&#39;s verdelen helpen digitale ervaringstoepassingen ontwikkelen en ontwikkelen.
 
 De volgende secties bevatten aanvullende informatie die u moet weten om verbinding te kunnen maken met een CS-systeem met de API [!DNL Flow Service] .
 
 ### Een basisverbinding verkrijgen
 
-Als u uw CS-systeem wilt verkennen met API&#39;s van [!DNL Platform] , moet u beschikken over een geldige basis-verbindings-id. Als u nog geen basisverbinding hebt voor het CS-systeem waarmee u wilt werken, kunt u een verbinding maken via de volgende zelfstudies:
+Als u uw CS-systeem wilt verkennen met API&#39;s van [!DNL Experience Platform] , moet u beschikken over een geldige basis-verbindings-id. Als u nog geen basisverbinding hebt voor het CS-systeem waarmee u wilt werken, kunt u een verbinding maken via de volgende zelfstudies:
 
 * [Salesforce Service Cloud](../create/customer-success/salesforce-service-cloud.md)
 * [ServiceNow](../create/customer-success/servicenow.md)
@@ -39,23 +39,23 @@ Deze zelfstudie biedt voorbeeld-API-aanroepen om aan te tonen hoe uw verzoeken m
 
 ### Waarden verzamelen voor vereiste koppen
 
-Om vraag aan [!DNL Platform] APIs te maken, moet u het [ authentificatieleerprogramma ](https://www.adobe.com/go/platform-api-authentication-en) eerst voltooien. Als u de zelfstudie over verificatie voltooit, krijgt u de waarden voor elk van de vereiste headers in alle API-aanroepen van [!DNL Experience Platform] , zoals hieronder wordt getoond:
+Om vraag aan [!DNL Experience Platform] APIs te maken, moet u het [ authentificatieleerprogramma ](https://www.adobe.com/go/platform-api-authentication-en) eerst voltooien. Als u de zelfstudie over verificatie voltooit, krijgt u de waarden voor elk van de vereiste headers in alle API-aanroepen van [!DNL Experience Platform] , zoals hieronder wordt getoond:
 
 * Autorisatie: Drager `{ACCESS_TOKEN}`
 * x-api-key: `{API_KEY}`
 * x-gw-ims-org-id: `{ORG_ID}`
 
-Alle bronnen in [!DNL Experience Platform], inclusief bronnen die tot [!DNL Flow Service] behoren, zijn geïsoleerd naar specifieke virtuele sandboxen. Alle aanvragen naar [!DNL Platform] API&#39;s vereisen een header die de naam van de sandbox opgeeft waarin de bewerking plaatsvindt:
+Alle bronnen in [!DNL Experience Platform], inclusief bronnen die tot [!DNL Flow Service] behoren, zijn geïsoleerd naar specifieke virtuele sandboxen. Alle aanvragen naar [!DNL Experience Platform] API&#39;s vereisen een header die de naam van de sandbox opgeeft waarin de bewerking plaatsvindt:
 
 * x-sandbox-name: `{SANDBOX_NAME}`
 
-Alle verzoeken die een nuttige lading (POST, PUT, PATCH) bevatten vereisen een extra media type kopbal:
+Alle verzoeken die een lading (POST, PUT, PATCH) bevatten vereisen een extra media typekopbal:
 
 * Inhoudstype: `application/json`
 
 ## Uw gegevenstabellen verkennen
 
-Met de basisverbinding voor uw CS-systeem kunt u uw gegevenstabellen verkennen door GET-aanvragen uit te voeren. Gebruik de volgende aanroep om het pad te zoeken van de tabel die u wilt inspecteren of waarin u wilt opnemen [!DNL Platform].
+Met de basisverbinding voor uw CS-systeem kunt u uw gegevenstabellen verkennen door GET-aanvragen uit te voeren. Gebruik de volgende aanroep om het pad te zoeken van de tabel die u wilt inspecteren of waarin u wilt opnemen [!DNL Experience Platform].
 
 **API formaat**
 
@@ -80,7 +80,7 @@ curl -X GET \
 
 **Reactie**
 
-Een succesvolle reactie keert een serie van lijsten van uw systeem terug CS. Zoek de tabel die u wilt opnemen in [!DNL Platform] en neem nota van de eigenschap `path` ervan, aangezien u deze in de volgende stap moet opgeven om de structuur te inspecteren.
+Een succesvolle reactie keert een serie van lijsten van uw systeem terug CS. Zoek de tabel die u wilt opnemen in [!DNL Experience Platform] en neem nota van de eigenschap `path` ervan, aangezien u deze in de volgende stap moet opgeven om de structuur te inspecteren.
 
 ```json
 [
@@ -115,9 +115,9 @@ Een succesvolle reactie keert een serie van lijsten van uw systeem terug CS. Zoe
 ]
 ```
 
-## De structuur van een tabel Inspect
+## De structuur van een tabel controleren
 
-Om de structuur van een lijst van uw systeem te inspecteren CS, voer een verzoek van de GET uit terwijl het specificeren van de weg van een lijst als vraagparameter.
+Om de structuur van een lijst van uw systeem te inspecteren CS, voer een verzoek van GET terwijl het specificeren van de weg van een lijst als vraagparameter uit.
 
 **API formaat**
 
@@ -176,4 +176,4 @@ Een geslaagde reactie retourneert de structuur van de opgegeven tabel. De detail
 
 ## Volgende stappen
 
-Aan de hand van deze zelfstudie hebt u uw CS-systeem verkend, het pad gevonden van de tabel waarin u wilt opnemen [!DNL Platform] en informatie verkregen over de structuur ervan. U kunt deze informatie in het volgende leerprogramma gebruiken [ gegevens van uw systeem verzamelen CS en het brengen in Platform ](../collect/customer-success.md).
+Aan de hand van deze zelfstudie hebt u uw CS-systeem verkend, het pad gevonden van de tabel waarin u wilt opnemen [!DNL Experience Platform] en informatie verkregen over de structuur ervan. U kunt deze informatie in het volgende leerprogramma gebruiken [ gegevens van uw systeem van CS verzamelen en het brengen in Experience Platform ](../collect/customer-success.md).

@@ -1,12 +1,12 @@
 ---
-keywords: Experience Platform;huis;populaire onderwerpen;dataset;Dataset;tijd om te leven;ttl;tijd-aan-levende;pseudoniem;pseudoniem profielen;gegevensvervaldatum;vervaldatum;
+keywords: Experience Platform;home;populaire onderwerpen;dataset;Dataset;tijd om te leven;ttl;tijd-aan-leven;pseudoniem;pseudoniem profielen;gegevensvervaldatum;vervaldatum;
 solution: Experience Platform
 title: Vervaldatum van gegevens van pseudoniem profiel
 description: Dit document biedt algemene richtlijnen voor het configureren van gegevensvervaldatum voor Pseudoniem-profielen in Adobe Experience Platform.
 exl-id: e8d31718-0b50-44b5-a15b-17668a063a9c
-source-git-commit: 9d38fdae0fc65048d02a4337375004edafedd1b6
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1065'
+source-wordcount: '1068'
 ht-degree: 0%
 
 ---
@@ -37,7 +37,7 @@ Een profiel wordt overwogen voor Pseudoniem gegevensvervaldatum als het aan de v
 
 ## Toegang {#access}
 
-De vervaldatum van gegevens van het Pseudoniem Profiel kan niet door Platform UI of APIs worden gevormd. In plaats daarvan moet u contact opnemen met ondersteuning om deze functie in te schakelen. Neem de volgende gegevens op wanneer u contact opneemt met de ondersteuningsafdeling:
+Het verlopen van gegevens van het Pseudoniem Profiel kan niet door de UI van Experience Platform of APIs worden gevormd. In plaats daarvan moet u contact opnemen met ondersteuning om deze functie in te schakelen. Neem de volgende gegevens op wanneer u contact opneemt met de ondersteuningsafdeling:
 
 - De naamruimten die in overweging moeten worden genomen voor het Pseudoniem-profiel, worden verwijderd.
    - Bijvoorbeeld: `ECID` alleen, `AAID` alleen of een combinatie van `ECID` en `AAID` .
@@ -75,11 +75,11 @@ De gegevensvervaldatum van het Pseudoniem Profiel en de gegevensvervaldatum van 
 
 U zou **altijd** de gegevensvervalsing van de Gebeurtenis van de opstellingsErvaring in uw datasets, die op uw behoeften worden gebaseerd om gegevens over uw bekende klanten te behouden. Zodra de gegevensvervaldatum van de Gebeurtenis van de Ervaring opstelling is, kunt u Pseudoniem de gegevensvervaldatum van het Profiel gebruiken om Pseudoniem Profielen automatisch te verwijderen. Doorgaans is de gegevensvervalperiode voor Pseudoniem Profielen korter dan de periode waarin de gegevens verlopen voor Experience Events.
 
-Voor een typisch gebruiksgeval, kunt u uw de gegevensvervaldatum van de Gebeurtenis van de Ervaring plaatsen die op de waarden van uw bekende gebruikersgegevens wordt gebaseerd en u kunt uw Pseudoniem gegevensvervaldatum van het Profiel aan een veel kortere duur plaatsen om het effect van Pseudoniem profielen op uw de vergunningsnaleving van het Platform te beperken.
+In een typisch geval kunt u de vervaldatum van de Ervaring-gebeurtenisgegevens instellen op basis van de waarden van uw bekende gebruikersgegevens en u kunt de vervaldatum van uw Pseudoniem-profielgegevens veel korter instellen om het effect van Pseudoniem-profielen op de Experience Platform-licentieconformiteit te beperken.
 
 ### Welke gebruikers zouden de vervaldatum van Pseudoniem profielgegevens moeten gebruiken?
 
-- Als u Web SDK gebruikt om gegevens rechtstreeks naar Platform te verzenden.
+- Als u Web SDK gebruikt om gegevens rechtstreeks naar Experience Platform te verzenden.
 - Als u een website hebt die ongeautoriseerde klanten massaal bedient.
 - Als u buitensporige profieltellingen in uw datasets hebt en bevestigd dat deze bovenmatige profieltelling wegens anonieme op koekje-gebaseerde identiteitsnaamruimte is.
    - Om dit te bepalen, zou u het overlappende rapport van de identiteitsnaamruimte moeten gebruiken. Meer informatie over dit rapport kan in de [ sectie van het het overlappingsrapport van de identiteitsoverlapping ](./api/preview-sample-status.md#identity-overlap-report) van de gids van de voorproefstatus API worden gevonden.

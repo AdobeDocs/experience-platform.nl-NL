@@ -2,9 +2,9 @@
 title: Profielinzichten
 description: Ontdek SQL dat uw profielinzichten en gebruik deze vragen aandrijft om douaneinzichten te produceren die uw klanten en hun ervaringen van de consument verder onderzoeken.
 exl-id: f3792076-3e01-4e26-8788-32927202a2e5
-source-git-commit: cce576c00823a0c02e4b639f0888a466a5af6a0c
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '1653'
+source-wordcount: '1654'
 ht-degree: 0%
 
 ---
@@ -15,19 +15,19 @@ De inzichten die zijn afgeleid van de analyse van uw gegevensmodel maken uw Adob
 
 Begrijp uw profielinzichten door tot SQL toegang te hebben die hen macht, dan uw eigen inzichten produceert om uw klanten en hun ervaringen van de consument verder te onderzoeken die omhoog uw profielen maken. Transformeer uw onbewerkte gegevens in nieuwe inzichten die kunnen worden gebruikt door het bestaande Real-Time CDP-gegevensmodel SQL als inspiratie te gebruiken voor het maken van query&#39;s voor uw unieke bedrijfsbehoeften.
 
-Zie de [ documentatie van de Mening SQL ](../view-sql.md) voor meer informatie over hoe te om uw inzichten&#39; SQL direct door Platform UI aan te passen.
+Zie de [ documentatie van de Mening SQL ](../view-sql.md) voor meer informatie over hoe te om uw inzichten&#39; SQL direct door Experience Platform UI aan te passen.
 
 De volgende inzichten zijn allen beschikbaar voor u als deel van het [ dashboard van Profielen ](../guides/profiles.md) of een douane [ user-defined dashboard ](../standard-dashboards.md) te gebruiken. Zie het [ aanpassingsoverzicht ](../customize/overview.md) voor instructies op hoe te om uw dashboard aan te passen of [ creeer en geef nieuwe widgets ](../customize/custom-widgets.md) in de widgetbibliotheek en [ user-defined dashboard ](../standard-dashboards.md#create-widget) uit.
 
 ## Publiek overlapt door samenvoegbeleid {#audience-overlap-by-merge-policy}
 
-Vragen beantwoord door dit inzicht:
+Door deze insight beantwoorde vragen:
 
 - Welke profielen gelden voor beide doelgroepen?
 - Hoe beïnvloedt de overlapping de betrokkenheid of de omrekeningskoersen?
 - Hoe kunnen marketingstrategieën worden afgestemd op het overlappende segment?
 
-+++Selecteer om de SQL te onthullen die dit inzicht produceert
++++Selecteer deze optie om de SQL die deze insight genereert, weer te geven
 
 ```sql
 SELECT Sum(overlap_col1) overlap_col1,
@@ -64,17 +64,17 @@ SELECT Sum(overlap_col1) overlap_col1,
 
 +++
 
-Zie de [ overlap van het Publiek door de documentatie van de widget van het fusiebeleid ](../guides/profiles.md#audience-overlap-by-merge-policy) voor informatie over de verschijning en de functionaliteit van dit inzicht.
+Zie de [ overlap van het Publiek door de documentatie van de widget van het samenvoegbeleid ](../guides/profiles.md#audience-overlap-by-merge-policy) voor informatie over de verschijning en de functionaliteit van dit insight.
 
 ## Rapport publiek overlappen {#audience-overlap-report}
 
-Vragen beantwoord door dit inzicht:
+Door deze insight beantwoorde vragen:
 
 - Wat zijn de 50 meest overlappende doelgroepen?
 - Wat is het 50 minst overlappende publiek?
 - Hoe verandert het overlappende patroon door samenvoegbeleid?
 
-+++Selecteer om de SQL te onthullen die dit inzicht produceert
++++Selecteer deze optie om de SQL die deze insight genereert, weer te geven
 
 ```sql
 SELECT source_segment_name,
@@ -131,17 +131,17 @@ SELECT source_segment_name,
 
 +++
 
-Zie het [ publiek overlappen rapport widget documentatie ](../guides/profiles.md#audience-overlap-report) voor informatie over de verschijning en de functionaliteit van dit inzicht.
+Zie de [ documentatie van het het overlappende rapport van het publiek widget ](../guides/profiles.md#audience-overlap-report) voor informatie over de verschijning en de functionaliteit van dit insight.
 
 ## Soorten publiek (aantal) {#audiences}
 
-Vragen beantwoord door dit inzicht:
+Door deze insight beantwoorde vragen:
 
 - Welk samenvoegingsbeleid hoofdzakelijk voor segmentatie wordt gebruikt?
 - Wat is de verdeling van publiek over fusiebeleid?
 - Zijn er significante veranderingen in publieksaantallen voor specifiek samenvoegbeleid in tijd?
 
-+++Selecteer om de SQL te onthullen die dit inzicht produceert
++++Selecteer deze optie om de SQL die deze insight genereert, weer te geven
 
 ```sql
 SELECT count(DISTINCT a.segment_id) count_of_segments
@@ -159,18 +159,18 @@ SELECT count(DISTINCT a.segment_id) count_of_segments
 
 +++
 
-Zie de [ documentatie van widgets van het publiek ](../guides/profiles.md#audiences) voor informatie over de verschijning en de functionaliteit van dit inzicht.
+Zie de [ documentatie van widgets van het publiek ](../guides/profiles.md#audiences) voor informatie over de verschijning en de functionaliteit van dit insight.
 
 ## Soorten publiek toegewezen aan doelstatus {#audiences-mapped-to-destination-status}
 
-Vragen beantwoord door dit inzicht:
+Door deze insight beantwoorde vragen:
 
 - Wat is de algemene verdeling van het publiek tussen toegewezen en niet in kaart gebrachte bestemmingen?
 - Welke specifieke bestemmingen hebben het hoogste in kaart gebrachte publiek?
 - Welk percentage van het totale publiek blijft onbepaald?
 - Zijn er patronen of verwante trends van deze niet-toegewezen doelgroepen?
 
-+++Selecteer om de SQL te onthullen die dit inzicht produceert
++++Selecteer deze optie om de SQL die deze insight genereert, weer te geven
 
 ```sql
 SELECT COUNT(DISTINCT (y.segment_id)) AS count_mapped_segments,
@@ -191,17 +191,17 @@ SELECT COUNT(DISTINCT (y.segment_id)) AS count_mapped_segments,
 
 +++
 
-Zie het [ publiek dat aan de documentatie van widget van de bestemmingsstatus ](../guides/profiles.md#audiences-mapped-to-destination-status) voor informatie over de verschijning en de functionaliteit van dit inzicht in kaart wordt gebracht.
+Zie het [ publiek dat aan de documentatie van widget van de bestemmingsstatus ](../guides/profiles.md#audiences-mapped-to-destination-status) voor informatie over de verschijning en de functionaliteit van dit insight in kaart wordt gebracht.
 
 ## Grootte publiek {#audiences-size}
 
-Vragen beantwoord door dit inzicht:
+Door deze insight beantwoorde vragen:
 
 - Welk publiekssegment heeft de grootste grootte?
 - Wat zijn de vijf grootste doelgroepen?
 - Hoe verandert de distributie van de publieksgrootte in tijd voor het hoogste publiek?
 
-+++Selecteer om de SQL te onthullen die dit inzicht produceert
++++Selecteer deze optie om de SQL die deze insight genereert, weer te geven
 
 ```sql
 SELECT qsaccel.profile_agg.adwh_fact_profile_by_segment_trendlines.date_key,
@@ -224,17 +224,17 @@ SELECT qsaccel.profile_agg.adwh_fact_profile_by_segment_trendlines.date_key,
 
 +++
 
-Zie de [ documentatie van de de groottewidget van het publiek ](../guides/profiles.md#audiences-size) voor informatie over de verschijning en de functionaliteit van dit inzicht.
+Zie de [ documentatie van de de groottewidget van het publiek ](../guides/profiles.md#audiences-size) voor informatie over de verschijning en de functionaliteit van dit insight.
 
 ## AI-distributie van scores door klant {#customer-ai-distribution-of-scores}
 
-Vragen beantwoord door dit inzicht:
+Door deze insight beantwoorde vragen:
 
 - Wat is de verdeling van scores over emmers voor elk van mijn AI-modellen van de Klant?
 - Wat is de verdeling van scores door hoge, gemiddelde, en lage scores?
 - Wat is de verdeling van de scoring per fusiebeleid?
 
-+++Selecteer om de SQL te onthullen die dit inzicht produceert
++++Selecteer deze optie om de SQL die deze insight genereert, weer te geven
 
 ```sql
 SELECT b.model_name,
@@ -361,17 +361,17 @@ SELECT b.model_name,
 
 +++
 
-Zie de [ AI distributie van de Klant van de documentatie van de scores widget ](../guides/profiles.md#customer-ai-distribution-of-scores) voor informatie over de verschijning en de functionaliteit van dit inzicht.
+Zie de [ AI van de Klant distributie van de documentatie van de scores widget ](../guides/profiles.md#customer-ai-distribution-of-scores) voor informatie over de verschijning en de functionaliteit van deze insight.
 
 ## Overzicht van AI-scores van klant {#customer-ai-scoring-summary}
 
-Vragen beantwoord door dit inzicht:
+Door deze insight beantwoorde vragen:
 
 - Wat is het scoresamenvatting voor elk van mijn AI-modellen van de Klant?
 - Hoe veranderen mijn AI-proENTIECores van mijn klant voor verschillende soorten publiek?
 - Hoe verandert mijn het scoren samenvattingsverandering in vergelijking met andere KPIs in het profiel overzicht?
 
-+++Selecteer om de SQL te onthullen die dit inzicht produceert
++++Selecteer deze optie om de SQL die deze insight genereert, weer te geven
 
 ```sql
 SELECT model_name,
@@ -402,18 +402,18 @@ SELECT model_name,
 
 +++
 
-Zie de [ AI van de Klant die summiere widget documentatie ](../guides/profiles.md#customer-ai-scoring-summary) voor informatie over de verschijning en de functionaliteit van dit inzicht scoren.
+Zie de [ AI het scoren van de Klant summiere widget documentatie ](../guides/profiles.md#customer-ai-scoring-summary) voor informatie over de verschijning en de functionaliteit van deze insight.
 
 ## Identiteitsoverlapping {#identity-overlap}
 
-Vragen beantwoord door dit inzicht:
+Door deze insight beantwoorde vragen:
 
 - Wat is het algemene snijpunt tussen [!UICONTROL Identity Type A] en [!UICONTROL Identity Type B]?
 - Hoe kan ik klantenpubliek verfijnen dat op de overlapping van specifieke identiteitstypes wordt gebaseerd om gerichte marketing strategieën te verbeteren?
 - Welke inzichten kunnen worden verkregen bij de evaluatie van de prestaties van de campagne op de elkaar kruisende gebieden?
-- Hoe kunnen toekomstige marketinginspanningen worden geoptimaliseerd aan de hand van dit inzicht in de campagneprestaties?
+- Hoe kunnen toekomstige marketinginspanningen worden geoptimaliseerd met deze insight-campagneresultaten?
 
-+++Selecteer om de SQL te onthullen die dit inzicht produceert
++++Selecteer deze optie om de SQL die deze insight genereert, weer te geven
 
 ```sql
 SELECT Sum(overlap_col1) overlap_col1,
@@ -459,13 +459,13 @@ SELECT Sum(overlap_col1) overlap_col1,
 
 +++
 
-Zie de [ documentatie van de overlap van de Identiteit ](../guides/profiles.md#identity-overlap) voor informatie over de verschijning en de functionaliteit van dit inzicht.
+Zie de [ documentatie van de Overlap van de Identiteit ](../guides/profiles.md#identity-overlap) voor informatie over de verschijning en de functionaliteit van dit insight.
 
 ## Aantal profielen {#profile-count}
 
-Vragen beantwoord door dit inzicht:
+Door deze insight beantwoorde vragen:
 
-- Wat is het totale aantal profielen in de Adobe Real-time Customer Data Platform?
+- Wat is het totale aantal profielen in de Adobe Real-Time Customer Data Platform?
 - Hoe worden de profielen verdeeld die op fusiebeleid worden gebaseerd?
 - Welk samenvoegbeleid heeft het hoogste profielaantal?
 
@@ -481,19 +481,19 @@ SELECT qsaccel.profile_agg.adwh_dim_merge_policies.merge_policy_name,
   GROUP BY qsaccel.profile_agg.adwh_dim_merge_policies.merge_policy_name;
 ```
 
-De volledige informatie over de verschijning en de functionaliteit van dit inzicht kan in de [ gids van de tellingtelling van het Profiel ](https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/profiles.html#profile-count) worden gevonden.
+De volledige informatie over de verschijning en de functionaliteit van dit insight kan in de [ gids van de tellingshoek van het Profiel ](https://experienceleague.adobe.com/docs/experience-platform/dashboards/guides/profiles.html#profile-count) worden gevonden.
 
-Zie de [ documentatie van de tellingswidget van het Profiel ](../guides/profiles.md#profile-count) voor informatie over de verschijning en de functionaliteit van dit inzicht.
+Zie de [ documentatie van de tellingswidget van het Profiel ](../guides/profiles.md#profile-count) voor informatie over de verschijning en de functionaliteit van dit insight.
 
 ## Wijziging van aantal profielen {#profile-count-change}
 
-Vragen beantwoord door dit inzicht:
+Door deze insight beantwoorde vragen:
 
 - Wat is de trend in de totale veranderingen in het aantal profielen?
 - Wat veroorzaakte significante pieken of dalingen in profieltelling?
 - Zijn er specifieke samenvoegingsbeleid die de verandering van het profielaantal drijven?
 
-+++Selecteer om de SQL te onthullen die dit inzicht produceert
++++Selecteer deze optie om de SQL die deze insight genereert, weer te geven
 
 ```sql
 SELECT (sum(count_of_profiles) - sum(count_of_profiles_days_ago)) profiles_added
@@ -528,17 +528,17 @@ SELECT (sum(count_of_profiles) - sum(count_of_profiles_days_ago)) profiles_added
 
 +++
 
-Zie de [ documentatie van de de veranderingsverandering van het Aantal van het Profiel ](../guides/profiles.md#profile-count-change) voor informatie over de verschijning en de functionaliteit van dit inzicht.
+Zie de [ documentatie van de de veranderingsverandering van het Aantal van het Profiel ](../guides/profiles.md#profile-count-change) voor informatie over de verschijning en de functionaliteit van dit insight.
 
 ## Tendens van wijzigingen in aantal profielen {#profile-count-change-trend}
 
-Vragen beantwoord door dit inzicht:
+Door deze insight beantwoorde vragen:
 
 - Wat is de algemene trend in het aantal profielveranderingen in de afgelopen twaalf maanden op basis van het fusiebeleid?
 - Zijn er specifieke patronen of fluctuaties in het aantal profielen die in de afgelopen 30 dagen zijn gewijzigd en die aandacht behoeven?
 - Hoe verhoudt het aantal profielen zich de afgelopen 90 dagen tot de algemene trend?
 
-+++Selecteer om de SQL te onthullen die dit inzicht produceert
++++Selecteer deze optie om de SQL die deze insight genereert, weer te geven
 
 ```sql
 SELECT date_key,
@@ -562,18 +562,18 @@ SELECT date_key,
 
 +++
 
-Zie de [ documentatie van de de veranderingstrend widget van de tellingverandering van het Profiel ](../guides/profiles.md#profile-count-change-trend) voor informatie over de verschijning en de functionaliteit van dit inzicht.
+Zie de [ documentatie van de de veranderingstrend van het Aantal van het Profiel widget ](../guides/profiles.md#profile-count-change-trend) voor informatie over de verschijning en de functionaliteit van dit insight.
 
 ## Tendens aantal profielen {#profile-count-trend}
 
-Vragen beantwoord door dit inzicht:
+Door deze insight beantwoorde vragen:
 
 - Wat is de algemene trend in het aantal profielen op basis van het fusiebeleid in de afgelopen 30 dagen?
 - Hoe verhoudt zij zich op basis van deze trend tot de langetermijntrends (bijvoorbeeld 90 dagen en 12 maanden)?
 - Welk samenvoegingsbeleid draagt het meest bij tot de verhoging of de daling van profieltelling over de gespecificeerde tijdsperiodes (30 dagen, 90 dagen, en 12 maanden)?
 - Zijn er specifieke pieken of dalingen in profieltelling die met bepaalde gebeurtenissen of periodes binnen het tijdkader van 30 dagen correleren?
 
-+++Selecteer om de SQL te onthullen die dit inzicht produceert
++++Selecteer deze optie om de SQL die deze insight genereert, weer te geven
 
 ```sql
 SELECT date_key,
@@ -593,18 +593,18 @@ SELECT date_key,
 
 +++
 
-Zie de [ documentatie van de de telendetrend van het Profiel widget ](../guides/profiles.md#profile-count-trend) voor informatie over de verschijning en de functionaliteit van dit inzicht.
+Zie de [ documentatie van de de telendetrend van het Profiel widget ](../guides/profiles.md#profile-count-trend) voor informatie over de verschijning en de functionaliteit van dit insight.
 
 ## Profielen op identiteit {#profiles-by-identity}
 
-Vragen beantwoord door dit inzicht:
+Door deze insight beantwoorde vragen:
 
 - Van het totale aantal profielen, welk identiteitstype houdt een hoger percentage?
 - Zijn er aanzienlijke verschillen tussen de identiteitstypen?
 - Wat is de algemene verspreiding van identiteitstypen?
 - Zijn er significante verschillen of anomalieën in het aantal identiteitsbewijzen?
 
-+++Selecteer om de SQL te onthullen die dit inzicht produceert
++++Selecteer deze optie om de SQL die deze insight genereert, weer te geven
 
 ```sql
 SELECT qsaccel.profile_agg.adwh_dim_namespaces.namespace_description,
@@ -622,17 +622,17 @@ SELECT qsaccel.profile_agg.adwh_dim_namespaces.namespace_description,
 
 +++
 
-Zie [ Profielen door de documentatie van de identiteitswidget ](../guides/profiles.md#profiles-by-identity) voor informatie over de verschijning en de functionaliteit van dit inzicht.
+Zie [ Profielen door de documentatie van de identiteitswidget ](../guides/profiles.md#profiles-by-identity) voor informatie over de verschijning en de functionaliteit van dit insight.
 
 ## Ontwikkeling van aantal profielen {#profiles-count-change-trend}
 
-Vragen beantwoord door dit inzicht:
+Door deze insight beantwoorde vragen:
 
 - Wat is de algemene trend in de verandering van het aantal profielen in de afgelopen twaalf maanden, gebaseerd op het fusiebeleid?
 - Zijn er specifieke patronen of schommelingen in de verandering van het profielaantal in de afgelopen 30 dagen die aandacht vergen?
 - Hoe verhoudt de verandering van het profiel zich de afgelopen 90 dagen tot de algemene trend?
 
-+++Selecteer om de SQL te onthullen die dit inzicht produceert
++++Selecteer deze optie om de SQL die deze insight genereert, weer te geven
 
 ```sql
 SELECT date_key,
@@ -656,17 +656,17 @@ SELECT date_key,
 
 +++
 
-Zie de [ documentatie van de de veranderingstrend widget van de Tendens van Profielen ](../guides/profiles.md#profiles-count-change-trend) voor informatie over de verschijning en de functionaliteit van dit inzicht.
+Zie de [ documentatie van de verandering trendverandering van het aantal Profielen widget ](../guides/profiles.md#profiles-count-change-trend) voor informatie over de verschijning en de functionaliteit van dit insight.
 
 ## Tendens van verandering van aantal profielen door identiteit {#profiles-count-change-trend-by-identity}
 
-Vragen beantwoord door dit inzicht:
+Door deze insight beantwoorde vragen:
 
 - Wat is de algemene trend in de verandering van het aantal profielen in de afgelopen twaalf maanden voor verschillende identiteiten?
 - Zijn er specifieke identiteitstendensen die significante veranderingen in de laatste 30 dagen tonen?
 - Hoe verschillen de veranderingen in het profielaantal wanneer het vergelijken van de 30 dag, 90 dag, en 12 maandtendensen voor een bepaalde identiteit?
 
-+++Selecteer om de SQL te onthullen die dit inzicht produceert
++++Selecteer deze optie om de SQL die deze insight genereert, weer te geven
 
 ```sql
 SELECT date_key,
@@ -697,18 +697,18 @@ SELECT date_key,
 
 +++
 
-Zie de [ trend van de verandering van de tellingen van Profielen door de documentatie van de identiteitswidget ](../guides/profiles.md#profiles-count-change-trend-by-identity) voor informatie over de verschijning en de functionaliteit van dit inzicht.
+Zie de [ trend van de verandering van de tellingen van Profielen door de documentatie van de identiteitswidget ](../guides/profiles.md#profiles-count-change-trend-by-identity) voor informatie over de verschijning en de functionaliteit van deze insight.
 
 ## Eén identiteitsprofiel {#single-identity-profiles}
 
-Vragen beantwoord door dit inzicht:
+Door deze insight beantwoorde vragen:
 
 - Zijn mijn gegevens van de klantenidentiteit constant vertegenwoordigd met enige identiteiten?
 - Welk percentage van mijn gebruikersbasis bestaat uit profielen met slechts één enkel type van identiteit?
 - Hoe is dit effect op de volledigheid van de profielen met slechts één type identiteit?
 - Is er een correlatie tussen het gemeenschappelijkste identiteitstype en het enige aantal van het identiteitsprofiel?
 
-+++Selecteer om de SQL te onthullen die dit inzicht produceert
++++Selecteer deze optie om de SQL die deze insight genereert, weer te geven
 
 ```sql
 SELECT qsaccel.profile_agg.adwh_dim_merge_policies.merge_policy_name,
@@ -722,17 +722,17 @@ SELECT qsaccel.profile_agg.adwh_dim_merge_policies.merge_policy_name,
 
 +++
 
-Zie de [ Enige documentatie van de widget van identiteitsprofielen ](../guides/profiles.md#single-identity-profiles) voor informatie over de verschijning en de functionaliteit van dit inzicht.
+Zie de [ Enige documentatie van de identiteitsprofielen widget ](../guides/profiles.md#single-identity-profiles) voor informatie over de verschijning en de functionaliteit van dit insight.
 
 ## Eén identiteitsprofiel op basis van identiteit {#single-identity-profiles-by-identity}
 
-Vragen beantwoord door dit inzicht:
+Door deze insight beantwoorde vragen:
 
 - Hoeveel unieke klanten hebben zich met één identiteit geregistreerd (bijvoorbeeld een e-mail- of telefoonnummer)?
 - Wat is de distributie van enkele identiteitsprofielen onder verschillende identiteitstypes, zoals e-mail of telefoonaantallen?
 - Zijn er identiteitspatronen of verschuivingen binnen de enige identiteitsprofielen?
 
-+++Selecteer om de SQL te onthullen die dit inzicht produceert
++++Selecteer deze optie om de SQL die deze insight genereert, weer te geven
 
 ```sql
 SELECT qsaccel.profile_agg.adwh_dim_namespaces.namespace_description,
@@ -749,17 +749,17 @@ SELECT qsaccel.profile_agg.adwh_dim_namespaces.namespace_description,
 
 +++
 
-Zie [ Enige identiteitsprofielen door de documentatie van de identiteitswidget ](../guides/profiles.md#single-identity-profiles-by-identity) voor informatie over de verschijning en de functionaliteit van dit inzicht.
+Zie [ Enige identiteitsprofielen door de documentatie van identiteitskaart widget ](../guides/profiles.md#single-identity-profiles-by-identity) voor informatie over de verschijning en de functionaliteit van dit insight.
 
 ## Niet-gesegmenteerde profielen {#unsegmented-profiles}
 
-Vragen beantwoord door dit inzicht:
+Door deze insight beantwoorde vragen:
 
 - Hoeveel profielen maken geen deel uit van een publiek?
 - Welk percentage van het totale publiek wordt vertegenwoordigd door ongesegmenteerde profielen?
 - Leidt een fusiebeleid tot een groot aantal ongesegmenteerde profielen?
 
-+++Selecteer om de SQL te onthullen die dit inzicht produceert
++++Selecteer deze optie om de SQL die deze insight genereert, weer te geven
 
 ```sql
 SELECT qsaccel.profile_agg.adwh_dim_merge_policies.merge_policy_name,
@@ -773,7 +773,7 @@ SELECT qsaccel.profile_agg.adwh_dim_merge_policies.merge_policy_name,
 
 +++
 
-Zie de [ Unsegmented de documentatie van de profielwidget ](../guides/profiles.md#unsegmented-profiles) voor informatie over de verschijning en de functionaliteit van dit inzicht.
+Zie de [ Unsegmented de documentatie van de profielwidget ](../guides/profiles.md#unsegmented-profiles) voor informatie over de verschijning en de functionaliteit van dit insight.
 
 ## Volgende stappen
 

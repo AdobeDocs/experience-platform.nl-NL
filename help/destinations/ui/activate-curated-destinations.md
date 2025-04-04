@@ -3,9 +3,9 @@ title: Het publiek activeren op gekrulde doelen op basis van LiveRamp-id's
 type: Tutorial
 description: Leer hoe u het publiek activeert van Adobe Experience Platform naar verbonden tv- en audiodoelen en andere integraties met de LiveRamp RampID.
 exl-id: 37e5bab9-588f-40b3-b65b-68f1a4b868f1
-source-git-commit: c2e308b5e743f07062be9a34e23c4bc700b27463
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '660'
+source-wordcount: '662'
 ht-degree: 0%
 
 ---
@@ -16,7 +16,7 @@ Gebruik de Adobe Real-Time CDP-integratie met [!DNL LiveRamp] om het publiek te 
 
 >[!IMPORTANT]
 >
->U hoeft geen gegevens in te voeren of op enigerlei wijze met LiveRamp RampID&#39;s in de interface van het Experience Platform te werken.
+>U hoeft geen LiveRamp RampID&#39;s in de Experience Platform-interface in te voeren of op welke manier dan ook te gebruiken.
 >
 > U kunt identiteiten van Real-Time CDP, zoals op PII-Gebaseerde herkenningstekens, bekende herkenningstekens, en douane IDs uitvoeren, zoals die in de officiële [ documentatie LiveRamp ](https://docs.liveramp.com/connect/en/identity-and-identifier-terms-and-concepts.html#known-identifiers) wordt beschreven. Deze identiteiten worden dan gevolgd door [!DNL LiveRamp RampIDs] verderop in het activeringsproces.
 
@@ -64,19 +64,19 @@ Bekijk de onderstaande video voor een end-to-end uitleg van de workflow die in d
 
 >[!VIDEO](https://video.tv.adobe.com/v/3425367)
 
-### Stap 1: Verzend uw publiek van Experience Platform naar LiveRamp, door de [!DNL LiveRamp - Onboarding] -bestemming {#onboarding}
+### Stap 1: verzend uw publiek van Experience Platform naar LiveRamp, via de [!DNL LiveRamp - Onboarding] -bestemming {#onboarding}
 
-Het eerste ding dat u moet doen om uw publiek aan gekromde bestemmingen te activeren die op LiveRampIDs worden gebaseerd moet **uw publiek van Experience Platform naar[!DNL LiveRamp]** uitvoeren.
+Het eerste wat u moet doen om uw publiek aan gekromde bestemmingen te activeren die op LiveRampIDs worden gebaseerd is uw publiek van Experience Platform naar **uit te voeren.[!DNL LiveRamp]**
 
 Dit doet u met het doel **[!DNL LiveRamp - Onboarding]** .
 
-{het beeld van 0} Experience Platform UI die LiveRamp - Onboarding bestemmingskaart toont ](../assets/ui/activate-curated-destinations-liveramp/liveramp-onboarding-catalog.png)![
+![ het beeld van Experience Platform UI die LiveRamp - Onboarding bestemmingskaart toont ](../assets/ui/activate-curated-destinations-liveramp/liveramp-onboarding-catalog.png)
 
-Lees de [[!DNL LiveRamp - Onboarding]](../catalog/advertising/liveramp-onboarding.md) doeldocumentatie voor meer informatie over het configureren van de [!DNL LiveRamp - Onboarding] -bestemming en het exporteren van publiek vanuit het Experience Platform.
+Lees de [[!DNL LiveRamp - Onboarding]](../catalog/advertising/liveramp-onboarding.md) -doeldocumentatie voor meer informatie over het configureren van de [!DNL LiveRamp - Onboarding] -bestemming en het exporteren van uw publiek vanuit Experience Platform.
 
 >[!IMPORTANT]
 >
->Wanneer het uitvoeren van dossiers aan de [!DNL LiveRamp - Onboarding] bestemming, produceert het Platform één Csv- dossier voor elke [ identiteitskaart van het fusiebeleid ](../../profile/merge-policies/overview.md). Zie de doeldocumentatie van [[!DNL LiveRamp - Onboarding]](../catalog/advertising/liveramp-onboarding.md) voor gedetailleerde informatie over hoe u de gegevensexport naar LiveRamp kunt valideren.
+>Wanneer het uitvoeren van dossiers aan de [!DNL LiveRamp - Onboarding] bestemming, produceert Experience Platform één Csv- dossier voor elke [ identiteitskaart van het fusiebeleid ](../../profile/merge-policies/overview.md). Zie de doeldocumentatie van [[!DNL LiveRamp - Onboarding]](../catalog/advertising/liveramp-onboarding.md) voor gedetailleerde informatie over hoe u de gegevensexport naar LiveRamp kunt valideren.
 
 
 Nadat u met succes uw publiek naar LiveRamp hebt uitgevoerd, ga aan [ stap 2 ](#distribution) verder.
@@ -91,7 +91,7 @@ Nadat u [ ](../catalog/advertising/liveramp-onboarding.md#exported-data) hebt be
 
 U activeert het publiek (die in [ wordt uitgevoerd stap 1 ](#onboarding)) door de **[!DNL LiveRamp - Distribution]** bestemming te gebruiken.
 
-![ Experience Platform UI beeld dat LiveRamp toont - de bestemmingskaart van de Distributie ](../assets/ui/activate-curated-destinations-liveramp/liveramp-distribution-catalog.png)
+![ het beeld van Experience Platform UI die LiveRamp toont - de bestemmingskaart van de Distributie ](../assets/ui/activate-curated-destinations-liveramp/liveramp-distribution-catalog.png)
 
 Leren hoe te om de **[!DNL LiveRamp - Distribution]** bestemming te vormen en het publiek te activeren dat u in [ stap 1 ](#onboarding) uitvoerde, de [[!DNL LiveRamp - Distribution]](../catalog/advertising/liveramp-distribution.md) bestemmingsdocumentatie lezen.
 
@@ -103,11 +103,11 @@ Wanneer u de **[!DNL LiveRamp - Distribution]** bestemming vormt, moet u een spe
 
 >[!TIP]
 >
->Adobe raadt u aan de volgende notatie te gebruiken wanneer u de naam van het doel opgeeft: `LiveRamp - Downstream Destination Name` . Dit het noemen patroon helpt u snel uw bestemmingen in [ identificeren doorbladert ](../ui/destinations-workspace.md#browse) lusje van de bestemmingswerkruimte.
+>Adobe raadt u aan de volgende notatie te gebruiken als u uw bestemming een naam geeft. `LiveRamp - Downstream Destination Name` Dit het noemen patroon helpt u snel uw bestemmingen in [ identificeren doorbladert ](../ui/destinations-workspace.md#browse) lusje van de bestemmingswerkruimte.
 ><br>
 >Voorbeeld: `LiveRamp - Roku` .
 
-{het schermschot van het platform UI die veelvoudige bestemmingen LiveRamp toont.](../assets/ui/activate-curated-destinations-liveramp/liveramp-naming.png)![
+{het schermschot van 0} Experience Platform UI die veelvoudige bestemmingen LiveRamp toont.](../assets/ui/activate-curated-destinations-liveramp/liveramp-naming.png)![
 
 ## Geëxporteerde gegevens/Gegevens valideren bij exporteren {#exported-data}
 

@@ -2,9 +2,9 @@
 title: Primaire id's instellen in een ad-hocgegevensset
 description: Met de Adobe Experience Platform Query Service kunt u een identiteit of een primaire identiteit voor de gegevenssetvelden van een ad-hocschema rechtstreeks instellen via de SQL-opdracht ALTER TABLE. Het document verklaart hoe te om het ALTER bevel van de LIJST te gebruiken om een primaire identiteit of een secundaire identiteit te plaatsen.
 exl-id: b8e6b87e-c6e5-4688-a936-a3a1510a3c5b
-source-git-commit: d9c3ccdf0c0e191af1ab18e894688f301378156d
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '445'
+source-wordcount: '447'
 ht-degree: 0%
 
 ---
@@ -22,7 +22,7 @@ Voor het labelen van gegevenssetkolommen als primaire of secundaire identiteit i
 
 ## Beperkingen toevoegen {#add-constraints}
 
-Met de opdracht `ALTER TABLE` kunt u een gegevenssetkolom labelen als de identiteit van een persoon en dat label vervolgens gebruiken als een primaire identiteit door de bijbehorende metagegevens bij te werken met SQL. Dit is vooral nuttig wanneer de datasets door SQL eerder dan direct van een schema door Platform UI worden gecreeerd. De opdracht kan worden gebruikt om ervoor te zorgen dat uw gegevensbewerkingen in het Platform compatibel zijn met het beleid voor gegevensgebruik.
+Met de opdracht `ALTER TABLE` kunt u een gegevenssetkolom labelen als de identiteit van een persoon en dat label vervolgens gebruiken als een primaire identiteit door de bijbehorende metagegevens bij te werken met SQL. Dit is vooral nuttig wanneer de datasets door SQL eerder dan direct van een schema door Experience Platform UI worden gecreeerd. U kunt deze opdracht gebruiken om ervoor te zorgen dat uw gegevensbewerkingen in Experience Platform compatibel zijn met het beleid voor gegevensgebruik.
 
 **Voorbeelden**
 

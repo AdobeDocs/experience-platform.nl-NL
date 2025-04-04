@@ -4,16 +4,16 @@ solution: Experience Platform
 title: Handleiding Workflows-gebruikersinterface
 description: Leer hoe u workflows met meerdere stappen kunt volgen voor het uitvoeren van veelvoorkomende bewerkingen in de Adobe Experience Platform-gebruikersinterface.
 exl-id: f1a3ea83-09c9-48df-9493-62f03b403a95
-source-git-commit: 5a14eb5938236fa7186d1a27f28cee15fe6558f6
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '278'
+source-wordcount: '280'
 ht-degree: 0%
 
 ---
 
 # [!UICONTROL Workflows] UI-hulplijn
 
-In de sectie **[!UICONTROL Workflows]** in de gebruikersinterface van Adobe Experience Platform wordt een lijst weergegeven met uit meerdere stappen bestaande workflows voor het uitvoeren van bewerkingen binnen het platform. Deze workflows hebben betrekking op gebieden zoals gegevensinvoer en gegevenswetenschap.
+Het gedeelte **[!UICONTROL Workflows]** in de gebruikersinterface van Adobe Experience Platform bevat een lijst met meerstapsworkflows voor het uitvoeren van bewerkingen in Experience Platform. Deze workflows hebben betrekking op gebieden zoals gegevensinvoer en gegevenswetenschap.
 
 ![ werkschema&#39;s ](./images/workflows/workflows.png)
 
@@ -35,4 +35,4 @@ Met de **[!UICONTROL Publish a model as a service]** -workflow kunt u een gemaak
 
 ## Volgende stappen
 
-Door deze handleiding te lezen, hebt u de [!UICONTROL Workflows] gekregen die beschikbaar is in de gebruikersinterface van het Experience Platform. Voor meer informatie over de eigenschappen en de functionaliteit van het Platform UI, te lezen gelieve de [ gids UI van Adobe Experience Platform ](ui-guide.md).
+Door deze handleiding te lezen, hebt u kennisgemaakt met de [!UICONTROL Workflows] -code die beschikbaar is in de Experience Platform-gebruikersinterface. Voor meer informatie over de eigenschappen en de functionaliteit van Experience Platform UI, te lezen gelieve de [ gids UI van Adobe Experience Platform ](ui-guide.md).

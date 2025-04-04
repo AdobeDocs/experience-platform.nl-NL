@@ -1,11 +1,11 @@
 ---
 title: Overzicht Snowflake Source Connector
 description: Leer hoe u Snowflake met Adobe Experience Platform kunt verbinden via API's of de gebruikersinterface.
-badgeUltimate: label="Ultieme" type="Positive"
+badgeUltimate: label="Ultimate" type="Positive"
 exl-id: df066463-1ae6-4ecd-ae0e-fb291cec4bd5
-source-git-commit: 8d6baef1549498e137d336ac2c8a42428496dedf
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '689'
+source-wordcount: '694'
 ht-degree: 0%
 
 ---
@@ -14,21 +14,21 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
->* De [!DNL Snowflake] -bron is in de broncatalogus beschikbaar voor gebruikers die Real-time Customer Data Platform Ultimate hebben aangeschaft.
->* Standaard wordt [!DNL Snowflake] source `null` geïnterpreteerd als een lege tekenreeks. Neem contact op met uw Adobe om ervoor te zorgen dat de `null` -waarden correct worden geschreven zoals `null` in Adobe Experience Platform.
->* Voor Experience Platform om gegevens in te voeren, moeten de tijdzones voor alle op lijst-gebaseerde partijbronnen aan UTC worden gevormd. Het enige tijdstempel dat wordt ondersteund voor de [!DNL Snowflake] -bron is TIMESTAMP_NTZ met UTC-tijd.
+>* De [!DNL Snowflake] -bron is in de broncatalogus beschikbaar voor gebruikers die Real-Time Customer Data Platform Ultimate hebben aangeschaft.
+>* Standaard wordt [!DNL Snowflake] source `null` geïnterpreteerd als een lege tekenreeks. Neem contact op met uw Adobe-vertegenwoordiger om ervoor te zorgen dat de `null` -waarden correct worden geschreven zoals `null` in Adobe Experience Platform.
+>* Experience Platform kan alleen gegevens invoeren als tijdzones voor alle batchbronnen op basis van tabellen zijn geconfigureerd voor UTC. Het enige tijdstempel dat wordt ondersteund voor de [!DNL Snowflake] -bron is TIMESTAMP_NTZ met UTC-tijd.
 
-Adobe Experience Platform staat toe dat gegevens uit externe bronnen worden opgenomen terwijl u de mogelijkheid krijgt om inkomende gegevens te structureren, te labelen en te verbeteren met behulp van de platformservices. U kunt gegevens uit diverse bronnen invoeren, zoals toepassingen voor Adobe, opslag in de cloud, databases en vele andere.
+Adobe Experience Platform staat toe dat gegevens uit externe bronnen worden opgenomen en biedt u de mogelijkheid om inkomende gegevens te structureren, labelen en verbeteren met behulp van Experience Platform-services. U kunt gegevens invoeren uit verschillende bronnen, zoals Adobe-toepassingen, opslag in de cloud, databases en vele andere.
 
-Experience Platform verleent steun voor het opnemen van gegevens van een derdegegevensbestand. Het platform kan met verschillende types van gegevensbestanden zoals relationeel, NoSQL, of gegevenspakhuizen verbinden. Ondersteuning voor databaseproviders is onder andere [!DNL Snowflake] .
+Experience Platform biedt ondersteuning voor het opnemen van gegevens uit een database van derden. Experience Platform kan verbinding maken met verschillende typen databases, zoals relationele databases, NoSQL-databases of gegevensopslagruimten. Ondersteuning voor databaseproviders is onder andere [!DNL Snowflake] .
 
 ## Vereisten {#prerequisites}
 
-In deze sectie worden de instellingstaken beschreven die u moet uitvoeren voordat u de [!DNL Snowflake] -bron kunt verbinden met het Experience Platform.
+In deze sectie worden de instellingstaken beschreven die u moet uitvoeren voordat u de [!DNL Snowflake] -bron kunt verbinden met Experience Platform.
 
 ### Uw account-id ophalen {#retrieve-your-account-identifier}
 
-U moet uw account-id ophalen van het [!DNL Snowflake] UI-dashboard omdat u de account-id gebruikt om uw [!DNL Snowflake] -instantie op het Experience Platform te verifiëren.
+U moet uw account-id ophalen van het [!DNL Snowflake] UI-dashboard omdat u de account-id gebruikt om uw [!DNL Snowflake] -instantie op Experience Platform te verifiëren.
 
 Uw account-id ophalen:
 
@@ -40,7 +40,7 @@ Uw account-id ophalen:
 
 ### Persoonlijke sleutel ophalen {#retrieve-your-private-key}
 
-Als u sleutelparverificatie gebruikt voor uw [!DNL Snowflake] -verbinding, moet u ook uw persoonlijke sleutel genereren voordat u verbinding maakt met het Experience Platform.
+Als u sleutelparverificatie gebruikt voor uw [!DNL Snowflake] -verbinding, moet u ook uw persoonlijke sleutel genereren voordat u verbinding maakt met Experience Platform.
 
 >[!BEGINTABS]
 
@@ -94,23 +94,23 @@ Om uw rol en pakhuis te verifiëren:
 * Navigeer in het [!DNL Edit user] -venster dat wordt weergegeven naar [!DNL Default Role] om de rol weer te geven die aan de opgegeven gebruiker is gekoppeld.
 * Navigeer in hetzelfde venster naar [!DNL Default Warehouse] om het pakhuis weer te geven dat aan de opgegeven gebruiker is gekoppeld.
 
-![ de Snowflake UI waar u uw rol en pakhuis kunt verifiëren.](../../images/tutorials/create/snowflake/snowflake-configs.png)
+![ Snowflake UI waar u uw rol en pakhuis kunt verifiëren.](../../images/tutorials/create/snowflake/snowflake-configs.png)
 
-Nadat de codering is voltooid, kunt u die [!DNL Base64] gecodeerde persoonlijke sleutel op het Experience Platform gebruiken om uw [!DNL Snowflake] -account te verifiëren.
+Nadat de codering is voltooid, kunt u die [!DNL Base64] gecodeerde persoonlijke sleutel op Experience Platform gebruiken om uw [!DNL Snowflake] -account te verifiëren.
 
 ## IP adres lijst van gewenste personen
 
 Een lijst van IP adressen moet aan een lijst van gewenste personen worden toegevoegd alvorens met bronschakelaars te werken. Het niet toevoegen van uw regio-specifieke IP adressen aan uw lijst van gewenste personen kan tot fouten of niet-prestaties leiden wanneer het gebruiken van bronnen. Zie de ](../../ip-address-allow-list.md) pagina van de lijst van gewenste personen van het 0} IP adres {voor meer informatie.[
 
-In de onderstaande documentatie vindt u informatie over het tot stand brengen van een verbinding tussen [!DNL Snowflake] en Platform via API&#39;s of de gebruikersinterface:
+In de onderstaande documentatie vindt u informatie over het tot stand brengen van een verbinding tussen [!DNL Snowflake] en Experience Platform via API&#39;s of de gebruikersinterface:
 
-## Verbinding maken [!DNL Snowflake] met platform met behulp van API&#39;s
+## Verbinding maken [!DNL Snowflake] met Experience Platform via API&#39;s
 
-* [Een basisverbinding voor Snowflaken maken met de Flow Service API](../../tutorials/api/create/databases/snowflake.md)
+* [Een Snowflake-basisverbinding maken met de Flow Service API](../../tutorials/api/create/databases/snowflake.md)
 * [Gegevenstabellen verkennen met de Flow Service API](../../tutorials/api/explore/tabular.md)
 * [Een gegevensstroom maken voor een databasebron met behulp van de Flow Service API](../../tutorials/api/collect/database-nosql.md)
 
-## Verbinding maken [!DNL Snowflake] met platform via de gebruikersinterface
+## Verbinding maken [!DNL Snowflake] met Experience Platform via de gebruikersinterface
 
 * [Een Snowflake-bronverbinding maken in de gebruikersinterface](../../tutorials/ui/create/databases/snowflake.md)
 * [Een gegevensstroom maken voor een databasebronverbinding in de gebruikersinterface](../../tutorials/ui/dataflow/databases.md)

@@ -1,11 +1,11 @@
 ---
 keywords: doelextensie;doel;doel v2;doel v2-extensie
 title: Adobe Target v2-extensie
-description: De Adobe Target v2-extensie is een personalisatiebestemming in Adobe Experience Platform. Zie de extensiepagina over Adobe Exchange voor meer informatie over de extensiefunctionaliteit.
+description: De Adobe Target v2-extensie is een personalisatiebestemming in Adobe Experience Platform. Zie de extensiepagina op Adobe Exchange voor meer informatie over de extensiefunctionaliteit.
 exl-id: d1d5ebbc-9093-42b0-8d88-58779df3ec89
-source-git-commit: 88939d674c0002590939004e0235d3da8b072118
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '476'
+source-wordcount: '479'
 ht-degree: 0%
 
 ---
@@ -18,13 +18,13 @@ Adobe Target is de Adobe Experience Cloud-oplossing die alles biedt wat u nodig 
 
 Adobe Target v2 is een personalisatie-uitbreiding in Adobe Experience Platform. Voor meer informatie over de uitbreidingsfunctionaliteit, zie de uitbreidingspagina op [ Adobe Exchange ](https://exchange.adobe.com/experiencecloud.details.102722.adobe-target-v2-launch-extension.html).
 
-Dit doel is een tagextensie. Voor meer informatie over hoe de markeringsuitbreidingen in Platform werken, zie het [ overzicht van markeringsuitbreidingen ](../launch-extensions/overview.md).
+Dit doel is een tagextensie. Voor meer informatie over hoe de markeringsuitbreidingen in Experience Platform werken, zie het [ overzicht van markeringsuitbreidingen ](../launch-extensions/overview.md).
 
 ![ de uitbreiding van Adobe Target v2 ](../../assets/catalog/personalization/adobe-target-v2/catalog.png)
 
 ## Vereisten {#prerequisites}
 
-Deze extensie is beschikbaar in de catalogus [!DNL Destinations] voor alle klanten die Platform hebben aangeschaft.
+Deze extensie is beschikbaar in de catalogus [!DNL Destinations] voor alle klanten die Experience Platform hebben aangeschaft.
 
 Als u deze extensie wilt gebruiken, hebt u toegang tot tags in Adobe Experience Platform nodig. Tags worden aan Adobe Experience Cloud-klanten aangeboden als een inbegrepen, waardetoevoegend element. Neem contact op met de systeembeheerder van uw organisatie om toegang tot tags te krijgen en vraag hen om u de **[!UICONTROL manage_properties]** -machtiging te verlenen zodat u extensies kunt installeren.
 
@@ -32,7 +32,7 @@ Als u deze extensie wilt gebruiken, hebt u toegang tot tags in Adobe Experience 
 
 De Adobe Target v2-extensie installeren:
 
-In de [ interface van het Platform ](https://platform.adobe.com/), ga **[!UICONTROL Destinations]** > **[!UICONTROL Catalog]**.
+In de [ interface van Experience Platform ](https://platform.adobe.com/), ga **[!UICONTROL Destinations]** > **[!UICONTROL Catalog]**.
 
 Selecteer de extensie in de catalogus of gebruik de zoekbalk.
 

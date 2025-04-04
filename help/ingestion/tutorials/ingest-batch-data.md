@@ -1,20 +1,20 @@
 ---
 keywords: Experience Platform;home;populaire onderwerpen;ingestie;ingest batchgegevens;zelfstudie;batch-opname;zelfstudie;ui-handleiding;
 solution: Experience Platform
-title: Gegevens in Experience Platform opnemen
+title: Gegevens opnemen in Experience Platform
 type: Tutorial
 description: Met Adobe Experience Platform kunt u gegevens eenvoudig importeren als batchbestanden in de vorm van Parquet-bestanden of gegevens die overeenkomen met een bekend XDM-schema (Experience Data Model).
 exl-id: a4a7358d-b117-4d81-8cb0-3dbbfeccdcbd
-source-git-commit: 8351f6907a0dc4a4bba01c7f6e9dec7c376c8575
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1260'
+source-wordcount: '1261'
 ht-degree: 0%
 
 ---
 
 # Gegevens opnemen in Adobe Experience Platform
 
-Met Adobe Experience Platform kunt u gegevens eenvoudig als batchbestanden importeren in [!DNL Platform] . Voorbeelden van gegevens die moeten worden opgenomen, kunnen profielgegevens bevatten van een plat bestand in een CRM-systeem (zoals een Parquet-bestand) of gegevens die voldoen aan een bekend [!DNL Experience Data Model] (XDM) schema in de Schema-register.
+Met Adobe Experience Platform kunt u gegevens eenvoudig als batchbestanden importeren in [!DNL Experience Platform] . Voorbeelden van gegevens die moeten worden opgenomen, kunnen profielgegevens bevatten van een plat bestand in een CRM-systeem (zoals een Parquet-bestand) of gegevens die voldoen aan een bekend [!DNL Experience Data Model] (XDM) schema in de Schema-register.
 
 ## Aan de slag
 
@@ -80,7 +80,7 @@ Op het tabblad Info vindt u ook een **[!UICONTROL Profile]** -schakeloptie die w
 
 ## Gegevensset inschakelen voor [!DNL Real-Time Customer Profile]
 
-Datasets worden gebruikt voor het opnemen van gegevens in [!DNL Experience Platform] en die gegevens worden uiteindelijk gebruikt om individuen te identificeren en informatie die uit meerdere bronnen afkomstig is aan elkaar te koppelen. Deze samengevoegde informatie wordt een [!DNL Real-Time Customer Profile] genoemd. [!DNL Platform] weet welke informatie moet worden opgenomen in de [!DNL Real-Time Profile] , dus gegevenssets kunnen worden gemarkeerd voor opname met de **[!UICONTROL Profile]** -schakeloptie.
+Datasets worden gebruikt voor het opnemen van gegevens in [!DNL Experience Platform] en die gegevens worden uiteindelijk gebruikt om individuen te identificeren en informatie die uit meerdere bronnen afkomstig is aan elkaar te koppelen. Deze samengevoegde informatie wordt een [!DNL Real-Time Customer Profile] genoemd. [!DNL Experience Platform] weet welke informatie moet worden opgenomen in de [!DNL Real-Time Profile] , dus gegevenssets kunnen worden gemarkeerd voor opname met de **[!UICONTROL Profile]** -schakeloptie.
 
 Deze schakeloptie is standaard uitgeschakeld. Als u [!DNL Profile] inschakelt, worden alle gegevens die in de gegevensset worden ingevoerd, gebruikt om een individu te identificeren en de gegevens aan elkaar te koppelen [!DNL Real-Time Profile] .
 
@@ -106,13 +106,13 @@ Klik op het tabblad **[!UICONTROL Add Data]** om gegevens toe te voegen aan de g
 
 >[!NOTE]
 >
->Platform ondersteunt twee bestandstypen voor gegevensinvoer, Parquet of JSON. U kunt maximaal vijf bestanden tegelijk toevoegen, waarbij de maximale bestandsgrootte van elk bestand 1 GB is.
+>Experience Platform ondersteunt twee bestandstypen voor gegevensinvoer, Parquet of JSON. U kunt maximaal vijf bestanden tegelijk toevoegen, waarbij de maximale bestandsgrootte van elk bestand 1 GB is.
 
 ![ voeg Gegevens tabel ](../images/tutorials/ingest-batch-data/drag-and-drop.png) toe
 
 ## Een bestand uploaden {#upload-file}
 
-Wanneer u een Parquet- of JSON-bestand dat u wilt uploaden sleept en neerzet (of bladert en selecteert), begint [!DNL Platform] onmiddellijk met het verwerken van het bestand. Op het tabblad **[!UICONTROL Add Data]** wordt een dialoogvenster **[!UICONTROL Uploading]** weergegeven met de voortgang van het uploaden van het bestand.
+Wanneer u een Parquet- of JSON-bestand dat u wilt uploaden sleept en neerzet (of bladert en selecteert), begint [!DNL Experience Platform] onmiddellijk met het verwerken van het bestand. Op het tabblad **[!UICONTROL Add Data]** wordt een dialoogvenster **[!UICONTROL Uploading]** weergegeven met de voortgang van het uploaden van het bestand.
 
 ![ Uploading dialoog ](../images/tutorials/ingest-batch-data/uploading-file.png)
 
@@ -150,6 +150,6 @@ Om meer over partijingestie te leren, te lezen gelieve het [ overzicht van de In
 
 >[!WARNING]
 >
->De gebruikersinterface van [!DNL Platform] in de volgende video is verouderd. Raadpleeg de bovenstaande documentatie voor de meest recente schermafbeeldingen en functionaliteit van de gebruikersinterface.
+>De gebruikersinterface van [!DNL Experience Platform] in de volgende video is verouderd. Raadpleeg de bovenstaande documentatie voor de meest recente schermafbeeldingen en functionaliteit van de gebruikersinterface.
 
 >[!VIDEO](https://video.tv.adobe.com/v/27269?quality=12&learn=on)

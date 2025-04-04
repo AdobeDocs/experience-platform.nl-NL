@@ -1,11 +1,11 @@
 ---
 keywords: bizible;bizible extension;bizible destination
 title: Bizible extension
-description: De Bizible-extensie is een e-maildoel in Adobe Experience Platform. Zie de extensiepagina over Adobe Exchange voor meer informatie over de extensiefunctionaliteit.
+description: De Bizible-extensie is een e-maildoel in Adobe Experience Platform. Zie de extensiepagina op Adobe Exchange voor meer informatie over de extensiefunctionaliteit.
 exl-id: 9e45416d-b951-411c-a59f-34f84529f721
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '424'
+source-wordcount: '427'
 ht-degree: 0%
 
 ---
@@ -18,13 +18,13 @@ ht-degree: 0%
 
 [!DNL Bizible] is een e-mailextensie in Adobe Experience Platform. Voor meer informatie over Bizible, lees [ Attributie van de Marketing ](https://experienceleague.adobe.com/docs/bizible/using/introduction-to-bizible/overview-resources/marketing-attribution.html) in de Bizible overzichtsmiddelen.
 
-Dit doel is een tagextensie. Voor meer informatie over hoe de uitbreidingen van markeringen in Platform werken, zie het [ overzicht van markeringsuitbreidingen ](../launch-extensions/overview.md).
+Dit doel is een tagextensie. Voor meer informatie over hoe de uitbreidingen van markeringen in Experience Platform werken, zie het [ overzicht van markeringsuitbreidingen ](../launch-extensions/overview.md).
 
 ![ Bizible uitbreiding ](../../assets/catalog/email/bizible/catalog.png)
 
 ## Vereisten {#prerequisites}
 
-Deze extensie is beschikbaar in de catalogus [!DNL Destinations] voor alle klanten die Platform hebben aangeschaft.
+Deze extensie is beschikbaar in de catalogus [!DNL Destinations] voor alle klanten die Experience Platform hebben aangeschaft.
 
 Als u deze extensie wilt gebruiken, hebt u toegang tot tags in Adobe Experience Platform nodig. Tags worden aan Adobe Experience Cloud-klanten aangeboden als een inbegrepen, waardetoevoegend element. Neem contact op met de systeembeheerder van uw organisatie om toegang tot tags te krijgen en vraag hen om u de **[!UICONTROL manage_properties]** -machtiging te verlenen zodat u extensies kunt installeren.
 
@@ -32,7 +32,7 @@ Als u deze extensie wilt gebruiken, hebt u toegang tot tags in Adobe Experience 
 
 De extensie [!DNL Bizible] installeren:
 
-In de [ interface van het Platform ](https://platform.adobe.com/), ga **[!UICONTROL Destinations]** > **[!UICONTROL Catalog]**.
+In de [ interface van Experience Platform ](https://platform.adobe.com/), ga **[!UICONTROL Destinations]** > **[!UICONTROL Catalog]**.
 
 Selecteer de extensie in de catalogus of gebruik de zoekbalk.
 

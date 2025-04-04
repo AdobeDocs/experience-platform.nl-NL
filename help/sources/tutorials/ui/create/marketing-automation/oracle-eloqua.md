@@ -1,15 +1,15 @@
 ---
-title: Een Eloqua-bronverbinding voor Oracles maken met behulp van Platform UI
-description: Leer hoe u Adobe Experience Platform kunt verbinden met Oracle Eloqua via de interface van het platform.
+title: Een Oracle Eloqua-bronverbinding maken met de gebruikersinterface van Experience Platform
+description: Leer hoe u Adobe Experience Platform kunt verbinden met Oracle Eloqua via de gebruikersinterface van Experience Platform.
 exl-id: c4431d85-5948-4122-9a99-dbacdde5a09f
-source-git-commit: 9ca4f19f7b59f075250bce7035303e11d3f3710f
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '504'
+source-wordcount: '519'
 ht-degree: 0%
 
 ---
 
-# Een [!DNL Oracle Eloqua] bronverbinding maken met behulp van platforminterface
+# Een [!DNL Oracle Eloqua] bronverbinding maken met de gebruikersinterface van Experience Platform
 
 >[!WARNING]
 >
@@ -19,16 +19,16 @@ Deze zelfstudie bevat stappen voor het maken van een [!DNL Oracle Eloqua] -bronv
 
 ## Aan de slag
 
-Deze gids vereist een werkend inzicht in de volgende componenten van Platform:
+Deze handleiding vereist een goed begrip van de volgende onderdelen van Experience Platform:
 
-* [ Bronnen ](../../../../home.md): Het platform staat gegevens toe om van diverse bronnen worden opgenomen terwijl het voorzien van u van de capaciteit om, inkomende gegevens te structureren te etiketteren en te verbeteren gebruikend de diensten van het Platform.
-* [ Sandboxes ](../../../../../sandboxes/home.md): Het platform verstrekt virtuele zandbakken die één enkele instantie van het Platform in afzonderlijke virtuele milieu&#39;s verdelen helpen digitale ervaringstoepassingen ontwikkelen en ontwikkelen.
+* [ Bronnen ](../../../../home.md): Experience Platform staat gegevens toe om van diverse bronnen worden opgenomen terwijl het voorzien van u van de capaciteit om, inkomende gegevens te structureren te etiketteren en te verbeteren gebruikend de diensten van Experience Platform.
+* [ Sandboxes ](../../../../../sandboxes/home.md): Experience Platform verstrekt virtuele zandbakken die één enkele instantie van Experience Platform in afzonderlijke virtuele milieu&#39;s verdelen helpen digitale ervaringstoepassingen ontwikkelen en ontwikkelen.
 
-Als u reeds een voor authentiek verklaarde [!DNL Oracle Eloqua] rekening op Platform hebt, dan kunt u de rest van dit document overslaan en aan het leerprogramma te werk gaan [ creërend een dataflow om de gegevens van de marketing automatisering aan Platform ](../../dataflow/marketing-automation.md) te brengen.
+Als u reeds een voor authentiek verklaarde [!DNL Oracle Eloqua] rekening op Experience Platform hebt, dan kunt u de rest van dit document overslaan en aan het leerprogramma te werk gaan [ creërend een dataflow om de gegevens van de marketing automatisering aan Experience Platform ](../../dataflow/marketing-automation.md) te brengen.
 
 ### Vereiste referenties verzamelen
 
-Als u [!DNL Oracle Eloqua] wilt verbinden met Platform, moet u waarden opgeven voor de volgende verificatie-eigenschappen:
+Als u [!DNL Oracle Eloqua] wilt verbinden met Experience Platform, moet u waarden opgeven voor de volgende verificatie-eigenschappen:
 
 | Credentials | Beschrijving |
 | --- | --- |
@@ -38,11 +38,11 @@ Als u [!DNL Oracle Eloqua] wilt verbinden met Platform, moet u waarden opgeven v
 
 Voor meer informatie over authentificatiegeloofsbrieven voor [!DNL Oracle Eloqua], zie de [[!DNL Oracle Eloqua]  gids over authentificatie ](https://docs.oracle.com/en/cloud/saas/marketing/eloqua-rest-api/Authentication_Basic.html).
 
-Nadat u de vereiste gegevens hebt verzameld, voert u de onderstaande stappen uit om uw [!DNL Oracle Eloqua] -account te koppelen aan Platform.
+Nadat u de vereiste gegevens hebt verzameld, kunt u de onderstaande stappen volgen om uw [!DNL Oracle Eloqua] -account te koppelen aan Experience Platform.
 
 ## Sluit uw [!DNL Oracle Eloqua] -account aan
 
-Selecteer in de gebruikersinterface van het platform de optie **[!UICONTROL Sources]** in de linkernavigatie voor toegang tot de werkruimte van [!UICONTROL Sources] . In het scherm [!UICONTROL Catalog] worden diverse bronnen weergegeven waarmee u een account kunt maken.
+Selecteer in de gebruikersinterface van Experience Platform de optie **[!UICONTROL Sources]** in de linkernavigatie voor toegang tot de werkruimte van [!UICONTROL Sources] . In het scherm [!UICONTROL Catalog] worden diverse bronnen weergegeven waarmee u een account kunt maken.
 
 U kunt de juiste categorie selecteren in de catalogus aan de linkerkant van het scherm. U kunt ook de specifieke bron vinden waarmee u wilt werken met de zoekoptie.
 
@@ -66,4 +66,4 @@ Als u een nieuwe account maakt, selecteert u **[!UICONTROL New account]** en gee
 
 ## Volgende stappen
 
-Aan de hand van deze zelfstudie hebt u een bronverbinding tussen uw [!DNL Oracle Eloqua] -account en Platform geverifieerd en gemaakt. U kunt nu aan het volgende leerprogramma verdergaan en [ een dataflow creëren om de gegevens van de marketing automatisering aan Platform ](../../dataflow/marketing-automation.md) te brengen.
+Aan de hand van deze zelfstudie hebt u een bronverbinding gemaakt en geverifieerd tussen uw [!DNL Oracle Eloqua] -account en Experience Platform. U kunt nu aan het volgende leerprogramma verdergaan en [ een dataflow creëren om de gegevens van de marketing automatisering aan Experience Platform ](../../dataflow/marketing-automation.md) te brengen.

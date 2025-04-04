@@ -5,7 +5,7 @@ title: Een GreenPlum Source-verbinding maken in de gebruikersinterface
 type: Tutorial
 description: Leer hoe u een GreenPlum-bronverbinding maakt met de gebruikersinterface van Adobe Experience Platform.
 exl-id: e6c6a495-25ce-4497-b20e-91374c7bb548
-source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '437'
 ht-degree: 0%
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # Een [!DNL GreenPlum] bronverbinding maken in de gebruikersinterface
 
-Source-connectors in Adobe Experience Platform bieden de mogelijkheid om volgens een schema extern gesourceerde gegevens in te voeren. Deze zelfstudie bevat stappen voor het maken van een [!DNL GreenPlum] bronaansluiting met behulp van de gebruikersinterface van [!DNL Platform] .
+Source-connectors in Adobe Experience Platform bieden de mogelijkheid om volgens een schema extern gesourceerde gegevens in te voeren. Deze zelfstudie bevat stappen voor het maken van een [!DNL GreenPlum] bronaansluiting met behulp van de gebruikersinterface van [!DNL Experience Platform] .
 
 ## Aan de slag
 
@@ -39,7 +39,7 @@ Voor meer informatie over begonnen worden, verwijs naar [ dit document GreenPlum
 
 ## Sluit uw [!DNL GreenPlum] -account aan
 
-Nadat u de vereiste gegevens hebt verzameld, voert u de onderstaande stappen uit om uw [!DNL GreenPlum] -account te koppelen aan [!DNL Platform] .
+Nadat u de vereiste gegevens hebt verzameld, voert u de onderstaande stappen uit om uw [!DNL GreenPlum] -account te koppelen aan [!DNL Experience Platform] .
 
 Login aan [ Adobe Experience Platform ](https://platform.adobe.com) en selecteer dan **[!UICONTROL Sources]** van de linkernavigatiebar om tot de **[!UICONTROL Sources]** werkruimte toegang te hebben. In het scherm **[!UICONTROL Catalog]** worden diverse bronnen weergegeven waarmee u een account kunt maken.
 
@@ -65,4 +65,4 @@ Als u een bestaande account wilt verbinden, selecteert u de [!DNL GreenPlum] -ac
 
 ## Volgende stappen
 
-Aan de hand van deze zelfstudie hebt u een verbinding tot stand gebracht met uw [!DNL GreenPlum] -account. U kunt nu aan het volgende leerprogramma verdergaan en [ een dataflow vormen om gegevens in  [!DNL Platform]](../../dataflow/databases.md) te brengen.
+Aan de hand van deze zelfstudie hebt u een verbinding tot stand gebracht met uw [!DNL GreenPlum] -account. U kunt nu aan het volgende leerprogramma verdergaan en [ een dataflow vormen om gegevens in  [!DNL Experience Platform]](../../dataflow/databases.md) te brengen.

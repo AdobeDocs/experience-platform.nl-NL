@@ -1,10 +1,10 @@
 ---
 title: Fuzzy Match in de Dienst van de Vraag
-description: Leer hoe te om een gelijke op uw gegevens van het Platform uit te voeren die resultaten van veelvoudige datasets door ongeveer een koord van uw keus combineert.
+description: Leer hoe u een overeenkomst op uw Experience Platform-gegevens kunt uitvoeren die resultaten van meerdere datasets combineert door ongeveer een tekenreeks van uw keuze overeen te komen.
 exl-id: ec1e2dda-9b80-44a4-9fd5-863c45bc74a7
-source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '813'
+source-wordcount: '815'
 ht-degree: 0%
 
 ---
@@ -69,7 +69,7 @@ cur = conn.cursor()
 
 Uw [!DNL Jupyter Notebook] -instantie is nu verbonden met Query Service. Als de verbinding tot stand is gebracht, wordt er geen bericht weergegeven. Als de verbinding mislukt, wordt een fout weergegeven.
 
-### Draw-gegevens van de Luma-gegevensset {#luma-dataset}
+### Gegevens tekenen vanuit de Luminagedataset {#luma-dataset}
 
 De gegevens voor analyse worden getrokken van de eerste dataset met de volgende bevelen. Kortom, de voorbeelden zijn beperkt tot de eerste 10 resultaten van de kolom.
 
@@ -96,7 +96,7 @@ array(['Deluxe King Or Queen Room', 'Kona Tower City / Mountain View',
 
 +++
 
-### Draw-gegevens uit de gegevensset Acme {#acme-dataset}
+### Gegevens tekenen uit de gegevensset Acme {#acme-dataset}
 
 De gegevens voor analyse worden nu getrokken van de tweede dataset met de volgende bevelen. Om kort te gaan, zijn de voorbeelden beperkt gebleven tot de eerste 10 resultaten van de kolom.
 
@@ -350,7 +350,7 @@ Selecteer **Output** om de resultaten van dit te zien toetreden.
 
 +++
 
-### Zwak gelijke resultaten opslaan naar platform {#save-to-platform}
+### Wazig overeenkomende resultaten opslaan in Experience Platform {#save-to-platform}
 
 Tot slot kunnen de resultaten van de vage gelijke als dataset voor gebruik in Adobe Experience Platform worden bewaard gebruikend SQL.
 

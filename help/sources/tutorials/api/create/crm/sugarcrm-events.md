@@ -2,9 +2,9 @@
 title: Een bronverbinding en gegevensstroom maken voor SugarCRM-gebeurtenissen met behulp van de Flow Service API
 description: Leer hoe u Adobe Experience Platform verbindt met SugarCRM-gebeurtenissen met behulp van de Flow Service API.
 exl-id: 12d08010-569c-4111-ba95-697c6ce6f637
-source-git-commit: 863889984e5e77770638eb984e129e720b3d4458
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1941'
+source-wordcount: '1952'
 ht-degree: 0%
 
 ---
@@ -19,16 +19,16 @@ Het volgende leerprogramma begeleidt u door de stappen om een [!DNL SugarCRM Eve
 
 ## Aan de slag
 
-Deze handleiding vereist een goed begrip van de volgende onderdelen van het Experience Platform:
+Deze handleiding vereist een goed begrip van de volgende onderdelen van Experience Platform:
 
-* [ Bronnen ](../../../../home.md): Experience Platform staat gegevens toe om van diverse bronnen worden opgenomen terwijl het voorzien van u van de capaciteit om, inkomende gegevens te structureren te etiketteren en te verbeteren gebruikend [!DNL Platform] diensten.
-* [ Sandboxes ](../../../../../sandboxes/home.md): Experience Platform verstrekt virtuele zandbakken die één enkele instantie van het Platform in afzonderlijke virtuele milieu&#39;s verdelen helpen digitale ervaringstoepassingen ontwikkelen en ontwikkelen.
+* [ Bronnen ](../../../../home.md): Experience Platform staat gegevens toe om van diverse bronnen worden opgenomen terwijl het voorzien van u van de capaciteit om, inkomende gegevens te structureren te etiketteren en te verbeteren gebruikend [!DNL Experience Platform] diensten.
+* [ Sandboxes ](../../../../../sandboxes/home.md): Experience Platform verstrekt virtuele zandbakken die één enkele instantie van Experience Platform in afzonderlijke virtuele milieu&#39;s verdelen helpen digitale ervaringstoepassingen ontwikkelen en ontwikkelen.
 
 In de volgende secties vindt u aanvullende informatie die u moet weten voordat u verbinding kunt maken met [!DNL SugarCRM] via de [!DNL Flow Service] API.
 
 ### Vereiste referenties verzamelen
 
-Als u [!DNL SugarCRM Events] wilt verbinden met Platform, moet u waarden opgeven voor de volgende verbindingseigenschappen:
+Als u [!DNL SugarCRM Events] wilt verbinden met Experience Platform, moet u waarden opgeven voor de volgende verbindingseigenschappen:
 
 | Credentials | Beschrijving | Voorbeeld |
 | --- | --- | --- |
@@ -36,15 +36,15 @@ Als u [!DNL SugarCRM Events] wilt verbinden met Platform, moet u waarden opgeven
 | `username` | Uw gebruikersnaam voor de SugarCRM-ontwikkelaarsaccount. | `abc.def@example.com@sugarmarketdemo000.com` |
 | `password` | Wachtwoord voor uw SugarCRM-ontwikkelaarsaccount. | `123456789` |
 
-## Verbinding maken [!DNL SugarCRM Events] met platform met behulp van de [!DNL Flow Service] API
+## Verbinding maken met Experience Platform via de [!DNL Flow Service] API[!DNL SugarCRM Events]
 
-In het volgende voorbeeld worden de stappen beschreven die u moet uitvoeren om de [!DNL SugarCRM] -bron te verifiëren, een bronverbinding te maken en een gegevensstroom te maken om uw gebeurtenisgegevens naar het Experience Platform te brengen.
+In het volgende voorbeeld worden de stappen beschreven die u moet uitvoeren om de [!DNL SugarCRM] -bron te verifiëren, een bronverbinding te maken en een gegevensstroom te maken om uw gebeurtenisgegevens naar Experience Platform te verzenden.
 
 ### Een basisverbinding maken {#base-connection}
 
-Een basisverbinding behoudt informatie tussen uw bron en Platform, met inbegrip van de de authentificatiegeloofsbrieven van uw bron, de huidige staat van de verbinding, en uw unieke identiteitskaart van de basisverbinding. Met de ID van de basisverbinding kunt u bestanden verkennen en door bestanden navigeren vanuit uw bron en kunt u de specifieke items identificeren die u wilt opnemen, inclusief informatie over hun gegevenstypen en indelingen.
+Een basisverbinding behoudt informatie tussen uw bron en Experience Platform, met inbegrip van de verificatiereferenties van uw bron, de huidige status van de verbinding, en uw unieke identiteitskaart van de basisverbinding. Met de ID van de basisverbinding kunt u bestanden verkennen en door bestanden navigeren vanuit uw bron en kunt u de specifieke items identificeren die u wilt opnemen, inclusief informatie over hun gegevenstypen en indelingen.
 
-Als u een basis-verbindings-id wilt maken, vraagt u een POST naar het `/connections` -eindpunt en geeft u de [!DNL SugarCRM Events] -verificatiegegevens op als onderdeel van de aanvraaginstantie.
+Als u een basis-verbindings-id wilt maken, vraagt u een POST-aanvraag naar het `/connections` -eindpunt en geeft u de [!DNL SugarCRM Events] -verificatiegegevens op als onderdeel van de aanvraagprocedure.
 
 **API formaat**
 
@@ -87,7 +87,7 @@ curl -X POST \
 | `name` | De naam van uw basisverbinding. Zorg ervoor dat de naam van uw basisverbinding beschrijvend is aangezien u dit kunt gebruiken om op informatie over uw basisverbinding te zoeken. |
 | `description` | Een optionele waarde die u kunt opnemen voor meer informatie over uw basisverbinding. |
 | `connectionSpec.id` | De verbindingsspecificatie-id van uw bron. Deze id kan worden opgehaald nadat de bron is geregistreerd en goedgekeurd via de API van [!DNL Flow Service] . |
-| `auth.specName` | Het verificatietype dat u gebruikt om uw bron te verifiëren bij Platform. |
+| `auth.specName` | Het verificatietype dat u gebruikt om uw bron te verifiëren bij Experience Platform. |
 | `auth.params.host` | De SugarCRM API gastheer: *developer.salesfusion.com* |
 | `auth.params.username` | Uw gebruikersnaam voor de SugarCRM-ontwikkelaarsaccount. |
 | `auth.params.password` | Wachtwoord voor uw SugarCRM-ontwikkelaarsaccount. |
@@ -105,8 +105,8 @@ Een succesvolle reactie keert de pas gecreëerde basisverbinding, met inbegrip v
 
 ### Ontdek uw bron {#explore}
 
-Met de id van de basisverbinding die u in de vorige stap hebt gegenereerd, kunt u bestanden en mappen verkennen door GET-aanvragen uit te voeren.
-Gebruik de volgende aanroepen om het pad te zoeken van het bestand dat u wilt inbrengen in [!DNL Platform] :
+Met de basisverbindings-id die u in de vorige stap hebt gegenereerd, kunt u bestanden en mappen verkennen door GET-verzoeken uit te voeren.
+Gebruik de volgende aanroepen om het pad te zoeken van het bestand dat u wilt inbrengen in [!DNL Experience Platform] :
 
 **API formaat**
 
@@ -114,16 +114,16 @@ Gebruik de volgende aanroepen om het pad te zoeken van het bestand dat u wilt in
 GET /connections/{BASE_CONNECTION_ID}/explore?objectType=rest&object={OBJECT}&fileType={FILE_TYPE}&preview={PREVIEW}&sourceParams={SOURCE_PARAMS}
 ```
 
-Wanneer het uitvoeren van GET verzoeken om de het dossierstructuur en inhoud van uw bron te onderzoeken, moet u de vraagparameters omvatten die in de lijst hieronder vermeld zijn:
+Wanneer u GET-verzoeken uitvoert om de bestandsstructuur en inhoud van uw bron te verkennen, moet u de queryparameters opnemen die in de onderstaande tabel worden vermeld:
 
 | Parameter | Beschrijving |
 | --------- | ----------- |
 | `{BASE_CONNECTION_ID}` | De id van de basisverbinding die in de vorige stap is gegenereerd. |
 | `objectType=rest` | Het type object dat u wilt verkennen. Deze waarde is momenteel altijd ingesteld op `rest` . |
 | `{OBJECT}` | Deze parameter is alleen vereist wanneer een specifieke map wordt weergegeven. Zijn waarde vertegenwoordigt de weg van de folder u wenst te onderzoeken. Voor deze bron zou de waarde `json` zijn. |
-| `fileType=json` | Het bestandstype van het bestand dat u naar Platform wilt verzenden. Momenteel is `json` het enige ondersteunde bestandstype. |
+| `fileType=json` | Het bestandstype van het bestand dat u naar Experience Platform wilt verzenden. Momenteel is `json` het enige ondersteunde bestandstype. |
 | `{PREVIEW}` | Een booleaanse waarde die definieert of de inhoud van de verbinding voorvertoning ondersteunt. |
-| `{SOURCE_PARAMS}` | Bepaalt parameters voor het brondossier u aan Platform wilt brengen. Als u het geaccepteerde indelingstype voor `{SOURCE_PARAMS}` wilt ophalen, moet u de gehele tekenreeks coderen in base64. <br> [!DNL SugarCRM Events] vereist geen lading. De waarde voor `{SOURCE_PARAMS}` wordt doorgegeven als `{}` en gecodeerd in base64 is gelijk aan `e30=` , zoals hieronder wordt weergegeven. |
+| `{SOURCE_PARAMS}` | Definieert parameters voor het bronbestand dat u naar Experience Platform wilt brengen. Als u het geaccepteerde indelingstype voor `{SOURCE_PARAMS}` wilt ophalen, moet u de gehele tekenreeks coderen in base64. <br> [!DNL SugarCRM Events] vereist geen lading. De waarde voor `{SOURCE_PARAMS}` wordt doorgegeven als `{}` en gecodeerd in base64 is gelijk aan `e30=` , zoals hieronder wordt weergegeven. |
 
 **Verzoek**
 
@@ -295,7 +295,7 @@ Een succesvol antwoord retourneert de structuur van het bestand waarnaar wordt g
 
 ### Een bronverbinding maken {#source-connection}
 
-U kunt een bronverbinding maken door een aanvraag voor een POST in te dienen bij de [!DNL Flow Service] API. Een bronverbinding bestaat uit een verbinding-id, een pad naar het brongegevensbestand en een verbindingsspecificatie-id.
+U kunt een bronverbinding maken door een POST-aanvraag in te dienen bij de [!DNL Flow Service] API. Een bronverbinding bestaat uit een verbinding-id, een pad naar het brongegevensbestand en een verbindingsspecificatie-id.
 
 **API formaat**
 
@@ -352,15 +352,15 @@ Een succesvolle reactie keert het unieke herkenningsteken (`id`) van de pas gecr
 
 ### Een doel-XDM-schema maken {#target-schema}
 
-Om de brongegevens in Platform te gebruiken, moet een doelschema worden gecreeerd om de brongegevens volgens uw behoeften te structureren. Het doelschema wordt dan gebruikt om een dataset van het Platform tot stand te brengen waarin de brongegevens bevat zijn.
+Als u de brongegevens in Experience Platform wilt gebruiken, moet u een doelschema maken om de brongegevens naar wens te structureren. Het doelschema wordt dan gebruikt om een dataset van Experience Platform tot stand te brengen waarin de brongegevens bevat zijn.
 
-Een doelXDM schema kan worden gecreeerd door een verzoek van de POST aan de [ Registratie API van het Schema ](https://developer.adobe.com/experience-platform-apis/references/schema-registry/) uit te voeren.
+Een doelXDM schema kan worden gecreeerd door een POST- verzoek aan de [ Registratie API van het Schema ](https://developer.adobe.com/experience-platform-apis/references/schema-registry/) uit te voeren.
 
 Voor gedetailleerde stappen op hoe te om een doelXDM schema tot stand te brengen, zie het leerprogramma op [ creërend een schema gebruikend API ](https://experienceleague.adobe.com/docs/experience-platform/xdm/api/schemas.html#create).
 
 ### Een doelgegevensset maken {#target-dataset}
 
-Een doeldataset kan worden gecreeerd door een verzoek van de POST aan de [ Dienst API van de Catalogus uit te voeren ](https://developer.adobe.com/experience-platform-apis/references/catalog/), verstrekkend identiteitskaart van het doelschema binnen de nuttige lading.
+Een doeldataset kan worden gecreeerd door een POST- verzoek aan de [ Dienst API van de Catalogus uit te voeren ](https://developer.adobe.com/experience-platform-apis/references/catalog/), verstrekkend identiteitskaart van het doelschema binnen de nuttige lading.
 
 Voor gedetailleerde stappen op hoe te om een doeldataset tot stand te brengen, zie het leerprogramma op [ het creëren van een dataset gebruikend API ](https://experienceleague.adobe.com/docs/experience-platform/catalog/api/create-dataset.html).
 
@@ -429,7 +429,7 @@ Een succesvolle reactie keert het unieke herkenningsteken van de nieuwe doelverb
 
 ### Een toewijzing maken {#mapping}
 
-Opdat de brongegevens in een doeldataset moeten worden opgenomen, moet het eerst aan het doelschema worden in kaart gebracht dat de doeldataset zich aan houdt. Dit wordt bereikt door een verzoek van de POST aan [[!DNL Data Prep]  API ](https://www.adobe.io/experience-platform-apis/references/data-prep/) met gegevenstoewijzingen uit te voeren die binnen de verzoeklading worden bepaald.
+Opdat de brongegevens in een doeldataset moeten worden opgenomen, moet het eerst aan het doelschema worden in kaart gebracht dat de doeldataset zich aan houdt. Dit wordt bereikt door een POST- verzoek aan [[!DNL Data Prep]  API ](https://www.adobe.io/experience-platform-apis/references/data-prep/) met gegevenstoewijzingen uit te voeren die binnen de verzoeklading worden bepaald.
 
 **API formaat**
 
@@ -558,13 +558,13 @@ Een succesvolle reactie keert details van de pas gecreëerde afbeelding met inbe
 
 ### Een flow maken {#flow}
 
-De laatste stap op weg naar het verzenden van gegevens van [!DNL SugarCRM Events] naar Platform is het maken van een gegevensstroom. Momenteel zijn de volgende vereiste waarden voorbereid:
+De laatste stap naar het verzenden van gegevens van [!DNL SugarCRM Events] naar Experience Platform is het maken van een gegevensstroom. Momenteel zijn de volgende vereiste waarden voorbereid:
 
 * [Source-verbinding-id](#source-connection)
 * [Doel-verbindings-id](#target-connection)
 * [Toewijzing-id](#mapping)
 
-Een dataflow is verantwoordelijk voor het plannen en verzamelen van gegevens uit een bron. U kunt een gegevensstroom tot stand brengen door een verzoek van de POST uit te voeren terwijl het verstrekken van de eerder vermelde waarden binnen de lading.
+Een dataflow is verantwoordelijk voor het plannen en verzamelen van gegevens uit een bron. U kunt een gegevensstroom tot stand brengen door een POST- verzoek uit te voeren terwijl het verstrekken van de eerder vermelde waarden binnen de lading.
 
 Als u een opname wilt plannen, moet u eerst de begintijdwaarde instellen op Tijd in seconden. Vervolgens moet u de frequentiewaarde instellen op `hour` of `day` . De intervalwaarde geeft de periode tussen twee opeenvolgende indelingen aan. De intervalwaarde moet worden ingesteld op `1` of `24` afhankelijk van `scheduleParams.frequency` de selectie van `hour` of `day` .
 
@@ -621,7 +621,7 @@ curl -X POST \
 | `flowSpec.version` | De corresponderende versie van de specificatie-id voor de stroom. Deze waarde is standaard ingesteld op `1.0` . |
 | `sourceConnectionIds` | [ bron verbindingsidentiteitskaart ](#source-connection) die in een vroegere stap wordt geproduceerd. |
 | `targetConnectionIds` | De [ identiteitskaart van de doelverbinding ](#target-connection) die in een vroegere stap wordt geproduceerd. |
-| `transformations` | Deze eigenschap bevat de verschillende transformaties die op de gegevens moeten worden toegepast. Dit bezit wordt vereist wanneer het brengen van niet-XDM-Volgzame gegevens aan Platform. |
+| `transformations` | Deze eigenschap bevat de verschillende transformaties die op de gegevens moeten worden toegepast. Dit bezit wordt vereist wanneer het brengen van niet-XDM-Volgzame gegevens aan Experience Platform. |
 | `transformations.name` | De naam die aan de transformatie is toegewezen. |
 | `transformations.params.mappingId` | [ afbeelding identiteitskaart ](#mapping) die in een vroegere stap wordt geproduceerd. |
 | `transformations.params.mappingVersion` | De corresponderende versie van de toewijzing-id. Deze waarde is standaard ingesteld op `0` . |
@@ -650,16 +650,16 @@ Zodra uw gegevensstroom is gecreeerd, kunt u de gegevens controleren die door he
 
 ### Uw gegevensstroom bijwerken
 
-Werk de details van uw gegevensstroom bij, zoals zijn naam en beschrijving, evenals zijn looppas programma en bijbehorende kaartreeksen door een PATCH verzoek aan het `/flows` eindpunt van [!DNL Flow Service] API te richten, terwijl het verstrekken van identiteitskaart van uw gegevensstroom. Wanneer u een PATCH-verzoek indient, moet u de unieke `etag` gegevens van uw gegevensstroom opgeven in de `If-Match` -header. Voor volledige API voorbeelden, lees de gids bij [ het bijwerken bronnen dataflows gebruikend API ](https://experienceleague.adobe.com/docs/experience-platform/sources/api-tutorials/update-dataflows.html)
+Werk de details van uw gegevensstroom bij, zoals zijn naam en beschrijving, evenals zijn looppas programma en bijbehorende kaartreeksen door een PATCH- verzoek aan het `/flows` eindpunt van [!DNL Flow Service] API te doen, terwijl het verstrekken van identiteitskaart van uw gegevensstroom. Wanneer u een PATCH-aanvraag indient, moet u de unieke `etag` gegevens van uw gegevensstroom opgeven in de `If-Match` -header. Voor volledige API voorbeelden, lees de gids bij [ het bijwerken bronnen dataflows gebruikend API ](https://experienceleague.adobe.com/docs/experience-platform/sources/api-tutorials/update-dataflows.html)
 
 ### Uw account bijwerken
 
-Werk de naam, beschrijving en gegevens van uw bronaccount bij door een PATCH-aanvraag uit te voeren naar de [!DNL Flow Service] API en uw basis-verbindings-id op te geven als een queryparameter. Wanneer u een PATCH-aanvraag indient, moet u de unieke `etag` van uw bronaccount opgeven in de `If-Match` -header. Voor volledige API voorbeelden, lees de gids bij [ het bijwerken van uw bronrekening gebruikend API ](https://experienceleague.adobe.com/docs/experience-platform/sources/api-tutorials/update.html).
+Werk de naam, beschrijving en gegevens van uw bronaccount bij door een PATCH-aanvraag uit te voeren naar de [!DNL Flow Service] API en uw basis-verbindings-id op te geven als een queryparameter. Wanneer u een PATCH-aanvraag indient, moet u de unieke `etag` naam van uw bronaccount opgeven in de header van `If-Match` . Voor volledige API voorbeelden, lees de gids bij [ het bijwerken van uw bronrekening gebruikend API ](https://experienceleague.adobe.com/docs/experience-platform/sources/api-tutorials/update.html).
 
 ### Uw gegevensstroom verwijderen
 
-Verwijder de gegevensstroom door een DELETE-aanvraag uit te voeren naar de [!DNL Flow Service] API en de id op te geven van de gegevensstroom die u wilt verwijderen als onderdeel van de queryparameter. Voor volledige API voorbeelden, lees de gids op [ schrappend uw dataflows gebruikend API ](https://experienceleague.adobe.com/docs/experience-platform/sources/api-tutorials/delete-dataflows.html).
+Verwijder uw gegevensstroom door een DELETE-aanvraag uit te voeren naar de [!DNL Flow Service] API terwijl u de id opgeeft van de gegevensstroom die u wilt verwijderen als onderdeel van de queryparameter. Voor volledige API voorbeelden, lees de gids op [ schrappend uw dataflows gebruikend API ](https://experienceleague.adobe.com/docs/experience-platform/sources/api-tutorials/delete-dataflows.html).
 
 ### Uw account verwijderen
 
-Verwijder uw account door een DELETE-aanvraag uit te voeren naar de [!DNL Flow Service] API terwijl u de basis verbinding-id opgeeft van het account dat u wilt verwijderen. Voor volledige API voorbeelden, lees de gids bij [ het schrappen van uw bronrekening gebruikend API ](https://experienceleague.adobe.com/docs/experience-platform/sources/api-tutorials/delete.html).
+Verwijder uw account door een DELETE-aanvraag uit te voeren naar de [!DNL Flow Service] API terwijl u de basis-verbindings-id opgeeft van het account dat u wilt verwijderen. Voor volledige API voorbeelden, lees de gids bij [ het schrappen van uw bronrekening gebruikend API ](https://experienceleague.adobe.com/docs/experience-platform/sources/api-tutorials/delete.html).

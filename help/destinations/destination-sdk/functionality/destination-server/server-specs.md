@@ -1,33 +1,33 @@
 ---
-description: Leer hoe te om de specificaties van de bestemmingsserver in Adobe Experience Platform Destination SDK via ` te vormen/creatie/bestemming-servers' eindpunt.
-title: Server specs voor bestemmingen die met Destination SDK worden gecreeerd
+description: Leer hoe te om specificaties van de bestemmingsserver in Adobe Experience Platform Destination SDK via `/authoring/bestemmings-servers te vormen.
+title: Serverspecificaties voor doelen die met Destination SDK zijn gemaakt
 exl-id: 62202edb-a954-42ff-9772-863cea37a889
-source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '2739'
+source-wordcount: '2753'
 ht-degree: 0%
 
 ---
 
-# Server specs voor bestemmingen die met Destination SDK worden gecreeerd
+# Serverspecificaties voor doelen die met Destination SDK zijn gemaakt
 
-De serverspecificaties van de bestemming bepalen het type van bestemmingsplatform dat de gegevens van Adobe Experience Platform, en de communicatie parameters tussen Platform en uw bestemming zal ontvangen. Bijvoorbeeld:
+De serverspecificaties van de bestemming bepalen het type van bestemmingsplatform dat de gegevens van Adobe Experience Platform, en de communicatie parameters tussen Experience Platform en uw bestemming zal ontvangen. Bijvoorbeeld:
 
-* A [ het stromen ](#streaming-example) specificatie van de bestemmingsserver bepaalt het de servereindpunt van HTTP dat de berichten van HTTP van Platform zal ontvangen. Leren om te vormen hoe de vraag van HTTP aan het eindpunt wordt geformatteerd, lees de [ het templating specs ](templating-specs.md) pagina.
-* Een [ Amazon S3 ](#s3-example) specificatie van de bestemmingsserver bepaalt de [!DNL S3] emmernaam en weg waar het Platform de dossiers zal uitvoeren.
-* Een [ SFTP ](#sftp-example) specificatie van de bestemmingsserver bepaalt de gastheernaam, wortelfolder, communicatie haven, en encryptietype van de server SFTP waar het Platform de dossiers zal uitvoeren.
+* A [ het stromen ](#streaming-example) specificatie van de bestemmingsserver bepaalt het de servereindpunt van HTTP dat de berichten van HTTP van Experience Platform zal ontvangen. Leren om te vormen hoe de vraag van HTTP aan het eindpunt wordt geformatteerd, lees de [ het templating specs ](templating-specs.md) pagina.
+* Een [ Amazon S3 ](#s3-example) specificatie van de bestemmingsserver bepaalt de [!DNL S3] emmer naam en weg waar Experience Platform de dossiers zal uitvoeren.
+* Een [ SFTP ](#sftp-example) specificatie van de bestemmingsserver bepaalt de gastheernaam, wortelfolder, communicatie haven, en encryptietype van de server SFTP waar Experience Platform de dossiers zal uitvoeren.
 
 Om te begrijpen waar deze component in een integratie past die met Destination SDK wordt gecreeerd, zie het diagram in de [ documentatie van configuratieopties ](../configuration-options.md) of zie de volgende pagina&#39;s van het overzicht van bestemmingsconfiguratie:
 
-* [Gebruik Destination SDK om een streamingbestemming te configureren](../../guides/configure-destination-instructions.md#create-server-template-configuratiom)
-* [Gebruik Destination SDK om een op een bestand gebaseerde bestemming te configureren](../../guides/configure-file-based-destination-instructions.md#create-server-file-configuration)
+* [Destination SDK gebruiken om een streamingbestemming te configureren](../../guides/configure-destination-instructions.md#create-server-template-configuratiom)
+* [Destination SDK gebruiken om een bestandsgebaseerde bestemming te configureren](../../guides/configure-file-based-destination-instructions.md#create-server-file-configuration)
 
 U kunt de specificaties van de bestemmingsserver via het `/authoring/destination-servers` eindpunt vormen. Zie de volgende API verwijzingspagina&#39;s voor gedetailleerde API vraagvoorbeelden waar u de componenten kunt vormen die in deze pagina worden getoond.
 
 * [Een doelserverconfiguratie maken](../../authoring-api/destination-server/create-destination-server.md)
 * [Een doelserverconfiguratie bijwerken](../../authoring-api/destination-server/update-destination-server.md)
 
-Deze pagina toont alle types van bestemmingsserver die door Destination SDK, met al hun configuratieparameters worden gesteund. Vervang bij het maken van uw bestemming de parameterwaarden door uw eigen waarden.
+Op deze pagina worden alle typen doelservers weergegeven die door Destination SDK worden ondersteund, met alle bijbehorende configuratieparameters. Vervang bij het maken van uw bestemming de parameterwaarden door uw eigen waarden.
 
 >[!IMPORTANT]
 >
@@ -46,7 +46,7 @@ Wanneer [ creërend ](../../authoring-api/destination-server/create-destination-
 
 ## Velden met harde code en sjablonen {#templatized-fields}
 
-Wanneer het creëren van een bestemmingsserver door Destination SDK, kunt u configuratieparameterwaarden of door hard-coderen hen in de configuratie, of door templatized gebieden te gebruiken bepalen. Met sjabloonvelden kunt u door de gebruiker opgegeven waarden lezen vanuit de gebruikersinterface van het platform.
+Wanneer u een doelserver maakt via Destination SDK, kunt u configuratieparameterwaarden definiëren door deze hard te coderen in de configuratie of door gebruik te maken van sjabloonvelden. Met sjabloonvelden kunt u door de gebruiker opgegeven waarden lezen vanuit de gebruikersinterface van Experience Platform.
 
 Doelserverparameters hebben twee configureerbare velden. Deze opties bepalen of u hard-gecodeerde of templatized waarden gebruikt.
 
@@ -63,7 +63,7 @@ Zowel hard-gecodeerde als templatized gebieden hebben hun eigen gebruik in Desti
 
 **het Verbinden met uw bestemming zonder gebruikersinput**
 
-Wanneer de gebruikers [ met uw bestemming ](../../../ui/connect-destination.md) in Platform UI verbinden, zou u het proces van de bestemmingsverbinding zonder hun input kunnen willen behandelen.
+Wanneer de gebruikers [ met uw bestemming ](../../../ui/connect-destination.md) in Experience Platform UI verbinden, zou u het proces van de bestemmingsverbinding zonder hun input kunnen willen behandelen.
 
 Hiervoor kunt u de verbindingsparameters van het doelplatform hard coderen in de serverspecificatie. Wanneer u hard-gecodeerde parameterwaarden in uw configuratie van de bestemmingsserver gebruikt, wordt de verbinding tussen Adobe Experience Platform en uw bestemmingsplatform behandeld zonder enige input van de gebruiker.
 
@@ -83,13 +83,13 @@ In het onderstaande voorbeeld maakt een partner een doelserver voor de landingsz
 }
 ```
 
-Dientengevolge, wanneer de gebruikers door het [ leerprogramma van de bestemmingsverbinding ](../../../ui/connect-destination.md) gaan, zullen zij geen [ authentificatiestap ](../../../ui/connect-destination.md#authenticate) zien. In plaats daarvan, wordt de authentificatie behandeld door Platform, zoals aangetoond in het hieronder beeld.
+Dientengevolge, wanneer de gebruikers door het [ leerprogramma van de bestemmingsverbinding ](../../../ui/connect-destination.md) gaan, zullen zij geen [ authentificatiestap ](../../../ui/connect-destination.md#authenticate) zien. In plaats daarvan wordt de verificatie uitgevoerd door Experience Platform, zoals in de onderstaande afbeelding wordt getoond.
 
-![ beeld dat van ui het authentificatiescherm tussen Platform en een bestemming DLZ toont.](../../assets/functionality/destination-server/server-spec-hardcoded.png)
+![ beeld dat van Ui het authentificatiescherm tussen Experience Platform en een bestemming DLZ toont.](../../assets/functionality/destination-server/server-spec-hardcoded.png)
 
 **Verbindend met uw bestemming met gebruikersinput**
 
-Wanneer de verbinding tussen Platform en uw bestemming na een specifieke gebruikersinput in het Platform UI zou moeten worden gevestigd, zoals het selecteren van een API eindpunt of het verstrekken van een gebiedswaarde, kunt u getemplatificeerde gebieden in de serverspecificatie gebruiken om de gebruikersinput te lezen en met uw bestemmingsplatform te verbinden.
+Wanneer de verbinding tussen Experience Platform en uw bestemming na een specifieke gebruikersinput in Experience Platform UI zou moeten worden gevestigd, zoals het selecteren van een API eindpunt of het verstrekken van een gebiedswaarde, kunt u getemplatificeerde gebieden in de serverspecificatie gebruiken om de gebruikersinput te lezen en met uw bestemmingsplatform te verbinden.
 
 In het voorbeeld hieronder, leidt een partner tot a [ real time (het stromen) ](#streaming-example) integratie en het `url.value` gebied gebruikt de getemplatificeerde parameter `{{customerData.region}}` om een deel van het API eindpunt te personaliseren dat op gebruikersinput wordt gebaseerd.
 
@@ -106,7 +106,7 @@ In het voorbeeld hieronder, leidt een partner tot a [ real time (het stromen) ](
 }
 ```
 
-Om gebruikers de optie te geven om een waarde van het Platform UI te selecteren, moet de `region` parameter ook in de [ bestemmingsconfiguratie ](../../authoring-api/destination-configuration/create-destination-configuration.md) als gebied van klantengegevens worden bepaald, zoals hieronder getoond:
+Om gebruikers de optie te geven om een waarde van Experience Platform UI te selecteren, moet de `region` parameter ook in de [ bestemmingsconfiguratie ](../../authoring-api/destination-configuration/create-destination-configuration.md) als gebied van klantengegevens worden bepaald, zoals hieronder getoond:
 
 ```json
 "customerDataFields":[
@@ -151,10 +151,10 @@ Het voorbeeld hieronder toont een voorbeeld van een configuratie van de bestemmi
 
 | Parameter | Type | Beschrijving |
 |---|---|---|
-| `name` | String | *Vereist.* Vertegenwoordigt een vriendschappelijke naam van uw server, zichtbaar slechts aan Adobe. Deze naam is niet zichtbaar aan partners of klanten. Voorbeeld: `Moviestar destination server` . |
+| `name` | String | *Vereist.* Vertegenwoordigt een vriendelijke naam van uw server, die alleen zichtbaar is voor Adobe. Deze naam is niet zichtbaar aan partners of klanten. Voorbeeld: `Moviestar destination server` . |
 | `destinationServerType` | String | *Vereist.* Stel dit in op `URL_BASED` voor streamingdoelen. |
-| `templatingStrategy` | String | *Vereist.* <ul><li>Gebruik `PEBBLE_V1` als u in het veld `value` een getemplativeerd veld gebruikt in plaats van een hard gecodeerde waarde. Gebruik deze optie als u een eindpunt zoals: `https://api.moviestar.com/data/{{customerData.region}}/items` hebt, waar de gebruikers het eindpuntgebied van Platform UI moeten selecteren. </li><li> Gebruik `NONE` als er aan de zijde van de Adobe geen getemplatificeerde transformatie nodig is, bijvoorbeeld als u een eindpunt hebt, zoals: `https://api.moviestar.com/data/items` </li></ul> |
-| `value` | String | *Vereist.* Vul het adres in van het API-eindpunt waarmee het Experience Platform verbinding moet maken. |
+| `templatingStrategy` | String | *Vereist.* <ul><li>Gebruik `PEBBLE_V1` als u in het veld `value` een getemplativeerd veld gebruikt in plaats van een hard gecodeerde waarde. Gebruik deze optie als u een eindpunt als: `https://api.moviestar.com/data/{{customerData.region}}/items` hebt, waar de gebruikers het eindpuntgebied van Experience Platform UI moeten selecteren. </li><li> Gebruik `NONE` als er geen getemplatificeerde transformatie aan de Adobe-zijde nodig is, bijvoorbeeld als u een eindpunt hebt, zoals: `https://api.moviestar.com/data/items` </li></ul> |
+| `value` | String | *Vereist.* Vul het adres in van het API-eindpunt waarmee Experience Platform verbinding moet maken. |
 
 {style="table-layout:auto"}
 
@@ -185,9 +185,9 @@ Het voorbeeld hieronder toont een voorbeeld van een configuratie van de bestemmi
 |---|---|---|
 | `name` | String | De naam van uw doelserver. |
 | `destinationServerType` | String | Stel deze waarde in op basis van het doelplatform. Als u bestanden naar een [!DNL Amazon S3] emmertje wilt exporteren, stelt u deze in op `FILE_BASED_S3` . |
-| `fileBasedS3Destination.bucket.templatingStrategy` | String | *Vereiste*. Stel deze waarde in op basis van het type waarde dat in het veld `bucket.value` wordt gebruikt.<ul><li>Stel deze waarde in op `PEBBLE_V1` als u wilt dat uw gebruikers hun eigen emmernaam invoeren in de interface van het Experience Platform. In dit geval, moet u het `value` gebied templatiseren om een waarde van de [ gebieden van klantengegevens ](../destination-configuration/customer-data-fields.md) te lezen die door de gebruiker worden gevuld. Dit gebruiksgeval wordt in het bovenstaande voorbeeld getoond.</li><li>Als u een hard-gecodeerde emmernaam voor uw integratie, zoals `"bucket.value":"MyBucket"` gebruikt, dan plaats deze waarde aan `NONE`.</li></ul> |
+| `fileBasedS3Destination.bucket.templatingStrategy` | String | *Vereiste*. Stel deze waarde in op basis van het type waarde dat in het veld `bucket.value` wordt gebruikt.<ul><li>Stel deze waarde in op `PEBBLE_V1` als u wilt dat uw gebruikers hun eigen emmernaam invoeren in de gebruikersinterface van Experience Platform. In dit geval, moet u het `value` gebied templatiseren om een waarde van de [ gebieden van klantengegevens ](../destination-configuration/customer-data-fields.md) te lezen die door de gebruiker worden gevuld. Dit gebruiksgeval wordt in het bovenstaande voorbeeld getoond.</li><li>Als u een hard-gecodeerde emmernaam voor uw integratie, zoals `"bucket.value":"MyBucket"` gebruikt, dan plaats deze waarde aan `NONE`.</li></ul> |
 | `fileBasedS3Destination.bucket.value` | String | De naam van de [!DNL Amazon S3] emmer die door dit doel moet worden gebruikt. Dit kan of een templatized gebied zijn dat de waarde van de [ gebieden van klantengegevens ](../destination-configuration/customer-data-fields.md) zal lezen die door de gebruiker (zoals aangetoond in het bovenstaande voorbeeld) worden ingevuld, of een hard-gecodeerde waarde, zoals `"value":"MyBucket"`. |
-| `fileBasedS3Destination.path.templatingStrategy` | String | *Vereiste*. Stel deze waarde in op basis van het type waarde dat in het veld `path.value` wordt gebruikt.<ul><li>Als u wilt dat uw gebruikers hun eigen pad invoeren in de gebruikersinterface van het Experience Platform, stelt u deze waarde in op `PEBBLE_V1` . In dit geval, moet u het `path.value` gebied templatiseren om een waarde van de [ gebieden van klantengegevens ](../destination-configuration/customer-data-fields.md) te lezen die door de gebruiker worden gevuld. Dit gebruiksgeval wordt in het bovenstaande voorbeeld getoond.</li><li>Als u een pad met harde codes gebruikt voor uw integratie, zoals `"bucket.value":"/path/to/MyBucket"` , stelt u deze waarde in op `NONE` .</li></ul> |
+| `fileBasedS3Destination.path.templatingStrategy` | String | *Vereiste*. Stel deze waarde in op basis van het type waarde dat in het veld `path.value` wordt gebruikt.<ul><li>Als u wilt dat uw gebruikers hun eigen pad invoeren in de gebruikersinterface van Experience Platform, stelt u deze waarde in op `PEBBLE_V1` . In dit geval, moet u het `path.value` gebied templatiseren om een waarde van de [ gebieden van klantengegevens ](../destination-configuration/customer-data-fields.md) te lezen die door de gebruiker worden gevuld. Dit gebruiksgeval wordt in het bovenstaande voorbeeld getoond.</li><li>Als u een pad met harde codes gebruikt voor uw integratie, zoals `"bucket.value":"/path/to/MyBucket"` , stelt u deze waarde in op `NONE` .</li></ul> |
 | `fileBasedS3Destination.path.value` | String | Het pad naar de [!DNL Amazon S3] emmer die door dit doel moet worden gebruikt. Dit kan of een templatized gebied zijn dat de waarde van de [ gebieden van klantengegevens ](../destination-configuration/customer-data-fields.md) zal lezen die door de gebruiker (zoals aangetoond in het bovenstaande voorbeeld) worden ingevuld, of een hard-gecodeerde waarde, zoals `"value":"/path/to/MyBucket"`. |
 
 {style="table-layout:auto"}
@@ -221,9 +221,9 @@ Het voorbeeld hieronder toont een voorbeeld van een configuratie van de bestemmi
 |---|---|---|
 | `name` | String | De naam van uw doelserver. |
 | `destinationServerType` | String | Stel deze waarde in op basis van het doelplatform. Als u bestanden naar een [!DNL SFTP] -doel wilt exporteren, stelt u deze in op `FILE_BASED_SFTP` . |
-| `fileBasedSFTPDestination.rootDirectory.templatingStrategy` | String | *Vereiste*. Stel deze waarde in op basis van het type waarde dat in het veld `rootDirectory.value` wordt gebruikt.<ul><li>Als u wilt dat uw gebruikers hun eigen pad naar de hoofdmap invoeren in de gebruikersinterface van het Experience Platform, stelt u deze waarde in op `PEBBLE_V1` . In dit geval, moet u het `rootDirectory.value` gebied templatiseren om een user-provided waarde van de [ gebieden van klantengegevens ](../destination-configuration/customer-data-fields.md) te lezen die door de gebruiker worden ingevuld. Dit gebruiksgeval wordt in het bovenstaande voorbeeld getoond.</li><li>Als u een pad naar de hoofdmap met harde codes gebruikt voor uw integratie, zoals `"rootDirectory.value":"Storage/MyDirectory"` , stelt u deze waarde in op `NONE` .</li></ul> |
+| `fileBasedSFTPDestination.rootDirectory.templatingStrategy` | String | *Vereiste*. Stel deze waarde in op basis van het type waarde dat in het veld `rootDirectory.value` wordt gebruikt.<ul><li>Als u wilt dat uw gebruikers hun eigen pad naar de hoofdmap invoeren in de gebruikersinterface van Experience Platform, stelt u deze waarde in op `PEBBLE_V1` . In dit geval, moet u het `rootDirectory.value` gebied templatiseren om een user-provided waarde van de [ gebieden van klantengegevens ](../destination-configuration/customer-data-fields.md) te lezen die door de gebruiker worden ingevuld. Dit gebruiksgeval wordt in het bovenstaande voorbeeld getoond.</li><li>Als u een pad naar de hoofdmap met harde codes gebruikt voor uw integratie, zoals `"rootDirectory.value":"Storage/MyDirectory"` , stelt u deze waarde in op `NONE` .</li></ul> |
 | `fileBasedSFTPDestination.rootDirectory.value` | String | Het pad naar de map die de geëxporteerde bestanden host. Dit kan of een templatized gebied zijn dat de waarde van de [ gebieden van klantengegevens ](../destination-configuration/customer-data-fields.md) zal lezen die door de gebruiker (zoals aangetoond in het bovenstaande voorbeeld) worden ingevuld, of een hard-gecodeerde waarde, zoals `"value":"Storage/MyDirectory"` |
-| `fileBasedSFTPDestination.hostName.templatingStrategy` | String | *Vereiste*. Stel deze waarde in op basis van het type waarde dat in het veld `hostName.value` wordt gebruikt.<ul><li>Als u wilt dat uw gebruikers hun eigen hostnaam invoeren in de gebruikersinterface van het Experience Platform, stelt u deze waarde in op `PEBBLE_V1` . In dit geval, moet u het `hostName.value` gebied templatiseren om een user-provided waarde van de [ gebieden van klantengegevens ](../destination-configuration/customer-data-fields.md) te lezen die door de gebruiker worden ingevuld. Dit gebruiksgeval wordt in het bovenstaande voorbeeld getoond.</li><li>Als u een hard-gecodeerde gastheernaam voor uw integratie, zoals `"hostName.value":"my.hostname.com"` gebruikt, dan plaats deze waarde aan `NONE`.</li></ul> |
+| `fileBasedSFTPDestination.hostName.templatingStrategy` | String | *Vereiste*. Stel deze waarde in op basis van het type waarde dat in het veld `hostName.value` wordt gebruikt.<ul><li>Als u wilt dat uw gebruikers hun eigen hostnaam invoeren in de gebruikersinterface van Experience Platform, stelt u deze waarde in op `PEBBLE_V1` . In dit geval, moet u het `hostName.value` gebied templatiseren om een user-provided waarde van de [ gebieden van klantengegevens ](../destination-configuration/customer-data-fields.md) te lezen die door de gebruiker worden ingevuld. Dit gebruiksgeval wordt in het bovenstaande voorbeeld getoond.</li><li>Als u een hard-gecodeerde gastheernaam voor uw integratie, zoals `"hostName.value":"my.hostname.com"` gebruikt, dan plaats deze waarde aan `NONE`.</li></ul> |
 | `fileBasedSFTPDestination.hostName.value` | String | De hostnaam van uw SFTP-server. Dit kan of een templatized gebied zijn dat de waarde van de [ gebieden van klantengegevens ](../destination-configuration/customer-data-fields.md) zal lezen die door de gebruiker (zoals aangetoond in het bovenstaande voorbeeld) worden ingevuld, of een hard-gecodeerde waarde, zoals `"hostName.value":"my.hostname.com"`. |
 | `port` | Geheel | De SFTP-serverpoort. |
 | `encryptionMode` | String | Geeft aan of bestandsversleuteling moet worden gebruikt. Ondersteunde waarden: <ul><li>PGP</li><li>Geen</li></ul> |
@@ -253,7 +253,7 @@ In het onderstaande voorbeeld ziet u een voorbeeld van een doelserverconfigurati
 |---|---|---|
 | `name` | String | De naam van de doelverbinding. |
 | `destinationServerType` | String | Stel deze waarde in op basis van het doelplatform. Stel dit voor [!DNL Azure Data Lake Storage] -doelen in op `FILE_BASED_ADLS_GEN2` . |
-| `fileBasedAdlsGen2Destination.path.templatingStrategy` | String | *Vereiste*. Stel deze waarde in op basis van het type waarde dat in het veld `path.value` wordt gebruikt.<ul><li>Stel deze waarde in op `PEBBLE_V1` als u wilt dat uw gebruikers het pad naar de [!DNL ADLS] -map invoeren in de gebruikersinterface van het Experience Platform. In dit geval, moet u het `path.value` gebied templatiseren om een waarde van de [ gebieden van klantengegevens ](../destination-configuration/customer-data-fields.md) te lezen die door de gebruiker worden gevuld. Dit gebruiksgeval wordt in het bovenstaande voorbeeld getoond.</li><li>Als u een pad met harde codes gebruikt voor uw integratie, zoals `"abfs://<file_system>@<account_name>.dfs.core.windows.net/<path>/"` , stelt u deze waarde in op `NONE` .</li></ul> |
+| `fileBasedAdlsGen2Destination.path.templatingStrategy` | String | *Vereiste*. Stel deze waarde in op basis van het type waarde dat in het veld `path.value` wordt gebruikt.<ul><li>Stel deze waarde in op `PEBBLE_V1` als u wilt dat uw gebruikers het pad naar de [!DNL ADLS] -map invoeren in de gebruikersinterface van Experience Platform. In dit geval, moet u het `path.value` gebied templatiseren om een waarde van de [ gebieden van klantengegevens ](../destination-configuration/customer-data-fields.md) te lezen die door de gebruiker worden gevuld. Dit gebruiksgeval wordt in het bovenstaande voorbeeld getoond.</li><li>Als u een pad met harde codes gebruikt voor uw integratie, zoals `"abfs://<file_system>@<account_name>.dfs.core.windows.net/<path>/"` , stelt u deze waarde in op `NONE` .</li></ul> |
 | `fileBasedAdlsGen2Destination.path.value` | String | Het pad naar de [!DNL ADLS] -opslagmap. Dit kan of een templatized gebied zijn dat de waarde van de [ gebieden van klantengegevens ](../destination-configuration/customer-data-fields.md) zal lezen die door de gebruiker (zoals aangetoond in het bovenstaande voorbeeld) worden ingevuld, of een hard-gecodeerde waarde, zoals `abfs://<file_system>@<account_name>.dfs.core.windows.net/<path>/`. |
 
 {style="table-layout:auto"}
@@ -285,16 +285,16 @@ In het onderstaande voorbeeld ziet u een voorbeeld van een doelserverconfigurati
 |---|---|---|
 | `name` | String | De naam van de doelverbinding. |
 | `destinationServerType` | String | Stel deze waarde in op basis van het doelplatform. Stel dit voor [!DNL Azure Blob Storage] -doelen in op `FILE_BASED_AZURE_BLOB` . |
-| `fileBasedAzureBlobDestination.path.templatingStrategy` | String | *Vereiste*. Stel deze waarde in op basis van het type waarde dat in het veld `path.value` wordt gebruikt.<ul><li>Als u uw gebruikers hun eigen [!DNL Azure Blob] [ opslagrekening URI ](https://learn.microsoft.com/en-us/azure/storage/blobs/storage-blobs-introduction) in het Experience Platform UI wilt invoeren, plaats deze waarde aan `PEBBLE_V1`. In dit geval, moet u het `path.value` gebied templatiseren om de waarde van de [ gebieden van klantengegevens ](../destination-configuration/customer-data-fields.md) te lezen die door de gebruiker worden gevuld. Dit gebruiksgeval wordt in het bovenstaande voorbeeld getoond.</li><li>Als u een pad met harde codes gebruikt voor uw integratie, zoals `"path.value": "https://myaccount.blob.core.windows.net/"` , stelt u deze waarde in op `NONE` . |
+| `fileBasedAzureBlobDestination.path.templatingStrategy` | String | *Vereiste*. Stel deze waarde in op basis van het type waarde dat in het veld `path.value` wordt gebruikt.<ul><li>Als u uw gebruikers hun eigen [!DNL Azure Blob] [ opslag rekening URI ](https://learn.microsoft.com/en-us/azure/storage/blobs/storage-blobs-introduction) in Experience Platform UI wilt invoeren, plaats deze waarde aan `PEBBLE_V1`. In dit geval, moet u het `path.value` gebied templatiseren om de waarde van de [ gebieden van klantengegevens ](../destination-configuration/customer-data-fields.md) te lezen die door de gebruiker worden gevuld. Dit gebruiksgeval wordt in het bovenstaande voorbeeld getoond.</li><li>Als u een pad met harde codes gebruikt voor uw integratie, zoals `"path.value": "https://myaccount.blob.core.windows.net/"` , stelt u deze waarde in op `NONE` . |
 | `fileBasedAzureBlobDestination.path.value` | String | Het pad naar de [!DNL Azure Blob] -opslag. Dit kan of een templatized gebied zijn dat de waarde van de [ gebieden van klantengegevens ](../destination-configuration/customer-data-fields.md) zal lezen die door de gebruiker (zoals aangetoond in het bovenstaande voorbeeld) worden ingevuld, of een hard-gecodeerde waarde, zoals `https://myaccount.blob.core.windows.net/`. |
-| `fileBasedAzureBlobDestination.container.templatingStrategy` | String | *Vereiste*. Stel deze waarde in op basis van het type waarde dat in het veld `container.value` wordt gebruikt.<ul><li>Als u uw gebruikers hun eigen [!DNL Azure Blob] [ containernaam ](https://learn.microsoft.com/en-us/azure/storage/blobs/storage-blobs-introduction) in het Experience Platform UI wilt invoeren, plaats deze waarde aan `PEBBLE_V1`. In dit geval, moet u het `container.value` gebied templatiseren om de waarde van de [ gebieden van klantengegevens ](../destination-configuration/customer-data-fields.md) te lezen die door de gebruiker worden gevuld. Dit gebruiksgeval wordt in het bovenstaande voorbeeld getoond.</li><li>Als u een hard-gecodeerde containernaam voor uw integratie gebruikt, zoals `"path.value: myContainer"`, dan plaats deze waarde aan `NONE`. |
+| `fileBasedAzureBlobDestination.container.templatingStrategy` | String | *Vereiste*. Stel deze waarde in op basis van het type waarde dat in het veld `container.value` wordt gebruikt.<ul><li>Als u uw gebruikers hun eigen [!DNL Azure Blob] [ containernaam ](https://learn.microsoft.com/en-us/azure/storage/blobs/storage-blobs-introduction) in Experience Platform UI wilt invoeren, plaats deze waarde aan `PEBBLE_V1`. In dit geval, moet u het `container.value` gebied templatiseren om de waarde van de [ gebieden van klantengegevens ](../destination-configuration/customer-data-fields.md) te lezen die door de gebruiker worden gevuld. Dit gebruiksgeval wordt in het bovenstaande voorbeeld getoond.</li><li>Als u een hard-gecodeerde containernaam voor uw integratie gebruikt, zoals `"path.value: myContainer"`, dan plaats deze waarde aan `NONE`. |
 | `fileBasedAzureBlobDestination.container.value` | String | De naam van de Azure Blob Storage-container die voor deze bestemming moet worden gebruikt. Dit kan of een templatized gebied zijn dat de waarde van de [ gebieden van klantengegevens ](../destination-configuration/customer-data-fields.md) zal lezen die door de gebruiker (zoals aangetoond in het bovenstaande voorbeeld) worden ingevuld, of een hard-gecodeerde waarde, zoals `myContainer`. |
 
 {style="table-layout:auto"}
 
 ## [!DNL Data Landing Zone] ([!DNL DLZ]) doelserver {#dlz-example}
 
-Met deze doelserver kunt u bestanden met platformgegevens exporteren naar een [[!DNL Data Landing Zone]](../../../catalog/cloud-storage/data-landing-zone.md) -opslag.
+Met deze doelserver kunt u bestanden met Experience Platform-gegevens exporteren naar een [[!DNL Data Landing Zone]](../../../catalog/cloud-storage/data-landing-zone.md) -opslagruimte.
 
 Het voorbeeld hieronder toont een voorbeeld van een configuratie van de bestemmingsserver voor een [!DNL Data Landing Zone] ([!DNL DLZ]) bestemming.
 
@@ -316,14 +316,14 @@ Het voorbeeld hieronder toont een voorbeeld van een configuratie van de bestemmi
 |---|---|---|
 | `name` | String | De naam van de doelverbinding. |
 | `destinationServerType` | String | Stel deze waarde in op basis van het doelplatform. Stel dit voor [!DNL Data Landing Zone] -doelen in op `FILE_BASED_DLZ` . |
-| `fileBasedDlzDestination.path.templatingStrategy` | String | *Vereiste*. Stel deze waarde in op basis van het type waarde dat in het veld `path.value` wordt gebruikt.<ul><li>Als u wilt dat uw gebruikers hun eigen [!DNL Data Landing Zone] -account invoeren in de gebruikersinterface van het Experience Platform, stelt u deze waarde in op `PEBBLE_V1` . In dit geval, moet u het `path.value` gebied templatiseren om een waarde van de [ gebieden van klantengegevens ](../destination-configuration/customer-data-fields.md) te lezen die door de gebruiker worden gevuld. Dit gebruiksgeval wordt in het bovenstaande voorbeeld getoond.</li><li>Als u een pad met harde codes gebruikt voor uw integratie, zoals `"path.value": "https://myaccount.blob.core.windows.net/"` , stelt u deze waarde in op `NONE` . |
+| `fileBasedDlzDestination.path.templatingStrategy` | String | *Vereiste*. Stel deze waarde in op basis van het type waarde dat in het veld `path.value` wordt gebruikt.<ul><li>Als u wilt dat uw gebruikers hun eigen [!DNL Data Landing Zone] -account invoeren in de gebruikersinterface van Experience Platform, stelt u deze waarde in op `PEBBLE_V1` . In dit geval, moet u het `path.value` gebied templatiseren om een waarde van de [ gebieden van klantengegevens ](../destination-configuration/customer-data-fields.md) te lezen die door de gebruiker worden gevuld. Dit gebruiksgeval wordt in het bovenstaande voorbeeld getoond.</li><li>Als u een pad met harde codes gebruikt voor uw integratie, zoals `"path.value": "https://myaccount.blob.core.windows.net/"` , stelt u deze waarde in op `NONE` . |
 | `fileBasedDlzDestination.path.value` | String | Het pad naar de doelmap waarin de geëxporteerde bestanden worden opgeslagen. |
 
 {style="table-layout:auto"}
 
 ## [!DNL Google Cloud Storage] doelserver {#gcs-example}
 
-Met deze doelserver kunt u bestanden met platformgegevens exporteren naar uw [!DNL Google Cloud Storage] -account.
+Met deze doelserver kunt u bestanden met Experience Platform-gegevens exporteren naar uw [!DNL Google Cloud Storage] -account.
 
 In het onderstaande voorbeeld ziet u een voorbeeld van een doelserverconfiguratie voor een [!DNL Google Cloud Storage] -doel.
 
@@ -348,9 +348,9 @@ In het onderstaande voorbeeld ziet u een voorbeeld van een doelserverconfigurati
 |---|---|---|
 | `name` | String | De naam van de doelverbinding. |
 | `destinationServerType` | String | Stel deze waarde in op basis van het doelplatform. Stel dit voor [!DNL Google Cloud Storage] -doelen in op `FILE_BASED_GOOGLE_CLOUD` . |
-| `fileBasedGoogleCloudStorageDestination.bucket.templatingStrategy` | String | *Vereiste*. Stel deze waarde in op basis van het type waarde dat in het veld `bucket.value` wordt gebruikt.<ul><li>Stel deze waarde in op `PEBBLE_V1` als u wilt dat uw gebruikers hun eigen [!DNL Google Cloud Storage] emmernaam invoeren in de interface van het Experience Platform. In dit geval, moet u het `bucket.value` gebied templatiseren om een waarde van de [ gebieden van klantengegevens ](../destination-configuration/customer-data-fields.md) te lezen die door de gebruiker worden gevuld. Dit gebruiksgeval wordt in het bovenstaande voorbeeld getoond.</li><li>Als u een hard-gecodeerde emmernaam voor uw integratie, zoals `"bucket.value": "my-bucket"` gebruikt, dan plaats deze waarde aan `NONE`. |
+| `fileBasedGoogleCloudStorageDestination.bucket.templatingStrategy` | String | *Vereiste*. Stel deze waarde in op basis van het type waarde dat in het veld `bucket.value` wordt gebruikt.<ul><li>Stel deze waarde in op `PEBBLE_V1` als u wilt dat uw gebruikers hun eigen [!DNL Google Cloud Storage] emmernaam invoeren in de gebruikersinterface van Experience Platform. In dit geval, moet u het `bucket.value` gebied templatiseren om een waarde van de [ gebieden van klantengegevens ](../destination-configuration/customer-data-fields.md) te lezen die door de gebruiker worden gevuld. Dit gebruiksgeval wordt in het bovenstaande voorbeeld getoond.</li><li>Als u een hard-gecodeerde emmernaam voor uw integratie, zoals `"bucket.value": "my-bucket"` gebruikt, dan plaats deze waarde aan `NONE`. |
 | `fileBasedGoogleCloudStorageDestination.bucket.value` | String | De naam van de [!DNL Google Cloud Storage] emmer die door dit doel moet worden gebruikt. Dit kan of een templatized gebied zijn dat de waarde van de [ gebieden van klantengegevens ](../destination-configuration/customer-data-fields.md) zal lezen die door de gebruiker (zoals aangetoond in het bovenstaande voorbeeld) worden ingevuld, of een hard-gecodeerde waarde, zoals `"value": "my-bucket"`. |
-| `fileBasedGoogleCloudStorageDestination.path.templatingStrategy` | String | *Vereiste*. Stel deze waarde in op basis van het type waarde dat in het veld `path.value` wordt gebruikt.<ul><li>Als u wilt dat uw gebruikers hun eigen [!DNL Google Cloud Storage] emmerpad invoeren in de gebruikersinterface van het Experience Platform, stelt u deze waarde in op `PEBBLE_V1` . In dit geval, moet u het `path.value` gebied templatiseren om een waarde van de [ gebieden van klantengegevens ](../destination-configuration/customer-data-fields.md) te lezen die door de gebruiker worden gevuld. Dit gebruiksgeval wordt in het bovenstaande voorbeeld getoond.</li><li>Als u een pad met harde codes gebruikt voor uw integratie, zoals `"path.value": "/path/to/my-bucket"` , stelt u deze waarde in op `NONE` .</li></ul> |
+| `fileBasedGoogleCloudStorageDestination.path.templatingStrategy` | String | *Vereiste*. Stel deze waarde in op basis van het type waarde dat in het veld `path.value` wordt gebruikt.<ul><li>Als u wilt dat uw gebruikers hun eigen [!DNL Google Cloud Storage] emmerpad invoeren in de gebruikersinterface van Experience Platform, stelt u deze waarde in op `PEBBLE_V1` . In dit geval, moet u het `path.value` gebied templatiseren om een waarde van de [ gebieden van klantengegevens ](../destination-configuration/customer-data-fields.md) te lezen die door de gebruiker worden gevuld. Dit gebruiksgeval wordt in het bovenstaande voorbeeld getoond.</li><li>Als u een pad met harde codes gebruikt voor uw integratie, zoals `"path.value": "/path/to/my-bucket"` , stelt u deze waarde in op `NONE` .</li></ul> |
 | `fileBasedGoogleCloudStorageDestination.path.value` | String | Het pad naar de [!DNL Google Cloud Storage] -map die door dit doel moet worden gebruikt. Dit kan of een templatized gebied zijn dat de waarde van de [ gebieden van klantengegevens ](../destination-configuration/customer-data-fields.md) zal lezen die door de gebruiker (zoals aangetoond in het bovenstaande voorbeeld) worden ingevuld, of een hard-gecodeerde waarde, zoals `"value": "/path/to/my-bucket"`. |
 
 {style="table-layout:auto"}

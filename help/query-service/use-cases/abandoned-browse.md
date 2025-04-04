@@ -3,9 +3,9 @@ keywords: Experience Platform;query-service;Query-service;query
 title: Voorbeeld van gebruik van hoofdletters/kleine letters voor Adobe Experience Platform Query Service
 description: Een end-to-end voorbeeld om de veelzijdigheid en de voordelen van de Dienst van de Vraag van Adobe Experience Platform aan te tonen.
 exl-id: 00bdae47-71b7-44ea-9365-a1d64c88d2bf
-source-git-commit: 38689125a43ad0b1a12a00efe6800bb310d7557c
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '695'
+source-wordcount: '696'
 ht-degree: 0%
 
 ---
@@ -28,7 +28,7 @@ Deze workflowdemonstratie is gebaseerd op verschillende Adobe Experience Platfor
 * Hoe te [ datasets tot stand brengen en gegevens opnemen ](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html)
 * Hoe te om [ gegevens in te voeren gebruikend de Adobe Analytics bronschakelaar ](https://experienceleague.adobe.com/docs/platform-learn/tutorials/sources/ingest-data-from-adobe-analytics.html)
 * [Segmentatie](../../segmentation/home.md)
-* [Doelen](../../destinations/home.md)
+* [Bestemmingen](../../destinations/home.md)
 
 In het voorbeeld voor het verlaten van een browser wordt het gebruik van Adobe [!DNL Analytics] -gegevens centraal gesteld bij het maken van een bepaald actionabel publiek. Het publiek is verfijnd en omvat alle klanten die de afgelopen vier dagen door de website hebben gebladerd, maar geen aankoop hebben gedaan. Elk profiel in het publiek wordt dan gericht met het hoogst-prijs SKU dat uit het gedragspatroon van de klant resulteerde.
 
@@ -57,7 +57,7 @@ order by price desc)D;
 
 ## [!DNL Query Service] voorbeeld met bladerstopzetting met gebruik van adobe analytics {#video-example}
 
-De onderstaande videopresentatie biedt een holistische, realistische gebruiksmogelijkheid voor uw Experience Platform-gegevens die zijn toegespitst op [!DNL Query Service] en integratie van Adobe-analysemogelijkheden.
+De onderstaande videopresentatie biedt een holistische, realistische gebruikscase voor uw Experience Platform-gegevens die zijn toegespitst op [!DNL Query Service] - en Adobe-analysemogelijkheden.
 
 >[!VIDEO](https://video.tv.adobe.com/v/342533?quality=12&learn=on)
 
@@ -69,7 +69,7 @@ Met [!DNL Query Service] kunt u beperkingen in uw query&#39;s opnemen om het pro
 
 Door logica in uw query op te nemen die voldoet aan terugkerende of statische voorwaarden, extraheert [!DNL Query Service] ook de last van uitgebreide segmentatie.
 
-Adobe Experience Platform biedt een gegevensopslagplaats en de benodigde hulpmiddelen om uw gegevens op een efficiënte en betrouwbare manier te activeren. Door gegevens binnen Platform te houden, staat het u toe om attributen af te leiden terwijl het runnen van andere processen en verwijdert de behoefte om gegevens naar derdehulpmiddelen voor manipulatie en verwerking uit te voeren. Dergelijke verwerkingsoverheadkosten kunnen een projectchronologie zeer beïnvloeden wanneer het behandelen van honderden attributen of campagnes. Dit geeft marketers één enkele plaats om tot hun gegevens toegang te hebben en campagnes te bouwen evenals een zeer dynamische manier om hun berichten te segmenteren en te personaliseren.
+Adobe Experience Platform biedt een gegevensopslagplaats en de benodigde hulpmiddelen om uw gegevens op een efficiënte en betrouwbare manier te activeren. Door gegevens in Experience Platform te bewaren, staat het u toe om attributen af te leiden terwijl het runnen van andere processen en verwijdert de behoefte om gegevens naar derdehulpmiddelen voor manipulatie en verwerking uit te voeren. Dergelijke verwerkingsoverheadkosten kunnen een projectchronologie zeer beïnvloeden wanneer het behandelen van honderden attributen of campagnes. Dit geeft marketers één enkele plaats om tot hun gegevens toegang te hebben en campagnes te bouwen evenals een zeer dynamische manier om hun berichten te segmenteren en te personaliseren.
 
 ## Volgende stappen
 

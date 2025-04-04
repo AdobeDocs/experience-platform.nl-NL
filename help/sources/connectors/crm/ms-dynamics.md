@@ -2,18 +2,18 @@
 keywords: Experience Platform;home;populaire onderwerpen;Microsoft Dynamics;microsoft dynamics;dynamics;Dynamics
 solution: Experience Platform
 title: Overzicht Microsoft Dynamics Source Connector
-description: Leer hoe u Microsoft Dynamics verbindt met Adobe Experience Platform via API's of de gebruikersinterface.
+description: Leer hoe u Microsoft Dynamics met Adobe Experience Platform kunt verbinden via API's of de gebruikersinterface.
 exl-id: 6ca162ce-2016-4270-b741-301cf4230233
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '282'
+source-wordcount: '285'
 ht-degree: 1%
 
 ---
 
 # Microsoft Dynamics-connector
 
-Adobe Experience Platform staat toe dat gegevens uit externe bronnen worden opgenomen en biedt u de mogelijkheid om inkomende gegevens te structureren, labelen en verbeteren met [!DNL Platform] -services. U kunt gegevens uit diverse bronnen invoeren, zoals toepassingen voor Adobe, opslag in de cloud, databases en vele andere.
+Adobe Experience Platform staat toe dat gegevens uit externe bronnen worden opgenomen en biedt u de mogelijkheid om inkomende gegevens te structureren, labelen en verbeteren met [!DNL Experience Platform] -services. U kunt gegevens invoeren uit verschillende bronnen, zoals Adobe-toepassingen, opslag in de cloud, databases en vele andere.
 
 [!DNL Experience Platform] biedt ondersteuning voor het opnemen van gegevens van een extern CRM-systeem. Tot de ondersteuning voor CRM-providers behoren [!DNL Microsoft Dynamics] .
 
@@ -23,9 +23,9 @@ Een lijst van IP adressen moet aan een lijst van gewenste personen worden toegev
 
 ## Veldtoewijzing van [!DNL Microsoft Dynamics] naar XDM
 
-Om een bronverbinding tussen [!DNL Microsoft Dynamics] en Platform tot stand te brengen, moeten de [!DNL Microsoft Dynamics] brongegevensgebieden aan hun aangewezen doelXDM gebieden worden in kaart gebracht alvorens in Platform wordt opgenomen.
+Als u een bronverbinding wilt maken tussen [!DNL Microsoft Dynamics] en Experience Platform, moeten de [!DNL Microsoft Dynamics] -brongegevensvelden worden toegewezen aan hun juiste doel-XDM-velden voordat ze worden opgenomen in Experience Platform.
 
-Zie het volgende voor gedetailleerde informatie over de regels voor het in kaart brengen van velden tussen [!DNL Microsoft Dynamics] datasets en Platform:
+Zie het volgende voor meer informatie over de regels voor veldmapping tussen [!DNL Microsoft Dynamics] datasets en Experience Platform:
 
 - [Contactpersonen](../adobe-applications/mapping/dynamics.md#contacts)
 - [Leads](../adobe-applications/mapping/dynamics.md#leads)
@@ -36,15 +36,15 @@ Zie het volgende voor gedetailleerde informatie over de regels voor het in kaart
 - [Marketing](../adobe-applications/mapping/dynamics.md#marketing-list)
 - [Leden van de marketinglijst](../adobe-applications/mapping/dynamics.md#marketing-list-members)
 
-In de onderstaande documentatie vindt u informatie over het tot stand brengen van een verbinding tussen [!DNL Microsoft Dynamics] en [!DNL Platform] via API&#39;s of de gebruikersinterface:
+In de onderstaande documentatie vindt u informatie over het tot stand brengen van een verbinding tussen [!DNL Microsoft Dynamics] en [!DNL Experience Platform] via API&#39;s of de gebruikersinterface:
 
-## Verbind [!DNL Microsoft Dynamics] met [!DNL Platform] gebruikend APIs
+## Verbind [!DNL Microsoft Dynamics] met [!DNL Experience Platform] gebruikend APIs
 
-- [Een basisverbinding voor Microsoft Dynamics maken met de Flow Service API](../../tutorials/api/create/crm/ms-dynamics.md)
+- [Een Microsoft Dynamics-basisverbinding maken met de Flow Service API](../../tutorials/api/create/crm/ms-dynamics.md)
 - [Gegevenstabellen verkennen met de Flow Service API](../../tutorials/api/explore/tabular.md)
 - [Een gegevensstroom maken voor een CRM-bron met behulp van de Flow Service API](../../tutorials/api/collect/crm.md)
 
-## Verbind [!DNL Microsoft Dynamics] met [!DNL Platform] gebruikend UI
+## Verbind [!DNL Microsoft Dynamics] met [!DNL Experience Platform] gebruikend UI
 
 - [Een Microsoft Dynamics-bronverbinding maken in de gebruikersinterface](../../tutorials/ui/create/crm/dynamics.md)
 - [Een gegevensstroom maken voor een CRM-verbinding in de gebruikersinterface](../../tutorials/ui/dataflow/crm.md)

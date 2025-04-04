@@ -1,11 +1,11 @@
 ---
-keywords: Experience Platform;thuis;populaire onderwerpen;de stroomdienst;
+keywords: Experience Platform;home;populaire onderwerpen;flowservice;
 title: Creeer een Looppas van de Stroom voor On-Demand Ingestie die de Dienst API van de Stroom gebruikt
 description: Leer hoe te om een stroom tot stand te brengen die voor opname op bestelling gebruikend de Dienst API van de Stroom wordt uitgevoerd
 exl-id: a7b20cd1-bb52-4b0a-aad0-796929555e4a
-source-git-commit: 5aefa362d7a7d93c12f9997d56311127e548497e
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '797'
+source-wordcount: '801'
 ht-degree: 0%
 
 ---
@@ -26,16 +26,16 @@ Dit leerprogramma behandelt de stappen op hoe te om op bestelling ingestie te ge
 
 Voor deze zelfstudie hebt u een goed inzicht nodig in de volgende onderdelen van Adobe Experience Platform:
 
-* [ Bronnen ](../../home.md): [!DNL Experience Platform] staat gegevens toe om van diverse bronnen worden opgenomen terwijl het voorzien van u van de capaciteit om, inkomende gegevens te structureren te etiketteren en te verbeteren gebruikend [!DNL Platform] diensten.
-* [ Sandboxen ](../../../sandboxes/home.md): [!DNL Experience Platform] verstrekt virtuele zandbakken die één enkele [!DNL Platform] instantie in afzonderlijke virtuele milieu&#39;s verdelen helpen digitale ervaringstoepassingen ontwikkelen en ontwikkelen.
+* [ Bronnen ](../../home.md): [!DNL Experience Platform] staat gegevens toe om van diverse bronnen worden opgenomen terwijl het voorzien van u van de capaciteit om, inkomende gegevens te structureren te etiketteren en te verbeteren gebruikend [!DNL Experience Platform] diensten.
+* [ Sandboxen ](../../../sandboxes/home.md): [!DNL Experience Platform] verstrekt virtuele zandbakken die één enkele [!DNL Experience Platform] instantie in afzonderlijke virtuele milieu&#39;s verdelen helpen digitale ervaringstoepassingen ontwikkelen en ontwikkelen.
 
-### Platform-API&#39;s gebruiken
+### Experience Platform API&#39;s gebruiken
 
-Voor informatie over hoe te om vraag aan Platform APIs met succes te maken, zie de gids op [ begonnen wordt met Platform APIs ](../../../landing/api-guide.md).
+Voor informatie over hoe te om vraag aan Experience Platform APIs met succes te maken, zie de gids op [ begonnen wordt met Experience Platform APIs ](../../../landing/api-guide.md).
 
 ## Een doorloop maken die wordt uitgevoerd voor een op tabellen gebaseerde bron
 
-Om een stroom voor een op lijst-gebaseerde bron tot stand te brengen, doe een verzoek van de POST aan [!DNL Flow Service] API terwijl het verstrekken van identiteitskaart van de stroom u de looppas wilt tot stand brengen, evenals waarden voor begintijd, eindtijd, en deltakolom.
+Als u een stroom voor een op een tabel gebaseerde bron wilt maken, dient u een POST-aanvraag in bij de [!DNL Flow Service] API en geeft u de id op van de flow waarop u de run wilt maken, evenals waarden voor begintijd, eindtijd en delta-kolom.
 
 >[!TIP]
 >
@@ -125,7 +125,7 @@ Een geslaagde reactie retourneert de details van de nieuw gemaakte flow, inclusi
 
 ## Een doorloop maken voor een op een bestand gebaseerde bron
 
-Als u een stroom voor een op een bestand gebaseerde bron wilt maken, vraagt u een POST naar de [!DNL Flow Service] API en geeft u de id op van de flow waarop u de runtime en waarden voor de begintijd en eindtijd wilt maken.
+Als u een stroom voor een op een bestand gebaseerde bron wilt maken, dient u een POST-aanvraag in bij de [!DNL Flow Service] API en geeft u de id op van de flow waarop u de runtime en waarden voor de begintijd en eindtijd wilt maken.
 
 >[!TIP]
 >
@@ -189,4 +189,4 @@ Een geslaagde reactie retourneert de details van de nieuw gemaakte flow, inclusi
 
 ## De stroomuitvoering controleren
 
-Zodra uw stroomlooppas is gecreeerd, kunt u de gegevens controleren die door het worden opgenomen om informatie over stroomlooppas, voltooiingsstatus, en fouten te zien. Om uw stroomlooppas te controleren die API gebruiken, zie het leerprogramma op [ controledataflows in API ](./monitor.md). Om uw stroomlooppas te controleren gebruikend Platform UI, zie de gids op [ controlemogelijkheden dataflows gebruikend het controledashboard ](../../../dataflows/ui/monitor-sources.md).
+Zodra uw stroomlooppas is gecreeerd, kunt u de gegevens controleren die door het worden opgenomen om informatie over stroomlooppas, voltooiingsstatus, en fouten te zien. Om uw stroomlooppas te controleren die API gebruiken, zie het leerprogramma op [ controledataflows in API ](./monitor.md). Om uw stroomlooppas te controleren die Experience Platform UI gebruiken, zie de gids op [ gegevensstroom controlemogelijkheden gebruikend het controledashboard ](../../../dataflows/ui/monitor-sources.md).

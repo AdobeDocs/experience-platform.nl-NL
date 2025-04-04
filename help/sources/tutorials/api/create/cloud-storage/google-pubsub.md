@@ -1,11 +1,11 @@
 ---
 title: Een Google PubSub Source Connection maken met de Flow Service API
 description: Leer hoe u Adobe Experience Platform kunt verbinden met een Google PubSub-account met behulp van de Flow Service API.
-badgeUltimate: label="Ultieme" type="Positive"
+badgeUltimate: label="Ultimate" type="Positive"
 exl-id: f5b8f9bf-8a6f-4222-8eb2-928503edb24f
-source-git-commit: fcac805e151d6142886eb8e05da0eb1babad2f69
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1147'
+source-wordcount: '1153'
 ht-degree: 0%
 
 ---
@@ -14,18 +14,18 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
->De [!DNL Google PubSub] -bron is in de broncatalogus beschikbaar voor gebruikers die Real-time Customer Data Platform Ultimate hebben aangeschaft.
+>De [!DNL Google PubSub] -bron is in de broncatalogus beschikbaar voor gebruikers die Real-Time Customer Data Platform Ultimate hebben aangeschaft.
 
-Dit leerprogramma begeleidt u door de stappen om [!DNL Google PubSub] (verder als &quot;[!DNL PubSub]&quot;worden bedoeld) met Experience Platform te verbinden, gebruikend [[!DNL Flow Service]  API ](<https://www.adobe.io/experience-platform-apis/references/flow-service/>).
+Dit leerprogramma begeleidt u door de stappen om [!DNL Google PubSub] (verder die als &quot; [!DNL PubSub]&quot;worden bedoeld) met Experience Platform te verbinden, gebruikend [[!DNL Flow Service]  API ](<https://www.adobe.io/experience-platform-apis/references/flow-service/>).
 
 ## Aan de slag
 
 Deze handleiding vereist een goed begrip van de volgende onderdelen van Adobe Experience Platform:
 
-* [ Bronnen ](../../../../home.md): Experience Platform staat gegevens toe om van diverse bronnen worden opgenomen terwijl het voorzien van u van de capaciteit om, inkomende gegevens te structureren te etiketteren en te verbeteren gebruikend de diensten van het Platform.
-* [ Sandboxes ](../../../../../sandboxes/home.md): Experience Platform verstrekt virtuele zandbakken die één enkele instantie van het Platform in afzonderlijke virtuele milieu&#39;s verdelen helpen digitale ervaringstoepassingen ontwikkelen en ontwikkelen.
+* [ Bronnen ](../../../../home.md): Experience Platform staat gegevens toe om van diverse bronnen worden opgenomen terwijl het voorzien van u van de capaciteit om, inkomende gegevens te structureren te etiketteren en te verbeteren gebruikend de diensten van Experience Platform.
+* [ Sandboxes ](../../../../../sandboxes/home.md): Experience Platform verstrekt virtuele zandbakken die één enkele instantie van Experience Platform in afzonderlijke virtuele milieu&#39;s verdelen helpen digitale ervaringstoepassingen ontwikkelen en ontwikkelen.
 
-In de volgende secties vindt u aanvullende informatie die u nodig hebt om [!DNL PubSub] met de API van [!DNL Flow Service] te kunnen verbinden met Platform.
+In de volgende secties vindt u aanvullende informatie die u moet weten voordat u [!DNL PubSub] met de API van [!DNL Flow Service] kunt verbinden met Experience Platform.
 
 ### Vereiste referenties verzamelen
 
@@ -58,9 +58,9 @@ Voor meer informatie over deze waarden, lees dit [[!DNL PubSub]  authentificatie
 >
 >Als u de op rekening-gebaseerde authentificatie van de dienst gebruikt, zorg ervoor dat u voldoende gebruikerstoegang tot uw de dienstrekening hebt verleend en dat er geen extra witte ruimten in JSON zijn, wanneer het kopiëren en het kleven van uw geloofsbrieven.
 
-### Platform-API&#39;s gebruiken
+### Experience Platform API&#39;s gebruiken
 
-Voor informatie over hoe te om vraag aan Platform APIs met succes te maken, zie de gids op [ begonnen wordt met Platform APIs ](../../../../../landing/api-guide.md).
+Voor informatie over hoe te om vraag aan Experience Platform APIs met succes te maken, zie de gids op [ begonnen wordt met Experience Platform APIs ](../../../../../landing/api-guide.md).
 
 ## Een basisverbinding maken
 
@@ -70,7 +70,7 @@ Voor informatie over hoe te om vraag aan Platform APIs met succes te maken, zie 
 
 De eerste stap bij het maken van een bronverbinding is het verifiëren van de [!DNL PubSub] -bron en het genereren van een basis-verbindings-id. Met een basis-verbindings-id kunt u bestanden verkennen en door de bestanden navigeren vanuit de bron en specifieke items identificeren die u wilt invoeren, zoals informatie over de gegevenstypen en indelingen.
 
-Als u een basis-verbindings-id wilt maken, vraagt u een POST naar het `/connections` -eindpunt en geeft u de [!DNL PubSub] -verificatiegegevens op als onderdeel van de aanvraagparameters.
+Als u een basis-verbindings-id wilt maken, vraagt u een POST-aanvraag naar het `/connections` -eindpunt en geeft u de [!DNL PubSub] -verificatiegegevens op als onderdeel van de aanvraagparameters.
 
 Met de bron [!DNL PubSub] kunt u het type toegang opgeven dat u wilt toestaan tijdens verificatie. U kunt uw account zo instellen dat deze toegang tot een bepaald onderwerp en een bepaald abonnement van [!DNL PubSub] heeft of beperkt.
 
@@ -88,7 +88,7 @@ POST /connections
 
 >[!TAB  op project-gebaseerde authentificatie ]
 
-Als u een basisverbinding wilt maken met verificatie op basis van een project, vraagt u een POST naar het `/connections` -eindpunt en geeft u de instructies `projectId` en `credentials` op in de aanvraag.
+Als u een basisverbinding wilt maken met verificatie op basis van een project, vraagt u een POST-aanvraag naar het `/connections` -eindpunt en geeft u de instructies `projectId` en `credentials` op in de aanvraagtekst.
 
 +++verzoek
 
@@ -140,7 +140,7 @@ Een succesvolle reactie keert details van de pas gecreëerde verbinding, met inb
 
 >[!TAB  Onderwerp en op abonnement-Gebaseerde authentificatie ]
 
-Als u een basisverbinding wilt maken met een onderwerp en verificatie op basis van een abonnement, vraagt u een POST naar het `/connections` -eindpunt en geeft u de instructies `credentials` , `topicName` en `subscriptionName` op in de aanvraagtekst.
+Als u een basisverbinding met een onderwerp en verificatie op basis van een abonnement wilt maken, dient u een POST-aanvraag in bij het eindpunt van `/connections` en geeft u `credentials` , `topicName` en `subscriptionName` op in de aanvraagtekst.
 
 +++verzoek
 
@@ -199,7 +199,7 @@ Een succesvolle reactie keert details van de pas gecreëerde verbinding, met inb
 
 Een bronverbinding maakt en beheert de verbinding met de externe bron vanwaar gegevens worden ingevoerd. Een bronverbinding bestaat uit informatie zoals gegevensbron, gegevensformaat, en een identiteitskaart van de bronverbinding nodig om een gegevensstroom tot stand te brengen. Een bronverbindingsinstantie is specifiek voor een huurder en organisatie.
 
-Als u een bronverbinding wilt maken, vraagt u een POST naar het `/sourceConnections` -eindpunt van de [!DNL Flow Service] API.
+Als u een bronverbinding wilt maken, vraagt u een POST-aanvraag naar het `/sourceConnections` -eindpunt van de [!DNL Flow Service] API.
 
 **API formaat**
 

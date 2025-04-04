@@ -2,9 +2,9 @@
 title: Een SFTP Source-verbinding maken in de gebruikersinterface
 description: Leer hoe u een SFTP-bronverbinding maakt met de Adobe Experience Platform-gebruikersinterface.
 exl-id: 1a00ed27-3c95-4e57-9f94-45ff256bf75c
-source-git-commit: 9cd1232c9257d27b80ed57c26658b1e4058535e8
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '638'
+source-wordcount: '641'
 ht-degree: 0%
 
 ---
@@ -15,9 +15,9 @@ Deze zelfstudie bevat stappen voor het maken van een [!DNL SFTP] -bronverbinding
 
 ## Aan de slag
 
-Deze zelfstudie vereist een goed begrip van de volgende componenten van Platform:
+Deze zelfstudie vereist een goed begrip van de volgende onderdelen van Experience Platform:
 
-* [[!DNL Experience Data Model (XDM)]  Systeem ](../../../../../xdm/home.md): Het gestandaardiseerde kader waardoor het Experience Platform gegevens van de klantenervaring organiseert.
+* [[!DNL Experience Data Model (XDM)]  Systeem ](../../../../../xdm/home.md): Het gestandaardiseerde kader waardoor Experience Platform gegevens van de klantenervaring organiseert.
    * [ Grondbeginselen van schemacompositie ](../../../../../xdm/schema/composition.md): Leer over de basisbouwstenen van schema&#39;s XDM, met inbegrip van zeer belangrijke principes en beste praktijken in schemacompositie.
    * [ het leerprogramma van de Redacteur van het Schema ](../../../../../xdm/tutorials/create-schema-ui.md): Leer hoe te om douaneschema&#39;s tot stand te brengen gebruikend de Redacteur UI van het Schema.
 * [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md): biedt een uniform, real-time consumentenprofiel dat is gebaseerd op geaggregeerde gegevens van meerdere bronnen.
@@ -34,13 +34,13 @@ Lees de [[!DNL SFTP]  authentificatiegids ](../../../../connectors/cloud-storage
 
 ## Verbinding maken met uw [!DNL SFTP] -server
 
-Selecteer in de gebruikersinterface van het platform **[!UICONTROL Sources]** in de linkernavigatiebalk voor toegang tot de werkruimte van [!UICONTROL Sources] . In het scherm [!UICONTROL Catalog] worden diverse bronnen weergegeven waarmee u een account kunt maken.
+Selecteer in de gebruikersinterface van Experience Platform de optie **[!UICONTROL Sources]** in de linkernavigatiebalk voor toegang tot de werkruimte van [!UICONTROL Sources] . In het scherm [!UICONTROL Catalog] worden diverse bronnen weergegeven waarmee u een account kunt maken.
 
 U kunt de juiste categorie selecteren in de catalogus aan de linkerkant van het scherm. U kunt ook de specifieke bron vinden waarmee u wilt werken met de zoekoptie.
 
 Selecteer onder de categorie [!UICONTROL Cloud storage] de optie **[!UICONTROL SFTP]** en selecteer vervolgens **[!UICONTROL Add data]** .
 
-![ de Experience Platform broncatalogus met geselecteerde bron SFTP.](../../../../images/tutorials/create/sftp/catalog.png)
+![ de de broncatalogus van Experience Platform met geselecteerde bron SFTP.](../../../../images/tutorials/create/sftp/catalog.png)
 
 De pagina **[!UICONTROL Connect to SFTP]** wordt weergegeven. Op deze pagina kunt u nieuwe of bestaande referenties gebruiken.
 
@@ -48,7 +48,7 @@ De pagina **[!UICONTROL Connect to SFTP]** wordt weergegeven. Op deze pagina kun
 
 Als u een bestaande account wilt verbinden, selecteert u de FTP- of SFTP-account waarmee u verbinding wilt maken en selecteert u **[!UICONTROL Next]** om door te gaan.
 
-![ een lijst van bestaande rekeningen SFTP op het Experience Platform UI.](../../../../images/tutorials/create/sftp/existing.png)
+![ een lijst van bestaande rekeningen SFTP op Experience Platform UI.](../../../../images/tutorials/create/sftp/existing.png)
 
 ### Nieuwe account
 
@@ -101,4 +101,4 @@ Voor meer informatie over authentificatie, lees de gids over [ het verzamelen ve
 
 ## Volgende stappen
 
-Aan de hand van deze zelfstudie hebt u een verbinding met uw SFTP-account tot stand gebracht. U kunt nu aan het volgende leerprogramma verdergaan en [ een dataflow vormen om gegevens van uw wolkenopslag in Platform ](../../dataflow/batch/cloud-storage.md) te brengen.
+Aan de hand van deze zelfstudie hebt u een verbinding met uw SFTP-account tot stand gebracht. U kunt nu aan het volgende leerprogramma verdergaan en [ een dataflow vormen om gegevens van uw wolkenopslag in Experience Platform ](../../dataflow/batch/cloud-storage.md) te brengen.

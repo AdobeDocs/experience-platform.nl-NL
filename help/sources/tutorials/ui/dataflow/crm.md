@@ -3,30 +3,30 @@ keywords: Experience Platform;home;populaire onderwerpen;crm-schema;crm;CRM;data
 solution: Experience Platform
 title: Creeer een Dataflow gebruikend CRM Source in UI
 type: Tutorial
-description: Een dataflow is een geplande taak die gegevens van een bron aan een dataset van het Platform terugwint en opneemt. Dit leerprogramma verstrekt stappen op hoe te om een dataflow voor een bron van CRM tot stand te brengen gebruikend Platform UI.
+description: Een dataflow is een geplande taak die gegevens van een bron aan een dataset van Experience Platform terugwint en opneemt. Deze zelfstudie bevat stappen voor het maken van een gegevensstroom voor een CRM-bron met Experience Platform UI.
 exl-id: e14eafa7-6594-48e6-ab7a-f6c928d1e5fb
-source-git-commit: d048109141168b33795753c4706dac64cdf29ca5
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1531'
+source-wordcount: '1539'
 ht-degree: 0%
 
 ---
 
 # Creeer een gegevensstroom gebruikend een bron van CRM in UI
 
-Een dataflow is een geplande taak die gegevens van een bron aan een dataset in Adobe Experience Platform terugwint en opneemt. Deze zelfstudie bevat stappen voor het maken van een gegevensstroom voor een CRM-bron (Customer Relationship Management) met behulp van de platforminterface.
+Een dataflow is een geplande taak die gegevens van een bron aan een dataset in Adobe Experience Platform terugwint en opneemt. Deze zelfstudie bevat stappen voor het maken van een gegevensstroom voor een CRM-bron (Customer Relationship Management) met de gebruikersinterface van Experience Platform.
 
 >[!NOTE]
 >
 >* Om een gegevensstroom tot stand te brengen, moet u reeds een voor authentiek verklaarde rekening met een bron van CRM hebben. Een lijst van leerprogramma&#39;s voor het creëren van verschillende bronrekeningen van CRM in UI kan in het [ bronoverzicht ](../../../home.md#crm) worden gevonden.
->* Voor Experience Platform om gegevens in te voeren, moeten de tijdzones voor alle op lijst-gebaseerde partijbronnen aan UTC worden gevormd.
+>* Experience Platform kan alleen gegevens invoeren als tijdzones voor alle batchbronnen op basis van tabellen zijn geconfigureerd voor UTC.
 
 ## Aan de slag
 
-Deze zelfstudie vereist een goed begrip van de volgende componenten van Platform:
+Deze zelfstudie vereist een goed begrip van de volgende onderdelen van Experience Platform:
 
-* [ Bronnen ](../../../home.md): Het platform staat gegevens toe om van diverse bronnen worden opgenomen terwijl het voorzien van u van de capaciteit om, inkomende gegevens te structureren te etiketteren en te verbeteren gebruikend [!DNL Platform] diensten.
-* [[!DNL Experience Data Model (XDM)]  Systeem ](../../../../xdm/home.md): Het gestandaardiseerde kader waardoor het Experience Platform gegevens van de klantenervaring organiseert.
+* [ Bronnen ](../../../home.md): Experience Platform staat gegevens toe om van diverse bronnen worden opgenomen terwijl het voorzien van u van de capaciteit om, inkomende gegevens te structureren te etiketteren en te verbeteren gebruikend [!DNL Experience Platform] diensten.
+* [[!DNL Experience Data Model (XDM)]  Systeem ](../../../../xdm/home.md): Het gestandaardiseerde kader waardoor Experience Platform gegevens van de klantenervaring organiseert.
    * [ Grondbeginselen van schemacompositie ](../../../../xdm/schema/composition.md): Leer over de basisbouwstenen van schema&#39;s XDM, met inbegrip van zeer belangrijke principes en beste praktijken in schemacompositie.
    * [ het leerprogramma van de Redacteur van het Schema ](../../../../xdm/tutorials/create-schema-ui.md): Leer hoe te om douaneschema&#39;s tot stand te brengen gebruikend de Redacteur UI van het Schema.
 * [[!DNL Real-Time Customer Profile]](../../../../profile/home.md): biedt een uniform, real-time consumentenprofiel dat is gebaseerd op geaggregeerde gegevens van meerdere bronnen.
@@ -85,11 +85,11 @@ Wanneer u klaar bent met het opgeven van details voor de gegevensstroom, selecte
 
 De stap [!UICONTROL Mapping] verschijnt, die u van een interface voorziet om de brongebieden van uw bronschema aan hun aangewezen doelXDM gebieden in het doelschema in kaart te brengen.
 
-Platform biedt intelligente aanbevelingen voor automatisch toegewezen velden op basis van het doelschema of de gegevensset die u hebt geselecteerd. U kunt toewijzingsregels handmatig aanpassen aan uw gebruiksgevallen. Op basis van uw behoeften kunt u ervoor kiezen om velden rechtstreeks toe te wijzen of gegevens prep-functies te gebruiken om brongegevens om berekende of berekende waarden af te leiden. Voor uitvoerige stappen bij het gebruiken van de kaartperinterface en berekende gebieden, zie de [ gids UI van de Prep van Gegevens ](../../../../data-prep/ui/mapping.md).
+Experience Platform biedt intelligente aanbevelingen voor automatisch toegewezen velden op basis van het doelschema of de gegevensset die u hebt geselecteerd. U kunt toewijzingsregels handmatig aanpassen aan uw gebruiksgevallen. Op basis van uw behoeften kunt u ervoor kiezen om velden rechtstreeks toe te wijzen of gegevens prep-functies te gebruiken om brongegevens om berekende of berekende waarden af te leiden. Voor uitvoerige stappen bij het gebruiken van de kaartperinterface en berekende gebieden, zie de [ gids UI van de Prep van Gegevens ](../../../../data-prep/ui/mapping.md).
 
 >[!NOTE]
 >
->Als u [!DNL Salesforce] als deel van de Uitgave van Adobe Real-time Customer Data Platform B2B gebruikt, gelieve te verwijzen naar het [[!DNL Salesforce]  document van de gebiedstoewijzing ](../../../connectors/adobe-applications/mapping/salesforce.md) voor begeleiding bij het in kaart brengen [!DNL Salesforce] brongebieden aan hun aangewezen XDM doelgebieden.
+>Als u [!DNL Salesforce] als deel van Adobe Real-Time Customer Data Platform B2B edition gebruikt, gelieve te verwijzen naar het [[!DNL Salesforce]  document van de gebiedstoewijzing ](../../../connectors/adobe-applications/mapping/salesforce.md) voor begeleiding bij het in kaart brengen [!DNL Salesforce] brongebieden aan hun aangewezen XDM doelgebieden.
 
 Selecteer **[!UICONTROL Next]** wanneer de brongegevens correct zijn toegewezen.
 
@@ -143,7 +143,7 @@ U kunt gegevensstromen verwijderen die niet meer nodig zijn of die onjuist zijn 
 
 ## Volgende stappen
 
-Door deze zelfstudie te volgen, hebt u met succes een gegevensstroom gecreeerd om gegevens van uw bron van CRM aan Platform te brengen. Binnenkomende gegevens kunnen nu worden gebruikt door [!DNL Platform] -services, zoals [!DNL Real-Time Customer Profile] en [!DNL Data Science Workspace] . Raadpleeg de volgende documenten voor meer informatie:
+Door deze zelfstudie te volgen, hebt u met succes een gegevensstroom gemaakt om gegevens van uw bron van CRM naar Experience Platform te brengen. Binnenkomende gegevens kunnen nu worden gebruikt door [!DNL Experience Platform] -services, zoals [!DNL Real-Time Customer Profile] en [!DNL Data Science Workspace] . Raadpleeg de volgende documenten voor meer informatie:
 
 * [[!DNL Real-Time Customer Profile]-overzicht](../../../../profile/home.md)
 * [[!DNL Data Science Workspace]-overzicht](../../../../data-science-workspace/home.md)
@@ -151,6 +151,6 @@ Door deze zelfstudie te volgen, hebt u met succes een gegevensstroom gecreeerd o
 
 >[!WARNING]
 >
-> De interface van het Platform die in de volgende video wordt getoond is verouderd. Raadpleeg de bovenstaande documentatie voor de meest recente schermafbeeldingen en functionaliteit van de gebruikersinterface.
+> De gebruikersinterface van Experience Platform die in de volgende video wordt weergegeven, is verouderd. Raadpleeg de bovenstaande documentatie voor de meest recente schermafbeeldingen en functionaliteit van de gebruikersinterface.
 >
 >[!VIDEO](https://video.tv.adobe.com/v/29711?quality=12&learn=on)

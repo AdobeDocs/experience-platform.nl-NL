@@ -1,11 +1,11 @@
 ---
-keywords: Experience Platform;thuis;populaire onderwerpen;HP Vertica
+keywords: Experience Platform;home;populaire onderwerpen;HP Vertica
 solution: Experience Platform
 title: Creeer een Verbinding van HP Vertica Source in UI
 type: Tutorial
 description: Leer hoe te om een HP Vertica bronverbinding tot stand te brengen gebruikend Adobe Experience Platform UI.
 exl-id: d7315ad4-9250-4e66-be33-016efabb512e
-source-git-commit: e37c00863249e677f1645266859bf40fe6451827
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '468'
 ht-degree: 0%
@@ -18,7 +18,7 @@ ht-degree: 0%
 >
 > De HP [!DNL Vertica] -connector bevindt zich in bèta. Zie het [ Bronoverzicht ](../../../../home.md#terms-and-conditions) voor meer informatie bij het gebruiken van bèta-geëtiketteerde schakelaars.
 
-Source-connectors in Adobe Experience Platform bieden de mogelijkheid om volgens een schema extern gesourceerde gegevens in te voeren. Deze zelfstudie bevat stappen voor het maken van een HP [!DNL Vertica] -bronconnector met behulp van de [!DNL Platform] -gebruikersinterface.
+Source-connectors in Adobe Experience Platform bieden de mogelijkheid om volgens een schema extern gesourceerde gegevens in te voeren. Deze zelfstudie bevat stappen voor het maken van een HP [!DNL Vertica] -bronconnector met behulp van de [!DNL Experience Platform] -gebruikersinterface.
 
 ## Aan de slag
 
@@ -43,7 +43,7 @@ Voor meer informatie over begonnen worden, verwijs naar [ dit document van HP  [
 
 ## Sluit uw HP [!DNL Vertica] -account aan
 
-Zodra u uw vereiste geloofsbrieven hebt verzameld, kunt u de stappen hieronder volgen om uw rekening van HP [!DNL Vertica] aan [!DNL Platform] te verbinden.
+Zodra u uw vereiste geloofsbrieven hebt verzameld, kunt u de stappen hieronder volgen om uw rekening van HP [!DNL Vertica] aan [!DNL Experience Platform] te verbinden.
 
 Login aan [ Adobe Experience Platform ](https://platform.adobe.com) en selecteer dan **[!UICONTROL Sources]** van de linkernavigatiebar om tot de **[!UICONTROL Sources]** werkruimte toegang te hebben. In het scherm **[!UICONTROL Catalog]** worden diverse bronnen weergegeven waarmee u een account kunt maken.
 
@@ -69,4 +69,4 @@ Als u een bestaande account wilt verbinden, selecteert u de HP [!DNL Vertica] -a
 
 ## Volgende stappen
 
-Door deze zelfstudie te volgen, hebt u een verbinding aan uw rekening van HP [!DNL Vertica] gevestigd. U kunt nu aan het volgende leerprogramma verdergaan en [ een dataflow vormen om gegevens in  [!DNL Platform]](../../dataflow/databases.md) te brengen.
+Door deze zelfstudie te volgen, hebt u een verbinding aan uw rekening van HP [!DNL Vertica] gevestigd. U kunt nu aan het volgende leerprogramma verdergaan en [ een dataflow vormen om gegevens in  [!DNL Experience Platform]](../../dataflow/databases.md) te brengen.

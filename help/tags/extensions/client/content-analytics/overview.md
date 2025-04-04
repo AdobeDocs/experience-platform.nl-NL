@@ -2,9 +2,9 @@
 title: Overzicht Adobe Content Analytics-extensie
 description: Meer informatie over de tagextensie Adobe Content Analytics in Adobe Experience Platform.
 exl-id: fcc46c86-e765-4bc7-bfdf-b8b10e8afacc
-source-git-commit: 5f852b69b0eb0a5e6a9119f14eb9e1f51c8a2e33
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '609'
+source-wordcount: '610'
 ht-degree: 0%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 Met de tagextensie [!DNL Adobe Content Analytics] kunt u gebeurtenissen met betrekking tot inhoud op een website bijhouden. De extensie verzendt inhoudsgegevens (ervaringen en elementen) vanuit wegeigenschappen naar een gegevensstroom in Adobe Experience Cloud via de Experience Platform Edge Network.
 
-Met de extensie kunt u specifieke gebeurtenisgegevens die door de inhoud worden vrijgegeven, streamen naar Platform, zodat u die gegevens kunt gebruiken in rapporten voor inhoudsanalyse in Customer Journey Analytics.
+Met de extensie kunt u specifieke gebeurtenisgegevens die door de inhoud worden vrijgegeven, streamen naar Experience Platform, zodat u die gegevens kunt gebruiken in rapporten voor inhoudsanalyse in Customer Journey Analytics.
 
 In dit document wordt uitgelegd hoe u de tagextensie configureert in de gebruikersinterface voor tags.
 

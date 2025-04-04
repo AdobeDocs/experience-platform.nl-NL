@@ -1,11 +1,11 @@
 ---
-keywords: Experience Platform;thuis;populaire onderwerpen;Teradata Vantage
+keywords: Experience Platform;home;populaire onderwerpen;Teradata Vantage
 title: Een Teradata Vantage Source Connection maken in de gebruikersinterface
 description: Leer hoe u een Teradata Vantage-bronverbinding maakt met de Adobe Experience Platform-gebruikersinterface.
 exl-id: 3fdb09fa-128a-477b-9144-d4ef3ed18ea6
-source-git-commit: 625a7959f48a0b16c3228d4555e046b5f67c51b7
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '394'
+source-wordcount: '399'
 ht-degree: 0%
 
 ---
@@ -16,14 +16,14 @@ Deze zelfstudie bevat stappen voor het maken van een [!DNL Teradata Vantage] bro
 
 ## Aan de slag
 
-Deze zelfstudie vereist een goed begrip van de volgende componenten van Platform:
+Deze zelfstudie vereist een goed begrip van de volgende onderdelen van Experience Platform:
 
-* [ Bronnen ](../../../../home.md): Experience Platform staat gegevens toe om van diverse bronnen worden opgenomen terwijl het voorzien van u van de capaciteit om, inkomende gegevens te structureren te etiketteren en te verbeteren gebruikend de diensten van het Experience Platform.
-* [ Sandboxes ](../../../../../sandboxes/home.md): Experience Platform verstrekt virtuele zandbakken die één enkele instantie van het Platform in afzonderlijke virtuele milieu&#39;s verdelen helpen digitale ervaringstoepassingen ontwikkelen en ontwikkelen.
+* [ Bronnen ](../../../../home.md): Experience Platform staat gegevens toe om van diverse bronnen worden opgenomen terwijl het voorzien van u van de capaciteit om, inkomende gegevens te structureren te etiketteren en te verbeteren gebruikend de diensten van Experience Platform.
+* [ Sandboxes ](../../../../../sandboxes/home.md): Experience Platform verstrekt virtuele zandbakken die één enkele instantie van Experience Platform in afzonderlijke virtuele milieu&#39;s verdelen helpen digitale ervaringstoepassingen ontwikkelen en ontwikkelen.
 
 ### Vereiste referenties verzamelen
 
-Als u toegang wilt krijgen tot uw [!DNL Teradata Vantage] -account op Platform, moet u de volgende verificatiewaarde opgeven:
+Als u toegang wilt krijgen tot uw [!DNL Teradata Vantage] -account op Experience Platform, moet u de volgende verificatiewaarde opgeven:
 
 | Credentials | Beschrijving |
 | ---------- | ----------- |
@@ -33,7 +33,7 @@ Voor meer informatie over begonnen worden, verwijs naar dit [[!DNL Teradata Vant
 
 ## Sluit uw [!DNL Teradata Vantage] -account aan
 
-Selecteer in de gebruikersinterface van het platform de optie **[!UICONTROL Sources]** in de linkernavigatie voor toegang tot de werkruimte van [!UICONTROL Sources] . U kunt de juiste categorie selecteren in de catalogus aan de linkerkant van het scherm. U kunt ook de specifieke bron vinden waarmee u wilt werken met de zoekoptie.
+Selecteer in de gebruikersinterface van Experience Platform de optie **[!UICONTROL Sources]** in de linkernavigatie voor toegang tot de werkruimte van [!UICONTROL Sources] . U kunt de juiste categorie selecteren in de catalogus aan de linkerkant van het scherm. U kunt ook de specifieke bron vinden waarmee u wilt werken met de zoekoptie.
 
 Selecteer onder de categorie [!UICONTROL Databases] de optie **[!UICONTROL Teradata Vantage]** en selecteer vervolgens **[!UICONTROL Set up]** .
 
@@ -59,4 +59,4 @@ Selecteer **[!UICONTROL New account]** als u nieuwe referenties gebruikt. Geef i
 
 ## Volgende stappen
 
-Aan de hand van deze zelfstudie hebt u een verbinding tot stand gebracht met uw Teradata Vantage-account. U kunt nu aan het volgende leerprogramma verdergaan en [ een dataflow vormen om gegevens in Platform ](../../dataflow/databases.md) te brengen.
+Door deze zelfstudie te volgen, hebt u een verbinding tot stand gebracht met uw Teradata Vantage-account. U kunt nu aan het volgende leerprogramma verdergaan en [ een dataflow vormen om gegevens in Experience Platform ](../../dataflow/databases.md) te brengen.

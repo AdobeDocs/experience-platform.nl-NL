@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;gegevensbeheer;klantenondersteuning;populaire onderwerpen
+keywords: Experience Platform;data governance;customer ai;populaire onderwerpen
 solution: Experience Platform
 feature: Customer AI
 title: Gegevensbeheer in AI van Klant
 description: Adobe Experience Platform biedt verschillende services en tools waarmee u uw verzamelde ervaringsgegevens op een betrouwbare manier kunt beheren, zodat u aan uw bedrijfspraktijken, wettelijke verplichtingen en ontwikkelingsproces kunt voldoen.
 exl-id: de0836a4-7bc2-4f9c-95a9-c01dd9e2b03f
-source-git-commit: f28558d5939607cabf449cbc03b7e0f5406f6326
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '278'
+source-wordcount: '280'
 ht-degree: 0%
 
 ---
@@ -16,11 +16,11 @@ ht-degree: 0%
 
 Eventuele instellingen met betrekking tot gegevensbeheer in Customer AI worden overgenomen van Adobe Experience Platform.
 
-## Gegevensbeheer {#governance}
+## Datagovernance {#governance}
 
-Dankzij de integratie tussen Customer AI en Adobe Experience Platform Data Governance kunt u uw gegevens tijdens de reis door het platform beheren en begrijpen. Dit omvat het handhaven van gegevenskwaliteit, gegevenslijn, gegevens het catalogiseren, en meer.
+Dankzij de integratie tussen Customer AI en Adobe Experience Platform Data Governance kunt u uw gegevens gedurende de reis door Experience Platform beheren en begrijpen. Dit omvat het handhaven van gegevenskwaliteit, gegevenslijn, gegevens het catalogiseren, en meer.
 
-De etiketten en het beleid van het gegevensgebruik die op datasets werden gecreeerd die door Platform worden verbruikt kunnen in de configuratiewerkschema van AI van de Klant worden gevonden. Deze labels stoppen of waarschuwen gebruikers die gelabelde velden gebruiken.
+Labels en beleidsregels voor gegevensgebruik die zijn gemaakt op gegevenssets die door Experience Platform worden gebruikt, kunnen worden weergegeven in de configuratieworkflow van de AI van de Klant. Deze labels stoppen of waarschuwen gebruikers die gelabelde velden gebruiken.
 
 Dankzij deze integratie kunt u de naleving efficiënter beheren. Gegevensstewards in uw organisatie kunnen beleid plaatsen om gebruik te beperken. Dientengevolge, kunt u gegevens gebruiken die met beleid in plaats van gegevens worden bepaald in overeenstemming zijn. Lees de documentatie over [ Etiketten en Beleid ](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-dataviews/data-governance.html) om meer te leren.
 

@@ -1,11 +1,11 @@
 ---
 title: Opmerkingen bij de release Adobe Experience Platform Web SDK
 description: De nieuwste aanvullende informatie voor de Adobe Experience Platform Web SDK.
-keywords: Adobe Experience Platform Web SDK;Platform Web SDK;Web SDK;release notes;
+keywords: Adobe Experience Platform Web SDK;Experience Platform Web SDK;Web SDK;release notes;
 exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
-source-git-commit: 8fd86a170433c4eb07a7370dbd3aa2cb3ef10922
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '2285'
+source-wordcount: '2288'
 ht-degree: 5%
 
 ---
@@ -294,7 +294,7 @@ Voor de recentste versienota&#39;s op de de markeringsuitbreiding van SDK van he
 - De opdracht [`getIdentity`](/help/web-sdk/commands/getidentity.md) retourneert nu de id van het randgebied naast de identiteit.
 - Waarschuwingen en fouten die van de server zijn ontvangen, zijn verbeterd en worden op een geschiktere manier afgehandeld.
 - Toegevoegde ondersteuning voor de Adobe-standaard Goedkeuring 2.0 voor de opdracht [`setConsent`](/help/web-sdk/commands/setconsent.md) .
-- Wanneer u de voorkeuren voor toestemming ontvangt, worden deze gehasht en lokaal opgeslagen voor een geoptimaliseerde integratie tussen CMP&#39;s, Platform Web SDK en Platform Edge Network. Als u toestemmingsvoorkeur verzamelt, moedigen wij u nu aan om `setConsent` op elke paginading te roepen.
+- Wanneer u de voorkeuren voor toestemming ontvangt, worden deze gehasht en lokaal opgeslagen voor een geoptimaliseerde integratie tussen CMP&#39;s, Experience Platform Web SDK en Experience Platform Edge Network. Als u toestemmingsvoorkeur verzamelt, moedigen wij u nu aan om `setConsent` op elke paginading te roepen.
 - Twee [ controlerende haken ](https://github.com/adobe/alloy/wiki/Monitoring-Hooks), `onCommandResolved` en `onCommandRejected`, zijn toegevoegd.
 - Bug Fix: de gebeurtenissen van het de interactiebericht van Personalization zouden dubbele informatie over de zelfde activiteit bevatten wanneer een gebruiker aan een nieuwe single-page toepassingsmening, terug naar de originele mening navigeerde, en een element in aanmerking voor omzetting klikte.
 - Opgeloste problemen: als voor de eerste gebeurtenis die door de SDK wordt verzonden `documentUnloading` is ingesteld op `true` , [`sendBeacon` ](https://developer.mozilla.org/en-US/docs/Web/API/Navigator/sendBeacon) , wordt de gebeurtenis verzonden, wat resulteert in een fout met betrekking tot een identiteit die niet wordt vastgesteld.

@@ -2,10 +2,10 @@
 title: Ondersteuning voor Content Security Policy (CSP)
 description: Leer hoe u met CSP-beperkingen (Content Security Policy) omgaat wanneer u uw website integreert met tags in Adobe Experience Platform.
 exl-id: 9232961e-bc15-47e1-aa6d-3eb9b865ac23
-source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1074'
-ht-degree: 0%
+source-wordcount: '1076'
+ht-degree: 4%
 
 ---
 
@@ -13,11 +13,11 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch is omgedoopt tot een reeks technologieën voor gegevensverzameling in Adobe Experience Platform. Diverse terminologische wijzigingen zijn als gevolg hiervan in de productdocumentatie doorgevoerd. Gelieve te verwijzen naar het volgende [ document ](../../term-updates.md) voor een geconsolideerde verwijzing van de terminologieveranderingen.
+>Adobe Experience Platform Launch is omgedoopt tot een reeks technologieën voor dataverzameling in Adobe Experience Platform.  Als gevolg hiervan zijn er verschillende terminologiewijzigingen in de productdocumentatie doorgevoerd. Raadpleeg het volgende [ document ](../../term-updates.md) voor een geconsolideerde referentie van de terminologiewijzigingen.
 
 Een inhoudsbeveiligingsbeleid (CSP) is een beveiligingsfunctie waarmee XSS (cross-site scripting aanvallen) wordt voorkomen. Dit gebeurt wanneer browser in het runnen van kwaadwillige inhoud wordt gesleept die uit een vertrouwde op bron schijnt te komen maar echt van elders komt. CSPs staat browser (namens de gebruiker) toe om te verifiëren dat het manuscript eigenlijk uit een vertrouwde op bron komt.
 
-CSPs wordt uitgevoerd door een `Content-Security-Policy` kopbal van HTTP aan uw serverreacties toe te voegen, of door een gevormd `<meta>` element in de `<head>` sectie van uw dossiers van de HTML toe te voegen.
+CSP&#39;s worden geïmplementeerd door een `Content-Security-Policy` HTTP-header toe te voegen aan uw serverreacties of door een geconfigureerd `<meta>` -element toe te voegen in de sectie `<head>` van uw HTML-bestanden.
 
 >[!NOTE]
 >
@@ -54,7 +54,7 @@ Content-Security-Policy: script-src 'self'
 
 ### Door Adobe beheerde hosting
 
-Als u een [ Adobe-geleide gastheer ](../publishing/hosts/managed-by-adobe-host.md) gebruikt, dan wordt uw bouwstijl gehandhaafd op `assets.adobedtm.com`. U moet `self` als een veilig domein opgeven zodat u geen scripts afbreekt die u al laadt, maar u moet `assets.adobedtm.com` ook als veilig weergeven of uw tagbibliotheek wordt niet op de pagina geladen. In dit geval, zou u de volgende configuratie moeten gebruiken:
+Als u een [ Adobe-Beheerde gastheer ](../publishing/hosts/managed-by-adobe-host.md) gebruikt, dan wordt uw bouwstijl gehandhaafd op `assets.adobedtm.com`. U moet `self` als een veilig domein opgeven zodat u geen scripts afbreekt die u al laadt, maar u moet `assets.adobedtm.com` ook als veilig weergeven of uw tagbibliotheek wordt niet op de pagina geladen. In dit geval, zou u de volgende configuratie moeten gebruiken:
 
 **HTTP- kopbal**
 
@@ -82,7 +82,7 @@ CSP maakt gealigneerde manuscripten door gebrek onbruikbaar, en daarom moet manu
 
 >[!NOTE]
 >
->De CSP-specificatie bevat details voor een derde optie met behulp van hashes, maar deze aanpak is niet mogelijk voor systemen voor tagbeheer zoals tags. Voor meer informatie over de beperkingen om hakjes met markeringen in Platform te gebruiken, zie de [ gids van de Integriteit Subresource (SRI) ](./sri.md).
+>De CSP-specificatie bevat details voor een derde optie met behulp van hashes, maar deze aanpak is niet mogelijk voor systemen voor tagbeheer zoals tags. Voor meer informatie over de beperkingen om haken met markeringen in Experience Platform te gebruiken, zie de [ gids van de Integriteit Subresource (SRI) ](./sri.md).
 
 ### Eenmaal toestaan {#nonce}
 
@@ -92,7 +92,7 @@ Deze methode omvat het genereren van een cryptografische id en het toevoegen van
 >
 >Als u deze methode wilt gebruiken, moet u de build asynchroon laden. Dit werkt niet wanneer het laden van de bouwstijl synchroon, wat in consolefouten en regels resulteert niet behoorlijk uitvoeren. Zie de gids op [ asynchrone plaatsing ](./asynchronous-deployment.md) voor meer informatie.
 
-De voorbeelden tonen hieronder hoe u uw nonce aan de CSP configuratie voor een Adobe-beheerde gastheer kunt toevoegen. Als u zelfhosting gebruikt, kunt u `assets.adobedtm.com` uitsluiten.
+De voorbeelden tonen hieronder hoe u uw nonce aan de CSP configuratie voor een Adobe-Beheerde gastheer kunt toevoegen. Als u zelfhosting gebruikt, kunt u `assets.adobedtm.com` uitsluiten.
 
 **HTTP- kopbal**
 
@@ -106,11 +106,11 @@ Content-Security-Policy: script-src 'self' assets.adobedtm.com 'nonce-2726c7f26c
 <meta http-equiv="Content-Security-Policy" content="script-src 'self' assets.adobedtm.com 'nonce-2726c7f26c'">
 ```
 
-Nadat u de koptekst- of HTML-tag hebt geconfigureerd, moet u de tag aangeven waar de nonce moet worden gevonden tijdens het laden van een inline-script. Als u wilt dat een tag de nonce gebruikt bij het laden van het script, moet u:
+Wanneer u de header of HTML-tag hebt geconfigureerd, moet u de tag aangeven waar de nonce moet worden gevonden bij het laden van een inline script. Als u wilt dat een tag de nonce gebruikt bij het laden van het script, moet u:
 
 1. Creeer een gegevenselement dat verwijzingen waar nonce binnen uw gegevenslaag wordt gevestigd.
 1. Vorm de Uitbreiding van de Kern en specificeer welk gegevenselement u gebruikte.
-1. Publish uw gegevenselement en Core Extension wijzigen.
+1. Publiceer uw gegevenselement en de veranderingen van de Uitbreiding van de Kern.
 
 >[!NOTE]
 >
@@ -140,7 +140,7 @@ Content-Security-Policy: script-src 'self' 'unsafe-inline'
 
 #### Door Adobe beheerde hosting
 
-Gebruik de volgende configuraties als u Adobe-beheerde het ontvangen gebruikt:
+Gebruik de volgende configuraties als u hosting door Adobe gebruikt:
 
 **HTTP- kopbal**
 
@@ -158,4 +158,4 @@ Content-Security-Policy: script-src 'self' assets.adobedtm.com 'unsafe-inline'
 
 Door dit document te lezen, moet u nu begrijpen hoe u de CSP-header zo kunt configureren dat het bibliotheekbestand van de tag en inlinescripts worden geaccepteerd.
 
-Als extra veiligheidsmaatregel, kunt u ook verkiezen om de Integriteit Subresource (SRI) te gebruiken om opgehaalde bibliotheekbouwt te bevestigen. Deze functie heeft echter enkele belangrijke beperkingen bij gebruik in systemen voor tagbeheer, zoals tags. Zie de gids op [ verenigbaarheid SRI in Platform ](./sri.md) voor meer informatie.
+Als extra veiligheidsmaatregel, kunt u ook verkiezen om de Integriteit Subresource (SRI) te gebruiken om opgehaalde bibliotheekbouwt te bevestigen. Deze functie heeft echter enkele belangrijke beperkingen bij gebruik in systemen voor tagbeheer, zoals tags. Zie de gids op [ verenigbaarheid SRI in Experience Platform ](./sri.md) voor meer informatie.

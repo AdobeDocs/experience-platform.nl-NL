@@ -1,15 +1,15 @@
 ---
-title: De IAB TCF 2.0-ondersteuning integreren met tags en de Platform Web SDK-extensie
+title: De IAB TCF 2.0-ondersteuning integreren met tags en de Experience Platform Web SDK Extension
 description: Leer hoe u IAB TCF 2.0-toestemming voor tags en de Adobe Experience Platform Web SDK-extensie instelt.
 exl-id: dc0e6b68-8257-4862-9fc4-50b370ef204f
-source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '826'
+source-wordcount: '831'
 ht-degree: 0%
 
 ---
 
-# Integreer IAB TCF 2.0 steun gebruikend markeringen en de uitbreiding van SDK van het Web van het Platform
+# De IAB TCF 2.0-ondersteuning integreren met tags en de Experience Platform Web SDK-extensie
 
 Adobe Experience Platform Web SDK ondersteunt het Interactive Advertising Bureau Transparency &amp; Consent Framework, versie 2.0 (IAB TCF 2.0). Deze gids toont u hoe te opstelling een markeringsbezit voor het verzenden van IAB TCF 2.0 toestemmingsinformatie naar Adobe gebruikend de de marktextensie van SDK van het Web van Adobe Experience Platform.
 
@@ -17,9 +17,9 @@ Als u niet wenst om markeringen te gebruiken, te verwijzen gelieve naar de gids 
 
 ## Aan de slag
 
-Om IAB TCF 2.0 met markeringen en de uitbreiding van SDK van het Web van het Platform te gebruiken, moet u een beschikbaar schema XDM en dataset hebben.
+Om IAB TCF 2.0 met markeringen en de uitbreiding van SDK van het Web van Experience Platform te gebruiken, moet u een beschikbaar schema XDM en dataset hebben.
 
-Bovendien vereist deze handleiding dat u een goed begrip hebt van de SDK van Adobe Experience Platform Web. Voor een snelle verfrisser, te lezen gelieve het [ overzicht van SDK van het Web van Adobe Experience Platform ](../../home.md) en [ vaak gestelde vragen ](../../faq.md) documentatie.
+Bovendien is voor deze handleiding een goed begrip van Adobe Experience Platform Web SDK vereist. Voor een snelle verfrisser, te lezen gelieve het [ overzicht van SDK van het Web van Adobe Experience Platform ](../../home.md) en [ vaak gestelde vragen ](../../faq.md) documentatie.
 
 ## Standaardtoestemming instellen
 
@@ -66,7 +66,7 @@ Deze aangepaste code doet twee dingen:
 
 >[!IMPORTANT]
 >
->U kunt deze gegevenselementen niet kiezen met de gegevenselementkiezer omdat ze zijn gemaakt met aangepaste code. U moet in de naam van het gegevenselement met de percentagetekens typen. Deze code werkt het profiel van uw klant bij met de nieuwe voorkeuren voor toestemming wanneer deze worden gewijzigd. Bovendien retourneert de server een cookiewaarde die kan voorkomen dat Adobe Experience Platform Web SDK ervaringsgebeurtenissen opneemt.
+>U kunt deze gegevenselementen niet kiezen met de gegevenselementkiezer omdat ze zijn gemaakt met aangepaste code. U moet in de naam van het gegevenselement met de percentagetekens typen. Deze code werkt het profiel van uw klant bij met de nieuwe voorkeuren voor toestemming wanneer deze worden gewijzigd. Bovendien retourneert de server een cookiewaarde die kan voorkomen dat Adobe Experience Platform Web SDK Experience Events opneemt.
 
 ## Een XDM-gegevenselement maken voor Experience Events
 
@@ -113,7 +113,7 @@ addEventListener();
 
 Deze code is identiek aan de vorige aangepaste code, behalve dat zowel `useractioncomplete` - als `tcloaded` -gebeurtenissen worden afgehandeld. De [ vorige douanecode ](#consent-code-1) brengt slechts teweeg wanneer de klant hun voorkeur voor het eerst kiest. Deze code wordt ook geactiveerd wanneer de klant al zijn voorkeuren heeft gekozen. Bijvoorbeeld op de tweede pagina laden.
 
-Voeg een actie &quot;Send Event&quot;van de uitbreiding van SDK van het Web van het Platform toe. Kies in het XDM-veld het XDM-gegevenselement dat u in de vorige sectie hebt gemaakt.
+Voeg een actie &quot;Send Event&quot; toe vanuit de Experience Platform Web SDK-extensie. Kies in het XDM-veld het XDM-gegevenselement dat u in de vorige sectie hebt gemaakt.
 
 ## Andere gebeurtenissen verzenden met IAB TCF 2.0 toestemmingsinformatie
 
@@ -121,4 +121,4 @@ Wanneer gebeurtenissen worden geactiveerd na de initiële Experience Event, zijn
 
 ## Volgende stappen
 
-Nu u hebt geleerd hoe te om IAB TCF 2.0 met de uitbreiding van SDK van het Web van het Platform te gebruiken, kunt u ook verkiezen om met andere Adobe oplossingen zoals Adobe Analytics of Adobe Real-time Customer Data Platform te integreren. Zie het [ IAB overzicht van de Transparantie &amp; van de Toestemming Kader 2.0 ](./overview.md) voor meer informatie.
+Nu u hebt geleerd hoe u IAB TCF 2.0 met de uitbreiding van Experience Platform Web SDK kunt gebruiken, kunt u ook verkiezen om met andere oplossingen van Adobe zoals Adobe Analytics of Adobe Real-Time Customer Data Platform te integreren. Zie het [ IAB overzicht van de Transparantie &amp; van de Toestemming Kader 2.0 ](./overview.md) voor meer informatie.

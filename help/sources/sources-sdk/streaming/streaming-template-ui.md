@@ -1,11 +1,11 @@
 ---
-title: Documentatie Self-Service Template voor streaming SDK UI
+title: Zelfservicesjabloon voor documentatie voor streaming SDK UI
 description: Leer hoe u streaminggegevens van een bron naar Adobe Experience Platform kunt overbrengen via de gebruikersinterface.
 exl-id: 82254be0-fa31-4114-a0ec-179a990e0904
 badge: Beta
-source-git-commit: 256857103b4037b2cd7b5b52d6c5385121af5a9f
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1158'
+source-wordcount: '1165'
 ht-degree: 0%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 0%
 
 *Begin door de meta-gegevens (titel en beschrijving) bij te werken bij de bovenkant van de pagina. Negeer alle exemplaren van UICONTROL op deze pagina. Dit is een label waarmee de pagina in de verschillende talen die wij ondersteunen correct wordt vertaald in onze computervertaalprocessen. Wij zullen markeringen aan uw documentatie toevoegen nadat u het voorlegt.*
 
-Dit leerprogramma verstrekt stappen voor het creëren van a ** bronschakelaar van de JONGE bron gebruikend het gebruikersinterface van het Platform.
+Dit leerprogramma verstrekt stappen voor het creëren van a ** bronschakelaar van de JONGE bron gebruikend het gebruikersinterface van Experience Platform.
 
 ## Overzicht
 
@@ -37,7 +37,7 @@ Dit leerprogramma verstrekt stappen voor het creëren van a ** bronschakelaar va
 
 ### Vereiste referenties verzamelen
 
-Om *UURSOURCE* aan Platform te verbinden, moet u waarden voor de volgende verbindingseigenschappen verstrekken:
+Om *UURSOURCE* aan Experience Platform te verbinden, moet u waarden voor de volgende verbindingseigenschappen verstrekken:
 
 | Credentials | Beschrijving | Voorbeeld |
 | --- | --- | --- |
@@ -49,11 +49,11 @@ Voor meer informatie over deze geloofsbrieven, zie *JONGE* authentificatiedocume
 
 ### Integreer *JUURSOURCE* met uw webhaak
 
-*het stromen SDK vereist uw bron om websites te kunnen steunen om met Experience Platform te communiceren. In deze sectie, moet u de stappen verstrekken die uw gebruikers zullen moeten volgen om Uw BRON met een webhaak te integreren.*
+*het stromen SDK vereist uw bron om webhaken te kunnen steunen om met Experience Platform te communiceren. In deze sectie, moet u de stappen verstrekken die uw gebruikers zullen moeten volgen om Uw BRON met een webhaak te integreren.*
 
 ## Verbind uw ** rekening van de JUURBRON
 
-Selecteer in de gebruikersinterface van het platform **[!UICONTROL Sources]** in de linkernavigatiebalk voor toegang tot de werkruimte van [!UICONTROL Sources] . In het scherm [!UICONTROL Catalog] worden diverse bronnen weergegeven waarmee u een account kunt maken.
+Selecteer in de gebruikersinterface van Experience Platform de optie **[!UICONTROL Sources]** in de linkernavigatiebalk voor toegang tot de werkruimte van [!UICONTROL Sources] . In het scherm [!UICONTROL Catalog] worden diverse bronnen weergegeven waarmee u een account kunt maken.
 
 U kunt de juiste categorie selecteren in de catalogus aan de linkerkant van het scherm. U kunt ook de specifieke bron vinden waarmee u wilt werken met de zoekoptie.
 
@@ -61,13 +61,13 @@ Onder de **Streaming** categorie, selecteer *JUURSOURCE*, en selecteer dan **[!U
 
 >[!TIP]
 >
->De onderstaande schermafbeeldingen zijn voorbeelden. Vervang de afbeeldingen bij het maken van de documentatie door schermafbeeldingen van de werkelijke bron. U kunt hetzelfde patroon en dezelfde kleur en dezelfde bestandsnamen gebruiken. Zorg ervoor dat uw schermafbeelding het gehele UI-scherm van het platform vastlegt. Voor informatie over hoe te om uw screenshots te uploaden, zie de gids bij [ het voorleggen van uw documentatie voor overzicht ](../documentation/github.md).
+>De onderstaande schermafbeeldingen zijn voorbeelden. Vervang de afbeeldingen bij het maken van de documentatie door schermafbeeldingen van de werkelijke bron. U kunt hetzelfde patroon en dezelfde kleur en dezelfde bestandsnamen gebruiken. Zorg ervoor dat uw schermafbeelding het volledige Experience Platform UI-scherm vastlegt. Voor informatie over hoe te om uw screenshots te uploaden, zie de gids bij [ het voorleggen van uw documentatie voor overzicht ](../documentation/github.md).
 
-![ de catalogus van bronnen van het Experience Platform ](../assets/streaming/catalog.png)
+![ de Experience Platform broncatalogus ](../assets/streaming/catalog.png)
 
 ## Gegevens selecteren
 
-De stap **[!UICONTROL Select data]** wordt weergegeven en biedt een interface waarmee u de gegevens kunt selecteren die u naar Platform verzendt.
+De stap **[!UICONTROL Select data]** wordt weergegeven en biedt een interface waarmee u de gegevens kunt selecteren die u naar Experience Platform verzendt.
 
 * Het linkergedeelte van de interface is een browser waarmee u de beschikbare gegevensstromen binnen uw account kunt bekijken.
 * In het rechtergedeelte van de interface kunt u maximaal 100 rijen gegevens uit een JSON-bestand voorvertonen.
@@ -94,7 +94,7 @@ Selecteer **[!UICONTROL Next]** als u klaar bent.
 
 De stap [!UICONTROL Mapping] verschijnt, die u van een interface voorziet om de brongebieden van uw bronschema aan hun aangewezen doelXDM gebieden in het doelschema in kaart te brengen.
 
-Platform biedt intelligente aanbevelingen voor automatisch toegewezen velden op basis van het doelschema of de gegevensset die u hebt geselecteerd. U kunt toewijzingsregels handmatig aanpassen aan uw gebruiksgevallen. Op basis van uw behoeften kunt u ervoor kiezen om velden rechtstreeks toe te wijzen of gegevens prep-functies te gebruiken om brongegevens om berekende of berekende waarden af te leiden. Voor uitvoerige stappen bij het gebruiken van de kaartperinterface en berekende gebieden, zie de [ gids UI van de Prep van Gegevens ](https://experienceleague.adobe.com/docs/experience-platform/data-prep/ui/mapping.html).
+Experience Platform biedt intelligente aanbevelingen voor automatisch toegewezen velden op basis van het doelschema of de gegevensset die u hebt geselecteerd. U kunt toewijzingsregels handmatig aanpassen aan uw gebruiksgevallen. Op basis van uw behoeften kunt u ervoor kiezen om velden rechtstreeks toe te wijzen of gegevens prep-functies te gebruiken om brongegevens om berekende of berekende waarden af te leiden. Voor uitvoerige stappen bij het gebruiken van de kaartperinterface en berekende gebieden, zie de [ gids UI van de Prep van Gegevens ](https://experienceleague.adobe.com/docs/experience-platform/data-prep/ui/mapping.html).
 
 Selecteer **[!UICONTROL Next]** wanneer de brongegevens correct zijn toegewezen.
 
@@ -113,7 +113,7 @@ Nadat u de gegevensstroom hebt gereviseerd, klikt u op **[!UICONTROL Finish]** e
 
 ## Uw URL voor het streamingeindpunt ophalen
 
-Wanneer uw streaminggegevens zijn gemaakt, kunt u nu de URL van het streamingeindpunt ophalen. Dit eindpunt zal worden gebruikt om aan uw webhaak in te tekenen, toestaand uw het stromen bron om met Experience Platform te communiceren.
+Wanneer uw streaminggegevens zijn gemaakt, kunt u nu de URL van het streamingeindpunt ophalen. Dit eindpunt wordt gebruikt om een abonnement te nemen op uw webhaak, zodat uw streamingbron kan communiceren met Experience Platform.
 
 Als u het streamingeindpunt wilt ophalen, gaat u naar de [!UICONTROL Dataflow activity] -pagina van de gegevensstroom die u net hebt gemaakt en kopieert u het eindpunt van de onderkant van het deelvenster [!UICONTROL Properties] .
 
@@ -123,7 +123,7 @@ Als u het streamingeindpunt wilt ophalen, gaat u naar de [!UICONTROL Dataflow ac
 
 *de Werkschema&#39;s voor de resterende stappen van het creëren van een dataflow worden gemoduleerd. Als er om het even welke specifieke vraag-outs zijn u betreffende uw bron wilt maken, gelieve de extra middelensectie hieronder te zien.*
 
-Door dit leerprogramma te volgen, hebt u een verbinding aan uw ** rekening van UUR {gevestigd. U kunt nu aan het volgende leerprogramma verdergaan en [ een dataflow vormen om gegevens in Platform ](https://experienceleague.adobe.com/docs/experience-platform/sources/ui-tutorials/dataflow/crm.html) te brengen.
+Door dit leerprogramma te volgen, hebt u een verbinding aan uw ** rekening van UUR {gevestigd. U kunt nu aan het volgende leerprogramma verdergaan en [ een dataflow vormen om gegevens in Experience Platform ](https://experienceleague.adobe.com/docs/experience-platform/sources/ui-tutorials/dataflow/crm.html) te brengen.
 
 ## Aanvullende bronnen
 

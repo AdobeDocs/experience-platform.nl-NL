@@ -1,27 +1,27 @@
 ---
-title: Platformgegevens beheren met Python en SQLAlchemy
-description: Leer hoe u SQLAlchemy gebruikt om uw gegevens van het Platform te beheren met Python in plaats van SQL.
+title: Experience Platform-gegevens beheren met Python en SQLAlchemy
+description: Leer hoe u SQLAlchemy gebruikt om uw Experience Platform-gegevens te beheren met Python in plaats van SQL.
 exl-id: 9fba942e-9b3d-4efe-ae94-aed685025dea
-source-git-commit: 8644b78c947fd015f6a169c9440b8d1df71e5e17
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '568'
+source-wordcount: '576'
 ht-degree: 0%
 
 ---
 
-# Platformgegevens beheren met [!DNL Python] en [!DNL SQLAlchemy]
+# Experience Platform-gegevens beheren met [!DNL Python] en [!DNL SQLAlchemy]
 
 Leer hoe u SQLAlchemy kunt gebruiken voor meer flexibiliteit bij het beheer van uw Adobe Experience Platform-gegevens. Voor degenen die niet zo vertrouwd met SQL zijn, kan SQLAlchemy ontwikkelingstijd zeer verbeteren wanneer het werken met relationele gegevensbanken. Dit document bevat instructies en voorbeelden voor het tot stand brengen van een verbinding tussen [!DNL SQLAlchemy] en Query Service en het gebruik van Python voor de interactie met uw databases.
 
-[!DNL SQLAlchemy] is een object Relational Mapper (ORM) en een [!DNL Python] codebibliotheek die gegevens die zijn opgeslagen in een SQL-database, kunnen overbrengen naar [!DNL Python] -objecten. Vervolgens kunt u met [!DNL Python] -code CRUD-bewerkingen uitvoeren op gegevens die in het gegevensmeer van het platform worden opgeslagen. Hierdoor hoeft u geen gegevens te beheren met alleen PSQL.
+[!DNL SQLAlchemy] is een object Relational Mapper (ORM) en een [!DNL Python] codebibliotheek die gegevens die zijn opgeslagen in een SQL-database, kunnen overbrengen naar [!DNL Python] -objecten. Vervolgens kunt u met [!DNL Python] -code CRUD-bewerkingen uitvoeren op gegevens die in het Experience Platform-gegevensmeer worden opgeslagen. Hierdoor hoeft u geen gegevens te beheren met alleen PSQL.
 
 ## Aan de slag
 
-U hebt toegang tot de werkruimte Query&#39;s in de gebruikersinterface van het platform nodig om de referenties te verkrijgen waarmee [!DNL SQLAlchemy] verbinding kan maken met Experience Platform. Neem contact op met uw organisatiebeheerder als u momenteel geen toegang hebt tot de werkruimte Query&#39;s.
+U hebt toegang tot de werkruimte Query&#39;s in de gebruikersinterface van Experience Platform nodig om de referenties te verkrijgen waarmee u [!DNL SQLAlchemy] kunt verbinden met Experience Platform. Neem contact op met uw organisatiebeheerder als u momenteel geen toegang hebt tot de werkruimte Query&#39;s.
 
 ## [!DNL Query Service] referenties {#credentials}
 
-Meld u aan bij de gebruikersinterface van het platform en selecteer **[!UICONTROL Queries]** in de linkernavigatie, gevolgd door **[!UICONTROL Credentials]** om uw referenties te zoeken. Voor volledige richtingen op hoe te om uw login geloofsbrieven te vinden, te lezen gelieve de [ gids van geloofsbrieven ](../ui/credentials.md).
+Meld u aan bij de gebruikersinterface van Experience Platform en selecteer **[!UICONTROL Queries]** in de linkernavigatie, gevolgd door **[!UICONTROL Credentials]** om uw referenties te zoeken. Voor volledige richtingen op hoe te om uw login geloofsbrieven te vinden, te lezen gelieve de [ gids van geloofsbrieven ](../ui/credentials.md).
 
 ![ het Credentiële lusje met het verlopen van geloofsbrieven voor de benadrukte Dienst van de Vraag.](../images/use-cases/credentials.png)
 
@@ -59,7 +59,7 @@ password = quote('''
 
 >[!NOTE]
 >
->Het wachtwoord dat u opgeeft om verbinding te maken met Experience Platform [!DNL SQLAlchemy] , verloopt als u uw aanmeldingsgegevens gebruikt. Zie de [ geloofsbrieven sectie ](#credentials) voor meer informatie.
+>Het wachtwoord dat u opgeeft om [!DNL SQLAlchemy] verbinding te maken met Experience Platform, verloopt als u uw aanmeldingsgegevens gebruikt. Zie de [ geloofsbrieven sectie ](#credentials) voor meer informatie.
 
 ### Een motorinstantie maken [#create-engine ]
 
@@ -69,7 +69,7 @@ Nadat de variabelen zijn gecreeerd, voer de `create_engine` functie in en creeer
 >
 >`create_engine` keert een geval van een motor terug. Nochtans, opent het niet de verbinding aan de Dienst van de Vraag tot een vraag wordt geroepen die een verbinding vereist.
 
-SSL moet zijn ingeschakeld wanneer u Platform opent met clients van derden. Als onderdeel van de engine voert u aanvullende trefwoordargumenten in via `connect_args` . U wordt aangeraden de SSL-modus in te stellen op `require` . Zie de [ SSL wijzedocumentatie ](../clients/ssl-modes.md) voor meer informatie over toegelaten waarden.
+SSL moet zijn ingeschakeld wanneer u Experience Platform opent met behulp van externe clients. Als onderdeel van de engine voert u aanvullende trefwoordargumenten in via `connect_args` . U wordt aangeraden de SSL-modus in te stellen op `require` . Zie de [ SSL wijzedocumentatie ](../clients/ssl-modes.md) voor meer informatie over toegelaten waarden.
 
 In het onderstaande voorbeeld wordt de [!DNL Python] -code weergegeven die nodig is om een engine- en verbindingstekenreeks te initialiseren.
 
@@ -89,9 +89,9 @@ engine = create_engine(db_string, connect_args={'sslmode':'require'})
 
 >[!NOTE]
 >
->Het wachtwoord dat u opgeeft om verbinding te maken met Experience Platform [!DNL SQLAlchemy] , verloopt als u uw aanmeldingsgegevens gebruikt. Zie de [ geloofsbrieven sectie ](#credentials) voor meer informatie.
+>Het wachtwoord dat u opgeeft om [!DNL SQLAlchemy] verbinding te maken met Experience Platform, verloopt als u uw aanmeldingsgegevens gebruikt. Zie de [ geloofsbrieven sectie ](#credentials) voor meer informatie.
 
-U kunt nu met [!DNL Python] query&#39;s uitvoeren op Platformgegevens. In het onderstaande voorbeeld wordt een array met tabelnamen van Query Service geretourneerd.
+U kunt nu Experience Platform-gegevens opvragen met [!DNL Python] . In het onderstaande voorbeeld wordt een array met tabelnamen van Query Service geretourneerd.
 
 ```python
 from sqlalchemy import inspect

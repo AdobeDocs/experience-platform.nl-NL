@@ -2,9 +2,9 @@
 title: Overzicht van het dashboard controleren
 description: Leer hoe u het dashboard voor bewaking gebruikt in de gebruikersinterface van Adobe Experience Platform
 exl-id: 06ea5380-d66e-45ae-aa02-c8060667da4e
-source-git-commit: 710fa6930b27f95d34539a18881c0f9d23e1debd
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '994'
+source-wordcount: '995'
 ht-degree: 0%
 
 ---
@@ -19,28 +19,28 @@ Met het dashboard voor bewaking in de gebruikersinterface van Adobe Experience P
 
 Het controledashboard ondersteunt de weergave van verschillende gegevenstypen:
 
-* **Klant &amp; Rekening**: De gegevens van de Klant verwijzen naar de gegevens die in [ Real-time Customer Data Platform ](../../rtcdp/home.md) worden gebruikt, terwijl de rekeningsgegevens naar [ gegevens van rekeningsprofielen ](../../rtcdp/accounts/account-profile-overview.md) verwijzen die wanneer geabonneerd aan [ Real-Time CDP, B2B Uitgave ](../../rtcdp/b2b-overview.md) toegankelijk zijn. Als uw Real-Time CDP-licentie Real-Time CDP, B2B Edition niet bevat, kunt u het dashboard voor bewaking alleen gebruiken om de klantgegevens te controleren.
-* **Vooruitzicht**: [ de profielen van het Vooruitzicht ](../../profile/ui/prospect-profile.md) worden gebruikt om mensen te vertegenwoordigen die nog niet met uw bedrijf in dienst hebben genomen maar u wilt bereiken. Met perspectiefprofielen, kunt u uw klantenprofielen met attributen van vertrouwde op derdepartners aanvullen. U moet een licentie hebben met Real-Time CDP (App Service), Adobe Experience Platform Activation, Real-Time CDP, Real-Time CDP Premiere, Real-Time CDP Ultimate om het gegevenstype voor perspectiefgegevens te kunnen bekijken.
-* **de profielverrijking van de Rekening**: De profielen van de rekening laten u toe om rekeningsinformatie uit veelvoudige bronnen te verenigen. U moet een licentie hebben voor de Real-Time CDP B2B-editie om de gegevens over het verrijken van accountprofielen te kunnen controleren.
+* **Klant &amp; Rekening**: De gegevens van de Klant verwijzen naar de gegevens die in [ Real-Time Customer Data Platform ](../../rtcdp/home.md) worden gebruikt, terwijl de rekeningsgegevens naar [ gegevens van rekeningsprofielen ](../../rtcdp/accounts/account-profile-overview.md) verwijzen die wanneer geabonneerd aan [ Real-Time CDP, B2B edition ](../../rtcdp/b2b-overview.md) toegankelijk zijn. Als uw Real-Time CDP-licentie Real-Time CDP, B2B edition niet bevat, kunt u alleen het dashboard voor bewaking gebruiken om de klantgegevens te controleren.
+* **Vooruitzicht**: [ de profielen van het Vooruitzicht ](../../profile/ui/prospect-profile.md) worden gebruikt om mensen te vertegenwoordigen die nog niet met uw bedrijf in dienst hebben genomen maar u wilt bereiken. Met perspectiefprofielen, kunt u uw klantenprofielen met attributen van vertrouwde op derdepartners aanvullen. U moet een licentie hebben met Real-Time CDP (App Service), Adobe Experience Platform Activation, Real-Time CDP, Real-Time CDP Prime, Real-Time CDP Ultimate om het gegevenstype voor perspectiefgegevens te kunnen bekijken.
+* **de profielverrijking van de Rekening**: De profielen van de rekening laten u toe om rekeningsinformatie uit veelvoudige bronnen te verenigen. U moet een licentie hebben voor Real-Time CDP, B2B edition om de gegevens over de verrijking van het accountprofiel te controleren.
 
-Lees dit document om te leren hoe u het dashboard voor bewaking kunt gebruiken om de reis van uw gegevens over verschillende services van Experience Platforms te controleren.
+Lees dit document om te leren hoe u het dashboard voor bewaking kunt gebruiken om de reis van uw gegevens over verschillende Experience Platform-services te volgen.
 
 ## Aan de slag
 
-Voor dit document is een goed begrip van de volgende onderdelen van het Experience Platform vereist:
+Voor dit document is een goed begrip van de volgende Experience Platform-componenten vereist:
 
-* [ Dataflows ](../home.md): Dataflows zijn vertegenwoordiging van gegevensbanen die gegevens over Experience Platform bewegen. U kunt de werkruimte van bronnen gebruiken om gegevensstromen tot stand te brengen die gegevens van een bepaalde bron aan Experience Platform opnemen.
-* [ Bronnen ](../../sources/home.md): De bronnen van het gebruik in Experience Platform om gegevens van een toepassing van de Adobe of een derdegegevensbron in te voeren.
+* [ Dataflows ](../home.md): Dataflows zijn vertegenwoordiging van gegevensbanen die gegevens over Experience Platform bewegen. U kunt de werkruimte voor bronnen gebruiken om gegevensstromen te maken die gegevens van een bepaalde bron naar Experience Platform invoeren.
+* [ Bronnen ](../../sources/home.md): De bronnen van het gebruik in Experience Platform om gegevens van een toepassing van Adobe of een derdegegevensbron in te voeren.
 * [ Dienst van de Identiteit ](../../identity-service/home.md): Verkrijg een betere mening van individuele klanten en hun gedrag door identiteiten over apparaten en systemen te overbruggen.
 * [ Real-Time Profiel van de Klant ](../../profile/home.md): Verstrekt een verenigd, real-time consumentenprofiel dat op samengevoegde gegevens van veelvoudige bronnen wordt gebaseerd.
 * [ Segmentatie ](../../segmentation/home.md): Gebruik de Dienst van de Segmentatie om segmenten en publiek van uw gegevens van het Profiel van de Klant in real time tot stand te brengen.
-* [ Doelen ](../../destinations/home.md): De bestemmingen zijn pre-gebouwde integratie met algemeen gebruikte toepassingen die voor de naadloze activering van gegevens van Platform voor dwars-kanaal marketing campagnes, e-mailcampagnes, gerichte reclame, en vele andere gebruiksgevallen toestaan.
+* [ Doelen ](../../destinations/home.md): De bestemmingen zijn pre-gebouwde integratie met algemeen gebruikte toepassingen die voor de naadloze activering van gegevens van Experience Platform voor kanaalmarketing campagnes, e-mailcampagnes, gerichte reclame, en vele andere gebruiksgevallen toestaan.
 
 ## Handleiding voor het controledashboard
 
-Selecteer in de gebruikersinterface van het Experience Platform **[!UICONTROL Monitoring]** onder [!UICONTROL Data Management] in de linkernavigatie.
+Selecteer in de gebruikersinterface van Experience Platform **[!UICONTROL Monitoring]** onder [!UICONTROL Data Management] in de linkernavigatie.
 
-![ het controledashboard in het Experience Platform UI.](../assets/ui/monitor-overview/monitoring.png)
+![ het controledashboard in Experience Platform UI.](../assets/ui/monitor-overview/monitoring.png)
 
 Selecteer **[!UICONTROL Data Type]** en gebruik vervolgens het vervolgkeuzemenu om het type gegevens te selecteren dat u wilt weergeven. De gegevenstypes worden bepaald door het schemaklassen van het Model van de Gegevens van de Ervaring (XDM) om ervoor te zorgen dat hun gegevens een standaardformaat wanneer ingebed in Experience Platform volgen. Raadpleeg de volgende documentatie voor meer informatie:
 
@@ -53,19 +53,19 @@ U kunt de weergave filteren op basis van de volgende gegevenstypen:
 
 >[!TAB  allen ]
 
-Selecteer **[!UICONTROL All]** om het dashboard bij te werken en metriek weer te geven voor alle gegevens die gedurende een bepaalde periode aan het Experience Platform zijn toegevoegd.
+Selecteer **[!UICONTROL All]** om uw dashboard bij te werken en metriek weer te geven voor alle gegevens die gedurende een bepaalde periode aan Experience Platform zijn toegevoegd.
 
 ![ het type van controlegegevens dat aan &quot;allen&quot;wordt geplaatst.](../assets/ui/monitor-overview/all.png)
 
 >[!TAB  Klant &amp; Rekening ]
 
-Selecteer **[!UICONTROL Customer & Account]** om uw dashboard bij te werken en metriek weer te geven op Customer &amp; Account-gegevens die gedurende een bepaalde periode aan het Experience Platform zijn doorgegeven.
+Selecteer **[!UICONTROL Customer & Account]** om uw dashboard bij te werken en metriek weer te geven op Customer &amp; Account-gegevens die gedurende een bepaalde periode aan Experience Platform zijn doorgegeven.
 
 ![ het type van controlegegevens dat aan &quot;Klant &amp; Rekening&quot;wordt geplaatst.](../assets/ui/monitor-overview/customer-account.png)
 
 >[!TAB  Vooruitziendheid ]
 
-Selecteer **[!UICONTROL Prospect]** om het dashboard bij te werken en metriek weer te geven bij het zoeken naar gegevens die gedurende een bepaalde periode aan het Experience Platform zijn toegevoegd. **Nota**: U kunt de activiteiten van het vooruitgangsgegevenstype slechts bekijken als u [ gerechtigd bent om gegevens ](../../rtcdp/partner-data/prospecting.md) te voorzien.
+Selecteer **[!UICONTROL Prospect]** om uw dashboard bij te werken en metriek weer te geven over het zoeken naar gegevens die gedurende een bepaalde periode aan Experience Platform zijn toegevoegd. **Nota**: U kunt de activiteiten van het vooruitgangsgegevenstype slechts bekijken als u [ gerechtigd bent om gegevens ](../../rtcdp/partner-data/prospecting.md) te voorzien.
 
 ![ het type van controlegegevens dat aan &quot;Vooruitzicht&quot;wordt geplaatst.](../assets/ui/monitor-overview/prospect.png)
 
@@ -131,7 +131,7 @@ Selecteer **[!UICONTROL Apply]** als u klaar bent.
 
 ## Volgende stappen
 
-Door dit document te lezen, kunt u nu door het controledashboard in UI navigeren. Lees de onderstaande documentatie voor informatie over hoe u gegevens voor een specifieke service van het Experience Platform kunt controleren:
+Door dit document te lezen, kunt u nu door het controledashboard in UI navigeren. Lees de onderstaande documentatie voor informatie over hoe u gegevens voor een specifieke Experience Platform-service kunt controleren:
 
 * [ de bronnen van de Monitor gegevens ](monitor-sources.md).
 * [ de identiteitsgegevens van de Monitor ](monitor-identities.md).

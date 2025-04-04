@@ -2,9 +2,9 @@
 title: Query-logbestanden
 description: Logboeken van de vraag worden automatisch geproduceerd telkens als een vraag wordt uitgevoerd en beschikbaar door UI om met het oplossen van problemen te helpen. Dit document schetst hoe te om de sectie van de Logboeken van de Dienst van de Vraag van UI te gebruiken en te navigeren.
 exl-id: 929e9fba-a9ba-4bf9-a363-ca8657a84f75
-source-git-commit: db0ba3bb32b5458ab3a32525c3c63939fe804ab4
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '901'
+source-wordcount: '902'
 ht-degree: 0%
 
 ---
@@ -23,7 +23,7 @@ Als u de querylogs wilt controleren, selecteert u [!UICONTROL Queries] om naar d
 >
 >Zowel worden de systeemvragen als de dashboardvragen uitgesloten door gebrek. Zie de [ filters ](#filter-logs) sectie voor informatie over hoe te om de getoonde logboeken te verfijnen die op uw montages worden gebaseerd.
 
-![ Platform UI met de Vragen en het Logboek benadrukte.](../images/ui/query-log/logs.png)
+![ UI van Experience Platform met de Vragen en het Logboek benadrukte.](../images/ui/query-log/logs.png)
 
 ## Aanpassen en zoeken {#customize-and-search}
 

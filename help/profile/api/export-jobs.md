@@ -5,7 +5,7 @@ type: Documentation
 description: In real-time klantprofiel kunt u één weergave van individuele klanten in Adobe Experience Platform samenstellen door gegevens uit meerdere bronnen samen te voegen, inclusief kenmerkgegevens en gedragsgegevens. De gegevens van het profiel kunnen dan naar een dataset voor verdere verwerking worden uitgevoerd.
 role: Developer
 exl-id: d51b1d1c-ae17-4945-b045-4001e4942b67
-source-git-commit: fd5042bee9b09182ac643bcc69482a0a2b3f8faa
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '1512'
 ht-degree: 0%
@@ -30,7 +30,7 @@ De API-eindpunten die in deze handleiding worden gebruikt, maken deel uit van de
 
 ## Een exporttaak maken
 
-Voor het exporteren van [!DNL Profile] -gegevens moet u eerst een gegevensset maken waarin de gegevens worden geëxporteerd en vervolgens een nieuwe exporttaak starten. Beide stappen kunnen worden verwezenlijkt gebruikend Experience Platform APIs, met het eerste gebruikend de Dienst API van de Catalogus en het tweede gebruikend Real-Time de Profiel van de Klant API. Gedetailleerde instructies voor het voltooien van elke stap worden beschreven in de volgende secties.
+Voor het exporteren van [!DNL Profile] -gegevens moet u eerst een gegevensset maken waarin de gegevens worden geëxporteerd en vervolgens een nieuwe exporttaak starten. Beide stappen kunnen worden verwezenlijkt gebruikend Experience Platform APIs, met het eerste gebruikend de Dienst API van de Catalogus en het laatste gebruikend Real-Time de Profiel van de Klant API. Gedetailleerde instructies voor het voltooien van elke stap worden beschreven in de volgende secties.
 
 ### Een doelgegevensset maken
 
@@ -38,7 +38,7 @@ Bij het exporteren van [!DNL Profile] -gegevens moet eerst een doelgegevensset w
 
 Één van de belangrijkste overwegingen is het schema waarop de dataset (`schemaRef.id` in het API steekproefverzoek hieronder) wordt gebaseerd. Als u profielgegevens wilt exporteren, moet de gegevensset zijn gebaseerd op het [!DNL XDM Individual Profile] Unieschema (`https://ns.adobe.com/xdm/context/profile__union` ). Een verenigingsschema is een systeem-geproduceerd, read-only schema dat de gebieden van schema&#39;s samenvoegt die de zelfde klasse delen. In dit geval is dat de [!DNL XDM Individual Profile] -klasse. Voor meer informatie over de schema&#39;s van de verenigingsmening, zie gelieve de [ uniesectie in de grondbeginselen van de gids van de schemacompositie ](../../xdm/schema/composition.md#union).
 
-In de stappen die in deze zelfstudie worden gezet, wordt beschreven hoe u een gegevensset maakt die verwijst naar het [!DNL XDM Individual Profile] Union-schema met de [!DNL Catalog] API. U kunt de [!DNL Platform] gebruikersinterface ook gebruiken om een dataset tot stand te brengen die verwijzingen het unieschema. De stappen voor het gebruiken van UI worden geschetst in [ dit leerprogramma UI voor het uitvoeren van publiek ](../../segmentation/tutorials/create-dataset-export-segment.md) maar zijn hier eveneens van toepassing. Zodra voltooid, kunt u aan dit leerprogramma terugkeren om met de stappen voor [ te werk te gaan in werking stellend een nieuwe uitvoerbaan ](#initiate).
+In de stappen die in deze zelfstudie worden gezet, wordt beschreven hoe u een gegevensset maakt die verwijst naar het [!DNL XDM Individual Profile] Union-schema met de [!DNL Catalog] API. U kunt de [!DNL Experience Platform] gebruikersinterface ook gebruiken om een dataset tot stand te brengen die verwijzingen het unieschema. De stappen voor het gebruiken van UI worden geschetst in [ dit leerprogramma UI voor het uitvoeren van publiek ](../../segmentation/tutorials/create-dataset-export-segment.md) maar zijn hier eveneens van toepassing. Zodra voltooid, kunt u aan dit leerprogramma terugkeren om met de stappen voor [ te werk te gaan in werking stellend een nieuwe uitvoerbaan ](#initiate).
 
 Als u reeds een compatibele dataset hebt en zijn identiteitskaart kent, kunt u rechtstreeks aan de stap voor [ in werking stellen een nieuwe de uitvoerbaan ](#initiate) te werk gaan.
 
@@ -85,7 +85,7 @@ Een succesvolle reactie keert een serie terug die read-only, systeem-geproduceer
 
 ### Exporttaak starten {#initiate}
 
-Zodra u een unie-persisterende dataset hebt, kunt u een uitvoerbaan tot stand brengen om de gegevens van het Profiel aan de dataset voort te zetten door een verzoek van de POST aan het `/export/jobs` eindpunt in Real-Time API van het Profiel van de Klant te richten en de details van de gegevens te verstrekken u wenst om in het lichaam van het verzoek uit te voeren.
+Zodra u een unie-persisterende dataset hebt, kunt u een uitvoerbaan tot stand brengen om de gegevens van het Profiel aan de dataset voort te zetten door een POST- verzoek aan het `/export/jobs` eindpunt in Real-Time API van het Profiel van de Klant te richten en de details van de gegevens te verstrekken u wenst om in het lichaam van het verzoek uit te voeren.
 
 **API formaat**
 
@@ -179,7 +179,7 @@ Een succesvolle reactie keert een dataset terug die met de gegevens van het Prof
 
 ## Alle exporttaken weergeven
 
-U kunt een lijst met alle exporttaken voor een bepaalde organisatie retourneren door een aanvraag voor een GET uit te voeren naar het eindpunt van `export/jobs` . De aanvraag ondersteunt ook de queryparameters `limit` en `offset`, zoals hieronder wordt weergegeven.
+U kunt een lijst met alle exporttaken voor een bepaalde organisatie retourneren door een GET-aanvraag uit te voeren naar het `export/jobs` -eindpunt. De aanvraag ondersteunt ook de queryparameters `limit` en `offset`, zoals hieronder wordt weergegeven.
 
 **API formaat**
 
@@ -324,7 +324,7 @@ De reactie bevat een `records` -object dat de exporttaken bevat die door uw orga
 
 ## Exportvoortgang volgen
 
-Als u de details van een specifieke exporttaak wilt bekijken of de status wilt controleren terwijl deze wordt verwerkt, kunt u een aanvraag indienen bij het `/export/jobs` -eindpunt en de `id` van de exporttaak in het pad opnemen. De exporttaak is voltooid wanneer het veld `status` de waarde &quot;SUCCEEDED&quot; retourneert.
+Als u de details van een specifieke exporttaak wilt bekijken of de status wilt controleren terwijl deze wordt verwerkt, kunt u een GET-aanvraag indienen bij het `/export/jobs` -eindpunt en de `id` van de exporttaak in het pad opnemen. De exporttaak is voltooid wanneer het veld `status` de waarde &quot;SUCCEEDED&quot; retourneert.
 
 **API formaat**
 
@@ -400,7 +400,7 @@ curl -X GET https://platform.adobe.io/data/core/ups/export/jobs/24115 \
 
 ## Een exporttaak annuleren
 
-Met Experience Platform kunt u een bestaande exporttaak annuleren. Dit kan om een aantal redenen nuttig zijn, bijvoorbeeld als de exporttaak niet is voltooid of vastgelopen in het verwerkingsstadium. Als u een exporttaak wilt annuleren, kunt u een DELETE-aanvraag naar het `/export/jobs` -eindpunt uitvoeren en de `id` van de exporttaak opnemen die u wilt annuleren naar het aanvraagpad.
+Met Experience Platform kunt u een bestaande exporttaak annuleren. Dit kan om een aantal redenen nuttig zijn, bijvoorbeeld als de exporttaak niet is voltooid of vastgelopen in de verwerkingsfase. Als u een exporttaak wilt annuleren, kunt u een DELETE-aanvraag naar het `/export/jobs` -eindpunt uitvoeren en de `id` van de exporttaak opnemen die u naar het aanvraagpad wilt annuleren.
 
 **API formaat**
 
@@ -428,7 +428,7 @@ Een succesvol verwijderingsverzoek retourneert HTTP Status 204 (Geen inhoud) en 
 
 ## Volgende stappen
 
-Nadat het exporteren is voltooid, zijn uw gegevens beschikbaar in het Data Lake in Experience Platform. U kunt de [ Toegang API van Gegevens ](https://www.adobe.io/experience-platform-apis/references/data-access/) dan gebruiken om tot de gegevens toegang te hebben gebruikend `batchId` verbonden aan de uitvoer. Afhankelijk van de grootte van de exportbewerking kunnen de gegevens in blokken staan en kan de batch uit meerdere bestanden bestaan.
+Zodra het exporteren is voltooid, zijn uw gegevens beschikbaar in het Data Lake in Experience Platform. U kunt de [ Toegang API van Gegevens ](https://www.adobe.io/experience-platform-apis/references/data-access/) dan gebruiken om tot de gegevens toegang te hebben gebruikend `batchId` verbonden aan de uitvoer. Afhankelijk van de grootte van de exportbewerking kunnen de gegevens in blokken staan en kan de batch uit meerdere bestanden bestaan.
 
 Voor geleidelijke instructies op hoe te om de Toegang API van Gegevens te gebruiken om tot partijdossiers toegang te hebben en te downloaden, volg het [ leerprogramma van de Toegang van Gegevens ](../../data-access/tutorials/dataset-data.md).
 

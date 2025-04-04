@@ -1,11 +1,11 @@
 ---
-keywords: Experience Platform;thuis;populaire onderwerpen;bronnen;connectors;bronconnectors;bronnen sdk;sdk;SDK
+keywords: Experience Platform;home;populaire onderwerpen;bronnen;connectors;bronconnectors;bronnen sdk;sdk;SDK
 title: Zelfbediening documentatiesjabloon voor UI
 description: Leer hoe u een bronverbinding voor UW BRON maakt met de gebruikersinterface van Adobe Experience Platform.
 exl-id: 6471c0a2-22e8-4133-a76f-ee3c5c669ef8
-source-git-commit: 1ed82798125f32fe392f2a06a12280ac61f225c6
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '706'
+source-wordcount: '711'
 ht-degree: 0%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 0%
 
 *Begin door de meta-gegevens (titel en beschrijving) bij te werken bij de bovenkant van de pagina. Negeer alle exemplaren van UICONTROL op deze pagina. Dit is een label waarmee de pagina in de verschillende talen die wij ondersteunen correct wordt vertaald in onze computervertaalprocessen. Wij zullen markeringen aan uw documentatie toevoegen nadat u het voorlegt.*
 
-Dit leerprogramma verstrekt stappen voor het creëren van a ** bronschakelaar van de JONGE bron gebruikend het gebruikersinterface van het Platform.
+Dit leerprogramma verstrekt stappen voor het creëren van a ** bronschakelaar van de JONGE bron gebruikend het gebruikersinterface van Experience Platform.
 
 ## Overzicht
 
@@ -37,7 +37,7 @@ Dit leerprogramma verstrekt stappen voor het creëren van a ** bronschakelaar va
 
 ### Vereiste referenties verzamelen
 
-Om *UURSOURCE* aan Platform te verbinden, moet u waarden voor de volgende verbindingseigenschappen verstrekken:
+Om *UURSOURCE* aan Experience Platform te verbinden, moet u waarden voor de volgende verbindingseigenschappen verstrekken:
 
 | Credentials | Beschrijving | Voorbeeld |
 | --- | --- | --- |
@@ -49,7 +49,7 @@ Voor meer informatie over deze geloofsbrieven, zie *JONGE* authentificatiedocume
 
 ## Verbind uw ** rekening van de JUURBRON
 
-Selecteer in de gebruikersinterface van het platform **[!UICONTROL Sources]** in de linkernavigatiebalk voor toegang tot de werkruimte van [!UICONTROL Sources] . In het scherm [!UICONTROL Catalog] worden diverse bronnen weergegeven waarmee u een account kunt maken.
+Selecteer in de gebruikersinterface van Experience Platform de optie **[!UICONTROL Sources]** in de linkernavigatiebalk voor toegang tot de werkruimte van [!UICONTROL Sources] . In het scherm [!UICONTROL Catalog] worden diverse bronnen weergegeven waarmee u een account kunt maken.
 
 U kunt de juiste categorie selecteren in de catalogus aan de linkerkant van het scherm. U kunt ook de specifieke bron vinden waarmee u wilt werken met de zoekoptie.
 
@@ -57,7 +57,7 @@ Onder de {*categorie 1} van de CATEGORIE van 0} JUURSOURCE, selecteer* JUURSOURC
 
 >[!TIP]
 >
->De onderstaande schermafbeeldingen zijn voorbeelden. Vervang de afbeeldingen bij het maken van de documentatie door schermafbeeldingen van de werkelijke bron. U kunt hetzelfde patroon en dezelfde kleur en dezelfde bestandsnamen gebruiken. Zorg ervoor dat uw schermafbeelding het gehele UI-scherm van het platform vastlegt. Voor informatie over hoe te om uw screenshots te uploaden, zie de gids bij [ het voorleggen van uw documentatie voor overzicht ](./github.md).
+>De onderstaande schermafbeeldingen zijn voorbeelden. Vervang de afbeeldingen bij het maken van de documentatie door schermafbeeldingen van de werkelijke bron. U kunt hetzelfde patroon en dezelfde kleur en dezelfde bestandsnamen gebruiken. Zorg ervoor dat uw schermafbeelding het volledige Experience Platform UI-scherm vastlegt. Voor informatie over hoe te om uw screenshots te uploaden, zie de gids bij [ het voorleggen van uw documentatie voor overzicht ](./github.md).
 
 ![ catalogus ](../assets/ui/catalog.png)
 
@@ -79,7 +79,7 @@ Als u een nieuwe account maakt, selecteert u **[!UICONTROL New account]** en gee
 
 *de Werkschema&#39;s voor de resterende stappen van het creëren van een dataflow worden gemoduleerd. Als er om het even welke specifieke vraag-outs zijn u betreffende uw bron wilt maken, gelieve de extra middelensectie hieronder te zien.*
 
-Door dit leerprogramma te volgen, hebt u een verbinding aan uw ** rekening van UUR {gevestigd. U kunt nu aan het volgende leerprogramma verdergaan en [ een dataflow vormen om gegevens in Platform ](https://experienceleague.adobe.com/docs/experience-platform/sources/ui-tutorials/dataflow/crm.html) te brengen.
+Door dit leerprogramma te volgen, hebt u een verbinding aan uw ** rekening van UUR {gevestigd. U kunt nu aan het volgende leerprogramma verdergaan en [ een dataflow vormen om gegevens in Experience Platform ](https://experienceleague.adobe.com/docs/experience-platform/sources/ui-tutorials/dataflow/crm.html) te brengen.
 
 ## Aanvullende bronnen
 

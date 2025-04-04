@@ -2,9 +2,9 @@
 title: Verificatie
 description: Leer hoe u verificatie voor de Adobe Experience Platform Edge Network Server-API configureert.
 exl-id: 73c7a186-9b85-43fe-a586-4c6260b6fa8c
-source-git-commit: 3bf13c3f5ac0506ac88effc56ff68758deb5f566
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '628'
+source-wordcount: '631'
 ht-degree: 1%
 
 ---
@@ -38,13 +38,13 @@ Voordat u de methode [!DNL Server API] kunt aanroepen, moet u controleren of aan
 
 ## Referenties verzamelen {#credentials}
 
-Om vraag aan Platform APIs te maken, moet u het [ authentificatieleerprogramma ](../landing/api-authentication.md) eerst voltooien. Het voltooien van de autorisatiezelfstudie biedt de waarden voor elk van de vereiste headers in alle Experience Platform API-aanroepen, zoals hieronder wordt getoond:
+Om vraag aan Experience Platform APIs te maken, moet u het [ authentificatieleerprogramma ](../landing/api-authentication.md) eerst voltooien. Als u de zelfstudie over verificatie voltooit, krijgt u de waarden voor elk van de vereiste headers in alle Experience Platform API-aanroepen, zoals hieronder wordt getoond:
 
 * Autorisatie: Drager `{ACCESS_TOKEN}`
 * x-api-key: `{API_KEY}`
 * x-gw-ims-org-id: `{ORG_ID}`
 
-De middelen in Experience Platform kunnen aan specifieke virtuele zandbakken worden geïsoleerd. In aanvragen voor platform-API&#39;s kunt u de naam en id opgeven van de sandbox waarin de bewerking plaatsvindt. Dit zijn optionele parameters.
+De middelen in Experience Platform kunnen aan specifieke virtuele zandbakken worden geïsoleerd. In aanvragen voor Experience Platform API&#39;s kunt u de naam en id opgeven van de sandbox waarin de bewerking plaatsvindt. Dit zijn optionele parameters.
 
 * x-sandbox-name: `{SANDBOX_NAME}`
 
@@ -52,13 +52,13 @@ De middelen in Experience Platform kunnen aan specifieke virtuele zandbakken wor
 >
 >Voor meer informatie over zandbakken in Experience Platform, zie de [ documentatie van het zandbakoverzicht ](../sandboxes/home.md).
 
-Alle verzoeken die een nuttige lading (POST, PUT, PATCH) bevatten vereisen een extra media type kopbal:
+Alle verzoeken die een lading (POST, PUT, PATCH) bevatten vereisen een extra media typekopbal:
 
 * Inhoudstype: `application/json`
 
 ## Machtigingen voor schrijven gegevensset configureren {#dataset-write-permissions}
 
-Om dataset te vormen schrijf toestemmingen, ga naar de [ Admin Console ](https://adminconsole.adobe.com), bepaal de plaats van het productprofiel in bijlage aan uw API sleutel, en plaats de volgende toestemmingen:
+Om dataset te vormen schrijf toestemmingen, ga naar [ Admin Console ](https://adminconsole.adobe.com), bepaal de plaats van het productprofiel in bijlage aan uw API sleutel, en plaats de volgende toestemmingen:
 
 * Selecteer in de sectie [!UICONTROL Sandboxes] de gegevensstroomsandbox.
 * Selecteer in de sectie [!UICONTROL Data Management] de machtiging **[!UICONTROL Manage Datasets]** .
@@ -71,6 +71,6 @@ Om dataset te vormen schrijf toestemmingen, ga naar de [ Admin Console ](https:/
 | `EXEG-0501-401` | Ongeldig token voor gebruikersautorisatie | Dit foutbericht wordt in een van de volgende situaties weergegeven: <ul><li>In de API-aanroep ontbreekt de vereiste `x-user-token` -header.</li><li>De opgegeven gebruikerstoken heeft een ongeldige indeling.</li></ul> |
 | `EXEG-0502-401` | Ongeldig machtigingstoken | Dit foutbericht wordt weergegeven wanneer het opgegeven machtigingstoken een geldige indeling (JWT) heeft, maar de handtekening ongeldig is. Controleer het [ authentificatieleerprogramma ](../landing/api-authentication.md) om te leren hoe te om een geldig teken JWT te krijgen. |
 | `EXEG-0503-401` | Ongeldig machtigingstoken | Dit foutbericht wordt weergegeven wanneer de opgegeven machtigingstoken is verlopen. Ga door het [ authentificatieleerprogramma ](../landing/api-authentication.md) om een nieuw teken te produceren. |
-| `EXEG-0504-401` | Vereiste productcontext ontbreekt | Dit foutbericht wordt in een van de volgende situaties weergegeven:  <ul><li>Het ontwikkelaarsaccount heeft geen toegang tot de Adobe Experience Platform-productcontext.</li><li>Het bedrijfsaccount heeft nog geen recht op een Adobe Experinece Platform.</li></ul> |
+| `EXEG-0504-401` | Vereiste productcontext ontbreekt | Dit foutbericht wordt in een van de volgende situaties weergegeven:  <ul><li>Het ontwikkelaarsaccount heeft geen toegang tot de Adobe Experience Platform-productcontext.</li><li>Het bedrijfsaccount heeft nog geen recht op Adobe Experinece Experience Platform.</li></ul> |
 | `EXEG-0505-401` | Vereiste tokenbereik van autorisatie ontbreekt | Deze fout is alleen van toepassing op verificatie van serviceaccounts. Het foutbericht wordt weergegeven wanneer het token voor servicevergunning dat in de aanroep is opgenomen, behoort tot een serviceaccount die geen toegang heeft tot het bereik van `acp.foundation` IMS. |
 | `EXEG-0506-401` | Sandbox niet toegankelijk voor schrijven | Dit foutbericht wordt weergegeven wanneer de ontwikkelaarsaccount geen `WRITE` toegang heeft tot de Experience Platform-sandbox waarin de gegevensstroom is gedefinieerd. |

@@ -1,16 +1,16 @@
 ---
-title: Gebruik de zelfidentificatie-enquête om uw persoonlijke profiel voor Experience Platforms samen te stellen
+title: Gebruik de zelfidentificatie-enquête om uw persoonlijke Experience Platform-profiel samen te stellen
 description: Leer hoe u de gebruikersinterface van de enquête voor zelfidentificatie gebruikt om relevante inhoud te ontvangen op basis van uw taakfuncties en verwante doelstellingen.
 badge: Beta
 exl-id: 80b3f55f-1eab-4a99-be75-49bd091f9739
-source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '547'
+source-wordcount: '556'
 ht-degree: 0%
 
 ---
 
-# Gebruik de zelfidentificatiecode-enquête om uw persoonlijke profiel voor Experience Platforms samen te stellen
+# Gebruik de zelfidentificatiereeks om uw Experience Platform-profiel te maken
 
 >[!NOTE]
 >
@@ -18,17 +18,17 @@ ht-degree: 0%
 
 De zelfidentificatiecode-enquête is een korte vragenlijst die wordt weergegeven op de homepage van de gebruikersinterface van Adobe Experience Platform. U kunt de enquête invullen om informatie te verschaffen over uw functies en algemene doelstellingen. Deze informatie wordt dan gebruikt om in-product gidsen beter te richten en uiteindelijk inhoud te leveren die voor uw doelstellingen relevanter is.
 
-Dit document verstrekt informatie over hoe u het zelf-identificatieonderzoek in het Platform UI kunt gebruiken om relevante inhoud te ontvangen die op uw doelstellingen en taken wordt gebaseerd, evenals hoe te om uw persoonlijke profielattributen opnieuw te vormen gebruikend UI.
+Dit document biedt informatie over hoe u de zelfidentificatiecode-enquête in de gebruikersinterface van Experience Platform kunt gebruiken om relevante inhoud te ontvangen op basis van uw doelstellingen en taken, en over hoe u uw persoonlijke profielkenmerken opnieuw kunt configureren met behulp van de gebruikersinterface.
 
-Om meer over Adobe Experience Platform te leren, te lezen gelieve het [ overzicht van het Experience Platform ](home.md).
+Meer over Adobe Experience Platform leren, gelieve het [ overzicht van Experience Platform ](home.md) te lezen.
 
-## Zelfidentificatieonderzoek in de gebruikersinterface van het platform
+## Zelfidentificatieonderzoek in de gebruikersinterface van Experience Platform
 
-De zelfidentificatiemethode van de enquêteherinnering verschijnt in het bodemrecht van de homepage van het Platform UI wanneer het ondertekenen binnen.
+De prompt voor zelfidentificatie van de enquête wordt rechtsonder op de startpagina van de gebruikersinterface van Experience Platform weergegeven wanneer u zich aanmeldt.
 
 Selecteer **[!UICONTROL Start]** om met de enquête te beginnen.
 
-![ de homepage UI van het Platform met het pop-upbericht die u ertoe aanzetten om het zelf-identificatieonderzoek te beginnen.](./images/survey/survey-prompt.png)
+![ de homepage UI van Experience Platform met het pop-upbericht die u ertoe aanzetten om het zelf-identificatieonderzoek te beginnen.](./images/survey/survey-prompt.png)
 
 Voor de eerste enquêtevraag selecteert u de functie die het beste uw werk beschrijft.
 
@@ -79,18 +79,18 @@ Selecteer **[!UICONTROL Done]** terwijl uw zelfidentificatiecode-enquête is vol
 
 ## Antwoorden van enquêtes bijwerken
 
-Werk uw taakfuncties en objecten bij met het voorkeurenmenu Experience Cloud. Als u het voorkeurenmenu wilt openen, selecteert u het profielpictogram in de bovenste navigatie en selecteert u vervolgens **[!UICONTROL Preferences]** .
+Werk uw taakfuncties en objecten bij met het voorkeurenmenu van Experience Cloud. Als u het voorkeurenmenu wilt openen, selecteert u het profielpictogram in de bovenste navigatie en selecteert u vervolgens **[!UICONTROL Preferences]** .
 
-![ de homepage UI van het Platform met het profielpictogram en de geselecteerde voorkeurenknoppen.](./images/survey/preferences.png)
+![ de homepage UI van Experience Platform met het profielpictogram en de geselecteerde voorkeurenknoppen.](./images/survey/preferences.png)
 
 Selecteer vervolgens **[!UICONTROL Update your job functions and objectives]** in de sectie [!UICONTROL General] van het menu met uw profielvoorkeuren.
 
-![ de algemene sectie van de het profielvoorkeur van het Platform UI pagina ](./images/survey/update.png)
+![ de algemene sectie van de het profielvoorkeur van Experience Platform UI pagina ](./images/survey/update.png)
 
 De zelfidentificatiecode wordt weergegeven, zodat u de reacties opnieuw kunt configureren en uw profiel kunt bijwerken.
 
-![ de pagina van de het profielvoorkeur van het Platform UI die het zelf-identificatieonderzoek toont om een gebruiker toe te staan om hun persoonlijk profiel bij te werken.](./images/survey/new-survey.png)
+![ de pagina van de het profielvoorkeur van Experience Platform UI die het zelf-identificatieonderzoek toont om een gebruiker toe te staan om hun persoonlijk profiel bij te werken.](./images/survey/new-survey.png)
 
 ## Volgende stappen
 
-Door dit document te lezen, hebt u nu informatie over uw taakfuncties en -doelstellingen verzonden en bijgewerkt om meer relevante inhoud te ontvangen wanneer u de interface van het platform gebruikt. Voor meer informatie over Platform UI, lees het [ overzicht van het Experience Platform ](home.md).
+Door dit document te lezen, hebt u nu informatie over uw functies en doelstellingen verzonden en bijgewerkt om meer relevante inhoud te ontvangen wanneer u de gebruikersinterface van Experience Platform gebruikt. Voor meer informatie over Experience Platform UI, lees het [ overzicht van Experience Platform ](home.md).

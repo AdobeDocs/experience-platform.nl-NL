@@ -3,9 +3,9 @@ keywords: Experience Platform;query-service;Query-service;geneste gegevensstruct
 title: Werken met geneste gegevensstructuren in Query Service
 description: Dit document biedt een werkvoorbeeld voor het verwerken en transformeren van geneste gegevensvelden met CTAS- en INSERT INTO-instructies.
 exl-id: 593379fb-88ad-4b14-8d2e-aa6d18129974
-source-git-commit: 99cd69234006e6424be604556829b77236e92ad7
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '789'
+source-wordcount: '790'
 ht-degree: 0%
 
 ---
@@ -14,11 +14,11 @@ ht-degree: 0%
 
 Adobe Experience Platform Query Service ondersteunt het gebruik van geneste gegevensvelden. De complexiteit van bedrijfsgegevensstructuren kan het transformeren of verwerken van deze gegevens ingewikkeld maken. Dit document verstrekt voorbeelden van om, datasets met complexe gegevenstypes met inbegrip van genestelde gegevensstructuren tot stand te brengen te verwerken of om te zetten.
 
-De Dienst van de vraag verstrekt een [!DNL PostgreSQL] interface om SQL vragen op alle datasets in werking te stellen die door Experience Platform worden beheerd. Het platform steunt het gebruik van of primitieve of complexe gegevenstypes in lijstkolommen zoals struct, series, kaarten, en diep genestelde struct, series, en kaarten. Datasets kunnen ook geneste structuren bevatten waarbij het gegevenstype van de kolom zo complex kan zijn als een array van geneste structuren, of een kaart met kaarten waarin de waarde van een sleutelwaardepaar een structuur met meerdere nestniveaus kan zijn.
+De Dienst van de vraag verstrekt een [!DNL PostgreSQL] interface om SQL vragen op alle datasets in werking te stellen die door Experience Platform worden beheerd. Experience Platform ondersteunt het gebruik van primitieve of complexe gegevenstypen in tabelkolommen, zoals struct, arrays, maps en diep geneste struct, arrays en maps. Datasets kunnen ook geneste structuren bevatten waarbij het gegevenstype van de kolom zo complex kan zijn als een array van geneste structuren, of een kaart met kaarten waarin de waarde van een sleutelwaardepaar een structuur met meerdere nestniveaus kan zijn.
 
 ## Aan de slag
 
-Deze zelfstudie vereist het gebruik van een externe PSQL-client of het hulpmiddel Query Editor om query&#39;s te schrijven, te valideren en uit te voeren in de gebruikersinterface van het Experience Platform (UI). De volledige details op hoe te om vragen door UI in werking te stellen kunnen in de [ gids UI van de Redacteur van de Vraag ](../ui/user-guide.md) worden gevonden. Voor een gedetailleerde lijst waarop de derdeDesktopcliënten met de Dienst van de Vraag kunnen verbinden, zie het [ overzicht van cliëntverbindingen ](../clients/overview.md).
+Deze zelfstudie vereist het gebruik van een PSQL-client van derden of het gereedschap Query-editor om query&#39;s te schrijven, te valideren en uit te voeren in de gebruikersinterface van Experience Platform (UI). De volledige details op hoe te om vragen door UI in werking te stellen kunnen in de [ gids UI van de Redacteur van de Vraag ](../ui/user-guide.md) worden gevonden. Voor een gedetailleerde lijst waarop de derdeDesktopcliënten met de Dienst van de Vraag kunnen verbinden, zie het [ overzicht van cliëntverbindingen ](../clients/overview.md).
 
 U moet ook een goed inzicht hebben in de syntaxis `INSERT INTO` en `CTAS` . De specifieke informatie over hun gebruik kan in de [`INSERT INTO`](../sql/syntax.md#insert-into) en [`CTAS`](../sql/syntax.md#create-table-as-select) secties van de [ SQL documentatie van de syntaxisverwijzing ](../sql/syntax.md) worden gevonden.
 

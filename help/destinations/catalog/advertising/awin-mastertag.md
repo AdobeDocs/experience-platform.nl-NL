@@ -1,11 +1,11 @@
 ---
 keywords: Awin Advertiser mastertag extension;mastertag tag;Awin;awin;AWIN
 title: Awin Advertiser Mastertag extension
-description: De extensie Awin Advertiser Mastertag is een advertentiebestemming in Adobe Experience Platform. Zie de extensiepagina over Adobe Exchange voor meer informatie over de extensiefunctionaliteit.
+description: De extensie Awin Advertiser Mastertag is een advertentiebestemming in Adobe Experience Platform. Zie de extensiepagina op Adobe Exchange voor meer informatie over de extensiefunctionaliteit.
 exl-id: 99a9ea40-b89f-4503-91a7-60cc8e1cd6d3
-source-git-commit: c8d6c156b3351324fe1be11144afeae91f7a2a59
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '472'
+source-wordcount: '475'
 ht-degree: 0%
 
 ---
@@ -18,13 +18,13 @@ ht-degree: 0%
 
 [!DNL Awin Advertiser Mastertag] is een advertentie-extensie in Adobe Experience Platform. Voor meer informatie over de uitbreidingsfunctionaliteit, zie de uitbreidingspagina op [ Adobe Exchange ](https://exchange.adobe.com/experiencecloud.details.103176.awin-advertiser-mastertag.html).
 
-Dit doel is een tagextensie. Voor meer informatie over hoe de uitbreidingen in Platform werken, zie het [ overzicht van markeringsuitbreidingen ](../launch-extensions/overview.md).
+Dit doel is een tagextensie. Voor meer informatie over hoe de uitbreidingen in Experience Platform werken, zie het [ overzicht van markeringsuitbreidingen ](../launch-extensions/overview.md).
 
 ![ Advertiser Mastertag uitbreiding in UI ](../../assets/catalog/advertising/awin-mastertag/catalog.png)
 
 ## Vereisten {#prerequisites}
 
-Deze extensie is beschikbaar in de catalogus [!DNL Destinations] voor alle klanten die Platform hebben aangeschaft.
+Deze extensie is beschikbaar in de catalogus [!DNL Destinations] voor alle klanten die Experience Platform hebben aangeschaft.
 
 Als u deze extensie wilt gebruiken, hebt u toegang tot tags in Adobe Experience Platform nodig. Tags worden aan Adobe Experience Cloud-klanten aangeboden als een inbegrepen, waardetoevoegend element. Neem contact op met de systeembeheerder van uw organisatie om toegang tot tags te krijgen en vraag hen om u de **[!UICONTROL manage_properties]** -machtiging te verlenen zodat u extensies kunt installeren.
 
@@ -32,7 +32,7 @@ Als u deze extensie wilt gebruiken, hebt u toegang tot tags in Adobe Experience 
 
 De extensie [!DNL Awin Advertiser Mastertag] installeren:
 
-In de [ interface van het Platform ](https://platform.adobe.com/), ga **[!UICONTROL Destinations]** > **[!UICONTROL Catalog]**.
+In de [ interface van Experience Platform ](https://platform.adobe.com/), ga **[!UICONTROL Destinations]** > **[!UICONTROL Catalog]**.
 
 Selecteer de extensie in de catalogus of gebruik de zoekbalk.
 
@@ -42,7 +42,7 @@ Selecteer de eigenschap tag waarin u de extensie wilt installeren. U kunt ook ee
 
 De werkstroom neemt u aan de UI van de Inzameling van Gegevens om de installatie te voltooien.
 
-Voor informatie over de opties en de installatiesteun van de uitbreidingsconfiguratie, zie de [ pagina van Advertiser Mastertag op Adobe Exchange ](https://exchange.adobe.com/experiencecloud.details.103176.awin-advertiser-mastertag.html) Awin.
+Voor informatie over de opties van de uitbreidingsconfiguratie en installatiesteun, zie de [ pagina van Advertiser Mastertag op Adobe Exchange ](https://exchange.adobe.com/experiencecloud.details.103176.awin-advertiser-mastertag.html) Awin.
 
 U kunt de uitbreiding direct in [ de Inzameling UI van Gegevens ](https://experience.adobe.com/#/data-collection/) ook installeren. Zie de gids op [ toevoegend een nieuwe uitbreiding ](../../../tags/ui/managing-resources/extensions/overview.md#add-a-new-extension) voor meer informatie.
 

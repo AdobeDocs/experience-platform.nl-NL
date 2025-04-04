@@ -1,10 +1,11 @@
 ---
 title: Machine Learning-Assisted Schema maken
-description: Leer hoe u een schema maakt in de gebruikersinterface van het Experience Platform.
+description: Leer hoe u een schema maakt in de Experience Platform-gebruikersinterface.
 badgeBeta: label="Beta" type="Informative"
-source-git-commit: f1db409a2af34ac66c81d7e5a11ee1bc8e5f4c9c
+exl-id: 6b14caed-a3ad-4834-8fa8-8d67dce6290e
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '924'
+source-wordcount: '925'
 ht-degree: 0%
 
 ---
@@ -31,7 +32,7 @@ Deze gids verklaart hoe te om schema&#39;s tot stand te brengen gebruikend machi
 
 ## Navigeren naar de workflow Schema maken {#navigate-to-schema-creation-workflow}
 
-Selecteer de **[!UICONTROL Schemas]** -werkruimte in de linkernavigatie van de gebruikersinterface van het platform. De werkruimte van **[!UICONTROL Schemas]** wordt weergegeven. Selecteer **[!UICONTROL Create schema]** om een nieuw schema toe te voegen om een werkschema voor het maken van schema&#39;s te beginnen.
+Selecteer de werkruimte **[!UICONTROL Schemas]** in de linkernavigatie van de gebruikersinterface van Experience Platform. De werkruimte van **[!UICONTROL Schemas]** wordt weergegeven. Selecteer **[!UICONTROL Create schema]** om een nieuw schema toe te voegen om een werkschema voor het maken van schema&#39;s te beginnen.
 
 ![ de werkruimte van Schema&#39;s met Schema in de linkernavigatie en leidt tot benadrukt schema.](../images/ui/ml-schema-creation/schemas-workspace-create-schema.png)
 

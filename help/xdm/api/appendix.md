@@ -1,10 +1,10 @@
 ---
-keywords: Experience Platform;home;populaire onderwerpen;api;API;XDM;XDM systeem;ervaringsgegevensmodel;Experience gegevensmodel;Experience Data Model;Gegevensmodel;Gegevensmodel;Schema register;Schema Register;Compatibiliteit;Compatibiliteitsmodus;Compatibiliteitsmodus;veldtype;veldtypen;
+keywords: Experience Platform;home;populaire onderwerpen;api;API;XDM;XDM-systeem;ervaringsgegevensmodel;Experience gegevensmodel;Experience Data Model;Data Model;Schema Register;Schema Register;Compatibiliteit;Compatibiliteitsmodus;Compatibiliteitsmodus;Veld type;veldtypen;
 solution: Experience Platform
 title: Aanhangsel voor schema-registratie-API
 description: Dit document bevat aanvullende informatie over het werken met de API voor het registreren van het schema.
 exl-id: 2ddc7fe8-dd0b-4cf9-8561-e89fcdadbfce
-source-git-commit: 28891cf37dc9ffcc548f4c0565a77f62432c0b44
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '986'
 ht-degree: 0%
@@ -57,9 +57,9 @@ U kunt resultaten filteren met de parameter `property` , die wordt gebruikt om e
 
 ## Compatibiliteitsmodus {#compatibility}
 
-[!DNL Experience Data Model] (XDM) is een openbaar gedocumenteerde specificatie, die door Adobe wordt gedreven om de interoperabiliteit, de expressiviteit, en de macht van digitale ervaringen te verbeteren. De Adobe handhaaft de broncode en formele definities XDM in een [ open bronproject op GitHub ](https://github.com/adobe/xdm/). Deze definities worden geschreven in de Standaardaantekening XDM, gebruikend JSON-LD (de Nota van de Objecten van JavaScript voor Gekoppelde Gegevens) en Schema JSON als grammatica voor het bepalen van schema&#39;s XDM.
+[!DNL Experience Data Model] (XDM) is een openbaar gedocumenteerde specificatie, die door Adobe wordt gedreven om de interoperabiliteit, de expressiviteit, en de macht van digitale ervaringen te verbeteren. Adobe handhaaft de broncode en de formele definities XDM in een [ open bronproject op GitHub ](https://github.com/adobe/xdm/). Deze definities worden geschreven in de Standaardaantekening XDM, gebruikend JSON-LD (de Nota van de Objecten van JavaScript voor Gekoppelde Gegevens) en Schema JSON als grammatica voor het bepalen van schema&#39;s XDM.
 
-Wanneer u formele XDM-definities bekijkt in de openbare opslagplaats, ziet u dat standaard XDM verschilt van wat u in Adobe Experience Platform ziet. Wat u ziet in [!DNL Experience Platform] , wordt Compatibiliteitsmodus genoemd en biedt een eenvoudige toewijzing tussen standaard-XDM en de manier waarop deze wordt gebruikt binnen [!DNL Platform] .
+Wanneer u formele XDM-definities bekijkt in de openbare opslagplaats, ziet u dat standaard XDM verschilt van wat u in Adobe Experience Platform ziet. Wat u ziet in [!DNL Experience Platform] , wordt Compatibiliteitsmodus genoemd en biedt een eenvoudige toewijzing tussen standaard-XDM en de manier waarop deze wordt gebruikt binnen [!DNL Experience Platform] .
 
 ### Hoe de Wijze van de Verenigbaarheid werkt
 
@@ -132,6 +132,6 @@ Adobe Experience Platform is ontworpen om met meerdere oplossingen en services t
 
 De meeste [!DNL Experience Platform] -services, inclusief [!DNL Catalog] , [!DNL Data Lake] en [!DNL Real-Time Customer Profile] use [!DNL Compatibility Mode] , vervangen door standaard-XDM. De [!DNL Schema Registry] API gebruikt ook [!DNL Compatibility Mode] en de voorbeelden in dit document worden allemaal weergegeven met [!DNL Compatibility Mode] .
 
-Het is de moeite waard om te weten dat een afbeelding plaatsvindt tussen standaard XDM en de manier waarop het in [!DNL Experience Platform] wordt uitgevoerd, maar het zou niet uw gebruik van [!DNL Platform] diensten moeten beïnvloeden.
+Het is de moeite waard om te weten dat een afbeelding plaatsvindt tussen standaard XDM en de manier waarop het in [!DNL Experience Platform] wordt uitgevoerd, maar het zou niet uw gebruik van [!DNL Experience Platform] diensten moeten beïnvloeden.
 
 Het opensource-project is beschikbaar voor u, maar als u communiceert met bronnen via de [!DNL Schema Registry] , bieden de API-voorbeelden in dit document de beste praktijken die u moet kennen en volgen.

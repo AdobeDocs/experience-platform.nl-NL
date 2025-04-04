@@ -3,9 +3,9 @@ keywords: doelpersonalisatie; bestemming; ervaring doelbestemming platform;doelb
 title: Adobe Target-verbinding
 description: Adobe Target is een toepassing die realtime, door AI aangedreven personalisatie- en experimentatiemogelijkheden biedt voor alle inkomende klantinteracties voor websites, mobiele apps en nog veel meer.
 exl-id: 3e3c405b-8add-4efb-9389-5ad695bc9799
-source-git-commit: 276fd7c532843c9589e1d51b0bc7a76cb5c3eb9f
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '1739'
+source-wordcount: '1740'
 ht-degree: 0%
 
 ---
@@ -161,7 +161,7 @@ Lees [ activeer publiek aan de bestemmingen van de randverpersoonlijking ](../..
 
 Er zijn extra stappen worden vereist om een publiek uit een bestaande verbinding van Adobe Target te verwijderen wanneer dat publiek reeds in een Adobe Target [ activiteit ](https://experienceleague.adobe.com/en/docs/target/using/activities/activities) wordt gebruikt. Wanneer u een publiek probeert te verwijderen uit een Adobe Target-verbinding, treedt een fout op als het publiek wordt gebruikt door een Adobe Target-activiteit.
 
-{het beeld van het Platform UI die van 0} een fout toont door te proberen om een publiek te verwijderen dat door een activiteit van het Doel wordt gebruikt.](../../assets/catalog/personalization/adobe-target-connection/remove-audience-error.png)![
+{het beeld van 0} Experience Platform UI die een fout toont die door te proberen wordt veroorzaakt om een publiek te verwijderen dat door een activiteit van het Doel wordt gebruikt.](../../assets/catalog/personalization/adobe-target-connection/remove-audience-error.png)![
 
 Om een publiek uit een bestemming van het Doel te verwijderen wanneer het publiek in een activiteit wordt gebruikt, moet u of het publiek uit de activiteit van het Doel eerst verwijderen die het gebruikt, of de activiteit volledig schrappen. Vervolgens kunt u het publiek verwijderen uit de doelverbinding.
 

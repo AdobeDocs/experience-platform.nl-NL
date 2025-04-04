@@ -5,7 +5,7 @@ solution: Experience Platform
 title: Gegevensstromen verwijderen in de gebruikersinterface
 type: Tutorial
 exl-id: aa224467-7733-40de-aab7-0ff1c557abf2
-source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '358'
 ht-degree: 0%
@@ -22,12 +22,12 @@ Deze zelfstudie bevat stappen voor het verwijderen van gegevensstromen in de wer
 
 Deze zelfstudie vereist een goed begrip van de volgende onderdelen van Adobe Experience Platform:
 
-- [ Bronnen ](../../home.md): [!DNL Experience Platform] staat gegevens toe om van diverse bronnen worden opgenomen terwijl het voorzien van u van de capaciteit om, inkomende gegevens te structureren te etiketteren en te verbeteren gebruikend [!DNL Platform] diensten.
-- [ Sandboxen ](../../../sandboxes/home.md): [!DNL Experience Platform] verstrekt virtuele zandbakken die één enkele [!DNL Platform] instantie in afzonderlijke virtuele milieu&#39;s verdelen helpen digitale ervaringstoepassingen ontwikkelen en ontwikkelen.
+- [ Bronnen ](../../home.md): [!DNL Experience Platform] staat gegevens toe om van diverse bronnen worden opgenomen terwijl het voorzien van u van de capaciteit om, inkomende gegevens te structureren te etiketteren en te verbeteren gebruikend [!DNL Experience Platform] diensten.
+- [ Sandboxen ](../../../sandboxes/home.md): [!DNL Experience Platform] verstrekt virtuele zandbakken die één enkele [!DNL Experience Platform] instantie in afzonderlijke virtuele milieu&#39;s verdelen helpen digitale ervaringstoepassingen ontwikkelen en ontwikkelen.
 
 ## Gegevensstromen verwijderen
 
-In het [ Experience Platform UI ](https://platform.adobe.com), selecteer **[!UICONTROL Sources]** van de linkernavigatie om tot de [!UICONTROL Sources] werkruimte toegang te hebben, en dan **[!UICONTROL Dataflows]** van de hoogste kopbal te selecteren.
+In [ Experience Platform UI ](https://platform.adobe.com), selecteer **[!UICONTROL Sources]** van de linkernavigatie om tot de [!UICONTROL Sources] werkruimte toegang te hebben, en dan **[!UICONTROL Dataflows]** van de hoogste kopbal te selecteren.
 
 ![ catalogus ](../../images/tutorials/delete/catalog.png)
 

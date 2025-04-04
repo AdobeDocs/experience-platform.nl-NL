@@ -1,12 +1,12 @@
 ---
-keywords: Experience Platform;home;populaire onderwerpen;Adobe Experience Platform;gebruikershandleiding;ui-handleiding;platform ui-handleiding;introductie op platform;dashboard;
+keywords: Experience Platform;home;populaire onderwerpen;Adobe Experience Platform;gebruikershandleiding;ui-handleiding;platform ui-handleiding;inleiding tot platform;dashboard;
 solution: Experience Platform
-title: Overzicht gebruikersinterface Experience Platform
+title: Overzicht Experience Platform UI
 description: Adobe Experience Platform
 exl-id: 47f9a3fb-731d-4ade-8069-faaa18f224dc
-source-git-commit: 6210f78e79c6c528296378756c9d11e35d092736
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1857'
+source-wordcount: '1871'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 Deze gids dient als inleiding aan het gebruiken van het gebruikersinterface van Adobe Experience Platform (UI), die verklaart wat de diverse componenten worden gebruikt voor en verbindingen aan verdere documentatie voor meer informatie verstrekt.
 
-Om meer over Adobe Experience Platform te leren, te lezen gelieve het [ overzicht van het Experience Platform ](home.md).
+Meer over Adobe Experience Platform leren, gelieve het [ overzicht van Experience Platform ](home.md) te lezen.
 
 ## Startscherm
 
@@ -59,9 +59,9 @@ De sectie **[!UICONTROL Recommended learning]** bevat koppelingen naar handige d
 
 ## Bovenste navigatiebalk
 
-De hoogste navigatiebar in Platform UI toont de organisatie u momenteel wordt ondertekend, en verstrekt verscheidene belangrijke controles.
+De bovenste navigatiebalk in de gebruikersinterface van Experience Platform geeft de organisatie weer waarin u momenteel bent aangemeld en bevat verschillende belangrijke besturingselementen.
 
-Links op de navigatiebalk bevindt zich het Adobe Experience Platform-logo. Als u dit logo op elk gewenst moment selecteert, wordt de gebruikersinterface van het platform weer weergegeven.
+Links op de navigatiebalk bevindt zich het Adobe Experience Platform-logo. Als u dit logo op elk gewenst moment selecteert, keert u terug naar het beginscherm van de Experience Platform UI.
 
 ![](./images/user-guide/homepage-top-nav-bar.png)
 
@@ -79,7 +79,7 @@ Het volgende punt op de rechterkant van de hoogste navigatie is de **toepassings
 
 ### Help
 
-Aan het recht van de toepassingsschakelaar is de **hulp en steunmenu**, die door het ![ vraagteken/hulp ](/help/images/icons/help.png) pictogram wordt vertegenwoordigd. Wanneer u dit pictogram selecteert, wordt een pop-upmenu weergegeven dat verschillende Help- en ondersteuningsbronnen bevat. Het tabblad **[!UICONTROL Help]** bevat een lijst met relevante documentatie voor de pagina die u momenteel hebt ingeschakeld. Op het tabblad **[!UICONTROL Support]** kunt u een ondersteuningsticket maken met het ondersteuningsteam voor Adoben. Op het tabblad **[!UICONTROL Feedback]** kunt u feedback over Platform verzenden naar Adobe.
+Aan het recht van de toepassingsschakelaar is de **hulp en steunmenu**, die door het ![ vraagteken/hulp ](/help/images/icons/help.png) pictogram wordt vertegenwoordigd. Wanneer u dit pictogram selecteert, wordt een pop-upmenu weergegeven dat verschillende Help- en ondersteuningsbronnen bevat. Het tabblad **[!UICONTROL Help]** bevat een lijst met relevante documentatie voor de pagina die u momenteel hebt ingeschakeld. Op het tabblad **[!UICONTROL Support]** kunt u een ondersteuningsticket maken met het Adobe-ondersteuningsteam. Op het tabblad **[!UICONTROL Feedback]** kunt u feedback over Experience Platform verzenden naar Adobe.
 
 ![](images/user-guide/homepage-help-clicked.png)
 
@@ -91,17 +91,17 @@ In de **berichten sectie**, die door ![ bel/Meldingen en het pictogram van Meded
 
 Het definitieve punt op de hoogste navigatiebar is de **gebruikersmontages**, die door het ![ worden vertegenwoordigd gebruikersmontages/pictogram van het Profiel van de Gebruiker ](images/user-guide/profile-icon.png). Selecteer dit pictogram om uw voorkeuren te bewerken of u af te melden.
 
-U kunt schakelen tussen het lichte en donkere thema voor de interface van het Platform met de schakelaar die net onder uw naam en e-mail wordt gevestigd. Selecteer het gewenste thema.
+U kunt schakelen tussen het lichte en donkere thema voor de interface van Experience Platform met de schakelaar die net onder uw naam en e-mail wordt gevestigd. Selecteer het gewenste thema.
 
 ![](images/theme.png)
 
 ### Sandboxes
 
-Direct onder de bovenste navigatiebalk bevindt zich de sandboxbalk. Deze balk geeft aan welke sandbox u momenteel gebruikt voor Platform. U kunt meer informatie over zandbakken in het [ overzicht van zandbakken ](../sandboxes/home.md) vinden.
+Direct onder de bovenste navigatiebalk bevindt zich de sandboxbalk. Op deze balk ziet u welke sandbox u momenteel gebruikt voor Experience Platform. U kunt meer informatie over zandbakken in het [ overzicht van zandbakken ](../sandboxes/home.md) vinden.
 
 ## Linkernavigatie {#left-nav}
 
-De navigatie op de linkerkant van het scherm maakt een lijst van alle verschillende diensten die in de UI van het Platform worden gesteund.
+Bij de navigatie aan de linkerkant van het scherm worden alle verschillende services weergegeven die worden ondersteund in de gebruikersinterface van Experience Platform.
 
 Klik op het menupictogram om het linkernavigatievenster weer te geven of te verbergen.
 
@@ -115,15 +115,15 @@ U kunt de navigatie op de open positie vergrendelen door nogmaals te klikken nad
 
 ![](images/user-guide/homepage-left.png)
 
-Met de sectie **[!UICONTROL Home]** kunt u terugkeren naar de startpagina van de gebruikersinterface van het platform.
+Met de sectie **[!UICONTROL Home]** kunt u terugkeren naar de startpagina van de Experience Platform-gebruikersinterface.
 
-De sectie **[!UICONTROL Workflows]** bevat een lijst met meerstapsworkflows voor het uitvoeren van bewerkingen binnen het platform. U kunt meer informatie over werkschema&#39;s in het [ overzicht van werkschema&#39;s ](./workflows.md) vinden.
+De sectie **[!UICONTROL Workflows]** bevat een lijst met meerstapsworkflows voor het uitvoeren van bewerkingen binnen Experience Platform. U kunt meer informatie over werkschema&#39;s in het [ overzicht van werkschema&#39;s ](./workflows.md) vinden.
 
 ### [!UICONTROL Connections]
 
-Met de sectie **[!UICONTROL Sources]** kunt u bronverbindingen maken, bijwerken en verwijderen, zodat u gegevens van externe bronnen kunt opnemen in Platform. U kunt meer informatie over bronnen in het [ overzicht van bronnen ](../sources/home.md) vinden.
+Met de sectie **[!UICONTROL Sources]** kunt u bronverbindingen maken, bijwerken en verwijderen, zodat u gegevens uit externe bronnen kunt invoeren in Experience Platform. U kunt meer informatie over bronnen in het [ overzicht van bronnen ](../sources/home.md) vinden.
 
-Met de sectie **[!UICONTROL Destinations]** kunt u doelen maken, bijwerken en verwijderen, zodat u gegevens van Platform naar veel externe doelen kunt exporteren. U kunt meer informatie over bestemmingen in het [ overzicht van bestemmingen ](../destinations/home.md) vinden.
+Met de sectie **[!UICONTROL Destinations]** kunt u doelen maken, bijwerken en verwijderen, zodat u gegevens vanuit Experience Platform kunt exporteren naar vele externe doelen. U kunt meer informatie over bestemmingen in het [ overzicht van bestemmingen ](../destinations/home.md) vinden.
 
 ### [!UICONTROL Customer]
 
@@ -131,13 +131,13 @@ In de sectie **[!UICONTROL Profiles]** kunt u door klantprofielen bladeren, prof
 
 In de sectie **[!UICONTROL Audiences]** kunt u segmentdefinities maken en beheren. Om meer over het gebruiken van de [!UICONTROL Audiences] sectie te leren, te lezen gelieve de [ gids van de segmentatiegebruiker ](../segmentation/ui/overview.md). U kunt meer informatie over de Dienst van de Segmentatie in het [ overzicht van de Dienst van de Segmentatie ](../segmentation/home.md) vinden.
 
-Met de sectie **[!UICONTROL Identities]** kunt u naamruimten maken en beheren. Voor meer informatie over de [!UICONTROL Identities] sectie, met inbegrip van informatie over identiteit namespaces en hoe te om identiteiten in het Platform UI te gebruiken, gelieve te verwijzen naar het [ overzicht van identiteitskaart namespace ](../identity-service/features/namespaces.md).
+Met de sectie **[!UICONTROL Identities]** kunt u naamruimten maken en beheren. Voor meer informatie over de [!UICONTROL Identities] sectie, met inbegrip van informatie over identiteit namespaces en hoe te om identiteiten in Experience Platform UI te gebruiken, gelieve te verwijzen naar het [ overzicht van identiteitskaart namespace ](../identity-service/features/namespaces.md).
 
 ### [!UICONTROL Privacy]
 
 In de sectie **[!UICONTROL Policies]** kunt u beleid voor gegevensgebruik maken en beheren. Om meer over het gebruiken van de sectie van het Beleid te leren, te lezen gelieve de [ gebruikersgids van het gegevensgebruiksbeleid ](../data-governance/policies/user-guide.md). U kunt meer informatie over het beleid van het gegevensgebruik in het [ overzicht van het beleid van het gegevensgebruik ](../data-governance/policies/overview.md) vinden.
 
-In de sectie **[!UICONTROL Requests]** kunt u privacyverzoeken maken en beheren. U moet zijn gevoegd op lijst van gewenste personen om toegang te hebben tot de gebruikersinterface van de Privacy Service. Om meer over het gebruiken van de sectie van Verzoeken te leren, te lezen gelieve de [ gebruikersgids van de Privacy Service ](../privacy-service/ui/user-guide.md). U kunt meer informatie over Privacy Service in het [ overzicht van de Privacy Service ](../privacy-service/home.md) vinden.
+In de sectie **[!UICONTROL Requests]** kunt u privacyverzoeken maken en beheren. U moet zijn gevoegd op lijst van gewenste personen om toegang te hebben tot de gebruikersinterface van Privacy Service. Om meer over het gebruiken van de sectie van Verzoeken te leren, te lezen gelieve de [ gebruikersgids van Privacy Service ](../privacy-service/ui/user-guide.md). U kunt meer informatie over Privacy Service in het [ overzicht van Privacy Service ](../privacy-service/home.md) vinden.
 
 ### [!UICONTROL Data Science]
 
@@ -145,7 +145,7 @@ De sectie **[!UICONTROL Notebooks]** biedt toegang tot JupyterLab, een interacti
 
 Met de sectie **[!UICONTROL Models]** kunt u leren van machines en kunstmatige intelligentie gebruiken om modellen te maken, te ontwikkelen, te trainen en af te stemmen om voorspellingen te maken. U kunt meer informatie over de sectie van Modellen in het leerprogramma vinden op [ opleiding en een model ](../data-science-workspace/models-recipes/train-evaluate-model-ui.md) evalueren.
 
-Met de sectie **[!UICONTROL Services]** kunt u uw gepubliceerde modellen voor geplande training en scoring beheren, of de Intelligente services van de Adobe gebruiken, een set AI-services die realtime persoonlijke klantervaringen bieden. U kunt meer informatie over de sectie van de Diensten in [ vinden het Publiceren van een Model als leerprogramma van de Dienst ](../data-science-workspace/models-recipes/publish-model-service-ui.md).
+Met de sectie **[!UICONTROL Services]** kunt u uw gepubliceerde modellen beheren voor geplande training en scoring, of Adobe intelligente services gebruiken, een set AI-services die real-time persoonlijke klantervaringen bieden. U kunt meer informatie over de sectie van de Diensten in [ vinden het Publiceren van een Model als leerprogramma van de Dienst ](../data-science-workspace/models-recipes/publish-model-service-ui.md).
 
 ### [!UICONTROL Data management]
 
@@ -168,11 +168,11 @@ Met de sectie **[!UICONTROL Federated databases]** kunt u Adobe Experience Platf
 
 ### [!UICONTROL Decisioning]
 
-Adobe Journey Optimizer is een toepassingsservice die boven op het Experience Platform is gebouwd. Het staat u toe om krachtige beslissingstechnologieën te gebruiken om de beste aanbieding en ervaring aan uw klanten over alle aanrakingspunten op het juiste ogenblik te leveren. Meer over Journey Optimizer leren, met inbegrip van het werken met [!UICONTROL Offers] en [!UICONTROL Activities] bezoek de [ documentatie van Journey Optimizer ](https://experienceleague.adobe.com/docs/journey-optimizer.html).
+Adobe Journey Optimizer is een toepassingsservice die op Experience Platform is gebouwd. Het staat u toe om krachtige beslissingstechnologieën te gebruiken om de beste aanbieding en ervaring aan uw klanten over alle aanrakingspunten op het juiste ogenblik te leveren. Meer over Journey Optimizer leren, met inbegrip van het werken met [!UICONTROL Offers] en [!UICONTROL Activities] bezoek de [ documentatie van Journey Optimizer ](https://experienceleague.adobe.com/docs/journey-optimizer.html).
 
 ### [!UICONTROL Administration]
 
-De gebruikersinterface van het Platform (UI) verstrekt een dashboard waardoor u belangrijke informatie over het vergunningsgebruik van uw organisatie kunt bekijken, zoals die tijdens een dagelijkse momentopname wordt gevangen. U kunt dit dashboard openen door **[!UICONTROL License usage]** te selecteren in de navigatie. Meer over het dashboard van het vergunningsgebruik leren, bezoek de [ gids van het vergunningsgebruik dashboard ](./license-usage-and-guardrails/license-usage-dashboard.md).
+De gebruikersinterface van Experience Platform (UI) verstrekt een dashboard waardoor u belangrijke informatie over het vergunningsgebruik van uw organisatie kunt bekijken, zoals die tijdens een dagelijkse momentopname wordt gevangen. U kunt dit dashboard openen door **[!UICONTROL License usage]** te selecteren in de navigatie. Meer over het dashboard van het vergunningsgebruik leren, bezoek de [ gids van het vergunningsgebruik dashboard ](./license-usage-and-guardrails/license-usage-dashboard.md).
 
 >[!IMPORTANT]
 >
@@ -180,4 +180,4 @@ De gebruikersinterface van het Platform (UI) verstrekt een dashboard waardoor u 
 
 ## Volgende stappen
 
-Door deze gids te lezen, bent u nu geïntroduceerd aan de homepage en belangrijkste navigatie elementen van Platform UI. Voor meer gedetailleerde informatie over het werken in het gebruikersinterface, gelieve te verwijzen naar de documentatie voor elke individuele dienst van het Platform. De verbindingen aan deze documentatie worden verstrekt in de [ verlaten navigatie ](#left-nav) sectie die vroeger in dit document wordt gevonden.
+Door deze gids te lezen, bent u nu geïntroduceerd aan de homepage en belangrijkste navigatie elementen van Experience Platform UI. Raadpleeg de documentatie van elke afzonderlijke Experience Platform-service voor meer informatie over het werken in de gebruikersinterface. De verbindingen aan deze documentatie worden verstrekt in de [ verlaten navigatie ](#left-nav) sectie die vroeger in dit document wordt gevonden.

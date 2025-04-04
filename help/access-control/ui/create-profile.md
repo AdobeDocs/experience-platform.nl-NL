@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Een nieuw productprofiel maken in Adobe Admin Console
 description: In dit document worden de stappen beschreven die nodig zijn om een nieuw productprofiel in de Adobe Admin Console te maken. Als u een nieuw profiel wilt maken, navigeert u naar het tabblad Productprofielen en klikt u op Nieuw profiel.
 exl-id: 47558f03-c3f7-4ead-affb-fcbfd7f1e918
-source-git-commit: 7b197f253aa5ce04a682040814cf749407154ebc
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '294'
+source-wordcount: '295'
 ht-degree: 0%
 
 ---
@@ -23,7 +23,7 @@ Selecteer **[!UICONTROL Next]** als u klaar bent.
 
 ![ creeer-nieuw-product-profiel ](../images/create-new-product-profile.png)
 
-In het volgende scherm wordt u gevraagd welke platformservices u in het profiel wilt opnemen. Selecteer de knevelknoop naast de dienst om het onbruikbaar te maken. Als een service is uitgeschakeld, zijn alle functies die aan die service zijn gekoppeld niet beschikbaar voor gebruikers die aan dit productprofiel zijn toegewezen. Selecteer **[!UICONTROL Save]** als u klaar bent.
+In het volgende scherm wordt u gevraagd welke Experience Platform-services u in het profiel wilt opnemen. Selecteer de knevelknoop naast de dienst om het onbruikbaar te maken. Als een service is uitgeschakeld, zijn alle functies die aan die service zijn gekoppeld niet beschikbaar voor gebruikers die aan dit productprofiel zijn toegewezen. Selecteer **[!UICONTROL Save]** als u klaar bent.
 
 ![ toelaten-diensten ](../images/enable-services.png)
 

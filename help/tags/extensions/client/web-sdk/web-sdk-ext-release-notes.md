@@ -2,16 +2,16 @@
 title: Opmerkingen bij de release Adobe Experience Platform Web SDK
 description: Adobe Experience Platform Web SDK-tagextensie
 exl-id: 91de8c91-023a-45b6-9f67-ac75ee471e50
-source-git-commit: 8fd86a170433c4eb07a7370dbd3aa2cb3ef10922
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '2567'
+source-wordcount: '2570'
 ht-degree: 5%
 
 ---
 
 # Opmerkingen bij de release Adobe Experience Platform Web SDK
 
-In dit document worden de releaseopmerkingen voor de Adobe Experience Platform Web SDK-tagextensie besproken. Voor de recentste versienota&#39;s op SDK zelf, zie de [ de versienota&#39;s van SDK van het Web van het Platform ](/help/web-sdk/release-notes.md).
+In dit document worden de releaseopmerkingen voor de Adobe Experience Platform Web SDK-tagextensie besproken. Voor de recentste versienota&#39;s op SDK zelf, zie de [ de versienota&#39;s van SDK van het Web van Experience Platform ](/help/web-sdk/release-notes.md).
 
 ## Versie 2.29.0 - 5 maart 2025
 
@@ -337,7 +337,7 @@ Bevat versie 2.3.0 van de Adobe Experience Platform Web SDK-bibliotheek.
 
 ## Versie 2.2.0 - vrijdag 1 oktober 2020
 
-- Wanneer klanten probeerden om een voorwerp XDM van zandbakschema&#39;s tot stand te brengen, kwamen zij in authentificatiekwesties in werking. De API die Platform roept is zich nu bewust van milieu&#39;s zodat worden de gebruikers slechts voorgesteld van die schema&#39;s die zij toegang hebben om uit te geven.
+- Wanneer klanten probeerden om een voorwerp XDM van zandbakschema&#39;s tot stand te brengen, kwamen zij in authentificatiekwesties in werking. De API die Experience Platform aanroept, is zich nu bewust van omgevingen, zodat gebruikers alleen de schema&#39;s krijgen die ze kunnen bewerken.
 - Wanneer u het gegevenselement `identityMap` gebruikt, worden de naamruimten nu vooraf ingevuld in een vervolgkeuzelijst, zodat u deze niet handmatig hoeft in te vullen.
 - De interface voor het gegevenselement `xdmObject` is vernieuwd. In de nieuwe UI, kunt u zien welke gebieden zijn bevolkt zonder het moeten elk punt in het voorwerp ingaan.
 
@@ -353,7 +353,7 @@ Bevat versie 2.3.0 van de Adobe Experience Platform Web SDK-bibliotheek.
 - Ondersteuning voor het overschrijven van de gegevensset-id in de handeling `sendEvent` .
 - Voeg een nieuw gegevenselement van het type `IdentityMap` toe dat kan worden gebruikt om de `identityMap` -vermelding te vullen in het XDM Object Data Element dat nu is ingeschakeld, en in de `setConsent` -actie.
 - Ondersteuning voor het doorgeven van een identiteitsoverzicht in de handeling `setConsent` .
-- Ondersteuning voor het kiezen van een platformsandbox in het XDM Object Data Element.
+- Ondersteuning voor het kiezen van een Experience Platform-sandbox in het XDM Object Data Element.
 
 ## Versie 1.0.0 - woensdag 26 mei 2020
 

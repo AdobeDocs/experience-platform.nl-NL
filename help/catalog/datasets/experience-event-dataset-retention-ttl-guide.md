@@ -2,9 +2,9 @@
 title: Behoud de Dataset van de Gebeurtenis van de Ervaring in het meer van Gegevens beheren gebruikend TTL
 description: Leer hoe u het behoud van de Experience Event-gegevensset in het datumpomeer kunt evalueren, instellen en beheren met TL-configuraties (Time-to-Live) met Adobe Experience Platform API's. In deze handleiding wordt uitgelegd hoe de vervaldatum van TTL op rijniveau het beleid voor gegevensbewaring ondersteunt, de opslagefficiëntie optimaliseert en een effectief beheer van de levenscyclus van gegevens garandeert. Het verstrekt ook gebruiksgevallen en beste praktijken om u te helpen TTL effectief toepassen.
 exl-id: d688d4d0-aa8b-4e93-a74c-f1a1089d2df0
-source-git-commit: 3b5fcc3eec6f2c2e749c86a7baf9995fb88b27d6
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '2335'
+source-wordcount: '2340'
 ht-degree: 0%
 
 ---
@@ -38,7 +38,7 @@ TTL is nuttig wanneer het beheren van tijd-gevoelige gegevens die relevantie in 
 
 ### Voorbeeld van industrie {#industry-example}
 
-Neem bijvoorbeeld een service voor videostreaming die gebruikersinteracties bijhoudt, zoals videoweergaven, zoekopdrachten en aanbevelingen. Terwijl recente betrokkenheidsgegevens van cruciaal belang zijn voor personalisatie, verliezen oudere activiteitenlogboeken (bijvoorbeeld interacties van meer dan een jaar geleden) de relevantie. Door rijniveauafloop te gebruiken, verwijdert het Platform automatisch verouderde logboeken, die ervoor zorgen slechts huidige en zinvolle gegevens voor analyses en aanbevelingen worden gebruikt.
+Neem bijvoorbeeld een service voor videostreaming die gebruikersinteracties bijhoudt, zoals videoweergaven, zoekopdrachten en aanbevelingen. Terwijl recente betrokkenheidsgegevens van cruciaal belang zijn voor personalisatie, verliezen oudere activiteitenlogboeken (bijvoorbeeld interacties van meer dan een jaar geleden) de relevantie. Door rijverloop te gebruiken, verwijdert Experience Platform automatisch verouderde logboeken, die ervoor zorgen slechts huidige en zinvolle gegevens voor analyses en aanbevelingen worden gebruikt.
 
 ## Evalueer de geschiktheid van TTL
 
@@ -76,7 +76,7 @@ Om met uw beheer van TTL te beginnen, controleer eerst huidige montages van TTL.
 
 >[!TIP]
 >
->De URL van de gateway van het Platform en het basisweg voor de Dienst API van de Catalogus is: `https://platform.adobe.io/data/foundation/catalog`.
+>De Experience Platform Gateway-URL en het basispad voor de Catalog Service API zijn: `https://platform.adobe.io/data/foundation/catalog` .
 
 **API formaat**
 
@@ -375,13 +375,13 @@ U kunt retentiebeleid toepassen op gegevenssets die zijn gemaakt met de klasse X
 ### Hoe snel zal de baan van het Behoud Dataset gegevens van de diensten van het gegevenspeer schrappen?
 
 +++Antwoord
-Dataset-TTL&#39;s worden wekelijks geëvalueerd en verwerkt, waarbij alle verlopen records worden verwijderd. Een gebeurtenis wordt als verlopen beschouwd als deze meer dan 30 dagen geleden in Platform is opgenomen (innamedatum > 30 dagen) en als de gebeurtenisdatum de gedefinieerde retentieperiode (TTL) overschrijdt.
+Dataset-TTL&#39;s worden wekelijks geëvalueerd en verwerkt, waarbij alle verlopen records worden verwijderd. Een gebeurtenis wordt als verlopen beschouwd als deze meer dan 30 dagen geleden in Experience Platform is ingeslikt (innamedatum > 30 dagen) en de gebeurtenisdatum ervan de gedefinieerde retentieperiode (TTL) overschrijdt.
 +++
 
 ### Hoe snel zal de baan van het Behoud Dataset gegevens van de diensten van het Profiel schrappen?
 
 +++Antwoord
-Zodra een behoudbeleid wordt geplaatst, worden de bestaande gebeurtenissen in Platform onmiddellijk geschrapt als hun gebeurtenistimestamp de behoudperiode (TTL) overschrijdt. Nieuwe gebeurtenissen worden verwijderd als de tijdstempel langer is dan de retentieperiode.
+Nadat een retentiebeleid is ingesteld, worden bestaande gebeurtenissen in Experience Platform onmiddellijk verwijderd als de tijdstempel van de gebeurtenis de retentieperiode (TTL) overschrijdt. Nieuwe gebeurtenissen worden verwijderd als de tijdstempel langer is dan de retentieperiode.
 
 Als u bijvoorbeeld op 15 mei een vervalbeleid van 30 dagen toepast, gebeurt het volgende:
 
@@ -436,6 +436,6 @@ Voor meer details, zie [ afgeleide datasets met SQL gids ](../../query-service/d
 
 Nu u hebt geleerd hoe te om de montages van TTL voor rij-vlakke afloop te beheren, herzie de volgende documentatie om uw inzicht in het beheer van TTL te bevorderen:
 
-- De banen van het behoud: Leer om datasettermijnen in het Platform UI met de [ gids UI van de de levenscyclus van gegevens te plannen en te automatiseren ](../../hygiene/ui/dataset-expiration.md), of de configuraties van het Behoud van de Dataset te controleren en te verifiëren dat de verlopen verslagen worden geschrapt.
+- De banen van het behoud: Leer om datasettermijnen in Experience Platform UI met de [ gids UI van de gegevenslevenscyclus te plannen en te automatiseren ](../../hygiene/ui/dataset-expiration.md), of configuraties van het Behoud van de Dataset te controleren en te verifiëren dat de verlopen verslagen worden geschrapt.
 - [ het eindpuntgids van de Vervalsing API van de Dataset ](../../hygiene/api/dataset-expiration.md): Ontdek hoe te om volledige datasets eerder dan enkel rijen te schrappen. Leer hoe u het verlopen van gegevenssets kunt plannen, beheren en automatiseren met behulp van de API voor een efficiënte gegevensopslag.
 - [ overzicht van het het gebruiksbeleid van gegevens ](../../data-governance/policies/overview.md): Leer hoe te om uw strategie van het gegevensbehoud met bredere nalevingsvereisten en marketing gebruiksbeperkingen te richten.

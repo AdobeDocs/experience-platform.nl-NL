@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;home;populaire onderwerpen
+keywords: Experience Platform;startpagina;populaire onderwerpen
 solution: Experience Platform
-title: Privacy Service probleemoplossingsgids
+title: Privacy Service-gids voor probleemoplossing
 description: Dit document bevat antwoorden op veelgestelde vragen over Privacy Service en informatie over veelvoorkomende fouten in de API.
 exl-id: 8afbb065-0f41-4048-9003-a22c0c839717
-source-git-commit: c6507a39ba5ae5ca6aa2bf02cf8844a4592152ac
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '1025'
-ht-degree: 0%
+ht-degree: 1%
 
 ---
 
@@ -63,13 +63,13 @@ De array bevat twee objecten die afzonderlijke gebruikers vertegenwoordigen die 
 Voor meer informatie bij het verstrekken van de informatie van de gebruikersidentiteit, zie de gids over [ identiteitsgegevens voor privacyverzoeken ](identity-data.md).
 
 
-## Kan ik [!DNL Privacy Service] gebruiken om gegevens op te schonen die per ongeluk naar [!DNL Platform] zijn verzonden?
+## Kan ik [!DNL Privacy Service] gebruiken om gegevens op te schonen die per ongeluk naar [!DNL Experience Platform] zijn verzonden?
 
 Adobe biedt geen ondersteuning voor het gebruik van [!DNL Privacy Service] voor het wissen van gegevens die per ongeluk naar een product zijn verzonden. [!DNL Privacy Service] is ontworpen om u te helpen bij het voldoen aan uw verplichtingen voor de toegang tot of het verwijderen van verzoeken van betrokkenen (of consumenten). Elk ander gebruik van Privacy Service voor het opschonen of onderhouden van gegevens wordt niet ondersteund of toegestaan.
 
 De verzoeken om privacy zijn tijdgevoelig en zijn voltooid met betrekking tot de toepasselijke privacywetgeving. het indienen van aanvragen die geen toegang tot of verwijderingsverzoeken voor betrokkenen/consumenten zijn, heeft invloed op alle [!DNL Privacy Service] -klanten en op de mogelijkheid voor [!DNL Privacy Service] om de juiste wettelijke tijdlijnen te ondersteunen. Er is nu een vaste uploadlimiet voor dagelijks gebruik om misbruik van de service te voorkomen.
 
-Neem contact op met het accountteam van de Adobe om problemen met de II of gegevens te coördineren en een inspanningsniveau te bieden.
+Neem contact op met uw Adobe-accountteam om problemen met PII&#39;s of gegevens te coördineren en te verhelpen.
 
 ## Hoe krijg ik informatie over de status van mijn privacyverzoek of baan?
 
@@ -81,7 +81,7 @@ Om de status van een bepaalde baan terug te winnen die [!DNL Privacy Service] AP
 
 ### UI gebruiken
 
-Alle actieve taakaanvragen worden vermeld in de **[!UICONTROL Job Requests]** -widget op het [!DNL Privacy Service] UI-dashboard. De status voor elke taakaanvraag wordt weergegeven onder de kolom **[!UICONTROL Status]** . Voor meer informatie bij het bekijken van baanverzoeken in UI, gelieve te zien de [ gebruikersgids van de Privacy Service ](ui/user-guide.md).
+Alle actieve taakaanvragen worden vermeld in de **[!UICONTROL Job Requests]** -widget op het [!DNL Privacy Service] UI-dashboard. De status voor elke taakaanvraag wordt weergegeven onder de kolom **[!UICONTROL Status]** . Voor meer informatie bij het bekijken van baanverzoeken in UI, gelieve te zien de [ gebruikersgids van Privacy Service ](ui/user-guide.md).
 
 ## Hoe kan ik de resultaten van mijn voltooide privacytaken downloaden?
 
@@ -95,7 +95,7 @@ Voor meer details, zie de sectie op [ zoekend omhoog een baan door zijn identite
 
 ### UI gebruiken
 
-Op het [!DNL Privacy Service] dashboard UI, vind de baan u van **de Verzoeken van de Baan** widget wilt downloaden. Selecteer de id van de taak om de pagina Taakdetails te openen. Van hier, uitgezochte **Download** in de hoger-juiste hoek om het dossier van het PIT te downloaden. Zie de [ gebruikersgids van de Privacy Service ](ui/user-guide.md) voor meer gedetailleerde stappen.
+Op het [!DNL Privacy Service] dashboard UI, vind de baan u van **de Verzoeken van de Baan** widget wilt downloaden. Selecteer de id van de taak om de pagina Taakdetails te openen. Van hier, uitgezochte **Download** in de hoger-juiste hoek om het dossier van het PIT te downloaden. Zie de [ gebruikersgids van Privacy Service ](ui/user-guide.md) voor meer gedetailleerde stappen.
 
 ## Algemene foutberichten {#common-error-messages}
 
@@ -111,4 +111,4 @@ In de volgende tabel worden enkele algemene fouten in [!DNL Privacy Service] bes
 | Toegang en machtigingen zijn vereist. | Toegang en machtigingen zijn vereist om [!DNL Privacy Service] te kunnen gebruiken. Neem contact op met de beheerder om toegang te krijgen. |
 | Er is een probleem opgetreden bij het uploaden en archiveren van de toegangsgegevens. | Wanneer deze fout optreedt, uploadt u de toegangsgegevens opnieuw en probeert u het opnieuw. |
 | De werkbelasting is overschreden voor de huidige documentsnelheidlimiet. | Als deze fout optreedt, verlaagt u de verzendfrequentie en probeert u het opnieuw. |
-| Te veel verzoeken <br> (HTTP 429 fouten) | Als uw voorleggingspatronen de gecontroleerde grens van toegestane gegevensonderwerpbanen overschrijden, zult u een HTTP 429 fout in antwoord op voortgezet verkeer van uw organisatie ontvangen. Privacy Service is bedoeld voor de verwerking van privacyverzoeken van betrokkenen. Het mag niet worden gebruikt voor het opschonen van gegevens. Als u fouten van HTTP 429 ontvangt, worden de vertragings en verzoekgrenzen uitgevoerd om Adobe tegen misbruik te beschermen dat wettige nalevingswerk in gevaar zou kunnen brengen.<br> Alternatieve methodes om uw gegevens te minimaliseren worden verstrekt door [ plaatsende datasetvervalprogramma&#39;s ](../hygiene/ui/dataset-expiration.md) en het gebruiken van [ verslag schrapt eigenschap ](../hygiene/ui/record-delete.md). Raadpleeg de documentatie bij deze pagina voor meer informatie over het toepassen van deze functies. |
+| Te veel verzoeken <br> (HTTP 429 fouten) | Als uw voorleggingspatronen de gecontroleerde grens van toegestane gegevensonderwerpbanen overschrijden, zult u een HTTP 429 fout in antwoord op voortgezet verkeer van uw organisatie ontvangen. Privacy Service is bedoeld voor de verwerking van privacyverzoeken van betrokkenen. Het mag niet worden gebruikt voor het opschonen van gegevens. Als u fouten van HTTP 429 ontvangt, worden vertragings en verzoekgrenzen uitgevoerd om Adobe tegen misbruik te beschermen dat wettige nalevingswerk in gevaar zou kunnen brengen.<br> Alternatieve methodes om uw gegevens te minimaliseren worden verstrekt door [ plaatsende datasetvervalprogramma&#39;s ](../hygiene/ui/dataset-expiration.md) en het gebruiken van [ verslag schrapt eigenschap ](../hygiene/ui/record-delete.md). Raadpleeg de documentatie bij deze pagina voor meer informatie over het toepassen van deze functies. |

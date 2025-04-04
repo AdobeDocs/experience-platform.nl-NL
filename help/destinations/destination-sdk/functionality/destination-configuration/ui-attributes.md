@@ -1,27 +1,27 @@
 ---
-description: Leer hoe te om de attributen UI, zoals de documentatiekoppeling, de categorie van de bestemmingskaart, en het type en de frequentie van de bestemmingsverbinding, voor bestemmingen te vormen die met Destination SDK worden gebouwd.
+description: Leer hoe te om de attributen UI, zoals de documentatiekoppeling, de categorie van de bestemmingskaart, en het type en de frequentie van bestemmingsverbinding, voor bestemmingen te vormen die met Destination SDK worden gebouwd.
 title: UI-kenmerken
 exl-id: aed8d868-c516-45da-b224-c7e99e4bfaf1
-source-git-commit: 995e464ca43e0738c16dd4e0ec928d27e5a8b029
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '794'
+source-wordcount: '796'
 ht-degree: 0%
 
 ---
 
 # UI-kenmerken
 
-De attributen UI bepalen de visuele elementen die de Adobe voor uw bestemmingskaart in het gebruikersinterface van Adobe Experience Platform zou moeten tonen, zoals een embleem, een verbinding aan de documentatiepagina, een bestemmingsbeschrijving en zijn categorie en type.
+UI-kenmerken definiëren de visuele elementen die Adobe in de gebruikersinterface van Adobe Experience Platform voor uw doelkaart moet weergeven, zoals een logo, een koppeling naar de documentatiepagina, een doelbeschrijving en de categorie en het type van de doelkaart.
 
 Om te begrijpen waar deze component in een integratie past die met Destination SDK wordt gecreeerd, zie het diagram in de [ documentatie van configuratieopties ](../configuration-options.md) of zie de volgende pagina&#39;s van het overzicht van bestemmingsconfiguratie:
 
-* [Gebruik Destination SDK om een streamingbestemming te configureren](../../guides/configure-destination-instructions.md#create-destination-configuration)
-* [Gebruik Destination SDK om een op een bestand gebaseerde bestemming te configureren](../../guides/configure-file-based-destination-instructions.md#create-destination-configuration)
+* [Destination SDK gebruiken om een streamingbestemming te configureren](../../guides/configure-destination-instructions.md#create-destination-configuration)
+* [Destination SDK gebruiken om een bestandsgebaseerde bestemming te configureren](../../guides/configure-file-based-destination-instructions.md#create-destination-configuration)
 
 Wanneer [ creërend een bestemming ](../../authoring-api/destination-configuration/create-destination-configuration.md) door Destination SDK, bepaalt de `uiAttributes` sectie de volgende visuele eigenschappen van uw bestemmingskaart:
 
 * URL van uw pagina van de bestemmingsdocumentatie in de [ bestemmingscatalogus ](../../../catalog/overview.md).
-* De categorie waaronder uw bestemming in Platform UI zichtbaar zal zijn.
+* De categorie waaronder je bestemming wordt weergegeven in de gebruikersinterface van Experience Platform.
 * De gegevensexportfrequentie voor uw bestemming.
 * Het verbindingstype van de bestemming, zoals Amazon S3, Azure Blob, enz.
 * De URL waar u het pictogram hebt gehost dat in de cataloguskaart van de doelen moet worden weergegeven.
@@ -31,9 +31,9 @@ U kunt attributen UI via het `/authoring/destinations` eindpunt vormen. Zie de v
 * [Een doelconfiguratie maken](../../authoring-api/destination-configuration/create-destination-configuration.md)
 * [Een doelconfiguratie bijwerken](../../authoring-api/destination-configuration/update-destination-configuration.md)
 
-Dit artikel beschrijft alle gesteunde attributen UI die u voor uw bestemming kunt gebruiken, en toont welke klanten in het Experience Platform UI zullen zien.
+In dit artikel worden alle ondersteunde UI-kenmerken beschreven die u voor uw doel kunt gebruiken en wordt aangegeven welke klanten in de gebruikersinterface van Experience Platform kunnen bekijken.
 
-{het schermschot van 0} UI die de attributen UI in de interface van het Experience Platform toont ](../../assets/functionality/destination-configuration/ui-attributes.png)![
+{het schermschot van 0} UI die de attributen UI in de interface van Experience Platform toont ](../../assets/functionality/destination-configuration/ui-attributes.png)![
 
 >[!IMPORTANT]
 >
@@ -72,7 +72,7 @@ De gebruikers kunnen uw documentatieverbinding van de pagina van de bestemmingsc
 
 >[!NOTE]
 >
->Deze verbinding werkt slechts nadat de Adobe uw bestemming live plaatst en de documentatie wordt gepubliceerd.
+>Deze koppeling werkt alleen nadat Adobe uw bestemming live instelt en de documentatie is gepubliceerd.
 
 ### `category` {#category}
 
@@ -112,11 +112,11 @@ U kunt een logopictogram aan uw bestemming, zoals aangetoond in het hieronder be
 
 ![ beeld UI die de pictogramplaats toont.](../../assets/functionality/destination-configuration/ui-attributes-icon.png)
 
-Om een embleem aan uw bestemmingskaart toe te voegen, moet u het gewenste beeld met het team van de Adobe delen wanneer u [ de bestemming voor overzicht ](../../guides/submit-destination.md#logo) voorlegt.
+Om een embleem aan uw bestemmingskaart toe te voegen, moet u het gewenste beeld met het team van Adobe delen wanneer u [ de bestemming voor overzicht ](../../guides/submit-destination.md#logo) voorlegt.
 
 ## Volgende stappen {#next-steps}
 
-Na het lezen van dit artikel, zou u een beter inzicht moeten hebben in welke attributen UI u voor uw bestemming kunt vormen en waar de gebruikers hen in Platform UI zullen zien.
+Na het lezen van dit artikel, zou u een beter inzicht moeten hebben in welke attributen UI u voor uw bestemming kunt vormen en waar de gebruikers hen in Experience Platform UI zullen zien.
 
 Raadpleeg de volgende artikelen voor meer informatie over de andere doelcomponenten:
 

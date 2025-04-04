@@ -1,10 +1,10 @@
 ---
-keywords: Experience Platform;huis;populaire onderwerpen;PSQL;psqlconnect met de vraagdienst;de dienst van de vraag;de vraagdienst;
+keywords: Experience Platform;home;populaire onderwerpen;PSQL;psqlconnect met de vraagdienst;de dienst van de vraag;de vraagdienst;
 solution: Experience Platform
 title: PSQL verbinden met Query Service
 description: PSQL is een opdrachtregelinterface die wordt weergegeven wanneer u PostgreSQL op uw computer installeert. U kunt het installeren door deze instructies te volgen.
 exl-id: ceb07128-409e-42be-8143-0cf681d435de
-source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '285'
 ht-degree: 0%
@@ -19,7 +19,7 @@ PSQL is een opdrachtregelinterface die wordt geïnstalleerd wanneer u [!DNL Post
 >
 > In deze handleiding wordt ervan uitgegaan dat u al toegang hebt tot [!DNL PSQL] en vertrouwd bent met het gebruik ervan. Meer informatie over [!DNL PSQL] kan in de [ officiële  [!DNL PSQL]  documentatie ](https://www.postgresql.org/docs/current/app-psql.html) worden gevonden.
 
-Na het installeren van PSQL op uw computer, bent u klaar om PSQL met de Dienst van de Vraag te verbinden. Ga terug naar de gebruikersinterface van [!DNL Platform] en selecteer vervolgens **[!UICONTROL Queries]** , gevolgd door **[!UICONTROL Credentials]** .
+Na het installeren van PSQL op uw computer, bent u klaar om PSQL met de Dienst van de Vraag te verbinden. Ga terug naar de gebruikersinterface van [!DNL Experience Platform] en selecteer vervolgens **[!UICONTROL Queries]** , gevolgd door **[!UICONTROL Credentials]** .
 
 Onder de **[!UICONTROL PSQL Command]** sectie, selecteer het **[!UICONTROL Copy to clipboard]** pictogram (![ Pictogram van het Exemplaar ](/help/images/icons/copy.png)) om het bevelkoord te kopiëren.
 

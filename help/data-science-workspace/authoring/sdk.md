@@ -1,12 +1,12 @@
 ---
-keywords: Experience Platform;ontwikkelaarsgids;SDK;Model authoring;Data Science Workspace;populaire onderwerpen;testen
+keywords: Experience Platform;developer guide;SDK;Model authoring;Data Science Workspace;populaire onderwerpen;testen
 solution: Experience Platform
 title: Model Authoring SDK
-description: De ModelAuthoring SDK stelt u in staat om aangepaste machine leerlende Ontvangers en de Leidingen van de Eigenschap te ontwikkelen die in Adobe Experience Platform Data Science Workspace kunnen worden gebruikt, die uitvoerbare malplaatjes in PySpark en Spark (Scala) verstrekken.
+description: De ModelAuthoring SDK stelt u in staat om aangepaste machines te ontwikkelen die Ontvangers en kenmerkpijplijnen leren die kunnen worden gebruikt in Adobe Experience Platform Data Science Workspace en implementeerbare sjablonen bieden in PySpark en Spark (Scala).
 exl-id: c7577f93-a64f-49b7-a76d-71f21d619052
-source-git-commit: 5d98dc0cbfaf3d17c909464311a33a03ea77f237
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1000'
+source-wordcount: '1004'
 ht-degree: 1%
 
 ---
@@ -19,9 +19,9 @@ ht-degree: 1%
 >
 >Deze documentatie is bedoeld voor bestaande klanten met eerdere rechten op Data Science Workspace.
 
-Met de SDK voor modelontwerp kunt u aangepaste computers met leertoepassingen Ontvangers en functiepijpleidingen ontwikkelen die kunnen worden gebruikt in [!DNL Adobe Experience Platform] Data Science Workspace en die implementeerbare sjablonen bieden in [!DNL PySpark] en [!DNL Spark (Scala)] .
+Met de Model Authoring SDK kunt u aangepaste computers leren Ontvangers en functiepijpleidingen ontwikkelen die kunnen worden gebruikt in [!DNL Adobe Experience Platform] Data Science Workspace en implementeerbare sjablonen bieden in [!DNL PySpark] en [!DNL Spark (Scala)] .
 
-Dit document bevat informatie over de verschillende klassen in de ModelontwerpSDK.
+Dit document bevat informatie over de verschillende klassen die in de Model Authoring SDK zijn gevonden.
 
 ## DataLoader {#dataloader}
 
@@ -42,7 +42,7 @@ In de volgende tabel worden de abstracte methoden van de klasse PySpark Data Loa
         <tr>
             <td>
                 <p><code>load(self, configProperties, spark)</code></p>
-                <p>Platformgegevens laden en retourneren als een Pandas DataFrame</p>
+                <p>Experience Platform-gegevens laden en retourneren als een Pandas DataFrame</p>
             </td>
             <td>
                 <ul>
@@ -70,7 +70,7 @@ In de volgende tabel worden de abstracte methoden van een klasse [!DNL Spark] Da
         <tr>
             <td>
                 <p><code>load(configProperties, sparkSession)</code></p>
-                <p>Platformgegevens laden en retourneren als een DataFrame</p>
+                <p>Experience Platform-gegevens laden en retourneren als een DataFrame</p>
             </td>
             <td>
                 <ul>
@@ -82,9 +82,9 @@ In de volgende tabel worden de abstracte methoden van een klasse [!DNL Spark] Da
     </tbody>
 </table>
 
-### Gegevens laden uit een [!DNL Platform] dataset {#load-data-from-a-platform-dataset}
+### Gegevens laden uit een [!DNL Experience Platform] dataset {#load-data-from-a-platform-dataset}
 
-In het volgende voorbeeld worden [!DNL Platform] -gegevens opgehaald op ID en wordt een DataFrame geretourneerd, waarbij de gegevensset-id (`datasetId` ) een gedefinieerde eigenschap in het configuratiebestand is.
+In het volgende voorbeeld worden [!DNL Experience Platform] -gegevens opgehaald op ID en wordt een DataFrame geretourneerd, waarbij de gegevensset-id (`datasetId` ) een gedefinieerde eigenschap in het configuratiebestand is.
 
 **PySpark**
 
@@ -216,7 +216,7 @@ In de volgende tabel worden de abstracte methoden van een [!DNL PySpark] klasse 
         <tr>
             <td>
                 <p><code>save(self, configProperties, dataframe)</code></p>
-                <p>Ontvang outputgegevens als DataFrame en sla het in een dataset van het Platform op</p>
+                <p>Uitvoergegevens ontvangen als een DataFrame en opslaan in een Experience Platform-gegevensset</p>
             </td>
             <td>
                 <ul>
@@ -244,7 +244,7 @@ In de volgende tabel worden de abstracte methoden van een [!DNL Spark] klasse Da
         <tr>
             <td>
                 <p><code>save(configProperties, dataFrame)</code></p>
-                <p>Ontvang outputgegevens als DataFrame en sla het in een dataset van het Platform op</p>
+                <p>Uitvoergegevens ontvangen als een DataFrame en opslaan in een Experience Platform-gegevensset</p>
             </td>
             <td>
                 <ul>
@@ -256,14 +256,14 @@ In de volgende tabel worden de abstracte methoden van een [!DNL Spark] klasse Da
     </tbody>
 </table>
 
-### Gegevens opslaan in een [!DNL Platform] dataset {#save-data-to-a-platform-dataset}
+### Gegevens opslaan naar een [!DNL Experience Platform] dataset {#save-data-to-a-platform-dataset}
 
-Om gegevens op een [!DNL Platform] dataset op te slaan, moeten de eigenschappen of in het configuratiedossier worden verstrekt of worden bepaald:
+Om gegevens op een [!DNL Experience Platform] dataset op te slaan, moeten de eigenschappen of in het configuratiedossier worden verstrekt of worden bepaald:
 
-- Een geldige [!DNL Platform] dataset-id waarop gegevens worden opgeslagen
+- Een geldige [!DNL Experience Platform] dataset-id waarop gegevens worden opgeslagen
 - De huurder-id van uw organisatie
 
-In de volgende voorbeelden worden gegevens (`prediction`) opgeslagen op een [!DNL Platform] dataset, waar de dataset-id (`datasetId`) en huurder-id (`tenantId`) gedefinieerde eigenschappen zijn in het configuratiebestand.
+In de volgende voorbeelden worden gegevens (`prediction`) opgeslagen op een [!DNL Experience Platform] dataset, waar de dataset-id (`datasetId`) en huurder-id (`tenantId`) gedefinieerde eigenschappen zijn in het configuratiebestand.
 
 
 **PySpark**
@@ -279,7 +279,7 @@ from .helper import *
 
 class MyDataSaver(DataSaver):
     """
-    Implementation of DataSaver which stores a DataFrame to a Platform dataset
+    Implementation of DataSaver which stores a DataFrame to an Experience Platform dataset
     """
 
     def save(self, config_properties, prediction):
@@ -347,7 +347,7 @@ import org.apache.spark.sql.functions._
 import org.apache.spark.sql.types.TimestampType
 
 /**
- * Implementation of DataSaver which stores a DataFrame to a Platform dataset
+ * Implementation of DataSaver which stores a DataFrame to an Experience Platform dataset
  */
 
 class ScoringDataSaver extends DataSaver {

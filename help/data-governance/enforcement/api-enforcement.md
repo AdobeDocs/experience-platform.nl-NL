@@ -5,9 +5,9 @@ title: Beleid voor gegevensgebruik afdwingen met de API voor beleidsservice
 type: Tutorial
 description: Zodra u de etiketten van het gegevensgebruik voor uw gegevens hebt gecreeerd, en gebruiksbeleid voor marketing acties tegen die etiketten hebt gecreeerd, kunt u de Dienst API van het Beleid gebruiken om te evalueren of een marketing actie die op een dataset of een willekeurige groep etiketten wordt uitgevoerd een beleidsschending vormt. Vervolgens kunt u uw eigen interne protocollen instellen om beleidsovertredingen af te handelen op basis van de API-reactie.
 exl-id: 093db807-c49d-4086-a676-1426426b43fd
-source-git-commit: 7b15166ae12d90cbcceb9f5a71730bf91d4560e6
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '998'
+source-wordcount: '999'
 ht-degree: 0%
 
 ---
@@ -26,10 +26,10 @@ Dit document bevat stappen voor het gebruik van de API [!DNL Policy Service] om 
 
 Deze zelfstudie vereist een goed begrip van de volgende belangrijke concepten die betrokken zijn bij het afdwingen van beleidsregels voor gegevensgebruik:
 
-* [ Beheer van Gegevens ](../home.md): Het kader waardoor [!DNL Platform] naleving van het gegevensgebruik afdwingt.
+* [ Beheer van Gegevens ](../home.md): Het kader waardoor [!DNL Experience Platform] naleving van het gegevensgebruik afdwingt.
    * [ de gebruiksetiketten van Gegevens ](../labels/overview.md): De etiketten van het gebruik van gegevens worden toegepast op datasets (en/of individuele gebieden binnen die datasets), die beperkingen specificeren voor hoe die gegevens kunnen worden gebruikt.
    * [ het gebruiksbeleid van Gegevens ](../policies/overview.md): Het gebruiksbeleid van gegevens is regels die de soorten marketing acties beschrijven die voor bepaalde reeksen etiketten van het gegevensgebruik worden toegestaan of beperkt.
-* [ Sandboxen ](../../sandboxes/home.md): [!DNL Experience Platform] verstrekt virtuele zandbakken die één enkele [!DNL Platform] instantie in afzonderlijke virtuele milieu&#39;s verdelen helpen digitale ervaringstoepassingen ontwikkelen en ontwikkelen.
+* [ Sandboxen ](../../sandboxes/home.md): [!DNL Experience Platform] verstrekt virtuele zandbakken die één enkele [!DNL Experience Platform] instantie in afzonderlijke virtuele milieu&#39;s verdelen helpen digitale ervaringstoepassingen ontwikkelen en ontwikkelen.
 
 Alvorens dit leerprogramma te beginnen, te herzien gelieve de [ ontwikkelaarsgids ](../api/getting-started.md) voor belangrijke informatie die u moet kennen om vraag aan [!DNL Policy Service] API met succes te maken, met inbegrip van vereiste kopballen en hoe te om voorbeeld API vraag te lezen.
 
@@ -132,7 +132,7 @@ Een geslaagde reactie retourneert de URL voor de marketingactie, de gebruikslabe
 
 ## Evalueren met gebruik van gegevenssets
 
-U kunt een beleid van het gegevensgebruik evalueren door een marketing actie tegen één of meerdere datasets te testen waarvan de etiketten kunnen worden verzameld. Dit wordt gedaan door een verzoek van de POST aan `/marketingActions/core/{MARKETING_ACTION_NAME}/constraints` te doen en dataset IDs binnen het verzoeklichaam, zoals aangetoond in het hieronder voorbeeld te verstrekken.
+U kunt een beleid van het gegevensgebruik evalueren door een marketing actie tegen één of meerdere datasets te testen waarvan de etiketten kunnen worden verzameld. Dit wordt gedaan door een POST- verzoek aan `/marketingActions/core/{MARKETING_ACTION_NAME}/constraints` te doen en dataset IDs binnen het verzoeklichaam, zoals aangetoond in het hieronder voorbeeld te verstrekken.
 
 **API formaat**
 
@@ -376,4 +376,4 @@ Een succesvolle reactie keert URL voor de marketing actie, de gebruiksetiketten 
 
 Door dit document te lezen, hebt u met succes gecontroleerd op beleidsschendingen wanneer het uitvoeren van een marketing actie op een dataset of een reeks etiketten van het gegevensgebruik. Met de gegevens die in API-reacties worden geretourneerd, kunt u protocollen in uw ervaringstoepassing instellen om beleidsovertredingen op de juiste wijze af te dwingen.
 
-Voor informatie over hoe het Platform automatisch beleidshandhaving voor geactiveerde segmenten verstrekt, zie de gids op [ automatische handhaving ](./auto-enforcement.md).
+Voor informatie over hoe Experience Platform automatisch beleidshandhaving voor geactiveerde segmenten verstrekt, zie de gids op [ automatische handhaving ](./auto-enforcement.md).

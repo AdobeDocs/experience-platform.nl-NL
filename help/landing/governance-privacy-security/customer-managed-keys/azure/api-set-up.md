@@ -4,16 +4,16 @@ description: Leer hoe u uw CMK-app instelt met uw Azure-medewerker en uw coderin
 role: Developer
 feature: API, Privacy
 exl-id: c9a1888e-421f-4bb4-b4c7-968fb1d61746
-source-git-commit: 53598f86e1876bc6d1807e95a26584da4d7db3f2
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1017'
+source-wordcount: '1023'
 ht-degree: 0%
 
 ---
 
 # Door de klant beheerde sleutels voor Azure instellen en configureren met behulp van de API
 
-In dit document worden de Azure-specifieke instructies besproken voor het inschakelen van Customer Managed Keys (CMK) in Adobe Experience Platform met behulp van de API. Voor instructies op hoe te om dit proces te voltooien gebruikend UI voor de instanties van het Azure-ontvangen Platform, verwijs naar het [ interface CMK opstellingsdocument CMK ](./ui-set-up.md).
+In dit document worden de Azure-specifieke instructies besproken voor het inschakelen van Customer Managed Keys (CMK) in Adobe Experience Platform met behulp van de API. Voor instructies op hoe te om dit proces te voltooien gebruikend UI voor de ver*schonken instanties van Experience Platform, verwijs naar het [ UI CMK opstellingsdocument ](./ui-set-up.md).
 
 Voor AWS-specifieke instructies, verwijs naar de [ opstellingsgids van AWS ](../aws/ui-set-up.md).
 
@@ -23,7 +23,7 @@ Als u de sectie [!UICONTROL Encryption] in Adobe Experience Platform wilt weerge
 
 Voor meer informatie bij het toewijzen van rollen en toestemmingen in Experience Platform, verwijs naar [ vormen toestemmingendocumentatie ](https://experienceleague.adobe.com/docs/platform-learn/getting-started-for-data-architects-and-data-engineers/configure-permissions.html).
 
-Om CMK voor ver*halen-ontvangen instanties van het Platform toe te laten, moet uw [[!DNL Azure]  Zeer belangrijke vault ](./azure-key-vault-config.md) met de volgende montages worden gevormd:
+Om CMK voor ver*halen-ontvangen instanties van Experience Platform toe te laten, moet uw [[!DNL Azure]  Zeer belangrijke vault ](./azure-key-vault-config.md) met de volgende montages worden gevormd:
 
 * [ laat purgebescherming ](https://learn.microsoft.com/en-us/azure/key-vault/general/soft-delete-overview#purge-protection) toe
 * [ laat zachte schrapping ](https://learn.microsoft.com/en-us/azure/key-vault/general/soft-delete-overview) toe
@@ -36,7 +36,7 @@ Nadat u uw sleutelkluis hebt gevormd, is de volgende stap voor de toepassing te 
 
 ### Aan de slag
 
-Voor het registreren van de CMK-toepassing moet u oproepen doen naar platform-API&#39;s. Voor details op hoe te om de vereiste authentificatiekopballen te verzamelen om deze vraag te maken, zie de [ API van het Platform authentificatiegids ](../../../api-authentication.md).
+Als u de CMK-toepassing registreert, moet u oproepen naar Experience Platform API&#39;s doen. Voor details op hoe te om de vereiste authentificatiekopballen te verzamelen om deze vraag te maken, zie de [ Experience Platform API authentificatiegids ](../../../api-authentication.md).
 
 Hoewel de verificatiegids instructies bevat over het genereren van uw eigen unieke waarde voor de vereiste `x-api-key` aanvraagheader, gebruiken alle API-bewerkingen in deze handleiding in plaats daarvan de statische waarde `acp_provisioning` . U moet echter wel uw eigen waarden opgeven voor `{ACCESS_TOKEN}` en `{ORG_ID}` .
 
@@ -44,7 +44,7 @@ In alle API-aanroepen die in deze handleiding worden weergegeven, wordt `platfor
 
 ### URL voor verificatie ophalen {#fetch-authentication-url}
 
-Als u het registratieproces wilt starten, vraagt u een GET aan bij het eindpunt van de toepassingsregistratie om de vereiste verificatie-URL voor uw organisatie op te halen.
+Als u het registratieproces wilt starten, dient u een GET-aanvraag in bij het eindpunt van de toepassingsregistratie om de vereiste verificatie-URL voor uw organisatie op te halen.
 
 **Verzoek**
 
@@ -94,9 +94,9 @@ Kies in het volgende scherm **[!DNL Select members]** om een dialoogvenster te o
 >
 >Als u uw toepassing niet in de lijst kunt vinden, dan is uw de diensthoofd niet in uw huurder goedgekeurd. U kunt controleren of u de juiste rechten hebt door samen te werken met uw [!DNL Azure] -beheerder of -vertegenwoordiger.
 
-## De configuratie van de coderingssleutel op het Experience Platform inschakelen {#send-to-adobe}
+## Configuratie van coderingssleutel inschakelen in Experience Platform {#send-to-adobe}
 
-Nadat u de CMK-toepassing op [!DNL Azure] hebt geïnstalleerd, kunt u de id van de coderingssleutel naar de Adobe sturen. Selecteer **[!DNL Keys]** in de linkernavigatie, gevolgd door de naam van de sleutel u wilt verzenden.
+Nadat u de CMK-toepassing op [!DNL Azure] hebt geïnstalleerd, kunt u de id van de coderingssleutel naar Adobe sturen. Selecteer **[!DNL Keys]** in de linkernavigatie, gevolgd door de naam van de sleutel u wilt verzenden.
 
 ![ Microsoft Azure dashboard met het [!DNL Keys] voorwerp en de zeer belangrijke benadrukte naam.](../../../images/governance-privacy-security/customer-managed-keys/select-key.png)
 
@@ -110,11 +110,11 @@ In het veld **[!UICONTROL Key Identifier]** wordt de URI-id voor de sleutel weer
 
 ![ Microsoft Azure Belangrijkste details van het dashboard met [!DNL Permitted operations] en de benadrukt secties van de exemplaarsleutel URL.](../../../images/governance-privacy-security/customer-managed-keys/copy-key-url.png)
 
-Nadat u de sleutelvault-URI hebt verkregen, kunt u deze met een verzoek van de POST naar het CMK-configuratiepunt verzenden.
+Nadat u de sleutelvault-URI hebt verkregen, kunt u deze met een POST-aanvraag naar het CMK-configuratiepunt verzenden.
 
 >[!NOTE]
 >
->Alleen de sleutelvault en sleutelnaam worden met Adobe opgeslagen, niet de belangrijkste versie.
+>Alleen de sleutelvault en de sleutelnaam worden opgeslagen met Adobe, niet de zeer belangrijke versie.
 
 **Verzoek**
 
@@ -176,7 +176,7 @@ De taak moet de verwerking binnen een paar minuten voltooien.
 
 ## De status van de configuratie controleren {#check-status}
 
-Om de status van het configuratieverzoek te controleren, kunt u een verzoek van de GET indienen.
+Om de status van het configuratieverzoek te controleren, kunt u een GET-verzoek indienen.
 
 **Verzoek**
 
@@ -221,13 +221,13 @@ curl -X GET \
 
 Het kenmerk `status` kan een van vier waarden hebben met de volgende betekenissen:
 
-1. `RUNNING`: hiermee wordt gevalideerd dat Platform toegang heeft tot de sleutel- en sleutelvault.
+1. `RUNNING`: hiermee wordt gevalideerd dat Experience Platform toegang heeft tot de sleutel- en toetsvault.
 1. `UPDATE_EXISTING_RESOURCES`: het systeem voegt de sleutelvault en sleutelnaam aan de datastores over alle zandbakken in uw organisatie toe.
 1. `COMPLETED`: De sleutelvault en sleutelnaam zijn toegevoegd aan de datastores.
 1. `FAILED`: Er heeft zich een probleem voorgedaan dat voornamelijk te maken heeft met de toepassingsinstellingen voor de toepassing key, key vault of multi-agent.
 
 ## Volgende stappen
 
-Door de bovenstaande stappen te voltooien, hebt u CMK voor uw organisatie ingeschakeld. Voor Azure-gehoste platforminstanties worden gegevens die in primaire gegevensopslagruimten worden ingevoerd, nu gecodeerd en gedecodeerd met de sleutel(s) in de [!DNL Azure] Key Vault.
+Door de bovenstaande stappen te voltooien, hebt u CMK voor uw organisatie ingeschakeld. Voor Experience Platform-instanties die in Azure worden gehost, worden gegevens die in de primaire gegevensopslag worden ingevoerd, nu gecodeerd en gedecodeerd met de sleutel(s) in de [!DNL Azure] Key Vault.
 
 Meer over gegevensencryptie in Adobe Experience Platform leren, zie de [ encryptiedocumentatie ](../../encryption.md).

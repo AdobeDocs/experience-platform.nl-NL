@@ -2,9 +2,9 @@
 title: Google-advertenties met API's verbinden met Experience Platform
 description: Leer hoe u Adobe Experience Platform met Google Ads kunt verbinden met behulp van de Flow Service API.
 exl-id: 4658e392-1bd9-4e74-aa05-96109f9b62a0
-source-git-commit: ac90eea69f493bf944a8f9920426a48d62faaa6c
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '457'
+source-wordcount: '462'
 ht-degree: 0%
 
 ---
@@ -28,9 +28,9 @@ Deze handleiding vereist een goed begrip van de volgende onderdelen van Experien
 
 In de volgende secties vindt u aanvullende informatie die u moet weten voordat u verbinding kunt maken met [!DNL Google Ads] via de [!DNL Flow Service] API.
 
-### Platform-API&#39;s gebruiken
+### Experience Platform API&#39;s gebruiken
 
-Voor informatie over hoe te om vraag aan Platform APIs met succes te maken, zie de gids op [ begonnen wordt met Platform APIs ](../../../../../landing/api-guide.md).
+Voor informatie over hoe te om vraag aan Experience Platform APIs met succes te maken, zie de gids op [ begonnen wordt met Experience Platform APIs ](../../../../../landing/api-guide.md).
 
 ### Vereiste referenties verzamelen
 
@@ -38,7 +38,7 @@ Voor informatie over authentificatie, lees het [[!DNL Google Ads]  bronoverzicht
 
 ## Een basisverbinding maken
 
-Een basisverbinding behoudt informatie tussen uw bron en Platform, met inbegrip van de de authentificatiegeloofsbrieven van uw bron, de huidige staat van de verbinding, en uw unieke identiteitskaart van de basisverbinding. Met de ID van de basisverbinding kunt u bestanden verkennen en door bestanden navigeren vanuit uw bron en kunt u de specifieke items identificeren die u wilt opnemen, inclusief informatie over hun gegevenstypen en indelingen.
+Een basisverbinding behoudt informatie tussen uw bron en Experience Platform, met inbegrip van de verificatiereferenties van uw bron, de huidige status van de verbinding, en uw unieke identiteitskaart van de basisverbinding. Met de ID van de basisverbinding kunt u bestanden verkennen en door bestanden navigeren vanuit uw bron en kunt u de specifieke items identificeren die u wilt opnemen, inclusief informatie over hun gegevenstypen en indelingen.
 
 Om een identiteitskaart van de basisverbinding tot stand te brengen, doe een POST- verzoek aan het `/connections` eindpunt terwijl het verstrekken van uw de authentificatiegeloofsbrieven van Google Ads als deel van de verzoekparameters.
 
@@ -110,4 +110,4 @@ Een succesvolle reactie keert details van de pas gecreëerde basisverbinding, me
 Aan de hand van deze zelfstudie hebt u een [!DNL Google Ads] basisverbinding gemaakt met de [!DNL Flow Service] API en uw [!DNL Google Ads] -account verbonden met Experience Platform. U kunt deze basis verbindings-id in de volgende zelfstudies gebruiken:
 
 * [Onderzoek de structuur en de inhoud van uw gegevenslijsten gebruikend  [!DNL Flow Service]  API](../../explore/tabular.md)
-* [Creeer een dataflow om reclamegegevens aan Platform te brengen gebruikend  [!DNL Flow Service]  API](../../collect/advertising.md)
+* [Creeer een dataflow om reclamegegevens aan Experience Platform te brengen gebruikend  [!DNL Flow Service]  API](../../collect/advertising.md)

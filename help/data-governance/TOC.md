@@ -5,10 +5,10 @@ breadcrumb-title: Handleiding Data Governance
 user-guide-description: Beperkingen voor gegevensgebruik afdwingen door labels, marketingacties en het beleid voor governance te gebruiken.
 feature: Data Governance
 role: User,Developer,Admin
-source-git-commit: 8837d719fbdf2864995c0d73a87a41c4b119cfb7
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '99'
-ht-degree: 34%
+source-wordcount: '100'
+ht-degree: 38%
 
 ---
 
@@ -42,4 +42,4 @@ ht-degree: 34%
    * [Marketingacties](api/marketing-actions.md)
    * [Evaluatie](api/evaluation.md)
 * [ API verwijzing ](https://www.adobe.io/experience-platform-apis/references/policy-service/)
-* [ de versienota&#39;s van het Platform ](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)
+* [Releaseopmerkingen bij Experience Platform](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)

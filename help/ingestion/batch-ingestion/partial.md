@@ -1,10 +1,10 @@
 ---
-keywords: Experience Platform;home;populaire onderwerpen;batch-opname;Batch-opname;partiële inname;Partiële inname;Fout ophalen;Fout ophalen;Onvolledige batch-opname;gedeeltelijke batch-opname;gedeeltelijke;Inslitie;Ingestie;
+keywords: Experience Platform;home;populaire onderwerpen;batch-opname;Batch-opname;gedeeltelijke inname;Partiële inname;Fouten ophalen;Fout ophalen;Gedeeltelijke batch-opname;Gedeeltelijke batch-opname;Gedeeltelijke;Inslikking;Ingestie;
 solution: Experience Platform
 title: Overzicht van partiële batchverwerking
 description: Dit document bevat een zelfstudie voor het beheren van gedeeltelijke batch-opname.
 exl-id: 25a34da6-5b7c-4747-8ebd-52ba516b9dc3
-source-git-commit: e802932dea38ebbca8de012a4d285eab691231be
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '887'
 ht-degree: 0%
@@ -21,10 +21,10 @@ Dit document bevat een zelfstudie voor het beheren van gedeeltelijke batch-opnam
 
 Deze zelfstudie vereist een praktische kennis van de verschillende Adobe Experience Platform-services die betrokken zijn bij gedeeltelijke batchopname. Voordat u met deze zelfstudie begint, raadpleegt u de documentatie voor de volgende services:
 
-- [ Inname van de Partij ](./overview.md): De methode die [!DNL Platform] gegevens van gegevensdossiers, zoals CSV en Parquet opneemt en opslaat.
-- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): Het gestandaardiseerde framework waarmee [!DNL Platform] gegevens voor de klantervaring indeelt.
+- [ Inname van de Partij ](./overview.md): De methode die [!DNL Experience Platform] gegevens van gegevensdossiers, zoals CSV en Parquet opneemt en opslaat.
+- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): Het gestandaardiseerde framework waarmee [!DNL Experience Platform] gegevens voor de klantervaring indeelt.
 
-De volgende secties bevatten aanvullende informatie die u moet weten om aanroepen van [!DNL Platform] API&#39;s te kunnen uitvoeren.
+De volgende secties bevatten aanvullende informatie die u moet weten om aanroepen van [!DNL Experience Platform] API&#39;s te kunnen uitvoeren.
 
 ### API-voorbeeldaanroepen lezen
 
@@ -32,19 +32,19 @@ Deze gids verstrekt voorbeeld API vraag om aan te tonen hoe te om uw verzoeken t
 
 ### Waarden verzamelen voor vereiste koppen
 
-Om vraag aan [!DNL Platform] APIs te maken, moet u het [ authentificatieleerprogramma ](https://www.adobe.com/go/platform-api-authentication-en) eerst voltooien. Als u de zelfstudie over verificatie voltooit, krijgt u de waarden voor elk van de vereiste headers in alle API-aanroepen van [!DNL Experience Platform] , zoals hieronder wordt getoond:
+Om vraag aan [!DNL Experience Platform] APIs te maken, moet u het [ authentificatieleerprogramma ](https://www.adobe.com/go/platform-api-authentication-en) eerst voltooien. Als u de zelfstudie over verificatie voltooit, krijgt u de waarden voor elk van de vereiste headers in alle API-aanroepen van [!DNL Experience Platform] , zoals hieronder wordt getoond:
 
 - Autorisatie: Drager `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
 - x-gw-ims-org-id: `{ORG_ID}`
 
-Alle bronnen in [!DNL Experience Platform] zijn geïsoleerd naar specifieke virtuele sandboxen. Alle aanvragen naar [!DNL Platform] API&#39;s vereisen een header die de naam van de sandbox opgeeft waarin de bewerking plaatsvindt:
+Alle bronnen in [!DNL Experience Platform] zijn geïsoleerd naar specifieke virtuele sandboxen. Alle aanvragen naar [!DNL Experience Platform] API&#39;s vereisen een header die de naam van de sandbox opgeeft waarin de bewerking plaatsvindt:
 
 - x-sandbox-name: `{SANDBOX_NAME}`
 
 >[!NOTE]
 >
->Voor meer informatie over zandbakken in [!DNL Platform], zie de [ documentatie van het zandbakoverzicht ](../../sandboxes/home.md).
+>Voor meer informatie over zandbakken in [!DNL Experience Platform], zie de [ documentatie van het zandbakoverzicht ](../../sandboxes/home.md).
 
 ## Een batch voor gedeeltelijke batch-opname inschakelen in de API {#enable-api}
 
@@ -65,7 +65,7 @@ Om een nieuwe partij tot stand te brengen, volg de stappen in de [ handleiding v
 
 | Eigenschap | Beschrijving |
 | -------- | ----------- |
-| `enableErrorDiagnostics` | Een markering waarmee [!DNL Platform] gedetailleerde foutberichten over de batch kan genereren. |
+| `enableErrorDiagnostics` | Een markering waarmee [!DNL Experience Platform] gedetailleerde foutberichten over de batch kan genereren. |
 | `partialIngestionPercent` | Het percentage van aanvaardbare fouten vóór de volledige partij zal ontbreken. In dit voorbeeld kan maximaal 5% van de batch fouten zijn voordat deze mislukt. |
 
 
@@ -75,7 +75,7 @@ Om een nieuwe partij tot stand te brengen, volg de stappen in de [ handleiding v
 >
 >In deze sectie wordt beschreven hoe u een batch voor gedeeltelijke batchinvoer via de gebruikersinterface inschakelt. Als u al een batch hebt ingeschakeld voor gedeeltelijke batch-opname met behulp van de API, kunt u verdergaan met de volgende sectie.
 
-Om een partij voor gedeeltelijke opname door [!DNL Platform] UI toe te laten, kunt u een nieuwe partij door bronverbindingen tot stand brengen, een nieuwe partij in een bestaande dataset tot stand brengen, of een nieuwe partij tot stand brengen door &quot; [!UICONTROL Map CSV to XDM flow]&quot;.
+Om een partij voor gedeeltelijke opname door [!DNL Experience Platform] UI toe te laten, kunt u een nieuwe partij door bronverbindingen tot stand brengen, een nieuwe partij in een bestaande dataset tot stand brengen, of een nieuwe partij tot stand brengen door &quot; [!UICONTROL Map CSV to XDM flow]&quot;.
 
 ### Een nieuwe bronverbinding maken {#new-source}
 
@@ -85,7 +85,7 @@ Om een nieuwe bronverbinding tot stand te brengen, volg de vermelde stappen in h
 
 Met de schakeloptie **[!UICONTROL Partial ingestion]** kunt u het gebruik van gedeeltelijke batchopname in- of uitschakelen.
 
-De schakeloptie **[!UICONTROL Error diagnostics]** wordt alleen weergegeven wanneer de schakeloptie **[!UICONTROL Partial ingestion]** is uitgeschakeld. Met deze functie kan [!DNL Platform] gedetailleerde foutberichten genereren over ingesloten batches. Als de schakeloptie **[!UICONTROL Partial ingestion]** is ingeschakeld, wordt de uitgebreide foutdiagnose automatisch afgedwongen.
+De schakeloptie **[!UICONTROL Error diagnostics]** wordt alleen weergegeven wanneer de schakeloptie **[!UICONTROL Partial ingestion]** is uitgeschakeld. Met deze functie kan [!DNL Experience Platform] gedetailleerde foutberichten genereren over ingesloten batches. Als de schakeloptie **[!UICONTROL Partial ingestion]** is ingeschakeld, wordt de uitgebreide foutdiagnose automatisch afgedwongen.
 
 ![](../images/batch-ingestion/partial-ingestion/configure-batch-partial-ingestion-focus.png)
 
@@ -99,7 +99,7 @@ Om een bestaande dataset te gebruiken, begin door een dataset te selecteren. De 
 
 Met de schakeloptie **[!UICONTROL Partial ingestion]** kunt u het gebruik van gedeeltelijke batchopname in- of uitschakelen.
 
-De schakeloptie **[!UICONTROL Error diagnostics]** wordt alleen weergegeven wanneer de schakeloptie **[!UICONTROL Partial ingestion]** is uitgeschakeld. Met deze functie kan [!DNL Platform] gedetailleerde foutberichten genereren over ingesloten batches. Als de schakeloptie **[!UICONTROL Partial ingestion]** is ingeschakeld, wordt de uitgebreide foutdiagnose automatisch afgedwongen.
+De schakeloptie **[!UICONTROL Error diagnostics]** wordt alleen weergegeven wanneer de schakeloptie **[!UICONTROL Partial ingestion]** is uitgeschakeld. Met deze functie kan [!DNL Experience Platform] gedetailleerde foutberichten genereren over ingesloten batches. Als de schakeloptie **[!UICONTROL Partial ingestion]** is ingeschakeld, wordt de uitgebreide foutdiagnose automatisch afgedwongen.
 
 ![](../images/batch-ingestion/partial-ingestion/monitor-dataset-partial-ingestion-focus.png)
 
@@ -115,7 +115,7 @@ Om de &quot;[!UICONTROL Map CSV to XDM schema]&quot;stroom te gebruiken, volg de
 
 Met de schakeloptie **[!UICONTROL Partial ingestion]** kunt u het gebruik van gedeeltelijke batchopname in- of uitschakelen.
 
-De schakeloptie **[!UICONTROL Error diagnostics]** wordt alleen weergegeven wanneer de schakeloptie **[!UICONTROL Partial ingestion]** is uitgeschakeld. Met deze functie kan [!DNL Platform] gedetailleerde foutberichten genereren over ingesloten batches. Als de schakeloptie **[!UICONTROL Partial ingestion]** is ingeschakeld, wordt de uitgebreide foutdiagnose automatisch afgedwongen.
+De schakeloptie **[!UICONTROL Error diagnostics]** wordt alleen weergegeven wanneer de schakeloptie **[!UICONTROL Partial ingestion]** is uitgeschakeld. Met deze functie kan [!DNL Experience Platform] gedetailleerde foutberichten genereren over ingesloten batches. Als de schakeloptie **[!UICONTROL Partial ingestion]** is ingeschakeld, wordt de uitgebreide foutdiagnose automatisch afgedwongen.
 
 ![](../images/batch-ingestion/partial-ingestion/xdm-csv-workflow-partial-ingestion-focus.png)
 

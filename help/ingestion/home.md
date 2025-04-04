@@ -2,20 +2,20 @@
 keywords: Experience Platform;home;populaire onderwerpen;gegevensinvoer;gegevenslocatie;Gegevenslocatie;Gegevensbeheer;gegevensbeheer;Lineaire;line;batch;Geëxtraheerde gegevens
 solution: Experience Platform
 title: Overzicht van gegevensinscriptie
-description: In dit document worden de drie belangrijkste manieren geïntroduceerd waarop gegevens worden opgenomen in Platform. De koppelingen naar de bijbehorende overzichtsdocumentatie bevatten meer gedetailleerde informatie.
+description: In dit document worden de drie belangrijkste manieren geïntroduceerd waarop gegevens in Experience Platform worden ingevoerd. In koppelingen naar de desbetreffende overzichtsdocumentatie vindt u meer gedetailleerde informatie.
 exl-id: c189dd4a-5c59-4189-a18c-a3e45a9ff01d
-source-git-commit: 15de9351203f6b43653042ab73ede17781486160
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '578'
+source-wordcount: '579'
 ht-degree: 0%
 
 ---
 
 # Overzicht van gegevensinname
 
-Adobe Experience Platform brengt gegevens uit meerdere bronnen samen om marketers te helpen het gedrag van hun klanten beter te begrijpen. De Ingestie van Gegevens van Adobe Experience Platform vertegenwoordigt de veelvoudige methodes waardoor Experience Platform gegevens uit deze bronnen inneemt, evenals hoe die gegevens binnen het meer van Gegevens voor gebruik door de stroomafwaartse diensten van het Experience Platform worden voortgeduurd.
+Adobe Experience Platform brengt gegevens uit meerdere bronnen samen om marketers te helpen het gedrag van hun klanten beter te begrijpen. De Ingestie van Gegevens van Adobe Experience Platform vertegenwoordigt de veelvoudige methodes waardoor Experience Platform gegevens uit deze bronnen opneemt, evenals hoe die gegevens binnen het meer van Gegevens voor gebruik door de stroomafwaartse diensten van Experience Platform worden voortgeduurd.
 
-Dit document introduceert de drie belangrijkste manieren waarop gegevens in Experience Platform worden opgenomen, met koppelingen naar hun respectieve overzichtsdocumentatie voor meer gedetailleerde informatie.
+In dit document worden de drie belangrijkste manieren geïntroduceerd waarop gegevens in Experience Platform worden ingevoerd. In koppelingen naar de desbetreffende overzichtsdocumentatie vindt u meer gedetailleerde informatie.
 
 ## Inname in batch
 
@@ -31,7 +31,7 @@ Zie het [ overzicht van partijingestie ](./batch-ingestion/overview.md) voor mee
 
 ## Streaming opname
 
-Met streaming opname kunt u gegevens van client- en server-side apparaten in real-time naar [!DNL Experience Platform] verzenden. Het Experience Platform steunt het gebruik van gegevensinlaten aan stroom inkomende ervaringsgegevens, die in streaming-toegelaten datasets binnen het meer van Gegevens wordt voortgeduurd. De inlaten van gegevens kunnen worden gevormd om de gegevens automatisch voor authentiek te verklaren die zij verzamelen, ervoor zorgen dat de gegevens uit een vertrouwde op bron komen.
+Met streaming opname kunt u gegevens van client- en server-side apparaten in real-time naar [!DNL Experience Platform] verzenden. Experience Platform steunt het gebruik van gegevensinlaten om inkomende ervaringsgegevens te stromen, die in streaming-toegelaten datasets binnen het meer van Gegevens wordt voortgeduurd. De inlaten van gegevens kunnen worden gevormd om de gegevens automatisch voor authentiek te verklaren die zij verzamelen, ervoor zorgen dat de gegevens uit een vertrouwde op bron komen.
 
 Zie [ het stromen ingegaan overzicht ](./streaming-ingestion/overview.md) voor meer informatie.
 

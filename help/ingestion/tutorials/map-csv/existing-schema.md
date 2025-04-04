@@ -5,7 +5,7 @@ title: Een CSV-bestand toewijzen aan een bestaand XDM-schema
 type: Tutorial
 description: In deze zelfstudie wordt uitgelegd hoe u een CSV-bestand via de Adobe Experience Platform-gebruikersinterface toewijst aan een bestaand XDM-schema.
 exl-id: 15f55562-269d-421d-ad3a-5c10fb8f109c
-source-git-commit: 15de9351203f6b43653042ab73ede17781486160
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '964'
 ht-degree: 0%
@@ -18,14 +18,14 @@ ht-degree: 0%
 >
 >In dit document wordt beschreven hoe u een CSV-bestand toewijst aan een bestaand XDM-schema. Voor informatie over hoe te om het AI-Gegenereerde hulpmiddel van de schemaaanbeveling (momenteel in bèta) te gebruiken, zie het document op [ in kaart brengend een Csv- dossier gebruikend machine-leert aanbevelingen ](./recommendations.md).
 
-Als u CSV-gegevens in [!DNL Adobe Experience Platform] wilt invoeren, moeten de gegevens worden toegewezen aan een [!DNL Experience Data Model] (XDM)-schema. In deze zelfstudie wordt uitgelegd hoe u een CSV-bestand via de gebruikersinterface van [!DNL Platform] kunt toewijzen aan een XDM-schema.
+Als u CSV-gegevens in [!DNL Adobe Experience Platform] wilt invoeren, moeten de gegevens worden toegewezen aan een [!DNL Experience Data Model] (XDM)-schema. In deze zelfstudie wordt uitgelegd hoe u een CSV-bestand via de gebruikersinterface van [!DNL Experience Platform] kunt toewijzen aan een XDM-schema.
 
 ## Aan de slag
 
-Deze zelfstudie vereist een goed begrip van de volgende componenten van [!DNL Platform] :
+Deze zelfstudie vereist een goed begrip van de volgende componenten van [!DNL Experience Platform] :
 
-- [[!DNL Experience Data Model (XDM System)]](../../../xdm/home.md): Het gestandaardiseerde framework waarmee [!DNL Platform] gegevens voor de klantervaring indeelt.
-- [ Inname van de Partij ](../../batch-ingestion/overview.md): De methode waardoor [!DNL Platform] gegevens van user-provided gegevensbestanden opneemt.
+- [[!DNL Experience Data Model (XDM System)]](../../../xdm/home.md): Het gestandaardiseerde framework waarmee [!DNL Experience Platform] gegevens voor de klantervaring indeelt.
+- [ Inname van de Partij ](../../batch-ingestion/overview.md): De methode waardoor [!DNL Experience Platform] gegevens van user-provided gegevensbestanden opneemt.
 - [ Prep van Gegevens van Adobe Experience Platform ](../../batch-ingestion/overview.md): Een reeks mogelijkheden die u toestaan om opgenomen gegevens in kaart te brengen en om te zetten om met schema&#39;s in overeenstemming te zijn XDM. De documentatie over [ Prep functies van Gegevens ](../../../data-prep/functions.md) is bijzonder relevant voor schemaafbeelding.
 
 Deze zelfstudie vereist ook dat u al een dataset hebt gemaakt om uw CSV-gegevens in te voeren. Voor stappen bij het creëren van een dataset in UI, zie [ gegevens ingest leerprogramma ](../ingest-batch-data.md).
@@ -64,7 +64,7 @@ De sectie **[!UICONTROL Sample data]** wordt weergegeven wanneer het bestand is 
 
 De stap **[!UICONTROL Mapping]** wordt weergegeven. De kolommen van het CSV-bestand worden weergegeven onder **[!UICONTROL Source Field]** en de bijbehorende XDM-schemavelden onder **[!UICONTROL Target Field]** .
 
-[!DNL Platform] verstrekt automatisch intelligente aanbevelingen voor auto-in kaart gebrachte gebieden die op het doelschema of de dataset worden gebaseerd die u selecteerde. U kunt toewijzingsregels handmatig aanpassen aan uw gebruiksgevallen.
+[!DNL Experience Platform] verstrekt automatisch intelligente aanbevelingen voor auto-in kaart gebrachte gebieden die op het doelschema of de dataset worden gebaseerd die u selecteerde. U kunt toewijzingsregels handmatig aanpassen aan uw gebruiksgevallen.
 
 ![](../../images/tutorials/map-a-csv-file/mapping-with-suggestions.png)
 
@@ -120,7 +120,7 @@ Nadat het CSV-bestand is toegewezen en gemaakt, kunt u de gegevens controleren d
 
 ## Volgende stappen
 
-Aan de hand van deze zelfstudie hebt u een standaard CSV-bestand toegewezen aan een XDM-schema en het ingepakt in [!DNL Platform] . Deze gegevens kunnen nu worden gebruikt door downstream [!DNL Platform] -services, zoals [!DNL Real-Time Customer Profile] . Zie het overzicht voor [[!DNL Real-Time Customer Profile]](../../../profile/home.md) voor meer informatie.
+Aan de hand van deze zelfstudie hebt u een standaard CSV-bestand toegewezen aan een XDM-schema en het ingepakt in [!DNL Experience Platform] . Deze gegevens kunnen nu worden gebruikt door downstream [!DNL Experience Platform] -services, zoals [!DNL Real-Time Customer Profile] . Zie het overzicht voor [[!DNL Real-Time Customer Profile]](../../../profile/home.md) voor meer informatie.
 
 >[!TIP]
 >

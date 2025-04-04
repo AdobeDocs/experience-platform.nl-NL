@@ -1,22 +1,22 @@
 ---
 title: Een slimme streamingverbinding en gegevensstroom maken in de gebruikersinterface
-description: Leer hoe u via de gebruikersinterface van Platform een Shopify Streaming-bronverbinding en -gegevensstroom maakt
+description: Leer hoe u via de Experience Platform-gebruikersinterface een Shopify Streaming-bronverbinding en -gegevensstroom maakt
 badge: Beta
 exl-id: d53f4ab5-8bdc-4647-83d5-ee898abda0f2
-source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '756'
+source-wordcount: '761'
 ht-degree: 0%
 
 ---
 
 # Een bronverbinding en gegevensstroom maken voor [!DNL Shopify Streaming] -gegevens met behulp van de interface
 
-Deze zelfstudie bevat stappen voor het maken van een [!DNL Shopify Streaming] bronverbinding en gegevensstroom via de gebruikersinterface van Platform.
+Deze zelfstudie bevat stappen voor het maken van een [!DNL Shopify Streaming] bronverbinding en gegevensstroom via de Experience Platform-gebruikersinterface.
 
 ## Aan de slag {#getting-started}
 
-Deze zelfstudie vereist een goed begrip van de volgende onderdelen van het Experience Platform:
+Deze zelfstudie vereist een goed begrip van de volgende onderdelen van Experience Platform:
 
 * [[!DNL Experience Data Model (XDM)]  Systeem ](../../../../../xdm/home.md): Het gestandaardiseerde kader waardoor [!DNL Experience Platform] gegevens van de klantenervaring organiseert.
    * [ Grondbeginselen van schemacompositie ](../../../../../xdm/schema/composition.md): Leer over de basisbouwstenen van schema&#39;s XDM, met inbegrip van zeer belangrijke principes en beste praktijken in schemacompositie.
@@ -29,17 +29,17 @@ Deze zelfstudie vereist een goed begrip van de volgende onderdelen van het Exper
 
 ## Sluit uw [!DNL Shopify Streaming] -account aan
 
-Selecteer in de gebruikersinterface van het platform **[!UICONTROL Sources]** in de linkernavigatiebalk voor toegang tot de werkruimte van [!UICONTROL Sources] . In het scherm [!UICONTROL Catalog] worden diverse bronnen weergegeven waarmee u een account kunt maken.
+Selecteer in de gebruikersinterface van Experience Platform de optie **[!UICONTROL Sources]** in de linkernavigatiebalk voor toegang tot de werkruimte van [!UICONTROL Sources] . In het scherm [!UICONTROL Catalog] worden diverse bronnen weergegeven waarmee u een account kunt maken.
 
 U kunt de juiste categorie selecteren in de catalogus aan de linkerkant van het scherm. U kunt ook de specifieke bron vinden waarmee u wilt werken met de zoekoptie.
 
 Onder de **eCommerce** categorie, selecteer [!DNL Shopify Streaming], en selecteer dan **[!UICONTROL Add data]**.
 
-![ de catalogus van bronnen van het Experience Platform ](../../../../images/tutorials/create/shopify-streaming/catalog.png)
+![ de Experience Platform broncatalogus ](../../../../images/tutorials/create/shopify-streaming/catalog.png)
 
 ## Gegevens selecteren
 
-De stap **[!UICONTROL Select data]** wordt weergegeven en biedt een interface waarmee u de gegevens kunt selecteren die u naar Platform verzendt.
+De stap **[!UICONTROL Select data]** wordt weergegeven en biedt een interface waarmee u de gegevens kunt selecteren die u naar Experience Platform verzendt.
 
 * Het linkergedeelte van de interface is een browser waarmee u de beschikbare gegevensstromen binnen uw account kunt bekijken.
 * In het rechtergedeelte van de interface kunt u maximaal 100 rijen gegevens uit een JSON-bestand voorvertonen.
@@ -66,7 +66,7 @@ Selecteer **[!UICONTROL Next]** als u klaar bent.
 
 De stap [!UICONTROL Mapping] verschijnt, die u van een interface voorziet om de brongebieden van uw bronschema aan hun aangewezen doelXDM gebieden in het doelschema in kaart te brengen.
 
-Platform biedt intelligente aanbevelingen voor automatisch toegewezen velden op basis van het doelschema of de gegevensset die u selecteert. U kunt toewijzingsregels handmatig aanpassen aan uw gebruiksgevallen. Op basis van uw behoeften kunt u ervoor kiezen om velden rechtstreeks toe te wijzen of gegevens prep-functies te gebruiken om brongegevens om berekende of berekende waarden af te leiden. Voor uitvoerige stappen bij het gebruiken van de kaartperinterface en berekende gebieden, zie de [ gids UI van de Prep van Gegevens ](https://experienceleague.adobe.com/docs/experience-platform/data-prep/ui/mapping.html).
+Experience Platform biedt intelligente aanbevelingen voor automatisch toegewezen velden op basis van het doelschema of de gegevensset die u selecteert. U kunt toewijzingsregels handmatig aanpassen aan uw gebruiksgevallen. Op basis van uw behoeften kunt u ervoor kiezen om velden rechtstreeks toe te wijzen of gegevens prep-functies te gebruiken om brongegevens om berekende of berekende waarden af te leiden. Voor uitvoerige stappen bij het gebruiken van de kaartperinterface en berekende gebieden, zie de [ gids UI van de Prep van Gegevens ](https://experienceleague.adobe.com/docs/experience-platform/data-prep/ui/mapping.html).
 
 Selecteer **[!UICONTROL Next]** wanneer de brongegevens correct zijn toegewezen.
 
@@ -85,7 +85,7 @@ Nadat u de gegevensstroom hebt gereviseerd, selecteert u **[!UICONTROL Finish]**
 
 ## Uw URL voor het streamingeindpunt ophalen
 
-Wanneer uw streaminggegevens zijn gemaakt, kunt u nu de URL van het streamingeindpunt ophalen. Dit eindpunt zal worden gebruikt om aan uw webhaak in te tekenen, toestaand uw het stromen bron om met Experience Platform te communiceren.
+Wanneer uw streaminggegevens zijn gemaakt, kunt u nu de URL van het streamingeindpunt ophalen. Dit eindpunt wordt gebruikt om een abonnement te nemen op uw webhaak, zodat uw streamingbron kan communiceren met Experience Platform.
 
 Als u het streamingeindpunt wilt ophalen, gaat u naar de [!UICONTROL Dataflow activity] -pagina van de gegevensstroom die u net hebt gemaakt en kopieert u het eindpunt van de onderkant van het deelvenster [!UICONTROL Properties] .
 

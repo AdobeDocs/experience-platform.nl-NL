@@ -4,9 +4,9 @@ description: Leer hoe u PathFactory via API's of de gebruikersinterface met Adob
 last-substantial-update: 2024-04-30T00:00:00Z
 badge: Beta
 exl-id: befb73c4-fd6a-4512-9124-d23a1c27e0e0
-source-git-commit: ca17854830edabaf2bd74265258d6f0096f2888e
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '460'
+source-wordcount: '463'
 ht-degree: 0%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 0%
 >
 >De bron [!DNL PathFactory] is in bèta. Gelieve te lezen het [ overzicht van bronnen ](../../home.md#terms-and-conditions) voor meer informatie bij het gebruiken van bèta-geëtiketteerde bronnen.
 
-[[!DNL PathFactory] ](https://www.pathfactory.com/) biedt een cloudplatform dat bedrijven helpt bij het beheren van inhoudsreizen en het aansturen van betrokkenheid via intelligente inzichten in inhoud. Deze gids bepaalt hoe u gegevens van PathFactory in Experience Platform kunt integreren, gebruikend de schakelaars van PathFactory voor optimale gegevensopname.
+[[!DNL PathFactory] ](https://www.pathfactory.com/) biedt een cloudplatform dat bedrijven helpt bij het beheren van inhoudsreizen en het aansturen van betrokkenheid via intelligente inzichten in inhoud. In deze handleiding wordt beschreven hoe u gegevens van PathFactory kunt integreren in Experience Platform en de connectors van PathFactory kunt gebruiken voor optimale gegevensinvoer.
 
 U kunt gegevens van [[!DNL PathFactory] ](https://www.pathfactory.com/) opnemen gebruikend drie primaire bronnen:
 
@@ -33,7 +33,7 @@ Een lijst van IP adressen kan vereisen om aan een lijst van gewenste personen wo
 
 ## Vereisten {#prerequisites}
 
-Voordat u begint met het integreren van [[!DNL PathFactory] ](https://www.pathfactory.com/) -connectors met Experience Platform, moet u controleren of aan de volgende voorwaarden is voldaan:
+Voordat u begint met het integreren van [[!DNL PathFactory] ](https://www.pathfactory.com/) -connectors met Experience Platform, moet u aan de volgende voorwaarden voldoen:
 
 * **a [ rekening PathFactory]**.
    * Neem contact op met [[!DNL PathFactory] ](https://www.pathfactory.com/portal/company/contactus.shtml) als u nog geen geldig account hebt.
@@ -45,7 +45,7 @@ Voordat u begint met het integreren van [[!DNL PathFactory] ](https://www.pathfa
 
 ### Hoe te om Verantwoordelijkheden en de Tokens van de Toegang te verkrijgen {#gather-credentials}
 
-Als u verbinding wilt maken met [!DNL PathFactory] , moet u de volgende gegevens opgeven:
+Als u [!DNL PathFactory] wilt verbinden met Experience Platform, moet u de volgende referenties opgeven:
 
 | Credentials | Beschrijving | Endpoint |
 | --- | --- | --- |
@@ -61,12 +61,12 @@ Voor gedetailleerde instructies op hoe te om uw gebruikersbenaming, wachtwoord, 
 
 ### Machtigingen configureren voor Experience Platform
 
-U moet zowel **[!UICONTROL View Sources]** als **[!UICONTROL Manage Sources]** machtigingen hebben ingeschakeld voor uw account om uw [!DNL PathFactory] -account aan Experience Platform te kunnen koppelen. Neem contact op met de productbeheerder om de benodigde machtigingen te verkrijgen. Voor meer informatie, lees de [ gids UI van de toegangscontrole ](../../../access-control/ui/overview.md).
+U moet zowel **[!UICONTROL View Sources]** - als **[!UICONTROL Manage Sources]** -machtigingen hebben ingeschakeld voor uw account om uw [!DNL PathFactory] -account te kunnen verbinden met Experience Platform. Neem contact op met de productbeheerder om de benodigde machtigingen te verkrijgen. Voor meer informatie, lees de [ gids UI van de toegangscontrole ](../../../access-control/ui/overview.md).
 
-## Verbinden [!DNL PathFactory] met platform {#pathfactory-connect}
+## Verbinden [!DNL PathFactory] met Experience Platform {#pathfactory-connect}
 
-In de onderstaande documentatie vindt u informatie over het tot stand brengen van een verbinding tussen [!DNL PathFactory] en Platform via API&#39;s of de gebruikersinterface:
+In de onderstaande documentatie vindt u informatie over het tot stand brengen van een verbinding tussen [!DNL PathFactory] en Experience Platform via API&#39;s of de gebruikersinterface:
 
-* [ creeer een bronverbinding en dataflow om  [!DNL PathFactory]  gegevens aan Platform te brengen gebruikend APIs ](../../tutorials/api/create/marketing-automation/pathfactory.md).
+* [ creeer een bronverbinding en dataflow om  [!DNL PathFactory]  gegevens aan Experience Platform te brengen gebruikend APIs ](../../tutorials/api/create/marketing-automation/pathfactory.md).
 * [ verbind uw  [!DNL PathFactory]  rekening met Experience Platform gebruikend UI ](../../tutorials/ui/create/marketing-automation/pathfactory.md).
 * [ creeer een dataflow voor een bronverbinding gebruikend UI ](../../tutorials/ui/dataflow/marketing-automation.md).

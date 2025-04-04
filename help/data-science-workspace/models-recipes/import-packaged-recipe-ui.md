@@ -1,11 +1,11 @@
 ---
-keywords: Experience Platform;in een pakket opgenomen recept importeren;Data Science Workspace;populaire onderwerpen;recepten;ui;engine maken
+keywords: Experience Platform;import verpakt recept;Data Science Workspace;populaire onderwerpen;recepten;ui;create engine
 solution: Experience Platform
 title: Een gecomprimeerde ontvanger importeren in de gebruikersinterface van Data Science Workspace
 type: Tutorial
-description: Deze zelfstudie biedt inzicht in het configureren en importeren van een verpakt recept met behulp van het meegeleverde voorbeeld Detailhandel. Aan het einde van deze zelfstudie bent u klaar om een model te maken, te trainen en te evalueren in Adobe Experience Platform Data Science Workspace.
+description: Deze zelfstudie biedt insight informatie over het configureren en importeren van een verpakt recept met behulp van het opgegeven voorbeeld Detailhandel. Aan het einde van deze zelfstudie bent u klaar om een model te maken, te trainen en te evalueren in Adobe Experience Platform Data Science Workspace.
 exl-id: 2556e1f0-3f9c-4884-a699-06c041d5c4d1
-source-git-commit: 5d98dc0cbfaf3d17c909464311a33a03ea77f237
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '1760'
 ht-degree: 0%
@@ -20,7 +20,7 @@ ht-degree: 0%
 >
 >Deze documentatie is bedoeld voor bestaande klanten met eerdere rechten op Data Science Workspace.
 
-Deze zelfstudie biedt inzicht in het configureren en importeren van een verpakt recept met behulp van het meegeleverde voorbeeld Detailhandel. Aan het einde van deze zelfstudie bent u klaar om een model te maken, te trainen en te evalueren in Adobe Experience Platform [!DNL Data Science Workspace] .
+Deze zelfstudie biedt insight informatie over het configureren en importeren van een verpakt recept met behulp van het opgegeven voorbeeld Detailhandel. Aan het einde van deze zelfstudie bent u klaar om een model te maken, te trainen en te evalueren in Adobe Experience Platform [!DNL Data Science Workspace] .
 
 ## Vereisten
 
@@ -128,7 +128,7 @@ Voor deze zelfstudie kunt u de standaardconfiguratiebestanden voor het recept vo
 
 ### Op Docker gebaseerde recept importeren - [!DNL Python] {#python}
 
-Begin door te navigeren en **[!UICONTROL Workflows]** te selecteren in de linkerbovenhoek van de gebruikersinterface van [!DNL Platform] . Daarna, selecteer **het recept van de Invoer** en selecteer **[!UICONTROL Launch]**.
+Begin door te navigeren en **[!UICONTROL Workflows]** te selecteren in de linkerbovenhoek van de gebruikersinterface van [!DNL Experience Platform] . Daarna, selecteer **het recept van de Invoer** en selecteer **[!UICONTROL Launch]**.
 
 ![](../images/models-recipes/import-package-ui/launch-import.png)
 
@@ -162,7 +162,7 @@ Ga aan de [ volgende stappen ](#next-steps) te werk om te weten te komen hoe te 
 
 ### Op Docker gebaseerde recept importeren - R {#r}
 
-Begin door te navigeren en **[!UICONTROL Workflows]** te selecteren in de linkerbovenhoek van de gebruikersinterface van [!DNL Platform] . Daarna, selecteer **het recept van de Invoer** en selecteer **[!UICONTROL Launch]**.
+Begin door te navigeren en **[!UICONTROL Workflows]** te selecteren in de linkerbovenhoek van de gebruikersinterface van [!DNL Experience Platform] . Daarna, selecteer **het recept van de Invoer** en selecteer **[!UICONTROL Launch]**.
 
 ![](../images/models-recipes/import-package-ui/launch-import.png)
 
@@ -196,7 +196,7 @@ Ga aan de [ volgende stappen ](#next-steps) te werk om te weten te komen hoe te 
 
 ### Op docker gebaseerde recept importeren - PySpark {#pyspark}
 
-Begin door te navigeren en **[!UICONTROL Workflows]** te selecteren in de linkerbovenhoek van de gebruikersinterface van [!DNL Platform] . Daarna, selecteer **het recept van de Invoer** en selecteer **[!UICONTROL Launch]**.
+Begin door te navigeren en **[!UICONTROL Workflows]** te selecteren in de linkerbovenhoek van de gebruikersinterface van [!DNL Experience Platform] . Daarna, selecteer **het recept van de Invoer** en selecteer **[!UICONTROL Launch]**.
 
 ![](../images/models-recipes/import-package-ui/launch-import.png)
 
@@ -232,7 +232,7 @@ Ga aan de [ volgende stappen ](#next-steps) te werk om te weten te komen hoe te 
 
 ### Op Docker gebaseerde recept importeren - Scala {#scala}
 
-Begin door te navigeren en **[!UICONTROL Workflows]** te selecteren in de linkerbovenhoek van de gebruikersinterface van [!DNL Platform] . Daarna, selecteer **het recept van de Invoer** en selecteer **[!UICONTROL Launch]**.
+Begin door te navigeren en **[!UICONTROL Workflows]** te selecteren in de linkerbovenhoek van de gebruikersinterface van [!DNL Experience Platform] . Daarna, selecteer **het recept van de Invoer** en selecteer **[!UICONTROL Launch]**.
 
 ![](../images/models-recipes/import-package-ui/launch-import.png)
 
@@ -268,7 +268,7 @@ Ga aan de [ volgende stappen ](#next-steps) te werk om te weten te komen hoe te 
 
 ## Volgende stappen {#next-steps}
 
-Deze zelfstudie gaf inzicht in het configureren en importeren van een recept in [!DNL Data Science Workspace] . U kunt nu een model maken, trainen en evalueren met het nieuwe recept.
+Deze zelfstudie biedt insight informatie over het configureren en importeren van een recept in [!DNL Data Science Workspace] . U kunt nu een model maken, trainen en evalueren met het nieuwe recept.
 
 - [Een model trainen en evalueren in de gebruikersinterface](./train-evaluate-model-ui.md)
 - [Een model trainen en evalueren met de API](./train-evaluate-model-api.md)

@@ -1,12 +1,12 @@
 ---
-keywords: Experience Platform;huis;populaire onderwerpen;dataset;Dataset;tijd om te leven;ttl;tijd-aan-levende;
+keywords: Experience Platform;home;populaire onderwerpen;dataset;Dataset;tijd om te leven;ttl;tijd-aan-levende;
 solution: Experience Platform
 title: Verlopen van gebeurtenissen ervaren
 description: Dit document biedt algemene richtlijnen voor het configureren van vervaltijden voor afzonderlijke Experience Events in een Adobe Experience Platform-gegevensset.
 exl-id: a91f2cd2-3a5d-42e6-81c3-0ec5bc644f5f
-source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '855'
+source-wordcount: '858'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 In Adobe Experience Platform, kunt u vervaltijden voor alle Gebeurtenissen van de Ervaring vormen die in een dataset worden opgenomen die voor [ in real time wordt toegelaten Profiel van de Klant ](./home.md). Hiermee kunt u automatisch gegevens verwijderen uit het profielarchief die niet meer geldig of nuttig zijn voor uw gebruiksgevallen.
 
-Verlopen van ervaringsgebeurtenissen kunnen niet worden geconfigureerd via de interface of API&#39;s van het platform. In plaats daarvan, moet u steun contacteren om de Verlopen van de Gebeurtenis van de Ervaring op uw vereiste datasets toe te laten.
+Verlopen van ervaringsgebeurtenissen kunnen niet worden geconfigureerd via de Experience Platform-gebruikersinterface of -API&#39;s. In plaats daarvan, moet u steun contacteren om de Verlopen van de Gebeurtenis van de Ervaring op uw vereiste datasets toe te laten.
 
 >[!IMPORTANT]
 >
@@ -23,7 +23,7 @@ Verlopen van ervaringsgebeurtenissen kunnen niet worden geconfigureerd via de in
 
 ## Geautomatiseerd vervalproces
 
-Nadat de Verlopen van de Gebeurtenis van de Ervaring op een profiel-Toegelaten dataset zijn toegelaten, past het Platform automatisch de vervalwaarden voor elke gevangen gebeurtenis in een proces in twee stappen toe:
+Nadat de Verlopen van de Gebeurtenis van de Ervaring op een profiel-Toegelaten dataset zijn toegelaten, past Experience Platform automatisch de vervalwaarden voor elke gevangen gebeurtenis in een proces in twee stappen toe:
 
 1. Voor alle nieuwe gegevens die in de gegevensset worden opgenomen, wordt de vervalwaarde toegepast op de ingangstijd op basis van de tijdstempel van de gebeurtenis.
 1. Alle bestaande gegevens in de dataset hebben de vervalwaarde met terugwerkende kracht wordt toegepast als eenmalig backfill systeembaan. Zodra de vervalwaarde op de dataset is geplaatst, zullen de gebeurtenissen die ouder zijn dan de vervalwaarde onmiddellijk worden gelaten vallen zodra de systeembaan loopt. Alle andere gebeurtenissen worden geannuleerd zodra ze hun vervalwaarden uit de tijdstempel van de gebeurtenis bereiken. Als alle Experience Events zijn verwijderd en het profiel geen profielkenmerken meer heeft, bestaat het profiel niet meer.
@@ -76,4 +76,4 @@ De vervaldatum van Pseudoniem Profielgegevens en Experience Event-gegevens kunne
 
 U zou **altijd** de gegevensvervaldatum van de Gebeurtenis van de opstellingsErvaring in uw datasets, die op uw behoeften worden gebaseerd om gegevens over uw bekende klanten te behouden. Als de geldigheids-gebeurtenisgegevensvervaldatum is ingesteld, kunt u de gegevensvervaldatum van het Pseudoniem-profiel gebruiken om automatisch Pseudoniem-profielen te verwijderen. Doorgaans is de vervalperiode van de gegevens voor Pseudoniem Profielen korter dan de vervalperiode van de gegevens voor Experience Events.
 
-In een typisch geval kunt u de gegevensvervaldatum van de Experience-gebeurtenis instellen op basis van de waarden van uw bekende gebruikersgegevens en u kunt de gegevensvervaldatum van het Pseudoniem-profiel instellen op een veel kortere duur om de invloed van Pseudoniem-profielen op de naleving van de Platform-licentie te beperken.
+In een typisch geval kunt u de gegevensvervaldatum van de Experience-gebeurtenis instellen op basis van de waarden van uw bekende gebruikersgegevens en u kunt de gegevensvervaldatum van het Pseudoniem-profiel instellen op een veel kortere duur om de invloed van Pseudoniem-profielen op de naleving van de Experience Platform-licentie te beperken.

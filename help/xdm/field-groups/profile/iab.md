@@ -1,12 +1,12 @@
 ---
-keywords: Experience Platform;home;populaire onderwerpen;schema;Schema;XDM;individueel profiel;gebieden;schema's;Schema's;Schema-ontwerp;veldgroep;veldgroep;iab;tcf;toestemming;
+keywords: Experience Platform;home;populaire onderwerpen;schema;Schema;XDM;individueel profiel;gebieden;schema's;Schema's;Schemaontwerp;veldgroep;veldgroep;iab;tcf;toestemming;
 solution: Experience Platform
 title: IAB TCF 2.0 de Groep van het Gebied van de Goedkeuring voor de Schema's van het Profiel
 description: Leer over IAB TCF 2.0 de gebiedsgroep van het schema van de Toestemming voor de klasse van het Profiel Individual XDM.
 exl-id: 52a4fee8-d7f4-4f27-8e26-0c132985eb84
-source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '307'
+source-wordcount: '308'
 ht-degree: 0%
 
 ---
@@ -50,7 +50,7 @@ In de volgende JSON ziet u de structuur van de `identityPrivacyInfo` -kaart.
 }
 ```
 
-Zoals in het voorbeeld wordt getoond, komt elke key op hoofdniveau van `xdm:identityPrivacyInfo` overeen met een naamruimte voor identiteit die wordt herkend door Identity Service. Elke naamruimte-eigenschap moet op zijn beurt ten minste één subeigenschap hebben waarvan de sleutel overeenkomt met de overeenkomstige identiteitswaarde van de klant voor die naamruimte. In dit voorbeeld wordt de klant aangeduid met de waarde `ECID` (Experience Cloud-id) `13782522493631189` .
+Zoals in het voorbeeld wordt getoond, komt elke key op hoofdniveau van `xdm:identityPrivacyInfo` overeen met een naamruimte voor identiteit die wordt herkend door Identity Service. Elke naamruimte-eigenschap moet op zijn beurt ten minste één subeigenschap hebben waarvan de sleutel overeenkomt met de overeenkomstige identiteitswaarde van de klant voor die naamruimte. In dit voorbeeld wordt de klant aangeduid met de Experience Cloud-id (`ECID`)-waarde `13782522493631189` .
 
 >[!NOTE]
 >
@@ -58,7 +58,7 @@ Zoals in het voorbeeld wordt getoond, komt elke key op hoofdniveau van `xdm:iden
 
 Voor elke identiteitswaarde moet een eigenschap `identityIABConsent` worden opgegeven die de TCF-toestemmingswaarde voor de identiteit biedt. De waarde voor dit bezit moet met het [[!UICONTROL Consent String] gegevenstype ](../../data-types/consent-string.md) in overeenstemming zijn.
 
-Zie de gids op [ IAB TCF 2.0 steun in Platform ](../../../landing/governance-privacy-security/consent/iab/overview.md) voor meer informatie over het gebruiksgeval van deze gebiedsgroep. Raadpleeg de openbare XDM-opslagplaats voor meer informatie over de veldgroep zelf:
+Zie de gids op [ IAB TCF 2.0 steun in Experience Platform ](../../../landing/governance-privacy-security/consent/iab/overview.md) voor meer informatie over het gebruiksgeval van deze gebiedsgroep. Raadpleeg de openbare XDM-opslagplaats voor meer informatie over de veldgroep zelf:
 
 * [ Bevolkt voorbeeld ](https://github.com/adobe/xdm/blob/master/components/fieldgroups/profile/profile-privacy.example.1.json)
 * [ Volledig schema ](https://github.com/adobe/xdm/blob/master/components/fieldgroups/profile/profile-privacy.schema.json)

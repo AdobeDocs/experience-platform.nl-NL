@@ -1,23 +1,23 @@
 ---
-keywords: Experience Platform;ontwikkelaarshandleiding;SDK;Data Access SDK;Data Science Workspace;populaire onderwerpen
+keywords: Experience Platform;developer guide;SDK;Data Access SDK;Data Science Workspace;populaire onderwerpen
 solution: Experience Platform
-title: Modelontwerp met de SDK van het Adobe Experience Platform-platform
-description: Deze zelfstudie biedt u informatie over het omzetten van data_access_sdk_python in de nieuwe Python platform_sdk in zowel Python als R.
+title: Modellen ontwerpen met de Adobe Experience Platform SDK
+description: Deze zelfstudie biedt u informatie over het omzetten van data_access_sdk_python in het nieuwe Python platform_sdk in zowel Python als R.
 exl-id: 20909cae-5cd2-422b-8dbb-35bc63e69b2a
-source-git-commit: 5d98dc0cbfaf3d17c909464311a33a03ea77f237
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '509'
+source-wordcount: '506'
 ht-degree: 0%
 
 ---
 
-# Modellen ontwerpen met de Adobe Experience Platform [!DNL Platform] SDK
+# Modellen ontwerpen met de Adobe [!DNL Experience Platform] SDK
 
 >[!NOTE]
 >
 >Data Science Workspace kan niet meer worden aangeschaft.
 >
->Deze documentatie is bedoeld voor bestaande klanten met eerdere rechten voor Data Science Workspace.
+>Deze documentatie is bedoeld voor bestaande klanten met eerdere rechten op Data Science Workspace.
 
 Deze zelfstudie biedt u informatie over het omzetten van `data_access_sdk_python` in de nieuwe Python `platform_sdk` in zowel Python als R. Deze zelfstudie biedt informatie over de volgende bewerkingen:
 
@@ -74,7 +74,7 @@ client_context <- psdk$client_context$ClientContext(api_key={API_KEY},
 
 ## Basislezen van gegevens {#basic-reading-of-data}
 
-Met de nieuwe [!DNL Platform] SDK is de maximale leesgrootte 32 GB, met een maximale leestijd van 10 minuten.
+Met de nieuwe [!DNL Experience Platform] SDK is de maximale leesgrootte 32 GB, met een maximale leestijd van 10 minuten.
 
 Als de leestijd te lang duurt, kunt u een van de volgende filteropties gebruiken:
 
@@ -89,7 +89,7 @@ Als de leestijd te lang duurt, kunt u een van de volgende filteropties gebruiken
 
 ### Python
 
-Gebruik het onderstaande codevoorbeeld om gegevens in Python te lezen:
+Voor het lezen van gegevens in Python gebruikt u het onderstaande codevoorbeeld:
 
 ```python
 from platform_sdk.dataset_reader import DatasetReader
@@ -109,7 +109,7 @@ df <- dataset_reader$read()
 df
 ```
 
-## Filteren op verschuiving en beperken {#filter-by-offset-and-limit}
+## Filteren op verschuiving en limiet {#filter-by-offset-and-limit}
 
 Omdat filteren op batch-id niet meer wordt ondersteund, moet u `offset` en `limit` gebruiken om het lezen van gegevens in bereik te houden.
 
@@ -151,7 +151,7 @@ df2 <- dataset_reader$where(
 df2
 ```
 
-De nieuwe [!DNL Platform] SDK ondersteunt de volgende bewerkingen:
+De nieuwe [!DNL Experience Platform] SDK ondersteunt de volgende bewerkingen:
 
 | Bewerking | Functie |
 | --------- | -------- |
@@ -226,4 +226,4 @@ write_tracker <- dataset_writer$write({PANDA_DATAFRAME}, file_format='json')
 
 ## Volgende stappen
 
-Nadat u de `platform_sdk` gegevenslader hebt geconfigureerd, worden de gegevens voorbereid en vervolgens gesplitst naar de gegevenssets `train` en `val` . Om over gegevensvoorbereiding en eigenschaptechniek te leren gelieve de sectie over [ te bezoeken gegevens voorbereiding en eigenschapengineering ](../jupyterlab/create-a-model.md#data-preparation-and-feature-engineering) in het leerprogramma voor het creëren van een recept gebruikend [!DNL JupyterLab] laptops.
+Nadat u de gegevenslader van `platform_sdk` hebt geconfigureerd, worden de gegevens voorbereid en vervolgens gesplitst naar de gegevenssets `train` en `val` . Om over gegevensvoorbereiding en eigenschaptechniek te leren gelieve de sectie over [ te bezoeken gegevens voorbereiding en eigenschapengineering ](../jupyterlab/create-a-model.md#data-preparation-and-feature-engineering) in het leerprogramma voor het creëren van een recept gebruikend [!DNL JupyterLab] laptops.

@@ -1,10 +1,10 @@
 ---
-keywords: Experience Platform;thuis;populaire onderwerpen;controle;monitor;gegevensstromen;controle opname;gegevensopname;gegevensopname;gegevensopname;meningsverslagen;meningspartijen;
+keywords: Experience Platform;home;populaire onderwerpen;controle;monitor;gegevensstromen;controle opname;gegevensopname;gegevensopname;gegevensopname;meningsverslagen;meningspartijen;
 solution: Experience Platform
 title: Gegevensinname controleren
 description: Deze gebruikershandleiding bevat een aantal stappen voor het controleren van uw gegevens in de gebruikersinterface van Adobe Experience Platform. Voor deze handleiding hebt u een Adobe ID nodig en hebt u toegang tot Adobe Experience Platform.
 exl-id: 85711a06-2756-46f9-83ba-1568310c9f73
-source-git-commit: 9399a242b855e151e5822035bc952efa89fe4bf0
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '641'
 ht-degree: 0%
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 # Inname van gegevens controleren
 
-Met gegevensinvoer kunt u uw gegevens opnemen in Adobe Experience Platform. U kunt batch-opname gebruiken, waardoor u gegevens kunt invoegen met verschillende bestandstypen (zoals CSV&#39;s), of streaming opname, waardoor u uw gegevens in [!DNL Platform] kunt invoeren met streaming eindpunten in real-time.
+Met gegevensinvoer kunt u uw gegevens opnemen in Adobe Experience Platform. U kunt batch-opname gebruiken, waardoor u gegevens kunt invoegen met verschillende bestandstypen (zoals CSV&#39;s), of streaming opname, waardoor u uw gegevens in [!DNL Experience Platform] kunt invoeren met streaming eindpunten in real-time.
 
 Deze gebruikershandleiding bevat stappen voor het controleren van gegevens in de gebruikersinterface van Adobe Experience Platform. Voor deze handleiding hebt u een Adobe ID nodig en hebt u toegang tot Adobe Experience Platform.
 
@@ -30,9 +30,9 @@ Deze gebruikershandleiding bevat stappen voor het controleren van gegevens in de
 >
 >Als u het totaal van de gebeurtenissen op een bepaalde datum wilt berekenen, gebruikt u de expressie: `total events / day = ingestion rate * 60 * 60 * 24` .
 
-In het [ Experience Platform UI ](https://platform.adobe.com), uitgezochte **[!UICONTROL Monitoring]** op het linkernavigatiemenu, die door **[!UICONTROL Streaming end-to-end]** wordt gevolgd.
+In [ Experience Platform UI ](https://platform.adobe.com), uitgezochte **[!UICONTROL Monitoring]** op het linkernavigatiemenu, die door **[!UICONTROL Streaming end-to-end]** wordt gevolgd.
 
-De controlepagina van **[!UICONTROL Streaming end-to-end]** wordt weergegeven. Deze werkruimte biedt een grafiek die de snelheid weergeeft van gestreamde gebeurtenissen die worden ontvangen door [!DNL Platform] , een grafiek die de snelheid weergeeft van gestreamde gebeurtenissen die zijn verwerkt door [[!DNL Real-Time Customer Profile]](../../profile/home.md) , en een gedetailleerde lijst met binnenkomende gegevens.
+De controlepagina van **[!UICONTROL Streaming end-to-end]** wordt weergegeven. Deze werkruimte biedt een grafiek die de snelheid weergeeft van gestreamde gebeurtenissen die worden ontvangen door [!DNL Experience Platform] , een grafiek die de snelheid weergeeft van gestreamde gebeurtenissen die zijn verwerkt door [[!DNL Real-Time Customer Profile]](../../profile/home.md) , en een gedetailleerde lijst met binnenkomende gegevens.
 
 ![](../images/quality/monitor-data-flows/list-streams.png)
 

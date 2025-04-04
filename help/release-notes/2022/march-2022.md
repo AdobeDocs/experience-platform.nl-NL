@@ -1,36 +1,36 @@
 ---
-title: Opmerkingen bij de release van Adobe Experience Platform, maart 2022
+title: Aanvullende informatie van maart 2022 voor Adobe Experience Platform
 description: Aanvullende informatie van maart 2022 voor Adobe Experience Platform.
 exl-id: 0d499aa6-e25d-4d34-ad32-5e4ab361cba1
-source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1171'
-ht-degree: 2%
+source-wordcount: '1181'
+ht-degree: 10%
 
 ---
 
-# Opmerkingen bij de release van Adobe Experience Platform
+# Aanvullende informatie voor Adobe Experience Platform
 
-**Releasedatum: donderdag 30 maart 2022**
+**Releasedatum:donderdag 30 maart 2022**
 
 Nieuwe functies in Adobe Experience Platform:
 
 - [Controlelogboeken](#audit-logs)
-- [Gerelateerde accounts in Real-Time CDP B2B Edition](#related-accounts)
+- [Verwante accounts in Real-Time CDP B2B edition](#related-accounts)
 
 Updates voor bestaande functies in Adobe Experience Platform:
 
 - [Waarschuwingen](#alerts)
 - [[!DNL Dashboards]](#dashboards)
-- [Gegevensverzameling](#data-collection)
+- [Dataverzameling](#data-collection)
 - [[!DNL Query Service]](#query-service)
 - [Bronnen](#sources)
 
 ## Auditlogboeken {#audit-logs}
 
-Experience Platform staat u toe om gebruikersactiviteit voor diverse diensten en mogelijkheden te controleren. De auditlogboeken bevatten informatie over wie wat heeft gedaan en wanneer.
+Met Experience Platform kunt u gebruikersactiviteiten controleren op verschillende services en mogelijkheden. De auditlogboeken bevatten informatie over wie wat heeft gedaan en wanneer.
 
-**Nieuwe eigenschappen**
+**Nieuwe functies**
 
 | Functie | Beschrijving |
 | --- | --- |
@@ -39,29 +39,29 @@ Experience Platform staat u toe om gebruikersactiviteit voor diverse diensten en
 
 {style="table-layout:auto"}
 
-Voor meer informatie over controlelogboeken in Platform, verwijs naar het [ overzicht van controlelogboeken ](../../landing/governance-privacy-security/audit-logs/overview.md).
+Voor meer informatie over controlelogboeken in Experience Platform, verwijs naar het [ overzicht van controlelogboeken ](../../landing/governance-privacy-security/audit-logs/overview.md).
 
-## Gerelateerde accounts in Real-Time CDP B2B Edition {#related-accounts}
+## Verwante accounts in Real-Time CDP B2B edition {#related-accounts}
 
 >[!NOTE]
 >
->De functie Verwante accounts is alleen beschikbaar voor klanten van de Real-Time CDP B2B Edition.
+>De functie Verwante accounts is alleen beschikbaar voor klanten van de Real-Time CDP B2B edition.
 
 B2B-ondernemingen hebben vaak hun klantgegevens opgeslagen in meerdere systemen, elk met inbegrip van slechts gedeeltelijke of zelfs conflicterende gegevens voor dezelfde reële bedrijfsentiteit. Dit zorgt voor een enorme uitdaging om tot een accuraat beeld van hun klanten te komen, waardoor de efficiëntie en effectiviteit van hun B2B-marketing- en -verkoopinspanningen afnemen. Met de release van verwante accounts geeft [!DNL Real-Time CDP B2B] nu een lijst weer met accounts die lijken op de account waarin u bladert. U kunt de verwante rekeningen in uw segmentdefinities omvatten om uw bereik uit te breiden of bredere criteria in uw segmenten toe te passen.
 
 Meer informatie over de functie vindt u op de volgende documentatiepagina&#39;s:
 
-- [Gerelateerde accounts in Real-Time CDP B2B Edition overzicht](../../rtcdp/b2b-ai-ml-services/related-accounts.md)
+- [Overzicht van verwante accounts in Real-Time CDP B2B edition](../../rtcdp/b2b-ai-ml-services/related-accounts.md)
 - [Het tabblad Verwante accounts in de gebruikersinterface voor het accountprofiel](../../rtcdp/accounts/account-profile-ui-guide.md#related-accounts-tab)
 - [Hoe verwant rekeningen in segmentdefinities gebruiken](../../rtcdp/segmentation/b2b.md#related-accounts)
 
-Meer over de Uitgave van Real-Time CDP B2B leren, zie het [ overzicht ](../../rtcdp/overview.md).
+Meer over Real-Time CDP B2B edition leren, zie het [ overzicht ](../../rtcdp/overview.md).
 
 ## Waarschuwingen {#alerts}
 
-Met Experience Platform kunt u zich abonneren op gebeurtenisgebaseerde waarschuwingen voor verschillende platformactiviteiten. U kunt zich abonneren op verschillende waarschuwingsregels via het tabblad [!UICONTROL Alerts] in de gebruikersinterface van het platform en u kunt ervoor kiezen waarschuwingsberichten te ontvangen in de gebruikersinterface zelf of via e-mailberichten.
+Met Experience Platform kunt u zich abonneren op waarschuwingen die zijn gebaseerd op gebeurtenissen voor verschillende Experience Platform-activiteiten. U kunt zich abonneren op verschillende waarschuwingsregels via het tabblad [!UICONTROL Alerts] in de Experience Platform-gebruikersinterface en u kunt ervoor kiezen waarschuwingsberichten te ontvangen in de gebruikersinterface zelf of via e-mailberichten.
 
-**Bijgewerkte eigenschappen**
+**Bijgewerkte functies**
 
 | Functie | Beschrijving |
 | --- | --- |
@@ -69,7 +69,7 @@ Met Experience Platform kunt u zich abonneren op gebeurtenisgebaseerde waarschuw
 
 {style="table-layout:auto"}
 
-Voor meer informatie over alarm in Platform, verwijs naar het [ alarm overzicht ](../../observability/alerts/overview.md).
+Voor meer informatie over alarm in Experience Platform, verwijs naar het [ alarm overzicht ](../../observability/alerts/overview.md).
 
 ## Dashboards {#dashboards}
 
@@ -79,7 +79,7 @@ Adobe Experience Platform biedt meerdere [!DNL dashboards] waarmee u belangrijke
 
 Op het dashboard Profielen wordt een momentopname weergegeven van de kenmerkgegevens (record) die uw organisatie heeft in de profielopslag in Experience Platform.
 
-**Bijgewerkte eigenschappen**
+**Bijgewerkte functies**
 
 | Functie | Beschrijving |
 | --- | --- |
@@ -94,9 +94,9 @@ Voor meer informatie over de dashboards van Profielen, verwijs naar het [ overzi
 
 ### Doeldashboards
 
-Het dashboard van Doelen toont een momentopname van de bestemmingen die uw organisatie binnen Experience Platform heeft toegelaten.
+Op het dashboard Doelen wordt een momentopname weergegeven van de doelen die uw organisatie binnen Experience Platform heeft ingeschakeld.
 
-**Bijgewerkte eigenschappen**
+**Bijgewerkte functies**
 
 | Functie | Beschrijving |
 | --- | --- |
@@ -104,26 +104,26 @@ Het dashboard van Doelen toont een momentopname van de bestemmingen die uw organ
 
 {style="table-layout:auto"}
 
-Voor meer informatie over dashboards van Doelen in Platform, verwijs naar het [ overzicht van dashboards van Doelen ](../../dashboards/guides/destinations.md).
+Voor meer informatie over dashboards van Doelen in Experience Platform, verwijs naar het [ overzicht van dashboards van Doelen ](../../dashboards/guides/destinations.md).
 
-## Gegevensverzameling {#data-collection}
+## Dataverzameling {#data-collection}
 
-Het platform biedt een reeks technologieën die u toestaan om cliënt-zijgegevens van de klantenervaring te verzamelen en het te verzenden naar de Edge Network van Adobe Experience Platform waar het kan worden verrijkt, worden getransformeerd, en aan Adobe of niet-Adobe bestemmingen worden gedistribueerd.
+Experience Platform biedt een reeks technologieën waarmee u gegevens over klantervaringen op de client kunt verzamelen en naar de Adobe Experience Platform Edge Network kunt sturen waar deze kunnen worden verrijkt, getransformeerd en gedistribueerd naar Adobe- of niet-Adobe-bestemmingen.
 
-**Nieuwe eigenschappen**
+**Nieuwe functies**
 
 | Functie | Beschrijving |
 | --- | --- |
 | Algemene gegevensstroominstellingen | U kunt nu verschillende nieuwe algemene instellingen configureren tijdens het configureren van een gegevensstroom: geo-locatie, cookie van eerste-partijid en synchronisatie van externe id&#39;s. Zie de sectie op [ vormend een datastream ](../../datastreams/overview.md#create) in de gids UI van Gegevensstromen voor meer informatie. |
-| [ de Server API van de Edge Network ](../../server-api/overview.md) | De server API staat klanten toe om met de Edge Network van het Experience Platform in wisselwerking te staan gebruikend een nieuw, voor authentiek verklaard eindpunt, om een verscheidenheid van gegevensinzameling, verpersoonlijking, reclame en marketing gebruiksgevallen te aandrijven. |
+| [ de Server API van Edge Network ](../../server-api/overview.md) | De server API staat klanten toe om met Experience Platform Edge Network in wisselwerking te staan gebruikend een nieuw, voor authentiek verklaard eindpunt, om een verscheidenheid van gegevensinzameling, verpersoonlijking, reclame en marketing gebruiksgevallen te drijven. |
 
-Voor meer informatie over gegevensinzameling in Platform, zie gelieve het [ overzicht van de gegevensinzameling ](../../collection/home.md).
+Voor meer informatie over gegevensinzameling in Experience Platform, te zien gelieve het [ overzicht van de gegevensinzameling ](../../collection/home.md).
 
 ## Query-service {#query-service}
 
-Met [!DNL Query Service] kunt u standaard-SQL gebruiken om query&#39;s uit te voeren op gegevens in Adobe Experience Platform [!DNL Data Lake] . U kunt zich bij om het even welke datasets van [!DNL Data Lake] aansluiten en de vraagresultaten vangen als nieuwe dataset voor gebruik in rapportering, de Wetenschap van Gegevens Workspace, of voor opname in het Profiel van de Klant in real time.
+Met [!DNL Query Service] kunt u standaard-SQL gebruiken om query&#39;s uit te voeren op gegevens in Adobe Experience Platform [!DNL Data Lake] . U kunt willekeurige datasets van [!DNL Data Lake] combineren en de queryresultaten vastleggen als nieuwe dataset voor gebruik in rapportage, de werkruimte voor datawetenschappen, of voor opname in het Real-Time Customer Profile.
 
-**Bijgewerkte eigenschappen**
+**Bijgewerkte functies**
 
 | Functie | Beschrijving |
 | --- | --- |
@@ -135,16 +135,16 @@ Voor meer informatie over beschikbare eigenschappen, verwijs naar het [ overzich
 
 ## Bronnen {#sources}
 
-Adobe Experience Platform kan gegevens uit externe bronnen invoeren, terwijl u die gegevens kunt structureren, labelen en verbeteren met behulp van de platformservices. U kunt gegevens van een verscheidenheid van bronnen zoals de toepassingen van de Adobe, op wolk-gebaseerde opslag, derdesoftware, en uw systeem van CRM opnemen.
+Adobe Experience Platform kan gegevens uit externe bronnen invoeren, terwijl u die gegevens kunt structureren, labelen en verbeteren met behulp van Experience Platform-services. U kunt gegevens opnemen uit verschillende bronnen, zoals Adobe-toepassingen, cloudopslag, software van derden en uw CRM-systeem.
 
-Experience Platform biedt een RESTful-API en een interactieve UI waarmee u eenvoudig bronverbindingen voor verschillende gegevensproviders kunt instellen. Deze bronverbindingen staan u toe om met externe opslagsystemen en de diensten van CRM voor authentiek te verklaren en te verbinden, tijden voor inname looppas te plaatsen, en gegevensopname door te beheren.
+Experience Platform biedt een RESTful-API en een interactieve gebruikersinterface waarmee u eenvoudig bronverbindingen voor verschillende gegevensproviders kunt instellen. Deze bronverbindingen staan u toe om met externe opslagsystemen en de diensten van CRM voor authentiek te verklaren en te verbinden, tijden voor inname looppas te plaatsen, en gegevensopname door te beheren.
 
-**Bijgewerkte eigenschappen**
+**Bijgewerkte functies**
 
 | Functie | Beschrijving |
 | --- | --- |
-| Nieuwe bronnen nu beschikbaar voor B2B-gebruik | U kunt nu alle beschikbare bronnen op Platform gebruiken voor B2B-gebruiksgevallen. Zie de [ broncatalogus ](../../sources/home.md) voor een volledige lijst van beschikbare bronnen. |
-| Algemene beschikbaarheid van nieuwe [!DNL Oracle Eloqua] bron | U kunt nu de [!DNL Oracle Eloqua] -bron gebruiken om naadloos gegevens in te voeren van uw [!DNL Oracle Eloqua] -instantie (account, campagne, contactpersonen) naar Platform. Zie de documentatie bij [ het creëren van een  [!DNL Oracle Eloqua]  bronverbinding ](../../sources/connectors/marketing-automation/oracle-eloqua.md) voor meer informatie. |
+| Nieuwe bronnen nu beschikbaar voor B2B-gebruik | U kunt nu alle beschikbare bronnen op Experience Platform voor B2B-gebruiksgevallen gebruiken. Zie de [ broncatalogus ](../../sources/home.md) voor een volledige lijst van beschikbare bronnen. |
+| Algemene beschikbaarheid van nieuwe [!DNL Oracle Eloqua] bron | U kunt nu de [!DNL Oracle Eloqua] -bron gebruiken om naadloos gegevens in te voeren van uw [!DNL Oracle Eloqua] -instantie (account, campagne, contactpersonen) naar Experience Platform. Zie de documentatie bij [ het creëren van een  [!DNL Oracle Eloqua]  bronverbinding ](../../sources/connectors/marketing-automation/oracle-eloqua.md) voor meer informatie. |
 | API-verbeteringen voor [!DNL Data Landing Zone] | De bron [!DNL Data Landing Zone] ondersteunt nu automatische detectie van bestandseigenschappen bij gebruik van de API van [!DNL Flow Service] . Zie de documentatie bij [ het creëren van a  [!DNL Data Landing Zone]  bronverbinding ](../../sources/tutorials/api/create/cloud-storage/data-landing-zone.md) voor meer informatie. |
 
 {style="table-layout:auto"}

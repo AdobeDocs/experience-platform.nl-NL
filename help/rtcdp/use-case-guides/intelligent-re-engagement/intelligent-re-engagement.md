@@ -3,9 +3,9 @@ title: Intelligente re-engagement
 description: Lever boeiende en verbonden ervaringen tijdens de belangrijkste conversiemomenten om op een intelligente manier opnieuw in contact te komen met onregelmatige klanten.
 feature: Use Cases
 exl-id: 13f6dbc9-7471-40bf-824d-27922be0d879
-source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '3869'
+source-wordcount: '3871'
 ht-degree: 1%
 
 ---
@@ -42,7 +42,7 @@ Wanneer u de stappen voor het implementeren van het hoofdlettergebruik uitvoert,
    * [Gegevenssets](/help/catalog/datasets/overview.md)
    * [Doelgroepen](/help/segmentation/home.md)
    * [[!DNL Adobe Journey Optimizer]](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/journey.html)
-   * [Doelen](/help/destinations/home.md)
+   * [Bestemmingen](/help/destinations/home.md)
 
 * [[!DNL Adobe Journey Optimizer] ](https://experienceleague.adobe.com/docs/journey-optimizer-learn/tutorials/introduction-to-journey-optimizer/introduction.html) - Helpt u verbonden, contextafhankelijke, en gepersonaliseerde ervaringen aan uw klanten te leveren.
    * [ de Trigger van de Gebeurtenis of van het Publiek ](https://experienceleague.adobe.com/docs/journey-optimizer/using/offer-decisioning/collect-event-data/data-collection.html)
@@ -147,7 +147,7 @@ Met deze veldgroep kunt u uw reis testen voordat deze wordt gepubliceerd met tes
 
 #### Schema voor digitale transacties van klanten
 
-Dit schema wordt gebruikt om de gebeurtenisgegevens te structureren en te verwijzen die uw klantenactiviteit vormen die op uw website of bijbehorende digitale platforms voorkomt. Dit gegeven wordt typisch opgenomen in [!DNL Adobe Experience Platform] via [ Web SDK ](/help/web-sdk/home.md) en is noodzakelijk om diverse doorbladeren en omzettingsgebeurtenissen van verwijzingen te voorzien die voor het teweegbrengen van reizen, gedetailleerde online klantenanalyse, verbeterde publieksmogelijkheden, en gepersonaliseerd overseinen worden gebruikt.
+Dit schema wordt gebruikt om de gebeurtenisgegevens te structureren en te verwijzen die uw klantenactiviteit vormen die op uw website of bijbehorende digitale platforms voorkomt. Dit gegeven wordt typisch opgenomen in [!DNL Adobe Experience Platform] via [ SDK van het Web ](/help/web-sdk/home.md) en is noodzakelijk om diverse doorbladeren en omzettingsgebeurtenissen van verwijzingen te voorzien die voor het teweegbrengen van reizen, gedetailleerde online klantenanalyse, verbeterde publieksmogelijkheden, en gepersonaliseerd overseinen worden gebruikt.
 
 Het schema voor digitale transacties van de klant wordt vertegenwoordigd door een [[!UICONTROL XDM ExperienceEvent]](/help/xdm/classes/experienceevent.md) -klasse.
 
@@ -165,16 +165,16 @@ De klasse [[!UICONTROL XDM ExperienceEvent]](/help/xdm/classes/experienceevent.m
 
 +++Details eindgebruiker-id (veldgroep)
 
-De ](/help/xdm/field-groups/event/enduserids.md) het gebiedsgroep van de Details van de Gebruiker van het 0} Eind {wordt gebruikt om de identiteitsinformatie van een individu over verscheidene toepassingen van de Adobe te beschrijven.[
+De ](/help/xdm/field-groups/event/enduserids.md) het gebiedsgroep van de Details van de Gebruiker van het 0} Eind {wordt gebruikt om de identiteitsinformatie van een individu over verscheidene toepassingen van Adobe te beschrijven.[
 
 | Velden | Beschrijving |
 | --- | --- |
 | `endUserIDs._experience.emailid.authenticatedState` | Status van e-mailadres voor eindgebruiker is geverifieerd. |
 | `endUserIDs._experience.emailid.id` | E-mailadres van eindgebruiker. |
 | `endUserIDs._experience.emailid.namespace.code` | Naamruimte-code van e-mailadres van eindgebruiker. |
-| `endUserIDs._experience.mcid.authenticatedState` | De status MCID (Marketing Cloud ID) is geverifieerd. [!DNL Adobe] De MCID wordt nu ECID (Experience Cloud-id) genoemd. |
-| `endUserIDs._experience.mcid.id` | [!DNL Adobe] Marketing Cloud-id (MCID). De MCID wordt nu ECID (Experience Cloud-id) genoemd. |
-| `endUserIDs._experience.mcid.namespace.code` | [!DNL Adobe] Marketing Cloud-id (MCID) naamruimtecode. |
+| `endUserIDs._experience.mcid.authenticatedState` | [!DNL Adobe] Status geverifieerd voor Marketing Cloud ID (MCID). De MCID wordt nu de Experience Cloud-id (ECID) genoemd. |
+| `endUserIDs._experience.mcid.id` | [!DNL Adobe] Marketing Cloud-id (MCID). De MCID wordt nu de Experience Cloud-id (ECID) genoemd. |
+| `endUserIDs._experience.mcid.namespace.code` | [!DNL Adobe] Marketing Cloud ID (MCID)-naamruimtecode. |
 
 +++
 
@@ -205,7 +205,7 @@ De externe Attributen van de Controle van het Systeem van Source is een standaar
 
 #### Offline transactieschema van de klant
 
-Dit schema wordt gebruikt om de gebeurtenisgegevens te structureren en te verwijzen die uw klantenactiviteit vormen die op platforms buiten uw website voorkomt. Deze gegevens worden doorgaans in [!DNL Adobe Experience Platform] opgenomen vanuit een besturingssysteem (of een vergelijkbaar systeem) en worden meestal via een API-verbinding gestreamd naar Platform. Zijn doel is de diverse off-line omzettingsgebeurtenissen van verwijzingen te voorzien die voor het teweegbrengen van reizen, diepe online en off-line klantenanalyse, verbeterde publieksmogelijkheden en gepersonaliseerd overseinen worden gebruikt.
+Dit schema wordt gebruikt om de gebeurtenisgegevens te structureren en te verwijzen die uw klantenactiviteit vormen die op platforms buiten uw website voorkomt. Deze gegevens worden doorgaans in [!DNL Adobe Experience Platform] ingevoerd via een besturingssysteem (of vergelijkbaar systeem) en worden meestal via een API-verbinding naar Experience Platform gestreamd. Zijn doel is de diverse off-line omzettingsgebeurtenissen van verwijzingen te voorzien die voor het teweegbrengen van reizen, diepe online en off-line klantenanalyse, verbeterde publieksmogelijkheden en gepersonaliseerd overseinen worden gebruikt.
 
 Het schema voor offlinetransacties van de klant wordt vertegenwoordigd door een [[!UICONTROL XDM ExperienceEvent]](/help/xdm/classes/experienceevent.md) -klasse.
 
@@ -257,13 +257,13 @@ De externe Attributen van de Controle van het Systeem van Source is een standaar
 
 +++
 
-#### Adobe webverbindingsschema
+#### Adobe-schema voor webconnector
 
 >[!NOTE]
 >
 >Dit is een optionele implementatie als u [[!DNL Adobe Analytics Source Connector]](/help/sources/connectors/adobe-applications/analytics.md) gebruikt.
 
-Dit schema wordt gebruikt om de gebeurtenisgegevens te structureren en te verwijzen die uw klantenactiviteit vormen die op uw website of bijbehorende digitale platforms voorkomt. Dit schema is gelijkaardig aan het Digitale schema van Transacties van de Klant maar in dat het bedoeld is om te worden gebruikt wanneer [ SDK van het Web ](/help/web-sdk/home.md) geen optie voor gegevensinzameling is; zo, is dit schema nodig wanneer u [!DNL Adobe Analytics Source Connector] gebruikt om uw online gegevens in [!DNL Adobe Experience Platform] of als primaire of secundaire gegevensstroom te verzenden.
+Dit schema wordt gebruikt om de gebeurtenisgegevens te structureren en te verwijzen die uw klantenactiviteit vormen die op uw website of bijbehorende digitale platforms voorkomt. Dit schema is gelijkaardig aan het Digitale schema van Transacties van de Klant maar verschilt in die zin dat het bedoeld is om te worden gebruikt wanneer [ SDK van het Web ](/help/web-sdk/home.md) geen optie voor gegevensinzameling is; zo, is dit schema nodig wanneer u [!DNL Adobe Analytics Source Connector] gebruikt om uw online gegevens in [!DNL Adobe Experience Platform] of als primaire of secundaire gegevensstroom te verzenden.
 
 Het schema van de [!DNL Adobe] webconnector wordt vertegenwoordigd door een [[!UICONTROL XDM ExperienceEvent]](/help/xdm/classes/experienceevent.md) -klasse.
 
@@ -288,9 +288,9 @@ De ](/help/xdm/field-groups/event/analytics-full-extension.md) het gebiedsgroep 
 | `endUserIDs._experience.emailid.authenticatedState` | Status van e-mailadres voor eindgebruiker is geverifieerd. |
 | `endUserIDs._experience.emailid.id` | E-mailadres van eindgebruiker. |
 | `endUserIDs._experience.emailid.namespace.code` | Naamruimte-code van e-mailadres van eindgebruiker. |
-| `endUserIDs._experience.mcid.authenticatedState` | De status MCID (Marketing Cloud ID) is geverifieerd. [!DNL Adobe] De MCID wordt nu ECID (Experience Cloud-id) genoemd. |
-| `endUserIDs._experience.mcid.id` | [!DNL Adobe] Marketing Cloud-id (MCID). De MCID wordt nu ECID (Experience Cloud-id) genoemd. |
-| `endUserIDs._experience.mcid.namespace.code` | [!DNL Adobe] Marketing Cloud-id (MCID) naamruimtecode. |
+| `endUserIDs._experience.mcid.authenticatedState` | [!DNL Adobe] Status geverifieerd voor Marketing Cloud ID (MCID). De MCID wordt nu de Experience Cloud-id (ECID) genoemd. |
+| `endUserIDs._experience.mcid.id` | [!DNL Adobe] Marketing Cloud-id (MCID). De MCID wordt nu de Experience Cloud-id (ECID) genoemd. |
+| `endUserIDs._experience.mcid.namespace.code` | [!DNL Adobe] Marketing Cloud ID (MCID)-naamruimtecode. |
 
 +++
 
@@ -350,7 +350,7 @@ Voor meer informatie over hoe te om een publiek tot stand te brengen, lees de [ 
 
 Voor meer informatie over hoe te om [ Soorten publiek ](/help/segmentation/home.md) direct samen te stellen, lees de [ gids UI van de Samenstelling van het publiek ](/help/segmentation/ui/audience-composition.md).
 
-Voor meer informatie over hoe te om publiek door Platform-afgeleide publieksdefinities te bouwen, lees de [ gids UI van de Bouwer van de Publiek ](/help/segmentation/ui/segment-builder.md).
+Voor meer informatie over hoe te om publiek door Experience Platform-Afgeleide publieksdefinities te bouwen, lees de [ gids UI van de Bouwer van de Publiek ](/help/segmentation/ui/segment-builder.md).
 
 >[!BEGINTABS]
 
@@ -763,7 +763,7 @@ Het bestemmingskader wordt gebruikt voor betaalde media advertenties. Zodra de t
 
 #### Vereiste gegevens voor bestemmingen
 
-Streaming publiek exportbestemmingen (zoals Facebook, Google Customer Match, Google DV360) ondersteunen verschillende identiteiten van klantgegevens:
+Streaming publiek exportbestemmingen (zoals Facebook, Google Customer Match, Google DV360) ondersteunen verschillende identiteiten uit klantgegevens:
 
 * `personalEmail.address`
 * `ECID`
@@ -775,7 +775,7 @@ U kunt verlaten productdoorbladeren activeren en het kartpubliek verlaten aan be
    * [ Advertising ](/help/destinations/catalog/advertising/overview.md)/[ Betaalde Media &amp; Sociale ](/help/destinations/catalog/social/overview.md)
    * [Mobiel](/help/destinations/catalog/mobile-engagement/overview.md)
    * [Streaming doel](/help/destinations/catalog/streaming/http-destination.md)
-   * [ de bestemming van de Douane die door Destination SDK te gebruiken wordt gecreeerd.](/help/destinations/destination-sdk/overview.md). Als u een ultieme klant van Real-Time CDP bent, kunt u een privé [ douanebestemming ook creëren gebruikend Destination SDK ](/help/destinations/destination-sdk/overview.md#productized-and-custom-integrations)
+   * [ de bestemming van de Douane die door Destination SDK wordt gecreeerd te gebruiken.](/help/destinations/destination-sdk/overview.md). Als u een klant van Real-Time CDP Ultimate bent, kunt u een privé [ douanebestemming ook creëren gebruikend Destination SDK ](/help/destinations/destination-sdk/overview.md#productized-and-custom-integrations)
 
 ## Volgende stappen {#next-steps}
 

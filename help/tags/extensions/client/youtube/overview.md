@@ -2,10 +2,10 @@
 title: Overzicht van YouTube Video Tracking Extension
 description: Meer informatie over de YouTube Video Tracking-tagextensie in Adobe Experience Platform.
 exl-id: 703f7b04-f72f-415f-80d6-45583fa661bc
-source-git-commit: 627835011784ffca8487d446c04c6948dfff059d
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '895'
-ht-degree: 1%
+source-wordcount: '897'
+ht-degree: 6%
 
 ---
 
@@ -13,7 +13,7 @@ ht-degree: 1%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch is omgedoopt tot een reeks technologieën voor gegevensverzameling in Adobe Experience Platform. Diverse terminologische wijzigingen zijn als gevolg hiervan in de productdocumentatie doorgevoerd. Gelieve te verwijzen naar het volgende [ document ](../../../term-updates.md) voor een geconsolideerde verwijzing van de terminologieveranderingen.
+>Adobe Experience Platform Launch is omgedoopt tot een reeks technologieën voor dataverzameling in Adobe Experience Platform.  Als gevolg hiervan zijn er verschillende terminologiewijzigingen in de productdocumentatie doorgevoerd. Raadpleeg het volgende [ document ](../../../term-updates.md) voor een geconsolideerde referentie van de terminologiewijzigingen.
 
 **Vereisten**
 
@@ -23,7 +23,7 @@ Elke markeringseigenschap in Adobe Experience Platform vereist dat de volgende e
 * Experience Cloud Visitor ID Service
 * Kernextensie
 
-Gebruik [ &quot;bed een speler in gebruikend een \ &lt;iframe \> markering&quot;](https://developers.google.com/youtube/player_parameters#Manual_IFrame_Embeds) codefragment van de de ontwikkelaarsdocs van Google in de HTML van elke Web-pagina waar een videospeler moet teruggeven.
+Gebruik [ &quot;bed een speler in gebruikend een \ &lt;iframe \> markering&quot;](https://developers.google.com/youtube/player_parameters#Manual_IFrame_Embeds) codefragment van de de ontwikkelaarsdocs van Google in HTML van elke Web-pagina waar een videospeler moet teruggeven.
 
 Deze extensie, versie 2.0.1, ondersteunt het insluiten van een of meer YouTube-video&#39;s op één webpagina door een `id` -kenmerk in te voegen met een unieke waarde in de iFrame-scripttag en `enablejsapi=1` en `rel=0` toe te voegen aan het einde van de `src` -kenmerkwaarde, als dit nog niet het geval is. Bijvoorbeeld:
 
@@ -89,16 +89,16 @@ De volgende video-extensieobjecten moeten worden opgenomen.
 * **Acties**: Gebruik de **uitbreiding van de Analyse** aan &quot;Reeks Variabelen&quot;actie, om in kaart te brengen:
 
    * De gebeurtenis voor het starten van de video,
-   * Een eigenschap/eVar voor het gegevenselement Videoduur
-   * Een eigenschap/eVar voor het gegevenselement Video-id
+   * Een prop/eVar voor het gegevenselement Videoduur
+   * Een proxy/eVar voor het gegevenselement Video-id
    * A prop/eVar for the Video Name data element
-   * Een eigenschap/eVar voor het URL-gegevenselement Video
+   * Een proxy/eVar voor het URL-gegevenselement Video
 
   Dan, omvat de &quot;Send Beacon&quot;actie (`s.tl`) met verbindingsnaam &quot;videobegin,&quot;door een &quot;Duidelijke actie van Variabelen&quot;wordt gevolgd.
 
 >[!TIP]
 > 
->Voor implementaties waar de veelvoudige steunen of eVars voor elk videoelement niet kunnen worden gebruikt, kunnen de waarden van het gegevenselement binnen Platform worden samengevoegd, in classificatierapporten worden ontleed gebruikend het hulpmiddel van de Bouwer van de Regel van de Classificatie, zoals die in [ https://experienceleague.adobe.com/docs/analytics/components/classifications/classifications-rulebuilder/classification-rule-builder.html ](https://experienceleague.adobe.com/docs/analytics/components/classifications/classifications-rulebuilder/classification-rule-builder.html) wordt verklaard, en dan als segment in Analysis Workspace worden toegepast.
+>Voor implementaties waar de veelvoudige steunen of eVars voor elk videoelement niet kunnen worden gebruikt, kunnen de waarden van het gegevenselement binnen Experience Platform worden samengevoegd, die in classificatierapporten worden geparseerd gebruikend het hulpmiddel van de Bouwer van de Regel van de Classificatie, zoals die in [ https://experienceleague.adobe.com/docs/analytics/components/classifications/classifications-rulebuilder/classification-rule-builder.html ](https://experienceleague.adobe.com/docs/analytics/components/classifications/classifications-rulebuilder/classification-rule-builder.html) wordt verklaard, en dan als segment in Analysis Workspace worden toegepast.
 
 Als u videogegevenswaarden wilt samenvoegen, maakt u een nieuw gegevenselement met de naam &quot;Videometagegevens&quot; en programmeert u dit om alle videogegevenselementen (hierboven vermeld) te verzamelen en samen te voegen. Bijvoorbeeld:
 
@@ -114,4 +114,4 @@ r.push(_satellite.getVar('Extension Version'));
 return r.join('|');
 ```
 
-Voor meer informatie over hoe te om en hefboomwerking gegevenselementen effectief binnen Platform tot stand te brengen, lees de [ elementen van gegevenselementen ](../../../ui/managing-resources/data-elements.md) documentatie.
+Voor meer informatie over hoe te om en hefboomwerking gegevenselementen effectief binnen Experience Platform tot stand te brengen, lees de [ elementen van gegevenselementen ](../../../ui/managing-resources/data-elements.md) documentatie.

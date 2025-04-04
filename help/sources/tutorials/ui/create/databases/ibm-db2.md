@@ -5,7 +5,7 @@ title: IBM DB2 Source Connection maken in de gebruikersinterface
 type: Tutorial
 description: Leer hoe u een IBM DB2-bronverbinding maakt met de Adobe Experience Platform-interface.
 exl-id: 69c99f94-9cb9-43ff-9315-ce166ab35a60
-source-git-commit: e37c00863249e677f1645266859bf40fe6451827
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '510'
 ht-degree: 0%
@@ -18,7 +18,7 @@ ht-degree: 0%
 >
 > De IBM DB2-connector is in bèta. Zie het [ Bronoverzicht ](../../../../home.md#terms-and-conditions) voor meer informatie bij het gebruiken van bèta-geëtiketteerde schakelaars.
 
-Source-connectors in Adobe Experience Platform bieden de mogelijkheid om volgens een schema extern gesourceerde gegevens in te voeren. Deze zelfstudie bevat stappen voor het maken van een IBM DB2-bronconnector (hierna &quot;DB2&quot; genoemd) via de gebruikersinterface van [!DNL Platform] .
+Source-connectors in Adobe Experience Platform bieden de mogelijkheid om volgens een schema extern gesourceerde gegevens in te voeren. Deze zelfstudie bevat stappen voor het maken van een IBM DB2-bronconnector (hierna &quot;DB2&quot; genoemd) via de gebruikersinterface van [!DNL Experience Platform] .
 
 ## Aan de slag
 
@@ -46,7 +46,7 @@ Voor meer informatie over begonnen worden, verwijs naar [ dit document DB2 ](htt
 
 ## IBM DB2-account verbinden
 
-Nadat u de vereiste gegevens hebt verzameld, voert u de onderstaande stappen uit om uw DB2-account te koppelen aan [!DNL Platform] .
+Nadat u de vereiste gegevens hebt verzameld, voert u de onderstaande stappen uit om uw DB2-account te koppelen aan [!DNL Experience Platform] .
 
 Login aan [ Adobe Experience Platform ](https://platform.adobe.com) en selecteer dan **[!UICONTROL Sources]** van de linkernavigatiebar om tot de **[!UICONTROL Sources]** werkruimte toegang te hebben. In het scherm **[!UICONTROL Catalog]** worden diverse bronnen weergegeven waarmee u een account kunt maken.
 
@@ -72,4 +72,4 @@ Als u een bestaande account wilt verbinden, selecteert u de DB2-account waarmee 
 
 ## Volgende stappen
 
-Aan de hand van deze zelfstudie hebt u een verbinding met uw DB2-account tot stand gebracht. U kunt nu aan het volgende leerprogramma verdergaan en [ een dataflow vormen om gegevens in  [!DNL Platform]](../../dataflow/databases.md) te brengen.
+Aan de hand van deze zelfstudie hebt u een verbinding met uw DB2-account tot stand gebracht. U kunt nu aan het volgende leerprogramma verdergaan en [ een dataflow vormen om gegevens in  [!DNL Experience Platform]](../../dataflow/databases.md) te brengen.

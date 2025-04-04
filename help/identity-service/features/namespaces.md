@@ -2,9 +2,9 @@
 title: Overzicht van id-naamruimte
 description: Meer informatie over naamruimten in Identity Service.
 exl-id: 86cfc7ae-943d-4474-90c8-e368afa48b7c
-source-git-commit: 2a2e3fcc4c118925795951a459a2ed93dfd7f7d7
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1846'
+source-wordcount: '1848'
 ht-degree: 0%
 
 ---
@@ -37,7 +37,7 @@ Naamruimten vereisen inzicht in verschillende Adobe Experience Platform-services
 
 Een volledig gekwalificeerde identiteit omvat twee componenten: een **identiteitswaarde** en een **identiteit namespace**. Als de waarde van een identiteit bijvoorbeeld `scott@acme.com` is, biedt een naamruimte context aan deze waarde door deze te onderscheiden als een e-mailadres. Op dezelfde manier kan een naamruimte `555-123-456` als een telefoonnummer herkennen en `3126ABC` als een CRMID. Hoofdzakelijk, **verstrekt a namespace context aan een bepaalde identiteit**. Bij het afstemmen van recordgegevens over profielfragmenten, zoals wanneer [!DNL Real-Time Customer Profile] profielgegevens samenvoegt, moeten zowel de identiteitswaarde als de naamruimte overeenkomen.
 
-Twee profielfragmenten kunnen bijvoorbeeld verschillende primaire id&#39;s bevatten, maar ze hebben dezelfde waarde voor de naamruimte E-mail, zodat Experience Platform kan zien dat deze fragmenten in feite dezelfde persoon zijn en de gegevens samenbrengt in de identiteitsgrafiek voor de persoon.
+Twee profielfragmenten kunnen bijvoorbeeld verschillende primaire id&#39;s bevatten, maar hebben dezelfde waarde voor de naamruimte E-mail. Daarom kan Experience Platform zien dat deze fragmenten in feite dezelfde persoon zijn en de gegevens samenvoegen in de identiteitsgrafiek voor de persoon.
 
 >[!BEGINSHADEBOX]
 
@@ -76,7 +76,7 @@ Een naamruimte bestaat uit de volgende componenten:
    * Identiteitsgrafieken worden gegenereerd voor alle andere identiteitstypen.
 * Welke identiteiten worden verwijderd uit de identiteitsgrafiek wanneer de systeemgrenzen worden bereikt. Voor meer informatie, lees de [ gidsen voor identiteitsgegevens ](../guardrails.md).
 
-De volgende identiteitstypen zijn beschikbaar in het Experience Platform:
+De volgende identiteitstypen zijn beschikbaar in Experience Platform:
 
 | Identiteitstype | Beschrijving |
 | --- | --- |
@@ -85,20 +85,20 @@ De volgende identiteitstypen zijn beschikbaar in het Experience Platform:
 | Apparaat-id | Apparaat-id&#39;s identificeren hardwareapparaten, zoals IDFA (iPhone en iPad), GAID (Android) en RIDA (Roku), en kunnen door meerdere personen in huishoudens worden gedeeld. |
 | E-mailadres | E-mailadressen zijn vaak gekoppeld aan één persoon en kunnen daarom worden gebruikt om die persoon op verschillende kanalen te identificeren. Tot dit type identiteiten behoren ook PII&#39;s (Persoonlijke identificeerbare informatie). Dit is een aanwijzing voor [!DNL Identity Service] om de waarde gevoelig af te handelen. |
 | Id van niet-personen | Niet-persoonlijke id&#39;s worden gebruikt voor het opslaan van id&#39;s die naamruimten vereisen maar niet zijn verbonden met een personencluster. Bijvoorbeeld een product-SKU, gegevens met betrekking tot producten, organisaties of winkels. |
-| Partner-id | <ul><li>Identiteitskaart van de partner is herkenningstekens die door gegevenspartners worden gebruikt om mensen te vertegenwoordigen. Identiteitskaart van de partner is vaak pseudoniem zodat om de ware identiteit van een persoon niet te onthullen, en kan probabilistisch zijn. In Real-time Customer Data Platform, worden de Partner IDs gebruikt hoofdzakelijk voor uitgebreide publieksactivering en gegevensverrijking, en niet voor de verbindingen van de de grafiekgrafiek van de bouwidentiteit.</li><li>Identiteitsgrafieken worden niet geproduceerd wanneer het opnemen van een identiteit die een identiteitsnamespace omvat die als type van identiteitskaart van de Partner wordt gespecificeerd.</li><li>Het nalaten om partnergegevens op te nemen die het identiteitstype van identiteitskaart van de Partner gebruiken kon in het bereiken van de beperkingen van de systeemgrafiek op de Dienst van de Identiteit, evenals ongewenste samenvoeging van profielen resulteren.</li><ul> |
+| Partner-id | <ul><li>Identiteitskaart van de partner is herkenningstekens die door gegevenspartners worden gebruikt om mensen te vertegenwoordigen. Identiteitskaart van de partner is vaak pseudoniem zodat om de ware identiteit van een persoon niet te onthullen, en kan probabilistisch zijn. In Real-Time Customer Data Platform, worden de Partner IDs gebruikt hoofdzakelijk voor uitgebreide publieksactivering en gegevensverrijking, en niet voor de verbindingen van de de grafiekgrafiek van de bouwidentiteit.</li><li>Identiteitsgrafieken worden niet geproduceerd wanneer het opnemen van een identiteit die een identiteitsnamespace omvat die als type van identiteitskaart van de Partner wordt gespecificeerd.</li><li>Het nalaten om partnergegevens op te nemen die het identiteitstype van identiteitskaart van de Partner gebruiken kon in het bereiken van de beperkingen van de systeemgrafiek op de Dienst van de Identiteit, evenals ongewenste samenvoeging van profielen resulteren.</li><ul> |
 | Telefoonnummer | Telefoonnummers zijn vaak gekoppeld aan één persoon en kunnen daarom worden gebruikt om die persoon via verschillende kanalen te identificeren. Tot dit type identiteiten behoren PII. Dit is een aanwijzing voor [!DNL Identity Service] om de waarde gevoelig af te handelen. |
 
 {style="table-layout:auto"}
 
 ### Standaardnaamruimten {#standard}
 
-Experience Platform biedt verschillende naamruimten die beschikbaar zijn voor alle organisaties. Deze worden standaardnaamruimten genoemd en zijn zichtbaar met de [!DNL Identity Service] API of via de interface van het platform.
+Experience Platform biedt verschillende naamruimten die beschikbaar zijn voor alle organisaties. Deze worden standaardnaamruimten genoemd en zijn zichtbaar met de API van [!DNL Identity Service] of via de gebruikersinterface van Experience Platform.
 
-De volgende standaardnaamruimten zijn beschikbaar voor gebruik door alle organisaties in het platform:
+De volgende standaardnaamruimten kunnen door alle organisaties in Experience Platform worden gebruikt:
 
 | Weergavenaam | Beschrijving |
 | ------------ | ----------- |
-| AdCloud | Een naamruimte die Adobe AdCloud vertegenwoordigt. |
+| AdCloud | Een naamruimte die staat voor Adobe AdCloud. |
 | Adobe Analytics (verouderd ID) | Een naamruimte die Adobe Analytics vertegenwoordigt. Zie het volgende document op [ Adobe Analytics namespaces ](https://experienceleague.adobe.com/docs/analytics/admin/data-governance/gdpr-namespaces.html#namespaces) voor meer informatie. |
 | Apple IDFA (ID voor adverteerders) | Een naamruimte die Apple-id voor adverteerders vertegenwoordigt. Zie het volgende document op [ op rente-gebaseerde advertenties ](https://support.apple.com/en-us/HT202074) voor meer informatie. |
 | Apple Push Notification-service | Een naamruimte die identiteiten vertegenwoordigt die zijn verzameld met de Apple Push Notification-service. Zie het volgende document op [ de dienst van het Bericht van de Duw van Apple ](https://developer.apple.com/library/archive/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/APNSOverview.html#//apple_ref/doc/uid/TP40008194-CH8-SW1) voor meer informatie. |

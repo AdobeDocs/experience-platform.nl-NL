@@ -2,9 +2,9 @@
 title: Real-Time overzicht van klantprofiel
 description: In real-time klantprofiel worden gegevens uit verschillende bronnen samengevoegd en krijgt toegang tot die gegevens in de vorm van individuele klantprofielen en gerelateerde tijdreeksgebeurtenissen. Met deze functie kunnen marketers op meerdere kanalen hun publiek gecoördineerde, consistente en relevante ervaringen bieden.
 exl-id: c93d8d78-b215-4559-a806-f019c602c4d2
-source-git-commit: fc53d1b32eb3fc0251f307d5b2f076b1153a2931
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1821'
+source-wordcount: '1826'
 ht-degree: 1%
 
 ---
@@ -21,7 +21,7 @@ Het verband tussen het Real-Time Profiel van de Klant en andere diensten binnen 
 
 ## Werken met profielen
 
-[!DNL Real-Time Customer Profile] voegt gegevens van diverse bedrijfssystemen samen en biedt vervolgens toegang tot die gegevens in de vorm van klantprofielen met gerelateerde tijdreeksgebeurtenissen. Met deze functie kunnen marketers op meerdere kanalen hun publiek gecoördineerde, consistente en relevante ervaringen bieden. De volgende secties benadrukken enkele kernconcepten die u moet begrijpen om profielen binnen Platform effectief te bouwen en te handhaven.
+[!DNL Real-Time Customer Profile] voegt gegevens van diverse bedrijfssystemen samen en biedt vervolgens toegang tot die gegevens in de vorm van klantprofielen met gerelateerde tijdreeksgebeurtenissen. Met deze functie kunnen marketers op meerdere kanalen hun publiek gecoördineerde, consistente en relevante ervaringen bieden. In de volgende secties worden enkele kernconcepten beschreven die u moet begrijpen om profielen op effectieve wijze te kunnen maken en onderhouden in Experience Platform.
 
 ### Samenstelling van profielentiteit
 
@@ -45,7 +45,7 @@ De entiteiten van de dimensie en B2B zijn verbonden aan de primaire entiteit doo
 
 Hoewel [!DNL Real-Time Customer Profile] ingesloten gegevens verwerkt en Adobe Experience Platform [!DNL Identity Service] gebruikt om verwante gegevens samen te voegen via identiteitstoewijzing, blijven de eigen gegevens behouden in de gegevensopslag van [!DNL Profile] . De opslag van [!DNL Profile] is gescheiden van catalogusgegevens in het datumpomeer en [!DNL Identity Service] -gegevens in het identiteitsdiagram.
 
-De profielopslag gebruikt een Microsoft Azure Cosmos DB-infrastructuur en het Platform Data Lake gebruikt Microsoft Azure Data Lake-opslag.
+De profielenwinkel gebruikt een Microsoft Azure Cosmos DB-infrastructuur en het Experience Platform Data Lake gebruikt de opslag van Microsoft Azure Data Lake.
 
 ### Profielhulplijnen
 
@@ -57,15 +57,15 @@ De gebruikersinterface van Experience Platform biedt een dashboard waarmee u bel
 
 ### Profielfragmenten versus samengevoegde profielen {#profile-fragments-vs-merged-profiles}
 
-Elk individueel klantprofiel bestaat uit meerdere profielfragmenten die zijn samengevoegd tot één weergave van die klant. Bijvoorbeeld, als een klant met uw merk over verscheidene kanalen in wisselwerking staat, zal uw organisatie veelvoudige profielfragmenten met betrekking tot die enige klant hebben die in veelvoudige datasets verschijnen. Wanneer deze fragmenten in Platform worden opgenomen, worden ze samengevoegd om één profiel voor die klant te maken.
+Elk individueel klantprofiel bestaat uit meerdere profielfragmenten die zijn samengevoegd tot één weergave van die klant. Bijvoorbeeld, als een klant met uw merk over verscheidene kanalen in wisselwerking staat, zal uw organisatie veelvoudige profielfragmenten met betrekking tot die enige klant hebben die in veelvoudige datasets verschijnen. Wanneer deze fragmenten in Experience Platform worden opgenomen, worden ze samengevoegd om één profiel voor die klant te maken.
 
 Met andere woorden, vertegenwoordigen de profielfragmenten een unieke primaire identiteit en het overeenkomstige [ verslag ](#record-data) of [ gebeurtenis ](#time-series-events) gegevens voor die identiteitskaart binnen een bepaalde dataset.
 
-Wanneer de gegevens van veelvoudige datasets conflicten (bijvoorbeeld één fragment maakt een lijst van de klant als &quot;enig&quot;terwijl andere van de klant als &quot;gehuwd&quot;een lijst maakt) bepaalt het [ fusiebeleid ](#merge-policies) welke informatie om in het profiel voor het individu voorrang te geven en te omvatten. Daarom is het totale aantal profielfragmenten binnen Platform waarschijnlijk altijd hoger dan het totale aantal samengevoegde profielen, aangezien elk profiel typisch uit veelvoudige fragmenten van veelvoudige datasets bestaat.
+Wanneer de gegevens van veelvoudige datasets conflicten (bijvoorbeeld één fragment maakt een lijst van de klant als &quot;enig&quot;terwijl andere van de klant als &quot;gehuwd&quot;een lijst maakt) bepaalt het [ fusiebeleid ](#merge-policies) welke informatie om in het profiel voor het individu voorrang te geven en te omvatten. Daarom is het totale aantal profielfragmenten binnen Experience Platform waarschijnlijk altijd hoger dan het totale aantal samengevoegde profielen, aangezien elk profiel gewoonlijk uit veelvoudige fragmenten van veelvoudige datasets bestaat.
 
 ### Gegevens opnemen {#record-data}
 
-Een profiel is een weergave van een onderwerp, een organisatie of een individu, dat uit vele kenmerken bestaat (ook wel recordgegevens genoemd). Het profiel van een product kan bijvoorbeeld een SKU en een beschrijving bevatten, terwijl het profiel van een persoon informatie bevat zoals voornaam, achternaam en e-mailadres. Met [!DNL Experience Platform] kunt u profielen aanpassen voor het gebruik van specifieke gegevens die relevant zijn voor uw bedrijf. De standaard [!DNL Experience Data Model] (XDM) klasse, [!DNL XDM Individual Profile], is de aangewezen klasse waarop om een schema te bouwen wanneer het beschrijven van de gegevens van het klantenverslag, en levert de gegevensintegraal aan vele interactie tussen de diensten van het Platform. Voor meer informatie bij het werken met schema&#39;s in [!DNL Experience Platform], gelieve te beginnen door het [ XDM overzicht van het Systeem te lezen ](../xdm/home.md).
+Een profiel is een weergave van een onderwerp, een organisatie of een individu, dat uit vele kenmerken bestaat (ook wel recordgegevens genoemd). Het profiel van een product kan bijvoorbeeld een SKU en een beschrijving bevatten, terwijl het profiel van een persoon informatie bevat zoals voornaam, achternaam en e-mailadres. Met [!DNL Experience Platform] kunt u profielen aanpassen voor het gebruik van specifieke gegevens die relevant zijn voor uw bedrijf. De standaard [!DNL Experience Data Model] (XDM) klasse, [!DNL XDM Individual Profile], is de aangewezen klasse waarop om een schema te bouwen wanneer het beschrijven van de gegevens van het klantenverslag, en levert de gegevensintegraal aan vele interactie tussen de diensten van Experience Platform. Voor meer informatie bij het werken met schema&#39;s in [!DNL Experience Platform], gelieve te beginnen door het [ XDM overzicht van het Systeem te lezen ](../xdm/home.md).
 
 ### Gebeurtenissen van tijdreeksen {#time-series-events}
 
@@ -77,7 +77,7 @@ Elk bedrijf wil met zijn klanten op een manier communiceren die zich persoonlijk
 
 ### Beleid samenvoegen
 
-Wanneer het brengen van gegevensfragmenten uit veelvoudige bronnen en het combineren van hen om een volledige mening van elk van uw individuele klanten te zien, zijn het fusiebeleid de regels die [!DNL Platform] gebruikt om te bepalen hoe de gegevens aan voorrang zullen worden gegeven en welke gegevens zullen worden gebruikt om het klantenprofiel tot stand te brengen.
+Wanneer het brengen van gegevensfragmenten uit veelvoudige bronnen en het combineren van hen om een volledige mening van elk van uw individuele klanten te zien, zijn het fusiebeleid de regels die [!DNL Experience Platform] gebruikt om te bepalen hoe de gegevens aan voorrang zullen worden gegeven en welke gegevens zullen worden gebruikt om het klantenprofiel tot stand te brengen.
 
 Wanneer er conflicterende gegevens van veelvoudige datasets zijn, bepaalt het fusiebeleid hoe die gegevens moeten worden behandeld en welke waarde zou moeten worden gebruikt. Via RESTful APIs of de gebruikersinterface, kunt u nieuw samenvoegbeleid tot stand brengen, bestaand beleid beheren, en een standaardsamenvoegbeleid voor uw organisatie plaatsen.
 
@@ -107,7 +107,7 @@ Invoer in realtime wordt mogelijk gemaakt via een proces dat streaming opname wo
 
 ## Gegevens invoegen in [!DNL Profile]
 
-[!DNL Platform] kan worden geconfigureerd om record- en tijdreeksgegevens naar [!DNL Profile] te verzenden, ter ondersteuning van streaming opname in realtime en batch-opname. Voor meer informatie, zie het leerprogramma schetterend hoe te [ gegevens aan het Profiel van de Klant in real time ](tutorials/add-profile-data.md) toevoegen.
+[!DNL Experience Platform] kan worden geconfigureerd om record- en tijdreeksgegevens naar [!DNL Profile] te verzenden, ter ondersteuning van streaming opname in realtime en batch-opname. Voor meer informatie, zie het leerprogramma schetterend hoe te [ gegevens aan het Profiel van de Klant in real time ](tutorials/add-profile-data.md) toevoegen.
 
 >[!NOTE]
 >
@@ -115,7 +115,7 @@ Invoer in realtime wordt mogelijk gemaakt via een proces dat streaming opname wo
 
 ### Metrische gegevens voor het opnemen van profielen
 
-Met waarnemingsinformatie kunt u belangrijke metriek in Adobe Experience Platform onthullen. Naast [!DNL Experience Platform] gebruiksstatistieken en prestatie-indicatoren voor diverse [!DNL Platform] functies, zijn er specifieke aan profielen gerelateerde metriek waarmee u inzicht kunt krijgen in inkomende aanvraagfrequenties, geslaagde inname, ingesloten recordgrootten en meer. Om meer te leren, begin door het [ overzicht van de Inzichten API van de Waarneming ](../observability/api/overview.md) te lezen, en voor een volledige lijst van metriek van het Profiel van de Klant in real time, zie de documentatie over [ beschikbare metriek ](../observability/api/metrics.md#available-metrics).
+Met waarnemingsinformatie kunt u belangrijke metriek in Adobe Experience Platform onthullen. Naast [!DNL Experience Platform] gebruiksstatistieken en prestatie-indicatoren voor diverse [!DNL Experience Platform] functies, zijn er specifieke aan profielen gerelateerde metriek waarmee u insight kunt betrekken bij inkomende aanvraagsnelheden, gelukte innamesnelheden, ingebedde recordgrootten en meer. Om meer te leren, begin door het [ overzicht van de Inzichten API van de Waarneming ](../observability/api/overview.md) te lezen, en voor een volledige lijst van metriek van het Profiel van de Klant in real time, zie de documentatie over [ beschikbare metriek ](../observability/api/metrics.md#available-metrics).
 
 ## Gegevens in profielarchief bijwerken
 
@@ -131,7 +131,7 @@ Met betrekking tot de toegang tot gegevens speelt gegevensbeheer een sleutelrol 
 - Beleid voor gegevenstoegang
 - Toegangscontrole van gegevens voor marketingacties
 
-Gegevensbeheer wordt op verschillende punten beheerd. Deze omvatten het bepalen van welke gegevens in [!DNL Platform] worden opgenomen en welke gegevens toegankelijk zijn na inname voor een bepaalde marketingactie. Voor meer informatie, begin door het [ overzicht van het gegevensbeheer ](../data-governance/home.md) te lezen.
+Gegevensbeheer wordt op verschillende punten beheerd. Deze omvatten het bepalen van welke gegevens in [!DNL Experience Platform] worden opgenomen en welke gegevens toegankelijk zijn na inname voor een bepaalde marketingactie. Voor meer informatie, begin door het [ overzicht van het gegevensbeheer ](../data-governance/home.md) te lezen.
 
 ### Verzoeken om opt-out en privacy van gegevens afhandelen
 

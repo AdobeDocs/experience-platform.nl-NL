@@ -3,9 +3,9 @@ title: API-handleiding voor gegevenshygiëne
 description: Leer hoe u de opgeslagen persoonlijke gegevens van uw klanten in Adobe Experience Platform programmatisch kunt corrigeren of verwijderen.
 role: Developer
 exl-id: 78c8b15b-b433-4168-a1e8-c97b96e4bf85
-source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '445'
+source-wordcount: '446'
 ht-degree: 0%
 
 ---
@@ -28,7 +28,7 @@ Om vraag aan de Hygiene API van Gegevens te maken, moet u uw authentificatiegelo
 * `x-api-key: {API_KEY}`
 * `x-gw-ims-org-id: {ORG_ID}`
 
-Alle verzoeken die een nuttige lading (POST, PUT, PATCH) bevatten vereisen een extra kopbal:
+Alle verzoeken die een lading (POST, PUT, PATCH) bevatten vereisen een extra kopbal:
 
 * `Content-Type: application/json`
 
@@ -44,7 +44,7 @@ Een gegevenssetvervaldatum is een tijd-vertraagde actie &quot;schrapt een datase
 
 >[!IMPORTANT]
 >
->De schrappingsverzoeken van het verslag zijn slechts beschikbaar voor organisaties die **het Schild van de Gezondheidszorg van de Adobe** hebben gekocht.
+>De schrappingsverzoeken van het verslag zijn slechts beschikbaar voor organisaties die **het Schild van de Gezondheidszorg van Adobe** hebben gekocht.
 >
 >
 >Gegevens verwijderen uit records moeten worden gebruikt voor het opschonen van gegevens, het verwijderen van anonieme gegevens of het minimaliseren van gegevens. Zij zijn **niet** om voor de verzoeken van de rechten van gegevenssubject (naleving) zoals met betrekking tot privacyverordeningen zoals de Algemene Verordening van de Bescherming van Gegevens (GDPR) te worden gebruikt. Voor alle gevallen van het nalevingsgebruik, gebruik [ Adobe Experience Platform Privacy Service ](../../privacy-service/home.md) in plaats daarvan.
@@ -57,4 +57,4 @@ Uw organisatie is beperkt tot een vooraf vastgesteld maandelijks taakquotum voor
 
 ## Volgende stappen
 
-In deze handleiding wordt beschreven hoe u aanvragen voor de levenscyclus van gegevens kunt beheren met behulp van API-aanroepen. Voor informatie over hoe te om deze acties in het Platform UI uit te voeren, zie de [ gids UI van de gegevenslevenscyclus van gegevens ](../ui/overview.md).
+In deze handleiding wordt beschreven hoe u aanvragen voor de levenscyclus van gegevens kunt beheren met behulp van API-aanroepen. Voor informatie over hoe te om deze acties in Experience Platform UI uit te voeren, zie de [ gids UI van de de levenscyclus van gegevens ](../ui/overview.md).

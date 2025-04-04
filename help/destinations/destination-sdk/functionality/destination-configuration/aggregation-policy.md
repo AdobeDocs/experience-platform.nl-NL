@@ -2,9 +2,9 @@
 description: Leer hoe te opstelling een samenvoegingsbeleid om te bepalen hoe de verzoeken van HTTP aan uw bestemming zouden moeten worden gegroepeerd en worden gegroepeerd.
 title: Samenvoegingsbeleid
 exl-id: 2dfa8815-2d69-4a22-8938-8ea41be8b9c5
-source-git-commit: 3ff20e51458cb9cccafb6da92414def9eeaaf821
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1006'
+source-wordcount: '1007'
 ht-degree: 0%
 
 ---
@@ -13,11 +13,11 @@ ht-degree: 0%
 
 Voor maximale efficiëntie bij het exporteren van gegevens naar het API-eindpunt kunt u verschillende instellingen gebruiken om geëxporteerde profielen samen te voegen tot grotere of kleinere batches, deze te groeperen op basis van identiteit en andere gebruiksgevallen. Hierdoor kunt u ook gegevens exporteren naar eventuele lagere beperkingen op het API-eindpunt (snelheidsbeperking, aantal identiteiten per API-aanroep, enz.).
 
-Gebruik configureerbare samenvoeging om diep in de montages te duiken die door Destination SDK worden verstrekt of beste inspanningssamenvoeging te gebruiken om Destination SDK te vertellen om de API vraag zo best te partijgen als het kan.
+Gebruik configureerbare aggregatie om diep in de montages te duiken die door Destination SDK worden verstrekt of beste inspanningssamenvoeging te gebruiken om Destination SDK te vertellen om de API vraag zo best te partijgen als het kan.
 
 Wanneer u een realtime (streaming) bestemming maakt met Destination SDK, kunt u configureren hoe de geëxporteerde profielen moeten worden gecombineerd in de resulterende export. Dit gedrag wordt bepaald door de instellingen van het aggregatiebeleid.
 
-Om te begrijpen waar deze component in een integratie past die met Destination SDK wordt gecreeerd, zie het diagram in de [ configuratieopties ](../configuration-options.md) documentatie of zie de gids op hoe te [ gebruiken Destination SDK om een het stromen bestemming ](../../guides/configure-destination-instructions.md#create-destination-configuration) te vormen.
+Om te begrijpen waar deze component in een integratie past die met Destination SDK wordt gecreeerd, zie het diagram in de [ configuratieopties ](../configuration-options.md) documentatie of zie de gids op hoe te [ Destination SDK gebruiken om een het stromen bestemming ](../../guides/configure-destination-instructions.md#create-destination-configuration) te vormen.
 
 U kunt de montages van het samenvoegingsbeleid via het `/authoring/destinations` eindpunt vormen. Zie de volgende API verwijzingspagina&#39;s voor gedetailleerde API vraagvoorbeelden waar u de componenten kunt vormen die in deze pagina worden getoond.
 
@@ -60,7 +60,7 @@ In de onderstaande voorbeeldconfiguratie ziet u een aggregatieconfiguratie voor 
 | Parameter | Type | Beschrijving |
 |---------|----------|------|
 | `aggregationType` | String | Wijst op het type van samenvoegingsbeleid dat uw bestemming zou moeten gebruiken. Ondersteunde aggregatietypen: <ul><li>`BEST_EFFORT`</li><li>`CONFIGURABLE_AGGREGATION`</li></ul> |
-| `bestEffortAggregation.maxUsersPerRequest` | Geheel | Experience Platform kan meerdere geëxporteerde profielen samenvoegen in één HTTP-aanroep. <br><br> Deze waarde wijst op het maximumaantal profielen dat uw eindpunt in één enkele vraag van HTTP zou moeten ontvangen. Merk op dat dit een beste inspanningssamenvoeging is. Bijvoorbeeld, als u waarde 100 specificeert, zou Platform om het even welk aantal profielen kunnen verzenden kleiner dan 100 op een vraag. <br><br> Als uw server niet per aanvraag meerdere gebruikers accepteert, stelt u deze waarde in op `1` . |
+| `bestEffortAggregation.maxUsersPerRequest` | Geheel | Experience Platform kan meerdere geëxporteerde profielen samenvoegen in één HTTP-oproep. <br><br> Deze waarde wijst op het maximumaantal profielen dat uw eindpunt in één enkele vraag van HTTP zou moeten ontvangen. Merk op dat dit een beste inspanningssamenvoeging is. Bijvoorbeeld, als u waarde 100 specificeert, zou Experience Platform om het even welk aantal profielen kunnen verzenden kleiner dan 100 op een vraag. <br><br> Als uw server niet per aanvraag meerdere gebruikers accepteert, stelt u deze waarde in op `1` . |
 | `bestEffortAggregation.splitUserById` | Boolean | Gebruik deze vlag als de vraag aan de bestemming door identiteit zou moeten worden verdeeld. Stel deze markering in op `true` als uw server slechts één identiteit per aanroep accepteert, voor een opgegeven naamruimte voor de identiteit. |
 
 {style="table-layout:auto"}
@@ -109,8 +109,8 @@ De voorbeeldconfiguratie toont hieronder een configureerbare samenvoegingsconfig
 |---------|----------|------|
 | `aggregationType` | String | Wijst op het type van samenvoegingsbeleid dat uw bestemming zou moeten gebruiken. Ondersteunde aggregatietypen: <ul><li>`BEST_EFFORT`</li><li>`CONFIGURABLE_AGGREGATION`</li></ul> |
 | `configurableAggregation.splitUserById` | Boolean | Gebruik deze vlag als de vraag aan de bestemming door identiteit zou moeten worden verdeeld. Stel deze markering in op `true` als uw server slechts één identiteit per aanroep accepteert, voor een opgegeven naamruimte voor de identiteit. |
-| `configurableAggregation.maxBatchAgeInSecs` | Geheel | Deze parameter wordt gebruikt in combinatie met `maxNumEventsInBatch` en bepaalt hoe lang Experience Platform moet wachten tot een API-aanroep naar het eindpunt wordt verzonden. <ul><li>Minimumwaarde (in seconden): 1.800</li><li>Maximumwaarde (in seconden): 3.600</li></ul> Bijvoorbeeld, als u de maximumwaarde voor beide parameters gebruikt, zal het Experience Platform of 3.600 seconden OF wachten tot er 10000 gekwalificeerde profielen zijn alvorens de API vraag te maken, welke eerst gebeurt. |
-| `configurableAggregation.maxNumEventsInBatch` | Geheel | Deze parameter wordt gebruikt in combinatie met `maxBatchAgeInSecs` en bepaalt hoeveel gekwalificeerde profielen moeten worden samengevoegd in een API-aanroep. <ul><li>Minimumwaarde: 1.000</li><li>Maximumwaarde: 10.000</li></ul> Bijvoorbeeld, als u de maximumwaarde voor beide parameters gebruikt, zal het Experience Platform of 3.600 seconden OF wachten tot er 10.000 gekwalificeerde profielen zijn alvorens de API vraag te maken, welke eerst gebeurt. |
+| `configurableAggregation.maxBatchAgeInSecs` | Geheel | Deze parameter wordt gebruikt in combinatie met `maxNumEventsInBatch` en bepaalt hoe lang Experience Platform moet wachten totdat een API-aanroep naar het eindpunt wordt verzonden. <ul><li>Minimumwaarde (in seconden): 1.800</li><li>Maximumwaarde (in seconden): 3.600</li></ul> Als u bijvoorbeeld de maximumwaarde voor beide parameters gebruikt, wacht Experience Platform 3600 seconden OF tot er 10000 gekwalificeerde profielen zijn voordat de API-aanroep wordt uitgevoerd, afhankelijk van wat zich het eerst voordoet. |
+| `configurableAggregation.maxNumEventsInBatch` | Geheel | Deze parameter wordt gebruikt in combinatie met `maxBatchAgeInSecs` en bepaalt hoeveel gekwalificeerde profielen moeten worden samengevoegd in een API-aanroep. <ul><li>Minimumwaarde: 1.000</li><li>Maximumwaarde: 10.000</li></ul> Als u bijvoorbeeld de maximumwaarde voor beide parameters gebruikt, wacht Experience Platform 3.600 seconden OF tot er 10.000 gekwalificeerde profielen zijn voordat de API-aanroep wordt uitgevoerd, afhankelijk van wat zich het eerst voordoet. |
 | `configurableAggregation.aggregationKey` | - | Hiermee kunt u de geëxporteerde profielen samenvoegen die aan de bestemming zijn toegewezen op basis van de hieronder beschreven parameters. |
 | `configurableAggregation.aggregationKey.includeSegmentId` | Boolean | Stel deze parameter in op `true` als u profielen wilt groeperen die naar uw doel zijn geëxporteerd op basis van gebruikers-id. |
 | `configurableAggregation.aggregationKey.includeSegmentStatus` | Boolean | Stel deze parameter en `includeSegmentId` in op `true` als u profielen wilt groeperen die naar uw doel zijn geëxporteerd op basis van gebruikers-id en de status van het publiek. |

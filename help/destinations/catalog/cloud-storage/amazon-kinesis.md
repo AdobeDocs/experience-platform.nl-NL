@@ -1,12 +1,12 @@
 ---
-keywords: Amazon Kinesis;kinesis-bestemming;kinesis
+keywords: Amazon Kinesis;kinesis, doel;kinesis
 title: Amazon Kinesis-verbinding
 description: Maak een real-time uitgaande verbinding met uw Amazon Kinesis-opslag om gegevens vanuit Adobe Experience Platform te streamen.
-badgeUltimate: label="Ultieme" type="Positive"
+badgeUltimate: label="Ultimate" type="Positive"
 exl-id: b40117ef-6ad0-48a9-bbcb-97c6f6d1dce3
-source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1950'
+source-wordcount: '1955'
 ht-degree: 0%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
-> Deze bestemming is beschikbaar slechts aan [ Adobe Real-time Customer Data Platform Ultimate ](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform.html) klanten.
+> Deze bestemming is beschikbaar slechts aan [ Adobe Real-Time Customer Data Platform Ultimate ](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform.html) klanten.
 
 Met de [!DNL Kinesis Data Streams] -service van [!DNL Amazon Web Services] kunt u grote stromen gegevensrecords in real-time verzamelen en verwerken.
 
@@ -25,9 +25,9 @@ U kunt een real-time uitgaande verbinding maken met uw [!DNL Amazon Kinesis] -op
 
 * Voor meer informatie over [!DNL Amazon Kinesis], zie de [ documentatie van Amazon ](https://docs.aws.amazon.com/streams/latest/dev/introduction.html).
 * Om met [!DNL Amazon Kinesis] programmatically te verbinden, zie de [ Streaming bestemmingen API leerprogramma ](../../api/streaming-destinations.md).
-* Zie de volgende secties voor een verbinding met [!DNL Amazon Kinesis] via de gebruikersinterface van Platform.
+* Zie de volgende secties als u verbinding wilt maken met [!DNL Amazon Kinesis] via de Experience Platform-gebruikersinterface.
 
-![ Amazon Kinesis in UI ](../../assets/catalog/cloud-storage/amazon-kinesis/catalog.png)
+![ Kinesis van Amazon in UI ](../../assets/catalog/cloud-storage/amazon-kinesis/catalog.png)
 
 ## Gebruiksscenario’s {#use-cases}
 
@@ -41,7 +41,7 @@ In deze sectie wordt beschreven welke soorten publiek u naar dit doel kunt expor
 
 | Oorsprong publiek | Ondersteund | Beschrijving |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | ✓ | Het publiek produceerde door de Dienst van de Segmentatie van het Experience Platform [ ](../../../segmentation/home.md). |
+| [!DNL Segmentation Service] | ✓ | Het publiek produceerde door de Dienst van de Segmentatie van Experience Platform [ ](../../../segmentation/home.md). |
 | Aangepaste uploads | ✓ | Het publiek [ ingevoerde ](../../../segmentation/ui/audience-portal.md#import-audience) in Experience Platform van Csv- dossiers. |
 
 {style="table-layout:auto"}
@@ -59,17 +59,17 @@ Raadpleeg de onderstaande tabel voor informatie over het exporttype en de export
 
 ## IP adres lijst van gewenste personen {#ip-address-allowlist}
 
-Om aan de veiligheid en nalevingsvereisten van klanten te voldoen, verstrekt het Experience Platform een lijst van statische IPs die u voor de [!DNL Amazon Kinesis] bestemming kunt lijsten van gewenste personen. Verwijs naar [ IP adreslijst van gewenste personen voor het stromen bestemmingen ](/help/destinations/catalog/streaming/ip-address-allow-list.md) voor de volledige lijst van IPs aan lijst van gewenste personen.
+Experience Platform biedt een lijst met statische IP&#39;s die u kunt lijsten van gewenste personen voor de [!DNL Amazon Kinesis] -bestemming om aan de beveiligings- en compatibiliteitsvereisten van klanten te voldoen. Verwijs naar [ IP adreslijst van gewenste personen voor het stromen bestemmingen ](/help/destinations/catalog/streaming/ip-address-allow-list.md) voor de volledige lijst van IPs aan lijst van gewenste personen.
 
 ## Vereiste [!DNL Amazon Kinesis] machtigingen {#required-kinesis-permission}
 
-Om gegevens te kunnen verbinden en exporteren naar uw [!DNL Amazon Kinesis] -streams, hebt Experience Platform machtigingen nodig voor de volgende handelingen:
+Experience Platform heeft machtigingen nodig voor de volgende handelingen om gegevens te kunnen verbinden en exporteren naar uw [!DNL Amazon Kinesis] -streams:
 
 * `kinesis:ListStreams`
 * `kinesis:PutRecord`
 * `kinesis:PutRecords`
 
-Deze machtigingen worden gerangschikt via de [!DNL Kinesis] -console en worden gecontroleerd door Platform wanneer u uw Kinesis-bestemming configureert in de gebruikersinterface van Platform.
+Deze machtigingen worden gerangschikt via de [!DNL Kinesis] -console en worden gecontroleerd door Experience Platform nadat u uw Kinesis-bestemming hebt geconfigureerd in de Experience Platform-gebruikersinterface.
 
 In het onderstaande voorbeeld worden de minimale toegangsrechten weergegeven die zijn vereist om gegevens te kunnen exporteren naar een [!DNL Kinesis] -doel.
 
@@ -95,8 +95,8 @@ In het onderstaande voorbeeld worden de minimale toegangsrechten weergegeven die
 | Eigenschap | Beschrijving |
 | -------- | ----------- |
 | `kinesis:ListStreams` | Een handeling waarmee uw Amazon Kinesis-gegevensstromen worden vermeld. |
-| `kinesis:PutRecord` | Een handeling waarmee één gegevensrecord in een Kinesis-gegevensstroom wordt geschreven. |
-| `kinesis:PutRecords` | Een handeling die meerdere gegevensrecords in één aanroep naar een Kinesis-gegevensstroom schrijft. |
+| `kinesis:PutRecord` | Een handeling die één gegevensrecord naar een Kinesis-gegevensstroom schrijft. |
+| `kinesis:PutRecords` | Een actie die veelvoudige gegevensverslagen in een de gegevensstroom van Kinesis in één enkele vraag schrijft. |
 
 {style="table-layout:auto"}
 
@@ -114,9 +114,9 @@ Om met deze bestemming te verbinden, volg de stappen die in het [ leerprogramma 
 
 Voer de onderstaande velden in en selecteer **[!UICONTROL Connect to destination]** :
 
-![ Beeld van het scherm UI die voltooide gebieden voor de authentificatiedetails van Amazon Kinesis tonen ](../../assets/catalog/cloud-storage/amazon-kinesis/kinesis-authentication-fields.png)
+![ Beeld van het scherm UI die voltooide gebieden voor de de authentificatiedetails van Kinesis van Amazon tonen ](../../assets/catalog/cloud-storage/amazon-kinesis/kinesis-authentication-fields.png)
 
-* **[!DNL Amazon Web Services]toegangstoets en geheime sleutel** : genereer in [!DNL Amazon Web Services] een `access key - secret access key` paar om Platform toegang te verlenen tot uw [!DNL Amazon Kinesis] -account. Leer meer in de [ documentatie van Amazon Web Services ](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html).
+* **[!DNL Amazon Web Services]toegangstoets en geheime sleutel** : genereer in [!DNL Amazon Web Services] een `access key - secret access key` paar om Experience Platform toegang te verlenen tot uw [!DNL Amazon Kinesis] -account. Leer meer in de [ documentatie van Amazon Web Services ](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html).
 * **[!UICONTROL Region]**: geef aan naar welk [!DNL Amazon Web Services] -gebied gegevens moeten worden gestreamd.
 
 ### Doelgegevens invullen {#destination-details}
@@ -133,11 +133,11 @@ Voer de onderstaande velden in en selecteer **[!UICONTROL Connect to destination
 
 Als u details voor de bestemming wilt configureren, vult u de vereiste en optionele velden hieronder in. Een sterretje naast een veld in de gebruikersinterface geeft aan dat het veld verplicht is.
 
-![ Beeld van het scherm UI die voltooide gebieden voor de de bestemmingsdetails van Kinesis van Amazon tonen ](../../assets/catalog/cloud-storage/amazon-kinesis/kinesis-destination-details.png)
+![ Beeld van het scherm UI die voltooide gebieden voor de bestemmingsdetails van Amazon Kinesis tonen ](../../assets/catalog/cloud-storage/amazon-kinesis/kinesis-destination-details.png)
 
 * **[!UICONTROL Name]**: Geef een naam op voor uw verbinding met [!DNL Amazon Kinesis]
 * **[!UICONTROL Description]**: geef een beschrijving op voor de verbinding met [!DNL Amazon Kinesis] .
-* **[!UICONTROL Stream]**: geef de naam op van een bestaande gegevensstroom in uw [!DNL Amazon Kinesis] -account. Platform zal gegevens naar deze stroom uitvoeren.
+* **[!UICONTROL Stream]**: geef de naam op van een bestaande gegevensstroom in uw [!DNL Amazon Kinesis] -account. Experience Platform exporteert gegevens naar deze stream.
 * **[!UICONTROL Include Segment Names]**: in-/uitschakelen als u wilt dat bij het exporteren van de gegevens de namen worden opgenomen van het publiek dat u exporteert. Voor een voorbeeld van een gegevens die met deze geselecteerde optie uitvoeren, verwijs naar de [ Uitgevoerde gegevens ](#exported-data) sectie verder hieronder.
 * **[!UICONTROL Include Segment Timestamps]**: Schakel deze optie in als u wilt dat bij het exporteren van de gegevens de UNIX-tijdstempel wordt gebruikt wanneer het publiek is gemaakt en bijgewerkt, en ook de UNIX-tijdstempel wanneer het publiek voor activering is toegewezen aan het doel. Voor een voorbeeld van een gegevens die met deze geselecteerde optie uitvoeren, verwijs naar de [ Uitgevoerde gegevens ](#exported-data) sectie verder hieronder.
 
@@ -145,7 +145,7 @@ Als u details voor de bestemming wilt configureren, vult u de vereiste en option
 
 >[!IMPORTANT]
 >
->Platform needs `write` permissions on the bucket object where the export files will be delivered.
+>Experience Platform needs `write` permissions on the bucket object where the export files will be delivered.
 
 -->
 
@@ -196,7 +196,7 @@ Vanuit het oogpunt van profielkenmerken bepalen wijzigingen in de vier bovenstaa
 
 ## Back-up van historische gegevens {#historical-data-backfill}
 
-Wanneer u een nieuw publiek aan een bestaande bestemming toevoegt, of wanneer u een nieuw doel en kaartpubliek aan het creeert, voert het Experience Platform historische gegevens van de publiekskwalificatie naar de bestemming uit. Profielen die voor het publiek *kwalificeerden alvorens* het publiek aan de bestemming werd toegevoegd worden uitgevoerd naar de bestemming binnen ongeveer één uur.
+Wanneer u een nieuw publiek aan een bestaande bestemming toevoegt, of wanneer u een nieuw doel creeert en een publiek in kaart brengt aan het, exporteert Experience Platform historische publiekskwalificatiegegevens naar de bestemming. Profielen die voor het publiek *kwalificeerden alvorens* het publiek aan de bestemming werd toegevoegd worden uitgevoerd naar de bestemming binnen ongeveer één uur.
 
 ## Geëxporteerde gegevens {#exported-data}
 
@@ -298,9 +298,9 @@ Hieronder vindt u meer voorbeelden van geëxporteerde gegevens, afhankelijk van 
 
 ## Beperkingen en beleid opnieuw proberen {#limits-retry-policy}
 
-In 95 percent van de tijd, probeert het Experience Platform om een productietolerantie van minder dan 10 minuten voor met succes verzonden berichten met een tarief van minder dan 10.000 verzoeken per seconde voor elke dataflow aan een bestemming van HTTP aan te bieden.
+In 95 percent van de tijd, probeert Experience Platform om een productietolerantie van minder dan 10 minuten voor met succes verzonden berichten met een tarief van minder dan 10.000 verzoeken per seconde voor elke dataflow aan een bestemming van HTTP aan te bieden.
 
-In het geval van ontbroken verzoeken aan uw bestemming van HTTP API, slaat het Experience Platform de ontbroken verzoeken op en probeert tweemaal om de verzoeken naar uw eindpunt te verzenden.
+In het geval van mislukte verzoeken aan uw bestemming van HTTP API, slaat Experience Platform de ontbroken verzoeken op en probeert tweemaal om de verzoeken naar uw eindpunt te verzenden.
 
 >[!MORELIKETHIS]
 >

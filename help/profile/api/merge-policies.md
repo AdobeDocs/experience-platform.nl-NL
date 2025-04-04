@@ -2,25 +2,25 @@
 keywords: Experience Platform;profiel;realtime klantprofiel;problemen oplossen;API
 title: API-eindpunt voor beleid samenvoegen
 type: Documentation
-description: Met Adobe Experience Platform kunt u gegevensfragmenten uit meerdere bronnen samenvoegen en combineren om een volledig beeld van elk van uw individuele klanten te krijgen. Wanneer het brengen van deze gegevens samen, is het fusiebeleid de regels die het Platform gebruikt om te bepalen hoe de gegevens voorrang zullen worden gegeven en welke gegevens zullen worden gecombineerd om een verenigde mening tot stand te brengen.
+description: Met Adobe Experience Platform kunt u gegevensfragmenten uit meerdere bronnen samenvoegen en combineren om een volledig beeld van elk van uw individuele klanten te krijgen. Wanneer het samenbrengen van deze gegevens, is het fusiebeleid de regels die Experience Platform gebruikt om te bepalen hoe de gegevens aan voorrang zullen worden gegeven en welke gegevens zullen worden gecombineerd om een verenigde mening tot stand te brengen.
 role: Developer
 exl-id: fb49977d-d5ca-4de9-b185-a5ac1d504970
-source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '2465'
+source-wordcount: '2468'
 ht-degree: 0%
 
 ---
 
 # Het eindpunt van beleid samenvoegen
 
-Met Adobe Experience Platform kunt u gegevensfragmenten uit meerdere bronnen samenvoegen en combineren om een volledig beeld van elk van uw individuele klanten te krijgen. Wanneer u deze gegevens samenbrengt, zijn samenvoegbeleidsregels de regels die [!DNL Platform] gebruikt om te bepalen hoe de prioriteit van gegevens wordt bepaald en welke gegevens worden gecombineerd om een uniforme weergave te maken.
+Met Adobe Experience Platform kunt u gegevensfragmenten uit meerdere bronnen samenvoegen en combineren om een volledig beeld van elk van uw individuele klanten te krijgen. Wanneer u deze gegevens samenbrengt, zijn samenvoegbeleidsregels de regels die [!DNL Experience Platform] gebruikt om te bepalen hoe de prioriteit van gegevens wordt bepaald en welke gegevens worden gecombineerd om een uniforme weergave te maken.
 
-Bijvoorbeeld, als een klant met uw merk over verscheidene kanalen in wisselwerking staat, zal uw organisatie veelvoudige profielfragmenten met betrekking tot die enige klant hebben die in veelvoudige datasets verschijnen. Wanneer deze fragmenten in Platform worden opgenomen, worden ze samengevoegd om één profiel voor die klant te maken. Wanneer de gegevens van veelvoudige bronnen conflicten (bijvoorbeeld één fragment maakt een lijst van de klant als &quot;enig&quot;terwijl de andere klant als &quot;gehuwd&quot;een lijst maakt) bepaalt het fusiebeleid welke informatie om in het profiel voor het individu te omvatten.
+Bijvoorbeeld, als een klant met uw merk over verscheidene kanalen in wisselwerking staat, zal uw organisatie veelvoudige profielfragmenten met betrekking tot die enige klant hebben die in veelvoudige datasets verschijnen. Wanneer deze fragmenten in Experience Platform worden opgenomen, worden ze samengevoegd om één profiel voor die klant te maken. Wanneer de gegevens van veelvoudige bronnen conflicten (bijvoorbeeld één fragment maakt een lijst van de klant als &quot;enig&quot;terwijl de andere klant als &quot;gehuwd&quot;een lijst maakt) bepaalt het fusiebeleid welke informatie om in het profiel voor het individu te omvatten.
 
 Gebruikend RESTful APIs of het gebruikersinterface, kunt u nieuw samenvoegbeleid tot stand brengen, bestaand beleid beheren, en een standaardsamenvoegbeleid voor uw organisatie plaatsen. Deze handleiding bevat stappen voor het werken met de API voor samenvoegbeleid.
 
-Om met samenvoegbeleid te werken gebruikend UI, gelieve te verwijzen naar de [ gids UI van het samenvoegingsbeleid ](../merge-policies/ui-guide.md). Meer over samenvoegingsbeleid in het algemeen, en hun rol binnen Experience Platform leren, gelieve te beginnen door het [ overzicht van het samenvoegingsbeleid ](../merge-policies/overview.md) te lezen.
+Om met samenvoegbeleid te werken gebruikend UI, gelieve te verwijzen naar de [ gids UI van het samenvoegingsbeleid ](../merge-policies/ui-guide.md). Meer over samenvoegingsbeleid in het algemeen, en hun rol binnen Experience Platform leren, gelieve te beginnen door het [ overzicht van het fusiebeleid ](../merge-policies/overview.md) te lezen.
 
 ## Aan de slag
 
@@ -28,7 +28,7 @@ Het API eindpunt dat in deze gids wordt gebruikt is een deel van [[!DNL Real-Tim
 
 ## Componenten van samenvoegingsbeleid {#components-of-merge-policies}
 
-Het beleid van de fusie is privé aan uw organisatie, toestaand u om verschillende beleid tot stand te brengen om schema&#39;s op de specifieke manieren samen te voegen die u nodig hebt. Voor elke API die toegang wil tot [!DNL Profile] -gegevens, is een samenvoegbeleid vereist, maar er wordt een standaard gebruikt als dit niet expliciet wordt opgegeven. [!DNL Platform] voorziet organisaties van een standaardsamenvoegbeleid, of u kunt een fusiebeleid voor een specifieke het schemaklasse van de Gegevens van de Ervaring van het Model (XDM) tot stand brengen en het merken als gebrek voor uw organisatie.
+Het beleid van de fusie is privé aan uw organisatie, toestaand u om verschillende beleid tot stand te brengen om schema&#39;s op de specifieke manieren samen te voegen die u nodig hebt. Voor elke API die toegang wil tot [!DNL Profile] -gegevens, is een samenvoegbeleid vereist, maar er wordt een standaard gebruikt als dit niet expliciet wordt opgegeven. [!DNL Experience Platform] voorziet organisaties van een standaardsamenvoegbeleid, of u kunt een fusiebeleid voor een specifieke het schemaklasse van de Gegevens van de Ervaring van het Model (XDM) tot stand brengen en het merken als gebrek voor uw organisatie.
 
 Hoewel elke organisatie mogelijk meerdere samenvoegbeleidsregels per schemaklasse kan hebben, kan elke klasse slechts één standaardsamenvoegbeleid hebben. Om het even welk samenvoegbeleid dat als gebrek wordt geplaatst zal worden gebruikt in gevallen waar de naam van de schemacategorie wordt verstrekt en een fusiebeleid wordt vereist maar niet verstrekt.
 
@@ -73,7 +73,7 @@ Het volledige samenvoegbeleidsobject vertegenwoordigt een set voorkeuren waarmee
 | `name` | Vriendelijke naam waarmee het samenvoegbeleid kan worden geïdentificeerd in lijstweergaven. |
 | `imsOrgId` | Organisatie-id waartoe dit samenvoegbeleid behoort |
 | `schema.name` | Het veld `name` bevat een deel van het object [`schema`](#schema) dat de XDM-schemaklasse bevat waarop het samenvoegbeleid betrekking heeft. Voor meer informatie over schema&#39;s en klassen, te lezen gelieve de [ documentatie XDM ](../../xdm/home.md). |
-| `version` | [!DNL Platform] bijgewerkte versie van het samenvoegbeleid. Deze alleen-lezen waarde wordt verhoogd wanneer een samenvoegbeleid wordt bijgewerkt. |
+| `version` | [!DNL Experience Platform] bijgewerkte versie van het samenvoegbeleid. Deze alleen-lezen waarde wordt verhoogd wanneer een samenvoegbeleid wordt bijgewerkt. |
 | `identityGraph` | [ de grafiekvoorwerp van de Identiteit ](#identity-graph) die op de identiteitsgrafiek wijst waarvan verwante identiteiten zullen worden verkregen. Profielfragmenten die voor alle verwante identiteiten worden gevonden, worden samengevoegd. |
 | `attributeMerge` | [ de fusie van Attributen ](#attribute-merge) die op de manier wijzen waarop het fusiebeleid profielattributen in het geval van gegevensconflicten voorrang zal geven. |
 | `isActiveOnEdge` | Een Booleaanse waarde die aangeeft of dit samenvoegbeleid aan de rand kan worden gebruikt. Deze waarde is standaard `false` . |
@@ -198,7 +198,7 @@ Met behulp van de [!DNL Real-Time Customer Profile] API kunt u aan de hand van h
 
 ### Heb toegang tot één enkel fusiebeleid door identiteitskaart
 
-U kunt tot één enkel fusiebeleid door zijn identiteitskaart toegang hebben door een verzoek van de GET tot het `/config/mergePolicies` eindpunt en het omvatten van `mergePolicyId` in de verzoekweg te richten.
+U hebt toegang tot één samenvoegbeleid met de id van de toepassing door een GET-aanvraag in te dienen bij het eindpunt `/config/mergePolicies` en de `mergePolicyId` op te nemen in het aanvraagpad.
 
 **API formaat**
 
@@ -249,7 +249,7 @@ Zie de [ componenten van het beleid van de fusie ](#components-of-merge-policies
 
 ### Hiermee worden meerdere samenvoegbeleidsregels via de id&#39;s opgehaald
 
-U kunt veelvoudige fusiebeleid terugwinnen door een verzoek van de POST aan het `/config/mergePolicies/bulk-get` eindpunt en met inbegrip van identiteitskaarts van het fusiebeleid te doen u in het verzoeklichaam wenst terug te winnen.
+U kunt veelvoudige fusiebeleid terugwinnen door een POST- verzoek aan het `/config/mergePolicies/bulk-get` eindpunt en met inbegrip van identiteitskaarts van het fusiebeleid te doen u in het verzoeklichaam wenst terug te winnen.
 
 **API formaat**
 
@@ -283,7 +283,7 @@ curl -X POST \
 
 **Reactie**
 
-Een succesvolle reactie keert de Status 207 van HTTP (multi-Status) en de details van het fusiebeleid terug waarvan IDs in het verzoek van de POST werd verstrekt.
+Een succesvolle reactie keert de Status 207 van HTTP (multi-Status) en de details van het fusiebeleid terug waarvan IDs in het POST- verzoek werd verstrekt.
 
 ```json
 { 
@@ -348,7 +348,7 @@ Zie de [ componenten van het beleid van de fusie ](#components-of-merge-policies
 
 ### Meerdere vormen van samenvoegingsbeleid weergeven op basis van criteria
 
-U kunt een lijst maken van veelvoudige samenvoegbeleid binnen uw organisatie door een verzoek van de GET tot het `/config/mergePolicies` eindpunt uit te geven en facultatieve vraagparameters te gebruiken om, de reactie te filtreren te orde te geven en te pagineren. U kunt meerdere parameters opnemen, gescheiden door ampersands (&amp;). Het maken van een vraag aan dit eindpunt zonder parameters zal al samenvoegbeleid beschikbaar voor uw organisatie terugwinnen.
+U kunt een lijst maken van de veelvoudige samenvoegbeleidsvormen binnen uw organisatie door een GET- verzoek aan het `/config/mergePolicies` eindpunt uit te geven en facultatieve vraagparameters te gebruiken om de reactie te filtreren, te ordenen en te pagineren. U kunt meerdere parameters opnemen, gescheiden door ampersands (&amp;). Het maken van een vraag aan dit eindpunt zonder parameters zal al samenvoegbeleid beschikbaar voor uw organisatie terugwinnen.
 
 **API formaat**
 
@@ -462,7 +462,7 @@ Een succesvolle reactie keert een gepagineerde lijst van fusiebeleid terug dat a
 
 ## Samenvoegbeleid maken
 
-U kunt een nieuw samenvoegbeleid voor uw organisatie tot stand brengen door een verzoek van de POST aan het `/config/mergePolicies` eindpunt te doen.
+U kunt een nieuw samenvoegbeleid voor uw organisatie tot stand brengen door een POST- verzoek aan het `/config/mergePolicies` eindpunt te doen.
 
 **API formaat**
 
@@ -551,7 +551,7 @@ Zie de [ componenten van het beleid van de fusie ](#components-of-merge-policies
 
 ## Een samenvoegingsbeleid bijwerken {#update}
 
-U kunt een bestaand samenvoegingsbeleid wijzigen door individuele attributen (PATCH) uit te geven of door het volledige fusiebeleid met nieuwe attributen (PUT) te beschrijven. Hieronder worden voorbeelden van beide weergegeven.
+U kunt een bestaand samenvoegbeleid wijzigen door afzonderlijke kenmerken te bewerken (PATCH) of door het gehele samenvoegbeleid te overschrijven met nieuwe kenmerken (PUT). Hieronder worden voorbeelden van beide weergegeven.
 
 ### Afzonderlijke velden voor samenvoegbeleid bewerken
 
@@ -632,7 +632,7 @@ Een succesvolle reactie keert de details van het onlangs bijgewerkte fusiebeleid
 
 ### Een samenvoegbeleid overschrijven
 
-Een andere manier om een fusiebeleid te wijzigen is een verzoek van de PUT te gebruiken, dat het volledige fusiebeleid beschrijft.
+Een andere manier om een fusiebeleid te wijzigen is een verzoek van PUT te gebruiken, dat het volledige fusiebeleid beschrijft.
 
 **API formaat**
 
@@ -727,7 +727,7 @@ Een geslaagde reactie retourneert de details van het bijgewerkte samenvoegingsbe
 
 ## Een samenvoegingsbeleid verwijderen
 
-Een samenvoegingsbeleid kan worden geschrapt door een verzoek van de DELETE aan het `/config/mergePolicies` eindpunt en met inbegrip van identiteitskaart van het fusiebeleid te doen dat u wenst om in de verzoekweg te schrappen.
+Een samenvoegingsbeleid kan worden geschrapt door een DELETE- verzoek aan het `/config/mergePolicies` eindpunt en met inbegrip van identiteitskaart van het fusiebeleid te doen dat u wenst om in de verzoekweg te schrappen.
 
 >[!NOTE]
 >
@@ -758,10 +758,10 @@ curl -X DELETE \
 
 **Reactie**
 
-Een succesvol verwijderingsverzoek retourneert HTTP Status 200 (OK) en een lege antwoordinstantie. Om de schrapping te bevestigen succesvol was, kunt u een verzoek van de GET uitvoeren om het fusiebeleid door zijn identiteitskaart te bekijken. Als het samenvoegbeleid is verwijderd, ontvangt u een HTTP Status 404 (Not Found)-fout.
+Een succesvol verwijderingsverzoek retourneert HTTP Status 200 (OK) en een lege antwoordinstantie. Om te bevestigen dat het verwijderen is gelukt, kunt u een GET-aanvraag uitvoeren om het samenvoegbeleid met de bijbehorende id weer te geven. Als het samenvoegbeleid is verwijderd, ontvangt u een HTTP Status 404 (Not Found)-fout.
 
 ## Volgende stappen
 
-Nu u weet om samenvoegbeleid voor uw organisatie tot stand te brengen en te vormen, kunt u hen gebruiken om de mening van klantenprofielen binnen Platform aan te passen en publiek van uw [!DNL Real-Time Customer Profile] gegevens tot stand te brengen.
+Nu u weet hoe u samenvoegbeleid voor uw organisatie kunt maken en configureren, kunt u deze gebruiken om de weergave van klantprofielen in Experience Platform aan te passen en om publiek te maken op basis van uw [!DNL Real-Time Customer Profile] -gegevens.
 
 Gelieve te zien de [ documentatie van de Dienst van de Segmentatie van Adobe Experience Platform ](../../segmentation/home.md) beginnen bepalend en werkend met publiek.

@@ -1,23 +1,23 @@
 ---
 title: Adobe Target gebruiken met Web SDK voor personalisatie
-description: Leer hoe te om gepersonaliseerde inhoud met het Web SDK van het Experience Platform terug te geven gebruikend Adobe Target
+description: Leer hoe u persoonlijke inhoud kunt renderen met de Experience Platform Web SDK met Adobe Target
 exl-id: 021171ab-0490-4b27-b350-c37d2a569245
-source-git-commit: 116db0808835c548c21635148b81b3e884b5cebd
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1357'
+source-wordcount: '1361'
 ht-degree: 1%
 
 ---
 
 # [!DNL Adobe Target] en [!DNL Web SDK] gebruiken voor personalisatie
 
-[!DNL Adobe Experience Platform] [!DNL Web SDK] kan persoonlijke ervaringen die in [!DNL Adobe Target] worden beheerd, leveren en renderen naar het webkanaal. U kunt een redacteur gebruiken WYSIWYG, genoemd de [ Visuele Composer van de Ervaring ](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html) (VEC), of een niet-visuele interface, de [ Op vorm-gebaseerde Composer van de Ervaring ](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html), om, uw activiteiten en verpersoonlijkingservaringen tot stand te brengen te activeren en te leveren.
+[!DNL Adobe Experience Platform] [!DNL Web SDK] kan persoonlijke ervaringen die in [!DNL Adobe Target] worden beheerd, leveren en renderen naar het webkanaal. U kunt een redacteur van WYSIWYG gebruiken, genoemd [ Visuele Composer van de Ervaring ](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html) (VEC), of een niet-visuele interface, [ op vorm-gebaseerde Composer van de Ervaring ](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html), om, uw activiteiten en verpersoonlijkingservaringen tot stand te brengen te activeren en te leveren.
 
 >[!IMPORTANT]
 >
->Leer hoe te om uw implementatie van het Doel aan het Web SDK van het Platform met [ te migreren Migrate Doel van at.js 2.x aan het Web SDK van het Platform ](https://experienceleague.adobe.com/docs/platform-learn/migrate-target-to-websdk/introduction.html) leerprogramma.
+>Leer hoe te om uw implementatie van het Doel aan het Web SDK van Experience Platform met [ te migreren Migrate Doel van at.js 2.x aan het Web SDK van Experience Platform ](https://experienceleague.adobe.com/docs/platform-learn/migrate-target-to-websdk/introduction.html) leerprogramma.
 >
->Leer hoe te om Doel voor het eerst met [ uit te voeren Adobe Experience Cloud met het leerprogramma van SDK van het Web ](https://experienceleague.adobe.com/docs/platform-learn/implement-web-sdk/overview.html) uitvoert. Voor informatie specifiek voor Doel, zie de tutorial sectie getiteld [ Vastgestelde Doel van de Opstelling met het Web SDK van het Platform ](https://experienceleague.adobe.com/docs/platform-learn/implement-web-sdk/applications-setup/setup-target.html).
+>Leer hoe te om Doel voor het eerst met [ uit te voeren Adobe Experience Cloud met het 1} leerprogramma van SDK van het Web {. ](https://experienceleague.adobe.com/docs/platform-learn/implement-web-sdk/overview.html) Voor informatie specifiek voor Doel, zie de tutorial sectie getiteld [ Vastgestelde Doel van de Opstelling met het Web SDK van Experience Platform ](https://experienceleague.adobe.com/docs/platform-learn/implement-web-sdk/applications-setup/setup-target.html).
 
 
 De volgende functies zijn getest en worden momenteel ondersteund in [!DNL Target] :
@@ -27,7 +27,7 @@ De volgende functies zijn getest en worden momenteel ondersteund in [!DNL Target
 * [ de activiteiten van Automated Personalization ](https://experienceleague.adobe.com/docs/target/using/activities/automated-personalization/automated-personalization.html)
 * [ Ervaring richtend activiteiten ](https://experienceleague.adobe.com/docs/target/using/activities/automated-personalization/automated-personalization.html)
 * [ Multivariate Tests (MVT) ](https://experienceleague.adobe.com/docs/target/using/activities/multivariate-test/multivariate-testing.html)
-* [ de activiteiten van Recommendations ](https://experienceleague.adobe.com/docs/target/using/recommendations/recommendations.html)
+* [ de activiteiten van Aanbevelingen ](https://experienceleague.adobe.com/docs/target/using/recommendations/recommendations.html)
 * [ Inheemse de indruk en omzetting van het Doel rapporterend ](https://experienceleague.adobe.com/docs/target/using/reports/reports.html)
 * [ Steun VEC ](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html)
 
@@ -35,18 +35,18 @@ De volgende functies zijn getest en worden momenteel ondersteund in [!DNL Target
 
 In het volgende diagram krijgt u inzicht in de workflow voor het bepalen van randen in [!DNL Target] en [!DNL Web SDK] .
 
-![ Diagram van de randbeslissing van Adobe Target met het Web SDK van het Platform ](assets/target-platform-web-sdk-new.png)
+![ Diagram van de randbeslissing van Adobe Target met SDK van het Web van Experience Platform ](assets/target-platform-web-sdk-new.png)
 
 | Bellen | Details |
 | --- | --- |
-| 1 | Het apparaat laadt de [!DNL Web SDK] . [!DNL Web SDK] verzendt een verzoek naar de Edge Network met XDM gegevens, milieu-id van Datastreams, overgegaan parameters, en (facultatieve) identiteitskaart van de Klant. De pagina (of containers) is vooraf verborgen. |
-| 2 | De Edge Network stuurt het verzoek naar de Edge-services om deze te verrijken met de informatie over de bezoeker-id, toestemming en andere bezoekerscontext, zoals geolocatie en apparaatvriendelijke namen. |
-| 3 | De Edge Network verzendt het verrijkte verpersoonlijkingsverzoek naar de [!DNL Target] rand met de bezoeker-id en doorgegeven parameters. |
+| 1 | Het apparaat laadt de [!DNL Web SDK] . [!DNL Web SDK] verzendt een aanvraag naar de Edge Network met XDM-gegevens, de DataStreams Environment ID, doorgegeven parameters en de Klant-id (optioneel). De pagina (of containers) is vooraf verborgen. |
+| 2 | De Edge Network stuurt het verzoek naar de Edge-services om deze te verrijken met de informatie over de bezoeker-id, toestemming en andere context-informatie voor bezoekers, zoals geolocatie en apparaatvriendelijke namen. |
+| 3 | De Edge Network verzendt de verrijkte aanpassingsaanvraag naar de [!DNL Target] edge met de parameters Visitor ID en passed-in. |
 | 4 | Profielscripts worden uitgevoerd en vervolgens opgenomen in de profielopslag van [!DNL Target] . De opslag van het profiel haalt segmenten van [!UICONTROL Audience Library] (bijvoorbeeld, segmenten die van [!DNL Adobe Analytics] worden gedeeld, [!DNL Adobe Audience Manager], [!DNL Adobe Experience Platform]). |
 | 5 | Op basis van URL-aanvraagparameters en -profielgegevens bepaalt [!DNL Target] welke activiteiten en ervaringen moeten worden weergegeven voor de bezoeker voor de huidige paginaweergave en voor toekomstige vooraf ingestelde weergaven. [!DNL Target] stuurt dit vervolgens terug naar de Edge Network. |
-| 6 | a. De Edge Network stuurt de verpersoonlijkingsreactie terug naar de pagina, eventueel met inbegrip van profielwaarden voor extra verpersoonlijking. Gepersonaliseerde inhoud op de huidige pagina wordt zo snel mogelijk weergegeven zonder flikkering van de standaardinhoud.<br> b. De gepersonaliseerde inhoud voor meningen die als resultaat van gebruikersacties in Één enkele Toepassing van de Pagina (SPA) worden getoond wordt in het voorgeheugen ondergebracht zodat kan het onmiddellijk zonder een extra servervraag worden toegepast wanneer de meningen worden teweeggebracht. <br> c. De Edge Network verzendt de bezoeker-id en andere waarden in cookies, zoals toestemming, sessie-id, identiteit, cookie-controle, personalisatie. |
-| 7 | De SDK van het Web verzendt het bericht van het apparaat naar de Edge Network. |
-| 8 | De Edge Network stuurt [!UICONTROL Analytics for Target] (A4T) gegevens (metagegevens over activiteit, ervaring en omzetting) door naar de [!DNL Analytics] edge. |
+| 6 | a. De Edge Network stuurt de personalisatiereactie terug naar de pagina, eventueel met inbegrip van profielwaarden voor extra personalisatie. Gepersonaliseerde inhoud op de huidige pagina wordt zo snel mogelijk weergegeven zonder flikkering van de standaardinhoud.<br> b. De gepersonaliseerde inhoud voor meningen die als resultaat van gebruikersacties in Één enkele Toepassing van de Pagina (SPA) worden getoond wordt in het voorgeheugen ondergebracht zodat kan het onmiddellijk zonder een extra servervraag worden toegepast wanneer de meningen worden teweeggebracht. <br> c. De Edge Network verzendt de bezoeker-id en andere waarden in cookies, zoals toestemming, sessie-id, identiteit, cookie-controle, personalisatie. |
+| 7 | De Web SDK stuurt het bericht van het apparaat naar de Edge Network. |
+| 8 | De Edge Network stuurt [!UICONTROL Analytics for Target] (A4T) gegevens (metagegevens over activiteit, ervaring en conversie) door naar de [!DNL Analytics] edge. |
 
 ## [!DNL Adobe Target] inschakelen
 
@@ -223,7 +223,7 @@ In de volgende tabel worden de [!DNL Recommendations] -kenmerken weergegeven en 
 
 | Categorie | Kenmerk | Ondersteuningsstatus |
 | --- | --- | --- |
-| Recommendations - Kenmerken van standaardentiteiten | entity.id | Ondersteund |
+| Aanbevelingen - Standaardentiteitskenmerken | entity.id | Ondersteund |
 |  | entity.name | Ondersteund |
 |  | entity.categoryId | Ondersteund |
 |  | entity.pageUrl | Ondersteund |
@@ -234,13 +234,13 @@ In de volgende tabel worden de [!DNL Recommendations] -kenmerken weergegeven en 
 |  | entity.brand | Ondersteund |
 |  | entity.margin | Ondersteund |
 |  | entity.event.detailsOnly | Ondersteund |
-| Recommendations - Aangepaste entiteitskenmerken | entity.yourCustomAttributeName | Ondersteund |
-| Recommendations - Gereserveerde parameters mbox/page | excludeIds | Ondersteund |
+| Aanbevelingen - Aangepaste entiteitskenmerken | entity.yourCustomAttributeName | Ondersteund |
+| Aanbevelingen - Gereserveerde parameters mbox/page | excludeIds | Ondersteund |
 |  | cartIds | Ondersteund |
 |  | productPurchasedId | Ondersteund |
 | Pagina of itemcategorie voor categorie affiniteit | user.categoryId | Ondersteund |
 
-**hoe te om de attributen van Recommendations naar Adobe Target te verzenden:**
+**hoe te om de attributen van Aanbevelingen naar Adobe Target te verzenden:**
 
 ```js
 alloy("sendEvent", {

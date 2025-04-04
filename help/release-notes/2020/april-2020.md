@@ -1,19 +1,19 @@
 ---
-title: Opmerkingen bij de release van Adobe Experience Platform, april 2020
+title: Aanvullende informatie van april 2020 voor Adobe Experience Platform
 description: Aanvullende informatie van april 2020 voor Adobe Experience Platform.
 doc-type: release notes
 last-update: April 13, 2020
 author: ens71067
 keywords: opmerkingen bij de release;
 exl-id: 0f68c71e-3c9d-453b-a953-1cd1b6ca2e35
-source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '985'
-ht-degree: 3%
+ht-degree: 26%
 
 ---
 
-# Opmerkingen bij de release van Adobe Experience Platform
+# Aanvullende informatie voor Adobe Experience Platform
 
 **Releasedatum: donderdag 8 april 2020**
 
@@ -22,7 +22,7 @@ Nieuwe functies in Adobe Experience Platform:
 
 Updates voor bestaande functies:
 * [[!DNL Experience Data Model (XDM)]](#xdm)
-* [Gegevensbeheer](#governance)
+* [Datagovernance](#governance)
 * [[!DNL Destinations]](#destinations)
 * [[!DNL Privacy Service]](#privacy)
 * [[!DNL Sources]](#sources)
@@ -46,11 +46,11 @@ Voor meer informatie over [!DNL Intelligent Services] en wat het moet aanbieden,
 
 ## [!DNL Experience Data Model] (XDM)-systeem {#xdm}
 
-Standaardisering en interoperabiliteit zijn de belangrijkste concepten achter [!DNL Experience Platform] . [!DNL Experience Data Model] (XDM), gedreven door Adobe, is een inspanning om de gegevens van de klantenervaring te standaardiseren en schema&#39;s voor het beheer van de klantenervaring te bepalen.
+Standaardisering en interoperabiliteit zijn de belangrijkste concepten achter [!DNL Experience Platform] . [!DNL Experience Data Model] (XDM), aangedreven door Adobe, is een inspanning om de gegevens van de klantenervaring te standaardiseren en schema&#39;s voor het beheer van de klantenervaring te bepalen.
 
-XDM is een openbaar gedocumenteerde specificatie die wordt ontworpen om de macht van digitale ervaringen te verbeteren. Het verstrekt gemeenschappelijke structuren en definities voor om het even welke toepassing om met de diensten op Adobe Experience Platform te communiceren. Door zich aan de normen van XDM te houden, kunnen alle gegevens van de klantenervaring in een gemeenschappelijke vertegenwoordiging worden opgenomen die inzichten op een snellere, meer geïntegreerde manier levert. U kunt waardevolle inzichten van klantenacties bereiken, klantenpubliek door segmenten bepalen, en klantenattributen voor verpersoonlijkingsdoeleinden gebruiken.
+XDM is een openbaar gedocumenteerde specificatie die wordt ontworpen om de macht van digitale ervaringen te verbeteren. Het verstrekt gemeenschappelijke structuren en definities voor om het even welke toepassing om met de diensten op Adobe Experience Platform te communiceren. Door zich aan de normen van XDM te houden, kunnen alle gegevens van de klantenervaring in een gemeenschappelijke vertegenwoordiging worden opgenomen die inzichten op een snellere, meer geïntegreerde manier levert. U kunt waardevolle inzichten verkrijgen uit klantacties, klantdoelgroepen definiëren via segmenten en klantkenmerken gebruiken voor personalisatiedoeleinden.
 
-**Nieuwe eigenschappen**
+**Nieuwe functies**
 
 | Functie | Beschrijving |
 | --- | --- |
@@ -66,15 +66,15 @@ XDM is een openbaar gedocumenteerde specificatie die wordt ontworpen om de macht
 
 * Bekend
 
-## Gegevensbeheer {#governance}
+## Datagovernance {#governance}
 
-Adobe Experience Platform Data Governance is een reeks strategieën en technologieën die worden gebruikt om klantgegevens te beheren en naleving van regelgeving, beperkingen en beleidsregels die van toepassing zijn op gegevensgebruik te waarborgen. De klasse speelt binnen [!DNL Experience Platform] op diverse niveaus een sleutelrol, zoals catalogisering, gegevenskoppeling, labels voor gegevensgebruik, beleid voor gegevenstoegang en toegangsbeheer voor marketingacties.
+Adobe Experience Platform-datagovernance is een reeks strategieën en technologieën die worden gebruikt om klantgegevens te beheren en naleving te waarborgen van regelgeving, beperkingen en beleidsregels die op gegevensgebruik van toepassing zijn. Dit speelt binnen [!DNL Experience Platform] een sleutelrol op verschillende niveaus zoals catalogisering, gegevensoorsprong, labeling van gegevensgebruik, beleid voor gegevenstoegang en beheer van toegang tot gegevens voor marketingacties.
 
 Aan de slag met gegevensbeheer vereist een grondig inzicht in de verordeningen, de contractuele verplichtingen, en het collectieve beleid die op uw klantengegevens van toepassing zijn. Daarna kunnen gegevens worden geclassificeerd door de juiste labels voor gegevensgebruik toe te passen en kan het gebruik ervan worden geregeld door de definitie van beleid voor gegevensgebruik.
 
 Het gegevensbeheerframework vereenvoudigt en stroomlijnt het proces voor het categoriseren van gegevens en het maken van beleidsregels voor gegevensgebruik via de gebruikersinterface en de API van [!DNL Experience Platform] .[!DNL Policy Service]
 
-**Nieuwe eigenschappen**
+**Nieuwe functies**
 
 | Functie | Beschrijving |
 | -----------| ---------- |
@@ -87,9 +87,9 @@ Het gegevensbeheerframework vereenvoudigt en stroomlijnt het proces voor het cat
 Voor meer informatie, gelieve te zien het [ overzicht van het Beleid van Gegevens ](../../data-governance/home.md).
 
 
-## Doelen {#destinations}
+## Bestemmingen {#destinations}
 
-In [ Real-time Customer Data Platform ](../../rtcdp/overview.md), zijn de bestemmingen pre-gebouwde integratie met bestemmingsplatforms die gegevens aan die partners op een naadloze manier activeren.
+In [ Real-Time Customer Data Platform ](../../rtcdp/overview.md), zijn de bestemmingen pre-gebouwde integratie met bestemmingsplatforms die gegevens aan die partners op een naadloze manier activeren.
 
 **Nieuwe bestemmingen**
 
@@ -98,35 +98,35 @@ Real-Time CDP ondersteunt nu gegevensactivering voor meer dan vijftig [!DNL Expe
 | Documentatie | Beschrijving |
 |--- | ---|
 | [ de types en de categorieën van de Bestemming ](../../destinations/destination-types.md) | Dit artikel verklaart het verschil tussen verbindingen en uitbreidingen in de interface van Real-Time CDP en adviseert wanneer om elk van deze bestemmingen te gebruiken. |
-| [ uitbreidingen van het Experience Platform Launch ](../../destinations/catalog/launch-extensions/overview.md) | Op deze pagina wordt uitgelegd wat [!DNL Launch] extensies zijn, worden gebruiksscenario&#39;s voor het gebruik van extensies vermeld en worden koppelingen naar documentatie voor elke [!DNL Launch] -extensie in Real-Time CDP weergegeven. |
+| [ de uitbreidingen van de Lancering van het Platform van de Ervaring ](../../destinations/catalog/launch-extensions/overview.md) | Op deze pagina wordt uitgelegd wat [!DNL Launch] extensies zijn, worden gebruiksscenario&#39;s voor het gebruik van extensies vermeld en worden koppelingen naar documentatie voor elke [!DNL Launch] -extensie in Real-Time CDP weergegeven. |
 
 Voor meer informatie, gelieve te zien het [ overzicht van Doelen ](../../destinations/home.md).
 
 ## [!DNL Privacy Service] {#privacy}
 
-De nieuwe wettelijke en organisatorische verordeningen geven gebruikers het recht om tot hun persoonlijke gegevens van uw gegevensopslag toegang te hebben of te schrappen op verzoek. Adobe Experience Platform [!DNL Privacy Service] biedt een RESTful-API en -gebruikersinterface waarmee u deze gegevensaanvragen van uw klanten kunt beheren. Met [!DNL Privacy Service] kunt u verzoeken indienen om toegang te krijgen tot persoonlijke of persoonlijke klantgegevens en deze te verwijderen uit Adobe Experience Cloud-toepassingen, waardoor u gemakkelijker kunt voldoen aan wettelijke en organisatorische privacyregels.
+De nieuwe wettelijke en organisatorische verordeningen geven gebruikers het recht om tot hun persoonlijke gegevens van uw gegevensopslag toegang te hebben of te schrappen op verzoek. Adobe Experience Platform [!DNL Privacy Service] biedt een RESTful-API en gebruikersinterface waarmee u deze gegevensaanvragen van uw klanten kunt beheren. Met [!DNL Privacy Service] kunt u verzoeken indienen om toegang te krijgen tot privé- of persoonlijke klantgegevens en deze te verwijderen uit Adobe Experience Cloud-toepassingen, waardoor u gemakkelijker kunt voldoen aan wettelijke en organisatorische privacyregels.
 
-**Nieuwe eigenschappen**
+**Nieuwe functies**
 
 | Functie | Beschrijving |
 | --- | --- |
-| PDPA-ondersteuning | De verzoeken van de privacy kunnen nu worden gecreeerd en worden gevolgd onder de Wet van de Bescherming van Persoonlijke Gegevens (PDPA) in Thailand. Wanneer u privacyverzoeken indient in de API, accepteert de array `regulation` de waarde &quot;pdpa_tha&quot;. |
-| Naamruimtetypen in de gebruikersinterface | U kunt nu verschillende naamruimtetypen opgeven in de Request Builder in de gebruikersinterface van [!DNL Privacy Service] . Zie de [ gebruikersgids ](../../privacy-service/ui/user-guide.md) voor meer informatie. |
-| Oude afleiding van eindpunt | Het oude API eindpunt (`data/privacy/gdpr`) is afgekeurd. |
+| PDPA-ondersteuning | De verzoeken van de privacy kunnen nu worden gecreeerd en worden gevolgd onder de Wet van de Bescherming van Persoonlijke Gegevens (PDPA) in Thailand. Wanneer u privacyverzoeken indient in de API, accepteert de array `regulation` de waarde &#39;pdpa_tha&#39;. |
+| Naamruimtetypen in de gebruikersinterface | U kunt nu verschillende naamruimtetypen opgeven in de Request Builder in de gebruikersinterface van [!DNL Privacy Service]. Raadpleeg het [handboek](../../privacy-service/ui/user-guide.md) voor meer informatie. |
+| Afschaffing van het oude eindpunt | Het oude API-eindpunt (`data/privacy/gdpr`) is afgeschaft. |
 
 Bekende problemen
 
 * Geen
 
-Voor meer informatie over [!DNL Privacy Service], gelieve te beginnen door het [ overzicht van de Privacy Service ](../../privacy-service/home.md) te lezen.
+Voor meer informatie over [!DNL Privacy Service], gelieve te beginnen door het [ overzicht van Privacy Service ](../../privacy-service/home.md) te lezen.
 
 ## Bronnen {#sources}
 
-Adobe Experience Platform kan gegevens uit externe bronnen invoeren, terwijl u die gegevens kunt structureren, labelen en verbeteren met [!DNL Platform] -services. U kunt gegevens van een verscheidenheid van bronnen zoals de toepassingen van de Adobe, op wolk-gebaseerde opslag, derdesoftware, en uw systeem van CRM opnemen.
+Adobe Experience Platform kan gegevens uit externe bronnen invoeren, terwijl u die gegevens kunt structureren, labelen en verbeteren met [!DNL Experience Platform] -services. U kunt gegevens opnemen uit verschillende bronnen, zoals Adobe-toepassingen, cloudgebaseerde opslag, software van derden en uw CRM-systeem.
 
-[!DNL Experience Platform] biedt een RESTful-API en een interactieve UI waarmee u eenvoudig bronverbindingen voor verschillende gegevensproviders kunt instellen. Deze bronverbindingen staan u toe om met externe opslagsystemen en de diensten van CRM voor authentiek te verklaren en te verbinden, tijden voor ingestiingslooppas te plaatsen, en gegevensinvoer te beheren.
+[!DNL Experience Platform] biedt een RESTful-API en een interactieve UI waarmee u eenvoudig bronverbindingen voor verschillende gegevensproviders kunt instellen. Met deze bronverbindingen kunt u externe opslagsystemen en CRM-services verifiëren en er verbinding mee maken, tijden voor opnameruns instellen en de doorvoer van gegevensopname beheren.
 
-**Nieuwe eigenschappen**
+**Nieuwe functies**
 
 | Functie | Beschrijving |
 | ------- | ----------- |

@@ -3,7 +3,7 @@ keywords: platform;bestemmingen;bestemmingswerkruimte;werkruimte;ui;bestemmingen
 title: Werkruimte Doelen
 description: De werkruimte van Doelen bestaat uit vijf secties, Overzicht, Catalogus, doorbladeren, Rekeningen, en de Mening van het Systeem. Deze worden in de onderstaande secties beschreven.
 exl-id: 0f46f08d-0fe3-441d-933a-86bc146c0f19
-source-git-commit: 78168493d712d2ec0974b811d288902fd94f3e40
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '1117'
 ht-degree: 0%
@@ -24,19 +24,19 @@ Op het tabblad **[!UICONTROL Overview]** wordt het dashboard van [!UICONTROL Des
 
 >[!NOTE]
 >
->Als uw organisatie nieuw is in het Experience Platform en nog geen actieve doelen heeft, zijn het dashboard [!UICONTROL Destinations] en het tabblad [!UICONTROL Overview] niet zichtbaar. In plaats daarvan, die [!UICONTROL Destinations] van de linkernavigatie selecteren toont [[!UICONTROL Catalog] lusje ](#catalog).
+>Als uw organisatie nieuw is voor Experience Platform en nog geen actieve doelen heeft, zijn het dashboard [!UICONTROL Destinations] en het tabblad [!UICONTROL Overview] niet zichtbaar. In plaats daarvan, die [!UICONTROL Destinations] van de linkernavigatie selecteren toont [[!UICONTROL Catalog] lusje ](#catalog).
 
 ![ het lusje van het Overzicht van het dashboard van Doelen.](../../dashboards/images/destinations/dashboard-overview.png)
 
 ## [!UICONTROL Catalog] {#catalog}
 
-Op het tabblad **[!UICONTROL Catalog]** wordt een lijst weergegeven met alle doelen die beschikbaar zijn in [!DNL Platform] en waarnaar u gegevens kunt verzenden.
+Op het tabblad **[!UICONTROL Catalog]** wordt een lijst weergegeven met alle doelen die beschikbaar zijn in [!DNL Experience Platform] en waarnaar u gegevens kunt verzenden.
 
-De gebruikersinterface van [!DNL Platform] biedt verschillende zoek- en filteropties op de pagina met de doelcatalogus:
+De gebruikersinterface van [!DNL Experience Platform] biedt verschillende zoek- en filteropties op de pagina met de doelcatalogus:
 
 * Gebruik de zoekfunctionaliteit op de pagina om een specifiek doel te zoeken.
 * Filter doelen met het besturingselement [!UICONTROL Categories] .
-* Schakelen tussen [!UICONTROL All destinations] en [!UICONTROL My destinations] . Wanneer u **[!UICONTROL All destinations]** selecteert, worden alle beschikbare [!DNL Platform] -doelen weergegeven. Wanneer u **[!UICONTROL My destinations]** selecteert, kunt u alleen de doelen zien waarmee u een verbinding hebt gemaakt.
+* Schakelen tussen [!UICONTROL All destinations] en [!UICONTROL My destinations] . Wanneer u **[!UICONTROL All destinations]** selecteert, worden alle beschikbare [!DNL Experience Platform] -doelen weergegeven. Wanneer u **[!UICONTROL My destinations]** selecteert, kunt u alleen de doelen zien waarmee u een verbinding hebt gemaakt.
 * Selecteer deze optie om de typen **[!UICONTROL Connections]** en/of **[!UICONTROL Extensions]** weer te geven. Om het verschil tussen de twee categorieën te begrijpen, lees [ de Types en de Categorieën van Bestemming ](../destination-types.md).
 
 ![ catalogus van Doelen die een paar reclame en wolkenopslagbestemmingen tonen.](../assets/ui/workspace/catalog.png)

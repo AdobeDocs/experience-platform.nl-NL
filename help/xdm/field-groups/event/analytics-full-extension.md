@@ -2,9 +2,9 @@
 title: Adobe Analytics ExperienceEvent Full Extension Schema Field Group
 description: Leer meer over de Adobe Analytics ExperienceEvent Full Extension schema-veldgroep.
 exl-id: b5e17f4a-a582-4059-bbcb-435d46932775
-source-git-commit: 5eb15a7dfff7e6d8ba815ae4f89142ba50166620
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '792'
+source-wordcount: '793'
 ht-degree: 0%
 
 ---
@@ -17,7 +17,7 @@ In dit document worden de structuur en het gebruiksscenario van de veldgroep Ana
 
 >[!NOTE]
 >
->Vanwege de grootte en het aantal herhaalde elementen in deze veldgroep zijn veel van de velden in deze handleiding samengevouwen om ruimte te besparen. Om de volledige structuur van deze gebiedsgroep te onderzoeken, kunt u het in Platform UI ](../../ui/explore.md) opzoeken of het volledige schema in de [ openbare XDM bewaarplaats ](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/analytics/experienceevent-all.schema.json) bekijken.[
+>Vanwege de grootte en het aantal herhaalde elementen in deze veldgroep zijn veel van de velden in deze handleiding samengevouwen om ruimte te besparen. Om de volledige structuur van deze gebiedsgroep te onderzoeken, kunt u het in Experience Platform UI ](../../ui/explore.md) opzoeken of het volledige schema in de [ openbare bewaarplaats XDM ](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/analytics/experienceevent-all.schema.json) bekijken.[
 
 ## Groepsstructuur van veld
 
@@ -103,4 +103,4 @@ Elk even object gebruikt het gegevenstype [[!UICONTROL Measure]](../../data-type
 
 In dit document wordt de structuur en het gebruik van hoofdletters en kleine letters besproken voor de veldgroep Analytics-extensie. Voor meer details op de gebiedsgroep zelf, verwijs naar de [ openbare bewaarplaats XDM ](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/analytics/experienceevent-all.schema.json).
 
-Als u deze gebiedsgroep gebruikt om de gegevens van Analytics te verzamelen gebruikend het Web SDK van Adobe Experience Platform, zie de gids op [ vormend een datastream ](../../../datastreams/overview.md) hoe te om gegevens aan XDM op de serverzijde in kaart te brengen.
+Als u deze gebiedsgroep gebruikt om de gegevens van Analytics te verzamelen gebruikend het Web SDK van Adobe Experience Platform, zie de gids op [ vormend een datastream ](../../../datastreams/overview.md) om te leren hoe te om gegevens aan XDM op de serverzijde in kaart te brengen.

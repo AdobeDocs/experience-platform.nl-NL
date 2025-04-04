@@ -2,9 +2,9 @@
 title: Amazon S3-verbinding
 description: Creeer een levende uitgaande verbinding aan uw opslag van Amazon Web Services (AWS) S3 om CSV- gegevensdossiers van Adobe Experience Platform in uw eigen S3 emmers periodiek uit te voeren.
 exl-id: 6a2a2756-4bbf-4f82-88e4-62d211cbbb38
-source-git-commit: 8dbdfb1e8e574647bf621a320ee07ecc7a653a6c
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1457'
+source-wordcount: '1461'
 ht-degree: 0%
 
 ---
@@ -27,7 +27,7 @@ ht-degree: 0%
 
 ## Verbinding maken met uw [!DNL Amazon S3] -opslag via API of UI {#connect-api-or-ui}
 
-* Om met uw [!DNL Amazon S3] opslagplaats te verbinden gebruikend het gebruikersinterface van het Platform, lees de secties [ verbinden met de bestemming ](#connect) en [ actief publiek aan deze bestemming ](#activate) hieronder.
+* Om met uw [!DNL Amazon S3] opslagplaats te verbinden gebruikend het gebruikersinterface van Experience Platform, lees de secties [ verbinden met de bestemming ](#connect) en [ actief publiek aan deze bestemming ](#activate) hieronder.
 * Om met uw [!DNL Amazon S3] opslagplaats programmatically te verbinden, lees de gids op hoe te [ publiek aan op dossier-gebaseerde bestemmingen activeren door de Dienst API van de Stroom te gebruiken leerprogramma ](../../api/activate-segments-file-based-destinations.md).
 
 ## Ondersteunde doelgroepen {#supported-audiences}
@@ -58,14 +58,14 @@ Raadpleeg de onderstaande tabel voor informatie over het exporttype en de export
 
 Deze bestemming steunt dataset de uitvoer. Voor volledige informatie over hoe te de uitvoer van de opstellingsdataset, lees de leerprogramma&#39;s:
 
-* Hoe te [ datasets uitvoeren gebruikend het gebruikersinterface van het Platform ](/help/destinations/ui/export-datasets.md).
+* Hoe te [ datasets uitvoeren gebruikend het gebruikersinterface van Experience Platform ](/help/destinations/ui/export-datasets.md).
 * Hoe te [ datasets programmatically uitvoeren gebruikend de Dienst API van de Stroom ](/help/destinations/api/export-datasets.md).
 
 ## Bestandsindeling van de geëxporteerde gegevens {#file-format}
 
-Wanneer het uitvoeren van *publieksgegevens*, leidt het Platform tot een `.csv`, `parquet`, of `.json` dossier in de opslagplaats die u verstrekte. Voor meer informatie over de dossiers, zie [ gesteunde dossierformaten voor de uitvoer ](../../ui/activate-batch-profile-destinations.md#supported-file-formats-export) sectie in het leerprogramma van de publiekactivering.
+Wanneer het uitvoeren van *publieksgegevens*, leidt Experience Platform tot een `.csv`, `parquet`, of `.json` dossier in de opslagplaats die u verstrekte. Voor meer informatie over de dossiers, zie [ gesteunde dossierformaten voor de uitvoer ](../../ui/activate-batch-profile-destinations.md#supported-file-formats-export) sectie in het leerprogramma van de publiekactivering.
 
-Wanneer het uitvoeren van *datasets*, leidt het Platform tot een `.parquet` of `.json` dossier in de opslagplaats die u verstrekte. Voor meer informatie over de dossiers, zie [ succesvolle datasetuitvoer ](../../ui/export-datasets.md#verify) sectie in het de uitvoerdatasetleerprogramma verifiëren.
+Wanneer het uitvoeren van *datasets*, leidt Experience Platform tot een `.parquet` of `.json` dossier in de opslagplaats die u verstrekte. Voor meer informatie over de dossiers, zie [ succesvolle datasetuitvoer ](../../ui/export-datasets.md#verify) sectie in het de uitvoerdatasetleerprogramma verifiëren.
 
 ## Verbinden met de bestemming {#connect}
 
@@ -93,7 +93,7 @@ Gebruik deze verificatiemethode als u de Amazon S3-toegangstoets en de geheime s
 
 ![ Beeld van de vereiste gebieden wanneer het selecteren van toegangstoets en geheime zeer belangrijke authentificatie.](/help/destinations/assets/catalog/cloud-storage/amazon-s3/access-key-secret-key-authentication.png)
 
-* **[!DNL Amazon S3]access key** en **[!DNL Amazon S3]geheime sleutel**: In [!DNL Amazon S3], produceer een `access key - secret access key` paar om Platform toegang tot uw [!DNL Amazon S3] rekening te verlenen. Leer meer in de [ documentatie van Amazon Web Services ](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html).
+* **[!DNL Amazon S3]access key** en **[!DNL Amazon S3]geheime sleutel**: in [!DNL Amazon S3] genereert u een `access key - secret access key` paar om Experience Platform toegang te verlenen tot uw [!DNL Amazon S3] account. Leer meer in de [ documentatie van Amazon Web Services ](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html).
 * **[!UICONTROL Encryption key]**: U kunt desgewenst een openbare sleutel met RSA-indeling toevoegen om versleuteling toe te voegen aan uw geëxporteerde bestanden. Bekijk een voorbeeld van een correct opgemaakte coderingssleutel in de onderstaande afbeelding.
 
   ![ Beeld dat een voorbeeld van een correct geformatteerde sleutel PGP in UI toont.](../../assets/catalog/cloud-storage/sftp/pgp-key.png)
@@ -154,7 +154,7 @@ Wanneer u klaar bent met het opgeven van details voor uw doelverbinding, selecte
 
 ### Vereiste [!DNL Amazon S3] machtigingen {#required-s3-permission}
 
-Als u gegevens wilt verbinden en exporteren naar uw [!DNL Amazon S3] -opslaglocatie, maakt u een gebruiker voor Identiteit en Toegangsbeheer (IAM) voor [!DNL Platform] in [!DNL Amazon S3] en wijst u machtigingen toe voor de volgende handelingen:
+Als u gegevens wilt verbinden en exporteren naar uw [!DNL Amazon S3] -opslaglocatie, maakt u een gebruiker voor Identiteit en Toegangsbeheer (IAM) voor [!DNL Experience Platform] in [!DNL Amazon S3] en wijst u machtigingen toe voor de volgende handelingen:
 
 * `s3:DeleteObject`
 * `s3:GetBucketLocation`
@@ -201,7 +201,7 @@ Commenting out this note, as write permissions are assigned through the s3:PutOb
 
 >[!IMPORTANT]
 >
->Platform needs `write` permissions on the bucket object where the export files will be delivered.
+>Experience Platform needs `write` permissions on the bucket object where the export files will be delivered.
 
 -->
 

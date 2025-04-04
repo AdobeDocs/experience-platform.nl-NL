@@ -2,24 +2,24 @@
 title: Op velden gebaseerde workflows in de Schema-editor
 description: Leer hoe u velden van bestaande veldgroepen afzonderlijk kunt toevoegen aan uw XDM-schema's (Experience Data Model).
 exl-id: 0499ff30-a602-419b-b9d3-2defdd4354a7
-source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1269'
+source-wordcount: '1273'
 ht-degree: 0%
 
 ---
 
 # Op velden gebaseerde workflows in de Schema-editor
 
-Adobe Experience Platform verstrekt een robuuste reeks gestandaardiseerde [ gebiedsgroepen ](../schema/composition.md#field-group) voor gebruik in de schema&#39;s van de Gegevens van de Ervaring van het Model (XDM). De structuur en de semantiek achter deze veldgroepen zijn zorgvuldig afgestemd op een grote verscheidenheid aan segmentatiegebruikstoepassingen en andere downstreamtoepassingen in Platform. U kunt ook uw eigen aangepaste veldgroepen definiëren voor unieke bedrijfsbehoeften.
+Adobe Experience Platform verstrekt een robuuste reeks gestandaardiseerde [ gebiedsgroepen ](../schema/composition.md#field-group) voor gebruik in de schema&#39;s van de Gegevens van de Ervaring van het Model (XDM). De structuur en de semantiek achter deze veldgroepen zijn zorgvuldig afgestemd op een grote verscheidenheid aan gebruikscategorieën voor segmentatie en andere downstreamtoepassingen in Experience Platform. U kunt ook uw eigen aangepaste veldgroepen definiëren voor unieke bedrijfsbehoeften.
 
 Wanneer u een veldgroep aan een schema toevoegt, erft dat schema alle gebieden in die groep. U kunt nu echter afzonderlijke velden toevoegen aan uw schema zonder dat u andere velden uit de bijbehorende veldgroep hoeft op te nemen die u niet altijd hoeft te gebruiken.
 
-Deze handleiding behandelt de verschillende methoden voor het toevoegen van afzonderlijke velden aan een schema in de gebruikersinterface van het platform.
+In deze handleiding worden de verschillende methoden besproken voor het toevoegen van afzonderlijke velden aan een schema in de gebruikersinterface van Experience Platform.
 
 ## Vereisten
 
-Dit leerprogramma veronderstelt dat u met de [ samenstelling van schema&#39;s XDM ](../schema/composition.md) vertrouwd bent en hoe te om de Redacteur van het Schema in Platform UI te gebruiken. Om langs te volgen, zou u het proces van [ moeten beginnen creërend een nieuw schema ](./resources/schemas.md) en het aan een standaardklasse toe te wijzen alvorens met deze gids verder te gaan.
+Dit leerprogramma veronderstelt dat u met de [ samenstelling van schema&#39;s XDM ](../schema/composition.md) vertrouwd bent en hoe te om de Redacteur van het Schema in Experience Platform UI te gebruiken. Om langs te volgen, zou u het proces van [ moeten beginnen creërend een nieuw schema ](./resources/schemas.md) en het aan een standaardklasse toe te wijzen alvorens met deze gids verder te gaan.
 
 ## Velden verwijderen die zijn toegevoegd uit standaardveldgroepen {#remove-field-group}
 
@@ -111,4 +111,4 @@ Zie [ creeer en geef schema&#39;s in de gids UI ](./resources/schemas.md#custom-
 
 ## Volgende stappen
 
-Deze gids behandelde de nieuwe op gebied-gebaseerde werkschema&#39;s voor de Redacteur van het Schema in Platform UI. Voor meer informatie over het beheren van schema&#39;s in UI, zie het [ overzicht UI ](./overview.md).
+Deze gids behandelde de nieuwe op gebied-gebaseerde werkschema&#39;s voor de Redacteur van het Schema in Experience Platform UI. Voor meer informatie over het beheren van schema&#39;s in UI, zie het [ overzicht UI ](./overview.md).

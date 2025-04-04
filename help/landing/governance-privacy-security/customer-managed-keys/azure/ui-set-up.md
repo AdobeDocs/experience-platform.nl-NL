@@ -1,21 +1,21 @@
 ---
-title: Door de klant beheerde sleutels voor Azure instellen en configureren met behulp van de platforminterface
+title: Door de klant beheerde sleutels voor Azure instellen en configureren met behulp van de gebruikersinterface van Experience Platform
 description: Leer hoe u uw CMK-app instelt met uw Azure-medewerker en uw coderingssleutel-id verzendt naar Adobe Experience Platform.
 role: Developer
 feature: Privacy
 exl-id: 5f38997a-66f3-4f9d-9c2f-fb70266ec0a6
-source-git-commit: 58bc7a650ff58f877550fa8838c6f8e2908f0090
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1051'
+source-wordcount: '1059'
 ht-degree: 0%
 
 ---
 
-# Door de klant beheerde sleutels voor Azure instellen en configureren met behulp van de platforminterface
+# Door de klant beheerde sleutels voor Azure instellen en configureren met behulp van de gebruikersinterface van Experience Platform
 
-Dit document behandelt de Azure-specifieke instructies voor het inschakelen van de CMK-functie (Customer Managed Keys) in Platform met behulp van de gebruikersinterface. Voor AWS-specifieke instructies, verwijs naar de [ opstellingsgids van AWS ](../aws/ui-set-up.md).
+In dit document worden de Azure-specifieke instructies besproken voor het inschakelen van de CMK-functie (Customer Managed Keys) in Experience Platform via de gebruikersinterface. Voor AWS-specifieke instructies, verwijs naar de [ opstellingsgids van AWS ](../aws/ui-set-up.md).
 
-Voor instructies op hoe te om dit proces voor ver*keerde-ontvangen instanties van het Platform te voltooien gebruikend API, verwijs naar het [ CMK opstellingsdocument van API CMK ](./api-set-up.md).
+Voor instructies op hoe te om dit proces voor de ver*schonken instanties van Experience Platform te voltooien gebruikend API, verwijs naar het [ CMK opstellingsdocument van API CMK ](./api-set-up.md).
 
 ## Vereisten
 
@@ -50,13 +50,13 @@ Selecteer het exemplaarpictogram (![ het exemplaarpictogram.](../../../../images
 
 ![ de [!UICONTROL Customer Managed Keys configuration] mening met de benadrukte sectie van de de authentificatieurl van de Toepassing.](../../../images/governance-privacy-security/customer-managed-keys/application-authentication-url.png)
 
-Kopieer en plak de [!UICONTROL Application authentication url] in een browser om een verificatiedialoogvenster te openen. Selecteer **[!DNL Accept]** om de principal van de CMK-toepassingsservice aan de [!DNL Azure] -gebruiker toe te voegen. Bevestigend leidt de authentificatie u aan de Experience Cloud het landen pagina opnieuw.
+Kopieer en plak de [!UICONTROL Application authentication url] in een browser om een verificatiedialoogvenster te openen. Selecteer **[!DNL Accept]** om de principal van de CMK-toepassingsservice aan de [!DNL Azure] -gebruiker toe te voegen. Als u de verificatie bevestigt, wordt u omgeleid naar de Experience Cloud-bestemmingspagina.
 
 ![ de dialoog van het de toestemmingsverzoek van Microsoft met [!UICONTROL Accept] benadrukt.](../../../images/governance-privacy-security/customer-managed-keys/app-permission.png)
 
 >[!IMPORTANT]
 >
->Als u meerdere [!DNL Microsoft Azure] -abonnementen hebt, kunt u mogelijk een verbinding maken tussen de instantie Platform en de verkeerde sleutelkluis. In dit geval moet u het gedeelte `common` van de URL-naam voor toepassingsverificatie vervangen door de CMK-directory-id.<br> Kopieer CMK folderidentiteitskaart van de Poortmontages, de Folders, en de pagina van Abonnementen van de [!DNL Microsoft Azure] toepassing <br>![ de [!DNL Microsoft Azure] montages van het toepassingsPortaal, de Folders en de pagina van Abonnementen met benadrukte identiteitskaart van de Folder.](../../../images/governance-privacy-security/customer-managed-keys/directory-id.png)<br> daarna, kleef het in uw browser adresbar.<br>![ browser van Google browser van met de &quot;gemeenschappelijke&quot;sectie van de benadrukte de authentificatieurl van de Toepassing.](../../../images/governance-privacy-security/customer-managed-keys/common-url-section.png)
+>Als u meerdere [!DNL Microsoft Azure] -abonnementen hebt, kunt u mogelijk een verbinding tot stand brengen tussen uw Experience Platform-exemplaar en de verkeerde sleutelkluis. In dit geval moet u het gedeelte `common` van de URL-naam voor toepassingsverificatie vervangen door de CMK-directory-id.<br> Kopieer CMK folderidentiteitskaart van de Poortmontages, de Folders, en de pagina van Abonnementen van de [!DNL Microsoft Azure] toepassing <br>![ de [!DNL Microsoft Azure] montages van het toepassingsPortaal, de Folders en de pagina van Abonnementen met benadrukte identiteitskaart van de Folder.](../../../images/governance-privacy-security/customer-managed-keys/directory-id.png)<br> daarna, kleef het in uw browser adresbar.<br>![ browser van Google browser van met de &quot;gemeenschappelijke&quot;sectie van de benadrukte de authentificatieurl van de Toepassing.](../../../images/governance-privacy-security/customer-managed-keys/common-url-section.png)
 
 ### De CMK-toepassing toewijzen aan een rol {#assign-to-role}
 
@@ -82,11 +82,11 @@ U kunt de toepassing verifiëren door de [!UICONTROL Application ID] in de [!UIC
 
 ![ de [!UICONTROL Customer Managed Keys configuration] mening met [!UICONTROL Application ID] benadrukte.](../../../images/governance-privacy-security/customer-managed-keys/application-id.png)
 
-Alle details noodzakelijk om Azure hulpmiddelen te verifiëren zijn inbegrepen in de UI van het Platform. Dit niveau van granulariteit wordt verstrekt aangezien vele gebruikers andere Azure hulpmiddelen willen gebruiken om hun capaciteit te verbeteren om deze toepassingen toegang tot hun zeer belangrijke kluis te controleren en te registreren. Kennis van deze id&#39;s is voor dat doel van essentieel belang en om Adobe-services te helpen toegang te krijgen tot de sleutel.
+Alle gegevens die nodig zijn om Azure-programma&#39;s te controleren, worden opgenomen in de gebruikersinterface van Experience Platform. Dit niveau van granulariteit wordt verstrekt aangezien vele gebruikers andere Azure hulpmiddelen willen gebruiken om hun capaciteit te verbeteren om deze toepassingen toegang tot hun zeer belangrijke kluis te controleren en te registreren. Kennis van deze id&#39;s is voor dat doel van essentieel belang en om Adobe-services te helpen toegang te krijgen tot de sleutel.
 
-## De configuratie van de coderingssleutel op het Experience Platform inschakelen {#send-to-adobe}
+## Configuratie van coderingssleutel inschakelen in Experience Platform {#send-to-adobe}
 
-Nadat u de CMK-toepassing op [!DNL Azure] hebt geïnstalleerd, kunt u de id van de coderingssleutel naar de Adobe sturen. Selecteer **[!DNL Keys]** in de linkernavigatie, gevolgd door de naam van de sleutel u wilt verzenden.
+Nadat u de CMK-toepassing op [!DNL Azure] hebt geïnstalleerd, kunt u de id van de coderingssleutel naar Adobe sturen. Selecteer **[!DNL Keys]** in de linkernavigatie, gevolgd door de naam van de sleutel u wilt verzenden.
 
 ![ Microsoft Azure dashboard met het [!DNL Keys] voorwerp en de zeer belangrijke benadrukte naam.](../../../images/governance-privacy-security/customer-managed-keys/select-key.png)
 
@@ -110,11 +110,11 @@ U wordt teruggestuurd naar de map [!UICONTROL Encryption configurations dashboar
 
 ## De status van de configuratie controleren {#check-status}
 
-Zorg voor een aanzienlijke hoeveelheid verwerkingstijd. Als u de status van de configuratie wilt controleren, gaat u terug naar de [!UICONTROL Customer Managed Keys configuration] -weergave en schuift u omlaag naar de [!UICONTROL Configuration status] -weergave. Op de voortgangsbalk kunt u stap één van de drie gebruiken. Hierin wordt uitgelegd dat het systeem controleert of Platform toegang heeft tot de sleutel- en sleutelvault.
+Zorg voor een aanzienlijke hoeveelheid verwerkingstijd. Als u de status van de configuratie wilt controleren, gaat u terug naar de [!UICONTROL Customer Managed Keys configuration] -weergave en schuift u omlaag naar de [!UICONTROL Configuration status] -weergave. Op de voortgangsbalk kunt u stap 1 van 3 uitvoeren. In deze balk wordt uitgelegd dat het systeem controleert of Experience Platform toegang heeft tot de sleutel- en sleutelvault.
 
 Er zijn vier mogelijke statussen van de CMK-configuratie. Deze zijn als volgt:
 
-* Stap 1: Valideert dat het Platform toegang heeft tot de sleutel- en sleutelvault.
+* Stap 1: Bevestigt dat Experience Platform de capaciteit heeft om tot de sleutel en de belangrijkste kluis toegang te hebben.
 * Stap 2: De belangrijkste vault en belangrijkste naam zijn in proces om aan alle datastores over uw organisatie worden toegevoegd.
 * Stap 3: De sleutelvault en sleutelnaam zijn met succes toegevoegd aan de datastores.
 * `FAILED`: Er heeft zich een probleem voorgedaan dat voornamelijk te maken heeft met de toepassingsinstellingen voor de toepassing key, key vault of multi-agent.

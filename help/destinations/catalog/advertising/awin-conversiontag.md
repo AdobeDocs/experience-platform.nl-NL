@@ -1,11 +1,11 @@
 ---
 keywords: Awin Advertiser Conversion Tag extension;conversion tag;Awin;awin;AWIN
 title: Awin Advertiser Conversion Tag-extensie
-description: De extensie van de conversietag voor Awin Advertiser is een advertentie-bestemming in Adobe Experience Platform. Zie de extensiepagina over Adobe Exchange voor meer informatie over de extensiefunctionaliteit.
+description: De extensie van de conversietag voor Awin Advertiser is een advertentie-bestemming in Adobe Experience Platform. Zie de extensiepagina op Adobe Exchange voor meer informatie over de extensiefunctionaliteit.
 exl-id: 99feb169-acf3-4e68-8785-3f4cf565e5a9
-source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '488'
+source-wordcount: '492'
 ht-degree: 0%
 
 ---
@@ -18,21 +18,21 @@ De conversietag is de declaratie van het JavaScript-object AWIN.Tracking.Sale, d
 
 Awin Advertiser Conversion Tag is een advertentie-extensie in Adobe Experience Platform. Voor meer informatie over de uitbreidingsfunctionaliteit, zie de uitbreidingspagina op [ Adobe Exchange ](https://exchange.adobe.com/experiencecloud.details.103240.awin-conversion-tag.html).
 
-Dit doel is een tagextensie. Voor meer informatie over hoe de uitbreidingen van markeringen in Platform werken, zie het [ overzicht van markeringsuitbreidingen ](../launch-extensions/overview.md).
+Dit doel is een tagextensie. Voor meer informatie over hoe de uitbreidingen van markeringen in Experience Platform werken, zie het [ overzicht van markeringsuitbreidingen ](../launch-extensions/overview.md).
 
 ![ Advertiser Conversiontag uitbreiding in UI ](../../assets/catalog/advertising/awin-conversion-tag/catalog.png)
 
 ## Vereisten {#prerequisites}
 
-Deze extensie is beschikbaar in de catalogus Doelen voor alle klanten die Platform hebben aangeschaft.
+Deze extensie is beschikbaar in de catalogus Doelen voor alle klanten die Experience Platform hebben aangeschaft.
 
-Als u deze extensie wilt gebruiken, hebt u toegang tot tags in Platform nodig. Tags worden aan Adobe Experience Cloud-klanten aangeboden als een inbegrepen, waardetoevoegend element. Neem contact op met de systeembeheerder van uw organisatie om toegang te krijgen tot de functies voor gegevensverzameling in de gebruikersinterface en vraag hen om u de machtiging **[!UICONTROL manage_properties]** te verlenen, zodat u extensies kunt installeren.
+Als u deze extensie wilt gebruiken, hebt u toegang tot tags in Experience Platform nodig. Tags worden aan Adobe Experience Cloud-klanten aangeboden als een inbegrepen, waardetoevoegend element. Neem contact op met de systeembeheerder van uw organisatie om toegang te krijgen tot de functies voor gegevensverzameling in de gebruikersinterface en vraag hen om u de machtiging **[!UICONTROL manage_properties]** te verlenen, zodat u extensies kunt installeren.
 
 ## Extensie installeren {#install-extension}
 
 De extensie [!DNL Awin Advertiser Conversion Tag] installeren:
 
-In de [ interface van het Platform ](https://platform.adobe.com/), ga **[!UICONTROL Destinations]** > **[!UICONTROL Catalog]**.
+In de [ interface van Experience Platform ](https://platform.adobe.com/), ga **[!UICONTROL Destinations]** > **[!UICONTROL Catalog]**.
 
 Selecteer de extensie in de catalogus of gebruik de zoekbalk.
 

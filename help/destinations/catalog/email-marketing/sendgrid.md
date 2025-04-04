@@ -3,7 +3,7 @@ keywords: e-mail;E-mail;e-mail;e-mailbestemmingen;sendGrid;sendGrid bestemming
 title: SendGrid-verbinding
 description: Met de SendGrid-bestemming kunt u uw gegevens van de eerste partij exporteren en deze activeren in SendGrid voor uw bedrijfsbehoeften.
 exl-id: 6f22746f-2043-4a20-b8a6-097d721f2fe7
-source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '1475'
 ht-degree: 0%
@@ -40,7 +40,7 @@ Alvorens gegevens aan de bestemming te activeren SendGrid, moet u a [ schema ](h
 >
 >* Voor de SendGrid-API die wordt gebruikt voor het maken van de mailinglijst vanuit e-mailprofielen, moeten binnen elk profiel unieke e-mailadressen worden opgegeven. Dit is ongeacht of het als waarde voor *e-mail* of *afwisselende e-mail* wordt gebruikt. Omdat de verbinding SendGrid afbeeldingen voor zowel e-mail als afwisselende e-mailwaarden steunt, gelieve ervoor te zorgen dat alle gebruikte e-mailadressen binnen elk profiel van de *Dataset* uniek zouden moeten zijn. Als de e-mailprofielen naar SendGrid worden verzonden, resulteert dit in een fout en is dat e-mailprofiel niet aanwezig in de gegevensexport.
 >
->* Er is momenteel geen functionaliteit beschikbaar om profielen uit SendGrid te verwijderen wanneer ze uit het publiek in het Experience Platform worden verwijderd.
+>* Er is momenteel geen functionaliteit om profielen uit SendGrid te verwijderen wanneer ze uit het publiek in Experience Platform worden verwijderd.
 
 ## Ondersteunde identiteiten {#supported-identities}
 
@@ -48,7 +48,7 @@ SendGrid ondersteunt de activering van identiteiten die in de onderstaande tabel
 
 | Doelidentiteit | Beschrijving | Overwegingen |
 |---|---|---|
-| email | E-mailadres | Onbewerkte tekst en gehashte e-mailadressen van SHA256 worden ondersteund door [!DNL Adobe Experience Platform] . Als het bronveld van het Experience-platform hashed-kenmerken bevat, schakelt u de optie **[!UICONTROL Apply transformation]** in om [!DNL Platform] de gegevens automatisch te laten hashen bij activering.<br/><br/> Merk op dat **SendGrid** geen gehakt e-mailadressen steunt, zodat slechts worden de gewone tekstgegevens zonder transformatie verzonden naar de bestemming. |
+| email | E-mailadres | Onbewerkte tekst en gehashte e-mailadressen van SHA256 worden ondersteund door [!DNL Adobe Experience Platform] . Als het bronveld van het Experience-platform hashed-kenmerken bevat, schakelt u de optie **[!UICONTROL Apply transformation]** in om [!DNL Experience Platform] de gegevens automatisch te laten hashen bij activering.<br/><br/> Merk op dat **SendGrid** geen gehakt e-mailadressen steunt, zodat slechts worden de gewone tekstgegevens zonder transformatie verzonden naar de bestemming. |
 
 {style="table-layout:auto"}
 

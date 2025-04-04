@@ -1,16 +1,17 @@
 ---
-title: Door de klant beheerde toetsen instellen en configureren met AWS via de interface van het platform
+title: Door de klant beheerde toetsen instellen en configureren met AWS via de interface van Experience Platform
 description: Leer hoe u uw CMK-toepassing instelt met uw Amazon Resource Name (ARN) en uw coderingssleutel-id verzendt naar Adobe Experience Platform.
-source-git-commit: e67aed9e8072bcd531d5aa6ce5b631c910a1812a
+exl-id: f0e38a60-d448-4975-977e-1367fca10515
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1201'
+source-wordcount: '1218'
 ht-degree: 0%
 
 ---
 
-# Door de klant beheerde toetsen instellen en configureren met AWS via de interface van het platform
+# Door de klant beheerde toetsen instellen en configureren met AWS via de interface van Experience Platform
 
-Gebruik deze handleiding om CMK (Customer Managed Keys) in te schakelen voor platforminstanties die via de gebruikersinterface van het platform op AWS worden gehost.
+Met deze handleiding kunt u CMK (Customer Managed Keys) inschakelen voor Experience Platform-instanties die via de Experience Platform-gebruikersinterface op AWS worden gehost.
 
 >[!IMPORTANT]
 >
@@ -40,11 +41,11 @@ Als u uw AWS-sleutel wilt integreren met Experience Platform, moet u de JSON bew
 }
 ```
 
-In het bovenstaande voorbeeld hebben alle bronnen (`"Resource": "*"`) binnen dezelfde account (`Principal.AWS` ) toegang tot de sleutel. Dit beleid staat de diensten in de rekening toe om encryptie en decryptieverrichtingen uit te voeren, die tot de gespecificeerde rekening worden beperkt. Om uw Platform enig-huurdersrekening toegang tot deze sleutel te verlenen, voeg nieuwe verklaringen aan het standaard beleid van AWS toe. U kunt het vereiste JSON-beleid verkrijgen via de platforminterface en dit toepassen op de AWS KMS-sleutel om een veilige verbinding met Adobe Experience Platform tot stand te brengen.
+In het bovenstaande voorbeeld hebben alle bronnen (`"Resource": "*"`) binnen dezelfde account (`Principal.AWS` ) toegang tot de sleutel. Dit beleid staat de diensten in de rekening toe om encryptie en decryptieverrichtingen uit te voeren, die tot de gespecificeerde rekening worden beperkt. Als u uw Experience Platform-account voor één gebruiker toegang tot deze sleutel wilt verlenen, voegt u nieuwe instructies toe aan het standaard AWS-beleid. U kunt het vereiste JSON-beleid verkrijgen via de gebruikersinterface van Experience Platform en dit toepassen op uw AWS KMS-sleutel om een veilige verbinding met Adobe Experience Platform tot stand te brengen.
 
-Ga in de UI Platform naar de sectie **[!UICONTROL Administration]** in de linkernavigatieregel en selecteer **[!UICONTROL Encryption]** . Selecteer **[!UICONTROL Configure]** in de [!UICONTROL Customer Managed Keys] -kaart in de [!UICONTROL Encryption Configuration] -werkruimte.
+Ga in de gebruikersinterface van Experience Platform naar de sectie **[!UICONTROL Administration]** in de linkernavigatieregel en selecteer **[!UICONTROL Encryption]** . Selecteer **[!UICONTROL Configure]** in de [!UICONTROL Customer Managed Keys] -kaart in de [!UICONTROL Encryption Configuration] -werkruimte.
 
-![ De werkruimte van de Configuratie van de Encryptie van het Platform met vormen die in de Klant Beheerde Sleutelkaart wordt benadrukt.](../../../images/governance-privacy-security/key-management-service/encryption-configuration.png)
+![ de werkruimte van de Configuratie van de Encryptie van Experience Platform met Configure die in de Klant Beheerde Sleutelkaart wordt benadrukt.](../../../images/governance-privacy-security/key-management-service/encryption-configuration.png)
 
 De lus [!UICONTROL Customer Managed Keys configuration] wordt weergegeven. Kopieer het `statement` -object uit het CMK KMS-beleid dat wordt weergegeven in [!UICONTROL Customer Managed Keys] [!UICONTROL Encryption Configuration] .
 
@@ -159,9 +160,9 @@ Selecteer **[!DNL Finish]** om het bijgewerkte beleid te bevestigen en de sleute
 
 De bijgewerkte [!DNL Customer Managed Keys] werkruimte van de AWS [!DNL Key Management Service] wordt weergegeven.
 
-### AWS-coderingssleutelgegevens toevoegen aan platform
+### AWS-coderingssleutelgegevens toevoegen aan Experience Platform
 
-Voeg vervolgens de Amazon Resource Name (ARN) van de sleutel aan het platform toe om codering in te schakelen [!UICONTROL Customer Managed Keys configuration] . Selecteer in de sectie [!DNL Customer Managed Keys] van AWS de alias van de nieuwe sleutel in de lijst in [!DNL Key Management Service] .
+Voeg vervolgens de Amazon Resource Name (ARN) van de sleutel aan uw Experience Platform [!UICONTROL Customer Managed Keys configuration] toe om codering in te schakelen. Selecteer in de sectie [!DNL Customer Managed Keys] van AWS de alias van de nieuwe sleutel in de lijst in [!DNL Key Management Service] .
 
 ![ de Klant van AWS KMS Beheerde de werkruimte van Sleutels met de nieuwe belangrijke alias benadrukt.](../../../images/governance-privacy-security/key-management-service/customer-managed-keys-on-aws.png)
 
@@ -172,17 +173,17 @@ Selecteer het kopieerpictogram om uw ARN te kopiëren. Er wordt een bevestigings
 
 ![ de belangrijkste details van uw AWS KMS Klant Beheerde Sleutel met ARN benadrukte.](../../../images/governance-privacy-security/key-management-service/keys-details-arn.png)
 
-Navigeer nu terug naar de interface Platform [!UICONTROL Customer Managed Keys configuration] . Voeg in de sectie **[!UICONTROL Add AWS encryption key details]** een **[!UICONTROL Configuration name]** en de **[!UICONTROL KMS key ARN]** toe die u uit de gebruikersinterface van AWS hebt gekopieerd.
+Navigeer nu terug naar de gebruikersinterface van Experience Platform [!UICONTROL Customer Managed Keys configuration] . Voeg in de sectie **[!UICONTROL Add AWS encryption key details]** een **[!UICONTROL Configuration name]** en de **[!UICONTROL KMS key ARN]** toe die u uit de gebruikersinterface van AWS hebt gekopieerd.
 
-![ de werkruimte van de Configuratie van de Encryptie van het Platform met de naam van de Configuratie en KMS zeer belangrijke ARN die in de Add sectie van de de encryptiesleutelgegevens van AWS wordt benadrukt.](../../../images/governance-privacy-security/key-management-service/add-encryption-key-details.png)
+![ de werkruimte van de Configuratie van de Encryptie van Experience Platform met de naam van de Configuratie en KMS zeer belangrijke ARN die in Add wordt benadrukt de zeer belangrijke sectie van de Gegevens van de encryptie van AWS.](../../../images/governance-privacy-security/key-management-service/add-encryption-key-details.png)
 
 Selecteer vervolgens **[!UICONTROL SAVE]** om de configuratienaam, de KMS-sleutel ARN en de validatie van de toets te starten.
 
-![ de werkruimte van de Configuratie van de Encryptie van het Platform met sparen benadrukte.](../../../images/governance-privacy-security/key-management-service/save.png)
+![ de werkruimte van de Configuratie van de Encryptie van Experience Platform met sparen benadrukt.](../../../images/governance-privacy-security/key-management-service/save.png)
 
 U wordt teruggestuurd naar de werkruimte van [!UICONTROL Encryption Configurations] . De status van de coderingsconfiguratie wordt onder aan de **[!UICONTROL Customer Managed Keys]** -kaart weergegeven.
 
-![ de werkruimte van de Configuraties van de Encryptie in Platform UI met Verwerking die op de Klant Beheerde Sleutelkaart wordt benadrukt.](../../../images/governance-privacy-security/key-management-service/configuration-status.png)
+![ de werkruimte van de Configuraties van de Encryptie in Experience Platform UI met Verwerking die op de Klant Beheerde Sleutelkaart wordt benadrukt.](../../../images/governance-privacy-security/key-management-service/configuration-status.png)
 
 Nadat de sleutel is gevalideerd, worden de sleutelvault-id&#39;s toegevoegd aan het dataroopbestand en de profieldatastores voor alle sandboxen.
 
@@ -198,7 +199,7 @@ Nadat de sleutel is gevalideerd, worden de sleutelvault-id&#39;s toegevoegd aan 
 
 Hier volgen enkele belangrijke overwegingen voor het intrekken van toetsen:
 
-- Als u de toets intrekt of uitschakelt, zijn de gegevens van het platform niet toegankelijk. Deze actie is onomkeerbaar en dient met voorzichtigheid te worden uitgevoerd.
+- Als u de toets intrekt of uitschakelt, zijn uw Experience Platform-gegevens ontoegankelijk. Deze actie is onomkeerbaar en dient met voorzichtigheid te worden uitgevoerd.
 - Denk aan de tijdlijnen van de propagatie wanneer de toegang tot encryptiesleutels wordt ingetrokken. De primaire gegevensopslag wordt binnen een paar minuten tot 24 uur ontoegankelijk. Gegevensopslag in cache of van voorbijgaande aard is binnen zeven dagen ontoegankelijk.
 
 Als u een toets wilt intrekken, navigeert u naar de AWS KMS-werkruimte. In de sectie **[!DNL Customer managed keys]** worden alle beschikbare sleutels voor uw AWS-account weergegeven. Selecteer de alias van uw sleutel in de lijst.
@@ -209,7 +210,7 @@ De details van uw sleutel worden getoond. Selecteer **[!DNL Key actions]** en **
 
 ![ de details van uw sleutel van AWS in AWS KMS UI met Zeer belangrijke acties en maak benadrukte onbruikbaar.](../../../images/governance-privacy-security/key-management-service/disable-key.png)
 
-Er wordt een bevestigingsvenster weergegeven. Selecteer **[!DNL Disable key]** om uw keuze te bevestigen. Het effect van het onbruikbaar maken van de sleutel zou in de toepassingen van het Platform en UI binnen ongeveer vijf minuten moeten worden weerspiegeld.
+Er wordt een bevestigingsvenster weergegeven. Selecteer **[!DNL Disable key]** om uw keuze te bevestigen. Het effect van het uitschakelen van de sleutel moet binnen ongeveer vijf minuten worden weerspiegeld in Experience Platform-toepassingen en de gebruikersinterface.
 
 >[!NOTE]
 >
@@ -217,11 +218,11 @@ Er wordt een bevestigingsvenster weergegeven. Selecteer **[!DNL Disable key]** o
 
 ![ onbruikbaar maken zeer belangrijk dialoog met onbruikbaar maakt benadrukte sleutel.](../../../images/governance-privacy-security/key-management-service/disable-key-dialog.png)
 
-Alternatief, als uw sleutel over andere diensten wordt gebruikt, kunt u toegang voor Experience Platform direct uit het belangrijkste beleid verwijderen. Selecteer **[!UICONTROL Edit]** in de sectie **[!DNL Key Policy]** .
+Als uw sleutel ook in andere services wordt gebruikt, kunt u de toegang voor Experience Platform rechtstreeks uit het sleutelbeleid verwijderen. Selecteer **[!UICONTROL Edit]** in de sectie **[!DNL Key Policy]** .
 
 ![ de detailssectie van de sleutel van AWS met uitgezocht in de Belangrijkste beleidssectie.](../../../images/governance-privacy-security/key-management-service/edit-key-policy.png)
 
-De pagina **[!DNL Edit key policy]** wordt weergegeven. Markeer en verwijder de beleidsinstructie, gekopieerd uit de platforminterface, om de machtigingen voor de door Klant beheerde toetsenapp te verwijderen. Selecteer vervolgens **[!DNL Save changes]** om het proces te voltooien.
+De pagina **[!DNL Edit key policy]** wordt weergegeven. Markeer en verwijder de beleidsinstructie, gekopieerd uit de gebruikersinterface van Experience Platform, om de machtigingen voor de door Klant beheerde toetsenapp te verwijderen. Selecteer vervolgens **[!DNL Save changes]** om het proces te voltooien.
 
 ![ geeft zeer belangrijke beleidswerkruimte op AWS met de verklaringJSON voorwerp en sparen benadrukte veranderingen uit.](../../../images/governance-privacy-security/key-management-service/delete-statement-and-save-changes.png)
 

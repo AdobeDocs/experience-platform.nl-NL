@@ -3,16 +3,16 @@ title: Overzicht van SugarCRM Source
 description: Leer hoe u SugarCRM koppelt aan Adobe Experience Platform met behulp van API's of de gebruikersinterface.
 last-substantial-update: 2023-08-23T00:00:00Z
 exl-id: 03fbc4e9-974d-494e-8463-756c96665fd5
-source-git-commit: 68c14d7b187075b4af6b019a8bd1ca2625beabde
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '356'
+source-wordcount: '363'
 ht-degree: 0%
 
 ---
 
 # [!DNL SugarCRM]
 
-Adobe Experience Platform staat toe dat gegevens uit externe bronnen worden opgenomen terwijl u de mogelijkheid krijgt om inkomende gegevens te structureren, te labelen en te verbeteren met behulp van de platformservices. U kunt gegevens uit diverse bronnen invoeren, zoals toepassingen voor Adobe, opslag in de cloud, databases en vele andere.
+Adobe Experience Platform staat toe dat gegevens uit externe bronnen worden opgenomen en biedt u de mogelijkheid om inkomende gegevens te structureren, labelen en verbeteren met behulp van Experience Platform-services. U kunt gegevens invoeren uit verschillende bronnen, zoals Adobe-toepassingen, opslag in de cloud, databases en vele andere.
 
 Experience Platform biedt ondersteuning voor het opnemen van gegevens van een CRM-toepassing van derden. Tot de ondersteuning voor CRM-providers behoren [!DNL SugarCRM] .
 
@@ -38,15 +38,15 @@ Voordat u een [!DNL SugarCRM] -bronverbinding kunt maken, moet u eerst controler
 
 * Een unieke API-gebruikersnaam en -account die los staan van een gebruikersaccount die is gekoppeld aan het marketing- of verkoopproces. Deze unieke gebruikersnaam en accountcombinatie moeten API-toegangsrechten hebben. Voor meer informatie over het proces om een rekening op te zetten, bezoek de [[!DNL SugarMarket RESTFUL API] ](https://market.apidocs.sugarcrm.com/#intro) documentatie.
 
-## Verbinden [!DNL SugarCRM Accounts & Contacts] met platform
+## Verbinden [!DNL SugarCRM Accounts & Contacts] met Experience Platform
 
-* [ creeer een bronverbinding om  [!DNL SugarCRM Accounts & Contacts]  gegevens aan Platform te brengen gebruikend APIs ](../../tutorials/api/create/crm/sugarcrm-accounts-contacts.md).
-* [ creeer een bronverbinding om  [!DNL SugarCRM Accounts & Contacts]  gegevens aan Platform te brengen gebruikend het gebruikersinterface ](../../tutorials/ui/create/crm/sugarcrm-accounts-contacts.md).
+* [ creeer een bronverbinding om  [!DNL SugarCRM Accounts & Contacts]  gegevens aan Experience Platform te brengen gebruikend APIs ](../../tutorials/api/create/crm/sugarcrm-accounts-contacts.md).
+* [ creeer een bronverbinding om  [!DNL SugarCRM Accounts & Contacts]  gegevens aan Experience Platform te brengen gebruikend het gebruikersinterface ](../../tutorials/ui/create/crm/sugarcrm-accounts-contacts.md).
 * [Een gegevensstroom maken voor een CRM-bron met behulp van de Flow Service API](../../tutorials/api/collect/crm.md)
 
 
-## Verbinden [!DNL SugarCRM Events] met platform
+## Verbinden [!DNL SugarCRM Events] met Experience Platform
 
-* [ creeer een bronverbinding om  [!DNL SugarCRM Events]  gegevens aan Platform te brengen gebruikend APIs ](../../tutorials/ui/create/crm/sugarcrm-events.md).
-* [ creeer een bronverbinding om  [!DNL SugarCRM Events]  gegevens aan Platform te brengen gebruikend het gebruikersinterface ](../../tutorials/ui/create/crm/sugarcrm-events.md).
+* [ creeer een bronverbinding om  [!DNL SugarCRM Events]  gegevens aan Experience Platform te brengen gebruikend APIs ](../../tutorials/ui/create/crm/sugarcrm-events.md).
+* [ creeer een bronverbinding om  [!DNL SugarCRM Events]  gegevens aan Experience Platform te brengen gebruikend het gebruikersinterface ](../../tutorials/ui/create/crm/sugarcrm-events.md).
 * [Een gegevensstroom maken voor een CRM-bronverbinding in de gebruikersinterface](../../tutorials/ui/dataflow/crm.md)

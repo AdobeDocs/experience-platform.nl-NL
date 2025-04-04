@@ -2,16 +2,16 @@
 title: Reacties sorteren en filteren in de Flow Service API
 description: Deze zelfstudie behandelt de syntaxis voor sorteren en filteren met behulp van queryparameters in de Flow Service API, inclusief enkele geavanceerde gebruiksgevallen.
 exl-id: 029c3199-946e-4f89-ba7a-dac50cc40c09
-source-git-commit: c7ff379b260edeef03f8b47f932ce9040eef3be2
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '826'
+source-wordcount: '827'
 ht-degree: 0%
 
 ---
 
 # Reacties sorteren en filteren in de Flow Service API
 
-Wanneer het uitvoeren van lijst (GET) verzoeken in de [ Dienst API van de Stroom ](https://www.adobe.io/experience-platform-apis/references/flow-service/), kunt u vraagparameters aan soort en filterreacties gebruiken. Deze handleiding bevat een referentie voor het gebruik van deze parameters voor verschillende gebruiksgevallen.
+Wanneer het uitvoeren van lijst (GET) verzoeken in de [ Dienst API van de Stroom ](https://www.adobe.io/experience-platform-apis/references/flow-service/), kunt u vraagparameters gebruiken om reacties te sorteren en te filtreren. Deze handleiding bevat een referentie voor het gebruik van deze parameters voor verschillende gebruiksgevallen.
 
 ## Sorteren
 
@@ -197,7 +197,7 @@ Afhankelijk van de entiteit van de Dienst van de Stroom u terugwint, kunnen de v
 
 ## Gebruiksscenario’s {#use-cases}
 
-Lees deze sectie voor sommige specifieke voorbeelden van hoe u het filtreren en het sorteren kunt gebruiken om informatie over bepaalde schakelaars terug te keren of u bij het zuiveren van kwesties te helpen. Als er nog meer gebruiksgevallen zijn die u door Adobe wilt toevoegen, kunt u een aanvraag indienen met de tekst **[!UICONTROL Detailed feedback options]** op de pagina.
+Lees deze sectie voor sommige specifieke voorbeelden van hoe u het filtreren en het sorteren kunt gebruiken om informatie over bepaalde schakelaars terug te keren of u bij het zuiveren van kwesties te helpen. Als er nog meer gebruiksgevallen zijn die Adobe moet toevoegen, kunt u een aanvraag indienen met de tekst **[!UICONTROL Detailed feedback options]** op de pagina.
 
 **Filter om verbindingen aan een bepaalde slechts bestemming terug te keren**
 
@@ -249,4 +249,4 @@ GET /runs?property=flowId==<flow-id>&property=metrics.statusSummary.status==Fail
 
 ## Volgende stappen
 
-In deze handleiding wordt beschreven hoe u de query-parameters `orderby` en `property` kunt gebruiken om reacties in de Flow Service API te sorteren en te filteren. Voor geleidelijke gidsen op hoe te om API voor gemeenschappelijke werkschema&#39;s in Platform te gebruiken, zie de API leerprogramma&#39;s in de [ bronnen ](../../sources/home.md) en [ documentatie van bestemmingen ](../../destinations/home.md).
+In deze handleiding wordt beschreven hoe u de query-parameters `orderby` en `property` kunt gebruiken om reacties in de Flow Service API te sorteren en te filteren. Voor geleidelijke gidsen op hoe te om API voor gemeenschappelijke werkschema&#39;s in Experience Platform te gebruiken, zie de API leerprogramma&#39;s in de [ bronnen ](../../sources/home.md) en [ documentatie van bestemmingen ](../../destinations/home.md).

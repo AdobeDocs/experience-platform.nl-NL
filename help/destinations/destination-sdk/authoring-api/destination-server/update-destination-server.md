@@ -2,9 +2,9 @@
 description: Deze pagina illustreert de API vraag die wordt gebruikt om een bestaande configuratie van de bestemmingsserver door Adobe Experience Platform Destination SDK bij te werken.
 title: Een doelserverconfiguratie bijwerken
 exl-id: 579d2cc1-5110-4fba-9dcc-ff4b8d259827
-source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1101'
+source-wordcount: '1103'
 ht-degree: 2%
 
 ---
@@ -15,12 +15,12 @@ Deze pagina illustreert de API-aanvraag en lading die u kunt gebruiken om een be
 
 >[!TIP]
 >
->Om het even welke updateverrichting op geproduceerde/openbare bestemmingen is zichtbaar slechts nadat u [ het publiceren API ](../../publishing-api/create-publishing-request.md) gebruikt en voorlegt de update voor Adobe overzicht.
+>Om het even welke updateverrichting op geproduceerde/openbare bestemmingen is zichtbaar slechts nadat u [ het publiceren API ](../../publishing-api/create-publishing-request.md) gebruikt en de update voor het overzicht van Adobe voorleggen.
 
 Voor een gedetailleerde beschrijving van de mogelijkheden die u door dit eindpunt kunt vormen, lees de volgende artikelen:
 
-* [Server specs voor bestemmingen die met Destination SDK worden gecreeerd](../../../destination-sdk/functionality/destination-server/server-specs.md)
-* [Sjabloonspecificaties voor doelen die met Destination SDK zijn gemaakt](../../../destination-sdk/functionality/destination-server/templating-specs.md)
+* [Serverspecificaties voor doelen die met Destination SDK zijn gemaakt](../../../destination-sdk/functionality/destination-server/server-specs.md)
+* [Sjabloonspecificaties voor bestemmingen die zijn gemaakt met Destination SDK](../../../destination-sdk/functionality/destination-server/templating-specs.md)
 * [Berichtindeling](../../../destination-sdk/functionality/destination-server/message-format.md)
 * [Configuratie bestandsindeling](../../../destination-sdk/functionality/destination-server/file-formatting.md)
 
@@ -92,13 +92,13 @@ curl -X PUT https://platform.adobe.io/data/core/activation/authoring/destination
 
 | Parameter | Type | Beschrijving |
 | -------- | ----------- | ----------- |
-| `name` | String | *Vereist.* Vertegenwoordigt een vriendschappelijke naam van uw server, zichtbaar slechts aan Adobe. Deze naam is niet zichtbaar aan partners of klanten. Voorbeeld `Moviestar destination server` . |
+| `name` | String | *Vereist.* Vertegenwoordigt een vriendelijke naam van uw server, die alleen zichtbaar is voor Adobe. Deze naam is niet zichtbaar aan partners of klanten. Voorbeeld `Moviestar destination server` . |
 | `destinationServerType` | String | *Vereist.* Ingesteld op `URL_BASED` voor realtime (streaming) doelen. |
-| `urlBasedDestination.url.templatingStrategy` | String | *Vereist.* <ul><li>Gebruik `PEBBLE_V1` als de Adobe de URL in het onderstaande veld `value` moet transformeren. Gebruik deze optie als u een eindpunt als: `https://api.moviestar.com/data/{{customerData.region}}/items` hebt. </li><li> Gebruik `NONE` als er aan de zijde van de Adobe geen transformatie nodig is, bijvoorbeeld als u een eindpunt hebt, zoals: `https://api.moviestar.com/data/items` .</li></ul> |
-| `urlBasedDestination.url.value` | String | *Vereist.* Vul het adres in van het API-eindpunt waarmee het Experience Platform verbinding moet maken. |
-| `httpTemplate.httpMethod` | String | *Vereist.* De methode die de Adobe in vraag aan uw server zal gebruiken. De opties zijn `GET`, `PUT`, `PUT`, `DELETE`, `PATCH` . |
+| `urlBasedDestination.url.templatingStrategy` | String | *Vereist.* <ul><li>Gebruik `PEBBLE_V1` als Adobe de URL in het onderstaande veld `value` moet transformeren. Gebruik deze optie als u een eindpunt als: `https://api.moviestar.com/data/{{customerData.region}}/items` hebt. </li><li> Gebruik `NONE` als er aan de Adobe-zijde geen transformatie nodig is, bijvoorbeeld als u een eindpunt hebt, zoals: `https://api.moviestar.com/data/items` .</li></ul> |
+| `urlBasedDestination.url.value` | String | *Vereist.* Vul het adres in van het API-eindpunt waarmee Experience Platform verbinding moet maken. |
+| `httpTemplate.httpMethod` | String | *Vereist.* De methode die Adobe gebruikt voor aanroepen van uw server. De opties zijn `GET`, `PUT`, `PUT`, `DELETE`, `PATCH` . |
 | `httpTemplate.requestBody.templatingStrategy` | String | *Vereist.* Gebruik `PEBBLE_V1` . |
-| `httpTemplate.requestBody.value` | String | *Vereist.* Deze tekenreeks is de op tekens gebaseerde versie die de gegevens van Platformklanten omzet in de indeling die uw service verwacht. <br> <ul><li> Voor informatie over hoe te om het malplaatje te schrijven, lees [ Gebruikend het malplaatjesectie ](../../functionality/destination-server/message-format.md#using-templating). </li><li> Voor meer informatie over karakter het ontsnappen, verwijs naar de [ norm RFC JSON, sectie zeven ](https://tools.ietf.org/html/rfc8259#section-7). </li><li> Voor een voorbeeld van een eenvoudige transformatie, verwijs naar de [ transformatie van de Attributen van het Profiel ](../../functionality/destination-server/message-format.md#attributes). </li></ul> |
+| `httpTemplate.requestBody.value` | String | *Vereist.* Deze tekenreeks is de versie met escape-teken die de gegevens van Experience Platform-klanten omzet in de indeling die uw service verwacht. <br> <ul><li> Voor informatie over hoe te om het malplaatje te schrijven, lees [ Gebruikend het malplaatjesectie ](../../functionality/destination-server/message-format.md#using-templating). </li><li> Voor meer informatie over karakter het ontsnappen, verwijs naar de [ norm RFC JSON, sectie zeven ](https://tools.ietf.org/html/rfc8259#section-7). </li><li> Voor een voorbeeld van een eenvoudige transformatie, verwijs naar de [ transformatie van de Attributen van het Profiel ](../../functionality/destination-server/message-format.md#attributes). </li></ul> |
 | `httpTemplate.contentType` | String | *Vereist.* Het inhoudstype dat uw server accepteert. Deze waarde is zeer waarschijnlijk `application/json` . |
 
 {style="table-layout:auto"}
@@ -752,11 +752,11 @@ Een succesvolle reactie keert status 200 van HTTP met de details van uw bijgewer
 
 ## API-foutafhandeling {#error-handling}
 
-Destination SDK API-eindpunten volgen de algemene API-foutberichtbeginselen voor Experience Platforms. Verwijs naar [ API statuscodes ](../../../../landing/troubleshooting.md#api-status-codes) en [ de fouten van de verzoekkopbal ](../../../../landing/troubleshooting.md#request-header-errors) in de het oplossen van problemengids van het Platform.
+Destination SDK API-eindpunten volgen de algemene beginselen van Experience Platform API-foutberichten. Verwijs naar [ API statuscodes ](../../../../landing/troubleshooting.md#api-status-codes) en [ de fouten van de verzoekkopbal ](../../../../landing/troubleshooting.md#request-header-errors) in de het oplossen van problemengids van Experience Platform.
 
 ## Volgende stappen {#next-steps}
 
-Nadat u dit document hebt gelezen, weet u nu hoe u een configuratie van de doelserver kunt bijwerken via het API-eindpunt Destination SDK `/authoring/destination-servers` .
+Nadat u dit document hebt gelezen, weet u nu hoe u een configuratie van een doelserver kunt bijwerken via het Destination SDK `/authoring/destination-servers` API-eindpunt.
 
 Raadpleeg de volgende artikelen voor meer informatie over wat u met dit eindpunt kunt doen:
 

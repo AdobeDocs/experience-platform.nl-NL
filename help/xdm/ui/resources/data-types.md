@@ -5,9 +5,9 @@ title: Gegevenstypen maken en bewerken met de gebruikersinterface
 type: Tutorial
 description: Leer hoe u gegevenstypen maakt en bewerkt in de Experience Platform-gebruikersinterface.
 exl-id: 2c917154-c425-463c-b8c8-04ba37d9247b
-source-git-commit: c04e5a49f2a4e90345ca20ecd0547d02b5004fcf
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1330'
+source-wordcount: '1333'
 ht-degree: 0%
 
 ---
@@ -27,7 +27,7 @@ Adobe Experience Platform biedt vele standaardgegevenstypen die kunnen worden ge
 >
 >Als een veld is gedefinieerd als een specifiek gegevenstype, kunt u niet hetzelfde veld met een ander gegevenstype in een ander schema maken. Deze beperking geldt voor de huurder van uw organisatie.
 
-Deze zelfstudie behandelt de stappen voor het maken en bewerken van aangepaste gegevenstypen in de gebruikersinterface van Platform.
+Deze zelfstudie behandelt de stappen voor het maken en bewerken van aangepaste gegevenstypen in de Experience Platform-gebruikersinterface.
 
 ## Vereisten {#prerequisites}
 
@@ -37,7 +37,7 @@ Terwijl niet vereist voor deze gids, wordt het geadviseerd dat u ook het leerpro
 
 ## Open de lus [!DNL Schema Editor] voor een gegevenstype {#data-type}
 
-Selecteer in de gebruikersinterface van het platform de optie **[!UICONTROL Schemas]** in de linkernavigatie om de [!UICONTROL Schemas] -werkruimte te openen en selecteer vervolgens het tabblad **[!UICONTROL Data types]** . Er wordt een lijst met beschikbare gegevenstypen weergegeven. De lijst met gegevenstypen wordt automatisch gefilterd op basis van de manier waarop ze zijn gemaakt. Met de standaardinstelling worden de gegevenstypen weergegeven die door Adobe zijn gedefinieerd. U kunt de lijst ook filteren om de lijsten weer te geven die door uw organisatie zijn gemaakt.
+Selecteer in de gebruikersinterface van Experience Platform de optie **[!UICONTROL Schemas]** in de linkernavigatie om de werkruimte van [!UICONTROL Schemas] te openen en selecteer vervolgens het tabblad **[!UICONTROL Data types]** . Er wordt een lijst met beschikbare gegevenstypen weergegeven. De lijst met gegevenstypen wordt automatisch gefilterd op basis van de manier waarop ze zijn gemaakt. Met de standaardinstelling worden de gegevenstypen weergegeven die door Adobe zijn gedefinieerd. U kunt de lijst ook filteren om de lijsten weer te geven die door uw organisatie zijn gemaakt.
 
 ![ de [!UICONTROL Schemas] werkruimte met [!UICONTROL Schemas] in de linkernavigatie en [!UICONTROL Data types] benadrukte.](../../images/ui/resources/data-types/data-types-tab.png)
 
@@ -125,6 +125,6 @@ Het canvas werkt het gegevenstype van het gebied van &quot;[!UICONTROL Object]&q
 
 ## Volgende stappen {#next-steps}
 
-In deze handleiding wordt beschreven hoe u gegevenstypen kunt maken en bewerken met behulp van de interface van het platform. Voor meer informatie over de mogelijkheden van de [!UICONTROL Schemas] werkruimte, zie het [[!UICONTROL Schemas] overzicht van de werkruimte ](../overview.md).
+In deze handleiding wordt beschreven hoe u gegevenstypen kunt maken en bewerken met de gebruikersinterface van Experience Platform. Voor meer informatie over de mogelijkheden van de [!UICONTROL Schemas] werkruimte, zie het [[!UICONTROL Schemas] overzicht van de werkruimte ](../overview.md).
 
 Leren hoe te om gegevenstypes te beheren gebruikend [!DNL Schema Registry] API, zie de [ gids van het gegevenstypepunteindpunt ](../../api/data-types.md).

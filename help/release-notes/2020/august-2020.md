@@ -1,18 +1,18 @@
 ---
-title: Opmerkingen bij de release van Adobe Experience Platform, augustus 2020
-description: Opmerkingen bij de release van augustus 2020 voor Adobe Experience Platform.
+title: Aanvullende informatie van augustus 2020 voor Adobe Experience Platform
+description: Aanvullende informatie van augustus 2020 voor Adobe Experience Platform.
 doc-type: release notes
 last-update: August 10, 2020
 author: crhoades, ens28527
 exl-id: 9347147f-e830-4487-aa12-f56723abb3c8
-source-git-commit: 14e3eff3ea2469023823a35ee1112568f5b5f4f7
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '576'
-ht-degree: 2%
+ht-degree: 23%
 
 ---
 
-# Opmerkingen bij de release van Adobe Experience Platform
+# Aanvullende informatie voor Adobe Experience Platform
 
 **Releasedatum: donderdag 12 augustus 2020**
 
@@ -25,9 +25,9 @@ Updates voor bestaande functies in Adobe Experience Platform:
 
 ## [!DNL Data Science Workspace] {#dsw}
 
-[!DNL Data Science Workspace] maakt gebruik van machinaal leren en kunstmatige intelligentie om inzichten van uw gegevens te ontketenen. [!DNL Data Science Workspace] is geïntegreerd in Adobe Experience Platform en helpt u bij het maken van voorspellingen met behulp van uw inhoud en gegevenselementen voor verschillende Adobe-oplossingen.
+[!DNL Data Science Workspace] maakt gebruik van machinaal leren en kunstmatige intelligentie om inzichten van uw gegevens te ontketenen. [!DNL Data Science Workspace] is geïntegreerd in Adobe Experience Platform en helpt u bij het maken van voorspellingen met behulp van uw inhoud en gegevenselementen in Adobe-oplossingen.
 
-**Nieuwe eigenschappen**
+**Nieuwe functies**
 
 | Functie | Beschrijving |
 | ------- | ----------- |
@@ -35,19 +35,19 @@ Updates voor bestaande functies in Adobe Experience Platform:
 
 Voor meer informatie over [!DNL JupyterLab], gelieve te zien de [[!DNL JupyterLab]  gebruikersgids ](../../data-science-workspace/jupyterlab/overview.md).
 
-## Doelen {#destinations}
+## Bestemmingen {#destinations}
 
-In [ Real-time Customer Data Platform ](../../rtcdp/overview.md), zijn de bestemmingen pre-gebouwde integratie met bestemmingsplatforms die gegevens aan die partners op een naadloze manier activeren.
+In [ Real-Time Customer Data Platform ](../../rtcdp/overview.md), zijn de bestemmingen pre-gebouwde integratie met bestemmingsplatforms die gegevens aan die partners op een naadloze manier activeren.
 
 **Nieuwe bestemmingen**
 
 Er zijn nieuwe doelen beschikbaar waar u uw Adobe Experience Platform-gegevens kunt activeren. Zie hieronder voor meer informatie:
 
-| Doel | Beschrijving |
+| Bestemming | Beschrijving |
 |--- | ---|
 | [!DNL Google Customer Match] | Met Google Customer Match kunt u uw online- en offline gegevens gebruiken om klanten te bereiken en opnieuw contact op te nemen met andere Google, zoals: [!DNL Search], [!DNL Shopping] , Gmail en YouTube. <br><br> Bezoek de [!DNL Google Customer Match] [ pagina ](../../destinations/catalog/advertising/google-customer-match.md) in de bestemmingscatalogus voor meer informatie over de bestemming en hoe te opstelling het in Real-Time CDP. |
 
-**Nieuwe eigenschappen**
+**Nieuwe functies**
 
 | Functie | Beschrijving |
 |------- | -----------|
@@ -56,9 +56,9 @@ Er zijn nieuwe doelen beschikbaar waar u uw Adobe Experience Platform-gegevens k
 
 ## [!DNL Real-Time Customer Data Platform] {#rtcdp}
 
-Real-time Customer Data Platform ([!DNL Real-Time CDP]) is gebaseerd op Experience Platform en helpt bedrijven bekende en onbekende gegevens bijeen te brengen om klantprofielen te activeren door middel van intelligente beslissingen tijdens de reis van de klant. [!DNL Real-Time CDP] combineert meerdere bedrijfsgegevensbronnen om klantprofielen in real-time te maken. De segmenten die van deze profielen worden gebouwd kunnen dan naar stroomafwaartse bestemmingen worden verzonden om één-aan-één gepersonaliseerde klantenervaringen over alle kanalen en apparaten te verstrekken.
+Real-Time Customer Data Platform ([!DNL Real-Time CDP]) is gebaseerd op Experience Platform en helpt bedrijven bekende en onbekende gegevens samen te brengen om klantprofielen te activeren met behulp van intelligente besluitvorming gedurende de hele klanttraject. [!DNL Real-Time CDP] combineert meerdere bedrijfsgegevensbronnen om klantprofielen in real-time te maken. Segmenten die op basis van deze profielen zijn samengesteld, kunnen vervolgens naar downstreambestemmingen worden verzonden om gepersonaliseerde één-op-één klantervaringen te bieden via alle kanalen en apparaten.
 
-**Nieuwe eigenschappen**
+**Nieuwe functies**
 
 | Functie | Beschrijving |
 | ------- | ----------- |
@@ -68,11 +68,11 @@ Voor meer informatie over [!DNL Real-Time CDP], zie het [[!DNL Real-Time CDP]  o
 
 ## Bronnen {#sources}
 
-Adobe Experience Platform kan gegevens uit externe bronnen invoeren, terwijl u die gegevens kunt structureren, labelen en verbeteren met [!DNL Platform] -services. U kunt gegevens van een verscheidenheid van bronnen zoals de toepassingen van de Adobe, op wolk-gebaseerde opslag, derdesoftware, en uw systeem van CRM opnemen.
+Adobe Experience Platform kan gegevens uit externe bronnen invoeren, terwijl u die gegevens kunt structureren, labelen en verbeteren met [!DNL Experience Platform] -services. U kunt gegevens opnemen uit verschillende bronnen, zoals Adobe-toepassingen, cloudgebaseerde opslag, software van derden en uw CRM-systeem.
 
-[!DNL Experience Platform] biedt een RESTful-API en een interactieve UI waarmee u eenvoudig bronverbindingen voor verschillende gegevensproviders kunt instellen. Deze bronverbindingen staan u toe om met externe opslagsystemen en de diensten van CRM voor authentiek te verklaren en te verbinden, tijden voor ingestiingslooppas te plaatsen, en gegevensinvoer te beheren.
+[!DNL Experience Platform] biedt een RESTful-API en een interactieve UI waarmee u eenvoudig bronverbindingen voor verschillende gegevensproviders kunt instellen. Met deze bronverbindingen kunt u externe opslagsystemen en CRM-services verifiëren en er verbinding mee maken, tijden voor opnameruns instellen en de doorvoer van gegevensopname beheren.
 
-**Nieuwe eigenschappen**
+**Nieuwe functies**
 
 | Functie | Beschrijving |
 | ------- | ----------- |

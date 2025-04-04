@@ -1,11 +1,11 @@
 ---
-keywords: Experience Platform;thuis;populaire onderwerpen;Azure Data Explorer;azure data explorer;data explorer;Data Explorer
+keywords: Experience Platform;home;populaire onderwerpen;Azure Data Explorer;azure data explorer;data explorer;Data Explorer
 solution: Experience Platform
 title: Een Azure Data Explorer Source Connection maken in de gebruikersinterface
 type: Tutorial
 description: Leer hoe u een Azure Data Explorer-bronverbinding maakt met de Adobe Experience Platform-gebruikersinterface.
 exl-id: 561bf948-fc92-4401-8631-e2a408667507
-source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '468'
 ht-degree: 0%
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # Een [!DNL Azure Data Explorer] bronverbinding maken in de gebruikersinterface
 
-Source-connectors in Adobe Experience Platform bieden de mogelijkheid om volgens een schema extern gesourceerde gegevens in te voeren. Deze zelfstudie bevat stappen voor het maken van een [!DNL Azure Data Explorer] (hierna &quot;[!DNL Data Explorer]&quot; genoemd) bronconnector met behulp van de [!DNL Platform] -gebruikersinterface.
+Source-connectors in Adobe Experience Platform bieden de mogelijkheid om volgens een schema extern gesourceerde gegevens in te voeren. Deze zelfstudie bevat stappen voor het maken van een [!DNL Azure Data Explorer] (hierna &quot;[!DNL Data Explorer]&quot; genoemd) bronconnector met behulp van de [!DNL Experience Platform] -gebruikersinterface.
 
 ## Aan de slag
 
@@ -29,7 +29,7 @@ Als u reeds een geldige [!DNL Data Explorer] verbinding hebt, kunt u de rest van
 
 ### Vereiste referenties verzamelen
 
-Als u toegang wilt krijgen tot uw [!DNL Data Explorer] account op [!DNL Platform] , moet u de volgende waarden opgeven:
+Als u toegang wilt krijgen tot uw [!DNL Data Explorer] account op [!DNL Experience Platform] , moet u de volgende waarden opgeven:
 
 | Credentials | Beschrijving |
 | ---------- | ----------- |
@@ -43,13 +43,13 @@ Voor meer informatie over begonnen worden, verwijs naar [ dit  [!DNL Data Explor
 
 ## Sluit uw [!DNL Azure Data Explorer] -account aan
 
-Nadat u de vereiste gegevens hebt verzameld, voert u de onderstaande stappen uit om uw [!DNL Data Explorer] -account te koppelen aan [!DNL Platform] .
+Nadat u de vereiste gegevens hebt verzameld, voert u de onderstaande stappen uit om uw [!DNL Data Explorer] -account te koppelen aan [!DNL Experience Platform] .
 
 Login aan [ Adobe Experience Platform ](https://platform.adobe.com) en selecteer dan **[!UICONTROL Sources]** van de linkernavigatiebar om tot de **[!UICONTROL Sources]** werkruimte toegang te hebben. In het scherm **[!UICONTROL Catalog]** worden diverse bronnen weergegeven waarvoor u een account kunt maken.
 
 U kunt de juiste categorie selecteren in de catalogus aan de linkerkant van het scherm. U kunt ook de specifieke bron vinden waarmee u wilt werken met de zoekoptie.
 
-Selecteer onder de categorie **[!UICONTROL Databases]** de optie **[!UICONTROL Azure Data Explorer]** . Selecteer **[!UICONTROL Configure]** als dit de eerste keer is dat u deze connector gebruikt. Anders selecteert u **[!UICONTROL Add data]** om een nieuwe Data Explorer-aansluiting te maken.
+Selecteer onder de categorie **[!UICONTROL Databases]** de optie **[!UICONTROL Azure Data Explorer]** . Selecteer **[!UICONTROL Configure]** als dit de eerste keer is dat u deze connector gebruikt. Anders selecteert u **[!UICONTROL Add data]** om een nieuwe Data Explorer-connector te maken.
 
 ![ catalogus ](../../../../images/tutorials/create/data-explorer/catalog.png)
 
@@ -69,4 +69,4 @@ Als u een bestaande account wilt verbinden, selecteert u de [!DNL Data Explorer]
 
 ## Volgende stappen
 
-Aan de hand van deze zelfstudie hebt u een verbinding tot stand gebracht met uw [!DNL Data Explorer] -account. U kunt nu aan het volgende leerprogramma verdergaan en [ een dataflow vormen om gegevens in  [!DNL Platform]](../../dataflow/databases.md) te brengen.
+Aan de hand van deze zelfstudie hebt u een verbinding tot stand gebracht met uw [!DNL Data Explorer] -account. U kunt nu aan het volgende leerprogramma verdergaan en [ een dataflow vormen om gegevens in  [!DNL Experience Platform]](../../dataflow/databases.md) te brengen.

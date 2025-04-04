@@ -1,19 +1,19 @@
 ---
-keywords: Experience Platform;huis;populaire onderwerpen;bronnen;opname;het oplossen van problemen;bronnen het oplossen van problemen;bronnen faq;faq;bron schakelaars;bron schakelaar;bron schakelaars komt voor;bron schakelaars het oplossen van problemen; bron schakelaars;
+keywords: Experience Platform;home;populaire onderwerpen;bronnen;insluiten;problemen oplossen;bronnen die problemen oplossen;bronnen faq;faq;bronconnectors;bronconnector;bronconnectors veelgestelde;bronconnectors;problemen met bronconnectors;
 solution: Experience Platform
 title: Bronoplossing
 description: Dit document bevat antwoorden op veelgestelde vragen over bronnen op Adobe Experience Platform.
 exl-id: 94875121-7d4d-4eb2-8760-aa795933dd7e
-source-git-commit: 583eb70235174825dd542b95463784638bdef235
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '748'
+source-wordcount: '749'
 ht-degree: 0%
 
 ---
 
 # Bronhulp voor probleemoplossing
 
-Dit document bevat antwoorden op veelgestelde vragen over bronnen op Adobe Experience Platform. Voor vragen en het oplossen van problemen met betrekking tot andere [!DNL Platform] diensten, met inbegrip van die die over alle [!DNL Platform] APIs worden ontmoet, gelieve te verwijzen naar de [ gids van de het oplossen van problemenoplossing van Experience Platforms ](../landing/troubleshooting.md).
+Dit document bevat antwoorden op veelgestelde vragen over bronnen op Adobe Experience Platform. Voor vragen en het oplossen van problemen met betrekking tot andere [!DNL Experience Platform] diensten, met inbegrip van die die over alle [!DNL Experience Platform] APIs worden ontmoet, gelieve te verwijzen naar de [ het oplossen van problemengids van Experience Platform ](../landing/troubleshooting.md).
 
 ## Veelgestelde vragen
 
@@ -67,7 +67,7 @@ Alle bronnen van inname in de batch ondersteunen gedeeltelijke inname. Bij strea
 
 ### Wanneer moet ik gedeeltelijke inname gebruiken?
 
-Gedeeltelijke opname zou moeten worden gebruikt als u **niet** beperkingen hebt, zoals het hebben van het volledige dossier dat in Platform wordt opgenomen. U kunt ook gedeeltelijke inname gebruiken als u er geen moeite mee hebt gegevens in te voeren die fouten erin kunnen bevatten.
+Gedeeltelijke opname zou moeten worden gebruikt als u **niet** beperkingen hebt, zoals het hebben van het volledige dossier dat in Experience Platform wordt opgenomen. U kunt ook gedeeltelijke inname gebruiken als u er geen moeite mee hebt gegevens in te voeren die fouten erin kunnen bevatten.
 
 ### Wat is de typische drempel voor gedeeltelijke inname?
 

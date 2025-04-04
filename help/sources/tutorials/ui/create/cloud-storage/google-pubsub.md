@@ -1,11 +1,11 @@
 ---
 title: Een Google PubSub Source Connection maken in de gebruikersinterface
-description: Leer hoe u een Google PubSub-bronconnector maakt via de gebruikersinterface van Platform.
-badgeUltimate: label="Ultieme" type="Positive"
+description: Leer hoe u een Google PubSub-bronconnector maakt via de Experience Platform-gebruikersinterface.
+badgeUltimate: label="Ultimate" type="Positive"
 exl-id: fb8411f2-ccae-4bb5-b1bf-52b1144534ed
-source-git-commit: fcac805e151d6142886eb8e05da0eb1babad2f69
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1061'
+source-wordcount: '1069'
 ht-degree: 0%
 
 ---
@@ -14,22 +14,22 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
->De [!DNL Google PubSub] -bron is in de broncatalogus beschikbaar voor gebruikers die Real-time Customer Data Platform Ultimate hebben aangeschaft.
+>De [!DNL Google PubSub] -bron is in de broncatalogus beschikbaar voor gebruikers die Real-Time Customer Data Platform Ultimate hebben aangeschaft.
 
-Deze zelfstudie biedt stappen voor het maken van een [!DNL Google PubSub] (hierna &quot;[!DNL PubSub]&quot; genoemd) met behulp van de gebruikersinterface van Platform.
+Deze zelfstudie bevat stappen voor het maken van een [!DNL Google PubSub] (hierna &quot;[!DNL PubSub]&quot; genoemd) met behulp van de Experience Platform-gebruikersinterface.
 
 ## Aan de slag
 
 Deze zelfstudie vereist een goed begrip van de volgende onderdelen van Adobe Experience Platform:
 
-* [ Bronnen ](../../../../home.md): Experience Platform staat gegevens toe om van diverse bronnen worden opgenomen terwijl het voorzien van u van de capaciteit om, inkomende gegevens te structureren te etiketteren en te verbeteren gebruikend de diensten van het Platform.
-* [ Sandboxes ](../../../../../sandboxes/home.md): Experience Platform verstrekt virtuele zandbakken die één enkele instantie van het Platform in afzonderlijke virtuele milieu&#39;s verdelen helpen digitale ervaringstoepassingen ontwikkelen en ontwikkelen.
+* [ Bronnen ](../../../../home.md): Experience Platform staat gegevens toe om van diverse bronnen worden opgenomen terwijl het voorzien van u van de capaciteit om, inkomende gegevens te structureren te etiketteren en te verbeteren gebruikend de diensten van Experience Platform.
+* [ Sandboxes ](../../../../../sandboxes/home.md): Experience Platform verstrekt virtuele zandbakken die één enkele instantie van Experience Platform in afzonderlijke virtuele milieu&#39;s verdelen helpen digitale ervaringstoepassingen ontwikkelen en ontwikkelen.
 
 Als u reeds een geldige [!DNL PubSub] verbinding hebt, kunt u de rest van dit document overslaan en aan het leerprogramma te werk gaan op [ vormend een dataflow ](../../dataflow/batch/cloud-storage.md).
 
 ### Vereiste referenties verzamelen
 
-U moet waarden opgeven voor de verbindingseigenschappen die hieronder worden beschreven om uw [!DNL PubSub] -account aan te sluiten op het Experience Platform. Voor meer informatie over authentificatie en eerste vereiste opstelling, lees het [[!DNL PubSub source]  overzicht ](../../../../connectors/cloud-storage/google-pubsub.md#prerequisites).
+U moet waarden opgeven voor de verbindingseigenschappen die hieronder worden beschreven om uw [!DNL PubSub] -account aan te sluiten op Experience Platform. Voor meer informatie over authentificatie en eerste vereiste opstelling, lees het [[!DNL PubSub source]  overzicht ](../../../../connectors/cloud-storage/google-pubsub.md#prerequisites).
 
 
 >[!BEGINTABS]
@@ -57,11 +57,11 @@ Voor meer informatie over deze waarden, zie het volgende ](https://cloud.google.
 >
 >Als u de op rekening-gebaseerde authentificatie van de dienst gebruikt, zorg ervoor dat u voldoende gebruikerstoegang tot uw de dienstrekening hebt verleend en dat er geen extra witte ruimten in JSON zijn, wanneer het kopiëren en het kleven van uw geloofsbrieven.
 
-Nadat u de vereiste gegevens hebt verzameld, voert u de onderstaande stappen uit om uw [!DNL PubSub] -account te koppelen aan Platform.
+Nadat u de vereiste gegevens hebt verzameld, kunt u de onderstaande stappen volgen om uw [!DNL PubSub] -account te koppelen aan Experience Platform.
 
 ## Sluit uw [!DNL PubSub] -account aan
 
-Selecteer in de gebruikersinterface van het platform de optie **[!UICONTROL Sources]** in de linkernavigatie voor toegang tot de werkruimte van [!UICONTROL Sources] . In het scherm [!UICONTROL Catalog] worden diverse bronnen weergegeven waarmee u een account kunt maken.
+Selecteer in de gebruikersinterface van Experience Platform de optie **[!UICONTROL Sources]** in de linkernavigatie voor toegang tot de werkruimte van [!UICONTROL Sources] . In het scherm [!UICONTROL Catalog] worden diverse bronnen weergegeven waarmee u een account kunt maken.
 
 U kunt de juiste categorie selecteren in de catalogus aan de linkerkant van het scherm. U kunt ook de specifieke bron vinden waarmee u wilt werken met de zoekoptie.
 
@@ -112,7 +112,7 @@ Als u een account wilt maken met beperkte toegang tot alleen een bepaald [!DNL P
 
 ## Gegevens selecteren
 
-Een geslaagde verificatie brengt u naar de stap [!UICONTROL Select data] , waar u door de gegevenshiërarchie van [!DNL PubSub] kunt navigeren en de gegevens kunt selecteren die u naar het Experience Platform wilt brengen.
+Een geslaagde verificatie brengt u naar de stap [!UICONTROL Select data] , waar u door de gegevenshiërarchie van [!DNL PubSub] kunt navigeren en de gegevens kunt selecteren die u naar Experience Platform wilt verzenden.
 
 >[!BEGINTABS]
 
@@ -136,4 +136,4 @@ Als u met een onderwerp en op abonnement-gebaseerde toegang voor authentiek hebt
 
 ## Volgende stappen
 
-Aan de hand van deze zelfstudie hebt u een verbinding gemaakt tussen uw [!DNL PubSub] -account en Platform. U kunt nu aan het volgende leerprogramma verdergaan en [ een dataflow vormen om het stromen gegevens van uw wolkenopslag in Platform ](../../dataflow/streaming/cloud-storage-streaming.md) te brengen.
+Aan de hand van deze zelfstudie hebt u een verbinding gemaakt tussen uw [!DNL PubSub] -account en Experience Platform. U kunt nu aan het volgende leerprogramma verdergaan en [ een dataflow vormen om het stromen gegevens van uw wolkenopslag in Experience Platform ](../../dataflow/streaming/cloud-storage-streaming.md) te brengen.

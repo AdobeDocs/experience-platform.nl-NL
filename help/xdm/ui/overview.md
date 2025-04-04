@@ -4,20 +4,20 @@ solution: Experience Platform
 title: Overzicht van de interface Schemas
 description: In dit overzicht worden de belangrijkste mogelijkheden van de werkruimte Schemas in Experience Platform besproken.
 exl-id: b6e089ce-cf9e-4150-92ab-368382a75049
-source-git-commit: 16d6090bc71dbdc9ab42db98eafa0ea5afb5967b
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '302'
+source-wordcount: '305'
 ht-degree: 2%
 
 ---
 
 # Overzicht van de gebruikersinterface [!UICONTROL Schemas]
 
-In de [!UICONTROL Schemas] -werkruimte in de Adobe Experience Platform-gebruikersinterface kunt u bronnen van het Experience Data Model (XDM) beheren, zoals schema&#39;s, klassen, groepen van schemavelden en gegevenstypen. U kunt kernmiddelen bekijken en onderzoeken die door Adobe worden verstrekt, en douanemiddelen en schema&#39;s voor uw organisatie tot stand brengen.
+In de [!UICONTROL Schemas] -werkruimte in de Adobe Experience Platform-gebruikersinterface kunt u bronnen van het Experience Data Model (XDM) beheren, zoals schema&#39;s, klassen, groepen van schemavelden en gegevenstypen. U kunt de kernbronnen van Adobe bekijken en verkennen en aangepaste bronnen en schema&#39;s voor uw organisatie maken.
 
-Als u toegang wilt tot de werkruimte in de interface van het platform, selecteert u **[!UICONTROL Schemas]** in de linkertrack.
+Als u toegang wilt tot de werkruimte in de gebruikersinterface van Experience Platform, selecteert u **[!UICONTROL Schemas]** in de linkertrack.
 
-![ de werkruimte van Schema&#39;s met Schema&#39;s die in de linkernavigatie van Platform worden benadrukt UI.](../images/ui/overview/schemas-tab.png)
+![ de werkruimte van Schema&#39;s met Schemas die in Experience Platform wordt benadrukt UI verlaten navigatie.](../images/ui/overview/schemas-tab.png)
 
 ## Aan de slag
 
@@ -40,4 +40,4 @@ Klassen, veldgroepen en gegevenstypen dragen allemaal velden bij aan een schema.
 
 ## Volgende stappen
 
-Dit document bevat een inleiding tot de [!UICONTROL Schemas] -werkruimte in de gebruikersinterface van het platform. Raadpleeg de documentatie bij dit overzicht voor meer informatie over het beheren van uw schema&#39;s en andere XDM-bronnen.
+Dit document bevat een inleiding tot de werkruimte van [!UICONTROL Schemas] in de gebruikersinterface van Experience Platform. Raadpleeg de documentatie bij dit overzicht voor meer informatie over het beheren van uw schema&#39;s en andere XDM-bronnen.

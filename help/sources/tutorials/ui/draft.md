@@ -2,9 +2,9 @@
 title: Conceptgegevens in de gebruikersinterface
 description: Leer hoe u uw gegevens als concept opslaat en deze later publiceert wanneer u de werkruimte Bronnen gebruikt.
 exl-id: ee00798e-152a-4618-acb3-db40f2f55fae
-source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '572'
+source-wordcount: '574'
 ht-degree: 0%
 
 ---
@@ -19,11 +19,11 @@ Dit document bevat stappen voor het opslaan van uw gegevensstromen wanneer u de 
 
 Voor dit document is een goed begrip van de volgende Adobe Experience Platform-componenten vereist:
 
-* [ Bronnen ](../../home.md): Experience Platform staat gegevens toe om van diverse bronnen worden opgenomen terwijl het voorzien van u van de capaciteit om, inkomende gegevens te structureren te etiketteren en te verbeteren gebruikend de diensten van het Platform.
+* [ Bronnen ](../../home.md): Experience Platform staat gegevens toe om van diverse bronnen worden opgenomen terwijl het voorzien van u van de capaciteit om, inkomende gegevens te structureren te etiketteren en te verbeteren gebruikend de diensten van Experience Platform.
 
 ## Een gegevensstroom opslaan als concept
 
-U kunt de voortgang van het maken van de gegevensstroom op elk gewenst moment pauzeren nadat u de gegevens hebt geselecteerd die u wilt overbrengen naar het platform.
+U kunt de voortgang van het maken van de gegevensstroom op elk gewenst moment pauzeren nadat u de gegevens hebt geselecteerd die u naar Experience Platform wilt verzenden.
 
 Selecteer bijvoorbeeld **[!UICONTROL Save as draft]** als u de voortgang wilt opslaan tijdens de detailstap voor de gegevensstroom.
 
@@ -51,7 +51,7 @@ Via de dataflows-catalogus hebt u ook toegang tot uw conceptgegevens. Selecteer 
 
 ![ een lijst van gegevens voor een bepaalde organisatie.](../../images/tutorials/draft/catalog-access.png)
 
-## Publish uw conceptgegevensstroom
+## Uw conceptgegevensstroom publiceren
 
 U keert terug naar de [!UICONTROL Add data] stap van de bronwerkstroom, waar u het formaat van uw gegevens kunt opnieuw bevestigen en op uw gegevensstroom verder kunt gaan.
 

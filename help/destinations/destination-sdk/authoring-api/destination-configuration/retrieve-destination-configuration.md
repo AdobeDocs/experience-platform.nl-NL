@@ -2,9 +2,9 @@
 description: Deze pagina illustreert de API vraag die wordt gebruikt om een bestemmingsconfiguratie door Adobe Experience Platform Destination SDK terug te winnen.
 title: Een doelconfiguratie ophalen
 exl-id: aaf4cfa0-3e90-4fcc-b506-b84ff62b3027
-source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '367'
+source-wordcount: '368'
 ht-degree: 0%
 
 ---
@@ -50,7 +50,7 @@ Selecteer hieronder elk tabblad om de bijbehorende lading weer te geven.
 
 >[!BEGINTABS]
 
->[!TAB  wint alle bestemmingsconfiguraties  terug]
+>[!TAB  wint alle bestemmingsconfiguraties ] terug
 
 +++verzoek
 
@@ -174,7 +174,7 @@ Een succesvol antwoord retourneert HTTP-status 200 met een lijst van doelconfigu
 
 +++
 
->[!TAB  wint een specifieke bestemmingsconfiguratie  terug]
+>[!TAB  wint een specifieke bestemmingsconfiguratie ] terug
 
 +++verzoek
 
@@ -306,11 +306,11 @@ Een succesvolle reactie keert status 200 van HTTP met de details van de bestemmi
 
 ## API-foutafhandeling {#error-handling}
 
-Destination SDK API-eindpunten volgen de algemene API-foutberichtbeginselen voor Experience Platforms. Verwijs naar [ API statuscodes ](../../../../landing/troubleshooting.md#api-status-codes) en [ de fouten van de verzoekkopbal ](../../../../landing/troubleshooting.md#request-header-errors) in de het oplossen van problemengids van het Platform.
+Destination SDK API-eindpunten volgen de algemene beginselen van Experience Platform API-foutberichten. Verwijs naar [ API statuscodes ](../../../../landing/troubleshooting.md#api-status-codes) en [ de fouten van de verzoekkopbal ](../../../../landing/troubleshooting.md#request-header-errors) in de het oplossen van problemengids van Experience Platform.
 
 ## Volgende stappen
 
-Nadat u dit document hebt gelezen, weet u nu hoe u een doelconfiguratie kunt ophalen via het API-eindpunt Destination SDK `/authoring/destinations` .
+Nadat u dit document hebt gelezen, weet u nu hoe u een doelconfiguratie kunt ophalen via het API-eindpunt van Destination SDK `/authoring/destinations` .
 
 Raadpleeg de volgende artikelen voor meer informatie over wat u met dit eindpunt kunt doen:
 

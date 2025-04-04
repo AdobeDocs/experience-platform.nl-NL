@@ -4,9 +4,9 @@ title: Mixpanel Track Events API Event Forwarding Extension
 description: Deze Adobe Experience Platform-gebeurtenis die een extensie doorstuurt, verzendt Edge Network-gebeurtenissen naar Mixpanel.
 last-substantial-update: 2023-03-29T00:00:00Z
 exl-id: 21e2e0fa-4949-4be4-859f-d449d21d8f41
-source-git-commit: 3272db15283d427eb4741708dffeb8141f61d5ff
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '868'
+source-wordcount: '869'
 ht-degree: 0%
 
 ---
@@ -47,7 +47,7 @@ In [!DNL Mixpanel] bevat een identiteitscluster een verzameling `distinct_id` -w
 
 [!DNL Mixpanel] verhelpt identiteitsclusters op twee manieren:
 
-* **identificeer**: [!DNL Mixpanel] verbindt uw gekozen herkenningsteken met anoniem `distinct_id`. Als de [!DNL Mixpanel] SDK van uw website is ingeschakeld, gebruikt Platform de `distinct_id` die is toegewezen aan de gebruiker die momenteel is aangemeld.
+* **identificeer**: [!DNL Mixpanel] verbindt uw gekozen herkenningsteken met anoniem `distinct_id`. Als de [!DNL Mixpanel] SDK is ingeschakeld op uw website, gebruikt Experience Platform de `distinct_id` die is toegewezen aan de gebruiker die momenteel is aangemeld.
 * **Alias**: [!DNL Mixpanel] combineert twee niet-anonieme `distinct id` s samen als de extra fusiecriteria worden voldaan.
 
 >[!NOTE]
@@ -74,7 +74,7 @@ Selecteer **[!UICONTROL Extensions]** in de linkernavigatie. Selecteer op het ta
 
 ## Een [!DNL Send Event] -regel maken
 
-Begin creërend een nieuwe regel in uw gebeurtenis door:sturen bezit. Voeg onder **[!UICONTROL Actions]** een nieuwe handeling toe en stel de extensie in op **[!UICONTROL Mixpanel]** . Stel vervolgens het actietype in op **[!UICONTROL Track Event]** om Edge Network-gebeurtenissen naar [!DNL Mixpanel] te verzenden.
+Begin creërend een nieuwe regel in uw gebeurtenis door:sturen bezit. Voeg onder **[!UICONTROL Actions]** een nieuwe handeling toe en stel de extensie in op **[!UICONTROL Mixpanel]** . Stel vervolgens het handelingstype in op **[!UICONTROL Track Event]** om Edge Network-gebeurtenissen naar [!DNL Mixpanel] te verzenden.
 
 | Invoer | Beschrijving | Vereist |
 | --- | --- | --- |
@@ -95,7 +95,7 @@ Zodra de [!UICONTROL Track Event] actie aan de regel wordt toegevoegd, kunt u de
 
 >[!IMPORTANT]
 >
->Als uw website [!DNL Mixpanel] SDK gebruikt, kunt u aan de volgende stap van [ blijven valideren uw gegevens binnen  [!DNL Mixpanel]](#validate). Als u niet [!DNL Mixpanel] SDK gebruikt, moet u [ een afzonderlijke het volgen van identiteit ](#create-an-identity-tracking-rule) tot stand brengen om ervoor te zorgen dat de aangewezen gebeurtenissen en `distinct_id` waarden naar [!DNL Mixpanel] worden verzonden wanneer een gebeurtenis van de gebruikersidentificatie voorkomt.
+>Als uw website [!DNL Mixpanel] SDK gebruikt, kunt u aan de volgende stap van [ blijven valideren uw gegevens binnen  [!DNL Mixpanel]](#validate). Als u niet [!DNL Mixpanel] SDK gebruikt, moet u [ een afzonderlijke identiteit het volgen regel ](#create-an-identity-tracking-rule) tot stand brengen om ervoor te zorgen dat de aangewezen gebeurtenissen en `distinct_id` waarden naar [!DNL Mixpanel] worden verzonden wanneer een gebeurtenis van de gebruikersidentificatie voorkomt.
 
 ## Gegevens valideren binnen [!DNL Mixpanel] {#validate}
 
@@ -105,7 +105,7 @@ Controleer of [!DNL Mixpanel] de gebeurtenissen voor na aanmelding heeft samenge
 
 ## Volgende stappen
 
-In deze handleiding wordt beschreven hoe conversiegebeurtenissen naar [!DNL Mixpanel] kunnen worden verzonden via het doorsturen van gebeurtenissen. Deze extensie voor het doorsturen van gebeurtenissen maakt gebruik van de [!DNL Mixpanel] SDK en de JavaScript API. Raadpleeg de officiële documentatie voor meer informatie over deze onderliggende technologieën:
+In deze handleiding wordt beschreven hoe conversiegebeurtenissen naar [!DNL Mixpanel] kunnen worden verzonden via het doorsturen van gebeurtenissen. Deze extensie voor het doorsturen van gebeurtenissen maakt gebruik van de [!DNL Mixpanel] SDK en JavaScript API. Raadpleeg de officiële documentatie voor meer informatie over deze onderliggende technologieën:
 
 * [[!DNL Mixpanel]  SDK ](https://developer.mixpanel.com/docs/nodejs)
 * [[!DNL Mixpanel]  JavaScript API ](https://developer.mixpanel.com/docs/javascript-full-api-reference#mixpanelidentify)

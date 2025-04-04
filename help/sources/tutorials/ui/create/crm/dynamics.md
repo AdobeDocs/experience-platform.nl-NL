@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;home;populaire onderwerpen;Microsoft Dynamics;microsoft dynamics;Dynamics;dynamiek
+keywords: Experience Platform;home;populaire onderwerpen;Microsoft Dynamics;microsoft dynamics;Dynamics;dynamics
 solution: Experience Platform
 title: Een Microsoft Dynamics Source Connection maken in de gebruikersinterface
 type: Tutorial
-description: Leer hoe u een Microsoft Dynamics-bronverbinding maakt met de gebruikersinterface van Adobe Experience Platform.
+description: Leer hoe u een Microsoft Dynamics-bronverbinding maakt met de interface van Adobe Experience Platform.
 exl-id: 1a7a66de-dc57-4a72-8fdd-5fd80175db69
-source-git-commit: d22c71fb77655c401f4a336e339aaf8b3125d1b6
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '577'
+source-wordcount: '580'
 ht-degree: 0%
 
 ---
@@ -20,7 +20,7 @@ Deze zelfstudie biedt stappen om een [!DNL Microsoft Dynamics] (hierna &quot;[!D
 
 Deze zelfstudie vereist een goed begrip van de volgende onderdelen van Adobe Experience Platform:
 
-* [[!DNL Experience Data Model (XDM)]  Systeem ](../../../../../xdm/home.md): Het gestandaardiseerde kader waardoor het Experience Platform gegevens van de klantenervaring organiseert.
+* [[!DNL Experience Data Model (XDM)]  Systeem ](../../../../../xdm/home.md): Het gestandaardiseerde kader waardoor Experience Platform gegevens van de klantenervaring organiseert.
    * [ Grondbeginselen van schemacompositie ](../../../../../xdm/schema/composition.md): Leer over de basisbouwstenen van schema&#39;s XDM, met inbegrip van zeer belangrijke principes en beste praktijken in schemacompositie.
    * [ het leerprogramma van de Redacteur van het Schema ](../../../../../xdm/tutorials/create-schema-ui.md): Leer hoe te om douaneschema&#39;s tot stand te brengen gebruikend de Redacteur UI van het Schema.
 * [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md): biedt een uniform, real-time consumentenprofiel dat is gebaseerd op geaggregeerde gegevens van meerdere bronnen.
@@ -54,13 +54,13 @@ Voor meer informatie bij het worden begonnen, verwijs naar [ dit  [!DNL Dynamics
 
 ## Sluit uw [!DNL Dynamics] -account aan
 
-Selecteer in de gebruikersinterface van het platform de optie **[!UICONTROL Sources]** in de linkernavigatie voor toegang tot de werkruimte van [!UICONTROL Sources] . In het scherm [!UICONTROL Catalog] worden diverse bronnen weergegeven waarmee u een account kunt maken.
+Selecteer in de gebruikersinterface van Experience Platform de optie **[!UICONTROL Sources]** in de linkernavigatie voor toegang tot de werkruimte van [!UICONTROL Sources] . In het scherm [!UICONTROL Catalog] worden diverse bronnen weergegeven waarmee u een account kunt maken.
 
 U kunt de juiste categorie selecteren in de catalogus aan de linkerkant van het scherm. U kunt ook de specifieke bron vinden waarmee u wilt werken met de zoekoptie.
 
 Selecteer onder de categorie [!UICONTROL CRM] de optie **[!UICONTROL Microsoft Dynamics]** en selecteer vervolgens **[!UICONTROL Add data]** .
 
-![ de geselecteerde broncatalogus met de Dynamica van Microsoft.](../../../../images/tutorials/create/ms-dynamics/catalog.png)
+![ de geselecteerde broncatalogus met Microsoft Dynamics.](../../../../images/tutorials/create/ms-dynamics/catalog.png)
 
 De pagina **[!UICONTROL Connect Microsoft Dynamics account]** wordt weergegeven. Op deze pagina kunt u nieuwe of bestaande referenties gebruiken.
 
@@ -86,7 +86,7 @@ Bij het maken van een [!DNL Dynamics] -account kunt u de basisverificatie of de 
 
 >[!TAB  Basisauthentificatie ]
 
-Als u een [!DNL Dynamics] -account met basisverificatie wilt maken, selecteert u [!UICONTROL Basic authentication] en geeft u vervolgens waarden op voor uw [!UICONTROL Service URI] , [!UICONTROL Username] en [!UICONTROL Password] . **Nota**: De fundamentele authentificatie in [!DNL Dynamics] kan door tweefaste authentificatie worden geblokkeerd, die momenteel niet door Platform wordt gesteund. In dit geval wordt aangeraden op toetsen gebaseerde verificatie te gebruiken om een bronconnector te maken met [!DNL Dynamics] .
+Als u een [!DNL Dynamics] -account met basisverificatie wilt maken, selecteert u [!UICONTROL Basic authentication] en geeft u vervolgens waarden op voor uw [!UICONTROL Service URI] , [!UICONTROL Username] en [!UICONTROL Password] . **Nota**: De basisauthentificatie in [!DNL Dynamics] kan door tweefaste authentificatie worden geblokkeerd, die momenteel niet door Experience Platform wordt gesteund. In dit geval wordt aangeraden op toetsen gebaseerde verificatie te gebruiken om een bronconnector te maken met [!DNL Dynamics] .
 
 Als u klaar bent, selecteert u **[!UICONTROL Connect to source]** en laat u de nieuwe account enige tijd beginnen.
 
@@ -104,4 +104,4 @@ Als u klaar bent, selecteert u **[!UICONTROL Connect to source]** en laat u de n
 
 ## Volgende stappen
 
-Aan de hand van deze zelfstudie hebt u een verbinding tot stand gebracht met uw [!DNL Dynamics] -account. U kunt nu aan het volgende leerprogramma verdergaan en [ een dataflow vormen om gegevens in Platform ](../../dataflow/crm.md) te brengen.
+Aan de hand van deze zelfstudie hebt u een verbinding tot stand gebracht met uw [!DNL Dynamics] -account. U kunt nu aan het volgende leerprogramma verdergaan en [ een dataflow vormen om gegevens in Experience Platform ](../../dataflow/crm.md) te brengen.

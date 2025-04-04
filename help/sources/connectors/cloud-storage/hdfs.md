@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Overzicht Apache HDFS Source Connector
 description: Leer hoe u Apache HDFS via API's of de gebruikersinterface kunt aansluiten op Adobe Experience Platform.
 exl-id: 1f156f7b-a19d-4dcf-a51d-ab6cb396d8f7
-source-git-commit: e37c00863249e677f1645266859bf40fe6451827
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '387'
 ht-degree: 0%
@@ -34,9 +34,9 @@ Hieronder volgt een lijst met beperkingen waarmee u rekening moet houden wanneer
 - Ongeldige URL-padtekens niet toegestaan. Codepunten zoals `\uE000` zijn weliswaar geldig in NTFS-bestandsnamen, maar zijn geen geldige Unicode-tekens. Bovendien zijn sommige ASCII- of Unicode-tekens, zoals besturingstekens (0x00 tot 0x1F, \u0081, enz.), niet toegestaan. Voor regels die de koorden van Unicode in HTTP/1.1 bepalen zie [ RFC 2616, Sectie 2.2: BasisRegels ](https://www.ietf.org/rfc/rfc2616.txt) en [ RFC 3987 ](https://www.ietf.org/rfc/rfc3987.txt).
 - De volgende bestandsnamen zijn niet toegestaan: LPT1, LPT2, LPT3, LPT4, LPT5, LPT6, LPT7, LPT8, LPT9, COM1, COM2, COM3, COM4, COM5, COM6, COM7, COM8, COM9, PRN, AUX, NUL, CON, CLOCK$, puntteken (.) en twee stippen ( ...).
 
-## [!DNL Apache] HDFS verbinden met [!DNL Platform]
+## [!DNL Apache] HDFS verbinden met [!DNL Experience Platform]
 
-In de onderstaande documentatie vindt u informatie over het aansluiten van [!DNL Apache] HDFS op [!DNL Platform] via API&#39;s of de gebruikersinterface:
+In de onderstaande documentatie vindt u informatie over het aansluiten van [!DNL Apache] HDFS op [!DNL Experience Platform] via API&#39;s of de gebruikersinterface:
 
 ### API&#39;s gebruiken
 

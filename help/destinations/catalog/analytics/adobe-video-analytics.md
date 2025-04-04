@@ -1,11 +1,11 @@
 ---
 keywords: media analytics extension;media analytics;audio and video extension
 title: Adobe Media Analytics voor audio- en video-extensie
-description: De Adobe Media Analytics for Audio and Video-extensie is een analysedoel in Adobe Experience Platform. Zie de extensiepagina over Adobe Exchange voor meer informatie over de extensiefunctionaliteit.
+description: De extensie Adobe Media Analytics for Audio and Video is een analysedoel in Adobe Experience Platform. Zie de extensiepagina op Adobe Exchange voor meer informatie over de extensiefunctionaliteit.
 exl-id: bf33e3e8-a95b-47e3-a1dc-c8f68f80b080
-source-git-commit: 88939d674c0002590939004e0235d3da8b072118
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '490'
+source-wordcount: '493'
 ht-degree: 0%
 
 ---
@@ -14,17 +14,17 @@ ht-degree: 0%
 
 ## Overzicht {#overview}
 
-Adobe Media Analytics for Audio and Video is een aanvulling op de basisanalysemogelijkheden die clients een robuuste meting voor video, audio en advertenties bieden.
+Adobe Media Analytics for Audio and Video is een add-on bij de basis-analyse die clients een robuuste meting biedt voor video, audio en advertenties.
 
-Adobe Media Analytics for Audio and Video is een uitbreiding van analysemogelijkheden in Adobe Experience Platform. Voor meer informatie over de uitbreidingsfunctionaliteit, zie de uitbreidingspagina op [ Adobe Exchange ](https://exchange.adobe.com/experiencecloud.details.100157.html).
+Adobe Media Analytics for Audio and Video is een uitbreiding voor analysemogelijkheden in Adobe Experience Platform. Voor meer informatie over de uitbreidingsfunctionaliteit, zie de uitbreidingspagina op [ Adobe Exchange ](https://exchange.adobe.com/experiencecloud.details.100157.html).
 
-Dit doel is een tagextensie. Voor meer informatie over hoe de uitbreidingen van markeringen in Platform werken, zie het [ overzicht van markeringsuitbreidingen ](../launch-extensions/overview.md).
+Dit doel is een tagextensie. Voor meer informatie over hoe de uitbreidingen van markeringen in Experience Platform werken, zie het [ overzicht van markeringsuitbreidingen ](../launch-extensions/overview.md).
 
-![ Analytics van Adobe Media voor Audio en Video uitbreiding ](../../assets/catalog/analytics/adobe-video-analytics/catalog.png)
+![ Analytics van de Media van Adobe voor Audio en Video uitbreiding ](../../assets/catalog/analytics/adobe-video-analytics/catalog.png)
 
 ## Vereisten {#prerequisites}
 
-Deze extensie is beschikbaar in de catalogus [!DNL Destinations] voor alle klanten die Platform hebben aangeschaft.
+Deze extensie is beschikbaar in de catalogus [!DNL Destinations] voor alle klanten die Experience Platform hebben aangeschaft.
 
 Als u deze extensie wilt gebruiken, hebt u toegang tot tags in Adobe Experience Platform nodig. Tags worden aan Adobe Experience Cloud-klanten aangeboden als een inbegrepen, waardetoevoegend element. Neem contact op met de systeembeheerder van uw organisatie om toegang tot tags te krijgen en vraag hen om u de **[!UICONTROL manage_properties]** -machtiging te verlenen zodat u extensies kunt installeren.
 
@@ -32,7 +32,7 @@ Als u deze extensie wilt gebruiken, hebt u toegang tot tags in Adobe Experience 
 
 De extensie Adobe Analytics for Video installeren:
 
-In de [ interface van het Platform ](https://platform.adobe.com/), ga **[!UICONTROL Destinations]** > **[!UICONTROL Catalog]**.
+In de [ interface van Experience Platform ](https://platform.adobe.com/), ga **[!UICONTROL Destinations]** > **[!UICONTROL Catalog]**.
 
 Selecteer de extensie in de catalogus of gebruik de zoekbalk.
 
@@ -42,7 +42,7 @@ Selecteer de eigenschap tag waarin u de extensie wilt installeren. U kunt ook ee
 
 De werkstroom neemt u aan de UI van de Inzameling van Gegevens om de installatie te voltooien.
 
-Voor informatie over de opties van de uitbreidingsconfiguratie, zie de [ Analytics van Adobe Media voor Audio en Video uitbreidingspagina ](../../../tags/extensions/client/media-analytics/overview.md) in de markeringsdocumentatie.
+Voor informatie over de opties van de uitbreidingsconfiguratie, zie de [ Analyses van de Media van Adobe voor Audio en Video uitbreidingspagina ](../../../tags/extensions/client/media-analytics/overview.md) in de markeringsdocumentatie.
 
 U kunt de uitbreiding direct in [ de Inzameling UI van Gegevens ](https://experience.adobe.com/#/data-collection/) ook installeren. Zie de gids op [ toevoegend een nieuwe uitbreiding ](../../../tags/ui/managing-resources/extensions/overview.md#add-a-new-extension) voor meer informatie.
 

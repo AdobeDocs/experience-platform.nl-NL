@@ -1,38 +1,38 @@
 ---
-keywords: Advertising Cloud;adverteren, wolkenuitbreiding; adverteren, wolkenbestemming
-title: Adobe Advertising Cloud-extensie
-description: De extensie Adobe Advertising Cloud is een reclamebestemming in Adobe Experience Platform. Zie de extensiepagina over Adobe Exchange voor meer informatie over de extensiefunctionaliteit.
+keywords: Advertentie Cloud;adverteren cloudextentie; adverteren cloudbestemming
+title: Adobe Advertising Cloud Extension
+description: De extensie Adobe Advertising Cloud is een advertentiedoel in Adobe Experience Platform. Zie de extensiepagina op Adobe Exchange voor meer informatie over de extensiefunctionaliteit.
 exl-id: 3415a85f-5678-4f5b-b7cf-e185a66d084f
-source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '430'
+source-wordcount: '434'
 ht-degree: 0%
 
 ---
 
-# Adobe Advertising Cloud-extensie {#adobe-advertising-cloud-extension}
+# Adobe Advertising Cloud Extension {#adobe-advertising-cloud-extension}
 
 ## Overzicht {#overview}
 
-Dit is de [!DNL Advertising Cloud] -extensie voor het implementeren van [!DNL Advertising Cloud] -conversie en publiekstags voor zowel de DSP als de zoekfunctie (DCO wordt momenteel niet ondersteund).
+Dit is de [!DNL Advertising Cloud] -extensie voor het implementeren van [!DNL Advertising Cloud] -conversie en publiekstags voor zowel de DSP als de Search (DCO wordt momenteel niet ondersteund).
 
-Adobe Advertising Cloud is een advertentieverlenging in Adobe Experience Platform.
+Adobe Advertising Cloud is een advertentie-extensie in Adobe Experience Platform.
 
-Dit doel is een tagextensie. Voor meer informatie over hoe de uitbreidingen van markeringen in Platform werken, zie het [ overzicht van markeringsuitbreidingen ](../launch-extensions/overview.md).
+Dit doel is een tagextensie. Voor meer informatie over hoe de uitbreidingen van markeringen in Experience Platform werken, zie het [ overzicht van markeringsuitbreidingen ](../launch-extensions/overview.md).
 
-![ de uitbreiding van Adobe Advertising Cloud ](../../assets/catalog/advertising/adobe-advertising-cloud/catalog.png)
+![ uitbreiding van de Wolk van de Reclame van Adobe ](../../assets/catalog/advertising/adobe-advertising-cloud/catalog.png)
 
 ## Vereisten {#prerequisites}
 
-Deze extensie is beschikbaar in de catalogus Doelen voor alle klanten die Platform hebben aangeschaft.
+Deze extensie is beschikbaar in de catalogus Doelen voor alle klanten die Experience Platform hebben aangeschaft.
 
-Als u deze extensie wilt gebruiken, hebt u toegang tot tags in Platform nodig. Tags worden aan Adobe Experience Cloud-klanten aangeboden als een inbegrepen, waardetoevoegend element. Neem contact op met de systeembeheerder van uw organisatie om toegang te krijgen tot de functies voor gegevensverzameling in de gebruikersinterface en vraag hen om u de machtiging **[!UICONTROL manage_properties]** te verlenen, zodat u extensies kunt installeren.
+Als u deze extensie wilt gebruiken, hebt u toegang tot tags in Experience Platform nodig. Tags worden aan Adobe Experience Cloud-klanten aangeboden als een inbegrepen, waardetoevoegend element. Neem contact op met de systeembeheerder van uw organisatie om toegang te krijgen tot de functies voor gegevensverzameling in de gebruikersinterface en vraag hen om u de machtiging **[!UICONTROL manage_properties]** te verlenen, zodat u extensies kunt installeren.
 
 ## Extensie installeren {#install-extension}
 
-De Adobe Advertising Cloud-extensie installeren:
+De extensie Adobe Advertising Cloud installeren:
 
-In de [ interface van het Platform ](https://platform.adobe.com/), ga **[!UICONTROL Destinations]** > **[!UICONTROL Catalog]**.
+In de [ interface van Experience Platform ](https://platform.adobe.com/), ga **[!UICONTROL Destinations]** > **[!UICONTROL Catalog]**.
 
 Selecteer de extensie in de catalogus of gebruik de zoekbalk.
 

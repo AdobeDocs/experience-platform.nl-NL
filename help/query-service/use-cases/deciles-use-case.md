@@ -2,16 +2,16 @@
 title: Het op decreet-gebaseerde Geval van het Gebruik van Datasets
 description: Deze gids toont de stappen die worden vereist om de Dienst van de Vraag te gebruiken om op decile-Gebaseerde afgeleide datasets voor gebruik met uw gegevens van het Profiel tot stand te brengen.
 exl-id: 0ec6b511-b9fd-4447-b63d-85aa1f235436
-source-git-commit: 2ffb8724b2aca54019820335fb21038ec7e69a7f
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1511'
+source-wordcount: '1512'
 ht-degree: 0%
 
 ---
 
 # Gebruiksgeval voor op een regel gebaseerde afgeleide gegevenssets
 
-De afgeleide datasets vergemakkelijken gecompliceerde gebruiksgevallen voor het analyseren van gegevens van het gegevensmeer die met andere stroomafwaartse diensten van het Platform kunnen worden gebruikt of in uw gegevens van het Profiel van de Klant in real time worden gepubliceerd.
+De afgeleide datasets vergemakkelijken gecompliceerde gebruiksgevallen voor het analyseren van gegevens van het gegevensmeer die met andere stroomafwaartse diensten van Experience Platform kunnen worden gebruikt of in uw gegevens van het Profiel van de Klant in real time worden gepubliceerd.
 
 Dit voorbeeld gebruikt geval toont aan hoe te om op decile-gebaseerde afgeleide datasets voor gebruik met uw gegevens van het Profiel van de Klant in real time te creëren. Gebruikend een scenario van de luchtvaartloyaliteit als voorbeeld, vertelt deze gids u hoe te om een dataset tot stand te brengen die categoriale deciles gebruikt om te segmenteren en publiek tot stand te brengen dat op gerangschikte attributen wordt gebaseerd.
 

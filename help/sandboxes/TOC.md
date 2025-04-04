@@ -2,12 +2,12 @@
 audience: user
 user-guide-title: Sandboxes in Adobe Experience Platform Help
 breadcrumb-title: Handleiding voor sandboxes
-user-guide-description: Leer meer over het functioneren van sandboxes en verdeel een exemplaar van het platform in partities in virtuele omgevingen voor het ontwikkelen, testen en implementeren van applicaties.
+user-guide-description: Kom te weten hoe sandboxen werken en een Experience Platform-instantie in virtuele omgevingen verdelen voor ontwikkeling, testen en implementatie van toepassingen.
 feature: Sandboxes
-source-git-commit: ecace5503fcd054ef992763044304b03b9661b3b
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '82'
-ht-degree: 45%
+source-wordcount: '84'
+ht-degree: 26%
 
 ---
 
@@ -38,4 +38,4 @@ ht-degree: 45%
    * [Uitstekingscentrum](use-cases/center-of-excellence.md)
 * [Handleiding voor probleemoplossing](troubleshooting-guide.md)
 * [ API verwijzing ](https://www.adobe.io/experience-platform-apis/references/sandbox)
-* [ de versienota&#39;s van het Platform ](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)
+* [Releaseopmerkingen bij Experience Platform](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)

@@ -1,12 +1,12 @@
 ---
 keywords: mobiel;mobiele betrokkenheidsdoelen;LINE;LINE mobiele betrokkenheidsbestemming
 title: LINE-verbinding
-description: De bestemming van de LIJN staat u toe om profielen aan uw publiek van het Platform toe te voegen en gepersonaliseerde ervaringen aan verbonden gebruikers te leveren.
+description: Met de LINE-bestemming kunt u profielen toevoegen aan uw Experience Platform-publiek en verbonden gebruikers een persoonlijke ervaring bieden.
 last-substantial-update: 2022-11-08T00:00:00Z
 exl-id: 9981798a-61f2-4a09-9a33-57e63eb36d43
-source-git-commit: 5aefa362d7a7d93c12f9997d56311127e548497e
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1139'
+source-wordcount: '1147'
 ht-degree: 0%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 0%
 
 [[!DNL LINE] ](https://line.me/en/) is een populair communicatie platform dat mensen, de diensten en de informatie verbindt en van een praatjeapp tot een hub voor vermaak, sociale, en dagelijkse activiteiten is gegroeid.
 
-Dit [!DNL Adobe Experience Platform] [ bestemmings ](/help/destinations/home.md) hefboomwerkingen [[!DNL LINE]  Overseinen API ](https://developers.line.biz/en/reference/messaging-api/). U kunt profielen van uw publiek van het Experience Platform als verbindingen binnen [!DNL LINE] voor uw bedrijfsbehoeften activeren.
+Dit [!DNL Adobe Experience Platform] [ bestemmings ](/help/destinations/home.md) hefboomwerkingen [[!DNL LINE]  Overseinen API ](https://developers.line.biz/en/reference/messaging-api/). U kunt profielen vanuit uw Experience Platform-publiek activeren als verbindingen binnen [!DNL LINE] voor uw zakelijke behoeften.
 
 [!DNL LINE] gebruikt Béonder Tokens als authentificatiemechanisme om met [!DNL LINE] Overseinen API te communiceren. De instructies om aan uw [!DNL LINE] instantie voor authentiek te verklaren zijn verder hieronder, binnen [ voor authentiek verklaren aan bestemmings ](#authenticate) sectie.
 
@@ -29,7 +29,7 @@ Als markeerteken kunt u gebruikers in een mobiele betrokkenheidsbestemming als d
 
 ### [!DNL LINE] voorwaarden {#prerequisites-destination}
 
-Als u gegevens wilt exporteren van Platform naar uw [!DNL LINE] -account, moet u rekening houden met de volgende voorwaarden in [!DNL LINE] :
+Als u gegevens wilt exporteren van Experience Platform naar uw [!DNL LINE] -account, moet u rekening houden met de volgende voorwaarden in [!DNL LINE] :
 
 #### U moet een [!DNL LINE] -account hebben {#prerequisites-account}
 
@@ -40,7 +40,7 @@ Als u nog geen account hebt, moet u zich registreren en een [!DNL LINE] -account
 
 #### De [!DNL LINE channel access token (long-lived)] verzamelen vanaf de [!DNL LINE] ontwikkelaarsconsole {#gather-credentials}
 
-Om Platform toe te staan om tot [!DNL LINE] middelen toegang te hebben, zult u *[!DNL Channel access token (long-lived)]* van het gewenste [!DNL LINE] *Overseinen API* kanaal nodig hebben.
+Om Experience Platform toe te staan om tot [!DNL LINE] middelen toegang te hebben, zult u *[!DNL Channel access token (long-lived)]* van het gewenste [!DNL LINE] *Overseinen API* kanaal nodig hebben.
 
 1. Login met uw [!DNL LINE] rekening aan de [[!DNL LINE]  console van de Ontwikkelaar ](https://developers.line.biz/console).
 1. Daarna, heb toegang tot de *[!DNL Providers]* lijst, dan selecteer *[!DNL Provider]* van rente en selecteer ten slotte het *Overseinen API* kanaal om tot zijn montages toegang te hebben. Als u tot de ontwikkelaarsconsole voor het eerst toegang hebt volg de [[!DNL LINE]  documentatie ](https://developers.line.biz/en/docs/messaging-api/getting-started/) om de stappen te voltooien die worden vereist om een leverancier tot stand te brengen.
@@ -85,7 +85,7 @@ Kies in **[!UICONTROL Destinations]** > **[!UICONTROL Catalog]** Zoeken naar [!D
 ### Verifiëren voor bestemming {#authenticate}
 
 Selecteer **[!UICONTROL Connect to destination]** als u wilt verifiëren bij het doel.
-{het schermschot van het platform UI die tonen hoe te voor authentiek te verklaren.](../../assets/catalog/mobile-engagement/line/authenticate-destination.png)![
+{het schermschot van 0} Experience Platform UI die toont hoe te voor authentiek te verklaren.](../../assets/catalog/mobile-engagement/line/authenticate-destination.png)![
 
 Vul de vereiste velden hieronder in.
 * **[!UICONTROL Bearer token]**: Uw [!DNL LINE Channel access token (long-lived)] vanuit de [!DNL LINE] ontwikkelaarsconsole. Verwijs naar [ verzamelen geloofsbrieven ](#gather-credentials) sectie.
@@ -95,7 +95,7 @@ Als de opgegeven gegevens geldig zijn, geeft de gebruikersinterface de status **
 ### Doelgegevens invullen {#destination-details}
 
 Als u details voor de bestemming wilt configureren, vult u de vereiste en optionele velden hieronder in. Een sterretje naast een veld in de gebruikersinterface geeft aan dat het veld verplicht is.
-{het schermschot van het platform UI die de bestemmingsdetails toont.](../../assets/catalog/mobile-engagement/line/destination-details.png)![
+{het schermschot van 0} Experience Platform UI die de bestemmingsdetails toont.](../../assets/catalog/mobile-engagement/line/destination-details.png)![
 
 * **[!UICONTROL Name]**: Een naam waarmee u dit doel in de toekomst herkent.
 * **[!UICONTROL Description]**: Een beschrijving die u zal helpen deze bestemming in de toekomst identificeren.
@@ -118,7 +118,7 @@ Lees [ activeer profielen en publiek aan het stromen publiek uitvoerbestemmingen
 
 ### Kenmerken en identiteiten toewijzen {#map}
 
-Als u uw publieksgegevens correct vanuit Adobe Experience Platform naar de [!DNL LINE] -bestemming wilt verzenden, moet u de stap voor veldtoewijzing doorlopen. Toewijzing bestaat uit het maken van een koppeling tussen de schemavelden van uw Experience Data Model (XDM) in uw Platform-account en de bijbehorende equivalenten van de doelbestemming. Voer de volgende stappen uit om uw XDM-velden correct toe te wijzen aan de [!DNL LINE] -doelvelden:
+Als u uw publieksgegevens correct vanuit Adobe Experience Platform naar de [!DNL LINE] -bestemming wilt verzenden, moet u de stap voor veldtoewijzing doorlopen. Toewijzing bestaat uit het maken van een koppeling tussen de schemavelden van uw Experience Data Model (XDM) in uw Experience Platform-account en de overeenkomstige equivalenten van de doelbestemming. Voer de volgende stappen uit om uw XDM-velden correct toe te wijzen aan de [!DNL LINE] -doelvelden:
 
 Afhankelijk van uw bronidentiteit moeten de volgende naamruimten voor de doelidentiteit worden toegewezen:
 
@@ -128,14 +128,14 @@ Afhankelijk van uw bronidentiteit moeten de volgende naamruimten voor de doelide
 | Gebruiker-id&#39;s voor LIJN | `UserID` | `LineId` |
 
 Als uw doelidentiteiten *gebruiker ID&#39;s van de LIJN* zijn zult u hieronder nodig hebben:
-![ het schermschot van het Platform UI die de afbeelding van het Doel tonen wanneer het gebruiken van de Gebruiker van de LIJN IDs voor doelidentiteiten.](../../assets/catalog/mobile-engagement/line/mappings-userid.png)
+![ het schermschot van Experience Platform UI die de afbeelding van het Doel tonen wanneer het gebruiken van de Gebruiker van de LIJN IDs voor doelidentiteiten.](../../assets/catalog/mobile-engagement/line/mappings-userid.png)
 
 Als uw doelidentiteit *identiteitskaart voor Advertisers (IFAs)* is zult u hieronder nodig hebben:
-![ het schermschot van het Platform UI die de afbeelding van het Doel tonen wanneer het gebruiken van identiteitskaart voor Advertisers (IFAs) voor doelidentiteiten.](../../assets/catalog/mobile-engagement/line/mappings-idfa.png)
+![ het schermschot van Experience Platform UI die de afbeelding van het Doel tonen wanneer het gebruiken van identiteitskaart voor Advertisers (IFAs) voor doelidentiteiten.](../../assets/catalog/mobile-engagement/line/mappings-idfa.png)
 
 ## Gegevens exporteren valideren {#exported-data}
 
-Wanneer de gegevensexport uit het Experience Platform is gelukt, maakt de [!DNL LINE] -bestemming een nieuw publiek in [!DNL LINE] met de geselecteerde publieksnaam.
+Wanneer de gegevensexport uit Experience Platform is gelukt, maakt de [!DNL LINE] -bestemming een nieuw publiek in [!DNL LINE] met de geselecteerde publieksnaam.
 
 Volg onderstaande stappen om te controleren of u de bestemming correct hebt ingesteld:
 

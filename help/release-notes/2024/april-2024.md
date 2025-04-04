@@ -1,11 +1,11 @@
 ---
-title: Adobe Experience Platform Release Notes April 2024
+title: Aanvullende informatie van april 2024 voor Adobe Experience Platform
 description: Aanvullende informatie van april 2024 voor Adobe Experience Platform.
 exl-id: 86d72fd8-a464-4715-abc9-4177236e423c
-source-git-commit: d6e306294d0a119108e2de7ba03ebed4f633fba1
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1897'
-ht-degree: 99%
+source-wordcount: '1899'
+ht-degree: 97%
 
 ---
 
@@ -55,7 +55,7 @@ Adobe Experience Platform biedt een reeks technologieën waarmee u klantervaring
 | Gegevensstromen | [Edge Network-botdetectie](../../datastreams/bot-detection.md) | Verkeer afkomstig van niet-menselijke entiteiten, zoals geautomatiseerde programma&#39;s, web scrapers, spiders en scriptscanners, kan het moeilijker maken om gebeurtenissen van menselijke bezoekers te identificeren. Dit soort verkeer kan belangrijke bedrijfsstatistieken negatief beïnvloeden, wat kan leiden tot onjuiste verkeersrapportage. <br>Met botdetectie kunt u gebeurtenissen die zijn gegenereerd door de [Web SDK](../../web-sdk/home.md), [Mobile SDK](https://developer.adobe.com/client-sdks/home/) en [[!DNL Server API]](../../server-api/overview.md) identificeren als gegenereerd door bekende spiders en bots. Door botdetectie voor uw datastreams te configureren, kunt u specifieke IP-adressen, IP-bereiken en verzoekheaders identificeren die u als botgebeurtenissen wilt classificeren. <br>De identificatie van botverkeer kan u een nauwkeurigere meting van de gebruikersactiviteit op uw site of mobiele app bieden. |
 | Mobile SDK | Release van primaire versie | Er zijn nieuwe primaire versies van de Mobile SDK uitgebracht voor de volgende platforms: iOS Mobile Core 5.x en compatibele iOS-extensies, Android Mobile Core 3.x en compatibele Android-extensies, React Native Core 6.x en compatibele React Native-extensies, Flutter Core 4.x en compatibele Flutter-extensies. Deze releases bieden diverse nieuwe functies en verbeteringen, waaronder ondersteuning in de Android SDK voor Jetpack Compose, ondersteuning voor op code gebaseerde ervaringen van Adobe Journey Optimizer en algemene beschikbaarheid van de Adobe Journey Optimizer Messaging-extensie voor Flutter. Voor meer gedetailleerde aanvullende informatie, raadpleegt u de [aanvullende informatie voor Mobile SDK](https://developer.adobe.com/client-sdks/home/release-notes/). |
 | Mobile SDK | Privacy | Vanwege de beleidsupdate van Apple, die op 1 mei 2024 ingaat, moeten ontwikkelaars nieuwe privacyfuncties implementeren om apps bij de App Store in te dienen. Alle Adobe-klanten die de Mobile SDK gebruiken, moeten upgraden naar versie 5.x van de SDK als ze na 1 mei goedkeuring van de App Store willen ontvangen. |
-| Roku SDK | Roku SDK | De eerste primaire versie van de Roku SDK is uitgebracht met ondersteuning voor de Streaming Media voor het Platform Edge Network. |
+| Roku SDK | Roku SDK | De eerste grote versie van de Roku SDK is uitgebracht met ondersteuning voor de Streaming Media voor de Experience Platform Edge Network. |
 | Tags en gebeurtenis doorsturen | Richtlijnen voor in-product | De functies [Tags](../../tags/home.md) en [Gebeurtenis doorsturen](../../tags/ui/event-forwarding/overview.md) van Experience Platform bieden een nieuwe reeks ervaringen waarmee u snel aan de slag kunt en snel waarde kunt creëren. Deze ervaringen omvatten nieuwe schermen voor onboarding, tutorials voor producten en tooltips.  <br>![Gebeurtenis doorsturen met de richtlijnen voor in-product gemarkeerd.](../2024/assets/april/event-forwarding.png "De Schema-editor met de velden Type en Type toewijzingswaarde gemarkeerd."){width="100" zoomable="yes"}<br> |
 | Web SDK | Vereenvoudigde toepassing van de Web SDK voor Audience Manager-klanten | Meerdere Web SDK-updates vereenvoudigen nu de toepassing van Web SDK zonder dat u Experience-datamodel (XDM) hoeft te gebruiken voor Experience Cloud Solutions, zoals Audience Manager, Analytics en Target. Meer informatie over de toepassing van Audience Manager Web SDK vindt u in de volgende handleidingen: <ul><li><a href="https://experienceleague.adobe.com/nl/docs/audience-manager/user-guide/migrate-to-web-sdk/dil-extension-to-web-sdk">Werk uw bibliotheek voor dataverzameling voor Audience Manager bij van de Audience Manager-tagextensie naar de Web SDK-tagextensie</li><li><a href="https://experienceleague.adobe.com/nl/docs/audience-manager/user-guide/migrate-to-web-sdk/appmeasurement-to-web-sdk">Werk uw bibliotheek voor dataverzameling voor Audience Manager bij van de AppMeasurement JavaScript-bibliotheek naar de Web SDK JavaScript-bibliotheek</li></ul> |
 
@@ -130,7 +130,7 @@ Voor meer informatie over Query-services raadpleegt u het [overzicht van Query-s
 
 ## Sandboxes {#sandboxes}
 
-Adobe Experience Platform is ontworpen om digitale ervaringstoepassingen wereldwijd te verrijken. Bedrijven gebruiken vaak meerdere digitale ervaringstoepassingen parallel en moeten de ontwikkeling, het testen en de implementatie van deze toepassingen verzorgen en tegelijkertijd de operationele naleving waarborgen. Om aan deze behoefte te voldoen, biedt Experience Platform sandboxes die één Platform-instantie opsplitsen in afzonderlijke virtuele omgevingen, zodat digitale ervaringstoepassingen kunnen worden ontwikkeld en verder ontwikkeld.
+Adobe Experience Platform is ontworpen om digitale ervaringstoepassingen wereldwijd te verrijken. Bedrijven gebruiken vaak meerdere digitale ervaringstoepassingen parallel en moeten de ontwikkeling, het testen en de implementatie van deze toepassingen verzorgen en tegelijkertijd de operationele naleving waarborgen. Om aan deze behoefte tegemoet te komen, biedt Experience Platform sandboxen die één Experience Platform-instantie in afzonderlijke virtuele omgevingen verdelen om toepassingen voor digitale ervaringen te ontwikkelen en te ontwikkelen.
 
 **Nieuwe of bijgewerkte functies**
 
@@ -144,7 +144,7 @@ Voor meer informatie over sandboxes, lees het [ overzicht van sandboxes](../../s
 
 ## Segmentatieservice {#segmentation}
 
-Met [!DNL Segmentation Service] kunt u gegevens die zijn opgeslagen in [!DNL Experience Platform] en die betrekking hebben op personen (zoals klanten, prospects, gebruikers of organisaties) segmenteren in doelgroepen. U kunt doelgroepen maken via segmentdefinities of andere bronnen op basis van uw [!DNL Real-Time Customer Profile]-gegevens. Deze doelgroepen worden centraal geconfigureerd en onderhouden op [!DNL Platform] en zijn gemakkelijk toegankelijk via elke Adobe-oplossing.
+Met [!DNL Segmentation Service] kunt u gegevens die zijn opgeslagen in [!DNL Experience Platform] en die betrekking hebben op personen (zoals klanten, prospects, gebruikers of organisaties) segmenteren in doelgroepen. U kunt doelgroepen maken via segmentdefinities of andere bronnen op basis van uw [!DNL Real-Time Customer Profile]-gegevens. Deze doelgroepen worden centraal geconfigureerd en onderhouden op [!DNL Experience Platform] en zijn gemakkelijk toegankelijk via elke Adobe-oplossing.
 
 **Bijgewerkte functie**
 

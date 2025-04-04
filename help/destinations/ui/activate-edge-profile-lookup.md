@@ -3,9 +3,9 @@ title: Kenmerken van randprofielen in real-time opzoeken
 description: Leer hoe u Edge-profielkenmerken in real-time opzoekt met de aangepaste Personalization-bestemming en de Edge Network-API
 type: Tutorial
 exl-id: e185d741-af30-4706-bc8f-d880204d9ec7
-source-git-commit: 276fd7c532843c9589e1d51b0bc7a76cb5c3eb9f
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1832'
+source-wordcount: '1835'
 ht-degree: 0%
 
 ---
@@ -25,7 +25,7 @@ Deze pagina beschrijft de stappen die u moet volgen om de gegevens van het randp
 
 ## Terminologie en voorwaarden {#prerequisites}
 
-Wanneer het vormen van het gebruiksgeval in deze pagina wordt beschreven, zult u de volgende componenten van het Platform gebruiken:
+Bij het configureren van het gebruiksscenario dat op deze pagina wordt beschreven, gebruikt u de volgende Experience Platform-componenten:
 
 * [ Datastreams ](../../datastreams/overview.md): Een gegevensstroom ontvangt inkomende gebeurtenisgegevens van het Web SDK en antwoordt met de gegevens van het randprofiel.
 * [ het Beleid van de Fusie ](../../segmentation/ui/segment-builder.md#merge-policies): U zult een [!UICONTROL Active-On-Edge] fusiebeleid creëren om ervoor te zorgen dat de randprofielen de correcte profielgegevens gebruiken.
@@ -54,7 +54,7 @@ Volg de stappen in de ](../../datastreams/configure.md#create-a-datastream) docu
     >
     >Enabling edge segmentation limits the maximum number of lookup requests to 1500 request per second. If you need a higher request throughput, disable edge segmentation for your datastream. See the [guardrails documentation](../guardrails.md#edge-destinations-activation) for detailed information. -->
 
-  ![ beeld UI van het Platform dat het scherm van de gegevensstroomconfiguratie toont.](../assets/ui/activate-edge-profile-lookup/datastream-config.png)
+  {het beeld van 0} Experience Platform UI die het scherm van de gegevensstroomconfiguratie toont.](../assets/ui/activate-edge-profile-lookup/datastream-config.png)![
 
 
 ## Stap 2: Vorm uw publiek voor randevaluatie {#audience-edge-evaluation}
@@ -110,7 +110,7 @@ Nadat u een **[!UICONTROL Custom Personalization With Attributes]** -verbinding 
    U kunt kiezen uit meerdere soorten publiek, afhankelijk van de oorsprong:
 
    * **[!UICONTROL Segmentation Service]**: publiek dat in Experience Platform wordt gegenereerd door de Segmentation Service. Zie de [ segmentatiedocumentatie ](../../segmentation/ui/overview.md) voor meer details.
-   * **[!UICONTROL Custom upload]**: buiten Experience Platform gegenereerde soorten publiek die als CSV-bestanden in Platform worden geüpload. Meer over extern publiek leren, zie de documentatie bij [ het invoeren van een publiek ](../../segmentation/ui/overview.md#import-audience).
+   * **[!UICONTROL Custom upload]**: buiten Experience Platform gegenereerde soorten publiek die als CSV-bestanden naar Experience Platform worden geüpload. Meer over extern publiek leren, zie de documentatie bij [ het invoeren van een publiek ](../../segmentation/ui/overview.md#import-audience).
    * Andere soorten publiek, afkomstig van andere Adobe-oplossingen, zoals [!DNL Audience Manager] .
 
      ![ Uitgezochte publieksstap van het activeringswerkschema met verscheidene benadrukte publiek.](../assets/ui/activate-edge-personalization-destinations/select-audiences.png)

@@ -1,11 +1,11 @@
 ---
 keywords: PebblePost;pebblepost;PebblePost Programmatic Direct Mail;pebblepost programmatic direct mail
 title: PebblePost-extensie
-description: De extensie PebblePost is een e-maildoel in Adobe Experience Platform. Zie de extensiepagina over Adobe Exchange voor meer informatie over de extensiefunctionaliteit.
+description: De extensie PebblePost is een e-maildoel in Adobe Experience Platform. Zie de extensiepagina op Adobe Exchange voor meer informatie over de extensiefunctionaliteit.
 exl-id: 2d0308db-9d75-4cd1-97de-70ce3837369d
-source-git-commit: baa0ea072c80e141974bb595dfff149aa5de6270
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '441'
+source-wordcount: '445'
 ht-degree: 0%
 
 ---
@@ -14,17 +14,17 @@ ht-degree: 0%
 
 ## Overzicht {#overview}
 
-Met [!DNL PebblePost's Programmatic Direct Mail] kunnen digitale marketers online interesse en intentie verbinden met offline, tastbare media die worden omgezet. Marktdeelnemers kunnen het door hen in de Adobe gecreëerde aangepaste gegevenspubliek benutten om zich nu te richten op consumenten met een relevante, langere, in-home media-indruk. De prestaties in real-time analyseren op basis van de activiteit van het responspad en de conversies ter plaatse.
+Met [!DNL PebblePost's Programmatic Direct Mail] kunnen digitale marketers online interesse en intentie verbinden met offline, tastbare media die worden omgezet. Marktdeelnemers kunnen het door hen in Adobe gecreëerde aangepaste gegevenspubliek benutten om zich nu te richten op consumenten met een relevante, langere, in-home media-indruk. De prestaties in real-time analyseren op basis van de activiteit van het responspad en de conversies ter plaatse.
 
 [!DNL PebblePost] is een e-mailextensie in Adobe Experience Platform.
 
-Dit doel is een tagextensie. Voor meer informatie over hoe de markeringsuitbreidingen in Platform werken, zie het [ overzicht van markeringsuitbreidingen ](../launch-extensions/overview.md).
+Dit doel is een tagextensie. Voor meer informatie over hoe de markeringsuitbreidingen in Experience Platform werken, zie het [ overzicht van markeringsuitbreidingen ](../launch-extensions/overview.md).
 
 ![ Extensie PebblePost ](../../assets/catalog/email/pebblepost/catalog.png)
 
 ## Vereisten {#prerequisites}
 
-Deze extensie is beschikbaar in de catalogus [!DNL Destinations] voor alle klanten die Platform hebben aangeschaft.
+Deze extensie is beschikbaar in de catalogus [!DNL Destinations] voor alle klanten die Experience Platform hebben aangeschaft.
 
 Als u deze extensie wilt gebruiken, hebt u toegang tot tags in Adobe Experience Platform nodig. Tags worden aan Adobe Experience Cloud-klanten aangeboden als een inbegrepen, waardetoevoegend element. Neem contact op met de systeembeheerder van uw organisatie om toegang tot tags te krijgen en vraag hen om u de **[!UICONTROL manage_properties]** -machtiging te verlenen zodat u extensies kunt installeren.
 
@@ -32,7 +32,7 @@ Als u deze extensie wilt gebruiken, hebt u toegang tot tags in Adobe Experience 
 
 De extensie [!DNL PebblePost] installeren:
 
-In de [ interface van het Platform ](https://platform.adobe.com/), ga **[!UICONTROL Destinations]** > **[!UICONTROL Catalog]**.
+In de [ interface van Experience Platform ](https://platform.adobe.com/), ga **[!UICONTROL Destinations]** > **[!UICONTROL Catalog]**.
 
 Selecteer de extensie in de catalogus of gebruik de zoekbalk.
 
@@ -56,6 +56,6 @@ U kunt extensies configureren, upgraden en verwijderen in de gebruikersinterface
 
 >[!TIP]
 >
->Als de extensie al op een van uw eigenschappen is geïnstalleerd, wordt de interface van het platform nog steeds **[!UICONTROL Install]** weergegeven voor de extensie. Kik van het installatiewerkschema zoals die in [ wordt beschreven installeer uitbreiding ](#install-extension) om uw uitbreiding te vormen of te schrappen.
+>Als de extensie al op een van uw eigenschappen is geïnstalleerd, wordt de gebruikersinterface van Experience Platform nog steeds **[!UICONTROL Install]** voor de extensie weergegeven. Kik van het installatiewerkschema zoals die in [ wordt beschreven installeer uitbreiding ](#install-extension) om uw uitbreiding te vormen of te schrappen.
 
 Om uw uitbreiding te bevorderen, zie de gids op het [ proces van de uitbreidingsverbetering ](../../../tags/ui/managing-resources/extensions/extension-upgrade.md) in de tagdocumentatie.

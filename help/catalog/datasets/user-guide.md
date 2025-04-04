@@ -4,9 +4,9 @@ solution: Experience Platform
 title: UI-gids voor gegevensbestanden
 description: Leer hoe u algemene handelingen uitvoert wanneer u werkt met gegevenssets in de Adobe Experience Platform-gebruikersinterface.
 exl-id: f0d59d4f-4ebd-42cb-bbc3-84f38c1bf973
-source-git-commit: 5184f714d6bd8fb6e202a5ca6eea2d52a7169ae6
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '3882'
+source-wordcount: '3885'
 ht-degree: 0%
 
 ---
@@ -22,7 +22,7 @@ Deze gebruikershandleiding vereist een goed begrip van de volgende onderdelen va
 * [ Datasets ](overview.md): De opslag en beheersconstructie voor gegevenspersistentie in [!DNL Experience Platform].
 * [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md): Het gestandaardiseerde framework waarmee [!DNL Experience Platform] gegevens voor de klantervaring indeelt.
    * [ Grondbeginselen van schemacompositie ](../../xdm/schema/composition.md): Leer over de basisbouwstenen van schema&#39;s XDM, met inbegrip van zeer belangrijke principes en beste praktijken in schemacompositie.
-   * [ Redacteur van het Schema ](../../xdm/tutorials/create-schema-ui.md): Leer hoe te om uw eigen schema&#39;s te bouwen XDM gebruikend [!DNL Schema Editor] binnen het [!DNL Platform] gebruikersinterface.
+   * [ Redacteur van het Schema ](../../xdm/tutorials/create-schema-ui.md): Leer hoe te om uw eigen schema&#39;s te bouwen XDM gebruikend [!DNL Schema Editor] binnen het [!DNL Experience Platform] gebruikersinterface.
 * [[!DNL Real-Time Customer Profile]](../../profile/home.md): biedt een uniform, real-time consumentenprofiel dat is gebaseerd op geaggregeerde gegevens van meerdere bronnen.
 * [[!DNL Adobe Experience Platform Data Governance]](../../data-governance/home.md): zorg ervoor dat de regels, beperkingen en beleidsregels betreffende het gebruik van klantgegevens worden nageleefd.
 
@@ -57,7 +57,7 @@ Deze gebruikershandleiding vereist een goed begrip van de volgende onderdelen va
 
 Selecteer in de gebruikersinterface van [!DNL Experience Platform] de optie **[!UICONTROL Datasets]** in de linkernavigatie om het dashboard van **[!UICONTROL Datasets]** te openen. Het dashboard maakt een lijst van alle beschikbare datasets voor uw organisatie. De details worden getoond voor elke vermelde dataset, met inbegrip van zijn naam, het schema de dataset zich aan, en het statuut van de meest recente opnamelooppas aansluit.
 
-![ Platform UI met het punt van Datasets dat in de linkernavigatiebar wordt benadrukt.](../images/datasets/user-guide/browse-datasets.png)
+![ UI van Experience Platform met het punt van Datasets dat in de linkernavigatiebar wordt benadrukt.](../images/datasets/user-guide/browse-datasets.png)
 
 Selecteer de naam van een gegevensset op het tabblad [!UICONTROL Browse] om het **[!UICONTROL Dataset activity]** -scherm te openen en details weer te geven van de gegevensset die u hebt geselecteerd. Het activiteitenlusje omvat een grafiek die het tarief visualiseert van berichten die worden verbruikt evenals een lijst van succesvolle en ontbroken partijen.
 
@@ -168,7 +168,7 @@ Het dialoogvenster [!UICONTROL Manage tags] kan ook bestaande tags uit een gegev
 
 Zodra een markering aan een dataset is toegevoegd, kunnen de datasets op de overeenkomstige markering worden gefiltreerd. Zie de sectie op hoe te [ filterdatasets door markeringen ](#enable-profile) voor meer informatie.
 
-Voor meer informatie over hoe te om bedrijfsvoorwerpen voor gemakkelijkere ontdekking en categorisering te classificeren, zie de gids op [ het leiden meta-gegevenstaxonomieën ](../../administrative-tags/ui/managing-tags.md). In deze handleiding wordt uitgelegd hoe gebruikers met de juiste machtigingen vooraf gedefinieerde tags kunnen maken, deze aan categorieën kunnen toewijzen en alle gerelateerde CRUD-bewerkingen in de gebruikersinterface van het platform kunnen beheren.
+Voor meer informatie over hoe te om bedrijfsvoorwerpen voor gemakkelijkere ontdekking en categorisering te classificeren, zie de gids op [ het leiden meta-gegevenstaxonomieën ](../../administrative-tags/ui/managing-tags.md). In deze handleiding wordt uitgelegd hoe gebruikers met de juiste machtigingen vooraf gedefinieerde tags kunnen maken, deze aan categorieën kunnen toewijzen en alle gerelateerde CRUD-bewerkingen in de gebruikersinterface van Experience Platform kunnen beheren.
 
 ### (Beta) Beleid voor gegevensbewaring instellen {#data-retention-policy}
 
@@ -176,7 +176,7 @@ Voor meer informatie over hoe te om bedrijfsvoorwerpen voor gemakkelijkere ontde
 > 
 >De montages van het behoud van gegevens zijn momenteel in bèta en beschikbaar slechts in a **beperkte versie** voor uitgezochte organisaties. De gebruikersinterface weerspiegelt mogelijk niet de hieronder beschreven functie.
 
-U kunt de instellingen voor het verlopen en behouden van de gegevensset beheren met het inlineactiemenu op het tabblad [!UICONTROL Browse] van de werkruimte van [!UICONTROL Datasets] . U kunt deze eigenschap gebruiken om te vormen hoe lang de gegevens in het gegevensmeer en de opslag van het Profiel worden behouden. De vervaldatum is gebaseerd op wanneer de gegevens in Platform en uw gevormde bewaartermijn werden opgenomen.
+U kunt de instellingen voor het verlopen en behouden van de gegevensset beheren met het inlineactiemenu op het tabblad [!UICONTROL Browse] van de werkruimte van [!UICONTROL Datasets] . U kunt deze eigenschap gebruiken om te vormen hoe lang de gegevens in het gegevensmeer en de opslag van het Profiel worden behouden. De vervaldatum is gebaseerd op wanneer de gegevens in Experience Platform werden opgenomen en uw gevormde bewaarperiode.
 
 >[!TIP]
 >
@@ -419,7 +419,7 @@ Als u de batch wilt verwijderen, selecteert u **[!UICONTROL Delete batch]** rech
 
 ## Volgende stappen
 
-Deze gebruikershandleiding bevat instructies voor het uitvoeren van veelvoorkomende handelingen bij het werken met gegevenssets in de gebruikersinterface van [!DNL Experience Platform] . Raadpleeg de volgende zelfstudies voor informatie over het uitvoeren van veelvoorkomende [!DNL Platform] -workflows met datasets:
+Deze gebruikershandleiding bevat instructies voor het uitvoeren van veelvoorkomende handelingen bij het werken met gegevenssets in de gebruikersinterface van [!DNL Experience Platform] . Raadpleeg de volgende zelfstudies voor informatie over het uitvoeren van veelvoorkomende [!DNL Experience Platform] -workflows met datasets:
 
 * [Een gegevensset maken met behulp van API&#39;s](create.md)
 * [De gegevens van de dataset van de vraag gebruikend de Toegang API van Gegevens](../../data-access/home.md)

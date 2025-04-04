@@ -2,9 +2,9 @@
 title: Overzicht van geavanceerd gegevenslevenscyclusbeheer
 description: Met Advanced Data Lifecycle Management kunt u de levenscyclus van uw gegevens beheren door verouderde of onjuiste gegevens bij te werken of te wissen.
 exl-id: 104a2bb8-3242-4a20-b98d-ad6df8071a16
-source-git-commit: 6ef09957d1eb2c07e5607105c782c36f20344bfa
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '817'
+source-wordcount: '821'
 ht-degree: 0%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 Adobe Experience Platform biedt een robuuste set hulpmiddelen voor het beheer van grote, gecompliceerde gegevensbewerkingen om de ervaringen van de consument te kunnen indelen. Aangezien het gegeven in tijd in het systeem wordt opgenomen, wordt het steeds belangrijker om uw gegevensopslag te beheren zodat de gegevens zoals verwacht worden gebruikt, wordt bijgewerkt wanneer de onjuiste gegevens moeten verbeteren, en wordt geschrapt wanneer het organisatorische beleid het noodzakelijk acht.
 
-<!-- Platform's data lifecycle capabilities allow you to manage your stored data through the following:
+<!-- Experience Platform's data lifecycle capabilities allow you to manage your stored data through the following:
 
 * Scheduling automated dataset expirations
 * Deleting individual records from one or all datasets
@@ -26,11 +26,11 @@ Deze activiteiten kunnen worden uitgevoerd gebruikend de [[!UICONTROL Data Lifec
 
 >[!NOTE]
 >
->Het geavanceerde Beheer van de Levenscyclus van Gegevens steunt datasetschrappingen door het [ eindpunt van de gegevenssetvervalsing ](./api/dataset-expiration.md) en identiteitskaart schrappingen (rij-vlakke gegevens) gebruikend primaire identiteiten via het [ werkordeeindpunt ](./api/workorder.md). U kunt [ datasetvervalingen ](./ui/dataset-expiration.md) en [ verslagschrappingen ](./ui/record-delete.md) door Platform UI ook beheren. Raadpleeg de gekoppelde documentatie voor meer informatie. Merk op dat de Levenscyclus van Gegevens geen partijschrapping steunt.
+>Het geavanceerde Beheer van de Levenscyclus van Gegevens steunt datasetschrappingen door het [ eindpunt van de gegevenssetvervalsing ](./api/dataset-expiration.md) en identiteitskaart schrappingen (rij-vlakke gegevens) gebruikend primaire identiteiten via het [ werkordeeindpunt ](./api/workorder.md). U kunt [ datasetvervalingen ](./ui/dataset-expiration.md) en [ verslagschrappingen ](./ui/record-delete.md) door Experience Platform UI ook beheren. Raadpleeg de gekoppelde documentatie voor meer informatie. Merk op dat de Levenscyclus van Gegevens geen partijschrapping steunt.
 
 ## [!UICONTROL Data Lifecycle] UI-werkruimte {#ui}
 
-Met de [!UICONTROL Data Lifecycle] -werkruimte in de interface van het platform kunt u de levenscyclusbewerkingen van gegevens configureren en plannen, zodat u zeker weet dat uw records op de verwachte manier worden onderhouden.
+Met de werkruimte van [!UICONTROL Data Lifecycle] in de gebruikersinterface van Experience Platform kunt u bewerkingen tijdens de gegevenslevenscyclus configureren en plannen, zodat u zeker weet dat uw records op de verwachte manier worden onderhouden.
 
 Voor gedetailleerde stappen bij het beheren van de taken van de gegevenslevenscyclus in UI, zie de [ gids UI van de gegevenslevenscyclus ](./ui/overview.md).
 
@@ -58,7 +58,7 @@ Het volgende vindt plaats wanneer het verzoek van de a [ datasetvervaldatum ](./
 
 >[!IMPORTANT]
 >
->Verwijderingen van gegevenssets in Amazon Web Services (AWS) moeten zo&#39;n drie uur duren voordat de wijzigingen volledig worden toegepast. Dit omvat tot twee uren voor de dataset die voor schrapping moet worden gemarkeerd, die door een extra uur wordt gevolgd alvorens het volledig van het systeem wordt gelaten vallen. In tegenstelling, leiden de schrappingsverzoeken voor de instanties van het Platform die de instanties van de Gegevens van Azure gebruiken in directe veranderingen over bedrijfsfuncties.
+>Verwijderingen van gegevenssets in Amazon Web Services (AWS) moeten zo&#39;n drie uur duren voordat de wijzigingen volledig worden toegepast. Dit omvat tot twee uren voor de dataset die voor schrapping moet worden gemarkeerd, die door een extra uur wordt gevolgd alvorens het volledig van het systeem wordt gelaten vallen. In tegenstelling, leiden de schrappingsverzoeken voor de instanties van Experience Platform die het Azure meer van Gegevens gebruiken tot directe veranderingen over bedrijfsfuncties.
 >
 >Voor AWS-gebruikers kan deze vertraging invloed hebben op batchsegmentatie, streamingsegmentatie, voorvertoningen, schattingen, export en gegevenstoegang. Deze latentie is alleen van invloed op klanten die AWS gebruiken, aangezien Azure Data Lake-gebruikers directe updates ervaren. Voor AWS-gebruikers kan het maximaal drie uur duren voordat verzoeken tot verwijdering volledig zijn doorgevoerd in alle betrokken systemen. Pas uw verwachtingen dienovereenkomstig aan.
 
@@ -80,4 +80,4 @@ The following takes place when a [record delete request](./ui/record-delete.md) 
 
 ## Volgende stappen
 
-In dit document wordt een overzicht gegeven van de mogelijkheden van het platform voor de levenscyclus van gegevens. Om begonnen te worden het maken van verzoeken van de gegevenshygiëne in UI, verwijs naar de [ gids UI ](./ui/overview.md). Leren hoe te om de banen van de Levenscyclus van Gegevens te creëren programmatically, naar de [ gids van de Hygiëne API van Gegevens ](./api/overview.md) verwijzen
+Dit document biedt een overzicht van de mogelijkheden van de Experience Platform-levenscyclus van gegevens. Om begonnen te worden het maken van verzoeken van de gegevenshygiëne in UI, verwijs naar de [ gids UI ](./ui/overview.md). Leren hoe te om de banen van de Levenscyclus van Gegevens te creëren programmatically, naar de [ gids van de Hygiëne API van Gegevens ](./api/overview.md) verwijzen

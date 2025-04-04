@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Automatische beleidscontrole
 description: In dit document wordt beschreven hoe beleidsregels voor gegevensgebruik automatisch worden toegepast wanneer gebruikers naar bestemmingen in Experience Platform worden geactiveerd.
 exl-id: c6695285-77df-48c3-9b4c-ccd226bc3f16
-source-git-commit: f9072a0fc287c8061a3d28972096577317a0a2c9
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '2094'
+source-wordcount: '2104'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 Labels en beleidsregels voor gegevensgebruik zijn beschikbaar voor alle Adobe Experience Platform-gebruikers. Bepaal het beleid van het gegevensgebruik en pas de etiketten van het gegevensgebruik toe om ervoor te zorgen dat om het even welke gevoelige, identificeerbare, of contractuele gegevens correct worden behandeld. Deze maatregelen helpen de regels voor gegevensbeheer van uw organisatie af te dwingen voor de manier waarop gegevens kunnen worden benaderd, verwerkt, opgeslagen en gedeeld.
 
-Om uw organisatie tegen potentiële risico&#39;s en verplichtingen te helpen beschermen, handhaaft het Platform automatisch gebruiksbeleid als om het even welke schendingen voorkomen wanneer het activeren van publiek aan bestemmingen.
+Om uw organisatie tegen potentiële risico&#39;s en verplichtingen te helpen beschermen, handhaaft Experience Platform automatisch gebruiksbeleid als om het even welke schendingen voorkomen wanneer het activeren van publiek aan bestemmingen.
 
 >[!IMPORTANT]
 >
@@ -25,12 +25,12 @@ Dit document richt zich op de handhaving van het beleid inzake gegevensbeheer en
 
 ## Vereisten
 
-Deze gids vereist een goed begrip van de diensten van het Platform die bij automatische handhaving betrokken zijn. Raadpleeg de volgende documentatie voor meer informatie voordat u doorgaat met deze handleiding:
+Deze handleiding vereist een goed begrip van de Experience Platform-diensten die betrokken zijn bij automatische handhaving. Raadpleeg de volgende documentatie voor meer informatie voordat u doorgaat met deze handleiding:
 
-* [ het Beheer van Gegevens van Adobe Experience Platform ](../home.md): Het kader waardoor het Platform naleving van het gegevensgebruik door het gebruik van etiketten en beleid afdwingt.
+* [ het Beheer van Gegevens van Adobe Experience Platform ](../home.md): Het kader waardoor Experience Platform naleving van het gegevensgebruik door het gebruik van etiketten en beleid afdwingt.
 * [ Real-Time Profiel van de Klant ](../../profile/home.md): Verstrekt een verenigd, real-time consumentenprofiel dat op samengevoegde gegevens van veelvoudige bronnen wordt gebaseerd.
-* [ de Dienst van de Segmentatie van Adobe Experience Platform ](../../segmentation/home.md): De segmenteringsmotor binnen [!DNL Platform] wordt gebruikt om publiek van uw klantenprofielen tot stand te brengen die op klantengedrag en attributen worden gebaseerd.
-* [ Doelen ](../../destinations/home.md): De bestemmingen zijn pre-gebouwde integratie met algemeen gebruikte toepassingen die voor de naadloze activering van gegevens van Platform voor dwars-kanaal marketing campagnes, e-mailcampagnes, gerichte reclame, en meer toestaan.
+* [ de Dienst van de Segmentatie van Adobe Experience Platform ](../../segmentation/home.md): De segmenteringsmotor binnen [!DNL Experience Platform] wordt gebruikt om publiek van uw klantenprofielen tot stand te brengen die op klantengedrag en attributen worden gebaseerd.
+* [ Doelen ](../../destinations/home.md): De bestemmingen zijn pre-gebouwde integratie met algemeen gebruikte toepassingen die voor de naadloze activering van gegevens van Experience Platform voor kanaalmarketing campagnes, e-mailcampagnes, gerichte reclame, en meer toestaan.
 
 ## Handelingenstroom {#flow}
 
@@ -53,13 +53,13 @@ Wanneer een publiek voor het eerst wordt geactiveerd, controleert [!DNL Policy S
 
 ## Gegevensverbinding {#lineage}
 
-De lijn van gegevens speelt een zeer belangrijke rol in hoe het beleid in Platform wordt afgedwongen. In algemene termen verwijst gegevenskoppeling naar de oorsprong van een set gegevens en naar wat er met de gegevens gebeurt (of waar deze naartoe worden verplaatst).
+Gegevenskoppeling speelt een sleutelrol in de manier waarop het beleid in Experience Platform wordt afgedwongen. In algemene termen verwijst gegevenskoppeling naar de oorsprong van een set gegevens en naar wat er met de gegevens gebeurt (of waar deze naartoe worden verplaatst).
 
-In de context van het Beleid van Gegevens, laat lijn gegevensgebruiksetiketten toe om van schema&#39;s aan stroomafwaartse diensten te verspreiden die hun gegevens, zoals het Profiel van de Klant in real time en Doelen verbruiken. Hierdoor kan het beleid op verschillende belangrijke punten in de gegevensreis door Platform worden geëvalueerd en afgedwongen, en wordt de gegevensconsument een context geboden waarin hij kan zien waarom een beleidsovertreding heeft plaatsgevonden.
+In de context van het Beleid van Gegevens, laat lijn gegevensgebruiksetiketten toe om van schema&#39;s aan stroomafwaartse diensten te verspreiden die hun gegevens, zoals het Profiel van de Klant in real time en Doelen verbruiken. Hierdoor kan het beleid op verschillende belangrijke punten in de gegevensreis door Experience Platform worden geëvalueerd en gehandhaafd, en wordt de gegevensconsument een context geboden waarin hij kan zien waarom een beleidsovertreding heeft plaatsgevonden.
 
 In Experience Platform gaat het bij de handhaving van het beleid om het volgende traject:
 
-1. Het gegeven wordt opgenomen in Platform en opgeslagen in **datasets**.
+1. Het gegeven wordt opgenomen in Experience Platform en opgeslagen in **datasets**.
 1. De profielen van de klant worden geïdentificeerd en worden geconstrueerd van die datasets door gegevensfragmenten volgens het **fusiebeleid** samen te voegen.
 1. De groepen profielen zijn verdeeld in **publiek** dat op gemeenschappelijke attributen wordt gebaseerd.
 1. Het publiek wordt geactiveerd aan stroomafwaartse **bestemmingen**.
@@ -69,7 +69,7 @@ Elke fase in de bovenstaande tijdlijn vertegenwoordigt een entiteit die kan bijd
 | Gegevenslijnfase | Rol bij de handhaving van beleid |
 | --- | --- |
 | Gegevensset | Datasets bevatten gegevensgebruikslabels (toegepast op het niveau van het schemagebied of het volledige datasetniveau) die bepalen welke gebruiksgevallen de volledige dataset of specifieke gebieden kunnen worden gebruikt voor. Beleidsovertredingen treden op als een dataset of veld met bepaalde labels wordt gebruikt voor een doel dat door een beleid wordt beperkt.<br><br> om het even welke toestemmingsattributen die van uw klanten worden verzameld worden ook opgeslagen in datasets. Als u toegang tot toestemmingsbeleid hebt, zullen om het even welke profielen die niet aan de vereisten van de toestemmingsattributen van uw beleid voldoen van publiek worden uitgesloten die aan een bestemming worden geactiveerd. |
-| Samenvoegbeleid | Het beleid van de fusie is de regels die het Platform gebruikt om te bepalen hoe de gegevens voorrang zullen worden gegeven wanneer het samenvoegen van fragmenten van veelvoudige datasets. De schendingen van het beleid zullen voorkomen als uw samenvoegbeleid wordt gevormd zodat de datasets met beperkte etiketten aan een bestemming worden geactiveerd. Zie het [ overzicht van het samenvoegingsbeleid ](../../profile/merge-policies/overview.md) voor meer informatie. |
+| Samenvoegbeleid | Het beleid van de fusie is de regels die Experience Platform gebruikt om te bepalen hoe de gegevens voorrang zullen worden gegeven wanneer het samenvoegen van fragmenten van veelvoudige datasets. De schendingen van het beleid zullen voorkomen als uw samenvoegbeleid wordt gevormd zodat de datasets met beperkte etiketten aan een bestemming worden geactiveerd. Zie het [ overzicht van het samenvoegingsbeleid ](../../profile/merge-policies/overview.md) voor meer informatie. |
 | Doelgroep | De regels van de segmentatie bepalen welke attributen van klantenprofielen zouden moeten worden omvat. Afhankelijk van de velden die een segmentdefinitie bevat, neemt het publiek alle toegepaste gebruikslabels voor die velden over. Beleidsovertredingen treden op als u een publiek probeert te activeren waarvan de geërfte labels worden beperkt door het toepasselijke beleid van de doelbestemming, op basis van de Gebruiksscenario&#39;s voor marketingdoeleinden. |
 | Bestemming | Bij het instellen van een bestemming kan een marketingactie (ook wel een marketingcase genoemd) worden gedefinieerd. Dit gebruiksgeval correleert met een marketingactie zoals gedefinieerd in een beleid. Met andere woorden, de marketingactie die u voor een bestemming definieert, bepaalt welk beleid voor gegevensgebruik en toestemmingsbeleid van toepassing zijn op die bestemming.<br><br> de schendingen van het het gebruiksbeleid van Gegevens komen voor als u probeert om een publiek te activeren de waarvan gebruiksetiketten voor de marketing van de doelbestemming actie beperkt zijn.<br><br> (Beta) Wanneer een publiek wordt geactiveerd, worden profielen die niet de vereiste toestemmingskenmerken voor de marketingactie bevatten (zoals gedefinieerd in uw toestemmingsbeleid), uitgesloten van het geactiveerde publiek. |
 
@@ -83,7 +83,7 @@ Wanneer beleidsschendingen voorkomen, verstrekken de resulterende berichten die 
 
 ## Beleidshandhavingsberichten {#enforcement}
 
-In de volgende secties worden de verschillende beleidshandhavingsberichten beschreven die in de interface van het Platform worden weergegeven:
+In de volgende secties worden de verschillende beleidshandhavingsberichten beschreven die in de gebruikersinterface van Experience Platform worden weergegeven:
 
 * [Beleidsschending gegevensgebruik](#data-usage-violation)
 * [Goedkeuring van het beleid](#consent-policy-evaluation)
@@ -146,7 +146,7 @@ Zodra u de **[!UICONTROL Review]** stap bereikt wanneer [ het activeren van een 
 
 Er wordt een dialoogvenster voor beleidscontrole weergegeven waarin u een voorbeeld kunt zien van de invloed die het beleid voor uw toestemming heeft op het publiek met instemming van het publiek dat moet worden geactiveerd.
 
-![ de dialoog van de de beleidscontrole van de toestemming in Platform UI ](../images/enforcement/consent-policy-check.png)
+![ de dialoog van de de beleidscontrole van de toestemming in Experience Platform UI ](../images/enforcement/consent-policy-check.png)
 
 Het dialoogvenster toont het publiek met toestemming voor één publiek per keer. Om de beleidsevaluatie voor een verschillend publiek te bekijken, gebruik dropdown menu boven het diagram om van de lijst te selecteren.
 

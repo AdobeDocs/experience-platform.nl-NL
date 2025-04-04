@@ -1,15 +1,15 @@
 ---
-title: Een expertisecentrum inschakelen met behulp van sandboxgereedschappen
+title: Een expertisecentrum inschakelen met behulp van sandbox-tools
 description: Schakel een expertisecentrum in met behulp van sandboxgereedschappen door een 'gouden sandbox'-pakket te maken waarmee u de aanbevolen procedures voor meerdere sandboxen kunt standaardiseren.
 exl-id: 6f242ad5-bb02-4a6d-b255-d196dd5fe4b8
-source-git-commit: d4df5606228347b5fb69fdaa24c637c329099895
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '880'
-ht-degree: 0%
+source-wordcount: '881'
+ht-degree: 2%
 
 ---
 
-# Een expertisecentrum inschakelen met behulp van sandboxgereedschappen
+# Een expertisecentrum inschakelen met behulp van sandbox-tools
 
 Schakel een expertisecentrum in met behulp van sandboxgereedschappen door een &#39;gouden sandbox&#39;-pakket te maken waarmee u de aanbevolen procedures voor meerdere sandboxen kunt standaardiseren.
 
@@ -37,7 +37,7 @@ Wanneer u van plan bent om uw eigen centrum van excellentie binnen uw organisati
 - Maak een sandbox met alle relevante en gevalideerde configuraties die als de gouden sandbox moeten worden ingesteld.
 - Verkrijg indien nodig de inbreng van belanghebbenden en ga akkoord met uw basislijnstandaarden.
 
-### UI-functionaliteit, platformcomponenten en Experiencen Cloud die u wilt gebruiken {#ui-functionality-and-elements}
+### UI-functionaliteit, Experience Platform-componenten en Experience Cloud-producten die u wilt gebruiken {#ui-functionality-and-elements}
 
 Als u dit geval wilt gebruiken, moet u meerdere gebieden van Adobe Experience Platform gebruiken. Verzeker u de noodzakelijke [ op attributen-gebaseerde toegangsbeheertoestemmingen ](../../access-control/abac/overview.md) voor al deze gebieden hebt, of uw systeembeheerder vragen om u de noodzakelijke toestemmingen te verlenen.
 
@@ -81,7 +81,7 @@ Met gereedschappen voor sandboxen kunt u pakketten delen die u in verschillende 
 
 ### Invoer en uitvoer controleren aan de hand van auditlogs
 
-Wanneer u het pakket importeert of exporteert, kunt u de status van de taken controleren met het dashboard **[!UICONTROL Jobs]** in het Experience Platform. Om meer over controletaken te leren, lees de gids over [ controlerende de invoerdetails ](../../sandboxes/ui/sandbox-tooling.md#monitor-import-details).
+Wanneer u het pakket importeert of exporteert, kunt u de status van de taken controleren met het dashboard van **[!UICONTROL Jobs]** in Experience Platform. Om meer over controletaken te leren, lees de gids over [ controlerende de invoerdetails ](../../sandboxes/ui/sandbox-tooling.md#monitor-import-details).
 
 ### De gouden sandbox regelmatig bijwerken
 
@@ -89,7 +89,7 @@ Nu uw gouden sandboxpakket klaar is, hebt u een gestandaardiseerd expertisecentr
 
 >[!NOTE]
 >
-> De bovenstaande stappen volgen het proces in de gebruikersinterface van het Experience Platform. Het is mogelijk om dezelfde stappen te volgen gebruikend API door diverse eindpunten. Verwijs naar de `sandboxes` [ eindpuntgids ](https://experienceleague.adobe.com/en/docs/experience-platform/sandbox/api/sandboxes#create) en de `packages` [ eindpuntgids ](https://experienceleague.adobe.com/en/docs/experience-platform/sandbox/sandbox-tooling-api/packages) voor informatie bij het maken van elk verzoek door API.
+> De bovenstaande stappen volgen het proces in de gebruikersinterface van Experience Platform. Het is mogelijk om dezelfde stappen te volgen gebruikend API door diverse eindpunten. Verwijs naar de `sandboxes` [ eindpuntgids ](https://experienceleague.adobe.com/en/docs/experience-platform/sandbox/api/sandboxes#create) en de `packages` [ eindpuntgids ](https://experienceleague.adobe.com/en/docs/experience-platform/sandbox/sandbox-tooling-api/packages) voor informatie bij het maken van elk verzoek door API.
 
 ## Andere gebruiksgevallen die worden bereikt via ondersteuning van partnergegevens {#other-use-cases}
 

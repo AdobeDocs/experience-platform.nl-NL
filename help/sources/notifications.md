@@ -1,10 +1,10 @@
 ---
 keywords: Experience Platform;home;populaire onderwerpen; meldingen
-description: Door u te abonneren op Adobe I/O Events, kunt u webhooks gebruiken om meldingen te ontvangen over de status van uw bronverbindingen tijdens de uitvoering. Deze berichten bevatten informatie over het succes van uw stroom of fouten die tot de mislukking van een looppas hebben bijgedragen.
+description: Als u zich abonneert op Adobe I/O Events, kunt u webhaks gebruiken om meldingen te ontvangen over de status die door de stroom wordt toegepast op uw bronverbindingen. Deze berichten bevatten informatie over het succes van uw stroom of fouten die tot de mislukking van een looppas hebben bijgedragen.
 solution: Experience Platform
 title: Meldingen voor Flow Run
 exl-id: 0f1cde97-3030-4b8e-be08-21f64e78b794
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '756'
 ht-degree: 0%
@@ -13,11 +13,11 @@ ht-degree: 0%
 
 # Meldingen voor stroomuitvoering
 
-Adobe Experience Platform staat toe dat gegevens uit externe bronnen worden opgenomen en biedt u de mogelijkheid om inkomende gegevens te structureren, labelen en verbeteren met [!DNL Platform] -services. U kunt gegevens uit diverse bronnen invoeren, zoals toepassingen voor Adobe, opslag in de cloud, databases en vele andere.
+Adobe Experience Platform staat toe dat gegevens uit externe bronnen worden opgenomen en biedt u de mogelijkheid om inkomende gegevens te structureren, labelen en verbeteren met [!DNL Experience Platform] -services. U kunt gegevens invoeren uit verschillende bronnen, zoals Adobe-toepassingen, opslag in de cloud, databases en vele andere.
 
-[[!DNL Flow Service]  API ](https://www.adobe.io/experience-platform-apis/references/flow-service/) wordt gebruikt om klantengegevens van diverse verschillende bronnen binnen [!DNL Platform] te verzamelen en te centraliseren. De service biedt een gebruikersinterface en RESTful API waaruit alle ondersteunde bronnen kunnen worden aangesloten.
+[[!DNL Flow Service]  API ](https://www.adobe.io/experience-platform-apis/references/flow-service/) wordt gebruikt om klantengegevens van diverse verschillende bronnen binnen [!DNL Experience Platform] te verzamelen en te centraliseren. De service biedt een gebruikersinterface en RESTful API waaruit alle ondersteunde bronnen kunnen worden aangesloten.
 
-Met Adobe I/O Events, kunt u op gebeurtenissen intekenen en Web gebruiken om berichten betreffende de status van uw stroomlooppas te ontvangen. Deze berichten bevatten informatie over het succes van uw stroom of fouten die tot de mislukking van een looppas hebben bijgedragen.
+Met Adobe I/O Events kunt u zich abonneren op gebeurtenissen en websites gebruiken om meldingen te ontvangen over de status van uw flowuitvoering. Deze berichten bevatten informatie over het succes van uw stroom of fouten die tot de mislukking van een looppas hebben bijgedragen.
 
 In dit document worden stappen beschreven voor het abonneren op gebeurtenissen, het registreren van websites en het ontvangen van meldingen met informatie over de status van uw flowuitvoering.
 
@@ -323,9 +323,9 @@ De volgende secties verstrekken extra informatie voor het werken met de berichte
 
 ### Foutberichten begrijpen {#errors}
 
-Er kunnen inslikingsfouten optreden wanneer gegevens van de bron worden gekopieerd of wanneer de gekopieerde gegevens naar [!DNL Platform] worden verwerkt. Zie de onderstaande tabel voor meer informatie over specifieke fouten.
+Er kunnen inslikingsfouten optreden wanneer gegevens van de bron worden gekopieerd of wanneer de gekopieerde gegevens naar [!DNL Experience Platform] worden verwerkt. Zie de onderstaande tabel voor meer informatie over specifieke fouten.
 
 | Fout | Beschrijving |
 | ---------- | ----------- |
 | `CONNECTOR-1001-500` | Er is een fout opgetreden tijdens het kopiëren van gegevens uit een bron. |
-| `CONNECTOR-2001-500` | Er is een fout opgetreden tijdens het verwerken van gekopieerde gegevens naar [!DNL Platform] . Deze fout kan betrekking hebben op parseren, valideren of transformeren. |
+| `CONNECTOR-2001-500` | Er is een fout opgetreden tijdens het verwerken van gekopieerde gegevens naar [!DNL Experience Platform] . Deze fout kan betrekking hebben op parseren, valideren of transformeren. |

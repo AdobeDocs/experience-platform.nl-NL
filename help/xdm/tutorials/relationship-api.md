@@ -1,10 +1,10 @@
 ---
-keywords: Experience Platform;home;populaire onderwerpen;api;API;XDM;XDM-systeem;ervaringsgegevensmodel;Experience Data Model;Experience Data Model;Data Model;Data Model;Schema Register;Schema;Schema;Schema;Schema's;Relationship;RelationshipDescriptor;RelationshipDescriptor;ReferentieIdentiteit;ReferentieIdentiteit;
+keywords: Experience Platform;home;populaire onderwerpen;api;API;XDM;XDM-systeem;ervaringsgegevensmodel;Experience gegevensmodel;Experience Data Model;Data Model;Schema Register;Schema;Schema;schema's;Schema's;Relationship;Relationship;Relationship descriptor;Relationship descriptor;reference identity;Reference identity;
 title: Definieer een relatie tussen twee schema's met behulp van de API voor het schemaregister
 description: Dit document verstrekt een zelfstudie voor het bepalen van een één-op-één verhouding tussen twee schema's die door uw organisatie worden bepaald gebruikend de Registratie API van het Schema.
 type: Tutorial
 exl-id: ef9910b5-2777-4d8b-a6fe-aee51d809ad5
-source-git-commit: 7021725e011a1e1d95195c6c7318ecb5afe05ac6
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '1379'
 ht-degree: 0%
@@ -30,7 +30,7 @@ Deze zelfstudie vereist een goed begrip van [!DNL Experience Data Model] (XDM) e
 * [ XDM Systeem in Experience Platform ](../home.md): Een overzicht van XDM en zijn implementatie in [!DNL Experience Platform].
    * [ Grondbeginselen van schemacompositie ](../schema/composition.md): Een inleiding van de bouwstenen van schema&#39;s XDM.
 * [[!DNL Real-Time Customer Profile]](../../profile/home.md): biedt een uniform, real-time consumentenprofiel dat is gebaseerd op geaggregeerde gegevens van meerdere bronnen.
-* [ Sandboxen ](../../sandboxes/home.md): [!DNL Experience Platform] verstrekt virtuele zandbakken die één enkele [!DNL Platform] instantie in afzonderlijke virtuele milieu&#39;s verdelen helpen digitale ervaringstoepassingen ontwikkelen en ontwikkelen.
+* [ Sandboxen ](../../sandboxes/home.md): [!DNL Experience Platform] verstrekt virtuele zandbakken die één enkele [!DNL Experience Platform] instantie in afzonderlijke virtuele milieu&#39;s verdelen helpen digitale ervaringstoepassingen ontwikkelen en ontwikkelen.
 
 Alvorens dit leerprogramma te beginnen, te herzien gelieve de [ ontwikkelaarsgids ](../api/getting-started.md) voor belangrijke informatie die u moet kennen om vraag aan [!DNL Schema Registry] API met succes te maken. Dit omvat uw `{TENANT_ID}` , het concept &quot;containers&quot; en de vereiste kopteksten voor het indienen van aanvragen (met speciale aandacht voor de header [!DNL Accept] en de mogelijke waarden ervan).
 
@@ -44,7 +44,7 @@ De verhoudingen van het schema worden vertegenwoordigd door a **bronschema** heb
 >
 >Om een relatie tot stand te brengen, moeten beide schema&#39;s primaire identiteiten hebben bepaald en voor [!DNL Real-Time Customer Profile] worden toegelaten. Zie de sectie op [ toelatend een schema voor gebruik in Profiel ](./create-schema-api.md#profile) in het leerprogramma van de schemaverwezenlijking als u begeleiding op hoe te om uw schema&#39;s dienovereenkomstig te vormen vereist.
 
-Als u een relatie tussen twee schema&#39;s wilt definiëren, moet u eerst de `$id` -waarden voor beide schema&#39;s ophalen. Als u de weergavenamen (`title`) van de schema&#39;s kent, kunt u hun `$id` -waarden vinden door een aanvraag voor een GET in te dienen bij het `/tenant/schemas` -eindpunt in de [!DNL Schema Registry] API.
+Als u een relatie tussen twee schema&#39;s wilt definiëren, moet u eerst de `$id` -waarden voor beide schema&#39;s ophalen. Als u de weergavenamen (`title`) van de schema&#39;s kent, kunt u hun `$id` -waarden vinden door een GET-aanvraag in te dienen bij het `/tenant/schemas` -eindpunt in de [!DNL Schema Registry] API.
 
 **API formaat**
 
@@ -126,7 +126,7 @@ In deze zelfstudie, bevat het verwijzingsschema &quot;[!DNL Hotels]&quot;een `ho
 
 ### Een nieuwe veldgroep maken
 
-Als u een nieuw veld aan een schema wilt toevoegen, moet u dit eerst definiëren in een veldgroep. U kunt een nieuwe veldgroep maken door een aanvraag voor een POST in te dienen bij het eindpunt van `/tenant/fieldgroups` .
+Als u een nieuw veld aan een schema wilt toevoegen, moet u dit eerst definiëren in een veldgroep. U kunt een nieuwe veldgroep maken door een POST-aanvraag in te dienen bij het eindpunt van `/tenant/fieldgroups` .
 
 **API formaat**
 
@@ -277,7 +277,7 @@ curl -X PATCH \
 
 | Eigenschap | Beschrijving |
 | --- | --- |
-| `op` | De uit te voeren PATCH-bewerking. In deze aanvraag wordt de bewerking `add` gebruikt. |
+| `op` | De PATCH-bewerking die moet worden uitgevoerd. In deze aanvraag wordt de bewerking `add` gebruikt. |
 | `path` | De weg aan het schemagebied waar het nieuwe middel zal worden toegevoegd. Wanneer u veldgroepen aan schema&#39;s toevoegt, moet de waarde &quot;/allOf/-&quot; zijn. |
 | `value.$ref` | De `$id` van de veldgroep die moet worden toegevoegd. |
 
@@ -348,7 +348,7 @@ Een geslaagde reactie retourneert de details van het bijgewerkte schema, dat nu 
 
 Op schemavelden moet een identiteitsbeschrijving van de referentie zijn toegepast als deze worden gebruikt als een verwijzing naar een ander schema in een relatie. Aangezien het veld `favoriteHotel` in &quot;[!DNL Loyalty Members]&quot; verwijst naar het veld `hotelId` in &quot;[!DNL Hotels]&quot;, moet aan `favoriteHotel` een identiteitsbeschrijvingsreferentie worden gegeven.
 
-Creeer een verwijzingsbeschrijver voor het bronschema door een verzoek van de POST aan het `/tenant/descriptors` eindpunt te doen.
+Creeer een verwijzingsbeschrijver voor het bronschema door een POST- verzoek aan het `/tenant/descriptors` eindpunt te doen.
 
 **API formaat**
 
@@ -405,7 +405,7 @@ Een succesvol antwoord retourneert de details van de zojuist gemaakte verwijzing
 
 ## Relatiebeschrijvingen maken {#create-descriptor}
 
-Relatiebeschrijvingen maken een één-op-één relatie tussen een bronschema en een referentieschema. Zodra u een beschrijver van de verwijzingsidentiteit voor het aangewezen gebied in het bronschema hebt bepaald, kunt u een nieuwe relatiebeschrijver tot stand brengen door een verzoek van de POST aan het `/tenant/descriptors` eindpunt te doen.
+Relatiebeschrijvingen maken een één-op-één relatie tussen een bronschema en een referentieschema. Zodra u een beschrijver van de verwijzingsidentiteit voor het aangewezen gebied in het bronschema hebt bepaald, kunt u een nieuwe relatiebeschrijver tot stand brengen door een POST- verzoek aan het `/tenant/descriptors` eindpunt te doen.
 
 **API formaat**
 

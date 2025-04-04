@@ -2,10 +2,10 @@
 title: Aanvullende informatie voor Adobe Experience Platform van februari 2024
 description: Aanvullende informatie voor Adobe Experience Platform van februari 2024.
 exl-id: 7e4b76b7-4027-4890-b869-1dbb79670c3e
-source-git-commit: 02f2082e695d157415c9e0c59ca5d371c94bb991
-workflow-type: ht
-source-wordcount: '1243'
-ht-degree: 100%
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+workflow-type: tm+mt
+source-wordcount: '1247'
+ht-degree: 91%
 
 ---
 
@@ -24,7 +24,7 @@ Updates van bestaande functies in Experience Platform:
 
 ## Waarschuwingen {#alerts}
 
-Met Experience Platform kunt u zich aanmelden voor gebeurtenisgebaseerde waarschuwingen voor verschillende platformactiviteiten. U kunt zich aanmelden op verschillende waarschuwingsregels via het tabblad [!UICONTROL Alerts] in de gebruikersinterface van het platform, en u kunt ervoor kiezen waarschuwingsmeldingen te ontvangen in de gebruikersinterface zelf of via e-mailberichten.
+Met Experience Platform kunt u zich abonneren op waarschuwingen die zijn gebaseerd op gebeurtenissen voor verschillende Experience Platform-activiteiten. U kunt zich abonneren op verschillende waarschuwingsregels via het tabblad [!UICONTROL Alerts] in de Experience Platform-gebruikersinterface en u kunt ervoor kiezen waarschuwingsberichten te ontvangen in de gebruikersinterface zelf of via e-mailberichten.
 
 **Nieuwe of bijgewerkte functies**
 
@@ -95,7 +95,7 @@ Voor meer algemene informatie over bestemmingen, raadpleegt u het [overzicht van
 
 ## Sandboxes {#sandboxes}
 
-Adobe Experience Platform is ontworpen om digitale ervaringstoepassingen wereldwijd te verrijken. Bedrijven gebruiken vaak meerdere digitale ervaringstoepassingen parallel en moeten de ontwikkeling, het testen en de implementatie van deze toepassingen verzorgen en tegelijkertijd de operationele naleving waarborgen. Om aan deze behoefte te voldoen, biedt Experience Platform sandboxes die één Platform-instantie opsplitsen in afzonderlijke virtuele omgevingen, zodat digitale ervaringstoepassingen kunnen worden ontwikkeld en verder ontwikkeld.
+Adobe Experience Platform is ontworpen om digitale ervaringstoepassingen wereldwijd te verrijken. Bedrijven gebruiken vaak meerdere digitale ervaringstoepassingen parallel en moeten de ontwikkeling, het testen en de implementatie van deze toepassingen verzorgen en tegelijkertijd de operationele naleving waarborgen. Om aan deze behoefte tegemoet te komen, biedt Experience Platform sandboxen die één Experience Platform-instantie in afzonderlijke virtuele omgevingen verdelen om toepassingen voor digitale ervaringen te ontwikkelen en te ontwikkelen.
 
 **Nieuwe of bijgewerkte functies**
 
@@ -109,13 +109,13 @@ Voor meer informatie over sandboxes, raadpleegt u het [Overzicht van sandboxes](
 
 ## Segmentatieservice {#segmentation}
 
-Met [!DNL Segmentation Service] kunt u gegevens die zijn opgeslagen in [!DNL Experience Platform] en die betrekking hebben op personen (zoals klanten, prospects, gebruikers of organisaties) segmenteren in doelgroepen. U kunt doelgroepen maken via segmentdefinities of andere bronnen op basis van uw [!DNL Real-Time Customer Profile]-gegevens. Deze doelgroepen worden centraal geconfigureerd en onderhouden op [!DNL Platform] en zijn eenvoudig toegankelijk via elke Adobe-oplossing.
+Met [!DNL Segmentation Service] kunt u gegevens die zijn opgeslagen in [!DNL Experience Platform] en die betrekking hebben op personen (zoals klanten, prospects, gebruikers of organisaties) segmenteren in doelgroepen. U kunt doelgroepen maken via segmentdefinities of andere bronnen op basis van uw [!DNL Real-Time Customer Profile]-gegevens. Deze doelgroepen worden centraal geconfigureerd en onderhouden op [!DNL Experience Platform] en zijn eenvoudig toegankelijk via elke Adobe-oplossing.
 
 **Nieuwe functie**
 
 | Functie | Beschrijving |
 | ------- | ----------- |
-| Accountdoelgroepen | Accountdoelgroepen zijn nu algemeen beschikbaar! U kunt nu accountsegmentatie gebruiken om het volledige gemak en de verfijning van de marketingsegmentatie-ervaring van op mensen gebaseerde doelgroepen naar op accounts gebaseerde doelgroepen te brengen in zowel de B2B- als de B2P-editie van het Real-Time Customer Platform. Met deze release kunt u op personen gebaseerde doelgroepen gebruiken als basis voor op accounts gebaseerde doelgroepen. Ook worden er zoekmogelijkheden toegevoegd, wordt het gebruik van aangepaste entiteiten ondersteund en voldoet de release aan datagovernance. Voor meer informatie over deze functie, raadpleegt u het [overzicht van accountdoelgroepen](../../segmentation/types/account-audiences.md). |
+| Accountdoelgroepen | Accountdoelgroepen zijn nu algemeen beschikbaar! U kunt nu de segmentatie van uw account gebruiken om de volledige versnelling en verfijning van de segmentatieervaring voor marketing te bieden van een publiek dat op mensen is gebaseerd naar een publiek dat op een account is gebaseerd, zowel in de B2B- als in de B2P-edities van Real-Time Customer Experience Platform. Met deze release kunt u op personen gebaseerde doelgroepen gebruiken als basis voor op accounts gebaseerde doelgroepen. Ook worden er zoekmogelijkheden toegevoegd, wordt het gebruik van aangepaste entiteiten ondersteund en voldoet de release aan datagovernance. Voor meer informatie over deze functie, raadpleegt u het [overzicht van accountdoelgroepen](../../segmentation/types/account-audiences.md). |
 
 {style="table-layout:auto"}
 

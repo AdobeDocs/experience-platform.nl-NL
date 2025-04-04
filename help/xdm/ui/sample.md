@@ -3,9 +3,9 @@ solution: Experience Platform
 title: Voorbeeldgegevens genereren voor een XDM-schema in de gebruikersinterface
 description: Leer hoe u voorbeeld-JSON-gegevens kunt genereren op basis van een bestaand schema in de Adobe Experience Platform-gebruikersinterface.
 exl-id: e60eedb2-2245-42cd-b574-43caf9e3426c
-source-git-commit: 19a9341a9f53559fe3f619b2f157015e53b25b64
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '392'
+source-wordcount: '395'
 ht-degree: 0%
 
 ---
@@ -19,9 +19,9 @@ ht-degree: 0%
 
 Om gegevens in Adobe Experience Platform in te voeren, moeten de indeling en de structuur van de gegevens voldoen aan een bestaand schema van het Experience Data Model (XDM). Afhankelijk van de ingewikkeldheid van het schema voor een bepaalde dataset, kan het moeilijk zijn om de nauwkeurige vorm van de gegevens te bepalen die de dataset op opneming verwacht.
 
-Voor elk schema dat u in de interface van het Experience Platform definieert, kunt u een voorbeeld-JSON-object genereren dat voldoet aan de structuur van het schema. Dit voorwerp kan als malplaatje voor om het even welke gegevens dienen die in datasets worden opgenomen die het betrokken schema in dienst nemen.
+Voor elk schema dat u in de gebruikersinterface van Experience Platform definieert, kunt u een voorbeeld-JSON-object genereren dat voldoet aan de structuur van het schema. Dit voorwerp kan als malplaatje voor om het even welke gegevens dienen die in datasets worden opgenomen die het betrokken schema in dienst nemen.
 
-Selecteer **[!UICONTROL Schemas]** in de gebruikersinterface van het platform in de linkernavigatie. Zoek onder het tabblad **[!UICONTROL Browse]** het schema waarvoor u voorbeeldgegevens wilt genereren. Selecteer het uit de lijst, en de juiste spoorupdates om details over het schema te tonen. Selecteer **[!UICONTROL Download sample file]** van hier.
+Selecteer **[!UICONTROL Schemas]** in de gebruikersinterface van Experience Platform in de linkernavigatie. Zoek onder het tabblad **[!UICONTROL Browse]** het schema waarvoor u voorbeeldgegevens wilt genereren. Selecteer het uit de lijst, en de juiste spoorupdates om details over het schema te tonen. Selecteer **[!UICONTROL Download sample file]** van hier.
 
 ![ het Browse lusje van de werkruimte van Schema&#39;s met een geselecteerd schema en benadrukt dossier van de downloadsteekproef.](../images/ui/sample/sample-data.png)
 
@@ -29,8 +29,8 @@ Een voorbeeld-JSON-bestand wordt gedownload door de browser. U kunt dit dossier 
 
 ## Volgende stappen
 
-Deze handleiding besprak hoe u een voorbeeld-JSON-bestand kunt genereren op basis van een XDM-schema in de gebruikersinterface van het platform. Leren hoe te om steekproefgegevens te produceren gebruikend de Registratie API van het Schema, zie de [ gids van het het eindpunt van steekproefgegevens ](../api/sample-data.md).
+Deze handleiding besprak hoe u een voorbeeld-JSON-bestand kunt genereren op basis van een XDM-schema in de gebruikersinterface van Experience Platform. Leren hoe te om steekproefgegevens te produceren gebruikend de Registratie API van het Schema, zie de [ gids van het het eindpunt van steekproefgegevens ](../api/sample-data.md).
 
-Zodra u bereid bent om gegevens in te voeren, zie het leerprogramma op [ in kaart brengen een Csv- dossier aan XDM ](../../ingestion/tutorials/map-csv/overview.md) om te leren hoe te om een vlak gegevensdossier (zoals CSV) aan een XDM- schema in kaart te brengen en het in Platform in te voeren. Alternatief, kunt u a [ bronverbinding ](../../sources/home.md) vestigen om uw gegevens van een externe bron in te brengen en het in kaart te brengen aan XDM.
+Zodra u bereid bent om gegevens in te voeren, zie het leerprogramma op [ in kaart brengen een Csv- dossier aan XDM ](../../ingestion/tutorials/map-csv/overview.md) om te leren hoe te om een vlak gegevensdossier (zoals CSV) aan een XDM- schema in kaart te brengen en het in Experience Platform in te voeren. Alternatief, kunt u a [ bronverbinding ](../../sources/home.md) vestigen om uw gegevens van een externe bron in te brengen en het in kaart te brengen aan XDM.
 
 Voor meer informatie over de mogelijkheden van de [!UICONTROL Schemas] werkruimte in UI, verwijs naar het [[!UICONTROL Schemas] overzicht van de werkruimte ](./overview.md).

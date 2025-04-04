@@ -2,9 +2,9 @@
 title: Verbinding maken met Data Distiller vanaf een Jupyter-laptop
 description: Leer hoe u verbinding maakt met Data Distiller vanaf een Jupyter-laptop.
 exl-id: e6238b00-aaeb-40c0-a90f-9aebb1a1c421
-source-git-commit: 308d07cf0c3b4096ca934a9008a13bf425dc30b6
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '671'
+source-wordcount: '672'
 ht-degree: 0%
 
 ---
@@ -19,7 +19,7 @@ In deze handleiding wordt ervan uitgegaan dat u bekend bent met interactieve [!D
 
 ### Verbindingsgegevens opvragen {#obtain-credentials}
 
-Als u verbinding wilt maken met Data Distiller en andere Adobe Experience Platform-services, hebt u een API-referentie voor Experience Platforms nodig. API geloofsbrieven kunnen in [ Adobe Developer Console ](https://developer.adobe.com/console/home) door iemand met de toegang van de Ontwikkelaar tot het Experience Platform worden gecreeerd. U wordt geadviseerd om een referentie van Oauth2 API specifiek voor de werkschema&#39;s van de gegevenswetenschap tot stand te brengen en een beheerder van het systeem van de Adobe van uw organisatie te hebben de geloofsbrieven aan een rol met aangewezen toestemmingen toewijzen.
+Als u verbinding wilt maken met Data Distiller en andere Adobe Experience Platform-services, hebt u een Experience Platform API-referentie nodig. API geloofsbrieven kunnen in [ Adobe Developer Console ](https://developer.adobe.com/console/home) door iemand met de toegang van de Ontwikkelaar tot Experience Platform worden gecreeerd. U wordt geadviseerd om een referentie van Oauth2 API specifiek voor de werkschema&#39;s van de gegevenswetenschap tot stand te brengen en een het systeemadmin van Adobe van uw organisatie te hebben de geloofsbrieven aan een rol met aangewezen toestemmingen toewijzen.
 
 Zie [ voor authentiek verklaren en toegang Experience Platform APIs ](../../../landing/api-authentication.md) voor gedetailleerde instructies bij het creëren van een API referentie en het verkrijgen van de vereiste toestemmingen.
 
@@ -32,11 +32,11 @@ De geadviseerde toestemmingen voor gegevenswetenschap omvatten:
 - Doelen: [!UICONTROL Manage and Activate Dataset Destinations]
 - Query-service: [!UICONTROL Manage Queries]
 
-Een rol (en API-referenties die aan die rol zijn toegewezen) heeft standaard geen toegang tot gelabelde gegevens. Afhankelijk van het beleid van de organisatie inzake gegevensbeheer, kan een Admin van het Systeem de rol toegang verlenen tot bepaalde geëtiketteerde gegevens die voor gebruik van de gegevenswetenschap aangewezen worden geacht. De klanten van het platform zijn verantwoordelijk om etikettoegang en beleid behoorlijk te beheren om aan relevante verordeningen en organisatiebeleid te voldoen.
+Een rol (en API-referenties die aan die rol zijn toegewezen) heeft standaard geen toegang tot gelabelde gegevens. Afhankelijk van het beleid van de organisatie inzake gegevensbeheer, kan een Admin van het Systeem de rol toegang verlenen tot bepaalde geëtiketteerde gegevens die voor gebruik van de gegevenswetenschap aangewezen worden geacht. Experience Platform-klanten zijn verantwoordelijk voor het op passende wijze beheren van toegang tot labels en beleid om te voldoen aan de desbetreffende regelgeving en het desbetreffende organisatiebeleid.
 
 ### Referenties opslaan in een afzonderlijk configuratiebestand {#store-credentials}
 
-Om uw referentie veilig te houden, verdient het aanbeveling geen referentie-informatie rechtstreeks in uw code te schrijven. Bewaar in plaats daarvan de referentie-informatie in een afzonderlijk configuratiebestand en lees de waarden in die nodig zijn om verbinding te maken met het Experience Platform en Data Distiller.
+Om uw referentie veilig te houden, verdient het aanbeveling geen referentie-informatie rechtstreeks in uw code te schrijven. Bewaar in plaats daarvan de referentie-informatie in een afzonderlijk configuratiebestand en lees de waarden in die nodig zijn om verbinding te maken met de Experience Platform en Data Distiller.
 
 U kunt bijvoorbeeld een bestand met de naam `config.ini` maken en de volgende informatie (samen met andere informatie, zoals id&#39;s van gegevenssets, die u tussen sessies kunt opslaan) opnemen:
 
@@ -69,7 +69,7 @@ org_id = config.get('Credential', 'ims_org_id')
 
 ## PP Python-bibliotheek installeren {#install-python-library}
 
-[ aepp ](https://github.com/adobe/aepp/tree/main) is een Adobe-geleide open-bron [!DNL Python] bibliotheek die functies verstrekt om met Gegevens Distiller te verbinden en vragen voor te leggen, zoals het doen van verzoeken aan andere diensten van het Experience Platform. De `aepp` -bibliotheek is op zijn beurt afhankelijk van het PostgreSQL-databaseadapterpakket `psycopg2` voor interactieve Distiller-query&#39;s voor gegevens. Het is mogelijk verbinding te maken met Data Distiller en gegevenssets voor Experience Platforms te zoeken met `psycopg2` alleen, maar `aepp` biedt meer gebruiksgemak en extra functionaliteit om aanvragen in te dienen bij alle Experience Platform API-services.
+[ aepp ](https://github.com/adobe/aepp/tree/main) is een Adobe-Beheerde open-source [!DNL Python] bibliotheek die functies verstrekt om met Gegevens Distiller te verbinden en vragen voor te leggen, zoals het doen van verzoeken aan andere diensten van Experience Platform. De `aepp` -bibliotheek is op zijn beurt afhankelijk van het PostgreSQL-databaseadapterpakket `psycopg2` voor interactieve Distiller-query&#39;s voor gegevens. Het is mogelijk verbinding te maken met Data Distiller en Experience Platform-gegevenssets te controleren met `psycopg2` alleen, maar `aepp` biedt meer gebruiksgemak en extra functionaliteit om aanvragen in te dienen bij alle Experience Platform API-services.
 
 Als u `aepp` en `psycopg2` wilt installeren of upgraden in uw omgeving, kunt u de opdracht `%pip` Magisch in uw notitieboekje gebruiken:
 
@@ -112,7 +112,7 @@ dd_conn = queryservice.QueryService().connection()
 dd_cursor = queryservice.InteractiveQuery2(dd_conn)
 ```
 
-U kunt dan de datasets in uw zandbak van het Experience Platform vragen. Gezien identiteitskaart van een dataset u wilt vragen, kunt u de overeenkomstige lijstnaam van de dienst van de Catalogus terugwinnen en vragen op de lijst in werking stellen:
+U kunt dan de datasets in uw zandbak van Experience Platform vragen. Gezien identiteitskaart van een dataset u wilt vragen, kunt u de overeenkomstige lijstnaam van de dienst van de Catalogus terugwinnen en vragen op de lijst in werking stellen:
 
 ```python
 table_name = 'ecommerce_events'

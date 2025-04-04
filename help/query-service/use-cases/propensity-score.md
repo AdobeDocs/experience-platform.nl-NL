@@ -1,17 +1,17 @@
 ---
 title: Een volheidsscore bepalen met behulp van een door een machine gegenereerd voorspellend model voor leren
-description: Leer hoe te om de Dienst van de Vraag te gebruiken om uw vooruitlopende model op de gegevens van het Platform toe te passen. In dit document wordt uitgelegd hoe u de gegevens van het platform kunt gebruiken om te voorspellen of een klant bij elk bezoek geneigd is om een aankoop te doen.
+description: Leer hoe u Query Service gebruikt om uw voorspellend model toe te passen op Experience Platform-gegevens. In dit document wordt uitgelegd hoe u Experience Platform-gegevens kunt gebruiken om te voorspellen of een klant bij elk bezoek geneigd is om producten te kopen.
 exl-id: 29587541-50dd-405c-bc18-17947b8a5942
-source-git-commit: 40c27a52fdae2c7d38c5e244a6d1d6ae3f80f496
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1304'
+source-wordcount: '1309'
 ht-degree: 0%
 
 ---
 
 # Bepaal een aandrijvingsscore gebruikend een machine-leren-Gegenereerd vooruitgangsmodel
 
-Met behulp van Query Service kunt u voorspellende modellen, zoals proxyscores, gebruiken die op uw computerleerplatform zijn gebaseerd om Experience Platform-gegevens te analyseren.
+Met de Query Service kunt u voorspellende modellen, zoals proxyscores, gebruiken die op uw computerleerplatform zijn gebaseerd om Experience Platform-gegevens te analyseren.
 
 In deze handleiding wordt uitgelegd hoe u de Query-service kunt gebruiken om gegevens naar uw computerplatform te verzenden om een model op te leiden in een computerlaptop. Het opgeleide model kan op gegevens worden toegepast gebruikend SQL om de neiging van een klant te voorspellen om voor elk bezoek te kopen.
 
@@ -35,9 +35,9 @@ numpy
 tqdm
 ```
 
-## Analytische tabellen importeren van Platform naar [!DNL Jupyter Notebook] {#import-analytics-tables}
+## Analytische tabellen importeren van Experience Platform naar [!DNL Jupyter Notebook] {#import-analytics-tables}
 
-Als u een model met de dichtheid wilt genereren, moet u een projectie van de analysegegevens die in Platform zijn opgeslagen, importeren in [!DNL Jupyter Notebook] . Van een [!DNL Python] 3 [!DNL Jupyter Notebook] verbonden met de Dienst van de Vraag, voert de volgende bevelen een dataset van het klantengedrag van Luma, een fictieve kledingopslag in. Aangezien de gegevens van het Platform gebruikend het Model van de Gegevens van de Ervaring (XDM) formaat worden opgeslagen, moet een steekproefJSON voorwerp worden geproduceerd dat aan de structuur van het schema in overeenstemming is. Zie de documentatie voor instructies op hoe te [ het voorwerp van steekproefJSON ](../../xdm/ui/sample.md) produceren.
+Als u een model met de dichtheid wilt genereren, moet u een projectie van de analysegegevens die in Experience Platform zijn opgeslagen, importeren in [!DNL Jupyter Notebook] . Van een [!DNL Python] 3 [!DNL Jupyter Notebook] verbonden met de Dienst van de Vraag, voert de volgende bevelen een dataset van het klantengedrag van Luma, een fictieve kledingopslag in. Aangezien Experience Platform-gegevens worden opgeslagen met de XDM-indeling (Experience Data Model), moet een JSON-voorbeeldobject worden gegenereerd dat voldoet aan de structuur van het schema. Zie de documentatie voor instructies op hoe te [ het voorwerp van steekproefJSON ](../../xdm/ui/sample.md) produceren.
 
 ![ het [!DNL Jupyter Notebook] dashboard met verscheidene benadrukte bevelen.](../images/use-cases/jupyter-commands.png)
 
@@ -161,7 +161,7 @@ Uit het staafdiagram kunnen verschillende patronen worden afgeleid. De onderwerp
 
 ## De Dienst van de Vraag van het gebruik om het getrainde model toe te passen {#use-query-service-to-apply-trained-model}
 
-Nadat het getrainde model is gemaakt, moet het worden toegepast op de gegevens in het Experience Platform. Om dit te doen, moet de logica van de machine het leren pijpleiding in SQL worden omgezet. De twee belangrijkste onderdelen van deze overgang zijn:
+Nadat het getrainde model is gemaakt, moet het worden toegepast op de gegevens in Experience Platform. Om dit te doen, moet de logica van de machine het leren pijpleiding in SQL worden omgezet. De twee belangrijkste onderdelen van deze overgang zijn:
 
 - Ten eerste moet SQL de module [!DNL Logistics Regression] vervangen om de waarschijnlijkheid van een voorspellingslabel te verkrijgen. Het model dat door Logistics Regression is gemaakt, heeft het regressiemodel `y = wX + c` opgeleverd, waarbij de gewichten `w` en intercept `c` de uitvoer van het model zijn. SQL-functies kunnen worden gebruikt om de gewichten te vermenigvuldigen om een waarschijnlijkheid te verkrijgen.
 

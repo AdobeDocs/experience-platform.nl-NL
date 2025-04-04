@@ -2,9 +2,9 @@
 title: Gegevensstromen maken en configureren
 description: Leer hoe u uw client-side Web SDK-integratie kunt verbinden met andere Adobe-producten en andere bestemmingen.
 exl-id: 4924cd0f-5ec6-49ab-9b00-ec7c592397c8
-source-git-commit: 4afb2c76f2022423e8f1fa29c91d02b43447ba90
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '2633'
+source-wordcount: '2638'
 ht-degree: 0%
 
 ---
@@ -103,7 +103,7 @@ Selecteer **[!UICONTROL Advanced Options]** om geavanceerde configuratieopties w
 | [!UICONTROL Access Type] | Definieert het verificatietype dat de Edge Network accepteert voor de gegevensstroom. <ul><li>**[!UICONTROL Mixed Authentication]**: Als deze optie is geselecteerd, accepteert de Edge Network zowel geverifieerde als niet-geverifieerde aanvragen. Selecteer deze optie wanneer u van plan bent om het Web SDK of [ Mobiele SDK ](https://developer.adobe.com/client-sdks/home/), samen met [ Server API ](../server-api/overview.md) te gebruiken. </li><li>**[!UICONTROL Authenticated Only]**: Als deze optie is geselecteerd, accepteert de Edge Network alleen geverifieerde aanvragen. Selecteer deze optie als u alleen de server-API wilt gebruiken en niet-geverifieerde aanvragen door de Edge Network moeten worden verwerkt.</li></ul> |
 | [!UICONTROL Media Analytics] | Laat verwerking van het stromen volgen gegevens voor de integratie van Edge Network via Experience Platform SDKs of [ Media Edge API ](https://developer.adobe.com/cja-apis/docs/endpoints/media-edge/getting-started/) toe. Leer over Analytics van Media van de [ documentatie ](https://experienceleague.adobe.com/docs/media-analytics/using/media-overview.html). |
 
-Van hier, als u uw gegevensstroom voor Experience Platform vormt, volg het leerprogramma op [ Prep van Gegevens voor de Inzameling van Gegevens ](./data-prep.md) om uw gegevens aan een de gebeurtenisschema van het Platform in kaart te brengen alvorens aan deze gids terug te keren. Anders selecteert u **[!UICONTROL Save]** en gaat u verder naar de volgende sectie.
+Van hier, als u uw gegevensstroom voor Experience Platform vormt, volg het leerprogramma op [ Prep van Gegevens voor de Inzameling van Gegevens ](./data-prep.md) om uw gegevens aan een de gebeurtenisschema van Experience Platform in kaart te brengen alvorens aan deze gids terug te keren. Anders selecteert u **[!UICONTROL Save]** en gaat u verder naar de volgende sectie.
 
 ## Gegevens gegevensstroom weergeven {#view-details}
 
@@ -160,7 +160,7 @@ Deze service bepaalt of en hoe gegevens naar Adobe Audience Manager worden verzo
 
 >[!IMPORTANT]
 >
->Wanneer het toelaten van een gegevensstroom voor Platform, neem nota van de zandbak van het Platform die u momenteel gebruikt, zoals getoond in het hoogste lint van UI.
+>Wanneer u een gegevensstroom voor Experience Platform inschakelt, moet u rekening houden met de Experience Platform-sandbox die u momenteel gebruikt, zoals wordt weergegeven in het bovenste lint van de gebruikersinterface.
 >
 >![ Geselecteerde zandbak ](assets/configure/platform-sandbox.png)
 >
@@ -172,8 +172,8 @@ Deze service bepaalt of en hoe gegevens naar Adobe Experience Platform worden ve
 
 | Instelling | Beschrijving |
 |---| --- |
-| [!UICONTROL Event Dataset] | **(Vereist)** selecteer de dataset van het Platform dat de gegevens van de klantengebeurtenis zullen worden gestroomd aan. Dit schema moet de [ klasse XDM ExperienceEvent ](../xdm/classes/experienceevent.md) gebruiken. Selecteer **[!UICONTROL Add Event Dataset]** als u aanvullende gegevenssets wilt toevoegen. |
-| [!UICONTROL Profile Dataset] | Selecteer de dataset van het Platform dat de gegevens van de klantenattributen zullen worden verzonden naar. Dit schema moet de [ individuele klasse van het Profiel XDM ](../xdm/classes/individual-profile.md) gebruiken. |
+| [!UICONTROL Event Dataset] | **(Vereist)** Selecteer de dataset van Experience Platform dat de gegevens van de klantengebeurtenis zullen worden gestroomd aan. Dit schema moet de [ klasse XDM ExperienceEvent ](../xdm/classes/experienceevent.md) gebruiken. Selecteer **[!UICONTROL Add Event Dataset]** als u aanvullende gegevenssets wilt toevoegen. |
+| [!UICONTROL Profile Dataset] | Selecteer de dataset van Experience Platform waarnaar de gegevens van de klantenattributen zullen worden verzonden. Dit schema moet de [ individuele klasse van het Profiel XDM ](../xdm/classes/individual-profile.md) gebruiken. |
 | [!UICONTROL Offer Decisioning] | Hiermee schakelt u Offer Decisioning for Web SDK-implementaties in. Zie de gids op [ gebruikend Offer Decisioning met het Web SDK ](../web-sdk/personalization/offer-decisioning/offer-decisioning-overview.md) voor meer implementatiedetails.<br><br> voor meer informatie over de mogelijkheden van Offer Decisioning, verwijs naar de [ documentatie van Adobe Journey Optimizer ](https://experienceleague.adobe.com/docs/journey-optimizer/using/offer-decisioning/get-started-decision/starting-offer-decisioning.html). |
 | [!UICONTROL Edge Segmentation] | Laat [ randsegmentatie ](../segmentation/methods/edge-segmentation.md) voor deze gegevensstroom toe. Wanneer het [ Web SDK ](../web-sdk/home.md) of [ de Server API van Edge Network ](../server-api/overview.md) gegevens door een gegevensstroom met toegelaten randsegmentatie verzendt, worden om het even welke bijgewerkte publiekslidmaatschappen voor het profiel in kwestie teruggestuurd in de reactie.<br><br> u kunt deze optie in combinatie met **[!UICONTROL Personalization Destinations]** voor zelfde-pagina en volgende-pagina het gebruiksgevallen van het verpersoonlijkingsgebruik door [ randbestemmingen ](../destinations/ui/activate-edge-personalization-destinations.md) of [!DNL Offer Decisioning] gebruiken. |
 | [!UICONTROL Personalization Destinations] | Wanneer het toelaten van dit na het toelaten van [!UICONTROL Edge Segmentation] checkbox, staat deze optie de datastream toe om met verpersoonlijkingsbestemmingen, zoals [ Douane Personalization ](../destinations/catalog/personalization/custom-personalization.md) te verbinden.<br><br> verwijs naar de bestemmingsdocumentatie voor specifieke stappen op [ vormend verpersoonlijkingsbestemmingen ](../destinations/ui/activate-edge-personalization-destinations.md). |

@@ -5,9 +5,9 @@ title: Een PayPal Source Connection maken in de gebruikersinterface
 type: Tutorial
 description: Leer hoe u een PayPal-bronverbinding maakt met de gebruikersinterface van Adobe Experience Platform.
 exl-id: bbd3f634-cb28-45d8-9b7b-ed3873101882
-source-git-commit: 9ca4f19f7b59f075250bce7035303e11d3f3710f
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '443'
+source-wordcount: '447'
 ht-degree: 0%
 
 ---
@@ -18,7 +18,7 @@ ht-degree: 0%
 >
 >De bron [!DNL PayPal] wordt eind juni 2025 vervangen.
 
-Source-connectors in Adobe Experience Platform bieden de mogelijkheid om volgens een schema extern gesourceerde gegevens in te voeren. Deze zelfstudie bevat stappen voor het maken van een [!DNL PayPal] bronconnector met behulp van de gebruikersinterface van Platform.
+Source-connectors in Adobe Experience Platform bieden de mogelijkheid om volgens een schema extern gesourceerde gegevens in te voeren. Deze zelfstudie bevat stappen voor het maken van een [!DNL PayPal] bronaansluiting met behulp van de Experience Platform-gebruikersinterface.
 
 ## Aan de slag
 
@@ -33,7 +33,7 @@ Als u reeds een geldige [!DNL PayPal] verbinding hebt, kunt u de rest van dit do
 
 ### Vereiste referenties verzamelen
 
-Als u toegang wilt krijgen tot uw [!DNL PayPal] accountplatform, moet u de volgende waarden opgeven:
+U moet de volgende waarden opgeven om toegang te krijgen tot uw [!DNL PayPal] -account Experience Platform:
 
 | Credentials | Beschrijving |
 | ---------- | ----------- |
@@ -45,7 +45,7 @@ Voor meer informatie over begonnen worden, verwijs naar dit [[!DNL PayPal]  docu
 
 ## Sluit uw [!DNL PayPal] -account aan
 
-Nadat u de vereiste gegevens hebt verzameld, voert u de onderstaande stappen uit om uw [!DNL PayPal] -account te koppelen aan Platform.
+Nadat u de vereiste gegevens hebt verzameld, kunt u de onderstaande stappen volgen om uw [!DNL PayPal] -account te koppelen aan Experience Platform.
 
 Login aan [ Adobe Experience Platform ](https://platform.adobe.com) en selecteer dan **[!UICONTROL Sources]** van de linkernavigatiebar om tot de **[!UICONTROL Sources]** werkruimte toegang te hebben. In het scherm **[!UICONTROL Catalog]** worden diverse bronnen weergegeven waarmee u een account kunt maken.
 
@@ -71,4 +71,4 @@ Als u een bestaande account wilt verbinden, selecteert u de [!DNL PayPal] -accou
 
 ## Volgende stappen
 
-Aan de hand van deze zelfstudie hebt u een verbinding tot stand gebracht met uw [!DNL PayPal] -account. U kunt nu aan het volgende leerprogramma verdergaan en [ een dataflow vormen om de gegevens van de Betaling in Platform ](../../dataflow/payments.md) te brengen.
+Aan de hand van deze zelfstudie hebt u een verbinding tot stand gebracht met uw [!DNL PayPal] -account. U kunt nu aan het volgende leerprogramma verdergaan en [ een dataflow vormen om de gegevens van de Betaling in Experience Platform ](../../dataflow/payments.md) te brengen.

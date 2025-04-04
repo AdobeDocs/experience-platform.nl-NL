@@ -1,11 +1,11 @@
 ---
-keywords: LinkedIn;linkedIn;Linkedin;LinkedIn Insight Tag;insight tag;Insight Tag
-title: LinkedIn Insight Tag-extensie
-description: De extensie LinkedIn Insight Tag is een advertentiebestemming in Adobe Experience Platform. Zie de extensiepagina over Adobe Exchange voor meer informatie over de extensiefunctionaliteit.
+keywords: LinkedIn;linkedin;Linkedin;LinkedIn Insight Tag;insight Tag;Insight Tag
+title: LinkedIn Insight-tagextensie
+description: De LinkedIn Insight-extensie is een advertentiebestemming in Adobe Experience Platform. Zie de extensiepagina op Adobe Exchange voor meer informatie over de extensiefunctionaliteit.
 exl-id: f3475621-79df-4208-a47a-e0cfd8acec7f
-source-git-commit: b4e869f9bc29122db4fc66ccda752a50c7db729f
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '434'
+source-wordcount: '438'
 ht-degree: 0%
 
 ---
@@ -16,15 +16,15 @@ ht-degree: 0%
 
 Installeer de [!DNL LinkedIn Insight Tag] voor het gebruik van functies voor het bijhouden van conversies, herbestemming en demografie van websites.
 
-[!DNL LinkedIn Insight Tag] is een advertentie-extensie in Adobe Experience Platform. Voor meer informatie over de uitbreidingsfunctionaliteit, zie [ de Markering van het Inzicht van LinkedIn ](https://business.linkedin.com/marketing-solutions/insight-tag).
+[!DNL LinkedIn Insight Tag] is een advertentie-extensie in Adobe Experience Platform. Voor meer informatie over de uitbreidingsfunctionaliteit, zie [ LinkedIn de Markering van Insight ](https://business.linkedin.com/marketing-solutions/insight-tag).
 
-Dit doel is een tagextensie. Voor meer informatie over hoe de markeringsuitbreidingen in Platform werken, zie het [ overzicht van markeringsuitbreidingen ](../launch-extensions/overview.md).
+Dit doel is een tagextensie. Voor meer informatie over hoe de markeringsuitbreidingen in Experience Platform werken, zie het [ overzicht van markeringsuitbreidingen ](../launch-extensions/overview.md).
 
-![ de Uitbreiding van de Markering van het Inzicht van LinkedIn ](../../assets/catalog/advertising/linkedin/catalog.png)
+![ LinkedIn de Uitbreiding van de Markering van Insight ](../../assets/catalog/advertising/linkedin/catalog.png)
 
 ## Vereisten {#prerequisites}
 
-Deze extensie is beschikbaar in de catalogus [!DNL Destinations] voor alle klanten die Platform hebben aangeschaft.
+Deze extensie is beschikbaar in de catalogus [!DNL Destinations] voor alle klanten die Experience Platform hebben aangeschaft.
 
 Als u deze extensie wilt gebruiken, hebt u toegang tot tags in Adobe Experience Platform nodig. Tags worden aan Adobe Experience Cloud-klanten aangeboden als een inbegrepen, waardetoevoegend element. Neem contact op met de systeembeheerder van uw organisatie om toegang tot tags te krijgen en vraag hen om u de **[!UICONTROL manage_properties]** -machtiging te verlenen zodat u extensies kunt installeren.
 
@@ -32,7 +32,7 @@ Als u deze extensie wilt gebruiken, hebt u toegang tot tags in Adobe Experience 
 
 De extensie [!DNL LinkedIn Insight Tag] installeren:
 
-In de [ interface van het Platform ](https://platform.adobe.com/), ga **[!UICONTROL Destinations]** > **[!UICONTROL Catalog]**.
+In de [ interface van Experience Platform ](https://platform.adobe.com/), ga **[!UICONTROL Destinations]** > **[!UICONTROL Catalog]**.
 
 Selecteer de extensie in de catalogus of gebruik de zoekbalk.
 
@@ -42,7 +42,7 @@ Selecteer de eigenschap waarin u de extensie wilt installeren. U kunt ook een ni
 
 Het werkschema begeleidt u door de stappen om de installatie te voltooien.
 
-Voor informatie over de opties van de uitbreidingsconfiguratie en installatiesteun, zie {de Markering van het Inzicht van LinkedIn 0} ](https://business.linkedin.com/marketing-solutions/insight-tag).[
+Voor informatie over de opties van de uitbreidingsconfiguratie en installatiesteun, zie [ LinkedIn de Markering van Insight ](https://business.linkedin.com/marketing-solutions/insight-tag).
 
 U kunt de uitbreiding direct in [ de Inzameling UI van Gegevens ](https://experience.adobe.com/#/data-collection/) ook installeren. Voor meer informatie, zie de sectie op [ toevoegend een nieuwe uitbreiding ](../../../tags/ui/managing-resources/extensions/overview.md#add-a-new-extension) in de markeringsdocumentatie.
 
@@ -58,6 +58,6 @@ U kunt extensies configureren, upgraden en verwijderen in de gebruikersinterface
 
 >[!TIP]
 >
->Als de extensie al op een van uw eigenschappen is geïnstalleerd, wordt de interface van het platform nog steeds **[!UICONTROL Install]** weergegeven voor de extensie. Kik van het installatiewerkschema zoals die in [ wordt beschreven installeer uitbreiding ](#install-extension) om uw uitbreiding te vormen of te schrappen.
+>Als de extensie al op een van uw eigenschappen is geïnstalleerd, wordt de gebruikersinterface van Experience Platform nog steeds **[!UICONTROL Install]** voor de extensie weergegeven. Kik van het installatiewerkschema zoals die in [ wordt beschreven installeer uitbreiding ](#install-extension) om uw uitbreiding te vormen of te schrappen.
 
 Om uw uitbreiding te bevorderen, zie de gids op het [ proces van de uitbreidingsverbetering ](../../../tags/ui/managing-resources/extensions/extension-upgrade.md) in de tagdocumentatie.

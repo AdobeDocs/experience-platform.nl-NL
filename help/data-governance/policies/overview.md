@@ -1,12 +1,12 @@
 ---
-keywords: Experience Platform;thuis;populaire onderwerpen;module;DULE
+keywords: Experience Platform;home;populaire onderwerpen;module;DULE
 solution: Experience Platform
 title: Overzicht van beleidsregels voor gegevensgebruik
 description: Beleid voor gegevensgebruik is regels die het soort marketingacties beschrijven dat u mag uitvoeren op gegevens in Adobe Experience Platform of waarvan u een beperking hebt ingesteld.
 exl-id: 1b372aa5-3e49-4741-82dc-5701a4bc8469
-source-git-commit: e5d90b24dad7faa9aa31c3b0670f8efa69cf0334
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1205'
+source-wordcount: '1207'
 ht-degree: 0%
 
 ---
@@ -27,7 +27,7 @@ Er zijn twee soorten beleid beschikbaar:
 
 >[!NOTE]
 >
->Het het gebruiksbeleid van gegevens moet niet met [ toegangsbeheerbeleid ](../../access-control/abac/end-to-end-guide.md#policy) worden verward, dat bepaalt of bepaalde gebruikers van het Platform in uw organisatie tot bepaalde gegevensgebieden kunnen toegang hebben, en door het [!UICONTROL Permissions] lusje worden gevormd.
+>Het beleid van het gegevensgebruik moet niet met [ toegangsbeheerbeleid ](../../access-control/abac/end-to-end-guide.md#policy) worden verward, dat bepaalt of bepaalde gebruikers van Experience Platform in uw organisatie tot bepaalde gegevensgebieden kunnen toegang hebben, en door het [!UICONTROL Permissions] lusje worden gevormd.
 
 Dit document biedt een overzicht op hoog niveau van het beleid voor gegevensgebruik en bevat koppelingen naar verdere documentatie voor het werken met het beleid in de gebruikersinterface of de API.
 
@@ -57,7 +57,7 @@ Zie het bijlage aan dit document voor een lijst van [ beschikbare Adobe-bepaalde
 
 Experience Platform has the ability to share audiences with Adobe Audience Manager. Any Data Export Controls that have been applied to Audience Manager audiences are translated to equivalent marketing use cases recognized by Experience Platform Data Governance.
 
-For a reference on how specific Data Export Controls map to marketing actions in Platform, please refer to the [Audience Manager documentation](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/data-export-controls.html).
+For a reference on how specific Data Export Controls map to marketing actions in Experience Platform, please refer to the [Audience Manager documentation](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/data-export-controls.html).
 -->
 
 ## Beleid voor gegevensgebruik beheren {#manage}
@@ -66,11 +66,11 @@ Nadat labels voor gegevensgebruik zijn toegepast, kunnen gegevensbeheerders de [
 
 >[!IMPORTANT]
 >
->Alle beleidsregels voor gegevensgebruik (inclusief kernbeleidsregels die door Adobe worden verschaft) zijn standaard uitgeschakeld. Om een individueel beleid voor handhaving te overwegen, moet u dat beleid manueel toelaten door API of UI.
+>Alle beleidsregels voor gegevensgebruik (inclusief basisbeleid van Adobe) zijn standaard uitgeschakeld. Om een individueel beleid voor handhaving te overwegen, moet u dat beleid manueel toelaten door API of UI.
 
 Voor geleidelijke instructies bij het werken met marketing acties en het beleid van het gegevensgebruik in API, zie het leerprogramma op [ het creëren van en het evalueren van het beleid van het gegevensgebruik ](create.md). Voor meer informatie zien de belangrijkste verrichtingen die door [!DNL Policy Service] API worden verstrekt, de [ gids van de ontwikkelaar van de Dienst van het Beleid ](../api/getting-started.md).
 
-Voor informatie over hoe te met marketing acties en beleid in [!DNL Platform] UI te werken, zie de [ gebruikersgids van het gegevensgebruiksbeleid ](./user-guide.md).
+Voor informatie over hoe te met marketing acties en beleid in [!DNL Experience Platform] UI te werken, zie de [ gebruikersgids van het gegevensgebruiksbeleid ](./user-guide.md).
 
 ## Volgende stappen
 
@@ -80,9 +80,9 @@ Dit document bevatte een inleiding op het beleid inzake gegevensgebruik binnen h
 
 In de volgende sectie vindt u aanvullende informatie over het beleid voor gegevensgebruik.
 
-### Door de Adobe gedefinieerde marketingacties {#core-actions}
+### Door Adobe gedefinieerde marketingacties {#core-actions}
 
-In de onderstaande tabel worden de belangrijkste marketingacties beschreven die door Adobe buiten de box worden geleverd.
+In de onderstaande tabel worden de belangrijkste marketingacties beschreven die Adobe van de verpakking heeft voorzien.
 
 >[!NOTE]
 >
@@ -94,10 +94,10 @@ In de onderstaande tabel worden de belangrijkste marketingacties beschreven die 
 | Combineren met rechtstreeks identificeerbare gegevens | Een handeling waarbij alle PII&#39;s (Personal Identified Information) worden gecombineerd met anonieme gegevens. Contracten voor gegevens die afkomstig zijn van advertentienetwerken, servers en derde gegevensleveranciers bevatten vaak specifieke contractuele verbodsbepalingen inzake het gebruik van dergelijke gegevens met rechtstreeks identificeerbare gegevens. |
 | Secundaire doelen voor meerdere sites | Een handeling die gegevens gebruikt voor verwijzing naar andere sites. De combinatie van gegevens van verschillende sites, waaronder een combinatie van gegevens ter plaatse en gegevens buiten de locatie of een combinatie van gegevens van verschillende bronnen buiten de locatie, wordt ook wel gegevens over andere locaties genoemd. Gegevens over andere sites worden doorgaans verzameld en verwerkt om conclusies te trekken over de belangen van gebruikers. |
 | Gegevenswetenschap | Een handeling die gegevens gebruikt voor workflows voor gegevenswetenschap. Sommige contracten bevatten expliciete verbodsbepalingen voor het gebruik van gegevens voor gegevenswetenschap. Soms worden deze termen gedefinieerd in termen die het gebruik van gegevens voor kunstmatige intelligentie (AI), machinaal leren (ML) of modellering verbieden. |
-| Gegevens exporteren | Een actie die gegevens naar om het even welke plaats of bestemming buiten de producten en de diensten van de Adobe uitvoert. Bijvoorbeeld, het downloaden van gegevens aan uw lokale machine, het kopiëren van gegevens van het scherm, het plannen van levering van gegevens aan een plaats buiten Adobe, Customer Journey Analytics Geplande Projecten, de Rapporten van de Download, Rapporterende API, etc. |
+| Gegevens exporteren | Een actie die gegevens naar om het even welke plaats of bestemming buiten de producten en de diensten van Adobe uitvoert. Bijvoorbeeld het downloaden van gegevens naar uw lokale computer, het kopiëren van gegevens van het scherm, het plannen van levering van gegevens aan een plaats buiten Adobe, Customer Journey Analytics Geplande Projecten, de Rapporten van de Download, Rapporterende API, etc. |
 | E-maildoelen | Een handeling waarbij gegevens worden gebruikt in campagnes voor het aanwijzen van e-mail. |
 | Exporteren naar derde partij | Een handeling die gegevens exporteert naar processors en entiteiten die geen directe relatie hebben met klanten. Veel gegevensleveranciers hebben bedingen in de contracten die de uitvoer van gegevens van waar het oorspronkelijk werd verzameld verbieden. Sociale netwerkcontracten beperken bijvoorbeeld vaak de overdracht van gegevens die u van hen ontvangt. |
 | Onsite Advertising | Een handeling die gegevens gebruikt voor onsite advertenties, waaronder de selectie en levering van advertenties op de websites of apps van uw organisatie, of om de levering en doeltreffendheid van dergelijke advertenties te meten. |
 | Onsite Personalization | Een actie die gegevens voor onsite inhoudpersonalisatie gebruikt. De verpersoonlijking op locatie is om het even welke gegevens die worden gebruikt om gevolgtrekkingen over gebruikersbelangen te maken, en gebruikt om te selecteren welke inhoud of advertenties op die gevolgtrekkingen worden gediend. |
-| Segmentovereenkomst | Een actie die gegevens voor de Gelijke van het Segment van Adobe Experience Platform gebruikt, die voor twee of meer gebruikers van het Platform toestaat om publieksgegevens uit te wisselen. Door beleid in te schakelen dat naar deze handeling verwijst, kunt u beperken welke gegevens worden gebruikt voor Segment Match. Bijvoorbeeld, als het kernbeleid &quot;Gegevens beperken die&quot;wordt toegelaten, om het even welke gegevens met het etiket van a [ C11 ](../labels/reference.md#c11) kunnen niet voor de Overeenkomst van het Segment worden gebruikt. |
+| Segmentovereenkomst | Een actie die gegevens voor de Gelijke van het Segment van Adobe Experience Platform gebruikt, die voor twee of meer gebruikers van Experience Platform toestaat om publieksgegevens uit te wisselen. Door beleid in te schakelen dat naar deze handeling verwijst, kunt u beperken welke gegevens worden gebruikt voor Segment Match. Bijvoorbeeld, als het kernbeleid &quot;Gegevens beperken die&quot;wordt toegelaten, om het even welke gegevens met het etiket van a [ C11 ](../labels/reference.md#c11) kunnen niet voor de Overeenkomst van het Segment worden gebruikt. |
 | Single Identity Personalization | Een handeling die vereist dat één identiteit wordt gebruikt voor verpersoonlijkingsdoeleinden in plaats van dat identiteiten uit meerdere bronnen worden gekoppeld. |

@@ -1,12 +1,12 @@
 ---
-keywords: Experience Platform;thuis;intelligente diensten;populaire onderwerpen;intelligente dienst;Intelligente dienst
+keywords: Experience Platform;home;intelligente services;populaire onderwerpen;intelligente service;intelligente service
 solution: Experience Platform
 title: Overzicht van intelligente services
 description: Intelligente services stellen marketinganalisten en praktijkmensen in staat om gebruik te maken van de kracht van kunstmatige intelligentie en het leren van machines in gebruiksgevallen van de klantervaring. Dit staat voor marketing analisten toe om voorspellingen op te zetten specifiek voor de behoeften van een bedrijf gebruikend zaken-vlakke configuraties zonder de behoefte aan de deskundigheid van de gegevenswetenschap. Daarnaast kunnen marketingspecialisten voorspellingen activeren in Adobe Experience Cloud, Adobe Experience Platform en toepassingen van derden.
 exl-id: db080c83-2a45-4fd5-8502-d9cae2a063be
-source-git-commit: d6a4b149b911cd6e7dbbd6c1289fce64be76b506
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '505'
+source-wordcount: '506'
 ht-degree: 0%
 
 ---
@@ -30,7 +30,7 @@ Intelligente services, gebaseerd op [!DNL Adobe Experience Platform] , bieden ma
 
 ### Kostenefficiënte snelheid van de markt
 
-Adobe beschikt over AI/ML-expertise in combinatie met uitgebreide CXM-ervaring, en Intelligente services zijn speciaal ontworpen voor marketeers om AI/ML onmiddellijk van de grond te krijgen voor gangbare gevallen van marketinggebruik zonder dat schaarse en dure gegevenswetenschappers hoeven te verhuren, waardoor de snelheid van de markt en actionabiliteit worden versneld.
+Adobe beschikt over AI/ML-expertise in combinatie met diepe CXM-ervaring, en Intelligente services zijn speciaal ontworpen voor marketeers om AI/ML onmiddellijk van de grond te krijgen voor gangbare gevallen van marketinggebruik zonder dat schaarse en dure gegevenswetenschappers hoeven aan te werven, waardoor de snelheid van de markt en actionabiliteit worden versneld.
 
 ### Hogere nauwkeurigheid in voorspellende inzichten
 
@@ -52,7 +52,7 @@ De marketinganalist configureert de gewenste voorspellingen door bedrijfsregels 
 
 ### Voorspelend
 
-Nadat de modellen klaar zijn met training en scoring, worden de scores teruggeschreven naar Platform.
+Nadat de modellen klaar zijn met training en scoring, worden de scores teruggeschreven naar Experience Platform.
 
 ### Handeling
 
@@ -60,4 +60,4 @@ Tot slot kunt u besluiten welke acties u met de voorspellingen wilt ondernemen, 
 
 ## Volgende stappen
 
-Intelligente services bieden momenteel Attribution AI- en Customer AI. Met Attribution AI kunnen marketers op intelligente wijze de doeltreffendheid van marketing via kanalen en campagnes stimuleren. Meer over Attribution AI leren, bezoek het [ overzicht van de Attribution AI ](./attribution-ai/overview.md). Klantenservice-AI stelt marketers in staat hun klantervaringen te hyper-personaliseren. Meer over Klant AI leren, bezoek het [ overzicht van AI van de Klant ](./customer-ai/overview.md).
+Intelligent Services biedt momenteel Attribution AI en Customer AI. Met Attribution AI kunnen marketers op intelligente wijze de marketingeffectiviteit op verschillende kanalen en campagnes stimuleren. Meer over Attributie AI leren, bezoek het [ overzicht van AI van de Attributie ](./attribution-ai/overview.md). Klantenservice-AI stelt marketers in staat hun klantervaringen te hyper-personaliseren. Meer over Klant AI leren, bezoek het [ overzicht van AI van de Klant ](./customer-ai/overview.md).

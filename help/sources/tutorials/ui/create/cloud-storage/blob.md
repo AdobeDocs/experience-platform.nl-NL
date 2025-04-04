@@ -1,23 +1,23 @@
 ---
 title: Een Azure Blob Source Connection maken in de gebruikersinterface
-description: Leer hoe u een Azure Blob-bronconnector kunt maken via de gebruikersinterface van Platform.
+description: Leer hoe u een Azure Blob-bronconnector kunt maken via de Experience Platform-gebruikersinterface.
 exl-id: 0e54569b-7305-4065-981e-951623717648
-source-git-commit: d22c71fb77655c401f4a336e339aaf8b3125d1b6
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '784'
+source-wordcount: '788'
 ht-degree: 0%
 
 ---
 
 # Een [!DNL Azure Blob] bronverbinding maken in de gebruikersinterface
 
-Deze zelfstudie bevat stappen voor het maken van een [!DNL Azure Blob] (hierna &quot;[!DNL Blob]&quot; genoemd) bronverbinding met behulp van de gebruikersinterface van Platform.
+Deze zelfstudie bevat stappen voor het maken van een [!DNL Azure Blob] (hierna &quot;[!DNL Blob]&quot; genoemd) bronverbinding met de Experience Platform-gebruikersinterface.
 
 ## Aan de slag
 
 Deze zelfstudie vereist een goed begrip van de volgende onderdelen van Adobe Experience Platform:
 
-* [[!DNL Experience Data Model (XDM)]  Systeem ](../../../../../xdm/home.md): Het gestandaardiseerde kader om de gegevens van de klantenervaring in Experience Platform te organiseren.
+* [[!DNL Experience Data Model (XDM)]  Systeem ](../../../../../xdm/home.md): Het gestandaardiseerde kader voor het organiseren van de gegevens van de klantenervaring in Experience Platform.
    * [ Grondbeginselen van schemacompositie ](../../../../../xdm/schema/composition.md): Leer over de basisbouwstenen van schema&#39;s XDM, met inbegrip van zeer belangrijke principes en beste praktijken in schemacompositie.
    * [ het leerprogramma van de Redacteur van het Schema ](../../../../../xdm/tutorials/create-schema-ui.md): Leer hoe te om douaneschema&#39;s tot stand te brengen gebruikend de Redacteur UI van het Schema.
 * [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md): biedt een uniform, real-time consumentenprofiel dat is gebaseerd op geaggregeerde gegevens van meerdere bronnen.
@@ -34,7 +34,7 @@ Experience Platform ondersteunt de volgende bestandsindelingen die door externe 
 
 ### Vereiste referenties verzamelen
 
-Als u toegang wilt tot [!DNL Blob] -opslag op het Experience Platform, moet u geldige waarden opgeven voor de volgende referenties:
+Als u toegang wilt tot [!DNL Blob] -opslag op Experience Platform, moet u geldige waarden opgeven voor de volgende referenties:
 
 >[!BEGINTABS]
 
@@ -42,7 +42,7 @@ Als u toegang wilt tot [!DNL Blob] -opslag op het Experience Platform, moet u ge
 
 | Credentials | Beschrijving |
 | --- | --- |
-| Verbindingstekenreeks | Een tekenreeks die de machtigingsgegevens bevat die nodig zijn om [!DNL Blob] te verifiëren bij Experience Platform. Het patroon van de [!DNL Blob] verbindingstekenreeks is: `DefaultEndpointsProtocol=https;AccountName={ACCOUNT_NAME};AccountKey={ACCOUNT_KEY}` . Voor meer informatie over verbindingskoorden, zie dit [!DNL Blob] document op [ vormend verbindingskoorden ](https://docs.microsoft.com/en-us/azure/storage/common/storage-configure-connection-string). |
+| Verbindingstekenreeks | Een tekenreeks die de machtigingsgegevens bevat die nodig zijn voor verificatie van [!DNL Blob] naar Experience Platform. Het patroon van de [!DNL Blob] verbindingstekenreeks is: `DefaultEndpointsProtocol=https;AccountName={ACCOUNT_NAME};AccountKey={ACCOUNT_KEY}` . Voor meer informatie over verbindingskoorden, zie dit [!DNL Blob] document op [ vormend verbindingskoorden ](https://docs.microsoft.com/en-us/azure/storage/common/storage-configure-connection-string). |
 
 >[!TAB  de authentificatie van SAS URI ]
 
@@ -54,17 +54,17 @@ Als u toegang wilt tot [!DNL Blob] -opslag op het Experience Platform, moet u ge
 
 >[!ENDTABS]
 
-Nadat u de vereiste gegevens hebt verzameld, voert u de onderstaande stappen uit om de [!DNL Blob] -opslagruimte aan te sluiten op het Experience Platform
+Nadat u de vereiste gegevens hebt verzameld, voert u de onderstaande stappen uit om uw [!DNL Blob] -opslaggegevens te verbinden met Experience Platform
 
 ## Sluit uw [!DNL Blob] -account aan
 
-Selecteer in de gebruikersinterface van het platform **[!UICONTROL Sources]** in de linkernavigatiebalk voor toegang tot de werkruimte van [!UICONTROL Sources] . In het scherm [!UICONTROL Catalog] worden diverse bronnen weergegeven waarmee u een account kunt maken.
+Selecteer in de gebruikersinterface van Experience Platform de optie **[!UICONTROL Sources]** in de linkernavigatiebalk voor toegang tot de werkruimte van [!UICONTROL Sources] . In het scherm [!UICONTROL Catalog] worden diverse bronnen weergegeven waarmee u een account kunt maken.
 
 U kunt de juiste categorie selecteren in de catalogus aan de linkerkant van het scherm. U kunt ook de specifieke bron vinden waarmee u wilt werken met de zoekbalk.
 
 Selecteer onder de categorie [!UICONTROL Cloud storage] de optie **[!UICONTROL Azure Blob Storage]** en selecteer vervolgens **[!UICONTROL Add data]** .
 
-![ de Experience Platform broncatalogus met de Azure Blob Bron van de Opslag selecteerde.](../../../../images/tutorials/create/blob/catalog.png)
+![ de de broncatalogus van Experience Platform met de Azure Blob geselecteerde bron van de Opslag.](../../../../images/tutorials/create/blob/catalog.png)
 
 De pagina **[!UICONTROL Connect to Azure Blob Storage]** wordt weergegeven. Op deze pagina kunt u nieuwe of bestaande referenties gebruiken.
 
@@ -108,4 +108,4 @@ Als u wilt verifiëren met een handtekening voor gedeelde toegang, selecteert u 
 
 ## Volgende stappen
 
-Aan de hand van deze zelfstudie hebt u een verbinding tot stand gebracht met uw [!DNL Blob] -account. U kunt nu aan het volgende leerprogramma verdergaan en [ een dataflow vormen om gegevens van uw wolkenopslag in Platform ](../../dataflow/batch/cloud-storage.md) te brengen.
+Aan de hand van deze zelfstudie hebt u een verbinding tot stand gebracht met uw [!DNL Blob] -account. U kunt nu aan het volgende leerprogramma verdergaan en [ een dataflow vormen om gegevens van uw wolkenopslag in Experience Platform ](../../dataflow/batch/cloud-storage.md) te brengen.

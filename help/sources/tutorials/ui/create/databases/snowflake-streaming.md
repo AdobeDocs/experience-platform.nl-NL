@@ -1,10 +1,10 @@
 ---
-title: De gegevens van de stroom van uw gegevensbestand van de Snowflake aan Experience Platform gebruikend UI
-description: Leer hoe u gegevens kunt streamen van de database van SnwofLake naar het Experience Platform
+title: Gegevens vanuit uw Snowflake-database naar Experience Platform streamen met behulp van de gebruikersinterface
+description: Leer hoe u gegevens kunt streamen van uw SnwofLake-database naar Experience Platform
 exl-id: 49d488f1-90d8-452a-9f3e-02afdcc79b09
-source-git-commit: 34b1676ebb5405d73cf37cd786d1e6c26cb8fdaa
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '1596'
+source-wordcount: '1597'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,7 @@ Volg deze handleiding om te leren hoe u de gebruikersinterface kunt gebruiken om
 
 ## Aan de slag
 
-Deze zelfstudie vereist een goed begrip van de volgende onderdelen van het Experience Platform:
+Deze zelfstudie vereist een goed begrip van de volgende onderdelen van Experience Platform:
 
 * [[!DNL Experience Data Model (XDM)]  Systeem ](../../../../../xdm/home.md): Het gestandaardiseerde kader waardoor [!DNL Experience Platform] gegevens van de klantenervaring organiseert.
    * [ Grondbeginselen van schemacompositie ](../../../../../xdm/schema/composition.md): Leer over de basisbouwstenen van schema&#39;s XDM, met inbegrip van zeer belangrijke principes en beste praktijken in schemacompositie.
@@ -26,9 +26,9 @@ Deze zelfstudie vereist een goed begrip van de volgende onderdelen van het Exper
 
 Lees de gids op [ eerste vereiste opstelling voor  [!DNL Snowflake]  het stromen gegevens ](../../../../connectors/databases/snowflake-streaming.md) voor informatie over de stappen die u moet voltooien alvorens u het stromen gegevens van [!DNL Snowflake] aan Experience Platform kunt opnemen.
 
-## Gebruik de [!DNL Snowflake Streaming] -bron om [!DNL Snowflake] -gegevens te streamen naar het Experience Platform
+## Gebruik de [!DNL Snowflake Streaming] -bron om [!DNL Snowflake] -gegevens te streamen naar Experience Platform
 
-Selecteer in de gebruikersinterface van het platform de optie **[!UICONTROL Sources]** in de linkernavigatie voor toegang tot de werkruimte van [!UICONTROL Sources] . U kunt de juiste categorie selecteren in de catalogus aan de linkerkant van het scherm. U kunt ook de specifieke bron vinden waarmee u wilt werken met de zoekoptie.
+Selecteer in de gebruikersinterface van Experience Platform de optie **[!UICONTROL Sources]** in de linkernavigatie voor toegang tot de werkruimte van [!UICONTROL Sources] . U kunt de juiste categorie selecteren in de catalogus aan de linkerkant van het scherm. U kunt ook de specifieke bron vinden waarmee u wilt werken met de zoekoptie.
 
 Onder de *categorie van Gegevensbestanden*, selecteer **[!DNL Snowflake Streaming]**, en selecteer dan **[!UICONTROL Add data]**.
 
@@ -36,7 +36,7 @@ Onder de *categorie van Gegevensbestanden*, selecteer **[!DNL Snowflake Streamin
 >
 >Bronnen zonder geverifieerde account in de broncatalogus geven de optie **[!UICONTROL Set up]** weer. Zodra een geverifieerd account bestaat, verandert deze optie in **[!UICONTROL Add data]** .
 
-![ de broncatalogus in het Experience Platform UI, met de Snowflake die bronkaart stroomt geselecteerd.](../../../../images/tutorials/create/snowflake-streaming/catalog.png)
+![ de broncatalogus in Experience Platform UI, met de Snowflake die bronkaart stroomt geselecteerd.](../../../../images/tutorials/create/snowflake-streaming/catalog.png)
 
 De pagina **[!UICONTROL Connect Snowflake Streaming account]** wordt weergegeven. Op deze pagina kunt u nieuwe of bestaande referenties gebruiken.
 
@@ -53,8 +53,8 @@ Als u klaar bent, selecteert u **[!UICONTROL Connect to source]** en laat u de n
 | Credentials | Beschrijving |
 | --- | --- |
 | Account | De naam van uw [!DNL Snowflake] account. Voor overeenkomsten op rekeningsnamen, lees de [[!DNL Snowflake Streaming]  authentificatiegids ](../../../../connectors/databases/snowflake-streaming.md#gather-required-credentials). |
-| Warehouse | De naam van uw [!DNL Snowflake] magazijn. De opslagplaatsen beheren de uitvoering van vragen in [!DNL Snowflake]. Elk [!DNL Snowflake] -pakhuis is onafhankelijk van elkaar en moet afzonderlijk worden benaderd om gegevens naar het Experience Platform te brengen. |
-| Database | De naam van de [!DNL Snowflake] -database. Het gegevensbestand bevat de gegevens die u aan Experience Platform wilt brengen. |
+| Warehouse | De naam van uw [!DNL Snowflake] magazijn. De opslagplaatsen beheren de uitvoering van vragen in [!DNL Snowflake]. Elk [!DNL Snowflake] -pakhuis is onafhankelijk van elkaar en moet afzonderlijk worden benaderd om gegevens naar Experience Platform te kunnen verzenden. |
+| Database | De naam van de [!DNL Snowflake] -database. De database bevat de gegevens die u naar Experience Platform wilt verzenden. |
 | Schema | (Optioneel) Het databaseschema dat aan uw [!DNL Snowflake] -account is gekoppeld. |
 | Gebruikersnaam | De gebruikersnaam van uw [!DNL Snowflake] -account. |
 | Wachtwoord | Het wachtwoord voor uw [!DNL Snowflake] -account. |
@@ -76,13 +76,13 @@ Selecteer **[!UICONTROL Next]** om door te gaan.
 
 >[!IMPORTANT]
 >
->* Er moet een tijdstempelkolom in de brontabel staan om een streaminggegevensstroom te kunnen maken. Het Experience Platform moet weten wanneer gegevens worden ingevoerd en wanneer incrementele gegevens worden gestreamd. Dit is de tijdstempel vereist. U kunt met terugwerkende kracht een tijdstempelkolom toevoegen voor een bestaande verbinding en een nieuwe gegevensstroom creëren.
+>* Er moet een tijdstempelkolom in de brontabel staan om een streaminggegevensstroom te kunnen maken. Experience Platform moet de tijdstempel hebben om te weten wanneer gegevens worden ingevoerd en wanneer incrementele gegevens worden gestreamd. U kunt met terugwerkende kracht een tijdstempelkolom toevoegen voor een bestaande verbinding en een nieuwe gegevensstroom creëren.
 >
 >* Zorg ervoor dat het hoofdlettergebruik van de gegevensvelden in het bestand met voorbeeldbrongegevens in overeenstemming is met de [!DNL Snowflake] -richtlijnen voor de oplossing van hoofdletters en kleine letters voor id&#39;s. Lees het [[!DNL Snowflake]  document op herkenningsteken casing ](https://docs.snowflake.com/en/sql-reference/identifiers-syntax#label-identifier-casing) voor meer informatie.
 
-De stap [!UICONTROL Select data] wordt weergegeven. In deze stap, moet u de gegevens selecteren u in Experience Platform wilt invoeren, timestamps en timezones vormen, en een dossier van steekproefbrongegevens voor de opname van ruwe gegevens verstrekken.
+De stap [!UICONTROL Select data] wordt weergegeven. In deze stap moet u de gegevens selecteren die u in Experience Platform wilt importeren, tijdstempels en tijdzones configureren en een bestand met voorbeeldbrongegevens opgeven voor de invoer van onbewerkte gegevens.
 
-Gebruik de databasemap links op het scherm en selecteer de tabel die u naar het Experience Platform wilt importeren.
+Gebruik de databasemap links op het scherm en selecteer de tabel die u naar Experience Platform wilt importeren.
 
 ![ de uitgezochte gegevensinterface met een geselecteerde gegevensbestandlijst.](../../../../images/tutorials/create/snowflake-streaming/select-table.png)
 
@@ -135,7 +135,7 @@ Als u al een bestaande dataset hebt, selecteert u **[!UICONTROL Existing dataset
 Als uw dataset voor het Profiel van de Klant in real time wordt toegelaten, dan tijdens deze stap, kunt u **[!UICONTROL Profile dataset]** van een knevel voorzien om uw gegevens voor Profiel-opname toe te laten. U kunt deze stap ook gebruiken om **[!UICONTROL Error diagnostics]** en **[!UICONTROL Partial ingestion]** in te schakelen.
 
 * **[!UICONTROL Error diagnostics]**: Selecteer **[!UICONTROL Error diagnostics]** om de bron de instructie te geven foutdiagnostiek te produceren waarnaar u later kunt verwijzen bij het controleren van de gegevenssetactiviteit en de status van de gegevensstroom.
-* **[!UICONTROL Partial ingestion]**: Gedeeltelijke batch-opname is de mogelijkheid om gegevens met fouten in te voeren tot een bepaalde configureerbare drempel. Met deze functie kunt u al uw nauwkeurige gegevens in het Experience Platform opnemen, terwijl al uw onjuiste gegevens afzonderlijk worden opgeslagen met informatie over waarom deze niet geldig zijn.
+* **[!UICONTROL Partial ingestion]**: Gedeeltelijke batch-opname is de mogelijkheid om gegevens met fouten in te voeren tot een bepaalde configureerbare drempel. Met deze functie kunt u al uw nauwkeurige gegevens in Experience Platform opnemen, terwijl al uw onjuiste gegevens afzonderlijk worden opgeslagen met informatie over waarom deze niet geldig zijn.
 
 +++
 
@@ -149,7 +149,7 @@ Zodra uw dataset wordt gevormd, moet u details op uw gegevensstroom, met inbegri
 | --- | --- |
 | Naam gegevensstroom | De naam van de gegevensstroom.  Standaard wordt hiervoor de naam gebruikt van het bestand dat wordt geïmporteerd. |
 | Beschrijving | (Optioneel) Een korte beschrijving van uw gegevensstroom. |
-| Waarschuwingen | Experience Platform kan op gebeurtenissen gebaseerde waarschuwingen genereren waarop gebruikers zich kunnen abonneren. Deze opties vereisen een lopende gegevensstroom om hen teweeg te brengen. Voor meer informatie, lees het [ alarm overzicht ](../../alerts.md) <ul><li>**het Begin van de Looppas van Bronnen Dataflow**: Selecteer dit alarm om een bericht te ontvangen wanneer uw dataflow looppas begint.</li><li>**Bronnen Dataflow de Succes van de Looppas**: Selecteer dit alarm om een bericht te ontvangen als uw dataflow zonder enige fouten beëindigt.</li><li>**de Uitval van de Looppas van Gegevensstroom van Bronnen**: Selecteer dit alarm om een bericht te ontvangen als uw dataflow looppas met om het even welke fouten beëindigt.</li></ul> |
+| Waarschuwingen | Experience Platform kan op gebeurtenissen gebaseerde waarschuwingen produceren waarop gebruikers zich kunnen abonneren. Deze opties vereisen een lopende gegevensstroom om hen teweeg te brengen. Voor meer informatie, lees het [ alarm overzicht ](../../alerts.md) <ul><li>**het Begin van de Looppas van Bronnen Dataflow**: Selecteer dit alarm om een bericht te ontvangen wanneer uw dataflow looppas begint.</li><li>**Bronnen Dataflow de Succes van de Looppas**: Selecteer dit alarm om een bericht te ontvangen als uw dataflow zonder enige fouten beëindigt.</li><li>**de Uitval van de Looppas van Gegevensstroom van Bronnen**: Selecteer dit alarm om een bericht te ontvangen als uw dataflow looppas met om het even welke fouten beëindigt.</li></ul> |
 
 Als u klaar bent, selecteert u **[!UICONTROL Next]** om door te gaan.
 

@@ -1,16 +1,16 @@
 ---
-title: U kunt via de gebruikersinterface betalingsgegevens vanuit uw Stripe aan het Experience Platform toevoegen.
-description: Leer hoe u via de gebruikersinterface betalingsgegevens van uw Stripe naar Experience Platform kunt invoeren.
+title: Breng via de gebruikersinterface betalingsgegevens van uw Stripe-account aan Experience Platform aan.
+description: Leer hoe u via de gebruikersinterface betalingsgegevens van uw Stripe-account aan Experience Platform kunt toevoegen.
 badge: Beta
 exl-id: f20c5935-a7c0-4387-b29e-73e78cab4972
-source-git-commit: dd9afe650f4c83b3877f980acac66e703e9ae5d8
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '1610'
+source-wordcount: '1611'
 ht-degree: 0%
 
 ---
 
-# Betalingsgegevens vanuit uw [!DNL Stripe] -account aan het Experience Platform toevoegen via de gebruikersinterface
+# Betalingsgegevens vanuit uw [!DNL Stripe] -account aan Experience Platform toevoegen via de gebruikersinterface
 
 >[!NOTE]
 >
@@ -20,7 +20,7 @@ Lees de volgende zelfstudie om te leren hoe u via de gebruikersinterface betalin
 
 ## Aan de slag
 
-Deze zelfstudie vereist een goed begrip van de volgende onderdelen van het Experience Platform:
+Deze zelfstudie vereist een goed begrip van de volgende onderdelen van Experience Platform:
 
 * [[!DNL Experience Data Model (XDM)]  Systeem ](../../../../../xdm/home.md): Het gestandaardiseerde kader waardoor [!DNL Experience Platform] gegevens van de klantenervaring organiseert.
    * [ Grondbeginselen van schemacompositie ](../../../../../xdm/schema/composition.md): Leer over de basisbouwstenen van schema&#39;s XDM, met inbegrip van zeer belangrijke principes en beste praktijken in schemacompositie.
@@ -33,7 +33,7 @@ Lees het [[!DNL Stripe]  overzicht ](../../../../connectors/payments/stripe.md) 
 
 ## Sluit uw [!DNL Stripe] -account aan {#connect}
 
-Selecteer in de gebruikersinterface van het platform de optie **[!UICONTROL Sources]** in de linkernavigatie voor toegang tot de werkruimte van [!UICONTROL Sources] . U kunt de juiste categorie selecteren in de catalogus aan de linkerkant van het scherm. U kunt ook de specifieke bron vinden waarmee u wilt werken met de zoekoptie.
+Selecteer in de gebruikersinterface van Experience Platform de optie **[!UICONTROL Sources]** in de linkernavigatie voor toegang tot de werkruimte van [!UICONTROL Sources] . U kunt de juiste categorie selecteren in de catalogus aan de linkerkant van het scherm. U kunt ook de specifieke bron vinden waarmee u wilt werken met de zoekoptie.
 
 Onder de *categorie van Betalingen*, selecteer **[!DNL Stripe]**, en selecteer dan **[!UICONTROL Set up]**.
 
@@ -41,7 +41,7 @@ Onder de *categorie van Betalingen*, selecteer **[!DNL Stripe]**, en selecteer d
 >
 >Bronnen in de catalogus met bronnen geven de optie **[!UICONTROL Set up]** weer wanneer een bepaalde bron nog geen geverifieerde account heeft. Zodra een geverifieerd account bestaat, verandert deze optie in **[!UICONTROL Add data]** .
 
-![ de broncatalogus in het Experience Platform UI, met de Stripe geselecteerde bronkaart.](../../../../images/tutorials/create/stripe/catalog.png)
+![ de broncatalogus in Experience Platform UI, met de geselecteerde bron van Stripe kaart.](../../../../images/tutorials/create/stripe/catalog.png)
 
 De pagina **[!UICONTROL Connect Stripe account]** wordt weergegeven. Op deze pagina kunt u nieuwe of bestaande referenties gebruiken.
 
@@ -84,7 +84,7 @@ Nu u toegang hebt tot uw account, moet u het juiste pad aangeven naar de [!DNL S
 
 Zodra uw eindpunt wordt geselecteerd, werkt de interface in een voorproefscherm bij, die de gegevensstructuur van het [!DNL Stripe] eindpunt toont dat u selecteerde. Selecteer **[!UICONTROL Next]** om door te gaan.
 
-![ het voorproefvenster van uw gegevens van het Stripe.](../../../../images/tutorials/create/stripe/preview.png)
+![ het voorproefvenster van uw gegevens van Stripe.](../../../../images/tutorials/create/stripe/preview.png)
 
 ## Gegevensset en gegevens over gegevensstroom opgeven {#provide-dataset-and-dataflow-details}
 
@@ -121,7 +121,7 @@ Als u al een bestaande dataset hebt, selecteert u **[!UICONTROL Existing dataset
 Als uw dataset voor het Profiel van de Klant in real time wordt toegelaten, dan tijdens deze stap, kunt u **[!UICONTROL Profile dataset]** van een knevel voorzien om uw gegevens voor Profiel-opname toe te laten. U kunt deze stap ook gebruiken om **[!UICONTROL Error diagnostics]** en **[!UICONTROL Partial ingestion]** in te schakelen.
 
 * **[!UICONTROL Error diagnostics]**: Selecteer **[!UICONTROL Error diagnostics]** om de bron de instructie te geven foutdiagnostiek te produceren waarnaar u later kunt verwijzen bij het controleren van de gegevenssetactiviteit en de status van de gegevensstroom.
-* **[!UICONTROL Partial ingestion]**: Gedeeltelijke batch-opname is de mogelijkheid om gegevens met fouten in te voeren tot een bepaalde configureerbare drempel. Met deze functie kunt u al uw nauwkeurige gegevens in het Experience Platform opnemen, terwijl al uw onjuiste gegevens afzonderlijk worden opgeslagen met informatie over waarom deze niet geldig zijn.
+* **[!UICONTROL Partial ingestion]**: Gedeeltelijke batch-opname is de mogelijkheid om gegevens met fouten in te voeren tot een bepaalde configureerbare drempel. Met deze functie kunt u al uw nauwkeurige gegevens in Experience Platform opnemen, terwijl al uw onjuiste gegevens afzonderlijk worden opgeslagen met informatie over waarom deze niet geldig zijn.
 
 +++
 
@@ -135,13 +135,13 @@ Zodra uw dataset wordt gevormd, moet u details op uw gegevensstroom, met inbegri
 | --- | --- |
 | Naam gegevensstroom | De naam van de gegevensstroom.  Standaard wordt hiervoor de naam gebruikt van het bestand dat wordt geïmporteerd. |
 | Beschrijving | (Optioneel) Een korte beschrijving van uw gegevensstroom. |
-| Waarschuwingen | Experience Platform kan op gebeurtenissen gebaseerde waarschuwingen genereren waarop gebruikers zich kunnen abonneren. Deze opties vereisen allen een lopende gegevensstroom om hen teweeg te brengen.  Voor meer informatie, lees het [ alarm overzicht ](../../alerts.md) <ul><li>**het Begin van de Looppas van Bronnen Dataflow**: Selecteer dit alarm om een bericht te ontvangen wanneer uw dataflow looppas begint.</li><li>**Bronnen Dataflow de Succes van de Looppas**: Selecteer dit alarm om een bericht te ontvangen als uw dataflow zonder enige fouten beëindigt.</li><li>**de Uitval van de Looppas van Gegevensstroom van Bronnen**: Selecteer dit alarm om een bericht te ontvangen als uw dataflow looppas met om het even welke fouten beëindigt.</li></ul> |
+| Waarschuwingen | Experience Platform kan op gebeurtenissen gebaseerde waarschuwingen produceren waarop gebruikers zich kunnen abonneren. Deze opties vereisen allen een lopende gegevensstroom om hen teweeg te brengen.  Voor meer informatie, lees het [ alarm overzicht ](../../alerts.md) <ul><li>**het Begin van de Looppas van Bronnen Dataflow**: Selecteer dit alarm om een bericht te ontvangen wanneer uw dataflow looppas begint.</li><li>**Bronnen Dataflow de Succes van de Looppas**: Selecteer dit alarm om een bericht te ontvangen als uw dataflow zonder enige fouten beëindigt.</li><li>**de Uitval van de Looppas van Gegevensstroom van Bronnen**: Selecteer dit alarm om een bericht te ontvangen als uw dataflow looppas met om het even welke fouten beëindigt.</li></ul> |
 
 Als u klaar bent, selecteert u **[!UICONTROL Next]** om door te gaan.
 
 ## Velden toewijzen aan een XDM-schema {#mapping}
 
-De stap **[!UICONTROL Mapping]** wordt weergegeven. Gebruik de toewijzingsinterface om uw brongegevens aan de aangewezen schemagebieden in kaart te brengen alvorens die gegevens in Experience Platform in te voeren. Voor een uitgebreide gids op hoe te om de kaartinterface te gebruiken, lees de [ gids UI van de Prep van Gegevens ](../../../../../data-prep/ui/mapping.md) voor meer informatie.
+De stap **[!UICONTROL Mapping]** wordt weergegeven. Gebruik de toewijzingsinterface om uw brongegevens toe te wijzen aan de aangewezen schemagebieden alvorens die gegevens in Experience Platform op te nemen. Voor een uitgebreide gids op hoe te om de kaartinterface te gebruiken, lees de [ gids UI van de Prep van Gegevens ](../../../../../data-prep/ui/mapping.md) voor meer informatie.
 
 ![ de afbeeldingsinterface van het bronwerkschema.](../../../../images/tutorials/create/stripe/mapping.png)
 
@@ -182,7 +182,7 @@ Nadat u de gegevensstroom hebt gereviseerd, selecteert u **[!UICONTROL Finish]**
 
 ## Volgende stappen
 
-Aan de hand van deze zelfstudie hebt u een gegevensstroom gemaakt om betalingsgegevens van uw [!DNL Stripe] -bron naar het Experience Platform te verzenden. Voor extra bronnen raadpleegt u de documentatie die hieronder wordt beschreven.
+Aan de hand van deze zelfstudie hebt u een gegevensstroom gemaakt om betalingsgegevens van uw [!DNL Stripe] -bron naar Experience Platform te verzenden. Voor extra bronnen raadpleegt u de documentatie die hieronder wordt beschreven.
 
 ### Uw gegevensstroom controleren
 

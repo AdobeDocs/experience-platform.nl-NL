@@ -3,9 +3,9 @@ title: De Trade Desk - CRM-verbinding
 description: Activeer profielen aan uw rekening van het Bureau van de Handel voor publiek gericht en onderdrukking die op de gegevens van CRM wordt gebaseerd.
 last-substantial-update: 2025-01-16T00:00:00Z
 exl-id: e09eaede-5525-4a51-a0e6-00ed5fdc662b
-source-git-commit: a189a86749996c0ee7b6146bcd030d8495745e12
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1083'
+source-wordcount: '1088'
 ht-degree: 0%
 
 ---
@@ -76,7 +76,7 @@ Raadpleeg de onderstaande tabel voor informatie over het exporttype en de export
 | Item | Type | Notities |
 ---------|----------|---------|
 | Exporttype | **[!UICONTROL Audience export]** | U exporteert alle leden van een publiek met de id&#39;s (e-mail of gehashte e-mail) die worden gebruikt in de bestemming Handelsbureau. |
-| Exportfrequentie | **[!UICONTROL Daily Batch]** | Aangezien een profiel in Experience Platform wordt bijgewerkt dat op publieksevaluatie wordt gebaseerd, wordt het profiel (identiteiten) één keer per dag bijgewerkt stroomafwaarts aan het bestemmingsplatform. Lees meer over [ partijuitvoer ](/help/destinations/destination-types.md#file-based). |
+| Exportfrequentie | **[!UICONTROL Daily Batch]** | Aangezien een profiel in Experience Platform wordt bijgewerkt op basis van publieksevaluatie, wordt het profiel (de identiteiten) eenmaal per dag bijgewerkt naar het doelplatform. Lees meer over [ partijuitvoer ](/help/destinations/destination-types.md#file-based). |
 
 {style="table-layout:auto"}
 
@@ -95,9 +95,9 @@ Voordat u publieksgegevens naar een doel kunt verzenden of activeren, moet u een
 * **[!UICONTROL Description]**: Een beschrijving die u zal helpen deze bestemming in de toekomst identificeren.
 * **[!UICONTROL Advertiser ID]**: uw [!DNL Trade Desk Advertiser ID] , die kan worden gedeeld door uw [!DNL Trade Desk] accountmanager of kan worden gevonden onder [!DNL Advertiser Preferences] in de gebruikersinterface van [!DNL Trade Desk] .
 
-{het schermschot van het platform UI die tonen hoe te om bestemmingsdetails in te vullen.](/help/destinations/assets/catalog/advertising/tradedesk/configuredestination2.png)![
+{het schermschot van 0} Experience Platform UI die tonen hoe te om bestemmingsdetails in te vullen.](/help/destinations/assets/catalog/advertising/tradedesk/configuredestination2.png)![
 
-Wanneer u verbinding maakt met de bestemming, is het instellen van een beleid voor gegevensbeheer volledig optioneel. Gelieve te herzien het Experience Platform [ overzicht van het gegevensbeheer ](/help/data-governance/policies/overview.md) voor meer details.
+Wanneer u verbinding maakt met de bestemming, is het instellen van een beleid voor gegevensbeheer volledig optioneel. Gelieve te herzien Experience Platform [ overzicht van het gegevensbeheer ](/help/data-governance/policies/overview.md) voor meer details.
 
 ## Soorten publiek naar dit doel activeren {#activate}
 
@@ -110,17 +110,17 @@ Lees [ activeer publieksgegevens aan de uitvoerbestemmingen van het partijprofie
 
 Op de pagina **[!UICONTROL Scheduling]** kunt u het schema en de bestandsnamen configureren voor elk publiek dat u exporteert. Het is verplicht het schema te configureren, maar het configureren van de bestandsnaam is optioneel.
 
-{het schermschot van het platform UI aan de activering van het programmapubliek.](/help/destinations/assets/catalog/advertising/tradedesk/schedulesegment1.png)![
+{het schermschot van 0} Experience Platform UI aan de activering van het programmapubliek.](/help/destinations/assets/catalog/advertising/tradedesk/schedulesegment1.png)![
 
 >[!NOTE]
 >
 >Alle soorten publiek die op [!DNL The Trade Desk] CRM-bestemming worden geactiveerd, worden automatisch ingesteld op een dagelijkse frequentie en het volledige bestand wordt geëxporteerd.
 
-{het schermschot van het platform UI aan de activering van het programmapubliek.](/help/destinations/assets/catalog/advertising/tradedesk/schedulesegment2.png)![
+{het schermschot van 0} Experience Platform UI aan de activering van het programmapubliek.](/help/destinations/assets/catalog/advertising/tradedesk/schedulesegment2.png)![
 
 Op de pagina **[!UICONTROL Mapping]** moet u kenmerken of naamruimten selecteren in de bronkolom en toewijzen aan de doelkolom.
 
-{het schermschot van het platform UI aan de activering van het kaartpubliek.](/help/destinations/assets/catalog/advertising/tradedesk/mappingsegment1.png)![
+{het schermschot van 0} Experience Platform UI aan de activering van het kaartpubliek.](/help/destinations/assets/catalog/advertising/tradedesk/mappingsegment1.png)![
 
 Hieronder ziet u een voorbeeld van correcte identiteitstoewijzing bij het activeren van soorten publiek naar [!DNL The Trade Desk] CRM-bestemming.
 
@@ -131,7 +131,7 @@ Hieronder ziet u een voorbeeld van correcte identiteitstoewijzing bij het active
 Bronvelden selecteren:
 
 * Selecteer de naamruimte of het kenmerk `Email` als bronidentiteit als u het onbewerkte e-mailadres bij gegevensinvoer gebruikt.
-* Selecteer de naamruimte of het kenmerk `Email_LC_SHA256` als bronidentiteit als u de e-mailadressen van klanten bij het invoeren van gegevens in Platform hebt gewijzigd.
+* Selecteer de naamruimte of het kenmerk `Email_LC_SHA256` als bronidentiteit als u de e-mailadressen van klanten bij het invoeren van gegevens in Experience Platform hebt gewijzigd.
 
 Doelvelden selecteren:
 
@@ -140,12 +140,12 @@ Doelvelden selecteren:
 
 ## Gegevens exporteren valideren {#validate}
 
-Als u wilt controleren of gegevens correct vanuit het Experience Platform naar [!DNL The Trade Desk] worden geëxporteerd, zoekt u het publiek onder de datatielabel Adobe 1PD in het [!DNL The Trade Desk] Data Management Platform (DMP). Hier volgen de stappen voor het zoeken van de bijbehorende id in de gebruikersinterface van [!DNL Trade Desk] :
+Als u wilt controleren of gegevens correct vanuit Experience Platform en naar [!DNL The Trade Desk] worden geëxporteerd, zoekt u het publiek onder de Adobe 1PD-gegevenstabel in [!DNL The Trade Desk] Data Management Platform (DMP). Hier volgen de stappen voor het zoeken van de bijbehorende id in de gebruikersinterface van [!DNL Trade Desk] :
 
 1. Selecteer eerst de tab **[!UICONTROL Data]** en bekijk de sectie **[!UICONTROL First-Party]** .
 2. Schuif omlaag op de pagina, onder **[!UICONTROL Imported Data]** , zoekt u de **[!UICONTROL Adobe 1PD Tile]** .
 3. Klik op de tegel** [!UICONTROL Adobe 1PD]** en hierin worden alle soorten publiek weergegeven die zijn geactiveerd voor de [!DNL Trade Desk] -bestemming voor uw adverteerder. U kunt ook de zoekfunctie gebruiken.
-4. Segment-id # van Experience Platform wordt weergegeven als Segmentnaam in de gebruikersinterface van [!DNL Trade Desk] .
+4. Het segment-id # van Experience Platform wordt weergegeven als de segmentnaam in de gebruikersinterface van [!DNL Trade Desk] .
 
 ## Gegevensgebruik en -beheer {#data-usage-governance}
 

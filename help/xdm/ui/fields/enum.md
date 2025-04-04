@@ -2,11 +2,11 @@
 keywords: Experience Platform;home;populaire onderwerpen;api;API;XDM;XDM systeem;ervaringsgegevensmodel;gegevensmodel;ui;werkruimte;enum;field;
 solution: Experience Platform
 title: Enum Fields en voorgestelde waarden in UI bepalen
-description: Leer hoe u opsommingen en voorgestelde waarden voor tekenreeksvelden definieert in de gebruikersinterface van het Experience Platform.
+description: Leer hoe u opsommingen en voorgestelde waarden voor tekenreeksvelden definieert in de Experience Platform-gebruikersinterface.
 exl-id: 67ec5382-31de-4f8d-9618-e8919bb5a472
-source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1221'
+source-wordcount: '1222'
 ht-degree: 0%
 
 ---
@@ -86,7 +86,7 @@ See the [section below](#evolution) for more information on the rules for updati
 
 ## Evolutieregels voor opsommingen en voorgestelde waarden {#evolution}
 
-Nadat een schema met een enum gebied is gebruikt om gegevens in Platform in te voeren, moeten om het even welke verdere veranderingen die in de schemadefinitie worden aangebracht aan de gegevens reeds in het systeem voldoen. In het algemeen, kunnen de veranderingen die aan een bestaand gebied worden aangebracht slechts dat gebied **minder** restrictief maken. Een veld kan niet restrictiever worden gemaakt dan het al is.
+Nadat een schema met een enum gebied is gebruikt om gegevens in Experience Platform in te voeren, moeten om het even welke verdere veranderingen die in de schemadefinitie worden aangebracht aan de gegevens voldoen reeds in het systeem. In het algemeen, kunnen de veranderingen die aan een bestaand gebied worden aangebracht slechts dat gebied **minder** restrictief maken. Een veld kan niet restrictiever worden gemaakt dan het al is.
 
 Wanneer het over aantallen en voorgestelde waarden aankomt, zijn de volgende regels post-ingesetion van toepassing:
 

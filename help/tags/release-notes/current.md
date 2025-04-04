@@ -2,10 +2,10 @@
 title: Aanvullende informatie voor tags en het doorsturen van gebeurtenissen
 description: De nieuwste aanvullende informatie voor tags en het doorsturen van gebeurtenissen in Adobe Experience Platform.
 exl-id: 2ebeaa1e-64b8-48fd-b4e8-419663271a87
-source-git-commit: e300e57df998836a8c388511b446e90499185705
-workflow-type: ht
-source-wordcount: '769'
-ht-degree: 100%
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+workflow-type: tm+mt
+source-wordcount: '771'
+ht-degree: 93%
 
 ---
 
@@ -54,13 +54,13 @@ Er zijn nieuwe extensies uitgebracht:
 
 ## 26 oktober 2022
 
-* **Gevoelige gegevensverwerking voor datastreams**: datastreams maken nu gebruik van verschillende Platform-technologieën om gevoelige gegevens op de juiste manier te verwerken, zoals opgelegd door regelgeving als de Health Insurance Portability and Accountability Act (HIPAA). Zie de sectie over [omgaan met gevoelige gegevens in datastreams](../../datastreams/overview.md#sensitive) voor meer informatie.
+* **Gevoelige gegevens behandeling voor gegevensstromen**: De stromen van gegevensstromen hefboomwerking nu verscheidene technologieën van Experience Platform om gevoelige gegevens geschikt te behandelen zoals die door verordeningen zoals de Wet van de Portabiliteit en van de Verantwoording van de Ziekteverzekering (HIPAA) worden afgedwongen. Zie de sectie over [omgaan met gevoelige gegevens in datastreams](../../datastreams/overview.md#sensitive) voor meer informatie.
 * **[!DNL Splunk]-extensie voor het doorsturen van gebeurtenissen**: u kunt nu gegevens verzenden naar [!DNL Splunk] met behulp van een extensie voor het [doorsturen van gebeurtenissen](../ui/event-forwarding/overview.md). Zie het [[!DNL Splunk] extensieoverzicht](../extensions/server/splunk/overview.md) voor meer informatie.
-* **[!DNL Zendesk]-extensie voor het doorsturen van gebeurtenissen**: u kunt nu gegevens verzenden naar [!DNL Zendesk] met behulp van een [extensie voor het doorsturen van gebeurtenissen](../ui/event-forwarding/overview.md). Zie het [[!DNL Zendesk] extensieoverzicht](../extensions/server/zendesk/overview.md) voor meer informatie.
+* **[!DNL Zendesk]-extensie voor het doorsturen van gebeurtenissen**: u kunt nu gegevens verzenden naar [!DNL Zendesk] met behulp van een extensie voor het [doorsturen van gebeurtenissen](../ui/event-forwarding/overview.md). Zie het [[!DNL Zendesk] extensieoverzicht](../extensions/server/zendesk/overview.md) voor meer informatie.
 
 ## 28 september 2022
 
-* **Integratie van het linkernavigatiedeelvenster in Adobe Experience Platform**: alle mogelijkheden die voorheen exclusief waren voor de gebruikersinterface voor dataverzameling (inclusief tags en het doorsturen van gebeurtenissen), zijn nu ook beschikbaar via het linkernavigatiedeelvenster in de gebruikersinterface van Experience Platform, onder de categorie **[!UICONTROL Data Collection]**. Hierdoor hoeft u niet meer te schakelen tussen gebruikersinterfaces wanneer u met de dataverzamelingsmogelijkheden van Platform werkt.
+* **Integratie van het linkernavigatiedeelvenster in Adobe Experience Platform**: alle mogelijkheden die voorheen exclusief waren voor de gebruikersinterface voor dataverzameling (inclusief tags en het doorsturen van gebeurtenissen), zijn nu ook beschikbaar via het linkernavigatiedeelvenster in de gebruikersinterface van Experience Platform, onder de categorie **[!UICONTROL Data Collection]**. Dit elimineert de behoefte om tussen UIs te schakelen wanneer het werken met de mogelijkheden van de gegevensinzameling in Experience Platform.
 * **Gebruikersattributie in tags en gebeurtenissen doorsturen**: bij het weergeven van beschikbare eigenschappen in tags en gebeurtenissen doorsturen wordt nu voor elke vermelde eigenschap weergegeven wanneer deze voor het laatst is bijgewerkt, en door wie.
 * **[[!DNL Snap Conversions API] -extensie](https://exchange.adobe.com/apps/ec/108550) voor gebeurtenissen doorsturen**: u kunt nu gegevens naar de [!DNL Snapchat Conversions API] verzenden met behulp van de extensie [Gebeurtenissen doorsturen](../../tags/ui/event-forwarding/overview.md). Raadpleeg de [[!DNL Snapchat Marketing API] documentatie](https://marketingapi.snapchat.com/docs/conversion.html) voor meer informatie over het verifiëren en gebruiken van de API.
 

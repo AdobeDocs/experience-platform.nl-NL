@@ -2,10 +2,10 @@
 title: Aanvullende informatie van maart 2024 voor Adobe Experience Platform
 description: Aanvullende informatie van maart 2024 voor Adobe Experience Platform.
 exl-id: cab47a76-04f3-48ec-82aa-d17645e4eb15
-source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
-workflow-type: ht
-source-wordcount: '1189'
-ht-degree: 100%
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+workflow-type: tm+mt
+source-wordcount: '1191'
+ht-degree: 97%
 
 ---
 
@@ -69,7 +69,7 @@ Voor meer informatie over dataverzameling, raadpleegt u het [overzicht van de da
 
 ## Bestemmingen {#destinations}
 
-[!DNL Destinations] zijn vooraf gebouwde integraties met bestemmingsplatforms die een naadloze activering van gegevens uit Adobe Experience Platform mogelijk maken. U kunt bestemmingen gebruiken om uw bekende en onbekende gegevens te activeren voor cross-channel marketingcampagnes, e-mailcampagnes, gerichte advertenties en vele andere gebruiksscenario&#39;s.
+[!DNL Destinations] zijn pre-built integraties met bestemmingsplatforms die de naadloze activering van gegevens van Adobe Experience Platform mogelijk maken. U kunt bestemmingen gebruiken om uw bekende en onbekende gegevens te activeren voor cross-channel marketingcampagnes, e-mailcampagnes, gerichte advertenties en vele andere gebruiksscenario&#39;s.
 
 **Nieuwe en bijgewerkte bestemmingen** {#new-updated-destinations}
 
@@ -98,15 +98,15 @@ XDM is een open-bronspecificatie die algemene structuren en definities (schema&#
 
 | Functie | Beschrijving |
 | --- | --- |
-| Ondersteuning voor het gegevenstype voor toewijzing in de Experience Platform-gebruikersinterface | U kunt de gegevensstructuur van uw Experience-datamodel (XDM) verder aanpassen door ktoewijzingsvelden te definiëren in de Platform-gebruikersinterface. U kunt nu toewijzingsvelden maken in de Schema-editor om flexibele gegevensstructuren te modelleren of sleutelwaardeparen efficiënt op te slaan. Selecteer Toewijzen in de vervolgkeuzelijst Type wanneer u een nieuw veld definieert om subvelden te configureren en deze toe te wijzen aan veldgroepen. De ondersteunde typen toewijzingswaarden zijn tekenreeks en geheel getal.<br>![De schema-editor met de velden Type en Type toewijzingswaarde gemarkeerd.](../2024/assets/march/maps.png "De schema-editor met de velden Type en Type toewijzingswaarde gemarkeerd."){width="100" zoomable="yes"}<br>Raadpleeg de handleiding voor de gebruikersinterface voor meer informatie over het [definiëren van toewijzingsvelden in de gebruikersinterface](../../xdm/ui/fields/map.md). |
+| Ondersteuning voor het gegevenstype voor toewijzing in de Experience Platform-gebruikersinterface | Pas de gegevensstructuur van uw Experience Data Model (XDM) verder aan door kaartvelden te definiëren in de gebruikersinterface van Experience Platform. U kunt nu toewijzingsvelden maken in de Schema-editor om flexibele gegevensstructuren te modelleren of sleutelwaardeparen efficiënt op te slaan. Selecteer Toewijzen in de vervolgkeuzelijst Type wanneer u een nieuw veld definieert om subvelden te configureren en deze toe te wijzen aan veldgroepen. De ondersteunde typen toewijzingswaarden zijn tekenreeks en geheel getal.<br>![De schema-editor met de velden Type en Type toewijzingswaarde gemarkeerd.](../2024/assets/march/maps.png "De schema-editor met de velden Type en Type toewijzingswaarde gemarkeerd."){width="100" zoomable="yes"}<br>Raadpleeg de handleiding voor de gebruikersinterface voor meer informatie over het [definiëren van toewijzingsvelden in de gebruikersinterface](../../xdm/ui/fields/map.md). |
 
 {style="table-layout:auto"}
 
-Voor meer informatie over XDM in Platform, raadpleegt u het [XDM-systeemoverzicht](../../xdm/home.md).
+Voor meer informatie over XDM in Experience Platform, zie het [ XDM overzicht van het Systeem ](../../xdm/home.md).
 
 ## Segmentatieservice {#segmentation}
 
-Met [!DNL Segmentation Service] kunt u gegevens die zijn opgeslagen in [!DNL Experience Platform] en die betrekking hebben op personen (zoals klanten, prospects, gebruikers of organisaties) in doelgroepen segmenteren. U kunt een doelgroep maken via segmentdefinities of andere bronnen op basis van uw [!DNL Real-Time Customer Profile]-gegevens. Deze doelgroepen worden centraal geconfigureerd en onderhouden op [!DNL Platform] en zijn eenvoudig toegankelijk via elke Adobe-oplossing.
+Met [!DNL Segmentation Service] kunt u gegevens die zijn opgeslagen in [!DNL Experience Platform] en die betrekking hebben op personen (zoals klanten, prospects, gebruikers of organisaties) segmenteren in doelgroepen. U kunt doelgroepen maken via segmentdefinities of andere bronnen op basis van uw [!DNL Real-Time Customer Profile]-gegevens. Deze doelgroepen worden centraal geconfigureerd en onderhouden op [!DNL Experience Platform] en zijn eenvoudig toegankelijk via elke Adobe-oplossing.
 
 **Nieuwe functie**
 

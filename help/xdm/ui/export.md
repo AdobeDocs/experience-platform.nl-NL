@@ -4,9 +4,9 @@ title: XDM-schema's exporteren in de gebruikersinterface
 description: Leer hoe u een bestaand schema exporteert naar een andere sandbox of organisatie in de Adobe Experience Platform-gebruikersinterface.
 type: Tutorial
 exl-id: c467666d-55bc-4134-b8f4-7758d49c4786
-source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '634'
+source-wordcount: '636'
 ht-degree: 0%
 
 ---
@@ -28,11 +28,11 @@ Om aan deze behoefte te voldoen, staat de [!UICONTROL Schemas] werkruimte in Ado
 
 ## Vereisten
 
-Terwijl de UI van het Platform u toelaat de middelen van XDM uitvoeren, moet u de Registratie API van het Schema gebruiken om die middelen in andere zandbakken of organisaties in te voeren om het werkschema te voltooien. Verwijs naar gids op [ begonnen worden met de Registratie API van het Schema ](../api/getting-started.md) voor belangrijke informatie betreffende vereiste authentificatiekopballen alvorens deze gids te volgen.
+Hoewel u met de Experience Platform-interface XDM-bronnen kunt exporteren, moet u de API voor het schemaregister gebruiken om die bronnen te importeren in andere sandboxen of organisaties om de workflow te voltooien. Verwijs naar gids op [ begonnen worden met de Registratie API van het Schema ](../api/getting-started.md) voor belangrijke informatie betreffende vereiste authentificatiekopballen alvorens deze gids te volgen.
 
 ## Een payload voor exporteren genereren {#generate-export-payload}
 
-Exportladingen kunnen in de gebruikersinterface van het platform worden gegenereerd vanuit het deelvenster Details op het tabblad [!UICONTROL Browse] of rechtstreeks vanaf het canvas van het schema in de Schema-editor.
+Exportladingen kunnen worden gegenereerd in de gebruikersinterface van Experience Platform via het deelvenster Details op het tabblad [!UICONTROL Browse] of rechtstreeks vanaf het canvas van het schema in de Schema-editor.
 
 Selecteer **[!UICONTROL Schemas]** in de linkernavigatie om een payload voor export te genereren. Selecteer in de werkruimte van [!UICONTROL Schemas] de rij voor het schema dat u wilt exporteren naar de schemadetails in de rechterzijbalk.
 
@@ -226,7 +226,7 @@ Merk op dat elk geval van huurder ID van uw organisatie als `<XDM_TENANTID_PLACE
 
 ## De bron importeren met de API {#import-resource-with-api}
 
-Zodra u de uitvoer JSON voor het schema hebt gekopieerd, kunt u het als nuttige lading voor een POST verzoek aan het `/rpc/import` eindpunt in de Registratie API van het Schema gebruiken. Zie de [ invoereindpuntgids ](../api/import.md) voor details op hoe te om de vraag te vormen om het schema naar de gewenste organisatie en zandbak te verzenden.
+Zodra u de uitvoer JSON voor het schema hebt gekopieerd, kunt u het als nuttige lading voor een POST- verzoek aan het `/rpc/import` eindpunt in de Registratie API van het Schema gebruiken. Zie de [ invoereindpuntgids ](../api/import.md) voor details op hoe te om de vraag te vormen om het schema naar de gewenste organisatie en zandbak te verzenden.
 
 ## Volgende stappen
 

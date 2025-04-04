@@ -2,9 +2,9 @@
 title: Packaging van Query Service
 description: Het volgende document schetst de verpakking van mogelijkheden en producten beschikbaar voor de Dienst van de Vraag en benadrukt de verschillen tussen ad hoc en partijvragen.
 exl-id: ba472d9e-afe6-423d-9abd-13ecea43f04f
-source-git-commit: 0970fd8fbea86115d92dc78cdba753da69cc2ee6
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '980'
+source-wordcount: '987'
 ht-degree: 0%
 
 ---
@@ -15,19 +15,19 @@ Dit document schetst de verschillende soorten verpakking en de mogelijkheden van
 
 Adobe Experience Platform Query Service kan worden onderverdeeld in twee mogelijkheden op basis van de querypatronen die kunnen worden uitgevoerd:
 
-- **Ad hoc vragen** zijn SQL vragen die worden gebruikt om ingebedde datasets voor controle, bevestiging, experimenteren, etc. te onderzoeken. Deze vragen schrijven geen gegevens terug naar het de gegevensmeer van het Platform.
-- **de vragen van de Partij** zijn SQL vragen die worden gebruikt om de post-ingestitieverwerking van ingebedde datasets uit te voeren. Deze vragen schonen, vormen, manipuleren, en verrijken gegevens, waarvan de resultaten terug naar het de gegevensmeer van het Platform worden geschreven. Deze vragen kunnen als partijbanen worden gepland, worden beheerd en worden gecontroleerd.
+- **Ad hoc vragen** zijn SQL vragen die worden gebruikt om ingebedde datasets voor controle, bevestiging, experimenteren, etc. te onderzoeken. Deze query&#39;s schrijven geen gegevens terug naar het Experience Platform data Lake.
+- **de vragen van de Partij** zijn SQL vragen die worden gebruikt om de post-ingestitieverwerking van ingebedde datasets uit te voeren. Deze vragen schoonmaken, vormen, manipuleren, en verrijken gegevens, waarvan de resultaten terug naar het gegevensmeer van Experience Platform worden geschreven. Deze vragen kunnen als partijbanen worden gepland, worden beheerd en worden gecontroleerd.
 
 De mogelijkheden van de Dienst van de vraag worden verpakt met de volgende producten en toe:voegen-ons:
 
-- **Op platform-gebaseerde toepassingen** (Adobe Real-time Customer Data Platform, Adobe Customer Journey Analytics, en Adobe Journey Optimizer): De toegang van de Dienst van de vraag om ad hoc vragen uit te voeren wordt verstrekt van het begin met elke variatie en rij van op platform-gebaseerde toepassingen.
+- **op Experience Platform-Gebaseerde toepassingen** (Adobe Real-Time Customer Data Platform, Adobe Customer Journey Analytics, en Adobe Journey Optimizer): De toegang van de Dienst van de vraag om ad hoc vragen uit te voeren wordt verstrekt van het begin met elke variatie en rij van op Experience Platform-Gebaseerde toepassingen.
 - **[!DNL Data Distiller]** (add-on-pakket dat u kunt kopen met Adobe Real-Time CDP, Customer Journey Analytics en Adobe Journey Optimizer): toegang tot Query Service voor het uitvoeren van batchquery&#39;s wordt geleverd bij [!DNL Data Distiller] .
 
 ## Rechten {#entitlements}
 
 De volgende lijst schetst de belangrijkste die de dienstrechten van de Vraag op hoe worden gebaseerd zij verpakt:
 
-| Query Service Entitlement | Verpakt met op platform-gebaseerde toepassingen | Verpakt met [!DNL Data Distiller] |
+| Query Service Entitlement | Verpakt met op Experience Platform gebaseerde toepassingen | Verpakt met [!DNL Data Distiller] |
 |---|---|---|
 | Ondersteund querypatroon | Alleen ad-hocquery&#39;s | Batchquery |
 | Ondersteuning voor hoofdletters en kleine letters gebruiken | <ul><li>&#x200B;</li><li>&#x200B; voor gegevensdetectie</li><li>Gegevensvalidatie</li><li>Experimentatie</li></ul> | <ul><li>Reiniging</li><li>Vorm</li><li>Bewerken</li><li>Verrijken</li></ul> |
@@ -56,7 +56,7 @@ Zie [ toestemmingen voor een productprofiel ](../access-control/ui/permissions.m
 
 ### De relevante toestemmingen van de Dienst van de Vraag {#query-service-permissions}
 
-Om de Dienst van de Vraag te gebruiken, moet de **[!DNL Manage Queries]** toestemming binnen Admin Console worden toegelaten. Met deze machtiging kunnen gebruikers ad-hoc- en batchquery&#39;s uitvoeren.
+Als u Query Service wilt gebruiken, moet de machtiging **[!DNL Manage Queries]** zijn ingeschakeld in Admin Console. Met deze machtiging kunnen gebruikers ad-hoc- en batchquery&#39;s uitvoeren.
 
 In de volgende tabel worden de effecten van de machtiging [!DNL Manage Queries] weergegeven:
 
@@ -80,7 +80,7 @@ Om de Gegevens Distiller [ SQL Inzichten ](./data-distiller/sql-insights/overvie
 
 ## Sandbox-ondersteuning {#sandbox-support}
 
-Sandboxen zijn virtuele partities binnen één instantie van Experience Platform. Elke instantie van het Platform steunt veelvoudige productie en niet productie zandbakken, elk die zijn eigen bibliotheek van de middelen van het Platform handhaven. Met niet-productiesandboxen kunt u functies testen, experimenten uitvoeren en aangepaste configuraties maken zonder dat dit invloed heeft op uw productiesandboxen. Voor meer informatie over zandbakken, zie het [ overzicht van zandbakken ](../sandboxes/home.md). Alle rechten van de Dienst van de Vraag worden gedeeld over alle zandbakken.
+Sandboxen zijn virtuele partities binnen één instantie van Experience Platform. Elke Experience Platform-instantie ondersteunt meerdere productie- en niet-productie sandboxen, elk met een eigen bibliotheek met Experience Platform-bronnen. Met niet-productiesandboxen kunt u functies testen, experimenten uitvoeren en aangepaste configuraties maken zonder dat dit invloed heeft op uw productiesandboxen. Voor meer informatie over zandbakken, zie het [ overzicht van zandbakken ](../sandboxes/home.md). Alle rechten van de Dienst van de Vraag worden gedeeld over alle zandbakken.
 
 ## Volgende stappen
 

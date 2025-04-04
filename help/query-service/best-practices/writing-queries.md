@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;huis;populaire onderwerpen;vraagdienst;de dienst van de vraag;het schrijven van vragen;het schrijven vraag;
+keywords: Experience Platform;home;populaire onderwerpen;query-service;Query-service;query's schrijven;query schrijven;
 solution: Experience Platform
 title: Algemene begeleiding voor de Uitvoering van de Vraag in de Dienst van de Vraag
 type: Tutorial
 description: In dit document worden belangrijke gegevens beschreven die u moet weten wanneer u query's schrijft in Adobe Experience Platform Query Service.
 exl-id: a7076c31-8f7c-455e-9083-cbbb029c93bb
-source-git-commit: 99cd69234006e6424be604556829b77236e92ad7
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1088'
+source-wordcount: '1089'
 ht-degree: 2%
 
 ---
@@ -201,7 +201,7 @@ De achtercitaten zijn **niet** nodig als u steun-aantekening gebruikt.
 
 ## Tabelgegevens weergeven
 
-Nadat u verbinding hebt gemaakt met Query Service, kunt u al uw beschikbare tabellen op Platform weergeven met de opdrachten `\d` of `SHOW TABLES` .
+Nadat u verbinding hebt gemaakt met Query Service, kunt u al uw beschikbare tabellen op Experience Platform weergeven met de opdrachten `\d` of `SHOW TABLES` .
 
 ### Standaardtabelweergave
 

@@ -1,18 +1,18 @@
 ---
-keywords: Experience Platform;thuis;populaire onderwerpen;Adobe Campaign Managed Cloud Services;campagne;campagne beheerde services
+keywords: Experience Platform;home;populaire onderwerpen;Adobe Campaign Managed Cloud Services;campagne;campagne beheerde services
 title: Adobe Campaign Managed Cloud Services
-description: Leer hoe te om Campagne Beheerde Cloud Servicen aan Platform te verbinden gebruikend het gebruikersinterface
+description: Leer hoe u via de gebruikersinterface verbinding kunt maken tussen Campagne Managed Cloud Services en Experience Platform
 exl-id: 8f18bf73-ebf1-4b4e-a12b-964faa0e24cc
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '743'
+source-wordcount: '747'
 ht-degree: 0%
 
 ---
 
 # Adobe Campaign Managed Cloud Services
 
-Adobe Experience Platform staat toe dat gegevens uit externe bronnen worden opgenomen terwijl u de mogelijkheid krijgt om inkomende gegevens te structureren, te labelen en te verbeteren met behulp van de platformservices. U kunt gegevens uit diverse bronnen invoeren, zoals toepassingen voor Adobe, opslag in de cloud, databases en vele andere.
+Adobe Experience Platform staat toe dat gegevens uit externe bronnen worden opgenomen en biedt u de mogelijkheid om inkomende gegevens te structureren, labelen en verbeteren met behulp van Experience Platform-services. U kunt gegevens invoeren uit verschillende bronnen, zoals Adobe-toepassingen, opslag in de cloud, databases en vele andere.
 
 Adobe Campaign Managed Cloud Services biedt een Managed Services-platform voor het ontwerpen van ervaringen met klanten over meerdere kanalen en biedt een omgeving voor visuele campagneorchestratie, realtime interactiebeheer en uitvoering via meerdere kanalen. Bezoek de [ documentatie van Adobe Campaign v8 ](https://experienceleague.adobe.com/docs/campaign/campaign-v8/campaign-home.html?lang=nl) voor meer informatie.
 
@@ -20,7 +20,7 @@ Met de Adobe Campaign Managed Cloud Services-bron kunt u Adobe Campaign v8-lever
 
 ## Vereisten
 
-Voordat u een bronverbinding kunt maken om uw campagne v8 naar het Experience Platform te brengen, moet u eerst aan de volgende voorwaarden voldoen:
+Voordat u een bronverbinding kunt maken om uw campagne v8 naar Experience Platform te brengen, moet u eerst aan de volgende voorwaarden voldoen:
 
 * [De import van het gebeurtenislogboek instellen met de Adobe Campaign-clientconsole](#view-delivery-and-tracking-log-data)
 * [Een XDM ExperienceEvent-schema maken](#create-a-schema)
@@ -70,14 +70,14 @@ Voor gedetailleerde instructies op hoe te om een schema tot stand te brengen, le
 
 Tot slot moet u een dataset voor uw schema&#39;s tot stand brengen. Voor gedetailleerde instructies op hoe te om een dataset tot stand te brengen, lees de gids bij [ het creëren van een dataset in UI ](../../../catalog/datasets/user-guide.md).
 
-## Een Adobe Campaign Managed Cloud Services-bronverbinding maken met de interface van het platform
+## Een Adobe Campaign Managed Cloud Services-bronverbinding maken met de interface van Experience Platform
 
-Nu u uw gegevenslogboeken in de de cliëntconsole van de Campagne hebt betreden, creeerde een schema, en een dataset, kunt u nu te werk gaan om een bronverbinding tot stand te brengen om uw gegevens van Managed Services van de Campagne aan Platform te brengen.
+Nu u uw gegevenslogboeken in de de cliëntconsole van de Campagne hebt betreden, creeerde een schema, en een dataset, kunt u nu te werk gaan om een bronverbinding tot stand te brengen om uw gegevens van Managed Services van de Campagne aan Experience Platform te brengen.
 
 Voor gedetailleerde instructies op hoe te om uw de leveringslogboeken van de Campagne v8 en het volgen logboekgegevens aan het Platfrom van de Ervaring te brengen, lees de gids op [ creërend een Gecampagneerde Managed Services bronverbinding in UI ](../../tutorials/ui/create/adobe-applications/campaign.md).
 
 >[!IMPORTANT]
 >
->Er is een randgeval waarin de interactie van een onlangs verwijderde e-mailontvanger met een e-mail persoonlijke informatie in Experience Platform zou kunnen opnieuw opnemen. In sommige gevallen, zou dit marketing aan die gebruiker kunnen re-toelaten.
+>Er is een randgeval waarin de interactie van een onlangs verwijderde e-mailontvanger met een e-mail persoonlijke informatie opnieuw in Experience Platform zou kunnen opnemen. In sommige gevallen, zou dit marketing aan die gebruiker kunnen re-toelaten.
 >
->* Dit scenario is slechts actief tussen de tijd een privacyverzoek in Experience Platform is uitgevoerd en de tijd het in Adobe Campaign Classic is uitgevoerd. Nadat het verzoek in Campagne wordt uitgevoerd, is er een controle om ervoor te zorgen het verslag niet wordt uitgevoerd naar Campagne. Voer na 72 uur na de uitvoering een GDPR-verzoek opnieuw uit om dit probleem op te lossen.
+>* Dit scenario is alleen actief tussen het moment dat een privacyverzoek in Experience Platform is uitgevoerd en het moment dat het in Adobe Campaign Classic is uitgevoerd. Nadat het verzoek in Campagne wordt uitgevoerd, is er een controle om ervoor te zorgen het verslag niet wordt uitgevoerd naar Campagne. Voer na 72 uur na de uitvoering een GDPR-verzoek opnieuw uit om dit probleem op te lossen.

@@ -5,10 +5,10 @@ breadcrumb-title: Handleiding voor dashboards
 user-guide-description: Leer hoe u gegevens in Experience Platform kunt visualiseren via aanpasbare dashboards.
 feature: Dashboards
 role: Developer,User
-source-git-commit: cb3cc06a31c0390d9b1f152c2186da3847647f64
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '142'
-ht-degree: 21%
+source-wordcount: '143'
+ht-degree: 23%
 
 ---
 
@@ -16,18 +16,18 @@ ht-degree: 21%
 # Adobe Experience Platform-dashboards {#dashboards}
 
 * [Overzicht van dashboards](home.md)
-* [Machtigingen voor dashboardtoegang](permissions.md)
-* [Dashboards-overzicht](inventory.md)
+* [Toegangsrechten voor dashboard](permissions.md)
+* [Overzicht van dashboards](inventory.md)
 * [Standaarddashboards](standard-dashboards.md)
-* [Dashboards downloaden naar PDF](download.md)
-* SQL-inzichten: modus Query Pro {#sql-insights-query-pro-mode}
+* [Downloaden van dashboards naar PDF](download.md)
+* SQL-inzichten: modus query pro {#sql-insights-query-pro-mode}
    * [Overzicht](sql-insights-query-pro-mode/overview.md)
-   * Data Distiller-sjablonen {#templates}
+   * Distiller-gegevenssjablonen {#templates}
       * [Overzicht](sql-insights-query-pro-mode/templates/overview.md)
       * [Geavanceerd publiek overlapt](sql-insights-query-pro-mode/templates/overlaps.md)
       * [Poortvergelijking](sql-insights-query-pro-mode/templates/comparison.md)
-      * [Doelgroeptrends](sql-insights-query-pro-mode/templates/trends.md)
-      * [Overlap van doelgroepidentiteit](sql-insights-query-pro-mode/templates/identity-overlaps.md)
+      * [Publiek: trends](sql-insights-query-pro-mode/templates/trends.md)
+      * [Identiteit publiek overlapt](sql-insights-query-pro-mode/templates/identity-overlaps.md)
    * Filters {#filters}
       * [Datumfilter](sql-insights-query-pro-mode/filters/date-filter.md)
       * [ Globale filter ](sql-insights-query-pro-mode/filters/global-filter.md)
@@ -57,10 +57,10 @@ ht-degree: 21%
 * Gebruik van inzichten {#insights-use-cases}
    * [Conceptanalyse](insights-use-cases/consent-analysis.md)
 * Beschikbare gegevensmodellen {#data-models}
-   * [Real-time Customer Data Platform Insights-gegevensmodel B2B edition](data-models/cdp-insights-data-model-b2b.md)
-   * [Real-time Customer Data Platform Insights, gegevensmodel B2C, editie](data-models/cdp-insights-data-model-b2c.md)
-* Toepassingsintegraties {#integrations}
+   * [Real-Time Customer Data Platform Insights-gegevensmodel B2B edition](data-models/cdp-insights-data-model-b2b.md)
+   * [Real-Time Customer Data Platform Insights, gegevensmodel B2C, editie](data-models/cdp-insights-data-model-b2c.md)
+* Toepassingsintegratie {#integrations}
    * [Power BI](integrations/power-bi.md)
-* [Datasets van querydashboard](query.md)
-* [SQL met inzicht weergeven](view-sql.md)
-* [ de versienota&#39;s van het Platform ](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)
+* [Gegevensbestanden van het query-dashboard](query.md)
+* [Insight SQL weergeven](view-sql.md)
+* [Releaseopmerkingen bij Experience Platform](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)

@@ -4,7 +4,7 @@ title: Doelen verwijderen
 type: Tutorial
 description: Deze zelfstudie bevat een overzicht van de stappen waarmee een bestaand doel in de gebruikersinterface van Adobe Experience Platform kan worden verwijderd
 exl-id: 7b672859-e61a-4b3c-9db9-62048258f0aa
-source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '399'
 ht-degree: 0%
@@ -19,7 +19,7 @@ In de Adobe Experience Platform-gebruikersinterface kunt u bestaande verbindinge
 
 Als u een bestemming verwijdert, worden bestaande gegevensstromen naar die bestemming verwijderd. Alle publiek dat aan de bestemmingen wordt geactiveerd die u schrapt wordt unmapped alvorens dataflow wordt geschrapt.
 
-Er zijn twee manieren waarop u doelen kunt verwijderen uit de map [!DNL Platform] [!DNL UI] . U kunt:
+Er zijn twee manieren waarop u doelen kunt verwijderen uit de map [!DNL Experience Platform] [!DNL UI] . U kunt:
 
 * [Doelen verwijderen van het tabblad [!UICONTROL Browse]](#delete-browse-tab)
 * [Doelen verwijderen van de pagina met bestemmingsdetails](#delete-destination-details-page)
@@ -28,7 +28,7 @@ Er zijn twee manieren waarop u doelen kunt verwijderen uit de map [!DNL Platform
 
 Voer de onderstaande stappen uit om een doel te verwijderen van het tabblad [!UICONTROL Browse] .
 
-1. Login aan het [ Experience Platform UI ](https://platform.adobe.com/) en selecteert **[!UICONTROL Destinations]** van de linkernavigatiebar. Selecteer **[!UICONTROL Browse]** in de bovenste koptekst om uw bestaande doelen weer te geven.
+1. Login aan [ UI van Experience Platform ](https://platform.adobe.com/) en selecteer **[!UICONTROL Destinations]** van de linkernavigatiebar. Selecteer **[!UICONTROL Browse]** in de bovenste koptekst om uw bestaande doelen weer te geven.
 
    ![ doorbladert bestemmingen ](../assets/ui/delete-destinations/browse-destinations.png)
 
@@ -47,7 +47,7 @@ Voer de onderstaande stappen uit om een doel te verwijderen van het tabblad [!UI
 
 Voer de onderstaande stappen uit om een bestemming te verwijderen van de pagina met doeldetails.
 
-1. Login aan het [ Experience Platform UI ](https://platform.adobe.com/) en selecteert **[!UICONTROL Destinations]** van de linkernavigatiebar. Selecteer **[!UICONTROL Browse]** in de bovenste koptekst om uw bestaande doelen weer te geven.
+1. Login aan [ UI van Experience Platform ](https://platform.adobe.com/) en selecteer **[!UICONTROL Destinations]** van de linkernavigatiebar. Selecteer **[!UICONTROL Browse]** in de bovenste koptekst om uw bestaande doelen weer te geven.
 
    ![ doorbladert bestemmingen ](../assets/ui/delete-destinations/browse-destinations.png)
 
@@ -77,4 +77,4 @@ Voer de onderstaande stappen uit om een bestemming te verwijderen van de pagina 
 
    >[!NOTE]
    >
-   >Afhankelijk van het laden van de server kan het enkele minuten duren voordat [!DNL Platform] het doel heeft verwijderd.
+   >Afhankelijk van het laden van de server kan het enkele minuten duren voordat [!DNL Experience Platform] het doel heeft verwijderd.

@@ -1,11 +1,11 @@
 ---
-keywords: Experience Platform;thuis;populaire onderwerpen;gegevens prep;api gids;schema's;
+keywords: Experience Platform;home;populaire onderwerpen;gegevens prep;api-gids;schema's;
 solution: Experience Platform
 title: Schemas API Endpoint
-description: U kunt het `/schema's' eindpunt in Adobe Experience Platform API gebruiken om, schema's voor gebruik met Mapper in Platform programmatically terug te winnen tot stand te brengen en bij te werken.
-source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
+description: U kunt het `/schema's' eindpunt in Adobe Experience Platform API gebruiken om schema's voor gebruik met Mapper in Experience Platform programmatically terug te winnen, tot stand te brengen en bij te werken.
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '616'
+source-wordcount: '619'
 ht-degree: 1%
 
 ---
@@ -14,15 +14,15 @@ ht-degree: 1%
 
 # Schemas, eindpunt
 
-Schema&#39;s kunnen met Mapper worden gebruikt om ervoor te zorgen dat de gegevens die u in Adobe Experience Platform hebt ingevoerd overeenkomen met wat u wilt opnemen. U kunt het `/schemas` eindpunt gebruiken om, douaneschema&#39;s programmatically tot stand te brengen voor gebruik met Mapper in Platform.
+Schema&#39;s kunnen met Mapper worden gebruikt om ervoor te zorgen dat de gegevens die u in Adobe Experience Platform hebt ingevoerd overeenkomen met wat u wilt opnemen. U kunt het `/schemas` eindpunt gebruiken om, douaneschema&#39;s programmatically tot stand te brengen voor gebruik met Mapper in Experience Platform.
 
 >[!NOTE]
 >
->Schema&#39;s die met dit eindpunt worden gemaakt, worden uitsluitend gebruikt met Mapper- en toewijzingssets. Om schema&#39;s tot stand te brengen die door andere diensten van het Platform toegankelijk zijn, te lezen gelieve de [ de ontwikkelaarsgids van de Registratie van het Schema ](../../xdm/api/schemas.md).
+>Schema&#39;s die met dit eindpunt worden gemaakt, worden uitsluitend gebruikt met Mapper- en toewijzingssets. Om schema&#39;s tot stand te brengen die door andere diensten van Experience Platform toegankelijk zijn, te lezen gelieve de [ de ontwikkelaarsgids van de Registratie van het Schema ](../../xdm/api/schemas.md).
 
 ## Alle schema&#39;s ophalen
 
-U kunt een lijst van alle beschikbare schema&#39;s van de Apper voor uw organisatie terugwinnen door een verzoek van de GET tot het `/schemas` eindpunt te richten.
+U kunt een lijst van alle beschikbare schema&#39;s van de Apper voor uw organisatie terugwinnen door een GET verzoek aan het `/schemas` eindpunt te doen.
 
 **API formaat**
 
@@ -132,7 +132,7 @@ De volgende reactie keert status 200 van HTTP met een lijst van de gevraagde sch
 
 ## Een schema maken
 
-U kunt een schema tot stand brengen om tegen te bevestigen door een verzoek van de POST aan het `/schemas` eindpunt te doen. Er zijn drie manieren om een schema tot stand te brengen: het verzenden van het Schema van a [ JSON ](https://json-schema.org/), gebruikend steekproefgegevens, of het van verwijzingen voorzien van een bestaand schema XDM.
+U kunt een schema tot stand brengen om tegen te bevestigen door een POST- verzoek aan het `/schemas` eindpunt te doen. Er zijn drie manieren om een schema tot stand te brengen: het verzenden van het Schema van a [ JSON ](https://json-schema.org/), gebruikend steekproefgegevens, of het van verwijzingen voorzien van een bestaand schema XDM.
 
 ```http
 POST /schemas
@@ -334,7 +334,7 @@ Een succesvolle reactie keert status 200 van HTTP met informatie over uw onlangs
 
 ## Een specifiek schema ophalen
 
-U kunt informatie over een specifiek schema terugwinnen door een verzoek van de GET tot het `/schemas` eindpunt te richten en identiteitskaart van het schema te verstrekken u in de verzoekweg wenst terug te winnen.
+U kunt informatie over een specifiek schema terugwinnen door een GET- verzoek aan het `/schemas` eindpunt te doen en identiteitskaart van het schema te verstrekken u in de verzoekweg wenst terug te winnen.
 
 **API formaat**
 

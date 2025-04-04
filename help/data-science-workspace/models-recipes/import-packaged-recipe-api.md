@@ -1,11 +1,11 @@
 ---
-keywords: Experience Platform;in een pakket opgenomen recept importeren;Data Science Workspace;populaire onderwerpen;recepten;api;sensei machine leren;engine maken
+keywords: Experience Platform;import verpakt recept;Data Science Workspace;populaire onderwerpen;recepten;api;sensei machine learning;create engine
 solution: Experience Platform
 title: Een gecomprimeerde ontvanger importeren met de API voor leren van de Sensei-computer
 type: Tutorial
 description: Deze zelfstudie gebruikt de API voor het leren van Sensei-machines om een engine te maken, die ook wel een recept in de gebruikersinterface wordt genoemd.
 exl-id: c8dde30b-5234-448d-a597-f1c8d32f23d4
-source-git-commit: 863889984e5e77770638eb984e129e720b3d4458
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '1018'
 ht-degree: 0%
@@ -41,7 +41,7 @@ Voor deze zelfstudie is een Recipe-bestand in het pakket vereist in de vorm van 
 
 - `{DOCKER_URL}`: Een URL-adres naar een Docker-afbeelding van een intelligente service.
 
-Dit leerprogramma vereist u om de [ Authentificatie aan zelfstudie van Adobe Experience Platform ](https://www.adobe.com/go/platform-api-authentication-en) te voltooien om vraag aan [!DNL Platform] APIs met succes te maken. Als u de zelfstudie over verificatie voltooit, krijgt u de waarden voor elk van de vereiste headers in alle API-aanroepen van [!DNL Experience Platform] , zoals hieronder wordt getoond:
+Dit leerprogramma vereist u om de [ Authentificatie aan zelfstudie van Adobe Experience Platform ](https://www.adobe.com/go/platform-api-authentication-en) te voltooien om vraag aan [!DNL Experience Platform] APIs met succes te maken. Als u de zelfstudie over verificatie voltooit, krijgt u de waarden voor elk van de vereiste headers in alle API-aanroepen van [!DNL Experience Platform] , zoals hieronder wordt getoond:
 
 - `{ACCESS_TOKEN}`: De specifieke tokenwaarde voor toonder die na verificatie wordt opgegeven.
 - `{ORG_ID}`: Uw organisatiereferenties zijn gevonden in uw unieke Adobe Experience Platform-integratie.
@@ -49,7 +49,7 @@ Dit leerprogramma vereist u om de [ Authentificatie aan zelfstudie van Adobe Exp
 
 ## Een engine maken
 
-De motoren kunnen worden gecreeerd door een verzoek van de POST aan het /engines eindpunt te doen. De gemaakte engine wordt geconfigureerd op basis van de vorm van het pakketbestand Recipe dat moet worden opgenomen als onderdeel van de API-aanvraag.
+De motoren kunnen worden gecreeerd door een POST- verzoek aan het /engines eindpunt te maken. De gemaakte engine wordt geconfigureerd op basis van de vorm van het pakketbestand Recipe dat moet worden opgenomen als onderdeel van de API-aanvraag.
 
 ### Een engine maken met een docker-URL {#create-an-engine-with-a-docker-url}
 

@@ -2,9 +2,9 @@
 title: Aan de slag met de API voor sandboxgereedschappen
 description: Met de API voor het gereedschap Sandbox kunt u artefacten onderzoeken en een momentopname van sandboxconfiguraties tussen sandboxen exporteren en importeren. Volg deze gids voor het uitvoeren van de belangrijkste bewerkingen met de API.
 exl-id: 0b34d153-a603-4397-a375-9cc846efe23a
-source-git-commit: 308d07cf0c3b4096ca934a9008a13bf425dc30b6
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '311'
+source-wordcount: '312'
 ht-degree: 4%
 
 ---
@@ -15,11 +15,11 @@ Deze handleiding voor ontwikkelaars bevat stappen waarmee u de API voor het bewe
 
 ## API-voorbeeldaanroepen lezen {#api-calls}
 
-Deze gids verstrekt voorbeeld API vraag om aan te tonen hoe te om uw verzoeken te formatteren. Dit zijn paden, vereiste kopteksten en correct opgemaakte ladingen voor aanvragen. Voorbeeld-JSON-gegevens die naar de API-reactie worden geretourneerd, worden ook verschaft. Voor informatie over de overeenkomsten die in de documentatie voor steekproef API vraag worden gebruikt, zie de sectie op [ hoe te om voorbeeld API vraag ](/help/landing/troubleshooting.md#how-do-i-format-an-api-request) in de het oplossen van problemengids van het Experience Platform te lezen.
+Deze gids verstrekt voorbeeld API vraag om aan te tonen hoe te om uw verzoeken te formatteren. Dit zijn paden, vereiste kopteksten en correct opgemaakte ladingen voor aanvragen. Voorbeeld-JSON-gegevens die naar de API-reactie worden geretourneerd, worden ook verschaft. Voor informatie over de overeenkomsten die in de documentatie voor steekproef API vraag worden gebruikt, zie de sectie op [ hoe te om voorbeeld API vraag ](/help/landing/troubleshooting.md#how-do-i-format-an-api-request) in de het oplossen van problemengids van Experience Platform te lezen.
 
 ## Waarden verzamelen voor vereiste koppen {#headers}
 
-Deze gids vereist u om het [ authentificatieleerprogramma ](https://www.adobe.com/go/platform-api-authentication-en) te hebben voltooid om vraag aan Platform APIs met succes te maken. Het voltooien van de autorisatiezelfstudie biedt de waarden voor elk van de vereiste headers in alle Experience Platform API-aanroepen, zoals hieronder wordt getoond:
+Deze gids vereist u om het [ authentificatieleerprogramma ](https://www.adobe.com/go/platform-api-authentication-en) te voltooien om vraag aan Experience Platform APIs met succes te maken. Als u de zelfstudie over verificatie voltooit, krijgt u de waarden voor elk van de vereiste headers in alle Experience Platform API-aanroepen, zoals hieronder wordt getoond:
 
 * `Authorization: Bearer {ACCESS_TOKEN}`
 * `x-api-key: {API_KEY}`
@@ -29,7 +29,7 @@ Naast de verificatieheaders is voor alle aanvragen een header vereist met de naa
 
 * `x-sandbox-name: {SANDBOX_NAME}`
 
-Alle verzoeken die een nuttige lading (POST, PUT, en PATCH) bevatten vereisen een extra kopbal:
+Alle verzoeken die een lading (POST, PUT, en PATCH) bevatten vereisen een extra kopbal:
 
 * `Content-Type: application/json`
 

@@ -2,16 +2,16 @@
 title: Flow Service-foutberichten
 description: Leer over de foutenmeldingen die u wanneer het gebruiken van de Dienst van de Stroom voor bronnen kunt ontmoeten.
 exl-id: af79c547-25d0-459a-8de7-eb14206a8694
-source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1667'
+source-wordcount: '1668'
 ht-degree: 0%
 
 ---
 
 # Foutberichten voor Flow Service
 
-De Dienst van de stroom wordt gebruikt om klantengegevens van diverse verschillende bronnen binnen Platform te verzamelen en te centraliseren. De service biedt een gebruikersinterface en RESTful API waarmee u eenvoudig bronverbindingen met verschillende gegevensproviders kunt instellen. Deze bronverbindingen laten u toe om uw derdesystemen voor authentiek te verklaren, tijden voor ingestitielooppas te plaatsen, en gegevensinvoer te beheren.
+De Flow Service wordt gebruikt om klantgegevens te verzamelen en te centraliseren uit verschillende bronnen binnen Experience Platform. De service biedt een gebruikersinterface en RESTful API waarmee u eenvoudig bronverbindingen met verschillende gegevensproviders kunt instellen. Deze bronverbindingen laten u toe om uw derdesystemen voor authentiek te verklaren, tijden voor ingestitielooppas te plaatsen, en gegevensinvoer te beheren.
 
 Dit document bevat een catalogus met foutberichten, beschrijvingen en voorgestelde resoluties over Flow Service.
 
@@ -71,7 +71,7 @@ In de volgende tabel worden fouten met betrekking tot interne validatie in Flow 
 | `1442-400` | Ongeldig verzoek | Samenvoegen niet toegestaan op veld-id. |
 | `1443-400` | Ongeldig verzoek | Operator &#39;&lt;=&#39; is niet toegestaan voor meerdere waarden. |
 | `1444-400` | Ongeldig verzoek | Flow 3f4ae131-b384-4e73 bevindt zich niet in de verwachte toestand. |
-| `1445-400` | Ongeldig verzoek | PATCH-verbindingsfunctie niet ingeschakeld. |
+| `1445-400` | Ongeldig verzoek | PATCH Connection Feature not enabled. |
 | `1446-400` | Ongeldig verzoek | De flow-id mag niet null of leeg zijn. Werk de flow-id bij en probeer het opnieuw. |
 | `1447-400` | Ongeldig verzoek | Gevonden actieve stromen met id aa6a206f-f233-4c2d. |
 | `1448-400` | Ongeldig verzoek | Operator >= niet ondersteund voor veld-id. |

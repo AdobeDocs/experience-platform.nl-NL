@@ -1,11 +1,11 @@
 ---
-keywords: Experience Platform;home;populaire onderwerpen;Oracle Service Cloud;oracle service cloud
+keywords: Experience Platform;home;populaire onderwerpen;Oracle Service Cloud;oracle Service Cloud
 title: Een Oracle Service Cloud Source Connection maken met de Flow Service API
-description: Leer hoe u Adobe Experience Platform met de Flow Service API kunt verbinden met Oracle Service Cloud.
+description: Leer hoe u Adobe Experience Platform verbindt met Oracle Service Cloud met behulp van de Flow Service API.
 exl-id: 00c0bc9c-a740-4bab-a882-2cfed8abe758
-source-git-commit: 9ca4f19f7b59f075250bce7035303e11d3f3710f
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '522'
+source-wordcount: '529'
 ht-degree: 0%
 
 ---
@@ -18,16 +18,16 @@ ht-degree: 0%
 
 Een basisverbinding vertegenwoordigt de geverifieerde verbinding tussen een bron en Adobe Experience Platform.
 
-Dit leerprogramma begeleidt u door de stappen om een basisverbinding voor de Wolk van de Dienst van het Oracle tot stand te brengen gebruikend [[!DNL Flow Service]  API ](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+Dit leerprogramma begeleidt u door de stappen om een basisverbinding voor de Wolk van de Dienst van Oracle tot stand te brengen gebruikend [[!DNL Flow Service]  API ](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
 ## Aan de slag
 
-Deze handleiding vereist een goed begrip van de volgende onderdelen van het Experience Platform:
+Deze handleiding vereist een goed begrip van de volgende onderdelen van Experience Platform:
 
-* [ Bronnen ](../../../../home.md): Experience Platform staat gegevens toe om van diverse bronnen worden opgenomen terwijl het voorzien van u van de capaciteit om, inkomende gegevens te structureren te etiketteren en te verbeteren gebruikend de diensten van het Platform.
-* [ Sandboxes ](../../../../../sandboxes/home.md): Experience Platform verstrekt virtuele zandbakken die één enkele instantie van het Platform in afzonderlijke virtuele milieu&#39;s verdelen helpen digitale ervaringstoepassingen ontwikkelen en ontwikkelen.
+* [ Bronnen ](../../../../home.md): Experience Platform staat gegevens toe om van diverse bronnen worden opgenomen terwijl het voorzien van u van de capaciteit om, inkomende gegevens te structureren te etiketteren en te verbeteren gebruikend de diensten van Experience Platform.
+* [ Sandboxes ](../../../../../sandboxes/home.md): Experience Platform verstrekt virtuele zandbakken die één enkele instantie van Experience Platform in afzonderlijke virtuele milieu&#39;s verdelen helpen digitale ervaringstoepassingen ontwikkelen en ontwikkelen.
 
-De volgende secties bevatten aanvullende informatie die u moet weten om verbinding te kunnen maken met de Oracle Service Cloud met de API [!DNL Flow Service] .
+De volgende secties bevatten aanvullende informatie die u moet weten om verbinding te kunnen maken met Oracle Service Cloud met de API [!DNL Flow Service] .
 
 ### Vereiste referenties verzamelen
 
@@ -40,17 +40,17 @@ De volgende secties bevatten aanvullende informatie die u moet weten om verbindi
 | `password` | Het wachtwoord voor uw Oracle Service Cloud-account. |
 | `connectionSpec.id` | De verbindingsspecificatie keert de schakelaareigenschappen van een bron, met inbegrip van authentificatiespecificaties met betrekking tot het creëren van de basis en bronverbindingen terug. De verbindingsspecificatie-id voor Oracle Service Cloud is: `ba5126ec-c9ac-11eb-b8bc-0242ac130003` . |
 
-Voor meer informatie bij het voor authentiek verklaren van uw rekening van de Wolk van de Dienst van het Oracle, verwijs naar de [[!DNL Oracle]  gids op authentificatie ](https://docs.oracle.com/en/cloud/saas/b2c-service/20c/cxska/OKCS_Authenticate_and_Authorize.html).
+Voor meer informatie bij het voor authentiek verklaren van uw rekening van de Wolk van de Dienst van Oracle, verwijs naar de [[!DNL Oracle]  gids over authentificatie ](https://docs.oracle.com/en/cloud/saas/b2c-service/20c/cxska/OKCS_Authenticate_and_Authorize.html).
 
-### Platform-API&#39;s gebruiken
+### Experience Platform API&#39;s gebruiken
 
-Voor informatie over hoe te om vraag aan Platform APIs met succes te maken, zie de gids op [ begonnen wordt met Platform APIs ](../../../../../landing/api-guide.md).
+Voor informatie over hoe te om vraag aan Experience Platform APIs met succes te maken, zie de gids op [ begonnen wordt met Experience Platform APIs ](../../../../../landing/api-guide.md).
 
 ## Een basisverbinding maken
 
-Een basisverbinding behoudt informatie tussen uw bron en Platform, met inbegrip van de de authentificatiegeloofsbrieven van uw bron, de huidige staat van de verbinding, en uw unieke identiteitskaart van de basisverbinding. Met de ID van de basisverbinding kunt u bestanden verkennen en door bestanden navigeren vanuit uw bron en kunt u de specifieke items identificeren die u wilt opnemen, inclusief informatie over hun gegevenstypen en indelingen.
+Een basisverbinding behoudt informatie tussen uw bron en Experience Platform, met inbegrip van de verificatiereferenties van uw bron, de huidige status van de verbinding, en uw unieke identiteitskaart van de basisverbinding. Met de ID van de basisverbinding kunt u bestanden verkennen en door bestanden navigeren vanuit uw bron en kunt u de specifieke items identificeren die u wilt opnemen, inclusief informatie over hun gegevenstypen en indelingen.
 
-Om een identiteitskaart van de basisverbinding tot stand te brengen, doe een verzoek van de POST aan het `/connections` eindpunt terwijl het verstrekken van uw de authentificatiegeloofsbrieven van de Wolk van de Dienst van het Oracle als deel van de verzoekparameters.
+Als u een basis-verbindings-id wilt maken, vraagt u een POST-aanvraag naar het `/connections` -eindpunt en geeft u de verificatiegegevens van de Oracle Service Cloud op als onderdeel van de aanvraagparameters.
 
 **API formaat**
 
@@ -60,7 +60,7 @@ POST /connections
 
 **Verzoek**
 
-Met de volgende aanvraag wordt een basisverbinding voor de Cloud van de service Oracle gemaakt:
+Met de volgende aanvraag wordt een basisverbinding voor Oracle Service Cloud gemaakt:
 
 ```shell
 curl -X POST \
@@ -91,9 +91,9 @@ curl -X POST \
 | Parameter | Beschrijving |
 | --------- | ----------- |
 | `auth.params.host` | De host-URL van uw Oracle Service Cloud-instantie. |
-| `auth.params.username` | De gebruikersnaam die is gekoppeld aan uw Oracle Service Cloud-account. |
-| `auth.params.password` | Het wachtwoord dat is gekoppeld aan uw Oracle Service Cloud-account. |
-| `connectionSpec.id` | De Oracle Service Cloud connection specification ID: `ba5126ec-c9ac-11eb-b8bc-0242ac130003` |
+| `auth.params.username` | De gebruikersnaam die aan uw Oracle Service Cloud-account is gekoppeld. |
+| `auth.params.password` | Het wachtwoord dat aan uw Oracle Service Cloud-account is gekoppeld. |
+| `connectionSpec.id` | De Oracle Service Cloud-verbindingsspecificatie-id: `ba5126ec-c9ac-11eb-b8bc-0242ac130003` |
 
 **Reactie**
 
@@ -108,7 +108,7 @@ Een succesvolle reactie keert de pas gecreëerde verbinding, met inbegrip van zi
 
 ## Volgende stappen
 
-Aan de hand van deze zelfstudie hebt u een basisverbinding met de Oracle Service Cloud gemaakt met de API [!DNL Flow Service] . U kunt deze basis verbindings-id in de volgende zelfstudies gebruiken:
+Aan de hand van deze zelfstudie hebt u een Oracle Service Cloud-basisverbinding gemaakt met de [!DNL Flow Service] API. U kunt deze basis verbindings-id in de volgende zelfstudies gebruiken:
 
 * [Onderzoek de structuur en de inhoud van uw gegevenslijsten gebruikend  [!DNL Flow Service]  API](../../explore/tabular.md)
-* [Creeer een dataflow om de gegevens van het klantensucces aan Platform te brengen gebruikend  [!DNL Flow Service]  API](../../collect/customer-success.md)
+* [Creeer een dataflow om de gegevens van het klantensucces aan Experience Platform te brengen gebruikend  [!DNL Flow Service]  API](../../collect/customer-success.md)

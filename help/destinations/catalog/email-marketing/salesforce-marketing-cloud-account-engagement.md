@@ -1,11 +1,11 @@
 ---
-title: Salesforce-accountservice voor Marketing Cloud
+title: Salesforce Marketing Cloud-accountbetrokkenheid
 description: Leer hoe u de Salesforce Marketing Cloud Account Engagement (voorheen Pardot genoemd)-bestemming kunt gebruiken om uw accountgegevens te exporteren en deze te activeren in Salesforce Marketing Cloud Account Engagement voor uw zakelijke behoeften.
 last-substantial-update: 2023-04-14T00:00:00Z
 exl-id: fca9d4f4-8717-4bfa-9992-5164ba98bea4
-source-git-commit: 5aefa362d7a7d93c12f9997d56311127e548497e
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1474'
+source-wordcount: '1482'
 ht-degree: 0%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 Gebruik de [[!DNL Salesforce Marketing Cloud Account Engagement] ](https://www.salesforce.com/products/marketing-cloud/marketing-automation/) *(vroeger gekend als [!DNL Pardot])* bestemming aan vangst, spoor, score en graad lood. U kunt ook loodsporen voor alle stadia van de pijpleiding voor gericht marktpubliek en klantengroepen door e-maildruppelcampagnes en loodbeheer met het bevorderen, het scoren en campagnesegmentatie ontwerpen.
 
-Vergeleken met [!DNL Salesforce Marketing Cloud Engagement] die meer gericht op **B2C** marketing is, [!DNL Marketing Cloud Account Engagement] is ideaal voor **B2B** gebruiksgevallen die veelvoudige afdelingen en besluitvormers impliceren die langere verkoop en besluitvormingscycli vereisen. Bovendien houdt u ook nauwere nabijheid en integratie met uw CRM aan om aangewezen verkoop en marketing besluiten te nemen. *Nota, heeft het Experience Platform ook verbindingen voor [!DNL Salesforce Marketing Cloud Engagement], kunt u hen op [[!DNL Salesforce Marketing Cloud]](/help/destinations/catalog/email-marketing/salesforce-marketing-cloud.md) controleren en [[!DNL (API) Salesforce Marketing Cloud]](/help/destinations/catalog/email-marketing/salesforce-marketing-cloud-exact-target.md) pagina&#39;s.*
+Vergeleken met [!DNL Salesforce Marketing Cloud Engagement] die meer gericht op **B2C** marketing is, [!DNL Marketing Cloud Account Engagement] is ideaal voor **B2B** gebruiksgevallen die veelvoudige afdelingen en besluitvormers impliceren die langere verkoop en besluitvormingscycli vereisen. Bovendien houdt u ook nauwere nabijheid en integratie met uw CRM aan om aangewezen verkoop en marketing besluiten te nemen. *Nota, heeft Experience Platform ook verbindingen voor [!DNL Salesforce Marketing Cloud Engagement], kunt u hen op de [[!DNL Salesforce Marketing Cloud]](/help/destinations/catalog/email-marketing/salesforce-marketing-cloud.md) en [[!DNL (API) Salesforce Marketing Cloud]](/help/destinations/catalog/email-marketing/salesforce-marketing-cloud-exact-target.md) pagina&#39;s controleren.*
 
 Dit [!DNL Adobe Experience Platform] [ doel ](/help/destinations/home.md) hefboomwerkingen het [[!DNL Salesforce Account Engagement API > Prospect Upsert by Email] ](https://developer.salesforce.com/docs/marketing/pardot/guide/prospect-v5.html#prospect-upsert-by-email) eindpunt, aan **toevoegen of uw lood** bijwerken na het activeren van hen binnen een nieuw [!DNL Marketing Cloud Account Engagement] segment.
 
@@ -38,11 +38,11 @@ Alvorens gegevens aan de [!DNL Marketing Cloud Account Engagement] bestemming te
 
 ### Vereisten in [!DNL Marketing Cloud Account Engagement] {#prerequisites-destination}
 
-Houd rekening met de volgende voorwaarden om gegevens van Platform naar uw [!DNL Marketing Cloud Account Engagement] -account te exporteren:
+Houd rekening met de volgende voorwaarden om gegevens van Experience Platform naar uw [!DNL Marketing Cloud Account Engagement] -account te exporteren:
 
 #### U moet een [!DNL Marketing Cloud Account Engagement] -account hebben {#prerequisites-account}
 
-Een [!DNL Marketing Cloud Account Engagement] rekening met een abonnement op het [ product van de Rekening van de Marketing Cloud ](https://www.salesforce.com/products/marketing-cloud/marketing-automation/) is verplicht te werk te gaan.
+Een [!DNL Marketing Cloud Account Engagement] rekening met een abonnement op het [ product van de Betrokkenheid van de Rekening van Marketing Cloud ](https://www.salesforce.com/products/marketing-cloud/marketing-automation/) is verplicht te werk te gaan.
 
 Uw [!DNL Salesforce] -account moet de [!DNL Salesforce] `Account Engagement Administrator role` hebben. Dit wordt vereist om [ gebieden van het douanevooruitzicht ](https://help.salesforce.com/s/articleView?id=sf.pardot_fields_create_custom_field.htm&amp;type=5) tot stand te brengen.
 
@@ -64,7 +64,7 @@ Noteer de onderstaande items voordat u de verificatie uitvoert naar de bestemmin
 
 ### Guardrails {#guardrails}
 
-Verwijs naar [!DNL Marketing Cloud Account Engagement] [ tariefgrenzen ](https://developer.salesforce.com/docs/marketing/pardot/guide/overview.html#rate-limits) die de grenzen door uw plan worden opgelegd en ook op de Experience Platform uitvoeringen van toepassing zouden zijn.
+Verwijs naar [!DNL Marketing Cloud Account Engagement] [ tariefgrenzen ](https://developer.salesforce.com/docs/marketing/pardot/guide/overview.html#rate-limits) die de grenzen door uw plan worden opgelegd en ook op de uitvoeringen van Experience Platform van toepassing zouden zijn.
 
 >[!IMPORTANT]
 >
@@ -86,7 +86,7 @@ Raadpleeg de onderstaande tabel voor informatie over het exporttype en de export
 
 | Item | Type | Notities |
 ---------|----------|---------|
-| Exporttype | **[!UICONTROL Profile-based]** | <ul><li>U exporteert alle leden van een segment samen met de gewenste schemavelden *(bijvoorbeeld: e-mailadres, telefoonnummer, achternaam)* volgens uw veldtoewijzing.</li><li> Voor elk geselecteerd publiek in Platform, wordt de overeenkomstige [!DNL Salesforce Marketing Cloud Account Engagement] segmentstatus bijgewerkt met zijn publieksstatus van Platform.</li></ul> |
+| Exporttype | **[!UICONTROL Profile-based]** | <ul><li>U exporteert alle leden van een segment samen met de gewenste schemavelden *(bijvoorbeeld: e-mailadres, telefoonnummer, achternaam)* volgens uw veldtoewijzing.</li><li> Voor elk geselecteerd publiek in Experience Platform wordt de bijbehorende segmentstatus van [!DNL Salesforce Marketing Cloud Account Engagement] bijgewerkt met de publieksstatus van Experience Platform.</li></ul> |
 | Exportfrequentie | **[!UICONTROL Streaming]** | Streaming doelen zijn &quot;altijd aan&quot; API-verbindingen. Zodra een profiel in Experience Platform wordt bijgewerkt dat op publieksevaluatie wordt gebaseerd, verzendt de schakelaar de update stroomafwaarts naar het bestemmingsplatform. Lees meer over [ het stromen bestemmingen ](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}
@@ -105,19 +105,19 @@ Zoek in **[!UICONTROL Destinations]** > **[!UICONTROL Catalog]** naar [!DNL Sale
 
 Selecteer **[!UICONTROL Connect to destination]** als u wilt verifiëren bij het doel. U gaat naar de aanmeldingspagina van [!DNL Salesforce] . Voer uw [!DNL Marketing Cloud Account Engagement] -accountgegevens in en selecteer [!DNL Log In] .
 
-{het schermschot van het platform UI die tonen hoe te aan de Betrokkenheid van de Rekening van de Marketing Cloud voor authentiek te verklaren.](../../assets/catalog/email-marketing/salesforce-marketing-cloud-account-engagement/authenticate-destination.png)![
+{het schermschot van 0} Experience Platform UI die tonen hoe te om aan de Betrokkenheid van de Rekening van Marketing Cloud voor authentiek te verklaren.](../../assets/catalog/email-marketing/salesforce-marketing-cloud-account-engagement/authenticate-destination.png)![
 
 Daarna, selecteer [!UICONTROL Allow] in het verdere venster om toestemmingen aan **Adobe Experience Platform** app te geven om tot uw [!DNL Salesforce Marketing Cloud Account Engagement] rekening toegang te hebben. *u zult dit slechts eenmaal* moeten doen.
 
-![ Salesforce App screenshot bevestiging popup om toestemmingen aan Experience Platform app toegang tot de Betrokkenheid van de Rekening van de Marketing Cloud te geven.](../../assets/catalog/email-marketing/salesforce-marketing-cloud-account-engagement/allow-app.png)
+![ het screenshot van Salesforce App pop-up om toestemmingen aan Experience Platform te geven app toegang tot de Betrokkenheid van de Rekening van Marketing Cloud.](../../assets/catalog/email-marketing/salesforce-marketing-cloud-account-engagement/allow-app.png)
 
-Als de verstrekte details geldig zijn, toont UI een bericht: *u met succes verbonden met de rekening van de Rekening van de Rekening van de Marketing Cloud Salesforce* bericht en a **[!UICONTROL Connected]** status met een groen vinkje, kunt u aan de volgende stap dan te werk gaan.
+Als de verstrekte details geldig zijn, toont UI een bericht: *u met succes verbonden met de rekening van de Betrokkenheid van de Rekening van Salesforce Marketing Cloud* bericht en a **[!UICONTROL Connected]** status met een groen vinkje, kunt u aan de volgende stap dan te werk gaan.
 
 ### Doelgegevens invullen {#destination-details}
 
 Als u details voor de bestemming wilt configureren, vult u de vereiste en optionele velden hieronder in. Een sterretje naast een veld in de gebruikersinterface geeft aan dat het veld verplicht is. Verwijs naar de [ Gather  [!DNL Marketing Cloud Account Engagement]  geloofsbrieven ](#gather-credentials) sectie voor om het even welke begeleiding.
 
-{het schermschot van het platform UI die de bestemmingsdetails toont.](../../assets/catalog/email-marketing/salesforce-marketing-cloud-account-engagement/destination-details.png)![
+{het schermschot van 0} Experience Platform UI die de bestemmingsdetails toont.](../../assets/catalog/email-marketing/salesforce-marketing-cloud-account-engagement/destination-details.png)![
 
 | Veld | Beschrijving |
 | --- | --- |
@@ -144,7 +144,7 @@ Lees [ activeer profielen en publiek aan het stromen publiek uitvoerbestemmingen
 
 ### Afbeeldingsoverwegingen en voorbeeld {#mapping-considerations-example}
 
-Als u uw publieksgegevens correct vanuit Adobe Experience Platform naar de [!DNL Marketing Cloud Account Engagement] -bestemming wilt verzenden, moet u de stap voor veldtoewijzing doorlopen. Toewijzing bestaat uit het maken van een koppeling tussen de schemavelden van uw Experience Data Model (XDM) in uw Platform-account en de bijbehorende equivalenten van de doelbestemming.
+Als u uw publieksgegevens correct vanuit Adobe Experience Platform naar de [!DNL Marketing Cloud Account Engagement] -bestemming wilt verzenden, moet u de stap voor veldtoewijzing doorlopen. Toewijzing bestaat uit het maken van een koppeling tussen de schemavelden van uw Experience Data Model (XDM) in uw Experience Platform-account en de overeenkomstige equivalenten van de doelbestemming.
 
 Voer de onderstaande stappen uit om uw XDM-velden correct toe te wijzen aan de [!DNL Marketing Cloud Account Engagement] -doelvelden.
 
@@ -161,7 +161,7 @@ Voer de onderstaande stappen uit om uw XDM-velden correct toe te wijzen aan de [
      | `xdm: person.name.firstName` | `Attribute: firstName` | |
 
    * Hieronder ziet u een voorbeeld met de bovenstaande toewijzingen:
-     ![ het schermschot van het Platform UI die de afbeeldingen van het Doel tonen.](../../assets/catalog/email-marketing/salesforce-marketing-cloud-account-engagement/mappings.png)
+     ![ Experience Platform UI het screenshot voorbeeld dat de afbeeldingen van het Doel toont.](../../assets/catalog/email-marketing/salesforce-marketing-cloud-account-engagement/mappings.png)
 
 Wanneer u klaar bent met het opgeven van de toewijzingen voor uw doelverbinding, selecteert u **[!UICONTROL Next]** .
 
@@ -170,12 +170,12 @@ Wanneer u klaar bent met het opgeven van de toewijzingen voor uw doelverbinding,
 Volg onderstaande stappen om te controleren of u de bestemming correct hebt ingesteld:
 
 1. Navigeer naar een geselecteerd publiek. Selecteer het tabblad **[!DNL Activation data]**. In de kolom **[!UICONTROL Mapping ID]** wordt de naam weergegeven van het aangepaste veld dat op de pagina [!DNL Marketing Cloud Account Engagement Prospects] wordt gegenereerd.
-   {het screenshot voorbeeld van het platform UI die identiteitskaart van de Afbeelding voor een geselecteerd segment tonen.](../../assets/catalog/email-marketing/salesforce-marketing-cloud-account-engagement/selected-segment-mapping-id.png)![
+   ![ het het schermschot van Experience Platform UI die identiteitskaart van de Toewijzing voor een geselecteerd segment tonen.](../../assets/catalog/email-marketing/salesforce-marketing-cloud-account-engagement/selected-segment-mapping-id.png)
 
 1. Meld u aan bij de [[!DNL Salesforce] ](https://login.salesforce.com/) -website. Navigeer vervolgens naar de pagina **[!DNL Account Engagement]** > **[!DNL Prospects]** > **[!DNL Pardot Prospects]** en controleer of de perspectieven van het publiek zijn toegevoegd of bijgewerkt. U kunt ook toegang krijgen tot [[!DNL Salesforce Pardot] ](https://pi.pardot.com/) en tot de pagina **[!DNL Prospects]** .
    {het schermschot van 0} Salesforce UI die de pagina van Vooruitzichten toont.](../../assets/catalog/email-marketing/salesforce-marketing-cloud-account-engagement/prospects.png)![
 
-1. Om te controleren of de vooruitzichten zijn bijgewerkt, selecteer een vooruitzicht en verifieer of is het gebied van het douanevooruitzicht bijgewerkt met de status van het Experience Platform publiek.
+1. Om te controleren of de vooruitzichten zijn bijgewerkt, selecteer een vooruitzicht en verifieer of is het gebied van het douanevooruitzicht bijgewerkt met de het publieksstatus van Experience Platform.
    {het schermschot van 0} Salesforce UI die de geselecteerde pagina van het Vooruitzicht toont, wordt het gebied van het douanevooruitzicht bijgewerkt met de publieksstatus.](../../assets/catalog/email-marketing/salesforce-marketing-cloud-account-engagement/prospect.png)![
 
 ## Gegevensgebruik en -beheer {#data-usage-governance}

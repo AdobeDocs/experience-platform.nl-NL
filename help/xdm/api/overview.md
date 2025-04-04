@@ -1,12 +1,12 @@
 ---
-keywords: Experience Platform;home;populaire onderwerpen;api;API;XDM;XDM systeem;ervaringsgegevensmodel;Ervaring gegevensmodel;Beleidsgegevensmodel;Gegevensmodel;Gegevensmodel;Schema register;Schemaregister
+keywords: Experience Platform;home;populaire onderwerpen;api;API;XDM;XDM-systeem;ervaringsgegevensmodel;Experience gegevensmodel;Experience Data Model;Data Model;Data Model;Schema register;Schema Register
 solution: Experience Platform
 title: Handleiding voor schema-register
 description: Met de API voor het schemaregister kunnen ontwikkelaars programmatisch alle schema's en gerelateerde XDM-bronnen (Experience Data Model) in Adobe Experience Platform beheren. Volg deze gids voor het uitvoeren van de belangrijkste bewerkingen met de API.
 exl-id: 9e693d29-303e-462a-a1e2-93c0d517b8e3
-source-git-commit: 6e58f070c0a25d7434f1f165543f92ec5a081e66
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1141'
+source-wordcount: '1144'
 ht-degree: 1%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 1%
 
 [!DNL Schema Registry] wordt gebruikt om toegang te krijgen tot de Schemabibliotheek binnen Adobe Experience Platform, die een gebruikersinterface en RESTful API verstrekt waarvan alle beschikbare bibliotheekmiddelen toegankelijk zijn.
 
-De API van de Registratie van het Schema verstrekt verscheidene eindpunten die u toestaan om alle schema&#39;s en verwante middelen van het Gegevensmodel van de Ervaring programmatically te beheren (XDM) beschikbaar aan u binnen Platform. Dit omvat die door Adobe, [!DNL Experience Platform] partners, en verkopers worden bepaald waarvan toepassingen u gebruikt.
+De API van de Registratie van het Schema verstrekt verscheidene eindpunten die u toestaan om alle schema&#39;s en verwante middelen van het Gegevensmodel van de Ervaring programmatically te beheren (XDM) beschikbaar aan u binnen Experience Platform. Dit zijn onder andere de gedefinieerde toepassingen door Adobe, [!DNL Experience Platform] partners en leveranciers van wie u de toepassingen gebruikt.
 
 Deze eindpunten worden hieronder beschreven. Gelieve te bezoeken de individuele eindpuntgidsen voor details en te verwijzen naar [ begonnen gids ](./getting-started.md) voor belangrijke informatie over vereiste kopballen, lezend steekproefAPI vraag, en meer.
 
@@ -27,7 +27,7 @@ Om alle beschikbare eindpunten en verrichtingen te bekijken CRUD, bezoek de [ Ve
 
 ## Schema&#39;s
 
-De schema&#39;s XDM vertegenwoordigen en bevestigen de structuur en het formaat van gegevens die in Platform worden opgenomen. Een schema bestaat uit een klasse en nul of meer groepen schemavelden. U kunt schema&#39;s maken, weergeven, bewerken en verwijderen met behulp van het `/schemas` -eindpunt. Leren hoe te om dit eindpunt te gebruiken, zie de [ gids van het schemaeindpunt ](./schemas.md).
+XDM-schema&#39;s vertegenwoordigen en valideren de structuur en indeling van gegevens die in Experience Platform worden ingevoerd. Een schema bestaat uit een klasse en nul of meer groepen schemavelden. U kunt schema&#39;s maken, weergeven, bewerken en verwijderen met behulp van het `/schemas` -eindpunt. Leren hoe te om dit eindpunt te gebruiken, zie de [ gids van het schemaeindpunt ](./schemas.md).
 
 Voor een geleidelijke gids op hoe te om een volledig schema in de Registratie API van het Schema manueel tot stand te brengen, met inbegrip van het creëren van en het toevoegen van gebiedsgroepen en gegevenstypes, zie de [ API schemaverwezenlijking leerprogramma ](../tutorials/create-schema-api.md).
 
@@ -59,7 +59,7 @@ Descriptors zijn reeksen meta-gegevens die aan specifieke gebieden binnen een sc
 
 ## Unies
 
-Terwijl Platform u toestaat om schema&#39;s voor bepaalde gebruiksgevallen samen te stellen, staat het u ook toe om een &quot;unie&quot;van schema&#39;s samen te stellen die tot een specifieke klasse behoren. Een samenvoegingsschema voegt de gebieden van alle schema&#39;s samen die de zelfde klasse in één enkele vertegenwoordiging delen. Door een schema voor gebruik met [ in real time het Profiel van de Klant ](../../profile/home.md) toe te laten, wordt dat schema inbegrepen in de unie voor zijn bijzondere klasse. Als zodanig kunnen unieschema&#39;s niet rechtstreeks worden bewerkt en alleen worden beïnvloed door het opnemen of uitsluiten van schema&#39;s voor gebruik in profiel.
+Hoewel u met Experience Platform schema&#39;s kunt samenstellen voor bepaalde gebruiksgevallen, kunt u ook een &#39;samenvoeging&#39; van schema&#39;s samenstellen die tot een bepaalde klasse behoren. Een samenvoegingsschema voegt de gebieden van alle schema&#39;s samen die de zelfde klasse in één enkele vertegenwoordiging delen. Door een schema voor gebruik met [ in real time het Profiel van de Klant ](../../profile/home.md) toe te laten, wordt dat schema inbegrepen in de unie voor zijn bijzondere klasse. Als zodanig kunnen unieschema&#39;s niet rechtstreeks worden bewerkt en alleen worden beïnvloed door het opnemen of uitsluiten van schema&#39;s voor gebruik in profiel.
 
 Leren hoe te om vakbonden in de Registratie API van het Schema te bekijken, zie de [ gids van het vakbondseindpunt ](./unions.md).
 
@@ -93,7 +93,7 @@ Zie de [ gids van het de eindpunt van steekproefgegevens ](./sample-data.md) voo
 
 ## Controlelogboek
 
-De Registratie van het Schema handhaaft een logboek van alle veranderingen die aan een middel (klasse, gebiedsgroep, gegevenstype, of schema) tussen verschillende updates zijn voorgekomen. U kunt het logboek voor een bepaalde bron terugwinnen door zijn `$id` of `meta:altId` in de weg van een verzoek van de GET aan dit eindpunt te verstrekken.
+De Registratie van het Schema handhaaft een logboek van alle veranderingen die aan een middel (klasse, gebiedsgroep, gegevenstype, of schema) tussen verschillende updates zijn voorgekomen. U kunt het logboek voor een bepaalde bron terugwinnen door zijn `$id` of `meta:altId` in de weg van een verzoek van GET aan dit eindpunt te verstrekken.
 
 Zie de [ gids van het de eindpuntgids van het controlelogboek ](./audit-log.md) voor meer informatie over het gebruik van dit eindpunt.
 

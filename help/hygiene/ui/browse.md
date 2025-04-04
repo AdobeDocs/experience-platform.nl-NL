@@ -2,9 +2,9 @@
 title: Door werkorders voor de levenscyclus van gegevens bladeren
 description: Leer hoe u bestaande werkorders voor de levenscyclus van gegevens kunt weergeven en beheren in de Adobe Experience Platform-gebruikersinterface.
 exl-id: 76d4a809-cc2c-434d-90b1-23d88f29c022
-source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '810'
+source-wordcount: '812'
 ht-degree: 0%
 
 ---
@@ -25,7 +25,7 @@ In deze handleiding wordt uitgelegd hoe u bestaande werkorders in de gebruikersi
 
 Wanneer u de **[!UICONTROL Data Lifecycle]** -werkruimte voor het eerst opent in de gebruikersinterface, wordt een lijst met bestaande werkorders weergegeven, samen met de basisgegevens.
 
-![ Beeld dat de [!UICONTROL Data Lifecycle] werkruimte in het Platform UI ](../images/ui/browse/work-order-list.png) toont
+![ Beeld dat de [!UICONTROL Data Lifecycle] werkruimte in Experience Platform UI ](../images/ui/browse/work-order-list.png) toont
 
 In de lijst worden alleen de werkorders voor één categorie tegelijk weergegeven. Selecteer **[!UICONTROL Consumer]** om een lijst met record-delete-taken weer te geven en **[!UICONTROL Dataset]** om een lijst met geplande gegevenssetvervaldatums weer te geven.
 
@@ -97,7 +97,7 @@ De detailspagina voor een datasetvervaldatum verstrekt informatie over zijn basi
 
 ## Volgende stappen
 
-Deze handleiding besprak hoe u bestaande werkorders voor de levenscyclus van gegevens kunt weergeven en beheren in de interface van het platform. Raadpleeg de volgende documentatie voor informatie over het maken van uw eigen werkorders:
+In deze handleiding wordt beschreven hoe u bestaande werkorders voor de levenscyclus van gegevens in de gebruikersinterface van Experience Platform kunt weergeven en beheren. Raadpleeg de volgende documentatie voor informatie over het maken van uw eigen werkorders:
 
 * [Verlopen gegevenssets beheren](./dataset-expiration.md)
 * [Record verwijderen beheren](./record-delete.md)

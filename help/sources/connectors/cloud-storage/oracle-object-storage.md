@@ -1,21 +1,21 @@
 ---
-keywords: Experience Platform;home;populaire onderwerpen;Oracle Object Storage;oracle object storage
+keywords: Experience Platform;home;populaire onderwerpen;Oracle Object Storage;orace object storage
 solution: Experience Platform
 title: Oracle Object Storage Source Connector - Overzicht
 description: Leer hoe u Oracle Object Storage met Adobe Experience Platform kunt verbinden via API's of de gebruikersinterface.
 exl-id: 5e8b85c8-9f01-49a6-9556-7b9c7518fb4b
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '421'
+source-wordcount: '425'
 ht-degree: 0%
 
 ---
 
 # Oracle Object Storage-connector
 
-Adobe Experience Platform biedt native connectiviteit voor cloudproviders zoals AWS [!DNL Google Cloud Platform] , zodat u gegevens van deze systemen kunt overbrengen naar Platform voor gebruik in downstreamservices en -doelen.
+Adobe Experience Platform biedt native connectiviteit voor cloudproviders zoals AWS [!DNL Google Cloud Platform] , zodat u gegevens van deze systemen naar Experience Platform kunt overbrengen voor gebruik in downstreamservices en -doelen.
 
-Met bronnen voor cloudopslag kunt u uw gegevens overbrengen naar Platform zonder dat u deze hoeft te downloaden, opmaken of uploaden. Ingebedde gegevens kunnen worden opgemaakt als XDM JSON, XDM Parquet, of afgebakend. Elke stap van het proces is geïntegreerd in de bronwerkstroom. Met Platform kunt u gegevens uit [!DNL Oracle Object Storage] tot en met batches inbrengen.
+Opslagbronnen in de cloud kunnen uw gegevens naar Experience Platform brengen zonder dat ze hoeven te worden gedownload, opgemaakt of geüpload. Ingebedde gegevens kunnen worden opgemaakt als XDM JSON, XDM Parquet, of afgebakend. Elke stap van het proces is geïntegreerd in de bronwerkstroom. Met Experience Platform kunt u gegevens van [!DNL Oracle Object Storage] tot en met batches inbrengen.
 
 ## IP adres lijst van gewenste personen
 
@@ -32,13 +32,13 @@ Hieronder volgt een lijst met beperkingen waarmee u rekening moet houden wanneer
 - Ongeldige URL-padtekens niet toegestaan. Codepunten zoals `\uE000` zijn weliswaar geldig in NTFS-bestandsnamen, maar zijn geen geldige Unicode-tekens. Bovendien zijn sommige ASCII- of Unicode-tekens niet toegestaan, zoals besturingstekens (0x00 tot 0x1F, \u0081, enz.). Voor regels die de koorden van Unicode in HTTP/1.1 bepalen zie [ RFC 2616, Sectie 2.2: BasisRegels ](https://www.ietf.org/rfc/rfc2616.txt) en [ RFC 3987 ](https://www.ietf.org/rfc/rfc3987.txt).
 - De volgende bestandsnamen zijn niet toegestaan: LPT1, LPT2, LPT3, LPT4, LPT5, LPT6, LPT7, LPT8, LPT9, COM1, COM2, COM3, COM4, COM5, COM6, COM7, COM8, COM9, PRN, AUX, NUL, CON, CLOCK$, puntteken (.) en twee stippen ( ...).
 
-## Verbinden [!DNL Oracle Object Storage] met platform
+## Verbinden [!DNL Oracle Object Storage] met Experience Platform
 
-In de onderstaande documentatie vindt u informatie over het tot stand brengen van een verbinding tussen Oracle Object Storage en Adobe Experience Platform via API&#39;s of de gebruikersinterface:
+In de onderstaande documentatie vindt u informatie over hoe u Oracle Object Storage via API&#39;s of de gebruikersinterface kunt verbinden met Adobe Experience Platform:
 
 ### API&#39;s gebruiken
 
-- [Een basisverbinding voor Oracle Object Storage maken met de Flow Service API](../../tutorials/api/create/cloud-storage/oracle-object-storage.md)
+- [Een Oracle Object Storage-basisverbinding maken met de Flow Service API](../../tutorials/api/create/cloud-storage/oracle-object-storage.md)
 - [De gegevensstructuur en inhoud van een cloudopslagbron verkennen met behulp van de Flow Service API](../../tutorials/api/explore/cloud-storage.md)
 - [Een gegevensstroom maken voor een cloudopslagbron met behulp van de Flow Service API](../../tutorials/api/collect/cloud-storage.md)
 

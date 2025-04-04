@@ -1,16 +1,16 @@
 ---
-title: Offer Decisioning gebruiken met de Platform Web SDK
+title: Offer Decisioning gebruiken met de Experience Platform Web SDK
 description: De Adobe Experience Platform Web SDK kan gepersonaliseerde aanbiedingen leveren en teruggeven die in Offer Decisioning worden beheerd. U kunt uw aanbiedingen en andere gerelateerde objecten maken met de gebruikersinterface of API van Offer Decisioning.
-keywords: aanbieden besluit;beslissing;Web SDK;Platform Web SDK;gepersonaliseerde aanbiedingen;leveren aanbiedingen;aanbieding levering levering;aanbieden verpersoonlijking aan;
+keywords: aanbieden besluit;beslissing;Web SDK;Experience Platform Web SDK;gepersonaliseerde aanbiedingen;leveren aanbiedingen;aanbieding levering;aanbieden verpersoonlijking aan;
 exl-id: 4ab51f9d-3c44-4855-b900-aa2cde673a9a
-source-git-commit: b2c3b1160782a81ea66f42e21e494e0a7d90e037
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '791'
+source-wordcount: '799'
 ht-degree: 0%
 
 ---
 
-# Offer Decisioning gebruiken met de Platform Web SDK
+# Offer Decisioning gebruiken met de Experience Platform Web SDK
 
 Adobe Experience Platform [!DNL Web SDK] kan persoonlijke aanbiedingen die in Offer Decisioning worden beheerd, aanbieden en weergeven. U kunt uw aanbiedingen en andere verwante objecten maken met de gebruikersinterface (UI) of API&#39;s van Offer Decisioning.
 
@@ -49,7 +49,7 @@ Het is belangrijk dat u de volgende terminologie begrijpt wanneer u met Offer De
 
 * **Datastreams:** voor meer informatie, te lezen gelieve de [ gegevensstromen ](/help/datastreams/overview.md) documentatie.
 
-* **Identiteit**: Voor meer informatie, te lezen gelieve deze documentatie die schetst hoe [ het Web SDK van het Platform de Dienst van de Identiteit ](../../identity/overview.md) gebruikt.
+* **Identiteit**: Voor meer informatie, te lezen gelieve deze documentatie die schetst hoe [ Experience Platform Web SDK de Dienst van de Identiteit ](../../identity/overview.md) gebruikt.
 
 ## Offer Decisioning inschakelen
 
@@ -82,13 +82,13 @@ Voer de volgende stappen uit om Offer Decisioning in te schakelen:
 
       1. [Een tag-eigenschap maken](/help/tags/ui/administration/companies-and-properties.md)
       1. [ voeg de ingebedde code ](https://experienceleague.adobe.com/docs/core-services-learn/implementing-in-websites-with-launch/configure-launch/launch-add-embed.html) toe
-      1. Installeer en vorm de uitbreiding van het Web SDK van het Platform met de Datstream u door de configuratie van &quot;Datstream&quot;dropdown te selecteren creeerde. Zie de documentatie op [ uitbreidingen ](/help/tags/ui/managing-resources/extensions/overview.md).
+      1. Installeer en configureer de Experience Platform Web SDK-extensie met de DataStream die u hebt gemaakt door de configuratie te selecteren in het vervolgkeuzemenu &quot;DataStream&quot;. Zie de documentatie op [ uitbreidingen ](/help/tags/ui/managing-resources/extensions/overview.md).
 
          ![ install-a-web-sdk-uitbreiding ](./assets/install-aep-web-sdk-extension.png)
 
          ![ vorm-sep-web-sdk-uitbreiding ](./assets/configure-aep-web-sdk-extension.png)
 
-      1. Creeer de noodzakelijke [ Elementen van Gegevens ](/help/tags/ui/managing-resources/data-elements.md). Bij het absolute minimum, moet u een Identiteitskaart van het Web van het Platform van SDK en een het gegevenselement van de Objecten van SDK XDM van het Web van het Platform tot stand brengen XDM.
+      1. Creeer de noodzakelijke [ Elementen van Gegevens ](/help/tags/ui/managing-resources/data-elements.md). Bij het absolute minimum, moet u een de Identiteitskaart van Experience Platform Web SDK en een het gegevenselement van de Objecten van SDK XDM van het Web van Experience Platform tot stand brengen.
 
          ![ identiteit-kaart-gegeven-element ](./assets/identity-map-data-element.png)
 
@@ -96,7 +96,7 @@ Voer de volgende stappen uit om Offer Decisioning in te schakelen:
 
       1. Creeer uw [ Regels ](/help/tags/ui/managing-resources/rules.md).
 
-         * Voeg een actie van de Gebeurtenis van de Gebeurtenis van het Web van het Platform toe SDK verzendt en voeg relevant `decisionScopes` aan de configuratie van die actie toe
+         * Voeg een Experience Platform Web SDK Send Event-actie toe en voeg de relevante `decisionScopes` toe aan de configuratie van die actie
 
          ![ send-event-action-DecisionScopes ](./assets/send-event-action-decisionScopes.png)
 

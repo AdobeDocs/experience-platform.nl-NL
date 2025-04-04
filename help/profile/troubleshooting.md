@@ -4,16 +4,16 @@ title: Handleiding voor het oplossen van problemen in realtime-klantprofiel
 type: Documentation
 description: Dit document bevat antwoorden op veelgestelde vragen over Real-Time klantprofiel en een gids voor probleemoplossing voor algemene fouten bij het werken met profielgegevens met Adobe Experience Platform.
 exl-id: 0b340025-093b-41e4-8053-969a8e80e889
-source-git-commit: dde38e230a6bcb10cd38a12f644f2dd03f0cebaf
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '960'
+source-wordcount: '964'
 ht-degree: 0%
 
 ---
 
 # Handleiding voor het oplossen van problemen in realtime van klantprofielen
 
-Dit document biedt antwoorden op veelgestelde vragen over Real-Time Klantprofiel en een gids voor probleemoplossing voor algemene fouten. Voor vragen en het oplossen van problemen met betrekking tot andere diensten in Adobe Experience Platform, gelieve te verwijzen naar de [ gids van de het oplossen van problemenoplossing van het Experience Platform ](../landing/troubleshooting.md).
+Dit document biedt antwoorden op veelgestelde vragen over Real-Time Klantprofiel en een gids voor probleemoplossing voor algemene fouten. Voor vragen en het oplossen van problemen met betrekking tot andere diensten in Adobe Experience Platform, gelieve te verwijzen naar de [ het oplossen van problemengids van Experience Platform ](../landing/troubleshooting.md).
 
 Met [!DNL Real-Time Customer Profile], kunt u een holistische mening van elke individuele klant zien door gegevens van veelvoudige kanalen, met inbegrip van online, off-line, CRM, en derde te combineren. Dit laat marketers toe om gecoördineerde, verenigbare, en relevante ervaringen voor klanten over veelvoudige kanalen te drijven.
 
@@ -25,15 +25,15 @@ Hieronder volgt een lijst met antwoorden op veelgestelde vragen over Real-Time k
 
 Het profiel keurt zowel **verslag** als **tijd-reeks** gegevens goed, zolang de gegevens in kwestie minstens één identiteitswaarde bevat die de gegevens met een unieke individuele persoon associeert.
 
-Zoals alle diensten van het Platform, vereist het Profiel dat zijn gegevens semantisch onder een schema van de Gegevens van de Ervaring worden gestructureerd Model (XDM). Omgekeerd, moet dit schema a **primaire identiteit** hebben bepaald en voor gebruik in Profiel worden toegelaten.
+Net als bij alle Experience Platform-services moeten de gegevens van het profiel semantisch zijn gestructureerd volgens een XDM-schema (Experience Data Model). Omgekeerd, moet dit schema a **primaire identiteit** hebben bepaald en voor gebruik in Profiel worden toegelaten.
 
 Als u met XDM onbekend bent, begin met het [ XDM overzicht ](../xdm/home.md) om meer te leren. Daarna, zie de XDM gebruikersgids voor stappen op hoe te [ plaats identiteitsgebieden ](../xdm/tutorials/create-schema-ui.md#identity-field) en [ een schema voor Profiel ](../xdm/tutorials/create-schema-ui.md#profile) toelaten.
 
 ### Waar worden profielgegevens opgeslagen?
 
-Het profiel van de Klant in real time handhaaft zijn eigen gegevensopslag (die als &quot;opslag van het Profiel&quot;wordt bedoeld), los van het meer van Gegevens dat andere opgenomen gegevens van het Platform bevat.
+In real time houdt het Profiel van de Klant zijn eigen gegevensopslag (die als &quot;opslag van het Profiel&quot;wordt bedoeld), los van het meer van Gegevens die andere opgenomen gegevens van Experience Platform bevat.
 
-### Als ik al gegevens in Platform heb ingevoerd, kan ik het dan beschikbaar stellen in de opslag van het Profiel?
+### Als ik al gegevens in Experience Platform heb ingevoerd, kan ik deze dan beschikbaar stellen in de winkel Profiel?
 
 Als de gegevens in een niet-Profiel dataset zijn opgenomen, moet u die gegevens in een profiel-Toegelaten dataset opnieuw opnemen om het in de opslag van het Profiel ter beschikking te stellen. Het is mogelijk om een bestaande dataset voor Profiel toe te laten, echter om het even welke gegevens die voorafgaand aan die configuratie werden opgenomen zullen nog niet in de opslag van het Profiel verschijnen.
 
@@ -51,13 +51,13 @@ U kunt de Adobe Experience Platform Segmentation Service API ook gebruiken om to
 
 #### UI gebruiken
 
-In de gebruikersinterface van het Experience Platform kunt u op het tabblad **[!UICONTROL Browse]** in de **[!UICONTROL Profiles]** -werkruimte het totale aantal profielen weergeven en naar afzonderlijke profielen zoeken op basis van hun identiteitswaarde. Zie de [ de gebruikersgids van het Profiel ](./ui/user-guide.md) voor meer informatie.
+In de gebruikersinterface van Experience Platform kunt u op het tabblad **[!UICONTROL Browse]** in de **[!UICONTROL Profiles]** -werkruimte het totale aantal profielen weergeven en naar afzonderlijke profielen zoeken op basis van hun identiteitswaarde. Zie de [ de gebruikersgids van het Profiel ](./ui/user-guide.md) voor meer informatie.
 
 U kunt ook een lijst met uw publiek weergeven onder het tabblad **[!UICONTROL Browse]** in de werkruimte van **[!UICONTROL Audiences]** . Nadat u een publiek hebt geselecteerd, wordt een voorbeeld weergegeven van profielen die voor dat publiek zijn gekwalificeerd. Vervolgens kunt u een van deze profielen selecteren om de details weer te geven. Zie het [ overzicht van de Segmentatie UI ](../segmentation/ui/overview.md) voor meer informatie.
 
 ## Foutcodes
 
-Hieronder volgt een lijst met foutberichten die u kunt tegenkomen wanneer u werkt met de Real-Time Customer Profile API. Als de fout u ontmoet niet hier vermeld is, kunt u het in de algemene [ gids van het oplossen van problemenoplossing van het Platform ](../landing/troubleshooting.md) in plaats daarvan vinden.
+Hieronder volgt een lijst met foutberichten die u kunt tegenkomen wanneer u werkt met de Real-Time Customer Profile API. Als de fout u ontmoet niet hier vermeld is, kunt u het in de algemene [ het oplossen van problemengids van Experience Platform ](../landing/troubleshooting.md) in plaats daarvan vinden.
 
 ### Kan het opzoekschema van het berekende kenmerk voor het opgegeven pad niet opzoeken
 
@@ -133,7 +133,7 @@ Deze fout treedt op wanneer een geldige batch niet kan worden gevonden tijdens e
 }
 ```
 
-Deze fout treedt op wanneer een POST- of PUT-aanvraag wordt verzonden met een ongeldige Content-Type-header. Controleer tweemaal dat u een geldige Content-Type waarde voor het eindpunt verstrekt u gebruikt.
+Deze fout treedt op wanneer een POST- of PUT-aanvraag met een ongeldige Content-Type-header wordt verzonden. Controleer tweemaal dat u een geldige Content-Type waarde voor het eindpunt verstrekt u gebruikt.
 
 De meeste eindpunten van het Profiel keuren &quot;application/json&quot;voor hun Content-Type kopbal, met de volgende uitzonderingen goed:
 

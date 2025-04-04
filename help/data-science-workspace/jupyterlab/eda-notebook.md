@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;JupyterLab;notebooks;Data Science Workspace;populaire onderwerpen;analyse gegevenslaptops;eda;verkennende gegevensanalyse;gegevenswetenschap
+keywords: Experience Platform;JupyterLab;notebooks;Data Science Workspace;populaire onderwerpen;analyseren gegevenslaptops;eda;verkennende gegevensanalyse;gegevenswetenschap
 solution: Experience Platform
 title: EDA-laptop (Exploration Data Analysis)
 type: Tutorial
 description: Deze gids concentreert zich op hoe te om het Verkennende Notitieboekje van de gegevensanalyse (EDA) te gebruiken om patronen in Webgegevens te ontdekken, gebeurtenissen met een voorspelingsdoel, schone samengevoegde gegevens te groeperen, en het verband tussen predikers en een doel te begrijpen.
 exl-id: 48209326-0a07-4b5c-8b49-a2082a78fa47
-source-git-commit: 5d98dc0cbfaf3d17c909464311a33a03ea77f237
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '2789'
+source-wordcount: '2790'
 ht-degree: 0%
 
 ---
@@ -70,7 +70,7 @@ pd.set_option('display.max_colwidth', -1)
 
 ### Verbinding maken met Adobe Experience Platform [!DNL Query Service]
 
-[!DNL JupyterLab] op Platform staat u toe om SQL in a [!DNL Python] notitieboekje te gebruiken om tot gegevens door [ de Dienst van de Vraag ](https://www.adobe.com/go/query-service-home-en) toegang te hebben. Toegang tot gegevens via [!DNL Query Service] kan handig zijn voor het verwerken van grote gegevenssets vanwege de superieure runtime. Houd er rekening mee dat het opvragen van gegevens met [!DNL Query Service] een verwerkingstijd van tien minuten heeft.
+[!DNL JupyterLab] op Experience Platform staat u toe om SQL in a [!DNL Python] notitieboekje te gebruiken om tot gegevens door [ de Dienst van de Vraag ](https://www.adobe.com/go/query-service-home-en) toegang te hebben. Toegang tot gegevens via [!DNL Query Service] kan handig zijn voor het verwerken van grote gegevenssets vanwege de superieure runtime. Houd er rekening mee dat het opvragen van gegevens met [!DNL Query Service] een verwerkingstijd van tien minuten heeft.
 
 Alvorens u [!DNL Query Service] in [!DNL JupyterLab] gebruikt, zorg ervoor u een werkend begrip van de [[!DNL Query Service]  SQL syntaxis ](https://www.adobe.com/go/query-service-sql-syntax-en) hebt.
 
@@ -792,9 +792,9 @@ else:
 
 ![ belangrijke eigenschappen ](../images/jupyterlab/eda/important-feature-model.PNG)
 
-### Voorbeeld van inzicht
+### Voorbeeld-insight
 
-Terwijl u bezig bent met het analyseren van uw gegevens, is het niet ongebruikelijk om inzichten te ontdekken. Het volgende voorbeeld is een inzicht dat de recentie en monetaire waarde voor een doelgebeurtenis in kaart brengt.
+Terwijl u bezig bent met het analyseren van uw gegevens, is het niet ongebruikelijk om inzichten te ontdekken. In het volgende voorbeeld ziet u een insight die de actualiteit en de geldwaarde voor een doelgebeurtenis in kaart brengt.
 
 ```python
 # Proxy for monetary value is TOTAL_ORDER_REVENUE and proxy for frequency is NUMBER_VISITS
@@ -806,7 +806,7 @@ else:
     sns.lmplot("DAYS_SINCE_VISIT", "TOTAL_ORDER_REVENUE", Data, hue="TARGET", fit_reg=False);
 ```
 
-![ voorbeeldinzicht ](../images/jupyterlab/eda/insight.PNG)
+![ voorbeeld insight ](../images/jupyterlab/eda/insight.PNG)
 
 ## Optionele stap voor gegevensreiniging {#optional-data-clean}
 

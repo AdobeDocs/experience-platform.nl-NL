@@ -3,9 +3,9 @@ title: Overzicht van Chatlio Source
 description: Leer hoe u Chatlio met Adobe Experience Platform kunt verbinden met behulp van API's of de gebruikersinterface door gebruik te maken van webhaken
 badge: Beta
 exl-id: 4a71d1dc-e0eb-443e-a956-8caa0e82fa18
-source-git-commit: 8de45a54607bed17fd79bbed693666beb09c0502
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '355'
+source-wordcount: '362'
 ht-degree: 0%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 0%
 >
 >De bron [!DNL Chatlio] is in bèta. Gelieve te lezen het [ overzicht van bronnen ](../../home.md#terms-and-conditions) voor meer informatie bij het gebruiken van bèta-geëtiketteerde bronnen.
 
-Adobe Experience Platform staat toe dat gegevens uit externe bronnen worden opgenomen terwijl u de mogelijkheid krijgt om inkomende gegevens te structureren, te labelen en te verbeteren met behulp van de platformservices. U kunt gegevens uit diverse bronnen invoeren, zoals toepassingen voor Adobe, opslag in de cloud, databases en vele andere.
+Adobe Experience Platform staat toe dat gegevens uit externe bronnen worden opgenomen en biedt u de mogelijkheid om inkomende gegevens te structureren, labelen en verbeteren met behulp van Experience Platform-services. U kunt gegevens invoeren uit verschillende bronnen, zoals Adobe-toepassingen, opslag in de cloud, databases en vele andere.
 
 Experience Platform biedt ondersteuning voor het opnemen van gegevens in streaming toepassingen. Tot de ondersteuning voor streamingproviders behoren [!DNL Chatlio] .
 
@@ -41,18 +41,18 @@ Voordat u een [!DNL Chatlio] -bronverbinding kunt maken, moet u eerst controlere
 
 ### WebHaak instellen [!DNL Chatlio] {#set-up-webhook}
 
-Nadat u de gegevensstroom hebt gemaakt, moet u een webhaak instellen om Platform op de hoogte te brengen van [!DNL Chatlio] -gebeurtenissen. Webhooks kunnen u onmiddellijk op de hoogte stellen wanneer de klantkenmerken veranderen of wanneer mensen uw berichten openen en deze gegevens naar uw [!DNL Chatlio] -bron verzenden.
+Nadat u de gegevensstroom hebt gemaakt, moet u een webhaak instellen om Experience Platform op de hoogte te brengen van [!DNL Chatlio] -gebeurtenissen. Webhooks kunnen u onmiddellijk op de hoogte stellen wanneer de klantkenmerken veranderen of wanneer mensen uw berichten openen en deze gegevens naar uw [!DNL Chatlio] -bron verzenden.
 
 Voor meer informatie, lees de leerprogramma&#39;s op [ die uw het stromen eindpunt URL ](../../tutorials/ui/create/marketing-automation/chatlio-webhook.md#get-streaming-endpoint) krijgen en [ vestiging a  [!DNL Chatlio]  Webhaak ](../../tutorials/ui/create/marketing-automation/chatlio-webhook.md#set-up-webhook).
 
-## Verbinden [!DNL Chatlio] met platform {#connect-to-platform}
+## Verbinden [!DNL Chatlio] met Experience Platform {#connect-to-platform}
 
-In de onderstaande documentatie vindt u informatie over het maken van een [!DNL Chatlio] streamingconnector voor verbinding met [!DNL Platform] via API&#39;s of de gebruikersinterface:
+In de onderstaande documentatie vindt u informatie over het maken van een [!DNL Chatlio] streamingconnector voor verbinding met [!DNL Experience Platform] via API&#39;s of de gebruikersinterface:
 
-### Verbinding maken [!DNL Chatlio] met platform met behulp van API&#39;s {#connect-to-platform-using-api}
+### Verbinding maken [!DNL Chatlio] met Experience Platform via API&#39;s {#connect-to-platform-using-api}
 
-* [Creeer een bronverbinding om  [!DNL Chatlio]  gegevens aan Platform te brengen gebruikend APIs.](../../tutorials/api/create/marketing-automation/chatlio-webhook.md)
+* [Creeer een bronverbinding om  [!DNL Chatlio]  gegevens aan Experience Platform te brengen gebruikend APIs.](../../tutorials/api/create/marketing-automation/chatlio-webhook.md)
 
-### Verbinding maken [!DNL Chatlio] met platform via de gebruikersinterface {#connect-to-platform-using-ui}
+### Verbinding maken [!DNL Chatlio] met Experience Platform via de gebruikersinterface {#connect-to-platform-using-ui}
 
-* [Creeer een bronverbinding om  [!DNL Chatlio]  gegevens aan Platform te brengen gebruikend het gebruikersinterface](../../tutorials/ui/create/marketing-automation/chatlio-webhook.md)
+* [Creeer een bronverbinding om  [!DNL Chatlio]  gegevens aan Experience Platform te brengen gebruikend het gebruikersinterface](../../tutorials/ui/create/marketing-automation/chatlio-webhook.md)

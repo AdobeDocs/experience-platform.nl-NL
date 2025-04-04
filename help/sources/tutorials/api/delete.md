@@ -5,9 +5,9 @@ title: Een account verwijderen met de Flow Service API
 type: Tutorial
 description: Leer hoe u een account verwijdert met de Flow Service API.
 exl-id: 3d07ab7d-c012-472e-8db4-b19e3936dcba
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '336'
+source-wordcount: '339'
 ht-degree: 0%
 
 ---
@@ -24,12 +24,12 @@ Voor deze zelfstudie moet u een geldige verbinding-id hebben. Als u geen geldige
 
 Voor deze zelfstudie hebt u ook een goed inzicht nodig in de volgende onderdelen van Adobe Experience Platform:
 
-* [ Bronnen ](../../home.md): [!DNL Experience Platform] staat gegevens toe om van diverse bronnen worden opgenomen terwijl het voorzien van u van de capaciteit om, inkomende gegevens te structureren te etiketteren en te verbeteren gebruikend [!DNL Platform] diensten.
-* [ Sandboxen ](../../../sandboxes/home.md): [!DNL Experience Platform] verstrekt virtuele zandbakken die één enkele [!DNL Platform] instantie in afzonderlijke virtuele milieu&#39;s verdelen helpen digitale ervaringstoepassingen ontwikkelen en ontwikkelen.
+* [ Bronnen ](../../home.md): [!DNL Experience Platform] staat gegevens toe om van diverse bronnen worden opgenomen terwijl het voorzien van u van de capaciteit om, inkomende gegevens te structureren te etiketteren en te verbeteren gebruikend [!DNL Experience Platform] diensten.
+* [ Sandboxen ](../../../sandboxes/home.md): [!DNL Experience Platform] verstrekt virtuele zandbakken die één enkele [!DNL Experience Platform] instantie in afzonderlijke virtuele milieu&#39;s verdelen helpen digitale ervaringstoepassingen ontwikkelen en ontwikkelen.
 
-### Platform-API&#39;s gebruiken
+### Experience Platform API&#39;s gebruiken
 
-Voor informatie over hoe te om vraag aan Platform APIs met succes te maken, zie de gids op [ begonnen wordt met Platform APIs ](../../../landing/api-guide.md).
+Voor informatie over hoe te om vraag aan Experience Platform APIs met succes te maken, zie de gids op [ begonnen wordt met Experience Platform APIs ](../../../landing/api-guide.md).
 
 ## Account verwijderen
 
@@ -37,7 +37,7 @@ Voor informatie over hoe te om vraag aan Platform APIs met succes te maken, zie 
 >
 >Voordat u de bronaccount verwijdert, moet u eerst bestaande gegevensstromen verwijderen die aan de bronaccount zijn gekoppeld. Om bestaande dataflows te schrappen, verwijs naar het leerprogramma bij [ het schrappen van brondataflows ](./delete-dataflows.md).
 
-Als u een account wilt verwijderen, vraagt u een DELETE aan op de [!DNL Flow Service] API terwijl u de basis-verbindings-id opgeeft die overeenkomt met het account dat u wilt verwijderen.
+Als u een account wilt verwijderen, vraagt u een DELETE-aanvraag naar de [!DNL Flow Service] API en geeft u de basis-verbindings-id op die overeenkomt met het account dat u wilt verwijderen.
 
 **API formaat**
 
@@ -64,7 +64,7 @@ curl -X DELETE \
 
 Een geslaagde reactie retourneert HTTP-status 204 (Geen inhoud) en een lege hoofdtekst.
 
-U kunt de schrapping bevestigen door een raadpleging (GET) verzoek aan de verbinding te proberen.
+U kunt de verwijdering bevestigen door een opzoekverzoek (GET) in te dienen bij de verbinding.
 
 ## Volgende stappen
 

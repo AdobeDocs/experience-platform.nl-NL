@@ -5,9 +5,9 @@ title: API-handleiding voor sandbox
 description: Sandboxen in Adobe Experience Platform bieden geïsoleerde ontwikkelomgevingen waarmee u functies kunt testen, experimenten kunt uitvoeren en aangepaste configuraties kunt maken zonder dat dit gevolgen heeft voor uw productieomgeving.
 role: Developer
 exl-id: c77e96dc-d138-4126-bbb0-b67beb0a02d6
-source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '327'
+source-wordcount: '328'
 ht-degree: 0%
 
 ---
@@ -28,7 +28,7 @@ Een sandbox is een virtuele partitie binnen één instantie van Adobe Experience
 
 ## Typen sandbox
 
-Momenteel zijn de ondersteunde sandboxtypen op Experience Platform productie- en ontwikkelingssandboxen. Een standaardplatformlicentie geeft u in totaal vijf sandboxen, die u kunt classificeren als productie of ontwikkeling. U kunt extra pakketten van 10 sandboxen een licentie geven tot een maximum van 75 sandboxen in totaal. Zie de [ gids van het de types van zandbak eindseindpunt ](./types.md) leren hoe te om gesteunde zandbaktypes voor uw organisatie in API te bekijken.
+Momenteel zijn de ondersteunde sandboxtypen op Experience Platform productie- en ontwikkelingssandboxen. Een Experience Platform-standaardlicentie geeft u in totaal vijf sandboxen, die u kunt indelen als productie of ontwikkeling. U kunt extra pakketten van 10 sandboxen een licentie geven tot een maximum van 75 sandboxen in totaal. Zie de [ gids van het de types van zandbak eindseindpunt ](./types.md) leren hoe te om gesteunde zandbaktypes voor uw organisatie in API te bekijken.
 
 ## Volgende stappen
 

@@ -1,15 +1,15 @@
 ---
-title: Adobe Experience Platform Release Notes April 2022
+title: Aanvullende informatie van april 2022 voor Adobe Experience Platform
 description: Aanvullende informatie van april 2022 voor Adobe Experience Platform.
 exl-id: 39233787-3089-4469-8363-b006ae41ae21
-source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '2547'
-ht-degree: 4%
+source-wordcount: '2556'
+ht-degree: 13%
 
 ---
 
-# Opmerkingen bij de release van Adobe Experience Platform
+# Aanvullende informatie voor Adobe Experience Platform
 
 **Releasedatum: donderdag 27 april 2022**
 
@@ -19,16 +19,16 @@ Updates voor bestaande functies in Adobe Experience Platform:
 - [[!DNL Dashboards]](#dashboards)
 - [Gegevensstromen](#dataflows)
 - [[!DNL Data Prep]](#data-prep)
-- [Doelen](#destinations)
-- [Experience Data Model (XDM)](#xdm)
+- [Bestemmingen](#destinations)
+- [Experience-datamodel (XDM)](#xdm)
 - [Real-Time Customer Data Platform B2B Edition](#B2B)
 - [Bronnen](#sources)
 
 ## [!DNL Dashboards] {#dashboards}
 
-Platform biedt meerdere dashboards waardoor u belangrijke informatie over de gegevens van uw organisatie kunt bekijken, zoals die tijdens dagelijkse momentopnamen wordt vastgelegd.
+Experience Platform biedt meerdere dashboards waarmee u belangrijke informatie over de gegevens van uw organisatie kunt bekijken, zoals vastgelegd tijdens dagelijkse momentopnamen.
 
-De dashboards verstrekken pre-gevormde rapporteringsopties voor de gegevens van uw organisatie en zijn direct in de markeringenwerkschema binnen Platform gebouwd. Deze dashboards zijn beschikbaar zonder de behoefte aan extra steun van IT of de tijd en de inspanning het anders zou vergen om gegevens met extra het opslagontwerp en implementatie van gegevens uit te voeren en te verwerken.
+De dashboards verstrekken pre-gevormde rapporteringsopties voor de gegevens van uw organisatie en zijn direct ingebouwd in de markeringswerkschema binnen Experience Platform. Deze dashboards zijn beschikbaar zonder de behoefte aan extra steun van IT of de tijd en de inspanning het anders zou vergen om gegevens met extra het opslagontwerp en implementatie van gegevens uit te voeren en te verwerken.
 
 De volgende widgets zijn beschikbaar via de widgetbibliotheek op hun respectieve dashboards. Zie de documentatie voor meer informatie over [ hoe te om widgets door de bibliotheek van Widget toe te voegen ](../../dashboards/customize/widget-library.md).
 
@@ -41,9 +41,9 @@ De volgende widgets zijn beschikbaar via de widgetbibliotheek op hun respectieve
 | [!UICONTROL Audiences size] | Profielen | Deze widget biedt een tabel met twee kolommen met maximaal 20 segmenten en het totale aantal soorten publiek in elk segment. De lijst is afhankelijk van het toegepaste samenvoegingsbeleid en wordt van hoog tot laag geordend volgens het totale aantal doelgroepen. |
 | [!UICONTROL Profile count trend] | Profielen | Deze widget gebruikt een lijngrafiek om de trend in het totale aantal profielen in het systeem in tijd te illustreren. De gegevens kunnen gedurende perioden van 30 dagen, 90 dagen en 12 maanden worden weergegeven. |
 | [!UICONTROL Single identity profiles by identity] | Profielen | Deze widget gebruikt een staafdiagram om het totale aantal profielen te illustreren dat met slechts één unieke id wordt geïdentificeerd. De widget ondersteunt maximaal vijf van de meest voorkomende identiteiten. |
-| [!UICONTROL Destination status] | Doelen | Deze widget geeft het totale aantal ingeschakelde bestemmingen als één enkele metrische waarde weer en gebruikt een doughnut grafiek om het proportionele verschil tussen toegelaten en gehandicapte bestemmingen te illustreren. |
-| [!UICONTROL Active destinations by destination platform] | Doelen | Deze widget gebruikt een twee-kolom lijst om een lijst van actieve bestemmingsplatforms en het totale aantal actieve bestemmingen voor elk bestemmingsplatform te tonen. |
-| [!UICONTROL Activated audiences across all destinations] | Doelen | Deze widget biedt het totale aantal soorten publiek dat op alle doelen in één meting is geactiveerd. |
+| [!UICONTROL Destination status] | Bestemmingen | Deze widget geeft het totale aantal ingeschakelde bestemmingen als één enkele metrische waarde weer en gebruikt een doughnut grafiek om het proportionele verschil tussen toegelaten en gehandicapte bestemmingen te illustreren. |
+| [!UICONTROL Active destinations by destination platform] | Bestemmingen | Deze widget gebruikt een twee-kolom lijst om een lijst van actieve bestemmingsplatforms en het totale aantal actieve bestemmingen voor elk bestemmingsplatform te tonen. |
+| [!UICONTROL Activated audiences across all destinations] | Bestemmingen | Deze widget biedt het totale aantal soorten publiek dat op alle doelen in één meting is geactiveerd. |
 | [!UICONTROL Audience activation order] | Segmenten | Deze widget biedt een tabel met drie kolommen met de doelnaam, het platform en de activeringsdatum van het publiek. |
 | [!UICONTROL Audience size trend] | Segmenten | Deze widget biedt een illustratie van de lijngrafiek voor het totale aantal profielen dat gedurende 30 dagen, 90 dagen en perioden van 12 maanden aan de criteria van om het even welke segmentdefinitie voldoet. |
 | [!UICONTROL Audience size change trend] | Segmenten | Deze widget geeft een lijngrafiekillustratie van het verschil in het totale aantal profielen dat voor een bepaald segment in aanmerking kwam tussen de meest recente dagelijkse momentopnamen. De periode van trendanalyse kan over 30 dagen, 90 dagen, en periodes van 12 maanden worden visualiseerd. |
@@ -61,11 +61,11 @@ Zie de documentatie voor meer informatie over [[!DNL Profiles]](../../dashboards
 
 ## Gegevensstromen {#dataflows}
 
-In Platform, worden de gegevens opgenomen van vele verschillende bronnen, binnen het systeem geanalyseerd, en geactiveerd aan een brede verscheidenheid van bestemmingen. Platform maakt het proces om deze potentieel niet-lineaire stroom van gegevens te volgen gemakkelijker door transparantie van gegevensstromen te verstrekken.
+In Experience Platform worden gegevens uit vele verschillende bronnen opgenomen, binnen het systeem geanalyseerd en geactiveerd naar een groot aantal verschillende bestemmingen. Experience Platform maakt het proces om deze potentieel niet-lineaire stroom van gegevens te volgen gemakkelijker door transparantie van gegevensstromen te verstrekken.
 
-Dataflows zijn een weergave van taken die gegevens over het hele platform verplaatsen. Deze dataflows worden gevormd over de verschillende diensten, die gegevens van bronschakelaars aan doeldatasets helpen bewegen, waar het dan door de Dienst van de Identiteit en het Profiel van de Klant in real time alvorens uiteindelijk aan bestemmingen wordt geactiveerd wordt gebruikt.
+Dataflows zijn een weergave van taken die gegevens over Experience Platform verplaatsen. Deze dataflows worden gevormd over de verschillende diensten, die gegevens van bronschakelaars aan doeldatasets helpen bewegen, waar het dan door de Dienst van de Identiteit en het Profiel van de Klant in real time alvorens uiteindelijk aan bestemmingen wordt geactiveerd wordt gebruikt.
 
-**Nieuwe eigenschappen**
+**Nieuwe functies**
 
 | Functie | Beschrijving |
 | ------- | ----------- |
@@ -77,25 +77,25 @@ Voor meer algemene informatie over dataflows, verwijs naar het [ dataflows overz
 
 [!DNL Data Prep] staat gegevensingenieurs toe om gegevens in kaart te brengen, om te zetten en te bevestigen aan en van het Model van de Gegevens van de Ervaring (XDM).
 
-**Bijgewerkte eigenschappen**
+**Bijgewerkte functies**
 
 | Functie | Beschrijving |
 | --- | --- |
 | Ondersteuning voor Adobe Analytics-bron | De Adobe Analytics-bron biedt nu ondersteuning voor functies voor het voorvertonen van gegevens, zodat u uw gegevens uit de Analytics-rapportenreeks kunt toewijzen aan een doel-XDM-schema wanneer u een gegevensstroom maakt. Zie het leerprogramma op [ creërend een Analytics bronverbinding ](../../sources/tutorials/ui/create/adobe-applications/analytics.md) voor meer informatie. |
 | Ondersteuning voor het importeren van bestaande toewijzingsregels | U kunt nu toewijzingsregels importeren uit een bestaande gegevensstroom om uw databaseconfiguraties te versnellen en fouten te beperken. Zie het leerprogramma bij [ het invoeren van bestaande toewijzingsregels ](../../data-prep/ui/mapping.md) voor meer informatie. |
 
-Voor meer informatie over [!DNL Data Prep], gelieve te zien het [[!DNL Data Prep]  overzicht ](../../data-prep/home.md).
+Voor meer informatie over [!DNL Data Prep] raadpleegt u het [[!DNL Data Prep] overzicht](../../data-prep/home.md).
 
 ## [!DNL Destinations] {#destinations}
 
-[!DNL Destinations] zijn vooraf gebouwde integratie met bestemmingsplatforms die voor de naadloze activering van gegevens van Adobe Experience Platform toestaan. U kunt bestemmingen gebruiken om uw bekende en onbekende gegevens voor kanaalmarketing campagnes, e-mailcampagnes, gerichte reclame, en vele andere gebruiksgevallen te activeren.
+[!DNL Destinations] zijn pre-built integraties met bestemmingsplatforms die de naadloze activering van gegevens van Adobe Experience Platform mogelijk maken. U kunt bestemmingen gebruiken om uw bekende en onbekende gegevens te activeren voor cross-channel marketingcampagnes, e-mailcampagnes, gerichte advertenties en vele andere gebruiksscenario&#39;s.
 
-**Nieuwe of bijgewerkte eigenschappen**
+**Nieuwe of bijgewerkte functies**
 
 | Functie | Beschrijving |
 | ----------- | ----------- |
 | Geavanceerde Enterprise-doelconnectors | Drie bedrijfsdoelconnectors zijn nu over het algemeen beschikbaar: [[!DNL Amazon Kinesis]](../../destinations/catalog/cloud-storage/amazon-kinesis.md) , [[!DNL Azure Event Hubs]](../../destinations/catalog/cloud-storage/azure-event-hubs.md) en [[!DNL HTTP API]](../../destinations/catalog/streaming/http-destination.md) . <br> De algemene beschikbaarheid van bedrijfsdoelconnectors omvat alle mogelijkheden die eerder in de Beta-fase werden aangeboden, en meer: <ul><li>De nieuwe authentificatiemogelijkheden, met inbegrip van [ Gedeelde Ondertekening van de Toegang in de Hubs van de Gebeurtenis van de Gebeurtenis van de Gebeurtenis ](../../destinations/catalog/cloud-storage/azure-event-hubs.md#sas-authentication) en meer [ authentificatietypen ](../../destinations/catalog/streaming/http-destination.md#authentication-information) (tokens aan tokens, OAuth 2) in de bestemming van HTTP API;</li><li>[ het Steunen van historische profielgegevens ](../../destinations/catalog/streaming/http-destination.md#historical-data-backfill) (verzendend historische profielen die voor het segment worden gekwalificeerd wanneer eerst geactiveerd);</li><li>Dataflow loopmetriek wordt nu gesteund voor deze bestemmingen;</li><li>[ extra segmentmeta-gegevens ](../../destinations/catalog/streaming/http-destination.md#destination-details) inbegrepen in de gegevensuitkering, met inbegrip van segmentnamen en segmenttimestamps;</li><li>Steun voor [ statische IP adressen ](/help/destinations/catalog/streaming/ip-address-allow-list.md) voor klanten die Experience Platform moeten lijsten van gewenste personen.</li></ul> |
-| In-context alarm voor bestemmingsdataflows | U kunt [ nu aan alarm ](../../destinations/ui/alerts.md) intekenen wanneer het creëren van een bestemmingsdataflow, om waakzame berichten betreffende de status, het succes, of de mislukking van uw dataflow looppas te ontvangen. U kunt ervoor kiezen waarschuwingen te ontvangen in de gebruikersinterface van het Experience Platform of via e-mail. |
+| In-context alarm voor bestemmingsdataflows | U kunt [ nu aan alarm ](../../destinations/ui/alerts.md) intekenen wanneer het creëren van een bestemmingsdataflow, om waakzame berichten betreffende de status, het succes, of de mislukking van uw dataflow looppas te ontvangen. U kunt ervoor kiezen waarschuwingen te ontvangen in de gebruikersinterface van Experience Platform of via e-mail. |
 
 ### Geen proces voor geavanceerde bedrijfsdoelconnectors {#release-process-enterprise-destinations}
 
@@ -105,22 +105,22 @@ Als u deze bestemmingen in de fase van Beta hebt gebruikt, gelieve te merken op 
 
 - Als u al eerder in Beta met een van de drie doelen bent geweest, is er geen actie nodig. Alle gegevensstromen die als onderdeel van Beta worden ingesteld, blijven functioneel en worden gemigreerd naar de GA-versie.
 - Als u deze bestemmingen vanaf 27 april wilt instellen, gelieve dit te doen met de nieuwe GA-versie van de bestemmingen.
-- De als afgekeurd gemarkeerde bètakaarten worden verwijderd zodra de releasebewerking is voltooid, naar schatting tegen het einde van dag 29 april. Het technische team van het Experience Platform volgt nauwlettend voor een succesvolle versieverrichting.
+- De als afgekeurd gemarkeerde bètakaarten worden verwijderd zodra de releasebewerking is voltooid, naar schatting tegen het einde van dag 29 april. Het technische team van Experience Platform houdt nauwlettend toezicht op een geslaagde releasebewerking.
 
 **Nieuwe bestemmingen**
 
-| Doel | Beschrijving |
+| Bestemming | Beschrijving |
 | ----------- | ----------- |
 | [!DNL Criteo] | Maak verbinding met en activeer gegevens naar het [[!DNL Criteo]](../../destinations/catalog/advertising/criteo.md) advertentieplatform. |
 | [!DNL Sendgrid] | Verbind en activeer gegevens aan het [[!DNL Sendgrid]](../../destinations/catalog/email-marketing/sendgrid.md) platform voor transactie en marketing e-mail. |
 
-Voor meer algemene informatie over bestemmingen, verwijs naar het [ overzicht van bestemmingen ](../../destinations/home.md).
+Voor meer algemene informatie over bestemmingen, raadpleegt u het [overzicht van bestemmingen](../../destinations/home.md).
 
-## Experience Data Model (XDM) {#xdm}
+## Experience-datamodel (XDM) {#xdm}
 
-XDM is een open-bronspecificatie die gemeenschappelijke structuren en definities (schema&#39;s) voor gegevens verstrekt die in Adobe Experience Platform worden gebracht. Door zich aan de normen van XDM te houden, kunnen alle gegevens van de klantenervaring in een gemeenschappelijke vertegenwoordiging worden opgenomen om inzichten op een snellere, meer geïntegreerde manier te leveren. U kunt waardevolle inzichten van klantenacties bereiken, klantenpubliek door segmenten bepalen, en klantenattributen voor verpersoonlijkingsdoeleinden gebruiken.
+XDM is een open-bronspecificatie die algemene structuren en definities (schema&#39;s) biedt voor gegevens die in Adobe Experience Platform worden geïmporteerd. Door de XDM-standaarden te hanteren, kunnen alle gegevens over de klantervaring worden opgenomen in een gemeenschappelijke weergave. Zo worden inzichten sneller en beter geïntegreerd verkregen. U kunt waardevolle inzichten verkrijgen uit klantacties, klantdoelgroepen definiëren via segmenten en klantkenmerken gebruiken voor personalisatiedoeleinden.
 
-**Nieuwe eigenschappen**
+**Nieuwe functies**
 
 | Functie | Beschrijving |
 | --- | --- |
@@ -169,61 +169,61 @@ XDM is een open-bronspecificatie die gemeenschappelijke structuren en definities
 
 {style="table-layout:auto"}
 
-Voor meer informatie over XDM in Platform, zie het [ XDM overzicht van het Systeem ](../../xdm/home.md).
+Voor meer informatie over XDM in Experience Platform, zie het [ XDM overzicht van het Systeem ](../../xdm/home.md).
 
 ## [!DNL Artificial Intelligence/Machine Learning services] {#ai/ml-services}
 
 Met AI/ML-services kunnen marketinganalisten en praktijkmensen gebruikmaken van de kracht van kunstmatige intelligentie en het leren van machines in gebruiksgevallen voor de klant. Dit staat voor marketing analisten toe om voorspellingen op te zetten specifiek voor de behoeften van een bedrijf gebruikend zaken-vlakke configuraties zonder de behoefte aan de deskundigheid van de gegevenswetenschap.
 
-### Attribution AI
+### Attributie-AI
 
 Attribution AI wordt gebruikt om credits toe te wijzen aan touchpoints die leiden tot conversiegebeurtenissen. Dit kan door marketeers worden gebruikt om de marketingimpact van elk individueel marketing-touchpoint in journeys van de klant te kwantificeren.
 
-**Bijgewerkte eigenschappen**
+**Bijgewerkte functies**
 
 | Functie | Beschrijving |
 | ------- | ----------- |
-| Ondersteuning voor meerdere gegevenssets | De Multi eigenschap van de Dataset van de Dataset steunt nu alle datasets van de Gebeurtenis van de Ervaring evenals de selectie van de Kaart van de Identiteit als identiteit. De klanten kunnen de Kaart van de Identiteit en om het even welke bijbehorende IDs selecteren zolang er een gemeenschappelijke identiteitsnaamruimte over datasets is. Attribution AI ondersteunt de volgende schema&#39;s: Adobe Analytics, Experience Event, Consumer Experience Event. Voor meer informatie over MultiDataset steun in Attribution AI, verwijs naar de [ gebruikersgids van de Attribution AI ](../../intelligent-services/attribution-ai/user-guide.md). |
+| Ondersteuning voor meerdere gegevenssets | De Multi eigenschap van de Dataset van de Dataset steunt nu alle datasets van de Gebeurtenis van de Ervaring evenals de selectie van de Kaart van de Identiteit als identiteit. De klanten kunnen de Kaart van de Identiteit en om het even welke bijbehorende IDs selecteren zolang er een gemeenschappelijke identiteitsnaamruimte over datasets is. Attribution AI ondersteunt de volgende schema&#39;s: Adobe Analytics, Experience Event, Consumer Experience Event. Voor meer informatie over MultiDataset steun in Attributie AI, verwijs naar de [ gebruikersgids van de Attributie AI ](../../intelligent-services/attribution-ai/user-guide.md). |
 
-Voor meer informatie over [!DNL Intelligent Services], gelieve te zien het [[!DNL Intelligent Services]  overzicht ](../../intelligent-services/home.md).
+Voor meer informatie over [!DNL Intelligent Services] raadpleegt u het [[!DNL Intelligent Services] overzicht](../../intelligent-services/home.md).
 
 ### Customer AI
 
-De in Real-time Customer Data Platform beschikbare AI van de klant wordt gebruikt om aangepaste eigenschapscores zoals kurn en conversie voor individuele profielen op schaal te produceren. Dit wordt bereikt zonder de bedrijfsbehoeften te hoeven omzetten in een machine learning-probleem, een algoritme te kiezen, te trainen of te implementeren.
+De in Real-Time Customer Data Platform beschikbare AI van de klant wordt gebruikt om aangepaste eigenschapscores zoals kurn en conversie voor individuele profielen op schaal te produceren. Dit wordt bereikt zonder de bedrijfsbehoeften te hoeven omzetten in een machine learning-probleem, een algoritme te kiezen, te trainen of te implementeren.
 
-**Bijgewerkte eigenschappen**
+**Bijgewerkte functies**
 
 | Functie | Beschrijving |
 | ------- | ----------- |
 | Ondersteuning voor meerdere gegevenssets | De Multi eigenschap van de Dataset van de Dataset steunt nu alle datasets van de Gebeurtenis van de Ervaring evenals de selectie van de Kaart van de Identiteit als identiteit. De klanten kunnen de Kaart van de Identiteit en om het even welke bijbehorende IDs selecteren zolang er een gemeenschappelijke identiteitsnaamruimte over datasets is. AI van de klant ondersteunt de volgende schema&#39;s: Adobe Analytics, Experience Event, Consumer Experience Event en het Adobe Audience Manager-schema. Voor meer informatie over de MultiSteun van de Dataset in Klant AI, verwijs naar de [ gebruikersgids van de Klant AI ](../../intelligent-services/customer-ai/user-guide/configure.md). |
 | Nieuwe maatstaven voor modelevaluatie in Customer AI | Met nieuwe winstkaarten in AI-kaarten van klanten kunnen marketers de groepsgrootte bepalen op basis van hun budget- en ROI-doelstellingen. Met nieuwe diagrammen kunt u de kwaliteit van het model meten, zodat u een betere zichtbaarheid krijgt in de lift die ze boven willekeurige doelen kunnen plaatsen. Voor meer informatie, zie [ inzichten met het document van AI van de Klant ](../../intelligent-services/customer-ai/user-guide/discover-insights.md) ontdekken. |
 
-Voor meer informatie over [!DNL Intelligent Services], gelieve te zien het [[!DNL Intelligent Services]  overzicht ](../../intelligent-services/home.md).
+Voor meer informatie over [!DNL Intelligent Services] raadpleegt u het [[!DNL Intelligent Services] overzicht](../../intelligent-services/home.md).
 
 ## Real-Time Customer Data Platform B2B Edition {#B2B}
 
-Real-Time CDP B2B Edition is gebaseerd op Real-time Customer Data Platform (Real-Time CDP) en is speciaal ontworpen voor marketers die werken in een servicemodel voor bedrijven. Het verenigt gegevens uit veelvoudige bronnen en combineert het in één enkele mening van mensen en rekeningsprofielen. Deze verenigde gegevens staan marketers toe om specifiek publiek nauwkeurig te richten en dat publiek over alle beschikbare kanalen in dienst te nemen.
+Real-Time CDP B2B edition is gebaseerd op Real-Time Customer Data Platform (Real-Time CDP) en is speciaal ontworpen voor marketers die werken in een servicemodel voor bedrijven. Het verenigt gegevens uit veelvoudige bronnen en combineert het in één enkele mening van mensen en rekeningsprofielen. Deze verenigde gegevens staan marketers toe om specifiek publiek nauwkeurig te richten en dat publiek over alle beschikbare kanalen in dienst te nemen.
 
-**Bijgewerkte eigenschappen**
+**Bijgewerkte functies**
 
 | Functie | Beschrijving |
 | --- | --- |
 | Ondersteuning voor `isDeleted` -functionaliteit | Alle [!DNL Marketo] datasets behalve `Activities` ondersteunen nu de `isDeleted` -toewijzing. De nieuwe toewijzing wordt automatisch toegevoegd aan uw bestaande B2B dataflows. Met de toewijzing `isDeleted` kunt u records filteren die zijn verwijderd, zodat de gegevens in [!DNL Data Lake] consistent zijn met de brongegevens. Zie de [[!DNL Marketo]  gids van kaartgebieden ](../../sources/connectors/adobe-applications/mapping/marketo.md) voor meer informatie over `isDeleted`. |
 
-Meer over de Uitgave van Real-time Customer Data Platform B2B leren, zie het [ B2B overzicht ](../../rtcdp/b2b-overview.md).
+Meer over Real-Time Customer Data Platform B2B edition leren, zie het [ B2B overzicht ](../../rtcdp/b2b-overview.md).
 
 ## Bronnen {#sources}
 
-Adobe Experience Platform kan gegevens uit externe bronnen invoeren, terwijl u die gegevens kunt structureren, labelen en verbeteren met behulp van de platformservices. U kunt gegevens van een verscheidenheid van bronnen zoals de toepassingen van de Adobe, op wolk-gebaseerde opslag, derdesoftware, en uw systeem van CRM opnemen.
+Adobe Experience Platform kan gegevens uit externe bronnen invoeren, terwijl u die gegevens kunt structureren, labelen en verbeteren met behulp van Experience Platform-services. U kunt gegevens opnemen uit verschillende bronnen, zoals Adobe-toepassingen, cloudopslag, software van derden en uw CRM-systeem.
 
-Experience Platform biedt een RESTful-API en een interactieve UI waarmee u eenvoudig bronverbindingen voor verschillende gegevensproviders kunt instellen. Deze bronverbindingen staan u toe om met externe opslagsystemen en de diensten van CRM voor authentiek te verklaren en te verbinden, tijden voor ingestiingslooppas te plaatsen, en gegevensinvoer te beheren.
+Experience Platform biedt een RESTful-API en een interactieve gebruikersinterface waarmee u eenvoudig bronverbindingen voor verschillende gegevensproviders kunt instellen. Met deze bronverbindingen kunt u externe opslagsystemen en CRM-services verifiëren en er verbinding mee maken, tijden voor opnameruns instellen en de doorvoer van gegevensopname beheren.
 
-**Bijgewerkte eigenschappen**
+**Bijgewerkte functies**
 
 | Functie | Beschrijving |
 | --- | --- |
-| Ondersteuning voor [!DNL OneTrust Integration] | U kunt nu de [!DNL OneTrust Integration] -bron gebruiken om toestemmings- en voorkeursgegevens in te voeren van uw [!DNL OneTrust] -account naar Platform. Zie de documentatie bij [ het creëren van a  [!DNL OneTrust Integration]  bronverbinding ](../../sources/connectors/consent-and-preferences/onetrust.md) voor meer informatie. |
-| Ondersteuning voor [!DNL Square] | U kunt nu de [!DNL Square] -bron gebruiken om betalingsgegevens van uw [!DNL Square] -account in te voeren naar Platform. |
+| Ondersteuning voor [!DNL OneTrust Integration] | U kunt nu de [!DNL OneTrust Integration] -bron gebruiken om toestemmings- en voorkeursgegevens van uw [!DNL OneTrust] -account in te voeren in Experience Platform. Zie de documentatie bij [ het creëren van a  [!DNL OneTrust Integration]  bronverbinding ](../../sources/connectors/consent-and-preferences/onetrust.md) voor meer informatie. |
+| Ondersteuning voor [!DNL Square] | U kunt nu de [!DNL Square] -bron gebruiken om betalingsgegevens van uw [!DNL Square] -account in te voeren naar Experience Platform. |
 | Ondersteuning voor het verwijderen van klantkenmerkgegevensstromen | U kunt nu dataflows verwijderen die zijn gemaakt met de bronconnector Klantkenmerken. |
 
 Meer over bronnen leren, zie het [ overzicht van bronnen ](../../sources/home.md).

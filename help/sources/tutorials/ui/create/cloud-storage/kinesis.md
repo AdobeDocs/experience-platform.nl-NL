@@ -1,9 +1,9 @@
 ---
 title: Een Amazon Kinesis Source Connection maken in de gebruikersinterface
-description: Leer hoe u een Amazon Kinesis-bronverbinding maakt met de Adobe Experience Platform-gebruikersinterface.
-badgeUltimate: label="Ultieme" type="Positive"
+description: Leer hoe u een Amazon Kinesis-bronverbinding maakt met de gebruikersinterface van Adobe Experience Platform.
+badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 4152e48b-bec7-4b05-a172-eea71c9d9880
-source-git-commit: 9a8139c26b5bb5ff937a51986967b57db58aab6c
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '450'
 ht-degree: 0%
@@ -14,9 +14,9 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
->De [!DNL Amazon Kinesis] -bron is in de broncatalogus beschikbaar voor gebruikers die Real-time Customer Data Platform Ultimate hebben aangeschaft.
+>De [!DNL Amazon Kinesis] -bron is in de broncatalogus beschikbaar voor gebruikers die Real-Time Customer Data Platform Ultimate hebben aangeschaft.
 
-Source-connectors in Adobe Experience Platform bieden de mogelijkheid om volgens een schema extern gesourceerde gegevens in te voeren. Deze zelfstudie bevat stappen voor het verifiëren van een [!DNL Amazon Kinesis] (hierna [!DNL "Kinesis"] genoemd) bronconnector met behulp van de [!DNL Platform] -gebruikersinterface.
+Source-connectors in Adobe Experience Platform bieden de mogelijkheid om volgens een schema extern gesourceerde gegevens in te voeren. Deze zelfstudie bevat stappen voor het verifiëren van een [!DNL Amazon Kinesis] (hierna [!DNL "Kinesis"] genoemd) bronconnector met behulp van de [!DNL Experience Platform] -gebruikersinterface.
 
 ## Aan de slag
 
@@ -43,7 +43,7 @@ Voor meer informatie over deze waarden, verwijs naar [ dit  [!DNL Kinesis]  docu
 
 ## Sluit uw [!DNL Kinesis] -account aan
 
-Nadat u de vereiste gegevens hebt verzameld, voert u de onderstaande stappen uit om uw [!DNL Kinesis] -account te koppelen aan [!DNL Platform] .
+Nadat u de vereiste gegevens hebt verzameld, voert u de onderstaande stappen uit om uw [!DNL Kinesis] -account te koppelen aan [!DNL Experience Platform] .
 
 Login aan [ Adobe Experience Platform ](https://platform.adobe.com) en selecteer dan **[!UICONTROL Sources]** van de linkernavigatiebar om tot de **[!UICONTROL Sources]** werkruimte toegang te hebben. In het scherm **[!UICONTROL Catalog]** worden diverse bronnen weergegeven waarmee u een account kunt maken.
 
@@ -69,4 +69,4 @@ Als u een bestaande account wilt verbinden, selecteert u de [!DNL Kinesis] -acco
 
 ## Volgende stappen
 
-Aan de hand van deze zelfstudie hebt u verbinding gemaakt met uw [!DNL Kinesis] -account met [!DNL Platform] . U kunt nu aan het volgende leerprogramma verdergaan en [ een dataflow vormen om gegevens van uw wolkenopslag in  [!DNL Platform]](../../dataflow/streaming/cloud-storage-streaming.md) te brengen.
+Aan de hand van deze zelfstudie hebt u verbinding gemaakt met uw [!DNL Kinesis] -account met [!DNL Experience Platform] . U kunt nu aan het volgende leerprogramma verdergaan en [ een dataflow vormen om gegevens van uw wolkenopslag in  [!DNL Experience Platform]](../../dataflow/streaming/cloud-storage-streaming.md) te brengen.

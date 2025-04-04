@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Schema's maken en bewerken in de gebruikersinterface
 description: Leer de basisbeginselen van het maken en bewerken van schema's in de Experience Platform-gebruikersinterface.
 exl-id: be83ce96-65b5-4a4a-8834-16f7ef9ec7d1
-source-git-commit: 9691ce1ca560acce7a9512df7eb92e61962bc467
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '3899'
+source-wordcount: '3902'
 ht-degree: 0%
 
 ---
@@ -29,7 +29,7 @@ Deze handleiding vereist een goed begrip van XDM System. Verwijs naar het [ XDM 
 
 >[!NOTE]
 >
->In deze sectie wordt beschreven hoe u handmatig een nieuw schema maakt in de gebruikersinterface. Als u CSV gegevens in Platform opneemt, kunt u het Leren van de Machine (ML) algoritmen gebruiken aan **een schema van steekproefCSV gegevens** produceren. Deze workflow komt overeen met uw gegevensindeling en maakt automatisch een nieuw schema op basis van de structuur en inhoud van uw CSV-bestand. Zie de [ ML-Begeleidde van de schemaverwezenlijking ](../ml-assisted-schema-creation.md) voor meer informatie over dit werkschema.
+>In deze sectie wordt beschreven hoe u handmatig een nieuw schema maakt in de gebruikersinterface. Als u CSV gegevens in Experience Platform opneemt, kunt u het Leren van de Machine (ML) algoritmen gebruiken aan **een schema van steekproefCSV gegevens** produceren. Deze workflow komt overeen met uw gegevensindeling en maakt automatisch een nieuw schema op basis van de structuur en inhoud van uw CSV-bestand. Zie de [ ML-Begeleidde van de schemaverwezenlijking ](../ml-assisted-schema-creation.md) voor meer informatie over dit werkschema.
 
 Selecteer in de werkruimte [!UICONTROL Schemas] de optie **[!UICONTROL Create schema]** in de rechterbovenhoek.
 
@@ -342,7 +342,7 @@ Als u het proces wilt voltooien, selecteert u **[!UICONTROL Save]** om het schem
 
 ![](../../images/ui/resources/schemas/profile-enabled.png)
 
-Het schema is nu ingeschakeld voor gebruik in Real-Time Klantprofiel. Wanneer het Platform gegevens in datasets opneemt die op dit schema worden gebaseerd, zullen die gegevens in uw samengevoegde gegevens van het Profiel worden opgenomen.
+Het schema is nu ingeschakeld voor gebruik in Real-Time Klantprofiel. Wanneer Experience Platform gegevens in datasets opneemt die op dit schema worden gebaseerd, zullen die gegevens in uw samengevoegde gegevens van het Profiel worden opgenomen.
 
 ## Weergavenamen voor schemavelden bewerken {#display-names}
 
@@ -388,7 +388,7 @@ Nadat de klassewijziging is bevestigd, wordt het canvas opnieuw ingesteld en gaa
 
 ## Volgende stappen {#next-steps}
 
-In dit document worden de basisbeginselen besproken van het maken en bewerken van schema&#39;s in de gebruikersinterface van het platform. Het wordt sterk geadviseerd dat u het [ leerprogramma van de schemaverwezenlijking ](../../tutorials/create-schema-ui.md) voor een uitvoerig werkschema voor de bouw van een volledig schema in UI herziet, met inbegrip van het creëren van de groepen van het douanegebied en gegevenstypes for unieke gebruiksgevallen.
+Dit document behandelt de basisbeginselen van het maken en bewerken van schema&#39;s in de gebruikersinterface van Experience Platform. Het wordt sterk geadviseerd dat u het [ leerprogramma van de schemaverwezenlijking ](../../tutorials/create-schema-ui.md) voor een uitvoerig werkschema voor de bouw van een volledig schema in UI herziet, met inbegrip van het creëren van de groepen van het douanegebied en gegevenstypes for unieke gebruiksgevallen.
 
 Voor meer informatie over de mogelijkheden van de [!UICONTROL Schemas] werkruimte, zie het [[!UICONTROL Schemas] overzicht van de werkruimte ](../overview.md).
 

@@ -3,9 +3,9 @@ solution: Experience Platform
 title: Inhoud en Voorkeuren voor schemaveldgroep
 description: Meer informatie over de veldgroep Inhoud en Voorkeuren.
 exl-id: ec592102-a9d3-4cac-8b94-58296a138573
-source-git-commit: be35c5398cd96cdfe424c5088db288ba4061ac4a
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '888'
+source-wordcount: '889'
 ht-degree: 0%
 
 ---
@@ -26,7 +26,7 @@ De veldgroep [!UICONTROL Consents and Preferences] biedt één objecttype veld, 
 
 >[!TIP]
 >
->Zie de gids op [ het onderzoeken van middelen XDM ](../../ui/explore.md) aan voor stappen op hoe te om het even welk middel XDM op te zoeken en zijn structuur in Platform UI te inspecteren.
+>Zie de gids op [ het onderzoeken van middelen XDM ](../../ui/explore.md) aan voor stappen op hoe te om het even welk middel XDM op te zoeken en zijn structuur in Experience Platform UI te inspecteren.
 
 In het volgende JSON-voorbeeld ziet u het type gegevens dat de veldgroep [!UICONTROL Consents and Preferences] kan verwerken. Voor informatie over hoe te om de meeste gebieden te gebruiken die door de gebiedsgroep worden verstrekt, verwijs naar de gids op het [ gegevenstype van de Inhoud en van de Voorkeur ](../../data-types/consents.md). De subsecties hieronder richten zich op de unieke attributen die de gebiedsgroep aan het gegevenstype toevoegt.
 

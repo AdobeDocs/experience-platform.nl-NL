@@ -1,12 +1,12 @@
 ---
-keywords: Experience Platform;huis;populaire onderwerpen;vraagdienst;de dienst van de Vraag;vraag;vraagredacteur;de redacteur van de vraag;de redacteur van de Vraag;
+keywords: Experience Platform;home;populaire onderwerpen;queryservice;Query-service;query-editor;Query-editor;Query-editor; Query-editor;
 solution: Experience Platform
 title: Handleiding Query Service Credentials
 description: Adobe Experience Platform Query Service biedt een gebruikersinterface die kan worden gebruikt om query's te schrijven en uit te voeren, eerder uitgevoerde query's weer te geven en query's te openen die zijn opgeslagen door gebruikers binnen uw organisatie.
 exl-id: ea25fa32-809c-429c-b855-fcee5ee31b3e
-source-git-commit: 569f8f96a1039e52ac374e2eb07fd96ad8138edd
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '1780'
+source-wordcount: '1782'
 ht-degree: 0%
 
 ---
@@ -17,7 +17,7 @@ Met Adobe Experience Platform Query Service kunt u verbinding maken met externe 
 
 >[!NOTE]
 >
->Het venster Referenties is niet automatisch beschikbaar voor alle gebruikers. Neem contact op met het accountteam van de Adobe om te vragen dat het tabblad [!UICONTROL Credentials] wordt opgenomen in de werkruimte van de Query-service als u dit nodig hebt. Indien gevraagd, is deze verandering organisatie wijd en door het technische team van Adobe geleid. Dit is geen instelling die door gebruikers wordt beheerd.
+>Het venster Referenties is niet automatisch beschikbaar voor alle gebruikers. Neem contact op met uw Adobe-accountteam om te vragen dat het tabblad [!UICONTROL Credentials] wordt opgenomen in de werkruimte van de Query Service als u dit nodig hebt. Indien gevraagd, is deze verandering organisatie wijd en geleid door het technische team van Adobe. Dit is geen instelling die door gebruikers wordt beheerd.
 
 ## Referenties vervallen {#expiring-credentials}
 
@@ -32,7 +32,7 @@ U kunt verlopen referenties gebruiken om snel een verbinding met een externe cli
 
 De sectie **[!UICONTROL Expiring credentials]** bevat de volgende informatie:
 
-- **[!UICONTROL Host]**: De naam van de host waarmee de client verbinding moet maken. Dit neemt de naam van uw organisatie zoals die in het hoogste lint van het Platform UI wordt gezien op.
+- **[!UICONTROL Host]**: De naam van de host waarmee de client verbinding moet maken. Dit neemt de naam van uw organisatie zoals die in het hoogste lint van Experience Platform UI wordt gezien op.
 - **[!UICONTROL Port]**: Het poortnummer van de host waarmee verbinding moet worden gemaakt.
 - **[!UICONTROL Database]**: De naam van de database waarmee een client verbinding moet maken.
 - **[!UICONTROL Username]**: De gebruikersnaam die wordt gebruikt om verbinding te maken met Query Service.
@@ -42,33 +42,33 @@ De sectie **[!UICONTROL Expiring credentials]** bevat de volgende informatie:
 
 >[!TIP]
 >
->Om het zittingsleven voor uw het verlopen geloofsbrieven verbinding aan de Dienst van de Vraag te veranderen, navigeer aan de [ Admin Console ](https://adminconsole.adobe.com/) en selecteer het volgende op het schermopties: **Montages** > **Privacy en Veiligheid** > **Montages van de Authentificatie** > **Geavanceerde montages** > **Max zittingsleven**.
+>Om het zittingsleven voor uw het verlopen geloofsbrieven verbinding aan de Dienst van de Vraag te veranderen, navigeer aan [ Admin Console ](https://adminconsole.adobe.com/) en selecteer het volgende op het schermopties: **Montages** > **Privacy en Veiligheid** > **Montages van de Authentificatie** > **Geavanceerde montages** > **Max zittingsleven**.
 >
->![ het lusje van de montages van de Admin Console met Privacy en Veiligheid, de montages van de Authentificatie, en Max benadrukt zittingsleven.](../images/ui/credentials/max-session-life.png)
+>![ het de montageslusje van Admin Console met Privacy en Veiligheid, de montages van de Authentificatie, en Max benadrukt zittingsleven.](../images/ui/credentials/max-session-life.png)
 >
->Zie de documentatie van de Hulp van de Adobe voor meer informatie over de [ Geavanceerde montages ](https://helpx.adobe.com/enterprise/using/authentication-settings.html#advanced-settings) die door Admin console worden aangeboden.
+>Zie de documentatie van de Hulp van Adobe voor meer informatie over de [ Geavanceerde montages ](https://helpx.adobe.com/enterprise/using/authentication-settings.html#advanced-settings) die door Admin console worden aangeboden.
 
 ### Verbinding maken met Customer Journey Analytics-gegevens binnen querysessies {#connect-to-customer-journey-analytics}
 
-Gebruik de uitbreiding van Customer Journey Analytics BI met Power BI of Tableau om tot uw Customer Journey Analytics [ gegevensmeningen ](https://experienceleague.adobe.com/en/docs/analytics-platform/using/cja-dataviews/data-views) met SQL toegang te hebben. Door de Dienst van de Vraag met de uitbreiding te integreren BI, kunt u tot uw gegevensmeningen direct binnen de zittingen van de Dienst van de Vraag toegang hebben. Deze integratie stroomlijnt functionaliteit voor hulpmiddelen BI die de Dienst van de Vraag als hun interface PostgreSQL gebruiken. Deze functionaliteit elimineert de behoefte om gegevensmeningen in hulpmiddelen van BI te dupliceren, verzekert verenigbare rapportering over platforms, en vereenvoudigt de integratie van de gegevens van de Customer Journey Analytics met andere bronnen in platforms van BI.
+Gebruik de uitbreiding van Customer Journey Analytics BI met Power BI of Tableau om tot uw Customer Journey Analytics [ gegevensmeningen ](https://experienceleague.adobe.com/en/docs/analytics-platform/using/cja-dataviews/data-views) met SQL toegang te hebben. Door de Dienst van de Vraag met de uitbreiding te integreren BI, kunt u tot uw gegevensmeningen direct binnen de zittingen van de Dienst van de Vraag toegang hebben. Deze integratie stroomlijnt functionaliteit voor hulpmiddelen BI die de Dienst van de Vraag als hun interface PostgreSQL gebruiken. Deze functionaliteit elimineert de behoefte om gegevensmeningen in hulpmiddelen van BI te dupliceren, verzekert verenigbare rapportering over platforms, en vereenvoudigt de integratie van de gegevens van Customer Journey Analytics met andere bronnen in platforms van BI.
 
 Zie de documentatie leren hoe te om de Dienst van de Vraag aan een verscheidenheid van de toepassingen van de Desktopcliënt ](../clients/overview.md) zoals [ Power BI ](../clients/power-bi.md) of [ Tableau ](../clients/tableau.md) te verbinden[
 
 >[!IMPORTANT]
 >
->Voor het gebruik van deze functionaliteit zijn een Customer Journey Analytics-werkruimteproject en een gegevensweergave vereist.
+>U hebt een Customer Journey Analytics-werkruimteproject en een gegevensweergave nodig om deze functionaliteit te kunnen gebruiken.
 
-Als u toegang wilt krijgen tot de gegevens van uw Customer Journey Analytics in Power BI of Tableau, selecteert u het vervolgkeuzemenu [!UICONTROL Database] en selecteert u `prod:cja` in de beschikbare opties. Kopieer vervolgens de [!DNL Postgres] verificatieparameters (Host, Poort, Database, Gebruikersnaam en andere) voor gebruik in de configuratie van Power BI of Tableau.
+Als u uw Customer Journey Analytics-gegevens in Power BI of Tableau wilt openen, selecteert u het vervolgkeuzemenu [!UICONTROL Database] en selecteert u `prod:cja` in de beschikbare opties. Kopieer vervolgens de [!DNL Postgres] verificatieparameters (host, poort, database, gebruikersnaam en andere) voor gebruik in uw Power BI- of tableau-configuratie.
 
 ![ het lusje van de geloofsbrieven van de Dienst van de Vraag met benadrukt gegevensbestand dropdown.](../images/ui/credentials/database-dropdown.png)
 
 >[!NOTE]
 >
->Wanneer u Power BI of Tableau met Customer Journey Analytics verbindt, wordt de &quot;gezamenlijke zittingen&quot;van de Dienst van de Vraag het recht verbruikt. Als extra sessies en query&#39;s vereist zijn, kan een extra add-on voor het pakket voor gebruikers van ad-hocquery&#39;s worden aangeschaft om vijf extra gelijktijdige sessies en één extra gelijktijdige query te verkrijgen.
+>Wanneer u Power BI of Tableau aansluit op Customer Journey Analytics, wordt de machtiging &#39;Gelijktijdige sessies&#39; van de Query Service gebruikt. Als extra sessies en query&#39;s vereist zijn, kan een extra add-on voor het pakket voor gebruikers van ad-hocquery&#39;s worden aangeschaft om vijf extra gelijktijdige sessies en één extra gelijktijdige query te verkrijgen.
 
-U kunt tot uw gegevens van de Customer Journey Analytics rechtstreeks van de Redacteur van de Vraag of CLI van Postgres toegang hebben. U doet dit door naar de `cja` -database te verwijzen wanneer u uw query schrijft. Zie de redacteur van de Vraag [ vraag auteursgids ](./user-guide.md#query-authoring) voor meer informatie over hoe te schrijven, uit te voeren en, vragen te bewaren.
+U kunt uw gegevens van Customer Journey Analytics tot direct van de Redacteur van de Vraag of CLI van Postgres toegang hebben. U doet dit door naar de `cja` -database te verwijzen wanneer u uw query schrijft. Zie de redacteur van de Vraag [ vraag auteursgids ](./user-guide.md#query-authoring) voor meer informatie over hoe te schrijven, uit te voeren en, vragen te bewaren.
 
-Zie de [ de uitbreidingsgids van BI ](https://experienceleague.adobe.com/en/docs/analytics-platform/using/cja-dataviews/bi-extension) voor volledige instructies bij de toegang tot van uw de gegevensmeningen van de Customer Journey Analytics met SQL.
+Zie de [ BI uitbreidingsgids ](https://experienceleague.adobe.com/en/docs/analytics-platform/using/cja-dataviews/bi-extension) voor volledige instructies bij de toegang tot van uw de gegevensmeningen van Customer Journey Analytics met SQL.
 
 ## Niet-verlopen referenties {#non-expiring-credentials}
 
@@ -99,7 +99,7 @@ Alle vereiste toestemmingen worden nu gevormd in Adobe Developer Console voor de
 
 ### Referenties genereren {#generate-credentials}
 
-Als u een set niet-vervallende gegevens wilt maken, gaat u terug naar de gebruikersinterface van het platform en selecteert u **[!UICONTROL Queries]** in de linkernavigatie voor toegang tot de [!UICONTROL Queries] -werkruimte. Selecteer vervolgens de tab **[!UICONTROL Credentials]** gevolgd door **[!UICONTROL Generate credentials]** .
+Als u een set niet-vervallende gegevens wilt maken, gaat u terug naar de gebruikersinterface van Experience Platform en selecteert u **[!UICONTROL Queries]** in de linkernavigatie om de werkruimte van [!UICONTROL Queries] te openen. Selecteer vervolgens de tab **[!UICONTROL Credentials]** gevolgd door **[!UICONTROL Generate credentials]** .
 
 ![ het dashboard van Vragen met het lusje van Geloofsbrieven en produceer benadrukte geloofsbrieven.](../images/ui/credentials/generate-credentials.png)
 
@@ -108,7 +108,7 @@ Er wordt een dialoogvenster weergegeven waarin u referenties kunt genereren. Als
 - **[!UICONTROL Name]**: De naam van de referenties die u genereert.
 - **[!UICONTROL Description]**: (Optioneel) Een beschrijving van de referenties die u genereert.
 - **[!UICONTROL Assigned to]**: De gebruiker waaraan de referenties worden toegewezen. Deze waarde moet het e-mailadres zijn van de gebruiker die de referenties maakt.
-- **[!UICONTROL Password]** (Optioneel) Een optioneel wachtwoord voor uw referenties. Als het wachtwoord niet is ingesteld, genereert de Adobe automatisch een wachtwoord voor u.
+- **[!UICONTROL Password]** (Optioneel) Een optioneel wachtwoord voor uw referenties. Als het wachtwoord niet is ingesteld, genereert Adobe automatisch een wachtwoord voor u.
 
 Nadat u alle vereiste gegevens hebt opgegeven, selecteert u **[!UICONTROL Generate credentials]** om uw referenties te genereren.
 
@@ -116,7 +116,7 @@ Nadat u alle vereiste gegevens hebt opgegeven, selecteert u **[!UICONTROL Genera
 
 >[!IMPORTANT]
 >
->Als **[!UICONTROL Generate credentials]** is geselecteerd, wordt een JSON-configuratiebestand gedownload naar uw lokale computer. Aangezien de Adobe **** niet de geproduceerde geloofsbrieven registreert, moet u het gedownloade dossier veilig opslaan en een verslag van de referentie houden.
+>Als **[!UICONTROL Generate credentials]** is geselecteerd, wordt een JSON-configuratiebestand gedownload naar uw lokale computer. Aangezien Adobe **** niet de geproduceerde geloofsbrieven registreert, moet u het gedownloade dossier veilig opslaan en een verslag van de referentie houden.
 >
 >Bovendien, als de geloofsbrieven niet gedurende 90 dagen worden gebruikt, zullen de geloofsbrieven worden verklaard.
 
@@ -144,7 +144,7 @@ Nadat u alle vereiste gegevens hebt opgegeven, selecteert u **[!UICONTROL Update
 
 ## Referenties gebruiken om verbinding te maken met externe clients {#use-credential-to-connect}
 
-U kunt of de het verlopen of niet-verlopen geloofsbrieven gebruiken om met externe cliënten, zoals de Studio van Gegevens Aqua, Leider, of Power BI te verbinden. De invoermethode voor deze referenties is afhankelijk van de externe client. Raadpleeg de documentatie van de externe client voor specifieke instructies over het gebruik van deze referenties.
+U kunt of de het verlopen of niet-verlopen geloofsbrieven gebruiken om met externe cliënten, zoals de Studio van Gegevens Aqua, Teller, of Power BI te verbinden. De invoermethode voor deze referenties is afhankelijk van de externe client. Raadpleeg de documentatie van de externe client voor specifieke instructies over het gebruik van deze referenties.
 
 De afbeelding geeft de locatie aan van elke parameter die in de gebruikersinterface wordt gevonden, behalve het wachtwoord van de niet-vervallende gegevens. Terwijl niet-vervallende geloofsbrieven door hun JSON configuratiedossiers worden verstrekt, kunt u uw het verlopen geloofsbrieven onder het **Credentials** lusje in UI bekijken.
 

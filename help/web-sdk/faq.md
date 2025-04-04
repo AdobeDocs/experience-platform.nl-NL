@@ -2,9 +2,9 @@
 title: Veelgestelde vragen over Adobe Experience Platform Web SDK
 description: U krijgt antwoorden op veelgestelde vragen over de Adobe Experience Platform Web SDK.
 exl-id: 6ddb4b4d-c9b8-471a-bd2e-135dc4202876
-source-git-commit: c26abeed890e06dce4e77133502b7031443bb4fa
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '2080'
+source-wordcount: '2082'
 ht-degree: 1%
 
 ---
@@ -31,7 +31,7 @@ Momenteel moet u verschillende JavaScript-bibliotheken implementeren op basis va
 * Geen van deze bibliotheken is gemaakt om met elkaar te werken.
 * Bij gebruik in oplossingen en Adobe Experience Platform moeten deze verschillende bibliotheken onderling afhankelijk zijn, waardoor implementatiewrijving optreedt.
 
-Hoewel de markeringen in Platform het zo gemakkelijk mogelijk maken om deze bibliotheken op te stellen en te beheren, zijn er nog kwesties met:
+Hoewel het zo eenvoudig mogelijk is om deze bibliotheken te implementeren en te beheren met tags in Experience Platform, zijn er nog steeds problemen met:
 
 * Bibliotheekgrootte (te veel Adobe-code op een pagina)
 * Prestaties (het laden van sites duurt te lang)
@@ -124,7 +124,7 @@ Met andere woorden, als u besluit Adobe Experience Platform Web SDK te gebruiken
 
 ## Kan ik de ECID&#39;s migreren als ik Web SDK ga gebruiken, zodat mijn websitebezoekers niet beginnen op te roepen als nieuwe bezoekers?
 
-Ja, Adobe Experience Platform Web SDK beschikt over de functie Identiteitsmigratie. Volg de instructies voor de migratie van identiteitskaart in de [ identiteitsdocumentatie van SDK van het Web van het Platform ](/help/web-sdk/identity/overview.md#id-migration) voor meer details.
+Ja, Adobe Experience Platform Web SDK beschikt over de functie Identiteitsmigratie. Volg de instructies voor de migratie van identiteitskaart in de [ identiteitsdocumentatie van SDK van het Web van Experience Platform ](/help/web-sdk/identity/overview.md#id-migration) voor meer details.
 
 ## Hoe is het Web SDK anders dan tags?
 

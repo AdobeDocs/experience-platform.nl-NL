@@ -3,9 +3,9 @@ title: Een nieuwe doelverbinding maken
 type: Tutorial
 description: Leer hoe u verbinding maakt met een doel in Adobe Experience Platform, waarschuwingen inschakelt en marketingacties instelt voor de verbonden bestemming.
 exl-id: 56d7799a-d1da-4727-ae79-fb2c775fe5a5
-source-git-commit: fbc2a6c81682797af4674adabff358a62d973007
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1106'
+source-wordcount: '1107'
 ht-degree: 0%
 
 ---
@@ -25,7 +25,7 @@ Voordat u publieksgegevens naar een bestemming kunt verzenden, moet u een verbin
 
 1. Ga naar **[!UICONTROL Connections]** > **[!UICONTROL Destinations]** en selecteer de tab **[!UICONTROL Catalog]** .
 
-   ![ Schermafbeelding van het Experience Platform UI, die de pagina van de bestemmingscatalogus toont.](../assets/ui/connect-destinations/catalog.png)
+   ![ Schermafbeelding van Experience Platform UI, die de pagina van de bestemmingscatalogus toont.](../assets/ui/connect-destinations/catalog.png)
 
 2. De kaarten van de bestemming in de catalogus zouden verschillende actiecontroles kunnen hebben, afhankelijk van of u een bestaande verbinding aan de bestemming hebt en of de bestemmingen het activeren van publiek, het uitvoeren van datasets, of allebei steunen. U zou om het even welke volgende controles voor bestemmingskaarten kunnen zien:
 
@@ -37,9 +37,9 @@ Voordat u publieksgegevens naar een bestemming kunt verzenden, moet u een verbin
 
    Selecteer **[!UICONTROL Set up]**, **[!UICONTROL Activate]** of **[!UICONTROL Activate audiences]** , afhankelijk van de besturingselementen die beschikbaar zijn.
 
-   ![ Schermafbeelding van het Experience Platform UI, die de pagina van de bestemmingscatalogus met de benadrukte controle van de Opstelling toont.](../assets/ui/connect-destinations/set-up.png)
+   ![ Schermafbeelding van Experience Platform UI, die de pagina van de bestemmingscatalogus met de benadrukte controle van de Opstelling toont.](../assets/ui/connect-destinations/set-up.png)
 
-   ![ Schermafbeelding van het Experience Platform UI, die de pagina van de bestemmingscatalogus met Activate benadrukte publiekscontrole toont.](../assets/ui/connect-destinations/activate-segments.png)
+   ![ Schermafbeelding van Experience Platform UI, die de pagina van de bestemmingscatalogus met Activate benadrukt publiek toont.](../assets/ui/connect-destinations/activate-segments.png)
 
 3. Als u **[!UICONTROL Set up]** selecteerde, skip aan de volgende stap, [ ](#authenticate) aan de bestemming voor authentiek verklaren.
 
@@ -47,13 +47,13 @@ Voordat u publieksgegevens naar een bestemming kunt verzenden, moet u een verbin
 
    Selecteer **[!UICONTROL Configure new destination]** om een nieuwe verbinding met het doel tot stand te brengen.
 
-   ![ Schermafbeelding van het Experience Platform UI, die een lijst van beschikbare bestemmingen en vormt nieuwe benadrukte bestemmingscontrole toont.](../assets/ui/connect-destinations/configure-new-destination.png)
+   ![ Schermafbeelding van Experience Platform UI, die een lijst van beschikbare bestemmingen en vormt nieuwe benadrukte bestemmingscontrole toont.](../assets/ui/connect-destinations/configure-new-destination.png)
 
 ## Verifiëren voor bestemming {#authenticate}
 
 De eerste stap in het verbinden met een bestemming moet aan het bestemmingsplatform voor authentiek verklaren.
 
-Afhankelijk van de bestemming waarmee u verbindt, zou u aan de pagina van de bestemmingspartner kunnen worden gebracht voor authentiek te verklaren, of u zou kunnen worden gevraagd om authentificatiegeloofsbrieven direct in het werkschema van het Platform in te voeren. Hieronder ziet u een voorbeeld van de vereiste invoer voor verificatie bij een [!DNL Amazon S3] -doel. Gedetailleerde instructies over de vereiste invoer worden gegeven op elke pagina met doeldocumentatie (zie bijvoorbeeld de verificatiesectie voor [[!DNL Amazon S3]](/help/destinations/catalog/cloud-storage/amazon-s3.md#authenticate) en voor [[!DNL Facebook]](/help/destinations/catalog/social/facebook.md#authenticate) ).
+Afhankelijk van het doel waarmee u verbinding maakt, kunt u naar de pagina van de bestemmingspartner worden gebracht voor verificatie, of u wordt gevraagd om verificatiegegevens rechtstreeks in te voeren in de Experience Platform-workflow. Hieronder ziet u een voorbeeld van de vereiste invoer voor verificatie bij een [!DNL Amazon S3] -doel. Gedetailleerde instructies over de vereiste invoer worden gegeven op elke pagina met doeldocumentatie (zie bijvoorbeeld de verificatiesectie voor [[!DNL Amazon S3]](/help/destinations/catalog/cloud-storage/amazon-s3.md#authenticate) en voor [[!DNL Facebook]](/help/destinations/catalog/social/facebook.md#authenticate) ).
 
 **[!DNL Amazon S3]vereiste en optionele verificatieparameters**
 
@@ -105,7 +105,7 @@ Sommige op dossier-gebaseerde bestemmingen steunen publieksactivering aan bekend
 
 ## marketingacties selecteren {#select-marketing-actions}
 
-1. Selecteer de marketingacties die van toepassing zijn op de gegevens die u naar de bestemming wilt exporteren. Marketingsacties geven de intentie aan waarvoor gegevens naar de bestemming worden geëxporteerd. U kunt kiezen uit door de Adobe gedefinieerde marketingacties of u kunt uw eigen marketingactie maken. Voor meer informatie over marketing acties, zie de [ pagina van het het beleidsoverzicht van het gegevensgebruik ](../../data-governance/policies/overview.md).
+1. Selecteer de marketingacties die van toepassing zijn op de gegevens die u naar de bestemming wilt exporteren. Marketingsacties geven de intentie aan waarvoor gegevens naar de bestemming worden geëxporteerd. U kunt kiezen uit door Adobe gedefinieerde marketingacties of u kunt uw eigen marketingactie maken. Voor meer informatie over marketing acties, zie de [ pagina van het het beleidsoverzicht van het gegevensgebruik ](../../data-governance/policies/overview.md).
 
    ![ Vorm nieuwe bestemmingsdialoog met de beschikbare benadrukte marketing acties. De beschikbare controles om Connect aan bestemmingswerkschema te voltooien worden ook benadrukt.](../assets/ui/connect-destinations/governance.png)
 
@@ -113,6 +113,6 @@ Sommige op dossier-gebaseerde bestemmingen steunen publieksactivering aan bekend
 
 ## Volgende stappen {#next-steps}
 
-Door dit document te lezen, hebt u geleerd hoe te om Experience Platform UI te gebruiken om een verbinding aan een bestemming te vestigen. Ter herinnering, variëren de beschikbare en vereiste verbindingsparameters van bestemming tot bestemming. U zou de pagina van de bestemmingsdocumentatie in de [ bestemmingscatalogus ](/help/destinations/catalog/overview.md) voor specifieke informatie over de vereiste input en beschikbare opties per bestemmingstype ook moeten raadplegen.
+Door dit document te lezen, hebt u geleerd hoe u de gebruikersinterface van Experience Platform kunt gebruiken om een verbinding met een doel tot stand te brengen. Ter herinnering, variëren de beschikbare en vereiste verbindingsparameters van bestemming tot bestemming. U zou de pagina van de bestemmingsdocumentatie in de [ bestemmingscatalogus ](/help/destinations/catalog/overview.md) voor specifieke informatie over de vereiste input en beschikbare opties per bestemmingstype ook moeten raadplegen.
 
 Daarna, kunt u aan [ het activeren publiek ](/help/destinations/ui/activation-overview.md) of [ het uitvoeren datasets ](/help/destinations/ui/export-datasets.md) aan uw bestemming te werk gaan.

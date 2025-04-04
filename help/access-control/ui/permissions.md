@@ -2,11 +2,11 @@
 keywords: Experience Platform;home;populaire onderwerpen;productprofiel;machtigingen beheren
 solution: Experience Platform
 title: Rechten voor een productprofiel beheren
-description: Met toegangsbeheer in Adobe Experience Platform kunt u rollen en machtigingen voor verschillende platformmogelijkheden beheren met behulp van de Adobe Admin Console. Dit document dient als richtlijn voor het beheren van machtigingen voor een productprofiel voor Platform.
+description: Met toegangsbeheer in Adobe Experience Platform kunt u rollen en machtigingen voor verschillende Experience Platform-mogelijkheden beheren met behulp van de Adobe Admin Console. Dit document dient als richtlijn voor het beheren van machtigingen voor een productprofiel voor Experience Platform.
 exl-id: ca403bef-6d62-4ca9-bba6-d1280ac63171
-source-git-commit: 1812af74e82f3071963177356b3cd4b23ea567f5
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '329'
+source-wordcount: '331'
 ht-degree: 0%
 
 ---

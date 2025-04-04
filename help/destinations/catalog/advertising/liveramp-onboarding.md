@@ -1,18 +1,18 @@
 ---
 title: LiveRamp - Verbinding aan boord
-description: Leer hoe u de LiveRamp-aansluiting kunt gebruiken voor het on-board publiek van Adobe Real-time Customer Data Platform naar LiveRamp Connect.
+description: Leer hoe u de LiveRamp-aansluiting kunt gebruiken voor het on-board publiek van Adobe Real-Time Customer Data Platform naar LiveRamp Connect.
 last-substantial-update: 2023-07-26T00:00:00Z
 exl-id: b8ce7ec2-7af9-4d26-b12f-d38c85ba488a
-source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1846'
+source-wordcount: '1853'
 ht-degree: 0%
 
 ---
 
 # [!DNL LiveRamp - Onboarding] verbinding {#liveramp-onboarding}
 
-Gebruik de [!DNL LiveRamp - Onboarding] -verbinding met het on-board publiek van Adobe Real-time Customer Data Platform naar [!DNL LiveRamp Connect] .
+Gebruik de [!DNL LiveRamp - Onboarding] -verbinding met het on-board publiek van Adobe Real-Time Customer Data Platform naar [!DNL LiveRamp Connect] .
 
 ## Gebruiksscenario’s {#use-cases}
 
@@ -24,7 +24,7 @@ Als markator wil ik een publiek van Adobe Experience Platform naar boordidentite
 
 De [!DNL LiveRamp - Onboarding] verbinding voert dossiers uit gebruikend [ 2} opslag van SFTP van LiveRamp {.](https://docs.liveramp.com/connect/en/upload-a-file-via-liveramp-s-sftp.html)
 
-Voordat u gegevens van het Experience Platform naar [!DNL LiveRamp - Onboarding] kunt verzenden, hebt u uw [!DNL LiveRamp] -referenties nodig. Neem contact op met uw [!DNL LiveRamp] -vertegenwoordiger om uw referenties te verkrijgen, als u deze nog niet hebt.
+Voordat u gegevens van Experience Platform naar [!DNL LiveRamp - Onboarding] kunt verzenden, hebt u uw [!DNL LiveRamp] -referenties nodig. Neem contact op met uw [!DNL LiveRamp] -vertegenwoordiger om uw referenties te verkrijgen, als u deze nog niet hebt.
 
 ## Ondersteunde identiteiten {#supported-identities}
 
@@ -38,7 +38,7 @@ In deze sectie wordt beschreven welke soorten publiek u naar dit doel kunt expor
 
 | Oorsprong publiek | Ondersteund | Beschrijving |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | ✓ | Het publiek produceerde door de Dienst van de Segmentatie van het Experience Platform [ ](../../../segmentation/home.md). |
+| [!DNL Segmentation Service] | ✓ | Het publiek produceerde door de Dienst van de Segmentatie van Experience Platform [ ](../../../segmentation/home.md). |
 | Aangepaste uploads | ✓ | Het publiek [ ingevoerde ](../../../segmentation/ui/audience-portal.md#import-audience) in Experience Platform van Csv- dossiers. |
 
 {style="table-layout:auto"}
@@ -50,7 +50,7 @@ Raadpleeg de onderstaande tabel voor informatie over het exporttype en de export
 | Item | Type | Notities |
 ---------|----------|---------|
 | Exporttype | **[!UICONTROL Audience export]** | U exporteert alle leden van een publiek met de id&#39;s (naam, telefoonnummer of andere) die in de [!DNL LiveRamp - Onboarding] -bestemming worden gebruikt. |
-| Exportfrequentie | **[!UICONTROL Daily batch]** | Aangezien de profielen in Experience Platform op publieksevaluatie worden bijgewerkt, worden de profielen (identiteiten) bijgewerkt eens per dag stroomafwaarts aan het bestemmingsplatform. Lees meer over [ partij op dossier-gebaseerde bestemmingen ](/help/destinations/destination-types.md#file-based). |
+| Exportfrequentie | **[!UICONTROL Daily batch]** | Aangezien profielen in Experience Platform worden bijgewerkt op basis van publieksevaluatie, worden de profielen (identiteiten) eenmaal per dag bijgewerkt naar het doelplatform. Lees meer over [ partij op dossier-gebaseerde bestemmingen ](/help/destinations/destination-types.md#file-based). |
 
 {style="table-layout:auto"}
 
@@ -104,7 +104,7 @@ Als u voor verificatie bij het doel wilt zorgen, vult u de vereiste velden in en
 
 Als u details voor de bestemming wilt configureren, vult u de vereiste en optionele velden hieronder in. Een sterretje naast een veld in de gebruikersinterface geeft aan dat het veld verplicht is.
 
-{het schermschot van het platform UI die tonen hoe te om details voor uw bestemming in te vullen ](../../assets/catalog/advertising/liveramp-onboarding/liveramp-sftp-destination-details.png)![
+{het schermschot van 0} Experience Platform UI die tonen hoe te om details voor uw bestemming in te vullen ](../../assets/catalog/advertising/liveramp-onboarding/liveramp-sftp-destination-details.png)![
 
 * **[!UICONTROL Name]**: Een naam waarmee u dit doel in de toekomst herkent.
 * **[!UICONTROL Description]**: Een beschrijving die u zal helpen deze bestemming in de toekomst identificeren.
@@ -135,13 +135,13 @@ Maak in de stap [!UICONTROL Scheduling] een exportschema voor elk publiek met de
 * **[!UICONTROL Frequency]**: [!UICONTROL Daily]
 * **[!UICONTROL Date]**: selecteer de begin- en eindtijd van het exporteren naar wens.
 
-{het schermschot van het platform UI die het publiek toont die stap plannen.](../../assets/catalog/advertising/liveramp-onboarding/liveramp_scheduling_screenshot.png)![
+{het schermschot van 0} Experience Platform UI die het publiek toont die stap plannen.](../../assets/catalog/advertising/liveramp-onboarding/liveramp_scheduling_screenshot.png)![
 
 De geëxporteerde bestandsnaam kan momenteel niet door de gebruiker worden geconfigureerd. Alle bestanden die naar de [!DNL LiveRamp - Onboarding] -bestemming worden geëxporteerd, krijgen automatisch een naam op basis van de volgende sjabloon:
 
 `%ORGANIZATION_NAME%_%DESTINATION%_%DESTINATION_INSTANCE_ID%_%DATETIME%`
 
-{het schermschot van het platform UI die het uitgevoerde dossier - naammalplaatje toont.](../../assets/catalog/advertising/liveramp-onboarding/liveramp-file-name.png)![
+{het schermschot van 0} Experience Platform UI die het uitgevoerde dossier - naammalplaatje toont.](../../assets/catalog/advertising/liveramp-onboarding/liveramp-file-name.png)![
 
 De naam van een geëxporteerd bestand voor een organisatie met de naam [!DNL Luma] kan er bijvoorbeeld als volgt uitzien:
 
@@ -165,19 +165,19 @@ In de stap **[!UICONTROL Mapping]** definieert de toewijzing **[!UICONTROL Targe
 
 1. Selecteer **[!UICONTROL Add new mapping]** in de stap **[!UICONTROL Mapping]** . Er verschijnt een nieuwe toewijzingsrij op het scherm.
 
-   {de schermen van 0} Experience Platform UI die het scherm van de Afbeelding tonen.](../../assets/catalog/advertising/liveramp-onboarding/liveramp-add-new-mapping.png)![
+   ![ de schermopname van Experience Platform UI die het scherm van de Afbeelding toont.](../../assets/catalog/advertising/liveramp-onboarding/liveramp-add-new-mapping.png)
 
 2. Kies in het venster **[!UICONTROL Select source field]** de categorie **[!UICONTROL Select attributes]** en selecteer het XDM-kenmerk dat u wilt toewijzen, of kies de categorie **[!UICONTROL Select identity namespace]** en selecteer de identiteit die u wilt toewijzen aan uw doel.
 
-   {het scherm van het Experience Platform UI van 0} scherm dat het scherm toont van de bron Toewijzing.](../../assets/catalog/advertising/liveramp-onboarding/liveramp-source-mapping.png)![
+   ![ het schermschot van Experience Platform UI die het scherm van de bronToewijzing toont.](../../assets/catalog/advertising/liveramp-onboarding/liveramp-source-mapping.png)
 
 3. Voer in het venster **[!UICONTROL Select target field]** de kenmerknaam in waaraan u het geselecteerde bronveld wilt toewijzen. De hier gedefinieerde kenmerknaam wordt in het geëxporteerde CSV-bestand weergegeven als kolomkop.
 
-   {het scherm van het Experience Platform UI van 0} scherm dat het scherm van de Afbeelding van het doel toont.](../../assets/catalog/advertising/liveramp-onboarding/liveramp-target-mapping.png)![
+   ![ de screeshot van Experience Platform UI die het scherm van het doelToewijzing toont.](../../assets/catalog/advertising/liveramp-onboarding/liveramp-target-mapping.png)
 
    U kunt de kenmerknaam ook invoeren door deze rechtstreeks in **[!UICONTROL Target field]** te typen.
 
-   {het scherm van het Experience Platform UI van 0} scherm dat het scherm van de Afbeelding van het doel toont.](../../assets/catalog/advertising/liveramp-onboarding/liveramp-target-field.png)![
+   ![ de screeshot van Experience Platform UI die het scherm van het doelToewijzing toont.](../../assets/catalog/advertising/liveramp-onboarding/liveramp-target-field.png)
 
 Nadat u alle gewenste toewijzingen hebt toegevoegd, selecteert u **[!UICONTROL Next]** en voltooit u de activeringsworkflow.
 
@@ -187,7 +187,7 @@ Uw gegevens worden als CSV-bestanden geëxporteerd naar de opslaglocatie van [!D
 
 Geëxporteerde bestanden hebben een maximale grootte van 10 miljoen rijen. Experience Platform genereert meerdere bestanden per levering als het geselecteerde publiek groter is dan 10 miljoen rijen. Als u verwacht dat u de limiet voor één bestand overschrijdt, neemt u contact op met uw [!DNL LiveRamp] -vertegenwoordiger en vraagt u deze om batch-opname voor u te configureren.
 
-Wanneer het uitvoeren van dossiers aan de [!DNL LiveRamp - Onboarding] bestemming, produceert het Platform één Csv- dossier voor elke [ identiteitskaart van het fusiebeleid ](../../../profile/merge-policies/overview.md).
+Wanneer het uitvoeren van dossiers aan de [!DNL LiveRamp - Onboarding] bestemming, produceert Experience Platform één Csv- dossier voor elke [ identiteitskaart van het fusiebeleid ](../../../profile/merge-policies/overview.md).
 
 Neem bijvoorbeeld het volgende publiek:
 
@@ -196,7 +196,7 @@ Neem bijvoorbeeld het volgende publiek:
 * Publiek C (Samenvoegingsbeleid 1)
 * Publiek D (Samenvoegingsbeleid 1)
 
-Platform exporteert twee CSV-bestanden naar [!DNL LiveRamp - Onboarding] :
+Experience Platform exporteert twee CSV-bestanden naar [!DNL LiveRamp - Onboarding] :
 
 * één CSV-bestand met soorten publiek A, C en D;
 * Eén CSV-bestand met publiek B.
@@ -211,7 +211,7 @@ De profielen in de geëxporteerde bestanden kunnen overeenkomen met een van de v
 * `Expired`: het profiel is niet langer gekwalificeerd voor het publiek, maar is in het verleden wel gekwalificeerd.
 * `""` (lege tekenreeks): Het profiel wordt nooit in aanmerking genomen voor het publiek.
 
-Bijvoorbeeld, een uitgevoerd CSV dossier met één `email` attribuut, twee publiek uit de Dienst van de Segmentatie van het Experience Platform [ ](../../../segmentation/home.md) voortkomt, en één [ ingevoerd ](../../../segmentation/ui/audience-portal.md#import-audience) extern publiek, kon als dit kijken:
+Bijvoorbeeld, een uitgevoerd CSV dossier met één `email` attribuut, twee publiek uit de Dienst van de Segmentatie van Experience Platform [ ](../../../segmentation/home.md) voortkomt, en één [ ingevoerd ](../../../segmentation/ui/audience-portal.md#import-audience) extern publiek, kon als dit kijken:
 
 ```csv
 email,ups_aa2e3d98-974b-4f8b-9507-59f65b6442df,ups_45d4e762-6e57-4f2f-a3e0-2d1893bcdd7f,CustomerAudienceUpload_7729e537-4e42-418e-be3b-dce5e47aaa1e
@@ -223,15 +223,15 @@ abc107@testemailabc.com,active,expired,active
 abc101@testemailabc.com,active,active,
 ```
 
-In het voorbeeld hierboven, beschrijven de `ups_aa2e3d98-974b-4f8b-9507-59f65b6442df` en `ups_45d4e762-6e57-4f2f-a3e0-2d1893bcdd7f` secties publiek dat uit de Dienst van de Segmentatie voortkomt, terwijl `CustomerAudienceUpload_7729e537-4e42-418e-be3b-dce5e47aaa1e` een publiek beschrijft dat in Platform als a [ wordt ingevoerd uploadt ](../../../segmentation/ui/audience-portal.md#import-audience).
+In het voorbeeld hierboven, beschrijven de `ups_aa2e3d98-974b-4f8b-9507-59f65b6442df` en `ups_45d4e762-6e57-4f2f-a3e0-2d1893bcdd7f` secties publiek dat uit de Dienst van de Segmentatie voortkomt, terwijl `CustomerAudienceUpload_7729e537-4e42-418e-be3b-dce5e47aaa1e` een publiek beschrijft dat in Experience Platform als a [ wordt ingevoerd uploadt ](../../../segmentation/ui/audience-portal.md#import-audience).
 
-Aangezien het Platform één Csv- dossier voor elke [ identiteitskaart van het samenvoegbeleid ](../../../profile/merge-policies/overview.md) produceert, produceert het ook een afzonderlijke dataflow looppas voor elke identiteitskaart van het fusiebeleid.
+Aangezien Experience Platform één Csv- dossier voor elke [ identiteitskaart van het fusiebeleid ](../../../profile/merge-policies/overview.md) produceert, produceert het ook een afzonderlijke dataflow looppas voor elke identiteitskaart van het fusiebeleid.
 
 Dit betekent dat de **[!UICONTROL Identities activated]** en **[!UICONTROL Profiles received]** metriek in de [ dataflow looppas ](../../../dataflows/ui/monitor-destinations.md#dataflow-runs-for-batch-destinations) pagina voor elke groep van publiek worden samengevoegd die het zelfde fusiebeleid gebruiken, in plaats van wordt getoond voor elk publiek.
 
 Als gevolg van dataflow looppas die voor een groep van publiek wordt geproduceerd die het zelfde fusiebeleid gebruiken, worden de publieksnamen niet getoond in het [ controledashboard ](../../../dataflows/ui/monitor-destinations.md#dataflow-runs-for-batch-destinations).
 
-{het scherm van 0} Experience Platform UI die de metrisch geactiveerde identiteiten toont.](../../assets/catalog/advertising/liveramp-onboarding/liveramp-metrics.png)![
+![ het schermopname van Experience Platform UI die de metrisch geactiveerde identiteiten toont.](../../assets/catalog/advertising/liveramp-onboarding/liveramp-metrics.png)
 
 ## Geëxporteerde gegevens uploaden naar LiveRamp {#upload-to-liveramp}
 

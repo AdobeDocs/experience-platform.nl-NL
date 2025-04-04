@@ -1,10 +1,10 @@
 ---
-description: Op deze pagina wordt beschreven hoe u Adobe Experience Platform Destination SDK kunt verifiëren en gebruiken. Het omvat instructies op hoe te om de authentificatiegeloofsbrieven van de Adobe I/O, een zandbaknaam, en de toestemming van de bestemmings auteurstoegang te verkrijgen.
+description: Op deze pagina wordt beschreven hoe u Adobe Experience Platform Destination SDK kunt verifiëren en gebruiken. Het omvat instructies op hoe te om de authentificatiegeloofsbrieven van Adobe I/O, een zandbaknaam, en de toestemming van de bestemmings auteurstoegang te verkrijgen.
 title: Aan de slag met Destination SDK
 exl-id: f22c37a8-202d-49ac-9af0-545dfa9af8fd
-source-git-commit: f652faac7d771b590b30f591616b53d0cd2ff1eb
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '591'
+source-wordcount: '592'
 ht-degree: 0%
 
 ---
@@ -13,17 +13,17 @@ ht-degree: 0%
 
 ## Overzicht {#overview}
 
-Op deze pagina wordt beschreven hoe u Adobe Experience Platform Destination SDK kunt verifiëren en gebruiken. Het omvat instructies op hoe te om de authentificatiegeloofsbrieven van de Adobe I/O, een zandbaknaam, en de toestemming van de bestemmings auteurstoegang te verkrijgen.
+Op deze pagina wordt beschreven hoe u Adobe Experience Platform Destination SDK kunt verifiëren en gebruiken. Het omvat instructies op hoe te om de authentificatiegeloofsbrieven van Adobe I/O, een zandbaknaam, en de toestemming van de bestemmings auteurstoegang te verkrijgen.
 
 ## Terminologie {#terminology}
 
-Deze gids gebruikt Platform-specifieke concepten, zoals organisatie en zandbakken. Raadpleeg de [ verklarende woordenlijst van het Experience Platform ](https://experienceleague.adobe.com/docs/experience-platform/landing/glossary.html) voor definities van deze termijnen. Raadpleeg de [ verklarende woordenlijst van de Destination SDK ](/help/destinations/destination-sdk/glossary.md) voor termijnen direct met betrekking tot deze functionaliteit.
+Deze handleiding gebruikt Experience Platform-specifieke concepten, zoals organisatie en sandboxen. Raadpleeg de [ verklarende woordenlijst van Experience Platform ](https://experienceleague.adobe.com/docs/experience-platform/landing/glossary.html) voor definities van deze termijnen. Raadpleeg de [ verklarende woordenlijst van Destination SDK ](/help/destinations/destination-sdk/glossary.md) voor termijnen direct met betrekking tot deze functionaliteit.
 
 ## Verkrijg vereiste authentificatiegeloofsbrieven {#obtain-authentication-credentials}
 
-Destination SDK gebruikt de [ Adobe I/O ](https://www.adobe.io/) gateway voor authentificatie. Om API vraag aan Destination SDK eindpunten te maken, moet u bepaalde kopballen in uw API vraag verstrekken. Het werk met het team van de Adobe Exchange aan opstellingsauthentificatie voor u aan [ Adobe Developer Console ](https://developer.adobe.com/console).
+Destination SDK gebruikt de [ Adobe I/O ](https://www.adobe.io/) gateway voor authentificatie. Om API vraag aan Destination SDK eindpunten te maken, moet u bepaalde kopballen in uw API vraag verstrekken. Het werk met het team van Adobe Exchange aan opstellingsauthentificatie voor u aan [ Adobe Developer Console ](https://developer.adobe.com/console).
 
-Om vraag aan Destination SDK API eindpunten met succes te maken, volg het [ de authentificatieleerprogramma van het Experience Platform ](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html). Begin het leerprogramma van &quot;[ produceert een API sleutel, organisatie identiteitskaart, en cliënt geheim ](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html#api-ims-secret)&quot;stap. Het team van de Adobe Exchange zal de vorige stappen voor u behandelen. Het voltooien van de autorisatiezelfstudie biedt de waarden voor elk van de vereiste headers in Destination SDK API-aanroepen, zoals hieronder wordt getoond:
+Om vraag aan Destination SDK API eindpunten met succes te maken, volg het [ de authentificatieleerprogramma van Experience Platform ](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html). Begin het leerprogramma van &quot;[ produceert een API sleutel, organisatie identiteitskaart, en cliënt geheim ](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html#api-ims-secret)&quot;stap. Het Adobe Exchange-team zal de vorige stappen voor u afhandelen. Als u de zelfstudie over verificatie voltooit, krijgt u de waarden voor elk van de vereiste headers in Destination SDK API-aanroepen, zoals hieronder wordt getoond:
 
 * `x-api-key: {API_KEY}`, ook wel client-id genoemd
 * `x-gw-ims-org-id: {ORG_ID}`, ook bekend als organisatie-id
@@ -48,19 +48,19 @@ You now have the required authentication headers `x-api-key: {API_KEY}`, `x-gw-i
 
 ## Eigendom van bestemming en sandboxen {#destination-ownership}
 
-Alle bronnen in Experience Platform zijn geïsoleerd naar specifieke virtuele sandboxen. Verzoeken om Destination SDK vereisen kopballen die de naam van de zandbak specificeren de verrichting in plaatsvindt:
+Alle bronnen in Experience Platform zijn geïsoleerd naar specifieke virtuele sandboxen. Voor aanvragen bij Destination SDK zijn headers vereist met de naam van de sandbox waarin de bewerking plaatsvindt:
 
 * `x-sandbox-name: {SANDBOX_NAME}`
 
-Het team van de Adobe Exchange voorziet u van uw zandbaknaam, die u in vraag aan de Destination SDK API eindpunten moet gebruiken.
+Het Adobe Exchange-team geeft u de naam van uw sandbox, die u moet gebruiken voor aanroepen naar de eindpunten van de Destination SDK API.
 
 ## Rolgebaseerde toegangscontrole (RBAC) {#rbac}
 
-Om de Destination SDK API eindpunten te gebruiken die in de [ verwijzingsdocumentatie ](functionality/configuration-options.md) worden beschreven, hebt u de **[!UICONTROL Destination Authoring]** toegangsbeheertoestemming nodig. Het werk met het team van de Adobe Exchange om deze toestemming te krijgen die aan u in [ wordt toegewezen Adobe Admin Console ](https://adminconsole.adobe.com/).
+Om de Destination SDK API eindpunten te gebruiken die in de [ verwijzingsdocumentatie ](functionality/configuration-options.md) worden beschreven, hebt u de **[!UICONTROL Destination Authoring]** toegangsbeheertoestemming nodig. Het werk met het team van Adobe Exchange om deze toestemming te krijgen die aan u in [ wordt toegewezen Adobe Admin Console ](https://adminconsole.adobe.com/).
 
 ![ Authoring toestemming van de Bestemming ](./assets/destination-authoring-permission.png)
 
-Lees voor meer informatie de volgende documenten van het Toegangsbeheer van het Experience Platform:
+Lees voor meer informatie de volgende Experience Platform Access Control-documenten:
 
 * [Rechten voor een productprofiel beheren](/help/access-control/ui/permissions.md)
 * [Beschikbare machtigingen voor Experience Platform](/help/access-control/home.md#permissions)
@@ -68,17 +68,17 @@ Lees voor meer informatie de volgende documenten van het Toegangsbeheer van het 
 
 ## Aanvullende overwegingen {#additional-considerations}
 
-* Voor geproduceerde/openbare bestemmingen, om het even welke veranderingen die u aan bestemmingsconfiguraties aanbrengt, of u creeert of een bestemmingsconfiguratie uitgeeft, moet door Adobe worden herzien en worden goedgekeurd. Uw veranderingen worden weerspiegeld in uw bestemmingen slechts nadat het overzicht wordt gedaan. Dit geldt niet voor particuliere bestemmingen die alleen voor u beschikbaar zijn.
+* Voor productiviteit/openbare bestemmingen, moeten om het even welke veranderingen die u aan bestemmingsconfiguraties aanbrengt, of u creeert of een bestemmingsconfiguratie uitgeeft, door Adobe worden herzien en worden goedgekeurd. Uw veranderingen worden weerspiegeld in uw bestemmingen slechts nadat het overzicht wordt gedaan. Dit geldt niet voor particuliere bestemmingen die alleen voor u beschikbaar zijn.
 * Alleen de gebruikers die tot dezelfde organisatie behoren en toegang hebben tot de sandbox, kunnen de doelconfiguratie bewerken.
 
 ## Volgende stappen {#next-steps}
 
-Door de stappen in dit artikel te volgen, hebt u authentificatiegeloofsbrieven aan Adobe I/O, een zandbaknaam, en de toestemming van de bestemmings authoring toegangscontrole verkregen. Vervolgens kunt u een bestemming instellen met behulp van Destination SDK.
+Door de stappen in dit artikel uit te voeren, hebt u verificatiegegevens verkregen naar Adobe I/O, een sandboxnaam en de toegangsbeheermachtiging voor het ontwerpen van de bestemming. Vervolgens kunt u een bestemming instellen met Destination SDK.
 
 * Lees de volgende configuratiegidsen, afhankelijk van uw bestemmingstype:
 
-   * [Gebruik Destination SDK om een streamingbestemming te configureren](guides/configure-destination-instructions.md)
-   * [Gebruik Destination SDK om een op een bestand gebaseerde bestemming te configureren](guides/configure-file-based-destination-instructions.md)
+   * [Destination SDK gebruiken om een streamingbestemming te configureren](guides/configure-destination-instructions.md)
+   * [Destination SDK gebruiken om een bestandsgebaseerde bestemming te configureren](guides/configure-file-based-destination-instructions.md)
 
 * Voor alle verrichtingen, verwijs naar de [ Authoring API documentatie van de Bestemming ](https://www.adobe.io/experience-platform-apis/references/destination-authoring/).
-* Gebruik de [ Authoring API van de Bestemming de inzameling van Postman ](https://github.com/adobe/experience-platform-postman-samples/blob/master/apis/experience-platform/Destination%20Authoring%20API.postman_collection.json) om uw bestemming te vormen gebruikend de Destination SDK API eindpunten. Om met Postman begonnen te worden, zie de [ stappen voor het invoeren van milieu&#39;s en inzamelingen ](https://learning.postman.com/docs/getting-started/importing-and-exporting-data/) en a [ videogids voor het creëren van het milieu van Postman ](https://video.tv.adobe.com/v/28832).
+* Gebruik de [ Ontwerpen API van de Bestemming de inzameling van Postman ](https://github.com/adobe/experience-platform-postman-samples/blob/master/apis/experience-platform/Destination%20Authoring%20API.postman_collection.json) om uw bestemming te vormen gebruikend Destination SDK API eindpunten. Om met Postman begonnen te worden, zie de [ stappen voor het invoeren van milieu&#39;s en inzamelingen ](https://learning.postman.com/docs/getting-started/importing-and-exporting-data/) en a [ videogids voor het creëren van het milieu van Postman ](https://video.tv.adobe.com/v/28832).

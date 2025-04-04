@@ -4,16 +4,16 @@ title: Navigeren naar Hoofdletters gebruiken
 description: Leer hoe u door een galerie met afspeelboeken kunt navigeren en aan de slag kunt gaan met een inspirerende sandbox.
 role: User
 exl-id: 1f5dae75-1136-4be3-9132-01d36a4066ca
-source-git-commit: 703c84e61af105bc3933e4750a3cb27df8ac19fe
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '705'
+source-wordcount: '706'
 ht-degree: 0%
 
 ---
 
 # Navigeren naar Hoofdletters gebruiken
 
-Afspeelboeken met hoofdletters en kleine letters zijn zonder extra kosten beschikbaar voor alle Adobe Experience Platform-klanten. Als u een uitgebreide galerie met gebruikscase-afspeelboeken wilt openen in de gebruikersinterface van het Experience Platform, selecteert u **[!UICONTROL Playbooks]** in de linkernavigatie.
+Afspeelboeken met hoofdletters en kleine letters zijn zonder extra kosten beschikbaar voor alle Adobe Experience Platform-klanten. Selecteer **[!UICONTROL Playbooks]** in de linkernavigatie voor toegang tot een uitgebreide galerie met gebruikscaseafspeelboeken in de gebruikersinterface van Experience Platform.
 
 ![ de galerij van het gebruiks case playbook.](/help/use-case-playbooks/assets/playbooks/discover/playbooks-gallery.png)
 
@@ -67,8 +67,8 @@ Configureer ook kanalen voor afspeelboeken die transactieberichten bevatten, zoa
 
 ### Push-kanaaloppervlak
 
-Bevestig dat de kanaalconfiguraties of van het Experience Platform of de interface van de Inzamelingen van Gegevens worden gevormd. Zo zien kanaalconfiguraties er uit in de omgeving van gegevensverzamelingen.
+Controleer of de kanaalconfiguraties zijn geconfigureerd via de interface van Experience Platform of Gegevensverzamelingen. Zo zien kanaalconfiguraties er uit in de omgeving van gegevensverzamelingen.
 
 ## Volgende stappen {#next-steps}
 
-Nu u dit document hebt gelezen, zou u moeten weten hoe te opstelling een inspirerende zandbak en vertrouwd met verschillende manieren om tot gebruikscaseplaybooks binnen Platform toegang te hebben. Als volgende stap, lees over hoe te [ ](/help/use-case-playbooks/playbooks/choose.md) het juiste playbook kiezen.
+Nu u dit document hebt gelezen, zou u moeten weten hoe te opstelling een inspirerende zandbak en vertrouwd met verschillende manieren om tot gebruikscaseplaybooks binnen Experience Platform toegang te hebben. Als volgende stap, lees over hoe te [ ](/help/use-case-playbooks/playbooks/choose.md) het juiste playbook kiezen.

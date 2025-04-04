@@ -2,9 +2,9 @@
 title: Een relatie definiëren tussen twee schema's in Real-Time Customer Data Platform B2B edition
 description: Leer hoe u een vele-op-één relatie tussen twee schema's in Adobe Real-Time Customer Data Platform B2B edition definieert.
 exl-id: 14032754-c7f5-46b6-90e6-c6e99af1efba
-source-git-commit: 85d6cf10599d153a15c1bd56067f57439ddd0133
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1724'
+source-wordcount: '1726'
 ht-degree: 0%
 
 ---
@@ -30,7 +30,7 @@ Deze zelfstudie behandelt de stappen voor het definiëren van een vele-op-één 
 >
 >Als u geen Real-Time Customer Data Platform B2B edition gebruikt of een één-aan-één verhouding wilt tot stand brengen, zie de gids op [ creërend een één-aan-één verhouding ](./relationship-ui.md) in plaats daarvan.
 >
->Dit leerprogramma concentreert zich op hoe te om relaties tussen B2B- schema&#39;s in het Platform UI manueel te vestigen. Als u gegevens van een B2B bronverbinding brengt, kunt u een auto-generatienut gebruiken om de vereiste schema&#39;s, identiteiten, en verhoudingen in plaats daarvan tot stand te brengen. Zie de brondocumentatie op B2B namespaces en schema&#39;s voor meer informatie over [ gebruikend het auto-generatienut ](../../sources/connectors/adobe-applications/marketo/marketo-namespaces.md).
+>Deze zelfstudie richt zich op het handmatig tot stand brengen van relaties tussen B2B-schema&#39;s in de gebruikersinterface van Experience Platform. Als u gegevens van een B2B bronverbinding brengt, kunt u een auto-generatienut gebruiken om de vereiste schema&#39;s, identiteiten, en verhoudingen in plaats daarvan tot stand te brengen. Zie de brondocumentatie op B2B namespaces en schema&#39;s voor meer informatie over [ gebruikend het auto-generatienut ](../../sources/connectors/adobe-applications/marketo/marketo-namespaces.md).
 
 ## Aan de slag
 
@@ -53,7 +53,7 @@ De verhoudingen van het schema worden vertegenwoordigd door een specifiek gebied
 >title="Naamruimte van verwijzing"
 >abstract="De naamruimte (type) voor het primaire identiteitsveld van het referentieschema. Het referentieschema moet een bestaand primair identiteitsveld hebben om aan een relatie te kunnen deelnemen. Raadpleeg de documentatie voor meer informatie over identiteiten in B2B-relaties."
 
-Om een relatie tot stand te brengen, moet het referentieschema een gedefinieerde primaire identiteit hebben. Houd er bij het instellen van een primaire identiteit voor een B2B-entiteit rekening mee dat op tekenreeks gebaseerde entiteit-id&#39;s elkaar kunnen overlappen als u deze verzamelt op verschillende systemen of locaties, wat tot gegevensconflicten in Platform kan leiden.
+Om een relatie tot stand te brengen, moet het referentieschema een gedefinieerde primaire identiteit hebben. Houd er bij het instellen van een primaire identiteit voor een B2B-entiteit rekening mee dat op tekenreeks gebaseerde entiteit-id&#39;s elkaar kunnen overlappen als u deze verzamelt op verschillende systemen of locaties, wat tot gegevensconflicten in Experience Platform kan leiden.
 
 Om dit te verklaren, bevatten alle standaardB2B klassen &quot;zeer belangrijke&quot;gebieden die met het [[!UICONTROL B2B Source] gegevenstype ](../data-types/b2b-source.md) in overeenstemming zijn. Dit gegevenstype verschaft velden voor een tekenreeks-id voor de B2B-entiteit, samen met andere contextuele informatie over de bron van de id. Een van deze velden, `sourceKey` , voegt de waarden van de andere velden in het gegevenstype samen om een geheel unieke id voor de entiteit te maken. Dit veld moet altijd worden gebruikt als de primaire identiteit voor B2B-entiteitsschema&#39;s.
 

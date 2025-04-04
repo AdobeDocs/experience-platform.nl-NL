@@ -1,10 +1,10 @@
 ---
-keywords: Experience Platform;home;populaire onderwerpen;streaming;streaming opname;problemen oplossen;streaming opname oplossen;streaming opname ophalen faq;faq;
+keywords: Experience Platform;home;populaire onderwerpen;streaming;streaming opname;problemen oplossen;streaming opname problemen;streaming opname faq;faq;
 solution: Experience Platform
 title: Handleiding voor het oplossen van problemen met streaming-inname
 description: In dit document worden antwoorden gegeven op veelgestelde vragen over het streamen van opname op Adobe Experience Platform.
 exl-id: 5d5deccf-25b8-44c9-ae27-9a4713ced274
-source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '1020'
 ht-degree: 0%
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 # Handleiding voor het oplossen van problemen bij het streamen
 
-In dit document worden antwoorden gegeven op veelgestelde vragen over het streamen van opname op Adobe Experience Platform. Voor vragen en het oplossen van problemen met betrekking tot andere [!DNL Platform] diensten, met inbegrip van die die over alle [!DNL Platform] APIs worden ontmoet, gelieve te verwijzen naar de [ gids van de het oplossen van problemenoplossing van Experience Platforms ](../../landing/troubleshooting.md).
+In dit document worden antwoorden gegeven op veelgestelde vragen over het streamen van opname op Adobe Experience Platform. Voor vragen en het oplossen van problemen met betrekking tot andere [!DNL Experience Platform] diensten, met inbegrip van die die over alle [!DNL Experience Platform] APIs worden ontmoet, gelieve te verwijzen naar de [ het oplossen van problemengids van Experience Platform ](../../landing/troubleshooting.md).
 
 Adobe Experience Platform [!DNL Data Ingestion] biedt RESTful-API&#39;s die u kunt gebruiken om gegevens in [!DNL Experience Platform] in te voeren. De opgenomen gegevens worden gebruikt om individuele klantenprofielen in bijna real time bij te werken, toestaand u om gepersonaliseerde, relevante ervaringen over veelvoudige kanalen te leveren. Gelieve te lezen het [ overzicht van de Ingestie van Gegevens ](../home.md) voor meer informatie over de dienst en de verschillende inspraakmethodes. Voor stappen op hoe te om het stromen ingestie APIs te gebruiken, te lezen gelieve [ het stromen ingestitieoverzicht ](../streaming-ingestion/overview.md).
 
@@ -33,9 +33,9 @@ Streaming opname ondersteunt twee validatiemodi: synchroon en asynchroon. Elke v
 
 Voor meer informatie over synchrone en asynchrone bevestiging, zie het [ stromen bevestigingsoverzicht ](../quality/streaming-validation.md). Voor stappen op hoe te om partijen te bekijken die bevestiging ontbreken, te verwijzen gelieve naar de gids op [ terugwinnend ontbroken partijen ](../quality/retrieve-failed-batches.md).
 
-### Kan ik een aanvraaglading bevestigen alvorens het naar [!DNL Platform] te verzenden?
+### Kan ik een aanvraaglading bevestigen alvorens het naar [!DNL Experience Platform] te verzenden?
 
-Aanvraagladingen kunnen alleen worden geëvalueerd nadat ze naar [!DNL Platform] zijn verzonden. Bij het uitvoeren van synchrone validatie retourneert een geldige payload gevulde JSON-objecten terwijl een ongeldige payload foutberichten retourneert. Tijdens asynchrone validatie detecteert de service beschadigde gegevens en verzendt deze naar de [!DNL Data Lake] waar deze later kunnen worden opgehaald voor analyse. Zie [ het stromen bevestigingsoverzicht ](../quality/streaming-validation.md) voor meer informatie.
+Aanvraagladingen kunnen alleen worden geëvalueerd nadat ze naar [!DNL Experience Platform] zijn verzonden. Bij het uitvoeren van synchrone validatie retourneert een geldige payload gevulde JSON-objecten terwijl een ongeldige payload foutberichten retourneert. Tijdens asynchrone validatie detecteert de service beschadigde gegevens en verzendt deze naar de [!DNL Data Lake] waar deze later kunnen worden opgehaald voor analyse. Zie [ het stromen bevestigingsoverzicht ](../quality/streaming-validation.md) voor meer informatie.
 
 ### Wat gebeurt er als synchrone validatie wordt aangevraagd voor een rand die deze niet ondersteunt?
 
@@ -43,7 +43,7 @@ Wanneer synchrone validatie niet wordt ondersteund voor de aangevraagde locatie,
 
 ### Hoe kan ik ervoor zorgen dat gegevens alleen worden verzameld van vertrouwde bronnen?
 
-[!DNL Experience Platform] ondersteunt beveiligde gegevensverzameling. Wanneer de voor authentiek verklaarde gegevensinzameling wordt toegelaten, moeten de cliënten een Token van het Web JSON (JWT) en hun organisatie-identiteitskaart als verzoekkopballen verzenden. Voor meer informatie over hoe te om voor authentiek verklaarde gegevens naar [!DNL Platform] te verzenden, te zien gelieve de gids over [ voor authentiek verklaarde gegevensinzameling ](../tutorials/create-authenticated-streaming-connection.md).
+[!DNL Experience Platform] ondersteunt beveiligde gegevensverzameling. Wanneer de voor authentiek verklaarde gegevensinzameling wordt toegelaten, moeten de cliënten een Token van het Web JSON (JWT) en hun organisatie-identiteitskaart als verzoekkopballen verzenden. Voor meer informatie over hoe te om voor authentiek verklaarde gegevens naar [!DNL Experience Platform] te verzenden, te zien gelieve de gids over [ voor authentiek verklaarde gegevensinzameling ](../tutorials/create-authenticated-streaming-connection.md).
 
 ### Wat is de latentie voor het stromen gegevens aan [!DNL Real-Time Customer Profile]?
 
@@ -51,15 +51,15 @@ Gestroomde gebeurtenissen worden over het algemeen weerspiegeld in [!DNL Real-Ti
 
 ### Kan ik meerdere berichten opnemen in dezelfde API-aanvraag?
 
-U kunt meerdere berichten groeperen binnen één aanvraaglading en deze streamen naar [!DNL Platform] . Als de gegevens correct worden gebruikt, is het groeperen van meerdere berichten binnen één aanvraag een uitstekende manier om uw gegevensbewerkingen te optimaliseren. Gelieve te lezen het leerprogramma op [ verzendend veelvoudige berichten in een verzoek ](../tutorials/streaming-multiple-messages.md) voor meer informatie.
+U kunt meerdere berichten groeperen binnen één aanvraaglading en deze streamen naar [!DNL Experience Platform] . Als de gegevens correct worden gebruikt, is het groeperen van meerdere berichten binnen één aanvraag een uitstekende manier om uw gegevensbewerkingen te optimaliseren. Gelieve te lezen het leerprogramma op [ verzendend veelvoudige berichten in een verzoek ](../tutorials/streaming-multiple-messages.md) voor meer informatie.
 
 ### Hoe weet ik of de gegevens die ik verstuur, worden ontvangen?
 
-Alle gegevens die naar [!DNL Platform] (met succes of anders) worden verzonden, worden opgeslagen als batchbestanden voordat ze in gegevenssets worden gecontinueerd. De verwerkingsstatus van batches wordt weergegeven in de gegevensset waarnaar ze zijn verzonden.
+Alle gegevens die naar [!DNL Experience Platform] (met succes of anders) worden verzonden, worden opgeslagen als batchbestanden voordat ze in gegevenssets worden gecontinueerd. De verwerkingsstatus van batches wordt weergegeven in de gegevensset waarnaar ze zijn verzonden.
 
-U kunt verifiëren als het gegeven met succes is opgenomen door datasetactiviteit te controleren gebruikend het [ gebruikersinterface van het Experience Platform ](https://platform.adobe.com). Klik op **[!UICONTROL Datasets]** in de linkernavigatie om een lijst met gegevenssets weer te geven. Selecteer de dataset u van de getoonde lijst aan om zijn **[!UICONTROL Dataset activity]** pagina te openen, die alle partijen toont die tijdens een geselecteerde tijdspanne worden verzonden. Voor meer informatie over het gebruiken van [!DNL Experience Platform] om gegevensstromen te controleren, zie de gids bij [ controle het stromen gegevensstromen ](../quality/monitor-data-ingestion.md).
+U kunt verifiëren als het gegeven met succes is opgenomen door datasetactiviteit te controleren gebruikend het [ gebruikersinterface van Experience Platform ](https://platform.adobe.com). Klik op **[!UICONTROL Datasets]** in de linkernavigatie om een lijst met gegevenssets weer te geven. Selecteer de dataset u van de getoonde lijst aan om zijn **[!UICONTROL Dataset activity]** pagina te openen, die alle partijen toont die tijdens een geselecteerde tijdspanne worden verzonden. Voor meer informatie over het gebruiken van [!DNL Experience Platform] om gegevensstromen te controleren, zie de gids bij [ controle het stromen gegevensstromen ](../quality/monitor-data-ingestion.md).
 
-Als uw gegevens niet zijn ingevoerd en u wilt deze herstellen vanuit [!DNL Platform] , kunt u de mislukte batches ophalen door hun id&#39;s naar de [!DNL Data Access API] te verzenden. Zie de gids bij [ het terugwinnen ontbroken partijen ](../quality/retrieve-failed-batches.md) voor meer informatie.
+Als uw gegevens niet zijn ingevoerd en u wilt deze herstellen vanuit [!DNL Experience Platform] , kunt u de mislukte batches ophalen door hun id&#39;s naar de [!DNL Data Access API] te verzenden. Zie de gids bij [ het terugwinnen ontbroken partijen ](../quality/retrieve-failed-batches.md) voor meer informatie.
 
 ### Waarom zijn mijn streaminggegevens niet beschikbaar in het Data Lake?
 

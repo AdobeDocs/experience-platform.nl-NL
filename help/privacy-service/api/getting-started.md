@@ -1,16 +1,16 @@
 ---
-title: De Privacy Service-API verifiëren en openen
-description: Leer hoe u verificatie uitvoert voor de Privacy Service-API en hoe u voorbeeld-API-aanroepen interpreteert in de documentatie.
+title: De Privacy Service API verifiëren en openen
+description: Leer hoe u voor verificatie voor de Privacy Service API zorgt en hoe u voorbeeld-API-aanroepen in de documentatie kunt interpreteren.
 role: Developer
 exl-id: c1d05e30-ef8f-4adf-87e0-1d6e3e9e9f9e
-source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '812'
+source-wordcount: '813'
 ht-degree: 0%
 
 ---
 
-# De Privacy Service-API verifiëren en openen
+# De Privacy Service API verifiëren en openen
 
 Deze gids verstrekt een inleiding aan de kernconcepten u moet kennen alvorens te proberen om vraag aan Adobe Experience Platform Privacy Service API te maken.
 
@@ -18,11 +18,11 @@ Deze gids verstrekt een inleiding aan de kernconcepten u moet kennen alvorens te
 
 Deze gids vereist een werkend begrip van [ Privacy Service ](../home.md) en hoe het u toestaat om toegang te beheren en verzoeken van uw gegevensproefpersonen (klanten) over de toepassingen van Adobe Experience Cloud te schrappen.
 
-Als u toegangsreferenties voor de API wilt maken, moet een beheerder binnen uw organisatie eerder productprofielen hebben ingesteld voor Privacy Service binnen Adobe Admin Console. Het productprofiel dat u toewijst aan een API-integratie, bepaalt welke machtigingen integratie heeft wanneer u toegang krijgt tot Privacy Service-mogelijkheden. Zie de gids over [ het beheren van de toestemmingen van de Privacy Service ](../permissions.md) voor meer informatie.
+Als u toegangsreferenties voor de API wilt maken, moet een beheerder binnen uw organisatie eerder productprofielen voor Privacy Service in Adobe Admin Console hebben ingesteld. Het productprofiel dat u toewijst aan een API-integratie, bepaalt welke machtigingen integratie heeft voor toegang tot Privacy Service-mogelijkheden. Zie de gids over [ het beheren van de toestemmingen van Privacy Service ](../permissions.md) voor meer informatie.
 
 ## Waarden verzamelen voor vereiste koppen {#gather-values-required-headers}
 
-Om vraag aan Privacy Service API te maken, moet u uw toegangsgeloofsbrieven eerst verzamelen die in vereiste kopballen moeten worden gebruikt:
+Als u aanroepen wilt uitvoeren naar de Privacy Service API, moet u eerst de toegangsreferenties verzamelen die in de vereiste headers moeten worden gebruikt:
 
 * `Authorization: Bearer {ACCESS_TOKEN}`
 * `x-api-key: {API_KEY}`
@@ -40,21 +40,21 @@ Als u een nieuw project hebt gemaakt, selecteert u **[!UICONTROL Add to Project]
 
 ![ de API optie die van [!UICONTROL Add to Project] dropdown van de pagina van projectdetails in Developer Console wordt geselecteerd ](../images/api/getting-started/add-api-button.png)
 
-#### Selecteer de Privacy Service-API {#select-privacy-service-api}
+#### De Privacy Service API selecteren {#select-privacy-service-api}
 
 Het scherm **[!UICONTROL Add an API]** wordt weergegeven. Selecteer **[!UICONTROL Experience Cloud]** om de lijst met beschikbare API&#39;s te beperken en selecteer vervolgens de kaart voor **[!UICONTROL Privacy Service API]** voordat u **[!UICONTROL Next]** selecteert.
 
-![ de Privacy Service API kaart die van de lijst van beschikbare APIs wordt geselecteerd ](../images/api/getting-started/add-privacy-service-api.png)
+![ De Privacy Service API kaart die van de lijst van beschikbare APIs wordt geselecteerd ](../images/api/getting-started/add-privacy-service-api.png)
 
 >[!TIP]
 >
 >Selecteer de **[!UICONTROL View docs]** optie om in een afzonderlijk browser venster aan de volledige [ Privacy Service API verwijzingsdocumentatie ](https://developer.adobe.com/experience-platform-apis/references/privacy-service/) te navigeren.
 
-Selecteer vervolgens het verificatietype dat u wilt maken voor het genereren van toegangstokens en voor toegang tot de Privacy Service-API.
+Selecteer vervolgens het verificatietype dat u wilt genereren voor toegangstokens en toegang tot de Privacy Service API.
 
 >[!IMPORTANT]
 >
->Selecteer de methode **[!UICONTROL OAuth Server-to-Server]** omdat dit de enige methode is die u kunt gebruiken om door te gaan. De methode **[!UICONTROL Service Account (JWT)]** is vervangen. Terwijl de integratie die de authentificatiemethode JWT gebruikt tot 1 Januari, 2025 zal blijven werken, adviseert de Adobe sterk dat u bestaande integratie aan de nieuwe server-aan-server methode OAuth vóór die datum migreert. Krijg meer informatie in de sectie [!BADGE  Afgekeurd ]{type=negative}[ produceer een Token van het Web JSON (JWT) ](/help/landing/api-authentication.md#jwt).
+>Selecteer de methode **[!UICONTROL OAuth Server-to-Server]** omdat dit de enige methode is die u kunt gebruiken om door te gaan. De methode **[!UICONTROL Service Account (JWT)]** is vervangen. Terwijl de integratie die de authentificatiemethode JWT gebruikt tot 1 Januari, 2025 zal blijven werken, adviseert Adobe sterk dat u bestaande integratie aan de nieuwe server-aan-server methode OAuth vóór die datum migreert. Krijg meer informatie in de sectie [!BADGE  Afgekeurd ]{type=negative}[ produceer een Token van het Web JSON (JWT) ](/help/landing/api-authentication.md#jwt).
 
 ![ Uitgezochte Oauth server-aan-Server authentificatiemethode.](/help/privacy-service/images/api/getting-started/select-oauth-authentication.png)
 
@@ -64,7 +64,7 @@ De laatste configuratiestap bestaat uit het selecteren van de productprofielen w
 
 >[!NOTE]
 >
-Productprofielen en de bijbehorende granulaire machtigingen worden door beheerders gemaakt en beheerd via Adobe Admin Console. Zie de gids op [ toestemmingen van de Privacy Service ](../permissions.md) voor meer informatie.
+Productprofielen en de bijbehorende granulaire machtigingen worden door beheerders gemaakt en beheerd via Adobe Admin Console. Zie de gids op [ toestemmingen van Privacy Service ](../permissions.md) voor meer informatie.
 
 Selecteer **[!UICONTROL Save configured API]** als u klaar bent.
 
@@ -96,15 +96,15 @@ Er wordt een nieuw toegangstoken gegenereerd en er wordt een knop opgegeven waar
 
 #### Automatisch token genereren {#auto-token}
 
-U kunt ook een Postman-omgeving en -verzameling gebruiken om toegangstokens te genereren. Voor meer informatie, lees de sectie over [ gebruikend Postman om API vraag ](/help/landing/api-authentication.md#use-postman) in de Experience Platform API authentificatiegids voor authentiek te verklaren en te testen.
+U kunt ook een Postman-omgeving en -verzameling gebruiken om toegangstokens te genereren. Voor meer informatie, lees de sectie over [ gebruikend Postman om API vraag ](/help/landing/api-authentication.md#use-postman) in de de authentificatiegids van Experience Platform voor authentiek te verklaren en te testen API.
 
 ## API-voorbeeldaanroepen lezen {#read-sample-api-calls}
 
-Elke eindpuntgids verstrekt voorbeeld API vraag om aan te tonen hoe te om uw verzoeken te formatteren. Dit zijn paden, vereiste kopteksten en correct opgemaakte ladingen voor aanvragen. Voorbeeld-JSON die wordt geretourneerd in API-reacties, wordt ook verschaft. Voor informatie over de overeenkomsten die in documentatie voor steekproef API vraag worden gebruikt, zie de sectie op [ hoe te voorbeeld API vraag ](../../landing/api-guide.md#sample-api) in de begonnen gids voor Platform APIs lezen.
+Elke eindpuntgids verstrekt voorbeeld API vraag om aan te tonen hoe te om uw verzoeken te formatteren. Dit zijn paden, vereiste kopteksten en correct opgemaakte ladingen voor aanvragen. Voorbeeld-JSON die wordt geretourneerd in API-reacties, wordt ook verschaft. Voor informatie over de overeenkomsten die in documentatie voor steekproef API vraag worden gebruikt, zie de sectie op [ hoe te om voorbeeld API vraag ](../../landing/api-guide.md#sample-api) in de begonnen gids voor Experience Platform APIs te lezen.
 
 ## Volgende stappen {#next-steps}
 
-Nu u begrijpt welke kopballen aan gebruik, bent u bereid beginnen het maken vraag aan Privacy Service API. Selecteer een van de eindpunthulplijnen om aan de slag te gaan:
+Nu u begrijpt welke headers u moet gebruiken, bent u klaar om te beginnen met het oproepen van de Privacy Service API. Selecteer een van de eindpunthulplijnen om aan de slag te gaan:
 
 * [Privacytaken](./privacy-jobs.md)
 * [Toestemming](./consent.md)

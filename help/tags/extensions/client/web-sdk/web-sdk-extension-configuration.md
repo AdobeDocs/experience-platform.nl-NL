@@ -2,9 +2,9 @@
 title: De Web SDK-tagextensie configureren
 description: Leer hoe u de Experience Platform Web SDK-tagextensie configureert in de gebruikersinterface voor tags.
 exl-id: 22425daa-10bd-4f06-92de-dff9f48ef16e
-source-git-commit: d267e816f42d1e0a751b188065f5164a5e2b6be9
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '2684'
+source-wordcount: '2685'
 ht-degree: 0%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 Met de tagextensie [!DNL Web SDK] worden gegevens vanuit wegeigenschappen via de Experience Platform Edge Network naar Adobe Experience Cloud verzonden.
 
-Met de extensie kunt u gegevens streamen naar Platform, identiteiten synchroniseren, de toestemmingssignalen van de klant verwerken en automatisch contextgegevens verzamelen.
+Met de extensie kunt u gegevens streamen naar Experience Platform, identiteiten synchroniseren, toestemmingssignalen van klanten verwerken en automatisch contextgegevens verzamelen.
 
 In dit document wordt uitgelegd hoe u de tagextensie configureert in de gebruikersinterface voor tags.
 

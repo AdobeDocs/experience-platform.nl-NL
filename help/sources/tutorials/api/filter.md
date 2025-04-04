@@ -2,9 +2,9 @@
 title: Gegevens op rijniveau voor een Source filteren met behulp van de Flow Service API
 description: Deze zelfstudie behandelt de stappen voor het filteren van gegevens op bronniveau met behulp van de Flow Service API
 exl-id: 224b454e-a079-4df3-a8b2-1bebfb37d11f
-source-git-commit: e8e8914c41d7a083395b0bf53aaac8021fcf9e9a
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '1817'
+source-wordcount: '1820'
 ht-degree: 2%
 
 ---
@@ -27,12 +27,12 @@ Lees deze gids voor stappen op hoe te om rij-vlakke gegevens voor een bron te fi
 
 Voor deze zelfstudie hebt u een goed inzicht nodig in de volgende onderdelen van Adobe Experience Platform:
 
-* [ Bronnen ](../../home.md): [!DNL Experience Platform] staat gegevens toe om van diverse bronnen worden opgenomen terwijl het voorzien van u van de capaciteit om, inkomende gegevens te structureren te etiketteren en te verbeteren gebruikend [!DNL Platform] diensten.
-* [ Sandboxen ](../../../sandboxes/home.md): [!DNL Experience Platform] verstrekt virtuele zandbakken die één enkele [!DNL Platform] instantie in afzonderlijke virtuele milieu&#39;s verdelen helpen digitale ervaringstoepassingen ontwikkelen en ontwikkelen.
+* [ Bronnen ](../../home.md): [!DNL Experience Platform] staat gegevens toe om van diverse bronnen worden opgenomen terwijl het voorzien van u van de capaciteit om, inkomende gegevens te structureren te etiketteren en te verbeteren gebruikend [!DNL Experience Platform] diensten.
+* [ Sandboxen ](../../../sandboxes/home.md): [!DNL Experience Platform] verstrekt virtuele zandbakken die één enkele [!DNL Experience Platform] instantie in afzonderlijke virtuele milieu&#39;s verdelen helpen digitale ervaringstoepassingen ontwikkelen en ontwikkelen.
 
-### Platform-API&#39;s gebruiken
+### Experience Platform API&#39;s gebruiken
 
-Voor informatie over hoe te om vraag aan Platform APIs met succes te maken, zie de gids op [ begonnen wordt met Platform APIs ](../../../landing/api-guide.md).
+Voor informatie over hoe te om vraag aan Experience Platform APIs met succes te maken, zie de gids op [ begonnen wordt met Experience Platform APIs ](../../../landing/api-guide.md).
 
 ## Brongegevens filteren {#filter-source-data}
 
@@ -42,7 +42,7 @@ De volgende schetsen stappen om rij-vlakke gegevens voor uw bron te filtreren.
 
 De eerste stap bij het filtreren van rij-vlakke gegevens voor uw bron is de verbindingsspecificaties van uw bron terug te winnen en de exploitanten en de taal te bepalen die uw bron steunt.
 
-Als u de verbindingsspecificatie van een bepaalde bron wilt ophalen, vraagt u een GET aan het `/connectionSpecs` -eindpunt van de [!DNL Flow Service] API en geeft u de eigenschapnaam van de bron op als onderdeel van de queryparameters.
+Als u de verbindingsspecificatie van een bepaalde bron wilt ophalen, vraagt u GET het `/connectionSpecs` -eindpunt van de [!DNL Flow Service] API aan en geeft u de eigenschapnaam van de bron op als onderdeel van de queryparameters.
 
 **API formaat**
 
@@ -155,7 +155,7 @@ In het onderstaande voorbeeld worden voorwaarden alleen toegepast op geselecteer
 
 ### Een voorbeeld van uw gegevens bekijken {#preview-your-data}
 
-U kunt een voorvertoning van uw gegevens weergeven door een aanvraag voor een GET in te dienen bij het `/explore` -eindpunt van de [!DNL Flow Service] API, terwijl u `filters` opgeeft als onderdeel van de queryparameters en uw PQL-invoervoorwaarden opgeeft in [!DNL Base64] .
+U kunt een voorbeeld van uw gegevens bekijken door een GET-aanvraag in te dienen bij het `/explore` -eindpunt van de [!DNL Flow Service] API. U kunt `filters` echter opgeven als onderdeel van de queryparameters en de invoervoorwaarden voor PQL in [!DNL Base64] opgeven.
 
 **API formaat**
 
@@ -334,7 +334,7 @@ Een geslaagde reactie retourneert de inhoud en structuur van de gegevens.
 
 ### Een bronverbinding maken voor gefilterde gegevens
 
-Om een bronverbinding tot stand te brengen en gefilterde gegevens in te voeren, doe een verzoek van de POST aan het `/sourceConnections` eindpunt en verstrek uw het filtreren voorwaarden in de parameters van het verzoeklichaam.
+Om een bronverbinding tot stand te brengen en gefilterde gegevens in te voeren, doe een POST- verzoek aan het `/sourceConnections` eindpunt en verstrek uw het filtreren voorwaarden in de parameters van het verzoeklichaam.
 
 **API formaat**
 
@@ -460,7 +460,7 @@ Navigeer in de gebruikersinterface naar de broncatalogus en selecteer vervolgens
 
 ### Gegevens over gegevensstroom ophalen
 
-Vervolgens moet u de gegevens over de gegevensstroom ophalen, met name de id van de bronverbinding die aan uw gegevensstroom is gekoppeld. Om uw gegevens terug te winnen dataflow details, doe een verzoek van de GET aan het `/flows` eindpunt en verstrek uw dataflow identiteitskaart als wegparameter.
+Vervolgens moet u de gegevens over de gegevensstroom ophalen, met name de id van de bronverbinding die aan uw gegevensstroom is gekoppeld. Als u de gegevens over de gegevensstroom wilt ophalen, vraagt u GET het `/flows` -eindpunt aan en geeft u uw gegevensstroom-id op als padparameter.
 
 **API formaat**
 
@@ -591,7 +591,7 @@ Een succesvolle reactie keert uw gegevens van de gegevensstroom, met inbegrip va
 
 ### De verbindingsgegevens van de bron ophalen
 
-Vervolgens gebruikt u de id van de bronverbinding en vraagt u een GET aan het eindpunt van `/sourceConnections` om de gegevens van de bronverbinding op te halen.
+Gebruik vervolgens de bron-verbindings-id en doe een GET-aanvraag aan het `/sourceConnections` -eindpunt om uw bronverbindingsgegevens op te halen.
 
 **API formaat**
 
@@ -676,9 +676,9 @@ Een succesvolle reactie keert de details van uw bronverbinding terug. Noteer de 
 
 ### De bronverbinding bijwerken met filtervoorwaarden
 
-Nu u uw bronverbindings-id en de bijbehorende versie hebt, kunt u nu een PATCH-verzoek indienen met de filtervoorwaarden die uw standaardactiviteitstypen opgeven.
+Nu u uw bron-verbindings-id en de bijbehorende versie hebt, kunt u nu een PATCH-aanvraag indienen met de filtervoorwaarden die uw standaardactiviteitstypen opgeven.
 
-Als u de bronverbinding wilt bijwerken, vraagt u een PATCH-aanvraag naar het `/sourceConnections` -eindpunt en geeft u uw bron-verbindings-id op als een queryparameter. Daarnaast moet u een headerparameter `If-Match` opgeven met de bijbehorende versie van uw bronverbinding.
+Als u de bronverbinding wilt bijwerken, vraagt u PATCH het `/sourceConnections` -eindpunt aan en geeft u uw bron-verbindings-id op als een queryparameter. Daarnaast moet u een headerparameter `If-Match` opgeven met de bijbehorende versie van uw bronverbinding.
 
 >[!TIP]
 >
@@ -747,9 +747,9 @@ Een geslaagde reactie retourneert uw bron-verbindings-id en -tag (versie).
 
 +++
 
-### Publish uw bronverbinding
+### De bronverbinding publiceren
 
-Wanneer de bronverbinding is bijgewerkt met de filtervoorwaarden, kunt u nu verder gaan van de conceptstatus en uw bronverbinding publiceren. Hiertoe vraagt u een POST aan bij het `/sourceConnections` -eindpunt en verstrekt u de id van de conceptbronverbinding en een handeling voor publicatie.
+Wanneer de bronverbinding is bijgewerkt met de filtervoorwaarden, kunt u nu verder gaan van de conceptstatus en uw bronverbinding publiceren. Hiertoe dient u een POST-verzoek in bij het `/sourceConnections` -eindpunt en verstrekt u de id van de conceptbronverbinding en een handeling voor publicatie.
 
 **API formaat**
 
@@ -791,9 +791,9 @@ Een geslaagde reactie retourneert uw bron-verbindings-id en -tag (versie).
 
 +++
 
-### Publish uw doelverbinding
+### Doelverbinding publiceren
 
-Net als bij de vorige stap moet u ook de doelverbinding publiceren om door te gaan en uw conceptgegevensstroom te publiceren. Maak een verzoek van de POST aan het `/targetConnections` eindpunt en verstrek identiteitskaart van de ontwerp doelverbinding die u, evenals een actieverrichting voor het publiceren wilt publiceren.
+Net als bij de vorige stap moet u ook de doelverbinding publiceren om door te gaan en uw conceptgegevensstroom te publiceren. Maak een POST- verzoek aan het `/targetConnections` eindpunt en verstrek identiteitskaart van de ontwerp doelverbinding die u, evenals een actieverrichting voor het publiceren wilt publiceren.
 
 **API formaat**
 
@@ -836,9 +836,9 @@ Een succesvolle reactie keert identiteitskaart en het overeenkomstige etiket voo
 +++
 
 
-### Publish, uw gegevensstroom
+### Uw gegevensstroom publiceren
 
-Met uw bron- en doelverbindingen beide gepubliceerd, kunt u nu verdergaan met de laatste stap en uw gegevensstroom publiceren. Als u de gegevensstroom wilt publiceren, vraagt u een POST naar het `/flows` -eindpunt en geeft u uw gegevensstroom-id en een handeling op voor publicatie.
+Met uw bron- en doelverbindingen beide gepubliceerd, kunt u nu verdergaan met de laatste stap en uw gegevensstroom publiceren. Als u de gegevensstroom wilt publiceren, vraagt u een POST-aanvraag naar het `/flows` -eindpunt en geeft u uw gegevensstroom-id en een handeling op voor publicatie.
 
 **API formaat**
 
@@ -880,7 +880,7 @@ Een geslaagde reactie retourneert de id en de bijbehorende `etag` gegevensstroom
 
 +++
 
-U kunt de interface van het Experience Platform gebruiken om te verifiëren dat uw ontwerp dataflow is gepubliceerd. Navigeer naar de pagina met gegevensstromen in de broncatalogus en verwijs naar **[!UICONTROL Status]** van de gegevensstroom. Als succesvol, zou de status aan **Toegelaten** nu moeten worden geplaatst.
+Met de gebruikersinterface van Experience Platform kunt u controleren of uw conceptgegevensstroom is gepubliceerd. Navigeer naar de pagina met gegevensstromen in de broncatalogus en verwijs naar **[!UICONTROL Status]** van de gegevensstroom. Als succesvol, zou de status aan **Toegelaten** nu moeten worden geplaatst.
 
 >[!TIP]
 >

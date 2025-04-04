@@ -1,10 +1,10 @@
 ---
-description: Leer hoe u een bestaande gegevensstroom voor bronnen bijwerkt in de gebruikersinterface van het Experience Platform.
+description: Leer hoe u een bestaande gegevensstroom voor bronnen bijwerkt in de gebruikersinterface van Experience Platform.
 title: Een Source Connection Dataflow bijwerken in de gebruikersinterface
 exl-id: 0499a2a3-5a22-47b1-ac0e-76a432bd26c0
-source-git-commit: c3082a8769f317407197b3fd05b36cfe00b36470
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '749'
+source-wordcount: '751'
 ht-degree: 0%
 
 ---
@@ -15,10 +15,10 @@ Lees deze zelfstudie voor stappen over het bijwerken van een bestaande gegevenss
 
 ## Aan de slag
 
-Deze zelfstudie vereist een goed begrip van de volgende onderdelen van het Experience Platform:
+Deze zelfstudie vereist een goed begrip van de volgende onderdelen van Experience Platform:
 
-* [ Bronnen ](../../home.md): Experience Platform staat gegevens toe om van diverse bronnen worden opgenomen terwijl het voorzien van u van de capaciteit om, inkomende gegevens te structureren te etiketteren en te verbeteren gebruikend de diensten van het Platform.
-* [ Sandboxes ](../../../sandboxes/home.md): Experience Platform verstrekt virtuele zandbakken die één enkele instantie van het Platform in afzonderlijke virtuele milieu&#39;s verdelen helpen digitale ervaringstoepassingen ontwikkelen en ontwikkelen.
+* [ Bronnen ](../../home.md): Experience Platform staat gegevens toe om van diverse bronnen worden opgenomen terwijl het voorzien van u van de capaciteit om, inkomende gegevens te structureren te etiketteren en te verbeteren gebruikend de diensten van Experience Platform.
+* [ Sandboxes ](../../../sandboxes/home.md): Experience Platform verstrekt virtuele zandbakken die één enkele instantie van Experience Platform in afzonderlijke virtuele milieu&#39;s verdelen helpen digitale ervaringstoepassingen ontwikkelen en ontwikkelen.
 
 ## Dataflows bijwerken {#update-dataflows}
 
@@ -27,7 +27,7 @@ Deze zelfstudie vereist een goed begrip van de volgende onderdelen van het Exper
 >title="Vervaldatum gegevensset"
 >abstract="Deze kolom wijst op het aantal dagen dat de doeldataset heeft verlaten alvorens het automatisch verloopt.<br> A dataflow zal ontbreken als de doeldataset is verlopen. Om dataflow te verhinderen te ontbreken, zorg ervoor dat een doeldataset wordt geplaatst om op de correcte datum te verlopen. Raadpleeg de documentatie voor informatie over het bijwerken van vervaldatums."
 
-Selecteer in de gebruikersinterface van het Experience Platform **[!UICONTROL Sources]** in de linkernavigatie en selecteer vervolgens **[!UICONTROL Dataflows]** in de bovenste koptekst.
+Selecteer in de gebruikersinterface van Experience Platform **[!UICONTROL Sources]** in de linkernavigatie en selecteer vervolgens **[!UICONTROL Dataflows]** in de bovenste koptekst.
 
 ![ de broncatalogus met de gegevens geselecteerde kopbaltabel.](../../images/tutorials/update-dataflows/catalog.png)
 
@@ -79,7 +79,7 @@ Selecteer vervolgens [!UICONTROL Disable] in het pop-upvenster dat wordt weergeg
 
 ![ het pop-up venster waar u moet bevestigen dat u uw gegevensstroom wilt onbruikbaar maken.](../../images/tutorials/update-dataflows/disable_dataflow.png)
 
-Als en wanneer u later dit dataflow opnieuw toelaat, zal het Experience Platform automatisch terugvullinglooppas plannen om de periode te behandelen waarin dataflow werd onbruikbaar gemaakt. Bijvoorbeeld, als dataflow werd gevormd om te lopen uur en onbruikbaar gemaakt voor 48 uren, op re-toelatend dit dataflow, zal het Experience Platform 48 backfill looppas tot stand brengen om de gemiste intervallen te verwerken.
+Als en wanneer u later dit gegevensstroom opnieuw toelaat, zal Experience Platform automatisch terugvullinglooppas plannen om de periode te dekken waarin dataflow werd onbruikbaar gemaakt. Bijvoorbeeld, als dataflow werd gevormd om te lopen uur en gehandicapt 48 uren was, op re-toelatend dit dataflow, zal Experience Platform 48 backfill looppas creëren aan verwerkte de gemiste intervallen.
 
 ## Volgende stappen
 

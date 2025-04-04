@@ -2,9 +2,9 @@
 description: Deze pagina illustreert de API vraag die wordt gebruikt om een publiekssjabloon door Adobe Experience Platform Destination SDK terug te winnen.
 title: Een publiekssjabloon ophalen
 exl-id: 44f2d571-49c5-4112-b3ee-bc839f2b0874
-source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '420'
+source-wordcount: '421'
 ht-degree: 0%
 
 ---
@@ -51,7 +51,7 @@ Selecteer hieronder elk tabblad om de bijbehorende lading weer te geven.
 
 >[!BEGINTABS]
 
->[!TAB  wint alle publieksmalplaatjes  terug]
+>[!TAB  wint alle publieksmalplaatjes ] terug
 
 Met de volgende aanvraag wordt de lijst met publiekssjablonen opgehaald die u kunt gebruiken op basis van de configuratie van [!DNL IMS Org ID] en de sandbox.
 
@@ -180,7 +180,7 @@ Een geslaagde reactie geeft HTTP-status 200 weer met een lijst van publiekssjabl
 
 +++
 
->[!TAB  wint een specifiek publiekssjabloon  terug]
+>[!TAB  wint een specifiek publiekssjabloon ] terug
 
 Met de volgende aanvraag wordt de lijst met publiekssjablonen opgehaald die u kunt gebruiken op basis van de configuratie van [!DNL IMS Org ID] en de sandbox.
 
@@ -317,7 +317,7 @@ Een succesvolle reactie keert status 200 van HTTP met de details van het publiek
 
 ## API-foutafhandeling {#error-handling}
 
-Destination SDK API-eindpunten volgen de algemene API-foutberichtbeginselen voor Experience Platforms. Verwijs naar [ API statuscodes ](../../../landing/troubleshooting.md#api-status-codes) en [ de fouten van de verzoekkopbal ](../../../landing/troubleshooting.md#request-header-errors) in de het oplossen van problemengids van het Platform.
+Destination SDK API-eindpunten volgen de algemene beginselen van Experience Platform API-foutberichten. Verwijs naar [ API statuscodes ](../../../landing/troubleshooting.md#api-status-codes) en [ de fouten van de verzoekkopbal ](../../../landing/troubleshooting.md#request-header-errors) in de het oplossen van problemengids van Experience Platform.
 
 ## Volgende stappen {#next-steps}
 

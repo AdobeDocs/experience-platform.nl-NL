@@ -2,9 +2,9 @@
 description: Deze pagina illustreert de API vraag die wordt gebruikt om een configuratie van de bestemmingsserver door Adobe Experience Platform Destination SDK terug te winnen.
 title: De configuratie van een doelserver ophalen
 exl-id: 1b375343-e793-4c91-856f-af66fe71822e
-source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '466'
+source-wordcount: '467'
 ht-degree: 0%
 
 ---
@@ -15,8 +15,8 @@ Deze pagina illustreert de API-aanvraag en -lading die u kunt gebruiken om infor
 
 Lees de volgende artikelen voor een gedetailleerde beschrijving van de mogelijkheden die bestemmingsservers gebruiken:
 
-* [Server specs voor bestemmingen die met Destination SDK worden gecreeerd](../../../destination-sdk/functionality/destination-server/server-specs.md)
-* [Sjabloonspecificaties voor doelen die met Destination SDK zijn gemaakt](../../../destination-sdk/functionality/destination-server/templating-specs.md)
+* [Serverspecificaties voor doelen die met Destination SDK zijn gemaakt](../../../destination-sdk/functionality/destination-server/server-specs.md)
+* [Sjabloonspecificaties voor bestemmingen die zijn gemaakt met Destination SDK](../../../destination-sdk/functionality/destination-server/templating-specs.md)
 * [Berichtindeling](../../../destination-sdk/functionality/destination-server/message-format.md)
 * [Configuratie bestandsindeling](../../../destination-sdk/functionality/destination-server/file-formatting.md)
 
@@ -56,7 +56,7 @@ Selecteer hieronder elk tabblad om de bijbehorende lading en de reacties weer te
 
 >[!BEGINTABS]
 
->[!TAB  wint alle configuraties van de bestemmingsserver  terug]
+>[!TAB  wint alle configuraties van de bestemmingsserver ] terug
 
 Met de volgende aanvraag wordt de lijst opgehaald met doelserverconfiguraties waartoe u toegang hebt, op basis van [!DNL IMS Org ID] en sandboxconfiguratie.
 
@@ -151,7 +151,7 @@ Een succesvol antwoord retourneert HTTP-status 200 met een lijst van doelserverc
 
 +++
 
->[!TAB  wint een specifieke configuratie van de bestemmingsserver  terug]
+>[!TAB  wint een specifieke configuratie van de bestemmingsserver ] terug
 
 Het volgende verzoek zal een specifieke configuraties van de bestemmingsserver terugwinnen die door de `{INSTANCE_ID}` parameter worden bepaald.
 
@@ -221,11 +221,11 @@ Een geslaagde reactie retourneert HTTP-status 200 met de configuratie van de doe
 
 ## API-foutafhandeling {#error-handling}
 
-Destination SDK API-eindpunten volgen de algemene API-foutberichtbeginselen voor Experience Platforms. Verwijs naar [ API statuscodes ](../../../../landing/troubleshooting.md#api-status-codes) en [ de fouten van de verzoekkopbal ](../../../../landing/troubleshooting.md#request-header-errors) in de het oplossen van problemengids van het Platform.
+Destination SDK API-eindpunten volgen de algemene beginselen van Experience Platform API-foutberichten. Verwijs naar [ API statuscodes ](../../../../landing/troubleshooting.md#api-status-codes) en [ de fouten van de verzoekkopbal ](../../../../landing/troubleshooting.md#request-header-errors) in de het oplossen van problemengids van Experience Platform.
 
 ## Volgende stappen {#next-steps}
 
-Nadat u dit document hebt gelezen, weet u nu hoe u een configuratie van de doelserver kunt ophalen via het API-eindpunt Destination SDK `/authoring/destination-servers` .
+Na het lezen van dit document weet u nu hoe u een configuratie van de doelserver kunt ophalen via het Destination SDK `/authoring/destination-servers` API-eindpunt.
 
 Raadpleeg de volgende artikelen voor meer informatie over wat u met dit eindpunt kunt doen:
 

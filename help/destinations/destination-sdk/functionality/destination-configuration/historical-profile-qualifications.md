@@ -2,7 +2,7 @@
 description: Leer over de historische profielkwalificaties die door bestemmingen worden gesteund die met Destination SDK worden gebouwd.
 title: Historische profielkwalificaties
 exl-id: 8880cff9-865b-4d45-a24d-a78e77419670
-source-git-commit: 82ba4e62d5bb29ba4fef22c5add864a556e62c12
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '214'
 ht-degree: 0%
@@ -33,14 +33,14 @@ Raadpleeg de onderstaande tabel voor meer informatie over de integratietypen die
 <!-- 
 |Parameter | Type | Description|
 |---------|----------|------|
-|`backfillHistoricalProfileData` | Boolean | Controls whether historical profile data is exported when audiences are activated to the destination. <br> <ul><li> `true`: [!DNL Platform] sends the historical user profiles that qualified for the audience before the audience is activated. </li><li> `false`: [!DNL Platform] only includes user profiles that qualify for the audience after the audience is activated. </li></ul> |
+|`backfillHistoricalProfileData` | Boolean | Controls whether historical profile data is exported when audiences are activated to the destination. <br> <ul><li> `true`: [!DNL Experience Platform] sends the historical user profiles that qualified for the audience before the audience is activated. </li><li> `false`: [!DNL Experience Platform] only includes user profiles that qualify for the audience after the audience is activated. </li></ul> |
 
 {style="table-layout:auto"} -->
 
 
 ## Volgende stappen {#next-steps}
 
-Na het lezen van dit artikel, zou u moeten weten dat het Experience Platform automatisch een historische populatie van alle profielen uitvoert die ooit voor een geactiveerd publiek hebben gekwalificeerd wanneer het publiek eerst naar de bestemming wordt uitgevoerd. Deze optie is niet configureerbaar in Destination SDK of in Experience Platform UI.
+Na het lezen van dit artikel, zou u moeten weten dat Experience Platform automatisch een historische populatie van alle profielen uitvoert die ooit voor een geactiveerd publiek hebben gekwalificeerd wanneer het publiek eerst naar de bestemming wordt uitgevoerd. Deze optie kan niet worden geconfigureerd in Destination SDK of in de gebruikersinterface van Experience Platform.
 
 Raadpleeg de volgende artikelen voor meer informatie over de andere doelcomponenten:
 

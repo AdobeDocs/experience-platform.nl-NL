@@ -1,11 +1,11 @@
 ---
 title: Een PathFactory Base Connection maken met de Flow Service API
-description: Leer hoe u uw PathFactory-account verifieert aan de hand van de Flow Service API voor Experience Platform.
+description: Leer hoe u uw PathFactory-account op Experience Platform verifieert met behulp van de Flow Service API.
 badge: Beta
 exl-id: 2bdfe38b-d3f7-480f-87c6-0b98b9521be2
-source-git-commit: ca17854830edabaf2bd74265258d6f0096f2888e
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '538'
+source-wordcount: '546'
 ht-degree: 1%
 
 ---
@@ -18,20 +18,20 @@ Lees dit document om te leren hoe te om een basisverbinding voor [!DNL PathFacto
 
 ## Aan de slag
 
-Deze handleiding vereist een goed begrip van de volgende onderdelen van het Experience Platform:
+Deze handleiding vereist een goed begrip van de volgende onderdelen van Experience Platform:
 
-* [ Bronnen ](../../../../home.md): Experience Platform staat gegevens toe om van diverse bronnen worden opgenomen terwijl het voorzien van u van de capaciteit om, inkomende gegevens te structureren te etiketteren en te verbeteren gebruikend de diensten van het Platform.
-* [ Sandboxes ](../../../../../sandboxes/home.md): Experience Platform verstrekt virtuele zandbakken die één enkele instantie van het Platform in afzonderlijke virtuele milieu&#39;s verdelen helpen digitale ervaringstoepassingen ontwikkelen en ontwikkelen.
+* [ Bronnen ](../../../../home.md): Experience Platform staat gegevens toe om van diverse bronnen worden opgenomen terwijl het voorzien van u van de capaciteit om, inkomende gegevens te structureren te etiketteren en te verbeteren gebruikend de diensten van Experience Platform.
+* [ Sandboxes ](../../../../../sandboxes/home.md): Experience Platform verstrekt virtuele zandbakken die één enkele instantie van Experience Platform in afzonderlijke virtuele milieu&#39;s verdelen helpen digitale ervaringstoepassingen ontwikkelen en ontwikkelen.
 
-### Platform-API&#39;s gebruiken
+### Experience Platform API&#39;s gebruiken
 
-Voor informatie over hoe te om vraag aan Platform APIs met succes te maken, zie de gids op [ begonnen wordt met Platform APIs ](../../../../../landing/api-guide.md).
+Voor informatie over hoe te om vraag aan Experience Platform APIs met succes te maken, zie de gids op [ begonnen wordt met Experience Platform APIs ](../../../../../landing/api-guide.md).
 
 In de volgende sectie vindt u aanvullende informatie die u moet weten als u verbinding wilt maken met [!DNL PathFactory] via de [!DNL Flow Service] API.
 
 ### Vereiste referenties verzamelen {#gather-credentials}
 
-Om tot uw rekening PathFactory op het Platform toegang te hebben, moet u de volgende waarden verstrekken:
+U moet de volgende waarden opgeven om toegang te krijgen tot uw PathFactory-account op de Experience Platform:
 
 | Credentials | Beschrijving |
 | ---------- | ----------- |
@@ -45,9 +45,9 @@ Voor meer informatie over hoe te om uw geloofsbrieven te beveiligen en te gebrui
 
 ## Een basisverbinding maken
 
-Een basisverbinding behoudt informatie tussen uw bron en Platform, met inbegrip van de de authentificatiegeloofsbrieven van uw bron, de huidige staat van de verbinding, en uw unieke identiteitskaart van de basisverbinding. Met de ID van de basisverbinding kunt u bestanden verkennen en door bestanden navigeren vanuit uw bron en kunt u de specifieke items identificeren die u wilt opnemen, inclusief informatie over hun gegevenstypen en indelingen.
+Een basisverbinding behoudt informatie tussen uw bron en Experience Platform, met inbegrip van de verificatiereferenties van uw bron, de huidige status van de verbinding, en uw unieke identiteitskaart van de basisverbinding. Met de ID van de basisverbinding kunt u bestanden verkennen en door bestanden navigeren vanuit uw bron en kunt u de specifieke items identificeren die u wilt opnemen, inclusief informatie over hun gegevenstypen en indelingen.
 
-Als u een basis-verbindings-id wilt maken, vraagt u een POST naar het `/connections` -eindpunt en geeft u de [!DNL PathFactory] -verificatiegegevens op als onderdeel van de aanvraaginstantie.
+Als u een basis-verbindings-id wilt maken, vraagt u een POST-aanvraag naar het `/connections` -eindpunt en geeft u de [!DNL PathFactory] -verificatiegegevens op als onderdeel van de aanvraagprocedure.
 
 **API formaat**
 
@@ -107,4 +107,4 @@ Een succesvolle reactie keert de pas gecreëerde verbinding, met inbegrip van zi
 Aan de hand van deze zelfstudie hebt u een [!DNL PathFactory] basisverbinding gemaakt met de [!DNL Flow Service] API. U kunt deze basis verbindings-id in de volgende zelfstudies gebruiken:
 
 * [Onderzoek de structuur en de inhoud van uw gegevenslijsten gebruikend  [!DNL Flow Service]  API](../../explore/tabular.md)
-* [Creeer een dataflow om marketing automatiseringsgegevens aan Platform te brengen gebruikend  [!DNL Flow Service]  API](../../collect/marketing-automation.md)
+* [Creeer een dataflow om marketing automatiseringsgegevens aan Experience Platform te brengen gebruikend  [!DNL Flow Service]  API](../../collect/marketing-automation.md)

@@ -2,9 +2,9 @@
 title: Identity Graph Viewer
 description: Een identiteitsgrafiek is een kaart van verhoudingen tussen verschillende identiteiten voor een bepaalde klant, die u van een visuele vertegenwoordiging van voorziet hoe uw klant met uw merk over verschillende kanalen interactie aangaat.
 exl-id: ccd5f8d8-595b-4636-9191-553214e426bd
-source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1374'
+source-wordcount: '1379'
 ht-degree: 0%
 
 ---
@@ -13,9 +13,9 @@ ht-degree: 0%
 
 Een identiteitsgrafiek is een kaart van verhoudingen tussen verschillende identiteiten voor een bepaalde klant, die u van een visuele vertegenwoordiging van voorziet hoe uw klant met uw merk over verschillende kanalen interactie aangaat. Alle grafieken van de klantenidentiteit worden collectief beheerd en door de Dienst van de Identiteit van Adobe Experience Platform in bijna real time bijgewerkt, in antwoord op klantenactiviteit.
 
-Met de viewer voor identiteitsgrafieken in de gebruikersinterface van Platform kunt u visualiseren en beter begrijpen welke klantenidentiteiten aan elkaar zijn gekoppeld en op welke manieren. Met de viewer kunt u naar verschillende delen van de grafiek slepen en hiermee communiceren, zodat u complexe identiteitsrelaties kunt onderzoeken, efficiënter kunt werken en kunt profiteren van meer transparantie bij het gebruik van informatie.
+Met de identiteitsgrafiekviewer in de Experience Platform-gebruikersinterface kunt u visualiseren en beter begrijpen welke klantidentiteiten aan elkaar zijn gekoppeld en op welke manieren. Met de viewer kunt u naar verschillende delen van de grafiek slepen en hiermee communiceren, zodat u complexe identiteitsrelaties kunt onderzoeken, efficiënter kunt werken en kunt profiteren van meer transparantie bij het gebruik van informatie.
 
-In het volgende document worden stappen beschreven voor het openen en gebruiken van de viewer voor identiteitsgrafieken in de interface van het platform.
+In het volgende document vindt u stappen voor het openen en gebruiken van de viewer voor identiteitsgrafieken in de gebruikersinterface van Experience Platform.
 
 ## Video over zelfstudie
 
@@ -38,9 +38,9 @@ Als u met de viewer voor identiteitsgrafieken werkt, moet u de verschillende bet
 
 ## De viewer voor identiteitsgrafieken openen {#access-identity-graph-viewer}
 
-Selecteer in de gebruikersinterface van het platform **[!UICONTROL Identities]** in de linkernavigatie en selecteer vervolgens **[!UICONTROL Identity Graph]** in de lijst met tabbladen in de koptekst.
+Selecteer in de gebruikersinterface van Experience Platform de optie **[!UICONTROL Identities]** in de linkernavigatie en selecteer vervolgens **[!UICONTROL Identity Graph]** in de lijst met tabbladen in de koptekst.
 
-![ de werkruimte van Identiteiten in het Experience Platform UI, met het geselecteerde lusje van de Grafiek van de Identiteit.](../images/graph-viewer/identity-graph.png)
+![ de werkruimte van Identiteiten in Experience Platform UI, met het geselecteerde lusje van de Grafiek van de Identiteit.](../images/graph-viewer/identity-graph.png)
 
 Als u een identiteitsgrafiek wilt weergeven, geeft u een naamruimte en de bijbehorende waarde op en selecteert u **[!UICONTROL View]** .
 
@@ -135,7 +135,7 @@ Selecteer in het voorvertoningsvenster een vingerafdrukpictogram om de identitei
 
 ## Volgende stappen
 
-Door dit document te lezen, hebt u geleerd hoe u de identiteitsgrafieken van uw klanten in de interface van het Platform kunt verkennen. Voor meer informatie over identiteiten in Platform, gelieve te verwijzen naar het [ overzicht van de Dienst van de Identiteit ](../home.md)
+Door dit document te lezen, hebt u geleerd hoe u de identiteitsgrafieken van uw klanten kunt verkennen in de gebruikersinterface van Experience Platform. Voor meer informatie over identiteiten in Experience Platform, gelieve te verwijzen naar het [ overzicht van de Dienst van de Identiteit ](../home.md)
 
 ## Changelog
 

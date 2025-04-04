@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;huis;populaire onderwerpen;api;Op attributen-Gebaseerd Toegangsbeheer;op attributen-gebaseerd toegangsbeheer
+keywords: Experience Platform;home;populaire onderwerpen;api;Op kenmerk-Gebaseerd Toegangsbeheer;op attributen-gebaseerd toegangsbeheer
 solution: Experience Platform
 title: API-eindpunt voor producten
 description: Het /products eindpunt in op attributen-Gebaseerde Controle API van de Toegang staat u toe om producten in Adobe Experience Platform programmatically te beheren.
 role: Developer
 exl-id: 44ee9a9d-7a13-4d59-a1a9-97764dbd3763
-source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '513'
+source-wordcount: '514'
 ht-degree: 1%
 
 ---
@@ -22,11 +22,11 @@ Het `/products` eindpunt in op attribuut-gebaseerde toegangsbeheer API staat u t
 
 ## Aan de slag
 
-Het API eindpunt dat in deze gids wordt gebruikt maakt deel uit van op attribuut-gebaseerde toegangsbeheer API. Alvorens verder te gaan, te herzien gelieve [ begonnen gids ](./getting-started.md) voor verbindingen aan verwante documentatie, een gids aan het lezen van de steekproefAPI vraag in dit document, en belangrijke informatie betreffende vereiste kopballen die nodig zijn om vraag aan om het even welk Experience Platform API met succes te maken.
+Het API eindpunt dat in deze gids wordt gebruikt maakt deel uit van op attribuut-gebaseerde toegangsbeheer API. Alvorens verder te gaan, te herzien gelieve [ begonnen gids ](./getting-started.md) voor verbindingen aan verwante documentatie, een gids aan het lezen van de steekproefAPI vraag in dit document, en belangrijke informatie betreffende vereiste kopballen die nodig zijn om vraag aan om het even welke Experience Platform API met succes te maken.
 
 ## Een lijst met producten met rechten ophalen {#list}
 
-U kunt een lijst van gemachtigde producten terugwinnen door een verzoek van de GET tot het `/products` eindpunt te richten.
+U kunt een lijst met producten met rechten ophalen door een GET-aanvraag in te dienen bij het eindpunt van `/products` .
 
 **API formaat**
 
@@ -70,7 +70,7 @@ Een succesvolle reactie keert een lijst van gerechtigde producten terug die tot 
 
 ## Machtigingscategorieën opzoeken op product-id
 
-U kunt machtigingscategorieën voor een bepaald product opzoeken door een aanvraag voor een GET in te dienen bij het eindpunt `/products/{PRODUCT_ID}/categories` terwijl u uw product-id opgeeft.
+U kunt machtigingencategorieën voor een bepaald product opzoeken door een GET-aanvraag in te dienen bij het eindpunt van `/products/{PRODUCT_ID}/categories` terwijl u uw product-id opgeeft.
 
 **API formaat**
 
@@ -145,7 +145,7 @@ Een succesvolle reactie keert de toestemmingscategorieën verbonden aan productI
 
 ## Machtigingssets opzoeken op product-id
 
-U kunt rechtensets opzoeken voor een bepaald product door een aanvraag voor een GET in te dienen bij het eindpunt van `/products/{PRODUCT_ID}/permission-sets` terwijl u de product-id opgeeft.
+U kunt rechtensets opzoeken voor een bepaald product door een GET-aanvraag in te dienen bij het eindpunt van `/products/{PRODUCT_ID}/permission-sets` terwijl u uw product-id opgeeft.
 
 **API formaat**
 
@@ -240,6 +240,6 @@ Een succesvolle reactie keert de toestemmingsreeksen verbonden aan productID ter
 | `id` | De bijbehorende id van de set met bevoegdheden waarnaar wordt gevraagd. |
 | `name` | De corresponderende naam van de desbetreffende rechtenset. |
 | `category` | De beschikbare machtigingencategorie. |
-| `permissions` | De toestemmingen omvatten de capaciteit om de eigenschappen van het Platform te bekijken en/of te gebruiken, zoals het creëren van zandbakken, het bepalen van schema&#39;s, en het beheren van datasets. |
+| `permissions` | De toestemmingen omvatten de capaciteit om de eigenschappen van Experience Platform te bekijken en/of te gebruiken, zoals het creëren van zandbakken, het bepalen van schema&#39;s, en het beheren van datasets. |
 | `permissions.resource` | Het element of object waartoe een onderwerp al dan niet toegang heeft. Bronnen kunnen bestanden, toepassingen, servers of zelfs API&#39;s zijn. |
 | `permissions.actions` | De handeling die een onderwerp mag uitvoeren tegen een bron met vragen. Mogelijke waarden zijn: `view` , `read` , `create` , `edit` en `delete` |

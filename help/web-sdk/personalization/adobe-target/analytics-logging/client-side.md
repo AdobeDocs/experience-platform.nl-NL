@@ -1,22 +1,22 @@
 ---
-title: Logboekregistratie aan de clientzijde voor A4T-gegevens in de Platform Web SDK
-description: Leer hoe te om cliënt-zijregistreren voor Adobe Analytics voor Doel (A4T) toe te laten gebruikend het Web SDK van het Experience Platform.
-seo-title: Client-side logging for A4T data in the Platform Web SDK
+title: Logboekregistratie op de client voor A4T-gegevens in de Experience Platform Web SDK
+description: Leer hoe te om cliënt-zijregistreren voor Adobe Analytics voor Doel (A4T) toe te laten gebruikend het Web SDK van Experience Platform.
+seo-title: Client-side logging for A4T data in the Experience Platform Web SDK
 seo-description: Learn how to enable client-side logging for Adobe Analytics for Target (A4T) using the Experience Platform Web SDK.
 keywords: doel;a4t;registreren;web sdk;ervaring;platform;
 exl-id: 7071d7e4-66e0-4ab5-a51a-1387bbff1a6d
-source-git-commit: 8fc0fd96f13f0642f7671d0e0f4ecfae8ab6761f
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1085'
+source-wordcount: '1090'
 ht-degree: 0%
 
 ---
 
-# Logboekregistratie aan de clientzijde voor A4T-gegevens in de Platform Web SDK
+# Logboekregistratie op de client voor A4T-gegevens in de Experience Platform Web SDK
 
 ## Overzicht {#overview}
 
-SDK van het Web van Adobe Experience Platform staat u toe om [ Adobe Analytics voor Doel (A4T) ](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4t.html) gegevens over de cliëntkant van uw Webtoepassing te verzamelen.
+Het Web SDK van Adobe Experience Platform staat u toe om [ Adobe Analytics voor Doel (A4T) ](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4t.html) gegevens over de cliëntkant van uw Webtoepassing te verzamelen.
 
 Logboekregistratie aan de clientzijde betekent dat relevante [!DNL Target] gegevens worden geretourneerd aan de clientzijde, zodat u deze kunt verzamelen en delen met Analytics. Deze optie zou moeten worden toegelaten als u van plan bent gegevens aan Analytics manueel te verzenden gebruikend de [ Invoeging API van Gegevens ](https://experienceleague.adobe.com/docs/analytics/import/c-data-insertion-api.html).
 
@@ -28,7 +28,7 @@ Dit document behandelt de stappen voor vestiging cliënt-kant het registreren A4
 
 ## Vereisten {#prerequisites}
 
-Dit leerprogramma veronderstelt dat u met de fundamentele concepten en processen vertrouwd bent met het gebruiken van SDK van het Web voor verpersoonlijkingsdoeleinden. Raadpleeg de volgende documentatie als u een inleiding nodig hebt:
+Dit leerprogramma veronderstelt dat u met de fundamentele concepten en processen vertrouwd bent met het gebruiken van het Web SDK voor verpersoonlijkingsdoeleinden. Raadpleeg de volgende documentatie als u een inleiding nodig hebt:
 
 * [De SDK van het Web configureren](/help/web-sdk/commands/configure/overview.md)
 * [Gebeurtenissen verzenden](/help/web-sdk/commands/sendevent/overview.md)
@@ -44,7 +44,7 @@ Om Analytics cliënt-zijregistreren te overwegen die voor uw implementatie wordt
 
 ![ de configuratie van de Analyse gegevensstroom gehandicapte ](../assets/disable-analytics-datastream.png)
 
-### Haal [!DNL A4T] -gegevens op van de SDK en verzend deze naar Analytics {#a4t-to-analytics}
+### [!DNL A4T] -gegevens ophalen van de SDK en verzenden deze naar Analytics {#a4t-to-analytics}
 
 Deze rapportmethode werkt alleen correct als u de [!DNL A4T] -gerelateerde gegevens verzendt die zijn opgehaald via de opdracht [`sendEvent`](/help/web-sdk/commands/sendevent/overview.md) in de hit Analytics.
 
@@ -227,9 +227,9 @@ De volgende subsecties tonen aan hoe te om cliënt-zijregistreren van Analytics 
 
 ### Formuliergebaseerde composeractiviteiten {#form-based-composer}
 
-U kunt SDK van het Web gebruiken om de uitvoering van voorstellen van [ op vorm-Gebaseerde Composer van de Ervaring van Adobe Target te controleren ](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html) activiteiten.
+U kunt het Web SDK gebruiken om de uitvoering van voorstellen van [ Adobe Target vorm-Gebaseerde Composer van de Ervaring te controleren ](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html) activiteiten.
 
-Wanneer u om voorstellen voor een specifiek besluitwerkingsgebied verzoekt, bevat het teruggekeerde voorstel zijn aangewezen token Analytics. De beste praktijken moeten het bevel van SDK van het Web van het Platform `sendEvent` ketenen en door de teruggekeerde voorstellen herhalen om hen uit te voeren terwijl het verzamelen van de tokens van de Analytics tezelfdertijd.
+Wanneer u om voorstellen voor een specifiek besluitwerkingsgebied verzoekt, bevat het teruggekeerde voorstel zijn aangewezen token Analytics. De beste manier is om de Experience Platform Web SDK `sendEvent` -opdracht te koppelen en de geretourneerde voorstellen te doorlopen om deze uit te voeren terwijl de Analytische tokens tegelijkertijd worden verzameld.
 
 U kunt een opdracht `sendEvent` activeren voor een werkgebied van Composer-activiteiten op basis van een formulier, zoals:
 
@@ -421,12 +421,12 @@ function getClickAnalyticsPayload(proposition) {
 
 #### Overzicht van implementatie {#implementation-summary}
 
-Samengevat, moeten de volgende stappen worden uitgevoerd wanneer het toepassen van de Form-Based Composer van de Ervaring activiteiten met het Web SDK van het Platform:
+Samengevat moeten de volgende stappen worden uitgevoerd bij het toepassen van Form-Based Experience Composer-activiteiten met de Experience Platform Web SDK:
 
 1. Verzend een gebeurtenis die op vorm-Gebaseerde de activiteitenvoorstellen van de Composer van de Ervaring haalt;
 1. Pas de inhoudswijzigingen toe op de pagina;
 1. Verzend de `decisioning.propositionDisplay` notification-gebeurtenis;
-1. Verzamel de analytische vertoningstokens van de reactie van SDK en construeer een lading voor de treffer Analytics;
+1. Verzamel de analytische vertoningstekenen van de reactie van SDK en construeer een lading voor de treffer Analytics;
 1. Verzend de nuttige lading naar Analytics gebruikend de [ Invoeging API van Gegevens ](https://github.com/AdobeDocs/analytics-1.4-apis/blob/master/docs/data-insertion-api/index.md);
 1. Als er klikmetriek in geleverde voorstellen zijn, zouden de klikluisteraars opstelling moeten zijn zodat wanneer een klik wordt uitgevoerd, het de `decisioning.propositionInteract` berichtgebeurtenis verzendt. De `onBeforeEventSend` -handler moet zo worden geconfigureerd dat bij het onderscheppen van `decisioning.propositionInteract` -gebeurtenissen de volgende handelingen plaatsvinden:
    1. De click Analytics-tokens verzamelen uit `xdm._experience.decisioning.propositions`
@@ -467,13 +467,13 @@ alloy("sendEvent", {
 
 ### Visual Experience Composer-activiteiten {#visual-experience-composer-acitivties}
 
-SDK van het Web staat u toe om aanbiedingen te behandelen die gebruikend [ Visual Experience Composer (VEC) ](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html) werden authored.
+SDK van het Web staat u toe om aanbiedingen te behandelen die gebruikend [ Visuele Composer van de Ervaring (VEC) ](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html) werden authored.
 
 >[!NOTE]
 >
 >De stappen voor het uitvoeren van dit gebruiksgeval zijn zeer gelijkaardig aan de stappen voor [ op vorm-Gebaseerde activiteiten van de Composer van de Ervaring ](#form-based-composer). Lees de vorige sectie voor meer informatie.
 
-Wanneer automatische rendering is ingeschakeld, kunt u de tokens Analytics verzamelen van de voorstellingen die op de pagina zijn uitgevoerd. De beste praktijken moeten het bevel van SDK van het Web van het Platform `sendEvent` ketenen en door de teruggekeerde voorstellen herhalen om die te filtreren die SDK van het Web heeft geprobeerd terug te geven.
+Wanneer automatische rendering is ingeschakeld, kunt u de tokens Analytics verzamelen van de voorstellingen die op de pagina zijn uitgevoerd. De beste manier is om de Experience Platform Web SDK `sendEvent` opdracht te koppelen en de geretourneerde voorstellen te doorlopen om de voorstellen te filteren die de Web SDK heeft geprobeerd te renderen.
 
 **Voorbeeld**
 
@@ -540,4 +540,4 @@ alloy("configure", {
 
 ## Volgende stappen {#next-steps}
 
-Deze gids behandelde cliënt-zijregistreren voor A4T gegevens in het Web SDK. Zie de gids op [ server-zijregistreren ](server-side.md) voor meer informatie over hoe te om A4T gegevens over de Edge Network te behandelen.
+Deze gids behandelde cliënt-zijregistreren voor A4T gegevens in het Web SDK. Zie de gids op [ server-zijregistreren ](server-side.md) voor meer informatie over hoe te om A4T gegevens over Edge Network te behandelen.

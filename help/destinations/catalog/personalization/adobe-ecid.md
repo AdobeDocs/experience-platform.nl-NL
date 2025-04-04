@@ -1,11 +1,11 @@
 ---
 Keywords: ECID;ecid
 title: Experience Cloud ID Service-extensie
-description: De uitbreiding van de Dienst van identiteitskaart van het Experience Cloud is een verpersoonlijkingsbestemming in Adobe Experience Platform. Zie de extensiepagina over Adobe Exchange voor meer informatie over de extensiefunctionaliteit.
+description: De Experience Cloud ID Service-extensie is een personalisatiebestemming in Adobe Experience Platform. Zie de extensiepagina op Adobe Exchange voor meer informatie over de extensiefunctionaliteit.
 exl-id: 4cc49c14-66ec-43e0-a106-70d9c3646d87
-source-git-commit: 88939d674c0002590939004e0235d3da8b072118
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '450'
+source-wordcount: '454'
 ht-degree: 0%
 
 ---
@@ -16,23 +16,23 @@ ht-degree: 0%
 
 Deze extensie implementeert de [!DNL Experience Cloud] ID-service, die bezoekers identificeert in alle [!DNL Experience Cloud] -oplossingen.
 
-[!DNL Experience Cloud] ID Service is een personalisatie-uitbreiding in Adobe Experience Platform. Voor meer informatie over de uitbreidingsfunctionaliteit, zie de [ de uitbreidingspagina van de Dienst van identiteitskaart van de Experience Cloud ](../../../tags/extensions/client/id-service/overview.md) in de markeringsdocumentatie.
+[!DNL Experience Cloud] ID Service is een personalisatie-uitbreiding in Adobe Experience Platform. Voor meer informatie over de uitbreidingsfunctionaliteit, zie de [ de uitbreidingspagina van de Dienst van identiteitskaart van Experience Cloud ](../../../tags/extensions/client/id-service/overview.md) in de markeringsdocumentatie.
 
-Dit doel is een tagextensie. Voor meer informatie over hoe de uitbreidingen van markeringen in Platform werken, zie het [ overzicht van markeringsuitbreidingen ](../launch-extensions/overview.md).
+Dit doel is een tagextensie. Voor meer informatie over hoe de uitbreidingen van markeringen in Experience Platform werken, zie het [ overzicht van markeringsuitbreidingen ](../launch-extensions/overview.md).
 
 ![ Adobe ECID uitbreiding ](../../assets/catalog/personalization/adobe-ecid/catalog.png)
 
 ## Vereisten {#prerequisites}
 
-Deze extensie is beschikbaar in de catalogus Doelen voor alle klanten die Platform hebben aangeschaft.
+Deze extensie is beschikbaar in de catalogus Doelen voor alle klanten die Experience Platform hebben aangeschaft.
 
-Als u deze extensie wilt gebruiken, hebt u toegang tot tags in Platform nodig. Tags worden aan Adobe Experience Cloud-klanten aangeboden als een inbegrepen, waardetoevoegend element. Neem contact op met de systeembeheerder van uw organisatie om toegang te krijgen tot de gebruikersinterface voor gegevensverzameling en vraag hen om u de **[!UICONTROL manage_properties]** -machtiging te verlenen zodat u extensies kunt installeren.
+Als u deze extensie wilt gebruiken, hebt u toegang tot tags in Experience Platform nodig. Tags worden aan Adobe Experience Cloud-klanten aangeboden als een inbegrepen, waardetoevoegend element. Neem contact op met de systeembeheerder van uw organisatie om toegang te krijgen tot de gebruikersinterface voor gegevensverzameling en vraag hen om u de **[!UICONTROL manage_properties]** -machtiging te verlenen zodat u extensies kunt installeren.
 
 ## Extensie installeren {#install-extension}
 
 U installeert als volgt de extensie [!DNL Experience Cloud] ID Service:
 
-In de [ interface van het Platform ](https://platform.adobe.com/), ga **[!UICONTROL Destinations]** > **[!UICONTROL Catalog]**.
+In de [ interface van Experience Platform ](https://platform.adobe.com/), ga **[!UICONTROL Destinations]** > **[!UICONTROL Catalog]**.
 
 Selecteer de extensie in de catalogus of gebruik de zoekbalk.
 
@@ -42,7 +42,7 @@ Selecteer de eigenschap tag waarin u de extensie wilt installeren. U kunt ook ee
 
 De werkstroom neemt u aan de UI van de Inzameling van Gegevens om de installatie te voltooien.
 
-Voor informatie over de opties van de uitbreidingsconfiguratie en installatiesteun, zie de [ de uitbreidingspagina van de Dienst van identiteitskaart van de Experience Cloud ](../../../tags/extensions/client/id-service/overview.md) in de markeringsdocumentatie.
+Voor informatie over de opties van de uitbreidingsconfiguratie en installatiesteun, zie de [ de uitbreidingspagina van de Dienst van identiteitskaart van Experience Cloud ](../../../tags/extensions/client/id-service/overview.md) in de markeringsdocumentatie.
 
 U kunt de uitbreiding direct in [ de Inzameling UI van Gegevens ](https://experience.adobe.com/#/data-collection/) ook installeren. Zie de gids op [ toevoegend een nieuwe uitbreiding ](../../../tags/ui/managing-resources/extensions/overview.md#add-a-new-extension) voor meer informatie.
 

@@ -2,9 +2,9 @@
 description: Leer hoe u de API voor het testen van doelen gebruikt om de uitvoer naar uw streamingdoel te valideren op basis van uw sjabloon voor berichttransformatie.
 title: Geëxporteerde profielstructuur valideren
 exl-id: e64ea89e-6064-4a05-9730-e0f7d7a3e1db
-source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '793'
+source-wordcount: '794'
 ht-degree: 0%
 
 ---
@@ -24,7 +24,7 @@ Alvorens verder te gaan, te herzien gelieve [ begonnen gids ](../../getting-star
 
 ## Geëxporteerde profielen renderen op basis van de sjabloon voor berichttransformatie {#render-exported-data}
 
-U kunt uitgevoerde profielen teruggeven door een verzoek van de POST aan het `authoring/testing/template/render` eindpunt te doen en bestemmingsidentiteitskaart van de bestemmingsconfiguratie en het malplaatje te verstrekken u gebruikend het [ malplaatje API eindpunt ](sample-template-api.md) creeerde.
+U kunt uitgevoerde profielen teruggeven door een POST- verzoek aan het `authoring/testing/template/render` eindpunt te doen en bestemmingsidentiteitskaart van de bestemmingsconfiguratie en het malplaatje te verstrekken u gebruikend het [ malplaatje API eindpunt ](sample-template-api.md) creeerde.
 
 U kunt beginnen met het gebruik van een eenvoudige sjabloon die uw Raw-profielen exporteert zonder transformaties toe te passen en vervolgens verdergaan naar een complexere sjabloon, die transformaties toepast op profielen. De syntaxis voor de eenvoudige sjabloon is: <br> `"template": "{% for profile in input.profiles %}{{profile|raw}}{% endfor %}}"`
 
@@ -43,7 +43,7 @@ POST authoring/testing/template/render
 | -------- | ----------- |
 | `destinationId` | De id van de doelconfiguratie waarvoor u geëxporteerde profielen rendert. |
 | `template` | De op tekens gebaseerde versie van de sjabloon waarop u geëxporteerde profielen rendert. |
-| `profiles` | *Facultatief*. U kunt profielen toevoegen aan de aanvraaginstantie. Als u geen profielen toevoegt, genereert en voegt het Experience Platform automatisch profielen toe aan de aanvraag. <br> Als u profielen aan het lichaam van de vraag zou willen toevoegen, kunt u wat produceren door de [ generatie API van de de profielgeneratie van de Steekproef te gebruiken ](sample-profile-generation-api.md). |
+| `profiles` | *Facultatief*. U kunt profielen toevoegen aan de aanvraaginstantie. Als u geen profielen toevoegt, genereert Experience Platform automatisch profielen en voegt deze aan de aanvraag toe. <br> Als u profielen aan het lichaam van de vraag zou willen toevoegen, kunt u wat produceren door de [ generatie API van de de profielgeneratie van de Steekproef te gebruiken ](sample-profile-generation-api.md). |
 
 {style="table-layout:auto"}
 
@@ -1066,7 +1066,7 @@ Een mislukte reactie retourneert HTTP-status 400, samen met beschrijvingen van d
 
 ## API-foutafhandeling {#api-error-handling}
 
-Destination SDK API-eindpunten volgen de algemene API-foutberichtbeginselen voor Experience Platforms. Verwijs naar [ API statuscodes ](../../../../landing/troubleshooting.md#api-status-codes) en [ de fouten van de verzoekkopbal ](../../../../landing/troubleshooting.md#request-header-errors) in de het oplossen van problemengids van het Platform.
+Destination SDK API-eindpunten volgen de algemene beginselen van Experience Platform API-foutberichten. Verwijs naar [ API statuscodes ](../../../../landing/troubleshooting.md#api-status-codes) en [ de fouten van de verzoekkopbal ](../../../../landing/troubleshooting.md#request-header-errors) in de het oplossen van problemengids van Experience Platform.
 
 ## Volgende stappen {#next-steps}
 

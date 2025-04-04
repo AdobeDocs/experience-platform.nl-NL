@@ -2,9 +2,9 @@
 title: Stimuleer soorten publiek met SQL
 description: Leer hoe u de SQL-publieksextensie in Adobe Experience Platform Data Distiller kunt gebruiken voor het maken, beheren en publiceren van soorten publiek met SQL-opdrachten. In deze handleiding worden alle aspecten van de levenscyclus van de doelgroep behandeld, zoals het maken, bijwerken en verwijderen van profielen en het gebruik van gegevensgestuurde publieksdefinities voor doelbestemmingen op basis van bestanden.
 exl-id: c35757c1-898e-4d65-aeca-4f7113173473
-source-git-commit: c66a7cf779c1b6e55ace86916985087dfaa3363b
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1479'
+source-wordcount: '1483'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,7 @@ Gebruik de SQL publieksuitbreiding om publiek met gegevens van het gegevensmeer,
 
 Het gebruik van deze SQL-extensie verbetert de mogelijkheid om een publiek te maken omdat u geen onbewerkte gegevens in uw profielen nodig hebt wanneer u publiekssegmenten definieert. Het publiek dat met deze methode wordt gecreeerd wordt automatisch geregistreerd in de werkruimte van het Publiek, waar u hen aan op dossier-gebaseerde bestemmingen kunt verder richten.
 
-![ Infographic die het SQL werkschema van de publieksuitbreiding tonen. De stadia omvatten; het bouwen van publiek met de Dienst van de Vraag die SQL bevelen gebruiken, die hen in Platform UI beheren, om hen in op dossier-gebaseerde bestemmingen te activeren.](../images/data-distiller/sql-audiences/sql-audience-extension-workflow.png)
+![ Infographic die het SQL werkschema van de publieksuitbreiding tonen. De stadia omvatten; het bouwen van publiek met de Dienst van de Vraag gebruikend SQL bevelen, die hen in Experience Platform UI beheren, om hen in op dossier-gebaseerde bestemmingen te activeren.](../images/data-distiller/sql-audiences/sql-audience-extension-workflow.png)
 
 In dit document wordt beschreven hoe u de SQL-publieksextensie in Adobe Experience Platform Data Distiller kunt gebruiken voor het maken, beheren en publiceren van soorten publiek met SQL-opdrachten.
 
@@ -203,7 +203,7 @@ DROP AUDIENCE IF EXISTS aud_test;
 
 ### Automatische publieksregistratie en beschikbaarheid {#registration-and-availability}
 
-Soorten publiek dat is gemaakt met de SQL-extensie, worden automatisch geregistreerd onder de Data Distiller [!UICONTROL Origin] in de werkruimte Publiek. Zodra geregistreerd, zijn deze publiek beschikbaar voor het richten in op dossier-gebaseerde bestemmingen, die segmentatie en het richten strategieën verbeteren. Dit proces vereist geen extra configuratie, die publieksbeheer stroomlijnt. Voor meer details op hoe te om, publiek binnen het Platform UI te bekijken te beheren en tot stand te brengen, zie het [ Poortoverzicht van het Poort van het Publiek ](../../segmentation/ui/audience-portal.md).
+Soorten publiek dat is gemaakt met de SQL-extensie, worden automatisch geregistreerd onder de Data Distiller [!UICONTROL Origin] in de werkruimte Publiek. Zodra geregistreerd, zijn deze publiek beschikbaar voor het richten in op dossier-gebaseerde bestemmingen, die segmentatie en het richten strategieën verbeteren. Dit proces vereist geen extra configuratie, die publieksbeheer stroomlijnt. Voor meer details op hoe te om, publiek binnen Experience Platform UI te bekijken te beheren en te creëren, zie het [ Poortoverzicht van het Poortpubliek van het Publiek ](../../segmentation/ui/audience-portal.md).
 
 <!-- Q) Do you know how long it takes for the audience to register? This info would help manage user expectations. -->
 
@@ -289,9 +289,9 @@ Ja, het publiek van Data Distiller wordt om de 30 dagen verwijderd omdat het een
 
 Nadat u dit document hebt gelezen, hebt u geleerd hoe u de SQL-publieksextensie in Data Distiller kunt gebruiken om een publiek met SQL-opdrachten te maken, te beheren en te publiceren. U kunt publieksdefinities nu aanpassen die op uw unieke bedrijfsvereisten worden gebaseerd en hen over diverse bestemmingen activeren, die uw marketing strategieën en gegeven-gedreven besluiten optimaliseren.
 
-Vervolgens kunt u de volgende documentatie lezen om uw publieksbeheerstrategieën voor het platform verder te ontwikkelen en te optimaliseren:
+Vervolgens kunt u de volgende documentatie lezen om uw Experience Platform-beheerstrategieën voor het publiek verder te ontwikkelen en te optimaliseren:
 
-- **Onderzoek de Evaluatie van het publiek**: Leer over de [ methodes van de publieksevaluatie in Adobe Experience Platform ](../../segmentation/home.md#evaluate-segments): het stromen segmentatie voor updates in real time, partijsegmentatie voor geplande of verwerking op bestelling, en randsegmentatie voor onmiddellijke evaluatie op de Edge Network.
-- **integreer met Doelen**: Lees de gids op hoe te [ dossiers op bestelling uitvoeren aan partijbestemmingen ](../../destinations/ui/export-file-now.md) gebruikend de Doelen UI van het Platform.
+- **Onderzoek de Evaluatie van het publiek**: Leer over de [ methodes van de publieksevaluatie in Adobe Experience Platform ](../../segmentation/home.md#evaluate-segments): het stromen segmentatie voor updates in real time, partijsegmentatie voor geplande of verwerking op bestelling, en randsegmentatie voor onmiddellijke evaluatie op Edge Network.
+- **integreer met Doelen**: Lees de gids op hoe te [ dossiers op bestelling uitvoeren aan partijbestemmingen ](../../destinations/ui/export-file-now.md) gebruikend de Doelen UI van Experience Platform.
 - **Prestaties van het publiek van het Overzicht**: Analyseer hoe uw SQL-bepaald publiek over verschillende kanalen presteert. Gebruik gegevensinzichten om uw publieksdefinities en doelstrategieën aan te passen en te verbeteren. Lees het document op [ de inzichten van het Publiek ](../../dashboards/insights/audiences.md) om te leren hoe te om tot de SQL vragen voor publieksinzichten in Adobe Real-Time CDP toegang te hebben en aan te passen. Vervolgens kunt u uw eigen inzichten maken en onbewerkte gegevens transformeren in activeerbare informatie door het dashboard Soorten publiek aan te passen en deze inzichten effectief te visualiseren en te gebruiken voor een betere besluitvorming.
 

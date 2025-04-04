@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Overzicht van HTTP API Source Connector
 description: Leer hoe u streamingconnectors maakt om verbinding te maken met Adobe Experience Platform via API's of de gebruikersinterface.
 exl-id: 41e079f3-75b2-4033-8138-73162c31461a
-source-git-commit: ee659ded9701132b12d5b93672b4c958e9720028
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '210'
+source-wordcount: '211'
 ht-degree: 0%
 
 ---
@@ -15,13 +15,13 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
->U kunt nu de [!DNL HTTP API] -bron gebruiken wanneer u Adobe Experience Platform uitvoert op Amazon Web Services (AWS). Experience Platform dat op AWS wordt uitgevoerd, is momenteel beschikbaar voor een beperkt aantal klanten. Meer over de gesteunde infrastructuur van het Experience Platform leren, zie het [ Experience Platform multi-cloud overzicht ](../../../landing/multi-cloud.md).
+>U kunt nu de [!DNL HTTP API] -bron gebruiken wanneer u Adobe Experience Platform uitvoert op Amazon Web Services (AWS). Experience Platform die op AWS wordt uitgevoerd, is momenteel beschikbaar voor een beperkt aantal klanten. Meer over de gesteunde infrastructuur van Experience Platform leren, zie het [ multi-wolkenoverzicht van Experience Platform ](../../../landing/multi-cloud.md).
 
-Adobe Experience Platform staat toe dat gegevens uit externe bronnen worden opgenomen en biedt u de mogelijkheid om inkomende gegevens te structureren, labelen en verbeteren met [!DNL Platform] -services. U kunt gegevens uit diverse bronnen invoeren, zoals toepassingen voor Adobe, opslag in de cloud, databases en vele andere.
+Adobe Experience Platform staat toe dat gegevens uit externe bronnen worden opgenomen en biedt u de mogelijkheid om inkomende gegevens te structureren, labelen en verbeteren met [!DNL Experience Platform] -services. U kunt gegevens invoeren uit verschillende bronnen, zoals Adobe-toepassingen, opslag in de cloud, databases en vele andere.
 
-U kunt de [!DNL HTTP API] bronconnector gebruiken om uw gegevens te streamen naar Platform. De [!DNL HTTP API] -bron wordt ondersteund door [!DNL Data Prep] -functies, zodat u eventuele niet XDM-compatibele gegevens kunt toewijzen aan een XDM-compatibele gegevensset.
+U kunt de [!DNL HTTP API] bronconnector gebruiken om uw gegevens te streamen naar Experience Platform. De [!DNL HTTP API] -bron wordt ondersteund door [!DNL Data Prep] -functies, zodat u eventuele niet XDM-compatibele gegevens kunt toewijzen aan een XDM-compatibele gegevensset.
 
-In de onderstaande documentatie vindt u informatie over het maken van een HTTP API-streamingconnector voor verbinding met [!DNL Platform] via API&#39;s of de gebruikersinterface:
+In de onderstaande documentatie vindt u informatie over het maken van een HTTP API-streamingconnector voor verbinding met [!DNL Experience Platform] via API&#39;s of de gebruikersinterface:
 
 ## Een HTTP API-streamingconnector met API&#39;s maken
 

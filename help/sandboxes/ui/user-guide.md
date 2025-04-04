@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Gebruiksaanwijzing voor sandbox
 description: Dit document bevat stappen voor het uitvoeren van verschillende bewerkingen met betrekking tot sandboxen in de Adobe Experience Platform-gebruikersinterface.
 exl-id: b258c822-5182-4217-9d1b-8196d889740f
-source-git-commit: b9b00f41f146b34a1326c4c2ac104c022a416dc9
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '1085'
+source-wordcount: '1086'
 ht-degree: 0%
 
 ---
@@ -23,7 +23,7 @@ Selecteer in de gebruikersinterface van Experience Platform de optie **[!UICONTR
 
 ## Schakelen tussen sandboxen
 
-De sandboxindicator bevindt zich in de bovenste header van de platforminterface en geeft de titel van de sandbox weer waarin u zich momenteel bevindt, het gebied en het type van de sandbox.
+De sandboxindicator bevindt zich in de bovenste header van de gebruikersinterface van Experience Platform en geeft de titel van de sandbox weer waarin u zich momenteel bevindt, het gebied en het type van de sandbox.
 
 ![ het zandbakendashboard met de benadrukte zandbakindicator.](../images/ui/sandbox-indicator.png)
 

@@ -1,24 +1,24 @@
 ---
-description: Deze pagina illustreert de API vraag die wordt gebruikt om een bestemmingsserver tot stand te brengen door Adobe Experience Platform Destination SDK.
+description: Deze pagina illustreert de API-aanroep die wordt gebruikt om een doelserver te maken via Adobe Experience Platform Destination SDK.
 title: Een doelserverconfiguratie maken
 exl-id: 5c6b6cf5-a9d9-4c8a-9fdc-f8a95ab2a971
-source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '2036'
+source-wordcount: '2040'
 ht-degree: 1%
 
 ---
 
 # Een doelserverconfiguratie maken
 
-Het creëren van een bestemmingsserver is de eerste stap in het creëren van uw eigen bestemming met Destination SDK. De bestemmingsserver omvat configuratieopties voor de [ server ](../../functionality/destination-server/server-specs.md) en [ het templating ](../../functionality/destination-server/templating-specs.md) specs, het [ berichtformaat ](../../functionality/destination-server/message-format.md), en [ dossier het formatteren ](../../functionality/destination-server/file-formatting.md) opties (voor op dossier-gebaseerde bestemmingen).
+Het maken van een doelserver is de eerste stap bij het maken van uw eigen bestemming met Destination SDK. De bestemmingsserver omvat configuratieopties voor de [ server ](../../functionality/destination-server/server-specs.md) en [ het templating ](../../functionality/destination-server/templating-specs.md) specs, het [ berichtformaat ](../../functionality/destination-server/message-format.md), en [ dossier het formatteren ](../../functionality/destination-server/file-formatting.md) opties (voor op dossier-gebaseerde bestemmingen).
 
 Deze pagina illustreert de API-aanvraag en lading die u kunt gebruiken om uw eigen doelserver te maken met behulp van het API-eindpunt `/authoring/destination-servers` .
 
 Voor een gedetailleerde beschrijving van de mogelijkheden die u door dit eindpunt kunt vormen, lees de volgende artikelen:
 
-* [Server specs voor bestemmingen die met Destination SDK worden gecreeerd](../../../destination-sdk/functionality/destination-server/server-specs.md)
-* [Sjabloonspecificaties voor doelen die met Destination SDK zijn gemaakt](../../../destination-sdk/functionality/destination-server/templating-specs.md)
+* [Serverspecificaties voor doelen die met Destination SDK zijn gemaakt](../../../destination-sdk/functionality/destination-server/server-specs.md)
+* [Sjabloonspecificaties voor bestemmingen die zijn gemaakt met Destination SDK](../../../destination-sdk/functionality/destination-server/templating-specs.md)
 * [Berichtindeling](../../../destination-sdk/functionality/destination-server/message-format.md)
 * [Configuratie bestandsindeling](../../../destination-sdk/functionality/destination-server/file-formatting.md)
 
@@ -94,13 +94,13 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 
 | Parameter | Type | Beschrijving |
 | -------- | ----------- | ----------- |
-| `name` | String | *Vereist.* Vertegenwoordigt een vriendschappelijke naam van uw server, zichtbaar slechts aan Adobe. Deze naam is niet zichtbaar aan partners of klanten. Voorbeeld `Moviestar destination server` . |
+| `name` | String | *Vereist.* Vertegenwoordigt een vriendelijke naam van uw server, die alleen zichtbaar is voor Adobe. Deze naam is niet zichtbaar aan partners of klanten. Voorbeeld `Moviestar destination server` . |
 | `destinationServerType` | String | *Vereist.* Ingesteld op `URL_BASED` voor realtime (streaming) doelen. |
-| `urlBasedDestination.url.templatingStrategy` | String | *Vereist.* <ul><li>Gebruik `PEBBLE_V1` als de Adobe de URL in het onderstaande veld `value` moet transformeren. Gebruik deze optie als u een eindpunt als `https://api.moviestar.com/data/{{customerData.region}}/items` hebt, waar het `region` -onderdeel kan verschillen tussen klanten. In dit geval moet u `region` ook vormen als gebied van a [ klantengegevens ](../../functionality/destination-configuration/customer-data-fields.md) in de [ bestemmingsconfiguratie ] (../destination-configuration/create-destination-configuration.md. </li><li> Gebruik `NONE` als er aan de zijde van de Adobe geen transformatie nodig is, bijvoorbeeld als u een eindpunt hebt, zoals: `https://api.moviestar.com/data/items` .</li></ul> |
-| `urlBasedDestination.url.value` | String | *Vereist.* Vul het adres in van het API-eindpunt waarmee het Experience Platform verbinding moet maken. |
-| `httpTemplate.httpMethod` | String | *Vereist.* De methode die de Adobe in vraag aan uw server zal gebruiken. De opties zijn `GET`, `PUT`, `POST`, `DELETE`, `PATCH` . |
+| `urlBasedDestination.url.templatingStrategy` | String | *Vereist.* <ul><li>Gebruik `PEBBLE_V1` als Adobe de URL in het onderstaande veld `value` moet transformeren. Gebruik deze optie als u een eindpunt als `https://api.moviestar.com/data/{{customerData.region}}/items` hebt, waar het `region` -onderdeel kan verschillen tussen klanten. In dit geval moet u `region` ook vormen als gebied van a [ klantengegevens ](../../functionality/destination-configuration/customer-data-fields.md) in de [ bestemmingsconfiguratie ] (../destination-configuration/create-destination-configuration.md. </li><li> Gebruik `NONE` als er aan de Adobe-zijde geen transformatie nodig is, bijvoorbeeld als u een eindpunt hebt, zoals: `https://api.moviestar.com/data/items` .</li></ul> |
+| `urlBasedDestination.url.value` | String | *Vereist.* Vul het adres in van het API-eindpunt waarmee Experience Platform verbinding moet maken. |
+| `httpTemplate.httpMethod` | String | *Vereist.* De methode die Adobe gebruikt voor aanroepen van uw server. De opties zijn `GET`, `PUT`, `POST`, `DELETE`, `PATCH` . |
 | `httpTemplate.requestBody.templatingStrategy` | String | *Vereist.* Gebruik `PEBBLE_V1` . |
-| `httpTemplate.requestBody.value` | String | *Vereist.* Deze tekenreeks is de op tekens gebaseerde versie die de gegevens van Platformklanten omzet in de indeling die uw service verwacht. <br> <ul><li> Voor informatie over hoe te om het malplaatje te schrijven, lees [ Gebruikend het malplaatjesectie ](../../functionality/destination-server/message-format.md#using-templating). </li><li> Voor meer informatie over karakter het ontsnappen, verwijs naar de [ norm RFC JSON, sectie zeven ](https://tools.ietf.org/html/rfc8259#section-7). </li><li> Voor een voorbeeld van een eenvoudige transformatie, verwijs naar de [ transformatie van de Attributen van het Profiel ](../../functionality/destination-server/message-format.md#attributes). </li></ul> |
+| `httpTemplate.requestBody.value` | String | *Vereist.* Deze tekenreeks is de versie met escape-teken die de gegevens van Experience Platform-klanten omzet in de indeling die uw service verwacht. <br> <ul><li> Voor informatie over hoe te om het malplaatje te schrijven, lees [ Gebruikend het malplaatjesectie ](../../functionality/destination-server/message-format.md#using-templating). </li><li> Voor meer informatie over karakter het ontsnappen, verwijs naar de [ norm RFC JSON, sectie zeven ](https://tools.ietf.org/html/rfc8259#section-7). </li><li> Voor een voorbeeld van een eenvoudige transformatie, verwijs naar de [ transformatie van de Attributen van het Profiel ](../../functionality/destination-server/message-format.md#attributes). </li></ul> |
 | `httpTemplate.contentType` | String | *Vereist.* Het inhoudstype dat uw server accepteert. Deze waarde is zeer waarschijnlijk `application/json` . |
 
 {style="table-layout:auto"}
@@ -826,13 +826,13 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 
 | Parameter | Type | Beschrijving |
 | -------- | ----------- | ----------- |
-| `name` | String | *Vereist.* Vertegenwoordigt een vriendschappelijke naam van uw dynamische schemaserver, zichtbaar slechts aan Adobe. |
+| `name` | String | *Vereist.* Vertegenwoordigt een vriendelijke naam van uw dynamische schemaserver, die slechts voor Adobe zichtbaar is. |
 | `destinationServerType` | String | *Vereist.* Ingesteld op `URL_BASED` voor dynamische schema-servers. |
-| `urlBasedDestination.url.templatingStrategy` | String | *Vereist.* <ul><li>Gebruik `PEBBLE_V1` als de Adobe de URL in het onderstaande veld `value` moet transformeren. Gebruik deze optie als u een eindpunt als: `https://api.moviestar.com/data/{{customerData.region}}/items` hebt. </li><li> Gebruik `NONE` als er aan de zijde van de Adobe geen transformatie nodig is, bijvoorbeeld als u een eindpunt hebt, zoals: `https://api.moviestar.com/data/items` .</li></ul> |
-| `urlBasedDestination.url.value` | String | *Vereist.* Vul het adres van het API-eindpunt in dat Experience Platform moet verbinden met de schemavelden en wint deze op om te vullen als doelvelden in de toewijzingsstap van de activeringsworkflow. |
-| `httpTemplate.httpMethod` | String | *Vereist.* De methode die de Adobe in vraag aan uw server zal gebruiken. Gebruik `GET` voor dynamische schemaservers. |
+| `urlBasedDestination.url.templatingStrategy` | String | *Vereist.* <ul><li>Gebruik `PEBBLE_V1` als Adobe de URL in het onderstaande veld `value` moet transformeren. Gebruik deze optie als u een eindpunt als: `https://api.moviestar.com/data/{{customerData.region}}/items` hebt. </li><li> Gebruik `NONE` als er aan de Adobe-zijde geen transformatie nodig is, bijvoorbeeld als u een eindpunt hebt, zoals: `https://api.moviestar.com/data/items` .</li></ul> |
+| `urlBasedDestination.url.value` | String | *Vereist.* Vul het adres in van het API-eindpunt dat Experience Platform moet verbinden met de schemavelden en open deze om te vullen als doelvelden in de toewijzingsstap van de activeringsworkflow. |
+| `httpTemplate.httpMethod` | String | *Vereist.* De methode die Adobe gebruikt voor aanroepen van uw server. Gebruik `GET` voor dynamische schemaservers. |
 | `responseFields.templatingStrategy` | String | *Vereist.* Gebruik `PEBBLE_V1` . |
-| `responseFields.value` | String | *Vereist.* Deze tekenreeks is de transformatiesjabloon met escape-teken waarmee de reactie die van de partner-API is ontvangen, wordt getransformeerd naar het partnerschema dat wordt weergegeven in de interface van het platform. <br> <ul><li> Voor informatie over hoe te om het malplaatje te schrijven, lees [ Gebruikend het malplaatjesectie ](../../functionality/destination-server/message-format.md#using-templating). </li><li> Voor meer informatie over karakter het ontsnappen, verwijs naar de [ norm RFC JSON, sectie zeven ](https://tools.ietf.org/html/rfc8259#section-7). </li><li> Voor een voorbeeld van een eenvoudige transformatie, verwijs naar de [ transformatie van de Attributen van het Profiel ](../../functionality/destination-server/message-format.md#attributes). </li></ul> |
+| `responseFields.value` | String | *Vereist.* Deze tekenreeks is de transformatiesjabloon met escape-teken dat de reactie die is ontvangen van de partner-API, transformeert naar het partnerschema dat wordt weergegeven in de Experience Platform-gebruikersinterface. <br> <ul><li> Voor informatie over hoe te om het malplaatje te schrijven, lees [ Gebruikend het malplaatjesectie ](../../functionality/destination-server/message-format.md#using-templating). </li><li> Voor meer informatie over karakter het ontsnappen, verwijs naar de [ norm RFC JSON, sectie zeven ](https://tools.ietf.org/html/rfc8259#section-7). </li><li> Voor een voorbeeld van een eenvoudige transformatie, verwijs naar de [ transformatie van de Attributen van het Profiel ](../../functionality/destination-server/message-format.md#attributes). </li></ul> |
 
 {style="table-layout:auto"}
 
@@ -923,14 +923,14 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 
 | Parameter | Type | Beschrijving |
 | -------- | ----------- | ----------- |
-| `name` | String | *Vereist.* Vertegenwoordigt een vriendelijke naam van uw dynamische dropdown server, zichtbaar slechts aan Adobe. |
+| `name` | String | *Vereist.* Vertegenwoordigt een vriendelijke naam van uw dynamische dropdown server, die slechts voor Adobe zichtbaar is. |
 | `destinationServerType` | String | *Vereist.* Ingesteld op `URL_BASED` voor dynamische vervolgkeuzeservers. |
-| `urlBasedDestination.url.templatingStrategy` | String | *Vereist.* <ul><li>Gebruik `PEBBLE_V1` als de Adobe de URL in het onderstaande veld `value` moet transformeren. Gebruik deze optie als u een eindpunt als: `https://api.moviestar.com/data/{{customerData.region}}/items` hebt. </li><li> Gebruik `NONE` als er aan de zijde van de Adobe geen transformatie nodig is, bijvoorbeeld als u een eindpunt hebt, zoals: `https://api.moviestar.com/data/items` .</li></ul> |
-| `urlBasedDestination.url.value` | String | *Vereist.* Vul het adres in van het API-eindpunt dat Experience Platform moet verbinden met de dropwdown-waarden en wint deze op. |
-| `httpTemplate.httpMethod` | String | *Vereist.* De methode die de Adobe in vraag aan uw server zal gebruiken. Gebruik `GET` voor dynamische dropdown-servers. |
+| `urlBasedDestination.url.templatingStrategy` | String | *Vereist.* <ul><li>Gebruik `PEBBLE_V1` als Adobe de URL in het onderstaande veld `value` moet transformeren. Gebruik deze optie als u een eindpunt als: `https://api.moviestar.com/data/{{customerData.region}}/items` hebt. </li><li> Gebruik `NONE` als er aan de Adobe-zijde geen transformatie nodig is, bijvoorbeeld als u een eindpunt hebt, zoals: `https://api.moviestar.com/data/items` .</li></ul> |
+| `urlBasedDestination.url.value` | String | *Vereist.* Vul het adres in van het API-eindpunt dat Experience Platform moet verbinden met de dropwdown-waarden en haalt dit op. |
+| `httpTemplate.httpMethod` | String | *Vereist.* De methode die Adobe gebruikt voor aanroepen van uw server. Gebruik `GET` voor dynamische dropdown-servers. |
 | `httpTemplate.headers` | Object | *Optiona.l* omvat om het even welke kopballen die worden vereist om met de dynamische dropdown server te verbinden. |
 | `responseFields.templatingStrategy` | String | *Vereist.* Gebruik `PEBBLE_V1` . |
-| `responseFields.value` | String | *Vereist.* Deze tekenreeks is de transformatiesjabloon met escape-teken waarmee de reactie die u van uw API hebt ontvangen, wordt omgezet in de waarden die worden weergegeven in de gebruikersinterface van het platform. <br> <ul><li> Voor informatie over hoe te om het malplaatje te schrijven, lees [ Gebruikend het malplaatjesectie ](../../functionality/destination-server/message-format.md#using-templating). </li><li> Voor meer informatie over karakter het ontsnappen, verwijs naar de [ norm RFC JSON, sectie zeven ](https://tools.ietf.org/html/rfc8259#section-7). |
+| `responseFields.value` | String | *Vereist.* Deze tekenreeks is de transformatiesjabloon met escape-teken waarmee de reactie die u van uw API hebt ontvangen, wordt omgezet in de waarden die worden weergegeven in de gebruikersinterface van Experience Platform. <br> <ul><li> Voor informatie over hoe te om het malplaatje te schrijven, lees [ Gebruikend het malplaatjesectie ](../../functionality/destination-server/message-format.md#using-templating). </li><li> Voor meer informatie over karakter het ontsnappen, verwijs naar de [ norm RFC JSON, sectie zeven ](https://tools.ietf.org/html/rfc8259#section-7). |
 
 {style="table-layout:auto"}
 
@@ -946,11 +946,11 @@ Een succesvolle reactie keert status 200 van HTTP met details van uw pas gecreë
 
 ## API-foutafhandeling {#error-handling}
 
-Destination SDK API-eindpunten volgen de algemene API-foutberichtbeginselen voor Experience Platforms. Verwijs naar [ API statuscodes ](../../../../landing/troubleshooting.md#api-status-codes) en [ de fouten van de verzoekkopbal ](../../../../landing/troubleshooting.md#request-header-errors) in de het oplossen van problemengids van het Platform.
+Destination SDK API-eindpunten volgen de algemene beginselen van Experience Platform API-foutberichten. Verwijs naar [ API statuscodes ](../../../../landing/troubleshooting.md#api-status-codes) en [ de fouten van de verzoekkopbal ](../../../../landing/troubleshooting.md#request-header-errors) in de het oplossen van problemengids van Experience Platform.
 
 ## Volgende stappen {#next-steps}
 
-Nadat u dit document hebt gelezen, weet u nu hoe u een nieuwe doelserver kunt maken via het API-eindpunt Destination SDK `/authoring/destination-servers` .
+Nadat u dit document hebt gelezen, weet u nu hoe u een nieuwe doelserver kunt maken via het Destination SDK `/authoring/destination-servers` API-eindpunt.
 
 Raadpleeg de volgende artikelen voor meer informatie over wat u met dit eindpunt kunt doen:
 
@@ -960,5 +960,5 @@ Raadpleeg de volgende artikelen voor meer informatie over wat u met dit eindpunt
 
 Om te begrijpen waar dit eindpunt in het bestemmings auteursproces past, zie de volgende artikelen:
 
-* [Gebruik Destination SDK om een streamingbestemming te configureren](../../guides/configure-destination-instructions.md#create-server-template-configuration)
-* [Gebruik Destination SDK om een op een bestand gebaseerde bestemming te configureren](../../guides/configure-file-based-destination-instructions.md#create-server-file-configuration)
+* [Destination SDK gebruiken om een streamingbestemming te configureren](../../guides/configure-destination-instructions.md#create-server-template-configuration)
+* [Destination SDK gebruiken om een bestandsgebaseerde bestemming te configureren](../../guides/configure-file-based-destination-instructions.md#create-server-file-configuration)

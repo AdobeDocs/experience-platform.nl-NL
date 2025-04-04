@@ -1,27 +1,27 @@
 ---
-keywords: Experience Platform;profiel;realtime klantprofiel;verenigd profiel;verenigd profiel;verenigd;Profiel;rtcp;inschakelen profiel;Profiel inschakelen;Unieschema;UNION-PROFIEL;verenigingsprofiel
+keywords: Experience Platform;profiel;realtime klantprofiel;verenigd profiel;verenigd profiel;verenigd;Profiel;rtcp;inschakelen profiel;Profiel inschakelen;Unieschema;UNION-PROFIEL;vakbondsprofiel
 title: UI-gids Unieschema
 type: Documentation
-description: In de gebruikersinterface van Adobe Experience Platform (UI) kunt u gemakkelijk om het even welk samenvoegingsschema binnen uw organisatie bekijken en voorproef de gebieden, de identiteiten, de verhoudingen, en bijdragende schema's voor een specifieke klasse. Deze gids verstrekt gedetailleerde informatie over hoe te om verenigingsschema's te bekijken en te onderzoeken gebruikend het Platform UI.
+description: In de gebruikersinterface van Adobe Experience Platform (UI) kunt u gemakkelijk om het even welk samenvoegingsschema binnen uw organisatie bekijken en voorproef de gebieden, de identiteiten, de verhoudingen, en bijdragende schema's voor een specifieke klasse. Deze gids verstrekt gedetailleerde informatie over hoe te om verenigingsschema's te bekijken en te onderzoeken gebruikend Experience Platform UI.
 exl-id: 52af0d77-e37d-4ed8-9dee-71a50b337b4e
-source-git-commit: 0f7ef438db5e7141197fb860a5814883d31ca545
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1183'
+source-wordcount: '1188'
 ht-degree: 0%
 
 ---
 
 # [!UICONTROL Union schema] UI-hulplijn
 
-In de gebruikersinterface van Adobe Experience Platform (UI) kunt u gemakkelijk om het even welk samenvoegingsschema binnen uw organisatie bekijken en voorproef de gebieden, de identiteiten, de verhoudingen, en bijdragende schema&#39;s voor een specifieke klasse. Deze gids verstrekt gedetailleerde informatie over hoe te om verenigingsschema&#39;s te bekijken en te onderzoeken gebruikend het Platform UI.
+In de gebruikersinterface van Adobe Experience Platform (UI) kunt u gemakkelijk om het even welk samenvoegingsschema binnen uw organisatie bekijken en voorproef de gebieden, de identiteiten, de verhoudingen, en bijdragende schema&#39;s voor een specifieke klasse. Deze gids verstrekt gedetailleerde informatie over hoe te om verenigingsschema&#39;s te bekijken en te onderzoeken gebruikend Experience Platform UI.
 
 ## Aan de slag
 
 Deze UI-handleiding vereist inzicht in de verschillende [!DNL Experience Platform] -services die betrokken zijn bij het beheren van realtime-klantprofielgegevens. Voordat u deze handleiding leest of in de gebruikersinterface werkt, raadpleegt u de documentatie voor de volgende services:
 
 * [[!DNL Real-Time Customer Profile]](../home.md): biedt een uniform, real-time consumentenprofiel dat is gebaseerd op geaggregeerde gegevens van meerdere bronnen.
-* [[!DNL Identity Service]](../../identity-service/home.md): schakelt [!DNL Real-Time Customer Profile] in door identiteiten te overbruggen van verschillende gegevensbronnen terwijl ze worden ingesloten in [!DNL Platform] .
-* [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): Het gestandaardiseerde framework waarmee [!DNL Platform] gegevens voor de klantervaring indeelt.
+* [[!DNL Identity Service]](../../identity-service/home.md): schakelt [!DNL Real-Time Customer Profile] in door identiteiten te overbruggen van verschillende gegevensbronnen terwijl ze worden ingesloten in [!DNL Experience Platform] .
+* [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): Het gestandaardiseerde framework waarmee [!DNL Experience Platform] gegevens voor de klantervaring indeelt.
 
 ## Verenigingsschema&#39;s begrijpen
 
@@ -33,7 +33,7 @@ Het werken met unieschema&#39;s vereist een diep inzicht in schema&#39;s XDM. Vo
 
 ## Verenigingsschema&#39;s weergeven
 
-Als u naar samenvoegingsschema&#39;s in de gebruikersinterface van het platform wilt navigeren, selecteert u **[!UICONTROL Profiles]** in de linkernavigatie en selecteert u vervolgens het tabblad **[!UICONTROL Union Schema]** . Het tabblad [!UICONTROL Union Schema] wordt geopend om het samenvoegingsschema voor de geselecteerde klasse weer te geven.
+Als u naar samenvoegingsschema&#39;s in de gebruikersinterface van Experience Platform wilt navigeren, selecteert u **[!UICONTROL Profiles]** in de linkernavigatie en selecteert u vervolgens het tabblad **[!UICONTROL Union Schema]** . Het tabblad [!UICONTROL Union Schema] wordt geopend om het samenvoegingsschema voor de geselecteerde klasse weer te geven.
 
 ![ de pagina van het Schema van de Unie wordt getoond, met het benadrukte lusje van het Schema van het Profiel en van de Vereniging.](../images/union-schema/landing.png)
 
@@ -63,7 +63,7 @@ Voor meer informatie over datasets, met inbegrip van het bekijken van datasetact
 
 ## Contribute-schema&#39;s weergeven
 
-U kunt ook zien welke specifieke schema&#39;s bijdragen aan het samenvoegingsschema door **[!UICONTROL All contributing schemas]** te selecteren om de lijst met schema&#39;s uit te breiden. Afhankelijk van de klasse u hebt geselecteerd en het aantal schema&#39;s die uw organisatie binnen Platform heeft gecreeerd, zou dit een korte lijst kunnen zijn die één enkel schema of een lange lijst bevat die vele schema&#39;s bevat.
+U kunt ook zien welke specifieke schema&#39;s bijdragen aan het samenvoegingsschema door **[!UICONTROL All contributing schemas]** te selecteren om de lijst met schema&#39;s uit te breiden. Afhankelijk van de klasse die u hebt geselecteerd en het aantal schema&#39;s dat uw organisatie binnen Experience Platform heeft gemaakt, kan dit een korte lijst zijn met één schema of een lange lijst met vele schema&#39;s.
 
 ![ de lijst van schema&#39;s die tot het unieschema bijdragen wordt benadrukt.](../images/union-schema/contributing-schemas.png)
 
@@ -99,4 +99,4 @@ Als u een relatieveld in de lijst selecteert, wordt het weergegeven schema zo no
 
 ## Volgende stappen
 
-Door deze gids te lezen, weet u nu hoe te om verenigingsschema&#39;s te bekijken en te navigeren gebruikend [!DNL Experience Platform] UI. Voor meer informatie over schema&#39;s, met inbegrip van hoe zij door Platform worden gebruikt, gelieve te beginnen door het [ overzicht van het Systeem XDM ](../../xdm/home.md) te lezen.
+Door deze gids te lezen, weet u nu hoe te om verenigingsschema&#39;s te bekijken en te navigeren gebruikend [!DNL Experience Platform] UI. Voor meer informatie over schema&#39;s, met inbegrip van hoe zij door Experience Platform worden gebruikt, gelieve te beginnen door het [ overzicht van het Systeem XDM ](../../xdm/home.md) te lezen.

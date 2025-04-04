@@ -1,26 +1,26 @@
 ---
-keywords: Experience Platform;home;populaire onderwerpen;api;API;XDM;XDM systeem;ervaringsgegevensmodel;Experience gegevensmodel;Experience Data Model;Gegevensmodel;Gegevensmodel;Schema register;Schema Register;Schema;Schema;schema's;Schema's;Maken
+keywords: Experience Platform;home;populaire onderwerpen;api;API;XDM;XDM-systeem;ervaringsgegevensmodel;Experience gegevensmodel;Experience Data Model;Gegevensmodel;Gegevensmodel;Schema register;Schema Register;Schema;Schema;Schema's;Schemas;create
 solution: Experience Platform
 title: Een schema maken met de API voor het schemaregister
 type: Tutorial
 description: Deze zelfstudie gebruikt de API voor schemaregistratie om u door de stappen te laten lopen om een schema samen te stellen met een standaardklasse.
 exl-id: fa487a5f-d914-48f6-8d1b-001a60303f3d
-source-git-commit: 3dffa9687f3429b970e8fceebd6864a5b61ead21
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '2569'
+source-wordcount: '2570'
 ht-degree: 0%
 
 ---
 
 # Een schema maken met de API van [!DNL Schema Registry]
 
-[!DNL Schema Registry] wordt gebruikt om [!DNL Schema Library] binnen Adobe Experience Platform te openen. [!DNL Schema Library] bevat middelen die aan u door Adobe, [!DNL Experience Platform] partners, en verkopers ter beschikking worden gesteld waarvan toepassingen u gebruikt. Het register biedt een gebruikersinterface en RESTful-API die toegang bieden tot alle beschikbare bibliotheekbronnen.
+[!DNL Schema Registry] wordt gebruikt om [!DNL Schema Library] binnen Adobe Experience Platform te openen. [!DNL Schema Library] bevat bronnen die beschikbaar zijn gesteld door Adobe, [!DNL Experience Platform] -partners en leveranciers van wie u de toepassingen gebruikt. Het register biedt een gebruikersinterface en RESTful-API die toegang bieden tot alle beschikbare bibliotheekbronnen.
 
 Deze zelfstudie gebruikt de [!DNL Schema Registry] API om u door de stappen te laten lopen om een schema samen te stellen met een standaardklasse. Als u het gebruikersinterface in [!DNL Experience Platform] liever zou gebruiken, verstrekt het [ Zelfstudie van de Redacteur van het Schema ](create-schema-ui.md) geleidelijke instructies voor het uitvoeren van gelijkaardige acties in de schemaredacteur.
 
 >[!NOTE]
 >
->Als u CSV gegevens in Platform opneemt, kunt u [ kaart dat gegevens aan een XDM schema dat door AI-Gegenereerde aanbevelingen ](../../ingestion/tutorials/map-csv/recommendations.md) wordt gecreeerd (momenteel in bèta) zonder het moeten manueel het schema creëren zelf.
+>Als u CSV gegevens in Experience Platform opneemt, kunt u [ kaart die gegevens aan een schema XDM dat door AI-Gegenereerde aanbevelingen ](../../ingestion/tutorials/map-csv/recommendations.md) wordt gecreeerd (momenteel in bèta) zonder het moeten manueel het schema creëren zelf.
 
 ## Aan de slag
 
@@ -29,7 +29,7 @@ Deze handleiding vereist een goed begrip van de volgende onderdelen van Adobe Ex
 * [[!DNL Experience Data Model (XDM) System]](../home.md): Het gestandaardiseerde framework waarmee [!DNL Experience Platform] gegevens voor de klantervaring indeelt.
    * [ Grondbeginselen van schemacompositie ](../schema/composition.md): Leer over de basisbouwstenen van schema&#39;s XDM, met inbegrip van zeer belangrijke principes en beste praktijken in schemacompositie.
 * [[!DNL Real-Time Customer Profile]](../../profile/home.md): biedt een uniform, real-time consumentenprofiel dat is gebaseerd op geaggregeerde gegevens van meerdere bronnen.
-* [[!DNL Sandboxes]](../../sandboxes/home.md): [!DNL Experience Platform] biedt virtuele sandboxen die één [!DNL Platform] -instantie in afzonderlijke virtuele omgevingen verdelen om toepassingen voor digitale ervaringen te ontwikkelen en te ontwikkelen.
+* [[!DNL Sandboxes]](../../sandboxes/home.md): [!DNL Experience Platform] biedt virtuele sandboxen die één [!DNL Experience Platform] -instantie in afzonderlijke virtuele omgevingen verdelen om toepassingen voor digitale ervaringen te ontwikkelen en te ontwikkelen.
 
 Alvorens dit leerprogramma te beginnen, te herzien gelieve de [ ontwikkelaarsgids ](../api/getting-started.md) voor belangrijke informatie die u moet kennen om vraag aan [!DNL Schema Registry] API met succes te maken. Dit omvat uw `{TENANT_ID}` , het concept &quot;containers&quot; en de vereiste kopteksten voor het indienen van aanvragen (met speciale aandacht voor de header `Accept` en de mogelijke waarden ervan).
 
@@ -43,7 +43,7 @@ Een schema kan worden beschouwd als de blauwdruk voor de gegevens die u wilt inv
 
 Het proces van de schemacompositie begint met de selectie van een klasse. De klasse definieert de belangrijkste gedragsaspecten van de gegevens (record- versus tijdreeks) en de minimale velden die vereist zijn om de gegevens te beschrijven die worden ingevoerd.
 
-Het schema dat u in deze zelfstudie maakt, gebruikt de klasse [!DNL XDM Individual Profile] . [!DNL XDM Individual Profile] is een standaardklasse die door Adobe wordt verstrekt voor het bepalen van verslaggedrag. Meer informatie over gedrag kan in [ grondbeginselen van schemacompositie ](../schema/composition.md) worden gevonden.
+Het schema dat u in deze zelfstudie maakt, gebruikt de klasse [!DNL XDM Individual Profile] . [!DNL XDM Individual Profile] is een standaardklasse die door Adobe wordt opgegeven voor het definiëren van recordgedrag. Meer informatie over gedrag kan in [ grondbeginselen van schemacompositie ](../schema/composition.md) worden gevonden.
 
 Om een klasse toe te wijzen, wordt een API vraag gemaakt om (POST) een nieuw schema in de huurderscontainer tot stand te brengen. Deze vraag omvat de klasse het schema zal uitvoeren. Elk schema mag slechts één klasse implementeren.
 
@@ -129,7 +129,7 @@ Een geslaagde aanvraag retourneert HTTP Response Status 201 (Gemaakt) met een ho
 
 ### Een schema opzoeken
 
-Als u het nieuwe schema wilt weergeven, voert u een opzoekaanvraag (GET) uit met de URI `meta:altId` of de URL-gecodeerde `$id` voor het schema.
+Als u het nieuwe schema wilt weergeven, voert u een opzoekverzoek (GET) uit met de URI `meta:altId` of de URL-gecodeerde `$id` URI voor het schema.
 
 **API formaat**
 
@@ -424,7 +424,7 @@ Hoewel de standaardveldgroep [!UICONTROL Loyalty Details] nuttige aan loyaliteit
 
 Als u deze velden wilt toevoegen, kunt u uw eigen aangepaste veldgroepen definiëren in de container van `tenant` . Deze veldgroepen zijn uniek voor uw organisatie en zijn niet zichtbaar of bewerkbaar voor iedereen buiten uw organisatie.
 
-Als u een nieuwe veldgroep wilt maken (POSTEN), moet uw aanvraag een `meta:intendedToExtend` -veld bevatten dat de `$id` bevat voor de basisklasse(n) waarmee de veldgroep compatibel is, samen met de eigenschappen die de veldgroep zal bevatten.
+Als u een nieuwe veldgroep wilt maken (POST), moet uw aanvraag een `meta:intendedToExtend` -veld bevatten dat de `$id` bevat voor de basisklasse(n) waarmee de veldgroep compatibel is, samen met de eigenschappen die de veldgroep zal bevatten.
 
 Aangepaste eigenschappen moeten onder `TENANT_ID` worden genest om conflicten met andere veldgroepen of velden te voorkomen.
 
@@ -602,7 +602,7 @@ PATCH /tenant/schemas/{SCHEMA_ID}
 
 **Verzoek**
 
-Dit verzoek werkt (PATCH) het schema van Loyalty Leden bij om de gebieden binnen de nieuwe &quot;Loyalty Rij&quot;gebiedsgroep te omvatten.
+Met dit verzoek wordt (PATCH) het schema Loyalty-leden bijgewerkt om de velden in de nieuwe veldgroep Loyalty Tier op te nemen.
 
 ```SHELL
 curl -X PATCH \
@@ -700,7 +700,7 @@ U ziet dat de veldgroep is toegevoegd omdat de reactie nu de nieuwe veldgroep in
 
 ### Het huidige schema weergeven
 
-U kunt nu een verzoek van de GET uitvoeren om het huidige schema te bekijken en te zien hoe de toegevoegde gebiedsgroepen aan de algemene structuur van het schema hebben bijgedragen.
+U kunt nu een GET-verzoek uitvoeren om het huidige schema weer te geven en te zien hoe de toegevoegde veldgroepen hebben bijgedragen aan de algemene structuur van het schema.
 
 **API formaat**
 
@@ -955,11 +955,11 @@ Een geslaagde aanvraag retourneert HTTP Response Status 201 (Gemaakt) met een an
 }
 ```
 
-U kunt een opzoekverzoek (GET) uitvoeren met de URL-gecodeerde `$id` URI om het nieuwe gegevenstype rechtstreeks weer te geven. Zorg ervoor dat u de header `version` opneemt in de `Accept` -header voor een opzoekaanvraag.
+U kunt een opzoekaanvraag (GET) uitvoeren met de URL-gecodeerde `$id` URI om het nieuwe gegevenstype rechtstreeks weer te geven. Zorg ervoor dat u de header `version` opneemt in de `Accept` -header voor een opzoekaanvraag.
 
 ### Gegevenstype gebruiken in schema
 
-Nu het gegevenstype Loyalty Tier is gemaakt, kunt u het veld `loyaltyTier` in de veldgroep die u hebt gemaakt bijwerken (PATCH) en verwijzen naar het gegevenstype in plaats van de velden die er eerder waren.
+Nu het gegevenstype Loyalty Tier is gemaakt, kunt u (PATCH) het veld `loyaltyTier` in de veldgroep die u hebt gemaakt, bijwerken om naar het gegevenstype te verwijzen in plaats van de velden die er eerder waren.
 
 **API formaat**
 
@@ -1185,7 +1185,7 @@ Wanneer op het schema een primaire identiteitsbeschrijving is toegepast, kunt u 
 
 ### Een tag `union` toevoegen
 
-Als u een schema wilt opnemen in de verenigingsweergave, moet de tag `union` worden toegevoegd aan het kenmerk `meta:immutableTags` van het schema. Dit gebeurt aan de hand van een PATCH-aanvraag om het schema bij te werken en een `meta:immutableTags` -array met de waarde `union` toe te voegen.
+Als u een schema wilt opnemen in de verenigingsweergave, moet de tag `union` worden toegevoegd aan het kenmerk `meta:immutableTags` van het schema. Dit gebeurt via een PATCH-aanvraag om het schema bij te werken en een `meta:immutableTags` -array met de waarde `union` toe te voegen.
 
 **API formaat**
 
@@ -1298,7 +1298,7 @@ De reactie toont aan dat de bewerking is uitgevoerd en het schema bevat nu een k
 
 ### Schema&#39;s weergeven in een union
 
-Het schema is nu toegevoegd aan de samenvoeging van [!DNL XDM Individual Profile] . Om een lijst van alle schema&#39;s te zien die een deel van de zelfde unie zijn, kunt u een verzoek uitvoeren van de GET gebruikend vraagparameters om de reactie te filtreren.
+Het schema is nu toegevoegd aan de samenvoeging van [!DNL XDM Individual Profile] . Om een lijst van alle schema&#39;s te zien die een deel van de zelfde unie zijn, kunt u een GET verzoek uitvoeren gebruikend vraagparameters om de reactie te filtreren.
 
 Met de query-parameter `property` kunt u opgeven dat alleen schema&#39;s worden geretourneerd die een `meta:immutableTags` -veld bevatten met een `meta:class` -waarde die gelijk is aan `$id` van de [!DNL XDM Individual Profile] -klasse.
 

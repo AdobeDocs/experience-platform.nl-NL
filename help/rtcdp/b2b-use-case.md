@@ -1,20 +1,20 @@
 ---
-keywords: RTCDP;CDP;Real-time Customer Data Platform;real-time platform voor klantgegevens;real-time cdp;cdp;rtcdp
-title: Voorbeeld van een draagtas voor Real-time Customer Data Platform B2B Edition
+keywords: RTCDP;CDP;Real-Time Customer Data Platform;real-time platform voor klantgegevens;real-time cdp;cdp;rtcdp
+title: Voorbeeld van gebruik van hoofdletters/kleine letters voor Real-Time Customer Data Platform B2B edition
 description: Dit voorbeeldscenario biedt een voorbeeld voor de configuratie van uw implementatie van Adobe Real-Time Customer Data Platform B2B Edition.
 feature: Get Started, Use Cases, B2B
-badgeB2B: label="B2B Edition" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
+badgeB2B: label="B2B edition" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
 exl-id: 15505980-ac33-44b2-8989-c08cbabd212b
-source-git-commit: 2704184446f7945c744e7e2d2a8c3cda3fc12527
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1151'
+source-wordcount: '1152'
 ht-degree: 1%
 
 ---
 
-# Voorbeeld van een draagtas voor Real-time Customer Data Platform B2B Edition
+# Voorbeeld van gebruik van hoofdletters/kleine letters voor Real-Time Customer Data Platform B2B edition
 
-Real-time Customer Data Platform B2B Edition breidt het bestaande Real-Time CDP- en Adobe Experience Platform-aanbod uit ter ondersteuning van B2B-gegevens en -workflows. Dit document biedt een voorbeeld van een gebruiksgeval dat de extra voordelen aantoont die door de B2B Edition worden geboden. Deze omvatten:
+Real-Time Customer Data Platform B2B edition breidt het bestaande aanbod van Real-Time CDP en Adobe Experience Platform uit om B2B-gegevens en -workflows te ondersteunen. In dit document vindt u een voorbeeld van een gebruiksgeval waarin de extra voordelen van de B2B edition worden getoond. Deze omvatten:
 
 - Combineer persoon- en accountgegevens uit verschillende gegevensbronnen op dezelfde locatie om een uitgebreide weergave te maken die een beter inzicht in de klanten en een nauwkeuriger segmentering mogelijk maakt. Zie de documentatie bij [ het creëren van XDM schemaverhoudingen ](./schemas/b2b.md) voor gebruik met gevarieerde B2B bronnen voor meer informatie.
 - Segmenteer een publiek op basis van kenmerken van verwante entiteiten. Dit omvat Rekeningen, Kansen, Campagnes, en de Lijst van de Marketing. Het publiek is niet meer beperkt tot alleen Personen-kenmerken en Experience Events. Zie de [ B2B segmentatiedocumentatie ](./segmentation/b2b.md) voor meer voorbeelden van het creëren van B2B-Specifiek publiek.
@@ -22,7 +22,7 @@ Real-time Customer Data Platform B2B Edition breidt het bestaande Real-Time CDP-
 
 ## Gebruiksscenario
 
-Bodea, een technologiebedrijf, heeft een nieuw product en wil tegelijkertijd klanten met een e-mail en een LinkedIn advertentiecampagne richten. Om de doeltreffendheid van hun marketingcampagne te maximaliseren, wil Bodea zich ook richten op de mensen die met die bestaande rekening verbonden zijn en die meer dan een miljoen dollar hebben uitgegeven aan hun producten eerder, EN de nieuwe productpagina in de afgelopen maand hebben bezocht.
+Bodea, een technologiebedrijf, heeft een nieuw product en wil klanten met een e-mail en een LinkedIn reclamecampagne gelijktijdig richten. Om de doeltreffendheid van hun marketingcampagne te maximaliseren, wil Bodea zich ook richten op de mensen die met die bestaande rekening verbonden zijn en die meer dan een miljoen dollar hebben uitgegeven aan hun producten eerder, EN de nieuwe productpagina in de afgelopen maand hebben bezocht.
 
 Bodea heeft echter twee verschillende bedrijfsonderdelen. Bodea&#39;s eerste business line 1 creëert software voor de automobielindustrie. De tweede branche, &quot;Line 2&quot;, verkoopt 3D-printers die auto-onderdelen maken. Als gevolg van de twee bedrijfsonderdelen van Bodea zijn de inkomstengegevens die uit de klantenrekeningen van Bodea worden gegenereerd, niet in één enkele weergave verenigd.
 
@@ -54,13 +54,13 @@ Tot op heden heeft Townsend meer dan een miljoen dollar cumulatief uitgegeven aa
 
 Aangezien de uitgaven van Townsend over verschillende verkoopsystemen worden verdeeld en individueel niet meer dan één miljoen bedragen, zou de segmentdefinitie niemand in Marketo 1 of Marketo 2 kwalificeren.
 
-### Hoe Real-Time CDP B2B Edition het probleem oplost
+### Hoe Real-Time CDP B2B edition het probleem oplost
 
-Met Real-Time CDP B2B Edition kan het marketingteam van Bodea:
+Met Real-Time CDP B2B edition kan het marketingteam van Bodea:
 
-- Combineer de gegevens van alle verschillende bronnen (meerdere Marketo- en CRM-instanties en het hoofdgegevensbeheer) tot Real-Time CDP B2B Edition.
+- Combineer de gegevens van alle verschillende bronnen (meerdere Marketo- en CRM-instanties en het hoofdgegevensbeheer) in Real-Time CDP B2B edition.
 
-Met RT-CDP B2B Edition, kan Bodea de Schakelaar van Source van het Marketo Engage gebruiken om B2B gegevens van Marketo 1 en Marketo 2 in Experience Platform te brengen en dit gegeven huidig te houden gebruikend Platform verbonden toepassingen. Zie de ](../sources/connectors/adobe-applications/marketo/marketo.md) documentatie van de 0} de bronschakelaar van Marketo {voor meer informatie.[
+Met RT-CDP B2B edition kan Bodea de Marketo Engage Source Connector gebruiken om B2B gegevens van Marketo 1 en Marketo 2 naar Experience Platform te brengen en deze gegevens actueel te houden gebruikend Experience Platform verbonden toepassingen. Zie de ](../sources/connectors/adobe-applications/marketo/marketo.md) documentatie van de 0} de bronschakelaar van Marketo {voor meer informatie.[
 
 B2B-gegevens (Mensen, Accounts, Opportunity, and activity ) van CRM1 worden gesynchroniseerd in Marketo 1. Evenzo worden alle B2B-gegevens van CRM 2 gesynchroniseerd in Marketo 2. Ze worden gesynchroniseerd in Adobe Experience Platform via de Marketo-bronconnector. Nochtans, als Bodea extra gegevens van CRM in Experience Platform wil brengen, kunnen zij bestaande Verbindingen van CRM gebruiken.
 
@@ -83,20 +83,20 @@ In het belang van de eenvoud en het doel van dit voorbeeld worden mensen geïden
    - EN
    - De productpagina in de afgelopen maand hebben bezocht
 
-- Creëer een publiek dat de meest efficiënte ontvangers van de nieuwe marketingcampagne van Bodea is. In dit voorbeeld, RT-CDP, zal B2B Uitgave de tellers helpen `p2@townsend.com` identificeren als het juiste doel voor deze marketing campagne.
+- Creëer een publiek dat de meest efficiënte ontvangers van de nieuwe marketingcampagne van Bodea is. In dit voorbeeld, RT-CDP, zal B2B edition de teler helpen `p2@townsend.com` identificeren als het juiste doel voor deze marketing campagne.
 
-Door het Marketo Engage en de bestemmingen van LinkedIn te gebruiken, heeft Bodea een oplossing van het het beheer van de klantenervaring van begin tot eind (CXM) voor zijn marketing team. Het in Experience Platform gemaakte publiek wordt naar de Marketo-bestemming geduwd, waar het als een statische lijst wordt weergegeven. Dit publiek wordt vervolgens automatisch toegevoegd aan een Marketo-marketingcampagne. Tegelijkertijd kan het publiek ook door de RT-CDP B2B Edition naar een LinkedIn-marketingcampagne worden gestuurd.
+Door Marketo Engage en LinkedIn bestemmingen te gebruiken, heeft Bodea een oplossing van de klantenervaring van begin tot eind voor zijn marketing team. Het publiek dat in Experience Platform is gemaakt, wordt naar de Marketo-bestemming geduwd, waar het als een statische lijst wordt weergegeven. Dit publiek wordt vervolgens automatisch toegevoegd aan een Marketo-marketingcampagne. Tegelijkertijd kan het publiek ook naar een LinkedIn marketing campagne door RT-CDP B2B edition worden verzonden.
 
 ## Volgende stappen
 
-Door dit document te lezen, bent u nu geïntroduceerd in de typen doelstellingen en problemen die met Real-Time CDP B2B Edition kunnen worden opgelost.
+Door dit document te lezen, bent u nu op de hoogte gebracht van de soorten doelstellingen en problemen die met Real-Time CDP B2B edition kunnen worden opgelost.
 
 De volgende documentatie wordt aanbevolen om meer inzicht te krijgen in B2B-specifieke functies:
 
-- [Real-time Customer Data Platform B2B Edition - end-to-end zelfstudie](./b2b-tutorial.md)
-- [Bronnen in Real-time Customer Data Platform B2B Edition](./sources/b2b.md)
-- [Schemas in Real-time Customer Data Platform B2B Edition](./schemas/b2b.md)
+- [Real-Time Customer Data Platform B2B edition - end-to-end zelfstudie](./b2b-tutorial.md)
+- [Bronnen in Real-Time Customer Data Platform B2B edition](./sources/b2b.md)
+- [Schemas in Real-Time Customer Data Platform B2B edition](./schemas/b2b.md)
 - [B2B-segmenteringsvoorbeelden](./segmentation/b2b.md)
 - [Overzicht van accountprofielen](./accounts/account-profile-overview.md)
-- [Doelen in Real-time Customer Data Platform B2B Edition](./destinations/b2b.md)
-- [Een bestemming voor een met LinkedIn overeenkomend publiek configureren](../destinations/catalog/social/linkedin.md)
+- [Doelen in Real-Time Customer Data Platform B2B edition](./destinations/b2b.md)
+- [Vorm een bestemming LinkedIn Gelijke Publiek](../destinations/catalog/social/linkedin.md)

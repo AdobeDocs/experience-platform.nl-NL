@@ -4,9 +4,9 @@ description: Het Zeta Marketing Platform (ZMP) is een cloudgebaseerd systeem dat
 hide: true
 hidefromtoc: true
 exl-id: 291ee60c-aa81-4f1e-9df2-9905a8eeb612
-source-git-commit: 0c3c192105146dd949e9b11f8925bf4f9d7c15c0
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1324'
+source-wordcount: '1328'
 ht-degree: 0%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 0%
 
 Het Zeta Marketing Platform (ZMP) is een cloudgebaseerd systeem dat u helpt klanten op efficiëntere wijze aan te schaffen, uit te breiden en te behouden, aangedreven door intelligentie (bedrijfseigen gegevens en AI). Voor meer details, verwijs naar [ Globale Zeta ](https://zetaglobal.com/).
 
-Met de Zeta Marketing Platform-aansluiting beschikbaar in Adobe Experience Platform kunt u uw publiek naadloos synchroniseren van Experience Platform naar ZMP.
+Met de Zeta Marketing Platform-aansluiting in Adobe Experience Platform kunt u uw publiek naadloos synchroniseren van Experience Platform naar het ZMP.
 
 >[!IMPORTANT]
 >
@@ -31,14 +31,14 @@ Een markeerder wil unieke publieksprofielen bouwen, hun meest waardevolle segmen
 
 ### Doelgebruikers met advertenties {#use-case-target-users}
 
-Een adverteerder richt zich op gebruikers binnen een specifiek publiek via het Zeta-Demand Side Platform (DSP), aangezien deze gebruikers met hun merken communiceren. Voor meer informatie over de DSP van Zeta, klik [ hier ](https://knowledgebase.zetaglobal.com/pug/).
+Een adverteerder richt zich op gebruikers binnen een specifiek publiek via de Zeta Demand Side Platform (DSP), aangezien deze gebruikers met hun merken communiceren. Voor meer informatie over Zeta DSP, klik [ hier ](https://knowledgebase.zetaglobal.com/pug/).
 
 ## Vereisten {#prerequisites}
 
 ### Voorwaarden voor het Zeta-marketingplatform
 
 * Voordat u een nieuwe verbinding instelt met de bestemming van het Zeta-marketingplatform, moet u een lege lijst met klanten maken in uw account van het Zeta-marketingplatform. U moet één van deze klantenlijsten als aangewezen doel kiezen om het publiek van Adobe Experience Platform te ontvangen dat u van plan bent te verzenden. U kunt een lege klantenlijst in ZMP tot stand brengen door de instructies [ hier ](https://knowledgebase.zetaglobal.com/kb/creating-audiences#CreatingAudiences-CreatingaCustomerList) te volgen.
-* Hoewel de Adobe Experience Platform de activering van meerdere soorten publiek naar een bepaalde ZMP-doelinstantie toestaat, is het verplicht dat elke ZMP-doelinstantie slechts één Experience Platform publiek ontvangt. Als u meerdere soorten publiek van het Experience Platform wilt afhandelen, maakt u aanvullende ZMP-doelinstanties voor elk publiek en selecteert u een andere lijst met klanten in het vervolgkeuzemenu. Deze benadering zorgt ervoor dat het doelZMP publiek niet wordt beschreven. Zie [ in bestemmingsdetails ](#destination-details) voor meer details invullen.
+* Hoewel de Adobe Experience Platform de activering van meerdere soorten publiek naar een bepaalde ZMP-doelinstantie toestaat, is het verplicht dat elke ZMP-doelinstantie slechts één Experience Platform-publiek ontvangt. Als u meerdere soorten publiek van de Experience Platform wilt afhandelen, maakt u aanvullende ZMP-doelinstanties voor elk publiek en selecteert u een andere lijst met klanten in het vervolgkeuzemenu. Deze benadering zorgt ervoor dat het doelZMP publiek niet wordt beschreven. Zie [ in bestemmingsdetails ](#destination-details) voor meer details invullen.
 * Gebruik de volgende geloofsbrieven om de bestemming te vormen:
    * Gebruikersnaam: **api**
    * Wachtwoord: uw ZMP REST API-sleutel. U kunt uw REST API Sleutel vinden door aan uw rekening van ZMP het programma te openen en aan **te navigeren Montages** > **Integraties** > **Sleutels &amp; Apps** sectie. Zie de [ documentatie van ZMP ](https://knowledgebase.zetaglobal.com/kb/integrations) voor meer details.
@@ -53,7 +53,7 @@ Een adverteerder richt zich op gebruikers binnen een specifiek publiek via het Z
 | Doelidentiteit | Beschrijving | Overwegingen | Notities |
 ---------|----------|----------|----------|
 | uid | Unieke id die ZMP gebruikt om klantprofielen te onderscheiden | Verplicht | Kies de standaardnaamruimte voor identiteiten van `Email` als u unieke profielen wilt identificeren aan de hand van hun e-mailadressen. U kunt ook de aangepaste naamruimte toewijzen aan `uid` als de profielen van klanten geen e-mail hebben. |
-| email_md5_id | E-mail MD5 die elk klantprofiel vertegenwoordigt | Optioneel | Kies deze doelidentiteit als u klantprofielen op unieke wijze wilt identificeren aan de hand van MD5-waarden per e-mail. Het is van essentieel belang dat e-mailadressen al in de MD5-indeling van het Experience Platform zijn, aangezien het Platform normale tekst niet omzet in MD5. In dit scenario stelt u `uid` (verplicht) in op dezelfde MD5-waarden voor e-mail of een andere geschikte naamruimte voor de identiteit. |
+| email_md5_id | E-mail MD5 die elk klantprofiel vertegenwoordigt | Optioneel | Kies deze doelidentiteit als u klantprofielen op unieke wijze wilt identificeren aan de hand van MD5-waarden per e-mail. Het is van essentieel belang dat e-mailadressen in de Experience Platform al in de MD5-indeling staan, aangezien de Experience Platform normale tekst niet omzet in MD5. In dit scenario stelt u `uid` (verplicht) in op dezelfde MD5-waarden voor e-mail of een andere geschikte naamruimte voor de identiteit. |
 
 {style="table-layout:auto"}
 
@@ -63,13 +63,13 @@ In deze sectie wordt beschreven welk type publiek u naar dit doel kunt exportere
 
 | Oorsprong publiek | Ondersteund | Beschrijving |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | ✓ | Het publiek produceerde door de Dienst van de Segmentatie van het Experience Platform [ ](../../../segmentation/home.md). |
+| [!DNL Segmentation Service] | ✓ | Het publiek produceerde door de Dienst van de Segmentatie van Experience Platform [ ](../../../segmentation/home.md). |
 | Aangepaste uploads | X | Het publiek [ ingevoerde ](../../../segmentation/ui/audience-portal.md#import-audience) in Experience Platform van Csv- dossiers. |
 
 {style="table-layout:auto"}
 
 >[!NOTE]
-> Aangezien de individuele leden worden toegevoegd of uit het publiek van het Platform verwijderd, zullen de updates naar ZMP worden verzonden om ervoor te zorgen dat de lijst van de bestemmingsklant dienovereenkomstig wordt gesynchroniseerd.
+> Aangezien de individuele leden worden toegevoegd of uit het publiek van Experience Platform verwijderd, zullen de updates naar ZMP worden verzonden om ervoor te zorgen dat de lijst van de bestemmingsklant dienovereenkomstig wordt gesynchroniseerd.
 
 ## Type en frequentie exporteren {#export-type-frequency}
 
@@ -104,7 +104,7 @@ Als u details voor de bestemming wilt configureren, vult u de vereiste en option
 * **[!UICONTROL Name]**: Een naam waarmee u dit doel in de toekomst herkent.
 * **[!UICONTROL Description]**: Een beschrijving die u zal helpen deze bestemming in de toekomst identificeren.
 * **[!UICONTROL ZMP Account Site Id]**: Uw Identiteitskaart van de Plaats van ZMP **** waar u uw publiek naar wilt verzenden. U kunt uw identiteitskaart van de Plaats bekijken door aan **Montages** te navigeren > **Integraties** > **Sleutels &amp; Apps** sectie. Meer informatie kan [ hier ](https://knowledgebase.zetaglobal.com/kb/integrations) worden gevonden.
-* **[!UICONTROL ZMP Segment]**: Het segment met de lijst met klanten in uw ZMP-site-id-account dat u wilt bijwerken met het publiek van het platform.
+* **[!UICONTROL ZMP Segment]**: Het segment met de lijst met klanten in uw ZMP Site Id-account dat u wilt bijwerken met het Experience Platform-publiek.
 
 ### Waarschuwingen inschakelen {#enable-alerts}
 
@@ -131,18 +131,18 @@ Bronvelden selecteren:
 
 Doelvelden selecteren:
 * (Verplicht) Selecteer `uid` als de doelidentiteit waaraan u een naamruimte voor de bronidentiteit toewijst.
-* (Optioneel) Selecteer `email_md5_id` als de doelidentiteit waaraan u de naamruimte voor de bronidentiteit hebt toegewezen die de md5-waarden voor e-mail vertegenwoordigt. Het is van essentieel belang dat e-mailadressen in het Experience Platform al in de MD5-indeling staan, aangezien het Platform normale tekst niet omzet in MD5
+* (Optioneel) Selecteer `email_md5_id` als de doelidentiteit waaraan u de naamruimte voor de bronidentiteit hebt toegewezen die de md5-waarden voor e-mail vertegenwoordigt. Het is van essentieel belang dat e-mailadressen in de Experience Platform al in de MD5-indeling staan, omdat de Experience Platform normale tekst niet naar MD5 converteert
 * Selecteer zo nodig aanvullende doeltoewijzingen.
 
 ![ de afbeelding van de Identiteit ](../../assets/catalog/data-management-platform/zeta-marketing-platform/zeta-mapping-example.png)
 
 ## Geëxporteerde gegevens/Gegevens valideren bij exporteren {#exported-data}
 
-Een geslaagde activering van het publiek van Experience Platform tot het Zeta Marketing Platform werkt de lijst met doelklanten in het ZMP bij. De telling en de steekproefprofielen in de lijst van de doelklant zullen gelijk zijn aan het aantal identiteiten die met succes werden geactiveerd.
+Een geslaagde activering van het publiek van Experience Platform naar het Zeta Marketing Platform werkt de lijst met doelklanten in het ZMP bij. De telling en de steekproefprofielen in de lijst van de doelklant zullen gelijk zijn aan het aantal identiteiten die met succes werden geactiveerd.
 
 ![ Lijst van de Klant in ZMP ](../../assets/catalog/data-management-platform/zeta-marketing-platform/zeta-customer-list-in-zmp.png)
 
-Elk publiekslid dat van Experience Platform werd geactiveerd zal ook onder **Soorten van publiek** > **Mensen** in ZMP zichtbaar zijn. U zult ook het **segment van de Lijst van de Klant** kunnen bekijken een profiel tot in de Enige mening van de Klant behoort zoals hieronder getoond.
+Elk publiekslid dat van Experience Platform werd geactiveerd zal ook onder **Soorten publiek** > **Mensen** in ZMP zichtbaar zijn. U zult ook het **segment van de Lijst van de Klant** kunnen bekijken een profiel tot in de Enige mening van de Klant behoort zoals hieronder getoond.
 
 ![ SingleCustomerViewInZMP ](../../assets/catalog/data-management-platform/zeta-marketing-platform/zeta-single-customer-view-in-zmp.png)
 

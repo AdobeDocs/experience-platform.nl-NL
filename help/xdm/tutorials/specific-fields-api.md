@@ -2,16 +2,16 @@
 title: Specifieke velden toevoegen aan een schema met de API voor het schemaregister
 description: Leer hoe u afzonderlijke velden van reeds bestaande veldgroepen toevoegt aan een XDM-schema (Experience Data Model) met behulp van de Schemaregistratie-API.
 exl-id: 696cce2b-bbde-416a-9f52-12ab4da9c2c6
-source-git-commit: 05a7b73da610a30119b4719ae6b6d85f93cdc2ae
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '625'
+source-wordcount: '626'
 ht-degree: 0%
 
 ---
 
 # Specifieke velden aan een schema toevoegen met de API voor het schemaregister
 
-De schema&#39;s van het Gegevensmodel van de ervaring (XDM) zijn samengesteld uit een basisklasse, met extra gebieden inbegrepen door het gebruik van standaardgebiedsgroepen die door Adobe en de groepen van het douanegebied worden bepaald door uw organisatie.
+De schema&#39;s van het Gegevensmodel van de ervaring (XDM) zijn samengesteld uit een basisklasse, met extra gebieden inbegrepen door het gebruik van standaardgebiedsgroepen die door Adobe en de groepen van het douanegebied worden bepaald door uw organisatie worden bepaald.
 
 Wanneer u een schema samenstelt, wilt u wellicht bepaalde velden uit een bepaalde veldgroep gebruiken, terwijl u andere wilt uitsluiten van dezelfde groep die u niet nodig hebt. Deze zelfstudie laat zien hoe u afzonderlijke velden van een veldgroep kunt toevoegen aan een schema met behulp van de API voor schemaregistratie.
 
@@ -97,9 +97,9 @@ U kunt `meta:refProperty` ook als een array opgeven, zodat u meerdere velden kun
 }
 ```
 
-## Velden toevoegen met behulp van een PUT
+## Velden toevoegen met een PUT-bewerking
 
-U kunt een verzoek van de PUT gebruiken om een volledig schema te herschrijven en de gebieden te vormen u onder `allOf` wilt omvatten.
+U kunt een PUT-aanvraag gebruiken om een volledig schema te herschrijven en de velden te configureren die u onder `allOf` wilt opnemen.
 
 **API formaat**
 
@@ -190,11 +190,11 @@ Een succesvolle reactie keert de details van het bijgewerkte schema terug.
 
 >[!NOTE]
 >
->Voor meer gedetailleerde informatie over de verzoeken van de PUT om schema&#39;s, verwijs naar de [ gids van het schemaeindpunt ](../api/schemas.md#put).
+>Voor meer gedetailleerde informatie over PUT verzoeken om schema&#39;s, verwijs naar de [ gids van het schemaeindpunt ](../api/schemas.md#put).
 
 ## Velden toevoegen met een PATCH-bewerking
 
-U kunt een PATCH-verzoek gebruiken om afzonderlijke velden aan een schema toe te voegen zonder andere velden te overschrijven. Het schema-register ondersteunt alle standaard JSON-patchbewerkingen, inclusief `add` , `remove` en `replace` . Voor meer informatie over Reparatie JSON, zie de [ API fundamentals gids ](../../landing/api-fundamentals.md#json-patch).
+U kunt een PATCH-aanvraag gebruiken om afzonderlijke velden aan een schema toe te voegen zonder andere velden te overschrijven. Het schema-register ondersteunt alle standaard JSON-patchbewerkingen, inclusief `add` , `remove` en `replace` . Voor meer informatie over Reparatie JSON, zie de [ API fundamentals gids ](../../landing/api-fundamentals.md#json-patch).
 
 **API formaat**
 
@@ -285,6 +285,6 @@ Een succesvolle reactie keert de details van het bijgewerkte schema terug.
 
 ## Volgende stappen
 
-Deze gids besprak hoe te om API vraag te gebruiken om individuele gebieden van een bestaande gebiedsgroep aan een schema toe te voegen. Voor details op hoe te om gelijkaardige op gebied-gebaseerde taken in het Platform UI uit te voeren, zie de gids op [ op gebied-gebaseerde werkschema&#39;s ](../ui/field-based-workflows.md).
+Deze gids besprak hoe te om API vraag te gebruiken om individuele gebieden van een bestaande gebiedsgroep aan een schema toe te voegen. Voor details op hoe te om gelijkaardige op gebied-gebaseerde taken in Experience Platform uit te voeren UI, zie de gids op [ op gebied-gebaseerde werkschema&#39;s ](../ui/field-based-workflows.md).
 
 Voor meer informatie over de mogelijkheden van de Registratie API van het Schema, verwijs naar het [ API overzicht ](../api/overview.md) voor een volledige lijst van eindpunten en processen.

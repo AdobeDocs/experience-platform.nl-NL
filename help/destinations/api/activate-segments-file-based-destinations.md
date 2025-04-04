@@ -4,16 +4,16 @@ title: Activeer publiek aan op dossier-gebaseerde bestemmingen door de Dienst AP
 description: Leer hoe u de Flow Service API gebruikt om bestanden met gekwalificeerde profielen te exporteren naar cloudopslagbestemmingen.
 type: Tutorial
 exl-id: 62028c7a-3ea9-4004-adb7-5e27bbe904fc
-source-git-commit: df7b9bb0c5dc4348e8be7a0ea93296e24bc0fb1d
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '4749'
+source-wordcount: '4752'
 ht-degree: 0%
 
 ---
 
 # Activeer publiek aan op dossier-gebaseerde bestemmingen door de Dienst API van de Stroom te gebruiken
 
-Gebruik de uitgebreide mogelijkheden voor het exporteren van bestanden om toegang te krijgen tot de verbeterde aanpassingsfunctionaliteit wanneer u bestanden exporteert vanuit het Experience Platform:
+Gebruik de verbeterde mogelijkheden voor het exporteren van bestanden om toegang te krijgen tot de verbeterde aanpassingsfunctionaliteit wanneer u bestanden exporteert vanuit Experience Platform:
 
 * Aanvullende [ dossier noemende opties ](/help/destinations/ui/activate-batch-profile-destinations.md#file-names).
 * Mogelijkheid om de kopballen van het douanedossier in uw uitgevoerde dossiers via de [ verbeterde toewijzingsstap ](/help/destinations/ui/activate-batch-profile-destinations.md#mapping) te plaatsen.
@@ -33,7 +33,7 @@ Dit artikel verklaart het werkschema dat wordt vereist om de [ Dienst API van de
 
 >[!TIP]
 >
->U kunt de gebruikersinterface van het Experience Platform ook gebruiken om profielen naar de bestemmingen van de wolkenopslag uit te voeren. Lees het [ activeer op dossier-gebaseerde bestemmingsleerprogramma ](/help/destinations/ui/activate-batch-profile-destinations.md) voor meer informatie.
+>U kunt de Experience Platform-gebruikersinterface ook gebruiken om profielen te exporteren naar opslagdoelen in de cloud. Lees het [ activeer op dossier-gebaseerde bestemmingsleerprogramma ](/help/destinations/ui/activate-batch-profile-destinations.md) voor meer informatie.
 
 <!--
 
@@ -51,9 +51,9 @@ Deze handleiding vereist een goed begrip van de volgende onderdelen van Adobe Ex
 
 * [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md): Het gestandaardiseerde framework waarmee [!DNL Experience Platform] gegevens voor de klantervaring indeelt.
 * [[!DNL Segmentation Service]](../../segmentation/api/overview.md) : [!DNL Adobe Experience Platform Segmentation Service] hiermee kunt u een publiek maken en in [!DNL Adobe Experience Platform] publiek genereren op basis van uw [!DNL Real-Time Customer Profile] -gegevens.
-* [[!DNL Sandboxes]](../../sandboxes/home.md): [!DNL Experience Platform] biedt virtuele sandboxen die één [!DNL Platform] -instantie in afzonderlijke virtuele omgevingen verdelen om toepassingen voor digitale ervaringen te ontwikkelen en te ontwikkelen.
+* [[!DNL Sandboxes]](../../sandboxes/home.md): [!DNL Experience Platform] biedt virtuele sandboxen die één [!DNL Experience Platform] -instantie in afzonderlijke virtuele omgevingen verdelen om toepassingen voor digitale ervaringen te ontwikkelen en te ontwikkelen.
 
-De volgende secties verstrekken extra informatie die u moet weten om gegevens aan op dossier-gebaseerde bestemmingen in Platform te activeren.
+De volgende secties verstrekken extra informatie die u moet weten om gegevens aan dossier-gebaseerde bestemmingen in Experience Platform te activeren.
 
 ### Vereiste machtigingen {#permissions}
 
@@ -67,13 +67,13 @@ Deze zelfstudie biedt voorbeeld-API-aanroepen om aan te tonen hoe uw verzoeken m
 
 ### Waarden verzamelen voor vereiste en optionele koppen {#gather-values-headers}
 
-Om vraag aan [!DNL Platform] APIs te maken, moet u het [ Experience Platform authentificatieleerprogramma ](https://www.adobe.com/go/platform-api-authentication-en) eerst voltooien. Als u de zelfstudie over verificatie voltooit, krijgt u de waarden voor elk van de vereiste headers in alle API-aanroepen van [!DNL Experience Platform] , zoals hieronder wordt getoond:
+Om vraag aan [!DNL Experience Platform] APIs te maken, moet u het [ de authentificatieleerprogramma van Experience Platform ](https://www.adobe.com/go/platform-api-authentication-en) eerst voltooien. Als u de zelfstudie over verificatie voltooit, krijgt u de waarden voor elk van de vereiste headers in alle API-aanroepen van [!DNL Experience Platform] , zoals hieronder wordt getoond:
 
 * Autorisatie: Drager `{ACCESS_TOKEN}`
 * x-api-key: `{API_KEY}`
 * x-gw-ims-org-id: `{ORG_ID}`
 
-Bronnen in [!DNL Experience Platform] kunnen worden geïsoleerd naar specifieke virtuele sandboxen. In aanvragen voor [!DNL Platform] API&#39;s kunt u de naam en id opgeven van de sandbox waarin de bewerking plaatsvindt. Dit zijn optionele parameters.
+Bronnen in [!DNL Experience Platform] kunnen worden geïsoleerd naar specifieke virtuele sandboxen. In aanvragen voor [!DNL Experience Platform] API&#39;s kunt u de naam en id opgeven van de sandbox waarin de bewerking plaatsvindt. Dit zijn optionele parameters.
 
 * x-sandbox-name: `{SANDBOX_NAME}`
 
@@ -99,7 +99,7 @@ Voor beschrijvingen van de termijnen die u in dit API leerprogramma zult ontmoet
 
 Voordat u de workflow voor het exporteren van profielen start, moet u de specificaties van de verbinding en de stroom identificeren van het doel waarnaar u het publiek wilt exporteren. Gebruik de onderstaande tabel ter referentie.
 
-| Doel | Verbindingsspecificatie | Stroomspecificatie |
+| Bestemming | Verbindingsspecificatie | Stroomspecificatie |
 ---------|----------|---------|
 | Amazon S3 | `4fce964d-3f37-408f-9778-e597338a21ee` | `1a0514a6-33d4-4c7f-aff8-594799c47549` |
 | Azure Blob Storage | `6d6b59bf-fb58-4107-9064-4d246c0e5bb2` | `752d422f-b16f-4f0d-b1c6-26e448e3b388` |
@@ -326,7 +326,7 @@ Voer de onderstaande stappen uit om een doelpubliek voor het exporteren van gege
 
 ![ Stappen om publiek te activeren die de huidige stap benadrukken die de gebruiker ](/help/destinations/assets/api/file-based-segment-export/step2.png) is
 
-Nadat u hebt bepaald naar welk doel u het publiek exporteert, moet u een bronverbinding maken. De [ bronverbinding ](https://developer.adobe.com/experience-platform-apis/references/destinations/#tag/Glossary) vertegenwoordigt de verbinding aan de interne [ opslag van het Profiel van het Experience Platform ](/help/profile/home.md#profile-data-store).
+Nadat u hebt bepaald naar welk doel u het publiek exporteert, moet u een bronverbinding maken. De [ bronverbinding ](https://developer.adobe.com/experience-platform-apis/references/destinations/#tag/Glossary) vertegenwoordigt de verbinding aan de interne [ opslag van het Profiel van Experience Platform ](/help/profile/home.md#profile-data-store).
 
 >[!BEGINSHADEBOX]
 
@@ -3742,7 +3742,7 @@ curl --location --request GET 'https://platform.adobe.io/data/foundation/flowser
 
 **Reactie met een voorbeeldschema**
 
-Inspect de reactie u wanneer het uitvoeren van de hierboven vermelde vraag krijgt. U moet omlaag naar de reactie gaan om het object te zoeken `targetSpec.attributes.partnerSchema.jsonSchema`
+Inspecteer de reactie u wanneer het uitvoeren van de hierboven vermelde vraag krijgt. U moet omlaag naar de reactie gaan om het object te zoeken `targetSpec.attributes.partnerSchema.jsonSchema`
 
 +++ Reactie om partnerschema voor het outputschema te krijgen
 
@@ -4514,7 +4514,7 @@ Om a [ marketing actie ](/help/data-governance/api/marketing-actions.md) toe te 
 >
 >De header `If-Match` is vereist wanneer u een `PATCH` -aanvraag indient. De waarde voor deze kopbal is de unieke versie van dataflow u wilt bijwerken. De etag waarde werkt met elke succesvolle update van een stroomentiteit zoals dataflow, doelverbinding, en anderen bij.
 >
-> Als u de laatste versie van de etag-waarde wilt ophalen, dient u een verzoek van de GET uit te voeren naar het `https://platform.adobe.io/data/foundation/flowservice/flows/{ID}` -eindpunt, waarbij `{ID}` de dataflow-id is die u wilt bijwerken.
+> Als u de meest recente versie van de etag-waarde wilt ophalen, voert u een GET-aanvraag uit naar het `https://platform.adobe.io/data/foundation/flowservice/flows/{ID}` -eindpunt, waarbij `{ID}` de dataflow-id is die u wilt bijwerken.
 >
 > Zorg ervoor dat u de waarde van de header `If-Match` tussen dubbele aanhalingstekens plaatst, zoals in de onderstaande voorbeelden, wanneer u `PATCH` -aanvragen maakt.
 
@@ -4583,7 +4583,7 @@ Om a [ verplichte sleutel ](/help/destinations/ui/activate-batch-profile-destina
 >
 >De header `If-Match` is vereist wanneer u een `PATCH` -aanvraag indient. De waarde voor deze kopbal is de unieke versie van dataflow u wilt bijwerken. De etag waarde werkt met elke succesvolle update van een stroomentiteit zoals dataflow, doelverbinding, en anderen bij.
 >
-> Als u de laatste versie van de etag-waarde wilt ophalen, dient u een verzoek van de GET uit te voeren naar het `https://platform.adobe.io/data/foundation/flowservice/flows/{ID}` -eindpunt, waarbij `{ID}` de dataflow-id is die u wilt bijwerken.
+> Als u de meest recente versie van de etag-waarde wilt ophalen, voert u een GET-aanvraag uit naar het `https://platform.adobe.io/data/foundation/flowservice/flows/{ID}` -eindpunt, waarbij `{ID}` de dataflow-id is die u wilt bijwerken.
 >
 > Zorg ervoor dat u de waarde van de header `If-Match` tussen dubbele aanhalingstekens plaatst, zoals in de onderstaande voorbeelden, wanneer u `PATCH` -aanvragen maakt.
 
@@ -4662,7 +4662,7 @@ Om a [ deduplicatiesleutel ](/help/destinations/ui/activate-batch-profile-destin
 >
 >De header `If-Match` is vereist wanneer u een `PATCH` -aanvraag indient. De waarde voor deze kopbal is de unieke versie van dataflow u wilt bijwerken. De etag waarde werkt met elke succesvolle update van een stroomentiteit zoals dataflow, doelverbinding, en anderen bij.
 >
-> Als u de laatste versie van de etag-waarde wilt ophalen, dient u een verzoek van de GET uit te voeren naar het `https://platform.adobe.io/data/foundation/flowservice/flows/{ID}` -eindpunt, waarbij `{ID}` de dataflow-id is die u wilt bijwerken.
+> Als u de meest recente versie van de etag-waarde wilt ophalen, voert u een GET-aanvraag uit naar het `https://platform.adobe.io/data/foundation/flowservice/flows/{ID}` -eindpunt, waarbij `{ID}` de dataflow-id is die u wilt bijwerken.
 >
 > Zorg ervoor dat u de waarde van de header `If-Match` tussen dubbele aanhalingstekens plaatst, zoals in de onderstaande voorbeelden, wanneer u `PATCH` -aanvragen maakt.
 
@@ -4817,11 +4817,11 @@ U kunt informatie over de [ diverse parameters vinden die door de looppasAPI van
 
 ## API-foutafhandeling {#api-error-handling}
 
-De API-eindpunten in deze zelfstudie volgen de algemene beginselen van het API-foutbericht voor Experience Platforms. Verwijs naar [ API statuscodes ](/help/landing/troubleshooting.md#api-status-codes) en [ de fouten van de verzoekkopbal ](/help/landing/troubleshooting.md#request-header-errors) in de het oplossen van problemengids van het Platform voor meer informatie bij het interpreteren van foutenreacties.
+De API-eindpunten in deze zelfstudie volgen de algemene beginselen van het Experience Platform API-foutbericht. Verwijs naar [ API statuscodes ](/help/landing/troubleshooting.md#api-status-codes) en [ de fouten van de verzoekkopbal ](/help/landing/troubleshooting.md#request-header-errors) in de het oplossen van problemengids van Experience Platform voor meer informatie bij het interpreteren van foutenreacties.
 
 ## Volgende stappen {#next-steps}
 
-Door deze zelfstudie te volgen, hebt u Platform met succes verbonden met een van uw voorkeursbestemmingen voor de cloudopslag en een dataflow ingesteld op de respectievelijke bestemming om het publiek te exporteren. Zie de volgende pagina&#39;s voor meer informatie, zoals hoe u bestaande gegevensstromen kunt bewerken met de Flow Service API:
+Door deze zelfstudie te volgen, hebt u Experience Platform verbonden met een van uw voorkeursbestemmingen voor cloudopslag en een dataflow ingesteld op de respectievelijke bestemming om het publiek te exporteren. Zie de volgende pagina&#39;s voor meer informatie, zoals hoe u bestaande gegevensstromen kunt bewerken met de Flow Service API:
 
 * [Overzicht van doelen](../home.md)
 * [Overzicht van de doelcatalogus](../catalog/overview.md)

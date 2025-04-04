@@ -5,10 +5,10 @@ feature: Customer AI
 title: Toegangsbeheer voor AI van de Klant
 description: Dit document bevat informatie over op kenmerken gebaseerde toegangscontrole voor AI van de Klant.
 exl-id: 02e3b6a4-304a-4ac4-b07c-010531101feb
-source-git-commit: f28558d5939607cabf449cbc03b7e0f5406f6326
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '491'
-ht-degree: 0%
+source-wordcount: '492'
+ht-degree: 3%
 
 ---
 
@@ -22,7 +22,7 @@ ht-degree: 0%
 
 Met deze functionaliteit kunt u XDM-schemavelden (Experience Data Model) labelen met labels die bereik voor organisatie of gegevensgebruik definiëren. Parallel hieraan kunnen beheerders de gebruikers- en rolbeheerinterface gebruiken om toegangsbeleid te definiëren rondom XDM-schemavelden en de toegang die gebruikers of groepen gebruikers (interne, externe of externe gebruikers) krijgen beter te beheren. Bovendien, op attribuut-gebaseerde toegangsbeheer staat beheerders toe om toegang tot specifieke segmenten te beheren.
 
-Via attribuut-gebaseerde toegangscontrole, kunnen de beheerders van uw organisatie gebruikers&#39; toegang tot zowel gevoelige persoonlijke gegevens (SPD) als persoonlijk identificeerbare informatie (PII) over alle werkschema&#39;s en middelen van het Platform controleren. Beheerders kunnen gebruikersrollen definiëren die alleen toegang hebben tot specifieke velden en gegevens die overeenkomen met die velden.
+Via attribuut-gebaseerde toegangscontrole, kunnen de beheerders van uw organisatie gebruikers&#39; toegang tot zowel gevoelige persoonlijke gegevens (SPD) als persoonlijk identificeerbare informatie (PII) over alle werkschema&#39;s en middelen van Experience Platform controleren. Beheerders kunnen gebruikersrollen definiëren die alleen toegang hebben tot specifieke velden en gegevens die bij die velden horen.
 
 Als gevolg van attribuut-gebaseerde toegangscontrole, zouden sommige gebieden en functionaliteiten toegang beperkt hebben en voor bepaalde de dienstmodellen van de AI van de Klant onbeschikbaar zijn. Voorbeelden zijn Identiteit, Score Definition en Klonen.
 
@@ -46,4 +46,4 @@ Zie de documentatie om [ te leren toewijzend toestemmingen voor toegangscontrole
 
 ## Volgende stappen
 
-Door deze gids te lezen, bent u geïntroduceerd aan de belangrijkste principes van toegangsbeheer in [!DNL Experience Platform]. U kunt nu aan de [ gebruikershandleiding van de toegangscontrole ](../overview.md) voor gedetailleerde stappen op blijven hoe gebruiken [!DNL Admin Console] om productprofielen tot stand te brengen en toestemmingen voor [!DNL Platform] toe te wijzen.
+Door deze gids te lezen, bent u geïntroduceerd aan de belangrijkste principes van toegangsbeheer in [!DNL Experience Platform]. U kunt nu aan de [ gebruikershandleiding van de toegangscontrole ](../overview.md) voor gedetailleerde stappen op blijven hoe gebruiken [!DNL Admin Console] om productprofielen tot stand te brengen en toestemmingen voor [!DNL Experience Platform] toe te wijzen.

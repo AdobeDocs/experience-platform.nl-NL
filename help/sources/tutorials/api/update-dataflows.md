@@ -2,9 +2,9 @@
 title: Gegevensstromen bijwerken met behulp van de Flow Service API
 description: Leer hoe te om een gegevensstroom, met inbegrip van zijn naam, beschrijving, en programma, gebruikend de Dienst API van de Stroom.
 exl-id: 367a3a9e-0980-4144-a669-e4cfa7a9c722
-source-git-commit: 9e1edaa4183a8025b8391f58d480063adc834616
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '656'
+source-wordcount: '661'
 ht-degree: 0%
 
 ---
@@ -23,16 +23,16 @@ Voor deze zelfstudie hebt u een geldige stroom-id nodig. Als u geen geldige stro
 
 Voor deze zelfstudie hebt u ook een goed inzicht nodig in de volgende onderdelen van Adobe Experience Platform:
 
-* [ Bronnen ](../../home.md): Experience Platform staat gegevens toe om van diverse bronnen worden opgenomen terwijl het voorzien van u van de capaciteit om, inkomende gegevens te structureren te etiketteren en te verbeteren gebruikend de diensten van het Platform.
-* [ Sandboxes ](../../../sandboxes/home.md): Experience Platform verstrekt virtuele zandbakken die één enkele instantie van het Platform in afzonderlijke virtuele milieu&#39;s verdelen helpen digitale ervaringstoepassingen ontwikkelen en ontwikkelen.
+* [ Bronnen ](../../home.md): Experience Platform staat gegevens toe om van diverse bronnen worden opgenomen terwijl het voorzien van u van de capaciteit om, inkomende gegevens te structureren te etiketteren en te verbeteren gebruikend de diensten van Experience Platform.
+* [ Sandboxes ](../../../sandboxes/home.md): Experience Platform verstrekt virtuele zandbakken die één enkele instantie van Experience Platform in afzonderlijke virtuele milieu&#39;s verdelen helpen digitale ervaringstoepassingen ontwikkelen en ontwikkelen.
 
-### Platform-API&#39;s gebruiken
+### Experience Platform API&#39;s gebruiken
 
-Voor informatie over hoe te om vraag aan Platform APIs met succes te maken, zie de gids op [ begonnen wordt met Platform APIs ](../../../landing/api-guide.md).
+Voor informatie over hoe te om vraag aan Experience Platform APIs met succes te maken, zie de gids op [ begonnen wordt met Experience Platform APIs ](../../../landing/api-guide.md).
 
 ## Gegevens over gegevensstroom opzoeken
 
-De eerste stap bij het bijwerken van uw gegevensstroom is gegevens terug te winnen die uw stroom ID gebruiken. U kunt de huidige details van een bestaande gegevensstroom bekijken door een verzoek van de GET aan het `/flows` eindpunt te richten.
+De eerste stap bij het bijwerken van uw gegevensstroom is gegevens terug te winnen die uw stroom ID gebruiken. U kunt de huidige details van een bestaande gegevensstroom bekijken door een GET- verzoek aan het `/flows` eindpunt te doen.
 
 **API formaat**
 
@@ -173,7 +173,7 @@ Een succesvolle reactie keert de huidige details van uw gegevensstroom met inbeg
 
 ## Gegevensstroom bijwerken
 
-Om het runtime programma, de naam en de beschrijving van uw gegevensstroom bij te werken, voer een PATCH verzoek aan [!DNL Flow Service] API uit terwijl het verstrekken van uw stroom ID, versie, en het nieuwe programma u wilt gebruiken.
+Als u het schema, de naam en de beschrijving van uw gegevensstroom wilt bijwerken, moet u een PATCH-aanvraag voor de [!DNL Flow Service] -API uitvoeren en tegelijkertijd uw flow-id, -versie en het nieuwe schema opgeven dat u wilt gebruiken.
 
 >[!IMPORTANT]
 >
@@ -224,7 +224,7 @@ curl -X PATCH \
 
 **Reactie**
 
-Een geslaagde reactie retourneert uw flow-id en een bijgewerkt label. U kunt de update verifiëren door een verzoek om GET te richten aan de [!DNL Flow Service] API, terwijl het verstrekken van uw stroom ID.
+Een geslaagde reactie retourneert uw flow-id en een bijgewerkt label. U kunt de update verifiëren door een GET-aanvraag in te dienen bij de [!DNL Flow Service] API en tegelijk uw flow-id op te geven.
 
 ```json
 {
@@ -280,7 +280,7 @@ curl -X PATCH \
 
 **Reactie**
 
-Een geslaagde reactie retourneert uw flow-id en een bijgewerkt label. U kunt de update verifiëren door een verzoek om GET te richten aan de [!DNL Flow Service] API, terwijl het verstrekken van uw stroom ID.
+Een geslaagde reactie retourneert uw flow-id en een bijgewerkt label. U kunt de update verifiëren door een GET-aanvraag in te dienen bij de [!DNL Flow Service] API en tegelijk uw flow-id op te geven.
 
 ```json
 {

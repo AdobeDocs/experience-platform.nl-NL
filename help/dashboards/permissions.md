@@ -1,12 +1,12 @@
 ---
 solution: Experience Platform
-title: Toegang voor dashboards van Experience Platforms verkrijgen en verlenen
+title: Toegang verkrijgen en verlenen voor Experience Platform-dashboards
 type: Documentation
-description: Gebruikers de mogelijkheid bieden om dashboards van Experience Platforms weer te geven, te bewerken en bij te werken met Adobe Admin Console.
+description: Gebruikers de mogelijkheid bieden om Experience Platform-dashboards te bekijken, te bewerken en bij te werken met Adobe Admin Console.
 exl-id: 2e50790f-b3ab-4851-a9a5-7cb98bf98ce3
-source-git-commit: fa4fc154f57243250dec9bdf9557db13ef7768e8
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '605'
+source-wordcount: '608'
 ht-degree: 5%
 
 ---
@@ -19,7 +19,7 @@ Dit document bevat een overzicht van de beschikbare machtigingen voor dashboards
 
 ## Vereisten
 
-Als u toegangsbeheer voor [!DNL Experience Platform] wilt configureren, moet u beheerdersrechten hebben voor een organisatie die een [!DNL Experience Platform] -productintegratie heeft. Zie het artikel van Adobe Help Center op [ administratieve rollen ](https://helpx.adobe.com/enterprise/using/admin-roles.html) voor meer informatie.
+Als u toegangsbeheer voor [!DNL Experience Platform] wilt configureren, moet u beheerdersrechten hebben voor een organisatie die een [!DNL Experience Platform] -productintegratie heeft. Zie het artikel van het Centrum van de Hulp van Adobe op [ administratieve rollen ](https://helpx.adobe.com/enterprise/using/admin-roles.html) voor meer informatie.
 
 ## Beschikbare dashboardmachtigingen {#available-permissions}
 
@@ -28,16 +28,16 @@ De service [!DNL Dashboards] biedt drie machtigingen die, wanneer ze worden geco
 | Machtiging | Beschrijving |
 |---|---|
 | **beheert Standaard dashboards** | Deze toestemming is a **globale lees en schrijf toestemmingen**. Het staat u toe om douane widgets ](./customize/custom-widgets.md) tot stand te brengen en [ het widgetschema ](./customize/edit-schema.md) door [!UICONTROL Widget library] uit te geven.[ |
-| **Standaarddashboards van de Mening** | Dit verstrekt **read-only** functionaliteit voor [!UICONTROL Profiles], [!UICONTROL Destinations], en [!UICONTROL Segments] dashboards en verleent toegang tot hen door de linkernavigatie van het Platform. De code voegt ook [!UICONTROL Dashboards] toe aan de linkernavigatie en toegang tot het tabblad [!UICONTROL Dashboards] voorraad en integratie. |
-| **Dashboard van het Gebruik van de Vergunning van de Mening** | Deze toestemming staat gebruikers **read-only** toegang tot [ toe het dashboard van het vergunningsgebruik ](./guides/license-usage.md) binnen Experience Platform UI. |
+| **Standaarddashboards van de Mening** | Dit verstrekt **read-only** functionaliteit voor [!UICONTROL Profiles], [!UICONTROL Destinations], en [!UICONTROL Segments] dashboards en verleent toegang tot hen door de linkernavigatie van Experience Platform. De code voegt ook [!UICONTROL Dashboards] toe aan de linkernavigatie en toegang tot het tabblad [!UICONTROL Dashboards] voorraad en integratie. |
+| **Dashboard van het Gebruik van de Vergunning van de Mening** | Deze toestemming staat gebruikers **read-only** toegang toe tot [ het dashboard van het vergunningsgebruik ](./guides/license-usage.md) binnen Experience Platform UI. |
 
 De categorie [!DNL Dashboard] bevat vijf machtigingen die mogelijk vereist zijn, afhankelijk van uw behoeften. In de volgende tabel worden de categorielocaties in de Admin Console weergegeven:
 
 >[!IMPORTANT]
 >
->Zowel **[!DNL Manage Standard Dashboards]** als **[!DNL View Standard Dashboards]** toestemmingen **vereisen** een &quot;mening&quot;of &quot;beheer&quot;toestemming van de [!DNL Profile Management] of [!DNL Destinations] categorie in de Admin Console om de relevante secties binnen het Platform UI te activeren.
+>Zowel **[!DNL Manage Standard Dashboards]** als **[!DNL View Standard Dashboards]** toestemmingen **vereisen** een &quot;mening&quot;of &quot;beheer&quot;toestemming van de [!DNL Profile Management] of [!DNL Destinations] categorie in Admin Console om de relevante secties binnen Experience Platform UI te activeren.
 
-| Machtiging | Locatie van de categorie Admin Console |
+| Machtiging | Locatie van Admin Console-categorie |
 |---|---|
 | [!DNL View Profiles] | [!DNL Profile Management] |
 | [!DNL View Segments] | [!DNL Profile Management] |
@@ -47,7 +47,7 @@ De categorie [!DNL Dashboard] bevat vijf machtigingen die mogelijk vereist zijn,
 
 ## Toegangscontrolematrix
 
-De volgende toegang-controle matrijs verstrekt een verdeling waarvan toestemmingen worden vereist en welke functie zij betreffende toegang tot de verschillende dashboardeigenschappen verstrekken. De toestemmingen zijn vermeld over de hoogste horizontale rij en de werkruimte van UI van het Platform is vermeld langs de linkerkolom.
+De volgende toegang-controle matrijs verstrekt een verdeling waarvan toestemmingen worden vereist en welke functie zij betreffende toegang tot de verschillende dashboardeigenschappen verstrekken. Machtigingen worden weergegeven in de bovenste horizontale rij en de gebruikersinterface van Experience Platform wordt weergegeven in de linkerkolom.
 
 |   | [!UICONTROL View Standard Dashboard] OR [!UICONTROL Manage Standard Dashboard] | [!UICONTROL View Profiles], <br/>[!UICONTROL View Segments], <br/> [!UICONTROL View Destinations] | [!UICONTROL Manage Queries] &amp; [!UICONTROL Manage Sandboxes] | [!UICONTROL View License Usage Dashboard] |
 |---|---|---|---|---|
@@ -55,7 +55,7 @@ De volgende toegang-controle matrijs verstrekt een verdeling waarvan toestemming
 | [!DNL Dashboards] in de linkernavigatie. | INGESCHAKELD | **minstens één VEREIST**. | N.v.t. | N.v.t. |
 | [!DNL Dashboards] [!DNL Inventory] <br/> (het tabblad Bladeren) | INGESCHAKELD | N.v.t. | N.v.t. | N.v.t. |
 | [!DNL Dashboards] [!DNL Integrations] tab <br/> (wordt gebruikt om Power BI te installeren) | INGESCHAKELD | **minstens één VEREIST** | N.v.t. | N.v.t. |
-| Knop Power BI installeren en workflow | INGESCHAKELD | N.v.t. | **VEREIST** | N.v.t. |
+| Power BI-knop Installeren en workflow | INGESCHAKELD | N.v.t. | **VEREIST** | N.v.t. |
 | [!DNL Profiles], <br/>[!DNL Segments], <br/>[!DNL Destinations] dashboards.<br/> de capaciteit om widgetschema&#39;s uit te geven en nieuwe attributen voor widgetaanpassing toe te voegen | **beheer-norm-dashboard VEREIST** | **VEREIST (voor elk respectieve dashboard)** | N.v.t. | N.v.t. |
 | [!DNL License Usage Dashboard] | N.v.t. | N.v.t. | N.v.t. | INGESCHAKELD |
 
@@ -71,4 +71,4 @@ Voor beschrijvingen van de toestemmingen, gelieve te verwijzen naar de [ beschik
 >
 >U hoeft niet alle machtigingen voor alle gebruikers in te schakelen. Afhankelijk van de structuur van uw organisatie kunt u verschillende productprofielen voor bepaalde gebruikers maken en beperkte toegang (zoals alleen-lezen) verlenen. Zie de documentatie bij het beheren van gebruikers voor een productprofiel om [ te leren hoe te om toestemmingen voor specifieke gebruikers ](../access-control/ui/users.md) toe te wijzen.
 
-Zodra u de noodzakelijke toegangstoestemmingen hebt toegevoegd, kunnen de gebruikers binnen uw organisatie beginnen om dashboards binnen het Experience Platform UI te bekijken en andere acties uit te voeren die op de toestemmingen worden gebaseerd die u hebt toegewezen.
+Zodra u de noodzakelijke toegangstoestemmingen hebt toegevoegd, kunnen de gebruikers binnen uw organisatie beginnen dashboards te bekijken binnen Experience Platform UI en andere acties uit te voeren die op de toestemmingen worden gebaseerd die u hebt toegewezen.

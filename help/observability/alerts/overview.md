@@ -4,10 +4,10 @@ title: Overzicht van waarschuwingen
 description: Meer informatie over waarschuwingen in Adobe Experience Platform, inclusief de structuur van hoe waarschuwingsregels worden gedefinieerd.
 feature: Alerts
 exl-id: c38a93c6-1618-4ef9-8f94-41c7ab4af43c
-source-git-commit: 829d7da1dc53486eba1cdceddb7888b578e1c137
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '799'
+ht-degree: 2%
 
 ---
 
@@ -19,13 +19,13 @@ ht-degree: 0%
 
 Met Adobe Experience Platform kunt u zich abonneren op waarschuwingen voor gebeurtenissen met betrekking tot Adobe Experience Platform-activiteiten. Het alarm vermindert of elimineert de behoefte om [[!DNL Observability Insights]  API ](../api/overview.md) te peilen om te controleren als een baan heeft voltooid, als een bepaalde mijlpaal binnen een werkschema is bereikt, of als om het even welke fouten zijn voorgekomen.
 
-Wanneer een bepaalde reeks voorwaarden in uw verrichtingen van het Platform wordt bereikt (zoals een potentieel probleem wanneer het systeem een drempel) schendt, kan het Platform waakzame berichten aan om het even welke gebruikers in uw organisatie leveren die aan hen hebben ingetekend. Deze berichten kunnen over een vooraf bepaald tijdinterval herhalen tot het alarm is opgelost.
+Wanneer een bepaalde set voorwaarden in uw Experience Platform-bewerkingen is bereikt (zoals een mogelijk probleem wanneer het systeem een drempelwaarde overschrijdt), kan Experience Platform waarschuwingsberichten verzenden aan gebruikers in uw organisatie die zich op deze gebruikers hebben geabonneerd. Deze berichten kunnen over een vooraf bepaald tijdinterval herhalen tot het alarm is opgelost.
 
 Dit document biedt een overzicht van waarschuwingen in Adobe Experience Platform, inclusief de structuur van de wijze waarop waarschuwingsregels worden gedefinieerd.
 
 ## Eenmalige waarschuwingen versus herhaalde waarschuwingen
 
-Platformwaarschuwingen kunnen één keer worden verzonden of worden herhaald gedurende een vooraf gedefinieerd interval totdat ze zijn opgelost. De gebruiksgevallen van elk van deze opties zijn bedoeld om op de volgende manieren te verschillen:
+Experience Platform-waarschuwingen kunnen één keer worden verzonden of worden herhaald gedurende een vooraf gedefinieerd interval totdat ze zijn opgelost. De gebruiksgevallen van elk van deze opties zijn bedoeld om op de volgende manieren te verschillen:
 
 | Eenmalige waarschuwing | Herhalingswaarschuwing |
 | --- | --- |
@@ -44,7 +44,7 @@ Een alarm kan in de volgende componenten worden verdeeld:
 | **Metrisch** | Een metrische van de Waarneming [ ](../api/metrics.md#available-metrics) de waarvan waarde het alarm, zoals het aantal ontbroken partijingestitiegebeurtenissen teweegbrengt (`timeseries.ingestion.dataset.batchfailed.count`). |
 | **Condition** | Een voorwaarde met betrekking tot metrisch die het alarm teweegbrengt als het aan waar, zoals telmetrisch die een bepaald aantal overschrijdt. Deze voorwaarde kan aan een vooraf bepaald tijdvenster worden geassocieerd. |
 | **Venster** | (Optioneel) De voorwaarde voor een waarschuwing kan worden beperkt tot een vooraf gedefinieerd tijdvenster. Een waarschuwing kan bijvoorbeeld worden geactiveerd afhankelijk van het aantal mislukte batches in de afgelopen vijf minuten. |
-| **Actie** | Wanneer een alarm wordt teweeggebracht, wordt een actie uitgevoerd. Specifiek, worden de berichten verzonden naar toepasselijke ontvangers door een leveringskanaal, zoals een pre-gevormde webhaak of Experience Platform UI. |
+| **Actie** | Wanneer een alarm wordt teweeggebracht, wordt een actie uitgevoerd. Specifiek, worden de berichten verzonden naar toepasselijke ontvangers door een leveringskanaal, zoals een pre-gevormde webhaak of UI van Experience Platform. |
 | **Frequentie** | (Optioneel) Een waarschuwing kan worden geconfigureerd om de handeling met een bepaald interval te herhalen als de voorwaarde waar blijft of op een andere manier niet wordt opgelost. |
 
 {style="table-layout:auto"}
@@ -54,19 +54,19 @@ Een alarm kan in de volgende componenten worden verdeeld:
 U kunt waarschuwingen ontvangen en beheren via twee kanalen:
 
 * [Adobe I/O Events](#events)
-* [Platforminterface](#ui)
+* [EXPERIENCE PLATFORM UI](#ui)
 
 ### I/O-gebeurtenissen {#events}
 
-U kunt waarschuwingen verzenden naar een geconfigureerde webhaak om een efficiënte automatisering van de bewaking van activiteiten te vergemakkelijken. Als u waarschuwingen wilt ontvangen via webhaak, moet u uw webhaak registreren voor Platformwaarschuwingen in Adobe Developer Console. Zie de gids op [ het intekenen aan de berichten van de Gebeurtenis van Adobe I/O ](./subscribe.md) voor specifieke stappen.
+U kunt waarschuwingen verzenden naar een geconfigureerde webhaak om een efficiënte automatisering van de bewaking van activiteiten te vergemakkelijken. Als u berichten wilt ontvangen via webhaak, moet u uw webhaak registreren voor Experience Platform-waarschuwingen in Adobe Developer Console. Zie de gids op [ het intekenen aan de berichten van de Gebeurtenis van Adobe I/O ](./subscribe.md) voor specifieke stappen.
 
-### Platforminterface {#ui}
+### EXPERIENCE PLATFORM UI {#ui}
 
-De interface van het Platform staat u toe om ontvangen alarm te bekijken en waakzame regels te beheren. De volgende video biedt een inleiding tot deze mogelijkheden.
+Met de gebruikersinterface van Experience Platform kunt u ontvangen waarschuwingen weergeven en waarschuwingsregels beheren. De volgende video biedt een inleiding tot deze mogelijkheden.
 
 >[!VIDEO](https://video.tv.adobe.com/v/336218?quality=12&learn=on)
 
-Als u met waarschuwingen wilt werken in de interface van het platform, moet u de volgende toegangsbeheermachtigingen hebben ingeschakeld via Adobe Admin Console:
+Als u met waarschuwingen wilt werken in de gebruikersinterface van Experience Platform, moet u de volgende toegangsbeheermachtigingen hebben ingeschakeld via Adobe Admin Console:
 
 | Machtiging | Beschrijving |
 | --- | --- |
@@ -81,7 +81,7 @@ Als u met waarschuwingen wilt werken in de interface van het platform, moet u de
 
 >[!NOTE]
 >
->Voor meer informatie over hoe te om toestemmingen in Platform te beheren, verwijs naar de [ documentatie van de toegangscontrole ](../../access-control/ui/overview.md).
+>Voor meer informatie over hoe te om toestemmingen in Experience Platform te beheren, verwijs naar de [ documentatie van de toegangscontrole ](../../access-control/ui/overview.md).
 
 Met de toestemming van het Alarm van de Mening, kan ontvangen alarm bekijken door het klokpictogram (![ Pictogram van de Telling ](/help/images/icons/bell.png)) in de hoger-juiste hoek te selecteren.
 
@@ -95,4 +95,4 @@ Bovendien staat het [!UICONTROL Alerts] lusje in UI individuele gebruikers toe o
 
 ## Volgende stappen
 
-Door dit document te lezen, bent u geïntroduceerd in Platformwaarschuwingen en hun rol in het ecosysteem van het Platform. Raadpleeg de procesdocumentatie waarnaar in dit overzicht wordt verwezen voor meer informatie over het ontvangen en beheren van waarschuwingen.
+Door dit document te lezen, bent u geïntroduceerd in Experience Platform-waarschuwingen en hun rol in het ecosysteem van Experience Platform. Raadpleeg de procesdocumentatie waarnaar in dit overzicht wordt verwezen voor meer informatie over het ontvangen en beheren van waarschuwingen.

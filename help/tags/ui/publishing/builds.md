@@ -2,10 +2,10 @@
 title: Builds
 description: Leer meer over het concept van builds en hoe ze binnen Adobe Experience Platform werken.
 exl-id: af899282-aa2d-4395-8dbd-18d91be3f041
-source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '784'
-ht-degree: 0%
+source-wordcount: '791'
+ht-degree: 5%
 
 ---
 
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch is omgedoopt tot een reeks technologieën voor gegevensverzameling in Adobe Experience Platform. Diverse terminologische wijzigingen zijn als gevolg hiervan in de productdocumentatie doorgevoerd. Gelieve te verwijzen naar het volgende [ document ](../../term-updates.md) voor een geconsolideerde verwijzing van de terminologieveranderingen.
+>Adobe Experience Platform Launch is omgedoopt tot een reeks technologieën voor dataverzameling in Adobe Experience Platform.  Als gevolg hiervan zijn er verschillende terminologiewijzigingen in de productdocumentatie doorgevoerd. Raadpleeg het volgende [ document ](../../term-updates.md) voor een geconsolideerde referentie van de terminologiewijzigingen.
 
 Een build is de set bestanden met alle code die op het clientapparaat wordt uitgevoerd.
 
@@ -56,15 +56,15 @@ Om een bouwstijl te voltooien, selecteer een bibliotheek en selecteer de optie v
 
 Minificatie verlaagt de bandbreedtekosten en verbetert de snelheid door gegevens te verwijderen die niet vereist zijn voor uitvoering vanuit een bestand.
 
-Om de prestaties te verbeteren, beperkt Platform alles, met inbegrip van:
+Om de prestaties te verbeteren, minimaliseert Experience Platform alles, waaronder:
 
 * De hoofdtagbibliotheek
 * Modulecode die door extensieontwikkelaars is opgegeven als onderdeel van een extensie
-* Aangepaste code verstrekt door Platformgebruikers
+* Aangepaste code verstrekt door Experience Platform-gebruikers
 
 >[!NOTE]
 >
->Als uw modulecode en douanecode reeds worden geminificeerd, minificeert het Platform het opnieuw. Deze tweede minificatie biedt geen extra voordelen, maar het veroorzaakt geen schade en maakt Platform minder complex en eenvoudiger te onderhouden.
+>Als de modulecode en de aangepaste code al zijn geminiateerd, wordt deze door Experience Platform opnieuw geminificeerd. Deze tweede minificatie biedt geen extra voordelen, maar het veroorzaakt geen schade en maakt Experience Platform minder complex en eenvoudiger te onderhouden.
 
 Alle gegeven code aan de clientzijde verwijst naar de geminificeerde versie van de code. Dit wordt weergegeven in de bestandsnamen die de standaardnaamgevingsconventie voor geminificeerde bestanden volgen:
 
@@ -74,7 +74,7 @@ Als u de niet-geminiaterde code wilt zien, verwijdert u .min uit de bestandsnaam
 
 `launch-%environment_id%.js`
 
-Als een extensieontwikkelaar geminificeerde code met de extensie levert, biedt Platform geen niet-geminiateerde code in de niet-geminiateerde build. Op dezelfde manier als een gebruiker van het Platform geminificeerde code in een doos van de douanecode zet, wordt die code nog minified in niet-geminificeerde bouwt. Platform maakt niets uit.
+Als een extensieontwikkelaar geminificeerde code met de extensie levert, biedt Experience Platform geen niet-geminiateerde code in de niet-geminiateerde build. Op dezelfde manier als een gebruiker van Experience Platform geminificeerde code in een doos van de douanecode zet, wordt die code nog geminiatuurd in niet-geminiateerde bouwstijlen. Experience Platform maakt niets uit.
 
 Voor meer informatie over minificatie, zie [ dit stapelpadartikel ](https://blog.stackpath.com/glossary/minification/).
 

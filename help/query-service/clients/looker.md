@@ -1,12 +1,12 @@
 ---
-keywords: Experience Platform;huis;populaire onderwerpen;de dienst van de Vraag;de vraagdienst;Leider;Leider;verbindt met de vraagdienst;
+keywords: Experience Platform;home;populaire onderwerpen;de dienst van de Vraag;de vraagdienst;Leider;Leider;verbindt met de vraagdienst;
 solution: Experience Platform
 title: Verbinding maken met Zoekservice
 description: Dit document doorloopt de stappen voor het verbinden van de Teller met de Dienst van de Vraag van Adobe Experience Platform.
 exl-id: 806e9077-533a-4546-b5ca-8124751957f5
-source-git-commit: b059a0191fbf2c3e5d2dfceb9802e2aaa429f7ed
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '403'
+source-wordcount: '404'
 ht-degree: 0%
 
 ---
@@ -32,9 +32,9 @@ Voer vanaf hier de gegevens in voor de verbindingsinstellingen die hieronder wor
 - **[!DNL Username and Password]:** De login geloofsbrieven die zullen worden gebruikt. De gebruikersnaam heeft de notatie `ORG_ID@AdobeOrg` .
 - **SSL**: Laat SSL toe om een veilige verbinding over het netwerk te verzekeren.
 
-Als u de referenties wilt zoeken die nodig zijn om Loker te verbinden met Query Service, meldt u zich aan bij de interface van het platform en selecteert u **[!UICONTROL Queries]** in de linkernavigatie, gevolgd door **[!UICONTROL Credentials]** . Voor meer informatie bij het vinden van uw **gastheer**, **haven**, **gegevensbestand**, **gebruikersbenaming**, en **wachtwoord** geloofsbrieven, te lezen gelieve de [ geloofsbrieven gids ](../ui/credentials.md).
+Als u de gegevens wilt zoeken die nodig zijn om verbinding te maken met Zoekservice, meldt u zich aan bij de gebruikersinterface van Experience Platform en selecteert u **[!UICONTROL Queries]** in de linkernavigatie, gevolgd door **[!UICONTROL Credentials]** . Voor meer informatie bij het vinden van uw **gastheer**, **haven**, **gegevensbestand**, **gebruikersbenaming**, en **wachtwoord** geloofsbrieven, te lezen gelieve de [ geloofsbrieven gids ](../ui/credentials.md).
 
-![ de pagina van Geloofsbrieven van de werkruimte van de Vragen van het Experience Platform met Geloofsbrieven en de Verpletterende Gemaakte Referenties.](../images/clients/looker/query-service-credentials-page.png)
+![ de pagina van Geloofsbrieven van de werkruimte van de Vragen van Experience Platform met Geloofsbrieven en de Verpletterende Gemaakte Referenties.](../images/clients/looker/query-service-credentials-page.png)
 
 >[!IMPORTANT]
 >

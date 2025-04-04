@@ -1,20 +1,20 @@
 ---
-keywords: Experience Platform;huis;populaire onderwerpen;[!DNL PostgreSQL];[!DNL PostgreSQL];PostgreSQL
+keywords: Experience Platform;home;populaire onderwerpen;[!DNL PostgreSQL];[!DNL PostgreSQL];PostgreSQL
 solution: Experience Platform
 title: Een Source-verbinding met PostSQL maken in de gebruikersinterface
 type: Tutorial
 description: Leer hoe u een PostSQL-bronverbinding maakt met de gebruikersinterface van Adobe Experience Platform.
 exl-id: e556d867-a1eb-4900-b8a9-189666a4f3f1
-source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '481'
-ht-degree: 0%
+ht-degree: 1%
 
 ---
 
 # Een [!DNL PostgreSQL] bronverbinding maken in de gebruikersinterface
 
-Source-connectors in Adobe Experience Platform bieden de mogelijkheid om volgens een schema extern gesourceerde gegevens in te voeren. Deze zelfstudie bevat stappen voor het maken van een [!DNL PostgreSQL] bronaansluiting met behulp van de gebruikersinterface van [!DNL Platform] .
+Source-connectors in Adobe Experience Platform bieden de mogelijkheid om volgens een schema extern gesourceerde gegevens in te voeren. Deze zelfstudie bevat stappen voor het maken van een [!DNL PostgreSQL] bronaansluiting met behulp van de gebruikersinterface van [!DNL Experience Platform] .
 
 ## Aan de slag
 
@@ -29,7 +29,7 @@ Als u reeds een geldige [!DNL PostgreSQL] verbinding hebt, kunt u de rest van di
 
 ### Vereiste referenties verzamelen
 
-Als u toegang wilt krijgen tot uw [!DNL PostgreSQL] account op [!DNL Platform] , moet u de volgende waarde opgeven:
+Als u toegang wilt krijgen tot uw [!DNL PostgreSQL] account op [!DNL Experience Platform] , moet u de volgende waarde opgeven:
 
 | Credentials | Beschrijving |
 | ---------- | ----------- |
@@ -50,7 +50,7 @@ Hier volgt een voorbeeld van een [!DNL PostgreSQL] verbindingstekenreeks die is 
 
 ## Sluit uw [!DNL PostgreSQL] -account aan
 
-Nadat u de vereiste gegevens hebt verzameld, voert u de onderstaande stappen uit om uw [!DNL PostgreSQL] -account te koppelen aan [!DNL Platform] .
+Nadat u de vereiste gegevens hebt verzameld, voert u de onderstaande stappen uit om uw [!DNL PostgreSQL] -account te koppelen aan [!DNL Experience Platform] .
 
 Login aan [ Adobe Experience Platform ](https://platform.adobe.com) en selecteer dan **[!UICONTROL Sources]** van de linkernavigatiebar om tot de **[!UICONTROL Sources]** werkruimte toegang te hebben. In het scherm **[!UICONTROL Catalog]** worden diverse bronnen weergegeven waarmee u een account kunt maken.
 
@@ -76,4 +76,4 @@ Als u een bestaande account wilt verbinden, selecteert u de [!DNL PostgreSQL] -a
 
 ## Volgende stappen
 
-Aan de hand van deze zelfstudie hebt u een verbinding tot stand gebracht met uw [!DNL PostgreSQL] -account. U kunt nu aan het volgende leerprogramma verdergaan en [ een dataflow vormen om gegevens in  [!DNL Platform]](../../dataflow/databases.md) te brengen.
+Aan de hand van deze zelfstudie hebt u een verbinding tot stand gebracht met uw [!DNL PostgreSQL] -account. U kunt nu aan het volgende leerprogramma verdergaan en [ een dataflow vormen om gegevens in  [!DNL Experience Platform]](../../dataflow/databases.md) te brengen.

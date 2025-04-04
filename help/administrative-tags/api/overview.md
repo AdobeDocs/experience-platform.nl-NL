@@ -3,16 +3,16 @@ title: Overzicht van Unified Tags API
 description: Leer hoe u de API voor Unified Tags gebruikt om uniforme tags en mappen in Adobe Experience Platform te beheren.
 role: Developer
 exl-id: f4da5850-d5b0-4746-9f28-88ce836db800
-source-git-commit: 717a4ea0568200c940cf9b8f26f4dd2aa9c00a3e
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '235'
+source-wordcount: '236'
 ht-degree: 0%
 
 ---
 
 # Overzicht van Unified Tags API
 
-Met de API voor Unified Tags kunt u uw bedrijfsobjecten in Adobe Experience Platform indelen en beheren. U kunt zowel omslagen als markeringen tot stand brengen die kunnen worden gebruikt om de voorwerpen van het Platform zoals publiek of datasets beter te organiseren door eindpunten in deze API te gebruiken.
+Met de API voor Unified Tags kunt u uw bedrijfsobjecten in Adobe Experience Platform indelen en beheren. U kunt zowel mappen als tags maken die kunnen worden gebruikt om Experience Platform-objecten, zoals soorten publiek of gegevenssets, beter te ordenen met behulp van eindpunten in deze API.
 
 Alvorens de individuele eindpuntgidsen te lezen, gelieve te verwijzen naar [ begonnen gids ](./getting-started.md) voor belangrijke informatie over vereiste kopballen, lezend steekproefAPI vraag, en meer.
 

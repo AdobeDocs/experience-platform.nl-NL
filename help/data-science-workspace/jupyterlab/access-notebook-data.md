@@ -1,12 +1,12 @@
 ---
-keywords: Experience Platform;JupyterLab;laptops;Data Science Workspace;populaire onderwerpen;%dataset;interactieve modus;batchmodus;Spark sdk;python sdk;toegangsgegevens;laptop toegang tot gegevens
+keywords: Experience Platform;JupyterLab;notebooks;Data Science Workspace;populaire onderwerpen;%dataset;interactieve modus;batchmodus;Spark sdk;python sdk;toegang tot gegevens;laptop toegang tot gegevens
 solution: Experience Platform
 title: Toegang tot gegevens in Jupyterlab-laptops
 description: Deze gids concentreert zich op hoe te om Notities van Jupyter te gebruiken, die binnen de Wetenschap van Gegevens Workspace worden gebouwd om tot uw gegevens toegang te hebben.
 exl-id: 2035a627-5afc-4b72-9119-158b95a35d32
-source-git-commit: 5d98dc0cbfaf3d17c909464311a33a03ea77f237
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '3273'
+source-wordcount: '3276'
 ht-degree: 2%
 
 ---
@@ -19,7 +19,7 @@ ht-degree: 2%
 >
 >Deze documentatie is bedoeld voor bestaande klanten met eerdere rechten op Data Science Workspace.
 
-Elke ondersteunde kernel biedt ingebouwde functies waarmee u de gegevens van het platform kunt lezen vanuit een gegevensset in een laptop. JupyterLab in Adobe Experience Platform Data Science Workspace ondersteunt momenteel laptops voor [!DNL Python] , R, PySpark en Scala. Ondersteuning voor paginering van gegevens is echter beperkt tot [!DNL Python] - en R-laptops. Deze handleiding is gericht op het gebruik van JupyterLab-laptops voor toegang tot uw gegevens.
+Elke ondersteunde kernel biedt ingebouwde functies waarmee u Experience Platform-gegevens kunt lezen van een gegevensset in een laptop. JupyterLab in Adobe Experience Platform Data Science Workspace ondersteunt momenteel laptops voor [!DNL Python] , R, PySpark en Scala. Ondersteuning voor paginering van gegevens is echter beperkt tot [!DNL Python] - en R-laptops. Deze handleiding is gericht op het gebruik van JupyterLab-laptops voor toegang tot uw gegevens.
 
 ## Aan de slag
 
@@ -85,14 +85,14 @@ Wanneer het lezen van datasets met PySpark en Nota&#39;s Scala, hebt u de optie 
 |-------------------------|--------|--------|-------|-------|-------|-------|---------|---------|----------|--------|--------|
 | Grootte op schijf | 2,93 MB | 4,38 MB | 29,02 | 2,69 GB | 5,39 GB | 8,09 GB | 13,42 GB | 26,82 GB | 134,24 GB | 268,39 GB | 1,31 TB |
 | SDK (interactieve modus) | 33 s | 32,4 s | 55,1s | 253,5 s | 489,2 s | 729,6 s | 1206,8s | - | - | - | - |
-| SDK (batchmodus) | 815,8 s | 492,8 s | 379,1s | 637,4 s | 624,5 s | 869,2s | 1104.1s | 1786s | 5387,2s | 10624,6s | 50547s |
+| SDK (Batch-modus) | 815,8 s | 492,8 s | 379,1s | 637,4 s | 624,5 s | 869,2s | 1104.1s | 1786s | 5387,2s | 10624,6s | 50547s |
 
 **ad-hoc schema:** op Interactieve wijze zou u een maximum van 5 miljoen rijen (~5.36GB gegevens op schijf) van niet-XDM gegevens in minder dan 3 minuten moeten kunnen lezen. In de modus Batch kunt u maximaal 1 miljard rijen (ongeveer 1,05 TB gegevens op schijf) niet-XDM-gegevens lezen in ongeveer 18 minuten.
 
 | Aantal rijen | 1K | 10K | 100K | 1M | 2 MB | 3 MB | 5 MB | 10 MB | 50 MB | 100 MB | 500 MB | 1 ter |
 |--------------|--------|---------|---------|-------|-------|-------|--------|--------|---------|--------|---------|-------|
 | Grootte op schijf | 1,12 MB | 11,24 MB | 109,48 MB | 2,69 GB | 2,14 GB | 3,21 GB | 5,36 GB | 10,71 GB | 53,58 GB | 107,52 GB | 535,88 GB | 1,05 TB |
-| Interactieve SDK-modus (in seconden) | 28,2 s | 18,6 s | 20,8 s | 20,9 s | 23,8 s | 21,7 s | 24,7 s | - | - | - | - | - |
+| SDK Interactive-modus (in seconden) | 28,2 s | 18,6 s | 20,8 s | 20,9 s | 23,8 s | 21,7 s | 24,7 s | - | - | - | - | - |
 | SDK-batchmodus (in seconden) | 428,8 s | 578,8 s | 641,4s | 538,5 s | 630,9s | 467,3 s | 411s | 675 s | 702 s | 719,2s | 1022.1s | 1122,3s |
 
 ### [!DNL Spark] (Scala kernel) laptopgegevenslimieten: {#scala-data-limits}
@@ -102,7 +102,7 @@ Wanneer het lezen van datasets met PySpark en Nota&#39;s Scala, hebt u de optie 
 | Aantal rijen | 1K | 10K | 100K | 1M | 2 MB | 3 MB | 5 MB | 10 MB | 50 MB | 100 MB | 500 MB |
 |---------------|--------|--------|-------|-------|-------|-------|---------|---------|----------|--------|--------|
 | Grootte op schijf | 2,93 MB | 4,38 MB | 29,02 | 2,69 GB | 5,39 GB | 8,09 GB | 13,42 GB | 26,82 GB | 134,24 GB | 268,39 GB | 1,31 TB |
-| Interactieve SDK-modus (in seconden) | 37,9 s | 22,7 s | 45,6 s | 231,7 s | 444,7 s | 660,6 s | 1100s | - | - | - | - |
+| SDK Interactive-modus (in seconden) | 37,9 s | 22,7 s | 45,6 s | 231,7 s | 444,7 s | 660,6 s | 1100s | - | - | - | - |
 | SDK-batchmodus (in seconden) | 374,4 s | 398,5 s | 527s | 487,9 s | 588,9s | 829s | 939,1s | 1441s | 5473,2s | 10118,8 | 49207,6 |
 
 **ad-hoc schema:** op interactieve wijze zou u een maximum van 5 miljoen rijen (~5.36GB gegevens op schijf) van niet-XDM gegevens in minder dan 3 minuten moeten kunnen lezen. In de batchmodus kunt u maximaal 1 miljard rijen (~1,05 TB gegevens op schijf) niet-XDM-gegevens lezen in ongeveer 16 minuten.
@@ -110,7 +110,7 @@ Wanneer het lezen van datasets met PySpark en Nota&#39;s Scala, hebt u de optie 
 | Aantal rijen | 1K | 10K | 100K | 1M | 2 MB | 3 MB | 5 MB | 10 MB | 50 MB | 100 MB | 500 MB | 1 ter |
 |--------------|--------|---------|---------|-------|-------|-------|---------|---------|---------|--------|---------|-------|
 | Grootte op schijf | 1,12 MB | 11,24 MB | 109,48 MB | 2,69 GB | 2,14 GB | 3,21 GB | 5,36 GB | 10,71 GB | 53,58 GB | 107,52 GB | 535,88 GB | 1,05 TB |
-| Interactieve SDK-modus (in seconden) | 35,7 s | 31s | 19,5 s | 25,3 s | 23 s | 33,2 s | 25,5 s | - | - | - | - | - |
+| SDK Interactive-modus (in seconden) | 35,7 s | 31s | 19,5 s | 25,3 s | 23 s | 33,2 s | 25,5 s | - | - | - | - | - |
 | SDK-batchmodus (in seconden) | 448,8 s | 459,7 s | 519s | 475,8 s | 599,9s | 347,6 s | 407,8 s | 397 s | 518,8 s | 487,9 s | 760,2s | 975,4s |
 
 ## Python-laptops {#python-notebook}
@@ -175,7 +175,7 @@ write_tracker = dataset_writer.write({PANDA_DATAFRAME}, file_format='json')
 
 ### Query-gegevens uitvoeren met [!DNL Query Service] in [!DNL Python] {#query-data-python}
 
-[!DNL JupyterLab] op [!DNL Platform] staat u toe om SQL in a [!DNL Python] notitieboekje te gebruiken om tot gegevens door [ de Dienst van de Vraag van Adobe Experience Platform ](https://www.adobe.com/go/query-service-home-en) toegang te hebben. Toegang tot gegevens via [!DNL Query Service] kan handig zijn voor het verwerken van grote gegevenssets vanwege de superieure runtime. Houd er rekening mee dat het opvragen van gegevens met [!DNL Query Service] een verwerkingstijd van tien minuten heeft.
+[!DNL JupyterLab] op [!DNL Experience Platform] staat u toe om SQL in a [!DNL Python] notitieboekje te gebruiken om tot gegevens door [ de Dienst van de Vraag van Adobe Experience Platform ](https://www.adobe.com/go/query-service-home-en) toegang te hebben. Toegang tot gegevens via [!DNL Query Service] kan handig zijn voor het verwerken van grote gegevenssets vanwege de superieure runtime. Houd er rekening mee dat het opvragen van gegevens met [!DNL Query Service] een verwerkingstijd van tien minuten heeft.
 
 Alvorens u [!DNL Query Service] in [!DNL JupyterLab] gebruikt, zorg ervoor u een werkend begrip van de [[!DNL Query Service]  SQL syntaxis ](https://www.adobe.com/go/query-service-sql-syntax-en) hebt.
 
@@ -488,7 +488,7 @@ val spark = SparkSession
 
 ### Een gegevensset lezen {#read-scala-dataset}
 
-In Scala, kunt u `clientContext` invoeren om de waarden van het Platform te krijgen en terug te keren, elimineert dit de behoefte om variabelen zoals `var userToken` te bepalen. In het onderstaande Scala-voorbeeld wordt `clientContext` gebruikt om alle vereiste waarden voor het lezen van een gegevensset op te halen en te retourneren.
+In Scala kunt u `clientContext` importeren om Experience Platform-waarden op te halen en te retourneren. Hierdoor hoeft u geen variabelen zoals `var userToken` te definiëren. In het onderstaande Scala-voorbeeld wordt `clientContext` gebruikt om alle vereiste waarden voor het lezen van een gegevensset op te halen en te retourneren.
 
 >[!IMPORTANT]
 >
@@ -543,7 +543,7 @@ en
 
 ### Schrijven naar een gegevensset {#scala-write-dataset}
 
-In Scala, kunt u `clientContext` invoeren om de waarden van het Platform te krijgen en terug te keren, elimineert dit de behoefte om variabelen zoals `var userToken` te bepalen. In het onderstaande Scala-voorbeeld wordt `clientContext` gebruikt om alle vereiste waarden die nodig zijn voor het schrijven naar een gegevensset te definiëren en te retourneren.
+In Scala kunt u `clientContext` importeren om Experience Platform-waarden op te halen en te retourneren. Hierdoor hoeft u geen variabelen zoals `var userToken` te definiëren. In het onderstaande Scala-voorbeeld wordt `clientContext` gebruikt om alle vereiste waarden die nodig zijn voor het schrijven naar een gegevensset te definiëren en te retourneren.
 
 >[!IMPORTANT]
 >

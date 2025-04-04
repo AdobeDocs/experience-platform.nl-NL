@@ -2,10 +2,10 @@
 title: Overzicht van de ontwikkeling van extensies
 description: Meer informatie over de primaire componenten van verschillende typen tagextensies en het ontwikkelingsproces van extensies in Adobe Experience Platform.
 exl-id: b72df3df-f206-488d-a690-0f086973c5b6
-source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '935'
-ht-degree: 2%
+source-wordcount: '938'
+ht-degree: 7%
 
 ---
 
@@ -13,9 +13,9 @@ ht-degree: 2%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch is omgedoopt tot een reeks technologieën voor gegevensverzameling in Adobe Experience Platform. Diverse terminologische wijzigingen zijn als gevolg hiervan in de productdocumentatie doorgevoerd. Gelieve te verwijzen naar het volgende [ document ](../term-updates.md) voor een geconsolideerde verwijzing van de terminologieveranderingen.
+>Adobe Experience Platform Launch is omgedoopt tot een reeks technologieën voor dataverzameling in Adobe Experience Platform.  Als gevolg hiervan zijn er verschillende terminologiewijzigingen in de productdocumentatie doorgevoerd. Raadpleeg het volgende [ document ](../term-updates.md) voor een geconsolideerde referentie van de terminologiewijzigingen.
 
-Een van de belangrijkste doelstellingen van tags in Adobe Experience Platform is het creëren van een open ecosysteem waar ingenieurs buiten de Adobe extra functies op hun websites en mobiele toepassingen kunnen blootstellen. Dit wordt gedaan door markeringsuitbreidingen. Nadat een extensie op een eigenschap tag is geïnstalleerd, wordt de functionaliteit van die extensie beschikbaar voor gebruik door alle gebruikers van de eigenschap.
+Een van de belangrijkste doelstellingen van tags in Adobe Experience Platform is het creëren van een open ecosysteem waar ingenieurs buiten Adobe extra functies op hun websites en mobiele toepassingen kunnen blootstellen. Dit wordt gedaan door markeringsuitbreidingen. Nadat een extensie op een eigenschap tag is geïnstalleerd, wordt de functionaliteit van die extensie beschikbaar voor gebruik door alle gebruikers van de eigenschap.
 
 In dit document worden de primaire componenten van een extensie beschreven en vindt u koppelingen naar verdere documentatie die u helpen bij het ontwikkelen van extensies.
 
@@ -37,13 +37,13 @@ U kunt bibliotheekmodulebestanden op elke gewenste locatie in de extensiemap pla
 
 ### Weergaven
 
-Een mening is een dossier van HTML geschikt om in [`iframe` element ](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/iframe) binnen de markeringstoepassing, specifiek door Platform UI en de Inzameling UI van Gegevens worden geladen. De weergave moet een script bevatten dat door de extensie wordt aangeboden en moet een kleine API bevatten om te kunnen communiceren met de toepassing.
+Een mening is een dossier van HTML geschikt om in [`iframe` element ](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/iframe) binnen de markeringstoepassing, specifiek door de UI van Experience Platform en UI van de Inzameling van Gegevens worden geladen. De weergave moet een script bevatten dat door de extensie wordt aangeboden en moet een kleine API bevatten om te kunnen communiceren met de toepassing.
 
 Het belangrijkste meningsdossier voor om het even welke uitbreiding is zijn configuratie. Zie de sectie over [ uitbreidingsconfiguraties ](#configuration) voor meer informatie.
 
-Er gelden geen beperkingen ten aanzien van de bibliotheken die in uw weergaven worden gebruikt. Met andere woorden, u kunt jQuery, Onderstreping, Reageren, Angular, Bootstrap of andere gebruiken. Het wordt echter nog steeds aangeraden om uw extensie er net zo uit te laten zien als de interface.
+Er gelden geen beperkingen ten aanzien van de bibliotheken die in uw weergaven worden gebruikt. Met andere woorden, u kunt jQuery, Underscore, React, Angular, Bootstrap of andere gebruiken. Het wordt echter nog steeds aangeraden om uw extensie er net zo uit te laten zien als de interface.
 
-U wordt aangeraden alle weergavegerelateerde bestanden (HTML, CSS, JavaScript) in één submap te plaatsen die is gescheiden van de bibliotheekmodulebestanden. In `extension.json` kunt u beschrijven waar deze submap voor de weergave zich bevindt. Het platform zal dan deze subdirectory (en slechts deze subdirectory) van zijn Webservers dienen.
+U wordt aangeraden alle weergavegerelateerde bestanden (HTML, CSS, JavaScript) in één submap te plaatsen die is gescheiden van de bibliotheekmodulebestanden. In `extension.json` kunt u beschrijven waar deze submap voor de weergave zich bevindt. Experience Platform zal deze subdirectory (en alleen deze subdirectory) dan vanaf zijn webservers aanleveren.
 
 ## Bibliotheekcomponenten {#components}
 
@@ -93,4 +93,4 @@ Meer leren, zie de gids op [ uitbreidingsconfiguraties ](./configuration.md).
 
 ## Extensies verzenden
 
-Nadat u de extensie hebt gemaakt, kunt u deze verzenden voor een lijst in de extensiecatalogus in Platform. Zie het [ overzicht van het proces van de uitbreidingsvoorlegging ](./submit/overview.md) voor meer informatie.
+Nadat u de extensie hebt gemaakt, kunt u deze verzenden naar een lijst in de extensiecatalogus in Experience Platform. Zie het [ overzicht van het proces van de uitbreidingsvoorlegging ](./submit/overview.md) voor meer informatie.

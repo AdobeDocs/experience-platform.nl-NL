@@ -4,9 +4,9 @@ title: Standaardwaarschuwingsregels
 description: Dit document behandelt de vooraf gedefinieerde waarschuwingsregels van Experience Platform.
 feature: Alerts
 exl-id: b4af1c15-b1bc-4e4b-a447-09cc17a63988
-source-git-commit: 3a800560376973a85f9f77a481ffead3c28a05aa
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '4277'
+source-wordcount: '4279'
 ht-degree: 1%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 1%
 
 Adobe Experience Platform biedt verschillende vooraf gedefinieerde waarschuwingsregels die u voor uw organisatie kunt inschakelen. In dit document worden de details van deze door Adobe ingevoerde waarschuwingsregels besproken. Voor meer algemene informatie over alarm in Experience Platform, zie het [ alarm overzicht ](./overview.md).
 
-Wanneer [ het bekijken waakzame regels in het Platform UI ](./ui.md), kunt u aan elke regel individueel intekenen. Wanneer het intekenen op alarm door [ I/O de berichten van de Gebeurtenis ](./subscribe.md), echter, zijn de waakzame regels georganiseerd in verschillende abonnementspakketten. In de onderstaande tabellen wordt elke regel weergegeven met de corresponderende naam van het I/O-gebeurtenisabonnement.
+Wanneer [ het bekijken waakzame regels in Experience Platform UI ](./ui.md), kunt u aan elke regel individueel intekenen. Wanneer het intekenen op alarm door [ I/O de berichten van de Gebeurtenis ](./subscribe.md), echter, zijn de waakzame regels georganiseerd in verschillende abonnementspakketten. In de onderstaande tabellen wordt elke regel weergegeven met de corresponderende naam van het I/O-gebeurtenisabonnement.
 
 ## Bronnen {#sources}
 
@@ -36,7 +36,7 @@ Als u zich eerder hebt geabonneerd op het volgende type waarschuwingen, ontvangt
 
 | Abonnement voor I/O-gebeurtenis | Alarmregel | Beschrijving |
 | --- | --- | --- |
-| Vertragingen, fouten en fouten bij Source Flow-uitvoering | Gebrek aan vergisting | Deze waarschuwing stuurt u een bericht als de inname meer dan zeven uur wordt vertraagd en er geen gegevens aan Platform worden doorgegeven. |
+| Vertragingen, fouten en fouten bij Source Flow-uitvoering | Gebrek aan vergisting | Deze waarschuwing stuurt u een bericht als de inname meer dan zeven uur wordt vertraagd en er geen gegevens aan Experience Platform worden doorgegeven. |
 
 {style="table-layout:auto"}
 

@@ -3,9 +3,9 @@ title: API-handleiding voor Distiller-verificatie
 description: Leer hoe te om de Gegevens Distiller Authorization API te gebruiken om op netwerk-gebaseerde IP beperkingen voor veilige verbindingen door SQL af te dwingen. Gebruik deze API om het beheer van gegevenstoegang voor uw Adobe Experience Platform-gegevens te verbeteren.
 role: Developer
 exl-id: bcc5ea0e-cb6d-4c7b-bf9f-a0336f76c4c8
-source-git-commit: 804eeb4ec976cf41fdd450bd8f307499c3ebae03
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '424'
+source-wordcount: '425'
 ht-degree: 1%
 
 ---
@@ -24,13 +24,13 @@ Met deze API kunt u IP-beperkingen configureren, afdwingen en controleren voor t
 
 De volgende eigenschappen laten u toe om op IP-Gebaseerde toegangsbeperkingen te bepalen, toegangspogingen te controleren, en de montages van de netwerkveiligheid voor de Dienst van de Vraag aan te passen:
 
-- **bepaalt op netwerk-gebaseerde controles van de gegevenstoegang**: Specificeer toegestane IP waaiers voor de toegang van de Dienst van de Vraag. Deze beperking is specifiek op SQL gegevensbestandverbindingen, met inbegrip van die gemaakt door Business Intelligence (BI) hulpmiddelen, gegevensbestandcliënten, of programmeringsinterfaces zoals JDBC.
+- **bepaalt op netwerk-gebaseerde controles van de gegevenstoegang**: Specificeer toegestane IP waaiers voor de toegang van de Dienst van de Vraag. Deze beperking is specifiek op SQL gegevensbestandverbindingen, met inbegrip van die gemaakt door de hulpmiddelen van Business Intelligence (BI), gegevensbestandcliënten, of programmeringsinterfaces zoals JDBC.
 - **laat uitvoerige controle en alarm** toe: Alle toegangspogingen, met inbegrip van ontkende verbindingen, worden geregistreerd en verzonden naar de [ Logboeken van de Controle van Adobe Experience Platform ](../../landing/governance-privacy-security/audit-logs/overview.md) voor het volgen in real time. Gebruik dit vermogen om toegangspatronen te controleren en potentiële veiligheidsbreuken te ontdekken.
 - **vorm flexibele IP beperkingen**: Specificeer toegestane IPs in zowel individuele IP als het blokformaten CIDR. Deze instellingen gelden per sandbox, zodat u de netwerkbeperkingen kunt aanpassen aan uw specifieke beveiligingsbehoeften.
 
 ## Functies voor controle en toezicht
 
-Om veilige praktijken van de gegevenstoegang te steunen, registreert de Dienst van de Vraag alle cliënt IPs die toegang hebben of proberen om tot Experience Platform toegang te hebben. De gebeurtenissen van de controle, met inbegrip van ontkende verbindingen, worden verzonden naar de Logboeken van de Controle van het Platform. Hierdoor wordt het volgende ingeschakeld:
+Om veilige gegevenstoegang te steunen, registreert de Dienst van de Vraag alle cliëntIPs die tot Experience Platform toegang hebben of proberen toegang te hebben. Controlegebeurtenissen, inclusief ontkende verbindingen, worden verzonden naar Experience Platform Audit Logs. Hierdoor wordt het volgende ingeschakeld:
 
 - **Realtime Controle**: De op IP-Gebaseerde toegangspatronen van het spoor om naleving te verzekeren.
 - **het Alarm op Onbevoegde Toegang**: Identificeer en antwoordt aan toegangspogingen van onbevoegde IPs.

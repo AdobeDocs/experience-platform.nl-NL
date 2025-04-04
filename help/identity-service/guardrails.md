@@ -3,9 +3,9 @@ keywords: Experience Platform;identiteit;identiteitsdienst;het oplossen van prob
 title: Guardrails voor identiteitsservice
 description: Dit document bevat informatie over het gebruik en de tarieflimieten voor identiteitsservicegegevens, zodat u de identiteitsgrafiek optimaal kunt gebruiken.
 exl-id: bd86d8bf-53fd-4d76-ad01-da473a1999ab
-source-git-commit: 2a2e3fcc4c118925795951a459a2ed93dfd7f7d7
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1585'
+source-wordcount: '1586'
 ht-degree: 0%
 
 ---
@@ -20,9 +20,9 @@ Dit document bevat informatie over het gebruik en de tarieflimieten voor [!DNL I
 
 ## Aan de slag
 
-De volgende diensten van het Experience Platform zijn betrokken bij het modelleren van de Gegevens van de Identiteit:
+De volgende Experience Platform-services zijn betrokken bij het modelleren van identiteitsgegevens:
 
-* [ Identiteiten ](home.md): De identiteiten van Bridge van verschillende gegevensbronnen aangezien zij in Platform worden opgenomen.
+* [ Identiteiten ](home.md): De identiteiten van Bridge van verschillende gegevensbronnen aangezien zij in Experience Platform worden opgenomen.
 * [[!DNL Real-Time Customer Profile]](../profile/home.md): Maak uniforme consumentenprofielen met behulp van gegevens uit meerdere bronnen.
 
 ## Gegevensmodellimieten
@@ -56,11 +56,11 @@ In de volgende tabel worden de bestaande regels beschreven die u moet volgen om 
 
 ### Naamnaamruimte-opname
 
-Vanaf 31 maart 2023 blokkeert Identity Service de inname van Adobe Analytics ID (AID) voor nieuwe klanten. Deze identiteit wordt typisch opgenomen door de [ bron van Adobe Analytics ](../sources/connectors/adobe-applications/analytics.md) en de [ bron van Adobe Audience Manager ](../sources//connectors/adobe-applications/audience-manager.md) en is overtollig omdat ECID zelfde Webbrowser vertegenwoordigt. Neem contact op met het accountteam van de Adobe als u deze standaardconfiguratie wilt wijzigen.
+Vanaf 31 maart 2023 blokkeert Identity Service de inname van Adobe Analytics ID (AID) voor nieuwe klanten. Deze identiteit wordt typisch opgenomen door de [ bron van Adobe Analytics ](../sources/connectors/adobe-applications/analytics.md) en de [ bron van Adobe Audience Manager ](../sources//connectors/adobe-applications/audience-manager.md) en is overtollig omdat ECID zelfde Webbrowser vertegenwoordigt. Neem contact op met het Adobe-accountteam als u deze standaardconfiguratie wilt wijzigen.
 
 ## Prestatiegerichten {#performance-guardrails}
 
-De Dienst van de identiteit controleert voortdurend inkomende gegevens om hoge prestaties en betrouwbaarheid op schaal te verzekeren. Een instroom van gegevens over ervaringen in een korte periode kan echter leiden tot prestatievermindering en latentie. Adobe is niet verantwoordelijk voor een dergelijke verslechtering van de prestaties.
+De Dienst van de identiteit controleert voortdurend inkomende gegevens om hoge prestaties en betrouwbaarheid op schaal te verzekeren. Een instroom van gegevens over ervaringen in een korte periode kan echter leiden tot prestatievermindering en latentie. Adobe is niet verantwoordelijk voor deze verslechtering van de prestaties.
 
 ## Begrijpen met de verwijderingslogica wanneer een identiteitsgrafiek op capaciteit wordt bijgewerkt {#deletion-logic}
 
@@ -90,12 +90,12 @@ De volgende secties schetsen de implicaties die de schrappingslogica aan de Dien
 
 #### Identity Service: Custom namespace identity type changes
 
-Neem contact op met het accountteam van uw Adobe om een wijziging in het type identiteit aan te vragen als uw productiessandbox het volgende bevat:
+Neem contact op met uw Adobe-accountteam om een wijziging in het type identiteit aan te vragen als uw productiessandbox het volgende bevat:
 
 * Een aangepaste naamruimte waarin de personen-id&#39;s (zoals CRMID&#39;s) zijn geconfigureerd als type cookie-/apparaatidentiteit.
 * Een aangepaste naamruimte waarin cookie-/apparaat-id&#39;s zijn geconfigureerd als identiteitstype voor verschillende apparaten.
 
-Als deze functie eenmaal beschikbaar is, worden grafieken die de limiet van 50 identiteiten overschrijden, verkleind tot maximaal 50 identiteiten. Voor Real-Time CDP B2C Edition kan dit resulteren in een minimale toename van het aantal profielen dat in aanmerking komt voor een publiek, aangezien deze profielen voorheen werden genegeerd door Segmentering en Activering.
+Als deze functie eenmaal beschikbaar is, worden grafieken die de limiet van 50 identiteiten overschrijden, verkleind tot maximaal 50 identiteiten. Voor Real-Time CDP B2C Edition kan dit leiden tot een minimale toename van het aantal profielen dat in aanmerking komt voor een publiek, aangezien deze profielen voorheen werden genegeerd door Segmentering en Activering.
 
 #### Klantprofiel in realtime: impact op adresseerbare doelgroepen
 
@@ -108,8 +108,8 @@ Verwijderen gebeurt alleen met gegevens in de Identiteitsservice en niet in real
 
 Als u geverifieerde gebeurtenissen wilt behouden voor de CRMID, kunt u het beste uw primaire id&#39;s wijzigen van ECID in CRMID. Lees de volgende documenten voor stappen over hoe te om deze verandering uit te voeren:
 
-* [ vorm identiteitskaart voor de markeringen van het Experience Platform ](../tags/extensions/client/web-sdk/data-element-types.md#identity-map).
-* [Identiteitsgegevens in het Web SDK van het Experience Platform](../web-sdk/identity/overview.md#using-identitymap)
+* [ vorm identiteitskaart voor de markeringen van Experience Platform ](../tags/extensions/client/web-sdk/data-element-types.md#identity-map).
+* [Identiteitsgegevens in de Experience Platform Web SDK](../web-sdk/identity/overview.md#using-identitymap)
 
 ### Voorbeeldscenario&#39;s
 
@@ -196,10 +196,10 @@ Raadpleeg de volgende documentatie voor meer informatie over [!DNL Identity Serv
 * [[!DNL Identity Service]-overzicht](home.md)
 * [Naamgrafiekviewer](features/identity-graph-viewer.md)
 
-Raadpleeg de volgende documentatie voor meer informatie over andere Experience Platforms services guardrails, over end-to-end latentie-informatie en licentiegegevens uit Real-Time CDP Product Description-documenten:
+Raadpleeg de volgende documentatie voor meer informatie over andere Experience Platform Services-instructies, informatie over end-to-end latentie en licentiegegevens uit Real-Time CDP Product Description-documenten:
 
 * [Real-Time CDP guardrails](/help/rtcdp/guardrails/overview.md)
-* [ De diagrammen van de latentie van begin tot eind ](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/deployment/guardrails.html?lang=en#end-to-end-latency-diagrams) voor diverse diensten van het Experience Platform.
-* [ Real-time Customer Data Platform (B2C Uitgave - Primaire en Ultimate Pakketten) ](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)
-* [ Real-time Customer Data Platform (B2P - Primaire en Ultimate Pakketten) ](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html)
-* [ Real-time Customer Data Platform (B2B - Primaire en Ultimate Pakketten) ](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html)
+* [ de diagrammen van de de latentie van begin tot eind ](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/deployment/guardrails.html?lang=en#end-to-end-latency-diagrams) voor diverse diensten van Experience Platform.
+* [ Real-Time Customer Data Platform (B2C Uitgave - de Pakketten van Prime en van Ultimate) ](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)
+* [ Real-Time Customer Data Platform (B2P - de Pakketten van Prime en van Ultimate) ](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html)
+* [ Real-Time Customer Data Platform (B2B - de Pakketten van Prime en van Ultimate) ](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html)

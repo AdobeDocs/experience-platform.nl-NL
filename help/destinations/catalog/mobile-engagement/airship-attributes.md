@@ -3,10 +3,10 @@ keywords: kenmerken van het luchtschip;bestemming van het luchtschip
 title: Koppeling met kenmerken van het luchtschip
 description: Geef naadloos Adobe Audience Data door aan Airship als Audience Attributes voor Doelstelling binnen Airship.
 exl-id: bfc1b52f-2d68-40d6-9052-c2ee1e877961
-source-git-commit: 453884612e787439ea58f312d8080622ee0441f7
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1102'
-ht-degree: 0%
+source-wordcount: '1105'
+ht-degree: 3%
 
 ---
 
@@ -14,15 +14,15 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
->* Vanaf 25 maart 2025 ziet u twee [!DNL Airship Attributes] kaarten naast elkaar in de doelcatalogus. Dit is toe te schrijven aan een interne verbetering aan de bestemmingsdienst. De naam van de bestaande [!DNL Airship Attributes] doelconnector is gewijzigd in **[!UICONTROL (Deprecated) Airship Attributes]** en u hebt nu een nieuwe kaart met de naam **[!UICONTROL Airship Attributes]** beschikbaar.
+>* Vanaf 25 maart 2025 kunt u twee [!DNL Airship Attributes]-kaarten naast elkaar zien in de bestemmingencatalogus. Dit komt door een interne upgrade van de bestemmingsservice. De naam van de bestaande [!DNL Airship Attributes] doelconnector is gewijzigd in **[!UICONTROL (Deprecated) Airship Attributes]** en u hebt nu een nieuwe kaart met de naam **[!UICONTROL Airship Attributes]** beschikbaar.
 >* Gebruik de **[!UICONTROL Airship Attributes]** -verbinding in de catalogus voor nieuwe gegevensstromen voor activering. Als u actieve gegevens naar de **[!UICONTROL (Deprecated) Airship Attributes]** -bestemming hebt, worden deze automatisch bijgewerkt, zodat u geen actie hoeft te ondernemen.
 >* Als u dataflows door de [ Dienst API van de Stroom ](https://developer.adobe.com/experience-platform-apis/references/destinations/) creeert, moet u uw [!DNL flow spec ID] en [!DNL connection spec ID] aan de volgende waarden bijwerken:
->   * Stroomspecificatie-id: `a862e0be-966e-4e5a-80d3-1bb566461986`
->   * Verbindingsspecificatie-id: `594bc002-4a47-49b7-8a98-ac0d21045502`
+>   * Stroomspecificatie-ID: `a862e0be-966e-4e5a-80d3-1bb566461986`
+>   * Verbindingsspecificatie-ID: `594bc002-4a47-49b7-8a98-ac0d21045502`
 
 ## Overzicht {#overview}
 
-[!DNL Airship] is het toonaangevende platform voor betrokkenheid van klanten, waarmee u in elke fase van de levenscyclus van de klant betekenisvolle, gepersonaliseerde omnichannel berichten voor uw gebruikers kunt leveren.
+[!DNL Airship] is de toonaangevende Experience Platform voor betrokkenheid van klanten, die u helpt bij het leveren van betekenisvolle, gepersonaliseerde omnichannel berichten aan uw gebruikers in elke fase van de levenscyclus van de klant.
 
 Deze integratie gaat het profielgegevens van Adobe in [!DNL Airship] als [ Attributen ](https://docs.airship.com/guides/audience/attributes/) voor het richten van of het teweegbrengen over.
 
@@ -67,7 +67,7 @@ Raadpleeg de onderstaande tabel voor informatie over het exporttype en de export
 
 ## Kenmerken inschakelen {#enable-attributes}
 
-Adobe Experience Platform-profielkenmerken lijken op [!DNL Airship] -kenmerken en kunnen eenvoudig aan elkaar worden toegewezen in Platform met behulp van het toewijzingsgereedschap dat hieronder op deze pagina wordt getoond.
+Adobe Experience Platform-profielkenmerken lijken op [!DNL Airship] -kenmerken en kunnen in Experience Platform eenvoudig aan elkaar worden toegewezen met het toewijzingsgereedschap dat hieronder op deze pagina wordt getoond.
 
 [!DNL Airship] -projecten hebben verschillende vooraf gedefinieerde en standaardkenmerken. Als u een aangepast kenmerk hebt, moet u dit eerst definiëren in [!DNL Airship] . Zie [ Opstelling en beheer Attributen ](https://docs.airship.com/tutorials/audience/attributes/) voor details.
 
@@ -91,7 +91,7 @@ Gebruik profielgegevens die in Adobe Experience Platform zijn verzameld voor per
 
 ### Hoofdletters gebruiken #2
 
-Gebruik kenmerken van Adobe Experience Platform om [!DNL Airship] -profielen verder te verrijken en deze te combineren met SDK of [!DNL Airship] voorspellende gegevens. Een detailhandelaar kan bijvoorbeeld een publiek met loyaliteitsstatus en locatiegegevens (kenmerken van Platform) en [!DNL Airship] maken dat gegevens naar verwachting zal doorsturen om zeer gerichte berichten te verzenden naar gebruikers in de status van gouden loyaliteit die in Las Vegas, NV wonen en die een grote kans hebben om te worden afgespeeld.
+Gebruik kenmerken van Adobe Experience Platform om [!DNL Airship] -profielen verder te verrijken en deze te combineren met SDK of [!DNL Airship] voorspellende gegevens. Een retailer kan bijvoorbeeld een publiek met loyaliteitsstatus en locatiegegevens (kenmerken van Experience Platform) en [!DNL Airship] maken dat gegevens naar verwachting zal doorsturen om zeer gerichte berichten te verzenden naar gebruikers in de status van gouden loyaliteit die in Las Vegas, NV wonen en met een grote kans op churning.
 
 ## Verbinden met de bestemming {#connect}
 

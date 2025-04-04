@@ -2,9 +2,9 @@
 title: Google-advertenties verbinden met Experience Platform via de gebruikersinterface
 description: Leer hoe u uw Google Ads-account in de gebruikersinterface koppelt aan Adobe Experience Platform.
 exl-id: 33dd2857-aed3-4e35-bc48-1c756a8b3638
-source-git-commit: ac90eea69f493bf944a8f9920426a48d62faaa6c
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '833'
+source-wordcount: '834'
 ht-degree: 0%
 
 ---
@@ -94,4 +94,4 @@ Selecteer **[!UICONTROL Preview]** om een voorvertoning van de gegevens weer te 
 
 ## Een gegevensstroom maken voor het opnemen van advertentiegegevens
 
-Aan de hand van deze zelfstudie hebt u een verbinding tot stand gebracht met uw Google Ads-account. U kunt nu aan het volgende leerprogramma verdergaan en [ een dataflow vormen om reclamegegevens in Platform ](../../dataflow/advertising.md) te brengen.
+Aan de hand van deze zelfstudie hebt u een verbinding tot stand gebracht met uw Google Ads-account. U kunt nu aan het volgende leerprogramma verdergaan en [ een dataflow vormen om reclamegegevens in Experience Platform ](../../dataflow/advertising.md) te brengen.

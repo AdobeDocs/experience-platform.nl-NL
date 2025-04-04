@@ -3,9 +3,9 @@ title: Een Pendo Source Connection maken in de gebruikersinterface
 description: Leer hoe u een Pendo-bronverbinding maakt met de gebruikersinterface van Adobe Experience Platform.
 badge: Beta
 exl-id: defdec30-42af-43c8-b2eb-7ce98f7871e3
-source-git-commit: 8de45a54607bed17fd79bbed693666beb09c0502
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1147'
+source-wordcount: '1160'
 ht-degree: 0%
 
 ---
@@ -20,7 +20,7 @@ Deze zelfstudie bevat stappen voor het maken van een [!DNL Pendo] bronverbinding
 
 ## Aan de slag {#getting-started}
 
-Deze zelfstudie vereist een goed begrip van de volgende onderdelen van het Experience Platform:
+Deze zelfstudie vereist een goed begrip van de volgende onderdelen van Experience Platform:
 
 * [[!DNL Experience Data Model (XDM)]  Systeem ](../../../../../xdm/home.md): Het gestandaardiseerde kader waardoor [!DNL Experience Platform] gegevens van de klantenervaring organiseert.
    * [ Grondbeginselen van schemacompositie ](../../../../../xdm/schema/composition.md): Leer over de basisbouwstenen van schema&#39;s XDM, met inbegrip van zeer belangrijke principes en beste praktijken in schemacompositie.
@@ -51,25 +51,25 @@ Voordat u een [!DNL Pendo] -bronverbinding maakt, moet u een bronschema opgeven.
 
 Voor meer informatie, lees de [[!DNL Pendo]  gids op webhooks ](https://support.pendo.io/hc/en-us/articles/360032285012-Webhooks).
 
-### Een platformschema maken voor [!DNL Pendo] {#create-platform-schema}
+### Experience Platform-schema maken voor [!DNL Pendo] {#create-platform-schema}
 
-U moet er ook voor zorgen dat u eerst een platformschema maakt dat u voor uw bron kunt gebruiken. Zie het leerprogramma op [ creërend een schema van het Platform ](../../../../../xdm/schema/composition.md) voor uitvoerige stappen op hoe te om een schema tot stand te brengen.
+U moet er ook voor zorgen dat u eerst een Experience Platform-schema voor uw bron maakt. Zie het leerprogramma op [ creërend een schema van Experience Platform ](../../../../../xdm/schema/composition.md) voor uitvoerige stappen op hoe te om een schema tot stand te brengen.
 
-![ Platform UI die een voorbeeldschema voor Pendo toont.](../../../../images/tutorials/create/analytics-pendo-webhook/schema.png)
+![ UI die van Experience Platform een voorbeeldschema voor Pendo toont.](../../../../images/tutorials/create/analytics-pendo-webhook/schema.png)
 
 ## Sluit uw [!DNL Pendo] -account aan {#connect-account}
 
-Selecteer in de gebruikersinterface van het platform **[!UICONTROL Sources]** in de linkernavigatie voor toegang tot de werkruimte van [!UICONTROL Sources] en bekijk een catalogus met bronnen die beschikbaar zijn in het Experience Platform.
+Selecteer in de gebruikersinterface van Experience Platform **[!UICONTROL Sources]** in de linkernavigatie voor toegang tot de werkruimte van [!UICONTROL Sources] en bekijk een catalogus met bronnen die beschikbaar zijn in Experience Platform.
 
 Gebruik het menu *[!UICONTROL Categories]* om bronnen op categorie te filteren. U kunt ook een bronnaam invoeren in de zoekbalk om een specifieke bron uit de catalogus te zoeken.
 
 Ga naar de categorie [!UICONTROL Analytics] om de [!DNL Pendo] bronkaart te zien. Selecteer eerst **[!UICONTROL Add data]** .
 
-![ de BronUI van het Platform catalogus met de kaart van de Pen.](../../../../images/tutorials/create/analytics-pendo-webhook/catalog.png)
+![ de bron van Experience Platform UI catalogus met de kaart van de Buigmachine.](../../../../images/tutorials/create/analytics-pendo-webhook/catalog.png)
 
 ## Gegevens selecteren {#select-data}
 
-De stap **[!UICONTROL Select data]** wordt weergegeven en biedt een interface waarmee u de gegevens kunt selecteren die u naar Platform wilt verzenden.
+De stap **[!UICONTROL Select data]** wordt weergegeven en biedt een interface waarmee u de gegevens kunt selecteren die u naar Experience Platform wilt verzenden.
 
 * Het linkergedeelte van de interface is een browser waarmee u de beschikbare gegevensstromen binnen uw account kunt bekijken.
 * In het rechtergedeelte van de interface kunt u maximaal 100 rijen gegevens uit een JSON-bestand voorvertonen.
@@ -96,7 +96,7 @@ Selecteer **[!UICONTROL Next]** als u klaar bent.
 
 De stap [!UICONTROL Mapping] verschijnt, die u van een interface voorziet om de brongebieden van uw bronschema aan hun aangewezen doelXDM gebieden in het doelschema in kaart te brengen.
 
-Platform biedt intelligente aanbevelingen voor automatisch toegewezen velden op basis van het doelschema of de gegevensset die u hebt geselecteerd. U kunt toewijzingsregels handmatig aanpassen aan uw gebruiksgevallen. Op basis van uw behoeften kunt u ervoor kiezen om velden rechtstreeks toe te wijzen of gegevens prep-functies te gebruiken om brongegevens om berekende of berekende waarden af te leiden. Voor uitvoerige stappen bij het gebruiken van de kaartperinterface en berekende gebieden, zie de [ gids UI van de Prep van Gegevens ](../../../../../data-prep/ui/mapping.md).
+Experience Platform biedt intelligente aanbevelingen voor automatisch toegewezen velden op basis van het doelschema of de gegevensset die u hebt geselecteerd. U kunt toewijzingsregels handmatig aanpassen aan uw gebruiksgevallen. Op basis van uw behoeften kunt u ervoor kiezen om velden rechtstreeks toe te wijzen of gegevens prep-functies te gebruiken om brongegevens om berekende of berekende waarden af te leiden. Voor uitvoerige stappen bij het gebruiken van de kaartperinterface en berekende gebieden, zie de [ gids UI van de Prep van Gegevens ](../../../../../data-prep/ui/mapping.md).
 
 De onderstaande toewijzingen zijn verplicht en moeten worden ingesteld voordat u naar het [!UICONTROL Review] -werkgebied gaat.
 
@@ -121,7 +121,7 @@ Nadat u de gegevensstroom hebt gereviseerd, selecteert u **[!UICONTROL Finish]**
 
 ## Uw URL voor het streamingeindpunt ophalen {#get-streaming-endpoint-url}
 
-Wanneer uw streaminggegevens zijn gemaakt, kunt u nu de URL van het streamingeindpunt ophalen. Dit eindpunt zal worden gebruikt om aan uw webhaak in te tekenen, toestaand uw het stromen bron om met Experience Platform te communiceren.
+Wanneer uw streaminggegevens zijn gemaakt, kunt u nu de URL van het streamingeindpunt ophalen. Dit eindpunt wordt gebruikt om een abonnement te nemen op uw webhaak, zodat uw streamingbron kan communiceren met Experience Platform.
 
 Als u de URL wilt maken die wordt gebruikt om de webhaak op [!DNL Pendo] te configureren, moet u het volgende ophalen:
 
@@ -144,11 +144,11 @@ Nadat u de webhaak hebt gemaakt, navigeert u naar de instellingenpagina van de [
 
 >[!TIP]
 >
->U kunt zich abonneren op verschillende categorieën gebeurtenissen om het type gebeurtenissen te bepalen dat u van uw [!DNL Pendo] -instantie naar Platform wilt verzenden. Voor meer informatie over de verschillende gebeurtenissen, gelieve te verwijzen naar de [[!DNL Pendo]  documentatie ](https://support.pendo.io/hc/en-us/articles/360032285012-Webhooks#create-a-webhook-0-4).
+>U kunt zich abonneren op verschillende categorieën gebeurtenissen om het type gebeurtenissen te bepalen dat u van uw [!DNL Pendo] -instantie naar Experience Platform wilt verzenden. Voor meer informatie over de verschillende gebeurtenissen, gelieve te verwijzen naar de [[!DNL Pendo]  documentatie ](https://support.pendo.io/hc/en-us/articles/360032285012-Webhooks#create-a-webhook-0-4).
 
 ## Volgende stappen {#next-steps}
 
-Aan de hand van deze zelfstudie hebt u een streaminggegevensstroom geconfigureerd om uw [!DNL Pendo] -gegevens naar het Experience Platform te brengen. Om de gegevens te controleren die worden opgenomen, verwijs naar de gids bij [ controle die dataflows gebruikend Platform UI ](../../monitor-streaming.md) stromen.
+Aan de hand van deze zelfstudie hebt u een streaminggegevensstroom geconfigureerd om uw [!DNL Pendo] -gegevens over te brengen naar Experience Platform. Om de gegevens te controleren die worden opgenomen, verwijs naar de gids bij [ controle die dataflows gebruikend Experience Platform UI ](../../monitor-streaming.md) stromen.
 
 ## Aanvullende bronnen {#additional-resources}
 
@@ -162,15 +162,15 @@ Voer de onderstaande stappen uit om te controleren of u de bron juist hebt inges
 
 {het schermschot van 0} van de Buigmachine UI die praatjegeschiedenis toont ](../../../../images/tutorials/create/analytics-pendo-webhook/pendo-events.png)![
 
-* Selecteer in de interface Platform de optie **[!UICONTROL View Dataflows]** naast het kaartmenu [!DNL Pendo] in de catalogus met bronnen. Selecteer vervolgens **[!UICONTROL Preview dataset]** om de gegevens te verifiëren die zijn ingevoerd voor de webhooks die u hebt geconfigureerd in [!DNL Pendo] .
+* Selecteer in de gebruikersinterface van Experience Platform de optie **[!UICONTROL View Dataflows]** naast het kaartmenu [!DNL Pendo] in de catalogus met bronnen. Selecteer vervolgens **[!UICONTROL Preview dataset]** om de gegevens te verifiëren die zijn ingevoerd voor de webhooks die u hebt geconfigureerd in [!DNL Pendo] .
 
-{het schermschot van het platform UI die ingebedde gebeurtenissen ](../../../../images/tutorials/create/analytics-pendo-webhook/platform-dataset.png) tonen![
+{het schermschot van 0} Experience Platform UI die ingebedde gebeurtenissen ](../../../../images/tutorials/create/analytics-pendo-webhook/platform-dataset.png) toont![
 
 ### Fouten en problemen oplossen {#errors-and-troubleshooting}
 
 Bij het controleren van een gegevensstroomuitvoering kan het volgende foutbericht optreden: `The message can't be validated ... uniqueID:expected minLength:1, actual 0].`
 
-{het schermschot van het platform UI die fout toont.](../../../../images/tutorials/create/analytics-pendo-webhook/error.png)![
+{het schermschot van 0} Experience Platform UI die fout toont.](../../../../images/tutorials/create/analytics-pendo-webhook/error.png)![
 
 Om deze fout te bevestigen, moet u verifiëren dat de ** afbeelding uniqueID opstelling is geweest. Voor extra begeleiding, verwijs naar de [ Mpping ](#mapping) sectie.
 

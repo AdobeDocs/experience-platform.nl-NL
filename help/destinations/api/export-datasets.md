@@ -4,9 +4,9 @@ title: De datasets van de uitvoer door de Dienst API van de Stroom te gebruiken
 description: Leer hoe te om de Dienst API van de Stroom te gebruiken om datasets naar uitgezochte bestemmingen uit te voeren.
 type: Tutorial
 exl-id: f23a4b22-da04-4b3c-9b0c-790890077eaa
-source-git-commit: 6f8922f972546d8cceeba63e1bb4d1a75f7ef5c3
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '5134'
+source-wordcount: '5137'
 ht-degree: 0%
 
 ---
@@ -15,11 +15,11 @@ ht-degree: 0%
 
 >[!AVAILABILITY]
 >
->* Deze functionaliteit is beschikbaar voor klanten die het Real-Time CDP Prime- en Ultimate-pakket, Adobe Journey Optimizer of Customer Journey Analytics hebben aangeschaft. Neem contact op met uw Adobe voor meer informatie.
+>* Deze functionaliteit is beschikbaar voor klanten die het Real-Time CDP Prime- en Ultimate-pakket, Adobe Journey Optimizer of Customer Journey Analytics hebben aangeschaft. Neem contact op met uw Adobe-vertegenwoordiger voor meer informatie.
 
 >[!IMPORTANT]
 >
->**het punt van de Actie**: De [ versie van 2024 van Experience Platform ](/help/release-notes/latest/latest.md#destinations) introduceert de optie om een `endTime` datum voor de gegevensstroom van de uitvoerdataset te plaatsen. De Adobe introduceert ook een standaardeinddatum van 1 Mei 2025 voor alle gegevens van de datasetuitvoer dataflows die *voorafgaand aan de versie van september* worden gecreeerd. Voor om het even welke dataflows, moet u de einddatum in dataflow manueel vóór de einddatum bijwerken, anders uw uitvoer voor stop op die datum. Gebruik het Experience Platform UI om te bekijken welke dataflows aan einde op 1 Mei zullen worden geplaatst.
+>**het punt van de Actie**: De [ versie van 2024 van Experience Platform ](/help/release-notes/latest/latest.md#destinations) introduceert de optie om een `endTime` datum voor de gegevensstroom van de uitvoerdataset te plaatsen. Adobe introduceert ook een standaardeinddatum van 1 Mei 2025 voor alle dataflows van de datasetuitvoer die *voorafgaand aan de versie van september* worden gecreeerd. Voor om het even welke dataflows, moet u de einddatum in dataflow manueel vóór de einddatum bijwerken, anders uw uitvoer voor stop op die datum. Gebruik de gebruikersinterface van Experience Platform om te bekijken welke dataflows op 1 mei worden ingesteld.
 >
 >Op dezelfde manier voor dataflows die u maakt zonder een `endTime` -datum op te geven, worden deze standaard ingesteld op een eindtijd van zes maanden vanaf het tijdstip waarop ze worden gemaakt.
 
@@ -34,11 +34,11 @@ Dit artikel verklaart het werkschema wordt vereist om [!DNL Flow Service API] te
 
 >[!TIP]
 >
->U kunt het gebruikersinterface van het Experience Platform ook gebruiken om datasets uit te voeren. Lees het [ leerprogramma van de de uitvoerdatasets UI ](/help/destinations/ui/export-datasets.md) voor meer informatie.
+>U kunt de gebruikersinterface van Experience Platform ook gebruiken om datasets uit te voeren. Lees het [ leerprogramma van de de uitvoerdatasets UI ](/help/destinations/ui/export-datasets.md) voor meer informatie.
 
 ## Beschikbare gegevensbestanden voor exporteren {#datasets-to-export}
 
-De gegevenssets die u kunt exporteren, zijn afhankelijk van de toepassing Experience Platform (Real-Time CDP, Adobe Journey Optimizer), de laag (Prime of Ultimate) en alle invoegtoepassingen die u hebt aangeschaft (bijvoorbeeld Data Distiller).
+De gegevenssets die u kunt exporteren, zijn afhankelijk van de Experience Platform-toepassing (Real-Time CDP, Adobe Journey Optimizer), de laag (Prime of Ultimate) en alle invoegtoepassingen die u hebt aangeschaft (bijvoorbeeld Data Distiller).
 
 Verwijs naar de [ lijst op de pagina van het UI leerprogramma ](/help/destinations/ui/export-datasets.md#datasets-to-export) om te begrijpen welke datasets u kunt uitvoeren.
 
@@ -62,9 +62,9 @@ Momenteel, kunt u datasets naar de bestemmingen van de wolkenopslag uitvoeren di
 Deze handleiding vereist een goed begrip van de volgende onderdelen van Adobe Experience Platform:
 
 * [[!DNL Experience Platform datasets]](/help/catalog/datasets/overview.md): alle gegevens die met succes in Adobe Experience Platform worden opgenomen, blijven in [!DNL Data Lake] als gegevenssets behouden. Een dataset is een opslag en beheersconstructie voor een inzameling van gegevens, typisch een lijst, die een schema (kolommen) en gebieden (rijen) bevat. Datasets bevatten ook metagegevens die verschillende aspecten van de gegevens beschrijven die ze opslaan.
-   * [[!DNL Sandboxes]](../../sandboxes/home.md): [!DNL Experience Platform] biedt virtuele sandboxen die één [!DNL Platform] -instantie in afzonderlijke virtuele omgevingen verdelen om toepassingen voor digitale ervaringen te ontwikkelen en te ontwikkelen.
+   * [[!DNL Sandboxes]](../../sandboxes/home.md): [!DNL Experience Platform] biedt virtuele sandboxen die één [!DNL Experience Platform] -instantie in afzonderlijke virtuele omgevingen verdelen om toepassingen voor digitale ervaringen te ontwikkelen en te ontwikkelen.
 
-De volgende secties verstrekken extra informatie die u moet weten om datasets naar de bestemmingen van de wolkenopslag in Platform uit te voeren.
+De volgende secties verstrekken extra informatie die u moet weten om datasets naar de bestemmingen van de wolkenopslag in Experience Platform uit te voeren.
 
 ### Vereiste machtigingen {#permissions}
 
@@ -78,13 +78,13 @@ Deze zelfstudie biedt voorbeeld-API-aanroepen om aan te tonen hoe uw verzoeken m
 
 ### Waarden verzamelen voor vereiste en optionele koppen {#gather-values-headers}
 
-Om vraag aan [!DNL Platform] APIs te maken, moet u het [ Experience Platform authentificatieleerprogramma ](https://www.adobe.com/go/platform-api-authentication-en) eerst voltooien. Als u de zelfstudie over verificatie voltooit, krijgt u de waarden voor elk van de vereiste headers in alle API-aanroepen van [!DNL Experience Platform] , zoals hieronder wordt getoond:
+Om vraag aan [!DNL Experience Platform] APIs te maken, moet u het [ de authentificatieleerprogramma van Experience Platform ](https://www.adobe.com/go/platform-api-authentication-en) eerst voltooien. Als u de zelfstudie over verificatie voltooit, krijgt u de waarden voor elk van de vereiste headers in alle API-aanroepen van [!DNL Experience Platform] , zoals hieronder wordt getoond:
 
 * Autorisatie: Drager `{ACCESS_TOKEN}`
 * x-api-key: `{API_KEY}`
 * x-gw-ims-org-id: `{ORG_ID}`
 
-Bronnen in [!DNL Experience Platform] kunnen worden geïsoleerd naar specifieke virtuele sandboxen. In aanvragen voor [!DNL Platform] API&#39;s kunt u de naam en id opgeven van de sandbox waarin de bewerking plaatsvindt. Dit zijn optionele parameters.
+Bronnen in [!DNL Experience Platform] kunnen worden geïsoleerd naar specifieke virtuele sandboxen. In aanvragen voor [!DNL Experience Platform] API&#39;s kunt u de naam en id opgeven van de sandbox waarin de bewerking plaatsvindt. Dit zijn optionele parameters.
 
 * x-sandbox-name: `{SANDBOX_NAME}`
 
@@ -92,7 +92,7 @@ Bronnen in [!DNL Experience Platform] kunnen worden geïsoleerd naar specifieke 
 >
 >Voor meer informatie over zandbakken in [!DNL Experience Platform], zie de [ documentatie van het zandbakoverzicht ](../../sandboxes/home.md).
 
-Alle verzoeken die een nuttige lading (POST, PUT, PATCH) bevatten vereisen een extra media type kopbal:
+Alle verzoeken die een lading (POST, PUT, PATCH) bevatten vereisen een extra media typekopbal:
 
 * Inhoudstype: `application/json`
 
@@ -2446,7 +2446,7 @@ U kunt informatie over de [ diverse parameters vinden die door de looppasAPI van
 
 Bij het exporteren van gegevenssets maakt Experience Platform een `.json` - of `.parquet` -bestand op de opslaglocatie die u hebt opgegeven. Verwacht een nieuw dossier dat in uw opslagplaats volgens het de uitvoerprogramma moet worden gedeponeerd u verstrekte toen [ creërend een dataflow ](#create-dataflow).
 
-Experience Platform leidt tot een omslagstructuur in de opslagplaats u specificeerde, waar het de uitgevoerde datasetdossiers bewaart. Voor elke exporttijd wordt een nieuwe map gemaakt volgens het onderstaande patroon:
+Experience Platform maakt een mappenstructuur op de opslaglocatie die u hebt opgegeven, waar de geëxporteerde gegevenssetbestanden worden opgeslagen. Voor elke exporttijd wordt een nieuwe map gemaakt volgens het onderstaande patroon:
 
 `folder-name-you-provided/datasetID/exportTime=YYYYMMDDHHMM`
 
@@ -2468,7 +2468,7 @@ Houd rekening met het verschil in bestandsindeling tussen de twee bestandstypen 
 
 ## API-foutafhandeling {#api-error-handling}
 
-De API-eindpunten in deze zelfstudie volgen de algemene beginselen van het API-foutbericht voor Experience Platforms. Verwijs naar [ API statuscodes ](/help/landing/troubleshooting.md#api-status-codes) en [ de fouten van de verzoekkopbal ](/help/landing/troubleshooting.md#request-header-errors) in de het oplossen van problemengids van het Platform voor meer informatie bij het interpreteren van foutenreacties.
+De API-eindpunten in deze zelfstudie volgen de algemene beginselen van het Experience Platform API-foutbericht. Verwijs naar [ API statuscodes ](/help/landing/troubleshooting.md#api-status-codes) en [ de fouten van de verzoekkopbal ](/help/landing/troubleshooting.md#request-header-errors) in de het oplossen van problemengids van Experience Platform voor meer informatie bij het interpreteren van foutenreacties.
 
 ## Bekende beperkingen {#known-limitations}
 
@@ -2480,7 +2480,7 @@ Bekijk a [ lijst van vaak gestelde vragen ](/help/destinations/ui/export-dataset
 
 ## Volgende stappen {#next-steps}
 
-Door deze zelfstudie te volgen, hebt u Platform met succes verbonden met één van uw aangewezen bestemmingen van de de opslagopslag van de partijwolk en opstelling een dataflow aan de respectieve bestemming om datasets uit te voeren. Zie de volgende pagina&#39;s voor meer informatie, zoals hoe u bestaande gegevensstromen kunt bewerken met de Flow Service API:
+Door deze zelfstudie te volgen, hebt u Experience Platform met succes verbonden met een van uw voorkeursbestemmingen voor de opslag van batchwolken en een gegevensstroom ingesteld naar de respectievelijke bestemming om gegevenssets te exporteren. Zie de volgende pagina&#39;s voor meer informatie, zoals hoe u bestaande gegevensstromen kunt bewerken met de Flow Service API:
 
 * [Overzicht van doelen](../home.md)
 * [Overzicht van de doelcatalogus](../catalog/overview.md)

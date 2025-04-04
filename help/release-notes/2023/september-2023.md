@@ -2,10 +2,10 @@
 title: Aanvullende informatie van september 2023 voor Adobe Experience Platform
 description: Aanvullende informatie voor de versie van september 2023 voor Adobe Experience Platform.
 exl-id: ff7fb0c1-6941-4339-8648-58f9b9e9a91f
-source-git-commit: 2d640b282feb783694276c69366b1fccadddfd78
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '2240'
-ht-degree: 29%
+source-wordcount: '2244'
+ht-degree: 27%
 
 ---
 
@@ -37,7 +37,7 @@ Met behulp van berekende kenmerken kunt u gebeurtenisgegevens eenvoudig samenvat
 
 ## Waarschuwingen {#alerts}
 
-Met Experience Platform kunt u zich aanmelden voor gebeurtenisgebaseerde waarschuwingen voor verschillende platformactiviteiten. U kunt zich aanmelden op verschillende waarschuwingsregels via het tabblad [!UICONTROL Alerts] in de gebruikersinterface van het platform, en u kunt ervoor kiezen waarschuwingsmeldingen te ontvangen in de gebruikersinterface zelf of via e-mailberichten.
+Met Experience Platform kunt u zich abonneren op waarschuwingen die zijn gebaseerd op gebeurtenissen voor verschillende Experience Platform-activiteiten. U kunt zich abonneren op verschillende waarschuwingsregels via het tabblad [!UICONTROL Alerts] in de Experience Platform-gebruikersinterface en u kunt ervoor kiezen waarschuwingsberichten te ontvangen in de gebruikersinterface zelf of via e-mailberichten.
 
 **Nieuwe of bijgewerkte functies**
 
@@ -103,7 +103,7 @@ Experience Platform biedt een reeks mogelijkheden voor gegevenshygiëne waarmee 
 
 {style="table-layout:auto"}
 
-Voor meer informatie over de mogelijkheden van de gegevenshygiëne van het Platform, verwijs naar het [ overzicht van de gegevenshygiëne ](../../hygiene/home.md).
+Voor meer informatie over de mogelijkheden van de gegevenshygiëne van Experience Platform, verwijs naar het [ overzicht van de gegevenshygiëne ](../../hygiene/home.md).
 
 ## Bestemmingen {#destinations}
 
@@ -180,7 +180,7 @@ XDM is een open-bronspecificatie die algemene structuren en definities (schema&#
 
 {style="table-layout:auto"}
 
-Voor meer informatie over XDM in Platform, zie het [ XDM overzicht van het Systeem ](../../xdm/home.md)
+Voor meer informatie over XDM in Experience Platform, zie het [ XDM overzicht van het Systeem ](../../xdm/home.md)
 
 ## Identiteitsservice {#identity-service}
 
@@ -214,7 +214,7 @@ Voor meer informatie over Query-services raadpleegt u het [overzicht van Query-s
 
 ## Segmentatieservice {#segmentation}
 
-Met [!DNL Segmentation Service] kunt u gegevens die zijn opgeslagen in [!DNL Experience Platform] en die betrekking hebben op personen (zoals klanten, prospects, gebruikers of organisaties) segmenteren in doelgroepen. U kunt doelgroepen maken via segmentdefinities of andere bronnen op basis van uw [!DNL Real-Time Customer Profile]-gegevens. Deze doelgroepen worden centraal geconfigureerd en onderhouden op [!DNL Platform], en zijn gemakkelijk toegankelijk via elke Adobe-toepassing.
+Met [!DNL Segmentation Service] kunt u gegevens die zijn opgeslagen in [!DNL Experience Platform] en die betrekking hebben op personen (zoals klanten, prospects, gebruikers of organisaties) segmenteren in doelgroepen. U kunt doelgroepen maken via segmentdefinities of andere bronnen op basis van uw [!DNL Real-Time Customer Profile]-gegevens. Deze doelgroepen worden centraal geconfigureerd en onderhouden op [!DNL Experience Platform], en zijn gemakkelijk toegankelijk via elke Adobe-toepassing.
 
 **Nieuwe of bijgewerkte functies**
 

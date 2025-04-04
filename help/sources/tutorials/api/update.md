@@ -2,9 +2,9 @@
 title: Accounts bijwerken met de Flow Service API
 description: In deze zelfstudie worden de stappen beschreven voor het bijwerken van de gegevens en referenties van een account met behulp van de Flow Service API.
 exl-id: a93385fd-ed36-457f-8882-41e37f6f209d
-source-git-commit: 9e1edaa4183a8025b8391f58d480063adc834616
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '539'
+source-wordcount: '544'
 ht-degree: 0%
 
 ---
@@ -25,16 +25,16 @@ Voor deze zelfstudie moet u beschikken over een bestaande verbinding en een geld
 
 Voor deze zelfstudie hebt u ook een goed inzicht nodig in de volgende onderdelen van Adobe Experience Platform:
 
-* [ Bronnen ](../../home.md): Experience Platform staat gegevens toe om van diverse bronnen worden opgenomen terwijl het voorzien van u van de capaciteit om, inkomende gegevens te structureren te etiketteren en te verbeteren gebruikend de diensten van het Platform.
-* [ Sandboxes ](../../../sandboxes/home.md): Experience Platform verstrekt virtuele zandbakken die één enkele instantie van het Platform in afzonderlijke virtuele milieu&#39;s verdelen helpen digitale ervaringstoepassingen ontwikkelen en ontwikkelen.
+* [ Bronnen ](../../home.md): Experience Platform staat gegevens toe om van diverse bronnen worden opgenomen terwijl het voorzien van u van de capaciteit om, inkomende gegevens te structureren te etiketteren en te verbeteren gebruikend de diensten van Experience Platform.
+* [ Sandboxes ](../../../sandboxes/home.md): Experience Platform verstrekt virtuele zandbakken die één enkele instantie van Experience Platform in afzonderlijke virtuele milieu&#39;s verdelen helpen digitale ervaringstoepassingen ontwikkelen en ontwikkelen.
 
-### Platform-API&#39;s gebruiken
+### Experience Platform API&#39;s gebruiken
 
-Voor informatie over hoe te om vraag aan Platform APIs met succes te maken, zie de gids op [ begonnen wordt met Platform APIs ](../../../landing/api-guide.md).
+Voor informatie over hoe te om vraag aan Experience Platform APIs met succes te maken, zie de gids op [ begonnen wordt met Experience Platform APIs ](../../../landing/api-guide.md).
 
 ## Verbindingsdetails opzoeken
 
-De eerste stap bij het bijwerken van uw verbinding is het terugwinnen van zijn details gebruikend uw verbindingsidentiteitskaart Als u de huidige gegevens van uw verbinding wilt ophalen, vraagt u de GET aan de [!DNL Flow Service] API terwijl u de verbinding-id opgeeft, van de verbinding die u wilt bijwerken.
+De eerste stap bij het bijwerken van uw verbinding is het terugwinnen van zijn details gebruikend uw verbindingsidentiteitskaart Als u de huidige gegevens van uw verbinding wilt ophalen, vraagt u een GET-aanvraag naar de [!DNL Flow Service] API en geeft u de verbinding-id op van de verbinding die u wilt bijwerken.
 
 **API formaat**
 
@@ -99,7 +99,7 @@ Een succesvolle reactie keert de huidige details van uw verbinding met inbegrip 
 
 ## Verbinding bijwerken
 
-Als u de naam, beschrijving en referenties van uw verbinding wilt bijwerken, voert u een PATCH-aanvraag uit naar de API van [!DNL Flow Service] en geeft u uw verbinding-id, versie en de nieuwe informatie op die u wilt gebruiken.
+Als u de naam, beschrijving en referenties van uw verbinding wilt bijwerken, voert u een PATCH-aanvraag uit naar de [!DNL Flow Service] API en geeft u uw verbinding-id, versie en de nieuwe informatie op die u wilt gebruiken.
 
 >[!IMPORTANT]
 >
@@ -158,7 +158,7 @@ curl -X PATCH \
 
 **Reactie**
 
-Een succesvolle reactie retourneert uw verbindings-id en een bijgewerkt label. U kunt de update verifiëren door een aanvraag voor een GET in te dienen bij de [!DNL Flow Service] API en tegelijk uw verbinding-id op te geven.
+Een succesvolle reactie retourneert uw verbindings-id en een bijgewerkt label. U kunt de update verifiëren door een GET-aanvraag in te dienen bij de [!DNL Flow Service] API en tegelijkertijd uw verbinding-id op te geven.
 
 ```json
 {

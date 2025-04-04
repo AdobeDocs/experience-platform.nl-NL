@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Overzicht van toegangsbeheer
 description: Via de Adobe Admin Console wordt het toegangsbeheer voor Adobe Experience Platform verzorgd. Deze functionaliteit maakt gebruik van productprofielen in Admin Console, die gebruikers koppelen aan machtigingen en sandboxen.
 exl-id: 591d59ad-2784-4ae4-a509-23649ce712c9
-source-git-commit: 50d768eeb0dc8fa85af113db7790ad3e3258ea64
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '3222'
+source-wordcount: '3224'
 ht-degree: 0%
 
 ---
@@ -202,7 +202,7 @@ In de volgende tabel worden de beschikbare machtigingen voor Experience Platform
 | [!DNL Data Governance] | [!UICONTROL Manage Usage Labels] | Toegang tot het lezen, maken en verwijderen van gebruikslabels. |
 | [!DNL Data Governance] | [!UICONTROL Manage Data Usage Policies] | Toegang tot het lezen, maken, bewerken en verwijderen van beleidsregels voor gegevensgebruik. |
 | [!DNL Data Governance] | [!UICONTROL View Data Usage Policies] | Alleen-lezen toegang voor beleidsregels voor gegevensgebruik die tot uw organisatie behoren. |
-| [!DNL Data Governance] | [!UICONTROL View User Activity Log] | Read-only toegang tot mening registreerde [ controlelogboeken ](../landing/governance-privacy-security/audit-logs/overview.md) van de activiteiten van het Platform. |
+| [!DNL Data Governance] | [!UICONTROL View User Activity Log] | Read-only toegang tot mening registreerde [ controlelogboeken ](../landing/governance-privacy-security/audit-logs/overview.md) van de activiteiten van Experience Platform. |
 | [!DNL Data Governance] | [!UICONTROL View Privacy Console] | Alleen-lezen toegang tot privacyconsoles. |
 | [!DNL Data Ingestion] | [!UICONTROL Manage Sources] | Toegang tot bronnen lezen, maken, bewerken en uitschakelen. |
 | [!DNL Data Ingestion] | [!UICONTROL View Sources] | Alleen-lezen toegang tot beschikbare bronnen op het tabblad **[!UICONTROL Catalog]** en geverifieerde bronnen op het tabblad **[!UICONTROL Browse]** . |
@@ -281,7 +281,7 @@ In de volgende tabel worden de beschikbare machtigingen voor Experience Platform
 | [!DNL Profile Management] | [!UICONTROL Manage Profile Settings] | Toegang tot alle profielinstellingen lezen en bewerken. |
 | [!DNL Prospects] | [!UICONTROL View Prospects] | Alleen-lezen toegang tot perspectiefschema&#39;s, profielen, doelgroepen en de perspectiefaccordeon. |
 | [!DNL Prospects] | [!UICONTROL Manage Prospects] | Mogelijkheid om perspectiefschema&#39;s, profielen en doelgroepen te maken en te beheren. Alleen-lezen toegang tot de perspectiefaccordeon. |
-| [!DNL Query Service] | [!UICONTROL Manage Queries] | Toegang tot het lezen, creëren, uitgeven, en schrappen van gestructureerde SQL vragen voor de gegevens van het Platform. |
+| [!DNL Query Service] | [!UICONTROL Manage Queries] | Toegang tot het lezen, maken, bewerken en verwijderen van gestructureerde SQL-query&#39;s voor Experience Platform-gegevens. |
 | [!DNL Query Service] | [!UICONTROL Manage Query Service Integration] | Toegang tot het creëren, bijwerken, en schrappen van niet-vervallende geloofsbrieven voor de toegang van de Dienst van de Vraag. |
 | [!DNL Query Service] | [!UICONTROL Manage Query Sessions] | Mogelijkheid om bestaande sessies te verwijderen. |
 | [!DNL Query Service] | [!UICONTROL Manage Allow List] | Mogelijkheid om IP-beperkingen voor uw organisatie te beheren. |

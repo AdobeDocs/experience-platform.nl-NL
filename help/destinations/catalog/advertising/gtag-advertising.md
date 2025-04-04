@@ -1,11 +1,11 @@
 ---
 keywords: gtag;google gtag;google extension;google gtag extension;GTAG
 title: Google-tag-extensie
-description: De Google-tag-extensie is een advertentiebestemming in Adobe Experience Platform. Zie de extensiepagina over Adobe Exchange voor meer informatie over de extensiefunctionaliteit.
+description: De Google-tag-extensie is een advertentiebestemming in Adobe Experience Platform. Zie de extensiepagina op Adobe Exchange voor meer informatie over de extensiefunctionaliteit.
 exl-id: 14a466f2-78a0-4493-93cd-3dcdae048042
-source-git-commit: c3f6650df5fabe9736e4b11a43c41ae39f014425
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '506'
+source-wordcount: '510'
 ht-degree: 0%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
->De hier beschreven Google-tagextensie is vervangen door de extensie [[!DNL Google Global Site Tag (gtag)] ](https://exchange.adobe.com/apps/ec/101437/google-global-site-tag-gtag) die is ontwikkeld door [!DNL Acronym] . U kunt de extensie [!DNL Google Global Site Tag (gtag)] vinden in de [[!UICONTROL Tags]](../../../tags/home.md) -werkruimte in de gebruikersinterface van de gegevensverzameling of de gebruikersinterface van het Experience Platform.
+>De hier beschreven Google-tagextensie is vervangen door de extensie [[!DNL Google Global Site Tag (gtag)] ](https://exchange.adobe.com/apps/ec/101437/google-global-site-tag-gtag) die is ontwikkeld door [!DNL Acronym] . U kunt de extensie [!DNL Google Global Site Tag (gtag)] vinden in de [[!UICONTROL Tags]](../../../tags/home.md) -werkruimte in de gebruikersinterface van de gegevensverzameling of de gebruikersinterface van Experience Platform.
 
 ## Overzicht {#overview}
 
@@ -22,13 +22,13 @@ Laad Google `gtag.js` in uw site om gebeurtenisgegevens naar [!DNL Google Analyt
 
 Google gtag is een advertentie-uitbreiding in Adobe Experience Platform. Voor meer informatie over de uitbreidingsfunctionaliteit, zie de uitbreidingspagina op [ Adobe Exchange ](https://exchange.adobe.com/experiencecloud.details.102805.google-gtag.html).
 
-Dit doel is een tagextensie. Voor meer informatie over hoe de markeringsuitbreidingen in Platform werken, zie het [ overzicht van markeringsuitbreidingen ](../launch-extensions/overview.md).
+Dit doel is een tagextensie. Voor meer informatie over hoe de markeringsuitbreidingen in Experience Platform werken, zie het [ overzicht van markeringsuitbreidingen ](../launch-extensions/overview.md).
 
 ![ Google gtag uitbreiding ](../../assets/catalog/advertising/gtag-advertising/catalog.png)
 
 ## Vereisten {#prerequisites}
 
-Deze extensie is beschikbaar in de catalogus [!DNL Destinations] voor alle klanten die Platform hebben aangeschaft.
+Deze extensie is beschikbaar in de catalogus [!DNL Destinations] voor alle klanten die Experience Platform hebben aangeschaft.
 
 Als u deze extensie wilt gebruiken, hebt u toegang tot tags in Adobe Experience Platform nodig. Tags worden aan Adobe Experience Cloud-klanten aangeboden als een inbegrepen, waardetoevoegend element. Neem contact op met de systeembeheerder van uw organisatie om toegang tot tags te krijgen en vraag hen om u de **[!UICONTROL manage_properties]** -machtiging te verlenen zodat u extensies kunt installeren.
 
@@ -36,7 +36,7 @@ Als u deze extensie wilt gebruiken, hebt u toegang tot tags in Adobe Experience 
 
 De Google-tagextensie installeren:
 
-In de [ interface van het Platform ](https://platform.adobe.com/), ga **[!UICONTROL Destinations]** > **[!UICONTROL Catalog]**.
+In de [ interface van Experience Platform ](https://platform.adobe.com/), ga **[!UICONTROL Destinations]** > **[!UICONTROL Catalog]**.
 
 Selecteer de extensie in de catalogus of gebruik de zoekbalk.
 
@@ -62,6 +62,6 @@ U kunt extensies configureren, upgraden en verwijderen in de gebruikersinterface
 
 >[!TIP]
 >
->Als de extensie al op een van uw eigenschappen is geïnstalleerd, wordt de interface van het platform nog steeds **[!UICONTROL Install]** weergegeven voor de extensie. Kik van het installatiewerkschema zoals die in [ wordt beschreven installeer uitbreiding ](#install-extension) om uw uitbreiding te vormen of te schrappen.
+>Als de extensie al op een van uw eigenschappen is geïnstalleerd, wordt de gebruikersinterface van Experience Platform nog steeds **[!UICONTROL Install]** voor de extensie weergegeven. Kik van het installatiewerkschema zoals die in [ wordt beschreven installeer uitbreiding ](#install-extension) om uw uitbreiding te vormen of te schrappen.
 
 Om uw uitbreiding te bevorderen, zie de gids op het [ proces van de uitbreidingsverbetering ](../../../tags/ui/managing-resources/extensions/extension-upgrade.md) in de tagdocumentatie.

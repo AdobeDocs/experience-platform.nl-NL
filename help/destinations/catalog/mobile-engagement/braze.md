@@ -4,7 +4,7 @@ title: Braze verbinding
 description: Braze is een uitgebreid platform voor klantbetrokkenheid dat relevante en gedenkwaardige ervaringen tussen klanten en de merken die ze leuk vinden, mogelijk maakt.
 last-substantial-update: 2024-08-20T00:00:00Z
 exl-id: 508e79ee-7364-4553-b153-c2c00cc85a73
-source-git-commit: 2b84b5106105339ab243a9f4412b47692caedf3c
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '1070'
 ht-degree: 0%
@@ -51,7 +51,7 @@ In deze sectie wordt beschreven welke soorten publiek u naar dit doel kunt expor
 
 | Oorsprong publiek | Ondersteund | Beschrijving |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | ✓ | Het publiek produceerde door de Dienst van de Segmentatie van het Experience Platform [ ](../../../segmentation/home.md). |
+| [!DNL Segmentation Service] | ✓ | Het publiek produceerde door de Dienst van de Segmentatie van Experience Platform [ ](../../../segmentation/home.md). |
 | Aangepaste uploads | ✓ | Het publiek [ ingevoerde ](../../../segmentation/ui/audience-portal.md#import-audience) in Experience Platform van Csv- dossiers. |
 
 {style="table-layout:auto"}
@@ -108,7 +108,7 @@ Zie [ publieksgegevens aan het stromen publiek de uitvoerbestemmingen ](../../ui
 
 Als u de publieksgegevens correct vanuit [!DNL Adobe Experience Platform] naar het [!DNL Braze] -doel wilt verzenden, moet u de stap voor veldtoewijzing doorlopen.
 
-Toewijzing bestaat uit het maken van een koppeling tussen de schemavelden [!DNL Experience Data Model] (XDM) in uw [!DNL Platform] -account en de bijbehorende equivalenten van de doelbestemming.
+Toewijzing bestaat uit het maken van een koppeling tussen de schemavelden [!DNL Experience Data Model] (XDM) in uw [!DNL Experience Platform] -account en de bijbehorende equivalenten van de doelbestemming.
 
 Voer de volgende stappen uit om uw XDM-velden correct toe te wijzen aan de [!DNL Braze] -doelvelden:
 
@@ -125,7 +125,7 @@ In het venster [!UICONTROL Select source field] kunt u kiezen uit twee categorie
 
 ![ breid de Attributen van Source van de Bestemming in kaart ](../../assets/catalog/mobile-engagement/braze/mapping-attributes.png)
 
-* [!UICONTROL Select identity namespace]: Gebruik deze optie om een naamruimte [!DNL Platform] identity aan een naamruimte [!DNL Braze] toe te wijzen.
+* [!UICONTROL Select identity namespace]: Gebruik deze optie om een naamruimte [!DNL Experience Platform] identity aan een naamruimte [!DNL Braze] toe te wijzen.
 
 ![ Bodembestemming die Source Namespace ](../../assets/catalog/mobile-engagement/braze/mapping-namespaces.png) in kaart brengt
 
@@ -136,7 +136,7 @@ Klik in de sectie [!UICONTROL Target Field] op het koppelingspictogram rechts va
 ![ breid het Doel Toewijzing van het Doel ](../../assets/catalog/mobile-engagement/braze/mapping-target.png) uit
 
 In het venster [!UICONTROL Select target field] kunt u kiezen uit twee categorieën doelvelden:
-* [!UICONTROL Select identity namespace]: Gebruik deze optie om [!DNL Platform] naamruimten toe te wijzen aan [!DNL Braze] naamruimten.
+* [!UICONTROL Select identity namespace]: Gebruik deze optie om [!DNL Experience Platform] naamruimten toe te wijzen aan [!DNL Braze] naamruimten.
 * [!UICONTROL Select custom attributes]: Gebruik deze optie om XDM-kenmerken toe te wijzen aan aangepaste [!DNL Braze] -kenmerken die u in uw [!DNL Braze] -account hebt gedefinieerd. <br> U kunt deze optie ook gebruiken om de naam van bestaande XDM-kenmerken te wijzigen in [!DNL Braze] . Als u bijvoorbeeld een `lastName` XDM-kenmerk toewijst aan een aangepast `Last_Name` -kenmerk in [!DNL Braze] , wordt het `Last_Name` -kenmerk in [!DNL Braze] gemaakt, als dat nog niet het geval is, en wordt het `lastName` XDM-kenmerk eraan toegewezen.
 
 ![ breid de Gebieden van de Toewijzing van het Doel van de Bestemming ](../../assets/catalog/mobile-engagement/braze/mapping-target-fields.png) uit

@@ -1,30 +1,30 @@
 ---
-keywords: Audience Manager DIL extensie;doelpublieksbeheer;dil-extensie
-title: Audience Manager DIL-extensie
-description: De extensie Audience Manager DIL is een DMP-bestemming (Data Management Platform) in Adobe Experience Platform. Zie de extensiepagina over Adobe Exchange voor meer informatie over de extensiefunctionaliteit.
+keywords: Audience Manager DIL-extensie;doelpublieksbeheer;dil-extensie
+title: Audience Manager DIL Extension
+description: De Audience Manager DIL-extensie is een bestemming voor een Data Management Platform (DMP) in Adobe Experience Platform. Zie de extensiepagina op Adobe Exchange voor meer informatie over de extensiefunctionaliteit.
 exl-id: 7e1099de-0650-4ee2-b746-721afe194097
-source-git-commit: 88939d674c0002590939004e0235d3da8b072118
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '504'
+source-wordcount: '507'
 ht-degree: 0%
 
 ---
 
-# Audience Manager DIL-extensie {#aam-dil-extension}
+# Audience Manager DIL Extension {#aam-dil-extension}
 
 ## Overzicht {#overview}
 
-Dit is de extensie Adobe Audience Manager Data Integration Library (client-side implementatie). Opmerking: deze extensie is niet bedoeld voor het doorsturen van Adobe Analytics-gegevens via de server (SSF). Gebruik voor SSF de extensie Adobe Analytics. Belangrijk: vanaf versie 8.0 is DIL sterk afhankelijk van de [!DNL Experience Cloud] ID-service, versie 3.3 of hoger. Implementeer zowel [!DNL Experience Cloud] ID-service als DIL voor de volledige mogelijkheden voor gegevensintegratie in [!DNL Audience Manager] .
+Dit is de Adobe Audience Manager Data Integration Library-extensie (client-side implementatie). Opmerking: deze extensie is niet bedoeld voor het doorsturen van Adobe Analytics-gegevens via de server (SSF). Gebruik voor SSF de extensie Adobe Analytics. Belangrijk: vanaf versie 8.0 is DIL sterk afhankelijk van de [!DNL Experience Cloud] ID Service, versie 3.3 of hoger. Implementeer zowel [!DNL Experience Cloud] ID Service als DIL voor volledige [!DNL Audience Manager] mogelijkheden voor gegevensintegratie.
 
-[!DNL Audience Manager] DIL is een DMP-extensie (Data Management Platform) in Adobe Experience Platform. Voor meer informatie over de uitbreidingsfunctionaliteit, zie de [ pagina van de de uitbreidingsuitbreiding van de Audience Manager ](../../../tags/extensions/client/audience-manager/overview.md) in de markeringsdocumentatie.
+[!DNL Audience Manager] DIL is een extensie voor Data Management Platform (DMP) in Adobe Experience Platform. Voor meer informatie over de uitbreidingsfunctionaliteit, zie de [ de uitbreidingspagina van Audience Manager ](../../../tags/extensions/client/audience-manager/overview.md) in de markeringsdocumentatie.
 
-Dit doel is een tagextensie. Voor meer informatie over hoe de uitbreidingen in Platform werken, zie het [ overzicht van markeringsuitbreidingen ](../launch-extensions/overview.md).
+Dit doel is een tagextensie. Voor meer informatie over hoe de uitbreidingen in Experience Platform werken, zie het [ overzicht van markeringsuitbreidingen ](../launch-extensions/overview.md).
 
-![ de uitbreiding van de DIL van de Audience Manager ](../../assets/catalog/data-management-platform/aam-dil-extension/configure.png)
+![ de uitbreiding van Audience Manager DIL ](../../assets/catalog/data-management-platform/aam-dil-extension/configure.png)
 
 ## Vereisten {#prerequisites}
 
-Deze extensie is beschikbaar in de catalogus [!DNL Destinations] voor alle klanten die Platform hebben aangeschaft.
+Deze extensie is beschikbaar in de catalogus [!DNL Destinations] voor alle klanten die Experience Platform hebben aangeschaft.
 
 Als u deze extensie wilt gebruiken, hebt u toegang tot tags in Adobe Experience Platform nodig. Tags worden aan Adobe Experience Cloud-klanten aangeboden als een inbegrepen, waardetoevoegend element. Neem contact op met de systeembeheerder van uw organisatie om toegang tot tags te krijgen en vraag hen om u de **[!UICONTROL manage_properties]** -machtiging te verlenen zodat u extensies kunt installeren.
 
@@ -32,7 +32,7 @@ Als u deze extensie wilt gebruiken, hebt u toegang tot tags in Adobe Experience 
 
 U installeert als volgt de extensie [!DNL Audience Manager] DIL:
 
-In de [ interface van het Platform ](https://platform.adobe.com/), ga **[!UICONTROL Destinations]** > **[!UICONTROL Catalog]**.
+In de [ interface van Experience Platform ](https://platform.adobe.com/), ga **[!UICONTROL Destinations]** > **[!UICONTROL Catalog]**.
 
 Selecteer de extensie in de catalogus of gebruik de zoekbalk.
 
@@ -42,7 +42,7 @@ Selecteer de eigenschap waarin u de extensie wilt installeren. U kunt ook een ni
 
 Het werkschema begeleidt u door de stappen om de installatie te voltooien.
 
-Voor informatie over de opties van de uitbreidingsconfiguratie, zie de [ pagina van de de uitbreidingsuitbreiding van de Audience Manager ](../../../tags/extensions/client/audience-manager/overview.md) in de markeringsdocumentatie.
+Voor informatie over de opties van de uitbreidingsconfiguratie, zie de [ de uitbreidingspagina van Audience Manager ](../../../tags/extensions/client/audience-manager/overview.md) in de markeringsdocumentatie.
 
 U kunt de uitbreiding direct in [ de Inzameling UI van Gegevens ](https://experience.adobe.com/#/data-collection/) ook installeren. Zie de gids op [ toevoegend een nieuwe uitbreiding ](../../../tags/ui/managing-resources/extensions/overview.md#add-a-new-extension) voor meer informatie.
 

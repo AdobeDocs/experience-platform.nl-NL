@@ -4,10 +4,10 @@ user-guide-title: Handleiding voor Real-time klantprofiel
 user-guide-description: Voeg klantgegevens samen om een uniform beeld te krijgen van klantinteracties via verschillende kanalen.
 feature: Profiles
 role: User
-source-git-commit: e7af4992b1a2d4c9ada89dea474ce8e5412313f9
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '132'
-ht-degree: 19%
+source-wordcount: '133'
+ht-degree: 22%
 
 ---
 
@@ -46,7 +46,7 @@ ht-degree: 19%
 * Unieschema&#39;s {#union-schemas}
    * [UI-hulplijn verenigingsschema](ui/union-schema.md)
    * [Overzicht van Unieschema (video)](video/union-schemas-overview.md)
-* Tutorials {#tutorials}
+* Zelfstudies {#tutorials}
    * [Gegevens toevoegen aan realtime klantprofiel](tutorials/add-profile-data.md)
    * [Een gegevensset voor profiel configureren](tutorials/dataset-configuration.md)
    * [Genereer het overlappingsrapport voor de gegevensset](tutorials/dataset-overlap-report.md)
@@ -54,4 +54,4 @@ ht-degree: 19%
 * [Verwerking van privacyverzoeken](privacy.md)
 * [[!DNL Profile] gids voor probleemoplossing](troubleshooting.md)
 * [ API van het Profiel verwijzing ](https://www.adobe.com/go/profile-apis-en)
-* [ de versienota&#39;s van het Platform ](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)
+* [Releaseopmerkingen bij Experience Platform](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)

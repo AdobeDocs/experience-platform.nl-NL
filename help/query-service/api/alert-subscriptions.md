@@ -1,19 +1,19 @@
 ---
-keywords: Experience Platform;thuis;populaire onderwerpen;vraagdienst;de dienst van de vraag;alarm;
+keywords: Experience Platform;home;populaire onderwerpen;queryservice;Query-service;alert;
 title: Alert Subscriptions Endpoint
 description: Deze gids verstrekt steekproefHTTP- verzoeken en reacties voor diverse API vraag u aan het waakzame abonnementseindpunt met de Dienst API van de Vraag kunt maken.
 role: Developer
 exl-id: 30ac587a-2286-4a52-9199-7a2a8acd5362
-source-git-commit: 41c069ef1c0a19f34631e77afd7a80b8967c5060
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '3200'
+source-wordcount: '3213'
 ht-degree: 0%
 
 ---
 
 # Alert Abonnementen, eindpunt
 
-Met Adobe Experience Platform Query Service kunt u zich abonneren op waarschuwingen voor zowel ad-hocquery&#39;s als geplande query&#39;s. Waarschuwingen kunnen via e-mail worden ontvangen, binnen de gebruikersinterface van het platform of beide. De inhoud van de melding is gelijk voor waarschuwingen binnen het platform en e-mailwaarschuwingen.
+Met Adobe Experience Platform Query Service kunt u zich abonneren op waarschuwingen voor zowel ad-hocquery&#39;s als geplande query&#39;s. Waarschuwingen kunnen via e-mail worden ontvangen, binnen de gebruikersinterface van Experience Platform of beide. De inhoud van het bericht is gelijk voor waarschuwingen in Experience Platform en e-mailberichten.
 
 ## Aan de slag
 
@@ -165,16 +165,16 @@ Een geslaagde reactie retourneert een HTTP 200-status en de `alerts` -array met 
 | Eigenschap | Beschrijving |
 | -------- | ----------- |
 | `alerts.assetId` | De vraag-id die aan de waarschuwing met een bepaalde query is gekoppeld. |
-| `alerts.id` | De naam van de waarschuwing. Deze naam wordt gegenereerd door de service Waarschuwingen en wordt gebruikt op het dashboard Waarschuwingen. De waarschuwingsnaam bestaat uit de map waarin de waarschuwing, de `alertType` en de flow-id zijn opgeslagen. De informatie over het beschikbare alarm kan in de [ het dashboarddocumentatie van het Alarm van het Platform ](../../observability/alerts/ui.md) worden gevonden. |
+| `alerts.id` | De naam van de waarschuwing. Deze naam wordt gegenereerd door de service Waarschuwingen en wordt gebruikt op het dashboard Waarschuwingen. De waarschuwingsnaam bestaat uit de map waarin de waarschuwing, de `alertType` en de flow-id zijn opgeslagen. De informatie over het beschikbare alarm kan in de [ het dashboarddocumentatie van het Alarm van Experience Platform ](../../observability/alerts/ui.md) worden gevonden. |
 | `alerts.status` | De waarschuwing heeft vier statuswaarden: `enabled`, `enabling`, `disabled` en `disabling` . Een waarschuwing luistert actief naar de gebeurtenissen, gepauzeerd voor toekomstig gebruik terwijl het behouden van alle relevante abonnees en montages, of het overgaan tussen deze staten. |
-| `alerts.alertType` | Het type waarschuwing. Er zijn vijf waarschuwingsstatussen beschikbaar voor geplande query&#39;s, hoewel er slechts vier waarschuwingsstatussen beschikbaar zijn voor ad-hocquery&#39;s. De waarschuwing `quarantine` is alleen beschikbaar voor geplande query&#39;s. U kunt de waarschuwing `delay` ook alleen instellen via de interface van het platform. Daarom wordt `delay` hier niet beschreven. De beschikbare waarschuwingen zijn: <ul><li>`start`: hiermee wordt een gebruiker gewaarschuwd wanneer de uitvoering van de query is gestart.</li><li>`success`: hiermee wordt de gebruiker op de hoogte gesteld wanneer de query is voltooid.</li><li>`failure`: hiermee wordt de gebruiker gewaarschuwd als de query mislukt.</li><li>`quarantine`: activeert wanneer een geplande vraaglooppas in quarantined staat wordt gezet.</li></ul> |
+| `alerts.alertType` | Het type waarschuwing. Er zijn vijf waarschuwingsstatussen beschikbaar voor geplande query&#39;s, hoewel er slechts vier waarschuwingsstatussen beschikbaar zijn voor ad-hocquery&#39;s. De waarschuwing `quarantine` is alleen beschikbaar voor geplande query&#39;s. U kunt de waarschuwing `delay` ook alleen instellen via de gebruikersinterface van Experience Platform. Daarom wordt `delay` hier niet beschreven. De beschikbare waarschuwingen zijn: <ul><li>`start`: hiermee wordt een gebruiker gewaarschuwd wanneer de uitvoering van de query is gestart.</li><li>`success`: hiermee wordt de gebruiker op de hoogte gesteld wanneer de query is voltooid.</li><li>`failure`: hiermee wordt de gebruiker gewaarschuwd als de query mislukt.</li><li>`quarantine`: activeert wanneer een geplande vraaglooppas in quarantined staat wordt gezet.</li></ul> |
 | `alerts._links` | Verstrekt informatie over de beschikbare methodes en de eindpunten die kunnen worden gebruikt om, informatie terug te winnen bij te werken uit te geven of te schrappen met betrekking tot deze waakzame identiteitskaart |
 | `_page` | Het object bevat eigenschappen die de volgorde, grootte, het totale aantal pagina&#39;s en de huidige pagina beschrijven. |
 | `_links` | Het object bevat URI-verwijzingen waarmee de volgende of vorige pagina met bronnen kan worden opgehaald. |
 
 ## Haal de informatie van het waakzame abonnement voor een bepaalde vraag of programma identiteitskaart op {#retrieve-all-alert-subscriptions-by-id}
 
-Haal de informatie van het waakzame abonnement voor een bepaalde vraag ID of programma identiteitskaart door een verzoek van de GET aan `/alert-subscriptions/{QUERY_ID}` of het `/alert-subscriptions/{SCHEDULE_ID}` eindpunt te doen.
+Haal de informatie van het waakzame abonnement voor een bepaalde vraag ID of programma identiteitskaart door een GET verzoek aan `/alert-subscriptions/{QUERY_ID}` of het `/alert-subscriptions/{SCHEDULE_ID}` eindpunt te doen.
 
 **API formaat**
 
@@ -294,15 +294,15 @@ Een geslaagde reactie retourneert een HTTP-status van 200 en de `alerts` -array 
 | Eigenschap | Beschrijving |
 | -------- | ----------- |
 | `assetId` | De waarschuwing is gekoppeld aan deze id. De id kan een query-id of een planning-id zijn. |
-| `id` | De naam van de waarschuwing. Deze naam wordt gegenereerd door de service Waarschuwingen en wordt gebruikt op het dashboard Waarschuwingen. De waarschuwingsnaam bestaat uit de map waarin de waarschuwing, de `alertType` en de flow-id zijn opgeslagen. De informatie over het beschikbare alarm kan in de [ het dashboarddocumentatie van het Alarm van het Platform ](../../observability/alerts/ui.md) worden gevonden. |
+| `id` | De naam van de waarschuwing. Deze naam wordt gegenereerd door de service Waarschuwingen en wordt gebruikt op het dashboard Waarschuwingen. De waarschuwingsnaam bestaat uit de map waarin de waarschuwing, de `alertType` en de flow-id zijn opgeslagen. De informatie over het beschikbare alarm kan in de [ het dashboarddocumentatie van het Alarm van Experience Platform ](../../observability/alerts/ui.md) worden gevonden. |
 | `status` | De waarschuwing heeft vier statuswaarden: `enabled`, `enabling`, `disabled` en `disabling` . Een waarschuwing luistert actief naar de gebeurtenissen, gepauzeerd voor toekomstig gebruik terwijl het behouden van alle relevante abonnees en montages, of het overgaan tussen deze staten. |
 | `alertType` | Elke waarschuwing kan drie verschillende waarschuwingstypen hebben. Het zijn: <ul><li>`start`: hiermee wordt een gebruiker gewaarschuwd wanneer de uitvoering van de query is gestart.</li><li>`success`: hiermee wordt de gebruiker op de hoogte gesteld wanneer de query is voltooid.</li><li>`failure`: hiermee wordt de gebruiker gewaarschuwd als de query mislukt.</li></ul> |
-| `subscriptions.emailNotifications` | Een array met Adobe geregistreerde e-mailadressen voor gebruikers die zich hebben geabonneerd om e-mails voor de waarschuwing te ontvangen. |
-| `subscriptions.inContextNotifications` | Een array met Adobe geregistreerde e-mailadressen voor gebruikers die zijn geabonneerd op UI-meldingen voor de waarschuwing. |
+| `subscriptions.emailNotifications` | Een array met Adobe-geregistreerde e-mailadressen voor gebruikers die zich hebben geabonneerd om e-mails voor de waarschuwing te ontvangen. |
+| `subscriptions.inContextNotifications` | Een array met Adobe-geregistreerde e-mailadressen voor gebruikers die zijn geabonneerd op UI-berichten voor de waarschuwing. |
 
 ## Hiermee worden abonnementsgegevens voor een bepaalde query of planning-id en een waarschuwingstype opgehaald {#get-alert-info-by-id-and-alert-type}
 
-Haal de informatie van het waakzame abonnement voor een bepaalde identiteitskaart en waakzaam type door een verzoek van de GET aan het `/alert-subscriptions/{QUERY_ID}/{ALERT_TYPE}` eindpunt te doen. Dit is van toepassing op zowel vraag als geplande vraag IDs.
+Haal de informatie van het waakzame abonnement voor een bepaalde identiteitskaart en waakzaam type door een GET verzoek aan het `/alert-subscriptions/{QUERY_ID}/{ALERT_TYPE}` eindpunt te doen. Dit is van toepassing op zowel vraag als geplande vraag IDs.
 
 **API formaat**
 
@@ -331,7 +331,7 @@ curl -X GET 'https://platform.adobe.io/data/foundation/query/alert-subscriptions
 
 **Reactie**
 
-Een succesvolle reactie keert een status van HTTP van 200 en alle alarm terug die aan worden geabonneerd. Dit omvat de waarschuwings-id, het type waarschuwing, de Adobe van de abonnee geregistreerde e-mailadressen en het bijbehorende berichtkanaal.
+Een succesvolle reactie keert een status van HTTP van 200 en alle alarm terug die aan worden geabonneerd. Dit omvat de waarschuwings-id, het type waarschuwing, de door de Adobe geregistreerde e-mailadressen van de abonnee en het bijbehorende berichtkanaal.
 
 ```json
 {
@@ -382,10 +382,10 @@ Een succesvolle reactie keert een status van HTTP van 200 en alle alarm terug di
 | Eigenschap | Beschrijving |
 | -------- | ----------- |
 | `assetId` | De vraag-id die aan de waarschuwing met een bepaalde query is gekoppeld. |
-| `alertType` | Het type waarschuwing. Er zijn vijf waarschuwingsstatussen beschikbaar voor geplande query&#39;s, hoewel er slechts vier waarschuwingsstatussen beschikbaar zijn voor ad-hocquery&#39;s. De waarschuwing `quarantine` is alleen beschikbaar voor geplande query&#39;s. U kunt de waarschuwing `delay` ook alleen instellen via de interface van het platform. Daarom wordt `delay` hier niet beschreven. De beschikbare waarschuwingen zijn: <ul><li>`start`: hiermee wordt een gebruiker gewaarschuwd wanneer de uitvoering van de query is gestart.</li><li>`success`: hiermee wordt de gebruiker op de hoogte gesteld wanneer de query is voltooid.</li><li>`failure`: hiermee wordt de gebruiker gewaarschuwd als de query mislukt.</li><li>`quarantine`: activeert wanneer een geplande vraaglooppas in quarantined staat wordt gezet.</li></ul> |
-| `subscriptions` | Een object dat wordt gebruikt voor het doorgeven van de Adobe van geregistreerde e-mailadressen die aan de waarschuwingen zijn gekoppeld, en de kanalen waarin de gebruikers de waarschuwingen zullen ontvangen. |
-| `subscriptions.inContextNotifications` | Een array met Adobe geregistreerde e-mailadressen voor gebruikers die zijn geabonneerd op UI-meldingen voor de waarschuwing. |
-| `subscriptions.emailNotifications` | Een array met Adobe geregistreerde e-mailadressen voor gebruikers die zich hebben geabonneerd om e-mails voor de waarschuwing te ontvangen. |
+| `alertType` | Het type waarschuwing. Er zijn vijf waarschuwingsstatussen beschikbaar voor geplande query&#39;s, hoewel er slechts vier waarschuwingsstatussen beschikbaar zijn voor ad-hocquery&#39;s. De waarschuwing `quarantine` is alleen beschikbaar voor geplande query&#39;s. U kunt de waarschuwing `delay` ook alleen instellen via de gebruikersinterface van Experience Platform. Daarom wordt `delay` hier niet beschreven. De beschikbare waarschuwingen zijn: <ul><li>`start`: hiermee wordt een gebruiker gewaarschuwd wanneer de uitvoering van de query is gestart.</li><li>`success`: hiermee wordt de gebruiker op de hoogte gesteld wanneer de query is voltooid.</li><li>`failure`: hiermee wordt de gebruiker gewaarschuwd als de query mislukt.</li><li>`quarantine`: activeert wanneer een geplande vraaglooppas in quarantined staat wordt gezet.</li></ul> |
+| `subscriptions` | Een object dat wordt gebruikt om de in Adobe geregistreerde e-mailadressen door te geven die aan de waarschuwingen zijn gekoppeld, en de kanalen waarin de gebruikers de waarschuwingen zullen ontvangen. |
+| `subscriptions.inContextNotifications` | Een array met Adobe-geregistreerde e-mailadressen voor gebruikers die zijn geabonneerd op UI-berichten voor de waarschuwing. |
+| `subscriptions.emailNotifications` | Een array met Adobe-geregistreerde e-mailadressen voor gebruikers die zich hebben geabonneerd om e-mails voor de waarschuwing te ontvangen. |
 
 ## Hiermee wordt een lijst opgehaald met alle waarschuwingen waarop een gebruiker is geabonneerd {#get-alert-subscription-list}
 
@@ -399,7 +399,7 @@ GET /alert-subscriptions/user-subscriptions/{EMAIL_ID}
 
 | Parameters | Beschrijving |
 | -------- | ----------- |
-| `{EMAIL_ID}` | Een e-mailadres dat is geregistreerd bij een Adobe-account, wordt gebruikt om de gebruikers te identificeren die zijn geabonneerd op waarschuwingen. |
+| `{EMAIL_ID}` | Een e-mailadres dat bij een Adobe-account is geregistreerd, wordt gebruikt om de gebruikers te identificeren die zijn geabonneerd op waarschuwingen. |
 | `orderby` | Het veld dat de volgorde van de resultaten aangeeft. De ondersteunde velden zijn `created` en `updated` . Voeg aan de naam van de eigenschap `+` voor oplopende volgorde en `-` voor aflopende volgorde toe. De standaardwaarde is `-created` . Merk op dat het plusteken (`+`) met `%2B` moet worden beschermd. `%2Bcreated` is bijvoorbeeld de waarde voor een oplopende, gemaakte volgorde. |
 | `pagesize` | Gebruik deze parameter om het aantal verslagen te controleren u van de API vraag per pagina wilt halen. De standaardlimiet is ingesteld op een maximum van 50 records per pagina. |
 | `page` | Geef het paginanummer op van de geretourneerde resultaten waarvoor u de records wilt zien. |
@@ -512,11 +512,11 @@ Een geslaagde reactie retourneert HTTP-status 200 en de array `items` met gegeve
 
 | Eigenschap | Beschrijving |
 | -------- | ----------- |
-| `name` | De naam van de waarschuwing. Deze naam wordt gegenereerd door de service Waarschuwingen en wordt gebruikt op het dashboard Waarschuwingen. De waarschuwingsnaam bestaat uit de map waarin de waarschuwing, de `alertType` en de flow-id zijn opgeslagen. De informatie over het beschikbare alarm kan in de [ het dashboarddocumentatie van het Alarm van het Platform ](../../observability/alerts/ui.md) worden gevonden. |
+| `name` | De naam van de waarschuwing. Deze naam wordt gegenereerd door de service Waarschuwingen en wordt gebruikt op het dashboard Waarschuwingen. De waarschuwingsnaam bestaat uit de map waarin de waarschuwing, de `alertType` en de flow-id zijn opgeslagen. De informatie over het beschikbare alarm kan in de [ het dashboarddocumentatie van het Alarm van Experience Platform ](../../observability/alerts/ui.md) worden gevonden. |
 | `assetId` | De vraag-id die aan de waarschuwing met een bepaalde query is gekoppeld. |
 | `status` | De waarschuwing heeft vier statuswaarden: `enabled`, `enabling`, `disabled` en `disabling` . Een waarschuwing luistert actief naar de gebeurtenissen, gepauzeerd voor toekomstig gebruik terwijl het behouden van alle relevante abonnees en montages, of het overgaan tussen deze staten. |
-| `alertType` | Het type waarschuwing. Er zijn vijf waarschuwingsstatussen beschikbaar voor geplande query&#39;s, hoewel er slechts vier waarschuwingsstatussen beschikbaar zijn voor ad-hocquery&#39;s. De waarschuwing `quarantine` is alleen beschikbaar voor geplande query&#39;s. U kunt de waarschuwing `delay` ook alleen instellen via de interface van het platform. Daarom wordt `delay` hier niet beschreven. De beschikbare waarschuwingen zijn: <ul><li>`start`: hiermee wordt een gebruiker gewaarschuwd wanneer de uitvoering van de query is gestart.</li><li>`success`: hiermee wordt de gebruiker op de hoogte gesteld wanneer de query is voltooid.</li><li>`failure`: hiermee wordt de gebruiker gewaarschuwd als de query mislukt.</li><li>`quarantine`: activeert wanneer een geplande vraaglooppas in quarantined staat wordt gezet.</li></ul> |
-| `subscriptions` | Een object dat wordt gebruikt voor het doorgeven van de Adobe van geregistreerde e-mailadressen die aan de waarschuwingen zijn gekoppeld, en de kanalen waarin de gebruikers de waarschuwingen zullen ontvangen. |
+| `alertType` | Het type waarschuwing. Er zijn vijf waarschuwingsstatussen beschikbaar voor geplande query&#39;s, hoewel er slechts vier waarschuwingsstatussen beschikbaar zijn voor ad-hocquery&#39;s. De waarschuwing `quarantine` is alleen beschikbaar voor geplande query&#39;s. U kunt de waarschuwing `delay` ook alleen instellen via de gebruikersinterface van Experience Platform. Daarom wordt `delay` hier niet beschreven. De beschikbare waarschuwingen zijn: <ul><li>`start`: hiermee wordt een gebruiker gewaarschuwd wanneer de uitvoering van de query is gestart.</li><li>`success`: hiermee wordt de gebruiker op de hoogte gesteld wanneer de query is voltooid.</li><li>`failure`: hiermee wordt de gebruiker gewaarschuwd als de query mislukt.</li><li>`quarantine`: activeert wanneer een geplande vraaglooppas in quarantined staat wordt gezet.</li></ul> |
+| `subscriptions` | Een object dat wordt gebruikt om de in Adobe geregistreerde e-mailadressen door te geven die aan de waarschuwingen zijn gekoppeld, en de kanalen waarin de gebruikers de waarschuwingen zullen ontvangen. |
 | `subscriptions.inContextNotifications` | Een Booleaanse waarde die bepaalt hoe gebruikers waarschuwingsmeldingen ontvangen. Een `true` -waarde bevestigt dat waarschuwingen via de gebruikersinterface moeten worden verzonden. Een `false` -waarde zorgt ervoor dat de gebruikers geen meldingen via dat kanaal ontvangen. |
 | `subscriptions.emailNotifications` | Een Booleaanse waarde die bepaalt hoe gebruikers waarschuwingsmeldingen ontvangen. Een `true` -waarde bevestigt dat waarschuwingen via e-mail moeten worden verzonden. Een `false` -waarde zorgt ervoor dat de gebruikers geen meldingen via dat kanaal ontvangen. |
 
@@ -526,7 +526,7 @@ Als u een waarschuwing wilt maken en een gebruiker wilt abonneren om deze te ont
 
 >[!IMPORTANT]
 >
->U kunt maximaal vijf Adobe geregistreerde e-mailadressen doorgeven in één aanvraag. Als u zich wilt abonneren op meer dan vijf gebruikers, moeten daarop volgende verzoeken worden ingediend.
+>Je kunt maximaal vijf door Adobe geregistreerde e-mailadressen doorgeven in één aanvraag. Als u zich wilt abonneren op meer dan vijf gebruikers, moeten daarop volgende verzoeken worden ingediend.
 
 **API formaat**
 
@@ -560,9 +560,9 @@ curl -X POST https://platform.adobe.io/data/foundation/query/alert-subscriptions
 | Eigenschap | Beschrijving |
 | -------- | ----------- |
 | `assetId` | De waarschuwing is gekoppeld aan deze id. De id kan een query-id of een planning-id zijn. |
-| `alertType` | Het type waarschuwing. Er zijn vijf waarschuwingsstatussen beschikbaar voor geplande query&#39;s, hoewel er slechts vier waarschuwingsstatussen beschikbaar zijn voor ad-hocquery&#39;s. De waarschuwing `quarantine` is alleen beschikbaar voor geplande query&#39;s. U kunt de waarschuwing `delay` ook alleen instellen via de interface van het platform. Daarom wordt `delay` hier niet beschreven. De beschikbare waarschuwingen zijn: <ul><li>`start`: hiermee wordt een gebruiker gewaarschuwd wanneer de uitvoering van de query is gestart.</li><li>`success`: hiermee wordt de gebruiker op de hoogte gesteld wanneer de query is voltooid.</li><li>`failure`: hiermee wordt de gebruiker gewaarschuwd als de query mislukt.</li><li>`quarantine`: activeert wanneer een geplande vraaglooppas in quarantined staat wordt gezet.</li></ul> |
-| `subscriptions` | Een object dat wordt gebruikt voor het doorgeven van de Adobe van geregistreerde e-mailadressen die aan de waarschuwingen zijn gekoppeld, en de kanalen waarin de gebruikers de waarschuwingen zullen ontvangen. |
-| `subscriptions.emailIds` | Een array met e-mailadressen om de gebruikers te identificeren die de waarschuwingen moeten ontvangen. De e-mailadressen **moeten** aan een rekening van de Adobe worden geregistreerd. |
+| `alertType` | Het type waarschuwing. Er zijn vijf waarschuwingsstatussen beschikbaar voor geplande query&#39;s, hoewel er slechts vier waarschuwingsstatussen beschikbaar zijn voor ad-hocquery&#39;s. De waarschuwing `quarantine` is alleen beschikbaar voor geplande query&#39;s. U kunt de waarschuwing `delay` ook alleen instellen via de gebruikersinterface van Experience Platform. Daarom wordt `delay` hier niet beschreven. De beschikbare waarschuwingen zijn: <ul><li>`start`: hiermee wordt een gebruiker gewaarschuwd wanneer de uitvoering van de query is gestart.</li><li>`success`: hiermee wordt de gebruiker op de hoogte gesteld wanneer de query is voltooid.</li><li>`failure`: hiermee wordt de gebruiker gewaarschuwd als de query mislukt.</li><li>`quarantine`: activeert wanneer een geplande vraaglooppas in quarantined staat wordt gezet.</li></ul> |
+| `subscriptions` | Een object dat wordt gebruikt om de in Adobe geregistreerde e-mailadressen door te geven die aan de waarschuwingen zijn gekoppeld, en de kanalen waarin de gebruikers de waarschuwingen zullen ontvangen. |
+| `subscriptions.emailIds` | Een array met e-mailadressen om de gebruikers te identificeren die de waarschuwingen moeten ontvangen. De e-mailadressen **moeten** aan een rekening van Adobe worden geregistreerd. |
 | `subscriptions.inContextNotifications` | Een Booleaanse waarde die bepaalt hoe gebruikers waarschuwingsmeldingen ontvangen. Een `true` -waarde bevestigt dat waarschuwingen via de gebruikersinterface moeten worden verzonden. Een `false` -waarde zorgt ervoor dat de gebruikers geen meldingen via dat kanaal ontvangen. |
 | `subscriptions.emailNotifications` | Een Booleaanse waarde die bepaalt hoe gebruikers waarschuwingsmeldingen ontvangen. Een `true` -waarde bevestigt dat waarschuwingen via e-mail moeten worden verzonden. Een `false` -waarde zorgt ervoor dat de gebruikers geen meldingen via dat kanaal ontvangen. |
 
@@ -613,7 +613,7 @@ Een succesvolle reactie retourneert HTTP-status 202 (geaccepteerd) met details v
 
 | Eigenschap | Beschrijving |
 | -------- | ----------- |
-| `id` | De naam van de waarschuwing. Deze naam wordt gegenereerd door de service Waarschuwingen en wordt gebruikt op het dashboard Waarschuwingen. De waarschuwingsnaam bestaat uit de map waarin de waarschuwing, de `alertType` en de flow-id zijn opgeslagen. De informatie over het beschikbare alarm kan in de [ het dashboarddocumentatie van het Alarm van het Platform ](../../observability/alerts/ui.md) worden gevonden. |
+| `id` | De naam van de waarschuwing. Deze naam wordt gegenereerd door de service Waarschuwingen en wordt gebruikt op het dashboard Waarschuwingen. De waarschuwingsnaam bestaat uit de map waarin de waarschuwing, de `alertType` en de flow-id zijn opgeslagen. De informatie over het beschikbare alarm kan in de [ het dashboarddocumentatie van het Alarm van Experience Platform ](../../observability/alerts/ui.md) worden gevonden. |
 | `_links` | Verstrekt informatie over de beschikbare methodes en de eindpunten die kunnen worden gebruikt om, informatie terug te winnen bij te werken uit te geven of te schrappen met betrekking tot deze waakzame identiteitskaart |
 
 ## Een waarschuwing in- of uitschakelen {#enable-or-disable-alert}
@@ -629,7 +629,7 @@ PATCH /alert-subscriptions/{SCHEDULE_ID}/{ALERT_TYPE}
 
 | Parameters | Beschrijving |
 | -------- | ----------- |
-| `ALERT_TYPE` | Het type waarschuwing. Er zijn vijf waarschuwingsstatussen beschikbaar voor geplande query&#39;s, hoewel er slechts vier waarschuwingsstatussen beschikbaar zijn voor ad-hocquery&#39;s. De waarschuwing `quarantine` is alleen beschikbaar voor geplande query&#39;s. U kunt de waarschuwing `delay` ook alleen instellen via de interface van het platform. Daarom wordt `delay` hier niet beschreven. De beschikbare waarschuwingen zijn: <ul><li>`start`: hiermee wordt een gebruiker gewaarschuwd wanneer de uitvoering van de query is gestart.</li><li>`success`: hiermee wordt de gebruiker op de hoogte gesteld wanneer de query is voltooid.</li><li>`failure`: hiermee wordt de gebruiker gewaarschuwd als de query mislukt.</li><li>`quarantine`: activeert wanneer een geplande vraaglooppas in quarantined staat wordt gezet.</li></ul>U moet het huidige waakzame type in eindpuntnamespace specificeren om het te veranderen. |
+| `ALERT_TYPE` | Het type waarschuwing. Er zijn vijf waarschuwingsstatussen beschikbaar voor geplande query&#39;s, hoewel er slechts vier waarschuwingsstatussen beschikbaar zijn voor ad-hocquery&#39;s. De waarschuwing `quarantine` is alleen beschikbaar voor geplande query&#39;s. U kunt de waarschuwing `delay` ook alleen instellen via de gebruikersinterface van Experience Platform. Daarom wordt `delay` hier niet beschreven. De beschikbare waarschuwingen zijn: <ul><li>`start`: hiermee wordt een gebruiker gewaarschuwd wanneer de uitvoering van de query is gestart.</li><li>`success`: hiermee wordt de gebruiker op de hoogte gesteld wanneer de query is voltooid.</li><li>`failure`: hiermee wordt de gebruiker gewaarschuwd als de query mislukt.</li><li>`quarantine`: activeert wanneer een geplande vraaglooppas in quarantined staat wordt gezet.</li></ul>U moet het huidige waakzame type in eindpuntnamespace specificeren om het te veranderen. |
 | `QUERY_ID` | De unieke id voor de query die moet worden bijgewerkt. |
 | `SCHEDULE_ID` | De unieke id voor de geplande query die moet worden bijgewerkt. |
 
@@ -654,7 +654,7 @@ curl -X PATCH 'https://platform.adobe.io/data/foundation/query/alert-subscriptio
 | -------- | ----------- |
 | `op` | De uit te voeren bewerking. Momenteel is de enige toegestane waarde `replace` . |
 | `path` | Deze waarde heeft betrekking op de naamruimte in het eindpunt. Momenteel is de enige toegestane waarde `/status` . |
-| `value` | In een succesvol verzoek van de PATCH verandert dit de `status` waarde van het alarm. Momenteel zijn de toegestane waarden `enable` of `disable` . |
+| `value` | In een succesvol PATCH-verzoek wijzigt dit de `status` -waarde van de waarschuwing. Momenteel zijn de toegestane waarden `enable` of `disable` . |
 
 {style="table-layout:auto"}
 
@@ -673,7 +673,7 @@ Een succesvolle reactie keert status 200 van HTTP met details van de waakzame st
 
 | Eigenschap | Beschrijving |
 | -------- | ----------- |
-| `id` | De naam van de waarschuwing. Deze naam wordt gegenereerd door de service Waarschuwingen en wordt gebruikt op het dashboard Waarschuwingen. De waarschuwingsnaam bestaat uit de map waarin de waarschuwing, de `alertType` en de flow-id zijn opgeslagen. De informatie over het beschikbare alarm kan in de [ het dashboarddocumentatie van het Alarm van het Platform ](../../observability/alerts/ui.md) worden gevonden. |
+| `id` | De naam van de waarschuwing. Deze naam wordt gegenereerd door de service Waarschuwingen en wordt gebruikt op het dashboard Waarschuwingen. De waarschuwingsnaam bestaat uit de map waarin de waarschuwing, de `alertType` en de flow-id zijn opgeslagen. De informatie over het beschikbare alarm kan in de [ het dashboarddocumentatie van het Alarm van Experience Platform ](../../observability/alerts/ui.md) worden gevonden. |
 | `assetId` | De waarschuwing is gekoppeld aan deze id. De id kan een query-id of een planning-id zijn. |
 | `alertType` | Elke waarschuwing kan drie verschillende waarschuwingstypen hebben. Het zijn: <ul><li>`start`: hiermee wordt een gebruiker gewaarschuwd wanneer de uitvoering van de query is gestart.</li><li>`success`: hiermee wordt de gebruiker op de hoogte gesteld wanneer de query is voltooid.</li><li>`failure`: hiermee wordt de gebruiker gewaarschuwd als de query mislukt.</li></ul> |
 | `status` | De waarschuwing heeft vier statuswaarden: `enabled`, `enabling`, `disabled` en `disabling` . Een waarschuwing luistert actief naar de gebeurtenissen, gepauzeerd voor toekomstig gebruik terwijl het behouden van alle relevante abonnees en montages, of het overgaan tussen deze staten. |
@@ -689,7 +689,7 @@ DELETE /alert-subscriptions/{SCHEDULE_ID}/{ALERT_TYPE}
 
 | Parameters | Beschrijving |
 | -------- | ----------- |
-| `ALERT_TYPE` | Het type waarschuwing. Er zijn vijf waarschuwingsstatussen beschikbaar voor geplande query&#39;s, hoewel er slechts vier waarschuwingsstatussen beschikbaar zijn voor ad-hocquery&#39;s. De waarschuwing `quarantine` is alleen beschikbaar voor geplande query&#39;s. U kunt de waarschuwing `delay` ook alleen instellen via de interface van het platform. Daarom wordt `delay` hier niet beschreven. De beschikbare waarschuwingen zijn: <ul><li>`start`: hiermee wordt een gebruiker gewaarschuwd wanneer de uitvoering van de query is gestart.</li><li>`success`: hiermee wordt de gebruiker op de hoogte gesteld wanneer de query is voltooid.</li><li>`failure`: hiermee wordt de gebruiker gewaarschuwd als de query mislukt.</li><li>`quarantine`: activeert wanneer een geplande vraaglooppas in quarantined staat wordt gezet.</li></ul> De DELETE-aanvraag geldt alleen voor het specifieke type waarschuwing dat wordt gegeven. |
+| `ALERT_TYPE` | Het type waarschuwing. Er zijn vijf waarschuwingsstatussen beschikbaar voor geplande query&#39;s, hoewel er slechts vier waarschuwingsstatussen beschikbaar zijn voor ad-hocquery&#39;s. De waarschuwing `quarantine` is alleen beschikbaar voor geplande query&#39;s. U kunt de waarschuwing `delay` ook alleen instellen via de gebruikersinterface van Experience Platform. Daarom wordt `delay` hier niet beschreven. De beschikbare waarschuwingen zijn: <ul><li>`start`: hiermee wordt een gebruiker gewaarschuwd wanneer de uitvoering van de query is gestart.</li><li>`success`: hiermee wordt de gebruiker op de hoogte gesteld wanneer de query is voltooid.</li><li>`failure`: hiermee wordt de gebruiker gewaarschuwd als de query mislukt.</li><li>`quarantine`: activeert wanneer een geplande vraaglooppas in quarantined staat wordt gezet.</li></ul> Het DELETE-verzoek geldt alleen voor het opgegeven specifieke type waarschuwing. |
 | `QUERY_ID` | De unieke id voor de query die moet worden bijgewerkt. |
 | `SCHEDULE_ID` | De unieke id voor de geplande query die moet worden bijgewerkt. |
 

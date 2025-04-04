@@ -1,12 +1,12 @@
 ---
-title: Overzicht van oracle NetSuite Source
+title: Oracle NetSuite Source - Overzicht
 description: Leer hoe u Oracle NetSuite met Adobe Experience Platform kunt verbinden via API's of de gebruikersinterface.
 last-substantial-update: 2024-01-30T00:00:00Z
 badge: Beta
 exl-id: 1dd30660-c990-4d3f-a64f-2a17e426f56d
-source-git-commit: 8be502c9eea67119dc537a5d63a6c71e0bff1697
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '748'
+source-wordcount: '756'
 ht-degree: 0%
 
 ---
@@ -17,9 +17,9 @@ ht-degree: 0%
 >
 >De bron [!DNL Oracle NetSuite] is in bèta. Gelieve te lezen het [ overzicht van bronnen ](../../home.md#terms-and-conditions) voor meer informatie bij het gebruiken van bèta-geëtiketteerde bronnen.
 
-Adobe Experience Platform staat toe dat gegevens uit externe bronnen worden opgenomen terwijl u de mogelijkheid krijgt om inkomende gegevens te structureren, te labelen en te verbeteren met behulp van de platformservices. U kunt gegevens uit diverse bronnen invoeren, zoals toepassingen voor Adobe, opslag in de cloud, databases en vele andere.
+Adobe Experience Platform staat toe dat gegevens uit externe bronnen worden opgenomen en biedt u de mogelijkheid om inkomende gegevens te structureren, labelen en verbeteren met behulp van Experience Platform-services. U kunt gegevens invoeren uit verschillende bronnen, zoals Adobe-toepassingen, opslag in de cloud, databases en vele andere.
 
-Experience Platform biedt ondersteuning voor het invoeren van gegevens van derden voor het automatiseren van de marketing. Ondersteuning voor marketingautomatiseringsproviders omvat [!DNL Oracle NetSuite] .
+Experience Platform biedt ondersteuning voor het invoeren van gegevens van derden voor marketingautomatisering. Ondersteuning voor marketingautomatiseringsproviders omvat [!DNL Oracle NetSuite] .
 
 [[!DNL Oracle NetSuite] ](https://www.netsuite.com/) is een op wolk-gebaseerde bedrijfsbeheerreeks die ERP/financiële, CRM en e-commerce oplossingen omvat.
 
@@ -42,7 +42,7 @@ Een lijst van IP adressen kan vereisen om aan een lijst van gewenste personen wo
 
 ## Vereisten {#prerequisites}
 
-Voordat u de [!DNL Oracle NetSuite] -gegevens naar het Experience Platform kunt overbrengen, moet u ervoor zorgen dat:
+Voordat u uw [!DNL Oracle NetSuite] -gegevens naar Experience Platform kunt overbrengen, moet u eerst controleren of het volgende mogelijk is:
 
 * **een [!DNL Oracle NetSuite] rekening**.
    * Neem contact op met [[!DNL Oracle NetSuite] ](https://www.NetSuite.com/portal/company/contactus.shtml) als u nog geen geldig account hebt.
@@ -58,7 +58,7 @@ Voordat u de [!DNL Oracle NetSuite] -gegevens naar het Experience Platform kunt 
 
 ### Vereiste referenties verzamelen {#gather-credentials}
 
-Als u [!DNL Oracle NetSuite] wilt verbinden met Platform, moet u waarden opgeven voor de volgende verbindingseigenschappen:
+Als u [!DNL Oracle NetSuite] wilt verbinden met Experience Platform, moet u waarden opgeven voor de volgende verbindingseigenschappen:
 
 | Credentials | Beschrijving | Voorbeeld |
 | --- | --- | --- |
@@ -67,24 +67,24 @@ Als u [!DNL Oracle NetSuite] wilt verbinden met Platform, moet u waarden opgeven
 | Autorisatietest-URL | (Optioneel) Test-URL voor uw [!DNL NetSuite] -autorisatietest. | `https://{ACCOUNT_ID}.app.netsuite.com<br>/app/login/oauth2/authorize.nl?response_type=code<br>&redirect_uri=https%3A%2F%2Fapi.github.com<br>&scope=rest_webservices<br>&state=ykv2XLx1BpT5Q0F3MRPHb94j<br>&client_id={CLIENT_ID}` |
 | Toegangstoken | Het toegangstoken is in formaat JSON Web Token (JWT) en is slechts geldig voor 60 minuten. Voor meer informatie over hoe te om uw toegangstoken terug te winnen, lees de [!DNL Oracle] gids over [ OAuth 2.0 vergunning voor NetSuite ](https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/section_158081952044.html#Step-Two-POST-Request-to-the-Token-Endpoint). | `eyJr......f4V0`<br> De waarde bestaat uit een tekenreeks van 1024 tekens die is opgemaakt als JSON Web Token (JWT). |
 | Token vernieuwen | Gebruik verfrissen zich om een nieuw toegangstoken te produceren, nadat uw toegangstoken verloopt. De token Vernieuwen is zeven dagen geldig. Voor meer informatie over hoe te om uw toegangstoken terug te winnen, lees de [!DNL Oracle] gids over [ OAuth 2.0 vergunning voor NetSuite ](https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/section_158081952044.html#Step-Two-POST-Request-to-the-Token-Endpoint). | `eyJr......dmxM`<br> De waarde bestaat uit een tekenreeks van 1024 tekens die is opgemaakt als JSON Web Token (JWT). |
-| Toegang tot token-URL | Het symbolische eindpunt waar de toepassing de verzoeken van de POST naar verzendt. | `https://{ACCOUNT_ID}.suitetalk.api.netsuite.com<br>/services/rest/auth/oauth2/v1/token` |
+| Toegang tot token-URL | Het symbolische eindpunt waar de toepassing de POST- verzoeken naar verzendt. | `https://{ACCOUNT_ID}.suitetalk.api.netsuite.com<br>/services/rest/auth/oauth2/v1/token` |
 
 >[!IMPORTANT]
 >
->Nadat een vernieuwingstoken verloopt, moet u een nieuw rekening in Experience Platform met uw bijgewerkte tokens tot stand brengen.
+>Nadat een vernieuwingstoken verloopt, moet u een nieuw account in Experience Platform maken met uw bijgewerkte tokens.
 
-## Verbinden [!DNL Oracle NetSuite Activities] met platform {#oracle-netsuite-activities}
+## Verbinden [!DNL Oracle NetSuite Activities] met Experience Platform {#oracle-netsuite-activities}
 
-In de onderstaande documentatie vindt u informatie over het tot stand brengen van een verbinding tussen [!DNL Oracle NetSuite Activities] en Platform via API&#39;s of de gebruikersinterface:
+In de onderstaande documentatie vindt u informatie over het tot stand brengen van een verbinding tussen [!DNL Oracle NetSuite Activities] en Experience Platform via API&#39;s of de gebruikersinterface:
 
-* [ creeer een bronverbinding en dataflow om  [!DNL Oracle NetSuite Activities]  gegevens aan Platform te brengen gebruikend APIs ](../../tutorials/api/create/marketing-automation/oracle-netsuite-activities.md).
+* [ creeer een bronverbinding en dataflow om  [!DNL Oracle NetSuite Activities]  gegevens aan Experience Platform te brengen gebruikend APIs ](../../tutorials/api/create/marketing-automation/oracle-netsuite-activities.md).
 * [ verbind uw  [!DNL Oracle NetSuite Activities]  rekening met Experience Platform gebruikend UI ](../../tutorials/ui/create/marketing-automation/oracle-netsuite-activities.md).
 * [ creeer een dataflow voor een bronverbinding gebruikend UI ](../../tutorials/ui/dataflow/marketing-automation.md).
 
-## Verbinden [!DNL Oracle NetSuite Entities] met platform {#oracle-netsuite-entities}
+## Verbinden [!DNL Oracle NetSuite Entities] met Experience Platform {#oracle-netsuite-entities}
 
-In de onderstaande documentatie vindt u informatie over het tot stand brengen van een verbinding tussen [!DNL Oracle NetSuite Entities] en Platform via API&#39;s of de gebruikersinterface:
+In de onderstaande documentatie vindt u informatie over het tot stand brengen van een verbinding tussen [!DNL Oracle NetSuite Entities] en Experience Platform via API&#39;s of de gebruikersinterface:
 
-* [ creeer een bronverbinding en dataflow om  [!DNL Oracle NetSuite Entities]  gegevens aan Platform te brengen gebruikend APIs ](../../tutorials/api/create/marketing-automation/oracle-netsuite-entities.md).
+* [ creeer een bronverbinding en dataflow om  [!DNL Oracle NetSuite Entities]  gegevens aan Experience Platform te brengen gebruikend APIs ](../../tutorials/api/create/marketing-automation/oracle-netsuite-entities.md).
 * [ verbind uw  [!DNL Oracle NetSuite Entities]  rekening met Experience Platform gebruikend UI ](../../tutorials/ui/create/marketing-automation/oracle-netsuite-entities.md).
 * [ creeer een dataflow voor een bronverbinding gebruikend UI ](../../tutorials/ui/dataflow/marketing-automation.md).

@@ -5,9 +5,9 @@ product: experience platform
 type: Documentation
 description: Leer over prestaties en door systemen afgedwongen richtlijnen voor profielgegevens en segmentatie. Zo zorgt u voor optimaal gebruik van de functie Real-Time CDP.
 exl-id: 33ff0db2-6a75-4097-a9c6-c8b7a9d8b78c
-source-git-commit: 31f725fc30b8fd9a045c0aac5ee65832cd995363
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '2609'
+source-wordcount: '2615'
 ht-degree: 1%
 
 ---
@@ -31,9 +31,9 @@ Dit document biedt standaardgebruiks- en tarieflimieten om u te helpen uw profie
 De volgende Experience Platform-services zijn betrokken bij het modelleren van realtime-klantprofielgegevens:
 
 * [[!DNL Real-Time Customer Profile]](home.md): Maak uniforme consumentenprofielen met behulp van gegevens uit meerdere bronnen.
-* [ Identiteiten ](../identity-service/home.md): De identiteiten van Bridge van verschillende gegevensbronnen aangezien zij in Platform worden opgenomen.
-* [ Schema&#39;s ](../xdm/home.md): De schema&#39;s van de Gegevens van de ervaring van het Model (XDM) zijn het gestandaardiseerde kader waardoor het Platform gegevens van de klantenervaring organiseert.
-* [ Soorten publiek ](../segmentation/home.md): De segmenteringsmotor binnen Platform wordt gebruikt om publiek van uw klantenprofielen tot stand te brengen die op klantengedrag en attributen worden gebaseerd.
+* [ Identiteiten ](../identity-service/home.md): De identiteiten van Bridge van verschillende gegevensbronnen aangezien zij in Experience Platform worden opgenomen.
+* [ Schema&#39;s ](../xdm/home.md): De schema&#39;s van de Gegevens van de ervaring van het Model (XDM) zijn het gestandaardiseerde kader waardoor Experience Platform gegevens van de klantenervaring organiseert.
+* [ Soorten publiek ](../segmentation/home.md): De segmenteringsmotor binnen Experience Platform wordt gebruikt om publiek van uw klantenprofielen tot stand te brengen die op klantengedrag en attributen worden gebaseerd.
 
 ## Limiettypen
 
@@ -177,9 +177,9 @@ In dit document zijn er verschillende hulplijnen die naar &quot;profielfragmente
 
 ### Beleid samenvoegen {#merge-policies}
 
-Wanneer het samenbrengen van gegevens uit veelvoudige bronnen, is het fusiebeleid de regels die het Platform gebruikt om te bepalen hoe de gegevens aan voorrang zullen worden gegeven en welke gegevens zullen worden gecombineerd om die verenigde mening tot stand te brengen. Bijvoorbeeld, als een klant met uw merk over verscheidene kanalen in wisselwerking staat, zal uw organisatie veelvoudige profielfragmenten met betrekking tot die enige klant hebben die in veelvoudige datasets verschijnen. Wanneer deze fragmenten in Platform worden opgenomen, worden ze samengevoegd om één profiel voor die klant te maken. Wanneer de gegevens uit meerdere bronnen conflicteren, bepaalt het samenvoegbeleid welke informatie moet worden opgenomen in het profiel voor de persoon. Per sandbox zijn maximaal vijf (5) samenvoegbeleidsregels die het `_xdm.context.profile` -schema gebruiken, toegestaan. Om meer over fusiebeleid te leren, te lezen gelieve het [ overzicht van het samenvoegbeleid ](merge-policies/overview.md).
+Wanneer het samenbrengen van gegevens uit veelvoudige bronnen, is het fusiebeleid de regels die Experience Platform gebruikt om te bepalen hoe de gegevens aan voorrang zullen worden gegeven en welke gegevens zullen worden gecombineerd om die verenigde mening tot stand te brengen. Bijvoorbeeld, als een klant met uw merk over verscheidene kanalen in wisselwerking staat, zal uw organisatie veelvoudige profielfragmenten met betrekking tot die enige klant hebben die in veelvoudige datasets verschijnen. Wanneer deze fragmenten in Experience Platform worden opgenomen, worden ze samengevoegd om één profiel voor die klant te maken. Wanneer de gegevens uit meerdere bronnen conflicteren, bepaalt het samenvoegbeleid welke informatie moet worden opgenomen in het profiel voor de persoon. Per sandbox zijn maximaal vijf (5) samenvoegbeleidsregels die het `_xdm.context.profile` -schema gebruiken, toegestaan. Om meer over fusiebeleid te leren, te lezen gelieve het [ overzicht van het samenvoegbeleid ](merge-policies/overview.md).
 
-### Gegevenssets van de Adobe Analytics-rapportsuite in Platform {#aa-datasets}
+### Adobe Analytics-rapportenpakket, gegevenssets in Experience Platform {#aa-datasets}
 
 De veelvoudige rapportsuites kunnen voor Profiel worden toegelaten zolang alle gegevensconflicten worden opgelost. U kunt de functie Gegevensvoorbeeld gebruiken om gegevensconflicten op te lossen over eVars, Lijsten, en Props. Om meer over te leren hoe te om de functionaliteit van Prep van Gegevens te gebruiken, te lezen gelieve de [ de schakelaargids UI van Adobe Analytics ](../sources/tutorials/ui/create/adobe-applications/analytics.md).
 

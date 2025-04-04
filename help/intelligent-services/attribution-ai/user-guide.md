@@ -1,31 +1,31 @@
 ---
 keywords: Experience Platform;gebruikershandleiding;attributie ai;populaire onderwerpen;regio
 feature: Attribution AI
-title: Handleiding voor Attribution AI UI
-description: Dit document fungeert als richtlijn voor interactie met Attribution AI in de gebruikersinterface Intelligente services.
+title: Handleiding voor AI-gebruikersinterface voor kenmerken
+description: Dit document fungeert als richtlijn voor interactie met Attribution AI in de Intelligent Services-gebruikersinterface.
 exl-id: 32e1dd07-31a8-41c4-88df-8893ff773f79
-source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '2392'
+source-wordcount: '2393'
 ht-degree: 0%
 
 ---
 
-# Handleiding voor Attribution AI UI
+# Handleiding voor AI-gebruikersinterface voor kenmerken
 
-Attribution AI, als onderdeel van Intelligente Diensten is een multi-channel, algoritmische attributiedienst die de invloed en de stijgende invloed van klanteninteractie tegen gespecificeerde resultaten berekent. Met Attribution AI kunnen marketeers marketing- en advertentieuitgaven meten en optimaliseren door inzicht te krijgen in de impact van elke individuele interactie van de klant in elke fase van de reizen van de klant.
+Attribution AI, als onderdeel van Intelligent Services is een meerkanaals, algoritmische attributiedienst die de invloed en incrementele impact van klanteninteractie tegen gespecificeerde resultaten berekent. Met Attribution AI kunnen marketers marketing- en advertentieuitgaven meten en optimaliseren door inzicht te krijgen in de impact van elke afzonderlijke interactie van de klant in elke fase van de reizen van de klant.
 
-Dit document fungeert als richtlijn voor interactie met Attribution AI in de gebruikersinterface Intelligente services.
+Dit document fungeert als richtlijn voor interactie met Attribution AI in de Intelligent Services-gebruikersinterface.
 
 ## Een model maken
 
-Selecteer in de gebruikersinterface van [!DNL Adobe Experience Platform] de optie **[!UICONTROL Services]** in de linkernavigatie. De browser **[!UICONTROL Services]** wordt weergegeven en geeft beschikbare intelligente services voor Adobe weer. Selecteer **[!UICONTROL Open]** in de container voor Attribution AI.
+Selecteer in de gebruikersinterface van [!DNL Adobe Experience Platform] de optie **[!UICONTROL Services]** in de linkernavigatie. De browser **[!UICONTROL Services]** wordt weergegeven en geeft beschikbare intelligente Adobe-services weer. Selecteer **[!UICONTROL Open]** in de container for Attribution AI.
 
 ![ Toegang hebbend tot uw model ](./images/user-guide/open_Attribution_ai.png)
 
-De de dienstpagina van de Attribution AI verschijnt. Deze pagina maakt een lijst van de dienstmodellen van Attribution AI en toont informatie over hen, met inbegrip van de naam van het model, omzettingsgebeurtenissen, hoe vaak het model in werking wordt gesteld, en de status van de laatste update.
+De pagina van de dienst van AI van de Attributie verschijnt. Deze pagina bevat servicemodellen van Attribution AI en geeft informatie over deze modellen, zoals de naam van het model, conversiegebeurtenissen, hoe vaak het model wordt uitgevoerd en de status van de laatste update.
 
-U kunt de metrische waarde van **[!UICONTROL Total conversion events scored]** in de bodem-juiste kant van de **[!UICONTROL Create model]** container vinden. Deze metrische waarde houdt het totale aantal omzettingsgebeurtenissen bij die door Attribution AI voor het huidige kalenderjaar met inbegrip van alle zandbakmilieu&#39;s en om het even welke geschrapte de dienstmodellen worden genoteerd.
+U kunt de metrische waarde van **[!UICONTROL Total conversion events scored]** in de bodem-juiste kant van de **[!UICONTROL Create model]** container vinden. Deze metrische waarde houdt het totale aantal omzettingsgebeurtenissen bij die door Attribution AI voor het huidige kalenderjaar met inbegrip van alle zandbakmilieu&#39;s en om het even welke geschrapte de dienstmodellen worden gescoord.
 
 ![ totale omzettingen ](./images/user-guide/total_conversions.png)
 
@@ -33,7 +33,7 @@ De modellen van de dienst kunnen worden uitgegeven, worden gekloond, en worden g
 
 - **[!UICONTROL Edit]**: als u **[!UICONTROL Edit]** selecteert, kunt u een bestaand servicemodel wijzigen. U kunt de naam, de beschrijving, de status, het scoren frequentie van het model, en de extra kolommen van de scoredataset uitgeven.
 - **[!UICONTROL Clone]**: als u **[!UICONTROL Clone]** selecteert, wordt het geselecteerde servicemodel gekopieerd. Vervolgens kunt u de workflow wijzigen om kleine wijzigingen aan te brengen en de naam ervan wijzigen in een nieuw model.
-- **[!UICONTROL Delete]**: U kunt een servicemodel verwijderen, inclusief alle historische regels. De overeenkomstige outputdataset zal van Platform worden geschrapt. De scores die zijn gesynchroniseerd met Real-Time Klantprofiel worden echter niet verwijderd.
+- **[!UICONTROL Delete]**: U kunt een servicemodel verwijderen, inclusief alle historische regels. De corresponderende uitvoergegevensset wordt uit Experience Platform verwijderd. De scores die zijn gesynchroniseerd met Real-Time Klantprofiel worden echter niet verwijderd.
 - **[!UICONTROL Data source]**: Een koppeling naar de gegevensset die wordt gebruikt. Als meer dan één dataset door Attribution AI wordt gebruikt, &quot;Veelvoud&quot;die door het aantal datasets wordt gevolgd wordt getoond. Als u de hyperlink selecteert, wordt de voorvertoning van de datasets weergegeven.
 - **[!UICONTROL Last run details]**: dit wordt alleen weergegeven wanneer een uitvoering mislukt. Hier wordt informatie weergegeven over waarom de uitvoering is mislukt, zoals foutcodes.
 
@@ -49,7 +49,7 @@ Selecteer **[!UICONTROL Create model]** om te beginnen.
 
 ![ creeer model ](./images/user-guide/landing_page.png)
 
-Vervolgens wordt de instellingspagina voor Attribution AI weergegeven waar u een naam en een optionele beschrijving voor het servicemodel kunt opgeven.
+Vervolgens wordt de instellingspagina voor Kenmerken AI weergegeven waar u een naam en een optionele beschrijving voor uw servicemodel kunt opgeven.
 
 ![ noemend een model ](./images/user-guide/naming_instance.png)
 
@@ -57,7 +57,7 @@ Vervolgens wordt de instellingspagina voor Attribution AI weergegeven waar u een
 
 <!-- https://www.adobe.com/go/aai-select-data -->
 
-Door ontwerp, kan Attribution AI Adobe Analytics, de gebeurtenis van de Ervaring, en de gegevens van de Gebeurtenis van de Consumentenervaring gebruiken om attributiescore te berekenen. Wanneer het selecteren van een dataset slechts degenen die met Attribution AI compatibel zijn worden vermeld. Om een dataset te selecteren, selecteer (**+**) symbool naast de datasetnaam of checkbox selecteren om veelvoudige datasets meteen toe te voegen. U kunt de onderzoeksoptie ook gebruiken om de datasets snel te vinden u in geinteresseerd bent.
+Door ontwerp, kan de AI van de Attributie Adobe Analytics, de gebeurtenis van de Ervaring, en de gegevens van de Gebeurtenis van de Consumentenervaring gebruiken om attributiescore te berekenen. Als u een gegevensset selecteert, worden alleen de gegevenssets weergegeven die compatibel zijn met Kenmerk AI. Om een dataset te selecteren, selecteer (**+**) symbool naast de datasetnaam of checkbox selecteren om veelvoudige datasets meteen toe te voegen. U kunt de onderzoeksoptie ook gebruiken om de datasets snel te vinden u in geinteresseerd bent.
 
 Nadat u de gegevenssets hebt geselecteerd die u wilt gebruiken, selecteert u de knop **[!UICONTROL Add]** om de gegevenssets toe te voegen aan het voorbeeldvenster van de gegevensset.
 
@@ -71,7 +71,7 @@ De voorproef van de dataset bevat gegevens zoals de laatste updatetijd, bronsche
 
 Selecteer **[!UICONTROL Save]** om uw concepten op te slaan terwijl u de workflow beweegt. U kunt ook conceptmodelconfiguraties opslaan en naar de volgende stap in de workflow gaan. Gebruik **[!UICONTROL Save and continue]** om concepten te maken en op te slaan tijdens modelconfiguraties. De eigenschap laat u toe om concepten van de modelconfiguratie tot stand te brengen en te bewaren en is bijzonder nuttig wanneer u vele gebieden in het configuratiewerkschema moet bepalen.
 
-![ creeer werkschema van het lusje van de Diensten van de Wetenschap van Gegevens met sparen en sparen en blijven benadrukt.](./images/user-guide/aai-save-save-&-exit.png)
+![ creeer werkschema van de Attributie AI van de Diensten van de Wetenschap van Gegevens lusje met sparen en sparen en blijven benadrukt.](./images/user-guide/aai-save-save-&-exit.png)
 
 ### Volledige gegevensset {#dataset-completeness}
 
@@ -81,7 +81,7 @@ In de voorproef van de dataset is een het percentagewaarde van de volledigheid v
 
 >[!NOTE]
 >
->De volledigheid van de gegevensset wordt berekend met behulp van het maximale trainingsvenster voor Attribution AI (één jaar). Dit betekent dat gegevens die meer dan een jaar oud zijn niet in aanmerking worden genomen bij het weergeven van de volledigheidswaarde van de gegevensset.
+>De volledigheid van de gegevensset wordt berekend gebruikend het maximum trainingsvenster voor Attribution AI (één jaar). Dit betekent dat gegevens die meer dan een jaar oud zijn niet in aanmerking worden genomen bij het weergeven van de volledigheidswaarde van de gegevensset.
 
 ![ volledigheid van de Dataset ](./images/user-guide/dataset-completeness.png)
 
@@ -109,7 +109,7 @@ Als er meer dan één identiteit beschikbaar is binnen een naamruimte, selecteer
 
 <!-- https://www.adobe.com/go/aai-mapping -->
 
-Nadat u het selecteren en het toevoegen van datasets hebt gebeëindigd, verschijnt de **de configuratiestappen van de Kaart**. Attribution AI vereist dat u het het kanaalgebied van Media voor elke dataset in kaart brengt u in de vorige stap selecteerde. Dit is omdat zonder de het kanaalafbeelding van Media tussen datasets, de inzichten die uit Attribution AI worden afgeleid niet behoorlijk kunnen tonen makend de inzichten pagina moeilijk te interpreteren. Hoewel alleen het Media-kanaal vereist is, wordt u ten zeerste aangeraden een aantal optionele velden zoals Media-actie, Campagnenaam, Campagnegroep en Campagne-tag toe te wijzen. Hierdoor kan de Attribution AI meer inzicht krijgen en optimale resultaten behalen.
+Nadat u het selecteren en het toevoegen van datasets hebt gebeëindigd, verschijnt de **de configuratiestappen van de Kaart**. Kenmerk AI vereist dat u het het kanaalgebied van Media voor elke dataset in kaart brengt u in de vorige stap selecteerde. Dit is omdat zonder de het kanaalafbeelding van Media tussen datasets, kunnen de inzichten die uit Attributie AI worden afgeleid niet behoorlijk tonen makend de inzichten pagina moeilijk te interpreteren maken. Hoewel alleen het Media-kanaal vereist is, wordt u ten zeerste aangeraden een aantal optionele velden zoals Media-actie, Campagnenaam, Campagnegroep en Campagne-tag toe te wijzen. Hierdoor biedt Attribution AI duidelijkere inzichten en optimale resultaten.
 
 ![ afbeelding ](./images/user-guide/mapping-save-&-exit.png)
 
@@ -205,7 +205,7 @@ Zodra u klaar bent met het bepalen van alle noodzakelijke aanraakpunten, scrol o
 
 ## Geavanceerde instellingen voor training en scores
 
-De laatste pagina in Attribution AI is de pagina **[!UICONTROL Advanced]** die wordt gebruikt voor het instellen van training en scoring.
+De laatste pagina in Attribution AI is de **[!UICONTROL Advanced]** -pagina die wordt gebruikt voor het instellen van training en scoring.
 
 ![ nieuwe pagina vastgestelde opties ](./images/user-guide/advanced_settings_set_options.png)
 
@@ -267,7 +267,7 @@ Nadat u het trainingsvenster hebt geselecteerd, selecteert u **[!UICONTROL Finis
 
 ## Volgende stappen
 
-Door deze zelfstudie te volgen, hebt u met succes een de dienstinstantie in Attribution AI gecreeerd. Zodra de instantie gebeëindigd het scoren (sta tot 24 uren toe), bent u bereid om [ Attribution AI inzichten ](./discover-insights.md) te ontdekken. Bovendien, als u wenst om uw het sorteren resultaten te downloaden, bezoek de [ downloadende scores ](./download-scores.md) documentatie.
+Aan de hand van deze zelfstudie hebt u een service-instantie gemaakt in Attribution AI. Zodra de instantie gebeëindigd het scoren (sta tot 24 uren toe), bent u bereid om de Inzichten van AI van de Attributie ](./discover-insights.md) te ontdekken. [ Bovendien, als u wenst om uw het sorteren resultaten te downloaden, bezoek de [ downloadende scores ](./download-scores.md) documentatie.
 
 ## Aanvullende bronnen
 

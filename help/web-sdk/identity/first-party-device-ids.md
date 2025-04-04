@@ -1,33 +1,33 @@
 ---
-title: Eerste-partij apparaat IDs in Web SDK
-description: Leer hoe u FPID's (First-party device ID's) configureert in de Adobe Experience Platform Web SDK.
+title: Apparaat-id's van de eerste partij in Web SDK
+description: Leer hoe u FPID's (First-Party Device ID's) configureert in de Adobe Experience Platform Web SDK.
 exl-id: c3b17175-8a57-43c9-b8a0-b874fecca952
-source-git-commit: 04ef39cbfc614369cb15f4d947474b491c34ef33
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '2051'
+source-wordcount: '2054'
 ht-degree: 0%
 
 ---
 
 
-# Eerste-partij apparaat IDs in Web SDK
+# Apparaat-id&#39;s van de eerste partij in Web SDK
 
-SDK van het Web van Adobe Experience Platform wijst [ Adobe Experience Cloud IDs (ECIDs) ](https://experienceleague.adobe.com/docs/experience-platform/identity/ecid.html) aan websitebezoekers door koekjes te gebruiken toe, om gebruikersgedrag te volgen. Als u browserbeperkingen voor de levensduur van cookies wilt compenseren, kunt u uw eigen apparaat-id&#39;s instellen en beheren. Deze worden bedoeld als eerste-partij apparaat IDs (`FPIDs`).
+Het Web SDK van Adobe Experience Platform wijst [ Adobe Experience Cloud IDs (ECIDs) ](https://experienceleague.adobe.com/docs/experience-platform/identity/ecid.html) aan websitebezoekers door koekjes te gebruiken toe, om gebruikersgedrag te volgen. Als u browserbeperkingen voor de levensduur van cookies wilt compenseren, kunt u uw eigen apparaat-id&#39;s instellen en beheren. Deze worden bedoeld als eerste-partij apparaat IDs (`FPIDs`).
 
 >[!NOTE]
 >
->De steun van eerste-partijapparaatidentiteitskaart is slechts beschikbaar wanneer het verzenden van gegevens naar de Edge Network van het Experience Platform via het Web SDK.
+>De ondersteuning voor apparaat-id&#39;s van de eerste partij is alleen beschikbaar wanneer u gegevens naar de Experience Platform Edge Network verzendt via Web SDK.
 
 >[!IMPORTANT]
 >
->Eerste-partij apparaat IDs is niet compatibel met de [ functionaliteit van derdekoekjes ](../../tags/extensions/client/web-sdk/web-sdk-extension-configuration.md#identity) in Web SDK.
+>Het apparaat van de eerste partij IDs is niet compatibel met de [ derdekoekjes ](../../tags/extensions/client/web-sdk/web-sdk-extension-configuration.md#identity) functionaliteit in SDK van het Web.
 >U kunt apparaat-id&#39;s van andere leveranciers gebruiken of cookies van andere leveranciers, maar u kunt beide functies niet tegelijkertijd gebruiken.
 
 Dit document verklaart hoe te om eerste-partijapparaat IDs voor uw implementatie van SDK van het Web te vormen.
 
 ## Vereisten
 
-Deze gids veronderstelt u vertrouwd met bent hoe de identiteitsgegevens voor het Web SDK van het Platform, met inbegrip van de rol van ECIDs en `identityMap` werken. Zie het overzicht op [ identiteitsgegevens in het Web SDK ](./overview.md) voor meer informatie.
+In deze handleiding wordt ervan uitgegaan dat u bekend bent met de werking van identiteitsgegevens voor de Experience Platform Web SDK, inclusief de rol van ECID&#39;s en `identityMap` . Zie het overzicht op [ identiteitsgegevens in het Web SDK ](./overview.md) voor meer informatie.
 
 ## FPID&#39;s (First-party device ID&#39;s) gebruiken {#using-fpid}
 
@@ -35,17 +35,17 @@ First-party apparaat IDs ([!DNL FPIDs]) houdt bezoekers door eerste-partijkoekje
 
 >[!IMPORTANT]
 >
->[!DNL A] - of [!DNL AAAA] -records worden alleen ondersteund voor het instellen en bijhouden van cookies. De belangrijkste methode voor gegevensverzameling is een [!DNL DNS] [!DNL CNAME] . Met andere woorden, [!DNL FPIDs] wordt ingesteld met een [!DNL A] record of [!DNL AAAA] record en wordt vervolgens naar de Adobe verzonden met een [!DNL CNAME] -record.
+>[!DNL A] - of [!DNL AAAA] -records worden alleen ondersteund voor het instellen en bijhouden van cookies. De belangrijkste methode voor gegevensverzameling is een [!DNL DNS] [!DNL CNAME] . Met andere woorden, [!DNL FPIDs] wordt ingesteld met een [!DNL A] record of [!DNL AAAA] record en wordt vervolgens naar Adobe verzonden met een [!DNL CNAME] -record.
 >
 >Het [ Adobe-Beheerde Programma van het Certificaat ](https://experienceleague.adobe.com/docs/core-services/interface/administration/ec-cookies/cookies-first-party.html#adobe-managed-certificate-program) wordt ook nog gesteund voor de inzameling van eerstepartijgegevens.
 
-Nadat een [!DNL FPID] -cookie is ingesteld, kan de waarde ervan worden opgehaald en naar de Adobe worden verzonden wanneer gebeurtenisgegevens worden verzameld. Verzameld [!DNL FPIDs] wordt gebruikt als zaad om [!DNL ECIDs] te genereren. Dit blijven de primaire id&#39;s in Adobe Experience Cloud-toepassingen.
+Nadat een [!DNL FPID] -cookie is ingesteld, kan de waarde ervan worden opgehaald en naar Adobe worden verzonden wanneer gebeurtenisgegevens worden verzameld. Verzameld [!DNL FPIDs] wordt gebruikt als zaad om [!DNL ECIDs] te genereren. Dit blijven de primaire id&#39;s in Adobe Experience Cloud-toepassingen.
 
-Als u een [!DNL FPID] voor een websitebezoeker naar de Edge Network wilt verzenden, moet u de [!DNL FPID] in de `identityMap` voor die bezoeker opnemen. Zie de sectie verderop in dit document over [ het gebruiken van FPIDs in `identityMap`](#identityMap) voor meer informatie.
+Als u een [!DNL FPID] -bestand voor een websitebezoeker naar de Edge Network wilt verzenden, moet u de [!DNL FPID] -code in de `identityMap` -code voor die bezoeker opnemen. Zie de sectie verderop in dit document over [ het gebruiken van FPIDs in `identityMap`](#identityMap) voor meer informatie.
 
 ### Opmaakvereisten voor eerste apparaat-id&#39;s {#formatting-requirements}
 
-De Edge Network keurt slechts [!DNL IDs] goed die aan het [ formaat UIDv4 ](https://datatracker.ietf.org/doc/html/rfc4122) voldoen. Apparaat-id&#39;s die niet de [!DNL UUIDv4] -indeling hebben, worden geweigerd.
+Edge Network keurt slechts [!DNL IDs] goed die aan het [ formaat UIDv4 ](https://datatracker.ietf.org/doc/html/rfc4122) voldoen. Apparaat-id&#39;s die niet de [!DNL UUIDv4] -indeling hebben, worden geweigerd.
 
 Het genereren van een [!DNL UUID] resulteert bijna altijd in een unieke, willekeurige id, waarbij de kans dat een botsing optreedt verwaarloosbaar is. [!DNL UUIDv4] kan niet worden verzonden gebruikend IP adressen of een andere persoonlijke identificeerbare informatie ([!DNL PII]). [!DNL UUIDs] zijn alomtegenwoordig en bibliotheken zijn beschikbaar voor vrijwel elke programmeertaal om deze te genereren.
 
@@ -59,17 +59,17 @@ U kunt een cookienaam opgeven in de gebruikersinterface van Datastreams, waar [!
 
 Zie de [ documentatie van gegevensstromen ](../../datastreams/configure.md) voor gedetailleerde informatie over hoe te om een gegevensstroom te vormen.
 
-Schakel de optie **[!UICONTROL First Party ID Cookie]** in wanneer u de gegevensstroom configureert. Dit het plaatsen vertelt de Edge Network om naar een gespecificeerd koekje te verwijzen wanneer het opzoeken van eerste-partijapparaat identiteitskaart, eerder dan het opzoeken van deze waarde in het [ identiteitskaart ](#identityMap).
+Schakel de optie **[!UICONTROL First Party ID Cookie]** in wanneer u de gegevensstroom configureert. Dit het plaatsen vertelt Edge Network om naar een gespecificeerd koekje te verwijzen wanneer het kijken omhoog identiteitskaart van het eerste-partijapparaat, eerder dan het kijken omhoog deze waarde in het [ identiteitskaart ](#identityMap).
 
 Zie de documentatie op [ eerste-partijkoekjes ](https://experienceleague.adobe.com/docs/core-services/interface/administration/ec-cookies/cookies-first-party.html) voor meer details over hoe zij met Adobe Experience Cloud werken.
 
-![ beeld van Platform UI die de configuratie toont die van de gegevensstroom de Eerste het plaatsen van het Koekje van identiteitskaart van de Partij ](../assets/first-party-id-datastreams.png) benadrukt
+{het beeld van 0} Experience Platform UI die de configuratie toont die van de gegevensstroom de Eerste het plaatsen van het Koekje van identiteitskaart van de Partij ](../assets/first-party-id-datastreams.png) benadrukt![
 
 Als u deze instelling inschakelt, moet u de naam opgeven van het cookie waarop de id moet worden opgeslagen.
 
 Als u id&#39;s van derden gebruikt, kunt u geen syncs voor id&#39;s van derden uitvoeren. Identiteitskaart van de derde baseert syncs zich op de [!DNL Visitor ID] dienst en `UUID` die door die dienst wordt geproduceerd. Wanneer u de functie voor de eerste-id gebruikt, wordt de [!DNL ECID] gegenereerd zonder gebruik te maken van de [!DNL Visitor ID] -service, waardoor syncs van andere id&#39;s niet mogelijk is.
 
-Wanneer u eerste-partij IDs gebruikt, [ Audience Manager ](https://experienceleague.adobe.com/en/docs/audience-manager) mogelijkheden die aan activering in partnerplatforms worden gericht worden niet gesteund, gegeven dat de syncs van identiteitskaart van de Partner van de Audience Manager meestal op `UUIDs` of `DIDs` worden gebaseerd. De [!DNL ECID] die is afgeleid van een id van een eerste partij is niet gekoppeld aan een `UUID` , zodat deze niet-adresseerbaar is.
+Wanneer u eerste-partij IDs gebruikt, [ Audience Manager ](https://experienceleague.adobe.com/en/docs/audience-manager) mogelijkheden die aan activering in partnerplatforms worden gericht worden niet gesteund, gegeven dat de syncs van identiteitskaart van de Partner van Audience Manager hoofdzakelijk op `UUIDs` of `DIDs` worden gebaseerd. De [!DNL ECID] die is afgeleid van een id van een eerste partij is niet gekoppeld aan een `UUID` , zodat deze niet-adresseerbaar is.
 
 ## Een cookie instellen met uw eigen server {#set-cookie-server}
 
@@ -110,7 +110,7 @@ Er zijn verschillende cookiemarkeringen die van invloed zijn op de manier waarop
 
 Cookies die zijn ingesteld met de markering `HTTPOnly` , zijn niet toegankelijk met clientscripts. Dit betekent dat als u bij het instellen van de [!DNL FPID] -markering een `HTTPOnly` -markering instelt, u een scripttaal aan de serverzijde moet gebruiken om de cookiewaarde te lezen voor opname in de `identityMap` .
 
-Als u ervoor kiest dat de Edge Network de waarde van het cookie [!DNL FPID] leest, zorgt het instellen van de markering `HTTPOnly` ervoor dat de waarde niet toegankelijk is voor clientscripts, maar geen negatieve invloed heeft op de mogelijkheid van de Edge Network om de cookie te lezen.
+Als u ervoor kiest dat de Edge Network de waarde van het cookie [!DNL FPID] laat lezen, zorgt het instellen van de markering `HTTPOnly` ervoor dat de waarde niet toegankelijk is voor clientscripts, maar geen negatieve invloed heeft op de mogelijkheid van de Edge Network om de cookie te lezen.
 
 >[!NOTE]
 >
@@ -167,7 +167,7 @@ Net als bij andere identiteitstypen kunt u de [!DNL FPID] opnemen met andere ide
 }
 ```
 
-Als [!DNL FPID] in een koekje bevat dat door de Edge Network wordt gelezen wanneer de inzameling van de eerste-partijgegevens wordt toegelaten, zou u slechts authentiek moeten vangen [!DNL CRM ID]:
+Als de [!DNL FPID] is opgenomen in een cookie die door de Edge Network wordt gelezen wanneer gegevensverzameling van de eerste partij is ingeschakeld, moet u alleen de geverifieerde [!DNL CRM ID] vastleggen:
 
 ```json
 {
@@ -204,7 +204,7 @@ De volgende `identityMap` resulteert in een foutreactie van de Edge Network omda
 }
 ```
 
-De foutreactie die in dit geval door de Edge Network wordt gegeven, is vergelijkbaar met de volgende:
+De door de Edge Network in dit geval geretourneerde foutreactie zou vergelijkbaar zijn met het volgende:
 
 ```json
 {
@@ -226,9 +226,9 @@ Naast het instellen van de [!DNL FPID] in de identiteitskaart, kunt u het [!DNL 
 
 Wanneer de inzameling van de eerste-partijgegevens gebruikend [!DNL CNAME] wordt toegelaten, zullen alle koekjes voor uw domein op verzoeken worden verzonden die aan het eindpunt van de gegevensinzameling worden gemaakt.
 
-Alle cookies die niet relevant zijn voor gegevensverzamelingsdoeleinden van de Adobe, worden verwijderd. Voor [!DNL FPID] kunt u de naam van het [!DNL FPID] -cookie in de configuratie van de gegevensstroom opgeven. Wanneer u dit doet, leest de Edge Network de inhoud van het cookie [!DNL FPID] in plaats van naar de [!DNL FPID] in de identiteitskaart te zoeken.
+Alle cookies die niet relevant zijn voor de verzameling van Adobe-gegevens, worden verwijderd. Voor [!DNL FPID] kunt u de naam van het [!DNL FPID] -cookie in de configuratie van de gegevensstroom opgeven. Wanneer u dit doet, leest de Edge Network de inhoud van het [!DNL FPID] -cookie in plaats van te zoeken naar de [!DNL FPID] in de identiteitskaart.
 
-Als u deze functionaliteit wilt gebruiken, moet u de eigenschap [!DNL FPID] instellen op het hoofdniveau van uw domein in plaats van op een specifiek subdomein. Als u de waarde instelt op een subdomein, wordt de waarde van het cookie niet naar de Edge Network verzonden en werkt de oplossing [!DNL FPID] niet naar behoren.
+Als u deze functionaliteit wilt gebruiken, moet u de eigenschap [!DNL FPID] instellen op het hoofdniveau van uw domein in plaats van op een specifiek subdomein. Als u de waarde instelt op een subdomein, wordt de waarde van het cookie niet verzonden naar de Edge Network en werkt de oplossing [!DNL FPID] niet naar behoren.
 
 ## ID-hiërarchie {#id-hierarchy}
 
@@ -258,7 +258,7 @@ Om dit proces te illustreren, kunt u een scenario overwegen waarbij een klant be
 | Eerste bezoek | Stel dat u nog niet bent begonnen met het instellen van het cookie [!DNL FPID] . [!DNL ECID] bevat in het [ koekje van AMCV ](https://experienceleague.adobe.com/docs/id-service/using/intro/cookies.html#section-c55af54828dc4cce89f6118655d694c8) zal het herkenningsteken zijn dat wordt gebruikt om de bezoeker te identificeren. |
 | Tweede bezoek | De introductie van de [!DNL FPID] -oplossing is gestart. Het bestaande [!DNL ECID] is nog steeds aanwezig en blijft de primaire id voor bezoekersidentificatie. |
 | Derde bezoek | Tussen het tweede en derde bezoek is er voldoende tijd verstreken om [!DNL ECID] te verwijderen vanwege het browserbeleid. Omdat [!DNL FPID] echter is ingesteld met een [!DNL DNS] [!DNL A] -record, blijft [!DNL FPID] bestaan. [!DNL FPID] wordt nu beschouwd als de primaire id en wordt gebruikt om [!DNL ECID] te verzenden, die naar het apparaat van de eindgebruiker wordt geschreven. De gebruiker wordt nu beschouwd als een nieuwe bezoeker in de oplossingen Adobe Experience Platform en Experience Cloud. |
-| Vierde bezoek | Tussen de derde en vierde keer is er voldoende tijd verstreken om [!DNL ECID] te verwijderen vanwege het browserbeleid. Net als bij het vorige bezoek blijft de [!DNL FPID] afhankelijk van de manier waarop deze is ingesteld. Deze keer wordt dezelfde [!DNL ECID] gegenereerd als het vorige bezoek. De gebruiker wordt gezien door het Experience Platform en de oplossingen van het Experience Cloud zoals de zelfde gebruiker zoals het vorige bezoek. |
+| Vierde bezoek | Tussen de derde en vierde keer is er voldoende tijd verstreken om [!DNL ECID] te verwijderen vanwege het browserbeleid. Net als bij het vorige bezoek blijft de [!DNL FPID] afhankelijk van de manier waarop deze is ingesteld. Deze keer wordt dezelfde [!DNL ECID] gegenereerd als het vorige bezoek. De gebruiker wordt in de Experience Platform- en Experience Cloud-oplossingen gezien als dezelfde gebruiker als het vorige bezoek. |
 | Vijfde bezoek | Tussen de vierde en de vijfde keer dat het programma wordt bezocht, heeft de eindgebruiker alle cookies in de browser gewist. Er wordt een nieuwe [!DNL FPID] gegenereerd en gebruikt om het maken van een nieuwe [!DNL ECID] te versnellen. De gebruiker wordt nu beschouwd als een nieuwe bezoeker in de oplossingen Adobe Experience Platform en Experience Cloud. |
 
 {style="table-layout:auto"}
@@ -269,16 +269,16 @@ Hieronder volgt een lijst met antwoorden op veelgestelde vragen over apparaat-id
 
 ### Hoe anders zaait u een id dan eenvoudig een id genereren?
 
-Het concept van zaaien is uniek in die zin dat de [!DNL FPID] die aan Adobe Experience Cloud wordt doorgegeven, wordt omgezet in een [!DNL ECID] met behulp van een deterministisch algoritme. Telkens wanneer dezelfde [!DNL FPID] naar de Edge Network wordt verzonden, wordt dezelfde [!DNL ECID] verzonden van de [!DNL FPID] .
+Het concept van zaaien is uniek in die zin dat de [!DNL FPID] die aan Adobe Experience Cloud wordt doorgegeven, wordt omgezet in een [!DNL ECID] met behulp van een deterministisch algoritme. Telkens wanneer dezelfde [!DNL FPID] naar de Edge Network wordt verzonden, wordt dezelfde [!DNL ECID] verzonden vanuit de [!DNL FPID] .
 
 ### Wanneer moet de apparaat-id van de eerste partij worden gegenereerd?
 
-Om potentiële bezoekersinflatie te verminderen, zou [!DNL FPID] moeten worden geproduceerd alvorens uw eerste verzoek te maken gebruikend SDK van het Web. Als u dit echter niet kunt doen, wordt nog steeds een [!DNL ECID] gegenereerd voor die gebruiker en wordt deze gebruikt als primaire id. De gegenereerde [!DNL FPID] wordt pas de primaire id wanneer [!DNL ECID] niet meer aanwezig is.
+Om potentiële bezoekersinflatie te verminderen, zou [!DNL FPID] moeten worden geproduceerd alvorens uw eerste verzoek te maken gebruikend het Web SDK. Als u dit echter niet kunt doen, wordt nog steeds een [!DNL ECID] gegenereerd voor die gebruiker en wordt deze gebruikt als primaire id. De gegenereerde [!DNL FPID] wordt pas de primaire id wanneer [!DNL ECID] niet meer aanwezig is.
 
 ### Welke methodes van de gegevensinzameling steunen eerste-partij apparaat IDs?
 
-Momenteel steunt slechts Web SDK eerste-partij apparaat IDs.
+Alleen Web SDK biedt momenteel ondersteuning voor apparaat-id&#39;s van andere leveranciers.
 
-### Worden apparaat-id&#39;s van de eerste partij opgeslagen op een platform- of Experience Cloud-oplossing?
+### Worden id&#39;s van eerste apparaten opgeslagen op Experience Platform- of Experience Cloud-oplossingen?
 
 Nadat [!DNL FPID] is gebruikt om een [!DNL ECID] te verzenden, wordt het verwijderd uit de `identityMap` en vervangen door de [!DNL ECID] die is gegenereerd. [!DNL FPID] wordt niet opgeslagen in Adobe Experience Platform- of Experience Cloud-oplossingen.

@@ -1,15 +1,15 @@
 ---
-title: Back-ups maken van objectconfiguraties met behulp van sandboxgereedschappen
+title: Back-ups maken van objectconfiguraties met behulp van sandbox-tools
 description: Als u sandboxen veilig wilt herstellen en ondersteuning voor versiebeheer wilt toevoegen, maakt u een back-up van objectconfiguraties (of metagegevens) met behulp van gereedschapspakketten van de sandbox. De reserve pakketten verhinderen het verlies van kritieke configuraties zoals schema's, datasets, en publiek, vooral tijdens ontwikkeliteraties.
 exl-id: cccbaaf1-ee68-4a00-9a44-aa5db4a83a14
-source-git-commit: d4df5606228347b5fb69fdaa24c637c329099895
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1152'
-ht-degree: 0%
+source-wordcount: '1153'
+ht-degree: 2%
 
 ---
 
-# Back-ups maken van objectconfiguraties met behulp van sandboxgereedschappen
+# Back-ups maken van objectconfiguraties met behulp van sandbox-tools
 
 Als u sandboxen veilig wilt herstellen en ondersteuning voor versiebeheer wilt toevoegen, maakt u een back-up van objectconfiguraties (of metagegevens) met behulp van gereedschapspakketten van de sandbox. De reserve pakketten verhinderen het verlies van kritieke configuraties zoals schema&#39;s, datasets, en publiek, vooral tijdens ontwikkeliteraties.
 
@@ -30,7 +30,7 @@ Wanneer u uw eigen back-uppakket binnen uw organisatie wilt maken, moet u rekeni
 - Afhankelijk van de werkingsgebiedmeta-gegevens u aan file wenst, zorg ervoor u begrijpt hoe te [ voorwerpen aan een pakket ](../ui/sandbox-tooling.md#add-object-to-a-new-package) toevoegen of hoe te [ een volledige zandbak ](../ui/sandbox-tooling.md#export-an-entire-sandbox) uitvoeren.
 - Zorg ervoor dat u toegang hebt tot de sandboxgereedschappen in uw organisatie met de juiste machtigingen.
 
-### UI-functionaliteit, platformcomponenten en Experiencen Cloud die u wilt gebruiken {#ui-functionality-and-elements}
+### UI-functionaliteit, Experience Platform-componenten en Experience Cloud-producten die u wilt gebruiken {#ui-functionality-and-elements}
 
 Als u dit geval wilt gebruiken, moet u meerdere gebieden van Adobe Experience Platform gebruiken. Verzeker u de noodzakelijke [ op attributen-gebaseerde toegangsbeheertoestemmingen ](../../access-control/abac/overview.md) voor al deze gebieden hebt, of uw systeembeheerder vragen om u de noodzakelijke toestemmingen te verlenen.
 
@@ -125,4 +125,4 @@ Nu u uw zandbak opnieuw hebt ingesteld, kunt u gebruik maken van het reservepakk
 
 Verken meer gebruiksgevallen die zijn gegenereerd via gereedschappen voor sandboxen:
 
-- [Een expertisecentrum inschakelen met behulp van sandboxgereedschappen](./center-of-excellence.md)
+- [Een expertisecentrum inschakelen met behulp van sandbox-tools](./center-of-excellence.md)

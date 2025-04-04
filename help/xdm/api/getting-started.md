@@ -1,12 +1,12 @@
 ---
-keywords: Experience Platform;home;populaire onderwerpen;api;API;XDM;XDM systeem;ervaringsgegevensmodel;Ervaring gegevensmodel;Beleidsgegevensmodel;Gegevensmodel;Gegevensmodel;Schema register;Schemaregister
+keywords: Experience Platform;home;populaire onderwerpen;api;API;XDM;XDM-systeem;ervaringsgegevensmodel;Experience gegevensmodel;Experience Data Model;Data Model;Data Model;Schema register;Schema Register
 solution: Experience Platform
 title: Aan de slag met de API voor schemaregistratie
 description: Dit document verstrekt een inleiding aan de kernconcepten u moet kennen alvorens te proberen om vraag aan de Registratie API van het Schema te maken.
 exl-id: 7daebb7d-72d2-4967-b4f7-1886736db69f
-source-git-commit: eb1cf204e95591082b27dc97cd3c709a23b20b08
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1361'
+source-wordcount: '1364'
 ht-degree: 0%
 
 ---
@@ -22,33 +22,33 @@ Voor het gebruik van de handleiding voor ontwikkelaars is een goed begrip van de
 * [[!DNL Experience Data Model (XDM) System]](../home.md): Het gestandaardiseerde framework waarmee [!DNL Experience Platform] gegevens voor de klantervaring indeelt.
    * [ Grondbeginselen van schemacompositie ](../schema/composition.md): Leer over de basisbouwstenen van schema&#39;s XDM.
 * [[!DNL Real-Time Customer Profile]](../../profile/home.md): biedt een uniform, real-time consumentenprofiel dat is gebaseerd op geaggregeerde gegevens van meerdere bronnen.
-* [[!DNL Sandboxes]](../../sandboxes/home.md): [!DNL Experience Platform] biedt virtuele sandboxen die één [!DNL Platform] -instantie in afzonderlijke virtuele omgevingen verdelen om toepassingen voor digitale ervaringen te ontwikkelen en te ontwikkelen.
+* [[!DNL Sandboxes]](../../sandboxes/home.md): [!DNL Experience Platform] biedt virtuele sandboxen die één [!DNL Experience Platform] -instantie in afzonderlijke virtuele omgevingen verdelen om toepassingen voor digitale ervaringen te ontwikkelen en te ontwikkelen.
 
 XDM gebruikt het formatteren van het Schema JSON om de structuur van ingebedde gegevens van de klantenervaring te beschrijven en te bevestigen. Daarom wordt sterk geadviseerd dat u de [ officiële documentatie van het Schema JSON ](https://json-schema.org/) voor een beter inzicht in deze onderliggende technologie herziet.
 
 ## API-voorbeeldaanroepen lezen
 
-De API-documentatie van [!DNL Schema Registry] biedt voorbeeld-API-aanroepen om aan te tonen hoe uw aanvragen moeten worden opgemaakt. Dit zijn paden, vereiste kopteksten en correct opgemaakte ladingen voor aanvragen. Voorbeeld-JSON die wordt geretourneerd in API-reacties, wordt ook verschaft. Voor informatie over de overeenkomsten die in documentatie voor steekproef API vraag worden gebruikt, zie de sectie op [ hoe te om voorbeeld API vraag ](../../landing/troubleshooting.md#how-do-i-format-an-api-request) in de het oplossen van problemengids van het Experience Platform te lezen.
+De API-documentatie van [!DNL Schema Registry] biedt voorbeeld-API-aanroepen om aan te tonen hoe uw aanvragen moeten worden opgemaakt. Dit zijn paden, vereiste kopteksten en correct opgemaakte ladingen voor aanvragen. Voorbeeld-JSON die wordt geretourneerd in API-reacties, wordt ook verschaft. Voor informatie over de overeenkomsten die in documentatie voor steekproef API vraag worden gebruikt, zie de sectie op [ hoe te om voorbeeld API vraag ](../../landing/troubleshooting.md#how-do-i-format-an-api-request) in de het oplossen van problemengids van Experience Platform te lezen.
 
 ## Waarden verzamelen voor vereiste koppen
 
-Om vraag aan [!DNL Platform] APIs te maken, moet u het [ authentificatieleerprogramma ](https://www.adobe.com/go/platform-api-authentication-en) eerst voltooien. Als u de zelfstudie over verificatie voltooit, krijgt u de waarden voor elk van de vereiste headers in alle API-aanroepen van [!DNL Experience Platform] , zoals hieronder wordt getoond:
+Om vraag aan [!DNL Experience Platform] APIs te maken, moet u het [ authentificatieleerprogramma ](https://www.adobe.com/go/platform-api-authentication-en) eerst voltooien. Als u de zelfstudie over verificatie voltooit, krijgt u de waarden voor elk van de vereiste headers in alle API-aanroepen van [!DNL Experience Platform] , zoals hieronder wordt getoond:
 
 * `Authorization: Bearer {ACCESS_TOKEN}`
 * `x-api-key: {API_KEY}`
 * `x-gw-ims-org-id: {ORG_ID}`
 
-Alle bronnen in [!DNL Experience Platform], inclusief de bronnen die tot de [!DNL Schema Registry] behoren, zijn geïsoleerd naar specifieke virtuele sandboxen. Alle aanvragen naar [!DNL Platform] API&#39;s vereisen een header die de naam van de sandbox opgeeft waarin de bewerking plaatsvindt:
+Alle bronnen in [!DNL Experience Platform], inclusief de bronnen die tot de [!DNL Schema Registry] behoren, zijn geïsoleerd naar specifieke virtuele sandboxen. Alle aanvragen naar [!DNL Experience Platform] API&#39;s vereisen een header die de naam van de sandbox opgeeft waarin de bewerking plaatsvindt:
 
 * `x-sandbox-name: {SANDBOX_NAME}`
 
 >[!NOTE]
 >
->Voor meer informatie over zandbakken in [!DNL Platform], zie de [ zandbakdocumentatie ](../../sandboxes/home.md).
+>Voor meer informatie over zandbakken in [!DNL Experience Platform], zie de [ zandbakdocumentatie ](../../sandboxes/home.md).
 
-Voor alle opzoekverzoeken (GET) naar de [!DNL Schema Registry] is een extra `Accept` -header nodig, waarvan de waarde de indeling van de informatie bepaalt die door de API wordt geretourneerd. Zie [ kopbal ](#accept) hieronder sectie goedkeuren voor meer details.
+Voor alle opzoekverzoeken (GET) naar de [!DNL Schema Registry] is een extra `Accept` -header vereist, waarvan de waarde de indeling van de informatie bepaalt die door de API wordt geretourneerd. Zie [ kopbal ](#accept) hieronder sectie goedkeuren voor meer details.
 
-Alle verzoeken die een nuttige lading (POST, PUT, PATCH) bevatten vereisen een extra kopbal:
+Alle verzoeken die een lading (POST, PUT, PATCH) bevatten vereisen een extra kopbal:
 
 * `Content-Type: application/json`
 
@@ -158,7 +158,7 @@ Oproepen aan de [!DNL Schema Registry] API vereisen het gebruik van `CONTAINER_I
 
 ### Algemene container
 
-De container `global` bevat alle standaard Adobe en door [!DNL Experience Platform] verschafte klassen, groepen met schemavelden, gegevenstypen en schema&#39;s. U kunt alleen lijst- en opzoekverzoeken (GET) uitvoeren in de `global` -container.
+De container `global` bevat alle standaard door Adobe en [!DNL Experience Platform] verschafte klassen, groepen met schemavelden, gegevenstypen en schema&#39;s. U kunt alleen lijst- en opzoekverzoeken (GET) uitvoeren in de `global` -container.
 
 Een voorbeeld van een aanroep die de container `global` gebruikt, ziet er als volgt uit:
 
@@ -168,7 +168,7 @@ GET /global/classes
 
 ### Trekcontainer
 
-De `tenant` -container bevat alle klassen, veldgroepen, gegevenstypen, schema&#39;s en beschrijvingen die door een organisatie zijn gedefinieerd, zodat deze niet worden verward met uw unieke `TENANT_ID` -container. Deze zijn uniek voor elke organisatie, die betekent zij niet zichtbaar of handelbaar door andere organisaties zijn. U kunt alle CRUD-bewerkingen (GET, POST, PUT, PATCH, DELETE) uitvoeren tegen bronnen die u maakt in de `tenant` -container.
+De `tenant` -container bevat alle klassen, veldgroepen, gegevenstypen, schema&#39;s en beschrijvingen die door een organisatie zijn gedefinieerd, zodat deze niet worden verward met uw unieke `TENANT_ID` -container. Deze zijn uniek voor elke organisatie, die betekent zij niet zichtbaar of handelbaar door andere organisaties zijn. U kunt alle CRUD-bewerkingen (GET, POST, PUT, PATCH, DELETE) uitvoeren met behulp van bronnen die u maakt in de `tenant` -container.
 
 Een voorbeeld van een aanroep die de container `tenant` gebruikt, ziet er als volgt uit:
 
@@ -197,7 +197,7 @@ Oproepen aan de [!DNL Schema Registry] API zullen of URL-Gecodeerde `$id` URI of
 
 ## Koptekst accepteren {#accept}
 
-Wanneer u lijst- en opzoekbewerkingen (GET) uitvoert in de [!DNL Schema Registry] API, is een `Accept` -header vereist om de indeling te bepalen van de gegevens die door de API worden geretourneerd. Wanneer u specifieke bronnen opzoekt, moet ook een versienummer in de `Accept` -header worden opgenomen.
+Bij het uitvoeren van lijst- en opzoekbewerkingen (GET) in de [!DNL Schema Registry] API is een `Accept` -header vereist om de indeling te bepalen van de gegevens die door de API worden geretourneerd. Wanneer u specifieke bronnen opzoekt, moet ook een versienummer in de `Accept` -header worden opgenomen.
 
 De volgende tabel bevat een lijst met compatibele `Accept` headerwaarden, inclusief waarden met versienummers, en beschrijvingen van wat de API retourneert wanneer deze worden gebruikt.
 
@@ -216,13 +216,13 @@ De volgende tabel bevat een lijst met compatibele `Accept` headerwaarden, inclus
 
 >[!NOTE]
 >
->Platform steunt momenteel slechts één belangrijke versie voor elk schema (`1`). Daarom moet de waarde voor `version` altijd `1` zijn wanneer het uitvoeren van raadplegingsverzoeken om de recentste minder belangrijke versie van het schema terug te keren. Zie de subsectie hieronder voor meer informatie over schemaversie.
+>Experience Platform steunt momenteel slechts één belangrijke versie voor elk schema (`1`). Daarom moet de waarde voor `version` altijd `1` zijn wanneer het uitvoeren van raadplegingsverzoeken om de recentste minder belangrijke versie van het schema terug te keren. Zie de subsectie hieronder voor meer informatie over schemaversie.
 
 ### Schema versioning {#versioning}
 
-In schemaversies wordt verwezen door `Accept` headers in de Schema Registry API en in `schemaRef.contentType` -eigenschappen in downstream Platform service API-payloads.
+In schemaversies wordt verwezen door `Accept` headers in de Schema Registry API en in `schemaRef.contentType` -eigenschappen in downstream Experience Platform service API payloads.
 
-Momenteel, steunt het Platform slechts één enkele belangrijkste versie (`1`) voor elk schema. Volgens de [ regels van schemaevolutie ](../schema/composition.md#evolution), moet elke update aan een schema niet-destructief zijn, betekenend dat nieuwe minder belangrijke versies van een schema (`1.2`, `1.3`, enz.) zijn altijd achterwaarts compatibel met eerdere secundaire versies. Daarom wanneer het specificeren van `version=1`, keert de Registratie van het Schema altijd de **recentste** belangrijkste versie `1` van een schema terug, betekenend dat de vorige minder belangrijke versies niet zijn teruggekeerd.
+Momenteel, steunt Experience Platform slechts één enkele belangrijkste versie (`1`) voor elk schema. Volgens de [ regels van schemaevolutie ](../schema/composition.md#evolution), moet elke update aan een schema niet-destructief zijn, betekenend dat de nieuwe minder belangrijke versies van een schema (`1.2`, `1.3`, enz.) altijd achterwaarts compatibel met vorige minder belangrijke versies zijn. Daarom wanneer het specificeren van `version=1`, keert de Registratie van het Schema altijd de **recentste** belangrijkste versie `1` van een schema terug, betekenend dat de vorige minder belangrijke versies niet zijn teruggekeerd.
 
 >[!NOTE]
 >

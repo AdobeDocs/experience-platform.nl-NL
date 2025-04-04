@@ -2,9 +2,9 @@
 title: Parameterized Vragen
 description: Leer hoe u geparametereerde query's kunt gebruiken in de gebruikersinterface van Adobe Experience Platform.
 exl-id: 5c5ac691-5e29-4262-ba53-84dcc56e744f
-source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '680'
+source-wordcount: '681'
 ht-degree: 0%
 
 ---
@@ -20,7 +20,7 @@ De Dienst van de vraag steunt het gebruik van parameterized vragen in de Redacte
 
 ## Vereisten
 
-Alvorens met deze gids verder te gaan, lees de [ gids UI van de Redacteur van de Vraag ](./user-guide.md). De gids van de Redacteur van de Vraag verstrekt gedetailleerde informatie over hoe te schrijven, te bevestigen, en vragen voor klantenervaringsgegevens binnen het gebruikersinterface van de Experience Platform in werking te stellen.
+Alvorens met deze gids verder te gaan, lees de [ gids UI van de Redacteur van de Vraag ](./user-guide.md). De gids van de Redacteur van de Vraag verstrekt gedetailleerde informatie over hoe te schrijven, te bevestigen, en vragen voor klantenervaringsgegevens in het gebruikersinterface van Experience Platform in werking te stellen.
 
 >[!NOTE]
 >
@@ -79,4 +79,4 @@ Parameterwaarden worden opgeslagen wanneer u een geparametriseerde query plant. 
 
 Door dit document te lezen, hebt u geleerd hoe te om vragen in Adobe Experience Platform UI parameters te bepalen en hen in geplande vraaglooppas te gebruiken. Het document benadrukte ook hoe te om de logboeken voor de parameterwaarden te controleren die in vraaguitvoeringen worden gebruikt.
 
-Daarna, wordt u geadviseerd om de gids te lezen over [ die geplande vragen ](./monitor-queries.md) controleert om een beter inzicht in het statuut van alle vraagbanen door Platform UI te krijgen.
+Daarna, wordt u geadviseerd om de gids te lezen over [ die geplande vragen ](./monitor-queries.md) controleert om een beter inzicht in het statuut van alle vraagbanen door Experience Platform UI te krijgen.

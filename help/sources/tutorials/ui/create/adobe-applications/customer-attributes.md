@@ -5,9 +5,9 @@ title: Een Source Connection met klantkenmerken maken in de gebruikersinterface
 type: Tutorial
 description: Leer hoe u een bronverbinding maakt in de gebruikersinterface om profielgegevens van klantkenmerken over te brengen naar Adobe Experience Platform.
 exl-id: 66bdab8f-c00e-4ebe-8b8e-f9e12cf86bbe
-source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '587'
+source-wordcount: '590'
 ht-degree: 0%
 
 ---
@@ -26,7 +26,7 @@ Deze zelfstudie bevat stappen voor het maken van een bronverbinding in de gebrui
 >
 >Als u al een bronverbinding hebt gemaakt voor de profielgegevens van Klantkenmerken, is de optie om verbinding te maken met de bron uitgeschakeld.
 
-Selecteer in de gebruikersinterface van het platform de optie **[!UICONTROL Sources]** in de linkernavigatie voor toegang tot de werkruimte van [!UICONTROL Sources] . In het scherm [!UICONTROL Catalog] worden diverse bronnen weergegeven waarmee u een verbinding kunt maken.
+Selecteer in de gebruikersinterface van Experience Platform de optie **[!UICONTROL Sources]** in de linkernavigatie voor toegang tot de werkruimte van [!UICONTROL Sources] . In het scherm [!UICONTROL Catalog] worden diverse bronnen weergegeven waarmee u een verbinding kunt maken.
 
 U kunt de juiste categorie selecteren in de catalogus aan de linkerkant van het scherm. U kunt ook de specifieke bron vinden waarmee u wilt werken met de zoekbalk.
 
@@ -42,7 +42,7 @@ In het scherm [!UICONTROL Add data] worden alle beschikbare gegevensbronnen voor
 >
 >De groepen van het gebied, de schema&#39;s, en de datasets worden gecreeerd uit-van-doos als deel van stroomlevering. Ze blijven ongewijzigd en u moet ze indien nodig handmatig verwijderen.
 
-De evolutie van het schema wordt niet gesteund door de bron van klantenattributen. Als de schemainput van een klant gegevensbron van attributen wordt veranderd, dan zou het onverenigbaar met Platform worden. Als alternerende actie, kunt u een bestaande gegevensstroom van klantenattributen, samen met zijn bijbehorende dataset, schema, en gebiedsgroep schrappen, en dan nieuwe creëren met het bijgewerkte schema en de gegevensbron.
+De evolutie van het schema wordt niet gesteund door de bron van klantenattributen. Als de schema-invoer van een klantkenmerkgegevensbron wordt gewijzigd, wordt deze niet meer compatibel met Experience Platform. Als alternerende actie, kunt u een bestaande gegevensstroom van klantenattributen, samen met zijn bijbehorende dataset, schema, en gebiedsgroep schrappen, en dan nieuwe creëren met het bijgewerkte schema en de gegevensbron.
 
 >[!IMPORTANT]
 >
@@ -75,7 +75,7 @@ De stap [!UICONTROL Review] wordt weergegeven, zodat u de nieuwe gegevensstroom 
 
 ## Volgende stappen
 
-Zodra de verbinding wordt gecreeerd, wordt een doelschema en een dataset automatisch gecreeerd om de inkomende gegevens te bevatten. Wanneer de eerste invoer is voltooid, kunnen de profielgegevens van de klantkenmerken worden gebruikt door downstream-platformservices zoals [!DNL Real-Time Customer Profile] en [!DNL Segmentation Service] . Raadpleeg de volgende documenten voor meer informatie:
+Zodra de verbinding wordt gecreeerd, wordt een doelschema en een dataset automatisch gecreeerd om de inkomende gegevens te bevatten. Wanneer de eerste invoer is voltooid, kunnen de klantkenmerkgegevens worden gebruikt door Experience Platform-services die aan de afhandeling zijn toegewezen, zoals [!DNL Real-Time Customer Profile] en [!DNL Segmentation Service] . Raadpleeg de volgende documenten voor meer informatie:
 
 * [[!DNL Real-Time Customer Profile]-overzicht](../../../../../profile/home.md)
 * [[!DNL Segmentation Service]-overzicht](../../../../../segmentation/home.md)

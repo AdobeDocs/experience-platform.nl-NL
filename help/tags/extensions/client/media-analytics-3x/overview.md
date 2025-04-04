@@ -1,11 +1,11 @@
 ---
-title: Adobe Media Analytics (3.x SDK) voor overzicht van audio- en videoextensie
-description: Leer meer over de Adobe Media Analytics (3.x SDK) voor Audio en Video markeringsuitbreiding in Adobe Experience Platform.
+title: Overzicht van Adobe Media Analytics (3.x SDK) voor audio- en video-extensie
+description: Meer informatie over de extensie Adobe Media Analytics (3.x SDK) voor Audio en Video in Adobe Experience Platform.
 exl-id: 7289d57d-7e7f-4832-9469-3b5a62183a32
-source-git-commit: e21ed1e9fd0c2678551cfc664b611076c198a157
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '692'
-ht-degree: 0%
+source-wordcount: '693'
+ht-degree: 6%
 
 ---
 
@@ -13,18 +13,18 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch is omgedoopt tot een reeks technologieën voor gegevensverzameling in Adobe Experience Platform. Diverse terminologische wijzigingen zijn als gevolg hiervan in de productdocumentatie doorgevoerd. Gelieve te verwijzen naar het volgende [ document ](../../../term-updates.md) voor een geconsolideerde verwijzing van de terminologieveranderingen.
+>Adobe Experience Platform Launch is omgedoopt tot een reeks technologieën voor dataverzameling in Adobe Experience Platform.  Als gevolg hiervan zijn er verschillende terminologiewijzigingen in de productdocumentatie doorgevoerd. Raadpleeg het volgende [ document ](../../../term-updates.md) voor een geconsolideerde referentie van de terminologiewijzigingen.
 
-Gebruik deze documentatie voor informatie over het installeren, configureren en implementeren van Adobe Media Analytics (3.x SDK) voor audio- en video-extensie (extensie Media Analytics). Omvat zijn de opties beschikbaar wanneer het gebruiken van deze uitbreiding om een regel, samen met voorbeelden en verbindingen aan steekproeven te bouwen.
+Gebruik deze documentatie voor informatie over het installeren, configureren en implementeren van de Adobe Media Analytics (3.x SDK) voor audio- en video-extensie (extensie Media Analytics). Omvat zijn de opties beschikbaar wanneer het gebruiken van deze uitbreiding om een regel, samen met voorbeelden en verbindingen aan steekproeven te bouwen.
 
 De extensie Media Analytics (MA) voegt de core JavaScript Media SDK (Media 3.x SDK) toe. Deze extensie biedt de functionaliteit voor het toevoegen van de `Media` tracker-instantie aan een site of project waarvoor tags zijn ingeschakeld. De extensie MA vereist twee extra extensies:
 
 * [Extensie Analytics](../analytics/overview.md)
-* [Extensie Experience Cloud-id](../id-service/overview.md)
+* [Experience Cloud ID Extension](../id-service/overview.md)
 
 >[!IMPORTANT]
 >
->Deze uitbreiding stelt met Media 3.x SDK op, die niet achterwaarts compatibel met Media 2.x SDK is. Aangezien 2.x is afgekeurd, moet u een update naar 3.x uitvoeren.
+>Deze extensie wordt geïmplementeerd met Media 3.x SDK, die niet achterwaarts compatibel is met Media 2.x SDK. Aangezien 2.x is afgekeurd, moet u een update naar 3.x uitvoeren.
 
 Nadat u alle drie bovengenoemde uitbreidingen in uw markering-toegelaten project hebt omvat, kunt u op één van twee manieren te werk gaan:
 
@@ -43,7 +43,7 @@ Nadat u alle drie bovengenoemde uitbreidingen in uw markering-toegelaten project
 
 | Optie | Beschrijving |
 | :--- | :--- |
-| Verzameling-API Server | Definieert de API-server voor mediagroep (neem contact op met uw Adobe om deze server op te halen) |
+| Verzameling-API Server | Definieert de API-server voor mediagroep (neem contact op met uw Adobe-vertegenwoordiger om deze server op te halen) |
 | Toepassingsversie | De versie van de mediaspeler-app/SDK |
 | Naam speler | Naam van de mediaspeler in gebruik (bijvoorbeeld &quot;AVPlayer&quot;, &quot;HTML5 Player&quot;, &quot;My Custom VideoPlayer&quot;) |
 | Kanaal | Channel name, eigenschap |
@@ -52,7 +52,7 @@ Nadat u alle drie bovengenoemde uitbreidingen in uw markering-toegelaten project
 | API&#39;s exporteren naar vensterobject | Het exporteren van media-API&#39;s voor analyse naar een algemeen bereik in- of uitschakelen |
 | Naam variabele | Een variabele die u gebruikt om Media Analytics API&#39;s te exporteren onder het `window` -object |
 
-**Herinnering:** de uitbreiding van MA vereist de [ Analytics ](../analytics/overview.md) en [ identiteitskaart van het Experience Cloud ](../id-service/overview.md) uitbreidingen. U moet deze uitbreidingen aan uw uitbreidingsbezit ook toevoegen en hen vormen.
+**Herinnering:** de uitbreiding van MA vereist de [ Analytics ](../analytics/overview.md) en [ identiteitskaart van Experience Cloud ](../id-service/overview.md) uitbreidingen. U moet deze uitbreidingen aan uw uitbreidingsbezit ook toevoegen en hen vormen.
 
 ## De extensie MA gebruiken
 
@@ -66,7 +66,7 @@ De extensie MA exporteert de media-API&#39;s in het algemene vensterobject door 
 
 1. **Media APIs:** `window["CONFIGURED_VARIABLE_NAME"].Media`
 
-   Dit stelt alle APIs en constanten van Media SDK bloot: [ https://adobe-marketing-cloud.github.io/media-sdks/reference/javascript_3x/APIReference.html ](https://adobe-marketing-cloud.github.io/media-sdks/reference/javascript_3x/APIReference.html)
+   Dit stelt alle APIs en constanten van Media SDK bloot: [ https://adobe-marketing-cloud.github.io/media-sdks/reference/javascript_3x/APIReference.html](https://adobe-marketing-cloud.github.io/media-sdks/reference/javascript_3x/APIReference.html)
 
 1. **creeer de Instantie van de Beheerder van Media:** `window["CONFIGURED_VARIABLE_NAME"].Media.getInstance`
 
@@ -93,7 +93,7 @@ De extensie MA stelt `media` als een gedeelde module beschikbaar voor andere ext
 
 1. **Media APIs:** `media` Gedeelde Module
 
-   Dit stelt alle APIs en constanten van Media SDK bloot: [ https://adobe-marketing-cloud.github.io/media-sdks/reference/javascript_3x/APIReference.html ](https://adobe-marketing-cloud.github.io/media-sdks/reference/javascript_3x/APIReference.html)
+   Dit stelt alle APIs en constanten van Media SDK bloot: [ https://adobe-marketing-cloud.github.io/media-sdks/reference/javascript_3x/APIReference.html](https://adobe-marketing-cloud.github.io/media-sdks/reference/javascript_3x/APIReference.html)
 
 1. Maak de instantie van Media tracker als volgt:
 
@@ -110,4 +110,4 @@ De extensie MA stelt `media` als een gedeelde module beschikbaar voor andere ext
 
 >[!NOTE]
 >
->**het Testen:** voor deze versie, om uw uitbreiding te testen moet u het aan [ Platform ](../../../extension-dev/submit/upload-and-test.md) uploaden, waar u toegang tot alle afhankelijke uitbreidingen hebt.
+>**het Testen:** voor deze versie, om uw uitbreiding te testen moet u het aan [ Experience Platform ](../../../extension-dev/submit/upload-and-test.md) uploaden, waar u toegang tot alle afhankelijke uitbreidingen hebt.

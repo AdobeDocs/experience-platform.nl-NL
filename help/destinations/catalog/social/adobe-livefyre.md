@@ -1,11 +1,11 @@
 ---
 keywords: livefyre;livefyre, extensie
 title: Adobe Livefyre-extensie
-description: De Adobe Livefyre-extensie is een sociale bestemming in Adobe Experience Platform. Zie de extensiepagina over Adobe Exchange voor meer informatie over de extensiefunctionaliteit.
+description: De Adobe Livefyre-extensie is een sociale bestemming in Adobe Experience Platform. Zie de extensiepagina op Adobe Exchange voor meer informatie over de extensiefunctionaliteit.
 exl-id: a134c144-e7b8-4d48-8c90-5999e5ceb8a0
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '433'
+source-wordcount: '436'
 ht-degree: 0%
 
 ---
@@ -14,25 +14,25 @@ ht-degree: 0%
 
 ## Overzicht {#overview}
 
-Met de Adobe Live kunt u een constante stroom door de gebruiker gegenereerde inhoud op uw website detecteren, ordenen en publiceren en zo authentieke en zeer persoonlijke ervaringen creëren.
+Met Adobe Live kunt u een constante stroom door gebruikers gegenereerde inhoud op uw website detecteren, organiseren en publiceren om authentieke en zeer persoonlijke ervaringen te creëren.
 
-Adobe Livefyre is een sociale extensie in Adobe Experience Platform. Voor meer informatie over de Levensstijl van de Adobe, lees de [ Levensmiddelenimplementatiegids ](https://experienceleague.adobe.com/docs/livefyre/implementation/home.html).
+Adobe Livefyre is een sociale extensie in Adobe Experience Platform. Voor meer informatie over het Leven van Adobe, lees de [ Leven implementatiegids ](https://experienceleague.adobe.com/docs/livefyre/implementation/home.html).
 
-Dit doel is een tagextensie. Voor meer informatie over hoe de uitbreidingen van markeringen in Platform werken, zie het [ overzicht van markeringsuitbreidingen ](../launch-extensions/overview.md).
+Dit doel is een tagextensie. Voor meer informatie over hoe de uitbreidingen van markeringen in Experience Platform werken, zie het [ overzicht van markeringsuitbreidingen ](../launch-extensions/overview.md).
 
-![ de uitbreiding van het Leven van de Adobe ](../../assets/catalog/social/adobe-livefyre/catalog.png)
+![ de Livefyre van Adobe uitbreiding ](../../assets/catalog/social/adobe-livefyre/catalog.png)
 
 ## Vereisten {#prerequisites}
 
-Deze extensie is beschikbaar in de catalogus [!DNL Destinations] voor alle klanten die Platform hebben aangeschaft.
+Deze extensie is beschikbaar in de catalogus [!DNL Destinations] voor alle klanten die Experience Platform hebben aangeschaft.
 
 Als u deze extensie wilt gebruiken, hebt u toegang tot tags in Adobe Experience Platform nodig. Tags worden aan Adobe Experience Cloud-klanten aangeboden als een inbegrepen, waardetoevoegend element. Neem contact op met de systeembeheerder van uw organisatie om toegang tot tags te krijgen en vraag hen om u de **[!UICONTROL manage_properties]** -machtiging te verlenen zodat u extensies kunt installeren.
 
 ## Extensie installeren {#install-extension}
 
-U installeert als volgt de Adobe Livefyre-extensie:
+De Adobe LiveCyre-extensie installeren:
 
-In de [ interface van het Platform ](https://platform.adobe.com/), ga **[!UICONTROL Destinations]** > **[!UICONTROL Catalog]**.
+In de [ interface van Experience Platform ](https://platform.adobe.com/), ga **[!UICONTROL Destinations]** > **[!UICONTROL Catalog]**.
 
 Selecteer de extensie in de catalogus of gebruik de zoekbalk.
 

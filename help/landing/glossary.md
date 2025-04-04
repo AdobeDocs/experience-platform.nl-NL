@@ -1,12 +1,12 @@
 ---
-keywords: Experience Platform;home;populaire onderwerpen
+keywords: Experience Platform;startpagina;populaire onderwerpen
 solution: Experience Platform
 title: Adobe Experience Platform Verklarende woordenlijst
 description: Een verklarende woordenlijst van belangrijke terminologie in Experience Platform.
 exl-id: 00eae5f5-7dfa-45ac-aff9-9e1769a3a53a
-source-git-commit: b16eae9698de6c20022fdf1a3ff659df35e440f6
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '7990'
+source-wordcount: '8003'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 ## A
 
-**Toegangscontrole**: Op rol-gebaseerd toegangsbeheer laat beheerders toe om toegang en toestemmingen aan gebruikers van Experience Platform toe te wijzen. De toestemmingen omvatten de capaciteit om de eigenschappen van het Experience Platform te bekijken en/of te gebruiken, zoals het creëren van zandbakken, het bepalen van schema&#39;s, en het beheren van datasets.
+**Toegangscontrole**: Op rol-gebaseerd toegangsbeheer laat beheerders toe om toegang en toestemmingen aan gebruikers van Experience Platform toe te wijzen. De toestemmingen omvatten de capaciteit om de eigenschappen van Experience Platform te bekijken en/of te gebruiken, zoals het creëren van zandbakken, het bepalen van schema&#39;s, en het beheren van datasets.
 
 **zeer belangrijke identiteitskaart van de Toegang**: Een toegangs zeer belangrijke identiteitskaart is een uniek herkenningsteken dat met een [!DNL Amazon] S3 geheime toegangssleutel wordt geassocieerd. De toegangssleutel-id en de geheime toegangssleutel worden samen gebruikt om [!DNL Amazon Web Services] (AWS)-aanvragen te ondertekenen.
 
@@ -27,7 +27,7 @@ ht-degree: 0%
 
 **Beheerder**: Één of meerdere individuen in uw organisatie die toestemmingen voor Experience Platform in Adobe Admin Console kunnen vormen en aanpassen.
 
-**Adobe Admin Console**: Adobe Admin Console verstrekt een centrale plaats voor het beheren van de rechten van het het productproduct van de Adobe en toegang voor uw organisatie. Via de console kunnen beheerders groepen gebruikers toegangsmachtigingen verlenen voor verschillende platformmogelijkheden, zoals &quot;Datasets beheren&quot;, &quot;Datasets weergeven&quot; of &quot;Profielen beheren&quot;.
+**Adobe Admin Console**: Adobe Admin Console verstrekt een centrale plaats voor het beheren van de productrechten en de toegang van Adobe voor uw organisatie. Via de console kunnen beheerders groepen gebruikers toegangsmachtigingen verlenen voor verschillende Experience Platform-functies, zoals &quot;Datasets beheren&quot;, &quot;Gegevenssets weergeven&quot; of &quot;Profielen beheren&quot;.
 
 **Adobe Experience Platform**: Adobe Experience Platform normaliseert gegevens en inhoud over de onderneming, die consumentenprofielen in real time aandrijft, gegevenswetenschap toelaat, en inhoudssnelheid versnelt om ervaringsupitalisering over de klantenreis te drijven.
 
@@ -35,19 +35,19 @@ ht-degree: 0%
 
 **de Dienst van de Segmentatie van Adobe Experience Platform**: Laat het bouwen van segmenten toe en producerend publiek van uw gegevens van het Profiel van de Klant in real time. Deze doelgroepen kunnen vervolgens naar hun eigen gegevensbestanden worden geëxporteerd binnen het Data Lake.
 
-**de Intelligente Diensten van de Adobe**: De Intelligente Diensten zoals Attribution AI en AI van de Klant zijn machine-leert, op kunstmatige intelligentie-gebaseerde modellen die doelgericht-gebouwd zijn en Experience Platform vereisen om in werking te stellen en te werken.
+**Intelligente Diensten van Adobe**: De Intelligente Diensten zoals Attributie AI en Klant AI zijn machine-leert, op kunstmatige intelligentie-gebaseerde modellen die doelgericht-gebouwd zijn en Experience Platform vereisen om in werking te stellen en te werken.
 
-**Adobe I/O**: Adobe I/O maakt deel uit van Experience Platform en verleent toegang tot alles ontwikkelaars moeten integreren, uitbreiden, en aanpassen Platform met inbegrip van APIs, gebeurtenissen, ontwikkelaarsconsole, en nuttig tooling.
+**Adobe I/O**: Adobe I/O maakt deel uit van Experience Platform en verleent toegang tot alles ontwikkelaars moeten integreren, uitbreiden, en Experience Platform met inbegrip van APIs, gebeurtenissen, ontwikkelaarsconsole, en nuttig tooling aanpassen.
 
 **Adobe Sensei**: Adobe Sensei is het inlichtingenkader dat Experience Platform macht. Het verstrekt ook een reeks diensten AI die merken machtigt om hun capaciteit te verbeteren om in real time, gepersonaliseerde klantenervaringen te leveren.
 
 **Amazon S3 emmer**: [!DNL Amazon S3] emmers zijn de fundamentele containers voor gegevens die in het [!DNL Amazon] ecosysteem worden opgeslagen. Emmers bevatten objecten. Elk object wordt opgeslagen en opgehaald met een unieke door de ontwikkelaar toegewezen sleutel.
 
-**Amazon S3 schakelaar**: De [!DNL Amazon] S3 schakelaar staat klanten van Experience Platform toe om veilig hun [!DNL Amazon] S3 gegevens te verbinden en toegang te hebben.
+**de schakelaar van Amazon S3**: De [!DNL Amazon] S3 schakelaar staat klanten van Experience Platform toe om veilig tot hun [!DNL Amazon] S3 gegevens te verbinden en toegang te hebben.
 
 **APA**: [[!DNL Australia Privacy Act (Privacy Act)] ](https://www.oaic.gov.au/privacy/the-privacy-act) bevordert en beschermt de privacy van individuen en regelt hoe de Australische overheidsagentschappen en organisatie persoonlijke informatie behandelen. [!DNL Privacy Act] bevat beginselen die van toepassing zijn op organisaties uit de particuliere sector. Individuen hebben bijvoorbeeld het recht te begrijpen waarom de persoonlijke gegevens worden verzameld en hoe deze worden gebruikt, of ze toegang hebben tot hun gegevens, deze kunnen wissen en persoonlijke gegevens kunnen corrigeren.
 
-**voeg sparen strategie** toe: &quot;voeg&quot;opslagstrategie toe is een optie die wordt gebruikt wanneer het specificeren van derdegegevens om via een verbinding in te gaan en het toevoegen van om het even welke nieuwe gegevens of rijen aan het eind van de dataset. De eerder opgenomen rijen blijven ongewijzigd en alleen rijen die zijn gemaakt sinds de laatste geplande uitvoering, worden op het Experience Platform ingevoerd. Rijen die in het bronsysteem zijn gewijzigd, blijven ongewijzigd op het Experience Platform.
+**voeg sparen strategie** toe: &quot;voeg&quot;opslagstrategie toe is een optie die wordt gebruikt wanneer het specificeren van derdegegevens om via een verbinding in te gaan en het toevoegen van om het even welke nieuwe gegevens of rijen aan het eind van de dataset. De eerder opgenomen rijen blijven ongewijzigd en alleen de rijen die zijn gemaakt sinds de laatste geplande run, worden opgenomen in Experience Platform. Alle rijen die in het bronsysteem zijn gewijzigd, blijven ongewijzigd op Experience Platform.
 
 **Serie**: De arrays worden gebruikt voor bevolen elementen met het zelfde gegevenstype.
 
@@ -55,9 +55,9 @@ ht-degree: 0%
 
 **Attributen**: De attributen zijn gespecificeerde kenmerken die een profiel vertegenwoordigen.
 
-**de fusie van Attributen**: Wanneer het bepalen van een fusiebeleid gebruikend Real-Time API van het Profiel van de Klant, wijst het `attributeMerge` voorwerp op de manier waardoor het fusiebeleid profielattributen in het geval van gegevensconflicten voorrang zal geven. Het is gelijk aan het selecteren van een [!UICONTROL Merge method] wanneer u een samenvoegbeleid definieert in de gebruikersinterface van het platform.
+**de fusie van Attributen**: Wanneer het bepalen van een fusiebeleid gebruikend Real-Time API van het Profiel van de Klant, wijst het `attributeMerge` voorwerp op de manier waardoor het fusiebeleid profielattributen in het geval van gegevensconflicten voorrang zal geven. Dit is hetzelfde als het selecteren van een [!UICONTROL Merge method] wanneer u een samenvoegbeleid definieert in de gebruikersinterface van Experience Platform.
 
-**Attribution AI**: [!DNL Attribution AI] is de Intelligente Dienst die door Adobe Sensei wordt aangedreven die algoritmische multi-kanaalattributiemogelijkheden over de volledige klantenlevenscyclus levert.
+**AI van de Attributie**: [!DNL Attribution AI] is de Intelligente Dienst die door Adobe Sensei wordt aangedreven die algoritmische multi-kanaalattributiemogelijkheden over de volledige klantenlevenscyclus levert.
 
 **Publiek**: Een publiek is de resulterende reeks profielen die aan de criteria van een segmentdefinitie voldoen.
 
@@ -69,13 +69,13 @@ ht-degree: 0%
 
 **Achtergrond**: Voor geplande bronnen, laat de backfill optie opname van historische gegevens toe.
 
-**Backfill periode**: De backfill periode is een optie om de tijdsduur voor het opnemen van derdehistorische gegevens via een bronverbinding te plaatsen. Het selecteren van een backfill periode van &quot;voorgoed&quot;zal de volledige geschiedenis van de brongegevens aan Experience Platform innemen.
+**Backfill periode**: De backfill periode is een optie om de tijdsduur voor het opnemen van derdehistorische gegevens via een bronverbinding te plaatsen. Als u een backfill-periode van &#39;voorgoed&#39; selecteert, wordt de hele geschiedenis van de brongegevens aan Experience Platform doorgegeven.
 
 **Partij**: Een partij is een reeks gegevens die over een periode worden verzameld en samen als één enkele eenheid worden verwerkt. Datasets bestaan uit meerdere batches.
 
-**identiteitskaart van de Partij**: Een partijidentiteitskaart is een Adobe-geproduceerde herkenningsteken voor een partij van gegevens.
+**identiteitskaart van de Partij**: Een partijidentiteitskaart is een Adobe-Gegenereerde herkenningsteken voor een partij van gegevens.
 
-**Inname van de Partij**: De inname van de partij staat u toe om gegevens in Experience Platform in te voeren als partijdossiers. Batches zijn gegevenseenheden die bestaan uit een of meer bestanden die als één eenheid moeten worden ingevoerd.
+**Inname van de Partij**: De inname van de partij staat u toe om gegevens in Experience Platform als partijdossiers in te voeren. Batches zijn gegevenseenheden die bestaan uit een of meer bestanden die als één eenheid moeten worden ingevoerd.
 
 **de segmentatie van de Partij**: De segmentatie van de partij is een alternatief aan een aan de gang zijnde proces van de gegevensselectie en beweegt alle profielgegevens onmiddellijk door segmentdefinities om overeenkomstige publiek te produceren. Zodra gecreeerd, wordt dit segment bewaard en opgeslagen zodat kan het voor gebruik worden uitgevoerd.
 
@@ -87,9 +87,9 @@ ht-degree: 0%
 
 **Aftappen**: In [!DNL Offer Decisioning], wordt het aftappen (die ook als frequentie het aftappen wordt bekend) gebruikt in beslissingsregels om te bepalen hoe vaak een aanbieding wordt voorgesteld. Er zijn twee typen uiteinden: het aantal keren dat een aanbieding kan worden voorgesteld voor het gecombineerde doelpubliek (een ‘Global Cap’ genoemd) en het aantal keren dat een aanbieding aan dezelfde eindgebruiker kan worden voorgesteld (een ‘Profile Cap’ genoemd).
 
-**Catalogus**: In de context van bronnen en bestemmingen, is een catalogus een galerij met beschikbare verbindingen aan de toepassingen van de Adobe en derdetechnologieën. Dit mag niet worden verward met [!DNL Catalog Service] .
+**Catalogus**: In de context van bronnen en bestemmingen, is een catalogus een galerij met beschikbare verbindingen aan de toepassingen van Adobe en derdetechnologieën. Dit mag niet worden verward met [!DNL Catalog Service] .
 
-**[!DNL Catalog Service]**: [!DNL Catalog Service] (ook wel [!DNL Catalog] genoemd) is het recordsysteem voor de gegevenslocatie en -lijn in Adobe Experience Platform. Hoewel alle gegevens die in het Experience Platform worden opgenomen in het datumpomeer worden opgeslagen als bestanden en mappen, bevat [!DNL Catalog] de metagegevens en een beschrijving van deze bestanden en mappen voor opzoekings-, controle- en gegevensbeheerdoeleinden.
+**[!DNL Catalog Service]**: [!DNL Catalog Service] (ook wel [!DNL Catalog] genoemd) is het recordsysteem voor de gegevenslocatie en -lijn in Adobe Experience Platform. Hoewel alle gegevens die in Experience Platform worden opgenomen, in het datumpomeer worden opgeslagen als bestanden en mappen, bevat [!DNL Catalog] de metagegevens en een beschrijving van deze bestanden en mappen voor opzoekings-, controle- en gegevensbeheerdoeleinden.
 
 **CCPA**: [[!DNL California Consumer Privacy Act (CCPA)] ](https://oag.ca.gov/privacy/ccpa) verbetert privacyrechten en consumentenbescherming voor ingezetenen van Californië, Verenigde Staten. De CCPA biedt de inwoners van Californië nieuwe privacyrechten op het gebied van gegevens, waaronder het recht op toegang tot en verwijdering van hun persoonsgegevens, om te weten of hun persoonsgegevens worden verkocht of openbaar gemaakt (en aan wie), en het recht om te weigeren hun gegevens aan derden te laten verkopen.
 
@@ -155,17 +155,17 @@ ht-degree: 0%
 
 **het element van Gegevens**: In de context van markeringen, is een gegevenselement een wijzer die binnen regels en uitbreidingen wordt gebruikt om aan een specifiek stuk van gegevens te richten die op het cliëntapparaat bestaan.
 
-**Inname van Gegevens**: De inname van gegevens is het proces om gegevens van een bron aan Experience Platform toe te voegen. Gegevens kunnen op verschillende manieren in Platform worden ingevoerd, zoals streaming, batches of toegevoegd via bronconnectors.
+**Inname van Gegevens**: De inname van gegevens is het proces om gegevens van een bron aan Experience Platform toe te voegen. Gegevens kunnen op verschillende manieren in Experience Platform worden ingevoerd, zoals streaming, batches of toegevoegd via bronconnectors.
 
 **de laag van Gegevens**: In de context van markeringen, is een gegevenslaag een gegevensstructuur die op het cliëntapparaat bestaat dat meta-gegevens over de context bevat waarin een pagina of het scherm wordt bekeken.
 
 **het bestuur van Gegevens**: Het bestuur van gegevens omvat de strategieën en de technologieën die worden gebruikt om gegevens te verzekeren is in overeenstemming met verordeningen en organisatiebeleid met betrekking tot gegevensgebruik.
 
-**de integratiepartners van Gegevens**: De de integratiepartners van gegevens vereenvoudigen en automatiseren het laden en de transformatie van massieve volumes van gegevens van meer dan 200 bronnen aan Experience Platform zonder code te schrijven.
+**de integratiepartners van Gegevens**: De partners van de integratie van gegevens vereenvoudigen en automatiseren het laden en de transformatie van massieve volumes van gegevens van meer dan 200 bronnen aan Experience Platform zonder code te schrijven.
 
 **de etiketten van de Dataset**: De etiketten van het gebruik van gegevens kunnen aan datasets worden toegevoegd. Alle gebieden binnen die dataset zullen de etiketten van de dataset erven.
 
-**de Wetenschap van Gegevens Workspace**: [!DNL Data Science Workspace] binnen Experience Platform laat klanten toe om machine-leert modellen tot stand te brengen die gegevens over Platform en Adobe toepassingen gebruiken om intelligente segmenten tot stand te brengen, inzichten te produceren, en voorspellingen te verstrekken, toestaand u om eind-gebruiker digitale ervaringen zeer te verbeteren.
+**de Wetenschap van Gegevens Workspace**: [!DNL Data Science Workspace] binnen Experience Platform laat klanten toe om machine-leert modellen tot stand te brengen die gegevens over Experience Platform en de toepassingen van Adobe gebruiken om intelligente segmenten tot stand te brengen, inzichten te produceren, en voorspellingen te verstrekken, toestaand u om eind-gebruiker digitale ervaringen zeer te verbeteren.
 
 **Gegevensbron**: Een gegevensbron is een gebruiker aangewezen oorsprong van gegevens. Voorbeelden van een gegevensbron zijn een mobiele app, een profiel en/of ervaringsgebeurtenissen, websiteprofielgebeurtenissen of een CRM.
 
@@ -177,13 +177,13 @@ ht-degree: 0%
 
 **de gebruiksetiketten van Gegevens**: De etiketten van het gebruik van gegevens staan u toe om gegevens te categoriseren die op privacy betrekking hebbende overwegingen en contractuele voorwaarden weerspiegelen om met verordeningen en collectief beleid volgzaam te zijn. De etiketten van het gegevensgebruik die aan een dataset worden toegevoegd worden geërft neer of op alle gebieden binnen die dataset worden toegepast. Labels voor gegevensgebruik kunnen ook rechtstreeks op velden worden toegepast.
 
-**Dataflow**: Een dataflow is een virtuele pijpleiding van gegevens die in Platform van een bron en uit aan bestemmingen stroomt.
+**Dataflow**: Een dataflow is een virtuele pijpleiding van gegevens die in Experience Platform van een bron en uit aan bestemmingen stromen.
 
-**Dataflow looppas**: Een dataflow looppas is een dataflow die in Experience Platform landt dat op een gebruiker gespecificeerd programma wordt gebaseerd.
+**Dataflow looppas**: Een dataflow looppas is een dataflow die in Experience Platform landt die op een gebruiker gespecificeerd programma wordt gebaseerd.
 
 **Dataset**: Een dataset is een opslag en beheersconstructie voor een inzameling van gegevens, typisch een lijst, die een schema (kolommen) en gebieden (rijen) bevat.
 
-**identiteitskaart van de Dataset**: Een Adobe-geproduceerd herkenningsteken voor een ingebedde dataset.
+**identiteitskaart van de Dataset**: Een Adobe-Gegenereerde herkenningsteken voor een opgenomen dataset.
 
 **output van de Dataset**: De output van de Dataset verstrekt een mechanisme om te bepalen wat de &quot;Create Lijst als Uitgezochte&quot;optie voor een bepaalde [!DNL Query Service] looppas zal worden gebruikt.
 
@@ -191,11 +191,11 @@ ht-degree: 0%
 
 **de kolom van de Delta**: Een deltakolom staat u toe om een brongegevensgebied te selecteren om timestamp voor stijgende opname te vertegenwoordigen.
 
-**de opslagstrategie van Delta**: De delta bewaart strategie is een optie voor het opnemen van derdegegevens via een bronverbinding. Met deze optie kan de gebruiker opgeven dat nieuwe of gewijzigde rijen met brongegevens worden opgenomen in het Experience Platform. De nieuwe rijen worden toegevoegd aan het eind van de dataset en de veranderde rijen worden bijgewerkt in de dataset op Experience Platform.
+**de opslagstrategie van Delta**: De delta bewaart strategie is een optie voor het opnemen van derdegegevens via een bronverbinding. Met deze optie kan de gebruiker opgeven dat nieuwe of gewijzigde rijen met brongegevens worden opgenomen in Experience Platform. De nieuwe rijen worden toegevoegd aan het eind van de dataset en de veranderde rijen worden bijgewerkt in de dataset op Experience Platform.
 
-**Beschrijver**: In het Model van Gegevens van de Ervaring (XDM), is een beschrijver een extra reeks op schema betrekking hebbende meta-gegevens die een specifiek gedrag voor een gebied beschrijft. De beschrijvers kunnen door Experience Platform worden gebruikt om voorgenomen schemagedrag zoals het verband tussen twee schema&#39;s te begrijpen.
+**Beschrijver**: In het Model van Gegevens van de Ervaring (XDM), is een beschrijver een extra reeks op schema betrekking hebbende meta-gegevens die een specifiek gedrag voor een gebied beschrijft. Descriptors kunnen door Experience Platform worden gebruikt om voorgenomen schemagedrag zoals het verband tussen twee schema&#39;s te begrijpen.
 
-**Bestemming**: Een bestemming is een algemene termijn voor om het even welk eindpunt, zoals een toepassing van de Adobe, een reclameplatform, de dienst van de wolkenopslag, of de marketing dienst, waar een publiek wordt geactiveerd en geleverd.
+**Bestemming**: Een bestemming is een algemene termijn voor om het even welk eindpunt, zoals een toepassing van Adobe, een reclameplatform, de dienst van de wolkenopslag, of de marketing dienst, waar een publiek wordt geactiveerd en geleverd.
 
 **categorie van de Bestemming**: Een bestemmingscategorie is een groepering van bestemmingen die gelijkaardige kenmerken hebben.
 
@@ -213,7 +213,7 @@ ht-degree: 0%
 
 **E-mail richtend marketing actie**: Een marketing actie die gegevens in e-mail het richten campagnes gebruikt.
 
-**bedt code** in: In de context van markeringen, is de ingebedde code een manuscriptmarkering die binnen de HTML op een plaats of een milieu wordt geplaatst. De insluitcode instrueert browser waar te om de bouwstijl terug te winnen.
+**bedt code** in: In de context van markeringen, is de ingebedde code een manuscriptmarkering die binnen HTML op een plaats of een milieu wordt geplaatst. De insluitcode instrueert browser waar te om de bouwstijl terug te winnen.
 
 **Opsomming**: Een opsomming (enum) is een gebied XDM dat aan een reeks vooraf bepaalde waarden wordt beperkt.
 
@@ -227,7 +227,7 @@ ht-degree: 0%
 
 **Gebeurtenissen**: De gebeurtenissen zijn de gedragsgegevens verbonden aan een profiel.
 
-**Model van de Gegevens van de Ervaring (XDM)** [!DNL Experience Data Model] (XDM) is een open-bronkader dat standaardschema&#39;s gebruikt om gegevens voor gebruik met Experience Platform en de toepassingen van Adobe Experience Cloud te verenigen. XDM gestandaardiseert hoe de gegevens gestructureerd zijn en versnelt en vereenvoudigt het proces om inzichten van enorme hoeveelheden gegevens te verkrijgen.
+**Model van de Gegevens van de Ervaring (XDM)** [!DNL Experience Data Model] (XDM) is een open-bronkader dat standaardschema&#39;s gebruikt om gegevens voor gebruik met de toepassingen van Experience Platform en van Adobe Experience Cloud te verenigen. XDM gestandaardiseert hoe de gegevens gestructureerd zijn en versnelt en vereenvoudigt het proces om inzichten van enorme hoeveelheden gegevens te verkrijgen.
 
 **Experiment**: Een experiment is het proces om een opgeleid model tot stand te brengen door de instantie met een steekproefgedeelte van levende productiegegevens te leiden. Dit is anders dan een getraind model dat tegen een holdout testdataset wordt getest. Dit is ook anders dan het concept van een experiment in sommige machineleesbare frameworks, waarbij het eigenlijk een modelleringsproject betekent.
 
@@ -239,7 +239,7 @@ ht-degree: 0%
 
 **Uitbreiding**: In de context van markeringen, is een uitbreiding een pakket van functionaliteit die aan een markeringsbezit wordt toegevoegd. Een uitbreiding is gewoonlijk geconcentreerd rond een bepaalde marketing of analyseoplossing en verstrekt de hulpmiddelen nodig om die technologie in een cliëntmilieu op te stellen.
 
-**het pakket van de Uitbreiding**: In de context van markeringen, is een uitbreidingspakket een dossier van het PIT dat door een uitbreidingsontwikkelaar wordt gecreeerd en wordt geupload die alles noodzakelijk voor markeringen gebruikers verstrekt om de uitbreiding binnen hun bezit te installeren. Een extensiepakket bevat een manifest dat informatie over de extensie opgeeft, de HTML/JavaScript die eindgebruikers nodig hebben om het gedrag van de tagextensie te configureren, en de uitvoerbare JavaScript die aan de clientomgeving wordt geleverd (indien vereist).
+**het pakket van de Uitbreiding**: In de context van markeringen, is een uitbreidingspakket een dossier van het PIT dat door een uitbreidingsontwikkelaar wordt gecreeerd en wordt geupload die alles noodzakelijk voor markeringen gebruikers verstrekt om de uitbreiding binnen hun bezit te installeren. Een extensiepakket bevat een manifest waarin informatie wordt opgegeven over de extensie, de HTML/JavaScript die eindgebruikers nodig hebben om het gedrag van de tagextensie te configureren, en de uitvoerbare JavaScript die aan de clientomgeving wordt geleverd (indien vereist).
 
 ## F
 
@@ -259,7 +259,7 @@ ht-degree: 0%
 
 ## G
 
-**Geofence**: Een geofence is een virtuele geografische grens, die door GPS of technologie wordt bepaald RFID, die software toelaat om een reactie teweeg te brengen wanneer een mobiel apparaat een bepaald gebied ingaat of verlaat.
+**Geofence**: Een geofence is een virtuele geografische grens, die door GPS of de technologie van RFID wordt bepaald, die software toelaat om een reactie teweeg te brengen wanneer een mobiel apparaat een bepaald gebied ingaat of verlaat.
 
 **GDPR (Algemene Verordening van de Bescherming van Gegevens)**: De Algemene Verordening van de Bescherming van Gegevens (GDPR) is een wettelijk kader dat richtsnoeren voor de inzameling en verwerking van persoonlijke informatie van individuen binnen de Europese Unie (EU) plaatst. De GDPR stelt de beginselen vast voor gegevensbeheer en de rechten van het individu en bestrijkt alle bedrijven die zich bezighouden met de gegevens van EU-burgers.
 
@@ -297,7 +297,7 @@ ht-degree: 0%
 
 **I2 etiket van het gegevensgebruik**: Het `I2` etiket van het gegevensgebruik wordt gebruikt om gegevens te classificeren die in combinatie met andere gegevens kunnen worden gebruikt om een specifieke persoon onrechtstreeks te identificeren of te contacteren.
 
-**IMS Organisatie**: Een organisatie IMS (die soms als IMS wordt bedoeld die) is de naam wordt gebruikt om een bedrijf of een specifieke groep binnen een bedrijf over de producten van de Adobe te identificeren. Beheerders kunnen toegang en machtigingen voor functies voor gebruikers van een organisatie configureren en beheren.
+**IMS Organisatie**: Een organisatie IMS (die soms als IMS wordt bedoeld die Org) wordt gebruikt om een bedrijf of een specifieke groep binnen een bedrijf over de producten van Adobe te identificeren. Beheerders kunnen toegang en machtigingen voor functies voor gebruikers van een organisatie configureren en beheren.
 
 **Ingestie**: Zie gegevensopname.
 
@@ -305,7 +305,7 @@ ht-degree: 0%
 
 **eigenschap van de Input**: Een inputeigenschap wordt gespecificeerd in eigenschapsafbeelding en door een machine-leert model gebruikt om voorspellingen te maken.
 
-**[!DNL Intelligent Services]**: [!DNL Intelligent Services] zoals [!DNL Attribution AI] en [!DNL Customer AI] zijn computergestuurde, op artificiële intelligentie gebaseerde modellen die Experience Platform vereisen (of toepassingen die zijn gebaseerd op Platform zoals Adobe Real-time Customer Data Platform) om te worden uitgevoerd en uitgevoerd.
+**[!DNL Intelligent Services]**: [!DNL Intelligent Services] zoals [!DNL Attribution AI] en [!DNL Customer AI] zijn computergestuurde, op kunstmatige intelligentie gebaseerde modellen die Experience Platform (of toepassingen die op Experience Platform zoals Adobe Real-Time Customer Data Platform zijn gebouwd) nodig hebben om te worden uitgevoerd en uitgevoerd.
 
 **Op rente-gebaseerde het richten of verpersoonlijking**: Op rente-gebaseerd richten, die ook als verpersoonlijking wordt bekend, komt voor als de volgende drie voorwaarden worden voldaan aan:
 
@@ -315,9 +315,9 @@ ht-degree: 0%
 
 ## J
 
-**[!DNL JupyterLab]**: Een open-source, op het web gebaseerde interface voor Project [!DNL Jupyter] die is geïntegreerd in de interface van het Platform.
+**[!DNL JupyterLab]**: Een open-source, webinterface voor Project [!DNL Jupyter] die is geïntegreerd in de gebruikersinterface van Experience Platform.
 
-**[!DNL Jupyter Notebook]**: Dankzij JupyterLab, Jupyter-laptops kunt u gegevens opschonen en transformeren, numerieke simulaties, statistische modellering, gegevensvisualisatie, machinaal leren en nog veel meer toepassen op uw Experience Platform gegevens in verschillende talen, zoals Python, Scala en PySpark.
+**[!DNL Jupyter Notebook]**: Met JupyterLab en Jupyter-laptops kunt u gegevens opschonen en transformeren, numerieke simulaties, statistische modellering, gegevensvisualisatie, machinaal leren en meer uitvoeren op uw Experience Platform-gegevens in verschillende talen, zoals Python, Scala en PySpark.
 
 ## K
 
@@ -339,11 +339,11 @@ ht-degree: 0%
 
 **Afbeelding**: De afbeelding van gegevens is het proces om brongegevensgebieden aan verwante doelgebieden in een bestemming in kaart te brengen.
 
-**de Handeling van de Marketing**: In het kader van het gegevensbeheer, is een marketing actie (die ook als een op de markt brengend gebruiksgeval wordt bekend) een actie die een consument van de gegevens van het Experience Platform neemt, waarvoor er een behoefte is om schendingen van het beleid van het gegevensgebruik te controleren.
+**de Handeling van de Marketing**: In het kader van het gegevensbeheer, is een marketing actie (die ook als een marketing gebruiksgeval wordt bekend) een actie die een de gegevensconsument van Experience Platform neemt, waarvoor er een behoefte is om schendingen van het beleid van het gegevensgebruik te controleren.
 
-**methode van de Fusie**: Wanneer het bepalen van een fusiebeleid gebruikend het Platform UI, specificeert de fusiemethode hoe de gegevensfragmenten zouden moeten worden voorrang gegeven wanneer een conflict voorkomt. Wanneer u de Real-Time Customer Profile API gebruikt om een samenvoegbeleid te definiëren, wordt de samenvoegmethode bepaald met het `attributeMerge` -object.
+**methode van de Fusie**: Wanneer het bepalen van een fusiebeleid gebruikend Experience Platform UI, specificeert de fusiemethode hoe de gegevensfragmenten zouden moeten worden voorrang gegeven wanneer een conflict voorkomt. Wanneer u de Real-Time Customer Profile API gebruikt om een samenvoegbeleid te definiëren, wordt de samenvoegmethode bepaald met het `attributeMerge` -object.
 
-**beleid van de Fusie**: Het beleid van de fusie is regels die het Experience Platform gebruikt om te bepalen hoe de fragmenten van klantengegevens van veelvoudige bronnen zullen worden gecombineerd om een individueel profiel tot stand te brengen. Wanneer een gegevensconflict voorkomt, bepaalt het fusiebeleid welke gegevens voor opneming in het profiel zouden moeten worden voorrang gegeven.
+**beleid van de Fusie**: Het beleid van de fusie is regels die Experience Platform gebruikt om te bepalen hoe de fragmenten van klantengegevens van veelvoudige bronnen zullen worden gecombineerd om een individueel profiel tot stand te brengen. Wanneer een gegevensconflict voorkomt, bepaalt het fusiebeleid welke gegevens voor opneming in het profiel zouden moeten worden voorrang gegeven.
 
 **MHMDAa**: [[!DNL Washington My Health My Data Act] ](https://app.leg.wa.gov/RCW/default.aspx?cite=19.373&amp;full=true) verbetert privacyrechten voor consumenten betreffende hun gezondheidsgegevens. Het verplicht de informatieverschaffing, de instemming van de consument en het recht om gezondheidsgegevens te verwijderen, en verbiedt de verkoop van gezondheidsgegevens zonder toestemming. Bovendien maakt de wet het onwettig om gebruik te maken van geofencing rond gezondheidszorgfaciliteiten.
 
@@ -391,9 +391,9 @@ ht-degree: 0%
 
 **Plaatsingen**: een plaatsing is de locatie en/of de context waarin een aanbieding voor een eindgebruiker wordt weergegeven.
 
-**de werkruimte van Beleid**: Een werkruimte in het Platform UI die gegevens stewards toelaat om de etiketten en het beleid van het gegevensgebruik voor uw organisatie te bekijken en te beheren.
+**de werkruimte van Beleid**: Een werkruimte in Experience Platform UI die gegevens stewards toelaat om de etiketten en het beleid van het gegevensgebruik voor uw organisatie te bekijken en te beheren.
 
-**Beleid**: Een beleid van het gegevensgebruik is een regel die marketing acties specificeert die gebaseerd op de toepassing van gebruiksetiketten worden beperkt die op de gegevens van het Platform worden toegepast.
+**Beleid**: Een beleid van het gegevensgebruik is een regel die marketing acties specificeert die gebaseerd op de toepassing van gebruiksetiketten worden beperkt die op de gegevens van Experience Platform worden toegepast.
 
 **handhaving van het Beleid**: Staat u toe om het beleid van het gegevensgebruik met toegepaste marketing acties af te dwingen om gegevensverrichtingen te verhinderen die beleidsschendingen binnen een organisatie vormen.
 
@@ -433,11 +433,11 @@ ht-degree: 0%
 
 ## R
 
-**Real-time Customer Data Platform**: Adobe Real-time Customer Data Platform (Real-Time CDP) brengt bekende en onbekende klantengegevens samen om vertrouwde op klantenprofielen met vereenvoudigde integratie, intelligente segmentatie, en activering in real time over de digitale klantenreis tot stand te brengen.
+**Real-Time Customer Data Platform**: Adobe Real-Time Customer Data Platform (Real-Time CDP) brengt bekende en onbekende klantengegevens samen om vertrouwde op klantenprofielen met vereenvoudigde integratie, intelligente segmentatie, en activering in real time over de digitale klantenreis tot stand te brengen.
 
 **Real-Time Profiel van de Klant**: Het Profiel van de Klant in real time (soms genoemd Profiel) verstrekt een holistische mening van elke individuele klant door gegevens van veelvoudige kanalen, met inbegrip van online, off-line, CRM, en derde te combineren. Met profiel kunt u uw klantgegevens consolideren in afzonderlijke profielen die een actioneerbare, tijdstempelaccount voor elke interactie van de klant bieden.
 
-**Ontvang**: Een recept is de termijn van de Adobe voor een modelspecificatie en is een top-level container die specifieke machine-leert processen, AI algoritmen, verwerkingslogica, en configuratieparameters vertegenwoordigt die worden vereist om een opgeleid model te bouwen en uit te voeren en vandaar hulp specifieke bedrijfsproblemen op te lossen.
+**recipe**: Een recept is Adobe termijn voor een modelspecificatie en is een top-level container die specifieke machine-leert processen, AI algoritmen, verwerkingslogica, en configuratieparameters vertegenwoordigt die worden vereist om een opgeleid model te bouwen en uit te voeren en vandaar hulp specifieke bedrijfsproblemen op te lossen.
 
 **Verslag**: Een verslag is gegevens die als rijen in een dataset voortduurt.
 
@@ -449,7 +449,7 @@ ht-degree: 0%
 
 **Middel**: In de context van markeringen, is een middel een generische termijn die naar opties verwijst de gebruiker kan binnen het cliëntmilieu, met inbegrip van uitbreidingen, gegevenselementen, en regels vormen.
 
-**Op rol-gebaseerd toegangsbeheer**: Op rol-gebaseerde toegangsbeheer laat beheerders toe om toegang en toestemmingen aan gebruikers van Experience Platform toe te wijzen. De toestemmingen omvatten de capaciteit om de eigenschappen van het Experience Platform te bekijken en/of te gebruiken, zoals het creëren van zandbakken, het bepalen van schema&#39;s, en het beheren van datasets.
+**Op rol-gebaseerd toegangsbeheer**: Op rol-gebaseerde toegangsbeheer laat beheerders toe om toegang en toestemmingen aan gebruikers van Experience Platform toe te wijzen. De toestemmingen omvatten de capaciteit om de eigenschappen van Experience Platform te bekijken en/of te gebruiken, zoals het creëren van zandbakken, het bepalen van schema&#39;s, en het beheren van datasets.
 
 **Regel**: In de context van markeringen, is een regel een inzameling van componenten die een specifieke reeks gebeurtenissen, voorwaarden, en acties bepalen die logisch gezien zouden moeten worden gegroepeerd.
 
@@ -461,11 +461,11 @@ ht-degree: 0%
 
 **gegevens van de Steekproef**: De gegevens van de steekproef zijn een voorproef van een gegevensdossier, typisch de eerste 100 rijen, die een gegevenswetenschapper of ingenieur een idee van verstrekt welk schema of gegevens in het gegevensdossier zijn.
 
-**Sandbox**: Een zandbak is een virtueel concept dat één enkele instantie van het Platform in een afzonderlijk virtueel milieu verdeelt, helpen digitale ervaringstoepassingen ontwikkelen en evolueren.
+**Sandbox**: Een zandbak is een virtueel concept dat één enkele instantie van Experience Platform in een afzonderlijk virtueel milieu verdeelt, helpen digitale ervaringstoepassingen ontwikkelen en ontwikkelen.
 
 **het terugstellen van Sandbox**: Het terugstellen van een zandbak schrapt alle gegevens met inbegrip van gegevens, profielen, en segmenten binnen een zandbak. Sandbox-voorinstellingen kunnen van invloed zijn op gegevens die zijn verbonden met interne of externe doelen.
 
-**zandbakschakelaar**: De controle van de zandbakschakelaar in Experience Platform staat gebruikers toe om tussen zandbakken te navigeren zij toegang hebben tot. Als u overschakelt op een sandbox, wordt alle inhoud gewijzigd en wordt mogelijk de toegang tot de functie gewijzigd op basis van machtigingen.
+**zandbakschakelaar**: De zandbakschakelaar controle in Experience Platform staat gebruikers toe om tussen zandbakken te navigeren zij toegang hebben tot. Als u overschakelt op een sandbox, wordt alle inhoud gewijzigd en wordt mogelijk de toegang tot de functie gewijzigd op basis van machtigingen.
 
 **Programma**: Een programma is een user-defined specificatie op frequentie of tijdigheid van gegevensopname van een derdegegevensbron aan Adobe Experience Platform.
 
@@ -483,7 +483,7 @@ ht-degree: 0%
 
 **Segment**: Een segment is een reeks regels die attributen en gebeurtenisgegevens omvatten die een aantal profielen kwalificeren om een publiek te worden.
 
-**de Bouwer van het Segment**: [!DNL Segment Builder] is een visuele ontwikkelomgeving die wordt gebruikt om segmentdefinities te bouwen. Het dient als gemeenschappelijke component van alle toepassingen gebruikend de Dienst van de Segmentatie van het Experience Platform.
+**de Bouwer van het Segment**: [!DNL Segment Builder] is een visuele ontwikkelomgeving die wordt gebruikt om segmentdefinities te bouwen. Het dient als gemeenschappelijke component van alle toepassingen die de Dienst van de Segmentatie van Experience Platform gebruiken.
 
 **definitie van het Segment**: Een segmentdefinitie is de regel die wordt geplaatst om de belangrijkste kenmerken of het gedrag van een doelpubliek te beschrijven. Zodra geconceptualiseerd, worden de regels die in een segmentdefinitie worden geschetst gebruikt om kwalificerende publieksleden voor een segment te bepalen.
 
@@ -499,11 +499,11 @@ ht-degree: 0%
 
 **Segmentatie**: De segmentatie is het proces om een grote groep klanten, vooruitzichten, of consumenten in kleinere groepen te verdelen die gelijkaardige attributen delen en op gelijkaardige wijze aan specifieke marketing strategieën zullen antwoorden.
 
-**Sensei ML Kader**: Het Kader van Sensei ML is een verenigd machine-leert (ML) kader dat de gegevens van het Experience Platform gebruikt om gegevenswetenschappers aan ontwikkeling van de ML-gedreven inlichtingendiensten op een snellere, scalable, en herbruikbare manier toe te laten.
+**Sensei ML Kader**: Het Kader van Sensei ML is een verenigd machine-leert (ML) kader dat de gegevens van Experience Platform gebruikt om gegevenswetenschappers aan ontwikkeling van de ML-gedreven inlichtingendiensten op een snellere, scalable, en herbruikbare manier toe te laten.
 
 **Gevoelige (&quot;S&quot;) etiketten**: De gevoelige (&quot;S&quot;) etiketten worden gebruikt om gegevens te categoriseren die gevoelig worden geacht, zoals verschillende soorten gedrag of geografische gegevens die u duidelijk als gevoelig wilt.
 
-**de Diensten**: Een krachtig kader om AI en de diensten van ML te exploiteren door de Intelligente Diensten van de Adobe leveraging. De diensten leveren in real time, gepersonaliseerde klantenervaringen of operationeel douane intelligente diensten.
+**de Diensten**: Een krachtig kader om AI en de diensten van ML te exploiteren door de Intelligente Diensten van Adobe leveraging. De diensten leveren in real time, gepersonaliseerde klantenervaringen of operationeel douane intelligente diensten.
 
 **Enige de verpersoonlijking van de identiteit marketing actie**: Een marketing actie die gegevens voor onsite inhoudpersonalisatie gebruikt. De verpersoonlijking op locatie is om het even welke gegevens die worden gebruikt om gevolgtrekkingen over gebruikersbelangen te maken, en gebruikt om te selecteren welke inhoud of advertenties op die gevolgtrekkingen worden gediend.
 
@@ -511,7 +511,7 @@ ht-degree: 0%
 
 **S2 etiket van het gegevensgebruik**: Een `S2` etiket van het gegevensgebruik wordt gebruikt om gegevens te classificeren die kunnen worden gebruikt om een breed bepaald geofentiegebied te bepalen.
 
-**Source**: Een bron is een algemene termijn voor om het even welke inputschakelaar in Platform. Zie ook: Source-connector
+**Source**: Een bron is een algemene termijn voor om het even welke inputschakelaar in Experience Platform. Zie ook: Source-connector
 
 **attributen van Source**: Een bronattribuut is een gebied in brondataset. Source-kenmerken worden toegewezen aan doelschemavelden.
 
@@ -519,13 +519,13 @@ ht-degree: 0%
 
 **de categorie van Source**: Een broncategorie is een groepering van bronnen die gelijkaardige kenmerken hebben.
 
-**de schakelaar van Source**: De schakelaars van Source (die ook als bronnen worden bekend) helpen gebruikers gemakkelijk gegevens uit veelvoudige bronnen innemen, die het structureren, het etiketteren en de verhoging van gegevens toestaan gebruikend de diensten van het Experience Platform. Gegevens kunnen worden ingevoerd uit verschillende bronnen, zoals cloudgebaseerde opslag, software van derden en CRM-systemen.
+**de schakelaar van Source**: De schakelaars van Source (die ook als bronnen worden bekend) helpen gebruikers gemakkelijk gegevens uit veelvoudige bronnen innemen, die het structureren, het etiketteren en de verhoging van gegevens toestaan gebruikend de diensten van Experience Platform. Gegevens kunnen worden ingevoerd uit verschillende bronnen, zoals cloudgebaseerde opslag, software van derden en CRM-systemen.
 
-**het stromen verbinding**: Een het stromen verbinding is een uniek eindpunt dat door Adobe wordt verstrekt en aan uw organisatie aan stroomgegevens in Experience Platform wordt gebonden.
+**het stromen verbinding**: Een het stromen verbinding is een uniek eindpunt dat door Adobe wordt verstrekt en aan uw organisatie wordt gebonden om gegevens in Experience Platform te stromen.
 
 **Standaard identiteitsnaamruimte**: De standaard identiteitsnaamruimten zijn vooraf bepaalde identiteitsnaamruimten die door Adobe worden verstrekt, die industrie-standaardoplossingen vertegenwoordigen die algemeen worden gebruikt om klanten te identificeren.
 
-**het stromen ingestie**: Het stromen ingestie staat u toe om gegevens van cliënt en server-zijapparaten naar Experience Platform in echt te verzenden - tijd.
+**Streaming opname**: Het stromen ingestie staat u toe om gegevens van cliënt en server-zijapparaten naar Experience Platform in real time te verzenden.
 
 **het stromen segmentatie**: Het stromen segmentatie is een aan de gang zijnde proces van de gegevensselectie dat segmenten in antwoord op gebruikersactiviteit bijwerkt. Nadat een segment is gemaakt en opgeslagen, wordt de segmentdefinitie toegepast op inkomende gegevens naar [!DNL Real-Time Customer Profile] . Segmenttoevoegingen en verwijderingen worden regelmatig verwerkt, zodat het doelpubliek relevant blijft.
 
@@ -565,7 +565,7 @@ ht-degree: 0%
 
 **XDM Individueel Profiel**: XDM [!DNL Individual Profile] is een op verslag-gebaseerde klasse die een enige vertegenwoordiging van de attributen van zowel geïdentificeerde als gedeeltelijk-geïdentificeerde onderwerpen vormt. De profielen die hoogst geïdentificeerd zijn kunnen voor persoonlijke mededelingen of gerichte overeenkomsten worden gebruikt, en kunnen gedetailleerde persoonlijke informatie zoals naam, geslacht, geboortedatum, plaats, en contactinformatie met inbegrip van telefoonaantallen en e-mailadressen bevatten.
 
-**XDM Systeem**: Het Systeem XDM vertegenwoordigt het kader dat XDM schema&#39;s voor gebruik in de stroomafwaartse diensten van het Experience Platform in werking stelt.
+**XDM Systeem**: Het Systeem XDM vertegenwoordigt het kader dat XDM schema&#39;s voor gebruik in de stroomafwaartse diensten van Experience Platform in werking stelt.
 
 ## Y
 

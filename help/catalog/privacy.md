@@ -1,12 +1,12 @@
 ---
-keywords: Experience Platform;thuis;populaire onderwerpen;gegevens meer privacy;identiteit namespaces;privacy;gegevens meer
+keywords: Experience Platform;home;populaire onderwerpen;privacy in datapeer;naamruimten;privacy;data Lake
 solution: Experience Platform
 title: De verwerking van het privacy- verzoek in het meer van Gegevens
 description: Adobe Experience Platform Privacy Service verwerkt verzoeken van klanten om toegang te krijgen, te weigeren of hun persoonsgegevens te verwijderen, zoals bepaald in wettelijke en organisatorische privacyregels. Dit document behandelt essentiële concepten met betrekking tot het verwerken van privacyverzoeken voor klantgegevens die in het datumpigment zijn opgeslagen.
 exl-id: c06b0a44-be1a-4938-9c3e-f5491a3dfc19
-source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1424'
+source-wordcount: '1425'
 ht-degree: 0%
 
 ---
@@ -19,9 +19,9 @@ Dit document behandelt essentiële concepten met betrekking tot het verwerken va
 
 >[!NOTE]
 >
->In deze handleiding wordt alleen uitgelegd hoe u een verzoek om privacy kunt indienen voor het datumpeer in Experience Platform. Als u ook van plan bent om privacyverzoeken voor de de gegevensopslag van het Profiel van de Klant in real time te maken, verwijs naar de gids op [ verwerking van het privacyverzoek voor Profiel ](../profile/privacy.md) naast dit leerprogramma.
+>In deze handleiding wordt alleen uitgelegd hoe u een verzoek om privacy kunt indienen voor het datumpigment in Experience Platform. Als u ook van plan bent om privacyverzoeken voor de de gegevensopslag van het Profiel van de Klant in real time te maken, verwijs naar de gids op [ verwerking van het privacyverzoek voor Profiel ](../profile/privacy.md) naast dit leerprogramma.
 >
->Voor stappen op hoe te om privacyverzoeken voor andere toepassingen van Adobe Experience Cloud te maken, verwijs naar de [ documentatie van de Privacy Service ](../privacy-service/experience-cloud-apps.md).
+>Voor stappen op hoe te om privacyverzoeken voor andere toepassingen van Adobe Experience Cloud te maken, verwijs naar de [ documentatie van Privacy Service ](../privacy-service/experience-cloud-apps.md).
 
 ## Aan de slag
 
@@ -34,7 +34,7 @@ U wordt aangeraden eerst de volgende [!DNL Experience Platform] -services te ler
 
 ## Naamruimten voor identiteiten {#namespaces}
 
-Adobe Experience Platform [!DNL Identity Service] biedt een brug tussen identiteitsgegevens van klanten op systemen en apparaten. [!DNL Identity Service] gebruikt naamruimten om context aan identiteitswaarden te verstrekken door hen op hun systeem van oorsprong met elkaar in verband te brengen. Een naamruimte kan een algemeen concept vertegenwoordigen, zoals een e-mailadres (&quot;e-mail&quot;) of de identiteit koppelen aan een specifieke toepassing, zoals een Adobe Advertising Cloud-id (&quot;AdCloud&quot;) of een Adobe Target-id (&quot;TNTID&quot;).
+Adobe Experience Platform [!DNL Identity Service] biedt een brug tussen identiteitsgegevens van klanten op systemen en apparaten. [!DNL Identity Service] gebruikt naamruimten om context aan identiteitswaarden te verstrekken door hen op hun systeem van oorsprong met elkaar in verband te brengen. Een naamruimte kan een algemeen concept vertegenwoordigen, zoals een e-mailadres (&quot;E-mail&quot;) of de identiteit koppelen aan een specifieke toepassing, zoals een Adobe Advertising Cloud-id (&quot;AdCloud&quot;) of een Adobe Target-id (&quot;TNTID&quot;).
 
 [!DNL Identity Service] onderhoudt een opslag van algemeen gedefinieerde (standaard) en door de gebruiker gedefinieerde (aangepaste) naamruimten. Standaard naamruimten zijn beschikbaar voor alle organisaties (bijvoorbeeld E-mail en ECID), terwijl uw organisatie aangepaste naamruimten kan maken die aan de specifieke behoeften voldoen.
 
@@ -73,7 +73,7 @@ Zodra u de aangewezen gebieden binnen het schema als identiteitsgebieden hebt ge
 >
 >Deze sectie veronderstelt ook dat u weet hoe te om vraag aan de Registratie API van het Schema te maken. Voor belangrijke informatie met betrekking tot het gebruiken van API, met inbegrip van het kennen van uw `{TENANT_ID}` en het concept containers, zie [ begonnen worden ](../xdm/api/getting-started.md) sectie van de API gids.
 
-U kunt een identiteitsbeschrijver aan het schema van XDM van een dataset toevoegen door een verzoek van de POST aan het `/descriptors` eindpunt in [!DNL Schema Registry] API te richten.
+U kunt een identiteitsbeschrijver aan het schema van XDM van een dataset toevoegen door een POST- verzoek aan het `/descriptors` eindpunt in [!DNL Schema Registry] API te doen.
 
 **API formaat**
 
@@ -200,11 +200,11 @@ curl -X POST \
 
 >[!IMPORTANT]
 >
->Het platform verwerkt privacyverzoeken over alle [ zandbakken ](../sandboxes/home.md) die tot uw organisatie behoren. Als gevolg hiervan wordt elke `x-sandbox-name` -header die in de aanvraag is opgenomen, genegeerd door het systeem.
+>Experience Platform verwerkt privacyverzoeken over alle [ zandbakken ](../sandboxes/home.md) die tot uw organisatie behoren. Als gevolg hiervan wordt elke `x-sandbox-name` -header die in de aanvraag is opgenomen, genegeerd door het systeem.
 
 ## Verzoek om verwerking verwijderen
 
-Wanneer [!DNL Experience Platform] een verwijderaanvraag ontvangt van [!DNL Privacy Service] , stuurt [!DNL Platform] een bevestiging naar [!DNL Privacy Service] dat de aanvraag is ontvangen en de desbetreffende gegevens zijn gemarkeerd voor verwijdering. De gegevens worden vervolgens binnen zeven dagen uit het datumpeer verwijderd. Tijdens dat venster van zeven dagen worden de gegevens via de elektronische weg verwijderd en zijn deze daarom niet toegankelijk voor een [!DNL Platform] -service.
+Wanneer [!DNL Experience Platform] een verwijderaanvraag ontvangt van [!DNL Privacy Service] , stuurt [!DNL Experience Platform] een bevestiging naar [!DNL Privacy Service] dat de aanvraag is ontvangen en de desbetreffende gegevens zijn gemarkeerd voor verwijdering. De gegevens worden vervolgens binnen zeven dagen uit het datumpeer verwijderd. Tijdens dat venster van zeven dagen worden de gegevens via de elektronische weg verwijderd en zijn deze daarom niet toegankelijk voor een [!DNL Experience Platform] -service.
 
 Als u ook `ProfileService` of `identity` in de privacyaanvraag hebt opgenomen, worden de bijbehorende gegevens afzonderlijk verwerkt. Zie de sectie over [ schrapping verzoekverwerking voor Profiel ](../profile/privacy.md#delete) voor meer informatie.
 

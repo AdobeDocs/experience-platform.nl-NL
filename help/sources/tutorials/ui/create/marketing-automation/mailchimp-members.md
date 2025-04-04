@@ -1,17 +1,17 @@
 ---
-keywords: Experience Platform;thuis;populaire onderwerpen;bronnen;connectors;bronconnectors;bronnen sdk;sdk;SDK
+keywords: Experience Platform;home;populaire onderwerpen;bronnen;connectors;bronconnectors;bronnen sdk;sdk;SDK
 solution: Experience Platform
-title: Een MailChimp-bronverbinding voor leden maken met behulp van platforminterface
-description: Leer hoe u Adobe Experience Platform verbindt met MailChimp-leden via de gebruikersinterface van het platform.
+title: Een MailChimp-bronverbinding voor leden maken met de gebruikersinterface van Experience Platform
+description: Leer hoe u Adobe Experience Platform met MailChimp-leden verbindt via de gebruikersinterface van Experience Platform.
 exl-id: dc620ef9-624d-4fc9-8475-bb475ea86eb7
-source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '650'
+source-wordcount: '663'
 ht-degree: 1%
 
 ---
 
-# Een [!DNL Mailchimp Members] bronverbinding maken met behulp van platforminterface
+# Een [!DNL Mailchimp Members] bronverbinding maken met de gebruikersinterface van Experience Platform
 
 Deze zelfstudie bevat stappen voor het maken van een [!DNL Mailchimp] bronaansluiting voor het invoeren van [!DNL Mailchimp Members] -gegevens naar Adobe Experience Platform via de gebruikersinterface.
 
@@ -19,12 +19,12 @@ Deze zelfstudie bevat stappen voor het maken van een [!DNL Mailchimp] bronaanslu
 
 Deze handleiding vereist een goed begrip van de volgende onderdelen van Adobe Experience Platform:
 
-* [ Bronnen ](../../../../home.md): Het platform staat gegevens toe om van diverse bronnen worden opgenomen terwijl het voorzien van u van de capaciteit om, inkomende gegevens te structureren te etiketteren en te verbeteren gebruikend [!DNL Platform] diensten.
-* [ Sandboxes ](../../../../../sandboxes/home.md): Het platform verstrekt virtuele zandbakken die één enkele instantie van het Platform in afzonderlijke virtuele milieu&#39;s verdelen helpen digitale ervaringstoepassingen ontwikkelen en ontwikkelen.
+* [ Bronnen ](../../../../home.md): Experience Platform staat gegevens toe om van diverse bronnen worden opgenomen terwijl het voorzien van u van de capaciteit om, inkomende gegevens te structureren te etiketteren en te verbeteren gebruikend [!DNL Experience Platform] diensten.
+* [ Sandboxes ](../../../../../sandboxes/home.md): Experience Platform verstrekt virtuele zandbakken die één enkele instantie van Experience Platform in afzonderlijke virtuele milieu&#39;s verdelen helpen digitale ervaringstoepassingen ontwikkelen en ontwikkelen.
 
 ## Vereiste referenties verzamelen
 
-Als u uw [!DNL Mailchimp Members] -gegevens naar Platform wilt verzenden, moet u eerst de juiste verificatiereferenties opgeven die overeenkomen met uw [!DNL Mailchimp] -account.
+Als u uw [!DNL Mailchimp Members] -gegevens naar Experience Platform wilt verzenden, moet u eerst de juiste verificatiereferenties opgeven die overeenkomen met uw [!DNL Mailchimp] -account.
 
 De [!DNL Mailchimp Members] -bron ondersteunt zowel OAuth 2 Refresh Code als basisverificatie. Zie de lijsten hieronder voor meer informatie over deze authentificatietypen.
 
@@ -33,10 +33,10 @@ De [!DNL Mailchimp Members] -bron ondersteunt zowel OAuth 2 Refresh Code als bas
 | Credentials | Beschrijving |
 | --- | --- |
 | Domein | De basis-URL waarmee verbinding wordt gemaakt met de MailChimp-API. De indeling voor de basis-URL is `https://{DC}.api.mailchimp.com` , waarbij `{DC}` het datacenter vertegenwoordigt dat overeenkomt met uw account. |
-| Autorisatietest-URL | De autorisatietest-URL wordt gebruikt om referenties te valideren wanneer [!DNL Mailchimp] wordt verbonden met Platform. Als dit niet wordt opgegeven, worden de referenties in plaats daarvan automatisch gecontroleerd tijdens het maken van de bronverbinding. |
+| Autorisatietest-URL | De autorisatietest-URL wordt gebruikt om referenties te valideren wanneer [!DNL Mailchimp] wordt verbonden met Experience Platform. Als dit niet wordt opgegeven, worden de referenties in plaats daarvan automatisch gecontroleerd tijdens het maken van de bronverbinding. |
 | Toegangstoken | Het overeenkomstige toegangstoken dat wordt gebruikt om uw bron voor authentiek te verklaren. Dit is vereist voor verificatie op basis van OAuth. |
 
-Voor meer informatie bij het gebruiken van OAuth 2 om uw [!DNL Mailchimp] rekening aan Platform voor authentiek te verklaren, zie dit [[!DNL Mailchimp]  document bij het gebruiken van OAuth 2 ](https://mailchimp.com/developer/marketing/guides/access-user-data-oauth-2/).
+Voor meer informatie bij het gebruiken van OAuth 2 om uw [!DNL Mailchimp] rekening aan Experience Platform voor authentiek te verklaren, zie dit [[!DNL Mailchimp]  document bij het gebruiken van OAuth 2 ](https://mailchimp.com/developer/marketing/guides/access-user-data-oauth-2/).
 
 ### Basisverificatie
 
@@ -46,9 +46,9 @@ Voor meer informatie bij het gebruiken van OAuth 2 om uw [!DNL Mailchimp] rekeni
 | Gebruikersnaam | De gebruikersnaam die overeenkomt met uw MailChimp-account. Dit is vereist voor basisverificatie. |
 | Wachtwoord | Het wachtwoord dat overeenkomt met uw MailChimp-account. Dit is vereist voor basisverificatie. |
 
-## Sluit uw [!DNL Mailchimp Members] -account aan op Platform
+## Sluit uw [!DNL Mailchimp Members] -account aan op Experience Platform
 
-Selecteer in de gebruikersinterface van het platform **[!UICONTROL Sources]** in de linkernavigatiebalk voor toegang tot de werkruimte van [!UICONTROL Sources] . In het scherm [!UICONTROL Catalog] worden diverse bronnen weergegeven waarmee u een account kunt maken.
+Selecteer in de gebruikersinterface van Experience Platform de optie **[!UICONTROL Sources]** in de linkernavigatiebalk voor toegang tot de werkruimte van [!UICONTROL Sources] . In het scherm [!UICONTROL Catalog] worden diverse bronnen weergegeven waarmee u een account kunt maken.
 
 U kunt de juiste categorie selecteren in de catalogus aan de linkerkant van het scherm. U kunt ook de specifieke bron vinden waarmee u wilt werken met de zoekoptie.
 
@@ -97,4 +97,4 @@ De pagina wordt bijgewerkt in een interactieve schemastructuur waarmee u de hië
 
 ## Volgende stappen
 
-Als uw [!DNL Mailchimp] -account is geverifieerd en uw [!DNL Mailchimp Members] -gegevens zijn geselecteerd, kunt u nu een gegevensstroom maken om uw gegevens over te brengen naar het Platform. Voor gedetailleerde stappen op hoe te om een dataflow tot stand te brengen, zie de documentatie bij [ het creëren van een dataflow om de gegevens van de marketing automatisering aan Platform ](../../dataflow/marketing-automation.md) te brengen.
+Als uw [!DNL Mailchimp] -account is geverifieerd en uw [!DNL Mailchimp Members] -gegevens zijn geselecteerd, kunt u nu een gegevensstroom beginnen te maken om uw gegevens over te brengen naar Experience Platform. Voor gedetailleerde stappen op hoe te om een dataflow tot stand te brengen, zie de documentatie bij [ het creëren van een dataflow om de gegevens van de marketing automatisering aan Experience Platform ](../../dataflow/marketing-automation.md) te brengen.

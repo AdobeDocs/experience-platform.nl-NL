@@ -2,9 +2,9 @@
 title: Concepten maken van de API voor Flow Service Entities
 description: Leer hoe u concepten van uw basisverbinding, bronverbinding, doelverbinding en gegevensstroom maakt met de Flow Service API
 exl-id: aad6a302-1905-4a23-bc3d-39e76c9a22da
-source-git-commit: 9c40f6254b548027d271e5831bd1b03aec98df77
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1188'
+source-wordcount: '1193'
 ht-degree: 0%
 
 ---
@@ -21,12 +21,12 @@ Deze zelfstudie bevat stappen voor het instellen van [!DNL Flow Service] -entite
 
 Voor deze zelfstudie hebt u een goed inzicht nodig in de volgende onderdelen van Adobe Experience Platform:
 
-* [ Bronnen ](../../home.md): Experience Platform staat gegevens toe om van diverse bronnen worden opgenomen terwijl het voorzien van u van de capaciteit om, inkomende gegevens te structureren te etiketteren en te verbeteren gebruikend de diensten van het Platform.
-* [ Sandboxes ](../../../sandboxes/home.md): Experience Platform verstrekt virtuele zandbakken die één enkele instantie van het Platform in afzonderlijke virtuele milieu&#39;s verdelen helpen digitale ervaringstoepassingen ontwikkelen en ontwikkelen.
+* [ Bronnen ](../../home.md): Experience Platform staat gegevens toe om van diverse bronnen worden opgenomen terwijl het voorzien van u van de capaciteit om, inkomende gegevens te structureren te etiketteren en te verbeteren gebruikend de diensten van Experience Platform.
+* [ Sandboxes ](../../../sandboxes/home.md): Experience Platform verstrekt virtuele zandbakken die één enkele instantie van Experience Platform in afzonderlijke virtuele milieu&#39;s verdelen helpen digitale ervaringstoepassingen ontwikkelen en ontwikkelen.
 
-### Platform-API&#39;s gebruiken
+### Experience Platform API&#39;s gebruiken
 
-Voor informatie over hoe te om vraag aan Platform APIs met succes te maken, zie de gids op [ begonnen wordt met Platform APIs ](../../../landing/api-guide.md).
+Voor informatie over hoe te om vraag aan Experience Platform APIs met succes te maken, zie de gids op [ begonnen wordt met Experience Platform APIs ](../../../landing/api-guide.md).
 
 ### Controleren op ondersteuning voor conceptmodus
 
@@ -571,7 +571,7 @@ Een succesvolle reactie keert de stroom specifieke informatie voor uw bron terug
 
 ## Concepten van basisverbindingen maken {#create-a-draft-base-connection}
 
-Als u een conceptbasisverbinding wilt maken, vraagt u een POST naar het `/connections` -eindpunt van de [!DNL Flow Service] API en geeft u `mode=draft` op als een queryparameter.
+Als u een conceptbasisverbinding wilt maken, vraagt u een POST-aanvraag naar het `/connections` -eindpunt van de [!DNL Flow Service] API en geeft u `mode=draft` op als een queryparameter.
 
 **API formaat**
 
@@ -624,9 +624,9 @@ Een geslaagde reactie retourneert de basis-verbindings-id en het bijbehorende la
 }
 ```
 
-## Publish uw conceptbasisverbinding {#publish-your-draft-base-connection}
+## Uw basisverbinding voor concepten publiceren {#publish-your-draft-base-connection}
 
-Zodra uw concept klaar is om te worden gepubliceerd, dient u een verzoek van de POST in bij het `/connections` -eindpunt en verstrekt u de id van de conceptbasisverbinding die u wilt publiceren, alsmede een handeling voor het publiceren.
+Zodra uw concept klaar is om te worden gepubliceerd, dient u een POST-verzoek in bij het `/connections` -eindpunt en verstrekt u de id van de conceptbasisverbinding die u wilt publiceren, alsmede een handeling voor het publiceren.
 
 **API formaat**
 
@@ -665,7 +665,7 @@ Een succesvolle reactie keert identiteitskaart en het overeenkomstige etiket voo
 
 ## Concepten van bronverbindingen maken {#create-a-draft-source-connection}
 
-Als u een conceptbronverbinding wilt maken, vraagt u een POST naar het `/sourceConnections` -eindpunt van de [!DNL Flow Service] API en geeft u `mode=draft` op als een queryparameter.
+Als u een conceptbronverbinding wilt maken, vraagt u een POST-aanvraag naar het `/sourceConnections` -eindpunt van de [!DNL Flow Service] API en geeft u `mode=draft` op als een queryparameter.
 
 **API formaat**
 
@@ -716,13 +716,13 @@ Een geslaagde reactie retourneert de bron-verbindings-id en de bijbehorende tag 
 }
 ```
 
-## Publish uw conceptbronverbinding {#publish-your-draft-source-connection}
+## Uw conceptbronverbinding publiceren {#publish-your-draft-source-connection}
 
 >[!NOTE]
 >
 >U kunt geen bronverbinding publiceren als de bijbehorende basisverbinding zich nog in het concept bevindt. Controleer of uw basisverbinding eerst is gepubliceerd voordat u uw bronverbinding publiceert.
 
-Zodra uw concept klaar is om te worden gepubliceerd, dient u een verzoek van de POST in bij het `/sourceConnections` eindpunt en verstrekt u de id van de conceptbronverbinding die u wilt publiceren, evenals een actiebewerking voor het publiceren.
+Zodra uw concept klaar is om te worden gepubliceerd, dient u een POST-verzoek in bij het `/sourceConnections` -eindpunt en verstrekt u de id van de conceptbronverbinding die u wilt publiceren, alsmede een handeling voor het publiceren.
 
 **API formaat**
 
@@ -761,7 +761,7 @@ Een succesvolle reactie keert identiteitskaart en het overeenkomstige etiket voo
 
 ## Concepten van doelverbinding maken {#create-a-draft-target-connection}
 
-Als u een conceptdoelverbinding wilt maken, vraagt u een POST naar het `/targetConnections` -eindpunt van de [!DNL Flow Service] API en geeft u `mode=draft` op als een queryparameter.
+Als u een conceptdoelverbinding wilt maken, vraagt u een POST-aanvraag naar het `/targetConnections` -eindpunt van de [!DNL Flow Service] API en geeft u `mode=draft` op als een queryparameter.
 
 **API formaat**
 
@@ -813,13 +813,13 @@ Een geslaagde reactie retourneert de doel-verbindings-id en de bijbehorende tag 
 }
 ```
 
-## Publish uw conceptdoelverbinding {#publish-your-draft-target-connection}
+## Conceptdoelverbinding publiceren {#publish-your-draft-target-connection}
 
 >[!NOTE]
 >
 >U kunt geen doelverbinding publiceren als de bijbehorende basisverbinding zich nog in de conceptstatus bevindt. Controleer of uw basisverbinding eerst is gepubliceerd voordat u de doelverbinding publiceert.
 
-Zodra uw concept klaar is om te worden gepubliceerd, dient u een verzoek van de POST in bij het `/targetConnections` -eindpunt en verstrekt u de id van de conceptdoelverbinding die u wilt publiceren, alsmede een handeling voor het publiceren.
+Zodra uw concept klaar is om te worden gepubliceerd, dient u een POST-verzoek in bij het `/targetConnections` -eindpunt en verstrekt u de id van de conceptdoelverbinding die u wilt publiceren, alsmede een handeling voor het publiceren.
 
 **API formaat**
 
@@ -858,7 +858,7 @@ Een succesvolle reactie keert identiteitskaart en het overeenkomstige etiket voo
 
 ## Concepten van gegevensstroom maken {#create-a-draft-dataflow}
 
-Als u een gegevensstroom wilt instellen als concept, vraagt u een POST naar het `/flows` -eindpunt terwijl u de `mode=draft` als queryparameter toevoegt. Op deze manier kunt u een gegevensstroom maken en deze opslaan als concept.
+Als u een gegevensstroom als concept wilt instellen, vraagt u een POST-verzoek om het `/flows` -eindpunt terwijl u de `mode=draft` als queryparameter toevoegt. Op deze manier kunt u een gegevensstroom maken en deze opslaan als concept.
 
 **API formaat**
 
@@ -908,13 +908,13 @@ Een geslaagde reactie retourneert de stroom-id en de bijbehorende tag voor de co
 }
 ```
 
-## Publish uw conceptgegevensstroom {#publish-your-draft-dataflow}
+## Uw conceptgegevensstroom publiceren {#publish-your-draft-dataflow}
 
 >[!NOTE]
 >
 >U kunt geen gegevensstroom publiceren als zijn bijbehorende bron en doelverbindingen nog in ontwerpstaat zijn. Zorg ervoor dat uw bron- en doelverbindingen eerst worden gepubliceerd voordat u uw gegevensstroom publiceert.
 
-Zodra uw concept klaar is om te worden gepubliceerd, doe een verzoek van de POST aan het `/flows` eindpunt terwijl het verstrekken van identiteitskaart van de ontwerp dataflow die u wilt publiceren, evenals een actieverrichting voor het publiceren.
+Zodra uw concept klaar is om te worden gepubliceerd, dient u een POST-verzoek in bij het `/flows` -eindpunt terwijl u de id opgeeft van de conceptgegevensstroom die u wilt publiceren, en een handeling voor het publiceren.
 
 **API formaat**
 

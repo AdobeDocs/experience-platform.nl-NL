@@ -2,9 +2,9 @@
 title: Constante analyse en tracering
 description: Leer hoe u een dashboard voor de toestemmingsanalyse kunt maken om te controleren hoe de toestemming van de gebruiker in de loop der tijd is verlopen.
 exl-id: 34accae5-8b4f-4281-8333-187a91db8199
-source-git-commit: adc6d50f2784fe665d0590c3af053a057f8e4e38
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '1804'
+source-wordcount: '1805'
 ht-degree: 0%
 
 ---
@@ -24,7 +24,7 @@ De in deze handleiding behandelde gevallen van gebruik zijn het trenderen van de
 
 ## Goedgekeurd publiek maken {#create-consent-audiences}
 
-Om een toestemmingsdashboard te bouwen, moet u eerst een publiek van alle profielen tot stand brengen die aan contact hebben goedgekeurd. Als u naar de Real-Time Customer Data Platform Segment Builder wilt navigeren, selecteert u **[!UICONTROL Audiences]** in de linkernavigatie van de gebruikersinterface van het platform. Selecteer op het tabblad [!UICONTROL Customer] van het [!UICONTROL Audiences] dashboard **[!UICONTROL Create audience]** in de rechterbovenhoek van de weergave en vervolgens **[!UICONTROL Build rules]** .
+Om een toestemmingsdashboard te bouwen, moet u eerst een publiek van alle profielen tot stand brengen die aan contact hebben goedgekeurd. Als u naar de Real-Time Customer Data Platform Segment Builder wilt navigeren, selecteert u **[!UICONTROL Audiences]** in de linkernavigatie van de gebruikersinterface van Experience Platform. Selecteer op het tabblad [!UICONTROL Customer] van het [!UICONTROL Audiences] dashboard **[!UICONTROL Create audience]** in de rechterbovenhoek van de weergave en vervolgens **[!UICONTROL Build rules]** .
 
 ![ het [!UICONTROL Audiences] dashboard met [!UICONTROL Customer], [!UICONTROL Audiences], en [!UICONTROL Create segment] benadrukte.](../images/insights-use-cases/consent-analysis/create-audience.png)
 
@@ -72,7 +72,7 @@ Adobe heeft verschillende inzichten gemaakt die automatisch voor u beschikbaar z
 
 ## Audioverlap {#audience-overlap}
 
-Als u de overlapping tussen twee toestemmingssoorten wilt controleren, voegt u de [!UICONTROL Audience overlap by merge policy] toe aan het dashboard Profielen en selecteert u het gewenste publiek in de vervolgkeuzemenu&#39;s. Zie de documentatie voor instructies op hoe te om een widget aan uw dashboard toe te voegen de [*overlap van het Publiek door beleid*](../guides/profiles.md#audience-overlap-by-merge-policy) voor meer informatie over het inzicht samen te voegen.
+Als u de overlapping tussen twee toestemmingssoorten wilt controleren, voegt u de [!UICONTROL Audience overlap by merge policy] toe aan het dashboard Profielen en selecteert u het gewenste publiek in de vervolgkeuzemenu&#39;s. Zie de documentatie voor instructies op hoe te om een widget aan uw dashboard toe te voegen de [*overlap van het Publiek door beleid van de fusie*](../guides/profiles.md#audience-overlap-by-merge-policy) voor meer informatie over insight.
 
 <!-- Image needs updating to night mode -->
 

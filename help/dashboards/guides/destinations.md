@@ -4,9 +4,9 @@ title: Doeldashboard
 description: Adobe Experience Platform biedt een dashboard waarmee u belangrijke informatie over de actieve doelen van uw organisatie kunt bekijken.
 type: Documentation
 exl-id: 6a34a796-24a1-450a-af39-60113928873e
-source-git-commit: a8b5ed09e8e28075a3a4f37ad30f01c1cc389b9c
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '3045'
+source-wordcount: '3048'
 ht-degree: 0%
 
 ---
@@ -19,7 +19,7 @@ Voor een overzicht van bestemmingen, evenals een catalogus van alle beschikbare 
 
 ## [!UICONTROL Destinations] dashboardgegevens {#destinations-dashboard-data}
 
-Het dashboard van Doelen toont een momentopname van de bestemmingen die uw organisatie binnen Experience Platform heeft toegelaten. De gegevens in de momentopname geven de gegevens precies zo weer als op het specifieke tijdstip waarop de momentopname is gemaakt. Met andere woorden, de momentopname is geen benadering of steekproef van de gegevens, en het dashboard van bestemmingen werkt niet in real time bij.
+Op het dashboard Doelen wordt een momentopname weergegeven van de doelen die uw organisatie binnen Experience Platform heeft ingeschakeld. De gegevens in de momentopname geven de gegevens precies zo weer als op het specifieke tijdstip waarop de momentopname is gemaakt. Met andere woorden, de momentopname is geen benadering of steekproef van de gegevens, en het dashboard van bestemmingen werkt niet in real time bij.
 
 >[!NOTE]
 >
@@ -27,15 +27,15 @@ Het dashboard van Doelen toont een momentopname van de bestemmingen die uw organ
 
 ## Het dashboard van [!UICONTROL Destinations] verkennen {#explore}
 
-Als u naar het doeldashboard in de gebruikersinterface van het platform wilt navigeren, selecteert u **[!UICONTROL Destinations]** in de linkertrack en selecteert u vervolgens het tabblad **[!UICONTROL Overview]** om het dashboard weer te geven.
+Als u naar het doeldashboard in de gebruikersinterface van Experience Platform wilt navigeren, selecteert u **[!UICONTROL Destinations]** in de linkertrack en selecteert u vervolgens het tabblad **[!UICONTROL Overview]** om het dashboard weer te geven.
 
 De datum en tijd van de meest recente momentopname worden getoond bij de bovenkant van [!UICONTROL Overview] naast het bestemmingsdrop-down. Alle widgetgegevens zijn nauwkeurig vanaf die datum en tijd. De tijdstempel van de momentopname wordt opgegeven in UTC; deze bevindt zich niet in de tijdzone van de individuele gebruiker of organisatie.
 
 >[!NOTE]
 >
->Als uw organisatie nieuw is aan Experience Platform en nog geen actieve bestemmingen heeft, zijn het dashboard van Doelen en het lusje [!UICONTROL Overview] niet zichtbaar. Als u in plaats daarvan [!UICONTROL Destinations] selecteert in de linkernavigatie, wordt het tabblad [!UICONTROL Catalog] weergegeven. Raadpleeg de [[!UICONTROL Destinations] handleiding voor de werkruimte ](../../destinations/ui/destinations-workspace.md) voor meer informatie over de tab [!UICONTROL Catalog] .
+>Als uw organisatie nieuw is voor Experience Platform en nog geen actieve doelen heeft, zijn het dashboard Doelen en het tabblad [!UICONTROL Overview] niet zichtbaar. Als u in plaats daarvan [!UICONTROL Destinations] selecteert in de linkernavigatie, wordt het tabblad [!UICONTROL Catalog] weergegeven. Raadpleeg de [[!UICONTROL Destinations] handleiding voor de werkruimte ](../../destinations/ui/destinations-workspace.md) voor meer informatie over de tab [!UICONTROL Catalog] .
 
-![ het Overzicht van de Doelen UI van het Platform met de meest recente benadrukte momentopname.](../images/destinations/snapshot-timestamp.png)
+![ het Overzicht van Doelen UI van Experience Platform met de meest recente benadrukte momentopname.](../images/destinations/snapshot-timestamp.png)
 
 ### Het dashboard [!UICONTROL Destinations] wijzigen {#modify}
 
@@ -53,7 +53,7 @@ In de widgetbibliotheek kunt u bladeren door de selectie van standaard- en aange
 
 ### SQL weergeven {#view-sql}
 
-U kunt de SQL bekijken die de inzichten produceert die op uw dashboard met een knevel op de [!UICONTROL Overview] werkruimte worden visualiseerd. U kunt inspiratie putten uit de SQL van uw bestaande inzichten om nieuwe vragen tot stand te brengen die unieke inzichten uit de gegevens van het Platform voortbrengen die op uw bedrijfsbehoeften worden gebaseerd. Om meer over deze eigenschap te leren, zie de [ SQL gids van de Mening UI ](../view-sql.md).
+U kunt de SQL bekijken die de inzichten produceert die op uw dashboard met een knevel op de [!UICONTROL Overview] werkruimte worden visualiseerd. U kunt inspiratie putten uit de SQL van uw bestaande inzichten om nieuwe vragen tot stand te brengen die unieke inzichten van de gegevens van Experience Platform afleiden die op uw bedrijfsbehoeften worden gebaseerd. Om meer over deze eigenschap te leren, zie de [ SQL gids van de Mening UI ](../view-sql.md).
 
 ## Standaardwidgets {#default-widgets}
 
@@ -70,7 +70,7 @@ Voor alle nieuwe Adobe Experience Platform-instanties wordt een standaardwidgetb
 
 ## Standaardwidgets {#standard-widgets}
 
-De Adobe verstrekt veelvoudige standaardwidgets die u kunt gebruiken om verschillende metriek met betrekking tot uw bestemmingen te visualiseren en de volledigheid van het publiek te beoordelen beschikbaar voor uw gegevensanalyse. U kunt ook aangepaste widgets maken die u met uw organisatie wilt delen met de [!UICONTROL Widget library] . Om meer over het creëren van douanewidgets te leren, gelieve te beginnen door het [ overzicht van de bibliotheek van Widget ](../customize/widget-library.md) te lezen.
+Adobe biedt meerdere standaardwidgets die u kunt gebruiken voor het visualiseren van verschillende maatstaven voor uw doelen en het beoordelen van de volledigheid van het publiek dat beschikbaar is voor uw gegevensanalyse. U kunt ook aangepaste widgets maken die u met uw organisatie wilt delen met de [!UICONTROL Widget library] . Om meer over het creëren van douanewidgets te leren, gelieve te beginnen door het [ overzicht van de bibliotheek van Widget ](../customize/widget-library.md) te lezen.
 
 ### Vereisten {#prerequisites}
 
@@ -80,7 +80,7 @@ Voordat u doorgaat met de beschrijvingen van standaardwidgets, moet u de definit
 * **Publiek**: Een reeks mensen, rekeningen, huishoudens, of andere entiteiten die gemeenschappelijke kenmerken en gedrag delen.
 * **Toegewezen/Afbeelding**: De afbeelding van gegevens is het proces om brongegevensgebieden aan verwante doelgebieden in een bestemming in kaart te brengen.
 * **Identiteit**: Een identiteit is een herkenningsteken dat uniek een individuele klant, zoals een koekjesidentiteitskaart, apparatenidentiteitskaart, of e-mailidentiteitskaart vertegenwoordigt.
-* **activeer**: Activeer is de actie die door een gebruiker wordt genomen om een publiek of profielen aan een bestemming zoals Oracle Eloqua, Google, of de Marketing Cloud van Salesforce in kaart te brengen.
+* **activeer**: Activeer is de actie die door een gebruiker wordt genomen om een publiek of profielen aan een bestemming zoals Oracle Eloqua, Google, of Salesforce Marketing Cloud in kaart te brengen.
 
 Als u meer wilt weten over elk van de beschikbare standaardwidgets, selecteert u de naam van een widget in de volgende lijst:
 
@@ -107,7 +107,7 @@ Als u meer wilt weten over elk van de beschikbare standaardwidgets, selecteert u
 >title="Meest gebruikte bestemmingen"
 >abstract="Deze widget geeft de meest actieve doelen van uw organisatie weer op basis van het aantal toegewezen doelgroepen. Deze getallen zijn nauwkeurig op het moment van de laatste opname. Deze rangschikking biedt inzicht in welke bestemmingen momenteel het meest worden gebruikt en markeert de doelen die mogelijk onderbenut zijn."
 
-Met de widget **[!UICONTROL Most used destinations]** worden de belangrijkste doelen van uw organisatie weergegeven op basis van het aantal toegewezen doelgroepen, vanaf de laatste momentopname. Deze rangschikking biedt inzicht in welke bestemmingen worden gebruikt en toont mogelijk ook de bestemmingen die mogelijk onderbenut zijn.
+Met de widget **[!UICONTROL Most used destinations]** worden de belangrijkste doelen van uw organisatie weergegeven op basis van het aantal toegewezen doelgroepen, vanaf de laatste momentopname. Deze rangschikking verstrekt insight waarin de bestemmingen worden gebruikt terwijl ook potentieel het tonen van die die kunnen worden onderbenut.
 
 Bijvoorbeeld, als u een bestemming gisteren vormde maar geen publiek aan het in kaart gebracht, zou u kunnen zien dat de bestemming momenteel onderbenut is.
 
@@ -253,7 +253,7 @@ Alle publieksgrootten in het systeem worden gesorteerd van hoge naar lage publie
 
 Als het aantal toegewezen publieksprofielen de afgelopen 30 dagen buiten één standaardafwijking van de gemiddelde toegewezen profielgrootte ligt, wijst dit op een anomalie in het systeem en het zou moeten worden onderzocht.
 
-Als een publiek in de [!UICONTROL Mapped audience health] -widget met een grote marge afwijkt, moet u naar het trends voor de doelgrootte verwijzen en het afwijkende publiek zoeken. De trend kan meer inzicht geven in de gezondheid van uw publiek.
+Als een publiek in de [!UICONTROL Mapped audience health] -widget met een grote marge afwijkt, moet u naar het trends voor de doelgrootte verwijzen en het afwijkende publiek zoeken. De trend kan insight verder helpen in de gezondheid van uw publiek.
 
 >[!NOTE]
 >

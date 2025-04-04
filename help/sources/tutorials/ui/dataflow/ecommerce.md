@@ -1,32 +1,32 @@
 ---
-keywords: Experience Platform;thuis;populaire onderwerpen;eCommerce-connector;eCommerce
+keywords: Experience Platform;home;populaire onderwerpen;eCommerce-connector;eCommerce
 solution: Experience Platform
 title: Een gegevensstroom maken met een E-Commerce Source in de gebruikersinterface
 type: Tutorial
-description: Een dataflow is een geplande taak die gegevens van een bron aan een dataset van het Platform terugwint en opneemt. Dit leerprogramma verstrekt stappen op hoe te om een dataflow voor een e-commercebron tot stand te brengen gebruikend Platform UI.
+description: Een dataflow is een geplande taak die gegevens van een bron aan een dataset van Experience Platform terugwint en opneemt. Deze zelfstudie bevat stappen voor het maken van een gegevensstroom voor een e-commercebron met Experience Platform UI.
 exl-id: ee1382c5-78ac-4765-8883-0a922772bb20
-source-git-commit: d048109141168b33795753c4706dac64cdf29ca5
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1533'
+source-wordcount: '1541'
 ht-degree: 0%
 
 ---
 
 # Creeer een gegevensstroom gebruikend een e-commercebron in UI
 
-Een dataflow is een geplande taak die gegevens van een bron aan een dataset in Adobe Experience Platform terugwint en opneemt. Deze zelfstudie biedt stappen voor het maken van een gegevensstroom voor een e-commercebron met behulp van de interface van het platform.
+Een dataflow is een geplande taak die gegevens van een bron aan een dataset in Adobe Experience Platform terugwint en opneemt. Deze zelfstudie bevat stappen voor het maken van een gegevensstroom voor een e-commercebron met de gebruikersinterface van Experience Platform.
 
 >[!NOTE]
 >
 >* Om een gegevensstroom tot stand te brengen, moet u reeds een voor authentiek verklaarde rekening met een e-commercebron hebben. Een lijst van leerprogramma&#39;s voor het creëren van verschillende e-commercebronrekeningen in UI kan in het [ overzicht van bronnen ](../../../home.md#ecommerce) worden gevonden.
->* Voor Experience Platform om gegevens in te voeren, moeten de tijdzones voor alle op lijst-gebaseerde partijbronnen aan UTC worden gevormd.
+>* Experience Platform kan alleen gegevens invoeren als tijdzones voor alle batchbronnen op basis van tabellen zijn geconfigureerd voor UTC.
 
 ## Aan de slag
 
-Deze zelfstudie vereist een goed begrip van de volgende componenten van Platform:
+Deze zelfstudie vereist een goed begrip van de volgende onderdelen van Experience Platform:
 
-* [ Bronnen ](../../../home.md): Het platform staat gegevens toe om van diverse bronnen worden opgenomen terwijl het voorzien van u van de capaciteit om, inkomende gegevens te structureren te etiketteren en te verbeteren gebruikend [!DNL Platform] diensten.
-* [[!DNL Experience Data Model (XDM)]  Systeem ](../../../../xdm/home.md): Het gestandaardiseerde kader waardoor het Experience Platform gegevens van de klantenervaring organiseert.
+* [ Bronnen ](../../../home.md): Experience Platform staat gegevens toe om van diverse bronnen worden opgenomen terwijl het voorzien van u van de capaciteit om, inkomende gegevens te structureren te etiketteren en te verbeteren gebruikend [!DNL Experience Platform] diensten.
+* [[!DNL Experience Data Model (XDM)]  Systeem ](../../../../xdm/home.md): Het gestandaardiseerde kader waardoor Experience Platform gegevens van de klantenervaring organiseert.
    * [ Grondbeginselen van schemacompositie ](../../../../xdm/schema/composition.md): Leer over de basisbouwstenen van schema&#39;s XDM, met inbegrip van zeer belangrijke principes en beste praktijken in schemacompositie.
    * [ het leerprogramma van de Redacteur van het Schema ](../../../../xdm/tutorials/create-schema-ui.md): Leer hoe te om douaneschema&#39;s tot stand te brengen gebruikend de Redacteur UI van het Schema.
 * [[!DNL Real-Time Customer Profile]](../../../../profile/home.md): biedt een uniform, real-time consumentenprofiel dat is gebaseerd op geaggregeerde gegevens van meerdere bronnen.
@@ -85,7 +85,7 @@ Wanneer u klaar bent met het opgeven van details voor de gegevensstroom, selecte
 
 De stap [!UICONTROL Mapping] verschijnt, die u van een interface voorziet om de brongebieden van uw bronschema aan hun aangewezen doelXDM gebieden in het doelschema in kaart te brengen.
 
-Platform biedt intelligente aanbevelingen voor automatisch toegewezen velden op basis van het doelschema of de gegevensset die u hebt geselecteerd. U kunt toewijzingsregels handmatig aanpassen aan uw gebruiksgevallen. Op basis van uw behoeften kunt u ervoor kiezen om velden rechtstreeks toe te wijzen of gegevens prep-functies te gebruiken om brongegevens om berekende of berekende waarden af te leiden. Voor uitvoerige stappen bij het gebruiken van de kaartperinterface en berekende gebieden, zie de [ gids UI van de Prep van Gegevens ](../../../../data-prep/ui/mapping.md).
+Experience Platform biedt intelligente aanbevelingen voor automatisch toegewezen velden op basis van het doelschema of de gegevensset die u hebt geselecteerd. U kunt toewijzingsregels handmatig aanpassen aan uw gebruiksgevallen. Op basis van uw behoeften kunt u ervoor kiezen om velden rechtstreeks toe te wijzen of gegevens prep-functies te gebruiken om brongegevens om berekende of berekende waarden af te leiden. Voor uitvoerige stappen bij het gebruiken van de kaartperinterface en berekende gebieden, zie de [ gids UI van de Prep van Gegevens ](../../../../data-prep/ui/mapping.md).
 
 Selecteer **[!UICONTROL Next]** wanneer de brongegevens correct zijn toegewezen.
 
@@ -139,7 +139,7 @@ U kunt gegevensstromen verwijderen die niet meer nodig zijn of die onjuist zijn 
 
 ## Volgende stappen
 
-Door deze zelfstudie te volgen, hebt u met succes een gegevensstroom gecreeerd om gegevens van uw e-commercebron aan Platform te brengen. Binnenkomende gegevens kunnen nu worden gebruikt door [!DNL Platform] -services, zoals [!DNL Real-Time Customer Profile] en [!DNL Data Science Workspace] . Raadpleeg de volgende documenten voor meer informatie:
+Door deze zelfstudie te volgen, hebt u een gegevensstroom gemaakt om gegevens van uw e-commercebron naar Experience Platform te brengen. Binnenkomende gegevens kunnen nu worden gebruikt door [!DNL Experience Platform] -services, zoals [!DNL Real-Time Customer Profile] en [!DNL Data Science Workspace] . Raadpleeg de volgende documenten voor meer informatie:
 
 * [[!DNL Real-Time Customer Profile]-overzicht](../../../../profile/home.md)
 * [[!DNL Data Science Workspace]-overzicht](../../../../data-science-workspace/home.md)
@@ -147,7 +147,7 @@ Door deze zelfstudie te volgen, hebt u met succes een gegevensstroom gecreeerd o
 
 >[!WARNING]
 >
-> De interface van het Platform die in de volgende video wordt getoond is verouderd. Raadpleeg de bovenstaande documentatie voor de meest recente schermafbeeldingen en functionaliteit van de gebruikersinterface.
+> De gebruikersinterface van Experience Platform die in de volgende video wordt weergegeven, is verouderd. Raadpleeg de bovenstaande documentatie voor de meest recente schermafbeeldingen en functionaliteit van de gebruikersinterface.
 >
 >[!VIDEO](https://video.tv.adobe.com/v/29711?quality=12&learn=on)
 

@@ -2,14 +2,14 @@
 title: Salesforce verbinden met Experience Platform met behulp van de Flow Service API
 description: Leer hoe u Adobe Experience Platform verbindt met een Salesforce-account met behulp van de Flow Service API.
 exl-id: 43dd9ee5-4b87-4c8a-ac76-01b83c1226f6
-source-git-commit: 01f655df8679383f57d60796be5274acd9b5df68
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1077'
+source-wordcount: '1082'
 ht-degree: 0%
 
 ---
 
-# Verbind [!DNL Salesforce] met Experience Platform gebruikend [!DNL Flow Service] API
+# Verbinding maken met Experience Platform via de [!DNL Flow Service] API[!DNL Salesforce]
 
 Lees deze gids om te leren hoe u uw [!DNL Salesforce] bronrekening met Adobe Experience Platform kunt verbinden gebruikend [[!DNL Flow Service]  API ](https://developer.adobe.com/experience-platform-apis/references/flow-service/).
 
@@ -17,16 +17,16 @@ Lees deze gids om te leren hoe u uw [!DNL Salesforce] bronrekening met Adobe Exp
 
 Deze handleiding vereist een goed begrip van de volgende onderdelen van Adobe Experience Platform:
 
-* [ Bronnen ](../../../../home.md): [!DNL Experience Platform] staat gegevens toe om van diverse bronnen worden opgenomen terwijl het voorzien van u van de capaciteit om, inkomende gegevens te structureren te etiketteren en te verbeteren gebruikend [!DNL Platform] diensten.
-* [ Sandboxen ](../../../../../sandboxes/home.md): [!DNL Experience Platform] verstrekt virtuele zandbakken die één enkele [!DNL Platform] instantie in afzonderlijke virtuele milieu&#39;s verdelen helpen digitale ervaringstoepassingen ontwikkelen en ontwikkelen.
+* [ Bronnen ](../../../../home.md): [!DNL Experience Platform] staat gegevens toe om van diverse bronnen worden opgenomen terwijl het voorzien van u van de capaciteit om, inkomende gegevens te structureren te etiketteren en te verbeteren gebruikend [!DNL Experience Platform] diensten.
+* [ Sandboxen ](../../../../../sandboxes/home.md): [!DNL Experience Platform] verstrekt virtuele zandbakken die één enkele [!DNL Experience Platform] instantie in afzonderlijke virtuele milieu&#39;s verdelen helpen digitale ervaringstoepassingen ontwikkelen en ontwikkelen.
 
-### Platform-API&#39;s gebruiken
+### Experience Platform API&#39;s gebruiken
 
-Voor informatie over hoe te om vraag aan Platform APIs met succes te maken, zie de gids op [ begonnen wordt met Platform APIs ](../../../../../landing/api-guide.md).
+Voor informatie over hoe te om vraag aan Experience Platform APIs met succes te maken, zie de gids op [ begonnen wordt met Experience Platform APIs ](../../../../../landing/api-guide.md).
 
-## Verbinden [!DNL Salesforce] met Experience Platform op [!DNL Azure] {#azure}
+## Verbinding maken [!DNL Salesforce] met Experience Platform op [!DNL Azure] {#azure}
 
-Lees de onderstaande stappen voor informatie over hoe u de [!DNL Salesforce] -bron kunt verbinden met het Experience Platform op [!DNL Azure] .
+Lees de onderstaande stappen voor informatie over hoe u de [!DNL Salesforce] -bron kunt verbinden met Experience Platform op [!DNL Azure] .
 
 ### Vereiste referenties verzamelen
 
@@ -44,7 +44,7 @@ Als u uw [!DNL Salesforce] -account wilt verbinden met [!DNL Flow Service] via b
 | `username` | De gebruikersnaam voor de gebruikersaccount van [!DNL Salesforce] . |
 | `password` | Het wachtwoord voor de [!DNL Salesforce] -gebruikersaccount. |
 | `securityToken` | Het beveiligingstoken voor de gebruikersaccount van [!DNL Salesforce] . |
-| `apiVersion` | (Optioneel) De REST API-versie van de instantie [!DNL Salesforce] die u gebruikt. De waarde voor de API-versie moet met een decimaal worden opgemaakt. Als u bijvoorbeeld API-versie `52` gebruikt, moet u de waarde invoeren als `52.0` . Als dit veld niet wordt ingevuld, gebruikt het Experience Platform automatisch de meest recente beschikbare versie. |
+| `apiVersion` | (Optioneel) De REST API-versie van de instantie [!DNL Salesforce] die u gebruikt. De waarde voor de API-versie moet met een decimaal worden opgemaakt. Als u bijvoorbeeld API-versie `52` gebruikt, moet u de waarde invoeren als `52.0` . Als dit veld niet wordt ingevuld, gebruikt Experience Platform automatisch de meest recente beschikbare versie. |
 | `connectionSpec.id` | De verbindingsspecificatie keert de schakelaareigenschappen van een bron, met inbegrip van authentificatiespecificaties met betrekking tot het creëren van de basis en bronverbindingen terug. De verbindingsspecificatie-id voor [!DNL Salesforce] is: `cfc0fee1-7dc0-40ef-b73e-d8b134c436f5` . |
 
 Voor meer informatie bij begonnen worden, bezoek [ dit document van Salesforce ](https://developer.salesforce.com/docs/atlas.en-us.api_rest.meta/api_rest/intro_understanding_authentication.htm).
@@ -58,7 +58,7 @@ Als u uw [!DNL Salesforce] -account wilt verbinden met [!DNL Flow Service] via O
 | `environmentUrl` | De URL van de broninstantie [!DNL Salesforce] . De notatie voor `environmentUrl` is `https://[domain].my.salesforce.com` |
 | `clientId` | De client-id wordt gebruikt in combinatie met het clientgeheim als onderdeel van OAuth2-verificatie. Met de client-id en het clientgeheim kan uw toepassing samen namens uw account werken door uw toepassing aan te duiden op [!DNL Salesforce] . |
 | `clientSecret` | Het clientgeheim wordt gebruikt in combinatie met de client-id als onderdeel van OAuth2-verificatie. Met de client-id en het clientgeheim kan uw toepassing samen namens uw account werken door uw toepassing aan te duiden op [!DNL Salesforce] . |
-| `apiVersion` | De REST API-versie van de instantie [!DNL Salesforce] die u gebruikt. De waarde voor de API-versie moet met een decimaal worden opgemaakt. Als u bijvoorbeeld API-versie `52` gebruikt, moet u de waarde invoeren als `52.0` . Als dit veld niet wordt ingevuld, gebruikt het Experience Platform automatisch de meest recente beschikbare versie. Deze waarde is verplicht voor OAuth2 Client Credential-verificatie. |
+| `apiVersion` | De REST API-versie van de instantie [!DNL Salesforce] die u gebruikt. De waarde voor de API-versie moet met een decimaal worden opgemaakt. Als u bijvoorbeeld API-versie `52` gebruikt, moet u de waarde invoeren als `52.0` . Als dit veld niet wordt ingevuld, gebruikt Experience Platform automatisch de meest recente beschikbare versie. Deze waarde is verplicht voor OAuth2 Client Credential-verificatie. |
 | `connectionSpec.id` | De verbindingsspecificatie keert de schakelaareigenschappen van een bron, met inbegrip van authentificatiespecificaties met betrekking tot het creëren van de basis en bronverbindingen terug. De verbindingsspecificatie-id voor [!DNL Salesforce] is: `cfc0fee1-7dc0-40ef-b73e-d8b134c436f5` . |
 
 Voor meer informatie bij het gebruiken van OAuth voor [!DNL Salesforce], lees de [[!DNL Salesforce]  gids over de Stroom van de Vergunning OAuth ](https://help.salesforce.com/s/articleView?id=sf.remoteaccess_oauth_flows.htm&amp;type=5).
@@ -67,9 +67,9 @@ Voor meer informatie bij het gebruiken van OAuth voor [!DNL Salesforce], lees de
 
 ### Een basisverbinding maken voor [!DNL Salesforce] in Experience Platform op [!DNL Azure]
 
-Een basisverbinding behoudt informatie tussen uw bron en Platform, met inbegrip van de de authentificatiegeloofsbrieven van uw bron, de huidige staat van de verbinding, en uw unieke identiteitskaart van de basisverbinding. Met de ID van de basisverbinding kunt u bestanden verkennen en door bestanden navigeren vanuit uw bron en kunt u de specifieke items identificeren die u wilt opnemen, inclusief informatie over hun gegevenstypen en indelingen.
+Een basisverbinding behoudt informatie tussen uw bron en Experience Platform, met inbegrip van de verificatiereferenties van uw bron, de huidige status van de verbinding, en uw unieke identiteitskaart van de basisverbinding. Met de ID van de basisverbinding kunt u bestanden verkennen en door bestanden navigeren vanuit uw bron en kunt u de specifieke items identificeren die u wilt opnemen, inclusief informatie over hun gegevenstypen en indelingen.
 
-Als u een basisverbinding wilt maken en uw [!DNL Salesforce] -account wilt verbinden met een Experience Platform op [!DNL Azure] , vraagt u een POST naar het `/connections` -eindpunt en geeft u de [!DNL Salesforce] verificatiegegevens op in de aanvraaginstantie.
+Als u een basisverbinding wilt maken en uw [!DNL Salesforce] -account op [!DNL Azure] wilt verbinden met Experience Platform, dient u een POST-aanvraag in bij het `/connections` -eindpunt en geeft u de [!DNL Salesforce] verificatiereferenties op in de hoofdtekst van de aanvraag.
 
 **API formaat**
 
@@ -198,9 +198,9 @@ Een geslaagde reactie retourneert de nieuwe basisverbinding samen met de unieke 
 
 >[!AVAILABILITY]
 >
->Deze sectie is van toepassing op implementaties van Experience Platform dat op Amazon Web Services (AWS) loopt. Experience Platform dat op AWS wordt uitgevoerd, is momenteel beschikbaar voor een beperkt aantal klanten. Meer over de gesteunde infrastructuur van het Experience Platform leren, zie het [ Experience Platform multi-cloud overzicht ](../../../../../landing/multi-cloud.md).
+>Deze sectie is van toepassing op implementaties van Experience Platform die op Amazon Web Services (AWS) worden uitgevoerd. Experience Platform die op AWS wordt uitgevoerd, is momenteel beschikbaar voor een beperkt aantal klanten. Meer over de gesteunde infrastructuur van Experience Platform leren, zie het [ multi-wolkenoverzicht van Experience Platform ](../../../../../landing/multi-cloud.md).
 
-Lees de onderstaande stappen voor informatie over hoe u de [!DNL Salesforce] -bron kunt verbinden met het Experience Platform op AWS.
+Lees de onderstaande stappen voor informatie over hoe u uw [!DNL Salesforce] -bron kunt verbinden met Experience Platform op AWS.
 
 ### Vereisten
 
@@ -208,7 +208,7 @@ Voor informatie over hoe te opstelling uw [!DNL Salesforce] rekening om met Expe
 
 ### Een basisverbinding maken voor [!DNL Salesforce] op Experience Platform op AWS
 
-Als u een basisverbinding wilt maken en uw [!DNL Salesforce] -account wilt verbinden met het Experience Platform op AWS, dient u een verzoek in bij de POST naar het `/connections` -eindpunt en geeft u de juiste waarden voor uw referenties op.
+Als u een basisverbinding wilt maken en uw [!DNL Salesforce] -account wilt verbinden met Experience Platform op AWS, dient u een POST-aanvraag in bij het `/connections` -eindpunt en geeft u de juiste waarden voor uw referenties op.
 
 **API formaat**
 
@@ -269,7 +269,7 @@ Een geslaagde reactie retourneert de nieuwe basisverbinding samen met de unieke 
 
 ### De verbindingsstatus controleren
 
-Om uw verbindingsstatus te verifiëren, doe een verzoek van de GET aan het `/connections` eindpunt en verstrek identiteitskaart van de basisverbinding die in de aanmaakstap werd geproduceerd.
+Om uw verbindingsstatus te verifiëren, dient u een GET-verzoek in bij het `/connections` -eindpunt en verstrekt u de id van de basisverbinding die in de aanmaakstap is gegenereerd.
 
 **API formaat**
 
@@ -394,4 +394,4 @@ In het volgende antwoord wordt informatie weergegeven voor de basis-verbindings-
 Aan de hand van deze zelfstudie hebt u een [!DNL Salesforce] basisverbinding gemaakt met de [!DNL Flow Service] API. U kunt deze basis verbindings-id in de volgende zelfstudies gebruiken:
 
 * [Onderzoek de structuur en de inhoud van uw gegevenslijsten gebruikend  [!DNL Flow Service]  API](../../explore/tabular.md)
-* [Creeer een dataflow om de gegevens van CRM aan Platform te brengen gebruikend  [!DNL Flow Service]  API](../../collect/crm.md)
+* [Creeer een dataflow om de gegevens van CRM aan Experience Platform te brengen gebruikend  [!DNL Flow Service]  API](../../collect/crm.md)

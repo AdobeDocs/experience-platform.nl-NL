@@ -3,10 +3,10 @@ keywords: cloudopslag;cloudopslag
 title: Overzicht van Cloud Storage-bestemmingen
 description: Adobe Experience Platform kan uw publiek als gegevensbestanden leveren aan uw Amazon S3-, AWS Kinesis-, Azure Event Hubs- of SFTP-cloudopslaglocaties.
 exl-id: d29f0a6e-b323-4f78-bbd0-dee2f1e0fedb
-source-git-commit: 2e21e62de624c5e7e9fac4d36dbf41b46198062a
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '463'
-ht-degree: 0%
+source-wordcount: '464'
+ht-degree: 1%
 
 ---
 
@@ -14,9 +14,9 @@ ht-degree: 0%
 
 ## Overzicht {#overview}
 
-Adobe Experience Platform kan uw publiek als gegevensbestanden leveren aan uw opslaglocaties in de cloud. Hierdoor kunt u soorten publiek en hun profielkenmerken naar uw interne systemen verzenden via CSV-bestanden voor [!DNL Amazon S3], [!DNL Azure Blob], [!DNL Azure Data Lake Storage Gen2], [!DNL Data Landing Zone], [!DNL Google Cloud Storage] en SFTP. Voor [!DNL Amazon Kinesis] - en [!DNL Azure Event Hubs] -doelen worden gegevens vanuit het Experience Platform gestreamd in [!DNL JSON] -indeling.
+Adobe Experience Platform kan uw publiek als gegevensbestanden leveren aan uw opslaglocaties in de cloud. Hierdoor kunt u soorten publiek en hun profielkenmerken naar uw interne systemen verzenden via CSV-bestanden voor [!DNL Amazon S3], [!DNL Azure Blob], [!DNL Azure Data Lake Storage Gen2], [!DNL Data Landing Zone], [!DNL Google Cloud Storage] en SFTP. Voor [!DNL Amazon Kinesis] - en [!DNL Azure Event Hubs] -doelen worden gegevens in [!DNL JSON] -indeling uit Experience Platform gestreamd.
 
-![ de bestemmingen van de de wolkenopslag van de Adobe ](../../assets/catalog/cloud-storage/cloud-storage-destinations.png)
+![ de bestemmingen van de wolkenopslag van Adobe ](../../assets/catalog/cloud-storage/cloud-storage-destinations.png)
 
 ## Ondersteunde cloudopslagbestemmingen {#supported-destinations}
 
@@ -33,7 +33,7 @@ Adobe Experience Platform ondersteunt gegevensexport naar de volgende cloudopsla
 
 ## Verbinding maken met een nieuwe bestemming voor cloudopslag {#connect-destination}
 
-Als u een publiek naar de opslaglocatie van de cloud voor uw campagnes wilt sturen, moet Platform eerst verbinding maken met de bestemming. Zie het [ leerprogramma van de bestemmingsverwezenlijking ](../../ui/connect-destination.md) voor gedetailleerde informatie bij vestiging een nieuwe bestemming.
+Experience Platform moet eerst verbinding maken met het doel om het publiek voor uw campagnes naar cloudopslagbestemmingen te sturen. Zie het [ leerprogramma van de bestemmingsverwezenlijking ](../../ui/connect-destination.md) voor gedetailleerde informatie bij vestiging een nieuwe bestemming.
 
 
 ## Macro&#39;s gebruiken om een map te maken op uw opslaglocatie {#use-macros}
@@ -74,7 +74,7 @@ Net als in de bovenstaande voorbeelden kunt u aanvullende macro&#39;s gebruiken 
 
 De opslagbestemmingen van de wolk steunen de volgende uitvoertypes:
 * **op profiel-gebaseerde uitvoer**. Dit betekent dat u details exporteert over de personen in het publiek. Deze details zijn nodig voor verpersoonlijking en kunnen attributen, gebeurtenissen, publiekslidmaatschappen, en meer omvatten.
-* **de uitvoer van de Dataset**. Deze functionaliteit staat u toe om volledige datasets naar de bestemmingen van de wolkenopslag uit te voeren. [ las meer ](/help/destinations/ui/export-datasets.md) over de functionaliteit.
+* **de uitvoer van de Dataset**. Deze functionaliteit staat u toe om volledige datasets naar de bestemmingen van de wolkenopslag uit te voeren. [Lees meer](/help/destinations/ui/export-datasets.md) over de nieuwe functionaliteit.
 
 ## Volgende stappen {#next-steps}
 

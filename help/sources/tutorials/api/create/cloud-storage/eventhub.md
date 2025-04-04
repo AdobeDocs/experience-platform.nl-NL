@@ -1,11 +1,11 @@
 ---
 title: Een Azure Event Hubs Source Connection maken met de Flow Service API
 description: Leer hoe u Adobe Experience Platform verbindt met een Azure Event Hubs-account met behulp van de Flow Service API.
-badgeUltimate: label="Ultieme" type="Positive"
+badgeUltimate: label="Ultimate" type="Positive"
 exl-id: a4d0662d-06e3-44f3-8cb7-4a829c44f4d9
-source-git-commit: 1256f0c76b29edad4808fc4be1d61399bfbae8fa
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1492'
+source-wordcount: '1496'
 ht-degree: 0%
 
 ---
@@ -14,18 +14,18 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
->De [!DNL Azure Event Hubs] -bron is in de broncatalogus beschikbaar voor gebruikers die Real-time Customer Data Platform Ultimate hebben aangeschaft.
+>De [!DNL Azure Event Hubs] -bron is in de broncatalogus beschikbaar voor gebruikers die Real-Time Customer Data Platform Ultimate hebben aangeschaft.
 
-Lees dit leerprogramma leren hoe te om [!DNL Azure Event Hubs] (verder te verbinden die als &quot; [!DNL Event Hubs]&quot;) aan Experience Platform wordt bedoeld, gebruikend [[!DNL Flow Service]  API ](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+Lees deze zelfstudie om te leren hoe te om [!DNL Azure Event Hubs] (verder als &quot;[!DNL Event Hubs]&quot;worden doorverwezen) met Experience Platform te verbinden, gebruikend [[!DNL Flow Service]  API ](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
 ## Aan de slag
 
 Deze handleiding vereist een goed begrip van de volgende onderdelen van Adobe Experience Platform:
 
-- [ Bronnen ](../../../../home.md): [!DNL Experience Platform] staat gegevens toe om van diverse bronnen worden opgenomen terwijl het voorzien van u van de capaciteit om, inkomende gegevens te structureren te etiketteren en te verbeteren gebruikend [!DNL Platform] diensten.
-- [ Sandboxen ](../../../../../sandboxes/home.md): [!DNL Experience Platform] verstrekt virtuele zandbakken die één enkele [!DNL Platform] instantie in afzonderlijke virtuele milieu&#39;s verdelen helpen digitale ervaringstoepassingen ontwikkelen en ontwikkelen.
+- [ Bronnen ](../../../../home.md): [!DNL Experience Platform] staat gegevens toe om van diverse bronnen worden opgenomen terwijl het voorzien van u van de capaciteit om, inkomende gegevens te structureren te etiketteren en te verbeteren gebruikend [!DNL Experience Platform] diensten.
+- [ Sandboxen ](../../../../../sandboxes/home.md): [!DNL Experience Platform] verstrekt virtuele zandbakken die één enkele [!DNL Experience Platform] instantie in afzonderlijke virtuele milieu&#39;s verdelen helpen digitale ervaringstoepassingen ontwikkelen en ontwikkelen.
 
-In de volgende secties vindt u aanvullende informatie die u nodig hebt om [!DNL Event Hubs] met de API van [!DNL Flow Service] te kunnen verbinden met Platform.
+In de volgende secties vindt u aanvullende informatie die u moet weten voordat u [!DNL Event Hubs] met de API van [!DNL Flow Service] kunt verbinden met Experience Platform.
 
 ### Vereiste referenties verzamelen
 
@@ -79,9 +79,9 @@ Voor meer informatie over [!DNL Azure Active Directory], lees de [ Azure gids bi
 
 Voor meer informatie over deze waarden, verwijs naar [ dit document van de Hubs van deze Gebeurtenis ](https://docs.microsoft.com/en-us/azure/event-hubs/authenticate-shared-access-signature).
 
-### Platform-API&#39;s gebruiken
+### Experience Platform API&#39;s gebruiken
 
-Voor informatie over hoe te om vraag aan Platform APIs met succes te maken, zie de gids op [ begonnen wordt met Platform APIs ](../../../../../landing/api-guide.md).
+Voor informatie over hoe te om vraag aan Experience Platform APIs met succes te maken, zie de gids op [ begonnen wordt met Experience Platform APIs ](../../../../../landing/api-guide.md).
 
 ## Een basisverbinding maken
 
@@ -91,7 +91,7 @@ Voor informatie over hoe te om vraag aan Platform APIs met succes te maken, zie 
 
 De eerste stap bij het maken van een bronverbinding is het verifiëren van de [!DNL Event Hubs] -bron en het genereren van een basis-verbindings-id. Met een basis-verbindings-id kunt u bestanden verkennen en door de bestanden navigeren vanuit de bron en specifieke items identificeren die u wilt invoeren, zoals informatie over de gegevenstypen en indelingen.
 
-Als u een basis-verbindings-id wilt maken, vraagt u een POST naar het `/connections` -eindpunt en geeft u de [!DNL Event Hubs] -verificatiegegevens op als onderdeel van de aanvraagparameters.
+Als u een basis-verbindings-id wilt maken, vraagt u een POST-aanvraag naar het `/connections` -eindpunt en geeft u de [!DNL Event Hubs] -verificatiegegevens op als onderdeel van de aanvraagparameters.
 
 **API formaat**
 
@@ -103,7 +103,7 @@ POST /connections
 
 >[!TAB  Standaard authentificatie ]
 
-Als u een account wilt maken met behulp van standaardverificatie, vraagt u een POST naar het `/connections` -eindpunt en geeft u waarden op voor de `sasKeyName` , `sasKey` en `namespace` .
+Als u een account wilt maken met standaardverificatie, vraagt u een POST-aanvraag naar het eindpunt van `/connections` en geeft u de waarden voor de `sasKeyName` , `sasKey` en `namespace` .
 
 +++verzoek
 
@@ -157,7 +157,7 @@ Een succesvolle reactie keert details van de pas gecreëerde basisverbinding, me
 
 >[!TAB  SAS authentificatie ]
 
-Als u een account wilt maken met behulp van SAS-verificatie, vraagt u een POST naar het `/connections` -eindpunt en geeft u waarden op voor de `sasKeyName` , `sasKey` , `namespace` en `eventHubName` .
+Als u een account wilt maken met behulp van SAS-verificatie, vraagt u een POST-aanvraag naar het `/connections` -eindpunt en geeft u waarden op voor uw `sasKeyName` , `sasKey` , `namespace` en `eventHubName` .
 
 +++verzoek
 
@@ -213,7 +213,7 @@ Een succesvolle reactie keert details van de pas gecreëerde basisverbinding, me
 
 >[!TAB  Hub van de Gebeurtenis Azure Actieve Auth van de Folder ]
 
-Als u een account wilt maken met Azure Active Directory Auth, vraagt u een POST naar het `/connections` -eindpunt terwijl u waarden opgeeft voor uw `tenantId` , `clientId` , `clientSecretValue` en `namespace` .
+Als u een account wilt maken met Azure Active Directory Auth, vraagt u een POST-aanvraag naar het `/connections` -eindpunt en geeft u waarden op voor de `tenantId` , `clientId` , `clientSecretValue` en `namespace` .
 
 +++verzoek
 
@@ -269,7 +269,7 @@ Een succesvolle reactie keert details van de pas gecreëerde basisverbinding, me
 
 >[!TAB  Hub Scoped Azure Actieve Auth van de Folder van de Gebeurtenis ]
 
-Als u een account wilt maken met Azure Active Directory Auth, vraagt u een POST naar het `/connections` -eindpunt en geeft u waarden op voor uw `tenantId` , `clientId` , `clientSecretValue` , `namespace` en `eventHubName` .
+Als u een account wilt maken met Azure Active Directory Auth, vraagt u een POST-aanvraag naar het eindpunt van `/connections` en geeft u waarden op voor uw `tenantId` , `clientId` , `clientSecretValue` , `namespace` en `eventHubName` .
 
 +++verzoek
 
@@ -335,7 +335,7 @@ Een succesvolle reactie keert details van de pas gecreëerde basisverbinding, me
 
 Een bronverbinding maakt en beheert de verbinding met de externe bron vanwaar gegevens worden ingevoerd. Een bronverbinding bestaat uit informatie zoals gegevensbron, gegevensformaat, en een identiteitskaart van de bronverbinding nodig om een gegevensstroom tot stand te brengen. Een bronverbindingsinstantie is specifiek voor een huurder en organisatie.
 
-Als u een bronverbinding wilt maken, vraagt u een POST naar het `/sourceConnections` -eindpunt van de [!DNL Flow Service] API.
+Als u een bronverbinding wilt maken, vraagt u een POST-aanvraag naar het `/sourceConnections` -eindpunt van de [!DNL Flow Service] API.
 
 **API formaat**
 

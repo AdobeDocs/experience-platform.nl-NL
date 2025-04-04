@@ -1,34 +1,34 @@
 ---
-title: Gegevens met toestemming van de klant verwerken met de Adobe Experience Platform Web SDK
-description: Leer hoe u de SDK van Adobe Experience Platform Web integreert om gegevens over toestemming van klanten te verwerken in Adobe Experience Platform.
+title: Gegevens met toestemming van de klant verwerken met Adobe Experience Platform Web SDK
+description: Leer hoe u de Adobe Experience Platform Web SDK integreert om gegevens over klanttoestemming in Adobe Experience Platform te verwerken.
 role: Developer
 feature: Consent, Web SDK
 exl-id: 3a53d908-fc61-452b-bec3-af519dfefa41
-source-git-commit: bf651967714745a0b501dcb27373379fe014c9e1
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1282'
+source-wordcount: '1293'
 ht-degree: 0%
 
 ---
 
-# Integreer het Web SDK van het Platform om de gegevens van de klanteninstemming te verwerken
+# Integreer de Experience Platform Web SDK om gegevens over toestemming van klanten te verwerken
 
-Met de Adobe Experience Platform Web SDK kunt u de door CMP&#39;s (Consent Management Platforms) gegenereerde toestemmingssignalen van klanten ophalen en deze naar Adobe Experience Platform verzenden wanneer er zich een gebeurtenis voordoet waarbij toestemming wordt gewijzigd.
+Met de Adobe Experience Platform Web SDK kunt u de door CMP&#39;s (Consent Management Platforms) gegenereerde toestemmingssignalen van klanten ophalen en deze naar Adobe Experience Platform verzenden wanneer er een gebeurtenis plaatsvindt die aanleiding geeft tot wijziging van de toestemming.
 
-**SDK interface niet met om het even welke CMPs uit de doos**. Het is aan u om te bepalen hoe te om SDK in uw website te integreren, naar toestemmingsveranderingen in CMP te luisteren, en het aangewezen bevel te roepen. Dit document biedt algemene richtlijnen voor het integreren van uw CMP met de Platform Web SDK.
+**SDK interface niet met om het even welke CMPs uit de doos**. Het is aan u om te bepalen hoe te om de SDK in uw website te integreren, naar toestemmingsveranderingen in CMP te luisteren, en het aangewezen bevel te roepen. Dit document biedt algemene richtlijnen voor het integreren van uw CMP met de Experience Platform Web SDK.
 
 ## Vereisten {#prerequisites}
 
-In deze zelfstudie wordt ervan uitgegaan dat u al hebt bepaald hoe u gegevens over Adobe binnen uw CMP kunt genereren en dat u een gegevensset hebt gemaakt die machtigingsvelden bevat die voldoen aan de standaard voor transparantie en instemming van IAB (TCF) 2.0. Als u deze dataset nog niet hebt gecreeerd, verwijs naar de volgende leerprogramma&#39;s alvorens aan deze gids terug te keren:
+In deze zelfstudie wordt ervan uitgegaan dat u al hebt bepaald hoe u gegevens over toestemming binnen uw CMP kunt genereren en dat u een gegevensset hebt gemaakt die machtigingsvelden bevat die voldoen aan de Adobe-standaard of de TCF 2.0-standaard (IAB Transparency and Consent Framework). Als u deze dataset nog niet hebt gecreeerd, verwijs naar de volgende leerprogramma&#39;s alvorens aan deze gids terug te keren:
 
-* [Een gegevensset maken met de standaard Adobe](./adobe/dataset.md)
+* [Een gegevensset maken met de Adobe-standaard](./adobe/dataset.md)
 * [Creeer een dataset gebruikend de norm TCF 2.0](./iab/dataset.md)
 
-Deze handleiding volgt de workflow voor het instellen van de SDK met de tagextensie in de gebruikersinterface. Raadpleeg de volgende documenten in plaats van deze handleiding als u de extensie niet wilt gebruiken en de zelfstandige versie van de SDK rechtstreeks op uw site wilt insluiten:
+Deze handleiding volgt de workflow voor het instellen van de SDK met de tagextensie in de gebruikersinterface. Raadpleeg de volgende documenten in plaats van deze handleiding als u de extensie niet wilt gebruiken en de zelfstandige versie van de SDK liever rechtstreeks op uw site wilt insluiten:
 
 * [Een gegevensstroom configureren](/help/datastreams/overview.md)
 * [De SDK installeren](/help/web-sdk/install/overview.md)
-* [De SDK configureren voor toestemmingsopdrachten](/help/web-sdk/commands/configure/defaultconsent.md)
+* [SDK configureren voor toestemmingsopdrachten](/help/web-sdk/commands/configure/defaultconsent.md)
 
 De installatiestappen in deze handleiding vereisen een goed begrip van de uitbreidingen van tags en hoe deze in webtoepassingen worden geïnstalleerd. Raadpleeg de volgende documentatie voor meer informatie:
 
@@ -38,7 +38,7 @@ De installatiestappen in deze handleiding vereisen een goed begrip van de uitbre
 
 ## Een gegevensstroom instellen
 
-SDK kan alleen gegevens naar Experience Platform verzenden als u eerst een gegevensstroom configureert. Selecteer **[!UICONTROL Datastreams]** in de linkernavigatie in de gebruikersinterface voor gegevensverzameling of de gebruikersinterface van het Experience Platform.
+Als de SDK gegevens naar Experience Platform moet verzenden, moet u eerst een gegevensstroom configureren. Selecteer **[!UICONTROL Datastreams]** in de linkernavigatie in de gebruikersinterface voor gegevensverzameling of de gebruikersinterface van Experience Platform.
 
 Nadat u een nieuwe gegevensstroom hebt gemaakt of een bestaande gegevensstroom hebt geselecteerd om te bewerken, selecteert u de schakelknop naast **[!UICONTROL Adobe Experience Platform]** . Gebruik vervolgens de hieronder vermelde waarden om het formulier in te vullen.
 
@@ -46,15 +46,15 @@ Nadat u een nieuwe gegevensstroom hebt gemaakt of een bestaande gegevensstroom h
 
 | Veld DataStream | Waarde |
 | --- | --- |
-| [!UICONTROL Sandbox] | De naam van de zandbak van het Platform [ ](../../../sandboxes/home.md) die de vereiste het stromen verbinding en datasets aan opstelling de datastream bevat. |
-| [!UICONTROL Event Dataset] | Een [!DNL XDM ExperienceEvent] dataset die u van plan bent om gebeurtenisgegevens naar het gebruiken van SDK te verzenden. Terwijl u een gebeurtenissendataset moet verstrekken om een gegevensstroom van het Platform tot stand te brengen, gelieve te merken dat de toestemmingsgegevens die via gebeurtenissen worden verzonden niet in stroomafwaartse handhavingswerkschema&#39;s worden nageleefd. |
+| [!UICONTROL Sandbox] | De naam van de zandbak van Experience Platform [ ](../../../sandboxes/home.md) die de vereiste het stromen verbinding en datasets aan opstelling bevat de datastream. |
+| [!UICONTROL Event Dataset] | Een [!DNL XDM ExperienceEvent] dataset die u van plan bent om gebeurtenisgegevens naar het gebruiken van SDK te verzenden. Hoewel u een gebeurtenissendataset moet verstrekken om een Experience Platform datastream te creëren, gelieve te merken dat toestemmingsgegevens die via gebeurtenissen worden verzonden niet in stroomafwaartse handhavingswerkschema&#39;s worden nageleefd. |
 | [!UICONTROL Profile Dataset] | [!DNL Profile] - toegelaten dataset met de gebieden van de klantentoestemming die u [ ](#prerequisites) creeerde. |
 
 Als u klaar bent, selecteert u **[!UICONTROL Save]** onder aan het scherm en gaat u verder met het volgen van eventuele extra aanwijzingen om de configuratie te voltooien.
 
-## De Platform Web SDK installeren en configureren
+## Experience Platform Web SDK installeren en configureren
 
-Zodra u een gegevensstroom zoals die in de vorige sectie wordt beschreven hebt gecreeerd, moet u de uitbreiding van SDK van het Web van het Platform dan vormen die u uiteindelijk op uw plaats zult opstellen. Als de SDK-extensie niet op de eigenschap tag is geïnstalleerd, selecteert u **[!UICONTROL Extensions]** in de linkernavigatie, gevolgd door de tab **[!UICONTROL Catalog]** . Selecteer vervolgens **[!UICONTROL Install]** onder de extensie Platform SDK in de lijst met beschikbare extensies.
+Zodra u een gegevensstroom zoals die in de vorige sectie wordt beschreven hebt gecreeerd, moet u dan de uitbreiding vormen van Experience Platform Web SDK die u uiteindelijk op uw plaats zult opstellen. Als u de extensie SDK niet op de eigenschap tag hebt geïnstalleerd, selecteert u **[!UICONTROL Extensions]** in de linkernavigatie, gevolgd door de tab **[!UICONTROL Catalog]** . Selecteer vervolgens **[!UICONTROL Install]** onder de extensie Experience Platform SDK in de lijst met beschikbare extensies.
 
 ![](../../images/governance-privacy-security/consent/adobe/sdk/install.png)
 
@@ -66,7 +66,7 @@ Selecteer **[!UICONTROL Save]** om de extensie te installeren.
 
 ### Een gegevenselement maken om de standaardtoestemming in te stellen
 
-Met de geïnstalleerde uitbreiding SDK, hebt u de optie om een gegevenselement tot stand te brengen om de waarde van de standaard gegevensinzamelingstoestemming (`collect.val`) voor uw gebruikers te vertegenwoordigen. Dit kan handig zijn als u verschillende standaardwaarden wilt hebben, afhankelijk van de gebruiker, zoals `pending` voor gebruikers in de Europese Unie en `in` voor gebruikers in Noord-Amerika.
+Als de extensie SDK is geïnstalleerd, kunt u een gegevenselement maken dat de waarde voor de standaardtoestemming voor gegevensverzameling (`collect.val`) voor uw gebruikers vertegenwoordigt. Dit kan handig zijn als u verschillende standaardwaarden wilt hebben, afhankelijk van de gebruiker, zoals `pending` voor gebruikers in de Europese Unie en `in` voor gebruikers in Noord-Amerika.
 
 In dit geval kunt u het volgende implementeren om standaardtoestemming in te stellen op basis van het gebied van de gebruiker:
 
@@ -86,7 +86,7 @@ Van hieruit moet u een [!UICONTROL JavaScript Variable] data-element maken op ba
 
 ![](../../images/governance-privacy-security/consent/adobe/sdk/data-element.png)
 
-Zodra het gegevenselement wordt gecreeerd, navigeer terug naar de de uitbreidingsconfig-pagina van SDK van het Web. Selecteer onder de sectie [!UICONTROL Privacy] de optie **[!UICONTROL Provided by data element]** en gebruik het dialoogvenster dat verschijnt om het gegevenselement met standaardtoestemmingen te selecteren dat u eerder hebt gemaakt.
+Zodra het gegevenselement wordt gecreeerd, navigeer terug naar de de uitbreidingsconfig van SDK van het Web pagina. Selecteer onder de sectie [!UICONTROL Privacy] de optie **[!UICONTROL Provided by data element]** en gebruik het dialoogvenster dat verschijnt om het gegevenselement met standaardtoestemmingen te selecteren dat u eerder hebt gemaakt.
 
 ![](../../images/governance-privacy-security/consent/adobe/sdk/default-consent.png)
 
@@ -96,7 +96,7 @@ Nadat u de extensie hebt geconfigureerd, kunt u deze integreren in uw website. V
 
 ## Opdrachten voor wijzigen van toestemming maken {#commands}
 
-Nadat u de SDK-extensie hebt geïntegreerd in uw website, kunt u de opdracht Platform Web SDK `setConsent` gebruiken om gegevens met toestemming naar Platform te verzenden.
+Als u de SDK-extensie eenmaal in uw website hebt geïntegreerd, kunt u de Experience Platform Web SDK `setConsent` -opdracht gebruiken om gegevens met toestemming naar Experience Platform te verzenden.
 
 De opdracht `setConsent` voert twee handelingen uit:
 
@@ -112,9 +112,9 @@ Er zijn twee situaties waarin `setConsent` op uw site moet worden aangeroepen:
 
 ### `setConsent` syntaxis
 
-De opdracht [`setConsent`](/help/web-sdk/commands/setconsent.md) verwacht een payload-object dat een enkele array-type eigenschap bevat: `consent` . De array `consent` moet ten minste één object bevatten dat de vereiste toestemmingsvelden voor de standaard Adobe bevat.
+De opdracht [`setConsent`](/help/web-sdk/commands/setconsent.md) verwacht een payload-object dat een enkele array-type eigenschap bevat: `consent` . De array `consent` moet ten minste één object bevatten dat de vereiste toestemmingsvelden voor de Adobe-standaard bevat.
 
-De vereiste toestemmingsgebieden voor de norm van de Adobe worden getoond in het volgende voorbeeld `setConsent` vraag:
+De vereiste toestemmingsgebieden voor de norm van Adobe worden getoond in het volgende voorbeeld `setConsent` vraag:
 
 ```js
 alloy("setConsent", {
@@ -143,8 +143,8 @@ alloy("setConsent", {
 
 | Payload, eigenschap | Beschrijving |
 | --- | --- |
-| `standard` | De gebruikte toestemmingsnorm. Voor de standaard Adobe moet deze waarde worden ingesteld op `Adobe` . |
-| `version` | Het versienummer van de toestemmingsnorm die onder `standard` wordt vermeld. Deze waarde moet worden ingesteld op `2.0` voor verwerking van toestemming volgens de Adobe. |
+| `standard` | De gebruikte toestemmingsnorm. Voor de Adobe-standaard moet deze waarde worden ingesteld op `Adobe` . |
+| `version` | Het versienummer van de toestemmingsnorm die onder `standard` wordt vermeld. Deze waarde moet worden ingesteld op `2.0` voor verwerking van toestemming volgens de Adobe-standaard. |
 | `value` | De bijgewerkte toestemmingsinformatie van de klant, die als voorwerp XDM wordt verstrekt die aan de structuur van de profiel-Toegelaten de toestemmingsgebieden van de dataset in overeenstemming is. |
 
 >[!NOTE]
@@ -182,7 +182,7 @@ var setConsent = function () {
     }
   };
 
-  // Pass the XDM object to the Platform Web SDK
+  // Pass the XDM object to the Experience Platform Web SDK
   alloy("setConsent", {
     consent: [{
       standard: "Adobe",
@@ -193,15 +193,15 @@ var setConsent = function () {
 });
 ```
 
-## Reacties in SDK verwerken
+## SDK-reacties verwerken
 
-Alle [!DNL Platform SDK] opdrachten retourneren beloftes die aangeven of de aanroep is geslaagd of mislukt. U kunt deze reacties vervolgens gebruiken voor extra logica, zoals het weergeven van bevestigingsberichten aan de klant. Zie [ reacties van het Bevel ](/help/web-sdk/commands/command-responses.md) voor meer informatie.
+Alle [!DNL Experience Platform SDK] opdrachten retourneren beloftes die aangeven of de aanroep is geslaagd of mislukt. U kunt deze reacties vervolgens gebruiken voor extra logica, zoals het weergeven van bevestigingsberichten aan de klant. Zie [ reacties van het Bevel ](/help/web-sdk/commands/command-responses.md) voor meer informatie.
 
-Nadat u `setConsent` -aanroepen met de SDK hebt uitgevoerd, kunt u met de profielviewer in de gebruikersinterface van het platform controleren of gegevens in het archief met profielen worden geplaatst. Zie de sectie over [ doorbladerend profielen door identiteit ](../../../profile/ui/user-guide.md#browse-identity) voor meer informatie.
+Nadat u `setConsent` -aanroepen met de SDK hebt uitgevoerd, kunt u met de profielviewer in de Experience Platform-gebruikersinterface controleren of gegevens in het Profile Store worden gedownload. Zie de sectie over [ doorbladerend profielen door identiteit ](../../../profile/ui/user-guide.md#browse-identity) voor meer informatie.
 
 ## Volgende stappen
 
-Door deze gids te volgen, hebt u de uitbreiding van SDK van het Web van het Platform gevormd om toestemmingsgegevens naar Experience Platform te verzenden. Raadpleeg voor hulp bij het testen van uw implementatie de documentatie voor de toestemmingsnorm die u implementeert:
+Door deze gids te volgen, hebt u de uitbreiding van Experience Platform Web SDK gevormd om toestemmingsgegevens naar Experience Platform te verzenden. Raadpleeg voor hulp bij het testen van uw implementatie de documentatie voor de toestemmingsnorm die u implementeert:
 
-* [Adobe](./adobe/overview.md#test)
+* [Adobe-standaard](./adobe/overview.md#test)
 * [TCF 2.0 standaard](./iab/overview.md#test)

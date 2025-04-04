@@ -3,7 +3,7 @@ title: Merkury Enterprise Connections-bestemming
 description: Leer hoe u een Merkury Enterprise Connections-doelverbinding maakt met de Adobe Experience Platform-gebruikersinterface.
 last-substantial-update: 2024-07-20T00:00:00Z
 exl-id: dffc6f4d-b756-4c13-96f3-b1cc57caacdb
-source-git-commit: 2b84b5106105339ab243a9f4412b47692caedf3c
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '1371'
 ht-degree: 2%
@@ -28,7 +28,7 @@ Voer de stappen in deze documentatiepagina uit om een [!DNL Merkury Connections]
 >
 >Als u het publiek wilt activeren naar mediadoelen met uw [!DNL Merkury Connect] -account, gebruikt u in plaats daarvan het doel van [!DNL Merkury Connections] .
 
-![ de de bestemmingskaart van de Verbindingen van de Onderneming van de Verduistering die in de catalogus van de bestemmingen van het Experience Platform wordt benadrukt.](../../assets/catalog/data-partners/merkury-connections/media/image2.png)
+![ de de bestemmingskaart van de Verbindingen van de Onderneming van de Verduistering die in de de bestemmingscatalogus van Experience Platform wordt benadrukt.](../../assets/catalog/data-partners/merkury-connections/media/image2.png)
 
 ## Gebruiksscenario’s
 
@@ -49,8 +49,8 @@ Voer de stappen in deze documentatiepagina uit om een [!DNL Merkury Connections]
 | GAID | GOOGLE ADVERTISING ID | Selecteer de GAID doelidentiteit wanneer uw bronidentiteit een GAID-naamruimte is. |
 | IDFA | Apple-id voor adverteerders | Selecteer de IDFA doelidentiteit wanneer uw bronidentiteit een IDFA namespace is. |
 | ECID | Experience Cloud-id | Een naamruimte die ECID vertegenwoordigt. Deze naamruimte kan ook worden aangeduid met de volgende aliassen: &quot;Adobe Marketing Cloud ID&quot;, &quot;Adobe Experience Cloud ID&quot;, &quot;Adobe Experience Platform ID&quot;. Zie het volgende document op [ ECID ](/help/identity-service/features/ecid.md) voor meer informatie. |
-| phone_sha256 | Telefoonnummers die zijn hashed met het SHA256-algoritme | Adobe Experience Platform biedt ondersteuning voor zowel platte tekst- als SHA256-telefoonnummers. Wanneer het bronveld hashingkenmerken bevat, schakelt u de optie **[!UICONTROL Apply transformation]** in om de gegevens automatisch te laten hashen bij activering door [!DNL Platform] . |
-| email_lc_sha256 | E-mailadressen die met het algoritme SHA256 worden gehasht | Adobe Experience Platform biedt ondersteuning voor zowel platte tekst- als SHA256-e-mailadressen met hashing. Wanneer het bronveld hashingkenmerken bevat, schakelt u de optie **[!UICONTROL Apply transformation]** in om de gegevens automatisch te laten hashen bij activering door [!DNL Platform] . |
+| phone_sha256 | Telefoonnummers die zijn hashed met het SHA256-algoritme | Adobe Experience Platform biedt ondersteuning voor zowel platte tekst- als SHA256-telefoonnummers. Wanneer het bronveld hashingkenmerken bevat, schakelt u de optie **[!UICONTROL Apply transformation]** in om de gegevens automatisch te laten hashen bij activering door [!DNL Experience Platform] . |
+| email_lc_sha256 | E-mailadressen die met het algoritme SHA256 worden gehasht | Adobe Experience Platform biedt ondersteuning voor zowel platte tekst- als SHA256-e-mailadressen met hashing. Wanneer het bronveld hashingkenmerken bevat, schakelt u de optie **[!UICONTROL Apply transformation]** in om de gegevens automatisch te laten hashen bij activering door [!DNL Experience Platform] . |
 | extern_id | Aangepaste gebruikers-id&#39;s | Selecteer deze doelidentiteit wanneer uw bronidentiteit een aangepaste naamruimte is. |
 
 {style="table-layout:auto"}
@@ -61,8 +61,8 @@ In deze sectie wordt beschreven welk type publiek u naar dit doel kunt exportere
 
 | **Doelgroep** | **Gesteund** | **Oorsprong van de Beschrijving** |
 |---|---|---|      
-| Segmentatieservice | ✓ | Soorten publiek door het Experience Platform [ wordt geproduceerd [de Dienst van de Segmentatie] ](https://experienceleague.adobe.com/en/docs/experience-platform/segmentation/home). |
-| Aangepaste uploads | X | Soorten publiek [ [ingevoerde] ](https://experienceleague.adobe.com/en/docs/experience-platform/segmentation/ui/overview#import-audience) in Experience Platform van Csv- dossiers. |
+| Segmentatieservice | ✓ | Soorten publiek dat door Experience Platform [ [de Dienst van de Segmentatie] ](https://experienceleague.adobe.com/en/docs/experience-platform/segmentation/home) wordt geproduceerd. |
+| Aangepaste uploads | X | Soorten publiek [ [ingevoerd] ](https://experienceleague.adobe.com/en/docs/experience-platform/segmentation/ui/overview#import-audience) in Experience Platform van Csv- dossiers. |
 
 {style="table-layout:auto"}
 
@@ -89,7 +89,7 @@ Om met deze bestemming te verbinden, volg de stappen die in [ worden beschreven 
 
 Om aan de bestemming voor authentiek te verklaren, vul de vereiste gebieden in en selecteer **verbinden met bestemming**.
 
-Om tot uw emmer op Experience Platform toegang te hebben, moet u geldige waarden voor de volgende geloofsbrieven verstrekken:
+Als u toegang wilt tot uw emmertje op Experience Platform, moet u geldige waarden opgeven voor de volgende referenties:
 
 
 | **Referentie** | **Beschrijving** |
@@ -150,7 +150,7 @@ Toewijzingssuggesties worden gegeven in de onderstaande tabel met de kenmerken a
 
 | Doelveld | Source-beschrijving |
 |---|---|
-| id | Identiteitsveld dat moet worden gebruikt om [!DNL Merkury] -gegevens toe te wijzen aan het Experience Platform via de [!DNL Merkury Enterprise Identity] Source-connector |
+| id | Identiteitsveld dat moet worden gebruikt om [!DNL Merkury] -gegevens via de [!DNL Merkury Enterprise Identity] Source-connector toe te wijzen aan Experience Platform |
 | Input_First_Name | De `person.name.firstName` -waarde in Experience Platform. |
 | Input_Last_Name | De `person.name.lastName` -waarde in Experience Platform. |
 | Input_Address_Line_1 | De `mailingAddress.street` -waarde in Experience Platform. |
@@ -173,4 +173,4 @@ Alle Adobe Experience Platform-doelen zijn bij het verwerken van uw gegevens com
 
 ## Volgende stappen
 
-Door deze zelfstudie te volgen, hebt u een gegevensstroom gemaakt om profielgegevens van Experience Platform naar uw [!DNL Merkury] beheerde S3-locatie te exporteren. Vervolgens moet u contact opnemen met uw [!DNL Merkury] -vertegenwoordiger met de naam van de account, de bestandsnamen en het emmerpad, zodat de verwerking kan worden ingesteld.
+Aan de hand van deze zelfstudie hebt u een gegevensstroom gemaakt om profielgegevens van Experience Platform naar uw [!DNL Merkury] beheerde S3-locatie te exporteren. Vervolgens moet u contact opnemen met uw [!DNL Merkury] -vertegenwoordiger met de naam van de account, de bestandsnamen en het emmerpad, zodat de verwerking kan worden ingesteld.

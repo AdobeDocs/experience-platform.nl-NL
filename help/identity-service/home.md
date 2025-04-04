@@ -1,12 +1,12 @@
 ---
-keywords: Experience Platform;home;populaire onderwerpen;identiteit;Identiteit;XDM grafieken;Identiteitsservice;Identiteitsservice
+keywords: Experience Platform;home;populaire onderwerpen;identiteit;Identiteit;XDM-grafieken;Identiteitsservice;Identiteitsservice
 solution: Experience Platform
 title: Overzicht van identiteitsservice
 description: Met de Adobe Experience Platform Identity Service kunt u uw klant en zijn gedrag beter zien door identiteiten tussen apparaten en systemen te overbruggen, zodat u in real-time een indrukwekkende, persoonlijke digitale ervaring kunt bieden.
 exl-id: a22dc3f0-3b7d-4060-af3f-fe4963b45f18
-source-git-commit: 2a2e3fcc4c118925795951a459a2ed93dfd7f7d7
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1555'
+source-wordcount: '1556'
 ht-degree: 0%
 
 ---
@@ -23,7 +23,7 @@ U kunt deze uitdagingen met de Dienst van de Identiteit van Adobe Experience Pla
 * Maak een grafiek voor Real-Time Klantprofiel, die vervolgens wordt gebruikt om een uitgebreide weergave van de klant te maken door kenmerken en gedragingen samen te voegen.
 * Voer validatie en foutopsporing uit met de verschillende gereedschappen.
 
-Dit document biedt een overzicht van Identiteitsservice en hoe u de functionaliteit ervan kunt gebruiken binnen de context van het Experience Platform.
+Dit document biedt een overzicht van Identity Service en van de manier waarop u de functionaliteit ervan kunt gebruiken in de context van Experience Platform.
 
 ## Terminologie {#terminology}
 
@@ -36,16 +36,16 @@ Lees, voordat u op de details van Identity Service gaat duiken, de volgende tabe
 | Identiteitswaarde | Een identiteitswaarde is een koord dat een real-world entiteit vertegenwoordigt en binnen de Dienst van de Identiteit door namespace gecategoriseerd is. Bijvoorbeeld, zou de identiteitswaarde (koord) **julien <span>@acme.com** als `Email` namespace kunnen worden gecategoriseerd. |
 | Identiteitstype | Een identiteitstype is een component van een naamruimte voor identiteiten. Het identiteitstype geeft aan of identiteitsgegevens al dan niet zijn gekoppeld in een identiteitsgrafiek. |
 | Koppeling | Een koppeling of een koppeling is een methode om vast te stellen dat twee verschillende identiteiten dezelfde entiteit vertegenwoordigen. Bijvoorbeeld, betekent een verbinding tussen &quot;`Email` = julien <span>@acme.com&quot; en &quot;`Phone` = 555-555-1234&quot;dat beide identiteiten de zelfde entiteit vertegenwoordigen. Dit suggereert dat de klant die met uw merk met zowel het e-mailadres van julien <span>@acme.com als het telefoonnummer 555-555-1234 heeft gecommuniceerd het zelfde is. |
-| Identiteitsservice | De Dienst van de identiteit is de dienst binnen Experience Platform die (of unlinks) identiteiten verbindt om identiteitsgrafieken te handhaven. |
+| Identiteitsservice | Identity Service is een service in Experience Platform die identiteiten koppelt (of ontkoppelt) om identiteitsgrafieken te onderhouden. |
 | Identiteitsgrafiek | De identiteitsgrafiek is een inzameling van identiteiten die één enkele klant vertegenwoordigen. Voor meer informatie, lees de gids op [ gebruikend de kijker van de identiteitsgrafiek ](./features/identity-graph-viewer.md). |
-| Klantprofiel in realtime | Real-Time klantprofiel is een service in Adobe Experience Platform die: <ul><li>Hiermee voegt u profielfragmenten samen om een profiel te maken op basis van een identiteitsgrafiek.</li><li>Segmenteert profielen zodat deze vervolgens naar de bestemming kunnen worden verzonden voor activering.</li></ul> |
+| Realtime-klantenprofiel | Real-Time klantprofiel is een service in Adobe Experience Platform die: <ul><li>Hiermee voegt u profielfragmenten samen om een profiel te maken op basis van een identiteitsgrafiek.</li><li>Segmenteert profielen zodat deze vervolgens naar de bestemming kunnen worden verzonden voor activering.</li></ul> |
 | Profiel | Een profiel is een weergave van een onderwerp, een organisatie of een individu. Een profiel bestaat uit vier elementen: <ul><li>Attributen: kenmerken geven informatie zoals naam, leeftijd of geslacht.</li><li>Gedrag: gedrag geeft informatie over de activiteiten van een bepaald profiel. Een profielgedrag kan bijvoorbeeld zien of een bepaald profiel &quot;naar sandalen zoeken&quot; of &quot;naar t-shirts opdracht geven&quot; was.</li><li>Identiteiten: voor een samengevoegd profiel wordt hier informatie gegeven over alle identiteiten die aan de persoon zijn gekoppeld. Identiteiten kunnen in drie categorieën worden ingedeeld: Persoon (CRMID, e-mail, telefoon), apparaat (IDFA, GAID) en cookie (ECID, STEUN).</li><li>Lidmaatschap van het publiek: De groepen waarin het profiel tot (loyale gebruikers, gebruikers die in Californië wonen, enz.) behoort</li></ul> |
 
 {style="table-layout:auto"}
 
 ## Wat is identiteitsdienst?
 
-![ Identiteitsstitching op Platform ](./images/identity-service-stitching.png)
+![ Identiteitsstitching op Experience Platform ](./images/identity-service-stitching.png)
 
 In een B2C-context (Business-To-Customer) communiceren klanten met uw bedrijf en maken ze een relatie met uw merk. Een typische klant kan actief zijn in om het even welk aantal systemen binnen de gegevensinfrastructuur van uw organisatie. Om het even welke bepaalde klant kan binnen uw e-handel, loyaliteit, en helpdesksystemen actief zijn. Die zelfde klant kan ook anoniem of door voor authentiek verklaarde middelen op om het even welk aantal verschillende apparaten aanspreken.
 
@@ -103,7 +103,7 @@ De volgende video is bedoeld als ondersteuning voor uw begrip van identiteiten e
 
 >[!VIDEO](https://video.tv.adobe.com/v/27841?quality=12&learn=on)
 
-## Inzicht in de rol van de identiteitsdienst binnen de Experience Platform-infrastructuur
+## Inzicht in de rol van Identity Service binnen de Experience Platform-infrastructuur
 
 Identiteitsdienst speelt een cruciale rol in Experience Platform. Enkele van deze belangrijke integraties zijn:
 

@@ -1,12 +1,12 @@
 ---
-keywords: Experience Platform;thuis;populaire onderwerpen;Marketo Engage;marketo engageren;Marketo;mapping
+keywords: Experience Platform;home;populaire onderwerpen;Marketo Engage;Marketo eng;Marketo;mapping
 solution: Experience Platform
-title: Toewijzingsvelden voor het Marketo Engage Source
+title: Toewijzingsvelden voor de Marketo Engage Source
 description: De onderstaande tabellen bevatten de toewijzingen tussen de velden in de Marketo-gegevenssets en de bijbehorende XDM-velden.
 exl-id: 2b217bba-2748-4d6f-85ac-5f64d5e99d49
-source-git-commit: 3084ed50f3665c7b33863f3a1aab4236c182c503
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '887'
+source-wordcount: '888'
 ht-degree: 0%
 
 ---
@@ -21,13 +21,13 @@ De onderstaande tabellen bevatten de toewijzingen tussen de velden in de negen [
 
 ## Activiteiten {#activities}
 
-De bron [!DNL Marketo] ondersteunt nu aanvullende standaardactiviteiten. Om standaardactiviteiten te gebruiken, moet u uw schema bijwerken gebruikend het [ schema auto-generatienut ](../marketo/marketo-namespaces.md) omdat als u nieuwe `activities` dataflow creeert zonder uw schema bij te werken, de afbeeldingsmalplaatjes zullen ontbreken aangezien de nieuwe doelgebieden niet in uw schema aanwezig zullen zijn. Als u ervoor kiest uw schema niet bij te werken, kunt u nog steeds een nieuwe gegevensstroom maken en eventuele fouten negeren. Nochtans, zullen om het even welke nieuwe of bijgewerkte gebieden niet in Platform worden opgenomen.
+De bron [!DNL Marketo] ondersteunt nu aanvullende standaardactiviteiten. Om standaardactiviteiten te gebruiken, moet u uw schema bijwerken gebruikend het [ schema auto-generatienut ](../marketo/marketo-namespaces.md) omdat als u nieuwe `activities` dataflow creeert zonder uw schema bij te werken, de afbeeldingsmalplaatjes zullen ontbreken aangezien de nieuwe doelgebieden niet in uw schema aanwezig zullen zijn. Als u ervoor kiest uw schema niet bij te werken, kunt u nog steeds een nieuwe gegevensstroom maken en eventuele fouten negeren. Nieuwe of bijgewerkte velden worden echter niet in Experience Platform opgenomen.
 
 Lees de documentatie over [ de klasse van de Gebeurtenis van de Ervaring XDM ](../../../../xdm/classes/experienceevent.md) voor meer informatie over de Klasse XDM en de Groep(s) van het Gebied XDM.
 
 >[!NOTE]
 >
->Het bronveld `iif(${web\.ecid} != null, to_object('ECID', arrays_to_objects('id', explode(last(split(${web\.ecid}, ":")), " "))), null)` is een berekend veld dat moet worden toegevoegd met de optie **[!UICONTROL Add calculated field]** in de gebruikersinterface van het Experience Platform. Lees het leerprogramma op [ toevoegend berekende gebieden ](../../../../data-prep/ui/mapping.md#calculated-fields) voor meer informatie.
+>Het bronveld `iif(${web\.ecid} != null, to_object('ECID', arrays_to_objects('id', explode(last(split(${web\.ecid}, ":")), " "))), null)` is een berekend veld dat moet worden toegevoegd met de optie **[!UICONTROL Add calculated field]** in de gebruikersinterface van Experience Platform. Lees het leerprogramma op [ toevoegend berekende gebieden ](../../../../data-prep/ui/mapping.md#calculated-fields) voor meer informatie.
 
 | Source-gegevensset | XDM-doelveld | Notities |
 | -------------- | ---------------- | ----- |
@@ -415,4 +415,4 @@ Lees het [ XDM Individuele overzicht van het Profiel ](../../../../xdm/classes/i
 
 ## Volgende stappen
 
-Door dit document te lezen, hebt u inzicht gekregen in de toewijzingsverhouding tussen uw [!DNL Marketo] datasets en hun overeenkomstige gebieden XDM. Zie het leerprogramma op [ creërend a  [!DNL Marketo]  bronverbinding ](../../../tutorials/ui/create/adobe-applications/marketo.md) om uw [!DNL Marketo] dataflow te voltooien.
+Door dit document te lezen, hebt u insight verworven op de toewijzingsverhouding tussen uw [!DNL Marketo] datasets en hun overeenkomstige gebieden XDM. Zie het leerprogramma op [ creërend a  [!DNL Marketo]  bronverbinding ](../../../tutorials/ui/create/adobe-applications/marketo.md) om uw [!DNL Marketo] dataflow te voltooien.

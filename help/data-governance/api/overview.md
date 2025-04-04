@@ -1,14 +1,14 @@
 ---
-keywords: Experience Platform;home;populaire onderwerpen
+keywords: Experience Platform;startpagina;populaire onderwerpen
 solution: Experience Platform
 title: API-handleiding voor beleidsservice
 description: Met de Beleidsservice-API kunnen ontwikkelaars labels en beleidsregels voor gegevensgebruik in Experience Platform beheren. Volg deze gids voor het uitvoeren van de belangrijkste bewerkingen met de API.
 role: Developer
 exl-id: 23c05670-7107-4b96-bc24-0a51b5d267b2
-source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '543'
-ht-degree: 2%
+source-wordcount: '545'
+ht-degree: 3%
 
 ---
 
@@ -22,7 +22,7 @@ Om alle beschikbare eindpunten en verrichtingen te bekijken CRUD, bezoek de [[!D
 
 ## Labels
 
-Pas de etiketten van het gegevensgebruik op schema&#39;s toe om datasets en gebieden volgens gebruiksbeleid te categoriseren die op die gegevens van toepassing zijn. Labels kunnen op elk gewenst moment worden toegepast, zodat u op flexibele wijze gegevens kunt beheren. Op basis van de aanbevolen procedures worden labelgegevens aangemoedigd zodra deze worden opgenomen in [!DNL Experience Platform] of zodra gegevens beschikbaar komen voor gebruik in [!DNL Platform] . U kunt labels maken, weergeven, bewerken en verwijderen met behulp van het `/labels` -eindpunt. Leren hoe te om dit eindpunt te gebruiken, bezoek de [ gids van het etiketteneindpunt ](./labels.md).
+Pas de etiketten van het gegevensgebruik op schema&#39;s toe om datasets en gebieden volgens gebruiksbeleid te categoriseren die op die gegevens van toepassing zijn. Labels kunnen op elk gewenst moment worden toegepast, zodat u op flexibele wijze gegevens kunt beheren. Op basis van de aanbevolen procedures worden labelgegevens aangemoedigd zodra deze worden opgenomen in [!DNL Experience Platform] of zodra gegevens beschikbaar komen voor gebruik in [!DNL Experience Platform] . U kunt labels maken, weergeven, bewerken en verwijderen met behulp van het `/labels` -eindpunt. Leren hoe te om dit eindpunt te gebruiken, bezoek de [ gids van het etiketteneindpunt ](./labels.md).
 
 ## Marketingacties
 
@@ -34,7 +34,7 @@ Beleid voor gegevensbeheer is regels die het soort marketingacties beschrijven d
 
 >[!NOTE]
 >
->Beleid voor gegevensbeheer mag niet worden verward met beleid voor toegangsbeheer, dat de specifieke gegevenskenmerken bepaalt die kunnen worden benaderd door bepaalde platformgebruikers in uw organisatie. Zie de gids op [ op attributen-gebaseerde toegangscontrole ](../../access-control/abac/overview.md) voor meer informatie.
+>Beleid voor gegevensbeheer mag niet worden verward met beleid voor toegangsbeheer, dat de specifieke gegevenskenmerken bepaalt die toegankelijk zijn voor bepaalde Experience Platform-gebruikers in uw organisatie. Zie de gids op [ op attributen-gebaseerde toegangscontrole ](../../access-control/abac/overview.md) voor meer informatie.
 
 Een beleid inzake gegevensbeheer wordt als volgt gedefinieerd:
 
@@ -45,7 +45,7 @@ Leren hoe te om beleid in API te beheren, zie de [ gids van het beleidseindpunt 
 
 ## Evaluatie
 
-Zodra de etiketten van het gegevensgebruik op de schema&#39;s van het Platform zijn toegepast, en het beleid van het gegevensgebruik is bepaald voor marketing acties tegen die etiketten, staan de mogelijkheden van het Beleid van Gegevens u toe om dat beleid te handhaven en gegevensverrichtingen te verhinderen die beleidsschendingen vormen.
+Zodra de etiketten van het gegevensgebruik op de schema&#39;s van Experience Platform zijn toegepast, en het beleid van het gegevensgebruik voor marketing acties tegen die etiketten is bepaald, staat de mogelijkheden van het Beleid van Gegevens u toe om dat beleid te handhaven en gegevensverrichtingen te verhinderen die beleidsschendingen vormen.
 
 De API van [!DNL Policy Service] verstrekt eindpunten die u toestaan om marketing acties tegen datasets of willekeurige combinaties etiketten van het gegevensgebruik te testen om als om het even welke beleidsschendingen te controleren. Op basis van de API-reactie kunt u vervolgens protocollen in uw ervaringstoepassing instellen om op de juiste wijze de naleving van het gegevensgebruiksbeleid af te dwingen. Zie de [ gids van de evaluatie eindpunten ](./evaluation.md) voor meer informatie.
 

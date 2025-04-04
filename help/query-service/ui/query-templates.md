@@ -1,10 +1,10 @@
 ---
 title: Query-sjablonen
-description: Zoeksjablonen zijn herbruikbare opgeslagen SQL-query's die andere gebruikers opnieuw kunnen gebruiken om tijd en moeite te besparen. Zij kunnen worden gecreeerd gebruikend de Redacteur van de Vraag of de Dienst API van de Vraag en zijn beschikbaar voor gebruik op alle datasets van het Experience Platform.
+description: Zoeksjablonen zijn herbruikbare opgeslagen SQL-query's die andere gebruikers opnieuw kunnen gebruiken om tijd en moeite te besparen. Zij kunnen worden gecreeerd gebruikend de Redacteur van de Vraag of de Dienst API van de Vraag en zijn beschikbaar voor gebruik op alle datasets van Experience Platform.
 exl-id: e74d058f-bb89-45ed-83cc-2e3a33401270
-source-git-commit: 1a44be939a4678078b414658199472e07dee153b
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '576'
+source-wordcount: '579'
 ht-degree: 0%
 
 ---
@@ -17,11 +17,11 @@ Dit document verstrekt de informatie die wordt vereist om vraagmalplaatjes in de
 
 ## Vereisten
 
-U moet [!UICONTROL Manage queries] toestemming hebben die wordt toegelaten om tot de Redacteur van de Vraag toegang te hebben en het vraagdashboard binnen de UI van het Platform te bekijken. De toestemming wordt toegelaten door de Adobe [ Admin Console ](https://adminconsole.adobe.com/). Neem contact op met de beheerder van uw organisatie als u geen beheerdersrechten hebt om deze machtiging in te schakelen. Zie de documentatie van de toegangscontrole voor [ volledige instructies bij het toevoegen van toestemmingen door Admin Console ](../../access-control/home.md).
+U moet [!UICONTROL Manage queries] toestemming hebben om tot de Redacteur van de Vraag toegang te hebben en het dashboard van vragen binnen Experience Platform UI te bekijken. De toestemming wordt toegelaten door Adobe [ Admin Console ](https://adminconsole.adobe.com/). Neem contact op met de beheerder van uw organisatie als u geen beheerdersrechten hebt om deze machtiging in te schakelen. Zie de documentatie van de toegangscontrole voor [ volledige instructies bij het toevoegen van toestemmingen door Admin Console ](../../access-control/home.md).
 
 ## Een querysjabloon maken
 
-U kunt vraagmalplaatjes door twee methodes tot stand brengen, of door een verzoek van de POST aan het eindpunt van de Dienst van de Vraag te doen API `query-templates`, of door te schrijven, een naam te geven, en een vraag door de Redacteur van de Vraag te bewaren.
+U kunt vraagmalplaatjes door twee methodes tot stand brengen, of door een POST- verzoek aan het eindpunt van de Dienst van de Vraag te doen API `query-templates`, of door te schrijven, een naam te geven, en een vraag door de Redacteur van de Vraag te bewaren.
 
 ### Gebruik de Redacteur van de Vraag om een vraag te ontwerpen en als malplaatje op te slaan
 
@@ -33,7 +33,7 @@ Zie de documentatie voor instructies op hoe te om de Redacteur van de Vraag te g
 
 ## Zoeksjablonen zoeken {#browse}
 
-Selecteer **[!UICONTROL Templates]** in de werkruimte Query&#39;s van de gebruikersinterface van het platform om de lijst met beschikbare opgeslagen query&#39;s weer te geven.
+Selecteer **[!UICONTROL Templates]** in de werkruimte Query&#39;s van de gebruikersinterface van Experience Platform om de lijst met beschikbare opgeslagen query&#39;s weer te geven.
 
 ![ de werkruimte van vragen met het benadrukte lusje van Malplaatjes.](../images/ui/query-templates/query-templates.png)
 
@@ -55,7 +55,7 @@ Zie de documentatie voor instructies op [ hoe te om een vraagmalplaatje ](../api
 
 >[!NOTE]
 >
->Sjablonen die zijn gemaakt met de API zijn ook zichtbaar op het tabblad Sjablonen voor de query-service van het platform.
+>Sjablonen die zijn gemaakt met de API zijn ook zichtbaar op het tabblad Sjablonen voor zoekopdrachten in de gebruikersinterface van Experience Platform.
 
 ## Volgende stappen
 

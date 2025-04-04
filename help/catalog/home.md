@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;home;populaire onderwerpen;catalogusservice;catalogus;Catalogusservice;gegevenslocatie;Gegevenslocatie;Gegevensbeheer;Lineage;Lijn;Catalogus;Gegevensset inschakelen
+keywords: Experience Platform;home;populaire onderwerpen;catalogusservice;catalogus;Catalogusservice;gegevenslocatie;Gegevenslocatie;Gegevensbeheer;Lineaire;Lijn;Catalogus;Gegevensset inschakelen
 solution: Experience Platform
 title: Overzicht van Catalog Service
-description: Catalogusservice is het systeem voor het vastleggen van de locatie van gegevens en de gegevensverbinding in Adobe Experience Platform. Terwijl alle gegevens die in Experience Platform worden opgenomen in het meer van Gegevens als dossiers en folders worden opgeslagen, houdt de Catalogus de meta-gegevens en de beschrijving van die dossiers en folders voor raadpleging en controledoeleinden.
+description: Catalogusservice is het systeem voor het vastleggen van de locatie en herkomst van gegevens binnen Adobe Experience Platform. Terwijl alle gegevens die in Experience Platform worden opgenomen in het Datameer als dossiers en folders worden opgeslagen, houdt de Catalogus de meta-gegevens en de beschrijving van die dossiers en folders voor raadpleging en controledoeleinden.
 exl-id: ef0c173b-607b-41b8-8676-c54ae9472e23
-source-git-commit: 0ebe9eadb1bce6252b43a50af009ce1b0f6e5d6e
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '694'
-ht-degree: 0%
+ht-degree: 2%
 
 ---
 
@@ -23,7 +23,7 @@ Eenvoudig gesteld, [!DNL Catalog] dienst als meta-gegevensopslag of &quot;catalo
 * Hoeveel gegevens zijn verwerkt?
 * Welke fouten zijn tijdens de verwerking opgetreden?
 
-[!DNL Catalog] biedt een RESTful-API waarmee u [!DNL Platform] -metagegevens programmatisch kunt beheren met behulp van standaard-CRUD-bewerkingen. Zie de [ de ontwikkelaarsgids van de Catalogus ](api/getting-started.md) voor meer informatie.
+[!DNL Catalog] biedt een RESTful-API waarmee u [!DNL Experience Platform] -metagegevens programmatisch kunt beheren met behulp van standaard-CRUD-bewerkingen. Zie de [ de ontwikkelaarsgids van de Catalogus ](api/getting-started.md) voor meer informatie.
 
 ## [!DNL Catalog] en [!DNL Experience Platform] services
 
@@ -31,9 +31,9 @@ De bronnen die [!DNL Catalog Service] tracks gebruiken, worden door meerdere [!D
 
 ### [!DNL Experience Data Model] (XDM)-systeem
 
-[!DNL Experience Data Model] (XDM) System is het gestandaardiseerde framework waarmee [!DNL Platform] gegevens over de klantervaring organiseert. [!DNL Experience Platform] gebruikt XDM-schema&#39;s om de gegevensstructuur op een consistente en herbruikbare manier te beschrijven.
+[!DNL Experience Data Model] (XDM) System is het gestandaardiseerde framework waarmee [!DNL Experience Platform] gegevens over de klantervaring organiseert. [!DNL Experience Platform] gebruikt XDM-schema&#39;s om de gegevensstructuur op een consistente en herbruikbare manier te beschrijven.
 
-Wanneer gegevens in [!DNL Platform] worden opgenomen, wordt de structuur van die gegevens toegewezen aan een XDM-schema en in [!DNL Data Lake] opgeslagen als onderdeel van een dataset. De meta-gegevens voor elke dataset worden gevolgd door [!DNL Catalog Service], die een verwijzing naar het XDM schema omvat dat de dataset met in overeenstemming is.
+Wanneer gegevens in [!DNL Experience Platform] worden opgenomen, wordt de structuur van die gegevens toegewezen aan een XDM-schema en in [!DNL Data Lake] opgeslagen als onderdeel van een dataset. De meta-gegevens voor elke dataset worden gevolgd door [!DNL Catalog Service], die een verwijzing naar het XDM schema omvat dat de dataset met in overeenstemming is.
 
 Voor meer algemene informatie over Systeem XDM, gelieve te zien het [ XDM overzicht van het Systeem ](../xdm/home.md).
 
@@ -47,7 +47,7 @@ Zie het [ overzicht van de gegevensopname ](../ingestion/home.md) voor meer info
 
 ## [!DNL Catalog] objecten
 
-Zoals in de vorige sectie wordt beschreven, houdt [!DNL Catalog] metagegevens bij voor verschillende soorten bronnen en bewerkingen die door andere [!DNL Platform] -services worden gebruikt. [!DNL Catalog] behoudt een eigen opslagruimte van &#39;objecten&#39; die deze metagegevens inkapselen. [!DNL Catalog] -objecten zijn queryable-representaties van [!DNL Platform] -gegevens waarmee u gegevens kunt zoeken, controleren en labelen zonder dat u toegang hoeft te krijgen tot de gegevens zelf.
+Zoals in de vorige sectie wordt beschreven, houdt [!DNL Catalog] metagegevens bij voor verschillende soorten bronnen en bewerkingen die door andere [!DNL Experience Platform] -services worden gebruikt. [!DNL Catalog] behoudt een eigen opslagruimte van &#39;objecten&#39; die deze metagegevens inkapselen. [!DNL Catalog] -objecten zijn queryable-representaties van [!DNL Experience Platform] -gegevens waarmee u gegevens kunt zoeken, controleren en labelen zonder dat u toegang hoeft te krijgen tot de gegevens zelf.
 
 In de volgende tabel worden de verschillende objecttypen weergegeven die worden ondersteund door [!DNL Catalog] :
 
@@ -55,7 +55,7 @@ In de volgende tabel worden de verschillende objecttypen weergegeven die worden 
 |---|---|---|
 | Batch | `/batches` | Batches zijn gegevenseenheden die bestaan uit een of meer bestanden die als één eenheid moeten worden ingevoerd. Een batchobject in [!DNL Catalog] beschrijft de innamemetriek van de batch (zoals het aantal verwerkte records of de grootte op schijf) en kan ook koppelingen bevatten naar gegevenssets, weergaven en andere bronnen die door de batchbewerking zijn beïnvloed. |
 | Gegevensset | `/dataSets` | Een dataset is een opslag en beheersconstructie die voor de inzameling van gegevens (typisch een lijst) wordt gebruikt die een schema (kolommen) en gebieden (rijen) bevat. Zie het [ overzicht van datasets ](./datasets/overview.md) voor meer informatie. |
-| Gegevensbestand | `/datasetFiles` | Gegevensbestanden vertegenwoordigen gegevensblokken die zijn opgeslagen op [!DNL Platform] . Als verslagen van letterlijke dossiers, zijn deze waar u de grootte van het dossier, het aantal verslagen kunt vinden het bevat, en een verwijzing naar de partij die het dossier opnam. |
+| Gegevensbestand | `/datasetFiles` | Gegevensbestanden vertegenwoordigen gegevensblokken die zijn opgeslagen op [!DNL Experience Platform] . Als verslagen van letterlijke dossiers, zijn deze waar u de grootte van het dossier, het aantal verslagen kunt vinden het bevat, en een verwijzing naar de partij die het dossier opnam. |
 
 ## Volgende stappen
 

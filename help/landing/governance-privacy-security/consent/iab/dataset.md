@@ -1,14 +1,14 @@
 ---
-keywords: Experience Platform;home;IAB;IAB 2.0;toestemming;toestemming
+keywords: Experience Platform;home;IAB;IAB 2.0;toestemming;Toestemming
 solution: Experience Platform
 title: Datasets maken voor het vastleggen van gegevens met IAB TCF 2.0-toestemming
 description: Dit document verstrekt stappen voor vestiging de twee vereiste datasets om IAB TCF 2.0 toestemmingsgegevens te verzamelen.
 role: Developer
 feature: Consent, Schemas, Datasets
 exl-id: 36b2924d-7893-4c55-bc33-2c0234f1120e
-source-git-commit: bf651967714745a0b501dcb27373379fe014c9e1
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1580'
+source-wordcount: '1586'
 ht-degree: 0%
 
 ---
@@ -24,9 +24,9 @@ Specifiek, worden twee datasets vereist voor het vangen van TCF 2.0 toestemmings
 
 >[!IMPORTANT]
 >
->Platform dwingt slechts de koorden TCF die in de Individuele dataset van het Profiel worden verzameld af. Terwijl een dataset ExperienceEvent nog wordt vereist om een gegevensstroom als deel van dit werkschema tot stand te brengen, moet u slechts gegevens in de profieldataset opnemen. De dataset ExperienceEvent kan nog worden gebruikt als u gebeurtenissen van de toestemmingsverandering in tijd wilt volgen, maar deze waarden worden niet gebruikt binnen wanneer het afdwingen op segmentactivering.
+>Experience Platform dwingt alleen de TCF-tekenreeksen af die in de dataset Individueel profiel zijn verzameld. Terwijl een dataset ExperienceEvent nog wordt vereist om een gegevensstroom als deel van dit werkschema tot stand te brengen, moet u slechts gegevens in de profieldataset opnemen. De dataset ExperienceEvent kan nog worden gebruikt als u gebeurtenissen van de toestemmingsverandering in tijd wilt volgen, maar deze waarden worden niet gebruikt binnen wanneer het afdwingen op segmentactivering.
 
-Dit document verstrekt stappen voor vestiging deze twee datasets. Voor een overzicht van het volledige werkschema om uw de gegevensverrichtingen van het Platform voor TCF 2.0 te vormen, verwijs naar [ IAB TCF 2.0 nalevingsoverzicht ](./overview.md).
+Dit document verstrekt stappen voor vestiging deze twee datasets. Voor een overzicht van het volledige werkschema om uw de gegevensverrichtingen van Experience Platform voor TCF 2.0 te vormen, verwijs naar [ IAB TCF 2.0 nalevingsoverzicht ](./overview.md).
 
 ## Vereisten
 
@@ -54,7 +54,7 @@ Zie de [ verwijzingsgids ](../../../../xdm/field-groups/profile/iab.md) voor dez
 
 Als u gebeurtenissen voor het wijzigen van de toestemming wilt bijhouden gedurende een tijdsverloop, kunt u de veldgroep [!UICONTROL IAB TCF 2.0 Consent Details] toevoegen aan uw [!UICONTROL XDM ExperienceEvent] -schema.
 
-Als u niet van plan bent om gebeurtenissen van de toestemmingsverandering in tijd te volgen, te hoeven u om deze gebiedsgroep niet in uw gebeurtenisschema te omvatten. Wanneer het automatisch afdwingen van TCF toestemmingswaarden, gebruikt het Experience Platform slechts de recentste toestemmingsinformatie die in de [ wordt opgenomen groep van het profielgebied ](#profile-field-group). Goedkeuringswaarden die door gebeurtenissen worden vastgelegd, nemen niet deel aan automatische workflows voor handhaving.
+Als u niet van plan bent om gebeurtenissen van de toestemmingsverandering in tijd te volgen, te hoeven u om deze gebiedsgroep niet in uw gebeurtenisschema te omvatten. Wanneer het automatisch afdwingen van TCF toestemmingswaarden, gebruikt Experience Platform slechts de recentste toestemmingsinformatie die in de [ wordt opgenomen groep van het profielgebied ](#profile-field-group). Goedkeuringswaarden die door gebeurtenissen worden vastgelegd, nemen niet deel aan automatische workflows voor handhaving.
 
 Zie de [ verwijzingsgids ](../../../../xdm/field-groups/event/iab.md) voor deze gebiedsgroep voor meer informatie over zijn structuur en gebruiksgeval.
 
@@ -62,9 +62,9 @@ Zie de [ verwijzingsgids ](../../../../xdm/field-groups/event/iab.md) voor deze 
 
 Om datasets tot stand te brengen die toestemmingsgegevens vangen, moet u XDM schema&#39;s eerst creëren om die datasets op te baseren.
 
-Zoals vermeld in de vorige sectie, wordt een schema dat de [!UICONTROL XDM Individual Profile] klasse gebruikt vereist om toestemming in stroomafwaartse workflows van het Platform af te dwingen. U kunt desgewenst ook een afzonderlijk schema maken op basis van [!UICONTROL XDM ExperienceEvent] als u wijzigingen in de toestemming wilt bijhouden. Beide schema&#39;s moeten een `identityMap` gebied en een aangewezen TCF 2.0 gebiedsgroep bevatten.
+Zoals vermeld in de vorige sectie, is een schema dat de [!UICONTROL XDM Individual Profile] klasse gebruikt vereist om toestemming in stroomafwaartse workflows van Experience Platform af te dwingen. U kunt desgewenst ook een afzonderlijk schema maken op basis van [!UICONTROL XDM ExperienceEvent] als u wijzigingen in de toestemming wilt bijhouden. Beide schema&#39;s moeten een `identityMap` gebied en een aangewezen TCF 2.0 gebiedsgroep bevatten.
 
-Selecteer in de gebruikersinterface van het platform de optie **[!UICONTROL Schemas]** in de linkernavigatie om de werkruimte van [!UICONTROL Schemas] te openen. Voer van hieruit de stappen in de onderstaande secties uit om elk vereist schema te maken.
+Selecteer in de gebruikersinterface van Experience Platform de optie **[!UICONTROL Schemas]** in de linkernavigatie om de werkruimte van [!UICONTROL Schemas] te openen. Voer van hieruit de stappen in de onderstaande secties uit om elk vereist schema te maken.
 
 >[!NOTE]
 >
@@ -102,7 +102,7 @@ Als u een bestaand schema uitgeeft dat reeds voor gebruik in [!DNL Real-Time Cus
 
 #### Het schema inschakelen voor gebruik in [!DNL Real-Time Customer Profile]
 
-Als u wilt dat Platform de gegevens over de toestemming die het ontvangt, kan koppelen aan specifieke klantprofielen, moet het toestemmingsschema zijn ingeschakeld voor gebruik in [!DNL Real-Time Customer Profile] .
+Experience Platform kan de gegevens die het ontvangt alleen koppelen aan specifieke klantprofielen als het toestemmingsschema is ingeschakeld voor gebruik in [!DNL Real-Time Customer Profile] .
 
 >[!NOTE]
 >
@@ -192,4 +192,4 @@ Door deze zelfstudie te volgen, hebt u minstens één dataset gecreeerd die nu k
 * Een op verslag-gebaseerde dataset die voor gebruik in het Profiel van de Klant in real time wordt toegelaten. **(Required)**
 * Een op tijdreeksen gebaseerde dataset die niet is ingeschakeld voor [!DNL Profile]. (Optioneel)
 
-U kunt nu aan het [ IAB TCF 2.0 overzicht ](./overview.md#merge-policies) terugkeren om het proces voort te zetten om Platform voor TCF 2.0 naleving te vormen.
+U kunt nu aan het [ IAB TCF 2.0 overzicht ](./overview.md#merge-policies) terugkeren om het proces voort te zetten om Experience Platform voor TCF 2.0 naleving te vormen.

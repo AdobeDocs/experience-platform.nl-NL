@@ -4,9 +4,9 @@ description: De Vraag van de controle is RESTful API die ontwikkelaars toestaat 
 role: Developer
 feature: Audits, API
 exl-id: 9ed291c6-ff8b-4d9b-9fed-d1e3fa8f92fb
-source-git-commit: c0eb5b5c3a1968cae2bc19b7669f70a97379239b
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '171'
+source-wordcount: '172'
 ht-degree: 1%
 
 ---
@@ -19,7 +19,7 @@ Om alle beschikbare eindpunten en verrichtingen te bekijken CRUD, bezoek de [[!D
 
 ## Gebeurtenissen
 
-Auditgebeurtenissen bieden inzichten van gebruikersacties in Platform, waaronder het actietype, de datum en tijd, de e-mailid van de gebruiker die de handeling heeft uitgevoerd en aanvullende kenmerken die relevant zijn voor het actietype voor verschillende functies in Adobe Experience Platform. Leren hoe te om metriek terug te winnen gebruikend API, zie de [ gids van het gebeurteniseindpunt ](./events.md).
+Auditgebeurtenissen bieden inzichten van gebruikersacties in Experience Platform, waaronder het actietype, de datum en tijd, de e-mailid van de gebruiker die de handeling heeft uitgevoerd en aanvullende kenmerken die relevant zijn voor het actietype voor verschillende functies in Adobe Experience Platform. Leren hoe te om metriek terug te winnen gebruikend API, zie de [ gids van het gebeurteniseindpunt ](./events.md).
 
 ## Exporteren
 

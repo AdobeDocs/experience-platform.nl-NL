@@ -4,9 +4,9 @@ title: Licentiegebruiksdashboard
 description: Adobe Experience Platform biedt een dashboard waarmee u belangrijke informatie kunt bekijken over het gebruik van licenties voor uw organisatie.
 type: Documentation
 exl-id: 143d16bb-7dc3-47ab-9b93-9c16683b9f3f
-source-git-commit: 243a99748d31cddcb8a550d52f9bb390726644be
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '3245'
+source-wordcount: '3250'
 ht-degree: 0%
 
 ---
@@ -132,13 +132,13 @@ ht-degree: 0%
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/event-expirations.html" text="Verlopen van gebeurtenissen beleven"
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/profile/pseudonymous-profiles.html" text="Verlopen gegevens van pseudoniem-profielen"
 
-U kunt belangrijke informatie over het gebruik van licenties voor uw organisatie bekijken via het Adobe Experience Platform [!UICONTROL License usage] -dashboard. De informatie die hier wordt weergegeven, wordt vastgelegd tijdens een dagelijkse momentopname van uw platforminstantie.
+U kunt belangrijke informatie over het gebruik van licenties voor uw organisatie bekijken via het Adobe Experience Platform [!UICONTROL License usage] -dashboard. De informatie die hier wordt weergegeven, wordt vastgelegd tijdens een dagelijkse momentopname van uw Experience Platform-exemplaar.
 
 De gebruiksrapporten van de vergunning verstrekken een hoge graad van granulariteit. De meeste metriek worden gedeeld over veelvoudige producten en wijzen op bijeengevoegd gebruik over alle producten die hen, niet per-producttotalen gebruiken. Het dashboard biedt een geconsolideerd gebruik van deze metriek in alle productie- of ontwikkelingssandboxen en de metrische methode voor het gebruik van een specifieke sandbox. De volgende Experience Platform-toepassingen kunnen worden bijgehouden met maatstaven voor gebruik: Real-Time Customer Data Platform, Adobe Journey Optimizer en Customer Journey Analytics.
 
 Deze gids schetst hoe te om tot en met het dashboard van het vergunningsgebruik in UI toegang te hebben en te werken en verstrekt meer informatie betreffende de visualisaties die in het dashboard worden getoond.
 
-Voor een algemeen overzicht van Platform UI, verwijs naar de [ gids UI van Experience Platform ](../../landing/ui-guide.md).
+Voor een algemeen overzicht van Experience Platform UI, verwijs naar de [ gids UI van Experience Platform ](../../landing/ui-guide.md).
 
 ## [!UICONTROL License usage] dashboardgegevens
 
@@ -148,11 +148,11 @@ De gegevens in dit dashboard worden precies zo weergegeven als op het specifieke
 
 >[!NOTE]
 >
->De meeste metriek in het dashboard worden dagelijks bijgewerkt, gebaseerd op een momentopname van uw instantie van het Platform. [!UICONTROL CJA Rows Available] is een uitzondering en wordt maandelijks bijgewerkt. Metrische gegevens met de labels &quot;packages&quot;, zoals [!UICONTROL Adhoc Query Service Users Packs] , [!UICONTROL Profile Richness No of Packs] en [!UICONTROL Streaming Segmentation No of Packs] , weerspiegelen licentierechten voor add-on-aanbiedingen en houden geen gegevens bij van het huidige gebruik. Wijzigingen die na de opname worden aangebracht, zijn pas zichtbaar wanneer de volgende opname wordt gemaakt.
+>De meeste metriek in het dashboard worden dagelijks bijgewerkt op basis van een momentopname van uw Experience Platform-exemplaar. [!UICONTROL CJA Rows Available] is een uitzondering en wordt maandelijks bijgewerkt. Metrische gegevens met de labels &quot;packages&quot;, zoals [!UICONTROL Adhoc Query Service Users Packs] , [!UICONTROL Profile Richness No of Packs] en [!UICONTROL Streaming Segmentation No of Packs] , weerspiegelen licentierechten voor add-on-aanbiedingen en houden geen gegevens bij van het huidige gebruik. Wijzigingen die na de opname worden aangebracht, zijn pas zichtbaar wanneer de volgende opname wordt gemaakt.
 
 ## Het dashboard voor licentiegebruik verkennen {#explore}
 
-Als u naar het dashboard voor licentiegebruik in de gebruikersinterface van het platform wilt navigeren, selecteert u **[!UICONTROL License usage]** in de linkertrack. Het dashboard bevat twee tabbladen: **[!UICONTROL Metrics]** en **[!UICONTROL Products]** .
+Als u naar het dashboard voor licentiegebruik in de gebruikersinterface van Experience Platform wilt navigeren, selecteert u **[!UICONTROL License usage]** in de linkertrack. Het dashboard bevat twee tabbladen: **[!UICONTROL Metrics]** en **[!UICONTROL Products]** .
 
 >[!NOTE]
 >
@@ -338,4 +338,4 @@ De beschikbaarheid van deze cijfers en de specifieke definitie van elk van deze 
 
 Nadat u dit document hebt gelezen, kunt u het dashboard voor het licentiegebruik vinden en de gebruiksgegevens voor elk aangeschaft product, voor alle productie- of ontwikkelingssandboxen en voor een specifieke sandbox bekijken. Meer informatie over de beschikbare metriek voor uw organisatie vindt u op basis van de licentie die uw organisatie heeft aangeschaft.
 
-Meer over andere eigenschappen leren beschikbaar in Experience Platform UI, verwijs naar de [ gids UI van het Platform ](../../landing/ui-guide.md).
+Meer over andere eigenschappen leren beschikbaar in Experience Platform UI, verwijs naar de [ gids van Experience Platform UI ](../../landing/ui-guide.md).

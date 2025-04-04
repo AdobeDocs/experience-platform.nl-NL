@@ -4,9 +4,9 @@ title: Sitepagina
 description: Adobe Experience Platform biedt een dashboard waarmee u belangrijke informatie kunt bekijken over het publiek dat uw organisatie heeft gemaakt.
 type: Documentation
 exl-id: de5e07bc-2c44-416e-99db-7607059117cb
-source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '2951'
+source-wordcount: '2955'
 ht-degree: 0%
 
 ---
@@ -15,11 +15,11 @@ ht-degree: 0%
 
 De gebruikersinterface van Adobe Experience Platform (UI) verstrekt een dashboard waardoor u belangrijke informatie over uw publiek kunt bekijken, zoals die tijdens een dagelijkse momentopname wordt gevangen. In deze handleiding wordt beschreven hoe u het dashboard [!UICONTROL Audiences] in de gebruikersinterface kunt openen en gebruiken en wordt meer informatie gegeven over de visualisaties die in het dashboard worden weergegeven.
 
-Voor een overzicht van alle eigenschappen van de Dienst van de Segmentatie van Adobe Experience Platform binnen het gebruikersinterface van het Platform, gelieve te bezoeken de [ gids UI van de Dienst van de Segmentatie UI ](../../segmentation/ui/overview.md).
+Voor een overzicht van alle eigenschappen van de Dienst van de Segmentatie van Adobe Experience Platform binnen het gebruikersinterface van Experience Platform, gelieve de [ gids UI van de Dienst van de Segmentatie te bezoeken ](../../segmentation/ui/overview.md).
 
 ## [!UICONTROL Audiences] dashboardgegevens
 
-Het dashboard van [!UICONTROL Audiences] toont een momentopname van de attributen (verslag) gegevens die uw organisatie binnen de opslag van het Profiel in Experience Platform heeft. De momentopname bevat geen gebeurtenis (tijdreeks)-gegevens.
+Op het dashboard van [!UICONTROL Audiences] wordt een momentopname weergegeven van de kenmerkgegevens (record) die uw organisatie heeft in het Profile Store in Experience Platform. De momentopname bevat geen gebeurtenis (tijdreeks)-gegevens.
 
 De kenmerkgegevens in de momentopname geven de gegevens precies zo weer als op het specifieke tijdstip waarop de momentopname is gemaakt. Met andere woorden, de momentopname is geen benadering of voorbeeld van de gegevens en het dashboard van [!UICONTROL Audiences] wordt niet in real-time bijgewerkt.
 
@@ -29,11 +29,11 @@ De kenmerkgegevens in de momentopname geven de gegevens precies zo weer als op h
 
 ## Het dashboard van [!UICONTROL Audiences] verkennen {#explore}
 
-Als u naar het [!UICONTROL Audiences] -dashboard in de gebruikersinterface van het platform wilt navigeren, selecteert u **[!UICONTROL Audiences]** in de linkertrack en selecteert u vervolgens het tabblad **[!UICONTROL Overview]** om het dashboard weer te geven.
+Als u naar het [!UICONTROL Audiences] dashboard in de gebruikersinterface van Experience Platform wilt navigeren, selecteert u **[!UICONTROL Audiences]** in de linkertrack en selecteert u vervolgens het tabblad **[!UICONTROL Overview]** om het dashboard weer te geven.
 
 >[!NOTE]
 >
->Als uw organisatie nieuw is aan Platform en nog geen actieve datasets van het Profiel of gecreeerd samenvoegbeleid heeft, is het [!UICONTROL Audiences] dashboard niet zichtbaar. In plaats daarvan geeft het tabblad [!UICONTROL Overview] koppelingen en documentatie weer om u te helpen aan de slag te gaan met segmentatie.
+>Als uw organisatie nieuw is voor Experience Platform en nog geen actieve profielgegevenssets of samenvoegbeleid heeft gemaakt, is het dashboard van [!UICONTROL Audiences] niet zichtbaar. In plaats daarvan geeft het tabblad [!UICONTROL Overview] koppelingen en documentatie weer om u te helpen aan de slag te gaan met segmentatie.
 
 ![ het [!UICONTROL Audiences] dashboard [!UICONTROL Overview] lusje met [!UICONTROL Audiences] en [!UICONTROL Overview] benadrukte.](../images/audiences/dashboard-overview.png)
 
@@ -53,7 +53,7 @@ In de widgetbibliotheek kunt u bladeren door de selectie van standaard- en aange
 
 ### SQL weergeven {#view-sql}
 
-U kunt de SQL bekijken die de inzichten produceert die op uw dashboard met een knevel op de [!UICONTROL Overview] werkruimte worden visualiseerd. U kunt inspiratie putten uit de SQL van uw bestaande inzichten om nieuwe vragen tot stand te brengen die unieke inzichten uit de gegevens van het Platform voortbrengen die op uw bedrijfsbehoeften worden gebaseerd. Om meer over deze eigenschap te leren, zie de [ SQL gids van de Mening UI ](../view-sql.md).
+U kunt de SQL bekijken die de inzichten produceert die op uw dashboard met een knevel op de [!UICONTROL Overview] werkruimte worden visualiseerd. U kunt inspiratie putten uit de SQL van uw bestaande inzichten om nieuwe vragen tot stand te brengen die unieke inzichten van de gegevens van Experience Platform afleiden die op uw bedrijfsbehoeften worden gebaseerd. Om meer over deze eigenschap te leren, zie de [ SQL gids van de Mening UI ](../view-sql.md).
 
 ## Een publiek selecteren {#select-audience}
 
@@ -119,7 +119,7 @@ Het AI-model waarmee de densiteitsscores worden bepaald, wordt gekozen uit de ve
 
 Selecteer **[!UICONTROL View model details]** om naar de pagina met gedetailleerde inzichten voor het geselecteerde AI-model van de Klant te navigeren.
 
-![ het dashboard van het Soorten Soorten publiek van het Experience Platform met [!UICONTROL Customer AI distribution of scores] wordt benadrukt widget en [!UICONTROL View model details].](../images/segments/customer-ai-distribution-of-scores.png)
+![ het dashboard van het Soorten Soorten publiek van Experience Platform met [!UICONTROL Customer AI distribution of scores] wordt benadrukt widget en [!UICONTROL View model details].](../images/segments/customer-ai-distribution-of-scores.png)
 
 De gedetailleerde pagina met modelinzichten wordt weergegeven.
 
@@ -146,7 +146,7 @@ Het vervolgkeuzemenu onder de widgettitel bevat een lijst met alle geconfigureer
 >
 >Het totale aantal berekende profielen is afhankelijk van het gekozen samenvoegingsbeleid. Als u het gebruikte samenvoegingsbeleid wilt wijzigen, selecteert u de vervolgkeuzelijst direct onder het tabblad Overzicht. Zie de sectie over [ fusiebeleid ](#merge-policies) voor een korte beschrijving, of het [ overzicht van het fusiebeleid ](../../profile/merge-policies/overview.md) voor meer details.
 
-![ het dashboard van de Soorten Soorten Soorten publiek van het Experience Platform met de benadrukte het scoren van de Klant AI summiere widget.](../images/segments/customer-ai-scoring-summary.png)
+![ het dashboard van het publiek van Experience Platform met de benadrukte het scoren van de overzichtswidget van AI van de Klant.](../images/segments/customer-ai-scoring-summary.png)
 
 Selecteer **[!UICONTROL View model details]** om naar de gedetailleerde pagina met inzichten voor het geselecteerde AI-model van de Klant te navigeren. Meer informatie over Klant AI kan op [ worden gevonden ontdek de gids van inzicht UI ](../../intelligent-services/customer-ai/user-guide/discover-insights.md).
 
@@ -243,7 +243,7 @@ Het dialoogvenster [!UICONTROL Audience overlap report] wordt weergegeven. Dit d
 >
 >Selecteer de kolomkop **[!UICONTROL Overlapping]** om de volgorde van de resultaten te wijzigen van het hoogste naar het laagste of het laagste naar het hoogste.
 
-Als u het volledige rapport in de indeling PDF wilt downloaden, selecteert u het optiemenu (**`...`**) gevolgd door **[!UICONTROL Download]** .
+Als u het volledige rapport in PDF-indeling wilt downloaden, selecteert u het optiemenu (**`...`**) gevolgd door **[!UICONTROL Download]** .
 
 ![ het publiek overlapt rapportdialoog met de ellipsen en benadrukte optie van de Download.](../images/audiences/audience-overlap-report-dialog-download.png)
 
@@ -297,4 +297,4 @@ Met de widget kunt u in één oogopslag zien waar en wanneer het publiek wordt g
 
 ## Volgende stappen
 
-Als u dit document volgt, kunt u nu het dashboard van [!UICONTROL Audiences] vinden en een publiek selecteren om te bekijken. U moet ook weten welke maatstaven worden weergegeven in de beschikbare widgets. Meer leren over het werken met publiek in het Experience Platform UI, gelieve te verwijzen naar de [ gids UI van de Dienst van de Segmentatie ](../../segmentation/ui/overview.md).
+Als u dit document volgt, kunt u nu het dashboard van [!UICONTROL Audiences] vinden en een publiek selecteren om te bekijken. U moet ook weten welke maatstaven worden weergegeven in de beschikbare widgets. Meer leren over het werken met publiek in Experience Platform UI, gelieve te verwijzen naar de [ gids UI van de Dienst van de Segmentatie ](../../segmentation/ui/overview.md).

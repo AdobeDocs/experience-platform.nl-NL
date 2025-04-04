@@ -5,21 +5,21 @@ user-guide-title: Hulp bij Intelligent Services
 breadcrumb-title: Handleiding voor Intelligent Services
 user-guide-description: Gebruik intelligente AI-services om scores te genereren, inzichten te ontdekken en segmenten te maken op basis van uw marketinggebeurtenisgegevens.
 role: User
-source-git-commit: e828485ad5b0904c9dc66b43d1cdb3c4707885b1
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '136'
-ht-degree: 20%
+source-wordcount: '137'
+ht-degree: 26%
 
 ---
 
 
-# Adobe Intelligente Diensten {#intelligent-services}
+# Adobe Intelligent Services {#intelligent-services}
 
 - [Overzicht van intelligente services](home.md)
 - [Gegevens voorbereiden voor gebruik in Intelligente services](data-preparation.md)
 - Attribution AI {#attribution-ai}
    - [Overzicht](attribution-ai/overview.md)
-   - [Aan de slag met Attribution AI](attribution-ai/getting-started.md)
+   - [Aan de slag met Attributie AI](attribution-ai/getting-started.md)
    - [Invoer en uitvoer](attribution-ai/input-output.md)
    - [Handleiding gebruikersinterface](attribution-ai/user-guide.md)
    - [Inzichten ontdekken](attribution-ai/discover-insights.md)
@@ -28,7 +28,7 @@ ht-degree: 20%
       - [Toegangsbesturingselementen](attribution-ai/aai-data-governance/access-controls.md)
       - [Controlelogboeken](attribution-ai/aai-data-governance/audit-logs.md)
       - [Door de klant beheerde sleutels](attribution-ai/aai-data-governance/customer-managed-keys.md)
-      - [Gegevensbeheer](attribution-ai/aai-data-governance/data-governance.md)
+      - [Datagovernance](attribution-ai/aai-data-governance/data-governance.md)
       - [Beleid inzake governance](attribution-ai/aai-data-governance/governance-policies.md)
    - [Muziek analyseren met Query Service](attribution-ai/aai-query-service.md)
    - [Problemen oplossen](attribution-ai/troubleshooting.md)
@@ -53,6 +53,6 @@ ht-degree: 20%
       - [Toegangsbesturingselementen](customer-ai/cai-data-governance/access-controls.md)
       - [Controlelogboeken](customer-ai/cai-data-governance/audit-logs.md)
       - [Door de klant beheerde sleutels](customer-ai/cai-data-governance/customer-managed-keys.md)
-      - [Gegevensbeheer](customer-ai/cai-data-governance/data-governance.md)
+      - [Datagovernance](customer-ai/cai-data-governance/data-governance.md)
       - [Beleid inzake governance](customer-ai/cai-data-governance/governance-policies.md)
-- [ de versienota&#39;s van het Platform ](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)
+- [Releaseopmerkingen bij Experience Platform](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)

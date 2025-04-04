@@ -1,19 +1,19 @@
 ---
 title: API-eindpunt voor controlegebeurtenissen
-description: Leer hoe te om controlegebeurtenissen in Experience Platform terug te winnen gebruikend de Vraag van de Controle API.
+description: Leer hoe u auditgebeurtenissen in Experience Platform ophaalt met behulp van de API voor auditquery.
 role: Developer
 feature: Audits, API
 exl-id: c365b6d8-0432-41a5-9a07-44a995f69b7d
-source-git-commit: c0eb5b5c3a1968cae2bc19b7669f70a97379239b
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '474'
+source-wordcount: '477'
 ht-degree: 0%
 
 ---
 
 # Het eindpunt van gebeurtenissen controleren
 
-De logboeken van de controle worden gebruikt om details van gebruikersactiviteit voor diverse diensten en mogelijkheden te verstrekken. Elke actie die in een logboek wordt geregistreerd bevat meta-gegevens die op het actietype, datum en tijd, e-mailidentiteitskaart van de gebruiker die de actie, en extra attributen relevant voor het actietype uitvoerde. Met het eindpunt `/audit/events` in de [!DNL Audit Query] API kunt u gebeurtenisgegevens voor de activiteit van uw organisatie in [!DNL Platform] programmatisch ophalen.
+De logboeken van de controle worden gebruikt om details van gebruikersactiviteit voor diverse diensten en mogelijkheden te verstrekken. Elke actie die in een logboek wordt geregistreerd bevat meta-gegevens die op het actietype, datum en tijd, e-mailidentiteitskaart van de gebruiker die de actie, en extra attributen relevant voor het actietype uitvoerde. Met het eindpunt `/audit/events` in de [!DNL Audit Query] API kunt u gebeurtenisgegevens voor de activiteit van uw organisatie in [!DNL Experience Platform] programmatisch ophalen.
 
 ## Aan de slag
 
@@ -21,7 +21,7 @@ Het API eindpunt dat in deze gids wordt gebruikt maakt deel uit van [[!DNL Audit
 
 ## Controles weergeven
 
-U kunt gebeurtenisgegevens terugwinnen door een verzoek van de GET tot het `/audit/events` eindpunt te richten, specificerend de gebeurtenissen u in de nuttige lading wenst terug te winnen.
+U kunt gebeurtenisgegevens ophalen door een GET-aanvraag in te dienen bij het `/audit/events` -eindpunt en de gebeurtenissen op te geven die u in de payload wilt ophalen.
 
 **API formaat**
 
@@ -152,9 +152,9 @@ Een succesvolle reactie keert de resulterende datapoints voor de metriek en de f
 | `imsOrgId` | De id van de organisatie waarop de gebeurtenis heeft plaatsgevonden. |
 | `permissionResource` | Het product of de capaciteit die de toestemming verstrekte voeren de actie uit. Een bron kan een van de volgende zijn: <ul><li>`Activation` </li><li>`ActivationAssociation` </li><li>`AnalyticSource` </li><li>`AudienceManagerSource` </li><li>`BizibleSource` </li><li>`CustomerAttributeSource` </li><li>`Dataset` </li><li>`EnterpriseSource` </li><li>`LaunchSource` </li><li>`MarketoSource` </li><li>`ProductProfile` </li><li>`ProfileConfig` </li><li>`Sandbox` </li><li>`Schema` </li><li>`Segment` </li><li>`StreamingSource` </li></ul> |
 | `permissionType` | Het type machtiging dat bij de handeling is betrokken. |
-| `assetType` | Het type van middel van het Platform dat de actie werd uitgevoerd. |
-| `assetId` | Een unieke id voor de Platform-bron waarop de actie is uitgevoerd. |
-| `assetName` | De naam van de bron van het Platform waarop de actie werd uitgevoerd. |
+| `assetType` | Het type Experience Platform-resource waarop de handeling is uitgevoerd. |
+| `assetId` | Een unieke id voor de Experience Platform-bron waarop de handeling is uitgevoerd. |
+| `assetName` | De naam van de Experience Platform-bron waarop de handeling is uitgevoerd. |
 | `action` | Het type actie dat is opgenomen voor de gebeurtenis. Een handeling kan een van de volgende handelingen zijn: <ul><li>`Add` </li><li>`Create` </li><li>`Dataset activate` </li><li>`Dataset remove` </li><li>`Delete` </li><li>`Disable for profile` </li><li>`Enable` </li><li>`Enable for profile` </li><li>`Profile activate` </li><li>`Profile remove` </li><li>`remove` </li><li>`reset` </li><li>`segment activate` </li><li>`segment remove` </li><li>`update` </li></ul> |
 | `status` | De status van de actie. Een status kan een van de volgende zijn: </li><li>`Allow` </li><li>`Deny` </li><li>`Failure` </li><li>`Success` </li></ul> |
 

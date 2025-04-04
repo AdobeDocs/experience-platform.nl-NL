@@ -2,9 +2,9 @@
 title: MediaAnalytics Interaction Details Schema Field Group
 description: Leer over de MediaAnalytics het schemagroep van Details van de Interactie.
 exl-id: 1096d28a-5796-49cc-bd45-b3f5188f699e
-source-git-commit: b81afb8f6c4eaedb19a58b6fe3896286f1486804
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '200'
+source-wordcount: '201'
 ht-degree: 0%
 
 ---
@@ -25,7 +25,7 @@ ht-degree: 0%
 
 >[!TIP]
 >
->U kunt velden verbergen die niet worden gebruikt door de Media Edge API. Het verbergen van deze gebieden maakt het schema gemakkelijker te lezen en te begrijpen, maar het wordt niet vereist. Deze velden verwijzen alleen naar de velden in de veldgroep [!UICONTROL MediaAnalytics Interaction Details] . Om leesbaarheid in het Platform UI te verbeteren, volg de instructies in de [ documentatie van de Analytics van Media op hoe te om ongebruikte gebieden ](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/edge-recommended/media-edge-sdk/implementation-edge.html#set-up-the-schema-in-adobe-experience-platform) te verbergen.
+>U kunt velden verbergen die niet worden gebruikt door de Media Edge API. Het verbergen van deze gebieden maakt het schema gemakkelijker te lezen en te begrijpen, maar het wordt niet vereist. Deze velden verwijzen alleen naar de velden in de veldgroep [!UICONTROL MediaAnalytics Interaction Details] . Om leesbaarheid in Experience Platform UI te verbeteren, volg de instructies in de [ documentatie van de Analytics van Media op hoe te om ongebruikte gebieden ](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/edge-recommended/media-edge-sdk/implementation-edge.html#set-up-the-schema-in-adobe-experience-platform) te verbergen.
 
 <!-- 
 >[!NOTE]

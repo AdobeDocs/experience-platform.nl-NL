@@ -5,7 +5,7 @@ doc-type: release notes
 last-update: September 13, 2019
 author: ens28527
 exl-id: 7f503046-a3b4-4fdb-833c-4205b6e9fa04
-source-git-commit: 863889984e5e77770638eb984e129e720b3d4458
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '531'
 ht-degree: 6%
@@ -36,13 +36,13 @@ Voor meer informatie, bezoek de [ documentatie van de Ingestie van Gegevens ](..
 
 ## [!DNL Data Science Workspace] {#dsw}
 
-Adobe Experience Platform [!DNL Data Science Workspace] is een volledig beheerde service binnen [!DNL Experience Platform] waarmee wetenschappers gegevens op naadloze wijze inzichten kunnen genereren op basis van gegevens en inhoud in oplossingen voor Adoben en systemen van derden door modellen voor het leren van machines te maken en te exploiteren. [!DNL Data Science Workspace] is nauw geïntegreerd met [!DNL Platform] en maakt de levenscyclus van de end-to-end gegevenswetenschap mogelijk, inclusief de exploratie en voorbereiding van XDM-gegevens, gevolgd door de ontwikkeling en de exploitatie van Modellen om [!DNL Real-Time Customer Profile] automatisch te verrijken met Inzichten voor het leren van machines.
+Adobe Experience Platform [!DNL Data Science Workspace] is een volledig beheerde service binnen [!DNL Experience Platform] waarmee wetenschappers gegevens naadloos inzichten kunnen genereren op basis van gegevens en inhoud in Adobe-oplossingen en systemen van derden door Machine Learning Models te maken en te exploiteren. [!DNL Data Science Workspace] is nauw geïntegreerd met [!DNL Experience Platform] en maakt de levenscyclus van de end-to-end gegevenswetenschap mogelijk, inclusief de exploratie en voorbereiding van XDM-gegevens, gevolgd door de ontwikkeling en de exploitatie van Modellen om [!DNL Real-Time Customer Profile] automatisch te verrijken met Inzichten voor het leren van machines.
 
 **Nieuwe functies**
 
 | Functie | Beschrijving |
 | -----------| ---------- |
-| Planning van de Diensten via UI | Geïntegreerd met [!DNL Platform] Orchestration Service om modeltraining en -scoring te automatiseren met door de gebruiker gedefinieerde schema&#39;s met behulp van de gebruikersinterface. |
+| Planning van de Diensten via UI | Geïntegreerd met [!DNL Experience Platform] Orchestration Service om modeltraining en -scoring te automatiseren met door de gebruiker gedefinieerde schema&#39;s met behulp van de gebruikersinterface. |
 | [!DNL Service Gallery] | Blader door, controleer en open de services voor machinaal leren, met de mogelijkheid om geautomatiseerde training en scoring taken te plannen, allemaal in de nieuwe versie [!DNL Service Gallery] . |
 | [!DNL JupyterLab] 5.0.0 | [!DNL JupyterLab] Verbeteringen in de gebruikersinterface. |
 
@@ -65,7 +65,7 @@ Met [!DNL Query Service] kunt u gegevensanalysecosystemen samenstellen, zodat u 
 | Functie | Beschrijving |
 | -----------| ---------- |
 | Verbeteringen in [!DNL Query Editor] | Er is een opslagfunctie toegevoegd waarmee u een query kunt opslaan en er later aan kunt werken. Het tabblad &quot;Bladeren&quot; is toegevoegd aan de gebruikersinterface van [!DNL Query Service] in Adobe Experience Platform waarin query&#39;s worden weergegeven die zijn opgeslagen door gebruikers in uw organisatie. Het deelvenster &quot;Query-details&quot; is geïmplementeerd waarin nuttige metagegevens worden weergegeven over de query die wordt weergegeven. |
-| Nieuwe toewijzingsfuncties | Adobe-bepaalde functies in [!DNL Query Service] aan vraag voor kanaalattributie met vervalparameters. |
+| Nieuwe toewijzingsfuncties | Adobe-gedefinieerde functies in [!DNL Query Service] om te zoeken naar kanaaltoewijzing met vervalparameters. |
 | Verbeteringen in SQL-syntaxis | Ondersteuning voor ilike-syntaxis. |
 | Gegevenssets genereren met een gedefinieerd XDM-schema | Een nieuwe clausule in Create Lijst als Uitgezochte vragen (CTAS) toegevoegd die u toestaat om een doelschema te specificeren. |
 

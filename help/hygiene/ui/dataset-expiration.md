@@ -2,9 +2,9 @@
 title: Geautomatiseerde gegevensset verlopen
 description: Leer hoe te om een datasetvervaldatum in Adobe Experience Platform UI te plannen.
 exl-id: 97db55e3-b5d6-40fd-94f0-2463fe041671
-source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '835'
+source-wordcount: '837'
 ht-degree: 0%
 
 ---
@@ -22,13 +22,13 @@ De [[!UICONTROL Data Lifecycle] werkruimte ](./overview.md) in Adobe Experience 
 >
 >Als een dataset wordt geplaatst om te verlopen, moet u om het even welke gegevensstromen manueel veranderen die gegevens in die dataset kunnen opnemen zodat uw stroomafwaartse werkschema&#39;s niet negatief worden beïnvloed.
 
-In dit document wordt beschreven hoe u gegevenssetvervaldatums in de gebruikersinterface van het platform kunt plannen en automatiseren.
+In dit document wordt beschreven hoe u gegevenssetvervaldatums in de gebruikersinterface van Experience Platform kunt plannen en automatiseren.
 
 >[!NOTE]
 >
 >Gegevens worden momenteel niet verwijderd uit de Adobe Experience Platform Edge Network. Er is echter geen mogelijkheid dat gegevens binnen de Edge Network blijven nadat de gegevensset is ingesteld op verlopen. Dit komt doordat de 15-daagse licentieovereenkomst voor Dataset Expiration overlapt met de periode van 14 dagen waarin gegevens in de Edge Network aanwezig zijn voordat ze worden verwijderd.
 
-Het geavanceerde Beheer van de Levenscyclus van Gegevens steunt datasetschrappingen door het [ eindpunt van de gegevenssetvervalsing ](../api/dataset-expiration.md) en identiteitskaart schrappingen (rij-vlakke gegevens) gebruikend primaire identiteiten via het [ werkordeeindpunt ](../api/workorder.md). U kunt datasetvervalingen en [ verslagschrappingen ](./record-delete.md) door Platform UI ook beheren. Raadpleeg de gekoppelde documentatie voor meer informatie.
+Het geavanceerde Beheer van de Levenscyclus van Gegevens steunt datasetschrappingen door het [ eindpunt van de gegevenssetvervalsing ](../api/dataset-expiration.md) en identiteitskaart schrappingen (rij-vlakke gegevens) gebruikend primaire identiteiten via het [ werkordeeindpunt ](../api/workorder.md). U kunt datasetvervalingen en [ verslagschrappingen ](./record-delete.md) door Experience Platform UI ook beheren. Raadpleeg de gekoppelde documentatie voor meer informatie.
 
 >[!NOTE]
 >

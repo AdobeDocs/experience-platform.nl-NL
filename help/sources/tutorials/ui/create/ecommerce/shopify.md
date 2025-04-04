@@ -1,11 +1,11 @@
 ---
-keywords: Experience Platform;thuis;populaire onderwerpen;uitspringen;Schuiven
+keywords: Experience Platform;home;populaire onderwerpen;winkelify;Shopify
 solution: Experience Platform
 title: Een Shopify Source Connection maken in de gebruikersinterface
 type: Tutorial
 description: Leer hoe u een Shopify-bronverbinding maakt met de gebruikersinterface van Adobe Experience Platform.
 exl-id: 527cac95-3d9a-4089-98e4-66d746641b85
-source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '430'
 ht-degree: 0%
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # Een [!DNL Shopify] bronverbinding maken in de gebruikersinterface
 
-Source-connectors in Adobe Experience Platform bieden de mogelijkheid om volgens een schema extern gesourceerde gegevens in te voeren. Deze zelfstudie bevat stappen voor het maken van een [!DNL Shopify] bronaansluiting met behulp van de gebruikersinterface van [!DNL Platform] .
+Source-connectors in Adobe Experience Platform bieden de mogelijkheid om volgens een schema extern gesourceerde gegevens in te voeren. Deze zelfstudie bevat stappen voor het maken van een [!DNL Shopify] bronaansluiting met behulp van de gebruikersinterface van [!DNL Experience Platform] .
 
 ## Aan de slag
 
@@ -29,7 +29,7 @@ Als u reeds een [!DNL Shopify] verbinding hebt, kunt u de rest van dit document 
 
 ### Vereiste referenties verzamelen
 
-Als u toegang wilt krijgen tot uw [!DNL Shopify] account op [!DNL Platform] , moet u de volgende waarden opgeven:
+Als u toegang wilt krijgen tot uw [!DNL Shopify] account op [!DNL Experience Platform] , moet u de volgende waarden opgeven:
 
 | Credentials | Beschrijving |
 | ---------- | ----------- |
@@ -40,7 +40,7 @@ Voor meer informatie over begonnen worden, verwijs naar dit [[!DNL Shopify]  doc
 
 ## Sluit uw [!DNL Shopify] -account aan
 
-Nadat u de vereiste gegevens hebt verzameld, voert u de onderstaande stappen uit om uw [!DNL Shopify] -account te koppelen aan [!DNL Platform] .
+Nadat u de vereiste gegevens hebt verzameld, voert u de onderstaande stappen uit om uw [!DNL Shopify] -account te koppelen aan [!DNL Experience Platform] .
 
 Login aan [ Adobe Experience Platform ](https://platform.adobe.com) en selecteer dan **[!UICONTROL Sources]** van de linkernavigatiebar om tot de **[!UICONTROL Sources]** werkruimte toegang te hebben. In het scherm **[!UICONTROL Catalog]** worden diverse bronnen weergegeven waarmee u een account kunt maken.
 
@@ -66,4 +66,4 @@ Als u een bestaande account wilt verbinden, selecteert u de [!DNL Shopify] -acco
 
 ## Volgende stappen
 
-Aan de hand van deze zelfstudie hebt u een verbinding tot stand gebracht met uw [!DNL Shopify] -account. U kunt nu aan het volgende leerprogramma verdergaan en [ een dataflow vormen om eCommerce-gegevens in  [!DNL Platform]](../../dataflow/ecommerce.md) te brengen.
+Aan de hand van deze zelfstudie hebt u een verbinding tot stand gebracht met uw [!DNL Shopify] -account. U kunt nu aan het volgende leerprogramma verdergaan en [ een dataflow vormen om eCommerce-gegevens in  [!DNL Experience Platform]](../../dataflow/ecommerce.md) te brengen.

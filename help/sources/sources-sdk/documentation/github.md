@@ -1,12 +1,12 @@
 ---
-keywords: Experience Platform;thuis;populaire onderwerpen;bronnen;connectors;bronconnectors;bronnen sdk;sdk;SDK
+keywords: Experience Platform;home;populaire onderwerpen;bronnen;connectors;bronconnectors;bronnen sdk;sdk;SDK
 solution: Experience Platform
 title: Gebruik de Interface van het Web van GitHub om een Pagina van de Documentatie van Bronnen te creëren
 description: Dit document verstrekt stappen op hoe te om de het Webinterface van GitHub aan auteursdocumentatie te gebruiken en een trekkingsverzoek (PR) voor te leggen.
 exl-id: 84b4219c-b3b2-4d0a-9a65-f2d5cd989f95
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '564'
+source-wordcount: '565'
 ht-degree: 0%
 
 ---
@@ -17,7 +17,7 @@ Dit document verstrekt stappen op hoe te om de het Webinterface van GitHub aan a
 
 >[!TIP]
 >
->De volgende documenten uit de bijdragende gids van de Adobe kunnen worden gebruikt om uw documentatieproces verder te steunen: <ul><li>[ installeer Git en de Authoring hulpmiddelen van de Prijsverhoging ](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/install-tools.html)</li><li>{de plaats van de Git van de opstelling plaatselijk voor documentatie ](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html)[</li><li>[ GitHub bijdragewerkschema voor belangrijkste veranderingen ](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/full-workflow.html)</li></ul>
+>De volgende documenten uit de bijdragende gids van Adobe kunnen worden gebruikt om uw documentatieproces verder te steunen: <ul><li>[ installeer Git en de Authoring hulpmiddelen van de Prijsverhoging ](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/install-tools.html)</li><li>{de plaats van de Git van de opstelling plaatselijk voor documentatie ](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html)[</li><li>[ GitHub bijdragewerkschema voor belangrijkste veranderingen ](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/full-workflow.html)</li></ul>
 
 ## Opstelling uw milieu GitHub
 
@@ -45,7 +45,7 @@ Er wordt een map met bestaande CRM-bronnen weergegeven. Om documentatie voor een
 
 ![ creeer-nieuw-dossier ](../assets/create-new-file.png)
 
-Geef het bronbestand een naam `YOURSOURCE.md` waarbij UURSOURCE de naam van de bron in Platform is. Als uw bedrijf bijvoorbeeld ACME CRM is, moet uw bestandsnaam `acme-crm.md` zijn.
+Geef het bronbestand een naam `YOURSOURCE.md` waarbij UURSOURCE de naam van uw bron in Experience Platform is. Als uw bedrijf bijvoorbeeld ACME CRM is, moet uw bestandsnaam `acme-crm.md` zijn.
 
 ![ git-interface ](../assets/git-interface.png)
 
@@ -63,19 +63,19 @@ Als u klaar bent, legt u het bestand in de vertakking vast.
 
 ## De documentatie ter controle verzenden
 
-Als het bestand eenmaal is toegewezen, kunt u een pull-verzoek (PR) openen om uw werkvertakking samen te voegen in de hoofdvertakking van de documentatieopslagplaats van de Adobe. Zorg ervoor dat de tak u aan hebt gewerkt wordt geselecteerd, en selecteer dan **vergelijken &amp; trekken verzoek**.
+Nadat het bestand is toegewezen, kunt u een pull-verzoek (PR) openen om uw werkvertakking samen te voegen in de hoofdvertakking van de Adobe-documentatieopslagplaats. Zorg ervoor dat de tak u aan hebt gewerkt wordt geselecteerd, en selecteer dan **vergelijken &amp; trekken verzoek**.
 
 ![ vergelijking-pr ](../assets/compare-pr.png)
 
-Zorg ervoor dat de basis- en vergelijkingsvertakkingen correct zijn. Voeg een nota aan PR toe, beschrijvend uw update, en selecteer dan **trekken verzoek** creëren. Dit opent een PR om de werkende tak van uw werk in de hoofdtak van de bewaarplaats van de Adobe samen te voegen.
+Zorg ervoor dat de basis- en vergelijkingsvertakkingen correct zijn. Voeg een nota aan PR toe, beschrijvend uw update, en selecteer dan **trekken verzoek** creëren. Dit opent een PR om de werkende tak van uw werk in de hoofdtak van de bewaarplaats van Adobe samen te voegen.
 
 >[!TIP]
 >
->Verlaat **uitgeeft door instandhouders** geselecteerde checkbox toestaan om ervoor te zorgen dat het de documentatieteam van de Adobe aan PR kan uitgeven.
+>Verlaat **uitgeeft door instandhouders** geselecteerde checkbox toestaan om ervoor te zorgen dat het de documentatieteam van Adobe aan PR kan uitgeven.
 
 ![ creeer-pr ](../assets/create-pr.png)
 
-Op dit punt, lijkt een bericht dat u ertoe aanzet om de Overeenkomst van de Vergunning van de Medewerker van de Adobe (CLA) te ondertekenen. Dit is een verplichte stap. Nadat u CLA ondertekent, vernieuw de PR pagina en verzend het trekkingsverzoek.
+Op dit moment wordt een melding weergegeven waarin u wordt gevraagd de Adobe Contributor License Agreement (CLA) te ondertekenen. Dit is een verplichte stap. Nadat u CLA ondertekent, vernieuw de PR pagina en verzend het trekkingsverzoek.
 
 U kunt bevestigen dat het trekkingsverzoek is voorgelegd door het lusje van trekkingsverzoeken in https://github.com/AdobeDocs/experience-platform.en te inspecteren.
 

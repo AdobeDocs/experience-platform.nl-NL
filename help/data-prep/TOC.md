@@ -4,10 +4,10 @@ user-guide-title: Handleiding Data Prep
 user-guide-description: Bereid uw data voor voor opname in het Adobe Experience Platform en ontdek hoe het voorbereiden van data u vandaag kan helpen bij het toewijzen, transformeren en valideren van data.
 feature: Data Prep
 role: Developer
-source-git-commit: e828485ad5b0904c9dc66b43d1cdb3c4707885b1
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '61'
-ht-degree: 50%
+source-wordcount: '62'
+ht-degree: 56%
 
 ---
 
@@ -27,4 +27,4 @@ ht-degree: 50%
 - [Toewijzingssets](mapping-set.md)
 - [Stroom upserts](upserts.md)
 - [Handleiding voor probleemoplossing](troubleshooting-guide.md)
-- [ de versienota&#39;s van het Platform ](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)
+- [Releaseopmerkingen bij Experience Platform](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)

@@ -5,9 +5,9 @@ audience: user
 user-guide-title: Gids voor Real-time Customer Data Platform
 user-guide-description: Breng bekende en anonieme gegevens van meerdere bronnen van bedrijven bij elkaar om klantprofielen te maken, doelgroepsegmenten van die profielen te maken, en die segmenten voor externe doelen te activeren.
 role: Admin
-source-git-commit: 4c2431148f584f2ffd5de20b8880a6b4a10ff95e
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '301'
+source-wordcount: '302'
 ht-degree: 12%
 
 ---
@@ -40,7 +40,7 @@ ht-degree: 12%
    * [Customer AI](segmentation/customer-ai.md)
 * Gegevenssets {#datasets}
    * [Gegevenssets](datasets/dataset.md)
-   * [Gegevenskwaliteit op platform](datasets/data-quality.md)
+   * [Gegevenskwaliteit op Experience Platform](datasets/data-quality.md)
 * Doelen {#destinations}
    * [Overzicht van doelen](destinations/overview.md)
    * [Doelen in Real-Time CDP B2B edition](destinations/b2b.md)

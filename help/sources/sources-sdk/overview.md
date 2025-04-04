@@ -1,23 +1,23 @@
 ---
-keywords: Experience Platform;thuis;populaire onderwerpen;bronnen;connectors;bronconnectors;bronnen sdk;sdk;SDK
+keywords: Experience Platform;home;populaire onderwerpen;bronnen;connectors;bronconnectors;bronnen sdk;sdk;SDK
 solution: Experience Platform
 title: Zelfbedieningsbronnen (Batch SDK) - Overzicht
-description: Adobe Experience Platform Self-Serve Sources (Batch SDK) is een set configuratie-API's waarmee u een REST API-bron kunt integreren met behulp van de Flow Service API om uw gegevens naar het Experience Platform te brengen.
+description: Adobe Experience Platform Self-Serve Sources (Batch SDK) is een set configuratie-API's waarmee u een REST API-bron kunt integreren met behulp van de Flow Service API om uw gegevens naar Experience Platform te brengen.
 exl-id: 5d5449ad-a1ba-402b-a281-0b2d8b704f32
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
 source-wordcount: '592'
 ht-degree: 0%
 
 ---
 
-# Overzicht van Self-Serve Sources (Batch SDK)
+# Zelfbedieningsbronnen (Batch SDK) - overzicht
 
-Adobe Experience Platform Self-Serve Bronnen (Batch SDK) is een kader dat u toestaat om een REST API-based bron aan de catalogus van de Experience Platform te integreren bronbronnen gebruikend [[!DNL Flow Service]  API ](https://www.adobe.io/experience-platform-apis/references/flow-service/). Self-Serve Sources (Batch SDK) beschikt over een set configuratie-API&#39;s om uw eigen bron te maken en uw batchgegevens naar het Experience Platform te brengen.
+Adobe Experience Platform Self-Serve Sources (Batch SDK) is een kader dat u toestaat om een REST API-based bron aan de Experience Platform broncatalogus te integreren gebruikend [[!DNL Flow Service]  API ](https://www.adobe.io/experience-platform-apis/references/flow-service/). Self-Serve Sources (Batch SDK) beschikt over een set configuratie-API&#39;s om uw eigen bron te maken en uw batchgegevens naar Experience Platform te brengen.
 
 Met Self-Serve Bronnen (Batch SDK) kunt u:
 
-* Configureer en integreer een nieuwe bron met de API van [!DNL Flow Service] in de catalogus met Experience Platforms.
+* Configureer en integreer een nieuwe bron met de API van [!DNL Flow Service] in de Experience Platform-catalogus.
 * Definieer specificaties voor uw bron, inclusief informatie over ondersteunde verificatietypen en hoe brongegevens worden opgehaald.
 * Maak gebruikersgerichte documentatie voor uw nieuwe bron.
 
@@ -27,13 +27,13 @@ De Self-Serve documentatie van Bronnen verstrekt instructies om, een REST API-Ge
 
 ## Bronnen begrijpen
 
-Het Experience Platform kan gegevens uit externe bronnen opnemen terwijl het toestaan van u om die gegevens te structureren, te etiketteren en te verbeteren gebruikend de diensten van het Experience Platform. U kunt gegevens van een verscheidenheid van bronnen zoals de toepassingen van de Adobe, op wolk-gebaseerde opslag, derdesoftware, en uw systeem van CRM opnemen.
+Experience Platform kan gegevens uit externe bronnen invoeren, terwijl u die gegevens kunt structureren, labelen en verbeteren met behulp van Experience Platform-services. U kunt gegevens opnemen uit verschillende bronnen, zoals Adobe-toepassingen, cloudopslag, software van derden en uw CRM-systeem.
 
 Voor meer informatie over bronnen, en om een lijst van verschillende bronnen te zien die momenteel op Experience Platform worden gesteund, zie het [ overzicht van bronnen ](../home.md).
 
 ## Een bron maken
 
-Via Self-Serve Sources kunt u uw eigen REST API-bron integreren en uw gegevens naar het Experience Platform brengen met [!DNL Flow Service] . U kunt een bron integreren in de catalogus met bronnen in het Experience Platform door nieuwe verbindingsspecificaties te maken, te configureren en in te dienen via de [!DNL Flow Service] API.
+Via Self-Serve Sources kunt u uw eigen REST API-bron integreren en uw gegevens met [!DNL Flow Service] naar Experience Platform overbrengen. U kunt een bron integreren in de Experience Platform-broncatalogus door nieuwe verbindingsspecificaties te maken, te configureren en in te dienen via de [!DNL Flow Service] API.
 
 Zie de gids bij [ het creëren van een nieuwe verbindingsspecificatie ](./api/api-overview.md) voor informatie over hoe te om een nieuwe bron aan Experience Platform te integreren.
 
@@ -51,7 +51,7 @@ Het stapsgewijze proces voor het configureren van uw bron in Experience Platform
    * Volg het leerprogramma bij [ het bijwerken van uw verbindingsspecificatie ](./api/update-connection-specs.md).
    * Volg het leerprogramma op [ toevoegend uw nieuwe identiteitskaart van de verbindingsspecificatie aan een stroomspecificatie ](./api/update-flow-specs.md)
    * [ legt uw nieuwe bron ](./api/submit.md) voor.
-* Om een beter inzicht in de structuur en de eigenschappen van een verbindingsspecificatie te verkrijgen, lees de gids op [ configuratieopties voor Zelfbediening Bronnen (Batch SDK) ](./config/config.md).
+* Om een beter inzicht in de structuur en de eigenschappen van een verbindingsspecificatie te verkrijgen, lees de gids op [ configuratieopties voor Zelfbediening Bronnen (Partij SDK) ](./config/config.md).
    * Lees de gids op [ vormend uw authentificatiespecificaties ](./config/authspec.md) om een beter inzicht in de verschillende authentificatietypen te krijgen die u voor uw bron kunt gebruiken.
    * Lees de gids op [ vormend uw bronspecificaties ](./config/sourcespec.md) voor informatie over de verschillende pagineringstypes, het plannen van formaten, en douaneschema&#39;s die voor uw bron kunnen worden gevormd.
    * Lees de gids op [ vormend uw onderzoek specificaties ](./config/explorespec.md) voor informatie over hoe te om de parameters te bepalen die voor het onderzoeken van en het inspecteren van voorwerpen in uw bron worden vereist.

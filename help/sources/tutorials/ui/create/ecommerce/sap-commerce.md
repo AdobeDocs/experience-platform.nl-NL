@@ -3,9 +3,9 @@ title: Een SAP Commerce-bronverbinding maken in de gebruikersinterface
 description: Leer hoe u een SAP Commerce-bronverbinding maakt met de Adobe Experience Platform-gebruikersinterface.
 badge: Beta
 exl-id: 6484e51c-77cd-4dbd-9c68-0a4e3372da33
-source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '944'
+source-wordcount: '955'
 ht-degree: 0%
 
 ---
@@ -20,7 +20,7 @@ Het volgende leerprogramma begeleidt u door de stappen om een [!DNL SAP Commerce
 
 ## Aan de slag {#getting-started}
 
-Deze zelfstudie vereist een goed begrip van de volgende onderdelen van het Experience Platform:
+Deze zelfstudie vereist een goed begrip van de volgende onderdelen van Experience Platform:
 
 * [[!DNL Experience Data Model (XDM)]  Systeem ](../../../../../xdm/home.md): Het gestandaardiseerde kader waardoor [!DNL Experience Platform] gegevens van de klantenervaring organiseert.
    * [ Grondbeginselen van schemacompositie ](../../../../../xdm/schema/composition.md): Leer over de basisbouwstenen van schema&#39;s XDM, met inbegrip van zeer belangrijke principes en beste praktijken in schemacompositie.
@@ -31,7 +31,7 @@ Als u reeds een geldige [!DNL SAP Commerce] rekening hebt, kunt u de rest van di
 
 ### Vereiste referenties verzamelen {#gather-credentials}
 
-Als u [!DNL SAP Commerce] wilt verbinden met een Experience Platform, moet u waarden opgeven voor de volgende verbindingseigenschappen:
+Als u [!DNL SAP Commerce] wilt verbinden met Experience Platform, moet u waarden opgeven voor de volgende verbindingseigenschappen:
 
 | Credentials | Beschrijving |
 | --- | --- |
@@ -42,9 +42,9 @@ Als u [!DNL SAP Commerce] wilt verbinden met een Experience Platform, moet u waa
 
 Voor meer informatie, gelieve te verwijzen naar de [[!DNL SAP Commerce]  documentatie ](https://help.sap.com/docs/CLOUD_TO_CASH_OD/987aec876092428f88162e438acf80d6/c5fcaf96daff4c7a8520188e4d8a1843.html).
 
-### Een platformschema maken {#create-platform-schema}
+### Een Experience Platform-schema maken {#create-platform-schema}
 
-Voordat u een [!DNL SAP Commerce] -bronverbinding maakt, moet u er ook voor zorgen dat u eerst een Experience Platform-schema maakt dat u voor de bron kunt gebruiken. Zie het leerprogramma op [ creërend een schema van het Platform ](../../../../../xdm/schema/composition.md) voor uitvoerige stappen op hoe te om een schema tot stand te brengen.
+Voordat u een [!DNL SAP Commerce] -bronverbinding maakt, moet u er ook voor zorgen dat u eerst een Experience Platform-schema voor uw bron maakt. Zie het leerprogramma op [ creërend een schema van Experience Platform ](../../../../../xdm/schema/composition.md) voor uitvoerige stappen op hoe te om een schema tot stand te brengen.
 
 Vouw de volgende sectie uit om een voorbeeldschema weer te geven.
 
@@ -143,13 +143,13 @@ Vouw de volgende sectie uit om een voorbeeldschema weer te geven.
 
 ## Sluit uw [!DNL SAP Commerce] -account aan {#connect-account}
 
-Selecteer in de gebruikersinterface van het platform **[!UICONTROL Sources]** in de linkernavigatiebalk voor toegang tot de werkruimte van [!UICONTROL Sources] . In het scherm [!UICONTROL Catalog] worden diverse bronnen weergegeven waarmee u een account kunt maken.
+Selecteer in de gebruikersinterface van Experience Platform de optie **[!UICONTROL Sources]** in de linkernavigatiebalk voor toegang tot de werkruimte van [!UICONTROL Sources] . In het scherm [!UICONTROL Catalog] worden diverse bronnen weergegeven waarmee u een account kunt maken.
 
 U kunt de juiste categorie selecteren in de catalogus aan de linkerkant van het scherm. U kunt ook de specifieke bron vinden waarmee u wilt werken met de zoekoptie.
 
 Onder de *eCommerce* categorie, selecteer **[!UICONTROL SAP Commerce]**, en selecteer dan **[!UICONTROL Add data]**.
 
-{het schermschot van het platform UI voor catalogus met de kaart van SAP Commerce ](../../../../images/tutorials/create/ecommerce/sap-commerce/catalog-card.png)![
+{het schermschot van 0} Experience Platform UI voor catalogus met de kaart van SAP Commerce ](../../../../images/tutorials/create/ecommerce/sap-commerce/catalog-card.png)![
 
 De pagina **[!UICONTROL Connect SAP Commerce account]** wordt weergegeven. Op deze pagina kunt u nieuwe of bestaande referenties gebruiken.
 
@@ -157,17 +157,17 @@ De pagina **[!UICONTROL Connect SAP Commerce account]** wordt weergegeven. Op de
 
 Als u een bestaande account wilt gebruiken, selecteert u de [!DNL SAP Commerce] -account waarmee u een nieuwe gegevensstroom wilt maken en selecteert u vervolgens **[!UICONTROL Next]** om door te gaan.
 
-{het schermschot van het platform UI om de rekening van SAP Commerce met een bestaande rekening te verbinden ](../../../../images/tutorials/create/ecommerce/sap-commerce/existing.png)![
+{het schermschot van 0} Experience Platform UI om de rekening van SAP Commerce met een bestaande rekening te verbinden ](../../../../images/tutorials/create/ecommerce/sap-commerce/existing.png)![
 
 ### Nieuwe account {#new-account}
 
 Als u een nieuwe account maakt, selecteert u **[!UICONTROL New account]** en geeft u een naam, een optionele beschrijving en uw referenties op. Als u klaar bent, selecteert u **[!UICONTROL Connect to source]** en laat u de nieuwe verbinding enige tijd tot stand brengen.
 
-{het schermschot van het platform UI om de rekening van SAP Commerce met een nieuwe rekening te verbinden ](../../../../images/tutorials/create/ecommerce/sap-commerce/new.png)![
+{het schermschot van 0} Experience Platform UI om de rekening van SAP Commerce met een nieuwe rekening te verbinden ](../../../../images/tutorials/create/ecommerce/sap-commerce/new.png)![
 
 ### Gegevens selecteren {#select-data}
 
-Tot slot moet u het objecttype selecteren dat u wilt opnemen in Platform.
+Tot slot moet u het objecttype selecteren dat u aan Experience Platform wilt toevoegen.
 
 | Objecttype | Beschrijving |
 | --- | --- |
@@ -180,19 +180,19 @@ Tot slot moet u het objecttype selecteren dat u wilt opnemen in Platform.
 
 Als u klantgegevens wilt invoeren, selecteert u **[!UICONTROL Customers]** als objecttype en selecteert u vervolgens **[!UICONTROL Next]** .
 
-{het schermschot van het Platform UI voor SAP Commerce die configuratie met geselecteerde optie van Klanten toont ](../../../../images/tutorials/create/ecommerce/sap-commerce/configuration-customers.png)![
+{het schermschot van 0} Experience Platform UI voor SAP Commerce die configuratie met geselecteerde optie van Klanten toont ](../../../../images/tutorials/create/ecommerce/sap-commerce/configuration-customers.png)![
 
 >[!TAB  Contacten ]
 
 Als u contactgegevens wilt invoeren, selecteert u **[!UICONTROL Contacts]** als objecttype en selecteert u vervolgens **[!UICONTROL Next]** .
 
-{het schermschot van het platform UI voor SAP Commerce die configuratie met geselecteerde optie van Contacten toont ](../../../../images/tutorials/create/ecommerce/sap-commerce/configuration-contacts.png)![
+{het schermschot van 0} Experience Platform UI voor SAP Commerce die configuratie met geselecteerde optie van Contacten toont ](../../../../images/tutorials/create/ecommerce/sap-commerce/configuration-contacts.png)![
 
 >[!ENDTABS]
 
 ## Volgende stappen {#next-steps}
 
-Aan de hand van deze zelfstudie hebt u een verbinding tot stand gebracht met uw [!DNL SAP Commerce] -account. U kunt nu aan het volgende leerprogramma verdergaan en [ een dataflow vormen om gegevens in Platform ](../../dataflow/ecommerce.md) te brengen.
+Aan de hand van deze zelfstudie hebt u een verbinding tot stand gebracht met uw [!DNL SAP Commerce] -account. U kunt nu aan het volgende leerprogramma verdergaan en [ een dataflow vormen om gegevens in Experience Platform ](../../dataflow/ecommerce.md) te brengen.
 
 ## Aanvullende bronnen {#additional-resources}
 
@@ -200,7 +200,7 @@ De onderstaande secties bevatten aanvullende bronnen waarnaar u kunt verwijzen w
 
 ### Toewijzing {#mapping}
 
-Platform biedt intelligente aanbevelingen voor automatisch toegewezen velden op basis van het doelschema of de gegevensset die u hebt geselecteerd. U kunt toewijzingsregels handmatig aanpassen aan uw gebruiksgevallen. Op basis van uw behoeften kunt u ervoor kiezen om velden rechtstreeks toe te wijzen of gegevens prep-functies te gebruiken om brongegevens om berekende of berekende waarden af te leiden. Voor uitvoerige stappen bij het gebruiken van de kaartperinterface en berekende gebieden, zie de [ gids UI van de Prep van Gegevens ](../../../../../data-prep/ui/mapping.md).
+Experience Platform biedt intelligente aanbevelingen voor automatisch toegewezen velden op basis van het doelschema of de gegevensset die u hebt geselecteerd. U kunt toewijzingsregels handmatig aanpassen aan uw gebruiksgevallen. Op basis van uw behoeften kunt u ervoor kiezen om velden rechtstreeks toe te wijzen of gegevens prep-functies te gebruiken om brongegevens om berekende of berekende waarden af te leiden. Voor uitvoerige stappen bij het gebruiken van de kaartperinterface en berekende gebieden, zie de [ gids UI van de Prep van Gegevens ](../../../../../data-prep/ui/mapping.md).
 
 De configuraties van de toewijzing voor uw gegevensstroom zullen afhankelijk van uw schema en het objecten type verschillen dat u selecteert om in te voeren.
 

@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;thuis;populaire onderwerpen;ui;UI;XDM;XDM systeem;ervaringsgegevensmodel;Ervaring gegevensmodel;Gegevensmodel;Gegevensmodel;Gegevensmodel;Schema redacteur;Schema;Schema;Schema;schema's;Schema's;Schema's;creeer
+keywords: Experience Platform;home;populaire onderwerpen;ui;UI;XDM;XDM systeem;ervaringsgegevensmodel;Experience gegevensmodel;Experience Data Model;Gegevensmodel;Gegevensmodel;Schema-editor;Schema-editor;Schema;Schema's;Schema's;Schema's;Maken
 solution: Experience Platform
 title: Een schema maken met de Schema-editor
 type: Tutorial
-description: Deze zelfstudie behandelt de stappen voor het maken van een schema met behulp van de Schema-editor in het Experience Platform.
+description: Deze zelfstudie behandelt de stappen voor het maken van een schema met de Schema-editor in Experience Platform.
 exl-id: 3edeb879-3ce4-4adb-a0bd-8d7ad2ec6102
-source-git-commit: f530e4ff755ac89141ee67bef80700b46acf0868
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '4660'
+source-wordcount: '4661'
 ht-degree: 0%
 
 ---
@@ -20,7 +20,7 @@ Voor demonstratiedoeleinden, impliceren de stappen in dit leerprogramma het cre�
 
 >[!NOTE]
 >
->Als u CSV gegevens in Platform opneemt, kunt u [ kaart dat gegevens aan een XDM schema dat door AI-Gegenereerde aanbevelingen ](../../ingestion/tutorials/map-csv/recommendations.md) wordt gecreeerd (momenteel in bèta) zonder het moeten manueel het schema creëren zelf.
+>Als u CSV gegevens in Experience Platform opneemt, kunt u [ kaart die gegevens aan een schema XDM dat door AI-Gegenereerde aanbevelingen ](../../ingestion/tutorials/map-csv/recommendations.md) wordt gecreeerd (momenteel in bèta) zonder het moeten manueel het schema creëren zelf.
 >
 >Als u verkiest om een schema samen te stellen gebruikend [!DNL Schema Registry] API, begin door de [[!DNL Schema Registry]  ontwikkelaarsgids ](../api/getting-started.md) te lezen alvorens het leerprogramma te proberen op [ creërend een schema gebruikend API ](create-schema-api.md).
 
@@ -28,13 +28,13 @@ Voor demonstratiedoeleinden, impliceren de stappen in dit leerprogramma het cre�
 
 Deze zelfstudie vereist een goed begrip van de verschillende aspecten van Adobe Experience Platform die bij het maken van schema&#39;s betrokken zijn. Lees vóór het starten van deze zelfstudie de documentatie voor de volgende concepten:
 
-* [[!DNL Experience Data Model (XDM)]](../home.md): Het gestandaardiseerde framework waarmee [!DNL Platform] gegevens voor de klantervaring indeelt.
+* [[!DNL Experience Data Model (XDM)]](../home.md): Het gestandaardiseerde framework waarmee [!DNL Experience Platform] gegevens voor de klantervaring indeelt.
    * [ Grondbeginselen van schemacompositie ](../schema/composition.md): Een overzicht van schema&#39;s XDM en hun bouwstenen, met inbegrip van klassen, groepen van het schemagebied, gegevenstypes, en individuele gebieden.
 * [[!DNL Real-Time Customer Profile]](../../profile/home.md): biedt een uniform, real-time consumentenprofiel dat is gebaseerd op geaggregeerde gegevens van meerdere bronnen.
 
 ## De werkruimte van [!UICONTROL Schemas] openen {#browse}
 
-De [!UICONTROL Schemas] -werkruimte in de [!DNL Platform] -gebruikersinterface biedt een visualisatie van [!DNL Schema Library] , zodat u de schema&#39;s die voor uw organisatie beschikbaar zijn, kunt bekijken. De werkruimte bevat ook de [!DNL Schema Editor] , het canvas waarop u een schema kunt samenstellen tijdens deze zelfstudie.
+De [!UICONTROL Schemas] -werkruimte in de [!DNL Experience Platform] -gebruikersinterface biedt een visualisatie van [!DNL Schema Library] , zodat u de schema&#39;s die voor uw organisatie beschikbaar zijn, kunt bekijken. De werkruimte bevat ook de [!DNL Schema Editor] , het canvas waarop u een schema kunt samenstellen tijdens deze zelfstudie.
 
 Nadat u zich hebt aangemeld bij [!DNL Experience Platform] , selecteert u **[!UICONTROL Schemas]** in de linkernavigatie om de werkruimte van **[!UICONTROL Schemas]** te openen. Op het tabblad **[!UICONTROL Browse]** wordt een lijst met schema&#39;s (een voorstelling van de [!DNL Schema Library] ) weergegeven die u kunt weergeven en aanpassen. De lijst bevat de naam, het type, de klasse en het gedrag (record of tijdreeks) waarop het schema is gebaseerd, evenals de datum en tijd waarop het schema voor het laatst is gewijzigd.
 
@@ -358,7 +358,7 @@ Als een schema eenmaal is ingeschakeld voor [!DNL Real-Time Customer Profile] en
 
 Selecteer **[!UICONTROL Enable]** om uw keuze te bevestigen. U kunt desgewenst de schakeloptie **[!UICONTROL Profile]** opnieuw selecteren om het schema uit te schakelen, maar als het schema is opgeslagen terwijl [!DNL Profile] is ingeschakeld, kan het niet meer worden uitgeschakeld.
 
-## Meer handelingen {#more}
+## Meer acties {#more}
 
 In de Schema-editor kunt u ook snel handelingen uitvoeren om de JSON-structuur van het schema te kopiëren of het schema te verwijderen. Selecteer [!UICONTROL More] boven aan de weergave om een vervolgkeuzelijst met snelle acties weer te geven.
 
@@ -395,7 +395,7 @@ Selecteer **[!UICONTROL Copy JSON structure]** om een exportlading voor om het e
 
 Nu u klaar bent met het samenstellen van het schema, kunt u het volledige schema in het canvas zien. Selecteer **[!UICONTROL Save]** en het schema wordt opgeslagen in [!DNL Schema Library] , waardoor het toegankelijk wordt voor [!DNL Schema Registry] .
 
-Het nieuwe schema kan nu worden gebruikt om gegevens in te voeren in [!DNL Platform] . Herinner dat zodra het schema is gebruikt om gegevens in te voeren, slechts de additieve veranderingen kunnen worden aangebracht. Zie de [ grondbeginselen van schemacompositie ](../schema/composition.md) voor meer informatie over schema versioning.
+Het nieuwe schema kan nu worden gebruikt om gegevens in te voeren in [!DNL Experience Platform] . Herinner dat zodra het schema is gebruikt om gegevens in te voeren, slechts de additieve veranderingen kunnen worden aangebracht. Zie de [ grondbeginselen van schemacompositie ](../schema/composition.md) voor meer informatie over schema versioning.
 
 U kunt het leerprogramma nu volgen op [ bepalend een schemaverhouding in UI ](./relationship-ui.md) om een nieuw relatiegebied aan het schema van de Leden van de &quot;Loyalty&quot;toe te voegen.
 
@@ -405,9 +405,9 @@ Het schema &quot;Loyalty Member&quot; is ook beschikbaar voor weergave en beheer
 
 >[!WARNING]
 >
-De gebruikersinterface van [!DNL Platform] in de volgende video&#39;s is verouderd. Raadpleeg de bovenstaande documentatie voor de meest recente schermafbeeldingen en functionaliteit van de gebruikersinterface.
+De gebruikersinterface van [!DNL Experience Platform] in de volgende video&#39;s is verouderd. Raadpleeg de bovenstaande documentatie voor de meest recente schermafbeeldingen en functionaliteit van de gebruikersinterface.
 
-In de volgende video ziet u hoe u een eenvoudig schema maakt in de gebruikersinterface van [!DNL Platform] .
+In de volgende video ziet u hoe u een eenvoudig schema maakt in de gebruikersinterface van [!DNL Experience Platform] .
 
 >[!VIDEO](https://video.tv.adobe.com/v/27012?quality=12&learn=on)
 

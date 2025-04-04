@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Beperkingen voor XDM-veldtypen
 description: Een verwijzing voor gebiedstype beperkingen in het Model van Gegevens van de Ervaring (XDM), met inbegrip van de andere rangschikkingsformaten zij aan en kunnen worden in kaart gebracht hoe te om uw eigen gebiedstypes in API te bepalen.
 exl-id: 63839a28-6d26-46f1-8bbf-b524e82ac4df
-source-git-commit: ca8859c7b71d1b0aad30880ff066d2b4b33b0a35
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '634'
+source-wordcount: '635'
 ht-degree: 0%
 
 ---
@@ -27,7 +27,7 @@ XDM wordt gebouwd bovenop het Schema van JSON, en daarom erven de gebieden XDM e
 
 >[!NOTE]
 >
->Zie de [ API grondbeginselen gids ](../../landing/api-fundamentals.md#json-schema) voor meer informatie over Schema JSON en andere onderliggende technologieën in Platform APIs.
+>Zie de [ API grondbeginselen gids ](../../landing/api-fundamentals.md#json-schema) voor meer informatie over Schema JSON en andere onderliggende technologieën in Experience Platform APIs.
 
 In de volgende tabel wordt beschreven hoe elk XDM-type wordt vertegenwoordigd in JSON-schema, samen met een voorbeeldwaarde die overeenkomt met het type:
 

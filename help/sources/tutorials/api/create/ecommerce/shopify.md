@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;thuis;populaire onderwerpen;Schopify;winkelen;e-commerce
+keywords: Experience Platform;home;populaire onderwerpen;Shopify;winkelen;e-commerce
 solution: Experience Platform
 title: Een Shopify-basisverbinding maken met de Flow Service API
 type: Tutorial
 description: Leer hoe u Shopify met Adobe Experience Platform kunt verbinden met behulp van de Flow Service API.
 exl-id: 36086c7f-813e-4fc5-9778-f9d55aba03b2
-source-git-commit: 90eb6256179109ef7c445e2a5a8c159fb6cbfe28
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '442'
+source-wordcount: '447'
 ht-degree: 0%
 
 ---
@@ -22,8 +22,8 @@ Dit leerprogramma begeleidt u door de stappen om een basisverbinding voor [!DNL 
 
 Deze handleiding vereist een goed begrip van de volgende onderdelen van Adobe Experience Platform:
 
-* [[!DNL Sources]](../../../../home.md) [!DNL Experience Platform] : hiermee kunt u gegevens uit verschillende bronnen invoegen en binnenkomende gegevens structureren, labelen en verbeteren met [!DNL Platform] -services.
-* [[!DNL Sandboxes]](../../../../../sandboxes/home.md): [!DNL Experience Platform] biedt virtuele sandboxen die één [!DNL Platform] -instantie in afzonderlijke virtuele omgevingen verdelen om toepassingen voor digitale ervaringen te ontwikkelen en te ontwikkelen.
+* [[!DNL Sources]](../../../../home.md) [!DNL Experience Platform] : hiermee kunt u gegevens uit verschillende bronnen invoegen en binnenkomende gegevens structureren, labelen en verbeteren met [!DNL Experience Platform] -services.
+* [[!DNL Sandboxes]](../../../../../sandboxes/home.md): [!DNL Experience Platform] biedt virtuele sandboxen die één [!DNL Experience Platform] -instantie in afzonderlijke virtuele omgevingen verdelen om toepassingen voor digitale ervaringen te ontwikkelen en te ontwikkelen.
 
 In de volgende secties vindt u aanvullende informatie die u moet weten voordat u verbinding kunt maken met [!DNL Shopify] via de [!DNL Flow Service] API.
 
@@ -39,15 +39,15 @@ In de volgende secties vindt u aanvullende informatie die u moet weten voordat u
 
 Voor meer informatie over begonnen worden, verwijs naar dit [ authentificatiedocument ](https://shopify.dev/concepts/about-apis/authentication) veranderen.
 
-### Platform-API&#39;s gebruiken
+### Experience Platform API&#39;s gebruiken
 
-Voor informatie over hoe te om vraag aan Platform APIs met succes te maken, zie de gids op [ begonnen wordt met Platform APIs ](../../../../../landing/api-guide.md).
+Voor informatie over hoe te om vraag aan Experience Platform APIs met succes te maken, zie de gids op [ begonnen wordt met Experience Platform APIs ](../../../../../landing/api-guide.md).
 
 ## Een basisverbinding maken
 
-Een basisverbinding behoudt informatie tussen uw bron en Platform, met inbegrip van de de authentificatiegeloofsbrieven van uw bron, de huidige staat van de verbinding, en uw unieke identiteitskaart van de basisverbinding. Met de ID van de basisverbinding kunt u bestanden verkennen en door bestanden navigeren vanuit uw bron en kunt u de specifieke items identificeren die u wilt opnemen, inclusief informatie over hun gegevenstypen en indelingen.
+Een basisverbinding behoudt informatie tussen uw bron en Experience Platform, met inbegrip van de verificatiereferenties van uw bron, de huidige status van de verbinding, en uw unieke identiteitskaart van de basisverbinding. Met de ID van de basisverbinding kunt u bestanden verkennen en door bestanden navigeren vanuit uw bron en kunt u de specifieke items identificeren die u wilt opnemen, inclusief informatie over hun gegevenstypen en indelingen.
 
-Als u een basis-verbindings-id wilt maken, vraagt u een POST naar het `/connections` -eindpunt en geeft u de [!DNL Shopify] -verificatiegegevens op als onderdeel van de aanvraagparameters.
+Als u een basis-verbindings-id wilt maken, vraagt u een POST-aanvraag naar het `/connections` -eindpunt en geeft u de [!DNL Shopify] -verificatiegegevens op als onderdeel van de aanvraagparameters.
 
 **API formaat**
 
@@ -106,4 +106,4 @@ Een succesvolle reactie keert de pas gecreëerde verbinding, met inbegrip van zi
 Aan de hand van deze zelfstudie hebt u een [!DNL Shopify] basisverbinding gemaakt met de [!DNL Flow Service] API. U kunt deze basis verbindings-id in de volgende zelfstudies gebruiken:
 
 * [Onderzoek de structuur en de inhoud van uw gegevenslijsten gebruikend  [!DNL Flow Service]  API](../../explore/tabular.md)
-* [Creeer een dataflow om gegevens E-Commerce aan Platform te brengen gebruikend  [!DNL Flow Service]  API](../../collect/ecommerce.md)
+* [Creeer een dataflow om E-Commerce gegevens aan Experience Platform te brengen gebruikend  [!DNL Flow Service]  API](../../collect/ecommerce.md)

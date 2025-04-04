@@ -2,16 +2,16 @@
 title: LiveRamp - Distribution Connection
 description: Leer hoe u de LiveRamp - Distribution-connector kunt gebruiken om publiek dat eerder in LiveRamp is ingesloten, te ordenen en te activeren voor downstreamadvertentiebestemmingen.
 exl-id: 1b11a743-1ef9-4b01-90ef-cc072bc03c91
-source-git-commit: c3ef732ee82f6c0d56e89e421da0efc4fbea2c17
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '2623'
+source-wordcount: '2645'
 ht-degree: 0%
 
 ---
 
 # [!DNL LiveRamp - Distribution] verbinding
 
-Met de [!DNL LiveRamp - Distribution] -verbinding kunt u een publiek activeren van Experience Platform tot hoogwaardige uitgevers op mobiele media, het web, displays en verbonden tv-media.
+Met de [!DNL LiveRamp - Distribution] -verbinding kunt u een publiek van Experience Platform activeren voor hoogwaardige uitgevers op mobiele media, het web, displays en verbonden tv-media.
 
 >[!IMPORTANT]
 >
@@ -46,13 +46,13 @@ Met de [!DNL LiveRamp - Distribution] -verbinding kunt u een publiek activeren v
 
 Om u beter te helpen begrijpen hoe en wanneer u de [!DNL LiveRamp - Distribution] bestemming zou moeten gebruiken, is hier een geval van het steekproefgebruik dat de klanten van Adobe Experience Platform kunnen oplossen door deze bestemming te gebruiken.
 
-Het marketing team van een sportkledinghandelaar gebruikte [ LiveRamp - on boarding ](liveramp-onboarding.md) verbinding om publiek van Experience Platform naar hun rekening te verzenden LiveRamp.
+Het marketing team van een sportkleding retailer gebruikte [ LiveRamp - Onboarding ](liveramp-onboarding.md) verbinding om publiek van Experience Platform naar hun rekening te verzenden LiveRamp.
 
 Door de [!DNL LiveRamp - Distribution] verbinding kunnen zij de activering van het geregistreerde publiek aan de [ gesteunde bestemmingen ](#supported-destinations) nu teweegbrengen. Vervolgens kunnen ze zich richten op gebruikers op mobiele, open web-, sociale en [!DNL CTV] -platforms.
 
 ## Boordpubliek naar LiveRamp {#onboarding}
 
-Alvorens publiek door de [!DNL LiveRamp - Distribution] verbinding te activeren, gebruik [ LiveRamp - Onboarding ](liveramp-onboarding.md) verbinding om uw publiek van het Experience Platform naar LiveRamp uit te voeren.
+Alvorens publiek door de [!DNL LiveRamp - Distribution] verbinding te activeren, gebruik [ LiveRamp - on boarding ](liveramp-onboarding.md) verbinding om uw publiek van Experience Platform naar LiveRamp uit te voeren.
 
 Nadat u uw publiek aan LiveRamp hebt ingezien, ga het activeringswerkschema van [ met de bestemmings ](#connect) stap verbinden om uw doelbestemmingsplatforms voor gegevensactivering te selecteren en te vormen.
 
@@ -73,7 +73,7 @@ Om met deze bestemming te verbinden, volg de stappen die in het [ leerprogramma 
 
 Als u voor verificatie bij het doel wilt zorgen, vult u de vereiste velden in en selecteert u **[!UICONTROL Connect to destination]** .
 
-![ beeld UI van het Platform dat van de bestemmingsverbinding screen.l toont ](../../assets/catalog/advertising/liveramp-distribution/liveramp-distribution-new-connection.png)
+![ het beeld van Experience Platform UI die het beeld van de bestemmingsverbinding screen.l toont ](../../assets/catalog/advertising/liveramp-distribution/liveramp-distribution-new-connection.png)
 
 * **[!UICONTROL LiveRamp Organization ID]**: De organisatieidentiteitskaart van uw rekening LiveRamp (die als _wordt vermeld owner_org_ in uw LiveRamp-Geleide geloofsbrieven).
 * **[!UICONTROL Password]**: Uw die rekeningswachtwoord LiveRamp (als _wordt vermeld geheim_key_ in uw LiveRamp-Geleide geloofsbrieven).
@@ -84,13 +84,13 @@ Als u voor verificatie bij het doel wilt zorgen, vult u de vereiste velden in en
 
 Nadat u verbinding hebt gemaakt met uw LiveRamp-account, voert u de vereiste informatie in om verbinding te maken met het doel waarop u het publiek wilt activeren.
 
-![ beeld UI van het Platform dat de bestemmingsdetails screen.l toont ](../../assets/catalog/advertising/liveramp-distribution/liveramp-distribution-destination-details.png)
+{het beeld van 0} Experience Platform UI die het doelDetails screen.l toont ](../../assets/catalog/advertising/liveramp-distribution/liveramp-distribution-destination-details.png)![
 
 * **[!UICONTROL Name]**: vul de voorkeursnaam in voor uw doelverbinding.
 
 >[!NOTE]
 >
->Bij het benoemen van de bestemming raadt de Adobe aan de volgende notatie te gebruiken: `LiveRamp - Downstream Destination Name` . Dit het noemen patroon helpt u snel uw bestemmingen in [ identificeren doorbladert ](../../ui/destinations-workspace.md#browse) lusje van de bestemmingswerkruimte.
+>Adobe raadt u aan de volgende notatie te volgen wanneer u de naam van uw bestemming wijzigt: `LiveRamp - Downstream Destination Name` . Dit het noemen patroon helpt u snel uw bestemmingen in [ identificeren doorbladert ](../../ui/destinations-workspace.md#browse) lusje van de bestemmingswerkruimte.
 ><br>
 >Voorbeeld: `LiveRamp - Roku` .
 
@@ -114,7 +114,7 @@ Zie de secties hieronder voor gedetailleerde begeleiding op hoe te om elke beste
 
 Vul de onderstaande velden in om details voor de bestemming te configureren.
 
-![ beeld UI van het Platform dat de gebieden van klantengegevens voor de 4C bestemming van Inzichten toont.](../../assets/catalog/advertising/liveramp-distribution/LR_4C_DestSpecific.png)
+{het beeld van 0} Experience Platform UI die de gebieden van klantengegevens voor de 4C bestemming van Inzichten toont.](../../assets/catalog/advertising/liveramp-distribution/LR_4C_DestSpecific.png)![
 
 * **[!UICONTROL 4C Brand Profile ID]**: voer de numerieke id in die is gekoppeld aan uw 4C-merkprofiel. Als u deze id niet hebt, neemt u contact op met uw 4C-vertegenwoordiger voor clientservices.
 
@@ -127,7 +127,7 @@ Vul de onderstaande velden in om details voor de bestemming te configureren.
 
 Vul de onderstaande velden in om details voor de bestemming te configureren.
 
-![ beeld UI van het Platform dat de gebieden van klantengegevens voor de Begeleidende bestemming toont.](../../assets/catalog/advertising/liveramp-distribution/LR_Acast_DestSpecific.png)
+![ het beeld van Experience Platform UI die de gebieden van klantengegevens voor de Begeleidende bestemming toont.](../../assets/catalog/advertising/liveramp-distribution/LR_Acast_DestSpecific.png)
 
 * **[!UICONTROL Client name]**: De naam van uw advertentieaccount, zoals u wilt dat deze aan de doelpartner wordt getoond. Gebruik uw bedrijfsnaam. Gebruik geen spaties of speciale tekens.
 
@@ -140,7 +140,7 @@ Vul de onderstaande velden in om details voor de bestemming te configureren.
 
 Vul de onderstaande velden in om details voor de bestemming te configureren.
 
-![ beeld UI van het Platform dat de gebieden van klantengegevens voor de bestemming Ampersand toont.](../../assets/catalog/advertising/liveramp-distribution/LR_Ampersand_DestSpecific.png)
+{het beeld van 0} Experience Platform UI die de gebieden van klantengegevens voor de bestemming Ampersand toont.](../../assets/catalog/advertising/liveramp-distribution/LR_Ampersand_DestSpecific.png)![
 
 * **[!UICONTROL Your Company Name]**: Uw bedrijfsnaam, aangezien u het aan de bestemmingspartner zou willen worden getoond. Gebruik geen spaties of speciale tekens.
 
@@ -153,7 +153,7 @@ Vul de onderstaande velden in om details voor de bestemming te configureren.
 
 Vul de onderstaande velden in om details voor de bestemming te configureren.
 
-![ beeld UI van het Platform dat de gebieden van klantengegevens voor Captify bestemming toont.](../../assets/catalog/advertising/liveramp-distribution/LR_Captify_DestSpecific.png)
+![ het beeld van Experience Platform UI die de gebieden van klantengegevens voor Captify bestemming toont.](../../assets/catalog/advertising/liveramp-distribution/LR_Captify_DestSpecific.png)
 
 * **[!UICONTROL Client name]**: De naam van uw advertentieaccount, zoals u wilt dat deze aan de doelpartner wordt getoond. Gebruik uw bedrijfsnaam. Gebruik geen spaties of speciale tekens.
 
@@ -166,7 +166,7 @@ Vul de onderstaande velden in om details voor de bestemming te configureren.
 
 Vul de onderstaande velden in om details voor de bestemming te configureren.
 
-![ beeld UI van het Platform dat de gebieden van klantengegevens voor de bestemming van de Karakteristiek toont.](../../assets/catalog/advertising/liveramp-distribution/LR_Cardlytics_DestSpecific.png)
+{het beeld van 0} Experience Platform UI die de gebieden van klantengegevens voor de bestemming van de Karakteristiek toont.](../../assets/catalog/advertising/liveramp-distribution/LR_Cardlytics_DestSpecific.png)![
 
 * **[!UICONTROL Client name]**: De naam van uw advertentieaccount, zoals u wilt dat deze aan de doelpartner wordt getoond. Gebruik uw bedrijfsnaam. Gebruik geen spaties of speciale tekens.
 
@@ -191,7 +191,7 @@ Vul de onderstaande velden in om details voor de bestemming te configureren.
 
 Vul de onderstaande velden in om details voor de bestemming te configureren.
 
-![ beeld UI van het Platform dat de gebieden van klantengegevens voor de bestemming van de Wijzerplaat toont.](../../assets/catalog/advertising/liveramp-distribution/liveramp-distribution-disney-fields.png)
+![ het beeld van Experience Platform UI die de gebieden van klantengegevens voor de bestemming van de Wijzerplaat toont.](../../assets/catalog/advertising/liveramp-distribution/liveramp-distribution-disney-fields.png)
 
 * **[!UICONTROL Advertiser data destination terms agreement]**: typ in `I AGREE` om de bevestiging en instemming met de gegevensvoorwaarden van Disney-adverteerders te bevestigen.
 * **[!UICONTROL Client name]**: ga uw bedrijfsnaam in aangezien u het aan de bestemmingspartner wilt worden getoond.
@@ -206,7 +206,7 @@ Vul de onderstaande velden in om details voor de bestemming te configureren.
 
 Vul de onderstaande velden in om details voor de bestemming te configureren.
 
-![ beeld UI van het Platform dat de gebieden van klantengegevens voor de bestemming iHeartMedia toont.](../../assets/catalog/advertising/liveramp-distribution/LR_iHeart_DestSpecific.png)
+![ het beeld van Experience Platform UI die de gebieden van klantengegevens voor de bestemming iHeartMedia toont.](../../assets/catalog/advertising/liveramp-distribution/LR_iHeart_DestSpecific.png)
 
 * **[!UICONTROL Client Name]**: De naam van uw advertentieaccount, zoals u wilt dat deze aan de doelpartner wordt getoond. Gebruik uw bedrijfsnaam. Gebruik geen spaties of speciale tekens.
 
@@ -219,7 +219,7 @@ Vul de onderstaande velden in om details voor de bestemming te configureren.
 
 Vul de onderstaande velden in om details voor de bestemming te configureren.
 
-![ beeld UI van het Platform dat de gebieden van klantengegevens voor de bestemming van de Uitwisseling van de Index toont.](../../assets/catalog/advertising/liveramp-distribution/LR_IndexExchange_DestSpecific.png)
+![ het beeld van Experience Platform UI die de gebieden van klantengegevens voor de bestemming van de Uitwisseling van de Index toont.](../../assets/catalog/advertising/liveramp-distribution/LR_IndexExchange_DestSpecific.png)
 
 * **[!UICONTROL Account Name]**: De naam van uw Index Exchange-clientaccount. Gebruik geen spaties of speciale tekens.
 
@@ -232,7 +232,7 @@ Vul de onderstaande velden in om details voor de bestemming te configureren.
 
 Vul de onderstaande velden in om details voor de bestemming te configureren.
 
-![ beeld UI van het Platform dat de gebieden van klantengegevens voor de bestemming van Tovers CTV toont.](../../assets/catalog/advertising/liveramp-distribution/LR_MagniteCTV_DestSpecific.png)
+![ het beeld van Experience Platform UI die de gebieden van klantengegevens voor de bestemming van Tovers CTV toont.](../../assets/catalog/advertising/liveramp-distribution/LR_MagniteCTV_DestSpecific.png)
 
 * **[!UICONTROL Client]**: Uw cliëntnaam, aangezien u het aan de bestemmingspartner zou willen worden getoond. Gebruik uw bedrijfsnaam. Gebruik geen spaties of speciale tekens.
 
@@ -250,7 +250,7 @@ Vul de onderstaande velden in om details voor de bestemming te configureren.
 
 Vul de onderstaande velden in om details voor de bestemming te configureren.
 
-![ beeld UI van het Platform dat de gebieden van klantengegevens voor de Magniet DV+ bestemming toont.](../../assets/catalog/advertising/liveramp-distribution/LR_MagniteDV_DestSpecific.png)
+{het beeld van 0} Experience Platform UI die de gebieden van klantengegevens voor de Magnite DV+ bestemming toont.](../../assets/catalog/advertising/liveramp-distribution/LR_MagniteDV_DestSpecific.png)![
 
 * **[!UICONTROL Partner ID]**: Identiteitskaart van de Partner van het Project Rubicon verbonden aan de uitgever die het segment/de gegevens bezit. Neem contact op met de vertegenwoordiger van uw Rubicon Project-account als u niet zeker weet welke waarde u moet gebruiken.
 * **[!UICONTROL Seat ID]**: Magnite DV+ Seat ID geleverd door uw Magnite-accountmanager
@@ -279,7 +279,7 @@ Vul de onderstaande velden in om details voor de bestemming te configureren.
 
 Vul de onderstaande velden in om details voor de bestemming te configureren.
 
-![ beeld UI van het Platform dat de gebieden van klantengegevens voor de bestemming Nexxen toont.](../../assets/catalog/advertising/liveramp-distribution/LR_Nexxen_DestSpecific.png)
+![ het beeld van Experience Platform UI die de gebieden van klantengegevens voor de bestemming van Nexxen toont.](../../assets/catalog/advertising/liveramp-distribution/LR_Nexxen_DestSpecific.png)
 
 * **[!UICONTROL Rate Type]**: Het type snelheid geeft aan hoe het gegevensgebruik moet worden gefactureerd. Alle $ 0,00 kosten moeten forfaitair worden berekend. Bevestig dit met uw Nexxen-vertegenwoordiger als u niet zeker weet welk type frequentie u moet gebruiken.
 * **[!UICONTROL Market ID]**: voer de numerieke markt-id in waar het Nexxen-gegevenscontract moet worden gemaakt. Als u de syndicatie &quot;AlwaysOn&quot;over elke markt in het Nexxen platform doet, ga -1 in.
@@ -295,7 +295,7 @@ Vul de onderstaande velden in om details voor de bestemming te configureren.
 
 Vul de onderstaande velden in om details voor de bestemming te configureren.
 
-![ beeld UI van het Platform dat de gebieden van klantengegevens voor Één bestemming van Fox toont.](../../assets/catalog/advertising/liveramp-distribution/LR_Fox_DestSpecific.png)
+![ het beeld van Experience Platform UI die de gebieden van klantengegevens voor de Één bestemming van Fox toont.](../../assets/catalog/advertising/liveramp-distribution/LR_Fox_DestSpecific.png)
 
 * **[!UICONTROL Client]**: De naam van uw bedrijf/distributierekening aangezien u het aan de partner zou willen verschijnen. Gebruik standaard uw bedrijfsnaam. Neem contact op met de vertegenwoordiger van uw partneraccount als u niet zeker weet welke naam u moet gebruiken. Gebruik geen spaties of speciale tekens.
 
@@ -308,7 +308,7 @@ Vul de onderstaande velden in om details voor de bestemming te configureren.
 
 Vul de onderstaande velden in om details voor de bestemming te configureren.
 
-![ beeld UI van het Platform dat de gebieden van klantengegevens voor de bestemming van Pandora toont.](../../assets/catalog/advertising/liveramp-distribution/LR_Pandora_DestSpecific.png)
+![ het beeld van Experience Platform UI die de gebieden van klantengegevens voor de bestemming van Pandora toont.](../../assets/catalog/advertising/liveramp-distribution/LR_Pandora_DestSpecific.png)
 
 * **[!UICONTROL Account name]**: De naam van uw Pandora-account. Neem contact op met uw vertegenwoordiger van uw Pandora-account als u niet zeker weet wat uw accountnaam is. Gebruik geen spaties of speciale tekens.
 
@@ -326,7 +326,7 @@ Vul de onderstaande velden in om details voor de bestemming te configureren.
 
 Vul de onderstaande velden in om details voor de bestemming te configureren.
 
-![ beeld UI van het Platform dat de gebieden van klantengegevens voor het reddit doel toont.](../../assets/catalog/advertising/liveramp-distribution/LR_Reddit_DestSpecific.png)
+{het beeld van 0} Experience Platform UI die de gebieden van klantengegevens voor het reddit doel toont.](../../assets/catalog/advertising/liveramp-distribution/LR_Reddit_DestSpecific.png)![
 
 * **[!UICONTROL Reddit advertiser ID]**: Je advertentie-id voor Reddit. Moet beginnen met &quot;t2_&quot; of &quot;a2_&quot;. Neem contact op met uw vertegenwoordiger van Reddit als u uw adverteerder-id niet kent.
 * **[!UICONTROL Reddit advertiser name]**: De naam van uw reddit-adverteerder. Gebruik geen spaties of speciale tekens.
@@ -345,7 +345,7 @@ Vul de onderstaande velden in om details voor de bestemming te configureren.
 
 Vul de onderstaande velden in om details voor de bestemming te configureren.
 
-![ beeld UI van het Platform dat de gesteunde herkenningstekens voor de bestemming van Roku toont.](../../assets/catalog/advertising/liveramp-distribution/liveramp-distribution-roku-fields.png)
+{het beeld van 0} Experience Platform UI die de gesteunde herkenningstekens voor de bestemming van Roku tonen.](../../assets/catalog/advertising/liveramp-distribution/liveramp-distribution-roku-fields.png)![
 
 * **[!UICONTROL Roku account email address]**: voer het e-mailadres in dat aan uw Roku-account is gekoppeld.
 * **[!UICONTROL Roku account representative email address]**: voer het e-mailadres in van uw vertegenwoordiger van uw Roku-account. Als u meerdere adressen wilt invoeren, scheidt u deze met komma&#39;s.
@@ -359,7 +359,7 @@ Vul de onderstaande velden in om details voor de bestemming te configureren.
 
 Vul de onderstaande velden in om details voor de bestemming te configureren.
 
-![ beeld UI van het Platform dat de gesteunde herkenningstekens voor de Spotify bestemming toont.](../../assets/catalog/advertising/liveramp-distribution/LR_Spotify_DestSpecific.png)
+![ het beeld van Experience Platform UI die de gesteunde herkenningstekens voor de Spotify bestemming tonen.](../../assets/catalog/advertising/liveramp-distribution/LR_Spotify_DestSpecific.png)
 
 * **[!UICONTROL Client name]**: De naam van uw advertentieaccount, zoals u wilt dat deze aan de doelpartner wordt getoond. Gebruik uw bedrijfsnaam. Gebruik geen spaties of speciale tekens.
 
@@ -377,7 +377,7 @@ Vul de onderstaande velden in om details voor de bestemming te configureren.
 
 Vul de onderstaande velden in om details voor de bestemming te configureren.
 
-![ beeld UI van het Platform dat de gesteunde herkenningstekens voor de bestemming Taboola toont.](../../assets/catalog/advertising/liveramp-distribution/LR_Taboola_DestSpecific.png)
+![ het beeld van Experience Platform UI die de gesteunde herkenningstekens voor de bestemming Taboola tonen.](../../assets/catalog/advertising/liveramp-distribution/LR_Taboola_DestSpecific.png)
 
 * **[!UICONTROL Account manager email address]**: Het e-mailadres van uw accountmanager van Taboola.
 * **[!UICONTROL Segment type]**: Het segmenttype. Momenteel worden alleen de eerste-partijsegmenten ondersteund.
@@ -391,7 +391,7 @@ Vul de onderstaande velden in om details voor de bestemming te configureren.
 
 Vul de onderstaande velden in om details voor de bestemming te configureren.
 
-![ beeld UI van het Platform dat de gesteunde herkenningstekens voor de bestemming toont TargetSpot.](../../assets/catalog/advertising/liveramp-distribution/LR_TargetSpot_DestSpecific.png)
+![ het beeld van Experience Platform UI die de gesteunde herkenningstekens voor de bestemming toont TargetSpot.](../../assets/catalog/advertising/liveramp-distribution/LR_TargetSpot_DestSpecific.png)
 
 * **[!UICONTROL Client name]**: De naam van uw advertentieaccount, zoals u wilt dat deze aan de doelpartner wordt getoond. Gebruik uw bedrijfsnaam. Gebruik geen spaties of speciale tekens.
 
@@ -404,7 +404,7 @@ Vul de onderstaande velden in om details voor de bestemming te configureren.
 
 Vul de onderstaande velden in om details voor de bestemming te configureren.
 
-![ beeld UI van het Platform dat de gesteunde herkenningstekens voor de bestemming toont TargetSpot.](../../assets/catalog/advertising/liveramp-distribution/LR_Teads_DestSpecific.png)
+![ het beeld van Experience Platform UI die de gesteunde herkenningstekens voor de bestemming toont TargetSpot.](../../assets/catalog/advertising/liveramp-distribution/LR_Teads_DestSpecific.png)
 
 * **[!UICONTROL Teads ID]**: Uw team-id
 
@@ -417,7 +417,7 @@ Vul de onderstaande velden in om details voor de bestemming te configureren.
 
 Vul de onderstaande velden in om details voor de bestemming te configureren.
 
-![ beeld van Platform UI die de gesteunde herkenningstekens voor de bestemming van de Ontdekking WB tonen.](../../assets/catalog/advertising/liveramp-distribution/LR_WBD_DestSpecific.png)
+![ het beeld van Experience Platform UI die de gesteunde herkenningstekens voor de bestemming van de Ontdekking WB tonen.](../../assets/catalog/advertising/liveramp-distribution/LR_WBD_DestSpecific.png)
 
 * **[!UICONTROL Client name]**: De naam van uw advertentieaccount, zoals u wilt dat deze aan de doelpartner wordt getoond. Gebruik uw bedrijfsnaam. Gebruik geen spaties of speciale tekens.
 

@@ -1,19 +1,19 @@
 ---
-keywords: Experience Platform;thuis;populaire onderwerpen;de vraagdienst;de dienst van de vraag;vraag
+keywords: Experience Platform;home;populaire onderwerpen;queryservice;Query-service;query
 solution: Experience Platform
 title: Overzicht van Query Service
 description: Leer over de rol van de Dienst van de Vraag binnen Experience Platform.
 exl-id: fdaefc12-a97d-4e4e-9aed-d3dbd0f43ea0
-source-git-commit: ddf886052aedc025ff125c03ab63877cb049583d
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '860'
+source-wordcount: '861'
 ht-degree: 0%
 
 ---
 
 # Overzicht van Query Service
 
-Adobe Experience Platform neemt gegevens op uit een groot aantal verschillende bronnen. Een belangrijke uitdaging voor marketeers is om deze gegevens te begrijpen om inzicht te krijgen in hun klanten. Als u gegevens wilt opvragen in Platform, kunt u standaard SQL en Adobe Experience Platform Query Service gebruiken. U kunt de Dienst van de Vraag gebruiken om zich bij om het even welke dataset in het gegevensmeer aan te sluiten en de vraagresultaten als nieuwe dataset voor gebruik in rapportering, machine het leren, of voor opname in [!DNL Real-Time Customer Profile] te vangen. Dit document verstrekt een overzicht van de rol van de Dienst van de Vraag binnen Experience Platform.
+Adobe Experience Platform neemt gegevens op uit een groot aantal verschillende bronnen. Een belangrijke uitdaging voor marketeers is om deze gegevens te begrijpen om inzicht te krijgen in hun klanten. Als u gegevens wilt opvragen in Experience Platform, kunt u standaard SQL en Adobe Experience Platform Query Service gebruiken. U kunt de Dienst van de Vraag gebruiken om zich bij om het even welke dataset in het gegevensmeer aan te sluiten en de vraagresultaten als nieuwe dataset voor gebruik in rapportering, machine het leren, of voor opname in [!DNL Real-Time Customer Profile] te vangen. Dit document biedt een overzicht van de rol van Query Service in Experience Platform.
 
 U kunt de Dienst van de Vraag gebruiken om de online-aan-off-line klantenreis aan te sluiten en omni-channel attributie voor uw merk te begrijpen. De volgende video toont hoe een ervaringszaken de Dienst van de Vraag kunnen gebruiken om zeer belangrijke gebruiksgevallen te richten en hoe de Dienst van de Vraag werkt.
 
@@ -32,13 +32,13 @@ Als u snel aan de slag wilt met de functies van Query Service, kunt u het beste 
 - [SQL-syntaxis in Query Service](./sql/syntax.md)
 - [Afgeleide datasets maken met SQL](./data-distiller/derived-datasets/create-derived-datasets-with-sql.md)
 
-## Query-service en Experience Platform {#experience-platform-services}
+## Query-service en Experience Platform-services {#experience-platform-services}
 
-De Dienst van de vraag wisselt en kan met de veelvoudige diensten van het Experience Platform worden gebruikt. Om de meesten uit de mogelijkheden van de Dienst van de Vraag te maken, zou u vertrouwd met deze diensten moeten worden en hoe zij met de Dienst van de Vraag communiceren. De [ documentatie die van het Experience Platform pagina ](https://experienceleague.adobe.com/docs/experience-platform.html) landt verstrekt samenvattingen en verbindingen aan de mogelijkheden van het platform.
+De Dienst van de vraag wisselt en kan met de veelvoudige diensten van Experience Platform worden gebruikt. Om de meesten uit de mogelijkheden van de Dienst van de Vraag te maken, zou u vertrouwd met deze diensten moeten worden en hoe zij met de Dienst van de Vraag communiceren. De [ documentatie die van Experience Platform pagina ](https://experienceleague.adobe.com/docs/experience-platform.html) landen verstrekt samenvattingen en verbindingen aan de mogelijkheden van het platform.
 
 ### [!DNL Data Science Workspace] {#data-science-workspace}
 
-Adobe Experience Platform [!DNL Data Science Workspace] maakt gebruik van machinaal leren en kunstmatige intelligentie om inzicht te krijgen in gegevens die in het Experience Platform zijn opgeslagen. Gegevenswetenschappers kunnen de [!DNL Data Science Workspace] gebruiken om recepten te bouwen die op verslag en tijdreeksgegevens over klanten en hun activiteiten worden gebaseerd. Deze recepten maken voorspellingen mogelijk, zoals het kopen van neiging en aanbevolen aanbiedingen die de betrokkene waarschijnlijk zal waarderen en gebruiken. U kunt SQL binnen [!DNL Data Science Workspace] gebruiken door de Dienst van de Vraag in [!DNL JupyterLab] te integreren om, Adobe Analytics gegevens te onderzoeken om te zetten en te analyseren. Lees het [[!DNL Data Science Workspace]  overzicht ](../data-science-workspace/home.md) en [ Jupyter de verbindingsgids van het Notitieboekje ](./clients/jupyter-notebook.md) voor meer informatie over hoe [!DNL Data Science Workspace] met de Dienst van de Vraag in wisselwerking staat.
+Adobe Experience Platform [!DNL Data Science Workspace] maakt gebruik van machinaal leren en kunstmatige intelligentie om inzicht te krijgen in gegevens die in Experience Platform zijn opgeslagen. Gegevenswetenschappers kunnen de [!DNL Data Science Workspace] gebruiken om recepten te bouwen die op verslag en tijdreeksgegevens over klanten en hun activiteiten worden gebaseerd. Deze recepten maken voorspellingen mogelijk, zoals het kopen van neiging en aanbevolen aanbiedingen die de betrokkene waarschijnlijk zal waarderen en gebruiken. U kunt SQL binnen [!DNL Data Science Workspace] gebruiken door de Dienst van de Vraag in [!DNL JupyterLab] te integreren om, Adobe Analytics gegevens te onderzoeken om te zetten en te analyseren. Lees het [[!DNL Data Science Workspace]  overzicht ](../data-science-workspace/home.md) en [ Jupyter de verbindingsgids van het Notitieboekje ](./clients/jupyter-notebook.md) voor meer informatie over hoe [!DNL Data Science Workspace] met de Dienst van de Vraag in wisselwerking staat.
 
 ### [!DNL Segmentation Service] {#segmentation}
 
@@ -50,11 +50,11 @@ De Dienst van de vraag verstrekt een flexibele benadering van uw gegevensverwerk
 
 ### Adobe Analytics browse-dissident {#abandon-browse}
 
-Dit [ doorbladert de voorbeeldcentra van de verlaten voorgeschiedenis bij het gebruiken van Adobe  [!DNL Analytics]](./use-cases/abandoned-browse.md) gegevens om een bepaald actionable publiek tot stand te brengen. De Dienst van de vraag past complexe logica voor segmentatie aan om diverse gepersonaliseerde attributen voor gebruik stroomafwaarts te berekenen, of zeer te vereenvoudigen hoe u uw publiek bouwt.
+Dit [ doorbladert de voorbeeldcentra van de verlaten voorbestemming bij het gebruiken van Adobe  [!DNL Analytics]](./use-cases/abandoned-browse.md) gegevens om een bepaald actionable publiek tot stand te brengen. De Dienst van de vraag past complexe logica voor segmentatie aan om diverse gepersonaliseerde attributen voor gebruik stroomafwaarts te berekenen, of zeer te vereenvoudigen hoe u uw publiek bouwt.
 
 ## Inzichten genereren met aangepaste dashboards {#custom-dashboards}
 
-Met Adobe Experience Platform kunt u alle opgeslagen datasets, waaronder gedragsgegevens, CRM en verkooppuntgegevens, opnemen, opslaan, structureren en ophalen. Gebruikend [!DNL Experience Platform's Query Service], kunt u op deze datasets vragen en specifieke vragen over de zaken beantwoorden en dan beginnen producerend impactful inzicht. Leer hoe te om douanedashboards te bouwen en te beheren waar u, op maat gemaakte widgets kunt creëren toevoegen en uitgeven om zeer belangrijke metriek met [ te visualiseren user-defined dashbaords ](../dashboards/standard-dashboards.md). U kunt zelfs [ uw eigen rapporten van Real-Time CDP ](../dashboards/data-models/cdp-insights-data-model-b2c.md) voor uw marketing en het gebruiksgevallen van KPI aanpassen door SQL vragen met de Modellen van Gegevens van de Gegevens van Real-time Customer Data Platform te gebruiken.
+Met Adobe Experience Platform kunt u alle opgeslagen datasets, waaronder gedragsgegevens, CRM en verkooppuntgegevens, opnemen, opslaan, structureren en ophalen. Gebruikend [!DNL Experience Platform's Query Service], kunt u op deze datasets vragen en specifieke vragen over de zaken beantwoorden en dan beginnen producerend impactful inzicht. Leer hoe te om douanedashboards te bouwen en te beheren waar u, op maat gemaakte widgets kunt creëren toevoegen en uitgeven om zeer belangrijke metriek met [ te visualiseren user-defined dashbaords ](../dashboards/standard-dashboards.md). U kunt zelfs [ uw eigen rapporten van Real-Time CDP ](../dashboards/data-models/cdp-insights-data-model-b2c.md) voor uw marketing en het gebruiksgevallen van KPI aanpassen door SQL vragen met de Modellen van Gegevens van de Gegevens van Real-Time Customer Data Platform te gebruiken.
 
 ## Volgende stappen en extra bronnen
 

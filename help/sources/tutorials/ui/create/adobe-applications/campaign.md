@@ -1,16 +1,16 @@
 ---
 keywords: Experience Platform;home;populaire onderwerpen;bronnen;connectors;bronconnectors;campagne;beheerde services voor campagne
-title: Een Adobe Campaign Managed Cloud Services-bronverbinding maken met behulp van platforminterface
-description: Leer hoe u verbinding maakt met Adobe Experience Platform via de gebruikersinterface van het platform.
+title: Een Adobe Campaign Managed Cloud Services-bronverbinding maken met de gebruikersinterface van Experience Platform
+description: Leer hoe u Adobe Experience Platform via de gebruikersinterface van Experience Platform verbindt met Adobe Campaign Managed Cloud Services.
 exl-id: 067ed558-b239-4845-8c85-3bf9b1d4caed
-source-git-commit: 67f42c155bf34f2b8adc3b08536bb3310bb77390
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1189'
+source-wordcount: '1202'
 ht-degree: 0%
 
 ---
 
-# Een Adobe Campaign Managed Cloud Services-bronverbinding maken met behulp van platforminterface
+# Een Adobe Campaign Managed Cloud Services-bronverbinding maken met de gebruikersinterface van Experience Platform
 
 Deze zelfstudie bevat stappen om een bronverbinding te maken waarmee uw Adobe Campaign Managed Cloud Services-gegevens naar Adobe Experience Platform worden overgebracht.
 
@@ -18,15 +18,15 @@ Deze zelfstudie bevat stappen om een bronverbinding te maken waarmee uw Adobe Ca
 
 Deze handleiding vereist een goed begrip van de volgende onderdelen van Experience Platform:
 
-* [ Bronnen ](../../../../home.md): Het platform staat gegevens toe om van diverse bronnen worden opgenomen terwijl het voorzien van u van de capaciteit om, inkomende gegevens te structureren te etiketteren en te verbeteren gebruikend de diensten van het Platform.
+* [ Bronnen ](../../../../home.md): Experience Platform staat gegevens toe om van diverse bronnen worden opgenomen terwijl het voorzien van u van de capaciteit om, inkomende gegevens te structureren te etiketteren en te verbeteren gebruikend de diensten van Experience Platform.
 * [[!DNL Experience Data Model (XDM)]  Systeem ](../../../../../xdm/home.md): Het gestandaardiseerde kader waardoor Experience Platform gegevens van de klantenervaring organiseert.
    * [ Grondbeginselen van schemacompositie ](../../../../../xdm/schema/composition.md): Leer over de basisbouwstenen van schema&#39;s XDM, met inbegrip van zeer belangrijke principes en beste praktijken in schemacompositie.
    * [ het leerprogramma van de Redacteur van het Schema ](../../../../../xdm/tutorials/create-schema-ui.md): Leer hoe te om douaneschema&#39;s tot stand te brengen gebruikend de Redacteur UI van het Schema.
-* [ Sandboxes ](../../../../../sandboxes/home.md): Het platform verstrekt virtuele zandbakken die één enkele instantie van het Platform in afzonderlijke virtuele milieu&#39;s verdelen helpen digitale ervaringstoepassingen ontwikkelen en ontwikkelen.
+* [ Sandboxes ](../../../../../sandboxes/home.md): Experience Platform verstrekt virtuele zandbakken die één enkele instantie van Experience Platform in afzonderlijke virtuele milieu&#39;s verdelen helpen digitale ervaringstoepassingen ontwikkelen en ontwikkelen.
 
-## Adobe Campaign Managed Cloud Services verbinden met platform
+## Adobe Campaign Managed Cloud Services verbinden met Experience Platform
 
-Selecteer in de gebruikersinterface van het platform de optie **[!UICONTROL Sources]** in de linkernavigatie voor toegang tot de werkruimte van [!UICONTROL Sources] . In het scherm [!UICONTROL Catalog] worden diverse bronnen weergegeven waarmee u een account kunt maken.
+Selecteer in de gebruikersinterface van Experience Platform de optie **[!UICONTROL Sources]** in de linkernavigatie voor toegang tot de werkruimte van [!UICONTROL Sources] . In het scherm [!UICONTROL Catalog] worden diverse bronnen weergegeven waarmee u een account kunt maken.
 
 U kunt de juiste categorie selecteren in de catalogus aan de linkerkant van het scherm. U kunt de zoekbalk ook gebruiken om de weergegeven bronnen te beperken.
 
@@ -60,7 +60,7 @@ De stap [!UICONTROL Select data] wordt weergegeven en verschaft u een interface 
 | --- | --- |
 | Adobe Campaign-exemplaar | De naam van de Adobe Campaign-omgevingsinstantie die u gebruikt. |
 | Targettoewijzing | De technische voorwerpen die door Campaign worden gebruikt om berichten te leveren, en bevatten alle technische montages die worden vereist om leveringen te verzenden. |
-| Schemanaam | De naam van de schemaentiteit die u aan Platform brengt. De opties omvatten het Logboek van de Levering en het Volgen Logboek. |
+| Schemanaam | De naam van de schemaentiteit die u aan Experience Platform brengt. De opties omvatten het Logboek van de Levering en het Volgen Logboek. |
 
 ![ een interface waar u uw instantie van Adobe Campaign, doelafbeelding, en schemanaam kunt vormen.](../../../../images/tutorials/create/campaign/select-data.png)
 
@@ -96,7 +96,7 @@ Wanneer u klaar bent met het opgeven van details voor de gegevensstroom, selecte
 
 De stap [!UICONTROL Mapping] verschijnt, die u van een interface voorziet om de brongebieden van uw bronschema aan hun aangewezen doelXDM gebieden in het doelschema in kaart te brengen.
 
-Platform biedt intelligente aanbevelingen voor automatisch toegewezen velden op basis van het doelschema of de gegevensset die u hebt geselecteerd. U kunt toewijzingsregels handmatig aanpassen aan uw gebruiksgevallen. Op basis van uw behoeften kunt u ervoor kiezen om velden rechtstreeks toe te wijzen of gegevens prep-functies te gebruiken om brongegevens om berekende of berekende waarden af te leiden. Voor uitvoerige stappen bij het gebruiken van de kaartperinterface en berekende gebieden, zie de [ gids UI van de Prep van Gegevens ](../../../../../data-prep/ui/mapping.md).
+Experience Platform biedt intelligente aanbevelingen voor automatisch toegewezen velden op basis van het doelschema of de gegevensset die u hebt geselecteerd. U kunt toewijzingsregels handmatig aanpassen aan uw gebruiksgevallen. Op basis van uw behoeften kunt u ervoor kiezen om velden rechtstreeks toe te wijzen of gegevens prep-functies te gebruiken om brongegevens om berekende of berekende waarden af te leiden. Voor uitvoerige stappen bij het gebruiken van de kaartperinterface en berekende gebieden, zie de [ gids UI van de Prep van Gegevens ](../../../../../data-prep/ui/mapping.md).
 
 >[!IMPORTANT]
 >
@@ -145,7 +145,7 @@ Deze pagina voorziet u ook van een interface om de meta-gegevensbeschrijving van
 
 ## Volgende stappen
 
-Door deze zelfstudie te volgen, hebt u met succes een dataflow gemaakt om uw de leveringslogboeken van de Berichten van de Campagne v8 en het volgen van logboekgegevens aan Platform te brengen. Binnenkomende gegevens kunnen nu worden gebruikt door downstream-platformservices zoals [!DNL Real-Time Customer Profile] en [!DNL Data Science Workspace] . Raadpleeg de volgende documenten voor meer informatie:
+Aan de hand van deze zelfstudie hebt u een gegevensstroom gemaakt waarmee u uw AMPAGE v8-leveringslogs en logbestandsgegevens voor bijhouden naar Experience Platform kunt overbrengen. Binnenkomende gegevens kunnen nu worden gebruikt door downstream Experience Platform-services, zoals [!DNL Real-Time Customer Profile] en [!DNL Data Science Workspace] . Raadpleeg de volgende documenten voor meer informatie:
 
 * [[!DNL Real-Time Customer Profile]-overzicht](../../../../../profile/home.md)
 * [[!DNL Data Science Workspace]-overzicht](../../../../../data-science-workspace/home.md)

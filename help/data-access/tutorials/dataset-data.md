@@ -5,9 +5,9 @@ title: Gegevens gegevensset weergeven met de API voor gegevenstoegang
 type: Tutorial
 description: Leer hoe u gegevens kunt zoeken, openen en downloaden die zijn opgeslagen in een gegevensset met de API voor gegevenstoegang in Adobe Experience Platform. In dit document worden enkele unieke functies van de API voor gegevenstoegang geïntroduceerd, zoals pagineren en gedeeltelijke downloads.
 exl-id: 1c1e5549-d085-41d5-b2c8-990876000f08
-source-git-commit: 9144a5f4cce88fc89973a7fea6d69384cc5f4ba1
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '1364'
+source-wordcount: '1365'
 ht-degree: 0%
 
 ---
@@ -20,7 +20,7 @@ In deze stapsgewijze zelfstudie leert u hoe u in een gegevensset opgeslagen gege
 
 Deze zelfstudie vereist een goed begrip van hoe u een dataset maakt en vult. Zie het [ leerprogramma van de datasetverwezenlijking ](../../catalog/datasets/create.md) voor meer informatie.
 
-De volgende secties verstrekken extra informatie die u moet weten om met succes vraag aan Platform APIs te maken.
+De volgende secties verstrekken extra informatie die u moet weten om met succes vraag aan Experience Platform APIs te maken.
 
 ### API-voorbeeldaanroepen lezen {#reading-sample-api-calls}
 
@@ -28,21 +28,21 @@ Deze zelfstudie biedt voorbeeld-API-aanroepen om aan te tonen hoe uw verzoeken m
 
 ### Waarden verzamelen voor vereiste koppen
 
-Om vraag aan [!DNL Platform] APIs te maken, moet u het [ authentificatieleerprogramma ](../../landing/api-authentication.md) eerst voltooien. Als u de zelfstudie over verificatie voltooit, krijgt u de waarden voor elk van de vereiste headers in alle API-aanroepen van [!DNL Experience Platform] , zoals hieronder wordt getoond:
+Om vraag aan [!DNL Experience Platform] APIs te maken, moet u het [ authentificatieleerprogramma ](../../landing/api-authentication.md) eerst voltooien. Als u de zelfstudie over verificatie voltooit, krijgt u de waarden voor elk van de vereiste headers in alle API-aanroepen van [!DNL Experience Platform] , zoals hieronder wordt getoond:
 
 - Autorisatie: Drager `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
 - x-gw-ims-org-id: `{ORG_ID}`
 
-Alle bronnen in [!DNL Experience Platform] zijn geïsoleerd naar specifieke virtuele sandboxen. Alle aanvragen naar [!DNL Platform] API&#39;s vereisen een header die de naam aangeeft van de sandbox waarin de bewerking plaatsvindt:
+Alle bronnen in [!DNL Experience Platform] zijn geïsoleerd naar specifieke virtuele sandboxen. Alle aanvragen naar [!DNL Experience Platform] API&#39;s vereisen een header die de naam aangeeft van de sandbox waarin de bewerking plaatsvindt:
 
 - x-sandbox-name: `{SANDBOX_NAME}`
 
 >[!NOTE]
 >
->Voor meer informatie over zandbakken in [!DNL Platform], zie de [ documentatie van het zandbakoverzicht ](../../sandboxes/home.md).
+>Voor meer informatie over zandbakken in [!DNL Experience Platform], zie de [ documentatie van het zandbakoverzicht ](../../sandboxes/home.md).
 
-Alle verzoeken die een nuttige lading (POST, PUT, PATCH) bevatten vereisen een extra kopbal:
+Alle verzoeken die een lading (POST, PUT, PATCH) bevatten vereisen een extra kopbal:
 
 - Inhoudstype: application/json
 
@@ -355,7 +355,7 @@ Deze reactie retourneert een map met twee afzonderlijke bestanden, met id&#39;s 
 
 ## De metagegevens van een bestand ophalen
 
-U kunt de metagegevens van een bestand ophalen door een HEAD-verzoek in te dienen. Hiermee worden de metagegevenskoppen van het bestand geretourneerd, inclusief de grootte in bytes en bestandsindeling.
+U kunt de metagegevens van een bestand ophalen door een HEAD-aanvraag in te dienen. Hiermee worden de metagegevenskoppen van het bestand geretourneerd, inclusief de grootte in bytes en bestandsindeling.
 
 **API formaat**
 
@@ -418,7 +418,7 @@ Als de reactie is gelukt, wordt de inhoud van het bestand geretourneerd.
 
 Als u een specifiek bytebereik van een bestand wilt downloaden, geeft u een bereikkoptekst op tijdens een `GET /files/{FILE_ID}` -aanvraag naar de [!DNL Data Access] API. Als het bereik niet is opgegeven, downloadt de API standaard het gehele bestand.
 
-Het voorbeeld van de HEAD in de [ vorige sectie ](#retrieve-the-metadata-of-a-file) geeft de grootte van een specifiek dossier in bytes.
+Het voorbeeld van HEAD in de [ vorige sectie ](#retrieve-the-metadata-of-a-file) geeft de grootte van een specifiek dossier in bytes.
 
 **API formaat**
 

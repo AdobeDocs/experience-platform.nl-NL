@@ -1,37 +1,37 @@
 ---
-title: Opmerkingen bij de release van Adobe Experience Platform, maart 2020
+title: Aanvullende informatie van maart 2020 voor Adobe Experience Platform
 description: Aanvullende informatie van maart 2020 voor Adobe Experience Platform.
 doc-type: release notes
 last-update: March 10, 2020
 author: ens71067
 keywords: opmerkingen bij de release;
 exl-id: 407c2bac-4c8a-4939-b3dd-788250f15650
-source-git-commit: 34e0381d40f884cd92157d08385d889b1739845f
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '858'
-ht-degree: 3%
+source-wordcount: '859'
+ht-degree: 15%
 
 ---
 
-# Opmerkingen bij de release van Adobe Experience Platform
+# Aanvullende informatie voor Adobe Experience Platform
 
-**Releasedatum: donderdag 11 maart 2020**
+**Releasedatum:donderdag 11 maart 2020**
 
 Updates voor bestaande functies in Adobe Experience Platform:
 
-* [Gegevensbeheer](#governance)
+* [Datagovernance](#governance)
 * [[!DNL Data Ingestion]](#ingestion)
 * [[!DNL Destinations]](#destinations)
 * [[!DNL Identity Service]](#identity)
 * [[!DNL Sources]](#sources)
 
-## Gegevensbeheer {#governance}
+## Datagovernance {#governance}
 
-[!DNL Experience Platform] stelt bedrijven in staat gegevens van meerdere bedrijfssystemen samen te brengen, zodat marketers klanten beter kunnen identificeren, begrijpen en betrekken. [!DNL Experience Platform] bevat een end-to-end infrastructuur voor gegevensbeheer die ervoor zorgt dat gegevens binnen [!DNL Platform] correct worden gebruikt en dat gegevens tussen systemen worden gedeeld.
+[!DNL Experience Platform] stelt bedrijven in staat gegevens van meerdere bedrijfssystemen samen te brengen, zodat marketers klanten beter kunnen identificeren, begrijpen en betrekken. [!DNL Experience Platform] bevat een end-to-end infrastructuur voor gegevensbeheer die ervoor zorgt dat gegevens binnen [!DNL Experience Platform] correct worden gebruikt en dat gegevens tussen systemen worden gedeeld.
 
-Adobe Experience Platform Data Governance is een reeks strategieën en technologieën die worden gebruikt om klantgegevens te beheren en naleving van regelgeving, beperkingen en beleidsregels die van toepassing zijn op gegevensgebruik te waarborgen. De klasse speelt binnen [!DNL Experience Platform] op diverse niveaus een sleutelrol, zoals catalogisering, gegevenskoppeling, labels voor gegevensgebruik, beleid voor gegevenstoegang en toegangsbeheer voor marketingacties.
+Adobe Experience Platform-datagovernance is een reeks strategieën en technologieën die worden gebruikt om klantgegevens te beheren en naleving te waarborgen van regelgeving, beperkingen en beleidsregels die op gegevensgebruik van toepassing zijn. Dit speelt binnen [!DNL Experience Platform] een sleutelrol op verschillende niveaus zoals catalogisering, gegevensoorsprong, labeling van gegevensgebruik, beleid voor gegevenstoegang en beheer van toegang tot gegevens voor marketingacties.
 
-**Nieuwe eigenschappen**
+**Nieuwe functies**
 
 >[!NOTE]
 >
@@ -53,7 +53,7 @@ Voor meer informatie over het Beleid van Gegevens, zie het [ overzicht van het B
 
 Adobe Experience Platform biedt een uitgebreide reeks functies voor het invoeren van elk type en elke vertraging van gegevens. Adobe Experience Platform [!DNL Data Ingestion] biedt meerdere alternatieven voor het opnemen van gegevens, zoals batch-API&#39;s, streaming API&#39;s, native Adobe-connectors, partners voor gegevensintegratie of de Adobe Experience Platform-interface.
 
-**Nieuwe eigenschappen**
+**Nieuwe functies**
 
 | Functie | Beschrijving |
 |------- | -----------|
@@ -63,18 +63,18 @@ Adobe Experience Platform biedt een uitgebreide reeks functies voor het invoeren
 
 * Geen
 
-Meer leren over het opnemen van gegevens in Platform, bezoek de [ documentatie van de Ingestie van Gegevens ](../../ingestion/home.md).
+Meer over het opnemen van gegevens in Experience Platform leren, bezoek de [ documentatie van de Ingestie van Gegevens ](../../ingestion/home.md).
 
 
-## Doelen {#destinations}
+## Bestemmingen {#destinations}
 
-In [ Real-time Customer Data Platform ](../../rtcdp/overview.md), zijn de bestemmingen pre-gebouwde integratie met bestemmingsplatforms die gegevens aan die partners op een naadloze manier activeren.
+In [ Real-Time Customer Data Platform ](../../rtcdp/overview.md), zijn de bestemmingen pre-gebouwde integratie met bestemmingsplatforms die gegevens aan die partners op een naadloze manier activeren.
 
 **Nieuwe bestemmingen**
 
 Er zijn nieuwe doelen beschikbaar waar u uw Adobe Experience Platform-gegevens kunt activeren. Zie hieronder voor meer informatie:
 
-| Doel | Beschrijving |
+| Bestemming | Beschrijving |
 |--- | ---|
 | Opslagdoelen voor cloud | Real-Time CDP kan uw segmenten nu als gegevensbestanden leveren aan uw [!DNL Amazon S3] - of SFTP-locatie voor cloudopslag. Hierdoor kunt u het publiek en de bijbehorende profielkenmerken naar uw interne systemen verzenden via CSV-bestanden of bestanden met tabs als scheidingsteken. |
 | Advertising-bestemmingen | De [!DNL Google] -doelkaart wordt nu gesplitst in drie doelkaarten voor de drie verschillende [!DNL Google] -platforms die momenteel worden ondersteund in Real-Time CDP: [!DNL Google Ads] , [!DNL Google Ad Manager] , [!DNL Google] Display &amp; Video 360. |
@@ -87,7 +87,7 @@ Voor het aanbieden van relevante digitale ervaringen is een volledig begrip van 
 
 Met Adobe Experience Platform [!DNL Identity Service] kunt u uw klanten en hun gedrag beter laten zien door identiteiten tussen apparaten en systemen te overbruggen, zodat u in real-time een indrukwekkende, persoonlijke digitale ervaring kunt bieden.
 
-**Nieuwe eigenschappen**
+**Nieuwe functies**
 
 | Functie | Beschrijving |
 | ------- | ----------- |
@@ -101,11 +101,11 @@ Voor meer informatie over [!DNL Identity Service], zie het [ overzicht van de Di
 
 ## Bronnen {#sources}
 
-Adobe Experience Platform kan gegevens uit externe bronnen invoeren, terwijl u die gegevens kunt structureren, labelen en verbeteren met [!DNL Platform] -services. U kunt gegevens van een verscheidenheid van bronnen zoals de toepassingen van de Adobe, op wolk-gebaseerde opslag, derdesoftware, en uw systeem van CRM opnemen.
+Adobe Experience Platform kan gegevens uit externe bronnen invoeren, terwijl u die gegevens kunt structureren, labelen en verbeteren met [!DNL Experience Platform] -services. U kunt gegevens opnemen uit verschillende bronnen, zoals Adobe-toepassingen, cloudopslag, software van derden en uw CRM-systeem.
 
-[!DNL Experience Platform] biedt een RESTful-API en een interactieve UI waarmee u eenvoudig bronverbindingen voor verschillende gegevensproviders kunt instellen. Deze bronverbindingen staan u toe om met externe opslagsystemen en de diensten van CRM voor authentiek te verklaren en te verbinden, tijden voor ingestiingslooppas te plaatsen, en gegevensinvoer te beheren.
+[!DNL Experience Platform] biedt een RESTful-API en een interactieve UI waarmee u eenvoudig bronverbindingen voor verschillende gegevensproviders kunt instellen. Met deze bronverbindingen kunt u externe opslagsystemen en CRM-services verifiëren en er verbinding mee maken, tijden voor opnameruns instellen en de doorvoer van gegevensopname beheren.
 
-**Nieuwe eigenschappen**
+**Nieuwe functies**
 
 | Functie | Beschrijving |
 | ------- | ----------- |

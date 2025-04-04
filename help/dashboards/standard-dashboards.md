@@ -2,9 +2,9 @@
 title: Standaarddashboards
 description: Leer hoe u aangepaste dashboards kunt maken en beheren waar u op maat gemaakte widgets kunt maken, toevoegen en bewerken om belangrijke metriek zichtbaar te maken.
 exl-id: a9ab83f7-b68d-4dbf-9dc6-ef253df5c82c
-source-git-commit: ddf886052aedc025ff125c03ab63877cb049583d
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '1552'
+source-wordcount: '1553'
 ht-degree: 0%
 
 ---
@@ -22,7 +22,7 @@ To view dashboards in Adobe Experience Platform you must have the appropriate pe
 
 ## Een aangepast dashboard maken
 
-Als u eerst een aangepast dashboard wilt maken, navigeert u naar het dashboardoverzicht. Selecteer **[!UICONTROL Dashboards]** in de linkernavigatie van de gebruikersinterface van het platform gevolgd door **[!UICONTROL Create dashboard]** .
+Als u eerst een aangepast dashboard wilt maken, navigeert u naar het dashboardoverzicht. Selecteer **[!UICONTROL Dashboards]** in de linkernavigatie van de gebruikersinterface van Experience Platform, gevolgd door **[!UICONTROL Create dashboard]** .
 
 ![ de dashboardinventaris met Dashboards in de linkernavigatie en &quot;Create dashboard&quot;benadrukte.](./images/standard-dashboards/create-dashboard.png)
 
@@ -64,7 +64,7 @@ De werkruimte van de widgetcomposer wordt weergegeven. Selecteer vervolgens **[!
 
 #### Gegevensmodel selecteren {#select-data-model}
 
-Het dialoogvenster [!UICONTROL Select data model] wordt weergegeven. Selecteer een gegevensmodel in de linkerkolom om een voorvertoningslijst van alle beschikbare lijsten te tonen. Het vooraf geconfigureerde gegevensmodel voor Real-time Customer Data Platform krijgt de naam [!UICONTROL CDPInsights] .
+Het dialoogvenster [!UICONTROL Select data model] wordt weergegeven. Selecteer een gegevensmodel in de linkerkolom om een voorvertoningslijst van alle beschikbare lijsten te tonen. Het vooraf geconfigureerde gegevensmodel voor Real-Time Customer Data Platform krijgt de naam [!UICONTROL CDPInsights] .
 
 >[!TIP]
 >
@@ -152,7 +152,7 @@ U kunt widgets opnieuw rangschikken en de grootte ervan wijzigen in deze werkrui
 
 ![ het user-defined dashboard met een douane widget en sparen benadrukte knoop.](./images/standard-dashboards/user-defined-dashboard.png)
 
-Om ervoor te zorgen dat elke vraag voor een Adobe Real-time Customer Data Platform inzichten dashboard genoeg middelen heeft om efficiënt uit te voeren, volgt API middelgebruik door gelijkheidsgroeven aan elke vraag toe te wijzen. Het systeem kan tot vier gezamenlijke vragen verwerken, en daarom zijn vier gezamenlijke vraaggroeven beschikbaar op elk bepaald ogenblik. Vragen worden in een wachtrij geplaatst op basis van sleuven voor gelijktijdige uitvoering en wachten vervolgens in de wachtrij totdat voldoende sleuven voor gelijktijdige uitvoering beschikbaar zijn.
+Om ervoor te zorgen dat elke vraag voor een Adobe Real-Time Customer Data Platform inzichten dashboard genoeg middelen heeft om efficiënt uit te voeren, volgt API middelgebruik door gelijkheidsgroeven aan elke vraag toe te wijzen. Het systeem kan tot vier gezamenlijke vragen verwerken, en daarom zijn vier gezamenlijke vraaggroeven beschikbaar op elk bepaald ogenblik. Vragen worden in een wachtrij geplaatst op basis van sleuven voor gelijktijdige uitvoering en wachten vervolgens in de wachtrij totdat voldoende sleuven voor gelijktijdige uitvoering beschikbaar zijn.
 
 ### Een widget bewerken, dupliceren of verwijderen {#duplicate}
 
@@ -172,7 +172,7 @@ Selecteer vervolgens de ovalen in de rechterbovenhoek van de widget die u wilt b
 
 >[!NOTE]
 >
->Met duplicatie kunt u de kenmerken van een inzicht aanpassen om een unieke widget te maken zonder dat u helemaal opnieuw hoeft te beginnen. Als u een widget dupliceert, wordt deze weergegeven in het aangepaste dashboard. U kunt vervolgens de ovalen van de nieuwe widget selecteren, gevolgd door **[!UICONTROL Edit]** , om uw inzicht aan te passen.
+>Met duplicatie kunt u de kenmerken van een insight aanpassen om een unieke widget te maken zonder dat u helemaal opnieuw hoeft te beginnen. Als u een widget dupliceert, wordt deze weergegeven in het aangepaste dashboard. Vervolgens kunt u de ovalen van de nieuwe widget selecteren, gevolgd door **[!UICONTROL Edit]** , om uw insight aan te passen.
 
 ## Volgende stappen en extra bronnen
 

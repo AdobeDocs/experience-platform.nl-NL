@@ -2,9 +2,9 @@
 title: Het dashboard Accountprofielen
 description: Adobe Experience Platform biedt een dashboard waarmee u belangrijke informatie over de B2B-accountprofielen van uw organisatie kunt bekijken.
 exl-id: c9a3d786-6240-4ba4-96c8-05f658e1150c
-source-git-commit: a0b762cb89f45313724187ce36b80b2f3d0548eb
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '2245'
+source-wordcount: '2249'
 ht-degree: 0%
 
 ---
@@ -17,7 +17,7 @@ Dit document biedt een overzicht van de functies in het dashboard van [!UICONTRO
 
 ## Aan de slag
 
-U moet aan [ Adobe Real-time Customer Data Platform B2B edition ](../../rtcdp/b2b-overview.md) gerechtigd zijn om tot het B2B [!UICONTROL Account Profiles] dashboard toegang te hebben.
+U moet aan [ Adobe Real-Time Customer Data Platform B2B edition ](../../rtcdp/b2b-overview.md) gerechtigd zijn om tot het B2B [!UICONTROL Account Profiles] dashboard toegang te hebben.
 
 ## Gegevens van accountprofielen {#data}
 
@@ -31,9 +31,9 @@ De profielgegevens in de momentopname geven de gegevens precies zo weer als op h
 
 ## Het dashboard van [!UICONTROL Account Profiles] verkennen {#explore}
 
-Als u naar het [!UICONTROL Account Profiles] -dashboard in de gebruikersinterface van het platform wilt navigeren, selecteert u **[!UICONTROL Profiles]** onder [!UICONTROL Accounts] in het navigatievenster aan de linkerkant.
+Als u naar het [!UICONTROL Account Profiles] -dashboard in de gebruikersinterface van Experience Platform wilt navigeren, selecteert u **[!UICONTROL Profiles]** onder [!UICONTROL Accounts] in het navigatievenster aan de linkerkant.
 
-![ het Platform UI met de Profielen van de Rekening in de linkerbenadrukte navigatie en het overzicht getoonde lusje.](../images/account-profiles/account-profiles-dashboard.png)
+![ UI van Experience Platform met de Profielen van de Rekening in de linkerbenadrukte navigatie en het overzicht getoonde lusje.](../images/account-profiles/account-profiles-dashboard.png)
 
 Van het [!UICONTROL Account Profiles] dashboard, kunt u of [ de rekeningsprofielen doorbladeren die in uw organisatie ](#browse-account-profiles) worden opgenomen, of [ bekijken de volledige gegevens van uw rekeningsprofiel bij een blik gebruikend widgets ](#standard-widgets).
 
@@ -61,7 +61,7 @@ Selecteer in de resultaten op het tabblad [!UICONTROL Browse] de optie [!UICONTR
 
 ![ De Profielen van de Rekening doorbladeren lusje met getoonde resultaten en benadrukte identiteitskaart van het Profiel.](../images/account-profiles/account-profiles-browse-tab.png)
 
-De accountprofielgegevens die op het tabblad [!UICONTROL Details] worden weergegeven, zijn samengevoegd vanuit meerdere profielfragmenten tot één weergave van het individuele account. Zie de documentatie bij [ doorbladerend rekeningsprofielen in Adobe Real-time Customer Data Platform ](../../rtcdp/accounts/account-profile-ui-guide.md#browse-account-profiles) om meer over de mogelijkheden van het rekeningsprofiel te leren bekijken in Platform UI.
+De accountprofielgegevens die op het tabblad [!UICONTROL Details] worden weergegeven, zijn samengevoegd vanuit meerdere profielfragmenten tot één weergave van het individuele account. Zie de documentatie bij [ doorbladerend rekeningsprofielen in Adobe Real-Time Customer Data Platform ](../../rtcdp/accounts/account-profile-ui-guide.md#browse-account-profiles) om meer over de mogelijkheden van het de profielbekijken van de rekening in Experience Platform UI te leren.
 
 ## Standaardwidgets {#standard-widgets}
 
@@ -103,7 +103,7 @@ De widget [!UICONTROL Account profiles added] gebruikt een lijngrafiek om het aa
 
 >[!NOTE]
 >
->Het [!UICONTROL Customers per account overview] inzicht en het zijn boor-door grafieken ([!UICONTROL Customers per account detail], [!UICONTROL Opportunities per account overview], [!UICONTROL Opportunities per account detail]) worden niet beïnvloed door enige globale datumfilters die u zou kunnen plaatsen.
+>De [!UICONTROL Customers per account overview] insight en het zijn doorlopende grafieken ([!UICONTROL Customers per account detail], [!UICONTROL Opportunities per account overview], [!UICONTROL Opportunities per account detail]) worden niet beïnvloed door globale datumfilters die u zou kunnen hebben ingesteld.
 
 Het [!UICONTROL Customers per account overview] -diagram bevat een overzicht van accounts op basis van de klanttypen. Er wordt een tabel met vier rijen weergegeven waarin accounts worden ingedeeld als direct of indirect klanten of als klanten zonder klanten. Het geeft het totale aantal rekeningen voor elke categorie aan. De grafiekhulp identificeert de distributie van rekeningen die directe of indirecte klanten hebben.
 
@@ -129,7 +129,7 @@ Om tussen de boor en het dashboard van Profielen van de Rekening te schakelen, s
 
 ![ de boor door mening in het dashboard van de Profielen van Rekeningen met het navigatiedruppdown benadrukte menu.](../images/account-profiles/navigation-dropdown.png)
 
-Meer over boorproductie in Platform UI leren, zie de [ Boren door gids ](../sql-insights-query-pro-mode/drill-through.md).
+Meer over boor door in Experience Platform UI leren, zie de [ Boren door gids ](../sql-insights-query-pro-mode/drill-through.md).
 
 #### [!UICONTROL Customers per account detail] {#customers-per-account-detail}
 
@@ -167,7 +167,7 @@ Met de widget [!UICONTROL New opportunities by person role] wordt het totale aan
 
 >[!NOTE]
 >
->De fout [!UICONTROL No data found] of [!UICONTROL Unable to load] wordt veroorzaakt wanneer de de brug-lijst van de &quot;opportuniteit-Persoon&quot;niet in uw schema wordt gebruikt. Als uw inzicht één van deze fouten toont, controleer uw verenigingsschema en zorg ervoor dat de &quot;opportuniteit-Persoon&quot;gebiedsgroep gegevens opneemt.
+>De fout [!UICONTROL No data found] of [!UICONTROL Unable to load] wordt veroorzaakt wanneer de de brug-lijst van de &quot;opportuniteit-Persoon&quot;niet in uw schema wordt gebruikt. Als in uw insight een van deze fouten wordt weergegeven, controleert u het schema van de union en controleert u of de veldgroep Opportunity-Person gegevens opneemt.
 
 ![ de Nieuwe kansen door de widget van de persoonsrol.](../images/account-profiles/new-opportunities-by-person-role.png)
 
@@ -233,10 +233,10 @@ Met het vervolgkeuzemenu in de widget kunt u het accountscoremodel selecteren.
 
 Als een widget *[!UICONTROL Unable to load. Try again.]* weergeeft, is dit omdat er geen gegevens beschikbaar zijn voor de B2B-entiteit. De widget die bijvoorbeeld onder [!UICONTROL New opportunities by person role] wordt weergegeven, toont het bericht &quot; [!UICONTROL Unable to load. Try again.]&quot; omdat deze sandbox geen opportuniteitsgegevens bevat.
 
-![ Onbekwaam om inzicht fout te laden.](../images/account-profiles/unable-to-load.png)
+![ Onbekwaam om de fout van insight te laden.](../images/account-profiles/unable-to-load.png)
 
 Om de kwestie op te lossen, moet u B2B entiteitsgegevens, zoals *opportunitypersoon* gegevens, in de zandbak innemen. Na 48 uur worden de gegevens weerspiegeld in de widgets.
 
 ## Volgende stappen
 
-Als u dit document volgt, moet u nu weten hoe u het dashboard van [!UICONTROL Account Profiles] kunt vinden en welke maatstaven in de beschikbare widgets worden weergegeven. Meer over het werken met rekeningsprofielen als deel van uw B2B- gegevens in het Experience Platform UI leren, gelieve te verwijzen naar het [ overzicht van rekeningsprofielen ](../../rtcdp/accounts/account-profile-overview.md) voor Adobe Real-Time CDP, B2B edition.
+Als u dit document volgt, moet u nu weten hoe u het dashboard van [!UICONTROL Account Profiles] kunt vinden en welke maatstaven in de beschikbare widgets worden weergegeven. Meer over het werken met rekeningsprofielen als deel van uw B2B- gegevens in Experience Platform UI leren, gelieve te verwijzen naar het [ overzicht van rekeningsprofielen ](../../rtcdp/accounts/account-profile-overview.md) voor Adobe Real-Time CDP, B2B edition.

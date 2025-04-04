@@ -2,10 +2,10 @@
 title: Extension Manifest
 description: Leer hoe u een JSON-manifestbestand configureert dat Adobe Experience Platform informeert over de juiste manier om uw extensie te gebruiken.
 exl-id: 7cac020b-3cfd-4a0a-a2d1-edee1be125d0
-source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '2591'
-ht-degree: 0%
+source-wordcount: '2606'
+ht-degree: 1%
 
 ---
 
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch is omgedoopt tot een reeks technologieën voor gegevensverzameling in Adobe Experience Platform. Diverse terminologische wijzigingen zijn als gevolg hiervan in de productdocumentatie doorgevoerd. Gelieve te verwijzen naar het volgende [ document ](../term-updates.md) voor een geconsolideerde verwijzing van de terminologieveranderingen.
+>Adobe Experience Platform Launch is omgedoopt tot een reeks technologieën voor dataverzameling in Adobe Experience Platform.  Als gevolg hiervan zijn er verschillende terminologiewijzigingen in de productdocumentatie doorgevoerd. Raadpleeg het volgende [ document ](../term-updates.md) voor een geconsolideerde referentie van de terminologiewijzigingen.
 
 In de basismap van de extensie moet u een bestand met de naam `extension.json` maken. Dit bevat belangrijke informatie over uw extensie waarmee Adobe Experience Platform deze correct kan gebruiken. Sommige inhoud wordt gevormd na de manier van [ npm `package.json` ](https://docs.npmjs.com/files/package.json).
 
@@ -26,12 +26,12 @@ Een extensiemanifest moet uit het volgende bestaan:
 | `name` | De naam van de extensie. Het moet van alle andere uitbreidingen uniek zijn en moet [ het noemen regels ](#naming-rules) naleven. **dit wordt gebruikt door markeringen als herkenningsteken en zou niet moeten worden veranderd nadat u uw uitbreiding publiceert.** |
 | `platform` | Het platform voor uw extensie. De enige waarde die op dit moment wordt geaccepteerd, is `web` . |
 | `version` | De versie van uw extensie. Het moet het [ semver ](https://semver.org/) versioning formaat volgen. Dit is verenigbaar met [ npm versiegebied ](https://docs.npmjs.com/files/package.json#version). |
-| `displayName` | De leesbare naam van de extensie. Dit zal aan de gebruikers van het Platform worden getoond. Het is niet nodig om &quot;tags&quot; of &quot;extensie&quot; te vermelden. Gebruikers weten dan al dat ze naar een extensie voor tags kijken. |
-| `description` | De beschrijving van de extensie. Dit zal aan de gebruikers van het Platform worden getoond. Als uw extensie gebruikers de mogelijkheid biedt om uw product te implementeren op hun website, moet u beschrijven wat uw product doet. Het is niet nodig om &quot;tags&quot; of &quot;extensie&quot; te vermelden. Gebruikers weten dan al dat ze naar een extensie voor tags kijken. |
-| `iconPath` *(Optioneel)* | Het relatieve pad naar het pictogram dat voor de extensie wordt weergegeven. Het mag niet beginnen met een slash. De extensie moet verwijzen naar een SVG-bestand met de extensie `.svg` . De SVG moet vierkant zijn en kan op Platform worden geschaald. |
+| `displayName` | De leesbare naam van de extensie. Dit wordt weergegeven aan Experience Platform-gebruikers. Het is niet nodig om &quot;tags&quot; of &quot;extensie&quot; te vermelden. Gebruikers weten dan al dat ze naar een extensie voor tags kijken. |
+| `description` | De beschrijving van de extensie. Dit wordt weergegeven aan Experience Platform-gebruikers. Als uw extensie gebruikers de mogelijkheid biedt om uw product te implementeren op hun website, moet u beschrijven wat uw product doet. Het is niet nodig om &quot;tags&quot; of &quot;extensie&quot; te vermelden. Gebruikers weten dan al dat ze naar een extensie voor tags kijken. |
+| `iconPath` *(Optioneel)* | Het relatieve pad naar het pictogram dat voor de extensie wordt weergegeven. Het mag niet beginnen met een slash. Het moet verwijzen naar een SVG-bestand met een `.svg` -extensie. De SVG moet vierkant zijn en kan door Experience Platform worden geschaald. |
 | `author` | De &quot;auteur&quot; is een object met de volgende structuur: <ul><li>`name`: De naam van de auteur van de extensie. De bedrijfsnaam kan hier ook worden gebruikt.</li><li>`url` *(Facultatief)*: Een URL waar u meer over de uitbreidingsauteur kunt weten.</li><li>`email` *(Facultatief)*: Het e-mailadres van de auteur van de uitbreiding.</li></ul>Dit is verenigbaar met [ npm auteursgebied ](https://docs.npmjs.com/files/package.json#people-fields-author-contributors) regels. |
-| `exchangeUrl` *(Vereist voor openbare extensies)* | De URL naar de aanbieding van uw extensie op Adobe Exchange. Deze moet overeenkomen met het patroon `https://www.adobeexchange.com/experiencecloud.details.######.html` . |
-| `viewBasePath` | Het relatieve pad naar de submap met al uw weergaven en aan de weergave gerelateerde bronnen (HTML, JavaScript, CSS, afbeeldingen). Platform host deze map op een webserver en laadt hierin iframe-inhoud. Dit is een verplicht veld en mag niet beginnen met een schuine streep. Als bijvoorbeeld al uw weergaven zich in `src/view/` bevinden, is de waarde van `viewBasePath` gelijk aan `src/view/` . |
+| `exchangeUrl` *(Vereist voor openbare extensies)* | De URL naar de aanbieding van je extensie op Adobe Exchange. Deze moet overeenkomen met het patroon `https://www.adobeexchange.com/experiencecloud.details.######.html` . |
+| `viewBasePath` | Het relatieve pad naar de submap met al uw weergaven en aan de weergave gerelateerde bronnen (HTML, JavaScript, CSS, afbeeldingen). Experience Platform host deze map op een webserver en laadt er iframe-inhoud uit. Dit is een verplicht veld en mag niet beginnen met een schuine streep. Als bijvoorbeeld al uw weergaven zich in `src/view/` bevinden, is de waarde van `viewBasePath` gelijk aan `src/view/` . |
 | `hostedLibFiles` *(Optioneel)* | Veel van onze gebruikers hebben de voorkeur aan het hosten van alle op tags betrekking hebbende dossiers op hun eigen server. Dit biedt gebruikers meer zekerheid over de beschikbaarheid van bestanden tijdens runtime en kan de code gemakkelijk scannen op beveiligingskwetsbaarheden. Als het bibliotheekgedeelte van uw extensie JavaScript-bestanden tijdens runtime moet laden, wordt u aangeraden deze eigenschap te gebruiken om deze bestanden weer te geven. De weergegeven bestanden worden samen met de tagruntimebibliotheek gehost. Uw uitbreiding kan de dossiers via URL dan laden die gebruikend [ wordt teruggewonnen getHostedLibFileUrl ](./turbine.md#get-hosted-lib-file) methode.<br><br> deze optie bevat een serie met relatieve wegen van derdebibliotheekdossiers die moeten worden ontvangen. |
 | `main` *(Optioneel)* | Het relatieve pad van een bibliotheekmodule die bij uitvoering moet worden uitgevoerd.<br><br> deze module zal altijd inbegrepen in de runtime bibliotheek en uitgevoerd zijn. Omdat de module altijd is opgenomen in de runtimebibliotheek, raden we u aan alleen een &#39;main&#39;-module te gebruiken als dit absoluut noodzakelijk is en de codegrootte minimaal te houden.<br><br> Deze module wordt gegarandeerd niet eerst worden uitgevoerd; andere modules kunnen vóór het worden uitgevoerd. |
 | `configuration` *(Optioneel)* | Dit beschrijft het [ gedeelte van de uitbreidingsconfiguratie ](./configuration.md) van de uitbreiding. Dit is nodig als u wilt dat gebruikers algemene instellingen voor de extensie opgeven. Zie [ bijlage ](#config-object) voor details op hoe dit gebied zou moeten worden gestructureerd. |
@@ -68,11 +68,11 @@ Het configuratieobject moet als volgt zijn gestructureerd:
   <tbody>
     <tr>
       <td><code>viewPath</code></td>
-      <td>De relatieve URL naar de configuratieweergave van de extensie. Deze moet relatief zijn ten opzichte van <code>viewBasePath</code> en mag niet beginnen met een schuine streep. De extensie moet verwijzen naar een HTML-bestand met de extensie <code>.html</code> . Achtervoegsels van queryreeksen en -fragmenten (hashes) zijn acceptabel.</td>
+      <td>De relatieve URL naar de configuratieweergave van de extensie. Deze moet relatief zijn ten opzichte van <code>viewBasePath</code> en mag niet beginnen met een schuine streep. Het moet verwijzen naar een HTML-bestand met een <code>.html</code> -extensie. Achtervoegsels van queryreeksen en -fragmenten (hashes) zijn acceptabel.</td>
     </tr>
     <tr>
       <td><code>schema</code></td>
-      <td>Een voorwerp van <a href="https://json-schema.org/"> JSON Schema </a> beschrijvend het formaat van een geldig voorwerp dat van de mening van de uitbreidingsconfiguratie wordt bewaard. Aangezien u de ontwikkelaar van de configuratiemening bent, is het uw verantwoordelijkheid om ervoor te zorgen dat om het even welk die montagesvoorwerp aan dit schema aanpast. Dit schema wordt ook gebruikt voor validatie wanneer gebruikers gegevens proberen op te slaan met behulp van de platformservices.<br><br> een voorwerp van het voorbeeldschema is als volgt:
+      <td>Een voorwerp van <a href="https://json-schema.org/"> JSON Schema </a> beschrijvend het formaat van een geldig voorwerp dat van de mening van de uitbreidingsconfiguratie wordt bewaard. Aangezien u de ontwikkelaar van de configuratiemening bent, is het uw verantwoordelijkheid om ervoor te zorgen dat om het even welk die montagesvoorwerp aan dit schema aanpast. Dit schema wordt ook gebruikt voor validatie wanneer gebruikers gegevens proberen op te slaan met Experience Platform-services.<br><br> een voorwerp van het voorbeeldschema is als volgt:
 <pre class="JSON language-JSON hljs">
 {
   "$schema": "http://json-schema.org/draft-04/schema#",
@@ -128,11 +128,11 @@ Een typedefinitie is een voorwerp dat wordt gebruikt om een gebeurtenis, een voo
     </tr>
     <tr>
       <td><code>viewPath</code> <em>(Optioneel)</em></td>
-      <td>De relatieve URL ten opzichte van de tekstweergave. Deze moet relatief zijn ten opzichte van <code>viewBasePath</code> en mag niet beginnen met een schuine streep. De extensie moet verwijzen naar een HTML-bestand met de extensie <code>.html</code> . Zoektekenreeksen en fragmentid's (hashes) zijn acceptabel. Als de de bibliotheekmodule van uw type geen montages van een gebruiker gebruikt, kunt u dit bezit uitsluiten en Platform zal in plaats daarvan placeholder tonen verklaren dat geen configuratie noodzakelijk is.</td>
+      <td>De relatieve URL ten opzichte van de tekstweergave. Deze moet relatief zijn ten opzichte van <code>viewBasePath</code> en mag niet beginnen met een schuine streep. Het moet verwijzen naar een HTML-bestand met een <code>.html</code> -extensie. Zoektekenreeksen en fragmentid's (hashes) zijn acceptabel. Als de bibliotheekmodule van uw type geen instellingen van een gebruiker gebruikt, kunt u deze eigenschap uitsluiten en geeft Experience Platform in plaats daarvan een tijdelijke aanduiding weer die aangeeft dat geen configuratie nodig is.</td>
     </tr>
     <tr>
       <td><code>schema</code></td>
-      <td>Een voorwerp van <a href="https://json-schema.org/"> JSON Schema </a> beschrijvend het formaat van een geldig montagesvoorwerp dat door de gebruiker kan worden bewaard. De montages worden gewoonlijk gevormd en door een gebruiker bewaard gebruikend het gebruikersinterface van de Inzameling van Gegevens. In deze gevallen kan de weergave van de extensie de nodige stappen ondernemen om door de gebruiker opgegeven instellingen te valideren. Anderzijds kiezen sommige gebruikers ervoor om tags-API's rechtstreeks te gebruiken zonder de hulp van een gebruikersinterface. Het doel van dit schema is Platform toe te staan om behoorlijk te bevestigen dat de montagesobjecten die door gebruikers worden bewaard, ongeacht of een gebruikersinterface wordt gebruikt, in een formaat zijn dat met de bibliotheekmodule compatibel is die op het montagesobject tijdens runtime zal handelen.<br><br> een voorwerp van het voorbeeldschema is als volgt:<br>
+      <td>Een voorwerp van <a href="https://json-schema.org/"> JSON Schema </a> beschrijvend het formaat van een geldig montagesvoorwerp dat door de gebruiker kan worden bewaard. De montages worden gewoonlijk gevormd en door een gebruiker bewaard gebruikend het gebruikersinterface van de Inzameling van Gegevens. In deze gevallen kan de weergave van de extensie de nodige stappen ondernemen om door de gebruiker opgegeven instellingen te valideren. Anderzijds kiezen sommige gebruikers ervoor om tags-API's rechtstreeks te gebruiken zonder de hulp van een gebruikersinterface. Het doel van dit schema is om Experience Platform toe te staan correct te bevestigen dat de montagesobjecten die door gebruikers worden bewaard, ongeacht of een gebruikersinterface wordt gebruikt, in een formaat zijn dat met de bibliotheekmodule compatibel is die op het montagesobject tijdens runtime zal handelen.<br><br> een voorwerp van het voorbeeldschema is als volgt:<br>
 <pre class="JSON language-JSON hljs">
 {
   "$schema": "http://json-schema.org/draft-04/schema#",
@@ -160,9 +160,9 @@ Een typedefinitie is een voorwerp dat wordt gebruikt om een gebeurtenis, een voo
 
 ### Transformaties {#transforms}
 
-Voor bepaalde specifieke gebruiksgevallen hebben extensies de instellingsobjecten die zijn opgeslagen vanuit een weergave nodig om door Platform te worden getransformeerd voordat ze worden uitgestraald in de runtimebibliotheek van de tag. U kunt vragen dat een of meer van deze transformaties plaatsvinden door de eigenschap `transforms` in te stellen wanneer u een typedefinitie definieert binnen uw `extension.json` . De eigenschap `transforms` is een array van objecten waarin elk object een transformatie vertegenwoordigt die moet plaatsvinden.
+Voor bepaalde specifieke gebruiksgevallen hebben extensies nodig dat de instellingsobjecten die zijn opgeslagen vanuit een weergave, door Experience Platform worden getransformeerd voordat ze worden uitgestraald in de runtimebibliotheek van de tag. U kunt vragen dat een of meer van deze transformaties plaatsvinden door de eigenschap `transforms` in te stellen wanneer u een typedefinitie definieert binnen uw `extension.json` . De eigenschap `transforms` is een array van objecten waarin elk object een transformatie vertegenwoordigt die moet plaatsvinden.
 
-Voor alle transformaties zijn een `type` en een `propertyPath` vereist. De instructie `type` moet `function` , `remove` en `file` zijn en beschrijft welk transformatieplatform op het instellingsobject moet worden toegepast. `propertyPath` is een door een punt gescheiden tekenreeks die tags doorgeeft waar de eigenschap moet worden gevonden die binnen het instellingsobject moet worden gewijzigd. Hier is een voorwerp van voorbeeldmontages en sommige `propertyPath` s:
+Voor alle transformaties zijn een `type` en een `propertyPath` vereist. De instructie `type` moet `function` , `remove` en `file` zijn en beschrijft welke transformatie Experience Platform op het instellingsobject moet toepassen. `propertyPath` is een door een punt gescheiden tekenreeks die tags doorgeeft waar de eigenschap moet worden gevonden die binnen het instellingsobject moet worden gewijzigd. Hier is een voorwerp van voorbeeldmontages en sommige `propertyPath` s:
 
 ```js
 {
@@ -191,7 +191,7 @@ In de onderstaande secties worden de beschikbare transformaties beschreven en ho
 
 #### Functietransformatie
 
-Met de functietransformatie kan code die door platformgebruikers wordt geschreven, worden uitgevoerd door een bibliotheekmodule binnen de uitgestraalde runtimebibliotheek.
+Met de functie-transformatie kan code die door Experience Platform-gebruikers is geschreven, worden uitgevoerd door een bibliotheekmodule in de uitgestraalde runtimebibliotheek.
 
 Laten we aannemen dat we een handelingstype &#39;aangepast script&#39; willen opgeven. De actieweergave &quot;aangepast script&quot; kan een tekstgebied bevatten waarin de gebruiker code kan invoeren. Laten we aannemen dat een gebruiker de volgende code in het tekstgebied heeft ingevoerd:
 
@@ -211,7 +211,7 @@ Wanneer een regel die onze actie gebruikt, in de runtimebibliotheek van de tag w
 
 Op het punt dat het instellingsobject wordt opgeslagen vanuit de weergave van het handelingstype, is de code van de gebruiker gewoon een tekenreeks. Dit is goed omdat het behoorlijk aan en van JSON kan behoorlijk in series worden vervaardigd; nochtans, is het ook slecht omdat het typisch in de markering runtime bibliotheek als koord evenals in plaats van een uitvoerbare functie zou worden uitgestoten. Hoewel u kon proberen om de code binnen de de bibliotheekmodule van uw actietype uit te voeren gebruikend [`eval` ](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/eval) of de aannemer van de Functie van a [ ](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function), is het hoogst ontmoedigd toe te schrijven aan [ inhoudsveiligheidsbeleid ](https://developer.mozilla.org/en-US/docs/Web/Security/CSP) potentieel blokkerend uitvoering.
 
-Als tussenoplossing voor deze situatie, vertelt het gebruiken van de functietransformatie Platform om de code van de gebruiker in een uitvoerbare functie te verpakken wanneer het in de markering runtime bibliotheek wordt uitgegeven. Om ons voorbeeldprobleem op te lossen, zouden wij de transformatie op de typedefinitie in `extension.json` als volgt bepalen:
+Als tussenoplossing voor deze situatie, vertelt het gebruiken van de functietransformatie Experience Platform om de code van de gebruiker in een uitvoerbare functie te verpakken wanneer het in de markering runtime bibliotheek wordt uitgegeven. Om ons voorbeeldprobleem op te lossen, zouden wij de transformatie op de typedefinitie in `extension.json` als volgt bepalen:
 
 ```json
 {
@@ -226,7 +226,7 @@ Als tussenoplossing voor deze situatie, vertelt het gebruiken van de functietran
 ```
 
 * `type` definieert het type transformatie dat op het instellingsobject moet worden toegepast.
-* `propertyPath` is een door een punt gescheiden tekenreeks die Platform opgeeft waar de eigenschap moet worden gevonden die binnen het instellingsobject moet worden gewijzigd.
+* `propertyPath` is een door een punt gescheiden tekenreeks die Experience Platform opgeeft waar de eigenschap moet worden gevonden die binnen het instellingsobject moet worden gewijzigd.
 * `parameters` is een array met parameternamen die moeten worden opgenomen in de handtekening van de functie wrapping.
 
 Wanneer het instellingsobject wordt uitgestraald in de tagruntime-bibliotheek, wordt het als volgt getransformeerd:
@@ -245,7 +245,7 @@ Uw bibliotheekmodule kan vervolgens de functie met de code van de gebruiker aanr
 
 #### Bestandstransformatie
 
-Met de bestandstransformatie kan code die door platformgebruikers is geschreven, worden verzonden naar een bestand dat losstaat van de runtimebibliotheek. Het bestand wordt samen met de tagruntime-bibliotheek gehost en kan vervolgens tijdens runtime naar wens worden geladen door de extensie.
+Met de bestandstransformatie kan code die door Experience Platform-gebruikers is geschreven, worden verzonden naar een bestand dat losstaat van de runtimebibliotheek. Het bestand wordt samen met de tagruntime-bibliotheek gehost en kan vervolgens tijdens runtime naar wens worden geladen door de extensie.
 
 Laten we aannemen dat we een handelingstype &#39;aangepast script&#39; willen opgeven. De weergave van het handelingstype kan een tekstgebied bevatten waarin de gebruiker code kan invoeren. Laten we aannemen dat een gebruiker de volgende code in het tekstgebied heeft ingevoerd:
 
@@ -275,7 +275,7 @@ We willen dat de code van de gebruiker in een afzonderlijk bestand wordt geplaat
 ```
 
 * `type` definieert het type transformatie dat op het instellingsobject moet worden toegepast.
-* `propertyPath` is een door een punt gescheiden tekenreeks die Platform opgeeft waar de eigenschap moet worden gevonden die binnen het instellingsobject moet worden gewijzigd.
+* `propertyPath` is een door een punt gescheiden tekenreeks die Experience Platform opgeeft waar de eigenschap moet worden gevonden die binnen het instellingsobject moet worden gewijzigd.
 
 Wanneer het instellingsobject wordt uitgestraald in de tagruntime-bibliotheek, wordt het als volgt getransformeerd:
 
@@ -321,7 +321,7 @@ De eigenschap `bar` wordt niet opgenomen in de runtimebibliotheek van de tag. Om
 ```
 
 * `type` definieert het type transformatie dat op het instellingsobject moet worden toegepast.
-* `propertyPath` is een door een punt gescheiden tekenreeks die Platform opgeeft waar de eigenschap moet worden gevonden die binnen het instellingsobject moet worden gewijzigd.
+* `propertyPath` is een door een punt gescheiden tekenreeks die Experience Platform opgeeft waar de eigenschap moet worden gevonden die binnen het instellingsobject moet worden gewijzigd.
 
 Wanneer het instellingsobject wordt uitgestraald in de tagruntime-bibliotheek, wordt het als volgt getransformeerd:
 

@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform; de Dienst van de Vraag; IP toegangsbeheer; vergunning; API; begonnen worden
+keywords: Experience Platform; Query Service; IP-toegangsbeheer; autorisatie; API; aan de slag
 title: API-handleiding voor Distiller-verificatie
 description: Leer hoe te beginnen voor vergunning en IP waaierbeperkingen voor veilige gegevenstoegang binnen de Dienst van de Vraag van Adobe Experience Platform.
 role: Developer
 exl-id: d93ce774-c8b2-4f15-a4d9-117d9aa5d9e7
-source-git-commit: 804eeb4ec976cf41fdd450bd8f307499c3ebae03
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '501'
-ht-degree: 1%
+source-wordcount: '504'
+ht-degree: 2%
 
 ---
 
@@ -27,21 +27,21 @@ In de volgende secties vindt u informatie over het voorbereiden van de vereiste 
 
 ### Vereiste machtigingen {#required-permissions}
 
-Om de beperkingen van de veilige gegevenstoegang in de Dienst van de Vraag toe te laten, hebt u de **[!UICONTROL Manage Allowed List]** toestemming nodig. Deze toestemming staat organisaties toe om specifieke IP waaiers (in formaat IPv4 of IPv6) te bepalen die aan toegangsgegevens in Platform via de SQL interface worden gemachtigd. De toegang wordt beheerd op het zandbakniveau, waar de gebruikers een lijst van goedgekeurde IP adressen of blokken kunnen vormen CIDR die toegang slechts tot toegelaten netwerken beperken.
+Om de beperkingen van de veilige gegevenstoegang in de Dienst van de Vraag toe te laten, hebt u de **[!UICONTROL Manage Allowed List]** toestemming nodig. Deze toestemming staat organisaties toe om specifieke IP waaiers (in formaat IPv4 of IPv6) te bepalen die tot gegevens in Experience Platform via de SQL interface worden gemachtigd. De toegang wordt beheerd op het zandbakniveau, waar de gebruikers een lijst van goedgekeurde IP adressen of blokken kunnen vormen CIDR die toegang slechts tot toegelaten netwerken beperken.
 
 >[!NOTE]
 >
->De Beheerders van het systeem kunnen opstellings gebruikerstoestemmingen van de Adobe [ Admin Console ](https://adminconsole.adobe.com/). Voor meer informatie, zie de [ gebruikersgids van de Admin Console ](https://helpx.adobe.com/nl/enterprise/using/admin-console.html).
+>De Beheerders van het systeem kunnen opstellings gebruikerstoestemmingen van Adobe [ Admin Console ](https://adminconsole.adobe.com/). Voor meer informatie, zie de [ gebruikersgids van Admin Console ](https://helpx.adobe.com/nl/enterprise/using/admin-console.html).
 
 De volgende functies zijn beschikbaar met de machtiging **[!UICONTROL Manage Allowed List]** :
 
-- **bepaalt toegestane IP waaiers**: Slechts IP adressen of de blokken CIDR van deze bepaalde waaiers kunnen tot gegevens in Platform toegang hebben gebruikend SQL door de Dienst van de Vraag.
+- **bepaalt toegestane IP waaiers**: Slechts IP adressen of de blokken CIDR van deze bepaalde waaiers kunnen tot gegevens in Experience Platform toegang hebben gebruikend SQL door de Dienst van de Vraag.
 - **afdwingen IP waaiercontroles**: De verbindingen van IPs buiten de toegestane waaiers worden ontkend.
 - **Controle en alarmerende mogelijkheden**: Alle toegangspogingen, met inbegrip van ontkende verbindingen, worden geregistreerd als controlegebeurtenissen. Deze gebeurtenissen zijn beschikbaar in de [ Logboeken van de Controle van Adobe Experience Platform ](../../landing/governance-privacy-security/audit-logs/overview.md), toelatend controle van potentiële veiligheidsbreuken.
 
 ### Waarden verzamelen voor vereiste koppen {#gather-values-for-required-headers}
 
-Om vraag aan de Vergunning API van Distiller van Gegevens te maken, moet u het [ Platform API authentificatieleerprogramma ](../../landing/api-authentication.md) voltooien, dat waarden voor vereiste kopballen in API vraag verstrekt. Neem de volgende kopteksten op in elke aanvraag:
+Om vraag aan de Vergunning API van Distiller van Gegevens te maken, moet u het [ Experience Platform API authentificatieleerprogramma ](../../landing/api-authentication.md) voltooien, dat waarden voor vereiste kopballen in API vraag verstrekt. Neem de volgende kopteksten op in elke aanvraag:
 
 - **Vergunning**: `Bearer {ACCESS_TOKEN}`
 - **x-api-sleutel**: `{API_KEY}`
@@ -52,7 +52,7 @@ Om vraag aan de Vergunning API van Distiller van Gegevens te maken, moet u het [
 >
 > Voor meer informatie over zandbakken, zie de [ documentatie van het zandbakoverzicht ](../../sandboxes/home.md).
 
-Alle verzoeken die een nuttige lading (POST, PUT, PATCH) bevatten vereisen ook deze kopbal:
+Alle verzoeken die een lading (POST, PUT, PATCH) bevatten vereisen ook deze kopbal:
 
 - **inhoud-Type**: `application/json`
 

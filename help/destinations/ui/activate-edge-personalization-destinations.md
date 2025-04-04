@@ -3,9 +3,9 @@ title: Het publiek activeren voor verpersoonlijkingsdoelen van randen
 description: Leer hoe u het publiek activeert van Adobe Experience Platform naar Edge-verpersoonlijkingsbestemmingen voor gebruiksgevallen van verpersoonlijking op dezelfde pagina en op de volgende pagina.
 type: Tutorial
 exl-id: cd7132eb-4047-4faa-a224-47366846cb56
-source-git-commit: 4afb2c76f2022423e8f1fa29c91d02b43447ba90
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1878'
+source-wordcount: '1882'
 ht-degree: 0%
 
 ---
@@ -85,7 +85,7 @@ Wanneer u de gegevensstroom configureert, moet u onder **[!UICONTROL Adobe Exper
 
 ![ configuratie DataStream met de benadrukte Doelen van de Segmentatie van Edge en van Personalization!](../assets/ui/activate-edge-personalization-destinations/datastream-config.png)
 
-Voor meer details op hoe te opstelling volgt een datastream, de instructies die in de [ documentatie van SDK van het Web van het Platform ](../../datastreams/configure.md#aep) worden beschreven.
+Voor meer details op hoe te opstelling volgt een datastream, de instructies die in de [ documentatie van SDK van het Web van Experience Platform ](../../datastreams/configure.md#aep) worden beschreven.
 
 ### Een [!DNL Active-On-Edge] samenvoegbeleid maken {#create-merge-policy}
 
@@ -97,9 +97,9 @@ Nadat u de doelverbinding hebt gemaakt, moet u een [!DNL Active-On-Edge] samenvo
 
 Volg de instructies op [ creërend een fusiebeleid ](../../profile/merge-policies/ui-guide.md#create-a-merge-policy), en zorg ervoor om **[!UICONTROL Active-On-Edge Merge Policy]** knevel toe te laten.
 
-### Nieuw publiek maken in platform {#create-audience}
+### Nieuw publiek maken in Experience Platform {#create-audience}
 
-Nadat u het samenvoegbeleid van [!DNL Active-On-Edge] hebt gemaakt, moet u een nieuw publiek in Platform creëren.
+Nadat u het samenvoegbeleid van [!DNL Active-On-Edge] hebt gemaakt, moet u een nieuw publiek in Experience Platform creëren.
 
 Volg de [ gids van de publieksbouwer ](../../segmentation/ui/segment-builder.md) om uw nieuw publiek tot stand te brengen, en zorg ervoor [ het ](../../segmentation/ui/segment-builder.md#merge-policies) toe te wijzen [!DNL Active-On-Edge] samenvoegingsbeleid dat u in de vorige stap creeerde.
 
@@ -141,7 +141,7 @@ Als u het publiek dat u wilt activeren naar het doel wilt selecteren, gebruikt u
 U kunt kiezen uit meerdere soorten publiek, afhankelijk van de oorsprong:
 
 * **[!UICONTROL Segmentation Service]**: publiek dat in Experience Platform wordt gegenereerd door de Segmentation Service. Zie de [ segmentatiedocumentatie ](../../segmentation/ui/overview.md) voor meer details.
-* **[!UICONTROL Custom upload]**: buiten Experience Platform gegenereerde soorten publiek die als CSV-bestanden in Platform worden geüpload. Meer over extern publiek leren, zie de documentatie bij [ het invoeren van een publiek ](../../segmentation/ui/audience-portal.md#import-audience).
+* **[!UICONTROL Custom upload]**: buiten Experience Platform gegenereerde soorten publiek die als CSV-bestanden naar Experience Platform worden geüpload. Meer over extern publiek leren, zie de documentatie bij [ het invoeren van een publiek ](../../segmentation/ui/audience-portal.md#import-audience).
 * Andere soorten publiek, afkomstig van andere Adobe-oplossingen, zoals [!DNL Audience Manager] .
 
 ![ Uitgezochte publieksstap van het activeringswerkschema met verscheidene benadrukte publiek.](../assets/ui/activate-edge-personalization-destinations/select-audiences.png)

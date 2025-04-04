@@ -1,21 +1,21 @@
 ---
-title: Sluit uw Snowflake Streaming Account aan op Adobe Experience Platform
-description: Leer hoe u Adobe Experience Platform kunt verbinden met Snowflake Streaming met behulp van de Flow Service API.
-badgeUltimate: label="Ultieme" type="Positive"
+title: Sluit uw Snowflake Streaming-account aan op Adobe Experience Platform
+description: Leer hoe u Adobe Experience Platform verbindt met Snowflake Streaming met behulp van de Flow Service API.
+badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 3fc225a4-746c-4a91-aa77-bbeb091ec364
-source-git-commit: 34b1676ebb5405d73cf37cd786d1e6c26cb8fdaa
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '845'
+source-wordcount: '852'
 ht-degree: 0%
 
 ---
 
-# Gegevens [!DNL Snowflake] streamen naar Experience Platform met de [!DNL Flow Service] API
+# [!DNL Snowflake] -gegevens met de API [!DNL Flow Service] naar Experience Platform streamen
 
 >[!IMPORTANT]
 >
 >
-> De [!DNL Snowflake] -streamingbron is in de API beschikbaar voor gebruikers die Real-time Customer Data Platform Ultimate hebben aangeschaft.
+> De [!DNL Snowflake] -streamingbron is in de API beschikbaar voor gebruikers die Real-Time Customer Data Platform Ultimate hebben aangeschaft.
 
 Dit leerprogramma verstrekt stappen op hoe te om gegevens van uw [!DNL Snowflake] rekening met Adobe Experience Platform te verbinden en te stromen gebruikend [[!DNL Flow Service]  API ](<https://www.adobe.io/experience-platform-apis/references/flow-service/>).
 
@@ -23,20 +23,20 @@ Dit leerprogramma verstrekt stappen op hoe te om gegevens van uw [!DNL Snowflake
 
 Deze handleiding vereist een goed begrip van de volgende onderdelen van Adobe Experience Platform:
 
-* [ Bronnen ](../../../../home.md): [!DNL Experience Platform] staat gegevens toe om van diverse bronnen worden opgenomen terwijl het voorzien van u van de capaciteit om, inkomende gegevens te structureren te etiketteren en te verbeteren gebruikend [!DNL Platform] diensten.
-* [ Sandboxen ](../../../../../sandboxes/home.md): [!DNL Experience Platform] verstrekt virtuele zandbakken die één enkele [!DNL Platform] instantie in afzonderlijke virtuele milieu&#39;s verdelen helpen digitale ervaringstoepassingen ontwikkelen en ontwikkelen.
+* [ Bronnen ](../../../../home.md): [!DNL Experience Platform] staat gegevens toe om van diverse bronnen worden opgenomen terwijl het voorzien van u van de capaciteit om, inkomende gegevens te structureren te etiketteren en te verbeteren gebruikend [!DNL Experience Platform] diensten.
+* [ Sandboxen ](../../../../../sandboxes/home.md): [!DNL Experience Platform] verstrekt virtuele zandbakken die één enkele [!DNL Experience Platform] instantie in afzonderlijke virtuele milieu&#39;s verdelen helpen digitale ervaringstoepassingen ontwikkelen en ontwikkelen.
 
 Voor de vereiste configuratie en informatie over de [!DNL Snowflake] streamingbron. Gelieve te lezen het [[!DNL Snowflake]  stromen bronoverzicht ](../../../../connectors/databases/snowflake-streaming.md).
 
-### Platform-API&#39;s gebruiken
+### Experience Platform API&#39;s gebruiken
 
-Voor informatie over hoe te om vraag aan Platform APIs met succes te maken, zie de gids op [ begonnen wordt met Platform APIs ](../../../../../landing/api-guide.md).
+Voor informatie over hoe te om vraag aan Experience Platform APIs met succes te maken, zie de gids op [ begonnen wordt met Experience Platform APIs ](../../../../../landing/api-guide.md).
 
 ## Een basisverbinding maken {#create-a-base-connection}
 
-Een basisverbinding behoudt informatie tussen uw bron en Platform, met inbegrip van de de authentificatiegeloofsbrieven van uw bron, de huidige staat van de verbinding, en uw unieke identiteitskaart van de basisverbinding. Met de ID van de basisverbinding kunt u bestanden verkennen en door bestanden navigeren vanuit uw bron en kunt u de specifieke items identificeren die u wilt opnemen, inclusief informatie over hun gegevenstypen en indelingen.
+Een basisverbinding behoudt informatie tussen uw bron en Experience Platform, met inbegrip van de verificatiereferenties van uw bron, de huidige status van de verbinding, en uw unieke identiteitskaart van de basisverbinding. Met de ID van de basisverbinding kunt u bestanden verkennen en door bestanden navigeren vanuit uw bron en kunt u de specifieke items identificeren die u wilt opnemen, inclusief informatie over hun gegevenstypen en indelingen.
 
-Als u een basis-verbindings-id wilt maken, vraagt u een POST naar het `/connections` -eindpunt en geeft u de [!DNL Snowflake] -verificatiegegevens op als onderdeel van de aanvraaginstantie.
+Als u een basis-verbindings-id wilt maken, vraagt u een POST-aanvraag naar het `/connections` -eindpunt en geeft u de [!DNL Snowflake] -verificatiegegevens op als onderdeel van de aanvraagprocedure.
 
 **API formaat**
 
@@ -86,7 +86,7 @@ curl -X POST \
 | --- | --- |
 | `auth.params.account` | De naam van uw [!DNL Snowflake] streamingaccount. |
 | `auth.params.database` | De naam van de [!DNL Snowflake] -database waaruit gegevens worden opgehaald. |
-| `auth.params.warehouse` | De naam van uw [!DNL Snowflake] magazijn. Het [!DNL Snowflake] pakhuis beheert het proces van de vraaguitvoering voor de toepassing. Elk pakhuis is onafhankelijk van elkaar en moet individueel worden betreden wanneer het brengen van gegevens over aan Platform. |
+| `auth.params.warehouse` | De naam van uw [!DNL Snowflake] magazijn. Het [!DNL Snowflake] pakhuis beheert het proces van de vraaguitvoering voor de toepassing. Elk pakhuis is onafhankelijk van elkaar en moet individueel worden betreden wanneer het brengen van gegevens naar Experience Platform. |
 | `auth.params.username` | De gebruikersnaam voor uw [!DNL Snowflake] streamingaccount. |
 | `auth.params.schema` | (Optioneel) Het databaseschema dat aan uw [!DNL Snowflake] streamingaccount is gekoppeld. |
 | `auth.params.password` | Het wachtwoord voor uw [!DNL Snowflake] streamingaccount. |
@@ -106,7 +106,7 @@ Een geslaagde reactie retourneert de nieuwe basisverbinding en de bijbehorende t
 
 ## Uw gegevenstabellen verkennen {#explore-your-data-tables}
 
-Daarna, gebruik identiteitskaart van de basisverbinding om door de gegevenslijsten van uw bron te onderzoeken en te navigeren door een verzoek van de GET aan het `/connections/{BASE_CONNECTION_ID}/explore?objectType=root` eindpunt te doen terwijl het verstrekken van uw identiteitskaart van de basisverbinding als parameter.
+Gebruik vervolgens de id van de basisverbinding om de gegevenstabellen van uw bron te verkennen en door te navigeren door een GET-aanvraag in te dienen bij het `/connections/{BASE_CONNECTION_ID}/explore?objectType=root` -eindpunt terwijl u uw id van de basisverbinding als parameter opgeeft.
 
 **API formaat**
 
@@ -156,7 +156,7 @@ Een succesvolle reactie keert de structuur en de inhoud van de gegevens van uw b
 
 Een bronverbinding maakt en beheert de verbinding met de externe bron vanwaar gegevens worden ingevoerd.
 
-Als u een bronverbinding wilt maken, vraagt u een POST naar het `/sourceConnections` -eindpunt van de [!DNL Flow Service] API.
+Als u een bronverbinding wilt maken, vraagt u een POST-aanvraag naar het `/sourceConnections` -eindpunt van de [!DNL Flow Service] API.
 
 **API formaat**
 
@@ -195,7 +195,7 @@ curl -X POST \
 | --- | --- |
 | `baseConnectionId` | De geverifieerde basis-verbindings-id voor uw [!DNL Snowflake] streamingbron. Deze id is gegenereerd in een eerdere stap. |
 | `connectionSpec.id` | De verbindingsspecificatie-id voor de [!DNL Snowflake] streamingbron. |
-| `params.tableName` | De naam van de tabel in uw [!DNL Snowflake] -database die u naar Platform wilt verzenden. |
+| `params.tableName` | De naam van de tabel in uw [!DNL Snowflake] -database die u naar Experience Platform wilt verzenden. |
 | `params.timestampColumn` | De naam van de tijdstempelkolom die wordt gebruikt om incrementele waarden op te halen. |
 | `params.backfill` | Een booleaanse vlag die bepaalt of de gegevens van het begin (0 epoche tijd) of van de tijd worden gehaald de bron in werking wordt gesteld. Voor meer informatie over deze waarde, lees het [[!DNL Snowflake]  stromen bronoverzicht ](../../../../connectors/databases/snowflake-streaming.md). |
 | `params.timezoneValue` | De tijdzonewaarde geeft aan welke tijd van de tijdzone moet worden opgehaald tijdens het opvragen van de [!DNL Snowflake] -database. Deze parameter moet worden opgegeven als de tijdstempelkolom in de config is ingesteld op `TIMESTAMP_NTZ` . Als deze optie niet is opgegeven, wordt voor `timezoneValue` standaard UTC gebruikt. |
@@ -213,7 +213,7 @@ Een geslaagde reactie retourneert uw bron-verbindings-id en de bijbehorende tag.
 
 ## Een gegevensstroom maken
 
-Als u een gegevensstroom wilt maken om gegevens van een tour [!DNL Snowflake] -account naar Platform te streamen, moet u een verzoek van de POST indienen bij het `/flows` -eindpunt en de volgende waarden opgeven:
+Als u een gegevensstroom wilt maken om gegevens van een tour [!DNL Snowflake] -account naar Experience Platform te streamen, moet u een POST-aanvraag indienen bij het `/flows` -eindpunt en de volgende waarden opgeven:
 
 >[!TIP]
 >

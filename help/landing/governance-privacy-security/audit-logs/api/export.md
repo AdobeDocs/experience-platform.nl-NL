@@ -4,16 +4,16 @@ description: Leer hoe u auditgebeurtenissen in Experience Platform exporteert me
 role: Developer
 feature: Audits, API
 exl-id: 76c5de76-e391-4258-afd8-ddb2c8a9443f
-source-git-commit: c0eb5b5c3a1968cae2bc19b7669f70a97379239b
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '158'
+source-wordcount: '159'
 ht-degree: 0%
 
 ---
 
 # Een lijst met auditgebeurtenissen exporteren
 
-U kunt gebeurtenisgegevens terugwinnen door een verzoek van de GET tot het `/audit/export` eindpunt te richten, specificerend de gebeurtenissen u in de nuttige lading wenst terug te winnen.
+U kunt gebeurtenisgegevens ophalen door een GET-aanvraag in te dienen bij het `/audit/export` -eindpunt en de gebeurtenissen op te geven die u in de payload wilt ophalen.
 
 **API formaat**
 
@@ -27,7 +27,7 @@ GET /audit/export
 | `status` | De status van de actie. Een status kan een van de volgende zijn: </li><li>`Allow` </li><li>`Deny` </li><li>`Failure` </li><li>`Success` </li></ul><br/> Voorbeeld: `?property=status==Deny`. |
 | `action` | Het type actie dat is opgenomen voor de gebeurtenis. Een handeling kan een van de volgende handelingen zijn: <ul><li>`Add` </li><li>`Create` </li><li>`Dataset activate` </li><li>`Dataset remove` </li><li>`Delete` </li><li>`Disable for profile` </li><li>`Enable` </li><li>`Enable for profile` </li><li>`Profile activate` </li><li>`Profile remove` </li><li>`Remove` </li><li>`Reset` </li><li>`Segment Activate` </li><li>`Segment remove` </li><li>`Update` </li></ul> Voorbeeld: `?property=action==Create` . |
 | `user` | De gebruiker die de gebeurtenis heeft uitgevoerd. |
-| `assetType` | Het type van middel van het Platform dat de actie werd uitgevoerd. <br/> Voorbeeld: `?property=assetType==<an asset type>`. |
+| `assetType` | Het type Experience Platform-resource waarop de handeling is uitgevoerd. <br/> Voorbeeld: `?property=assetType==<an asset type>`. |
 
 **Verzoek**
 

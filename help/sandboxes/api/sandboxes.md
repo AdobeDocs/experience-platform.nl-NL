@@ -5,24 +5,24 @@ title: API-eindpunt voor sandboxbeheer
 description: Met het eindpunt /sandboxen in de sandbox-API kunt u sandboxen in Adobe Experience Platform programmatisch beheren.
 role: Developer
 exl-id: 0ff653b4-3e31-4ea5-a22e-07e18795f73e
-source-git-commit: c15b24990835746a51a50a3e7e7b6a85701c0eb9
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1474'
+source-wordcount: '1477'
 ht-degree: 1%
 
 ---
 
 # Sandbox-beheereindpunt
 
-Sandboxen in Adobe Experience Platform bieden geïsoleerde ontwikkelomgevingen waarmee u functies kunt testen, experimenten kunt uitvoeren en aangepaste configuraties kunt maken zonder dat dit gevolgen heeft voor uw productieomgeving. Met het eindpunt `/sandboxes` in de [!DNL Sandbox] API kunt u sandboxen in Platform programmatisch beheren.
+Sandboxen in Adobe Experience Platform bieden geïsoleerde ontwikkelomgevingen waarmee u functies kunt testen, experimenten kunt uitvoeren en aangepaste configuraties kunt maken zonder dat dit gevolgen heeft voor uw productieomgeving. Met het eindpunt `/sandboxes` in de [!DNL Sandbox] API kunt u sandboxen in Experience Platform programmatisch beheren.
 
 ## Aan de slag
 
-Het API eindpunt dat in deze gids wordt gebruikt maakt deel uit van [[!DNL Sandbox]  API ](https://www.adobe.io/experience-platform-apis/references/sandbox). Alvorens verder te gaan, te herzien gelieve [ begonnen gids ](./getting-started.md) voor verbindingen aan verwante documentatie, een gids aan het lezen van de steekproefAPI vraag in dit document, en belangrijke informatie betreffende vereiste kopballen die nodig zijn om vraag aan om het even welk Experience Platform API met succes te maken.
+Het API eindpunt dat in deze gids wordt gebruikt maakt deel uit van [[!DNL Sandbox]  API ](https://www.adobe.io/experience-platform-apis/references/sandbox). Alvorens verder te gaan, te herzien gelieve [ begonnen gids ](./getting-started.md) voor verbindingen aan verwante documentatie, een gids aan het lezen van de steekproefAPI vraag in dit document, en belangrijke informatie betreffende vereiste kopballen die nodig zijn om vraag aan om het even welke Experience Platform API met succes te maken.
 
 ## Een lijst met sandboxen ophalen {#list}
 
-U kunt alle sandboxen weergeven die tot uw organisatie behoren (actief of anderszins) door een aanvraag voor een GET in te dienen bij het eindpunt `/sandboxes` .
+U kunt alle sandboxen weergeven die tot uw organisatie behoren (actief of anderszins) door een GET-aanvraag in te dienen bij het `/sandboxes` -eindpunt.
 
 **API formaat**
 
@@ -136,7 +136,7 @@ Een succesvol antwoord retourneert een lijst met sandboxen die tot uw organisati
 
 ## Sandbox opzoeken {#lookup}
 
-U kunt een afzonderlijke sandbox opzoeken door een aanvraag voor een GET in te dienen die de eigenschap `name` van de sandbox bevat in het aanvraagpad.
+U kunt een afzonderlijke sandbox opzoeken door een GET-aanvraag in te dienen die de eigenschap `name` van de sandbox bevat in het aanvraagpad.
 
 **API formaat**
 
@@ -195,7 +195,7 @@ Een succesvol antwoord retourneert de details van de sandbox, inclusief `name` ,
 >
 >Wanneer een nieuwe zandbak wordt gecreeerd, moet u die nieuwe zandbak aan uw productprofiel in [ Adobe Admin Console ](https://adminconsole.adobe.com/) eerst toevoegen alvorens u kunt beginnen de nieuwe zandbak te gebruiken. Zie de documentatie over [ het leiden toestemmingen voor een productprofiel ](../../access-control/ui/permissions.md) voor informatie over hoe te om een zandbak aan een productprofiel te verstrekken.
 
-U kunt een nieuwe ontwikkelings- of productiestandaard maken door een POST aan te vragen bij het eindpunt `/sandboxes` .
+U kunt een nieuwe ontwikkelings- of productiesandbox maken door een POST-aanvraag in te dienen bij het `/sandboxes` -eindpunt.
 
 ### Een ontwikkelingssandbox maken
 
@@ -228,7 +228,7 @@ curl -X POST \
 | Eigenschap | Beschrijving |
 | --- | --- |
 | `name` | De id die wordt gebruikt voor toegang tot de sandbox in toekomstige aanvragen. Deze waarde moet uniek zijn, en de beste praktijken moeten het zo beschrijvend mogelijk maken. Deze waarde mag geen spaties of speciale tekens bevatten. |
-| `title` | Een leesbare naam die voor weergavedoeleinden in de gebruikersinterface van het platform wordt gebruikt. |
+| `title` | Een leesbare naam die voor weergavedoeleinden in de Experience Platform-gebruikersinterface wordt gebruikt. |
 | `type` | Het type sandbox dat moet worden gemaakt. Voor een niet-productiesandbox moet deze waarde `development` zijn. |
 
 **Reactie**
@@ -281,7 +281,7 @@ curl -X POST \
 | Eigenschap | Beschrijving |
 | --- | --- |
 | `name` | De id die wordt gebruikt voor toegang tot de sandbox in toekomstige aanvragen. Deze waarde moet uniek zijn, en de beste praktijken moeten het zo beschrijvend mogelijk maken. Deze waarde mag geen spaties of speciale tekens bevatten. |
-| `title` | Een leesbare naam die voor weergavedoeleinden in de gebruikersinterface van het platform wordt gebruikt. |
+| `title` | Een leesbare naam die voor weergavedoeleinden in de Experience Platform-gebruikersinterface wordt gebruikt. |
 | `type` | Het type sandbox dat moet worden gemaakt. Voor een productiesandbox moet deze waarde `production` zijn. |
 
 **Reactie**
@@ -485,7 +485,7 @@ U kunt een sandbox verwijderen door een DELETE-aanvraag in te dienen die de sand
 
 >[!NOTE]
 >
->Als u deze API-aanroep maakt, wordt de eigenschap `status` van de sandbox bijgewerkt naar &quot;verwijderd&quot; en wordt deze gedeactiveerd. Met GET-aanvragen kunnen de gegevens van de sandbox nog steeds worden opgehaald nadat deze zijn verwijderd.
+>Als u deze API-aanroep maakt, wordt de eigenschap `status` van de sandbox bijgewerkt naar &quot;verwijderd&quot; en wordt deze gedeactiveerd. GET-aanvragen kunnen de gegevens van de sandbox nog steeds ophalen nadat deze zijn verwijderd.
 
 **API formaat**
 

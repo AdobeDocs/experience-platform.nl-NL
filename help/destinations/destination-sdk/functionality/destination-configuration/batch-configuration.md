@@ -1,35 +1,35 @@
 ---
-description: Leer hoe te om de montages van de dossieruitvoer voor bestemmingen te vormen die met Destination SDK worden gebouwd.
+description: Leer hoe u de exportinstellingen voor bestanden configureert voor doelen die met Destination SDK zijn gemaakt.
 title: Batchconfiguratie
 exl-id: 0ffbd558-a83c-4c3d-b4fc-b6f7a23a163a
-source-git-commit: 82ba4e62d5bb29ba4fef22c5add864a556e62c12
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1025'
+source-wordcount: '1031'
 ht-degree: 0%
 
 ---
 
 # Batchconfiguratie {#batch-configuration}
 
-Gebruik de opties voor batchconfiguratie in Destination SDK om gebruikers toe te staan de geëxporteerde bestandsnamen aan te passen en het exportschema te configureren volgens hun voorkeur.
+Met de batch-configuratieopties in Destination SDK kunnen gebruikers de geëxporteerde bestandsnamen aanpassen en het exportschema naar wens configureren.
 
-Wanneer u op dossier-gebaseerde bestemmingen door Destination SDK creeert, kunt u standaarddossier het noemen en de uitvoerprogramma&#39;s vormen, of u kunt gebruikers de optie geven om deze montages van het Platform UI te vormen. U kunt bijvoorbeeld gedragingen configureren, zoals:
+Wanneer u op dossier-gebaseerde bestemmingen door Destination SDK creeert, kunt u standaarddossier het noemen en de uitvoerschema&#39;s vormen, of u kunt gebruikers de optie geven om deze montages van de UI van Experience Platform te vormen. U kunt bijvoorbeeld gedragingen configureren, zoals:
 
 * Specifieke informatie in de bestandsnaam opnemen, zoals gebruikers-id&#39;s, doel-id&#39;s of aangepaste informatie.
-* Gebruikers toestaan de bestandsnaamgeving aan te passen vanuit de gebruikersinterface van het platform.
+* Gebruikers toestaan de bestandsnaamgeving aan te passen vanuit de gebruikersinterface van Experience Platform.
 * Configureer het exporteren van bestanden zodat deze bij ingestelde tijdintervallen kunnen optreden.
-* Definieer welke opties voor het aanpassen van bestandsnamen en exportschema&#39;s gebruikers kunnen zien in de interface van het platform.
+* Definieer welke opties voor het aanpassen van bestandsnamen en exportschema&#39;s gebruikers kunnen zien in de gebruikersinterface van Experience Platform.
 
 De de configuratiemontages van de partij maken deel uit van de bestemmingsconfiguratie voor op dossier-gebaseerde bestemmingen.
 
-Om te begrijpen waar deze component in een integratie past die met Destination SDK wordt gecreeerd, zie het diagram in de [ configuratieopties ](../configuration-options.md) documentatie of zie de gids op hoe te [ gebruiken Destination SDK om een op dossier-gebaseerde bestemming ](../../guides/configure-file-based-destination-instructions.md#create-server-file-configuration) te vormen.
+Om te begrijpen waar deze component in een integratie past die met Destination SDK wordt gecreeerd, zie het diagram in de [ configuratieopties ](../configuration-options.md) documentatie of zie de gids op hoe te [ Destination SDK gebruiken om een op dossier-gebaseerde bestemming ](../../guides/configure-file-based-destination-instructions.md#create-server-file-configuration) te vormen.
 
 U kunt de instellingen voor de bestandsnaam en het exportschema configureren via het eindpunt van `/authoring/destinations` . Zie de volgende API verwijzingspagina&#39;s voor gedetailleerde API vraagvoorbeelden waar u de componenten kunt vormen die in deze pagina worden getoond.
 
 * [Een doelconfiguratie maken](../../authoring-api/destination-configuration/create-destination-configuration.md)
 * [Een doelconfiguratie bijwerken](../../authoring-api/destination-configuration/update-destination-configuration.md)
 
-Dit artikel beschrijft alle gesteunde opties van de partijconfiguratie die u voor uw bestemming kunt gebruiken, en toont welke klanten in Platform UI zullen zien.
+In dit artikel worden alle ondersteunde batch-configuratieopties beschreven die u voor uw doel kunt gebruiken en wordt aangegeven welke klanten in de gebruikersinterface van Experience Platform kunnen zien.
 
 >[!IMPORTANT]
 >
@@ -95,7 +95,7 @@ De waarden die u opstelling hier wordt aangehaald in de [ stap van de de publiek
 | `allowedScheduleFrequency` | Lijst | Hiermee definieert u de exportfrequentie voor bestanden die beschikbaar is voor klanten. Ondersteunde waarden:<ul><li>`ONCE`</li><li>`EVERY_3_HOURS`</li><li>`EVERY_6_HOURS`</li><li>`EVERY_8_HOURS`</li><li>`EVERY_12_HOURS`</li><li>`DAILY`</li></ul> |
 | `defaultFrequency` | Enum | Definieert de standaard exportfrequentie voor bestanden.Ondersteunde waarden:<ul><li>`ONCE`</li><li>`EVERY_3_HOURS`</li><li>`EVERY_6_HOURS`</li><li>`EVERY_8_HOURS`</li><li>`EVERY_12_HOURS`</li><li>`DAILY`</li></ul> De standaardwaarde is `DAILY` . |
 | `defaultStartTime` | String | Hiermee definieert u de standaardbegintijd voor het exporteren van het bestand. Gebruikt een bestandsindeling van 24 uur. De standaardwaarde is &quot;00:00&quot;. |
-| `filenameConfig.allowedFilenameAppendOptions` | String | *Vereiste*. Lijst met beschikbare bestandsnaammacro&#39;s waaruit gebruikers kunnen kiezen. Op deze manier bepaalt u welke items aan geëxporteerde bestandsnamen worden toegevoegd (gebruikers-id, naam van de organisatie, datum en tijd van export, enzovoort). Zorg er bij het instellen van `defaultFilename` voor dat dubbele macro&#39;s worden vermeden. <br><br> Gesteunde waarden: <ul><li>`DESTINATION`</li><li>`SEGMENT_ID`</li><li>`SEGMENT_NAME`</li><li>`DESTINATION_INSTANCE_ID`</li><li>`DESTINATION_INSTANCE_NAME`</li><li>`ORGANIZATION_NAME`</li><li>`SANDBOX_NAME`</li><li>`DATETIME`</li><li>`CUSTOM_TEXT`</li></ul>Ongeacht de orde waarin u de macro&#39;s bepaalt, zal Experience Platform UI altijd hen in de hier voorgestelde orde tonen. <br><br> Als `defaultFilename` leeg is, moet de lijst `allowedFilenameAppendOptions` minstens één macro bevatten. |
+| `filenameConfig.allowedFilenameAppendOptions` | String | *Vereiste*. Lijst met beschikbare bestandsnaammacro&#39;s waaruit gebruikers kunnen kiezen. Op deze manier bepaalt u welke items aan geëxporteerde bestandsnamen worden toegevoegd (gebruikers-id, naam van de organisatie, datum en tijd van export, enzovoort). Zorg er bij het instellen van `defaultFilename` voor dat dubbele macro&#39;s worden vermeden. <br><br> Gesteunde waarden: <ul><li>`DESTINATION`</li><li>`SEGMENT_ID`</li><li>`SEGMENT_NAME`</li><li>`DESTINATION_INSTANCE_ID`</li><li>`DESTINATION_INSTANCE_NAME`</li><li>`ORGANIZATION_NAME`</li><li>`SANDBOX_NAME`</li><li>`DATETIME`</li><li>`CUSTOM_TEXT`</li></ul>Ongeacht de volgorde waarin u de macro&#39;s definieert, geeft de Experience Platform-interface deze altijd weer in de volgorde die hier wordt weergegeven. <br><br> Als `defaultFilename` leeg is, moet de lijst `allowedFilenameAppendOptions` minstens één macro bevatten. |
 | `filenameConfig.defaultFilenameAppendOptions` | String | *Vereiste*. Vooraf geselecteerde standaardbestandsnaammacro&#39;s die gebruikers kunnen uitschakelen.<br><br> De macro&#39;s in deze lijst zijn een subset van de gedefinieerde macro&#39;s in `allowedFilenameAppendOptions` . |
 | `filenameConfig.defaultFilename` | String | *Facultatief*. Hiermee definieert u de standaardbestandsnamen van macro&#39;s voor de geëxporteerde bestanden. Deze kunnen niet worden overschreven door gebruikers. <br><br> Om het even welke macro die door `allowedFilenameAppendOptions` wordt bepaald zal na de `defaultFilename` macro&#39;s worden toegevoegd. <br><br> Als `defaultFilename` leeg is, moet u minstens één macro in `allowedFilenameAppendOptions` bepalen. |
 | `segmentGroupingEnabled` | Boolean | Bepaalt of het geactiveerde publiek in één enkel dossier of veelvoudige dossiers zou moeten worden uitgevoerd, die op publiek [ wordt gebaseerd fusiebeleid ](../../../../profile/merge-policies/overview.md). Ondersteunde waarden: <ul><li>`true` : exporteert één bestand per samenvoegbeleid.</li><li>`false` : exporteert één bestand per publiek, ongeacht het samenvoegbeleid. Dit is het standaardgedrag. U kunt hetzelfde resultaat bereiken door deze parameter volledig in te zetten.</li></ul> |
@@ -113,9 +113,9 @@ Gebruik de configuratiesymbolen voor bestandsnamen om te definiëren wat de geë
 | Macro | UI-label | Beschrijving | Voorbeeld |
 |---|---|---|---|
 | `DESTINATION` | [!UICONTROL Destination] | Doelnaam in de gebruikersinterface. | Amazon S3 |
-| `SEGMENT_ID` | [!UICONTROL Segment ID] | Unieke, door het platform gegenereerde gebruikers-id | ce5c5482-2813-4a80-99bc-57113f6acde2 |
-| `SEGMENT_NAME` | [!UICONTROL Segment Name] | Door gebruiker gedefinieerde publieksnaam | VIP abonnee |
-| `DESTINATION_INSTANCE_ID` | [!UICONTROL Destination ID] | Unieke, door het platform gegenereerde id van de doelinstantie | 7b891e5f-025a-4f0d-9e73-1919e71da3b0 |
+| `SEGMENT_ID` | [!UICONTROL Segment ID] | Unieke, door Experience Platform gegenereerde gebruikers-id | ce5c5482-2813-4a80-99bc-57113f6acde2 |
+| `SEGMENT_NAME` | [!UICONTROL Segment Name] | Door gebruiker gedefinieerde publieksnaam | VIP-abonnee |
+| `DESTINATION_INSTANCE_ID` | [!UICONTROL Destination ID] | Unieke, door Experience Platform gegenereerde id van de doelinstantie | 7b891e5f-025a-4f0d-9e73-1919e71da3b0 |
 | `DESTINATION_INSTANCE_NAME` | [!UICONTROL Destination Name] | Door gebruiker gedefinieerde naam van de doelinstantie. | Mijn Advertising-bestemming van 2022 |
 | `ORGANIZATION_NAME` | [!UICONTROL Organization Name] | Naam van de klantenorganisatie in Adobe Experience Platform. | Naam van mijn organisatie |
 | `SANDBOX_NAME` | [!UICONTROL Sandbox Name] | Naam van de sandbox die de klant gebruikt. | prod |

@@ -5,7 +5,7 @@ title: Een Generic OData Source Connection maken in de gebruikersinterface
 type: Tutorial
 description: Leer hoe u een algemene Open Data Protocol-bronverbinding maakt met de gebruikersinterface van Adobe Experience Platform.
 exl-id: aad6b6f7-622c-4ab6-bf6d-1221fe1132d1
-source-git-commit: ed92bdcd965dc13ab83649aad87eddf53f7afd60
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '431'
 ht-degree: 0%
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # Een [!DNL Generic OData] bronverbinding maken in de gebruikersinterface
 
-Source-connectors in Adobe Experience Platform bieden de mogelijkheid om volgens een schema extern gesourceerde gegevens in te voeren. Deze zelfstudie bevat stappen voor het maken van een [!DNL Generic Open Data Protocol] (hierna &quot;[!DNL OData]&quot; genoemd) bronconnector met behulp van de [!DNL Platform] -gebruikersinterface.
+Source-connectors in Adobe Experience Platform bieden de mogelijkheid om volgens een schema extern gesourceerde gegevens in te voeren. Deze zelfstudie bevat stappen voor het maken van een [!DNL Generic Open Data Protocol] (hierna &quot;[!DNL OData]&quot; genoemd) bronconnector met behulp van de [!DNL Experience Platform] -gebruikersinterface.
 
 ## Aan de slag
 
@@ -29,7 +29,7 @@ Als u reeds een geldige [!DNL OData] verbinding hebt, kunt u de rest van dit doc
 
 ### Vereiste referenties verzamelen
 
-U moet de volgende waarden opgeven om toegang te krijgen tot uw [!DNL OData] -account in [!DNL Platform] :
+U moet de volgende waarden opgeven om toegang te krijgen tot uw [!DNL OData] -account in [!DNL Experience Platform] :
 
 | Credentials | Beschrijving |
 | ---------- | ----------- |
@@ -39,7 +39,7 @@ Voor meer informatie over begonnen worden verwijs naar [ dit  [!DNL OData]  docu
 
 ## Sluit uw [!DNL OData] -account aan
 
-Nadat u de vereiste gegevens hebt verzameld, voert u de onderstaande stappen uit om uw [!DNL OData] -account te koppelen aan [!DNL Platform] .
+Nadat u de vereiste gegevens hebt verzameld, voert u de onderstaande stappen uit om uw [!DNL OData] -account te koppelen aan [!DNL Experience Platform] .
 
 Login aan [ Adobe Experience Platform ](https://platform.adobe.com) en selecteer dan **[!UICONTROL Sources]** van de linkernavigatiebar om tot de **[!UICONTROL Sources]** werkruimte toegang te hebben. In het scherm **[!UICONTROL Catalog]** worden diverse bronnen weergegeven waarmee u een account kunt maken.
 
@@ -65,4 +65,4 @@ Als u een bestaande account wilt verbinden, selecteert u de [!DNL OData] -accoun
 
 ## Volgende stappen
 
-Aan de hand van deze zelfstudie hebt u een verbinding tot stand gebracht met uw [!DNL OData] -account. U kunt nu aan het volgende leerprogramma verdergaan en [ een dataflow vormen om protocolgegevens in  [!DNL Platform]](../../dataflow/protocols.md) te brengen.
+Aan de hand van deze zelfstudie hebt u een verbinding tot stand gebracht met uw [!DNL OData] -account. U kunt nu aan het volgende leerprogramma verdergaan en [ een dataflow vormen om protocolgegevens in  [!DNL Experience Platform]](../../dataflow/protocols.md) te brengen.

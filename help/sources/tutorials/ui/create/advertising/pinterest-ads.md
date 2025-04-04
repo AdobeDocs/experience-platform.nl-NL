@@ -1,14 +1,14 @@
 ---
-keywords: Experience Platform;thuis;populaire onderwerpen;bronnen;connectors;bronconnectors;bronnen sdk;sdk;SDK
+keywords: Experience Platform;home;populaire onderwerpen;bronnen;connectors;bronconnectors;bronnen sdk;sdk;SDK
 title: Een Pinterest Ads-bronverbinding maken in de gebruikersinterface
 description: Leer hoe u een Pinterest Ads-bronverbinding maakt met de Adobe Experience Platform-interface.
 badge: Beta
 hide: true
 hidefromtoc: true
 exl-id: ca7b99c8-f1d9-4120-85d5-720f5b9ad41a
-source-git-commit: e37c00863249e677f1645266859bf40fe6451827
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '787'
+source-wordcount: '797'
 ht-degree: 1%
 
 ---
@@ -23,7 +23,7 @@ Deze zelfstudie bevat stappen voor het maken van een [!DNL Pinterest Ads] bronaa
 
 ## Aan de slag {#getting-started}
 
-Deze zelfstudie vereist een goed begrip van de volgende onderdelen van het Experience Platform:
+Deze zelfstudie vereist een goed begrip van de volgende onderdelen van Experience Platform:
 
 * [[!DNL Experience Data Model (XDM)]  Systeem ](../../../../../xdm/home.md): Het gestandaardiseerde kader waardoor het Platform van de Ervaring gegevens van de klantenervaring organiseert.
    * [ Grondbeginselen van schemacompositie ](../../../../../xdm/schema/composition.md): Leer over de basisbouwstenen van schema&#39;s XDM, met inbegrip van zeer belangrijke principes en beste praktijken in schemacompositie.
@@ -32,7 +32,7 @@ Deze zelfstudie vereist een goed begrip van de volgende onderdelen van het Exper
 
 ## Vereisten {#prerequisites}
 
-Als u [!DNL Pinterest Ads] wilt verbinden met een Experience Platform, moet u waarden opgeven voor de volgende verbindingseigenschappen:
+Als u [!DNL Pinterest Ads] wilt verbinden met Experience Platform, moet u waarden opgeven voor de volgende verbindingseigenschappen:
 
 * Het toegangstoken van [!DNL Pinterest].
 * De [!DNL Pinterest] id van de advertentie.
@@ -40,17 +40,17 @@ Als u [!DNL Pinterest Ads] wilt verbinden met een Experience Platform, moet u wa
 
 Voor meer informatie over deze verbindingseigenschappen, lees het [[!DNL Pinterest Ads]  overzicht ](../../../../connectors/advertising/pinterest-ads.md#prerequisites).
 
-### Een platformschema maken {#create-platform-schema}
+### Een Experience Platform-schema maken {#create-platform-schema}
 
-U moet er ook voor zorgen dat u eerst een platformschema maakt voor gebruik bij de [!DNL Pinterst Ads] -bron. Lees het leerprogramma op [ creërend een schema van het Platform ](../../../../../xdm/schema/composition.md) voor uitvoerige stappen op hoe te om een schema tot stand te brengen.
+U moet er ook voor zorgen dat u eerst een Experience Platform-schema maakt dat u voor uw [!DNL Pinterst Ads] -bron kunt gebruiken. Lees het leerprogramma op [ creërend een schema van Experience Platform ](../../../../../xdm/schema/composition.md) voor uitvoerige stappen op hoe te om een schema tot stand te brengen.
 
-![ een schema van het voorbeeldPlatform voor de Advertentie van Pinterest ](../../../../images/tutorials/create/advertising/pinterest-ads/schema.png)
+![ een schema van voorbeeldExperience Platform voor Pinterest Adds ](../../../../images/tutorials/create/advertising/pinterest-ads/schema.png)
 
 Voor een lijst van de gebieden die door de [!DNL Pinterest] campagne, en groep en advertentie APIs worden gesteund, verwijs naar [[!DNL Pinterest]  gebieden ](#pinterest-fields) sectie.
 
 ## Sluit uw [!DNL Pinterest Ads] -account aan {#connect-account}
 
-Selecteer in de gebruikersinterface van het platform **[!UICONTROL Sources]** in de linkernavigatiebalk voor toegang tot de werkruimte van [!UICONTROL Sources] . In het scherm [!UICONTROL Catalog] worden diverse bronnen weergegeven waarmee u een account kunt maken.
+Selecteer in de gebruikersinterface van Experience Platform de optie **[!UICONTROL Sources]** in de linkernavigatiebalk voor toegang tot de werkruimte van [!UICONTROL Sources] . In het scherm [!UICONTROL Catalog] worden diverse bronnen weergegeven waarmee u een account kunt maken.
 
 U kunt de juiste categorie selecteren in de catalogus aan de linkerkant van het scherm. U kunt ook de specifieke bron vinden waarmee u wilt werken met de zoekoptie.
 
@@ -76,7 +76,7 @@ Als u een nieuwe account maakt, selecteert u **[!UICONTROL New account]** en gee
 
 ## Gegevens selecteren {#select-data}
 
-De stap **[!UICONTROL Select data]** wordt weergegeven en biedt een interface waarmee u de informatie kunt invoeren die aan de API&#39;s wordt doorgegeven om de gegevens te verzenden die u wilt opnemen in Platform.
+De stap **[!UICONTROL Select data]** wordt weergegeven en biedt een interface waarmee u de informatie kunt invoeren die aan de API&#39;s wordt doorgegeven om de gegevens te verzenden die u naar Experience Platform wilt.
 
 | Veld | Beschrijving |
 | --- | --- |
@@ -86,7 +86,7 @@ De stap **[!UICONTROL Select data]** wordt weergegeven en biedt een interface wa
 
 >[!TIP]
 >
->U kunt meerdere `object_ids` opgeven door door komma&#39;s gescheiden waarden door te geven. Het maximumaantal id&#39;s dat u in één aanvraag kunt doorgeven, is 100. Als onjuiste waarden worden doorgegeven, geeft Platform het volgende bericht weer: `The request could not be processed. Error from flow provider: Unknown error while processing request.`
+>U kunt meerdere `object_ids` opgeven door door komma&#39;s gescheiden waarden door te geven. Het maximumaantal id&#39;s dat u in één aanvraag kunt doorgeven, is 100. Als onjuiste waarden worden doorgegeven, geeft Experience Platform het volgende bericht weer: `The request could not be processed. Error from flow provider: Unknown error while processing request.`
 
 Selecteer **[!UICONTROL Select]** nadat u de waarden hebt opgegeven. Als de verstrekte waarden geldig zijn, zal het juiste deel van de interface, voorproefgegevens, bevolkt worden.
 
@@ -94,7 +94,7 @@ Selecteer **[!UICONTROL Select]** nadat u de waarden hebt opgegeven. Als de vers
 
 ## Volgende stappen {#next-steps}
 
-Aan de hand van deze zelfstudie hebt u een verbinding tot stand gebracht met uw [!DNL Pinterest Ads] -account. U kunt nu aan het volgende leerprogramma verdergaan en [ een dataflow vormen om reclamegegevens in Platform ](../../dataflow/advertising.md) te brengen.
+Aan de hand van deze zelfstudie hebt u een verbinding tot stand gebracht met uw [!DNL Pinterest Ads] -account. U kunt nu aan het volgende leerprogramma verdergaan en [ een dataflow vormen om reclamegegevens in Experience Platform ](../../dataflow/advertising.md) te brengen.
 
 ## Aanvullende bronnen {#additional-resources}
 
@@ -119,9 +119,9 @@ Als u de waarden voor uw schema hebt opgegeven, selecteert u **[!UICONTROL Next]
 
 Volg onderstaande stappen om te controleren of u de bron juist hebt ingesteld en of [!DNL Pinterest Ads] -gegevens worden ingevoerd:
 
-Selecteer in de interface Platform de optie **[!UICONTROL View Dataflows]** naast het kaartmenu [!DNL Pinterest Ads] op de cataloguspagina. Vervolgens kunt u [!UICONTROL Preview dataset] selecteren om de gegevens te verifiëren die zijn ingevoerd.
+Selecteer in de gebruikersinterface van Experience Platform de optie **[!UICONTROL View Dataflows]** naast het kaartmenu [!DNL Pinterest Ads] op de cataloguspagina. Vervolgens kunt u [!UICONTROL Preview dataset] selecteren om de gegevens te verifiëren die zijn ingevoerd.
 
-{het schermschot van het platform UI voor de Dataset van de Voorproef van Pinterest Adds.](../../../../images/tutorials/create/advertising/pinterest-ads/preview-dataset.png)![
+{het schermschot van 0} Experience Platform UI voor de Dataset van de Voorproef van Pinterest Adds.](../../../../images/tutorials/create/advertising/pinterest-ads/preview-dataset.png)![
 
 U kunt de gegevens verifiëren op basis van de tellingen die zichtbaar zijn op de gebruikersinterface van [!DNL Pinterest]
 
@@ -131,7 +131,7 @@ U kunt de gegevens verifiëren op basis van de tellingen die zichtbaar zijn op d
 
 ![ Pinterest Campaigns pagina.](../../../../images/tutorials/create/advertising/pinterest-ads/pinterest-campaigns.png)
 
->[!TAB  voeg groepen  toe]
+>[!TAB  voeg groepen ] toe
 
 ![ Pinterest en groepenpagina.](../../../../images/tutorials/create/advertising/pinterest-ads/pinterest-ad-groups.png)
 

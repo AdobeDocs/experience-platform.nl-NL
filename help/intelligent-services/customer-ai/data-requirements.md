@@ -6,9 +6,9 @@ title: Gegevensvereisten in AI van de Klant
 topic-legacy: Getting started
 description: Meer informatie over de vereiste gebeurtenissen, invoer en uitvoer die door de AI van de Klant worden gebruikt.
 exl-id: 9b21a89c-bf48-4c45-9eb3-ace38368481d
-source-git-commit: 63bdb48936070d23d1801d8e6143db3aefad5f6e
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '2532'
+source-wordcount: '2538'
 ht-degree: 0%
 
 ---
@@ -48,7 +48,7 @@ In de volgende secties wordt een overzicht gegeven van de verschillende vereiste
 De AI van de klant werkt door de volgende datasets te analyseren om te voorspellen (wanneer een klant waarschijnlijk zal stoppen met het gebruik van het product) of de conversie (wanneer een klant waarschijnlijk een aankoop zal doen) eigenschapscores:
 
 - De gegevens van Adobe Analytics die de [ bron van Analytics schakelaar ](../../sources/tutorials/ui/create/adobe-applications/analytics.md) gebruiken
-- Adobe Audience Manager gegevens die de [ Audience Manager bronschakelaar gebruiken ](../../sources/tutorials/ui/create/adobe-applications/audience-manager.md)
+- Adobe Audience Manager gegevens die de [ bronVerbinding van Audience Manager gebruiken ](../../sources/tutorials/ui/create/adobe-applications/audience-manager.md)
 - [ dataset van de Gebeurtenis van de Ervaring ](https://experienceleague.adobe.com/docs/experience-platform/xdm/classes/experienceevent.html)
 - [ de dataset van de Gebeurtenis van de Ervaring van de consument ](https://experienceleague.adobe.com/docs/experience-platform/intelligent-services/data-preparation.html#cee-schema)
 
@@ -62,8 +62,8 @@ In de volgende tabel wordt een aantal gangbare terminologie beschreven die in di
 
 | Term | Definitie |
 | --- | --- |
-| [ Model van de Gegevens van de Ervaring (XDM) ](../../xdm/home.md) | XDM is het basiskader dat Adobe Experience Cloud, aangedreven door Adobe Experience Platform, toestaat om het juiste bericht aan de juiste persoon, op het juiste kanaal, op het juiste moment te leveren. Het platform gebruikt het Systeem XDM om gegevens op een bepaalde manier te organiseren die het voor de diensten van het Platform gemakkelijker maakt te gebruiken. |
-| [ XDM Schema ](../../xdm/schema/composition.md) | Het Experience Platform gebruikt schema&#39;s om de structuur van gegevens op een verenigbare en herbruikbare manier te beschrijven. Door gegevens consistent in verschillende systemen te definiëren, wordt het eenvoudiger om betekenis te behouden en zo waarde te verkrijgen van gegevens. Voordat gegevens in Platform kunnen worden opgenomen, moet een schema worden samengesteld om de gegevensstructuur te beschrijven en beperkingen te bieden aan het type gegevens dat binnen elk veld kan worden opgenomen. Schema&#39;s bestaan uit een basis-XDM-klasse en nul of meer schemaveldgroepen. |
+| [ Model van de Gegevens van de Ervaring (XDM) ](../../xdm/home.md) | XDM is het basiskader dat Adobe Experience Cloud, aangedreven door Adobe Experience Platform, toestaat om het juiste bericht aan de juiste persoon, op het juiste kanaal, op het juiste moment te leveren. Experience Platform gebruikt XDM System om gegevens op een bepaalde manier te organiseren die het voor de diensten van Experience Platform gemakkelijker maken te gebruiken. |
+| [ XDM Schema ](../../xdm/schema/composition.md) | Experience Platform gebruikt schema&#39;s om de gegevensstructuur op een consistente en herbruikbare manier te beschrijven. Door gegevens consistent in verschillende systemen te definiëren, wordt het eenvoudiger om betekenis te behouden en zo waarde te verkrijgen van gegevens. Voordat gegevens in Experience Platform kunnen worden ingevoerd, moet een schema zijn samengesteld om de gegevensstructuur te beschrijven en om beperkingen te bieden aan het type gegevens dat binnen elk veld kan worden opgenomen. Schema&#39;s bestaan uit een basis-XDM-klasse en nul of meer schemaveldgroepen. |
 | [ klasse XDM ](../../xdm/schema/field-constraints.md) | Alle XDM-schema&#39;s beschrijven gegevens die als `Experience Event` kunnen worden gecategoriseerd. Het gegevensgedrag van een schema wordt bepaald door de klasse van het schema, die aan een schema wordt toegewezen wanneer het eerst wordt gecreeerd. De klassen XDM beschrijven het kleinste aantal eigenschappen een schema moet bevatten om een bepaald gegevensgedrag te vertegenwoordigen. |
 | [Veldengroepen](../../xdm/schema/composition.md) | Een component die een of meer velden in een schema definieert. Veldgroepen dwingen af hoe hun velden worden weergegeven in de hiërarchie van het schema en tonen daarom in elk schema dezelfde structuur aan waarin ze zijn opgenomen. Veldgroepen zijn alleen compatibel met specifieke klassen, zoals bepaald door het kenmerk `meta:intendedToExtend` ervan. |
 | [ Type van Gegevens ](../../xdm/schema/composition.md) | Een component die ook een of meer velden voor een schema kan bevatten. In tegenstelling tot veldgroepen worden gegevenstypen echter niet beperkt tot een bepaalde klasse. Dit maakt gegevenstypes een flexibelere optie om gemeenschappelijke gegevensstructuren te beschrijven die over veelvoudige schema&#39;s met potentieel verschillende klassen herbruikbaar zijn. De gegevenstypen die in dit document worden beschreven, worden ondersteund door zowel de CEE- als Adobe Analytics-schema&#39;s. |
@@ -73,9 +73,9 @@ In de volgende tabel wordt een aantal gangbare terminologie beschreven die in di
 
 Voor inputdatasets, zoals Adobe Analytics en Adobe Audience Manager, wijzen de respectieve bronschakelaars direct de gebeurtenissen in deze standaardgebiedsgroepen (Commerce, Web, Toepassing, en Onderzoek) door gebrek tijdens het verbindingsproces in kaart. In de onderstaande tabel worden de gebeurtenisvelden weergegeven in de standaardveldgroepen voor Klanten-AI.
 
-Voor meer informatie bij het in kaart brengen van de gegevens van Adobe Analytics of van de Audience Manager, bezoek de het gebiedsafbeeldingen van de Analyse of Audience Manager [ gids van de het gebiedsafbeeldingen ](../../sources/connectors/adobe-applications/mapping/audience-manager.md).
+Voor meer informatie bij het in kaart brengen van de gegevens van Adobe Analytics of van Audience Manager, bezoek de het gebiedsafbeeldingen van Analytics of Audience Manager [ gebied in kaart brengen gids ](../../sources/connectors/adobe-applications/mapping/audience-manager.md).
 
-U kunt de Gebeurtenis van de Ervaring of de Gebeurtenis XDM schema&#39;s van de Ervaring voor inputdatasets gebruiken die niet via één van de bovengenoemde schakelaars worden bevolkt. Extra XDM gebiedsgroepen kunnen tijdens het proces van de schemaverwezenlijking worden toegevoegd. De veldgroepen kunnen door Adobe worden verstrekt zoals de standaardgebiedsgroepen of een groep van het douanegebied, die de gegevensvertegenwoordiging in het Platform aanpast.
+U kunt de Gebeurtenis van de Ervaring of de Gebeurtenis XDM schema&#39;s van de Ervaring voor inputdatasets gebruiken die niet via één van de bovengenoemde schakelaars worden bevolkt. Extra XDM gebiedsgroepen kunnen tijdens het proces van de schemaverwezenlijking worden toegevoegd. De veldgroepen kunnen door Adobe worden opgegeven, net als de standaardveldgroepen of een aangepaste veldgroep, die overeenkomt met de gegevensrepresentatie in de Experience Platform.
 
 >[!IMPORTANT]
 >
@@ -91,7 +91,7 @@ De Gebeurtenissen van de ervaring worden gebruikt om diverse klantengedrag te be
 
 Klant-AI gebruikt standaard de gebeurtenissen in deze vier standaardveldgroepen: Commerce, Web, Application en Search. Het is niet nodig om voor elke gebeurtenis gegevens te hebben in de hieronder vermelde standaardveldgroepen, maar voor bepaalde scenario&#39;s zijn bepaalde gebeurtenissen vereist. Als u gebeurtenissen in de beschikbare standaardveldgroepen hebt, is het raadzaam deze op te nemen in uw schema. Als u bijvoorbeeld een AI-model van de klant wilt maken voor het voorspellen van aankoopgebeurtenissen, is het handig om gegevens te hebben van de veldgroepen Commerce en Webpagina details.
 
-Als u een veldgroep wilt weergeven in de gebruikersinterface van het platform, selecteert u de tab **[!UICONTROL Schemas]** in de linkertrack, gevolgd door de tab **[!UICONTROL Field groups]** .
+Als u een veldgroep wilt weergeven in de gebruikersinterface van Experience Platform, selecteert u de tab **[!UICONTROL Schemas]** in de linkertrack, gevolgd door de tab **[!UICONTROL Field groups]** .
 
 | Veldgroep | Het type Event | XDM-veldpad |
 | --- | --- | --- |
@@ -211,7 +211,7 @@ Hoewel de AI van de Klant een minimumperiode vereist om de gegevens binnen het s
 
 De AI van de Klant produceert verscheidene attributen voor individuele profielen die als verkiesbaar worden beschouwd. Er zijn twee manieren om de score (output) te verbruiken op basis van wat u hebt voorzien. Als u een in real time Klantprofiel-Toegelaten dataset in real time hebt, kunt u inzichten van het Profiel van de Klant in real time in de [ Bouwer van het Segment ](../../segmentation/ui/segment-builder.md) verbruiken. Als u geen profiel-toegelaten dataset hebt, kunt u [ de output van de Klant AI ](./user-guide/download-scores.md) dataset downloaden beschikbaar op het gegevensmeer.
 
-U kunt de outputdataset in de 2} werkruimte van de Datasets van het Platform **{vinden.** Alle de outputdatasets beginnen van de Klant AI met de naam **Scores van de Klant - NAME_OF_APP**. Op dezelfde manier beginnen alle de outputschema&#39;s van AI van de Klant met het naam **Schema van de Klant AI - Name_of_app**.
+U kunt de outputdataset in de Experience Platform **** werkruimte van Datasets vinden {. Alle de outputdatasets beginnen van de Klant AI met de naam **Scores van de Klant - NAME_OF_APP**. Op dezelfde manier beginnen alle de outputschema&#39;s van AI van de Klant met het naam **Schema van de Klant AI - Name_of_app**.
 
 ![ Naam van de outputdatasets in Klant AI ](./images/user-guide/cai-schema-name-of-app.png)
 

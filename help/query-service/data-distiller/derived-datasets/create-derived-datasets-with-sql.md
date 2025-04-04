@@ -2,9 +2,9 @@
 title: Afgeleide gegevensbestanden maken met SQL
 description: Leer hoe te om SQL te gebruiken om een afgeleide dataset tot stand te brengen die voor profiel wordt toegelaten, en hoe te om de dataset voor de Dienst van het Profiel en van de Segmentatie van de Klant in real time te gebruiken.
 exl-id: bb1a1d8d-4662-40b0-857a-36efb8e78746
-source-git-commit: 5bf54374773fd95ae1c40dd00b5dbe633031b70e
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '1235'
+source-wordcount: '1238'
 ht-degree: 0%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 Leer hoe te om SQL vragen te gebruiken om gegevens van bestaande datasets te manipuleren en om te zetten om een afgeleide dataset tot stand te brengen die voor Profiel wordt toegelaten. Dit werkschema verstrekt een efficiënte, alternatieve methode om afgeleide datasets voor uw zaken van het bedrijfsgebruik van het Profiel van de Klant in real time te creëren.
 
-Dit document schetst diverse geschikte SQL uitbreidingen die een afgeleide dataset voor gebruik met het Profiel van de Klant in real time produceren. Het werkschema vereenvoudigt het proces dat u anders door diverse API vraag of de interactie van het Platform UI zou moeten voltooien.
+Dit document schetst diverse geschikte SQL uitbreidingen die een afgeleide dataset voor gebruik met het Profiel van de Klant in real time produceren. De workflow vereenvoudigt het proces dat u anders zou moeten voltooien via verschillende API-aanroepen of Experience Platform UI-interacties.
 
 Typisch, zou het produceren van en het publiceren van een afgeleide dataset voor het Profiel van de Klant in real time de volgende stappen impliceren:
 
@@ -35,7 +35,7 @@ De Dienst van de vraag staat u toe om alle hierboven vermelde acties uit te voer
 >
 >De hieronder opgegeven SQL-query gaat uit van het gebruik van een bestaande naamruimte.
 
-Gebruik een Create Lijst als Uitgezochte vraag (CTAS) om een dataset tot stand te brengen, datatypes toe te wijzen, een primaire identiteit te plaatsen, een schema tot stand te brengen, en het te merken als profiel-toegelaten. De voorbeeld-SQL-instructie hieronder maakt een gegevensset en stelt deze beschikbaar voor Real-time Customer Data Platform (Real-Time CDP). Uw SQL-query heeft de indeling die in het onderstaande voorbeeld wordt getoond:
+Gebruik een Create Lijst als Uitgezochte vraag (CTAS) om een dataset tot stand te brengen, datatypes toe te wijzen, een primaire identiteit te plaatsen, een schema tot stand te brengen, en het te merken als profiel-toegelaten. De voorbeeld-SQL-instructie hieronder maakt een gegevensset en stelt deze beschikbaar voor Real-Time Customer Data Platform (Real-Time CDP). Uw SQL-query heeft de indeling die in het onderstaande voorbeeld wordt getoond:
 
 ```sql
 CREATE TABLE <your_table_name> [IF NOT EXISTS] (fieldname <your_data_type> primary identity namespace <your_namespace>, [field_name2 <your_data_type>]) [WITH(LABEL='PROFILE')];
@@ -51,7 +51,7 @@ MAP <data_type, data_type>
 ARRAY <data_type>
 ```
 
-Alternatief, kunnen de datasets ook voor profiel door Platform UI worden toegelaten. Voor meer informatie bij het merken van een dataset zoals toegelaten voor profiel, zie [ een dataset voor de documentatie van het Profiel van de Klant in real time ](../../../catalog/datasets/user-guide.md#enable-profile) toelaten.
+U kunt gegevenssets ook inschakelen voor profielen via de gebruikersinterface van Experience Platform. Voor meer informatie bij het merken van een dataset zoals toegelaten voor profiel, zie [ een dataset voor de documentatie van het Profiel van de Klant in real time ](../../../catalog/datasets/user-guide.md#enable-profile) toelaten.
 
 In de onderstaande voorbeeldquery wordt de `decile_table` dataset gemaakt met `id` als de primaire identiteitskolom en heeft deze de naamruimte `IDFA` . Het heeft ook een gebied genoemd `decile1Month` van het gegevenstype van de kaart. De gemaakte tabel (`decile_table`) is ingeschakeld voor het profiel.
 
@@ -178,7 +178,7 @@ U kunt van het voorbeeld zien dat `table_with_a_decile` voor profiel is toegelat
 
 ### Een veldgroep met SQL maken
 
-Veldgroepen kunnen nu worden gemaakt met SQL. Dit verstrekt een alternatief aan het gebruiken van de Redacteur van het Schema binnen het Platform UI of het maken van een API vraag aan de schemaregistratie.
+Veldgroepen kunnen nu worden gemaakt met SQL. Dit verstrekt een alternatief aan het gebruiken van de Redacteur van het Schema binnen Experience Platform UI of het maken van een API vraag aan de schemaregistratie.
 
 Een voorbeeldinstructie voor het maken van een veldgroep vindt u hieronder.
 

@@ -4,9 +4,9 @@ title: Een gegevensset voor profiel- en identiteitsservice inschakelen met behul
 type: Tutorial
 description: Deze zelfstudie laat u zien hoe u een gegevensset kunt inschakelen voor gebruik met Real-Time Customer Profile and Identity Service met Adobe Experience Platform API's.
 exl-id: a115e126-6775-466d-ad7e-ee36b0b8b49c
-source-git-commit: b80d8349fc54a955ebb3362d67a482d752871420
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '1069'
+source-wordcount: '1070'
 ht-degree: 0%
 
 ---
@@ -24,14 +24,14 @@ Deze zelfstudie behandelt het proces waarbij een gegevensset wordt ingeschakeld 
 
 ## Aan de slag
 
-Deze zelfstudie vereist een goed begrip van verschillende Adobe Experience Platform-services die betrokken zijn bij het beheer van voor profielen geschikte gegevenssets. Lees vóór het starten van deze zelfstudie de documentatie voor deze verwante [!DNL Platform] services:
+Deze zelfstudie vereist een goed begrip van verschillende Adobe Experience Platform-services die betrokken zijn bij het beheer van voor profielen geschikte gegevenssets. Lees vóór het starten van deze zelfstudie de documentatie voor deze verwante [!DNL Experience Platform] services:
 
 - [[!DNL Real-Time Customer Profile]](../../profile/home.md): biedt een uniform, real-time consumentenprofiel dat is gebaseerd op geaggregeerde gegevens van meerdere bronnen.
-- [[!DNL Identity Service]](../../identity-service/home.md): schakelt [!DNL Real-Time Customer Profile] in door identiteiten te overbruggen van verschillende gegevensbronnen die in [!DNL Platform] worden opgenomen.
+- [[!DNL Identity Service]](../../identity-service/home.md): schakelt [!DNL Real-Time Customer Profile] in door identiteiten te overbruggen van verschillende gegevensbronnen die in [!DNL Experience Platform] worden opgenomen.
 - [[!DNL Catalog Service]](../../catalog/home.md): Een RESTful-API waarmee u gegevenssets kunt maken en configureren voor [!DNL Real-Time Customer Profile] en [!DNL Identity Service] .
-- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): Het gestandaardiseerde framework waarmee [!DNL Platform] gegevens voor de klantervaring indeelt.
+- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): Het gestandaardiseerde framework waarmee [!DNL Experience Platform] gegevens voor de klantervaring indeelt.
 
-De volgende secties verstrekken extra informatie die u zult moeten weten om met succes vraag aan Platform APIs te maken.
+De volgende secties verstrekken extra informatie die u zult moeten weten om met succes vraag aan Experience Platform APIs te maken.
 
 ### API-voorbeeldaanroepen lezen
 
@@ -39,15 +39,15 @@ Deze zelfstudie biedt voorbeeld-API-aanroepen om aan te tonen hoe uw verzoeken m
 
 ### Waarden verzamelen voor vereiste koppen
 
-Om vraag aan [!DNL Platform] APIs te maken, moet u het [ authentificatieleerprogramma ](https://www.adobe.com/go/platform-api-authentication-en) eerst voltooien. Als u de zelfstudie over verificatie voltooit, krijgt u de waarden voor elk van de vereiste headers in alle API-aanroepen van [!DNL Experience Platform] , zoals hieronder wordt getoond:
+Om vraag aan [!DNL Experience Platform] APIs te maken, moet u het [ authentificatieleerprogramma ](https://www.adobe.com/go/platform-api-authentication-en) eerst voltooien. Als u de zelfstudie over verificatie voltooit, krijgt u de waarden voor elk van de vereiste headers in alle API-aanroepen van [!DNL Experience Platform] , zoals hieronder wordt getoond:
 
 - `Authorization: Bearer {ACCESS_TOKEN}`
 - `x-api-key: {API_KEY}`
 - `x-gw-ims-org-id: {ORG_ID}`
 
-Alle verzoeken die een nuttige lading (POST, PUT, PATCH) bevatten vereisen een extra `Content-Type` kopbal. De correcte waarde voor deze kopbal wordt getoond in de steekproefverzoeken waar nodig.
+Voor alle aanvragen die een payload (POST, PUT, PATCH) bevatten, is een extra `Content-Type` -header vereist. De correcte waarde voor deze kopbal wordt getoond in de steekproefverzoeken waar nodig.
 
-Alle bronnen in [!DNL Experience Platform] zijn geïsoleerd naar specifieke virtuele sandboxen. Alle aanvragen naar [!DNL Platform] API&#39;s vereisen een `x-sandbox-name` -header die de naam aangeeft van de sandbox waarin de bewerking plaatsvindt. Voor meer informatie over zandbakken in [!DNL Platform], zie de [ documentatie van het zandbakoverzicht ](../../sandboxes/home.md).
+Alle bronnen in [!DNL Experience Platform] zijn geïsoleerd naar specifieke virtuele sandboxen. Alle aanvragen naar [!DNL Experience Platform] API&#39;s vereisen een `x-sandbox-name` -header die de naam aangeeft van de sandbox waarin de bewerking plaatsvindt. Voor meer informatie over zandbakken in [!DNL Experience Platform], zie de [ documentatie van het zandbakoverzicht ](../../sandboxes/home.md).
 
 ## Een gegevensset maken die is ingeschakeld voor profiel en identiteit {#create-a-dataset-enabled-for-profile-and-identity}
 
@@ -57,7 +57,7 @@ U kunt een dataset voor het Profiel en de Dienst van de Identiteit van de Klant 
 >
 >Om een nieuwe profiel-Toegelaten dataset tot stand te brengen, moet u identiteitskaart van een bestaand schema kennen XDM dat voor Profiel wordt toegelaten. Voor informatie over hoe te omhoog kijken of een profiel-Toegelaten schema tot stand brengen, zie het leerprogramma op [ creërend een schema gebruikend de Registratie API van het Schema ](../../xdm/tutorials/create-schema-api.md).
 
-Om een dataset tot stand te brengen die voor Profiel wordt toegelaten, kunt u een verzoek van de POST aan het `/dataSets` eindpunt gebruiken.
+Om een dataset tot stand te brengen die voor Profiel wordt toegelaten, kunt u een POST- verzoek aan het `/dataSets` eindpunt gebruiken.
 
 **API formaat**
 
@@ -172,7 +172,7 @@ Onder de eigenschap `tags` ziet u dat `unifiedProfile` en `unifiedIdentity` beid
 
 ### De gegevensset inschakelen {#enable-the-dataset}
 
-Als de bestaande dataset niet voor [!DNL Profile] of [!DNL Identity Service] is toegelaten, kunt u het toelaten door een verzoek van de PATCH te maken gebruikend dataset identiteitskaart
+Als de bestaande dataset niet voor [!DNL Profile] of [!DNL Identity Service] is toegelaten, kunt u het toelaten door een PATCH- verzoek te maken gebruikend dataset identiteitskaart
 
 **API formaat**
 
@@ -204,7 +204,7 @@ De hoofdtekst van de aanvraag bevat een `path` naar twee typen tags, `unifiedPro
 
 **Reactie**
 
-Een succesvol PATCH verzoek keert de Status 200 van HTTP (O.K.) en een serie terug die identiteitskaart van de bijgewerkte dataset bevatten. Deze id moet overeenkomen met de id die in de aanvraag voor PATCH is verzonden. De tags `unifiedProfile` en `unifiedIdentity` zijn nu toegevoegd en de gegevensset is ingeschakeld voor gebruik door de services Profiel en Identiteit.
+Een geslaagde PATCH-aanvraag retourneert HTTP Status 200 (OK) en een array met de id van de bijgewerkte dataset. Deze id moet overeenkomen met de id die in de PATCH-aanvraag is verzonden. De tags `unifiedProfile` en `unifiedIdentity` zijn nu toegevoegd en de gegevensset is ingeschakeld voor gebruik door de services Profiel en Identiteit.
 
 ```json
 [

@@ -2,10 +2,10 @@
 title: Reactor-API
 description: Met de Reactor-API kunnen ontwikkelaars programmatisch alle bronnen voor tags in Adobe Experience Platform beheren. Volg deze gids voor het uitvoeren van de belangrijkste bewerkingen met de API.
 exl-id: 153eab11-db08-499e-80d1-c56f254372ce
-source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1079'
-ht-degree: 2%
+source-wordcount: '1080'
+ht-degree: 3%
 
 ---
 
@@ -99,7 +99,7 @@ Zie de [ gids van het de controlegebeurtenissen eindpunt van gebeurtenissen ](./
 
 ## Callbacks
 
-Een callback is een bericht dat Platform naar een gastheer URL verzendt wanneer een nieuwe controlegebeurtenis wordt geproduceerd. Zie de [ gids van het callbacks eindpunt ](./endpoints/callbacks.md) leren hoe te om callbacks in API te beheren.
+Een callback is een bericht dat Experience Platform naar een gastheer URL verzendt wanneer een nieuwe controlegebeurtenis wordt geproduceerd. Zie de [ gids van het callbacks eindpunt ](./endpoints/callbacks.md) leren hoe te om callbacks in API te beheren.
 
 ## Notities
 
@@ -107,7 +107,7 @@ Notities zijn tekstuele annotaties die u aan bepaalde tagbronnen kunt toevoegen,
 
 ## Profiel
 
-Een profiel bevat alle informatie over de aangemelde gebruiker, met inbegrip van alle Adobe Orgs waartot zij behoren, de productprofielen zij tot binnen elk Org behoren, en de rechten zij van elk productprofiel hebben.
+Een profiel bevat alle informatie over de aangemelde gebruiker, inclusief alle Adobe Orgs waartoe ze behoren, de productprofielen waartoe ze behoren binnen elke organisatie en de rechten die ze hebben van elk productprofiel.
 
 Zie de [ gids van het profieleindpunt ](./endpoints/profile.md) leren hoe te om deze informatie in API te bekijken.
 

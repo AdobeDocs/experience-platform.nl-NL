@@ -1,11 +1,11 @@
 ---
-keywords: Experience Platform;thuis;populaire onderwerpen;api;API;XDM;XDM systeem;ervaringsgegevensmodel;gegevensmodel;ui;werkruimte;vereist;gebied;
+keywords: Experience Platform;home;populaire onderwerpen;api;API;XDM;XDM systeem;ervaringsgegevensmodel;gegevensmodel;ui;werkruimte;vereist;gebied;
 title: Vereiste velden definiëren in de gebruikersinterface
-description: Leer hoe u een vereist XDM-veld definieert in de gebruikersinterface van het Experience Platform.
+description: Leer hoe u een vereist XDM-veld definieert in de Experience Platform-gebruikersinterface.
 exl-id: 3a5885a0-6f07-42f3-b521-053083d5b556
-source-git-commit: b66a50e40aaac8df312a2c9a977fb8d4f1fb0c80
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '355'
+source-wordcount: '356'
 ht-degree: 0%
 
 ---
@@ -16,7 +16,7 @@ In het Model van de Gegevens van de Ervaring (XDM), wijst een vereist gebied ero
 
 >[!IMPORTANT]
 >
->Ongeacht of een schemaveld wordt vereist of niet, accepteert Platform geen `null` of lege waarden voor een ingesloten veld. Als er geen waarde is voor een bepaald veld in een record of gebeurtenis, moet de sleutel voor dat veld worden uitgesloten van de opname-lading.
+>Ongeacht of een schemaveld verplicht is of niet, accepteert Experience Platform geen `null` of lege waarden voor een veld dat wordt ingevoerd. Als er geen waarde is voor een bepaald veld in een record of gebeurtenis, moet de sleutel voor dat veld worden uitgesloten van de opname-lading.
 
 Wanneer [ het bepalen van een nieuw gebied ](./overview.md#define) in het gebruikersinterface van Adobe Experience Platform, kunt u het als vereist gebied plaatsen door **[!UICONTROL Required]** checkbox in het juiste spoor te selecteren. Selecteer **[!UICONTROL Apply]** om de wijziging op het schema toe te passen.
 

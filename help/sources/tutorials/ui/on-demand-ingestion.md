@@ -2,9 +2,9 @@
 title: On-demand-insluiting voor gegevensstromen van bronnen in UI
 description: Leer hoe u op aanvraag gegevensstromen voor uw bronverbindingen kunt maken via de Experience Platform-gebruikersinterface.
 exl-id: e5a70044-2484-416a-8098-48e6d99c2d98
-source-git-commit: 7a287c8de3c3fd0670cbdf29cd58558b30982122
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '521'
+source-wordcount: '524'
 ht-degree: 0%
 
 ---
@@ -31,9 +31,9 @@ De looppas van de stroom vertegenwoordigt een geval van dataflow uitvoering. Bij
 
 Voor dit document is een goed begrip van de volgende Experience Platform-componenten vereist:
 
-* [ Bronnen ](../../home.md): Experience Platform staat gegevens toe om van diverse bronnen worden opgenomen terwijl het voorzien van u van de capaciteit om, inkomende gegevens te structureren te etiketteren en te verbeteren gebruikend de diensten van het Platform.
-* [ Dataflows ](../../../dataflows/home.md): Een dataflow is een vertegenwoordiging van gegevensbanen die gegevens over Platform bewegen. Dataflows worden gevormd over de verschillende diensten, die gegevens van bronschakelaars aan doeldatasets, aan de Dienst van de Identiteit en het Profiel van de Klant in real time, en aan Doelen helpen verplaatsen.
-* [ Sandboxes ](../../../sandboxes/home.md): Experience Platform verstrekt virtuele zandbakken die één enkele instantie van het Platform in afzonderlijke virtuele milieu&#39;s verdelen helpen digitale ervaringstoepassingen ontwikkelen en ontwikkelen.
+* [ Bronnen ](../../home.md): Experience Platform staat gegevens toe om van diverse bronnen worden opgenomen terwijl het voorzien van u van de capaciteit om, inkomende gegevens te structureren te etiketteren en te verbeteren gebruikend de diensten van Experience Platform.
+* [ Dataflows ](../../../dataflows/home.md): Een dataflow is een vertegenwoordiging van gegevensbanen die gegevens over Experience Platform bewegen. Dataflows worden gevormd over de verschillende diensten, die gegevens van bronschakelaars aan doeldatasets, aan de Dienst van de Identiteit en het Profiel van de Klant in real time, en aan Doelen helpen verplaatsen.
+* [ Sandboxes ](../../../sandboxes/home.md): Experience Platform verstrekt virtuele zandbakken die één enkele instantie van Experience Platform in afzonderlijke virtuele milieu&#39;s verdelen helpen digitale ervaringstoepassingen ontwikkelen en ontwikkelen.
 
 ## Een gegevensstroom op aanvraag maken {#create-a-dataflow-on-demand}
 

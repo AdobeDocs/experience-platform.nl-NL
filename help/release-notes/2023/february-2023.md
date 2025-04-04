@@ -1,54 +1,54 @@
 ---
-title: Opmerkingen bij de release van Adobe Experience Platform, februari 2023
-description: In de release van februari 2023 staat Adobe Experience Platform vermeld.
+title: Aanvullende informatie voor Adobe Experience Platform van februari 2023
+description: Aanvullende informatie voor Adobe Experience Platform van februari 2023.
 exl-id: 1c30a646-d9f8-4749-ac25-40bc48365a40
-source-git-commit: 5bf54374773fd95ae1c40dd00b5dbe633031b70e
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1214'
-ht-degree: 3%
+source-wordcount: '1218'
+ht-degree: 29%
 
 ---
 
-# Opmerkingen bij de release van Adobe Experience Platform
+# Aanvullende informatie voor Adobe Experience Platform
 
 **Releasedatum: donderdag 22 februari 2023**
 
 Updates voor bestaande functies in Adobe Experience Platform:
 
-- [Gegevensverzameling](#data-collection)
+- [Dataverzameling](#data-collection)
 - [[!DNL Destinations]](#destinations)
-- [Experience Data Model (XDM)](#xdm)
+- [Experience-datamodel (XDM)](#xdm)
 - [Query-service](#query-service)
 - [Real-Time Customer Data Platform B2B Edition](#b2b)
 - [Bronnen](#sources)
 
-## Gegevensverzameling {#data-collection}
+## Dataverzameling {#data-collection}
 
-Adobe Experience Platform biedt een reeks technologieën waarmee u gegevens over klantervaringen aan de clientzijde kunt verzamelen en naar de Adobe Experience Platform-Edge Network kunt sturen waar deze verrijkt, getransformeerd en gedistribueerd kan worden naar Adobe- of niet-Adobe-bestemmingen.
+Adobe Experience Platform biedt een reeks technologieën waarmee u klantervaringsgegevens aan de klantzijde kunt verzamelen en deze naar het Adobe Experience Platform Edge Network kunt verzenden. Daar kunnen ze worden verrijkt, getransformeerd en gedistribueerd naar Adobe- of niet-Adobe-bestemmingen.
 
-### Betrouwbaarheid {#assurance}
+### Assurance {#assurance}
 
 Met Adobe Assurance kunt u controleren, testen, simuleren en valideren hoe u gegevens verzamelt of ervaringen opdoet in uw mobiele app.
 
-**Nieuwe of bijgewerkte eigenschappen**
+**Nieuwe of bijgewerkte functies**
 
 | Functie | Beschrijving |
 | ------- | ----------- |
-| Openbare API&#39;s | De Adobe Assurance API&#39;s zijn nu beschikbaar. De API&#39;s voor Betrouwbaarheid zijn een verzameling API&#39;s die gebruikers de mogelijkheid bieden om hun eigen web- en mobiele toepassingen te testen en er fouten in op te sporen, wanneer deze zijn uitgerust met de Adobe Assurance-extensie met Mobile SDK. Om meer over de Verzekering APIs te leren, te lezen gelieve het [ overzicht van de Verzekering API ](https://developer.adobe.com/adobe-assurance-public-apis/). |
+| Openbare API&#39;s | De Adobe Assurance API&#39;s zijn nu beschikbaar. De Assurance API&#39;s zijn een verzameling API&#39;s die gebruikers de mogelijkheid bieden om hun eigen web- en mobiele apps te testen en er fouten in op te sporen, wanneer deze zijn uitgerust met de Adobe Assurance-extensie met Mobile SDK. Om meer over Assurance APIs te leren, te lezen gelieve het [ overzicht van Assurance API ](https://developer.adobe.com/adobe-assurance-public-apis/). |
 
 {style="table-layout:auto"}
 
-Voor meer informatie over Verzekering, te lezen gelieve de [ documentatie van de Verzekering ](https://developer.adobe.com/client-sdks/documentation/platform-assurance/).
+Voor meer informatie over Assurance, te lezen gelieve de [ documentatie van Assurance ](https://developer.adobe.com/client-sdks/documentation/platform-assurance/).
 
 ## [!DNL Destinations] {#destinations}
 
-[!DNL Destinations] zijn vooraf gebouwde integratie met bestemmingsplatforms die voor de naadloze activering van gegevens van Adobe Experience Platform toestaan. U kunt bestemmingen gebruiken om uw bekende en onbekende gegevens voor kanaalmarketing campagnes, e-mailcampagnes, gerichte reclame, en vele andere gebruiksgevallen te activeren.
+[!DNL Destinations] zijn pre-built integraties met bestemmingsplatforms die de naadloze activering van gegevens van Adobe Experience Platform mogelijk maken. U kunt bestemmingen gebruiken om uw bekende en onbekende gegevens te activeren voor cross-channel marketingcampagnes, e-mailcampagnes, gerichte advertenties en vele andere gebruiksscenario&#39;s.
 
 **Nieuwe of bijgewerkte eigenschappen** {#destinations-new-updated-features}
 
 | Functie | Beschrijving |
 | ----------- | ----------- |
-| [ Verbetering van het Beleid van de Toestemming ](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-enhancement) voor integratie met [ op dossier-gebaseerde (partij) bestemmingen ](/help/destinations/destination-types.md#file-based) | <p> Wanneer de profielen niet meer voor een toestemmingsbeleid gekwalificeerd zijn, deelt Experience Platform nu proactief hun beleidsuitgang aan op dossier-gebaseerde bestemmingen mee. Dit volgt de [ versie in Februari 2023 ](/help/release-notes/2023/january-2023.md#destinations-new-updated-functionality) van de zelfde functionaliteit voor het stromen bestemmingen. </p> <p> <b> Nota </b>: Deze functionaliteit is beschikbaar slechts aan klanten van **[!UICONTROL Privacy and Security Shield]**, en die van **[!UICONTROL Healthcare Shield]**. </p> |
+| [ Verbetering van het Beleid van de Toestemming ](/help/data-governance/enforcement/auto-enforcement.md#consent-policy-enhancement) voor integratie met [ op dossier-gebaseerde (partij) bestemmingen ](/help/destinations/destination-types.md#file-based) | <p> Wanneer profielen niet meer in aanmerking komen voor een beleid voor toestemming, geeft Experience Platform nu proactief aan dat het beleid is afgesloten naar bestandsbestemmingen. Dit volgt de [ versie in Februari 2023 ](/help/release-notes/2023/january-2023.md#destinations-new-updated-functionality) van de zelfde functionaliteit voor het stromen bestemmingen. </p> <p> <b> Nota </b>: Deze functionaliteit is beschikbaar slechts aan klanten van **[!UICONTROL Privacy and Security Shield]**, en die van **[!UICONTROL Healthcare Shield]**. </p> |
 
 {style="table-layout:auto"}
 
@@ -58,13 +58,13 @@ Voor meer informatie over Verzekering, te lezen gelieve de [ documentatie van de
 | ----------- | ----------- |
 | Hoe werken de bestemmingen documentatie | <p>We hebben drie nieuwe artikelen gepubliceerd waarin wordt uitgelegd hoe bestemmingen werken, op basis van gemeenschappelijke vragen van gebruikers:</p> <p><ul><li>[ configureerbare en gemeenschappelijke uitvoermontages in bestemmingen ](/help/destinations/how-destinations-work/destinations-configurations.md)</li><li>[ de uitvoergedrag van het Profiel voor verschillende bestemmingstypes ](/help/destinations/how-destinations-work/profile-export-behavior.md)</li><li>[ Identiteitsafhandeling in het werkschema van de bestemmingsactivering ](/help/destinations/how-destinations-work/identity-handling.md)</li></p> |
 
-Voor meer algemene informatie over bestemmingen, verwijs naar het [ overzicht van bestemmingen ](../../destinations/home.md).
+Voor meer algemene informatie over bestemmingen, raadpleegt u het [overzicht van bestemmingen](../../destinations/home.md).
 
-## Experience Data Model (XDM) {#xdm}
+## Experience-datamodel (XDM) {#xdm}
 
-XDM is een open-bronspecificatie die gemeenschappelijke structuren en definities (schema&#39;s) voor gegevens verstrekt die in Adobe Experience Platform worden gebracht. Door zich aan de normen van XDM te houden, kunnen alle gegevens van de klantenervaring in een gemeenschappelijke vertegenwoordiging worden opgenomen om inzichten op een snellere, meer geïntegreerde manier te leveren. U kunt waardevolle inzichten van klantenacties bereiken, klantenpubliek door segmenten bepalen, en klantenattributen voor verpersoonlijkingsdoeleinden gebruiken.
+XDM is een open-bronspecificatie die algemene structuren en definities (schema&#39;s) biedt voor gegevens die in Adobe Experience Platform worden geïmporteerd. Door de XDM-standaarden te hanteren, kunnen alle gegevens over de klantervaring worden opgenomen in een gemeenschappelijke weergave. Zo worden inzichten sneller en beter geïntegreerd verkregen. U kunt waardevolle inzichten verkrijgen uit klantacties, klantdoelgroepen definiëren via segmenten en klantkenmerken gebruiken voor personalisatiedoeleinden.
 
-**Bijgewerkte eigenschappen**
+**Bijgewerkte functies**
 
 | Functie | Beschrijving |
 | --- | --- |
@@ -92,13 +92,13 @@ XDM is een open-bronspecificatie die gemeenschappelijke structuren en definities
 
 {style="table-layout:auto"}
 
-Voor meer informatie over XDM in Platform, lees het [ XDM overzicht van het Systeem ](../../xdm/home.md). &#x200B;
+Voor meer informatie over XDM in Experience Platform, lees het [ XDM overzicht van het Systeem ](../../xdm/home.md). &#x200B;
 
 ## Query-service {#query-service}
 
-Met Query Service kunt u standaard-SQL gebruiken om query&#39;s uit te voeren op gegevens in Adobe Experience Platform [!DNL Data Lake] . U kunt zich bij om het even welke datasets van gegevens aansluiten meer en de vraagresultaten vangen als nieuwe dataset voor gebruik in rapportering, de Wetenschap van Gegevens Workspace, of voor opname in het Profiel van de Klant in real time.
+Met de Query-service kunt u standaard SQL gebruiken om query&#39;s uit te voeren op gegevens in Adobe Experience Platform [!DNL Data Lake]. U kunt alle datasets uit Data Lake samenvoegen en de queryresultaten vastleggen als een nieuwe dataset voor gebruik in rapportage, de werkruimte voor datawetenschappen, of voor opname in het Real-Time Customer Profile.
 
-**Bijgewerkte eigenschappen**
+**Bijgewerkte functies**
 
 | Functie | Beschrijving |
 | --- | --- |
@@ -109,14 +109,14 @@ Met Query Service kunt u standaard-SQL gebruiken om query&#39;s uit te voeren op
 
 {style="table-layout:auto"}
 
-Voor meer informatie over de Diensten van de Vraag, verwijs naar het [ overzicht van de Dienst van de Vraag ](../../query-service/home.md).
+Voor meer informatie over Query-services raadpleegt u het [overzicht van Query-services](../../query-service/home.md).
 
 
 ## Real-Time Customer Data Platform B2B Edition {#b2b}
 
-Real-Time CDP B2B Edition is gebaseerd op Real-time Customer Data Platform (Real-Time CDP) en is speciaal ontworpen voor marketers die werken in een servicemodel voor bedrijven. Het verenigt gegevens uit veelvoudige bronnen en combineert het in één enkele mening van mensen en rekeningsprofielen. Deze verenigde gegevens staan marketers toe om specifiek publiek nauwkeurig te richten en dat publiek over alle beschikbare kanalen in dienst te nemen.
+Real-Time CDP B2B edition is gebaseerd op Real-Time Customer Data Platform (Real-Time CDP) en is speciaal ontworpen voor marketers die werken in een servicemodel voor bedrijven. Het verenigt gegevens uit veelvoudige bronnen en combineert het in één enkele mening van mensen en rekeningsprofielen. Deze verenigde gegevens staan marketers toe om specifiek publiek nauwkeurig te richten en dat publiek over alle beschikbare kanalen in dienst te nemen.
 
-**Bijgewerkte eigenschappen**
+**Bijgewerkte functies**
 
 | Functie | Beschrijving |
 | --- | --- |
@@ -124,22 +124,22 @@ Real-Time CDP B2B Edition is gebaseerd op Real-time Customer Data Platform (Real
 
 {style="table-layout:auto"}
 
-Meer over de Uitgave van Real-Time CDP B2B leren, lees het [ overzicht van de Uitgave van Real-Time CDP B2B ](../../rtcdp/overview.md).
+Meer over Real-Time CDP B2B edition leren, lees het [ overzicht van B2B edition van Real-Time CDP ](../../rtcdp/overview.md).
 
 ## Bronnen {#sources}
 
-Adobe Experience Platform kan gegevens uit externe bronnen invoeren en stelt u in staat die gegevens te structureren, te labelen en te verbeteren met behulp van de platformservices. U kunt gegevens van een verscheidenheid van bronnen zoals de toepassingen van de Adobe, op wolk-gebaseerde opslag, derdesoftware, en uw systeem van CRM opnemen.
+Adobe Experience Platform kan gegevens uit externe bronnen invoeren en maakt het mogelijk die gegevens te structureren, te labelen en te verbeteren met behulp van Experience Platform-services. U kunt gegevens opnemen uit verschillende bronnen, zoals Adobe-toepassingen, cloudopslag, software van derden en uw CRM-systeem.
 
-Experience Platform biedt een RESTful-API en een interactieve UI waarmee u eenvoudig bronverbindingen voor verschillende gegevensproviders kunt instellen. Deze bronverbindingen staan u toe om met externe opslagsystemen en de diensten van CRM voor authentiek te verklaren en te verbinden, tijden voor ingestiingslooppas te plaatsen, en gegevensinvoer te beheren.
+Experience Platform biedt een RESTful-API en een interactieve gebruikersinterface waarmee u eenvoudig bronverbindingen voor verschillende gegevensproviders kunt instellen. Met deze bronverbindingen kunt u externe opslagsystemen en CRM-services verifiëren en er verbinding mee maken, tijden voor opnameruns instellen en de doorvoer van gegevensopname beheren.
 
-**Bijgewerkte eigenschappen**
+**Bijgewerkte functies**
 
 | Functie | Beschrijving |
 | --- | --- |
-| Toegang op abonnementsniveau toewijzen met [!DNL Google PubSub] | U kunt toegang tot een specifiek onderwerpabonnement nu bepalen wanneer het gebruiken van de [!DNL Google PubSub] bron door abonnements identiteitskaart te verstrekken wanneer het voor authentiek verklaren. Voor meer informatie, lees het [!DNL Google PubSub] authentificatieleerprogramma [ gebruikend de Dienst API van de Stroom ](../../sources/tutorials/api/create/cloud-storage/google-pubsub.md) of [ Platform UI ](../../sources/tutorials/ui/create/cloud-storage/google-pubsub.md). |
-| Aangepaste activiteitsgegevens verzamelen vanuit [!DNL Marketo] | U kunt nu aangepaste activiteitsgegevens van uw [!DNL Marketo] -instantie overbrengen naar het Experience Platform. Om de gegevens van de douaneactiviteit in te voeren, moet u de groepen van het gebied van douaneactiviteiten in het B2B schema van Activiteiten opzetten en een dataflow creëren gebruikend de activiteitendataset. Zodra de gegevensstroom volledig is, zal de ingebedde dataset zowel standaard als douaneactiviteiten van uw [!DNL Marketo] instantie bevatten. U kunt [ Dienst van de Vraag ](../../query-service/home.md) dan gebruiken om tot uw verslagen van de douaneactiviteit op Platform toegang te hebben. Voor meer informatie, lees de gids op [ creërend een dataflow voor de gegevens van de douaneactiviteit ](../../sources/tutorials/ui/create/adobe-applications/marketo-custom-activities.md). |
+| Toegang op abonnementsniveau toewijzen met [!DNL Google PubSub] | U kunt toegang tot een specifiek onderwerpabonnement nu bepalen wanneer het gebruiken van de [!DNL Google PubSub] bron door abonnements identiteitskaart te verstrekken wanneer het voor authentiek verklaren. Voor meer informatie, lees het [!DNL Google PubSub] authentificatieleerprogramma [ gebruikend de Dienst API van de Stroom ](../../sources/tutorials/api/create/cloud-storage/google-pubsub.md) of [ Experience Platform UI ](../../sources/tutorials/ui/create/cloud-storage/google-pubsub.md). |
+| Aangepaste activiteitsgegevens verzamelen vanuit [!DNL Marketo] | U kunt nu aangepaste activiteitsgegevens van uw [!DNL Marketo] -instantie overbrengen naar Experience Platform. Om de gegevens van de douaneactiviteit in te voeren, moet u de groepen van het gebied van douaneactiviteiten in het B2B schema van Activiteiten opzetten en een dataflow creëren gebruikend de activiteitendataset. Zodra de gegevensstroom volledig is, zal de ingebedde dataset zowel standaard als douaneactiviteiten van uw [!DNL Marketo] instantie bevatten. U kunt [ Dienst van de Vraag ](../../query-service/home.md) dan gebruiken om tot uw verslagen van de douaneactiviteit op Experience Platform toegang te hebben. Voor meer informatie, lees de gids op [ creërend een dataflow voor de gegevens van de douaneactiviteit ](../../sources/tutorials/ui/create/adobe-applications/marketo-custom-activities.md). |
 | Niet-geclaimde accounts uitsluiten van [!DNL Marketo] | U kunt nu configureren of u niet-geclaimde accounts wilt uitsluiten of opnemen in de opname wanneer u een gegevensstroom voor bedrijfsgegevens maakt. Voor meer informatie, lees de gids bij [ het creëren van een bronverbinding en een dataflow voor  [!DNL Marketo]](../../sources/tutorials/ui/create/adobe-applications/marketo.md). |
 
 {style="table-layout:auto"}
 
-Meer over bronnen leren, lees het [ overzicht van bronnen ](../../sources/home.md).
+Voor meer informatie over bronnen leest u het [overzicht van bronnen](../../sources/home.md).

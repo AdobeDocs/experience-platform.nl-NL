@@ -1,16 +1,16 @@
 ---
-title: Het vergelijken bij.js met het Web SDK van het Experience Platform
-description: Leer hoe de at.js eigenschappen met Experience Platform Web SDK vergelijken
+title: Bij.js vergelijken met de Experience Platform Web SDK
+description: Meer informatie over de at.js-functies in vergelijking met Experience Platform Web SDK
 keywords: doel;adobe target;activity.id;experience.id;renderDecisions;DecisionScopes;prehide snippet;vec;Form-Based Experience Composer;xdm;publiek;decisions;scope;schema;system diagram;diagram
 exl-id: b63fe47d-856a-4cae-9057-51917b3e58dd
-source-git-commit: 9489b5345c2b13b9d05b26d646aa7f1576840fb8
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '2182'
+source-wordcount: '2183'
 ht-degree: 2%
 
 ---
 
-# Het vergelijken van de bibliotheek at.js met het Web SDK
+# De bibliotheek at.js vergelijken met de Web SDK
 
 ## Overzicht
 
@@ -22,7 +22,7 @@ Dit artikel biedt een overzicht van de verschillen tussen de `at.js` -bibliothee
 
 Wij staan onze klanten toe om de bibliotheek van Adobe Experience Cloud, het lusje van de Implementatie direct te downloaden. De bibliotheek at.js wordt aangepast met instellingen die de klant als volgt heeft: clientCode, imsOrgId, enz.
 
-### De SDK van het Web installeren
+### De Web SDK installeren
 
 De vooraf gebouwde versie is beschikbaar op een CDN. U kunt de bibliotheek op CDN rechtstreeks op uw pagina van verwijzingen voorzien, of het downloaden en ontvangen op uw eigen infrastructuur. Het is beschikbaar in geminiatuurde en ongeminificeerde formaten. De ongeminificeerde versie is handig voor foutopsporingsdoeleinden.
 
@@ -105,7 +105,7 @@ alloy("sendEvent", {
 });
 ```
 
-SDK van het Web van het Experience Platform verzendt automatisch een bericht met de aanbiedingen die door WEB SDK werden uitgevoerd, is dit een voorbeeld van hoe een lading van het berichtverzoek als kijkt:
+Experience Platform Web SDK verzendt automatisch een bericht met de aanbiedingen die door WEB SDK werden uitgevoerd, is dit een voorbeeld van hoe een lading van het berichtverzoek kijkt als:
 
 ```json
 {
@@ -219,7 +219,7 @@ adobe.target.getOffers({
 
 ### Web SDK gebruiken
 
-Voer een opdracht `sendEvent` uit met een speciaal bereik onder `decisionScopes` : `__view__` . Wij gebruiken dit werkingsgebied als signaal om alle pagina-lading activiteiten van Doel te halen en alle meningen vooraf in te stellen. De SDK van het Web zal ook proberen om alle VEC mening gebaseerde activiteiten te evalueren. Het uitschakelen van weergave-prefetching wordt momenteel niet ondersteund in de Web SDK.
+Voer een opdracht `sendEvent` uit met een speciaal bereik onder `decisionScopes` : `__view__` . Wij gebruiken dit werkingsgebied als signaal om alle pagina-lading activiteiten van Doel te halen en alle meningen vooraf in te stellen. De SDK van het Web zal ook proberen om alle VEC mening gebaseerde activiteiten te evalueren. Het uitschakelen van de weergave-prefetching wordt momenteel niet ondersteund in Web SDK.
 
 Om tot om het even welke verpersoonlijkingsinhoud toegang te hebben, kunt u een callback functie verstrekken, die zal worden geroepen nadat SDK een succesvolle reactie van de server ontvangt. Uw callback wordt verstrekt een resultaatvoorwerp, dat voorzetbezit kan bevatten die om het even welke teruggekeerde verpersoonlijkingsinhoud bevatten.
 
@@ -657,7 +657,7 @@ alloy("sendEvent", {
 
 ### At.js gebruiken
 
-Gebruik de functie `adobe.target.triggerView` . Deze functie kan worden aangeroepen wanneer een nieuwe pagina wordt geladen of wanneer een component op een pagina opnieuw wordt weergegeven. adobe.target.triggerView () zou voor enige paginatoepassingen (SPA) moeten worden uitgevoerd om Visual Experience Composer (VEC) te gebruiken om A/B Tests en Ervaring te creëren richtend (XT) activiteiten. Als adobe.target.triggerView() niet is geïmplementeerd op de site, kan de VEC niet worden gebruikt voor SPA.
+Gebruik de functie `adobe.target.triggerView` . Deze functie kan worden aangeroepen wanneer een nieuwe pagina wordt geladen of wanneer een component op een pagina opnieuw wordt weergegeven. adobe.target.triggerView () zou voor enige paginatoepassingen (SPAs) moeten worden uitgevoerd om Visual Experience Composer (VEC) te gebruiken om A/B Tests en Ervaring te creëren richtend (XT) activiteiten. Als adobe.target.triggerView() niet is geïmplementeerd op de site, kan VEC niet worden gebruikt voor SPA.
 
 **Voorbeeld**
 
@@ -670,7 +670,7 @@ adobe.target.triggerView("homeView")
 
 ### Web SDK gebruiken
 
-Als u een wijziging in de weergave van één pagina wilt activeren of signaleren, stelt u de eigenschap `web.webPageDetails.viewName` in onder de optie `xdm` van de opdracht `sendEvent` . De Web SDK controleert de weergavecache als er aanbiedingen zijn voor de `viewName` die in `sendEvent` is opgegeven, deze worden uitgevoerd en er wordt een weergavemeldingsgebeurtenis verzonden.
+Als u een wijziging in de weergave van één pagina wilt activeren of signaleren, stelt u de eigenschap `web.webPageDetails.viewName` in onder de optie `xdm` van de opdracht `sendEvent` . De Web SDK controleert de weergavecache. Als er aanbiedingen zijn voor de `viewName` die in `sendEvent` is opgegeven, worden deze uitgevoerd en wordt een weergavemeldingsgebeurtenis verzonden.
 
 **Voorbeeld**
 
@@ -712,7 +712,7 @@ document.addEventListener(adobe.target.event.REQUEST_SUCCEEDED, function(e) {
 
 >[!IMPORTANT]
 >
->Zorg ervoor dat u versie 2.6.0 of later van SDK van het Web van het Platform gebruikt.
+>Zorg ervoor dat u Experience Platform Web SDK versie 2.6.0 of later gebruikt.
 
 De reactietokens worden geretourneerd als onderdeel van de `propositions` die worden weergegeven in het resultaat van de opdracht `sendEvent` . Elke propositie bevat een array van `items` en elk item heeft een `meta` -object dat is gevuld met reactietokens als deze zijn ingeschakeld in de interface van Target-beheerder. [Meer informatie](https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html)
 
@@ -760,7 +760,7 @@ alloy("sendEvent", {
 Als u at.js gebruikt, kunt u flikkering beheren door `bodyHidingEnabled: true` zo in te stellen dat at.js het bestand is dat zorgt voor
 de gepersonaliseerde containers voorverbergen voordat deze de DOM-wijzigingen ophalen en toepassen.
 De paginagedeelten die gepersonaliseerde inhoud bevatten, kunnen vooraf worden verborgen door at.js `bodyHiddenStyle` te overschrijven.
-Standaard verbergt `bodyHiddenStyle` de gehele HTML `body` .
+Standaard verbergt `bodyHiddenStyle` de hele HTML `body` .
 U kunt beide instellingen overschrijven met `window.targetGlobalSettings` . `window.targetGlobalSettings` moet worden geplaatst voordat u het bestand at.js laadt.
 
 ### Web SDK gebruiken
@@ -776,7 +776,7 @@ alloy("configure", {
 });
 ```
 
-Wanneer het laden van de asynchrone SDK van het Web adviseren wij dat het volgende fragment in de pagina wordt ingespoten alvorens het Web SDK wordt ingespoten:
+Wanneer het laden van het Web SDK async adviseren wij dat het volgende fragment in de pagina wordt ingespoten alvorens het Web SDK wordt ingespoten:
 
 ```html
 <script>
@@ -940,7 +940,7 @@ Logboekregistratie aan de serverkant van Analytics wordt ingeschakeld wanneer An
 ![ Datastreams UI die de montages van Analytics toont.](assets/analytics-enabled-datastream-config.png)
 
 Wanneer de Logboekregistratie van de Analyse van de Zijde van de Server wordt toegelaten de nuttige lading A4T die met Analytics moet worden gedeeld zodat de Analytics rapportering toont
-de correcte beelden en de omzettingen worden gedeeld op het niveau van de Edge Network, zodat de klant geen extra verwerking hoeft te doen.
+de correcte beelden en de omzettingen worden gedeeld op het niveau van Edge Network, zodat de klant geen extra verwerking hoeft te doen.
 
 Hieronder wordt beschreven hoe gegevens in onze systemen stromen wanneer de Logboekregistratie van de Analytics van de Server wordt toegelaten:
 
@@ -1027,7 +1027,7 @@ alloy("sendEvent", {
 });
 ```
 
-## Hoe gebruik ik Target Recommendations
+## Hoe gebruik ik Doelaanbevelingen
 
 ### At.js gebruiken
 
@@ -1148,7 +1148,7 @@ window.targetPageParams = function() {
 
 ### Web SDK gebruiken
 
-Web SDK ondersteunt doel-id van derden. Er zijn echter nog een paar stappen voor nodig. Voordat we in de oplossing duiken, moeten we wat praten over `identityMap` .
+Web SDK biedt ondersteuning voor doel-id van derden. Er zijn echter nog een paar stappen voor nodig. Voordat we in de oplossing duiken, moeten we wat praten over `identityMap` .
 Met Identiteitskaart kunnen klanten meerdere identiteiten verzenden. Alle identiteiten worden naamruimte gegeven. Elke naamruimte kan een of meer identiteiten hebben. Een bepaalde identiteit kan als primair worden gemarkeerd.
 Met deze kennis in mening kunnen wij zien wat de noodzakelijke stappen aan opstellings Web sdk zijn om identiteitskaart van de Derde van het Doel te gebruiken.
 
@@ -1202,7 +1202,7 @@ window.targetPageParams = function() {
 
 ### Web SDK gebruiken
 
-Gebruikend Web SDK kunnen de klanten opstelling het bezit op een hoger niveau, wanneer vestiging de gegevensstroomconfiguratie, onder Adobe Target namespace:
+Gebruikend Web SDK kunnen de klanten opstelling het bezit op een hoger niveau, wanneer vestiging de configuratie van de gegevensstroom, onder Adobe Target namespace:
 ![ Datastreams UI die de montages van Adobe Target toont.](assets/at-property-setup.png)
 Dit betekent elke vraag van het Doel voor die specifieke configuratie van de Stream van Gegevens die bezitstoken zal bevatten.
 
@@ -1253,10 +1253,10 @@ Nota: Al deze het zuiveren eigenschappen zijn beschikbaar met verbeterde mogelij
 
 ### Web SDK gebruiken
 
-U hebt veelvoudige het zuiveren mogelijkheden wanneer het gebruiken van Web SDK:
+U hebt meerdere mogelijkheden voor foutopsporing wanneer u Web SDK gebruikt:
 
-* Gebruikend [ Verzekering ](/help/assurance/home.md)
-* [Web SDK debugenabled](/help/web-sdk/use-cases/debugging.md)
-* Het gebruik [ van SDK van het Web controlehaken ](https://github.com/adobe/alloy/wiki/Monitoring-Hooks)
-* Het gebruik [ Adobe Experience Platform Debugger ](/help/debugger/home.md)
+* Gebruikend [ Assurance ](/help/assurance/home.md)
+* [Web SDK debug ingeschakeld](/help/web-sdk/use-cases/debugging.md)
+* Het gebruik van [ SDK controlemaakjes van het Web ](https://github.com/adobe/alloy/wiki/Monitoring-Hooks)
+* Gebruik [ Adobe Experience Platform Debugger ](/help/debugger/home.md)
 * Doelovertrek

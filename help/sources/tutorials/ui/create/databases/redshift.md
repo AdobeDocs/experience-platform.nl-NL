@@ -3,10 +3,10 @@ title: Opnieuw overschakelen naar Experience Platform via de gebruikersinterface
 description: Leer hoe u een AWS Redshift-account koppelt aan Experience Platform met behulp van de interface voor bronnen.
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 4faf3200-673b-4a20-8f94-d049e800444b
-source-git-commit: 8533aa3527bfb74a77f5b15dacf9ecfe622477d5
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '700'
-ht-degree: 1%
+source-wordcount: '701'
+ht-degree: 0%
 
 ---
 
@@ -31,7 +31,7 @@ Als u reeds een geldige [!DNL AWS Redshift] verbinding hebt, kunt u de rest van 
 
 ## Navigeren door de catalogus met bronnen
 
-Selecteer in de gebruikersinterface van het platform de optie **[!UICONTROL Sources]** in de linkernavigatie voor toegang tot de werkruimte van [!UICONTROL Sources] . U kunt de juiste categorie selecteren in de catalogus aan de linkerkant van het scherm. U kunt ook de specifieke bron vinden waarmee u wilt werken met de zoekoptie.
+Selecteer in de gebruikersinterface van Experience Platform de optie **[!UICONTROL Sources]** in de linkernavigatie voor toegang tot de werkruimte van [!UICONTROL Sources] . U kunt de juiste categorie selecteren in de catalogus aan de linkerkant van het scherm. U kunt ook de specifieke bron vinden waarmee u wilt werken met de zoekoptie.
 
 Selecteer **[!DNL AWS Redshift]** onder de categorie *[!UICONTROL Databases]* en selecteer vervolgens **[!UICONTROL Set up]** .
 

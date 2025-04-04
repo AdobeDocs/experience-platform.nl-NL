@@ -5,10 +5,10 @@ breadcrumb-title: Handleiding voor toegangsbeheer
 user-guide-description: Gebruik productprofielen in Adobe Admin Console om gebruikersmachtigingen te beheren. Leer hoe u gebruikers kunt toewijzen aan producten en sandboxes.
 feature: Access Control
 role: Admin
-source-git-commit: e2e16572c9c03b28d99d309b6810090b8778a941
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '131'
-ht-degree: 34%
+source-wordcount: '132'
+ht-degree: 44%
 
 ---
 
@@ -19,7 +19,7 @@ ht-degree: 34%
 * Toegangsbeheer op basis van kenmerken {#abac}
    * [Overzicht](abac/overview.md)
    * [End-to-end hulplijn](abac/end-to-end-guide.md)
-   * [De toegangslabels van het gebruik om gebruikerstoegang tot bestemmingsdataflows te beheren](/help/access-control/abac/apply-access-labels-destinations.md)
+   * [Toegangslabels gebruiken om gebruikerstoegang tot bestemmingsgegevensstromen te beheren](/help/access-control/abac/apply-access-labels-destinations.md)
    * Machtigingen {#permissions-ui}
       * [Bladeren](abac/ui/browse.md)
       * [Labels](abac/ui/labels.md)
@@ -50,4 +50,4 @@ ht-degree: 34%
    * [Effectief beleid weergeven](api/effective-policies.md)
 * [Handleiding voor probleemoplossing](troubleshooting-guide.md)
 * [ API verwijzing ](https://www.adobe.io/experience-platform-apis/references/access-control/)
-* [ de versienota&#39;s van het Platform ](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)
+* [Releaseopmerkingen bij Experience Platform](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)

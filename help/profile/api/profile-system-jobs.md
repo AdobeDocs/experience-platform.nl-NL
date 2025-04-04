@@ -5,9 +5,9 @@ type: Documentation
 description: Met Adobe Experience Platform kunt u een gegevensset of batch verwijderen uit de profielopslag om gegevens van het realtime-klantprofiel te verwijderen die niet meer nodig zijn of die ten onrechte zijn toegevoegd. Hiervoor moet u de profiel-API gebruiken om een profielsysteemtaak te maken of een aanvraag te verwijderen.
 role: Developer
 exl-id: 75ddbf2f-9a54-424d-8569-d6737e9a590e
-source-git-commit: 16778d0edbad4539a4ff5084a2f22ca5f08e83ec
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '2020'
+source-wordcount: '2022'
 ht-degree: 0%
 
 ---
@@ -16,9 +16,9 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
->De volgende eindpunten kunnen verschillen tussen implementaties van Adobe Experience Platform die worden uitgevoerd op Microsoft Azure en Amazon Web Services (AWS). Experience Platform dat op AWS wordt uitgevoerd, is momenteel beschikbaar voor een beperkt aantal klanten. Meer over de gesteunde infrastructuur van het Experience Platform leren, zie het [ Experience Platform multi-cloud overzicht ](https://experienceleague.adobe.com/en/docs/experience-platform/landing/multi-cloud).
+>De volgende eindpunten kunnen verschillen tussen implementaties van Adobe Experience Platform die worden uitgevoerd op Microsoft Azure en Amazon Web Services (AWS). Experience Platform die op AWS wordt uitgevoerd, is momenteel beschikbaar voor een beperkt aantal klanten. Meer over de gesteunde infrastructuur van Experience Platform leren, zie het [ multi-wolkenoverzicht van Experience Platform ](https://experienceleague.adobe.com/en/docs/experience-platform/landing/multi-cloud).
 
-Met Adobe Experience Platform kunt u gegevens uit meerdere bronnen invoeren en robuuste profielen voor individuele klanten maken. Gegevens die in [!DNL Platform] worden ingevoerd, worden opgeslagen in [!DNL Data Lake] en als de gegevenssets zijn ingeschakeld voor Profiel, worden die gegevens ook opgeslagen in de [!DNL Real-Time Customer Profile] -gegevensopslag. Soms kan het nodig zijn om profielgegevens die zijn gekoppeld aan een gegevensset te verwijderen uit de profielenopslag om gegevens te verwijderen die niet meer nodig zijn of die ten onrechte zijn toegevoegd. Hiervoor moet u de API van [!DNL Real-Time Customer Profile] gebruiken om een [!DNL Profile] -systeemtaak te maken, of &quot;aanvraag verwijderen&quot;.
+Met Adobe Experience Platform kunt u gegevens uit meerdere bronnen invoeren en robuuste profielen voor individuele klanten maken. Gegevens die in [!DNL Experience Platform] worden ingevoerd, worden opgeslagen in [!DNL Data Lake] en als de gegevenssets zijn ingeschakeld voor Profiel, worden die gegevens ook opgeslagen in de [!DNL Real-Time Customer Profile] -gegevensopslag. Soms kan het nodig zijn om profielgegevens die zijn gekoppeld aan een gegevensset te verwijderen uit de profielenopslag om gegevens te verwijderen die niet meer nodig zijn of die ten onrechte zijn toegevoegd. Hiervoor moet u de API van [!DNL Real-Time Customer Profile] gebruiken om een [!DNL Profile] -systeemtaak te maken, of &quot;aanvraag verwijderen&quot;.
 
 >[!NOTE]
 >
@@ -26,11 +26,11 @@ Met Adobe Experience Platform kunt u gegevens uit meerdere bronnen invoeren en r
 
 ## Aan de slag
 
-Het API eindpunt dat in deze gids wordt gebruikt is een deel van [[!DNL Real-Time Customer Profile API] ](https://www.adobe.com/go/profile-apis-en). Alvorens verder te gaan, te herzien gelieve [ begonnen gids ](getting-started.md) voor verbindingen aan verwante documentatie, een gids aan het lezen van de steekproefAPI vraag in dit document, en belangrijke informatie betreffende vereiste kopballen die nodig zijn om vraag aan om het even welk Experience Platform API met succes te maken.
+Het API eindpunt dat in deze gids wordt gebruikt is een deel van [[!DNL Real-Time Customer Profile API] ](https://www.adobe.com/go/profile-apis-en). Alvorens verder te gaan, te herzien gelieve [ begonnen gids ](getting-started.md) voor verbindingen aan verwante documentatie, een gids aan het lezen van de steekproefAPI vraag in dit document, en belangrijke informatie betreffende vereiste kopballen die nodig zijn om vraag aan om het even welke Experience Platform API met succes te maken.
 
 ## Verzoeken om verwijderen weergeven {#view}
 
-Een verwijderingsverzoek is een langdurig, asynchroon proces, wat betekent dat uw organisatie mogelijk meerdere verwijderingsverzoeken tegelijk uitvoert. Om alle schrappingsverzoeken te bekijken die uw organisatie momenteel loopt, kunt u een verzoek van de GET aan het `/system/jobs` eindpunt uitvoeren.
+Een verwijderingsverzoek is een langdurig, asynchroon proces, wat betekent dat uw organisatie mogelijk meerdere verwijderingsverzoeken tegelijk uitvoert. Als u alle verwijderingsaanvragen wilt weergeven die uw organisatie momenteel uitvoert, kunt u een GET-aanvraag naar het `/system/jobs` -eindpunt uitvoeren.
 
 U kunt facultatieve vraagparameters ook gebruiken om de lijst van schrappingsverzoeken te filtreren die in de reactie zijn teruggekeerd. Als u meerdere parameters wilt gebruiken, scheidt u elke parameter met een en-teken (`&`).
 
@@ -38,7 +38,7 @@ U kunt facultatieve vraagparameters ook gebruiken om de lijst van schrappingsver
 
 >[!AVAILABILITY]
 >
->De volgende vraagparameters zijn **slechts** beschikbaar wanneer het gebruiken van Platform op Microsoft Azure.
+>De volgende vraagparameters zijn **slechts** beschikbaar wanneer het gebruiken van Experience Platform op Microsoft Azure.
 >
 >Wanneer het gebruiken van dit eindpunt op AWS, zijn de eerste 100 systeembanen teruggekeerd in dalende orde, die op hun aanmaakdatum wordt gebaseerd.
 
@@ -208,11 +208,11 @@ Een geslaagde reactie retourneert een array met een object voor elk van de syste
 
 ## Een verwijderaanvraag maken {#create-a-delete-request}
 
-Het in werking stellen van een nieuw schrappingsverzoek wordt gedaan door een verzoek van de POST aan het `/systems/jobs` eindpunt, waar identiteitskaart van de te schrappen dataset of partij in het lichaam van het verzoek wordt verstrekt.
+Het in werking stellen van een nieuw schrappingsverzoek wordt gedaan door een POST- verzoek aan het `/systems/jobs` eindpunt, waar identiteitskaart van de te schrappen dataset of partij in het lichaam van het verzoek wordt verstrekt.
 
 ### Een gegevensset en de bijbehorende profielgegevens verwijderen
 
-Om een dataset en alle profielgegevens verbonden aan de dataset van de opslag van het Profiel te schrappen, moet dataset identiteitskaart in het lichaam van het verzoek van de POST worden omvat. Deze actie zal ALLE gegevens voor een bepaalde dataset schrappen. [!DNL Experience Platform] staat u toe om datasets te schrappen die op zowel verslag als tijdreeksschema&#39;s worden gebaseerd.
+Om een dataset en alle profielgegevens verbonden aan de dataset van de opslag van het Profiel te schrappen, moet dataset identiteitskaart in het lichaam van het POST- verzoek worden omvat. Deze actie zal ALLE gegevens voor een bepaalde dataset schrappen. [!DNL Experience Platform] staat u toe om datasets te schrappen die op zowel verslag als tijdreeksschema&#39;s worden gebaseerd.
 
 **API formaat**
 
@@ -309,7 +309,7 @@ Een geslaagde reactie retourneert de details van het nieuwe verwijderingsverzoek
 | Eigenschap | Beschrijving |
 | -------- | ----------- |
 | `id` | De unieke, door het systeem gegenereerde, alleen-lezen-id van de verwijderaanvraag. |
-| `dataSetId` | Identiteitskaart van de dataset, zoals die in het verzoek van de POST wordt gespecificeerd. |
+| `dataSetId` | De id van de gegevensset, zoals opgegeven in het POST-verzoek. |
 
 +++
 
@@ -351,7 +351,7 @@ Een succesvolle reactie keert de details van het onlangs gecreeerde systeemverzo
 
 ### Een batch verwijderen
 
-Om een partij te kunnen verwijderen, moet de partij-ID worden opgenomen in de hoofdtekst van de aanvraag voor de POST. Gelieve te worden geadviseerd dat u geen partijen voor datasets kunt schrappen die op verslagschema&#39;s worden gebaseerd. Alleen batches voor gegevenssets op basis van tijdreeksschema&#39;s mogen worden verwijderd.
+Om een partij te kunnen verwijderen, moet de partij-ID worden opgenomen in de hoofdtekst van de POST-aanvraag. Gelieve te worden geadviseerd dat u geen partijen voor datasets kunt schrappen die op verslagschema&#39;s worden gebaseerd. Alleen batches voor gegevenssets op basis van tijdreeksschema&#39;s mogen worden verwijderd.
 
 >[!NOTE]
 >
@@ -460,7 +460,7 @@ Een geslaagde reactie retourneert de details van het nieuwe verwijderingsverzoek
 | -------- | ----------- |
 | `id` | De unieke, door het systeem gegenereerde, alleen-lezen-id van de verwijderaanvraag. |
 | `datasetId` | De id van de opgegeven gegevensset. |
-| `batchId` | De id van de batch, zoals opgegeven in het verzoek om POST. |
+| `batchId` | De id van de batch, zoals opgegeven in de POST-aanvraag. |
 
 +++
 
@@ -502,7 +502,7 @@ Een succesvolle reactie keert de details van het onlangs gecreeerde systeemverzo
 
 >[!AVAILABILITY]
 >
->De volgende eigenschap is **slechts** beschikbaar wanneer het gebruiken van Platform op Microsoft Azure.
+>De volgende eigenschap is **slechts** beschikbaar wanneer het gebruiken van Experience Platform op Microsoft Azure.
 
 Als u probeert om een schrappingsverzoek voor een partij van de dataset van het Verslag in werking te stellen, zult u een fout op 400 niveau ontmoeten, gelijkend op het volgende:
 
@@ -522,7 +522,7 @@ Als u probeert om een schrappingsverzoek voor een partij van de dataset van het 
 
 ## Een specifiek verwijderingsverzoek weergeven {#view-a-specific-delete-request}
 
-Om een specifiek schrappingsverzoek, met inbegrip van details zoals zijn status te bekijken, kunt u een raadpleging (GET) verzoek aan het `/system/jobs` eindpunt uitvoeren en identiteitskaart van het schrappingsverzoek in de weg omvatten.
+Als u een specifieke verwijderingsaanvraag wilt weergeven, inclusief details zoals de status, kunt u een opzoekaanvraag (GET) uitvoeren naar het `/system/jobs` -eindpunt en de id van de verwijderingsaanvraag opnemen in het pad.
 
 **API formaat**
 
@@ -656,7 +656,7 @@ Als de status van de verwijderaanvraag is ingesteld op `"COMPLETED"` , kunt u be
 >
 >Dit eindpunt wordt **slechts** gesteund in de Azure instantie van Adobe Experience Platform, en wordt **niet** gesteund op de instantie van AWS.
 
-Met [!DNL Experience Platform] kunt u een eerdere aanvraag verwijderen. Dit kan om een aantal redenen nuttig zijn, bijvoorbeeld als de verwijdertaak niet is voltooid of vastgelopen in het verwerkingsstadium. Als u een verwijderingsaanvraag wilt verwijderen, kunt u een DELETE-aanvraag naar het `/system/jobs` -eindpunt uitvoeren en de id van de verwijderaanvraag opnemen die u naar het aanvraagpad wilt verwijderen.
+Met [!DNL Experience Platform] kunt u een eerdere aanvraag verwijderen. Dit kan om een aantal redenen nuttig zijn, bijvoorbeeld als de verwijdertaak niet is voltooid of vastgelopen in het verwerkingsstadium. Als u een verwijderaanvraag wilt verwijderen, kunt u een DELETE-aanvraag naar het `/system/jobs` -eindpunt uitvoeren en de id van de verwijderaanvraag opnemen die u naar het aanvraagpad wilt verwijderen.
 
 **API formaat**
 
@@ -680,7 +680,7 @@ curl -X POST https://platform.adobe.io/data/core/ups/system/jobs/9c2018e2-cd04-4
 
 **Reactie**
 
-Een succesvol verwijderingsverzoek retourneert HTTP Status 200 (OK) en een lege antwoordinstantie. U kunt bevestigen dat de aanvraag is verwijderd door een GET-aanvraag uit te voeren om de verwijderaanvraag met de id weer te geven. Dit zou een Status 404 van HTTP (niet Gevonden) moeten terugkeren, erop wijzend dat het schrappingsverzoek werd verwijderd.
+Een succesvol verwijderingsverzoek retourneert HTTP Status 200 (OK) en een lege antwoordinstantie. U kunt bevestigen dat de aanvraag is verwijderd door een GET-aanvraag uit te voeren om de aanvraag voor verwijderen met de id weer te geven. Dit zou een Status 404 van HTTP (niet Gevonden) moeten terugkeren, erop wijzend dat het schrappingsverzoek werd verwijderd.
 
 ## Volgende stappen
 

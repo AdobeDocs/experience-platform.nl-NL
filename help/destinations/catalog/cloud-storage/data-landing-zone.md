@@ -3,9 +3,9 @@ title: Bestemming landingszone gegevens
 description: Leer hoe u verbinding maakt met Data Landing Zone om het publiek te activeren en gegevenssets te exporteren.
 last-substantial-update: 2023-07-26T00:00:00Z
 exl-id: 40b20faa-cce6-41de-81a0-5f15e6c00e64
-source-git-commit: 5f932f3de2b875d77904582dfb320e0b6ce17afd
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1927'
+source-wordcount: '1937'
 ht-degree: 0%
 
 ---
@@ -19,9 +19,9 @@ ht-degree: 0%
 
 ## Overzicht {#overview}
 
-[!DNL Data Landing Zone] is een interface voor cloudopslag die door Adobe Experience Platform is ingericht en waarmee u toegang hebt tot een veilige, op de cloud gebaseerde opslagfaciliteit voor het opslaan van bestanden om bestanden van het platform te exporteren. U hebt toegang tot één [!DNL Data Landing Zone] container per sandbox en het totale gegevensvolume voor alle containers is beperkt tot de totale gegevens die worden geleverd bij uw Platform Products and Services-licentie. Alle klanten van Platform en de bijbehorende toepassingen, zoals [!DNL Customer Journey Analytics] , [!DNL Journey Orchestration] , [!DNL Intelligent Services] en [!DNL Real-Time Customer Data Platform] , beschikken over één [!DNL Data Landing Zone] container per sandbox.
+[!DNL Data Landing Zone] is een interface voor cloudopslag die door Adobe Experience Platform is ingericht en waarmee u toegang hebt tot een veilige opslagvoorziening voor bestanden in de cloud waarmee u bestanden vanuit Experience Platform kunt exporteren. U hebt toegang tot één [!DNL Data Landing Zone] container per sandbox en het totale gegevensvolume voor alle containers is beperkt tot de totale gegevens die worden geleverd bij uw Experience Platform-licentie voor producten en services. Alle klanten van Experience Platform en de bijbehorende toepassingen, zoals [!DNL Customer Journey Analytics] , [!DNL Journey Orchestration] , [!DNL Intelligent Services] en [!DNL Real-Time Customer Data Platform] , beschikken over één [!DNL Data Landing Zone] container per sandbox.
 
-Het platform dwingt een strikte tijd-aan-levende (TTL) zeven dagen op alle dossiers af die aan een [!DNL Data Landing Zone] container worden geupload. Alle bestanden worden na zeven dagen verwijderd.
+Experience Platform past een strikte, 7-dagen durende (TTL) toe op alle bestanden die naar een [!DNL Data Landing Zone] -container zijn geüpload. Alle bestanden worden na zeven dagen verwijderd.
 
 De [!DNL Data Landing Zone] doelconnector is beschikbaar voor klanten die de Azure- of Amazon Web Service-cloudondersteuning gebruiken. Het authentificatiemechanisme is verschillend gebaseerd op de wolk waarin de bestemming provisioned is, zijn al het andere over de bestemming en zijn gebruiksgevallen het zelfde. Lees meer over de twee verschillende authentificatiemechanismen in de secties [ voor authentiek verklaren aan de Gegevens Landing Zone die in Azure Blob ](#authenticate-dlz-azure) wordt voorzien en [ voor authentiek verklaart aan de AWS-provisioned Gegeven Landing Zone ](#authenticate-dlz-aws).
 
@@ -29,7 +29,7 @@ De [!DNL Data Landing Zone] doelconnector is beschikbaar voor klanten die de Azu
 
 ## Verbinding maken met uw [!UICONTROL Data Landing Zone] -opslag via API of UI {#connect-api-or-ui}
 
-* Om met uw [!UICONTROL Data Landing Zone] opslagplaats te verbinden gebruikend het gebruikersinterface van het Platform, lees de secties [ verbinden met de bestemming ](#connect) en [ actief publiek aan deze bestemming ](#activate) hieronder.
+* Om met uw [!UICONTROL Data Landing Zone] opslagplaats te verbinden gebruikend het gebruikersinterface van Experience Platform, lees de secties [ verbinden met de bestemming ](#connect) en [ actief publiek aan deze bestemming ](#activate) hieronder.
 * Om met uw [!UICONTROL Data Landing Zone] opslagplaats programmatically te verbinden, lees [ actief publiek aan op dossier-gebaseerde bestemmingen door de dienst API van de Stroom te gebruiken leerprogramma ](../../api/activate-segments-file-based-destinations.md).
 
 ## Ondersteunde doelgroepen {#supported-audiences}
@@ -38,7 +38,7 @@ In deze sectie wordt beschreven welke soorten publiek u naar dit doel kunt expor
 
 | Oorsprong publiek | Ondersteund | Beschrijving |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | ✓ | Het publiek produceerde door de Dienst van de Segmentatie van het Experience Platform [ ](../../../segmentation/home.md). |
+| [!DNL Segmentation Service] | ✓ | Het publiek produceerde door de Dienst van de Segmentatie van Experience Platform [ ](../../../segmentation/home.md). |
 | Aangepaste uploads | ✓ | Het publiek [ ingevoerde ](../../../segmentation/ui/audience-portal.md#import-audience) in Experience Platform van Csv- dossiers. |
 
 {style="table-layout:auto"}
@@ -58,20 +58,20 @@ Raadpleeg de onderstaande tabel voor informatie over het exporttype en de export
 
 Deze bestemming steunt dataset de uitvoer. Voor volledige informatie over hoe te de uitvoer van de opstellingsdataset, lees de leerprogramma&#39;s:
 
-* Hoe te [ datasets uitvoeren gebruikend het gebruikersinterface van het Platform ](/help/destinations/ui/export-datasets.md).
+* Hoe te [ datasets uitvoeren gebruikend het gebruikersinterface van Experience Platform ](/help/destinations/ui/export-datasets.md).
 * Hoe te [ datasets programmatically uitvoeren gebruikend de Dienst API van de Stroom ](/help/destinations/api/export-datasets.md).
 
 ## Bestandsindeling van de geëxporteerde gegevens {#file-format}
 
-Wanneer het uitvoeren van *publieksgegevens*, leidt het Platform tot een `.csv`, `parquet`, of `.json` dossier in de opslagplaats die u verstrekte. Voor meer informatie over de dossiers, zie [ gesteunde dossierformaten voor de uitvoer ](../../ui/activate-batch-profile-destinations.md#supported-file-formats-export) sectie in het leerprogramma van de publiekactivering.
+Wanneer het uitvoeren van *publieksgegevens*, leidt Experience Platform tot een `.csv`, `parquet`, of `.json` dossier in de opslagplaats die u verstrekte. Voor meer informatie over de dossiers, zie [ gesteunde dossierformaten voor de uitvoer ](../../ui/activate-batch-profile-destinations.md#supported-file-formats-export) sectie in het leerprogramma van de publiekactivering.
 
-Wanneer het uitvoeren van *datasets*, leidt het Platform tot een `.parquet` of `.json` dossier in de opslagplaats die u verstrekte. Voor meer informatie over de dossiers, zie [ succesvolle datasetuitvoer ](../../ui/export-datasets.md#verify) sectie in het de uitvoerdatasetleerprogramma verifiëren.
+Wanneer het uitvoeren van *datasets*, leidt Experience Platform tot een `.parquet` of `.json` dossier in de opslagplaats die u verstrekte. Voor meer informatie over de dossiers, zie [ succesvolle datasetuitvoer ](../../ui/export-datasets.md#verify) sectie in het de uitvoerdatasetleerprogramma verifiëren.
 
 ## Verifieer aan de Gebied van Gegevens die in Azure Blob wordt verstrekt {#authenticate-dlz-azure}
 
 >[!AVAILABILITY]
 >
->Deze sectie is van toepassing op implementaties van Experience Platform die op Microsoft Azure lopen. Meer over de gesteunde infrastructuur van het Experience Platform leren, zie het [ Experience Platform multi-cloud overzicht ](https://experienceleague.adobe.com/en/docs/experience-platform/landing/multi-cloud).
+>Deze sectie is van toepassing op implementaties van Experience Platform die worden uitgevoerd op Microsoft Azure. Meer over de gesteunde infrastructuur van Experience Platform leren, zie het [ multi-wolkenoverzicht van Experience Platform ](https://experienceleague.adobe.com/en/docs/experience-platform/landing/multi-cloud).
 
 U kunt bestanden lezen en schrijven naar uw container via [!DNL Azure Storage Explorer] of de opdrachtregelinterface.
 
@@ -97,7 +97,7 @@ Na het selecteren van uw verbindingsmethode, moet u a **vertoningsnaam** en **[!
 
 ### De referenties voor uw [!DNL Data Landing Zone] ophalen {#retrieve-dlz-credentials}
 
-U moet de platform-API&#39;s gebruiken om uw [!DNL Data Landing Zone] -referenties op te halen. De API-aanroep om uw referenties op te halen wordt hieronder beschreven. Voor informatie over het krijgen van de vereiste waarden voor uw kopballen, verwijs [ Begonnen het worden met Adobe Experience Platform APIs ](/help/landing/api-guide.md) gids.
+U moet de Experience Platform API&#39;s gebruiken om uw [!DNL Data Landing Zone] -gegevens op te halen. De API-aanroep om uw referenties op te halen wordt hieronder beschreven. Voor informatie over het krijgen van de vereiste waarden voor uw kopballen, verwijs [ Begonnen het worden met Adobe Experience Platform APIs ](/help/landing/api-guide.md) gids.
 
 **API formaat**
 
@@ -148,7 +148,7 @@ De volgende reactie retourneert de referentie-informatie voor de landingszone, i
 
 ### [!DNL Data Landing Zone] gebruikersgegevens bijwerken {#update-dlz-credentials}
 
-U kunt uw gegevens desgewenst ook vernieuwen. U kunt uw `SASToken` bijwerken door een aanvraag voor een POST in te dienen bij het `/credentials` eindpunt van de [!DNL Connectors] API.
+U kunt uw gegevens desgewenst ook vernieuwen. U kunt uw `SASToken` bijwerken door een POST-aanvraag in te dienen bij het `/credentials` eindpunt van de [!DNL Connectors] API.
 
 **API formaat**
 
@@ -204,13 +204,13 @@ Een geslaagde verbinding werkt de gebruikersinterface van [!DNL Azure Storage Ex
 
 ![ Samenvatting van de DLZ gebruikerscontainer die in Azure UI wordt benadrukt.](/help/sources/images/tutorials/create/dlz/dlz-user-container.png)
 
-Als de [!DNL Data Landing Zone] -container is aangesloten op [!DNL Azure Storage Explorer] , kunt u nu bestanden van het Experience Platform naar de [!DNL Data Landing Zone] -container exporteren. Als u bestanden wilt exporteren, moet u een verbinding tot stand brengen met de [!DNL Data Landing Zone] -bestemming in de gebruikersinterface van het Experience Platform, zoals beschreven in de onderstaande sectie.
+Als de [!DNL Data Landing Zone] -container is aangesloten op [!DNL Azure Storage Explorer] , kunt u nu bestanden van Experience Platform naar uw [!DNL Data Landing Zone] -container exporteren. Als u bestanden wilt exporteren, moet u een verbinding tot stand brengen met de [!DNL Data Landing Zone] -bestemming in de gebruikersinterface van Experience Platform, zoals hieronder wordt beschreven.
 
 ## Verifiëren voor de AWS-provisioned Data Landing Zone {#authenticate-dlz-aws}
 
 >[!AVAILABILITY]
 >
->Deze sectie is van toepassing op implementaties van Experience Platform dat op Amazon Web Services (AWS) loopt. Experience Platform dat op AWS wordt uitgevoerd, is momenteel beschikbaar voor een beperkt aantal klanten. Meer over de gesteunde infrastructuur van het Experience Platform leren, zie het [ Experience Platform multi-cloud overzicht ](https://experienceleague.adobe.com/en/docs/experience-platform/landing/multi-cloud).
+>Deze sectie is van toepassing op implementaties van Experience Platform die op Amazon Web Services (AWS) worden uitgevoerd. Experience Platform die op AWS wordt uitgevoerd, is momenteel beschikbaar voor een beperkt aantal klanten. Meer over de gesteunde infrastructuur van Experience Platform leren, zie het [ multi-wolkenoverzicht van Experience Platform ](https://experienceleague.adobe.com/en/docs/experience-platform/landing/multi-cloud).
 
 Voer de onderstaande bewerkingen uit om referenties naar uw [!DNL Data Landing Zone] -instantie te verkrijgen die is ingericht op AWS. Gebruik vervolgens een keuzerondje om verbinding te maken met de instantie [!DNL Data Landing Zone] .
 
@@ -218,7 +218,7 @@ Voer de onderstaande bewerkingen uit om referenties naar uw [!DNL Data Landing Z
 
 ### De referenties voor uw [!DNL Data Landing Zone] ophalen {#retrieve-dlz-credentials-aws}
 
-U moet de platform-API&#39;s gebruiken om uw [!DNL Data Landing Zone] -referenties op te halen. De API-aanroep om uw referenties op te halen wordt hieronder beschreven. Voor informatie over het krijgen van de vereiste waarden voor uw kopballen, verwijs [ Begonnen het worden met Adobe Experience Platform APIs ](/help/landing/api-guide.md) gids.
+U moet de Experience Platform API&#39;s gebruiken om uw [!DNL Data Landing Zone] -gegevens op te halen. De API-aanroep om uw referenties op te halen wordt hieronder beschreven. Voor informatie over het krijgen van de vereiste waarden voor uw kopballen, verwijs [ Begonnen het worden met Adobe Experience Platform APIs ](/help/landing/api-guide.md) gids.
 
 **API formaat**
 
@@ -267,7 +267,7 @@ De volgende reactie retourneert de referentie-informatie voor de landingszone, i
 
 | Eigenschap | Beschrijving |
 | --- | --- |
-| `credentials` | Dit object bevat de tags `awsAccessKeyId` , `awsSecretAccessKey` en `awsSessionToken` die Experience Platform gebruikt om bestanden te exporteren naar de ingericht-landingslocatie voor gegevens. |
+| `credentials` | Dit object bevat de tags `awsAccessKeyId` , `awsSecretAccessKey` en `awsSessionToken` die Experience Platform gebruikt om bestanden te exporteren naar de ingericht locatie voor de landingszone van gegevens. |
 | `dlzPath` | Dit object bevat het pad op de AWS-locatie met Adobe-provisioning waar geëxporteerde bestanden worden gedeponeerd. |
 | `dlzProvider` | Geeft aan dat dit een Amazon S3-provisioned Data Landing Zone is. |
 | `expiryTime` | Geeft aan wanneer de referenties in het `credentials` -object verlopen. Voer de aanvraag opnieuw uit om de voorwaarden te vernieuwen. |
@@ -286,7 +286,7 @@ Om met deze bestemming te verbinden, volg de stappen die in het [ leerprogramma 
 
 ### Verifiëren voor bestemming {#authenticate}
 
-Zorg ervoor dat u uw [!DNL Data Landing Zone] container aan [!DNL Azure Storage Explorer] zoals die in de [ wordt beschreven eerste vereisten ](#prerequisites) sectie hebt verbonden. Omdat [!DNL Data Landing Zone] een Adobe-provisioned opslag is, te hoeven u geen verdere stappen in het Experience Platform UI uit te voeren om aan de bestemming voor authentiek te verklaren.
+Zorg ervoor dat u uw [!DNL Data Landing Zone] container aan [!DNL Azure Storage Explorer] zoals die in de [ wordt beschreven eerste vereisten ](#prerequisites) sectie hebt verbonden. Omdat [!DNL Data Landing Zone] is een opslagruimte met Adobe-provisioning, hoeft u geen verdere stappen in de Experience Platform-interface uit te voeren om verificatie naar de bestemming uit te voeren.
 
 ### Doelgegevens invullen {#destination-details}
 
@@ -295,7 +295,7 @@ Als u details voor de bestemming wilt configureren, vult u de vereiste en option
 * **[!UICONTROL Name]**: vul de voorkeursnaam voor dit doel in.
 * **[!UICONTROL Description]**: optioneel. U kunt bijvoorbeeld opgeven voor welke campagne u deze bestemming wilt gebruiken.
 * **[!UICONTROL Folder path]**: voer het pad in naar de doelmap waarin de geëxporteerde bestanden worden opgeslagen.
-* **[!UICONTROL File type]**: selecteer het Experience Platform voor de indeling die u voor de geëxporteerde bestanden wilt gebruiken. Wanneer het selecteren van de [!UICONTROL CSV] optie, kunt u ook [ de dossier het formatteren opties ](../../ui/batch-destinations-file-formatting-options.md) vormen.
+* **[!UICONTROL File type]**: selecteer de indeling die Experience Platform moet gebruiken voor de geëxporteerde bestanden. Wanneer het selecteren van de [!UICONTROL CSV] optie, kunt u ook [ de dossier het formatteren opties ](../../ui/batch-destinations-file-formatting-options.md) vormen.
 * **[!UICONTROL Compression format]**: Selecteer het compressietype dat Experience Platform moet gebruiken voor de geëxporteerde bestanden.
 * **[!UICONTROL Include manifest file]**: Schakel deze optie in als u wilt dat bij het exporteren een manifest-JSON-bestand wordt opgenomen dat informatie bevat over de exportlocatie, de exportgrootte en meer. Het manifest wordt genoemd gebruikend het formaat `manifest-<<destinationId>>-<<dataflowRunId>>.json`. Bekijk a [ steekproef manifestdossier ](/help/destinations/assets/common/manifest-d0420d72-756c-4159-9e7f-7d3e2f8b501e-0ac8f3c0-29bd-40aa-82c1-f1b7e0657b19.json). Het manifestbestand bevat de volgende velden:
    * `flowRunId`: De [ dataflow looppas ](/help/dataflows/ui/monitor-destinations.md#dataflow-runs-for-batch-destinations) die het uitgevoerde dossier produceerde.

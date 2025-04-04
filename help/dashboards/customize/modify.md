@@ -1,11 +1,11 @@
 ---
-keywords: Experience Platform;gebruikersinterface;UI;dashboards;dashboard;profielen;segmenten;bestemmingen;vergunningsgebruik
-title: Platformdashboards in UI wijzigen
+keywords: Experience Platform;gebruikersinterface;UI;dashboards;dashboard;profielen;segmenten;bestemmingen;licentiegebruik
+title: Experience Platform-dashboards wijzigen in de gebruikersinterface
 description: Deze handleiding bevat stapsgewijze instructies voor het aanpassen van de manier waarop de Adobe Experience Platform-gegevens van uw organisatie worden weergegeven in dashboards.
 exl-id: 75e4aea7-b521-434d-9cd5-32a00d00550d
-source-git-commit: 32dd90018c990e7013d826b29608a61022ba808b
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '470'
+source-wordcount: '472'
 ht-degree: 0%
 
 ---
@@ -18,7 +18,7 @@ Binnen de gebruikersinterface van Adobe Experience Platform (UI), kunt u met de 
 >
 >Alle updates van de dashboards worden uitgevoerd per organisatie en per sandbox.
 
-Deze handleiding bevat stapsgewijze instructies voor het aanpassen van de weergave van dashboardgegevens in de dashboards [!UICONTROL Profiles] , [!UICONTROL Segments] en [!UICONTROL Destinations] in de platforminterface.
+Deze handleiding bevat stapsgewijze instructies voor het aanpassen van de weergave van dashboardgegevens in de dashboards [!UICONTROL Profiles] , [!UICONTROL Segments] en [!UICONTROL Destinations] in de Experience Platform-gebruikersinterface.
 
 ## Aan de slag
 

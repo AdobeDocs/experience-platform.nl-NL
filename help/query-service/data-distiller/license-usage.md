@@ -2,9 +2,9 @@
 title: Gebruik van batch-query's controleren
 description: De gebruikersinterface van Adobe Experience Platform biedt een dashboard waarmee u belangrijke informatie kunt bekijken over het gebruik van de Data Distiller-licentie van uw organisatie.
 exl-id: a1e365a0-cc65-4fd6-b36f-8d79b7d9ec7c
-source-git-commit: d83604b2bf6a8e2f2b5802a5e7f26447fbf7eb2e
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '232'
+source-wordcount: '233'
 ht-degree: 0%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 Het licentiegebruiksdashboard biedt gedetailleerde rapporten over het gebruik van de Query Service-licentie en gebruiksmaatstaven van uw organisatie voor elk aangeschaft product. Om meer over de beschikbare metriek te leren die in het dashboard wordt getoond, bezoek de [ gids van het gebruiksdashboard van de vergunning ](../../dashboards/guides/license-usage.md#available-metrics).
 
-Het dashboard biedt gebruiksmaatstaven voor elk aangeschaft product, het geconsolideerde gebruik van metriek in alle productie- of ontwikkelingssandboxen en de gebruiksmaatstaven van een specifieke sandbox. De hier weergegeven informatie wordt vastgelegd tijdens een dagelijkse momentopname van uw platforminstantie.
+Het dashboard biedt gebruiksmaatstaven voor elk aangeschaft product, het geconsolideerde gebruik van metriek in alle productie- of ontwikkelingssandboxen en de gebruiksmaatstaven van een specifieke sandbox. De hier weergegeven informatie wordt vastgelegd tijdens een dagelijkse momentopname van uw Experience Platform-exemplaar.
 
 >[!NOTE]
 >

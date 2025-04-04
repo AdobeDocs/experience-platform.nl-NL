@@ -5,9 +5,9 @@ description: Leer hoe u met Adobe Real-time Customer Data Platform B2B Edition a
 badgeB2B: label="B2B edition" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
 feature: Profiles, B2B
 exl-id: 67515fe0-975e-4ee1-b172-60bc93ba1010
-source-git-commit: 02f2082e695d157415c9e0c59ca5d371c94bb991
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '305'
+source-wordcount: '306'
 ht-degree: 7%
 
 ---
@@ -24,7 +24,7 @@ Door accountgegevens uit verschillende bronnen te bundelen, kunt u een volledig 
 
 ## Accountprofielviewer
 
-Met Real-Time CDP, B2B edition, kunt u de gebruikersinterface van Experience Platform gebruiken om rekeningsprofielen te bekijken en naar specifieke rekeningen te zoeken gebruikend een rekeningsidentiteitskaart van een verbonden ondernemingsbron of door brondetails direct in te gaan. Voor meer informatie betreffende hoe te om rekeningsprofielen binnen het Platform UI te bekijken, gelieve te zien de [ gids UI van het rekeningsprofiel ](account-profile-ui-guide.md).
+Met Real-Time CDP, B2B edition, kunt u de gebruikersinterface van Experience Platform gebruiken om rekeningsprofielen te bekijken en naar specifieke rekeningen te zoeken gebruikend een rekeningsidentiteitskaart van een verbonden ondernemingsbron of door brondetails direct in te gaan. Voor meer informatie betreffende hoe te om rekeningsprofielen binnen Experience Platform UI te bekijken, gelieve te zien de [ gids UI van het rekeningsprofiel ](account-profile-ui-guide.md).
 
 ## Accountsoorten maken en activeren
 

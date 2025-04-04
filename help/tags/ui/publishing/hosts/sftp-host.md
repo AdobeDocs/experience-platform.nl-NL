@@ -2,9 +2,9 @@
 title: SFTP-hosts
 description: Leer hoe u tags in Adobe Experience Platform configureert om bibliotheekbuilds te leveren aan een beveiligde, zelfgehoste SFTP-server.
 exl-id: 3c1dc43b-291c-4df4-94f7-a03b25dbb44c
-source-git-commit: 5b362d28eb3be5e2a45464390c694f7ae59f899c
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '856'
+source-wordcount: '861'
 ht-degree: 5%
 
 ---
@@ -25,7 +25,7 @@ Met Experience Platform kunt u bouwen van tagbibliotheken leveren aan een beveil
 
 ## Een toegangstoets voor uw server instellen {#access-key}
 
-Platform maakt verbinding met uw SFTP-site met behulp van een gecodeerde sleutel. Er zijn een paar stappen om dit correct in te stellen:
+Experience Platform maakt verbinding met uw SFTP-site met behulp van een gecodeerde sleutel. Er zijn een paar stappen om dit correct in te stellen:
 
 ### Een combinatie van openbare/persoonlijke sleutels maken
 
@@ -35,7 +35,7 @@ Er moet een combinatie van openbare/persoonlijke sleutels op uw SFTP-server zijn
 
 De persoonlijke sleutel wordt gebruikt om de openbare sleutel te coderen. U moet uw persoonlijke sleutel opgeven tijdens het maken van de SFTP-host. Zie de sectie over [ het coderen van waarden ](../../../api/guides/encrypting-values.md) in de Reactor API gids voor instructies bij het coderen van openbare sleutels. Gebruik de GPG-sleutel van de productieomgeving, tenzij u weet dat u een specifieke sleutel nodig hebt. Tot slot kunt u uw persoonlijke sleutel van om het even welke machine coderen, zodat te hoeven u niet om GPG op uw server te installeren om deze stap te voltooien.
 
-### IP van het Platform van de Lijst van gewenste personen adressen
+### Experience Platform IP-adressen voor Lijst van gewenste personen
 
 >[!IMPORTANT]
 >
@@ -53,7 +53,7 @@ De persoonlijke sleutel wordt gebruikt om de openbare sleutel te coderen. U moet
 > * `44.194.43.191`
 > * `3.215.163.18`
 
-Mogelijk moet u een set IP-adressen goedkeuren die binnen uw bedrijfsfirewall moet worden gebruikt, zodat Platform uw SFTP-server kan bereiken en er verbinding mee kan maken. Deze IP Adressen zijn:
+Mogelijk moet u een set IP-adressen goedkeuren die binnen uw bedrijfsfirewall moet worden gebruikt, zodat Experience Platform uw SFTP-server kan bereiken en er verbinding mee kan maken. Deze IP Adressen zijn:
 
 * `184.72.239.68`
 * `23.20.85.113`
@@ -94,7 +94,7 @@ Selecteer **[!UICONTROL Save]** om de host te maken met de geselecteerde configu
 
 ![ Beeld dat de gastheer toont SFTP die wordt bewaard ](../../../images/ui/publishing/sftp-hosts/save-host.png)
 
-Wanneer u **[!UICONTROL Save]** selecteert, worden de verbinding en de mogelijkheid om de bestanden naar uw SFTP-server te leveren getest. Platform maakt een map, schrijft een bestand in die map, controleert of het bestand aanwezig is en wist het vervolgens zelf. Als de gebruikersaccount op uw SFTP-server (die is gekoppeld aan het beveiligde certificaat dat u aan Platform hebt verstrekt) niet de benodigde machtigingen heeft om deze handeling uit te voeren, gaat de host naar de status &quot;Mislukt&quot;.
+Wanneer u **[!UICONTROL Save]** selecteert, worden de verbinding en de mogelijkheid om de bestanden naar uw SFTP-server te leveren getest. Experience Platform maakt een map, schrijft een bestand in die map, controleert of het bestand aanwezig is en wist het vervolgens zelf. Als de gebruikersaccount op uw SFTP-server (die is gekoppeld aan het beveiligde certificaat dat u aan Experience Platform hebt verstrekt) niet de benodigde machtigingen heeft om deze handeling uit te voeren, gaat de host naar de status &quot;Mislukt&quot;.
 
 ## Volgende stappen
 

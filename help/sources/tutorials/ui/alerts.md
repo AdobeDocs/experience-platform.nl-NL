@@ -3,9 +3,9 @@ keywords: Experience Platform;home;populaire onderwerpen; waarschuwingen
 description: U kunt op alarm intekenen wanneer het creëren van een gegevensstroom, om waakzame berichten betreffende de status, het succes, of het mislukken van uw stroom te ontvangen in werking stellen.
 title: Abonneren op in-context-waarschuwingen in de gebruikersinterface
 exl-id: 5d51edaa-ecba-4ac0-8d3c-49010466b9a5
-source-git-commit: 0165aa60ca865c6d1cf269b16068dffa9349214c
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '803'
+source-wordcount: '809'
 ht-degree: 0%
 
 ---
@@ -22,9 +22,9 @@ In dit document worden de stappen beschreven voor het ontvangen van berichten me
 
 Voor dit document is een goed begrip van de volgende Adobe Experience Platform-componenten vereist:
 
-* [ Bronnen ](../../home.md): [!DNL Experience Platform] staat gegevens toe om van diverse bronnen worden opgenomen terwijl het voorzien van u van de capaciteit om, inkomende gegevens te structureren te etiketteren en te verbeteren gebruikend [!DNL Platform] diensten.
-* [ Observability ](../../../observability/home.md): [!DNL Observability Insights] staat u toe om de activiteiten van het Platform door het gebruik van statistische metriek en gebeurtenisberichten te controleren.
-   * [ Alarm ](../../../observability/alerts/overview.md): Wanneer een bepaalde reeks voorwaarden in uw verrichtingen van het Platform wordt bereikt (zoals een potentieel probleem wanneer het systeem een drempel) schendt, kan het Platform waakzame berichten aan om het even welke gebruikers in uw organisatie leveren die aan hen hebben ingetekend.
+* [ Bronnen ](../../home.md): [!DNL Experience Platform] staat gegevens toe om van diverse bronnen worden opgenomen terwijl het voorzien van u van de capaciteit om, inkomende gegevens te structureren te etiketteren en te verbeteren gebruikend [!DNL Experience Platform] diensten.
+* [ Observability ](../../../observability/home.md): [!DNL Observability Insights] staat u toe om de activiteiten van Experience Platform door het gebruik van statistische metriek en gebeurtenisberichten te controleren.
+   * [ Alarm ](../../../observability/alerts/overview.md): Wanneer een bepaalde reeks voorwaarden in uw verrichtingen van Experience Platform wordt bereikt (zoals een potentieel probleem wanneer het systeem een drempel) schendt, kan Experience Platform waakzame berichten aan om het even welke gebruikers in uw organisatie leveren die aan hen zijn ingetekend.
 
 ## Abonneren op waarschuwingen in de gebruikersinterface {#subscribe-sources-alerts}
 
@@ -36,7 +36,7 @@ Voor dit document is een goed begrip van de volgende Adobe Experience Platform-c
 
 >[!IMPORTANT]
 >
->U moet directe meldingen van e-mails voor uw Platform-account inschakelen om e-mailmeldingen voor uw gegevensstromen te ontvangen.
+>U moet directe meldingen van e-mails voor uw Experience Platform-account inschakelen om e-mailmeldingen voor uw gegevensstromen te ontvangen.
 
 U kunt waarschuwingen voor uw gegevensstromen tijdens de [!UICONTROL Dataflow detail] stap van de bronwerkstroom in de bronwerkruimte inschakelen.
 
@@ -51,7 +51,7 @@ De beschikbare alarm voor bronnen dataflows zijn:
 | Waarschuwingen | Beschrijving |
 | --- | --- |
 | Bronnen Start Stroom | Deze waarschuwing stuurt u een bericht wanneer uw brongegevensstroom is begonnen. |
-| Resources Flow Run Success | Deze waarschuwing stuurt u een bericht wanneer gegevens van uw bron met succes aan Platform worden opgenomen. |
+| Resources Flow Run Success | Deze waarschuwing stuurt je een bericht wanneer gegevens van je bron naar Experience Platform zijn verzonden. |
 | Fout bij uitvoeren van bronstroom | Deze waarschuwing stuurt u een bericht als er een fout optreedt in uw gegevensstroom. |
 
 Selecteer de waarschuwingen waarop u zich wilt abonneren en selecteer vervolgens **[!UICONTROL Next]** om uw gegevensstroom te bekijken en af te ronden.
@@ -76,7 +76,7 @@ Zodra uw gegevensstroom loopt, kunt u alarm door UI of door e-mail ontvangen.
 
 ### In de gebruikersinterface
 
-Alarm wordt vertegenwoordigd in UI door een berichtpictogram in de hoogste kopbal van het Platform UI. Selecteer het berichtpictogram om specifieke waakzame berichten betreffende uw gegevens te zien.
+Waarschuwingen worden in de gebruikersinterface vertegenwoordigd door een berichtpictogram in de bovenste koptekst van de gebruikersinterface van Experience Platform. Selecteer het berichtpictogram om specifieke waakzame berichten betreffende uw gegevens te zien.
 
 ![ bericht ](../../images/tutorials/alerts/notification.png)
 

@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Woordenlijst met gegevensverbruikslabels
 description: Dit document bevat een overzicht van alle labels voor gegevensgebruik die momenteel door Adobe Experience Platform worden ondersteund.
 exl-id: 70d0702d-def7-4ab2-a861-eaf0f0cde1d4
-source-git-commit: 6f3f08203242843ce703de5e4546a537dff82270
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '2254'
+source-wordcount: '2257'
 ht-degree: 0%
 
 ---
@@ -72,7 +72,7 @@ Dit etiket wordt gebruikt om het gebruik van perspectiefgegevens te regelen.
 
 | Label | Definitie |
 | --- | --- |
-| **Derden** | Gegevens van derden zijn gegevens die u ontvangt van een externe leverancier van gegevens. Een externe leverancier van gegevens is een entiteit die een overeenkomst met uw organisatie is aangegaan die u machtigt om de gegevens van derden in combinatie met Platform te openen, te gebruiken, weer te geven en te verzenden. |
+| **Derden** | Gegevens van derden zijn gegevens die u ontvangt van een externe leverancier van gegevens. Een externe leverancier van gegevens is een entiteit die een overeenkomst met uw organisatie heeft gesloten die u machtigt om de gegevens van derden samen met Experience Platform te openen, te gebruiken, weer te geven en te verzenden. |
 | **derdeverrijking** | Gegevens verzameld door een externe organisatie die niet rechtstreeks met de betrokkene verband houdt. Het label moet worden toegepast op gegevens van derden die worden gebruikt voor het verrijken van profielen van derden. |
 | **derde-partij-Verkennend** | Gegevens verzameld door een externe organisatie die niet rechtstreeks met de betrokkene verband houdt. Het etiket moet worden toegepast op gegevens van derden die worden gebruikt voor de uitbreiding van de trechter naar nieuwe klanten. |
 
@@ -150,8 +150,8 @@ Sommige beleidsregels voor gegevensbeheer beperken het gebruik van verankerde id
 
 #### C11 {#c11}
 
-Met Adobe Experience Platform Segment Match kunt u door Platform gegenereerde doelgroepen afstemmen op privacy- en toestemmingsvoorkeuren, waardoor verrijkte profilering en downstreaminzichten mogelijk worden. Het label C11 geeft gegevens aan die niet mogen worden gebruikt in [!DNL Segment Match] -processen. Nadat u hebt bepaald welke datasets en/of gebieden u van de Gelijke van het Segment wilt uitsluiten en dienovereenkomstig het etiket C11 toevoegt, wordt het etiket automatisch afgedwongen door het werkschema van de Gelijke van het Segment.
+Met Adobe Experience Platform Segment Match kunt u door Experience Platform gegenereerde soorten publiek afstemmen op privacy- en toestemmingsvoorkeuren, zodat beter geprofileerde profielen en downstreaminzichten mogelijk zijn. Het label C11 geeft gegevens aan die niet mogen worden gebruikt in [!DNL Segment Match] -processen. Nadat u hebt bepaald welke datasets en/of gebieden u van de Gelijke van het Segment wilt uitsluiten en dienovereenkomstig het etiket C11 toevoegt, wordt het etiket automatisch afgedwongen door het werkschema van de Gelijke van het Segment.
 
 #### 12 {#c12}
 
-Gegevens met dit label kunnen op geen enkele manier worden geëxporteerd van Platform. Velden met het label C12 zijn uitgesloten van CSV-downloads, API-verbruik en activeringsworkflows.
+Gegevens met dit label kunnen op geen enkele manier uit Experience Platform worden geëxporteerd. Velden met het label C12 zijn uitgesloten van CSV-downloads, API-verbruik en activeringsworkflows.

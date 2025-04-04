@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;JupyterLab;laptops;Data Science Workspace;populaire onderwerpen;analyseren gegevenslaptops
+keywords: Experience Platform;JupyterLab;notebooks;Data Science Workspace;populaire onderwerpen;analyse gegevenslaptops
 solution: Experience Platform
 title: Uw gegevens analyseren met laptops
 type: Tutorial
 description: Deze zelfstudie richt zich op het gebruik van Jupyter-laptops, gebouwd in Data Science Workspace, voor toegang tot, verkenning en visualisatie van uw gegevens.
 exl-id: 3b0148d1-9c08-458b-9601-979cb6c7a0fb
-source-git-commit: 5d98dc0cbfaf3d17c909464311a33a03ea77f237
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1726'
+source-wordcount: '1727'
 ht-degree: 0%
 
 ---
@@ -25,18 +25,18 @@ Deze zelfstudie richt zich op het gebruik van Jupyter-laptops, gebouwd in Data S
 De volgende concepten worden geïntroduceerd:
 
 - **[!DNL JupyterLab]:** [[!DNL JupyterLab] ](https://blog.jupyter.org/jupyterlab-is-ready-for-users-5a6f039b8906) is de volgende-generatie web-based interface voor Project Jupyter, en is strak geïntegreerd in [!DNL Adobe Experience Platform].
-- **Gezichten:** Datasets worden samengesteld uit partijen. Een batch is een reeks gegevens die over een bepaalde periode worden verzameld en samen als één eenheid worden verwerkt. Er worden nieuwe batches gemaakt wanneer gegevens aan een gegevensset worden toegevoegd.
-- **de Toegang SDK van Gegevens (afgekeurd):** SDK van de Toegang van Gegevens is nu afgekeurd. Gebruik de handleiding [[!DNL Platform SDK]](../authoring/platform-sdk.md) .
+- **de Banden:** Datasets worden samengesteld uit partijen. Een batch is een reeks gegevens die over een bepaalde periode worden verzameld en samen als één eenheid worden verwerkt. Nieuwe batches worden gemaakt wanneer gegevens aan een gegevensset worden toegevoegd.
+- **SDK van de Toegang van Gegevens (afgekeurd):** De Toegang SDK van Gegevens is nu afgekeurd. Gebruik de handleiding [[!DNL Experience Platform SDK]](../authoring/platform-sdk.md) .
 
 ## Ontdek notebooks in Data Science Workspace
 
-In deze sectie worden gegevens verkend die eerder in het detailhandelschema werden opgenomen.
+In deze sectie, worden de gegevens onderzocht die eerder in het detailhandelschema werden opgenomen.
 
-Met Data Science Workspace kunnen gebruikers [!DNL Jupyter Notebooks] maken via het [!DNL JupyterLab] -platform, waar ze werkstromen voor machine learning kunnen maken en bewerken. [!DNL JupyterLab] is een hulpprogramma voor samenwerking tussen servers en clients waarmee gebruikers notitieboekdocumenten kunnen bewerken via een webbrowser. Deze laptops kunnen zowel uitvoerbare code als tekstelementen bevatten. Voor onze doeleinden gebruiken we Markdown voor analysebeschrijving en uitvoerbare [!DNL Python] -code om gegevensexploratie en -analyse uit te voeren.
+Met Data Science Workspace kunnen gebruikers [!DNL Jupyter Notebooks] maken via het [!DNL JupyterLab] -platform waar ze werkstromen voor machinaal leren kunnen maken en bewerken. [!DNL JupyterLab] is een hulpmiddel voor samenwerking tussen server en client waarmee gebruikers notitieboekjecten kunnen bewerken via een webbrowser. Deze laptops kunnen zowel uitvoerbare code als tekstelementen bevatten. Voor onze doeleinden gebruiken we Markdown voor analysebeschrijving en uitvoerbare [!DNL Python] code om gegevensexploratie en -analyse uit te voeren.
 
-### De werkruimte kiezen
+### Kies uw werkruimte
 
-Bij het starten van [!DNL JupyterLab] wordt een webinterface weergegeven voor Jupyter-laptops. Afhankelijk van het type laptop dat we kiezen, wordt een corresponderende kernel gestart.
+Bij het starten van [!DNL JupyterLab] krijgen we een webinterface voor Jupyter-laptops te zien. Afhankelijk van welk type laptop we kiezen, wordt een corresponderende kernel gestart.
 
 Bij het vergelijken van welke omgeving we moeten gebruiken, moeten we rekening houden met de beperkingen van elke service. Bijvoorbeeld, als wij de [ pandas ](https://pandas.pydata.org/) bibliotheek met [!DNL Python] gebruiken, als regelmatige gebruiker is de grens van RAM 2 GB. Zelfs als energiegebruiker zouden we beperkt zijn tot 20 GB RAM. Als u werkt met grotere berekeningen, is het handig om [!DNL Spark] te gebruiken, dat 1,5 TB biedt dat wordt gedeeld met alle laptopexemplaren.
 
@@ -44,11 +44,11 @@ Standaard werkt Tensorflow-recept in een GPU-cluster en Python in een CPU-cluste
 
 ### Een nieuw notebook maken
 
-Selecteer in de gebruikersinterface van [!DNL Adobe Experience Platform] de optie [!UICONTROL Data Science] in het bovenste menu om naar de Data Science Workspace te gaan. Selecteer op deze pagina [!DNL JupyterLab] om de [!DNL JupyterLab] launcher te openen. U zou een pagina gelijkend op dit moeten zien.
+Selecteer in de gebruikersinterface van [!DNL Adobe Experience Platform] de optie [!UICONTROL Data Science] in het bovenste menu om naar de Data Science Workspace te gaan. Selecteer op deze pagina [!DNL JupyterLab] om de [!DNL JupyterLab] launcher te openen. U zou een pagina moeten zien gelijkend op dit.
 
 ![](../images/jupyterlab/analyze-data/jupyterlab-launcher-new.png)
 
-In onze zelfstudie gebruiken we [!DNL Python] 3 in het Jupyter-notebook om te tonen hoe we de data kunnen bekijken. Op de pagina Launcher staan voorbeelden van laptops. We gebruiken het winkelrecept voor [!DNL Python] 3.
+In onze zelfstudie gebruiken we [!DNL Python] 3 in het Jupyter-notebook om te tonen hoe we de gegevens kunnen openen en verkennen. Op de pagina Launcher staan voorbeelden van laptops. We gebruiken het winkelrecept voor [!DNL Python] 3.
 
 ![](../images/jupyterlab/analyze-data/retail_sales.png)
 
@@ -58,7 +58,7 @@ Het recept van de Verkoop van de Detailhandel is een standalone voorbeeld dat de
 
 >[!NOTE]
 >
->`data_access_sdk_python` is afgekeurd en wordt niet meer aanbevolen. Gelieve te verwijzen naar [ het omzetten van gegevenstoegang SDK in Platform SDK ](../authoring/platform-sdk.md) leerprogramma om uw code om te zetten. Voor deze zelfstudie gelden nog dezelfde stappen.
+>`data_access_sdk_python` is afgekeurd en wordt niet meer aanbevolen. Gelieve te verwijzen naar het [ omzetten van gegevenstoegang SDK in Experience Platform SDK ](../authoring/platform-sdk.md) leerprogramma om uw code om te zetten. Voor deze zelfstudie gelden nog dezelfde stappen.
 
 We gaan over tot interne toegang tot gegevens van [!DNL Adobe Experience Platform] en externe gegevens. We gebruiken de `data_access_sdk_python` -bibliotheek voor toegang tot interne gegevens, zoals gegevenssets en XDM-schema&#39;s. Voor externe gegevens gebruiken we de bibliotheek met panda&#39;s [!DNL Python] .
 
@@ -78,7 +78,7 @@ Tot slot kunnen we eens bekijken hoe onze gegevens eruit zien. Met `df.head(n)` 
 
 #### [!DNL Experience Platform] gegevens
 
-We gaan nu verder met het openen van [!DNL Experience Platform] data.
+Nu gaan we verder met het benaderen van [!DNL Experience Platform] -gegevens.
 
 ##### Op gegevensset-id
 
@@ -96,7 +96,7 @@ Nu, kunnen wij op de `Retail-Training-<your-alias>` dataset met de rechtermuiskn
 
 >[!TIP]
 >
->Raadpleeg de handleiding van [[!DNL Platform SDK]](../authoring/platform-sdk.md) voor het converteren van uw code.
+>Raadpleeg de handleiding van [[!DNL Experience Platform SDK]](../authoring/platform-sdk.md) voor het converteren van uw code.
 
 ```PYTHON
 from data_access_sdk_python.reader import DataSetReader
@@ -152,21 +152,21 @@ df.describe()
 
 We zien dat er 6435 gevallen zijn voor elk kenmerk. Daarnaast worden statistische informatie gegeven zoals gemiddelde, standaardafwijking (std), min, max en interkwartielen. Dit geeft ons informatie over de afwijking voor de gegevens. In de volgende sectie gaan we over tot visualisatie die samen met deze informatie werkt om ons een goed inzicht te geven in onze gegevens.
 
-Als u de minimum- en maximumwaarden voor `store` bekijkt, ziet u dat er 45 unieke opslagruimten zijn waarin de gegevens staan. Er zijn ook `storeTypes` die differentiëren wat een winkel is. U kunt de verdeling van `storeTypes` als volgt zien:
+Als u de minimum- en maximumwaarden voor `store` bekijkt, ziet u dat er 45 unieke opslagruimten zijn waarin de gegevens staan. Er zijn ook `storeTypes` die onderscheid maken tussen wat een winkel is. U kunt de verdeling van `storeTypes` als volgt zien:
 
 ![](../images/jupyterlab/analyze-data/df_groupby.png)
 
-Dit betekent dat 22 winkels `storeType` `A` hebben, 17 `storeType` `B` en 6 `storeType` `C` zijn.
+Dit betekent dat er 22 winkels zijn van `storeType` `A` , 17 van `storeType` `B` en 6 van `storeType` `C` .
 
-#### Datavisualisatie
+#### Gegevensvisualisatie
 
-Nu we onze dataframewaarden kennen, willen we dit aanvullen met visualisaties om dingen duidelijker te maken en het makkelijker te maken om patronen te herkennen. Grafieken zijn ook handig wanneer u resultaten overbrengt naar een publiek. Enkele [!DNL Python] -bibliotheken die handig zijn voor visualisatie zijn:
+Nu we onze gegevenskaderwaarden kennen, willen we dit aanvullen met visualisaties om de dingen duidelijker en makkelijker te maken om patronen te identificeren. Grafieken zijn ook handig wanneer u resultaten naar een publiek verzendt. Enkele [!DNL Python] -bibliotheken die nuttig zijn voor visualisatie zijn onder andere:
 - [ Matplotlib ](https://matplotlib.org/)
 - [ pandas ](https://pandas.pydata.org/)
 - [ seaborn ](https://seaborn.pydata.org/)
-- [ grafiek ](https://ggplot2.tidyverse.org/)
+- [ gplot ](https://ggplot2.tidyverse.org/)
 
-In deze sectie gaan we snel in op enkele voordelen van het gebruik van elke bibliotheek.
+In deze sectie gaan we snel over enkele voordelen voor het gebruik van elke bibliotheek.
 
 [ Matplotlib ](https://matplotlib.org/) is het oudste [!DNL Python] visualisatiepakket. Hun doel is om &quot;gemakkelijke en moeilijke dingen mogelijk te maken&quot;. Dit is meestal het geval omdat het pakket uiterst krachtig is, maar ook ingewikkeld. Het is niet altijd gemakkelijk om een redelijke grafiek te krijgen zonder veel tijd en moeite te nemen.
 
@@ -174,22 +174,22 @@ In deze sectie gaan we snel in op enkele voordelen van het gebruik van elke bibl
 
 [ seaborn ](https://seaborn.pydata.org/) is een pakket bouwt bovenop matplotlib. Het hoofddoel is standaardgrafieken visueel aantrekkelijker te maken en het maken van gecompliceerde grafieken te vereenvoudigen.
 
-[ gplot ](https://ggplot2.tidyverse.org/) is een pakket dat ook bovenop matplotlib wordt gebouwd. Het belangrijkste verschil is echter dat het gereedschap een poort van ggplot2 is voor R. Vergelijkbaar met afbreken, is het doel om matplotlib te verbeteren. Gebruikers die bekend zijn met ggplot2 for R, moeten rekening houden met deze bibliotheek.
+[ gplot ](https://ggplot2.tidyverse.org/) is een pakket dat ook bovenop matplotlib wordt gebouwd. Het belangrijkste verschil is echter dat het gereedschap een haven is van ggplot2 voor R. Net als voor Seaborn, is het doel om matplotlib beter te maken. De gebruikers die met gplot2 voor R vertrouwd zijn zouden deze bibliotheek moeten overwegen.
 
 
-##### Univariate grafieken
+##### Grafieken gelijktrekken
 
-Univariate grafieken zijn grafieken van een individuele variabele. Een algemene Univariate grafiek wordt gebruikt om je data te visualiseren is het vak en een whiskerplot.
+Univariate grafieken zijn percelen van een individuele variabele. Een uniforme grafiek wordt gebruikt om uw gegevens te visualiseren is de doos en de whiskergrafiek.
 
-Met onze dataset van tevoren kunnen we de doos en het whiskerplot genereren voor elk van de 45 winkels en hun wekelijkse verkoop. Het plot wordt gegenereerd met de functie `seaborn.boxplot` .
+Met behulp van onze detailhandelsdataset van voordien, kunnen wij de doos en de whiskerperceel voor elk van 45 winkels en hun wekelijkse verkoop produceren. Het waarnemingspunt wordt geproduceerd gebruikend de `seaborn.boxplot` functie.
 
 ![](../images/jupyterlab/analyze-data/box_whisker.png)
 
-Er wordt een kader en een whiskerplot gebruikt om de verspreiding van gegevens te tonen. De buitenste lijnen van het plot tonen de bovenste en onderste kwartielen, terwijl de doos het interkwartielbereik beslaat. De lijn in het vak markeert de mediaan. Elk gegevenspunt dat meer dan 1,5 keer het bovenste of onderste kwartiel bedraagt, wordt als een cirkel gemarkeerd. Deze punten worden beschouwd als uitschieters.
+Een doos en een whiskerplot worden gebruikt om de verspreiding van gegevens te tonen. De buitenlijnen van het waarnemingspunt tonen de bovenste en onderste kwartiel, terwijl de doos het interkwartielbereik beslaat. De regel in het vak markeert de mediaan. Alle gegevenspunten die meer dan 1,5 keer het bovenste of onderste kwartiel bedragen, worden als een cirkel gemarkeerd. Deze punten worden beschouwd als uitschieters.
 
-##### Multivariate grafieken
+##### Meerdere grafieken
 
-Multivariate percelen worden gebruikt om de interactie tussen variabelen te zien. Met de visualisatie kunnen datawetenschappers zien of er correlaties of patronen zijn tussen de variabelen. Een veelgebruikte multivariate grafiek is een correlatiematrix. Met een correlatiematrix worden de afhankelijkheden tussen meerdere variabelen gekwantificeerd aan de hand van de correlatiecoëfficiënt.
+Meerdere percelen worden gebruikt om de interactie tussen variabelen te zien. Met de visualisatie kunnen wetenschappers van data zien of er correlaties of patronen zijn tussen de variabelen. Een veelgebruikte multivariate grafiek is een correlatiematrix. Met een correlatiematrix worden de afhankelijkheden tussen meerdere variabelen gekwantificeerd aan de hand van de correlatiecoëfficiënt.
 
 Gebruikend de zelfde kleinhandelsdataset, kunnen wij de correlatiematrix produceren.
 
@@ -200,8 +200,8 @@ Merk op dat 1 diagonaal naar beneden is. Dit toont aan dat wanneer het vergelijk
 
 ## Volgende stappen
 
-In deze zelfstudie wordt uitgelegd hoe u een nieuw Jupyter-notebook maakt in de Data Science Workspace en hoe u toegang krijgt tot gegevens zowel extern als vanuit [!DNL Adobe Experience Platform] . We hebben met name de volgende stappen doorlopen:
-- Maak een nieuw Jupyter-notebook
+In deze zelfstudie wordt uitgelegd hoe u een nieuw Jupyter-notebook kunt maken in de Data Science Workspace en hoe u toegang kunt krijgen tot gegevens zowel extern als vanuit [!DNL Adobe Experience Platform] . We hebben met name de volgende stappen doorlopen:
+- Een nieuwe jupyter-laptop maken
 - Gegevensbestanden en schema&#39;s voor toegang
 - Gegevenssets verkennen
 

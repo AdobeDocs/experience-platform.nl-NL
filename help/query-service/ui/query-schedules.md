@@ -2,9 +2,9 @@
 title: Zoekplanningen
 description: Leer hoe te om geplande vraaglooppas te automatiseren, een vraagprogramma te schrappen of onbruikbaar te maken, en de beschikbare het plannen opties door de UI van Adobe Experience Platform te gebruiken.
 exl-id: 984d5ddd-16e8-4a86-80e4-40f51f37a975
-source-git-commit: db0ba3bb32b5458ab3a32525c3c63939fe804ab4
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '1933'
+source-wordcount: '1934'
 ht-degree: 0%
 
 ---
@@ -113,7 +113,7 @@ In de onderstaande tabel worden de ondersteunde typen querywaarschuwingen beschr
 
 >[!NOTE]
 >
->Als u een [!UICONTROL Query Run Delay] -waarschuwing wilt instellen, moet u de gewenste vertragingstijd in minuten instellen in de gebruikersinterface van het platform. Voer de duur in minuten in. De maximale vertraging is 24 uur (1440 minuten).
+>Als u een [!UICONTROL Query Run Delay] -waarschuwing wilt instellen, moet u de gewenste vertragingstijd in minuten instellen in de gebruikersinterface van Experience Platform. Voer de duur in minuten in. De maximale vertraging is 24 uur (1440 minuten).
 
 Voor een overzicht van alarm in Adobe Experience Platform, met inbegrip van de structuur van hoe de waakzame regels worden bepaald, zie het [ alarm overzicht ](../../observability/alerts/overview.md). Voor begeleiding bij het beheren van alarm en waakzame regels binnen Adobe Experience Platform UI, zie de [ gids UI van het Alarm ](../../observability/alerts/ui.md).
 
@@ -153,7 +153,7 @@ De volgende lijst verstrekt beschrijvingen van elke kolom beschikbaar in de deta
 |---------------------|----------------------------------|
 | [!UICONTROL Query Run ID] | Toont een uniek herkenningsteken voor elke vraaglooppas, toestaand u om individuele uitvoeringen van uw geplande vragen te volgen en van verwijzingen te voorzien. |
 | [!UICONTROL Query Run Start] | Wijst op de begindatum en de tijd van de vraaglooppas, om u te helpen controleren wanneer elke uitvoering begon. |
-| [!UICONTROL Query Run Complete] | Toont de voltooiingsdatum en de tijd van de vraaglooppas, om inzicht in uitvoeringsduur en status te verstrekken. |
+| [!UICONTROL Query Run Complete] | Toont de voltooiingsdatum en de tijd van de vraaglooppas, om insight in uitvoeringsduur en status te verstrekken. |
 | [!UICONTROL Status] | Geeft de huidige status van de query weer, zoals `Completed,` `Running,` of `Failed,` om het resultaat snel te beoordelen. |
 | [!UICONTROL Datasets] | Maakt een lijst van datasets die in de vraaglooppas worden gebruikt, om te tonen welke gegevensbronnen bij de uitvoering betrokken waren. |
 | [!UICONTROL Compute Hours] | Toont de compute tijd die voor elke vraaglooppas wordt gebruikt, in uren wordt gemeten die. Hierdoor kunt u het gebruik van bronnen bijhouden en de queryprestaties optimaliseren. |

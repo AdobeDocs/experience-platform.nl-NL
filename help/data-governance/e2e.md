@@ -2,9 +2,9 @@
 title: End-to-end handleiding voor gegevensbeheer
 description: Volg het volledige proces voor het afdwingen van beperkingen van het gegevensgebruik voor gebieden en datasets in Adobe Experience Platform.
 exl-id: f18ae032-027a-4c97-868b-e04753237c81
-source-git-commit: 9f3fa696ed60ce85fa93515e39716d89ec80f1ec
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1811'
+source-wordcount: '1814'
 ht-degree: 0%
 
 ---
@@ -19,7 +19,7 @@ Als u wilt bepalen welke marketingacties op bepaalde gegevenssets en velden in A
 
 Zodra u klaar bent met het vormen van uw etiketten, governancebeleid, en marketing acties, kunt u [ uw beleidshandhaving ](#test) testen om ervoor te zorgen het zoals verwacht werkt.
 
-Deze gids doorloopt het volledige proces om een beleid van het gegevensbeheer in het Platform UI te vormen en af te dwingen. Voor meer gedetailleerde informatie over de eigenschappen die in deze gids worden gebruikt, verwijs naar de overzichtsdocumentatie over de volgende onderwerpen:
+Deze gids doorloopt het volledige proces om een beleid van het gegevensbeheer in Experience Platform UI te vormen en te handhaven. Voor meer gedetailleerde informatie over de eigenschappen die in deze gids worden gebruikt, verwijs naar de overzichtsdocumentatie over de volgende onderwerpen:
 
 * [Adobe Experience Platform Data Governance](./home.md)
 * [Labels voor gegevensgebruik](./labels/overview.md)
@@ -28,13 +28,13 @@ Deze gids doorloopt het volledige proces om een beleid van het gegevensbeheer in
 
 >[!NOTE]
 >
->Deze gids concentreert zich op hoe te opstelling en beleid te handhaven voor hoe de gegevens in Experience Platform worden gebruikt of worden geactiveerd. Als u probeert om **toegang** tot de gegevens zelf voor bepaalde gebruikers van het Platform binnen uw organisatie te beperken, zie de gids van begin tot eind op [ op attribuut-gebaseerde toegangsbeheer ](../access-control/abac/end-to-end-guide.md) in plaats daarvan. Op attributen-gebaseerde toegangscontrole gebruikt ook etiketten en beleid, maar voor een verschillend gebruiksgeval dan gegevensbeheer.
+>Deze handleiding is vooral gericht op het instellen en afdwingen van beleid voor het gebruik of activeren van gegevens in Experience Platform. Als u probeert om **toegang** tot de gegevens zelf voor bepaalde gebruikers van Experience Platform binnen uw organisatie te beperken, zie in plaats daarvan de gids van begin tot eind op [ op attribuut-gebaseerde toegangsbeheer ](../access-control/abac/end-to-end-guide.md). Op attributen-gebaseerde toegangscontrole gebruikt ook etiketten en beleid, maar voor een verschillend gebruiksgeval dan gegevensbeheer.
 
 ## Labels toepassen {#labels}
 
 >[!IMPORTANT]
 >
->Labels kunnen niet langer op afzonderlijke velden op het niveau van de gegevensset worden toegepast. Deze workflow is vervangen door labels op schemaniveau. Nochtans, kunt u nog een volledige dataset etiketteren. Alle labels die eerder op afzonderlijke gegevenssetvelden zijn toegepast, worden tot 31 mei 2024 nog steeds ondersteund via de interface van het platform. Om ervoor te zorgen dat uw etiketten over alle schema&#39;s verenigbaar zijn, moeten om het even welke etiketten die eerder aan gebieden op het datasetniveau worden vastgemaakt door u over het komende jaar worden gemigreerd aan het schemaniveau. Zie de sectie op [ migrerend eerder toegepaste etiketten ](#migrate-labels) voor instructies op hoe te om dit te doen.
+>Labels kunnen niet langer op afzonderlijke velden op het niveau van de gegevensset worden toegepast. Deze workflow is vervangen door labels op schemaniveau. Nochtans, kunt u nog een volledige dataset etiketteren. Alle labels die eerder op afzonderlijke gegevenssetvelden zijn toegepast, worden tot 31 mei 2024 nog steeds ondersteund via de gebruikersinterface van Experience Platform. Om ervoor te zorgen dat uw etiketten over alle schema&#39;s verenigbaar zijn, moeten om het even welke etiketten die eerder aan gebieden op het datasetniveau worden vastgemaakt door u over het komende jaar worden gemigreerd aan het schemaniveau. Zie de sectie op [ migrerend eerder toegepaste etiketten ](#migrate-labels) voor instructies op hoe te om dit te doen.
 
 U kunt [ etiketten op een schema ](#schema-labels) toepassen zodat alle datasets die op dat schema worden gebaseerd de zelfde etiketten erven. Hierdoor kunt u de labels voor gegevensbeheer, toestemming en toegangsbeheer op één locatie beheren. Door beperkingen van het gegevensgebruik op het schemaniveau af te dwingen, verspreidt het effect zich stroomafwaarts aan alle datasets die op dat schema gebaseerd zijn. Labels die worden toegepast op het niveau van het schemaveld ondersteunen het gebruik van Data Governance en zijn te vinden op het tabblad Datasets [!UICONTROL Data Governance] onder de kolom [!UICONTROL Field Name] als alleen-lezen labels.
 

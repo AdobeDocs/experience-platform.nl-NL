@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;huis;populaire onderwerpen;api;Op attributen-Gebaseerd Toegangsbeheer;op attributen-gebaseerd toegangsbeheer
+keywords: Experience Platform;home;populaire onderwerpen;api;Op kenmerk-Gebaseerd Toegangsbeheer;op attributen-gebaseerd toegangsbeheer
 solution: Experience Platform
 title: Rollen API-eindpunt
 description: Het /rollen eindpunt in op attributen-Gebaseerde Controle API van de Toegang staat u toe om rollen in Adobe Experience Platform programmatically te beheren.
 role: Developer
 exl-id: 049f7a18-7d06-437b-8ce9-25d7090ba782
-source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '1665'
+source-wordcount: '1670'
 ht-degree: 1%
 
 ---
@@ -24,11 +24,11 @@ Het `/roles` eindpunt in op attribuut-gebaseerde toegangsbeheer API staat u toe 
 
 ## Aan de slag
 
-Het API eindpunt dat in deze gids wordt gebruikt maakt deel uit van op attribuut-gebaseerde toegangsbeheer API. Alvorens verder te gaan, te herzien gelieve [ begonnen gids ](./getting-started.md) voor verbindingen aan verwante documentatie, een gids aan het lezen van de steekproefAPI vraag in dit document, en belangrijke informatie betreffende vereiste kopballen die nodig zijn om vraag aan om het even welk Experience Platform API met succes te maken.
+Het API eindpunt dat in deze gids wordt gebruikt maakt deel uit van op attribuut-gebaseerde toegangsbeheer API. Alvorens verder te gaan, te herzien gelieve [ begonnen gids ](./getting-started.md) voor verbindingen aan verwante documentatie, een gids aan het lezen van de steekproefAPI vraag in dit document, en belangrijke informatie betreffende vereiste kopballen die nodig zijn om vraag aan om het even welke Experience Platform API met succes te maken.
 
 ## Een lijst met rollen ophalen {#list}
 
-U kunt alle bestaande rollen die tot uw organisatie behoren, weergeven door een aanvraag voor een GET in te dienen bij het `/roles` eindpunt.
+U kunt alle bestaande rollen weergeven die tot uw organisatie behoren door een GET-aanvraag in te dienen bij het `/roles` -eindpunt.
 
 **API formaat**
 
@@ -108,12 +108,12 @@ Een succesvolle reactie keert een lijst van rollen in uw organisatie, met inbegr
 | `roleType` | Het aangewezen type van de rol. De mogelijke waarden voor het roltype zijn: `user-defined` en `system-defined` . |
 | `permissionSets` | Machtigingssets vertegenwoordigen een groep machtigingen die een beheerder op een rol kan toepassen. Een beheerder kan rechtensets toewijzen aan een rol in plaats van individuele machtigingen toe te wijzen. Dit staat u toe om douanerollen van een vooraf bepaalde rol tot stand te brengen die een groep toestemmingen bevat. |
 | `sandboxes` | Met deze eigenschap worden de sandboxen binnen uw organisatie weergegeven die zijn ingericht voor een bepaalde rol. |
-| `subjectAttributes` | De attributen die op de correlatie tussen een onderwerp en de middelen van het Platform wijzen die zij hebben toegang tot. |
+| `subjectAttributes` | De kenmerken die de correlatie aangeven tussen een onderwerp en de Experience Platform-bronnen waartoe ze toegang hebben. |
 | `subjectAttributes.labels` | Hiermee geeft u de labels voor gegevensgebruik weer die op de gevraagde rol zijn toegepast. |
 
 ## Rol opzoeken {#lookup}
 
-U kunt een individuele rol omhoog zoeken door een verzoek van de GET te doen die het overeenkomstige `roleId` in de verzoekweg omvat.
+U kunt een afzonderlijke rol opzoeken door een GET-aanvraag in te dienen die de bijbehorende `roleId` bevat in het aanvraagpad.
 
 **API formaat**
 
@@ -175,7 +175,7 @@ Een succesvolle reactie keert details voor gevraagde rol identiteitskaart, met i
 | `roleType` | Het aangewezen type van de rol. De mogelijke waarden voor het roltype zijn: `user-defined` en `system-defined` . |
 | `permissionSets` | Machtigingssets vertegenwoordigen een groep machtigingen die een beheerder op een rol kan toepassen. Een beheerder kan rechtensets toewijzen aan een rol in plaats van individuele machtigingen toe te wijzen. Dit staat u toe om douanerollen van een vooraf bepaalde rol tot stand te brengen die een groep toestemmingen bevat. |
 | `sandboxes` | Met deze eigenschap worden de sandboxen binnen uw organisatie weergegeven die zijn ingericht voor een bepaalde rol. |
-| `subjectAttributes` | De attributen die op de correlatie tussen een onderwerp en de middelen van het Platform wijzen die zij hebben toegang tot. |
+| `subjectAttributes` | De kenmerken die de correlatie aangeven tussen een onderwerp en de Experience Platform-bronnen waartoe ze toegang hebben. |
 | `subjectAttributes.labels` | Hiermee geeft u de labels voor gegevensgebruik weer die op de gevraagde rol zijn toegepast. |
 
 ## Onderwerpen opzoeken op rol-id
@@ -256,7 +256,7 @@ Een succesvolle reactie retourneert de onderwerpen die aan de betrokken rol-id z
 
 ## Een rol maken {#create}
 
-Om een nieuwe rol tot stand te brengen, doe een verzoek van de POST aan het `/roles` eindpunt terwijl het verstrekken van waarden voor de naam van uw rol, beschrijving, en roltype.
+Om een nieuwe rol tot stand te brengen, doe een POST- verzoek aan het `/roles` eindpunt terwijl het verstrekken van waarden voor de naam van uw rol, beschrijving, en roltype.
 
 **API formaat**
 
@@ -323,12 +323,12 @@ Een succesvolle reactie keert uw onlangs gecreëerde rol, met zijn overeenkomsti
 | `roleType` | Het aangewezen type van de rol. De mogelijke waarden voor het roltype zijn: `user-defined` en `system-defined` . |
 | `permissionSets` | Machtigingssets vertegenwoordigen een groep machtigingen die een beheerder op een rol kan toepassen. Een beheerder kan rechtensets toewijzen aan een rol in plaats van individuele machtigingen toe te wijzen. Dit staat u toe om douanerollen van een vooraf bepaalde rol tot stand te brengen die een groep toestemmingen bevat. |
 | `sandboxes` | Met deze eigenschap worden de sandboxen binnen uw organisatie weergegeven die zijn ingericht voor een bepaalde rol. |
-| `subjectAttributes` | De attributen die op de correlatie tussen een onderwerp en de middelen van het Platform wijzen die zij hebben toegang tot. |
+| `subjectAttributes` | De kenmerken die de correlatie aangeven tussen een onderwerp en de Experience Platform-bronnen waartoe ze toegang hebben. |
 | `subjectAttributes.labels` | Hiermee geeft u de labels voor gegevensgebruik weer die op de gevraagde rol zijn toegepast. |
 
 ## Een rol bijwerken {#patch}
 
-U kunt de eigenschappen van een rol bijwerken door een verzoek van PATCH aan het `/roles` eindpunt te doen terwijl het verstrekken van overeenkomstige rol identiteitskaart en waarden voor de verrichtingen u wilt toepassen.
+U kunt de eigenschappen van een rol bijwerken door een PATCH-aanvraag in te dienen bij het `/roles` -eindpunt terwijl de bijbehorende rol-id en waarden worden opgegeven voor de bewerkingen die u wilt toepassen.
 
 **API formaat**
 
@@ -403,12 +403,12 @@ Een geslaagde reactie retourneert de bijgewerkte rol, inclusief nieuwe waarden v
 | `roleType` | Het aangewezen type van de rol. De mogelijke waarden voor het roltype zijn: `user-defined` en `system-defined` . |
 | `permissionSets` | Machtigingssets vertegenwoordigen een groep machtigingen die een beheerder op een rol kan toepassen. Een beheerder kan rechtensets toewijzen aan een rol in plaats van individuele machtigingen toe te wijzen. Dit staat u toe om douanerollen van een vooraf bepaalde rol tot stand te brengen die een groep toestemmingen bevat. |
 | `sandboxes` | Met deze eigenschap worden de sandboxen binnen uw organisatie weergegeven die zijn ingericht voor een bepaalde rol. |
-| `subjectAttributes` | De attributen die op de correlatie tussen een onderwerp en de middelen van het Platform wijzen die zij hebben toegang tot. |
+| `subjectAttributes` | De kenmerken die de correlatie aangeven tussen een onderwerp en de Experience Platform-bronnen waartoe ze toegang hebben. |
 | `subjectAttributes.labels` | Hiermee geeft u de labels voor gegevensgebruik weer die op de gevraagde rol zijn toegepast. |
 
 ## Rollen bijwerken op rol-id {#put}
 
-U kunt een rol bijwerken door een verzoek van de PUT aan het `/roles` eindpunt te richten en rolidentiteitskaart te specificeren die aan de rol beantwoordt u wilt bijwerken.
+U kunt een rol bijwerken door een PUT-aanvraag in te dienen bij het `/roles` -eindpunt en de rol-id op te geven die overeenkomt met de rol die u wilt bijwerken.
 
 **API formaat**
 
@@ -477,12 +477,12 @@ Een succesvolle reactie keert uw bijgewerkte rol, met inbegrip van nieuwe waarde
 | `roleType` | Het aangewezen type van de rol. De mogelijke waarden voor het roltype zijn: `user-defined` en `system-defined` . |
 | `permissionSets` | Machtigingssets vertegenwoordigen een groep machtigingen die een beheerder op een rol kan toepassen. Een beheerder kan rechtensets toewijzen aan een rol in plaats van individuele machtigingen toe te wijzen. Dit staat u toe om douanerollen van een vooraf bepaalde rol tot stand te brengen die een groep toestemmingen bevat. |
 | `sandboxes` | Met deze eigenschap worden de sandboxen binnen uw organisatie weergegeven die zijn ingericht voor een bepaalde rol. |
-| `subjectAttributes` | De attributen die op de correlatie tussen een onderwerp en de middelen van het Platform wijzen die zij hebben toegang tot. |
+| `subjectAttributes` | De kenmerken die de correlatie aangeven tussen een onderwerp en de Experience Platform-bronnen waartoe ze toegang hebben. |
 | `subjectAttributes.labels` | Hiermee geeft u de labels voor gegevensgebruik weer die op de gevraagde rol zijn toegepast. |
 
 ## Onderwerp bijwerken op rol-id
 
-Om de onderwerpen bij te werken verbonden aan een rol, doe een verzoek van PATCH aan het `/roles` eindpunt terwijl het verstrekken van rolidentiteitskaart van de onderwerpen u wilt bijwerken.
+Om de onderwerpen bij te werken verbonden aan een rol, doe een PATCH verzoek aan het `/roles` eindpunt terwijl het verstrekken van rolidentiteitskaart van de onderwerpen u wilt bijwerken.
 
 **API formaat**
 
@@ -552,7 +552,7 @@ Een succesvolle reactie retourneert uw bijgewerkte rol, inclusief nieuwe waarden
 
 ## Een rol verwijderen {#delete}
 
-Als u een rol wilt verwijderen, vraagt u een DELETE aan het `/roles` -eindpunt terwijl u de id opgeeft van de rol die u wilt verwijderen.
+Als u een rol wilt verwijderen, vraagt u DELETE het `/roles` -eindpunt aan en geeft u de id op van de rol die u wilt verwijderen.
 
 **API formaat**
 
@@ -580,7 +580,7 @@ curl -X DELETE \
 
 Een geslaagde reactie retourneert HTTP-status 204 (Geen inhoud) en een lege hoofdtekst.
 
-U kunt de schrapping bevestigen door een raadpleging (GET) verzoek aan de rol te proberen. U ontvangt de HTTP-status 404 (Niet gevonden) omdat de rol uit het beheer is verwijderd.
+U kunt de verwijdering bevestigen door een opzoekverzoek (GET) in te dienen bij de rol. U ontvangt de HTTP-status 404 (Niet gevonden) omdat de rol uit het beheer is verwijderd.
 
 ## API-referentie toevoegen {#apicredential}
 

@@ -3,9 +3,9 @@ keywords: google en manager;google ad;doubleclick;DoubleClick AdX;DoubleClick;Go
 title: Google Ad Manager-verbinding
 description: Google Ad Manager, voorheen bekend als DoubleClick voor Publishers of DoubleClick AdX, is een advertentieplatform uit Google dat uitgevers de mogelijkheid biedt om de weergave van advertenties op hun websites, via video en in mobiele apps te beheren.
 exl-id: e93f1bd5-9d29-43a1-a9a6-8933f9d85150
-source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1077'
+source-wordcount: '1079'
 ht-degree: 3%
 
 ---
@@ -30,7 +30,7 @@ ht-degree: 3%
 Let op de volgende details die specifiek zijn voor [!DNL Google Ad Manager] doelen:
 
 * Geactiveerd publiek wordt programmatically gecreeerd in het [!DNL Google] platform.
-* [!DNL Platform] bevat momenteel geen metrische waarde om succesvolle activering te valideren. Raadpleeg het aantal gebruikers in Google om de integratie te valideren en te begrijpen waar de doelgroep zich op richt.
+* [!DNL Experience Platform] bevat momenteel geen metrische waarde om succesvolle activering te valideren. Raadpleeg het aantal gebruikers in Google om de integratie te valideren en te begrijpen waar de doelgroep zich op richt.
 * Nadat u een publiek hebt toegewezen aan een [!DNL Google Ad Manager] -doel, wordt de publieksnaam direct weergegeven in de gebruikersinterface van [!DNL Google Ad Manager] .
 * De segmentpopulatie moet 24-48 uur in [!DNL Google Ad Manager] worden weergegeven. Bovendien moeten doelgroepen een publieksgrootte hebben van ten minste 50 profielen om te kunnen worden weergegeven in [!DNL Google Ad Manager] . Soorten publiek met een grootte kleiner dan 50 profielen worden niet ingevuld in [!DNL Google Ad Manager] .
 
@@ -74,11 +74,11 @@ Raadpleeg de onderstaande tabel voor informatie over het exporttype en de export
 
 ## Vereisten {#prerequisites}
 
-Als u uw eerste bestemming met [!DNL Google Ad Manager] wilt tot stand brengen en niet de [ functionaliteit van de Synchronisatie van identiteitskaart ](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/idsync.html) in de Dienst van identiteitskaart van Experience Cloud in het verleden (met Audience Manager of andere toepassingen) hebt toegelaten, te bereiken gelieve uit aan Adobe Consulting of de Zorg van de Klant om de syncs van identiteitskaart toe te laten. Als u eerder [!DNL Google] -integraties hebt ingesteld in Audience Manager, worden de id-synchronisaties die u hebt ingesteld, overgedragen naar Platform.
+Als u uw eerste bestemming met [!DNL Google Ad Manager] wilt tot stand brengen en niet de [ functionaliteit van de Synchronisatie van identiteitskaart ](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/idsync.html) in de Dienst van identiteitskaart van Experience Cloud in het verleden (met Audience Manager of andere toepassingen) hebt toegelaten, te bereiken gelieve uit aan Adobe Consulting of de Zorg van de Klant om de syncs van identiteitskaart toe te laten. Als u eerder [!DNL Google] -integraties hebt ingesteld in Audience Manager, worden de id-syncs die u hebt ingesteld, overgedragen naar Experience Platform.
 
 ### Aanbieding toestaan {#allow-listing}
 
-Aanbieding toestaan is verplicht voordat u de eerste [!DNL Google Ad Manager] -bestemming in Platform instelt. Voltooi de hieronder beschreven procedure voor het aanbieden van objecten in een geldige plaats voordat je de bestemming maakt.
+Aanbieding toestaan is verplicht voordat u de eerste [!DNL Google Ad Manager] -bestemming in Experience Platform instelt. Voltooi de hieronder beschreven procedure voor het aanbieden van objecten in een geldige plaats voordat je de bestemming maakt.
 
 1. Volg de stappen in [ worden beschreven Google en de documentatie van de Manager ](https://support.google.com/admanager/answer/3289669?hl=en) om Adobe als verbonden Platform van het Beheer van Gegevens toe te voegen (DMP) die.
 2. Ga in de interface [!DNL Google Ad Manager] naar **[!UICONTROL Admin]** > **[!UICONTROL Global Settings]** > **[!UICONTROL Network Settings]** en schakel de schuifregelaar **[!UICONTROL API Access]** in.

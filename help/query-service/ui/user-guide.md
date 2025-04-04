@@ -4,9 +4,9 @@ solution: Experience Platform
 title: UI-gids voor zoekprogramma
 description: De Query Editor is een interactief hulpmiddel dat wordt geleverd door de Adobe Experience Platform Query Service en waarmee u query's voor gegevens voor klantenervaring kunt schrijven, valideren en uitvoeren in de Experience Platform-gebruikersinterface. De Redacteur van de vraag steunt het ontwikkelen van vragen voor analyse en gegevensexploratie, en staat u toe om interactieve vragen voor ontwikkelingsdoeleinden evenals niet-interactieve vragen in werking te stellen om datasets in Experience Platform te bevolken.
 exl-id: d7732244-0372-467d-84e2-5308f42c5d51
-source-git-commit: ae189e2f6d303043e32e6ca658161bcdf4c28dc6
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '2600'
+source-wordcount: '2601'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 De Redacteur van de vraag is een interactief hulpmiddel dat door de Dienst van de Vraag van Adobe Experience Platform wordt verstrekt, die u toestaat om, vragen voor klantenervaringsgegevens te schrijven te bevestigen en in werking te stellen binnen het [!DNL Experience Platform] gebruikersinterface. De Redacteur van de vraag steunt het ontwikkelen van vragen voor analyse en gegevensexploratie, en staat u toe om interactieve vragen voor ontwikkelingsdoeleinden evenals niet-interactieve vragen in werking te stellen om datasets in [!DNL Experience Platform] te bevolken.
 
-Voor meer informatie over de concepten en de eigenschappen van de Dienst van de Vraag, zie het [ overzicht van de Dienst van de Vraag ](../home.md). Meer over leren hoe te om het gebruikersinterface van de Dienst van de Vraag op [!DNL Platform] te navigeren, zie het [ overzicht UI van de Dienst van de Vraag ](./overview.md).
+Voor meer informatie over de concepten en de eigenschappen van de Dienst van de Vraag, zie het [ overzicht van de Dienst van de Vraag ](../home.md). Meer over leren hoe te om het gebruikersinterface van de Dienst van de Vraag op [!DNL Experience Platform] te navigeren, zie het [ overzicht UI van de Dienst van de Vraag ](./overview.md).
 
 ## Aan de slag {#getting-started}
 
@@ -97,7 +97,7 @@ De redacteur van de Vraag heeft een maximum 50.000 rijoutput. U kunt het aantal 
 
 >[!NOTE]
 >
->Aangezien de interface van het Platform tot 1000 rijen kan steunen, wordt het overgaan van een waarde LIMIT meer dan 1000 genegeerd.
+>Aangezien de gebruikersinterface van Experience Platform maximaal 1000 rijen kan ondersteunen, wordt het doorgeven van een LIMIT-waarde van meer dan 1000 genegeerd.
 
 ![ de Redacteur van de Vraag met de benadrukte drop-down van de resultaattelling.](../images/ui/query-editor/result-count.png)
 
@@ -258,4 +258,4 @@ In de volgende video ziet u hoe u query&#39;s uitvoert in de Adobe Experience Pl
 
 ## Volgende stappen
 
-Nu u weet welke eigenschappen in de Redacteur van de Vraag beschikbaar zijn en hoe te om de toepassing te navigeren, kunt u beginnen direct creërend uw eigen vragen in [!DNL Platform]. Voor meer informatie over het runnen van SQL vragen tegen datasets in [!DNL Data Lake], zie de gids op [ lopende vragen ](../best-practices/writing-queries.md).
+Nu u weet welke eigenschappen in de Redacteur van de Vraag beschikbaar zijn en hoe te om de toepassing te navigeren, kunt u beginnen direct creërend uw eigen vragen in [!DNL Experience Platform]. Voor meer informatie over het runnen van SQL vragen tegen datasets in [!DNL Data Lake], zie de gids op [ lopende vragen ](../best-practices/writing-queries.md).

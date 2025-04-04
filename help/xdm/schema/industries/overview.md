@@ -3,9 +3,9 @@ solution: Experience Platform
 title: Overzicht van industriemodellen
 description: Leer over de gestandaardiseerde gegevensmodellen voor diverse de industrietakken die kunnen worden geconstrueerd gebruikend de componenten van het Model van de Gegevens van de Ervaring (XDM).
 exl-id: 8fa9a610-36b5-470f-ad63-f2a4a060e0f1
-source-git-commit: 60c0bd62b4effaa161c61ab304718ab8c20a06e1
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '341'
+source-wordcount: '342'
 ht-degree: 0%
 
 ---
@@ -24,9 +24,9 @@ Om u te helpen uw gegevensmodelleringsstrategie begeleiden die op uw bepaalde in
 
 ## Vereisten
 
-Om ERDs te lezen die in deze gids van verwijzingen wordt voorzien, moet u een werkend inzicht in hebben hoe de componenten XDM aan vormschema&#39;s en hoe XDM- schema&#39;s in Experience Platform als geheel in wisselwerking staan. Lees de volgende overzichtsdocumentatie voordat u verdergaat:
+Als u de ERD&#39;s waarnaar in deze handleiding wordt verwezen, wilt lezen, moet u een goed begrip hebben van de manier waarop XDM-componenten werken met formulierschema&#39;s en hoe XDM-schema&#39;s in Experience Platform als geheel werken. Lees de volgende overzichtsdocumentatie voordat u verdergaat:
 
-* [ XDM Overzicht van het Systeem ](../../home.md): Leer hoe XDM in het ecosysteem van het Platform werkt.
+* [ XDM Overzicht van het Systeem ](../../home.md): Leer hoe XDM in het ecosysteem van Experience Platform werkt.
 * [ Grondbeginselen van schemacompositie ](../../schema/composition.md): Leer hoe de componenten XDM (zoals de groepen van het schemagebied, klassen, en gegevenstypes) tot de structuur van een schema, evenals de rol van identiteitsgebieden bijdragen.
 
 Het wordt ook geadviseerd dat u de [ gegevens modelleert best practices gids ](../../schema/best-practices.md) voor algemene richtlijnen over hoe te om uw gegevens aan XDM in kaart te brengen.

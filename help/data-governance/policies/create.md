@@ -1,11 +1,11 @@
 ---
-keywords: Experience Platform;thuis;populaire onderwerpen;gegevensbeheer;gegevensgebruiksbeleid
+keywords: Experience Platform;home;populaire onderwerpen;gegevensbeheer;gegevensgebruiksbeleid
 solution: Experience Platform
 title: Een beleid voor gegevensbeheer maken in de API
 type: Tutorial
 description: Leer hoe u een beleid voor gegevensbeheer maakt met de API voor beleidsservice.
 exl-id: 8483f8a1-efe8-4ebb-b074-e0577e5a81a4
-source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '1199'
 ht-degree: 0%
@@ -26,10 +26,10 @@ Dit document bevat een stapsgewijze zelfstudie voor het maken van een beheerbele
 
 Deze zelfstudie vereist een goed begrip van de volgende belangrijke concepten betrokken bij het creëren en evalueren van beleid:
 
-* [ Adobe Experience Platform de Governance van Gegevens ](../home.md): Het kader waardoor [!DNL Platform] naleving van het gegevensgebruik afdwingt.
+* [ Adobe Experience Platform de Governance van Gegevens ](../home.md): Het kader waardoor [!DNL Experience Platform] naleving van het gegevensgebruik afdwingt.
    * [ de gebruiksetiketten van Gegevens ](../labels/overview.md): De etiketten van het gebruik van gegevens worden toegepast op XDM gegevensgebieden, die beperkingen specificeren voor hoe dat gegeven kan worden betreden.
-* [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): Het gestandaardiseerde framework waarmee [!DNL Platform] gegevens voor de klantervaring indeelt.
-* [ Sandboxen ](../../sandboxes/home.md): [!DNL Experience Platform] verstrekt virtuele zandbakken die één enkele [!DNL Platform] instantie in afzonderlijke virtuele milieu&#39;s verdelen helpen digitale ervaringstoepassingen ontwikkelen en ontwikkelen.
+* [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): Het gestandaardiseerde framework waarmee [!DNL Experience Platform] gegevens voor de klantervaring indeelt.
+* [ Sandboxen ](../../sandboxes/home.md): [!DNL Experience Platform] verstrekt virtuele zandbakken die één enkele [!DNL Experience Platform] instantie in afzonderlijke virtuele milieu&#39;s verdelen helpen digitale ervaringstoepassingen ontwikkelen en ontwikkelen.
 
 Alvorens dit leerprogramma te beginnen, te herzien gelieve de [ ontwikkelaarsgids ](../api/getting-started.md) voor belangrijke informatie die u moet kennen om vraag aan [!DNL Policy Service] API met succes te maken, met inbegrip van vereiste kopballen en hoe te om voorbeeld API vraag te lezen.
 
@@ -44,7 +44,7 @@ De eerste stap bij het creëren van een beleid van het gegevensgebruik is te bep
 
 ### Een bestaande marketingactie opzoeken {#look-up}
 
-U kunt bestaande marketingacties opzoeken die door uw beleid moeten worden geëvalueerd door een GET-aanvraag in te dienen bij een van de eindpunten van `/marketingActions` .
+U kunt bestaande marketingacties opzoeken die door uw beleid moeten worden geëvalueerd, door een GET-aanvraag in te dienen bij een van de eindpunten van `/marketingActions` .
 
 **API formaat**
 
@@ -129,7 +129,7 @@ Wanneer u de marketingactie vindt die u wilt gebruiken, neemt u de waarde van de
 
 ### Nieuwe marketingactie maken {#create-new}
 
-U kunt een nieuwe marketing actie tot stand brengen door een verzoek van de PUT aan het `/marketingActions/custom/` eindpunt te doen en een naam voor de marketing actie te verstrekken aan het eind van de verzoekweg.
+U kunt een nieuwe marketingactie maken door een PUT-aanvraag in te dienen bij het `/marketingActions/custom/` -eindpunt en een naam op te geven voor de marketingactie aan het einde van het aanvraagpad.
 
 **API formaat**
 
@@ -225,7 +225,7 @@ Deze expressie wordt een beleidsexpressie genoemd en is een object dat (A) een l
 >
 >Alleen de operatoren OR en AND worden ondersteund.
 
-Zodra u uw beleidsuitdrukking hebt gevormd, kunt u een nieuw beleid tot stand brengen door een verzoek van de POST aan het `/policies/custom` eindpunt te doen.
+Zodra u uw beleidsuitdrukking hebt gevormd, kunt u een nieuw beleid tot stand brengen door een POST- verzoek aan het `/policies/custom` eindpunt te doen.
 
 **API formaat**
 
@@ -332,7 +332,7 @@ Registreer URI identiteitskaart van het onlangs gecreëerde beleid, aangezien he
 >
 >Deze stap is optioneel als u uw beleid de status `DRAFT` wilt geven. U moet echter wel opgeven dat de status van een beleid standaard moet zijn ingesteld op `ENABLED` als u wilt deelnemen aan de evaluatie. Zie de gids op [ beleidshandhaving ](../enforcement/api-enforcement.md) voor informatie over hoe te om uitzonderingen voor beleid in `DRAFT` status te maken.
 
-Beleid waarvoor de eigenschap `status` is ingesteld op `DRAFT` , neemt standaard niet deel aan de evaluatie. U kunt uw beleid voor evaluatie toelaten door een verzoek van PATCH aan het `/policies/custom/` eindpunt te doen en het unieke herkenningsteken voor het beleid aan het eind van de verzoekweg te verstrekken.
+Beleid waarvoor de eigenschap `status` is ingesteld op `DRAFT` , neemt standaard niet deel aan de evaluatie. U kunt uw beleid voor evaluatie toelaten door een PATCH- verzoek aan het `/policies/custom/` eindpunt te doen en het unieke herkenningsteken voor het beleid te verstrekken aan het eind van de verzoekweg.
 
 **API formaat**
 
@@ -346,7 +346,7 @@ PATCH /policies/custom/{POLICY_ID}
 
 **Verzoek**
 
-De volgende aanvraag voert een PATCH-bewerking uit op de eigenschap `status` van het beleid, waarbij de waarde van `DRAFT` in `ENABLED` wordt gewijzigd.
+In de volgende aanvraag wordt een PATCH-bewerking uitgevoerd op de eigenschap `status` van het beleid, waarbij de waarde wordt gewijzigd van `DRAFT` in `ENABLED` .
 
 ```shell
 curl -X PATCH \

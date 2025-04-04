@@ -2,9 +2,9 @@
 title: Een Zendesk Source Connection maken in de gebruikersinterface
 description: Leer hoe u een Zendesk-bronverbinding maakt met de gebruikersinterface van Adobe Experience Platform.
 exl-id: 75d303b0-2dcd-4202-987c-fe3400398d90
-source-git-commit: 6f8abca8f0db8a559fe62e6c143f2d0506d3b886
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '714'
+source-wordcount: '724'
 ht-degree: 0%
 
 ---
@@ -24,7 +24,7 @@ Deze zelfstudie vereist een goed begrip van de volgende onderdelen van Adobe Exp
 
 ### Vereiste referenties verzamelen
 
-Als u toegang wilt krijgen tot uw [!DNL Zendesk] -account op Platform, moet u waarden opgeven voor de volgende referenties:
+Als u toegang wilt krijgen tot uw [!DNL Zendesk] -account op Experience Platform, moet u waarden opgeven voor de volgende referenties:
 
 | Credentials | Beschrijving | Voorbeeld |
 | --- | --- | --- |
@@ -35,9 +35,9 @@ Voor meer informatie bij het voor authentiek verklaren van uw [!DNL Zendesk] bro
 
 ![ het teken van Zendesk API ](../../../../images/tutorials/create/zendesk/zendesk-api-tokens.png)
 
-### Een platformschema maken voor [!DNL Zendesk]
+### Experience Platform-schema maken voor [!DNL Zendesk]
 
-Voordat u een [!DNL Zendesk] -bronverbinding maakt, moet u er ook voor zorgen dat u eerst een Platform-schema maakt dat u voor uw bron kunt gebruiken. Zie het leerprogramma op [ creërend een schema van het Platform ](../../../../../xdm/schema/composition.md) voor uitvoerige stappen op hoe te om een schema tot stand te brengen.
+Voordat u een [!DNL Zendesk] -bronverbinding maakt, moet u er ook voor zorgen dat u eerst een Experience Platform-schema voor uw bron maakt. Zie het leerprogramma op [ creërend een schema van Experience Platform ](../../../../../xdm/schema/composition.md) voor uitvoerige stappen op hoe te om een schema tot stand te brengen.
 
 Voor extra begeleiding op uw [!DNL Zendesk] schema dat voor [!DNL Zendesk Search API] wordt vereist, verwijs naar de [ grenzen ](#limits) hieronder sectie.
 
@@ -45,7 +45,7 @@ Voor extra begeleiding op uw [!DNL Zendesk] schema dat voor [!DNL Zendesk Search
 
 ## Sluit uw [!DNL Zendesk] -account aan
 
-Selecteer in de gebruikersinterface van het platform **[!UICONTROL Sources]** in de linkernavigatiebalk voor toegang tot de werkruimte van [!UICONTROL Sources] . In het scherm [!UICONTROL Catalog] worden diverse bronnen weergegeven waarmee u een account kunt maken.
+Selecteer in de gebruikersinterface van Experience Platform de optie **[!UICONTROL Sources]** in de linkernavigatiebalk voor toegang tot de werkruimte van [!UICONTROL Sources] . In het scherm [!UICONTROL Catalog] worden diverse bronnen weergegeven waarmee u een account kunt maken.
 
 U kunt de juiste categorie selecteren in de catalogus aan de linkerkant van het scherm. U kunt ook de specifieke bron vinden waarmee u wilt werken met de zoekoptie.
 
@@ -75,7 +75,7 @@ Nadat de bron is geverifieerd, wordt de pagina bijgewerkt in een interactieve sc
 
 ## Volgende stappen
 
-Aan de hand van deze zelfstudie hebt u een bronverbinding tussen uw [!DNL Zendesk] -account en Platform geverifieerd en gemaakt. U kunt nu aan het volgende leerprogramma verdergaan en [ een dataflow creëren om de gegevens van het klantensucces in Platform ](../../dataflow/customer-success.md) te brengen.
+Aan de hand van deze zelfstudie hebt u een bronverbinding gemaakt en geverifieerd tussen uw [!DNL Zendesk] -account en Experience Platform. U kunt nu aan het volgende leerprogramma verdergaan en [ een dataflow creëren om de gegevens van het klantensucces in Experience Platform ](../../dataflow/customer-success.md) te brengen.
 
 ## Aanvullende bronnen
 
@@ -83,9 +83,9 @@ De onderstaande secties bevatten aanvullende bronnen waarnaar u kunt verwijzen w
 
 ### Validatie {#validation}
 
-In de volgende overzichtsstappen kunt u controleren of u de [!DNL Zendesk] -bron hebt verbonden en of [!DNL Zendesk] -profielen worden opgenomen in Platform.
+In de volgende overzichtsstappen kunt u controleren of u de [!DNL Zendesk] -bron hebt verbonden en of [!DNL Zendesk] -profielen worden opgenomen in Experience Platform.
 
-Selecteer in de gebruikersinterface van het platform de optie **[!UICONTROL Datasets]** in de linkernavigatie voor toegang tot de werkruimte van [!UICONTROL Datasets] . In het scherm [!UICONTROL Dataset Activity] worden de details van uitvoeringen weergegeven.
+Selecteer in de gebruikersinterface van Experience Platform de optie **[!UICONTROL Datasets]** in de linkernavigatie voor toegang tot de werkruimte van [!UICONTROL Datasets] . In het scherm [!UICONTROL Dataset Activity] worden de details van uitvoeringen weergegeven.
 
 ![ pagina van de Activiteit ](../../../../images/tutorials/create/zendesk/dataset-activity.png)
 
@@ -97,7 +97,7 @@ Selecteer ten slotte **[!UICONTROL Preview dataset]** om de gegevens weer te gev
 
 ![ de dataset van Zendesk ](../../../../images/tutorials/create/zendesk/preview-dataset.png)
 
-U kunt ook de gegevens van het platform controleren op basis van de gegevens op de pagina [!DNL Zendesk] > [!DNL Customers] .
+U kunt uw Experience Platform-gegevens ook controleren aan de hand van de gegevens op uw pagina [!DNL Zendesk] > [!DNL Customers] .
 
 ![ zendesk-klanten ](../../../../images/tutorials/create/zendesk/zendesk-customers.png)
 

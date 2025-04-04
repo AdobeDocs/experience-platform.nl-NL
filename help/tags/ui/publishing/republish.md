@@ -2,10 +2,10 @@
 title: Bibliotheek opnieuw publiceren
 description: Leer hoe u een vorige tagbibliotheek opnieuw publiceert in Adobe Experience Platform.
 exl-id: 026b01f2-a93d-4e8a-9ed2-47c4f011e70f
-source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '646'
-ht-degree: 0%
+source-wordcount: '649'
+ht-degree: 7%
 
 ---
 
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch is omgedoopt tot een reeks technologieën voor gegevensverzameling in Adobe Experience Platform. Diverse terminologische wijzigingen zijn als gevolg hiervan in de productdocumentatie doorgevoerd. Gelieve te verwijzen naar het volgende [ document ](../../term-updates.md) voor een geconsolideerde verwijzing van de terminologieveranderingen.
+>Adobe Experience Platform Launch is omgedoopt tot een reeks technologieën voor dataverzameling in Adobe Experience Platform.  Als gevolg hiervan zijn er verschillende terminologiewijzigingen in de productdocumentatie doorgevoerd. Raadpleeg het volgende [ document ](../../term-updates.md) voor een geconsolideerde referentie van de terminologiewijzigingen.
 
 De vijf meest recente bibliotheken die aan uw productiemilieu op een bezit van het Web zijn gepubliceerd zijn beschikbaar voor recentere herwinning. Deze functie is handig wanneer u een probleem aantreft in uw productiebibliotheek en u onmiddellijk terug moet keren naar een bekende goede toestand.
 
@@ -21,9 +21,9 @@ Het ophaalproces is afhankelijk van uw omgevingsinstellingen op het moment dat d
 
 De volgende opties zijn beschikbaar:
 
-* **Gastheer: Beheerd door Adobe, Archief: Van:** als u Beheerd door de gastheer van de Adobe gebruikt en u archiveert uw bibliotheek niet, kunt u deze oudere bibliotheken opnieuw publiceren.
+* **Gastheer: Beheerd door Adobe, Archiveer: Van:** als u de Beheerde door de gastheer van Adobe gebruikt en u archiveert uw bibliotheek niet, kunt u deze oudere bibliotheken opnieuw publiceren.
 
-* **Gastheer: Beheerd door Adobe, Archief: Op:** als u Beheerd door de gastheer van de Adobe gebruikt en u uw bibliotheek archiveert, dan kunt u deze oudere bibliotheken downloaden.
+* **Gastheer: Beheerd door Adobe, Archief: Op:** als u de Beheerde door de gastheer van Adobe gebruikt en u uw bibliotheek archiveert, dan kunt u deze oudere bibliotheken downloaden.
 
 * **Gastheer: SFTP, Archief: Aan of weg:** als u de gastheer van SFTP gebruikt, wordt aangenomen dat u uw eigen archiefstrategieën op zijn plaats hebt en geen terugwinningsopties beschikbaar zijn.
 
@@ -37,7 +37,7 @@ Wanneer u aan een ontwikkelings of het opvoeren milieu bouwt, wordt de oude bouw
 
 Deze vijf meest recente builds in uw productiemilieu zijn degenen die voor terugwinning beschikbaar zijn.
 
-Wanneer u een oudere bibliotheek opnieuw publiceert, werkt Platform de milieuverbinding bij om aan één van deze oudere bouwstijlen te richten die nog niet is schoongemaakt.  Platform geeft ook een zuiveringsverzoek aan het CDN geheime voorgeheugen van randknopen uit om erop te wijzen dat de bibliotheek is bijgewerkt en een vers exemplaar van de oorsprong zou moeten worden teruggewonnen.
+Wanneer u een oudere bibliotheek opnieuw publiceert, werkt Experience Platform de omgevingskoppeling bij zodat deze verwijst naar een van deze oudere builds die nog niet is opgeschoond.  Experience Platform geeft ook een verwijderingsverzoek uit aan de cache van de CDN-randknooppunten om aan te geven dat de bibliotheek is bijgewerkt en dat een nieuwe kopie moet worden opgehaald van de oorsprong.
 
 Dit betekent dat wanneer u een oudere bibliotheek opnieuw publiceert:
 
@@ -47,7 +47,7 @@ Dit betekent dat wanneer u een oudere bibliotheek opnieuw publiceert:
 
 Overweeg het scenario wanneer u wegens een probleem met een specifieke regel terugdraait. De herziening van de regels die nu in productie is, zou bijvoorbeeld drie oude herzieningen kunnen zijn.  Wanneer u die regel in UI bekijkt om het te bevestigen, weerspiegelt het nog de recentste opgeslagen veranderingen eerder dan wat momenteel in productie is.
 
-Om deze reden, deelt het Platform u mee dat een bezit in een opnieuw gepubliceerde staat als herinnering is dat wat u in het gebruikersinterface van de Inzameling van Gegevens ziet een weinig verder verwijderd uit Productie dan normaal is. Deze melding is niet toegestaan en wordt de eerste keer dat u de eigenschap weergeeft, eenmaal per browsersessie weergegeven.
+Om deze reden, deelt Experience Platform u mee dat een bezit in een opnieuw gepubliceerde staat is als herinnering dat wat u in het gebruikersinterface van de Inzameling van Gegevens ziet een weinig verder verwijderd uit Productie dan normaal is. Deze melding is niet toegestaan en wordt de eerste keer dat u de eigenschap weergeeft, eenmaal per browsersessie weergegeven.
 
 ### Een oudere bibliotheek opnieuw publiceren
 

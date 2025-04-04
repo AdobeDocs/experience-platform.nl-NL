@@ -1,11 +1,11 @@
 ---
-title: Toepassing van één pagina voor de SDK van het Web van Adobe Experience Platform
-description: Leer hoe u een toepassing (SPA) van één pagina maakt met Adobe Target.
-keywords: doel;adobe target;xdm meningen; meningen;enige paginatoepassingen;SPA;SPA levenscyclus;cliënt-kant;AB het testen;AB;De ervaring richt;XT;VEC
+title: Implementatie van één pagina-toepassing voor de Adobe Experience Platform Web SDK
+description: Leer hoe te om een enig-paginatoepassing (SPA) implementatie van het Web SDK van Adobe Experience Platform tot stand te brengen gebruikend Adobe Target.
+keywords: doel;adobe target;xdm meningen; meningen;enige paginatoepassingen;SPA;SPA levenscyclus;cliënt-kant;AB het testen;AB;Beleving gericht;XT;VEC
 exl-id: cc48c375-36b9-433e-b45f-60e6c6ea4883
-source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1817'
+source-wordcount: '1818'
 ht-degree: 0%
 
 ---
@@ -13,15 +13,15 @@ ht-degree: 0%
 
 # Implementatie van één pagina
 
-Adobe Experience Platform Web SDK verstrekt rijke eigenschappen die uw zaken uitrusten om verpersoonlijking op volgende-generatie, cliënt-zijtechnologieën zoals enig-paginatoepassingen (SPA) uit te voeren.
+Adobe Experience Platform Web SDK verstrekt rijke eigenschappen die uw zaken uitrusten om verpersoonlijking op volgende-generatie, cliënt-zijtechnologieën zoals single-page toepassingen (SPAs) uit te voeren.
 
 Traditionele websites werkten aan navigatiemodellen &quot;van pagina tot pagina&quot;, ook wel bekend als Toepassingen van meerdere pagina&#39;s, waarbij websiteontwerpen nauw gekoppeld waren aan URL&#39;s en overgangen van de ene webpagina naar de andere een pagina moesten laden.
 
 De moderne Webtoepassingen, zoals enig-paginatoepassingen, hebben in plaats daarvan een model aangenomen dat snel gebruik van browser UI teruggeeft, die vaak onafhankelijk van paginaherladingen is. Deze ervaringen kunnen door klanteninteractie, zoals rollen, klikken, en curseurbewegingen worden teweeggebracht. Naarmate de paradigma&#39;s van het moderne web zijn geëvolueerd, werkt de relevantie van traditionele generieke gebeurtenissen, zoals het laden van een pagina, voor het implementeren van personalisatie en experimenten niet meer.
 
-![ Diagram die de SPA levenscyclus in vergelijking met de traditionele paginalilifecycle tonen.](assets/spa-vs-traditional-lifecycle.png)
+![ Diagram die de levenscyclus van het KUUROORD in vergelijking met de traditionele paginaleven tonen.](assets/spa-vs-traditional-lifecycle.png)
 
-## Voordelen van Platform Web SDK voor SPA
+## Voordelen van Experience Platform Web SDK voor SPA&#39;s
 
 Hier volgen enkele voordelen van Adobe Experience Platform Web SDK voor uw single-page toepassingen:
 
@@ -31,7 +31,7 @@ Hier volgen enkele voordelen van Adobe Experience Platform Web SDK voor uw singl
 
 ## XDM-weergaven en toepassingen van één pagina
 
-Adobe Target VEC for SPA maakt gebruik van een concept genaamd Views: een logische groep visuele elementen die samen een SPA ervaring vormen. Een toepassing van één pagina kan daarom worden beschouwd als het overgaan door Meningen, in plaats van URLs, die op gebruikersinteractie wordt gebaseerd. Een weergave kan doorgaans een hele site of gegroepeerde visuele elementen binnen een site vertegenwoordigen.
+Adobe Target VEC voor SPAs haalt voordeel uit een concept genoemd Bekijken: een logische groep visuele elementen die samen omhoog een ervaring van het KUUROORD maken. Een toepassing van één pagina kan daarom worden beschouwd als het overgaan door Meningen, in plaats van URLs, die op gebruikersinteractie wordt gebaseerd. Een weergave kan doorgaans een hele site of gegroepeerde visuele elementen binnen een site vertegenwoordigen.
 
 Om verder uit te leggen welke Weergaven zijn, gebruikt het volgende voorbeeld een hypothetische online e-commercesite die in React wordt uitgevoerd om voorbeeldweergaven te onderzoeken.
 
@@ -59,7 +59,7 @@ Het concept van standpunten kan veel verder worden uitgebreid. Dit zijn slechts 
 
 ## XDM-weergaven implementeren
 
-XDM-weergaven kunnen in Adobe Target worden gebruikt om marketers in staat te stellen A/B- en XT-tests uit te voeren op SPA via Visual Experience Composer. Hiervoor moeten de volgende stappen worden uitgevoerd om een eenmalige ontwikkelaarsinstelling te voltooien:
+De meningen XDM kunnen in Adobe Target worden gebruikt om marketers toe te staan om tests A/B en XT op SPAs via Visual Experience Composer in werking te stellen. Hiervoor moeten de volgende stappen worden uitgevoerd om een eenmalige ontwikkelaarsinstelling te voltooien:
 
 1. Installeer [ SDK van het Web van Adobe Experience Platform ](/help/web-sdk/install/overview.md)
 2. Bepaal alle XDM-weergaven in uw toepassing voor één pagina die u wilt aanpassen.
@@ -215,13 +215,13 @@ class Checkout extends Component {
 } 
 ```
 
-## Het gebruiken van Visual Experience Composer voor een SPA
+## Het gebruiken van de Visuele Composer van de Ervaring voor een SPA
 
 Wanneer u klaar bent met het definiëren van uw XDM-weergaven en `sendEvent()` hebt geïmplementeerd met deze XDM Views die zijn doorgegeven, kan de VEC deze weergaven detecteren en kunnen gebruikers handelingen en wijzigingen maken voor A/B- of XT-activiteiten.
 
 >[!NOTE]
 >
->Om VEC voor uw SPA te gebruiken, moet u of [ Firefox ](https://addons.mozilla.org/en-US/firefox/addon/adobe-target-vec-helper/) installeren en activeren of [ de Helper van Chrome ](https://chrome.google.com/webstore/detail/adobe-target-vec-helper/ggjpideecfnbipkacplkhhaflkdjagak) Uitbreiding VEC.
+>Om VEC voor uw SPA te gebruiken, moet u of de [ Firefox ](https://addons.mozilla.org/en-US/firefox/addon/adobe-target-vec-helper/) installeren en activeren of [ Chrome ](https://chrome.google.com/webstore/detail/adobe-target-vec-helper/ggjpideecfnbipkacplkhhaflkdjagak) VEC Helper Extension.
 
 ### Deelvenster Wijzigingen
 
@@ -243,7 +243,7 @@ Wanneer u op een handeling klikt, wordt het element op de site gemarkeerd waarop
 | Verplaatsen | Hiermee wordt de handeling verplaatst naar een gebeurtenis Pagina laden of een andere weergave die al bestaat in het deelvenster Wijzigingen.<br/><br/>**Gebeurtenis van de Lading van de Pagina:** Om het even welke acties die aan de gebeurtenis beantwoorden van de paginading worden toegepast op de aanvankelijke paginading van uw Webtoepassing. <br/><br/>**Nota:** nadat een bewegingsverrichting wordt gemaakt, moet u aan de Mening in VEC via Browse navigeren om te zien of de beweging een geldige verrichting was. Als de actie niet op de Mening kan worden toegepast, zult u een fout zien. |
 | Verwijderen | Hiermee verwijdert u de handeling. |
 
-## VEC gebruiken voor SPA voorbeelden
+## Het gebruiken van VEC voor voorbeelden SPAs
 
 Deze sectie schetst drie voorbeelden om de Visuele Composer van de Ervaring te gebruiken om acties en wijzigingen voor A/B of XT activiteiten tot stand te brengen.
 

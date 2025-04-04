@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;huis;populaire onderwerpen;api;op attributen-gebaseerde toegangscontrole;Op Attribuut-Gebaseerd Toegangsbeheer
+keywords: Experience Platform;home;populaire onderwerpen;api;op attributen-gebaseerd toegangsbeheer;Op attributen-Gebaseerd Toegangsbeheer
 solution: Experience Platform
 title: API-handleiding voor toegangsbeheer op basis van kenmerken
 description: Met de API voor toegangsbeheer op basis van kenmerken kunt u rollen en toegangsbeleid in Adobe Experience Platform programmatisch beheren. Volg deze gids voor het uitvoeren van de belangrijkste bewerkingen met de API.
 role: Developer
 exl-id: 0fc32354-4869-4392-9501-b1dbea1bc55e
-source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '450'
+source-wordcount: '451'
 ht-degree: 3%
 
 ---
@@ -20,7 +20,7 @@ De op attribuut-gebaseerde toegangsbeheer API wordt gebruikt om tot rollen, prod
 
 >[!IMPORTANT]
 >
->Op attributen-gebaseerde toegangscontrole moet niet met de mogelijkheden van het gegevensbeheer van het Experience Platform worden verward, die u toestaan om etiketten en beleid te gebruiken om te controleren hoe het gegeven in Platform eerder wordt gebruikt dan welke gebruikers in uw organisatie toegang tot het hebben. Zie de [ gids van de Dienst API van het Beleid ](../../../data-governance/api/overview.md) voor stappen op hoe te hefboomwerking programmatically deze mogelijkheden.
+>Toegangsbeheer op basis van kenmerken mag niet worden verward met Experience Platform-mogelijkheden voor gegevensbeheer, waardoor u labels en beleidsregels kunt gebruiken om te bepalen hoe gegevens in Experience Platform worden gebruikt en niet welke gebruikers in uw organisatie er toegang toe hebben. Zie de [ gids van de Dienst API van het Beleid ](../../../data-governance/api/overview.md) voor stappen op hoe te hefboomwerking programmatically deze mogelijkheden.
 
 Deze eindpunten worden hieronder beschreven. Gelieve te bezoeken de individuele eindpuntgidsen voor details en te verwijzen naar [ begonnen gids ](./getting-started.md) voor belangrijke informatie over vereiste kopballen, lezend steekproefAPI vraag, en meer.
 

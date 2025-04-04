@@ -5,9 +5,9 @@ title: Overzicht van gegevenssets
 description: Dit document biedt een overzicht op hoog niveau van gegevenssets in Experience Platform.
 user-guide-description: Krijg een overzicht op hoog niveau van datasets in Experience Platform met deze gids. Leer hoe te om hen tot stand te brengen, beperkingen op gegevens af te dwingen en gegevens in datasets hier in te voeren.
 exl-id: 51ecefb0-a699-4b1a-80f1-26c6ba92fcbf
-source-git-commit: 81f570f8e5401624ccac74696b2323252a4de0a9
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '871'
+source-wordcount: '872'
 ht-degree: 1%
 
 ---
@@ -26,7 +26,7 @@ Zie het [ overzicht van de Dienst van de Catalogus ](../home.md) voor meer infor
 
 ## Beperkingen van gegevenssetgegevens afdwingen
 
-[!DNL Experience Data Model] (XDM) is het gestandaardiseerde framework waarmee [!DNL Platform] gegevens voor de klantervaring indeelt. Alle gegevens die in [!DNL Platform] worden opgenomen, moeten in overeenstemming zijn met een vooraf gedefinieerd XDM-schema voordat het in [!DNL Data Lake] als dataset kan worden voortgezet.
+[!DNL Experience Data Model] (XDM) is het gestandaardiseerde framework waarmee [!DNL Experience Platform] gegevens voor de klantervaring indeelt. Alle gegevens die in [!DNL Experience Platform] worden opgenomen, moeten in overeenstemming zijn met een vooraf gedefinieerd XDM-schema voordat het in [!DNL Data Lake] als dataset kan worden voortgezet.
 
 Alle datasets bevatten een verwijzing naar het schema XDM dat het formaat en de structuur van de gegevens beperkt die zij kunnen opslaan. Het proberen om gegevens aan een dataset te uploaden die niet met het schema XDM van de dataset in overeenstemming is zal binnendringen veroorzaken om te ontbreken.
 
@@ -34,7 +34,7 @@ Voor meer informatie over XDM, zie het [ XDM overzicht van het Systeem ](../../x
 
 ## Gegevens in gegevenssets invoegen
 
-Adobe Experience Platform Data Ingestie vertegenwoordigt de meerdere methoden waarmee [!DNL Platform] gegevens uit verschillende bronnen inneemt. Ongeacht de manier van inname worden alle gegevens die correct zijn ingesloten, geconverteerd naar batchbestanden. Batches zijn gegevenseenheden die bestaan uit een of meer bestanden die als één eenheid moeten worden ingevoerd. Deze partijdossiers worden dan toegevoegd aan specifieke datasets en binnen [!DNL Data Lake] voortgeduurd.
+Adobe Experience Platform Data Ingestie vertegenwoordigt de meerdere methoden waarmee [!DNL Experience Platform] gegevens uit verschillende bronnen inneemt. Ongeacht de manier van inname worden alle gegevens die correct zijn ingesloten, geconverteerd naar batchbestanden. Batches zijn gegevenseenheden die bestaan uit een of meer bestanden die als één eenheid moeten worden ingevoerd. Deze partijdossiers worden dan toegevoegd aan specifieke datasets en binnen [!DNL Data Lake] voortgeduurd.
 
 Zie het [ Overzicht van de Ingestie van Gegevens ](../../ingestion/home.md) voor meer informatie.
 
@@ -44,16 +44,16 @@ Met Adobe Experience Platform Data Governance kunt u klantgegevens beheren om er
 
 >[!IMPORTANT]
 >
->Labels kunnen niet meer worden toegepast op velden op het niveau van de gegevensset. Deze workflow is vervangen door labels op schemaniveau. Alle labels die eerder op het niveau van gegevenssetobjecten zijn toegepast, worden tot 31 mei 2024 nog steeds ondersteund via de interface van het platform. Om ervoor te zorgen dat uw etiketten over alle schema&#39;s verenigbaar zijn, moeten om het even welke etiketten die eerder aan gebieden op het datasetniveau worden vastgemaakt door u over het komende jaar worden gemigreerd aan het schemaniveau. Zie de sectie op [ migrerend eerder toegepaste etiketten ](../../data-governance/e2e.md#migrate-labels) voor instructies op hoe te om dit te doen.
+>Labels kunnen niet meer worden toegepast op velden op het niveau van de gegevensset. Deze workflow is vervangen door labels op schemaniveau. Alle labels die eerder op het niveau van gegevenssetobjecten zijn toegepast, worden tot 31 mei 2024 nog steeds ondersteund via de gebruikersinterface van Experience Platform. Om ervoor te zorgen dat uw etiketten over alle schema&#39;s verenigbaar zijn, moeten om het even welke etiketten die eerder aan gebieden op het datasetniveau worden vastgemaakt door u over het komende jaar worden gemigreerd aan het schemaniveau. Zie de sectie op [ migrerend eerder toegepaste etiketten ](../../data-governance/e2e.md#migrate-labels) voor instructies op hoe te om dit te doen.
 
-Zie het [ overzicht van het Beleid van Gegevens ](../../data-governance/home.md) voor meer informatie over de dienst. Raadpleeg de volgende hulplijnen voor stappen over het werken met gebruikslabels in [!DNL Platform] :
+Zie het [ overzicht van het Beleid van Gegevens ](../../data-governance/home.md) voor meer informatie over de dienst. Raadpleeg de volgende hulplijnen voor stappen over het werken met gebruikslabels in [!DNL Experience Platform] :
 
 * [Labels beheren in de gebruikersinterface](../../data-governance/labels/user-guide.md)
 * [Gegevenssetlabels beheren in de API](../../data-governance/labels/dataset-api.md)
 
-## Datasets in downstream [!DNL Platform] -services
+## Datasets in downstream [!DNL Experience Platform] -services
 
-Zodra de datasets zijn gebruikt om ingebedde gegevens op te slaan, worden die datasets dan gebruikt door stroomafwaartse [!DNL Platform] diensten om klantenprofielen bij te werken, inzichten door machine het leren te bereiken, en meer.
+Zodra de datasets zijn gebruikt om ingebedde gegevens op te slaan, worden die datasets dan gebruikt door stroomafwaartse [!DNL Experience Platform] diensten om klantenprofielen bij te werken, inzichten door machine het leren te bereiken, en meer.
 
 Hieronder volgt een lijst met downstreamservices die gegevenssets gebruiken voor diverse bewerkingen. Raadpleeg de documentatie bij elke service voor meer informatie.
 
@@ -67,6 +67,6 @@ Hieronder volgt een lijst met downstreamservices die gegevenssets gebruiken voor
 
 ## Volgende stappen
 
-Door dit document te lezen, bent u geïntroduceerd in de belangrijkste toepassingen van datasets in [!DNL Experience Platform], evenals de diverse [!DNL Platform] diensten die datasets gebruiken. Voor meer informatie over de vele manieren worden de datasets gebruikt in [!DNL Platform], te herzien gelieve de de dienstdocumentatie verbonden door dit overzicht.
+Door dit document te lezen, bent u geïntroduceerd in de belangrijkste toepassingen van datasets in [!DNL Experience Platform], evenals de diverse [!DNL Experience Platform] diensten die datasets gebruiken. Voor meer informatie over de vele manieren worden de datasets gebruikt in [!DNL Experience Platform], te herzien gelieve de de dienstdocumentatie verbonden door dit overzicht.
 
 Voor stappen op hoe te met datasets binnen [!DNL Experience Platform] UI in wisselwerking te staan, zie de [ gids van de datasetgebruiker ](user-guide.md).

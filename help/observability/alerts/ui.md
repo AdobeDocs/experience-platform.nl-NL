@@ -1,13 +1,13 @@
 ---
 keywords: Experience Platform;home;populaire onderwerpen;datumbereik
 title: UI-gids voor waarschuwingen
-description: Leer hoe u waarschuwingen beheert in de gebruikersinterface van het Experience Platform.
+description: Leer hoe u waarschuwingen beheert in de Experience Platform-gebruikersinterface.
 feature: Alerts
 exl-id: 4ba3ef2b-7394-405e-979d-0e5e1fe676f3
-source-git-commit: 2e0fc17fee9b1586b4c2b44c326e2c305c127fad
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '765'
-ht-degree: 0%
+source-wordcount: '766'
+ht-degree: 4%
 
 ---
 
@@ -41,7 +41,7 @@ Selecteer de ellips (**...**) naast de naam van een regel, en een dropdown verto
 
 >[!NOTE]
 >
-> Als u een waarschuwing wilt toewijzen aan een gebruikers-id van een Adobe, een extern e-mailadres of een lijst met e-mailgroepen, moet u een beheerder zijn.
+> Als u een waarschuwing wilt toewijzen aan een Adobe-gebruikersnaam, een extern e-mailadres of een lijst met e-mailgroepen, moet u een beheerder zijn.
 
 Het tabblad **[!UICONTROL Browse]** bevat een lijst met de beschikbare regels die een waarschuwing kunnen activeren.
 
@@ -51,7 +51,7 @@ Selecteer de ellips (**...**) naast de naam van een regel, een dropdown vertonin
 
 ![ selecteer de ellipsen om het drop-down menu te tonen. De optie [!UICONTROL Manage alert subscribers] wordt gemarkeerd. ](../images/alerts/ui/manage-alert-subscribers.png)
 
-De pagina [!UICONTROL Manage alert subscribers] wordt weergegeven. Als u meldingen wilt toewijzen aan specifieke gebruikers, voert u de gebruikers-id, het externe e-mailadres of een lijst met e-mailgroepen van die gebruikers in en drukt u op Enter.
+De pagina [!UICONTROL Manage alert subscribers] wordt weergegeven. Als u berichten wilt toewijzen aan specifieke gebruikers, voert u hun Adobe-gebruikersnaam, extern e-mailadres of een lijst met e-mailgroepen in en drukt u op Enter.
 
 >[!NOTE]
 >
@@ -71,7 +71,7 @@ U hebt gebruikers toegevoegd aan uw lijst met waarschuwingen. De verzonden gebru
 
 Waarschuwingsberichten kunnen rechtstreeks naar uw e-mail worden verzonden.
 
-Selecteer het klokpictogram (![ klokpictogram ](/help/images/icons/bell.png)) dat in het hoogste lint op het recht wordt gevestigd om berichten en aankondigingen te tonen. In dropdown die verschijnt, selecteer het cogopictogram (![ cog pictogram ](/help/images/icons/settings.png)) om tot de de voorkeurspagina van het Experience Cloud toegang te hebben.
+Selecteer het klokpictogram (![ klokpictogram ](/help/images/icons/bell.png)) dat in het hoogste lint op het recht wordt gevestigd om berichten en aankondigingen te tonen. In dropdown die verschijnt, selecteer het cogapictogram (![ cog pictogram ](/help/images/icons/settings.png)) om tot de de voorkeurenpagina van Experience Cloud toegang te hebben.
 
 ![ een lijst van alarm die het belpictogram en het cogpictogram benadrukken wordt getoond.](../images/alerts/ui/edit-preferences.png)
 
@@ -94,12 +94,12 @@ De drempelwaarden van de alarm kunnen voor de volgende waakzame types worden aan
 | Vertraging segmenttaak | Vertragingsdrempel |
 | Vertraging bij exporteren segment | Vertragingsdrempel |
 | Vertraging bij uitvoering van bestemming | Vertragingsdrempel |
-| Vertraging bij uitvoering identiteitsservicestroom | Vertragingsdrempel |
-| Vertraging bij uitvoering van profielstroom | Vertragingsdrempel |
-| Bronnen: Vertraging bij uitvoering | Vertragingsdrempel |
-| Vertraging bij uitvoeren query | Vertragingsdrempel |
+| Vertraging bij uitvoering identiteitsserviceworkflow | Vertragingsdrempel |
+| Vertraging bij uitvoering van profielworkflow | Vertragingsdrempel |
+| Vertraging bij uitvoering van workflow voor bronnen | Vertragingsdrempel |
+| Vertraging bij het uitvoeren van query&#39;s | Vertragingsdrempel |
 | Activeringssnelheid overschreden | Foutdrempel |
-| Bronopinievormingsfoutfrequentie overschreden | Foutdrempel |
+| Foutpercentage van opname van bronnen overschreden | Foutdrempel |
 
 Selecteer de ellips (**...**) naast de naam van een regel, een dropdown vertoningencontroles. Selecteer **[!UICONTROL Edit]**.
 
@@ -125,4 +125,4 @@ Selecteer een vermeld alarm en meer details verschijnen in het juiste spoor, met
 
 ## Volgende stappen
 
-Dit document biedt een overzicht van het weergeven en beheren van waarschuwingen in de gebruikersinterface van het platform. Zie het overzicht op [ Inzichten van de Waarneming ](../home.md) voor meer informatie over de mogelijkheden van de dienst.
+Dit document biedt een overzicht van het weergeven en beheren van waarschuwingen in de gebruikersinterface van Experience Platform. Zie het overzicht op [ Inzichten van de Waarneming ](../home.md) voor meer informatie over de mogelijkheden van de dienst.

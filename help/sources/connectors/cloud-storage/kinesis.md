@@ -3,9 +3,9 @@ title: Amazon Kinesis Source Connector - Overzicht
 description: Leer hoe u Amazon Kinesis met Adobe Experience Platform kunt verbinden via API's of de gebruikersinterface.
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: b71fc922-7722-4279-8fc6-e5d7735e1ebb
-source-git-commit: 84d09038ded1f35269ebf67c6bc1a5dacaafe4ac
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '529'
+source-wordcount: '532'
 ht-degree: 0%
 
 ---
@@ -16,16 +16,16 @@ ht-degree: 0%
 >
 >- De [!DNL Amazon Kinesis] -bron is in de broncatalogus beschikbaar voor gebruikers die Real-Time CDP Ultimate hebben aangeschaft.
 >
->- U kunt nu de [!DNL Amazon Kinesis] -bron gebruiken wanneer u Adobe Experience Platform uitvoert op Amazon Web Services (AWS). Experience Platform dat op AWS wordt uitgevoerd, is momenteel beschikbaar voor een beperkt aantal klanten. Meer over de gesteunde infrastructuur van het Experience Platform leren, zie het [ Experience Platform multi-cloud overzicht ](../../../landing/multi-cloud.md).
+>- U kunt nu de [!DNL Amazon Kinesis] -bron gebruiken wanneer u Adobe Experience Platform uitvoert op Amazon Web Services (AWS). Experience Platform die op AWS wordt uitgevoerd, is momenteel beschikbaar voor een beperkt aantal klanten. Meer over de gesteunde infrastructuur van Experience Platform leren, zie het [ multi-wolkenoverzicht van Experience Platform ](../../../landing/multi-cloud.md).
 
 
-Adobe Experience Platform biedt native connectiviteit voor cloudproviders zoals AWS, [!DNL Google Cloud Platform] en [!DNL Azure] . U kunt uw gegevens van deze systemen overbrengen naar [!DNL Platform] .
+Adobe Experience Platform biedt native connectiviteit voor cloudproviders zoals AWS, [!DNL Google Cloud Platform] en [!DNL Azure] . U kunt uw gegevens van deze systemen overbrengen naar [!DNL Experience Platform] .
 
-Met bronnen voor cloudopslag kunt u uw eigen gegevens overbrengen naar [!DNL Platform] zonder dat u deze hoeft te downloaden, opmaken of uploaden. Ingebedde gegevens kunnen worden opgemaakt als XDM JSON, XDM Parquet, of afgebakend. Elke stap van het proces is geïntegreerd in het Bronwerkschema. Met [!DNL Platform] kunt u gegevens van [!DNL Amazon Kinesis] in real-time invoeren.
+Met bronnen voor cloudopslag kunt u uw eigen gegevens overbrengen naar [!DNL Experience Platform] zonder dat u deze hoeft te downloaden, opmaken of uploaden. Ingebedde gegevens kunnen worden opgemaakt als XDM JSON, XDM Parquet, of afgebakend. Elke stap van het proces is geïntegreerd in het Bronwerkschema. Met [!DNL Experience Platform] kunt u gegevens van [!DNL Amazon Kinesis] in real-time invoeren.
 
 >[!NOTE]
 >
->De schaalfactor voor [!DNL Kinesis] moet worden verhoogd als u gegevens met een hoog volume wilt invoeren. Het maximale gegevensvolume dat u van uw [!DNL Kinesis] -account naar Platform kunt verzenden, is momenteel 4000 records per seconde. Neem contact op met uw Adobe als u de schaal wilt verhogen en meer gegevens over het volume wilt invoeren.
+>De schaalfactor voor [!DNL Kinesis] moet worden verhoogd als u gegevens met een hoog volume wilt invoeren. Het maximale gegevensvolume dat u van uw [!DNL Kinesis] -account naar Experience Platform kunt verzenden, is momenteel 4000 records per seconde. Neem contact op met uw Adobe-vertegenwoordiger als u de schaal wilt verhogen en meer gegevens wilt invoeren.
 
 ## Vereisten
 
@@ -40,7 +40,7 @@ Een [!DNL Kinesis] -stream vereist de volgende machtigingen om een bronverbindin
 - `DescribeStream`
 - `ListStreams`
 
-Deze machtigingen worden gerangschikt via de [!DNL Kinesis] -console en worden gecontroleerd door Platform nadat u uw referenties hebt ingevoerd en uw gegevensstroom hebt geselecteerd.
+Deze machtigingen worden gerangschikt via de [!DNL Kinesis] -console en worden gecontroleerd door Experience Platform nadat u uw referenties hebt ingevoerd en uw gegevensstroom hebt geselecteerd.
 
 In het onderstaande voorbeeld worden de minimale toegangsrechten weergegeven die vereist zijn om een [!DNL Kinesis] bronverbinding te maken.
 
@@ -85,13 +85,13 @@ Voor meer informatie bij het controleren van toegang voor [!DNL Kinesis] gegeven
 | `TRIM_HORIZON` | De gegevens worden gelezen vanaf de oudste gegevensrecord. |
 | `LATEST` | De gegevens worden gelezen vanaf de meest recente gegevensrecord. |
 
-Een [!DNL Kinesis] UI-bron ondersteunt momenteel alleen `TRIM_HORIZON` , terwijl de API zowel `TRIM_HORIZON` als `LATEST` as-modi ondersteunt om gegevens op te halen. De standaardwaarde voor de iterator die Platform gebruikt voor de [!DNL Kinesis] -bron is `TRIM_HORIZON` .
+Een [!DNL Kinesis] UI-bron ondersteunt momenteel alleen `TRIM_HORIZON` , terwijl de API zowel `TRIM_HORIZON` als `LATEST` as-modi ondersteunt om gegevens op te halen. De standaardwaarde van de iterator die Experience Platform gebruikt voor de [!DNL Kinesis] -bron is `TRIM_HORIZON` .
 
 Voor meer informatie over iteratortypes, zie het volgende [[!DNL Kinesis]  document ](https://docs.aws.amazon.com/kinesis/latest/APIReference/API_GetShardIterator.html#API_GetShardIterator_RequestSyntax).
 
-## Verbinden [!DNL Amazon Kinesis] met [!DNL Platform]
+## Verbinden [!DNL Amazon Kinesis] met [!DNL Experience Platform]
 
-In de onderstaande documentatie vindt u informatie over het tot stand brengen van een verbinding tussen [!DNL Amazon Kinesis] en [!DNL Platform] via API&#39;s of de gebruikersinterface:
+In de onderstaande documentatie vindt u informatie over het tot stand brengen van een verbinding tussen [!DNL Amazon Kinesis] en [!DNL Experience Platform] via API&#39;s of de gebruikersinterface:
 
 ### API&#39;s gebruiken
 

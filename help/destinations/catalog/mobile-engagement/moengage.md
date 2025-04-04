@@ -3,7 +3,7 @@ title: Verbinding maken
 description: Moconnect is een platform voor klantbetrokkenheid dat klantgerichte interacties tussen consumenten en merken in real time mogelijk maakt.
 last-substantial-update: 2023-10-11T00:00:00Z
 exl-id: 051f1a10-3c41-4c0a-b187-bf80de0565f0
-source-git-commit: 1e22ad63414876af45d156ed030b8103908de8a1
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '987'
 ht-degree: 0%
@@ -100,7 +100,7 @@ Zie [ publieksgegevens aan het stromen segment uitvoerbestemmingen ](../../ui/ac
 
 Als u de publieksgegevens correct vanuit [!DNL Adobe Experience Platform] naar het [!DNL Moengage] -doel wilt verzenden, moet u de stap voor veldtoewijzing doorlopen.
 
-Toewijzing bestaat uit het maken van een koppeling tussen de schemavelden [!DNL Experience Data Model] (XDM) in uw [!DNL Platform] -account en de bijbehorende equivalenten van de doelbestemming.
+Toewijzing bestaat uit het maken van een koppeling tussen de schemavelden [!DNL Experience Data Model] (XDM) in uw [!DNL Experience Platform] -account en de bijbehorende equivalenten van de doelbestemming.
 
 Voer de volgende stappen uit om uw XDM-velden correct toe te wijzen aan de [!DNL Moengage] -doelvelden:
 
@@ -128,7 +128,7 @@ Selecteer in de sectie [!UICONTROL Target Field] het toewijzingspictogram rechts
 ![ verbind de Toewijzing van het Doel van de Bestemming ](../../assets/catalog/mobile-engagement/moengage/mapping-target.png)
 
 In het venster [!UICONTROL Select target field] kunt u kiezen uit twee categorieën doelvelden:
-* [!UICONTROL Select identity namespace]: Gebruik deze optie om [!DNL Platform] naamruimten toe te wijzen aan [!DNL Moengage] naamruimten.
+* [!UICONTROL Select identity namespace]: Gebruik deze optie om [!DNL Experience Platform] naamruimten toe te wijzen aan [!DNL Moengage] naamruimten.
 * [!UICONTROL Select custom attributes]: Gebruik deze optie om XDM-kenmerken toe te wijzen aan aangepaste [!DNL Moengage] -kenmerken die u in uw [!DNL Moengage] -account hebt gedefinieerd. <br> U kunt deze optie ook gebruiken om de naam van bestaande XDM-kenmerken te wijzigen in [!DNL Moengage] . Als u bijvoorbeeld een `lastName` XDM-kenmerk toewijst aan een aangepast `Last_Name` -kenmerk in [!DNL Moengage] , wordt het `Last_Name` -kenmerk in [!DNL Moengage] gemaakt, als dat nog niet het geval is, en wordt het `lastName` XDM-kenmerk eraan toegewezen.
 
 ![ verbind Gebieden van de Toewijzing van het Doel van de Bestemming ](../../assets/catalog/mobile-engagement/moengage/mapping-target-fields.png)

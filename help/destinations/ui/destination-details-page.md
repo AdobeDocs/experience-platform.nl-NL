@@ -3,7 +3,7 @@ keywords: doelen;doel;doeldetailpagina;doeldetailpagina;doeldetailpagina
 title: Doelgegevens weergeven
 description: De detailspagina voor een individuele bestemming verstrekt een overzicht van de bestemmingsdetails. De details van de bestemming omvatten de bestemmingsnaam, identiteitskaart, publiek in kaart gebracht aan de bestemming, en controles om de activering uit te geven en de gegevensstroom toe te laten en onbruikbaar te maken.
 exl-id: e44e2b2d-f477-4516-8a47-3e95c2d85223
-source-git-commit: 47d0e2a7fae973edfda035d046f66c88d34bf8b2
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '1226'
 ht-degree: 0%
@@ -18,13 +18,13 @@ In de gebruikersinterface van Adobe Experience Platform, kunt u de attributen en
 
 >[!NOTE]
 >
->De pagina met doeldetails maakt deel uit van de werkruimte [!UICONTROL Destinations] in de [!DNL Platform] [!DNL UI] . Zie het [[!UICONTROL Destinations] overzicht van de werkruimte ](./destinations-workspace.md) voor meer informatie.
+>De pagina met doeldetails maakt deel uit van de werkruimte [!UICONTROL Destinations] in de [!DNL Experience Platform] [!DNL UI] . Zie het [[!UICONTROL Destinations] overzicht van de werkruimte ](./destinations-workspace.md) voor meer informatie.
 
 ## Doelgegevens weergeven {#view-details}
 
 Voer de onderstaande stappen uit om meer informatie over een bestaand doel weer te geven. U kunt doelidentiteitskaart van een bestemming, de gebruiker ontdekken die de bestemming creeerde, toen het werd gecreeerd, en andere informatie.
 
-1. Login aan het [ Experience Platform UI ](https://platform.adobe.com/) en selecteert **[!UICONTROL Destinations]** van de linkernavigatiebar. Selecteer **[!UICONTROL Browse]** in de bovenste koptekst om uw bestaande doelen weer te geven.
+1. Login aan [ UI van Experience Platform ](https://platform.adobe.com/) en selecteer **[!UICONTROL Destinations]** van de linkernavigatiebar. Selecteer **[!UICONTROL Browse]** in de bovenste koptekst om uw bestaande doelen weer te geven.
 
    ![ doorbladert bestemmingen ](../assets/ui/details-page/browse-destinations.png)
 
@@ -82,8 +82,8 @@ Het tabblad [!UICONTROL Dataflow runs] bevat metrische gegevens over uw gegevens
 
 >[!NOTE]
 >
->* Doelen die functionaliteit controleren wordt momenteel gesteund voor alle bestemmingen in Experience Platform *behalve* [ Adobe Target ](/help/destinations/catalog/personalization/adobe-target-connection.md), [ de verpersoonlijking van de Douane ](/help/destinations/catalog/personalization/custom-personalization.md) en [ het publiek van de Experience Cloud ](/help/destinations/catalog/adobe/experience-cloud-audiences.md) bestemmingen.
->* Voor [ Kinesis van Amazon ](/help/destinations/catalog/cloud-storage/amazon-kinesis.md), [ Azure Gebeurtenis Hubs ](/help/destinations/catalog/cloud-storage/azure-event-hubs.md), en [ HTTP API ](/help/destinations/catalog/streaming/http-destination.md) bestemmingen, worden de metriek met betrekking tot identiteiten uitgesloten, ontbroken, en geactiveerd geschat. Hogere volumes activeringsgegevens leiden tot een hogere nauwkeurigheid van de meetwaarden.
+>* Doelen die functionaliteit controleren wordt momenteel gesteund voor alle bestemmingen in Experience Platform *behalve* de [ Adobe Target ](/help/destinations/catalog/personalization/adobe-target-connection.md), [ Verpersoonlijking van de Douane ](/help/destinations/catalog/personalization/custom-personalization.md) en [ 7} bestemmingen van het publiek van Experience Cloud.](/help/destinations/catalog/adobe/experience-cloud-audiences.md)
+>* Voor de [ Kinesis van Amazon ](/help/destinations/catalog/cloud-storage/amazon-kinesis.md), [ Azure Gebeurtenishubs ](/help/destinations/catalog/cloud-storage/azure-event-hubs.md), en [ HTTP API ](/help/destinations/catalog/streaming/http-destination.md) bestemmingen, worden de metriek met betrekking tot identiteiten uitgesloten, ontbroken, en geactiveerd geschat. Hogere volumes activeringsgegevens leiden tot een hogere nauwkeurigheid van de meetwaarden.
 
 ![ Dataflow looppas mening ](../assets/ui/details-page/dataflow-runs.png)
 
@@ -93,7 +93,7 @@ Er is een verschil in de getoonde duur van dataflow looppas tussen het stromen e
 
 ### Streaming doelen {#streaming}
 
-Hoewel de **[!UICONTROL Processing duration]** die wordt aangegeven voor de meeste streaming gegevensstroom, ongeveer vier uur duurt, zoals in de onderstaande afbeelding wordt getoond, is de werkelijke verwerkingstijd voor elke gegevensstroom veel korter. Dataflow runtime vensters blijven open voor langer in het geval dat het Experience Platform moet opnieuw proberen makend vraag aan de bestemming en ook ervoor zorgen het niet op om het even welk laat aankomen gegevens voor zelfde tijdvenster mist.
+Hoewel de **[!UICONTROL Processing duration]** die wordt aangegeven voor de meeste streaming gegevensstroom, ongeveer vier uur duurt, zoals in de onderstaande afbeelding wordt getoond, is de werkelijke verwerkingstijd voor elke gegevensstroom veel korter. Dataflow-run-vensters blijven langer open voor het geval dat Experience Platform opnieuw moet proberen aanroepen naar de bestemming te doen en er ook voor moet zorgen dat dit niet wordt overgeslagen bij late aankomende gegevens voor hetzelfde tijdvenster.
 
 ![ Beeld van de looppas Dataflow pagina met de kolom van de tijd van de Verwerking die voor een het stromen bestemming wordt benadrukt.](/help/destinations/assets/ui/details-page/processing-time-dataflow-run-streaming.png)
 

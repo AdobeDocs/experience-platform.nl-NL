@@ -1,33 +1,33 @@
 ---
-title: Sluit uw PathFactory-account aan op Experience Platform via de gebruikersinterface
-description: Leer hoe u uw PathFactory-account met Experience Platform kunt verbinden via de gebruikersinterface.
+title: Uw PathFactory-account verbinden met Experience Platform via de gebruikersinterface
+description: Leer hoe u uw PathFactory-account via de gebruikersinterface met Experience Platform kunt verbinden.
 badge: Beta
 exl-id: 859dd0c1-8c4b-43e3-a87b-84c879460bc0
-source-git-commit: ca17854830edabaf2bd74265258d6f0096f2888e
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '552'
+source-wordcount: '554'
 ht-degree: 0%
 
 ---
 
-# Sluit uw [!DNL PathFactory] -account aan op het Experience Platform via de gebruikersinterface
+# Sluit uw [!DNL PathFactory] -account aan op Experience Platform via de gebruikersinterface
 
 Deze zelfstudie bevat stappen voor het tot stand brengen van een verbinding tussen de gegevens van [!DNL PathFactory] Bezoekers, Sessies en Paginaweergaven en Adobe Experience Platform via de gebruikersinterface.
 
 ## Aan de slag
 
-Deze zelfstudie vereist een goed begrip van de volgende onderdelen van het Experience Platform:
+Deze zelfstudie vereist een goed begrip van de volgende onderdelen van Experience Platform:
 
 * [[!DNL Experience Data Model (XDM)]  Systeem ](../../../../../xdm/home.md): Het gestandaardiseerde kader waardoor [!DNL Experience Platform] gegevens van de klantenervaring organiseert.
    * [ Grondbeginselen van schemacompositie ](../../../../../xdm/schema/composition.md): Leer over de basisbouwstenen van schema&#39;s XDM, met inbegrip van zeer belangrijke principes en beste praktijken in schemacompositie.
    * [ het leerprogramma van de Redacteur van het Schema ](../../../../../xdm/tutorials/create-schema-ui.md): Leer hoe te om douaneschema&#39;s tot stand te brengen gebruikend de Redacteur UI van het Schema.
 * [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md): biedt een uniform, real-time consumentenprofiel dat is gebaseerd op geaggregeerde gegevens van meerdere bronnen.
 
-Als u reeds een [!DNL PathFactory] rekening hebt, kunt u de rest van dit document overslaan en aan het leerprogramma te werk gaan [ brengend de gegevens van de marketingautomatisering aan Experience Platform gebruikend UI ](../../dataflow/marketing-automation.md).
+Als u reeds een [!DNL PathFactory] rekening hebt, kunt u de rest van dit document overslaan en aan het leerprogramma te werk gaan [ brengend de gegevens van de marketing automatisering aan Experience Platform gebruikend UI ](../../dataflow/marketing-automation.md).
 
 ### Vereiste referenties verzamelen {#gather-credentials}
 
-Om tot uw rekening PathFactory op het Platform toegang te hebben, moet u de volgende waarden verstrekken:
+U moet de volgende waarden opgeven om toegang te krijgen tot uw PathFactory-account op de Experience Platform:
 
 | Credentials | Beschrijving |
 | ---------- | ----------- |
@@ -42,7 +42,7 @@ Voor gedetailleerde begeleiding op hoe te om uw geloofsbrieven te beveiligen en 
 
 ## Sluit uw [!DNL PathFactory] -account aan
 
-Selecteer in de gebruikersinterface van het platform de optie **[!UICONTROL Sources]** in de linkernavigatie voor toegang tot de werkruimte van [!UICONTROL Sources] . In [!UICONTROL Catalog] worden diverse bronnen weergegeven die door het Experience Platform worden ondersteund.
+Selecteer in de gebruikersinterface van Experience Platform de optie **[!UICONTROL Sources]** in de linkernavigatie voor toegang tot de werkruimte van [!UICONTROL Sources] . In [!UICONTROL Catalog] worden diverse bronnen weergegeven die door Experience Platform worden ondersteund.
 
 U kunt de juiste categorie selecteren in de lijst met categorieën. U kunt de zoekbalk ook gebruiken om te filteren op een bepaalde bron.
 
@@ -68,4 +68,4 @@ Als u al een bestaande account hebt, selecteert u **[!UICONTROL Existing account
 
 ## Volgende stappen
 
-Aan de hand van deze zelfstudie hebt u een verbinding tot stand gebracht tussen uw [!DNL PathFactory] -account en het Experience Platform. U kunt nu aan het volgende leerprogramma verdergaan en [ een dataflow creëren om uw gegevens van de marketing automatisering in Experience Platform ](../../dataflow/marketing-automation.md) te brengen.
+Aan de hand van deze zelfstudie hebt u een verbinding tot stand gebracht tussen uw [!DNL PathFactory] -account en Experience Platform. U kunt nu aan het volgende leerprogramma verdergaan en [ een dataflow creëren om uw gegevens van de marketing automatisering in Experience Platform ](../../dataflow/marketing-automation.md) te brengen.

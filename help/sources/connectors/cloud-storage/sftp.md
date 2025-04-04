@@ -2,16 +2,16 @@
 title: Overzicht SFTP Source-connector
 description: Leer hoe u een SFTP-server verbindt met Adobe Experience Platform via API's of de gebruikersinterface.
 exl-id: d5bced3d-cd33-40ea-bce0-32c76ecd2790
-source-git-commit: 9e1edaa4183a8025b8391f58d480063adc834616
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1221'
+source-wordcount: '1226'
 ht-degree: 0%
 
 ---
 
 # SFTP-aansluiting
 
-Adobe Experience Platform staat toe dat gegevens uit externe bronnen worden opgenomen terwijl u de mogelijkheid krijgt om inkomende gegevens te structureren, te labelen en te verbeteren met behulp van de platformservices. U kunt gegevens uit diverse bronnen invoeren, zoals toepassingen voor Adobe, opslag in de cloud, databases en vele andere.
+Adobe Experience Platform staat toe dat gegevens uit externe bronnen worden opgenomen en biedt u de mogelijkheid om inkomende gegevens te structureren, labelen en verbeteren met behulp van Experience Platform-services. U kunt gegevens invoeren uit verschillende bronnen, zoals Adobe-toepassingen, opslag in de cloud, databases en vele andere.
 
 Lees dit document voor de vereiste stappen die u moet uitvoeren om uw [!DNL SFTP] -account met Experience Platform te kunnen verbinden.
 
@@ -21,7 +21,7 @@ Lees dit document voor de vereiste stappen die u moet uitvoeren om uw [!DNL SFTP
 
 ## Vereisten {#prerequisites}
 
-Lees deze sectie voor de vereiste stappen die u moet voltooien om de [!DNL SFTP] -bron met Experience Platform te kunnen verbinden.
+Lees deze sectie voor de vereiste stappen die u moet voltooien om de [!DNL SFTP] -bron met succes aan te sluiten op Experience Platform.
 
 ### IP adres lijst van gewenste personen
 
@@ -40,7 +40,7 @@ Hieronder volgt een lijst met beperkingen waarmee u rekening moet houden wanneer
 
 ### Een Base64-gecodeerde OpenSSH-privésleutel instellen voor [!DNL SFTP]
 
-De [!DNL SFTP] -bron ondersteunt verificatie met behulp van de [!DNL Base64] -gecodeerde OpenSSH-persoonlijke sleutel. Zie de stappen hieronder voor informatie over hoe te om uw Base64-Gecodeerde OpenSSH privé sleutel te produceren en [!DNL SFTP] met Platform te verbinden.
+De [!DNL SFTP] -bron ondersteunt verificatie met behulp van de [!DNL Base64] -gecodeerde OpenSSH-persoonlijke sleutel. Zie de onderstaande stappen voor informatie over het genereren van uw Base64-gecodeerde OpenSSH-persoonlijke sleutel en het verbinden van [!DNL SFTP] met Experience Platform.
 
 >[!BEGINTABS]
 
@@ -96,7 +96,7 @@ Voer vervolgens de volgende opdracht uit terwijl u het bestandspad van de persoo
 C:\Users\lucy> [convert]::ToBase64String((Get-Content -path "C:\Users\lucy\.ssh\id_rsa" -Encoding byte)) > C:\Users\lucy\.ssh\id_rsa_base64
 ```
 
-Met de bovenstaande opdracht slaat u de [!DNL Base64] -gecodeerde persoonlijke sleutel op in het bestandspad dat u hebt toegewezen. Vervolgens kunt u die persoonlijke sleutel gebruiken om zich te verifiëren bij [!DNL SFTP] en verbinding te maken met Platform.
+Met de bovenstaande opdracht slaat u de [!DNL Base64] -gecodeerde persoonlijke sleutel op in het bestandspad dat u hebt toegewezen. Vervolgens kunt u die persoonlijke sleutel gebruiken om zich te verifiëren bij [!DNL SFTP] en verbinding te maken met Experience Platform.
 
 >[!TAB  Mac ]
 
@@ -154,7 +154,7 @@ more ~/.ssh/authorized_keys
 
 ### Vereiste referenties verzamelen {#credentials}
 
-U moet waarden opgeven voor de volgende referenties om de [!DNL SFTP] -server aan te sluiten op het Experience Platform.
+U moet waarden opgeven voor de volgende referenties om uw [!DNL SFTP] -server te verbinden met Experience Platform.
 
 >[!BEGINTABS]
 
@@ -168,7 +168,7 @@ Geef de juiste waarden op voor de volgende referenties om de [!DNL SFTP] -server
 | `port` | De [!DNL SFTP] serverpoort waarmee u verbinding maakt. Als deze waarde niet wordt opgegeven, wordt deze standaard ingesteld op `22` . |
 | `username` | De gebruikersnaam met toegang tot de [!DNL SFTP] -server. |
 | `password` | Het wachtwoord voor uw [!DNL SFTP] -server. |
-| `maxConcurrentConnections` | Met deze parameter kunt u een maximumlimiet opgeven voor het aantal gelijktijdige verbindingen dat Platform maakt wanneer verbinding wordt gemaakt met uw SFTP-server. U moet deze waarde instellen op een waarde die kleiner is dan de limiet die door SFTP is ingesteld. **Nota**: Wanneer dit het plaatsen voor een bestaande rekening van SFTP wordt toegelaten, zal het slechts toekomstige dataflows en niet bestaande dataflows beïnvloeden. |
+| `maxConcurrentConnections` | Met deze parameter kunt u een maximumlimiet opgeven voor het aantal gelijktijdige verbindingen dat Experience Platform maakt wanneer verbinding wordt gemaakt met uw SFTP-server. U moet deze waarde instellen op een waarde die kleiner is dan de limiet die door SFTP is ingesteld. **Nota**: Wanneer dit het plaatsen voor een bestaande rekening van SFTP wordt toegelaten, zal het slechts toekomstige dataflows en niet bestaande dataflows beïnvloeden. |
 | `folderPath` | Het pad naar de map waartoe u toegang wilt verlenen. [!DNL SFTP] -bron, kunt u het mappad opgeven waarmee u gebruikerstoegang tot de submap van uw keuze kunt opgeven. |
 | `disableChunking` | Tijdens gegevensinvoer kan de bron van [!DNL SFTP] eerst de lengte van het bestand ophalen, het bestand in meerdere delen verdelen en deze vervolgens parallel lezen. U kunt deze waarde in- of uitschakelen om op te geven of de [!DNL SFTP] -server de lengte van bestanden kan ophalen of gegevens kan lezen vanaf een specifieke verschuiving. |
 | `connectionSpec.id` | (Alleen API) De verbindingsspecificatie retourneert de verbindingseigenschappen van een bron, inclusief verificatiespecificaties voor het maken van de basis- en bronverbindingen. De verbindingsspecificatie-id voor [!DNL SFTP] is: `b7bf2577-4520-42c9-bae9-cad01560f7bc` . |
@@ -185,7 +185,7 @@ Geef de juiste waarden op voor de volgende referenties om uw [!DNL SFTP] -server
 | `password` | Het wachtwoord voor uw [!DNL SFTP] -server. |
 | `privateKeyContent` | De Base64-gecodeerde SSH-inhoud voor persoonlijke sleutels. Het type van sleutel OpenSSH moet als of RSA of DSA worden geclassificeerd. |
 | `passPhrase` | De wachtwoordgroep of het wachtwoord voor het decoderen van de persoonlijke sleutel als het sleutelbestand of de sleutelinhoud wordt beveiligd door een wachtwoordgroep. Als PrivateKeyContent met een wachtwoord beveiligd is, moet deze parameter worden gebruikt met de wachtwoordzin van PrivateKeyContent als waarde. |
-| `maxConcurrentConnections` | Met deze parameter kunt u een maximumlimiet opgeven voor het aantal gelijktijdige verbindingen dat Platform maakt wanneer verbinding wordt gemaakt met uw SFTP-server. U moet deze waarde instellen op een waarde die kleiner is dan de limiet die door SFTP is ingesteld. **Nota**: Wanneer dit het plaatsen voor een bestaande rekening van SFTP wordt toegelaten, zal het slechts toekomstige dataflows en niet bestaande dataflows beïnvloeden. |
+| `maxConcurrentConnections` | Met deze parameter kunt u een maximumlimiet opgeven voor het aantal gelijktijdige verbindingen dat Experience Platform maakt wanneer verbinding wordt gemaakt met uw SFTP-server. U moet deze waarde instellen op een waarde die kleiner is dan de limiet die door SFTP is ingesteld. **Nota**: Wanneer dit het plaatsen voor een bestaande rekening van SFTP wordt toegelaten, zal het slechts toekomstige dataflows en niet bestaande dataflows beïnvloeden. |
 | `folderPath` | Het pad naar de map waartoe u toegang wilt verlenen. [!DNL SFTP] -bron, kunt u het mappad opgeven waarmee u gebruikerstoegang tot de submap van uw keuze kunt opgeven. |
 | `disableChunking` | Tijdens gegevensinvoer kan de bron van [!DNL SFTP] eerst de lengte van het bestand ophalen, het bestand in meerdere delen verdelen en deze vervolgens parallel lezen. U kunt deze waarde in- of uitschakelen om op te geven of de [!DNL SFTP] -server de lengte van bestanden kan ophalen of gegevens kan lezen vanaf een specifieke verschuiving. |
 | `connectionSpec.id` | (Alleen API) De verbindingsspecificatie retourneert de verbindingseigenschappen van een bron, inclusief verificatiespecificaties voor het maken van de basis- en bronverbindingen. De verbindingsspecificatie-id voor [!DNL SFTP] is: `b7bf2577-4520-42c9-bae9-cad01560f7bc` . |
@@ -194,7 +194,7 @@ Geef de juiste waarden op voor de volgende referenties om uw [!DNL SFTP] -server
 
 ## SFTP verbinden met Experience Platform
 
-De documentatie hieronder verstrekt informatie over hoe te om een server van SFTP aan Experience Platform te verbinden gebruikend APIs of de gebruikersinterface:
+In de onderstaande documentatie vindt u informatie over het tot stand brengen van een verbinding tussen een SFTP-server en Experience Platform via API&#39;s of de gebruikersinterface:
 
 ### API&#39;s gebruiken
 

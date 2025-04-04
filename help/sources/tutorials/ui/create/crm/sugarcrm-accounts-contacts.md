@@ -2,9 +2,9 @@
 title: Een SugarCRM-bronverbinding voor accounts en contactpersonen maken in de gebruikersinterface
 description: Leer hoe u een SugarCRM-bronverbinding maakt met de gebruikersinterface van Adobe Experience Platform.
 exl-id: 45840d7e-4c19-4720-8629-be446347862d
-source-git-commit: 0de4b32ac2ddc90dabefd469b6658388a4532e0d
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '741'
+source-wordcount: '756'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,7 @@ Deze zelfstudie bevat stappen voor het maken van een [!DNL SugarCRM Accounts & C
 
 ## Aan de slag
 
-Deze zelfstudie vereist een goed begrip van de volgende onderdelen van het Experience Platform:
+Deze zelfstudie vereist een goed begrip van de volgende onderdelen van Experience Platform:
 
 * [[!DNL Experience Data Model (XDM)]  Systeem ](../../../../../xdm/home.md): Het gestandaardiseerde kader waardoor [!DNL Experience Platform] gegevens van de klantenervaring organiseert.
    * [ Grondbeginselen van schemacompositie ](../../../../../xdm/schema/composition.md): Leer over de basisbouwstenen van schema&#39;s XDM, met inbegrip van zeer belangrijke principes en beste praktijken in schemacompositie.
@@ -26,7 +26,7 @@ Als u reeds een geldige [!DNL SugarCRM] rekening hebt, kunt u de rest van dit do
 
 ### Vereiste referenties verzamelen
 
-Als u [!DNL SugarCRM Accounts & Contacts] wilt verbinden met Platform, moet u waarden opgeven voor de volgende verbindingseigenschappen:
+Als u [!DNL SugarCRM Accounts & Contacts] wilt verbinden met Experience Platform, moet u waarden opgeven voor de volgende verbindingseigenschappen:
 
 | Credentials | Beschrijving | Voorbeeld |
 | --- | --- | --- |
@@ -34,9 +34,9 @@ Als u [!DNL SugarCRM Accounts & Contacts] wilt verbinden met Platform, moet u wa
 | `Username` | Uw gebruikersnaam voor de SugarCRM-ontwikkelaarsaccount. | `abc.def@example.com@sugarmarketdemo000.com` |
 | `Password` | Wachtwoord voor uw SugarCRM-ontwikkelaarsaccount. | `123456789` |
 
-### Een platformschema maken
+### Een Experience Platform-schema maken
 
-Voordat u een [!DNL SugarCRM] -bronverbinding maakt, moet u er ook voor zorgen dat u eerst een Platform-schema maakt dat u voor uw bron kunt gebruiken. Zie het leerprogramma op [ creërend een schema van het Platform ](../../../../../xdm/schema/composition.md) voor uitvoerige stappen op hoe te om een schema tot stand te brengen.
+Voordat u een [!DNL SugarCRM] -bronverbinding maakt, moet u er ook voor zorgen dat u eerst een Experience Platform-schema voor uw bron maakt. Zie het leerprogramma op [ creërend een schema van Experience Platform ](../../../../../xdm/schema/composition.md) voor uitvoerige stappen op hoe te om een schema tot stand te brengen.
 
 De [!DNL SugarCRM Accounts & Contacts] ondersteunt meerdere API&#39;s. Dit betekent dat u een afzonderlijk schema moet maken, afhankelijk van het objecttype dat u gebruikt. Zie de voorbeelden hieronder voor zowel rekeningen als contactschema&#39;s:
 
@@ -44,23 +44,23 @@ De [!DNL SugarCRM Accounts & Contacts] ondersteunt meerdere API&#39;s. Dit betek
 
 >[!TAB  Rekeningen ]
 
-{het schermschot van het platform UI die een voorbeeldschema voor Rekeningen toont ](../../../../images/tutorials/create/sugarcrm-accounts-contacts/sugarcrm-schema-accounts.png)![
+{het schermschot van 0} Experience Platform UI die een voorbeeldschema voor Rekeningen ](../../../../images/tutorials/create/sugarcrm-accounts-contacts/sugarcrm-schema-accounts.png) toont![
 
 >[!TAB  Contacten ]
 
-{het schermschot van het platform UI die een voorbeeldschema voor Contacten ](../../../../images/tutorials/create/sugarcrm-accounts-contacts/sugarcrm-schema-contacts.png) toont![
+{het schermschot van 0} Experience Platform UI die een voorbeeldschema voor Contacten ](../../../../images/tutorials/create/sugarcrm-accounts-contacts/sugarcrm-schema-contacts.png) toont![
 
 >[!ENDTABS]
 
 ## Sluit uw [!DNL SugarCRM Accounts & Contacts] -account aan
 
-Selecteer in de gebruikersinterface van het platform **[!UICONTROL Sources]** in de linkernavigatiebalk voor toegang tot de werkruimte van [!UICONTROL Sources] . In het scherm [!UICONTROL Catalog] worden diverse bronnen weergegeven waarmee u een account kunt maken.
+Selecteer in de gebruikersinterface van Experience Platform de optie **[!UICONTROL Sources]** in de linkernavigatiebalk voor toegang tot de werkruimte van [!UICONTROL Sources] . In het scherm [!UICONTROL Catalog] worden diverse bronnen weergegeven waarmee u een account kunt maken.
 
 U kunt de juiste categorie selecteren in de catalogus aan de linkerkant van het scherm. U kunt ook de specifieke bron vinden waarmee u wilt werken met de zoekoptie.
 
 Onder de *CRM* categorie, selecteer **[!UICONTROL SugarCRM Accounts & Contacts]**, en selecteer dan **[!UICONTROL Add data]**.
 
-{het schermschot van het platform UI voor catalogus met de Rekeningen &amp; de kaart van Contacten SugarCRM ](../../../../images/tutorials/create/sugarcrm-accounts-contacts/catalog-sugarcrm-accounts-contacts.png)![
+![ het schermschot van Experience Platform UI voor catalogus met de Rekeningen &amp; de kaart van Contacten SugarCRM ](../../../../images/tutorials/create/sugarcrm-accounts-contacts/catalog-sugarcrm-accounts-contacts.png)
 
 De pagina **[!UICONTROL Connect SugarCRM Accounts & Contacts account]** wordt weergegeven. Op deze pagina kunt u nieuwe of bestaande referenties gebruiken.
 
@@ -68,17 +68,17 @@ De pagina **[!UICONTROL Connect SugarCRM Accounts & Contacts account]** wordt we
 
 Als u een bestaande account wilt gebruiken, selecteert u de [!DNL SugarCRM Accounts & Contacts] -account waarmee u een nieuwe gegevensstroom wilt maken en selecteert u vervolgens **[!UICONTROL Next]** om door te gaan.
 
-![ het schermschot van het Platform UI voor rekeningen Connect SugarCRM &amp; de rekening van Contacten met een bestaande rekening ](../../../../images/tutorials/create/sugarcrm-accounts-contacts/existing.png)
+![ het schermschot van Experience Platform voor Connect SugarCRM- Rekeningen &amp; van Contacten rekening met een bestaande rekening ](../../../../images/tutorials/create/sugarcrm-accounts-contacts/existing.png)
 
 ### Nieuwe account
 
 Als u een nieuwe account maakt, selecteert u **[!UICONTROL New account]** en geeft u een naam, een optionele beschrijving en uw referenties op. Als u klaar bent, selecteert u **[!UICONTROL Connect to source]** en laat u de nieuwe verbinding enige tijd tot stand brengen.
 
-![ het schermschot van het Platform UI voor Connect SugarCRM- Rekeningen &amp; rekening van Contacten met een nieuwe rekening ](../../../../images/tutorials/create/sugarcrm-accounts-contacts/new.png)
+![ het schermschot van Experience Platform voor Connect SugarCRM- Rekeningen &amp; rekening van Contacten met een nieuwe rekening ](../../../../images/tutorials/create/sugarcrm-accounts-contacts/new.png)
 
 ### Gegevens selecteren
 
-Tot slot moet u het objecttype selecteren dat u wilt opnemen in Platform.
+Tot slot moet u het objecttype selecteren dat u aan Experience Platform wilt toevoegen.
 
 | Objecttype | Beschrijving |
 | --- | --- |
@@ -89,17 +89,17 @@ Tot slot moet u het objecttype selecteren dat u wilt opnemen in Platform.
 
 >[!TAB  Rekeningen ]
 
-{het schermschot van het platform UI voor de Rekeningen van SugarCRM &amp; Contacten die configuratie met geselecteerde optie van de Rekening tonen ](../../../../images/tutorials/create/sugarcrm-accounts-contacts/configuration-accounts.png)![
+{het schermschot van 0} Experience Platform UI voor de Rekeningen van SugarCRM &amp; Contacten die configuratie met geselecteerde optie van de Rekening tonen ](../../../../images/tutorials/create/sugarcrm-accounts-contacts/configuration-accounts.png)![
 
 >[!TAB  Contacten ]
 
-{het schermschot van het platform UI voor de Rekeningen van SugarCRM &amp; Contacten die configuratie met geselecteerde optie van Contacten tonen ](../../../../images/tutorials/create/sugarcrm-accounts-contacts/configuration-contacts.png)![
+{het schermschot van 0} Experience Platform UI voor de Rekeningen van SugarCRM &amp; Contacten die configuratie met geselecteerde optie van Contacten tonen ](../../../../images/tutorials/create/sugarcrm-accounts-contacts/configuration-contacts.png)![
 
 >[!ENDTABS]
 
 ## Volgende stappen
 
-Aan de hand van deze zelfstudie hebt u een verbinding tot stand gebracht met uw [!DNL SugarCRM Accounts & Contacts] -account. U kunt nu aan het volgende leerprogramma verdergaan en [ een dataflow vormen om gegevens in Platform ](../../dataflow/crm.md) te brengen.
+Aan de hand van deze zelfstudie hebt u een verbinding tot stand gebracht met uw [!DNL SugarCRM Accounts & Contacts] -account. U kunt nu aan het volgende leerprogramma verdergaan en [ een dataflow vormen om gegevens in Experience Platform ](../../dataflow/crm.md) te brengen.
 
 ## Aanvullende bronnen
 
@@ -113,7 +113,7 @@ De snelheid van de API van [!DNL SugarCRM] is 90 vraag per minuut of 2000 vraag 
 
 Volg onderstaande stappen om te controleren of u de bron juist hebt ingesteld en of [!DNL SugarCRM Accounts & Contacts] -gegevens worden ingevoerd:
 
-* Selecteer in de interface Platform de optie **[!UICONTROL View Dataflows]** naast het kaartmenu [!DNL SugarCRM Accounts & Contacts] in de catalogus met bronnen. Selecteer vervolgens **[!UICONTROL Preview dataset]** om de gegevens te verifiëren die zijn ingevoerd.
+* Selecteer in de gebruikersinterface van Experience Platform de optie **[!UICONTROL View Dataflows]** naast het kaartmenu [!DNL SugarCRM Accounts & Contacts] in de catalogus met bronnen. Selecteer vervolgens **[!UICONTROL Preview dataset]** om de gegevens te verifiëren die zijn ingevoerd.
 
 * Afhankelijk van het objecttype waarmee u werkt, kunt u de samengevoegde gegevens vergelijken met de tellingen die op de pagina&#39;s [!DNL SugarMarket] Accounts of Contacts hieronder worden weergegeven:
 

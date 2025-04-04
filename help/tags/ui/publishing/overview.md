@@ -2,10 +2,10 @@
 title: Overzicht van publicatie
 description: Meer informatie over het publiceren van wijzigingen in uw codebibliotheken voor tagbeheer in Adobe Experience Platform.
 exl-id: 32eaad87-d7dc-4812-b546-a136511512fe
-source-git-commit: a8b0282004dd57096dfc63a9adb82ad70d37495d
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '609'
-ht-degree: 0%
+source-wordcount: '610'
+ht-degree: 7%
 
 ---
 
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch is omgedoopt tot een reeks technologieën voor gegevensverzameling in Adobe Experience Platform. Diverse terminologische wijzigingen zijn als gevolg hiervan in de productdocumentatie doorgevoerd. Gelieve te verwijzen naar het volgende [ document ](../../term-updates.md) voor een geconsolideerde verwijzing van de terminologieveranderingen.
+>Adobe Experience Platform Launch is omgedoopt tot een reeks technologieën voor dataverzameling in Adobe Experience Platform.  Als gevolg hiervan zijn er verschillende terminologiewijzigingen in de productdocumentatie doorgevoerd. Raadpleeg het volgende [ document ](../../term-updates.md) voor een geconsolideerde referentie van de terminologiewijzigingen.
 
 Met Adobe Experience Platform kunt u wijzigingen in uw code voor tagbeheer opnemen in afzonderlijke bibliotheken. Aangezien meerdere bibliotheken nu parallel door verschillende teams kunnen worden ontwikkeld, moeten deze bibliotheken een weloverwogen, toegestane procedure volgen voor het samenvoegen van wijzigingen voordat ze naar uw productieomgeving worden geduwd.
 
@@ -33,8 +33,8 @@ Naast de publicatiestroom zijn er diverse componenten en relaties die u belangri
 | --- | --- |
 | Bibliotheken | Een bibliotheek is een set instructies voor hoe extensies, gegevenselementen en regels met elkaar en met uw website moeten communiceren. Wanneer een bibliotheek wordt gecompileerd om aan een milieu worden opgesteld, wordt die bibliotheek een bouwstijl.<br><br> zie het overzicht op [ bibliotheken ](./libraries.md) voor meer informatie over om, bibliotheken in UI tot stand te brengen te leiden en te activeren. |
 | Builds | Een build is een gecompileerde bibliotheek. Wanneer opgesteld in een milieu, verstrekt een bouwstijl de daadwerkelijke reeks dossiers die de code bevatten die aan browser van elke gebruiker wordt geleverd wanneer zij uw plaats bekijken.<br><br> zie het overzicht op [ bouwt ](./builds.md) voor meer informatie over de inhoud en het formaat van bouwt. |
-| Omgevingen | Een markeringsmilieu is een reeks plaatsingsinstructies die Platform vertelt welke formaat u uw bouwstijl binnen wilt en waar u die geleverde bouwstijl zou willen.<br><br> zie het overzicht op [ milieu&#39;s ](./environments.md) voor meer informatie over de verschillende soorten milieu&#39;s, om bestaande milieu&#39;s te installeren en te vormen, en hoe te om nieuwe milieu&#39;s tot stand te brengen. |
-| Gastheren | Een gastheer vertegenwoordigt de verbindingsdetails voor een milieu om een bouwstijl aan uw website te leveren. U kunt ervoor kiezen dat Adobe het hosten van uw build kan beheren, of u kunt in plaats daarvan informatie voor uw eigen hostservers opgeven.<br><br> zie het overzicht op [ gastheren ](./hosts/hosts-overview.md) voor meer informatie over elke het ontvangen optie. |
+| Omgevingen | Een markeringsmilieu is een reeks plaatsingsinstructies die Experience Platform vertelt welke formaat u uw bouwstijl binnen wilt en waar u die geleverde bouwstijl zou willen.<br><br> zie het overzicht op [ milieu&#39;s ](./environments.md) voor meer informatie over de verschillende soorten milieu&#39;s, om bestaande milieu&#39;s te installeren en te vormen, en hoe te om nieuwe milieu&#39;s tot stand te brengen. |
+| Gastheren | Een gastheer vertegenwoordigt de verbindingsdetails voor een milieu om een bouwstijl aan uw website te leveren. U kunt ervoor kiezen om Adobe de hosting van uw build te laten beheren, of u kunt in plaats daarvan informatie voor uw eigen hostservers opgeven.<br><br> zie het overzicht op [ gastheren ](./hosts/hosts-overview.md) voor meer informatie over elke het ontvangen optie. |
 | Code aan de clientzijde | De client-side code is de set scripts die u in de broncode voor uw site of toepassing plaatst die elk clientapparaat vertelt waar de build moet worden opgehaald. De code is in bijlage aan een milieu en kan veranderen wanneer u uw milieuconfiguratie verandert.<br><br> zie de sectie op [ bed codes ](./environments.md#embed-code) in het milieu- overzicht in om meer te leren. |
 
 ## Volgende stappen

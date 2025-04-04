@@ -3,11 +3,11 @@ keywords: Experience Platform;home;populaire onderwerpen;cloudopslaggegevens;str
 solution: Experience Platform
 title: Een gegevensstroom voor streaming maken voor Raw-gegevens met de Flow Service API
 type: Tutorial
-description: In deze zelfstudie worden de stappen beschreven voor het ophalen van streaminggegevens en het overbrengen van deze gegevens naar het platform met behulp van bronconnectors en API's.
+description: In deze zelfstudie worden de stappen beschreven voor het ophalen van streaminggegevens en het plaatsen van deze gegevens naar Experience Platform met behulp van bronconnectors en API's.
 exl-id: 898df7fe-37a9-4495-ac05-30029258a6f4
-source-git-commit: 863889984e5e77770638eb984e129e720b3d4458
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1169'
+source-wordcount: '1180'
 ht-degree: 0%
 
 ---
@@ -20,16 +20,16 @@ Dit leerprogramma behandelt de stappen om ruwe gegevens van een het stromen bron
 
 Voor deze zelfstudie hebt u een goed inzicht nodig in de volgende onderdelen van Adobe Experience Platform:
 
-- [[!DNL Experience Data Model (XDM) System]](../../../../xdm/home.md): Het gestandaardiseerde framework waarmee Experience Platform gegevens voor klantervaring organiseert.
+- [[!DNL Experience Data Model (XDM) System]](../../../../xdm/home.md): Het gestandaardiseerde raamwerk waarmee Experience Platform gegevens over de ervaring van klanten organiseert.
    - [ Grondbeginselen van schemacompositie ](../../../../xdm/schema/composition.md): Leer over de basisbouwstenen van schema&#39;s XDM, met inbegrip van zeer belangrijke principes en beste praktijken in schemacompositie.
    - [ de ontwikkelaarsgids van de Registratie van het Schema ](../../../../xdm/api/getting-started.md): Omvat belangrijke informatie die u moet kennen om vraag aan de Registratie API van het Schema met succes uit te voeren. Dit omvat uw `{TENANT_ID}`, het concept &quot;containers&quot;, en de vereiste kopballen voor het maken van verzoeken (met speciale aandacht voor de Accept kopbal en zijn mogelijke waarden).
-- [[!DNL Catalog Service]](../../../../catalog/home.md): Catalog is het recordsysteem voor de gegevenslocatie en -lijn in het Experience Platform.
-- [[!DNL Streaming ingestion]](../../../../ingestion/streaming-ingestion/overview.md): De het stromen opname voor Platform verstrekt gebruikers een methode om gegevens van cliënt en server-zijapparaten naar Experience Platform in echt te verzenden - tijd.
-- [ Sandboxes ](../../../../sandboxes/home.md): Experience Platform verstrekt virtuele zandbakken die één enkele instantie van het Platform in afzonderlijke virtuele milieu&#39;s verdelen helpen digitale ervaringstoepassingen ontwikkelen en ontwikkelen.
+- [[!DNL Catalog Service]](../../../../catalog/home.md): Catalog is het recordsysteem voor gegevenslocatie en -lijn in Experience Platform.
+- [[!DNL Streaming ingestion]](../../../../ingestion/streaming-ingestion/overview.md): bij het streamen van tags voor Experience Platform beschikken gebruikers over een methode om gegevens van client- en serverapparaten in real-time naar Experience Platform te verzenden.
+- [ Sandboxes ](../../../../sandboxes/home.md): Experience Platform verstrekt virtuele zandbakken die één enkele instantie van Experience Platform in afzonderlijke virtuele milieu&#39;s verdelen helpen digitale ervaringstoepassingen ontwikkelen en ontwikkelen.
 
-### Platform-API&#39;s gebruiken
+### Experience Platform API&#39;s gebruiken
 
-Voor informatie over hoe te om vraag aan Platform APIs met succes te maken, zie de gids op [ begonnen wordt met Platform APIs ](../../../../landing/api-guide.md).
+Voor informatie over hoe te om vraag aan Experience Platform APIs met succes te maken, zie de gids op [ begonnen wordt met Experience Platform APIs ](../../../../landing/api-guide.md).
 
 ### Een bronverbinding maken {#source}
 
@@ -41,9 +41,9 @@ Deze zelfstudie vereist ook dat u een geldige bron-verbindings-id hebt voor een 
 
 ## Een doel-XDM-schema maken {#target-schema}
 
-Om de brongegevens in Platform te gebruiken, moet een doelschema worden gecreeerd om de brongegevens volgens uw behoeften te structureren. Het doelschema wordt dan gebruikt om een dataset van het Platform tot stand te brengen waarin de brongegevens bevat zijn. Dit doel-XDM-schema breidt ook de klasse XDM [!DNL Individual Profile] uit.
+Als u de brongegevens in Experience Platform wilt gebruiken, moet u een doelschema maken om de brongegevens naar wens te structureren. Het doelschema wordt dan gebruikt om een dataset van Experience Platform tot stand te brengen waarin de brongegevens bevat zijn. Dit doel-XDM-schema breidt ook de klasse XDM [!DNL Individual Profile] uit.
 
-Om een doelXDM schema tot stand te brengen, doe een verzoek van de POST aan het `/schemas` eindpunt van [[!DNL Schema Registry]  API ](https://www.adobe.io/experience-platform-apis/references/schema-registry/).
+Om een doelXDM schema tot stand te brengen, doe een POST verzoek aan het `/schemas` eindpunt van [[!DNL Schema Registry]  API ](https://www.adobe.io/experience-platform-apis/references/schema-registry/).
 
 **API formaat**
 
@@ -151,7 +151,7 @@ Een succesvolle reactie keert details van het pas gecreëerde schema met inbegri
 
 ## Een doelgegevensset maken
 
-Met een doel-XDM-schema gemaakt en zijn unieke `$id` kunt u nu een doeldataset maken die uw brongegevens bevat. Om een doeldataset tot stand te brengen, doe een verzoek van de POST aan het `dataSets` eindpunt van de [ Dienst API van de Catalogus ](https://www.adobe.io/experience-platform-apis/references/catalog/), terwijl het verstrekken van identiteitskaart van het doelschema binnen de nuttige lading.
+Met een doel-XDM-schema gemaakt en zijn unieke `$id` kunt u nu een doeldataset maken die uw brongegevens bevat. Om een doeldataset tot stand te brengen, doe een POST- verzoek aan het `dataSets` eindpunt van de [ Dienst API van de Catalogus ](https://www.adobe.io/experience-platform-apis/references/catalog/), terwijl het verstrekken van identiteitskaart van het doelschema binnen de nuttige lading.
 
 **API formaat**
 
@@ -204,9 +204,9 @@ Een geslaagde reactie retourneert een array met de id van de nieuwe dataset in d
 
 ## Een doelverbinding maken {#target-connection}
 
-De verbindingen van het doel leiden tot en leiden een bestemmingsverbinding aan Platform of om het even welke plaats waar de overgebrachte gegevens zullen landen. De verbindingen van het doel bevatten informatie betreffende gegevensbestemming, gegevensformaat, en identiteitskaart van de doelverbinding die wordt vereist om een gegevensstroom tot stand te brengen. De de verbindingsinstanties van het doel zijn specifiek voor een huurder en organisatie.
+De verbindingen van het doel leiden tot en leiden een bestemmingsverbinding aan Experience Platform of om het even welke plaats waar de overgebrachte gegevens zullen landen. De verbindingen van het doel bevatten informatie betreffende gegevensbestemming, gegevensformaat, en identiteitskaart van de doelverbinding die wordt vereist om een gegevensstroom tot stand te brengen. De de verbindingsinstanties van het doel zijn specifiek voor een huurder en organisatie.
 
-Als u een doelverbinding wilt maken, vraagt u een POST naar het `/targetConnections` -eindpunt van de [!DNL Flow Service] API. Als onderdeel van de aanvraag moet u de gegevensindeling opgeven, de `dataSetId` die in de vorige stap is opgehaald en de vaste id van de verbindingsspecificatie die aan [!DNL Data Lake] is gekoppeld. Deze id is `c604ff05-7f1a-43c0-8e18-33bf874cb11c` .
+Als u een doelverbinding wilt maken, vraagt u een POST-aanvraag naar het `/targetConnections` -eindpunt van de [!DNL Flow Service] API. Als onderdeel van de aanvraag moet u de gegevensindeling opgeven, de `dataSetId` die in de vorige stap is opgehaald en de vaste id van de verbindingsspecificatie die aan [!DNL Data Lake] is gekoppeld. Deze id is `c604ff05-7f1a-43c0-8e18-33bf874cb11c` .
 
 **API formaat**
 
@@ -265,7 +265,7 @@ Een succesvolle reactie keert het unieke herkenningsteken van de nieuwe doelverb
 
 Opdat de brongegevens in een doeldataset moeten worden opgenomen, moet het eerst aan het doelschema worden in kaart gebracht dat de doeldataset zich aan houdt.
 
-Om een mappingsreeks tot stand te brengen, doe een verzoek van de POST aan het `mappingSets` eindpunt van [[!DNL Data Prep]  API ](https://developer.adobe.com/experience-platform-apis/references/data-prep/) terwijl het verstrekken van uw doelXDM schema `$id` en de details van de mappingsreeksen u wilt tot stand brengen.
+Om een mappingsreeks tot stand te brengen, doe een POST- verzoek aan het `mappingSets` eindpunt van [[!DNL Data Prep]  API ](https://developer.adobe.com/experience-platform-apis/references/data-prep/) terwijl het verstrekken van uw doelXDM schema `$id` en de details van de mappingsreeksen u wilt tot stand brengen.
 
 **API formaat**
 
@@ -325,7 +325,7 @@ Een succesvolle reactie keert details van de pas gecreëerde afbeelding met inbe
 
 ## Een lijst met gegevensstroomspecificaties ophalen {#specs}
 
-Een gegevensstroom is verantwoordelijk voor het verzamelen van gegevens uit bronnen en het brengen van hen in Platform. Als u een gegevensstroom wilt maken, moet u eerst de dataflow-specificaties verkrijgen door een aanvraag voor GET naar de [!DNL Flow Service] API uit te voeren.
+Een gegevensstroom is verantwoordelijk voor het verzamelen van gegevens uit bronnen en het brengen van deze naar Experience Platform. Als u een gegevensstroom wilt maken, moet u eerst de gegevensstroomspecificaties verkrijgen door een GET-aanvraag voor de [!DNL Flow Service] API uit te voeren.
 
 **API formaat**
 
@@ -422,7 +422,7 @@ De laatste stap op weg naar het verzamelen van streaminggegevens is het maken va
 - [Toewijzing-id](#mapping)
 - [Dataflow-specificatie-id](#specs)
 
-Een dataflow is verantwoordelijk voor het plannen en verzamelen van gegevens uit een bron. U kunt een gegevensstroom tot stand brengen door een verzoek van de POST uit te voeren terwijl het verstrekken van de eerder vermelde waarden binnen de lading.
+Een dataflow is verantwoordelijk voor het plannen en verzamelen van gegevens uit een bron. U kunt een gegevensstroom tot stand brengen door een POST- verzoek uit te voeren terwijl het verstrekken van de eerder vermelde waarden binnen de lading.
 
 **API formaat**
 
@@ -566,7 +566,7 @@ De volgende voorbeelden zijn van toepassing op alle:
 
 ## Volgende stappen
 
-Aan de hand van deze zelfstudie hebt u een gegevensstroom gemaakt voor het verzamelen van streaminggegevens via de streamingconnector. Binnenkomende gegevens kunnen nu worden gebruikt door downstream-platformservices zoals [!DNL Real-Time Customer Profile] en [!DNL Data Science Workspace] . Raadpleeg de volgende documenten voor meer informatie:
+Aan de hand van deze zelfstudie hebt u een gegevensstroom gemaakt voor het verzamelen van streaminggegevens via de streamingconnector. Binnenkomende gegevens kunnen nu worden gebruikt door downstream Experience Platform-services, zoals [!DNL Real-Time Customer Profile] en [!DNL Data Science Workspace] . Raadpleeg de volgende documenten voor meer informatie:
 
 - [Overzicht van het realtime klantprofiel](../../../../profile/home.md)
 - [Overzicht van Data Science Workspace](../../../../data-science-workspace/home.md)

@@ -3,7 +3,7 @@ title: Doel van Auditieanalyse
 description: Bekijk het publiek waarvoor klanten in Customer Journey Analytics in aanmerking komen.
 badgeLimitedAvailability: label="Beperkte beschikbaarheid" type="Informative"
 exl-id: 81437237-d746-4ce9-b938-7d2541f0ed32
-source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '760'
 ht-degree: 0%
@@ -16,14 +16,14 @@ De [!UICONTROL Audience Analysis] bestemming staat u toe om het publieksgegevens
 
 >[!AVAILABILITY]
 >
->Deze bestemming bevindt zich in een beperkte testfase. Als u in het gebruiken van deze bestemming geinteresseerd bent, contacteer uw Team van de Rekening van de Adobe.
+>Deze bestemming bevindt zich in een beperkte testfase. Neem contact op met het Adobe-accountteam als u deze bestemming wilt gebruiken.
 
 ## Vereisten
 
 Het volgende wordt vereist alvorens deze bestemming te gebruiken:
 
-* U moet worden provisioned om de bestemming van de Analyse van de Publiek te gebruiken. Neem contact op met het accountteam van de Adobe als u nog geen provisioned bent voor het gebruik van deze bestemming.
-* U moet zijn provisioned om Customer Journey Analytics te gebruiken.
+* U moet worden provisioned om de bestemming van de Analyse van de Publiek te gebruiken. Neem contact op met uw Adobe-accountteam als u nog geen provisioned bent voor het gebruik van deze bestemming.
+* U moet zijn ingericht om Customer Journey Analytics te kunnen gebruiken.
 * Er moet ten minste één publiek zijn gemaakt in Adobe Experience Platform.
 
 ## Ondersteunde identiteiten
@@ -35,8 +35,8 @@ De Analyse van het publiek steunt de activering van identiteiten die in de lijst
 | GAID | GOOGLE ADVERTISING ID | Selecteer de GAID doelidentiteit wanneer uw bronidentiteit een GAID-naamruimte is. |
 | IDFA | Apple-id voor adverteerders | Selecteer de IDFA doelidentiteit wanneer uw bronidentiteit een IDFA namespace is. |
 | ECID | Experience Cloud-id | Een naamruimte die ECID vertegenwoordigt. Deze naamruimte kan ook worden aangeduid met de volgende aliassen: &quot;Adobe Marketing Cloud ID&quot;, &quot;Adobe Experience Cloud ID&quot;, &quot;Adobe Experience Platform ID&quot;. Zie het volgende document op [ ECID ](/help/identity-service/features/ecid.md) voor meer informatie. |
-| phone_sha256 | Telefoonnummers die zijn hashed met het SHA256-algoritme | Adobe Experience Platform biedt ondersteuning voor zowel platte tekst- als SHA256-telefoonnummers. Wanneer het bronveld hashingkenmerken bevat, schakelt u de optie **[!UICONTROL Apply transformation]** in om de gegevens automatisch te laten hashen bij activering door [!DNL Platform] . |
-| email_lc_sha256 | E-mailadressen die met het algoritme SHA256 worden gehasht | Adobe Experience Platform biedt ondersteuning voor zowel platte tekst- als SHA256-e-mailadressen met hashing. Wanneer het bronveld hashingkenmerken bevat, schakelt u de optie **[!UICONTROL Apply transformation]** in om de gegevens automatisch te laten hashen bij activering door [!DNL Platform] . |
+| phone_sha256 | Telefoonnummers die zijn hashed met het SHA256-algoritme | Adobe Experience Platform biedt ondersteuning voor zowel platte tekst- als SHA256-telefoonnummers. Wanneer het bronveld hashingkenmerken bevat, schakelt u de optie **[!UICONTROL Apply transformation]** in om de gegevens automatisch te laten hashen bij activering door [!DNL Experience Platform] . |
+| email_lc_sha256 | E-mailadressen die met het algoritme SHA256 worden gehasht | Adobe Experience Platform biedt ondersteuning voor zowel platte tekst- als SHA256-e-mailadressen met hashing. Wanneer het bronveld hashingkenmerken bevat, schakelt u de optie **[!UICONTROL Apply transformation]** in om de gegevens automatisch te laten hashen bij activering door [!DNL Experience Platform] . |
 | extern_id | Aangepaste gebruikers-id&#39;s | Selecteer deze doelidentiteit wanneer uw bronidentiteit een aangepaste naamruimte is. |
 
 {style="table-layout:auto"}
@@ -47,7 +47,7 @@ De volgende soorten doelgroepen worden ondersteund bij gebruik van dit doel:
 
 | Oorsprong publiek | Ondersteund | Beschrijving |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | ✓ | Het publiek produceerde door de Dienst van de Segmentatie van het Experience Platform [ ](../../../segmentation/home.md). |
+| [!DNL Segmentation Service] | ✓ | Het publiek produceerde door de Dienst van de Segmentatie van Experience Platform [ ](../../../segmentation/home.md). |
 | Aangepaste uploads | ✓ | Het publiek [ ingevoerde ](../../../segmentation/ui/audience-portal.md#import-audience) in Experience Platform van Csv- dossiers. |
 
 {style="table-layout:auto"}

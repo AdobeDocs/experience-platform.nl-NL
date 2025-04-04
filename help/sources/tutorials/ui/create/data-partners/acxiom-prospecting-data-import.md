@@ -1,12 +1,12 @@
 ---
 title: Importeren van Acrobat-perspectiefgegevens
-description: Leer hoe u via de gebruikersinterface verbinding maakt met Acrobat Prospecting Data naar Adobe Experience Platform en Adobe Real-time Customer Data Platform.
+description: Leer hoe u via de gebruikersinterface verbinding maakt met Acrobat Prospecting Data naar Adobe Experience Platform en Adobe Real-Time Customer Data Platform.
 last-substantial-update: 2024-02-21T00:00:00Z
 badge: Beta
 exl-id: cde0bfe9-0604-41d3-8422-114f58a74d04
-source-git-commit: d048109141168b33795753c4706dac64cdf29ca5
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '1818'
+source-wordcount: '1819'
 ht-degree: 0%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 0%
 >
 >De bron [!DNL Acxiom Prospecting Data Import] is in bèta. Gelieve te lezen het [ overzicht van bronnen ](../../../../home.md#terms-and-conditions) voor meer informatie bij het gebruiken van bèta-geëtiketteerde bronnen.
 
-De [!DNL Acxiom] -programma voor het doorvoeren van gegevens voor Adobe Real-time Customer Data Platform is een proces voor het bieden van het meest productieve mogelijke publiek. [!DNL Acxiom] gebruikt Real-Time CDP-gegevens van de eerste partij via een beveiligde exportbewerking en voert deze gegevens uit via een bekroond systeem voor het oplossen van hygiëne en identiteit. Dit veroorzaakt een gegevensdossier dat als onderdrukkingslijst moet worden gebruikt. Dit gegevensdossier wordt dan aangepast tegen het Globale gegevensbestand van Acxiom, dat toelaat dat de perspectieflijsten worden gemaakt voor de invoer.
+De [!DNL Acxiom] -programma voor het doorvoeren van gegevens voor Adobe Real-Time Customer Data Platform is een proces voor het bieden van het meest productieve mogelijke publiek. [!DNL Acxiom] gebruikt Real-Time CDP-gegevens van de eerste partij via een beveiligde exportbewerking en voert deze gegevens uit via een bekroond systeem voor het oplossen van hygiëne en identiteit. Dit veroorzaakt een gegevensdossier dat als onderdrukkingslijst moet worden gebruikt. Dit gegevensdossier wordt dan aangepast tegen het Globale gegevensbestand van Acxiom, dat toelaat dat de perspectieflijsten worden gemaakt voor de invoer.
 
 U kunt de [!DNL Acxiom] bron gebruiken om reacties van de dienst van het Vooruitzicht van Acxiom terug te winnen en in kaart te brengen gebruikend Amazon S3 als dalingspunt.
 
@@ -25,9 +25,9 @@ Lees deze zelfstudie om te leren hoe u een [!DNL Acxiom Prospecting Data Import]
 
 ## Vereisten {#prerequisites}
 
-Deze zelfstudie vereist een goed begrip van de volgende onderdelen van het Experience Platform:
+Deze zelfstudie vereist een goed begrip van de volgende onderdelen van Experience Platform:
 
-* [[!DNL Experience Data Model (XDM)]  Systeem ](../../../../../xdm/home.md): Het gestandaardiseerde kader waardoor het Experience Platform gegevens van de klantenervaring organiseert.
+* [[!DNL Experience Data Model (XDM)]  Systeem ](../../../../../xdm/home.md): Het gestandaardiseerde kader waardoor Experience Platform gegevens van de klantenervaring organiseert.
    * [ Grondbeginselen van schemacompositie ](../../../../../xdm/schema/composition.md): Leer over de basisbouwstenen van schema&#39;s XDM, met inbegrip van zeer belangrijke principes en beste praktijken in schemacompositie.
    * [ het leerprogramma van de Redacteur van het Schema ](../../../../../xdm/tutorials/create-schema-ui.md): Leer hoe te om douaneschema&#39;s tot stand te brengen gebruikend de Redacteur UI van het Schema.
 * [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md): biedt een uniform, real-time consumentenprofiel dat is gebaseerd op geaggregeerde gegevens van meerdere bronnen.
@@ -35,7 +35,7 @@ Deze zelfstudie vereist een goed begrip van de volgende onderdelen van het Exper
 
 ### Vereiste referenties verzamelen
 
-Om tot uw emmer op Experience Platform toegang te hebben, moet u geldige waarden voor de volgende geloofsbrieven verstrekken:
+Als u toegang wilt tot uw emmertje op Experience Platform, moet u geldige waarden opgeven voor de volgende referenties:
 
 | Credentials | Beschrijving |
 | --- | --- |
@@ -46,11 +46,11 @@ Om tot uw emmer op Experience Platform toegang te hebben, moet u geldige waarden
 
 >[!IMPORTANT]
 >
->U moet zowel **[!UICONTROL View Sources]** als **[!UICONTROL Manage Sources]** machtigingen hebben ingeschakeld voor uw account om uw [!DNL Acxiom] -account aan Experience Platform te kunnen koppelen. Neem contact op met de productbeheerder om de benodigde machtigingen te verkrijgen. Voor meer informatie, lees de [ gids UI van de toegangscontrole ](../../../../../access-control/ui/overview.md).
+>U moet zowel **[!UICONTROL View Sources]** - als **[!UICONTROL Manage Sources]** -machtigingen hebben ingeschakeld voor uw account om uw [!DNL Acxiom] -account te kunnen verbinden met Experience Platform. Neem contact op met de productbeheerder om de benodigde machtigingen te verkrijgen. Voor meer informatie, lees de [ gids UI van de toegangscontrole ](../../../../../access-control/ui/overview.md).
 
 ## Sluit uw [!DNL Acxiom] -account aan
 
-Selecteer in de gebruikersinterface van het platform **[!UICONTROL Sources]** in de linkernavigatiebalk voor toegang tot de werkruimte van [!UICONTROL Sources] . In het scherm [!UICONTROL Catalog] worden diverse bronnen weergegeven waarmee u een account kunt maken.
+Selecteer in de gebruikersinterface van Experience Platform de optie **[!UICONTROL Sources]** in de linkernavigatiebalk voor toegang tot de werkruimte van [!UICONTROL Sources] . In het scherm [!UICONTROL Catalog] worden diverse bronnen weergegeven waarmee u een account kunt maken.
 
 U kunt de juiste categorie selecteren in de catalogus aan de linkerkant van het scherm. U kunt ook de specifieke bron vinden waarmee u wilt werken met de zoekoptie.
 
@@ -175,7 +175,7 @@ Nadat u de gegevensstroom hebt gereviseerd, klikt u op Voltooien en wacht u enig
 
 ## Volgende stappen
 
-Aan de hand van deze zelfstudie hebt u een gegevensstroom gemaakt om batchgegevens van uw [!DNL Acxiom] -bron naar het Experience Platform te verzenden. Voor extra bronnen raadpleegt u de documentatie die hieronder wordt beschreven.
+Aan de hand van deze zelfstudie hebt u een gegevensstroom gemaakt om batchgegevens van uw [!DNL Acxiom] -bron naar Experience Platform te verzenden. Voor extra bronnen raadpleegt u de documentatie die hieronder wordt beschreven.
 
 ### Uw gegevensstroom controleren
 

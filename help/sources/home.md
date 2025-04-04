@@ -2,20 +2,20 @@
 keywords: Experience Platform;home;populaire onderwerpen;bronconnectors;bronaansluiting;bronnen;gegevensbronnen;gegevensbron;gegevensbronverbinding
 solution: Experience Platform
 title: Overzicht Source Connectors
-description: Adobe Experience Platform staat toe dat gegevens uit externe bronnen worden opgenomen terwijl u de mogelijkheid krijgt om inkomende gegevens te structureren, te labelen en te verbeteren met behulp van de platformservices. U kunt gegevens invoeren uit verschillende bronnen, zoals Adobe-toepassingen, opslag in de cloud, databases en vele andere.
+description: Adobe Experience Platform staat toe dat gegevens uit externe bronnen worden opgenomen en biedt u de mogelijkheid om inkomende gegevens te structureren, labelen en verbeteren met behulp van Experience Platform-services. U kunt gegevens invoeren uit verschillende bronnen, zoals Adobe-toepassingen, opslag in de cloud, databases en vele andere.
 exl-id: efdbed4d-5697-43ef-a47a-a8bcf0f13237
-source-git-commit: 0a6a9fe759d71fd62e3eaf5c93a091614f3c76a0
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1522'
+source-wordcount: '1527'
 ht-degree: 0%
 
 ---
 
 # Overzicht van Source-connectors
 
-Adobe Experience Platform staat toe dat gegevens uit externe bronnen worden opgenomen terwijl u de mogelijkheid krijgt om inkomende gegevens te structureren, te labelen en te verbeteren met behulp van de platformservices. U kunt gegevens invoeren uit verschillende bronnen, zoals Adobe-toepassingen, opslag in de cloud, databases en vele andere.
+Adobe Experience Platform staat toe dat gegevens uit externe bronnen worden opgenomen en biedt u de mogelijkheid om inkomende gegevens te structureren, labelen en verbeteren met behulp van Experience Platform-services. U kunt gegevens invoeren uit verschillende bronnen, zoals Adobe-toepassingen, opslag in de cloud, databases en vele andere.
 
-[!DNL Flow Service] wordt gebruikt voor het verzamelen en centraliseren van klantgegevens uit verschillende bronnen binnen het platform. De service biedt een gebruikersinterface en RESTful API waarmee u eenvoudig bronverbindingen met verschillende gegevensproviders kunt instellen. Deze bronverbindingen laten u toe om uw derdesystemen voor authentiek te verklaren, tijden voor ingestitielooppas te plaatsen, en gegevensinvoer te beheren.
+[!DNL Flow Service] wordt gebruikt voor het verzamelen en centraliseren van klantgegevens uit verschillende bronnen in Experience Platform. De service biedt een gebruikersinterface en RESTful API waarmee u eenvoudig bronverbindingen met verschillende gegevensproviders kunt instellen. Deze bronverbindingen laten u toe om uw derdesystemen voor authentiek te verklaren, tijden voor ingestitielooppas te plaatsen, en gegevensinvoer te beheren.
 
 Met Experience Platform kunt u gegevens die u uit verschillende bronnen verzamelt, centraliseren en de daaruit verkregen inzichten gebruiken om meer te doen.
 
@@ -84,7 +84,7 @@ Experience Platform biedt ondersteuning voor het opnemen van gegevens van een ex
 
 ### Cloud Storage {#cloud-storage}
 
-Met bronnen voor cloudopslag kunt u uw eigen gegevens overbrengen naar Platform zonder dat u deze hoeft te downloaden, opmaken of uploaden. Ingebedde gegevens kunnen worden opgemaakt als XDM JSON, XDM Parquet, of afgebakend. Elke stap van het proces is geïntegreerd in het Bronwerkschema gebruikend het gebruikersinterface. Zie de volgende verwante documenten voor meer informatie:
+Opslagbronnen in de cloud kunnen uw eigen gegevens naar Experience Platform brengen zonder dat ze hoeven te worden gedownload, opgemaakt of geüpload. Ingebedde gegevens kunnen worden opgemaakt als XDM JSON, XDM Parquet, of afgebakend. Elke stap van het proces is geïntegreerd in het Bronwerkschema gebruikend het gebruikersinterface. Zie de volgende verwante documenten voor meer informatie:
 
 - [[!DNL Azure Data Lake Storage Gen2]](connectors/cloud-storage/adls-gen2.md) [!BADGE  Partij ]{type=Informative}
 - [[!DNL Azure Blob]](connectors/cloud-storage/blob.md) [!BADGE  Partij ]{type=Informative}
@@ -224,11 +224,11 @@ Met toegangsbeheer op basis van kenmerken in Adobe Experience Platform kunnen be
 
 Met op attribuut-gebaseerde toegangsbeheer, kunt u toewijzingsconfiguraties op gebieden toepassen die u toestemmingen hebt. Bovendien kunt u geen gegevens aan een dataset opnemen als u geen toegang tot alle gebieden in de dataset hebt.
 
-#### Ondersteuning voor op kenmerken gebaseerd toegangsbeheer in bronnen
+#### Ondersteuning voor op kenmerken gebaseerde toegangscontrole in bronnen
 
 >[!TIP]
 >
->Op attributen-gebaseerde toegangsbeheer werkt als volgt: **rollen** worden gecreeerd om de types van gebruikers te categoriseren die met uw instantie van het Platform in wisselwerking staan. **de Etiketten** worden toegepast op **rollen** om de toegang van die bepaalde rol aan te wijzen. **de Etiketten** worden ook toegepast op middelen zoals schemagebieden en segmenten. Opdat een gebruiker toegang tot bepaalde schemagebieden en segmenten heeft, moeten zij aan *een rol met het zelfde etiket worden toegevoegd dat aan het gevraagde middel* wordt toegewezen. Voor meer informatie, lees de [ op attributen-gebaseerde gids van begin tot eind van de toegangscontrole ](../access-control/abac/end-to-end-guide.md).
+>Op attributen-gebaseerde toegangsbeheer werkt als volgt: **rollen** worden gecreeerd om de types van gebruikers te categoriseren die met uw instantie van Experience Platform in wisselwerking staan. **de Etiketten** worden toegepast op **rollen** om de toegang van die bepaalde rol aan te wijzen. **de Etiketten** worden ook toegepast op middelen zoals schemagebieden en segmenten. Opdat een gebruiker toegang tot bepaalde schemagebieden en segmenten heeft, moeten zij aan *een rol met het zelfde etiket worden toegevoegd dat aan het gevraagde middel* wordt toegewezen. Voor meer informatie, lees de [ op attributen-gebaseerde gids van begin tot eind van de toegangscontrole ](../access-control/abac/end-to-end-guide.md).
 
 - Pas etiketten op schemagebieden toe om toegang tot specifieke schemagebieden in uw organisatie te bepalen. Zodra de toegang tot specifieke schemagebieden wordt gevestigd, zullen de gebruikers slechts afbeeldingen voor de gebieden kunnen tot stand brengen die zij toegang hebben tot.
 - Gebruikers zonder de juiste rollen kunnen geen dataflows met toewijzingen maken of bijwerken die ontoegankelijke schemavelden bevatten. Bovendien kunnen onbevoegde gebruikers bestaande gegevensstromen met ontoegankelijke schemavelden niet bijwerken, verwijderen, inschakelen of uitschakelen.

@@ -1,11 +1,11 @@
 ---
 keywords: luchtschepen, codes;bestemming van het luchtschip
 title: Koppeling met vliegtuigcodes
-description: Naadloos gegevens van het publiek van de Adobe doorgeven aan het luchtschip als Poortcodes voor doelgroepen binnen het luchtschip.
+description: Geef naadloos Adobe Audience Data door aan het luchtschip als Publiek Tags om zich binnen het luchtschip te richten.
 exl-id: 84cf5504-f0b5-48d8-8da1-ff91ee1dc171
-source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '934'
+source-wordcount: '936'
 ht-degree: 0%
 
 ---
@@ -42,7 +42,7 @@ In deze sectie wordt beschreven welke soorten publiek u naar dit doel kunt expor
 
 | Oorsprong publiek | Ondersteund | Beschrijving |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | ✓ | Het publiek produceerde door de Dienst van de Segmentatie van het Experience Platform [ ](../../../segmentation/home.md). |
+| [!DNL Segmentation Service] | ✓ | Het publiek produceerde door de Dienst van de Segmentatie van Experience Platform [ ](../../../segmentation/home.md). |
 | Aangepaste uploads | ✓ | Het publiek [ ingevoerde ](../../../segmentation/ui/audience-portal.md#import-audience) in Experience Platform van Csv- dossiers. |
 
 {style="table-layout:auto"}
@@ -60,7 +60,7 @@ Raadpleeg de onderstaande tabel voor informatie over het exporttype en de export
 
 ## Taggroepen
 
-Het concept publiek in het Platorm van de Ervaring van de Adobe is gelijkaardig aan [ Markeringen ](https://docs.airship.com/guides/audience/tags/) in Luchtschip, met lichte verschillen in implementatie. Deze integratie brengt het statuut van een gebruiker [ lidmaatschap in een segment van het Experience Platform ](../../../xdm/field-groups/profile/segmentation.md) aan de aanwezigheid of de afwezigheid van een [!DNL Airship] markering in kaart. In een platformpubliek waar de `xdm:status` verandert in `realized` , wordt de tag bijvoorbeeld toegevoegd aan het [!DNL Airship] -kanaal of aan een benoemde gebruiker wordt dit profiel toegewezen. Als de `xdm:status` verandert in `exited` , wordt de tag verwijderd.
+Het concept publiek in het Platform van de Ervaring van Adobe is gelijkaardig aan [ Markeringen ](https://docs.airship.com/guides/audience/tags/) in Luchtschip, met lichte verschillen in implementatie. Deze integratie brengt het statuut van een gebruiker [ lidmaatschap in een segment van Experience Platform ](../../../xdm/field-groups/profile/segmentation.md) aan de aanwezigheid of de afwezigheid van een [!DNL Airship] markering in kaart. In een Experience Platform-publiek waar `xdm:status` verandert in `realized` , wordt de tag bijvoorbeeld toegevoegd aan het [!DNL Airship] -kanaal of aan een benoemde gebruiker wordt dit profiel toegewezen. Als de `xdm:status` verandert in `exited` , wordt de tag verwijderd.
 
 Om deze integratie toe te laten, creeer de groep van de a *markering* in [!DNL Airship] genoemd `adobe-segments`.
 
@@ -76,7 +76,7 @@ Ga naar **[!UICONTROL Settings]**&quot; **[!UICONTROL APIs & Integrations]** in 
 
 Klik op **[!UICONTROL Create Token]**.
 
-Geef uw token een gebruikersvriendelijke naam, bijvoorbeeld Doel van Adobe-tags en selecteer Alle toegang voor de rol.
+Geef uw token een gebruikersvriendelijke naam, bijvoorbeeld &quot;Doel Adobe-tags&quot;, en selecteer &quot;All Access&quot; voor de rol.
 
 Klik op **[!UICONTROL Create Token]** en sla de details op als vertrouwelijk.
 
@@ -92,7 +92,7 @@ Detailhandelaars of entertainmentplatforms kunnen gebruikersprofielen maken voor
 
 U kunt een-op-een berichten in real-time activeren wanneer gebruikers binnen of buiten een bepaald publiek in Adobe Experience Platform vallen.
 
-Een detailhandelaar stelt bijvoorbeeld een specifiek publiek voor jeans op in Platform. Deze detailhandelaar kan nu een mobiel bericht activeren zodra iemand zijn jeans-voorkeur op een bepaald merk instelt.
+Een retailer vestigt bijvoorbeeld een specifiek publiek voor jeans in Experience Platform. Dat retailer nu een mobiel bericht kan activeren zodra iemand zijn jeans-voorkeur instelt op een bepaald merk.
 
 ## Verbinden met de bestemming {#connect}
 

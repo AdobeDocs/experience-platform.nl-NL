@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;inzichten;klantenai;populaire onderwerpen;klantenai segmenten
+keywords: Experience Platform;inzichten;klanten ai;populaire onderwerpen;klantenai segmenten
 solution: Experience Platform, Real-Time Customer Data Platform
 feature: Customer AI
 title: Klantsegmenten maken met voorspelde scores
 description: Wanneer een voorspelling is voltooid, worden voorspelde scores voor de dichtheid automatisch verbruikt door Profielen. Door profielen te verrijken met AI-scores van de Klant, kunnen klantsegmenten worden gemaakt om een publiek te zoeken op basis van hun populatiescore. Deze sectie verstrekt stappen voor het creëren van segmenten gebruikend de Bouwer van het Segment.
 exl-id: ac81f798-f599-4a8d-af25-c00c92e74b4e
-source-git-commit: 68aa226395e8dcbf98a851134332f31303a8c710
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '306'
+source-wordcount: '307'
 ht-degree: 0%
 
 ---
@@ -20,7 +20,7 @@ Wanneer een voorspelling is voltooid, worden voorspelde scores voor de dichtheid
 >
 >Om deze methode te gebruiken, moet het Profiel van de Klant in real time voor de dataset worden toegelaten.
 
-Klik in de interface Platform op **[!UICONTROL Segments]** in de linkernavigatie en klik vervolgens op **[!UICONTROL Create segment]** .
+Klik in de gebruikersinterface van Experience Platform op **[!UICONTROL Segments]** in de linkernavigatie en klik vervolgens op **[!UICONTROL Create segment]** .
 
 ![](../images/user-guide/segments_new.png)
 

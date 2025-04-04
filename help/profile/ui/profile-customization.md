@@ -3,16 +3,16 @@ keywords: Experience Platform;profiel;realtime klantprofiel;gebruikersinterface;
 title: Aanpassing profieldetails in de gebruikersinterface
 description: Deze handleiding bevat stapsgewijze instructies voor het aanpassen van de manier waarop gegevens van het realtime-klantprofiel worden weergegeven in de gebruikersinterface van Adobe Experience Platform.
 exl-id: 76cf8420-cc50-4a56-9f6d-5bfc01efcdb3
-source-git-commit: 69ac6d3f98675df11183082ecbbb49d18ddb57af
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '1315'
+source-wordcount: '1316'
 ht-degree: 0%
 
 ---
 
 # [!DNL Real-Time Customer Profile] detailaanpassing {#profile-detail-customization}
 
-In de Adobe Experience Platform-gebruikersinterface kunt u [!DNL Real-Time Customer Profile] -gegevens weergeven en ermee werken in de vorm van klantprofielen. De profielgegevens die in de gebruikersinterface worden weergegeven, zijn samengevoegd vanuit meerdere profielfragmenten en vormen één weergave van elke afzonderlijke klant. Dit omvat details zoals basiskenmerken, gekoppelde identiteiten en kanaalvoorkeuren. De standaardvelden in profielen kunnen ook op organisatorisch niveau worden gewijzigd, zodat de voorkeurskenmerken [!DNL Profile] worden weergegeven. Deze handleiding bevat stapsgewijze instructies voor het aanpassen van de manier waarop [!DNL Profile] -gegevens worden weergegeven in de gebruikersinterface van het platform.
+In de Adobe Experience Platform-gebruikersinterface kunt u [!DNL Real-Time Customer Profile] -gegevens weergeven en ermee werken in de vorm van klantprofielen. De profielgegevens die in de gebruikersinterface worden weergegeven, zijn samengevoegd vanuit meerdere profielfragmenten en vormen één weergave van elke afzonderlijke klant. Dit omvat details zoals basiskenmerken, gekoppelde identiteiten en kanaalvoorkeuren. De standaardvelden in profielen kunnen ook op organisatorisch niveau worden gewijzigd, zodat de voorkeurskenmerken [!DNL Profile] worden weergegeven. Deze handleiding bevat stapsgewijze instructies voor het aanpassen van de manier waarop [!DNL Profile] -gegevens worden weergegeven in de gebruikersinterface van Experience Platform.
 
 Voor een volledige gids aan Profielen UI, gelieve te bezoeken de [ gids UI van het Profiel ](user-guide.md).
 
@@ -74,7 +74,7 @@ Na het opslaan gaat u terug naar het tabblad **[!UICONTROL Detail]** waar de bij
 
 ## Een nieuwe kaart toevoegen {#add-a-new-card}
 
-Als u de weergave van profielen in het Experience Platform verder wilt aanpassen, kunt u ervoor kiezen nieuwe kaarten aan het dashboard toe te voegen en de kenmerken te selecteren die u op die kaarten wilt weergeven. Selecteer eerst **[!UICONTROL Modify dashboard]** op de tab **[!UICONTROL Detail]** .
+Als u de weergave van profielen in Experience Platform verder wilt aanpassen, kunt u ervoor kiezen nieuwe kaarten toe te voegen aan het dashboard en de kenmerken te selecteren die u op die kaarten wilt weergeven. Selecteer eerst **[!UICONTROL Modify dashboard]** op de tab **[!UICONTROL Detail]** .
 
 ![ de Customize knoop van profieldetails wordt benadrukt.](../images/profile-customization/customize-profile-details.png)
 
@@ -110,4 +110,4 @@ Als u op een gegeven moment besluit dat u de standaardkaarten die sindsdien zijn
 
 ## Volgende stappen
 
-Als u dit document volgt, kunt u nu de profielweergave voor uw organisatie bijwerken, zoals kaarten toevoegen en verwijderen, kaartdetails en kenmerken bewerken en kaarten opnieuw ordenen en vergroten of verkleinen. Meer over het werken met [!DNL Profile] gegevens in het Experience Platform UI leren, gelieve te verwijzen naar de [[!DNL Profile]  gebruikersgids ](user-guide.md).
+Als u dit document volgt, kunt u nu de profielweergave voor uw organisatie bijwerken, zoals kaarten toevoegen en verwijderen, kaartdetails en kenmerken bewerken en kaarten opnieuw ordenen en vergroten of verkleinen. Meer over het werken met [!DNL Profile] gegevens in Experience Platform UI leren, gelieve te verwijzen naar de [[!DNL Profile]  gebruikersgids ](user-guide.md).

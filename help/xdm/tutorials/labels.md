@@ -2,16 +2,16 @@
 title: Labels voor gegevensgebruik voor een schema beheren
 description: Leer hoe u labels voor gegevensgebruik toevoegt aan XDM-schemavelden (Experience Data Model) in de gebruikersinterface van Adobe Experience Platform.
 exl-id: 92284bf7-f034-46cc-b905-bdfb9fcd608a
-source-git-commit: ac6af3e90c417d1c97860394ce8afb07a0a7917d
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '741'
+source-wordcount: '745'
 ht-degree: 0%
 
 ---
 
 # De labels voor gegevensgebruik voor een schema beheren
 
-Alle gegevens die in Adobe Experience Platform worden gebracht worden beperkt door schema&#39;s van de Gegevens van de Ervaring van het Model (XDM). Deze gegevens zijn mogelijk onderworpen aan gebruiksbeperkingen die zijn gedefinieerd door uw organisatie of wettelijke voorschriften. Om van dit rekenschap te geven, staat het Platform u toe om het gebruik van bepaalde datasets en gebieden door het gebruik van [ etiketten van het gegevensgebruik ](../../data-governance/labels/overview.md) te beperken.
+Alle gegevens die in Adobe Experience Platform worden gebracht worden beperkt door schema&#39;s van de Gegevens van de Ervaring van het Model (XDM). Deze gegevens zijn mogelijk onderworpen aan gebruiksbeperkingen die zijn gedefinieerd door uw organisatie of wettelijke voorschriften. Om van dit rekenschap te geven, staat Experience Platform u toe om het gebruik van bepaalde datasets en gebieden door het gebruik van [ etiketten van het gegevensgebruik ](../../data-governance/labels/overview.md) te beperken.
 
 Een label dat wordt toegepast op een schemaveld, geeft het gebruiksbeleid aan dat van toepassing is op de gegevens in dat specifieke veld.
 
@@ -19,15 +19,15 @@ De etiketten kunnen op individuele schema&#39;s, en gebieden binnen die schema&#
 
 Bovendien verspreidt om het even welk gebiedsetiket dat u in één schema toevoegt aan alle andere schema&#39;s die het zelfde gebied van een gedeelde klasse of een gebiedsgroep in dienst nemen. Zo zorgt u ervoor dat de gebruiksregels voor vergelijkbare velden consistent zijn in het gehele gegevensmodel.
 
-Deze zelfstudie behandelt de stappen voor het toevoegen van labels aan een schema met behulp van de Schema-editor in de interface van het platform.
+Deze zelfstudie behandelt de stappen voor het toevoegen van labels aan een schema met behulp van de Schema-editor in de gebruikersinterface van Experience Platform.
 
 ## Aan de slag
 
 Deze handleiding vereist een goed begrip van de volgende onderdelen van Adobe Experience Platform:
 
 * [[!DNL Experience Data Model (XDM) System]](../home.md): Het gestandaardiseerde framework waarmee [!DNL Experience Platform] gegevens voor de klantervaring indeelt.
-   * [ Redacteur van het Schema ](../ui/overview.md): Leer hoe te om schema&#39;s en andere middelen in Platform UI tot stand te brengen en te beheren.
-* [[!DNL Adobe Experience Platform Data Governance]](../../data-governance/home.md): biedt de infrastructuur voor het afdwingen van beperkingen op gegevensgebruik voor platformbewerkingen, waarbij beleidsregels worden gebruikt die definiëren welke marketingacties op gelabelde gegevens kunnen (of kunnen) worden uitgevoerd.
+   * [ Redacteur van het Schema ](../ui/overview.md): Leer hoe te om schema&#39;s en andere middelen in Experience Platform UI tot stand te brengen en te beheren.
+* [[!DNL Adobe Experience Platform Data Governance]](../../data-governance/home.md): biedt de infrastructuur voor het afdwingen van beperkingen voor gegevensgebruik voor Experience Platform-bewerkingen, waarbij beleidsregels worden gebruikt die definiëren welke marketingacties op gelabelde gegevens kunnen (of kunnen) worden uitgevoerd.
 
 ## Selecteer een schema of veld waaraan u labels wilt toevoegen {#select-schema-field}
 

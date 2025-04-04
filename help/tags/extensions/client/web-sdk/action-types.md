@@ -1,11 +1,11 @@
 ---
 title: Handelingstypen in de Adobe Experience Platform Web SDK Extension
-description: Leer meer over de verschillende actietypen die door de de marktextensie van SDK van het Web van Adobe Experience Platform worden verstrekt.
+description: Meer informatie over de verschillende actietypen die worden geboden door de Adobe Experience Platform Web SDK-extensie.
 solution: Experience Platform
 exl-id: a4bf0bb9-59b4-4c43-97e6-387768176517
-source-git-commit: 760484bb7f95df97701f81f78783f0214aecaf5b
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1969'
+source-wordcount: '1976'
 ht-degree: 0%
 
 ---
@@ -32,7 +32,7 @@ U kunt dit actietype voor diverse gebruiksgevallen gebruiken, zoals:
 Dit actietype zal geen vertoningsgebeurtenis voor teruggegeven voorstellingen verzenden. Het zal spoor van teruggegeven voorstellingen houden zodat deze in verdere **[!UICONTROL Send event]** vraag kunnen worden omvat.
 
 
-![ de Markeringen UI van het Platform die het Apply actietype van Voorstellen tonen.](assets/apply-propositions.png)
+![ de Markeringen UI die van Experience Platform het Apply actietype van Voorstellen tonen.](assets/apply-propositions.png)
 
 Dit handelingstype ondersteunt de volgende velden:
 
@@ -45,24 +45,24 @@ Dit handelingstype ondersteunt de volgende velden:
 
 ## Antwoord toepassen {#apply-response}
 
-Gebruik het actietype **[!UICONTROL Apply response]** wanneer u verschillende acties wilt uitvoeren die op een reactie van de Edge Network worden gebaseerd. Dit actietype wordt typisch gebruikt in hybride plaatsingen waar de server een aanvankelijke vraag aan de Edge Network maakt, dan neemt dit actietype de reactie van die vraag en initialiseert het Web SDK in browser.
+Gebruik het actietype **[!UICONTROL Apply response]** wanneer u verschillende handelingen wilt uitvoeren op basis van een reactie van de Edge Network. Dit actietype wordt typisch gebruikt in hybride plaatsingen waar de server een aanvankelijke vraag aan Edge Network maakt, dan neemt dit actietype de reactie van die vraag en initialiseert het Web SDK in browser.
 
 Met dit actietype kan de laadtijd van de client worden verkort bij gebruik van hybride personalisatie.
 
-![ Beeld van het gebruikersinterface van het Experience Platform die het Apply reactietactietype tonen.](assets/apply-response.png)
+![ Beeld van het gebruikersinterface van Experience Platform die het Apply reactietype tonen.](assets/apply-response.png)
 
 Dit handelingstype ondersteunt de volgende configuratieopties:
 
 * **[!UICONTROL Instance]**: Selecteer de Web SDK-instantie die u gebruikt.
-* **[!UICONTROL Response headers]**: Selecteer het gegevenselement dat een object retourneert dat de headertoetsen en waarden bevat die door de serveraanroep van de Edge Network worden geretourneerd.
-* **[!UICONTROL Response body]**: selecteer het gegevenselement dat het object retourneert dat de JSON-payload bevat die door de reactie van de Edge Network wordt opgegeven.
-* **[!UICONTROL Render visual personalization decisions]**: Schakel deze optie in om automatisch de personalisatie-inhoud te renderen die door de Edge Network wordt geleverd en om flikkering te voorkomen de inhoud vooraf te verbergen.
+* **[!UICONTROL Response headers]**: Selecteer het gegevenselement dat een object retourneert dat de headertoetsen en waarden bevat die door de Edge Network-serveraanroep worden geretourneerd.
+* **[!UICONTROL Response body]**: selecteer het gegevenselement dat het object retourneert dat de JSON-payload bevat die door het Edge Network-antwoord wordt opgegeven.
+* **[!UICONTROL Render visual personalization decisions]**: Schakel deze optie in om automatisch de personalisatie-inhoud van de Edge Network te renderen en de inhoud vooraf te verbergen om flikkering te voorkomen.
 
 ## Regels evalueren {#evaluate-rulesets}
 
 Dit actietype activeert manueel liniaalevaluatie. Regels worden door Adobe Journey Optimizer geretourneerd ter ondersteuning van functies zoals in-browser berichten.
 
-![ Beeld van het gebruikersinterface die van het Experience Platform het Evaluate type van de liniaalreactie toont.](assets/evaluate-rulesets.png)
+![ Beeld van het gebruikersinterface van Experience Platform die het Evaluate type van de liniaalreactie toont.](assets/evaluate-rulesets.png)
 
 Dit handelingstype ondersteunt de volgende opties:
 
@@ -73,7 +73,7 @@ Dit handelingstype ondersteunt de volgende opties:
 
 Deze handeling wordt gebruikt om de verouderde Media Analytics API op te halen. Wanneer de handeling wordt geconfigureerd en een objectnaam wordt opgegeven, wordt de verouderde Media Analytics-API geëxporteerd naar dat vensterobject. Als er niets is opgegeven, wordt deze geëxporteerd naar `window.Media` zoals in de huidige Media JS-bibliotheek.
 
-![ beeld van Platform UI die het Get de actietype van de Traceur van de Analyse van Media toont.](assets/get-media-analytics-tracker.png)
+![ Experience Platform UI beeld dat het Get de actietype van de Traceur van de Analyse van Media toont.](assets/get-media-analytics-tracker.png)
 
 ## Omleiden met identiteit {#redirect-with-identity}
 
@@ -81,17 +81,17 @@ Gebruik dit actietype om identiteiten van de huidige pagina aan andere domeinen 
 
 ## Gebeurtenis Send {#send-event}
 
-Verzendt een gebeurtenis naar het Experience Platform, zodat Platform de gegevens kan verzamelen die u verzendt en op die informatie kan handelen. Alle gegevens die u wilt verzenden, kunnen in het veld **[!UICONTROL XDM Data]** worden verzonden. Gebruik een [!DNL JSON] -object dat voldoet aan de structuur van uw [!DNL XDM] -schema. Dit object kan op de pagina worden gemaakt of via een **[!UICONTROL Custom Code]** **[!UICONTROL Data Element]** .
+Verstuurt een gebeurtenis naar Experience Platform zodat Experience Platform de gegevens die u verzendt kan verzamelen en op die informatie kan reageren. Alle gegevens die u wilt verzenden, kunnen in het veld **[!UICONTROL XDM Data]** worden verzonden. Gebruik een [!DNL JSON] -object dat voldoet aan de structuur van uw [!DNL XDM] -schema. Dit object kan op de pagina worden gemaakt of via een **[!UICONTROL Custom Code]** **[!UICONTROL Data Element]** .
 
 Het handelingstype **[!UICONTROL Send Event]** ondersteunt de onderstaande velden en instellingen. Deze velden zijn allemaal optioneel.
 
 ### Instantie-instellingen {#instance}
 
-Gebruik de kiezer van **[!UICONTROL Instance]** om de Web SDK-instantie te kiezen die u wilt configureren. Als u slechts één instantie hebt, wordt deze vooraf geselecteerd.
+Gebruik de kiezer van **[!UICONTROL Instance]** om uw Web SDK-instantie te kiezen die u wilt configureren. Als u slechts één instantie hebt, wordt deze vooraf geselecteerd.
 
-![ beeld van de Markeringen UI van het Platform die de instantiemontages voor het Send actietype van de Gebeurtenis tonen.](assets/instance-settings.png)
+![ het beeld van de Markeringen UI van Experience Platform die de instantiemontages voor het Send actietype van de Gebeurtenis tonen.](assets/instance-settings.png)
 
-* **[!UICONTROL Instance]**: Selecteer de instantie van SDK van het Web die u wilt vormen. Als u slechts één instantie hebt, wordt deze vooraf geselecteerd.
+* **[!UICONTROL Instance]**: Selecteer de Web SDK-instantie die u wilt configureren. Als u slechts één instantie hebt, wordt deze vooraf geselecteerd.
 * **[!UICONTROL Use guided events]**: Schakel deze optie in om bepaalde velden automatisch in te vullen of te verbergen om een bepaald geval van gebruik in te schakelen. Als u deze optie inschakelt, worden de volgende instellingen weergegeven.
    * **[!UICONTROL Request personalization]**: Deze gebeurtenis moet boven aan de pagina worden aangeroepen. Wanneer deze gebeurtenis is geselecteerd, worden de volgende velden ingesteld:
       * **[!UICONTROL Type]**: **[!UICONTROL Decisioning Proposition Fetch]**
@@ -108,31 +108,31 @@ Gebruik de kiezer van **[!UICONTROL Instance]** om de Web SDK-instantie te kieze
 
 ### Gegevens {#data}
 
-![ beeld van de Markeringen UI van het Platform die de het elementenmontages van Gegevens voor het Send actietype van de Gebeurtenis tonen.](assets/data.png)
+![ het beeld van de Markeringen UI van Experience Platform die de het elementenmontages van Gegevens voor het Send actietype van de Gebeurtenis tonen.](assets/data.png)
 
 * **[!UICONTROL Type]**: In dit veld kunt u een gebeurtenistype opgeven dat wordt opgenomen in uw XDM-schema. Zie [`type`](/help/web-sdk/commands/sendevent/type.md) in het `sendEvent` bevel voor meer informatie.
-* **[!UICONTROL XDM]**:
-* **[!UICONTROL Data]**: Gebruik dit veld om gegevens te verzenden die niet overeenkomen met een XDM-schema. Dit veld is handig als u probeert een Adobe Target-profiel bij te werken of Recommendations-kenmerken van het doel te verzenden. Zie [`data`](/help/web-sdk/commands/sendevent/data.md) in het `sendEvent` bevel voor meer informatie.
+* **[!UICONTROL XDM]** :
+* **[!UICONTROL Data]**: Gebruik dit veld om gegevens te verzenden die niet overeenkomen met een XDM-schema. Dit veld is handig als u een Adobe Target-profiel wilt bijwerken of kenmerken voor doelaanbevelingen wilt verzenden. Zie [`data`](/help/web-sdk/commands/sendevent/data.md) in het `sendEvent` bevel voor meer informatie.
 * **[!UICONTROL Include rendered propositions]**: Schakel deze optie in om alle voorstellingen op te nemen die zijn gerenderd, maar er is geen weergavegebeurtenis verzonden. Gebruik dit in combinatie met **[!UICONTROL Automatically send a display event]** uitgeschakeld. Met deze instelling wordt het XDM-veld `_experience.decisioning` bijgewerkt met informatie over de gerenderde profielen.
 * **[!UICONTROL Document will unload]**: Schakel deze optie in om ervoor te zorgen dat de gebeurtenissen de server bereiken, zelfs als de gebruiker bij de pagina vandaan navigeert. Hierdoor kunnen gebeurtenissen de server bereiken, maar reacties worden genegeerd.
 * **[!UICONTROL Merge ID]**: **Dit gebied wordt afgekeurd**. Hiermee wordt het XDM-veld `eventMergeId` gevuld.
 
 ### Personalisatie {#personalization}
 
-![ beeld van de Markeringen UI van het Platform die de montages van Personalization voor het Send actietype van de Gebeurtenis tonen.](assets/personalization-settings.png)
+![ het beeld van de Markeringen UI van Experience Platform die de montages van Personalization voor het Send actietype van de Gebeurtenis tonen.](assets/personalization-settings.png)
 
 * **[!UICONTROL Scopes]**: selecteer het bereik (Adobe Target [!DNL mboxes] ) dat u expliciet wilt aanvragen voor personalisatie. U kunt het bereik handmatig invoeren of een gegevenselement opgeven.
 * **[!UICONTROL Surfaces]**: stel de weboppervlakken in die beschikbaar zijn op de pagina voor personalisatie. Zie de [ documentatie van Adobe Journey Optimizer ](https://experienceleague.adobe.com/docs/journey-optimizer/using/web/create-web.html) voor meer details.
 * **geeft visuele verpersoonlijkingsbesluiten terug:** Als u gepersonaliseerde inhoud op uw pagina wilt teruggeven, controleer **[!UICONTROL Render visual personalization decisions]** checkbox. Indien nodig kunt u ook het beslissingsbereik en/of de oppervlakken opgeven. Zie de [ verpersoonlijkingsdocumentatie ](/help/web-sdk/personalization/rendering-personalization-content.md#automatically-rendering-content) voor meer informatie bij het teruggeven van gepersonaliseerde inhoud.
 * **[!UICONTROL Request default personalization]**: gebruik deze sectie om te bepalen of het bereik (globale mbox) voor de hele pagina en het standaardoppervlak (weboppervlak op basis van de huidige URL) worden aangevraagd. Deze wordt standaard automatisch aangevraagd tijdens de eerste `sendEvent` oproep van het laden van de pagina. U kunt uit de volgende opties kiezen:
    * **[!UICONTROL Automatic]**: dit is het standaardgedrag. Vraag slechts standaardverpersoonlijking aan wanneer het nog niet gevraagd is. Dit komt overeen met `requestDefaultPersonalization` niet ingesteld in de opdracht Web SDK.
-   * **[!UICONTROL Enabled]**: vraag expliciet om het paginabereik en het standaardoppervlak. Hiermee werkt u de SPA weergavecache bij. Dit komt overeen met `requestDefaultPersonalization` ingesteld op `true` .
+   * **[!UICONTROL Enabled]**: vraag expliciet om het paginabereik en het standaardoppervlak. Dit werkt het de meningsgeheime voorgeheugen van het KUUROORD bij. Dit komt overeen met `requestDefaultPersonalization` ingesteld op `true` .
    * **[!UICONTROL Disabled]**: Hiermee onderdrukt u expliciet de aanvraag voor het paginabereik en het standaardoppervlak. Dit komt overeen met `requestDefaultPersonalization` ingesteld op `false` .
 * **[!UICONTROL Decision context]**: dit is een sleutel-waardekaart die wordt gebruikt wanneer het evalueren van de Adobe Journey Optimizer-regels voor het op-apparaat beslissen. U kunt de besluitvormingscontext manueel of door een gegevenselement verstrekken.
 
 ### DataStream-configuratieoverschrijvingen {#datastream-overrides}
 
-Met overschrijvingen van gegevensstroom kunt u aanvullende configuraties voor uw gegevensstreams definiëren. Deze configuraties worden via de SDK van het web doorgegeven aan de Edge Network.
+Met DataStream-overschrijvingen kunt u aanvullende configuraties voor uw gegevensstreams definiëren. Deze configuraties worden via de Web SDK aan de Edge Network doorgegeven.
 
 Dit helpt u verschillend gegevensstroomgedrag dan de standaarddegenen teweegbrengen, zonder het creëren van een nieuwe gegevensstroom of het wijzigen van uw bestaande montages. Zie de documentatie op [ vormend datastream treedt ](web-sdk-extension-configuration.md#datastream-overrides) voor meer details met voeten.
 
@@ -140,7 +140,7 @@ Dit helpt u verschillend gegevensstroomgedrag dan de standaarddegenen teweegbren
 
 Hiermee verzendt u een mediagebeurtenis naar Adobe Experience Platform en/of Adobe Analytics. Deze handeling is handig wanneer u mediafouten op uw website bijhoudt. Selecteer een instantie (als u meerdere exemplaren hebt). De handeling vereist een `playerId` die een unieke id vertegenwoordigt voor een bijgehouden mediasessie. Bij het starten van een mediasessie is ook een **[!UICONTROL Quality of Experience]** - en `playhead` -gegevenselement nodig.
 
-![ beeld UI van het Platform dat het send scherm van de media gebeurtenis toont.](assets/send-media-event.png)
+{het beeld van 0} Experience Platform UI die het send scherm van de media gebeurtenis toont.](assets/send-media-event.png)![
 
 Het handelingstype **[!UICONTROL Send media event]** ondersteunt de volgende eigenschappen:
 
@@ -159,7 +159,7 @@ Het handelingstype **[!UICONTROL Send media event]** ondersteunt de volgende eig
 
 ## Goedkeuring instellen {#set-consent}
 
-Nadat u toestemming van uw gebruiker hebt ontvangen, moet deze toestemming aan het Web SDK van Adobe Experience Platform worden meegedeeld door het &quot;Vastgestelde type van de Actie van de Toestemming te gebruiken&quot;. Momenteel worden twee typen standaarden ondersteund: &quot;Adobe&quot; en &quot;IAB TCF.&quot; Zie [ Ondersteunende Voorkeur van de Klanteninstemming ](../../../../web-sdk/commands/setconsent.md). Bij gebruik van Adobe versie 2.0 wordt alleen een waarde voor een gegevenselement ondersteund. U moet een gegevenselement maken dat wordt omgezet in het toestemmingsobject.
+Nadat u toestemming van uw gebruiker hebt ontvangen, moet deze toestemming aan het Web SDK van Adobe Experience Platform worden meegedeeld door het &quot;Vastgestelde type van de Actie van de Toestemming&quot;te gebruiken. Momenteel worden twee typen standaarden ondersteund: &quot;Adobe&quot; en &quot;IAB TCF&quot;. Zie [ Ondersteunende Voorkeur van de Klanteninstemming ](../../../../web-sdk/commands/setconsent.md). Als u Adobe versie 2.0 gebruikt, wordt alleen een waarde voor het gegevenselement ondersteund. U moet een gegevenselement maken dat wordt omgezet in het toestemmingsobject.
 
 In deze handeling krijgt u ook een optioneel veld met een identiteitskaarten, zodat identiteiten kunnen worden gesynchroniseerd zodra de toestemming is ontvangen. Het synchroniseren is nuttig wanneer de toestemming als &quot;In behandeling&quot;of &quot;uit&quot;wordt gevormd omdat de toestemmingsvraag waarschijnlijk de eerste vraag aan brand is.
 

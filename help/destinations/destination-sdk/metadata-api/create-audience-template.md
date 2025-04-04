@@ -2,9 +2,9 @@
 description: Deze pagina illustreert de API vraag die wordt gebruikt om een publiekssjabloon door Adobe Experience Platform Destination SDK tot stand te brengen.
 title: Een publiekssjabloon maken
 exl-id: 98d30002-d462-4008-9337-7de0cd608194
-source-git-commit: 3447a1c6959419c36fd55359496284daf90e26cf
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '622'
+source-wordcount: '623'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 0%
 >
 >**API eindpunt**: `platform.adobe.io/data/core/activation/authoring/audience-templates`
 
-Voor sommige bestemmingen die gebruikend Destination SDK worden gecreeerd, moet u een configuratie van publieksmeta-gegevens tot stand brengen programmatically om, publieksmeta-gegevens in de bestemming tot stand te brengen bij te werken of te schrappen. Op deze pagina ziet u hoe u het API-eindpunt `/authoring/audience-templates` gebruikt om de configuratie te maken.
+Voor sommige bestemmingen die met Destination SDK worden gecreeerd, moet u een configuratie van publieksmeta-gegevens creëren programmatically om, publieksmeta-gegevens in de bestemming te creëren bij te werken of te schrappen. Op deze pagina ziet u hoe u het API-eindpunt `/authoring/audience-templates` gebruikt om de configuratie te maken.
 
 Voor een gedetailleerde beschrijving van de mogelijkheden die u door dit eindpunt kunt vormen, zie [ beheer van publieksmeta-gegevens ](../functionality/audience-metadata-management.md).
 
@@ -256,7 +256,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/audience-t
 
 | Eigenschap | Type | Beschrijving |
 | -------- | ----------- | ----------- |
-| `name` | String | De naam van het malplaatje van publieksmeta-gegevens voor uw bestemming. Deze naam zal in om het even welk partner-specifiek foutenmelding in het gebruikersinterface van het Experience Platform verschijnen. |
+| `name` | String | De naam van het malplaatje van publieksmeta-gegevens voor uw bestemming. Deze naam zal in om het even welk partner-specifiek foutenmelding in het gebruikersinterface van Experience Platform verschijnen. |
 | `url` | String | De URL en het eindpunt van uw API, die voor het creëren van, het bijwerken van, het schrappen van, of het bevestigen van publiek en/of dataflows in uw platform wordt gebruikt. Twee voorbeelden uit de branche zijn: `https://adsapi.snapchat.com/v1/adaccounts/{{customerData.accountId}}/segments` en `https://api.linkedin.com/v2/dmpSegments/{{segment.alias}}` . |
 | `httpMethod` | String | De methode die op uw eindpunt wordt gebruikt programmatically tot stand te brengen, bij te werken, te schrappen, of het publiek in uw bestemming te bevestigen. Bijvoorbeeld: `POST`, `PUT`, `DELETE` |
 | `headers.header` | String | Geeft alle HTTP-headers op die moeten worden toegevoegd aan de aanroep van de API. Bijvoorbeeld: `"Content-Type"` |
@@ -265,7 +265,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/audience-t
 | `responseFields.name` | String | Geef antwoordvelden op die de API retourneert wanneer deze wordt aangeroepen. Bijvoorbeeld, verwijs naar de [ malplaatjevoorbeelden ](../functionality/audience-metadata-management.md#examples) in het document van de de meta-gegevensfunctionaliteit van het publiek. |
 | `responseFields.value` | String | Geef de waarde op van de reactievelden die de API retourneert wanneer deze wordt aangeroepen. |
 | `responseErrorFields.name` | String | Geef antwoordvelden op die de API retourneert wanneer deze wordt aangeroepen. Bijvoorbeeld, verwijs naar de [ malplaatjevoorbeelden ](../functionality/audience-metadata-management.md#examples) in het document van de de meta-gegevensfunctionaliteit van het publiek. |
-| `responseErrorFields.value` | String | Parseert om het even welke foutenmeldingen die op API vraagreacties van uw bestemming zijn teruggekeerd. Deze foutberichten worden weergegeven in de gebruikersinterface van het Experience Platform. |
+| `responseErrorFields.value` | String | Parseert om het even welke foutenmeldingen die op API vraagreacties van uw bestemming zijn teruggekeerd. Deze foutberichten worden weergegeven in de gebruikersinterface van Experience Platform. |
 | `validations.field` | String | Geeft aan of validaties voor velden moeten worden uitgevoerd voordat API-aanroepen naar uw doel worden uitgevoerd. U kunt bijvoorbeeld `{{validations.accountId}}` gebruiken om de account-id van de gebruiker te valideren. |
 | `validations.regex` | String | Hiermee geeft u aan hoe het veld moet worden gestructureerd voordat de validatie wordt doorgegeven. |
 
@@ -281,7 +281,7 @@ Een succesvolle reactie keert status 200 van HTTP met details van uw onlangs gec
 
 ## API-foutafhandeling
 
-Destination SDK API-eindpunten volgen de algemene API-foutberichtbeginselen voor Experience Platforms. Verwijs naar [ API statuscodes ](../../../landing/troubleshooting.md#api-status-codes) en [ de fouten van de verzoekkopbal ](../../../landing/troubleshooting.md#request-header-errors) in de het oplossen van problemengids van het Platform.
+Destination SDK API-eindpunten volgen de algemene beginselen van Experience Platform API-foutberichten. Verwijs naar [ API statuscodes ](../../../landing/troubleshooting.md#api-status-codes) en [ de fouten van de verzoekkopbal ](../../../landing/troubleshooting.md#request-header-errors) in de het oplossen van problemengids van Experience Platform.
 
 ## Volgende stappen
 

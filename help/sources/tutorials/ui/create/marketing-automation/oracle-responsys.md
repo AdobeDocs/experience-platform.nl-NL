@@ -1,18 +1,18 @@
 ---
-keywords: Experience Platform;huis;populaire onderwerpen;bronnen;schakelaars;oracle;
-title: (Beta) Creeer een Oracle Resys bronverbinding gebruikend Platform UI
-description: Leer hoe te om Adobe Experience Platform met Oracle te verbinden Resys gebruikend Platform UI.
+keywords: Experience Platform;home;populaire onderwerpen;bronnen;connectors;orakel;
+title: (Beta) Een Oracle Resys-bronverbinding maken met Experience Platform UI
+description: Leer hoe u Adobe Experience Platform met Oracle Responsys verbindt via de gebruikersinterface van Experience Platform.
 hide: true
 hidefromtoc: true
 exl-id: 9ec5e1c2-3d9e-4729-be81-89a85d5ea782
-source-git-commit: e37c00863249e677f1645266859bf40fe6451827
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '457'
+source-wordcount: '472'
 ht-degree: 0%
 
 ---
 
-# (Beta) Een [!DNL Oracle Responsys] bronverbinding maken met behulp van platforminterface
+# (Beta) Een [!DNL Oracle Responsys] bronverbinding maken met de gebruikersinterface van Experience Platform
 
 >[!NOTE]
 >
@@ -22,16 +22,16 @@ In deze zelfstudie worden de stappen beschreven waarmee u een [[!DNL Oracle Resp
 
 ## Aan de slag
 
-Deze gids vereist een werkend inzicht in de volgende componenten van Platform:
+Deze handleiding vereist een goed begrip van de volgende onderdelen van Experience Platform:
 
-* [ Bronnen ](../../../../home.md): Het platform staat gegevens toe om van diverse bronnen worden opgenomen terwijl het voorzien van u van de capaciteit om, inkomende gegevens te structureren te etiketteren en te verbeteren gebruikend de diensten van het Platform.
-* [ Sandboxes ](../../../../../sandboxes/home.md): Het platform verstrekt virtuele zandbakken die één enkele instantie van het Platform in afzonderlijke virtuele milieu&#39;s verdelen helpen digitale ervaringstoepassingen ontwikkelen en ontwikkelen.
+* [ Bronnen ](../../../../home.md): Experience Platform staat gegevens toe om van diverse bronnen worden opgenomen terwijl het voorzien van u van de capaciteit om, inkomende gegevens te structureren te etiketteren en te verbeteren gebruikend de diensten van Experience Platform.
+* [ Sandboxes ](../../../../../sandboxes/home.md): Experience Platform verstrekt virtuele zandbakken die één enkele instantie van Experience Platform in afzonderlijke virtuele milieu&#39;s verdelen helpen digitale ervaringstoepassingen ontwikkelen en ontwikkelen.
 
-Als u reeds een voor authentiek verklaarde [!DNL Oracle Responsys] rekening op Platform hebt, dan kunt u de rest van dit document overslaan en aan het leerprogramma te werk gaan [ creërend een dataflow om de gegevens van de marketing automatisering aan Platform ](../../dataflow/marketing-automation.md) te brengen.
+Als u reeds een voor authentiek verklaarde [!DNL Oracle Responsys] rekening op Experience Platform hebt, dan kunt u de rest van dit document overslaan en aan het leerprogramma te werk gaan [ creërend een dataflow om de gegevens van de marketing automatisering aan Experience Platform ](../../dataflow/marketing-automation.md) te brengen.
 
 ### Vereiste referenties verzamelen
 
-Als u [!DNL Oracle Responsys] wilt verbinden met Platform, moet u waarden opgeven voor de volgende verificatie-eigenschappen:
+Als u [!DNL Oracle Responsys] wilt verbinden met Experience Platform, moet u waarden opgeven voor de volgende verificatie-eigenschappen:
 
 | Credentials | Beschrijving |
 | --- | --- |
@@ -41,17 +41,17 @@ Als u [!DNL Oracle Responsys] wilt verbinden met Platform, moet u waarden opgeve
 
 Voor meer informatie over authentificatiegeloofsbrieven voor [!DNL Oracle Responsys], zie de [[!DNL Oracle Responsys]  gids over authentificatie ](https://docs.oracle.com/en/cloud/saas/marketing/responsys-develop/API/GetStarted/authentication.htm).
 
-Nadat u de vereiste gegevens hebt verzameld, voert u de onderstaande stappen uit om uw [!DNL Oracle Responsys] -account te koppelen aan Platform.
+Nadat u de vereiste gegevens hebt verzameld, kunt u de onderstaande stappen volgen om uw [!DNL Oracle Responsys] -account te koppelen aan Experience Platform.
 
 ## Sluit uw [!DNL Oracle Responsys] -account aan
 
-Selecteer in de gebruikersinterface van het platform de optie **[!UICONTROL Sources]** in de linkernavigatie voor toegang tot de werkruimte van [!UICONTROL Sources] . In het scherm [!UICONTROL Catalog] worden diverse bronnen weergegeven waarmee u een account kunt maken.
+Selecteer in de gebruikersinterface van Experience Platform de optie **[!UICONTROL Sources]** in de linkernavigatie voor toegang tot de werkruimte van [!UICONTROL Sources] . In het scherm [!UICONTROL Catalog] worden diverse bronnen weergegeven waarmee u een account kunt maken.
 
 U kunt de juiste categorie selecteren in de catalogus aan de linkerkant van het scherm. U kunt ook de specifieke bron vinden waarmee u wilt werken met de zoekoptie.
 
 Selecteer onder de categorie [!UICONTROL Marketing automation] de optie **[!UICONTROL Oracle Responsys]** en selecteer vervolgens **[!UICONTROL Add data]** .
 
-![ de de broncatalogus van Adobe Experience Platform met de benadrukte bron van Resys van het Oracle.](../../../../images/tutorials/create/oracle-responsys/catalog.png)
+![ de de broncatalogus van Adobe Experience Platform met de benadrukte bron van Resys van Oracle.](../../../../images/tutorials/create/oracle-responsys/catalog.png)
 
 De pagina **[!UICONTROL Connect Oracle Responsys account]** wordt weergegeven. Op deze pagina kunt u nieuwe of bestaande referenties gebruiken.
 
@@ -69,4 +69,4 @@ Als u een nieuwe account wilt maken, selecteert u **[!UICONTROL New account]** e
 
 ## Volgende stappen
 
-Aan de hand van deze zelfstudie hebt u een bronverbinding tussen uw [!DNL Oracle Responsys] -account en Platform geverifieerd en gemaakt. U kunt nu aan het volgende leerprogramma verdergaan en [ een dataflow creëren om de gegevens van de marketing automatisering aan Platform ](../../dataflow/marketing-automation.md) te brengen.
+Aan de hand van deze zelfstudie hebt u een bronverbinding gemaakt en geverifieerd tussen uw [!DNL Oracle Responsys] -account en Experience Platform. U kunt nu aan het volgende leerprogramma verdergaan en [ een dataflow creëren om de gegevens van de marketing automatisering aan Experience Platform ](../../dataflow/marketing-automation.md) te brengen.

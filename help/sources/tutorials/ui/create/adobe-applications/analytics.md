@@ -2,9 +2,9 @@
 title: Een Adobe Analytics Source Connection maken in de gebruikersinterface
 description: Leer hoe u een Adobe Analytics-bronverbinding maakt in de gebruikersinterface om consumentengegevens over te brengen naar Adobe Experience Platform.
 exl-id: 5ddbaf63-feaa-44f5-b2f2-2d5ae507f423
-source-git-commit: 71932d6f743d8cf767ce4e088231e61e9c2160e0
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '2550'
+source-wordcount: '2554'
 ht-degree: 0%
 
 ---
@@ -15,17 +15,17 @@ Deze zelfstudie bevat stappen voor het maken van een Adobe Analytics-bronverbind
 
 ## Aan de slag
 
-Deze zelfstudie vereist een goed begrip van de volgende onderdelen van het Experience Platform:
+Deze zelfstudie vereist een goed begrip van de volgende onderdelen van Experience Platform:
 
-* [ Model van de Gegevens van de Ervaring (XDM) Systeem ](../../../../../xdm/home.md): Het gestandaardiseerde kader waardoor het Experience Platform gegevens van de klantenervaring organiseert.
+* [ Model van de Gegevens van de Ervaring (XDM) Systeem ](../../../../../xdm/home.md): Het gestandaardiseerde kader waardoor Experience Platform gegevens van de klantenervaring organiseert.
 * [ Real-Time Profiel van de Klant ](../../../../../profile/home.md): Verstrekt een verenigd, real-time consumentenprofiel dat op samengevoegde gegevens van veelvoudige bronnen wordt gebaseerd.
-* [ Sandboxes ](../../../../../sandboxes/home.md): Experience Platform verstrekt virtuele zandbakken die één enkele instantie van het Platform in afzonderlijke virtuele milieu&#39;s verdelen helpen digitale ervaringstoepassingen ontwikkelen en ontwikkelen.
+* [ Sandboxes ](../../../../../sandboxes/home.md): Experience Platform verstrekt virtuele zandbakken die één enkele instantie van Experience Platform in afzonderlijke virtuele milieu&#39;s verdelen helpen digitale ervaringstoepassingen ontwikkelen en ontwikkelen.
 
 ### Belangrijke terminologie
 
 Het is belangrijk dat u de volgende belangrijke termen kent die in dit document worden gebruikt:
 
-* **Standaard attribuut**: De standaardattributen zijn om het even welk attribuut dat door Adobe vooraf wordt bepaald. Ze bevatten dezelfde betekenis voor alle klanten en zijn beschikbaar in de [!DNL Analytics] brongegevens en [!DNL Analytics] -schemaveldgroepen.
+* **Standaard attributen**: De standaardattributen zijn om het even welk attribuut dat door Adobe vooraf wordt bepaald. Ze bevatten dezelfde betekenis voor alle klanten en zijn beschikbaar in de [!DNL Analytics] brongegevens en [!DNL Analytics] -schemaveldgroepen.
 * **attributen van de Douane**: De attributen van de Douane zijn om het even welk attribuut in de hiërarchie van de douanevariabele in [!DNL Analytics]. De attributen van de douane worden gebruikt binnen een implementatie van Adobe Analytics om specifieke informatie in een rapportreeks te vangen, en zij kunnen in hun gebruik van rapportreeks aan rapportreeks verschillen. Aangepaste kenmerken zijn onder andere eVars, props en lijsten. Zie de volgende [[!DNL Analytics]  documentatie over omzettingsvariabelen ](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/conversion-variables/conversion-var-admin.html) voor meer informatie over Vars.
 * **om het even welk attribuut in de gebiedsgroepen van de Douane**: De attributen die uit gebiedsgroepen voortkomen die door klanten worden gecreeerd zijn allen user-defined en worden beschouwd als noch standaard noch douanekenmerken.
 * **vriendschappelijke namen**: De vriendschappelijke namen zijn mens-verstrekte etiketten voor douanevariabelen in een [!DNL Analytics] implementatie. Zie de volgende [[!DNL Analytics]  documentatie over omzettingsvariabelen ](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/conversion-variables/conversion-var-admin.html) voor meer informatie over vriendschappelijke namen.
@@ -39,7 +39,7 @@ Het is belangrijk dat u de volgende belangrijke termen kent die in dit document 
 >* Een dataflow die een 13 maanden backfill van historische gegevens van de rapportreeks in gegevens meer doet. Deze gegevensstroom eindigt wanneer de backfill volledig is.
 >* Een dataflow-flow die live-gegevens verzendt naar het data-meer en [!DNL Real-Time Customer Profile] . Deze gegevensstroom wordt voortdurend uitgevoerd.
 
-Selecteer in de gebruikersinterface van het platform de optie **[!UICONTROL Sources]** in de linkernavigatie voor toegang tot de werkruimte van [!UICONTROL Sources] . In het scherm [!UICONTROL Catalog] worden diverse bronnen weergegeven waarmee u een account kunt maken.
+Selecteer in de gebruikersinterface van Experience Platform de optie **[!UICONTROL Sources]** in de linkernavigatie voor toegang tot de werkruimte van [!UICONTROL Sources] . In het scherm [!UICONTROL Catalog] worden diverse bronnen weergegeven waarmee u een account kunt maken.
 
 U kunt de juiste categorie selecteren in de catalogus aan de linkerkant van het scherm. U kunt de zoekbalk ook gebruiken om de weergegeven bronnen te beperken.
 
@@ -57,7 +57,7 @@ De stap **[!UICONTROL Analytics source add data]** bevat een lijst met [!DNL Ana
 
 Een rapportsuite is een container met gegevens die de basis vormt voor [!DNL Analytics] -rapportage. Een organisatie kan vele rapportreeksen hebben, elk die verschillende datasets bevatten.
 
-U kunt rapportsuites van om het even welk gebied (Verenigde Staten, Verenigd Koninkrijk, of Singapore) opnemen zolang zij aan de zelfde organisatie zoals de zandbakinstantie van het Experience Platform worden in kaart gebracht waarin de bronverbinding wordt gecreeerd. Een rapportreeks kan worden opgenomen gebruikend slechts één enkele actieve dataflow. Er is al een rapportsuite die niet selecteerbaar is, opgenomen in de sandbox die u gebruikt of in een andere sandbox.
+U kunt rapportsuites van om het even welk gebied (Verenigde Staten, Verenigd Koninkrijk, of Singapore) opnemen zolang zij aan de zelfde organisatie zoals de zandbakinstantie van Experience Platform worden in kaart gebracht waarin de bronverbinding wordt gecreeerd. Een rapportreeks kan worden opgenomen gebruikend slechts één enkele actieve dataflow. Er is al een rapportsuite die niet selecteerbaar is, opgenomen in de sandbox die u gebruikt of in een andere sandbox.
 
 Er kunnen meerdere interne verbindingen worden gemaakt om meerdere rapportsuites over te brengen naar dezelfde sandbox. Als de rapportsuites verschillende schema&#39;s voor variabelen (zoals eVars of gebeurtenissen) hebben, zouden zij aan specifieke gebieden in de groepen van het douanegebied moeten worden in kaart gebracht en gegevensconflicten vermijden gebruikend [ Prep van Gegevens ](../../../../../data-prep/ui/mapping.md). Rapportsuites kunnen alleen aan één sandbox worden toegevoegd.
 
@@ -115,7 +115,7 @@ De pagina [!UICONTROL Adobe Analytics ExperienceEvent Template Schema Field Grou
 
 ![ gebied-groep-voorproef ](../../../../images/tutorials/create/analytics/field-group-preview.png)
 
-Het platform detecteert automatisch uw toewijzingensets voor eventuele conflicten met vriendschappelijke namen. Als er geen conflicten zijn met uw toewijzingsets, selecteert u **[!UICONTROL Next]** om door te gaan.
+Experience Platform detecteert automatisch uw sets met toewijzingen voor eventuele conflicten met vriendschappelijke namen. Als er geen conflicten zijn met uw toewijzingsets, selecteert u **[!UICONTROL Next]** om door te gaan.
 
 ![ afbeelding ](../../../../images/tutorials/create/analytics/mapping.png)
 
@@ -187,7 +187,7 @@ Nadat u toewijzingen voor de gegevens van uw [!DNL Analytics] -rapportsuite hebt
 * Als u de configuraties van de Prep van Gegevens tijdens de aanvankelijke opstelling van een [!DNL Analytics] stroom gebruikt, worden die veranderingen ook toegepast op automatische 13 maanden backfill.
    * Dit is echter niet het geval voor filteren, omdat filteren alleen is gereserveerd voor live-gegevens.
 * Gegevensvoorinstelling wordt toegepast op streaming- en batchinvoerpaden. Als u een bestaande configuratie van de Prep van Gegevens wijzigt, worden die veranderingen dan toegepast op nieuwe inkomende gegevens over zowel het stromen als de weg van de partijopname.
-   * Nochtans, zijn om het even welke configuraties van de Prep van Gegevens niet op gegevens van toepassing die reeds in Experience Platform zijn opgenomen, ongeacht of het stromen of partijgegevens is.
+   * De configuraties van Data Prep zijn echter niet van toepassing op gegevens die al in Experience Platform zijn opgenomen, ongeacht of het om streaming- of batchgegevens gaat.
 * Standaardkenmerken van Analytics worden altijd automatisch toegewezen. Daarom kunt u geen transformaties toepassen op standaardkenmerken.
    * U kunt standaardkenmerken echter wel uitfilteren zolang deze niet zijn vereist in Identiteitsservice of Profiel.
 * U kunt filteren op kolomniveau niet gebruiken om vereiste velden en identiteitsvelden te filteren.
@@ -322,7 +322,7 @@ Als u de gegevensstroom Analytics wilt verwijderen, selecteert u **[!UICONTROL D
 
 ## Volgende stappen en extra bronnen
 
-Zodra de verbinding wordt gecreeerd, wordt de dataflow automatisch gecreeerd om de inkomende gegevens te bevatten en een dataset met uw geselecteerd schema te bevolken. Bovendien vindt de terugvulling van gegevens plaats en neemt deze tot 13 maanden aan historische gegevens in. Wanneer de eerste opname is voltooid, [!DNL Analytics] -gegevens en wordt deze gebruikt door downstream-platformservices zoals [!DNL Real-Time Customer Profile] en Segmentation Service. Raadpleeg de volgende documenten voor meer informatie:
+Zodra de verbinding wordt gecreeerd, wordt de dataflow automatisch gecreeerd om de inkomende gegevens te bevatten en een dataset met uw geselecteerd schema te bevolken. Bovendien vindt de terugvulling van gegevens plaats en neemt deze tot 13 maanden aan historische gegevens in. Wanneer de eerste opname is voltooid, [!DNL Analytics] -gegevens en wordt deze gebruikt door downstream Experience Platform-services, zoals [!DNL Real-Time Customer Profile] en Segmentation Service. Raadpleeg de volgende documenten voor meer informatie:
 
 * [[!DNL Real-Time Customer Profile]-overzicht](../../../../../profile/home.md)
 * [[!DNL Segmentation Service]-overzicht](../../../../../segmentation/home.md)
@@ -333,6 +333,6 @@ De volgende video is bedoeld als ondersteuning voor uw inzicht in het opnemen va
 
 >[!WARNING]
 >
-> De gebruikersinterface van [!DNL Platform] in de volgende video is verouderd. Raadpleeg de bovenstaande documentatie voor de meest recente schermafbeeldingen en functionaliteit van de gebruikersinterface.
+> De gebruikersinterface van [!DNL Experience Platform] in de volgende video is verouderd. Raadpleeg de bovenstaande documentatie voor de meest recente schermafbeeldingen en functionaliteit van de gebruikersinterface.
 
 >[!VIDEO](https://video.tv.adobe.com/v/29687?quality=12&learn=on)

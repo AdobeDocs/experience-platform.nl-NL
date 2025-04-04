@@ -1,14 +1,14 @@
 ---
-keywords: Experience Platform;thuis;populaire onderwerpen;Pinterest-advertenties;
+keywords: Experience Platform;home;populaire onderwerpen;Pinterest Ads;
 title: Pinterest Ads Source - Overzicht
 description: Leer hoe u Pinterest Ads met Adobe Experience Platform kunt verbinden via API's of de gebruikersinterface.
 badge: Beta
 hide: true
 hidefromtoc: true
 exl-id: 8edbcb26-0a18-47f1-8012-ca209d99d7a6
-source-git-commit: e37c00863249e677f1645266859bf40fe6451827
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '939'
+source-wordcount: '946'
 ht-degree: 0%
 
 ---
@@ -19,11 +19,11 @@ ht-degree: 0%
 >
 >De bron [!DNL Pinterest Ads] is in bèta. Lees het [ Bronoverzicht ](../../home.md#terms-and-conditions) voor meer informatie bij het gebruiken van bèta-geëtiketteerde schakelaars.
 
-Adobe Experience Platform staat toe dat gegevens uit externe bronnen worden opgenomen terwijl u de mogelijkheid krijgt om inkomende gegevens te structureren, te labelen en te verbeteren met behulp van de platformservices. U kunt gegevens uit diverse bronnen invoeren, zoals toepassingen voor Adobe, opslag in de cloud, databases en vele andere.
+Adobe Experience Platform staat toe dat gegevens uit externe bronnen worden opgenomen en biedt u de mogelijkheid om inkomende gegevens te structureren, labelen en verbeteren met behulp van Experience Platform-services. U kunt gegevens invoeren uit verschillende bronnen, zoals Adobe-toepassingen, opslag in de cloud, databases en vele andere.
 
 Experience Platform biedt ondersteuning voor het opnemen van gegevens uit een derde-advertentiesysteem. Tot de ondersteuning voor advertentieproviders behoren [!DNL Pinterest Ads] .
 
-[[!DNL Pinterest] ](https://www.pinterest.com) is een visuele ontdekkingsmotor voor het vinden van recepten, huisdécor, stijlinspiratie, en andere ideeën over het Web. Deze worden op kleine schaal weergegeven met behulp van afbeeldingen, geanimeerde GIFFEN en video&#39;s in pinboardindeling. [[!DNL Pinterest Ads] ](https://ads.pinterest.com/) staat u toe om uw zaken uit te breiden en 400 miljoen mensen te bereiken gebruikend [!DNL Pinterest].
+[[!DNL Pinterest] ](https://www.pinterest.com) is een visuele ontdekkingsmotor voor het vinden van recepten, huisdécor, stijlinspiratie, en andere ideeën over het Web. Deze worden op kleine schaal weergegeven met afbeeldingen, geanimeerde GIF&#39;s en video&#39;s in pinboardindeling. [[!DNL Pinterest Ads] ](https://ads.pinterest.com/) staat u toe om uw zaken uit te breiden en 400 miljoen mensen te bereiken gebruikend [!DNL Pinterest].
 
 Met [!DNL Pinterest Ads] kunt u gebruikers bereiken via gerichte advertenties om uw producten te ontdekken en te kopen. Spelden van [!DNL Pinterest Ads] worden gesponsord om extra blootstelling in relevante onderzoeksresultaten te ontvangen. Gebruikers met een abonnement op [!DNL Pinterest Business] kunnen bestaande best presterende punten promoten, een nieuw beeld of video maken of zelfs een afbeelding promoten die van een website is vastgezet. [!DNL Pinterest Ads] biedt verschillende advertentievormen aan om u te helpen uw specifieke campagnedoelstellingen te verwezenlijken.
 
@@ -35,7 +35,7 @@ De [!DNL Pinterest Ads] -bron gebruikt de [!DNL Pinterest] API&#39;s om uw [!DNL
 * [ analyseert de Groep van de Advertentie ](https://developers.pinterest.com/docs/api/v5/#operation/ad_groups/analytics)
 * [ Adds analyseert ](https://developers.pinterest.com/docs/api/v5/#operation/ads/analytics)
 
-Gebruik de [!DNL Pinterest Ads] -bron om uw gegevens van [!DNL Pinterest] naar het Experience Platform te brengen, waar u vervolgens gegevensanalyses kunt uitvoeren. Gegevens worden geretourneerd vanaf de datum van inname gedurende een achterhaald bereik van 90 dagen. [!DNL Pinterest Ads] gebruikt tokens aan toonder als verificatiemechanisme om te communiceren met de API&#39;s van [!DNL Pinterest] .
+Gebruik de [!DNL Pinterest Ads] -bron om uw gegevens van [!DNL Pinterest] naar Experience Platform te brengen, waar u vervolgens gegevensanalyses kunt uitvoeren. Gegevens worden geretourneerd vanaf de datum van inname gedurende een achterhaald bereik van 90 dagen. [!DNL Pinterest Ads] gebruikt tokens aan toonder als verificatiemechanisme om te communiceren met de API&#39;s van [!DNL Pinterest] .
 
 ## Vereisten {#prerequisites}
 
@@ -51,7 +51,7 @@ Om uw toegangstoken te produceren, lees de [!DNL Pinterest] gidsen op [ vestigin
 
 ### Vereiste referenties verzamelen {#gather-required-credentials}
 
-Als u [!DNL Pinterest Ads] wilt verbinden met Platform, moet u waarden opgeven voor de volgende verbindingseigenschappen:
+Als u [!DNL Pinterest Ads] wilt verbinden met Experience Platform, moet u waarden opgeven voor de volgende verbindingseigenschappen:
 
 | Credentials | Beschrijving |
 | --- | --- |
@@ -95,23 +95,23 @@ De API van [!DNL Pinterest] ondersteunt verschillende soorten tijdsgranulariteit
 | **WEEKLY** | De gegevens worden wekelijks uitgesplitst. |
 | **MAANDELIJKS** | De gegevens worden maandelijks uitgesplitst. |
 
-Voor Platform is de [!DNL Pinterest Ads] -bron intern geconfigureerd voor `Day` . Dit houdt in dat gegevens dagelijks worden geaggregeerd. Als u bijvoorbeeld `impressions recorded` als metrische waarde gebruikt en de granulariteit als `DAY` hebt geconfigureerd, krijgt u `xx` -afbeeldingen op `day 1` , `yy` -afbeeldingen op `day 2` enzovoort.
+Voor Experience Platform is de [!DNL Pinterest Ads] -bron intern geconfigureerd voor `Day` . Dit houdt in dat gegevens dagelijks worden geaggregeerd. Als u bijvoorbeeld `impressions recorded` als metrische waarde gebruikt en de granulariteit als `DAY` hebt geconfigureerd, krijgt u `xx` -afbeeldingen op `day 1` , `yy` -afbeeldingen op `day 2` enzovoort.
 
 >[!IMPORTANT]
 >
 >Pinterest stelt een maximale snelheid van 1000 API-aanroepen per dag op voor de API om informatie te lezen van advertenties, ad-hocgroepen of advertentiecampagnes. Voor informatie over tariefgrenzen van toepassing op onderliggende API vraag, verwijs naar de [[!DNL Pinterest]  documentatie over tariefgrenzen ](https://developers.pinterest.com/docs/reference/ratelimits/).
 
-## Verbinden [!DNL Pinterest Ads] met platform {#connect-to-platform}
+## Verbinden [!DNL Pinterest Ads] met Experience Platform {#connect-to-platform}
 
-In de onderstaande documentatie vindt u informatie over het tot stand brengen van een verbinding tussen [!DNL Pinterest Ads] en Platform via API&#39;s of de gebruikersinterface:
+In de onderstaande documentatie vindt u informatie over het tot stand brengen van een verbinding tussen [!DNL Pinterest Ads] en Experience Platform via API&#39;s of de gebruikersinterface:
 
-### Verbinding maken [!DNL Pinterest Ads] met platform met behulp van API&#39;s {#connect-to-platform-using-api}
+### Verbinding maken [!DNL Pinterest Ads] met Experience Platform via API&#39;s {#connect-to-platform-using-api}
 
 * [Een Pinterest-basisverbinding maken met de Flow Service API](../../tutorials/api/create/advertising/pinterest-ads.md)
 * [Gegevenstabellen verkennen met de Flow Service API](../../tutorials/api/explore/tabular.md)
 * [Een dataflow maken voor een advertentiebron met behulp van de Flow Service API](../../tutorials/api/collect/advertising.md)
 
-### Verbinding maken [!DNL Pinterest Ads] met platform via de gebruikersinterface {#connect-to-platform-using-ui}
+### Verbinding maken [!DNL Pinterest Ads] met Experience Platform via de gebruikersinterface {#connect-to-platform-using-ui}
 
 * [Een Pinterest-bronverbinding maken in de gebruikersinterface](../../tutorials/ui/create/advertising/pinterest-ads.md)
 * [Een gegevensstroom maken voor een verbinding met een advertentiebron in de gebruikersinterface](../../tutorials/ui/dataflow/advertising.md)

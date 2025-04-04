@@ -1,12 +1,12 @@
 ---
-keywords: Experience Platform;thuis;populaire onderwerpen;e-commerce
+keywords: Experience Platform;home;populaire onderwerpen;e-commerce
 solution: Experience Platform
 title: Ontdek een eCommerce-verbinding met behulp van de Flow Service API
 description: Deze zelfstudie gebruikt de Flow Service API om eCommerce-verbindingen te verkennen.
 exl-id: 832ce399-6c9f-40da-8e7c-5434503c16b6
-source-git-commit: 90eb6256179109ef7c445e2a5a8c159fb6cbfe28
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '559'
+source-wordcount: '560'
 ht-degree: 0%
 
 ---
@@ -21,14 +21,14 @@ Deze zelfstudie gebruikt de [!DNL Flow Service] API om een verbinding van derden
 
 Deze handleiding vereist een goed begrip van de volgende onderdelen van Adobe Experience Platform:
 
-* [[!DNL Sources]](../../../home.md) [!DNL Experience Platform] : hiermee kunt u gegevens uit verschillende bronnen invoegen en binnenkomende gegevens structureren, labelen en verbeteren met [!DNL Platform] -services.
-* [[!DNL Sandboxes]](../../../../sandboxes/home.md): [!DNL Experience Platform] biedt virtuele sandboxen die één [!DNL Platform] -instantie in afzonderlijke virtuele omgevingen verdelen om toepassingen voor digitale ervaringen te ontwikkelen en te ontwikkelen.
+* [[!DNL Sources]](../../../home.md) [!DNL Experience Platform] : hiermee kunt u gegevens uit verschillende bronnen invoegen en binnenkomende gegevens structureren, labelen en verbeteren met [!DNL Experience Platform] -services.
+* [[!DNL Sandboxes]](../../../../sandboxes/home.md): [!DNL Experience Platform] biedt virtuele sandboxen die één [!DNL Experience Platform] -instantie in afzonderlijke virtuele omgevingen verdelen om toepassingen voor digitale ervaringen te ontwikkelen en te ontwikkelen.
 
 In de volgende secties vindt u aanvullende informatie die u moet weten als u verbinding wilt maken met een **[!UICONTROL eCommerce]** -verbinding met de [!DNL Flow Service] API.
 
 ### Verbindings-id verkrijgen
 
-Als u de **[!UICONTROL eCommerce]** -verbinding wilt verkennen met [!DNL Platform] -API&#39;s, moet u over een geldige verbinding-id beschikken. Als u nog geen verbinding hebt voor de **[!UICONTROL eCommerce]** -verbinding waarmee u wilt werken, kunt u een verbinding maken via de volgende zelfstudie:
+Als u de **[!UICONTROL eCommerce]** -verbinding wilt verkennen met [!DNL Experience Platform] -API&#39;s, moet u over een geldige verbinding-id beschikken. Als u nog geen verbinding hebt voor de **[!UICONTROL eCommerce]** -verbinding waarmee u wilt werken, kunt u een verbinding maken via de volgende zelfstudie:
 
 * [Schopify](../create/ecommerce/shopify.md)
 
@@ -38,23 +38,23 @@ Deze zelfstudie biedt voorbeeld-API-aanroepen om aan te tonen hoe uw verzoeken m
 
 ### Waarden verzamelen voor vereiste koppen
 
-Om vraag aan [!DNL Platform] APIs te maken, moet u het [ authentificatieleerprogramma ](https://www.adobe.com/go/platform-api-authentication-en) eerst voltooien. Als u de zelfstudie over verificatie voltooit, krijgt u de waarden voor elk van de vereiste headers in alle API-aanroepen van [!DNL Experience Platform] , zoals hieronder wordt getoond:
+Om vraag aan [!DNL Experience Platform] APIs te maken, moet u het [ authentificatieleerprogramma ](https://www.adobe.com/go/platform-api-authentication-en) eerst voltooien. Als u de zelfstudie over verificatie voltooit, krijgt u de waarden voor elk van de vereiste headers in alle API-aanroepen van [!DNL Experience Platform] , zoals hieronder wordt getoond:
 
 * `Authorization: Bearer {ACCESS_TOKEN}`
 * `x-api-key: {API_KEY}`
 * `x-gw-ims-org-id: {ORG_ID}`
 
-Alle bronnen in [!DNL Experience Platform], inclusief bronnen die tot [!DNL Flow Service] behoren, zijn geïsoleerd naar specifieke virtuele sandboxen. Alle aanvragen naar [!DNL Platform] API&#39;s vereisen een header die de naam van de sandbox opgeeft waarin de bewerking plaatsvindt:
+Alle bronnen in [!DNL Experience Platform], inclusief bronnen die tot [!DNL Flow Service] behoren, zijn geïsoleerd naar specifieke virtuele sandboxen. Alle aanvragen naar [!DNL Experience Platform] API&#39;s vereisen een header die de naam van de sandbox opgeeft waarin de bewerking plaatsvindt:
 
 * `x-sandbox-name: {SANDBOX_NAME}`
 
-Alle verzoeken die een nuttige lading (POST, PUT, PATCH) bevatten vereisen een extra media type kopbal:
+Alle verzoeken die een lading (POST, PUT, PATCH) bevatten vereisen een extra media typekopbal:
 
 * `Content-Type: application/json`
 
 ## Uw gegevenstabellen verkennen
 
-Met de **[!UICONTROL eCommerce]** -verbindings-id kunt u uw gegevenstabellen verkennen door GET-aanvragen uit te voeren. Gebruik de volgende aanroep om het pad te zoeken van de tabel die u wilt inspecteren of waarin u wilt opnemen [!DNL Platform].
+Met de **[!UICONTROL eCommerce]** -verbindings-id kunt u uw gegevenstabellen verkennen door GET-aanvragen uit te voeren. Gebruik de volgende aanroep om het pad te zoeken van de tabel die u wilt inspecteren of waarin u wilt opnemen [!DNL Experience Platform].
 
 **API formaat**
 
@@ -79,7 +79,7 @@ curl -X GET \
 
 **Reactie**
 
-Een succesvol antwoord retourneert een array met tabellen van uw **[!UICONTROL eCommerce]** -verbinding. Zoek de tabel die u wilt opnemen in [!DNL Platform] en neem nota van de eigenschap `path` ervan, aangezien u deze in de volgende stap moet opgeven om de structuur te inspecteren.
+Een succesvol antwoord retourneert een array met tabellen van uw **[!UICONTROL eCommerce]** -verbinding. Zoek de tabel die u wilt opnemen in [!DNL Experience Platform] en neem nota van de eigenschap `path` ervan, aangezien u deze in de volgende stap moet opgeven om de structuur te inspecteren.
 
 ```json
 [
@@ -114,9 +114,9 @@ Een succesvol antwoord retourneert een array met tabellen van uw **[!UICONTROL e
 ]
 ```
 
-## De structuur van een tabel Inspect
+## De structuur van een tabel controleren
 
-Als u de structuur van een tabel wilt inspecteren vanuit de **[!UICONTROL eCommerce]** -verbinding, moet u een verzoek uitvoeren en het pad van een tabel opgeven binnen een `object` -queryparameter.
+Als u de structuur van een tabel wilt inspecteren vanuit uw **[!UICONTROL eCommerce]** -verbinding, voert u een GET-aanvraag uit terwijl u het pad van een tabel opgeeft binnen een `object` -queryparameter.
 
 **API formaat**
 
@@ -196,4 +196,4 @@ Een geslaagde reactie retourneert de structuur van de opgegeven tabel. De detail
 
 ## Volgende stappen
 
-Aan de hand van deze zelfstudie hebt u de **[!UICONTROL eCommerce]** -verbinding verkend, het pad gevonden van de tabel waarin u wilt opnemen in [!DNL Platform] en informatie verkregen over de structuur ervan. U kunt deze informatie in het volgende leerprogramma gebruiken [ eCommerce- gegevens verzamelen en het brengen in Platform ](../collect/ecommerce.md).
+Aan de hand van deze zelfstudie hebt u de **[!UICONTROL eCommerce]** -verbinding verkend, het pad gevonden van de tabel waarin u wilt opnemen in [!DNL Experience Platform] en informatie verkregen over de structuur ervan. U kunt deze informatie in het volgende leerprogramma gebruiken [ eCommerce-gegevens verzamelen en het brengen in Experience Platform ](../collect/ecommerce.md).

@@ -1,12 +1,12 @@
 ---
-title: Overzicht van Snowflake Streaming Source Connector
+title: Snowflake Streaming Source Connector - Overzicht
 description: Leer hoe u een bronverbinding en gegevensstroom kunt maken om streaminggegevens van uw Snowflake-instantie naar Adobe Experience Platform in te voeren
 badgeUltimate: label="Ultimate" type="Positive"
 last-substantial-update: 2023-09-24T00:00:00Z
 exl-id: ed937689-e844-487e-85fb-e3536c851fe5
-source-git-commit: 84d09038ded1f35269ebf67c6bc1a5dacaafe4ac
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '816'
+source-wordcount: '820'
 ht-degree: 0%
 
 ---
@@ -17,10 +17,10 @@ ht-degree: 0%
 >
 >* De [!DNL Snowflake] -streamingbron is in de API beschikbaar voor gebruikers die Real-Time CDP Ultimate hebben aangeschaft.
 >
->* U kunt nu de [!DNL Snowflake] -streamingbron gebruiken wanneer u Adobe Experience Platform uitvoert op Amazon Web Services (AWS). Experience Platform dat op AWS wordt uitgevoerd, is momenteel beschikbaar voor een beperkt aantal klanten. Meer over de gesteunde infrastructuur van het Experience Platform leren, zie het [ Experience Platform multi-cloud overzicht ](../../../landing/multi-cloud.md).
+>* U kunt nu de [!DNL Snowflake] -streamingbron gebruiken wanneer u Adobe Experience Platform uitvoert op Amazon Web Services (AWS). Experience Platform die op AWS wordt uitgevoerd, is momenteel beschikbaar voor een beperkt aantal klanten. Meer over de gesteunde infrastructuur van Experience Platform leren, zie het [ multi-wolkenoverzicht van Experience Platform ](../../../landing/multi-cloud.md).
 
 
-Adobe Experience Platform staat toe dat gegevens uit externe bronnen worden opgenomen terwijl u de mogelijkheid krijgt om inkomende gegevens te structureren, te labelen en te verbeteren met behulp van de platformservices. U kunt gegevens uit diverse bronnen invoeren, zoals toepassingen voor Adobe, opslag in de cloud, databases en vele andere.
+Adobe Experience Platform staat toe dat gegevens uit externe bronnen worden opgenomen en biedt u de mogelijkheid om inkomende gegevens te structureren, labelen en verbeteren met behulp van Experience Platform-services. U kunt gegevens invoeren uit verschillende bronnen, zoals Adobe-toepassingen, opslag in de cloud, databases en vele andere.
 
 Experience Platform biedt ondersteuning voor het streamen van gegevens uit een [!DNL Snowflake] -database.
 
@@ -32,13 +32,13 @@ Met [!DNL Kafka Connect] houdt de [!DNL Snowflake] streamingbron de meest recent
 
 ## Vereisten
 
-In de volgende sectie worden de vereiste stappen beschreven die moeten worden uitgevoerd voordat u gegevens kunt streamen van uw [!DNL Snowflake] -database naar het Experience Platform:
+In de volgende sectie worden de vereiste stappen beschreven die moeten worden uitgevoerd voordat u gegevens kunt streamen van uw [!DNL Snowflake] -database naar Experience Platform:
 
 ### Werk uw IP lijst van gewenste personen van het adres bij
 
 Een lijst van IP adressen moet aan een lijst van gewenste personen worden toegevoegd alvorens met bronschakelaars te werken. Het niet toevoegen van uw regio-specifieke IP adressen aan uw lijst van gewenste personen kan tot fouten of niet-prestaties leiden wanneer het gebruiken van bronnen. Zie de ](../../ip-address-allow-list.md#ip-address-allow-list-for-streaming-sources) pagina van de lijst van gewenste personen van het 0} IP adres {voor meer informatie.[
 
-In de onderstaande documentatie vindt u informatie over het tot stand brengen van een verbinding tussen [!DNL Amazon Redshift] en Platform via API&#39;s of de gebruikersinterface:
+In de onderstaande documentatie vindt u informatie over het tot stand brengen van een verbinding tussen [!DNL Amazon Redshift] en Experience Platform via API&#39;s of de gebruikersinterface:
 
 ### Vereiste referenties verzamelen
 
@@ -47,8 +47,8 @@ In de onderstaande documentatie vindt u informatie over het tot stand brengen va
 | Credentials | Beschrijving |
 | --- | --- |
 | `account` | De volledige account-id (naam van account of accountlocator) van uw [!DNL Snowflake] -account is toegevoegd met het achtervoegsel `snowflakecomputing.com` . De account-id kan verschillende indelingen hebben: <ul><li>{ORG_NAME} - {ACCOUNT_NAME} .snowflakecomputing.com (b.v. `acme-abc12345.snowflakecomputing.com`)</li><li>{ACCOUNT_LOCATOR}.{CLOUD_REGION_ID} .snowflakecomputing.com (bijvoorbeeld `acme12345.ap-southeast-1.snowflakecomputing.com`)</li><li>{ACCOUNT_LOCATOR}.{CLOUD_REGION_ID}.{CLOUD} .snowflakecomputing.com (bijvoorbeeld `acme12345.east-us-2.azure.snowflakecomputing.com`)</li></ul> Voor meer informatie, lees [[!DNL Snowflake document on account identifiers] ](<https://docs.snowflake.com/en/user-guide/admin-account-identifier.html>). |
-| `warehouse` | Het [!DNL Snowflake] pakhuis beheert het proces van de vraaguitvoering voor de toepassing. Elk [!DNL Snowflake] -pakhuis is onafhankelijk van elkaar en moet afzonderlijk worden benaderd wanneer u gegevens naar Platform overbrengt. |
-| `database` | De [!DNL Snowflake] -database bevat de gegevens die u voor het platform wilt gebruiken. |
+| `warehouse` | Het [!DNL Snowflake] pakhuis beheert het proces van de vraaguitvoering voor de toepassing. Elk [!DNL Snowflake] -pakhuis is onafhankelijk van elkaar en moet afzonderlijk worden benaderd wanneer u gegevens naar Experience Platform overbrengt. |
+| `database` | De database [!DNL Snowflake] bevat de gegevens die u aan de Experience Platform wilt toevoegen. |
 | `username` | De gebruikersnaam voor de [!DNL Snowflake] -account. |
 | `password` | Het wachtwoord voor de [!DNL Snowflake] -gebruikersaccount. |
 | `role` | (Optioneel) Een op maat gedefinieerde rol die voor een gebruiker, voor een bepaalde verbinding kan worden opgegeven. Als deze waarde niet is opgegeven, wordt deze standaard ingesteld op `public` . |
@@ -87,7 +87,7 @@ Voor meer informatie over rol en voorrechtbeheer, verwijs naar de [[!DNL Snowfla
 
 ## Volgende stappen
 
-De volgende zelfstudie biedt stappen voor het verbinden van uw [!DNL Snowflake] streamingbron met Experience Platform met behulp van de API:
+In de volgende zelfstudie worden stappen beschreven voor het verbinden van uw [!DNL Snowflake] -streamingbron met Experience Platform met behulp van de API:
 
 * [De gegevens van de stroom van a [!DNL Snowflake]  gegevensbestand aan Experience Platform die de Dienst API van de Stroom gebruiken](../../tutorials/api/create/databases/snowflake-streaming.md)
-* [De gegevens van de stroom van a  [!DNL Snowflake]  gegevensbestand aan Experience Platform gebruikend de bronwerkruimte in het gebruikersinterface van het Experience Platform](../../tutorials/ui/create/databases/snowflake-streaming.md)
+* [De gegevens van de stroom van a [!DNL Snowflake]  gegevensbestand aan Experience Platform gebruikend de bronwerkruimte in het gebruikersinterface van Experience Platform](../../tutorials/ui/create/databases/snowflake-streaming.md)

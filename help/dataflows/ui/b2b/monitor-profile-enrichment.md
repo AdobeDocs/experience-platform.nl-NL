@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Verbeteringstaken voor profielen controleren
 type: Tutorial
 exl-id: 096a2212-ed7f-4419-8ead-fa1ca01c2804
-source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '692'
+source-wordcount: '693'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 Gebruik het dashboard van [!UICONTROL Profile Enrichment] om te begrijpen of de banen van de profielverrijking met succes liepen en voltooiden, en om de basismetriek te bekijken om de doeltreffendheid van de verrijking te meten.
 
-In [ Platform UI ](https://platform.adobe.com), selecteer **[!UICONTROL Monitoring]** van de linkernavigatie om tot het [!UICONTROL Monitoring] dashboard toegang te hebben. In de meningsselecteur, uitgezochte **B2B Stroom** om de dashboardelementen te zien specifiek voor [ Real-Time CDP B2B ](/help/rtcdp/b2b-overview.md).  Het dashboard van [!UICONTROL Monitoring] bevat de basismetriek van de laatste succesvolle looppas, en dagelijkse baanstatus tot 90 dagen in het verleden.
+In [ Experience Platform UI ](https://platform.adobe.com), selecteer **[!UICONTROL Monitoring]** van de linkernavigatie om tot het [!UICONTROL Monitoring] dashboard toegang te hebben. In de meningsselecteur, uitgezochte **B2B Stroom** om de dashboardelementen te zien specifiek voor [ Real-Time CDP B2B ](/help/rtcdp/b2b-overview.md).  Het dashboard van [!UICONTROL Monitoring] bevat de basismetriek van de laatste succesvolle looppas, en dagelijkse baanstatus tot 90 dagen in het verleden.
 
 ## Verrijking van het accountprofiel {#related-accounts}
 

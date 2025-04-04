@@ -1,26 +1,26 @@
 ---
-description: Leer hoe u invoervelden maakt in de gebruikersinterface van het Experience Platform waarmee uw gebruikers verschillende informatie kunnen opgeven die relevant is voor het maken van een verbinding en het exporteren van gegevens naar uw bestemming.
+description: Leer hoe u invoervelden maakt in de gebruikersinterface van Experience Platform waarmee uw gebruikers verschillende informatie kunnen opgeven die relevant is voor het maken van een verbinding en het exporteren van gegevens naar uw bestemming.
 title: Gegevensvelden van de klant
 exl-id: 7f5b8278-175c-4ab8-bf67-8132d128899e
-source-git-commit: b35f584d13fb241c06b4045b525d84775ef8317c
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '1722'
+source-wordcount: '1730'
 ht-degree: 0%
 
 ---
 
 # Gebruikersinvoer configureren via gegevensvelden van klanten
 
-Wanneer het verbinden met uw bestemming in de UI van het Experience Platform, zou u uw gebruikers kunnen nodig hebben om specifieke configuratiedetails te verstrekken of specifieke opties te selecteren die u ter beschikking stelt aan hen. In Destination SDK worden deze opties gegevensvelden voor klanten genoemd.
+Wanneer u verbinding maakt met uw doel in de gebruikersinterface van Experience Platform, hebt u mogelijk uw gebruikers nodig om specifieke configuratiegegevens op te geven of specifieke opties te selecteren die u hun ter beschikking stelt. In Destination SDK worden deze opties gegevensvelden voor klanten genoemd.
 
 Om te begrijpen waar deze component in een integratie past die met Destination SDK wordt gecreeerd, zie het diagram in de [ documentatie van configuratieopties ](../configuration-options.md) of zie de volgende pagina&#39;s van het overzicht van bestemmingsconfiguratie:
 
-* [Gebruik Destination SDK om een streamingbestemming te configureren](../../guides/configure-destination-instructions.md#create-destination-configuration)
-* [Gebruik Destination SDK om een op een bestand gebaseerde bestemming te configureren](../../guides/configure-file-based-destination-instructions.md#create-destination-configuration)
+* [Destination SDK gebruiken om een streamingbestemming te configureren](../../guides/configure-destination-instructions.md#create-destination-configuration)
+* [Destination SDK gebruiken om een bestandsgebaseerde bestemming te configureren](../../guides/configure-file-based-destination-instructions.md#create-destination-configuration)
 
 ## Gebruik gevallen voor gegevensvelden van klanten {#use-cases}
 
-De gebieden van de klantengegevens van het gebruik voor een verscheidenheid van gebruiksgevallen waar u gebruikers nodig hebt om gegevens in de UI van het Experience Platform in te voeren. Gebruik bijvoorbeeld gegevensvelden van klanten wanneer gebruikers het volgende moeten opgeven:
+Gebruik gegevensvelden van klanten voor een groot aantal gebruiksgevallen waarin u gebruikers nodig hebt om gegevens in te voeren in de gebruikersinterface van Experience Platform. Gebruik bijvoorbeeld gegevensvelden van klanten wanneer gebruikers het volgende moeten opgeven:
 
 * Namen en paden van cloudopslagemmertjes voor op bestanden gebaseerde doelen.
 * De indeling die wordt geaccepteerd door de gegevensvelden van de klant.
@@ -32,7 +32,7 @@ U kunt de gebieden van klantengegevens via het `/authoring/destinations` eindpun
 * [Een doelconfiguratie maken](../../authoring-api/destination-configuration/create-destination-configuration.md)
 * [Een doelconfiguratie bijwerken](../../authoring-api/destination-configuration/update-destination-configuration.md)
 
-In dit artikel worden alle ondersteunde configuratietypen voor klantgegevensvelden beschreven die u voor uw doel kunt gebruiken, en wordt aangegeven welke klanten in de gebruikersinterface van het Experience Platform zullen zien.
+In dit artikel worden alle ondersteunde configuratietypen voor klantgegevensvelden beschreven die u voor uw doel kunt gebruiken, en wordt aangegeven welke klanten in de gebruikersinterface van Experience Platform zullen zien.
 
 >[!IMPORTANT]
 >
@@ -53,10 +53,10 @@ Wanneer u uw eigen gegevensvelden voor klanten maakt, kunt u de parameters in de
 
 | Parameter | Type | Vereist/optioneel | Beschrijving |
 |---------|----------|------|---|
-| `name` | String | Vereist | Geef een naam op voor het aangepaste veld dat u introduceert. Deze naam is niet zichtbaar in de gebruikersinterface van het platform, tenzij het veld `title` leeg is of ontbreekt. |
+| `name` | String | Vereist | Geef een naam op voor het aangepaste veld dat u introduceert. Deze naam is niet zichtbaar in de gebruikersinterface van Experience Platform, tenzij het veld `title` leeg is of ontbreekt. |
 | `type` | String | Vereist | Hiermee geeft u het type van het aangepaste veld aan dat u wilt gebruiken. Geaccepteerde waarden: <ul><li>`string`</li><li>`object`</li><li>`integer`</li></ul> |
-| `title` | String | Optioneel | Hiermee wordt de naam van het veld aangegeven, zoals deze wordt weergegeven door klanten in de gebruikersinterface van het platform. Als dit veld leeg is of ontbreekt, neemt de interface de veldnaam over van de waarde `name` . |
-| `description` | String | Optioneel | Geef een beschrijving op voor het aangepaste veld. Deze beschrijving is niet zichtbaar in de interface van het Platform. |
+| `title` | String | Optioneel | Hiermee wordt de naam van het veld aangegeven, zoals deze wordt weergegeven door klanten in de gebruikersinterface van Experience Platform. Als dit veld leeg is of ontbreekt, neemt de interface de veldnaam over van de waarde `name` . |
+| `description` | String | Optioneel | Geef een beschrijving op voor het aangepaste veld. Deze beschrijving is niet zichtbaar in de gebruikersinterface van Experience Platform. |
 | `isRequired` | Boolean | Optioneel | Geeft aan of gebruikers een waarde voor dit veld moeten opgeven in de workflow voor de doelconfiguratie. |
 | `pattern` | String | Optioneel | Hiermee wordt, indien nodig, een patroon voor het aangepaste veld afgedwongen. Gebruik reguliere expressies om een patroon af te dwingen. Als uw klant-id&#39;s bijvoorbeeld geen cijfers of onderstrepingstekens bevatten, voert u `^[A-Za-z]+$` in dit veld in. |
 | `enum` | String | Optioneel | Hiermee geeft u het aangepaste veld weer als een vervolgkeuzemenu en geeft u de opties weer die beschikbaar zijn voor de gebruiker. |
@@ -67,7 +67,7 @@ Wanneer u uw eigen gegevensvelden voor klanten maakt, kunt u de parameters in de
 
 {style="table-layout:auto"}
 
-In het onderstaande voorbeeld definieert de sectie `customerDataFields` twee velden die gebruikers moeten invoeren in de interface van het platform wanneer ze verbinding maken met het doel:
+In het onderstaande voorbeeld definieert de sectie `customerDataFields` twee velden die gebruikers moeten invoeren in de gebruikersinterface van Experience Platform wanneer ze verbinding maken met het doel:
 
 * `Account ID`: Een gebruikersaccount-id voor het doelplatform.
 * `Endpoint region`: Het regionale eindpunt van de API waarmee ze verbinding maken. In de sectie `enum` wordt een vervolgkeuzemenu gemaakt met de waarden die binnen de beschikbare ruimte voor de gebruikers zijn gedefinieerd.
@@ -103,7 +103,7 @@ De resulterende ervaring met de gebruikersinterface wordt weergegeven in de onde
 
 ## Namen en beschrijvingen van doelverbindingen {#names-description}
 
-Wanneer u een nieuw doel maakt, voegt Destination SDK automatisch **[!UICONTROL Name]** - en **[!UICONTROL Description]** -velden toe aan het scherm met de doelverbinding in de gebruikersinterface van het platform. Zoals u in het bovenstaande voorbeeld kunt zien, worden de velden **[!UICONTROL Name]** en **[!UICONTROL Description]** weergegeven in de gebruikersinterface zonder te worden opgenomen in de configuratie van de gegevensvelden van de klant.
+Wanneer Destination SDK een nieuw doel maakt, worden automatisch **[!UICONTROL Name]** - en **[!UICONTROL Description]** -velden toegevoegd aan het scherm met de doelverbinding in de gebruikersinterface van Experience Platform. Zoals u in het bovenstaande voorbeeld kunt zien, worden de velden **[!UICONTROL Name]** en **[!UICONTROL Description]** weergegeven in de gebruikersinterface zonder te worden opgenomen in de configuratie van de gegevensvelden van de klant.
 
 >[!IMPORTANT]
 >
@@ -111,7 +111,7 @@ Wanneer u een nieuw doel maakt, voegt Destination SDK automatisch **[!UICONTROL 
 
 ## Gegevensvelden van klanten bestellen {#ordering}
 
-De orde waarin u de gebieden van klantengegevens in de bestemmingsconfiguratie toevoegt wordt weerspiegeld in Platform UI.
+De volgorde waarin u de gegevensvelden van de klant toevoegt in de doelconfiguratie wordt weerspiegeld in de gebruikersinterface van Experience Platform.
 
 De onderstaande configuratie wordt bijvoorbeeld dienovereenkomstig weergegeven in de gebruikersinterface, waarbij de opties worden weergegeven in de volgorde **[!UICONTROL Name]**, **[!UICONTROL Description]**, **[!UICONTROL Bucket name]**, **[!UICONTROL Folder path]**, **[!UICONTROL File Type]** en **[!UICONTROL Compression format]** .
 
@@ -559,7 +559,7 @@ Hieronder ziet u het resulterende UI-scherm op basis van de bovenstaande configu
 
 ## Toegang tot getemplatificeerde gegevensvelden van klanten {#accessing-templatized-fields}
 
-Wanneer uw bestemming gebruikersinvoer vereist, moet u een selectie van gebieden van klantengegevens aan uw gebruikers verstrekken, die zij door de UI van het Platform kunnen invullen. Dan, moet u uw bestemmingsserver vormen om de gebruikersinput van de gebieden van de klantengegevens correct te lezen. Dit wordt gedaan door templatized gebieden.
+Wanneer uw bestemming gebruikersinvoer vereist, moet u een selectie van gebieden van klantengegevens aan uw gebruikers verstrekken, die zij door de UI van Experience Platform kunnen invullen. Dan, moet u uw bestemmingsserver vormen om de gebruikersinput van de gebieden van de klantengegevens correct te lezen. Dit wordt gedaan door templatized gebieden.
 
 Sjabloonvelden gebruiken de indeling `{{customerData.fieldName}}` , waarbij `fieldName` de naam is van het gegevensveld van de klant waaruit u informatie leest. Alle sjabloongegevensvelden van klanten worden voorafgegaan door `customerData.` en ingesloten door dubbele accolades `{{ }}` .
 
@@ -592,7 +592,7 @@ Bijvoorbeeld, denken wij de volgende Amazon S3 bestemmingsconfiguratie:
 
 Deze configuratie vraagt uw gebruikers om hun [!DNL Amazon S3] emmernaam en omslagweg in hun respectieve gebieden van klantengegevens in te gaan.
 
-Voor Experience Platform om correct met [!DNL Amazon S3] te verbinden, moet uw bestemmingsserver worden gevormd om de waarden van deze twee gebieden van klantengegevens te lezen, zoals hieronder getoond:
+Experience Platform kan alleen correct verbinding maken met [!DNL Amazon S3] als uw doelserver is geconfigureerd voor het lezen van de waarden van deze twee gegevensvelden van klanten, zoals hieronder wordt weergegeven:
 
 ```json
  "fileBasedS3Destination":{
@@ -607,13 +607,13 @@ Voor Experience Platform om correct met [!DNL Amazon S3] te verbinden, moet uw b
    }
 ```
 
-De sjabloonwaarden `{{customerData.bucketName}}` en `{{customerData.path}}` lezen de door de gebruiker opgegeven waarden zodat het Experience Platform verbinding kan maken met het doelplatform.
+De sjabloonwaarden `{{customerData.bucketName}}` en `{{customerData.path}}` lezen de door de gebruiker opgegeven waarden zodat Experience Platform verbinding kan maken met het doelplatform.
 
 Voor meer informatie over hoe te om uw bestemmingsserver te vormen om gematigde gebieden te lezen, zie de documentatie op [ hard-gecodeerd tegenover templatized gebieden ](../destination-server/server-specs.md#templatized-fields).
 
 ## Volgende stappen {#next-steps}
 
-Nadat u dit artikel hebt gelezen, hebt u beter inzicht in hoe u uw gebruikers kunt toestaan om informatie in de gebruikersinterface van het Experience Platform in te voeren via de gegevensvelden van de klant. U weet nu ook hoe te om het juiste gebied van klantengegevens voor uw gebruiksgeval te selecteren, en, klantengegevensgebieden te vormen, te ordenen en te groeperen in de UI van het Platform.
+Nadat u dit artikel hebt gelezen, hebt u beter inzicht in hoe u uw gebruikers kunt toestaan om informatie in de gebruikersinterface van Experience Platform in te voeren via de gegevensvelden van de klant. U weet nu ook hoe u het juiste gegevensveld voor klanten voor uw gebruiksscenario selecteert en de gegevensvelden voor klanten configureert, ordent en groepeert in de gebruikersinterface van Experience Platform.
 
 Raadpleeg de volgende artikelen voor meer informatie over de andere doelcomponenten:
 

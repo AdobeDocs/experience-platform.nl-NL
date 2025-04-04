@@ -2,19 +2,19 @@
 title: Deelnemerprofielen opnieuw instellen
 description: Leer hoe u de doelconnector voor RainFocus-profielen van deelnemers gebruikt om de publieksprofielen te synchroniseren met het RainFocus Global-deelnemerprofiel.
 last-substantial-update: 2024-12-17T00:00:00Z
-source-git-commit: a3dcf49d3ed9afacd3ffef10d6f280c71ebdf584
+exl-id: 27c3848c-411a-4305-a5d5-00b145b95287
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '969'
-ht-degree: 1%
+ht-degree: 3%
 
 ---
-
 
 # Deelnemerprofielen opnieuw instellen {#rainfocus-destination}
 
 ## Overzicht {#overview}
 
-Gebruik de bestemming [!DNL RainFocus Attendee Profiles] om klantprofielen vanuit Adobe Experience Platform te streamen naar het [!DNL RainFocus] -platform om deelnemerprofielen te maken en bij te werken.
+Gebruik de bestemming [!DNL RainFocus Attendee Profiles] om klantprofielen van Adobe Experience Platform naar het [!DNL RainFocus]-platform te streamen om deelnemersprofielen te maken en bij te werken.
 
 >[!IMPORTANT]
 >
@@ -48,7 +48,7 @@ U moet ook een herkenningsteken van de gebeurteniscode RainFocus **hebben**, waa
 
 | Doelidentiteit | Beschrijving | Overwegingen |
 |---|---|---|
-| email_lc_sha256 | E-mailadressen die met het algoritme SHA256 worden gehasht | Adobe Experience Platform biedt ondersteuning voor zowel platte tekst- als SHA256-e-mailadressen met hashing. Wanneer het bronveld hashingkenmerken bevat, schakelt u de optie **[!UICONTROL Apply transformation]** in om de gegevens automatisch te laten hashen bij activering door [!DNL Platform] . |
+| email_lc_sha256 | E-mailadressen die met het algoritme SHA256 worden gehasht | Adobe Experience Platform biedt ondersteuning voor zowel platte tekst- als SHA256-e-mailadressen met hashing. Wanneer het bronveld hashingkenmerken bevat, schakelt u de optie **[!UICONTROL Apply transformation]** in om de gegevens automatisch te laten hashen bij activering door [!DNL Experience Platform] . |
 
 {style="table-layout:auto"}
 
@@ -58,7 +58,7 @@ In deze sectie wordt beschreven welk type publiek u naar dit doel kunt exportere
 
 | Oorsprong publiek | Ondersteund | Beschrijving |
 ---------|----------|----------|
-| [!DNL Segmentation Service] | ✓ | Het publiek produceerde door de Dienst van de Segmentatie van het Experience Platform [ ](../../../segmentation/home.md). |
+| [!DNL Segmentation Service] | ✓ | Het publiek produceerde door de Dienst van de Segmentatie van Experience Platform [ ](../../../segmentation/home.md). |
 | Aangepaste uploads | ✓ | Het publiek [ ingevoerde ](../../../segmentation/ui/overview.md#import-audience) in Experience Platform van Csv- dossiers. |
 
 {style="table-layout:auto"}

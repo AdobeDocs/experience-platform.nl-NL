@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Unions API-eindpunt
 description: Het /union eindpunt in de Registratie API van het Schema staat u toe om XDM vakingsschema's in uw ervaringstoepassing programmatically te beheren.
 exl-id: d0ece235-72e8-49d9-856b-5dba44e16ee7
-source-git-commit: 3da2e8f66f08a7bb9533795f7854ad583734911c
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '899'
+source-wordcount: '900'
 ht-degree: 0%
 
 ---
@@ -31,13 +31,13 @@ De array `timeSeriesEvents` is een lijst met tijdreeksgebeurtenissen die betrekk
 
 ### Segmentlidmaatschapstoewijzing
 
-In de `segmentMembership` -kaart worden de resultaten opgeslagen van de evaluatie van een segmentdefinitie. Wanneer de segmentbanen met succes gebruikend de [ Segmentatie API ](https://www.adobe.io/experience-platform-apis/references/segmentation/) in werking worden gesteld, wordt de kaart bijgewerkt. `segmentMembership` slaat ook vooraf beoordeelde soorten publiek op die in Platform worden opgenomen, waardoor integratie met andere oplossingen zoals Adobe Audience Manager mogelijk wordt. Zie het leerprogramma op [ creërend publiek gebruikend APIs ](../../segmentation/tutorials/create-a-segment.md) voor meer informatie.
+In de `segmentMembership` -kaart worden de resultaten opgeslagen van de evaluatie van een segmentdefinitie. Wanneer de segmentbanen met succes gebruikend de [ Segmentatie API ](https://www.adobe.io/experience-platform-apis/references/segmentation/) in werking worden gesteld, wordt de kaart bijgewerkt. `segmentMembership` slaat ook vooraf beoordeelde soorten publiek op die in Experience Platform worden opgenomen, zodat ze kunnen worden geïntegreerd met andere oplossingen, zoals Adobe Audience Manager. Zie het leerprogramma op [ creërend publiek gebruikend APIs ](../../segmentation/tutorials/create-a-segment.md) voor meer informatie.
 
 ## Een lijst met vakbonden ophalen {#list}
 
 Wanneer u de tag `union` instelt op een schema, voegt [!DNL Schema Registry] automatisch het schema toe aan de union voor de klasse waarop het schema is gebaseerd. Als er voor de betreffende klasse geen vakbond bestaat, wordt automatisch een nieuwe vakbond gemaakt. `$id` voor de union is gelijkaardig aan de norm `$id` van andere [!DNL Schema Registry] middelen, met het enige verschil dat door twee onderstrepingstekens en het woord &quot;union&quot; (`__union`) wordt toegevoegd.
 
-U kunt een lijst met beschikbare samenvoegingen weergeven door een aanvraag voor GET in te dienen bij het eindpunt van `/tenant/unions` .
+U kunt een lijst met beschikbare samenvoegingen weergeven door een GET-aanvraag in te dienen bij het eindpunt van `/tenant/unions` .
 
 **API formaat**
 
@@ -91,7 +91,7 @@ Een geslaagde reactie retourneert HTTP-status 200 (OK) en een `results` -array i
 
 ## Vereniging opzoeken {#lookup}
 
-U kunt een specifieke samenvoeging bekijken door een verzoek van de GET uit te voeren die `$id` omvat en, afhankelijk van de Accept- kopbal, sommige of alle details van de unie.
+U kunt een specifieke samenvoeging weergeven door een GET-aanvraag uit te voeren die de `$id` bevat en, afhankelijk van de header Accepteren, enkele of alle details van de samenvoeging.
 
 >[!NOTE]
 >
@@ -180,11 +180,11 @@ De responsindeling is afhankelijk van de Accept-header die in de aanvraag wordt 
 
 ## Een schema voor samenvoeging inschakelen {#enable}
 
-Als u een schema voor de klasse wilt opnemen in de samenvoeging, moet u een tag `union` toevoegen aan het kenmerk `meta:immutableTags` van het schema. U kunt dit bereiken door een PATCH-verzoek in te dienen om een `meta:immutableTags` -array met een enkele tekenreekswaarde van `union` aan het desbetreffende schema toe te voegen. Zie de [ gids van het schemaeindpunt ](./schemas.md#union) voor een gedetailleerd voorbeeld.
+Als u een schema voor de klasse wilt opnemen in de samenvoeging, moet u een tag `union` toevoegen aan het kenmerk `meta:immutableTags` van het schema. U kunt dit bereiken door een PATCH-verzoek in te dienen om een `meta:immutableTags` -array met een enkele tekenreekswaarde van `union` toe te voegen aan het desbetreffende schema. Zie de [ gids van het schemaeindpunt ](./schemas.md#union) voor een gedetailleerd voorbeeld.
 
 ## Schema&#39;s weergeven in een union {#list-schemas}
 
-Om te zien welke schema&#39;s deel van een specifieke vereniging uitmaken, kunt u een verzoek van de GET tot het `/tenant/schemas` eindpunt uitvoeren. Met de query-parameter `property` kunt u de reactie alleen configureren voor retourschema&#39;s die een `meta:immutableTags` field en een `meta:class` bevatten die gelijk zijn aan de klasse waartoe u toegang hebt.
+Als u wilt zien welke schema&#39;s deel uitmaken van een specifieke samenvoeging, kunt u een GET-verzoek uitvoeren naar het `/tenant/schemas` -eindpunt. Met de query-parameter `property` kunt u de reactie alleen configureren voor retourschema&#39;s die een `meta:immutableTags` field en een `meta:class` bevatten die gelijk zijn aan de klasse waartoe u toegang hebt.
 
 **API Formaat**
 

@@ -1,12 +1,12 @@
 ---
 keywords: crm;CRM;crm bestemmingen;Microsoft Dynamics 365;Microsoft Dynamics 365 crm bestemming
 title: Microsoft Dynamics 365-verbinding
-description: Met de bestemming Microsoft Dynamics 365 kunt u uw accountgegevens exporteren en activeren in Microsoft Dynamics 365 voor uw zakelijke behoeften.
+description: Met de Microsoft Dynamics 365-bestemming kunt u uw accountgegevens exporteren en activeren binnen Microsoft Dynamics 365 voor uw zakelijke behoeften.
 last-substantial-update: 2022-11-08T00:00:00Z
 exl-id: 49bb5c95-f4b7-42e1-9aae-45143bbb1d73
-source-git-commit: 5aefa362d7a7d93c12f9997d56311127e548497e
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1940'
+source-wordcount: '1959'
 ht-degree: 0%
 
 ---
@@ -27,15 +27,15 @@ Als markeerteken kunt u uw gebruikers een persoonlijke ervaring bieden op basis 
 
 ## Vereisten {#prerequisites}
 
-### Voorwaarden voor Experience Platforms {#prerequisites-in-experience-platform}
+### Experience Platform-voorwaarden {#prerequisites-in-experience-platform}
 
 Alvorens gegevens aan de [!DNL Dynamics 365] bestemming te activeren, moet u a [ schema ](/help/xdm/schema/composition.md), a [ dataset ](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html) hebben, en [ publiek ](https://experienceleague.adobe.com/docs/platform-learn/tutorials/audiences/create-audiences.html) dat in [!DNL Experience Platform] wordt gecreeerd.
 
-Verwijs naar de documentatie van de Adobe voor [ het schemagroep van de Details van het Lidmaatschap van de Publiek ](/help/xdm/field-groups/profile/segmentation.md) als u begeleiding op publieksstatistieken nodig hebt.
+Verwijs naar de documentatie van Adobe voor [ het schemagroep van de Details van het Lidmaatschap van het Publiek ](/help/xdm/field-groups/profile/segmentation.md) als u begeleiding op publieksstatistieken nodig hebt.
 
 ### [!DNL Microsoft Dynamics 365] voorwaarden {#prerequisites-destination}
 
-Als u gegevens wilt exporteren van Platform naar uw [!DNL Dynamics 365] -account, moet u rekening houden met de volgende voorwaarden in [!DNL Dynamics 365] :
+Als u gegevens wilt exporteren van Experience Platform naar uw [!DNL Dynamics 365] -account, moet u rekening houden met de volgende voorwaarden in [!DNL Dynamics 365] :
 
 #### U moet een [!DNL Microsoft Dynamics 365] -account hebben {#prerequisites-account}
 
@@ -94,7 +94,7 @@ De [ grenzen en de toewijzingen van Verzoeken ](https://docs.microsoft.com/en-us
 
 In deze sectie worden alle soorten publiek beschreven die u naar deze bestemming kunt exporteren.
 
-Deze bestemming steunt de activering van alle die publiek door de Dienst van de Segmentatie van het Experience Platform [ wordt geproduceerd ](../../../segmentation/home.md).
+Deze bestemming steunt de activering van alle die publiek door de Dienst van de Segmentatie van Experience Platform [ wordt geproduceerd ](../../../segmentation/home.md).
 
 ## Type en frequentie exporteren {#export-type-frequency}
 
@@ -102,7 +102,7 @@ Raadpleeg de onderstaande tabel voor informatie over het exporttype en de export
 
 | Item | Type | Notities |
 ---------|----------|---------|
-| Exporttype | **[!UICONTROL Profile-based]** | <ul><li>U exporteert alle leden van een publiek samen met de gewenste schemavelden *(bijvoorbeeld: e-mailadres, telefoonnummer, achternaam)* volgens uw veldtoewijzing.</li><li> Elke publieksstatus in [!DNL Dynamics 365] wordt bijgewerkt met de overeenkomstige publieksstatus van Platform, die op de **[!UICONTROL Mapping ID]** waarde wordt gebaseerd die tijdens de [ publiek wordt verstrekt die ](#schedule-audience-export-example) stap plant.</li></ul> |
+| Exporttype | **[!UICONTROL Profile-based]** | <ul><li>U exporteert alle leden van een publiek samen met de gewenste schemavelden *(bijvoorbeeld: e-mailadres, telefoonnummer, achternaam)* volgens uw veldtoewijzing.</li><li> Elke publieksstatus in [!DNL Dynamics 365] wordt bijgewerkt met de overeenkomstige publieksstatus van Experience Platform, die op de **[!UICONTROL Mapping ID]** waarde wordt gebaseerd tijdens de [ publiek die ](#schedule-audience-export-example) stap plannen.</li></ul> |
 | Exportfrequentie | **[!UICONTROL Streaming]** | <ul><li>Streaming doelen zijn &quot;altijd aan&quot; API-verbindingen. Zodra een profiel in Experience Platform wordt bijgewerkt dat op publieksevaluatie wordt gebaseerd, verzendt de schakelaar de update stroomafwaarts naar het bestemmingsplatform. Lees meer over [ het stromen bestemmingen ](/help/destinations/destination-types.md#streaming-destinations).</li></ul> |
 
 {style="table-layout:auto"}
@@ -120,7 +120,7 @@ Kies in **[!UICONTROL Destinations]** > **[!UICONTROL Catalog]** Zoeken naar [!D
 ### Verifiëren voor bestemming {#authenticate}
 
 Selecteer **[!UICONTROL Connect to destination]** als u wilt verifiëren bij het doel.
-{het schermschot van het platform UI die tonen hoe te voor authentiek te verklaren.](../../assets/catalog/crm/microsoft-dynamics-365/authenticate-destination.png)![
+{het schermschot van 0} Experience Platform UI die toont hoe te voor authentiek te verklaren.](../../assets/catalog/crm/microsoft-dynamics-365/authenticate-destination.png)![
 
 Vul de vereiste velden hieronder in. Verwijs naar de [ Dynamica 365 van de Verzameling geloofsbrieven ](#gather-credentials) sectie voor om het even welke begeleiding.
 * **[!UICONTROL Client ID]**: De [!DNL Dynamics 365] client-id voor uw [!DNL Azure Active Directory] -toepassing.
@@ -134,7 +134,7 @@ Als de opgegeven gegevens geldig zijn, geeft de gebruikersinterface de status **
 ### Doelgegevens invullen {#destination-details}
 
 Als u details voor de bestemming wilt configureren, vult u de vereiste en optionele velden hieronder in. Een sterretje naast een veld in de gebruikersinterface geeft aan dat het veld verplicht is.
-{het schermschot van het platform UI die de bestemmingsdetails toont.](../../assets/catalog/crm/microsoft-dynamics-365/destination-details.png)![
+{het schermschot van 0} Experience Platform UI die de bestemmingsdetails toont.](../../assets/catalog/crm/microsoft-dynamics-365/destination-details.png)![
 
 * **[!UICONTROL Name]**: Een naam waarmee u dit doel in de toekomst herkent.
 * **[!UICONTROL Description]**: Een beschrijving die u zal helpen deze bestemming in de toekomst identificeren.
@@ -157,17 +157,17 @@ Lees [ activeer profielen en publiek aan het stromen publiek uitvoerbestemmingen
 
 ### Afbeeldingsoverwegingen en voorbeeld {#mapping-considerations-example}
 
-Als u uw publieksgegevens correct vanuit Adobe Experience Platform naar de [!DNL Dynamics 365] -bestemming wilt verzenden, moet u de stap voor veldtoewijzing doorlopen. Toewijzing bestaat uit het maken van een koppeling tussen de schemavelden van uw Experience Data Model (XDM) in uw Platform-account en de bijbehorende equivalenten van de doelbestemming. Voer de volgende stappen uit om uw XDM-velden correct toe te wijzen aan de [!DNL Dynamics 365] -doelvelden:
+Als u uw publieksgegevens correct vanuit Adobe Experience Platform naar de [!DNL Dynamics 365] -bestemming wilt verzenden, moet u de stap voor veldtoewijzing doorlopen. Toewijzing bestaat uit het maken van een koppeling tussen de schemavelden van uw Experience Data Model (XDM) in uw Experience Platform-account en de overeenkomstige equivalenten van de doelbestemming. Voer de volgende stappen uit om uw XDM-velden correct toe te wijzen aan de [!DNL Dynamics 365] -doelvelden:
 
 1. Selecteer **[!UICONTROL Add new mapping]** in de stap **[!UICONTROL Mapping]** . Er verschijnt een nieuwe toewijzingsrij op het scherm.
-   {het screenshot voorbeeld van het platform UI voor Add nieuwe afbeelding.](../../assets/catalog/crm/microsoft-dynamics-365/add-new-mapping.png)![
+   ![ het schermschot van Experience Platform UI voor Add nieuwe afbeelding.](../../assets/catalog/crm/microsoft-dynamics-365/add-new-mapping.png)
 
 1. Kies in het venster **[!UICONTROL Select source field]** de categorie **[!UICONTROL Select identity namespace]** en selecteer `contactid` .
-   ![ het schermschot van het Platform UI voor het in kaart brengen van Source.](../../assets/catalog/crm/microsoft-dynamics-365/source-mapping.png)
+   ![ het schermschot van Experience Platform UI voor de afbeelding van Source.](../../assets/catalog/crm/microsoft-dynamics-365/source-mapping.png)
 
 1. Selecteer in het **[!UICONTROL Select target field]** -venster het type doelveld waaraan u het bronveld wilt toewijzen.
    * **[!UICONTROL Select identity namespace]**: selecteer deze optie om het bronveld toe te wijzen aan een naamruimte in de lijst.
-     {het schermschot van het platform UI die van het Doel afbeelding voor contact tonen.](../../assets/catalog/crm/microsoft-dynamics-365/target-mapping-contactid.png)![
+     ![ het schermschot van Experience Platform UI die de afbeelding van het Doel voor contact tonen.](../../assets/catalog/crm/microsoft-dynamics-365/target-mapping-contactid.png)
 
    * Voeg de volgende toewijzing toe tussen uw XDM-profielschema en uw [!DNL Dynamics 365] -instantie:
 
@@ -176,7 +176,7 @@ Als u uw publieksgegevens correct vanuit Adobe Experience Platform naar de [!DNL
      | `contactid` | `contactid` | Ja |
 
    * **[!UICONTROL Select custom attributes]**: selecteer deze optie om het bronveld toe te wijzen aan een aangepast kenmerk dat u in het veld **[!UICONTROL Attribute name]** definieert. Verwijs naar [[!DNL Dynamics 365]  documentatie ](https://docs.microsoft.com/en-us/dynamics365/customerengagement/on-premises/developer/entities/contact?view=op-9-1#entity-properties) voor een uitvoerige lijst van gesteunde attributen.
-     {het schermschot van het platform UI die van het Doel afbeelding voor e-mail toont.](../../assets/catalog/crm/microsoft-dynamics-365/target-mapping-email.png)![
+     {het schermschot van 0} Experience Platform UI die de afbeelding van het Doel voor e-mail toont.](../../assets/catalog/crm/microsoft-dynamics-365/target-mapping-email.png)![
 
      >[!IMPORTANT]
      >
@@ -193,11 +193,11 @@ Als u uw publieksgegevens correct vanuit Adobe Experience Platform naar de [!DNL
 
    * Hieronder ziet u een voorbeeld waarin deze toewijzingen worden gebruikt:
 
-   ![ het schermschot van het Platform UI die de afbeeldingen van het Doel tonen.](../../assets/catalog/crm/microsoft-dynamics-365/mappings.png)
+   ![ Experience Platform UI het screenshot voorbeeld dat de afbeeldingen van het Doel toont.](../../assets/catalog/crm/microsoft-dynamics-365/mappings.png)
 
 ### Het publiek van het programma uitvoeren en voorbeeld {#schedule-audience-export-example}
 
-In de stap [[!UICONTROL Schedule audience export]](/help/destinations/ui/activate-segment-streaming-destinations.md#scheduling) van de activeringsworkflow moet u het publiek Platform handmatig toewijzen aan het aangepaste veldkenmerk in [!DNL Dynamics 365] .
+In de stap [[!UICONTROL Schedule audience export]](/help/destinations/ui/activate-segment-streaming-destinations.md#scheduling) van de activeringsworkflow moet u Experience Platform-soorten publiek handmatig toewijzen aan het aangepaste veldkenmerk in [!DNL Dynamics 365] .
 
 U doet dit door elk publiek te selecteren en vervolgens het bijbehorende aangepaste veldkenmerk in te voeren vanuit [!DNL Dynamics 365] in het veld **[!UICONTROL Mapping ID]** .
 
@@ -206,25 +206,25 @@ U doet dit door elk publiek te selecteren en vervolgens het bijbehorende aangepa
 >De waarde die voor de **[!UICONTROL Mapping ID]** wordt gebruikt, moet exact overeenkomen met de naam van het aangepaste veldkenmerk dat in [!DNL Dynamics 365] is gemaakt. Zie [[!DNL Dynamics 365]  documentatie ](https://docs.microsoft.com/en-us/dynamics365/customerengagement/on-premises/customize/create-edit-fields?view=op-9-1) als u begeleiding bij het vinden van uw attributen van het douanegebied nodig hebt.
 
 Hieronder ziet u een voorbeeld:
-{het screenshot voorbeeld van het Platform UI die het publiek van het Programma tonen uitvoer.](../../assets/catalog/crm/microsoft-dynamics-365/schedule-segment-export.png)![
+{het screenshot voorbeeld van 0} Experience Platform UI die het publiek van het Programma tonen uitvoer.](../../assets/catalog/crm/microsoft-dynamics-365/schedule-segment-export.png)![
 
 ## Gegevens exporteren valideren {#exported-data}
 
 Volg onderstaande stappen om te controleren of u de bestemming correct hebt ingesteld:
 
 1. Selecteer **[!UICONTROL Destinations]** > **[!UICONTROL Browse]** om naar de lijst met doelen te navigeren.
-   ![ het schermschot van het Platform UI die door Doelen toont.](../../assets/catalog/crm/microsoft-dynamics-365/browse-destinations.png)
+   {het schermschot van 0} Experience Platform UI die Browse Doelen toont.](../../assets/catalog/crm/microsoft-dynamics-365/browse-destinations.png)![
 
 1. Selecteer het doel en bevestig dat de status **[!UICONTROL enabled]** is.
-   ![ het schermschot van het Platform UI die de Looppas van Doelen Dataflow toont.](../../assets/catalog/crm/microsoft-dynamics-365/destination-dataflow-run.png)
+   ![ het schermschot van Experience Platform UI die de Looppas van Doelen Dataflow toont.](../../assets/catalog/crm/microsoft-dynamics-365/destination-dataflow-run.png)
 
 1. Ga naar het tabblad **[!DNL Activation data]** en selecteer vervolgens een publieksnaam.
-   ![ het schermschot van het Platform UI die de Gegevens van de Activering van Doelen toont.](../../assets/catalog/crm/microsoft-dynamics-365/destinations-activation-data.png)
+   ![ het schermschot van Experience Platform UI die de Gegevens van de Activering van Doelen toont.](../../assets/catalog/crm/microsoft-dynamics-365/destinations-activation-data.png)
 
 1. Controleer het overzicht van het publiek en zorg ervoor dat het aantal profielen overeenkomt met het aantal profielen dat in het publiek is gemaakt.
-   {het screenshot voorbeeld van het platform UI die publiek toont.](../../assets/catalog/crm/microsoft-dynamics-365/segment.png)![
+   {het schermschot van 0} Experience Platform UI die publiek toont.](../../assets/catalog/crm/microsoft-dynamics-365/segment.png)![
 
-1. Meld u aan bij de [!DNL Dynamics 365] -website, navigeer naar de pagina [!DNL Customers] > [!DNL Contacts] en controleer of de profielen van het publiek zijn toegevoegd. U kunt zien dat elke publieksstatus in [!DNL Dynamics 365] met de overeenkomstige publieksstatus van Platform werd bijgewerkt, dat op de **[!UICONTROL Mapping ID]** waarde wordt gebaseerd die tijdens de [ publiek wordt verstrekt die ](#schedule-audience-export-example) stap plant.
+1. Meld u aan bij de [!DNL Dynamics 365] -website, navigeer naar de pagina [!DNL Customers] > [!DNL Contacts] en controleer of de profielen van het publiek zijn toegevoegd. U kunt zien dat elke publieksstatus in [!DNL Dynamics 365] met de overeenkomstige publieksstatus van Experience Platform werd bijgewerkt, die op de **[!UICONTROL Mapping ID]** waarde wordt gebaseerd die tijdens de [ publiek wordt verstrekt die ](#schedule-audience-export-example) stap plant.
    {de het schermschot van de Dynamiek 365 UI die de pagina van Contacten met bijgewerkte publieksstatussen toont.](../../assets/catalog/crm/microsoft-dynamics-365/contacts.png)![
 
 ## Gegevensgebruik en -beheer {#data-usage-governance}
@@ -237,9 +237,9 @@ Alle [!DNL Adobe Experience Platform] -doelen zijn compatibel met het beleid voo
 
 Wanneer u een gegevensstroomuitvoering controleert, als u het volgende foutbericht krijgt: `Bad request reported while pushing events to the destination. Please contact the administrator and try again.`
 
-{het schermschot van 0} Platform UI die Onjuiste verzoekfout toont.](../../assets/catalog/crm/microsoft-dynamics-365/error.png)![
+![ het schermschot van Experience Platform UI die Onjuiste verzoekfout toont.](../../assets/catalog/crm/microsoft-dynamics-365/error.png)
 
-U kunt deze fout verhelpen door te controleren of de **[!UICONTROL Mapping ID]** die u in [!DNL Dynamics 365] voor uw platformpubliek hebt opgegeven, geldig is en aanwezig is in [!DNL Dynamics 365] .
+Om deze fout te corrigeren, controleert u of de **[!UICONTROL Mapping ID]** die u in [!DNL Dynamics 365] voor uw Experience Platform-publiek hebt opgegeven, geldig is en bestaat binnen [!DNL Dynamics 365] .
 
 ## Aanvullende bronnen {#additional-resources}
 
@@ -255,7 +255,7 @@ Deze sectie vangt de functionaliteit en de significante documentatieupdates aan 
 
 | Releasedatum | Type bijwerken | Beschrijving |
 |---|---|---|
-| Oktober 2023 | Documentatie bijwerken | De bijgewerkte begeleiding om op alle namen van doelattributen te wijzen zou in kleine letters, in de [ Afbeelding overwegingen en voorbeeld ](#mapping-considerations-example) stap moeten zijn. |
+| Oktober 2023 | Documentatie bijgewerkt | De bijgewerkte begeleiding om op alle namen van doelattributen te wijzen zou in kleine letters, in de [ Afbeelding overwegingen en voorbeeld ](#mapping-considerations-example) stap moeten zijn. |
 | Augustus 2023 | Bijwerken van functionaliteit en documentatie | Extra ondersteuning voor [!DNL Dynamics 365] aangepaste veldvoorvoegsels voor aangepaste velden die niet zijn gemaakt in de standaardoplossing van [!DNL Dynamics 365] . Een nieuw inputgebied, **[!UICONTROL Customization Prefix]**, is toegevoegd in [ Vul de stap van bestemmingsdetails ](#destination-details). (PLATIR-31602). |
 | nov. 2022 | Eerste release | Oorspronkelijke doelversie en documentatie publiceren. |
 

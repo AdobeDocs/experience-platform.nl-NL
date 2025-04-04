@@ -1,17 +1,17 @@
 ---
-keywords: Experience Platform;thuis;populaire onderwerpen;Audience Manager-aansluiting;Audience Manager;publieksmanager
+keywords: Experience Platform;home;populaire onderwerpen;Audience Manager-aansluiting;Auditiebeheer;publieksmanager
 solution: Experience Platform
-title: Overzicht van Audience Manager Source
+title: Audience Manager Source - Overzicht
 description: De Adobe Audience Manager-bronstroom streamt gegevens van de eerste partij die in Audience Manager naar Adobe Experience Platform zijn verzameld.
 exl-id: be90db33-69e1-4f42-9d1a-4f8f26405f0f
-source-git-commit: 8ef9fedcc77f39707ef5191988a5b7360e1118cc
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1120'
+source-wordcount: '1130'
 ht-degree: 0%
 
 ---
 
-# Bron Audience Manager
+# Audience Manager-bron
 
 >[!IMPORTANT]
 >
@@ -20,18 +20,18 @@ ht-degree: 0%
 >- [ creeer een douane namespace in de Dienst van de Identiteit ](../../../identity-service/features/namespaces.md#create-custom-namespaces) met het gespecificeerde identiteitssymbool (`VALUE`).
 >- Voer uw gegevens opnieuw in.
 
-De Adobe Audience Manager-bronstroom streamt gegevens van de eerste partij die in Adobe Audience Manager zijn verzameld voor activering in Adobe Experience Platform. De bron van de Audience Manager neemt twee soorten gegevens aan Platform op:
+De Adobe Audience Manager-bronstroom streamt gegevens van de eerste partij die in Adobe Audience Manager zijn verzameld voor activering in Adobe Experience Platform. De Audience Manager-bron voert twee typen gegevens in op Experience Platform:
 
-- **gegevens in real time:** Gegevens die in real time op de server van de de gegevensinzameling van de Audience Manager worden gevangen. Deze gegevens worden gebruikt in Audience Manager om op regel-gebaseerde eigenschappen te bevolken en zullen in Platform in de kortste latentietijd oppervlakten.
-- **gegevens van het Profiel:** de Audience Manager gebruikt real time en ongebogen gegevens om klantenprofielen af te leiden. Deze profielen worden gebruikt om identiteitsgrafieken en eigenschappen op segmentrealisaties te bevolken.
+- **gegevens in real time:** Gegevens die in echt - tijd op de server van de de gegevensinzameling van Audience Manager worden gevangen. Deze gegevens worden gebruikt in Audience Manager om op regels gebaseerde kenmerken te vullen en zullen in Experience Platform in de kortste latentietijd verschijnen.
+- **gegevens van het Profiel:** Audience Manager gebruikt real time en ongebogen gegevens om klantenprofielen af te leiden. Deze profielen worden gebruikt om identiteitsgrafieken en eigenschappen op segmentrealisaties te bevolken.
 
-De bron van de Audience Manager brengt deze gegevenstypes aan een Model van de Gegevens van de Ervaring (XDM) schema in kaart en verzendt hen dan naar Platform. In real time gegevens worden verzonden als gegevens XDM ExperienceEvent, terwijl de gegevens van het Profiel als gegevens van het Individuele Profiel XDM worden verzonden.
+De Audience Manager-bron wijst deze gegevenstypen toe aan een XDM-schema (Experience Data Model) en verzendt deze vervolgens naar Experience Platform. In real time gegevens worden verzonden als gegevens XDM ExperienceEvent, terwijl de gegevens van het Profiel als gegevens van het Individuele Profiel XDM worden verzonden.
 
 Voor meer informatie, lees de gids bij [ het creëren van een Audience Manager bronverbinding in UI ](../../tutorials/ui/create/adobe-applications/audience-manager.md).
 
 ## Wat is het Model van de Gegevens van de Ervaring (XDM)?
 
-XDM is een openbaar gedocumenteerde specificatie die een gestandaardiseerd kader verstrekt waardoor het Platform gegevens van de klantenervaring organiseert.
+XDM is een openbaar gedocumenteerde specificatie die een gestandaardiseerd kader verstrekt waardoor Experience Platform gegevens van de klantenervaring organiseert.
 
 Door zich aan XDM-standaarden te houden, kunnen gegevens voor klantervaring op uniforme wijze worden opgenomen, waardoor het eenvoudiger wordt om gegevens te leveren en informatie te verzamelen.
 
@@ -39,7 +39,7 @@ Voor meer informatie over hoe XDM in Experience Platform wordt gebruikt, lees he
 
 ## Voorbeelden van XDM-schema&#39;s
 
-Hieronder volgen voorbeelden van de structuur van de Audience Manager die is toegewezen aan XDM ExperienceEvent en XDM Individual Profile in Platform.
+Hieronder volgen voorbeelden van de Audience Manager-structuur die is toegewezen aan XDM ExperienceEvent en XDM Individual Profile in Experience Platform.
 
 ### ExperienceEvent - voor realtime gegevens en onbeheerde gegevens
 
@@ -49,30 +49,30 @@ Hieronder volgen voorbeelden van de structuur van de Audience Manager die is toe
 
 ![](images/aam-profile-xdm-for-profile-data.png)
 
-Voor informatie over hoe de gebieden van Audience Manager aan XDM in kaart worden gebracht, lees de documentatie over [ Audience Manager in kaart brengende gebieden ](./mapping/audience-manager.md).
+Voor informatie over hoe de gebieden van Audience Manager aan XDM in kaart worden gebracht, lees de documentatie over [ de kaartgebieden van Audience Manager ](./mapping/audience-manager.md).
 
-## Gegevensbeheer op platform
+## Gegevensbeheer op Experience Platform
 
 ### Gegevenssets
 
-Een dataset is een opslag en beheersconstructie voor een inzameling van gegevens, typisch een lijst, die een schema (kolommen) en gebieden (rijen) bevat en door een gegevensverbinding ter beschikking wordt gesteld. De gegevens van de Audience Manager bestaan uit gegevens in real time, binnenkomende gegevens, en de gegevens van het Profiel. Om van uw gegevensreeksen van de Audience Manager de plaats te bepalen, gebruik de onderzoeksfunctie in UI met de verstrekte noemende overeenkomsten voor elk type van gegevens.
+Een dataset is een opslag en beheersconstructie voor een inzameling van gegevens, typisch een lijst, die een schema (kolommen) en gebieden (rijen) bevat en door een gegevensverbinding ter beschikking wordt gesteld. Audience Manager-gegevens bestaan uit realtime gegevens, binnenkomende gegevens en profielgegevens. Om van uw datasets van Audience Manager de plaats te bepalen, gebruik de onderzoeksfunctie in UI met de verstrekte noemende overeenkomsten voor elk type van gegevens.
 
-De datasets van de Audience Manager worden onbruikbaar gemaakt voor Profiel door gebrek en de gebruikers hebben de capaciteit om datasets toe te laten of onbruikbaar te maken die op hun gebruiksgevallen worden gebaseerd. Het wordt niet geadviseerd om datasets onbruikbaar te maken die voor segmentlidmaatschap in Profiel zullen worden gebruikt.
+De datasets van Audience Manager worden onbruikbaar gemaakt voor Profiel door gebrek en de gebruikers hebben de capaciteit om datasets toe te laten of onbruikbaar te maken die op hun gebruiksgevallen worden gebaseerd. Het wordt niet geadviseerd om datasets onbruikbaar te maken die voor segmentlidmaatschap in Profiel zullen worden gebruikt.
 
 >[!NOTE]
 >
->AAM Real-time is de enige dataset die naar het datumpeer gaat. Alle andere gegevenssets voor Audience Managers gaan naar [!DNL Profile] als deze zijn ingeschakeld voor [!DNL Profile] . Als ze niet zijn ingeschakeld voor [!DNL Profile] , ontvangen ze geen gegevens en worden ze als leeg weergegeven.
+>AAM Real-time is de enige dataset die naar het data Lake gaat. Alle andere Audience Manager-gegevenssets gaan naar [!DNL Profile] als deze zijn ingeschakeld voor [!DNL Profile] . Als ze niet zijn ingeschakeld voor [!DNL Profile] , ontvangen ze geen gegevens en worden ze als leeg weergegeven.
 
 | Naam gegevensset | Beschrijving | Klasse |
 | --- | --- | --- |
-| AAM in realtime | Deze dataset bevat gegevens die door directe treffers op eindpunten DCS van de Audience Manager en identiteitskaarten voor Profielen van de Audience Manager worden verzameld. Laat deze gegevensset ingeschakeld voor het opnemen van profielen. | Gebeurtenis Experience |
-| Updates van real-time profiel AAM | Deze dataset laat in real time het richten van de eigenschappen en de segmenten van de Audience Manager toe. Het omvat informatie voor het regionale verpletteren van Edge, eigenschap, en segmentlidmaatschap. Laat deze gegevensset ingeschakeld voor het opnemen van profielen. Gegevens zijn niet zichtbaar als batches in de gegevensset. U kunt de schakeloptie **[!UICONTROL Profile]** inschakelen om de gegevens rechtstreeks in te voeren in Profiel. | Opnemen |
-| Apparaatgegevens AAM | Apparaatgegevens met ECID&#39;s en bijbehorende segmentrealisaties geaggregeerd in Audience Manager. Gegevens zijn niet zichtbaar als batches in de gegevensset. U kunt de schakeloptie **[!UICONTROL Profile]** inschakelen om de gegevens rechtstreeks in te voeren in Profiel. | Opnemen |
-| Apparaatprofielgegevens AAM | Wordt gebruikt voor diagnostiek van de Audience Manager-connector. Gegevens zijn niet zichtbaar als batches in de gegevensset. U kunt de schakeloptie **[!UICONTROL Profile]** inschakelen om de gegevens rechtstreeks in te voeren in Profiel. | Opnemen |
-| AAM geverifieerde profielen | Deze dataset bevat Audience Manager voor authentiek verklaarde profielen. Gegevens zijn niet zichtbaar als batches in de gegevensset. U kunt de schakeloptie **[!UICONTROL Profile]** inschakelen om de gegevens rechtstreeks in te voeren in Profiel. | Opnemen |
-| Metagegevens geverifieerde profielen AAM | Wordt gebruikt voor diagnostiek van Audience Manager Connector. Gegevens zijn niet zichtbaar als batches in de gegevensset. U kunt de schakeloptie **[!UICONTROL Profile]** inschakelen om de gegevens rechtstreeks in te voeren in Profiel. | Opnemen |
-| Gegevensback-up AAM apparaten | Dataset van het brengen in vroegere apparatengegevens. Dit bevat ECID&#39;s en de bijbehorende segmentrealisaties geaggregeerd in Audience Manager. Gegevens zijn niet zichtbaar als batches in de gegevensset. U kunt de schakeloptie **[!UICONTROL Profile]** inschakelen om de gegevens rechtstreeks in te voeren in Profiel. | Opnemen |
-| Back-up van geverifieerde profielen AAM | Dataset van het brengen in verleden voor authentiek verklaarde gegevens. Dit bevat voor Audience Managers geverifieerde profielen. Gegevens zijn niet zichtbaar als batches in de gegevensset. U kunt de schakeloptie **[!UICONTROL Profile]** inschakelen om de gegevens rechtstreeks in te voeren in Profiel. | Opnemen |
+| AAM Real-time | Deze dataset bevat gegevens die zijn verzameld door directe hits op Audience Manager DCS-eindpunten en identiteitskaarten voor Audience Manager-profielen. Laat deze gegevensset ingeschakeld voor het opnemen van profielen. | Gebeurtenis Experience |
+| AAM Updates voor realtime profiel | Deze dataset laat in real time het richten van de eigenschappen en de segmenten van Audience Manager toe. Het omvat informatie voor het regionale verpletteren van Edge, eigenschap, en segmentlidmaatschap. Laat deze gegevensset ingeschakeld voor het opnemen van profielen. Gegevens zijn niet zichtbaar als batches in de gegevensset. U kunt de schakeloptie **[!UICONTROL Profile]** inschakelen om de gegevens rechtstreeks in te voeren in Profiel. | Opnemen |
+| AAM-apparaatgegevens | Apparaatgegevens met ECID&#39;s en bijbehorende segmentrealisaties geaggregeerd in Audience Manager. Gegevens zijn niet zichtbaar als batches in de gegevensset. U kunt de schakeloptie **[!UICONTROL Profile]** inschakelen om de gegevens rechtstreeks in te voeren in Profiel. | Opnemen |
+| AAM-apparaatprofielgegevens | Wordt gebruikt voor Audience Manager-connector diagnostiek. Gegevens zijn niet zichtbaar als batches in de gegevensset. U kunt de schakeloptie **[!UICONTROL Profile]** inschakelen om de gegevens rechtstreeks in te voeren in Profiel. | Opnemen |
+| AAM-geverifieerde profielen | Deze dataset bevat voor Audience Manager geauthenticeerde profielen. Gegevens zijn niet zichtbaar als batches in de gegevensset. U kunt de schakeloptie **[!UICONTROL Profile]** inschakelen om de gegevens rechtstreeks in te voeren in Profiel. | Opnemen |
+| Metagegevens voor geverifieerde AAM-profielen | Wordt gebruikt voor diagnostiek van Audience Manager Connector. Gegevens zijn niet zichtbaar als batches in de gegevensset. U kunt de schakeloptie **[!UICONTROL Profile]** inschakelen om de gegevens rechtstreeks in te voeren in Profiel. | Opnemen |
+| AAM-apparaten - Gegevensback-up | Dataset van het brengen in vroegere apparatengegevens. Deze bevat ECID&#39;s en de bijbehorende segmentrealisaties die in Audience Manager zijn geaggregeerd. Gegevens zijn niet zichtbaar als batches in de gegevensset. U kunt de schakeloptie **[!UICONTROL Profile]** inschakelen om de gegevens rechtstreeks in te voeren in Profiel. | Opnemen |
+| Backfill voor AAM-geverifieerde profielen | Dataset van het brengen in verleden voor authentiek verklaarde gegevens. Dit bevat Audience Manager-geverifieerde profielen. Gegevens zijn niet zichtbaar als batches in de gegevensset. U kunt de schakeloptie **[!UICONTROL Profile]** inschakelen om de gegevens rechtstreeks in te voeren in Profiel. | Opnemen |
 
 ### Verbindingen
 
@@ -80,14 +80,14 @@ Adobe Audience Manager maakt één verbinding in Catalog: Audience Manager Conne
 
 ### Segmentpopulatie voor profieleffect
 
-De de bevolkingsgrootte van het segment heeft een directe invloed op de aantallen van het Profiel wanneer u eerst een segment van de Audience Manager naar Platform verzendt. Dit betekent dat het selecteren van alle segmenten mogelijk Profieloverschrijdingen kan veroorzaken die uw gebruiksrechten voor licenties overschrijden. Platform maakt ook onderscheid tussen nieuwe gegevens en historische gegevens voor het opnemen van profielen. Een segment met 100 op de eerste plaats gebaseerde identiteiten zal tot 100 profielen leiden. Als de populatie van hetzelfde segment echter tot 150 werd verhoogd en aan Platform werd geconsumeerd, zal het aantal profielen slechts met 50 stijgen, aangezien er slechts 50 nieuwe profielen zijn.
+Grootte van segmentpopulatie heeft een directe invloed op profielnummers wanneer u voor het eerst een Audience Manager-segment naar Experience Platform verzendt. Dit betekent dat het selecteren van alle segmenten mogelijk Profieloverschrijdingen kan veroorzaken die uw gebruiksrechten voor licenties overschrijden. Experience Platform maakt ook onderscheid tussen nieuwe gegevens en historische gegevens voor het opnemen van profielen. Een segment met 100 op de eerste plaats gebaseerde identiteiten zal tot 100 profielen leiden. Als de populatie van hetzelfde segment echter tot 150 werd verhoogd en aan Experience Platform werd geconsumeerd, zal het aantal profielen slechts met 50 stijgen, aangezien er slechts 50 nieuwe profielen zijn.
 
 U kunt het profielgebruik ook controleren uw rekening beschikbaar door het [ dashboard van het Gebruik van de Vergunning ](../../../dashboards/guides/license-usage.md) heeft.
 
-## Wat is de verwachte latentie voor de Gegevens van de Audience Manager op Platform?
+## Wat is de verwachte vertraging voor Audience Manager Data op Experience Platform?
 
-| Gegevens Audience Manager | Type | Latentie | Notities |
+| Audience Manager-gegevens | Type | Latentie | Notities |
 | --- | --- | --- | --- |
-| Gegevens in realtime | Gebeurtenissen | &lt;25 minuten | Tijd vanaf het vastleggen op het knooppunt Audience Manager Edge tot het verschijnen in het datumpomeer. |
+| Gegevens in realtime | Gebeurtenissen | &lt;25 minuten | Tijd van vastleggen op Audience Manager Edge-knooppunt tot verschijnen in data Lake. |
 | Gegevens in realtime | Profielupdates | &lt;10 minuten | Tijd om in het Profiel van de Klant in real time te landen. |
-| Gegevens in realtime en ongeboekt | Profielupdates | 24 tot 36 uur | Tijd vanaf het vastleggen via DCS/PCS Edge-gegevens en opgenomen gegevens, het verwerken naar een gebruikersprofiel en het vervolgens weergeven in Real-Time klantprofiel. Momenteel landen deze gegevens niet rechtstreeks in het datumpeer. De knevel van het profiel kan voor de datasets van het Profiel van de Audience Manager worden toegelaten om deze gegevens direct in het Profiel van de Klant in real time in te voeren. |
+| Gegevens in realtime en ongeboekt | Profielupdates | 24 tot 36 uur | Tijd vanaf het vastleggen via DCS/PCS Edge-gegevens en opgenomen gegevens, het verwerken naar een gebruikersprofiel en het vervolgens weergeven in Real-Time klantprofiel. Momenteel landen deze gegevens niet rechtstreeks in het datumpeer. De knevel van het profiel kan voor de datasets van het Profiel van Audience Manager worden toegelaten om deze gegevens direct in het Profiel van de Klant in real time in te voeren. |

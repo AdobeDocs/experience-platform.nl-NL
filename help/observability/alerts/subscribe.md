@@ -1,10 +1,10 @@
 ---
 keywords: Experience Platform;home;populaire onderwerpen;datumbereik
 title: Abonneren op Adobe I/O-gebeurtenismeldingen
-description: Dit document bevat stappen voor het abonneren op Adobe I/O-gebeurtenismeldingen voor Adobe Experience Platform-services. De informatie van de verwijzing betreffende beschikbare gebeurtenistypen wordt ook verstrekt, samen met verbindingen aan verdere documentatie over hoe te om teruggekeerde gebeurtenisgegevens voor elke toepasselijke  [!DNL Platform]  dienst te interpreteren.
+description: Dit document bevat stappen voor het abonneren op Adobe I/O-gebeurtenismeldingen voor Adobe Experience Platform-services. De informatie van de verwijzing betreffende beschikbare gebeurtenistypen wordt ook verstrekt, samen met verbindingen aan verdere documentatie over hoe te om teruggekeerde gebeurtenisgegevens voor elke toepasselijke  [!DNL Experience Platform]  dienst te interpreteren.
 feature: Alerts
 exl-id: c0ad7217-ce84-47b0-abf6-76bcf280f026
-source-git-commit: 8e6301c5f834465acff99b4cd668017581c1dfa9
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '751'
 ht-degree: 0%
@@ -13,9 +13,9 @@ ht-degree: 0%
 
 # Abonneren op Adobe I/O-gebeurtenismeldingen
 
-Met [!DNL Observability Insights] kunt u zich abonneren op Adobe I/O Event-meldingen met betrekking tot Adobe Experience Platform-activiteiten. Deze gebeurtenissen worden naar een geconfigureerde webhaak verzonden om een efficiënte automatisering van de bewaking van activiteiten te vergemakkelijken.
+Met [!DNL Observability Insights] kunt u zich abonneren op Adobe I/O-gebeurtenismeldingen met betrekking tot Adobe Experience Platform-activiteiten. Deze gebeurtenissen worden naar een geconfigureerde webhaak verzonden om een efficiënte automatisering van de bewaking van activiteiten te vergemakkelijken.
 
-In dit document worden de stappen beschreven waarmee u zich kunt abonneren op Adobe I/O-gebeurtenismeldingen voor Adobe Experience Platform-services. Er wordt ook informatie over beschikbare gebeurtenistypen gegeven, samen met koppelingen naar verdere documentatie over hoe u teruggestuurde gebeurtenisgegevens kunt interpreteren voor elke toepasselijke [!DNL Platform] -service.
+Dit document bevat stappen voor het abonneren op Adobe I/O-gebeurtenismeldingen voor Adobe Experience Platform-services. Er wordt ook informatie over beschikbare gebeurtenistypen gegeven, samen met koppelingen naar verdere documentatie over hoe u teruggestuurde gebeurtenisgegevens kunt interpreteren voor elke toepasselijke [!DNL Experience Platform] -service.
 
 ## Aan de slag
 
@@ -29,7 +29,7 @@ U kunt uw webhaak configureren met behulp van de client van uw keuze. Voor een t
 
 ![](../images/notifications/webhook-url.png)
 
-Tijdens het eerste validatieproces verzendt [!DNL I/O Events] een `challenge` -queryparameter in een GET-aanvraag naar de webhaak. U moet uw webhaak vormen om de waarde van deze parameter in de antwoordlading terug te keren. Als u Webhaak.site gebruikt, selecteert u **[!DNL Edit]** in de rechterbovenhoek en voert u `$request.query.challenge$` onder **[!DNL Response body]** in voordat u **[!DNL Save]** selecteert.
+Tijdens het eerste validatieproces verzendt [!DNL I/O Events] een query-parameter `challenge` in een GET-aanvraag naar de webhaak. U moet uw webhaak vormen om de waarde van deze parameter in de antwoordlading terug te keren. Als u Webhaak.site gebruikt, selecteert u **[!DNL Edit]** in de rechterbovenhoek en voert u `$request.query.challenge$` onder **[!DNL Response body]** in voordat u **[!DNL Save]** selecteert.
 
 ![](../images/notifications/response-challenge.png)
 
@@ -63,7 +63,7 @@ In het volgende scherm wordt een lijst weergegeven met gebeurtenistypen waarop u
 >Raadpleeg de volgende documentatie als u niet zeker weet op welke gebeurtenissen u zich moet abonneren voor de service waarmee u werkt:
 >
 >* [ de berichten van het Platform ](./rules.md)
->* [ Privacy Service berichten ](../../privacy-service/privacy-events.md)
+>* [ de berichten van Privacy Service ](../../privacy-service/privacy-events.md)
 
 >[!IMPORTANT]
 >

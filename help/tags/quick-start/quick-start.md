@@ -2,9 +2,9 @@
 title: Snelstartgids
 description: Leer hoe u snel aan de slag kunt met tags in Adobe Experience Platform.
 exl-id: 490ee344-3b18-4189-9293-2378f86fb10d
-source-git-commit: 8c881d99554a8694da79bdc29ad30ebbc870db20
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1517'
+source-wordcount: '1518'
 ht-degree: 3%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 3%
 >
 >Adobe Experience Platform Launch is omgedoopt tot een reeks technologieën voor dataverzameling in Adobe Experience Platform.  Als gevolg hiervan zijn er verschillende terminologiewijzigingen in de productdocumentatie doorgevoerd. Raadpleeg het volgende [ document ](../term-updates.md) voor een geconsolideerde referentie van de terminologiewijzigingen.
 
-Tags zijn Adobe Experience Platform van de volgende generatie technologie voor tagbeheer. Het wordt van de grond opgebouwd om een open en duurzaam ecosysteem te steunen waar iedereen zijn eigen integraties kan bouwen die de klanten van de Adobe aan hun plaatsen kunnen opstellen. Het is een eerste API-toepassing, dus alles wat u via de UI kunt doen, kunt u ook via programmacode doen via een API.
+Tags zijn Adobe Experience Platform van de volgende generatie technologie voor tagbeheer. Het is vanaf de grond opgebouwd om een open en duurzaam ecosysteem te steunen waar iedereen zijn eigen integraties kan bouwen die klanten van Adobe aan hun plaatsen kunnen opstellen. Het is een eerste API-toepassing, dus alles wat u via de UI kunt doen, kunt u ook via programmacode doen via een API.
 
 De basisworkflow voor labels:
 
@@ -29,7 +29,7 @@ De basisworkflow voor labels:
 
 ## 1. Groepen en gebruikers instellen
 
-Tags zijn volledig geïntegreerd met uw Adobe ID. Gebruikersmachtigingen worden via de Admin Console beheerd met andere producten en oplossingen van de Adobe [!DNL Creative Cloud] , [!DNL Document Cloud] en het Experience Cloud.
+Tags zijn volledig geïntegreerd met uw Adobe ID. Gebruikersmachtigingen worden via de Admin Console beheerd met andere Adobe-producten en -oplossingen van de [!DNL Creative Cloud] , [!DNL Document Cloud] en Experience Cloud.
 
 Tags hebben een op rechten gebaseerd gebruikersbeheersysteem. Dit betekent dat individuele rechten expliciet moeten worden toegekend. Deze rechten worden toegewezen aan groepen, en gebruikers worden toegevoegd aan de juiste groepen om toegang te krijgen. Zelfs als uw organisatie toegang tot de Inzameling van Gegevens heeft, kunnen de individuele gebruikers niets doen tot een beheerder hen uitdrukkelijk sommige rechten verleent.
 
@@ -37,7 +37,7 @@ Voor gedetailleerde instructies op hoe te om groepen tot stand te brengen en geb
 
 ## 2. Aanmelden
 
-Nadat de markeringsrechten aan uw Adobe ID zijn toegevoegd, moet u login aan het Experience Platform UI of UI van de Inzameling van Gegevens. U kunt dit doen door rechtstreeks aan het [ Experience Cloud login scherm ](https://experience.adobe.com/) te navigeren, en of **[!UICONTROL Data Collection]** of **[!UICONTROL Experience Platform]** te selecteren.
+Nadat u tagrechten hebt toegevoegd aan uw Adobe ID, moet u zich aanmelden bij de gebruikersinterface van Experience Platform of de gebruikersinterface voor gegevensverzameling. U kunt dit doen door rechtstreeks aan het [ login van Experience Cloud scherm ](https://experience.adobe.com/) te navigeren, en het selecteren van of **[!UICONTROL Data Collection]** of **[!UICONTROL Experience Platform]**.
 
 >[!NOTE]
 >
@@ -51,11 +51,11 @@ Voor meer over het creëren van eigenschappen, zie [ een bezit ](../ui/administr
 
 ## 4. Extensies installeren
 
-Een uitbreiding is een integratie die door Adobe of een partner van de Adobe wordt gebouwd die nieuwe en eindeloze opties voor de markeringen toevoegt die u aan uw plaatsen kunt opstellen. Als u een tag ziet als een besturingssysteem, zijn extensies de apps die u installeert om de specifieke taken uit te voeren die u nodig hebt.
+Een extensie is een integratie die is gebouwd door Adobe of een Adobe-partner en die nieuwe en eindeloze opties toevoegt voor de tags die u kunt implementeren op uw sites. Als u een tag ziet als een besturingssysteem, zijn extensies de apps die u installeert om de specifieke taken uit te voeren die u nodig hebt.
 
 Alle nieuwe eigenschappen komen met de [ geïnstalleerde uitbreiding van de Kern ](../extensions/client/core/overview.md). Mobiele eigenschappen worden geleverd met extra extensies. De uitbreiding van de Kern wordt gebouwd door Adobe om een robuuste standaardreeks gegevenselementtypes voor uw gegevenslaag en gebeurtenistypen voor uw regels te verstrekken. De meeste handelingen die u wilt uitvoeren (een ECID ophalen, [!DNL Adobe Analytics] -beacons verzenden, het globale vakje [!DNL Target] laden, enzovoort) komen uit extensies die u installeert vanuit de catalogus.
 
-Wat ervoor zorgt dat tags in Platform echt uniek zijn, is dat deze extensies door iedereen kunnen worden gemaakt. Moet u een Facebook-hermarketingpixel op uw site neerzetten? Bekijk de extensie die Facebook heeft gemaakt. Wilt u hetzelfde voor Twitter of Gekoppeld in? Gebruik deze extensies. Moet u een onderzoek in werking stellen? Kijk naar Vraag Pro of Voorzien. Moet u privacy beheren en toestemming van uw eindgebruikers geven om uit te weg te gaan met [!DNL GDPR]? Kijk goed naar Evidon en Vertrouwboog. Wilt u een gedetailleerd inzicht zien in het gedrag van individuele gebruikers op uw site? Kijk eens naar Clicktale. Voor meer informatie, voor meer informatie, zie de sectie over [ toevoegend een nieuwe uitbreiding ](../ui/managing-resources/extensions/overview.md#add-a-new-extension).
+Wat tags in Experience Platform echt uniek maakt, is dat deze extensies door iedereen kunnen worden gemaakt. Moet u een opnieuw op de markt gebrachte pixel op Facebook op uw site neerzetten? Bekijk de extensie die Facebook heeft gemaakt. Wilt u hetzelfde voor Twitter of Gekoppeld in? Gebruik deze extensies. Moet u een onderzoek in werking stellen? Kijk naar Vraag Pro of Voorzien. Moet u privacy beheren en toestemming van uw eindgebruikers geven om uit te weg te gaan met [!DNL GDPR]? Kijk goed naar Evidon en Vertrouwboog. Wilt u korrelige insight weergeven in het gedrag van individuele gebruikers op uw site? Kijk eens naar Clicktale. Voor meer informatie, voor meer informatie, zie de sectie over [ toevoegend een nieuwe uitbreiding ](../ui/managing-resources/extensions/overview.md#add-a-new-extension).
 
 ## 5. Gegevenselementen en regels maken
 
@@ -91,7 +91,7 @@ Het is belangrijk dat u de relatie begrijpt tussen uw webpagina, de hostlocatie 
 
 ### Gastheren
 
-Een host is een verbinding tussen een tag-eigenschap en uw hostlocatie. Tags bieden momenteel ondersteuning voor via Adobe beheerde hosting via een [!DNL Akamai] -host of zelfhosting via een SFTP-host. Tags maken verbinding met de server die door de host is gedefinieerd en leveren de build wanneer u een build maakt.
+Een host is een verbinding tussen een tag-eigenschap en uw hostlocatie. Tags bieden momenteel ondersteuning voor door Adobe beheerde hosting via een [!DNL Akamai] -host of zelfhosting via een SFTP-host. Tags maken verbinding met de server die door de host is gedefinieerd en leveren de build wanneer u een build maakt.
 
 Als u zelf host, kan een tagbuild rechtstreeks via SFTP naar uw servers gaan. U kunt ook naar [!DNL Akamai] gaan en deze downloaden met de archiefoptie van uw omgeving.
 
@@ -106,7 +106,7 @@ Elke bibliotheek wordt binnen een omgeving gemaakt. Een milieu bepaalt hoe u uw 
 
 Nadat u de omgeving hebt opgeslagen, wordt de insluitcode gegenereerd die u kunt kopiëren en in uw website kunt plakken. De insluitcode werkt pas nadat u een bibliotheek hebt gemaakt en een build hebt gemaakt. Voor meer informatie, zie [ Milieu&#39;s ](../ui/publishing/environments.md).
 
-### Publish een build naar Dev
+### Een build publiceren naar Dev
 
 Het publicatieproces wordt in de onderstaande stappen beschreven.
 
@@ -124,7 +124,7 @@ Voor de bevordering van een bibliotheek tot aan de productie is meestal coördin
 
 * Een ontwikkelaar (iemand met de ontwikkelaar naar rechts) verzendt de bibliotheek, die de bibliotheek naar de verzendstatus verplaatst.
 * Een fiatteur (iemand met het recht Goedkeuren) kan de bibliotheek bouwen in de werkgebiedomgeving en deze na het testen goedkeuren. Hierdoor wordt de bibliotheek naar de goedgekeurde status verplaatst. Er kan slechts één bibliotheek tegelijk worden verzonden en goedgekeurd.
-* Een uitgever (iemand met het recht van Publish) kan de bibliotheek aan het productiemilieu bouwen.
+* Een uitgever (iemand met het recht Publiceren) kan de bibliotheek aan het productiemilieu bouwen.
 
 U kunt al deze rechten aan één persoon toewijzen.
 
@@ -136,4 +136,4 @@ Raadpleeg de volgende bronnen voor meer informatie over tags:
 
 * **[Gemeenschap van de Inzameling van Gegevens ](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-data/ct-p/adobe-launch-community)**: Vraag en beantwoord vragen, voorlegt ideeën, stem op de ideeën van anderen. Meld u aan bij uw Adobe ID.
 * **[Docs van de Ontwikkelaar](../api/overview.md)**: Krijg betrokken met de gemeenschap van de markeringsontwikkelaar om uitbreidingen te bouwen of de markeringen APIs te gebruiken
-* **[Tutorials Overzicht ](https://experienceleague.adobe.com/docs/core-services-learn/tutorials/overview.html)**: Deze documenten introduceren u aan markeringsconcepten met inbegrip van gebeurtenis door:sturen en Mobiele SDK in de Apps van Android.
+* **[het Overzicht van Leerprogramma&#39;s ](https://experienceleague.adobe.com/docs/core-services-learn/tutorials/overview.html)**: Deze documenten introduceren u aan markeringsconcepten met inbegrip van gebeurtenis door:sturen en Mobiele SDK in de Apps van Android.

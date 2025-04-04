@@ -5,9 +5,9 @@ title: Gegevens stroomrecord met API's voor streaming-insluiting
 type: Tutorial
 description: Deze zelfstudie helpt u bij het gebruik van streaming opname-API's, die onderdeel zijn van de API's van de Adobe Experience Platform Data Ingestie Service.
 exl-id: 097dfd5a-4e74-430d-8a12-cac11b1603aa
-source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1032'
+source-wordcount: '1036'
 ht-degree: 0%
 
 ---
@@ -21,13 +21,13 @@ Deze zelfstudie helpt u bij het gebruik van streaming opname-API&#39;s, onderdee
 
 Deze zelfstudie vereist een praktische kennis van verschillende Adobe Experience Platform-services. Voordat u met deze zelfstudie begint, raadpleegt u de documentatie voor de volgende services:
 
-- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): Het gestandaardiseerde framework waarmee [!DNL Platform] ervaringsgegevens ordent.
+- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): Het gestandaardiseerde framework waarmee [!DNL Experience Platform] ervaringsgegevens ordent.
    - [ de ontwikkelaarsgids van de Registratie van het Schema ](../../xdm/api/getting-started.md): Een uitvoerige gids die elk van de beschikbare eindpunten van [!DNL Schema Registry] API behandelt en hoe te om vraag aan hen te maken. Dit omvat het kennen van uw `{TENANT_ID}`, die in vraag door dit leerprogramma verschijnt, evenals het weten hoe te om schema&#39;s tot stand te brengen, die in het creëren van een dataset voor opname wordt gebruikt.
 - [[!DNL Real-Time Customer Profile]](../../profile/home.md): biedt een uniform, consumentenprofiel in real-time op basis van geaggregeerde gegevens van meerdere bronnen.
 
-### Platform-API&#39;s gebruiken
+### Experience Platform API&#39;s gebruiken
 
-Voor informatie over hoe te om vraag aan Platform APIs met succes te maken, zie de gids op [ begonnen wordt met Platform APIs ](../../landing/api-guide.md).
+Voor informatie over hoe te om vraag aan Experience Platform APIs met succes te maken, zie de gids op [ begonnen wordt met Experience Platform APIs ](../../landing/api-guide.md).
 
 ## Een schema samenstellen dat is gebaseerd op de klasse [!DNL XDM Individual Profile]
 
@@ -247,7 +247,7 @@ Voor meer informatie bij het creëren van een het stromen verbinding, te lezen g
 
 ## Recordgegevens opnemen in de streamingverbinding {#ingest-data}
 
-Met de gegevensset en streamingverbinding op zijn plaats kunt u JSON-records met XDM-indeling invoeren om recordgegevens in [!DNL Platform] in te voeren.
+Met de gegevensset en streamingverbinding op zijn plaats kunt u JSON-records met XDM-indeling invoeren om recordgegevens in [!DNL Experience Platform] in te voeren.
 
 **API formaat**
 
@@ -264,7 +264,7 @@ POST /collection/{CONNECTION_ID}?syncValidation=true
 
 U kunt recordgegevens met of zonder de bronnaam in een streamingverbinding invoegen.
 
-In de onderstaande voorbeeldaanvraag wordt een record met een ontbrekende bronnaam opgenomen in Platform. Als de bronnaam van een record ontbreekt, wordt de bron-id toegevoegd uit de definitie van de streamingverbinding.
+In de onderstaande voorbeeldaanvraag wordt een record met een ontbrekende bronnaam opgenomen in Experience Platform. Als de bronnaam van een record ontbreekt, wordt de bron-id toegevoegd uit de definitie van de streamingverbinding.
 
 >[!NOTE]
 >
@@ -346,7 +346,7 @@ Een geslaagde reactie retourneert HTTP-status 200 met details van het net gestre
 | Eigenschap | Beschrijving |
 | -------- | ----------- |
 | `{CONNECTION_ID}` | De id van de eerder gemaakte streamingverbinding. |
-| `xactionId` | Een unieke id die op de server is gegenereerd voor de record die u zojuist hebt verzonden. Met deze id kan de Adobe de levenscyclus van deze record volgen via verschillende systemen en met foutopsporing. |
+| `xactionId` | Een unieke id die op de server is gegenereerd voor de record die u zojuist hebt verzonden. Met deze id kan Adobe de levenscyclus van deze record volgen via verschillende systemen en met foutopsporing. |
 | `receivedTimeMs` | Een tijdstempel (tijdperk in milliseconden) dat aangeeft op welk tijdstip de aanvraag is ontvangen. |
 | `syncValidation.status` | Aangezien de queryparameter `syncValidation=true` is toegevoegd, wordt deze waarde weergegeven. Als de validatie is gelukt, is de status `pass` . |
 
@@ -374,7 +374,7 @@ GET /access/entities?schema.name=_xdm.context.profile&entityId=janedoe@example.c
 
 **Verzoek**
 
-U kunt de eerder opgenomen recordgegevens met de volgende GET-aanvraag bekijken.
+U kunt de eerder opgenomen recordgegevens bekijken met het volgende GET-verzoek.
 
 ```shell
 curl -X GET 'https://platform.adobe.io/data/core/ups/access/entities?schema.name=_xdm.context.profile&entityId=janedoe@example.com&entityIdNS=email'\
@@ -435,6 +435,6 @@ Een geslaagde reactie retourneert HTTP status 200 met details over de aangevraag
 
 ## Volgende stappen
 
-Door dit document te lezen, begrijpt u nu hoe u recordgegevens via streamingverbindingen in [!DNL Platform] kunt opnemen. U kunt proberen meer vraag met verschillende waarden te maken en de bijgewerkte waarden terug te winnen. Bovendien kunt u uw ingesloten gegevens controleren via de gebruikersinterface van [!DNL Platform] . Voor meer informatie, te lezen gelieve de [ controle gegevensopname ](../quality/monitor-data-ingestion.md) gids.
+Door dit document te lezen, begrijpt u nu hoe u recordgegevens via streamingverbindingen in [!DNL Experience Platform] kunt opnemen. U kunt proberen meer vraag met verschillende waarden te maken en de bijgewerkte waarden terug te winnen. Bovendien kunt u uw ingesloten gegevens controleren via de gebruikersinterface van [!DNL Experience Platform] . Voor meer informatie, te lezen gelieve de [ controle gegevensopname ](../quality/monitor-data-ingestion.md) gids.
 
 Voor meer informatie over het stromen ingestie in het algemeen, te lezen gelieve het [ stromen ingestitieoverzicht ](../streaming-ingestion/overview.md).

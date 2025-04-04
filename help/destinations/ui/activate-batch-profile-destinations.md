@@ -3,9 +3,9 @@ title: Soorten publiek activeren om exportdoelen voor batchprofielen te gebruike
 type: Tutorial
 description: Leer hoe u het publiek in Adobe Experience Platform activeert door het naar batchbestemmingen te sturen.
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
-source-git-commit: f01a044d3d12ef457c6242a0b93acbfeeaf48588
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '4282'
+source-wordcount: '4284'
 ht-degree: 1%
 
 ---
@@ -64,7 +64,7 @@ Als u het publiek dat u wilt activeren naar het doel wilt selecteren, gebruikt u
 U kunt kiezen uit meerdere soorten publiek, afhankelijk van de oorsprong:
 
 * **[!UICONTROL Segmentation Service]**: publiek dat in Experience Platform wordt gegenereerd door de Segmentation Service. Zie de [ segmentatiedocumentatie ](../../segmentation/ui/overview.md) voor meer details.
-* **[!UICONTROL Custom upload]**: buiten Experience Platform gegenereerde soorten publiek die als CSV-bestanden in Platform worden geüpload. Meer over extern publiek leren, zie de documentatie bij [ het invoeren van een publiek ](../../segmentation/ui/audience-portal.md#import-audience). Het selecteren van publiek uit **[!UICONTROL Custom uploads]** laat automatisch de [ Uitgezochte verrijkingsattributen ](#select-enrichment-attributes) stap toe.
+* **[!UICONTROL Custom upload]**: buiten Experience Platform gegenereerde soorten publiek die als CSV-bestanden naar Experience Platform worden geüpload. Meer over extern publiek leren, zie de documentatie bij [ het invoeren van een publiek ](../../segmentation/ui/audience-portal.md#import-audience). Het selecteren van publiek uit **[!UICONTROL Custom uploads]** laat automatisch de [ Uitgezochte verrijkingsattributen ](#select-enrichment-attributes) stap toe.
 * Andere soorten publiek, afkomstig van andere Adobe-oplossingen, zoals [!DNL Audience Manager] .
 
 >[!IMPORTANT]
@@ -133,7 +133,7 @@ Selecteer **[!UICONTROL Export full files]** om het exporteren van een bestand m
 
 2. Gebruik de schakeloptie **[!UICONTROL Time]** om te bepalen of het exporteren direct na de publieksevaluatie of op een geplande basis op een bepaald tijdstip moet plaatsvinden. Wanneer u de optie **[!UICONTROL Scheduled]** selecteert, kunt u met de kiezer de tijd van de dag kiezen, in [!DNL UTC] -indeling, waarop het exporteren moet plaatsvinden.
 
-   Gebruik de optie **[!UICONTROL After segment evaluation]** om de activeringstaak direct uit te voeren nadat de dagelijkse batchsegmentatietaak van het Platform is voltooid. Met deze optie zorgt u ervoor dat de meest actuele profielen naar uw bestemming worden geëxporteerd wanneer de activeringstaak wordt uitgevoerd. Hierdoor kan een publiek meerdere keren per dag worden geëxporteerd, op basis van uw acties.
+   Gebruik de optie **[!UICONTROL After segment evaluation]** om de activeringstaak direct uit te voeren nadat de dagelijkse segmentatietaak van de Experience Platform-batch is voltooid. Met deze optie zorgt u ervoor dat de meest actuele profielen naar uw bestemming worden geëxporteerd wanneer de activeringstaak wordt uitgevoerd. Hierdoor kan een publiek meerdere keren per dag worden geëxporteerd, op basis van uw acties.
 
    >[!IMPORTANT]
    >
@@ -293,7 +293,7 @@ In deze stap moet u de profielkenmerken selecteren die u wilt toevoegen aan de b
 
 Een verplicht kenmerk is een selectievakje dat door de gebruiker wordt ingeschakeld en dat ervoor zorgt dat alle profielrecords het geselecteerde kenmerk bevatten. Alle geëxporteerde profielen bevatten bijvoorbeeld een e-mailadres. &#x200B;
 
-U kunt kenmerken als verplicht markeren om ervoor te zorgen dat [!DNL Platform] alleen de profielen exporteert die het specifieke kenmerk bevatten. Het resultaat is dat het kan worden gebruikt als extra filtermethode. Het merken van een attribuut als verplicht is **niet** vereist.
+U kunt kenmerken als verplicht markeren om ervoor te zorgen dat [!DNL Experience Platform] alleen de profielen exporteert die het specifieke kenmerk bevatten. Het resultaat is dat het kan worden gebruikt als extra filtermethode. Het merken van een attribuut als verplicht is **niet** vereist.
 
 Als u geen verplicht kenmerk selecteert, worden alle gekwalificeerde profielen geëxporteerd, ongeacht de kenmerken ervan.
 
@@ -310,7 +310,7 @@ Een deduplicatiesleutel is een door de gebruiker gedefinieerde primaire sleutel 
 
 Deduplicatietoetsen maken het onmogelijk meerdere records van hetzelfde profiel in één exportbestand te hebben.
 
-Er zijn drie manieren waarop u deduplicatietoetsen kunt gebruiken in [!DNL Platform] :
+Er zijn drie manieren waarop u deduplicatietoetsen kunt gebruiken in [!DNL Experience Platform] :
 
 * Eén naamruimte voor identiteit gebruiken als een [!UICONTROL deduplication key]
 * Eén profielkenmerk van een [!DNL XDM] -profiel gebruiken als [!UICONTROL deduplication key]

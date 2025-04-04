@@ -4,7 +4,7 @@ title: Gegevens toevoegen aan realtime klantprofiel
 type: Tutorial
 description: In deze zelfstudie worden de stappen beschreven die nodig zijn om gegevens toe te voegen aan het realtime profiel van de klant.
 exl-id: c2df224b-bf3d-4994-aa3a-9e9f4a6a726c
-source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '452'
 ht-degree: 0%
@@ -24,7 +24,7 @@ U kunt een schema inschakelen voor gebruik in [!DNL Real-Time Customer Profile] 
 
 ## Gegevens toevoegen met behulp van batch-opname
 
-Alle gegevens die naar [!DNL Platform] zijn geüpload met behulp van batch-invoer, worden geüpload naar afzonderlijke gegevenssets. Voordat deze gegevens door [!DNL Real-Time Customer Profile] kunnen worden gebruikt, moet de desbetreffende gegevensset specifiek zijn geconfigureerd. Voor volledige instructies, zie het leerprogramma op [ vormend een dataset voor de Dienst van het Profiel en van de Identiteit ](dataset-configuration.md).
+Alle gegevens die naar [!DNL Experience Platform] zijn geüpload met behulp van batch-invoer, worden geüpload naar afzonderlijke gegevenssets. Voordat deze gegevens door [!DNL Real-Time Customer Profile] kunnen worden gebruikt, moet de desbetreffende gegevensset specifiek zijn geconfigureerd. Voor volledige instructies, zie het leerprogramma op [ vormend een dataset voor de Dienst van het Profiel en van de Identiteit ](dataset-configuration.md).
 
 Zodra de dataset is gevormd, kunt u beginnen gegevens in het op te nemen. Zie de [ handleiding van de partijontwikkelaar ](../../ingestion/batch-ingestion/api-overview.md) voor gedetailleerde stappen op hoe te om dossiers in verschillende formaten te uploaden.
 

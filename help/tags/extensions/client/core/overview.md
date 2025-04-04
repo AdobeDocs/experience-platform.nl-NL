@@ -2,10 +2,10 @@
 title: Overzicht van Core Extension
 description: Meer informatie over de uitbreiding van de tag Core in Adobe Experience Platform.
 exl-id: 841f32ad-a6a8-49fb-a131-ef4faab47187
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '5435'
-ht-degree: 0%
+source-wordcount: '5437'
+ht-degree: 1%
 
 ---
 
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch is omgedoopt tot een reeks technologieën voor gegevensverzameling in Adobe Experience Platform. Diverse terminologische wijzigingen zijn als gevolg hiervan in de productdocumentatie doorgevoerd. Gelieve te verwijzen naar het volgende [ document ](../../../term-updates.md) voor een geconsolideerde verwijzing van de terminologieveranderingen.
+>Adobe Experience Platform Launch is omgedoopt tot een reeks technologieën voor dataverzameling in Adobe Experience Platform.  Als gevolg hiervan zijn er verschillende terminologiewijzigingen in de productdocumentatie doorgevoerd. Raadpleeg het volgende [ document ](../../../term-updates.md) voor een geconsolideerde referentie van de terminologiewijzigingen.
 
 De extensie van de tag Core is de standaardextensie die wordt vrijgegeven met Adobe Experience Platform.
 
@@ -106,7 +106,7 @@ Als het element een ankermarkering (`<a>`) aan verbonden inhoud is, kunt u ook s
 >
 >Deze optie moet uiterst voorzichtig worden gebruikt vanwege de mogelijke negatieve gevolgen voor de gebruikerservaring indien deze onjuist wordt gebruikt.
 
-Wanneer u koppelingsvertraging gebruikt, voorkomt Platform eigenlijk browser van de pagina te navigeren. Vervolgens wordt een JavaScript omgeleid naar de oorspronkelijke bestemming na de opgegeven time-out. Dit is vooral gevaarlijk wanneer uw paginamarkering `<a>` markeringen heeft waar de voorgenomen functionaliteit niet de gebruiker weg van de pagina eigenlijk navigeert. Als u uw probleem niet op een andere manier kunt oplossen, zou u met uw selecteursdefinitie uiterst nauwkeurig moeten zijn zodat deze gebeurtenis precies teweegbrengt waar u het nodig hebt en nergens anders.
+Wanneer u koppelingsvertraging gebruikt, voorkomt Experience Platform eigenlijk dat de browser van de pagina af navigeert. Vervolgens wordt een JavaScript omgeleid naar de oorspronkelijke bestemming na de opgegeven time-out. Dit is vooral gevaarlijk wanneer uw paginamarkering `<a>` markeringen heeft waar de voorgenomen functionaliteit niet de gebruiker weg van de pagina eigenlijk navigeert. Als u uw probleem niet op een andere manier kunt oplossen, zou u met uw selecteursdefinitie uiterst nauwkeurig moeten zijn zodat deze gebeurtenis precies teweegbrengt waar u het nodig hebt en nergens anders.
 
 De standaardwaarde voor de vertraging van de koppeling is 100 milliseconden. Tags wachten altijd op de opgegeven tijd en houden op geen enkele manier verband met de uitvoering van de handelingen van de regel. Het is mogelijk dat de vertraging de gebruiker zal dwingen langer te wachten dan noodzakelijk is, en ook dat de vertraging niet lang genoeg zal zijn voor alle acties van de regel met succes te voltooien. Langere vertragingen verstrekken meer tijd voor regeluitvoering maar ook verslechteren de gebruikerservaring.
 
@@ -584,11 +584,11 @@ Tijdens het gebruik van document.write nadat een pagina is geladen, zouden er do
 
 #### Aangepaste codevalidatie
 
-De validator die in de tagcode-editor wordt gebruikt, is ontworpen om problemen met door ontwikkelaars geschreven code te identificeren. De code die door een minificatieproces-zoals code AppMeasurement.js is gegaan die van de Manager van de Code wordt gedownload - zou verkeerd kunnen worden gemarkeerd zoals hebbend kwesties door validator, die gewoonlijk kan worden genegeerd.
+De validator die in de tagcode-editor wordt gebruikt, is ontworpen om problemen met door ontwikkelaars geschreven code te identificeren. Code die door een minificatieproces is gegaan—zoals de code AppMeasurement.js die van de Manager van de Code wordt gedownload—zou verkeerd kunnen worden gemarkeerd zoals hebbend kwesties door validator, die gewoonlijk kan worden genegeerd.
 
 #### Handelingvolgorde
 
-Wanneer de optie &quot;Regelcomponenten in volgorde uitvoeren&quot; van eigenschapinstellingen is ingeschakeld, kunt u volgende regelcomponenten laten wachten terwijl uw handeling een asynchrone taak uitvoert.  Dit werkt anders voor aangepaste JavaScript- en HTML-code.
+Wanneer de optie &quot;Regelcomponenten in volgorde uitvoeren&quot; van eigenschapinstellingen is ingeschakeld, kunt u volgende regelcomponenten laten wachten terwijl uw handeling een asynchrone taak uitvoert.  Dit werkt anders voor de aangepaste code van JavaScript en HTML.
 
 *JavaScript*
 
@@ -614,9 +614,9 @@ return new Promise(function(resolve, reject) {
 
 *HTML*
 
-Wanneer u een aangepaste code HTML maakt, is een functie met de naam `onCustomCodeSuccess()` beschikbaar voor gebruik in uw aangepaste code. U kunt deze functie aanroepen om aan te geven dat de aangepaste code is voltooid en dat tags kunnen worden toegepast bij het uitvoeren van volgende handelingen. Als uw aangepaste code op een of andere manier is mislukt, kunt u `onCustomCodeFailure()` aanroepen. Hiermee wordt aangegeven dat tags de volgende handelingen uit die regel niet mogen uitvoeren.
+Wanneer u een aangepaste code van HTML maakt, is een functie met de naam `onCustomCodeSuccess()` beschikbaar voor gebruik in uw aangepaste code. U kunt deze functie aanroepen om aan te geven dat de aangepaste code is voltooid en dat tags kunnen worden toegepast bij het uitvoeren van volgende handelingen. Als uw aangepaste code op een of andere manier is mislukt, kunt u `onCustomCodeFailure()` aanroepen. Hiermee wordt aangegeven dat tags de volgende handelingen uit die regel niet mogen uitvoeren.
 
-Een voorbeeld van een actie van de HTML douanecode die nieuwe callbacks gebruikt:
+Een voorbeeld van een aangepaste code van HTML die de nieuwe callbacks gebruikt:
 
 ```html
 <script>
@@ -838,7 +838,7 @@ Sessieopslag is vergelijkbaar met lokale opslag, behalve dat de gegevens worden 
 
 ### Bezoekergedrag
 
-Vergelijkbaar met Pagina Info, gebruikt dit gegevenselement gemeenschappelijke gedragstypes om logica binnen regels en andere oplossingen van het Platform te verrijken.
+Net als Pagina-info gebruikt dit gegevenselement gangbare gedragstypen om logica binnen regels en andere Experience Platform-oplossingen te verrijken.
 
 Selecteer een van de volgende kenmerken voor bezoekersgedrag:
 

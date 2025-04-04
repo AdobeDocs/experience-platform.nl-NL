@@ -2,9 +2,9 @@
 title: Gevoelige en Persoonlijke Informatie in XDM
 description: Leer over zeer belangrijke overwegingen betreffende gevoelige persoonlijke informatie (SPI) en persoonlijk identificeerbare informatie (PII) in het Model van de Gegevens van de Ervaring (XDM).
 exl-id: 92a8b6ad-3c45-4772-8178-60f857ab13e2
-source-git-commit: 302dca9a9f834dba1fd3fdac15284ea4e2fba282
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '567'
+source-wordcount: '568'
 ht-degree: 0%
 
 ---
@@ -35,7 +35,7 @@ Raadpleeg uw juridische team om te bepalen hoe vertrouwelijke en persoonlijke ge
 
 XDM verstrekt een verscheidenheid van standaardgebiedsgroepen en gegevenstypes om relevante, algemeen gebruikte gegevensstructuren te beschrijven om klantenervaringen te aandrijven. Als een geadviseerde standaardmiddel beperkte gebieden bevat die u niet in uw schema&#39;s wilt omvatten, nochtans, moet u dat middel niet gebruiken.
 
-Het platform staat u toe om uw eigen groepen van het douanegebied en gegevenstypes te bepalen, die u volledige controle over geven hoe uw gegevens wordt gestructureerd als om het even welke beschikbare standaardmiddelen niet aan uw behoeften voldoen. Raadpleeg de volgende documentatie voor meer informatie over het definiëren van deze aangepaste bronnen:
+Met Experience Platform kunt u uw eigen aangepaste veldgroepen en gegevenstypen definiëren. Zo hebt u de volledige controle over de structuur van uw gegevens als beschikbare standaardbronnen niet aan uw behoeften voldoen. Raadpleeg de volgende documentatie voor meer informatie over het definiëren van deze aangepaste bronnen:
 
 * [Een aangepaste veldgroep maken](../ui/resources/field-groups.md#create)
 * [Een aangepast gegevenstype maken](../ui/resources/data-types.md#create)

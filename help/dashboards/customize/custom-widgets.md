@@ -3,18 +3,18 @@ keywords: Experience Platform;gebruikersinterface;UI;dashboards;dashboard;profie
 title: Aangepaste widgets maken voor dashboards
 description: Deze handleiding bevat stapsgewijze instructies voor het maken van aangepaste widgets voor gebruik in Adobe Experience Platform-dashboards.
 exl-id: 0168ab1e-0b7d-4faf-852e-7208a2b09a04
-source-git-commit: 32dd90018c990e7013d826b29608a61022ba808b
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '951'
+source-wordcount: '954'
 ht-degree: 0%
 
 ---
 
 # Aangepaste widgets maken voor dashboards
 
-In Adobe Experience Platform kunt u de gegevens van uw organisatie bekijken en ermee communiceren met behulp van meerdere dashboards. U kunt bepaalde dashboards ook bijwerken door nieuwe widgets aan uw dashboardmening toe te voegen. Naast de standaardwidgets die door Adobe worden geboden, kunt u ook aangepaste widgets maken en deze delen in uw organisatie.
+In Adobe Experience Platform kunt u de gegevens van uw organisatie bekijken en ermee communiceren met behulp van meerdere dashboards. U kunt bepaalde dashboards ook bijwerken door nieuwe widgets aan uw dashboardmening toe te voegen. Naast de standaardwidgets die Adobe biedt, kunt u ook aangepaste widgets maken en deze delen in uw hele organisatie.
 
-Deze handleiding bevat stapsgewijze instructies voor het maken en toevoegen van aangepaste widgets aan de dashboards [!UICONTROL Profiles] , [!UICONTROL Segments] en [!UICONTROL Destinations] in de gebruikersinterface van het platform.
+Deze handleiding bevat stapsgewijze instructies voor het maken en toevoegen van aangepaste widgets aan de dashboards [!UICONTROL Profiles] , [!UICONTROL Segments] en [!UICONTROL Destinations] in de Experience Platform-gebruikersinterface.
 
 >[!NOTE]
 >
@@ -24,7 +24,7 @@ Meer over standaard widgets leren, gelieve te verwijzen naar de gids voor [ toev
 
 ## Widget-bibliotheek {#widget-library}
 
-Voor deze handleiding is toegang tot [!UICONTROL Widget library] in het Experience Platform vereist. Meer over de widgetbibliotheek leren, en hoe te om tot het binnen UI toegang te hebben, gelieve te beginnen door het [ overzicht van de widgetbibliotheek te lezen ](widget-library.md).
+Deze handleiding vereist toegang tot de [!UICONTROL Widget library] in Experience Platform. Meer over de widgetbibliotheek leren, en hoe te om tot het binnen UI toegang te hebben, gelieve te beginnen door het [ overzicht van de widgetbibliotheek te lezen ](widget-library.md).
 
 ## Aan de slag met aangepaste widgets
 
@@ -94,7 +94,7 @@ Als u verborgen widgets wilt weergeven, selecteert u **[!UICONTROL Show hidden w
 
 >[!WARNING]
 >
->Als u een widget verbergt in de bibliotheek, wordt de widget niet verwijderd uit de dashboards van individuele gebruikers. Als een widget niet meer in uw organisatie moet worden gebruikt, moet u dit rechtstreeks doorgeven aan alle gebruikers van het platform, omdat zij de widget uit hun dashboards moeten verwijderen.
+>Als u een widget verbergt in de bibliotheek, wordt de widget niet verwijderd uit de dashboards van individuele gebruikers. Als een widget niet meer in uw organisatie mag worden gebruikt, moet u dit rechtstreeks doorgeven aan alle Experience Platform-gebruikers, omdat deze de widget uit hun dashboards moeten verwijderen.
 
 ![ het lusje van de Douane van de werkruimte van de widgetbibliotheek met de widget dropdown menuopties en tonen verborgen benadrukte widgets.](../images/customization/hide-widget.png)
 
@@ -108,7 +108,7 @@ In het dialoogvenster **[!UICONTROL Edit widget]** kunt u de titel en beschrijvi
 
 >[!WARNING]
 >
->Als u een widget in de bibliotheek bewerkt, wordt de widget niet voor individuele gebruikers bijgewerkt. Als een widget is bijgewerkt, dient u dit rechtstreeks door te geven aan alle gebruikers van het platform. Deze gebruikers moeten de verouderde widget uit hun dashboards verwijderen en vervolgens de bijgewerkte widget uit de widgetbibliotheek selecteren en toevoegen.
+>Als u een widget in de bibliotheek bewerkt, wordt de widget niet voor individuele gebruikers bijgewerkt. Als een widget is bijgewerkt, moet u dit rechtstreeks doorgeven aan alle Experience Platform-gebruikers, aangezien deze de verouderde widget uit hun dashboards moeten verwijderen en vervolgens de bijgewerkte widget uit de widgetbibliotheek moeten selecteren en toevoegen.
 
 ![ Edit widget dialoog.](../images/customization/edit-widget.png)
 

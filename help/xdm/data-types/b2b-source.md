@@ -2,9 +2,9 @@
 title: B2B Source-gegevenstype
 description: Leer meer over het B2B Source Experience Data Model (XDM) gegevenstype.
 exl-id: 01b7d41c-1ab6-4cbc-b9b3-77b6af69faf3
-source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '230'
+source-wordcount: '231'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 Wanneer u alleen op op tekenreeks gebaseerde id&#39;s vertrouwt, kan er sprake zijn van overlappingen tussen id&#39;s op meerdere systemen (een mogelijkheid kan bijvoorbeeld worden gegeven aan een tekenreeks-id op één CRM-systeem, maar die id kan verwijzen naar een totaal andere mogelijkheid). Dit kan in gegevensconflicten resulteren wanneer het samenvoegen van gegevens in [ Real-Time Profiel van de Klant ](../../profile/home.md).
 
-Met het gegevenstype [!UICONTROL B2B Source] kunt u de oorspronkelijke tekenreeks-id van een entiteit gebruiken en deze combineren met bronspecifieke contextuele informatie om ervoor te zorgen dat deze volledig uniek blijft in het platformsysteem, ongeacht de bron waaruit deze afkomstig is.
+Met het gegevenstype [!UICONTROL B2B Source] kunt u de oorspronkelijke tekenreeks-id van een entiteit gebruiken en deze combineren met bronspecifieke contextafhankelijke informatie om ervoor te zorgen dat deze volledig uniek blijft in het Experience Platform-systeem, ongeacht de bron waaruit deze afkomstig is.
 
 ![ B2B de Structuur van Source ](../images/data-types/b2b-source.png)
 

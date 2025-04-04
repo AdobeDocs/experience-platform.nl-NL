@@ -1,12 +1,12 @@
 ---
-keywords: Experience Platform;huis;populaire onderwerpen;de dienst van de vraag;de vraagdienst;postico;Postico;verbind met de vraagdienst;
+keywords: Experience Platform;home;populaire onderwerpen;Query-service;query-service;postico;Postico;connect to query service;
 solution: Experience Platform
 title: Connect Postico aan de Dienst van de Vraag
 description: Dit document bevat de koppeling voor de installatie van de back-upclient Postico for Adobe Experience Platform Query Service.
 exl-id: a19abfc8-b431-4e57-b44d-c6130041af4a
-source-git-commit: 9fe7e618d251867c90c88f8bee6ef5863ae78f60
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '401'
+source-wordcount: '402'
 ht-degree: 0%
 
 ---
@@ -28,14 +28,14 @@ Als u [!DNL Postico] wilt verbinden met Query Service, opent u [!DNL Postico] en
 | **[!DNL Host]:** | De hostnaam van de PostSQL-server. |
 | **[!DNL Port]:** | De poort voor [!DNL Query Service] . U moet haven **80** of **gebruiken 5432** om met [!DNL Query Service] te verbinden. |
 | **[!DNL User]** | Maak een naam voor uw specifieke verbinding. Laat het veld leeg om uw Mac-aanmeldnaam te gebruiken. |
-| **[!DNL Password]** | Deze alfanumerieke tekenreeks is de referentie voor het Experience Platform **[!UICONTROL Password]** . Als u niet-verlopen geloofsbrieven wilt gebruiken, is deze waarde de samengevoegde argumenten van `technicalAccountID` en `credential` gedownload in het configuratieJSON dossier. De wachtwoordwaarde heeft de vorm: {technicalAccountId}:{credential}. Het configuratieJSON dossier voor niet-vervallende geloofsbrieven is een eenmalig download tijdens hun initialisering die de Adobe geen exemplaar van houdt. |
-| **[!DNL Database]** | Gebruik uw Experience Platform **[!UICONTROL Database]** referentie waarde: `prod:all` . |
+| **[!DNL Password]** | Deze alfanumerieke tekenreeks is uw Experience Platform **[!UICONTROL Password]** referentie. Als u niet-verlopen geloofsbrieven wilt gebruiken, is deze waarde de samengevoegde argumenten van `technicalAccountID` en `credential` gedownload in het configuratieJSON dossier. De wachtwoordwaarde heeft de vorm: {technicalAccountId}:{credential}. Het configuratie-JSON-bestand voor niet-vervallende gegevens is een eenmalige download tijdens de initialisatie waarbij Adobe geen kopie van het bestand bewaart. |
+| **[!DNL Database]** | Gebruik uw Experience Platform **[!UICONTROL Database]** -referentie: `prod:all` . |
 
-Voor meer informatie bij het vinden van uw gegevensbestandnaam, gastheer, haven, en login geloofsbrieven, te lezen gelieve de [ gids van geloofsbrieven ](../ui/credentials.md). Als u uw referenties wilt zoeken, meldt u zich aan bij [!DNL Platform] en selecteert u **[!UICONTROL Queries]** , gevolgd door **[!UICONTROL Credentials]** .
+Voor meer informatie bij het vinden van uw gegevensbestandnaam, gastheer, haven, en login geloofsbrieven, te lezen gelieve de [ gids van geloofsbrieven ](../ui/credentials.md). Als u uw referenties wilt zoeken, meldt u zich aan bij [!DNL Experience Platform] en selecteert u **[!UICONTROL Queries]** , gevolgd door **[!UICONTROL Credentials]** .
 
 Nadat u uw referenties hebt ingevoegd, selecteert u **[!DNL Connect]** om verbinding te maken met Query Service.
 
-Na het verbinden met Platform, zult u een lijst van alle relaties kunnen zien die eerder met de Dienst van de Vraag worden gemaakt.
+Na het verbinden met Experience Platform, zult u een lijst van alle die betrekkingen kunnen zien eerder met de Dienst van de Vraag worden gemaakt.
 
 ## SQL-instructies maken
 

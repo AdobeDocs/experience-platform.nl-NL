@@ -2,9 +2,9 @@
 title: Start gegevensstroom opnieuw mislukt
 description: Leer hoe u mislukte dataflow-uitvoering opnieuw kunt proberen met de Flow Service API.
 exl-id: b9abc737-9a57-47e6-98ab-6d6c44f38d17
-source-git-commit: d4dba26a151619a555a69287e182ff8398cca7b4
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '269'
+source-wordcount: '272'
 ht-degree: 1%
 
 ---
@@ -21,16 +21,16 @@ Dit leerprogramma behandelt stappen op hoe te om ontbroken dataflow looppas opni
 
 Voor deze zelfstudie hebt u een goed inzicht nodig in de volgende onderdelen van Adobe Experience Platform:
 
-* [ Bronnen ](../../home.md): Experience Platform staat gegevens toe om van diverse bronnen worden opgenomen terwijl het voorzien van u van de capaciteit om, inkomende gegevens te structureren te etiketteren en te verbeteren gebruikend [!DNL Platform] diensten.
-* [ Sandboxes ](../../../sandboxes/home.md): Experience Platform verstrekt virtuele zandbakken die één enkele [!DNL Platform] instantie in afzonderlijke virtuele milieu&#39;s verdelen helpen digitale ervaringstoepassingen ontwikkelen en ontwikkelen.
+* [ Bronnen ](../../home.md): Experience Platform staat gegevens toe om van diverse bronnen worden opgenomen terwijl het voorzien van u van de capaciteit om, inkomende gegevens te structureren te etiketteren en te verbeteren gebruikend [!DNL Experience Platform] diensten.
+* [ Sandboxes ](../../../sandboxes/home.md): Experience Platform verstrekt virtuele zandbakken die één enkele [!DNL Experience Platform] instantie in afzonderlijke virtuele milieu&#39;s verdelen helpen digitale ervaringstoepassingen ontwikkelen en ontwikkelen.
 
-### Platform-API&#39;s gebruiken
+### Experience Platform API&#39;s gebruiken
 
-Voor informatie over hoe te om vraag aan Platform APIs met succes te maken, zie de gids op [ begonnen wordt met Platform APIs ](../../../landing/api-guide.md).
+Voor informatie over hoe te om vraag aan Experience Platform APIs met succes te maken, zie de gids op [ begonnen wordt met Experience Platform APIs ](../../../landing/api-guide.md).
 
 ## Een mislukte gegevensstroomuitvoering opnieuw proberen
 
-Als u een mislukte gegevensstroomuitvoering opnieuw wilt proberen, vraagt u een POST naar het `/runs` -eindpunt terwijl u de runtime-id van de gegevensstroom en de `re-trigger` -bewerking opgeeft als onderdeel van de queryparameters.
+Als u een mislukte gegevensstroomuitvoering opnieuw wilt proberen, dient u een POST-aanvraag in bij het `/runs` -eindpunt terwijl u de runtime-id van de gegevensstroom en de `re-trigger` -bewerking opgeeft als onderdeel van de queryparameters.
 
 **API formaat**
 

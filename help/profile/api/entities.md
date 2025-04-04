@@ -5,7 +5,7 @@ type: Documentation
 description: Met Adobe Experience Platform hebt u toegang tot realtime gegevens van het klantprofiel met RESTful-API's of de gebruikersinterface. In deze handleiding wordt beschreven hoe u met behulp van de profiel-API toegang krijgt tot entiteiten, beter bekend als "profielen".
 role: Developer
 exl-id: 06a1a920-4dc4-4468-ac15-bf4a6dc885d4
-source-git-commit: efebf8e341b17fdd71586827753eadfe1c2cfa15
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '1706'
 ht-degree: 0%
@@ -18,7 +18,7 @@ ht-degree: 0%
 >
 >De zoekopdracht ExperienceEvent met de API voor toegang tot het profiel wordt afgekeurd. Gebruik functies zoals berekende kenmerken voor gebruiksgevallen die het opzoeken van ExperienceEvents vereisen. Neem voor meer informatie over deze wijziging contact op met de klantenservice van Adobe.
 
-Met Adobe Experience Platform hebt u toegang tot [!DNL Real-Time Customer Profile] -gegevens via RESTful API&#39;s of de gebruikersinterface. In deze handleiding wordt beschreven hoe u met de API toegang krijgt tot entiteiten die beter bekend staan als &quot;profielen&quot;. Voor meer informatie bij de toegang tot van profielen die [!DNL Platform] UI gebruiken, gelieve te verwijzen naar de [ de gebruikersgids van het Profiel ](../ui/user-guide.md).
+Met Adobe Experience Platform hebt u toegang tot [!DNL Real-Time Customer Profile] -gegevens via RESTful API&#39;s of de gebruikersinterface. In deze handleiding wordt beschreven hoe u met de API toegang krijgt tot entiteiten die beter bekend staan als &quot;profielen&quot;. Voor meer informatie bij de toegang tot van profielen die [!DNL Experience Platform] UI gebruiken, gelieve te verwijzen naar de [ de gebruikersgids van het Profiel ](../ui/user-guide.md).
 
 ## Aan de slag
 
@@ -1223,7 +1223,7 @@ Een geslaagde reactie retourneert HTTP status 202 met een lege antwoordinstantie
 
 ## Volgende stappen
 
-In deze handleiding hebt u toegang tot gegevensvelden, profielen en gegevens uit de tijdreeks van [!DNL Real-Time Customer Profile] . Leren hoe te om tot andere gegevensmiddelen toegang te hebben die in [!DNL Platform] worden opgeslagen, zie het [ overzicht van de Toegang van Gegevens ](../../data-access/home.md).
+In deze handleiding hebt u toegang tot gegevensvelden, profielen en gegevens uit de tijdreeks van [!DNL Real-Time Customer Profile] . Leren hoe te om tot andere gegevensmiddelen toegang te hebben die in [!DNL Experience Platform] worden opgeslagen, zie het [ overzicht van de Toegang van Gegevens ](../../data-access/home.md).
 
 ## Bijlage {#appendix}
 

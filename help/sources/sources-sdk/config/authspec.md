@@ -3,9 +3,9 @@ keywords: Experience Platform;home;populaire onderwerpen;bronnen;connectors;bron
 title: Verificatiespecs voor Self-Serve Bronnen configureren (Batch SDK)
 description: Dit document biedt een overzicht van de configuraties die u moet voorbereiden voor het gebruik van Self-Serve Sources (Batch SDK).
 exl-id: 68ed22fe-1f22-46d2-9d58-72ad8a9e6b98
-source-git-commit: 8517532f991413a239e0da890bf53b1bf5b621f0
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '770'
+source-wordcount: '772'
 ht-degree: 0%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 Verificatiespects bepalen hoe Adobe Experience Platform-gebruikers verbinding kunnen maken met uw bron.
 
-De array `authSpec` bevat informatie over de verificatieparameters die zijn vereist om een bron te verbinden met Platform. Om het even welke bepaalde bron kan veelvoudige verschillende types van authentificatie steunen.
+De array `authSpec` bevat informatie over de verificatieparameters die zijn vereist om een bron te verbinden met Experience Platform. Om het even welke bepaalde bron kan veelvoudige verschillende types van authentificatie steunen.
 
 ## Verificatiespects
 
@@ -340,4 +340,4 @@ Hieronder ziet u een voorbeeld van een voltooide verificatiespecificatie met een
 
 ## Volgende stappen
 
-Met uw bevolkte authentificatiespecificaties, kunt u te werk gaan om de bronspecificaties voor de bron te vormen die u aan Platform wilt integreren. Zie het document op [ vormend bronspecificaties ](./sourcespec.md) voor meer informatie.
+Met uw bevolkte authentificatiespecificaties, kunt u te werk gaan om de bronspecificaties voor de bron te vormen die u aan Experience Platform wilt integreren. Zie het document op [ vormend bronspecificaties ](./sourcespec.md) voor meer informatie.

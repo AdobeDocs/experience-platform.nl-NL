@@ -2,10 +2,10 @@
 title: Asynchrone implementatie
 description: Leer hoe u Adobe Experience Platform-tagbibliotheken asynchroon op uw website kunt implementeren.
 exl-id: ed117d3a-7370-42aa-9bc9-2a01b8e7794e
-source-git-commit: 88939d674c0002590939004e0235d3da8b072118
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1045'
-ht-degree: 0%
+source-wordcount: '1046'
+ht-degree: 4%
 
 ---
 
@@ -18,9 +18,9 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch is omgedoopt tot een reeks technologieën voor gegevensverzameling in Adobe Experience Platform. Diverse terminologische wijzigingen zijn als gevolg hiervan in de productdocumentatie doorgevoerd. Gelieve te verwijzen naar het volgende [ document ](../../term-updates.md) voor een geconsolideerde verwijzing van de terminologieveranderingen.
+>Adobe Experience Platform Launch is omgedoopt tot een reeks technologieën voor dataverzameling in Adobe Experience Platform.  Als gevolg hiervan zijn er verschillende terminologiewijzigingen in de productdocumentatie doorgevoerd. Raadpleeg het volgende [ document ](../../term-updates.md) voor een geconsolideerde referentie van de terminologiewijzigingen.
 
-Prestaties en het niet blokkeren van de implementatie van de JavaScript-bibliotheken die onze producten vereisen, worden steeds belangrijker voor Adobe Experience Cloud-gebruikers. Hulpmiddelen zoals [[!DNL Google PageSpeed] ](https://developers.google.com/speed/pagespeed/insights/) adviseren dat de gebruikers veranderen zij hoe zij de bibliotheken van de Adobe op hun plaats opstellen. In dit artikel wordt uitgelegd hoe u de Adobe JavaScript-bibliotheken asynchroon kunt gebruiken.
+Prestaties en het niet blokkeren van de implementatie van de JavaScript-bibliotheken die onze producten vereisen, worden steeds belangrijker voor Adobe Experience Cloud-gebruikers. Gereedschappen zoals [[!DNL Google PageSpeed] ](https://developers.google.com/speed/pagespeed/insights/) raden gebruikers aan hun manier van implementatie van de Adobe-bibliotheken op hun site te wijzigen. In dit artikel wordt uitgelegd hoe u de Adobe JavaScript-bibliotheken asynchroon kunt gebruiken.
 
 ## Synchroon versus asynchroon
 
@@ -106,4 +106,4 @@ De markeringen verstrekken een knevel om asynchrone lading aan te zetten wanneer
    <script type="text/javascript">_satellite.pageBottom();</script>
    ```
 
-   Deze code vertelt Platform dat de browser parser de bodem van de pagina heeft bereikt. Het is waarschijnlijk dat tags niet voor deze tijd zijn geladen en uitgevoerd, dus het aanroepen van `_satellite.pageBottom()` resulteert in een fout en het gebeurtenistype Pagina onder werkt mogelijk niet zoals verwacht.
+   Deze code vertelt Experience Platform dat de parser van de browser de bodem van de pagina heeft bereikt. Het is waarschijnlijk dat tags niet voor deze tijd zijn geladen en uitgevoerd, dus het aanroepen van `_satellite.pageBottom()` resulteert in een fout en het gebeurtenistype Pagina onder werkt mogelijk niet zoals verwacht.

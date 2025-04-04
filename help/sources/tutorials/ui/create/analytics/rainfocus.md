@@ -1,16 +1,16 @@
 ---
-title: Sluit uw RainFocus-account aan op het Experience Platform via de gebruikersinterface
+title: Uw RainFocus-account verbinden met Experience Platform via de gebruikersinterface
 description: Leer hoe u uw RainFocus-account met Experience Platform kunt verbinden via de gebruikersinterface.
 badge: Beta
 exl-id: a349e37e-9f2c-47ff-8360-ccbe578dce27
-source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '973'
+source-wordcount: '974'
 ht-degree: 0%
 
 ---
 
-# Sluit uw [!DNL RainFocus] -account aan op het Experience Platform via de gebruikersinterface
+# Sluit uw [!DNL RainFocus] -account aan op Experience Platform via de gebruikersinterface
 
 >[!NOTE]
 >
@@ -24,16 +24,16 @@ Deze zelfstudie bevat stappen voor het verbinden van uw [!DNL RainFocus] -accoun
 
 ## Aan de slag
 
-Deze zelfstudie vereist een goed begrip van de volgende onderdelen van het Experience Platform:
+Deze zelfstudie vereist een goed begrip van de volgende onderdelen van Experience Platform:
 
-* [[!DNL Experience Data Model (XDM)]  Systeem ](../../../../../xdm/home.md): Het gestandaardiseerde kader waardoor het Experience Platform gegevens van de klantenervaring organiseert.
+* [[!DNL Experience Data Model (XDM)]  Systeem ](../../../../../xdm/home.md): Het gestandaardiseerde kader waardoor Experience Platform gegevens van de klantenervaring organiseert.
    * [ Grondbeginselen van schemacompositie ](../../../../../xdm/schema/composition.md): Leer over de basisbouwstenen van schema&#39;s XDM, met inbegrip van zeer belangrijke principes en beste praktijken in schemacompositie.
    * [ het leerprogramma van de Redacteur van het Schema ](../../../../../xdm/tutorials/create-schema-ui.md): Leer hoe te om douaneschema&#39;s tot stand te brengen gebruikend de Redacteur UI van het Schema.
 * [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md): biedt een uniform, real-time consumentenprofiel dat is gebaseerd op geaggregeerde gegevens van meerdere bronnen.
 
 ### Vereisten
 
-Voordat u een verbinding tot stand kunt brengen tussen uw [!DNL RainFocus] -account en het Experience Platform, moet u eerst de volgende taken uitvoeren:
+Voordat u uw [!DNL RainFocus] -account kunt verbinden met Experience Platform, moet u eerst de volgende taken uitvoeren:
 
 * [Vereiste referenties verzamelen](../../../../connectors/analytics/rainfocus.md#gather-required-credentials)
 * [Een XDM-schema maken en het identiteitsveld definiëren](../../../../connectors/analytics/rainfocus.md#create-an-xdm-schema-and-define-the-identity-field)
@@ -43,7 +43,7 @@ Nadat u de vereiste instellingen hebt voltooid, kunt u de onderstaande stappen u
 
 ## Sluit uw RainFocus-account aan op Experience Platform
 
-Selecteer in de gebruikersinterface van het platform de optie **[!UICONTROL Sources]** in de linkernavigatiebalk voor toegang tot de werkruimte Bronnen. In het scherm *[!UICONTROL Catalog]* worden diverse bronnen weergegeven waarmee u een account kunt maken.
+Selecteer in de gebruikersinterface van Experience Platform de optie **[!UICONTROL Sources]** in de linkernavigatiebalk voor toegang tot de werkruimte Bronnen. In het scherm *[!UICONTROL Catalog]* worden diverse bronnen weergegeven waarmee u een account kunt maken.
 
 U kunt de juiste categorie selecteren in de catalogus aan de linkerkant van het scherm. U kunt ook de specifieke bron vinden waarmee u wilt werken met de zoekoptie.
 
@@ -53,7 +53,7 @@ Selecteer onder de categorie *[!UICONTROL Analytics]* de optie **[!UICONTROL Rai
 
 ## Gegevens selecteren
 
-De stap Gegevens selecteren wordt weergegeven en biedt een interface waarmee u de gegevens kunt selecteren die u naar het Experience Platform verzendt.
+De gegevensstap Selecteren wordt weergegeven en biedt een interface waarmee u de gegevens kunt selecteren die u naar Experience Platform verzendt.
 
 * Het linkergedeelte van de interface is een browser waarmee u de beschikbare gegevensstromen binnen uw account kunt bekijken.
 * In het rechtergedeelte van de interface kunt u maximaal 100 rijen gegevens uit een JSON-bestand voorvertonen.
@@ -101,7 +101,7 @@ Zodra u uw dataflow hebt herzien, uitgezochte **Afwerking** en laat wat tijd voo
 
 ## Uw URL voor het streamingeindpunt ophalen {#get-your-streaming-endpoint-url}
 
-Wanneer uw streaminggegevens zijn gemaakt, kunt u nu de URL van het streamingeindpunt ophalen. Dit eindpunt zal worden gebruikt om aan uw webhaak in te tekenen, toestaand uw het stromen bron om met Experience Platform te communiceren.
+Wanneer uw streaminggegevens zijn gemaakt, kunt u nu de URL van het streamingeindpunt ophalen. Dit eindpunt wordt gebruikt om een abonnement te nemen op uw webhaak, zodat uw streamingbron kan communiceren met Experience Platform.
 
 Als u het streamingeindpunt wilt ophalen, gaat u naar de *[!UICONTROL Dataflow activity]* -pagina van de gegevensstroom die u net hebt gemaakt en kopieert u het eindpunt van de onderkant van het deelvenster *[!UICONTROL Properties]* .
 
@@ -117,7 +117,7 @@ Nadat de gegevensstroom is voltooid en u de URL van het streamingeindpunt hebt o
 
 ## Volgende stappen
 
-Aan de hand van deze zelfstudie hebt u een verbinding tot stand gebracht voor uw [!DNL RainFocus] -bron, waarmee u gegevens voor gebeurtenisbeheer en analyses kunt streamen naar het Experience Platform.
+Aan de hand van deze zelfstudie hebt u een verbinding tot stand gebracht voor uw [!DNL RainFocus] -bron, waarmee u gegevens voor gebeurtenisbeheer en analysegegevens kunt streamen naar Experience Platform.
 
 ## Aanvullende bronnen
 

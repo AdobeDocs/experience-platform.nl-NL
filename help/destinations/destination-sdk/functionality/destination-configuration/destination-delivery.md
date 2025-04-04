@@ -2,16 +2,16 @@
 description: Leer hoe te om de montages van de bestemmingslevering voor bestemmingen te vormen die met Destination SDK worden gebouwd, om erop te wijzen waar de uitgevoerde gegevens gaan en welke authentificatieregel in de plaats wordt gebruikt waar de gegevens zullen landen.
 title: Levering bestemming
 exl-id: ade77b6b-4b62-4b17-a155-ef90a723a4ad
-source-git-commit: 82ba4e62d5bb29ba4fef22c5add864a556e62c12
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '563'
+source-wordcount: '564'
 ht-degree: 0%
 
 ---
 
 # Levering bestemming
 
-Om meer controle over aan te bieden waar de gegevens die naar uw bestemmingslanden worden uitgevoerd, staat Destination SDK u toe om de montages van de bestemmingslevering te specificeren.
+Als u meer controle wilt hebben over de plaats waar de gegevens die naar uw bestemming worden geëxporteerd, kunt u in Destination SDK instellingen voor de levering van de bestemming opgeven.
 
 De sectie van de bestemmingslevering wijst op waar de uitgevoerde gegevens gaan en welke authentificatieregel in de plaats wordt gebruikt waar de gegevens zullen landen.
 
@@ -19,8 +19,8 @@ De sectie van de bestemmingslevering wijst op waar de uitgevoerde gegevens gaan 
 
 Om te begrijpen waar deze component in een integratie past die met Destination SDK wordt gecreeerd, zie het diagram in de [ documentatie van configuratieopties ](../configuration-options.md) of zie de volgende pagina&#39;s van het overzicht van bestemmingsconfiguratie:
 
-* [Gebruik Destination SDK om een streamingbestemming te configureren](../../guides/configure-destination-instructions.md#create-destination-configuration)
-* [Gebruik Destination SDK om een op een bestand gebaseerde bestemming te configureren](../../guides/configure-file-based-destination-instructions.md#create-destination-configuration)
+* [Destination SDK gebruiken om een streamingbestemming te configureren](../../guides/configure-destination-instructions.md#create-destination-configuration)
+* [Destination SDK gebruiken om een bestandsgebaseerde bestemming te configureren](../../guides/configure-file-based-destination-instructions.md#create-destination-configuration)
 
 U kunt de montages van de bestemmingslevering via het `/authoring/destinations` eindpunt vormen. Zie de volgende API verwijzingspagina&#39;s voor gedetailleerde API vraagvoorbeelden waar u de componenten kunt vormen die in deze pagina worden getoond.
 
@@ -48,7 +48,7 @@ Wanneer het vormen van uw montages van de bestemmingslevering, kunt u de paramet
 
 | Parameter | Type | Beschrijving |
 |---------|----------|------|
-| `authenticationRule` | String | Geeft aan hoe [!DNL Platform] verbinding moet maken met uw doel. Ondersteunde waarden:<ul><li>`CUSTOMER_AUTHENTICATION`: Gebruik deze optie als de klanten van het Platform aan uw systeem via om het even welke die authentificatiemethodes [ hier ](customer-authentication.md) worden beschreven login.</li><li>`PLATFORM_AUTHENTICATION`: Gebruik deze optie als er een algemeen verificatiesysteem is tussen Adobe en uw doel en de [!DNL Platform] -klant geen verificatiereferenties hoeft op te geven om verbinding te maken met uw doel. In dit geval, moet u een geloofsbrieven tot stand brengen voorwerp gebruikend de [ geloofsbrieven API ](../../credentials-api/create-credential-configuration.md) configuratie. </li><li>`NONE`: gebruik deze optie als er geen verificatie vereist is om gegevens naar het doelplatform te verzenden. </li></ul> |
+| `authenticationRule` | String | Geeft aan hoe [!DNL Experience Platform] verbinding moet maken met uw doel. Ondersteunde waarden:<ul><li>`CUSTOMER_AUTHENTICATION`: Gebruik deze optie als de klanten van Experience Platform aan uw systeem via om het even welke beschreven authentificatiemethodes [ hier ](customer-authentication.md) login.</li><li>`PLATFORM_AUTHENTICATION`: Gebruik deze optie als er een wereldwijd verificatiesysteem is tussen Adobe en uw bestemming en de [!DNL Experience Platform] -klant geen verificatiereferenties hoeft op te geven om verbinding te maken met uw bestemming. In dit geval, moet u een geloofsbrieven tot stand brengen voorwerp gebruikend de [ geloofsbrieven API ](../../credentials-api/create-credential-configuration.md) configuratie. </li><li>`NONE`: gebruik deze optie als er geen verificatie vereist is om gegevens naar het doelplatform te verzenden. </li></ul> |
 | `destinationServerId` | String | `instanceId` van de [ bestemmingsserver ](../../authoring-api/destination-server/create-destination-server.md) die u gegevens naar wilt uitvoeren. |
 | `deliveryMatchers.type` | String | <ul><li>Wanneer het vormen van bestemmingslevering voor op dossier-gebaseerde bestemmingen, plaats altijd dit aan `SOURCE`.</li><li>Wanneer het vormen van bestemmingslevering voor een het stromen bestemming, wordt de `deliveryMatchers` sectie niet vereist.</li></ul> |
 | `deliveryMatchers.value` | String | <ul><li>Wanneer het vormen van bestemmingslevering voor op dossier-gebaseerde bestemmingen, plaats altijd dit aan `batch`.</li><li>Wanneer het vormen van bestemmingslevering voor een het stromen bestemming, wordt de `deliveryMatchers` sectie niet vereist.</li></ul> |

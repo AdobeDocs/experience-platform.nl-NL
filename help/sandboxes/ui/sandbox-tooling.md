@@ -2,9 +2,9 @@
 title: Sandbox Tooling
 description: U kunt Sandboxconfiguraties naadloos exporteren en importeren tussen sandboxen.
 exl-id: f1199ab7-11bf-43d9-ab86-15974687d182
-source-git-commit: 3cedf019cff7ef0aa06da1242798a533196f9b2a
+source-git-commit: 480785dc17ab27df5544524cf08baa9150fe426f
 workflow-type: tm+mt
-source-wordcount: '2318'
+source-wordcount: '2319'
 ht-degree: 0%
 
 ---
@@ -252,7 +252,7 @@ In het dialoogvenster **[!UICONTROL Import summary]** wordt een percentage weerg
 
 ![ de dialoog die [!UICONTROL Import details] een gedetailleerde uitsplitsing van de invoer toont.](../images/ui/sandbox-tooling/import-details.png)
 
-Wanneer de importbewerking is voltooid, ontvangt u een melding in de gebruikersinterface van het platform. U kunt deze meldingen openen via het waarschuwingspictogram. U kunt hier naar probleemoplossing navigeren als een taak mislukt.
+Wanneer het importeren is voltooid, ontvangt u een melding in de gebruikersinterface van Experience Platform. U kunt deze meldingen openen via het waarschuwingspictogram. U kunt hier naar probleemoplossing navigeren als een taak mislukt.
 
 ## Videotutorial
 

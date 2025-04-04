@@ -1,12 +1,12 @@
 ---
-keywords: Experience Platform;thuis;populaire onderwerpen;DULE;module
+keywords: Experience Platform;home;populaire onderwerpen;DULE;module
 solution: Experience Platform
 title: Overzicht gegevensbeheer
-description: Met Adobe Experience Platform Data Governance kunt u klantgegevens beheren en ervoor zorgen dat de regels, beperkingen en beleidsregels die van toepassing zijn op het gebruik van gegevens worden nageleefd. Het speelt een sleutelrol binnen Experience Platform op diverse niveaus, met inbegrip van catalogisering, gegevenslijn, het etiketteren van het gegevensgebruik, het beleid van het gegevensgebruik, en het controleren van het gebruik van gegevens voor marketing acties.
+description: Met Adobe Experience Platform Data Governance kunt u klantgegevens beheren en ervoor zorgen dat de regels, beperkingen en beleidsregels die van toepassing zijn op het gebruik van gegevens worden nageleefd. Het speelt binnen Experience Platform een sleutelrol op verschillende niveaus, zoals catalogisering, gegevenskoppeling, etikettering van het gegevensgebruik, het beleid voor gegevensgebruik en het controleren van het gebruik van gegevens voor marketingacties.
 exl-id: 00ca6bc2-1c58-4ea2-8bb5-30fd3fa5944a
-source-git-commit: 1a050cfb41a28053606f07931c7c97d15989ac3e
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1618'
+source-wordcount: '1619'
 ht-degree: 0%
 
 ---
@@ -20,13 +20,13 @@ ht-degree: 0%
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/data-governance/home.html" text="Overzicht van gegevensbeheer"
 >additional-url="https://experienceleague.adobe.com/docs/experience-platform/data-governance/labels/overview.html" text="Overzicht van labels voor gegevensbeheer"
 
-Een van de kernmogelijkheden van Adobe Experience Platform is om gegevens van meerdere bedrijfssystemen samen te brengen, zodat marketeers klanten beter kunnen identificeren, begrijpen en betrekken. Deze gegevens zijn mogelijk onderworpen aan gebruiksbeperkingen die zijn gedefinieerd door uw organisatie of wettelijke voorschriften. Daarom is het belangrijk dat u ervoor zorgt dat uw gegevensbewerkingen in [!DNL Platform] voldoen aan het beleid voor gegevensgebruik.
+Een van de kernmogelijkheden van Adobe Experience Platform is om gegevens van meerdere bedrijfssystemen samen te brengen, zodat marketeers klanten beter kunnen identificeren, begrijpen en betrekken. Deze gegevens zijn mogelijk onderworpen aan gebruiksbeperkingen die zijn gedefinieerd door uw organisatie of wettelijke voorschriften. Daarom is het belangrijk dat u ervoor zorgt dat uw gegevensbewerkingen in [!DNL Experience Platform] voldoen aan het beleid voor gegevensgebruik.
 
-Beheer klantgegevens en zorg ervoor dat u zich houdt aan de voorschriften, beperkingen en beleidsregels die van toepassing zijn op gegevensgebruik met Adobe Experience Platform Data Governance. Het beheer van gegevens speelt binnen het Experience Platform een sleutelrol op verschillende niveaus, zoals catalogisering, datalayage, etikettering van het gegevensgebruik, het beleid voor gegevensgebruik en het controleren van het gebruik van gegevens voor marketingacties.
+Beheer klantgegevens en zorg ervoor dat u zich houdt aan de voorschriften, beperkingen en beleidsregels die van toepassing zijn op gegevensgebruik met Adobe Experience Platform Data Governance. Het beheer van gegevens speelt binnen Experience Platform op verschillende niveaus een sleutelrol, zoals catalogisering, datalayage, etikettering van het gegevensgebruik, het beleid voor gegevensgebruik en het controleren van het gebruik van gegevens voor marketingacties.
 
 >[!NOTE]
 >
->In Experience Platform gaat het gegevensbeheer alleen over de manier waarop gegevens worden gebruikt of geactiveerd, ongeacht de gebruiker die de handeling uitvoert. Voor informatie over hoe te om toegang tot specifieke gegevensgebieden voor bepaalde gebruikers van het Platform binnen uw organisatie te controleren, zie in plaats daarvan de documentatie op [ op attribuut-gebaseerde toegangsbeheer ](../access-control/abac/overview.md).
+>In Experience Platform gaat het gegevensbeheer alleen over de manier waarop gegevens worden gebruikt of geactiveerd, ongeacht de gebruiker die de handeling uitvoert. Voor informatie over hoe te om toegang tot specifieke gegevensgebieden voor bepaalde gebruikers van Experience Platform binnen uw organisatie te controleren, zie in plaats daarvan de documentatie op [ op attribuut-gebaseerde toegangsbeheer ](../access-control/abac/overview.md).
 
 ## Functies voor gegevensbeheer {#data-governance-roles}
 
@@ -77,13 +77,13 @@ Het gegevensbeheerframework bevat vooraf gedefinieerde labels voor gegevensgebru
 >
 >Zie de gids op [ gesteunde etiketten van het gegevensgebruik ](labels/reference.md) voor een volledige lijst van beschikbare etiketten, en definities voor elk etikettype.
 
-Labels kunnen op elk gewenst moment worden toegepast, zodat u op flexibele wijze gegevens kunt beheren. De beste praktijken bevorderen etiketteringsgegevens wanneer het in Experience Platform wordt opgenomen, of zodra de gegevens in [!DNL Platform] beschikbaar worden.
+Labels kunnen op elk gewenst moment worden toegepast, zodat u op flexibele wijze gegevens kunt beheren. De beste praktijken bevorderen etiketteringsgegevens wanneer het in Experience Platform wordt opgenomen, of zodra de gegevens in [!DNL Experience Platform] beschikbaar worden.
 
 Zie het overzicht op [ de etiketten van het gegevensgebruik ](./labels/overview.md) voor meer informatie over hoe de etiketten van het gegevensgebruik worden gebruikt helpen naleving van het gegevensbeheer afdwingen.
 
 ## Beleid voor gegevensgebruik {#data-usage-policies}
 
-Voor gegevensgebruiksetiketten om gegevensnaleving effectief te steunen, moet het beleid van het gegevensgebruik worden uitgevoerd. Beleid voor gegevensgebruik is regels die het soort marketingacties beschrijven dat u mag uitvoeren op gegevens binnen het Experience Platform, of dat u er een beperking voor hebt.
+Voor gegevensgebruiksetiketten om gegevensnaleving effectief te steunen, moet het beleid van het gegevensgebruik worden uitgevoerd. Beleid voor gegevensgebruik is regels die het soort marketingacties beschrijven dat u mag uitvoeren op gegevens in Experience Platform of waarvan u een beperking hebt ingesteld.
 
 Een voorbeeld van een marketing actie zou de wens kunnen zijn om een dataset naar een derdedienst uit te voeren. Als er een beleid bestaat waarin wordt verklaard dat Persoonlijk Identificeerbare Informatie (PII) niet kan worden uitgevoerd, en een etiket &quot;I&quot;(identiteitsgegevens) is toegepast op het gebiedsniveau van zijn schema. De Dienst van het beleid verhindert dan om het even welke actie die deze dataset naar een derdebestemming zou uitvoeren. Als één van deze actiepogingen voorkomt, verzendt de Dienst van het Beleid een bericht die u vertelt dat een beleid van het gegevensgebruik is geschonden.
 
@@ -93,11 +93,11 @@ Er zijn twee soorten beleid beschikbaar:
 * **[!UICONTROL Data governance policy]**: de activering van gegevens beperken op basis van de marketingactie die wordt uitgevoerd en de labels voor gegevensgebruik die door de gegevens in kwestie worden meegevoerd.
 * **[!UICONTROL Consent policy]**: Filter de profielen die aan [ bestemmingen ](../destinations/home.md) kunnen worden geactiveerd die op de toestemming of de voorkeur van uw klanten worden gebaseerd.
 
-Zodra de etiketten van het gegevensgebruik zijn toegepast, kunnen de gegevensstewards beleid tot stand brengen gebruikend de Dienst API van het Beleid of de gebruikersinterface van het Experience Platform. Voor meer informatie over het beleid van het gegevensgebruik en marketing acties, zie het [ beleidsoverzicht ](./policies/overview.md).
+Zodra de etiketten van het gegevensgebruik zijn toegepast, kunnen de gegevensstewards beleid tot stand brengen gebruikend de Dienst API van het Beleid of de gebruikersinterface van Experience Platform. Voor meer informatie over het beleid van het gegevensgebruik en marketing acties, zie het [ beleidsoverzicht ](./policies/overview.md).
 
 >[!IMPORTANT]
 >
->Alle beleidsregels voor gegevensgebruik (inclusief kernbeleidsregels die door Adobe worden verschaft) zijn standaard uitgeschakeld. Om een individueel beleid voor handhaving te overwegen, moet u dat beleid manueel toelaten.
+>Alle beleidsregels voor gegevensgebruik (inclusief basisbeleid van Adobe) zijn standaard uitgeschakeld. Om een individueel beleid voor handhaving te overwegen, moet u dat beleid manueel toelaten.
 
 ## Volgende stappen
 
@@ -123,7 +123,7 @@ De volgende tabel geeft een overzicht van de belangrijkste termen met betrekking
 | **Geofence** | Een geofence is een virtuele geografische grens, gedefinieerd door GPS- of RFID-technologie, die software in staat stelt een reactie te activeren wanneer een mobiel apparaat een bepaald gebied binnenkomt of verlaat. |
 | **de etiketten van de Identiteit** | De etiketten van de identiteit &quot;I&quot;worden gebruikt om gegevens te categoriseren die een specifieke persoon kunnen identificeren of contacteren. |
 | **Op rente-Gebaseerd richtend** | Op rente-gebaseerd richten, die ook als verpersoonlijking wordt bekend, komt voor als de volgende drie voorwaarden worden voldaan:<br> Gegevens die op-plaats worden verzameld is, <br><ul><li>Gebruikt om conclusies te trekken over het belang van de gebruikers,</li><li>Wordt gebruikt in een andere context, zoals op een andere site of in een app (externe site)</li><li>Wordt gebruikt om te selecteren welke inhoud of advertenties worden aangeboden op basis van die conclusies.</li></ul> |
-| **de Marketing actie** | Een marketingactie in het kader van het gegevensbeheerkader is een actie die een Experience Platform voor gegevensverbruikers onderneemt en waarvoor moet worden gecontroleerd op overtredingen van het gegevensgebruiksbeleid |
+| **de Marketing actie** | Een marketingactie in het kader van het gegevensbeheerkader is een actie die een Experience Platform-gegevensconsument onderneemt en waarvoor moet worden gecontroleerd op overtredingen van het gegevensgebruiksbeleid |
 | **Beleid** | In het kader van gegevensbeheer is een beleid een regel die beschrijft welke soorten marketingacties al dan niet mogen worden ondernomen met betrekking tot specifieke gegevens. |
 | **Etiketten van het Schema** | Beheer de etiketten voor gegevensbeheer, toestemming, en toegangsbeheer op het schemaniveau. Dit verspreidt de etiketten aan elke dataset die dat schema gebruikt. |
 | **Gevoelige Etiketten** | De gevoelige etiketten &quot;S&quot;worden gebruikt om gegevens te categoriseren die u, en uw organisatie, gevoelig overwegen. |
@@ -134,6 +134,6 @@ De volgende video is bedoeld om uw begrip van het kader van het Beheer van Gegev
 
 >[!VIDEO](https://video.tv.adobe.com/v/29708?quality=12&enable10seconds=on&speedcontrol=on)
 
-De volgende video verstrekt begeleiding op hoe te om de etiketten van het gegevensgebruik op uw schema&#39;s of de volledige dataset in Experience Platform toe te passen.
+De volgende video biedt richtlijnen voor het toepassen van labels voor gegevensgebruik op uw schema&#39;s of op de volledige dataset in Experience Platform.
 
 >[!VIDEO](https://video.tv.adobe.com/v/29709/?learn=on)

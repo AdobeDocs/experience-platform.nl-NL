@@ -4,50 +4,50 @@ title: Aangepaste toegankelijkheidsoplossingen voor Experience Platform
 type: Documentation
 description: Meer informatie over aangepaste toegankelijkheidsoplossingen in de Adobe Experience Platform-gebruikersinterface.
 exl-id: cb5ad99e-8a95-4c9e-aae6-1d0036ecf052
-source-git-commit: 2cf28acb5b0ddb4965b2d5120333659e0ac460bf
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '1649'
+source-wordcount: '1650'
 ht-degree: 0%
 
 ---
 
 # Aangepaste toegankelijkheidsoplossingen voor Experience Platform
 
-Adobe Experience Platform wordt voortdurend uitgebreid om aan de behoeften van alle soorten gebruikers te voldoen en voldoet aan de wereldwijde normen die personen met een visuele, auditieve, mobiliteitsfunctie of andere handicap omvatten. In dit document worden aangepaste toegankelijkheidsoplossingen in de gebruikersinterface van het Experience Platform beschreven.
+Adobe Experience Platform wordt voortdurend uitgebreid om aan de behoeften van alle soorten gebruikers te voldoen en voldoet aan de wereldwijde normen die personen met een visuele, auditieve, mobiliteitsfunctie of andere handicap omvatten. In dit document worden aangepaste toegankelijkheidsoplossingen in de Experience Platform-gebruikersinterface beschreven.
 
 ## Overzicht van homepage en gebruikersinterface
 
-De gebruikersinterface van het Experience Platform voldoet aan vereiste contrastverhoudingen voor normale tekst, grafiek, en UI componenten. De kleuren van de gebruikersinterface zijn ook gekozen om toegankelijkheid voor alle gebruikers te ondersteunen, inclusief gebruikers met een visuele handicap.
+De Experience Platform-gebruikersinterface voldoet aan de vereiste contrastverhoudingen voor normale tekst, afbeeldingen en UI-componenten. De kleuren van de gebruikersinterface zijn ook gekozen om toegankelijkheid voor alle gebruikers te ondersteunen, inclusief gebruikers met een visuele handicap.
 
-In Platform, kunnen de elementen UI die met een wijzer klikbaar of actionable zijn ook worden betrokken gebruikend een toetsenbord. Dit omvat de linkernavigatie, videospelers, lijsten, en meer.
+In kunnen UI-elementen die kunnen worden aangeklikt of geactiveerd met een aanwijzer, ook worden geactiveerd met een toetsenbord. Dit omvat de linkernavigatie, videospelers, lijsten, en meer.
 
-Experience Platform streeft ernaar te voldoen aan internationale toegankelijkheidsnormen, waaronder de Web Content Accessibility Guidelines 2.1 Level A en Level AA en de Web Accessibility Initiative - Accessible Rich Internet Applications (WAI-ARIA) webstandaarden.
+Experience Platform streeft ernaar te voldoen aan internationale toegankelijkheidsnormen, waaronder de Web Content Accessibility Guidelines 2.1 Level A en Level AA en de Web Accessibility Initiative - Accessible Rich Internet Applications (WAI-ARIA).
 
 ![ De homepage van Adobe Experience Platform UI.](images/homepage.png)
 
 ## Linkernavigatie
 
-De linkernavigatie binnen de interface van het Experience Platform is toetsenbord-toegankelijk en verstrekt kleurencontrast in normale, aanwijs, en selectiestaten die aan toegankelijkheidsnormen voldoen.
+De linkernavigatie in de gebruikersinterface van Experience Platform is toegankelijk voor het toetsenbord en biedt kleurcontrast in normale toestand, bij aanwijzen en in selectiestatus die aan toegankelijkheidsnormen voldoet.
 
 Gebruikers kunnen met de Tab-toets naar links in het scherm Home gaan. Het selecteren van **verschuiving + Lusje** keert de gebruiker aan het scherm van het Huis terug.
 
-![ de Experience Platform linkernavigatie.](images/left-navigation-select.png)
+![ de linkernavigatie van Experience Platform.](images/left-navigation-select.png)
 
 Met de linkernavigatie in nadruk, **Lusje** neemt gebruikers aan uit en doen ineenstorten interactie. De capaciteit om de linkernavigatie uit te breiden of samen te vouwen wordt geactiveerd met **binnengaan (Terugkeer)**.
 
-![ de verlaten Experience Platform navigeerde.](images/left-navigation-collapse.png)
+![ de verlaten navigatie van Experience Platform doen ineenstorten.](images/left-navigation-collapse.png)
 
 Met de linkernavigatie in focus, navigeren de pijltoetsen omhoog en omlaag naar elk item in de navigatie en doorlopend (met andere woorden, verschuift de focus niet weg totdat de gebruiker met de Tab-toets van de linkernavigatie af gaat). Wanneer deze optie is geselecteerd, wordt de focus voor navigatie-items weergegeven. De huidige selectie wordt weergegeven met een gemarkeerde en bolle tekst. Wanneer het selecteren van een linkernavigatiepunt, **gaat binnen (Terugkeer)** het geselecteerde punt UI in het juiste paneel opent, nochtans blijft de nadruk in linkernavigatie tot de gebruikerslusjes weg.
 
-![ de linkernavigatie van het Experience Platform met Geselecteerde Bronnen.](images/left-navigation-sources.png)
+![ de linkernavigatie van Experience Platform met Geselecteerde bronnen.](images/left-navigation-sources.png)
 
-Sommige functies in Platform zijn niet voor alle gebruikers ingeschakeld. Deze items worden in de navigatie weergegeven, maar kunnen niet worden geselecteerd. Wanneer het navigeren met een toetsenbord, worden deze punten overgeslagen tijdens pijlnavigatie en kunnen niet worden geselecteerd gebruikend **binnengaan (Terugkeer)**.
+Sommige functies in Experience Platform zijn niet voor alle gebruikers ingeschakeld. Deze items worden in de navigatie weergegeven, maar kunnen niet worden geselecteerd. Wanneer het navigeren met een toetsenbord, worden deze punten overgeslagen tijdens pijlnavigatie en kunnen niet worden geselecteerd gebruikend **binnengaan (Terugkeer)**.
 
-![ secties van de Experience Platform verlaten navigatie die niet voor de gebruiker worden toegelaten kunnen niet worden geselecteerd.](images/left-navigation-sections-disabled.png)
+![ secties van de verlaten navigatie van Experience Platform die niet voor de gebruiker worden toegelaten kunnen niet worden geselecteerd.](images/left-navigation-sections-disabled.png)
 
 ## Dialoogvenster Ingesloten video
 
-Video&#39;s kunnen binnen het Experience Platform worden weergegeven door toetsenbordnavigatie te gebruiken om een beschikbare videokoppeling te markeren en te selecteren. Hiermee wordt een ingesloten videodialoogvenster geopend in de gebruikersinterface van het platform.
+Video&#39;s kunnen in Experience Platform worden weergegeven door toetsenbordnavigatie te gebruiken om een beschikbare videokoppeling te markeren en te selecteren. Hiermee wordt een ingesloten videodialoogvenster geopend in de gebruikersinterface van Experience Platform.
 
 ![ een blauwe grens die rond een geselecteerd element verschijnt om erop te wijzen dat de nadruk wordt toegepast.](images/profile-overview-tab.png)
 
@@ -74,7 +74,7 @@ U kunt ook via het toetsenbord navigeren in het dialoogvenster Ingesloten video.
 
 ## Bestanden slepen en neerzetten
 
-In Experience Platform zijn alle zones waar bestanden worden geselecteerd en waar ze worden gesleept, toegankelijk voor het toetsenbord. Het gebruiken van **Lusje** om **[!UICONTROL Choose files]** te benadrukken en het gebruiken **gaat of spacebar** binnen om het te selecteren haalt het de dossierselectie UI van het werkende systeem aan.
+In Experience Platform zijn zones voor het slepen en neerzetten van bestanden toegankelijk voor het toetsenbord. Het gebruiken van **Lusje** om **[!UICONTROL Choose files]** te benadrukken en het gebruiken **gaat of spacebar** binnen om het te selecteren haalt het de dossierselectie UI van het werkende systeem aan.
 
 Nadat een bestand is geüpload, kunt u met het toetsenbord navigeren door een verwijderpictogram om het geselecteerde bestand te verwijderen en een nieuw bestand te uploaden. De gebruikers kunnen **Lusje** gebruiken om zich op het schrappingspictogram te concentreren en **binnengaan of ruimtebar** om het te selecteren. Wanneer het bestand is verwijderd, krijgt **[!UICONTROL Choose files]** automatisch de focus en kan het worden geselecteerd.
 
@@ -88,7 +88,7 @@ Als u een muis gebruikt om de zone voor slepen en neerzetten te selecteren, word
 
 ## Tabelbladeren
 
-Alle tabellen in de gebruikersinterface van het Experience Platform zijn toegankelijk via het toetsenbord. U kunt met een aantal sneltoetsen bladeren door tabelrijen en -kolommen en er met deze rijen en kolommen mee werken:
+Alle tabellen in de Experience Platform-gebruikersinterface zijn toegankelijk via het toetsenbord. U kunt met een aantal sneltoetsen bladeren door tabelrijen en -kolommen en er met deze rijen en kolommen mee werken:
 
 * Van de lijstkopbal, gebruik **benedenpijl** om de lijst te doorbladeren. De kopballen van de lijst zijn verkiesbaar wanneer het navigeren via **Lusje**, en u kunt de sorterende orde veranderen gebruikend **spacebar**.
 * **omhoog en onderaan pijlsleutels** bewegingen omhoog en neer door de rijen in de lijst.
@@ -126,7 +126,7 @@ De UI van de Redacteur van het Schema wordt toegankelijk gemaakt door de volgend
 
 ## Gebruikersinterface van Segment Builder
 
-Wanneer het gebruiken van de Bouwer van het Segment UI om, met segmenten binnen Experience Platform tot stand te brengen uit te geven en in wisselwerking te staan, verbeteren de volgende eigenschappen toegankelijkheid:
+Wanneer u de gebruikersinterface van Segment Builder gebruikt voor het maken, bewerken en gebruiken van segmenten in Experience Platform, verbeteren de volgende functies de toegankelijkheid:
 
 * De gebruikersinterface van Segment Builder is toegankelijk via toetsenbordnavigatie.
 * Schermlezers herkennen markeringen voor opmaakcodes voor koppen en kunnen de kop samen met het niveau ervan aankondigen.

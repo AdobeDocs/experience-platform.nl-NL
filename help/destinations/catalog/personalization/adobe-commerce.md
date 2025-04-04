@@ -2,9 +2,9 @@
 title: Adobe Commerce-bestemmingsconnector
 description: Leer hoe verkopers van Adobe Commerce en Real-Time CDP de winkelervaring kunnen aanpassen door zeer relevante site-inhoud en -promoties te leveren, aangepast aan klanten die in Real-Time CDP zijn gebouwd en beheerd.
 exl-id: f7aa3c6c-ba7a-440c-a4d7-5d7b50dbbc0d
-source-git-commit: c3ef732ee82f6c0d56e89e421da0efc4fbea2c17
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '668'
+source-wordcount: '669'
 ht-degree: 0%
 
 ---
@@ -17,19 +17,19 @@ Met de [!DNL Adobe Commerce] -doelconnector kunt u een of meer Real-Time CDP-soo
 
 ## Vereisten {#prerequisites}
 
-Deze aansluiting is beschikbaar in de catalogus met doelen voor klanten die Real-Time CDP Premiere of Ultimate en Adobe Commerce hebben aangeschaft.
+Deze connector is beschikbaar in de catalogus met doelen voor klanten die Real-Time CDP Prime of Ultimate en Adobe Commerce hebben aangeschaft.
 
 Om deze bestemmingsverbinding te gebruiken, zorg ervoor dat u toegang hebt tot:
 
 - [ Adobe Experience Platform ](https://experience.adobe.com/)
 - [ Adobe Developer Console ](https://developer.adobe.com/developer-console/docs/guides/getting-started/). Met toegang tot de ontwikkelaarsconsole, kunt u de dienstrekening en credentieinformatie bekijken die nodig is om [ de configuratie ](https://experienceleague.adobe.com/docs/commerce-admin/customers/customers-menu/audience-activation.html#configure-the-extension) van de uitbreiding in Adobe Commerce te voltooien.
-- [ versie van Adobe Commerce Cloud 2.4.4 of hoger ](https://business.adobe.com/products/magento/magento-commerce.html)
+- [ versie van de Wolk van de Handel van Adobe 2.4.4 of hoger ](https://business.adobe.com/products/magento/magento-commerce.html)
 
-In Experience Platform, creeer het volgende:
+In Experience Platform maakt u het volgende:
 
 - [ Schema ](../../../xdm/schema/composition.md). Het schema dat u maakt, vertegenwoordigt de gegevens die u vanuit Adobe Commerce wilt invoeren. [ leer meer ](https://experienceleague.adobe.com/docs/commerce-merchant-services/data-connection/fundamentals/update-xdm.html) over hoe te om een schema tot stand te brengen dat Commerce-Specifieke gebiedsgroepen bevat.
 - [ Dataset ](../../../catalog/datasets/user-guide.md#create). Een dataset is een opslag en beheersconstructie voor een inzameling van gegevens. U creeert deze dataset van het schema dat u hierboven creeerde.
-- [ DataStream ](../../../datastreams/overview.md#create). ID die gegevens om van Adobe Experience Platform aan andere Adobe DX producten toestaat te stromen. Deze id moet zijn gekoppeld aan een specifieke website in uw specifieke Adobe Commerce-exemplaar. Wanneer u deze gegevensstroom creeert, specificeer het XDM schema u hierboven creeerde.
+- [ DataStream ](../../../datastreams/overview.md#create). ID waarmee gegevens kunnen worden verzonden van Adobe Experience Platform naar andere Adobe DX-producten. Deze id moet zijn gekoppeld aan een specifieke website in uw specifieke Adobe Commerce-exemplaar. Wanneer u deze gegevensstroom creeert, specificeer het XDM schema u hierboven creeerde.
 
 Maak verbinding met het doel [!DNL Commerce] nadat u aan de voorwaarden hebt voldaan.
 
@@ -41,7 +41,7 @@ Maak verbinding met het doel [!DNL Commerce] nadat u aan de voorwaarden hebt vol
 
 Als u verbinding wilt maken met het doel [!DNL Adobe Commerce] :
 
-1. In de [ interface van het Platform ](https://experience.adobe.com/platform/), ga **[!UICONTROL Destinations]** > **[!UICONTROL Catalog]**.
+1. In de [ interface van Experience Platform ](https://experience.adobe.com/platform/), ga **[!UICONTROL Destinations]** > **[!UICONTROL Catalog]**.
 1. Selecteer **[!UICONTROL Personalization]**.
 1. Selecteer de Adobe Commerce-bestemming om deze te markeren en selecteer vervolgens **[!UICONTROL Set up]** .
 1. Volg de stappen die in het [ leerprogramma van de bestemmingsconfiguratie ](../../ui/connect-destination.md) worden beschreven.
@@ -52,7 +52,7 @@ Terwijl [ vestiging ](../../ui/connect-destination.md) deze bestemming, u de vol
 
 - **[!UICONTROL Name]**: vul de voorkeursnaam voor dit doel in.
 - **[!UICONTROL Description]**: voer een beschrijving in voor uw doel. U kunt bijvoorbeeld opgeven voor welke campagne u deze bestemming wilt gebruiken. Dit veld is optioneel.
-- **[!UICONTROL Integration alias]**: deze waarde wordt als een JSON-objectnaam verzonden naar de Web SDK van het Experience Platform.
+- **[!UICONTROL Integration alias]**: deze waarde wordt als een JSON-objectnaam verzonden naar de Experience Platform Web SDK.
 - **[!UICONTROL Datastream ID]**: hiermee wordt bepaald welke gegevensstroom voor gegevensverzameling het publiek bevat dat wordt opgenomen in het antwoord op de pagina. Het drop-down menu toont slechts gegevensstromen die de toegelaten bestemmingsconfiguratie hebben. Zie [ Vormend een datastream ](../../../datastreams/overview.md) voor meer details.
 
 ### Waarschuwingen inschakelen {#enable-alerts}
@@ -71,7 +71,7 @@ Lees [ activeer profielen en publiek aan de bestemmingen van het profielverzoek 
 
 ## Volgende stappen in [!DNL Adobe Commerce]
 
-Nu u de [!DNL Commerce] -bestemming in het Experience Platform hebt geconfigureerd, moet u de [!DNL Audience Activation] -extensie installeren in [!DNL Commerce] en de [!DNL Commerce Admin] zodanig configureren dat het door u gemaakte Real-Time CDP-publiek wordt geïmporteerd. Zie de [[!DNL Commerce]  documentatie ](https://experienceleague.adobe.com/docs/commerce-admin/customers/customers-menu/audience-activation.html) om meer te leren.
+Nu u de [!DNL Commerce] -bestemming hebt geconfigureerd in Experience Platform, moet u de [!DNL Audience Activation] -extensie installeren in [!DNL Commerce] en de [!DNL Commerce Admin] configureren om het door u gemaakte Real-Time CDP-publiek te importeren. Zie de [[!DNL Commerce]  documentatie ](https://experienceleague.adobe.com/docs/commerce-admin/customers/customers-menu/audience-activation.html) om meer te leren.
 
 ## Activering van publiek valideren in Commerce {#exported-data}
 

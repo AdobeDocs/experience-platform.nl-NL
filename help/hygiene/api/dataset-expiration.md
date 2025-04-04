@@ -3,9 +3,9 @@ title: API-eindpunt gegevensset vervaldatum
 description: Het /ttl eindpunt in de Hygiene API van Gegevens staat u toe om datasettermijnen in Adobe Experience Platform programmatically te plannen.
 role: Developer
 exl-id: fbabc2df-a79e-488c-b06b-cd72d6b9743b
-source-git-commit: 911089ec641d9fbb436807b04dd38e00fd47eecf
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1964'
+source-wordcount: '1966'
 ht-degree: 0%
 
 ---
@@ -18,7 +18,7 @@ Een gegevenssetvervaldatum is slechts een getimed-vertraagde schrappingsverricht
 
 >[!NOTE]
 >
->Hoewel de vervaldatum als een specifiek tijdstip wordt gespecificeerd, kan er tot 24 uur vertraging na het verstrijken van de vervaldatum zijn voordat de eigenlijke verwijdering wordt gestart. Zodra schrapping in werking wordt gesteld, kan het tot zeven dagen duren alvorens alle sporen van de dataset uit de systemen van het Platform zijn verwijderd.
+>Hoewel de vervaldatum als een specifiek tijdstip wordt gespecificeerd, kan er tot 24 uur vertraging na het verstrijken van de vervaldatum zijn voordat de eigenlijke verwijdering wordt gestart. Wanneer de verwijdering is gestart, kan het maximaal zeven dagen duren voordat alle sporen van de gegevensset uit Experience Platform-systemen zijn verwijderd.
 
 Op elk ogenblik alvorens dataset-schrapping eigenlijk in werking wordt gesteld, kunt u het verlopen annuleren of zijn trekkertijd wijzigen. Na het annuleren van een datasetvervaldatum, kunt u het opnieuw openen door een nieuwe vervaldatum te plaatsen.
 
@@ -28,7 +28,7 @@ Nadat het wissen van de gegevensset is gestart, wordt de vervaltaak gemarkeerd a
 >
 >Als een dataset wordt geplaatst om te verlopen, moet u om het even welke gegevensstromen manueel veranderen die gegevens in die dataset kunnen opnemen zodat uw stroomafwaartse werkschema&#39;s niet negatief worden beïnvloed.
 
-Het geavanceerde Beheer van de Levenscyclus van Gegevens steunt datasetschrappingen door het eindpunt van de gegevenssetvervalsing en identiteitskaart schrappingen (rij-vlakke gegevens) gebruikend primaire identiteiten via het [ werkordeeindpunt ](./workorder.md). U kunt [ datasetvervalingen ](../ui/dataset-expiration.md) en [ verslagschrappingen ](../ui/record-delete.md) door Platform UI ook beheren. Raadpleeg de gekoppelde documentatie voor meer informatie.
+Het geavanceerde Beheer van de Levenscyclus van Gegevens steunt datasetschrappingen door het eindpunt van de gegevenssetvervalsing en identiteitskaart schrappingen (rij-vlakke gegevens) gebruikend primaire identiteiten via het [ werkordeeindpunt ](./workorder.md). U kunt [ datasetvervalingen ](../ui/dataset-expiration.md) en [ verslagschrappingen ](../ui/record-delete.md) door Experience Platform UI ook beheren. Raadpleeg de gekoppelde documentatie voor meer informatie.
 
 >[!NOTE]
 >
@@ -44,7 +44,7 @@ Het eindpunt dat in deze handleiding wordt gebruikt, maakt deel uit van de Data 
 
 ## Verlopen gegevensset weergeven {#list}
 
-U kunt van alle datasettermijnen voor uw organisatie een lijst maken door een verzoek van de GET te doen. De parameters van de vraag kunnen worden gebruikt om de reactie voor aangewezen resultaten te filtreren.
+U kunt alle gegevenssetvervaldatums voor uw organisatie weergeven door een GET-aanvraag in te dienen. De parameters van de vraag kunnen worden gebruikt om de reactie voor aangewezen resultaten te filtreren.
 
 **API formaat**
 
@@ -107,7 +107,7 @@ Een succesvolle reactie maakt een lijst van de resulterende datasetvervaldata. H
 
 ## Een gegevensset opzoeken die vervalt {#lookup}
 
-Als u een gegevensset wilt opzoeken die vervalt, vraagt u een GET aan met de `{DATASET_ID}` of de `{DATASET_EXPIRATION_ID}` .
+Als u een gegevensset wilt opzoeken die vervalt, moet u een GET-aanvraag indienen bij de `{DATASET_ID}` of de `{DATASET_EXPIRATION_ID}` .
 
 >[!IMPORTANT]
 >
@@ -202,11 +202,11 @@ De volgende JSON vertegenwoordigt een ingekorte reactie voor de details van een 
 
 Om ervoor te zorgen dat gegevens na een bepaalde periode uit het systeem worden verwijderd, plant u een vervaldatum voor een specifieke dataset door de gegevensset-id en de vervaldatum en -tijd op te geven in ISO 8601-indeling.
 
-Om een datasetvervaldatum tot stand te brengen, voer een verzoek van de POST uit zoals hieronder getoond en verstrek de hieronder vermelde waarden binnen de nuttige lading.
+Om een datasetvervaldatum tot stand te brengen, voer een POST- verzoek zoals hieronder getoond uit en verstrek de hieronder vermelde waarden binnen de lading.
 
 >[!NOTE]
 >
->Als u een fout van 404 ontvangt, zorg ervoor dat het verzoek geen extra voorwaartse schuine strepen heeft. Een sluitslash kan ertoe leiden dat een verzoek om een POST mislukt.
+>Als u een fout van 404 ontvangt, zorg ervoor dat het verzoek geen extra voorwaartse schuine strepen heeft. Een volgslash kan ertoe leiden dat een POST-aanvraag mislukt.
 
 **API formaat**
 
@@ -276,7 +276,7 @@ De HTTP-status 400 (Onjuist verzoek) treedt op als er al een gegevenssetvervalda
 
 ## Vervaldatum gegevensset bijwerken {#update}
 
-Om een vervaldatum voor een dataset bij te werken, gebruik een verzoek van de PUT en `ttlId`. U kunt de gegevens `displayName` , `description` en/of `expiry` bijwerken.
+Als u een vervaldatum voor een gegevensset wilt bijwerken, gebruikt u een PUT-aanvraag en de instructies `ttlId` . U kunt de gegevens `displayName` , `description` en/of `expiry` bijwerken.
 
 >[!NOTE]
 >
@@ -353,7 +353,7 @@ Een mislukte reactie retourneert een HTTP-status van 404 (Niet gevonden) als een
 
 ## Vervaldatum gegevensset annuleren {#delete}
 
-U kunt een gegevenssetvervaldatum annuleren door een verzoek van de DELETE te doen.
+U kunt een gegevenssetvervaldatum annuleren door een DELETE-verzoek in te dienen.
 
 >[!NOTE]
 >

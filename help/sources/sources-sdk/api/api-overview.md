@@ -1,22 +1,22 @@
 ---
-keywords: Experience Platform;thuis;populaire onderwerpen;bronnen;connectors;bronconnectors;bronnen sdk;sdk;SDK
-title: Zelfbedieningsbron (Batch SDK) API-handleiding
+keywords: Experience Platform;home;populaire onderwerpen;bronnen;connectors;bronconnectors;bronnen sdk;sdk;SDK
+title: Self-Serve Sources (Batch SDK) API Guide
 description: Dit document biedt een overzicht van het proces voor het maken van een nieuwe bron, inclusief stappen voor het ophalen, schrijven en verzenden van een nieuwe verbindingsspecificatie met behulp van de Flow Service API.
 exl-id: 7e827989-207b-41e2-84d6-5ecb754bebb6
-source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '483'
+source-wordcount: '484'
 ht-degree: 0%
 
 ---
 
-# Zelfbedieningsbron (Batch SDK) API-handleiding
+# Self-Serve Sources (Batch SDK) API Guide
 
 Dit document verstrekt een overzicht van het proces om een nieuwe bron tot stand te brengen, met inbegrip van stappen op om een nieuwe verbindingsspecificatie te schrijven en voor te leggen gebruikend [[!DNL Flow Service]  API ](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
-[!DNL Flow Service] wordt gebruikt voor het verzamelen en centraliseren van klantgegevens uit verschillende bronnen binnen het platform. De service biedt een gebruikersinterface en RESTful API waarmee u eenvoudig bronverbindingen met verschillende gegevensproviders kunt instellen. Deze bronverbindingen laten u toe om uw derdesystemen voor authentiek te verklaren, tijden voor ingestitielooppas te plaatsen, en gegevensinvoer te beheren.
+[!DNL Flow Service] wordt gebruikt voor het verzamelen en centraliseren van klantgegevens uit verschillende bronnen in Experience Platform. De service biedt een gebruikersinterface en RESTful API waarmee u eenvoudig bronverbindingen met verschillende gegevensproviders kunt instellen. Deze bronverbindingen laten u toe om uw derdesystemen voor authentiek te verklaren, tijden voor ingestitielooppas te plaatsen, en gegevensinvoer te beheren.
 
-De [!DNL Flow Service] API verstrekt verscheidene eindpunten die u toestaan om de verbinding en stroomspecificaties voor een nieuwe bron programmatically te beheren die u door Zelfbediening Bronnen (Band SDK) integreert.
+De [!DNL Flow Service] API verstrekt verscheidene eindpunten die u toestaan om de verbinding en stroomspecificaties voor een nieuwe bron programmatically te beheren die u door Zelfbediening Bronnen (Batch SDK) integreert.
 
 ## Een nieuwe verbindingsspecificatie maken
 
@@ -36,11 +36,11 @@ Voor gedetailleerde instructies, zie de gids bij [ het bijwerken stroomspecifica
 
 ## De verbindingsspecificatie bijwerken
 
-U kunt uw verbindingsspecificatie bijwerken door een PUT aan te vragen bij de [!DNL Flow Service] API. Zie de gids bij [ het bijwerken van uw verbindingsspecificaties ](./update-connection-specs.md) voor meer informatie.
+U kunt uw verbindingsspecificatie bijwerken door een PUT-aanvraag in te dienen bij de [!DNL Flow Service] API. Zie de gids bij [ het bijwerken van uw verbindingsspecificaties ](./update-connection-specs.md) voor meer informatie.
 
 ## Uw bron verzenden
 
-Als u uw bron voor integratie naar het Experience Platform wilt verzenden, moet u eerst de volledige API-workflow voor bronnen van [!DNL Flow Service] voltooien om ervoor te zorgen dat uw bron goed werkt. Als de bron goed wordt uitgevoerd, kunt u doorgaan en contact opnemen met uw Adobe voor verificatie en promotie. Zie de gids bij [ het testen en het voorleggen van uw bron ](./submit.md) voor meer informatie
+Als u uw bron voor integratie naar Experience Platform wilt verzenden, moet u eerst de volledige API-workflow voor bronnen van [!DNL Flow Service] voltooien om ervoor te zorgen dat uw bron goed werkt. Als je bron goed werkt, kun je doorgaan en contact opnemen met je Adobe-vertegenwoordiger voor verificatie en promotie. Zie de gids bij [ het testen en het voorleggen van uw bron ](./submit.md) voor meer informatie
 
 ## Volgende stappen
 

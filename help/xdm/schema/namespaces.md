@@ -1,12 +1,12 @@
 ---
-keywords: Experience Platform;home;populaire onderwerpen;schema;Schema;xdm;ervaringsgegevensmodel;naamruimte;naamruimte;compatibiliteitsmodus;Gereed;
+keywords: Experience Platform;home;populaire onderwerpen;schema;Schema;xdm;ervaringsgegevensmodel;naamruimte;naamruimten;compatibiliteitsmodus;Gereed;
 solution: Experience Platform
 title: Naamruimte in XDM (Experience Data Model)
 description: Leer hoe het namespacing in het Model van de Gegevens van de Ervaring (XDM) u toestaat om uw schema's uit te breiden en gebiedsbotsingen te verhinderen aangezien de verschillende schemacomponenten samen worden gebracht.
 exl-id: b351dfaf-5219-4750-a7a9-cf4689a5b736
-source-git-commit: d26a0586a992948e1b278bae91a985fe3d9f1ee8
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '665'
+source-wordcount: '666'
 ht-degree: 0%
 
 ---
@@ -29,7 +29,7 @@ In de volgende secties ziet u hoe naamruimten worden toegewezen in XDM-syntaxis.
 
 ### Standaard XDM {#standard}
 
-De standaard syntaxis XDM verstrekt inzicht in hoe namespaces in schema&#39;s (met inbegrip van [ worden vertegenwoordigd hoe zij in Adobe Experience Platform ](#compatibility) worden vertaald).
+De standaard syntaxis XDM verstrekt insight in hoe namespaces in schema&#39;s (met inbegrip van [ worden vertegenwoordigd hoe zij in Adobe Experience Platform ](#compatibility) worden vertaald).
 
 Standaard XDM gebruikt [ JSON-LD ](https://www.w3.org/TR/json-ld11/#basic-concepts) syntaxis om namespaces aan gebieden toe te wijzen. Deze naamruimte wordt geleverd in de vorm van een URI (bijvoorbeeld `https://ns.adobe.com/xdm` voor de `xdm` naamruimte) of als een voorvoegsel dat wordt geconfigureerd in het `@context` -kenmerk van een schema.
 
@@ -89,7 +89,7 @@ Hier volgt een voorbeeldschema voor een product in de standaard XDM-syntaxis. Me
 
 ### Compatibiliteitsmodus {#compatibility}
 
-In Adobe Experience Platform, worden de schema&#39;s XDM vertegenwoordigd in [ syntaxis van de Wijze van de Verenigbaarheid ](../api/appendix.md#compatibility), die niet de JSON-LD syntaxis gebruikt om namespaces te vertegenwoordigen. In plaats daarvan converteert Platform de naamruimte naar een bovenliggend veld (te beginnen met een onderstrepingsteken) en nest het de onderliggende velden.
+In Adobe Experience Platform, worden de schema&#39;s XDM vertegenwoordigd in [ syntaxis van de Wijze van de Verenigbaarheid ](../api/appendix.md#compatibility), die niet de JSON-LD syntaxis gebruikt om namespaces te vertegenwoordigen. In plaats daarvan converteert Experience Platform de naamruimte naar een bovenliggend veld (te beginnen met een onderstrepingsteken) en worden de onderliggende velden genest.
 
 De standaard-XDM `repo:createdDate` wordt bijvoorbeeld omgezet in `_repo.createdDate` en wordt weergegeven onder de volgende structuur in de compatibiliteitsmodus:
 

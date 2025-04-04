@@ -1,12 +1,12 @@
 ---
-keywords: Experience Platform;thuis;populaire onderwerpen;bronnen;connectors;bronconnectors;bronnen sdk;sdk;SDK
+keywords: Experience Platform;home;populaire onderwerpen;bronnen;connectors;bronconnectors;bronnen sdk;sdk;SDK
 solution: Experience Platform
 title: Een teksteditor in uw lokale omgeving gebruiken om een documentatiepagina voor bronnen te maken
 description: Dit document bevat stappen voor het gebruik van uw lokale omgeving bij het schrijven van documentatie voor uw bron en het indienen van een pull-verzoek (PR).
 exl-id: 4cc89d1d-bc42-473d-ba54-ab3d1a2cd0d6
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '600'
+source-wordcount: '601'
 ht-degree: 0%
 
 ---
@@ -17,7 +17,7 @@ Dit document bevat stappen voor het gebruik van uw lokale omgeving bij het schri
 
 >[!TIP]
 >
->De volgende documenten uit de bijdragende gids van de Adobe kunnen worden gebruikt om uw documentatieproces verder te steunen: <ul><li>[ installeer Git en de Authoring hulpmiddelen van de Prijsverhoging ](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/install-tools.html)</li><li>{de plaats van de Git van de opstelling plaatselijk voor documentatie ](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html)[</li><li>[ GitHub bijdragewerkschema voor belangrijkste veranderingen ](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/full-workflow.html)</li></ul>
+>De volgende documenten uit de bijdragende gids van Adobe kunnen worden gebruikt om uw documentatieproces verder te steunen: <ul><li>[ installeer Git en de Authoring hulpmiddelen van de Prijsverhoging ](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/install-tools.html)</li><li>{de plaats van de Git van de opstelling plaatselijk voor documentatie ](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html)[</li><li>[ GitHub bijdragewerkschema voor belangrijkste veranderingen ](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/full-workflow.html)</li></ul>
 
 ## Vereisten
 
@@ -29,7 +29,7 @@ De eerste stap in vestiging uw lokaal auteursmilieu moet aan de [ bewaarplaats v
 
 ![ platform-repo ](../assets/platform-repo.png)
 
-Voor de belangrijkste pagina van de bewaarplaats van GitHub van het Platform, uitgezochte **Fork**.
+Voor de belangrijkste pagina van de bewaarplaats van Experience Platform GitHub, uitgezochte **Fork**.
 
 ![ vork ](../assets/fork.png)
 
@@ -53,7 +53,7 @@ In popover paneel dat verschijnt, ga een beschrijvende naam voor uw tak in, en s
 
 ![ creeer-tak-vs ](../assets/create-branch-vs.png)
 
-Daarna, uitgezochte **tak van Publish**.
+Daarna, uitgezochte **publiceer tak**.
 
 ![ publiceren-tak ](../assets/publish-branch.png)
 
@@ -61,7 +61,7 @@ Daarna, uitgezochte **tak van Publish**.
 
 Met de bewaarplaats die aan uw lokale machine en een nieuwe gecreeerde tak wordt gekloond, kunt u nu beginnen de documentatiepagina voor uw nieuwe bron door de [ tekstredacteur van uw keus ](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/install-tools.html#understand-markdown-editors) te ontwerpen.
 
-De Adobe adviseert dat u [ Code van Visual Studio ](https://code.visualstudio.com/) gebruikt en dat u de Authoring van de Markeringen van de Adobe uitbreiding installeert. Om de uitbreiding te installeren, lanceer de Code van Visual Studio, en selecteer dan het **lusje van Uitbreidingen** van de linkernavigatie.
+Adobe adviseert dat u [ Code van Visual Studio ](https://code.visualstudio.com/) gebruikt en dat u de Authoring van de Markeringen van Adobe uitbreiding installeert. Om de uitbreiding te installeren, lanceer de Code van Visual Studio, en selecteer dan het **lusje van Uitbreidingen** van de linkernavigatie.
 
 ![ uitbreiding ](../assets/extension.png)
 
@@ -89,11 +89,11 @@ Om een trekkrachtverzoek tot stand te brengen, creeer **het Volledige Verzoek**.
 
 ![ creeer-pr-vs ](../assets/create-pr-vs.png)
 
-Zorg ervoor dat de basis- en vergelijkingsvertakkingen correct zijn. Voeg een nota aan PR toe, beschrijvend uw update, en selecteer dan **trekken verzoek** creëren. Dit opent een PR om de werkende tak van uw werk in de hoofdtak van de bewaarplaats van de Adobe samen te voegen.
+Zorg ervoor dat de basis- en vergelijkingsvertakkingen correct zijn. Voeg een nota aan PR toe, beschrijvend uw update, en selecteer dan **trekken verzoek** creëren. Dit opent een PR om de werkende tak van uw werk in de hoofdtak van de bewaarplaats van Adobe samen te voegen.
 
 >[!TIP]
 >
->Verlaat **uitgeeft door instandhouders** geselecteerde checkbox toestaan om ervoor te zorgen dat het de documentatieteam van de Adobe aan PR kan uitgeven.
+>Verlaat **uitgeeft door instandhouders** geselecteerde checkbox toestaan om ervoor te zorgen dat het de documentatieteam van Adobe aan PR kan uitgeven.
 
 ![ creeer-pr ](../assets/create-pr.png)
 

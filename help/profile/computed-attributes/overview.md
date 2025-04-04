@@ -2,9 +2,9 @@
 title: Overzicht van berekende kenmerken
 description: Berekende kenmerken zijn functies om gegevens op gebeurtenisniveau samen te voegen tot kenmerken op profielniveau. Deze functies worden automatisch berekend zodat zij over segmentatie, activering, en verpersoonlijking kunnen worden gebruikt.
 exl-id: 13878363-589d-4a3c-811c-21d014a5f3c2
-source-git-commit: 03f1dfab768e98ef4959d605cc3ead25bb5eb238
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1153'
+source-wordcount: '1154'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,7 @@ Personalization op basis van gebruikersgedrag is een belangrijke vereiste voor m
 
 Met behulp van berekende kenmerken kunnen gedragsgegevens van profielen snel worden omgezet in geaggregeerde waarden op profielniveau zonder afhankelijk te zijn van technische bronnen voor:
 
-- Het toelaten van gerichte één-aan-één of partijverpersoonlijking met activering van gedragsaggregaten aan de bestemmingen van Real-time Customer Data Platform en gebruik in Adobe Journey Optimizer
+- Het toelaten van gerichte één-aan-één of partijverpersoonlijking met activering van gedragsaggregaten aan de bestemmingen van Real-Time Customer Data Platform en gebruik in Adobe Journey Optimizer
 - Vereenvoudigde publiekssegmentatie met opslag van gedragsaggregaten als profielkenmerken
 - Standaardisering van geaggregeerde profielgedragsgegevens voor gebruik op verschillende platforms en toepassingen
 - Beter gegevensbeheer met consolidatie van gegevens van gebeurtenissen met een oud profiel in betekenisvolle gedragsinzichten
@@ -32,13 +32,13 @@ Voorbeelden van gebruiksgevallen zijn:
 - Meerdere, op gebeurtenissen gebaseerde doelgroepen samenvouwen tot een meer versmalde groep met berekende kenmerken
 - Niet-geverifieerde gebruikers offsite opnieuw toewijzen met behulp van recente partner-id&#39;s uit gebeurtenissen
 
-Deze gids zal u helpen om de rol van gegevens verwerkte attributen binnen Platform beter te begrijpen, naast het verklaren van de grondbeginselen van gegevens verwerkte attributen.
+Deze handleiding helpt u om de rol van berekende kenmerken in Experience Platform beter te begrijpen, en om de basisbeginselen van berekende kenmerken uit te leggen.
 
 ## Berekende kenmerken begrijpen
 
 Met Adobe Experience Platform kunt u eenvoudig gegevens uit meerdere bronnen importeren en samenvoegen om [!DNL Real-Time Customer Profiles] te genereren. Elk profiel bevat belangrijke informatie met betrekking tot een persoon, zoals zijn contactgegevens, voorkeuren en aankoopgeschiedenis, die een 360 graden mening van de klant verstrekken.
 
-Een deel van de informatie die in het profiel wordt verzameld, is gemakkelijk te begrijpen wanneer de gegevensvelden rechtstreeks worden gelezen (bijvoorbeeld &quot;voornaam&quot;), terwijl andere gegevens meerdere berekeningen vereisen of op andere velden en waarden vertrouwen om de informatie te genereren (bijvoorbeeld &quot;totaal voor levenslange aanschaf&quot;). Om deze gegevens in één oogopslag begrijpelijker te maken, kunt u in [!DNL Platform] berekende kenmerken maken die deze verwijzingen en berekeningen automatisch uitvoeren en de waarde in het juiste veld retourneren.
+Een deel van de informatie die in het profiel wordt verzameld, is gemakkelijk te begrijpen wanneer de gegevensvelden rechtstreeks worden gelezen (bijvoorbeeld &quot;voornaam&quot;), terwijl andere gegevens meerdere berekeningen vereisen of op andere velden en waarden vertrouwen om de informatie te genereren (bijvoorbeeld &quot;totaal voor levenslange aanschaf&quot;). Om deze gegevens in één oogopslag begrijpelijker te maken, kunt u in [!DNL Experience Platform] berekende kenmerken maken die deze verwijzingen en berekeningen automatisch uitvoeren en de waarde in het juiste veld retourneren.
 
 De berekende attributen omvatten het creëren van een uitdrukking, of &quot;regel&quot;, die op inkomende gegevens werkt en de resulterende waarde in een profielattribuut opslaat. Expressies kunnen op meerdere verschillende manieren worden gedefinieerd, zodat u kunt opgeven op welke gebeurtenissen moet worden geaggregeerd, welke functies moeten worden geaggregeerd of hoe lang de zoekopdracht moet duren.
 

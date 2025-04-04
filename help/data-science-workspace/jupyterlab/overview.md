@@ -1,21 +1,21 @@
 ---
-keywords: Experience Platform;JupyterLab;laptops;Data Science Workspace;populaire onderwerpen;jupyterlab
+keywords: Experience Platform;JupyterLab;notebooks;Data Science Workspace;populaire onderwerpen;jupyterlab
 solution: Experience Platform
-title: Overzicht van JupyterLab-gebruikersinterface
-description: JupyterLab is een webgebaseerde gebruikersinterface voor Project Jupyter en is nauw geïntegreerd in Adobe Experience Platform. Het biedt een interactieve ontwikkelomgeving voor datawetenschappers om te werken met Jupyter-laptops, -code en -data. Dit document biedt een overzicht van JupyterLab en de bijbehorende functies, plus instructies voor het uitvoeren van veelvoorkomende handelingen.
+title: Overzicht van de gebruikersinterface van JupyterLab
+description: JupyterLab is een webgebaseerde gebruikersinterface voor Project Jupyter en is nauw geïntegreerd in Adobe Experience Platform. Het verstrekt een interactieve ontwikkelomgeving voor gegevenswetenschappers om met Notities Jupyter, code, en gegevens te werken. Dit document biedt een overzicht van JupyterLab en de bijbehorende functies, evenals instructies om algemene handelingen uit te voeren.
 exl-id: 13786fbd-ef16-49cd-8bcf-46320c33e902
-source-git-commit: 5d98dc0cbfaf3d17c909464311a33a03ea77f237
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1829'
+source-wordcount: '1832'
 ht-degree: 0%
 
 ---
 
-# Overzicht van de gebruikersinterface van [!DNL JupyterLab]
+# Overzicht van de gebruikersinterface [!DNL JupyterLab]
 
 >[!NOTE]
 >
->Data Science Workspace is niet meer verkrijgbaar.
+>Data Science Workspace kan niet meer worden aangeschaft.
 >
 >Deze documentatie is bedoeld voor bestaande klanten met eerdere rechten op Data Science Workspace.
 
@@ -25,26 +25,26 @@ Dit document biedt een overzicht van [!DNL JupyterLab] en de bijbehorende functi
 
 ## [!DNL JupyterLab] on [!DNL Experience Platform]
 
-De JupyterLab-integratie van Experience Platform gaat gepaard met architectuurwijzigingen, ontwerpoverwegingen, aangepaste laptopextensies, vooraf geïnstalleerde bibliotheken en een interface op basis van Adoben.
+De integratie met Experience Platform JupyterLab gaat gepaard met architectuurwijzigingen, ontwerpoverwegingen, aangepaste laptopextensies, vooraf geïnstalleerde bibliotheken en een Adobe-interface.
 
-In de volgende lijst worden enkele functies beschreven die uniek zijn voor JupyterLab op Platform:
+In de volgende lijst worden enkele functies beschreven die uniek zijn voor JupyterLab op Experience Platform:
 
 | Functie | Beschrijving |
 | --- | --- |
 | **Kernels** | Kernels bieden laptop en andere [!DNL JupyterLab] front-ends de mogelijkheid om code in verschillende programmeertalen uit te voeren en te introspecteren. [!DNL Experience Platform] bevat aanvullende kernels die de ontwikkeling in [!DNL Python] , R, PySpark en [!DNL Spark] ondersteunen. Zie de [ kernels ](#kernels) sectie voor meer details. |
 | **Toegang van Gegevens** | U hebt vanuit [!DNL JupyterLab] rechtstreeks toegang tot bestaande gegevenssets met volledige ondersteuning voor lees- en schrijfmogelijkheden. |
-| **[!DNL Platform]service integration** | Dankzij de ingebouwde integratie kunt u andere [!DNL Platform] -services rechtstreeks vanuit [!DNL JupyterLab] gebruiken. Een volledige lijst van gesteunde integratie wordt verstrekt in de sectie over [ Integratie met andere diensten van het Platform ](#service-integration). |
-| **Verificatie** | Naast <a href="https://jupyter-notebook.readthedocs.io/en/stable/security.html" target="_blank"> JupyterLab&#39;s ingebouwde veiligheidsmodel </a>, wordt elke interactie tussen uw toepassing en Experience Platform, met inbegrip van de dienst-aan-dienst van het Platform mededeling gecodeerd en voor authentiek verklaard door <a href="https://www.adobe.io/authentication/auth-methods.html" target="_blank">[!DNL Adobe Identity Management System] (IMS) </a>. |
+| **[!DNL Experience Platform]service integration** | Dankzij de ingebouwde integratie kunt u andere [!DNL Experience Platform] -services rechtstreeks vanuit [!DNL JupyterLab] gebruiken. Een volledige lijst van gesteunde integratie wordt verstrekt in de sectie over [ Integratie met andere diensten van Experience Platform ](#service-integration). |
+| **Verificatie** | Naast <a href="https://jupyter-notebook.readthedocs.io/en/stable/security.html" target="_blank"> JupyterLab&#39;s ingebouwde veiligheidsmodel </a>, wordt elke interactie tussen uw toepassing en Experience Platform, met inbegrip van de dienst-aan-dienst van Experience Platform mededeling gecodeerd en door <a href="https://www.adobe.io/authentication/auth-methods.html" target="_blank">[!DNL Adobe Identity Management System] (IMS) </a> voor authentiek verklaard. |
 | **de bibliotheken van de Ontwikkeling** | In [!DNL Experience Platform] biedt [!DNL JupyterLab] vooraf geïnstalleerde bibliotheken voor [!DNL Python] , R en PySpark. Zie [ bijlage ](#supported-libraries) voor een volledige lijst van gesteunde bibliotheken. |
-| **controlemechanisme van de Bibliotheek** | Wanneer de vooraf geïnstalleerde bibliotheken niet geschikt zijn voor uw behoeften, kunnen extra bibliotheken voor Python en R worden geïnstalleerd en tijdelijk in geïsoleerde containers worden opgeslagen om de integriteit van [!DNL Platform] te handhaven en uw gegevens veilig te houden. Zie de [ kernels ](#kernels) sectie voor meer details. |
+| **controlemechanisme van de Bibliotheek** | Wanneer de vooraf geïnstalleerde bibliotheken niet geschikt zijn voor uw behoeften, kunnen extra bibliotheken voor Python en R worden geïnstalleerd en tijdelijk in geïsoleerde containers worden opgeslagen om de integriteit van [!DNL Experience Platform] te handhaven en uw gegevens veilig te houden. Zie de [ kernels ](#kernels) sectie voor meer details. |
 
 >[!NOTE]
 >
 >Aanvullende bibliotheken zijn alleen beschikbaar voor de sessie waarin ze zijn geïnstalleerd. Wanneer u nieuwe sessies start, moet u alle extra bibliotheken die u nodig hebt opnieuw installeren.
 
-## Integratie met andere [!DNL Platform] -services {#service-integration}
+## Integratie met andere [!DNL Experience Platform] -services {#service-integration}
 
-Standaardisering en interoperabiliteit zijn de belangrijkste concepten achter [!DNL Experience Platform] . Dankzij de integratie van [!DNL JupyterLab] on [!DNL Platform] als een ingesloten IDE kunt u communiceren met andere [!DNL Platform] -services, zodat u [!DNL Platform] optimaal kunt gebruiken. De volgende [!DNL Platform] -services zijn beschikbaar in [!DNL JupyterLab] :
+Standaardisering en interoperabiliteit zijn de belangrijkste concepten achter [!DNL Experience Platform] . Dankzij de integratie van [!DNL JupyterLab] on [!DNL Experience Platform] als een ingesloten IDE kunt u communiceren met andere [!DNL Experience Platform] -services, zodat u [!DNL Experience Platform] optimaal kunt gebruiken. De volgende [!DNL Experience Platform] -services zijn beschikbaar in [!DNL JupyterLab] :
 
 * **[!DNL Catalog Service]:** open en verken datasets met lees- en schrijffunctionaliteit.
 * **[!DNL Query Service]:** heb toegang tot en verken datasets gebruikend SQL, die lagere gegevenstoegang overheadkosten verstrekken wanneer het behandelen van grote hoeveelheden gegevens.
@@ -53,7 +53,7 @@ Standaardisering en interoperabiliteit zijn de belangrijkste concepten achter [!
 
 >[!NOTE]
 >
->Sommige [!DNL Platform] -service-integratie op [!DNL JupyterLab] is beperkt tot specifieke kernels. Verwijs naar de sectie op [ kernels ](#kernels) voor meer details.
+>Sommige [!DNL Experience Platform] -service-integratie op [!DNL JupyterLab] is beperkt tot specifieke kernels. Verwijs naar de sectie op [ kernels ](#kernels) voor meer details.
 
 ## Belangrijke functies en veelvoorkomende bewerkingen
 
@@ -87,7 +87,7 @@ De menubalk boven aan de interface heeft menu&#39;s op hoofdniveau die acties be
 * **Kernel:** Acties voor het beheren van kernels
 * **Lusjes:** een lijst van open documenten en activiteiten
 * **Montages:** Gemeenschappelijke montages en een geavanceerde montagesredacteur
-* **Hulp:** een lijst van [!DNL JupyterLab] en kernel de verbindingen van de hulp
+* **Hulp:** een lijst van [!DNL JupyterLab] en kernel hulpverbindingen
 
 **Linkerzijbalk**
 
@@ -140,7 +140,7 @@ Vaak voorkomende celhandelingen worden hieronder beschreven:
 
 * **Beweeg een cel:** Plaats uw curseur rechts van de cel u wenst te bewegen, dan klik en sleep de cel aan een nieuwe plaats. Als u bovendien een cel van het ene notebook naar het andere verplaatst, wordt de cel met de inhoud gerepliceerd.
 
-* **voer een cel uit:** klik op het lichaam van de cel u wenst uit te voeren en dan het **spel** pictogram (**▶**) van het notitieboekjecomenu klikken. Een asterisk (**\***) wordt getoond in de uitvoerteller van de cel wanneer de kernel de uitvoering verwerkt, en met een geheel na voltooiing vervangen.
+* **voert een cel uit:** klik op het lichaam van de cel u wenst uit te voeren en dan het **spel** pictogram (**▶**) van het notitieboekjecomenu te klikken. Een asterisk (**\***) wordt getoond in de uitvoerteller van de cel wanneer de kernel de uitvoering verwerkt, en met een geheel na voltooiing vervangen.
 
 * **Schrap een cel:** klik op het lichaam van de cel u wenst om dan het **schaar** pictogram te schrappen en te klikken.
 
@@ -150,7 +150,7 @@ Notebookkernels zijn de taalspecifieke computerengines voor de verwerking van no
 
 Bepaalde kenmerken en functies zijn beperkt tot bepaalde kernels zoals beschreven in de onderstaande tabel:
 
-| Kernel | Ondersteuning voor bibliotheekinstallatie | [!DNL Platform] integraties |
+| Kernel | Ondersteuning voor bibliotheekinstallatie | [!DNL Experience Platform] integraties |
 | :----: | :--------------------------: | :-------------------- |
 | **[!DNL Python]** | Ja | <ul><li>[!DNL Sensei ML Framework]</li><li>[!DNL Catalog Service]</li><li>[!DNL Query Service]</li></ul> |
 | **R** | Ja | <ul><li>[!DNL Sensei ML Framework]</li><li>[!DNL Catalog Service]</li></ul> |
@@ -175,9 +175,9 @@ De aangepaste *Lanceerinrichting* voorziet u van nuttige notitieboekjecalplaatje
 | Sjabloon | Beschrijving |
 | --- | --- |
 | Leeg | Een leeg laptopbestand. |
-| Starter | Een voorgevuld notebook dat dataverkenning aantoont met behulp van voorbeelddata. |
-| Detailhandel | Een voorgevuld notitieboekje met het [ detailhandels recept ](../pre-built-recipes/retail-sales.md) gebruikend steekproefgegevens. |
-| Recipe Builder | Een laptopsjabloon voor het maken van een recept in [!DNL JupyterLab] . Het is vooraf ingevuld met code en commentaar waarin het proces voor het maken van het recept wordt geïllustreerd en beschreven. Verwijs naar de [ notitieboekje aan recept zelfstudie ](https://www.adobe.com/go/data-science-create-recipe-notebook-tutorial-en) voor een gedetailleerde analyse. |
+| Starter | Een voorgevulde laptop die de gegevensexploratie aantoont met behulp van voorbeeldgegevens. |
+| Detailhandel | Een voorgevuld notitieboekje dat het [ detailhandelrecept ](../pre-built-recipes/retail-sales.md) kenmerkt gebruikend steekproefgegevens. |
+| Recipe Builder | Een laptopsjabloon voor het maken van een recept in [!DNL JupyterLab] . De voorgevulde code en opmerkingen tonen en beschrijven het proces voor het maken van recept. Verwijs naar de [ notitieboekje aan recept zelfstudie ](https://www.adobe.com/go/data-science-create-recipe-notebook-tutorial-en) voor een gedetailleerde analyse. |
 | [!DNL Query Service] | Een voorgevulde laptop die het gebruik van [!DNL Query Service] rechtstreeks in [!DNL JupyterLab] aantoont, beschikt over voorbeeldworkflows waarmee gegevens op schaal worden geanalyseerd. |
 | XDM-gebeurtenissen | Een voorgevulde laptop waarin de gegevensverkenning op postvalue Experience-gebeurtenisgegevens wordt gedemonstreerd, waarbij de nadruk ligt op functies die gemeenschappelijk zijn in de gegevensstructuur. |
 | XDM-query&#39;s | Een voorgevulde laptop met voorbeelden van zakelijke vragen over Experience Event-gegevens. |
@@ -243,13 +243,13 @@ Sommige laptopsjablonen zijn beperkt tot bepaalde kernels. De beschikbaarheid va
         <td >nee</td>
         <td >nee</td>
         <td >nee</td>
-        <td >no</td>
-        <td >no</td>
+        <td >nee</td>
+        <td >nee</td>
         <td >ja</td>
     </tr>
 </table>
 
-Om een nieuwe *Lanceerprogramma* te openen, klik **Dossier > Nieuwe Lanceerinrichting**. Alternatief, breid browser van het **Dossier** van linkerzijbalk uit en klik het plus symbool (**+**):
+Om een nieuwe *Lanceerinrichting* te openen, klik **Dossier > Nieuwe Lanceerinrichting**. Alternatief, breid browser van het **Dossier** van linkerzijbalk uit en klik het plus symbool (**+**):
 
 ![](../images/jupyterlab/user-guide/new_launcher.gif)
 

@@ -1,11 +1,11 @@
 ---
-keywords: Experience Platform;thuis;populaire onderwerpen;de dienst van de vraag;de vraagdienst;verbind;verbindt met de vraagdienst;SSL;ssl;sslmode;
+keywords: Experience Platform;home;populaire onderwerpen;Query-service;queryservice;connect;connect met queryservice;SSL;ssl;sslmode;
 title: SSL-opties voor Query Service
 description: Leer meer over SSL-ondersteuning voor verbindingen van derden met Adobe Experience Platform Query Service en hoe u verbinding maakt via de SSL-modus Volledig controleren.
 exl-id: 41b0a71f-165e-49a2-8a7d-d809f5f683ae
-source-git-commit: 37c30fc1a040efbce0c221c10b36e105d5b1a962
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1008'
+source-wordcount: '1011'
 ht-degree: 0%
 
 ---
@@ -16,11 +16,11 @@ Voor meer beveiliging biedt Adobe Experience Platform [!DNL Query Service] nativ
 
 ## Vereisten
 
-In dit document wordt ervan uitgegaan dat u al een clienttoepassing van een andere fabrikant hebt gedownload voor gebruik met uw platformgegevens. Specifieke instructies over hoe te om SSL veiligheid op te nemen wanneer het verbinden met een derdecliënt worden gevonden in hun respectieve documentatie van de verbindingsgids. Voor een lijst van alle [!DNL Query Service] gesteunde cliënten, zie het [ overzicht van cliëntverbindingen ](./overview.md).
+In dit document wordt ervan uitgegaan dat u al een clienttoepassing van een andere fabrikant hebt gedownload voor gebruik met uw Experience Platform-gegevens. Specifieke instructies over hoe te om SSL veiligheid op te nemen wanneer het verbinden met een derdecliënt worden gevonden in hun respectieve documentatie van de verbindingsgids. Voor een lijst van alle [!DNL Query Service] gesteunde cliënten, zie het [ overzicht van cliëntverbindingen ](./overview.md).
 
 ## Beschikbare SSL-opties {#available-ssl-options}
 
-Platform ondersteunt verschillende SSL-opties die aansluiten bij uw behoeften op het gebied van gegevensbeveiliging en die een evenwicht vormen tussen de verwerkingsoverhead van codering en sleuteluitwisseling.
+Experience Platform biedt ondersteuning voor verschillende SSL-opties die zijn afgestemd op uw behoeften op het gebied van gegevensbeveiliging en die de verwerkingsoverhead van codering en sleuteluitwisseling op elkaar afstemmen.
 
 De verschillende `sslmode` -parameterwaarden bieden verschillende beveiligingsniveaus. Door uw gegevens in beweging met SSL certificaten te coderen, helpt het &quot;man-in-the-middle&quot; (MITM) aanvallen, afluisteren, en imitatie te voorkomen. De onderstaande tabel bevat een uitsplitsing van de verschillende beschikbare SSL-modi en het beschermingsniveau dat zij bieden.
 
@@ -40,13 +40,13 @@ De verschillende `sslmode` -parameterwaarden bieden verschillende beveiligingsni
 >
 >Het verschil tussen `verify-ca` en `verify-full` is afhankelijk van het beleid van de basiscertificeringsinstantie (CA). Als u uw eigen lokale CA hebt gemaakt om persoonlijke certificaten voor uw toepassingen uit te geven, biedt het gebruik van `verify-ca` vaak voldoende beveiliging. Als u een openbare CA gebruikt, staat `verify-ca` verbindingen toe met een server die iemand anders mogelijk bij de CA heeft geregistreerd. `verify-full` moet altijd worden gebruikt met een openbare basis-CA.
 
-Wanneer u een verbinding van derden tot stand brengt met een Platform-database, wordt u aangeraden `sslmode=require` minimaal te gebruiken om een veilige verbinding tot stand te brengen voor uw gegevens in beweging. De SSL-modus van `verify-full` wordt aanbevolen voor gebruik in de meeste beveiligingsgevoelige omgevingen.
+Wanneer u een verbinding van derden tot stand brengt met een Experience Platform-database, wordt u aangeraden `sslmode=require` minimaal te gebruiken om een veilige verbinding tot stand te brengen voor uw gegevens in beweging. De SSL-modus van `verify-full` wordt aanbevolen voor gebruik in de meeste beveiligingsgevoelige omgevingen.
 
 ## Een basiscertificaat instellen voor serververificatie {#root-certificate}
 
 >[!IMPORTANT]
 >
->De TLS/SSL-certificaten op productieomgevingen voor de API voor interactieve posters van Query Service zijn op woensdag 24 januari 2024 vernieuwd.<br> Hoewel dit een jaarlijks vereiste is, is het wortelcertificaat in de ketting ook veranderd aangezien de het certificaatleverancier van TLS/SSL van Adobe hun certificaathiërarchie heeft bijgewerkt. Dit kan gevolgen hebben voor bepaalde klanten van Postgres als hun lijst van de Autoriteiten van het Certificaat de wortelcert mist. Een PSQL CLI-client moet bijvoorbeeld de basiscertificaten toevoegen aan een expliciet bestand `~/postgresql/root.crt` , anders kan dit resulteren in een fout. Bijvoorbeeld `psql: error: SSL error: certificate verify failed` . Zie de [ officiële documentatie PostgreSQL ](https://www.postgresql.org/docs/current/libpq-ssl.html#LIBQ-SSL-CERTIFICATES) voor meer informatie over deze kwestie.<br> het wortelcertificaat om toe te voegen kan van [ https://cacerts.digicert.com/DigiCertGlobalRootG2.crt.pem ](https://cacerts.digicert.com/DigiCertGlobalRootG2.crt.pem) worden gedownload.
+>De TLS/SSL-certificaten op productieomgevingen voor de API voor interactieve posters van Query Service zijn op woensdag 24 januari 2024 vernieuwd.<br> Hoewel dit een jaarlijks vereiste is, is het wortelcertificaat in de ketting ook veranderd aangezien de Adobe TLS/SSL certificaatleverancier hun certificaathiërarchie heeft bijgewerkt. Dit kan gevolgen hebben voor bepaalde klanten van Postgres als hun lijst van de Autoriteiten van het Certificaat de wortelcert mist. Een PSQL CLI-client moet bijvoorbeeld de basiscertificaten toevoegen aan een expliciet bestand `~/postgresql/root.crt` , anders kan dit resulteren in een fout. Bijvoorbeeld `psql: error: SSL error: certificate verify failed` . Zie de [ officiële documentatie PostgreSQL ](https://www.postgresql.org/docs/current/libpq-ssl.html#LIBQ-SSL-CERTIFICATES) voor meer informatie over deze kwestie.<br> het wortelcertificaat om toe te voegen kan van [ https://cacerts.digicert.com/DigiCertGlobalRootG2.crt.pem ](https://cacerts.digicert.com/DigiCertGlobalRootG2.crt.pem) worden gedownload.
 
 Om een veilige verbinding te verzekeren, moet SSL gebruik op zowel de cliënt als de server worden gevormd alvorens de verbinding wordt gemaakt. Als SSL slechts op de server wordt gevormd, zou de cliënt gevoelige informatie zoals wachtwoorden kunnen verzenden alvorens het wordt gevestigd dat de server hoge veiligheid vereist.
 

@@ -1,11 +1,11 @@
 ---
-keywords: Experience Platform;voorvoegsel van gegevens;voorinstelling van gegevens, api;problemen oplossen;API
+keywords: Experience Platform;data prep;data prep api;problemen oplossen;API
 title: Aan de slag met Data Prep API
 description: Leer de belangrijkste concepten en basisfunctionaliteit die u moet kennen om de eindpunten van de API van Prep van Gegevens te gebruiken om basisbewerkingen van CRUD voor gebruik met Mapper uit te voeren.
 exl-id: 027e6fbe-9a0d-420b-8d67-659ca7f5ec22
-source-git-commit: d39ae3a31405b907f330f5d54c91b95c0f999eee
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '186'
+source-wordcount: '187'
 ht-degree: 0%
 
 ---
@@ -20,7 +20,7 @@ Voor het gebruik van de handleiding voor ontwikkelaars is een goed begrip vereis
 - [[!DNL Adobe Experience Platform Data Ingestion]](../../ingestion/home.md): de methoden waarmee gegevens naar [!DNL Experience Platform] kunnen worden verzonden.
 - [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md): Het gestandaardiseerde framework waarmee [!DNL Experience Platform] gegevens voor de klantervaring indeelt.
 
-Om vraag aan [!DNL Data Prep] API eindpunten met succes te maken, te lezen gelieve de gids op [ begonnen wordt met Platform APIs ](../../landing/api-guide.md) om over vereiste kopballen te leren en hoe te om steekproefAPI vraag te lezen.
+Om vraag aan [!DNL Data Prep] API eindpunten met succes te maken, te lezen gelieve de gids op [ begonnen wordt met Experience Platform APIs ](../../landing/api-guide.md) om over vereiste kopballen te leren en hoe te om steekproefAPI vraag te lezen.
 
 ## Volgende stappen
 

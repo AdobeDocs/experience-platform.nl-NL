@@ -2,12 +2,12 @@
 keywords: Experience Platform;home;populaire onderwerpen;Beleidshandhaving;API-gebaseerde handhaving;gegevensbeheer
 solution: Experience Platform
 title: API-eindpunt voor beleidsregels voor gegevensbeheer
-description: Beleid voor gegevensbeheer is regels die door uw organisatie worden toegepast en die een beschrijving geven van de soorten marketingacties die u mag uitvoeren op gegevens binnen het Experience Platform of waarvan u een beperking hebt ingesteld. Het /policies eindpunt wordt gebruikt voor alle API vraag met betrekking tot het bekijken van, het creëren van, het bijwerken van, of het schrappen van het beleid van het gegevensbeheer.
+description: Beleid voor gegevensbeheer is regels die uw organisatie toepast en die het soort marketingacties beschrijven dat u mag uitvoeren op gegevens in Experience Platform of waarvan u een beperking hebt ingesteld. Het /policies eindpunt wordt gebruikt voor alle API vraag met betrekking tot het bekijken van, het creëren van, het bijwerken van, of het schrappen van het beleid van het gegevensbeheer.
 role: Developer
 exl-id: 62a6f15b-4c12-4269-bf90-aaa04c147053
-source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1863'
+source-wordcount: '1864'
 ht-degree: 0%
 
 ---
@@ -18,7 +18,7 @@ Beleid voor gegevensbeheer is regels die het soort marketingacties beschrijven d
 
 >[!IMPORTANT]
 >
->Het beleid van het bestuur moet niet met toegangsbeheerbeleid worden verward, dat de specifieke gegevensattributen bepaalt die door bepaalde gebruikers van het Platform in uw organisatie kunnen worden betreden. Verwijs naar de `/policies` eindpuntgids voor [ Controle API van de Toegang ](../../access-control/abac/api/policies.md) voor details op hoe te om toegangsbeheerbeleid programmatically te beheren.
+>Het beleid van het bestuur moet niet met toegangsbeheerbeleid worden verward, dat de specifieke gegevensattributen bepaalt die door bepaalde gebruikers van Experience Platform in uw organisatie kunnen worden betreden. Verwijs naar de `/policies` eindpuntgids voor [ Controle API van de Toegang ](../../access-control/abac/api/policies.md) voor details op hoe te om toegangsbeheerbeleid programmatically te beheren.
 
 ## Aan de slag
 
@@ -26,7 +26,7 @@ Het API eindpunt dat in deze gids wordt gebruikt maakt deel uit van [[!DNL Polic
 
 ## Een lijst met beleidsregels ophalen {#list}
 
-U kunt alle `core` - of `custom` -beleidsregels weergeven door een GET-aanvraag in te dienen bij `/policies/core` respectievelijk `/policies/custom` .
+U kunt alle `core` - of `custom` -beleidsregels weergeven door een GET-aanvraag in te dienen bij respectievelijk `/policies/core` of `/policies/custom` .
 
 **API formaat**
 
@@ -274,7 +274,7 @@ Als u bijvoorbeeld een beleid wilt definiëren dat het uitvoeren van een marketi
 | `operands` | Een array van objecten, waarbij elk object één label of een extra paar `operator` - en `operands` -eigenschappen vertegenwoordigt. De aanwezigheid van de labels en/of bewerkingen in een `operands` -array wordt op basis van de waarde van de eigenschap `operator` sibling omgezet in true of false. |
 | `label` | De naam van één gegevensgebruikslabel dat op het beleid van toepassing is. |
 
-U kunt een nieuw douanebeleid tot stand brengen door een verzoek van de POST aan het `/policies/custom` eindpunt te doen.
+U kunt een nieuw douanebeleid tot stand brengen door een POST- verzoek aan het `/policies/custom` eindpunt te doen.
 
 **API formaat**
 
@@ -378,7 +378,7 @@ Een geslaagde reactie retourneert de details van het nieuwe beleid, inclusief de
 >
 >U kunt alleen aangepast beleid bijwerken. Als u wenst om kernbeleid toe te laten of onbruikbaar te maken, zie de sectie bij [ het bijwerken van de lijst van toegelaten kernbeleid ](#update-enabled-core).
 
-U kunt een bestaand douanebeleid bijwerken door zijn identiteitskaart in de weg van een verzoek van de PUT met een nuttige lading te verstrekken die de bijgewerkte vorm van het beleid in zijn geheel omvat. Met andere woorden, het verzoek van de PUT herschrijft in wezen het beleid.
+U kunt een bestaand douanebeleid bijwerken door zijn identiteitskaart in de weg van een verzoek van PUT met een lading te verstrekken die de bijgewerkte vorm van het beleid in zijn geheel omvat. Met andere woorden, het PUT-verzoek herschrijft in wezen het beleid.
 
 >[!NOTE]
 >
@@ -478,11 +478,11 @@ Een succesvolle reactie keert de details van het bijgewerkte beleid terug.
 >
 >U kunt alleen aangepast beleid bijwerken. Als u wenst om kernbeleid toe te laten of onbruikbaar te maken, zie de sectie bij [ het bijwerken van de lijst van toegelaten kernbeleid ](#update-enabled-core).
 
-Een specifiek gedeelte van een beleid kan worden bijgewerkt gebruikend een verzoek van de PATCH. In tegenstelling tot de verzoeken van de PUT die het beleid herschrijven, werken de verzoeken van PATCH slechts de eigenschappen bij die in het verzoeklichaam worden gespecificeerd. Dit is vooral nuttig wanneer u een beleid wilt toelaten of onbruikbaar maken, aangezien u slechts de weg aan het aangewezen bezit (`/status`) en zijn waarde (`ENABLED` of `DISABLED`) moet verstrekken.
+Een specifiek gedeelte van een beleid kan worden bijgewerkt met behulp van een PATCH-aanvraag. In tegenstelling tot PUT-verzoeken om het beleid te herschrijven, werkt PATCH alleen de eigenschappen bij die in de aanvraaginstantie zijn opgegeven. Dit is vooral nuttig wanneer u een beleid wilt toelaten of onbruikbaar maken, aangezien u slechts de weg aan het aangewezen bezit (`/status`) en zijn waarde (`ENABLED` of `DISABLED`) moet verstrekken.
 
 >[!NOTE]
 >
->Voor PATCH-aanvragen worden de JSON Patch-opmaak gebruikt. Zie de [ API grondbeginselen gids ](../../landing/api-fundamentals.md) voor meer informatie over de toegelaten syntaxis.
+>Betalingen voor PATCH-aanvragen volgen de opmaak van JSON Patch. Zie de [ API grondbeginselen gids ](../../landing/api-fundamentals.md) voor meer informatie over de toegelaten syntaxis.
 
 De API van [!DNL Policy Service] ondersteunt de JSON-patchbewerkingen `add` , `remove` en `replace` en stelt u in staat meerdere updates samen te voegen tot één aanroep, zoals in het onderstaande voorbeeld wordt getoond.
 
@@ -502,7 +502,7 @@ In de volgende aanvraag worden twee `replace` -bewerkingen gebruikt om de beleid
 
 >[!IMPORTANT]
 >
->Wanneer het verzenden van veelvoudige PATCH verrichtingen in één enkel verzoek, zullen zij in de orde worden verwerkt waarin zij in de serie verschijnen. Zorg ervoor dat u de aanvragen zo nodig in de juiste volgorde verzendt.
+>Wanneer meerdere PATCH-bewerkingen in één aanvraag worden verzonden, worden deze verwerkt in de volgorde waarin ze in de array voorkomen. Zorg ervoor dat u de aanvragen zo nodig in de juiste volgorde verzendt.
 
 ```SHELL
 curl -X PATCH \
@@ -607,11 +607,11 @@ curl -X DELETE \
 
 Een geslaagde reactie retourneert HTTP-status 200 (OK) met een lege hoofdtekst.
 
-U kunt de verwijdering bevestigen door te proberen het beleid opnieuw op te zoeken (GET). Er wordt een HTTP 404-fout (Niet gevonden) weergegeven als het beleid is verwijderd.
+U kunt de verwijdering bevestigen door het beleid opnieuw op te zoeken (GET). Er wordt een HTTP 404-fout (Niet gevonden) weergegeven als het beleid is verwijderd.
 
 ## Een lijst met ingeschakelde kernbeleidsregels ophalen {#list-enabled-core}
 
-Standaard wordt alleen een beleid voor gegevensbeheer aan de evaluatie toegevoegd. U kunt een lijst van kernbeleid terugwinnen dat momenteel door uw organisatie door een verzoek van de GET aan het `/enabledCorePolicies` eindpunt wordt toegelaten.
+Standaard wordt alleen een beleid voor gegevensbeheer aan de evaluatie toegevoegd. U kunt een lijst van kernbeleid terugwinnen dat momenteel door uw organisatie door een GET verzoek aan het `/enabledCorePolicies` eindpunt wordt toegelaten.
 
 **API formaat**
 
@@ -663,7 +663,7 @@ Een geslaagde reactie retourneert de lijst met ingeschakelde kernbeleidsregels o
 
 ## De lijst met ingeschakelde kernbeleidsregels bijwerken {#update-enabled-core}
 
-Standaard wordt alleen een beleid voor gegevensbeheer aan de evaluatie toegevoegd. Door een verzoek van de PUT aan het `/enabledCorePolicies` eindpunt te doen, kunt u de lijst van toegelaten kernbeleid voor uw organisatie bijwerken gebruikend één enkele vraag.
+Standaard wordt alleen een beleid voor gegevensbeheer aan de evaluatie toegevoegd. Door een PUT-aanvraag naar het `/enabledCorePolicies` -eindpunt in te dienen, kunt u de lijst met ingeschakeld kernbeleid voor uw organisatie bijwerken met behulp van één aanroep.
 
 >[!NOTE]
 >

@@ -1,12 +1,12 @@
 ---
-keywords: Experience Platform;thuis;populaire onderwerpen; alarm;bestemmingen
+keywords: Experience Platform;home;populaire onderwerpen; waarschuwingen;doelen
 description: U kunt op alarm intekenen wanneer het creëren van een gegevensstroom, om waakzame berichten betreffende de status, het succes, of het mislukken van uw stroom te ontvangen in werking stellen.
 title: Abonneren op in-context-bestemmingswaarschuwingen
 exl-id: 134144a0-cdfe-49a8-bd8b-e36a4f053de5
-source-git-commit: 165793619437f403045b9301ca6fa5389d55db31
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '930'
-ht-degree: 0%
+source-wordcount: '935'
+ht-degree: 3%
 
 ---
 
@@ -22,9 +22,9 @@ In dit document worden de stappen beschreven voor de manier waarop u zich abonne
 
 Voor dit document is een goed begrip van de volgende Adobe Experience Platform-componenten vereist:
 
-* [ Doelen ](../home.md): Vooraf gebouwde integratie met bestemmingsplatforms die voor de naadloze activering van gegevens van Adobe Experience Platform toestaan. U kunt bestemmingen gebruiken om uw bekende en onbekende gegevens voor kanaalmarketing campagnes, e-mailcampagnes, gerichte reclame, en vele andere gebruiksgevallen te activeren.
-* [ Observability ](../../observability/home.md): [!DNL Observability Insights] staat u toe om de activiteiten van het Platform door het gebruik van statistische metriek en gebeurtenisberichten te controleren.
-   * [ Alarm ](../../observability/alerts/overview.md): Wanneer een bepaalde reeks voorwaarden in uw verrichtingen van het Platform wordt bereikt (zoals een potentieel probleem wanneer het systeem een drempel) schendt, kan het Platform waakzame berichten aan om het even welke gebruikers in uw organisatie leveren die aan hen hebben ingetekend.
+* [ Doelen ](../home.md): Vooraf gebouwde integratie met bestemmingsplatforms die voor de naadloze activering van gegevens van Adobe Experience Platform toestaan. U kunt bestemmingen gebruiken om uw bekende en onbekende gegevens te activeren voor cross-channel marketingcampagnes, e-mailcampagnes, gerichte advertenties en vele andere gebruiksscenario&#39;s.
+* [ Observability ](../../observability/home.md): [!DNL Observability Insights] staat u toe om de activiteiten van Experience Platform door het gebruik van statistische metriek en gebeurtenisberichten te controleren.
+   * [ Alarm ](../../observability/alerts/overview.md): Wanneer een bepaalde reeks voorwaarden in uw verrichtingen van Experience Platform wordt bereikt (zoals een potentieel probleem wanneer het systeem een drempel) schendt, kan Experience Platform waakzame berichten aan om het even welke gebruikers in uw organisatie leveren die aan hen zijn ingetekend.
 
 ## Abonneren op waarschuwingen in de gebruikersinterface {#subscribe-destination-alerts}
 
@@ -36,7 +36,7 @@ Voor dit document is een goed begrip van de volgende Adobe Experience Platform-c
 
 >[!IMPORTANT]
 >
->U moet directe meldingen van e-mails voor uw Platform-account inschakelen om e-mailmeldingen voor uw gegevensstromen te ontvangen.
+>U moet directe meldingen van e-mails voor uw Experience Platform-account inschakelen om e-mailmeldingen voor uw gegevensstromen te ontvangen.
 
 U kunt alarm voor uw gegevensstromen tijdens de [!UICONTROL Configure new destination] stap van het [ werkschema van de bestemmingsverbinding ](connect-destination.md) toelaten.
 
@@ -51,7 +51,7 @@ De waarschuwingen die beschikbaar zijn voor bestemmingsgegevensstromen worden be
 
 | Waarschuwingen | Beschrijving |
 | --- | --- |
-| Uitvoervertraging bestemming | Deze waarschuwing geeft een melding wanneer een doelstroom langer dan 150 minuten duurt om een publiek te activeren. |
+| Vertraging bij uitvoering bestemmingsworkflow | Deze waarschuwing geeft een melding wanneer een doelstroom langer dan 150 minuten duurt om een publiek te activeren. |
 | Uitvoerfout bestemming | Deze waarschuwing brengt u op de hoogte wanneer een fout voorkomt terwijl het activeren van een publiek aan een bestemming. |
 | Uitvoersucces bestemming | Deze waarschuwing brengt u op de hoogte wanneer een publiek met succes aan een bestemming wordt geactiveerd. |
 | Start stroom bestemming | Deze waarschuwing brengt u op de hoogte wanneer een looppas van de bestemmingsstroom begint een publiek te activeren. |
@@ -63,9 +63,9 @@ Zodra uw doelgegevensstroom loopt, kunt u alarm door UI of door e-mail ontvangen
 
 ### Waarschuwingen ontvangen in de gebruikersinterface {#receiving-alerts-in-ui}
 
-Alarm wordt vertegenwoordigd in UI door een berichtpictogram in de hoogste kopbal van het Platform UI. Selecteer het berichtpictogram om specifieke waakzame berichten betreffende uw gegevens te zien.
+Waarschuwingen worden in de gebruikersinterface vertegenwoordigd door een berichtpictogram in de bovenste koptekst van de gebruikersinterface van Experience Platform. Selecteer het berichtpictogram om specifieke waakzame berichten betreffende uw gegevens te zien.
 
-![ beeld UI die het berichtpictogram in Experience Platform tonen ](../assets/ui/alerts/notification.png)
+![ beeld UI die het berichtpictogram in Experience Platform toont ](../assets/ui/alerts/notification.png)
 
 Het deelvenster met meldingen wordt weergegeven met een lijst met statusupdates in de gegevensstroom die u hebt gemaakt.
 

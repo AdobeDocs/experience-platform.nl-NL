@@ -3,9 +3,9 @@ title: Pega Profile Connector
 description: Gebruik de Pega Profile Connector voor Amazon S3 in Adobe Experience Platform om profielgegevens volledig of incrementeel of beide te exporteren naar de Amazon S3-cloudopslag. In de Hub van het Beslissingsbesluit van de Klant van Pega, kunnen de gegevensbanen in het Profiel van de Klant Designer worden gepland om profielgegevens periodiek van de opslag van Amazon S3 te invoeren.
 last-substantial-update: 2023-01-25T00:00:00Z
 exl-id: f422f21b-174a-4b93-b05d-084b42623314
-source-git-commit: ba39f62cd77acedb7bfc0081dbb5f59906c9b287
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1084'
+source-wordcount: '1085'
 ht-degree: 0%
 
 ---
@@ -39,8 +39,8 @@ Een marketeter wil actuele profielgegevens van Adobe Experience Platform beschik
 Voordat u deze bestemming kunt gebruiken voor het exporteren van gegevens uit Adobe Experience Platform en het importeren van profielen naar [!DNL Pega Customer Decision Hub] , moet u aan de volgende voorwaarden voldoen:
 
 * Configureer [!DNL Amazon S3] bucket en het mappad dat moet worden gebruikt voor het exporteren en importeren van gegevensbestanden.
-* Configureer de toegangssleutel [!DNL Amazon S3] en de sleutel [!DNL Amazon S3] geheime sleutel: in [!DNL Amazon S3] genereert u een `access key - secret access key` -paar om Platform toegang te verlenen tot uw [!DNL Amazon S3] -account.
-* Als u gegevens wilt verbinden en exporteren naar uw [!DNL Amazon S3] -opslaglocatie, maakt u een gebruiker voor Identiteit en Toegangsbeheer (IAM) voor [!DNL Platform] in [!DNL Amazon S3] en wijst u machtigingen toe zoals `s3:DeleteObject` , `s3:GetBucketLocation` , `s3:GetObject` , `s3:ListBucket` , `s3:PutObject` , `s3:ListMultipartUploadParts`
+* Configureer de sleutel [!DNL Amazon S3] access en [!DNL Amazon S3] geheime key: In [!DNL Amazon S3] genereert u een `access key - secret access key` -paar om Experience Platform toegang te verlenen tot uw [!DNL Amazon S3] -account.
+* Als u gegevens wilt verbinden en exporteren naar uw [!DNL Amazon S3] -opslaglocatie, maakt u een gebruiker voor Identiteit en Toegangsbeheer (IAM) voor [!DNL Experience Platform] in [!DNL Amazon S3] en wijst u machtigingen toe zoals `s3:DeleteObject` , `s3:GetBucketLocation` , `s3:GetObject` , `s3:ListBucket` , `s3:PutObject` , `s3:ListMultipartUploadParts`
 * Zorg ervoor dat de [!DNL Pega Customer Decision Hub] -instantie is bijgewerkt naar versie 8.8 of hoger.
 
 ## Ondersteunde identiteiten {#supported-identities}
@@ -117,10 +117,10 @@ In de stap **[!UICONTROL Mapping]** kunt u selecteren welke kenmerk- en identite
 
 ## Gegevens exporteren valideren {#exported-data}
 
-Voor [!DNL Pega Profile Connector] -doelen maakt [!DNL Platform] een `.csv` -bestand in de opslaglocatie van Amazon S3 die u hebt opgegeven. Voor meer informatie over de dossiers, zie [ publieksgegevens aan de uitvoerbestemmingen van het partijprofiel ](../../ui/activate-batch-profile-destinations.md) in het leerprogramma van de publiekactivering activeren.
+Voor [!DNL Pega Profile Connector] -doelen maakt [!DNL Experience Platform] een `.csv` -bestand in de opslaglocatie van Amazon S3 die u hebt opgegeven. Voor meer informatie over de dossiers, zie [ publieksgegevens aan de uitvoerbestemmingen van het partijprofiel ](../../ui/activate-batch-profile-destinations.md) in het leerprogramma van de publiekactivering activeren.
 
 Wanneer het importeren van profielgegevens uit S3 is gelukt, worden gegevens in de [!DNL Pega Customer] -profieldatastore ingevoegd. De geïmporteerde klantprofielgegevens kunnen worden gevalideerd in [!DNL Pega Customer Profile Designer] , zoals in de volgende afbeelding wordt getoond.
-![ Beeld van het scherm UI waar u het profielgegevens van de Adobe in Designer van het Profiel van de Klant kunt bevestigen ](../../assets/catalog/personalization/pega-profile/pega-profile-data.png)
+![ Beeld van het scherm UI waar u het profielgegevens van Adobe in Designer van het Profiel van de Klant kunt bevestigen ](../../assets/catalog/personalization/pega-profile/pega-profile-data.png)
 
 In [!DNL Pega Customer Decision Hub] kunnen gegevensbeheerders gegevenstaken configureren in [!DNL Customer Profile Designer] om profielgegevens periodiek te importeren vanuit S3, zoals in de volgende afbeelding wordt getoond. Zie de [ extra middelen ](#additional-resources) voor meer informatie over hoe te om gegevenstaken te vormen om profielgegevens van [!DNL Amazon S3] in te voeren.
 ![ Beeld van het scherm UI om gegevenstaken in Designer van het Profiel van de Klant te vormen ](../../assets/catalog/personalization/pega-profile/pega-profile-screen-image1.png)

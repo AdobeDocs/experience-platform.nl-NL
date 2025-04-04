@@ -3,9 +3,9 @@ keywords: Experience Platform;profiel;real-time klantprofiel;problemen;API;toest
 title: Gegevenstype Inhoud en Voorkeuren
 description: Het gegevenstype Consent for Privacy, Personalization en Marketing Preferences is bedoeld ter ondersteuning van de verzameling van klantmachtigingen en -voorkeuren die worden gegenereerd door CMP's (Consent Management Platforms) en andere bronnen van uw gegevensbewerkingen.
 exl-id: cdcc7b04-eeb9-40d3-b0b5-f736a5472621
-source-git-commit: 7a2b6c1033ad9e78b049857b9b4e6fc3708ed36c
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '2289'
+source-wordcount: '2291'
 ht-degree: 0%
 
 ---
@@ -38,13 +38,13 @@ Een voorkeur is een optie die de klant toestaat om te specificeren hoe de versch
 * **voorkeur van Personalization**: Voorkeur betreffende hoe het merk ervaringen zou moeten personaliseren die aan een klant worden geleverd.
 * **de voorkeur van de Marketing**: Voorkeur betreffende of een merk een klant door diverse kanalen mag contacteren.
 
-De volgende schermafbeelding laat zien hoe de structuur van het gegevenstype wordt weergegeven in de interface van het platform:
+In de volgende schermafbeelding ziet u hoe de structuur van het gegevenstype wordt weergegeven in de gebruikersinterface van Experience Platform:
 
 ![](../images/data-types/consents.png)
 
 >[!TIP]
 >
->Zie de gids op [ het onderzoeken van middelen XDM ](../ui/explore.md) aan voor stappen op hoe te om het even welk middel XDM op te zoeken en zijn structuur in Platform UI te inspecteren.
+>Zie de gids op [ het onderzoeken van middelen XDM ](../ui/explore.md) aan voor stappen op hoe te om het even welk middel XDM op te zoeken en zijn structuur in Experience Platform UI te inspecteren.
 
 In het volgende voorbeeld van JSON ziet u het type gegevens dat het gegevenstype [!UICONTROL Consents and Preferences] kan verwerken. In de volgende secties wordt informatie gegeven over het specifieke gebruik van elk van deze velden.
 
@@ -86,7 +86,7 @@ In het volgende voorbeeld van JSON ziet u het type gegevens dat het gegevenstype
 
 >[!TIP]
 >
->U kunt steekproefJSON gegevens voor om het even welk XDM schema produceren dat u in Experience Platform bepaalt helpen visualiseren hoe uw klantentoestemming en voorkeursgegevens zouden moeten in kaart worden gebracht. Raadpleeg de volgende documentatie voor meer informatie:
+>U kunt voorbeeld-JSON-gegevens genereren voor elk XDM-schema dat u in Experience Platform definieert om te helpen visualiseren hoe de toestemming en voorkeursgegevens van uw klant moeten worden toegewezen. Raadpleeg de volgende documentatie voor meer informatie:
 >
 >* [ produceer steekproefgegevens in UI ](../ui/sample.md)
 >* [ produceer steekproefgegevens in API ](../api/sample-data.md)
@@ -267,7 +267,7 @@ Zie het leerprogramma op [ creërend een schema in UI ](https://www.adobe.com/go
 
 ## Verwerking van toestemmings- en preferenties
 
-Wanneer een klant hun toestemmingen of voorkeur op uw website verandert, zouden deze veranderingen moeten worden verzameld en onmiddellijk worden afgedwongen gebruikend [ Adobe Experience Platform Web SDK ](../../web-sdk/commands/setconsent.md). Als een klant ervoor kiest geen gegevens meer te verzamelen, moet de gegevensverzameling onmiddellijk worden beëindigd. Als een klant ervoor kiest geen personalisatie meer te gebruiken, dan is er geen personalisatie aanwezig op de volgende pagina die zij bezoeken.
+Wanneer een klant hun toestemmingen of voorkeur op uw website verandert, zouden deze veranderingen moeten worden verzameld en onmiddellijk worden afgedwongen gebruikend het [ Web SDK van Adobe Experience Platform ](../../web-sdk/commands/setconsent.md). Als een klant ervoor kiest geen gegevens meer te verzamelen, moet de gegevensverzameling onmiddellijk worden beëindigd. Als een klant ervoor kiest geen personalisatie meer te gebruiken, dan is er geen personalisatie aanwezig op de volgende pagina die zij bezoeken.
 
 ## Bijlage {#appendix}
 

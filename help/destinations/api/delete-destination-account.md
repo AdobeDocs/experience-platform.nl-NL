@@ -1,26 +1,26 @@
 ---
-keywords: Experience Platform;home;populaire onderwerpen;flowservice;verwijder doelaccounts;delete;api
+keywords: Experience Platform;home;populaire onderwerpen;flowservice;delete doelaccounts;delete;api
 solution: Experience Platform
 title: Een doelaccount verwijderen met de Flow Service API
 type: Tutorial
 description: Leer hoe u een doelaccount kunt verwijderen met de Flow Service API.
 exl-id: a963073c-ecba-486b-a5c2-b85bdd426e72
-source-git-commit: 47a94b00e141b24203b01dc93834aee13aa6113c
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '761'
-ht-degree: 0%
+source-wordcount: '762'
+ht-degree: 9%
 
 ---
 
 # Een doelaccount verwijderen met de Flow Service API
 
-[!DNL Destinations] zijn vooraf gebouwde integratie met bestemmingsplatforms die voor de naadloze activering van gegevens van Adobe Experience Platform toestaan. U kunt bestemmingen gebruiken om uw bekende en onbekende gegevens voor kanaalmarketing campagnes, e-mailcampagnes, gerichte reclame, en vele andere gebruiksgevallen te activeren.
+[!DNL Destinations] zijn pre-built integraties met bestemmingsplatforms die de naadloze activering van gegevens van Adobe Experience Platform mogelijk maken. U kunt bestemmingen gebruiken om uw bekende en onbekende gegevens te activeren voor cross-channel marketingcampagnes, e-mailcampagnes, gerichte advertenties en vele andere gebruiksscenario&#39;s.
 
 Voordat u gegevens kunt activeren, moet u verbinding maken met de bestemming door eerst een doelaccount in te stellen. Dit leerprogramma behandelt de stappen om bestemmingsrekeningen te schrappen die niet meer nodig zijn door [[!DNL Flow Service]  API ](https://www.adobe.io/experience-platform-apis/references/flow-service/) te gebruiken.
 
 >[!NOTE]
 >
->Het verwijderen van doelaccounts wordt momenteel alleen ondersteund in de Flow Service API. Doelaccounts kunnen niet worden verwijderd met de gebruikersinterface van het Experience Platform.
+>Het verwijderen van doelaccounts wordt momenteel alleen ondersteund in de Flow Service API. Bestemmingsaccounts kunnen niet worden verwijderd met de gebruikersinterface van Experience Platform.
 
 ## Aan de slag {#get-started}
 
@@ -28,8 +28,8 @@ Voor deze zelfstudie moet u een geldige verbinding-id hebben. De verbindings-id 
 
 Voor deze zelfstudie hebt u ook een goed inzicht nodig in de volgende onderdelen van Adobe Experience Platform:
 
-* [ Doelen ](../home.md): [!DNL Destinations] zijn pre-gebouwde integratie met bestemmingsplatforms die voor de naadloze activering van gegevens van Adobe Experience Platform toestaan. U kunt bestemmingen gebruiken om uw bekende en onbekende gegevens voor kanaalmarketing campagnes, e-mailcampagnes, gerichte reclame, en vele andere gebruiksgevallen te activeren.
-* [ Sandboxen ](../../sandboxes/home.md): [!DNL Experience Platform] verstrekt virtuele zandbakken die één enkele [!DNL Platform] instantie in afzonderlijke virtuele milieu&#39;s verdelen helpen digitale ervaringstoepassingen ontwikkelen en ontwikkelen.
+* [ Doelen ](../home.md): [!DNL Destinations] zijn pre-gebouwde integratie met bestemmingsplatforms die voor de naadloze activering van gegevens van Adobe Experience Platform toestaan. U kunt bestemmingen gebruiken om uw bekende en onbekende gegevens te activeren voor cross-channel marketingcampagnes, e-mailcampagnes, gerichte advertenties en vele andere gebruiksscenario&#39;s.
+* [ Sandboxen ](../../sandboxes/home.md): [!DNL Experience Platform] verstrekt virtuele zandbakken die één enkele [!DNL Experience Platform] instantie in afzonderlijke virtuele milieu&#39;s verdelen helpen digitale ervaringstoepassingen ontwikkelen en ontwikkelen.
 
 De volgende secties bevatten aanvullende informatie die u moet weten om een doelaccount met de [!DNL Flow Service] API te kunnen verwijderen.
 
@@ -39,13 +39,13 @@ Deze zelfstudie biedt voorbeeld-API-aanroepen om aan te tonen hoe uw verzoeken m
 
 ### Waarden verzamelen voor vereiste koppen {#gather-values-for-required-headers}
 
-Om vraag aan [!DNL Platform] APIs te maken, moet u het [ authentificatieleerprogramma ](https://www.adobe.com/go/platform-api-authentication-en) eerst voltooien. Als u de zelfstudie over verificatie voltooit, krijgt u de waarden voor elk van de vereiste headers in alle API-aanroepen van [!DNL Experience Platform] , zoals hieronder wordt getoond:
+Om vraag aan [!DNL Experience Platform] APIs te maken, moet u het [ authentificatieleerprogramma ](https://www.adobe.com/go/platform-api-authentication-en) eerst voltooien. Als u de zelfstudie over verificatie voltooit, krijgt u de waarden voor elk van de vereiste headers in alle API-aanroepen van [!DNL Experience Platform] , zoals hieronder wordt getoond:
 
 * `Authorization: Bearer {ACCESS_TOKEN}`
 * `x-api-key: {API_KEY}`
 * `x-gw-ims-org-id: {ORG_ID}`
 
-Alle bronnen in [!DNL Experience Platform], inclusief bronnen die tot [!DNL Flow Service] behoren, zijn geïsoleerd naar specifieke virtuele sandboxen. Alle aanvragen naar [!DNL Platform] API&#39;s vereisen een header die de naam van de sandbox opgeeft waarin de bewerking plaatsvindt:
+Alle bronnen in [!DNL Experience Platform], inclusief bronnen die tot [!DNL Flow Service] behoren, zijn geïsoleerd naar specifieke virtuele sandboxen. Alle aanvragen naar [!DNL Experience Platform] API&#39;s vereisen een header die de naam van de sandbox opgeeft waarin de bewerking plaatsvindt:
 
 * `x-sandbox-name: {SANDBOX_NAME}`
 
@@ -53,7 +53,7 @@ Alle bronnen in [!DNL Experience Platform], inclusief bronnen die tot [!DNL Flow
 >
 >Als de header `x-sandbox-name` niet is opgegeven, worden aanvragen opgelost onder de sandbox `prod` .
 
-Alle verzoeken die een nuttige lading (POST, PUT, PATCH) bevatten vereisen een extra media type kopbal:
+Alle verzoeken die een lading (POST, PUT, PATCH) bevatten vereisen een extra media typekopbal:
 
 * `Content-Type: application/json`
 
@@ -64,7 +64,7 @@ Alle verzoeken die een nuttige lading (POST, PUT, PATCH) bevatten vereisen een e
 
 De eerste stap bij het verwijderen van een doelaccount is om de verbinding-id te achterhalen die overeenkomt met de doelaccount die u wilt verwijderen.
 
-Blader in de gebruikersinterface van het Experience Platform naar **[!UICONTROL Destinations]** > **[!UICONTROL Accounts]** en selecteer de account die u wilt verwijderen door het nummer in de kolom **[!UICONTROL Destinations]** te selecteren.
+Blader in de gebruikersinterface van Experience Platform naar **[!UICONTROL Destinations]** > **[!UICONTROL Accounts]** en selecteer de account die u wilt verwijderen door het nummer in de kolom **[!UICONTROL Destinations]** te selecteren.
 
 ![ Uitgezochte bestemmingsrekening om te schrappen ](/help/destinations/assets/api/delete-destination-account/select-destination-account.png)
 
@@ -148,10 +148,10 @@ A successful response returns the current details of your connection including i
 >
 >Voordat u de doelaccount verwijdert, moet u bestaande gegevensstromen naar de doelaccount verwijderen.
 >Als u bestaande gegevensstromen wilt verwijderen, raadpleegt u de volgende pagina&#39;s:
->* [ gebruik het Experience Platform UI ](../ui/delete-destinations.md) om bestaande dataflows te schrappen;
+>* [ gebruik Experience Platform UI ](../ui/delete-destinations.md) om bestaande dataflows te schrappen;
 >* [ Gebruik de Dienst API van de Stroom ](delete-destination-dataflow.md) om bestaande dataflows te schrappen.
 
-Nadat u een verbinding-id hebt en hebt gecontroleerd dat er geen gegevensstromen naar de doelaccount bestaan, voert u een DELETE-aanvraag uit naar de [!DNL Flow Service] API.
+Zodra u een verbindings-id hebt en ervoor hebt gezorgd dat er geen gegevensstromen naar de doelaccount bestaan, voert u een DELETE-aanvraag uit naar de [!DNL Flow Service] API.
 
 **API formaat**
 
@@ -176,11 +176,11 @@ curl -X DELETE \
 
 **Reactie**
 
-Een geslaagde reactie retourneert HTTP-status 204 (Geen inhoud) en een lege hoofdtekst. U kunt de schrapping bevestigen door een raadpleging (GET) verzoek aan de verbinding te proberen. De API retourneert een HTTP 404 (Not Found)-fout die aangeeft dat de doelaccount is verwijderd.
+Een geslaagde reactie retourneert HTTP-status 204 (Geen inhoud) en een lege hoofdtekst. U kunt de verwijdering bevestigen door een opzoekverzoek (GET) in te dienen bij de verbinding. De API retourneert een HTTP 404 (Not Found)-fout die aangeeft dat de doelaccount is verwijderd.
 
 ## API-foutafhandeling {#api-error-handling}
 
-De API-eindpunten in deze zelfstudie volgen de algemene beginselen van het API-foutbericht voor Experience Platforms. Verwijs naar [ API statuscodes ](../../landing/troubleshooting.md#api-status-codes) en [ de fouten van de verzoekkopbal ](../../landing/troubleshooting.md#request-header-errors) in de het oplossen van problemengids van het Platform.
+De API-eindpunten in deze zelfstudie volgen de algemene beginselen van het Experience Platform API-foutbericht. Verwijs naar [ API statuscodes ](../../landing/troubleshooting.md#api-status-codes) en [ de fouten van de verzoekkopbal ](../../landing/troubleshooting.md#request-header-errors) in de het oplossen van problemengids van Experience Platform.
 
 ## Volgende stappen
 

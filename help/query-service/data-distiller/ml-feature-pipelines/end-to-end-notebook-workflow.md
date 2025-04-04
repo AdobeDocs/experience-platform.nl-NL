@@ -4,9 +4,9 @@ description: Gebruik cloudgebaseerde laptops voor computerleren om een training 
 hide: true
 hidefromtoc: true
 exl-id: 2853e7c7-cab8-4e1b-b73f-622c937fbbaf
-source-git-commit: 308d07cf0c3b4096ca934a9008a13bf425dc30b6
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '620'
+source-wordcount: '632'
 ht-degree: 0%
 
 ---
@@ -22,7 +22,7 @@ Old title:
 
 Met Data Distiller kunt u uw computers verrijken met leerleidingen met hoogwaardige gegevens voor klanten die zijn verzameld en verwerkt in Adobe Experience Platform.
 
-Dit document bevat een reeks cloudgebaseerde laptops voor de computerleeromgeving die een complete workflow demonstreren. In de workflow worden aangepaste gegevensmodellen gemaakt die uw gebruiksscenario&#39;s voor marketingdoeleinden ondersteunen met behulp van Experience Platforms.
+Dit document bevat een reeks cloudgebaseerde laptops voor de computerleeromgeving die een complete workflow demonstreren. In de workflow worden aangepaste gegevensmodellen gemaakt die uw gebruiksscenario&#39;s voor marketingdoeleinden ondersteunen met Experience Platform-gegevens.
 
 Deze workflow vereist het gebruik van [!DNL Python] -laptops in een leeromgeving voor uw computer. Instructies om aan de slag te gaan met deze [!DNL Python] -laptops zijn opgenomen in de respectievelijke Lees mij-bestanden.
 
@@ -32,13 +32,13 @@ Alvorens u met deze gids verdergaat, volg de stappen die in het [ worden geschet
 
 De end-to-end workflow kan in drie brede fasen worden verdeeld op basis van de services die worden gebruikt om de workflow te implementeren.
 
-- De eerste exploratie en voorbereiding van de gegevens van het Platform zijn afhankelijk van de diensten van het Platform.
+- De eerste exploratie en voorbereiding van Experience Platform-gegevens is afhankelijk van Experience Platform-services.
 - Modeltraining en -scoring maken gebruik van gereedschappen in uw op de cloud gebaseerde XML-omgeving. De gemeenschappelijke keuzen voor de platforms van ML omvatten: Databricks ML, AWS Sagemaker, DataRobot, etc.
-- Het aanzetten van scores terug in Platform en om het even welke code-gebaseerde publieksverwezenlijking en activering die op die scores wordt gebaseerd zouden opnieuw op de diensten van het Platform vertrouwen.
+- Als u scores terugbrengt naar Experience Platform en als u code-gebaseerde publiekscreaties en activering op basis van die scores uitvoert, zou u weer vertrouwen op de Experience Platform-services.
 
-Al deze fasen kunnen echter worden uitgevoerd in een of meer laptops uit uw XML-omgeving zonder dat de gebruiker de context moet schakelen tussen Platform en de bijbehorende op de cloud gebaseerde ML-tools.
+Al deze fasen kunnen echter worden uitgevoerd in een of meer laptops uit uw XML-omgeving zonder dat de gebruiker moet schakelen tussen de context van Experience Platform en zijn op de cloud gebaseerde ML-tools.
 
-De typische stappen van deze end-to-end-flow zijn verdeeld in een reeks modulaire laptops die, samen genomen, de stappen aantonen die betrokken zijn bij een typisch machinaal leerproject met behulp van platformgegevens. Hierdoor wordt het gemakkelijker om de laptops te gebruiken als referentie voor het uitvoeren van specifieke activiteiten, en om code van de relevante notebooks te selecteren en aan te passen om een praktijkgeval te implementeren. In de praktijk kan een gegevenswetenschapper één enkel notitieboekje opstellen dat de pijpleiding van begin tot eind voor hun project van XML uitvoert. Alternatief, kan een gegevenswetenschapper eenvoudig de steekproefcode voor het vragen van de gegevens van het Platform en het ter beschikking stellen van het in hun milieu van ML alvorens het project op UI-Gebaseerde eigenschappen in hun platform van ML verder te gaan aanpassen.
+De typische stappen van deze end-to-end-flow zijn verdeeld in een reeks modulaire laptops die samen de stappen aantonen die nodig zijn voor een typisch project voor machinaal leren waarbij Experience Platform-gegevens worden gebruikt. Hierdoor wordt het gemakkelijker om de laptops te gebruiken als referentie voor het uitvoeren van specifieke activiteiten, en om code van de relevante notebooks te selecteren en aan te passen om een praktijkgeval te implementeren. In de praktijk kan een gegevenswetenschapper één enkel notitieboekje opstellen dat de pijpleiding van begin tot eind voor hun project van XML uitvoert. Alternatief, kan een gegevenswetenschapper eenvoudig de steekproefcode voor het vragen van de gegevens van Experience Platform en het ter beschikking stellen van het in hun milieu van XML aanpassen alvorens het project op UI-Gebaseerde eigenschappen in hun platform van XML verder te gebruiken.
 
 De voorbeeldlaptops in de gekoppelde opslagplaats worden hieronder kort beschreven. Gedetailleerde documentatie voor elke laptop is afgestemd op de code in de laptops zelf.
 
@@ -46,11 +46,11 @@ De voorbeeldlaptops in de gekoppelde opslagplaats worden hieronder kort beschrev
 
 ### synthetische gegevens genereren {#generate-synthetic-data}
 
-Deze laptop bevat code voor het genereren van gegevenssets met synthetische profielen en Experience Events in uw platform die worden gebruikt om de CMLE-workflow te illustreren.
+Deze laptop bevat code voor het genereren van gegevenssets met synthetische profielen en Experience Events in uw Experience Platform die worden gebruikt om de CMLE-workflow te illustreren.
 
 ### EDA en kenmerking met de Dienst van de Vraag {#eda-and-featurization-with-query-service}
 
-Deze laptop bevat voorbeelden van verkennende analyse van gegevenssets van het platform met behulp van interactieve query&#39;s via de Platform Query Service. Deze worden gevolgd met voorbeelden van featuriseringsvragen om een opleidingsdataset voor het model van de voorbeeldaandrijving tot stand te brengen.
+Dit notebook bevat voorbeelden van verkennende analyse van Experience Platform-gegevenssets met behulp van interactieve query&#39;s via Experience Platform Query Service. Deze worden gevolgd met voorbeelden van featuriseringsvragen om een opleidingsdataset voor het model van de voorbeeldaandrijving tot stand te brengen.
 
 ### Trainingsgegevens exporteren {#export-training-data}
 
@@ -62,12 +62,12 @@ Deze laptop illustreert het trainen van een model van eigenaardigheid. Het veron
 
 ### Score het aandrijvingsmodel
 
-Deze laptop illustreert het scoren van het getrainde neigheidsmodel om een dataset van nevenscores voor elk profiel van de Klant van het Platform te produceren.
+Dit notebook illustreert het scoren van het getrainde neigheidsmodel om een dataset van nevenscores voor elk Experience Platform-klantprofiel te produceren.
 
-### Muziek opnemen in AEP
+### Scores toevoegen aan AEP
 
 Dit korte notitieboekje illustreert het opnemen van de dataset van eigenschapscores om de klantenprofielen in AEP te verrijken.
 
 ### Soorten publiek maken en activeren op basis van code
 
-In deze laptop wordt geïllustreerd hoe de gebruiker een publiek kan maken op basis van de scores en dat publiek kan activeren via Platform-apps op basis van de notebookcode.
+In dit notebook ziet u hoe de gebruiker een publiek kan maken op basis van de scores en dat publiek kan activeren via Experience Platform-apps op basis van de notebookcode.

@@ -1,12 +1,12 @@
 ---
-keywords: Experience Platform;huis;populaire onderwerpen;vraagdienst;de dienst van de Vraag;vraag;vraagredacteur;de redacteur van de vraag;de redacteur van de Vraag;
+keywords: Experience Platform;home;populaire onderwerpen;queryservice;Query-service;query-editor;Query-editor;Query-editor; Query-editor;
 solution: Experience Platform
 title: UI-gids voor zoekservice
 description: Adobe Experience Platform Query Service biedt een gebruikersinterface die kan worden gebruikt om query's te schrijven en uit te voeren, eerder uitgevoerde query's weer te geven en query's te openen die zijn opgeslagen door gebruikers binnen uw organisatie.
 exl-id: 99ad25e4-0ca4-4bd1-b701-ab463197930b
-source-git-commit: a4fc19599ea6639ee5762ee1542cb08b9ed3b6a8
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '2149'
+source-wordcount: '2150'
 ht-degree: 0%
 
 ---
@@ -37,7 +37,7 @@ De sectie [!UICONTROL Data Distiller capabilities] bevat documentatiekoppelingen
 
 - **[[!UICONTROL Data exploration]](../use-cases/data-exploration.md)**: Leer hoe u in batch ingesloten gegevens kunt verkennen, oplossen en verifiëren met SQL.
 - **[[!UICONTROL Derived datasets for Experience Platform applications]](../data-distiller/derived-datasets/overview.md)**: Leer hoe u afgeleide gegevenssets maakt ter ondersteuning van complexe en diverse gebruiksgevallen die uw gegevenshulpprogramma maximaliseren.
-- **[[!UICONTROL AI/ML pipelines]](../data-distiller/ml-feature-pipelines/overview.md)**: Leer belangrijke concepten achter de leergereedschappen van uw voorkeurssysteem en hoe u aangepaste modellen maakt die uw gebruiksscenario&#39;s voor marketingdoeleinden ondersteunen. Deze reeks gidsen beschrijft de noodzakelijke stappen om eigenschappijpleidingen te bouwen die gegevens van Experience Platform voorbereiden om douanemodellen in uw machine het leren milieu te voeren.
+- **[[!UICONTROL AI/ML pipelines]](../data-distiller/ml-feature-pipelines/overview.md)**: Leer belangrijke concepten achter de leergereedschappen van uw voorkeurssysteem en hoe u aangepaste modellen maakt die uw gebruiksscenario&#39;s voor marketingdoeleinden ondersteunen. In deze reeks handleidingen worden de stappen beschreven die nodig zijn om functiepijplijnen te maken die gegevens van Experience Platform voorbereiden om aangepaste modellen te voeden in de leeromgeving van uw computer.
 - **[[!UICONTROL SQL insights]](../data-distiller/sql-insights/overview.md)**: Leer over de belangrijkste mogelijkheden en vereiste stappen om een dashboard met inzichten van SQL met Gegevens Distiller te ontwikkelen.
 
 ![ de werkruimte van de Dienst van de Vraag met de benadrukte de motensectie van Distiller van Gegevens.](../images/ui/overview/data-distiller-capabilities.png)
@@ -62,7 +62,7 @@ Selecteer een kaart om documentatiegidsen en voorbeelden te openen om u te helpe
 - **[[!UICONTROL Customer lifetime value]](../use-cases/customer-lifetime-value.md)**: Leer hoe u de levensduurwaarde van klanten kunt bijhouden en visualiseren met Real-Time CDP en aangepaste dashboards. Gebruik deze inzichten om strategieën te ontwikkelen voor het verwerven van nieuwe klanten, bestaande klanten te behouden en winstmarges te maximaliseren.
 - **[[!UICONTROL Propensity score]](../use-cases/propensity-score.md)**: Leer hoe u de scores van de dichtheid kunt bepalen aan de hand van voorspellende modellen die in de machine zijn leren. Deze handleiding behandelt het verzenden van gegevens voor training, het toepassen van getrainde modellen met SQL en het voorspellen van de aankoopwaarschijnlijkheid van klanten.
 - **[[!UICONTROL Consent analysis]](../../dashboards/insights-use-cases/consent-analysis.md)**: Leer hoe u de toestemming van klanten kunt analyseren en volgen met Real-Time CDP, Query Service en Data Distiller. Deze gids behandelt bouwtoestemmingsdashboards, het verfijnen van segmentatie, het volgen van tendensen, en het verzekeren van naleving, die u helpen vertrouwen opbouwen en persoonlijke ervaringen leveren.
-- **[[!UICONTROL Fuzzy match]](../use-cases/fuzzy-match.md)**: Leer hoe u een &#39;wazzy&#39;-overeenkomst uitvoert op uw Experience Platform-gegevens om benaderende overeenkomsten te zoeken en tekenreeksgelijkenis in gegevenssets te analyseren. Volg deze handleiding om tijd te besparen en uw gegevens toegankelijker te maken. Het voorbeeld toont aan hoe te om de attributen van de hotelruimte tussen twee gegevensreeksen van reisbureaus aan te passen, die tonen hoe te, grote, complexe datasets voor consistentie en nauwkeurigheid efficiënt aanpassen, vergelijken en met elkaar in overeenstemming brengen.
+- **[[!UICONTROL Fuzzy match]](../use-cases/fuzzy-match.md)**: Leer hoe u een &#39;vage&#39; overeenkomst uitvoert op uw Experience Platform-gegevens om overeenkomsten bij benadering te zoeken en tekenreeksgelijkenis te analyseren in verschillende gegevenssets. Volg deze handleiding om tijd te besparen en uw gegevens toegankelijker te maken. Het voorbeeld toont aan hoe te om de attributen van de hotelruimte tussen twee gegevensreeksen van reisbureaus aan te passen, die tonen hoe te, grote, complexe datasets voor consistentie en nauwkeurigheid efficiënt aanpassen, vergelijken en met elkaar in overeenstemming brengen.
 
 ![ de werkruimte van de Dienst van de Vraag met de benadrukte de voorbeelden van Gegevens Distiller sectie.](../images/ui/overview/data-distiller-examples.png)
 
@@ -142,7 +142,7 @@ Op het tabblad **[!UICONTROL Templates]** worden query&#39;s weergegeven die doo
 | **[!UICONTROL Modified by]** | De laatste gebruiker die de query heeft gewijzigd. Om het even welke gebruiker in uw organisatie met toegang tot de Dienst van de Vraag kan vragen wijzigen. |
 | **[!UICONTROL Last modified]** | De datum en de tijd van de laatste wijziging in de query, in de tijdzone van de browser. |
 
-Zie de [ documentatie van vraagmalplaatjes ](./query-templates.md) voor meer informatie over malplaatjes in Platform UI.
+Zie de [ documentatie van vraagmalplaatjes ](./query-templates.md) voor meer informatie over malplaatjes in Experience Platform UI.
 
 ## Logboek {#log}
 
@@ -174,4 +174,4 @@ Op het tabblad **[!UICONTROL Credentials]** worden uw verlopen en niet-verlopen 
 
 ## Volgende stappen
 
-Nu u met het gebruikersinterface van de Dienst van de Vraag op [!DNL Platform] vertrouwd bent, kunt u tot de Redacteur van de Vraag toegang hebben beginnen uw eigen vraagprojecten te creëren om met andere gebruikers in uw organisatie te delen. Voor meer informatie over het schrijven van en het runnen van vragen in de Redacteur van de Vraag, zie de [ gebruikersgids van de Redacteur van de Vraag ](./user-guide.md).
+Nu u met het gebruikersinterface van de Dienst van de Vraag op [!DNL Experience Platform] vertrouwd bent, kunt u tot de Redacteur van de Vraag toegang hebben beginnen uw eigen vraagprojecten te creëren om met andere gebruikers in uw organisatie te delen. Voor meer informatie over het schrijven van en het runnen van vragen in de Redacteur van de Vraag, zie de [ gebruikersgids van de Redacteur van de Vraag ](./user-guide.md).

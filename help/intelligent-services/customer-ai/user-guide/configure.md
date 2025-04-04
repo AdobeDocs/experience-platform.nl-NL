@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;gebruikershandleiding;klant ai;populaire onderwerpen;vorm instantie;creeer instantie;
+keywords: Experience Platform;gebruikershandleiding;klantenservice;populaire onderwerpen;instantie configureren;instantie maken;
 solution: Experience Platform, Real-Time Customer Data Platform
 feature: Customer AI
 title: Een AI-instantie van een klant configureren
 description: AI/ML-services bieden Klantenservice aan als een eenvoudig te gebruiken Adobe Sensei-service die voor verschillende gebruiksgevallen kan worden geconfigureerd. De volgende secties bevatten stappen voor het configureren van een exemplaar van Customer AI.
 exl-id: 78353dab-ccb5-4692-81f6-3fb3f6eca886
-source-git-commit: c2832821ea6f9f630e480c6412ca07af788efd66
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '2740'
+source-wordcount: '2742'
 ht-degree: 0%
 
 ---
@@ -21,7 +21,7 @@ AI/ML-services bieden Klantenservice aan als een eenvoudig te gebruiken Adobe Se
 
 ## Een instantie maken {#set-up-your-instance}
 
-Selecteer **[!UICONTROL Services]** in de gebruikersinterface van het platform in de linkernavigatie. De browser van **[!UICONTROL Services]** wordt weergegeven en geeft alle beschikbare services weer. Selecteer **[!UICONTROL Open]** in de container voor AI van klant.
+Selecteer **[!UICONTROL Services]** in de gebruikersinterface van Experience Platform in de linkernavigatie. De browser van **[!UICONTROL Services]** wordt weergegeven en geeft alle beschikbare services weer. Selecteer **[!UICONTROL Open]** in de container voor AI van klant.
 
 ![](../images/user-guide/navigate-to-service.png)
 
@@ -35,7 +35,7 @@ De instanties van de dienst kunnen worden uitgegeven, worden gekloond, en worden
 
 - **[!UICONTROL Edit]**: als u **[!UICONTROL Edit]** selecteert, kunt u een bestaande service-instantie wijzigen. U kunt de naam, de beschrijving en de scorefrequentie van de instantie bewerken.
 - **[!UICONTROL Clone]**: als u **[!UICONTROL Clone]** selecteert, wordt de momenteel geselecteerde service-instantie gekopieerd. Vervolgens kunt u de workflow wijzigen om kleine tweaks te maken en deze een nieuwe naam te geven.
-- **[!UICONTROL Delete]**: U kunt een de dienstinstantie met inbegrip van om het even welke historische looppas schrappen. De overeenkomstige outputdataset zal van Platform worden geschrapt. De scores die zijn gesynchroniseerd met Real-Time Klantprofiel worden echter niet verwijderd.
+- **[!UICONTROL Delete]**: U kunt een de dienstinstantie met inbegrip van om het even welke historische looppas schrappen. De corresponderende uitvoergegevensset wordt uit Experience Platform verwijderd. De scores die zijn gesynchroniseerd met Real-Time Klantprofiel worden echter niet verwijderd.
 - **[!UICONTROL Data source]**: Een koppeling naar de gegevensset die door dit exemplaar wordt gebruikt. Als de veelvoudige datasets worden gebruikt, opent het selecteren van de hyperlinktekst de datasetvoorproefpopover.
 - **[!UICONTROL Last run details]**: dit wordt alleen weergegeven wanneer een uitvoering mislukt. Hier wordt informatie weergegeven over waarom de uitvoering is mislukt, zoals foutcodes.
 - **[!UICONTROL Score definition]**: Een kort overzicht van het doel dat u voor deze instantie hebt geconfigureerd.

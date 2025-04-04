@@ -3,9 +3,9 @@ keywords: inzichten;klantenai;klantenInzichten;AAI vraagdienst;klantenvragen;kla
 title: Door de klant beheerde sleutels in AI van de Klant.
 description: Leer hoe u door de klant beheerde sleutels instelt voor AI van de klant.
 exl-id: 12746c5c-094a-4d49-8d3a-7641fe0ec02a
-source-git-commit: 1a7babf104b2146bad4a336b9e0abd5a32c88999
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '163'
+source-wordcount: '164'
 ht-degree: 0%
 
 ---
@@ -20,4 +20,4 @@ U kunt de documentatie op [ Klant Geleide Sleutels in Adobe Experience Platform 
 >
 >[!DNL Customer Managed Keys] is momenteel alleen beschikbaar voor organisaties die de [!DNL Healthcare Shield or Privacy & Security Shield] add-on service hebben aangeschaft.
 
-Alle gegevens die door Platform worden gebruikt, worden in doorvoer en in rust gecodeerd om uw gegevens veilig te houden, met of zonder CMK. Voor informatie over de encryptie van Adobe Experience Platform, lees de documentatie over [ encryptie van Gegevens ](../../../landing/governance-privacy-security/encryption.md).
+Alle gegevens die door Experience Platform worden gebruikt, worden in doorvoer en in rust gecodeerd om uw gegevens veilig te houden, met of zonder CMK. Voor informatie over de encryptie van Adobe Experience Platform, lees de documentatie over [ encryptie van Gegevens ](../../../landing/governance-privacy-security/encryption.md).

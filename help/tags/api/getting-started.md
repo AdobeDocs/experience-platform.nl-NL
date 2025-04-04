@@ -2,9 +2,9 @@
 title: De Reactor-API verifiëren en openen
 description: Leer hoe u aan de slag kunt met de Reactor-API, inclusief stappen voor het genereren van de vereiste toegangsreferenties.
 exl-id: fc1acc1d-6cfb-43c1-9ba9-00b2730cad5a
-source-git-commit: 2c8ac35e9bf72c91743714da1591c3414db5c5e9
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '890'
+source-wordcount: '894'
 ht-degree: 0%
 
 ---
@@ -21,7 +21,7 @@ In deze handleiding wordt uitgelegd hoe u de Adobe Developer Console kunt gebrui
 
 ## Toegang voor ontwikkelaars tot Adobe Experience Platform {#gain-developer-access}
 
-Voordat u verificatiewaarden voor de Reactor-API kunt genereren, moet u ontwikkelaarstoegang tot het Experience Platform hebben. Om ontwikkelaartoegang te verkrijgen, volg de eerste stappen in het [ Experience Platform authentificatieleerprogramma ](/help/landing/api-authentication.md). Zodra u de [ stap van de Toegang van de Gebruiker van de Versterking ](/help/landing/api-authentication.md#gain-user-access) hebt voltooid, terugkeer naar dit leerprogramma om de geloofsbrieven te produceren specifiek voor Reactor API.
+Voordat u verificatiewaarden voor de Reactor-API kunt genereren, moet u toegang voor ontwikkelaars tot Experience Platform hebben. Om ontwikkelaartoegang te verkrijgen, volg de eerste stappen in het [ de authentificatieleerprogramma van Experience Platform ](/help/landing/api-authentication.md). Zodra u de [ stap van de Toegang van de Gebruiker van de Versterking ](/help/landing/api-authentication.md#gain-user-access) hebt voltooid, terugkeer naar dit leerprogramma om de geloofsbrieven te produceren specifiek voor Reactor API.
 
 ## Toegangsreferenties genereren {#generate-access-credentials}
 
@@ -43,15 +43,15 @@ Zodra u een project hebt gecreeerd, uitgezocht **voeg API** op het **Overzicht v
 
 ![](../images/api/getting-started/add-api-button.png)
 
-**voeg API** scherm toe verschijnt. Selecteer **Experience Platform Launch API** van de lijst van beschikbare APIs alvorens **daarna** te selecteren.
+**voeg API** scherm toe verschijnt. Selecteer **de Lanceer API van het Platform van de Ervaring** van de lijst van beschikbare APIs alvorens **daarna** te selecteren.
 
 ![](../images/api/getting-started/add-launch-api.png)
 
-Selecteer vervolgens het verificatietype dat u wilt maken voor het genereren van toegangstokens en voor toegang tot de Experience Platform-API.
+Selecteer vervolgens het verificatietype dat u wilt genereren voor toegangstokens en toegang tot de Experience Platform API.
 
 >[!IMPORTANT]
 >
->Selecteer de methode **[!UICONTROL OAuth Server-to-Server]** omdat dit de enige methode is die u kunt gebruiken om door te gaan. De methode **[!UICONTROL Service Account (JWT)]** is vervangen. Terwijl de integratie die de authentificatiemethode JWT gebruikt tot 1 Januari, 2025 zal blijven werken, adviseert de Adobe sterk dat u bestaande integratie aan de nieuwe server-aan-server methode OAuth vóór die datum migreert. Krijg meer informatie in de sectie [!BADGE  Afgekeurd ]{type=negative}[ produceer een Token van het Web JSON (JWT) ](/help/landing/api-authentication.md#jwt) in het de authentificatieleerprogramma van het Platform API.
+>Selecteer de methode **[!UICONTROL OAuth Server-to-Server]** omdat dit de enige methode is die u kunt gebruiken om door te gaan. De methode **[!UICONTROL Service Account (JWT)]** is vervangen. Terwijl de integratie die de authentificatiemethode JWT gebruikt tot 1 Januari, 2025 zal blijven werken, adviseert Adobe sterk dat u bestaande integratie aan de nieuwe server-aan-server methode OAuth vóór die datum migreert. Krijg meer informatie in de sectie [!BADGE  Afgekeurd ]{type=negative}[ produceer een Token van het Web JSON (JWT) ](/help/landing/api-authentication.md#jwt) in het de authentificatieleerprogramma van Experience Platform API.
 
 Selecteer **daarna** om verder te gaan.
 
@@ -78,7 +78,7 @@ Zodra API aan het project is toegevoegd, **[!UICONTROL Experience Platform API]*
 
 ### Een toegangstoken genereren {#generate-access-token}
 
-De volgende stap bestaat uit het genereren van een `{ACCESS_TOKEN}` -referentie voor gebruik in API-aanroepen van het platform. In tegenstelling tot de waarden voor `{API_KEY}` en `{ORG_ID}` , moet om de 24 uur een nieuw token worden gegenereerd om door te gaan met het gebruik van platform-API&#39;s.
+De volgende stap bestaat uit het genereren van een `{ACCESS_TOKEN}` -referentie voor gebruik in Experience Platform API-aanroepen. In tegenstelling tot de waarden voor `{API_KEY}` en `{ORG_ID}` , moet om de 24 uur een nieuw token worden gegenereerd om Experience Platform API&#39;s te kunnen blijven gebruiken.
 
 >[!TIP]
 >
@@ -99,7 +99,7 @@ Er wordt een nieuw toegangstoken gegenereerd en er wordt een knop opgegeven waar
 
 #### Automatisch token genereren {#auto-token}
 
-U kunt ook een Postman-omgeving en -verzameling gebruiken om toegangstokens te genereren. Voor meer informatie, lees de sectie over [ gebruikend Postman om API vraag ](/help/landing/api-authentication.md#use-postman) in de Experience Platform API authentificatiegids voor authentiek te verklaren en te testen.
+U kunt ook een Postman-omgeving en -verzameling gebruiken om toegangstokens te genereren. Voor meer informatie, lees de sectie over [ gebruikend Postman om API vraag ](/help/landing/api-authentication.md#use-postman) in de de authentificatiegids van Experience Platform voor authentiek te verklaren en te testen API.
 
 ## API-referenties testen {#test-api-credentials}
 
@@ -115,7 +115,7 @@ Nadat u hebt bevestigd dat uw toegangsreferenties werken, gaat u verder met de d
 
 ## API-voorbeeldaanroepen lezen {#read-sample-api-calls}
 
-Elke eindpuntgids verstrekt voorbeeld API vraag om aan te tonen hoe te om uw verzoeken te formatteren. Dit zijn paden, vereiste kopteksten en correct opgemaakte ladingen voor aanvragen. Voorbeeld-JSON die wordt geretourneerd in API-reacties, wordt ook verschaft. Voor informatie over de overeenkomsten die in documentatie voor steekproef API vraag worden gebruikt, zie de sectie op [ hoe te voorbeeld API vraag ](../../landing/api-guide.md#sample-api) in de begonnen gids voor Platform APIs lezen.
+Elke eindpuntgids verstrekt voorbeeld API vraag om aan te tonen hoe te om uw verzoeken te formatteren. Dit zijn paden, vereiste kopteksten en correct opgemaakte ladingen voor aanvragen. Voorbeeld-JSON die wordt geretourneerd in API-reacties, wordt ook verschaft. Voor informatie over de overeenkomsten die in documentatie voor steekproef API vraag worden gebruikt, zie de sectie op [ hoe te om voorbeeld API vraag ](../../landing/api-guide.md#sample-api) in de begonnen gids voor Experience Platform APIs te lezen.
 
 ## Volgende stappen {#next-steps}
 

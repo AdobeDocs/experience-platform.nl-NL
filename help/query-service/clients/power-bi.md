@@ -1,12 +1,12 @@
 ---
-keywords: Experience Platform;huis;populaire onderwerpen;de vraagdienst;de dienst van de vraag;Power BI;macht bi;verbindt met de vraagdienst;
+keywords: Experience Platform;home;populaire onderwerpen;queryservice;Query-service;Power BI;power bi;connect to query service;
 solution: Experience Platform
-title: Verbinding maken met Power BI-zoekservice
+title: Power BI verbinden met Query Service
 description: Dit document doorloopt de stappen voor het verbinden van Power BI met de Dienst van de Vraag van Adobe Experience Platform.
 exl-id: 8fcd3056-aac7-4226-a354-ed7fb8fe9ad7
-source-git-commit: 2b76b99d1e22d75faf8d758edd6cf08acdec7c21
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1008'
+source-wordcount: '1011'
 ht-degree: 0%
 
 ---
@@ -23,7 +23,7 @@ Deze handleiding vereist dat u al toegang hebt tot de bureaubladtoepassing van [
 >
 > De [!DNL Power BI] Desktoptoepassing is **slechts** beschikbaar op de apparaten van Vensters.
 
-U hebt toegang tot de werkruimte Query&#39;s in de gebruikersinterface van het platform nodig om de referenties te verkrijgen waarmee [!DNL Power BI] verbinding kan maken met Experience Platform. Neem contact op met uw organisatiebeheerder als u momenteel geen toegang hebt tot de werkruimte met query&#39;s.
+U hebt toegang tot de werkruimte Query&#39;s in de gebruikersinterface van Experience Platform nodig om de referenties te verkrijgen waarmee u [!DNL Power BI] kunt verbinden met Experience Platform. Neem contact op met uw organisatiebeheerder als u momenteel geen toegang hebt tot de werkruimte met query&#39;s.
 
 ## Verbinden [!DNL Power BI] met de Dienst van de Vraag {#connect-power-bi}
 
@@ -31,13 +31,13 @@ Als u [!DNL Power BI] wilt verbinden met Query Service, opent u [!DNL Power BI] 
 
 Het databasedialoogvenster [!DNL PostgreSQL] wordt geopend waarin waarden voor uw server en database worden aangevraagd. De extra instructies op hoe te [ verbinden met een gegevensbestand PostgreSQL van de Desktop van de Vraag van de Macht ](https://learn.microsoft.com/en-us/power-query/connectors/postgresql#connect-to-a-postgresql-database-from-power-query-desktop) kunnen in de officiële [!DNL PowerBI] documentatie worden gevonden.
 
-Deze vereiste waarden zijn afkomstig van je Adobe Experience Platform-gebruikersgegevens. Meld u aan bij de gebruikersinterface van het platform en selecteer **[!UICONTROL Queries]** in de linkernavigatie, gevolgd door **[!UICONTROL Credentials]** om uw referenties te zoeken. Voor meer informatie bij het vinden van uw gegevensbestandnaam, gastheer, haven, en login geloofsbrieven, te lezen gelieve de [ gids van geloofsbrieven ](../ui/credentials.md).
+Deze vereiste waarden zijn afkomstig van je Adobe Experience Platform-gebruikersgegevens. Meld u aan bij de gebruikersinterface van Experience Platform en selecteer **[!UICONTROL Queries]** in de linkernavigatie, gevolgd door **[!UICONTROL Credentials]** om uw referenties te zoeken. Voor meer informatie bij het vinden van uw gegevensbestandnaam, gastheer, haven, en login geloofsbrieven, te lezen gelieve de [ gids van geloofsbrieven ](../ui/credentials.md).
 
 >[!IMPORTANT]
 >
->Als gebruiker van Power BI of van Tableau, kunt u Customer Journey Analytics met uw hulpmiddelen van BI van de geloofsbrieven tabel van de Dienst van de Vraag verbinden. Zie de geloofsbrieven documentatie voor instructies op hoe te [ uw hulpmiddelen van BI aan Customer Journey Analytics ](../ui/credentials.md#connect-to-customer-journey-analytics) verbinden.
+>Als Power BI- of Tableau-gebruiker kunt u Customer Journey Analytics verbinden met uw BI-gereedschappen via het tabblad Inloggegevens van Query Service. Zie de geloofsbrieven documentatie voor instructies op hoe te [ uw hulpmiddelen van BI met Customer Journey Analytics ](../ui/credentials.md#connect-to-customer-journey-analytics) verbinden.
 
-![ de werkruimte van de Vragen van het Experience Platform met het lusje van Geloofsbrieven en het Uitbreiden van benadrukte geloofsbrieven.](../images/clients/power-bi/query-service-credentials-page.png)
+![ de werkruimte van Vragen van Experience Platform met het lusje van Referenties en het Verlopen van benadrukte geloofsbrieven.](../images/clients/power-bi/query-service-credentials-page.png)
 
 Voer in het veld **[!DNL Server]** van het dialoogvenster [!DNL PostgreSQL database] de waarde in voor de host die u vindt in de sectie Query Service [!UICONTROL Credentials] . Voeg voor productie poort `:80` toe aan het einde van de hosttekenreeks. Bijvoorbeeld `made-up.platform-query.adobe.io:80` .
 
@@ -69,13 +69,13 @@ Als u **[!DNL Import]** [!DNL Data Connectivity mode] selecteert, wordt de volle
 >
 >Als u gegevenswijzigingen wilt zien die zich hebben voorgedaan sinds de eerste importbewerking, moet u de gegevens binnen [!DNL Power BI] vernieuwen door de volledige gegevensset opnieuw te importeren.
 
-Om een lijst in te voeren, ga de server en gegevensbestanddetails [ in zoals hierboven beschreven ](#connect-power-bi) en selecteer **[!DNL Import]** [!DNL Data Connectivity mode], die door **[!DNL OK]** wordt gevolgd. Het dialoogvenster [!DNL Navigator] wordt weergegeven met een lijst van alle beschikbare tabellen. Selecteer de tabel waarvan u een voorvertoning wilt weergeven, gevolgd door **[!DNL Load]** om de gegevensset over te brengen naar Power BI. De tabel wordt nu geïmporteerd in [!DNL Power BI] .
+Om een lijst in te voeren, ga de server en gegevensbestanddetails [ in zoals hierboven beschreven ](#connect-power-bi) en selecteer **[!DNL Import]** [!DNL Data Connectivity mode], die door **[!DNL OK]** wordt gevolgd. Het dialoogvenster [!DNL Navigator] wordt weergegeven met een lijst van alle beschikbare tabellen. Selecteer de tabel die u wilt voorvertonen, gevolgd door **[!DNL Load]** om de gegevensset over te brengen naar Power BI. De tabel wordt nu geïmporteerd in [!DNL Power BI] .
 
 [ Algemene informatie bij het verbinden met gegevens in de Desktop PowerBi ](https://learn.microsoft.com/en-us/power-bi/connect-data/desktop-quickstart-connect-to-data#connect-to-data) app kan in de officiële documentatie worden gevonden.
 
 ### Tabellen importeren met behulp van aangepaste SQL
 
-[!DNL Power BI] en andere hulpmiddelen van derden zoals [!DNL Tableau] staan gebruikers momenteel niet toe geneste objecten, zoals XDM-objecten in Platform, te importeren. Om dit te verklaren, [!DNL Power BI] staat u toe om douaneSQL te gebruiken om tot deze genestelde gebieden toegang te hebben en een samengevoegde mening van de gegevens tot stand te brengen. [!DNL Power BI] laadt vervolgens deze samengevoegde weergave van de eerder geneste gegevens als een normale tabel.
+[!DNL Power BI] en andere hulpmiddelen van derden zoals [!DNL Tableau] staan gebruikers momenteel niet toe geneste objecten, zoals XDM-objecten in Experience Platform, te importeren. Om dit te verklaren, [!DNL Power BI] staat u toe om douaneSQL te gebruiken om tot deze genestelde gebieden toegang te hebben en een samengevoegde mening van de gegevens tot stand te brengen. [!DNL Power BI] laadt vervolgens deze samengevoegde weergave van de eerder geneste gegevens als een normale tabel.
 
 Selecteer **[!DNL Advanced options]** in het dialoogvenster [!DNL PostgreSQL database] om een aangepaste SQL-query in te voeren in de sectie **[!DNL SQL statement]** . Deze aangepaste query moet worden gebruikt om de naam-waardeparen van JSON af te vlakken in een tabelindeling. De officiële documentatie verstrekt ook informatie over hoe te [ PowerBI verbinden gebruikend een SQL verklaring in de geavanceerde opties ](https://learn.microsoft.com/en-us/power-query/connectors/postgresql#connect-using-advanced-options).
 

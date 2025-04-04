@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Gegevenskwaliteit
 description: Het volgende document bevat een overzicht van de ondersteunde controles en validatiegedragingen voor batch- en streaming-opname in Adobe Experience Platform.
 exl-id: 7ef40859-235a-4759-9492-c63e5fd80c8e
-source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '427'
 ht-degree: 0%
@@ -54,7 +54,7 @@ De volgende validaties worden uitgevoerd voor streaming invoer:
 | Gegevensset | Zorgt ervoor dat de dataset wordt gespecificeerd, toegelaten en niet is verwijderd. |
 | Koptekst | Zorgt ervoor dat de kopbal wordt gespecificeerd en geldig is. |
 
-Meer informatie over hoe [!DNL Platform] controleert en gegevens bevestigt in de [ documentatie van de controlegegevensstromen kan worden gevonden ](./monitor-data-ingestion.md).
+Meer informatie over hoe [!DNL Experience Platform] controleert en gegevens bevestigt in de [ documentatie van de controlegegevensstromen kan worden gevonden ](./monitor-data-ingestion.md).
 
 ## Validatie van identiteitswaarden
 

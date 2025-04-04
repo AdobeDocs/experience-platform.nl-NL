@@ -1,27 +1,27 @@
 ---
-title: Uw Phoenix-account aansluiten via de gebruikersinterface van het Experience Platform
-description: Leer hoe u uw Phoenix-account koppelt en gegevens uit uw Phoenix-database naar het Experience Platform brengt via de gebruikersinterface.
+title: Uw Phoenix-account aansluiten via de Experience Platform-gebruikersinterface
+description: Leer hoe u uw Phoenix-account kunt aansluiten en gegevens uit uw Phoenix-database naar Experience Platform kunt brengen via de gebruikersinterface.
 exl-id: 2ed469bc-1c72-4f04-a5f0-6a0bb519a6c2
-source-git-commit: 9ca4f19f7b59f075250bce7035303e11d3f3710f
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '593'
+source-wordcount: '594'
 ht-degree: 0%
 
 ---
 
-# Sluit uw [!DNL Phoenix] -account aan op het Experience Platform via de gebruikersinterface
+# Sluit uw [!DNL Phoenix] -account aan op Experience Platform via de gebruikersinterface
 
 >[!WARNING]
 >
 >De bron [!DNL Phoenix] wordt eind juni 2025 vervangen.
 
-Deze zelfstudie bevat stappen voor het tot stand brengen van een verbinding tussen uw [!DNL Phoenix] -account en het naar Experience Platform brengen van gegevens uit uw [!DNL Phoenix] -database.
+Deze zelfstudie bevat stappen voor het verbinden van uw [!DNL Phoenix] -account en het overbrengen van gegevens van uw [!DNL Phoenix] -database naar Experience Platform.
 
 ## Aan de slag
 
 Deze zelfstudie vereist een goed begrip van de volgende onderdelen van Adobe Experience Platform:
 
-* [[!DNL Experience Data Model (XDM)]  Systeem ](../../../../../xdm/home.md): Het gestandaardiseerde kader waardoor het Experience Platform gegevens van de klantenervaring organiseert.
+* [[!DNL Experience Data Model (XDM)]  Systeem ](../../../../../xdm/home.md): Het gestandaardiseerde kader waardoor Experience Platform gegevens van de klantenervaring organiseert.
    * [ Grondbeginselen van schemacompositie ](../../../../../xdm/schema/composition.md): Leer over de basisbouwstenen van schema&#39;s XDM, met inbegrip van zeer belangrijke principes en beste praktijken in schemacompositie.
    * [ het leerprogramma van de Redacteur van het Schema ](../../../../../xdm/tutorials/create-schema-ui.md): Leer hoe te om douaneschema&#39;s tot stand te brengen gebruikend de Redacteur UI van het Schema.
 * [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md): biedt een uniform, real-time consumentenprofiel dat is gebaseerd op geaggregeerde gegevens van meerdere bronnen.
@@ -43,11 +43,11 @@ Als u toegang wilt krijgen tot uw [!DNL Phoenix] -account op Experience Platform
 
 Voor meer informatie over begonnen worden, verwijs naar [ dit  [!DNL Phoenix]  document ](https://python-phoenixdb.readthedocs.io/en/latest/api.html).
 
-Nadat u de vereiste gegevens hebt verzameld, voert u de onderstaande stappen uit om uw [!DNL Phoenix] -account te verbinden met het Experience Platform.
+Nadat u de vereiste gegevens hebt verzameld, voert u de onderstaande stappen uit om uw [!DNL Phoenix] -account te verbinden met Experience Platform.
 
 ## Sluit uw [!DNL Phoenix] -account aan
 
-Selecteer in de interface Platform de optie **[!UICONTROL Sources]** in de linkernavigatie voor toegang tot de werkruimte Bronnen. In het scherm *[!UICONTROL Catalog]* worden diverse bronnen weergegeven die beschikbaar zijn in de catalogus met bronnen in het Experience Platform.
+Selecteer in de gebruikersinterface van Experience Platform de optie **[!UICONTROL Sources]** in de linkernavigatie voor toegang tot de werkruimte Bronnen. In het scherm *[!UICONTROL Catalog]* worden diverse bronnen weergegeven die beschikbaar zijn in de Experience Platform-broncatalogus.
 
 U kunt de juiste categorie selecteren in de catalogus aan de linkerkant van het scherm. U kunt ook een specifieke bron zoeken met de zoekoptie.
 
@@ -61,7 +61,7 @@ Selecteer **[!UICONTROL Databases]** in de lijst met categorieën bronnen en kie
 >
 >* **[!UICONTROL Set up]** betekent dat u gebruikersgegevens moet opgeven en een nieuw account moet verifiëren om de geselecteerde bron te kunnen gebruiken.
 
-![ de broncatalogus op het Experience Platform UI met de Phoenix geselecteerde bronkaart.](../../../../images/tutorials/create/phoenix/catalog.png)
+![ de broncatalogus op Experience Platform UI met de Phoenix geselecteerde bronkaart.](../../../../images/tutorials/create/phoenix/catalog.png)
 
 De pagina **[!UICONTROL Connect to Phoenix]** wordt weergegeven. Op deze pagina kunt u nieuwe of bestaande referenties gebruiken.
 

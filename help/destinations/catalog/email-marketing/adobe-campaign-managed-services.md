@@ -2,7 +2,7 @@
 title: Adobe Campaign Managed Cloud Services-verbinding
 description: Adobe Campaign Managed Cloud Services biedt een platform voor het ontwerpen van de ervaringen van klanten over meerdere kanalen en een omgeving voor visuele campagneorchestratie, real-time interactiebeheer en uitvoering via meerdere kanalen.
 exl-id: fe151ad3-c431-4b5a-b453-9d1d9aedf775
-source-git-commit: 299868e5ca1b8fde667c4c0ec9a7435634a1717d
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '1571'
 ht-degree: 0%
@@ -47,9 +47,9 @@ Om u beter te helpen begrijpen hoe en wanneer u de bestemming van de Dienst van 
 
 * Adobe Experience Platform maakt een klantprofiel dat informatie bevat zoals de identiteitsgrafiek, gedragsgegevens van analyses, het samenvoegen van offline- en onlinegegevens, enzovoort. Dankzij deze integratie kunt u de segmentatiemogelijkheden die al in Adobe Campaign bestaan, uitbreiden met die door Adobe Experience Platform aangedreven doelgroepen. U kunt die gegevens dus activeren in Campaign.
 
-  Een sportattierbedrijf wil bijvoorbeeld het door Adobe Experience Platform aangedreven publiek aantrekken en activeren met Adobe Campaign om op de verschillende door Adobe Campaign ondersteunde kanalen naar de klantenbasis te reiken. Zodra de berichten worden verzonden, willen zij het klantenprofiel in het platform van de Ervaring van de Adobe met ervaringsgegevens van Adobe Campaign zoals verzenden, openen en klikken verbeteren.
+  Een sportattierbedrijf wil bijvoorbeeld het door Adobe Experience Platform aangedreven publiek aantrekken en activeren met Adobe Campaign om op de verschillende door Adobe Campaign ondersteunde kanalen naar de klantenbasis te reiken. Zodra de berichten worden verzonden, willen zij het klantenprofiel in Adobe Experience platform met ervaringsgegevens van Adobe Campaign zoals verzenden, openen en klikken verbeteren.
 
-  Het resultaat is kanaalcampagnes die consistenter zijn in het cloudecosysteem van de Ervaring van de Adobe en een rijk klantprofiel dat zich snel aanpast en leert.
+  Het resultaat is kanaalcampagnes die consistenter zijn in het Adobe Experience cloud-ecosysteem en een rijk klantprofiel dat zich snel aanpast en leert.
 
 
 * Naast activering van het publiek in Campagne, kunt u de bestemming van Adobe Campaign Managed Services gebruiken om extra profielattributen in te brengen die aan een profiel op Adobe Experience Platform worden gebonden en een synchronisatieproces op zijn plaats hebben zodat zij in het gegevensbestand van Adobe Campaign worden bijgewerkt.
@@ -70,8 +70,8 @@ Om u beter te helpen begrijpen hoe en wanneer u de bestemming van de Dienst van 
 |---|---|---|
 | external_id | Aangepaste gebruikers-id&#39;s | Selecteer deze doelidentiteit wanneer uw bronidentiteit een aangepaste naamruimte is. Wij adviseren gebruikend deze identiteit en het in kaart brengen aan identiteitskaart in uw instantie van de Campagne die klant (loyalty_ID, account_ID, customer_ID...) vertegenwoordigt |
 | ECID | Experience Cloud-id | Een naamruimte die ECID vertegenwoordigt. Deze naamruimte kan ook worden aangeduid met de volgende aliassen: &quot;Adobe Marketing Cloud ID&quot;, &quot;Adobe Experience Cloud ID&quot;, &quot;Adobe Experience Platform ID&quot;. Zie het volgende document op [ ECID ](/help/identity-service/features/ecid.md) voor meer informatie. |
-| email_lc_sha256 | E-mailadressen die met het algoritme SHA256 worden gehasht | Adobe Experience Platform biedt ondersteuning voor zowel platte tekst- als SHA256-e-mailadressen met hashing. Wanneer het bronveld hashingkenmerken bevat, schakelt u de optie **[!UICONTROL Apply transformation]** in om de gegevens automatisch te laten hashen bij activering door [!DNL Platform] . |
-| phone_sha256 | Telefoonnummers die zijn hashed met het SHA256-algoritme | Adobe Experience Platform biedt ondersteuning voor zowel platte tekst- als SHA256-telefoonnummers. Wanneer het bronveld hashingkenmerken bevat, schakelt u de optie **[!UICONTROL Apply transformation]** in om de gegevens automatisch te laten hashen bij activering door [!DNL Platform] . |
+| email_lc_sha256 | E-mailadressen die met het algoritme SHA256 worden gehasht | Adobe Experience Platform biedt ondersteuning voor zowel platte tekst- als SHA256-e-mailadressen met hashing. Wanneer het bronveld hashingkenmerken bevat, schakelt u de optie **[!UICONTROL Apply transformation]** in om de gegevens automatisch te laten hashen bij activering door [!DNL Experience Platform] . |
+| phone_sha256 | Telefoonnummers die zijn hashed met het SHA256-algoritme | Adobe Experience Platform biedt ondersteuning voor zowel platte tekst- als SHA256-telefoonnummers. Wanneer het bronveld hashingkenmerken bevat, schakelt u de optie **[!UICONTROL Apply transformation]** in om de gegevens automatisch te laten hashen bij activering door [!DNL Experience Platform] . |
 | GAID | GOOGLE ADVERTISING ID | Selecteer de GAID doelidentiteit wanneer uw bronidentiteit een GAID-naamruimte is. |
 | IDFA | Apple-id voor adverteerders | Selecteer de IDFA doelidentiteit wanneer uw bronidentiteit een IDFA namespace is. |
 
@@ -106,7 +106,7 @@ Als u details voor de bestemming wilt configureren, vult u de vereiste en option
 * **[!UICONTROL Description]**: Een beschrijving die u zal helpen deze bestemming in de toekomst identificeren.
 * **[!UICONTROL Select instance]**: Uw **[!DNL Campaign]** marketinginstantie.
 * **[!UICONTROL Target mapping]**: selecteer de doeltoewijzing die u in **[!DNL Adobe Campaign]** gebruikt om leveringen te verzenden. [Meer informatie](https://experienceleague.adobe.com/docs/campaign/campaign-v8/profiles-and-audiences/add-profiles/target-mappings.html).
-* **[!UICONTROL Select sync type]**:
+* **[!UICONTROL Select sync type]** :
 
    * **[!UICONTROL Audience sync]**: gebruik deze optie om Adobe Experience Platform-publiek naar Adobe Campaign te sturen.
    * **[!UICONTROL Profile sync (Update only)]**: gebruik deze optie om Adobe Experience Platform-profielkenmerken over te brengen naar Adobe Campaign en een synchronisatieproces te laten uitvoeren zodat ze regelmatig kunnen worden bijgewerkt.

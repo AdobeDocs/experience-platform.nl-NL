@@ -1,18 +1,18 @@
 ---
-keywords: Experience Platform;thuis;populaire onderwerpen;
+keywords: Experience Platform;home;populaire onderwerpen;
 title: Handleiding voor het oplossen van problemen met Data Prep
 description: Dit document geeft antwoorden op veelgestelde vragen over Adobe Experience Platform Data Prep.
 exl-id: 810cfb2f-f80a-4aa7-ab3c-beb5de78708e
-source-git-commit: ff8f660c2b3a04d8b4b9d4f19891816a44069088
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '1250'
+source-wordcount: '1251'
 ht-degree: 0%
 
 ---
 
 # [!DNL Data Prep] gids voor probleemoplossing
 
-Dit document bevat antwoorden op veelgestelde vragen over Adobe Experience Platform [!DNL Data Prep] en een gids voor probleemoplossing voor algemene fouten. Voor vragen en het oplossen van problemeninformatie betreffende Platform APIs in het algemeen, zie de [ het oplossen van problemengids van Adobe Experience Platform API ](../landing/troubleshooting.md).
+Dit document bevat antwoorden op veelgestelde vragen over Adobe Experience Platform [!DNL Data Prep] en een gids voor probleemoplossing voor algemene fouten. Voor vragen en het oplossen van problemeninformatie betreffende Experience Platform APIs in het algemeen, zie de [ het oplossen van problemengids van Adobe Experience Platform API ](../landing/troubleshooting.md).
 
 ## Veelgestelde vragen
 
@@ -20,7 +20,7 @@ Hieronder volgt een lijst met veelgestelde vragen over [!DNL Data Prep] en de bi
 
 ### Hoe worden transformatiefouten opgelost?
 
-[!DNL Data Prep] lokaliseert alle transformatiefouten naar de kolom waarin zij voorkwamen. Dientengevolge, wordt die kolom nietig verklaard en de rest van de rij zal verder worden verwerkt. Deze transformatiekwesties worden geregistreerd als **Waarschuwingen**. U wordt aangeraden de waarschuwingen regelmatig te controleren en de transformatielogica aan te passen om rekening te houden met de transformatieproblemen. Dit zal de kwaliteit van de gegevens verhogen die in Experience Platform worden opgenomen.
+[!DNL Data Prep] lokaliseert alle transformatiefouten naar de kolom waarin zij voorkwamen. Dientengevolge, wordt die kolom nietig verklaard en de rest van de rij zal verder worden verwerkt. Deze transformatiekwesties worden geregistreerd als **Waarschuwingen**. U wordt aangeraden de waarschuwingen regelmatig te controleren en de transformatielogica aan te passen om rekening te houden met de transformatieproblemen. Hierdoor wordt de kwaliteit van de gegevens die in Experience Platform worden ingevoerd, verhoogd.
 
 Als de kolommen die als **worden gemerkt Vereist** wegens transformatiekwesties ongeldig worden gemaakt, dan zal de rij niet worden opgenomen. Wanneer gedeeltelijke gegevensopname wordt toegelaten, kunt u de drempel van dergelijke verwerpingen plaatsen alvorens de volledige stroom ontbreekt. Als het ongeldig gemaakte attribuut geen bevestigingen van het schemaniveau beïnvloedde, zal de rij blijven worden opgenomen.
 
@@ -38,7 +38,7 @@ Berekende velden mogen maximaal 4096 tekens lang zijn.
 
 Zorg ervoor dat het gegevenstype voor elk veld overeenkomt met het type dat in het schema is gedefinieerd. Daarnaast moeten beperkingen zoals &quot;Required&quot;, &quot;enum&quot; en &quot;format&quot; worden nageleefd.
 
-De gegevens die worden opgenomen moeten het schema van de Gegevens van de Ervaring (XDM) in Experience Platform worden bepaald in overeenstemming zijn. Als het kenmerk niet overeenkomt met het verwachte type of de indeling die in het schema is opgegeven, mislukt de invoer.
+De gegevens die worden opgenomen moeten in overeenstemming zijn met het XDM-schema (Experience Data Model) dat in Experience Platform is gedefinieerd. Als het kenmerk niet overeenkomt met het verwachte type of de indeling die in het schema is opgegeven, mislukt de invoer.
 
 Als de functies van Data Prep worden gebruikt, zorg er dan voor dat de transformatie in de juiste attributen resulteert. U kunt de kenmerken controleren tijdens het installatieproces van de workflow voor bronnen. Selecteer **[!UICONTROL New field type]** tijdens de toewijzingsstap en selecteer **[!UICONTROL Add calculated field]** . Vervolgens gebruikt u de berekende veldinterface om elke functie voor te vertonen.
 
@@ -58,7 +58,7 @@ Na inname kunt u de gegevens opschonen, vormgeven en manipuleren met SQL. Nochta
 >
 >* Identiteitsservice: u kunt records niet rechtstreeks verwijderen in Identiteitsservice. U moet het volledige profiel verwijderen en het profiel opnieuw uploaden met de juiste records met de API voor het verwijderen van profielen.
 
-### Wat zijn de beste praktijken voor het gebruiken van berekende gebieden in de gegevens van het GIF?
+### Wat zijn de beste praktijken voor het gebruiken van berekende gebieden in de gegevens van GIF?
 
 U kunt de de kaartfuncties van de Prep van Gegevens tijdens de afbeeldingsstap van brongegevens aan XDM schema gebruiken om een nieuw berekend gebied tot stand te brengen.
 

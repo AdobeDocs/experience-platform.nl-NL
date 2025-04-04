@@ -2,9 +2,9 @@
 title: Een HTTP API-streamingverbinding maken met de gebruikersinterface
 description: Deze UI-handleiding helpt u bij het maken van een streamingverbinding met Adobe Experience Platform.
 exl-id: 7932471c-a9ce-4dd3-8189-8bc760ced5d6
-source-git-commit: de721d204cda8e55c72ac5f530b89b2275d94306
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '935'
+source-wordcount: '938'
 ht-degree: 0%
 
 ---
@@ -25,7 +25,7 @@ Deze zelfstudie vereist een goed begrip van de volgende onderdelen van Adobe Exp
 
 ## Een streamingverbinding maken
 
-Selecteer in de gebruikersinterface van het platform de optie **[!UICONTROL Sources]** in de linkernavigatie voor toegang tot de werkruimte van [!UICONTROL Sources] . In het scherm [!UICONTROL Catalog] worden diverse bronnen weergegeven waarmee u een account kunt maken.
+Selecteer in de gebruikersinterface van Experience Platform de optie **[!UICONTROL Sources]** in de linkernavigatie voor toegang tot de werkruimte van [!UICONTROL Sources] . In het scherm [!UICONTROL Catalog] worden diverse bronnen weergegeven waarmee u een account kunt maken.
 
 U kunt de juiste categorie selecteren in de catalogus aan de linkerkant van het scherm. U kunt ook de specifieke bron vinden waarmee u wilt werken met de zoekoptie.
 
@@ -66,7 +66,7 @@ Als uw gegevens zijn geüpload, kunt u de rechterkant van de interface gebruiken
 
 ## Gegevensvelden toewijzen aan een XDM-schema
 
-De stap [!UICONTROL Mapping] verschijnt, die een interface verstrekken om de brongegevens aan een dataset van het Platform in kaart te brengen.
+De stap [!UICONTROL Mapping] wordt weergegeven en biedt een interface voor het toewijzen van de brongegevens aan een Experience Platform-gegevensset.
 
 De [!DNL HTTP API] -bron ondersteunt inname van JSON-bestanden. JSON-bestanden vereisen geen handmatige configuratie als deze zijn gemarkeerd als XDM-klap. Als niet, dan moet u de afbeelding uitdrukkelijk vormen.
 
@@ -141,4 +141,4 @@ Als de verbinding is gemaakt, wordt de pagina met brondetails weergegeven. Deze 
 
 Aan de hand van deze zelfstudie hebt u een streaming HTTP-verbinding gemaakt, waarmee u het streaming eindpunt kunt gebruiken voor toegang tot diverse [!DNL Data Ingestion] API&#39;s. Voor instructies om een het stromen verbinding in API tot stand te brengen, te lezen gelieve [ creërend een het stromen verbindingsleerprogramma ](../../../api/create/streaming/http.md).
 
-Leren hoe te om gegevens aan Platform te stromen, te lezen gelieve of het leerprogramma op [ het stromen tijdreeksgegevens ](../../../../../ingestion/tutorials/streaming-time-series-data.md) of het leerprogramma op [ het stromen verslaggegevens ](../../../../../ingestion/tutorials/streaming-record-data.md).
+Leren hoe te om gegevens aan Experience Platform te stromen, te lezen gelieve of het leerprogramma op [ het stromen tijdreeksgegevens ](../../../../../ingestion/tutorials/streaming-time-series-data.md) of het leerprogramma op [ het stromen verslaggegevens ](../../../../../ingestion/tutorials/streaming-record-data.md).

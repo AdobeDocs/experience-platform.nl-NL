@@ -2,9 +2,9 @@
 description: Leer hoe u de API voor bestemmingstests gebruikt om een sjabloon voor de transformatie van testberichten voor uw bestemming te genereren.
 title: Een transformatiesjabloon voor een voorbeeldbericht genereren
 exl-id: d18a06f7-0c3a-4b4d-a7d5-011690d00e2c
-source-git-commit: d6402f22ff50963b06c849cf31cc25267ba62bb1
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '376'
+source-wordcount: '377'
 ht-degree: 0%
 
 ---
@@ -24,7 +24,7 @@ Alvorens verder te gaan, te herzien gelieve [ begonnen gids ](../../getting-star
 
 ## Voorbeeldsjabloon ophalen {#generate-sample-template}
 
-U kunt een steekproefmalplaatje krijgen door een verzoek van de GET tot het `authoring/testing/template/sample/` eindpunt te richten en bestemmingsidentiteitskaart van de bestemmingsconfiguratie te verstrekken die op wordt gebaseerd die u uw malplaatje creeert.
+U kunt een steekproefmalplaatje krijgen door een verzoek van GET aan het `authoring/testing/template/sample/` eindpunt te doen en bestemmingsidentiteitskaart van de bestemmingsconfiguratie te verstrekken die op wordt gebaseerd die u uw malplaatje creeert.
 
 >[!TIP]
 >
@@ -132,7 +132,7 @@ Als bestemmingsidentiteitskaart u verstrekt aan een malplaatje van de bestemming
 
 ## API-foutafhandeling {#api-error-handling}
 
-Destination SDK API-eindpunten volgen de algemene API-foutberichtbeginselen voor Experience Platforms. Verwijs naar [ API statuscodes ](../../../../landing/troubleshooting.md#api-status-codes) en [ de fouten van de verzoekkopbal ](../../../../landing/troubleshooting.md#request-header-errors) in de het oplossen van problemengids van het Platform.
+Destination SDK API-eindpunten volgen de algemene beginselen van Experience Platform API-foutberichten. Verwijs naar [ API statuscodes ](../../../../landing/troubleshooting.md#api-status-codes) en [ de fouten van de verzoekkopbal ](../../../../landing/troubleshooting.md#request-header-errors) in de het oplossen van problemengids van Experience Platform.
 
 ## Volgende stappen {#next-steps}
 

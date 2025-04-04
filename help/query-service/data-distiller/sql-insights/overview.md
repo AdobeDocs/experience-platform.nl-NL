@@ -2,9 +2,9 @@
 title: SQL Insights
 description: Leer meer over de gebruiksgevallen, essentiële mogelijkheden en vereiste stappen om een SQL-inzichten-dashboard met Data Distiller te ontwikkelen. Ontdek hoe de SQL-mogelijkheden voor inzichten in Data Distiller de transparantie kunnen verbeteren en operationele inzichten kunnen opdoen in verschillende dimensies, zoals profielen, publiek, campagnes, reizen, rechten en toestemming.
 exl-id: f807d0fd-c8ec-42d4-96a0-5ffc5681943b
-source-git-commit: ddf886052aedc025ff125c03ab63877cb049583d
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '941'
+source-wordcount: '943'
 ht-degree: 0%
 
 ---
@@ -19,11 +19,11 @@ In dit document worden de gebruiksgevallen, essentiële functies en vereiste sta
 
 ## Vereisten
 
-Deze zelfstudie gebruikt door de gebruiker gedefinieerde dashboards om gegevens van uw aangepaste gegevensmodel in de gebruikersinterface van het platform te visualiseren. Zie [ user-defined dashboards documentatie ](../../../dashboards/standard-dashboards.md) om meer over deze eigenschap te leren.
+In deze zelfstudie worden door de gebruiker gedefinieerde dashboards gebruikt om gegevens van uw aangepaste gegevensmodel in de gebruikersinterface van Experience Platform te visualiseren. Zie [ user-defined dashboards documentatie ](../../../dashboards/standard-dashboards.md) om meer over deze eigenschap te leren.
 
 ## Aan de slag
 
-Distiller SKU van Gegevens wordt vereist om een model van douanegegevens voor uw rapporteringsinzichten te bouwen en de de gegevensmodellen van Real-Time CDP uit te breiden die de verrijkte gegevens van het Platform houden. Zie het [ verpakken ](../../packaging.md), [ guardrails ](../../guardrails.md#query-accelerated-store), en [ verlenen van vergunningen ](../../data-distiller/license-usage.md) documentatie die op het SKU van Gegevens Distiller betrekking heeft. Als u geen gegevens Distiller SKU hebt, contacteer uw vertegenwoordiger van de klantendienst van de Adobe voor meer informatie.
+Distiller SKU van Gegevens wordt vereist om een model van douanegegevens voor uw rapporteringsinzichten te bouwen en de de gegevensmodellen van Real-Time CDP uit te breiden die verrijkte gegevens van Experience Platform houden. Zie het [ verpakken ](../../packaging.md), [ guardrails ](../../guardrails.md#query-accelerated-store), en [ verlenen van vergunningen ](../../data-distiller/license-usage.md) documentatie die op het SKU van Gegevens Distiller betrekking heeft. Als u de Data Distiller SKU niet hebt, neemt u contact op met uw Adobe-medewerker van de klantenservice voor meer informatie.
 
 ## Gebruiksgevallen van SQL Insights {#use-cases}
 
@@ -61,7 +61,7 @@ In de onderstaande afbeelding worden verschillende essentiële functies voor het
 1. **het schrijven van het dashboard:** toelatend de verwezenlijking van douanedashboards die aan specifieke gebruiksgevallen worden aangepast, die een meer gepersonaliseerde en gerichte analytische ervaring verstrekken.
 1. **Flexibele SQL gegevensmodellering:** gebruik een veelzijdige SQL benadering van gegevensmodellering die gebruikers toestaat om verschillende datasets naadloos te combineren en te manipuleren, die aanpassingsvermogen, en analytische diepte verbeteren.
 1. **Versnelde opslag:** Uitvoerend een versneld opslagmechanisme om samengevoegde inzichten door SQL efficiënt te dienen, die gestroomlijnde en snelle toegang tot waardevolle informatie verzekeren.
-1. **connectiviteit van BI:** Faciliterend naadloze integratie met populaire hulpmiddelen van de Business Intelligence (BI), met inbegrip van Power BI, Tableau, Looker, en Apache Superset. Deze connectiviteit zorgt voor compatibiliteit met verschillende BI-omgevingen en biedt gebruikers de flexibiliteit om hun keuze te gebruiken voor diepgaande analyse en rapportage.
+1. **connectiviteit van BI:** vergemakkelijkt naadloze integratie met populaire hulpmiddelen van Business Intelligence (BI), met inbegrip van Power BI, Tableau, Looker, en Apache Superset. Deze connectiviteit zorgt voor compatibiliteit met verschillende BI-omgevingen en biedt gebruikers de flexibiliteit om hun keuze te gebruiken voor diepgaande analyse en rapportage.
 
 ![ Visuele vertegenwoordiging van de belangrijkste mogelijkheden van Gegevens Distiller SQL Inzichten.](../../images/data-distiller/sql-insights/key-capabilities-of-customizable-insights.png)
 
@@ -72,7 +72,7 @@ Volg onderstaande stapsgewijze instructies voor het ontwikkelen van een SQL Insi
 1. **Ad hoc vraagexploratie:** begin door ad hoc `SELECT` vragen uit te voeren om ruwe gegevens over het gegevenshoeveelheid te onderzoeken. Hierdoor kan ter plekke een verkennende gegevensanalyse worden uitgevoerd om gegevens te experimenteren, en worden gegevens gevalideerd wanneer de resultaten van de query&#39;s niet in het datumpeer zijn opgeslagen.
 1. **het vraaggebruik van de Partij van de Partij:** de partijvragen van het Gebruik [ creëren geplande banen ](../../api/scheduled-queries.md#create-a-new-scheduled-query) voor het produceren van inzichten samengevoegde lijsten, die een systematische en geautomatiseerde benadering van gegevensverwerking verzekeren. Batchquery&#39;s worden uitgevoerd `INSERT TABLE AS SELECT` en `CREATE TABLE AS SELECT` -query&#39;s om gegevens op te schonen, vorm te geven, te manipuleren en te verrijken. De resultaten van deze vragen worden opgeslagen op het gegevens meer.
 1. **Geaggregeerde inzichten die laden:** Laad de geproduceerde bijeengevoegde inzichten in de versnelde opslag en gebruik SQL om vragen te testen, en de nauwkeurigheid en de efficiency van gegevensherwinning te verzekeren. Leren hoe te om stateless vragen aan de versnelde opslag ](../../api/accelerated-queries.md) te maken, zie de documentatie.[
-1. **Toegang en integratie:** heb toegang tot de inzichten die in de versnelde opslag foutloos door met Adobe Experience Platform [ te integreren gebruiker-bepaalde Dashboards ](../../../dashboards/standard-dashboards.md) of andere aangewezen Business Intelligence (BI) hulpmiddelen worden opgeslagen. Deze integratie met externe clients maakt een consistente en intuïtieve ervaring voor gebruikers mogelijk.
+1. **Toegang en integratie:** heb toegang tot de inzichten die in de versnelde opslag foutloos door met Adobe Experience Platform [ gebruiker-bepaalde Dashboards ](../../../dashboards/standard-dashboards.md) of andere aangewezen hulpmiddelen van Business Intelligence (BI) te integreren worden opgeslagen. Deze integratie met externe clients maakt een consistente en intuïtieve ervaring voor gebruikers mogelijk.
 
 ![ een infografisch illustrerend de vier stappen aan SQL Inzichten in Gegevens Distiller.](../../images/data-distiller/sql-insights/steps-to-customizable-insights.png)
 

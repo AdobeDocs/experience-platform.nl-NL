@@ -1,11 +1,11 @@
 ---
-keywords: Experience Platform;home;populaire onderwerpen;cloudopslag;Cloudopslag
+keywords: Experience Platform;home;populaire onderwerpen;cloudopslag;Cloud-opslag
 title: Een Cloud Storage-map verkennen met de Flow Service API
 description: Deze zelfstudie gebruikt de Flow Service API om een extern cloudopslagsysteem te verkennen.
 exl-id: ba1a9bff-43a6-44fb-a4e7-e6a45b7eeebd
-source-git-commit: 9b9803b4d2aeb2a86ef980f34ee34909679ea3d9
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '691'
+source-wordcount: '695'
 ht-degree: 0%
 
 ---
@@ -22,18 +22,18 @@ Deze zelfstudie bevat stappen voor het verkennen en voorvertonen van de structuu
 
 Deze handleiding vereist een goed begrip van de volgende onderdelen van Adobe Experience Platform:
 
-* [ Bronnen ](../../../home.md): [!DNL Experience Platform] staat gegevens toe om van diverse bronnen worden opgenomen terwijl het voorzien van u van de capaciteit om, inkomende gegevens te structureren te etiketteren en te verbeteren gebruikend [!DNL Platform] diensten.
-* [ Sandboxen ](../../../../sandboxes/home.md): [!DNL Experience Platform] verstrekt virtuele zandbakken die één enkele [!DNL Platform] instantie in afzonderlijke virtuele milieu&#39;s verdelen helpen digitale ervaringstoepassingen ontwikkelen en ontwikkelen.
+* [ Bronnen ](../../../home.md): [!DNL Experience Platform] staat gegevens toe om van diverse bronnen worden opgenomen terwijl het voorzien van u van de capaciteit om, inkomende gegevens te structureren te etiketteren en te verbeteren gebruikend [!DNL Experience Platform] diensten.
+* [ Sandboxen ](../../../../sandboxes/home.md): [!DNL Experience Platform] verstrekt virtuele zandbakken die één enkele [!DNL Experience Platform] instantie in afzonderlijke virtuele milieu&#39;s verdelen helpen digitale ervaringstoepassingen ontwikkelen en ontwikkelen.
 
-### Platform-API&#39;s gebruiken
+### Experience Platform API&#39;s gebruiken
 
-Voor informatie over hoe te om vraag aan Platform APIs met succes te maken, zie de gids op [ begonnen wordt met Platform APIs ](../../../../landing/api-guide.md).
+Voor informatie over hoe te om vraag aan Experience Platform APIs met succes te maken, zie de gids op [ begonnen wordt met Experience Platform APIs ](../../../../landing/api-guide.md).
 
 ## Ontdek uw mappen voor cloudopslag
 
-U kunt informatie over de structuur van uw mappen voor cloudopslag ophalen door een aanvraag voor een GET in te dienen bij de API van [!DNL Flow Service] en de basis-verbindings-id van uw bron op te geven.
+U kunt informatie ophalen over de structuur van uw mappen voor cloudopslag door een GET-aanvraag in te dienen bij de API van [!DNL Flow Service] en de basis-verbindings-id van uw bron op te geven.
 
-Wanneer u GET-aanvragen uitvoert om uw cloudopslag te verkennen, moet u de queryparameters opnemen die in de onderstaande tabel worden vermeld:
+Wanneer u GET-verzoeken uitvoert om uw cloudopslag te verkennen, moet u de queryparameters opnemen die in de onderstaande tabel worden vermeld:
 
 | Parameter | Beschrijving |
 | --------- | ----------- |
@@ -94,11 +94,11 @@ Een succesvol antwoord retourneert een array met bestanden en mappen die in de g
 ]
 ```
 
-## De structuur van een bestand Inspect
+## De structuur van een bestand controleren
 
-Om de structuur van gegevensdossier van uw cloudopslag te inspecteren, voer een verzoek van de GET uit terwijl het verstrekken van de weg van het dossier en type als vraagparameter.
+Als u de structuur van gegevensbestanden vanuit de cloudopslag wilt inspecteren, voert u een GET-aanvraag uit terwijl u het pad van het bestand opgeeft en typt u het als een queryparameter.
 
-U kunt de structuur van een gegevensbestand van uw bron van de wolkenopslag inspecteren door een verzoek van de GET uit te voeren terwijl het verstrekken van de weg en het type van het dossier. U kunt ook verschillende bestandstypen inspecteren, zoals CSV, TSV of gecomprimeerde JSON en gescheiden bestanden door de bestandstypen op te geven als onderdeel van de queryparameters.
+U kunt de structuur van een gegevensbestand vanuit de bron van de cloudopslag inspecteren door een GET-aanvraag uit te voeren en het pad en type van het bestand op te geven. U kunt ook verschillende bestandstypen inspecteren, zoals CSV, TSV of gecomprimeerde JSON en gescheiden bestanden door de bestandstypen op te geven als onderdeel van de queryparameters.
 
 **API formaat**
 
@@ -168,4 +168,4 @@ Een succesvol antwoord geeft de structuur van het gevraagde dossier met inbegrip
 
 ## Volgende stappen
 
-Aan de hand van deze zelfstudie hebt u uw cloudopslagsysteem verkend, het pad gevonden van het bestand dat u wilt introduceren in [!DNL Platform] en de structuur ervan bekeken. U kunt deze informatie in het volgende leerprogramma gebruiken [ gegevens van uw wolkenopslag verzamelen en het brengen in Platform ](../collect/cloud-storage.md).
+Aan de hand van deze zelfstudie hebt u uw cloudopslagsysteem verkend, het pad gevonden van het bestand dat u wilt introduceren in [!DNL Experience Platform] en de structuur ervan bekeken. U kunt deze informatie in het volgende leerprogramma gebruiken [ gegevens van uw wolkenopslag verzamelen en het brengen in Experience Platform ](../collect/cloud-storage.md).

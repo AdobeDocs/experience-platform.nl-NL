@@ -3,16 +3,16 @@ title: Intelligente Luma-voorbeelden voor opnieuw engagement
 description: Voorbeelden van video's voor het gebruik van Intelligent Re-engagement.
 feature: Use Cases
 exl-id: 635ac7ce-2059-4fed-8a4a-e32b2cd7ceea
-source-git-commit: 8be502c9eea67119dc537a5d63a6c71e0bff1697
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '60'
+source-wordcount: '61'
 ht-degree: 1%
 
 ---
 
 # Neem op intelligente wijze contact op met uw klanten: Luma-voorbeelden
 
-Leer hoe de Adobe de Intelligent re-engagement gebruikscase aan het werk met de Luma demo plaats paste, voortbouwend op de stichtingsimplementatie die in het leerprogramma van de Architect van Gegevens en van de Ingenieur van Gegevens en het leerprogramma van SDK van het Web van het Platform wordt gedocumenteerd.
+Leer hoe Adobe de Intelligent Re-engagement gebruikscase heeft aangepast om met de Luma demo-site te werken, voortbouwend op de stichtingsimplementatie die is gedocumenteerd in de zelfstudie van de Architect van Gegevens en van de Ingenieur van Gegevens en de zelfstudie van Experience Platform Web SDK.
 
 ## Implementatie
 

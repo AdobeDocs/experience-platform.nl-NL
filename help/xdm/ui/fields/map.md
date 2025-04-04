@@ -1,10 +1,10 @@
 ---
 title: Kaartvelden definiëren in de gebruikersinterface
-description: Leer hoe u een kaartveld definieert in de gebruikersinterface van het Experience Platform.
+description: Leer hoe u een kaartveld definieert in de Experience Platform-gebruikersinterface.
 exl-id: 657428a2-f184-4d7c-b657-4fc60d77d5c6
-source-git-commit: ee27fc42a1ee23ef650d320df64e5970a84d0d38
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '434'
+source-wordcount: '437'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,7 @@ Adobe Experience Platform staat u toe om de structuur van uw klassen van het Mod
 
 U kunt kaartgebieden in de Redacteur van het Schema ook bepalen om flexibele en dynamische gegevensstructuren te modelleren of een inzameling van sleutel-waardeparen op te slaan.
 
-Wanneer het bepalen van een nieuw gebied in het gebruikersinterface van het Platform (UI), gebruik **[!UICONTROL Type]** dropdown en selecteer &quot;**[!UICONTROL Map]**&quot;van de lijst.
+Wanneer u een nieuw veld in de gebruikersinterface van Experience Platform (UI) definieert, gebruikt u het vervolgkeuzemenu **[!UICONTROL Type]** en selecteert u &quot;**[!UICONTROL Map]**&quot; in de lijst.
 
 ![ de Redacteur van Schema&#39;s met het Type dropdown en benadrukte waarde van de Kaart.](../../images/ui/fields/special/map.png)
 
@@ -44,10 +44,10 @@ Zorg ervoor dat u kaart-type gebieden wanneer absoluut noodzakelijk slechts gebr
 
 >[!NOTE]
 >
->De interface van het platform heeft beperkingen in hoe het de sleutels van kaart-type gebieden kan halen. Terwijl objecttekstvelden kunnen worden uitgebreid, worden kaarten als één veld weergegeven. De gebieden van de kaart die door de Registratie API van het Schema worden gecreeerd die geen koord of geheel gegevenstypes zijn worden getoond als &quot;[!UICONTROL Complex]&quot;gegevenstypes die.
+>De gebruikersinterface van Experience Platform kent beperkingen in de manier waarop de sleutels van kaartvelden kunnen worden geëxtraheerd. Terwijl objecttekstvelden kunnen worden uitgebreid, worden kaarten als één veld weergegeven. De gebieden van de kaart die door de Registratie API van het Schema worden gecreeerd die geen koord of geheel gegevenstypes zijn worden getoond als &quot;[!UICONTROL Complex]&quot;gegevenstypes die.
 
 ## Volgende stappen
 
-Nadat u dit document hebt gelezen, kunt u nu kaartvelden definiëren in de interface van het platform. U kunt alleen klassen en veldgroepen gebruiken om velden aan schema&#39;s toe te voegen. Meer over leren hoe te om deze middelen in UI te beheren, zie de gidsen bij het creëren van en het uitgeven van [ klassen ](../resources/classes.md) en [ gebiedsgroepen ](../resources/field-groups.md).
+Nadat u dit document hebt gelezen, kunt u nu kaartvelden definiëren in de gebruikersinterface van Experience Platform. U kunt alleen klassen en veldgroepen gebruiken om velden aan schema&#39;s toe te voegen. Meer over leren hoe te om deze middelen in UI te beheren, zie de gidsen bij het creëren van en het uitgeven van [ klassen ](../resources/classes.md) en [ gebiedsgroepen ](../resources/field-groups.md).
 
 Voor meer informatie over de mogelijkheden van de [!UICONTROL Schemas] werkruimte, zie het [[!UICONTROL Schemas] overzicht van de werkruimte ](../overview.md).

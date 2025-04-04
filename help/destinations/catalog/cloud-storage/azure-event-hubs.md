@@ -2,11 +2,11 @@
 keywords: Azure-gebeurtenishub-bestemming;azure-gebeurtenishub;azure-eventhub
 title: Azure Event Hubs-verbinding
 description: Creeer een uitgaande verbinding in real time aan uw  [!DNL Azure Event Hubs]  opslag aan stroomgegevens van Experience Platform.
-badgeUltimate: label="Ultieme" type="Positive"
+badgeUltimate: label="Ultimate" type="Positive"
 exl-id: f98a389a-bce3-4a80-9452-6c7293d01de3
-source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '2032'
+source-wordcount: '2033'
 ht-degree: 0%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
-> Deze bestemming is beschikbaar slechts aan [ Adobe Real-time Customer Data Platform Ultimate ](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform.html) klanten.
+> Deze bestemming is beschikbaar slechts aan [ Adobe Real-Time Customer Data Platform Ultimate ](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform.html) klanten.
 
 [!DNL Azure Event Hubs] is een groot platform voor gegevensstreaming en de service voor het opnemen van gebeurtenissen. Het kan miljoenen gebeurtenissen per seconde ontvangen en verwerken. Gegevens die naar een gebeurtenishub worden verzonden, kunnen worden getransformeerd en opgeslagen met behulp van een realtime analyseprovider of batchadapters.
 
@@ -25,9 +25,9 @@ U kunt een real-time uitgaande verbinding maken met uw [!DNL Azure Event Hubs] -
 
 * Voor meer informatie over [!DNL Azure Event Hubs], zie de [ documentatie van Microsoft ](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-about).
 * Om met [!DNL Azure Event Hubs] programmatically te verbinden, zie de [ Streaming bestemmingen API leerprogramma ](../../api/streaming-destinations.md).
-* Zie de volgende secties voor een verbinding met [!DNL Azure Event Hubs] via de gebruikersinterface van Platform.
+* Zie de volgende secties als u verbinding wilt maken met [!DNL Azure Event Hubs] via de Experience Platform-gebruikersinterface.
 
-![ AWS Kinesis in UI ](../../assets/catalog/cloud-storage/event-hubs/catalog.png)
+![ Kinesis van AWS in UI ](../../assets/catalog/cloud-storage/event-hubs/catalog.png)
 
 ## Gebruiksscenario’s {#use-cases}
 
@@ -41,7 +41,7 @@ In deze sectie wordt beschreven welke soorten publiek u naar dit doel kunt expor
 
 | Oorsprong publiek | Ondersteund | Beschrijving |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | ✓ | Het publiek produceerde door de Dienst van de Segmentatie van het Experience Platform [ ](../../../segmentation/home.md). |
+| [!DNL Segmentation Service] | ✓ | Het publiek produceerde door de Dienst van de Segmentatie van Experience Platform [ ](../../../segmentation/home.md). |
 | Aangepaste uploads | ✓ | Het publiek [ ingevoerde ](../../../segmentation/ui/audience-portal.md#import-audience) in Experience Platform van Csv- dossiers. |
 
 {style="table-layout:auto"}
@@ -59,7 +59,7 @@ Raadpleeg de onderstaande tabel voor informatie over het exporttype en de export
 
 ## IP adres lijst van gewenste personen {#ip-address-allowlist}
 
-Om aan de veiligheid en nalevingsvereisten van klanten te voldoen, verstrekt het Experience Platform een lijst van statische IPs die u voor de [!DNL Azure Event Hubs] bestemming kunt lijsten van gewenste personen. Verwijs naar [ IP adreslijst van gewenste personen voor het stromen bestemmingen ](/help/destinations/catalog/streaming/ip-address-allow-list.md) voor de volledige lijst van IPs aan lijst van gewenste personen.
+Experience Platform biedt een lijst met statische IP&#39;s die u kunt lijsten van gewenste personen voor de [!DNL Azure Event Hubs] -bestemming om aan de beveiligings- en compatibiliteitsvereisten van klanten te voldoen. Verwijs naar [ IP adreslijst van gewenste personen voor het stromen bestemmingen ](/help/destinations/catalog/streaming/ip-address-allow-list.md) voor de volledige lijst van IPs aan lijst van gewenste personen.
 
 ## Verbinden met de bestemming {#connect}
 
@@ -161,7 +161,7 @@ Vanuit het oogpunt van profielkenmerken bepalen wijzigingen in de vier bovenstaa
 
 ## Back-up van historische gegevens {#historical-data-backfill}
 
-Wanneer u een nieuw publiek aan een bestaande bestemming toevoegt, of wanneer u een nieuw doel en kaartpubliek aan het creeert, voert het Experience Platform historische gegevens van de publiekskwalificatie naar de bestemming uit. Profielen die voor het publiek *kwalificeerden alvorens* het publiek aan de bestemming werd toegevoegd worden uitgevoerd naar de bestemming binnen ongeveer één uur.
+Wanneer u een nieuw publiek aan een bestaande bestemming toevoegt, of wanneer u een nieuw doel creeert en een publiek in kaart brengt aan het, exporteert Experience Platform historische publiekskwalificatiegegevens naar de bestemming. Profielen die voor het publiek *kwalificeerden alvorens* het publiek aan de bestemming werd toegevoegd worden uitgevoerd naar de bestemming binnen ongeveer één uur.
 
 ## Geëxporteerde gegevens {#exported-data}
 
@@ -263,12 +263,12 @@ Hieronder vindt u meer voorbeelden van geëxporteerde gegevens, afhankelijk van 
 
 ## Beperkingen en beleid opnieuw proberen {#limits-retry-policy}
 
-In 95 percent van de tijd, probeert het Experience Platform om een productietolerantie van minder dan 10 minuten voor met succes verzonden berichten met een tarief van minder dan 10.000 verzoeken per seconde voor elke dataflow aan een bestemming van HTTP aan te bieden.
+In 95 percent van de tijd, probeert Experience Platform om een productietolerantie van minder dan 10 minuten voor met succes verzonden berichten met een tarief van minder dan 10.000 verzoeken per seconde voor elke dataflow aan een bestemming van HTTP aan te bieden.
 
-In het geval van ontbroken verzoeken aan uw bestemming van HTTP API, slaat het Experience Platform de ontbroken verzoeken op en probeert tweemaal om de verzoeken naar uw eindpunt te verzenden.
+In het geval van mislukte verzoeken aan uw bestemming van HTTP API, slaat Experience Platform de ontbroken verzoeken op en probeert tweemaal om de verzoeken naar uw eindpunt te verzenden.
 
 >[!MORELIKETHIS]
 >
 >* [ verbind met Azure de Hubs van de Gebeurtenis en activeer gegevens gebruikend de Dienst API van de Stroom ](../../api/streaming-destinations.md)
->* [ de bestemming van Kinesis van AWS ](./amazon-kinesis.md)
+>* [ bestemming van AWS Kinesis ](./amazon-kinesis.md)
 >* [ de types en de categorieën van de Bestemming ](../../destination-types.md)

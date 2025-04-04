@@ -1,12 +1,12 @@
 ---
 keywords: reclame; criteria;
 title: Criteverbinding
-description: Criteo biedt vertrouwde en ondoordachte reclame de mogelijkheid om meer ervaring op te doen voor elke consument op het open internet. Met 's werelds grootste set handelsgegevens en de best-in-class AI zorgt Criteo ervoor dat elk touchpoint over de winkelreis gepersonaliseerd is om klanten met de juiste en juiste advertentie op het juiste moment te bereiken.
+description: Criteo maakt betrouwbare en effectieve reclame mogelijk om elke consument op het open internet een rijkere ervaring te bieden. Met 's werelds grootste set handelsgegevens en de best-in-class AI zorgt Criteo ervoor dat elk contactpunt tijdens het winkeltraject gepersonaliseerd is om klanten op het juiste moment met de juiste advertentie te bereiken.
 exl-id: e6f394b2-ab82-47bb-8521-1cf9d01a203b
-source-git-commit: e594e473ac78663203c9254623fe8e324985fa39
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '998'
-ht-degree: 1%
+source-wordcount: '999'
+ht-degree: 10%
 
 ---
 
@@ -18,7 +18,7 @@ ht-degree: 1%
 >
 >Deze bestemmingsschakelaar en documentatiepagina worden gecreeerd en door Criteo gehandhaafd. Voor om het even welke onderzoeken of updateverzoeken, gelieve direct contactCiteo [ ](mailto:criteoTechnicalPartnerships@criteo.com).
 
-Criteo biedt vertrouwde en ondoordachte reclame de mogelijkheid om meer ervaring op te doen voor elke consument op het open internet. Met &#39;s werelds grootste set handelsgegevens en de best-in-class AI zorgt Criteo ervoor dat elk touchpoint over de winkelreis gepersonaliseerd is om klanten met de juiste en juiste advertentie op het juiste moment te bereiken.
+Criteo maakt betrouwbare en effectieve reclame mogelijk om elke consument op het open internet een rijkere ervaring te bieden. Met &#39;s werelds grootste set handelsgegevens en de best-in-class AI zorgt Criteo ervoor dat elk contactpunt tijdens het winkeltraject gepersonaliseerd is om klanten op het juiste moment met de juiste advertentie te bereiken.
 
 ## Vereisten {#prerequisites}
 
@@ -39,7 +39,7 @@ Criteo ondersteunt de activering van identiteiten die in de onderstaande tabel w
 
 | Doelidentiteit | Beschrijving | Overwegingen |
 | --- | --- | --- |
-| `email_sha256` | E-mailadressen die met het algoritme SHA-256 worden gehasht | Adobe Experience Platform biedt ondersteuning voor zowel platte tekst- als SHA-256-gehashte e-mailadressen. Wanneer het bronveld niet-gehashte kenmerken bevat, schakelt u de optie [!UICONTROL Apply transformation] in om ervoor te zorgen dat Platform de gegevens bij activering automatisch verbergt. |
+| `email_sha256` | E-mailadressen die met het algoritme SHA-256 worden gehasht | Adobe Experience Platform biedt ondersteuning voor zowel platte tekst- als SHA-256-gehashte e-mailadressen. Wanneer het bronveld hashingkenmerken bevat, schakelt u de optie [!UICONTROL Apply transformation] in om ervoor te zorgen dat Experience Platform de gegevens automatisch hasht bij activering. |
 | `gum_id` | Criteo [!DNL GUM] cookie-id | [!DNL GUM IDs] staat cliënten toe om een correspondentie tussen hun systeem van de gebruikersidentificatie en de gebruikersidentificatie van het Comité te handhaven ([!DNL UID]). Als het id-type `gum_id` is, moet ook een extra parameter, de [!DNL GUM Caller ID] , worden opgenomen. Neem indien nodig contact op met het accountteam van uw website voor de juiste [!DNL GUM Caller ID] of voor meer informatie over deze [!DNL GUM ID] -synchronisatie. |
 
 ## Type en frequentie exporteren {#export-type-frequency}

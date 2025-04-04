@@ -3,45 +3,45 @@ audience: user
 user-guide-title: Overzicht van Adobe Experience Platform
 breadcrumb-title: Overzicht van Experience Platform
 user-guide-description: Ontdek hoe u met Experience Platform uw klanten in real time persoonlijke ervaringen kunt bieden met handleidingen, documentatie en zelfstudies.
-source-git-commit: 08a63fb854fe1c2aa83e7a7f74df4c02580e4d4c
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '309'
-ht-degree: 16%
+source-wordcount: '324'
+ht-degree: 20%
 
 ---
 
 
 # Adobe Experience Platform-overzicht {#landing}
 
-* [Overzicht van platform](home.md)
-* [Overzicht van platform (video)](video/platform-overview.md)
+* [Overzicht van Experience Platform](home.md)
+* [Experience Platform-overzicht (video)](video/platform-overview.md)
 * [Overzicht van meerdere wolken](multi-cloud.md)
 * [Edge Network- en hubvergelijking](./edge-and-hub-comparison.md)
-* [ Zelfstudies van het Platform ](https://experienceleague.adobe.com/docs/platform-learn/tutorials/overview.html)
-* [Een klantervaring aangedreven door Platform (video)](video/customer-experience.md)
-* [Achter de schermen van een klantervaring met behulp van Platform (video)](video/customer-experience-bts.md)
+* [ zelfstudies van Experience Platform ](https://experienceleague.adobe.com/docs/platform-learn/tutorials/overview.html)
+* [Een klantervaring met Experience Platform (video)](video/customer-experience.md)
+* [Achter de schermen van een klantervaring met Experience Platform (video)](video/customer-experience-bts.md)
 * Aan de slag {#getting-started}
    * [Voorbeeld van begin tot eind](end-to-end-tutorial.md)
    * [Belangrijkste mogelijkheden (video)](video/key-capabilities.md)
    * [Hoofdgebruik (video)](video/platform-use-cases.md)
-   * [Platformarchitectuur (video)](video/platform-architecture.md)
+   * [Experience Platform-architectuur (video)](video/platform-architecture.md)
    * [Rollen en projectfasen (video)](video/roles-project-phases.md)
 * Experience Platform-gebruikersinterface {#platform-ui}
-   * [Handleiding voor platforminterface](ui-guide.md)
-   * [Platform UI tour (video)](video/platform-ui.md)
+   * [Handleiding Experience Platform UI](ui-guide.md)
+   * [Rondleiding door Experience Platform UI (video)](video/platform-ui.md)
    * [Handleiding Workflows-gebruikersinterface](workflows.md)
    * [Browserondersteuning en taalondersteuning](browser-language-support.md)
    * [Zelfidentificatie-enquête](self-identification.md)
 * Experience Platform API&#39;s {#platform-apis}
-   * [Aan de slag met platform-API&#39;s](api-guide.md)
-   * [Platform-API&#39;s verifiëren en openen](api-authentication.md)
+   * [Aan de slag met Experience Platform API&#39;s](api-guide.md)
+   * [Experience Platform-API&#39;s verifiëren en openen](api-authentication.md)
    * [API-basisbeginselen](api-fundamentals.md)
-   * [Postman gebruiken met platform-API&#39;s](postman.md)
+   * [Postman gebruiken met Experience Platform API&#39;s](postman.md)
    * [ API verwijzingsdocumenten ](https://www.adobe.com/go/platform-api-reference-en)
-* Platformdocumentatie {#documentation}
+* Experience Platform-documentatie {#documentation}
    * [Overzicht](documentation/overview.md)
    * [Taalondersteuning](documentation/language-support.md)
-* Toepassingen gebaseerd op platform {#ecosystem}
+* Op Experience Platform gebaseerde toepassingen {#ecosystem}
    * [Overzicht](application-services.md)
    * [ Adobe Real-Time Customer Data Platform (alle uitgaven) ](https://experienceleague.adobe.com/docs/real-time-customer-data-platform.html)
    * [Application and Intelligent Services (video)](video/application-intelligent-services.md)
@@ -49,7 +49,7 @@ ht-degree: 16%
    * [ Adobe Journey Optimizer ](https://experienceleague.adobe.com/docs/journey-optimizer.html)
    * [Journey Orchestration](https://experienceleague.adobe.com/docs/journey-orchestration.html)
    * [[!DNL Adobe Mix Modeler]](https://experienceleague.adobe.com/docs/mix-modeler.html)
-   * [Platformintegratie met Experience Cloud (video)](video/experience-cloud-integrations.md)
+   * [Experience Platform-integratie met Experience Cloud (video)](video/experience-cloud-integrations.md)
 * Beheer, privacy en beveiliging {#governance-privacy-security}
    * [Overzicht](./governance-privacy-security/overview.md)
    * Toestemmingsbeheer {#consent}
@@ -59,7 +59,7 @@ ht-degree: 16%
       * IAB TCF 2.0 {#iab}
          * [Overzicht](./governance-privacy-security/consent/iab/overview.md)
          * [Een gegevensset configureren om toestemmings- en voorkeursgegevens vast te leggen](./governance-privacy-security/consent/iab/dataset.md)
-      * [ integreer het Web SDK van het Platform om toestemming en voorkeursgegevens te verwerken ](./governance-privacy-security/consent/sdk.md)
+      * [ integreer het Web SDK van Experience Platform om toestemmings en voorkeursgegevens te verwerken ](./governance-privacy-security/consent/sdk.md)
    * Controlelogboeken {#audit-logs}
       * [Overzicht](./governance-privacy-security/audit-logs/overview.md)
       * Audit Query API {#audit-api}

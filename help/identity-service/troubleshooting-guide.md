@@ -1,19 +1,19 @@
 ---
-keywords: Experience Platform;home;populaire onderwerpen;naamruimte voor identiteit;Naamruimte
+keywords: Experience Platform;home;populaire onderwerpen;naamruimte identiteit;Naamruimte
 solution: Experience Platform
 title: Handleiding voor probleemoplossing voor identiteitsservice
 description: Dit document bevat antwoorden op veelgestelde vragen over Adobe Experience Platform Identity Service en een gids voor probleemoplossing voor algemene fouten.
 exl-id: dac31bc3-7003-46d6-9d41-9f6fd3645c2c
-source-git-commit: 2a2e3fcc4c118925795951a459a2ed93dfd7f7d7
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '2165'
+source-wordcount: '2168'
 ht-degree: 0%
 
 ---
 
 # Handleiding voor het oplossen van problemen met identiteitsservice
 
-Dit document bevat antwoorden op veelgestelde vragen over Adobe Experience Platform [!DNL Identity Service] en een gids voor probleemoplossing voor algemene fouten. Voor vragen en het oplossen van problemen betreffende [!DNL Platform] APIs in het algemeen, zie de [ het oplossen van problemengids van Adobe Experience Platform API ](../landing/troubleshooting.md).
+Dit document bevat antwoorden op veelgestelde vragen over Adobe Experience Platform [!DNL Identity Service] en een gids voor probleemoplossing voor algemene fouten. Voor vragen en het oplossen van problemen betreffende [!DNL Experience Platform] APIs in het algemeen, zie de [ het oplossen van problemengids van Adobe Experience Platform API ](../landing/troubleshooting.md).
 
 Gegevens die één enkele klant identificeren, worden vaak gefragmenteerd over de verschillende apparaten en systemen die zij gebruiken om met uw merk in contact te komen. [!DNL Identity Service] verenigt deze gefragmenteerde identiteiten en maakt het voor de klant gemakkelijker om volledig inzicht te krijgen in het gedrag van de klant, zodat u in real-time een indrukwekkende digitale ervaring kunt opdoen. Voor meer informatie, zie het [ overzicht van de Dienst van de Identiteit ](./home.md).
 
@@ -77,11 +77,11 @@ Standaardnaamruimten zijn naamruimten die beschikbaar zijn voor alle organisatie
 
 ## Waar kan ik de lijst van identiteitsnamespaces beschikbaar voor mijn organisatie vinden?
 
-Gebruikend de [ Dienst API van de Identiteit ](https://www.adobe.io/experience-platform-apis/references/identity-service), kunt u van alle beschikbare identiteitsnamespaces voor uw organisatie een lijst maken door een verzoek van de GET tot het `/idnamespace/identities` eindpunt te richten. Zie de sectie op [ lijst beschikbare namespaces ](./api/list-namespaces.md) in het API overzicht van de Dienst van de Identiteit voor meer informatie.
+Gebruikend de [ Dienst API van de Identiteit ](https://www.adobe.io/experience-platform-apis/references/identity-service), kunt u van alle beschikbare identiteitsnamespaces voor uw organisatie een verzoek van GET aan het `/idnamespace/identities` eindpunt een lijst maken. Zie de sectie op [ lijst beschikbare namespaces ](./api/list-namespaces.md) in het API overzicht van de Dienst van de Identiteit voor meer informatie.
 
 ## Hoe maak ik een aangepaste naamruimte voor mijn organisatie?
 
-Gebruikend de [ Dienst API van de Identiteit ](https://www.adobe.io/experience-platform-apis/references/identity-service), kunt u een douaneidentiteit tot stand brengen namespace voor uw organisatie door een verzoek van de POST aan het `/idnamespace/identities` eindpunt te maken. Zie de sectie op [ creërend een douane namespace ](./api/create-custom-namespace.md) in het overzicht van de Dienst API van de Identiteit voor meer informatie.
+Gebruikend de [ Dienst API van de Identiteit ](https://www.adobe.io/experience-platform-apis/references/identity-service), kunt u een douaneidentiteit tot stand brengen namespace voor uw organisatie door een POST- verzoek aan het `/idnamespace/identities` eindpunt te maken. Zie de sectie op [ creërend een douane namespace ](./api/create-custom-namespace.md) in het overzicht van de Dienst API van de Identiteit voor meer informatie.
 
 ## Wat zijn samengestelde identiteiten en XIDs?
 
@@ -89,7 +89,7 @@ In API-aanroepen wordt naar identiteiten verwezen door hun samengestelde identit
 
 ## Hoe verwerkt de Identiteitsdienst persoonlijk identificeerbare informatie (PII)?
 
-De Dienst van de identiteit heeft standaardnamespaces om het opnemen van gehakte identiteitswaarden voor telefoonaantallen en e-mails te steunen. U bent echter verantwoordelijk voor de hash van waarden. Meer leren over het hakken van gegevens die in Platform worden opgenomen, zie de [[!DNL Data Prep]  gids van de kaartfuncties ](../data-prep/functions.md#hashing).
+De Dienst van de identiteit heeft standaardnamespaces om het opnemen van gehakte identiteitswaarden voor telefoonaantallen en e-mails te steunen. U bent echter verantwoordelijk voor de hash van waarden. Meer leren over het hakken van gegevens die in Experience Platform worden opgenomen, zie de [[!DNL Data Prep]  gids van de kaartfuncties ](../data-prep/functions.md#hashing).
 
 ## Zijn er overwegingen bij het hakken van op PII-Gebaseerde identiteiten?
 
@@ -115,7 +115,7 @@ Internal solutions|Preferred|Common
 
 ## Waarom heb ik geen toegang tot de pagina of API&#39;s van de identiteitsgrafiek?
 
-De beheerder van het Platform moet u de `view-identity-graph` toestemming verstrekken om de gegevens van de identiteitsgrafiek te bekijken. Zonder deze toestemming, zult u een toestemmingsontkend bericht op de pagina van de kijker van de identiteitsgrafiek en wanneer het roepen van Platform APIs ontvangen. Zie het [ toegangsbeheeroverzicht ](../access-control/home.md) voor meer informatie over toestemmingen.
+Uw Experience Platform-beheerder moet u de `view-identity-graph` -machtiging verschaffen om identiteitsgrafiekgegevens te kunnen bekijken. Zonder deze machtiging ontvangt u een bericht met toestemming dat is geweigerd op de pagina voor identiteitsgrafiekviewers en wanneer u Experience Platform API&#39;s oproept. Zie het [ toegangsbeheeroverzicht ](../access-control/home.md) voor meer informatie over toestemmingen.
 
 ## Problemen oplossen
 
@@ -216,7 +216,7 @@ Dit foutbericht wordt weergegeven wanneer uw organisatie niet beschikt over de j
 }
 ```
 
-In het geval van deze fout, is uw toegangstoken ongeldig. Toegangstokens verlopen elke 24 uur en moeten opnieuw worden gegenereerd om door te gaan met het gebruik van [!DNL Platform] API&#39;s. Zie het [ authentificatieleerprogramma ](https://www.adobe.com/go/platform-api-authentication-en) voor instructies bij het produceren van nieuwe toegangstokens.
+In het geval van deze fout, is uw toegangstoken ongeldig. Toegangstokens verlopen elke 24 uur en moeten opnieuw worden gegenereerd om door te gaan met het gebruik van [!DNL Experience Platform] API&#39;s. Zie het [ authentificatieleerprogramma ](https://www.adobe.com/go/platform-api-authentication-en) voor instructies bij het produceren van nieuwe toegangstokens.
 
 ### Token voor machtigingsservice is niet geldig
 
@@ -228,7 +228,7 @@ In het geval van deze fout, is uw toegangstoken ongeldig. Toegangstokens verlope
 }
 ```
 
-In het geval van deze fout, is uw toegangstoken ongeldig. Toegangstokens verlopen elke 24 uur en moeten opnieuw worden gegenereerd om door te gaan met het gebruik van [!DNL Platform] API&#39;s. Zie het [ authentificatieleerprogramma ](https://www.adobe.com/go/platform-api-authentication-en) voor instructies bij het produceren van nieuwe toegangstokens.
+In het geval van deze fout, is uw toegangstoken ongeldig. Toegangstokens verlopen elke 24 uur en moeten opnieuw worden gegenereerd om door te gaan met het gebruik van [!DNL Experience Platform] API&#39;s. Zie het [ authentificatieleerprogramma ](https://www.adobe.com/go/platform-api-authentication-en) voor instructies bij het produceren van nieuwe toegangstokens.
 
 ### Gebruikerstoken heeft geen geldige productcontext
 
@@ -276,11 +276,11 @@ Dit foutbericht wordt weergegeven wanneer uw organisatie niet beschikt over de j
 }
 ```
 
-Deze fout wordt weergegeven wanneer er een onverwachte uitzondering optreedt bij de uitvoering van een serviceaanroep [!DNL Platform] . De beste praktijken moeten uw geautomatiseerde vraag programmeren om hun verzoeken een paar keer bij een bepaald interval opnieuw te proberen wanneer het ontvangen van deze fout. Neem contact op met de systeembeheerder als het probleem zich blijft voordoen.
+Deze fout wordt weergegeven wanneer er een onverwachte uitzondering optreedt bij de uitvoering van een serviceaanroep [!DNL Experience Platform] . De beste praktijken moeten uw geautomatiseerde vraag programmeren om hun verzoeken een paar keer bij een bepaald interval opnieuw te proberen wanneer het ontvangen van deze fout. Neem contact op met de systeembeheerder als het probleem zich blijft voordoen.
 
 ## Code voor de fout met de inname in de batch
 
-[!DNL Identity Service] neemt identiteitsgegevens op uit record- en tijdreeksgegevens die naar [!DNL Platform] zijn geüpload met Batch-inname. Aangezien batch-opname een asynchroon proces is, moet u de details van een batch bekijken om fouten weer te geven. Fouten zullen zich ophopen aangezien de partij vordert tot de partij volledig is.
+[!DNL Identity Service] neemt identiteitsgegevens op uit record- en tijdreeksgegevens die naar [!DNL Experience Platform] zijn geüpload met Batch-inname. Aangezien batch-opname een asynchroon proces is, moet u de details van een batch bekijken om fouten weer te geven. Fouten zullen zich ophopen aangezien de partij vordert tot de partij volledig is.
 
 Het volgende is een lijst van foutenmeldingen met betrekking tot [!DNL Identity Service] u kunt ontmoeten wanneer het gebruiken van [ Ingestie API van de Partij ](https://developer.adobe.com/experience-platform-apis/references/batch-ingestion/).
 

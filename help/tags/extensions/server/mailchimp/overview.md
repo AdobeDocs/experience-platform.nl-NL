@@ -7,10 +7,10 @@ level: Beginner
 role: User, Developer, Admin
 topic: Integrations
 exl-id: a52870c4-10e6-45a0-a502-f48da3398f3f
-source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
 source-wordcount: '1251'
-ht-degree: 0%
+ht-degree: 4%
 
 ---
 
@@ -18,7 +18,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >  
->Adobe Experience Platform Launch is omgedoopt tot een reeks technologieën voor gegevensverzameling in Adobe Experience Platform. Diverse terminologische wijzigingen zijn als gevolg hiervan in de productdocumentatie doorgevoerd. Gelieve te verwijzen naar het volgende [ document ](https://experienceleague.adobe.com/docs/experience-platform/tags/term-updates.html) voor een geconsolideerde verwijzing van de terminologieveranderingen.
+>Adobe Experience Platform Launch is omgedoopt tot een reeks technologieën voor dataverzameling in Adobe Experience Platform.  Als gevolg hiervan zijn er verschillende terminologiewijzigingen in de productdocumentatie doorgevoerd. Raadpleeg het volgende [ document ](https://experienceleague.adobe.com/docs/experience-platform/tags/term-updates.html) voor een geconsolideerde referentie van de terminologiewijzigingen.
 
 De gebeurtenis die van de Brievenchimp [ ](../../../ui/event-forwarding/overview.md) uitbreiding door:sturen verzendt gebeurtenissen naar de Marketing API van Mailchimp die e-mails voor de marketing van Mailchimp campagnes, reizen, of transacties kan teweegbrengen.
 
@@ -101,19 +101,19 @@ Selecteer onder **[!UICONTROL Mailchimp token]** het pictogram voor het gegevens
 
 De extensie is nu geïnstalleerd en geconfigureerd voor gebruik in uw eigenschap.
 
-## Gegevensverzameling
+## Dataverzameling
 
-Wanneer het gebruiken van deze uitbreiding in a [ regel ](../../../ui/managing-resources/rules.md), zijn er verscheidene gegevenswaarden die de uitbreiding naar Mailchimp met elke gebeurtenis verzendt. Voor een typische implementatie, kunt u de [ uitbreiding van SDK van het Web van Adobe Experience Platform ](../../client/web-sdk/overview.md) vormen om die gegevens naar [!DNL Platform Edge Network] voor gebruik door de uitbreiding in de gebeurtenis te verzenden die bezit door:sturen.
+Wanneer het gebruiken van deze uitbreiding in a [ regel ](../../../ui/managing-resources/rules.md), zijn er verscheidene gegevenswaarden die de uitbreiding naar Mailchimp met elke gebeurtenis verzendt. Voor een typische implementatie, kunt u de [ uitbreiding van SDK van het Web van Adobe Experience Platform ](../../client/web-sdk/overview.md) vormen om die gegevens naar [!DNL Experience Platform Edge Network] voor gebruik door de uitbreiding in de gebeurtenis te verzenden die bezit door:sturen.
 
 De gegevens die door deze extensie worden vereist, kunnen vanuit Web SDK worden verzonden als XDM-gegevens (met behulp van het [`xdm`](/help/web-sdk/commands/sendevent/xdm.md) -object) of als niet-XDM-gegevens (met behulp van het [`data`](/help/web-sdk/commands/sendevent/data.md) -object).
 
-Als een klant bijvoorbeeld een aankoop doet of zich registreert voor een gebeurtenis op uw site, kunt u een bevestigingsbericht verzenden via Mailchimp met deze extensie. Zodra u de vereiste informatie van SDK van het Web naar de Edge Network verzendt, brengt de uitbreiding e-mail met Mailchimp in werking.
+Als een klant bijvoorbeeld een aankoop doet of zich registreert voor een gebeurtenis op uw site, kunt u een bevestigingsbericht verzenden via Mailchimp met deze extensie. Zodra u de vereiste informatie van Web SDK naar Edge Network verzendt, teweegbrengt de uitbreiding e-mail met Mailchimp in werking.
 
 ![ voeg de actieconfiguratie van de Gebeurtenis ](../../../images/extensions/server/mailchimp/action-configurations.png) toe
 
 ### Gegevenselementen
 
-Het schermafbeelding in de vorige sectie toont de gegevens die u met elke gebeurtenis van deze extensie naar Mailchimp kunt verzenden. Zodra u het Web SDK vormt om deze gegevens naar de Edge Network te verzenden, kunt u gegevenselementen in de gebeurtenis tot stand brengen door:sturen bezit zodat kan de uitbreiding tot die waarden toegang hebben.
+Het schermafbeelding in de vorige sectie toont de gegevens die u met elke gebeurtenis van deze extensie naar Mailchimp kunt verzenden. Zodra u SDK van het Web vormt om deze gegevens naar Edge Network te verzenden, kunt u gegevenselementen in de gebeurtenis tot stand brengen die bezit door:sturen zodat kan de uitbreiding tot die waarden toegang hebben.
 
 In de onderstaande tabel vindt u meer details voor elke mogelijke waarde.
 
@@ -140,7 +140,7 @@ U kunt deze extensie en de handeling Gebeurtenis toevoegen nu gebruiken om mailc
 
 ## Gegevensvalidatie
 
-Wanneer het werken met gebeurtenis die uitbreidingen door:sturen, is het [ Adobe Experience Platform Debugger ](https://chrome.google.com/webstore/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob) zeer nuttig. In de sectie Logs, onder de logboeken van Edge kunt u de verzoeken zien die door uw gebeurtenis door:sturen regels worden gemaakt nadat zij worden teweeggebracht. De volgende schermafbeeldingen tonen een verzoek dat aan Mailchimp API door de uitbreiding wordt gedaan.
+Wanneer het werken met gebeurtenis die uitbreidingen door:sturen, is [ Adobe Experience Platform Debugger ](https://chrome.google.com/webstore/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob) zeer nuttig. In de sectie Logs, onder de logboeken van Edge kunt u de verzoeken zien die door uw gebeurtenis door:sturen regels worden gemaakt nadat zij worden teweeggebracht. De volgende schermafbeeldingen tonen een verzoek dat aan Mailchimp API door de uitbreiding wordt gedaan.
 
 ![ Adobe Experience Platform Debugger ](../../../images/extensions/server/mailchimp/debugger-edge-logs.png)
 

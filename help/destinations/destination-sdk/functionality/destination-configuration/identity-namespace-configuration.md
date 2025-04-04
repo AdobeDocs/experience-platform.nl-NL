@@ -1,10 +1,10 @@
 ---
-description: Leer hoe te om de gesteunde doelidentiteiten voor bestemmingen te vormen die met Destination SDK worden gebouwd.
+description: Leer hoe u de ondersteunde doel-id's configureert voor doelen die met Destination SDK zijn gebouwd.
 title: Configuratie naamruimte voor identiteit
 exl-id: 30c0939f-b968-43db-b09b-ce5b34349c6e
-source-git-commit: 606685c1f0b607ca586e477cb9825ec551d537cc
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '913'
+source-wordcount: '920'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,7 @@ Experience Platform gebruikt naamruimten om het type van specifieke identiteiten
 
 Houd, afhankelijk van het type doel dat u maakt (streaming of op bestand gebaseerd), rekening met de volgende vereisten voor naamruimte voor identiteiten:
 
-* Wanneer het creëren van bestemmingen in real time (het stromen) door Destination SDK, naast [ vormend een partnerschema ](schema-configuration.md) waaraan de gebruikers profielattributen en identiteiten kunnen in kaart brengen, moet u *minstens één* identiteitsnamespaces ook bepalen die door uw bestemmingsplatform worden gesteund. Bijvoorbeeld, als uw bestemmingsplatform gehakt e-mail en [!DNL IDFA] goedkeurt, moet u deze twee identiteiten bepalen zoals [ verder in dit document ](#supported-parameters) wordt beschreven.
+* Wanneer het creëren van bestemmingen in real time (het stromen) door Destination SDK, naast [ vormend een partnerschema ](schema-configuration.md) waaraan de gebruikers profielattributen en identiteiten kunnen in kaart brengen, moet u *minstens één* identiteitsnamespaces ook bepalen die door uw bestemmingsplatform wordt gesteund. Bijvoorbeeld, als uw bestemmingsplatform gehakt e-mail en [!DNL IDFA] goedkeurt, moet u deze twee identiteiten bepalen zoals [ verder in dit document ](#supported-parameters) wordt beschreven.
 
   >[!IMPORTANT]
   >
@@ -31,14 +31,14 @@ Wanneer het vormen van identiteitsnamespaces voor uw bestemming, kunt u de afbee
 * Toestaan van gebruikers om [ standaardidentiteitsnamespaces ](../../../../identity-service/features/namespaces.md#standard) aan uw eigen identiteitsnaamruimten in kaart te brengen.
 * Toestaan van gebruikers om [ naamruimten van de douanetechniek ](../../../../identity-service/features/namespaces.md#manage-namespaces) aan uw eigen identiteitsnaamruimten in kaart te brengen.
 
-Om te begrijpen waar deze component in een integratie past die met Destination SDK wordt gecreeerd, zie het diagram in de [ configuratieopties ](../configuration-options.md) documentatie of zie de gids op hoe te [ gebruiken Destination SDK om een op dossier-gebaseerde bestemming ](../../guides/configure-file-based-destination-instructions.md#create-server-file-configuration) te vormen.
+Om te begrijpen waar deze component in een integratie past die met Destination SDK wordt gecreeerd, zie het diagram in de [ configuratieopties ](../configuration-options.md) documentatie of zie de gids op hoe te [ Destination SDK gebruiken om een op dossier-gebaseerde bestemming ](../../guides/configure-file-based-destination-instructions.md#create-server-file-configuration) te vormen.
 
 U kunt ondersteunde naamruimten configureren via het `/authoring/destinations` -eindpunt. Zie de volgende API verwijzingspagina&#39;s voor gedetailleerde API vraagvoorbeelden waar u de componenten kunt vormen die in deze pagina worden getoond.
 
 * [Een doelconfiguratie maken](../../authoring-api/destination-configuration/create-destination-configuration.md)
 * [Een doelconfiguratie bijwerken](../../authoring-api/destination-configuration/update-destination-configuration.md)
 
-In dit artikel worden alle ondersteunde configuratieopties voor naamruimten beschreven die u voor uw bestemming kunt gebruiken, en wordt getoond welke klanten in de interface van het platform zullen zien.
+In dit artikel worden alle ondersteunde configuratieopties voor naamruimten beschreven die u voor uw doel kunt gebruiken, en wordt aangegeven welke klanten in de gebruikersinterface van Experience Platform zullen zien.
 
 >[!IMPORTANT]
 >
@@ -62,7 +62,7 @@ Wanneer het bepalen van de doelidentiteiten die uw bestemming steunt, kunt u de 
 | `acceptsAttributes` | Boolean | Optioneel | Geeft aan of klanten standaardprofielkenmerken kunnen toewijzen aan de identiteit die u configureert. |
 | `acceptsCustomNamespaces` | Boolean | Optioneel | Geeft aan of klanten aangepaste naamruimten kunnen toewijzen aan de naamruimte van de identiteit die u configureert. |
 | `acceptedGlobalNamespaces` | - | Optioneel | Wijst op welke [ standaardidentiteitsnamespaces ](../../../../identity-service/features/namespaces.md#standard) (bijvoorbeeld, [!UICONTROL IDFA]) klanten aan de identiteit kunnen in kaart brengen die u vormt. |
-| `transformation` | String | Optioneel | Hiermee wordt het selectievakje [[!UICONTROL Apply transformation]](../../../ui/activate-segment-streaming-destinations.md#apply-transformation) weergegeven in de gebruikersinterface van het platform wanneer het bronveld een XDM-kenmerk of een naamruimte voor een aangepaste identiteit is. Gebruik deze optie om gebruikers de mogelijkheid te geven bronkenmerken bij het exporteren te hashen. Als u deze optie wilt inschakelen, stelt u de waarde in op `sha256(lower($))` . |
+| `transformation` | String | Optioneel | Hiermee wordt het selectievakje [[!UICONTROL Apply transformation]](../../../ui/activate-segment-streaming-destinations.md#apply-transformation) weergegeven in de gebruikersinterface van Experience Platform wanneer het bronveld een XDM-kenmerk of een naamruimte voor een aangepaste identiteit is. Gebruik deze optie om gebruikers de mogelijkheid te geven bronkenmerken bij het exporteren te hashen. Als u deze optie wilt inschakelen, stelt u de waarde in op `sha256(lower($))` . |
 | `requiredTransformation` | String | Optioneel | Wanneer klanten deze naamruimte voor de bronidentiteit selecteren, wordt het selectievakje [[!UICONTROL Apply transformation]](../../../ui/activate-segment-streaming-destinations.md#apply-transformation) automatisch toegepast op de toewijzing en kunnen klanten deze naamruimte niet uitschakelen. Als u deze optie wilt inschakelen, stelt u de waarde in op `sha256(lower($))` . |
 
 {style="table-layout:auto"}
@@ -85,22 +85,22 @@ Wanneer het bepalen van de doelidentiteiten die uw bestemming steunt, kunt u de 
    }
 ```
 
-U moet aangeven welke [!DNL Platform] -identiteiten klanten kunnen exporteren naar uw doel. Enkele voorbeelden zijn [!DNL Experience Cloud ID] , gehashte e-mail, apparaat-id ([!DNL IDFA], [!DNL GAID] ). Deze waarden zijn [!DNL Platform] naamruimten die klanten vanaf hun bestemming kunnen toewijzen aan naamruimten.
+U moet aangeven welke [!DNL Experience Platform] -identiteiten klanten kunnen exporteren naar uw doel. Enkele voorbeelden zijn [!DNL Experience Cloud ID] , gehashte e-mail, apparaat-id ([!DNL IDFA], [!DNL GAID] ). Deze waarden zijn [!DNL Experience Platform] naamruimten die klanten vanaf hun bestemming kunnen toewijzen aan naamruimten.
 
-Naamruimten vereisen geen 1-op-1 overeenkomst tussen [!DNL Platform] en uw doel.
-Klanten kunnen bijvoorbeeld een naamruimte [!DNL Platform] [!DNL IDFA] aan een naamruimte [!DNL IDFA] toewijzen vanuit uw doel, of ze kunnen dezelfde naamruimte [!DNL Platform] [!DNL IDFA] toewijzen aan een naamruimte [!DNL Customer ID] in uw doel.
+Naamruimten vereisen geen 1-op-1 overeenkomst tussen [!DNL Experience Platform] en uw doel.
+Klanten kunnen bijvoorbeeld een naamruimte [!DNL Experience Platform] [!DNL IDFA] aan een naamruimte [!DNL IDFA] toewijzen vanuit uw doel, of ze kunnen dezelfde naamruimte [!DNL Experience Platform] [!DNL IDFA] toewijzen aan een naamruimte [!DNL Customer ID] in uw doel.
 
 Lees meer over identiteiten in het [ overzicht van identiteitskaart namespace ](../../../../identity-service/features/namespaces.md).
 
 ## Toewijzingsoverwegingen
 
-Als klanten een naamruimte voor de bronidentiteit selecteren en geen doeltoewijzing selecteren, wordt de doeltoewijzing automatisch ingevuld met een kenmerk met dezelfde naam.
+Als klanten een naamruimte voor de bronidentiteit selecteren en geen doeltoewijzing selecteren, vult Experience Platform automatisch de doeltoewijzing met een attribuut met dezelfde naam in.
 
 ## Optionele hashing voor bronvelden configureren
 
-Klanten van Experience Platforms kunnen ervoor kiezen om gegevens in te voeren in Platform met hashing of in onbewerkte tekst. Als uw bestemmingsplatform zowel gehakt als unhashed gegevens goedkeurt, kunt u klanten de optie geven om te kiezen of Platform de waarden van brongebieden zou moeten hakken wanneer zij worden uitgevoerd naar uw bestemming.
+Experience Platform-klanten kunnen ervoor kiezen om gegevens in te voeren in Experience Platform met een hashing-indeling of in onbewerkte tekst. Als uw bestemmingsplatform zowel gehakt als unhashed gegevens goedkeurt, kunt u klanten de optie geven om te kiezen of Experience Platform de waarden van de brongebieden zou moeten hakken wanneer zij naar uw bestemming worden uitgevoerd.
 
-De configuratie hieronder laat facultatieve [ toe past transformatie ](../../../ui/activate-segment-streaming-destinations.md#apply-transformation) optie in Platform UI, in de stap van de Afbeelding toe.
+De configuratie hieronder laat facultatieve [ toe past transformatie ](../../../ui/activate-segment-streaming-destinations.md#apply-transformation) optie in Experience Platform UI, in de stap van de Afbeelding toe.
 
 ```json {line-numbers="true" highlight="5"}
 "identityNamespaces":{
@@ -124,7 +124,7 @@ Wanneer u ongehakte bronattributen aan doelattributen in kaart brengt die de bes
 
 ## Verplichte hash voor bronvelden configureren
 
-Als uw bestemming slechts gehakte gegevens goedkeurt, kunt u de uitgevoerde attributen vormen om automatisch door Platform worden gehakt. De configuratie hieronder controleert automatisch **transformatie** optie toepassen wanneer de `Email` en `Phone` identiteiten in kaart worden gebracht.
+Als uw bestemming slechts gehakte gegevens goedkeurt, kunt u de uitgevoerde attributen vormen om automatisch gehakt te worden door Experience Platform. De configuratie hieronder controleert automatisch **transformatie** optie toepassen wanneer de `Email` en `Phone` identiteiten in kaart worden gebracht.
 
 ```json {line-numbers="true" highlight="8,11"}
 "identityNamespaces":{
@@ -146,7 +146,7 @@ Als uw bestemming slechts gehakte gegevens goedkeurt, kunt u de uitgevoerde attr
 
 ## Volgende stappen {#next-steps}
 
-Na het lezen van dit artikel, zou u een beter inzicht in moeten hebben hoe te om uw identiteit namespaces voor bestemmingen te vormen die met Destination SDK worden gebouwd.
+Na het lezen van dit artikel, zou u beter inzicht in moeten hebben hoe te om uw identiteit namespaces voor bestemmingen te vormen die met Destination SDK worden gebouwd.
 
 Raadpleeg de volgende artikelen voor meer informatie over de andere doelcomponenten:
 

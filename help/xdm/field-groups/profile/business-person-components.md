@@ -2,9 +2,9 @@
 title: XDM Business Person Components-schemaveldgroep
 description: Meer informatie over de XDM Business Person Components schemagroep.
 exl-id: 965b89f4-59f5-43f4-8778-3549e15b44d4
-source-git-commit: de8e944cfec3b52d25bb02bcfebe57d6a2a35e39
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '496'
+source-wordcount: '497'
 ht-degree: 0%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 [!UICONTROL XDM Business Person Components] is een standaardgroep van het schemagebied voor de [[!DNL XDM Individual Profile]  klasse ](../../classes/individual-profile.md) die veelvoudige bronverslagen voor een persoon vangt, en andere attributen die voor persoonsegmentatie worden vereist.
 
-Wanneer een profiel voor een persoon door [ Real-Time Profiel van de Klant ](../../../profile/home.md) in de B2B- uitgave van Real-Time CDP wordt gecreeerd, kan de informatie die wordt gebruikt om dat profiel tot stand te brengen potentieel uit vele bronverslagen voortkomen. Bijvoorbeeld, als een persoon voor twee verschillende bedrijven werkt, zouden vele systemen van CRM tot een opzettelijk dubbel exemplaar van die persoon leiden zodat één exemplaar met Bedrijf A wordt verbonden, terwijl andere met Onderneming B wordt verbonden. Wanneer die gegevens naar Adobe Experience Platform worden overgebracht, wordt deze veldgroep gebruikt om die verschillende bronrecords samen te voegen tot één representatie.
+Wanneer een profiel voor een persoon door [ Real-Time Profiel van de Klant ](../../../profile/home.md) in B2B edition van Real-Time CDP wordt gecreeerd, kan de informatie die wordt gebruikt om dat profiel tot stand te brengen potentieel uit vele bronverslagen voortkomen. Bijvoorbeeld, als een persoon voor twee verschillende bedrijven werkt, zouden vele systemen van CRM tot een opzettelijk dubbel exemplaar van die persoon leiden zodat één exemplaar met Bedrijf A wordt verbonden, terwijl andere met Onderneming B wordt verbonden. Wanneer die gegevens naar Adobe Experience Platform worden overgebracht, wordt deze veldgroep gebruikt om die verschillende bronrecords samen te voegen tot één representatie.
 
 De veldgroep biedt een veld op hoofdniveau `personComponents` . Dit is een array van objecten. Elk object in de array vertegenwoordigt een andere bronrecord.
 
@@ -21,8 +21,8 @@ De veldgroep biedt een veld op hoofdniveau `personComponents` . Dit is een array
 >
 >U moet de innamepatronen volgen zoals die in de [ documentatie van bronnen ](../../../rtcdp/sources/b2b.md) worden beschreven. Andere kaartmethoden in het veld werken niet gegarandeerd.
 >
->Elk object van de array `personComponents` wordt bijvoorbeeld afzonderlijk verzonden tijdens standaard opname-patronen en vervolgens aan de array toegevoegd door Platform. Als u handmatig een array met objecten toevoegt aan de Business Person Component, wordt een fout geretourneerd.
->U zou het auto-generatienut moeten gebruiken wanneer het creëren van schema&#39;s voor uw B2B gegevens. Zie de documentatie voor instructies op hoe te om [ B2B te gebruiken namespace en schema auto-generatienut ](../../../sources/connectors/adobe-applications/marketo/marketo-namespaces.md). Als u niet het auto-generatienut gebruikt en van plan bent om uw gegevensmodel manueel in kaart te brengen, ben zeker om de documentatie over de [ klassen van de Uitgave XDM van Adobe Real-time Customer Data Platform B2B ](../../../rtcdp/schemas/b2b.md) te lezen alvorens uw gegevens in kaart te brengen.
+>Elk object van de array `personComponents` wordt bijvoorbeeld afzonderlijk verzonden tijdens standaard opname-patronen en vervolgens door Experience Platform aan de array toegevoegd. Als u handmatig een array met objecten toevoegt aan de Business Person Component, wordt een fout geretourneerd.
+>U zou het auto-generatienut moeten gebruiken wanneer het creëren van schema&#39;s voor uw B2B gegevens. Zie de documentatie voor instructies op hoe te om [ B2B te gebruiken namespace en schema auto-generatienut ](../../../sources/connectors/adobe-applications/marketo/marketo-namespaces.md). Als u niet het auto-generatienut gebruikt en van plan bent om uw gegevensmodel manueel in kaart te brengen, ben zeker om de documentatie over de [ Adobe Real-Time Customer Data Platform B2B edition XDM klassen ](../../../rtcdp/schemas/b2b.md) te lezen alvorens uw gegevens in kaart te brengen.
 >
 >Zie het [ leerprogramma van begin tot eind ](../../../rtcdp/b2b-tutorial.md) voor informatie over geadviseerde werkschema&#39;s voor B2B- gegevens.
 

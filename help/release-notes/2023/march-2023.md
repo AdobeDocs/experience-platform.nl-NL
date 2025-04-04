@@ -1,33 +1,33 @@
 ---
-title: Opmerkingen bij de release van Adobe Experience Platform, maart 2023
+title: Aanvullende informatie van maart 2023 voor Adobe Experience Platform
 description: Aanvullende informatie van maart 2023 voor Adobe Experience Platform.
 exl-id: 3f4d764a-77cd-4e4a-ae11-e97a23006a53
-source-git-commit: e300e57df998836a8c388511b446e90499185705
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '2018'
-ht-degree: 3%
+source-wordcount: '2020'
+ht-degree: 26%
 
 ---
 
-# Opmerkingen bij de release van Adobe Experience Platform
+# Aanvullende informatie voor Adobe Experience Platform
 
-**Releasedatum: donderdag 29 maart 2023**
+**Releasedatum:donderdag 29 maart 2023**
 
 Updates voor bestaande functies in Adobe Experience Platform:
 
 - [Dashboards](#dashboards)
-- [Gegevensverzameling](#data-collection)
+- [Dataverzameling](#data-collection)
 - [Gegevensvoorbereiding](#data-prep)
-- [Doelen](#destinations)
+- [Bestemmingen](#destinations)
 - [Experience Data Model](#xdm)
 - [Query-service](#query-service)
 - [Real-Time Customer Data Platform B2B Edition](#b2b)
-- [Segmenteringsservice](#segmentation)
+- [Segmentatieservice](#segmentation)
 - [Bronnen](#sources)
 
 ## Dashboards {#dashboards}
 
-Adobe Experience Platform biedt meerdere dashboards waarmee u belangrijke inzichten over de gegevens van uw organisatie kunt bekijken, zoals vastgelegd tijdens dagelijkse momentopnamen.
+Adobe Experience Platform biedt meerdere dashboards waarmee u belangrijke inzichten kunt bekijken over de gegevens van uw organisatie, zoals vastgelegd tijdens dagelijkse momentopnamen.
 
 **Nieuwe of bijgewerkte eigenschappen** {#dashboards-new-updated-features}
 
@@ -37,29 +37,29 @@ Adobe Experience Platform biedt meerdere dashboards waarmee u belangrijke inzich
 
 {style="table-layout:auto"}
 
-Voor meer informatie over dashboards, met inbegrip van hoe te om toegangstoestemmingen te verlenen en douanegidgets tot stand te brengen, begin door het [ overzicht van dashboards ](../../dashboards/home.md) te lezen.
+Voor meer informatie over dashboards, inclusief het verlenen van toegangsrechten en het maken van aangepaste widgets, raadpleegt u eerst het [overzicht van dashboards](../../dashboards/home.md).
 
-## Gegevensverzameling {#data-collection}
+## Dataverzameling {#data-collection}
 
-Adobe Experience Platform biedt een reeks technologieën waarmee u gegevens over klantervaringen aan de clientzijde kunt verzamelen en naar de Adobe Experience Platform-Edge Network kunt sturen waar deze verrijkt, getransformeerd en gedistribueerd kan worden naar Adobe- of niet-Adobe-bestemmingen.
+Adobe Experience Platform biedt een reeks technologieën waarmee u klantervaringsgegevens aan de klantzijde kunt verzamelen en deze naar het Adobe Experience Platform Edge Network kunt verzenden. Daar kunnen ze worden verrijkt, getransformeerd en gedistribueerd naar Adobe- of niet-Adobe-bestemmingen.
 
-**Nieuwe of bijgewerkte eigenschappen**
+**Nieuwe of bijgewerkte functies**
 
 | Functie | Beschrijving |
 | --- | --- |
-| Nieuwe snelstartworkflow voor Meta Conversions API (Beta) | Toegang tot nieuwe snelstartworkflows onder &quot;Aan de slag&quot; vanuit het startscherm van de gegevensverzameling. Het [ snelle beginwerkschema voor de Conversies van Meta API ](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/meta/overview.html#quick-start) laat klanten toe om gebeurtenisgegevens, server-kant aan Meta voor advertentieconversies in enkel een paar eenvoudige stappen snel te verzamelen en door:sturen. |
-| Nieuwe snelstartworkflow voor Mobile SDK (Beta) | Toegang tot nieuwe snelstartworkflows onder &quot;Aan de slag&quot; vanuit het startscherm van de gegevensverzameling. Het [ snelle beginwerkschema voor Mobiele SDK ](https://developer.adobe.com/client-sdks/documentation/) laat u toe om Mobiele SDK snel uit te voeren en fundamentele mobiele gebeurtenissen in enkel een paar eenvoudige stappen te bevestigen. |
-| [!DNL Braze] -gebeurtenis, extensie doorsturen | Met de [[!DNL Braze Track Events API] ](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/braze/overview.html) -extensie voor het doorsturen van gebeurtenissen kunt u gegevens die zijn vastgelegd in de Adobe Experience Platform-Edge Network, gebruiken en verzenden naar [!DNL Braze] in de vorm van gebeurtenissen aan de serverzijde met behulp van de [!DNL Braze] User Track API&#39;s. |
-| [!DNL Epsilon] -gebeurtenis, extensie doorsturen | Met de extensie [[!DNL Epsilon Events API] ](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/overview.html) kunt u gebeurtenissen doorsturen om gebeurtenisinformatie vast te leggen in de Adobe Experience Platform-Edge Network en deze naar [!DNL Epsilon] te verzenden met de [!DNL Epsilon] Event API. |
-| [!DNL Mixpanel] -gebeurtenis, extensie doorsturen | Met de extensie [[!DNL Mixpanel Track Events API] ](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/braze/overview.html) kunnen klanten gebeurtenissen doorsturen om gebeurtenisinformatie vast te leggen in de Adobe Experience Platform-Edge Network en deze via de API Gebeurtenissen bijhouden naar Mixpanel te verzenden. |
+| Nieuwe snelstartworkflow voor Meta Conversions API (Beta) | Krijg toegang tot nieuwe snelstartworkflows onder Aan de slag vanuit het startscherm voor gegevensverzameling. Het [ snelle beginwerkschema voor de Conversies van Meta API ](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/meta/overview.html#quick-start) laat klanten toe om gebeurtenisgegevens, server-kant aan Meta voor advertentieconversies in enkel een paar eenvoudige stappen snel te verzamelen en door:sturen. |
+| Nieuwe snelstartworkflow voor Mobile SDK (Beta) | Krijg toegang tot nieuwe snelstartworkflows onder Aan de slag vanuit het startscherm voor gegevensverzameling. Het [ snelle beginwerkschema voor Mobiele SDK ](https://developer.adobe.com/client-sdks/documentation/) laat u toe om Mobiele SDK snel uit te voeren en fundamentele mobiele gebeurtenissen in enkel een paar eenvoudige stappen te bevestigen. |
+| [!DNL Braze] -gebeurtenis, extensie doorsturen | Met de [[!DNL Braze Track Events API] ](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/braze/overview.html) -extensie voor het doorsturen van gebeurtenissen kunt u gegevens die zijn vastgelegd in de Adobe Experience Platform Edge Network, gebruiken en verzenden naar [!DNL Braze] in de vorm van gebeurtenissen aan de serverzijde met behulp van de [!DNL Braze] User Track API&#39;s. |
+| [!DNL Epsilon] -gebeurtenis, extensie doorsturen | Met de extensie [[!DNL Epsilon Events API] ](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/overview.html) kunt u gebeurtenissen doorsturen om gebeurtenisinformatie vast te leggen in de Adobe Experience Platform Edge Network en deze naar [!DNL Epsilon] te verzenden met de [!DNL Epsilon] Event-API. |
+| [!DNL Mixpanel] -gebeurtenis, extensie doorsturen | Met de extensie [[!DNL Mixpanel Track Events API] ](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/braze/overview.html) kunnen klanten gebeurtenissen doorsturen om gebeurtenisinformatie vast te leggen in de Adobe Experience Platform Edge Network en deze naar Mixpanel te verzenden met de API voor gebeurtenissen bijhouden. |
 
 {style="table-layout:auto"}
 
 ## Gegevensvoorbereiding {#data-prep}
 
-Met Data Prep kunnen gegevensengineers gegevens toewijzen, transformeren en valideren van en naar het XDM-model (Experience Data Model).
+Met gegevensvoorbereiding kunnen gegevenstechnici gegevens toewijzen, transformeren en valideren van en naar het XDM-model (Experience-datamodel).
 
-**Bijgewerkte eigenschappen**
+**Bijgewerkte functies**
 
 | Functie | Beschrijving |
 | --- | --- |
@@ -68,19 +68,19 @@ Met Data Prep kunnen gegevensengineers gegevens toewijzen, transformeren en vali
 
 Voor meer informatie over Prep van Gegevens, gelieve het [ overzicht van de Prep van Gegevens ](../../data-prep/home.md) te lezen.
 
-## Doelen {#destinations}
+## Bestemmingen {#destinations}
 
-[!DNL Destinations] zijn vooraf gebouwde integratie met bestemmingsplatforms die voor de naadloze activering van gegevens van Adobe Experience Platform toestaan. U kunt bestemmingen gebruiken om uw bekende en onbekende gegevens voor kanaalmarketing campagnes, e-mailcampagnes, gerichte reclame, en vele andere gebruiksgevallen te activeren.
+[!DNL Destinations] zijn pre-built integraties met bestemmingsplatforms die de naadloze activering van gegevens van Adobe Experience Platform mogelijk maken. U kunt bestemmingen gebruiken om uw bekende en onbekende gegevens te activeren voor cross-channel marketingcampagnes, e-mailcampagnes, gerichte advertenties en vele andere gebruiksscenario&#39;s.
 
 **Nieuwe bestemmingen** {#new-destinations}
 
-| Doel | Beschrijving |
+| Bestemming | Beschrijving |
 | ----------- | ----------- |
 | [[!DNL Adobe Commerce]  verbinding GA ](../../destinations/catalog/personalization/adobe-commerce.md) | Met de [!DNL Adobe Commerce] doelconnector (nu algemeen beschikbaar) kunt u een of meer Real-Time CDP-soorten publiek selecteren om te activeren naar uw [!DNL Adobe Commerce] -account voor een dynamische, gepersonaliseerde ervaring voor uw klanten. |
-| [[!DNL Snap Inc]  verbinding GA ](../../destinations/catalog/advertising/snap-inc.md) | Met de [!DNL Snap Inc] doelconnector (nu algemeen beschikbaar) kunnen marketers gebruikerssegmenten die in het Experience Platform zijn gemaakt, importeren in [!DNL Snapchat Ads] en deze gebruiken om hun advertenties te activeren. |
+| [[!DNL Snap Inc]  verbinding GA ](../../destinations/catalog/advertising/snap-inc.md) | Met de [!DNL Snap Inc] doelconnector (nu algemeen beschikbaar) kunnen marketers gebruikerssegmenten die in Experience Platform zijn gemaakt, importeren in [!DNL Snapchat Ads] en deze gebruiken om hun advertenties te activeren. |
 | [ (API) Oracle Eloqua-verbinding ](../../destinations/catalog/email-marketing/oracle-eloqua-api.md) | Gebruik de op API gebaseerde verbinding met [!DNL Oracle Eloqua] om campagnes te plannen en uit te voeren terwijl een persoonlijke klantervaring wordt geboden voor hun vooruitzichten in [!DNL Oracle Eloqua] . |
 | [ (Beta)  [!DNL Amazon Ads]  verbinding ](../../destinations/catalog/advertising/amazon-ads.md) | De [!DNL Amazon Ads] -integratie met Adobe Experience Platform biedt kant-en-klare integratie voor [!DNL Amazon Ads] -producten, inclusief de [!DNL Amazon DSP (ADSP)] -producten. Met behulp van de [!DNL Amazon Ads] -bestemming in Adobe Experience Platform kunnen gebruikers adverteerdersoorten definiëren voor activering en doelversie op de [!DNL Amazon DSP] . |
-| [[!DNL Marketo Measure Ultimate]  verbinding ](../../destinations/catalog/adobe/marketo-measure-ultimate.md) | [!DNL Marketo Measure] (voorheen Bizible) geeft marketeers inzicht in welke marketinginspanningen het meest effectief zijn in het aansturen van inkomsten en het maximaliseren van het rendement van investeringen voor hun bedrijf. De bestemming laat de zaken-aan-zaken (B2B) gegevensstromen van Adobe Experience Platform aan [!DNL Marketo Measure] toe. De kaart is alleen beschikbaar voor [!DNL Marketo Measure Ultimate] klanten. |
+| [[!DNL Marketo Measure Ultimate] verbinding](../../destinations/catalog/adobe/marketo-measure-ultimate.md) | [!DNL Marketo Measure] (voorheen Bizible) biedt marketers insight de mogelijkheid om marketingactiviteiten te ontplooien die de meest efficiënte manier zijn om inkomsten te genereren en het rendement van investeringen voor hun bedrijf te maximaliseren. De bestemming laat de zaken-aan-zaken (B2B) gegevensstromen van Adobe Experience Platform aan [!DNL Marketo Measure] toe. De kaart is alleen beschikbaar voor [!DNL Marketo Measure Ultimate] klanten. |
 | [ verbinding van TikTok ](../../destinations/catalog/social/tiktok.md) | Bouw een aangepast publiek op TikTok met uw gegevens voor doelgerichte advertentiecampagnes. |
 | [ verbinding van Zendesk ](../../destinations/catalog/crm/zendesk.md) | Gebruik deze bestemming om identiteiten binnen een segment als contacten binnen [!DNL Zendesk] tot stand te brengen en bij te werken. |
 
@@ -94,24 +94,24 @@ Voor meer informatie over Prep van Gegevens, gelieve het [ overzicht van de Prep
 
 {style="table-layout:auto"}
 
-**Correcties en verhogingen** {#destinations-fixes-and-enhancements}
+**Opgeloste problemen en verbeteringen** {#destinations-fixes-and-enhancements}
 
 Er wordt een foutopsporing voor PGP/GPG-codering vrijgegeven in bestandsgebaseerde doelen voor Real-Time CDP. Met deze wijziging genereren bestaande op bestanden gebaseerde doelen die momenteel codering gebruiken een bestandsnaam met een andere extensie dan voorheen.
 
 - Huidige extensie bij gebruik van codering: `filename.csv`
 - Future extension when using encryption: `filename.csv.gpg`
 
-Voor meer algemene informatie over bestemmingen, verwijs naar het [ overzicht van bestemmingen ](../../destinations/home.md).
+Voor meer algemene informatie over bestemmingen, raadpleegt u het [overzicht van bestemmingen](../../destinations/home.md).
 
-## Experience Data Model (XDM) {#xdm}
+## Experience-datamodel (XDM) {#xdm}
 
-XDM is een open-bronspecificatie die gemeenschappelijke structuren en definities (schema&#39;s) voor gegevens verstrekt die in Adobe Experience Platform worden gebracht. Door zich aan de normen van XDM te houden, kunnen alle gegevens van de klantenervaring in een gemeenschappelijke vertegenwoordiging worden opgenomen om inzichten op een snellere, meer geïntegreerde manier te leveren. U kunt waardevolle inzichten van klantenacties bereiken, klantenpubliek door segmenten bepalen, en klantenattributen voor verpersoonlijkingsdoeleinden gebruiken.
+XDM is een open-bronspecificatie die algemene structuren en definities (schema&#39;s) biedt voor gegevens die in Adobe Experience Platform worden geïmporteerd. Door de XDM-standaarden te hanteren, kunnen alle gegevens over de klantervaring worden opgenomen in een gemeenschappelijke weergave. Zo worden inzichten sneller en beter geïntegreerd verkregen. U kunt waardevolle inzichten verkrijgen uit klantacties, klantdoelgroepen definiëren via segmenten en klantkenmerken gebruiken voor personalisatiedoeleinden.
 
-**Bijgewerkte eigenschappen**
+**Bijgewerkte functies**
 
 | Functie | Beschrijving |
 | --- | --- |
-| CSV naar schemaaanbeveling | U kunt nu uw lokale bestanden uploaden om via een computer opgeleide schema&#39;s te maken die het niet nodig maken om handmatig een schema te maken. Vanuit de werkruimte van [!UICONTROL Sources] uploadt u een voorbeeld-CSV-bestand. Leeralgoritmen voor Adobe-apparaten stellen een schema voor u voor op basis van de doelvelden. Zie de [ documentatie ](../../ingestion/tutorials/map-csv/recommendations.md) voor meer informatie.&quot; |
+| CSV naar schemaaanbeveling | U kunt nu uw lokale bestanden uploaden om via een computer opgeleide schema&#39;s te maken die het niet nodig maken om handmatig een schema te maken. Upload vanuit de werkruimte van [!UICONTROL Sources] een voorbeeld-CSV-bestand en Adobe-algoritmen voor machinetaken stellen een schema voor u voor op basis van de doelvelden. Zie de [ documentatie ](../../ingestion/tutorials/map-csv/recommendations.md) voor meer informatie.&quot; |
 
 {style="table-layout:auto"}
 
@@ -147,13 +147,13 @@ XDM is een open-bronspecificatie die gemeenschappelijke structuren en definities
 
 {style="table-layout:auto"}
 
-Voor meer informatie over XDM in Platform, lees het [ XDM overzicht van het Systeem ](../../xdm/home.md).
+Voor meer informatie over XDM in Experience Platform, lees het [ XDM overzicht van het Systeem ](../../xdm/home.md).
 
 ## Query-service {#query-service}
 
-Met Query Service kunt u standaard-SQL gebruiken om query&#39;s uit te voeren op gegevens in Adobe Experience Platform [!DNL Data Lake] . U kunt zich bij om het even welke datasets van gegevens aansluiten meer en de vraagresultaten vangen als nieuwe dataset voor gebruik in rapportering, de Wetenschap van Gegevens Workspace, of voor opname in het Profiel van de Klant in real time.
+Met de Query-service kunt u standaard SQL gebruiken om query&#39;s uit te voeren op gegevens in Adobe Experience Platform [!DNL Data Lake]. U kunt alle datasets uit Data Lake samenvoegen en de queryresultaten vastleggen als een nieuwe dataset voor gebruik in rapportage, de werkruimte voor datawetenschappen, of voor opname in het Real-Time Customer Profile.
 
-**Bijgewerkte eigenschappen**
+**Bijgewerkte functies**
 
 | Functie | Beschrijving |
 | --- | --- |
@@ -161,27 +161,27 @@ Met Query Service kunt u standaard-SQL gebruiken om query&#39;s uit te voeren op
 
 {style="table-layout:auto"}
 
-Voor meer informatie over de Diensten van de Vraag, verwijs naar het [ overzicht van de Dienst van de Vraag ](../../query-service/home.md).
+Voor meer informatie over Query-services raadpleegt u het [overzicht van Query-services](../../query-service/home.md).
 
 ## Real-Time Customer Data Platform B2B Edition {#b2b}
 
-Real-Time CDP B2B Edition is gebaseerd op Real-time Customer Data Platform (Real-Time CDP) en is speciaal ontworpen voor marketers die werken in een servicemodel voor bedrijven. Het verenigt gegevens uit veelvoudige bronnen en combineert het in één enkele mening van mensen en rekeningsprofielen. Deze verenigde gegevens staan marketers toe om specifiek publiek nauwkeurig te richten en dat publiek over alle beschikbare kanalen in dienst te nemen.
+Real-Time CDP B2B edition is gebaseerd op Real-Time Customer Data Platform (Real-Time CDP) en is speciaal ontworpen voor marketers die werken in een servicemodel voor bedrijven. Het verenigt gegevens uit veelvoudige bronnen en combineert het in één enkele mening van mensen en rekeningsprofielen. Deze verenigde gegevens staan marketers toe om specifiek publiek nauwkeurig te richten en dat publiek over alle beschikbare kanalen in dienst te nemen.
 
-**Bijgewerkte eigenschappen**
+**Bijgewerkte functies**
 
 | Functie | Beschrijving |
 | --- | --- |
-| rugvoegsel | Voor een nauwkeurigere weergave van profielen in uw systeem bevat het systeem geen interne profielen meer in het totale aantal profielen of de meetwaarde voor het adresseerbare publiek voor de Real-time Customer Data Platform B2B Edition. Vanaf vandaag is het mogelijk dat het totale aantal profielen/adresseerbare publiek slechts één keer daalt. Geen van uw gegevens is gewist, dit is gewoon een wijziging in de telling. Neem contact op met uw Adobe-medewerker voor eventuele problemen |
+| rugvoegsel | Voor een nauwkeurigere weergave van profielen in uw systeem bevat het systeem geen interne profielen meer in het totale aantal profielen of de meetwaarde voor het adresseerbare publiek voor de Real-Time Customer Data Platform B2B edition. Vanaf vandaag is het mogelijk dat het totale aantal profielen/adresseerbare publiek slechts één keer daalt. Geen van uw gegevens is gewist, dit is gewoon een wijziging in de telling. Neem contact op met uw Adobe-medewerker voor eventuele problemen |
 
 {style="table-layout:auto"}
 
-Meer over de Uitgave van Real-Time CDP B2B leren, lees het [ overzicht van de Uitgave van Real-Time CDP B2B ](../../rtcdp/overview.md).
+Meer over Real-Time CDP B2B edition leren, lees het [ overzicht van B2B edition van Real-Time CDP ](../../rtcdp/overview.md).
 
-## Segmenteringsservice {#segmentation}
+## Segmentatieservice {#segmentation}
 
-[!DNL Segmentation Service] definieert een bepaalde subset van profielen door de criteria te beschrijven die een verhandelbare groep personen binnen uw klantenbasis onderscheiden. Segmenten kunnen worden gebaseerd op recordgegevens (zoals demografische informatie) of tijdreeksgebeurtenissen die klantinteracties met uw merk vertegenwoordigen.
+[!DNL Segmentation Service] definieert een specifieke subset van profielen door de criteria te beschrijven die een groep personen aan wie marketing kan worden aangeboden binnen uw klantenbestand onderscheiden. Segmenten kunnen worden gebaseerd op recordgegevens (zoals demografische informatie) of tijdreeksgebeurtenissen die klantinteracties met uw merk vertegenwoordigen.
 
-**Nieuwe of bijgewerkte eigenschappen**
+**Nieuwe of bijgewerkte functies**
 
 | Functie | Beschrijving |
 | ------- | ----------- |
@@ -189,23 +189,23 @@ Meer over de Uitgave van Real-Time CDP B2B leren, lees het [ overzicht van de Ui
 
 {style="table-layout:auto"}
 
-Voor meer informatie over [!DNL Segmentation Service], gelieve te zien het [ overzicht van de Segmentatie ](../../segmentation/home.md).
+Voor meer informatie over [!DNL Segmentation Service], raadpleegt u het [overzicht van segmentatie](../../segmentation/home.md).
 
 ## Bronnen {#sources}
 
-Adobe Experience Platform kan gegevens uit externe bronnen invoeren en stelt u in staat die gegevens te structureren, te labelen en te verbeteren met behulp van de platformservices. U kunt gegevens van een verscheidenheid van bronnen zoals de toepassingen van de Adobe, op wolk-gebaseerde opslag, derdesoftware, en uw systeem van CRM opnemen.
+Adobe Experience Platform kan gegevens uit externe bronnen invoeren en maakt het mogelijk die gegevens te structureren, te labelen en te verbeteren met behulp van Experience Platform-services. U kunt gegevens opnemen uit verschillende bronnen, zoals Adobe-toepassingen, cloudopslag, software van derden en uw CRM-systeem.
 
-Experience Platform biedt een RESTful-API en een interactieve UI waarmee u eenvoudig bronverbindingen voor verschillende gegevensproviders kunt instellen. Deze bronverbindingen staan u toe om met externe opslagsystemen en de diensten van CRM voor authentiek te verklaren en te verbinden, tijden voor ingestiingslooppas te plaatsen, en gegevensinvoer te beheren.
+Experience Platform biedt een RESTful-API en een interactieve gebruikersinterface waarmee u eenvoudig bronverbindingen voor verschillende gegevensproviders kunt instellen. Met deze bronverbindingen kunt u externe opslagsystemen en CRM-services verifiëren en er verbinding mee maken, tijden voor opnameruns instellen en de doorvoer van gegevensopname beheren.
 
-**Bijgewerkte eigenschappen**
+**Bijgewerkte functies**
 
 | Functie | Beschrijving |
 | --- | --- |
-| Beta-beschikbaarheid van [!DNL Chatlio] | De bron [!DNL Chatlio] is nu beschikbaar in bèta. Gebruik de [!DNL Chatlio] -bron om uw [!DNL Chatlio] -gebeurtenisgegevens te streamen naar het Experience Platform. Voor meer informatie, lees het [[!DNL Chatlio]  overzicht ](../../sources/connectors/marketing-automation/chatlio-webhook.md). |
-| Beta-beschikbaarheid van [!DNL Customer.io] | De bron [!DNL Customer.io] is nu beschikbaar in bèta. Gebruik de [!DNL Customer.io] -bron om de gegevens van klantgebeurtenissen te streamen naar het Experience Platform. Voor meer informatie, lees het [[!DNL Customer.io]  overzicht ](../../sources/connectors/marketing-automation/customerio-webhook.md). |
-| Beta-beschikbaarheid van [!DNL Pendo] | De bron [!DNL Pendo] is nu beschikbaar in bèta. Gebruik de [!DNL Pendo] -bron om de analysegegevens van uw product naar het Experience Platform te streamen. Voor meer informatie, lees het [[!DNL Pendo]  overzicht ](../../sources/connectors/analytics/pendo-webhook.md). |
+| Beta-beschikbaarheid van [!DNL Chatlio] | De bron [!DNL Chatlio] is nu beschikbaar in bèta. Gebruik de [!DNL Chatlio] -bron om uw [!DNL Chatlio] -gebeurtenisgegevens te streamen naar Experience Platform. Voor meer informatie, lees het [[!DNL Chatlio]  overzicht ](../../sources/connectors/marketing-automation/chatlio-webhook.md). |
+| Beta-beschikbaarheid van [!DNL Customer.io] | De bron [!DNL Customer.io] is nu beschikbaar in bèta. Gebruik de [!DNL Customer.io] -bron om de gegevens van klantgebeurtenissen te streamen naar Experience Platform. Voor meer informatie, lees het [[!DNL Customer.io]  overzicht ](../../sources/connectors/marketing-automation/customerio-webhook.md). |
+| Beta-beschikbaarheid van [!DNL Pendo] | De bron [!DNL Pendo] is nu beschikbaar in bèta. Gebruik de bron [!DNL Pendo] om de analysegegevens van uw product naar Experience Platform te streamen. Voor meer informatie, lees het [[!DNL Pendo]  overzicht ](../../sources/connectors/analytics/pendo-webhook.md). |
 | Ondersteuning voor conceptgegevensstromen | U kunt nu de Flow Service API gebruiken om uw gegevensstromen in te stellen op een conceptstatus. Tekenstromen kunnen later worden bijgewerkt en gepubliceerd met nieuwe informatie. Voor meer informatie, lees de gids bij [ plaatsend uw brongegevens als concepten ](../../sources/tutorials/api/draft.md). |
 
 {style="table-layout:auto"}
 
-Meer over bronnen leren, lees het [ overzicht van bronnen ](../../sources/home.md).
+Voor meer informatie over bronnen leest u het [overzicht van bronnen](../../sources/home.md).

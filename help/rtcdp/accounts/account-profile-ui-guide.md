@@ -1,13 +1,13 @@
 ---
 keywords: rtcdp-profiel;profielen rtcdp;rtcdp-identiteiten;rtcdp-samenvoegingsbeleid;realtime klantprofiel
 title: Gebruikersgids voor accountprofiel
-description: Door het gebruik van accountprofielen kunt u met Adobe Real-time Customer Data Platform B2B Edition rekeninggegevens uit meerdere bronnen verenigen. Deze handleiding bevat informatie over het werken met accountprofielen in de gebruikersinterface van Adobe Experience Platform.
-badgeB2B: label="B2B Edition" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
+description: Via het gebruik van accountprofielen kunt u met Adobe Real-Time Customer Data Platform B2B edition accountgegevens uit meerdere bronnen verenigen. Deze handleiding bevat informatie over het werken met accountprofielen in de gebruikersinterface van Adobe Experience Platform.
+badgeB2B: label="B2B edition" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
 feature: Profiles, B2B
 exl-id: a05e8b84-026e-4482-a288-aa25b441bd69
-source-git-commit: 96f29d5c64bb29125d8a63dd3ddb3bdedb5ebd52
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1609'
+source-wordcount: '1610'
 ht-degree: 0%
 
 ---
@@ -16,9 +16,9 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->Accountprofielen zijn alleen beschikbaar voor Real-time Customer Data Platform B2B Edition-klanten. Om meer over Real-Time CDP, met inbegrip van de eigenschappen en de functionaliteit beschikbaar aan elk vergunningstype te leren, gelieve te beginnen door het [ overzicht van Real-Time CDP ](../overview.md) te lezen.
+>Accountprofielen zijn alleen beschikbaar voor Real-Time Customer Data Platform B2B edition-klanten. Om meer over Real-Time CDP, met inbegrip van de eigenschappen en de functionaliteit beschikbaar aan elk vergunningstype te leren, gelieve te beginnen door het [ overzicht van Real-Time CDP ](../overview.md) te lezen.
 
-Met accountprofielen kunt u accountgegevens uit meerdere bronnen verenigen. Deze verenigde mening van een rekening brengt gegevens van over uw vele marketing kanalen en de diverse systemen samen die uw organisatie momenteel gebruikt om de informatie van de klantenrekening op te slaan. Dit document biedt een gids voor interactie met accountprofielen met behulp van de Real-Time CDP- en B2B Edition-mogelijkheden die beschikbaar zijn in de gebruikersinterface van Adobe Experience Platform (UI).
+Met accountprofielen kunt u accountgegevens uit meerdere bronnen verenigen. Deze verenigde mening van een rekening brengt gegevens van over uw vele marketing kanalen en de diverse systemen samen die uw organisatie momenteel gebruikt om de informatie van de klantenrekening op te slaan. Dit document biedt een handleiding voor interactie met accountprofielen met behulp van de Real-Time CDP- en B2B edition-mogelijkheden die beschikbaar zijn in de gebruikersinterface van Adobe Experience Platform (UI).
 
 Om meer over te leren hoe de rekeningsprofielen als deel van het B2B- werkschema worden gecreeerd, te zien gelieve het [ leerprogramma van begin tot eind ](../b2b-tutorial.md).
 
@@ -28,7 +28,7 @@ Selecteer **[!UICONTROL Profiles]** onder [!UICONTROL Accounts] in de linkernavi
 
 ![ het lusje van het Overzicht van de Profielen van de Rekening met Profielen in de linkernavigatie en benadrukt Overzicht.](images/b2b-account-profile-overview.png)
 
-Raadpleeg de documentatie op het dashboard van [[!UICONTROL Account Profiles]](../../dashboards/guides/account-profiles.md) voor meer informatie. Zie de documentatie over [ Real-time Customer Data Platform de gegevensmodel B2B Uitgave van de Gegevens model ](../../dashboards/data-models/cdp-insights-data-model-b2b.md) voor meer informatie over hoe uw modellen van inzichten gegevensmodellen kunnen worden gebruikt om douanegrafieken voor uw dashboards tot stand te brengen.
+Raadpleeg de documentatie op het dashboard van [[!UICONTROL Account Profiles]](../../dashboards/guides/account-profiles.md) voor meer informatie. Zie de documentatie over [ Real-time het gegevensmodel B2B edition ](../../dashboards/data-models/cdp-insights-data-model-b2b.md) van de Gegevens van de Klant voor meer informatie over hoe uw modellen van inzichten gegevensmodellen kunnen worden gebruikt om douanegrafieken voor uw dashboards tot stand te brengen.
 
 ## Configureer lead in account matching {#configure-lead-to-account-matching}
 
@@ -76,7 +76,7 @@ U kunt een bron kiezen door het keuzerondje naast de naam van de verbinding te s
 
 ![ Uitgezochte bronwerkschema ](images/b2b-account-select-source.png)
 
-Als er een bron is geselecteerd, moet u nu een **[!UICONTROL Account ID]** invoeren die betrekking heeft op de bron. Als u bijvoorbeeld een Salesforce-bron selecteert, moet u een account-id invoeren in de Salesforce-instantie om het accountprofiel weer te geven dat aan die id is gekoppeld.
+Als er een bron is geselecteerd, moet u nu een **[!UICONTROL Account ID]** invoeren die betrekking heeft op de bron. Als u bijvoorbeeld een Salesforce-bron selecteert, moet u een account-id van het Salesforce-exemplaar invoeren om het aan die id gekoppelde accountprofiel weer te geven.
 
 >[!NOTE]
 >
@@ -88,11 +88,11 @@ Als er een bron is geselecteerd, moet u nu een **[!UICONTROL Account ID]** invoe
 
 ### Bladeren op [!UICONTROL Others] {#browse-by-others}
 
-Real-Time CDP, B2B Edition ondersteunt de mogelijkheid om een directe zoekopdracht uit te voeren door u toe te staan een **[!UICONTROL Source name]** -, **[!UICONTROL Source instance]** - en **[!UICONTROL Account ID]** -account in te voeren voor een account dat u wilt bekijken. Door de bronnaam en -instantie rechtstreeks in te voeren, geeft u de context op die Experience Platform nodig heeft om de juiste accountprofielgegevens te zoeken en weer te geven.
+Real-Time CDP, B2B edition ondersteunt de mogelijkheid om een directe zoekopdracht uit te voeren door u toe te staan een **[!UICONTROL Source name]** -, **[!UICONTROL Source instance]** - en **[!UICONTROL Account ID]** -account in te voeren voor een account dat u wilt bekijken. Door de bronnaam en -instantie rechtstreeks in te voeren, geeft u de context op die Experience Platform nodig heeft om de juiste accountprofielgegevens te zoeken en weer te geven.
 
-De mogelijkheid om een directe zoekopdracht uit te voeren is handig in omstandigheden waarin een bronverbinding rechtstreeks met de gegevens niet mogelijk is. Als uw organisatie bijvoorbeeld een beleid voor gegevensbeheer heeft dat directe verbinding met een CRM verhindert, kunt u die gegevens exporteren naar een systeem voor cloudopslag en deze vervolgens in Experience Platform opnemen.
+De mogelijkheid om een directe zoekopdracht uit te voeren is handig in omstandigheden waarin een bronverbinding rechtstreeks met de gegevens niet mogelijk is. Als uw organisatie bijvoorbeeld een beleid voor gegevensbeheer heeft dat directe verbinding met een CRM voorkomt, kunt u die gegevens exporteren naar een systeem voor cloudopslag en deze vervolgens opnemen in Experience Platform.
 
-Een ander voorbeeld zou kunnen zijn dat u een transformatie op de gegevens tussen de tijd uitvoert het een systeem verlaat en Platform ingaat. U kunt de directe raadplegingsfunctionaliteit gebruiken om context voor de gegevens te verstrekken (zoals specificerend dat het gegevens van Marketo is, ondanks het feit dat het uit een emmertje van Amazon S3, bijvoorbeeld) komt zodat het systeem weet waar te zoeken, en hoe te om behoorlijk terug te geven, de gegevens.
+Een ander voorbeeld is dat u de gegevens transformeert tussen het moment dat het systeem verlaat en Experience Platform binnengaat. U kunt de directe raadplegingsfunctionaliteit gebruiken om context voor de gegevens te verstrekken (zoals specificerend dat het gegevens van Marketo is, ondanks het feit dat het uit een emmertje van Amazon S3, bijvoorbeeld) komt zodat het systeem weet waar te zoeken, en hoe te om behoorlijk terug te geven, de gegevens.
 
 Als u wilt beginnen met een directe zoekopdracht, selecteert u **[!UICONTROL Others]** in de vervolgkeuzelijst **[!UICONTROL Browse by]** en voert u vervolgens een **[!UICONTROL Source name]** , **[!UICONTROL Source instance]** en **[!UICONTROL Account ID]** in voor de account die u wilt weergeven.
 
@@ -122,19 +122,19 @@ U kunt de gegevens niet alleen in een lijst weergeven, maar u kunt ook de zoekba
 
 ## Het tabblad Personen {#people-tab}
 
-Het tabblad **[!UICONTROL People]** bevat een lijst met individuele personen die aan het account zijn gekoppeld. Deze mensen kunnen contacten en leiders van verschillende ondernemingssystemen zijn die door verschillende teams binnen uw organisatie worden beheerd, maar in Real-Time CDP, B2B Edition worden zij samen voorgesteld als één enkele lijst toelatend om een holistische mening van uw rekeningscontacten te zien.
+Het tabblad **[!UICONTROL People]** bevat een lijst met individuele personen die aan het account zijn gekoppeld. Deze mensen kunnen contacten en leiders zijn van verschillende ondernemingssystemen die door verschillende teams binnen uw organisatie worden beheerd, maar in Real-Time CDP, B2B edition worden zij samen voorgesteld als één enkele lijst toelatend u om een meer holistische mening van uw rekeningscontacten te zien.
 
 >[!NOTE]
 >
 >Op het tabblad [!UICONTROL People] wordt een lijst weergegeven met maximaal 25 personen die aan het account zijn gekoppeld. Voor rekeningen met meer dan 25 geassocieerde personen toont het systeem een willekeurige steekproef van 25 records.
 
-Naast het tonen van u een momentopname van informatie voor het contact, omvat elke vermelde persoon ook een **[!UICONTROL Profile ID]**, die een klikbare verbinding is die u toestaat om het Real-Time Profiel van de Klant voor dat individu te onderzoeken. Om meer over het bekijken van individuele klantenprofielen met betrekking tot uw rekeningen te leren, gelieve de gids voor [ het doorbladeren profielen in Real-Time CDP, B2B Uitgave ](../profile/profile-browse.md) te bezoeken.
+Naast het tonen van u een momentopname van informatie voor het contact, omvat elke vermelde persoon ook een **[!UICONTROL Profile ID]**, die een klikbare verbinding is die u toestaat om het Real-Time Profiel van de Klant voor dat individu te onderzoeken. Om meer over het bekijken van individuele klantenprofielen met betrekking tot uw rekeningen te leren, te bezoeken gelieve de gids voor [ het doorbladeren profielen in Real-Time CDP, B2B edition ](../profile/profile-browse.md).
 
 ![ Mensen tabel ](images/b2b-account-people.png)
 
 ## Tabblad Kansen {#opportunities-tab}
 
-Het tabblad **[!UICONTROL Opportunities]** bevat informatie over open en gesloten kansen voor de account. Deze kansen kunnen in Experience Platform van veelvoudige bronnen worden opgenomen, nochtans maakt de Real-Time CDP, B2B Uitgave het voor marketers gemakkelijk om al deze kansen samen te zien op één plaats.
+Het tabblad **[!UICONTROL Opportunities]** bevat informatie over open en gesloten kansen voor de account. Deze mogelijkheden kunnen vanuit meerdere bronnen in Experience Platform worden benut, maar Real-Time CDP en B2B edition maken het voor de marketeers gemakkelijk om al deze mogelijkheden op één plaats samen te zien.
 
 >[!NOTE]
 >

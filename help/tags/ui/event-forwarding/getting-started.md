@@ -3,9 +3,9 @@ title: Aan de slag met het doorsturen van gebeurtenissen
 description: Volg deze stapsgewijze zelfstudie om te beginnen met het doorsturen van gebeurtenissen in Adobe Experience Platform.
 feature: Event Forwarding
 exl-id: f82bfac9-dc2d-44de-a308-651300f107df
-source-git-commit: e9f98e1f94aa6ae2ecf29940912d296813611d4c
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '849'
+source-wordcount: '855'
 ht-degree: 7%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 7%
 
 >[!NOTE]
 >
->Het door:sturen van gebeurtenissen is een betaalde eigenschap die als deel van het aanbod van de Verbindingen van Adobe Real-time Customer Data Platform, Prime, of Ultimate inbegrepen is.
+>Het door:sturen van gebeurtenissen is een betaalde eigenschap die als deel van het aanbod van de Verbindingen van Adobe Real-Time Customer Data Platform, Prime, of Ultimate inbegrepen is.
 
 >[!NOTE]
 >
@@ -27,9 +27,9 @@ Als u gebeurtenissen wilt doorsturen in Adobe Experience Platform, moeten gegeve
 * [Edge Network Server API](/help/server-api/overview.md)
 
 >[!NOTE]
->Voor Platform Web SDK en Platform Mobile SDK is geen implementatie via tags in Adobe Experience Platform vereist. Het gebruik van labels voor de implementatie van deze SDK&#39;s wordt echter aanbevolen.
+>Experience Platform Web SDK en Experience Platform Mobile SDK vereisen geen implementatie via tags in Adobe Experience Platform. Het gebruik van labels voor de implementatie van deze SDK&#39;s wordt echter aanbevolen.
 
-Nadat u gegevens naar het netwerk van Edge verzendt, kunt u Adobe oplossingen van een knevel voorzien om gegevens daar te verzenden. Om gegevens naar een niet-Adobe oplossing te verzenden, plaats die opstelling in gebeurtenis door:sturen.
+Nadat u gegevens naar het Edge-netwerk hebt verzonden, kunt u Adobe-oplossingen in- en uitschakelen om gegevens naar dat netwerk te verzenden. Om gegevens naar een niet-Adobe oplossing te verzenden, plaats die opstelling in gebeurtenis door:sturen.
 
 ## Vereisten
 
@@ -69,7 +69,7 @@ Maak in de werkruimte **[!UICONTROL Tags]** een eigenschap van het type **[!UICO
 1. Selecteer **[!UICONTROL Save]**.
 
 Nadat u de eigenschap hebt gemaakt, gaat u naar het tabblad **[!UICONTROL Environments]** voor de nieuwe eigenschap en maakt u
-nota van milieu-IDs. Als de Adobe die in de gegevensstroom wordt gebruikt verschilt van de Adobe die bij het door:sturen van gebeurtenissen wordt gebruikt, kunt u milieu-id van het **[!UICONTROL Environments]** lusje kopiëren en kleven het wanneer het creëren van een gegevensstroom. Anders kunt u de omgeving selecteren in een vervolgkeuzemenu.
+nota van milieu-IDs. Als de Adobe-organisatie die in de gegevensstroom wordt gebruikt afwijkt van de Adobe-organisatie die wordt gebruikt bij het doorsturen van gebeurtenissen, kunt u de milieu-id kopiëren vanaf het tabblad **[!UICONTROL Environments]** en deze plakken bij het maken van een gegevensstroom. Anders kunt u de omgeving selecteren in een vervolgkeuzemenu.
 
 ## Een gegevensstroom maken
 
@@ -84,13 +84,13 @@ De beschrijving helpt om configuraties in een lijst van verscheidene configurati
 
 ## Gebeurtenis doorsturen inschakelen {#enable-event-forwarding}
 
-Daarna, vorm Edge Network om gegevens naar gebeurtenis te verzenden door:sturen, en aan andere producten van de Adobe.
+Configureer vervolgens Edge Network om gegevens naar gebeurtenissen door:sturen en naar andere Adobe-producten te verzenden.
 
 1. Selecteer in de werkruimte **[!UICONTROL Datastreams]** de eigenschap die u hebt gemaakt.
 
 1. Selecteer de ontwikkelings-, productie- of testomgeving.
 
-   Of selecteer **[!UICONTROL Switch to Advanced Mode]** en plak in een id als u gegevens naar een omgeving voor het doorsturen van gebeurtenissen buiten de Adobe org wilt verzenden. ID wordt verstrekt wanneer u een gebeurtenis creeert die bezit door:sturen.
+   Of selecteer **[!UICONTROL Switch to Advanced Mode]** en plak in een id als u gegevens naar een door:sturen-gebeurtenisomgeving buiten de Adobe-org wilt verzenden. ID wordt verstrekt wanneer u een gebeurtenis creeert die bezit door:sturen.
 
 1. Schakel de benodigde gereedschappen in en configureer deze naar wens.
 
@@ -100,17 +100,17 @@ Daarna, vorm Edge Network om gegevens naar gebeurtenis te verzenden door:sturen,
 
 Na het vormen, neem nota van milieu IDs voor het nieuwe bezit.
 
-## Vorm de uitbreiding van SDK van het Web van het Platform om gegevens naar eerder gecreeerd datastream te verzenden
+## Configureer de Experience Platform Web SDK-extensie voor het verzenden van gegevens naar de eerder gemaakte gegevensstroom
 
-Maak uw eigenschap in de **[!UICONTROL Tags]** -werkruimte en navigeer naar **[!UICONTROL Extensions]** en selecteer de extensie Web SDK Experience Platform in de catalogus om deze te configureren en installeren.
+Maak uw eigenschap in de **[!UICONTROL Tags]** -werkruimte en navigeer naar **[!UICONTROL Extensions]** en selecteer de Experience Platform Web SDK-extensie in de catalogus om deze te configureren en installeren.
 
 Zie de [ de uitbreidingsdocumentatie van SDK van het Web ](../../extensions/client/web-sdk/overview.md) voor details op configuratieopties.
 
-## Een labelregel maken om gegevens naar Platform Web SDK te verzenden
+## Een labelregel maken om gegevens naar Experience Platform Web SDK te verzenden
 
 Nadat het bovenstaande op zijn plaats is, bouwt gegevensdefinities, regels, etc., die gebeurtenis het door:sturen en markeringen gebruiken, maar die slechts één enkel verzoek van de pagina vereisen.
 
-Maak een regel voor het laden van pagina&#39;s met de extensie Platform Web SDK en het actietype &quot;Send Event&quot;:
+Maak een regel voor het laden van pagina&#39;s met de Experience Platform Web SDK-extensie en het actietype &quot;Send Event&quot;:
 
 1. Open het tabblad **[!UICONTROL Rules]** en selecteer vervolgens **[!UICONTROL Create New Rule]** .
 
@@ -120,7 +120,7 @@ Maak een regel voor het laden van pagina&#39;s met de extensie Platform Web SDK 
 
 1. Voeg een gebeurtenis toe door een extensie en een van de gebeurtenistypen te kiezen die beschikbaar zijn voor die extensie, en configureer vervolgens de instellingen voor de gebeurtenis. Selecteer bijvoorbeeld **[!UICONTROL Core - Window Loaded]** .
 
-1. Voeg een handeling toe met de extensie Platform Web SDK. Selecteer **[!UICONTROL Send Event]** in de lijst **[!UICONTROL Action Type]** de gewenste instantie (Alloy-instantie die eerder is geconfigureerd) en selecteer vervolgens een gegevenselement dat u wilt toevoegen aan het XDM-gegevensblok in de Alloy-hit.
+1. Voeg een handeling toe met de extensie Experience Platform Web SDK. Selecteer **[!UICONTROL Send Event]** in de lijst **[!UICONTROL Action Type]** de gewenste instantie (Alloy-instantie die eerder is geconfigureerd) en selecteer vervolgens een gegevenselement dat u wilt toevoegen aan het XDM-gegevensblok in de Alloy-hit.
 
 1. Laat de rest van de instellingen als standaard voor dit voorbeeld staan en selecteer **[!UICONTROL Save]** .
 
@@ -128,7 +128,7 @@ In een ander voorbeeld kunt u een regel maken die de gegevenslaag naar Edge verz
 
 ## Samenvatting
 
-Met het volgende op zijn plaats, kunt u gebeurtenis nu tot stand brengen die regels door:sturen om gegevens aan niet-Adobe bestemmingen door:sturen.
+Met het volgende op zijn plaats, kunt u gebeurtenis nu tot stand brengen die regels door:sturen om gegevens aan bestemmingen door:sturen niet-Adobe.
 
 * Het Model van de Gegevens van de ervaring schema (Noteer de naam die u het gaf.)
 * Een gebeurtenis die bezit door:sturen (houd spoor van bezitsidentiteitskaart en milieu IDs.)

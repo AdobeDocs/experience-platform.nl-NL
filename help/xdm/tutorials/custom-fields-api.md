@@ -2,9 +2,9 @@
 title: XDM-velden definiëren in de API voor schemaregister
 description: Leer hoe u verschillende velden definieert bij het maken van XDM-bronnen (Custom Experience Data Model) in de Schema Registry API.
 exl-id: d79332e3-8448-42af-b250-882bcb0f1e7d
-source-git-commit: a3140d5216857ef41c885bbad8c69d91493b619d
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1157'
+source-wordcount: '1158'
 ht-degree: 0%
 
 ---
@@ -368,7 +368,7 @@ Zorg ervoor dat u kaart-type gebieden wanneer absoluut noodzakelijk slechts gebr
 * De tijd van de reactie van [ de Dienst van de Vraag van Adobe Experience Platform ](../../query-service/home.md) degradeert van drie seconden aan tien seconden voor 100 miljoen verslagen.
 * Kaarten moeten minder dan 16 sleutels hebben of anders risico op verdere afbraak.
 
-De gebruikersinterface van het Platform heeft ook beperkingen in hoe het de sleutels van kaart-type gebieden kan halen. Terwijl objecttekstvelden kunnen worden uitgebreid, worden kaarten als één veld weergegeven.
+De gebruikersinterface van Experience Platform heeft ook beperkingen in de manier waarop de sleutels van map-type gebieden kunnen halen. Terwijl objecttekstvelden kunnen worden uitgebreid, worden kaarten als één veld weergegeven.
 
 ## Volgende stappen
 

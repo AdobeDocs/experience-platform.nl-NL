@@ -1,16 +1,16 @@
 ---
-keywords: Experience Platform;thuis;populaire onderwerpen;bronnen;connectors;bronconnectors;bronnen sdk;sdk;SDK
+keywords: Experience Platform;home;populaire onderwerpen;bronnen;connectors;bronconnectors;bronnen sdk;sdk;SDK
 title: Bronspecificaties configureren voor Self-Serve Sources (Batch SDK)
-description: Dit document biedt een overzicht van de configuraties die u moet voorbereiden om Self-Serve Sources (Batch SDK) te kunnen gebruiken.
+description: Dit document biedt een overzicht van de configuraties die u moet voorbereiden voor het gebruik van Self-Serve Sources (Batch SDK).
 exl-id: f814c883-b529-4ecc-bedd-f638bf0014b5
-source-git-commit: 1fdce7c798d8aff49ab4953298ad7aa8dddb16bd
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '2084'
+source-wordcount: '2090'
 ht-degree: 0%
 
 ---
 
-# Bronspecificatie voor Self-Serve Bronnen (Batch SDK) configureren
+# Bronspecificatie configureren voor Self-Serve Sources (Batch SDK)
 
 Source-specificaties bevatten specifieke informatie over een bron, waaronder kenmerken die betrekking hebben op de categorie van een bron, de bètastatus en het cataloguspictogram. Zij bevatten ook nuttige informatie zoals parameters URL, inhoud, kopbal, en programma. Source-specificaties beschrijven ook het schema met de parameters die nodig zijn om een bronverbinding te maken via een basisverbinding. Het schema is nodig om een bronverbinding te maken.
 
@@ -233,21 +233,21 @@ Zie [ bijlage ](#source-spec) voor een voorbeeld van een volledig-bevolkte brons
 | `sourceSpec.attributes.uiAttributes` | Geeft informatie weer over de specifieke bron voor de gebruikersinterface. |
 | `sourceSpec.attributes.uiAttributes.isBeta` | Een Booleaans kenmerk dat aangeeft of de bron meer feedback van klanten vereist om aan de functionaliteit toe te voegen. | <ul><li>`true`</li><li>`false`</li></ul> |
 | `sourceSpec.attributes.uiAttributes.category` | Definieert de categorie van de bron. | <ul><li>`advertising`</li><li>`crm`</li><li>`customer success`</li><li>`database`</li><li>`ecommerce`</li><li>`marketing automation`</li><li>`payments`</li><li>`protocols`</li></ul> |
-| `sourceSpec.attributes.uiAttributes.icon` | Definieert het pictogram dat wordt gebruikt voor de rendering van de bron in de interface van het platform. | `mailchimp-icon.svg` |
+| `sourceSpec.attributes.uiAttributes.icon` | Definieert het pictogram dat wordt gebruikt voor het renderen van de bron in de gebruikersinterface van Experience Platform. | `mailchimp-icon.svg` |
 | `sourceSpec.attributes.uiAttributes.description` | Geeft een korte beschrijving van de bron weer. |
-| `sourceSpec.attributes.uiAttributes.label` | Toont het etiket dat voor het teruggeven van de bron in Platform UI moet worden gebruikt. |
+| `sourceSpec.attributes.uiAttributes.label` | Geeft het label weer dat moet worden gebruikt voor het renderen van de bron in de gebruikersinterface van Experience Platform. |
 | `sourceSpec.attributes.spec.properties.urlParams` | Bevat informatie over de het middelweg URL, methode, en gesteunde vraagparameters. |
 | `sourceSpec.attributes.spec.properties.urlParams.properties.path` | Bepaalt de middelweg van waar te om de gegevens van te halen. | `/3.0/reports/${campaignId}/email-activity` |
 | `sourceSpec.attributes.spec.properties.urlParams.properties.method` | Bepaalt de methode van HTTP die moet worden gebruikt om het verzoek aan het middel te doen om gegevens te halen. | `GET`, `POST` |
 | `sourceSpec.attributes.spec.properties.urlParams.properties.queryParams` | Definieert de ondersteunde queryparameters die kunnen worden gebruikt om de bron-URL toe te voegen bij het indienen van een aanvraag om gegevens op te halen. **Nota**: Om het even welke user-provided parameterwaarde moet als placeholder worden geformatteerd. Bijvoorbeeld: `${USER_PARAMETER}` . | `"queryParams" : {"key" : "value", "key1" : "value1"}` wordt als volgt aan de bron-URL toegevoegd: `/?key=value&key1=value1` |
 | `sourceSpec.attributes.spec.properties.spec.properties.headerParams` | Bepaalt kopballen die in het HTTP- verzoek aan bron URL moeten worden verstrekt terwijl het halen van gegevens. | `"headerParams" : {"Content-Type" : "application/json", "x-api-key" : "key"}` |
-| `sourceSpec.attributes.spec.properties.bodyParams` | Dit attribuut kan worden gevormd om het lichaam van HTTP door een verzoek van de POST te verzenden. |
-| `sourceSpec.attributes.spec.properties.contentPath` | Bepaalt de knoop die de lijst van punten bevat die aan Platform moeten worden opgenomen. Dit kenmerk moet een geldige JSON-padsyntaxis volgen en verwijzen naar een bepaalde array. | Bekijk de [ extra middelensectie ](#content-path) voor een voorbeeld van het middel bevat binnen een inhoudsweg. |
-| `sourceSpec.attributes.spec.properties.contentPath.path` | Het pad dat wijst naar de verzamelingsrecords die moeten worden ingesloten op Platform. | `$.emails` |
+| `sourceSpec.attributes.spec.properties.bodyParams` | Dit attribuut kan worden gevormd om het lichaam van HTTP door een POST- verzoek te verzenden. |
+| `sourceSpec.attributes.spec.properties.contentPath` | Definieert het knooppunt dat de lijst bevat met items die moeten worden opgenomen in Experience Platform. Dit kenmerk moet een geldige JSON-padsyntaxis volgen en verwijzen naar een bepaalde array. | Bekijk de [ extra middelensectie ](#content-path) voor een voorbeeld van het middel bevat binnen een inhoudsweg. |
+| `sourceSpec.attributes.spec.properties.contentPath.path` | Het pad dat wijst naar de verzamelingsrecords die moeten worden ingevoegd in Experience Platform. | `$.emails` |
 | `sourceSpec.attributes.spec.properties.contentPath.skipAttributes` | Met deze eigenschap kunt u specifieke items identificeren uit de bron die is geïdentificeerd in het inhoudspad en die moeten worden uitgesloten van het opnemen van inhoud. | `[total_items]` |
 | `sourceSpec.attributes.spec.properties.contentPath.keepAttributes` | Met deze eigenschap kunt u expliciet de afzonderlijke kenmerken opgeven die u wilt behouden. | `[total_items]` |
 | `sourceSpec.attributes.spec.properties.contentPath.overrideWrapperAttribute` | Met deze eigenschap kunt u de waarde overschrijven van de kenmerknaam die u in `contentPath` hebt opgegeven. | `email` |
-| `sourceSpec.attributes.spec.properties.explodeEntityPath` | Met deze eigenschap kunt u twee arrays samenvoegen en de brongegevens transformeren naar de Platform-bron. |
+| `sourceSpec.attributes.spec.properties.explodeEntityPath` | Met deze eigenschap kunt u twee arrays samenvoegen en de brongegevens transformeren naar de Experience Platform-resource. |
 | `sourceSpec.attributes.spec.properties.explodeEntityPath.path` | Het pad dat wijst naar de verzamelingsrecords die u wilt afvlakken. | `$.email.activity` |
 | `sourceSpec.attributes.spec.properties.explodeEntityPath.skipAttributes` | Dit bezit staat u toe om specifieke punten van het middel te identificeren die in de entiteitweg worden geïdentificeerd die van worden uitgesloten. | `[total_items]` |
 | `sourceSpec.attributes.spec.properties.explodeEntityPath.keepAttributes` | Met deze eigenschap kunt u expliciet de afzonderlijke kenmerken opgeven die u wilt behouden. | `[total_items]` |
@@ -509,7 +509,7 @@ Met het paginatype `PAGE` kunt u de retourgegevens doorlopen op het aantal pagin
 
 >[!TAB  niets ]
 
-Het paginatietype `NONE` kan worden gebruikt voor bronnen die geen van de beschikbare paginatypen ondersteunen. De bronnen die het pagineringstype van `NONE` gebruiken keren eenvoudig alle terugwinnbare verslagen terug wanneer een verzoek van de GET wordt gemaakt.
+Het paginatietype `NONE` kan worden gebruikt voor bronnen die geen van de beschikbare paginatypen ondersteunen. De bronnen die het pagineringstype van `NONE` gebruiken keren eenvoudig alle terugwinnbare verslagen terug wanneer een GET verzoek wordt gemaakt.
 
 ```json
 "paginationParams": {
@@ -556,7 +556,7 @@ Zodra u uw geavanceerde planning vormt, moet u dan naar uw `scheduleParams` in d
 
 ### Een aangepast schema toevoegen om de dynamische kenmerken van uw bron te definiëren
 
-U kunt een aangepast schema aan uw `sourceSpec` opnemen om alle kenmerken te definiëren die nodig zijn voor uw bron, inclusief alle dynamische kenmerken die u nodig hebt. U kunt de bijbehorende verbindingsspecificatie van uw bron bijwerken door een PUT aan te vragen bij het `/connectionSpecs` -eindpunt van de [!DNL Flow Service] API, terwijl u uw aangepaste schema opgeeft in de sectie `sourceSpec` van uw verbindingsspecificatie.
+U kunt een aangepast schema aan uw `sourceSpec` opnemen om alle kenmerken te definiëren die nodig zijn voor uw bron, inclusief alle dynamische kenmerken die u nodig hebt. U kunt de bijbehorende verbindingsspecificatie van uw bron bijwerken door een PUT-aanvraag in te dienen bij het `/connectionSpecs` -eindpunt van de [!DNL Flow Service] API en het aangepaste schema op te geven in de sectie `sourceSpec` van uw verbindingsspecificatie.
 
 Hieronder ziet u een voorbeeld van een aangepast schema dat u kunt toevoegen aan de verbindingsspecificatie van uw bron:
 
@@ -659,4 +659,4 @@ Hieronder ziet u een voorbeeld van een aangepast schema dat u kunt toevoegen aan
 
 ## Volgende stappen
 
-Met uw bevolkte bronspecificaties, kunt u te werk gaan om de verkennende specificaties voor de bron te vormen die u aan Platform wilt integreren. Zie het document bij [ het vormen onderzoeken specificaties ](./explorespec.md) voor meer informatie.
+Met uw bevolkte bronspecificaties, kunt u te werk gaan om de verkennende specificaties voor de bron te vormen die u aan Experience Platform wilt integreren. Zie het document bij [ het vormen onderzoeken specificaties ](./explorespec.md) voor meer informatie.

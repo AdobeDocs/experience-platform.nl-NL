@@ -3,7 +3,7 @@ keywords: e-mail;E-mail;e-mail;e-mailbestemmingen;adobe campagne;campagne
 title: Adobe Campaign-verbinding
 description: Adobe Campaign is een reeks oplossingen die u helpen campagnes op al uw online en offline kanalen personaliseren en te leveren.
 exl-id: 0de91738-8f56-41f5-8745-9b14b15db76a
-source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '843'
 ht-degree: 0%
@@ -24,7 +24,7 @@ In deze sectie wordt beschreven welke soorten publiek u naar dit doel kunt expor
 
 | Oorsprong publiek | Ondersteund | Beschrijving |
 | ---------|----------|----------|
-| [!DNL Segmentation Service] | ✓ | Het publiek produceerde door de Dienst van de Segmentatie van het Experience Platform [ ](../../../segmentation/home.md). |
+| [!DNL Segmentation Service] | ✓ | Het publiek produceerde door de Dienst van de Segmentatie van Experience Platform [ ](../../../segmentation/home.md). |
 | Aangepaste uploads | ✓ | Het publiek [ ingevoerde ](../../../segmentation/ui/audience-portal.md#import-audience) in Experience Platform van Csv- dossiers. |
 
 {style="table-layout:auto"}
@@ -42,7 +42,7 @@ Raadpleeg de onderstaande tabel voor informatie over het exporttype en de export
 
 ## IP adres lijst van gewenste personen {#allow-list}
 
-Wanneer vestiging e-mail marketing bestemmingen met de opslag van SFTP, adviseert de Adobe dat u bepaalde IP waaiers aan uw lijst van gewenste personen toevoegt.
+Bij het opzetten van e-mail marketing bestemmingen met de opslag van SFTP, adviseert Adobe dat u bepaalde IP waaiers aan uw lijst van gewenste personen toevoegt.
 
 Verwijs naar [ IP adreslijst van gewenste personen voor bestemmingen SFTP ](../cloud-storage/ip-address-allow-list.md) als u Adobe IPs aan uw lijst van gewenste personen moet toevoegen.
 
@@ -74,8 +74,8 @@ Terwijl [ vestiging ](../../ui/connect-destination.md) deze bestemming, u de vol
 * U kunt desgewenst een openbare sleutel met RSA-indeling toevoegen om versleuteling met PGP/GPG toe te voegen aan geëxporteerde bestanden onder de sectie **[!UICONTROL Key]** . De openbare sleutel moet als een [!DNL Base64] gecodeerde tekenreeks worden geschreven.
 * **[!UICONTROL Name]**: Kies een relevante naam voor de bestemming.
 * **[!UICONTROL Description]**: voer een beschrijving in voor uw doel.
-* **[!UICONTROL Bucket Name]**: *voor S3 verbindingen*. Voer de locatie van uw S3-emmertje in waar [!DNL Platform] uw exportgegevens als CSV-bestanden indient.
-* **[!UICONTROL Folder Path]**: geef het pad op uw opslaglocatie op waar [!DNL Platform] uw exportgegevens als CSV-bestanden indient.
+* **[!UICONTROL Bucket Name]**: *voor S3 verbindingen*. Voer de locatie van uw S3-emmertje in waar [!DNL Experience Platform] uw exportgegevens als CSV-bestanden indient.
+* **[!UICONTROL Folder Path]**: geef het pad op uw opslaglocatie op waar [!DNL Experience Platform] uw exportgegevens als CSV-bestanden indient.
 * **[!UICONTROL Container]**: *voor verbindingen Blob*. De container die het blob-pad voor uw map bevat, bevindt zich in.
 * **[!UICONTROL File Format]**: Selecteer **CSV** om Csv- dossiers naar uw opslagplaats uit te voeren.
 
@@ -97,11 +97,11 @@ Zie [ publieksgegevens aan de uitvoerbestemmingen van het partijprofiel ](../../
 
 ### Doelkenmerken {#destination-attributes}
 
-Wanneer het activeren van publiek aan deze bestemming, adviseert de Adobe dat u een uniek herkenningsteken van uw [ verenigingsschema ](../../../profile/home.md#profile-fragments-and-union-schemas) selecteert. Selecteer de unieke id en andere XDM-velden die u naar het doel wilt exporteren. Voor meer informatie, verwijs naar [ beste praktijken wanneer het activeren van publiek aan e-mail marketing bestemmingen ](overview.md#best-practices).
+Wanneer het activeren van publiek aan deze bestemming, adviseert Adobe dat u een uniek herkenningsteken van uw [ verenigingsschema ](../../../profile/home.md#profile-fragments-and-union-schemas) selecteert. Selecteer de unieke id en andere XDM-velden die u naar het doel wilt exporteren. Voor meer informatie, verwijs naar [ beste praktijken wanneer het activeren van publiek aan e-mail marketing bestemmingen ](overview.md#best-practices).
 
 ## Geëxporteerde gegevens {#exported-data}
 
-Voor [!DNL Adobe Campaign] -doelen maakt [!DNL Platform] een `.csv` -bestand in de opslaglocatie die u hebt opgegeven. Voor meer informatie over de dossiers, zie [ sectie van de publiekactivering ](../../ui/activate-batch-profile-destinations.md#verify) in het leerprogramma van de publiekactivering verifiëren.
+Voor [!DNL Adobe Campaign] -doelen maakt [!DNL Experience Platform] een `.csv` -bestand in de opslaglocatie die u hebt opgegeven. Voor meer informatie over de dossiers, zie [ sectie van de publiekactivering ](../../ui/activate-batch-profile-destinations.md#verify) in het leerprogramma van de publiekactivering verifiëren.
 
 ## Gegevensimport instellen in Adobe Campaign {#import-data-into-campaign}
 
@@ -111,6 +111,6 @@ Voor [!DNL Adobe Campaign] -doelen maakt [!DNL Platform] een `.csv` -bestand in 
 >* U moet uw geëxporteerde segmenten in Adobe Campaign plannen, importeren en toewijzen met behulp van [!DNL Campaign] -workflows. Verwijs naar [ Vestiging een terugkomende invoer ](https://experienceleague.adobe.com/docs/campaign-classic/using/automating-with-workflows/use-cases/data-management/recurring-import-workflow.html) in de documentatie van Adobe Campaign Classic en [ Ongeveer de activiteiten van het gegevensbeheer ](https://experienceleague.adobe.com/docs/campaign-standard/using/managing-processes-and-data/data-management-activities/about-data-management-activities.html) in de documentatie van Adobe Campaign Standard.
 >* De voorkeursmethode voor het verzenden van gegevens naar Adobe Campaign is via [!DNL Amazon S3] of [!DNL Azure Blob] .
 
-Nadat u [!DNL Platform] hebt verbonden met uw [!DNL Amazon S3] - of [!DNL Azure Blob] -opslag, moet u de gegevensimport instellen vanaf uw opslaglocatie naar Adobe Campaign. Raadpleeg de volgende Adobe Campaign-documentatiepagina&#39;s voor meer informatie hierover:
+Nadat u [!DNL Experience Platform] hebt verbonden met uw [!DNL Amazon S3] - of [!DNL Azure Blob] -opslag, moet u de gegevensimport instellen vanaf uw opslaglocatie naar Adobe Campaign. Raadpleeg de volgende Adobe Campaign-documentatiepagina&#39;s voor meer informatie hierover:
 * [ krijgt begonnen met gegevensimport en de uitvoer ](https://experienceleague.adobe.com/docs/campaign-classic/using/getting-started/importing-and-exporting-data/get-started-data-import-export.html) en [ het laden van Gegevens (dossier) ](https://experienceleague.adobe.com/docs/campaign-classic/using/automating-with-workflows/action-activities/data-loading--file-.html) in de documentatie van Adobe Campaign Classic.
 * [ krijgt begonnen met processen en gegevensbeheer ](https://experienceleague.adobe.com/docs/campaign-standard/using/managing-processes-and-data/get-started-workflows.html) en [ dossier van de Lading ](https://experienceleague.adobe.com/docs/campaign-standard/using/managing-processes-and-data/data-management-activities/load-file.html) in de documentatie van Adobe Campaign Standard.

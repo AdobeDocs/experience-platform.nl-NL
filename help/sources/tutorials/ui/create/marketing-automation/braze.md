@@ -4,9 +4,9 @@ description: Leer hoe u een gegevensstroom maakt voor uw Braze-account met de ge
 last-substantial-update: 2024-01-30T00:00:00Z
 badge: Beta
 exl-id: 6e94414a-176c-4810-80ff-02cf9e797756
-source-git-commit: 59600165328181e41750b9b2a1f4fbf162dd1df5
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '969'
+source-wordcount: '971'
 ht-degree: 0%
 
 ---
@@ -45,9 +45,9 @@ Als u reeds een [!DNL Braze] verbinding hebt, kunt u de rest van dit document ov
 
 >[!TIP]
 >
->U moet een XDM-schema (Experience Data Model) maken als dit de eerste keer is dat u een [!DNL Braze Currents] -verbinding maakt. Als u reeds een schema voor [!DNL Braze Currents] hebt gecreeerd, dan kunt u deze stap overslaan en aan [ verdergaan verbindend uw rekening met Experience Platform ](#connect).
+>U moet een XDM-schema (Experience Data Model) maken als dit de eerste keer is dat u een [!DNL Braze Currents] -verbinding maakt. Als u reeds een schema voor [!DNL Braze Currents] hebt gecreeerd, dan kunt u deze stap overslaan en aan [ te werk gaan verbindend uw rekening met Experience Platform ](#connect).
 
-Gebruik in de gebruikersinterface van het platform de linkernavigatie en selecteer vervolgens **[!UICONTROL Schemas]** om de werkruimte van [!UICONTROL Schemas] te openen. Selecteer vervolgens **[!UICONTROL Create schema]** en selecteer **[!UICONTROL Experience Event]** . Selecteer **[!UICONTROL Next]** om door te gaan.
+In de gebruikersinterface van Experience Platform gebruikt u de linkernavigatie en selecteert u **[!UICONTROL Schemas]** om de werkruimte van [!UICONTROL Schemas] te openen. Selecteer vervolgens **[!UICONTROL Create schema]** en selecteer **[!UICONTROL Experience Event]** . Selecteer **[!UICONTROL Next]** om door te gaan.
 
 ![ A voltooid schema.](../../../../images/tutorials/create/braze/schema.png)
 
@@ -55,13 +55,13 @@ Geef een naam en beschrijving op voor uw schema. Gebruik vervolgens het deelvens
 
 Voor meer informatie over schema&#39;s, lees de gids aan [ creërend schema&#39;s in UI ](../../../../../xdm/tutorials/create-schema-ui.md).
 
-## Sluit uw [!DNL Braze] -account aan op het Experience Platform {#connect}
+## Sluit uw [!DNL Braze] -account aan op Experience Platform {#connect}
 
-Selecteer in de gebruikersinterface van het platform de optie **[!UICONTROL Sources]** in de linkernavigatie voor toegang tot de werkruimte van [!UICONTROL Sources] . U kunt de juiste categorie selecteren in de catalogus aan de linkerkant van het scherm. U kunt ook de specifieke bron vinden waarmee u wilt werken met de zoekoptie.
+Selecteer in de gebruikersinterface van Experience Platform de optie **[!UICONTROL Sources]** in de linkernavigatie voor toegang tot de werkruimte van [!UICONTROL Sources] . U kunt de juiste categorie selecteren in de catalogus aan de linkerkant van het scherm. U kunt ook de specifieke bron vinden waarmee u wilt werken met de zoekoptie.
 
 Onder de *categorie van de Automatisering van de Marketing*, selecteer **[!UICONTROL Braze Currents]**, en selecteer dan **[!UICONTROL Add data]**.
 
-![ de broncatalogus op het Experience Platform UI met de Bron van de Stroom geselecteerde Studenten.](../../../../images/tutorials/create/braze/catalog.png)
+![ de broncatalogus op Experience Platform UI met de Bron van de Stroom geselecteerde Bron van Huidige.](../../../../images/tutorials/create/braze/catalog.png)
 
 Daarna, upload het verstrekte [ de steekproefdossier van de Studenten van de Bodemo ](https://github.com/Appboy/currents-examples/blob/master/sample-data/Adobe/adobe_examples.json). Dit bestand bevat alle mogelijke velden die door Braze kunnen worden verzonden als onderdeel van een gebeurtenis.
 
@@ -84,7 +84,7 @@ Zodra het nieuwe berekende gebied wordt toegevoegd, uitgezocht **[!UICONTROL Map
 
 >[!IMPORTANT]
 >
->Tijdstempels voor rasteren worden niet uitgedrukt in milliseconden, maar in seconden. Als u de tijdstempels in het Experience Platform nauwkeurig wilt weergeven, moet u berekende velden maken in milliseconden. Een berekening van &quot;tijd * 1000&quot; wordt correct omgezet in milliseconden, die geschikt zijn voor toewijzing aan een tijdstempelveld binnen Experience Platform.
+>Tijdstempels voor rasteren worden niet uitgedrukt in milliseconden, maar in seconden. Als u de tijdstempels in Experience Platform op de juiste wijze wilt laten weergeven, moet u berekende velden maken in milliseconden. Een berekening van &quot;tijd * 1000&quot; wordt correct omgezet in milliseconden, die geschikt zijn voor toewijzing aan een tijdstempelveld binnen Experience Platform.
 >
 >![ Creërend een berekend gebied voor timestamp ](../../../../images/tutorials/create/braze/create-calculated-field.png)
 
@@ -94,16 +94,16 @@ Selecteer **[!UICONTROL Next]** als u klaar bent. Gebruik de overzichtspagina om
 
 ### Vereiste referenties verzamelen
 
-Zodra uw verbinding wordt gecreeerd, moet u de volgende credentiewaarden verzamelen, die u dan in het Braze Dashboard zult verstrekken om gegevens naar Experience Platform te verzenden. Voor meer informatie, leest de [!DNL Braze] [ gids bij het navigeren aan Huidige heden ](https://www.braze.com/docs/user_guide/data_and_analytics/braze_currents/setting_up_currents/#step-2-navigate-to-currents).
+Nadat u de verbinding hebt gemaakt, moet u de volgende referentie-waarden verzamelen. U geeft deze waarden op in het dashboard Braze om gegevens naar Experience Platform te verzenden. Voor meer informatie, leest de [!DNL Braze] [ gids bij het navigeren aan Huidige heden ](https://www.braze.com/docs/user_guide/data_and_analytics/braze_currents/setting_up_currents/#step-2-navigate-to-currents).
 
 | Veld | Beschrijving |
 | --- | --- |
-| Client-id | De client-id die aan de bron van het Experience Platform is gekoppeld. |
-| Clientgeheim | Het clientgeheim dat aan de bron van het Experience Platform is gekoppeld. |
-| Tenant-id | De huurder-id die aan uw bron van het Experience Platform is gekoppeld. |
-| Naam sandbox | De sandbox die aan de bron van het Experience Platform is gekoppeld. |
-| Dataflow-id | De gegevensstroom-id die aan de bron van het Experience Platform is gekoppeld. |
-| Streaming eindpunt | Het streamingeindpunt dat aan de bron van het Experience Platform is gekoppeld. **Nota**: [!DNL Braze] zet automatisch dit in het batch die eindpunt stromen om. |
+| Client-id | De client-id die aan uw Experience Platform-bron is gekoppeld. |
+| Clientgeheim | Het clientgeheim dat aan uw Experience Platform-bron is gekoppeld. |
+| Tenant-id | De huurder-id die aan uw Experience Platform-bron is gekoppeld. |
+| Naam sandbox | De sandbox die aan uw Experience Platform-bron is gekoppeld. |
+| Dataflow-id | De gegevensstroom-id die aan uw Experience Platform-bron is gekoppeld. |
+| Streaming eindpunt | Het streamingeindpunt dat aan uw Experience Platform-bron is gekoppeld. **Nota**: [!DNL Braze] zet automatisch dit in het batch die eindpunt stromen om. |
 
 ### Configureer [!DNL Braze Currents] om gegevens te streamen naar uw gegevensbron
 
@@ -111,4 +111,4 @@ Binnen [!DNL Braze Dashboard], navigeer aan de Integraties van de Partner **->**
 
 ## Volgende stappen
 
-Aan de hand van deze zelfstudie hebt u een verbinding tot stand gebracht met uw [!DNL Braze] -account. U kunt nu aan het volgende leerprogramma verdergaan en [ een dataflow vormen om het systeemgegevens van de marketing automatisering in  [!DNL Platform]](../../dataflow/marketing-automation.md) te brengen.
+Aan de hand van deze zelfstudie hebt u een verbinding tot stand gebracht met uw [!DNL Braze] -account. U kunt nu aan het volgende leerprogramma verdergaan en [ een dataflow vormen om het systeemgegevens van de marketing automatisering in  [!DNL Experience Platform]](../../dataflow/marketing-automation.md) te brengen.

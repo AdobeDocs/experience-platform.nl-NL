@@ -1,23 +1,23 @@
 ---
 title: Gegevenssignalen bijhouden om de levenswaarde van uw klant te genereren
-description: Deze gids verstrekt een demonstratie van begin tot eind op hoe te om Gegevens Distiller en user-defined dashboards met Real-time Customer Data Platform te gebruiken om de waarde van het klantenleven te meten en te visualiseren.
+description: Deze gids verstrekt een demonstratie van begin tot eind op hoe te om Gegevens Distiller en user-defined dashboards met Real-Time Customer Data Platform te gebruiken om de waarde van het klantenleven te meten en te visualiseren.
 exl-id: c74b5bff-feb2-4e21-9ee4-1e0973192570
-source-git-commit: ddf886052aedc025ff125c03ab63877cb049583d
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1263'
+source-wordcount: '1266'
 ht-degree: 0%
 
 ---
 
 # De gegevenssignalen van het spoor om uw waarde van het klantenleven te produceren
 
-U kunt Real-time Customer Data Platform gebruiken om de waarde van het klantenleven (CLV) te volgen en die metrisch met user-defined dashboards te visualiseren. Door het gebruik van Gegevens Distiller en user-defined dashboards, kunt u meten hoe waardevol een klant aan uw bedrijf over de gehele lijn van uw verhouding is. Kennis van CLV kan u helpen de strategieën van uw zaken ontwikkelen om nieuwe klanten te verwerven terwijl het handhaven van bestaande degenen en het handhaven van winstmarges.
+U kunt Real-Time Customer Data Platform gebruiken om de waarde van het klantenleven (CLV) te volgen en die metrisch met user-defined dashboards te visualiseren. Door het gebruik van Gegevens Distiller en user-defined dashboards, kunt u meten hoe waardevol een klant aan uw bedrijf over de gehele lijn van uw verhouding is. Kennis van CLV kan u helpen de strategieën van uw zaken ontwikkelen om nieuwe klanten te verwerven terwijl het handhaven van bestaande degenen en het handhaven van winstmarges.
 
 De volgende infografische weergave toont de cyclus van gegevensverzameling, manipulatie, analyse en actuatie die krachtige gegevens genereert om uw marketingcampagnes te verbeteren.
 
 ![ de ronde reis infographic van gegevens van observatie aan analyse aan actie.](../images/use-cases/infographic-use-case-cycle.png)
 
-Dit gebruiksgeval van begin tot eind toont aan hoe de gegevenssignalen kunnen worden gevangen en worden gewijzigd om de waarde afgeleide van de klantenlevensduur te berekenen. Deze afgeleide datasets kunnen dan op uw het profielgegevens van Real-Time CDP worden toegepast en zijn beschikbaar voor gebruik met user-defined dashboards om een dashboard voor inzicht analyse te bouwen. Via Data Distiller kunt u het Real-Time CDP-gegevensmodel voor inzichten uitbreiden en de op CLV gebaseerde datasets en dashboardinzichten gebruiken om een nieuw publiek te maken en het te activeren naar een gewenst doel. Deze krachtige doelgroepen kunnen dan worden gebruikt om uw volgende marketingcampagne te ondersteunen.
+Dit gebruiksgeval van begin tot eind toont aan hoe de gegevenssignalen kunnen worden gevangen en worden gewijzigd om de waarde afgeleide van de klantenlevensduur te berekenen. Deze afgeleide datasets kunnen dan op uw het profielgegevens van Real-Time CDP worden toegepast en zijn beschikbaar voor gebruik met user-defined dashboards om een dashboard voor de analyse van insight te bouwen. Via Data Distiller kunt u het Real-Time CDP-gegevensmodel voor inzichten uitbreiden en de op CLV gebaseerde datasets en dashboardinzichten gebruiken om een nieuw publiek te maken en het te activeren naar een gewenst doel. Deze krachtige doelgroepen kunnen dan worden gebruikt om uw volgende marketingcampagne te ondersteunen.
 
 Deze gids wordt ontworpen om u te helpen uw klantenervaring beter begrijpen door gegevenssignalen over zeer belangrijke aanraakpunten te meten die CLV drijven en een gelijkaardig gebruiksgeval in uw milieu uitvoeren. Het volledige proces wordt samengevat in de onderstaande afbeelding.
 
@@ -51,12 +51,12 @@ Vervolgens moet u een aangepast gegevensmodel maken of een bestaand Adobe Real-T
 
 * Een model maken voor het rapporteren van inzichten met Data Distiller.
 * Tabellen, relaties en gegevens vullen.
-* Vraag het rapporteringsgegevensmodel van inzicht.
+* Vraag het rapporterende insight-gegevensmodel op.
 * Vergroot uw gegevensmodel met het Real-Time CDP-gegevensmodel voor inzichten.
 * Maak dimensietabellen om uw rapporteringsinzichten-model uit te breiden.
 * Vraag uw uitgebreide versnelde opslagrapportering van inzichten gegevensmodel
 
-Gelieve te zien de documentatie van het Model van Gegevens van de Gegevens van Real-time Customer Data Platform van Inzichten leren hoe te [ uw SQL vraagmalplaatjes aanpassen om de rapporten van Real-Time CDP voor uw marketing en zeer belangrijke het gebruiksgevallen van de prestatiesindicator (KPI) tot stand te brengen ](../../dashboards/data-models/cdp-insights-data-model-b2c.md).
+Gelieve te zien de documentatie van het Model van Gegevens van de Gegevens van Real-Time Customer Data Platform van Inzichten leren hoe te [ uw SQL vraagmalplaatjes aanpassen om de rapporten van Real-Time CDP voor uw marketing en zeer belangrijke het gebruiksgevallen van de prestatiesindicator (KPI) tot stand te brengen ](../../dashboards/data-models/cdp-insights-data-model-b2c.md).
 
 Zorg ervoor om een programma te plaatsen om uw model van douanegegevens op een regelmatige kadentie te verfrissen. Dit zorgt ervoor dat de gegevens terug binnen als deel van uw innamepijplijn zoals nodig komen, en bevolkt uw user-defined dashboards. Zie de [ gids van de programmavragen ](../ui/query-schedules.md#create-schedule) leren hoe te opstelling uw programma.
 
@@ -73,7 +73,7 @@ Voorbeelden van aangepaste CLV-widgets die gebruik maken van decile-emmers, zijn
 
 ## Krachtig publiek maken en activeren {#create-and-activate-audiences}
 
-De volgende stap is een segmentdefinitie te bouwen en publiek van uw gegevens van het Profiel van de Klant in real time te produceren. Zie de gids UI van de Bouwer van het Segment leren hoe te om [ publiek in Platform ](../../segmentation/ui/segment-builder.md) tot stand te brengen en te activeren. De gids verstrekt secties over hoe te:
+De volgende stap is een segmentdefinitie te bouwen en publiek van uw gegevens van het Profiel van de Klant in real time te produceren. Zie de gids UI van de Bouwer van het Segment leren hoe te [ tot publiek in Experience Platform ](../../segmentation/ui/segment-builder.md) leiden en activeren. De gids verstrekt secties over hoe te:
 
 * Maak segmentdefinities met een combinatie van kenmerken, gebeurtenissen en bestaand publiek als bouwstenen.
 * Gebruik het canvas en de containers van de regelbouwer om de orde te controleren waarin de segmenteringsregels worden uitgevoerd.
@@ -85,7 +85,7 @@ Alternatief, is er ook de videoleerprogramma&#39;s van de a [ segmentbouwer ](ht
 
 ## Uw publiek activeren voor een e-mailcampagne {#activate-audience-for-campaign}
 
-Nadat u het publiek hebt samengesteld, kunt u het activeren op een bestemming. Het platform biedt ondersteuning voor diverse ESP&#39;s (Email Service Providers) waarmee u uw e-mailmarketingactiviteiten kunt beheren, zoals het verzenden van promotionele e-mailcampagnes.
+Nadat u het publiek hebt samengesteld, kunt u het activeren op een bestemming. Experience Platform biedt ondersteuning voor diverse ESP&#39;s (Email Service Providers) waarmee u uw marketingactiviteiten voor e-mail kunt beheren, zoals het verzenden van promotionele e-mailcampagnes.
 
 Controleer het [ e-mailmarketing bestemmingsoverzicht ](../../destinations/catalog/email-marketing/overview.md#connect-destination) voor een lijst van de gesteunde bestemmingen die u gegevens aan (bijvoorbeeld de [ Oracle Eloqua ](../../destinations/catalog/email-marketing/oracle-eloqua-api.md) pagina) wilt uitvoeren.
 
@@ -107,11 +107,11 @@ Deze inzichten kunnen u beurtelings helpen uw bedrijfsstrategieën voor verdere 
 
 ## Volgende stappen
 
-Door dit document te lezen, hebt u beter inzicht in hoe u Real-time Customer Data Platform kunt gebruiken om de maatstaf van de levensduur van de klant (CLV) bij te houden en te visualiseren. Als u meer wilt weten over de vele gevallen van zakelijk gebruik die worden beschreven via Query Service en Experience Platform, kunt u het beste de volgende documenten lezen:
+Door dit document te lezen, hebt u beter inzicht in hoe u Real-Time Customer Data Platform kunt gebruiken om de maatstaf van de levensduur van de klant (CLV) bij te houden en te visualiseren. Als u meer wilt weten over de vele gevallen van zakelijk gebruik die worden beschreven via Query Service en Experience Platform, kunt u het beste de volgende documenten lezen:
 
 * [Een voorbeeld van begin tot eind van verlaten doorbladert gebruiksgeval dat de veelzijdigheid en de voordelen van de Dienst van de Vraag aantoont.](./abandoned-browse.md)
 * [De Query-service en het leren van computers gebruiken om beide activiteiten te bepalen en te filteren op basis van echt internetverkeer voor bezoekers](./bot-filtering.md)
-* [Hoe te om een gelijke op uw gegevens van het Platform uit te voeren die resultaten van veelvoudige datasets door ongeveer het aanpassen van een koord van uw keus combineert.](./fuzzy-match.md)
+* [Hoe te om een gelijke op uw gegevens uit te voeren van Experience Platform die resultaten van veelvoudige datasets door ongeveer een koord van uw keus combineert.](./fuzzy-match.md)
 
 <!-- "Data signals are actions taken by consumers while online that offer clues about intent that can be acted upon. This includes anything from visiting a website to filling out a change of address or clicking an ad."  -->
 

@@ -1,12 +1,12 @@
 ---
-keywords: Experience Platform;thuis;populaire onderwerpen;CJA;reisanalyse;de analyse van de klantenreis;campagneorchestratie;orchestratie;klantenreis;reis;reis orchestratie;vermogen;regio
+keywords: Experience Platform;home;populaire onderwerpen;CJA;reisanalyse;analyse van de klantenreis;campagneorkest;orchestratie;reis;reis;reis orchestratie;capaciteit;regio
 solution: Experience Platform
 title: Overzicht van Adobe Experience Platform
 description: Adobe Experience Platform stelt organisaties in staat klantgegevens te centraliseren en te standaardiseren voordat ze dataletterdheid en computerleren toepassen, zodat ze het ontwerp en de levering van rijke, persoonlijke ervaringen aanzienlijk kunnen verbeteren.
 exl-id: edcce353-338a-440e-99eb-a64e2abca579
-source-git-commit: ca38a2d72681e4a69304cc765ab6b95d3527d336
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '431'
+source-wordcount: '432'
 ht-degree: 1%
 
 ---
@@ -28,13 +28,13 @@ Adobe Experience Platform is het krachtigste, meest flexibele en open systeem op
 
 ## [!DNL Experience Platform] documentatie
 
-[!DNL Experience Platform] -documentatie wordt in meerdere indelingen geleverd voor een groot aantal functies en toepassingen. Meer over de types van documentatie leren die beschikbaar zijn, gelieve het [ overzicht van de documentatie van het Platform ](documentation/overview.md) te bezoeken.
+[!DNL Experience Platform] -documentatie wordt in meerdere indelingen geleverd voor een groot aantal functies en toepassingen. Meer over de types van documentatie leren die beschikbaar zijn, gelieve het [ de documentatieoverzicht van Experience Platform ](documentation/overview.md) te bezoeken.
 
-Beginnen meer over de specifieke [!DNL Platform] dienst te leren, terugkeer aan de [ documentatie landend pagina ](https://experienceleague.adobe.com/docs/experience-platform.html) en selecteer de aangewezen gids.
+Beginnen meer over de specifieke [!DNL Experience Platform] dienst te leren, terugkeer aan de [ documentatie landend pagina ](https://experienceleague.adobe.com/docs/experience-platform.html) en selecteer de aangewezen gids.
 
 ### Documentatie voor op [!DNL Experience Platform] gebaseerde toepassingen
 
-Adobe heeft meerdere toepassingen bovenop Experience Platform gebouwd. De documentatie voor deze toepassingen vindt u in de onderstaande handleidingen:
+Adobe heeft meerdere toepassingen gebouwd boven op Experience Platform. De documentatie voor deze toepassingen vindt u in de onderstaande handleidingen:
 
 * [[!DNL Adobe Real-Time Customer Data Platform (Real-Time CDP)]](../rtcdp/overview.md)
 * [[!DNL Real-Time Customer Data Platform (Real-Time CDP) B2B Edition]](../rtcdp/b2b-overview.md)
@@ -43,20 +43,20 @@ Adobe heeft meerdere toepassingen bovenop Experience Platform gebouwd. De docume
 * [[!DNL Journey Orchestration]](https://experienceleague.adobe.com/docs/journey-orchestration.html)
 * [[!DNL Adobe Mix Modeler]](https://experienceleague.adobe.com/docs/mix-modeler/using/overview.html?lang=en)
 
-In de onderstaande video worden de gebruiksgevallen beschreven van elke toepassing die boven op het Experience Platform is gebouwd.
+In de onderstaande video worden de gebruiksgevallen beschreven van elke toepassing die boven op Experience Platform is gebouwd.
 
 >[!VIDEO](https://video.tv.adobe.com/v/32554/?learn=on)
 
 ## [!DNL Experience Platform]-tutorials
 
-U kunt snel en eenvoudig aan de slag met [!DNL Platform] door stapsgewijze zelfstudies te volgen waarin alles wordt behandeld, van het voorbereiden van uw gegevens voor opname tot geavanceerde computerleeralgoritmen. Deze zelfstudies zijn ontworpen als aanvulling op de informatie in de documentatie van [!DNL Experience Platform] , zodat u de documentatie voor de beste resultaten bij de voltooiing van de zelfstudies kunt bewaren.
+U kunt snel en eenvoudig aan de slag met [!DNL Experience Platform] door stapsgewijze zelfstudies te volgen waarin alles wordt behandeld, van het voorbereiden van uw gegevens voor opname tot geavanceerde computerleeralgoritmen. Deze zelfstudies zijn ontworpen als aanvulling op de informatie in de documentatie van [!DNL Experience Platform] , zodat u de documentatie voor de beste resultaten bij de voltooiing van de zelfstudies kunt bewaren.
 
-Bezoek de [ leerprogramma&#39;s van het Experience Platform ](https://www.adobe.com/go/platform-tutorials-home-en) landende pagina om begonnen te worden.
+Bezoek de [ zelfstudies van Experience Platform ](https://www.adobe.com/go/platform-tutorials-home-en) landende pagina om begonnen te worden.
 
 ## Referentiedocumenten en bronnen
 
 * [**API fundamentals**](api-fundamentals.md)\
-  Leer de basisbeginselen van het werken met [!DNL Platform] API&#39;s.
+  Leer de basisbeginselen van het werken met [!DNL Experience Platform] API&#39;s.
 
 * [**API verwijzingsdocumenten** ](https://www.adobe.com/go/platform-api-reference-en)\
   Ontdek API&#39;s van [!DNL Experience Platform] , waaronder headers, parameters, voorbeeldaanvragen en reacties.<br/>*Deze documenten worden ontvangen op Adobe I/O.*

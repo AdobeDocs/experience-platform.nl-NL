@@ -1,12 +1,12 @@
 ---
-keywords: Experience Platform;profiel;real-time klantprofiel;problemen;API;rapportering;dataset overlapt rapport;profiel gegevens
+keywords: Experience Platform;profiel;real-time klantprofiel;problemen;API;rapportage;gegevensset overlapt rapport;profielgegevens
 title: Het rapport Gegevensset-overlap genereren
 type: Tutorial
 description: In deze zelfstudie worden de stappen beschreven die nodig zijn om het overlappingsrapport van de gegevensset te genereren met behulp van de Real-Time Customer Profile API.
 exl-id: 90894ed3-b09e-435d-a9e3-18fd6dc8e907
-source-git-commit: fcd44aef026c1049ccdfe5896e6199d32b4d1114
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '889'
+source-wordcount: '890'
 ht-degree: 0%
 
 ---
@@ -21,7 +21,7 @@ In deze zelfstudie worden de stappen beschreven die nodig zijn om het rapport vo
 
 ## Aan de slag
 
-Om Adobe Experience Platform APIs te gebruiken, moet u het [ authentificatieleerprogramma ](https://www.adobe.com/go/platform-api-authentication-en) eerst voltooien om de waarden te verzamelen die u voor de vereiste kopballen nodig hebt. Meer over Experience Platform APIs leren, gelieve te verwijzen naar [ begonnen wordt met de documentatie van Platform APIs ](../../landing/api-guide.md).
+Om Adobe Experience Platform APIs te gebruiken, moet u het [ authentificatieleerprogramma ](https://www.adobe.com/go/platform-api-authentication-en) eerst voltooien om de waarden te verzamelen die u voor de vereiste kopballen nodig hebt. Meer over Experience Platform APIs leren, gelieve te verwijzen naar [ begonnen wordt met de documentatie van Experience Platform APIs ](../../landing/api-guide.md).
 
 De vereiste kopballen voor alle API vraag in dit leerprogramma zijn:
 
@@ -33,7 +33,7 @@ Na de voltooiing van de authentificatiezelfstudie en het verzamelen van de waard
 
 ## Gegevenssetoverlapping genereren met gebruik van de opdrachtregel
 
-Als u vertrouwd bent met het gebruiken van de bevellijn, kunt u het volgende cURL- verzoek gebruiken om het rapport van de datasetoverlapping te produceren door een verzoek van de GET aan `/previewsamplestatus/report/dataset/overlap` uit te voeren.
+Als u vertrouwd bent met het gebruiken van de bevellijn, kunt u het volgende cURL- verzoek gebruiken om het rapport van de datasetoverlapping te produceren door een GET verzoek aan `/previewsamplestatus/report/dataset/overlap` uit te voeren.
 
 **Verzoek**
 
@@ -74,7 +74,7 @@ Postman is een samenwerkingsplatform voor API-ontwikkeling en is handig voor het
 
 Voer de volgende stappen uit om het rapport voor gegevenssetoverlapping met Postman aan te vragen:
 
-* Selecteer GET als aanvraagtype met behulp van het vervolgkeuzemenu.
+* Selecteer GET als aanvraagtype in het vervolgkeuzemenu.
 * Voer de vereiste kopteksten in de kolom `KEY` in:
    * `Authorization`
    * `x-api-key`

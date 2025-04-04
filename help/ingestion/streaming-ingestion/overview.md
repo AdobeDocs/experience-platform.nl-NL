@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Overzicht van streaming inscriptie
 description: Streaming opname voor Adobe Experience Platform biedt gebruikers een methode om gegevens van client- en serverapparaten in real-time naar Experience Platform te verzenden.
 exl-id: 851f15fd-7ac5-4a9f-934d-6b907057da87
-source-git-commit: 9b2d0c8fad1ed328725129664be94cf1800f6631
+source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
 workflow-type: tm+mt
 source-wordcount: '424'
 ht-degree: 0%
@@ -25,7 +25,7 @@ De volgende video is ontworpen om u te helpen bij het begrijpen van streaming op
 
 ### Stream-profielrecords en [!DNL ExperienceEvents]
 
-Met streaming opname kunnen gebruikers profielrecords streamen en [!DNL ExperienceEvents] naar [!DNL Platform] in seconden om de realtime personalisatie te bevorderen. Alle gegevens die naar streaming opname-API&#39;s worden verzonden, blijven automatisch behouden in de [!DNL Data Lake] .
+Met streaming opname kunnen gebruikers profielrecords streamen en [!DNL ExperienceEvents] naar [!DNL Experience Platform] in seconden om de realtime personalisatie te bevorderen. Alle gegevens die naar streaming opname-API&#39;s worden verzonden, blijven automatisch behouden in de [!DNL Data Lake] .
 
 Gelieve te lezen [ creeer een het stromen verbindingsgids ](../tutorials/create-streaming-connection.md) voor meer informatie.
 

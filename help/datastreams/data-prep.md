@@ -2,16 +2,16 @@
 title: Gegevensvoorvoegsel voor gegevensverzameling
 description: Leer hoe u uw gegevens aan een XDM-gebeurtenisschema (Experience Data Model) toewijst bij het configureren van een gegevensstroom voor Adobe Experience Platform Web en Mobile SDK's.
 exl-id: 87a70d56-1093-445c-97a5-b8fa72a28ad0
-source-git-commit: e90bd5abe502a7638ae54fca5eb0f051a925a2d8
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1171'
+source-wordcount: '1175'
 ht-degree: 0%
 
 ---
 
 # Gegevensvoorvoegsel voor gegevensverzameling
 
-Prep van gegevens is de dienst van Adobe Experience Platform die u toestaat om, gegevens in kaart te brengen en te bevestigen aan en van [ het Model van Gegevens van de Ervaring (XDM) ](../xdm/home.md). Wanneer het vormen van een platform-toegelaten [ datastream ](./overview.md), kunt u de mogelijkheden van de Prep van Gegevens gebruiken om uw brongegevens aan XDM in kaart te brengen wanneer het verzenden van het naar Platform Edge Network.
+Prep van gegevens is de dienst van Adobe Experience Platform die u toestaat om, gegevens in kaart te brengen en te bevestigen aan en van [ het Model van Gegevens van de Ervaring (XDM) ](../xdm/home.md). Wanneer het vormen van een Experience Platform-Toegelaten [ datastream ](./overview.md), kunt u de mogelijkheden van de Prep van Gegevens gebruiken om uw brongegevens aan XDM in kaart te brengen wanneer het verzenden van het naar Experience Platform Edge Network.
 
 Alle gegevens die vanaf een webpagina worden verzonden, moeten in Experience Platform als XDM worden geland. Er zijn drie manieren om gegevens van een op pagina gegevenslaag te vertalen naar de XDM die door Experience Platform wordt geaccepteerd:
 
@@ -52,7 +52,7 @@ Raadpleeg de volgende video voor een snelle demonstratie van het proces Gegevens
 
 ## [!UICONTROL Select data] {#select-data}
 
-Selecteer **[!UICONTROL Save and Add Mapping]** nadat u de basisconfiguratie voor een gegevensstroom hebt voltooid en de stap **[!UICONTROL Select data]** wordt weergegeven. Van hier, moet u een steekproefJSON voorwerp verstrekken dat de structuur van de gegevens vertegenwoordigt die u bij het verzenden naar Platform van plan bent.
+Selecteer **[!UICONTROL Save and Add Mapping]** nadat u de basisconfiguratie voor een gegevensstroom hebt voltooid en de stap **[!UICONTROL Select data]** wordt weergegeven. Van hieruit moet u een voorbeeld-JSON-object opgeven dat de structuur vertegenwoordigt van de gegevens die u naar Experience Platform wilt verzenden.
 
 Als u eigenschappen rechtstreeks vanaf uw gegevenslaag wilt vastleggen, moet het JSON-object één basiseigenschap `data` hebben. De subeigenschappen van het `data` -object moeten vervolgens zo worden geconstrueerd dat ze zijn toegewezen aan de eigenschappen van de gegevenslaag die u wilt vastleggen. Selecteer de onderstaande sectie om een voorbeeld weer te geven van een JSON-object met de juiste opmaak en een `data` root.
 
@@ -162,7 +162,7 @@ U kunt de optie selecteren om het object als een bestand te uploaden of het onbe
 
 ## [!UICONTROL Mapping]
 
-De stap **[!UICONTROL Mapping]** wordt weergegeven, zodat u de velden in uw brongegevens kunt toewijzen aan die van het doelgebeurtenisschema in Platform. Van hier, kunt u de afbeelding op twee manieren vormen:
+De stap **[!UICONTROL Mapping]** wordt weergegeven, zodat u de velden in uw brongegevens kunt toewijzen aan die van het doelgebeurtenisschema in Experience Platform. Van hier, kunt u de afbeelding op twee manieren vormen:
 
 * [ creeer toewijzingsregels ](#create-mapping) voor deze gegevensstroom door een handproces.
 * [ de toewijzingsregels van de Invoer ](#import-mapping) van een bestaande datastream.

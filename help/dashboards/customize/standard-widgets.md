@@ -1,11 +1,11 @@
 ---
-keywords: Experience Platform;gebruikersinterface;UI;dashboards;dashboard;profielen;segmenten;bestemmingen;vergunningsgebruik
+keywords: Experience Platform;gebruikersinterface;UI;dashboards;dashboard;profielen;segmenten;bestemmingen;licentiegebruik
 title: Standaarddashboardwidgets
 description: Deze handleiding bevat stapsgewijze instructies voor het toevoegen van standaardwidgets aan uw Adobe Experience Platform-dashboards.
 exl-id: 37353e73-b207-444a-b2b5-a20a3628086b
-source-git-commit: 32dd90018c990e7013d826b29608a61022ba808b
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '419'
+source-wordcount: '421'
 ht-degree: 0%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 In Adobe Experience Platform kunt u de gegevens van uw organisatie bekijken en ermee communiceren met behulp van meerdere dashboards. U kunt bepaalde dashboards ook bijwerken door nieuwe widgets aan uw dashboardmening toe te voegen. Adobe biedt een selectie van standaardwidgets die u kunt toevoegen aan uw dashboards.
 
-De dashboards [[!UICONTROL Profiles]](../guides/profiles.md#default-widgets) , [[!UICONTROL Audiences]](../guides/audiences.md#default-widgets) en [[!UICONTROL Destinations]](../guides/destinations.md#default-widgets) hebben elk een standaard widgetlading wanneer een nieuwe instantie van het Platform wordt gecreeerd. Deze handleiding bevat stapsgewijze instructies voor het toevoegen van standaardwidgets om de dashboards [!UICONTROL Profiles] , [!UICONTROL Audiences] en [!UICONTROL Destinations] in de gebruikersinterface van het platform aan te passen.
+De dashboards [[!UICONTROL Profiles]](../guides/profiles.md#default-widgets) , [[!UICONTROL Audiences]](../guides/audiences.md#default-widgets) en [[!UICONTROL Destinations]](../guides/destinations.md#default-widgets) hebben elk een standaard widgetlading wanneer een nieuwe instantie van Experience Platform wordt gecreeerd. Deze handleiding bevat stapsgewijze instructies voor het toevoegen van standaardwidgets om de dashboards [!UICONTROL Profiles] , [!UICONTROL Audiences] en [!UICONTROL Destinations] aan te passen in de gebruikersinterface van Experience Platform.
 
 >[!NOTE]
 >
@@ -24,11 +24,11 @@ Meer over douanewidgets leren, te verwijzen gelieve naar de gids voor [ het cre�
 
 ## Widget-bibliotheek {#widget-library}
 
-Voor deze handleiding is toegang tot [!UICONTROL Widget library] in het Experience Platform vereist. Meer over de widgetbibliotheek leren, en hoe te om tot het binnen UI toegang te hebben, gelieve te beginnen door het [ overzicht van de widgetbibliotheek te lezen ](widget-library.md).
+Deze handleiding vereist toegang tot de [!UICONTROL Widget library] in Experience Platform. Meer over de widgetbibliotheek leren, en hoe te om tot het binnen UI toegang te hebben, gelieve te beginnen door het [ overzicht van de widgetbibliotheek te lezen ](widget-library.md).
 
 ## Aan de slag met standaardwidgets {#standard-widgets}
 
-Het tabblad **[!UICONTROL Standard]** van de widgetbibliotheek bevat widgets die zijn gemaakt op basis van Adobe en die zijn onderverdeeld in categorieën op basis van de beschikbare dashboards.
+Het tabblad **[!UICONTROL Standard]** van de widgetbibliotheek bevat widgets die door Adobe zijn gemaakt en die zijn onderverdeeld in categorieën op basis van de beschikbare dashboards.
 
 De geselecteerde categorie komt overeen met het dashboard waaruit u de widgetbibliotheek hebt ingevoerd. Met andere woorden, als u de widgetbibliotheek hebt geselecteerd in het dashboard van [!UICONTROL Profiles] , wordt de categorie [!UICONTROL Profiles] geselecteerd en worden de andere categorieën grijs weergegeven.
 

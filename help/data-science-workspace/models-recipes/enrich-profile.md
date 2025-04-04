@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;machine het leren model;De Wetenschap van gegevens Workspace;Real-time het Profiel van de Klant;populaire onderwerpen;machine het leren inzicht
+keywords: Experience Platform;machine-leermodel;Data Science Workspace;Real-time klantprofiel;populaire onderwerpen;machine-leergegevens
 solution: Experience Platform
 title: Verrijk het Profiel van de Klant in real time met het Leren van de Machine Inzichten
 type: Tutorial
 description: Dit document biedt een handleiding voor het verrijken van Real-Time Customer Profile met inzichten in computerleren.
 exl-id: 397023c9-383d-4a21-b58a-0f920631ac56
-source-git-commit: 923c6f2deb4d1199cfc5dc9dc4ca7b4da154aaaa
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '653'
+source-wordcount: '655'
 ht-degree: 0%
 
 ---
@@ -31,8 +31,8 @@ Dit document bevat koppelingen naar zelfstudies waarmee u [!DNL Real-Time Custom
 Als u de onderstaande lesbestanden wilt voltooien, hebt u een goed begrip nodig van het invoeren van [!DNL Profile] -gegevens en het maken van soorten publiek. Voordat u met deze zelfstudie begint, raadpleegt u de documentatie voor de volgende services:
 
 - [[!DNL Real-Time Customer Profile]](../../profile/home.md): biedt een volledige, uniforme representatie van elke individuele klant op basis van geaggregeerde gegevens van meerdere bronnen.
-- [[!DNL Identity Service]](../../identity-service/home.md): schakelt [!DNL Real-Time Customer Profile] in door identiteiten te overbruggen van verschillende gegevensbronnen die in Platform worden opgenomen.
-- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): Het gestandaardiseerde framework waarmee Platform gegevens voor klantervaring organiseert.
+- [[!DNL Identity Service]](../../identity-service/home.md): schakelt [!DNL Real-Time Customer Profile] in door identiteiten te overbruggen van verschillende gegevensbronnen die in Experience Platform worden opgenomen.
+- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): Het gestandaardiseerde raamwerk waarmee Experience Platform gegevens over de ervaring van klanten organiseert.
 
 Naast de bovengenoemde documenten, wordt het ten zeerste geadviseerd dat u ook de volgende gidsen op schema&#39;s en de Redacteur van het Schema bekijkt:
 

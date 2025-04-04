@@ -3,9 +3,9 @@ title: Onsite ervaringen voor onbekende bezoekers personaliseren met de erkennin
 description: Leer hoe u bezoekerserkenning met ondersteuning van partners kunt gebruiken om uw bezoekers op de site een persoonlijke ervaring te bieden.
 feature: Use Cases, Personalization, Customer Acquisition
 exl-id: 99677988-1df8-47b1-96b1-0ef6db818a1d
-source-git-commit: 02f2082e695d157415c9e0c59ca5d371c94bb991
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '2565'
+source-wordcount: '2568'
 ht-degree: 1%
 
 ---
@@ -42,7 +42,7 @@ Wanneer het van plan zijn om partner-verstrekte attributen te gebruiken om geper
 * In hoeverre bent u comfortabel om personalisatie op verschillende kanalen en voor verschillende gebruiksgevallen te leveren die op voorwaardelijk afgeleide datasets, tegenover deterministisch bevestigde attributen worden gebaseerd?
 * Hoe moet de ervaring van een vooraf geverifieerde maar herkende bezoeker veranderen wanneer ze worden geverifieerd?
 
-### UI-functionaliteit, platformcomponenten en Experience Cloud-producten die u wilt gebruiken {#ui-functionality-and-elements}
+### UI-functionaliteit, Experience Platform-componenten en Experience Cloud-producten die u wilt gebruiken {#ui-functionality-and-elements}
 
 Als u dit geval wilt gebruiken, moet u meerdere gebieden van Real-Time Customer Data Platform en andere Experience Cloud-oplossingen gebruiken. Zorg ervoor dat u de noodzakelijke [ op attributen-gebaseerde toegangsbeheertoestemmingen ](/help/access-control/abac/overview.md) voor al deze gebieden hebt, of vraag uw systeembeheerder om u de noodzakelijke toestemmingen te verlenen.
 
@@ -131,7 +131,7 @@ Gebruik eerst de toepassingsschakeloptie rechtsboven in het scherm om naar de se
 
 Het gedeelte **[!UICONTROL Data Collection]** van de gebruikersinterface ziet er ongeveer zo uit als de onderstaande afbeelding.
 
-![ sectie van de inzameling van Gegevens van het Platform UI.](/help/rtcdp/assets/partner-data/onsite-personalization/data-collection-home.png)
+![ sectie van de inzameling van Gegevens van Experience Platform UI.](/help/rtcdp/assets/partner-data/onsite-personalization/data-collection-home.png)
 
 #### Gegevensstroom maken
 
@@ -259,7 +259,7 @@ U bent nu klaar om publiek voor verpersoonlijking tot stand te brengen en te act
 
 #### Het publiek maken en segmentatie van randen instellen
 
-Navigeer in de gebruikersinterface van het platform naar **[!UICONTROL Customer]** > **[!UICONTROL Audiences]** en maak een publiek om uw websitebezoekers vast te leggen.
+Navigeer in de gebruikersinterface van Experience Platform naar **[!UICONTROL Customer]** > **[!UICONTROL Audiences]** en maak een publiek om uw websitebezoekers vast te leggen.
 
 ![ Mening van hoe te aan publiek te navigeren.](/help/rtcdp/assets/partner-data/onsite-personalization/navigate-to-audiences.png)
 

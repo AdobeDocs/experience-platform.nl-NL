@@ -1,11 +1,11 @@
 ---
-keywords: e-mail;E-mail;e-mail;e-mailbestemmingen;oracle responsys bestemming
-title: Verbinding oracle Responsys
-description: Responsys is een marketingtool voor e-mailberichten voor marketingcampagnes over meerdere kanalen die door Oracle worden aangeboden om interacties via e-mail, mobiele apparaten, displays en sociale media te personaliseren.
+keywords: e-mail;E-mail;e-mail;e-mailbestemmingen;e-mailbestemming voor responsys
+title: Oracle Responsys-verbinding
+description: Responsys is een marketingtool voor e-mailberichten voor marketingcampagnes over meerdere kanalen die door Oracle worden aangeboden om interacties via e-mail, mobiele apparaten, displays en sociale media aan te passen.
 exl-id: 70f2f601-afee-4315-bf7a-ed2c92397ebe
-source-git-commit: c35b43654d31f0f112258e577a1bb95e72f0a971
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '659'
+source-wordcount: '661'
 ht-degree: 0%
 
 ---
@@ -24,7 +24,7 @@ In deze sectie wordt beschreven welke soorten publiek u naar dit doel kunt expor
 
 | Oorsprong publiek | Ondersteund | Beschrijving |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | ✓ | Het publiek produceerde door de Dienst van de Segmentatie van het Experience Platform [ ](../../../segmentation/home.md). |
+| [!DNL Segmentation Service] | ✓ | Het publiek produceerde door de Dienst van de Segmentatie van Experience Platform [ ](../../../segmentation/home.md). |
 | Aangepaste uploads | ✓ | Het publiek [ ingevoerde ](../../../segmentation/ui/audience-portal.md#import-audience) in Experience Platform van Csv- dossiers. |
 
 {style="table-layout:auto"}
@@ -42,7 +42,7 @@ Raadpleeg de onderstaande tabel voor informatie over het exporttype en de export
 
 ## IP adres lijst van gewenste personen {#allow-list}
 
-Bij het opzetten van e-mail marketing bestemmingen met de opslag van SFTP, adviseert de Adobe dat u bepaalde IP waaiers aan uw lijst van gewenste personen toevoegt.
+Bij het instellen van e-mailmarketingdoelen met SFTP-opslag raadt Adobe u aan bepaalde IP-bereiken toe te voegen aan uw lijst van gewenste personen.
 
 Verwijs naar [ IP adres lijst van gewenste personen voor bestemmingen SFTP ](../cloud-storage/ip-address-allow-list.md) als u Adobe IPs aan uw lijst van gewenste personen moet toevoegen.
 
@@ -76,14 +76,14 @@ Terwijl [ vestiging ](../../ui/connect-destination.md) deze bestemming, u de vol
 * U kunt desgewenst een openbare sleutel met RSA-indeling toevoegen om versleuteling met PGP/GPG toe te voegen aan geëxporteerde bestanden onder de sectie **[!UICONTROL Key]** . De openbare sleutel moet als een [!DNL Base64] gecodeerde tekenreeks worden geschreven.
 * **[!UICONTROL Name]**: Kies een relevante naam voor de bestemming.
 * **[!UICONTROL Description]**: voer een beschrijving in voor uw doel.
-* **[!UICONTROL Folder Path]**: geef het pad op uw opslaglocatie op waar Platform uw exportgegevens als CSV-bestanden indient.
+* **[!UICONTROL Folder Path]**: geef het pad op uw opslaglocatie op waar Experience Platform uw exportgegevens als CSV-bestanden indient.
 * **[!UICONTROL File Format]**: Selecteer **CSV** om Csv- dossiers naar uw opslagplaats uit te voeren.
 
 <!--
 
 Commenting out Amazon S3 bucket part for now until support is clarified
 
-- **[!UICONTROL Bucket name]**: Your Amazon S3 bucket, where Platform will deposit the data export. Your input must be between 3 and 63 characters long. Must begin and end with a letter or number. Must contain only lowercase letters, numbers, or hyphens ( - ). Must not be formatted as an IP address (for example, 192.100.1.1).
+- **[!UICONTROL Bucket name]**: Your Amazon S3 bucket, where Experience Platform will deposit the data export. Your input must be between 3 and 63 characters long. Must begin and end with a letter or number. Must contain only lowercase letters, numbers, or hyphens ( - ). Must not be formatted as an IP address (for example, 192.100.1.1).
 
 -->
 
@@ -104,12 +104,12 @@ Zie [ publieksgegevens aan de uitvoerbestemmingen van het partijprofiel ](../../
 
 ### Doelkenmerken {#destination-attributes}
 
-Wanneer het activeren van publiek aan deze bestemming, adviseert de Adobe dat u een uniek herkenningsteken van uw [ verenigingsschema ](../../../profile/home.md#profile-fragments-and-union-schemas) selecteert. Selecteer de unieke id en andere XDM-velden die u naar het doel wilt exporteren. Voor meer informatie, verwijs naar [ beste praktijken wanneer het activeren van publiek aan e-mail marketing bestemmingen ](overview.md#best-practices).
+Wanneer het activeren van publiek aan deze bestemming, adviseert Adobe dat u een uniek herkenningsteken van uw [ verenigingsschema ](../../../profile/home.md#profile-fragments-and-union-schemas) selecteert. Selecteer de unieke id en andere XDM-velden die u naar het doel wilt exporteren. Voor meer informatie, verwijs naar [ beste praktijken wanneer het activeren van publiek aan e-mail marketing bestemmingen ](overview.md#best-practices).
 
 ## Geëxporteerde gegevens {#exported-data}
 
-Voor [!DNL Oracle Responsys] -doelen maakt Platform een `.csv` -bestand in de opslaglocatie die u hebt opgegeven. Voor meer informatie over de dossiers, zie [ de activering van het publiek ](../../ui/activate-batch-profile-destinations.md#verify) in het leerprogramma van de publiekactivering verifiëren.
+Voor [!DNL Oracle Responsys] -doelen maakt Experience Platform een `.csv` -bestand in de opslaglocatie die u hebt opgegeven. Voor meer informatie over de dossiers, zie [ de activering van het publiek ](../../ui/activate-batch-profile-destinations.md#verify) in het leerprogramma van de publiekactivering verifiëren.
 
 ## Gegevensimport instellen in [!DNL Oracle Responsys] {#import-data-into-responsys}
 
-Nadat u [!DNL Platform] hebt verbonden met uw [!DNL SFTP] -opslag, moet u de gegevens die u wilt importeren vanaf uw opslaglocatie naar [!DNL Oracle Responsys] instellen. Leren hoe te om dit te verwezenlijken, zie [ Importerend contacten of rekeningen ](https://docs.oracle.com/cloud/latest/marketingcs_gs/OMCEA/Connect_WizardUpload.htm) in [!DNL Oracle Responsys Help Center].
+Nadat u [!DNL Experience Platform] hebt verbonden met uw [!DNL SFTP] -opslag, moet u de gegevens die u wilt importeren vanaf uw opslaglocatie naar [!DNL Oracle Responsys] instellen. Leren hoe te om dit te verwezenlijken, zie [ Importerend contacten of rekeningen ](https://docs.oracle.com/cloud/latest/marketingcs_gs/OMCEA/Connect_WizardUpload.htm) in [!DNL Oracle Responsys Help Center].

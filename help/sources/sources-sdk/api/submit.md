@@ -1,26 +1,26 @@
 ---
-keywords: Experience Platform;thuis;populaire onderwerpen;bronnen;connectors;bronconnectors;bronnen sdk;sdk;SDK
+keywords: Experience Platform;home;populaire onderwerpen;bronnen;connectors;bronconnectors;bronnen sdk;sdk;SDK
 title: Je Source verzenden
-description: Het volgende document verstrekt stappen op hoe te om een nieuwe bron te testen en te verifiëren gebruikend de Dienst API van de Stroom en een nieuwe bron door Zelfbediening Bronnen (de Band SDK) te integreren.
+description: Het volgende document bevat stappen voor het testen en verifiëren van een nieuwe bron met behulp van de Flow Service API en het integreren van een nieuwe bron via Self-Serve Sources (Batch SDK).
 exl-id: 9e945ba1-51b6-40a9-b92f-e0a52b3f92fa
-source-git-commit: 59dfa862388394a68630a7136dee8e8988d0368c
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '823'
+source-wordcount: '829'
 ht-degree: 0%
 
 ---
 
 # Uw bron verzenden
 
-De laatste stap voor het integreren van uw nieuwe bron in Adobe Experience Platform met behulp van Self-Serve Sources (Batch SDK) is het testen van uw bron voor verificatie. Als dit lukt, kunt u de nieuwe bron verzenden door contact op te nemen met uw Adobe.
+De laatste stap voor het integreren van uw nieuwe bron in Adobe Experience Platform met behulp van Self-Serve Sources (Batch SDK) is het testen van uw bron voor verificatie. Als de bewerking succesvol is, kunt u de nieuwe bron verzenden door contact op te nemen met uw Adobe-vertegenwoordiger.
 
 Het volgende document verstrekt stappen op hoe te om uw bron te testen en te zuiveren gebruikend [[!DNL Flow Service]  API ](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
 ## Aan de slag
 
-* Voor informatie over hoe te om vraag aan Platform APIs met succes te maken, zie de gids op [ begonnen wordt met Platform APIs ](../../../landing/api-guide.md).
-* Voor informatie over hoe te om uw geloofsbrieven voor Platform APIs te produceren, zie het leerprogramma op [ voor authentiek verklaren en tot Experience Platform APIs toegang heeft ](../../../landing/api-authentication.md).
-* Voor informatie over hoe te opstelling [!DNL Postman] voor Platform APIs, zie het leerprogramma op [ vestiging de console van de ontwikkelaar en  [!DNL Postman]](../../../landing/postman.md).
+* Voor informatie over hoe te om vraag aan Experience Platform APIs met succes te maken, zie de gids op [ begonnen wordt met Experience Platform APIs ](../../../landing/api-guide.md).
+* Voor informatie over hoe te om uw geloofsbrieven voor Experience Platform APIs te produceren, zie het leerprogramma op [ voor authentiek verklaren en tot Experience Platform APIs toegang heeft ](../../../landing/api-authentication.md).
+* Voor informatie over hoe te opstelling [!DNL Postman] voor Experience Platform APIs, zie het leerprogramma op [ vestiging de console van de ontwikkelaar en  [!DNL Postman]](../../../landing/postman.md).
 * Om uw het testen en het zuiveren proces te helpen, download de [ Zelfbediening inzameling en het milieu van de Broncontrole hier ](../assets/sdk-verification.zip) en volg de hieronder geschetste stappen.
 
 ## De bron testen
@@ -59,10 +59,10 @@ Zodra uw authentificatie en bronspecificatieparameters worden verstrekt, kunt u 
 
 | Parameter | Beschrijving | Voorbeeld |
 | --- | --- | --- |
-| `x-api-key` | Een unieke id die wordt gebruikt om aanroepen van Experience Platform-API&#39;s te verifiëren. Zie het leerprogramma op [ voor authentiek verklaren en tot Experience Platform APIs toegang heeft ](../../../landing/api-authentication.md) voor informatie over hoe te om uw `x-api-key` terug te winnen. | `c8d9a2f5c1e03789bd22e8efdd1bdc1b` |
+| `x-api-key` | Een unieke id die wordt gebruikt om aanroepen naar Experience Platform API&#39;s te verifiëren. Zie het leerprogramma op [ voor authentiek verklaren en tot Experience Platform APIs toegang hebben ](../../../landing/api-authentication.md) voor informatie over hoe te om uw `x-api-key` terug te winnen. | `c8d9a2f5c1e03789bd22e8efdd1bdc1b` |
 | `x-gw-ims-org-id` | Een onderneming die producten en diensten kan bezitten of in licentie kan geven en toegang kan verlenen tot haar leden. Zie het leerprogramma op [ vestiging de console van de ontwikkelaar en  [!DNL Postman]](../../../landing/postman.md) voor instructies op hoe te om uw `x-gw-ims-org-id` informatie terug te winnen. | `ABCEH0D9KX6A7WA7ATQE0TE@adobeOrg` |
-| `authorizationToken` | Het toestemmingstoken dat wordt vereist om vraag aan Experience Platform APIs te voltooien. Zie het leerprogramma op [ voor authentiek verklaren en tot Experience Platform APIs toegang heeft ](../../../landing/api-authentication.md) voor informatie over hoe te om uw `authorizationToken` terug te winnen. | `Bearer authorizationToken` |
-| `schemaId` | Om de brongegevens in Platform te gebruiken, moet een doelschema worden gecreeerd om de brongegevens volgens uw behoeften te structureren. Voor gedetailleerde stappen op hoe te om een doelXDM schema tot stand te brengen, zie het leerprogramma op [ creërend een schema gebruikend API ](../../../xdm/api/schemas.md). | `https://ns.adobe.com/{TENANT_ID}.schemas.0ef4ce0d390f0809fad490802f53d30b` |
+| `authorizationToken` | Het toestemmingstoken wordt vereist om vraag aan Experience Platform APIs te voltooien. Zie het leerprogramma op [ voor authentiek verklaren en tot Experience Platform APIs toegang hebben ](../../../landing/api-authentication.md) voor informatie over hoe te om uw `authorizationToken` terug te winnen. | `Bearer authorizationToken` |
+| `schemaId` | Als u de brongegevens in Experience Platform wilt gebruiken, moet u een doelschema maken om de brongegevens naar wens te structureren. Voor gedetailleerde stappen op hoe te om een doelXDM schema tot stand te brengen, zie het leerprogramma op [ creërend een schema gebruikend API ](../../../xdm/api/schemas.md). | `https://ns.adobe.com/{TENANT_ID}.schemas.0ef4ce0d390f0809fad490802f53d30b` |
 | `schemaVersion` | De unieke versie die overeenkomt met uw schema. | `application/vnd.adobe.xed-full-notext+json; version=1` |
 | `schemaAltId` | De `meta:altId` die wordt geretourneerd naast de `schemaId` bij het maken van een nieuw schema. | `_{TENANT_ID}.schemas.0ef4ce0d390f0809fad490802f53d30b` |
 | `dataSetId` | Voor gedetailleerde stappen op hoe te om een doeldataset tot stand te brengen, zie het leerprogramma op [ het creëren van een dataset gebruikend API ](../../../catalog/api/create-dataset.md). | `5f3c3cedb2805c194ff0b69a` |
@@ -82,10 +82,10 @@ De interface [!DNL Runner] wordt weergegeven, zodat u de uitvoervolgorde van de 
 
 >[!NOTE]
 >
->U kunt **Stroom van de Schrapping** van checklist van de looppasorde onbruikbaar maken als u verkiest om bronnen controledashboard in Platform UI te gebruiken. Als u echter klaar bent met testen, moet u ervoor zorgen dat de teststromen worden verwijderd.
+>U kunt **Stroom van de Schrapping** van checklist van de looppasorde onbruikbaar maken als u verkiest om bronnen controledashboard in Experience Platform UI te gebruiken. Als u echter klaar bent met testen, moet u ervoor zorgen dat de teststromen worden verwijderd.
 
 ![ looppas-inzameling ](../assets/run-collection.png)
 
 ## Uw bron verzenden
 
-Zodra uw bron de volledige werkstroom kan voltooien kunt u te werk gaan om uw vertegenwoordiger van de Adobe te contacteren en uw bron voor integratie voor te leggen.
+Zodra uw bron de volledige werkstroom kan voltooien kunt u doorgaan met contact op te nemen met uw Adobe-vertegenwoordiger en uw bron verzenden voor integratie.

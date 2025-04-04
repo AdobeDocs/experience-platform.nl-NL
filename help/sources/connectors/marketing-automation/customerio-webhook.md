@@ -3,9 +3,9 @@ title: Overzicht van Customer.io Source
 description: Leer hoe u Customer.io met Adobe Experience Platform kunt verbinden via API's of de gebruikersinterface door gebruik te maken van webhaken
 badge: Beta
 exl-id: 0f4ee106-c22b-465c-9c5e-83709e8424f5
-source-git-commit: e37c00863249e677f1645266859bf40fe6451827
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '375'
+source-wordcount: '382'
 ht-degree: 0%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 0%
 >
 >De bron [!DNL Customer.io] is in bèta. Gelieve te lezen het [ overzicht van bronnen ](../../home.md#terms-and-conditions) voor meer informatie bij het gebruiken van bèta-geëtiketteerde bronnen.
 
-Adobe Experience Platform staat toe dat gegevens uit externe bronnen worden opgenomen terwijl u de mogelijkheid krijgt om inkomende gegevens te structureren, te labelen en te verbeteren met behulp van de platformservices. U kunt gegevens uit diverse bronnen invoeren, zoals toepassingen voor Adobe, opslag in de cloud, databases en vele andere.
+Adobe Experience Platform staat toe dat gegevens uit externe bronnen worden opgenomen en biedt u de mogelijkheid om inkomende gegevens te structureren, labelen en verbeteren met behulp van Experience Platform-services. U kunt gegevens invoeren uit verschillende bronnen, zoals Adobe-toepassingen, opslag in de cloud, databases en vele andere.
 
 Experience Platform biedt ondersteuning voor het opnemen van gegevens uit streaming toepassingen. Tot de ondersteuning voor streamingproviders behoren [!DNL Customer.io] .
 
@@ -31,7 +31,7 @@ De ondersteunde webhaakgebeurtenisschema&#39;s zijn:
 * SMS-gebeurtenissen
 * Gebeurtenissen voor pushmeldingen
 * Berichtgebeurtenissen in de app
-* Gebeurtenissen Slack
+* Slack Events
 * Webhaakgebeurtenissen
 
 Voor een lijst van gebeurtenissen die door webhooks beschikbaar zijn, gelieve te verwijzen naar de [[!DNL Customer.io]  Meldend de gebeurtenissen van Webhaak ](https://customer.io/docs/webhooks/#events) documentatie.
@@ -45,16 +45,16 @@ Voordat u een [!DNL Customer.io] -bronverbinding kunt maken, moet u eerst contro
 
 ### [!DNL Customer.io] Webhaak instellen {#set-up-webhook}
 
-Zodra u met succes uw gegevensstroom hebt gecreeerd, moet u opstelling een Meldende Webhaak om Platform over [!DNL Customer.io] gebeurtenissen te informeren. Webhooks kunnen u onmiddellijk op de hoogte stellen wanneer de klantkenmerken veranderen of wanneer mensen uw berichten openen, en deze informatie naar uw [!DNL Customer.io] bron verzenden. Voor meer informatie, lees de leerprogramma&#39;s op [ die uw het stromen eindpunt URL ](../../tutorials/ui/create/marketing-automation/customerio-webhook.md#get-streaming-endpoint) krijgen en [ vestiging a  [!DNL Customer.io]  Webhaak ](../../tutorials/ui/create/marketing-automation/customerio-webhook.md#set-up-webhook).
+Zodra u uw gegevensstroom met succes hebt gecreeerd, moet u opstelling een Rapporterende Webhaak om Experience Platform over [!DNL Customer.io] gebeurtenissen te informeren. Webhooks kunnen u onmiddellijk op de hoogte stellen wanneer de klantkenmerken veranderen of wanneer mensen uw berichten openen, en deze informatie naar uw [!DNL Customer.io] bron verzenden. Voor meer informatie, lees de leerprogramma&#39;s op [ die uw het stromen eindpunt URL ](../../tutorials/ui/create/marketing-automation/customerio-webhook.md#get-streaming-endpoint) krijgen en [ vestiging a  [!DNL Customer.io]  Webhaak ](../../tutorials/ui/create/marketing-automation/customerio-webhook.md#set-up-webhook).
 
-## Verbinding maken [!DNL Customer.io] met platform {#connect-to-platform}
+## [!DNL Customer.io] verbinden met Experience Platform {#connect-to-platform}
 
-In de onderstaande documentatie vindt u informatie over het maken van een [!DNL Customer.io] streaming verbinding met [!DNL Platform] via API&#39;s of de gebruikersinterface:
+In de onderstaande documentatie vindt u informatie over het maken van een [!DNL Customer.io] streaming verbinding met [!DNL Experience Platform] via API&#39;s of de gebruikersinterface:
 
-### Verbinding maken [!DNL Customer.io] met platform met behulp van API&#39;s {#connect-to-platform-using-api}
+### Verbinding maken [!DNL Customer.io] met Experience Platform via API&#39;s {#connect-to-platform-using-api}
 
-* [Creeer een bronverbinding en dataflow om  [!DNL Customer.io]  gegevens aan Platform te brengen gebruikend APIs.](../../tutorials/api/create/marketing-automation/customerio-webhook.md)
+* [Creeer een bronverbinding en dataflow om  [!DNL Customer.io]  gegevens aan Experience Platform te brengen gebruikend APIs.](../../tutorials/api/create/marketing-automation/customerio-webhook.md)
 
-### Verbinding maken [!DNL Customer.io] met platform via de gebruikersinterface {#connect-to-platform-using-ui}
+### Verbinding maken [!DNL Customer.io] met Experience Platform via de gebruikersinterface {#connect-to-platform-using-ui}
 
-* [Creeer een bronverbinding en dataflow om  [!DNL Customer.io]  gegevens aan Platform te brengen gebruikend het gebruikersinterface](../../tutorials/ui/create/marketing-automation/customerio-webhook.md)
+* [Creeer een bronverbinding en dataflow om  [!DNL Customer.io]  gegevens aan Experience Platform te brengen gebruikend het gebruikersinterface](../../tutorials/ui/create/marketing-automation/customerio-webhook.md)

@@ -2,9 +2,9 @@
 title: Vraag versnelde handleiding voor het rapporteren van inzichten in winkels
 description: Leer hoe te om een rapporterend gegevensmodel van inzichten door de Dienst van de Vraag voor gebruik met versnelde opslaggegevens en user-defined dashboards te bouwen.
 exl-id: 216d76a3-9ea3-43d3-ab6f-23d561831048
-source-git-commit: ddf886052aedc025ff125c03ab63877cb049583d
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1034'
+source-wordcount: '1037'
 ht-degree: 0%
 
 ---
@@ -13,31 +13,31 @@ ht-degree: 0%
 
 De vraag versnelde opslag staat u toe om de tijd en de verwerkingscapaciteit te verminderen die wordt vereist om kritieke inzichten van uw gegevens te bereiken. Doorgaans worden gegevens regelmatig verwerkt (bijvoorbeeld op uurbasis of dagelijks), waar geaggregeerde weergaven worden gemaakt en gerapporteerd. De analyse van deze verslagen, die op basis van geaggregeerde gegevens zijn opgesteld, leidt tot inzichten die tot doel hebben de bedrijfsresultaten te verbeteren. De opslag met query-versnelling biedt een cacheservice, gelijktijdige uitvoering, een interactieve ervaring en een stateless API. Er wordt echter aangenomen dat de gegevens vooraf worden verwerkt en geoptimaliseerd voor geaggregeerd opvragen en niet voor onbewerkte opvragen van gegevens.
 
-Met de opslag met query-versnelling kunt u een aangepast gegevensmodel maken en/of een bestaand Adobe Real-time Customer Data Platform-gegevensmodel uitbreiden. Vervolgens kunt u naar keuze uw rapportinzichten gebruiken of insluiten in een rapportage-/visualisatieframework van uw keuze. Gelieve te zien de documentatie van het Model van Gegevens van de Gegevens van Real-time Customer Data Platform van Inzichten leren hoe te [ uw SQL vraagmalplaatjes aanpassen om de rapporten van Real-Time CDP voor uw marketing en zeer belangrijke het gebruiksgevallen van de prestatiesindicator (KPI) tot stand te brengen ](../../../dashboards/data-models/cdp-insights-data-model-b2c.md).
+Met de opslag met query-versnelling kunt u een aangepast gegevensmodel maken en/of een bestaand Adobe Real-Time Customer Data Platform-gegevensmodel uitbreiden. Vervolgens kunt u naar keuze uw rapportinzichten gebruiken of insluiten in een rapportage-/visualisatieframework van uw keuze. Gelieve te zien de documentatie van het Model van Gegevens van de Gegevens van Real-Time Customer Data Platform van Inzichten leren hoe te [ uw SQL vraagmalplaatjes aanpassen om de rapporten van Real-Time CDP voor uw marketing en zeer belangrijke het gebruiksgevallen van de prestatiesindicator (KPI) tot stand te brengen ](../../../dashboards/data-models/cdp-insights-data-model-b2c.md).
 
-Het Real-Time CDP-gegevensmodel van Adobe Experience Platform biedt inzicht in profielen, soorten publiek en bestemmingen en biedt de Real-Time CDP-dashboards inzicht. Dit document begeleidt u door het proces van het creëren van uw het gegevensmodel van het Rapport van Inzichten en ook hoe te om de gegevensmodellen van Real-Time CDP uit te breiden zoals nodig.
+Het Real-Time CDP-gegevensmodel van Adobe Experience Platform biedt inzicht in profielen, soorten publiek en bestemmingen en maakt de Real-Time CDP insight-dashboards mogelijk. Dit document begeleidt u door het proces van het creëren van uw het gegevensmodel van het Rapport van Inzichten en ook hoe te om de gegevensmodellen van Real-Time CDP uit te breiden zoals nodig.
 
 ## Vereisten
 
-Deze zelfstudie gebruikt door de gebruiker gedefinieerde dashboards om gegevens van uw aangepaste gegevensmodel in de gebruikersinterface van het platform te visualiseren. Gelieve te zien de [ user-defined dashboards documentatie ](../../../dashboards/standard-dashboards.md) om meer over deze eigenschap te leren.
+In deze zelfstudie worden door de gebruiker gedefinieerde dashboards gebruikt om gegevens van uw aangepaste gegevensmodel in de gebruikersinterface van Experience Platform te visualiseren. Gelieve te zien de [ user-defined dashboards documentatie ](../../../dashboards/standard-dashboards.md) om meer over deze eigenschap te leren.
 
 ## Aan de slag
 
-Distiller SKU van Gegevens wordt vereist om een model van douanegegevens voor uw rapporteringsinzichten te bouwen en de de gegevensmodellen van Real-Time CDP uit te breiden die de verrijkte gegevens van het Platform houden. Gelieve te zien het [ verpakken ](../../packaging.md), [ guardrails ](../../guardrails.md#query-accelerated-store), en [ verlenen van vergunningen ](../../data-distiller/license-usage.md) documentatie die op het SKU van Gegevens Distiller betrekking heeft. Als u geen gegevens hebt Distiller SKU gelieve uw vertegenwoordiger van de klantendienst van de Adobe voor meer informatie te contacteren.
+Distiller SKU van Gegevens wordt vereist om een model van douanegegevens voor uw rapporteringsinzichten te bouwen en de de gegevensmodellen van Real-Time CDP uit te breiden die verrijkte gegevens van Experience Platform houden. Gelieve te zien het [ verpakken ](../../packaging.md), [ guardrails ](../../guardrails.md#query-accelerated-store), en [ verlenen van vergunningen ](../../data-distiller/license-usage.md) documentatie die op het SKU van Gegevens Distiller betrekking heeft. Als u geen gegevens hebt, neemt u contact op met uw Adobe-medewerker van de klantenservice voor meer informatie.
 
 ## Een gegevensmodel voor het rapporteren van inzichten maken
 
-In deze zelfstudie wordt een voorbeeld gebruikt van het bouwen van een gegevensmodel voor inzicht van het publiek. Als u een of meer adverteerderplatforms gebruikt om uw publiek te bereiken, kunt u de API van de adverteerder gebruiken om een geschatte gelijke telling van uw publiek te krijgen.
+In deze zelfstudie wordt een voorbeeld gebruikt van het bouwen van een insight-gegevensmodel voor het publiek. Als u een of meer adverteerderplatforms gebruikt om uw publiek te bereiken, kunt u de API van de adverteerder gebruiken om een geschatte gelijke telling van uw publiek te krijgen.
 
 Aan het begin hebt u een eerste gegevensmodel uit uw bronnen (mogelijk via de API van uw adverteerderplatform). Als u een geaggregeerde weergave van uw onbewerkte gegevens wilt maken, maakt u een model voor rapportinzichten, zoals hieronder in de afbeelding wordt beschreven. Dit staat voor één dataset toe om de hogere en lagere grenzen van de publieksgelijke te krijgen.
 
-![ een entiteitrelationeel diagram (ERD) van het gebruikersmodel van het publieksinzicht.](../../images/data-distiller/sql-insights/audience-insight-user-model.png)
+![ een entiteitrelationeel diagram (ERD) van het gebruikersmodel van publiekinsight.](../../images/data-distiller/sql-insights/audience-insight-user-model.png)
 
-In dit voorbeeld is de `externalaudiencereach` tabel/dataset gebaseerd op een id en worden de onderste en bovenste begrenzingen voor het aantal overeenkomsten bijgehouden. De `externalaudiencemapping` metingstabel/dataset brengt externe identiteitskaart aan een bestemming en een publiek op Platform in kaart.
+In dit voorbeeld is de `externalaudiencereach` tabel/dataset gebaseerd op een id en worden de onderste en bovenste begrenzingen voor het aantal overeenkomsten bijgehouden. De `externalaudiencemapping` afmetingstabel/dataset brengt externe identiteitskaart aan een bestemming en een publiek op Experience Platform in kaart.
 
 ## Een model maken voor het rapporteren van inzichten met Data Distiller
 
-Creëer daarna een rapporterend inzicht model (`audienceinsight` in dit voorbeeld) en gebruik het SQL bevel `ACCOUNT=acp_query_batch and TYPE=QSACCEL` om het op de versnelde opslag te verzekeren wordt gecreeerd. Gebruik vervolgens Query Service om een `audienceinsight.audiencemodel` -schema voor de `audienceinsight` -database te maken.
+Maak vervolgens een insight-model voor rapportage (`audienceinsight` in dit voorbeeld) en gebruik de SQL-opdracht `ACCOUNT=acp_query_batch and TYPE=QSACCEL` om ervoor te zorgen dat dit model wordt gemaakt in de versnelde opslag. Gebruik vervolgens Query Service om een `audienceinsight.audiencemodel` -schema voor de `audienceinsight` -database te maken.
 
 >[!NOTE]
 >
@@ -51,7 +51,7 @@ CREATE schema audienceinsight.audiencemodel;
 
 ## Tabellen, relaties en gegevens vullen
 
-Nu u het `audienceinsight` rapportmodel voor inzichten hebt gemaakt, maakt u de tabellen `externalaudiencereach` en `externalaudiencemapping` en maakt u er relaties tussen. Gebruik vervolgens de opdracht `ALTER TABLE` om een beperking voor een vreemde sleutel tussen de tabellen toe te voegen en een relatie te definiëren. In het volgende SQL-voorbeeld wordt getoond hoe u dit doet.
+Nu u uw `audienceinsight` rapportmodel voor insight hebt gemaakt, maakt u de tabellen `externalaudiencereach` en `externalaudiencemapping` en brengt u de relaties tussen deze tabellen tot stand. Gebruik vervolgens de opdracht `ALTER TABLE` om een beperking voor een vreemde sleutel tussen de tabellen toe te voegen en een relatie te definiëren. In het volgende SQL-voorbeeld wordt getoond hoe u dit doet.
 
 ```sql
 CREATE TABLE IF NOT exists audienceinsight.audiencemodel.externalaudiencereach
@@ -93,7 +93,7 @@ Wanneer de instructies zijn uitgevoerd, gebruikt u de opdracht `SHOW datagroups;
  audienceinsight | audiencemodel | QSACCEL   | Data Warehouse Table | externalaudiencereach   | true           | 1b941a6d-6214-4810-815c-81c497a0b636
 ```
 
-## Vraag het rapporterende gegevensmodel van het inzicht
+## Vraag het rapporterende insight-gegevensmodel
 
 Gebruik Query Service om een query uit te voeren op de tabel met `audiencemodel.externalaudiencereach` dimensies. Een voorbeeldvraag kan hieronder worden gezien.
 
@@ -131,7 +131,7 @@ ext_custom_audience_id | approximate_count_upper_bound
 
 U kunt het publieksmodel uitbreiden met extra details om een rijkere dimensietabel te maken. U kunt bijvoorbeeld de publieksnaam en de doelnaam toewijzen aan de externe publieksidentificatie. Om dit te doen, gebruik de Dienst van de Vraag om een nieuwe dataset tot stand te brengen of te verfrissen en het toe te voegen aan het publieksmodel dat publiek en bestemmingen met een externe identiteit combineert. In het onderstaande diagram wordt het concept van deze extensie van het gegevensmodel geïllustreerd.
 
-![ een ERD diagram dat het model van het inzicht van Real-Time CDP gegevens en het Vraag versnelde opslagmodel verbindt.](../../images/data-distiller/sql-insights/updatingAudienceInsightUserModel.png)
+![ een ERD diagram dat het de gegevensmodel van Real-Time CDP insight en het Vraag versnelde opslagmodel verbindt.](../../images/data-distiller/sql-insights/updatingAudienceInsightUserModel.png)
 
 ## Tabellen met dimensies maken om uw model met rapportageinzichten uit te breiden
 

@@ -1,12 +1,12 @@
 ---
-keywords: Experience Platform;profiel;realtime klantprofiel;problemen;API;verenigd profiel;verenigd profiel;verenigd profiel;profiel;rtcp;inschakelen profiel;profiel inschakelen
+keywords: Experience Platform;profiel;real-time klantprofiel;problemen;API;verenigd profiel;verenigd profiel;verenigd;Profiel;rtcp;inschakelen profiel;Profiel inschakelen
 title: Real-Time API-handleiding voor klantprofiel
 description: Met de realtime-API voor klantprofiel kunnen ontwikkelaars profielgegevens verkennen en ermee werken, waaronder weergaveprofielen, beleid voor samenvoegen maken en bijwerken, profielgegevens exporteren of samplen en profielgegevens verwijderen die niet langer vereist zijn of die door een fout zijn toegevoegd. Volg deze gids voor het uitvoeren van de belangrijkste bewerkingen met de API.
 role: Developer
 exl-id: ce39b95b-cff7-46cf-a14c-8203017c8826
-source-git-commit: cb276c55c010aa7ccc936947ad87bf74239d6e99
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '860'
+source-wordcount: '862'
 ht-degree: 1%
 
 ---
@@ -31,7 +31,7 @@ U kunt berekende kenmerken maken, weergeven, bewerken en verwijderen met behulp 
 
 ## Entiteiten ([!DNL Profile] access) {#entities}
 
-Via Adobe Experience Platform hebt u toegang tot [!DNL Real-Time Customer Profile] -gegevens via RESTful API&#39;s of de gebruikersinterface. Leren hoe te om tot entiteiten toegang te hebben, algemeen gekend als &quot;profielen&quot;, die API gebruiken, de stappen volgen die in de [ gids van het entiteiteneindpunt ](entities.md) worden geschetst. Om tot profielen toegang te hebben gebruikend [!DNL Platform] UI, verwijs naar de [ de gebruikersgids van het Profiel ](../ui/user-guide.md).
+Via Adobe Experience Platform hebt u toegang tot [!DNL Real-Time Customer Profile] -gegevens via RESTful API&#39;s of de gebruikersinterface. Leren hoe te om tot entiteiten toegang te hebben, algemeen gekend als &quot;profielen&quot;, die API gebruiken, de stappen volgen die in de [ gids van het entiteiteneindpunt ](entities.md) worden geschetst. Om tot profielen toegang te hebben gebruikend [!DNL Experience Platform] UI, verwijs naar de [ de gebruikersgids van het Profiel ](../ui/user-guide.md).
 
 ## Exporttaken ([!DNL Profile] exporteren) {#profile-export}
 
@@ -39,17 +39,17 @@ Via Adobe Experience Platform hebt u toegang tot [!DNL Real-Time Customer Profil
 
 ## Beleid samenvoegen {#merge-policies}
 
-Wanneer u gegevens uit meerdere bronnen samenbrengt in [!DNL Experience Platform] , worden samenvoegbeleidsregels gebruikt die [!DNL Platform] gebruikt om te bepalen hoe de prioriteit van gegevens wordt bepaald en welke gegevens worden gecombineerd om individuele klantprofielen te maken. Met de API van [!DNL Real-Time Customer Profile] kunt u nieuwe regels voor samenvoeging maken, bestaand beleid beheren en een standaardbeleid voor samenvoeging voor uw organisatie instellen. Om met samenvoegbeleid te werken gebruikend API, bezoek de [ gids van het het eindpunt van samenvoegingsbeleid ](merge-policies.md).
+Wanneer u gegevens uit meerdere bronnen samenbrengt in [!DNL Experience Platform] , worden samenvoegbeleidsregels gebruikt die [!DNL Experience Platform] gebruikt om te bepalen hoe de prioriteit van gegevens wordt bepaald en welke gegevens worden gecombineerd om individuele klantprofielen te maken. Met de API van [!DNL Real-Time Customer Profile] kunt u nieuwe regels voor samenvoeging maken, bestaand beleid beheren en een standaardbeleid voor samenvoeging voor uw organisatie instellen. Om met samenvoegbeleid te werken gebruikend API, bezoek de [ gids van het het eindpunt van samenvoegingsbeleid ](merge-policies.md).
 
-Om meer over fusiebeleid, en hun rol binnen Platform te leren, gelieve te beginnen door het [ overzicht van het fusiebeleid ](../merge-policies/overview.md) te lezen.
+Om meer over fusiebeleid, en hun rol binnen Experience Platform te leren, gelieve te beginnen door het [ overzicht van het fusiebeleid ](../merge-policies/overview.md) te lezen.
 
 ## Voorbeeldstatus voorvertonen ([!DNL Profile] voorvertoning) {#profile-preview}
 
-Aangezien de gegevens in Platform worden opgenomen, wordt een steekproefbaan in werking gesteld om de profieltelling en andere gegevens-verwante metriek van het Profiel van de Klant in real time bij te werken. De resultaten van deze voorbeeldbaan kunnen worden bekeken gebruikend het `/previewsamplestatus` eindpunt, deel van Real-Time het Profiel van de Klant API. Dit eindpunt kan ook worden gebruikt om van profieldistributies door zowel dataset als identiteit namespace een lijst te maken, evenals veelvoudige rapporten te produceren om zicht in de samenstelling van de opslag van het Profiel van uw organisatie te bereiken.  Om begonnen te worden gebruikend het `/profilepreviewstatus` eindpunt, verwijs naar de [ gids van het de eindpuntvan de voorproefstatus ](preview-sample-status.md).
+Als gegevens in Experience Platform worden ingevoerd, wordt een voorbeeldtaak uitgevoerd om het aantal profielen en andere gegevensgerelateerde gegevens in het realtime-profiel van de klant bij te werken. De resultaten van deze voorbeeldbaan kunnen worden bekeken gebruikend het `/previewsamplestatus` eindpunt, deel van Real-Time het Profiel van de Klant API. Dit eindpunt kan ook worden gebruikt om van profieldistributies door zowel dataset als identiteit namespace een lijst te maken, evenals veelvoudige rapporten te produceren om zicht in de samenstelling van de opslag van het Profiel van uw organisatie te bereiken.  Om begonnen te worden gebruikend het `/profilepreviewstatus` eindpunt, verwijs naar de [ gids van het de eindpuntvan de voorproefstatus ](preview-sample-status.md).
 
 ## Systeemtaken profiel {#profile-system-jobs}
 
-Profielgegevens die in [!DNL Platform] worden ingevoerd, worden zowel in de [!DNL Data Lake] -gegevensopslag als in de [!DNL Real-Time Customer Profile] -gegevensopslag opgeslagen. Soms kan het nodig zijn om profielgegevens die zijn gekoppeld aan een gegevensset te verwijderen uit de profielenopslag om gegevens te verwijderen die niet meer nodig zijn of die ten onrechte zijn toegevoegd. Hiervoor moet u de API gebruiken om een [!DNL Profile System Job] -bestand te maken, ook wel &quot;[!DNL delete request]&quot; genoemd, dat u indien nodig kunt wijzigen, controleren of verwijderen. Leren hoe te met schrappingsverzoeken te werken gebruikend het `/system/jobs` eindpunt in [!DNL Real-Time Customer Profile] API, de stappen volgen die in de [ gids van het de baaneindpunt van het profielsysteem ](profile-system-jobs.md) worden geschetst.
+Profielgegevens die in [!DNL Experience Platform] worden ingevoerd, worden zowel in de [!DNL Data Lake] -gegevensopslag als in de [!DNL Real-Time Customer Profile] -gegevensopslag opgeslagen. Soms kan het nodig zijn om profielgegevens die zijn gekoppeld aan een gegevensset te verwijderen uit de profielenopslag om gegevens te verwijderen die niet meer nodig zijn of die ten onrechte zijn toegevoegd. Hiervoor moet u de API gebruiken om een [!DNL Profile System Job] -bestand te maken, ook wel &quot;[!DNL delete request]&quot; genoemd, dat u indien nodig kunt wijzigen, controleren of verwijderen. Leren hoe te met schrappingsverzoeken te werken gebruikend het `/system/jobs` eindpunt in [!DNL Real-Time Customer Profile] API, de stappen volgen die in de [ gids van het de baaneindpunt van het profielsysteem ](profile-system-jobs.md) worden geschetst.
 
 ## Profielkenmerken bijwerken {#update-profile}
 

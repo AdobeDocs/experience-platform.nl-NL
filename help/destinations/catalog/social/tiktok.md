@@ -3,9 +3,9 @@ title: TikTok-verbinding
 description: Bouw een aangepast publiek op TikTok met uw gegevens voor doelgerichte advertentiecampagnes. Dit soort publiek zou kunnen bestaan uit mensen die uw website hebben bezocht of interactie hebben gehad met uw inhoud. Snel en veilig het gewenste publiek van Adobe Experience Platform naar TikTok duwen met Adobe in real-time integratie met TikTok Ads Manager.
 last-substantial-update: 2023-03-20T00:00:00Z
 exl-id: 7b12d17f-7d9a-4615-9830-92bffe3f6927
-source-git-commit: 9a80a9b49b1983e8e488d11b114c02130b045686
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '1048'
+source-wordcount: '1050'
 ht-degree: 1%
 
 ---
@@ -42,8 +42,8 @@ TikTok ondersteunt de activering van identiteiten die in de onderstaande tabel w
 |---|---|---|
 | GAID | GOOGLE ADVERTISING ID | Selecteer de GAID doelidentiteit wanneer uw bronidentiteit een GAID-naamruimte is. |
 | IDFA | Apple-id voor adverteerders | Selecteer de IDFA doelidentiteit wanneer uw bronidentiteit een IDFA namespace is. |
-| Telefoonnummer | Telefoonnummers die zijn hashed met het SHA256-algoritme | Onbewerkte tekst en gehashte telefoonnummers van SHA256 worden ondersteund door Adobe Experience Platform en moeten de indeling E.164 hebben. Wanneer het bronveld hashingkenmerken bevat, schakelt u de optie **[!UICONTROL Apply transformation]** in om de gegevens automatisch te laten hashen bij activering door [!DNL Platform] . |
-| Email | E-mailadressen die met het algoritme SHA256 worden gehasht | Adobe Experience Platform biedt ondersteuning voor zowel platte tekst- als SHA256-e-mailadressen met hashing. Wanneer het bronveld hashingkenmerken bevat, schakelt u de optie **[!UICONTROL Apply transformation]** in om de gegevens automatisch te laten hashen bij activering door [!DNL Platform] . |
+| Telefoonnummer | Telefoonnummers die zijn hashed met het SHA256-algoritme | Onbewerkte tekst en gehashte telefoonnummers van SHA256 worden ondersteund door Adobe Experience Platform en moeten de indeling E.164 hebben. Wanneer het bronveld hashingkenmerken bevat, schakelt u de optie **[!UICONTROL Apply transformation]** in om de gegevens automatisch te laten hashen bij activering door [!DNL Experience Platform] . |
+| Email | E-mailadressen die met het algoritme SHA256 worden gehasht | Adobe Experience Platform biedt ondersteuning voor zowel platte tekst- als SHA256-e-mailadressen met hashing. Wanneer het bronveld hashingkenmerken bevat, schakelt u de optie **[!UICONTROL Apply transformation]** in om de gegevens automatisch te laten hashen bij activering door [!DNL Experience Platform] . |
 
 {style="table-layout:auto"}
 
@@ -55,7 +55,7 @@ In deze sectie wordt beschreven welke soorten publiek u naar dit doel kunt expor
 |---------|----------|----------|
 | [!DNL Segmentation Service] | ✓ | Het publiek produceerde door de Dienst van de Segmentatie van Experience Platform [ ](../../../segmentation/home.md). |
 | Aangepaste uploads | ✓ | Het publiek [ ingevoerde ](../../../segmentation/ui/audience-portal.md#import-audience) in Experience Platform van Csv- dossiers. |
-| [!DNL Federated Audience Composition] | ✓ | Het publiek werd ingevoerd in Experience Platform door [ Federated Samenstelling van het Publiek ](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/start/audiences). |
+| [!DNL Federated Audience Composition] | ✓ | Het publiek werd ingevoerd in Experience Platform door [ Federated Samenstelling van het Publiek ](https://experienceleague.adobe.com/nl/docs/federated-audience-composition/using/start/audiences). |
 
 {style="table-layout:auto"}
 
@@ -88,7 +88,7 @@ Als u zich wilt verifiëren bij de bestemming, wordt u omgeleid naar uw [!DNL Ti
 
 Als u details voor de bestemming wilt configureren, vult u de vereiste en optionele velden hieronder in. Een sterretje naast een veld in de gebruikersinterface geeft aan dat het veld verplicht is.
 
-![ de verbindingsdetails van de Bestemming ](/help/destinations/assets/catalog/social/tiktok/tiktok-configure-destination-details.png " Beeld van het Platform UI, die de details van de bestemmingsverbinding tonen in te vullen ")
+![ de verbindingsdetails van de Bestemming ](/help/destinations/assets/catalog/social/tiktok/tiktok-configure-destination-details.png " Beeld van Experience Platform UI, die de details van de bestemmingsverbinding tonen in te vullen ")
 
 * **[!UICONTROL Name]**: Een naam waarmee u dit doel in de toekomst herkent.
 * **[!UICONTROL Description]**: Een beschrijving die u zal helpen deze bestemming in de toekomst identificeren.
@@ -123,7 +123,7 @@ Doelvelden selecteren:
 
 * Selecteer de naamruimte E-mail als doel-id.
 
-](/help/destinations/assets/catalog/social/tiktok/tiktok-map-identity.png " Beeld van de afbeelding van de Identiteit van het Platform UI, afbeelding van identiteiten ")![
+![ het afbeelding van de Identiteit ](/help/destinations/assets/catalog/social/tiktok/tiktok-map-identity.png " Beeld van Experience Platform UI, afbeelding van identiteiten ")
 
 ## Geëxporteerde gegevens {#exported-data}
 

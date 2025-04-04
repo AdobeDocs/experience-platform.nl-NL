@@ -3,9 +3,9 @@ title: Samenvatting Gecodeerde Gegevens in Brongebruikersinterface Workspace
 description: Leer hoe u gecodeerde gegevens kunt invoeren in de UI-werkruimte voor bronnen.
 badge: Beta
 exl-id: 34aaf9b6-5c39-404b-a70a-5553a4db9cdb
-source-git-commit: 70bfebc747c7e6267939eb313048cb2d0e132202
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '1434'
+source-wordcount: '1435'
 ht-degree: 0%
 
 ---
@@ -16,25 +16,25 @@ ht-degree: 0%
 >
 >De ondersteuning voor gecodeerde gegevensinvoer in de interface voor bronnen is in bèta. De functie en documentatie kunnen worden gewijzigd.
 
-U kunt gecodeerde gegevensbestanden en -mappen via batchbronnen voor cloudopslag opnemen in Adobe Experience Platform. Met gecodeerde gegevensinvoer kunt u gebruikmaken van asymmetrische coderingsmechanismen om batchgegevens veilig naar het Experience Platform over te brengen. De ondersteunde asymmetrische versleutelingsmechanismen zijn PGP en GPG.
+U kunt gecodeerde gegevensbestanden en -mappen via batchbronnen voor cloudopslag opnemen in Adobe Experience Platform. Met gecodeerde gegevensinvoer kunt u gebruikmaken van asymmetrische coderingsmechanismen om batchgegevens veilig over te brengen naar Experience Platform. De ondersteunde asymmetrische versleutelingsmechanismen zijn PGP en GPG.
 
 Lees deze handleiding om te leren hoe u gecodeerde gegevens met bronnen voor opslagbatch voor de cloud kunt invoeren met behulp van de gebruikersinterface.
 
 ## Aan de slag
 
-Lees voordat u verdergaat met deze zelfstudie de volgende documenten om de volgende Experience Platforms en concepten beter te begrijpen.
+Lees voordat u verdergaat met deze zelfstudie de volgende documenten om de volgende Experience Platform-functies en -concepten beter te begrijpen.
 
-* [ Bronnen ](../../home.md): De bronnen van het gebruik in Experience Platform om gegevens van een Toepassing van de Adobe of een derdegegevensbron in te voeren.
-* [ Dataflows ](../../../dataflows/home.md): Dataflows zijn vertegenwoordiging van gegevensbanen die gegevens over Experience Platform bewegen. U kunt de werkruimte van bronnen gebruiken om gegevensstromen tot stand te brengen die gegevens van een bepaalde bron aan Experience Platform opnemen.
-* [ Sandboxes ](../../../sandboxes/home.md): De zandbakken van het gebruik in Experience Platform om virtuele verdelingen tussen uw instanties van het Experience Platform tot stand te brengen en milieu&#39;s te creëren gewijd aan ontwikkeling of productie.
+* [ Bronnen ](../../home.md): De bronnen van het gebruik in Experience Platform om gegevens van een Toepassing van Adobe of een derdegegevensbron in te voeren.
+* [ Dataflows ](../../../dataflows/home.md): Dataflows zijn vertegenwoordiging van gegevensbanen die gegevens over Experience Platform bewegen. U kunt de werkruimte voor bronnen gebruiken om gegevensstromen te maken die gegevens van een bepaalde bron naar Experience Platform invoeren.
+* [ Sandboxes ](../../../sandboxes/home.md): De zandbakken van het gebruik in Experience Platform om virtuele verdelingen tussen uw instanties van Experience Platform tot stand te brengen en milieu&#39;s te creëren gewijd aan ontwikkeling of productie.
 
 ### Overzicht op hoog niveau
 
-* Creeer een encryptiesleutel gebruikend de bronwerkruimte in Experience Platform UI.
+* Maak een sleutelpaar voor versleuteling met behulp van de bronwerkruimte in de gebruikersinterface van Experience Platform.
    * Desgewenst kunt u ook uw eigen sleutelpaar voor tekenverificatie maken om een extra beveiligingslaag voor de gecodeerde gegevens te bieden.
 * Gebruik de openbare sleutel van uw encryptiesleutel om uw gegevens te coderen.
 * Plaats de gecodeerde gegevens in de cloudopslag. Tijdens deze stap moet u er ook voor zorgen dat u een voorbeeldbestand van uw gegevens in uw cloudopslag hebt dat als referentie kan worden gebruikt om uw brongegevens toe te wijzen aan een XDM-schema (Experience Data Model).
-* Gebruik uw bron van de de opslagpartij van de wolk en begin het proces van de gegevensopname in de bronwerkruimte in de UI van het Experience Platform.
+* Gebruik de blokbron voor cloudopslag en begin met het gegevensinvoerproces in de werkruimte voor bronnen in de gebruikersinterface van Experience Platform.
 * Geef tijdens het maken van de bronverbinding de sleutel-id op die overeenkomt met de openbare sleutel waarmee u uw gegevens hebt versleuteld.
    * Als u ook het sleutelpaar voor handtekeningverificatie hebt gebruikt, moet u ook de sleutel-id voor tekenverificatie opgeven die overeenkomt met uw gecodeerde gegevens.
 * Ga door met de stappen voor het maken van de gegevensstroom.
@@ -52,11 +52,11 @@ Lees voordat u verdergaat met deze zelfstudie de volgende documenten om de volge
 
 Een sleutelpaar van de encryptie is een asymmetrisch cryptografiemechanisme dat uit een openbare sleutel en een privé sleutel bestaat. De openbare sleutel wordt gebruikt om gegevens te coderen en de privé sleutel wordt dan gebruikt om genoemde gegevens te decrypteren.
 
-U kunt uw encryptiesleutel tot stand brengen door het Experience Platform UI. Wanneer gegenereerd, ontvangt u een openbare sleutel en een bijbehorende sleutel-id. Gebruik de openbare sleutel om uw gegevens te coderen en gebruik vervolgens de sleutel-id om uw identiteit te bevestigen wanneer u bezig bent met het invoeren van uw gecodeerde gegevens. De persoonlijke sleutel gaat automatisch naar het Experience Platform, waar het in een veilige kluis wordt opgeslagen, en zal slechts worden gebruikt zodra uw gegevens klaar voor decryptie zijn.
+U kunt een sleutelpaar voor versleuteling maken via de gebruikersinterface van Experience Platform. Wanneer gegenereerd, ontvangt u een openbare sleutel en een bijbehorende sleutel-id. Gebruik de openbare sleutel om uw gegevens te coderen en gebruik vervolgens de sleutel-id om uw identiteit te bevestigen wanneer u bezig bent met het invoeren van uw gecodeerde gegevens. De persoonlijke sleutel gaat automatisch naar Experience Platform, waar deze in een beveiligde kluis wordt opgeslagen. Deze wordt pas gebruikt wanneer uw gegevens gereed zijn voor decodering.
 
 >[!ENDSHADEBOX]
 
-Navigeer in de interface Platform naar de werkruimte Bronnen en selecteer vervolgens [!UICONTROL Key Pairs] in de bovenste koptekst.
+Navigeer in de gebruikersinterface van Experience Platform naar de werkruimte voor bronnen en selecteer vervolgens [!UICONTROL Key Pairs] in de bovenste koptekst.
 
 ![ de broncatalogus met de &quot;Belangrijkste Geselecteerde kopbal van Paren&quot;.](../../images/tutorials/edi/catalog.png)
 
@@ -68,7 +68,7 @@ Kies vervolgens het toetstype dat u wilt maken. Als u een coderingssleutel wilt 
 
 ![ het zeer belangrijke creatievenster, met geselecteerde encryptiesleutel.](../../images/tutorials/edi/choose_encryption_key_type.png)
 
-Geef een titel en een wachtwoordzin op voor de coderingssleutel. Passphrase is een extra laag van bescherming voor uw encryptiesleutels. Op verwezenlijking, slaat het Experience Platform passphrase in een verschillend veilige kluis van de openbare sleutel op. U moet een niet-lege tekenreeks opgeven als een wachtwoordzin. Selecteer **[!UICONTROL Create]** als u klaar bent.
+Geef een titel en een wachtwoordzin op voor de coderingssleutel. Passphrase is een extra laag van bescherming voor uw encryptiesleutels. Bij het maken slaat Experience Platform de passphrase op in een andere veilige kluis dan de openbare sleutel. U moet een niet-lege tekenreeks opgeven als een wachtwoordzin. Selecteer **[!UICONTROL Create]** als u klaar bent.
 
 ![ het venster van de encryptiesleutel verwezenlijking, waar een titel en een passphrase wordt verstrekt.](../../images/tutorials/edi/create_encryption_key.png)
 
@@ -91,7 +91,7 @@ Om informatie over een bestaande encryptiesleutel te bekijken, selecteer de elli
 
 **wat is een sleutel van de signaalcontrole?**
 
-Een verificatiesleutel is een ander versleutelingsmechanisme dat een persoonlijke sleutel en een openbare sleutel omvat. In dit geval kunt u een sleutelpaar voor de verificatie van uw handtekening maken en de persoonlijke sleutel gebruiken om uw gegevens te ondertekenen en een extra coderingslaag toe te voegen. U zult dan de overeenkomstige openbare sleutel aan Experience Platform delen. Tijdens opname gebruikt Experience Platform de openbare sleutel om de handtekening te verifiëren die aan uw persoonlijke sleutel is gekoppeld.
+Een verificatiesleutel is een ander versleutelingsmechanisme dat een persoonlijke sleutel en een openbare sleutel omvat. In dit geval kunt u een sleutelpaar voor de verificatie van uw handtekening maken en de persoonlijke sleutel gebruiken om uw gegevens te ondertekenen en een extra coderingslaag toe te voegen. Vervolgens deelt u de bijbehorende openbare sleutel met Experience Platform. Tijdens het invoeren gebruikt Experience Platform de openbare sleutel om de handtekening te verifiëren die aan uw persoonlijke sleutel is gekoppeld.
 
 >[!ENDSHADEBOX]
 
@@ -136,7 +136,7 @@ Verifieer met de bron van de wolkenopslag van uw keus. Selecteer tijdens de stap
 
 ![ de &quot;uitgezochte gegevens&quot;stap van het bronwerkschema, waar een gecodeerd gegevensdossier voor ingebed wordt geselecteerd.](../../images/tutorials/edi/select_data.png)
 
-Selecteer vervolgens een voorbeeldbestand uit de brongegevens. Aangezien uw gegevens gecodeerd zijn, vereist Experience Platform een voorbeeldbestand om een XDM-schema te maken dat aan uw brongegevens kan worden toegewezen.
+Selecteer vervolgens een voorbeeldbestand uit de brongegevens. Aangezien uw gegevens gecodeerd zijn, heeft Experience Platform een voorbeeldbestand nodig om een XDM-schema te maken dat aan uw brongegevens kan worden toegewezen.
 
 ![ &quot;Is dit dossier gecodeerd?&quot; Schakel deze optie in en selecteer de knop Voorbeeldbestand selecteren. ](../../images/tutorials/edi/select_sample_file.png)
 
@@ -165,4 +165,4 @@ U kunt blijven [ updates aan uw dataflow ](../ui/update-dataflows.md) maken zodr
 
 ## Volgende stappen
 
-Door dit document te lezen, kunt u nu gecodeerde gegevens van uw blokbron voor cloudopslag opnemen in het Experience Platform. Voor informatie over hoe te om gecodeerde gegevens in te voeren gebruikend APIs, lees de gids over [ het opnemen van gecodeerde gegevens gebruikend  [!DNL Flow Service]  API ](../api/encrypt-data.md). Voor algemene informatie over bronnen op Experience Platform, lees het [ overzicht van bronnen ](../../home.md).
+Door dit document te lezen, kunt u nu gecodeerde gegevens van uw blokbron voor cloudopslag opnemen in Experience Platform. Voor informatie over hoe te om gecodeerde gegevens in te voeren gebruikend APIs, lees de gids over [ het opnemen van gecodeerde gegevens gebruikend  [!DNL Flow Service]  API ](../api/encrypt-data.md). Voor algemene informatie over bronnen op Experience Platform, lees het [ overzicht van bronnen ](../../home.md).

@@ -2,10 +2,10 @@
 title: Weergaven in webextensies
 description: Leer hoe u weergaven voor bibliotheekmodules definieert in uw Adobe Experience Platform-webextensies.
 exl-id: 4471df3e-75e2-4257-84c0-dd7b708be417
-source-git-commit: 41efcb14df44524b58be2293d2b943bd890c1621
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '2061'
-ht-degree: 0%
+source-wordcount: '2063'
+ht-degree: 2%
 
 ---
 
@@ -13,13 +13,13 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch is omgedoopt tot een reeks technologieën voor gegevensverzameling in Adobe Experience Platform. Diverse terminologische wijzigingen zijn als gevolg hiervan in de productdocumentatie doorgevoerd. Gelieve te verwijzen naar het volgende [ document ](../../term-updates.md) voor een geconsolideerde verwijzing van de terminologieveranderingen.
+>Adobe Experience Platform Launch is omgedoopt tot een reeks technologieën voor dataverzameling in Adobe Experience Platform.  Als gevolg hiervan zijn er verschillende terminologiewijzigingen in de productdocumentatie doorgevoerd. Raadpleeg het volgende [ document ](../../term-updates.md) voor een geconsolideerde referentie van de terminologiewijzigingen.
 
 Elke gebeurtenis, voorwaarde, actie, of het type van gegevenselement kan een mening verstrekken die een gebruiker toestaat om montages te leveren. De uitbreiding kan ook een top-level [ mening van de uitbreidingsconfiguratie ](../configuration.md) hebben die gebruikers toestaat om globale montages voor de volledige uitbreiding te leveren. Het proces om een mening te bouwen is identiek over alle soorten meningen.
 
 ## Een documenttype opnemen
 
-Zorg ervoor dat u een `doctype` -tag opneemt in uw HTML-bestand. Doorgaans betekent dit dat u het HTML-bestand begint met het volgende:
+Zorg ervoor dat u een `doctype` -tag opneemt in uw HTML-bestand. Doorgaans betekent dit dat u het volgende HTML-bestand begint:
 
 ```xml
 <!DOCTYPE html>
@@ -27,7 +27,7 @@ Zorg ervoor dat u een `doctype` -tag opneemt in uw HTML-bestand. Doorgaans betek
 
 ## Het iframe-script voor tags opnemen
 
-Neem het iFrame-script voor tags op in de HTML van de weergave:
+Neem het iFrame-script voor tags op in de HTML van uw weergave:
 
 ```html
 <script src="https://assets.adobedtm.com/activation/reactor/extensionbridge/extensionbridge.min.js"></script>
@@ -72,7 +72,7 @@ De methode `init` wordt aangeroepen door tags zodra de weergave in het iframe is
 | `settings` | Een object met instellingen die eerder in deze weergave zijn opgeslagen. Als `settings` wel `null` is, wordt hiermee aangegeven dat de gebruiker de eerste instellingen maakt in plaats van een opgeslagen versie te laden. Als `settings` een object is, moet u het gebruiken om de weergave te vullen, aangezien de gebruiker ervoor kiest om de eerder blijvend instellingen te bewerken. |
 | `extensionSettings` | Instellingen die zijn opgeslagen in de configuratieweergave van de extensie. Dit kan nuttig zijn om tot uitbreidingsmontages in meningen toegang te hebben die niet de mening van de uitbreidingsconfiguratie zijn. Gebruik `settings` als de huidige weergave de configuratieweergave van de extensie is. |
 | `propertySettings` | Een object met instellingen voor de eigenschap. Zie de [ turbineobjecten gids ](../turbine.md#property-settings) voor details op wat in dit voorwerp bevat is. |
-| `tokens` | Een object met API-tokens. Voor toegang tot Adobe-API&#39;s vanuit de weergave moet u doorgaans een IMS-token gebruiken onder `tokens.imsAccess` . Dit token wordt alleen beschikbaar gesteld voor extensies die door de Adobe zijn ontwikkeld. Als u een werknemer bent die van de Adobe een uitbreiding vertegenwoordigt die door Adobe wordt authored, gelieve [ het team van de de ingenieurskunst van de gegevensverzameling ](mailto:reactor@adobe.com) e-mail en de naam van de uitbreiding te verstrekken zodat kunnen wij het aan de lijst van gewenste personen toevoegen. |
+| `tokens` | Een object met API-tokens. Als u Adobe API&#39;s vanuit de weergave wilt openen, moet u doorgaans een IMS-token gebruiken onder `tokens.imsAccess` . Deze token wordt alleen beschikbaar gesteld voor extensies die door Adobe zijn ontwikkeld. Als u een werknemer van Adobe die een uitbreiding vertegenwoordigen door Adobe wordt authored, gelieve [ het team van de de ingenieurswetenschappen van de gegevensinzameling ](mailto:reactor@adobe.com) te e-mailen en de naam van de uitbreiding te verstrekken zodat kunnen wij het aan de lijst van gewenste personen toevoegen. |
 | `company` | Een object met één eigenschap, `orgId` , die zelf uw Adobe Experience Cloud-id vertegenwoordigt (een alfanumerieke tekenreeks van 24 tekens). |
 | `schema` | Een voorwerp in [ JSON Schema ](https://json-schema.org/) formaat. Dit voorwerp zal uit [ uitbreidingsmanifest ](../manifest.md) komen en kan in het bevestigen van uw vorm nuttig zijn. |
 
@@ -148,9 +148,9 @@ Het `options` -object moet één booleaanse eigenschap bevatten, `tokenize` . Th
 
 Uw weergaven hebben waarschijnlijk formuliervelden waarin gebruikers gegevenselementen willen gebruiken. Als uw weergave bijvoorbeeld een tekstveld bevat waarin de gebruiker een productnaam moet invoeren, heeft het voor de gebruiker niet altijd zin om een hard-gecodeerde waarde in het veld te typen. In plaats daarvan willen ze mogelijk dat de waarde van het veld dynamisch is (bepaald bij uitvoering) en kunnen ze dit bereiken met behulp van een gegevenselement.
 
-Als voorbeeld, veronderstel wij een uitbreiding bouwen die een baken verzendt om een omzetting te volgen. Laten we er ook van uitgaan dat een van de gegevens die ons baken verstuurt een productnaam is. Onze uitbreidingsmening die de gebruiker toestaat om het baken te vormen zou waarschijnlijk een tekstgebied voor de productnaam hebben. Normaal gesproken zou het voor de gebruiker van het Platform weinig zin hebben om een statische productnaam zoals &quot;Calzone Oven XL&quot;te typen omdat de productnaam waarschijnlijk afhankelijk is van de pagina waarvan het baken zal worden verzonden. Dit is een goed geval voor een gegevenselement.
+Als voorbeeld, veronderstel wij een uitbreiding bouwen die een baken verzendt om een omzetting te volgen. Laten we er ook van uitgaan dat een van de gegevens die ons baken verstuurt een productnaam is. Onze uitbreidingsmening die de gebruiker toestaat om het baken te vormen zou waarschijnlijk een tekstgebied voor de productnaam hebben. Normaal gesproken zou het voor de Experience Platform-gebruiker weinig zin hebben om een statische productnaam in te voeren, zoals &quot;Calzone Oven XL&quot;, omdat de productnaam waarschijnlijk afhankelijk is van de pagina vanwaar het baken wordt verzonden. Dit is een goed geval voor een gegevenselement.
 
-Als een gebruiker het gegevenselement genoemd `productname` voor de waarde van de productnaam wilde gebruiken, kunnen zij de naam van het gegevenselement met percententekens op beide kanten typen (`%productname%`). We verwijzen naar de naam van het data-element met een procentteken als een &#39;data-element token&#39;. De gebruikers van het platform zijn vaak vertrouwd met dit concept. Uw extensie slaat op zijn beurt het token voor het gegevenselement op in het `settings` -object dat het exporteert. Het instellingsobject kan er dan als volgt uitzien:
+Als een gebruiker het gegevenselement genoemd `productname` voor de waarde van de productnaam wilde gebruiken, kunnen zij de naam van het gegevenselement met percententekens op beide kanten typen (`%productname%`). We verwijzen naar de naam van het data-element met een procentteken als een &#39;data-element token&#39;. Experience Platform-gebruikers zijn vaak vertrouwd met dit concept. Uw extensie slaat op zijn beurt het token voor het gegevenselement op in het `settings` -object dat het exporteert. Het instellingsobject kan er dan als volgt uitzien:
 
 ```js
 {
@@ -172,7 +172,7 @@ Om aan te geven waar het nuttig kan zijn voor gebruikers om gegevenselementen te
 
 >[!NOTE]
 >
->Om het aangewezen pictogram te downloaden, navigeer aan de [ pictogrammen pagina op het Spectrum van de Adobe ](https://spectrum.adobe.com/page/icons/) en onderzoek naar &quot;[!DNL Data]&quot;.
+>Om het aangewezen pictogram te downloaden, navigeer aan de [ pictogrammen pagina op het Spectrum van Adobe ](https://spectrum.adobe.com/page/icons/) en onderzoek naar &quot;[!DNL Data]&quot;.
 
 Wanneer de knoop naast het tekstgebied door een gebruiker wordt geselecteerd, vraag `window.extensionBridge.openDataElementSelector` zoals [ hierboven geschetst ](#open-data-element). Hiermee wordt een lijst weergegeven met de gegevenselementen van de gebruiker die de gebruiker kan kiezen in plaats van deze te dwingen de naam en het type procent-teken te onthouden. Nadat de gebruiker een gegevenselement heeft geselecteerd, ontvangt u de naam van het geselecteerde gegevenselement met procenttekens (tenzij u de optie `tokenize` op `false` hebt ingesteld). We raden u aan het tekstveld te vullen met het resultaat.
 
@@ -230,4 +230,4 @@ In dit geval is het resultaat altijd een tekenreeks, omdat de waarde van `produc
 
 ## Navigatie voorkomen
 
-De communicatie tussen de uitbreidingsmening en het bevattende gebruikersinterface van de Inzameling van Gegevens is afhankelijk van geen navigatie die binnen de uitbreidingsmening voorkomt. Als zodanig moet u vermijden dat er iets aan de extensieweergave wordt toegevoegd waarmee de gebruiker kan navigeren van de HTML-pagina van de extensieweergave. Als u bijvoorbeeld een koppeling opgeeft in de extensieweergave, moet u ervoor zorgen dat er een nieuw browservenster wordt geopend (meestal door `target="_blank"` aan de ankertag toe te voegen). Als u ervoor kiest om een `form` -element te gebruiken in de extensieweergave, moet u ervoor zorgen dat het formulier nooit wordt verzonden. Het verzenden van het formulier kan per ongeluk plaatsvinden als u een `button` -element in het formulier hebt en er `type="button"` niet aan toevoegt. Als u een formulier verzendt in de extensieweergave, wordt het HTML-document vernieuwd. Dit leidt tot een verbroken gebruikerservaring.
+De communicatie tussen de uitbreidingsmening en het bevattende gebruikersinterface van de Inzameling van Gegevens is afhankelijk van geen navigatie die binnen de uitbreidingsmening voorkomt. Voeg daarom niets toe aan de extensieweergave waarmee de gebruiker kan navigeren van de HTML-pagina van de extensieweergave. Als u bijvoorbeeld een koppeling opgeeft in de extensieweergave, moet u ervoor zorgen dat er een nieuw browservenster wordt geopend (meestal door `target="_blank"` aan de ankertag toe te voegen). Als u ervoor kiest om een `form` -element te gebruiken in de extensieweergave, moet u ervoor zorgen dat het formulier nooit wordt verzonden. Het verzenden van het formulier kan per ongeluk plaatsvinden als u een `button` -element in het formulier hebt en er `type="button"` niet aan toevoegt. Als u een formulier verzendt in de extensieweergave, wordt het HTML-document vernieuwd. Dit leidt tot een verbroken gebruikerservaring.

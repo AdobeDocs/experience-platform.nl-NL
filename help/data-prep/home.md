@@ -1,12 +1,12 @@
 ---
-keywords: Experience Platform;home;populaire onderwerpen;map csv;map csv-bestand;map csv-bestand toewijzen aan xdm;map csv aan xdm;ui guide;mapper;mapping;data prep;data voorbereiden;voorbereiden van gegevens;
+keywords: Experience Platform;home;populaire onderwerpen;map csv;map csv-bestand;map csv-bestand toewijzen aan xdm;map csv aan xdm;ui-gids;mapper;mapping;data prep;gegevens voorbereiden;gegevens voorbereiden;
 solution: Experience Platform
 title: Overzicht van Data Prep
 description: Dit document introduceert Data Prep in Adobe Experience Platform.
 exl-id: f15eeb50-a531-4560-a524-1a670fbda706
-source-git-commit: d39ae3a31405b907f330f5d54c91b95c0f999eee
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '789'
+source-wordcount: '790'
 ht-degree: 0%
 
 ---
@@ -52,7 +52,7 @@ Om meer over afbeeldingsreeksen, met inbegrip van te leren hoe te om de gebieden
 
 ## Gegevensverwerking
 
-De Prep van gegevens kan robuust verschillende formaten van gegevens behandelen die in Platform worden opgenomen. Om meer over te leren hoe de Prep van Gegevens verschillende gegevenstypes behandelt, te lezen gelieve het [ overzicht van de gegevensformaat behandeling ](./data-handling.md).
+Data Prep kan op krachtige wijze verschillende gegevensindelingen verwerken die in Experience Platform worden ingevoerd. Om meer over te leren hoe de Prep van Gegevens verschillende gegevenstypes behandelt, te lezen gelieve het [ overzicht van de gegevensformaat behandeling ](./data-handling.md).
 
 ## Updates van gedeeltelijke rijen verzenden met [!DNL Data Prep]
 

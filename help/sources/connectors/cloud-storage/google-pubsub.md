@@ -3,9 +3,9 @@ title: Google PubSub Source - Overzicht
 description: Leer hoe u Google PubSub met Adobe Experience Platform kunt verbinden via API's of de gebruikersinterface.
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 7c78173d-2639-47cb-8935-77fb7841a121
-source-git-commit: 84d09038ded1f35269ebf67c6bc1a5dacaafe4ac
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '825'
+source-wordcount: '829'
 ht-degree: 0%
 
 ---
@@ -16,13 +16,13 @@ ht-degree: 0%
 >
 >De [!DNL Google PubSub] -bron is in de broncatalogus beschikbaar voor gebruikers die Real-Time CDP Ultimate hebben aangeschaft.
 
-Adobe Experience Platform biedt native connectiviteit voor cloudproviders zoals [!DNL AWS] , [!DNL Google Cloud Platform] en [!DNL Azure] , zodat u gegevens van deze systemen kunt overbrengen naar Platform voor gebruik in downstreamservices en -doelen.
+Adobe Experience Platform biedt native connectiviteit voor cloudproviders zoals [!DNL AWS] , [!DNL Google Cloud Platform] en [!DNL Azure] , zodat u gegevens van deze systemen naar Experience Platform kunt overbrengen voor gebruik in downstreamservices en -doelen.
 
-Met bronnen voor cloudopslag kunt u uw gegevens overbrengen naar Platform zonder dat u deze hoeft te downloaden, opmaken of uploaden. Ingebedde gegevens kunnen worden opgemaakt als XDM JSON, XDM Parquet, of afgebakend. Elke stap van het proces is geïntegreerd in de bronwerkstroom. Met Platform kunt u gegevens uit [!DNL Google PubSub] in real-time invoeren.
+Opslagbronnen in de cloud kunnen uw gegevens naar Experience Platform brengen zonder dat ze hoeven te worden gedownload, opgemaakt of geüpload. Ingebedde gegevens kunnen worden opgemaakt als XDM JSON, XDM Parquet, of afgebakend. Elke stap van het proces is geïntegreerd in de bronwerkstroom. Met Experience Platform kunt u gegevens van [!DNL Google PubSub] in real-time invoeren.
 
 ## Vereisten {#prerequisites}
 
-In deze sectie worden de vereiste instellingen beschreven die u moet voltooien voordat u uw [!DNL Google PubSub] -account kunt verbinden met het Experience Platform.
+In deze sectie worden de vereiste instellingen beschreven die u moet voltooien voordat u uw [!DNL Google PubSub] -account kunt verbinden met Experience Platform.
 
 ### Serviceaccount maken {#create-service-account}
 
@@ -49,7 +49,7 @@ Om sleutels voor uw de dienstrekening te produceren, selecteer de sleutelkopbal 
 
 ![ voegt zeer belangrijk venster in Google toe Developer Console ](../../images/tutorials/create/google-pubsub/add-key.png)
 
-Als dit lukt, ontvangt u een bericht dat de persoonlijke sleutel op uw computer is opgeslagen en dat een bestand wordt gedownload. U kunt de inhoud van dit bestand vervolgens als referenties gebruiken wanneer u uw [!DNL Google PubSub] -account op het Experience Platform maakt.
+Als dit lukt, ontvangt u een bericht dat de persoonlijke sleutel op uw computer is opgeslagen en dat een bestand wordt gedownload. Vervolgens kunt u de inhoud van dit bestand als referenties gebruiken wanneer u uw [!DNL Google PubSub] -account op Experience Platform maakt.
 
 ### Rechten verlenen op onderwerp- en abonnementsniveau {#grant-permissions}
 
@@ -59,7 +59,7 @@ Om toestemmingen op het onderwerp en abonnementsniveau te verlenen, navigeer aan
 
 ## Configuraties voor optimale prestaties [!DNL Google PubSub usage] {#optimal-configurations}
 
-In deze sectie worden configuraties beschreven die u kunt aanraden om het gebruik van de [!DNL Google PubSub] -bron op het Experience Platform te optimaliseren.
+In deze sectie worden configuraties beschreven die u kunt aanraden om het gebruik van de [!DNL Google PubSub] -bron op Experience Platform te optimaliseren.
 
 ### Eigenschappen voor abonnementen {#subscription-properties}
 
@@ -83,7 +83,7 @@ U moet **plaatsen uw het bewaarduur van het abonnementsbericht om 24 uur of meer
 
 ## Verbinden [!DNL Google PubSub] met Experience Platform
 
-In de onderstaande documentatie vindt u informatie over het tot stand brengen van een verbinding tussen [!DNL Google PubSub] en Platform via API&#39;s of de gebruikersinterface:
+In de onderstaande documentatie vindt u informatie over het tot stand brengen van een verbinding tussen [!DNL Google PubSub] en Experience Platform via API&#39;s of de gebruikersinterface:
 
 ### API&#39;s gebruiken
 

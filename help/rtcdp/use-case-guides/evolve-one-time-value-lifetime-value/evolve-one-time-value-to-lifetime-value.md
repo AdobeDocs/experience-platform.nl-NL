@@ -3,9 +3,9 @@ title: Evolueer eenmalig klantenwaarde aan levenwaarde
 description: Leer hoe u persoonlijke campagnes kunt maken om de beste complementaire producten of services te bieden op basis van de kenmerken, het gedrag en eerdere aankopen van een specifieke klant.
 feature: Use Cases
 exl-id: 45f72b5e-a63b-44ac-a186-28bac9cdd442
-source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '3154'
+source-wordcount: '3156'
 ht-degree: 0%
 
 ---
@@ -44,7 +44,7 @@ Om dit te bereiken, bestaat de vereiste technologie uit twee Experience Platform
    * [Profielen](/help/profile/home.md)
    * [Gegevenssets](/help/catalog/datasets/overview.md)
    * [Doelgroepen](/help/segmentation/home.md)
-   * [Doelen](/help/destinations/home.md)
+   * [Bestemmingen](/help/destinations/home.md)
 * [[!DNL Adobe Journey Optimizer] ](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/journey.html): De reizen van het ontwerp, opstellingstrekkers, en creeer het juiste overseinen om uw bezoekers te richten.
    * [ de Trigger van de Gebeurtenis of van het Publiek ](https://experienceleague.adobe.com/docs/journey-optimizer/using/offer-decisioning/collect-event-data/data-collection.html)
    * [ Soorten publiek en Gebeurtenissen ](https://experienceleague.adobe.com/docs/journey-optimizer/using/audiences-profiles-identities/audiences/about-audiences.html)
@@ -52,7 +52,7 @@ Om dit te bereiken, bestaat de vereiste technologie uit twee Experience Platform
 
 ## Real-Time CDP- en Journey Optimizer-architectuur
 
-Hieronder volgt een architectuurweergave op hoog niveau van de verschillende componenten van Real-Time CDP en Journey Optimizer. In dit diagram ziet u hoe gegevens door de twee Experience Platform-apps lopen van gegevensverzameling tot het punt waar deze wordt geactiveerd via reizen of campagnes naar bestemmingen, om het gebruiksgeval te bereiken dat op deze pagina wordt beschreven.
+Hieronder volgt een architectuurweergave op hoog niveau van de verschillende componenten van Real-Time CDP en Journey Optimizer. In dit diagram ziet u hoe de gegevens door de twee Experience Platform-apps lopen van gegevensverzameling tot het punt waar deze wordt geactiveerd via reizen of campagnes naar bestemmingen, om het gebruiksgeval te bereiken dat op deze pagina wordt beschreven.
 
 ![ Architectuur hoog niveau visueel overzicht.](/help/rtcdp/use-case-guides/evolve-one-time-value-lifetime-value/images/architecture-diagram.png){zoomable="yes"}
 
@@ -97,7 +97,7 @@ Voor meer informatie over het creëren van [ schema&#39;s ](https://experiencele
 
 Er zijn verscheidene schemaontwerpen die u in deze steekproefimplementatie voor het gebruiksgeval kunt gebruiken om éénmalige waarde aan levenwaarde te evolueren. Elk schema bevat specifieke vereiste velden die moeten worden ingesteld, en enkele velden die worden voorgesteld.
 
-Gebaseerd op steekproefimplementaties, stelt de Adobe voor dat u de volgende drie schema&#39;s creeert om dit gebruiksgeval te verwezenlijken:
+Gebaseerd op steekproefimplementaties, stelt Adobe voor dat u de volgende drie schema&#39;s creeert om dit gebruiksgeval te verwezenlijken:
 
 * [ de attributenschema van de Klant ](#customer-attributes-schema) (een profielschema)
 * [ schema van de Transacties van de Klant digitale ](#customer-digital-transactions-schema) (een schema van de ervaringsgebeurtenis)
@@ -137,7 +137,7 @@ Het schema met klantkenmerken wordt vertegenwoordigd door een [!UICONTROL XDM In
 
 #### Schema voor digitale transacties van klanten {#customer-digital-transactions-schema}
 
-Dit schema wordt gebruikt om de gebeurtenisgegevens te structureren en te verwijzen die uw klantenactiviteit vormen die op uw website of op andere bijbehorende digitale platforms voorkomt. Dit gegeven wordt typisch opgenomen in [!DNL Adobe Experience Platform] via [ Web SDK ](/help/web-sdk/home.md) en is noodzakelijk om diverse doorbladeren en omzettingsgebeurtenissen van verwijzingen te voorzien die voor het teweegbrengen van reizen, gedetailleerde online klantenanalyse, en verbeterde segmenteringsmogelijkheden worden gebruikt.
+Dit schema wordt gebruikt om de gebeurtenisgegevens te structureren en te verwijzen die uw klantenactiviteit vormen die op uw website of op andere bijbehorende digitale platforms voorkomt. Dit gegeven wordt typisch opgenomen in [!DNL Adobe Experience Platform] via [ SDK van het Web ](/help/web-sdk/home.md) en is noodzakelijk om diverse doorbladeren en omzettingsgebeurtenissen van verwijzingen te voorzien die voor het teweegbrengen van reizen, gedetailleerde online klantenanalyse, en verbeterde segmenteringsmogelijkheden worden gebruikt.
 
 ![ de digitale transactieschema van de Klant met benadrukte gebiedsgroepen ](/help/rtcdp/use-case-guides/evolve-one-time-value-lifetime-value/images/customer-digital-transactions-schema.png)
 
@@ -210,7 +210,7 @@ De externe Attributen van de Controle van het Systeem van Source is een standaar
 
 #### Offline transactieschema van de klant {#customer-offline-transactions-schema}
 
-Dit schema wordt gebruikt om de gebeurtenisgegevens te structureren en te verwijzen die uw klantenactiviteit vormen die op platforms buiten uw website voorkomt. Deze gegevens worden doorgaans in [!DNL Adobe Experience Platform] opgenomen vanuit een besturingssysteem (of een vergelijkbaar systeem) en worden meestal via een API-verbinding gestreamd naar Platform. Lees over [ partij ingestie ](/help/ingestion/batch-ingestion/getting-started.md). Zijn doel is de diverse off-line omzettingsgebeurtenissen van verwijzingen te voorzien die voor het teweegbrengen van reizen, diepe online en off-line klantenanalyse, en verbeterde segmenteringsmogelijkheden worden gebruikt.
+Dit schema wordt gebruikt om de gebeurtenisgegevens te structureren en te verwijzen die uw klantenactiviteit vormen die op platforms buiten uw website voorkomt. Deze gegevens worden doorgaans in [!DNL Adobe Experience Platform] ingevoerd via een besturingssysteem (of vergelijkbaar systeem) en worden meestal via een API-verbinding naar Experience Platform gestreamd. Lees over [ partij ingestie ](/help/ingestion/batch-ingestion/getting-started.md). Zijn doel is de diverse off-line omzettingsgebeurtenissen van verwijzingen te voorzien die voor het teweegbrengen van reizen, diepe online en off-line klantenanalyse, en verbeterde segmenteringsmogelijkheden worden gebruikt.
 
 ![ de off-line transactieschema van de Klant met benadrukte gebiedsgroepen ](/help/rtcdp/use-case-guides/evolve-one-time-value-lifetime-value/images/customer-offline-transactions-schema.png)
 
@@ -234,7 +234,7 @@ De externe Attributen van de Controle van het Systeem van Source is een standaar
 
 +++
 
-#### Adobe webverbindingsschema {#adobe-web-connector-schema}
+#### Adobe-schema voor webconnector {#adobe-web-connector-schema}
 
 >[!NOTE]
 >
@@ -242,7 +242,7 @@ De externe Attributen van de Controle van het Systeem van Source is een standaar
 
 Dit schema wordt gebruikt om de gebeurtenisgegevens te structureren en te verwijzen die uw klantenactiviteit vormen die op uw website of op andere bijbehorende digitale platforms voorkomt. Dit schema is gelijkaardig aan het schema van de Transacties van de Klant Digitale maar verschilt in die zin dat het kan wanneer het Web SDK geen optie voor gegevensinzameling is. Als zodanig kunt u dit schema gebruiken wanneer u [!DNL Adobe Analytics Data Connector] gebruikt om uw onlinegegevens naar [!DNL Adobe Experience Platform] te verzenden als primaire of secundaire gegevensstroom.
 
-![ Adobe Web verbindingsschema met benadrukte gebiedsgroepen ](/help/rtcdp/use-case-guides/evolve-one-time-value-lifetime-value/images/adobe-web-schema.png)
+![ het schema van de het Webschakelaar van Adobe met benadrukte gebiedsgroepen ](/help/rtcdp/use-case-guides/evolve-one-time-value-lifetime-value/images/adobe-web-schema.png)
 
 Het schema van de [!DNL Adobe] webconnector wordt vertegenwoordigd door een [!UICONTROL XDM ExperienceEvent] -klasse, die de volgende veldgroepen bevat:
 
@@ -300,7 +300,7 @@ Voor dit gebruiksgeval moet u twee soorten publiek maken om specifieke kenmerken
 
 * Voor informatie over hoe te om een publiek tot stand te brengen, lees de [ de dienstgids van het publiek UI ](https://experienceleague.adobe.com/docs/experience-platform/segmentation/ui/overview.html#create-audience).
 * Voor informatie over hoe te om [ publiek ](/help/segmentation/home.md) samen te stellen, lees de [ gids UI van de Samenstelling van het publiek ](/help/segmentation/ui/audience-composition.md).
-* Voor informatie over hoe te om publiek door Platform-afgeleide segmentdefinities te bouwen, lees de [ gids UI van de Bouwer van het publiek van het publiek ](/help/segmentation/ui/segment-builder.md).
+* Voor informatie over hoe te om publiek door Experience Platform-Afgeleide segmentdefinities te bouwen, lees de [ gids UI van de Bouwer van het publiek van het publiek UI ](/help/segmentation/ui/segment-builder.md).
 
 Met name moet u twee soorten publiek maken en gebruiken in verschillende stappen van het gebruiksscenario, zoals in de onderstaande afbeelding wordt getoond.
 

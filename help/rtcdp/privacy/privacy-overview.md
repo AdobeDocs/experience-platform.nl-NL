@@ -4,9 +4,9 @@ title: Privacy in Real-Time Customer Data Platform
 description: Met Adobe Real-Time Customer Data Platform kunt u het proces stroomlijnen waarbij uw gegevensbewerkingen voldoen aan de privacyregels.
 feature: Get Started, Privacy
 exl-id: bcb0e42e-4549-4952-bb69-5534aee353f8
-source-git-commit: adc6d50f2784fe665d0590c3af053a057f8e4e38
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '386'
+source-wordcount: '387'
 ht-degree: 0%
 
 ---
@@ -19,7 +19,7 @@ De meeste [!DNL Real-Time CDP] -mogelijkheden worden aangestuurd door Adobe Expe
 
 ## Toegang tot en verwijderen van verzoeken van klanten respecteren
 
-Wettelijke privacyregels zoals de [!DNL General Data Protection Regulation] (GDPR) en de [!DNL California Consumer Privacy Act] (CCPA) geven klanten het recht om toegang te vragen tot of te verwijderen van de persoonsgegevens die u van hen verzamelt. Aangezien [!DNL Real-Time CDP] gebruikmaakt van [!DNL Experience Platform] -mogelijkheden voor gegevensverzameling en -opslag, moeten verzoeken van klanten om toegang tot en verwijdering van hun persoonlijke gegevens binnen [!DNL Platform] worden beheerd. Zie het overzicht op [ Adobe Experience Platform Privacy Service ](../../privacy-service/home.md) voor meer informatie.
+Wettelijke privacyregels zoals de [!DNL General Data Protection Regulation] (GDPR) en de [!DNL California Consumer Privacy Act] (CCPA) geven klanten het recht om toegang te vragen tot of te verwijderen van de persoonsgegevens die u van hen verzamelt. Aangezien [!DNL Real-Time CDP] gebruikmaakt van [!DNL Experience Platform] -mogelijkheden voor gegevensverzameling en -opslag, moeten verzoeken van klanten om toegang tot en verwijdering van hun persoonlijke gegevens binnen [!DNL Experience Platform] worden beheerd. Zie het overzicht op [ Adobe Experience Platform Privacy Service ](../../privacy-service/home.md) voor meer informatie.
 
 >[!IMPORTANT]
 >
@@ -33,7 +33,7 @@ Zie het document op [ het ontvangen opt-out verzoeken ](../../segmentation/tutor
 
 ## IAB TCF 2.0-ondersteuning
 
-[!DNL Real-Time CDP] wordt voortgebouwd op Adobe Experience Platform, die deel van de geregistreerde [ verkoperslijst ](https://iabeurope.eu/vendor-list-tcf/) voor [!DNL Transparency & Consent Framework (TCF)] uitmaakt, zoals die door [!DNL Interactive Advertising Bureau (IAB)] wordt geschetst. In overeenstemming met de TCF 2.0-vereisten, kunt u met Platform gedetailleerde gegevens over de toestemming van klanten verzamelen en deze integreren in uw opgeslagen klantprofielen. Deze gegevens over toestemming kunnen vervolgens worden meegenomen in de vraag of bepaalde profielen worden opgenomen in geëxporteerde soorten publiek, afhankelijk van het geval waarin ze worden gebruikt.
+[!DNL Real-Time CDP] wordt voortgebouwd op Adobe Experience Platform, die deel van de geregistreerde [ verkoperslijst ](https://iabeurope.eu/vendor-list-tcf/) voor [!DNL Transparency & Consent Framework (TCF)] uitmaakt, zoals die door [!DNL Interactive Advertising Bureau (IAB)] wordt geschetst. In overeenstemming met de TCF 2.0-vereisten, kunt u met Experience Platform gedetailleerde gegevens over toestemming van klanten verzamelen en deze integreren in uw opgeslagen klantprofielen. Deze gegevens over toestemming kunnen vervolgens worden meegenomen in de vraag of bepaalde profielen worden opgenomen in geëxporteerde soorten publiek, afhankelijk van het geval waarin ze worden gebruikt.
 
 Zie het overzicht op [ IAB TCF 2.0 steun in Experience Platform ](../../landing/governance-privacy-security/consent/iab/overview.md) voor meer informatie.
 

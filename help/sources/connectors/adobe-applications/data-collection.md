@@ -1,24 +1,24 @@
 ---
-keywords: Experience Platform;thuis;populaire onderwerpen;bronnen;bron;gegevensverzameling
-title: Gegevensverzameling Adoben
-description: Dit document biedt een overzicht van de bron voor gegevensverzameling van Adoben.
+keywords: Experience Platform;home;populaire onderwerpen;bronnen;bron;gegevensverzameling
+title: Adobe-gegevensverzameling
+description: Dit document biedt een overzicht van de Adobe-gegevensbron voor gegevensverzameling.
 exl-id: 3cb582a9-b852-4ede-8047-af1a47aa3647
-source-git-commit: 8ded2aed32dffa4f0923fedac7baf798e68a9ec9
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '287'
+source-wordcount: '288'
 ht-degree: 0%
 
 ---
 
-# Gegevensverzameling Adoben
+# Adobe-gegevensverzameling
 
-Adobe Experience Platform biedt een reeks technologieën waarmee u gegevens van de klantenervaring van client-side bronnen kunt verzamelen en deze naar de Adobe Experience Platform-Edge Network kunt verzenden waar deze in seconden kan worden verrijkt, getransformeerd en gedistribueerd naar Adobe- of niet-Adobe doelen.
+Adobe Experience Platform biedt een reeks technologieën waarmee u gegevens van klanten-side bronnen kunt verzamelen en deze naar Adobe Experience Platform Edge Network kunt sturen waar ze kunnen worden verrijkt, getransformeerd en in enkele seconden naar Adobe- of niet-Adobe-bestemmingen kunnen worden gedistribueerd.
 
-De bronintegratie van de Gegevensinzameling van Adobe Experience Platform staat u toe om tot uw gegevens over de Edge Network, met inbegrip van Prep van Gegevens voor de Inzameling van Gegevens, evenals betere steun voor waarschuwingen, door de broncatalogus toegang te hebben.
+Dankzij de integratie van bronnen in Adobe Experience Platform Data Collection hebt u via de broncatalogus toegang tot uw gegevens op de Edge Network, waaronder Data Prep voor gegevensverzameling en verbeterde ondersteuning voor waarschuwingen.
 
 ## De werkruimte Bronnen gebruiken om toegang te krijgen tot Gegevensverzameling
 
-Selecteer in de gebruikersinterface van het platform **[!UICONTROL Sources]** in de linkernavigatiebalk voor toegang tot de werkruimte van [!UICONTROL Sources] . In het scherm [!UICONTROL Catalog] worden diverse bronnen weergegeven waarmee u een account kunt maken.
+Selecteer in de gebruikersinterface van Experience Platform de optie **[!UICONTROL Sources]** in de linkernavigatiebalk voor toegang tot de werkruimte van [!UICONTROL Sources] . In het scherm [!UICONTROL Catalog] worden diverse bronnen weergegeven waarmee u een account kunt maken.
 
 U kunt de juiste categorie selecteren in de catalogus aan de linkerkant van het scherm. U kunt ook de specifieke bron vinden waarmee u wilt werken met de zoekoptie.
 
@@ -28,7 +28,7 @@ Selecteer onder de categorie [!UICONTROL Adobe applications] de optie **[!UICONT
 
 De gebruikersinterface voor gegevensverzameling wordt weergegeven op het tabblad **[!UICONTROL Datastreams]** .
 
-Een gegevensstroom is een configuratie die de Edge Network vertelt waar u uw gegevens wilt worden verzonden. Specifiek, specificeert een datastream welke producten van het Experience Cloud u de gegevens naar wilt verzenden, en hoe u de gegevens wilt worden behandeld en in elk product worden opgeslagen.
+Een gegevensstroom is een configuratie die de Edge Network vertelt waar u uw gegevens wilt worden verzonden. Specifiek, specificeert een gegevensstroom welke producten van Experience Cloud u de gegevens naar wilt verzenden, en hoe u de gegevens wilt worden behandeld en in elk product worden opgeslagen.
 
 ![ gegevensstromen ](./images/data-collection/datastreams.png)
 

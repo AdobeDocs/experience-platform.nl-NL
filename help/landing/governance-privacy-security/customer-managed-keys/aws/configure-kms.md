@@ -1,9 +1,10 @@
 ---
 title: AWS KMS configureren voor door de klant beheerde sleutels
 description: Leer hoe u de Amazon Web Services Key Management Service (KMS) configureert voor gebruik met door klanten beheerde sleutels in Adobe Experience Platform.
-source-git-commit: 90b8a3253e8298a634c0deaf82ac8be05f478622
+exl-id: 0cf0deab-dc30-412f-b511-dee5504c3953
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1564'
+source-wordcount: '1568'
 ht-degree: 0%
 
 ---
@@ -12,13 +13,13 @@ ht-degree: 0%
 
 >[!AVAILABILITY]
 >
->Dit document is van toepassing op implementaties van Experience Platforms die op Amazon Web Services (AWS) worden uitgevoerd. Experience Platform dat op AWS wordt uitgevoerd, is momenteel beschikbaar voor een beperkt aantal klanten. Meer over de gesteunde infrastructuur van het Experience Platform leren, zie het [ Experience Platform multi-cloud overzicht ](https://experienceleague.adobe.com/en/docs/experience-platform/landing/multi-cloud).
+>Dit document is van toepassing op implementaties van Experience Platform die op Amazon Web Services (AWS) worden uitgevoerd. Experience Platform die op AWS wordt uitgevoerd, is momenteel beschikbaar voor een beperkt aantal klanten. Meer over de gesteunde infrastructuur van Experience Platform leren, zie het [ multi-wolkenoverzicht van Experience Platform ](https://experienceleague.adobe.com/en/docs/experience-platform/landing/multi-cloud).
 >
 >[ Klant Beheerde Sleutels ](../overview.md) (CMK) op AWS worden gesteund voor Privacy en het Schild van de Veiligheid maar zijn niet beschikbaar voor het Schild van de Gezondheidszorg. CMK on Azure wordt ondersteund voor zowel het privacyschild als het beveiligingsschild.
 
 Met deze handleiding kunt u uw gegevens beveiligen met Amazon Web Services (AWS) Key Management Service (KMS) door coderingssleutels voor Adobe Experience Platform te maken, te beheren en te beheren. Deze integratie vereenvoudigt naleving, stroomlijnt verrichtingen door automatisering, en elimineert de behoefte om uw eigen zeer belangrijke beheerinfrastructuur te handhaven.
 
-Voor Customer Journey Analytics-specifieke instructies, verwijs naar de [ documentatie van de Customer Journey Analytics CMK ](https://experienceleague.adobe.com/en/docs/analytics-platform/using/cja-privacy/cmk)
+Voor Customer Journey Analytics-specifieke instructies, verwijs naar de [ documentatie van Customer Journey Analytics CMK ](https://experienceleague.adobe.com/en/docs/analytics-platform/using/cja-privacy/cmk)
 
 >[!IMPORTANT]
 >
@@ -36,7 +37,7 @@ Voordat u doorgaat met dit document, hebt u een goed inzicht in de volgende bela
    - Geef op welke handelingen gebruikers mogen uitvoeren of mogen niet uitvoeren.
    - Voer fijnkorrelig toegangsbeheer door toestemmingen toe te wijzen gebruikend beleid IAM uit.
 Verwijs naar het [ IAM Beleid voor de officiële documentatie van AWS KMS ](https://docs.aws.amazon.com/kms/latest/developerguide/iam-policies.html) voor meer informatie.
-- **Veiligheid van Gegevens in Experience Platform**: Onderzoek hoe het Platform gegevensveiligheid verzekert en met de externe diensten zoals AWS KMS voor encryptie integreert. Platform beveiligt gegevens met HTTPS TLS v1.2 voor doorvoer, cloudprovidercodering in rust, geïsoleerde opslag en aanpasbare verificatie- en coderingsopties. Zie het [ bestuur, de privacy, en veiligheidsoverzicht ](../overview.md), of het document op [ gegevensencryptie in Platform ](../../encryption.md) voor meer informatie over hoe uw gegevens veilig wordt gehouden.
+- **Veiligheid van Gegevens in Experience Platform**: Onderzoek hoe Experience Platform gegevensveiligheid verzekert en met de externe diensten zoals AWS KMS voor encryptie integreert. Experience Platform beschermt gegevens met HTTPS TLS v1.2 voor doorvoer, codering van cloudproviders in rust, geïsoleerde opslag en aanpasbare verificatie- en coderingsopties. Zie het [ bestuur, de privacy, en veiligheidsoverzicht ](../overview.md), of het document over [ gegevensencryptie in Experience Platform ](../../encryption.md) voor meer informatie over hoe uw gegevens veilig wordt gehouden.
 - **AWS Management Console**: Een centrale hub waar u tot al uw diensten van AWS van één Web-based toepassing kunt toegang hebben en leiden. Met de zoekbalk kunt u snel gereedschappen zoeken, meldingen controleren, uw account en facturering beheren en uw instellingen aanpassen. Verwijs naar de [ officiële documentatie van de de beheersconsole van AWS ](https://docs.aws.amazon.com/awsconsolehelpdocs/latest/gsg/what-is.html) voor meer informatie.
 
 ## Aan de slag {#get-started}
@@ -73,7 +74,7 @@ Als u uw coderingssleutel wilt instellen en beheren, meldt u zich aan bij uw AWS
 
 >[!IMPORTANT]
 >
->Zorg voor de veilige opslag, toegang en beschikbaarheid van de coderingssleutels. U bent verantwoordelijk voor het beheer van uw toetsen en het voorkomen van verstoringen van de werking van het platform.
+>Zorg voor de veilige opslag, toegang en beschikbaarheid van de coderingssleutels. U bent verantwoordelijk voor het beheer van uw sleutels en het voorkomen van onderbrekingen in Experience Platform-bewerkingen.
 
 Selecteer **[!DNL Create a key]** in de [!DNL Key Management Service (KMS)] -werkruimte.
 
@@ -95,7 +96,7 @@ Selecteer vervolgens de instelling [!DNL Regionality] , die het bereik van het g
 
 >[!IMPORTANT]
 >
->AWS past gebiedsbeperkingen voor KMS-sleutels toe. Deze gebiedsbeperking betekent dat de sleutel in het zelfde gebied moet zijn zoals uw rekening van de Adobe. Adobe heeft alleen toegang tot KMS-sleutels die zich in het gebied van uw account bevinden. Zorg ervoor dat het gebied dat u selecteert, overeenkomt met het gebied van uw Adobe-account voor één gebruiker.
+>AWS past gebiedsbeperkingen voor KMS-sleutels toe. Deze gebiedsbeperking betekent dat de sleutel in het zelfde gebied moet zijn zoals uw Adobe rekening. Adobe heeft alleen toegang tot KMS-sleutels die zich in het gebied van uw account bevinden. Zorg ervoor dat het gebied dat u selecteert, overeenkomt met het gebied van uw Adobe-account voor één gebruiker.
 
 ![ Stap één van het Configure zeer belangrijke werkschema met het gebied van AWS, KMS, en Één van één enkel gebied benadrukt gebied zeer belangrijke opties.](../../../images/governance-privacy-security/key-management-service/configure-key-advanced-options.png)
 
@@ -103,9 +104,9 @@ Selecteer vervolgens de instelling [!DNL Regionality] , die het bereik van het g
 
 Het tweede, [!DNL Add labels] werkgebied wordt weergegeven. Hier configureert u de velden [!DNL Alias] en [!DNL Tags] om u te helpen uw coderingssleutel te beheren en te vinden via de AWS KMS-console.
 
-Voer in het invoerveld **[!DNL Alias]** een beschrijvend label voor de toets in. De alias fungeert als een gebruikersvriendelijke id waarmee u de sleutel snel kunt vinden met de zoekbalk in de AWS KMS-console. Om verwarring te voorkomen kiest u een betekenisvolle naam die het doel van de sleutel weerspiegelt, zoals &quot;Adobe-Platform-Sleutel&quot; of &quot;Customer-Encryption-Key&quot;. U kunt ook een beschrijving van de sleutel opnemen als de belangrijkste alias niet volstaat om het doel te beschrijven.
+Voer in het invoerveld **[!DNL Alias]** een beschrijvend label voor de toets in. De alias fungeert als een gebruikersvriendelijke id waarmee u de sleutel snel kunt vinden met de zoekbalk in de AWS KMS-console. Om verwarring te voorkomen, kiest u een betekenisvolle naam die het doel van de sleutel weerspiegelt, zoals &quot;Adobe-Experience-Platform-Key&quot; of &quot;Customer-Encryption-Key&quot;. U kunt ook een beschrijving van de sleutel opnemen als de belangrijkste alias niet volstaat om het doel te beschrijven.
 
-Tot slot wijs meta-gegevens aan uw sleutel toe door sleutel-waarde paren in de [!DNL Tags] sectie toe te voegen. Deze stap is optioneel, maar u moet codes toevoegen om AWS-bronnen te categoriseren en te filteren, zodat u ze eenvoudiger kunt beheren. Als uw organisatie bijvoorbeeld meerdere bronnen gebruikt die te maken hebben met Adobe, kunt u deze coderen met &#39;Adobe&#39; of &#39;Experience-Platform&#39;. Deze extra stap maakt het eenvoudig om al uw bijbehorende bronnen in de AWS Management Console te zoeken en te beheren. Selecteer **[!DNL Add tag]** om met het proces te beginnen.
+Tot slot wijs meta-gegevens aan uw sleutel toe door sleutel-waarde paren in de [!DNL Tags] sectie toe te voegen. Deze stap is optioneel, maar u moet codes toevoegen om AWS-bronnen te categoriseren en te filteren, zodat u ze eenvoudiger kunt beheren. Als uw organisatie bijvoorbeeld meerdere aan Adobe gerelateerde bronnen gebruikt, kunt u deze coderen met &quot;Adobe&quot; of &quot;Experience-Platform&quot;. Deze extra stap maakt het eenvoudig om al uw bijbehorende bronnen in de AWS Management Console te zoeken en te beheren. Selecteer **[!DNL Add tag]** om met het proces te beginnen.
 
 <!-- I do not have an AWS account with which to document the Add tag process as yet. -->
 

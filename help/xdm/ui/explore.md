@@ -1,26 +1,26 @@
 ---
-keywords: Experience Platform;thuis;populaire onderwerpen;ui;UI;XDM;XDM systeem;ervaringsgegevensmodel;Ervaring gegevensmodel;Gegevensmodel;Gegevensmodel;Onderzoek;klasse;veldgroep;gegevenstype;schema;
+keywords: Experience Platform;home;populaire onderwerpen;ui;UI;XDM;XDM systeem;ervaringsgegevensmodel;Experience gegevensmodel;Experience Data Model;Data Model;exploreren;klasse;field groep;gegevenstype;schema;
 solution: Experience Platform
 title: De Middelen van het Schema in UI onderzoeken
-description: Leer hoe te om bestaande schema's, klassen, de groepen van het schemagebied, en gegevenstypes in het gebruikersinterface van de Experience Platform te onderzoeken.
+description: Leer hoe u bestaande schema's, klassen, schemaveldgroepen en gegevenstypen in de Experience Platform-gebruikersinterface kunt verkennen.
 type: Tutorial
 exl-id: b527b2a0-e688-4cfe-a176-282182f252f2
-source-git-commit: 5f9fdc9eff4d8bba049c03058d24e80e9b89e953
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '1292'
+source-wordcount: '1295'
 ht-degree: 0%
 
 ---
 
 # Schema-bronnen in de gebruikersinterface verkennen
 
-In Adobe Experience Platform worden alle XDM-schemabronnen (Experience Data Model) opgeslagen in [!DNL Schema Library] , inclusief standaardbronnen die worden geleverd door Adobe en aangepaste bronnen die door uw organisatie zijn gedefinieerd. In de interface van het Experience Platform kunt u de structuur en de gebieden van om het even welk bestaand schema, klasse, gebiedsgroep, of gegevenstype in [!DNL Schema Library] bekijken. Dit is vooral nuttig wanneer het plannen van en het voorbereidingen treffen voor gegevensopname, aangezien UI informatie over de verwachte gegevenstypes en gebruiksgevallen van elk gebied verstrekt door deze middelen XDM verstrekt.
+In Adobe Experience Platform worden alle XDM-schemabronnen (Experience Data Model) opgeslagen in de [!DNL Schema Library] , inclusief standaardbronnen die worden geleverd door Adobe en aangepaste bronnen die zijn gedefinieerd door uw organisatie. In Experience Platform UI, kunt u de structuur en de gebieden van om het even welk bestaand schema, klasse, gebiedsgroep, of gegevenstype in [!DNL Schema Library] bekijken. Dit is vooral nuttig wanneer het plannen van en het voorbereidingen treffen voor gegevensopname, aangezien UI informatie over de verwachte gegevenstypes en gebruiksgevallen van elk gebied verstrekt door deze middelen XDM verstrekt.
 
-Deze zelfstudie behandelt de stappen voor het verkennen van bestaande schema&#39;s, klassen, gebiedsgroepen, en gegevenstypes in Experience Platform UI.
+Deze zelfstudie behandelt de stappen voor het verkennen van bestaande schema&#39;s, klassen, veldgroepen en gegevenstypen in de gebruikersinterface van Experience Platform.
 
 ## Een schemabron opzoeken {#lookup}
 
-Selecteer **[!UICONTROL Schemas]** in de gebruikersinterface van het platform in de linkernavigatie. De werkruimte van [!UICONTROL Schemas] biedt een tabblad **[!UICONTROL Browse]** waarin alle schema&#39;s in uw organisatie worden verkend, samen met extra specifieke tabbladen voor respectievelijk **[!UICONTROL Classes]** , **[!UICONTROL Field groups]** , **[!UICONTROL Data types]** en **[!UICONTROL Relationships]** .
+Selecteer **[!UICONTROL Schemas]** in de gebruikersinterface van Experience Platform in de linkernavigatie. De werkruimte van [!UICONTROL Schemas] biedt een tabblad **[!UICONTROL Browse]** waarin alle schema&#39;s in uw organisatie worden verkend, samen met extra specifieke tabbladen voor respectievelijk **[!UICONTROL Classes]** , **[!UICONTROL Field groups]** , **[!UICONTROL Data types]** en **[!UICONTROL Relationships]** .
 
 ![ de werkruimte van Schema&#39;s met verscheidene benadrukte lusjes.](../images/ui/explore/tabs.png)
 
@@ -73,7 +73,7 @@ Zie [ douanegebieden aan standaardgebiedsgroepen ](./resources/schemas.md) docum
 
 Sommige veldnamen worden voorafgegaan door een onderstrepingsteken, zoals `_repo` en `_id` . Deze vertegenwoordigen placeholders voor gebieden die het systeem automatisch zal produceren en toewijzen aangezien de gegevens worden opgenomen.
 
-Daarom moeten de meeste van deze velden worden uitgesloten van de structuur van uw gegevens wanneer u deze opneemt in Platform. De belangrijkste uitzondering op deze regel is het [`_{TENANT_ID}` gebied ](../api/getting-started.md#know-your-tenant_id), dat alle gebieden XDM die onder uw organisatie worden gecreeerd namespaced onder moeten zijn.
+Daarom moeten de meeste van deze velden van de gegevensstructuur worden uitgesloten wanneer u ze in Experience Platform plaatst. De belangrijkste uitzondering op deze regel is het [`_{TENANT_ID}` gebied ](../api/getting-started.md#know-your-tenant_id), dat alle gebieden XDM die onder uw organisatie worden gecreeerd namespaced onder moeten zijn.
 
 ### Datatypen {#data-types}
 
@@ -107,7 +107,7 @@ De gebieden van de identiteit worden benadrukt in het canvas met een vingerafdru
 
 >[!NOTE]
 >
->Zie de gids op [ bepalende identiteitsgebieden ](./fields/identity.md) voor meer informatie over identiteitsgebieden en hun verhouding met de stroomafwaartse diensten van het Platform.
+>Zie de gids op [ bepalend identiteitsgebieden ](./fields/identity.md) voor meer informatie over identiteitsgebieden en hun verhouding met de stroomafwaartse diensten van Experience Platform.
 
 ### Relatievelden {#relationship}
 
@@ -123,4 +123,4 @@ Zie het leerprogramma op [ creërend een verband in UI ](../tutorials/relationsh
 
 ## Volgende stappen
 
-In dit document wordt beschreven hoe u bestaande XDM-bronnen kunt verkennen in de gebruikersinterface van het Experience Platform. Zie het [[!UICONTROL Schemas] overzicht van de werkruimte ](./overview.md) voor meer informatie over de verschillende functies van de [!UICONTROL Schemas] -werkruimte en [!DNL Schema Editor] .
+In dit document wordt beschreven hoe u bestaande XDM-bronnen in de gebruikersinterface van Experience Platform kunt verkennen. Zie het [[!UICONTROL Schemas] overzicht van de werkruimte ](./overview.md) voor meer informatie over de verschillende functies van de [!UICONTROL Schemas] -werkruimte en [!DNL Schema Editor] .

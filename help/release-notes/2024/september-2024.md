@@ -1,10 +1,11 @@
 ---
 title: Aanvullende informatie van september 2024 voor Adobe Experience Platform
 description: Aanvullende informatie voor de versie van september 2024 voor Adobe Experience Platform.
-source-git-commit: eac613434f631cab567ab3fa6e30d33acac79d2f
+exl-id: e5b40712-2a54-4c6f-a4a1-2f078305da59
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '2196'
-ht-degree: 100%
+source-wordcount: '2199'
+ht-degree: 97%
 
 ---
 
@@ -26,7 +27,7 @@ Updates van bestaande functies en documentatie in Adobe Experience Platform:
 
 ## Waarschuwingen {#alerts}
 
-Met Experience Platform kunt u zich aanmelden voor gebeurtenisgebaseerde waarschuwingen voor verschillende platformactiviteiten. U kunt zich aanmelden op verschillende waarschuwingsregels via het tabblad [!UICONTROL Alerts] in de gebruikersinterface van het platform, en u kunt ervoor kiezen waarschuwingsmeldingen te ontvangen in de gebruikersinterface zelf of via e-mailberichten.
+Met Experience Platform kunt u zich abonneren op waarschuwingen die zijn gebaseerd op gebeurtenissen voor verschillende Experience Platform-activiteiten. U kunt zich abonneren op verschillende waarschuwingsregels via het tabblad [!UICONTROL Alerts] in de Experience Platform-gebruikersinterface en u kunt ervoor kiezen waarschuwingsberichten te ontvangen in de gebruikersinterface zelf of via e-mailberichten.
 
 **Nieuwe of bijgewerkte functies**
 
@@ -49,7 +50,7 @@ Experience Platform biedt meerdere dashboards waarmee u belangrijke inzichten kr
 
 | Functie | Beschrijving |
 | ------- | ----------- |
-| Tabel voor licentiegebruik van invoegtoepassingen | Zorg voor granulaire zichtbaarheid van het licentiegebruik en beheer uw platformresources met specifieke tabellen voor kernproducten en invoegtoepassingen. Volg en analyseer de kernmetrics van elk kernproduct, met uitgevouwen weergaven op sandboxniveau. Metrics van invoegtoepassingen integreren naadloos met metrics van kernproducten, waardoor u een uitgebreide weergave van het gebruik krijgt. Dankzij de verbeterde zichtbaarheid kunt u het licentiebeheer optimaliseren en de resources afstemmen op de behoeften van de organisatie. Raadpleeg de [[!UICONTROL License Usage]handleiding van het dashboard](../../dashboards/guides/license-usage.md#overview-tab) voor meer informatie. |
+| Tabel voor licentiegebruik van invoegtoepassingen | Geniet van uitgebreide zichtbaarheid in het gebruik van licenties en beheer uw Experience Platform-bronnen met speciale tabellen voor kernproducten en invoegtoepassingen. Volg en analyseer de kernmetrics van elk kernproduct, met uitgevouwen weergaven op sandboxniveau. Metrics van invoegtoepassingen integreren naadloos met metrics van kernproducten, waardoor u een uitgebreide weergave van het gebruik krijgt. Dankzij de verbeterde zichtbaarheid kunt u het licentiebeheer optimaliseren en de resources afstemmen op de behoeften van de organisatie. Raadpleeg de [[!UICONTROL License Usage]handleiding van het dashboard](../../dashboards/guides/license-usage.md#overview-tab) voor meer informatie. |
 | Query Pro-modus - Algemene filterupgrades | Verbeter analyse met de nieuwe datumfilter van de Query Pro-modus. Verfijn inzichten met dynamische datumparameters in uw SQL-query&#39;s en filter gegevens op specifieke tijdsbestekken. Kies vooraf ingestelde of aangepaste datumbereiken met een intuïtieve gebruikersinterface, zodat de dashboards voor alle gebruikers relevant blijven. Vereenvoudig workflows, houd precisie in stand en maak tijdig beslissingen. Raadpleeg de [handleiding over het maken van datumfilters](../../dashboards/sql-insights-query-pro-mode/filters/global-filter.md) voor meer informatie. |
 | Query Pro-modi - Drill Throughs | Krijg diepere inzichten met de Drill Through-functie van de Query Pro-modus en navigeer naadloos van algemene grafieken naar gedetailleerde dashboards. Met deze functie kunt u moeiteloos van samenvattingen naar diepgaande analyses gaan en trends, klantgedrag en KPI&#39;s verkennen. Automatische pass-throughs voor filters en drill-throughs op meerdere niveaus zorgen voor consistente gegevens, zodat de verkenning soepel verloopt. Vereenvoudig workflows, behoud de context en versnel beslissingen. Raadpleeg de [stapsgewijze handleiding voor het maken van drill-throughs](../../dashboards/sql-insights-query-pro-mode/drill-through.md) voor meer informatie. |
 | Query Pro-modus - Geavanceerde tabelkenmerken | Gebruik de geavanceerde tabelkenmerken van de Query Pro-modus om de gegevensvisualisatie te stroomlijnen, de efficiëntie van de workflow en de duidelijkheid van de gegevens te verbeteren. Voeg automatisch sorteren, formaat wijzigen en paginering toe aan uw tabellen, rechtstreeks vanuit aangepaste dashboards. Sorteer kolommen om prioriteit te geven aan belangrijke gegevens, wijzig de grootte voor optimale leesbaarheid en navigeer naadloos door grote datasets zonder SQL-query&#39;s te wijzigen. Raadpleeg de handleiding [Meer weergeven](../../dashboards/sql-insights-query-pro-mode/view-more.md) voor meer informatie over hoe u deze functies kunt integreren en uw gegevensinzichten kunt verbeteren. |

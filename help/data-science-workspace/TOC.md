@@ -6,10 +6,10 @@ user-guide-description: Gebruik machine learning om modellen en recepten te ontw
 feature: Data Science Workspace
 solution: Experience Platform
 role: User, Developer
-source-git-commit: 863889984e5e77770638eb984e129e720b3d4458
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '225'
-ht-degree: 15%
+source-wordcount: '227'
+ht-degree: 16%
 
 ---
 
@@ -43,7 +43,7 @@ ht-degree: 15%
 * Modellen ontwerpen {#authoring}
    * [Model Authoring SDK](authoring/sdk.md)
    * [Een functiepijpleiding maken](authoring/feature-pipeline.md)
-   * [Model authoring met Platform SDK (Python)](authoring/platform-sdk.md)
+   * [Modellen maken met de Experience Platform SDK (Python)](authoring/platform-sdk.md)
    * [Toegang tot Python-gegevens](authoring/python.md)
    * [Toegang tot Vonk](authoring/spark.md)
 * Zelfstudies over modellen en recept {#models-recipes}
@@ -60,9 +60,9 @@ ht-degree: 15%
    * [Score een model (API)](models-recipes/score-model-api.md)
    * [Een model optimaliseren](models-recipes/optimize-model.md)
    * [Klantprofiel in real-time verrijken met kennis van machinaal leren](models-recipes/enrich-profile.md)
-   * [Publish a model as a service (UI)](models-recipes/publish-model-service-ui.md)
-   * [Publish a model as a service (API)](models-recipes/publish-model-service-api.md)
+   * [Een model publiceren als service (UI)](models-recipes/publish-model-service-ui.md)
+   * [Een model publiceren als service (API)](models-recipes/publish-model-service-api.md)
    * [Geautomatiseerde training en scoring op een service (UI) plannen](models-recipes/schedule-models-ui.md)
 * [Handleiding voor probleemoplossing](troubleshooting-guide.md)
 * [ API verwijzing ](https://developer.adobe.com/experience-platform-apis/references/sensei-machine-learning/)
-* [ de versienota&#39;s van het Platform ](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)
+* [Releaseopmerkingen bij Experience Platform](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)

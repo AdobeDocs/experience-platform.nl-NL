@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;JupyterLab;recept;notebooks;Data Science Workspace;populaire onderwerpen;recept maken
+keywords: Experience Platform;JupyterLab;recept;laptops;Data Science Workspace;populaire onderwerpen;recept maken
 solution: Experience Platform
 title: Een model maken met JupyterLab-laptops
 type: Tutorial
 description: Deze zelfstudie begeleidt u door de vereiste stappen om een recept te maken met behulp van de sjabloon voor het maken van het recept voor JupyterLab-laptops.
 exl-id: d3f300ce-c9e8-4500-81d2-ea338454bfde
-source-git-commit: 5d98dc0cbfaf3d17c909464311a33a03ea77f237
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '2077'
+source-wordcount: '2079'
 ht-degree: 0%
 
 ---
@@ -24,8 +24,8 @@ Deze zelfstudie begeleidt u door de vereiste stappen om een model te maken met b
 
 ## Ingevoerde concepten:
 
-- **Ontvangers:** A recept is de termijn van de Adobe voor een modelspecificatie en is een top-level container die een specifiek machine het leren, AI algoritme of een samenstel van algoritmen, verwerkingslogica, en configuratie vertegenwoordigt die wordt vereist om een getraind model te bouwen en uit te voeren.
-- **Model:** een model is een geval van een machine het leren recept dat gebruikend historische gegevens en configuraties wordt getraind om voor een bedrijfsgeval op te lossen.
+- **Ontvangt:** Een recept is Adobe termijn voor een modelspecificatie en is een top-level container die een specifiek machine het leren, AI algoritme of samenkomen van algoritmen, verwerkingslogica, en configuratie vertegenwoordigt die wordt vereist om een opgeleid model te bouwen en uit te voeren.
+- **Model:** het model van A is een geval van een machine het leren recept dat gebruikend historische gegevens en configuraties wordt opgeleid om voor een bedrijfs gebruiksgeval op te lossen.
 - **Opleiding:** de Opleiding is het proces om patronen en inzichten van geëtiketteerde gegevens te leren.
 - **het Schetsen:** het Scoreren is het proces om inzichten van gegevens te produceren gebruikend een opgeleid model.
 
@@ -53,13 +53,13 @@ In het nieuwe laptoptabblad bovenaan wordt een werkbalk geladen met drie extra h
 
 ## Aan de slag met de [!UICONTROL Recipe Builder] -laptop
 
-In de opgegeven map assets bevindt zich een waarschijnlijkheidsmodel voor Luma `propensity_model.ipynb` . Met de optie voor het uploaden van een laptop in JupyterLab uploadt u het meegeleverde model en opent u de laptop.
+In de meegeleverde map met middelen bevindt zich een Luminantiemodel `propensity_model.ipynb` . Met de optie voor het uploaden van een laptop in JupyterLab uploadt u het meegeleverde model en opent u de laptop.
 
 ![ upload notitieboekje ](../images/jupyterlab/create-recipe/upload_notebook.png)
 
-De rest van deze zelfstudie heeft betrekking op de volgende bestanden die vooraf zijn gedefinieerd in de notebook met het waarschijnlijkheidsmodel:
+De rest van deze zelfstudie heeft betrekking op de volgende bestanden die vooraf zijn gedefinieerd in de laptop met het model van de dichtheid:
 
-- [Vereisten-bestand](#requirements-file)
+- [Vereisten, bestand](#requirements-file)
 - [Configuratiebestanden](#configuration-files)
 - [Opleidingsgegevensloader](#training-data-loader)
 - [Scoregegevenslader](#scoring-data-loader)
@@ -67,13 +67,13 @@ De rest van deze zelfstudie heeft betrekking op de volgende bestanden die vooraf
 - [Evaluatorbestand](#evaluator-file)
 - [Gegevensopslagbestand](#data-saver-file)
 
-In de volgende videozelfstudie wordt uitgelegd hoe u het notebook met het Luma-neiging kunt gebruiken:
+In de volgende videozelfstudie wordt uitgelegd hoe u de laptop met het Luminantiemodel kunt gebruiken:
 
 >[!VIDEO](https://video.tv.adobe.com/v/333570)
 
-### Vereisten-bestand {#requirements-file}
+### Vereisten, bestand {#requirements-file}
 
-Het bestand met vereisten wordt gebruikt om extra bibliotheken te declareren die u in het model wilt gebruiken. U kunt het versienummer opgeven als er sprake is van afhankelijkheid. Om extra bibliotheken te zoeken, bezoek [ anaconda.org ](https://anaconda.org). Leren hoe te om het behoeftendossier te formatteren, bezoek [ Conda ](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html#creating-an-environment-file-manually). De lijst met hoofdbibliotheken die al worden gebruikt, bevat:
+Het bestand requirements wordt gebruikt om extra bibliotheken te declareren die u in het model wilt gebruiken. U kunt het versienummer opgeven als er een afhankelijkheid is. Om extra bibliotheken te zoeken, bezoek [ anaconda.org ](https://anaconda.org). Om te leren hoe te om het vereisten dossier te formatteren, bezoek [ Conda ](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html#creating-an-environment-file-manually). De lijst met hoofdbibliotheken die al worden gebruikt, bevat:
 
 ```JSON
 python=3.6.7
@@ -87,11 +87,11 @@ data_access_sdk_python
 >
 >Bibliotheken of specifieke versies die u toevoegt, zijn mogelijk niet compatibel met de bovenstaande bibliotheken. Als u ervoor kiest om handmatig een omgevingsbestand te maken, mag het veld `name` niet worden overschreven.
 
-Voor de laptop met de Luma-neiging hoeven de vereisten niet te worden bijgewerkt.
+Voor de laptop met de Luminantiemodus hoeven de vereisten niet te worden bijgewerkt.
 
 ### Configuratiebestanden {#configuration-files}
 
-De configuratiebestanden, `training.conf` en `scoring.conf` , worden gebruikt om de gegevenssets op te geven die u wilt gebruiken voor training en scores, en om hyperparameters toe te voegen. Er zijn verschillende configuraties voor training en scoring.
+De configuratiebestanden `training.conf` en `scoring.conf` worden gebruikt om de gegevenssets op te geven die u wilt gebruiken voor training en scoring en om hyperparameters toe te voegen. Er zijn verschillende configuraties voor training en scoring.
 
 Een model kan training alleen uitvoeren als u de instructies `trainingDataSetId` , `ACP_DSW_TRAINING_XDM_SCHEMA` en `tenantId` opgeeft. Daarnaast moet u voor scoring de waarden `scoringDataSetId`, `tenantId` en `scoringResultsDataSetId ` opgeven.
 
@@ -112,33 +112,33 @@ Standaard worden de volgende configuratieparameters voor u ingesteld wanneer u g
 - `ML_FRAMEWORK_IMS_ML_TOKEN`
 - `ML_FRAMEWORK_IMS_TENANT_ID`
 
-## Informatie over de trainingsgegevenslader {#training-data-loader}
+## De Loader voor trainingsgegevens {#training-data-loader}
 
-Het doel van de trainingsgegevenslader is om gegevens te instantiëren die worden gebruikt voor het maken van het machine-learningmodel. De trainingsgegevenslader voert doorgaans twee taken uit:
+Het doel van de trainingsgegevenslader is het instantiëren van gegevens die worden gebruikt voor het maken van het model voor machinaal leren. Er zijn doorgaans twee taken die de lader van de trainingsgegevens uitvoert:
 
-- Gegevens laden uit [!DNL Platform]
+- Gegevens laden van [!DNL Experience Platform]
 - Gegevensvoorbereiding en functietechniek
 
 De volgende twee secties gaan over het laden van gegevens en het voorbereiden van gegevens.
 
 ### Gegevens laden {#loading-data}
 
-Deze stap gebruikt [ pandas dataframe ](https://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.html). Gegevens kunnen worden geladen uit bestanden in [!DNL Adobe Experience Platform] met behulp van de [!DNL Platform] SDK (`platform_sdk` ) of uit externe bronnen met behulp van de `read_csv()` - of `read_json()` functies van panda&#39;s.
+Deze stap gebruikt het [ pandas dataframe ](https://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.html). Gegevens kunnen worden geladen uit bestanden in [!DNL Adobe Experience Platform] met behulp van [!DNL Experience Platform] SDK (`platform_sdk` ) of uit externe bronnen met behulp van de functies `read_csv()` of `read_json()` van panda&#39;s.
 
-- [[!DNL Platform SDK]](#platform-sdk)
+- [[!DNL Experience Platform SDK]](#platform-sdk)
 - [Externe bronnen](#external-sources)
 
 >[!NOTE]
 >
 >In de Recipe Builder-laptop worden gegevens geladen via de `platform_sdk` -gegevenslader.
 
-### [!DNL Platform] SDK {#platform-sdk}
+### [!DNL Experience Platform] SDK {#platform-sdk}
 
-Voor een diepgaande zelfstudie bij het gebruiken van de `platform_sdk` gegevenslader, gelieve de [ gids van SDK van het Platform ](../authoring/platform-sdk.md) te bezoeken. Dit leerprogramma verstrekt informatie over bouwstijlauthentificatie, basislezing van gegevens, en basisschrijven van gegevens.
+Voor een diepgaande zelfstudie bij het gebruiken van de `platform_sdk` gegevenslader, gelieve te bezoeken de [ gids van SDK van Experience Platform ](../authoring/platform-sdk.md). Dit leerprogramma verstrekt informatie over bouwstijlauthentificatie, basislezing van gegevens, en basisschrijven van gegevens.
 
 ### Externe bronnen {#external-sources}
 
-In deze sectie ziet u hoe u een JSON- of CSV-bestand importeert naar een pandaobject. Officiële documentatie van de pandabibliotheek is hier te vinden:
+In deze sectie ziet u hoe u een JSON- of CSV-bestand importeert naar een pandaobject. De officiële documentatie van de pandabibliotheek is te vinden op:
 - [ read_csv ](https://pandas.pydata.org/pandas-docs/stable/generated/pandas.read_csv.html)
 - [ read_json ](https://pandas.pydata.org/pandas-docs/stable/generated/pandas.read_json.html)
 
@@ -158,7 +158,7 @@ Nu zijn uw gegevens in het dataframe voorwerp en kunnen in de [ volgende sectie 
 
 ## Loader-bestand voor trainingsgegevens
 
-In dit voorbeeld worden gegevens geladen met de SDK van het platform. De bibliotheek kan boven aan de pagina worden geïmporteerd door de volgende regel op te nemen:
+In dit voorbeeld worden gegevens geladen met de Experience Platform SDK. De bibliotheek kan boven aan de pagina worden geïmporteerd door de volgende regel op te nemen:
 
 `from platform_sdk.dataset_reader import DatasetReader`
 
@@ -191,9 +191,9 @@ Nadat de gegevens zijn geladen, moeten de gegevens worden gereinigd en worden de
 
 ![ voorbeeld van gegevens prep ](../images/jupyterlab/create-recipe/data_prep.png)
 
-Als u overbodige gegevens hebt verwijderd, kunt u beginnen met het ontwerpen van functies. De demo-gegevens die in dit voorbeeld worden gebruikt, bevatten geen sessiegegevens. Normaal gesproken wilt u gegevens over de huidige en vorige sessies voor een bepaalde klant. Vanwege het gebrek aan sessiegegevens bootst dit voorbeeld in plaats daarvan huidige en eerdere sessies na via trajectafbakening.
+Zodra u om het even welke onnodige gegevens hebt gelaten vallen, kunt u eigenschaptechniek beginnen. De demo-gegevens die voor dit voorbeeld worden gebruikt, bevatten geen sessiegegevens. Normaal gesproken wilt u gegevens over de huidige en vorige sessies voor een bepaalde klant. Door het gebrek aan zittingsinformatie, imiteert dit voorbeeld in plaats daarvan huidige en vroegere zittingen via reisafbakening.
 
-![ de afbakening van het Dagboek ](../images/jupyterlab/create-recipe/journey_demarcation.png)
+![ de afbakening van de Reis ](../images/jupyterlab/create-recipe/journey_demarcation.png)
 
 Nadat de afbakening volledig is, worden de gegevens geëtiketteerd en een reis gecreeerd.
 
@@ -213,15 +213,15 @@ In het geval dat u verschillende gegevensbestanden voor training en scoring wilt
 
 Het bestand `pipeline.py` bevat logica voor training en scoring.
 
-Het doel van opleiding is een model te creëren gebruikend eigenschappen en etiketten in uw opleidingsdataset. Nadat u uw trainingsmodel hebt gekozen, moet u uw x- en y-trainingsdataset aan het model aanpassen en retourneert de functie het getrainde model.
+Het doel van opleiding is een model te creëren gebruikend eigenschappen en etiketten in uw opleidingsdataset. Na het kiezen van uw opleidingsmodel, moet u uw x en ytrainingsdataset aan het model passen en de functie keert het getrainde model terug.
 
 >[!NOTE]
 > 
->Functies verwijzen naar de invoervariabele die door het machine-learningmodel wordt gebruikt om de labels te voorspellen.
+>Functies verwijzen naar de invoervariabele die door het model voor machinaal leren wordt gebruikt om de labels te voorspellen.
 
 ![ def trein ](../images/jupyterlab/create-recipe/def_train.png)
 
-De functie `score()` moet het scoralgoritme bevatten en een meting retourneren om aan te geven hoe succesvol het model is. De functie `score()` maakt gebruik van de labels van de gegevensset en het getrainde model om een set voorspelde functies te genereren. Deze voorspelde waarden worden vervolgens vergeleken met de feitelijke kenmerken in de gegevensset. In dit voorbeeld gebruikt de functie `score()` het getrainde model om functies te voorspellen aan de hand van de labels uit de scoredataset. De voorspelde functies worden geretourneerd.
+De functie `score()` moet het scorealgoritme bevatten en een meting retourneren om aan te geven hoe succesvol het model is. De functie `score()` gebruikt de labels van de scoredataset en het getrainde model om een reeks voorspelde eigenschappen te produceren. Deze voorspelde waarden worden vervolgens vergeleken met de feitelijke kenmerken in de gegevensset voor scoren. In dit voorbeeld gebruikt de functie `score()` het getrainde model om functies te voorspellen aan de hand van de labels uit de scoredataset. De voorspelde functies worden geretourneerd.
 
 ![ def score ](../images/jupyterlab/create-recipe/def_score.png)
 
@@ -231,19 +231,19 @@ Het bestand `evaluator.py` bevat logica voor de manier waarop u uw getrainde rec
 
 ### De gegevensset splitsen {#split-the-dataset}
 
-In de fase van de voorbereiding van de gegevens voor de opleiding moet de gegevensset worden gesplitst die voor de opleiding en het testen moet worden gebruikt. Deze `val` -gegevens worden impliciet gebruikt om het model te evalueren nadat het is getraind. Dit proces staat los van scores.
+De fase van de gegevensvoorbereiding voor opleiding vereist opsplitsing van de gegevensset die voor opleiding en tests moet worden gebruikt. Deze `val` -gegevens worden impliciet gebruikt om het model te evalueren nadat het is opgeleid. Dit proces staat los van scoring.
 
-Deze sectie toont de `split()` functie die gegevens in de notitieboekje laadt, dan schoonmaakt de gegevens door niet verwante kolommen in de dataset te verwijderen. Van daaruit kunt u functietechniek uitvoeren. Dit is het proces voor het maken van aanvullende relevante functies op basis van bestaande RAW-functies in de gegevens.
+In deze sectie wordt de functie `split()` weergegeven die gegevens in de notitieboekje laadt en vervolgens de gegevens opruimt door niet-verwante kolommen uit de gegevensset te verwijderen. Van daaruit kunt u functietechniek uitvoeren. Dit is het proces om aanvullende relevante functies te maken van bestaande onbewerkte functies in de gegevens.
 
 ![ Gesplitste functie ](../images/jupyterlab/create-recipe/split.png)
 
 ### Evalueer het getrainde model {#evaluate-the-trained-model}
 
-De functie `evaluate()` wordt uitgevoerd nadat het model is getraind en retourneert een metrische waarde om aan te geven hoe succesvol het model is. De functie `evaluate()` gebruikt de labels van de testgegevensset en het getrainde model om een reeks functies te voorspellen. Deze voorspelde waarden worden vervolgens vergeleken met de feitelijke kenmerken in de testdataset. In dit voorbeeld worden de volgende metrics gebruikt: `precision`, `recall`, `f1` en `accuracy` . De functie retourneert een `metric` -object dat een array van evaluatiemetrieken bevat. Deze metrics worden gebruikt om te evalueren hoe goed het getrainde model presteert.
+De functie `evaluate()` wordt uitgevoerd nadat het model is getraind en retourneert een metrische waarde om aan te geven hoe succesvol het model is. De functie `evaluate()` gebruikt de labels van de testdataset en het getrainde model om een reeks eigenschappen te voorspellen. Deze voorspelde waarden worden vervolgens vergeleken met de feitelijke kenmerken in de testdataset. In dit voorbeeld worden de volgende metriek gebruikt: `precision` , `recall` , `f1` en `accuracy` . De functie retourneert een `metric` -object dat een array van evaluatiemetriek bevat. Deze metriek wordt gebruikt om te evalueren hoe goed het opgeleide model presteert.
 
 ![ evalueert ](../images/jupyterlab/create-recipe/evaluate.png)
 
-Door `print(metric)` toe te voegen, kunt u de metrische resultaten bekijken.
+Door `print(metric)` toe te voegen, kunt u de resultaten van de meting weergeven.
 
 ![ metrische resultaten ](../images/jupyterlab/create-recipe/evaluate_metric.png)
 
@@ -255,9 +255,9 @@ Het bestand `datasaver.py` bevat de functie `save()` en wordt gebruikt om uw voo
 
 ## Training en scores {#training-and-scoring}
 
-Wanneer u klaar bent met het aanbrengen van wijzigingen in uw notitieboekje en uw recept wilt trainen, kunt u de bijbehorende knoppen boven aan de balk selecteren om een trainingsrun in de cel te maken. Nadat u de knop hebt geselecteerd, wordt een logboek met opdrachten en resultaten van het trainingsscript weergegeven in het notitieblok (onder de `evaluator.py` -cel). Conda installeert eerst alle afhankelijkheden, dan wordt de opleiding in werking gesteld.
+Wanneer u klaar bent met het aanbrengen van wijzigingen in uw laptop en uw recept wilt trainen, kunt u de bijbehorende knoppen boven aan de balk selecteren om een trainingsrun in de cel te maken. Nadat u de knop hebt geselecteerd, wordt een logboek met opdrachten en uitvoer uit het trainingsscript weergegeven in de notitie (onder de cel `evaluator.py` ). Conda installeert eerst alle gebiedsdelen, dan wordt de opleiding in werking gesteld.
 
-U moet ten minste één keer training uitvoeren voordat u scores kunt uitvoeren. Als u de knop **[!UICONTROL Run Scoring]** selecteert, behaalt u de score van het getrainde model dat tijdens de training is gegenereerd. Het scorescript wordt weergegeven onder `datasaver.py` .
+Let erop dat u minstens één keer training moet uitvoeren voordat u scoring kunt uitvoeren. Als u de knop **[!UICONTROL Run Scoring]** selecteert, behaalt u het getrainde model dat tijdens de training is gegenereerd. Het scorescript wordt weergegeven onder `datasaver.py` .
 
 Als u de verborgen uitvoer wilt zien, voegt u voor foutopsporingsdoeleinden `debug` toe aan het einde van de uitvoercel en voert u deze opnieuw uit.
 
@@ -269,7 +269,7 @@ Als u klaar bent met het bewerken van het recept en tevreden bent met de trainin
 
 ![](../images/jupyterlab/create-recipe/create-recipe.png)
 
-Nadat u **[!UICONTROL Create Recipe]** hebt geselecteerd, wordt u gevraagd een naam voor het recept in te voeren. Deze naam staat voor het recept dat werkelijk is gemaakt op [!DNL Platform] .
+Nadat u **[!UICONTROL Create Recipe]** hebt geselecteerd, wordt u gevraagd een naam voor het recept in te voeren. Deze naam staat voor het recept dat werkelijk is gemaakt op [!DNL Experience Platform] .
 
 ![](../images/jupyterlab/create-recipe/enter_recipe_name.png)
 
@@ -287,4 +287,4 @@ Nadat u **[!UICONTROL Ok]** hebt geselecteerd, wordt het proces voor het maken v
 
 Door deze zelfstudie te voltooien, hebt u geleerd hoe u een model voor computerleren kunt maken in de [!UICONTROL Recipe Builder] -laptop. U hebt ook geleerd hoe u de workflow voor het maken van een notebook kunt gebruiken.
 
-Als u wilt leren werken met bronnen binnen [!DNL Data Science Workspace] , gaat u naar het vervolgkeuzemenu [!DNL Data Science Workspace] Ontwerpen en modellen.
+Ga naar het vervolgkeuzemenu [!DNL Data Science Workspace] recepten en modellen als u wilt blijven leren werken met bronnen in [!DNL Data Science Workspace] .

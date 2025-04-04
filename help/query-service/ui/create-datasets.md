@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;huis;populaire onderwerpen;de vraagdienst;de dienst van de Vraag;produceert datasets;produceert dataset;creeer dataset;
+keywords: Experience Platform;home;populaire onderwerpen;query-service;Query-service;genereren datasets;genereren gegevensset;maken gegevensset;
 solution: Experience Platform
 title: Uitvoergegevens genereren op basis van zoekresultaten
 type: Tutorial
 description: Met Adobe Experience Platform Query Service kunt u gegevenssets maken vanuit de gebruikersinterface. Nadat een dataset wordt gecreeerd, kan het als een andere dataset in het meer van Gegevens worden betreden en voor een verscheidenheid van gebruiksgevallen worden gebruikt.
 exl-id: 6f6c049d-f19f-4161-aeb4-3a01eca7dc75
-source-git-commit: 59d2d74b2d77f3bbaca381af908de5295af24e5b
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '480'
+source-wordcount: '485'
 ht-degree: 0%
 
 ---
@@ -22,7 +22,7 @@ Ga als volgt te werk om gegevenssets te maken van de gebruikersinterface van Ado
 
 1. Maak een query met een verbonden client en valideer de uitvoer. Leren hoe te om vragen te schrijven gebruikend [!DNL Query Editor], lees de [!DNL Query Editor] gids UI [ bij het schrijven van vragen ](./user-guide.md#writing-queries).
 
-2. Navigeer in de gebruikersinterface van het platform naar **[!UICONTROL Queries]** , gevolgd door het tabblad **[!UICONTROL Templates]** en selecteer de query die u hebt gemaakt. Voor meer details op hoe te om vragen te bekijken die voor uw organisatie binnen het Platform UI werden gecreeerd en werden bewaard, lees het [[!DNL Query Service]  overzicht ](./overview.md#browse).
+2. Navigeer in de gebruikersinterface van Experience Platform naar **[!UICONTROL Queries]** , gevolgd door het tabblad **[!UICONTROL Templates]** en selecteer de query die u hebt gemaakt. Voor meer details op hoe te om vragen te bekijken die voor uw organisatie binnen Experience Platform UI werden gecreeerd en werden bewaard, lees het [[!DNL Query Service]  overzicht ](./overview.md#browse).
 
 3. Selecteer **[!UICONTROL Run as CTAS]** in het deelvenster Query-details.
 
@@ -34,7 +34,7 @@ Ga als volgt te werk om gegevenssets te maken van de gebruikersinterface van Ado
 
    ![ de dialoog van de dataset van de Output met de datasetdetails en [!UICONTROL Run as CTAS] benadrukte ](../images/ui/create-datasets/run-query.png)
 
-6. Wanneer de query is uitgevoerd, navigeert u naar **[!UICONTROL Datasets]** om de gegevensset weer te geven die u hebt gemaakt. Meer over leren hoe te om gemeenschappelijke acties uit te voeren wanneer het werken met datasets binnen het Platform UI, zie de [ gids UI van Datasets ](../../catalog/datasets/user-guide.md).
+6. Wanneer de query is uitgevoerd, navigeert u naar **[!UICONTROL Datasets]** om de gegevensset weer te geven die u hebt gemaakt. Meer over leren hoe te om gemeenschappelijke acties uit te voeren wanneer het werken met datasets binnen Experience Platform UI, zie de [ gids UI van Datasets ](../../catalog/datasets/user-guide.md).
 
 Nadat een dataset wordt gecreeerd, kan het als een andere dataset in [!DNL Data Lake] worden betreden en voor een verscheidenheid van gebruiksgevallen worden gebruikt.
 
@@ -52,4 +52,4 @@ Datasets die met deze functie worden gemaakt, worden gegenereerd met een ad-hocs
 
 ## Volgende stappen
 
-Nadat u dit document hebt gelezen, moet u nu begrijpen hoe u [!DNL Query Service] kunt gebruiken om gegevenssets te genereren vanuit de interface van het platform. Voor meer informatie over hoe te om tot, schrijven en vragen binnen het Platform UI uitvoeren, zie het [[!DNL Query Service]  overzicht UI ](./overview.md).
+Nadat u dit document hebt gelezen, moet u nu begrijpen hoe u [!DNL Query Service] kunt gebruiken om gegevenssets te genereren via de gebruikersinterface van Experience Platform. Voor meer informatie over hoe te om tot, schrijven, en uit te voeren vragen binnen Experience Platform UI, zie het [[!DNL Query Service]  overzicht UI ](./overview.md).

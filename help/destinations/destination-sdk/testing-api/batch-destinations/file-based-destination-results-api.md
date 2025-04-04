@@ -2,9 +2,9 @@
 description: Deze pagina verklaart hoe te om het /testing/destinationInstance API eindpunt te gebruiken om de volledige details van uw testende resultaten te bekijken. Dit API eindpunt keert het zelfde resultaat terug zoals u zou verkrijgen wanneer het gebruiken van de Dienst API van de Stroom om dataflows te controleren.
 title: Gedetailleerde activeringsresultaten weergeven
 exl-id: a7b27beb-825e-47fd-8939-f499c3298f68
-source-git-commit: 9ac6b075af3805da4dad0dd6442d026ae96ab5c7
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '545'
+source-wordcount: '547'
 ht-degree: 1%
 
 ---
@@ -31,16 +31,16 @@ Alvorens verder te gaan, te herzien gelieve [ begonnen gids ](../../getting-star
 
 Voordat u het eindpunt `/testing/destinationInstance` kunt gebruiken, moet u controleren of aan de volgende voorwaarden is voldaan:
 
-* U hebt een bestaande op dossier-gebaseerde bestemming die door de Destination SDK wordt gecreeerd en u kunt het in uw [ catalogus van bestemmingen ](../../../ui/destinations-workspace.md) zien.
-* U hebt minstens één activeringsstroom voor uw bestemming in de gebruikersinterface van het Experience Platform gemaakt.
-* Als u de API-aanvraag met succes wilt uitvoeren, hebt u de id van de doelinstantie nodig die overeenkomt met de doelinstantie die u wilt testen. Krijg bestemmingsidentiteitskaart die u in de API vraag, van URL zou moeten gebruiken, wanneer het doorbladeren van een verbinding met uw bestemming in Platform UI.
+* U hebt een bestaande op dossier-gebaseerde bestemming die door Destination SDK wordt gecreeerd en u kunt het in uw [ doelcatalogus ](../../../ui/destinations-workspace.md) zien.
+* U hebt ten minste één activeringsstroom voor uw doel gemaakt in de gebruikersinterface van Experience Platform.
+* Als u de API-aanvraag met succes wilt uitvoeren, hebt u de id van de doelinstantie nodig die overeenkomt met de doelinstantie die u wilt testen. Krijg bestemmingsidentiteitskaart die u in de API vraag, van URL zou moeten gebruiken, wanneer het doorbladeren van een verbinding met uw bestemming in Experience Platform UI.
 
   ![ beeld UI die hoe te om bestemmingsidentiteitskaart van URL te krijgen toont.](../../assets/testing-api/get-destination-instance-id.png)
 * U hebt eerder [ uw bestemmingsconfiguratie ](file-based-destination-testing-api.md) getest, en een geldige API reactie ontvangen, die a `results` bezit omvat. U gebruikt deze `results` -waarde om de bestemming verder te testen.
 
 ## Gedetailleerde resultaten voor doeltests weergeven {#test-activation-results}
 
-Zodra u [ uw bestemmingsconfiguratie ](file-based-destination-testing-api.md) hebt bevestigd, kunt u gedetailleerde activeringsresultaten bekijken door een verzoek van de GET tot het `authoring/testing/destinationInstance/` eindpunt te richten en bestemmingsidentiteitskaart van de bestemming te verstrekken die u, en de stroom in werking stelt IDs van het geactiveerde publiek test.
+Zodra u [ uw bestemmingsconfiguratie ](file-based-destination-testing-api.md) hebt bevestigd, kunt u gedetailleerde activeringsresultaten bekijken door een verzoek van GET aan het `authoring/testing/destinationInstance/` eindpunt te doen en bestemmingsidentiteitskaart van de bestemming te verstrekken die u, en de stroom in werking stelt IDs van het geactiveerde publiek test.
 
 U kunt volledige API URL vinden die u in het `results` bezit moet gebruiken dat in de [ reactie van de bestemmings testende vraag ](file-based-destination-testing-api.md) is teruggekeerd.
 
@@ -213,7 +213,7 @@ Het antwoord bevat de volledige details van de activeringsstroom. U kunt de zelf
 
 ## API-foutafhandeling {#api-error-handling}
 
-Destination SDK API-eindpunten volgen de algemene API-foutberichtbeginselen voor Experience Platforms. Verwijs naar [ API statuscodes ](../../../../landing/troubleshooting.md#api-status-codes) en [ de fouten van de verzoekkopbal ](../../../../landing/troubleshooting.md#request-header-errors) in de het oplossen van problemengids van het Platform.
+Destination SDK API-eindpunten volgen de algemene beginselen van Experience Platform API-foutberichten. Verwijs naar [ API statuscodes ](../../../../landing/troubleshooting.md#api-status-codes) en [ de fouten van de verzoekkopbal ](../../../../landing/troubleshooting.md#request-header-errors) in de het oplossen van problemengids van Experience Platform.
 
 ## Volgende stappen
 

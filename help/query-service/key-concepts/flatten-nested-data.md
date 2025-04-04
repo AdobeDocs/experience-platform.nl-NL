@@ -1,11 +1,11 @@
 ---
-keywords: Experience Platform;query-service;Query-service;geneste gegevensstructuren;geneste gegevens;afvlakken;geneste gegevens afvlakken;samenvoegen;
+keywords: Experience Platform;query-service;Query-service;geneste gegevensstructuren;geneste gegevens;afvlakken;geneste gegevens samenvoegen; samenvoegen;
 title: Geneste gegevensstructuren samenvoegen voor gebruik met BI-gereedschappen
 description: In dit document wordt uitgelegd hoe u XDM-schema's voor alle tabellen en weergaven tijdens een sessie afvlakt wanneer u BI-gereedschappen van derden gebruikt met Query Service.
 exl-id: 7e534c0a-db6c-463e-85da-88d7b2534ece
-source-git-commit: 5f2b44c364183b7becf69f491b41e9d5558accc2
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '853'
+source-wordcount: '854'
 ht-degree: 0%
 
 ---
@@ -24,9 +24,9 @@ Voor het gebruik van de instelling `FLATTEN` is een goed begrip van de volgende 
 
 * [ XDM Systeem ](../../xdm/home.md): Een overzicht op hoog niveau van XDM en zijn implementatie in Experience Platform.
 
-   * [ creeer een ad hoc schema ](../../xdm/tutorials/ad-hoc.md): Een schema XDM met gebieden die namespaced voor gebruik slechts door één enkele dataset zijn, wordt bedoeld als ad hoc schema. Ad-hocschema&#39;s worden gebruikt in diverse werkstromen voor gegevensinvoer voor Experience Platform en het creëren van bepaalde soorten bronverbindingen.
+   * [ creeer een ad hoc schema ](../../xdm/tutorials/ad-hoc.md): Een schema XDM met gebieden die namespaced voor gebruik slechts door één enkele dataset zijn, wordt bedoeld als ad hoc schema. Ad-hocschema&#39;s worden gebruikt in verschillende workflows voor gegevensinvoer voor Experience Platform en het maken van bepaalde soorten bronverbindingen.
 
-* [ Sandboxes ](../../sandboxes/home.md): Experience Platform verstrekt virtuele zandbakken die één enkele instantie van het Platform in afzonderlijke virtuele milieu&#39;s verdelen helpen digitale ervaringstoepassingen ontwikkelen en ontwikkelen.
+* [ Sandboxes ](../../sandboxes/home.md): Experience Platform verstrekt virtuele zandbakken die één enkele instantie van Experience Platform in afzonderlijke virtuele milieu&#39;s verdelen helpen digitale ervaringstoepassingen ontwikkelen en ontwikkelen.
 
 * [ Genestelde gegevensstructuren ](./nested-data-structures.md): Dit document verstrekt voorbeelden van hoe te om, datasets met complexe gegevenstypes tot stand te brengen te verwerken of om te zetten met inbegrip van genestelde gegevensstructuren.
 

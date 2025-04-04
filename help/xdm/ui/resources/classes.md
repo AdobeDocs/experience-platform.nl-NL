@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Klassen maken en bewerken in de gebruikersinterface
 description: Leer hoe u klassen maakt en bewerkt in de gebruikersinterface van Experience Platform.
 exl-id: 1b4c3996-2319-45dd-9edd-a5bcad46578b
-source-git-commit: 02b709c01347c1d03f870132dff437b97f239a9c
+source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
 workflow-type: tm+mt
-source-wordcount: '1560'
+source-wordcount: '1563'
 ht-degree: 0%
 
 ---
@@ -32,7 +32,7 @@ Terwijl niet vereist voor deze gids, wordt het geadviseerd dat u ook het leerpro
 
 ## Aan de slag {#getting-started}
 
-Selecteer in de gebruikersinterface van het platform de optie **[!UICONTROL Schemas]** in de linkernavigatie om de [!UICONTROL Schemas] -werkruimte te openen en selecteer vervolgens het tabblad **[!UICONTROL Classes]** . Er wordt een lijst met beschikbare klassen weergegeven.
+Selecteer in de gebruikersinterface van Experience Platform de optie **[!UICONTROL Schemas]** in de linkernavigatie om de werkruimte van [!UICONTROL Schemas] te openen en selecteer vervolgens het tabblad **[!UICONTROL Classes]** . Er wordt een lijst met beschikbare klassen weergegeven.
 
 ![ De van klassen binnen het [!UICONTROL Classes] lusje van de [!UICONTROL Schemas] benadrukte werkruimte [!UICONTROL Classes] en [!UICONTROL Schemas].](../../images/ui/resources/classes/available-classes.png)
 
@@ -48,7 +48,7 @@ De lijst met klassen wordt automatisch gefilterd op basis van de manier waarop z
 
 ## Een nieuwe klasse maken {#create}
 
-Er zijn twee methoden om een klasse te maken in de gebruikersinterface van het platform, tot en met **[!UICONTROL Create class]** of **[!UICONTROL Create schema]** .
+Er zijn twee methoden om een klasse te maken in de gebruikersinterface van Experience Platform, tot en met **[!UICONTROL Create class]** of **[!UICONTROL Create schema]** .
 
 ### Klasse maken
 
@@ -156,6 +156,6 @@ Zie de gids bij [ het creëren van en het uitgeven van schema&#39;s ](./schemas.
 
 ## Volgende stappen {#next-steps}
 
-In dit document wordt beschreven hoe u klassen kunt maken en bewerken met de gebruikersinterface van het platform. Voor meer informatie over de mogelijkheden van de [!UICONTROL Schemas] werkruimte, zie het [[!UICONTROL Schemas] overzicht van de werkruimte ](../overview.md).
+In dit document wordt beschreven hoe u klassen kunt maken en bewerken met de gebruikersinterface van Experience Platform. Voor meer informatie over de mogelijkheden van de [!UICONTROL Schemas] werkruimte, zie het [[!UICONTROL Schemas] overzicht van de werkruimte ](../overview.md).
 
 Leren hoe te om klassen te beheren die de Registratie API van het Schema gebruiken, zie de [ gids van het klasseeindpunt ](../../api/classes.md).

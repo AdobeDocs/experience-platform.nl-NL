@@ -1,12 +1,12 @@
 ---
-keywords: Experience Platform;home;populaire onderwerpen;Google Cloud Storage;Google Cloud-opslag
+keywords: Experience Platform;home;populaire onderwerpen;Google Cloud Storage;Google cloud-opslag
 solution: Experience Platform
 title: Google Cloud Storage Source Connector - Overzicht
 description: Leer hoe u Google Cloud Storage met Adobe Experience Platform kunt verbinden via API's of de gebruikersinterface.
 exl-id: f7ebd213-f914-4c49-aebd-1df4514ffec0
-source-git-commit: ee659ded9701132b12d5b93672b4c958e9720028
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '597'
+source-wordcount: '603'
 ht-degree: 0%
 
 ---
@@ -15,11 +15,11 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
->U kunt nu de [!DNL Google Cloud Storage] -bron gebruiken wanneer u Adobe Experience Platform uitvoert op Amazon Web Services (AWS). Experience Platform dat op AWS wordt uitgevoerd, is momenteel beschikbaar voor een beperkt aantal klanten. Meer over de gesteunde infrastructuur van het Experience Platform leren, zie het [ Experience Platform multi-cloud overzicht ](../../../landing/multi-cloud.md).
+>U kunt nu de [!DNL Google Cloud Storage] -bron gebruiken wanneer u Adobe Experience Platform uitvoert op Amazon Web Services (AWS). Experience Platform die op AWS wordt uitgevoerd, is momenteel beschikbaar voor een beperkt aantal klanten. Meer over de gesteunde infrastructuur van Experience Platform leren, zie het [ multi-wolkenoverzicht van Experience Platform ](../../../landing/multi-cloud.md).
 
 Adobe Experience Platform biedt native connectiviteit voor cloudproviders zoals AWS, [!DNL Google Cloud Platform] en [!DNL Azure] , zodat u gegevens van deze systemen kunt overbrengen.
 
-Met bronnen voor cloudopslag kunt u uw eigen gegevens overbrengen naar Platform zonder dat u deze hoeft te downloaden, opmaken of uploaden. De opgenomen gegevens kunnen als JSON of Parquet worden geformatteerd die met het Model van de Gegevens van de Ervaring (XDM), of in een afgebakend formaat volgzaam is. Elke stap van het proces is geïntegreerd in de bronwerkstroom. Met Platform kunt u gegevens uit [!DNL Google Cloud Storage] tot en met batches inbrengen.
+Opslagbronnen in de cloud kunnen uw eigen gegevens naar Experience Platform brengen zonder dat ze hoeven te worden gedownload, opgemaakt of geüpload. De opgenomen gegevens kunnen als JSON of Parquet worden geformatteerd die met het Model van de Gegevens van de Ervaring (XDM), of in een afgebakend formaat volgzaam is. Elke stap van het proces is geïntegreerd in de bronwerkstroom. Met Experience Platform kunt u gegevens van [!DNL Google Cloud Storage] tot en met batches inbrengen.
 
 ## IP adres lijst van gewenste personen
 
@@ -27,7 +27,7 @@ Een lijst van IP adressen moet aan een lijst van gewenste personen worden toegev
 
 ## Vereiste instellingen voor verbinding met uw [!DNL Google Cloud Storage] -account
 
-Als u verbinding wilt maken met Platform, moet u eerst interoperabiliteit inschakelen voor uw [!DNL Google Cloud Storage] -account. Als u de instelling voor interoperabiliteit wilt openen, opent u [!DNL Google Cloud Platform] en selecteert u **[!UICONTROL Settings]** in de optie **[!UICONTROL Cloud Storage]** in het navigatievenster.
+Als u verbinding wilt maken met Experience Platform, moet u eerst interoperabiliteit inschakelen voor uw [!DNL Google Cloud Storage] -account. Als u de instelling voor interoperabiliteit wilt openen, opent u [!DNL Google Cloud Platform] en selecteert u **[!UICONTROL Settings]** in de optie **[!UICONTROL Cloud Storage]** in het navigatievenster.
 
 <!-- ![](../../images/tutorials/create/google-cloud-storage/nav.png) -->
 
@@ -39,7 +39,7 @@ De pagina **[!UICONTROL Interoperability]** bevat informatie over verificatie, t
 
 <!-- ![](../../images/tutorials/create/google-cloud-storage/interoperability.png) -->
 
-U kunt uw onlangs gegenereerde toegangs sleutel-id en geheime toegangssleutel gebruiken om uw [!DNL Google Cloud Storage] -account te verbinden met Platform.
+U kunt uw onlangs gegenereerde toegangs sleutel-id en geheime toegangssleutel gebruiken om uw [!DNL Google Cloud Storage] -account aan te sluiten op Experience Platform.
 
 Voor meer informatie, te lezen gelieve de gids over [ het creëren van en het beheren van de sleutels van de de dienstrekening ](https://cloud.google.com/iam/docs/creating-managing-service-account-keys) van de [!DNL Google Cloud] documentatie.
 
@@ -54,9 +54,9 @@ Hieronder volgt een lijst met beperkingen waarmee u rekening moet houden wanneer
 - Ongeldige URL-padtekens niet toegestaan. Codepunten zoals `\uE000` zijn weliswaar geldig in NTFS-bestandsnamen, maar zijn geen geldige Unicode-tekens. Bovendien zijn sommige ASCII- of Unicode-tekens, zoals besturingstekens (0x00 tot 0x1F, \u0081, enz.), niet toegestaan. Voor regels die de koorden van Unicode in HTTP/1.1 bepalen zie [ RFC 2616, Sectie 2.2: BasisRegels ](https://www.ietf.org/rfc/rfc2616.txt) en [ RFC 3987 ](https://www.ietf.org/rfc/rfc3987.txt).
 - De volgende bestandsnamen zijn niet toegestaan: LPT1, LPT2, LPT3, LPT4, LPT5, LPT6, LPT7, LPT8, LPT9, COM1, COM2, COM3, COM4, COM5, COM6, COM7, COM8, COM9, PRN, AUX, NUL, CON, CLOCK$, puntteken (.) en twee stippen ( ...).
 
-## Verbinden [!DNL Google Cloud Storage] met platform
+## Verbinden [!DNL Google Cloud Storage] met Experience Platform
 
-In de onderstaande documentatie vindt u informatie over het tot stand brengen van een verbinding tussen [!DNL Google Cloud Storage] en Platform via API&#39;s of de gebruikersinterface:
+In de onderstaande documentatie vindt u informatie over het tot stand brengen van een verbinding tussen [!DNL Google Cloud Storage] en Experience Platform via API&#39;s of de gebruikersinterface:
 
 ### API&#39;s gebruiken
 

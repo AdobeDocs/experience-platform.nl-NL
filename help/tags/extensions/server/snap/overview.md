@@ -3,16 +3,16 @@ title: Overzicht van de extensie Snapchat Conversion API
 description: Gebruik de Snapchat-conversie om gebeurtenisgegevens op de server naar Snap te verzenden.
 last-substantial-update: 2025-01-20T00:00:00Z
 exl-id: 1c2d7243-5bcd-40a0-8515-9ab72613c5f3
-source-git-commit: 7cece312a2f019d48653dbd208cc8b7593ab0ee3
+source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '918'
+source-wordcount: '920'
 ht-degree: 0%
 
 ---
 
 # [!DNL Snapchat] Overzicht van conversie-API
 
-De [!DNL Snap] Uitbreiding van de Omzetting API is een veilige [ API van de Server van de Edge Network ](/help/server-api/overview.md) interface die u toestaat om informatie met [!DNL Snapchat] over gebruikersacties op uw websites direct te delen. U kunt de regels voor het doorsturen van gebeurtenissen gebruiken om gegevens van **[!DNL Adobe Experience Platform Edge Network]** naar **[!DNL Snapchat]** te verzenden met de API-extensie **[!DNL Snap]** Conversion.
+De [!DNL Snap] Uitbreiding van de Omzetting API is een veilige [ API van de Server van Edge Network ](/help/server-api/overview.md) interface die u toestaat om informatie met [!DNL Snapchat] over gebruikersacties op uw websites direct te delen. U kunt de regels voor het doorsturen van gebeurtenissen gebruiken om gegevens van **[!DNL Adobe Experience Platform Edge Network]** naar **[!DNL Snapchat]** te verzenden met de API-extensie **[!DNL Snap]** Conversion.
 
 ## [!DNL Snapchat] voorwaarden {#prerequisites}
 
@@ -79,7 +79,7 @@ Zie de [ Gebeurtenis door:sturen eigenschappen documentatie ](/help/tags/ui/even
 
 ## Regels maken om conversiegebeurtenissen naar Magnetisch te verzenden {#create-snap-rules}
 
-[ Regels ](https://experienceleague.adobe.com/en/docs/platform-learn/implement-web-sdk/event-forwarding/setup-event-forwarding#create-an-event-forwarding-rule) worden gebruikt om uitbreidingen in Platform teweeg te brengen. Deze sectie schetst hoe te om regels binnen uw gebeurtenis tot stand te brengen die bezit door:sturen om omzettingsgebeurtenissen naar Breuk te verzenden gebruikend de uitbreiding van Conversies API.
+[ Regels ](https://experienceleague.adobe.com/en/docs/platform-learn/implement-web-sdk/event-forwarding/setup-event-forwarding#create-an-event-forwarding-rule) worden gebruikt om uitbreidingen in Experience Platform teweeg te brengen. Deze sectie schetst hoe te om regels binnen uw gebeurtenis tot stand te brengen die bezit door:sturen om omzettingsgebeurtenissen naar Breuk te verzenden gebruikend de uitbreiding van Conversies API.
 
 ### Een nieuwe regel maken
 
@@ -201,4 +201,4 @@ Als u kwesties met uw **Score van de Kwaliteit van de Gebeurtenis** ervaart, lee
 
 ## Volgende stappen {#next-steps}
 
-In deze handleiding wordt beschreven hoe u gebeurtenisgegevens aan de serverzijde naar **[!DNL Snap]** kunt verzenden met de extensie **[!DNL Snap Conversions API]** . Voor meer informatie over gebeurtenis door:sturen mogelijkheden in Platform, verwijs naar de [ Gebeurtenis door:sturen overzicht ](../../../ui/event-forwarding/overview.md).
+In deze handleiding wordt beschreven hoe u gebeurtenisgegevens aan de serverzijde naar **[!DNL Snap]** kunt verzenden met de extensie **[!DNL Snap Conversions API]** . Voor meer informatie over gebeurtenis door:sturen mogelijkheden in Experience Platform, verwijs naar de [ Gebeurtenis door:sturen overzicht ](../../../ui/event-forwarding/overview.md).
