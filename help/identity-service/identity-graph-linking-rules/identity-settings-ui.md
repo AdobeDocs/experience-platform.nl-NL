@@ -2,9 +2,9 @@
 title: Gebruikersinterface Identiteitsinstellingen
 description: Leer hoe u de gebruikersinterface voor identiteitsinstellingen gebruikt.
 exl-id: 738b7617-706d-46e1-8e61-a34855ab976e
-source-git-commit: 0b4d9a493df6125decc6c46ddcd404f0bb1c9c6a
+source-git-commit: 4c43813e234dd5d06c6b505652fca161b88971c9
 workflow-type: tm+mt
-source-wordcount: '623'
+source-wordcount: '626'
 ht-degree: 0%
 
 ---
@@ -71,7 +71,13 @@ Van hier, moet u het volgende bevestigen alvorens tot de definitieve stap te wer
 
 ![ A bevestigingsvenster met de &quot;bevestig&quot;geselecteerde knoop.](../images/rules/confirmation.png)
 
-De definitieve stap is een ander bevestigingsbericht erop wijst dat de bestaande grafieken slechts door het grafiekalgoritme **zullen worden beïnvloed slechts als de grafieken na het opslaan van uw montages** worden bijgewerkt, en dat de primaire identiteit van gebeurtenisfragmenten op het Profiel van de Klant in real time niet zal worden bijgewerkt zelfs na namespace prioritaire veranderingen. Bovendien, wordt u meegedeeld dat het tot **zes uren** voor uw nieuwe of bijgewerkte montages zal duren om van kracht te worden. Voer de naam van de sandbox in en selecteer **[!UICONTROL Confirm]** om deze te bevestigen.
+### Bevestig uw instellingen {#confirm-your-settings}
+
+>[!IMPORTANT]
+>
+>* De definitieve stap is een ander bevestigingsbericht erop wijst dat de bestaande grafieken slechts door het grafiekalgoritme **zullen worden beïnvloed slechts als de grafieken na het opslaan van uw montages** worden bijgewerkt, en dat de primaire identiteit van gebeurtenisfragmenten op het Profiel van de Klant in real time niet zal worden bijgewerkt zelfs na namespace prioritaire veranderingen.
+>
+>* Bovendien, wordt u meegedeeld dat het tot **zes uren** voor uw nieuwe of bijgewerkte montages zal duren om van kracht te worden. Voer de naam van de sandbox in en selecteer **[!UICONTROL Confirm]** om deze te bevestigen.
 
 ![ het bevestigingsvenster dat een waarschuwing over een vertraging van zes uur toont alvorens de configuraties worden verwerkt.](../images/rules/complete.png)
 
