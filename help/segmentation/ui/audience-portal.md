@@ -2,9 +2,9 @@
 title: Overzicht van publiek portal
 description: Leer hoe u het publiek in Adobe Experience Platform kunt bekijken, beheren en een publiek kunt maken.
 exl-id: 505ac22e-05f3-423a-a9a0-7f3470af8945
-source-git-commit: c1f06b14cb33a0fc29a50a2851c1fb52ae82c45d
+source-git-commit: cfa8b24784ed24384131fe1248bb3f7dd41214c6
 workflow-type: tm+mt
-source-wordcount: '4152'
+source-wordcount: '4167'
 ht-degree: 0%
 
 ---
@@ -98,7 +98,7 @@ U kunt extra gebieden aan het Portaal van het Publiek toevoegen door ![ het pict
 | ----- | ----------- |
 | [!UICONTROL Name] | De naam van het publiek. |
 | [!UICONTROL Profile count] | Het totale aantal profielen dat voor het publiek in aanmerking komt. |
-| [!UICONTROL Origin] | De oorsprong van het publiek. Dit geeft aan waar het publiek vandaan komt. Mogelijke waarden zijn Segmentatieservice, Aangepast uploaden, Audience-compositie en Audience Manager. |
+| [!UICONTROL Origin] | De oorsprong van het publiek. Dit geeft aan waar het publiek vandaan komt. De mogelijke waarden omvatten [ Dienst van de Segmentatie ](#segment-builder), [ Douane uploadt ](#import-audience), [ compositie van het publiek ](#audience-composition), [ Audience Manager ](https://experienceleague.adobe.com/en/docs/audience-manager/user-guide/aam-home), [ look-alike publiek ](../types/lookalike-audiences.md), [ Federated Audience Composition ](#fac), [ Customer Journey Analytics ](https://experienceleague.adobe.com/en/docs/analytics-platform/using/cja-overview/cja-overview), [ Distiller van Gegevens ](#data-distiller), en {111 6} AJO B2B ](https://experienceleague.adobe.com/en/docs/journey-optimizer-b2b/user/guide-overview).[ |
 | [!UICONTROL Lifecycle status] | De status van het publiek. Mogelijke waarden voor dit veld zijn `Draft` , `Inactive` en `Published` . Meer informatie over levenscyclusstatussen, met inbegrip van wat de verschillende staten betekenen en hoe te om publiek naar verschillende levenscyclusstaten te bewegen, lees de [ sectie van de levenscyclusstatus van de Segmentatie FAQ ](../faq.md#lifecycle-status). |
 | [!UICONTROL Update frequency] | Een waarde die aangeeft hoe vaak de gegevens van het publiek worden bijgewerkt. Mogelijke waarden voor dit veld zijn [!UICONTROL Batch] , [!UICONTROL Streaming] , [!UICONTROL Edge] en [!UICONTROL Not Scheduled] . |
 | [!UICONTROL Last updated by] | De naam van de persoon die het publiek het laatst heeft bijgewerkt. |

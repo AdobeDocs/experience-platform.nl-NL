@@ -2,10 +2,10 @@
 title: Aanvullende informatie van maart 2025 voor Adobe Experience Platform
 description: Aanvullende informatie van maart 2025 voor Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: edcdf84a8cb954c15f7dd235fb14cf14e11e22c8
+source-git-commit: f0879683629ba10ed1b799e52f0adf332f079daf
 workflow-type: tm+mt
 source-wordcount: '1235'
-ht-degree: 95%
+ht-degree: 93%
 
 ---
 
@@ -89,8 +89,8 @@ Gebruik bronnen in Experience Platform om gegevens vanuit een Adobe-applicatie o
 
 | Functie | Beschrijving |
 | --- | --- |
-| [!DNL Bombora Intent] | De bron [!DNL Bombora Intent] is nu beschikbaar in de broncatalogus. Gebruik deze bron voor het volgende: <ul><li>Bombora Company Surge Intent-gegevens integreren om accounts te identificeren die actief onderzoek doen naar uw producten of diensten.</li><li>Prioriteit geven aan accounts binnen de markt, zodat u nauwkeurige segmenten kunt maken en zeer gerichte ABM-campagnes kunt uitvoeren. Zo zorgt u ervoor dat uw marketingactiviteiten zich richten op de accounts die de grootste kans op conversie bieden.</li><li>Inzet van intentiegedreven strategieën om advertentie-uitgaven te optimaliseren, betrokkenheid te vergroten en ROI te maximaliseren.</li></ul> Voor meer informatie kunt u de handleiding lezen over het [koppelen van uw  [!DNL Bombora] account aan Experience Platform](../../sources/tutorials/ui/create/data-partners/bombora.md). |
-| [!DNL Demandbase Intent] | De bron [!DNL Demandbase Intent] is nu beschikbaar in de bronnencatalogus. Gebruik deze bron voor het volgende: <ul><li>Integreer de Account Intent-gegevens van Demandbase om accounts met hoge interesse te identificeren op basis van realtimebetrokkenheid.</li><li>Door prioriteit te geven aan de sterkste intentiesignalen kunt u nauwkeurige segmenten maken en zeer gerichte campagnes uitvoeren. Zo weet u zeker dat uw marketingactiviteiten zich richten op accounts die de grootste kans op conversie bieden.</li><li>Intentiegestuurde strategieën activeren om advertentie-uitgaven te optimaliseren, de betrokkenheid te vergroten en het rendement op uw investering te verhogen.</li></ul> Voor meer informatie kunt u de handleiding lezen over het [koppelen van uw  [!DNL Demandbase] account aan Experience Platform](../../sources/tutorials/ui/create/data-partners/demandbase.md). |
+| [!DNL Bombora Intent] | De [!DNL Bombora Intent] -bron is nu beschikbaar in de broncatalogus. Gebruik deze bron voor het volgende: <ul><li>Bombora Company Surge Intent-gegevens integreren om accounts te identificeren die actief onderzoek doen naar uw producten of diensten.</li><li>Prioriteit geven aan accounts binnen de markt, zodat u nauwkeurige segmenten kunt maken en zeer gerichte ABM-campagnes kunt uitvoeren. Zo zorgt u ervoor dat uw marketingactiviteiten zich richten op de accounts die de grootste kans op conversie bieden.</li><li>Inzet van intentiegedreven strategieën om advertentie-uitgaven te optimaliseren, betrokkenheid te vergroten en ROI te maximaliseren.</li></ul> Voor meer informatie kunt u de handleiding lezen over het [koppelen van uw  [!DNL Bombora] account aan Experience Platform](../../sources/tutorials/ui/create/data-partners/bombora.md). |
+| [!DNL Demandbase Intent] | De [!DNL Demandbase Intent] -bron is nu beschikbaar in de broncatalogus. Gebruik deze bron voor het volgende: <ul><li>Integreer de Account Intent-gegevens van Demandbase om accounts met hoge interesse te identificeren op basis van realtimebetrokkenheid.</li><li>Door prioriteit te geven aan de sterkste intentiesignalen kunt u nauwkeurige segmenten maken en zeer gerichte campagnes uitvoeren. Zo weet u zeker dat uw marketingactiviteiten zich richten op accounts die de grootste kans op conversie bieden.</li><li>Intentiegestuurde strategieën activeren om advertentie-uitgaven te optimaliseren, de betrokkenheid te vergroten en het rendement op uw investering te verhogen.</li></ul> Voor meer informatie kunt u de handleiding lezen over het [koppelen van uw  [!DNL Demandbase] account aan Experience Platform](../../sources/tutorials/ui/create/data-partners/demandbase.md). |
 
 {style="table-layout:auto"}
 
