@@ -2,9 +2,9 @@
 title: Tips om de waarde te maximaliseren met Adobe Experience Platform Data Distiller - OS656
 description: Leer de waarde te maximaliseren met Adobe Experience Platform Data Distiller door gegevens van het Real-Time Klantprofiel te verrijken en inzichten in gedrag te gebruiken om doelgroepen op te bouwen. Dit middel omvat een steekproefdataset en een gevallenanalyse die aantonen hoe te om het model van Recency, Frequency, Monetair (RFM) voor klantensegmentatie toe te passen.
 exl-id: f3af4b9a-5024-471a-b740-a52fd226a985
-source-git-commit: 30db967fc94d8f5b9ded22ce81da3d51001610af
+source-git-commit: 3a8c53a5c5e72231c195ccfab32109ed4971fa8b
 workflow-type: tm+mt
-source-wordcount: '3624'
+source-wordcount: '3663'
 ht-degree: 0%
 
 ---
@@ -50,6 +50,10 @@ Elke techniek voor het maken van marketingmodellen heeft betrekking op voordelen
 RFM-modellering kent echter beperkingen. Het veronderstelt uniformiteit binnen segmenten die op recentie, frequentie, en monetaire waarde worden gebaseerd, die klantengedrag kan overdreven vereenvoudigen. In het model wordt ook een gelijk gewicht aan deze factoren toegewezen, waardoor de waarde van de klant mogelijk onjuist wordt weergegeven. Bovendien wordt er geen rekening gehouden met context, zoals productspecifieke kenmerken of klantvoorkeuren, die tot verkeerde interpretaties van aankoopgedrag kan leiden.
 
 ## Een dynamisch SQL-publiek op basis van RFM-score opbouwen {#build-a-dynamic-rfm-audience}
+
+De volgende informatie biedt een overzicht op hoog niveau van de workflow voor het maken van gebruikers van RFM SQL die in deze zelfstudie wordt beschreven.
+
+![ een infografisch genoemd &quot;RFM-Score-Gebaseerde SQL Audience&quot;die vier stappen illustreert: upload CSV, onderzoek gegevens, verrijk met de scores van RFM, en activeer het publiek.](../images/data-distiller/top-tips-to-maximize-value/rfm-score-based-sql-audience.png)
 
 Voordat u de Luminantiestudie start, moet u een voorbeeldgegevensset invoeren. Eerst, [ selecteer de verbinding om de `luma_web_data.zip` dataset plaatselijk ](../resources/luma_web_data.zip) te downloaden. De voorbeelddataset is een CSV-bestand met een gecomprimeerde ZIP-indeling dat kan worden uitgelijnd met het gebruiksscenario. Decomprimeer dit ZIP-bestand met Adobe Acrobat of een programma voor het ophalen van vertrouwde bestanden, zoals het ingebouwde hulpprogramma van uw besturingssysteem. In de praktijk zou u doorgaans gegevens van Adobe Analytics, Adobe Commerce of Adobe Web/Mobile SDK betrekken.
 
