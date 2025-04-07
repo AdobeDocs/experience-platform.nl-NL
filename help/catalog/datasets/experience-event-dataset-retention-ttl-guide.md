@@ -2,9 +2,9 @@
 title: Behoud de Dataset van de Gebeurtenis van de Ervaring in het meer van Gegevens beheren gebruikend TTL
 description: Leer hoe u het behoud van de Experience Event-gegevensset in het datumpomeer kunt evalueren, instellen en beheren met TL-configuraties (Time-to-Live) met Adobe Experience Platform API's. In deze handleiding wordt uitgelegd hoe de vervaldatum van TTL op rijniveau het beleid voor gegevensbewaring ondersteunt, de opslagefficiëntie optimaliseert en een effectief beheer van de levenscyclus van gegevens garandeert. Het verstrekt ook gebruiksgevallen en beste praktijken om u te helpen TTL effectief toepassen.
 exl-id: d688d4d0-aa8b-4e93-a74c-f1a1089d2df0
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 767e9536862799e31d1ab5c77588d485f80c59e9
 workflow-type: tm+mt
-source-wordcount: '2340'
+source-wordcount: '2406'
 ht-degree: 0%
 
 ---
@@ -50,11 +50,13 @@ Alvorens een behoudbeleid toe te passen, bepaal of uw dataset een goede kandidaa
 
 Indien historische gegevens van essentieel belang zijn voor langetermijnanalyse of bedrijfsactiviteiten, is TTL wellicht niet de juiste aanpak. Als u deze factoren controleert, zorgt u ervoor dat TTL wordt afgestemd op de behoeften voor gegevensopslag zonder dat dit negatieve gevolgen heeft voor de beschikbaarheid van gegevens.
 
-## Uw vragen plannen
+## Uw vragen plannen {#plan-queries}
 
-Alvorens TTL toe te passen, gebruik vragen om datasetgrootte en relevantie te analyseren. Het runnen van gerichte vragen helpt bepalen hoeveel gegevens onder verschillende configuraties van TTL worden behouden of worden verwijderd.
+Alvorens TTL toe te passen, is het belangrijk om datasetgrootte en gegevensrelevantie te beoordelen, en te evalueren hoeveel historische gegevens moeten worden behouden. Het volgende visuele overzicht schetst het volledige proces om TTL uit te voeren, van planningsvragen aan de doeltreffendheid van het toezicht.
 
-De volgende SQL-query telt bijvoorbeeld het aantal records dat in de laatste 30 dagen is gemaakt:
+![ een visuele werkschema voor het uitvoeren van TTL op de Datasets van de Gebeurtenis van de Ervaring. De stappen omvatten: beoordelen gegevenslevensduur en effect van verwijdering, bevestigen de montages van TTL met vragen, vormen TTL door de Dienst API van de Catalogus, en controleren onophoudelijk de gevolgen van TTL en maken aanpassingen.](../images/datasets/dataset-retention-ttl-guide/manage-experience-event-dataset-retention-in-the-data-lake.png)
+
+Het runnen van gerichte vragen helpt bepalen hoeveel gegevens onder verschillende configuraties van TTL worden behouden of worden verwijderd. De volgende SQL-query telt bijvoorbeeld het aantal records dat in de laatste 30 dagen is gemaakt:
 
 ```sql
 SELECT COUNT(1) FROM [datasetName] WHERE timestamp > date_sub(now(), INTERVAL 30 DAY);
