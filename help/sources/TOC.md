@@ -5,10 +5,10 @@ breadcrumb-title: Gids voor Source Connectors
 user-guide-description: Neem gegevens uit diverse bronnen op. Leer hoe u opgenomen gegevens kunt structureren, labelen en verbeteren.
 feature: Sources
 role: Developer
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 47f6251a190a12b86ec566e3ba72fa34a0bd028b
 workflow-type: tm+mt
-source-wordcount: '1064'
-ht-degree: 6%
+source-wordcount: '1070'
+ht-degree: 7%
 
 ---
 
@@ -43,7 +43,7 @@ ht-degree: 6%
       - [Mixpanel-aansluiting](connectors/analytics/mixpanel.md)
       - [Pendo](connectors/analytics/pendo-webhook.md)
       - [RainFocus](connectors/analytics/rainfocus.md)
-   - Cloudopslag {#cloud-storage}
+   - Cloud-opslag {#cloud-storage}
       - [Amazon Kinesis-connector](connectors/cloud-storage/kinesis.md)
       - [Amazon S3-connector](connectors/cloud-storage/s3.md)
       - [Apache HDFS-aansluiting](connectors/cloud-storage/hdfs.md)
@@ -95,6 +95,7 @@ ht-degree: 6%
    - Gegevens- en identiteitspartner {#data-partner}
       - [Acxiale gegevensinname](connectors/data-partners/acxiom-data-ingestion.md)
       - [Importeren van Acrobat-perspectiefgegevens](connectors/data-partners/acxiom-prospecting-data-import.md)
+      - [Algolia-gebruikersprofielen](connectors/data-partners/algolia-user-profiles.md)
       - [Bombora-intentie](connectors/data-partners/bombora.md)
       - [Demandbase-intentie](connectors/data-partners/demandbase.md)
       - [Merkury Enterprise Identity Resolution](connectors/data-partners/merkury.md)
@@ -132,7 +133,7 @@ ht-degree: 6%
       - Analytics {#analytics}
          - [Mixpanel](tutorials/api/create/analytics/mixpanel.md)
          - [Pendo](tutorials/api/create/analytics/pendo-webhook.md)
-      - Cloudopslag {#cloud-storage}
+      - Cloud-opslag {#cloud-storage}
          - [Amazon Kinesis](tutorials/api/create/cloud-storage/kinesis.md)
          - [Amazon S3](tutorials/api/create/cloud-storage/s3.md)
          - [Apache HDFS](tutorials/api/create/cloud-storage/hdfs.md)
@@ -142,13 +143,13 @@ ht-degree: 6%
          - [Azure-bestandsopslag](tutorials/api/create/cloud-storage/azure-file-storage.md)
          - [Gegevenslandingszone](tutorials/api/create/cloud-storage/data-landing-zone.md)
          - [FTP](tutorials/api/create/cloud-storage/ftp.md)
-         - [Google Cloud Storage](tutorials/api/create/cloud-storage/google.md)
+         - [Google Cloud-opslag](tutorials/api/create/cloud-storage/google.md)
          - [Google PubSub](tutorials/api/create/cloud-storage/google-pubsub.md)
          - [Oracle Object Storage](tutorials/api/create/cloud-storage/oracle-object-storage.md)
          - [SFTP](tutorials/api/create/cloud-storage/sftp.md)
       - Toestemming en voorkeuren {#consent}
          - [OneTrust-integratie](tutorials/api/create/consent-and-preferences/onetrust.md)
-      - CRM {#crm}
+      - CRM Nederland {#crm}
          - [Microsoft Dynamics](tutorials/api/create/crm/ms-dynamics.md)
          - [Salesforce](tutorials/api/create/crm/salesforce.md)
          - [SugarCRM-rekeningen en -contactpersonen](tutorials/api/create/crm/sugarcrm-accounts-contacts.md)
@@ -200,9 +201,9 @@ ht-degree: 6%
       - Betalingen {#payments}
          - [PayPal](tutorials/api/create/payments/paypal.md)
          - [Vierkant](tutorials/api/create/payments/square.md)
-         - [Stripe](tutorials/api/create/payments/stripe.md)
+         - [Streep](tutorials/api/create/payments/stripe.md)
       - Protocollen {#protocols}
-         - [Generic OData](tutorials/api/create/protocols/odata.md)
+         - [Generiek OData](tutorials/api/create/protocols/odata.md)
          - [Algemene REST-API](tutorials/api/create/protocols/generic-rest.md)
       - Streaming {#streaming}
          - [HTTP-API](tutorials/api/create/streaming/http.md)
@@ -239,7 +240,7 @@ ht-degree: 6%
    - [Gecodeerde gegevens verzamelen](tutorials/api/encrypt-data.md)
    - [Een gegevensstroom opslaan als concept](tutorials/api/draft.md)
    - [Toegangslabels toepassen op een gegevensstroom](tutorials/api/labels.md)
-- Zelfstudies voor gebruikersinterface {#ui-tutorials}
+- UI-zelfstudies {#ui-tutorials}
    - Een bronverbinding maken {#create}
       - Adobe-toepassingen {#adobe-applications}
          - [Adobe Analytics (rapportsuite-gegevens)](tutorials/ui/create/adobe-applications/analytics.md)
@@ -256,7 +257,7 @@ ht-degree: 6%
          - [Mixpanel](tutorials/ui/create/analytics/mixpanel.md)
          - [Pendo](tutorials/ui/create/analytics/pendo-webhook.md)
          - [RainFocus](tutorials/ui/create/analytics/rainfocus.md)
-      - Cloudopslag {#cloud-storage}
+      - Cloud-opslag {#cloud-storage}
          - [Amazon Kinesis](tutorials/ui/create/cloud-storage/kinesis.md)
          - [Amazon S3](tutorials/ui/create/cloud-storage/s3.md)
          - [Apache HDFS](tutorials/ui/create/cloud-storage/hdfs.md)
@@ -280,7 +281,7 @@ ht-degree: 6%
          - [SugarCRM-gebeurtenissen](tutorials/ui/create/crm/sugarcrm-events.md)
          - [Veeva CRM](tutorials/ui/create/crm/veeva.md)
          - [Zoho CRM](tutorials/ui/create/crm/zoho.md)
-      - Klantsucces {#customer-success}
+      - Klant geslaagd {#customer-success}
          - [Oracle Service Cloud](tutorials/ui/create/customer-success/oracle-service-cloud.md)
          - [Salesforce Service Cloud](tutorials/ui/create/customer-success/salesforce-service-cloud.md)
          - [ServiceNow](tutorials/ui/create/customer-success/servicenow.md)
@@ -309,6 +310,7 @@ ht-degree: 6%
       - Gegevens- en identiteitspartner {#data-partner}
          - [Acxiale gegevensinname](tutorials/ui/create/data-partners/acxiom-data-ingestion.md)
          - [Importeren van Acrobat-perspectiefgegevens](tutorials/ui/create/data-partners/acxiom-prospecting-data-import.md)
+         - [Algolia-gebruikersprofielen](tutorials/ui/create/data-partners/algolia-user-profiles.md)
          - [Bombora-intentie](tutorials/ui/create/data-partners/bombora.md)
          - [Demandbase-intentie](tutorials/ui/create/data-partners/demandbase.md)
          - [Merkury Enterprise Identity Resolution](tutorials/ui/create/data-partners/merkury.md)
@@ -336,7 +338,7 @@ ht-degree: 6%
          - [Vierkant](tutorials/ui/create/payments/square.md)
          - [Stripe](tutorials/ui/create/payments/stripe.md)
       - Protocollen {#protocols}
-         - [Generic OData](tutorials/ui/create/protocols/odata.md)
+         - [Generiek OData](tutorials/ui/create/protocols/odata.md)
       - Streaming {#streaming}
          - [HTTP-API](tutorials/ui/create/streaming/http.md)
    - Een gegevensstroom configureren {#dataflow}
@@ -365,7 +367,7 @@ ht-degree: 6%
    - [Abonneren op waarschuwingen voor bronnen](tutorials/ui/alerts.md)
    - [Een gegevensstroom opslaan als concept](tutorials/ui/draft.md)
    - [Toegangslabels toepassen op een gegevensstroom](tutorials/ui/labels.md)
-- Self-Serve Sources (Batch SDK) {#sdk}
+- Zelfbedieningsbronnen (Batch SDK) {#sdk}
    - [Overzicht](sources-sdk/overview.md)
    - Uw verbindingsspecificatie configureren {#config}
       - [Configuratieopties](sources-sdk/config/config.md)
