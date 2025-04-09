@@ -4,8 +4,8 @@ description: Aanvullende informatie van maart 2025 voor Adobe Experience Platfor
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
 source-git-commit: f0879683629ba10ed1b799e52f0adf332f079daf
 workflow-type: tm+mt
-source-wordcount: '1235'
-ht-degree: 93%
+source-wordcount: '1258'
+ht-degree: 96%
 
 ---
 
@@ -35,7 +35,7 @@ Experience Platform biedt meerdere dashboards waarmee u belangrijke inzichten kr
 | Bijgewerkte voorspellingsfrequentie | Het dashboard voor licentiegebruik biedt nu nauwkeuriger inzicht in het verwachte verbruik door de gebruiksvoorspellingen **wekelijks** bij te werken in plaats van maandelijks. Deze voorspellingen tonen het geschatte gebruik voor de komende zes weken op basis van recente trends. Deze wijziging zorgt voor snellere besluitvorming, eerder ingrijpen en betere licentieplanning. Zie de [handleiding van het dashboard voor licentiegebruik](../../dashboards/guides/license-usage.md#predicted-usage) voor meer informatie. |
 | Bijgewerkte beschrijvingen van metrics in de gebruikersinterface | De definities van metrics in het dashboard voor licentiegebruik zijn herzien voor duidelijkheid en consistentie. U kunt nu bijgewerkte beschrijvingen rechtstreeks in het dashboard bekijken met behulp van inline-infopictogrammen naast elke indicator op het tabblad **Metrics**. Dankzij deze updates wordt het begrijpelijker hoe metrics worden bijgehouden en voor welke producten ze gelden. Zie de [handleiding van het dashboard voor licentiegebruik](../../dashboards/guides/license-usage.md#available-metrics) voor meer informatie. |
 
-{style="table-layout:auto"}
+{style=&quot;table-layout:auto&quot;}
 
 Voor meer informatie over dashboards, met inbegrip van hoe u toegangsrechten verleent en aangepaste widgets maakt, raadpleegt u eerst het [overzicht van dashboards](../../dashboards/home.md).
 
@@ -43,30 +43,30 @@ Voor meer informatie over dashboards, met inbegrip van hoe u toegangsrechten ver
 
 [!DNL Destinations] zijn pre-built integraties met bestemmingsplatforms die de naadloze activering van gegevens van Adobe Experience Platform mogelijk maken. U kunt bestemmingen gebruiken om uw bekende en onbekende gegevens te activeren voor cross-channel marketingcampagnes, e-mailcampagnes, gerichte advertenties en vele andere gebruiksscenario&#39;s.
 
-**Nieuwe of bijgewerkte bestemmingen** {#new-updated-destinations}
+**Nieuwe of bijgewerkte bestemmingen** {#new-updated-destinations}  #new-updated-bestemmingen}
 
 | Bestemming | Beschrijving |
 | --- | --- |
-| [ De verbinding van Mensen van de Vereis ](/help/destinations/catalog/advertising/demandbase-people.md) | Gebruik de verbinding [!DNL Demandbase People] om profielen voor uw Demandbase-campagnes voor doelgroepen, personalisatie en onderdrukking te activeren. |
-| [ Bombora rekeningsverbinding ](/help/destinations/catalog/advertising/bombora.md) | Gebruik de [!DNL Bombora] verbinding om profielen voor uw campagnes Bombora voor publiek te activeren richtend, verpersoonlijking, en onderdrukking, die op [ wordt gebaseerd rekeningspubliek ](/help/segmentation/types/account-audiences.md). |
+| [Demandbase People-verbinding](/help/destinations/catalog/advertising/demandbase-people.md) | Gebruik de [!DNL Demandbase People]-verbinding om profielen voor uw Demandbase-campagnes te activeren voor doelgroeptargeting, personalisatie en onderdrukking. |
+| [Bombora-accountverbinding](/help/destinations/catalog/advertising/bombora.md) | Gebruik de [!DNL Bombora]-verbinding om profielen voor uw Bombora-campagnes te activeren voor doelgroeptargeting, personalisatie en onderdrukking, op basis van [accountdoelgroepen](/help/segmentation/types/account-audiences.md). |
 | [Airship Attributes](/help/destinations/catalog/mobile-engagement/airship-attributes.md)-upgrade | Vanaf 25 maart 2025 kunt u twee **[!UICONTROL Airship Attributes]**-kaarten naast elkaar zien in de bestemmingencatalogus. Dit komt door een interne upgrade van de bestemmingsservice. De naam van de bestaande bestemmingsconnector **[!UICONTROL Airship Attributes]** is gewijzigd in **[!UICONTROL (Deprecated) Airship Attributes]** en er is nu een nieuwe kaart met de naam **[!UICONTROL Airship Attributes]** voor u beschikbaar. <br> Gebruik de **[!UICONTROL Airship Attributes]**-verbinding in de catalogus voor nieuwe activeringsgegevensstromen. Als u actieve gegevensstromen naar de bestemming [!DNL (Deprecated) Airship Attributes] hebt, worden deze automatisch bijgewerkt. U hoeft dus niets te doen. <br> Als u gegevensstromen maakt via de [Flow Service API](https://developer.adobe.com/experience-platform-apis/references/destinations/), moet u uw [!DNL flow spec ID] en [!DNL connection spec ID] bijwerken naar de volgende waarden: <ul><li> Stroomspecificatie-ID: `a862e0be-966e-4e5a-80d3-1bb566461986`</li><li> Verbindingsspecificatie-ID: `594bc002-4a47-49b7-8a98-ac0d21045502`</li> </ul> |
 
-{style="table-layout:auto"}
+{style=&quot;table-layout:auto&quot;}
 
-**Nieuwe of bijgewerkte functionaliteit** {#destinations-new-updated-functionality}
+**Nieuwe of bijgewerkte functionaliteit** {#destinations-new-updated-functionality} {#destination-new-updated-functionaliteit}
 
 | Functie | Beschrijving |
 | --- | --- |
 | [Verbeterde rapportagenauwkeurigheid voor streamingbestemmingen](../../dataflows/ui/monitor-destinations.md) | Vanaf maart 2025 brengt Adobe een update uit om de rapportagenauwkeurigheid voor streamingbestemmingen te verbeteren. Deze verbetering zorgt voor een betere afstemming tussen het Experience Platform en de rapportage van de bestemmingsplatforms. <br> Vóór deze update werden alle activeringspogingen in **[!UICONTROL Identities failed]** opgenomen. Na deze update wordt alleen de laatste activeringspoging opgenomen in het totale aantal. <br> Deze verbetering geldt voor alle streamingbestemmingen. <br> Na deze verbetering kunnen gebruikers van streamingbestemmingen een daling in hun **[!UICONTROL Identities failed]**-aantal verwachten. |
-| [Ondersteuning voor het exporteren van kaartvelden voor ondernemings- en Edge-bestemmingen](/help/destinations/ui/export-arrays-maps-objects.md) | Bij het exporteren van gegevens naar de bestemmingen [Amazon Kinesis](/help/destinations/catalog/cloud-storage/amazon-kinesis.md), [HTTP API](/help/destinations/catalog/streaming/http-destination.md), [Azure Event Hubs](/help/destinations/catalog/cloud-storage/azure-event-hubs.md) en [Adobe Target](/help/destinations/catalog/personalization/adobe-target-connection.md) kunt u nu kaartvelden selecteren voor export in de toewijzingsstap van de activeringsworkflow. <br> ![Exporteer een kaartveld naar de ondernemingsbestemming.](../2025/assets/march/export-map.png "Exporteer kaartveld naar ondernemingsbestemming."){width="250" align="center" zoomable="yes"} |
+| [Ondersteuning voor het exporteren van kaartvelden voor ondernemings- en Edge-bestemmingen](/help/destinations/ui/export-arrays-maps-objects.md) | Bij het exporteren van gegevens naar de bestemmingen [Amazon Kinesis](/help/destinations/catalog/cloud-storage/amazon-kinesis.md), [HTTP API](/help/destinations/catalog/streaming/http-destination.md), [Azure Event Hubs](/help/destinations/catalog/cloud-storage/azure-event-hubs.md) en [Adobe Target](/help/destinations/catalog/personalization/adobe-target-connection.md) kunt u nu kaartvelden selecteren voor export in de toewijzingsstap van de activeringsworkflow. <br> ![Exporteer een kaartveld naar de ondernemingsbestemming.](../2025/assets/march/export-map.png "Exporteer een kaartveld naar de ondernemingsbestemming."){width="250" align="center" zoomable="yes"}{width=&quot;250&quot; align=&quot;center&quot; zoomable=&quot;yes&quot;} |
 
-{style="table-layout:auto"}
+{style=&quot;table-layout:auto&quot;}
 
 Voor meer informatie raadpleegt u het [overzicht van bestemmingen](../../destinations/home.md).
 
 ## Samenstelling van Federated-doelgroep {#federated-audience-composition}
 
-Voor informatie over de recentste updates voor de Federatieve Samenstelling van het Publiek, lees [ specifieke versienota&#39;s ](https://experienceleague.adobe.com/nl/docs/federated-audience-composition/using/release-notes) hier.
+Voor informatie over de recentste updates voor Samenstelling van Federated-doelgroepen, raadpleegt u hier de [ specifieke aanvullende informatie](https://experienceleague.adobe.com/nl/docs/federated-audience-composition/using/release-notes).
 
 ## Segmentatieservice {#segmentation-service}
 
@@ -92,7 +92,7 @@ Gebruik bronnen in Experience Platform om gegevens vanuit een Adobe-applicatie o
 | [!DNL Bombora Intent] | De [!DNL Bombora Intent] -bron is nu beschikbaar in de broncatalogus. Gebruik deze bron voor het volgende: <ul><li>Bombora Company Surge Intent-gegevens integreren om accounts te identificeren die actief onderzoek doen naar uw producten of diensten.</li><li>Prioriteit geven aan accounts binnen de markt, zodat u nauwkeurige segmenten kunt maken en zeer gerichte ABM-campagnes kunt uitvoeren. Zo zorgt u ervoor dat uw marketingactiviteiten zich richten op de accounts die de grootste kans op conversie bieden.</li><li>Inzet van intentiegedreven strategieën om advertentie-uitgaven te optimaliseren, betrokkenheid te vergroten en ROI te maximaliseren.</li></ul> Voor meer informatie kunt u de handleiding lezen over het [koppelen van uw  [!DNL Bombora] account aan Experience Platform](../../sources/tutorials/ui/create/data-partners/bombora.md). |
 | [!DNL Demandbase Intent] | De [!DNL Demandbase Intent] -bron is nu beschikbaar in de broncatalogus. Gebruik deze bron voor het volgende: <ul><li>Integreer de Account Intent-gegevens van Demandbase om accounts met hoge interesse te identificeren op basis van realtimebetrokkenheid.</li><li>Door prioriteit te geven aan de sterkste intentiesignalen kunt u nauwkeurige segmenten maken en zeer gerichte campagnes uitvoeren. Zo weet u zeker dat uw marketingactiviteiten zich richten op accounts die de grootste kans op conversie bieden.</li><li>Intentiegestuurde strategieën activeren om advertentie-uitgaven te optimaliseren, de betrokkenheid te vergroten en het rendement op uw investering te verhogen.</li></ul> Voor meer informatie kunt u de handleiding lezen over het [koppelen van uw  [!DNL Demandbase] account aan Experience Platform](../../sources/tutorials/ui/create/data-partners/demandbase.md). |
 
-{style="table-layout:auto"}
+{style=&quot;table-layout:auto&quot;}
 
 **Bijgewerkte functies**
 
@@ -103,6 +103,6 @@ Gebruik bronnen in Experience Platform om gegevens vanuit een Adobe-applicatie o
 | Ondersteuning voor API-sleutelauthenticatie in Self-Serve Sources (Batch SDK) | U kunt nu API-sleutelauthenticatie gebruiken als verificatietype bij het integreren van een nieuwe bron met Self-Serve Sources (Batch SDK). Voor meer informatie kunt u de handleiding [over het configureren van uw verificatiespecificatie in Batch SDK](../../sources/sources-sdk/config/authspec.md) raadplegen. |
 | Ondersteuning voor op kenmerken gebaseerde toegangscontrole in bronnen | U kunt nu op kenmerken gebaseerde toegangscontrolefuncties gebruiken voor uw brongegevensstromen. Raadpleeg de volgende handleidingen voor meer informatie: <ul><li>[Labels toepassen op uw brongegevensstromen met behulp van de API](../../sources/tutorials/api/labels.md)</li><li>[Pas labels toe op uw brongegevensstromen met behulp van de gebruikersinterface](../../sources/tutorials/ui/labels.md). |
 
-{style="table-layout:auto"}
+{style=&quot;table-layout:auto&quot;}
 
 Voor meer informatie, raadpleegt u het [overzicht van bronnen](../../sources/home.md).
