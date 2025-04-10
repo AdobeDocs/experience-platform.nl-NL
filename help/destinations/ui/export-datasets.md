@@ -3,9 +3,9 @@ title: Datasets exporteren naar cloudopslagdoelen
 type: Tutorial
 description: Leer hoe u gegevenssets van Adobe Experience Platform naar de gewenste locatie voor cloudopslag exporteert.
 exl-id: e89652d2-a003-49fc-b2a5-5004d149b2f4
-source-git-commit: 5624dab337bcd27e28b4153459bb4e85fab22d6f
+source-git-commit: 29fb232ecfbd119ef84d62599fc79249513dca43
 workflow-type: tm+mt
-source-wordcount: '2529'
+source-wordcount: '2638'
 ht-degree: 0%
 
 ---
@@ -14,15 +14,23 @@ ht-degree: 0%
 
 >[!AVAILABILITY]
 >
->* Deze functionaliteit is beschikbaar voor klanten die het Real-Time CDP Prime- of Ultimate-pakket, Adobe Journey Optimizer of Customer Journey Analytics hebben aangeschaft. Neem contact op met uw Adobe voor meer informatie.
+>Deze functionaliteit is beschikbaar voor klanten die het Real-Time CDP Prime- of Ultimate-pakket, Adobe Journey Optimizer of Customer Journey Analytics hebben aangeschaft. Neem contact op met uw Adobe-vertegenwoordiger voor meer informatie.
 
-Dit artikel verklaart het werkschema dat wordt vereist om [ datasets ](/help/catalog/datasets/overview.md) van Adobe Experience Platform naar uw aangewezen plaats van de wolkenopslag, zoals [!DNL Amazon S3], plaatsen SFTP, of [!DNL Google Cloud Storage] uit te voeren door het Experience Platform UI te gebruiken.
+>[!IMPORTANT]
+>
+>**het punt van de Actie**: De [ versie van September 2024 van Experience Platform ](/help/release-notes/latest/latest.md#destinations) introduceerde de optie om een `endTime` datum voor de gegevens van de uitvoerdataset te plaatsen. Adobe heeft ook een standaardeinddatum van 1 Mei 2025 voor alle gegevens van de datasetuitvoer gecreeerd *vóór de versie van september 2024* geïntroduceerd.
+>
+>Voor om het even welke dataflows, moet u de einddatum in dataflow manueel bijwerken vóór de einddatum, anders zal uw uitvoer op die datum ophouden. Gebruik de gebruikersinterface van Experience Platform om te bekijken welke dataflows op 1 mei 2025 worden ingesteld.
+>
+>Verwijs naar [ het plannen sectie ](#scheduling) voor informatie over hoe te om de einddatum van een dataset uit te geven uitvoerdataflow.
 
-U kunt de Experience Platform APIs ook gebruiken om datasets uit te voeren. Lees de [ leerprogramma&#39;s van de uitvoerdatasets API ](/help/destinations/api/export-datasets.md) voor meer informatie.
+Dit artikel verklaart het werkschema dat wordt vereist om [ datasets ](/help/catalog/datasets/overview.md) van Adobe Experience Platform naar uw aangewezen plaats van de wolkenopslag, zoals [!DNL Amazon S3], plaatsen SFTP, of [!DNL Google Cloud Storage] uit te voeren door Experience Platform UI te gebruiken.
+
+U kunt de Experience Platform API&#39;s ook gebruiken om gegevenssets te exporteren. Lees de [ leerprogramma&#39;s van de uitvoerdatasets API ](/help/destinations/api/export-datasets.md) voor meer informatie.
 
 ## Beschikbare gegevensbestanden voor exporteren {#datasets-to-export}
 
-De datasets die u kunt uitvoeren variëren gebaseerd op de toepassing van het Experience Platform (Real-Time CDP, Adobe Journey Optimizer), de rij (Prime of Ultimate), en om het even welke toe:voegen-ons die u (bijvoorbeeld: Gegevens Distiller) kocht.
+De gegevenssets die u kunt exporteren, variëren op basis van de Experience Platform-toepassing (Real-Time CDP, Adobe Journey Optimizer), de laag (Prime of Ultimate) en alle invoegtoepassingen die u hebt aangeschaft (bijvoorbeeld Data Distiller).
 
 Gebruik de onderstaande tabel om te begrijpen welke gegevenstypen u kunt exporteren, afhankelijk van uw toepassing, productlaag en eventuele aangeschafte invoegtoepassingen:
 
@@ -38,11 +46,11 @@ Gebruik de onderstaande tabel om te begrijpen welke gegevenstypen u kunt exporte
   <tr>
     <td rowspan="2">Real-Time CDP</td>
     <td>Prime</td>
-    <td>De datasets van de Gebeurtenis van het profiel en van de Ervaring die in de Experience Platform UI na het opnemen van of het verzamelen van gegevens door Bronnen, het Web SDK, Mobiele SDK, de Schakelaar van Gegevens van de Analyse, en Audience Manager worden gecreeerd.</td>
+    <td>De datasets van de Gebeurtenis van het profiel en van de Ervaring die in de UI van Experience Platform na het opnemen van of het verzamelen van gegevens door Bronnen, Web SDK, Mobiele SDK, de Verbinding van Gegevens van Analytics, en Audience Manager worden gecreeerd.</td>
   </tr>
   <tr>
     <td>Ultimate</td>
-    <td><ul><li>De datasets van de Gebeurtenis van het profiel en van de Ervaring die in de Experience Platform UI na het opnemen van of het verzamelen van gegevens door Bronnen, het Web SDK, Mobiele SDK, de Schakelaar van Gegevens van de Analyse, en Audience Manager worden gecreeerd.</li><li> <a href="https://experienceleague.adobe.com/docs/experience-platform/dashboards/query.html#profile-attribute-datasets"> systeem-geproduceerde dataset van de Momentopname van het Profiel </a>.</li></td>
+    <td><ul><li>De datasets van de Gebeurtenis van het profiel en van de Ervaring die in de UI van Experience Platform na het opnemen van of het verzamelen van gegevens door Bronnen, Web SDK, Mobiele SDK, de Verbinding van Gegevens van Analytics, en Audience Manager worden gecreeerd.</li><li> <a href="https://experienceleague.adobe.com/docs/experience-platform/dashboards/query.html#profile-attribute-datasets"> systeem-geproduceerde dataset van de Momentopname van het Profiel </a>.</li></td>
   </tr>
   <tr>
     <td rowspan="2">Adobe Journey Optimizer</td>
@@ -56,7 +64,7 @@ Gebruik de onderstaande tabel om te begrijpen welke gegevenstypen u kunt exporte
   <tr>
     <td>Customer Journey Analytics</td>
     <td>Alles</td>
-    <td> De datasets van de Gebeurtenis van het profiel en van de Ervaring die in de Experience Platform UI na het opnemen van of het verzamelen van gegevens door Bronnen, het Web SDK, Mobiele SDK, de Schakelaar van Gegevens van de Analyse, en Audience Manager worden gecreeerd.</td>
+    <td> De datasets van de Gebeurtenis van het profiel en van de Ervaring die in de UI van Experience Platform na het opnemen van of het verzamelen van gegevens door Bronnen, Web SDK, Mobiele SDK, de Verbinding van Gegevens van Analytics, en Audience Manager worden gecreeerd.</td>
   </tr>
   <tr>
     <td>Data Distiller</td>
@@ -87,10 +95,10 @@ Momenteel, kunt u datasets naar de bestemmingen van de wolkenopslag uitvoeren di
 
 ## Wanneer moet u het publiek activeren of gegevenssets exporteren {#when-to-activate-audiences-or-activate-datasets}
 
-Sommige op dossier-gebaseerde bestemmingen in de catalogus van het Experience Platform steunen zowel publieksactivering als dataset de uitvoer.
+Sommige op dossier-gebaseerde bestemmingen in de catalogus van Experience Platform steunen zowel publieksactivering als de uitvoer van datasets.
 
 * U kunt doelgroepen activeren als u uw gegevens wilt indelen in profielen die zijn gegroepeerd op belangen of kwalificaties van het publiek.
-* U kunt ook gegevenssets exporteren overwegen wanneer u onbewerkte gegevenssets wilt exporteren. Deze zijn niet gegroepeerd of gestructureerd op basis van belangen of kwalificaties van het publiek. U kunt deze gegevens gebruiken voor rapportage, workflows voor gegevenswetenschap en vele andere gebruiksgevallen. Bijvoorbeeld, als beheerder, gegevensingenieur, of analist, kunt u gegevens van Experience Platform uitvoeren om met uw gegevenspakhuis te synchroniseren, gebruik in de analysehulpmiddelen van BI, externe wolkenhulpmiddelen van XML, of opslag in uw systeem voor de opslagbehoeften op lange termijn.
+* U kunt ook gegevenssets exporteren overwegen wanneer u onbewerkte gegevenssets wilt exporteren. Deze zijn niet gegroepeerd of gestructureerd op basis van belangen of kwalificaties van het publiek. U kunt deze gegevens gebruiken voor rapportage, workflows voor gegevenswetenschap en vele andere gebruiksgevallen. Bijvoorbeeld, als beheerder, gegevensingenieur, of analist, kunt u gegevens van Experience Platform uitvoeren om met uw gegevenspakhuis te synchroniseren, in de analysehulpmiddelen van BI, externe wolkenhulpmiddelen van XML, of opslag in uw systeem voor de opslagbehoeften op lange termijn te gebruiken.
 
 Dit document bevat alle informatie die nodig is om gegevenssets te exporteren. Als u *publiek* aan cloudopslag of e-mail marketing bestemmingen wilt activeren, lees [ publieksgegevens aan de uitvoerbestemmingen van het partijprofiel ](/help/destinations/ui/activate-batch-profile-destinations.md) activeren.
 
@@ -216,7 +224,7 @@ Op de pagina **[!UICONTROL Review]** ziet u een overzicht van uw selectie. Selec
 
 Bij het exporteren van gegevenssets maakt Experience Platform een of meerdere `.json` - of `.parquet` -bestanden op de opslaglocatie die u hebt opgegeven. Nieuwe bestanden worden naar verwachting op uw opslaglocatie gedeponeerd volgens het exportschema dat u hebt opgegeven.
 
-Experience Platform leidt tot een omslagstructuur in de opslagplaats u specificeerde, waar het de uitgevoerde datasetdossiers bewaart. Het standaard patroon van de omslaguitvoer wordt hieronder getoond, maar u kunt [ de omslagstructuur met uw aangewezen macro&#39;s ](#edit-folder-path) aanpassen.
+Experience Platform maakt een mappenstructuur op de opslaglocatie die u hebt opgegeven, waar de geëxporteerde gegevenssetbestanden worden opgeslagen. Het standaard patroon van de omslaguitvoer wordt hieronder getoond, maar u kunt [ de omslagstructuur met uw aangewezen macro&#39;s ](#edit-folder-path) aanpassen.
 
 >[!TIP]
 > 
@@ -247,7 +255,7 @@ De uitvoer naar JSON- dossiers wordt gesteund *op een samengeperste slechts wijz
 
 Om datasets uit een bestaande gegevensstroom te verwijderen, volg de stappen hieronder:
 
-1. Login aan het [ Experience Platform UI ](https://experience.adobe.com/platform/) en selecteert **[!UICONTROL Destinations]** van de linkernavigatiebar. Selecteer **[!UICONTROL Browse]** in de bovenste koptekst om de bestaande doelgegevens weer te geven.
+1. Login aan [ UI van Experience Platform ](https://experience.adobe.com/platform/) en selecteer **[!UICONTROL Destinations]** van de linkernavigatiebar. Selecteer **[!UICONTROL Browse]** in de bovenste koptekst om de bestaande doelgegevens weer te geven.
 
    ![ doorbladert de Bestemming mening met een getoonde bestemmingsverbinding en de rest vervaagd uit.](../assets/ui/export-datasets/browse-dataset-connections.png)
 
@@ -281,7 +289,7 @@ U kunt uw profieluitvoer tegen uw contractuele grenzen in het [ dashboard van he
 
 Houd in mening de volgende beperkingen voor de algemene beschikbaarheidsversie van de uitvoer van datasets:
 
-* Experience Platform kan veelvoudige dossiers zelfs voor kleine datasets uitvoeren. Dataset exporteren is ontworpen voor systeemintegratie en geoptimaliseerd voor prestaties. Het aantal geëxporteerde bestanden kan daarom niet worden aangepast.
+* Experience Platform kan meerdere bestanden exporteren, zelfs voor kleine gegevenssets. Dataset exporteren is ontworpen voor systeemintegratie en geoptimaliseerd voor prestaties. Het aantal geëxporteerde bestanden kan daarom niet worden aangepast.
 * De geëxporteerde bestandsnamen kunnen momenteel niet worden aangepast.
 * Datasets die via API zijn gemaakt, zijn momenteel niet beschikbaar voor export.
 * UI blokkeert momenteel niet u van het schrappen van een dataset die naar een bestemming wordt uitgevoerd. Verwijder geen datasets die naar bestemmingen worden geëxporteerd. [ verwijder de dataset ](#remove-dataset) uit een bestemmingsdataflow alvorens het te schrappen.
@@ -293,7 +301,7 @@ Houd in mening de volgende beperkingen voor de algemene beschikbaarheidsversie v
 **kunnen wij een dossier zonder een omslag produceren als wij enkel bij `/` als omslagweg bewaren? Ook, als wij geen omslagweg vereisen, hoe dossiers met dubbele namen in een omslag of een plaats worden geproduceerd?**
 
 +++Antwoord
-Vanaf de release van september 2024 kunt u de mapnaam aanpassen en zelfs `/` gebruiken voor het exporteren van bestanden voor alle gegevenssets in dezelfde map. De Adobe adviseert dit niet voor bestemmingen die veelvoudige datasets uitvoeren, aangezien de systeem-geproduceerde filenames die tot verschillende datasets behoren in de zelfde omslag zullen worden gemengd.
+Vanaf de release van september 2024 kunt u de mapnaam aanpassen en zelfs `/` gebruiken voor het exporteren van bestanden voor alle gegevenssets in dezelfde map. Adobe adviseert dit niet voor bestemmingen die veelvoudige datasets uitvoeren, aangezien de systeem-geproduceerde filenames die tot verschillende datasets behoren in de zelfde omslag zullen worden gemengd.
 +++
 
 **kunt u het manifestdossier aan één omslag en gegevensdossiers in een andere omslag leiden?**
@@ -329,7 +337,7 @@ Er is geen mogelijkheid om aanvullende informatie aan het manifestbestand toe te
 **Hoe worden de gegevensdossiers verdeeld? Hoeveel verslagen per dossier?**
 
 +++Antwoord
-Gegevensbestanden worden gesplitst volgens de standaardpartitionering in het gegevenspeer van het Experience Platform. Grotere datasets hebben een hoger aantal verdelingen. Standaard het verdelen is niet configureerbaar door de gebruiker aangezien het voor lezing wordt geoptimaliseerd.
+Gegevensbestanden worden gesplitst volgens de standaardpartitionering in het Experience Platform-gegevensmeer. Grotere datasets hebben een hoger aantal verdelingen. Standaard het verdelen is niet configureerbaar door de gebruiker aangezien het voor lezing wordt geoptimaliseerd.
 +++
 
 **kunnen wij een drempel (aantal verslagen per dossier) plaatsen?**

@@ -4,9 +4,9 @@ title: De datasets van de uitvoer door de Dienst API van de Stroom te gebruiken
 description: Leer hoe te om de Dienst API van de Stroom te gebruiken om datasets naar uitgezochte bestemmingen uit te voeren.
 type: Tutorial
 exl-id: f23a4b22-da04-4b3c-9b0c-790890077eaa
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 29fb232ecfbd119ef84d62599fc79249513dca43
 workflow-type: tm+mt
-source-wordcount: '5137'
+source-wordcount: '5139'
 ht-degree: 0%
 
 ---
@@ -19,7 +19,9 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
->**het punt van de Actie**: De [ versie van 2024 van Experience Platform ](/help/release-notes/latest/latest.md#destinations) introduceert de optie om een `endTime` datum voor de gegevensstroom van de uitvoerdataset te plaatsen. Adobe introduceert ook een standaardeinddatum van 1 Mei 2025 voor alle dataflows van de datasetuitvoer die *voorafgaand aan de versie van september* worden gecreeerd. Voor om het even welke dataflows, moet u de einddatum in dataflow manueel vóór de einddatum bijwerken, anders uw uitvoer voor stop op die datum. Gebruik de gebruikersinterface van Experience Platform om te bekijken welke dataflows op 1 mei worden ingesteld.
+>**het punt van de Actie**: De [ versie van September 2024 van Experience Platform ](/help/release-notes/latest/latest.md#destinations) introduceerde de optie om een `endTime` datum voor de gegevens van de uitvoerdataset te plaatsen. Adobe heeft ook een standaardeinddatum van 1 Mei 2025 voor alle gegevens van de datasetuitvoer gecreeerd *vóór de versie van september 2024* geïntroduceerd.
+>
+>Voor om het even welke dataflows, moet u de einddatum in dataflow manueel bijwerken vóór de einddatum, anders zal uw uitvoer op die datum ophouden. Gebruik de gebruikersinterface van Experience Platform om te bekijken welke dataflows op 1 mei 2025 worden ingesteld.
 >
 >Op dezelfde manier voor dataflows die u maakt zonder een `endTime` -datum op te geven, worden deze standaard ingesteld op een eindtijd van zes maanden vanaf het tijdstip waarop ze worden gemaakt.
 
@@ -438,9 +440,9 @@ Merk op dat om in aanmerking komende datasets terug te winnen, [!DNL connection 
 
 >[!ENDSHADEBOX]
 
-Een succesvol antwoord bevat een lijst met gegevenssets die in aanmerking komen voor activering. Deze datasets kunnen worden gebruikt wanneer het construeren van de bronverbinding in de volgende stap.
+Een succesvol antwoord bevat een lijst met gegevenssets die in aanmerking komen voor activering. Deze datasets kunnen worden gebruikt bij het opbouwen van de bronverbinding in de volgende stap.
 
-Voor informatie over de diverse reactieparameters voor elke teruggekeerde dataset, verwijs naar de [ API ontwikkelaarsdocumentatie van Datasets ](https://developer.adobe.com/experience-platform-apis/references/catalog/#tag/Datasets/operation/listDatasets).
+Raadpleeg de [documentatie](https://developer.adobe.com/experience-platform-apis/references/catalog/#tag/Datasets/operation/listDatasets) voor ontwikkelaars van de Datasets-API voor informatie over de verschillende antwoordparameters voor elke geretourneerde gegevensset.
 
 ## Een bronverbinding maken {#create-source-connection}
 
@@ -934,7 +936,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 >
 >Voor informatie over hoe te om de vereiste authentificatiegeloofsbrieven te verkrijgen, verwijs naar [ voor authentiek verklaren aan bestemmings ](/help/destinations/catalog/cloud-storage/adls-gen2.md#authenticate) sectie van de Azure pagina van de de bestemmingsdocumentatie van het Leer van Gegevens 2 (ADLS Gen2).
 
-Maak een notitie van de gemarkeerde regels met inline opmerkingen in het aanvraagvoorbeeld, die aanvullende informatie bevatten. Verwijder de inline commentaren in het verzoek wanneer het kopiëren-kleeft van het verzoek in uw terminal van keus.
+Maak een notitie van de gemarkeerde regels met inline opmerkingen in het aanvraagvoorbeeld, die aanvullende informatie bevatten. Verwijder de inline opmerkingen in het verzoek wanneer u het verzoek kopieert en plakt in de terminal van uw keuze.
 
 ```shell {line-numbers="true" start-line="1" highlight="20"}
 curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/connections' \
@@ -1618,7 +1620,7 @@ Aan de hand van de bovenstaande specificatie kunt u een aanvraag voor een doelve
 
 **Verzoek**
 
-+++[!DNL Amazon S3] - Aanvraag voor doelverbinding
++++[!DNL Amazon S3] - Verzoek om doelverbinding
 
 >[!TIP]
 >
@@ -2063,13 +2065,13 @@ De onderstaande tabel bevat beschrijvingen van alle parameters in de sectie `sch
 | `interval` | Selecteer `1` wanneer `timeUnit` dag en `3` is, `6`, `9`, `12` wanneer de tijdeenheid `hour` is. |
 | `startTime` | De datum en de tijd in de seconden van UNIX wanneer de datasetuitvoer zou moeten beginnen. |
 | `endTime` | De datum en de tijd in de seconden van UNIX wanneer de datasetuitvoer zou moeten beëindigen. |
-| `foldernameTemplate` | Geef de verwachte mapnaamstructuur op in de opslaglocatie waar de geëxporteerde bestanden worden gedeponeerd. <ul><li><code> DATASET_ID</code> = <span> een uniek herkenningsteken voor de dataset.</span></li><li><code> BESTEMMING</code> = <span> de naam van de bestemming.</span></li><li><code> DATETIME</code> = <span> de datum en de tijd die als yyyyMMdd_HHmmss wordt geformatteerd.</span></li><li><code> EXPORT_TIME</code> = <span> de geplande tijd voor gegevens die als `exportTime=YYYYMMDDHHMM` worden geformatteerd.</span></li><li><code> DESTINATION_INSTANCE_NAME</code> = <span> de naam van de specifieke instantie van de bestemming.</span></li><li><code> DESTINATION_INSTANCE_ID</code> = <span> een uniek herkenningsteken voor de bestemmingsinstantie.</span></li><li><code> SANDBOX_NAME</code> = <span> de naam van het zandbakmilieu.</span></li><li><code> ORGANIZATION_NAME</code> = <span> de naam van de organisatie.</span></li></ul> |
+| `foldernameTemplate` | Geef de verwachte mapnaamstructuur op in de opslaglocatie waar de geëxporteerde bestanden worden gedeponeerd. <ul><li><code> DATASET_ID</code> = <span> een uniek herkenningsteken voor de dataset.</span></li><li><code> BESTEMMING</code> = <span> de naam van de bestemming.</span></li><li><code> DATETIME</code> = <span> de datum en de tijd die als yyyyMMdd_HHmmss wordt geformatteerd.</span></li><li><code> EXPORT_TIME</code> = <span> de geplande tijd voor gegevens die als `exportTime=YYYYMMDDHHMM` worden geformatteerd.</span></li><li><code> DESTINATION_INSTANCE_NAME</code> = <span> de naam van de specifieke instantie van de bestemming.</span></li><li><code> DESTINATION_INSTANCE_ID</code> <span>= Een unieke identificatie voor de doelinstantie.</span></li><li><code> SANDBOX_NAME</code> = <span> de naam van het zandbakmilieu.</span></li><li><code> ORGANIZATION_NAME</code> <span>= De naam van de organisatie.</span></li></ul> |
 
 {style="table-layout:auto"}
 
 +++
 
-**Reactie**
+**Antwoord**
 
 +++Gegevensstroom maken - Reactie
 
@@ -2082,13 +2084,13 @@ De onderstaande tabel bevat beschrijvingen van alle parameters in de sectie `sch
 
 +++
 
->[!TAB  Azure Gen 2 van Gegevens (ADLS Gen2) ]
+>[!TAB Azure Data Lake Gen 2 (ADLS Gen2)]
 
 **Verzoek**
 
-+++Gegevensset maken naar [!DNL Azure Data Lake Gen 2(ADLS Gen2)] doel - Verzoek
++++Gegevensset maken naar [!DNL Azure Data Lake Gen 2(ADLS Gen2)] bestemming - Aanvragen
 
-Maak een notitie van de gemarkeerde regels met inline opmerkingen in het aanvraagvoorbeeld, die aanvullende informatie bevatten. Verwijder de inline commentaren in het verzoek wanneer het kopiëren-kleeft van het verzoek in uw terminal van keus.
+Let op de gemarkeerde regels met inline-opmerkingen in het aanvraagvoorbeeld, die aanvullende informatie bieden. Verwijder de inline opmerkingen in het verzoek wanneer u het verzoek kopieert en plakt in de terminal van uw keuze.
 
 ```shell {line-numbers="true" start-line="1" highlight="12,22-25"}
 curl --location --request POST 'https://platform.adobe.io/data/foundation/flowservice/flows' \
@@ -2124,7 +2126,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 }'
 ```
 
-De onderstaande tabel bevat beschrijvingen van alle parameters in de sectie `scheduleParams` . Hiermee kunt u de exporttijden, frequentie, locatie en meer aanpassen voor het exporteren van uw gegevensset.
+De onderstaande tabel bevat beschrijvingen van alle parameters in de `scheduleParams` sectie, waarmee u exporttijden, frequentie, locatie en meer kunt aanpassen voor de export van uw gegevensset.
 
 | Parameter | Beschrijving |
 |---------|----------|
@@ -2198,12 +2200,12 @@ De onderstaande tabel bevat beschrijvingen van alle parameters in de sectie `sch
 
 | Parameter | Beschrijving |
 |---------|----------|
-| `exportMode` | Selecteer `"DAILY_FULL_EXPORT"` of `"FIRST_FULL_THEN_INCREMENTAL"` . Voor meer informatie over de twee opties, verwijs naar [ uitvoer volledige dossiers ](/help/destinations/ui/activate-batch-profile-destinations.md#export-full-files) en [ de uitvoer stijgende dossiers ](/help/destinations/ui/activate-batch-profile-destinations.md#export-incremental-files) in het leerprogramma van de de activering van partijbestemmingen. De drie beschikbare exportopties zijn: <br> **Volledig dossier - eens**: `"DAILY_FULL_EXPORT"` kan slechts in combinatie met `timeUnit` worden gebruikt:`day` en `interval`:`0` voor eenmalig volledige uitvoer van de dataset. Dagelijkse volledige uitvoer van gegevenssets wordt niet ondersteund. Gebruik de optie voor incrementele export als u dagelijks wilt exporteren. <br> **Incrementele dagelijkse uitvoer**: Selecteer `"FIRST_FULL_THEN_INCREMENTAL"`, `timeUnit`:`day`, en `interval` :`1` voor dagelijkse stijgende uitvoer. <br> **Incrementele uuruitvoer**: Uitgezocht `"FIRST_FULL_THEN_INCREMENTAL"`, `timeUnit`:`hour`, en `interval` :`3`, `6`, `9`, of `12` voor per uur stijgende uitvoer. |
-| `timeUnit` | Selecteer `day` of `hour` afhankelijk van de frequentie waarmee u gegevenssetbestanden wilt exporteren. |
-| `interval` | Selecteer `1` wanneer `timeUnit` dag en `3` is, `6`, `9`, `12` wanneer de tijdeenheid `hour` is. |
+| `exportMode` | Selecteer `"DAILY_FULL_EXPORT"` of `"FIRST_FULL_THEN_INCREMENTAL"` . Voor meer informatie over de twee opties, verwijs naar [ uitvoer volledige dossiers ](/help/destinations/ui/activate-batch-profile-destinations.md#export-full-files) en [ de uitvoer stijgende dossiers ](/help/destinations/ui/activate-batch-profile-destinations.md#export-incremental-files) in het leerprogramma van de de activering van partijbestemmingen. De drie beschikbare exportopties zijn: <br> **Volledig dossier - eens**: `"DAILY_FULL_EXPORT"` kan slechts in combinatie met `timeUnit` worden gebruikt:`day` en `interval`:`0` voor eenmalig volledige uitvoer van de dataset. Dagelijkse volledige export van gegevenssets wordt niet ondersteund. Als u dagelijkse exports nodig heeft, gebruikt u de optie voor incrementele export. <br> **Incrementele dagelijkse exports**: Selecteer `"FIRST_FULL_THEN_INCREMENTAL"`, `timeUnit`:`day`, en `interval` :`1` voor dagelijkse incrementele exports. <br> **Incrementele export** per uur: selecteer `"FIRST_FULL_THEN_INCREMENTAL"`, `timeUnit`:`hour`, en `interval` :`3`,`6`,`9`, of `12` voor incrementele export per uur. |
+| `timeUnit` | Selecteer `day` of `hour` , afhankelijk van de frequentie waarmee u gegevenssetbestanden wilt exporteren. |
+| `interval` | Selecteer `1` wanneer de `timeUnit` dag is en `3`,`6`,`9`,`12` wanneer de tijdseenheid is `hour`. |
 | `startTime` | De datum en de tijd in de seconden van UNIX wanneer de datasetuitvoer zou moeten beginnen. |
 | `endTime` | De datum en de tijd in de seconden van UNIX wanneer de datasetuitvoer zou moeten beëindigen. |
-| `foldernameTemplate` | Geef de verwachte mapnaamstructuur op in de opslaglocatie waar de geëxporteerde bestanden worden gedeponeerd. <ul><li><code> DATASET_ID</code> = <span> een uniek herkenningsteken voor de dataset.</span></li><li><code> BESTEMMING</code> = <span> de naam van de bestemming.</span></li><li><code> DATETIME</code> = <span> de datum en de tijd die als yyyyMMdd_HHmmss wordt geformatteerd.</span></li><li><code> EXPORT_TIME</code> = <span> de geplande tijd voor gegevens die als `exportTime=YYYYMMDDHHMM` worden geformatteerd.</span></li><li><code> DESTINATION_INSTANCE_NAME</code> = <span> de naam van de specifieke instantie van de bestemming.</span></li><li><code> DESTINATION_INSTANCE_ID</code> = <span> een uniek herkenningsteken voor de bestemmingsinstantie.</span></li><li><code> SANDBOX_NAME</code> = <span> de naam van het zandbakmilieu.</span></li><li><code> ORGANIZATION_NAME</code> = <span> de naam van de organisatie.</span></li></ul> |
+| `foldernameTemplate` | Geef de verwachte mapnaamstructuur op in de opslaglocatie waar de geëxporteerde bestanden worden gedeponeerd. <ul><li><code> DATASET_ID</code> <span>= Een unieke identificatie voor de dataset.</span></li><li><code>BESTEMMING</code> <span>= De naam van de bestemming.</span></li><li><code>DATUM/TIJD</code> <span>= De datum en tijd geformatteerd als yyyyMMdd_HHmmss.</span></li><li><code> EXPORT_TIME</code> <span>= De geplande tijd voor het exporteren van gegevens, geformatteerd als `exportTime=YYYYMMDDHHMM`.</span></li><li><code> DESTINATION_INSTANCE_NAME</code> <span>= De naam van de specifieke instantie van de bestemming.</span></li><li><code> DESTINATION_INSTANCE_ID</code> <span>= Een unieke identificatie voor de doelinstantie.</span></li><li><code> SANDBOX_NAME</code> = <span> de naam van het zandbakmilieu.</span></li><li><code> ORGANIZATION_NAME</code> = <span> de naam van de organisatie.</span></li></ul> |
 
 {style="table-layout:auto"}
 +++
@@ -2272,13 +2274,13 @@ De onderstaande tabel bevat beschrijvingen van alle parameters in de sectie `sch
 | `interval` | Selecteer `1` wanneer `timeUnit` dag en `3` is, `6`, `9`, `12` wanneer de tijdeenheid `hour` is. |
 | `startTime` | De datum en de tijd in de seconden van UNIX wanneer de datasetuitvoer zou moeten beginnen. |
 | `endTime` | De datum en de tijd in de seconden van UNIX wanneer de datasetuitvoer zou moeten beëindigen. |
-| `foldernameTemplate` | Geef de verwachte mapnaamstructuur op in de opslaglocatie waar de geëxporteerde bestanden worden gedeponeerd. <ul><li><code> DATASET_ID</code> = <span> een uniek herkenningsteken voor de dataset.</span></li><li><code> BESTEMMING</code> = <span> de naam van de bestemming.</span></li><li><code> DATETIME</code> = <span> de datum en de tijd die als yyyyMMdd_HHmmss wordt geformatteerd.</span></li><li><code> EXPORT_TIME</code> = <span> de geplande tijd voor gegevens die als `exportTime=YYYYMMDDHHMM` worden geformatteerd.</span></li><li><code> DESTINATION_INSTANCE_NAME</code> = <span> de naam van de specifieke instantie van de bestemming.</span></li><li><code> DESTINATION_INSTANCE_ID</code> = <span> een uniek herkenningsteken voor de bestemmingsinstantie.</span></li><li><code> SANDBOX_NAME</code> = <span> de naam van het zandbakmilieu.</span></li><li><code> ORGANIZATION_NAME</code> = <span> de naam van de organisatie.</span></li></ul> |
+| `foldernameTemplate` | Geef de verwachte mapnaamstructuur op in de opslaglocatie waar de geëxporteerde bestanden worden gedeponeerd. <ul><li><code> DATASET_ID</code> = <span> een uniek herkenningsteken voor de dataset.</span></li><li><code> BESTEMMING</code> = <span> de naam van de bestemming.</span></li><li><code> DATETIME</code> = <span> de datum en de tijd die als yyyyMMdd_HHmmss wordt geformatteerd.</span></li><li><code> EXPORT_TIME</code> = <span> de geplande tijd voor gegevens die als `exportTime=YYYYMMDDHHMM` worden geformatteerd.</span></li><li><code> DESTINATION_INSTANCE_NAME</code> = <span> de naam van de specifieke instantie van de bestemming.</span></li><li><code> DESTINATION_INSTANCE_ID</code> = <span> een uniek herkenningsteken voor de bestemmingsinstantie.</span></li><li><code> SANDBOX_NAME</code> = <span> de naam van het zandbakmilieu.</span></li><li><code> ORGANIZATION_NAME</code> <span>= De naam van de organisatie.</span></li></ul> |
 
 {style="table-layout:auto"}
 
 +++
 
-**Reactie**
+**Antwoord**
 
 +++Gegevensstroom maken - Reactie
 
@@ -2337,11 +2339,11 @@ De onderstaande tabel bevat beschrijvingen van alle parameters in de sectie `sch
 
 | Parameter | Beschrijving |
 |---------|----------|
-| `exportMode` | Selecteer `"DAILY_FULL_EXPORT"` of `"FIRST_FULL_THEN_INCREMENTAL"` . Voor meer informatie over de twee opties, verwijs naar [ uitvoer volledige dossiers ](/help/destinations/ui/activate-batch-profile-destinations.md#export-full-files) en [ de uitvoer stijgende dossiers ](/help/destinations/ui/activate-batch-profile-destinations.md#export-incremental-files) in het leerprogramma van de de activering van partijbestemmingen. De drie beschikbare exportopties zijn: <br> **Volledig dossier - eens**: `"DAILY_FULL_EXPORT"` kan slechts in combinatie met `timeUnit` worden gebruikt:`day` en `interval`:`0` voor eenmalig volledige uitvoer van de dataset. Dagelijkse volledige uitvoer van gegevenssets wordt niet ondersteund. Gebruik de optie voor incrementele export als u dagelijks wilt exporteren. <br> **Incrementele dagelijkse uitvoer**: Selecteer `"FIRST_FULL_THEN_INCREMENTAL"`, `timeUnit`:`day`, en `interval` :`1` voor dagelijkse stijgende uitvoer. <br> **Incrementele uuruitvoer**: Uitgezocht `"FIRST_FULL_THEN_INCREMENTAL"`, `timeUnit`:`hour`, en `interval` :`3`, `6`, `9`, of `12` voor per uur stijgende uitvoer. |
-| `timeUnit` | Selecteer `day` of `hour` afhankelijk van de frequentie waarmee u gegevenssetbestanden wilt exporteren. |
-| `interval` | Selecteer `1` wanneer `timeUnit` dag en `3` is, `6`, `9`, `12` wanneer de tijdeenheid `hour` is. |
-| `startTime` | De datum en de tijd in de seconden van UNIX wanneer de datasetuitvoer zou moeten beginnen. |
-| `endTime` | De datum en de tijd in de seconden van UNIX wanneer de datasetuitvoer zou moeten beëindigen. |
+| `exportMode` | Selecteer `"DAILY_FULL_EXPORT"` of `"FIRST_FULL_THEN_INCREMENTAL"`. Voor meer informatie over de twee opties raadpleegt [u volledige bestanden](/help/destinations/ui/activate-batch-profile-destinations.md#export-full-files) exporteren en [incrementele bestanden](/help/destinations/ui/activate-batch-profile-destinations.md#export-incremental-files) exporteren in de zelfstudie voor het activeren van batchbestemmingen. De drie beschikbare exportopties zijn: <br> **Volledig bestand - Eenmalig**: `"DAILY_FULL_EXPORT"` kan alleen worden gebruikt in combinatie met `timeUnit`:`day` en `interval`:`0` voor een eenmalige volledige export van de dataset. Dagelijkse volledige export van gegevenssets wordt niet ondersteund. Als u dagelijkse exports nodig heeft, gebruikt u de optie voor incrementele export. <br> **Incrementele dagelijkse exports**: Selecteer `"FIRST_FULL_THEN_INCREMENTAL"`, `timeUnit`:`day`, en `interval` :`1` voor dagelijkse incrementele exports. <br> **Incrementele export** per uur: selecteer `"FIRST_FULL_THEN_INCREMENTAL"`, `timeUnit`:`hour`, en `interval` :`3`,`6`,`9`, of `12` voor incrementele export per uur. |
+| `timeUnit` | Selecteer `day` of `hour` , afhankelijk van de frequentie waarmee u gegevenssetbestanden wilt exporteren. |
+| `interval` | Selecteer `1` wanneer de `timeUnit` dag is en `3`,`6`,`9`,`12` wanneer de tijdseenheid is `hour`. |
+| `startTime` | De datum en tijd in UNIX-seconden waarop het exporteren van de gegevensset moet beginnen. |
+| `endTime` | De datum en tijd in UNIX-seconden waarop het exporteren van de gegevensset moet eindigen. |
 | `foldernameTemplate` | Geef de verwachte mapnaamstructuur op in de opslaglocatie waar de geëxporteerde bestanden worden gedeponeerd. <ul><li><code> DATASET_ID</code> = <span> een uniek herkenningsteken voor de dataset.</span></li><li><code> BESTEMMING</code> = <span> de naam van de bestemming.</span></li><li><code> DATETIME</code> = <span> de datum en de tijd die als yyyyMMdd_HHmmss wordt geformatteerd.</span></li><li><code> EXPORT_TIME</code> = <span> de geplande tijd voor gegevens die als `exportTime=YYYYMMDDHHMM` worden geformatteerd.</span></li><li><code> DESTINATION_INSTANCE_NAME</code> = <span> de naam van de specifieke instantie van de bestemming.</span></li><li><code> DESTINATION_INSTANCE_ID</code> = <span> een uniek herkenningsteken voor de bestemmingsinstantie.</span></li><li><code> SANDBOX_NAME</code> = <span> de naam van het zandbakmilieu.</span></li><li><code> ORGANIZATION_NAME</code> = <span> de naam van de organisatie.</span></li></ul> |
 
 {style="table-layout:auto"}
