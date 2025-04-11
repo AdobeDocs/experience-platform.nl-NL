@@ -3,9 +3,9 @@ title: Flexibele gids voor de evaluatie van het publiek
 description: Leer hoe te om flexibele publieksevaluatie te gebruiken om partijsegmentatietaken op bestelling in werking te stellen.
 role: Developer, User
 exl-id: b85bf735-be02-4bf7-bd63-8d74ae905e58
-source-git-commit: 71818ee273749bb5053286c5b8bbd07a4429c341
+source-git-commit: 3829f506d0b4d78b543b949e8e11806d8fe10b9c
 workflow-type: tm+mt
-source-wordcount: '1033'
+source-wordcount: '1047'
 ht-degree: 0%
 
 ---
@@ -15,6 +15,8 @@ ht-degree: 0%
 >[!AVAILABILITY]
 >
 >De flexibele publieksevaluatie is **slechts** beschikbaar op instanties van Experience Platform die op [!DNL Microsoft Azure] lopen. Meer over de gesteunde infrastructuur van Experience Platform leren, zie het [ multi-wolkenoverzicht van Experience Platform ](../../landing/multi-cloud.md).
+>
+>Bovendien, is de flexibele publieksevaluatie **slechts** beschikbaar voor gebruik met Real-Time CDP B2C Edition.
 
 Dankzij de flexibele publieksevaluatie kunt u een batchsegmentatietaak op aanvraag uitvoeren. Met flexibele publieksevaluatie, kunt u ad hoc campagnelanceringen, just-in-time mededelingen, of andere tijd-gevoelige activiteiten in werking stellen.
 

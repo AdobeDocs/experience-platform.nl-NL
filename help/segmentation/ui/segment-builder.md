@@ -3,9 +3,9 @@ solution: Experience Platform
 title: UI-gids voor segmentBuilder
 description: De segmentbouwer in Adobe Experience Platform UI verstrekt een rijke werkruimte die u toestaat om met de gegevenselementen van het Profiel in wisselwerking te staan. De werkruimte biedt intuïtieve besturingselementen voor het maken en bewerken van regels, zoals tegels voor slepen en neerzetten die worden gebruikt om gegevenseigenschappen te vertegenwoordigen.
 exl-id: b27516ea-8749-4b44-99d0-98d3dc2f4c65
-source-git-commit: f6d700087241fb3a467934ae8e64d04f5c1d98fa
+source-git-commit: 3829f506d0b4d78b543b949e8e11806d8fe10b9c
 workflow-type: tm+mt
-source-wordcount: '4893'
+source-wordcount: '4937'
 ht-degree: 0%
 
 ---
@@ -26,6 +26,16 @@ ht-degree: 0%
 >id="platform_segments_createsegment_segmentbuilder_fields"
 >title="Velden"
 >abstract="De drie veldtypen waaruit een segmentdefinitie bestaat, zijn kenmerken, gebeurtenissen en doelgroepen. Met kenmerken kunt u Profielkenmerken gebruiken die horen bij de klasse Individueel profiel XDM, gebeurtenissen kunt u een publiek maken op basis van handelingen of gebeurtenissen die plaatsvinden met XDM ExperienceEvent-gegevenselementen en publiek kunt geïmporteerde soorten publiek uit externe bronnen gebruiken."
+
+>[!CONTEXTUALHELP]
+>id="platform_segmentation_segmentbuilder_showfullxdmschema"
+>title="Volledig XDM-schema weergeven"
+>abstract="Standaard worden alleen velden weergegeven die gegevens bevatten. Schakel deze optie in om alle velden in het XDM-schema weer te geven."
+
+>[!CONTEXTUALHELP]
+>id="platform_segmentation_segmentbuilder_showdeprecatedfields"
+>title="Vervangen velden tonen"
+>abstract="Vervangen XDM-velden worden standaard niet weergegeven. Schakel deze optie in om vervangen XDM-velden weer te geven."
 
 De basisbouwstenen van segmentdefinities zijn attributen en gebeurtenissen. Daarnaast kunnen de kenmerken en gebeurtenissen in bestaande doelgroepen worden gebruikt als componenten voor nieuwe definities.
 

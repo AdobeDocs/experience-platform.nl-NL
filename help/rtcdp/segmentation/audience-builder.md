@@ -3,13 +3,13 @@ title: Audience Builder in Real-Time Customer Data Platform
 description: Leer hoe u de Audience Builder in Real-Time Customer Data Platform kunt gebruiken om een publiek te maken.
 feature: Get Started, Audiences
 badgeB2B: label="B2B edition" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
-source-git-commit: b9099b123ae83eef6d470076dc2f8d143170a846
+exl-id: da87baad-b82a-4a45-89c3-cf20d66fe657
+source-git-commit: 3829f506d0b4d78b543b949e8e11806d8fe10b9c
 workflow-type: tm+mt
-source-wordcount: '882'
+source-wordcount: '957'
 ht-degree: 0%
 
 ---
-
 
 # Audience Builder in Real-Time Customer Data Platform
 
@@ -18,6 +18,21 @@ ht-degree: 0%
 ![ de Bouwer van de Publiek binnen de sectie van Rekeningen.](../assets/segmentation/audience-builder/audience-builder.png){zoomable="yes"}
 
 ## Velden {#fields}
+
+>[!CONTEXTUALHELP]
+>id="platform_b2b_audiencebuilder_showfullxdmschema"
+>title="Volledig XDM-schema weergeven"
+>abstract="Standaard worden alleen velden weergegeven die gegevens bevatten. Schakel deze optie in om alle velden in het XDM-schema weer te geven."
+
+>[!CONTEXTUALHELP]
+>id="platform_b2b_audiencebuilder_showrelationselectors"
+>title="Relatie-kiezers tonen"
+>abstract="Standaard worden de standaardrelaties voor uw organisatie gebruikt. Schakel deze optie in om de gebruikte relatiekiezers weer te geven."
+
+>[!CONTEXTUALHELP]
+>id="platform_b2b_audiencebuilder_showconstrainedfields"
+>title="Beperkte velden weergeven"
+>abstract="Standaard worden alleen velden weergegeven waarvoor geen beperkingen gelden. Schakel deze optie in om velden weer te geven die er beperkingen op hebben."
 
 Wanneer u Audience Builder gebruikt voor accounts, kunt u accountkenmerken of bestaande doelgroepen gebruiken als de velden van uw publiek.
 
