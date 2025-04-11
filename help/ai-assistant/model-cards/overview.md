@@ -3,24 +3,31 @@ title: Modelkaarten voor AI-modeltransparantie in Adobe Experience Platform
 description: Meer weten over modelkaarten in Adobe Experience Platform?
 hide: true
 hidefromtoc: true
-source-git-commit: 21a95bd678cf83c72a08213b647ef778cfb49cfc
+exl-id: 74a8ef82-cff9-4a7e-95c8-f915eb664eda
+source-git-commit: 1edecf0cb413b66d66973517421bc0062f475337
 workflow-type: tm+mt
-source-wordcount: '2386'
+source-wordcount: '3171'
 ht-degree: 0%
 
 ---
 
 # Modelkaarten voor transparantie van AI-modellen in Adobe Experience Platform
 
-Modelkaarten zijn de standaardindelingen waarmee transparantie van het AI-model wordt doorgegeven. Modelkaarten zijn openbaar en zijn bedoeld om zowel het bestaande als het toekomstige inzicht van klanten in de door Adobe gebruikte AI-modellen te verbeteren. Modelkaarten zijn doorgaans statisch. Er zijn echter verschillende aspecten van AI-modellen die in de loop der tijd kunnen veranderen, zoals lijntype, afwijking en andere transparantiekenmerken.
+Een AI-modelkaart is de standaardindeling waarmee transparantie van het AI-model wordt doorgegeven. Modelkaarten bieden uitgebreide informatie over het onderliggende model waarop een bepaald AI-gereedschap is gebouwd. Modelkaarten bevatten informatie zoals het doel van een AI-hulpprogramma, trainingsgegevens, prestatiegegevens, beperkingen en ethische overwegingen. U kunt de transparantie die modelkaarten bieden, gebruiken om de mogelijkheden en beperkingen van het model beter te begrijpen en om een verantwoord en eerlijk gebruik van AI beter te bevorderen.
+
+Modelkaarten zijn openbaar en zijn bedoeld om zowel het bestaande als het toekomstige inzicht van klanten in de door Adobe gebruikte AI-modellen te verbeteren. Modelkaarten zijn doorgaans statisch. Er zijn echter verschillende aspecten van AI-modellen die in de loop der tijd kunnen veranderen, zoals lijntype, afwijking en andere transparantiekenmerken.
 
 Lees dit document voor meer informatie over modelkaarten in Adobe Experience Platform.
 
 ## Modelkaartsecties {#model-card-sections}
 
+Een modelkaart bestaat uit verschillende secties die elk op een bepaald aspect van het AI-model zijn toegespitst.
+
 Lees het volgende voor een gids over de verschillende secties van een modelkaart, met inbegrip van informatie de vragen die zij behandelen.
 
 ### Modeloverzicht {#model-overview}
+
+Het modeloverzicht bevat algemene informatie over een AI-model. Gebruik deze sectie om informatie zoals de naam, het doel, en het type van uw AI model te verstrekken. Daarnaast kunt u deze sectie gebruiken om de gebruikers te identificeren die u wilt gebruiken en om uit te leggen hoe uw model kan worden geïntegreerd met Experience Platform.
 
 +++Vragen en voorbeeldantwoorden weergeven
 
@@ -38,6 +45,8 @@ Lees het volgende voor een gids over de verschillende secties van een modelkaart
 
 ### Beoogd gebruik {#intended-use}
 
+De sectie voor het beoogde gebruik bevat informatie over de gevallen van primair gebruik van uw AI-model. U kunt deze sectie gebruiken om de problemen uit te breiden die uw model van plan is op te lossen, de industrieën en/of domeinen die uw model relevant voor is, en de misbruikgevallen die zouden moeten worden vermeden wanneer het gebruiken van uw model AI.
+
 +++Vragen en voorbeeldantwoorden weergeven
 
 | Vraag | Benodigde informatie | Voorbeeldantwoord |
@@ -52,6 +61,8 @@ Lees het volgende voor een gids over de verschillende secties van een modelkaart
 +++
 
 ### Invoer en uitvoer van modellen {#model-inputs-and-outputs}
+
+Het gedeelte Invoer en uitvoer van het model bevat informatie over de ondersteunde gegevenstypen die uw model als invoer gebruikt en als uitvoer retourneert. U kunt deze sectie gebruiken om voorbeelden te geven van de gegevensinvoer en -uitvoer die relevant zijn voor uw AI-model.
 
 +++Vragen en voorbeeldantwoorden weergeven
 
@@ -68,6 +79,8 @@ Lees het volgende voor een gids over de verschillende secties van een modelkaart
 
 ### Trainingsgegevens {#training-data}
 
+Het gedeelte met trainingsgegevens bevat informatie over de gegevenssets die zijn gebruikt om een bepaald AI-model op te leiden. U kunt deze sectie gebruiken om de grootte en de bron van de trainingsgegevens, de vooroordelen die in de dataset zijn geïdentificeerd, en hoe gegevens vooraf zijn verwerkt uit te werken.
+
 +++Vragen en voorbeeldantwoorden weergeven
 
 | Vraag | Benodigde informatie | Voorbeeldantwoord |
@@ -82,6 +95,8 @@ Lees het volgende voor een gids over de verschillende secties van een modelkaart
 +++
 
 ### Modelarchitectuur en -opleiding {#model-architecture-and-training}
+
+In de sectie Modelarchitectuur en Training wordt de blauwdruk van uw AI-model beschreven. In deze paragraaf wordt verwezen naar de structuur en het ontwerp van het AI-model, met inbegrip van bijzonderheden over het type algoritme en de gebruikte evaluatiemethoden. U kunt deze sectie ook gebruiken om informatie te verstrekken over de gebruikte trainingskaders en de computerbronnen die in de training zijn gebruikt.
 
 +++Vragen en voorbeeldantwoorden weergeven
 
@@ -99,6 +114,8 @@ Lees het volgende voor een gids over de verschillende secties van een modelkaart
 
 ### Prestaties en evaluatie {#performance-and-evaluation}
 
+De prestaties en evaluatiesectie bevat informatie over de metriek en de methodes die worden gebruikt om te beoordelen hoe goed het model zijn voorgenomen taken uitvoert. U kunt deze sectie gebruiken om informatie over de evaluatiemetriek te verstrekken die, evenals geïdentificeerde zwakheden of mislukkingsgevallen werden gebruikt.
+
 +++Vragen en voorbeeldantwoorden weergeven
 
 | Vraag | Benodigde informatie | Voorbeeldantwoord |
@@ -114,13 +131,15 @@ Lees het volgende voor een gids over de verschillende secties van een modelkaart
 
 ### Fairness en afwijking {#fairness-and-bias}
 
+De sectie billijkheid en vooringenomenheid bevat informatie over de wijze waarop het AI-model is uitgevoerd met betrekking tot de maatstaven voor billijkheid en vooringenomenheid. De eerlijkheid heeft betrekking op het vermogen van het model om billijke resultaten te leveren over verschillende demografische groepen en gebruiksgevallen, terwijl de voorkeur verwijst naar systematische fouten die tot oneerlijke resultaten leiden. Gebruik deze sectie om de uitgevoerde billijkheidscontroles uit te werken en te bespreken hoe het model vertekening verlicht.
+
 +++Vragen en voorbeeldantwoorden weergeven
 
 | Vraag | Benodigde informatie | Voorbeeldantwoord |
 | --- | --- | --- |
 | Welke billijkheidscontroles zijn uitgevoerd? | De analyse- en mitigatieprocessen die zijn uitgevoerd. | Het model onderging demografische pariteitstests en tegengestelde billijkheidsbeoordelingen om prestatiesverschillen tussen verschillende gebruikerssegmenten te ontdekken. |
 | Heeft het model een onevenredig grote invloed op bepaalde groepen? | Eventuele verschillen in prestaties die zijn vastgesteld. | De analyse onthulde een 5% prestatiesdaling voor gebruikers met lage historische interactiegegevens. Om dit te verhelpen, worden in het model technieken voor herweging tijdens de opleiding opgenomen. |
-| Hoe verzacht het model bis? | De technieken die worden gebruikt om afwijking aan te pakken. | De gegevensset is gestratificeerd om te zorgen voor een evenredige vertegenwoordiging van de verschillende demografische gegevens van de klant, en tijdens de opleiding worden billijkheidsbeperkingen ingevoerd om te voorkomen dat het model een bepaalde groep begunstigt. Regelmatige vertekende audits worden uitgevoerd op basis van een demografische pariteitsanalyse, waarbij aanpassingen mogelijk zijn als er prestatieverschillen worden vastgesteld. |
+| Hoe verzacht het model vertekening? | De technieken die worden gebruikt om afwijking aan te pakken. | De gegevensset is gestratificeerd om te zorgen voor een evenredige vertegenwoordiging van de verschillende demografische gegevens van de klant, en tijdens de opleiding worden billijkheidsbeperkingen ingevoerd om te voorkomen dat het model een bepaalde groep begunstigt. Regelmatige vertekende audits worden uitgevoerd op basis van een demografische pariteitsanalyse, waarbij aanpassingen mogelijk zijn als er prestatieverschillen worden vastgesteld. |
 
 {style="table-layout:auto"}
 
@@ -128,18 +147,26 @@ Lees het volgende voor een gids over de verschillende secties van een modelkaart
 
 ### Uitleg en interpreteerbaarheid {#explainability-and-interpretability}
 
+De sectie &#39;verklaarbaarheid en interpretabiliteit&#39; bevat informatie over de mogelijkheid van een AI-model om duidelijke en begrijpelijke uitleg te geven en over het gemak waarmee een menselijke gebruiker kan begrijpen hoe invoerfuncties voorspellingen en antwoorden beïnvloeden. In deze sectie kunt u uitleggen hoe gebruikers beter begrijpen waarom uw model bepaalde beslissingen neemt en welke gereedschappen of technieken beschikbaar zijn voor interpretatie.
+
 +++Vragen en voorbeeldantwoorden weergeven
 
 | Vraag | Benodigde informatie | Voorbeeldantwoord |
 | --- | --- | --- |
-| Can users understand why the model makes certain decisions? | The interpretability methods used by the model. | The model leverages **SHapley Additive Explanations (SHAP)** to quantify the impact of each input feature on its predictions, providing transparency into how customer attributes influence propensity scores. De waarden van de SHAP laten zowel globale interpretabiliteit toe, die de meest invloedrijke factoren over alle voorspellingen identificeert, als lokale interpretabiliteit, die individuele voorspellingen voor specifieke klanten verklaren. |
-| What tools or techniques are available for interpretability? | The available explainability tools. | The model supports **Local Interpretable Model-Agnostic Explanations (LIME)** and SHAP to provide insights into how input features influence predictions. LIME genereert lokale uitleg door gepertureerde versies van de invoergegevens te maken en wijzigingen in voorspellingen te observeren, terwijl SHAP aan elke functie bijdragewaarden toekent, waardoor zowel de algemene als de lokale interpretabiliteit van modelbeslissingen wordt geboden. |
+| Kunnen de gebruikers begrijpen waarom het model bepaalde besluiten neemt? | De door het model gebruikte interpretatiemethoden. | De modelhefboomwerkingen **SHapley Additieve Verklaringen (SHAP)** om het effect van elke inputeigenschap op zijn voorspellingen te kwantificeren, die transparantie verstrekken in hoe de klantenattributen de aandrijvingsscores beïnvloeden. De waarden van de SHAP laten zowel globale interpretabiliteit toe, die de meest invloedrijke factoren over alle voorspellingen identificeert, als lokale interpretabiliteit, die individuele voorspellingen voor specifieke klanten verklaren. |
+| Welke instrumenten of technieken zijn beschikbaar voor interpretatiedoeleinden? | De beschikbare gereedschappen voor uitleg. | Het model steunt **Lokale Interpretable Model-Agnostische Verklaringen (LIME)** en SCHAP om inzicht in te verstrekken hoe de inputeigenschappen voorspellingen beïnvloeden. LIME genereert lokale uitleg door gepertureerde versies van de invoergegevens te maken en wijzigingen in voorspellingen te observeren, terwijl SHAP aan elke functie bijdragewaarden toekent, waardoor zowel de algemene als de lokale interpretabiliteit van modelbeslissingen wordt geboden. |
 
 {style="table-layout:auto"}
 
 +++
 
 ### Robuustheid en generalisatie {#robustness-and-generalization}
+
+De sectie robuustheid en generalisatie bevat informatie over hoe goed uw AI-model kan presteren op onzichtbare gegevens. Bovendien kunt u deze sectie gebruiken om uit te leggen hoe uw model zijn prestaties en nauwkeurigheid handhaaft op basis van onverwachte of uitdagende invoer.
+
+>[!TIP]
+>
+>In AI verwijst &quot;onzichtbare gegevens&quot; naar gegevens die afwijken van de gegevens waarop een bepaald model is getraind.
 
 +++Vragen en voorbeeldantwoorden weergeven
 
@@ -154,6 +181,8 @@ Lees het volgende voor een gids over de verschillende secties van een modelkaart
 
 ### Beveiligings- en privacyoverwegingen {#security-and-privacy-considerations}
 
+De sectie over overwegingen met betrekking tot beveiliging en privacy bevat informatie over de maatregelen en praktijken die zijn geïmplementeerd om vertrouwelijke gegevens te beschermen en het veilige gebruik van uw model te garanderen. U kunt deze sectie gebruiken om vragen te beantwoorden over hoe uw model gevoelige gegevens behandelt.
+
 +++Vragen en voorbeeldantwoorden weergeven
 
 | Vraag | Benodigde informatie | Voorbeeldantwoord |
@@ -166,6 +195,8 @@ Lees het volgende voor een gids over de verschillende secties van een modelkaart
 +++
 
 ### Toezicht en onderhoud {#monitoring-and-maintenance}
+
+De sectie voor bewaking en onderhoud bevat informatie over de manier waarop de prestaties van uw model in de loop der tijd worden gecontroleerd en hoe vaak het model opnieuw wordt opgeleid. U kunt deze sectie gebruiken om informatie te verstrekken over hoe de metriek zoals nauwkeurigheid, precisie, herinnering, en latentie worden gevolgd.
 
 +++Vragen en voorbeeldantwoorden weergeven
 
@@ -180,6 +211,8 @@ Lees het volgende voor een gids over de verschillende secties van een modelkaart
 
 ### Ethische overwegingen en verantwoordelijke AI {#ethical-considerations-and-responsible-ai}
 
+De ethische overwegingen en de verantwoordelijke AI sectie bevatten informatie over om het even welke ethische zorgen die met uw AI Model worden geassocieerd. Deze sectie bevat ook hoe goed uw model met verantwoordelijke AI-principes samenvoegt. Gebruik deze sectie om informatie te verstrekken over de potentiële ethische gevolgen van het gebruik van uw model, met inbegrip van het erkennen van vooroordelen, het verzekeren van billijkheid, en het voorkomen van schade aan individuen of groepen.
+
 +++Vragen en voorbeeldantwoorden weergeven
 
 | Vraag | Benodigde informatie | Voorbeeldantwoord |
@@ -193,18 +226,22 @@ Lees het volgende voor een gids over de verschillende secties van een modelkaart
 
 ### Bekende beperkingen {#known-limitations}
 
+De bekende sectie met beperkingen bevat informatie over de bestaande beperkingen die zijn geïdentificeerd voor uw AI-model. Gebruik deze sectie om de voorwaarden te onderstrepen waarin uw AI model slecht kan presteren en om om het even welke beperkingen te schetsen die de gebruikers moeten bewust zijn van.
+
 +++Vragen en voorbeeldantwoorden weergeven
 
 | Vraag | Benodigde informatie | Voorbeeldantwoord |
 | --- | --- | --- |
-| What are known limitations of the model? | Any identified performance or use case constraints. | Het model kan moeite hebben om de resultaten voor nieuw gelanceerde producten of klantsegmenten waar onvoldoende historische gegevens beschikbaar zijn, nauwkeurig te voorspellen. Bovendien kunnen seizoensschommelingen in het gedrag van klanten schommelingen in voorspellende nauwkeurigheid veroorzaken als deze tijdens de herscholing niet in aanmerking worden genomen. |
-| Under what conditions does the model perform poorly? | Any identified weaknesses regarding the model. | De prestaties nemen af wanneer de geschiedenis van de klant gering is, bijvoorbeeld voor eerste kopers of gebruikers met minimale betrokkenheidsgegevens. Additionally, if customer behaviors shift due to external factors like economic downturns or industry trends, the model may require rapid adaptation to maintain accuracy. |
+| Wat zijn bekende beperkingen van het model? | Om het even welke geïdentificeerde prestaties of gebruikscasebeperkingen. | Het model kan moeite hebben om de resultaten voor nieuw gelanceerde producten of klantsegmenten waar onvoldoende historische gegevens beschikbaar zijn, nauwkeurig te voorspellen. Bovendien kunnen seizoensschommelingen in het gedrag van klanten schommelingen in voorspellende nauwkeurigheid veroorzaken als deze tijdens de herscholing niet in aanmerking worden genomen. |
+| Onder welke omstandigheden presteert het model slecht? | Eventuele geconstateerde tekortkomingen met betrekking tot het model. | De prestaties nemen af wanneer de geschiedenis van de klant gering is, bijvoorbeeld voor eerste kopers of gebruikers met minimale betrokkenheidsgegevens. Bovendien, als het klantengedrag als gevolg van externe factoren zoals economische neergang of industrietrends verschuift, kan het model snelle aanpassing vereisen om nauwkeurigheid te handhaven. |
 
 {style="table-layout:auto"}
 
 +++
 
 ### Toekomstige verbeteringen {#future-improvements}
+
+De sectie over toekomstige verbeteringen bevat informatie over functie-updates die zijn gepland voor uw AI-model. Gebruik deze sectie om verder te gaan op uw verbeteringstraject.
 
 +++Vragen en voorbeeldantwoorden weergeven
 
