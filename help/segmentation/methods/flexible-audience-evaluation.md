@@ -3,7 +3,7 @@ title: Flexibele gids voor de evaluatie van het publiek
 description: Leer hoe te om flexibele publieksevaluatie te gebruiken om partijsegmentatietaken op bestelling in werking te stellen.
 role: Developer, User
 exl-id: b85bf735-be02-4bf7-bd63-8d74ae905e58
-source-git-commit: 3829f506d0b4d78b543b949e8e11806d8fe10b9c
+source-git-commit: 7084b05d1ae142016cb2158fd22d07a240385190
 workflow-type: tm+mt
 source-wordcount: '1047'
 ht-degree: 0%
@@ -387,3 +387,4 @@ Alleen publiek met de oorsprong van Segmentation Service wordt ondersteund voor 
 De flexibele de looppas van de publieksevaluatie die of gebruikend API of de telling UI naar de maximumgrens werden gecreeerd. Nochtans, draagt de dagelijkse de baanlooppas van de partijsegmentatie die op een nachtelijke basis loopt **niet** aan deze grens bij.
 
 +++
+
