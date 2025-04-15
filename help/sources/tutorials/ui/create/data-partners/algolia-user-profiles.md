@@ -3,9 +3,10 @@ title: Gebruikersprofielen van Algolië verbinden met Experience Platform via de
 description: Leer hoe u verbinding kunt maken met gebruikers van Algolië die op Experience Platform zijn ingesteld
 hide: true
 hidefromtoc: true
-source-git-commit: a55f0b37614bb43a66d7d2e9cf106484b4d6e8dc
+exl-id: d4c936a7-4983-4a12-a813-03b672116e44
+source-git-commit: 009866abc39b06c22b7bea758ce9fdfba8c72b00
 workflow-type: tm+mt
-source-wordcount: '1103'
+source-wordcount: '1107'
 ht-degree: 0%
 
 ---
@@ -53,13 +54,13 @@ Als u [!DNL Algolia] wilt gebruiken, selecteert u de **[!UICONTROL Algolia]** br
 
 ## Verificatie
 
-### Bestaande account
+### Een bestaande account gebruiken
 
 Als u een bestaande account wilt gebruiken, selecteert u **[!UICONTROL Existing account]** en vervolgens de [!DNL Algolia User Profiles] -account die u wilt gebruiken. Selecteer **[!UICONTROL Next]** om door te gaan.
 
 ![ de bestaande rekeningsinterface.](../../../../images/tutorials/create/algolia/user-profiles/existing-account.png)
 
-### Nieuwe account
+### Een nieuwe account maken
 
 Als u een nieuwe account maakt, selecteert u **[!UICONTROL New account]** en geeft u vervolgens een naam, een optionele beschrijving en [!DNL Algolia] referenties. Als u klaar bent, selecteert u **[!UICONTROL Connect to source]** en laat u de nieuwe verbinding enige tijd tot stand brengen.
 
@@ -76,7 +77,7 @@ Selecteer **[!UICONTROL Next]** als u klaar bent met het selecteren en voorverto
 
 ![ de uitgezochte gegevensstap van het werkschema.](../../../../images/tutorials/create/algolia/user-profiles/select-data.png)
 
-### Gegevens over gegevensstroom opgeven
+## Gegevens over gegevensstroom opgeven
 
 Als u een bestaande dataset gebruikt, selecteer een dataset die met een schema wordt geassocieerd dat de [!DNL Algolia Profile] Groep van het Gebied gebruikt.
 
@@ -86,13 +87,13 @@ Als u een nieuwe dataset creeert, selecteer een schema dat de [!DNL Algolia Prof
 
 ![ de nieuwe datasetstap van het bronwerkschema.](../../../../images/tutorials/create/algolia/user-profiles/dataflow-detail-new-dataset.png)
 
-### Gegevensvelden toewijzen aan een XDM-schema
+## Gegevensvelden toewijzen aan een XDM-schema
 
 Gebruik de toewijzingsinterface om uw brongegevens toe te wijzen aan de aangewezen schemagebieden alvorens gegevens aan Experience Platform in te voeren.  Voor meer informatie, lees de [ kaartgids in UI ](../../../../../data-prep/ui/mapping.md).
 
 ![ de afbeeldingsstap van het bronwerkschema.](../../../../images/tutorials/create/algolia/user-profiles/mapping.png)
 
-### Planninguitvoering
+## Planninguitvoering
 
 Daarna, gebruik de het plannen interface om het innameprogramma van uw dataflow te bepalen.
 
@@ -107,7 +108,7 @@ Daarna, gebruik de het plannen interface om het innameprogramma van uw dataflow 
 | Begintijd | Het tijdstempel voor de geprojecteerde run, weergegeven in UTC-tijdzone. |
 | Achtergrond | Met Backfill wordt bepaald welke gegevens in eerste instantie worden ingevoerd. Als backfill is ingeschakeld, worden alle huidige bestanden in het opgegeven pad tijdens de eerste geplande inname opgenomen. Als terugvullen is uitgeschakeld, worden alleen de bestanden opgenomen die tussen de eerste opname en de begintijd worden geladen. Bestanden die vóór de begintijd zijn geladen, worden niet opgenomen. |
 
-### Controleer uw gegevensstroom
+## Controleer uw gegevensstroom
 
 Gebruik de overzichtspagina voor een samenvatting van uw gegevensstroom voorafgaand aan opname. De details worden gegroepeerd in de volgende categorieën:
 

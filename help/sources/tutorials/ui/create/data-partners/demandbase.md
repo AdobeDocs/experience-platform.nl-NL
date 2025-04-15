@@ -1,10 +1,12 @@
 ---
 title: Connect Demandbase Intent to Experience Platform via de gebruikersinterface
 description: Leer hoe u demandbase Intent kunt verbinden met Experience Platform
+badgeB2B: label="B2B edition" type="Informative" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=en#rtcdp-editions newtab=true"
+badgeB2P: label="B2P Edition" type="Positive" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=en#rtcdp-editions newtab=true"
 exl-id: 7dc87067-cdf6-4dde-b077-19666dcb12e2
-source-git-commit: 0a6a9fe759d71fd62e3eaf5c93a091614f3c76a0
+source-git-commit: a1af85c6b76cc7bded07ab4acaec9c3213a94397
 workflow-type: tm+mt
-source-wordcount: '984'
+source-wordcount: '994'
 ht-degree: 0%
 
 ---

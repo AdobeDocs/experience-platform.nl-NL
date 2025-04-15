@@ -2,14 +2,18 @@
 title: Google-advertenties verbinden met Experience Platform via de gebruikersinterface
 description: Leer hoe u uw Google Ads-account in de gebruikersinterface koppelt aan Adobe Experience Platform.
 exl-id: 33dd2857-aed3-4e35-bc48-1c756a8b3638
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 009866abc39b06c22b7bea758ce9fdfba8c72b00
 workflow-type: tm+mt
-source-wordcount: '834'
+source-wordcount: '856'
 ht-degree: 0%
 
 ---
 
 # Verbinding maken [!DNL Google Ads] met Experience Platform via de gebruikersinterface
+
+>[!WARNING]
+>
+>De [!DNL Google Ads] -bron is momenteel niet beschikbaar in de gebruikersinterface. U kunt uw [!DNL Google Ads] gegevens aan Experience Platform [ blijven opnemen gebruikend API ](../../../api/create/advertising/ads.md).
 
 >[!NOTE]
 >
