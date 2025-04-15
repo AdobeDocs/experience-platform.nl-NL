@@ -6,10 +6,10 @@ user-guide-description: Leer analyses, marketing en advertenties te implementere
 feature: Tags
 solution: Data Collection
 role: Developer
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 7fe7bbf7f4566a567c08ef73b4b9b503ea140549
 workflow-type: tm+mt
-source-wordcount: '777'
-ht-degree: 16%
+source-wordcount: '778'
+ht-degree: 18%
 
 ---
 
@@ -47,7 +47,7 @@ ht-degree: 16%
    * [Bibliotheken die zichzelf hosten](./ui/publishing/hosts/self-hosting-libraries.md)
    * [Bibliotheek opnieuw publiceren](./ui/publishing/republish.md)
    * [Experience Platform-tags (China)](./ui/publishing/premium-cdn.md)
-* Informatie aan de clientzijde {#client-side}
+* Clientinformatie {#client-side}
    * [Overzicht](./ui/client-side/overview.md)
    * [Asynchrone implementatie](./ui/client-side/asynchronous-deployment.md)
    * [Verwijzing naar satellietobject](./ui/client-side/satellite-object.md)
@@ -66,7 +66,7 @@ ht-degree: 16%
    * [Gebruikersmachtigingen](./ui/administration/user-permissions.md)
 * Extensies {#extensions}
    * [Overzicht](./extensions/overview.md)
-   * Extensies labelen (client-side) {#client}
+   * Tagextensies (client-side) {#client}
       * [Overzicht](./extensions/client/overview.md)
       * [ Toegankelijke Metriek van de Snelheid van de Plaats ](https://exchange.adobe.com/apps/ec/103053)
       * [ de Klanzer van Activity Map ](https://exchange.adobe.com/apps/ec/101531)
@@ -80,7 +80,7 @@ ht-degree: 16%
       * [ Adobe Analytics &amp; Adobe Target ](https://exchange.adobe.com/apps/ec/105363/6sense-for-analytics-and-target)
       * [ Adobe Analytics &amp; Microsoft Dynamics ](https://exchange.adobe.com/apps/ec/102966)
       * [ Adobe Analytics &amp; Salesforce ](https://exchange.adobe.com/apps/ec/101530)
-      * Adobe Analytics-productreeks {#product-string}
+      * Adobe Analytics-producttekenreeks {#product-string}
          * [Overzicht](./extensions/client/product-string/overview.md)
          * [Aanvullende informatie](./extensions/client/product-string/release-notes.md)
       * [ de Bouwer van het Koord van het Product van Adobe Analytics ](https://exchange.adobe.com/apps/ec/101461)
@@ -95,7 +95,7 @@ ht-degree: 16%
       * Adobe ContextHub {#contexthub}
          * [Overzicht](./extensions/client/contexthub/overview.md)
       * [ Adobe Experience Manager Forms ](https://exchange.adobe.com/apps/ec/107493)
-      * Adobe Experience Cloud-id-service {#id-service}
+      * Adobe Experience Cloud ID Service {#id-service}
          * [Overzicht](./extensions/client/id-service/overview.md)
          * [Aanvullende informatie](./extensions/client/id-service/release-notes.md)
       * Adobe Experience Platform Demo {#platform-demo}
@@ -114,7 +114,7 @@ ht-degree: 16%
          * [Overzicht](./extensions/client/asset-insights/overview.md)
          * [Aanvullende informatie](./extensions/client/asset-insights/release-notes.md)
       * [ Adobe Fonts ](https://exchange.adobe.com/apps/ec/101538)
-      * Adobe Media Analytics for Audio and Video {#media-analytics}
+      * Adobe Media Analytics voor audio en video {#media-analytics}
          * [Overzicht](./extensions/client/media-analytics/overview.md)
          * [Aanvullende informatie](./extensions/client/media-analytics/release-notes.md)
       * Adobe Media Analytics (3.x SDK) {#media-analytics-3x}
@@ -147,7 +147,7 @@ ht-degree: 16%
       * [ het Herkenningsteken van Source van het Kanaal ](https://exchange.adobe.com/apps/ec/101412)
       * [ Ervaringen van de Tijger ](https://exchange.adobe.com/apps/ec/102759)
       * [ Clicktale ](https://exchange.adobe.com/apps/ec/100082)
-      * Algemene plug-ins voor Analytics {#plugins}
+      * Gebruikelijke plug-ins voor Analytics {#plugins}
          * [Overzicht](./extensions/client/plugins/overview.md)
          * [Aanvullende informatie](./extensions/client/plugins/release-notes.md)
       * [ Concat ](https://exchange.adobe.com/apps/ec/104690)
@@ -213,11 +213,13 @@ ht-degree: 16%
       * [!DNL YouTube] video bijhouden {#youtube}
          * [Overzicht](./extensions/client/youtube/overview.md)
          * [Aanvullende informatie](./extensions/client/youtube/release-notes.md)
-   * Extensies voor doorsturen van gebeurtenissen (server-side) {#server}
+   * Gebeurtenis die uitbreidingen (server-kant) door:sturen {#server}
       * [Overzicht](./extensions/server/overview.md)
       * Adobe Experience Platform Cloud Connector {#cloud-connector}
          * [Overzicht](./extensions/server/cloud-connector/overview.md)
          * [Aanvullende informatie](./extensions/server/cloud-connector/release-notes.md)
+      * [!DNL Adform] {#adform}
+         * [Overzicht](./extensions/server/adform/overview.md)
       * [!DNL AWS] {#aws}
          * [Overzicht](./extensions/server/aws/overview.md)
       * [!DNL Braze] {#braze}
@@ -226,7 +228,7 @@ ht-degree: 16%
       * Kern {#core}
          * [Overzicht](./extensions/server/core/overview.md)
       * [ Epsilon Event API ](https://exchange.adobe.com/apps/ec/109127)
-      * Verbeterde Google-omzettingen voor advertenties {#google-ads-enhanced-conversions}
+      * Verbeterde Google-conversies voor advertenties {#google-ads-enhanced-conversions}
          * [Overzicht](./extensions/server/google-ads-enhanced-conversions/overview.md)
       * Google Cloud Platform {#google-cloud-platform}
          * [Overzicht](./extensions/server/google-cloud-platform/overview.md)
@@ -257,7 +259,7 @@ ht-degree: 16%
          * [Overzicht](./extensions/server/tradedesk/overview.md)
       * [!DNL Zendesk] API voor gebeurtenissen {#zendesk}
          * [Overzicht](./extensions/server/zendesk/overview.md)
-* Ontwikkeling van extensies {#extension-dev}
+* Uitbreiding {#extension-dev}
    * [Overzicht](./extension-dev/overview.md)
    * [Aan de slag](./extension-dev/getting-started.md)
    * [Ondersteunde browsers](./extension-dev/browsers.md)
@@ -315,7 +317,7 @@ ht-degree: 16%
       * [Profiel](./api/endpoints/profile.md)
       * [Zoeken](./api/endpoints/search.md)
       * [Geheimen](./api/endpoints/secrets.md)
-   * Hulplijnen {#guides}
+   * Gidsen {#guides}
       * [Id&#39;s van beschrijvingsbestanden delegeren](./api/guides/delegate-descriptor-ids.md)
       * [Waarden versleutelen](./api/guides/encrypting-values.md)
       * [Foutafhandeling](./api/guides/error-handling.md)
