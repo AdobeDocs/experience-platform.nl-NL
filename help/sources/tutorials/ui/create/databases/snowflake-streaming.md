@@ -2,7 +2,7 @@
 title: Gegevens vanuit uw Snowflake-database naar Experience Platform streamen met behulp van de gebruikersinterface
 description: Leer hoe u gegevens kunt streamen van uw SnwofLake-database naar Experience Platform
 exl-id: 49d488f1-90d8-452a-9f3e-02afdcc79b09
-source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
+source-git-commit: 04a1cecbacdaf0b701d3ef18d03497973a8f3263
 workflow-type: tm+mt
 source-wordcount: '1597'
 ht-degree: 0%
@@ -86,7 +86,7 @@ Gebruik de databasemap links op het scherm en selecteer de tabel die u naar Expe
 
 ![ de uitgezochte gegevensinterface met een geselecteerde gegevensbestandlijst.](../../../../images/tutorials/create/snowflake-streaming/select-table.png)
 
-Selecteer vervolgens het kolomtype voor de tijdstempel van de tabel. U kunt kiezen uit twee typen tijdstempelkolommen: `TIMESTAMP_NTZ` of `TIMESTAMP_LTZ` . Als u een kolomtype `TIMESTAMP_NTZ` selecteert, moet u ook een tijdzone opgeven. De kolommen moeten een beperking hebben die niet null is. Voor meer informatie, lees de sectie over [ beperkingen en vaak gestelde vragen ]
+Selecteer vervolgens het kolomtype voor de tijdstempel van de tabel. U kunt kiezen uit twee typen tijdstempelkolommen: `TIMESTAMP_NTZ` of `TIMESTAMP_LTZ` . Als u een kolomtype `TIMESTAMP_NTZ` selecteert, moet u ook een tijdzone opgeven. De kolommen moeten een beperking hebben die niet null is. Voor meer informatie, lees de sectie over [ beperkingen en vaak gestelde vragen ](../../../../connectors/databases/snowflake-streaming.md#limitations-and-frequently-asked-questions).
 
 Tijdens deze stap kunt u ook instellingen voor backfill configureren. Met Backfill wordt bepaald welke gegevens in eerste instantie worden ingevoerd. Als backfill is ingeschakeld, worden alle huidige bestanden in het opgegeven pad tijdens de eerste geplande inname opgenomen. Als dat niet het geval is, worden alleen de bestanden opgenomen die tussen de eerste opname en de begintijd worden geladen. Bestanden die vóór de begintijd zijn geladen, worden niet opgenomen.
 
