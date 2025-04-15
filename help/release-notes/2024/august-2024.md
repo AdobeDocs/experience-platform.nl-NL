@@ -3,9 +3,9 @@ title: Aanvullende informatie van augustus 2024 voor Adobe Experience Platform
 description: Aanvullende informatie van augustus 2024 voor Adobe Experience Platform.
 exl-id: 153891e9-fd82-4894-a047-c8d82f214fef
 source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1556'
-ht-degree: 95%
+ht-degree: 100%
 
 ---
 
@@ -29,9 +29,9 @@ Updates van bestaande functies en documentatie in Experience Platform:
 
 ## Toegangsbeheer op basis van kenmerken {#abac}
 
-Toegangscontrole op basis van kenmerken is een functionaliteit van Adobe Experience Platform waarmee merken die aandacht hebben voor privacy, meer flexibiliteit krijgen bij toegangsbeheer voor gebruikers. Individuele objecten, zoals schemavelden en segmenten, kunnen aan gebruikersrollen worden toegewezen. Met deze functie kunt u toegang tot afzonderlijke objecten verlenen of intrekken voor specifieke Experience Platform-gebruikers in uw organisatie.
+Toegangscontrole op basis van kenmerken is een functionaliteit van Adobe Experience Platform waarmee merken die aandacht hebben voor privacy, meer flexibiliteit krijgen bij toegangsbeheer voor gebruikers. Individuele objecten, zoals schemavelden en segmenten, kunnen aan gebruikersrollen worden toegewezen. Met deze functie kunt u toegang tot individuele objecten verlenen of intrekken voor specifieke Experience Platform-gebruikers in uw organisatie.
 
-Via attribuut-gebaseerde toegangscontrole, kunnen de beheerders van uw organisatie gebruikers&#39; toegang tot gevoelige persoonlijke gegevens (SPD) controleren, persoonlijk identificeerbare informatie (PII), en ander aangepast type van gegevens over alle werkschema&#39;s en middelen van Experience Platform. Beheerders kunnen gebruikersrollen definiëren die alleen toegang hebben tot specifieke velden en gegevens die bij die velden horen.
+Met toegangsbeheer op basis van kenmerken kunnen beheerders van uw organisatie de toegang van gebruikers tot gevoelige persoonlijke gegevens (SPD), persoonlijk identificeerbare informatie (PII) en andere aangepaste typen gegevens in alle Experience Platform-workflows en -bronnen beheren. Beheerders kunnen gebruikersrollen definiëren die alleen toegang hebben tot specifieke velden en gegevens die bij die velden horen.
 
 **Nieuwe functie**
 
@@ -96,7 +96,7 @@ XDM is een open-bronspecificatie die algemene structuren en definities (schema&#
 
 {style="table-layout:auto"}
 
-Voor meer informatie over XDM in Experience Platform, zie het [ XDM overzicht van het Systeem ](../../xdm/home.md).
+Raadpleeg het [XDM-systeemoverzicht](../../xdm/home.md) voor meer informatie over XDM in Experience Platform.
 
 ## Identiteitsservice {#identity-service}
 

@@ -3,9 +3,9 @@ title: 'Aanvullende informatie van januari 2024 voor Adobe Experience Platform '
 description: Aanvullende informatie van januari 2024 voor Adobe Experience Platform.
 exl-id: d4b3c5b2-3adb-41fd-91ad-f4c0f21d2325
 source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
-workflow-type: tm+mt
-source-wordcount: '1653'
-ht-degree: 95%
+workflow-type: ht
+source-wordcount: '1649'
+ht-degree: 100%
 
 ---
 
@@ -43,9 +43,9 @@ Raadpleeg de volgende documentatiepagina&#39;s om met [!UICONTROL Use Case Playb
 
 ## Toegangsbeheer op basis van kenmerken {#abac}
 
-Toegangsbeheer op basis van kenmerken is een functionaliteit van Adobe Experience Platform waarmee merken die aandacht hebben voor privacy, meer flexibiliteit krijgen bij toegangsbeheer voor gebruikers. Individuele objecten, zoals schemavelden en segmenten, kunnen aan gebruikersrollen worden toegewezen. Met deze functie kunt u toegang tot afzonderlijke objecten verlenen of intrekken voor specifieke Experience Platform-gebruikers in uw organisatie.
+Toegangsbeheer op basis van kenmerken is een functionaliteit van Adobe Experience Platform waarmee merken die aandacht hebben voor privacy, meer flexibiliteit krijgen bij toegangsbeheer voor gebruikers. Individuele objecten, zoals schemavelden en segmenten, kunnen aan gebruikersrollen worden toegewezen. Met deze functie kunt u toegang tot individuele objecten verlenen of intrekken voor specifieke Experience Platform-gebruikers in uw organisatie.
 
-Via attribuut-gebaseerde toegangscontrole, kunnen de beheerders van uw organisatie gebruikers&#39; toegang tot, gevoelige persoonlijke gegevens (SPD), persoonlijk identificeerbare informatie (PII) en ander aangepast type van gegevens over alle werkschema&#39;s en middelen van Experience Platform controleren. Beheerders kunnen gebruikersrollen definiëren die alleen toegang hebben tot specifieke velden en gegevens die bij die velden horen.
+Met toegangsbeheer op basis van kenmerken kunnen beheerders van uw organisatie de toegang van gebruikers tot gevoelige persoonlijke gegevens (SPD), persoonlijk identificeerbare informatie (PII) en andere aangepaste typen gegevens in alle Experience Platform-workflows en -bronnen beheren. Beheerders kunnen gebruikersrollen definiëren die alleen toegang hebben tot specifieke velden en gegevens die bij die velden horen.
 
 **Nieuwe of bijgewerkte documentatie**
 
@@ -79,7 +79,7 @@ Adobe Experience Platform biedt meerdere dashboards waarmee u belangrijke inzich
 
 | Functie | Beschrijving |
 | --- | --- |
-| SQL weergeven | U kunt de SQL nu achter uw profielen, doelgroepen, bestemmingen, en aangepaste inzichten bekijken met de schakelaar SQL weergeven en vervolgens de query op aanvraag uitvoeren via de Query-editor. Door toegang te krijgen tot de SQL die uw Real-time Customer Data Platform-inzichten aanstuurt, krijgt u inzicht in de logica achter de analyse van uw datamodel. Deze transparantie maakt uw Adobe Real-time CDP-gegevens toegankelijker, gemakkelijker te begrijpen en impactvoller voor de besluitvorming.<br> neem inspiratie van SQL van meer dan 40 bestaande inzichten om nieuwe vragen tot stand te brengen die unieke inzichten uit de gegevens van Experience Platform voortbrengen die op uw bedrijfsbehoeften worden gebaseerd. De SQL is ook beschikbaar voor uw inzichten in [Profielen](../../dashboards/insights/profiles.md), [Doelgroepen](../../dashboards/insights/audiences.md) en [Bestemmingen](../../dashboards/insights/destinations.md) in de documentatie van de Experience League. In deze documenten worden de zakelijke gebruiksscenario&#39;s belicht die met de standaardinzichten kunnen worden beantwoord. Voor meer informatie, raadpleegt u de handleiding voor [het weergeven van SQL-inzichten](../../dashboards/view-sql.md). |
+| SQL weergeven | U kunt de SQL nu achter uw profielen, doelgroepen, bestemmingen, en aangepaste inzichten bekijken met de schakelaar SQL weergeven en vervolgens de query op aanvraag uitvoeren via de Query-editor. Door toegang te krijgen tot de SQL die uw Real-time Customer Data Platform-inzichten aanstuurt, krijgt u inzicht in de logica achter de analyse van uw datamodel. Deze transparantie maakt uw Adobe Real-time CDP-gegevens toegankelijker, gemakkelijker te begrijpen en impactvoller voor de besluitvorming.<br>Laat u inspireren door de SQL van meer dan 40 bestaande inzichten om nieuwe query&#39;s te maken die unieke inzichten uit Experience Platform-gegevens afleiden aan de hand van uw zakelijke behoeften. De SQL is ook beschikbaar voor uw inzichten in [Profielen](../../dashboards/insights/profiles.md), [Doelgroepen](../../dashboards/insights/audiences.md) en [Bestemmingen](../../dashboards/insights/destinations.md) in de documentatie van de Experience League. In deze documenten worden de zakelijke gebruiksscenario&#39;s belicht die met de standaardinzichten kunnen worden beantwoord. Voor meer informatie, raadpleegt u de handleiding voor [het weergeven van SQL-inzichten](../../dashboards/view-sql.md). |
 
 {style="table-layout:auto"}
 
@@ -181,8 +181,8 @@ Experience Platform biedt een RESTful-API en een interactieve gebruikersinterfac
 
 | Functie | Beschrijving |
 | --- | --- |
-| [!BADGE Beta]{type=Informative} [!DNL Oracle NetSuite] bronnen | Gebruik de [!DNL Oracle NetSuite]-integraties in de broncatalogus om gegevens van uw [[!DNL Oracle NetSuite Activities]](../../sources/tutorials/ui/create/marketing-automation/oracle-netsuite-activities.md)- en [[!DNL Oracle NetSuite Entities]](../../sources/tutorials/ui/create/marketing-automation/oracle-netsuite-entities.md)-accounts naar Experience Platform over te zetten. |
-| [!BADGE Beta]{type=Informative}[!DNL Braze Currents]-bron | U kunt de [[!DNL Braze Currents]](../../sources/tutorials/ui/create/marketing-automation/braze.md)-integratie in de broncatalogus gebruiken om gegevens van uw [!DNL Braze]-account naar Experience Platform over te zetten. |
+| [!BADGE Beta]{type=Informative} [!DNL Oracle NetSuite]-bronnen | Gebruik de [!DNL Oracle NetSuite]-integraties in de broncatalogus om gegevens van uw [[!DNL Oracle NetSuite Activities]](../../sources/tutorials/ui/create/marketing-automation/oracle-netsuite-activities.md)- en [[!DNL Oracle NetSuite Entities]](../../sources/tutorials/ui/create/marketing-automation/oracle-netsuite-entities.md)-accounts naar Experience Platform over te zetten. |
+| [!BADGE Beta]{type=Informative} [!DNL Braze Currents]-bron | U kunt de [[!DNL Braze Currents]](../../sources/tutorials/ui/create/marketing-automation/braze.md)-integratie in de broncatalogus gebruiken om gegevens van uw [!DNL Braze]-account naar Experience Platform over te zetten. |
 | Ondersteuning voor sleutelpaarverificatie voor [!DNL Snowflake]-batchbron | U kunt nu sleutelpaarverificatie gebruiken bij het maken van een nieuw [!DNL Snowflake]-account voor batchgegevens. Voor meer informatie leest u de handleiding voor [het maken van een  [!DNL Snowflake] -account met behulp van de API](../../sources/tutorials/api/create/databases/snowflake.md) of de handleiding voor het [het maken van een  [!DNL Snowflake] -account met behulp van de gebruikersinterface](../../sources/tutorials/ui/create/databases/snowflake.md). |
 
 {style="table-layout:auto"}

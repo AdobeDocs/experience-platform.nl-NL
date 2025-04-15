@@ -3,9 +3,9 @@ title: Aanvullende informatie voor Adobe Experience Platform van februari 2024
 description: Aanvullende informatie voor Adobe Experience Platform van februari 2024.
 exl-id: 7e4b76b7-4027-4890-b869-1dbb79670c3e
 source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
-workflow-type: tm+mt
-source-wordcount: '1247'
-ht-degree: 91%
+workflow-type: ht
+source-wordcount: '1237'
+ht-degree: 100%
 
 ---
 
@@ -24,7 +24,7 @@ Updates van bestaande functies in Experience Platform:
 
 ## Waarschuwingen {#alerts}
 
-Met Experience Platform kunt u zich abonneren op waarschuwingen die zijn gebaseerd op gebeurtenissen voor verschillende Experience Platform-activiteiten. U kunt zich abonneren op verschillende waarschuwingsregels via het tabblad [!UICONTROL Alerts] in de Experience Platform-gebruikersinterface en u kunt ervoor kiezen waarschuwingsberichten te ontvangen in de gebruikersinterface zelf of via e-mailberichten.
+Met Experience Platform kunt u zich aanmelden voor gebeurtenisgebaseerde waarschuwingen voor verschillende Experience Platform-activiteiten. U kunt zich aanmelden voor verschillende waarschuwingsregels via het tabblad [!UICONTROL Alerts] in de gebruikersinterface van Experience Platform, en u kunt ervoor kiezen waarschuwingsmeldingen te ontvangen in de gebruikersinterface zelf of via e-mailberichten.
 
 **Nieuwe of bijgewerkte functies**
 
@@ -84,8 +84,8 @@ For more information on Data Prep, read the [Data Prep overview](../../data-prep
 | ----------- | ----------- |
 | Accountdoelgroepen die algemeen beschikbaar zijn activeren | De functionaliteit om accountdoelgroepen voor bepaalde bestemmingen te activeren is nu algemeen beschikbaar voor bedrijven die de [Business-to-Business](/help/rtcdp/overview.md#rtcdp-b2b) en [Business-to-Person](/help/rtcdp/overview.md#rtcdp-b2p)-edities van Real-Time Customer Data Platform aanschaffen. Lees de tutorial over [het activeren van accountdoelgroepen](/help/destinations/ui/activate-account-audiences.md) voor volledige informatie, inclusief ondersteunde bestemmingen. |
 | Tools voor handhaving toestemming van de Digital Markets Act voor Google-bestemmingen | Google brengt wijzigingen door in de [Google Ads-API](https://developers.google.com/google-ads/api/docs/start), [Customer Match](https://ads-developers.googleblog.com/2023/10/updates-to-customer-match-conversion.html) en de [Display &amp; Video 360-API](https://developers.google.com/display-video/api/guides/getting-started/overview) ter ondersteuning van de nalevings- en toestemmingsvereisten die zijn gedefinieerd in de [Digital Markets Act](https://digital-markets-act.ec.europa.eu/index_nl) (DMA) in de Europese Unie ([EU-beleid inzake toestemming van gebruikers](https://www.google.com/about/company/user-consent-policy/)). De verwachting is dat deze wijzigingen in de toestemmingsvereisten vanaf 6 maart 2024 van kracht worden. <br/><br/> Om te voldoen aan het EU-beleid inzake toestemming van gebruikers en om doelgroeplijsten te blijven maken voor gebruikers in de Europese Economische Ruimte (EER), moeten adverteerders en partners ervoor zorgen dat ze toestemming van de eindgebruiker doorgeven bij het uploaden van doelgroepgegevens. Als Google-partner beschikt Adobe over de benodigde tools om te voldoen aan deze toestemmingsvereisten in het kader van de DMA in de Europese Unie.<br/><br/>Klanten die Adobe Privacy &amp; Security Shield hebben aangeschaft en een [toestemmingsbeleid](../../data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) hebben geconfigureerd om profielen waarvoor geen toestemming is verleend, te filteren, hoeven geen actie te ondernemen.<br/><br/>Klanten die Adobe Privacy &amp; Security Shield niet hebben aangeschaft, moeten de mogelijkheden voor [segmentdefinitie](../../segmentation/home.md#segment-definitions) in [Segment Builder](../../segmentation/ui/segment-builder.md) gebruiken om niet-toegestane profielen eruit te filteren, zodat ze de bestaande Real-Time CDP Google-bestemmingen zonder onderbreking kunnen blijven gebruiken. |
-| [!BADGE Beta]{type=Informative} Toewijzingsvelden voor batchbestemmingen opnieuw ordenen | U kunt nu de volgorde van de kolommen in uw CSV-exporten wijzigen door de toewijzingsvelden in de stap [toewijzing](../../destinations/ui/activate-batch-profile-destinations.md#mapping) te slepen en neer te zetten. De volgorde van de toegewezen velden in de gebruikersinterface komt overeen met de volgorde van de kolommen in het geëxporteerde CSV-bestand, van boven naar beneden, waarbij de bovenste rij de meest linkse kolom in het CSV-bestand is. <br/><br/> Deze functie bevindt zich in de bètafase en is alleen beschikbaar voor geselecteerde klanten. Neem contact op met uw Adobe-vertegenwoordiger als u toegang tot deze functie wilt aanvragen. |
-| [!BADGE Beta]{type=Informative} Voorgeselecteerde standaard exportschema&#39;s voor batchbestemmingen | Experience Platform stelt nu automatisch een standaardschema in voor elke bestandsexport. Zie de documentatie over [het plannen van doelgroepexporten](../../destinations/ui/activate-batch-profile-destinations.md#scheduling) voor meer informatie over het wijzigen van het standaardschema. <br/><br/> Deze functie bevindt zich in de bètafase en is alleen beschikbaar voor geselecteerde klanten. Neem contact op met uw Adobe-vertegenwoordiger als u toegang tot deze functie wilt aanvragen. |
+| [!BADGE Beta]{type=Informative} Toewijzingsvelden opnieuw ordenen voor batchbestemmingen | U kunt nu de volgorde van de kolommen in uw CSV-exporten wijzigen door de toewijzingsvelden in de stap [toewijzing](../../destinations/ui/activate-batch-profile-destinations.md#mapping) te slepen en neer te zetten. De volgorde van de toegewezen velden in de gebruikersinterface komt overeen met de volgorde van de kolommen in het geëxporteerde CSV-bestand, van boven naar beneden, waarbij de bovenste rij de meest linkse kolom in het CSV-bestand is. <br/><br/> Deze functie bevindt zich in de bètafase en is alleen beschikbaar voor geselecteerde klanten. Neem contact op met uw Adobe-vertegenwoordiger als u toegang tot deze functie wilt aanvragen. |
+| [!BADGE Beta]{type=Informative} Vooraf geselecteerde standaard exportschema&#39;s voor batchbestemmingen | Experience Platform stelt nu automatisch een standaardschema in voor elke bestandsexport. Zie de documentatie over [het plannen van doelgroepexporten](../../destinations/ui/activate-batch-profile-destinations.md#scheduling) voor meer informatie over het wijzigen van het standaardschema. <br/><br/> Deze functie bevindt zich in de bètafase en is alleen beschikbaar voor geselecteerde klanten. Neem contact op met uw Adobe-vertegenwoordiger als u toegang tot deze functie wilt aanvragen. |
 | [!BADGE Beta]{type=Informative} Doelgroepactiveringsschema&#39;s in bulk bewerken voor batchbestemmingen | U kunt het activeringsschema voor meerdere doelgroepen nu in bulk bewerken via de pagina [Activeringsgegevens](../../destinations/ui/destination-details-page.md#bulk-edit-schedule). <br/><br/> Deze functie bevindt zich in de bètafase en is alleen beschikbaar voor geselecteerde klanten. Neem contact op met uw Adobe-vertegenwoordiger als u toegang tot deze functie wilt aanvragen. |
 | [!BADGE Beta]{type=Informative} Bestanden op aanvraag in bulk exporteren naar batchbestemmingen | U kunt doelgroepen nu in bulk naar batchbestemmingen exporteren via de functionaliteit voor [bestanden op aanvraag te exporteren](../../destinations/ui/export-file-now.md). <br/><br/> Deze functie bevindt zich in de bètafase en is alleen beschikbaar voor geselecteerde klanten. Neem contact op met uw Adobe-vertegenwoordiger als u toegang tot deze functie wilt aanvragen. |
 
@@ -95,7 +95,7 @@ Voor meer algemene informatie over bestemmingen, raadpleegt u het [overzicht van
 
 ## Sandboxes {#sandboxes}
 
-Adobe Experience Platform is ontworpen om digitale ervaringstoepassingen wereldwijd te verrijken. Bedrijven gebruiken vaak meerdere digitale ervaringstoepassingen parallel en moeten de ontwikkeling, het testen en de implementatie van deze toepassingen verzorgen en tegelijkertijd de operationele naleving waarborgen. Om aan deze behoefte tegemoet te komen, biedt Experience Platform sandboxen die één Experience Platform-instantie in afzonderlijke virtuele omgevingen verdelen om toepassingen voor digitale ervaringen te ontwikkelen en te ontwikkelen.
+Adobe Experience Platform is ontworpen om digitale ervaringstoepassingen wereldwijd te verrijken. Bedrijven gebruiken vaak meerdere digitale ervaringstoepassingen parallel en moeten de ontwikkeling, het testen en de implementatie van deze toepassingen verzorgen en tegelijkertijd de operationele naleving waarborgen. Om aan deze behoefte te voldoen biedt Experience Platform sandboxes die één Experience Platform-instantie opsplitsen in afzonderlijke virtuele omgevingen, zodat digitale ervaringstoepassingen kunnen worden ontwikkeld en verbeterd.
 
 **Nieuwe of bijgewerkte functies**
 
@@ -115,7 +115,7 @@ Met [!DNL Segmentation Service] kunt u gegevens die zijn opgeslagen in [!DNL Exp
 
 | Functie | Beschrijving |
 | ------- | ----------- |
-| Accountdoelgroepen | Accountdoelgroepen zijn nu algemeen beschikbaar! U kunt nu de segmentatie van uw account gebruiken om de volledige versnelling en verfijning van de segmentatieervaring voor marketing te bieden van een publiek dat op mensen is gebaseerd naar een publiek dat op een account is gebaseerd, zowel in de B2B- als in de B2P-edities van Real-Time Customer Experience Platform. Met deze release kunt u op personen gebaseerde doelgroepen gebruiken als basis voor op accounts gebaseerde doelgroepen. Ook worden er zoekmogelijkheden toegevoegd, wordt het gebruik van aangepaste entiteiten ondersteund en voldoet de release aan datagovernance. Voor meer informatie over deze functie, raadpleegt u het [overzicht van accountdoelgroepen](../../segmentation/types/account-audiences.md). |
+| Accountdoelgroepen | Accountdoelgroepen zijn nu algemeen beschikbaar! U kunt nu accountsegmentatie gebruiken om te profiteren van het volledige gemak en de verfijning van de marketingsegmentatie-ervaring van op mensen gebaseerde doelgroepen in op accounts gebaseerde doelgroepen in zowel de B2B- als de B2P-editie van het Real-Time Customer Experience Platform. Met deze release kunt u op personen gebaseerde doelgroepen gebruiken als basis voor op accounts gebaseerde doelgroepen. Ook worden er zoekmogelijkheden toegevoegd, wordt het gebruik van aangepaste entiteiten ondersteund en voldoet de release aan datagovernance. Voor meer informatie over deze functie, raadpleegt u het [overzicht van accountdoelgroepen](../../segmentation/types/account-audiences.md). |
 
 {style="table-layout:auto"}
 
@@ -127,7 +127,7 @@ Experience Platform biedt een RESTful-API en een interactieve gebruikersinterfac
 
 | Functie | Beschrijving |
 | --- | --- |
-| [!BADGE Beta]{type=Informative} [!DNL Acxiom] bron | Gebruik de [[!DNL Acxiom Prospecting Data Import] bron](../../sources/tutorials/ui/create/data-partners/acxiom-prospecting-data-import.md) om gegevens van [!DNL Acxiom] prospect service op te halen en toe te wijzen aan Experience Platform. |
+| [!BADGE Beta]{type=Informative} [!DNL Acxiom]-bron | Gebruik de [[!DNL Acxiom Prospecting Data Import] bron](../../sources/tutorials/ui/create/data-partners/acxiom-prospecting-data-import.md) om gegevens van [!DNL Acxiom] prospect service op te halen en toe te wijzen aan Experience Platform. |
 
 {style="table-layout:auto"}
 

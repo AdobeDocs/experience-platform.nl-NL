@@ -3,9 +3,9 @@ title: Aanvullende informatie van maart 2024 voor Adobe Experience Platform
 description: Aanvullende informatie van maart 2024 voor Adobe Experience Platform.
 exl-id: cab47a76-04f3-48ec-82aa-d17645e4eb15
 source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
-workflow-type: tm+mt
-source-wordcount: '1191'
-ht-degree: 97%
+workflow-type: ht
+source-wordcount: '1187'
+ht-degree: 100%
 
 ---
 
@@ -98,11 +98,11 @@ XDM is een open-bronspecificatie die algemene structuren en definities (schema&#
 
 | Functie | Beschrijving |
 | --- | --- |
-| Ondersteuning voor het gegevenstype voor toewijzing in de Experience Platform-gebruikersinterface | Pas de gegevensstructuur van uw Experience Data Model (XDM) verder aan door kaartvelden te definiëren in de gebruikersinterface van Experience Platform. U kunt nu toewijzingsvelden maken in de Schema-editor om flexibele gegevensstructuren te modelleren of sleutelwaardeparen efficiënt op te slaan. Selecteer Toewijzen in de vervolgkeuzelijst Type wanneer u een nieuw veld definieert om subvelden te configureren en deze toe te wijzen aan veldgroepen. De ondersteunde typen toewijzingswaarden zijn tekenreeks en geheel getal.<br>![De schema-editor met de velden Type en Type toewijzingswaarde gemarkeerd.](../2024/assets/march/maps.png "De schema-editor met de velden Type en Type toewijzingswaarde gemarkeerd."){width="100" zoomable="yes"}<br>Raadpleeg de handleiding voor de gebruikersinterface voor meer informatie over het [definiëren van toewijzingsvelden in de gebruikersinterface](../../xdm/ui/fields/map.md). |
+| Ondersteuning voor het gegevenstype voor toewijzing in de Experience Platform-gebruikersinterface | U kunt de gegevensstructuur van uw Experience-datamodel (XDM) verder aanpassen door toewijzingsvelden te definiëren in de Experience Platform-gebruikersinterface. U kunt nu toewijzingsvelden maken in de Schema-editor om flexibele gegevensstructuren te modelleren of sleutelwaardeparen efficiënt op te slaan. Selecteer Toewijzen in de vervolgkeuzelijst Type wanneer u een nieuw veld definieert om subvelden te configureren en deze toe te wijzen aan veldgroepen. De ondersteunde typen toewijzingswaarden zijn tekenreeks en geheel getal.<br>![De schema-editor met de velden Type en Type toewijzingswaarde gemarkeerd.](../2024/assets/march/maps.png "De schema-editor met de velden Type en Type toewijzingswaarde gemarkeerd."){width="100" zoomable="yes"}<br>Raadpleeg de handleiding voor de gebruikersinterface voor meer informatie over het [definiëren van toewijzingsvelden in de gebruikersinterface](../../xdm/ui/fields/map.md). |
 
 {style="table-layout:auto"}
 
-Voor meer informatie over XDM in Experience Platform, zie het [ XDM overzicht van het Systeem ](../../xdm/home.md).
+Raadpleeg het [XDM-systeemoverzicht](../../xdm/home.md) voor meer informatie over XDM in Experience Platform.
 
 ## Segmentatieservice {#segmentation}
 
