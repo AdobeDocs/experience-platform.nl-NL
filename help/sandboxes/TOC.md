@@ -7,7 +7,7 @@ feature: Sandboxes
 source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
 source-wordcount: '84'
-ht-degree: 26%
+ht-degree: 28%
 
 ---
 
@@ -33,7 +33,7 @@ ht-degree: 26%
    * [Pakketten](sandbox-tooling-api/packages.md)
    * [Tools](sandbox-tooling-api/tools.md)
    * [Bijlage](sandbox-tooling-api/appendix.md)
-* Gevallen gebruiken {#use-cases}
+* Gebruiksscenario’s {#use-cases}
    * [Back-upobjectconfiguraties](use-cases/backup-object-configuration.md)
    * [Uitstekingscentrum](use-cases/center-of-excellence.md)
 * [Handleiding voor probleemoplossing](troubleshooting-guide.md)

@@ -22,7 +22,7 @@ ht-degree: 19%
    - [Logica voor identiteitskoppeling](./features/identity-linking-logic.md)
    - [Naamgrafiekviewer](./features/identity-graph-viewer.md)
    - [Verwijderen in identiteitsservice](./features/deletion.md)
-   - Regels voor identiteitsgrafiek koppelen {#identity-graph-linking-rules}
+   - Koppelingsregels voor identiteitsgrafiek {#identity-graph-linking-rules}
       - [Overzicht van functies](./identity-graph-linking-rules/overview.md)
       - [Algoritme voor identiteitsoptimalisatie](./identity-graph-linking-rules/identity-optimization-algorithm.md)
       - [Implementatiegids voor koppelingsregels voor identiteitsgrafieken](./identity-graph-linking-rules/implementation-guide.md)
@@ -34,7 +34,7 @@ ht-degree: 19%
    - [ECID-overzicht](./features/ecid.md)
 - [Implementatiehandleiding](implementation.md)
 - [Guardrails voor identiteitsgegevens](guardrails.md)
-- Identiteitsservice-API {#api}
+- Identity Service API {#api}
    - [Aan de slag](api/getting-started.md)
    - [Een veld als identiteit labelen](api/label-identities.md)
    - [Clusteridentiteiten weergeven](api/list-cluster-identites.md)
