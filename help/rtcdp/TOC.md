@@ -5,10 +5,10 @@ audience: user
 user-guide-title: Gids voor Real-time Customer Data Platform
 user-guide-description: Breng bekende en anonieme gegevens van meerdere bronnen van bedrijven bij elkaar om klantprofielen te maken, doelgroepsegmenten van die profielen te maken, en die segmenten voor externe doelen te activeren.
 role: Admin
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 3b2645927e4760114298295e920e07a20df3fcbd
 workflow-type: tm+mt
-source-wordcount: '302'
-ht-degree: 12%
+source-wordcount: '307'
+ht-degree: 16%
 
 ---
 
@@ -21,7 +21,7 @@ ht-degree: 12%
       * [Real-Time CDP-overzicht](overview.md)
       * [Aan de slag met Real-Time CDP](get-started.md)
       * [Homepage](home-page-dashboards.md)
-   * Real-Time CDP B2B edition {#rtcdpb2b-intro}
+   * Real-Time CDP B2B Edition {#rtcdpb2b-intro}
       * [Real-Time CDP B2B edition - overzicht](b2b-overview.md)
       * [Voorbeeld van gebruik](./b2b-use-case.md)
       * [Volledige zelfstudie](./b2b-tutorial.md)
@@ -33,7 +33,7 @@ ht-degree: 12%
    * [Gebruikersgids voor accountprofielen](accounts/account-profile-ui-guide.md)
 * Beheer {#admin}
    * [Overzicht van beheer](administration/admin-overview.md)
-* Soorten publiek en segmentatie {#segmentation}
+* Splitsen en segmenteren {#segmentation}
    * [Overzicht van segmentatie](segmentation/segmentation-overview.md)
    * [Handleiding Audience Builder](segmentation/audience-builder.md)
    * [Segmentering in Real-Time CDP B2B edition](segmentation/b2b.md)
@@ -41,20 +41,20 @@ ht-degree: 12%
 * Gegevenssets {#datasets}
    * [Gegevenssets](datasets/dataset.md)
    * [Gegevenskwaliteit op Experience Platform](datasets/data-quality.md)
-* Doelen {#destinations}
+* Bestemmingen {#destinations}
    * [Overzicht van doelen](destinations/overview.md)
    * [Doelen in Real-Time CDP B2B edition](destinations/b2b.md)
 * Guardrails {#guardrails}
    * [Overzicht van Real-Time CDP-instructies](guardrails/overview.md)
-   * [ Guardrails voor gegevensopname ](https://experienceleague.adobe.com/docs/experience-platform/ingestion/guardrails.html) {target="_blank"}
-   * [ Guardrails voor  [!DNL Edge Network Server API] ](https://experienceleague.adobe.com/docs/experience-platform/edge-network-server-api/guardrails.html) {target="_blank"}
-   * [ Guardrails voor  [!DNL Real-Time Customer Profile]  gegevens en segmentatie ](https://experienceleague.adobe.com/docs/experience-platform/profile/guardrails.html) {target="_blank"}
-   * [ Guardrails voor  [!DNL Identity Service]  gegevens ](https://experienceleague.adobe.com/docs/experience-platform/identity/guardrails.html) {target="_blank"}
-   * [ Guardrails voor  [!DNL Query Service] ](https://experienceleague.adobe.com/docs/experience-platform/query/guardrails.html) {target="_blank"}
-   * [ Grafieken voor gegevensactivering door bestemmingen ](https://experienceleague.adobe.com/docs/experience-platform/destinations/guardrails.html) {target="_blank"}
+   * [ Guardrails voor gegevensopname ](https://experienceleague.adobe.com/docs/experience-platform/ingestion/guardrails.html){target="_blank"}
+   * [ Guardrails voor  [!DNL Edge Network Server API] ](https://experienceleague.adobe.com/docs/experience-platform/edge-network-server-api/guardrails.html){target="_blank"}
+   * [ Guardrails voor  [!DNL Real-Time Customer Profile]  gegevens en segmentatie ](https://experienceleague.adobe.com/docs/experience-platform/profile/guardrails.html){target="_blank"}
+   * [ Guardrails voor  [!DNL Identity Service]  gegevens ](https://experienceleague.adobe.com/docs/experience-platform/identity/guardrails.html){target="_blank"}
+   * [ Guardrails voor  [!DNL Query Service] ](https://experienceleague.adobe.com/docs/experience-platform/query/guardrails.html){target="_blank"}
+   * [ Grafieken voor gegevensactivering door bestemmingen ](https://experienceleague.adobe.com/docs/experience-platform/destinations/guardrails.html){target="_blank"}
 * Identiteiten {#identity}
    * [Identiteiten en naamruimten](profile/identities-overview.md)
-* Beleid voor samenvoegen {#merge-policies}
+* Beleid samenvoegen {#merge-policies}
    * [Overzicht van beleid samenvoegen](profile/merge-policies.md)
 * Privacy en gegevensbeheer {#privacy}
    * [Privacyoverzicht](privacy/privacy-overview.md)
@@ -65,10 +65,10 @@ ht-degree: 12%
 * Real-Time CDP B2B edition AI/ML-services {#b2b-cdp-ai-ml}
    * [Verwante accounts](b2b-ai-ml-services/related-accounts.md)
    * [Overeenkomende lead-account](b2b-ai-ml-services/lead-to-account-matching.md)
-   * Voorspelende lead en accountscoring {#predictive-lead-and-account-scoring-intro}
+   * Voorspelend lood en account scoring {#predictive-lead-and-account-scoring-intro}
       * [Overzicht van voorsprong en accountscoring](b2b-ai-ml-services/predictive-lead-and-account-scoring.md)
       * [Voorspelende leads en accountscoring beheren](b2b-ai-ml-services/manage-predictive-lead-and-account-scoring.md)
-* Schemas {#schemas}
+* Schema&#39;s {#schemas}
    * [Overzicht van schema&#39;s](schemas/overview.md)
    * [Schemas in Real-Time CDP B2B edition](schemas/b2b.md)
 * Bronnen {#sources}
@@ -80,9 +80,10 @@ ht-degree: 12%
       * [ neemt en verwerft nieuwe klanten zonder gebiedsdeel op derdekoekjes ](/help/rtcdp/partner-data/prospecting.md) aan
       * [Onsite ervaringen voor onbekende bezoekers personaliseren met de erkenning van bezoekers met hulp van partners](/help/rtcdp/partner-data/onsite-personalization.md)
       * [Offsite herbestemming van niet-geverifieerde gebruikers](./partner-data/offsite-retargeting.md)
+      * [Offsite herbestemming van niet-geverifieerde gebruikers](./partner-data/unauthenticated-retargeting.md)
    * Profielverrijking {#profile-enrichment}
       * [Voeg eerste-partijprofielen met partner-verstrekte attributen toe](/help/rtcdp/partner-data/supplement-first-party-profiles.md)
-   * Persoonlijke inzichten en betrokkenheid {#personalization-insights-engagement}
+   * Gepersonaliseerde inzichten en betrokkenheid {#personalization-insights-engagement}
       * [Evolueer eenmalig klantenwaarde aan levenwaarde](/help/rtcdp/use-case-guides/evolve-one-time-value-lifetime-value/evolve-one-time-value-to-lifetime-value.md)
       * [Neem op intelligente wijze uw klanten opnieuw aan](/help/rtcdp/use-case-guides/intelligent-re-engagement/intelligent-re-engagement.md)
       * [Neem op intelligente wijze contact op met uw klanten: Luma-voorbeelden](/help/rtcdp/use-case-guides/intelligent-re-engagement/use-cases-luma.md)
