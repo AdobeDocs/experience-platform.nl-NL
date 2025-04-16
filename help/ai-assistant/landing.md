@@ -3,9 +3,9 @@ title: AI Assistant in Adobe Experience Platform-productdocumentatie
 description: Ga aan de slag met AI Assistant in Adobe Experience Platform.
 feature: AI Assistant
 exl-id: bcb86a41-d5d8-4c1a-a86d-79fa0c167bc7
-source-git-commit: eb62627e81f361d21026cba368802ebace4a8dde
+source-git-commit: 40c5162801b95d73ce70587f3abd87ad44fa0f01
 workflow-type: tm+mt
-source-wordcount: '1156'
+source-wordcount: '1159'
 ht-degree: 0%
 
 ---
@@ -41,6 +41,17 @@ Begin met het lezen van het materiaal in de koppelingen hieronder om uzelf vertr
     <td align="center"><a href="https://experienceleague.adobe.com/en/playlists/experience-platform-get-started-with-ai-assistant"><img src="../rtcdp/assets/do-not-localize/learn-more-button.svg"></a></td>
     </tr>
 </table>
+
+### Handson gids om uw productiviteit met AI Medewerker te verhogen
+
+>[!NOTE]
+>
+>Dit werkboek is voor het laatst bijgewerkt op 31 maart 2025. Sindsdien zijn sommige mogelijkheden wellicht geëvolueerd of uitgebreid. Bovendien, kunnen een paar eigenschappen waarnaar in deze gids wordt verwezen nog in vroege toegang zijn. Als u iets tegenkomt dat nog niet beschikbaar is in uw omgeving en u geïnteresseerd bent in het verkennen ervan, neemt u contact op met uw Adobe-accountteam om vroege toegang aan te vragen.
+
+Lees het volgende voor een handleiding over hoe u uw productiviteit kunt verhogen met AI Assistant.
+
+* [Verhoog uw productiviteit met AI Assistant](./assets/landing/ai-assistant-lab-workbook.pdf)
+
 
 ## Nieuwe functies
 
@@ -439,16 +450,6 @@ Bekijk de volgende video&#39;s voor extra voorbeelden van AI Assistant-gebruikss
 * [ ontgrendel operationele inzichten met Medewerker AI ](https://www.youtube.com/watch?v=fGgFwAOZle8)
 
 >[!ENDTABS]
-
-### Verhoog uw productiviteit met AI Assistant
-
->[!NOTE]
->
->Dit werkboek is voor het laatst bijgewerkt op 31 maart 2025. Sindsdien zijn sommige mogelijkheden wellicht geëvolueerd of uitgebreid. Bovendien, kunnen een paar eigenschappen waarnaar in deze gids wordt verwezen nog in vroege toegang zijn. Als u iets tegenkomt dat nog niet beschikbaar is in uw omgeving en u geïnteresseerd bent in het verkennen ervan, neemt u contact op met uw Adobe-accountteam om vroege toegang aan te vragen.
-
-Lees het volgende voor een handleiding over hoe u uw productiviteit kunt verhogen met AI Assistant.
-
-* [Verhoog uw productiviteit met AI Assistant](./assets/landing/ai-assistant-lab-workbook.pdf)
 
 ## Volgende stappen
 
