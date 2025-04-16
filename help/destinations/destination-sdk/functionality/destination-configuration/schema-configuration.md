@@ -2,9 +2,9 @@
 description: Leer hoe te om het partnerschema voor bestemmingen te vormen die met Destination SDK worden gebouwd.
 title: Configuratie partnerschema
 exl-id: 0548e486-206b-45c5-8d18-0d6427c177c5
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 30a237c7acf814722d384792366f95289dc3f34a
 workflow-type: tm+mt
-source-wordcount: '1937'
+source-wordcount: '1884'
 ht-degree: 0%
 
 ---
@@ -105,8 +105,8 @@ Als u een statisch schema met profielkenmerken wilt maken, definieert u de doelk
 | `profileRequired` | Boolean | Optioneel | Gebruik `true` als gebruikers in staat moeten zijn om profielkenmerken van Experience Platform toe te wijzen aan aangepaste kenmerken op uw doelplatform. |
 | `segmentRequired` | Boolean | Vereist | Deze parameter wordt vereist door Destination SDK en moet altijd worden ingesteld op `true` . |
 | `identityRequired` | Boolean | Vereist | Reeks aan `true` als de gebruikers [ identiteitstypes ](identity-namespace-configuration.md) van Experience Platform aan de attributen zouden moeten kunnen in kaart brengen u in de `profileFields` serie bepaalde. |
-| `segmentNamespaceAllowList` | Array | Optioneel | Hiermee definieert u specifieke publieksnaamruimten waaruit gebruikers doelgroepen kunnen toewijzen. Gebruik deze parameter om Experience Platform-gebruikers te beperken tot het exporteren van soorten publiek uit alleen de naamruimten voor het publiek die u in de array definieert. Deze parameter kan niet samen met `segmentNamespaceDenyList` worden gebruikt.<br> <br> Voorbeeld: gebruikers kunnen in `"segmentNamespaceAllowList": ["AudienceManager"]` alleen soorten publiek vanuit de naamruimte `AudienceManager` toewijzen aan dit doel. <br> <br> Als u gebruikers wilt toestaan een publiek naar uw bestemming te exporteren, kunt u deze parameter negeren. <br> <br> als zowel `segmentNamespaceAllowList` als `segmentNamespaceDenyList` van uw configuratie ontbreken, zullen de gebruikers slechts publiek uit de [ Dienst van de Segmentatie ](../../../../segmentation/home.md) kunnen uitvoeren. |
-| `segmentNamespaceDenyList` | Array | Optioneel | Beperkt gebruikers van het in kaart brengen van publiek aan de bestemming, van de publieksnamespaces die in de serie worden bepaald. Kan niet samen met `segmentNamespaceAllowed` worden gebruikt. <br> <br> Voorbeeld: `"segmentNamespaceDenyList": ["AudienceManager"]` blokkeert gebruikers om publiek van de naamruimte `AudienceManager` naar dit doel toe te wijzen. <br> <br> Als u gebruikers wilt toestaan een publiek naar uw bestemming te exporteren, kunt u deze parameter negeren. <br> <br> als zowel `segmentNamespaceAllowed` als `segmentNamespaceDenyList` van uw configuratie ontbreken, zullen de gebruikers slechts publiek uit de [ Dienst van de Segmentatie ](../../../../segmentation/home.md) kunnen uitvoeren. <br> <br> Als u het exporteren van alle soorten publiek wilt toestaan, ongeacht de oorsprong, stelt u `"segmentNamespaceDenyList":[]` in. |
+| `segmentNamespaceAllowList` | Array | Optioneel | Staat gebruikers toe om slechts publiek van de publieksnamespaces in kaart te brengen die in de serie aan de bestemming worden bepaald. <br><br> Het gebruik van deze parameter wordt in de meeste gevallen afgeraden. Gebruik in plaats daarvan `"segmentNamespaceDenyList":[]` om alle soorten publiek naar uw doel te laten exporteren. <br><br> als zowel `segmentNamespaceAllowList` als `segmentNamespaceDenyList` van uw configuratie ontbreken, zullen de gebruikers slechts publiek uit de [ Dienst van de Segmentatie ](../../../../segmentation/home.md) kunnen uitvoeren. <br><br>`segmentNamespaceAllowList` en `segmentNamespaceDenyList` sluiten elkaar uit. |
+| `segmentNamespaceDenyList` | Array | Optioneel | Beperkt gebruikers van het in kaart brengen van publiek van de publiek namespaces die in de serie aan de bestemming worden bepaald. <br><br> Adobe adviseert om de uitvoer van alle publiek, ongeacht de oorsprong, toe te staan door `"segmentNamespaceDenyList":[]` te plaatsen. <br><br> als zowel `segmentNamespaceAllowed` als `segmentNamespaceDenyList` van uw configuratie ontbreken, zullen de gebruikers slechts publiek uit de [ Dienst van de Segmentatie ](../../../../segmentation/home.md) kunnen uitvoeren. <br><br>`segmentNamespaceAllowList` en `segmentNamespaceDenyList` sluiten elkaar uit. |
 
 {style="table-layout:auto"}
 
