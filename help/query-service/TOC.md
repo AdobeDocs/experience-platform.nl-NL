@@ -5,10 +5,10 @@ breadcrumb-title: Gids voor Query Service
 user-guide-description: Gebruik standaard SQL om gegevens te doorzoeken binnen de data lake in Experience Platform.
 feature: Queries
 role: User,Developer
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 5e8dccf91e8c83b4734b363539cfb911b5c2ae29
 workflow-type: tm+mt
-source-wordcount: '401'
-ht-degree: 12%
+source-wordcount: '404'
+ht-degree: 14%
 
 ---
 
@@ -23,16 +23,17 @@ ht-degree: 12%
 - Data Distiller {#data-distiller}
    - [Overzicht](data-distiller/overview.md)
    - [Licentiegebruik](data-distiller/license-usage.md)
-   - Afgeleide gegevenssets {#derived-datasets}
+   - Afgeleide datasets {#derived-datasets}
       - [Overzicht](data-distiller/derived-datasets/overview.md)
       - [Afgeleide datasets maken met SQL](data-distiller/derived-datasets/create-derived-datasets-with-sql.md)
       - [Op decile gebaseerde afgeleide gegevenssets maken](data-distiller/derived-datasets/decile-based-derived-attributes.md)
-   - SQL-inzichten voor uitgebreide toepassingsrapportage {#sql-insights}
+   - SQL Insights voor uitgebreide apprapportage {#sql-insights}
       - [Overzicht](data-distiller/sql-insights/overview.md)
       - [Query Pro-modus](data-distiller/sql-insights/query-pro-mode.md)
+      - [Overzicht van versnelde opslag](data-distiller/sql-insights/accelerated-store-overview.md)
       - [Verstuur versnelde vragen](data-distiller/sql-insights/send-accelerated-queries.md)
       - [Handleiding voor het rapporteringsmodel voor inzichten](data-distiller/sql-insights/reporting-insights-data-model.md)
-   - Pijpleidingen met functies voor AI/ML {#ml-feature-pipelines}
+   - Pijpleidingen met I/ML-functies {#ml-feature-pipelines}
       - [Overzicht](data-distiller/ml-feature-pipelines/overview.md)
       - [Verbinding maken met Jupyter-laptops](data-distiller/ml-feature-pipelines/establish-connection.md)
       - [Verkennende gegevensanalyse](data-distiller/ml-feature-pipelines/exploratory-analysis.md)
@@ -40,7 +41,7 @@ ht-degree: 12%
       - [Gegevens exporteren naar XML-omgevingen](data-distiller/ml-feature-pipelines/export-data.md)
       - [Verrijking van end-to-end workflow voor de AI/ML-gegevenspijpleiding](data-distiller/ml-feature-pipelines/end-to-end-notebook-workflow.md)
    - [Top 2025](data-distiller/top-tips-to-maximize-value.md)
-- Distiller-statistieken over gegevens en leren van machines {#advanced-statistics}
+- Distiller-statistieken en leren van machines {#advanced-statistics}
    - [Overzicht](advanced-statistics/overview.md)
    - [Functietechniek](advanced-statistics/feature-engineering.md)
    - [Modellen](advanced-statistics/models.md)
@@ -85,9 +86,9 @@ ht-degree: 12%
    - [Gegevensdeduplicatie](key-concepts/deduplication.md)
    - [Gegevenssetvoorbeelden](key-concepts/dataset-samples.md)
    - [Berekening van gegevenssetstatistieken](key-concepts/dataset-statistics.md)
-- Distiller-hyperkubussen voor gegevens {#hypercubes}
+- Data Distiller Hyperkubussen {#hypercubes}
    - [Efficiënte grote gegevensanalyse met hyperkubussen](hypercubes/overview.md)
-- Clients verbinden met Query Service {#clients}
+- Client verbinden met Query-service {#clients}
    - [Overzicht van clientverbindingen](clients/overview.md)
    - [SSL-modi](./clients/ssl-modes.md)
    - [Aqua Data Studio](clients/aqua-data-studio.md)
@@ -100,7 +101,7 @@ ht-degree: 12%
    - [PSQL](clients/psql.md)
    - [RStudio](clients/rstudio.md)
    - [Tableau](clients/tableau.md)
-- Gebruikersinterface van Query-service {#ui}
+- Gebruikersinterface Query Service {#ui}
    - [Overzicht van gebruikersinterface](ui/overview.md)
    - [Gebruikershandleiding voor de Query Editor](ui/user-guide.md)
    - [Zoeksjablonen](ui/query-templates.md)
@@ -119,17 +120,17 @@ ht-degree: 12%
    - [Zoeksjablonen](api/query-templates.md)
    - [Versnelde query&#39;s](api/accelerated-queries.md)
    - [Waarschuwingsabonnementen](api/alert-subscriptions.md)
-- API voor Distiller-verificatie van gegevens {#auth-api}
+- Distiller-API voor gegevens {#auth-api}
    - [Overzicht](auth-api/overview.md)
    - [Aan de slag](auth-api/getting-started.md)
    - [IP-toegang](auth-api/ip-access.md)
    - [Valideren](auth-api/validate.md)
-- Gegevensbeheer {#data-governance}
+- Datagovernance {#data-governance}
    - [Overzicht](data-governance/overview.md)
    - [Handleiding controlelogboek](data-governance/audit-log-guide.md)
    - [Identiteiten in gegevenssets van ad-hocschema](data-governance/ad-hoc-schema-identities.md)
    - [Op kenmerken gebaseerde ondersteuning voor toegangsbeheer voor ad-hocschema&#39;s](./data-governance/ad-hoc-schema-labels.md)
-- Aanbevolen procedures {#best-practices}
+- Best practices {#best-practices}
    - [Zoekopdracht uitvoeren](best-practices/writing-queries.md)
    - [Gegevensmiddelenorganisatie](./best-practices/organize-data-assets.md)
 - SQL-referentie {#sql}
