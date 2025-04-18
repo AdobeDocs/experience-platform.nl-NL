@@ -3,9 +3,9 @@ title: Soorten publiek activeren om exportdoelen voor batchprofielen te gebruike
 type: Tutorial
 description: Leer hoe u het publiek in Adobe Experience Platform activeert door het naar batchbestemmingen te sturen.
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 500cad30178e6371c8d7431b032a67f6ed15a1d6
 workflow-type: tm+mt
-source-wordcount: '4284'
+source-wordcount: '4347'
 ht-degree: 1%
 
 ---
@@ -83,6 +83,16 @@ U kunt kiezen uit meerdere soorten publiek, afhankelijk van de oorsprong:
 >id="platform_destinations_activate_schedule"
 >title="Schema"
 >abstract="Gebruik het potloodpictogram om het bestandstype (volledige bestanden of incrementele bestanden) en de exportfrequentie in te stellen."
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_activate_schedule_weekly_messaging"
+>title="Wekelijkse uitvoer"
+>abstract="Selecteer de begindatum en de volgende exportbewerkingen vinden plaats op die dag van de week tot de geselecteerde einddatum."
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_activate_schedule_monthly_messaging"
+>title="Maandelijkse uitvoer"
+>abstract="Selecteer de begindatum en de volgende exportbewerkingen vinden plaats op die datum van de maand tot de geselecteerde einddatum. Voor maanden met minder dan 30 of 31 dagen vindt de uitvoer plaats op de laatste dag van de maand."
 
 [!DNL Adobe Experience Platform] exporteert gegevens voor e-mailmarketing en de bestemmingen van de wolkenopslag als [ verschillende dossiertypes ](#supported-file-formats-export). Op de pagina **[!UICONTROL Scheduling]** kunt u het schema en de bestandsnamen configureren voor elk publiek dat u exporteert.
 
