@@ -26,7 +26,7 @@ De volgende geheime types worden momenteel gesteund:
 
 {style="table-layout:auto"}
 
-Deze gids verstrekt een overzicht op hoog niveau van hoe te om geheimen voor een gebeurtenis te vormen door:sturen ([!UICONTROL Edge]) bezit in het Experience Platform UI of de Inzameling UI van Gegevens.
+Deze gids verstrekt een overzicht op hoog niveau van hoe te om geheimen voor een gebeurtenis te vormen door:sturen ([!UICONTROL Edge]) bezit in Experience Platform UI of UI van de Inzameling van Gegevens.
 
 >[!NOTE]
 >
@@ -242,7 +242,7 @@ Als u een bestaand geheim in de **[!UICONTROL Secrets]** -werkruimte wilt verwij
 
 ## Het gebruiken van geheimen in gebeurtenis door:sturen
 
-Om gebruik van een geheim in gebeurtenis te maken door:sturen, moet u a [ gegevenselement ](../managing-resources/data-elements.md) eerst creëren dat verwijzingen het geheim zelf. Na het bewaren van het gegevenselement, kunt u het in gebeurtenis omvatten door:sturen [ regels ](../managing-resources/rules.md) en die regels toevoegen aan a [ bibliotheek ](../publishing/libraries.md), die beurtelings aan de servers van de Adobe als a [ kan worden opgesteld bouwt ](../publishing/builds.md).
+Om gebruik van een geheim in gebeurtenis te maken door:sturen, moet u a [ gegevenselement ](../managing-resources/data-elements.md) eerst creëren dat verwijzingen het geheim zelf. Na het bewaren van het gegevenselement, kunt u het in gebeurtenis omvatten door:sturen [ regels ](../managing-resources/rules.md) en die regels toevoegen aan a [ bibliotheek ](../publishing/libraries.md), die beurtelings aan de servers van Adobe als a [ kan worden opgesteld bouwt ](../publishing/builds.md).
 
 Selecteer bij het maken van het gegevenselement de extensie **[!UICONTROL Core]** en selecteer vervolgens **[!UICONTROL Secret]** voor het gegevenstype van het gegevenselement. Het rechterdeelvenster wordt bijgewerkt en bevat vervolgkeuzemenu&#39;s waarmee maximaal drie geheimen aan het gegevenselement kunnen worden toegewezen: een voor respectievelijk [!UICONTROL Development] , [!UICONTROL Staging] en [!UICONTROL Production] .
 

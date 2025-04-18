@@ -28,7 +28,7 @@ Deze UI-gids vereist inzicht in de verschillende [!DNL Experience Platform] -ser
 
 ## Berekende kenmerken weergeven {#view}
 
-Selecteer in de gebruikersinterface van het Experience Platform de optie **[!UICONTROL Profiles]** in de linkernavigatie, gevolgd door **[!UICONTROL Computed attributes]** om een lijst weer te geven met de berekende kenmerken die beschikbaar zijn voor uw organisatie. Dit omvat informatie over de gegevens verwerkte naam van de attributen, beschrijving, laatste evaluatiedatum, en laatste evaluatiestatus.
+Selecteer in de gebruikersinterface van Experience Platform de optie **[!UICONTROL Profiles]** in de linkernavigatie, gevolgd door **[!UICONTROL Computed attributes]** om een lijst weer te geven met de berekende kenmerken die beschikbaar zijn voor uw organisatie. Dit omvat informatie over de gegevens verwerkte naam van de attributen, beschrijving, laatste evaluatiedatum, en laatste evaluatiestatus.
 
 ![ de [!UICONTROL Profile] sectie en de [!UICONTROL Computed attributes] lusjes worden benadrukt, die gebruikers tonen hoe te om tot de gegevens verwerkte attributen toegang te hebben doorbladert pagina.](./images/ui/browse.png)
 

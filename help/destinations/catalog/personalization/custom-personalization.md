@@ -23,9 +23,9 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
->Profielkenmerken kunnen vertrouwelijke gegevens bevatten. Om dit gegeven te beschermen, moet u de [ Server API van de Edge Network ](/help/server-api/overview.md) gebruiken wanneer het vormen van de **[!UICONTROL Custom Personalization]** bestemming voor op attribuut-gebaseerde verpersoonlijking. Alle Server API vraag moet in een [ voor authentiek verklaarde context ](../../../server-api/authentication.md) worden gemaakt.
+>Profielkenmerken kunnen vertrouwelijke gegevens bevatten. Om dit gegeven te beschermen, moet u [ de Server API van Edge Network gebruiken API ](/help/server-api/overview.md) wanneer het vormen van de **[!UICONTROL Custom Personalization]** bestemming voor op attribuut-gebaseerde verpersoonlijking. Alle Server API vraag moet in een [ voor authentiek verklaarde context ](../../../server-api/authentication.md) worden gemaakt.
 >
-><br> u kunt profielattributen via de [ Server API van de Edge Network terugwinnen API ](/help/server-api/overview.md) door een server-zijintegratie toe te voegen die de zelfde gegevensstroom gebruikt die u reeds voor uw Web of Mobiele implementatie SDK gebruikt.
+><br> u kunt profielattributen via de [ Server API van Edge Network terugwinnen API ](/help/server-api/overview.md) door een server-zijintegratie toe te voegen die de zelfde gegevensstroom gebruikt die u reeds voor uw implementatie van het Web of Mobiele SDK gebruikt.
 >
 ><br> als u niet de hierboven vereisten volgt, zal de verpersoonlijking op publiekslidmaatschap slechts gebaseerd zijn.
 
@@ -39,11 +39,11 @@ Deze bestemming vereist het gebruik van één van de volgende methodes van de ge
 
 * Gebruik [ SDK van het Web van Adobe Experience Platform ](/help/web-sdk/home.md) als u gegevens van uw website wilt verzamelen.
 * Gebruik [ Adobe Experience Platform Mobile SDK ](https://developer.adobe.com/client-sdks/documentation/) als u gegevens van uw mobiele toepassing wilt verzamelen.
-* Gebruik de [ Server API van de Edge Network ](../../../server-api/overview.md) als u [ SDK van het Web ](/help/web-sdk/home.md) of [ Mobiele SDK ](https://developer.adobe.com/client-sdks/documentation/) niet gebruikt, of als u de gebruikerservaring wilt personaliseren die op profielattributen wordt gebaseerd.
+* Gebruik [ de Server API van Edge Network ](../../../server-api/overview.md) als u [ SDK van het Web ](/help/web-sdk/home.md) of [ Mobiele SDK ](https://developer.adobe.com/client-sdks/documentation/) niet gebruikt, of als u de gebruikerservaring wilt personaliseren die op profielattributen wordt gebaseerd.
 
 >[!IMPORTANT]
 >
->Alvorens een verbinding van de douaneverpersoonlijking tot stand te brengen, lees de gids op hoe te [ publieksgegevens aan de bestemmingen van de randverpersoonlijking ](../../ui/activate-edge-personalization-destinations.md) activeren. Deze gids neemt u door de vereiste configuratiestappen voor zelfde-pagina en volgende-paginagrootte het gebruiksgevallen van het verpersoonlijkingsgebruik, over veelvoudige Experience Platform componenten.
+>Alvorens een verbinding van de douaneverpersoonlijking tot stand te brengen, lees de gids op hoe te [ publieksgegevens aan de bestemmingen van de randverpersoonlijking ](../../ui/activate-edge-personalization-destinations.md) activeren. Deze handleiding begeleidt u door de vereiste configuratiestappen voor het gebruik van dezelfde pagina en volgende pagina&#39;s voor personalisatie, voor meerdere Experience Platform-componenten.
 
 ## Ondersteunde doelgroepen {#supported-audiences}
 
@@ -51,7 +51,7 @@ In deze sectie wordt beschreven welke soorten publiek u naar dit doel kunt expor
 
 | Oorsprong publiek | Ondersteund | Beschrijving |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | ✓ | Het publiek produceerde door de Dienst van de Segmentatie van het Experience Platform [ ](../../../segmentation/home.md). |
+| [!DNL Segmentation Service] | ✓ | Het publiek produceerde door de Dienst van de Segmentatie van Experience Platform [ ](../../../segmentation/home.md). |
 | Aangepaste uploads | ✓ | Het publiek [ ingevoerde ](../../../segmentation/ui/audience-portal.md#import-audience) in Experience Platform van Csv- dossiers. |
 
 {style="table-layout:auto"}
@@ -60,7 +60,7 @@ In deze sectie wordt beschreven welke soorten publiek u naar dit doel kunt expor
 
 | Item | Type | Notities |
 ---------|----------|---------|
-| Exporttype | **[!DNL Profile request]** | U vraagt om alle soorten publiek die voor één profiel zijn toegewezen in de aangepaste verpersoonlijkingsbestemming. De verschillende bestemmingen van de douaneverpersoonlijking kunnen opstelling voor verschillende [ gegevensstromen van de Inzameling van Gegevens van de Adobe ](../../../datastreams/overview.md) zijn. |
+| Exporttype | **[!DNL Profile request]** | U vraagt om alle soorten publiek die voor één profiel zijn toegewezen in de aangepaste verpersoonlijkingsbestemming. De verschillende bestemmingen van de douaneverpersoonlijking kunnen opstelling voor verschillende [ de gegevensstromen van de Inzameling van Gegevens van Adobe ](../../../datastreams/overview.md) zijn. |
 | Exportfrequentie | **[!UICONTROL Streaming]** | Streaming doelen zijn &quot;altijd aan&quot; API-verbindingen. Zodra een profiel in Experience Platform wordt bijgewerkt dat op publieksevaluatie wordt gebaseerd, verzendt de schakelaar de update stroomafwaarts naar het bestemmingsplatform. Lees meer over [ het stromen bestemmingen ](/help/destinations/destination-types.md#streaming-destinations). |
 
 ## Verbinden met de bestemming {#connect}
@@ -83,7 +83,7 @@ Terwijl [ vestiging ](../../ui/connect-destination.md) deze bestemming, u de vol
 
 * **[!UICONTROL Name]**: vul de voorkeursnaam voor dit doel in.
 * **[!UICONTROL Description]**: voer een beschrijving in voor uw doel. U kunt bijvoorbeeld opgeven voor welke campagne u deze bestemming wilt gebruiken. Dit veld is optioneel.
-* **[!UICONTROL Integration alias]**: deze waarde wordt als een JSON-objectnaam verzonden naar de Web SDK van het Experience Platform.
+* **[!UICONTROL Integration alias]**: deze waarde wordt als een JSON-objectnaam verzonden naar de Experience Platform Web SDK.
 * **[!UICONTROL Datastream ID]**: hiermee bepaalt u in welke gegevensstroom voor gegevensverzameling het publiek wordt opgenomen in de reactie op de pagina. Het drop-down menu toont slechts gegevensstromen die de toegelaten bestemmingsconfiguratie hebben. Zie [ Vormend een datastream ](../../../datastreams/overview.md) voor meer details.
 
 ### Waarschuwingen inschakelen {#enable-alerts}
@@ -102,7 +102,7 @@ Lees [ activeer profielen en de de verpersoonlijkingsbestemmingen van de doelpub
 
 ## Geëxporteerde gegevens {#exported-data}
 
-Als u [ Markeringen in Adobe Experience Platform ](../../../tags/home.md) gebruikt om het Web SDK van het Experience Platform op te stellen, gebruik [ verzendt gebeurtenis volledige ](../../../tags/extensions/client/web-sdk/event-types.md) functionaliteit en uw actie van de douanecode zal een `event.destinations` variabele hebben die u kunt gebruiken om de uitgevoerde gegevens te zien.
+Als u [ Markeringen in Adobe Experience Platform ](../../../tags/home.md) gebruikt om het Web SDK van Experience Platform op te stellen, gebruik [ verzendt gebeurtenis volledige ](../../../tags/extensions/client/web-sdk/event-types.md) functionaliteit en uw actie van de douanecode zal een `event.destinations` variabele hebben die u kunt gebruiken om de uitgevoerde gegevens te zien.
 
 Hier volgt een voorbeeldwaarde voor de variabele `event.destinations` :
 
@@ -124,7 +124,7 @@ Hier volgt een voorbeeldwaarde voor de variabele `event.destinations` :
 ]
 ```
 
-Als u [ Markeringen ](/help/tags/home.md) niet gebruikt om het Web SDK van het Experience Platform op te stellen, gebruik [ bevelreacties ](/help/web-sdk/commands/command-responses.md) om de uitgevoerde gegevens te zien.
+Als u niet [ Markeringen ](/help/tags/home.md) gebruikt om het Web SDK van Experience Platform op te stellen, gebruik [ bevelreacties ](/help/web-sdk/commands/command-responses.md) om de uitgevoerde gegevens te zien.
 
 Het JSON-antwoord van Adobe Experience Platform kan worden geparseerd om de bijbehorende integratiealias te zoeken van de toepassing die u integreert met Adobe Experience Platform. De gebruikers-id&#39;s kunnen als doelparameters worden doorgegeven aan de code van de toepassing. Hieronder ziet u een voorbeeld van hoe dit er specifiek uitziet voor de doelrespons.
 

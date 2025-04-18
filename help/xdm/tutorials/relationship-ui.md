@@ -1,8 +1,8 @@
 ---
-keywords: Experience Platform;thuis;populaire onderwerpen;ui;UI;XDM;XDM systeem;ervaringsgegevensmodel;Ervaar gegevensmodel;Gegevensmodel;Gegevensmodel;Gegevensmodel;Schema redacteur;Schema;Schema;schema's;Schema's;creëren;verhouding;Verhouding;verwijzing;Verwijzing;
+keywords: Experience Platform;home;populaire onderwerpen;ui;UI;XDM;XDM systeem;ervaringsgegevensmodel;Beleidingsgegevensmodel;Gegevensmodel;Gegevensmodel;Gegevensmodel;Schema-editor;Schema;Schema;Schema;Schema's;Schema's;Maken;Relatie;Referentie;Referentie;
 solution: Experience Platform
 title: Een relatie tussen twee schema's definiëren met de Schema-editor
-description: Dit document verstrekt een zelfstudie voor het bepalen van een verband tussen twee schema's gebruikend de Redacteur van het Schema in het gebruikersinterface van het Experience Platform.
+description: Dit document biedt een zelfstudie voor het definiëren van een relatie tussen twee schema's met behulp van de Schema-editor in de Experience Platform-gebruikersinterface.
 type: Tutorial
 exl-id: feed776b-bc8d-459b-9700-e5c9520788c0
 source-git-commit: 5f9fdc9eff4d8bba049c03058d24e80e9b89e953
@@ -41,7 +41,7 @@ Dit document bevat een zelfstudie voor het definiëren van een relatie tussen tw
 
 >[!NOTE]
 >
->Voor stappen op hoe te om een vele-aan-één verhouding in de Uitgave van Adobe Real-time Customer Data Platform B2B tot stand te brengen, zie de gids op [ het creëren van relaties B2B ](./relationship-b2b.md).
+>Voor stappen op hoe te om een vele-aan-één verhouding in Adobe Real-Time Customer Data Platform B2B edition tot stand te brengen, zie de gids op [ het creëren van B2B verhoudingen ](./relationship-b2b.md).
 
 ## Aan de slag
 
@@ -119,7 +119,7 @@ Het dialoogvenster [!UICONTROL Add relationship] wordt weergegeven. In dit dialo
 
 >[!NOTE]
 >
->Als u toegang tot de Uitgave van Real-Time CDP B2B hebt, kunt u de juiste-spoorcontroles van het canvas gebruiken om een relatieveld te bepalen, evenals een vele-aan-één verhouding te bouwen gebruikend de [ zelfde dialoog ](./relationship-b2b.md#relationship-field).
+>Als u toegang tot Real-Time CDP B2B edition hebt, kunt u de de juiste-spoorcontroles van het canvas gebruiken om een relatieveld te bepalen, evenals een vele-aan-één verhouding te bouwen gebruikend de [ zelfde dialoog ](./relationship-b2b.md#relationship-field).
 
 ![ de Add relatiedialoog.](../images/tutorials/relationship/add-relationship-dialog.png)
 

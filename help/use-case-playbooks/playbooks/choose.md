@@ -41,7 +41,7 @@ Voordat u een afspeelboek maakt en er exemplaren van maakt, moet u het controler
 
 Gebruik de sectie mindmap in een afspeelboek om te begrijpen welke stappen van de workflow u met de afspeellijst kunt oplossen. Visualiseer de stroom van hoe alle geproduceerde voorwerpen u het gebruiksgeval kunnen helpen bereiken, vanuit het perspectief van de persoon die in het gebruiksgeval wordt gericht.
 
-De mindmap begint met een definitie van wie in de gebruikersreis wordt bereikt en beschrijft bij elke stap als iets door Adobe, zoals een nieuw bericht of een herinnering wordt geleverd, of als het iets is dat de gerichte persoon deed dat het volgende bericht of de gebeurtenis teweegbracht.
+De mindmap begint met een definitie van wie wordt bereikt in de gebruikersreis en beschrijft bij elke stap als iets door Adobe wordt geleverd, zoals een nieuw bericht of een herinnering, of als het iets is dat de gerichte persoon deed die het volgende bericht of de gebeurtenis teweegbracht.
 
 ![ benadrukte mindmap van het Playbook.](/help/use-case-playbooks/assets/playbooks/ui-guide/playbook-mindmap.png)
 
@@ -52,7 +52,7 @@ De mindmap begint met een definitie van wie in de gebruikersreis wordt bereikt e
 >title="Assets"
 >abstract="Dit zijn de elementen die worden gegenereerd door dit afspeelboek. Nadat u een instantie van het afspeelboek hebt gemaakt, kunt u de elementen in de inspirerende sandbox bekijken en deze desgewenst naar andere sandboxen promoten."
 
-Inspect de overzichtssectie om te begrijpen welke activa worden geproduceerd zodra u instanties van playbook creeert. De elementen die voor elk afspeelboek worden gegenereerd, worden aangepast aan het gebruiksscenario dat in het afspeelboek wordt ingeschakeld. Meer informatie over alle items in de overzichtssectie vindt u hieronder.
+Controleer de overzichtssectie om te begrijpen welke activa worden geproduceerd zodra u instanties van playbook creeert. De elementen die voor elk afspeelboek worden gegenereerd, worden aangepast aan het gebruiksscenario dat in het afspeelboek wordt ingeschakeld. Meer informatie over alle items in de overzichtssectie vindt u hieronder.
 
 | Item | Beschrijving |
 ---------|----------|

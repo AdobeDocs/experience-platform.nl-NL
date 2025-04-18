@@ -64,7 +64,7 @@ U kunt kiezen uit meerdere soorten publiek, afhankelijk van de oorsprong:
 >Deze stap is alleen van toepassing op bepaalde streamingdoelen voor het publiek. Als uw bestemming geen a **[!UICONTROL Mapping]** stap heeft, overslaan aan [ publiek dat ](#scheduling) plant.
 >
 >Wanneer het activeren van publiek aan het stromen bestemmingen, moet u *minstens één doelidentiteit ook in kaart brengen namespace*, naast de attributen van het doelprofiel. Anders wordt het publiek niet geactiveerd naar het doelplatform.
-> ![Afbeelding van toewijzingsstap die een verplichte naamruimtetoewijzing weergeeft. ](../assets/ui/activate-segment-streaming-destinations/identity-mapping-mandatory.png) {zoomable="yes"}
+> ![Afbeelding van toewijzingsstap die een verplichte naamruimtetoewijzing weergeeft.](../assets/ui/activate-segment-streaming-destinations/identity-mapping-mandatory.png) {zoomable="yes"}
 
 
 Voor sommige doelstreamingdoelen voor het publiek moet u bronkenmerken of naamruimten selecteren om toe te wijzen als doelidentiteiten in de bestemming.

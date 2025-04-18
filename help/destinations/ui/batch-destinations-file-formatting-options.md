@@ -17,7 +17,7 @@ ht-degree: 0%
 
 De optie om diverse dossier te vormen formatterend opties voor de uitgevoerde dossiers is beschikbaar aan u wanneer u [ ](/help/destinations/ui/connect-destination.md) met een op dossier-gebaseerde bestemming, zoals [ Amazon S3 ](/help/destinations/catalog/cloud-storage/amazon-s3.md#connect), [ Azure Blob ](/help/destinations/catalog/cloud-storage/azure-blob.md#connect) verbindt, of [ SFTP ](/help/destinations/catalog/cloud-storage/sftp.md#connect).
 
-U kunt verschillende opmaakopties voor geëxporteerde bestanden configureren met de interface van het Experience Platform. U kunt verschillende eigenschappen van de geëxporteerde bestanden aanpassen aan de vereisten van het systeem voor het ontvangen van bestanden aan uw zijde, zodat u de bestanden die u van het Experience Platform hebt ontvangen, optimaal kunt lezen en interpreteren.
+U kunt verschillende opmaakopties voor geëxporteerde bestanden configureren met de gebruikersinterface van Experience Platform. U kunt verschillende eigenschappen van de geëxporteerde bestanden aanpassen aan de vereisten van het systeem voor het ontvangen van bestanden aan uw zijde, zodat u de bestanden die u van Experience Platform hebt ontvangen, optimaal kunt lezen en interpreteren.
 
 <!--
 * To configure file formatting options for exported files by using the Experience Platform UI, read this document.
@@ -30,9 +30,9 @@ Om het dossier te tonen die opties formatteren, begin [ met bestemmings ](/help/
 
 >[!IMPORTANT]
 >
->Mogelijk zijn niet al deze opties beschikbaar voor de bestemming waarmee u verbinding maakt. Het is aan de bestemmingsontwikkelaar om te bepalen welke dossier het formatteren opties zij in hun bestemming willen steunen. De bestemmingsontwikkelaar kan bepalen welke opties beschikbaar zijn wanneer het verbinden met de bestemming. De vereiste opties zijn duidelijk met een asterisk in de UI van het Experience Platform.
+>Mogelijk zijn niet al deze opties beschikbaar voor de bestemming waarmee u verbinding maakt. Het is aan de bestemmingsontwikkelaar om te bepalen welke dossier het formatteren opties zij in hun bestemming willen steunen. De bestemmingsontwikkelaar kan bepalen welke opties beschikbaar zijn wanneer het verbinden met de bestemming. De vereiste opties zijn gemarkeerd met een sterretje in de gebruikersinterface van Experience Platform.
 > 
->De Adobe-gebouwde bestemmingen van de cloudopslag - [ Amazon S3 ](/help/destinations/catalog/cloud-storage/amazon-s3.md), [ Azure Blob ](/help/destinations/catalog/cloud-storage/azure-blob.md), [ Azure Gegevens Meer Gen2 van de Opslag ](/help/destinations/catalog/cloud-storage/adls-gen2.md), [ Gegevens Landing Zone ](/help/destinations/catalog/cloud-storage/data-landing-zone.md), [ de Opslag van de Wolk van Google ](/help/destinations/catalog/cloud-storage/google-cloud-storage.md), [ SFTP ](/help/destinations/catalog/cloud-storage/sftp.md) - steunt momenteel slechts de zes hieronder benadrukte opties CSV.
+>De Adobe-gebouwde bestemmingen van de wolkenopslag - [ Amazon S3 ](/help/destinations/catalog/cloud-storage/amazon-s3.md), [ Azure Blob ](/help/destinations/catalog/cloud-storage/azure-blob.md), [ Azure Gegevens meer van de Opslag Gen2 ](/help/destinations/catalog/cloud-storage/adls-gen2.md), [ Gegevens Landing Zone ](/help/destinations/catalog/cloud-storage/data-landing-zone.md), [ de Opslag van de Wolk van Google ](/help/destinations/catalog/cloud-storage/google-cloud-storage.md), [ SFTP ](/help/destinations/catalog/cloud-storage/sftp.md) - momenteel steunt slechts de zes hieronder benadrukte opties CSV.
 
 ![ Beeld dat enkele beschikbare dossier het formatteren opties toont.](../assets/ui/batch-destinations-file-formatting-options/file-formatting-options.png)
 
@@ -122,7 +122,7 @@ Bekijk de voorbeelden hieronder van de inhoud van geëxporteerde CSV-bestanden m
 
 * Voorbeeld van uitvoer met **[!UICONTROL null]** geselecteerd: `male,NULL,TestLastName` . In dit geval transformeert Experience Platform de lege waarde in een null-waarde.
 * Voorbeeld uitvoer met **&quot;&quot;** selected: `male,"",TestLastName`. In dit geval transformeert Experience Platform de lege waarde in twee dubbele aanhalingstekens.
-* Voorbeeld van uitvoer met **[!UICONTROL Empty string]** geselecteerd: `male,,TestLastName` . In dit geval behoudt het Experience Platform de lege waarde en exporteert het zoals het is (zonder dubbele aanhalingstekens).
+* Voorbeeld van uitvoer met **[!UICONTROL Empty string]** geselecteerd: `male,,TestLastName` . In dit geval behoudt de Experience Platform de lege waarde en exporteert deze zoals deze is (zonder dubbele aanhalingstekens).
 
 >[!TIP]
 >
