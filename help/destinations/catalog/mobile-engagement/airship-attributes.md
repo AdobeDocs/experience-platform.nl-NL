@@ -3,22 +3,14 @@ keywords: kenmerken van het luchtschip;bestemming van het luchtschip
 title: Koppeling met kenmerken van het luchtschip
 description: Geef naadloos Adobe Audience Data door aan Airship als Audience Attributes voor Doelstelling binnen Airship.
 exl-id: bfc1b52f-2d68-40d6-9052-c2ee1e877961
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 7377b2ffecf59fdb5ca5449daf1387ae1586bd63
 workflow-type: tm+mt
-source-wordcount: '1105'
-ht-degree: 3%
+source-wordcount: '1004'
+ht-degree: 0%
 
 ---
 
 # [!DNL Airship Attributes] verbinding {#airship-attributes-destination}
-
->[!IMPORTANT]
->
->* Vanaf 25 maart 2025 kunt u twee [!DNL Airship Attributes]-kaarten naast elkaar zien in de bestemmingencatalogus. Dit komt door een interne upgrade van de bestemmingsservice. De naam van de bestaande [!DNL Airship Attributes] doelconnector is gewijzigd in **[!UICONTROL (Deprecated) Airship Attributes]** en u hebt nu een nieuwe kaart met de naam **[!UICONTROL Airship Attributes]** beschikbaar.
->* Gebruik de **[!UICONTROL Airship Attributes]** -verbinding in de catalogus voor nieuwe gegevensstromen voor activering. Als u actieve gegevens naar de **[!UICONTROL (Deprecated) Airship Attributes]** -bestemming hebt, worden deze automatisch bijgewerkt, zodat u geen actie hoeft te ondernemen.
->* Als u dataflows door de [ Dienst API van de Stroom ](https://developer.adobe.com/experience-platform-apis/references/destinations/) creeert, moet u uw [!DNL flow spec ID] en [!DNL connection spec ID] aan de volgende waarden bijwerken:
->   * Stroomspecificatie-ID: `a862e0be-966e-4e5a-80d3-1bb566461986`
->   * Verbindingsspecificatie-ID: `594bc002-4a47-49b7-8a98-ac0d21045502`
 
 ## Overzicht {#overview}
 
