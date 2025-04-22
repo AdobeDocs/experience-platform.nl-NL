@@ -2,9 +2,9 @@
 title: Algoritme voor identiteitsoptimalisatie
 description: Leer over het Algoritme van de Optimalisering van de Identiteit in de Dienst van de Identiteit.
 exl-id: 5545bf35-3f23-4206-9658-e1c33e668c98
-source-git-commit: 7174c2c0d8c4ada8d5bba334492bad396c1cfb34
+source-git-commit: a309f0dca5ebe75fcb7abfeb98605aec2692324d
 workflow-type: tm+mt
-source-wordcount: '1560'
+source-wordcount: '1617'
 ht-degree: 0%
 
 ---
@@ -18,7 +18,11 @@ ht-degree: 0%
 
 >[!AVAILABILITY]
 >
->De regels voor identiteitsgrafiekkoppelingen zijn momenteel in Beperkte Beschikbaarheid. Neem contact op met uw Adobe-accountteam voor informatie over hoe u toegang kunt krijgen tot de functie in ontwikkelingssandboxen.
+>De Regels van de Vereniging van de Grafiek van de identiteit zijn momenteel in Beperkte Beschikbaarheid, en kunnen door alle klanten in ontwikkelingszandbakken worden betreden.
+>
+>* **de vereisten van de Activering**: De eigenschap zal inactief blijven tot u vormt en uw [!DNL Identity Settings] bewaart. Zonder deze configuratie, zal het systeem normaal, zonder veranderingen in gedrag blijven werken.
+>* **Belangrijke nota&#39;s**: Tijdens deze Beperkte fase van de Beschikbaarheid, kan de segmentatie van Edge onverwachte resultaten van het segmentlidmaatschap veroorzaken. Streaming en batchsegmentatie functioneren echter naar behoren.
+>* **Volgende stappen**: Voor informatie over hoe te om deze eigenschap in productiestanddozen toe te laten, gelieve uw Adobe accountteam te contacteren.
 
 Het algoritme voor identiteitsoptimalisatie is een grafiekalgoritme voor Identiteitsservice dat ervoor zorgt dat een identiteitsgrafiek representatief is voor één persoon, en dat daardoor ongewenste samenvoeging van identiteiten in Real-Time Klantprofiel voorkomt.
 
@@ -163,9 +167,9 @@ Bekijk het onderstaande diagram om beter te begrijpen hoe anonieme gebeurtenisas
 
 ## Volgende stappen
 
-Lees de volgende documentatie voor meer informatie over koppelingsregels voor identiteitsgrafieken:
+Lees de volgende documentatie voor meer informatie over [!DNL Identity Graph Linking Rules] :
 
-* [Overzicht van regels voor identiteitsgrafiek](./overview.md)
+* [[!DNL Identity Graph Linking Rules]-overzicht](./overview.md)
 * [Implementatiehandleiding](./implementation-guide.md)
 * [Voorbeelden van grafiekconfiguraties](./example-configurations.md)
 * [Problemen oplossen en veelgestelde vragen](./troubleshooting.md)

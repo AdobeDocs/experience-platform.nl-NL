@@ -2,9 +2,9 @@
 title: Voorbeelden van grafiekconfiguraties
 description: Leer over gemeenschappelijke grafiekscenario's die u zou kunnen ontmoeten wanneer het werken met identiteitsgrafiek die regels en identiteitsgegevens verbindt.
 exl-id: fd0afb0b-a368-45b9-bcdc-f2f3b7508cee
-source-git-commit: 7174c2c0d8c4ada8d5bba334492bad396c1cfb34
+source-git-commit: a309f0dca5ebe75fcb7abfeb98605aec2692324d
 workflow-type: tm+mt
-source-wordcount: '2796'
+source-wordcount: '2849'
 ht-degree: 1%
 
 ---
@@ -18,14 +18,18 @@ ht-degree: 1%
 
 >[!AVAILABILITY]
 >
->De regels voor identiteitsgrafiekkoppelingen zijn momenteel in Beperkte Beschikbaarheid. Neem contact op met uw Adobe-accountteam voor informatie over hoe u toegang kunt krijgen tot de functie in ontwikkelingssandboxen.
+>De Regels van de Vereniging van de Grafiek van de identiteit zijn momenteel in Beperkte Beschikbaarheid, en kunnen door alle klanten in ontwikkelingszandbakken worden betreden.
+>
+>* **de vereisten van de Activering**: De eigenschap zal inactief blijven tot u vormt en uw [!DNL Identity Settings] bewaart. Zonder deze configuratie, zal het systeem normaal, zonder veranderingen in gedrag blijven werken.
+>* **Belangrijke nota&#39;s**: Tijdens deze Beperkte fase van de Beschikbaarheid, kan de segmentatie van Edge onverwachte resultaten van het segmentlidmaatschap veroorzaken. Streaming en batchsegmentatie functioneren echter naar behoren.
+>* **Volgende stappen**: Voor informatie over hoe te om deze eigenschap in productiestanddozen toe te laten, gelieve uw Adobe accountteam te contacteren.
 
 >[!NOTE]
 >
 >* &#39;CRMID&#39; en &#39;loginID&#39; zijn aangepaste naamruimten. In dit document is &#39;CRMID&#39; een persoon-id en is &#39;loginID&#39; een aanmeldings-id die aan een bepaalde persoon is gekoppeld.
 >* Als u de voorbeeldgrafiekscenario&#39;s wilt simuleren die in dit document worden beschreven, moet u eerst twee aangepaste naamruimten maken, een met het identiteitssymbool &quot;CRMID&quot; en een ander met het identiteitssymbool &quot;loginID&quot;. Identiteitssymbolen zijn hoofdlettergevoelig.
 
-Dit document schetst de voorbeelden van de grafiekconfiguratie van gemeenschappelijke scenario&#39;s die u zou kunnen ontmoeten wanneer het werken met identiteitsgrafiek die regels en identiteitsgegevens verbindt.
+In dit document worden voorbeelden van grafiekconfiguratie beschreven van veelvoorkomende scenario&#39;s die u kunt tegenkomen wanneer u met [!DNL Identity Graph Linking Rules] en identiteitsgegevens werkt.
 
 ## alleen CRMID
 
@@ -764,9 +768,9 @@ CRMID: Tom, ECID: 111
 
 ## Volgende stappen
 
-Lees de volgende documentatie voor meer informatie over koppelingsregels voor identiteitsgrafieken:
+Lees de volgende documentatie voor meer informatie over [!DNL Identity Graph Linking Rules] :
 
-* [Overzicht van regels voor identiteitsgrafiek](./overview.md)
+* [[!DNL Identity Graph Linking Rules]-overzicht](./overview.md)
 * [Algoritme voor identiteitsoptimalisatie](./identity-optimization-algorithm.md)
 * [Implementatiehandleiding](./implementation-guide.md)
 * [Problemen oplossen en veelgestelde vragen](./troubleshooting.md)

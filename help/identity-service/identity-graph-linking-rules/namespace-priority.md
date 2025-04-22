@@ -2,9 +2,9 @@
 title: Prioriteit naamruimte
 description: Leer over namespace prioriteit in de Dienst van de Identiteit.
 exl-id: bb04f02e-3826-45af-b935-752ea7e6ed7c
-source-git-commit: 8157eaf3d79523995fd50d02234e7873cffcea14
+source-git-commit: a309f0dca5ebe75fcb7abfeb98605aec2692324d
 workflow-type: tm+mt
-source-wordcount: '1801'
+source-wordcount: '1866'
 ht-degree: 1%
 
 ---
@@ -18,7 +18,11 @@ ht-degree: 1%
 
 >[!AVAILABILITY]
 >
->De regels voor identiteitsgrafiekkoppelingen zijn momenteel in Beperkte Beschikbaarheid. Neem contact op met uw Adobe-accountteam voor informatie over hoe u toegang kunt krijgen tot de functie in ontwikkelingssandboxen.
+>De Regels van de Vereniging van de Grafiek van de identiteit zijn momenteel in Beperkte Beschikbaarheid, en kunnen door alle klanten in ontwikkelingszandbakken worden betreden.
+>
+>* **de vereisten van de Activering**: De eigenschap zal inactief blijven tot u vormt en uw [!DNL Identity Settings] bewaart. Zonder deze configuratie, zal het systeem normaal, zonder veranderingen in gedrag blijven werken.
+>* **Belangrijke nota&#39;s**: Tijdens deze Beperkte fase van de Beschikbaarheid, kan de segmentatie van Edge onverwachte resultaten van het segmentlidmaatschap veroorzaken. Streaming en batchsegmentatie functioneren echter naar behoren.
+>* **Volgende stappen**: Voor informatie over hoe te om deze eigenschap in productiestanddozen toe te laten, gelieve uw Adobe accountteam te contacteren.
 
 Elke klantenimplementatie is uniek en gemaakt om de doelstellingen van een bepaalde organisatie te ontmoeten, en als dusdanig, varieert het belang van bepaalde namespace van klant tot klant. Voorbeelden in de praktijk zijn:
 

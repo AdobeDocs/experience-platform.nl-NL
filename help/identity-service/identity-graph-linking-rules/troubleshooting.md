@@ -2,20 +2,24 @@
 title: De Gids van het oplossen van problemen voor de Regels van de Verbinding van de Grafiek van de Identiteit
 description: Leer hoe te om gemeenschappelijke kwesties in identiteitsgrafiek problemen op te lossen die regels verbinden.
 exl-id: 98377387-93a8-4460-aaa6-1085d511cacc
-source-git-commit: 0e7911e21c546fb40cd51f03a5a6d6a2aa751dec
+source-git-commit: a309f0dca5ebe75fcb7abfeb98605aec2692324d
 workflow-type: tm+mt
-source-wordcount: '3331'
+source-wordcount: '3368'
 ht-degree: 0%
 
 ---
 
-# Handleiding voor het oplossen van problemen met koppelingsregels voor identiteitsgrafieken
+# Handleiding voor probleemoplossing voor [!DNL Identity Graph Linking Rules]
 
 >[!AVAILABILITY]
 >
->De regels voor identiteitsgrafiekkoppelingen zijn momenteel in Beperkte Beschikbaarheid. Neem contact op met uw Adobe-accountteam voor informatie over hoe u toegang kunt krijgen tot de functie in ontwikkelingssandboxen.
+>De Regels van de Vereniging van de Grafiek van de identiteit zijn momenteel in Beperkte Beschikbaarheid, en kunnen door alle klanten in ontwikkelingszandbakken worden betreden.
+>
+>* **de vereisten van de Activering**: De eigenschap zal inactief blijven tot u vormt en uw [!DNL Identity Settings] bewaart. Zonder deze configuratie, zal het systeem normaal, zonder veranderingen in gedrag blijven werken.
+>* **Belangrijke nota&#39;s**: Tijdens deze Beperkte fase van de Beschikbaarheid, kan de segmentatie van Edge onverwachte resultaten van het segmentlidmaatschap veroorzaken. Streaming en batchsegmentatie functioneren echter naar behoren.
+>* **Volgende stappen**: Voor informatie over hoe te om deze eigenschap in productiestanddozen toe te laten, gelieve uw Adobe accountteam te contacteren.
 
-Wanneer u regels voor identiteitsgrafieken test en valideert, kan er een aantal problemen optreden die te maken hebben met gegevensinvoer en grafiekgedrag. Lees dit document om te leren hoe te om sommige gemeenschappelijke kwesties problemen op te lossen die u zou kunnen ontmoeten wanneer het werken met identiteitsgrafiek die regels verbindt.
+Terwijl u [!DNL Identity Graph Linking Rules] test en valideert, kan het gebeuren dat er problemen optreden met betrekking tot gegevensinvoer en grafiekgedrag. Lees dit document om te leren hoe u een aantal algemene problemen kunt oplossen die u kunt tegenkomen wanneer u met [!DNL Identity Graph Linking Rules] werkt.
 
 ## Overzicht gegevensinvoer {#data-ingestion-flow-overview}
 
@@ -55,7 +59,7 @@ Er zijn verschillende redenen waarom dit zou kunnen gebeuren, waaronder, maar ni
 * Door gebrek, [ worden AIDs geblokkeerd van opname ](../guardrails.md#identity-namespace-ingestion).
 * De identiteit wordt verwijderd wegens [ systeemgidsen ](../guardrails.md#understanding-the-deletion-logic-when-an-identity-graph-at-capacity-is-updated).
 
-Binnen de context van identiteitsgrafiek die regels verbindt, kan een verslag van de Dienst van de Identiteit worden verworpen omdat de inkomende gebeurtenis twee of meer identiteiten met zelfde unieke namespace maar verschillende identiteitswaarde heeft. Dit scenario gebeurt gewoonlijk als gevolg van implementatiefouten.
+Binnen de context van [!DNL Identity Graph Linking Rules] kan een record van Identity Service worden geweigerd omdat de inkomende gebeurtenis twee of meer identiteiten heeft met dezelfde unieke naamruimte maar andere identiteitswaarde. Dit scenario gebeurt gewoonlijk als gevolg van implementatiefouten.
 
 Overweeg het volgende evenement met twee veronderstellingen:
 
@@ -318,11 +322,11 @@ U kunt de volgende vraag in de de uitvoerdataset van de profielmomentopname gebr
 
 >[!TIP]
 >
->De twee hierboven vermelde vragen zullen verwachte resultaten opleveren als de zandbak niet voor de gedeelde interimbenadering van het apparaat wordt toegelaten en zich anders gedraagt dan de identiteitsgrafiek die regels verbindt.
+>De twee hierboven vermelde query&#39;s leveren verwachte resultaten op als de sandbox niet is ingeschakeld voor de interimaanpak van het gedeelde apparaat en zich anders gedraagt dan [!DNL Identity Graph Linking Rules] .
 
 ## Veelgestelde vragen {#faq}
 
-Deze sectie schetst een lijst van antwoorden op vaak gestelde vragen over de verbindingsregels van de identiteitsgrafiek.
+In deze sectie wordt een lijst met antwoorden op veelgestelde vragen over [!DNL Identity Graph Linking Rules] beschreven.
 
 ## Algoritme voor identiteitsoptimalisatie {#identity-optimization-algorithm}
 
@@ -389,7 +393,7 @@ Het algoritme voor identiteitsoptimalisatie wordt eerst toegepast om te zorgen d
 
 ## Testen
 
-Lees deze sectie voor antwoorden op vaak gestelde vragen over het testen van en het zuiveren eigenschappen in identiteitsgrafiek die regels verbinden.
+Lees deze sectie voor antwoorden op veelgestelde vragen over het testen van en het zuiveren van eigenschappen in [!DNL Identity Graph Linking Rules].
 
 ### Wat zijn enkele scenario&#39;s die ik zou moeten testen in een omgeving van de ontwikkelingszandbak?
 

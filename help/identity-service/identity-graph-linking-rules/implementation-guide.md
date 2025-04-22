@@ -2,9 +2,9 @@
 title: Implementatiegids voor koppelingsregels voor identiteitsgrafieken
 description: Leer de aanbevolen stappen die u moet volgen wanneer u uw gegevens implementeert met configuraties van regels voor identiteitsgrafieken.
 exl-id: 368f4d4e-9757-4739-aaea-3f200973ef5a
-source-git-commit: 45fdce7dc50b237edc511047ec150ecdd6adce50
+source-git-commit: a309f0dca5ebe75fcb7abfeb98605aec2692324d
 workflow-type: tm+mt
-source-wordcount: '1823'
+source-wordcount: '1876'
 ht-degree: 0%
 
 ---
@@ -13,7 +13,11 @@ ht-degree: 0%
 
 >[!AVAILABILITY]
 >
->De regels voor identiteitsgrafiekkoppelingen zijn momenteel in Beperkte Beschikbaarheid. Neem contact op met uw Adobe-accountteam voor informatie over hoe u toegang kunt krijgen tot de functie in ontwikkelingssandboxen.
+>De Regels van de Vereniging van de Grafiek van de identiteit zijn momenteel in Beperkte Beschikbaarheid, en kunnen door alle klanten in ontwikkelingszandbakken worden betreden.
+>
+>* **de vereisten van de Activering**: De eigenschap zal inactief blijven tot u vormt en uw [!DNL Identity Settings] bewaart. Zonder deze configuratie, zal het systeem normaal, zonder veranderingen in gedrag blijven werken.
+>* **Belangrijke nota&#39;s**: Tijdens deze Beperkte fase van de Beschikbaarheid, kan de segmentatie van Edge onverwachte resultaten van het segmentlidmaatschap veroorzaken. Streaming en batchsegmentatie functioneren echter naar behoren.
+>* **Volgende stappen**: Voor informatie over hoe te om deze eigenschap in productiestanddozen toe te laten, gelieve uw Adobe accountteam te contacteren.
 
 >[!IMPORTANT]
 >
@@ -33,7 +37,7 @@ Stapsgewijze omtrek:
 
 ## Vereisten voor de implementatie {#prerequisites-for-implementation}
 
-In deze sectie worden de vereiste stappen beschreven die u moet voltooien voordat u identiteitsgrafiek implementeert die regels aan uw gegevens koppelt.
+In deze sectie worden de vereiste stappen beschreven die u moet uitvoeren voordat u [!DNL Identity Graph Linking Rules] aan uw gegevens kunt implementeren.
 
 ### Unieke naamruimte
 
@@ -291,9 +295,9 @@ In dit voorbeeld wordt ook getoond dat Tom en Summer verschillende persoonentite
 
 ## Volgende stappen
 
-Lees de volgende documentatie voor meer informatie over koppelingsregels voor identiteitsgrafieken:
+Lees de volgende documentatie voor meer informatie over [!DNL Identity Graph Linking Rules] :
 
-* [Overzicht van regels voor identiteitsgrafiek](./overview.md)
+* [[!DNL Identity Graph Linking Rules]-overzicht](./overview.md)
 * [Algoritme voor identiteitsoptimalisatie](./identity-optimization-algorithm.md)
 * [Voorbeelden van grafiekconfiguraties](./example-configurations.md)
 * [Problemen oplossen en veelgestelde vragen](./troubleshooting.md)

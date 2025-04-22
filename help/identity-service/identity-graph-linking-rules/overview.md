@@ -2,14 +2,14 @@
 title: Identiteitsgrafiekkoppelingsregels
 description: Leer over identiteitsgrafiek die regels in de Dienst van de Identiteit verbindt.
 exl-id: 317df52a-d3ae-4c21-bcac-802dceed4e53
-source-git-commit: 9243da3ebe5e963ec457da5ae3e300e852787d37
+source-git-commit: a309f0dca5ebe75fcb7abfeb98605aec2692324d
 workflow-type: tm+mt
-source-wordcount: '1476'
+source-wordcount: '1497'
 ht-degree: 0%
 
 ---
 
-# Overzicht van regels voor identiteitsgrafiek {#identity-graph-linking-rules-overview}
+# [!DNL Identity Graph Linking Rules]-overzicht {#identity-graph-linking-rules-overview}
 
 >[!CONTEXTUALHELP]
 >id="platform_identities_linkingrules_overview"
@@ -18,17 +18,21 @@ ht-degree: 0%
 
 >[!AVAILABILITY]
 >
->De regels voor identiteitsgrafiekkoppelingen zijn momenteel in Beperkte Beschikbaarheid. Neem contact op met uw Adobe-accountteam voor informatie over hoe u toegang kunt krijgen tot de functie in ontwikkelingssandboxen.
+>De Regels van de Vereniging van de Grafiek van de identiteit zijn momenteel in Beperkte Beschikbaarheid, en kunnen door alle klanten in ontwikkelingszandbakken worden betreden.
+>
+>* **de vereisten van de Activering**: De eigenschap zal inactief blijven tot u vormt en uw [!DNL Identity Settings] bewaart. Zonder deze configuratie, zal het systeem normaal, zonder veranderingen in gedrag blijven werken.
+>* **Belangrijke nota&#39;s**: Tijdens deze Beperkte fase van de Beschikbaarheid, kan de segmentatie van Edge onverwachte resultaten van het segmentlidmaatschap veroorzaken. Streaming en batchsegmentatie functioneren echter naar behoren.
+>* **Volgende stappen**: Voor informatie over hoe te om deze eigenschap in productiestanddozen toe te laten, gelieve uw Adobe accountteam te contacteren.
 
-Met Adobe Experience Platform Identity Service en Real-Time Customer Profile is het eenvoudig om aan te nemen dat uw gegevens perfect zijn opgenomen en dat alle samengevoegde profielen één persoon vertegenwoordigen via een personenteken, zoals een CRMID. Er zijn echter scenario&#39;s waarin bepaalde gegevens kunnen proberen meerdere verschillende profielen samen te voegen tot één profiel (grafiek samenvouwen). Om deze ongewenste samenvoegingen te verhinderen, kunt u configuraties gebruiken die door identiteitsgrafiek worden verstrekt die regels verbindt en voor nauwkeurige verpersoonlijking voor uw gebruikers toestaan.
+Met Adobe Experience Platform Identity Service en Real-Time Customer Profile is het eenvoudig om aan te nemen dat uw gegevens perfect zijn opgenomen en dat alle samengevoegde profielen één persoon vertegenwoordigen via een personenteken, zoals een CRMID. Er zijn echter scenario&#39;s waarin bepaalde gegevens kunnen proberen meerdere verschillende profielen samen te voegen tot één profiel (grafiek samenvouwen). Om deze ongewenste samenvoegingen te voorkomen, kunt u configuraties gebruiken die via [!DNL Identity Graph Linking Rules] worden geleverd en nauwkeurige personalisatie voor uw gebruikers mogelijk maken.
 
-Bekijk de volgende video voor aanvullende informatie over het gebruik van koppelingsregels voor identiteitsgrafieken:
+Bekijk de volgende video voor meer informatie over het gebruik van [!DNL Identity Graph Linking Rules] :
 
 >[!VIDEO](https://video.tv.adobe.com/v/3448250/?learn=on&enablevpops)
 
 ## Aan de slag
 
-De volgende documenten zijn essentieel voor het begrijpen van identiteitsgrafiek die regels met elkaar verbindt.
+De volgende documenten zijn essentieel voor het begrijpen van [!DNL Identity Graph Linking Rules] .
 
 * [Algoritme voor identiteitsoptimalisatie](./identity-optimization-algorithm.md)
 * [Implementatiehandleiding](./implementation-guide.md)
@@ -45,7 +49,7 @@ De volgende documenten zijn essentieel voor het begrijpen van identiteitsgrafiek
 >title="Grafiek vouwscenario&#39;s"
 >abstract="Er zijn meerdere redenen waarom grafieken kunnen &#39;samenvouwen&#39; of meerdere personen-entiteiten kunnen vertegenwoordigen."
 
-Deze sectie schetst voorbeeldscenario&#39;s die u kunt overwegen wanneer het vormen van identiteitsgrafiek die regels verbindt.
+In deze sectie worden voorbeeldscenario&#39;s beschreven die u in overweging kunt nemen bij het configureren van [!DNL Identity Graph Linking Rules] .
 
 ### Gedeeld apparaat
 
@@ -61,7 +65,7 @@ Er zijn gevallen waarin meerdere aanmeldingen op één apparaat kunnen plaatsvin
 
 In deze gevallen, vanuit grafiekstandpunt, zonder toegelaten grenzen, zal één enkele ECID met veelvoudige CRMIDs worden verbonden.
 
-Met de regels voor identiteitsgrafieken kunt u:
+Met [!DNL Identity Graph Linking Rules] kunt u:
 
 * Vorm identiteitskaart die voor login als uniek herkenningsteken wordt gebruikt. U kunt bijvoorbeeld een grafiek beperken tot het opslaan van slechts één identiteit met een CRMID-naamruimte en zo die CRMID definiëren als de unieke id van een gedeeld apparaat.
    * Op deze manier kunt u ervoor zorgen dat CRMID&#39;s niet worden samengevoegd met de ECID.
@@ -72,7 +76,7 @@ Er zijn ook instanties van gebruikers die valse waarden als telefoonaantallen en
 
 ![ een diagram dat ongeldige e-mail of telefoonscenario&#39;s vertegenwoordigt.](../images/identity-settings/invalid-email-phone.png)
 
-Met de regels voor identiteitsgrafieken kunt u:
+Met [!DNL Identity Graph Linking Rules] kunt u:
 
 * Configureer de CRMID, het telefoonnummer of het e-mailadres als de unieke id en beperkt zo één persoon tot slechts één CRMID, telefoonnummer en/of e-mailadres dat aan zijn account is gekoppeld.
 
@@ -89,11 +93,11 @@ Deze identiteiten zouden in de volgende grafieken kunnen resulteren, waar veelvo
 
 ![ een grafiekvoorbeeld van identiteitsgegevens met onjuiste of slechte identiteitswaarden.](../images/identity-settings/bad-data.png)
 
-Met identiteitsgrafiek die regels verbindt kunt u CRMID als unieke herkenningsteken vormen om ongewenste profiel te verhinderen die als gevolg van dit type gegevens ineenstorten.
+Met [!DNL Identity Graph Linking Rules] kunt u de CRMID configureren als de unieke id om te voorkomen dat ongewenst profiel samenvouwt als gevolg van dit type gegevens.
 
-## Koppelingsregels voor identiteitsgrafiek {#identity-graph-linking-rules}
+## [!DNL Identity Graph Linking Rules] {#identity-graph-linking-rules}
 
-Met de regels voor identiteitsgrafiek kunt u:
+Met [!DNL Identity Graph Linking Rules] kunt u:
 
 * Maak één identiteitsgrafiek/samengevoegd profiel voor elke gebruiker door unieke naamruimten te configureren, waardoor twee verschillende personen-id&#39;s niet in één identiteitsgrafiek kunnen worden samengevoegd.
 * Online geverifieerde gebeurtenissen aan de persoon koppelen door prioriteiten te configureren
@@ -151,7 +155,7 @@ Voor meer informatie, lees de gids over [ namespace prioriteit ](./namespace-pri
 
 ## Volgende stappen
 
-Lees de volgende documentatie voor meer informatie over koppelingsregels voor identiteitsgrafieken:
+Lees de volgende documentatie voor meer informatie over [!DNL Identity Graph Linking Rules] :
 
 * [Algoritme voor identiteitsoptimalisatie](./identity-optimization-algorithm.md)
 * [Implementatiehandleiding](./implementation-guide.md)

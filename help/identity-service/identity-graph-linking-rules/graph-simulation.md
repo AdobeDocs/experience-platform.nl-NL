@@ -2,9 +2,9 @@
 title: UI-gids voor grafieksimulatie
 description: Leer hoe te om de Simulatie van de Grafiek in de Dienst UI van de Identiteit te gebruiken.
 exl-id: 89f0cf6e-c43f-40ec-859a-f3b73a6da8c8
-source-git-commit: 7174c2c0d8c4ada8d5bba334492bad396c1cfb34
+source-git-commit: a309f0dca5ebe75fcb7abfeb98605aec2692324d
 workflow-type: tm+mt
-source-wordcount: '1465'
+source-wordcount: '1526'
 ht-degree: 0%
 
 ---
@@ -18,8 +18,11 @@ ht-degree: 0%
 
 >[!AVAILABILITY]
 >
->* De regels voor identiteitsgrafiekkoppelingen zijn momenteel in Beperkte Beschikbaarheid. Neem contact op met uw Adobe-accountteam voor informatie over hoe u toegang kunt krijgen tot de functie in ontwikkelingssandboxen.
+>De Regels van de Vereniging van de Grafiek van de identiteit zijn momenteel in Beperkte Beschikbaarheid, en kunnen door alle klanten in ontwikkelingszandbakken worden betreden.
 >
+>* **de vereisten van de Activering**: De eigenschap zal inactief blijven tot u vormt en uw [!DNL Identity Settings] bewaart. Zonder deze configuratie, zal het systeem normaal, zonder veranderingen in gedrag blijven werken.
+>* **Belangrijke nota&#39;s**: Tijdens deze Beperkte fase van de Beschikbaarheid, kan de segmentatie van Edge onverwachte resultaten van het segmentlidmaatschap veroorzaken. Streaming en batchsegmentatie functioneren echter naar behoren.
+>* **Volgende stappen**: Voor informatie over hoe te om deze eigenschap in productiestanddozen toe te laten, gelieve uw Adobe accountteam te contacteren.
 >* Uw rekening moet de **toestemming hebben van de Grafiek van de Identiteit van de Mening** om tot het [!DNL Graph Simulation] hulpmiddel toegang te hebben. Voor meer informatie, lees de [ gids op toestemmingen in op attributen-gebaseerde toegangscontrole ](../../access-control/abac/ui/permissions.md).
 
 [!DNL Graph Simulation] is een hulpmiddel in de Dienst UI van de Identiteit die u kunt gebruiken om te simuleren hoe een identiteitsgrafiek zich op een bepaalde combinatie van identiteiten gedraagt en hoe u het [ algoritme van de identiteitsoptimalisering ](./identity-optimization-algorithm.md) vormt.
@@ -182,7 +185,7 @@ In de onderstaande voorbeeldgrafiek bestaat een stippellijn tussen `{Email: tom@
 
 Door dit document te lezen, weet u nu hoe u het gereedschap [!DNL Graph Simulation] kunt gebruiken om beter te begrijpen hoe uw identiteitsgegevens worden behandeld op basis van een bepaalde set regels en configuraties. Lees de volgende documenten voor meer informatie:
 
-* [Overzicht van regels voor identiteitsgrafiek](./overview.md)
+* [[!DNL Identity Graph Linking Rules]-overzicht](./overview.md)
 * [Algoritme voor identiteitsoptimalisatie](./identity-optimization-algorithm.md)
 * [Implementatiehandleiding](./implementation-guide.md)
 * [Problemen oplossen en veelgestelde vragen](./troubleshooting.md)
