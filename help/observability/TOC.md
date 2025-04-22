@@ -1,13 +1,13 @@
 ---
 audience: user
 user-guide-title: Handleiding voor Inzichten in waarneembaarheid
-user-guide-description: Kom te weten hoe u de activiteiten van Experience Platform kunt controleren, gebruikend statistische metriek en gebeurtenisberichten van Adobe Experience Platform Observability Inghts.
+user-guide-description: Meer informatie over het bewaken van de activiteiten van het Experience Platform via statistische metriek en gebeurtenisberichten uit de Adobe Experience Platform Observability Insights.
 feature: Observability
 role: Developer
 source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
 source-wordcount: '57'
-ht-degree: 22%
+ht-degree: 59%
 
 ---
 
