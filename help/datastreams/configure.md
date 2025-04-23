@@ -2,7 +2,7 @@
 title: Gegevensstromen maken en configureren
 description: Leer hoe u uw client-side Web SDK-integratie kunt verbinden met andere Adobe-producten en andere bestemmingen.
 exl-id: 4924cd0f-5ec6-49ab-9b00-ec7c592397c8
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 637f7d68c0de93ede5ee808b68a0066f6abe52c9
 workflow-type: tm+mt
 source-wordcount: '2638'
 ht-degree: 0%
@@ -81,7 +81,7 @@ Apparaat- en hardwaregegevens gebruiken de `context` arraytekenreeks `"device"` 
 
 Zorg er ook voor dat elk gewenst XDM-veld in uw schema voorkomt. Als dit niet het geval is, kunt u de door Adobe verschafte `Environment Details` veldgroep toevoegen aan uw schema.
 
-### Geavanceerde opties configureren {#@advanced-options}
+### Geavanceerde opties configureren {#advanced-options}
 
 Selecteer **[!UICONTROL Advanced Options]** om geavanceerde configuratieopties weer te geven. Hier, kunt u extra gegevensstroommontages, zoals IP obfuscation, de koekjes van eerste identiteitskaart van de Partij, en meer vormen.
 
