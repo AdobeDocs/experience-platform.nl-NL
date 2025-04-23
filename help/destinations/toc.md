@@ -5,9 +5,9 @@ user-guide-description: Activeer uw bekende en onbekende gegevens voor cross-cha
 description: In dit document wordt de inhoudsopgave voor Adobe Experience Platform-doelen weergegeven
 feature: Destinations
 role: Admin,User
-source-git-commit: df047593a14ce6683dc04a6ba6518e6d0810c43d
+source-git-commit: b456540a59c4b0455e8e1d52ed98d97454f8f61f
 workflow-type: tm+mt
-source-wordcount: '1282'
+source-wordcount: '1286'
 ht-degree: 2%
 
 ---
@@ -243,6 +243,7 @@ ht-degree: 2%
          * [Ondersteunde transformatiefuncties](./destination-sdk/functionality/destination-server/supported-functions.md)
          * [Configuratie bestandsindeling](./destination-sdk/functionality/destination-server/file-formatting.md)
       * Componenten voor doelconfiguratie {#destination-configuration}
+         * [Type publieksgegevens configureren](./destination-sdk/functionality/destination-configuration/audience-data-type.md)
          * [Configuratie van klantverificatie](./destination-sdk/functionality/destination-configuration/customer-authentication.md)
          * [OAuth2-vergunning](./destination-sdk/functionality/destination-configuration/oauth2-authorization.md)
          * [Gegevensvelden van de klant](./destination-sdk/functionality/destination-configuration/customer-data-fields.md)
