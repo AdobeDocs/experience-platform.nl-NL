@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Handleiding voor de API voor batchverwerking
 description: Dit document bevat een uitgebreide handleiding voor ontwikkelaars die werken met batch-opname-API's voor Adobe Experience Platform.
 exl-id: 4ca9d18d-1b65-4aa7-b608-1624bca19097
-source-git-commit: e52eb90b64ae9142e714a46017cfd14156c78f8b
+source-git-commit: 0e484dffa38d454561f9d67c6bea92f426d3515d
 workflow-type: tm+mt
-source-wordcount: '2383'
+source-wordcount: '2435'
 ht-degree: 1%
 
 ---
@@ -27,7 +27,9 @@ Alvorens verder te gaan, te herzien gelieve het [ partij ingestie API overzicht 
 
 >[!NOTE]
 >
->De volgende stappen zijn van toepassing op kleine bestanden (256 MB of minder). Als u een gatewayonderbreking of de fouten van de verzoeklichaamsomvang raakt, moet u op grote dossier schakelen uploadt.
+>- De volgende stappen zijn van toepassing op kleine bestanden (256 MB of minder). Als u een gatewayonderbreking of de fouten van de verzoeklichaamsomvang raakt, moet u op grote dossier schakelen uploadt.
+>
+>- Gebruik Single-line JSON in plaats van multi-line JSON als invoer voor batch-opname. Single-line JSON biedt betere prestaties omdat het systeem één invoerbestand in meerdere delen kan verdelen en parallel kan verwerken, terwijl JSON met meerdere regels niet kan worden gesplitst. Dit kan de kosten voor gegevensverwerking aanzienlijk verlagen en de latentie voor batchverwerking aanzienlijk verbeteren.
 
 ### Batch maken
 
@@ -405,7 +407,7 @@ curl -X POST https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}
 
 ### Grote bestandskoppels uploaden
 
-Nadat het bestand is gemaakt, kunnen alle volgende elementen worden geüpload door herhaalde PATCH-aanvragen te maken, één voor elke sectie van het bestand.
+Nadat het bestand is gemaakt, kunnen alle volgende hoofdstukken worden geüpload door herhaalde PATCH-aanvragen te maken, één voor elke sectie van het bestand.
 
 **API formaat**
 
@@ -720,7 +722,7 @@ curl -X POST https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}
 
 ## Een batch verwijderen {#delete-a-batch}
 
-Een partij kan worden geschrapt door het volgende verzoek van de POST met de `action=REVERT` vraagparameter aan identiteitskaart van de partij uit te voeren u wenst om te schrappen. De partij is gemerkt als &quot;inactief&quot;, die het voor huisvuilinzameling in aanmerking laten komen. De partij wordt asynchroon verzameld, waarna de partij als &quot;geschrapt&quot;zal worden gemerkt.
+Een partij kan worden geschrapt door het volgende POST- verzoek met de `action=REVERT` vraagparameter aan identiteitskaart van de partij uit te voeren u wenst om te schrappen. De partij is gemerkt als &quot;inactief&quot;, die het voor huisvuilinzameling in aanmerking laten komen. De partij wordt asynchroon verzameld, waarna de partij als &quot;geschrapt&quot;zal worden gemerkt.
 
 **API formaat**
 
@@ -915,7 +917,7 @@ curl -X POST https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}
 
 ## Bijlage
 
-De volgende sectie bevat aanvullende informatie voor het innemen van gegevens in Experience Platforms door middel van batch-inname.
+De volgende sectie bevat aanvullende informatie voor het innemen van gegevens in Experience Platform door middel van batch-inname.
 
 ### Gegevenstransformatie voor batch-opname
 
