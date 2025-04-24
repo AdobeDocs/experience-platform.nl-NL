@@ -3,9 +3,9 @@ keywords: bestemmingen; vragen; veelgestelde vragen; vk; bestemmingen vk
 title: Veelgestelde vragen
 description: Antwoorden op de meest gestelde vragen over Adobe Experience Platform-bestemmingen
 exl-id: 2c34ecd0-a6d0-48dd-86b0-a144a6acf61a
-source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
+source-git-commit: 7f3459f678c74ead1d733304702309522dd0018b
 workflow-type: tm+mt
-source-wordcount: '1672'
+source-wordcount: '1670'
 ht-degree: 0%
 
 ---
@@ -201,7 +201,7 @@ Nr, [ SDK van het Web ](../web-sdk/home.md) wordt niet vereist om publiek aan [ 
 
 Nochtans, als [[!DNL at.js] ](https://experienceleague.adobe.com/docs/target-dev/developer/client-side/at-js-implementation/overview.html) in plaats van Web SDK wordt gebruikt, slechts wordt de volgende-zittingsverpersoonlijking gesteund.
 
-Voor [ zelfde-pagina en volgende-pagina verpersoonlijking ](ui/activate-edge-personalization-destinations.md) gebruiksgevallen, moet u of [ SDK van het Web ](../web-sdk/home.md) of [ Server API van Edge Network ](../server-api/overview.md) gebruiken. Zie de documentatie bij [ activerend publiek aan randbestemmingen ](ui/activate-edge-personalization-destinations.md) voor meer implementatiedetails.
+Voor [ zelfde-pagina en volgende-pagina verpersoonlijking ](ui/activate-edge-personalization-destinations.md) gebruiksgevallen, moet u of [ SDK van het Web ](../web-sdk/home.md) of [ Edge Network API ](https://developer.adobe.com/data-collection-apis/docs/api/) gebruiken. Zie de documentatie bij [ activerend publiek aan randbestemmingen ](ui/activate-edge-personalization-destinations.md) voor meer implementatiedetails.
 +++
 
 ### Is er een grens op het aantal attributen die ik van het Platform van de Gegevens van de Klant in real time naar Adobe Target of een bestemming van de Douane Personalization kan verzenden?
@@ -244,10 +244,10 @@ Dit wordt momenteel niet gesteund door de Doelen UI. Neem contact op met uw Adob
 Wanneer u een doel verwijdert, worden alle soorten publiek en kenmerken die onder het doel zijn toegewezen, uit Adobe Target verwijderd en uit de Edge Network verwijderd.
 +++
 
-### Werkt de integratie met de Edge Network Server-API?
+### Werkt de integratie met de Edge Network API?
 
 +++Antwoord
-Ja, de Edge Network Server-API werkt met de Custom Personalization-bestemming. Aangezien profielkenmerken gevoelige gegevens kunnen bevatten, vereist de aangepaste Personalization-bestemming dat u de Edge Network Server-API voor gegevensverzameling gebruikt. Voorts moeten alle API vraag in een [ voor authentiek verklaarde context ](../server-api/authentication.md) worden gemaakt.
+Ja, de Edge Network API werkt met de Custom Personalization-bestemming. Aangezien profielkenmerken gevoelige gegevens kunnen bevatten, vereist de aangepaste Personalization-bestemming dat u de Edge Network API voor gegevensverzameling gebruikt om deze gegevens te beveiligen. Voorts moeten alle API vraag in een [ voor authentiek verklaarde context ](https://developer.adobe.com/data-collection-apis/docs/getting-started/authentication/) worden gemaakt.
 +++
 
 ### Ik kan slechts één samenvoegbeleid hebben dat actief-op-rand is. Kan ik een publiek opbouwen dat een ander samenvoegbeleid gebruikt en ze nog steeds naar Adobe Target sturen als streaming publiek?

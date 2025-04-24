@@ -3,9 +3,9 @@ title: Kenmerken van randprofielen in real-time opzoeken
 description: Leer hoe u Edge-profielkenmerken in real-time opzoekt met de aangepaste Personalization-bestemming en de Edge Network-API
 type: Tutorial
 exl-id: e185d741-af30-4706-bc8f-d880204d9ec7
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 7f3459f678c74ead1d733304702309522dd0018b
 workflow-type: tm+mt
-source-wordcount: '1835'
+source-wordcount: '1839'
 ht-degree: 0%
 
 ---
@@ -30,7 +30,7 @@ Bij het configureren van het gebruiksscenario dat op deze pagina wordt beschreve
 * [ Datastreams ](../../datastreams/overview.md): Een gegevensstroom ontvangt inkomende gebeurtenisgegevens van het Web SDK en antwoordt met de gegevens van het randprofiel.
 * [ het Beleid van de Fusie ](../../segmentation/ui/segment-builder.md#merge-policies): U zult een [!UICONTROL Active-On-Edge] fusiebeleid creëren om ervoor te zorgen dat de randprofielen de correcte profielgegevens gebruiken.
 * [ de verbinding van Personalization van de Douane ](../catalog/personalization/custom-personalization.md): U zult een nieuwe verbinding van de douaneverpersoonlijking vormen die de profielattributen naar Edge Network zal verzenden.
-* [ Edge Network API ](../../server-api/overview.md): U zult de Edge Network API [ interactieve functionaliteit van de gegevensinzameling ](../../server-api/interactive-data-collection.md) gebruiken om profielattributen van de randprofielen snel terug te winnen.
+* [ Edge Network API ](https://developer.adobe.com/data-collection-apis/docs/): U zult de Edge Network API [ interactieve functionaliteit van de gegevensinzameling ](https://developer.adobe.com/data-collection-apis/docs/endpoints/interact/) gebruiken om profielattributen van de randprofielen snel terug te winnen.
 
 ## Prestatiegerichten {#guardrails}
 
@@ -166,7 +166,7 @@ De volgende stap bestaat uit het configureren van uw personalisatieoplossing om 
 
 >[!IMPORTANT]
 >
->Profielkenmerken kunnen vertrouwelijke gegevens bevatten. Om deze gegevens te beschermen, moet u de profielattributen door [ Edge Network API ](../../server-api/overview.md) terugwinnen. Voorts moet u de profielattributen via het Edge Network API [ interactieve eindpunt van de gegevensinzameling ](../../server-api/interactive-data-collection.md) terugwinnen, opdat de API vraag voor authentiek wordt verklaard.
+>Profielkenmerken kunnen vertrouwelijke gegevens bevatten. Om deze gegevens te beschermen, moet u de profielattributen door [ Edge Network API ](https://developer.adobe.com/data-collection-apis/docs/getting-started/) terugwinnen. Voorts moet u de profielattributen via het Edge Network API [ interactieve eindpunt van de gegevensinzameling ](https://developer.adobe.com/data-collection-apis/docs/endpoints/interact/) terugwinnen, opdat de API vraag voor authentiek wordt verklaard.
 ><br>Als u de bovenstaande vereisten niet opvolgt, wordt de personalisatie alleen gebaseerd op het lidmaatschap van het publiek en zijn de profielkenmerken niet beschikbaar voor u.
 
 De gegevensstroom die u in [ stap 1 ](#create-datastream) vormde is nu klaar om inkomende gebeurtenisgegevens goed te keuren en met de informatie van het randprofiel te antwoorden.

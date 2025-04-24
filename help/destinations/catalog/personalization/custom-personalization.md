@@ -3,9 +3,9 @@ keywords: aangepaste personalisatie; bestemming; ervaring met aangepaste bestemm
 title: Aangepaste verpersoonlijkingsverbinding
 description: Deze bestemming verstrekt externe verpersoonlijking, inhoudsbeheersystemen, en servers, en andere toepassingen die op uw plaats lopen een manier om publieksinformatie van Adobe Experience Platform terug te winnen. Deze bestemming verstrekt verpersoonlijking in real time die op het gebruikersprofiellidmaatschap wordt gebaseerd.
 exl-id: 2382cc6d-095f-4389-8076-b890b0b900e3
-source-git-commit: 0f70e072402bca055b96195ded91816810759fc2
+source-git-commit: 25697d341b2970eeb20d9f2507ee701ade8046d3
 workflow-type: tm+mt
-source-wordcount: '924'
+source-wordcount: '926'
 ht-degree: 0%
 
 ---
@@ -23,9 +23,9 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
->Profielkenmerken kunnen vertrouwelijke gegevens bevatten. Om dit gegeven te beschermen, moet u [ de Server API van Edge Network gebruiken API ](/help/server-api/overview.md) wanneer het vormen van de **[!UICONTROL Custom Personalization]** bestemming voor op attribuut-gebaseerde verpersoonlijking. Alle Server API vraag moet in een [ voor authentiek verklaarde context ](../../../server-api/authentication.md) worden gemaakt.
+>Profielkenmerken kunnen vertrouwelijke gegevens bevatten. Om dit gegeven te beschermen, moet u [ Edge Network API ](https://developer.adobe.com/data-collection-apis/docs/) gebruiken wanneer het vormen van de **[!UICONTROL Custom Personalization]** bestemming voor op attribuut-gebaseerde verpersoonlijking. Alle Edge Network API vraag moet in een [ voor authentiek verklaarde context ](https://developer.adobe.com/data-collection-apis/docs/getting-started/authentication) worden gemaakt.
 >
-><br> u kunt profielattributen via de [ Server API van Edge Network terugwinnen API ](/help/server-api/overview.md) door een server-zijintegratie toe te voegen die de zelfde gegevensstroom gebruikt die u reeds voor uw implementatie van het Web of Mobiele SDK gebruikt.
+><br> u kunt profielattributen via [ Edge Network API ](https://developer.adobe.com/data-collection-apis/docs/) terugwinnen door een server-zijintegratie toe te voegen die de zelfde gegevensstroom gebruikt die u reeds voor uw implementatie van het Web of Mobiele SDK gebruikt.
 >
 ><br> als u niet de hierboven vereisten volgt, zal de verpersoonlijking op publiekslidmaatschap slechts gebaseerd zijn.
 
@@ -39,7 +39,7 @@ Deze bestemming vereist het gebruik van één van de volgende methodes van de ge
 
 * Gebruik [ SDK van het Web van Adobe Experience Platform ](/help/web-sdk/home.md) als u gegevens van uw website wilt verzamelen.
 * Gebruik [ Adobe Experience Platform Mobile SDK ](https://developer.adobe.com/client-sdks/documentation/) als u gegevens van uw mobiele toepassing wilt verzamelen.
-* Gebruik [ de Server API van Edge Network ](../../../server-api/overview.md) als u [ SDK van het Web ](/help/web-sdk/home.md) of [ Mobiele SDK ](https://developer.adobe.com/client-sdks/documentation/) niet gebruikt, of als u de gebruikerservaring wilt personaliseren die op profielattributen wordt gebaseerd.
+* Gebruik [ Edge Network API ](https://developer.adobe.com/data-collection-apis/docs/) als u [ SDK van het Web ](/help/web-sdk/home.md) of [ Mobiele SDK ](https://developer.adobe.com/client-sdks/documentation/) niet gebruikt, of als u de gebruikerservaring wilt personaliseren die op profielattributen wordt gebaseerd.
 
 >[!IMPORTANT]
 >

@@ -2,16 +2,16 @@
 title: Verbeter gegevensverzameling met weersgegevens van DNL het Weather Channel
 description: Verbeter de gegevens die u via gegevensstromen met weersgegevens van DNL het Weather Kanaal verzamelt.
 exl-id: 548dfca7-2548-46ac-9c7e-8190d64dd0a4
-source-git-commit: 041a1782442df5f08bb52e4e450734a51c7781ea
+source-git-commit: 7f3459f678c74ead1d733304702309522dd0018b
 workflow-type: tm+mt
-source-wordcount: '647'
+source-wordcount: '649'
 ht-degree: 1%
 
 ---
 
 # Verbeter gegevensverzameling met weersgegevens van [!DNL The Weather Channel]
 
-Adobe heeft met [!DNL [The Weather Company]](https://www.ibm.com/weather) samengewerkt om de extra context van het weer in de Verenigde Staten te brengen aan de gegevens die via gegevensstromen worden verzameld. U kunt deze gegevens gebruiken voor analyses, het richten, en publieksverwezenlijking in Experience Platform.
+Adobe heeft samengewerkt met [!DNL [The Weather Company]](https://www.ibm.com/weather) om de extra context van het weer in de Verenigde Staten te brengen aan de gegevens die via gegevensstreams worden verzameld. U kunt deze gegevens gebruiken voor analyses, doelgroepen en het maken van doelgroepen in Experience Platform.
 
 Er zijn drie typen gegevens beschikbaar via [!DNL The Weather Channel] :
 
@@ -28,19 +28,19 @@ Er zijn drie typen gegevens beschikbaar via [!DNL The Weather Channel] :
 Voordat u weergegevens gebruikt, moet u controleren of aan de volgende voorwaarden is voldaan:
 
 * U moet een licentie geven voor de weergegevens die u gebruikt vanuit [!DNL The Weather Channel] . Ze zullen het dan inschakelen op je account.
-* Weer-gegevens zijn alleen beschikbaar via gegevensstreams. Om weergegevens te gebruiken, moet u [!DNL Web SDK] gebruiken, [!DNL Mobile Edge Extension] of [ Server API ](../../server-api/overview.md) om deze gegevens te omvatten.
+* Weer-gegevens zijn alleen beschikbaar via gegevensstreams. Om weergegevens te gebruiken, moet u [!DNL Web SDK] gebruiken, [!DNL Mobile Edge Extension] of [ Edge Network API ](https://developer.adobe.com/data-collection-apis/docs/api/) om deze gegevens te omvatten.
 * Voor uw gegevensstroom moet [[!UICONTROL Geo Location]](../configure.md#advanced-options) zijn ingeschakeld.
 * Voeg de [ groep van het weergebied ](#schema-configuration) aan het schema toe dat u gebruikt.
 
 ## Inrichting {#provisioning}
 
-Nadat u een licentie voor de gegevens van [!DNL The Weather Channel] hebt verkregen, kan uw account toegang krijgen tot de gegevens. Vervolgens moet u de klantenservice van de Adobe bereiken om de gegevens op uw gegevensstroom te kunnen inschakelen. Als deze optie is ingeschakeld, worden de gegevens automatisch toegevoegd.
+Nadat u een licentie voor de gegevens van [!DNL The Weather Channel] hebt verkregen, kan uw account toegang krijgen tot de gegevens. Vervolgens moet u contact opnemen met de klantenservice van Adobe om de gegevens op uw gegevensstroom in te schakelen. Als deze optie is ingeschakeld, worden de gegevens automatisch toegevoegd.
 
-U kunt bevestigen dat het door een randspoor met debugger in werking te stellen of door Verzekering te gebruiken wordt toegevoegd om een klap door [!DNL Edge Network] te vinden.
+U kunt controleren of het wordt toegevoegd door een randspoor met debugger in werking te stellen of door Assurance te gebruiken om een klap door [!DNL Edge Network] te vinden.
 
 ### Schema-configuratie {#schema-configuration}
 
-U moet de groepen van het weergebied aan uw schema van het Experience Platform toevoegen die aan de gebeurtenisdataset beantwoorden u in uw gegevensstroom gebruikt. Er zijn vijf veldgroepen beschikbaar:
+U moet de groepen van het weergebied aan uw schema van Experience Platform toevoegen die aan de gebeurtenisdataset beantwoorden u in uw gegevensstroom gebruikt. Er zijn vijf veldgroepen beschikbaar:
 
 * [!UICONTROL Forecasted Weather]
 * [!UICONTROL Current Weather]
@@ -66,11 +66,11 @@ In [!DNL Adobe Customer Journey Analytics] zijn de weergegevens beschikbaar in d
 
 ### Real-Time Customer Data Platform {#rtcdp}
 
-De gegevens van het Weer zijn beschikbaar in [ Real-time Customer Data Platform ](../../rtcdp/overview.md), voor gebruik in publiek. Weezelgegevens worden gekoppeld aan gebeurtenissen.
+De gegevens van het Weer zijn beschikbaar in [ Real-Time Customer Data Platform ](../../rtcdp/overview.md), voor gebruik in publiek. Weezelgegevens worden gekoppeld aan gebeurtenissen.
 
 ![ de Bouwer van het Element die Weer Gebeurtenissen ](../assets/data-enrichment/weather/schema-builder.png) toont
 
-Aangezien de weersomstandigheden vaak veranderen, adviseert de Adobe dat u tijdbeperkingen op het publiek, zoals aangetoond in het bovenstaande voorbeeld plaatst. Een koude dag in de laatste twee is veel impacter dan een koude dag zes maanden geleden.
+Aangezien de weersomstandigheden vaak veranderen, raadt Adobe u aan om tijdbeperkingen in te stellen voor het publiek, zoals in het bovenstaande voorbeeld wordt getoond. Een koude dag in de laatste twee is veel impacter dan een koude dag zes maanden geleden.
 
 Zie [ weerverwijzing ](weather-reference.md) voor de beschikbare gebieden.
 

@@ -1,12 +1,12 @@
 ---
 title: Visitor-identificatie via FPID
-description: Leer hoe u bezoekers consistent kunt identificeren via de server-API met de FPID
-seo-description: Learn how to consistently identify visitors via the Server API, by using the FPID
+description: Leer hoe u bezoekers consistent kunt identificeren via de Edge Network API, met de FPID
+seo-description: Learn how to consistently identify visitors via the Edge Network API, by using the FPID
 keywords: edge network;gateway;api;bezoeker;identificatie;fpid
 exl-id: c61d2e7c-7b5e-4b14-bd52-13dde34e32e3
-source-git-commit: 1ab1c269fd43368e059a76f96b3eb3ac4e7b8388
+source-git-commit: 7f3459f678c74ead1d733304702309522dd0018b
 workflow-type: tm+mt
-source-wordcount: '348'
+source-wordcount: '349'
 ht-degree: 0%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 0%
 
 `FPID` kan als onderdeel van `identityMap` in de aanvraagtekst van de API worden opgenomen of als cookie worden verzonden.
 
-Een `FPID` kan deterministisch worden omgezet in een `ECID` door de Edge Network, zodat `FPID` -identiteiten volledig compatibel zijn met oplossingen voor Experiencen Cloud. Het verkrijgen van een `ECID` van een specifieke `FPID` geeft altijd hetzelfde resultaat, zodat gebruikers een consistente ervaring hebben.
+Een `FPID` kan deterministisch worden omgezet in een `ECID` door de Edge Network, zodat `FPID` -identiteiten volledig compatibel zijn met Experience Cloud-oplossingen. Het verkrijgen van een `ECID` van een specifieke `FPID` geeft altijd hetzelfde resultaat, zodat gebruikers een consistente ervaring hebben.
 
 De op deze manier verkregen `ECID` kan worden opgehaald via een `identity.fetch` -query:
 
@@ -35,7 +35,7 @@ De op deze manier verkregen `ECID` kan worden opgehaald via een `identity.fetch`
 
 Voor aanvragen die zowel een `FPID` als een `ECID` bevatten, heeft de eigenschap `ECID` die al in de aanvraag aanwezig is, voorrang op de aanvraag die kan worden gegenereerd vanuit de `FPID` . Met andere woorden, de Edge Network gebruikt de `ECID` die al is opgegeven en de `FPID` wordt genegeerd. Een nieuwe `ECID` wordt alleen gegenereerd wanneer een `FPID` op zichzelf wordt geleverd.
 
-Wat apparaat-id&#39;s betreft, moeten de `server` gegevensstromen `FPID` gebruiken als apparaat-id. Andere identiteiten (d.w.z. `EMAIL`) kunnen ook binnen de aanvraaginstantie worden verstrekt, maar de Edge Network vereist dat een primaire identiteit uitdrukkelijk wordt verstrekt. Primaire identiteit is de basisidentiteit waarin de profielgegevens worden opgeslagen.
+Wat apparaat-id&#39;s betreft, moeten de `server` gegevensstromen `FPID` gebruiken als apparaat-id. Andere identiteiten (d.w.z. `EMAIL`) kunnen ook binnen de aanvraaginstantie worden opgegeven, maar de Edge Network vereist dat expliciet een primaire identiteit wordt opgegeven. Primaire identiteit is de basisidentiteit waarin de profielgegevens worden opgeslagen.
 
 >[!NOTE]
 >
@@ -84,7 +84,7 @@ De volgende `identityMap` -veldgroep resulteert in een foutreactie wanneer deze 
 }
 ```
 
-De foutreactie die in dit geval door de Edge Network wordt geretourneerd, is vergelijkbaar met de volgende:
+De door de Edge Network in dit geval geretourneerde foutreactie is vergelijkbaar met de volgende:
 
 ```json
 {

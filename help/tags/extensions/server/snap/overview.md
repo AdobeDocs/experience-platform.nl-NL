@@ -3,7 +3,7 @@ title: Overzicht van de extensie Snapchat Conversion API
 description: Gebruik de Snapchat-conversie om gebeurtenisgegevens op de server naar Snap te verzenden.
 last-substantial-update: 2025-01-20T00:00:00Z
 exl-id: 1c2d7243-5bcd-40a0-8515-9ab72613c5f3
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 7f3459f678c74ead1d733304702309522dd0018b
 workflow-type: tm+mt
 source-wordcount: '920'
 ht-degree: 0%
@@ -12,7 +12,7 @@ ht-degree: 0%
 
 # [!DNL Snapchat] Overzicht van conversie-API
 
-De [!DNL Snap] Uitbreiding van de Omzetting API is een veilige [ API van de Server van Edge Network ](/help/server-api/overview.md) interface die u toestaat om informatie met [!DNL Snapchat] over gebruikersacties op uw websites direct te delen. U kunt de regels voor het doorsturen van gebeurtenissen gebruiken om gegevens van **[!DNL Adobe Experience Platform Edge Network]** naar **[!DNL Snapchat]** te verzenden met de API-extensie **[!DNL Snap]** Conversion.
+De [!DNL Snap] Uitbreiding van de Omzetting API is een veilige [ Edge Network API ](https://developer.adobe.com/data-collection-apis/docs/) interface die u toestaat om informatie met [!DNL Snapchat] direct over gebruikersacties op uw websites te delen. U kunt de regels voor het doorsturen van gebeurtenissen gebruiken om gegevens van **[!DNL Adobe Experience Platform Edge Network]** naar **[!DNL Snapchat]** te verzenden met de API-extensie **[!DNL Snap]** Conversion.
 
 ## [!DNL Snapchat] voorwaarden {#prerequisites}
 

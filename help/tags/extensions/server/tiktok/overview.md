@@ -1,9 +1,9 @@
 ---
-title: Adobe TikTok webgebeurtenissen API-extensie Integratie
+title: Adobe TikTok Web events API-extensie Integratie
 description: Met deze Adobe Experience Platform-API voor webgebeurtenissen kunt u interacties van websites rechtstreeks delen met TikTok.
 last-substantial-update: 2023-09-26T00:00:00Z
 exl-id: 14b8e498-8ed5-4330-b1fa-43fd1687c201
-source-git-commit: 4ee895cb8371646fd2013e2a8f65c2ffdae95850
+source-git-commit: 7f3459f678c74ead1d733304702309522dd0018b
 workflow-type: tm+mt
 source-wordcount: '1048'
 ht-degree: 1%
@@ -12,7 +12,7 @@ ht-degree: 1%
 
 # [!DNL TikTok] API-extensieoverzicht van webgebeurtenissen
 
-De [!DNL TikTok] gebeurtenissen API is een veilige [ API van de Server van de Edge Network ](/help/server-api/overview.md) interface die u toestaat om informatie met [!DNL TikTok] direct over gebruikersacties op uw websites te delen. U kunt de regels voor het doorsturen van gebeurtenissen gebruiken om gegevens van [!DNL Adobe Experience Platform Edge Network] naar [!DNL TikTok] te verzenden met de API-extensie [!DNL TikTok] Webgebeurtenissen.
+De [!DNL TikTok] gebeurtenissen API is een veilige [ Edge Network API ](https://developer.adobe.com/data-collection-apis/docs/) interface die u toestaat om informatie met [!DNL TikTok] direct over gebruikersacties op uw websites te delen. U kunt de regels voor het doorsturen van gebeurtenissen gebruiken om gegevens van [!DNL Adobe Experience Platform Edge Network] naar [!DNL TikTok] te verzenden met de API-extensie [!DNL TikTok] Webgebeurtenissen.
 
 ## [!DNL TikTok] voorwaarden {#prerequisites}
 
@@ -52,7 +52,7 @@ Selecteer **[!UICONTROL Save]** als u klaar bent.
 
 Zodra al uw gegevenselementen opstelling zijn, kunt u gebeurtenis beginnen tot stand te brengen die regels bepaalt wanneer en hoe uw gebeurtenissen naar [!DNL TikTok] zullen worden verzonden.
 
-Creeer een nieuwe [ regel ](../../../ui/managing-resources/rules.md) in uw gebeurtenis door:sturen bezit. Voeg onder **[!UICONTROL Actions]** een nieuwe handeling toe en stel de extensie in op **[!UICONTROL TikTok Web Events API Extension]** . Als u Edge Network-gebeurtenissen naar [!DNL TikTok] wilt verzenden, stelt u de waarde **[!UICONTROL Action Type]** in op **[!UICONTROL Send TikTok Web Events API Event].**
+Creeer een nieuwe [ regel ](../../../ui/managing-resources/rules.md) in uw gebeurtenis door:sturen bezit. Voeg onder **[!UICONTROL Actions]** een nieuwe handeling toe en stel de extensie in op **[!UICONTROL TikTok Web Events API Extension]** . Als u Edge Network-gebeurtenissen naar [!DNL TikTok] wilt verzenden, stelt u de eigenschap **[!UICONTROL Action Type]** to **[!UICONTROL Send TikTok Web Events API Event]in.**
 
 ![ het [!UICONTROL Send TikTok Web Events API Event] actietype dat voor een [!DNL TikTok] regel in de Inzameling UI van Gegevens wordt geselecteerd.](../../../images/extensions/server/tiktok/select-action.png)
 
@@ -82,7 +82,7 @@ De parameters van de gebruikerscontext bevatten klantinformatie die wordt gebrui
 | Gebruikersagent | De niet-gehashte gebruikersagent van het apparaat van de gebruiker. |
 | Email | E-mailadres van de contactpersoon die aan de conversiegebeurtenis is gekoppeld. |
 | Telefoon | Het telefoonaantal moet in formaat E164 zijn [+] [landcode] [ gebiedscode ][local phone number] alvorens het hakken. |
-| Cookie-id | Als u de SDK van Pixel gebruikt, wordt automatisch een unieke id opgeslagen in het cookie van `_ttp` als cookies zijn ingeschakeld. De waarde `_ttp` kan voor dit veld worden geëxtraheerd en gebruikt. |
+| Cookie-id | Als u Pixel gebruikt, slaat SDK automatisch een unieke id op in het cookie `_ttp` als cookies zijn ingeschakeld. De waarde `_ttp` kan voor dit veld worden geëxtraheerd en gebruikt. |
 | Externe id | Om het even welk uniek herkenningsteken zoals gebruiker IDs, externe koekjesidentiteitskaarts etc. en moet met SHA256 worden gehakt. |
 | TikTok Click ID | De `ttclid` die aan de URL van de bestemmingspagina wordt toegevoegd telkens als een advertentie op [!DNL TikTok] wordt geselecteerd. |
 | Pagina-URL | De pagina-URL op het moment van de gebeurtenis. |
@@ -116,9 +116,9 @@ Gebruik de parameters van eigenschappen om extra gesteunde eigenschappen te vorm
 
 ## Gebeurtenisdeduplicatie {#deduplication}
 
-[!DNL TikTok] pixel moet worden ingesteld voor deduplicatie als u zowel de [!DNL TikTok] pixel SDK als de [!DNL TikTok] web events API-extensie gebruikt om dezelfde gebeurtenissen naar [!DNL TikTok] te verzenden.
+[!DNL TikTok] -pixel moet worden ingesteld voor deduplicatie als u zowel de [!DNL TikTok] pixel SDK- als de [!DNL TikTok] web events API-extensie gebruikt om dezelfde gebeurtenissen naar [!DNL TikTok] te verzenden.
 
-Deduplicatie is niet vereist als verschillende gebeurtenistypen zonder overlapping van de client en server worden verzonden. Om ervoor te zorgen dat uw rapportage geen negatieve gevolgen heeft, moet u ervoor zorgen dat elke afzonderlijke gebeurtenis die wordt gedeeld door de [!DNL TikTok] pixel SDK en de [!DNL TikTok] web events API-extensie, wordt gededupliceerd.
+Deduplicatie is niet vereist als verschillende gebeurtenistypen zonder overlapping van de client en server worden verzonden. Om ervoor te zorgen dat uw rapportage geen negatieve gevolgen heeft, moet u ervoor zorgen dat elke afzonderlijke gebeurtenis die wordt gedeeld door de extensie [!DNL TikTok] pixel SDK en de [!DNL TikTok] web events API, wordt gededupliceerd.
 
 Wanneer u gedeelde gebeurtenissen verzendt, moet u ervoor zorgen dat elke gebeurtenis een pixel-id, gebeurtenis-id en naam bevat. Gedupliceerde gebeurtenissen die binnen vijf minuten na elkaar aankomen, worden samengevoegd. Als het gegevensveld niet aanwezig was in de eerste gebeurtenis, wordt dit gecombineerd met de volgende gebeurtenis. Eventuele dubbele gebeurtenissen die binnen 48 uur zijn ontvangen, worden verwijderd.
 

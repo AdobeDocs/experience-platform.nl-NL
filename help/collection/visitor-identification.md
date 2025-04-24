@@ -1,19 +1,19 @@
 ---
 title: Identificatie bezoeker
-description: Leer hoe bezoekers worden geïdentificeerd met de Adobe Experience Platform Edge Network Server API
-seo-description: Learn how Adobe Experience Platform Edge Network Server API identifies visitors
+description: Meer informatie over bezoekers met de Adobe Experience Platform Edge Network API
+seo-description: Learn how Adobe Experience Platform Edge Network API identifies visitors
 keywords: edge network;gateway;api;bezoeker;identificatie
 exl-id: aa2f3b83-5cc8-4e02-9119-edfd5e212588
-source-git-commit: 3272db15283d427eb4741708dffeb8141f61d5ff
+source-git-commit: 7f3459f678c74ead1d733304702309522dd0018b
 workflow-type: tm+mt
-source-wordcount: '151'
-ht-degree: 1%
+source-wordcount: '149'
+ht-degree: 2%
 
 ---
 
 # Identificatie bezoeker
 
-De server API van de Edge Network steunt [ bezoekersidentificatie via identiteitskaart van de Eerste Partij ([!DNL FPID]) ](visitor-identification-fpid.md).
+Edge Network API steunt [ bezoekersidentificatie via identiteitskaart van de Eerste Partij ([!DNL FPID]) ](visitor-identification-fpid.md).
 
 Alle gebruikersidentiteiten moeten worden opgegeven in de veldgroep `identityMap` . Deze veldgroep is opgenomen in de mix AEP Web SDK `ExperienceEvent` .
 
@@ -42,7 +42,7 @@ Er zijn meerdere manieren waarop een apparaat kan worden geïdentificeerd binnen
 
 | ID-naamruimte | Beheerd door | Beschrijving |
 | --- | --- | --- |
-| `FPID` | Klant | `FPID` wordt automatisch door de Edge Network gecodeerd in een `ECID` . Daarom werken oplossingen waarvoor een `ECID` vereist is, ook.  <br><br> Voor een consistente apparaatidentificatie moeten deze id&#39;s op het apparaat worden voortgezet en op elk verzoek worden opgegeven. Voor webinteracties moeten deze worden opgeslagen als browsercookies. |
+| `FPID` | Klant | `FPID` wordt automatisch gecodeerd in een `ECID` door de Edge Network. Daarom werken oplossingen waarvoor een `ECID` vereist is, ook.  <br><br> Voor een consistente apparaatidentificatie moeten deze id&#39;s op het apparaat worden voortgezet en op elk verzoek worden opgegeven. Voor webinteracties moeten deze worden opgeslagen als browsercookies. |
 | `IDFA`/`GAID` | Experience Platform | Kan gebruikers in verschillende toepassingen identificeren, zodat deze id&#39;s niet in `ECID` worden gecodeerd door de Edge Network. |
 
 <!--

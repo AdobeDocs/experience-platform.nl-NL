@@ -1,30 +1,30 @@
 ---
-title: Hybride verpersoonlijking die Web SDK en de Server API van de Edge Network gebruikt
-description: Dit artikel toont aan hoe u SDK van het Web samen met de Server API kunt gebruiken om hybride verpersoonlijking op uw Webeigenschappen op te stellen.
+title: Hybride personalisatie met Web SDK en Edge Network API
+description: In dit artikel wordt getoond hoe u de Web SDK in combinatie met de Edge Network API kunt gebruiken om hybride personalisatie op uw wegeigenschappen in te voeren.
 keywords: personalisatie; hybride; server-API; server-side; hybride implementatie;
 exl-id: 506991e8-701c-49b8-9d9d-265415779876
-source-git-commit: 9489b5345c2b13b9d05b26d646aa7f1576840fb8
+source-git-commit: 7f3459f678c74ead1d733304702309522dd0018b
 workflow-type: tm+mt
-source-wordcount: '853'
+source-wordcount: '860'
 ht-degree: 1%
 
 ---
 
-# Hybride verpersoonlijking die Web SDK en de Server API van de Edge Network gebruikt
+# Hybride personalisatie met Web SDK en Edge Network API
 
 ## Overzicht {#overview}
 
-Hybdrid verpersoonlijking beschrijft het proces om verpersoonlijkingsinhoud server-kant terug te winnen, gebruikend de [ Server API van de Edge Network ](../../server-api/overview.md), en het terug te geven cliënt-kant, gebruikend [ Web SDK ](../home.md).
+Hybdrid verpersoonlijking beschrijft het proces om verpersoonlijkingsinhoud server-kant terug te winnen, gebruikend [ Edge Network API ](https://developer.adobe.com/data-collection-apis/docs/api/), en het terug te geven cliënt-kant, gebruikend [ SDK van het Web ](../home.md).
 
-U kunt hybride personalisatie met verpersoonlijkingsoplossingen zoals Adobe Target, Adobe Journey Optimizer, of Offer decisioning gebruiken, het verschil is de inhoud van de [!UICONTROL Server API] lading.
+U kunt hybride personalisatie met verpersoonlijkingsoplossingen zoals Adobe Target, Adobe Journey Optimizer, of Offer Decisioning gebruiken, het verschil is de inhoud van de [!UICONTROL Edge Network API] lading.
 
 ## Vereisten {#prerequisites}
 
 Controleer of u aan de volgende voorwaarden voldoet voordat u hybride personalisatie gaat implementeren op uw webeigenschappen:
 
-* U hebt besloten welke personalisatieoplossing u wilt gebruiken. Dit is van invloed op de inhoud van de [!UICONTROL Server API] payload.
-* U hebt toegang tot een toepassingsserver waarmee u [!UICONTROL Server API] aanroepen kunt uitvoeren.
-* U hebt toegang tot [ de Server API van de Edge Network ](../../server-api/authentication.md).
+* U hebt besloten welke personalisatieoplossing u wilt gebruiken. Dit is van invloed op de inhoud van de [!UICONTROL Edge Network API] payload.
+* U hebt toegang tot een toepassingsserver waarmee u [!UICONTROL Edge Network API] aanroepen kunt uitvoeren.
+* U hebt toegang tot [ Edge Network API ](https://developer.adobe.com/data-collection-apis/docs/api/).
 * U hebt correct [ gevormd ](/help/web-sdk/commands/configure/overview.md) en opgesteld SDK van het Web op de pagina&#39;s die u wilt personaliseren.
 
 ## Stroomdiagram {#flow-diagram}
@@ -35,10 +35,10 @@ In het onderstaande stroomdiagram wordt de volgorde beschreven van de stappen di
 
 1. Eventuele bestaande cookies die eerder door de browser zijn opgeslagen, vooraf ingesteld door `kndctr_` , worden opgenomen in de browseraanvraag.
 1. De clientwebbrowser vraagt de webpagina op van uw toepassingsserver.
-1. Wanneer de toepassingsserver het paginaverzoek ontvangt, doet het a `POST` verzoek aan het [ de interactieve eindpunt van de gegevensinzameling van de Server API ](../../server-api/interactive-data-collection.md) om verpersoonlijkingsinhoud te halen. De aanvraag `POST` bevat een `event` en een `query` . De cookies uit de vorige stap, indien beschikbaar, worden opgenomen in de array `meta>state>entries` .
-1. De server-API retourneert de verpersoonlijkingsinhoud naar uw toepassingsserver.
+1. Wanneer de toepassingsserver het paginaverzoek ontvangt, doet het a `POST` verzoek aan het [ Edge Network API interactieve eindpunt van de gegevensinzameling ](https://developer.adobe.com/data-collection-apis/docs/endpoints/interact/) om verpersoonlijkingsinhoud te halen. De aanvraag `POST` bevat een `event` en een `query` . De cookies uit de vorige stap, indien beschikbaar, worden opgenomen in de array `meta>state>entries` .
+1. De Edge Network API retourneert de personalisatie-inhoud naar uw toepassingsserver.
 1. De toepassingsserver keert een reactie van HTML op cliëntbrowser terug, die de [ identiteit en clusterkoekjes ](#cookies) bevatten.
-1. Op de clientpagina wordt de opdracht [!DNL Web SDK] `applyResponse` aangeroepen, waarbij de koppen en de hoofdtekst van het [!UICONTROL Server API] -antwoord uit de vorige stap worden doorgegeven.
+1. Op de clientpagina wordt de opdracht [!DNL Web SDK] `applyResponse` aangeroepen, waarbij de koppen en de hoofdtekst van het [!UICONTROL Edge Network API] -antwoord uit de vorige stap worden doorgegeven.
 1. [!DNL Web SDK] geeft de aanbiedingen van het Doel [[!DNL Visual Experience Composer (VEC)] ](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html) en de punten van het Kanaal van Journey Optimizer automatisch terug, omdat de `renderDecisions` vlag aan `true` wordt geplaatst.
 1. Doelformuliergebaseerde [!DNL HTML]/[!DNL JSON] -aanbiedingen en Journey Optimizer-ervaringen op basis van code worden handmatig toegepast via de `applyProposition` -methode om de [!DNL DOM] bij te werken op basis van de personalisatie-inhoud in het voorstel.
 1. Voor op vorm-gebaseerde [!DNL HTML]/ [!DNL JSON] aanbiedingen van het Doel en op code-gebaseerde ervaringen van Journey Optimizer, moeten de vertoningsgebeurtenissen manueel worden verzonden om erop te wijzen wanneer de teruggekeerde inhoud is getoond. Dit gebeurt via de opdracht `sendEvent` .
@@ -50,11 +50,11 @@ Cookies worden gebruikt om de gebruikersidentiteit en clusterinformatie voort te
 | Cookie | Doel | Opgeslagen door | Verzonden door |
 |---|---|---|---|
 | `kndctr_AdobeOrg_identity` | Bevat identiteitsgegevens van de gebruiker. | Applicatieserver | Applicatieserver |
-| `kndctr_AdobeOrg_cluster` | Geeft aan welke Edge Network-cluster moet worden gebruikt om aan de aanvragen te voldoen. | Applicatieserver | Applicatieserver |
+| `kndctr_AdobeOrg_cluster` | Geeft aan met welke Edge Network-cluster de aanvragen moeten worden vervuld. | Applicatieserver | Applicatieserver |
 
 ## Verzoek om plaatsing {#request-placement}
 
-Server-API-aanvragen zijn vereist om proposities op te halen en een weergavemelding te verzenden. Wanneer u een hybride implementatie gebruikt, doet de toepassingsserver deze aanvragen aan de server-API.
+Edge Network API-aanvragen zijn vereist voor het ophalen van voorstellen en het verzenden van een weergavemelding. Wanneer u een hybride implementatie gebruikt, doet de toepassingsserver deze aanvragen aan de Edge Network API.
 
 | Verzoek | Door |
 |---|---|
@@ -70,14 +70,14 @@ Wanneer u [ een gegevensstroom ](../../datastreams/overview.md) voor Analytics v
 Het voorbeeld van deze implementatie gebruikt twee verschillende gegevensstromen:
 
 * Een gegevensstroom die voor Analytics wordt gevormd. Deze gegevensstroom wordt gebruikt voor de interactie van SDK van het Web.
-* Een tweede gegevensstroom zonder een configuratie Analytics. Deze gegevensstroom wordt gebruikt voor server API verzoeken. U moet deze gegevensstroom met de zelfde bestemmingsconfiguratie vormen zoals de gegevensstroom die u voor Analytics vormde.
+* Een tweede gegevensstroom zonder een configuratie Analytics. Deze gegevensstroom wordt gebruikt voor Edge Network API-aanvragen. U moet deze gegevensstroom met de zelfde bestemmingsconfiguratie vormen zoals de gegevensstroom die u voor Analytics vormde.
 
 Op deze manier registreert de server-side aanvraag geen Analytics-gebeurtenissen, maar de client-side aanvragen wel. Dit leidt ertoe dat de verzoeken van de Analyse nauwkeurig worden geteld.
 
 
 ## Verzoek op de server {#server-side-request}
 
-De voorbeeldaanvraag hieronder illustreert een Server API-aanvraag die uw toepassingsserver kan gebruiken om de personalisatie-inhoud op te halen.
+De voorbeeldaanvraag hieronder illustreert een Edge Network API-aanvraag die uw toepassingsserver kan gebruiken om de personalisatie-inhoud op te halen.
 
 >[!IMPORTANT]
 >
@@ -163,11 +163,11 @@ curl -X POST "https://edge.adobedc.net/ee/v2/interact?dataStreamId={DATASTREAM_I
 | Parameter | Type | Vereist | Beschrijving |
 | --- | --- | --- | --- |
 | `dataStreamId` | `String` | Ja. | De id van de gegevensstroom die u gebruikt om de interacties door te geven aan de Edge Network. Zie het [ overzicht van gegevensstromen ](../../datastreams/overview.md) leren hoe te om een gegevensstroom te vormen. |
-| `requestId` | `String` | Nee | Een willekeurige id voor correlerende interne serveraanvragen. Als niets wordt verstrekt, zal de Edge Network één produceren en zal het in de reactie terugkeren. |
+| `requestId` | `String` | Nee | Een willekeurige id voor correlerende interne serveraanvragen. Als er niets wordt opgegeven, genereert de Edge Network er een en retourneert deze het antwoord. |
 
 ### Serverreactie {#server-response}
 
-De voorbeeldreactie hieronder laat zien hoe de API-reactie van de server eruit zou kunnen zien.
+De voorbeeldreactie hieronder laat zien hoe de Edge Network API-respons eruit zou kunnen zien.
 
 
 ```json

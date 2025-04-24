@@ -2,10 +2,10 @@
 title: Aanvullende informatie van augustus 2022 voor Adobe Experience Platform
 description: Aanvullende informatie van augustus 2022 voor Adobe Experience Platform.
 exl-id: dbf1e7a3-8599-4991-8932-f57d3b1c640d
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 25697d341b2970eeb20d9f2507ee701ade8046d3
 workflow-type: tm+mt
-source-wordcount: '1965'
-ht-degree: 21%
+source-wordcount: '1967'
+ht-degree: 22%
 
 ---
 
@@ -94,7 +94,7 @@ Meer over [!DNL Data Prep] leren, zie het [[!DNL Data Prep]  overzicht ](../../d
 
 | Functie | Beschrijving |
 | ----------- | ----------- |
-| (Beta) Op kenmerken gebaseerde ondersteuning voor personalisatie voor verpersoonlijkingsdoelen | Met de bètaversie van op attribuut-gebaseerde verpersoonlijking, zult u twee nieuwe kaarten in de [ bestemmingscatalogus ](../../destinations/catalog/overview.md) zien: <ul><li>**[!UICONTROL Adobe Target V2]**: Deze connector bevindt zich momenteel in bèta en is alleen beschikbaar voor een beperkt aantal klanten. Naast de functionaliteit die door de kaart van Adobe Target V1 wordt verstrekt, voegt de schakelaar van het Doel V2 a [ kaartstap ](/help/destinations/ui/activate-edge-personalization-destinations.md#map-attributes) aan het activeringswerkschema toe, dat u toestaat om profielattributen aan Adobe Target in kaart te brengen, toelatend op attribuut-gebaseerde zelfde-pagina en volgende-pagina verpersoonlijking.</li><li>**[!UICONTROL Custom Personalization With Attributes]**: Deze connector bevindt zich momenteel in bèta en is alleen beschikbaar voor een beperkt aantal klanten. Naast de functionaliteit die door **[!UICONTROL Custom Personalization]** wordt verstrekt, voegt de **[!UICONTROL Custom Personalization With Attributes]** schakelaar een facultatieve [ toewijzingsstap ](../../destinations/ui/activate-edge-personalization-destinations.md#map-attributes) aan het activeringswerkschema toe, dat u toestaat om profielattributen aan uw douaneverpersoonlijkingsbestemming in kaart te brengen, toelatend op attribuut-gebaseerde zelfde-pagina en volgende-pagina verpersoonlijking.</li></ul> <br> Profielkenmerken kunnen vertrouwelijke gegevens bevatten. Om dit gegeven te beschermen, vereist de **[!UICONTROL Custom Personalization With Attributes]** bestemming u om de [ Server API van Edge Network ](../../server-api/overview.md) voor gegevensinzameling te gebruiken. Voorts moeten alle Server API vraag in een [ voor authentiek verklaarde context ](../../server-api/authentication.md) worden gemaakt. |
+| (Beta) Op kenmerken gebaseerde ondersteuning voor personalisatie voor verpersoonlijkingsdoelen | Met de bètaversie van op attribuut-gebaseerde verpersoonlijking, zult u twee nieuwe kaarten in de [ bestemmingscatalogus ](../../destinations/catalog/overview.md) zien: <ul><li>**[!UICONTROL Adobe Target V2]**: Deze connector bevindt zich momenteel in bèta en is alleen beschikbaar voor een beperkt aantal klanten. Naast de functionaliteit die door de kaart van Adobe Target V1 wordt verstrekt, voegt de schakelaar van het Doel V2 a [ kaartstap ](/help/destinations/ui/activate-edge-personalization-destinations.md#map-attributes) aan het activeringswerkschema toe, dat u toestaat om profielattributen aan Adobe Target in kaart te brengen, toelatend op attribuut-gebaseerde zelfde-pagina en volgende-pagina verpersoonlijking.</li><li>**[!UICONTROL Custom Personalization With Attributes]**: Deze connector bevindt zich momenteel in bèta en is alleen beschikbaar voor een beperkt aantal klanten. Naast de functionaliteit die door **[!UICONTROL Custom Personalization]** wordt verstrekt, voegt de **[!UICONTROL Custom Personalization With Attributes]** schakelaar een facultatieve [ toewijzingsstap ](../../destinations/ui/activate-edge-personalization-destinations.md#map-attributes) aan het activeringswerkschema toe, dat u toestaat om profielattributen aan uw douaneverpersoonlijkingsbestemming in kaart te brengen, toelatend op attribuut-gebaseerde zelfde-pagina en volgende-pagina verpersoonlijking.</li></ul> <br> Profielkenmerken kunnen vertrouwelijke gegevens bevatten. Om dit gegeven te beschermen, vereist de **[!UICONTROL Custom Personalization With Attributes]** bestemming u om [ Edge Network API ](https://developer.adobe.com/data-collection-apis/docs/getting-started/) voor gegevensinzameling te gebruiken. Voorts moeten alle Edge Network API vraag in een [ voor authentiek verklaarde context ](https://developer.adobe.com/data-collection-apis/docs/getting-started/authentication) worden gemaakt. |
 
 {style="table-layout:auto"}
 
@@ -137,7 +137,7 @@ XDM is een open-bronspecificatie die algemene structuren en definities (schema&#
 
 {style="table-layout:auto"}
 
-Voor meer informatie over XDM in Experience Platform, zie het [ XDM overzicht van het Systeem ](../../xdm/home.md).
+Raadpleeg het [XDM-systeemoverzicht](../../xdm/home.md) voor meer informatie over XDM in Experience Platform.
 
 ## Realtime-klantenprofiel {#profile}
 

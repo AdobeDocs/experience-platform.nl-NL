@@ -2,16 +2,16 @@
 title: Gegevensstroomoverschrijvingen configureren
 description: Leer hoe te om gegevensstroom met voeten te treden in de UI van Datastreams en hen via het Web SDK of Mobiele SDK te activeren.
 exl-id: 3f17a83a-dbea-467b-ac67-5462c07c884c
-source-git-commit: 17ed5f3c14d4787352f72d3d7721cbb6416d533e
+source-git-commit: 7f3459f678c74ead1d733304702309522dd0018b
 workflow-type: tm+mt
-source-wordcount: '1060'
+source-wordcount: '1062'
 ht-degree: 0%
 
 ---
 
 # Gegevensstroomoverschrijvingen configureren
 
-Met overschrijvingen van gegevensstroom kunt u aanvullende configuraties voor uw gegevensstromen definiëren. Deze configuraties worden via de SDK van het Web of de mobiele SDK aan de Edge Network doorgegeven.
+Met gegevensstroomoverschrijvingen kunt u aanvullende configuraties voor uw gegevensstreams definiëren. Deze worden via de webpagina SDK of de mobiele SDK aan de Edge Network doorgegeven.
 
 Dit helpt u verschillend gegevensstroomgedrag dan de standaarddegenen teweegbrengen, zonder een gegevensstroom te creëren of uw bestaande montages te wijzigen.
 
@@ -27,7 +27,7 @@ Dit artikel verklaart het proces van de de configuratieopheffing van begin tot e
 
 >[!IMPORTANT]
 >
->De overrides van de gegevensstroom worden slechts gesteund voor [ Web SDK ](../web-sdk/home.md) en [ Mobiele SDK ](https://developer.adobe.com/client-sdks/home/) integratie. ](../server-api/overview.md) de integraties van de Server API van 0} {steunen momenteel geen gegevensstroomoverschrijvingen.[
+>De overrides van de gegevensstroom worden slechts gesteund voor [ SDK van het Web ](../web-sdk/home.md) en [ Mobiele integratie van SDK ](https://developer.adobe.com/client-sdks/home/). [ de integratie van Edge Network API ](https://developer.adobe.com/data-collection-apis/docs/api/) steunt momenteel geen gegevensstroomoverschrijvingen.
 ><br>
 >De overrides van DataStream zouden moeten worden gebruikt wanneer u verschillende gegevens nodig hebt die naar verschillende gegevensstromen worden verzonden. Gebruik geen gegevensstroomoverschrijvingen voor gevallen van verpersoonlijking of toestemmingsgegevens.
 
@@ -45,7 +45,7 @@ Een veelvoorkomend geval van gebruik kan het verzenden van gegevens naar een lan
 
 **het Verschillende profielen en identiteiten voor verschillende bedrijfseenheden**
 
-Een bedrijf met veelvoudige bedrijfseenheden wil veelvoudige Experience Platforms zandbakken gebruiken om gegevens op te slaan specifiek voor elke bedrijfseenheid.
+Een bedrijf met veelvoudige bedrijfseenheden wil de veelvoudige zandbakken van de Platforms van de Ervaring gebruiken om gegevens op te slaan specifiek voor elke bedrijfseenheid.
 
 In plaats van gegevens naar een standaardgegevensstroom te verzenden, kan het bedrijf gegevensstroomoverschrijvingen gebruiken om ervoor te zorgen dat elke bedrijfseenheid zijn eigen gegevensstroom heeft om gegevens door te ontvangen.
 
@@ -53,9 +53,9 @@ In plaats van gegevens naar een standaardgegevensstroom te verzenden, kan het be
 
 De configuratieoverschrijvingen van DataStream staan u toe om de volgende configuraties van de gegevensstroom te wijzigen:
 
-* Gegevenssets voor gebeurtenissen Experience Platform
+* Experience Platform-gebeurtenisgegevenssets
 * Adobe Target-eigenschapstokens
-* Audience Manager-id-synchronisatiecontainers
+* Audience Manager ID-synchronisatiecontainers
 * Adobe Analytics rapport suites
 
 ### DataStream-overschrijvingen voor Adobe Target {#target-overrides}
@@ -68,7 +68,7 @@ Zodra u de gegevensstroom hebt gecreeerd, geef de [ dienst van Adobe Target ](co
 
 Nadat u de gewenste overschrijvingen hebt toegevoegd, slaat u de gegevensstroominstellingen op.
 
-De Adobe Target-gegevensstroomoverschrijvingen moeten nu zijn geconfigureerd. Nu kunt u [ de met voeten treedt naar de Edge Network via het Web SDK of Mobiele SDK ](#send-overrides) verzenden.
+De Adobe Target-gegevensstroomoverschrijvingen moeten nu zijn geconfigureerd. Nu kunt u [ de overschrijvingen naar Edge Network via het Web SDK of Mobiele SDK ](#send-overrides) verzenden.
 
 ### DataStream-overschrijvingen voor Adobe Analytics {#analytics-overrides}
 
@@ -82,11 +82,11 @@ Selecteer **[!UICONTROL Show Batch Mode]** om het in batch bewerken van de rappo
 
 Nadat u de gewenste overschrijvingen hebt toegevoegd, slaat u de gegevensstroominstellingen op.
 
-De Adobe Analytics-gegevensstroomoverschrijvingen moeten nu zijn geconfigureerd. Nu kunt u [ de met voeten treedt naar de Edge Network via het Web SDK of Mobiele SDK ](#send-overrides) verzenden.
+De Adobe Analytics-gegevensstroomoverschrijvingen moeten nu zijn geconfigureerd. Nu kunt u [ de overschrijvingen naar Edge Network via het Web SDK of Mobiele SDK ](#send-overrides) verzenden.
 
-### DataStream-overschrijvingen voor gegevenssets met gebeurtenissen Experience Platform {#event-dataset-overrides}
+### DataStream overschrijft de gegevenssets voor Experience Platform-gebeurtenissen {#event-dataset-overrides}
 
-Om gegevensstroomoverschrijvingen voor de gebeurtenisdatasets van het Experience Platform te vormen, moet u eerst een [ gemaakte Adobe Experience Platform ](configure.md#aep) datastream hebben. Volg de instructies om [ een datastream ](configure.md) met de [ Adobe Experience Platform ](configure.md#aep) dienst te vormen.
+Om gegevensstroomoverschrijvingen voor de gebeurtenisdatasets van Experience Platform te vormen, moet u eerst een [ gemaakte Adobe Experience Platform ](configure.md#aep) datastream hebben. Volg de instructies om [ een datastream ](configure.md) met de [ Adobe Experience Platform ](configure.md#aep) dienst te vormen.
 
 Zodra u de gegevensstroom hebt gecreeerd, geef de [ dienst van Adobe Experience Platform ](configure.md#aep) uit die u hebt toegevoegd en selecteer de **[!UICONTROL Add Event Dataset]** optie om één of meerdere met voeten getreden gebeurtenisdatasets, zoals aangetoond in het hieronder beeld toe te voegen.
 
@@ -94,7 +94,7 @@ Zodra u de gegevensstroom hebt gecreeerd, geef de [ dienst van Adobe Experience 
 
 Nadat u de gewenste overschrijvingen hebt toegevoegd, slaat u de gegevensstroominstellingen op.
 
-De Adobe Experience Platform-gegevensstroomoverschrijvingen moeten nu zijn geconfigureerd. Nu kunt u [ de met voeten treedt naar de Edge Network via het Web SDK of Mobiele SDK ](#send-overrides) verzenden.
+De Adobe Experience Platform-gegevensstroomoverschrijvingen moeten nu zijn geconfigureerd. Nu kunt u [ de overschrijvingen naar Edge Network via het Web SDK of Mobiele SDK ](#send-overrides) verzenden.
 
 ### DataStream overschrijft de synchronisatie-containers van externe id&#39;s {#container-overrides}
 
@@ -106,19 +106,19 @@ Voeg vervolgens in de sectie **[!UICONTROL Container ID Overrides]** de containe
 
 >[!IMPORTANT]
 >
->Container-id&#39;s moeten numerieke waarden zijn, zoals `1234567` , en geen tekenreeksen, zoals `"1234567"` . Als u een koordwaarde door SDK van het Web als de opheffing van containeridentiteitskaart verzendt, zult u een fout ontvangen.
+>Container-id&#39;s moeten numerieke waarden zijn, zoals `1234567` , en geen tekenreeksen, zoals `"1234567"` . Als u een tekenreekswaarde via de Web SDK verzendt als een containerid-overschrijving, ontvangt u een fout.
 
 ![ het schermschot van gegevensstromen UI die de montages van de gegevensstroom toont, met de benadrukte de synchronisatiecontainer van derdeidentiteitskaart.](assets/overrides/override-container.png)
 
 Nadat u de gewenste overschrijvingen hebt toegevoegd, slaat u de gegevensstroominstellingen op.
 
-U moet nu de containeroverschrijvingen voor id-synchronisatie hebben geconfigureerd. Nu kunt u [ de met voeten treedt naar de Edge Network via het Web SDK of Mobiele SDK ](#send-overrides) verzenden.
+U moet nu de containeroverschrijvingen voor id-synchronisatie hebben geconfigureerd. Nu kunt u [ de overschrijvingen naar Edge Network via het Web SDK of Mobiele SDK ](#send-overrides) verzenden.
 
 ## De overschrijvingen naar de Edge Network verzenden {#send-overrides}
 
-Na het vormen van gegevensstroom treedt in de Inzameling UI van Gegevens met voeten, kunt u de met voeten treedt naar de Edge Network door het Web SDK of Mobiele SDK verzenden.
+Nadat u gegevensstroomoverschrijvingen hebt geconfigureerd in de gebruikersinterface voor gegevensverzameling, kunt u de overschrijvingen naar de Edge Network verzenden via de webpagina SDK of de mobiele SDK.
 
-* **SDK van het Web**: Zie [ de configuratiemet voeten treedt van de gegevensstroom ](../web-sdk/commands/datastream-overrides.md#library) voor de instructies van de markeringsuitbreiding en de codevoorbeelden van de de bibliotheekcode van JavaScript.
+* **SDK van het Web**: Zie [ configuratie gegevensstroom met voeten treedt ](../web-sdk/commands/datastream-overrides.md#library) voor de instructies van de markeringsuitbreiding en de voorbeelden van de de bibliotheekcode van JavaScript.
 * **Mobiele SDK**: U kunt gegeven-identiteitskaart met voeten treden of gebruikend [ sendEvent API ](https://developer.adobe.com/client-sdks/edge/edge-network/tutorials/send-overrides-sendevent/) of door [ Regels ](https://developer.adobe.com/client-sdks/edge/edge-network/tutorials/send-overrides-rules/) te gebruiken.
 
 ## Payload-voorbeeld {#payload-example}

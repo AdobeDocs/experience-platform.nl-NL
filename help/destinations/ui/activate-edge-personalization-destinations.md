@@ -3,9 +3,9 @@ title: Het publiek activeren voor verpersoonlijkingsdoelen van randen
 description: Leer hoe u het publiek activeert van Adobe Experience Platform naar Edge-verpersoonlijkingsbestemmingen voor gebruiksgevallen van verpersoonlijking op dezelfde pagina en op de volgende pagina.
 type: Tutorial
 exl-id: cd7132eb-4047-4faa-a224-47366846cb56
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 25697d341b2970eeb20d9f2507ee701ade8046d3
 workflow-type: tm+mt
-source-wordcount: '1882'
+source-wordcount: '1885'
 ht-degree: 0%
 
 ---
@@ -150,9 +150,9 @@ U kunt kiezen uit meerdere soorten publiek, afhankelijk van de oorsprong:
 
 >[!IMPORTANT]
 >
->Profielkenmerken kunnen vertrouwelijke gegevens bevatten. Om dit gegeven te beschermen, vereist de **[!UICONTROL Custom Personalization]** bestemming u om de [ Server API van Edge Network ](../../server-api/overview.md) te gebruiken wanneer het vormen van de bestemming voor op attribuut-gebaseerde verpersoonlijking. Alle Server API vraag moet in een [ voor authentiek verklaarde context ](../../server-api/authentication.md) worden gemaakt.
+>Profielkenmerken kunnen vertrouwelijke gegevens bevatten. Om dit gegeven te beschermen, vereist de **[!UICONTROL Custom Personalization]** bestemming u om [ Edge Network API ](https://developer.adobe.com/data-collection-apis/docs/) te gebruiken wanneer het vormen van de bestemming voor op attribuut-gebaseerde verpersoonlijking. Alle Edge Network API vraag moet in een [ voor authentiek verklaarde context ](https://developer.adobe.com/data-collection-apis/docs/getting-started/authentication/) worden gemaakt.
 >
-><br> als u reeds het Web SDK of Mobiele SDK voor uw integratie gebruikt, kunt u attributen via de Server API terugwinnen door een server-zijintegratie toe te voegen.
+><br> als u reeds Web SDK of Mobiele SDK voor uw integratie gebruikt, kunt u attributen via Edge Network API terugwinnen door een server-zijintegratie toe te voegen.
 >
 ><br> als u niet de hierboven vereisten volgt, zal de verpersoonlijking op publiekslidmaatschap slechts gebaseerd zijn.
 

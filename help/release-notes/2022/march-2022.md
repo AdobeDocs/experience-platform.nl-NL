@@ -2,10 +2,10 @@
 title: Aanvullende informatie van maart 2022 voor Adobe Experience Platform
 description: Aanvullende informatie van maart 2022 voor Adobe Experience Platform.
 exl-id: 0d499aa6-e25d-4d34-ad32-5e4ab361cba1
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 7f3459f678c74ead1d733304702309522dd0018b
 workflow-type: tm+mt
-source-wordcount: '1181'
-ht-degree: 10%
+source-wordcount: '1182'
+ht-degree: 14%
 
 ---
 
@@ -59,7 +59,7 @@ Meer over Real-Time CDP B2B edition leren, zie het [ overzicht ](../../rtcdp/ove
 
 ## Waarschuwingen {#alerts}
 
-Met Experience Platform kunt u zich abonneren op waarschuwingen die zijn gebaseerd op gebeurtenissen voor verschillende Experience Platform-activiteiten. U kunt zich abonneren op verschillende waarschuwingsregels via het tabblad [!UICONTROL Alerts] in de Experience Platform-gebruikersinterface en u kunt ervoor kiezen waarschuwingsberichten te ontvangen in de gebruikersinterface zelf of via e-mailberichten.
+Met Experience Platform kunt u zich aanmelden voor gebeurtenisgebaseerde waarschuwingen voor verschillende Experience Platform-activiteiten. U kunt zich aanmelden voor verschillende waarschuwingsregels via het tabblad [!UICONTROL Alerts] in de gebruikersinterface van Experience Platform, en u kunt ervoor kiezen waarschuwingsmeldingen te ontvangen in de gebruikersinterface zelf of via e-mailberichten.
 
 **Bijgewerkte functies**
 
@@ -73,7 +73,7 @@ Voor meer informatie over alarm in Experience Platform, verwijs naar het [ alarm
 
 ## Dashboards {#dashboards}
 
-Adobe Experience Platform biedt meerdere [!DNL dashboards] waarmee u belangrijke informatie over de gegevens van uw organisatie kunt weergeven, zoals die tijdens dagelijkse momentopnamen zijn vastgelegd.
+Adobe Experience Platform biedt meerdere [!DNL dashboards] waarmee u belangrijke informatie over de gegevens van uw organisatie kunt bekijken, zoals die tijdens dagelijkse momentopnamen zijn vastgelegd.
 
 ### Profieldashboards
 
@@ -115,7 +115,7 @@ Experience Platform biedt een reeks technologieën waarmee u gegevens over klant
 | Functie | Beschrijving |
 | --- | --- |
 | Algemene gegevensstroominstellingen | U kunt nu verschillende nieuwe algemene instellingen configureren tijdens het configureren van een gegevensstroom: geo-locatie, cookie van eerste-partijid en synchronisatie van externe id&#39;s. Zie de sectie op [ vormend een datastream ](../../datastreams/overview.md#create) in de gids UI van Gegevensstromen voor meer informatie. |
-| [ de Server API van Edge Network ](../../server-api/overview.md) | De server API staat klanten toe om met Experience Platform Edge Network in wisselwerking te staan gebruikend een nieuw, voor authentiek verklaard eindpunt, om een verscheidenheid van gegevensinzameling, verpersoonlijking, reclame en marketing gebruiksgevallen te drijven. |
+| [ Edge Network API ](https://developer.adobe.com/data-collection-apis/docs/getting-started/) | Met de Edge Network API kunnen klanten met de Experience Platform Edge Network communiceren via een nieuw, geverifieerd eindpunt, zodat ze een groot aantal verschillende gebruiksgevallen voor gegevensverzameling, personalisatie, reclame en marketing kunnen aansturen. |
 
 Voor meer informatie over gegevensinzameling in Experience Platform, te zien gelieve het [ overzicht van de gegevensinzameling ](../../collection/home.md).
 
