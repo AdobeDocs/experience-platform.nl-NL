@@ -4,9 +4,9 @@ title: Activeringsgegevens bewerken
 type: Tutorial
 description: Voer de stappen in dit artikel uit om een bestaande activeringsgegevensstroom in Adobe Experience Platform te bewerken.
 exl-id: 0d79fbff-bfde-4109-8353-c7530e9719fb
-source-git-commit: ca33131c505803b74075f6d8331095b016a301a0
+source-git-commit: b8f3443c1e574505f7fd0ca8a5ae91801da4cbef
 workflow-type: tm+mt
-source-wordcount: '442'
+source-wordcount: '790'
 ht-degree: 0%
 
 ---
@@ -15,10 +15,12 @@ ht-degree: 0%
 
 In Adobe Experience Platform kunt u verschillende componenten van bestaande activeringsgegevens configureren naar doelen, zoals:
 
-* [ laat of maak ](#enable-disable-dataflows) activeringsdataflows toe onbruikbaar;
-* [ voeg extra publiek en profielattributen ](#add-audiences) aan activeringsdataflows toe;
-* [ voeg extra datasets ](#add-datasets) aan activeringswerkschema&#39;s toe;
-* [ geef namen en beschrijvingen ](#edit-names-descriptions) voor uw activeringsdataflows uit;
+* [ laat of maakt ](#enable-disable-dataflows) activeringsdataflows onbruikbaar
+* [ voeg extra publiek ](#add-audiences) aan activeringsdataflows toe
+* [Toegewezen kenmerken en identiteiten bewerken](#edit-mapped-attributes)
+* [Het activeringsschema en de exportfrequentie bewerken](#edit-schedule-frequency)
+* [ voeg extra datasets ](#add-datasets) aan activeringswerkschema&#39;s toe
+* [ geeft namen en beschrijvingen ](#edit-names-descriptions) voor uw activeringsdataflows uit
 
 <!-- * [Apply access labels](#apply-access-labels) to exported data; -->
 
@@ -26,7 +28,7 @@ In Adobe Experience Platform kunt u verschillende componenten van bestaande acti
 
 Voer de onderstaande stappen uit om door de bestaande activeringsgegevens te bladeren en de gegevens te identificeren die u wilt bewerken.
 
-1. Login aan het [ Experience Platform UI ](https://platform.adobe.com/) en selecteert **[!UICONTROL Destinations]** van de linkernavigatiebar. Selecteer **[!UICONTROL Browse]** in de bovenste koptekst om de bestaande doelgegevens weer te geven.
+1. Login aan [ UI van Experience Platform ](https://platform.adobe.com/) en selecteer **[!UICONTROL Destinations]** van de linkernavigatiebar. Selecteer **[!UICONTROL Browse]** in de bovenste koptekst om de bestaande doelgegevens weer te geven.
 
    ![ doorbladert bestemmingen ](../assets/ui/edit-activation/browse-destinations.png)
 
@@ -44,19 +46,61 @@ Voer de onderstaande stappen uit om door de bestaande activeringsgegevens te bla
 
 Met de schakeloptie **[!UICONTROL Enabled]/[!UICONTROL Disabled]** kunt u alle gegevens die u exporteert naar het doel starten of pauzeren.
 
-{het beeld van 0} Experience Platform UI tonend Toegelaten/Gehandicapte dataflow looppas knevel.](../assets/ui/edit-activation/enable-toggle.png)![
+{het beeld van 0} Experience Platform UI die toegelaten/Gehandicapte dataflow looppas tonen knevel.](../assets/ui/edit-activation/enable-toggle.png)![
 
 ## Soorten publiek toevoegen aan een activeringsgegevensstroom {#add-audiences}
 
-Selecteer **[!UICONTROL Activate audiences]** in het rechterspoor om te wijzigen welk publiek of welke profielkenmerken naar de bestemming moeten worden verzonden. Hiermee gaat u naar de activeringsworkflow, die afhankelijk is van het doeltype.
+Selecteer **[!UICONTROL Activate audiences]** in het rechterspoor om te wijzigen welk publiek naar het doel moet worden verzonden. Hiermee gaat u naar de activeringsworkflow.
 
-{het beeld van 0} Experience Platform UI tonend de Activate optie van het publiek dataflow.](../assets/ui/edit-activation/activate-audiences.png)![
+{het beeld van 0} Experience Platform UI die de Activate de looppasoptie van het publiek toont dataflow.](../assets/ui/edit-activation/activate-audiences.png)![
 
-Zie de volgende hulplijnen voor meer informatie over de activeringsworkflows voor elk doeltype:
+In de stap **[!UICONTROL Select audiences]** van de activeringsworkflow kunt u bestaande doelgroepen verwijderen of nieuwe doelgroepen toevoegen aan de activeringsworkflow.
+
+De activeringsworkflow verschilt enigszins afhankelijk van het doeltype. Lees de volgende hulplijnen voor meer informatie over de activeringsworkflows voor elk doeltype:
 
 * [ activeer publiek aan het stromen bestemmingen ](./activate-segment-streaming-destinations.md) (bijvoorbeeld, Facebook of Twitter);
 * [ activeer publiek aan de uitvoerbestemmingen van het partijprofiel ](./activate-batch-profile-destinations.md) (bijvoorbeeld, Amazon S3 of Oracle Eloqua);
 * [ activeer publiek aan het stromen van profieluitvoer bestemmingen ](./activate-streaming-profile-destinations.md) (bijvoorbeeld, HTTP API of Amazon Kinesis).
+
+## Het activeringsschema en de exportfrequentie bewerken {#edit-schedule-frequency}
+
+Selecteer **[!UICONTROL Activate audiences]** in de rechtertrack. Hiermee gaat u naar de activeringsworkflow.
+
+{het beeld van 0} Experience Platform UI die de Activate de looppasoptie van het publiek toont dataflow.](../assets/ui/edit-activation/activate-audiences.png)![
+
+Selecteer de **[!UICONTROL Scheduling]** -stap in de activeringsworkflow om het activeringsschema en de exportfrequentie voor de gegevensstroom te bewerken. Deze stap staat u toe om te vormen hoe vaak de gegevens naar de bestemming worden uitgevoerd.
+
+In de stap **[!UICONTROL Scheduling]** van de activeringsworkflow kunt u:
+* Pas de exportfrequentie aan.
+* Stel de begin- en einddatum voor de activeringsgegevensstroom in of wijzig deze.
+
+De het plannen verrichtingen die u kunt uitvoeren variëren lichtjes afhankelijk van bestemmingstype. Lees de volgende hulplijnen voor meer informatie over de activeringsworkflows voor elk doeltype:
+
+* [ activeer publiek aan het stromen bestemmingen ](./activate-segment-streaming-destinations.md) (bijvoorbeeld, Facebook of Twitter);
+* [ activeer publiek aan de uitvoerbestemmingen van het partijprofiel ](./activate-batch-profile-destinations.md) (bijvoorbeeld, Amazon S3 of Oracle Eloqua);
+* [ activeer publiek aan het stromen van profieluitvoer bestemmingen ](./activate-streaming-profile-destinations.md) (bijvoorbeeld, HTTP API of Amazon Kinesis).
+
+## Toegewezen kenmerken en identiteiten bewerken {#edit-mapped-attributes}
+
+Selecteer **[!UICONTROL Activate audiences]** in de rechtertrack. Hiermee gaat u naar de activeringsworkflow.
+
+{het beeld van 0} Experience Platform UI die de Activate de looppasoptie van het publiek toont dataflow.](../assets/ui/edit-activation/activate-audiences.png)![
+
+Selecteer de stap **[!UICONTROL Mapping]** in de activeringsworkflow om de toegewezen kenmerken en identiteiten voor de activeringsgegevensstroom te bewerken. Op deze manier kunt u aanpassen welke profielkenmerken en identiteiten naar de bestemming moeten worden geëxporteerd.
+
+In de stap **[!UICONTROL Mapping]** van de activeringsworkflow kunt u:
+
+* Voeg nieuwe kenmerken of identiteiten toe aan de toewijzing.
+* Bestaande kenmerken of identiteiten verwijderen uit de toewijzing.
+* Pas de volgorde van toewijzingen aan om de kolomvolgorde in geëxporteerde bestanden te definiëren.
+
+De activeringsworkflow verschilt enigszins afhankelijk van het doeltype. Lees de volgende hulplijnen voor meer informatie over de activeringsworkflows voor elk doeltype:
+
+* [ activeer publiek aan het stromen bestemmingen ](./activate-segment-streaming-destinations.md) (bijvoorbeeld, Facebook of Twitter);
+* [ activeer publiek aan de uitvoerbestemmingen van het partijprofiel ](./activate-batch-profile-destinations.md) (bijvoorbeeld, Amazon S3 of Oracle Eloqua);
+* [ activeer publiek aan het stromen van profieluitvoer bestemmingen ](./activate-streaming-profile-destinations.md) (bijvoorbeeld, HTTP API of Amazon Kinesis).
+
+
 
 ## Gegevenssets toevoegen aan een activeringsgegevensstroom {#add-datasets}
 
@@ -66,7 +110,9 @@ Selecteer **[!UICONTROL Export datasets]** in het rechterspoor om extra datasets
 >
 >Deze optie is slechts zichtbaar voor [ bestemmingen die datasetuitvoer ](export-datasets.md#supported-destinations) steunen.
 
-{het beeld van 0} Experience Platform UI die de Datasets van de Uitvoer dataflow looppasoptie toont.](../assets/ui/edit-activation/export-datasets.png)![
+{het beeld van 0} Experience Platform UI die de Datasets van de Uitvoer dataflow looppas optie toont.](../assets/ui/edit-activation/export-datasets.png)![
+
+
 
 <!-- ## Apply access labels {#apply-access-labels}
 
