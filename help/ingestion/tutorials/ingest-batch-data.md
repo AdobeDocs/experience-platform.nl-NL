@@ -5,7 +5,7 @@ title: Gegevens opnemen in Experience Platform
 type: Tutorial
 description: Met Adobe Experience Platform kunt u gegevens eenvoudig importeren als batchbestanden in de vorm van Parquet-bestanden of gegevens die overeenkomen met een bekend XDM-schema (Experience Data Model).
 exl-id: a4a7358d-b117-4d81-8cb0-3dbbfeccdcbd
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 31631b03b6ff1e50e55c01e948fae5c29fd618dd
 workflow-type: tm+mt
 source-wordcount: '1261'
 ht-degree: 0%
@@ -78,7 +78,7 @@ Op het tabblad Info vindt u ook een **[!UICONTROL Profile]** -schakeloptie die w
 
 ![ de activiteit van de Dataset ](../images/tutorials/ingest-batch-data/sample-dataset.png)
 
-## Gegevensset inschakelen voor [!DNL Real-Time Customer Profile]
+## Gegevensset inschakelen voor [!DNL Real-Time Customer Profile] {#enable-for-profile}
 
 Datasets worden gebruikt voor het opnemen van gegevens in [!DNL Experience Platform] en die gegevens worden uiteindelijk gebruikt om individuen te identificeren en informatie die uit meerdere bronnen afkomstig is aan elkaar te koppelen. Deze samengevoegde informatie wordt een [!DNL Real-Time Customer Profile] genoemd. [!DNL Experience Platform] weet welke informatie moet worden opgenomen in de [!DNL Real-Time Profile] , dus gegevenssets kunnen worden gemarkeerd voor opname met de **[!UICONTROL Profile]** -schakeloptie.
 

@@ -3,9 +3,9 @@ title: Datasets exporteren naar cloudopslagdoelen
 type: Tutorial
 description: Leer hoe u gegevenssets van Adobe Experience Platform naar de gewenste locatie voor cloudopslag exporteert.
 exl-id: e89652d2-a003-49fc-b2a5-5004d149b2f4
-source-git-commit: 29fb232ecfbd119ef84d62599fc79249513dca43
+source-git-commit: 31631b03b6ff1e50e55c01e948fae5c29fd618dd
 workflow-type: tm+mt
-source-wordcount: '2638'
+source-wordcount: '2667'
 ht-degree: 0%
 
 ---
@@ -104,7 +104,10 @@ Dit document bevat alle informatie die nodig is om gegevenssets te exporteren. A
 
 ## Vereisten {#prerequisites}
 
-Om datasets naar de bestemmingen van de wolkenopslag uit te voeren, moet u met succes [ verbonden aan een bestemming ](./connect-destination.md) hebben. Als u dit niet reeds hebt gedaan, ga naar de [ bestemmingscatalogus ](../catalog/overview.md), doorblader de gesteunde bestemmingen, en vorm de bestemming die u wilt gebruiken.
+Neem nota van de volgende voorwaarden om datasets uit te voeren:
+
+* Om datasets naar de bestemmingen van de wolkenopslag uit te voeren, moet u met succes [ verbonden aan een bestemming ](./connect-destination.md) hebben. Als u dit niet reeds hebt gedaan, ga naar de [ bestemmingscatalogus ](../catalog/overview.md), doorblader de gesteunde bestemmingen, en vorm de bestemming die u wilt gebruiken.
+* De datasets van het profiel moeten voor gebruik in het Profiel van de Klant in real time worden toegelaten. [ las meer ](/help/ingestion/tutorials/ingest-batch-data.md#enable-for-profile) over hoe te om deze optie toe te laten.
 
 ### Vereiste machtigingen {#permissions}
 
