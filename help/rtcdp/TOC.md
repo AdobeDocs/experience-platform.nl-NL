@@ -5,10 +5,10 @@ audience: user
 user-guide-title: Gids voor Real-time Customer Data Platform
 user-guide-description: Breng bekende en anonieme gegevens van meerdere bronnen van bedrijven bij elkaar om klantprofielen te maken, doelgroepsegmenten van die profielen te maken, en die segmenten voor externe doelen te activeren.
 role: Admin
-source-git-commit: 7f3459f678c74ead1d733304702309522dd0018b
+source-git-commit: ba2154e84f24ddf4ec270121bdcbb6dd5d3dff42
 workflow-type: tm+mt
-source-wordcount: '307'
-ht-degree: 16%
+source-wordcount: '305'
+ht-degree: 17%
 
 ---
 
@@ -80,7 +80,7 @@ ht-degree: 16%
       * [ neemt en verwerft nieuwe klanten zonder gebiedsdeel op derdekoekjes ](/help/rtcdp/partner-data/prospecting.md) aan
       * [Onsite ervaringen voor onbekende bezoekers personaliseren met de erkenning van bezoekers met hulp van partners](/help/rtcdp/partner-data/onsite-personalization.md)
       * [Offsite herbestemming van niet-geverifieerde gebruikers](./partner-data/offsite-retargeting.md)
-      * [Offsite herbestemming van niet-geverifieerde gebruikers](./partner-data/unauthenticated-retargeting.md)
+      * [Niet-geverifieerde herbestemming op de server](./partner-data/unauthenticated-retargeting.md)
    * Profielverrijking {#profile-enrichment}
       * [Voeg eerste-partijprofielen met partner-verstrekte attributen toe](/help/rtcdp/partner-data/supplement-first-party-profiles.md)
    * Gepersonaliseerde inzichten en betrokkenheid {#personalization-insights-engagement}

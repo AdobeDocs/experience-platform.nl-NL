@@ -1,15 +1,16 @@
 ---
-title: Offsite herbestemming van niet-geregistreerde bezoekers
+title: Niet-geverifieerde herbestemming op de server
 description: Leer hoe u niet-geverifieerde gebruikers opnieuw als doel instelt met behulp van ECID's
 feature: Use Cases, Customer Acquisition
-source-git-commit: 672b15b0c36efbf3b7d62ec616f254fffe3dbb81
+exl-id: 008f4534-29e7-49b9-b0be-9e0c3962ee21
+source-git-commit: ba2154e84f24ddf4ec270121bdcbb6dd5d3dff42
 workflow-type: tm+mt
-source-wordcount: '640'
+source-wordcount: '639'
 ht-degree: 0%
 
 ---
 
-# Niet-geverifieerde herbestemming {#unauthenticated-retargeting}
+# Niet-geverifieerde herbestemming op de server {#unauthenticated-retargeting}
 
 Als cookies van derden hun effectiviteit verliezen, gaan bedrijven over naar oplossingen zonder cookies voor persoonlijke betrokkenheid en herbestemming. Offsite heroriënteren maakt het bedrijven mogelijk om gebruikers met hoge bedoelingen te bereiken op basis van hun vorige interacties, zonder dat ze op JavaScript aan de clientzijde hoeven te vertrouwen.
 
