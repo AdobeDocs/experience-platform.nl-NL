@@ -2,10 +2,10 @@
 title: TLS-informatie (Transport Layer Security)
 description: Informatie over de TLS-versies en -ciphers
 exl-id: 04948cd8-6cf0-4159-a9d3-3130b97af106
-source-git-commit: 8be502c9eea67119dc537a5d63a6c71e0bff1697
+source-git-commit: 236c5a11f40490fc7ee536358fb146027fe64545
 workflow-type: tm+mt
-source-wordcount: '209'
-ht-degree: 0%
+source-wordcount: '201'
+ht-degree: 15%
 
 ---
 
@@ -13,17 +13,17 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch is omgedoopt tot een reeks technologieën voor gegevensverzameling in Adobe Experience Platform. Diverse terminologische wijzigingen zijn als gevolg hiervan in de productdocumentatie doorgevoerd. Voor een geconsolideerde verwijzing van de terminologieveranderingen, verwijs naar het [ term updates ](../../term-updates.md) document.
+>Adobe Experience Platform Launch is omgedoopt tot een reeks technologieën voor dataverzameling in Adobe Experience Platform.  Als gevolg hiervan zijn er verschillende terminologiewijzigingen in de productdocumentatie doorgevoerd. Voor een geconsolideerde verwijzing van de terminologieveranderingen, verwijs naar het [ term updates ](../../term-updates.md) document.
 
 TLS (Transport Layer Security) is een cryptografisch protocol dat end-to-end beveiliging biedt voor gegevens die via internet tussen toepassingen worden verzonden. Voor meer gedetailleerde informatie over TLS, lees de [ basisbeginselen van TLS ](https://www.internetsociety.org/deploy360/tls/basics/) documentatie.
 
-Tags in Adobe Experience Platform zijn een systeem voor tagbeheer dat is ontworpen om scripts op uw website dynamisch te laden. TLS beveiligt de communicatie tussen de host van de Adobe `assets.adobedtm.com` en uw website wanneer deze scripts worden geladen.
+Tags in Adobe Experience Platform zijn een systeem voor tagbeheer dat is ontworpen om scripts op uw website dynamisch te laden. TLS beveiligt de communicatie tussen de Adobe-host `assets.adobedtm.com` en uw website wanneer deze scripts worden geladen.
 
 Er zijn meerdere TLS-versies beschikbaar en deze ondersteunen een aantal verschillende ciphers. Niet alle versies en ciphers zijn het zelfde aangezien sommige als minder of veiliger dan andere worden beschouwd.
 
 ## Ondersteunde TLS-versies en -CIFERS
 
-De host-optie Adobe biedt momenteel ondersteuning voor de volgende TLS-versies en -ciphers:
+De Adobe-hostoptie biedt momenteel ondersteuning voor de volgende TLS-versies en -ciphers:
 
 ```
 PORT    STATE SERVICE
@@ -52,34 +52,3 @@ PORT    STATE SERVICE
 ### Zelfhosting
 
 Als u [ zelf-gastheer ](../publishing/hosts/self-hosting-libraries.md) uw bibliotheek bent, dan zullen de gesteunde versies TLS door uw eigen het ontvangen dienst worden bepaald.
-
-## Op 1 mei 2024 te verwijderen TLS-cifers
-
-```
-PORT    STATE SERVICE
-443/tcp open  https
-| ssl-enum-ciphers:
-|   TLSv1.2:
-|     ciphers:
-|       TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA384 (secp256r1) - A
-|       TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA256 (secp256r1) - A
-|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384 (secp256r1) - A
-|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256 (secp256r1) - A
-|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (secp256r1) - A
-|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (secp256r1) - A
-|       TLS_RSA_WITH_AES_256_GCM_SHA384 (rsa 2048) - A
-|       TLS_RSA_WITH_AES_128_GCM_SHA256 (rsa 2048) - A
-|       TLS_RSA_WITH_AES_256_CBC_SHA256 (rsa 2048) - A
-|       TLS_RSA_WITH_AES_128_CBC_SHA256 (rsa 2048) - A
-|       TLS_RSA_WITH_AES_256_CBC_SHA (rsa 2048) - A
-|       TLS_RSA_WITH_AES_128_CBC_SHA (rsa 2048) - A
-|     compressors:
-|       NULL
-|     cipher preference: server
-|   TLSv1.3:
-|     ciphers:
-|       TLS_AKE_WITH_AES_128_CCM_8_SHA256 (secp256r1) - A
-|       TLS_AKE_WITH_AES_128_CCM_SHA256 (secp256r1) - A
-|     cipher preference: client
-|_  least strength: A
-```
