@@ -2,9 +2,9 @@
 title: Gegevens op rijniveau voor een Source filteren met behulp van de Flow Service API
 description: Deze zelfstudie behandelt de stappen voor het filteren van gegevens op bronniveau met behulp van de Flow Service API
 exl-id: 224b454e-a079-4df3-a8b2-1bebfb37d11f
-source-git-commit: 67abd5cda9cff1da8757ef691ebbf27e9a5550c5
+source-git-commit: fe7025b7e48634232d823f8380610c6409b2d4b1
 workflow-type: tm+mt
-source-wordcount: '1822'
+source-wordcount: '1820'
 ht-degree: 2%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 2%
 >
 >De steun voor het filtreren van rij-vlakke gegevens is momenteel slechts beschikbaar aan de volgende bronnen:
 >
->* [ [Amazon Redshift] ](../../connectors/databases/redshift.md)
+>* [[!DNL Amazon Redshift]](../../connectors/databases/redshift.md)
 >* [[!DNL Google BigQuery]](../../connectors/databases/bigquery.md)
 >* [[!DNL Marketo Engage]  standaardactiviteiten ](../../connectors/adobe-applications/marketo/marketo.md)
 >* [[!DNL Microsoft Dynamics]](../../connectors/crm/ms-dynamics.md)
