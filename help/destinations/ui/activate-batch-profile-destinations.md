@@ -3,9 +3,9 @@ title: Soorten publiek activeren om exportdoelen voor batchprofielen te gebruike
 type: Tutorial
 description: Leer hoe u het publiek in Adobe Experience Platform activeert door het naar batchbestemmingen te sturen.
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
-source-git-commit: 11961e291188d509609a036f41084f4487cab584
+source-git-commit: 6b91527afe172530597de30b9669b86ff0262e13
 workflow-type: tm+mt
-source-wordcount: '4347'
+source-wordcount: '4424'
 ht-degree: 1%
 
 ---
@@ -125,7 +125,7 @@ Als u meerdere schema&#39;s tegelijk wilt bewerken, selecteert u het publiek met
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activationchaining_aftersegmentevaluation"
 >title="Activeren na publieksevaluatie"
->abstract="De activering wordt onmiddellijk uitgevoerd nadat de dagelijkse segmentatietaak is voltooid. Zo weet u zeker dat de meest actuele profielen worden geëxporteerd."
+>abstract="<p>De activering wordt onmiddellijk uitgevoerd nadat de dagelijkse segmentatietaak is voltooid. Zo weet u zeker dat de meest actuele profielen worden geëxporteerd.</p><p>De optie om profielen na publieksevaluatie uit te voeren is <i> niet </i> beschikbaar voor de wekelijkse en maandelijkse uitvoerfrequentie.</p>"
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activationchaining_scheduled"
@@ -140,6 +140,8 @@ Selecteer **[!UICONTROL Export full files]** om het exporteren van een bestand m
 
    * **[!UICONTROL Once]**: plant een eenmalige volledige bestandsexport.
    * **[!UICONTROL Daily]**: plant de volledige bestandsexport eenmaal per dag, elke dag, op het opgegeven tijdstip.
+   * **[!UICONTROL Weekly]**: selecteer de begindatum en de volgende exportbewerkingen vinden plaats op die dag van de week tot de geselecteerde einddatum.
+   * **[!UICONTROL Monthly]**: selecteer de begindatum en de volgende exportbewerkingen vinden plaats op die datum van de maand tot de geselecteerde einddatum. Voor maanden met minder dan 30 of 31 dagen vindt de uitvoer plaats op de laatste dag van de maand.
 
 2. Gebruik de schakeloptie **[!UICONTROL Time]** om te bepalen of het exporteren direct na de publieksevaluatie of op een geplande basis op een bepaald tijdstip moet plaatsvinden. Wanneer u de optie **[!UICONTROL Scheduled]** selecteert, kunt u met de kiezer de tijd van de dag kiezen, in [!DNL UTC] -indeling, waarop het exporteren moet plaatsvinden.
 
@@ -187,6 +189,7 @@ Selecteer **[!UICONTROL Export incremental files]** om een exportbewerking te st
 
    * **[!UICONTROL Daily]**: plant de incrementele bestandsexport eenmaal per dag, elke dag, op het opgegeven tijdstip.
    * **[!UICONTROL Hourly]**: plant het incrementele exporteren van bestanden om de 3, 6, 8 of 12 uur.
+
 
 2. Gebruik de kiezer van **[!UICONTROL Time]** om in [!DNL UTC] -indeling de tijd van de dag te kiezen waarop het exporteren moet plaatsvinden.
 
