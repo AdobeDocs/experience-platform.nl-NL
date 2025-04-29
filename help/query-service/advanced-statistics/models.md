@@ -3,9 +3,9 @@ title: Modellen
 description: Model levenscyclusbeheer met de extensie Data Distiller SQL. Leer hoe u geavanceerde statistische modellen kunt maken, trainen en beheren met SQL, inclusief belangrijke processen zoals modelversioning, evaluatie en voorspelling, om actioneerbare inzichten van uw gegevens af te leiden.
 role: Developer
 exl-id: c609a55a-dbfd-4632-8405-55e99d1e0bd8
-source-git-commit: 6a61900b19543f110c47e30f4d321d0016b65262
+source-git-commit: 09129d9d19816b4d93b4979305f4ad532e5ffde4
 workflow-type: tm+mt
-source-wordcount: '1229'
+source-wordcount: '1645'
 ht-degree: 0%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 0%
 >
 >Deze functionaliteit is beschikbaar voor klanten die de Data Distiller-add hebben aangeschaft. Neem voor meer informatie contact op met uw Adobe-vertegenwoordiger.
 
-De Dienst van de vraag steunt nu de kernprocessen om een model te bouwen en op te stellen. U kunt SQL gebruiken om het model te trainen gebruikend uw gegevens, zijn nauwkeurigheid te evalueren, en dan treinmodel toe te passen om voorspellingen over nieuwe gegevens te maken. U kunt het model dan gebruiken om van uw vroegere gegevens te generaliseren om geïnformeerde besluiten over echte scenario&#39;s te nemen.
+De Dienst van de vraag steunt nu de kernprocessen om een model te bouwen en op te stellen. U kunt SQL gebruiken om het model te trainen gebruikend uw gegevens, zijn nauwkeurigheid te evalueren, en dan het getrainde model te gebruiken om voorspellingen over nieuwe gegevens te maken. U kunt het model dan gebruiken om van uw vroegere gegevens te generaliseren om geïnformeerde besluiten over echte scenario&#39;s te nemen.
 
 De drie stappen in de levenscyclus van het model voor het genereren van actioneerbare inzichten zijn:
 
@@ -75,6 +75,10 @@ Om u te helpen de belangrijkste componenten en de configuraties in het modelverw
 
 Gebruik SQL om naar de dataset te verwijzen die voor opleiding wordt gebruikt.
 
+>[!TIP]
+>
+>Voor een volledige verwijzing op de `TRANSFORM` clausule, met inbegrip van gesteunde functies en gebruik over zowel `CREATE MODEL` als `CREATE TABLE`, zie de [`TRANSFORM` clausule in de SQL documentatie van de Syntaxis ](../sql/syntax.md#transform).
+
 ## Een model bijwerken {#update}
 
 Leer hoe te om een bestaand machine het leren model bij te werken door nieuwe eigenschappen technische transformaties toe te passen en opties zoals het algoritmetype en etiketkolom te vormen. Bij elke update wordt een nieuwe versie van het model gemaakt, die vanaf de laatste versie wordt verhoogd. Dit zorgt ervoor dat de wijzigingen worden bijgehouden en dat het model opnieuw kan worden gebruikt in toekomstige evaluatie- of voorspellingsstappen.
@@ -104,6 +108,80 @@ In de volgende notities worden de belangrijkste componenten en opties in de work
 - `UPDATE model <model_alias>`: de opdracht Bijwerken verwerkt het versiebeheer en maakt een nieuwe modelversie die is verhoogd vanaf de laatste versie.
 - `version`: Een optioneel trefwoord dat alleen tijdens updates wordt gebruikt om expliciet op te geven dat een nieuwe versie moet worden gemaakt. Als deze waarde wordt weggelaten, wordt de versie automatisch door het systeem verhoogd.
 
+### Getransformeerde functies voorvertonen en behouden {#preview-transform-output}
+
+Gebruik de component `TRANSFORM` in de instructies `CREATE TABLE` en `CREATE TEMP TABLE` om een voorvertoning van de uitvoer van functietransformaties weer te geven en door te zetten vóór modeltraining. Deze verbetering verstrekt zicht in hoe de transformatiefuncties (zoals het coderen, tokenization, en vectorassembleer) op uw dataset worden toegepast.
+
+Door getransformeerde gegevens in een standalone lijst te materialiseren, kunt u tussenliggende eigenschappen inspecteren, verwerkingslogica bevestigen, en eigenschapkwaliteit verzekeren alvorens een model te creëren. Dit verbetert de transparantie over de machineleiding van het leren en steunt meer geïnformeerde besluitvorming tijdens modelontwikkeling.
+
+#### Syntaxis {#syntax}
+
+Gebruik de component `TRANSFORM` binnen een instructie `CREATE TABLE` of `CREATE TEMP TABLE` , zoals hieronder wordt getoond:
+
+```sql
+CREATE TABLE [IF NOT EXISTS] table_name
+[WITH (tableProperties)]
+TRANSFORM (transformFunctionExpression1, transformFunctionExpression2, ...)
+AS SELECT * FROM source_table;
+```
+
+Of:
+
+```sql
+CREATE TEMP TABLE [IF NOT EXISTS] table_name
+[WITH (tableProperties)]
+TRANSFORM (transformFunctionExpression1, transformFunctionExpression2, ...)
+AS SELECT * FROM source_table;
+```
+
+**Voorbeeld**
+
+Een tabel maken met behulp van basistransformaties:
+
+```sql
+CREATE TABLE ctas_transform_table
+TRANSFORM(
+  String_Indexer(additional_comments) si_add_comments,
+  one_hot_encoder(si_add_comments) as ohe_add_comments,
+  tokenizer(comments) as token_comments
+)
+AS SELECT * FROM movie_review;
+```
+
+Maak een tijdelijke tabel met extra technische stappen:
+
+```sql
+CREATE TEMP TABLE ctas_transform_table
+TRANSFORM(
+  String_Indexer(additional_comments) si_add_comments,
+  one_hot_encoder(si_add_comments) as ohe_add_comments,
+  tokenizer(comments) as token_comments,
+  stop_words_remover(token_comments, array('and','very','much')) stp_token,
+  ngram(stp_token, 3) ngram_token,
+  tf_idf(ngram_token, 20) ngram_idf,
+  count_vectorizer(stp_token, 13) cnt_vec_comments,
+  tf_idf(token_comments, 10, 1) as cmts_idf
+)
+AS SELECT * FROM movie_review;
+```
+
+Dan vraag de output:
+
+```sql
+SELECT * FROM ctas_transform_table LIMIT 1;
+```
+
+#### Belangrijke overwegingen {#considerations}
+
+Hoewel deze functie de transparantie verbetert en functievalidatie ondersteunt, zijn er belangrijke beperkingen waarmee u rekening moet houden wanneer u de component `TRANSFORM` buiten het maken van het model gebruikt.
+
+- **Vectoroutput**: Als de transformatie vector-type output produceert, worden zij automatisch omgezet in series.
+- **de beperking van het hergebruik van de partij**: De Lijsten die met `TRANSFORM` worden gecreeerd kunnen transformaties tijdens lijstverwezenlijking slechts toepassen. De nieuwe partijen gegevens die met `INSERT INTO` worden opgenomen worden **niet automatisch getransformeerd**. Als u dezelfde transformatielogica wilt toepassen op nieuwe gegevens, moet u de tabel opnieuw maken met een nieuwe instructie `CREATE TABLE AS SELECT` (CTAS).
+- **Model heruse beperking**: De lijsten die het gebruiken van `TRANSFORM` worden gecreeerd kunnen niet direct in `CREATE MODEL` verklaringen worden gebruikt. U moet de `TRANSFORM` -logica opnieuw definiëren tijdens het maken van het model. Transformaties die uitvoer van vectortypen produceren, worden niet ondersteund tijdens modeltraining. Voor meer informatie, zie de [ types van de transformatieoutputgegevens van de Eigenschap ](./feature-transformation.md#available-transformations).
+
+>[!NOTE]
+>
+>Deze functie is ontworpen voor inspectie en validatie. Het is geen substituut voor herbruikbare pijpleidingslogica. Transformaties die zijn bedoeld voor invoer van het model moeten expliciet opnieuw worden gedefinieerd in de stap voor het maken van het model.
 
 ## Modellen evalueren {#evaluate-model}
 
@@ -114,10 +192,10 @@ SELECT *
 FROM   model_evaluate(model-alias, version-number,SELECT col1,
        col2,
        label-COLUMN
-FROM   test -dataset)
+FROM   test_dataset)
 ```
 
-De functie `model_evaluate` neemt `model-alias` als eerste argument en een flexibele instructie `SELECT` als tweede argument. De Service van de vraag voert eerst de `SELECT` verklaring uit en brengt de resultaten aan de `model_evaluate` Adobe Gedefinieerde Functie (ADF) in kaart. Het systeem verwacht dat de kolomnamen en gegevenstypen in het resultaat van de instructie `SELECT` overeenkomen met de namen die in de trainingsstap worden gebruikt. Deze kolomnamen en gegevenstypen worden behandeld als testgegevens en etiketgegevens voor evaluatie.
+De functie `model_evaluate` neemt `model-alias` als eerste argument en een flexibele instructie `SELECT` als tweede argument. De Query Service voert eerst de instructie `SELECT` uit en wijst de resultaten toe aan de `model_evaluate` Adobe Defined Function (ADF). Het systeem verwacht dat de kolomnamen en gegevenstypen in het resultaat van de instructie `SELECT` overeenkomen met de namen die in de trainingsstap worden gebruikt. Deze kolomnamen en gegevenstypen worden behandeld als testgegevens en etiketgegevens voor evaluatie.
 
 >[!IMPORTANT]
 >
@@ -125,21 +203,62 @@ De functie `model_evaluate` neemt `model-alias` als eerste argument en een flexi
 
 ## Voorspelend {#predict}
 
-Gebruik vervolgens het trefwoord `model_predict` om het opgegeven model en de versie toe te passen op een gegevensset en om voorspellingen voor de geselecteerde kolommen te genereren. De onderstaande SQL demonstreert dit proces en toont hoe u resultaten kunt voorspellen met behulp van de alias en versie van het model.
-
-```sql
-SELECT *
-FROM   model_predict(model-alias, version-number,SELECT col1,
-       col2,
-       label-COLUMN
-FROM   dataset)
-```
-
-`model_predict` accepteert de alias van het model als het eerste argument en een flexibele instructie `SELECT` als het tweede argument. De Query Service voert eerst de instructie `SELECT` uit en wijst de resultaten toe aan de `model_predict` ADF. Het systeem verwacht dat de kolomnamen en gegevenstypen in het resultaat van de instructie `SELECT` overeenkomen met die van de trainingsstap. Deze gegevens worden vervolgens gebruikt voor het scoren en het genereren van voorspellingen.
-
 >[!IMPORTANT]
 >
->Bij de evaluatie (`model_evaluate`) en het voorspellen (`model_predict`), worden de transformatie(s) gebruikt die op het tijdstip van opleiding worden uitgevoerd.
+>De verbeterde kolomselectie en aliasing voor `model_predict` worden gecontroleerd door een eigenschapvlag. Tussenvelden zoals `probability` en `rawPrediction` worden standaard niet opgenomen in de voorspelling-uitvoer.\
+>Als u toegang tot deze tussenliggende velden wilt inschakelen, voert u de volgende opdracht uit voordat u `model_predict` uitvoert:
+>
+>`set advanced_statistics_show_hidden_fields=true;`
+
+Gebruik het trefwoord `model_predict` om het opgegeven model en de versie toe te passen op een gegevensset en om voorspellingen te genereren. U kunt alle uitvoerkolommen selecteren, specifieke kolommen kiezen of aliassen toewijzen om de uitvoerhelderheid te verbeteren.
+
+Door gebrek, slechts zijn de basiskolommen en de definitieve voorspelling teruggekeerd tenzij de eigenschapvlag wordt toegelaten.
+
+```sql
+SELECT * FROM model_predict(model-alias, version-number, SELECT col1, col2 FROM dataset);
+```
+
+### Specifieke uitvoervelden selecteren {#select-specific-output-fields}
+
+Wanneer de functiemarkering is ingeschakeld, kunt u een subset van velden ophalen uit de uitvoer van `model_predict` . Gebruik dit om tussenliggende resultaten, zoals voorspellingskansen, onbewerkte voorspellingsscores, en basiskolommen van de inputvraag terug te winnen.
+
+**Geval 1: Terugkeer alle beschikbare outputgebieden**
+
+```sql
+SELECT * FROM model_predict(modelName, 1, SELECT a, b, c FROM dataset);
+```
+
+**Geval 2: Terugkeer geselecteerde kolommen**
+
+```sql
+SELECT a, b, c, probability, predictionCol FROM model_predict(modelName, 1, SELECT a, b, c FROM dataset);
+```
+
+**Geval 3: Terugkeer geselecteerde kolommen met aliassen**
+
+```sql
+SELECT a, b, c, probability AS p1, predictionCol AS pdc FROM model_predict(modelName, 1, SELECT a, b, c FROM dataset);
+```
+
+In elk geval worden de buitenste `SELECT` besturingselementen geretourneerd die resulteren in velden. Dit zijn basisvelden van de invoerquery, samen met voorspellingsuitvoer zoals `probability` , `rawPrediction` en `predictionCol` .
+
+### Voorspelingen behouden met CREATE TABLE of INVOEGEN IN
+
+U kunt voorspellingen voortzetten met &#39;TABEL MAKEN ALS SELECT&#39; of &#39;INVOEGEN IN SELECT&#39;, inclusief indien gewenst voorspelling-uitvoer.
+
+**Voorbeeld: Creeer lijst met alle gebieden van de voorspellingsoutput**
+
+```sql
+CREATE TABLE scored_data AS SELECT * FROM model_predict(modelName, 1, SELECT a, b, c FROM dataset);
+```
+
+**Voorbeeld: Voeg geselecteerde outputgebieden met aliassen in**
+
+```sql
+INSERT INTO scored_data SELECT a, b, c, probability AS p1, predictionCol AS pdc FROM model_predict(modelName, 1, SELECT a, b, c FROM dataset);
+```
+
+Dit biedt flexibiliteit om alleen de relevante voorspellingsoutputvelden en basiskolommen voor downstreamanalyse of rapportage te selecteren en aan te houden.
 
 ## Uw modellen evalueren en beheren
 

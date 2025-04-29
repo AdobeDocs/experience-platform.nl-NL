@@ -4,9 +4,9 @@ solution: Experience Platform
 title: SQL-syntaxis in Query-service
 description: In dit document wordt de SQL-syntaxis beschreven die wordt ondersteund door de Adobe Experience Platform Query Service.
 exl-id: 2bd4cc20-e663-4aaa-8862-a51fde1596cc
-source-git-commit: 654a8b6a3f961514ef96eaec879697cde36f8b1b
+source-git-commit: 5adc587a232e77f1136410f52ec207631b6715e3
 workflow-type: tm+mt
-source-wordcount: '4265'
+source-wordcount: '4623'
 ht-degree: 1%
 
 ---
@@ -192,32 +192,141 @@ SELECT statement 2
 
 ### TABEL MAKEN ALS SELECT {#create-table-as-select}
 
-De volgende syntaxis definieert een query `CREATE TABLE AS SELECT` (CTAS):
+Gebruik de opdracht `CREATE TABLE AS SELECT` (CTAS) om de resultaten van een `SELECT` -query in een nieuwe tabel te plaatsen. Dit is nuttig voor het creëren van getransformeerde datasets, het uitvoeren van samenvoegingen, of het voorvertonen van eigenschap-gebouwde gegevens alvorens het in een model te gebruiken.
+
+Als u bereid bent om een model te trainen gebruikend getransformeerde eigenschappen, zie de [ documentatie van Modellen ](../advanced-statistics/models.md) voor begeleiding bij het gebruiken van `CREATE MODEL` met de `TRANSFORM` clausule.
+
+U kunt desgewenst een `TRANSFORM` -component opnemen om een of meer functies voor functietechniek rechtstreeks in de CTAS-instructie toe te passen. Gebruik `TRANSFORM` om de resultaten van uw transformatielogica te inspecteren voordat u een modeltraining volgt.
+
+Deze syntaxis is van toepassing op zowel permanente als tijdelijke tabellen.
 
 ```sql
-CREATE TABLE table_name [ WITH (schema='target_schema_title', rowvalidation='false', label='PROFILE') ] AS (select_query)
+CREATE TABLE table_name 
+  [WITH (schema='target_schema_title', rowvalidation='false', label='PROFILE')] 
+  [TRANSFORM (transformFunctionExpression1, transformFunctionExpression2, ...)]
+AS (select_query)
 ```
 
-| Parameters | Beschrijving |
+```sql
+CREATE TEMP TABLE table_name 
+  [WITH (schema='target_schema_title', rowvalidation='false', label='PROFILE')] 
+  [TRANSFORM (transformFunctionExpression1, transformFunctionExpression2, ...)]
+AS (select_query)
+```
+
+| Parameter | Beschrijving |
 | ----- | ----- |
-| `schema` | De titel van het XDM-schema. Gebruik deze clausule slechts als u wenst om een bestaand schema XDM voor de nieuwe dataset te gebruiken die door de vraag CTAS wordt gecreeerd. |
-| `rowvalidation` | (Optioneel) Hiermee wordt aangegeven of de gebruiker validatie op rijniveau wil toepassen voor elke nieuwe batch die wordt opgenomen voor de nieuwe dataset. De standaardwaarde is `true` . |
-| `label` | Wanneer u een dataset met een vraag CTAS creeert, gebruik dit etiket met de waarde van `profile` om uw dataset zoals toegelaten voor profiel te etiketteren. Dit betekent dat uw dataset automatisch voor profiel duidelijk wordt aangezien het wordt gecreeerd. Zie het afgeleide document met kenmerkextensies voor meer informatie over het gebruik van `label` . |
-| `select_query` | Een instructie `SELECT` . De syntaxis van de `SELECT` vraag kan in de [ UITGEZOCHTE vraagsectie ](#select-queries) worden gevonden. |
-
-**Voorbeeld**
-
-```sql
-CREATE TABLE Chairs AS (SELECT color, count(*) AS no_of_chairs FROM Inventory i WHERE i.type=="chair" GROUP BY i.color)
-
-CREATE TABLE Chairs WITH (schema='target schema title', label='PROFILE') AS (SELECT color, count(*) AS no_of_chairs FROM Inventory i WHERE i.type=="chair" GROUP BY i.color)
-
-CREATE TABLE Chairs AS (SELECT color FROM Inventory SNAPSHOT SINCE 123)
-```
+| `schema` | De titel van het XDM-schema. Gebruik deze clausule slechts als u wenst om de nieuwe lijst met een bestaand schema te associëren XDM. |
+| `rowvalidation` | (Optioneel) Hiermee schakelt u validatie op rijniveau in voor elke batch die in de gegevensset wordt opgenomen. De standaardwaarde is true. |
+| `label` | (Optioneel) Gebruik de waarde `PROFILE` om de gegevensset een label te geven dat geschikt is voor het opnemen van profielen. |
+| `transform` | (Optioneel) Past functietechnologietransformaties toe (zoals tekenreeksindexering, one-hot codering of TF-IDF) voordat de gegevensset wordt geconcretiseerd. Deze component wordt gebruikt voor het voorvertonen van getransformeerde functies. Zie [`TRANSFORM` componentendocumentatie ](#transform) voor meer details. |
+| `select_query` | Een standaardinstructie `SELECT` die de gegevensset definieert. Zie [`SELECT` vragen sectie ](#select-queries) voor meer details. |
 
 >[!NOTE]
 >
->De instructie `SELECT` moet een alias hebben voor de statistische functies zoals `COUNT` , `SUM` , `MIN` , enzovoort. De instructie `SELECT` kan ook met of zonder haakjes () worden geleverd. U kunt een `SNAPSHOT` -component opgeven om incrementele delta&#39;s in de doeltabel te lezen.
+>De instructie `SELECT` moet een alias voor statistische functies zoals `COUNT` , `SUM` of `MIN` bevatten. U kunt de query voor `SELECT` uitvoeren met of zonder haakjes. Dit is van toepassing ongeacht of de `TRANSFORM` -component wordt gebruikt.
+
+**Voorbeelden**
+
+Een eenvoudig voorbeeld dat a `TRANSFORM` clausule gebruikt om een paar gemanipuleerde eigenschappen voor te vertonen:
+
+```sql
+CREATE TABLE ctas_transform_table_vp14 
+TRANSFORM(
+  String_Indexer(additional_comments) si_add_comments,
+  one_hot_encoder(si_add_comments) as ohe_add_comments,
+  tokenizer(comments) as token_comments
+)
+AS SELECT * FROM movie_review_e2e_DND;
+```
+
+Een geavanceerder voorbeeld met meerdere transformatiestappen:
+
+```sql
+CREATE TABLE ctas_transform_table 
+TRANSFORM(
+  String_Indexer(additional_comments) si_add_comments,
+  one_hot_encoder(si_add_comments) as ohe_add_comments,
+  tokenizer(comments) as token_comments,
+  stop_words_remover(token_comments, array('and','very','much')) stp_token,
+  ngram(stp_token, 3) ngram_token,
+  tf_idf(ngram_token, 20) ngram_idf,
+  count_vectorizer(stp_token, 13) cnt_vec_comments,
+  tf_idf(token_comments, 10, 1) as cmts_idf
+)
+AS SELECT * FROM movie_review;
+```
+
+Een tijdelijk tabelvoorbeeld:
+
+```sql
+CREATE TEMP TABLE ctas_transform_table 
+TRANSFORM(
+  String_Indexer(additional_comments) si_add_comments,
+  one_hot_encoder(si_add_comments) as ohe_add_comments,
+  tokenizer(comments) as token_comments,
+  stop_words_remover(token_comments, array('and','very','much')) stp_token,
+  ngram(stp_token, 3) ngram_token,
+  tf_idf(ngram_token, 20) ngram_idf,
+  count_vectorizer(stp_token, 13) cnt_vec_comments,
+  tf_idf(token_comments, 10, 1) as cmts_idf
+)
+AS SELECT * FROM movie_review;
+```
+
+#### Beperkingen en gedrag {#limitations-and-behavior}
+
+Houd rekening met de volgende beperkingen wanneer u de component `TRANSFORM` gebruikt met `CREATE TABLE` of `CREATE TEMP TABLE` :
+
+- Als een transformatiefunctie een vectoruitvoer genereert, wordt deze automatisch omgezet in een array.
+- Daarom kunnen tabellen die zijn gemaakt met `TRANSFORM` niet rechtstreeks in `CREATE MODEL` -instructies worden gebruikt. U moet de transformatielogica tijdens het maken van het model opnieuw definiëren om de juiste functievectoren te genereren.
+- Transformaties worden alleen toegepast tijdens het maken van tabellen. De nieuwe gegevens die in de lijst met `INSERT INTO` worden opgenomen worden **niet automatisch getransformeerd**. Als u transformaties wilt toepassen op nieuwe gegevens, moet u de tabel opnieuw maken met `CREATE TABLE AS SELECT` met de component `TRANSFORM` .
+- Deze methode is bedoeld voor het voorvertonen en valideren van transformaties op een bepaald tijdstip, niet voor het bouwen van herbruikbare transformatiepijpleidingen.
+
+>[!NOTE]
+>
+>Voor meer details over beschikbare transformatiefuncties en hun outputtypes, zie {de gegevenstypen van de transformatieoutput van 0} Eigenschap ](../advanced-statistics/feature-transformation.md#available-transformations).[
+
+
+### TRANSFORM, component {#transform}
+
+Gebruik de component `TRANSFORM` om een of meer functies van de functietechniek toe te passen op een dataset voordat u een modeltraining of tabel maakt. Met deze component kunt u de exacte vorm van de invoerfuncties voorvertonen, valideren of definiëren.
+
+De component `TRANSFORM` kan in de volgende instructies worden gebruikt:
+
+- `CREATE MODEL`
+- `CREATE TABLE`
+- `CREATE TEMP TABLE`
+
+Zie de [ documentatie van Modellen ](../advanced-statistics/models.md) voor gedetailleerde instructies bij het gebruiken CREATE MODEL, met inbegrip van hoe te om transformaties te bepalen, modelopties te plaatsen, en opleidingsgegevens te vormen.
+
+Voor gebruik met `CREATE TABLE`, zie [ LIJST ALS UITGEZOCHTE sectie ](#create-table-as-select) CREËREN.
+
+#### CREATE MODEL, voorbeeld
+
+```sql
+CREATE MODEL review_model
+TRANSFORM(
+  String_Indexer(additional_comments) si_add_comments,
+  one_hot_encoder(si_add_comments) AS ohe_add_comments,
+  tokenizer(comments) AS token_comments,
+  stop_words_remover(token_comments, array('and','very','much')) AS stp_token,
+  ngram(stp_token, 3) AS ngram_token,
+  tf_idf(ngram_token, 20) AS ngram_idf,
+  count_vectorizer(stp_token, 13) AS cnt_vec_comments,
+  tf_idf(token_comments, 10, 1) AS cmts_idf,
+  vector_assembler(array(cmts_idf, viewsgot, ohe_add_comments, ngram_idf, cnt_vec_comments)) AS features
+)
+OPTIONS(MODEL_TYPE='logistic_reg', LABEL='reviews')
+AS SELECT * FROM movie_review_e2e_DND;
+```
+
+#### Beperkingen {#limitations}
+
+De volgende beperkingen zijn van toepassing wanneer u `TRANSFORM` met `CREATE TABLE` gebruikt. Zie `CREATE TABLE AS SELECT` beperkingen en gedragssectie voor een gedetailleerde uitleg van hoe getransformeerde gegevens worden opgeslagen, hoe vectoroutput wordt behandeld en waarom de resultaten niet direct in de workflows van de modeltraining kunnen worden hergebruikt.
+
+- Vectoruitvoerbestanden worden automatisch omgezet in arrays, die niet rechtstreeks in `CREATE MODEL` kunnen worden gebruikt.
+- Transformatielogica blijft niet behouden als metagegevens en kan niet opnieuw worden gebruikt in batches.
 
 ## INVOEGEN IN
 

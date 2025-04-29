@@ -4,9 +4,9 @@ solution: Experience Platform
 title: UI-gids voor zoekservice
 description: Adobe Experience Platform Query Service biedt een gebruikersinterface die kan worden gebruikt om query's te schrijven en uit te voeren, eerder uitgevoerde query's weer te geven en query's te openen die zijn opgeslagen door gebruikers binnen uw organisatie.
 exl-id: 99ad25e4-0ca4-4bd1-b701-ab463197930b
-source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
+source-git-commit: 7e1eee48b45311f9ac358496e46ca8980df0112b
 workflow-type: tm+mt
-source-wordcount: '2150'
+source-wordcount: '2627'
 ht-degree: 0%
 
 ---
@@ -104,6 +104,50 @@ Terwijl u in de Query-editor typt, voltooit de editor automatisch voor SQL geres
 
 ![ de werkruimte van de Redacteur van de Vraag.](../images/ui/overview/query-editor.png)
 
+### Zoekresultaten downloaden {#download-query-results}
+
+>[!AVAILABILITY]
+>
+>Downloadmogelijkheden zijn alleen beschikbaar voor klanten met de Data Distiller-invoegtoepassing. Neem contact op met uw Adobe-vertegenwoordiger voor meer informatie over Data Distiller.
+
+U kunt vraagresultaten nu direct van het gebruikersinterface van de Redacteur van de Vraag downloaden. Nadat de query is uitgevoerd, kunt u de uitvoer downloaden in de bestandsindeling CSV, XLSX of JSON. Deze functionaliteit stroomlijnt werkschema&#39;s voor marketing en analytische teams door directe toegang tot vraagresultaten voor off-line analyse, rapportering, en op Excel-Gebaseerde processen toe te laten.
+
+Als u de queryresultaten wilt downloaden, selecteert u **[!UICONTROL Download]** in de rechterbovenhoek van het tabblad Query-editor **[!UICONTROL Result]** . Kies vervolgens **[!UICONTROL CSV]** , **[!UICONTROL XLSX]** of **[!UICONTROL JSON]** in het vervolgkeuzemenu. Het bestand wordt automatisch naar uw lokale computer gedownload.
+
+>[!NOTE]
+>
+>De knop **[!UICONTROL Download]** wordt alleen weergegeven wanneer een query resultaten retourneert. Als er geen records worden geretourneerd, wordt op het tabblad **[!UICONTROL Result]** het bericht &#39;Geen resultaten&#39; weergegeven en is de downloadoptie uitgeschakeld.
+
+![ het resultatenlusje van de Redacteur van de Vraag met Gemarkeerde Download en dropdown menu.](../images/ui/overview/download-results.png)
+
+>[!NOTE]
+>
+>Wanneer het openen van een Csv- dossier in Excel, kunt u de volgende waarschuwing zien:<br> &quot;Mogelijke Verlies van Gegevens. Sommige eigenschappen zouden kunnen worden verloren als u dit werkboek in het komma-afgebakende formaat (.csv) opslaat. Als u deze functies wilt behouden, slaat u ze op in Excel-bestandsindeling.&quot;<br> bovendien, ben zich ervan bewust dat datum en tijd het formatteren per dossiertype kunnen variëren. CSV-bestanden behouden de indeling die wordt weergegeven in de zoekresultaten, terwijl XLSX-bestanden de gelokaliseerde opmaak automatisch kunnen toepassen in Excel.
+
+### Resultaten op volledig scherm weergeven {#view-results}
+
+Nadat de query met succes is uitgevoerd, selecteert u **[!UICONTROL View results]** op het tabblad **[!UICONTROL Result]** om een tabelweergave op volledig scherm met uw resultaten te openen.
+
+In de weergave Volledig scherm wordt de uitvoer weergegeven in een raster waarvan de grootte kan worden gewijzigd, zodat u gemakkelijker grote gegevenssets kunt bekijken en over kolommen kunt scannen. Deze voorvertoningsmodus is vooral handig voor het analyseren van brede tabellen of het controleren van details op rijniveau.
+
+>[!NOTE]
+>
+>De voorvertoning is alleen-lezen en wijzigt uw query of dataset niet.
+
+![ de dialoog van de volledig-schermvoorproef met de geselecteerde resultaten van de Mening.](../images/ui/overview/view-results-fullscreen.png)
+
+### Resultaten kopiëren {#copy-results}
+
+Gebruik de verbeterde exemplaareigenschap in de Redacteur van de Vraag om vraagresultaten als komma-gescheiden waarden (CSV) snel te kopiëren. Plak de gekopieerde gegevens gemakkelijk in spreadsheettoepassingen zoals Excel voor verdere analyse. Deze functionaliteit verbetert de leesbaarheid, behoudt de opmaak en stroomlijnt de workflows voor validatie en rapportage zonder afhankelijk te zijn van hulpmiddelen van derden.
+
+U kunt queryresultaten kopiëren via het tabblad [!UICONTROL Result] of vanuit de voorvertoning van de resultaten op het volledige scherm. Van het **[!UICONTROL Result]** lusje, selecteer het exemplaarpictogram (![ A exemplaarpictogram.](../../images/icons/copy.png)) om alle queryresultaten naar het klembord te kopiëren. Selecteer op het tabblad Resultaten van de Query-editor de afzonderlijke rijen of gebruik de kolomkop van het selectievakje om alle rijen te selecteren. Selecteer één rij om het kopieerpictogram in te schakelen.
+
+![ het resultatenlusje van de Redacteur van de Vraag met het benadrukte exemplaarpictogram.](../images/ui/overview/query-editor-copy-icon.png)
+
+U kunt ook **[!UICONTROL View results]** selecteren om de voorvertoning op volledig scherm te openen. Van dit dialoog, uitgezochte individuele rijen of gebruik checkbox in de upper-left hoek om alle rijen te selecteren, dan het exemplaarpictogram (![ A exemplaarpictogram te selecteren.](../../images/icons/copy.png) ) om de geselecteerde gegevens te kopiëren.
+
+![ de dialoog van de volledig-schermvoorproef met geselecteerde resultaatrijen en het benadrukte exemplaarpictogram.](../images/ui/overview/results-copy.png)
+
 ## Geplande query&#39;s {#scheduled-queries}
 
 Vragen die al als een sjabloon zijn opgeslagen, kunnen worden gepland voor uitvoering op een normale cadence. Wanneer het plannen van een vraag, kunt u de frequentie van looppas, de begin en einddatum, de dag van de week kiezen de geplande vraaglooppas, evenals de dataset om de vraag naar uit te voeren. De programma&#39;s van de vraag worden geplaatst gebruikend de Redacteur van de Vraag.
@@ -113,8 +157,6 @@ Leren hoe te om een vraag door UI te plannen, zie de [ geplande gids van vragen 
 Nadat een query is gepland, wordt deze weergegeven in de lijst met geplande query&#39;s op het tabblad [!UICONTROL Scheduled Queries] . De volledige details betreffende de vraag, de looppas, de schepper, en de tijdopnemers kunnen worden gevonden door een geplande vraag van de lijst te selecteren.
 
 ![ de werkruimte van Vragen met het Geplande lusje van Vragen benadrukte en tonend rijen van vraagprogramma&#39;s.](../images/ui/overview/scheduled-queries.png)
-
-<!--  -->
 
 | Kolom | Beschrijving |
 | --- | --- |
