@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Vervaldatum van gegevens van pseudoniem profiel
 description: Dit document biedt algemene richtlijnen voor het configureren van gegevensvervaldatum voor Pseudoniem-profielen in Adobe Experience Platform.
 exl-id: e8d31718-0b50-44b5-a15b-17668a063a9c
-source-git-commit: 07786ad7f43c66411e9e167c17daa2baf51a2661
+source-git-commit: aeb9d6636f0d843bf13d09bcb4c12754e2890046
 workflow-type: tm+mt
 source-wordcount: '1241'
 ht-degree: 0%
@@ -138,3 +138,4 @@ In een typisch geval kunt u de vervaldatum van de Ervaring-gebeurtenisgegevens i
 ## Volgende stappen
 
 Nadat u deze handleiding hebt gelezen, kunt u de vervaldatum van Pseudoniem-profielgegevens weergeven en maken. Voor meer informatie over gegevensbeheer over Experience Platform als geheel, gelieve te lezen de [ gids van de het beheervergunning van Gegevens best practices ](../landing/license-usage-and-guardrails/data-management-best-practices.md).
+
