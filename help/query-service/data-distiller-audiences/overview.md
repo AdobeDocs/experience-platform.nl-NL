@@ -2,9 +2,9 @@
 title: Stimuleer soorten publiek met SQL
 description: Leer hoe u de SQL-publieksextensie in Adobe Experience Platform Data Distiller kunt gebruiken voor het maken, beheren en publiceren van soorten publiek met SQL-opdrachten. In deze handleiding worden alle aspecten van de levenscyclus van de doelgroep behandeld, zoals het maken, bijwerken en verwijderen van profielen en het gebruik van gegevensgestuurde publieksdefinities voor doelbestemmingen op basis van bestanden.
 exl-id: c35757c1-898e-4d65-aeca-4f7113173473
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 9e16282f9f10733fac9f66022c521684f8267167
 workflow-type: tm+mt
-source-wordcount: '1483'
+source-wordcount: '1831'
 ht-degree: 0%
 
 ---
@@ -100,6 +100,97 @@ In het volgende voorbeeld wordt getoond hoe u profielen aan een bestaand publiek
 INSERT INTO Audience aud_test
 SELECT userId, orders, total_revenue, recency, frequency, monetization FROM customer_ds;
 ```
+
+### Audiogegevens vervangen (OVERSCHRIJVEN INVOEGEN) {#replace-audience}
+
+Gebruik de opdracht `INSERT OVERWRITE INTO` om alle bestaande profielen in een publiek te vervangen door de resultaten van een nieuwe SQL-query. Dit bevel is nuttig om dynamische publiekssegmenten te beheren door u toe te staan om de inhoud van een publiek in één enkele stap volledig te verfrissen.
+
+>[!AVAILABILITY]
+>
+>De opdracht `INSERT OVERWRITE INTO` is alleen beschikbaar voor Distiller-klanten met gegevens. Neem contact op met uw Adobe-vertegenwoordiger voor meer informatie over de Data Distiller-invoegtoepassing.
+
+In tegenstelling tot [`INSERT INTO`](#add-profiles-to-audience) , dat aan het huidige publiek toevoegt, verwijdert `INSERT OVERWRITE INTO` alle bestaande publieksleden en voegt alleen die in die door de query worden geretourneerd. Dit biedt meer controle en flexibiliteit bij het beheer van soorten publiek die regelmatig of volledig moeten worden bijgewerkt.
+
+Gebruik het volgende syntaxismalplaatje om een publiek met een nieuwe reeks profielen te beschrijven:
+
+```sql
+INSERT OVERWRITE INTO audience_name
+SELECT select_query
+```
+
+**Parameters**
+
+In de volgende tabel worden de parameters beschreven die voor de opdracht `INSERT OVERWRITE INTO` zijn vereist:
+
+| Parameter | Beschrijving |
+|-----------|-------------|
+| `audience_name` | De naam van het publiek dat is gemaakt met de opdracht `CREATE AUDIENCE` . |
+| `select_query` | Een instructie `SELECT` die de profielen definieert die in het publiek moeten worden opgenomen. |
+
+**Voorbeeld:**
+
+In dit voorbeeld wordt het publiek van `audience_monthly_refresh` volledig overschreven door de resultaten van de query. Profielen die niet door de query worden geretourneerd, worden uit het publiek verwijderd.
+
+>[!NOTE]
+>
+>Overschrijvingsbewerkingen werken alleen correct als er maar één batch-upload aan de doelgroep is gekoppeld.
+
+```sql
+INSERT OVERWRITE INTO audience_monthly_refresh
+SELECT user_id FROM latest_transaction_summary WHERE total_spend > 100;
+```
+
+#### Het gedrag van het publiek beschrijft gedrag in het Profiel van de Klant In real time
+
+Wanneer u een publiek overschrijft, past het Profiel van de Klant in real time de volgende logica toe om profiellidmaatschap bij te werken:
+
+- Profielen die alleen in de nieuwe batch worden weergegeven, worden gemarkeerd als ingevoerd.
+- Profielen die alleen in de vorige batch bestonden, worden gemarkeerd als verlaten.
+- Profielen in beide batches blijven ongewijzigd (er wordt geen bewerking uitgevoerd).
+
+Dit zorgt ervoor dat de publieksupdates nauwkeurig in stroomafwaartse systemen en werkschema&#39;s worden weerspiegeld.
+
+**scenario van het Voorbeeld**
+
+Als een publiek `A1` oorspronkelijk bevat:
+
+| ID | NAAM |
+|----|------|
+| A | Jack |
+| B | John |
+| C | Martha |
+
+En de overschrijvingsvraag keert terug:
+
+| ID | NAAM |
+|----|------|
+| A | Stewart |
+| C | Martha |
+
+Dan zal het bijgewerkte publiek bevatten:
+
+| ID | NAAM |
+|----|------|
+| A | Stewart |
+| C | Martha |
+
+Profiel B wordt verwijderd, profiel A wordt bijgewerkt en profiel C blijft ongewijzigd.
+
+Als de overschrijvingsquery een nieuw profiel bevat:
+
+| ID | NAAM |
+|----|------|
+| A | Stewart |
+| C | Martha |
+| D | Chris |
+
+Dan zal het uiteindelijke publiek zijn:
+
+| ID | NAAM |
+|----|------|
+| A | Stewart |
+| C | Martha |
+| D | Chris |
 
 ### Voorbeeld van publiek van RFM-model {#rfm-model-audience-example}
 
