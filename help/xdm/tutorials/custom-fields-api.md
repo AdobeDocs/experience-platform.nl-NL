@@ -2,9 +2,9 @@
 title: XDM-velden definiëren in de API voor schemaregister
 description: Leer hoe u verschillende velden definieert bij het maken van XDM-bronnen (Custom Experience Data Model) in de Schema Registry API.
 exl-id: d79332e3-8448-42af-b250-882bcb0f1e7d
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 7521273c0ea4383b7141e9d7a82953257ff18c34
 workflow-type: tm+mt
-source-wordcount: '1158'
+source-wordcount: '1166'
 ht-degree: 0%
 
 ---
@@ -36,7 +36,7 @@ Om te beginnen, het gewenste gebiedstype te vinden en de steekproefcode te gebru
 U kunt desgewenst beperken welke soorten waarden voor de tekenreeks kunnen worden ingevoerd via de volgende aanvullende eigenschappen:
 
 * `pattern`: Een regex-patroon dat moet worden beperkt.
-* `minLength`: een minimumlengte voor de tekenreeks.
+* `minLength`: een minimumlengte voor de tekenreeks. Tekenreeksen krijgen standaard de minimale waarde `1` .
 * `maxLength`: Een maximumlengte voor de tekenreeks.
 
 ```json

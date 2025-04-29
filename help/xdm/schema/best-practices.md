@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Aanbevolen procedures voor gegevensmodellering
 description: Dit document verstrekt een inleiding aan de schema's van het Gegevensmodel van de Ervaring (XDM) en de bouwstenen, de beginselen, en beste praktijken voor het samenstellen van schema's die in Adobe Experience Platform moeten worden gebruikt.
 exl-id: 2455a04e-d589-49b2-a3cb-abb5c0b4e42f
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 7521273c0ea4383b7141e9d7a82953257ff18c34
 workflow-type: tm+mt
-source-wordcount: '3211'
+source-wordcount: '3223'
 ht-degree: 0%
 
 ---
@@ -251,7 +251,7 @@ Hieronder volgt een verzameling suggesties voor het behoud van gegevensintegrite
 * **pas patronen voor verenigbare waarden** toe: Als uw identiteitswaarden een specifiek patroon volgen, zou u **[!UICONTROL Pattern]** het plaatsen moeten gebruiken om deze beperking af te dwingen. Deze instelling kan regels bevatten zoals alleen cijfers, hoofdletters of kleine letters of specifieke tekencombinaties. Gebruik reguliere expressies die overeenkomen met patronen in de tekenreeksen.
 * **Grenswaarden eVars in de schema&#39;s van Analytics**: Typisch, zou een schema Analytics slechts één eVar moeten hebben die als identiteit wordt aangewezen. Als u meer dan één eVar als identiteit wilt gebruiken, moet u controleren of de gegevensstructuur kan worden geoptimaliseerd.
 * **verzekert uniciteit van een geselecteerd gebied**: Uw gekozen gebied zou uniek moeten zijn in vergelijking met de primaire identiteit in het schema. Als dit niet het geval is, merk het dan niet als een identiteit. Als bijvoorbeeld meerdere klanten hetzelfde e-mailadres kunnen opgeven, is die naamruimte geen geschikte identiteit. Dit beginsel is ook van toepassing op andere naamruimten zoals telefoonnummers. Als u een niet-uniek veld als een identiteit markeert, kan dit leiden tot het samenvouwen van het profiel.
-* **verifieer minimumkoordlengten**: Alle koordgebieden zouden minstens één karakter in lengte moeten zijn, aangezien de koordwaarden nooit leeg zouden moeten zijn. Null-waarden voor niet-vereiste velden zijn echter acceptabel.
+* **verifieer minimumkoordlengten**: Alle koordgebieden zouden minstens één karakter in lengte moeten zijn, aangezien de koordwaarden nooit leeg zouden moeten zijn. Null-waarden voor niet-vereiste velden zijn echter acceptabel. Nieuwe tekenreeksvelden krijgen standaard een minimale lengte van één.
 
 ## Volgende stappen
 
