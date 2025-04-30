@@ -2,9 +2,9 @@
 title: Aanvullende informatie van april 2025 voor Adobe Experience Platform
 description: Aanvullende informatie van april 2025 voor Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: d2ee1adb031af83569f7b226a8881297423fc257
+source-git-commit: 7772e0b6f512c3854a03fb01580c80cc0cb41ba3
 workflow-type: tm+mt
-source-wordcount: '1649'
+source-wordcount: '1692'
 ht-degree: 28%
 
 ---
@@ -51,6 +51,7 @@ Experience League is een uitgebreid trainingsplatform dat u helpt uw vaardighede
 | Bestemming | Beschrijving |
 | --- | --- |
 | [ Marketo Engage Person Sync ](/help/destinations/catalog/adobe/marketo-engage-person-sync.md) | Adobe heeft het doel van [!DNL Marketo Engage Person Sync] bijgewerkt om een probleem op te lossen dat van invloed was op klanten wanneer er meerdere e-mails in de identiteitskaart stonden. |
+| [ (V2) Pega CDH Realtime Audience connection ](/help/destinations/catalog/personalization/pega-v2.md) | Gebruik de [!DNL (V2) Pega Customer Decision Hub Realtime Audience] bestemming in Adobe Experience Platform om profielattributen en de gegevens van het publiekslidmaatschap naar de Hub van het Besluit van de Klant van Pega voor volgende-best-actie besluit te verzenden, wanneer u veelvoudige toepassingen hebt van de Hub van het Besluit van de Klant van Pega die in uw rekening worden gevormd Pega. |
 
 **Nieuwe of bijgewerkte functionaliteit** {#destinations-new-updated-functionality}
 
