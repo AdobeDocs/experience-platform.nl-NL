@@ -1,19 +1,17 @@
 ---
 title: Gebruikersprofielen van Algolië verbinden met Experience Platform via de gebruikersinterface
 description: Leer hoe u verbinding kunt maken met gebruikers van Algolië die op Experience Platform zijn ingesteld
-hide: true
-hidefromtoc: true
 exl-id: d4c936a7-4983-4a12-a813-03b672116e44
-source-git-commit: 009866abc39b06c22b7bea758ce9fdfba8c72b00
+source-git-commit: 9bc7d372eba9ffcfe64f90d2d58a532411e5f1ce
 workflow-type: tm+mt
-source-wordcount: '1107'
+source-wordcount: '1106'
 ht-degree: 0%
 
 ---
 
 # Gegevens [!DNL Algolia User Profiles] aan Experience Platform toevoegen met de gebruikersinterface
 
-Lees deze zelfstudie om te leren hoe u via de gebruikersinterface betalingsgegevens van uw [!DNL Algolia User Profiles] -account aan Adobe Experience Platform kunt toevoegen.
+Lees deze zelfstudie om te leren hoe u via de gebruikersinterface gegevens van uw [!DNL Algolia User Profiles] -account kunt invoeren naar Adobe Experience Platform.
 
 ## Aan de slag
 

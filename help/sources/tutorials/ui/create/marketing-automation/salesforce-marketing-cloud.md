@@ -2,9 +2,9 @@
 title: Verbinding maken met Experience Platform via de gebruikersinterface van uw Salesforce Marketing Cloud-account
 description: Leer hoe u uw Salesforce Marketing Cloud-account via de gebruikersinterface met Experience Platform kunt verbinden.
 exl-id: 1d9bde60-31e0-489c-9c1c-b6471e0ea554
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 7ff0709b62590bb80c1ed664368f28cdc4a950ea
 workflow-type: tm+mt
-source-wordcount: '489'
+source-wordcount: '526'
 ht-degree: 0%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 >[!WARNING]
 >
->De bron [!DNL Salesforce Marketing Cloud] wordt eind juni 2025 vervangen.
+>De [!DNL Salesforce Marketing Cloud] -bron wordt afgekeurd in januari 2026. Later dit jaar zal een nieuwe bron worden vrijgegeven als alternatief. Zodra de nieuwe bron wordt vrijgegeven, moet u van plan zijn om aan de nieuwe bron te migreren door nieuwe rekeningsverbindingen en dataflows vóór eind Januari 2026 te creëren.
 
 Deze zelfstudie biedt stappen voor het verbinden van uw [!DNL Salesforce Marketing Cloud] -account met Adobe Experience Platform via de gebruikersinterface.
 
