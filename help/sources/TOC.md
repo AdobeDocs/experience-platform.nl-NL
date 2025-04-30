@@ -5,9 +5,9 @@ breadcrumb-title: Gids voor Source Connectors
 user-guide-description: Neem gegevens uit diverse bronnen op. Leer hoe u opgenomen gegevens kunt structureren, labelen en verbeteren.
 feature: Sources
 role: Developer
-source-git-commit: 47f6251a190a12b86ec566e3ba72fa34a0bd028b
+source-git-commit: 7b1dbec504ba11983958c3452878cf410b2a490c
 workflow-type: tm+mt
-source-wordcount: '1070'
+source-wordcount: '1075'
 ht-degree: 7%
 
 ---
@@ -75,6 +75,7 @@ ht-degree: 7%
       - [Amazon Redshift-connector](connectors/databases/redshift.md)
       - [Apache Hive op Azure HDInsights-connector](connectors/databases/hive.md)
       - [Apache Spark op Azure HDInsights-connector](connectors/databases/spark.md)
+      - [Azure Databricks-aansluiting](connectors/databases/databricks.md)
       - [Azure Data Explorer-connector](connectors/databases/data-explorer.md)
       - [Azure Synapse Analytics-connector](connectors/databases/synapse-analytics.md)
       - [Azure Table Storage-connector](connectors/databases/ats.md)
@@ -143,13 +144,13 @@ ht-degree: 7%
          - [Azure-bestandsopslag](tutorials/api/create/cloud-storage/azure-file-storage.md)
          - [Gegevenslandingszone](tutorials/api/create/cloud-storage/data-landing-zone.md)
          - [FTP](tutorials/api/create/cloud-storage/ftp.md)
-         - [Google Cloud-opslag](tutorials/api/create/cloud-storage/google.md)
+         - [Google Cloud Storage](tutorials/api/create/cloud-storage/google.md)
          - [Google PubSub](tutorials/api/create/cloud-storage/google-pubsub.md)
          - [Oracle Object Storage](tutorials/api/create/cloud-storage/oracle-object-storage.md)
          - [SFTP](tutorials/api/create/cloud-storage/sftp.md)
       - Toestemming en voorkeuren {#consent}
          - [OneTrust-integratie](tutorials/api/create/consent-and-preferences/onetrust.md)
-      - CRM Nederland {#crm}
+      - CRM {#crm}
          - [Microsoft Dynamics](tutorials/api/create/crm/ms-dynamics.md)
          - [Salesforce](tutorials/api/create/crm/salesforce.md)
          - [SugarCRM-rekeningen en -contactpersonen](tutorials/api/create/crm/sugarcrm-accounts-contacts.md)
@@ -165,6 +166,7 @@ ht-degree: 7%
          - [Amazon Redshift](tutorials/api/create/databases/redshift.md)
          - [Apache Hive op Azure HDInsights](tutorials/api/create/databases/hive.md)
          - [Apache Spark op Azure HDInsights](tutorials/api/create/databases/spark.md)
+         - [Azure Databricks](tutorials/api/create/databases/databricks.md)
          - [Azure Data Explorer](tutorials/api/create/databases/data-explorer.md)
          - [Azure Synapse Analytics](tutorials/api/create/databases/synapse-analytics.md)
          - [Azure Table Storage](tutorials/api/create/databases/ats.md)
@@ -201,9 +203,9 @@ ht-degree: 7%
       - Betalingen {#payments}
          - [PayPal](tutorials/api/create/payments/paypal.md)
          - [Vierkant](tutorials/api/create/payments/square.md)
-         - [Streep](tutorials/api/create/payments/stripe.md)
+         - [Stripe](tutorials/api/create/payments/stripe.md)
       - Protocollen {#protocols}
-         - [Generiek OData](tutorials/api/create/protocols/odata.md)
+         - [Generic OData](tutorials/api/create/protocols/odata.md)
          - [Algemene REST-API](tutorials/api/create/protocols/generic-rest.md)
       - Streaming {#streaming}
          - [HTTP-API](tutorials/api/create/streaming/http.md)
@@ -338,7 +340,7 @@ ht-degree: 7%
          - [Vierkant](tutorials/ui/create/payments/square.md)
          - [Stripe](tutorials/ui/create/payments/stripe.md)
       - Protocollen {#protocols}
-         - [Generiek OData](tutorials/ui/create/protocols/odata.md)
+         - [Generic OData](tutorials/ui/create/protocols/odata.md)
       - Streaming {#streaming}
          - [HTTP-API](tutorials/ui/create/streaming/http.md)
    - Een gegevensstroom configureren {#dataflow}
