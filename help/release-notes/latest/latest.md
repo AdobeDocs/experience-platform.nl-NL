@@ -2,10 +2,10 @@
 title: Aanvullende informatie van april 2025 voor Adobe Experience Platform
 description: Aanvullende informatie van april 2025 voor Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 7772e0b6f512c3854a03fb01580c80cc0cb41ba3
+source-git-commit: b7904761e4120170664b1b21482d3077ff5df57b
 workflow-type: tm+mt
-source-wordcount: '1692'
-ht-degree: 28%
+source-wordcount: '1885'
+ht-degree: 25%
 
 ---
 
@@ -31,6 +31,7 @@ Updates van bestaande functies en documentatie in Adobe Experience Platform:
 - [Query-service](#query-service)
 - [Realtime-klantenprofiel](#profile)
 - [Bronnen](#sources)
+- [Playbooks voor gebruiksscenario&#39;s](#use-case-playbooks)
 
 ## Experience League {#experience-league}
 
@@ -152,3 +153,21 @@ Gebruik bronnen in Experience Platform om gegevens vanuit een Adobe-applicatie o
 {style="table-layout:auto"}
 
 Voor meer informatie, raadpleegt u het [overzicht van bronnen](../../sources/home.md).
+
+## Playbooks voor gebruiksscenario&#39;s {#use-case-playbooks}
+
+Afspeelboeken met hoofdletters zijn oorspronkelijk ontworpen om u te helpen uitdagingen het hoofd te bieden wanneer u aan de slag gaat met Real-Time Customer Data Platform of Adobe Journey Optimizer. Ze blijven evolueren en stellen u nu in staat om belangrijke gevallen van marketinggebruik te beginnen en inspiratie en vooraf gebouwde middelen te bieden om te testen en in productie te gaan.
+
+In Use Case Playbooks (Engelstalig) is een overgang gemaakt van een detectiegereedschap naar een samenwerkingskader. Met deze programma&#39;s kunt u nu uw eigen afspeelboeken samenstellen, beheren en delen in verschillende organisaties.
+
+**Bijgewerkte functies**
+
+| Functie | Beschrijving |
+| --- | --- |
+| [!BADGE  Beta ]{type=Informative} Auteur en deel uw eigen playbooks | Met een nieuw Playbook Authoring Framework kunt u uw eigen praktijkafspeelboeken maken, beheren en delen. Dit omvat ondersteuning voor het vastleggen van belangrijke metagegevens, het bewerken van reiskaarten en het koppelen van relevante technische elementen. U kunt Playbooks over organisaties delen om marketing benaderingen te standaardiseren en consistentie te handhaven. |
+
+{style="table-layout:auto"}
+
+Leren hoe u auteur kunt en uw eigen playbooks delen, de [ Auteur lezen en uw eigen playbooks ](/help/use-case-playbooks/playbooks/author.md) document delen.
+
+Voor meer informatie, lees het [ overzicht van de Playbooks van het Geval van het Gebruik ](/help/use-case-playbooks/playbooks/overview.md), dat een overzicht van de functionaliteit van playbooks, hun doel, en een demonstratie van begin tot eind, met inbegrip van hoe te om instanties tot stand te brengen en geproduceerde activa in andere zandbakmilieu&#39;s in te voeren verstrekt.
