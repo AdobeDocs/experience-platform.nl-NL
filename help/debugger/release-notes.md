@@ -4,14 +4,22 @@ description: De nieuwste aanvullende informatie voor Adobe Experience Platform D
 keywords: foutopsporing;Experience Platform Debugger-extensie;Chrome;extensie;aanvullende informatie
 uuid: 47a5d6f3-c074-4ad5-ad4b-e6030496689b
 exl-id: 3eed44da-5f85-413e-a783-3a0df03a2baf
-source-git-commit: e82cd0b24504f807f7511aae1f5a0c9d77a40f74
+source-git-commit: f32c4bbf48fce2ada7cf7b75efc82e28d1ec26ff
 workflow-type: tm+mt
-source-wordcount: '801'
-ht-degree: 98%
+source-wordcount: '850'
+ht-degree: 93%
 
 ---
 
 # Aanvullende informatie over Adobe Experience Platform Debugger
+
+## Versie 1.6.3 - 30 april 2025
+
+### Oplossingen en verbeteringen
+
+* Probleem verholpen waarbij Foutopsporing DTM- en Launch-functies verhindert te werken.
+* Probleem verholpen waarbij Analytics Post-Processors Hits niet in logs zou worden weergegeven.
+* Probleem verholpen waarbij gegevens in niet-ASCII-talen zoals Japans niet correct worden weergegeven in logboeken.
 
 ## Versie 1.6.2 - woensdag 1 oktober 2024
 
