@@ -2,10 +2,10 @@
 title: Aanvullende informatie van april 2025 voor Adobe Experience Platform
 description: Aanvullende informatie van april 2025 voor Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: b7904761e4120170664b1b21482d3077ff5df57b
+source-git-commit: 3836b369d609448146a273fc6cf29061fd1ea422
 workflow-type: tm+mt
-source-wordcount: '1885'
-ht-degree: 25%
+source-wordcount: '2026'
+ht-degree: 28%
 
 ---
 
@@ -30,6 +30,7 @@ Updates van bestaande functies en documentatie in Adobe Experience Platform:
 - [Identiteitsservice](#identity)
 - [Query-service](#query-service)
 - [Realtime-klantenprofiel](#profile)
+- [Sandboxes](#sandboxes)
 - [Bronnen](#sources)
 - [Playbooks voor gebruiksscenario&#39;s](#use-case-playbooks)
 
@@ -126,6 +127,20 @@ Met Adobe Experience Platform kunt u uw klanten gecoördineerde, consistente en 
 {style="table-layout:auto"}
 
 Voor meer informatie over Real-Time Customer Profile, raadpleegt u het [overzicht van profielen](../../profile/home.md)
+
+## Sandboxes {#sandboxes}
+
+Adobe Experience Platform is ontworpen om digitale ervaringstoepassingen wereldwijd te verrijken. Bedrijven gebruiken vaak meerdere digitale ervaringstoepassingen parallel en moeten de ontwikkeling, het testen en de implementatie van deze toepassingen verzorgen en tegelijkertijd de operationele naleving waarborgen. Om aan deze behoefte te voldoen biedt Experience Platform sandboxes die één Experience Platform-instantie opsplitsen in afzonderlijke virtuele omgevingen, zodat digitale ervaringstoepassingen kunnen worden ontwikkeld en verbeterd.
+
+**Nieuwe of bijgewerkte functies**
+
+| Functie | Beschrijving |
+| --- | --- |
+| Sandbox-plug-in ondersteunt uitbreiding | Aangepaste handelingen kunnen nu als een afhankelijk object worden gekopieerd wanneer u Reis-objecten dupliceert in gereedschappen in de sandbox. Daarnaast kunt u bestaande handelingen selecteren die u opnieuw wilt gebruiken in de doelsandbox. Ze kunnen ook afzonderlijk aan een pakket worden toegevoegd. Voor volledige informatie over de gesteunde voorwerpen van Adobe Journey Optimizer, lees de [ zandbak het gebruiken ](../../sandboxes/ui/sandbox-tooling.md#adobe-journey-optimizer-objects) gids. |
+
+{style="table-layout:auto"}
+
+Voor meer informatie over sandboxes, raadpleegt u het [ overzicht van sandboxes](../../sandboxes/home.md).
 
 ## Bronnen {#sources}
 
