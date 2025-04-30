@@ -3,9 +3,9 @@ keywords: personalisatie;Personalization
 title: Overzicht Personalization-bestemmingen
 description: Personalization-platforms verzamelen gegevens en inzichten uit individueel gedrag. Deze platforms kunnen marketers helpen anonieme gegevens te navigeren, aanbiedingen of advertenties te verzorgen op basis van eerdere activiteiten of als onderdeel van een publiek met vergelijkbare gewoonten.
 exl-id: 18a2b170-43d0-4d41-8afc-d2f0f9bfd7bb
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: cc18f5c9445e5d08565cd5ac4bcbdb11ccbc1a31
 workflow-type: tm+mt
-source-wordcount: '151'
+source-wordcount: '157'
 ht-degree: 1%
 
 ---
@@ -26,6 +26,7 @@ Experience Platform biedt momenteel ondersteuning voor de onderstaande personali
 * [Adobe Commerce](adobe-commerce.md)
 * [Aangepaste verpersoonlijkingsverbinding](custom-personalization.md)
 * [Verbinding met PEGA-client-beslissingshub](pega.md)
+* [(V2) Verbinding met de hub voor beslissingen van Pega-klanten](pega.md)
 * [Verbinding met Pega-profiel](pega-profile.md)
 
 **Uitbreidingen**
