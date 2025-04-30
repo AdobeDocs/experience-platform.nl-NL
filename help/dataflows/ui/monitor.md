@@ -2,9 +2,9 @@
 title: Overzicht van het dashboard controleren
 description: Leer hoe u het dashboard voor bewaking gebruikt in de gebruikersinterface van Adobe Experience Platform
 exl-id: 06ea5380-d66e-45ae-aa02-c8060667da4e
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: cca405c58551a52a044ac513921298637974e88e
 workflow-type: tm+mt
-source-wordcount: '995'
+source-wordcount: '951'
 ht-degree: 0%
 
 ---
@@ -63,12 +63,6 @@ Selecteer **[!UICONTROL Customer & Account]** om uw dashboard bij te werken en m
 
 ![ het type van controlegegevens dat aan &quot;Klant &amp; Rekening&quot;wordt geplaatst.](../assets/ui/monitor-overview/customer-account.png)
 
->[!TAB  Vooruitziendheid ]
-
-Selecteer **[!UICONTROL Prospect]** om uw dashboard bij te werken en metriek weer te geven over het zoeken naar gegevens die gedurende een bepaalde periode aan Experience Platform zijn toegevoegd. **Nota**: U kunt de activiteiten van het vooruitgangsgegevenstype slechts bekijken als u [ gerechtigd bent om gegevens ](../../rtcdp/partner-data/prospecting.md) te voorzien.
-
-![ het type van controlegegevens dat aan &quot;Vooruitzicht&quot;wordt geplaatst.](../assets/ui/monitor-overview/prospect.png)
-
 >[!TAB  de profielverrijking van de Rekening ]
 
 Selecteer **[!UICONTROL Account profile enrichment]** om het dashboard bij te werken en metriek weer te geven op de gegevens voor profielverrijking. **Nota**: U kunt de metriek van de de profielverrijking van de rekening slechts bekijken als u [ B2B- gegevens ](../../rtcdp/b2b-tutorial.md) gerechtigd bent.
@@ -81,11 +75,11 @@ Gebruik de bovenste koptekst van het dashboard voor een ervaring van cross-servi
 
 >[!BEGINTABS]
 
->[!TAB  Bronnen ]
+>[!TAB  het meer van Gegevens ]
 
-Selecteer **[!UICONTROL Sources]** om de metriek van uw bronopname te bekijken tarief. Lees de gids over [ controlemiddel gegevens ](monitor-sources.md) voor meer informatie.
+Selecteer **[!UICONTROL Data lake]** om metriek op uw gegevens te bekijken het meer inname tarief. Lees de gids over [ controle gegevens meer ingeslikt ](monitor-sources.md) voor meer informatie.
 
-![ het controledashboard in UI met de geselecteerde bronkaart.](../assets/ui/monitor-overview/sources.png)
+![ het controledashboard in UI met de geselecteerde kaart van het gegevensmeer.](../assets/ui/monitor-overview/data-lake.png)
 
 >[!TAB  Identiteiten ]
 
@@ -133,8 +127,12 @@ Selecteer **[!UICONTROL Apply]** als u klaar bent.
 
 Door dit document te lezen, kunt u nu door het controledashboard in UI navigeren. Lees de onderstaande documentatie voor informatie over hoe u gegevens voor een specifieke Experience Platform-service kunt controleren:
 
-* [ de bronnen van de Monitor gegevens ](monitor-sources.md).
+* [ de opname van het gegevenspeer van de Monitor ](monitor-sources.md).
 * [ de identiteitsgegevens van de Monitor ](monitor-identities.md).
 * [ de profielgegevens van de Monitor ](monitor-profiles.md).
 * [ de publieksgegevens van de Monitor ](monitor-audiences.md).
 * [ de bestemmingsgegevens van de Monitor ](monitor-destinations.md).
+
+<!-- >[!TAB Prospect]
+
+Select **[!UICONTROL Prospect]** to update your dashboard and display metrics on prospecting data that has been ingested to Experience Platform over the course of a given period. **Note**: You can only view prospect data type activities if you are [entitled to prospect data](../../rtcdp/partner-data/prospecting.md). -->

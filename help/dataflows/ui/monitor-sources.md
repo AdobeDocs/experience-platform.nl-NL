@@ -1,21 +1,21 @@
 ---
-description: Leer hoe te om het controledashboard te gebruiken om gegevens te controleren die van bronnen worden ingebed.
-title: De Dataflows van de monitor voor Bronnen in UI
+description: Leer hoe te om het controledashboard te gebruiken om gegevens te controleren die in gegevens meer worden opgenomen.
+title: Inname van meer gegevens controleren
 exl-id: 53fa4338-c5f8-4e1a-8576-3fe13d930846
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: f671188fbc694b0d2d808577265f91788cb0d8e9
 workflow-type: tm+mt
-source-wordcount: '1296'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
 
-# Dataflows controleren voor bronnen in de gebruikersinterface
+# Inname van meer gegevens controleren
 
 >[!IMPORTANT]
 >
 >Het stromen bronnen, zoals de [ bron van HTTP API ](../../sources/connectors/streaming/http.md) wordt momenteel niet gesteund door het controledashboard. Op dit moment kunt u het dashboard alleen gebruiken om batchbronnen te controleren.
 
-Lees dit document om te leren hoe u het dashboard voor bewaking kunt gebruiken om uw brongegevens in de gebruikersinterface van Experience Platform te controleren.
+Lees dit document om te leren hoe u het dashboard voor bewaking kunt gebruiken om de opname van gegevens in het meer in de gebruikersinterface van Experience Platform te controleren.
 
 ## Aan de slag {#get-started}
 
@@ -28,7 +28,7 @@ Deze zelfstudie vereist een goed begrip van de volgende onderdelen van Adobe Exp
 * [ Real-Time Profiel van de Klant ](../../profile/home.md): Verstrekt een verenigd, real-time consumentenprofiel dat op samengevoegde gegevens van veelvoudige bronnen wordt gebaseerd.
 * [ Sandboxes ](../../sandboxes/home.md): Experience Platform verstrekt virtuele zandbakken die één enkele instantie van Experience Platform in afzonderlijke virtuele milieu&#39;s verdelen helpen digitale ervaringstoepassingen ontwikkelen en ontwikkelen.
 
-## Brongegevens controleren met het dashboard voor bewaking
+## Het dashboard voor toezicht op het opnemen van gegevens in het meer gebruiken
 
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_source_ingestion"
@@ -42,15 +42,11 @@ Deze zelfstudie vereist een goed begrip van de volgende onderdelen van Adobe Exp
 >abstract="De bronverwerking bevat informatie over de status van de gegevensactiviteit en metriek in de dienst van het gegevensmeer, met inbegrip van opgenomen verslagen en ontbroken verslagen. Bekijk de metrische definitiegids voor meer informatie over metriek en grafieken."
 >text="Learn more in documentation"
 
-<!-- In the [Experience Platform UI](https://platform.adobe.com), select **[!UICONTROL Monitoring]** from the left navigation to access the [!UICONTROL Monitoring] dashboard. The [!UICONTROL Monitoring] dashboard contains metrics and information on all sources dataflows, including insights into the health of data traffic from a source to [!DNL Identity Service], and to [!DNL Profile].
+Selecteer **[!UICONTROL Data lake]** in de hoofdkoptekst van het dashboard voor controle om de opnamesnelheid van het gegevensmeer weer te geven.
 
-At the center of the dashboard is the [!UICONTROL Source ingestion] panel, which contains metrics and graphs that display data on records ingested and records failed. -->
+![ het controledashboard met de geselecteerde bronkaart.](../assets/ui/monitor-sources/data-lake.png)
 
-Selecteer in het dashboard voor bewaking [!UICONTROL Sources] in de hoofdkoptekst om het dashboard bij te werken met een weergave van de gegevensstroomopnamesnelheid van uw bronnen.
-
-![ het controledashboard met de geselecteerde bronkaart.](../assets/ui/monitor-sources/sources.png)
-
-In de grafiek [!UICONTROL Ingestion rate] wordt de gegevensinnamesnelheid weergegeven op basis van het geconfigureerde tijdkader. Standaard geeft het dashboard voor de bewaking de innamesnelheid van de laatste 24 uur weer. Voor stappen op hoe te om uw tijdkader te vormen, leest de gids bij [ vormend controletijdkader ](monitor.md#configure-monitoring-time-frame).
+In de grafiek [!UICONTROL Ingestion rate] wordt de gegevensinnamesnelheid weergegeven op basis van het geconfigureerde tijdkader. Standaard geeft het dashboard voor de bewaking de innamesnelheden van de laatste 24 uur weer. Voor stappen op hoe te om uw tijdkader te vormen, leest de gids bij [ vormend controletijdkader ](monitor.md#configure-monitoring-time-frame).
 
 De grafiek wordt standaard weergegeven. Als u de grafiek wilt verbergen, selecteert u **[!UICONTROL Metrics and graphs]** om het schakelen uit te schakelen en de grafiek te verbergen.
 
@@ -132,11 +128,9 @@ In de sectie [!UICONTROL Records failed] kunt u metrische gegevens weergeven voo
 >
 >U kunt foutdiagnostiek alleen gebruiken als deze functie is ingeschakeld tijdens het maken van de bronverbinding.
 
-![ het dataflow looppas foutenpaneel.](../assets/ui/monitor-sources/errors.png)
-
 ## Volgende stappen {#next-steps}
 
-Aan de hand van deze zelfstudie hebt u de gegevensstroom voor inname vanaf het bronniveau gecontroleerd met het dashboard **[!UICONTROL Monitoring]** . U hebt ook met succes fouten geïdentificeerd die tot de mislukking van gegevensstromen tijdens het innameproces hebben bijgedragen. Raadpleeg de volgende documenten voor meer informatie:
+Aan de hand van deze zelfstudie hebt u geleerd hoe u de opnamesnelheid van het gegevensmeer kunt controleren met behulp van het dashboard **[!UICONTROL Monitoring]** . U leerde ook fouten identificeren die dataflow-fouten tijdens inname veroorzaken. Raadpleeg de volgende documenten voor meer informatie:
 
 * [ de identiteitsgegevens van de Controle ](./monitor-identities.md).
 * [ het profielgegevens van de Controle ](./monitor-profiles.md).
