@@ -4,9 +4,9 @@ title: Leer hoe u uw eigen afspeelboeken ontwerpt en deelt met de AI Assistant.
 description: Hoe te om uw eigen gebruiksdoosplaybooks te ontwerpen en te delen.
 role: User
 exl-id: 0bc49710-ad9e-4509-b7e6-55f9b9037aa9
-source-git-commit: a910c922e9a51b60e276b0aac7e81e35d0a378fd
+source-git-commit: 401062fbea8845f16803edb72ccb14b75c3f8409
 workflow-type: tm+mt
-source-wordcount: '1638'
+source-wordcount: '1640'
 ht-degree: 0%
 
 ---
@@ -161,11 +161,11 @@ Als een afspeelboek wordt gemarkeerd voor onjuiste of aanstootgevende inhoud, wo
 
 Als uw organisatie meerdere sandboxen bevat, hoeft u de afspeelboeken niet handmatig te delen. Zodra u een afspeelboek maakt en publiceert in één sandbox, wordt het beschikbaar in alle sandboxen binnen die organisatie. Vervolgens kunt u instanties van dat afspeelboek maken in een van de andere sandboxen.
 
-Als het afspeelboek verwijst naar velden die niet beschikbaar zijn in het samenvoegingsschema van een andere sandbox, wordt mogelijk een foutbericht weergegeven wanneer u de instantie probeert te maken. Dat bericht roept de ontbrekende gebieden uit, zodat kunt u het schema bijwerken zoals nodig.
+Als de playbook verwijzingsgebieden die niet beschikbaar in het unieschema van de doelzandbak zijn of de vereiste toestemmingen ontbreken, kunt u een foutenmelding zien wanneer het proberen om de instantie tot stand te brengen. In dat bericht worden de ontbrekende velden en/of ontbrekende machtigingen aangeroepen.
 
->[!IMPORTANT]
->
->Het tijdelijk delen van een afspeelboek wordt niet ondersteund. Als u een playbook van één organisatie aan een andere deelt en dan het invoert, kan het niet opnieuw van de ontvangende organisatie aan een derde organisatie worden gedeeld.
+Als er velden ontbreken in uw samenvoegingsschema, worden deze tijdens het importeren gemarkeerd in een dialoogvenster.
+
+![ Gebieden die van het unieschema ontbreken tijdens het de invoerproces wordt vermeld ](/help/use-case-playbooks/assets/playbooks/authoring/missing-fields.png)
 
 ## Uw afspeelboeken delen tussen organisaties {#sharing-playbooks-organizations}
 
@@ -181,14 +181,14 @@ Voer de volgende stappen uit om een afspeelboek van de ene organisatie naar de a
 * **stelt het aandeel** in werking: Zodra playbook wordt gepubliceerd en een partnerschap wordt gevestigd, uitgezocht **[!UICONTROL Share Playbook]**.
 * **selecteer de doelorganisatie**: Kies de organisatie u playbook wilt delen wanneer ertoe aangezet.
 * **Bevestig en deel**: Bevestig uw selectie. Je ontvangt bevestigingsberichten die aangeven dat het delen is gelukt.
-* * **verifieer de doelorganisatie**: Logboek in de doelorganisatie om te verifiëren dat playbook beschikbaar is.
+* **verifieer de doelorganisatie**: Logboek in de doelorganisatie om te verifiëren dat playbook beschikbaar is.
 * **de Invoer playbook**: Selecteer **[!UICONTROL Import]** om playbook in de doelorganisatie te brengen. U kunt het in het **Playbooks** lusje bekijken.
 
-Als er velden ontbreken in uw samenvoegingsschema, worden deze tijdens het importeren gemarkeerd in een dialoogvenster.
-
-![ Gebieden die van het unieschema ontbreken tijdens het de invoerproces wordt vermeld ](/help/use-case-playbooks/assets/playbooks/authoring/missing-fields.png)
-
 Als playbook niet verschijnt, zorg ervoor het wordt gepubliceerd en dat het organisatieparternship actief is.
+
+>[!IMPORTANT]
+>
+>Het tijdelijk delen van een afspeelboek wordt niet ondersteund. Als u een playbook van één organisatie aan een andere deelt en dan het invoert, kan het niet opnieuw van de ontvangende organisatie aan een derde organisatie worden gedeeld.
 
 ## Vereiste machtigingen
 
