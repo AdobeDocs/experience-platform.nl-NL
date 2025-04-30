@@ -5,9 +5,9 @@ user-guide-description: Activeer uw bekende en onbekende gegevens voor cross-cha
 description: In dit document wordt de inhoudsopgave voor Adobe Experience Platform-doelen weergegeven
 feature: Destinations
 role: Admin,User
-source-git-commit: b456540a59c4b0455e8e1d52ed98d97454f8f61f
+source-git-commit: 8a9320ae00fdb611e4fd0fdc9ba80e922273359e
 workflow-type: tm+mt
-source-wordcount: '1286'
+source-wordcount: '1292'
 ht-degree: 2%
 
 ---
@@ -203,7 +203,8 @@ ht-degree: 2%
       * [Verkenningsextensie](./catalog/personalization/gainsight.md)
       * [KickFire-extensie](./catalog/personalization/kickfire.md)
       * [Marketo Web Personalization-extensie](./catalog/personalization/marketo-web-personalization.md)
-      * [Verbinding met PEGA-client-beslissingshub](./catalog/personalization/pega.md)
+      * [Pega CDH Realtime Audience-verbinding](./catalog/personalization/pega.md)
+      * [(V2) Pega CDH Realtime Audience Connection](./catalog/personalization/pega-v2.md)
       * [Verbinding met Pega-profiel](./catalog/personalization/pega-profile.md)
    * Sociale bestemmingen{#social}
       * [Overzicht van sociale bestemmingen](./catalog/social/overview.md)
