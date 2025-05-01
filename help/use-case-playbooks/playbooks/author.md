@@ -4,9 +4,9 @@ title: Leer hoe u uw eigen afspeelboeken ontwerpt en deelt met de AI Assistant.
 description: Hoe te om uw eigen gebruiksdoosplaybooks te ontwerpen en te delen.
 role: User
 exl-id: 0bc49710-ad9e-4509-b7e6-55f9b9037aa9
-source-git-commit: 401062fbea8845f16803edb72ccb14b75c3f8409
+source-git-commit: 9583d836d4e295bcb5cc2ce41ba8ba6d2046b114
 workflow-type: tm+mt
-source-wordcount: '1640'
+source-wordcount: '1652'
 ht-degree: 0%
 
 ---
@@ -157,11 +157,13 @@ Houd bij het maken van afspeelboeken rekening met de taal en inhoud die u inneem
 
 Als een afspeelboek wordt gemarkeerd voor onjuiste of aanstootgevende inhoud, wordt het automatisch ter controle naar Adobe gerapporteerd. Adobe controleert vervolgens de gemarkeerde inhoud en als dit niet passend wordt geacht, wordt de klant op de hoogte gesteld en wordt het afspeelboek verwijderd.
 
-## Afspeelboeken delen over sandboxen {#sharing-playbooks-sandboxes}
+## Afspeelboeken delen over sandboxen {#share-playbooks-sandboxes}
 
-Als uw organisatie meerdere sandboxen bevat, hoeft u de afspeelboeken niet handmatig te delen. Zodra u een afspeelboek maakt en publiceert in één sandbox, wordt het beschikbaar in alle sandboxen binnen die organisatie. Vervolgens kunt u instanties van dat afspeelboek maken in een van de andere sandboxen.
+Wanneer u een afspeelboek maakt en publiceert in één sandbox, wordt dit automatisch beschikbaar in alle sandboxen binnen uw organisatie. Hierdoor is handmatig delen overbodig en kunt u naadloos instanties van het afspeelboek in andere sandboxen maken.
 
-Als de playbook verwijzingsgebieden die niet beschikbaar in het unieschema van de doelzandbak zijn of de vereiste toestemmingen ontbreken, kunt u een foutenmelding zien wanneer het proberen om de instantie tot stand te brengen. In dat bericht worden de ontbrekende velden en/of ontbrekende machtigingen aangeroepen.
+>[!TIP]
+>
+>Als de playbook verwijzingsgebieden die niet beschikbaar in het unieschema van de doelzandbak zijn of de vereiste toestemmingen ontbreken, kunt u een foutenmelding zien wanneer het proberen om de instantie tot stand te brengen. In dat bericht worden de ontbrekende velden en/of ontbrekende machtigingen aangeroepen.
 
 Als er velden ontbreken in uw samenvoegingsschema, worden deze tijdens het importeren gemarkeerd in een dialoogvenster.
 
@@ -169,34 +171,34 @@ Als er velden ontbreken in uw samenvoegingsschema, worden deze tijdens het impor
 
 ## Uw afspeelboeken delen tussen organisaties {#sharing-playbooks-organizations}
 
-Voer de volgende stappen uit om een afspeelboek van de ene organisatie naar de andere te delen:
+Het delen van afspeelboeken tussen organisaties zorgt voor consistentie en efficiëntie wanneer meerdere teams dezelfde best practices moeten volgen. Voer de volgende stappen uit om een afspeelboek van de ene organisatie naar de andere te delen:
 
-* **Logboek in de bronorganisatie**: Navigeer aan de organisatie die playbook bevat u creeerde en van het **[!UICONTROL Your playbooks]** lusje wilt delen.
-* **publiceer playbook**: Als playbook niet reeds wordt gepubliceerd, moet u het publiceren alvorens te delen.
+1. **Logboek in de bronorganisatie**: Navigeer aan de organisatie die playbook bevat u creeerde en van het **[!UICONTROL Your playbooks]** lusje wilt delen.
+2. **publiceer playbook**: Als playbook niet reeds wordt gepubliceerd, moet u het publiceren alvorens te delen.
 
->[!NOTE]
->
->Er moet een partnerschap tot stand worden gebracht tussen de bron- en doelorganisaties om het delen van spelboeken mogelijk te maken. Leer hoe te [ een verzoek van het organisatiepartnerschap tot stand te brengen ](https://experienceleague.adobe.com/en/docs/experience-platform/sandbox/ui/sharing-packages-across-orgs).
+   >[!NOTE]
+   >
+   >Er moet een partnerschap tot stand worden gebracht tussen de bron- en doelorganisaties om het delen van spelboeken mogelijk te maken. Leer hoe te [ een verzoek van het organisatiepartnerschap tot stand te brengen ](/help/sandboxes/ui/sharing-packages-across-orgs.md#create-an-organization-partnership-request).
 
-* **stelt het aandeel** in werking: Zodra playbook wordt gepubliceerd en een partnerschap wordt gevestigd, uitgezocht **[!UICONTROL Share Playbook]**.
-* **selecteer de doelorganisatie**: Kies de organisatie u playbook wilt delen wanneer ertoe aangezet.
-* **Bevestig en deel**: Bevestig uw selectie. Je ontvangt bevestigingsberichten die aangeven dat het delen is gelukt.
-* **verifieer de doelorganisatie**: Logboek in de doelorganisatie om te verifiëren dat playbook beschikbaar is.
-* **de Invoer playbook**: Selecteer **[!UICONTROL Import]** om playbook in de doelorganisatie te brengen. U kunt het in het **Playbooks** lusje bekijken.
+3. **stelt het aandeel** in werking: Zodra playbook wordt gepubliceerd en een partnerschap wordt gevestigd, uitgezocht **[!UICONTROL Share Playbook]**.
+4. **selecteer de doelorganisatie**: Kies de organisatie u playbook wilt delen wanneer ertoe aangezet.
+5. **Bevestig en deel**: Bevestig uw selectie. Je ontvangt bevestigingsberichten die aangeven dat het delen is gelukt.
+6. **verifieer de doelorganisatie**: Logboek in de doelorganisatie om te verifiëren dat playbook beschikbaar is.
+7. **de Invoer playbook**: Selecteer **[!UICONTROL Import]** om playbook in de doelorganisatie te brengen. U kunt het in het **Playbooks** lusje bekijken.
 
-Als playbook niet verschijnt, zorg ervoor het wordt gepubliceerd en dat het organisatieparternship actief is.
+Als playbook niet verschijnt, zorg ervoor het wordt gepubliceerd en dat het organisatiepartnerschap actief is.
 
 >[!IMPORTANT]
 >
 >Het tijdelijk delen van een afspeelboek wordt niet ondersteund. Als u een playbook van één organisatie aan een andere deelt en dan het invoert, kan het niet opnieuw van de ontvangende organisatie aan een derde organisatie worden gedeeld.
 
-## Vereiste machtigingen
+## Vereiste machtigingen {#required-permissions}
 
 U hebt de volgende machtigingen nodig om toegang te krijgen tot de sandbox en deze functie te gebruiken:
 
-* {de toestemmingen van 0} Sandbox **:**
+### Sandbox-machtigingen
 
-Deze zijn vereist voor toegang tot de sandboxomgeving waarin de functie bestaat:
+Deze machtigingen zijn vereist voor toegang tot de sandboxomgeving waarin de functie bestaat:
 
 * **beheert zandbak**
 * **zandbak van de Mening**
