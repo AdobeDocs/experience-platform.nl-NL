@@ -2,7 +2,7 @@
 title: Algoritme voor identiteitsoptimalisatie
 description: Leer over het Algoritme van de Optimalisering van de Identiteit in de Dienst van de Identiteit.
 exl-id: 5545bf35-3f23-4206-9658-e1c33e668c98
-source-git-commit: a309f0dca5ebe75fcb7abfeb98605aec2692324d
+source-git-commit: df89afb7131c57b9400788ce30c420b9830c022e
 workflow-type: tm+mt
 source-wordcount: '1617'
 ht-degree: 0%
@@ -147,7 +147,7 @@ Met algoritme voor identiteitsoptimalisatie worden onjuiste identiteitswaarden z
 
 ![ slecht-e-mail ](../images/identity-settings/bad-email.png)
 
-### Anonieme gebeurtenisassociatie
+## Anonieme gebeurtenisassociatie
 
 ECID&#39;s slaan niet-geverifieerde (anonieme) gebeurtenissen op, terwijl CRMID geverifieerde gebeurtenissen opslaat. In het geval van gedeelde apparaten, wordt ECID (drager van niet voor authentiek verklaarde gebeurtenissen) geassocieerd met de **laatste voor authentiek verklaarde gebruiker**.
 
