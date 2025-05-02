@@ -4,9 +4,9 @@ solution: Experience Platform
 title: SQL-syntaxis in Query-service
 description: In dit document wordt de SQL-syntaxis beschreven die wordt ondersteund door de Adobe Experience Platform Query Service.
 exl-id: 2bd4cc20-e663-4aaa-8862-a51fde1596cc
-source-git-commit: 5adc587a232e77f1136410f52ec207631b6715e3
+source-git-commit: a0b7cd9e406b4a140ef70f8d80cb27ba6817c0cd
 workflow-type: tm+mt
-source-wordcount: '4623'
+source-wordcount: '4649'
 ht-degree: 1%
 
 ---
@@ -110,17 +110,21 @@ SELECT * FROM table_to_be_queried SNAPSHOT AS OF end_snapshot_id;
 
 SELECT * FROM table_to_be_queried SNAPSHOT BETWEEN start_snapshot_id AND end_snapshot_id;
 
-SELECT * FROM table_to_be_queried SNAPSHOT BETWEEN HEAD AND start_snapshot_id;
+SELECT * FROM table_to_be_queried SNAPSHOT BETWEEN 'HEAD' AND start_snapshot_id;
 
-SELECT * FROM table_to_be_queried SNAPSHOT BETWEEN end_snapshot_id AND TAIL;
+SELECT * FROM table_to_be_queried SNAPSHOT BETWEEN end_snapshot_id AND 'TAIL';
 
-SELECT * FROM (SELECT id FROM table_to_be_queried BETWEEN start_snapshot_id AND end_snapshot_id) C 
+SELECT * FROM (SELECT id FROM table_to_be_queried SNAPSHOT BETWEEN start_snapshot_id AND end_snapshot_id) C;
 
 (SELECT * FROM table_to_be_queried SNAPSHOT SINCE start_snapshot_id) a
   INNER JOIN 
 (SELECT * from table_to_be_joined SNAPSHOT AS OF your_chosen_snapshot_id) b 
   ON a.id = b.id;
 ```
+
+>[!NOTE]
+>
+>Wanneer u `HEAD` of `TAIL` in een `SNAPSHOT` -component gebruikt, moet u deze tussen enkele aanhalingstekens plaatsen (bijvoorbeeld &#39;HEAD&#39;, &#39;TAIL&#39;). Als u ze zonder aanhalingstekens gebruikt, treedt er een syntaxisfout op.
 
 In de onderstaande tabel wordt de betekenis van elke syntaxisoptie in de component SNAPSHOT uitgelegd.
 
@@ -130,7 +134,7 @@ In de onderstaande tabel wordt de betekenis van elke syntaxisoptie in de compone
 | `AS OF end_snapshot_id` | Gegevens worden gelezen zoals deze zich op de opgegeven opname-id bevonden (inclusief). |
 | `BETWEEN start_snapshot_id AND end_snapshot_id` | Leest gegevens tussen de opgegeven begin- en eindopname-id&#39;s. Deze is exclusief voor `start_snapshot_id` en inclusief de `end_snapshot_id` . |
 | `BETWEEN HEAD AND start_snapshot_id` | Leest gegevens vanaf het begin (vóór de eerste opname) tot en met de opgegeven start-opname-id. Hiermee worden alleen rijen in `start_snapshot_id` geretourneerd. |
-| `BETWEEN end_snapshot_id AND TAIL` | Leest gegevens van net na gespecificeerde `end-snapshot_id` aan het eind van de dataset (exclusief momentopname ID). Dit betekent dat als `end_snapshot_id` de laatste momentopname in de dataset is, de vraag nul rijen zal terugkeren omdat er geen momentopnamen voorbij die laatste momentopname zijn. |
+| `BETWEEN end_snapshot_id AND TAIL` | Leest gegevens van net na gespecificeerde `end_snapshot_id` aan het eind van de dataset (exclusief momentopname ID). Dit betekent dat als `end_snapshot_id` de laatste momentopname in de dataset is, de vraag nul rijen zal terugkeren omdat er geen momentopnamen voorbij die laatste momentopname zijn. |
 | `SINCE start_snapshot_id INNER JOIN table_to_be_joined AS OF your_chosen_snapshot_id ON table_to_be_queried.id = table_to_be_joined.id` | Leest gegevens die beginnen met de opgegeven momentopname-id uit `table_to_be_queried` en koppelt deze aan de gegevens uit `table_to_be_joined` zoals deze zich op `your_chosen_snapshot_id` bevonden. Verbinden is gebaseerd op passende IDs van de kolommen van identiteitskaart van de twee lijsten die worden aangesloten bij. |
 
 Een `SNAPSHOT` -component werkt met een tabel- of tabelalias, maar niet boven op een subquery of weergave. Een `SNAPSHOT` -component werkt overal waar een `SELECT` -query op een tabel kan worden toegepast.

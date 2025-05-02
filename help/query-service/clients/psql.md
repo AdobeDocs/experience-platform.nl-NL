@@ -4,7 +4,7 @@ solution: Experience Platform
 title: PSQL verbinden met Query Service
 description: Leer hoe u de PSQL-client aansluit op de Adobe Experience Platform Query Service, inclusief ondersteunde PostSQL-versies en installatie-instructies.
 exl-id: ceb07128-409e-42be-8143-0cf681d435de
-source-git-commit: 74f4ac5a3ca4c06e81111ef453ae0effd21b3f16
+source-git-commit: f75ea97e8631984dcd1d4a7f8aff3c10cba7b11f
 workflow-type: tm+mt
 source-wordcount: '386'
 ht-degree: 0%
@@ -29,7 +29,7 @@ Zodra PSQL wordt geïnstalleerd, kunt u het met de Dienst van de Vraag verbinden
 
 Onder de **[!UICONTROL PSQL Command]** sectie, selecteer het **[!UICONTROL Copy to clipboard]** pictogram (![ Pictogram van het Exemplaar ](/help/images/icons/copy.png)) om het bevelkoord te kopiëren.
 
-![ het lusje van Referenties van het dashboard van Vragen met het benadrukte exemplaarpictogram.](../images/clients/psql/connect-bi.png)
+![ het lusje van Referenties van het dashboard van Vragen met het benadrukte exemplaarpictogram.](../images/clients/psql/copy-credentials.png)
 
 Plak het bevelkoord in uw terminal en druk **binnengaan** op uw toetsenbord.
 
