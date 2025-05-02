@@ -5,18 +5,20 @@ badgeUltimate: label="Ultimate" type="Positive"
 badgeBeta: label="Beta" type="Informative"
 last-substantial-update: 2025-04-29T00:00:00Z
 exl-id: 2f082898-aa0e-47a1-a4bf-077c21afdfee
-source-git-commit: 30f1c16084b3049fae45e26db0eed03888d35516
+source-git-commit: 0c8ff1029beee3f58cbf536b11b40551b6f6c2ed
 workflow-type: tm+mt
-source-wordcount: '591'
+source-wordcount: '612'
 ht-degree: 0%
 
 ---
 
 # [!DNL Azure Databricks]
 
->[!IMPORTANT]
+>[!AVAILABILITY]
 >
->De [!DNL Azure Databricks] -bron is in de broncatalogus beschikbaar voor gebruikers die Real-Time CDP Ultimate hebben aangeschaft.
+>* De [!DNL Azure Databricks] -bron is in de broncatalogus beschikbaar voor gebruikers die Real-Time CDP Ultimate hebben aangeschaft.
+>
+>* De bron [!DNL Azure Databricks] is in bèta. Lees de [ voorwaarden ](../../home.md#terms-and-conditions) in het bronoverzicht voor meer informatie bij het gebruiken van bèta-geëtiketteerde bronnen.
 
 [!DNL Azure Databricks] is een op de cloud gebaseerd platform dat is ontworpen voor gegevensanalyse, leren van machines en AI. U kunt [!DNL Databricks] gebruiken om met [!DNL Azure] te integreren en een holistische omgeving te verstrekken voor de bouw van, het opstellen van, en het beheren van gegevensoplossingen op schaal.
 

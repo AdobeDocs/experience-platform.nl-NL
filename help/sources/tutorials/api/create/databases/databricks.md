@@ -4,18 +4,20 @@ description: Leer hoe u Azure Databricks met behulp van API's verbindt met Exper
 badgeUltimate: label="Ultimate" type="Positive"
 badgeBeta: label="Beta" type="Informative"
 exl-id: c3974bab-8e67-49a1-b1a5-d453cf7bfd1d
-source-git-commit: 30f1c16084b3049fae45e26db0eed03888d35516
+source-git-commit: 0c8ff1029beee3f58cbf536b11b40551b6f6c2ed
 workflow-type: tm+mt
-source-wordcount: '507'
+source-wordcount: '528'
 ht-degree: 0%
 
 ---
 
 # Verbinding maken met Experience Platform via de [!DNL Flow Service] API[!DNL Azure Databricks]
 
->[!IMPORTANT]
+>[!AVAILABILITY]
 >
->De [!DNL Azure Databricks] -bron is in de broncatalogus beschikbaar voor gebruikers die Real-Time CDP Ultimate hebben aangeschaft.
+>* De [!DNL Azure Databricks] -bron is in de broncatalogus beschikbaar voor gebruikers die Real-Time CDP Ultimate hebben aangeschaft.
+>
+>* De bron [!DNL Azure Databricks] is in bèta. Lees de [ termijnen en voorwaarden ](../../../../home.md#terms-and-conditions) in het bronoverzicht voor meer informatie bij het gebruiken van bèta-geëtiketteerde bronnen.
 
 Lees deze gids om te leren hoe te om uw [!DNL Azure Databricks] rekening met Adobe Experience Platform te verbinden gebruikend [[!DNL Flow Service]  API ](https://developer.adobe.com/experience-platform-apis/references/flow-service/).
 
