@@ -4,9 +4,9 @@ title: Leer hoe u uw eigen afspeelboeken ontwerpt en deelt met de AI Assistant.
 description: Hoe te om uw eigen gebruiksdoosplaybooks te ontwerpen en te delen.
 role: User
 exl-id: 0bc49710-ad9e-4509-b7e6-55f9b9037aa9
-source-git-commit: 9583d836d4e295bcb5cc2ce41ba8ba6d2046b114
+source-git-commit: 5cdbc160369a146da3ae8ca39d8c3095887e03b5
 workflow-type: tm+mt
-source-wordcount: '1652'
+source-wordcount: '1776'
 ht-degree: 0%
 
 ---
@@ -34,25 +34,25 @@ Ga als volgt te werk om een afspeelboek te maken met de AI-assistent:
 
 Selecteer **[!UICONTROL Playbooks]** in het navigatievenster aan de linkerkant.
 
-![ &quot;Playbooks&quot;die in de linkernavigatieruit worden benadrukt in UI.](/help/use-case-playbooks/assets/playbooks/authoring/playbooks.png)
+![ Platform UI met de optie &quot;Playbooks&quot;die in het linkernavigatievenster wordt benadrukt.](/help/use-case-playbooks/assets/playbooks/authoring/playbooks.png)
 
 Selecteer **[!UICONTROL New Playbook]**, en selecteer dan **playbook met AI Medewerker** produceren.
 
-![ de playbook interface met &quot;produceer playbook met AI Medewerker&quot;geselecteerd.](/help/use-case-playbooks/assets/playbooks/authoring/generate-playbook.png)
+![ de interface van de playbook verwezenlijking die &quot;playbook met AI Geselecteerde optie&quot;toont.](/help/use-case-playbooks/assets/playbooks/authoring/generate-playbook.png)
 
 Gebruik het snelle gebied om het gebruiksgeval te beschrijven. Bijvoorbeeld:
 
 &quot;Neem ACME-klanten in dienst die door lopende schoenen hebben gebladerd maar de aankoop niet hebben voltooid.&quot;
 
-![ de playbook interface met het benadrukte webformuliergebied.](/help/use-case-playbooks/assets/playbooks/authoring/prompt.png)
+![ de interface van de playboekverwezenlijking die het webvormgebied benadrukt waar de gebruikers een herinnering kunnen invoeren.](/help/use-case-playbooks/assets/playbooks/authoring/prompt.png)
 
 Selecteer **[!UICONTROL Generate]** om de metagegevens voor de afspeelboek te maken.
 
-![ het snelle gebied met &quot;produceer&quot;benadrukte playbook knoop.](/help/use-case-playbooks/assets/playbooks/authoring/generate.png)
+![ de playbook verwezenlijking interface die &quot;toont produceert&quot;knoop die in het snelle gebied wordt benadrukt.](/help/use-case-playbooks/assets/playbooks/authoring/generate.png)
 
 Als de code eenmaal is gegenereerd, selecteert u **[!UICONTROL Edit]** om de gegenereerde titel, beschrijving en metagegevens naar wens te wijzigen.
 
-![ geproduceerde playbook met de &quot;geef&quot;benadrukte knoop uit.](/help/use-case-playbooks/assets/playbooks/authoring/edit.png)
+![ A produceerde playbook met &quot;geeft&quot;benadrukte knoop uit, toestaand gebruikers om meta-gegevens te wijzigen.](/help/use-case-playbooks/assets/playbooks/authoring/edit.png)
 
 Vul de sectie **[!UICONTROL Playbook detail]** in om ervoor te zorgen dat de gegevensengineers over alle benodigde details beschikken om het geval te gebruiken. Deze velden zijn optioneel, maar helpen u belangrijke informatie vast te leggen, waardoor het makkelijker wordt om de juiste technische componenten te verbinden. Selecteer **[!UICONTROL Edit]** om waarden toe te voegen aan de volgende velden:
 
@@ -60,17 +60,17 @@ Vul de sectie **[!UICONTROL Playbook detail]** in om ervoor te zorgen dat de geg
 * **het publiek van het Doel**
 * **Marketing kanaal**
 
-![ de sectie van playbook details met &quot;geeft&quot;benadrukte knoop uit.](/help/use-case-playbooks/assets/playbooks/authoring/edit-details.png)
+![ de sectie van playbook details met &quot;geeft&quot;knoop benadrukt uit zodat u details zoals industrie, doelpubliek, en marketing kanaal kunt toevoegen of wijzigen.](/help/use-case-playbooks/assets/playbooks/authoring/edit-details.png)
 
 Nadat de metagegevens zijn gegenereerd, selecteert u **[!UICONTROL Edit journey map]** om de stappen in het reisoverzicht naar wens aan te passen.
 
-![ geef de knoop van het reisoverzicht uit.](/help/use-case-playbooks/assets/playbooks/authoring/edit-journey-map-button.png)
+![ &quot;geef de knoop van het reisoverzicht&quot;uit om de stappen in het reisoverzicht te wijzigen.](/help/use-case-playbooks/assets/playbooks/authoring/edit-journey-map-button.png)
 
-![ geeft de reiskaart uit zodra u de playbook meta-gegevens vangt.](/help/use-case-playbooks/assets/playbooks/authoring/edit-journey-map.png)
+![ de interface van de de redacteur van het reiskaart zodat u stappen kunt aanpassen nadat u playbook meta-gegevens vangt.](/help/use-case-playbooks/assets/playbooks/authoring/edit-journey-map.png)
 
 Ga vervolgens verder met het koppelen van het afspeelboek aan technische elementen. Selecteer **[!UICONTROL Create playbook manually]** als u handmatig een afspeelboek wilt maken.
 
-![ creeer manueel playbook ](/help/use-case-playbooks/assets/playbooks/authoring/create-manually.png)
+![ &quot;creeer playbook manueel&quot;optie om playbook van een leeg malplaatje te beginnen.](/help/use-case-playbooks/assets/playbooks/authoring/create-manually.png)
 
 Er wordt een lege afspeelboeksjabloon weergegeven. Vul details zoals **Titel** en **Beschrijving** uit. U kunt het reisoverzicht ook bewerken om gebeurtenissen en aanraakpunten toe te voegen als dat nodig is.
 
@@ -82,25 +82,25 @@ Ongeacht of u handmatig een afspeelboek maakt of met de AI Assistant, moet u dez
 >
 > Ondersteuning voor Real-Time CDP wordt in een toekomstige release toegevoegd.
 
-![ de &quot;Technische activa&quot;tabel en de &quot;Add vereiste benadrukte productknoop&quot;.](/help/use-case-playbooks/assets/playbooks/authoring/technical-assets-add-required-product.png)
+![ het &quot;Technische Assets&quot;lusje met de &quot;Add vereiste benadrukte productknoop&quot;die u kunt gebruiken om technische activa met playbook te associëren.](/help/use-case-playbooks/assets/playbooks/authoring/technical-assets-add-required-product.png)
 
 Kies **[!UICONTROL Select an Asset]** om dit afspeelboek te koppelen aan een reis zoals in de onderstaande afbeelding wordt getoond. Dan uitgezocht **publiceer playbook** om playbook te voltooien.
 
-![ &quot;Selecteer activa&quot;knoop die op de &quot;Technische activa&quot;tabel wordt benadrukt ](/help/use-case-playbooks/assets/playbooks/authoring/select-assets.png)
+![ het &quot;Technische Assets&quot;lusje met de &quot;Uitgezochte activa&quot;benadrukte knoop die u kunt gebruiken om een reis met playbook te associëren.](/help/use-case-playbooks/assets/playbooks/authoring/select-assets.png)
 
-![ selecteer een reis ](/help/use-case-playbooks/assets/playbooks/authoring/journey.png)
+![ selecteer een reis om het met playbook te associëren.](/help/use-case-playbooks/assets/playbooks/authoring/journey.png)
 
 Na publicatie extraheert en koppelt het afspeelboek automatisch het schema en de publieksdetails van de reis.
 
-![ Gepubliceerd playbook ](/help/use-case-playbooks/assets/playbooks/authoring/publish-playbook.png)
+![ A gepubliceerde playbook die meta-gegevens en bijbehorende technische activa tonen.](/help/use-case-playbooks/assets/playbooks/authoring/publish-playbook.png)
 
 Alle gecreeerde playbooks zijn beschikbaar in **Uw Playbooks** tabel.
 
-![ &quot;Uw playbooks&quot;lusje ](/help/use-case-playbooks/assets/playbooks/authoring/your-playbooks-tab.png)
+![ &quot;Uw playbooks&quot;lusje tonend een lijst van gecreeerde playbooks.](/help/use-case-playbooks/assets/playbooks/authoring/your-playbooks-tab.png)
 
 U kunt elke gewenste afspeellijst in de catalogus selecteren om instanties te maken voor hergebruik. Verwijs naar de documentatie aan [ leren hoe te om instanties ](/help/use-case-playbooks/playbooks/create-share-reuse.md) tot stand te brengen.
 
-![ De optie &quot;Instantie maken&quot; wordt gemarkeerd op het tabblad &quot;Overzicht van afspeelboek&quot; nadat u een afspeelboek hebt geselecteerd. ](/help/use-case-playbooks/assets/playbooks/authoring/create-instance.png)
+![ het lusje van het Overzicht van het Playbook met de &quot;Create instantie&quot;benadrukte optie.](/help/use-case-playbooks/assets/playbooks/authoring/create-instance.png)
 
 >[!NOTE]
 >
@@ -108,13 +108,13 @@ U kunt elke gewenste afspeellijst in de catalogus selecteren om instanties te ma
 
 ## Voorbeeld vragen
 
-De AI Medewerker kan diverse snelle structuren verwerken en zeer belangrijke details halen terwijl het filtreren uit onnodige informatie. Hieronder volgen enkele voorbeelden van gebruikersvragen en hoe deze door het systeem worden geïnterpreteerd:
+De AI Medewerker kan diverse snelle structuren verwerken en zeer belangrijke details halen terwijl het filtreren uit onnodige informatie. Hieronder volgen enkele voorbeelden van gebruikersherinneringen en hoe het systeem deze interpreteert.
 
 **Voorbeeld 1:**
 
-&quot;Creeer een campagne getiteld &quot;Voltooi de Blik&quot;om verkoop en CLV te verhogen. De campagne moedigt klanten aan keukengerei of meubilair te kopen om een aanvullende aankoop te voltooien via gepersonaliseerde aanbevelingen en aanbiedingen met betrekking tot hun aankoop. Eerste bericht aan de klanten met productaanbevelingen. Als ze binnen 7 dagen geen aankopen doen, ontvangen ze een tweede bericht met productaanbevelingen en voorstellen. Gebruik pushberichten en e-mail om contact op te nemen met de klanten. Doelklanten die in de afgelopen 7 dagen een aankoop hebben gedaan in keukengerei of meubelcategorie en die in de afgelopen 30 dagen niet als doelgroep zijn aangemerkt. Als onderdeel van de campagne, willen wij KPIs zoals kliks (e-mail, app, sms, duw), CTR, e-Wallet CTR, de Omzetting van AOV.CLV Inkomsten, de Totale gebeurtenissen van de Aankoop (in-store, digitaal, callcenter) meten.&quot;
+&quot;Creeer een campagne getiteld &quot;Voltooi de Blik&quot;om verkoop en CLV te verhogen. De campagne moedigt klanten aan keukengerei of meubilair te kopen om een aanvullende aankoop te voltooien via gepersonaliseerde aanbevelingen en aanbiedingen met betrekking tot hun aankoop. Eerste bericht aan de klanten met productaanbevelingen. Als ze binnen 7 dagen geen aankopen doen, ontvangen ze een tweede bericht met productaanbevelingen en voorstellen. Gebruik pushberichten en e-mail om contact op te nemen met de klanten. Doelklanten die in de afgelopen 7 dagen een aankoop hebben gedaan in keukengerei of meubelcategorie en die in de afgelopen 30 dagen niet als doelgroep zijn aangemerkt. Als onderdeel van de campagne, willen wij KPIs zoals kliks (e-mail, app, sms, duw), CTR, E-Wallet CTR, de Omzetting van AOV.CLV Inkomsten, de Totale gebeurtenissen van de Aankoop (in-store, digitaal, callcenter) meten.&quot;
 
-![ Voorbeeld dat een lange herinnering in het vakje van de tekstinput toont ](/help/use-case-playbooks/assets/playbooks/authoring/long-prompt.png)
+![ een voorbeeld van een lange herinnering ingegaan in het vakje van de tekstinput om playbook te produceren.](/help/use-case-playbooks/assets/playbooks/authoring/long-prompt.png)
 
 **Voorbeeld 2:**
 
@@ -126,20 +126,20 @@ Projectkanalen/aanraakpunten: E-mail
 Doelpubliek: Klanten die zijn geabonneerd op ACME-nieuwsbrieven.
 Doel-KPI&#39;s/Betrokkenheidsmetriek/ROI: 1. Verhoog de inkomsten uit producten. 2. Klantloyaliteit aansturen.&quot;
 
-![ Voorbeeld dat een georganiseerde herinnering in het vakje van de tekstinput toont ](/help/use-case-playbooks/assets/playbooks/authoring/organized-list-prompt.png)
+![ een voorbeeld van een georganiseerde, lijst-stijl herinnering ingegaan in het vakje van de tekstinput om playbook te produceren.](/help/use-case-playbooks/assets/playbooks/authoring/organized-list-prompt.png)
 
 **Voorbeeld 3:**
 
 &quot;Vraag kopers om producten te kopen tijdens een doorlopende productpromotiecampagne.
 Neem contact op met kopers tijdens een doorlopende promotie door geschikte communicatie via e-mail, SMS of via pushberichten te verzenden om producten te kopen. Stuur ze een herinnering per e-mail nadat ze 24 uur niet hebben deelgenomen aan de promotie.&quot;
 
-![ Voorbeeld dat een beknopte herinnering in het vakje van de tekstinput toont ](/help/use-case-playbooks/assets/playbooks/authoring/concise-prompt.png)
+![ een voorbeeld van een beknopte herinnering ingegaan in het vakje van de tekstinput om playbook te produceren.](/help/use-case-playbooks/assets/playbooks/authoring/concise-prompt.png)
 
 **Voorbeeld 4:**
 
 &quot;Verkoop schoenen aan middelbare scholieren.&quot;
 
-![ Voorbeeld dat een herinnering van één regel toont ](/help/use-case-playbooks/assets/playbooks/authoring/one-liner-prompt.png)
+![ een voorbeeld van een one-line herinnering ingegaan in het vakje van de tekstinput om playbook te produceren.](/help/use-case-playbooks/assets/playbooks/authoring/one-liner-prompt.png)
 
 De AI-assistent verwijdert alle overbodige details zoals &quot;Projectnaam&quot; of &quot;Achtergrond&quot;. De code extraheert de belangrijkste elementen zoals &quot;doelpubliek&quot;, &quot;campagnedoel&quot; en &quot;marketingkanaal&quot; en werkt met elke invoerstijl.
 
@@ -151,23 +151,23 @@ Deze voorbeelden tonen aan hoe AI essentiële details van gebruikersherinneringe
 
 ## Richtlijnen voor inhoud en modernisering
 
-Houd bij het maken van afspeelboeken rekening met de taal en inhoud die u inneemt. Afspeelboeken zijn in uw hele organisatie zichtbaar en alle aanstootgevende of ongeschikte inhoud kan door gebruikers worden gemarkeerd.
+Houd bij het maken van afspeelboeken rekening met de taal en inhoud die u inneemt. Afspeelboeken zijn zichtbaar in uw hele organisatie en alle aanstootgevende of ongepaste inhoud die gebruikers markeren.
 
 ### Markering- en controleproces
 
-Als een afspeelboek wordt gemarkeerd voor onjuiste of aanstootgevende inhoud, wordt het automatisch ter controle naar Adobe gerapporteerd. Adobe controleert vervolgens de gemarkeerde inhoud en als dit niet passend wordt geacht, wordt de klant op de hoogte gesteld en wordt het afspeelboek verwijderd.
+Als een afspeelboek ongeschikte of aanstootgevende inhoud bevat, ontvangt Adobe automatisch een rapport ter controle. Adobe controleert de gemarkeerde inhoud, brengt de klant op de hoogte als dit niet geschikt wordt geacht en verwijdert het afspeelboek.
 
 ## Afspeelboeken delen over sandboxen {#share-playbooks-sandboxes}
 
-Wanneer u een afspeelboek maakt en publiceert in één sandbox, wordt dit automatisch beschikbaar in alle sandboxen binnen uw organisatie. Hierdoor is handmatig delen overbodig en kunt u naadloos instanties van het afspeelboek in andere sandboxen maken.
+Wanneer u een afspeelboek maakt en publiceert in één sandbox, wordt dit automatisch beschikbaar in alle sandboxen binnen uw organisatie. Met deze functie is handmatig delen overbodig en kunt u naadloos instanties van het afspeelboek in andere sandboxen maken.
 
 >[!TIP]
 >
->Als de playbook verwijzingsgebieden die niet beschikbaar in het unieschema van de doelzandbak zijn of de vereiste toestemmingen ontbreken, kunt u een foutenmelding zien wanneer het proberen om de instantie tot stand te brengen. In dat bericht worden de ontbrekende velden en/of ontbrekende machtigingen aangeroepen.
+>Als de afspeelboek verwijst naar velden die niet beschikbaar zijn in het samenvoegingsschema van de doelsandbox of als u niet de vereiste machtigingen hebt, wordt een foutbericht weergegeven wanneer u de instantie probeert te maken. In het bericht worden de ontbrekende velden en/of machtigingen opgegeven.
 
 Als er velden ontbreken in uw samenvoegingsschema, worden deze tijdens het importeren gemarkeerd in een dialoogvenster.
 
-![ Gebieden die van het unieschema ontbreken tijdens het de invoerproces wordt vermeld ](/help/use-case-playbooks/assets/playbooks/authoring/missing-fields.png)
+![ de dialoogdoos van A die gebieden van het unieschema tijdens het playbook invoerproces missen.](/help/use-case-playbooks/assets/playbooks/authoring/missing-fields.png)
 
 ## Uw afspeelboeken delen tussen organisaties {#sharing-playbooks-organizations}
 
@@ -210,7 +210,7 @@ Deze machtigingen zijn vereist voor de functionaliteit voor intern delen:
 * [**Pakket beheren*](/help/sandboxes/ui/sandbox-tooling.md)
 * [**Pakket delen**](/help/sandboxes/ui/sharing-packages-across-orgs.md)
 
-Met deze machtigingen kunt u:
+Gebruik deze machtigingen om:
 
 * De sandboxomgeving invoeren
 * Toegang tot de functie in de sandbox
@@ -218,11 +218,11 @@ Met deze machtigingen kunt u:
 
 Deze machtigingen bevinden zich in de sectie **[!UICONTROL Sandboxes]** van de lijst met machtigingen.
 
-![ de lijst van toestemmingen met de relevante benadrukte toestemmingen.](/help/use-case-playbooks/assets/playbooks/authoring/permissions.png)
+![ de toestemmingenlijst met relevante toestemmingen voor het leiden en het delen van benadrukte playbooks.](/help/use-case-playbooks/assets/playbooks/authoring/permissions.png)
 
 ### Reizen en gerelateerde objecten - machtigingen
 
-Wanneer het bouwen van Schavens die Playbooks gebruiken, zult u waarschijnlijk andere voorwerpen zoals **Kanalen** van verwijzingen voorzien, **Soorten publiek**, en andere entiteiten. Elk van deze heeft zijn eigen rechtenset.
+Wanneer het bouwen van Reizen die Playbooks gebruiken, zou u andere voorwerpen, zoals **Kanalen**, **Soorten publiek**, en andere entiteiten kunnen van verwijzingen voorzien. Elk van deze objecten heeft een eigen rechtenset.
 
 Dit zijn de belangrijkste toestemmingen voor Reisgerelateerde acties, zoals:
 
@@ -240,4 +240,4 @@ Aangezien de Reizen hoogst flexibel zijn en vele onderling verbonden voorwerpen 
 
 ## Volgende stappen
 
-Nu u begrijpt om playbooks tot stand te brengen, te publiceren en te delen gebruikend de Medewerker AI, hoe te beginnen met de beschikbare playbooks en juiste te kiezen voor uw gebruiksgeval van [ Lijst van Playbooks ](/help/use-case-playbooks/playbooks/choose.md).
+Nu u begrijpt om, playbooks tot stand te brengen te publiceren en te delen gebruikend de Medewerker AI, leren hoe te beginnen met de beschikbare playbooks en de juiste te kiezen voor uw gebruiksgeval van [ Lijst van Playbooks ](/help/use-case-playbooks/playbooks/choose.md).
