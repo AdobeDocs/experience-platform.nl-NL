@@ -4,7 +4,7 @@ description: Leer hoe u Azure Databricks met behulp van API's verbindt met Exper
 badgeUltimate: label="Ultimate" type="Positive"
 badgeBeta: label="Beta" type="Informative"
 exl-id: c3974bab-8e67-49a1-b1a5-d453cf7bfd1d
-source-git-commit: 5637a12d5f9cc14b6cf3d88f018aa92de06ab739
+source-git-commit: 30f1c16084b3049fae45e26db0eed03888d35516
 workflow-type: tm+mt
 source-wordcount: '507'
 ht-degree: 0%
@@ -32,7 +32,7 @@ Lees de gids op [ hoe te beginnen met Experience Platform APIs ](../../../../../
 
 ### Voorwaarden configureren
 
-Lees het [[!DNL Databricks]  overzicht ](../../../../connectors/databases/databricks.md) voor informatie de in de eerste plaats vereiste configuraties die eerst moeten worden voltooid, alvorens u uw rekening met Experience Platform kunt verbinden.
+Lees het [[!DNL Databricks]  overzicht ](../../../../connectors/databases/databricks.md) om over de in de eerste plaats vereiste configuraties te leren die moeten worden voltooid alvorens u uw rekening met Experience Platform kunt verbinden.
 
 ### Vereiste referenties verzamelen
 
