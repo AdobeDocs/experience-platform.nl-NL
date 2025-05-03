@@ -2,10 +2,10 @@
 title: Aanvullende informatie van april 2025 voor Adobe Experience Platform
 description: Aanvullende informatie van april 2025 voor Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 3836b369d609448146a273fc6cf29061fd1ea422
+source-git-commit: be9e1a995e62fa5a437be82aa15187815bbc5a9d
 workflow-type: tm+mt
-source-wordcount: '2026'
-ht-degree: 28%
+source-wordcount: '2133'
+ht-degree: 29%
 
 ---
 
@@ -25,6 +25,7 @@ ht-degree: 28%
 Updates van bestaande functies en documentatie in Adobe Experience Platform:
 
 - [Experience League](#experience-league)
+- [Dataverzameling](#data-collection)
 - [Bestemmingen](#destinations)
 - [Experience Data Model](#xdm)
 - [Identiteitsservice](#identity)
@@ -41,6 +42,18 @@ Experience League is een uitgebreid trainingsplatform dat u helpt uw vaardighede
 | Functie | Beschrijving |
 | --- | --- |
 | Persoonlijke homepage | Toegang tot en pas uw gepersonaliseerde homepage op [ Experience League ](https://experienceleague.adobe.com/en/home#) aan. Meld u aan met uw Adobe-gebruikersgegevens en selecteer vervolgens **[!UICONTROL Experience League]** in het bovenste menu om uw leerervaring te optimaliseren: <ul><li>**Bladwijzers**: Gebruik de [!UICONTROL Bookmarks] eigenschap om uw favoriete middelen op één plaats te bewaren en te verzamelen. U kunt diverse inhoud opslaan, zoals afspeellijsten, artikelen en zelfstudies.</li><li>**pas uw het leren** aan: Verbeter uw het leren ervaring door uw profiel van Experience League met de rollen, de industrieën, de producten, en het ervaringsniveau bij te werken dat het beste uw behoeften aanpast.</li><li>**Aanbevelingen**: De het leren van mening adviseerde inhoud die op uw recente activiteit wordt gebaseerd.</li><li>**onlangs bekeken**: Gebruik de [!UICONTROL Recently viewed] sectie om snel terug naar onlangs bekeken inhoud zoals documentatie en video&#39;s te navigeren.</li><li>**Lerende middelen**: Gebruik het [!UICONTROL All learning resources] paneel om aan leerprogramma&#39;s, documentatie, gemeenschap, gebeurtenissen, en certificatie te navigeren.</li><li>**wat** nieuw is: Bekijk de [!UICONTROL What's new] sectie voor een stroom van de recentste inhoud op Experience League.</li><li>**Controle voorbij gebeurtenissen op bestelling**: Bekijk eerder geregistreerde levende stromen op productspots, gebruiksgevallen, en leerprogramma&#39;s met de [!UICONTROL Watch past events on-demand] sectie.</li></ul><br> ![ Persoonlijke homepage op Experience League.](../2025/assets/april/personalized-home-page.png " Persoonlijke homepage op Experience League."){width="250" align="center" zoomable="yes"} |
+
+{style="table-layout:auto"}
+
+## Dataverzameling {#data-collection}
+
+Adobe Experience Platform biedt een reeks technologieën waarmee u klantervaringsgegevens aan de klantzijde kunt verzamelen en deze naar het Adobe Experience Platform Edge Network kunt verzenden. Daar kunnen ze worden verrijkt, getransformeerd en gedistribueerd naar Adobe- of niet-Adobe-bestemmingen.
+
+**Nieuwe of bijgewerkte functies**
+
+| Functie | Beschrijving |
+| --- | --- |
+| [!DNL Amazon] API-extensie voor webgebeurtenissen | Met de API-extensie [!DNL Amazon] Conversies kunnen adverteerders website-interacties rechtstreeks delen met [!DNL Amazon] , waardoor de toewijzing, betrouwbaarheid van gegevens en de optimalisatie van de campagne zijn verbeterd. Deze extensie ondersteunt het doorsturen van gebeurtenissen, zodat u conversiegebeurtenissen zoals aankopen, winkelwagentaanvullingen en meer kunt verzenden en er tegelijkertijd voor zorgt dat de deduplicatie correct wordt uitgevoerd voor een juiste rapportage. Voor meer informatie, zie het [ de uitbreidingsoverzicht van Amazon ](/help/tags/extensions/server/amazon/overview.md). |
 
 {style="table-layout:auto"}
 
