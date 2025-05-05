@@ -17,13 +17,13 @@ Op deze pagina wordt beschreven hoe u Adobe Experience Platform Destination SDK 
 
 ## Terminologie {#terminology}
 
-Deze handleiding gebruikt Experience Platform-specifieke concepten, zoals organisatie en sandboxen. Raadpleeg de [ verklarende woordenlijst van Experience Platform ](https://experienceleague.adobe.com/docs/experience-platform/landing/glossary.html) voor definities van deze termijnen. Raadpleeg de [ verklarende woordenlijst van Destination SDK ](/help/destinations/destination-sdk/glossary.md) voor termijnen direct met betrekking tot deze functionaliteit.
+Deze handleiding gebruikt Experience Platform-specifieke concepten, zoals organisatie en sandboxen. Raadpleeg de [ verklarende woordenlijst van Experience Platform ](https://experienceleague.adobe.com/docs/experience-platform/landing/glossary.html?lang=nl-NL) voor definities van deze termijnen. Raadpleeg de [ verklarende woordenlijst van Destination SDK ](/help/destinations/destination-sdk/glossary.md) voor termijnen direct met betrekking tot deze functionaliteit.
 
 ## Verkrijg vereiste authentificatiegeloofsbrieven {#obtain-authentication-credentials}
 
 Destination SDK gebruikt de [ Adobe I/O ](https://www.adobe.io/) gateway voor authentificatie. Om API vraag aan Destination SDK eindpunten te maken, moet u bepaalde kopballen in uw API vraag verstrekken. Het werk met het team van Adobe Exchange aan opstellingsauthentificatie voor u aan [ Adobe Developer Console ](https://developer.adobe.com/console).
 
-Om vraag aan Destination SDK API eindpunten met succes te maken, volg het [ de authentificatieleerprogramma van Experience Platform ](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html). Begin het leerprogramma van &quot;[ produceert een API sleutel, organisatie identiteitskaart, en cliënt geheim ](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html#api-ims-secret)&quot;stap. Het Adobe Exchange-team zal de vorige stappen voor u afhandelen. Als u de zelfstudie over verificatie voltooit, krijgt u de waarden voor elk van de vereiste headers in Destination SDK API-aanroepen, zoals hieronder wordt getoond:
+Om vraag aan Destination SDK API eindpunten met succes te maken, volg het [ de authentificatieleerprogramma van Experience Platform ](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=nl-NL). Begin het leerprogramma van &quot;[ produceert een API sleutel, organisatie identiteitskaart, en cliënt geheim ](https://experienceleague.adobe.com/docs/experience-platform/landing/platform-apis/api-authentication.html?lang=nl-NL#api-ims-secret)&quot;stap. Het Adobe Exchange-team zal de vorige stappen voor u afhandelen. Als u de zelfstudie over verificatie voltooit, krijgt u de waarden voor elk van de vereiste headers in Destination SDK API-aanroepen, zoals hieronder wordt getoond:
 
 * `x-api-key: {API_KEY}`, ook wel client-id genoemd
 * `x-gw-ims-org-id: {ORG_ID}`, ook bekend als organisatie-id

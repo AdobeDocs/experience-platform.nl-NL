@@ -48,4 +48,4 @@ alloy("sendEvent", {
 
 ## Het object `data` gebruiken met Adobe Analytics {#analytics}
 
-U kunt het `data` -object met Adobe Analytics gebruiken om gegevens naar een rapportsuite zonder een XDM-schema te verzenden. Variabelen zijn geconfigureerd om dezelfde syntaxis te gebruiken als [!DNL AppMeasurement] variabelen, waardoor het upgradeproces naar de SDK van het web wordt vereenvoudigd. Zie [ objecten van Gegevens veranderlijke afbeelding aan Adobe Analytics ](https://experienceleague.adobe.com/en/docs/analytics/implementation/aep-edge/data-var-mapping) in de de implementatiegids van Adobe Analytics voor meer informatie.
+U kunt het `data` -object met Adobe Analytics gebruiken om gegevens naar een rapportsuite zonder een XDM-schema te verzenden. Variabelen zijn geconfigureerd om dezelfde syntaxis te gebruiken als [!DNL AppMeasurement] variabelen, waardoor het upgradeproces naar de SDK van het web wordt vereenvoudigd. Zie [ objecten van Gegevens veranderlijke afbeelding aan Adobe Analytics ](https://experienceleague.adobe.com/nl/docs/analytics/implementation/aep-edge/data-var-mapping) in de de implementatiegids van Adobe Analytics voor meer informatie.

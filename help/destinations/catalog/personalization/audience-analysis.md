@@ -12,7 +12,7 @@ ht-degree: 0%
 
 # Doel van Auditieanalyse
 
-De [!UICONTROL Audience Analysis] bestemming staat u toe om het publieksgegevens van Adobe Experience Platform in [ Customer Journey Analytics ](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-overview/cja-overview.html) te verrijken. U kunt selecteren welk publiek u in de resulterende verrijkte gegevens wilt opnemen. De kwalificaties van het publiek zijn dan beschikbaar als afmetingen in [ Analysis Workspace ](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-workspace/home.html) rapporterend.
+De [!UICONTROL Audience Analysis] bestemming staat u toe om het publieksgegevens van Adobe Experience Platform in [ Customer Journey Analytics ](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-overview/cja-overview.html?lang=nl-NL) te verrijken. U kunt selecteren welk publiek u in de resulterende verrijkte gegevens wilt opnemen. De kwalificaties van het publiek zijn dan beschikbaar als afmetingen in [ Analysis Workspace ](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-workspace/home.html?lang=nl-NL) rapporterend.
 
 >[!AVAILABILITY]
 >

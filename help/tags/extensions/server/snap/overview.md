@@ -53,7 +53,7 @@ Selecteer **[!UICONTROL Save]** als u klaar bent.
 
 ## Gegevenselementen maken {#create-data-elements}
 
-Om gegevens naar de [!DNL Snapchat] API uitbreiding van Conversies te verzenden, creeer [ gegevenselementen ](https://experienceleague.adobe.com/en/docs/platform-learn/implement-web-sdk/event-forwarding/setup-event-forwarding#create-an-event-forwarding-data-element) voor elke gegevensparameter. Voer de volgende stappen uit:
+Om gegevens naar de [!DNL Snapchat] API uitbreiding van Conversies te verzenden, creeer [ gegevenselementen ](https://experienceleague.adobe.com/nl/docs/platform-learn/implement-web-sdk/event-forwarding/setup-event-forwarding#create-an-event-forwarding-data-element) voor elke gegevensparameter. Voer de volgende stappen uit:
 
 1. Navigeer aan **[!UICONTROL Authoring]**> **[!UICONTROL Data Elements]** in het scherm van uw bezit **[!UICONTROL Property Info]**, en selecteer dan **[!UICONTROL Add Data Element]**.
 
@@ -79,7 +79,7 @@ Zie de [ Gebeurtenis door:sturen eigenschappen documentatie ](/help/tags/ui/even
 
 ## Regels maken om conversiegebeurtenissen naar Magnetisch te verzenden {#create-snap-rules}
 
-[ Regels ](https://experienceleague.adobe.com/en/docs/platform-learn/implement-web-sdk/event-forwarding/setup-event-forwarding#create-an-event-forwarding-rule) worden gebruikt om uitbreidingen in Experience Platform teweeg te brengen. Deze sectie schetst hoe te om regels binnen uw gebeurtenis tot stand te brengen die bezit door:sturen om omzettingsgebeurtenissen naar Breuk te verzenden gebruikend de uitbreiding van Conversies API.
+[ Regels ](https://experienceleague.adobe.com/nl/docs/platform-learn/implement-web-sdk/event-forwarding/setup-event-forwarding#create-an-event-forwarding-rule) worden gebruikt om uitbreidingen in Experience Platform teweeg te brengen. Deze sectie schetst hoe te om regels binnen uw gebeurtenis tot stand te brengen die bezit door:sturen om omzettingsgebeurtenissen naar Breuk te verzenden gebruikend de uitbreiding van Conversies API.
 
 ### Een nieuwe regel maken
 

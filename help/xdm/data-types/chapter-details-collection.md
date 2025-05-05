@@ -21,9 +21,9 @@ ht-degree: 0%
 
 | Weergavenaam | Eigenschap | Gegevenstype | Vereist | Beschrijving |
 |-------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------|-----------|----------|---------------------------------------------------|
-| [[!UICONTROL Chapter Length Or Duration]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/chapter-parameters.html#chapter-length) | `length` | integer | Ja | De lengte van het hoofdstuk, in seconden. |
-| [[!UICONTROL Chapter Name]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/chapter-parameters.html#chapter-name) | `friendlyName` | string | Nee | De naam van het hoofdstuk en/of segment. |
-| [[!UICONTROL Chapter Offset]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/chapter-parameters.html#chapter-offset) | `offset` | integer | Ja | De verschuiving van het hoofdstuk binnen de inhoud (in seconden) vanaf het begin. |
-| [[!UICONTROL Chapter Position]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/chapter-parameters.html#chapter-position) | `index` | integer | Ja | De positie (index, geheel getal) van het hoofdstuk binnen de inhoud. |
+| [[!UICONTROL Chapter Length Or Duration]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/chapter-parameters.html?lang=nl-NL#chapter-length) | `length` | integer | Ja | De lengte van het hoofdstuk, in seconden. |
+| [[!UICONTROL Chapter Name]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/chapter-parameters.html?lang=nl-NL#chapter-name) | `friendlyName` | string | Nee | De naam van het hoofdstuk en/of segment. |
+| [[!UICONTROL Chapter Offset]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/chapter-parameters.html?lang=nl-NL#chapter-offset) | `offset` | integer | Ja | De verschuiving van het hoofdstuk binnen de inhoud (in seconden) vanaf het begin. |
+| [[!UICONTROL Chapter Position]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/chapter-parameters.html?lang=nl-NL#chapter-position) | `index` | integer | Ja | De positie (index, geheel getal) van het hoofdstuk binnen de inhoud. |
 
 {style="table-layout:auto"}

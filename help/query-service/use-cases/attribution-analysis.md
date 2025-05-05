@@ -19,8 +19,8 @@ De SQL-voorbeelden in dit document zijn query&#39;s die veel worden gebruikt met
 
 * [ de bron van Adobe Analytics schakelaar voor rapport-reeks gegevensoverzicht ](../../sources/connectors/adobe-applications/mapping/analytics.md).
 * [ de documentatie van het het gebiedstoewijzingen van Analytics ](../../sources/connectors/adobe-applications/mapping/analytics.md) verstrekt meer informatie bij het opnemen van en het in kaart brengen van analysegegevens voor gebruik met de Dienst van de Vraag.
-* [ het overzicht van de Attribution IQ ](https://experienceleague.adobe.com/docs/analytics/analyze/analysis-workspace/attribution/overview.html)
-* [ de het paneelgids van de Attributie van Adobe Analytics ](https://experienceleague.adobe.com/docs/analytics/analyze/analysis-workspace/panels/attribution.html).
+* [ het overzicht van de Attribution IQ ](https://experienceleague.adobe.com/docs/analytics/analyze/analysis-workspace/attribution/overview.html?lang=nl-NL)
+* [ de het paneelgids van de Attributie van Adobe Analytics ](https://experienceleague.adobe.com/docs/analytics/analyze/analysis-workspace/panels/attribution.html?lang=nl-NL).
 
 Een verklaring van de parameters binnen de `OVER()` functie kan in de [ sectie van vensterfuncties ](../sql/adobe-defined-functions.md#window-functions) worden gevonden. De [ Adobe Marketing en de Verklarende woordenlijst van de Term van Commerce ](https://business.adobe.com/glossary/index.html) kunnen ook van nut zijn.
 

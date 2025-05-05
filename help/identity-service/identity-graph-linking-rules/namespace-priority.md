@@ -73,7 +73,7 @@ De prioriteit van Namespace kan worden gevormd gebruikend [ identiteitsmontages 
 
 ## Prioriteitsgebruik voor naamruimte
 
-Momenteel, beïnvloedt de nameprioriteit systeemgedrag van het Profiel van de Klant in real time. In het onderstaande diagram wordt dit concept geïllustreerd. Voor meer informatie, lees de gids op [ Adobe Experience Platform en de diagrammen van de toepassingsarchitectuur ](https://experienceleague.adobe.com/en/docs/blueprints-learn/architecture/architecture-overview/platform-applications).
+Momenteel, beïnvloedt de nameprioriteit systeemgedrag van het Profiel van de Klant in real time. In het onderstaande diagram wordt dit concept geïllustreerd. Voor meer informatie, lees de gids op [ Adobe Experience Platform en de diagrammen van de toepassingsarchitectuur ](https://experienceleague.adobe.com/nl/docs/blueprints-learn/architecture/architecture-overview/platform-applications).
 
 ![ een diagram van namespace prioritaire toepassingswerkingsgebied ](../images/namespace-priority/application-scope.png)
 

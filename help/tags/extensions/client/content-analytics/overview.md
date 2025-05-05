@@ -21,14 +21,14 @@ In dit document wordt uitgelegd hoe u de tagextensie configureert in de gebruike
 
 >[!NOTE]
 >
->De de markeringsuitbreiding van Adobe Content Analytics wordt automatisch geïnstalleerd als deel van het markeringsbezit dat automatisch wordt gecreeerd wanneer het gebruiken van de [ Content Analytics geleide configuratietovenaar ](https://experienceleague.adobe.com/en/docs/analytics-platform/using/content-analytics/configuration/guided){target="_blank"} .
+>De de markeringsuitbreiding van Adobe Content Analytics wordt automatisch geïnstalleerd als deel van het markeringsbezit dat automatisch wordt gecreeerd wanneer het gebruiken van de [ Content Analytics geleide configuratietovenaar ](https://experienceleague.adobe.com/nl/docs/analytics-platform/using/content-analytics/configuration/guided){target="_blank"} .
 
 
 ### Handmatige installatie
 
-In het geval van een handmatige configuratie moet voor de extensie van de Adobe Content Analytics-tag een eigenschap worden geïnstalleerd. Als u dit niet reeds hebt gedaan, zie de documentatie bij [ het creëren van een markeringsbezit ](https://experienceleague.adobe.com/en/docs/platform-learn/implement-in-websites/configure-tags/create-a-property).
+In het geval van een handmatige configuratie moet voor de extensie van de Adobe Content Analytics-tag een eigenschap worden geïnstalleerd. Als u dit niet reeds hebt gedaan, zie de documentatie bij [ het creëren van een markeringsbezit ](https://experienceleague.adobe.com/nl/docs/platform-learn/implement-in-websites/configure-tags/create-a-property).
 
-Nadat u een bezit hebt gecreeerd of wanneer u het bezit dat gebruikend de [ Content Analytics geleide configuratietovenaar ](https://experienceleague.adobe.com/en/docs/analytics-platform/using/content-analytics/configuration/guided) wordt gecreeerd selecteert, open het bezit en selecteer het **[!UICONTROL Extensions]** lusje op de linkerzijbar.
+Nadat u een bezit hebt gecreeerd of wanneer u het bezit dat gebruikend de [ Content Analytics geleide configuratietovenaar ](https://experienceleague.adobe.com/nl/docs/analytics-platform/using/content-analytics/configuration/guided) wordt gecreeerd selecteert, open het bezit en selecteer het **[!UICONTROL Extensions]** lusje op de linkerzijbar.
 
 Selecteer het tabblad **[!UICONTROL Catalog]**. Zoek in de lijst met beschikbare extensies naar de extensie **[!DNL Adobe Content Analytics]** en selecteer **[!UICONTROL Install]** .
 
@@ -40,7 +40,7 @@ Nadat u **[!UICONTROL Install]** hebt geselecteerd, moet u de extensie van de Ad
 <!--
 ## Configure schema
 
-The [Content Analytics guided configuration wizard](https://experienceleague.adobe.com/en/docs/analytics-platform/using/content-analytics/configuration/guided) automatically populates the proper value for the **[!UICONTROL Tenant Schema Name]**. 
+The [Content Analytics guided configuration wizard](https://experienceleague.adobe.com/nl/docs/analytics-platform/using/content-analytics/configuration/guided) automatically populates the proper value for the **[!UICONTROL Tenant Schema Name]**. 
 
 ![Image that shows the Schema configuration of the Adobe Content Analytics tag extension in the Tags UI](assets/aca-tag-schema.png)
 
@@ -52,7 +52,7 @@ The [Content Analytics guided configuration wizard](https://experienceleague.ado
 
 ## Gegevensstromen configureren
 
-De [ Content Analytics geleide configuratietovenaar ](https://experienceleague.adobe.com/en/docs/analytics-platform/using/content-analytics/configuration/guided) selecteert automatisch de juiste waarde voor **[!UICONTROL Sandbox]** en **[!UICONTROL Production Datastream]**. U kunt desgewenst een extra **[!UICONTROL Staging Datastream]** en **[!UICONTROL Development Datastream]** configureren.
+De [ Content Analytics geleide configuratietovenaar ](https://experienceleague.adobe.com/nl/docs/analytics-platform/using/content-analytics/configuration/guided) selecteert automatisch de juiste waarde voor **[!UICONTROL Sandbox]** en **[!UICONTROL Production Datastream]**. U kunt desgewenst een extra **[!UICONTROL Staging Datastream]** en **[!UICONTROL Development Datastream]** configureren.
 
 ![ Beeld dat de configuratie van Datastreams van de de markeringsuitbreiding van Adobe Content Analytics in de Markeringen UI ](assets/aca-tag-datastreams.png) toont
 
@@ -83,7 +83,7 @@ Gebruik ![ dicht ](./assets/CrossSize300.svg) om individuele parameters te schra
 
 ## Gebeurtenisfiltering configureren
 
-In de sectie **[!UICONTROL Event Filtering]** kunt u de reguliere expressies wijzigen om te filteren **[!UICONTROL Page URLs]** en **[!UICONTROL Assets URLs]** wanneer u gegevens voor Content Analytics verzamelt. De regelmatige uitdrukkingen die u in de [ Content Analytics geleide configuratietovenaar ](https://experienceleague.adobe.com/en/docs/analytics-platform/using/content-analytics/configuration/guided) hebt bepaald worden automatisch bevolkt.
+In de sectie **[!UICONTROL Event Filtering]** kunt u de reguliere expressies wijzigen om te filteren **[!UICONTROL Page URLs]** en **[!UICONTROL Assets URLs]** wanneer u gegevens voor Content Analytics verzamelt. De regelmatige uitdrukkingen die u in de [ Content Analytics geleide configuratietovenaar ](https://experienceleague.adobe.com/nl/docs/analytics-platform/using/content-analytics/configuration/guided) hebt bepaald worden automatisch bevolkt.
 
 ![ Beeld dat de gebeurtenis het filtreren montages van de de markeringsuitbreiding van Adobe Content Analytics in de markeringen UI toont ](assets/aca-tag-eventfiltering.png)
 

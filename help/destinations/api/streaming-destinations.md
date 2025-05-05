@@ -563,7 +563,7 @@ De geretourneerde reactie moet in de parameter `transformations` het publiek en 
 
 >[!IMPORTANT]
 >
-> Naast de profielattributen en het publiek in de stap [ activeer gegevens aan uw nieuwe bestemming ](#activate-data), zullen de uitgevoerde gegevens in [!DNL AWS Kinesis] en [!DNL Azure Event Hubs] ook informatie over de identiteitskaart omvatten. Dit vertegenwoordigt de identiteiten van de uitgevoerde profielen (bijvoorbeeld [ ECID ](https://experienceleague.adobe.com/docs/id-service/using/intro/id-request.html), mobiele identiteitskaart, identiteitskaart van Google, e-mailadres, enz.). Zie een voorbeeld hieronder.
+> Naast de profielattributen en het publiek in de stap [ activeer gegevens aan uw nieuwe bestemming ](#activate-data), zullen de uitgevoerde gegevens in [!DNL AWS Kinesis] en [!DNL Azure Event Hubs] ook informatie over de identiteitskaart omvatten. Dit vertegenwoordigt de identiteiten van de uitgevoerde profielen (bijvoorbeeld [ ECID ](https://experienceleague.adobe.com/docs/id-service/using/intro/id-request.html?lang=nl-NL), mobiele identiteitskaart, identiteitskaart van Google, e-mailadres, enz.). Zie een voorbeeld hieronder.
 
 ```json
 {

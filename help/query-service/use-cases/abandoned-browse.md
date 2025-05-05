@@ -25,8 +25,8 @@ Dit document en de bijbehorende videopresentatie bieden een end-to-end workflow 
 Deze workflowdemonstratie is gebaseerd op verschillende Adobe Experience Platform-services. Als u de stappen wilt volgen, is het raadzaam de volgende functies en services goed te begrijpen:
 
 * De [ grondbeginselen van het Model van de Gegevens van de Ervaring (XDM) schemacompositie ](../../xdm/schema/composition.md)
-* Hoe te [ datasets tot stand brengen en gegevens opnemen ](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html)
-* Hoe te om [ gegevens in te voeren gebruikend de Adobe Analytics bronschakelaar ](https://experienceleague.adobe.com/docs/platform-learn/tutorials/sources/ingest-data-from-adobe-analytics.html)
+* Hoe te [ datasets tot stand brengen en gegevens opnemen ](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html?lang=nl-NL)
+* Hoe te om [ gegevens in te voeren gebruikend de Adobe Analytics bronschakelaar ](https://experienceleague.adobe.com/docs/platform-learn/tutorials/sources/ingest-data-from-adobe-analytics.html?lang=nl-NL)
 * [Segmentatie](../../segmentation/home.md)
 * [Bestemmingen](../../destinations/home.md)
 

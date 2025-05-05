@@ -21,7 +21,7 @@ In deze handleiding ziet u hoe u machtigingen voor Privacy Service beheert.
 
 ## Aan de slag
 
-Om toegangsbeheer voor Privacy Service te vormen, moet u beheerdervoorrechten voor een organisatie hebben die een productintegratie met Adobe Experience Platform Privacy Service heeft. De minimumrol die toestemmingen kan verlenen of terugtrekken is de beheerder van het a **productprofiel**. Andere beheerderrollen die toestemmingen kunnen beheren zijn **productbeheerders** (kan alle profielen binnen een product beheren) en **systeembeheerders** (geen beperkingen). Zie het artikel op [ administratieve rollen ](https://helpx.adobe.com/enterprise/using/admin-roles.html) in de het beleidsgids van de Onderneming van de Adobe voor meer informatie.
+Om toegangsbeheer voor Privacy Service te vormen, moet u beheerdervoorrechten voor een organisatie hebben die een productintegratie met Adobe Experience Platform Privacy Service heeft. De minimumrol die toestemmingen kan verlenen of terugtrekken is de beheerder van het a **productprofiel**. Andere beheerderrollen die toestemmingen kunnen beheren zijn **productbeheerders** (kan alle profielen binnen een product beheren) en **systeembeheerders** (geen beperkingen). Zie het artikel op [ administratieve rollen ](https://helpx.adobe.com/nl/enterprise/using/admin-roles.html) in de het beleidsgids van de Onderneming van de Adobe voor meer informatie.
 
 Deze gids veronderstelt u vertrouwd met basisconcepten van de Admin Console zoals productprofielen en hoe zij producttoestemmingen aan individuele gebruikers en groepen verlenen. Voor meer informatie, zie de [ gebruikersgids van de Admin Console ](https://helpx.adobe.com/nl/enterprise/using/admin-console.html).
 
@@ -85,7 +85,7 @@ Als u gebruikers wilt toewijzen aan het productprofiel (en hun de geconfigureerd
 
 ![ het lusje van Gebruikers voor een productprofiel in Admin Console.](./images/permissions/manage-users.png)
 
-Voor meer informatie bij het beheren van gebruikers voor een productprofiel, zie de [ documentatie van de Admin Console ](https://helpx.adobe.com/enterprise/using/manage-product-profiles.html).
+Voor meer informatie bij het beheren van gebruikers voor een productprofiel, zie de [ documentatie van de Admin Console ](https://helpx.adobe.com/nl/enterprise/using/manage-product-profiles.html).
 
 ### Verouderde API-referenties migreren naar het profiel {#migrate-tech-accounts}
 

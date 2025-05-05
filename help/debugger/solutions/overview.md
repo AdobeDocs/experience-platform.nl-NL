@@ -25,17 +25,17 @@ Het scherm van SDK van het Web van Adobe Experience Platform toont informatie ov
 
 ## [!UICONTROL Analytics] {#section-f71dfcc22bb44c86bec328491606a482}
 
-Het [!UICONTROL Analytics] lusje verstrekt informatie over uw [ implementatie van Adobe Analytics ](https://experienceleague.adobe.com/docs/analytics/implementation/home.html).
+Het [!UICONTROL Analytics] lusje verstrekt informatie over uw [ implementatie van Adobe Analytics ](https://experienceleague.adobe.com/docs/analytics/implementation/home.html?lang=nl-NL).
 
 ## [!UICONTROL Target] {#section-988873ba5ede4317953193bd7ac5474c}
 
-Gebruik het [!UICONTROL Target] scherm om [ Adobe Target ](https://experienceleague.adobe.com/docs/target/using/target-home.html) verzoeken of [ mboxTrace ](https://experienceleague.adobe.com/docs/target/using/activities/troubleshoot-activities/content-trouble.html#section_256FCF7C14BB435BA2C68049EF0BA99E) reactiedetails te bekijken.
+Gebruik het [!UICONTROL Target] scherm om [ Adobe Target ](https://experienceleague.adobe.com/docs/target/using/target-home.html?lang=nl-NL) verzoeken of [ mboxTrace ](https://experienceleague.adobe.com/docs/target/using/activities/troubleshoot-activities/content-trouble.html?lang=nl-NL#section_256FCF7C14BB435BA2C68049EF0BA99E) reactiedetails te bekijken.
 
 Zie de gids op [ gebruikend Debugger voor de implementaties van het Doel ](./target.md) voor meer informatie.
 
 ## [!UICONTROL Audience Manager] {#section-1d4484f8b46f457f859ba88039a9a585}
 
-Gebruik het [[!UICONTROL Audience Manager] ](https://experienceleague.adobe.com/docs/audience-manager/user-guide/aam-home.html) lusje aan meningsdetails van [ gebeurtenissen ](https://experienceleague.adobe.com/docs/audience-manager/user-guide/api-and-sdk-code/dcs/dcs-event-calls/dcs-event-calls.html) in Adobe Audience Manager. Selecteer de organisatie die u wilt uitbreiden en geef de informatie weer.
+Gebruik het [[!UICONTROL Audience Manager] ](https://experienceleague.adobe.com/docs/audience-manager/user-guide/aam-home.html?lang=nl-NL) lusje aan meningsdetails van [ gebeurtenissen ](https://experienceleague.adobe.com/docs/audience-manager/user-guide/api-and-sdk-code/dcs/dcs-event-calls/dcs-event-calls.html?lang=nl-NL) in Adobe Audience Manager. Selecteer de organisatie die u wilt uitbreiden en geef de informatie weer.
 
 ## [!UICONTROL Adobe Experience Platform Tags] {#section-ee80a9c509f2462c89c1e5bd8d05d7c8}
 
@@ -43,7 +43,7 @@ Gebruik de sectie [!UICONTROL Adobe Experience Platform Tags] om tagaanvragen we
 
 ## [!UICONTROL Experience Cloud ID] {#section-a96c32f8e63a4991abb296f6e8ea01cf}
 
-Gebruik het [!UICONTROL Experience Cloud ID] lusje om [ de verzoeken van de Dienst van identiteitskaart van het Experience Cloud ](https://experienceleague.adobe.com/docs/id-service/using/home.html) te bekijken.
+Gebruik het [!UICONTROL Experience Cloud ID] lusje om [ de verzoeken van de Dienst van identiteitskaart van het Experience Cloud ](https://experienceleague.adobe.com/docs/id-service/using/home.html?lang=nl-NL) te bekijken.
 
 ## [!UICONTROL Dynamic Tag Management]
 

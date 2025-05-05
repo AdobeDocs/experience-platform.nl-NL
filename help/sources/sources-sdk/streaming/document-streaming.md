@@ -22,8 +22,8 @@ Deze handleiding bevat:
 
 * Een zelfstudie die u kunt volgen om een documentatiepagina voor uw nieuwe bron te maken;
 * Een documentatiesjabloon dat u kunt invullen voor uw nieuwe bron.
-* [ Instructies op hoe te om Markering voor het schrijven van technische documentatie ](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/markdown.html) te gebruiken;
-* [ Instructies bij het begrip van de aroma van de Prijsverhoging van Adobe ](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/markdown.html#custom-markdown-extensions).
+* [ Instructies op hoe te om Markering voor het schrijven van technische documentatie ](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/markdown.html?lang=nl-NL) te gebruiken;
+* [ Instructies bij het begrip van de aroma van de Prijsverhoging van Adobe ](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/markdown.html?lang=nl-NL#custom-markdown-extensions).
 
 ## Vereisten
 

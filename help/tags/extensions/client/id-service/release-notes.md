@@ -15,7 +15,7 @@ ht-degree: 1%
 >
 >Adobe Experience Platform Launch is omgedoopt tot een reeks technologieën voor gegevensverzameling in Adobe Experience Platform. Diverse terminologische wijzigingen zijn als gevolg hiervan in de productdocumentatie doorgevoerd. Gelieve te verwijzen naar het volgende [ document ](../../../term-updates.md) voor een geconsolideerde verwijzing van de terminologieveranderingen.
 
-In dit document worden de opmerkingen bij de release voor de extensie van de Adobe Experience Cloud Identity Service besproken. Voor versienota&#39;s op de Dienst van de Identiteit van het Experience Cloud zelf, gelieve te verwijzen naar de [ documentatie van de Dienst van de Identiteit ](https://experienceleague.adobe.com/docs/id-service/using/release-notes/release-notes.html).
+In dit document worden de opmerkingen bij de release voor de extensie van de Adobe Experience Cloud Identity Service besproken. Voor versienota&#39;s op de Dienst van de Identiteit van het Experience Cloud zelf, gelieve te verwijzen naar de [ documentatie van de Dienst van de Identiteit ](https://experienceleague.adobe.com/docs/id-service/using/release-notes/release-notes.html?lang=nl-NL).
 
 ## 17 okt. 2022
 

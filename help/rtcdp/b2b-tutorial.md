@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Aan de slag met Real-Time Customer Data Platform B2B edition
 description: Gebruik dit voorbeeldscenario als voorbeeld bij het instellen van uw implementatie van Adobe Real-Time Customer Data Platform B2B edition.
 feature: Get Started, B2B
-badgeB2B: label="B2B edition" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
+badgeB2B: label="B2B edition" type="Informative" url="https://helpx.adobe.com/nl/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
 exl-id: ad9ace46-9915-4b8f-913a-42e735859edf
 source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
@@ -100,9 +100,9 @@ In de [!UICONTROL Segments] -werkruimte van de gebruikersinterface van Experienc
 
 >[!NOTE]
 > 
->Zie het leerprogramma op [ activerend een publiek aan een bestemming ](https://experienceleague.adobe.com/docs/marketo/using/product-docs/core-marketo-concepts/smart-lists-and-static-lists/static-lists/push-an-adobe-experience-cloud-segment-to-a-marketo-static-list.html) voor uitvoerige stappen op hoe te om dit te verwezenlijken.
+>Zie het leerprogramma op [ activerend een publiek aan een bestemming ](https://experienceleague.adobe.com/docs/marketo/using/product-docs/core-marketo-concepts/smart-lists-and-static-lists/static-lists/push-an-adobe-experience-cloud-segment-to-a-marketo-static-list.html?lang=nl-NL) voor uitvoerige stappen op hoe te om dit te verwezenlijken.
 
-De Bodea-markeerteken activeert het publiek naar de Marketo-bestemming, zodat het publiek gegevens van Experience Platform naar Marketo Engage kan verzenden in de vorm van een statische lijst. Zie de gids op de [ bestemming van Marketo ](https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/adobe/marketo-engage.html) voor meer informatie.
+De Bodea-markeerteken activeert het publiek naar de Marketo-bestemming, zodat het publiek gegevens van Experience Platform naar Marketo Engage kan verzenden in de vorm van een statische lijst. Zie de gids op de [ bestemming van Marketo ](https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/adobe/marketo-engage.html?lang=nl-NL) voor meer informatie.
 
 ## Volgende stappen
 

@@ -20,9 +20,9 @@ Deze video biedt een overzicht van de &#39;Application and Intelligent Services&
 
 Ga voor meer informatie naar de documentatie voor elke afzonderlijke toepassing met de koppelingen:
 
-* [[!DNL Customer Journey Analytics]](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-landing.html)
-* [ Intelligente Diensten ](https://experienceleague.adobe.com/docs/intelligent-services.html)
-* [[!DNL Journey Orchestration]](https://experienceleague.adobe.com/docs/journeys/using/journey-orchestration-home.html)
+* [[!DNL Customer Journey Analytics]](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-landing.html?lang=nl-NL)
+* [ Intelligente Diensten ](https://experienceleague.adobe.com/docs/intelligent-services.html?lang=nl-NL)
+* [[!DNL Journey Orchestration]](https://experienceleague.adobe.com/docs/journeys/using/journey-orchestration-home.html?lang=nl-NL)
 * [[!DNL Offer Decisioning]](https://experienceleague.adobe.com/docs/offer-decisioning/using/offer-decisioning-home.html?lang=nl)
 * [[!DNL Real-Time Customer Data Platform (Real-Time CDP)]](../../rtcdp/overview.md)
 

@@ -39,7 +39,7 @@ Selecteer **[!UICONTROL Extensions]** in de linkernavigatie. Selecteer op het ta
 
 Voer in het volgende scherm de [!UICONTROL Advertiser ID] en eventueel een [!UICONTROL Merchant ID] in. U kunt de id&#39;s rechtstreeks in deze invoer plakken of u kunt een gegevenselement gebruiken. Deze worden gebruikt als standaardwaarden bij het aanroepen van een gebeurtenis naar de [!DNL The Trade Desk] Real-Time Conversions API. Selecteer **[!UICONTROL Save]** wanneer u klaar bent.
 
-Leren hoe u gegevenselementen kunt tot stand brengen en hen ter beschikking stellen van uitbreidingen in uw markeringsbezit, [ volg gegevenselementen ](https://experienceleague.adobe.com/en/docs/platform-learn/data-collection/tags/create-data-elements) leerprogramma creëren.
+Leren hoe u gegevenselementen kunt tot stand brengen en hen ter beschikking stellen van uitbreidingen in uw markeringsbezit, [ volg gegevenselementen ](https://experienceleague.adobe.com/nl/docs/platform-learn/data-collection/tags/create-data-elements) leerprogramma creëren.
 
 ![ de [!DNL The Trade Desk] pagina van de uitbreidingsconfiguratie met [!UICONTROL Advertiser ID] en [!UICONTROL Merchant ID] benadrukte gebieden.](../../../images/extensions/server/tradedesk/configure-extension.png)
 

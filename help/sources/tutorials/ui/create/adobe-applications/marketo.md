@@ -13,7 +13,7 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
->Alvorens een [!DNL Marketo Engage] bronverbinding en een dataflow te creëren, moet u eerst ervoor zorgen dat u [ uw identiteitskaart van de Organisatie van Adobe ](https://experienceleague.adobe.com/docs/marketo/using/product-docs/core-marketo-concepts/miscellaneous/set-up-adobe-organization-mapping.html) in kaart hebt gebracht in [!DNL Marketo]. Voorts moet u ook verzekeren dat u [ auto-bevolkt uw  [!DNL Marketo]  B2B namespaces en schema&#39;s ](../../../../connectors/adobe-applications/marketo/marketo-namespaces.md) voorafgaand aan het creëren van een bronverbinding en een dataflow hebt voltooid.
+>Alvorens een [!DNL Marketo Engage] bronverbinding en een dataflow te creëren, moet u eerst ervoor zorgen dat u [ uw identiteitskaart van de Organisatie van Adobe ](https://experienceleague.adobe.com/docs/marketo/using/product-docs/core-marketo-concepts/miscellaneous/set-up-adobe-organization-mapping.html?lang=nl-NL) in kaart hebt gebracht in [!DNL Marketo]. Voorts moet u ook verzekeren dat u [ auto-bevolkt uw  [!DNL Marketo]  B2B namespaces en schema&#39;s ](../../../../connectors/adobe-applications/marketo/marketo-namespaces.md) voorafgaand aan het creëren van een bronverbinding en een dataflow hebt voltooid.
 
 Deze zelfstudie biedt stappen voor het maken van een [!DNL Marketo Engage] (hierna &quot;[!DNL Marketo]&quot; genoemd) bronconnector in de UI om B2B-gegevens naar Adobe Experience Platform te brengen.
 

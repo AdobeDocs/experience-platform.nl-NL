@@ -32,7 +32,7 @@ Controleer de documentatie in de onderstaande koppelingen om snel aan de slag te
                 <li><a href="/help/destinations/destination-sdk/functionality/configuration-options.md">Alle configuratieopties worden beschreven</a></li>
                 <li> De serverconfiguratie van de bestemming - <a href="/help/destinations/destination-sdk/functionality/destination-server/server-specs.md"> server specs </a> en <a href="/help/destinations/destination-sdk/functionality/destination-server/templating-specs.md"> het templating specs </a></li>
                 <li><a href="/help/destinations/destination-sdk/functionality/destination-configuration/customer-data-fields.md">Gegevensvelden van de klant en andere onderdelen van de doelconfiguratie</a></li>
-                <li><a href="https://experienceleague.adobe.com/en/docs/experience-platform/destinations/destination-sdk/functionality/destination-server/message-format">Sjablonen en macro's</a></li>
+                <li><a href="https://experienceleague.adobe.com/nl/docs/experience-platform/destinations/destination-sdk/functionality/destination-server/message-format">Sjablonen en macro's</a></li>
             </ul>
         </td>
         <td>
@@ -68,7 +68,7 @@ Controleer de documentatie in de onderstaande koppelingen om snel aan de slag te
                 <li><a href="/help/destinations/destination-sdk/guides/configure-destination-instructions.md">Vorm een het stromen bestemmingsgids van begin tot eind</a></li>
                 <li><a href="/help/destinations/destination-sdk/functionality/destination-server/message-format.md"> Begrijp gegevenstransformatie door de malplaatjes van de Kiezelaar </a> en <a href="/help/destinations/destination-sdk/functionality/destination-server/supported-functions.md"> mening gesteunde het templating functies </a></li>
                 <li><a href="/help/destinations/destination-sdk/functionality/destination-configuration/aggregation-policy.md">Beleid voor gegevenssamenvoeging begrijpen</a></li>
-                <li><a href="https://experienceleague.adobe.com/en/docs/experience-platform/destinations/destination-sdk/functionality/destination-server/message-format">Voorbeeld van actieve configuratie</a></li>
+                <li><a href="https://experienceleague.adobe.com/nl/docs/experience-platform/destinations/destination-sdk/functionality/destination-server/message-format">Voorbeeld van actieve configuratie</a></li>
                 <li><a href="/help/destinations/destination-sdk/testing-api/streaming-destinations/streaming-destination-testing-overview.md">Streaming doel testen</a></li>
             </ul>
         </td>
@@ -103,7 +103,7 @@ Controleer de documentatie in de onderstaande koppelingen om snel aan de slag te
 
 >[!IMPORTANT]
 >
-> Deze functionaliteit om privé douanebestemmingen tot stand te brengen is beschikbaar slechts aan [ Adobe Real-time Customer Data Platform Ultimate ](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform.html) klanten.
+> Deze functionaliteit om privé douanebestemmingen tot stand te brengen is beschikbaar slechts aan [ Adobe Real-time Customer Data Platform Ultimate ](https://helpx.adobe.com/nl/legal/product-descriptions/real-time-customer-data-platform.html) klanten.
 
 Als partner van Destination SDK, kunt u van het toevoegen van uw geproduceerde bestemming aan de [ catalogus van het Experience Platform ](../catalog/overview.md) profiteren:
 
@@ -144,7 +144,7 @@ De toegang van Destination SDK varieert gebaseerd op uw status als partner of Ex
 ---------|----------|
 | Independent Software Vendor (ISV) | Sluit me aan bij het [ Programma van de Partner van de Technologie van de Adobe ](https://partners.adobe.com/technologyprogram/experiencecloud.html) en verzoek om een zandbak van het Experience Platform te krijgen die wordt voorzien om tot Destination SDK toegang te hebben. |
 | Systeemintegrator (SI) | U moet op of het Niveau van het Goud of Platina in het [ Programma van de Partner van de Oplossing van de Adobe ](https://solutionpartners.adobe.com/home.html) zijn om een zandbak van het Experience Platform te krijgen provisioned en toegang tot Destination SDK. |
-| De klant van het Experience Platform op het [ Ultimate pakket van Real-Time CDP ](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform.html) | Door gebrek, krijgt u toegang tot de zandbakken van het Experience Platform en Destination SDK, die u toestaan om privé bestemmingen voor uw organisatie te bouwen. |
+| De klant van het Experience Platform op het [ Ultimate pakket van Real-Time CDP ](https://helpx.adobe.com/nl/legal/product-descriptions/real-time-customer-data-platform.html) | Door gebrek, krijgt u toegang tot de zandbakken van het Experience Platform en Destination SDK, die u toestaan om privé bestemmingen voor uw organisatie te bouwen. |
 
 {style="table-layout:auto"}
 
@@ -152,7 +152,7 @@ De toegang van Destination SDK varieert gebaseerd op uw status als partner of Ex
 
 Het proces om uw bestemming in Experience Platform te vormen wordt hieronder geschetst:
 
-1. Als u ISV of SI bent, zie [ het krijgen van toegang ](#get-access) informatie in de sectie hierboven. [ Real-Time CDP Ultimate pakket ](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform.html) klanten kunnen deze stap overslaan.
+1. Als u ISV of SI bent, zie [ het krijgen van toegang ](#get-access) informatie in de sectie hierboven. [ Real-Time CDP Ultimate pakket ](https://helpx.adobe.com/nl/legal/product-descriptions/real-time-customer-data-platform.html) klanten kunnen deze stap overslaan.
 2. [ Verzoek aan voorziening een zandbak van het Experience Platform ](https://adobeexchangeec.zendesk.com/hc/en-us/articles/360037457812-Adobe-Experience-Platform-Sandbox-Accounts-Access-Adding-Users-and-Support) en laat de toestemming van de bestemmingscreatie toe.
 3. Bouw uw integratie op. Volg de instructies in de productdocumentatie om [ het stromen bestemmingen ](guides/configure-destination-instructions.md) of [ op dossier-gebaseerde bestemmingen ](guides/configure-file-based-destination-instructions.md) te vormen.
 4. Test uw integratie. Volg de instructies in de productdocumentatie om [ het stromen bestemmingen ](testing-api/streaming-destinations/streaming-destination-testing-overview.md) of [ op dossier-gebaseerde bestemmingen ](testing-api/batch-destinations/file-based-destination-testing-overview.md) te testen.
@@ -166,5 +166,5 @@ Het proces om uw bestemming in Experience Platform te vormen wordt hieronder ges
 Adobe raadt u aan de volgende documentatie van het Experience Platform te lezen en te begrijpen:
 
 * [ de bestemmingen van Adobe Experience Platform overzicht ](https://experienceleague.adobe.com/docs/experience-platform/destinations/home.html?lang=nl)
-* [ Basis van XDM schemacompositie ](https://experienceleague.adobe.com/docs/experience-platform/xdm/schema/composition.html)
+* [ Basis van XDM schemacompositie ](https://experienceleague.adobe.com/docs/experience-platform/xdm/schema/composition.html?lang=nl-NL)
 * [ Overzicht van identiteitskaart namespace ](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html?lang=nl)

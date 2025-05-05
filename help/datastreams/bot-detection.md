@@ -33,7 +33,7 @@ Deze beide het scoren helpt de oplossingen die het verzoek ontvangen beide verke
 >
 >Boot detection slaat beide aanvragen niet neer. Het werkt slechts het schema XDM met beide het scoren bij, en door:sturen de gebeurtenis aan de [ datastream dienst ](configure.md) die u vormde.
 >
->Adobe-oplossingen kunnen beide scoren op verschillende manieren verwerken. Bijvoorbeeld, gebruikt Adobe Analytics zijn eigen [ bot filtrerende dienst ](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/manage-report-suites/edit-report-suite/report-suite-general/bot-removal/bot-rules.html) en gebruikt niet de score die door Edge Network wordt geplaatst. De twee diensten gebruiken de zelfde [ IAB beide lijst ](https://www.iab.com/guidelines/iab-abc-international-spiders-bots-list/), zodat is het beide het scoren identiek.
+>Adobe-oplossingen kunnen beide scoren op verschillende manieren verwerken. Bijvoorbeeld, gebruikt Adobe Analytics zijn eigen [ bot filtrerende dienst ](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/manage-report-suites/edit-report-suite/report-suite-general/bot-removal/bot-rules.html?lang=nl-NL) en gebruikt niet de score die door Edge Network wordt geplaatst. De twee diensten gebruiken de zelfde [ IAB beide lijst ](https://www.iab.com/guidelines/iab-abc-international-spiders-bots-list/), zodat is het beide het scoren identiek.
 
 Bot-detectieregels kunnen tot 15 minuten duren voordat ze door de Edge Network worden verspreid.
 

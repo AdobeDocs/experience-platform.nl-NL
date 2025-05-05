@@ -16,7 +16,7 @@ ht-degree: 0%
 
 Deze extensie implementeert het script voor [!DNL Marketo's] Web Personalization- en ContentAI-toepassingen. [!DNL Marketo] Web Personalization identificeert en personaliseert inhoud op unieke wijze aan de kenmerken van webbezoekers, zoals firmographics voor anonieme bezoekers en een breed scala aan gedragskenmerken binnen het [!DNL Marketo] Betrokkenheidsplatform voor bekende bezoekers. [!DNL Marketo] ContentAI bevat mogelijkheden voor door AI aangedreven aanbevelingen en personalisatie voor web- en e-mailcampagnes die uniek zijn voor B2B-klanten.
 
-[!DNL Marketo Web Personalization] is een personalisatie-uitbreiding in Adobe Experience Platform. Voor meer informatie over Webverpersoonlijking en ContentAI in Marketo, lees {het Overzicht van Personalization van 0} Web [&#128279;](https://experienceleague.adobe.com/docs/marketo/using/product-docs/web-personalization/understanding-web-personalization/web-personalization-overview.html).
+[!DNL Marketo Web Personalization] is een personalisatie-uitbreiding in Adobe Experience Platform. Voor meer informatie over Webverpersoonlijking en ContentAI in Marketo, lees {het Overzicht van Personalization van 0} Web [&#128279;](https://experienceleague.adobe.com/docs/marketo/using/product-docs/web-personalization/understanding-web-personalization/web-personalization-overview.html?lang=nl-NL).
 
 Dit doel is een tagextensie. Voor meer informatie over hoe de markeringsuitbreidingen in Experience Platform werken, zie het [ overzicht van markeringsuitbreidingen ](../launch-extensions/overview.md).
 

@@ -56,7 +56,7 @@ Ook, wanneer het gebruiken van derdegegevensinzameling, beperken sommige en blok
 
 ### Effecten van de levensduur van cookies op Adobe Experience Cloud-toepassingen {#lifespans}
 
-Ongeacht of u eerste-partij of derdegegevensinzameling kiest, kan de tijdsduur een koekje een directe invloed op bezoekersaantallen in [ Adobe Analytics ](https://experienceleague.adobe.com/en/docs/analytics) en [ Customer Journey Analytics ](https://experienceleague.adobe.com/en/docs/customer-journey-analytics) aanhouden. Ook, kunnen de eindgebruikers inconsistente verpersoonlijkingservaringen ervaren wanneer [ Adobe Target ](https://experienceleague.adobe.com/en/docs/target) of [ Offer decisioning ](https://experienceleague.adobe.com/en/docs/target/using/integrate/ajo/offer-decision) op de plaats wordt gebruikt.
+Ongeacht of u eerste-partij of derdegegevensinzameling kiest, kan de tijdsduur een koekje een directe invloed op bezoekersaantallen in [ Adobe Analytics ](https://experienceleague.adobe.com/nl/docs/analytics) en [ Customer Journey Analytics ](https://experienceleague.adobe.com/nl/docs/customer-journey-analytics) aanhouden. Ook, kunnen de eindgebruikers inconsistente verpersoonlijkingservaringen ervaren wanneer [ Adobe Target ](https://experienceleague.adobe.com/nl/docs/target) of [ Offer decisioning ](https://experienceleague.adobe.com/nl/docs/target/using/integrate/ajo/offer-decision) op de plaats wordt gebruikt.
 
 Neem bijvoorbeeld een situatie waarin u een personaliseringservaring hebt gemaakt waarmee elk item op de homepage wordt bevorderd als een gebruiker dit de afgelopen zeven dagen drie keer heeft bekeken.
 
@@ -165,7 +165,7 @@ Elk identiteitsobject in de array identities bevat de volgende eigenschappen:
 | `authenticatedState` | String | **(Vereist)** De authentificatiestatus van identiteitskaart Mogelijke waarden zijn `ambiguous` , `authenticated` en `loggedOut` . |
 | `primary` | Boolean | Hiermee wordt bepaald of deze identiteit moet worden gebruikt als primair fragment in het profiel. Standaard wordt de ECID ingesteld als de primaire id voor de gebruiker. Als deze waarde wordt weggelaten, wordt deze standaard ingesteld op `false` . |
 
-Als u het veld `identityMap` gebruikt om apparaten of gebruikers te identificeren, leidt dit tot hetzelfde resultaat als wanneer u de methode [`setCustomerIDs` ](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/setcustomerids.html) van de [!DNL ID Service API] . Zie de [ API documentatie van de Dienst van identiteitskaart ](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/get-set.html) voor meer details.
+Als u het veld `identityMap` gebruikt om apparaten of gebruikers te identificeren, leidt dit tot hetzelfde resultaat als wanneer u de methode [`setCustomerIDs` ](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/setcustomerids.html?lang=nl-NL) van de [!DNL ID Service API] . Zie de [ API documentatie van de Dienst van identiteitskaart ](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/get-set.html?lang=nl-NL) voor meer details.
 
 ## Migreren van Bezoeker-API naar ECID {#migrating-visitor-api-ecid}
 
@@ -177,7 +177,7 @@ Wanneer u migreert vanuit de Bezoeker-API, kunt u ook bestaande AMCV-cookies mig
 
 ### Functies voor migratie bijwerken
 
-Wanneer gegevens met XDM-indeling naar Audience Manager worden verzonden, moeten deze gegevens tijdens het migreren naar signalen worden geconverteerd. Uw kenmerken moeten worden bijgewerkt om de nieuwe sleutels te weerspiegelen die XDM verstrekt. Dit proces wordt gemakkelijker gemaakt door het [ hulpmiddel BAAAM ](https://experienceleague.adobe.com/docs/audience-manager/user-guide/reference/bulk-management-tools/bulk-management-intro.html#getting-started-with-bulk-management) te gebruiken dat de Audience Manager heeft gecreeerd.
+Wanneer gegevens met XDM-indeling naar Audience Manager worden verzonden, moeten deze gegevens tijdens het migreren naar signalen worden geconverteerd. Uw kenmerken moeten worden bijgewerkt om de nieuwe sleutels te weerspiegelen die XDM verstrekt. Dit proces wordt gemakkelijker gemaakt door het [ hulpmiddel BAAAM ](https://experienceleague.adobe.com/docs/audience-manager/user-guide/reference/bulk-management-tools/bulk-management-intro.html?lang=nl-NL#getting-started-with-bulk-management) te gebruiken dat de Audience Manager heeft gecreeerd.
 
 ## Gebruiken in gebeurtenis door:sturen
 

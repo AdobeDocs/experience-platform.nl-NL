@@ -71,8 +71,8 @@ In de onderstaande tabel worden de AWS-gebieden aangegeven waar Experience Platf
 De Adobe streeft ernaar om functiepariteit aan te bieden op cloudplatforms, voor alle toepassingen die op het Experience Platform worden uitgevoerd, zoals:
 
 * [Real-Time Customer Data Platform](../rtcdp/home.md)
-* [ Adobe Journey Optimizer ](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/ajo-home)
-* [Customer Journey Analytics](https://experienceleague.adobe.com/en/docs/analytics-platform/using/cja-landing)
+* [ Adobe Journey Optimizer ](https://experienceleague.adobe.com/nl/docs/journey-optimizer/using/ajo-home)
+* [Customer Journey Analytics](https://experienceleague.adobe.com/nl/docs/analytics-platform/using/cja-landing)
 
 Bepaalde functies kunnen echter afwijken voor de implementaties van Azure en AWS. Deze verschillen worden beschreven in de onderstaande sectie en in andere delen van de productdocumentatie, indien van toepassing.
 

@@ -22,7 +22,7 @@ Adobe Experience Platform [!DNL Web SDK] kan persoonlijke aanbiedingen die in Of
 
 ## Terminologie
 
-Het is belangrijk dat u de volgende terminologie begrijpt wanneer u met Offer Decisioning werkt. Voor meer informatie en om extra termijnen te bekijken, gelieve de [ verklarende woordenlijst van Offer Decisioning ](https://experienceleague.adobe.com/docs/offer-decisioning/using/get-started/glossary.html) te bezoeken.
+Het is belangrijk dat u de volgende terminologie begrijpt wanneer u met Offer Decisioning werkt. Voor meer informatie en om extra termijnen te bekijken, gelieve de [ verklarende woordenlijst van Offer Decisioning ](https://experienceleague.adobe.com/docs/offer-decisioning/using/get-started/glossary.html?lang=nl-NL) te bezoeken.
 
 * **Scopes van het Besluit:** voor Offer Decisioning, zijn het besluitvormingswerkingsgebied Base64 gecodeerde koorden van JSON die de activiteit en plaatsings IDs bevatten u de dienst van de aanbiedingsbeslissing wilt gebruiken om aanbiedingen voor te stellen.
 
@@ -81,7 +81,7 @@ Voer de volgende stappen uit om Offer Decisioning in te schakelen:
    * De SDK installeren via tags
 
       1. [Een tag-eigenschap maken](/help/tags/ui/administration/companies-and-properties.md)
-      1. [ voeg de ingebedde code ](https://experienceleague.adobe.com/docs/core-services-learn/implementing-in-websites-with-launch/configure-launch/launch-add-embed.html) toe
+      1. [ voeg de ingebedde code ](https://experienceleague.adobe.com/docs/core-services-learn/implementing-in-websites-with-launch/configure-launch/launch-add-embed.html?lang=nl-NL) toe
       1. Installeer en configureer de Experience Platform Web SDK-extensie met de DataStream die u hebt gemaakt door de configuratie te selecteren in het vervolgkeuzemenu &quot;DataStream&quot;. Zie de documentatie op [ uitbreidingen ](/help/tags/ui/managing-resources/extensions/overview.md).
 
          ![ install-a-web-sdk-uitbreiding ](./assets/install-aep-web-sdk-extension.png)
@@ -328,4 +328,4 @@ Voer de volgende stappen uit om Offer Decisioning in te schakelen:
 
 ## Beperkingen
 
-Sommige aanbiedingsbeperkingen worden momenteel niet ondersteund door de mobiele Edge Network-workflows, bijvoorbeeld Afdekkingen. De waarde van het gebied van de Plak specificeert het aantal tijden een aanbieding over alle gebruikers kan worden voorgesteld. Voor meer details, zie [ de geschiktheidsregels en beperkingsdocumentatie van de Aanbieding ](https://experienceleague.adobe.com/docs/offer-decisioning/using/managing-offers-in-the-offer-library/creating-personalized-offers.html#eligibility).
+Sommige aanbiedingsbeperkingen worden momenteel niet ondersteund door de mobiele Edge Network-workflows, bijvoorbeeld Afdekkingen. De waarde van het gebied van de Plak specificeert het aantal tijden een aanbieding over alle gebruikers kan worden voorgesteld. Voor meer details, zie [ de geschiktheidsregels en beperkingsdocumentatie van de Aanbieding ](https://experienceleague.adobe.com/docs/offer-decisioning/using/managing-offers-in-the-offer-library/creating-personalized-offers.html?lang=nl-NL#eligibility).

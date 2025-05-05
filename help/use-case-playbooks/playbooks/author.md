@@ -236,7 +236,7 @@ U hebt ook de volgende publieksmachtigingen nodig:
 * **gelezen Profiel**
 * **gelezen Dataset**
 
-Aangezien de Reizen hoogst flexibel zijn en vele onderling verbonden voorwerpen kunnen impliceren, zijn hun [ volledige toestemmingen ](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/access-control/privacy/high-low-permissions) afzonderlijk gedocumenteerd en kunnen variëren gebaseerd op uw bijzonder gebruiksgeval.
+Aangezien de Reizen hoogst flexibel zijn en vele onderling verbonden voorwerpen kunnen impliceren, zijn hun [ volledige toestemmingen ](https://experienceleague.adobe.com/nl/docs/journey-optimizer/using/access-control/privacy/high-low-permissions) afzonderlijk gedocumenteerd en kunnen variëren gebaseerd op uw bijzonder gebruiksgeval.
 
 ## Volgende stappen
 

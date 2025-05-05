@@ -39,7 +39,7 @@ In het onderstaande stroomdiagram wordt de volgorde beschreven van de stappen di
 1. De Edge Network API retourneert de personalisatie-inhoud naar uw toepassingsserver.
 1. De toepassingsserver keert een reactie van HTML op cliëntbrowser terug, die de [ identiteit en clusterkoekjes ](#cookies) bevatten.
 1. Op de clientpagina wordt de opdracht [!DNL Web SDK] `applyResponse` aangeroepen, waarbij de koppen en de hoofdtekst van het [!UICONTROL Edge Network API] -antwoord uit de vorige stap worden doorgegeven.
-1. [!DNL Web SDK] geeft de aanbiedingen van het Doel [[!DNL Visual Experience Composer (VEC)] ](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html) en de punten van het Kanaal van Journey Optimizer automatisch terug, omdat de `renderDecisions` vlag aan `true` wordt geplaatst.
+1. [!DNL Web SDK] geeft de aanbiedingen van het Doel [[!DNL Visual Experience Composer (VEC)] ](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html?lang=nl-NL) en de punten van het Kanaal van Journey Optimizer automatisch terug, omdat de `renderDecisions` vlag aan `true` wordt geplaatst.
 1. Doelformuliergebaseerde [!DNL HTML]/[!DNL JSON] -aanbiedingen en Journey Optimizer-ervaringen op basis van code worden handmatig toegepast via de `applyProposition` -methode om de [!DNL DOM] bij te werken op basis van de personalisatie-inhoud in het voorstel.
 1. Voor op vorm-gebaseerde [!DNL HTML]/ [!DNL JSON] aanbiedingen van het Doel en op code-gebaseerde ervaringen van Journey Optimizer, moeten de vertoningsgebeurtenissen manueel worden verzonden om erop te wijzen wanneer de teruggekeerde inhoud is getoond. Dit gebeurt via de opdracht `sendEvent` .
 

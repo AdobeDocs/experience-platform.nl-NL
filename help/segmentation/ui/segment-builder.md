@@ -380,7 +380,7 @@ Als u een samenvoegbeleid voor uw segmentdefinitie wilt selecteren, selecteert u
 >id="platform_segments_createsegment_segmentbuilder_refreshestimate"
 >title="Ramingen vernieuwen"
 >abstract="U kunt de ramingen van uw segmentdefinitie verfrissen om onmiddellijk een voorproef van te zien hoeveel profielen voor de voorgestelde segmentdefinitie zouden kwalificeren. De schattingen van het publiek worden geproduceerd door een steekproefgrootte van de steekproefgegevens van die dag te gebruiken."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/tutorials/create-a-segment.html#estimate-and-preview-an-audience" text="Een publiek schatten en voorvertonen"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/tutorials/create-a-segment.html?lang=nl-NL#estimate-and-preview-an-audience" text="Een publiek schatten en voorvertonen"
 
 Wanneer het bouwen van een segmentdefinitie, **[!UICONTROL Audience properties]** sectie op de rechterkant van de werkruimte toont een schatting van de grootte van de resulterende segmentdefinitie, die u toestaat om uw segmentdefinitie aan te passen zoals nodig alvorens het publiek zelf te bouwen.
 

@@ -14,11 +14,11 @@ ht-degree: 0%
 
 Adobe heeft verschillende toepassingen bovenop Experience Platform gebouwd. Documentatie voor deze toepassingen vindt u met de onderstaande koppelingen:
 
-* [[!DNL Customer Journey Analytics]](https://experienceleague.adobe.com/docs/customer-journey-analytics.html)
-* [[!DNL Journey Orchestration]](https://experienceleague.adobe.com/docs/journey-orchestration.html)
-* [[!DNL Adobe Journey Optimizer]](https://experienceleague.adobe.com/docs/journey-optimizer.html)
+* [[!DNL Customer Journey Analytics]](https://experienceleague.adobe.com/docs/customer-journey-analytics.html?lang=nl-NL)
+* [[!DNL Journey Orchestration]](https://experienceleague.adobe.com/docs/journey-orchestration.html?lang=nl-NL)
+* [[!DNL Adobe Journey Optimizer]](https://experienceleague.adobe.com/docs/journey-optimizer.html?lang=nl-NL)
 * [[!DNL Adobe Real-Time Customer Data Platform (Real-Time CDP)]](../rtcdp/overview.md)
-* [[!DNL Adobe Mix Modeler]](https://experienceleague.adobe.com/docs/mix-modeler.html)
+* [[!DNL Adobe Mix Modeler]](https://experienceleague.adobe.com/docs/mix-modeler.html?lang=nl-NL)
 
 In de onderstaande video worden de gebruiksgevallen beschreven van elke toepassing die boven op het Experience Platform is gebouwd.
 

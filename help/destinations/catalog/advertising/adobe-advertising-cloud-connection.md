@@ -13,7 +13,7 @@ ht-degree: 0%
 
 ## Overzicht {#overview}
 
-Met de Adobe Advertising Cloud [!DNL Demand-Side Platform] (DSP)-bestemming kunt u geverifieerde soorten publiek van de eerste partij delen met goedgekeurde adverteerders en gebruikers voor activering van de campagne met DSP. Meer over de integratie van Real-Time CDP met DSP leren, zie [ Ongeveer het Activeren van Voor authentiek verklaard publiek van de Bronnen van het Publiek ](https://experienceleague.adobe.com/docs/advertising-cloud/dsp/audiences/sources/source-about.html).
+Met de Adobe Advertising Cloud [!DNL Demand-Side Platform] (DSP)-bestemming kunt u geverifieerde soorten publiek van de eerste partij delen met goedgekeurde adverteerders en gebruikers voor activering van de campagne met DSP. Meer over de integratie van Real-Time CDP met DSP leren, zie [ Ongeveer het Activeren van Voor authentiek verklaard publiek van de Bronnen van het Publiek ](https://experienceleague.adobe.com/docs/advertising-cloud/dsp/audiences/sources/source-about.html?lang=nl-NL).
 
 >[!IMPORTANT]
 >
@@ -35,8 +35,8 @@ Een mediabedrijf met een DSP account voert een herrichtingscampagne namens zijn 
 
 * DSP instellingen op accountniveau en op campagnereniveau om het delen van publiek met [!DNL LiveRamp RampID] mogelijk te maken. Hiermee worden klantgegevens naar [!DNL RampIDs] vertaald om doelgerichte segmenten te maken. Uw DSP accountteam zal deze configuratie uitvoeren. [!DNL RampID] is beschikbaar via een partnerschap tussen DSP en [!DNL LiveRamp] en u hebt geen eigen [!DNL LiveRamp] -lidmaatschap nodig om dit te gebruiken.
 * De organisatie-id van het Experience Cloud voor de account Experience Platform. U vindt uw id op de pagina met gebruikersprofielen van [!DNL Real-Time CDP] .
-* A [[!DNL Real-Time CDP]  bron in DSP ](https://experienceleague.adobe.com/docs/advertising-cloud/dsp/audiences/sources/source-create.html) om publiek voor campagneactivering te ontvangen. Uw DSP accountteam zal de bron maken met uw organisatie-id van het Experience Cloud.
-* De bronsleutel voor de DSP rekening of adverteerder, die wordt geproduceerd wanneer de bron van a [[!DNL Real-Time CDP]  in DSP ](https://experienceleague.adobe.com/docs/advertising-cloud/dsp/audiences/sources/source-create.html) wordt gecreeerd. Uw DSP accountteam zal deze sleutel met u delen. U zult het binnen Experience Platform gebruiken om een bestemmingsverbinding aan de bestemming van Advertising Cloud DSP tot stand te brengen, zoals [ hieronder verklaard ](#authenticate).
+* A [[!DNL Real-Time CDP]  bron in DSP ](https://experienceleague.adobe.com/docs/advertising-cloud/dsp/audiences/sources/source-create.html?lang=nl-NL) om publiek voor campagneactivering te ontvangen. Uw DSP accountteam zal de bron maken met uw organisatie-id van het Experience Cloud.
+* De bronsleutel voor de DSP rekening of adverteerder, die wordt geproduceerd wanneer de bron van a [[!DNL Real-Time CDP]  in DSP ](https://experienceleague.adobe.com/docs/advertising-cloud/dsp/audiences/sources/source-create.html?lang=nl-NL) wordt gecreeerd. Uw DSP accountteam zal deze sleutel met u delen. U zult het binnen Experience Platform gebruiken om een bestemmingsverbinding aan de bestemming van Advertising Cloud DSP tot stand te brengen, zoals [ hieronder verklaard ](#authenticate).
 * Klantgegevens die bestaan uit e-mails of gehashte e-mails.
 
 ## Ondersteunde identiteiten {#supported-identities}
@@ -72,7 +72,7 @@ Om met de bestemming te verbinden, volg de instructies om [ een bestemmingsverbi
 
 Als u verbinding wilt maken met het doel, geeft u de volgende parameter op in de sectie [!UICONTROL Connection type] en selecteert u vervolgens **[!UICONTROL Connect to destination]** :
 
-* **[!UICONTROL Account or Advertiser Key]**: Dit [!UICONTROL Source Key] wordt geproduceerd wanneer a [[!DNL Real-Time CDP]  bron in het DSP gebruikersinterface ](https://experienceleague.adobe.com/docs/advertising-cloud/dsp/audiences/sources/source-create.html) wordt gecreeerd. Uw DSP accountteam zal deze sleutel met u delen nadat zij de bron hebben gemaakt.
+* **[!UICONTROL Account or Advertiser Key]**: Dit [!UICONTROL Source Key] wordt geproduceerd wanneer a [[!DNL Real-Time CDP]  bron in het DSP gebruikersinterface ](https://experienceleague.adobe.com/docs/advertising-cloud/dsp/audiences/sources/source-create.html?lang=nl-NL) wordt gecreeerd. Uw DSP accountteam zal deze sleutel met u delen nadat zij de bron hebben gemaakt.
 
 ![ het typegebied van de Verbinding ](/help/destinations/assets/catalog/advertising/adobe-advertising-cloud-connection/authenticate-destination.png)
 

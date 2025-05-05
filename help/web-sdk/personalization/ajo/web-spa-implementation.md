@@ -61,7 +61,7 @@ XDM-weergaven kunnen in Adobe Journey Optimizer worden gebruikt om marketers in 
 
 Hiervoor moeten de volgende stappen worden uitgevoerd om een eenmalige ontwikkelaarsinstelling te voltooien:
 
-1. Installeer [ SDK van het Web van Adobe Experience Platform ](/help/web-sdk/install/overview.md) en controleer de [ pre-veelheden van het Webkanaal ](https://experienceleague.adobe.com/docs/journey-optimizer/using/web/configure-web-channel/web-prerequisites.html) pagina.
+1. Installeer [ SDK van het Web van Adobe Experience Platform ](/help/web-sdk/install/overview.md) en controleer de [ pre-veelheden van het Webkanaal ](https://experienceleague.adobe.com/docs/journey-optimizer/using/web/configure-web-channel/web-prerequisites.html?lang=nl-NL) pagina.
 
 2. Bepaal alle XDM meningen in uw enig-paginatoepassing die u wilt personaliseren.
 

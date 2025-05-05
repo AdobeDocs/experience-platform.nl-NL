@@ -102,7 +102,7 @@ U kunt extra gebieden aan het Portaal van het Publiek toevoegen door ![ het pict
 | ----- | ----------- |
 | [!UICONTROL Name] | De naam van het publiek. |
 | [!UICONTROL Profile count] | Het totale aantal profielen dat voor het publiek in aanmerking komt. |
-| [!UICONTROL Origin] | De oorsprong van het publiek. Dit geeft aan waar het publiek vandaan komt. De mogelijke waarden omvatten [ Dienst van de Segmentatie ](#segment-builder), [ Douane uploadt ](#import-audience), [ compositie van het publiek ](#audience-composition), [ Audience Manager ](https://experienceleague.adobe.com/en/docs/audience-manager/user-guide/aam-home), [ look-alike publiek ](../types/lookalike-audiences.md), [ Federated Audience Composition ](#fac), [ Customer Journey Analytics ](https://experienceleague.adobe.com/en/docs/analytics-platform/using/cja-overview/cja-overview), [ Distiller van Gegevens ](#data-distiller), en {111 6} AJO B2B [&#128279;](https://experienceleague.adobe.com/en/docs/journey-optimizer-b2b/user/guide-overview). |
+| [!UICONTROL Origin] | De oorsprong van het publiek. Dit geeft aan waar het publiek vandaan komt. De mogelijke waarden omvatten [ Dienst van de Segmentatie ](#segment-builder), [ Douane uploadt ](#import-audience), [ compositie van het publiek ](#audience-composition), [ Audience Manager ](https://experienceleague.adobe.com/nl/docs/audience-manager/user-guide/aam-home), [ look-alike publiek ](../types/lookalike-audiences.md), [ Federated Audience Composition ](#fac), [ Customer Journey Analytics ](https://experienceleague.adobe.com/nl/docs/analytics-platform/using/cja-overview/cja-overview), [ Distiller van Gegevens ](#data-distiller), en {111 6} AJO B2B [&#128279;](https://experienceleague.adobe.com/nl/docs/journey-optimizer-b2b/user/guide-overview). |
 | [!UICONTROL Lifecycle status] | De status van het publiek. Mogelijke waarden voor dit veld zijn `Draft` , `Inactive` en `Published` . Meer informatie over levenscyclusstatussen, met inbegrip van wat de verschillende staten betekenen en hoe te om publiek naar verschillende levenscyclusstaten te bewegen, lees de [ sectie van de levenscyclusstatus van de Segmentatie FAQ ](../faq.md#lifecycle-status). |
 | [!UICONTROL Update frequency] | Een waarde die aangeeft hoe vaak de gegevens van het publiek worden bijgewerkt. Mogelijke waarden voor dit veld zijn [!UICONTROL Batch] , [!UICONTROL Streaming] , [!UICONTROL Edge] en [!UICONTROL Not Scheduled] . |
 | [!UICONTROL Last updated by] | De naam van de persoon die het publiek het laatst heeft bijgewerkt. |
@@ -138,7 +138,7 @@ Als u [!DNL Unified Search] wilt gebruiken, voegt u de term die u wilt zoeken to
 
 ![ de onderzoeksbar wordt benadrukt.](../images/ui/audience-portal/browse-audience-search.png)
 
-Voor meer informatie over [!DNL Unified Search], met inbegrip van gesteunde eigenschappen, te lezen gelieve de [ Verenigde documentatie van het Onderzoek ](https://experienceleague.adobe.com/docs/core-services/interface/services/search-experience-cloud.html).
+Voor meer informatie over [!DNL Unified Search], met inbegrip van gesteunde eigenschappen, te lezen gelieve de [ Verenigde documentatie van het Onderzoek ](https://experienceleague.adobe.com/docs/core-services/interface/services/search-experience-cloud.html?lang=nl-NL).
 
 #### Tags {#tags}
 
@@ -203,7 +203,7 @@ De lijst met beschikbare filters wordt weergegeven.
 
 | Filter | Beschrijving |
 | ------ | ----------- |
-| [!UICONTROL Origin] | Hiermee kunt u filteren op basis van de oorsprong van het publiek. De mogelijke waarden omvatten [ Dienst van de Segmentatie ](#segment-builder), [ Douane uploadt ](#import-audience), [ compositie van het publiek ](#audience-composition), [ Audience Manager ](https://experienceleague.adobe.com/en/docs/audience-manager/user-guide/aam-home), [ look-alike publiek ](../types/lookalike-audiences.md), [ Federated Audience Composition ](#fac), [ Customer Journey Analytics ](https://experienceleague.adobe.com/en/docs/analytics-platform/using/cja-overview/cja-overview), [ Distiller van Gegevens ](#data-distiller), en {111 6} AJO B2B [&#128279;](https://experienceleague.adobe.com/en/docs/journey-optimizer-b2b/user/guide-overview). |
+| [!UICONTROL Origin] | Hiermee kunt u filteren op basis van de oorsprong van het publiek. De mogelijke waarden omvatten [ Dienst van de Segmentatie ](#segment-builder), [ Douane uploadt ](#import-audience), [ compositie van het publiek ](#audience-composition), [ Audience Manager ](https://experienceleague.adobe.com/nl/docs/audience-manager/user-guide/aam-home), [ look-alike publiek ](../types/lookalike-audiences.md), [ Federated Audience Composition ](#fac), [ Customer Journey Analytics ](https://experienceleague.adobe.com/nl/docs/analytics-platform/using/cja-overview/cja-overview), [ Distiller van Gegevens ](#data-distiller), en {111 6} AJO B2B [&#128279;](https://experienceleague.adobe.com/nl/docs/journey-optimizer-b2b/user/guide-overview). |
 | [!UICONTROL Has any tag] | Hiermee kunt u filteren op tags. U kunt kiezen tussen **[!UICONTROL Has any tag]** en **[!UICONTROL Has all tags]** . Wanneer **[!UICONTROL Has any tag]** wordt geselecteerd, zal het gefiltreerde publiek **om het even welk** van de markeringen omvatten u hebt toegevoegd. Wanneer **[!UICONTROL Has all tags]** wordt geselecteerd, moet het gefiltreerde publiek **alle** van de markeringen omvatten u hebt toegevoegd. |
 | [!UICONTROL Lifecycle status] | Hiermee kunt u filteren op basis van de levenscyclusstatus van de doelgroep. Beschikbare opties zijn [!UICONTROL Deleted] , [!UICONTROL Draft] , [!UICONTROL Inactive] en [!UICONTROL Published] . |
 | [!UICONTROL Update frequency] | Hiermee kunt u filteren op basis van de updatefrequentie van het publiek (evaluatiemethode). Beschikbare opties zijn [!UICONTROL Batch] , [!UICONTROL Streaming] en [!UICONTROL Edge] |
@@ -392,7 +392,7 @@ Als u **[!UICONTROL Build rule]** selecteert, gaat u naar de Segment Builder. De
 
 Met Adobe Federated Audience Composition kunt u nieuwe soorten publiek maken van bedrijfsgegevenssets zonder onderliggende gegevens te kopiëren en die soorten publiek op te slaan in Adobe Experience Platform Audience Portal.
 
-U kunt bestaande soorten publiek in Adobe Experience Platform ook verrijken door samengestelde publieksgegevens te gebruiken die van het entrepot van ondernemingsgegevens zijn gefedereerd. Gelieve te lezen de gids op [ Federated de Samenstelling van het Publiek ](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/home).
+U kunt bestaande soorten publiek in Adobe Experience Platform ook verrijken door samengestelde publieksgegevens te gebruiken die van het entrepot van ondernemingsgegevens zijn gefedereerd. Gelieve te lezen de gids op [ Federated de Samenstelling van het Publiek ](https://experienceleague.adobe.com/nl/docs/federated-audience-composition/using/home).
 
 ![ een lijst van publiek dat in Federatieve Samenstelling van het Publiek voor uw organisatie wordt gecreeerd.](../images/ui/overview/federated-audience-composition.png)
 

@@ -23,7 +23,7 @@ Met [!UICONTROL Permissions] kunt u het volgende configureren:
 * [Sandboxes](./sandboxes.md)
 * [Gebruikers](./users.md)
 
-Als u toegang wilt tot op kenmerken gebaseerde toegangsbeheermachtigingen voor [!DNL Adobe Experience Platform] , moet u een beheerder zijn voor uw organisatie die een abonnement heeft op [!DNL Adobe Experience Platform] . Hoewel Adobe flexibele beheerderhiërarchieën voor uw organisaties ondersteunt, moet u een productbeheerder voor [!DNL Adobe Experience Platform] zijn om machtigingen te configureren. Zie het artikel van het Centrum van de Hulp van Adobe op [ administratieve rollen ](https://helpx.adobe.com/enterprise/using/admin-roles.html) voor meer informatie.
+Als u toegang wilt tot op kenmerken gebaseerde toegangsbeheermachtigingen voor [!DNL Adobe Experience Platform] , moet u een beheerder zijn voor uw organisatie die een abonnement heeft op [!DNL Adobe Experience Platform] . Hoewel Adobe flexibele beheerderhiërarchieën voor uw organisaties ondersteunt, moet u een productbeheerder voor [!DNL Adobe Experience Platform] zijn om machtigingen te configureren. Zie het artikel van het Centrum van de Hulp van Adobe op [ administratieve rollen ](https://helpx.adobe.com/nl/enterprise/using/admin-roles.html) voor meer informatie.
 
 Als u geen beheerdersrechten hebt, neemt u contact op met de systeembeheerder om toegang te krijgen.
 

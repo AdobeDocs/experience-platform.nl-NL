@@ -38,4 +38,4 @@ ht-degree: 33%
 * [Behandeling van een privacyverzoek in het Data Lake](privacy.md)
 * [ API verwijzing ](https://www.adobe.io/experience-platform-apis/references/catalog/)
 * [Veelgestelde vragen](catalog-faq.md)
-* [Releaseopmerkingen bij Experience Platform](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)
+* [Releaseopmerkingen bij Experience Platform](https://experienceleague.adobe.com/nl/docs/experience-platform/release-notes/latest)

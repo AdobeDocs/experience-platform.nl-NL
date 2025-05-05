@@ -13,12 +13,12 @@ ht-degree: 1%
 
 De opdracht `createMediaSession` maakt deel uit van de Web SDK `streamingMedia` -component. Met deze component kunt u gegevens verzamelen die betrekking hebben op mediasessies op uw website. Zie `streamingMedia` [ documentatie ](configure/streamingmedia.md) leren hoe te om deze component te vormen.
 
-De verzamelde gegevens kunnen informatie over media playbacks, pauzes, voltooiing, en andere verwante gebeurtenissen omvatten. Zodra verzameld, kunt u deze gegevens naar [ Adobe Analytics para medios de streaming ](https://experienceleague.adobe.com/en/docs/media-analytics/using/media-overview) verzenden, aan gezamenlijke metriek. Deze functie biedt een uitgebreide oplossing voor het bijhouden en begrijpen van het gedrag van het mediaconsumptie op uw website.
+De verzamelde gegevens kunnen informatie over media playbacks, pauzes, voltooiing, en andere verwante gebeurtenissen omvatten. Zodra verzameld, kunt u deze gegevens naar [ Adobe Analytics para medios de streaming ](https://experienceleague.adobe.com/nl/docs/media-analytics/using/media-overview) verzenden, aan gezamenlijke metriek. Deze functie biedt een uitgebreide oplossing voor het bijhouden en begrijpen van het gedrag van het mediaconsumptie op uw website.
 
 U kunt mediasessies maken in Web SDK op twee manieren:
 
-* [ automatisch-gevolgd media zittingen ](#automatic) staan het Web SDK toe om de verzending van media te beheren pingelen gebeurtenissen aan [ Adobe Analytics para medios de streaming ](https://experienceleague.adobe.com/en/docs/media-analytics/using/media-overview). De frequentie van deze pingelt wordt bepaald door de configuratiemontages van de [ streamingMedia ](configure/streamingmedia.md) component.
-* [ manueel-gevolgd media zittingen ](#manual) geven u meer controle over de verzending van zitting pingelt gebeurtenissen aan [ Adobe Analytics para medios de streaming ](https://experienceleague.adobe.com/en/docs/media-analytics/using/media-overview). Bovendien kunt u de `sessionID` voor mediasessies opslaan.
+* [ automatisch-gevolgd media zittingen ](#automatic) staan het Web SDK toe om de verzending van media te beheren pingelen gebeurtenissen aan [ Adobe Analytics para medios de streaming ](https://experienceleague.adobe.com/nl/docs/media-analytics/using/media-overview). De frequentie van deze pingelt wordt bepaald door de configuratiemontages van de [ streamingMedia ](configure/streamingmedia.md) component.
+* [ manueel-gevolgd media zittingen ](#manual) geven u meer controle over de verzending van zitting pingelt gebeurtenissen aan [ Adobe Analytics para medios de streaming ](https://experienceleague.adobe.com/nl/docs/media-analytics/using/media-overview). Bovendien kunt u de `sessionID` voor mediasessies opslaan.
 
 ## Een automatisch bijgehouden mediasessie maken {#automatic}
 

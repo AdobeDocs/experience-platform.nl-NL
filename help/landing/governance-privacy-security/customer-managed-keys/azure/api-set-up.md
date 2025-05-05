@@ -21,7 +21,7 @@ Voor AWS-specifieke instructies, verwijs naar de [ opstellingsgids van AWS ](../
 
 Als u de sectie [!UICONTROL Encryption] in Adobe Experience Platform wilt weergeven en bezoeken, moet u een rol hebben gemaakt en [!UICONTROL Manage Customer Managed Key] toestemming aan die rol hebben toegewezen. Elke gebruiker met de machtiging [!UICONTROL Manage Customer Managed Key] kan CMK inschakelen voor zijn of haar organisatie.
 
-Voor meer informatie bij het toewijzen van rollen en toestemmingen in Experience Platform, verwijs naar [ vormen toestemmingendocumentatie ](https://experienceleague.adobe.com/docs/platform-learn/getting-started-for-data-architects-and-data-engineers/configure-permissions.html).
+Voor meer informatie bij het toewijzen van rollen en toestemmingen in Experience Platform, verwijs naar [ vormen toestemmingendocumentatie ](https://experienceleague.adobe.com/docs/platform-learn/getting-started-for-data-architects-and-data-engineers/configure-permissions.html?lang=nl-NL).
 
 Om CMK voor ver*halen-ontvangen instanties van Experience Platform toe te laten, moet uw [[!DNL Azure]  Zeer belangrijke vault ](./azure-key-vault-config.md) met de volgende montages worden gevormd:
 

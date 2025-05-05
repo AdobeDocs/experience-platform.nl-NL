@@ -17,7 +17,7 @@ Dit document bevat stappen voor het gebruik van uw lokale omgeving bij het schri
 
 >[!TIP]
 >
->De volgende documenten uit de bijdragende gids van Adobe kunnen worden gebruikt om uw documentatieproces verder te steunen: <ul><li>[ installeer Git en de Authoring hulpmiddelen van de Prijsverhoging ](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/install-tools.html)</li><li>&lbrace;de plaats van de Git van de opstelling plaatselijk voor documentatie [&#128279;](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html)</li><li>[ GitHub bijdragewerkschema voor belangrijkste veranderingen ](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/full-workflow.html)</li></ul>
+>De volgende documenten uit de bijdragende gids van Adobe kunnen worden gebruikt om uw documentatieproces verder te steunen: <ul><li>[ installeer Git en de Authoring hulpmiddelen van de Prijsverhoging ](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/install-tools.html?lang=nl-NL)</li><li>&lbrace;de plaats van de Git van de opstelling plaatselijk voor documentatie [&#128279;](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html?lang=nl-NL)</li><li>[ GitHub bijdragewerkschema voor belangrijkste veranderingen ](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/full-workflow.html?lang=nl-NL)</li></ul>
 
 ## Vereisten
 
@@ -37,7 +37,7 @@ Om de bewaarplaats aan uw lokale machine te klonen, selecteer **Code**. Van het 
 
 >[!TIP]
 >
->Voor meer informatie, zie het leerprogramma op [ de plaats van de Plaats van de Plaats plaatselijk voor documentatie ](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html#create-a-local-clone-of-the-repository).
+>Voor meer informatie, zie het leerprogramma op [ de plaats van de Plaats van de Plaats plaatselijk voor documentatie ](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html?lang=nl-NL#create-a-local-clone-of-the-repository).
 
 ![ open-git-Desktop ](../assets/open-git-desktop.png)
 
@@ -59,7 +59,7 @@ Daarna, uitgezochte **publiceer tak**.
 
 ## Auteur de documentatiepagina voor uw bron
 
-Met de bewaarplaats die aan uw lokale machine en een nieuwe gecreeerde tak wordt gekloond, kunt u nu beginnen de documentatiepagina voor uw nieuwe bron door de [ tekstredacteur van uw keus ](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/install-tools.html#understand-markdown-editors) te ontwerpen.
+Met de bewaarplaats die aan uw lokale machine en een nieuwe gecreeerde tak wordt gekloond, kunt u nu beginnen de documentatiepagina voor uw nieuwe bron door de [ tekstredacteur van uw keus ](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/install-tools.html?lang=nl-NL#understand-markdown-editors) te ontwerpen.
 
 Adobe adviseert dat u [ Code van Visual Studio ](https://code.visualstudio.com/) gebruikt en dat u de Authoring van de Markeringen van Adobe uitbreiding installeert. Om de uitbreiding te installeren, lanceer de Code van Visual Studio, en selecteer dan het **lusje van Uitbreidingen** van de linkernavigatie.
 

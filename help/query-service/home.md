@@ -34,7 +34,7 @@ Als u snel aan de slag wilt met de functies van Query Service, kunt u het beste 
 
 ## Query-service en Experience Platform-services {#experience-platform-services}
 
-De Dienst van de vraag wisselt en kan met de veelvoudige diensten van Experience Platform worden gebruikt. Om de meesten uit de mogelijkheden van de Dienst van de Vraag te maken, zou u vertrouwd met deze diensten moeten worden en hoe zij met de Dienst van de Vraag communiceren. De [ documentatie die van Experience Platform pagina ](https://experienceleague.adobe.com/docs/experience-platform.html) landen verstrekt samenvattingen en verbindingen aan de mogelijkheden van het platform.
+De Dienst van de vraag wisselt en kan met de veelvoudige diensten van Experience Platform worden gebruikt. Om de meesten uit de mogelijkheden van de Dienst van de Vraag te maken, zou u vertrouwd met deze diensten moeten worden en hoe zij met de Dienst van de Vraag communiceren. De [ documentatie die van Experience Platform pagina ](https://experienceleague.adobe.com/docs/experience-platform.html?lang=nl-NL) landen verstrekt samenvattingen en verbindingen aan de mogelijkheden van het platform.
 
 ### [!DNL Data Science Workspace] {#data-science-workspace}
 

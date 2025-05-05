@@ -22,10 +22,10 @@ Dankzij de integratie tussen Attribution AI en Adobe Experience Platform Data Go
 
 De etiketten en het beleid van het gegevensgebruik die op datasets werden gecreeerd die door Experience Platform worden verbruikt kunnen in het de configuratiewerkschema van Attribution AI worden aangeschept. Deze labels stoppen of waarschuwen gebruikers die gelabelde velden gebruiken.
 
-Dankzij deze integratie kunt u de naleving efficiënter beheren. Gegevensstewards in uw organisatie kunnen beleid plaatsen om gebruik te beperken. Dientengevolge, kunt u gegevens gebruiken die met beleid in plaats van gegevens worden bepaald in overeenstemming zijn. Lees de documentatie over [ Etiketten en Beleid ](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-dataviews/data-governance.html) om meer te leren.
+Dankzij deze integratie kunt u de naleving efficiënter beheren. Gegevensstewards in uw organisatie kunnen beleid plaatsen om gebruik te beperken. Dientengevolge, kunt u gegevens gebruiken die met beleid in plaats van gegevens worden bepaald in overeenstemming zijn. Lees de documentatie over [ Etiketten en Beleid ](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-dataviews/data-governance.html?lang=nl-NL) om meer te leren.
 
 Meer informatie over deze functie vindt u hier:
 
 [ Begonnen het worden in Attributie AI ](../../attribution-ai/getting-started.md)
-[ Adobe Experience Platform &amp; Toepassingen ](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/platform-applications.html)
-[ Adobe Experience Cloud architectuurdiagrammen ](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/experience-cloud.html)
+[ Adobe Experience Platform &amp; Toepassingen ](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/platform-applications.html?lang=nl-NL)
+[ Adobe Experience Cloud architectuurdiagrammen ](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/experience-cloud.html?lang=nl-NL)

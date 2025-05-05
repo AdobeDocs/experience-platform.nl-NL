@@ -36,18 +36,18 @@ U zult schema&#39;s, datasets, en publiek aangezien u door voorbeelden van re-be
 
 Wanneer u de stappen voor het implementeren van het hoofdlettergebruik uitvoert, maakt u gebruik van de volgende Real-Time CDP- en Adobe Journey Optimizer-functionaliteit (vermeld in de volgorde waarin u deze gaat gebruiken). Zorg ervoor dat u de noodzakelijke [ op attributen-gebaseerde toegangsbeheertoestemmingen ](/help/access-control/home.md) voor al deze gebieden hebt, of vraag uw systeembeheerder om u de noodzakelijke toestemmingen te verlenen.
 
-* [[!DNL Adobe Real-Time Customer Data Platform (Real-Time CDP)] ](https://experienceleague.adobe.com/docs/platform-learn/tutorials/rtcdp/understanding-the-real-time-customer-data-platform.html) - integreert gegevens over gegevensbronnen om de campagne te voeden. Deze gegevens worden vervolgens gebruikt om het campagnepubliek te maken en gepersonaliseerde gegevenselementen aan de oppervlakte te brengen die worden gebruikt in de e-mail en de webpromo-elementen (bijvoorbeeld naam of aan account gerelateerde informatie). CDP wordt ook gebruikt om publiek over e-mail en het Web (via [!DNL Adobe Target]) te activeren.
+* [[!DNL Adobe Real-Time Customer Data Platform (Real-Time CDP)] ](https://experienceleague.adobe.com/docs/platform-learn/tutorials/rtcdp/understanding-the-real-time-customer-data-platform.html?lang=nl-NL) - integreert gegevens over gegevensbronnen om de campagne te voeden. Deze gegevens worden vervolgens gebruikt om het campagnepubliek te maken en gepersonaliseerde gegevenselementen aan de oppervlakte te brengen die worden gebruikt in de e-mail en de webpromo-elementen (bijvoorbeeld naam of aan account gerelateerde informatie). CDP wordt ook gebruikt om publiek over e-mail en het Web (via [!DNL Adobe Target]) te activeren.
    * [Schema&#39;s](/help/xdm/home.md)
    * [Profielen](/help/profile/home.md)
    * [Gegevenssets](/help/catalog/datasets/overview.md)
    * [Doelgroepen](/help/segmentation/home.md)
-   * [[!DNL Adobe Journey Optimizer]](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/journey.html)
+   * [[!DNL Adobe Journey Optimizer]](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/journey.html?lang=nl-NL)
    * [Bestemmingen](/help/destinations/home.md)
 
-* [[!DNL Adobe Journey Optimizer] ](https://experienceleague.adobe.com/docs/journey-optimizer-learn/tutorials/introduction-to-journey-optimizer/introduction.html) - Helpt u verbonden, contextafhankelijke, en gepersonaliseerde ervaringen aan uw klanten te leveren.
-   * [ de Trigger van de Gebeurtenis of van het Publiek ](https://experienceleague.adobe.com/docs/journey-optimizer/using/offer-decisioning/collect-event-data/data-collection.html)
-   * [ Soorten publiek/Gebeurtenissen ](https://experienceleague.adobe.com/docs/journey-optimizer/using/audiences-profiles-identities/audiences/about-audiences.html)
-   * [ Acties van de Reis ](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/journey.html)
+* [[!DNL Adobe Journey Optimizer] ](https://experienceleague.adobe.com/docs/journey-optimizer-learn/tutorials/introduction-to-journey-optimizer/introduction.html?lang=nl-NL) - Helpt u verbonden, contextafhankelijke, en gepersonaliseerde ervaringen aan uw klanten te leveren.
+   * [ de Trigger van de Gebeurtenis of van het Publiek ](https://experienceleague.adobe.com/docs/journey-optimizer/using/offer-decisioning/collect-event-data/data-collection.html?lang=nl-NL)
+   * [ Soorten publiek/Gebeurtenissen ](https://experienceleague.adobe.com/docs/journey-optimizer/using/audiences-profiles-identities/audiences/about-audiences.html?lang=nl-NL)
+   * [ Acties van de Reis ](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/journey.html?lang=nl-NL)
 
 ## Hoe het gebruiksgeval te bereiken {#achieve-use-case-instruction}
 
@@ -141,7 +141,7 @@ De [ Inhoud en de 1&rbrace; het gebiedsgroep van Voorkeur &lbrace;verstrekt éé
 
 +++Details van de Test van het Profiel (de Groep van het Gebied)
 
-Met deze veldgroep kunt u uw reis testen voordat deze wordt gepubliceerd met testprofielen. Voor meer informatie over het creëren van testprofielen, leest [ tot de leerprogramma&#39;s van testprofielen ](https://experienceleague.adobe.com/docs/journeys/using/building-journeys/about-journey-building/creating-test-profiles.html) en [ het testen van de reiszelfstudie ](https://experienceleague.adobe.com/docs/journeys/using/building-journeys/testing-the-journey.html).
+Met deze veldgroep kunt u uw reis testen voordat deze wordt gepubliceerd met testprofielen. Voor meer informatie over het creëren van testprofielen, leest [ tot de leerprogramma&#39;s van testprofielen ](https://experienceleague.adobe.com/docs/journeys/using/building-journeys/about-journey-building/creating-test-profiles.html?lang=nl-NL) en [ het testen van de reiszelfstudie ](https://experienceleague.adobe.com/docs/journeys/using/building-journeys/testing-the-journey.html?lang=nl-NL).
 
 +++
 
@@ -308,17 +308,17 @@ Voor meer informatie over hoe te om a [ dataset ](/help/catalog/datasets/overvie
 
 >[!NOTE]
 >
->Gelijkaardig aan de stap om een schema tot stand te brengen, moet u toelaten dat de dataset in het Profiel van de Klant in real time wordt omvat. Voor meer informatie over het toelaten van de dataset voor gebruik in het Profiel van de Klant in real time, zie zelfstudie over [ brengend gegevens in het Profiel van de Klant in real time ](https://experienceleague.adobe.com/docs/platform-learn/tutorials/profiles/bring-data-into-the-real-time-customer-profile.html).
+>Gelijkaardig aan de stap om een schema tot stand te brengen, moet u toelaten dat de dataset in het Profiel van de Klant in real time wordt omvat. Voor meer informatie over het toelaten van de dataset voor gebruik in het Profiel van de Klant in real time, zie zelfstudie over [ brengend gegevens in het Profiel van de Klant in real time ](https://experienceleague.adobe.com/docs/platform-learn/tutorials/profiles/bring-data-into-the-real-time-customer-profile.html?lang=nl-NL).
 
 ### Toestemming en gegevensbeheer {#privacy-consent}
 
 >[!IMPORTANT]
 >
->Het is een wettelijke vereiste om klanten de mogelijkheid te bieden zich niet langer te abonneren op het ontvangen van communicatie van een merk, en om ervoor te zorgen dat deze keuze wordt nagekomen. Leer meer over de toepasselijke wetgeving in het [ overzicht van de Regels van de Privacy ](https://experienceleague.adobe.com/docs/experience-platform/privacy/regulations/overview.html).
+>Het is een wettelijke vereiste om klanten de mogelijkheid te bieden zich niet langer te abonneren op het ontvangen van communicatie van een merk, en om ervoor te zorgen dat deze keuze wordt nagekomen. Leer meer over de toepasselijke wetgeving in het [ overzicht van de Regels van de Privacy ](https://experienceleague.adobe.com/docs/experience-platform/privacy/regulations/overview.html?lang=nl-NL).
 
 #### Toestemmingsbeleid
 
-Wanneer het creëren van een re-betrokkenheidspad, denk na toevoegend het volgende [ toestemmingsbeleid ](https://experienceleague.adobe.com/docs/platform-learn/data-collection/web-sdk/consent/overview.html):
+Wanneer het creëren van een re-betrokkenheidspad, denk na toevoegend het volgende [ toestemmingsbeleid ](https://experienceleague.adobe.com/docs/platform-learn/data-collection/web-sdk/consent/overview.html?lang=nl-NL):
 
 * Als `consents.marketing.email.val = "Y"` dan kan e-mailen
 * Indien `consents.marketing.sms.val = "Y"` dan kan SMS
@@ -346,7 +346,7 @@ Er zijn geen [ beleid van het gegevensgebruik ](/help/data-governance/policies/o
 
 In de scenario&#39;s voor herbetrokkenheid wordt gebruikgemaakt van publiek om specifieke kenmerken of gedragingen te definiëren die worden gedeeld door een subset van profielen in uw profielarchief om een verhandelbare groep personen te onderscheiden van uw klantenbasis. Soorten publiek kan op meerdere manieren worden gemaakt in [!DNL Adobe Experience Platform] .
 
-Voor meer informatie over hoe te om een publiek tot stand te brengen, lees de [ gids UI van de publieksdienst ](https://experienceleague.adobe.com/docs/experience-platform/segmentation/ui/overview.html#create-audience).
+Voor meer informatie over hoe te om een publiek tot stand te brengen, lees de [ gids UI van de publieksdienst ](https://experienceleague.adobe.com/docs/experience-platform/segmentation/ui/overview.html?lang=nl-NL#create-audience).
 
 Voor meer informatie over hoe te om [ Soorten publiek ](/help/segmentation/home.md) direct samen te stellen, lees de [ gids UI van de Samenstelling van het publiek ](/help/segmentation/ui/audience-composition.md).
 
@@ -436,7 +436,7 @@ Voor deze reis is geen publiek nodig.
 >
 >[!DNL Adobe Journey Optimizer] omvat niet alles die in de diagrammen wordt getoond. Alle [ betaalde media advertenties ](/help/destinations/catalog/social/overview.md) worden gecreeerd in [!UICONTROL Destinations].
 
-[[!DNL Adobe Journey Optimizer] ](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/journey.html) helpt u verbonden, contextafhankelijke, en gepersonaliseerde ervaringen aan uw klanten leveren. De reis van de klant is het volledige proces van interactie van een klant met het merk. Voor elke gebruiksreis is specifieke informatie vereist. Hieronder staan de precieze gegevens die nodig zijn voor elke reis.
+[[!DNL Adobe Journey Optimizer] ](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/journey.html?lang=nl-NL) helpt u verbonden, contextafhankelijke, en gepersonaliseerde ervaringen aan uw klanten leveren. De reis van de klant is het volledige proces van interactie van een klant met het merk. Voor elke gebruiksreis is specifieke informatie vereist. Hieronder staan de precieze gegevens die nodig zijn voor elke reis.
 
 >[!BEGINTABS]
 
@@ -446,7 +446,7 @@ Het verlaten productbladerscenario richt verlaten product het doorbladeren op zo
 
 +++Gebeurtenissen
 
-Gebeurtenissen stellen u in staat om uw reizen tijdelijk te activeren en berichten in real-time te verzenden aan de persoon die de reis maakt. Voor meer informatie over gebeurtenissen, lees de [ algemene gebeurtenisgids ](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/about-journey-building/general-events.html).
+Gebeurtenissen stellen u in staat om uw reizen tijdelijk te activeren en berichten in real-time te verzenden aan de persoon die de reis maakt. Voor meer informatie over gebeurtenissen, lees de [ algemene gebeurtenisgids ](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/about-journey-building/general-events.html?lang=nl-NL).
 
 * Gebeurtenis 1: productweergaven
    * Schema: digitale transacties van klanten
@@ -571,7 +571,7 @@ Het verlaten kartscenario richt producten die in de kar zijn geplaatst maar nog 
 
 +++Gebeurtenissen
 
-Gebeurtenissen stellen u in staat om uw reizen tijdelijk te activeren en berichten in real-time te verzenden aan de persoon die de reis maakt. Voor meer informatie over gebeurtenissen, lees de [ algemene gebeurtenisgids ](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/about-journey-building/general-events.html).
+Gebeurtenissen stellen u in staat om uw reizen tijdelijk te activeren en berichten in real-time te verzenden aan de persoon die de reis maakt. Voor meer informatie over gebeurtenissen, lees de [ algemene gebeurtenisgids ](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/about-journey-building/general-events.html?lang=nl-NL).
 
 * Gebeurtenis 2: Toevoegen aan winkelwagentje
    * Schema: digitale transacties van klanten
@@ -704,7 +704,7 @@ Het bevestigingsscenario voor bestellingen is vooral gericht op productaankopen 
 
 +++Gebeurtenissen
 
-Gebeurtenissen stellen u in staat om uw reizen tijdelijk te activeren en berichten in real-time te verzenden aan de persoon die de reis maakt. Voor meer informatie over gebeurtenissen, lees de [ algemene gebeurtenisgids ](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/about-journey-building/general-events.html).
+Gebeurtenissen stellen u in staat om uw reizen tijdelijk te activeren en berichten in real-time te verzenden aan de persoon die de reis maakt. Voor meer informatie over gebeurtenissen, lees de [ algemene gebeurtenisgids ](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/about-journey-building/general-events.html?lang=nl-NL).
 
 * Gebeurtenis 4: online aankopen
    * Schema: digitale transacties van klanten
@@ -755,7 +755,7 @@ De belangrijkste logica van het reiscanvas vereist u om specifieke gebeurtenisse
 
 >[!ENDTABS]
 
-Voor meer informatie over het creëren van reizen in [!DNL Adobe Journey Optimizer], lees [ begonnen met reisgids ](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/journey.html).
+Voor meer informatie over het creëren van reizen in [!DNL Adobe Journey Optimizer], lees [ begonnen met reisgids ](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/journey.html?lang=nl-NL).
 
 ### Betaalde mediadeskundigen instellen in bestemmingen {#paid-media-ads}
 

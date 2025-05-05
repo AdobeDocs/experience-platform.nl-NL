@@ -24,8 +24,8 @@ Deze sectie van documentatie omvat:
 
 * Stapsgewijze instructies voor u om een documentatiepagina voor uw nieuwe bestemming tot stand te brengen;
 * Een sjabloon dat u moet invullen voor uw doel.
-* [ Algemene instructies bij het gebruiken van Markering ](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/markdown.html);
-* [ Specifieke instructies voor de aroma van de Vermindering van de Adobe ](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/markdown.html#custom-markdown-extensions) (de geur van de Vermindering van de Adobe is zeer gelijkaardig aan regelmatige Vermindering).
+* [ Algemene instructies bij het gebruiken van Markering ](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/markdown.html?lang=nl-NL);
+* [ Specifieke instructies voor de aroma van de Vermindering van de Adobe ](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/markdown.html?lang=nl-NL#custom-markdown-extensions) (de geur van de Vermindering van de Adobe is zeer gelijkaardig aan regelmatige Vermindering).
 * A [ best practices pagina ](./authoring-best-practices.md) om u te helpen een documentatiepagina voor uw bestemmingspagina ontwerpen, die aan de de documentatiekwaliteitsnormen van het Experience Platform voldoet.
 
 ## Vereisten {#prerequisites}
@@ -38,12 +38,12 @@ Om documentatie voor uw bestemming volgens de instructies in dit artikel tot sta
 
 ## Instructies op hoog niveau voor het maken van documentatie voor uw bestemming in Adobe Experience Platform {#high-level-instructions}
 
-Op een hoog niveau, om documentatie voor uw bestemming tot stand te brengen, moet u [ een vork ](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html#fork-the-repository) van de de documentatiebewaarplaats van Adobe Experience Platform tot stand brengen en het [ verstrekte documentatiemalplaatje ](./self-service-template.md) in een nieuwe tak uitgeven. Gebruik het Adobe-Verstrekte malplaatje om een nieuwe bestemmingspagina tot stand te brengen. Open een trekkingsverzoek (PR) wanneer u klaar bent. De instructies om dit te doen zijn verder hieronder, in [ Stappen om uw nieuwe bestemmingspagina ](./documentation-instructions.md#steps-to-create-docs-page) tot stand te brengen.
+Op een hoog niveau, om documentatie voor uw bestemming tot stand te brengen, moet u [ een vork ](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html?lang=nl-NL#fork-the-repository) van de de documentatiebewaarplaats van Adobe Experience Platform tot stand brengen en het [ verstrekte documentatiemalplaatje ](./self-service-template.md) in een nieuwe tak uitgeven. Gebruik het Adobe-Verstrekte malplaatje om een nieuwe bestemmingspagina tot stand te brengen. Open een trekkingsverzoek (PR) wanneer u klaar bent. De instructies om dit te doen zijn verder hieronder, in [ Stappen om uw nieuwe bestemmingspagina ](./documentation-instructions.md#steps-to-create-docs-page) tot stand te brengen.
 
 <!--
 
 * In the table of contents (TOC.md) `/help/rtcdp/TOC.md`, add a link to your new destination page. Place it within the category where your destination resides in the Adobe Experience Platform user interface (for example: mobile, social, advertising). 
-* In the overview page for the respective category, add a link to your new destination page. For example, for cloud storage destinations, you would add a link to [this page](https://docs.adobe.com/content/help/en/experience-platform/rtcdp/destinations/destinations-cat/cloud-storage/cloud-storage-destinations.html). 
+* In the overview page for the respective category, add a link to your new destination page. For example, for cloud storage destinations, you would add a link to [this page](https://docs.adobe.com/content/help/nl-NL/experience-platform/rtcdp/destinations/destinations-cat/cloud-storage/cloud-storage-destinations.html). 
 
 -->
 
@@ -64,4 +64,4 @@ U kunt de het Webinterface van GitHub of uw lokaal milieu gebruiken om documenta
 
 ## Best practices {#best-practices}
 
-Herzie [ auteursbeste praktijken ](/help/destinations/destination-sdk/docs-framework/authoring-best-practices.md) vóór en terwijl u de pagina van de bestemmingsdocumentatie creeert. Zorg ervoor om de [ het schrijven begeleiding voor de Documentatie van de Adobe ](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/general-writing-guidance.html) voor sommige meer het schrijven uiteinden ook te lezen die het de documentatieteam van de Adobe gebruikt wanneer het ontwerpen van documentatie.
+Herzie [ auteursbeste praktijken ](/help/destinations/destination-sdk/docs-framework/authoring-best-practices.md) vóór en terwijl u de pagina van de bestemmingsdocumentatie creeert. Zorg ervoor om de [ het schrijven begeleiding voor de Documentatie van de Adobe ](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/general-writing-guidance.html?lang=nl-NL) voor sommige meer het schrijven uiteinden ook te lezen die het de documentatieteam van de Adobe gebruikt wanneer het ontwerpen van documentatie.

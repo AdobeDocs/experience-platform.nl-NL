@@ -52,7 +52,7 @@ Bekijk deze video om te leren om instanties van een Hoofdlettergebruik Playbook 
 
 ## Beschikbaarheid {#availability}
 
-Sommige [!UICONTROL Use Case Playbooks] zijn toegesneden op Real-Time CDP-gebruiksgevallen, terwijl andere het meest geschikt zijn voor klanten die Journey Optimizer gebruiken. Blader in de catalogus naar de afspeelboeken die het meest geschikt zijn voor uw product en gebruik. Ontdek meer over Real-Time CDP en Journey Optimizer in de [ beschrijvingen van het product van de Adobe ](https://helpx.adobe.com/legal/product-descriptions.html).
+Sommige [!UICONTROL Use Case Playbooks] zijn toegesneden op Real-Time CDP-gebruiksgevallen, terwijl andere het meest geschikt zijn voor klanten die Journey Optimizer gebruiken. Blader in de catalogus naar de afspeelboeken die het meest geschikt zijn voor uw product en gebruik. Ontdek meer over Real-Time CDP en Journey Optimizer in de [ beschrijvingen van het product van de Adobe ](https://helpx.adobe.com/nl/legal/product-descriptions.html).
 
 ## UI-hulplijnen {#ui-guides}
 

@@ -100,7 +100,7 @@ De volgende video-uitbreidingsobjecten moeten worden opgenomen:
 
 >[!TIP]
 >
->Voor degenen die niet veelvoudige eVars of steunen voor elk video element zouden kunnen willen verstrekken, worden de waarden van het gegevenselement aaneengeschakeld als alternatieve methode. Daarna worden ze geparseerd in classificatierapporten met het gereedschap Classificatieregel Builder. Zie de [&#128279;](https://experienceleague.adobe.com/docs/analytics/components/classifications/classifications-rulebuilder/classification-rule-builder.html) documentatie van de Bouwer van de Regel van de Classificatie van 0&rbrace; &lbrace;voor meer informatie.  Tot slot worden zij in Analysis Workspace als een segment toegepast.
+>Voor degenen die niet veelvoudige eVars of steunen voor elk video element zouden kunnen willen verstrekken, worden de waarden van het gegevenselement aaneengeschakeld als alternatieve methode. Daarna worden ze geparseerd in classificatierapporten met het gereedschap Classificatieregel Builder. Zie de [&#128279;](https://experienceleague.adobe.com/docs/analytics/components/classifications/classifications-rulebuilder/classification-rule-builder.html?lang=nl-NL) documentatie van de Bouwer van de Regel van de Classificatie van 0&rbrace; &lbrace;voor meer informatie.  Tot slot worden zij in Analysis Workspace als een segment toegepast.
 >
 >Hiertoe maakt u een nieuw gegevenselement, bijvoorbeeld &quot;Video MetaData&quot;, en programmeert u dit om alle videogegevenselementen (hierboven vermeld) aan elkaar te koppelen.
 

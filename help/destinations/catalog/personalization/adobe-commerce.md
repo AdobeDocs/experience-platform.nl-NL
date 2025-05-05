@@ -22,12 +22,12 @@ Deze connector is beschikbaar in de catalogus met doelen voor klanten die Real-T
 Om deze bestemmingsverbinding te gebruiken, zorg ervoor dat u toegang hebt tot:
 
 - [ Adobe Experience Platform ](https://experience.adobe.com/)
-- [ Adobe Developer Console ](https://developer.adobe.com/developer-console/docs/guides/getting-started/). Met toegang tot de ontwikkelaarsconsole, kunt u de dienstrekening en credentieinformatie bekijken die nodig is om [ de configuratie ](https://experienceleague.adobe.com/docs/commerce-admin/customers/customers-menu/audience-activation.html#configure-the-extension) van de uitbreiding in Adobe Commerce te voltooien.
+- [ Adobe Developer Console ](https://developer.adobe.com/developer-console/docs/guides/getting-started/). Met toegang tot de ontwikkelaarsconsole, kunt u de dienstrekening en credentieinformatie bekijken die nodig is om [ de configuratie ](https://experienceleague.adobe.com/docs/commerce-admin/customers/customers-menu/audience-activation.html?lang=nl-NL#configure-the-extension) van de uitbreiding in Adobe Commerce te voltooien.
 - [ versie van de Wolk van de Handel van Adobe 2.4.4 of hoger ](https://business.adobe.com/products/magento/magento-commerce.html)
 
 In Experience Platform maakt u het volgende:
 
-- [ Schema ](../../../xdm/schema/composition.md). Het schema dat u maakt, vertegenwoordigt de gegevens die u vanuit Adobe Commerce wilt invoeren. [ leer meer ](https://experienceleague.adobe.com/docs/commerce-merchant-services/data-connection/fundamentals/update-xdm.html) over hoe te om een schema tot stand te brengen dat Commerce-Specifieke gebiedsgroepen bevat.
+- [ Schema ](../../../xdm/schema/composition.md). Het schema dat u maakt, vertegenwoordigt de gegevens die u vanuit Adobe Commerce wilt invoeren. [ leer meer ](https://experienceleague.adobe.com/docs/commerce-merchant-services/data-connection/fundamentals/update-xdm.html?lang=nl-NL) over hoe te om een schema tot stand te brengen dat Commerce-Specifieke gebiedsgroepen bevat.
 - [ Dataset ](../../../catalog/datasets/user-guide.md#create). Een dataset is een opslag en beheersconstructie voor een inzameling van gegevens. U creeert deze dataset van het schema dat u hierboven creeerde.
 - [ DataStream ](../../../datastreams/overview.md#create). ID waarmee gegevens kunnen worden verzonden van Adobe Experience Platform naar andere Adobe DX-producten. Deze id moet zijn gekoppeld aan een specifieke website in uw specifieke Adobe Commerce-exemplaar. Wanneer u deze gegevensstroom creeert, specificeer het XDM schema u hierboven creeerde.
 
@@ -71,7 +71,7 @@ Lees [ activeer profielen en publiek aan de bestemmingen van het profielverzoek 
 
 ## Volgende stappen in [!DNL Adobe Commerce]
 
-Nu u de [!DNL Commerce] -bestemming hebt geconfigureerd in Experience Platform, moet u de [!DNL Audience Activation] -extensie installeren in [!DNL Commerce] en de [!DNL Commerce Admin] configureren om het door u gemaakte Real-Time CDP-publiek te importeren. Zie de [[!DNL Commerce]  documentatie ](https://experienceleague.adobe.com/docs/commerce-admin/customers/customers-menu/audience-activation.html) om meer te leren.
+Nu u de [!DNL Commerce] -bestemming hebt geconfigureerd in Experience Platform, moet u de [!DNL Audience Activation] -extensie installeren in [!DNL Commerce] en de [!DNL Commerce Admin] configureren om het door u gemaakte Real-Time CDP-publiek te importeren. Zie de [[!DNL Commerce]  documentatie ](https://experienceleague.adobe.com/docs/commerce-admin/customers/customers-menu/audience-activation.html?lang=nl-NL) om meer te leren.
 
 ## Activering van publiek valideren in Commerce {#exported-data}
 

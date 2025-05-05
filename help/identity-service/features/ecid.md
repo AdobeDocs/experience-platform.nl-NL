@@ -31,8 +31,8 @@ Om uw onlinegebruikers te identificeren, moet u uw site of mobiele app van instr
 
 De volgende documentatie biedt meer informatie over ECID in verschillende Experience Platform- en Experience Cloud-toepassingen:
 
-* Om ECID met websiteimplementatie te gebruiken, zie de documentatie voor [ de Dienst van de Identiteit van Experience Cloud ](https://experienceleague.adobe.com/docs/id-service/using/home.html).
-* Om te zien hoe ECID met apps en mobiele webinhoud wordt gebruikt, zie de documentatie voor [ bezoeker die tussen app en mobiel Web ](https://experienceleague.adobe.com/docs/mobile-services/ios/sdk-reference-ios/hybrid-app.html#sdk-reference-ios) volgen.
+* Om ECID met websiteimplementatie te gebruiken, zie de documentatie voor [ de Dienst van de Identiteit van Experience Cloud ](https://experienceleague.adobe.com/docs/id-service/using/home.html?lang=nl-NL).
+* Om te zien hoe ECID met apps en mobiele webinhoud wordt gebruikt, zie de documentatie voor [ bezoeker die tussen app en mobiel Web ](https://experienceleague.adobe.com/docs/mobile-services/ios/sdk-reference-ios/hybrid-app.html?lang=nl-NL#sdk-reference-ios) volgen.
 * Het opstellen van deze hulpmiddelen kan eenvoudig en gemakkelijk zijn te beheren als u [ markeringen ](../../tags/home.md) gebruikt.
 * Zie de [ documentatie van Privacy Service ](../../privacy-service/identity-data.md) voor informatie bij het gebruiken van ECID om naleving van privacyverordeningen zoals GDPR te vergemakkelijken.
 * Voor meer informatie over ECID met de context van Experience Platform, zie het [ overzicht van de Dienst van de Identiteit ](../home.md) en het [ overzicht van identiteitsnaamruimten ](./namespaces.md).

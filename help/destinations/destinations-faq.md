@@ -199,7 +199,7 @@ Voor gedetailleerde verklaringen over identiteitskaart passende vereisten, zie [
 +++Antwoord
 Nr, [ SDK van het Web ](../web-sdk/home.md) wordt niet vereist om publiek aan [ Adobe Target ](catalog/personalization/adobe-target-connection.md) te activeren.
 
-Nochtans, als [[!DNL at.js] ](https://experienceleague.adobe.com/docs/target-dev/developer/client-side/at-js-implementation/overview.html) in plaats van Web SDK wordt gebruikt, slechts wordt de volgende-zittingsverpersoonlijking gesteund.
+Nochtans, als [[!DNL at.js] ](https://experienceleague.adobe.com/docs/target-dev/developer/client-side/at-js-implementation/overview.html?lang=nl-NL) in plaats van Web SDK wordt gebruikt, slechts wordt de volgende-zittingsverpersoonlijking gesteund.
 
 Voor [ zelfde-pagina en volgende-pagina verpersoonlijking ](ui/activate-edge-personalization-destinations.md) gebruiksgevallen, moet u of [ SDK van het Web ](../web-sdk/home.md) of [ Edge Network API ](https://developer.adobe.com/data-collection-apis/docs/api/) gebruiken. Zie de documentatie bij [ activerend publiek aan randbestemmingen ](ui/activate-edge-personalization-destinations.md) voor meer implementatiedetails.
 +++
@@ -229,7 +229,7 @@ De definities van het publiek worden verspreid aan [ Edge Network ](../web-sdk/h
 ### Waar zie ik de geactiveerde kenmerken in Adobe Target?
 
 +++Antwoord
-De attributen zullen beschikbaar in Doel in [ JSON ](https://experienceleague.adobe.com/docs/target/using/experiences/offers/create-json-offer.html) en [ HTML ](https://experienceleague.adobe.com/docs/target/using/experiences/offers/manage-content.html) aanbiedingen zijn te gebruiken.
+De attributen zullen beschikbaar in Doel in [ JSON ](https://experienceleague.adobe.com/docs/target/using/experiences/offers/create-json-offer.html?lang=nl-NL) en [ HTML ](https://experienceleague.adobe.com/docs/target/using/experiences/offers/manage-content.html?lang=nl-NL) aanbiedingen zijn te gebruiken.
 +++
 
 ### Kan ik een bestemming zonder een gegevensstroom tot stand brengen en dan een gegevensstroom aan de zelfde bestemming op een recentere punt toevoegen?

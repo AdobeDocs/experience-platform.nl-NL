@@ -92,7 +92,7 @@ De pagina van de Samenstelling van het Publiek verschijnt met de bouwstenen die 
 
 ## Samenstelling van Federated-doelgroep {#fac}
 
-Naast publiekssamenstellingen en segmentdefinities kunt u Adobe Federated Audience Composition gebruiken om nieuwe soorten publiek te maken van bedrijfsgegevenssets zonder onderliggende gegevens te kopiëren en die soorten publiek op te slaan in Adobe Experience Platform Audience Portal. U kunt bestaande soorten publiek in Adobe Experience Platform ook verrijken door samengestelde publieksgegevens te gebruiken die van het entrepot van ondernemingsgegevens zijn gefedereerd. Gelieve te lezen de gids op [ Federated de Samenstelling van het Publiek ](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/home).
+Naast publiekssamenstellingen en segmentdefinities kunt u Adobe Federated Audience Composition gebruiken om nieuwe soorten publiek te maken van bedrijfsgegevenssets zonder onderliggende gegevens te kopiëren en die soorten publiek op te slaan in Adobe Experience Platform Audience Portal. U kunt bestaande soorten publiek in Adobe Experience Platform ook verrijken door samengestelde publieksgegevens te gebruiken die van het entrepot van ondernemingsgegevens zijn gefedereerd. Gelieve te lezen de gids op [ Federated de Samenstelling van het Publiek ](https://experienceleague.adobe.com/nl/docs/federated-audience-composition/using/home).
 
 ![ een lijst van publiek dat in Federatieve Samenstelling van het Publiek voor uw organisatie wordt gecreeerd.](../images/ui/overview/federated-audience-composition.png)
 

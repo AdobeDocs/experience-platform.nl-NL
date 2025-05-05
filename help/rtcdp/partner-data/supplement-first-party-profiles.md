@@ -14,7 +14,7 @@ ht-degree: 3%
 
 >[!AVAILABILITY]
 >
->* Deze functionaliteit is beschikbaar voor klanten die een licentie hebben verkregen voor Real-Time CDP (App Service), Adobe Experience Platform Activation, Real-Time CDP, Real-Time CDP Premiere, Real-Time CDP Ultimate. Lees meer over deze pakketten in de [ productbeschrijvingen ](https://helpx.adobe.com/legal/product-descriptions.html) en contacteer uw vertegenwoordiger van de Adobe voor meer informatie.
+>* Deze functionaliteit is beschikbaar voor klanten die een licentie hebben verkregen voor Real-Time CDP (App Service), Adobe Experience Platform Activation, Real-Time CDP, Real-Time CDP Premiere, Real-Time CDP Ultimate. Lees meer over deze pakketten in de [ productbeschrijvingen ](https://helpx.adobe.com/nl/legal/product-descriptions.html) en contacteer uw vertegenwoordiger van de Adobe voor meer informatie.
 
 Voeg eerst-partijprofielen met attributen van vertrouwde op gegevenspartners toe om uw gegevensstichting te verbeteren en nieuwe inzichten in uw klantenbasis te verkrijgen en betere publieksoptimalisering te bereiken.
 
@@ -41,7 +41,7 @@ Aangezien u overweegt om uw eigen first-party profielen met attributen van gegev
 
 >[!WARNING]
 >
->De extra partner-verstrekte attributen die in Real-Time CDP worden opgenomen beïnvloeden uw *totaal gegevensvolume*. Lees de [ Beschrijving van het Product van Real-time Customer Data Platform ](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform.html) voor meer informatie over totaal gegevensvolume.
+>De extra partner-verstrekte attributen die in Real-Time CDP worden opgenomen beïnvloeden uw *totaal gegevensvolume*. Lees de [ Beschrijving van het Product van Real-time Customer Data Platform ](https://helpx.adobe.com/nl/legal/product-descriptions/real-time-customer-data-platform.html) voor meer informatie over totaal gegevensvolume.
 
 ## Video doorloopt {#video-walkthrough}
 

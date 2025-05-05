@@ -15,7 +15,7 @@ De Adobe Experience Platform Web SDK is een client-side JavaScript-bibliotheek w
 
 U kunt SDK van het Web op twee manieren uitvoeren:
 
-* De [ de markeringsuitbreiding van SDK van het Web ](../tags/extensions/client/web-sdk/web-sdk-extension-configuration.md). Zie het leerprogramma op hoe te [ Adobe Experience Cloud met het Web SDK ](https://experienceleague.adobe.com/docs/platform-learn/implement-web-sdk/overview.html) voor meer informatie uitvoeren.
+* De [ de markeringsuitbreiding van SDK van het Web ](../tags/extensions/client/web-sdk/web-sdk-extension-configuration.md). Zie het leerprogramma op hoe te [ Adobe Experience Cloud met het Web SDK ](https://experienceleague.adobe.com/docs/platform-learn/implement-web-sdk/overview.html?lang=nl-NL) voor meer informatie uitvoeren.
 * Handmatige implementatie die de [ bibliotheek van SDK van het Web JavaScript ](install/library.md) gebruikt.
 
 Deze handleiding bevat instructies voor het werken met Experience Cloud-oplossingen met zowel de Web SDK JavaScript-bibliotheek als de tagextensie.
@@ -81,7 +81,7 @@ Voordat u pagina&#39;s migreert met `AT.js` naar Web SDK, schakelt u de volgende
 >
 >De volgende doelfuncties worden niet ondersteund bij het migreren van `at.js` naar Web SDK:
 >
->* [ Redirect aanbiedingen ](https://experienceleague.adobe.com/docs/target/using/experiences/offers/offer-redirect.html)
->* [ CNAME en dwars-domeinsteun ](https://experienceleague.adobe.com/docs/target-dev/developer/client-side/at-js-implementation/atjs-cookies.html)
+>* [ Redirect aanbiedingen ](https://experienceleague.adobe.com/docs/target/using/experiences/offers/offer-redirect.html?lang=nl-NL)
+>* [ CNAME en dwars-domeinsteun ](https://experienceleague.adobe.com/docs/target-dev/developer/client-side/at-js-implementation/atjs-cookies.html?lang=nl-NL)
 
 Nadat u van `AT.js` naar de Web SDK hebt gemigreerd, verwijdert u de optie `targetMigrationEnabled` uit de configuratie.

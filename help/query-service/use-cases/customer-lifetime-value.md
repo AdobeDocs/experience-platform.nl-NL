@@ -81,7 +81,7 @@ De volgende stap is een segmentdefinitie te bouwen en publiek van uw gegevens va
 * Schakel alle segmentdefinities in voor geplande segmentatie.
 * Hiermee kunt u opgegeven segmentdefinities voor streaming segmentatie inschakelen.
 
-Alternatief, is er ook de videoleerprogramma&#39;s van de a [ segmentbouwer ](https://experienceleague.adobe.com/docs/platform-learn/tutorials/audiences/create-segments.html) beschikbaar voor meer informatie.
+Alternatief, is er ook de videoleerprogramma&#39;s van de a [ segmentbouwer ](https://experienceleague.adobe.com/docs/platform-learn/tutorials/audiences/create-segments.html?lang=nl-NL) beschikbaar voor meer informatie.
 
 ## Uw publiek activeren voor een e-mailcampagne {#activate-audience-for-campaign}
 

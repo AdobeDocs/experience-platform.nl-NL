@@ -85,7 +85,7 @@ Geef het trackerobject op dat globaal moet worden gebruikt.
 
 #### Editor openen
 
-Laat u kern [ AppMeasurement.js ](https://experienceleague.adobe.com/docs/analytics/implementation/js/overview.html) code opnemen. Deze code wordt automatisch gevuld wanneer het gebruiken van de automatische configuratiemethode.
+Laat u kern [ AppMeasurement.js ](https://experienceleague.adobe.com/docs/analytics/implementation/js/overview.html?lang=nl-NL) code opnemen. Deze code wordt automatisch gevuld wanneer het gebruiken van de automatische configuratiemethode.
 
 >[!NOTE]
 >
@@ -135,13 +135,13 @@ _satellite.cookie.set("sat_track", "true");
 Hiermee bepaalt u hoe de afbeeldingsaanvraag wordt gecodeerd. Als in uw implementatie of site niet-ASCII-tekens worden gebruikt, is het belangrijk dat u hier een tekenset definieert. U kunt een vooraf ingestelde tekenset selecteren of een aangepaste tekenset opgeven. Adobe raadt u aan dezelfde tekencodering als uw site te gebruiken. Deze waarde is doorgaans UTF-8.
 
 Tekenset kan in aangepaste code Analytics worden ingesteld met de variabele `s.charSet` .
-Voor meer informatie over karakterreeksen, zie de [ charSet documentatie ](https://experienceleague.adobe.com/docs/analytics/implementation/vars/config-vars/charset.html).
+Voor meer informatie over karakterreeksen, zie de [ charSet documentatie ](https://experienceleague.adobe.com/docs/analytics/implementation/vars/config-vars/charset.html?lang=nl-NL).
 
 ### Valuta
 
 Bepaalt de omrekeningskoers die moet worden toegepast op inkomsten- en valutagebeurtenissen. Als bezoekers op uw site in meerdere valuta&#39;s kunnen kopen, kunt u door de valutacode in te stellen ervoor zorgen dat het geldbedrag correct wordt omgezet en opgeslagen.
 
-Voor meer informatie over de gesteunde muntcodes, zie [ currencyCode ](https://experienceleague.adobe.com/docs/analytics/implementation/vars/config-vars/currencycode.html).
+Voor meer informatie over de gesteunde muntcodes, zie [ currencyCode ](https://experienceleague.adobe.com/docs/analytics/implementation/vars/config-vars/currencycode.html?lang=nl-NL).
 
 ### Trackingserver
 
@@ -149,7 +149,7 @@ Gebruikt voor de implementaties van het eerste-partijkoekje om te dicteren waar 
 
 Trackingserver kan in aangepaste code voor Analytics worden ingesteld met de variabele `s.trackingServer` .
 
-Zie [ trackingServer ](https://experienceleague.adobe.com/docs/analytics/implementation/vars/config-vars/trackingserver.html) in de gids van de Implementatie van Adobe Analytics.
+Zie [ trackingServer ](https://experienceleague.adobe.com/docs/analytics/implementation/vars/config-vars/trackingserver.html?lang=nl-NL) in de gids van de Implementatie van Adobe Analytics.
 
 ### SSL-tracking-server
 
@@ -157,11 +157,11 @@ Wordt gebruikt voor SSL-first-party-cookimimplementaties om te bepalen waar het 
 
 SSL Tracking Server kan worden ingesteld in aangepaste code Analytics met behulp van de variabele `s.trackingServerSecure` .
 
-Zie [ trackingServerSecure ](https://experienceleague.adobe.com/docs/analytics/implementation/vars/config-vars/trackingserversecure.html).
+Zie [ trackingServerSecure ](https://experienceleague.adobe.com/docs/analytics/implementation/vars/config-vars/trackingserversecure.html?lang=nl-NL).
 
 ## Algemene variabelen
 
-Gebruik deze sectie aan opstelling [ eVars en Props ](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/evar.html), en om hiërarchieën tot stand te brengen.
+Gebruik deze sectie aan opstelling [ eVars en Props ](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/evar.html?lang=nl-NL), en om hiërarchieën tot stand te brengen.
 
 Globale variabelen zijn variabelen die in het object Analytics tracking worden ingesteld wanneer dat object op de pagina wordt geïnitialiseerd. Alle variabelen die u hier instelt, worden ingesteld wanneer het volgende object op elke pagina wordt gemaakt. Als deze variabelen eenmaal zijn ingesteld, zijn ze net als alle andere variabelen die op een andere manier zijn ingesteld. Specifiek, betekent dit dat een regel deze variabelen kan wijzigen, veranderen of ontruimen.
 
@@ -173,25 +173,25 @@ Selecteer een optie in de sectie Koppeling bijhouden van de configuratiepagina. 
 
 ### ClickMapen inschakelen
 
-[ ClickMap ](https://experienceleague.adobe.com/docs/analytics/analyze/activity-map/activity-map.html) is een elektrisch toestel voor Internet Explorer en Firefox, en een module van Rapporten &amp; Analytics.
+[ ClickMap ](https://experienceleague.adobe.com/docs/analytics/analyze/activity-map/activity-map.html?lang=nl-NL) is een elektrisch toestel voor Internet Explorer en Firefox, en een module van Rapporten &amp; Analytics.
 
 ### Download-koppelingen volgen
 
 Koppelingen naar downloadbare bestanden op uw site bijhouden.
 
-Zie [ s.trackDownLoadLinks ](https://experienceleague.adobe.com/docs/analytics/implementation/vars/config-vars/trackdownloadlinks.html).
+Zie [ s.trackDownLoadLinks ](https://experienceleague.adobe.com/docs/analytics/implementation/vars/config-vars/trackdownloadlinks.html?lang=nl-NL).
 
 ### Extensies downloaden
 
 Als de optie Koppelingen voor downloaden bijhouden is ingeschakeld, kunt u de extensies selecteren van de bestandskoppelingen die worden opgenomen in het rapport Downloads. Als uw site koppelingen bevat naar bestanden met een van de vermelde extensies, worden de URL&#39;s van deze koppelingen weergegeven in de rapportage.
 
-Zie [ s.linkDownloadFileTypes ](https://experienceleague.adobe.com/docs/analytics/implementation/vars/config-vars/linkdownloadfiletypes.html).
+Zie [ s.linkDownloadFileTypes ](https://experienceleague.adobe.com/docs/analytics/implementation/vars/config-vars/linkdownloadfiletypes.html?lang=nl-NL).
 
 ### Uitgaande koppelingen bijhouden
 
 Hiermee wordt bepaald of een geselecteerde koppeling een afsluitkoppeling is.
 
-Zie [ s.trackExternalLinks ](https://experienceleague.adobe.com/docs/analytics/implementation/vars/config-vars/trackexternallinks.html).
+Zie [ s.trackExternalLinks ](https://experienceleague.adobe.com/docs/analytics/implementation/vars/config-vars/trackexternallinks.html?lang=nl-NL).
 
 **Enige-Pagina App Overwegingen:** wegens de manier sommige SPA websites worden gecodeerd, zou een interne verbinding aan een pagina op de SPA plaats kunnen kijken als het een uitgaande verbinding is.
 
@@ -212,7 +212,7 @@ De pagina &quot;about&quot; is de enige uitgaande koppeling die wordt bijgehoude
 
 Zoektekenreeksen blijven behouden.
 
-Zie [ s.linkLeaveQueryString ](https://experienceleague.adobe.com/docs/analytics/implementation/vars/config-vars/linkleavequerystring.html).
+Zie [ s.linkLeaveQueryString ](https://experienceleague.adobe.com/docs/analytics/implementation/vars/config-vars/linkleavequerystring.html?lang=nl-NL).
 
 ## Cookies
 
@@ -222,37 +222,37 @@ Configureer veldbeschrijvingen voor de algemene instellingen voor cookies die wo
 
 Unieke waarde die een klant in zowel de online als off-line systemen vertegenwoordigt.
 
-Zie [ bezoekorID ](https://experienceleague.adobe.com/docs/analytics/implementation/vars/config-vars/visitorid.html).
+Zie [ bezoekorID ](https://experienceleague.adobe.com/docs/analytics/implementation/vars/config-vars/visitorid.html?lang=nl-NL).
 
 ### Naamruimte van bezoeker
 
 Variabele waarmee het domein wordt geïdentificeerd waarmee cookies worden ingesteld.
 
-Zie [ bezoekorNamespace ](https://experienceleague.adobe.com/docs/analytics/implementation/vars/config-vars/visitornamespace.html).
+Zie [ bezoekorNamespace ](https://experienceleague.adobe.com/docs/analytics/implementation/vars/config-vars/visitornamespace.html?lang=nl-NL).
 
 ### Domeinperioden
 
 Het domein waarop het Analytics-cookie `s_cc` en `s_sq` worden ingesteld door het aantal punten in het domein van de pagina-URL te bepalen. Deze variabele wordt ook gebruikt door bepaalde plug-ins voor het bepalen van het juiste domein voor het instellen van het cookie van de plug-in.
 
-Zie [ s.cookieDomainPeriods ](https://experienceleague.adobe.com/docs/analytics/implementation/vars/config-vars/cookiedomainperiods.html).
+Zie [ s.cookieDomainPeriods ](https://experienceleague.adobe.com/docs/analytics/implementation/vars/config-vars/cookiedomainperiods.html?lang=nl-NL).
 
 ### Domeinperioden van de eerste partij
 
 De variabele `fpCookieDomainPeriods` is voor cookies die zijn ingesteld door JavaScript (`s_sq` , `s_cc` , plug-ins) en die inherent eerstehands cookies zijn, zelfs als in uw implementatie de domeinen van derden 2o7.net of omtrdc.net worden gebruikt.
 
-Zie [ s.fpCookieDomainPeriods ](https://experienceleague.adobe.com/docs/analytics/implementation/vars/config-vars/fpcookiedomainperiods.html).
+Zie [ s.fpCookieDomainPeriods ](https://experienceleague.adobe.com/docs/analytics/implementation/vars/config-vars/fpcookiedomainperiods.html?lang=nl-NL).
 
 ### Cookie Lifetime
 
 Bepaalt de levensduur van een cookie.
 
-Zie [ s.cookieLifetime ](https://experienceleague.adobe.com/docs/analytics/implementation/vars/config-vars/cookielifetime.html).
+Zie [ s.cookieLifetime ](https://experienceleague.adobe.com/docs/analytics/implementation/vars/config-vars/cookielifetime.html?lang=nl-NL).
 
 ### Beveiligde cookies
 
 Met deze variabele kan AppMeasurement beveiligde cookies schrijven.
 
-Zie [ writeSecureCookies ](https://experienceleague.adobe.com/docs/analytics/implementation/vars/config-vars/writesecurecookies.html)
+Zie [ writeSecureCookies ](https://experienceleague.adobe.com/docs/analytics/implementation/vars/config-vars/writesecurecookies.html?lang=nl-NL)
 
 
 ## Paginacode aanpassen
@@ -275,7 +275,7 @@ U kunt geavanceerde montages vormen door **te selecteren tonen geavanceerde mont
 
 ![](../../../images/an-ext-aam-adv.png)
 
-Voor informatie over elke het plaatsen, selecteer het infopictogram, of verwijs naar de [ documentatie van Adobe Audience Manager ](https://experienceleague.adobe.com/docs/audience-manager/user-guide/aam-home.html).
+Voor informatie over elke het plaatsen, selecteer het infopictogram, of verwijs naar de [ documentatie van Adobe Audience Manager ](https://experienceleague.adobe.com/docs/audience-manager/user-guide/aam-home.html?lang=nl-NL).
 
 ## Typen handelingen voor extensies voor Analytics
 
@@ -305,7 +305,7 @@ In deze weergave kunt u verschillende variabelen opgeven, zoals `eVars` , `Props
 
 #### eVars
 
-Plaats één of meerdere [ Vars ](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/evar.html).
+Plaats één of meerdere [ Vars ](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/evar.html?lang=nl-NL).
 
 1. Selecteer een eVar in de vervolgkeuzelijst.
 1. Geef op of u de eVar wilt instellen als de waarde (Instellen als) of een andere eVar wilt kopiëren (Dupliceren van).
@@ -315,7 +315,7 @@ Plaats één of meerdere [ Vars ](https://experienceleague.adobe.com/docs/analyt
 
 #### Props
 
-Plaats één of meerdere [ eigenschappen ](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/prop.html).
+Plaats één of meerdere [ eigenschappen ](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/prop.html?lang=nl-NL).
 
 1. Selecteer een eigenschap in het vervolgkeuzemenu.
 1. Geef op of u de eigenschap wilt instellen als de waarde (Instellen als) of een andere eVar wilt kopiëren (Dupliceren van).
@@ -325,10 +325,10 @@ Plaats één of meerdere [ eigenschappen ](https://experienceleague.adobe.com/do
 
 #### Gebeurtenissen
 
-Plaats één of meerdere [ gebeurtenissen ](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/events/events-overview.html).
+Plaats één of meerdere [ gebeurtenissen ](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/events/events-overview.html?lang=nl-NL).
 
 1. Selecteer een gebeurtenis in de vervolgkeuzelijst.
-1. (Facultatief) selecteer of specificeer een gegevenselement dat voor [ wordt gebruikt gebeurtenisrangschikking ](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/events/event-serialization.html).
+1. (Facultatief) selecteer of specificeer een gegevenselement dat voor [ wordt gebruikt gebeurtenisrangschikking ](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/events/event-serialization.html?lang=nl-NL).
 1. (Optioneel) Selecteer **[!UICONTROL Add event]** om meer gebeurtenissen in te stellen.
 1. Selecteer **[!UICONTROL Keep Changes]**.
 
@@ -353,7 +353,7 @@ Er bestaan echter wel enkele beperkingen:
 
 #### Hiërarchie
 
-Plaats de [ Hiërarchie van de Analyse ](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/hier.html) variabele.
+Plaats de [ Hiërarchie van de Analyse ](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/hier.html?lang=nl-NL) variabele.
 
 Geef elk niveau in de hiërarchie op.
 
@@ -361,7 +361,7 @@ Configureer desgewenst extra hiërarchieën.
 
 #### Paginanaam
 
-Deze waarde verwijst naar de naam van een bepaalde pagina en komt overeen met de [`pageName` variabele ](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/pagename.html) in Analytics.
+Deze waarde verwijst naar de naam van een bepaalde pagina en komt overeen met de [`pageName` variabele ](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/pagename.html?lang=nl-NL) in Analytics.
 
 >[!IMPORTANT]
 >

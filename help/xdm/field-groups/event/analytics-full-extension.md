@@ -37,17 +37,17 @@ De veldgroep biedt één `_experience` -object aan een schema, dat zelf één `a
 
 ## `customDimensions` {#custom-dimensions}
 
-`customDimensions` vangt de afmetingen van de douane [&#128279;](https://experienceleague.adobe.com/docs/analytics/components/dimensions/overview.html) die door Analytics worden gevolgd.
+`customDimensions` vangt de afmetingen van de douane [&#128279;](https://experienceleague.adobe.com/docs/analytics/components/dimensions/overview.html?lang=nl-NL) die door Analytics worden gevolgd.
 
 ![ customDimensions gebied ](../../images/field-groups/analytics-full-extension/customDimensions.png)
 
 | Eigenschap | Gegevenstype | Beschrijving |
 | --- | --- | --- |
-| `eVars` | Object | Een voorwerp dat tot 250 omzettingsvariabelen ([ eVars ](https://experienceleague.adobe.com/docs/analytics/components/dimensions/evar.html)) vangt. De eigenschappen van dit object worden `eVar1` naar `eVar250` gekopieerd en accepteren alleen tekenreeksen voor hun gegevenstype. |
-| `hierarchies` | Object | Een voorwerp dat tot vijf variabelen van de douanehiërarchie ([ heiers ](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/hier.html)) vangt. De eigenschappen van dit object worden `hier1` naar `hier5` geschaald. Dit zijn zelf objecten met de volgende subeigenschappen:<ul><li>`delimiter`: het oorspronkelijke scheidingsteken dat wordt gebruikt om de lijst te genereren die wordt geleverd onder `values` .</li><li>`values`: Een gescheiden lijst met namen op hiërarchisch niveau, weergegeven als een tekenreeks.</li></ul> |
-| `listProps` | Object | Een voorwerp dat tot 75 [ lijststeunen ](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/prop.html#list-props) vangt. De eigenschappen van dit object worden `prop1` naar `prop75` geschaald. Dit zijn zelf objecten met de volgende subeigenschappen:<ul><li>`delimiter`: het oorspronkelijke scheidingsteken dat wordt gebruikt om de lijst te genereren die wordt geleverd onder `values` .</li><li>`values`: Een lijst met gescheiden waarden voor de eigenschap, weergegeven als een tekenreeks.</li></ul> |
-| `lists` | Object | Een voorwerp dat tot drie [ lijsten ](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/list.html) vangt. De eigenschappen van dit object worden vastgezet `list1` naar `list3` . Elk van deze eigenschappen bevat één `list` -array van [[!UICONTROL Key Value Pair]](../../data-types/key-value-pair.md) -gegevenstypen. |
-| `props` | Object | Een voorwerp dat tot 75 [ steunen ](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/prop.html) vangt. De eigenschappen van dit object worden `prop1` naar `prop75` gekopieerd en accepteren alleen tekenreeksen voor hun gegevenstype. |
+| `eVars` | Object | Een voorwerp dat tot 250 omzettingsvariabelen ([ eVars ](https://experienceleague.adobe.com/docs/analytics/components/dimensions/evar.html?lang=nl-NL)) vangt. De eigenschappen van dit object worden `eVar1` naar `eVar250` gekopieerd en accepteren alleen tekenreeksen voor hun gegevenstype. |
+| `hierarchies` | Object | Een voorwerp dat tot vijf variabelen van de douanehiërarchie ([ heiers ](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/hier.html?lang=nl-NL)) vangt. De eigenschappen van dit object worden `hier1` naar `hier5` geschaald. Dit zijn zelf objecten met de volgende subeigenschappen:<ul><li>`delimiter`: het oorspronkelijke scheidingsteken dat wordt gebruikt om de lijst te genereren die wordt geleverd onder `values` .</li><li>`values`: Een gescheiden lijst met namen op hiërarchisch niveau, weergegeven als een tekenreeks.</li></ul> |
+| `listProps` | Object | Een voorwerp dat tot 75 [ lijststeunen ](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/prop.html?lang=nl-NL#list-props) vangt. De eigenschappen van dit object worden `prop1` naar `prop75` geschaald. Dit zijn zelf objecten met de volgende subeigenschappen:<ul><li>`delimiter`: het oorspronkelijke scheidingsteken dat wordt gebruikt om de lijst te genereren die wordt geleverd onder `values` .</li><li>`values`: Een lijst met gescheiden waarden voor de eigenschap, weergegeven als een tekenreeks.</li></ul> |
+| `lists` | Object | Een voorwerp dat tot drie [ lijsten ](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/list.html?lang=nl-NL) vangt. De eigenschappen van dit object worden vastgezet `list1` naar `list3` . Elk van deze eigenschappen bevat één `list` -array van [[!UICONTROL Key Value Pair]](../../data-types/key-value-pair.md) -gegevenstypen. |
+| `props` | Object | Een voorwerp dat tot 75 [ steunen ](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/prop.html?lang=nl-NL) vangt. De eigenschappen van dit object worden `prop1` naar `prop75` gekopieerd en accepteren alleen tekenreeksen voor hun gegevenstype. |
 | `postalCode` | String | Een door de klant opgegeven postcode. |
 | `stateProvince` | String | Een door de klant opgegeven staat of provincie. |
 
@@ -72,12 +72,12 @@ De veldgroep biedt één `_experience` -object aan een schema, dat zelf één `a
 
 | Eigenschap | Gegevenstype | Beschrijving |
 | --- | --- | --- |
-| `browserIDStr` | String | Het herkenningsteken van Adobe Analytics voor gebruikte browser (anders gekend als [ browser type afmeting ](https://experienceleague.adobe.com/docs/analytics/components/dimensions/browser-type.html)). |
-| `operatingSystemIDStr` | String | Het herkenningsteken van Adobe Analytics voor het gebruikte werkende systeem (anders gekend als [ werkend systeemtype dimensie ](https://experienceleague.adobe.com/docs/analytics/components/dimensions/operating-system-types.html)). |
+| `browserIDStr` | String | Het herkenningsteken van Adobe Analytics voor gebruikte browser (anders gekend als [ browser type afmeting ](https://experienceleague.adobe.com/docs/analytics/components/dimensions/browser-type.html?lang=nl-NL)). |
+| `operatingSystemIDStr` | String | Het herkenningsteken van Adobe Analytics voor het gebruikte werkende systeem (anders gekend als [ werkend systeemtype dimensie ](https://experienceleague.adobe.com/docs/analytics/components/dimensions/operating-system-types.html?lang=nl-NL)). |
 
 ## Aangepaste gebeurtenisvelden {#events}
 
-De de uitbreidingsgebiedgroep van de Analyse verstrekt tien objecten gebieden die tot 100 [ metriek van de douanegebeurtenis ](https://experienceleague.adobe.com/docs/analytics/components/metrics/custom-events.html) elk vangen, voor een totaal van 1000 voor de gebiedsgroep.
+De de uitbreidingsgebiedgroep van de Analyse verstrekt tien objecten gebieden die tot 100 [ metriek van de douanegebeurtenis ](https://experienceleague.adobe.com/docs/analytics/components/metrics/custom-events.html?lang=nl-NL) elk vangen, voor een totaal van 1000 voor de gebiedsgroep.
 
 Elk gebeurtenisobject op hoofdniveau bevat de afzonderlijke gebeurtenisobjecten voor het desbetreffende bereik. `event101to200` bevat bijvoorbeeld de gebeurtenissen die van `event101` tot `event200` zijn uitgevoerd.
 

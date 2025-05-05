@@ -12,11 +12,11 @@ ht-degree: 0%
 
 # [!DNL Adobe Journey Optimizer] gebruiken met de [!DNL Experience Platform Web SDK]
 
-[!DNL Adobe Experience Platform] [!DNL Web SDK] kan persoonlijke ervaringen die in [!DNL Adobe Journey Optimizer] worden beheerd, leveren en renderen naar het webkanaal. U kunt een redacteur van WYSIWYG, [!DNL Adobe Journey Optimizer] [ Kanaal van het Web ](https://experienceleague.adobe.com/docs/journey-optimizer/using/web/create-web.html), of een niet-visuele interface, het [ op code-Gebaseerde Kanaal van de Ervaring ](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/code-based-experience/get-started-code-based) gebruiken om, uw [!DNL Journey Optimizer Web] campagnes en verpersoonlijkingservaringen tot stand te brengen te activeren en te leveren.
+[!DNL Adobe Experience Platform] [!DNL Web SDK] kan persoonlijke ervaringen die in [!DNL Adobe Journey Optimizer] worden beheerd, leveren en renderen naar het webkanaal. U kunt een redacteur van WYSIWYG, [!DNL Adobe Journey Optimizer] [ Kanaal van het Web ](https://experienceleague.adobe.com/docs/journey-optimizer/using/web/create-web.html?lang=nl-NL), of een niet-visuele interface, het [ op code-Gebaseerde Kanaal van de Ervaring ](https://experienceleague.adobe.com/nl/docs/journey-optimizer/using/code-based-experience/get-started-code-based) gebruiken om, uw [!DNL Journey Optimizer Web] campagnes en verpersoonlijkingservaringen tot stand te brengen te activeren en te leveren.
 
 >[!IMPORTANT]
 >
->Lees de [ documentatie van het Kanaal van het Web van Adobe Journey Optimizer ](https://experienceleague.adobe.com/docs/journey-optimizer/using/web/get-started-web.html) voor informatie bij het worden begonnen met [!DNL Journey Optimizer Web] ervaring creatie en rapportering.
+>Lees de [ documentatie van het Kanaal van het Web van Adobe Journey Optimizer ](https://experienceleague.adobe.com/docs/journey-optimizer/using/web/get-started-web.html?lang=nl-NL) voor informatie bij het worden begonnen met [!DNL Journey Optimizer Web] ervaring creatie en rapportering.
 
 ## Terminologie {#terminology}
 
@@ -28,7 +28,7 @@ ht-degree: 0%
 
 Voer de onderstaande stappen uit om [!DNL Adobe Journey Optimizer] te gaan gebruiken.
 
-1. Ga door de [ eerste vereisten ](https://experienceleague.adobe.com/docs/journey-optimizer/using/web/create-web.html#prerequesites) van de [!DNL Adobe Journey Optimizer] [ Gids van de Ervaringen van het Web ](https://experienceleague.adobe.com/docs/journey-optimizer/using/web/create-web.html), specifiek:
+1. Ga door de [ eerste vereisten ](https://experienceleague.adobe.com/docs/journey-optimizer/using/web/create-web.html?lang=nl-NL#prerequesites) van de [!DNL Adobe Journey Optimizer] [ Gids van de Ervaringen van het Web ](https://experienceleague.adobe.com/docs/journey-optimizer/using/web/create-web.html?lang=nl-NL), specifiek:
    * Instellen [!DNL Adobe Experience Cloud Visual Editing Helper] .
    * Laat [!DNL Adobe Journey Optimizer] in uw [ datastream ](../../../datastreams/overview.md) toe.
    * Schakel de optie [!UICONTROL Active-On-Edge Merge Policy] in.
@@ -84,7 +84,7 @@ Voer de onderstaande stappen uit om [!DNL Adobe Journey Optimizer] te gaan gebru
 
 ## Adobe Journey Optimizer Web-ervaringen maken {#create-ajo-web-experiences}
 
-Volg de [&#128279;](https://experienceleague.adobe.com/docs/journey-optimizer/using/web/create-web.html#create-web-campaign) instructies van de [!DNL Adobe Journey Optimizer] [ Gids van de Ervaringen van het Web ](https://experienceleague.adobe.com/docs/journey-optimizer/using/web/create-web.html)  campagne authoring &lbrace;om [!DNL Journey Optimizer Web] campagnes en ervaringen tot stand te brengen.
+Volg de [&#128279;](https://experienceleague.adobe.com/docs/journey-optimizer/using/web/create-web.html?lang=nl-NL#create-web-campaign) instructies van de [!DNL Adobe Journey Optimizer] [ Gids van de Ervaringen van het Web ](https://experienceleague.adobe.com/docs/journey-optimizer/using/web/create-web.html?lang=nl-NL)  campagne authoring &lbrace;om [!DNL Journey Optimizer Web] campagnes en ervaringen tot stand te brengen.
 
 ## Aangepaste inhoud renderen {#rendering-personalized-content}
 

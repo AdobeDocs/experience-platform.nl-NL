@@ -98,7 +98,7 @@ Als u uw schema voor [!DNL RainFocus] gegevens wilt maken, leest u de volgende d
 >[!IMPORTANT]
 >
 >* Het schema moet de **klasse uitbreiden XDM ExperienceEvent.**
->* U moet ervoor zorgen dat het schema a **primaire identiteit** omvat, en **toegelaten voor Profiel** is. Voor meer informatie, lees de gids op [ bepalende identiteitsgebieden in UI ](https://experienceleague.adobe.com/docs/experience-platform/xdm/ui/fields/identity.html)
+>* U moet ervoor zorgen dat het schema a **primaire identiteit** omvat, en **toegelaten voor Profiel** is. Voor meer informatie, lees de gids op [ bepalende identiteitsgebieden in UI ](https://experienceleague.adobe.com/docs/experience-platform/xdm/ui/fields/identity.html?lang=nl-NL)
 >* U kunt de voorbeeldidentiteit (e-mail) vervangen voor een andere relevante id, zoals een sha256-e-mail of ECID.
 
 ### Een integratieprofiel maken in RainFocus {#create-an-integration-profile-in-rainfocus}
@@ -122,7 +122,7 @@ Geef vervolgens de gegevens op die u hebt opgehaald in het Adobe Developer Porta
 
 Nadat de referenties zijn opgegeven, selecteert u **[!DNL Save]** . U ziet nu de nieuwe [!DNL Integration Profile] in het dashboard van [!DNL RainFocus] .
 
-Selecteer [!DNL Integration Profile] dat u enkel creeerde om een lijst van vooraf bepaalde **duw types** te zien reeds gevormd. Dit zijn de [ Gebeurtenissen van de Ervaring ](https://experienceleague.adobe.com/docs/experience-platform/xdm/classes/experienceevent.html) die naar Experience Platform zullen worden verzonden wanneer zij voorkomen.
+Selecteer [!DNL Integration Profile] dat u enkel creeerde om een lijst van vooraf bepaalde **duw types** te zien reeds gevormd. Dit zijn de [ Gebeurtenissen van de Ervaring ](https://experienceleague.adobe.com/docs/experience-platform/xdm/classes/experienceevent.html?lang=nl-NL) die naar Experience Platform zullen worden verzonden wanneer zij voorkomen.
 
 ![ een lijst van vooraf bepaalde duptypes in het dashboard RainFocus.](/help/sources/images/tutorials/create/rainfocus/rainfocus_integration-profile-setup.png)
 

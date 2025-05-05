@@ -47,7 +47,7 @@ Voordat u Adform integreert met Adobe, moet u controleren of aan de volgende voo
 2. **CDP of SKU van de Verbinding**: U moet of het Platform van Gegevens van de Klant van Adobe (CDP) Prime of SKU van Ultimate, of het SKU van de Verbinding hebben, om naadloze cliënt-kant en server-zijmededeling toe te laten.
 
 3. **de configuratie van Edge Network van Adobe Experience Platform**:
-   * Zorg ervoor dat de Edge Network is geconfigureerd voor ondersteuning van realtime-gebeurtenisverzending voor offsite herbestemming. Zie Adobe [ Gebeurtenis door:sturen Begonnen gids ](https://experienceleague.adobe.com/en/docs/experience-platform/tags/event-forwarding/getting-started) voor meer informatie.
+   * Zorg ervoor dat de Edge Network is geconfigureerd voor ondersteuning van realtime-gebeurtenisverzending voor offsite herbestemming. Zie Adobe [ Gebeurtenis door:sturen Begonnen gids ](https://experienceleague.adobe.com/nl/docs/experience-platform/tags/event-forwarding/getting-started) voor meer informatie.
    * Deze stap is essentieel voor het efficiënt overbrengen van gegevens naar server-zijeindpunt van Adform.
 
 Wanneer deze voorwaarden zijn ingesteld, kunt u de extensie [!DNL Adform] blijven configureren en implementeren.

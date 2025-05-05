@@ -100,7 +100,7 @@ _satellite.getVisitorId() => Object
 var visitorIdInstance = _satellite.getVisitorId();
 ```
 
-Als de extensie [!DNL Adobe Experience Cloud ID] op de eigenschap is geïnstalleerd, retourneert deze methode de instantie van de bezoeker-id. Zie de [ documentatie van de Dienst van identiteitskaart van het Experience Cloud ](https://experienceleague.adobe.com/docs/id-service/using/home.html) voor meer informatie.
+Als de extensie [!DNL Adobe Experience Cloud ID] op de eigenschap is geïnstalleerd, retourneert deze methode de instantie van de bezoeker-id. Zie de [ documentatie van de Dienst van identiteitskaart van het Experience Cloud ](https://experienceleague.adobe.com/docs/id-service/using/home.html?lang=nl-NL) voor meer informatie.
 
 ## `logger`
 

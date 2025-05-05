@@ -21,6 +21,6 @@ Bij het testen van de consistentie van tags wordt gezocht naar inconsistenties o
 
 | Testen | Dikte | Criteria | Aanbeveling |
 | --- | --- | --- | --- |
-| Adobe Analytics - Consistente codeversie | 5 | Er zijn meerdere versies van de Analytics-code gevonden. | Vervang alle instanties van Analytics door de huidige versie.<br><br>[ Aanvullende informatie ](https://experienceleague.adobe.com/docs/analytics/implementation/home.html) |
+| Adobe Analytics - Consistente codeversie | 5 | Er zijn meerdere versies van de Analytics-code gevonden. | Vervang alle instanties van Analytics door de huidige versie.<br><br>[ Aanvullende informatie ](https://experienceleague.adobe.com/docs/analytics/implementation/home.html?lang=nl-NL) |
 
 {style="table-layout:auto"}

@@ -19,7 +19,7 @@ De uitbreiding van Adobe Experience Platform Debugger voor [ Chrome ](https://ch
 
 U kunt Experience Platform Debugger gebruiken met de andere Adobe activeringsoplossingen om het volgende uit te voeren:
 
-1. Gebruik [ markeringen ](../tags/home.md) om code op te nemen die [ Adobe Experience Cloud ](https://experienceleague.adobe.com/docs/core-services/interface/experience-cloud.html) producten op uw pagina&#39;s activeert.
+1. Gebruik [ markeringen ](../tags/home.md) om code op te nemen die [ Adobe Experience Cloud ](https://experienceleague.adobe.com/docs/core-services/interface/experience-cloud.html?lang=nl-NL) producten op uw pagina&#39;s activeert.
 1. Gebruik het [**[!UICONTROL Auditor]**&#x200B;lusje ](./auditor/overview.md) in Foutopsporing van Experience Platform om uw implementaties te testen.
 1. Gebruik op gebeurtenissen gebaseerde en oplossingsspecifieke hulpmiddelen in Foutopsporing van Experience Platform om kwesties te zuiveren die door de Controleur worden gevonden of andere informatie over uw implementaties te onderzoeken.
 

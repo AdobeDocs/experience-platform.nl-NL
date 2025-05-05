@@ -24,7 +24,7 @@ Met het schemageneratie van ML, kunt u nieuwe gegevensbronnen snel integreren en
 
 Deze zelfstudie vereist een goed begrip van de vereisten voor het maken van schema&#39;s. Alvorens met deze gids verder te gaan, zou u de [ gids UI aan het creëren van en het uitgeven van schema&#39;s ](./resources/schemas.md) moeten lezen.
 
-Deze gids verklaart hoe te om schema&#39;s tot stand te brengen gebruikend machine het leren (ML) algoritmen om een schema van steekproefgegevens te produceren. Zie de [ handgids van de schemaverwezenlijking ](https://experienceleague.adobe.com/en/docs/experience-platform/xdm/ui/resources/schemas#add-field-groups) voor informatie bij het creëren van schema&#39;s of het document op [ op gebied-gebaseerde werkschema&#39;s in de Redacteur van het Schema ](https://experienceleague.adobe.com/en/docs/experience-platform/xdm/ui/field-based-workflows) om uw begrip van het proces van de schemaverwezenlijking te verbeteren.
+Deze gids verklaart hoe te om schema&#39;s tot stand te brengen gebruikend machine het leren (ML) algoritmen om een schema van steekproefgegevens te produceren. Zie de [ handgids van de schemaverwezenlijking ](https://experienceleague.adobe.com/nl/docs/experience-platform/xdm/ui/resources/schemas#add-field-groups) voor informatie bij het creëren van schema&#39;s of het document op [ op gebied-gebaseerde werkschema&#39;s in de Redacteur van het Schema ](https://experienceleague.adobe.com/nl/docs/experience-platform/xdm/ui/field-based-workflows) om uw begrip van het proces van de schemaverwezenlijking te verbeteren.
 
 >[!NOTE]
 >
@@ -125,4 +125,4 @@ De Schema-editor wordt weergegeven met het nieuwe schema dat op het canvas wordt
 
 Na het creëren van uw schema, kunt u de Redacteur van het Schema gebruiken om verdere wijzigingen, indien nodig te maken. Uw nieuwe schema is nu klaar om met uw gegevensbronnen te worden geïntegreerd en voor gegevensanalyse worden gebruikt.
 
-Zie [ een bestaande schemagids ](https://experienceleague.adobe.com/en/docs/experience-platform/xdm/ui/resources/schemas#edit) voor meer informatie uitgeven bij het gebruiken van de Redacteur van het Schema.
+Zie [ een bestaande schemagids ](https://experienceleague.adobe.com/nl/docs/experience-platform/xdm/ui/resources/schemas#edit) voor meer informatie uitgeven bij het gebruiken van de Redacteur van het Schema.

@@ -47,4 +47,4 @@ ht-degree: 22%
 - [Identiteitsvelden definiëren in de gebruikersinterface](label-identities.md)
 - [Verwerking van privacyverzoeken](privacy.md)
 - [Handleiding voor probleemoplossing](troubleshooting-guide.md)
-- [Releaseopmerkingen bij Experience Platform](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)
+- [Releaseopmerkingen bij Experience Platform](https://experienceleague.adobe.com/nl/docs/experience-platform/release-notes/latest)

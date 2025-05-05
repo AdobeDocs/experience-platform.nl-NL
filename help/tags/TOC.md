@@ -333,5 +333,5 @@ ht-degree: 18%
 * [Veelgestelde vragen](./faq.md)
 * [Terminologie-updates](./term-updates.md)
 * [Ondersteuning voor Internet Explorer 10 en 11 wordt afgeschaft](./ie-deprecation.md)
-* [Releaseopmerkingen bij Experience Platform](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)
+* [Releaseopmerkingen bij Experience Platform](https://experienceleague.adobe.com/nl/docs/experience-platform/release-notes/latest)
 

@@ -89,13 +89,13 @@ Als u de brongegevens in Experience Platform wilt gebruiken, moet u een doelsche
 
 Een doelXDM schema kan worden gecreeerd door een POST- verzoek aan de [ Registratie API van het Schema ](https://developer.adobe.com/experience-platform-apis/references/schema-registry/) uit te voeren.
 
-Voor gedetailleerde stappen op hoe te om een doelXDM schema tot stand te brengen, zie het leerprogramma op [ creërend een schema gebruikend API ](https://experienceleague.adobe.com/docs/experience-platform/xdm/api/schemas.html#create).
+Voor gedetailleerde stappen op hoe te om een doelXDM schema tot stand te brengen, zie het leerprogramma op [ creërend een schema gebruikend API ](https://experienceleague.adobe.com/docs/experience-platform/xdm/api/schemas.html?lang=nl-NL#create).
 
 ### Een doelgegevensset maken {#target-dataset}
 
 Een doeldataset kan worden gecreeerd door een POST- verzoek aan de [ Dienst API van de Catalogus uit te voeren ](https://developer.adobe.com/experience-platform-apis/references/catalog/), verstrekkend identiteitskaart van het doelschema binnen de nuttige lading.
 
-Voor gedetailleerde stappen op hoe te om een doeldataset tot stand te brengen, zie het leerprogramma op [ het creëren van een dataset gebruikend API ](https://experienceleague.adobe.com/docs/experience-platform/catalog/api/create-dataset.html).
+Voor gedetailleerde stappen op hoe te om een doeldataset tot stand te brengen, zie het leerprogramma op [ het creëren van een dataset gebruikend API ](https://experienceleague.adobe.com/docs/experience-platform/catalog/api/create-dataset.html?lang=nl-NL).
 
 ### Een doelverbinding maken {#target-connection}
 
@@ -433,20 +433,20 @@ In de volgende sectie vindt u informatie over de stappen die u kunt uitvoeren om
 
 ### Uw gegevensstroom controleren {#monitor-dataflow}
 
-Zodra uw gegevensstroom is gecreeerd, kunt u de gegevens controleren die door het worden opgenomen om informatie over stroomlooppas, voltooiingsstatus, en fouten te zien. Voor volledige API voorbeelden, lees de gids op [ controlerend uw brongegevens gebruikend API ](https://experienceleague.adobe.com/docs/experience-platform/sources/api-tutorials/monitor.html).
+Zodra uw gegevensstroom is gecreeerd, kunt u de gegevens controleren die door het worden opgenomen om informatie over stroomlooppas, voltooiingsstatus, en fouten te zien. Voor volledige API voorbeelden, lees de gids op [ controlerend uw brongegevens gebruikend API ](https://experienceleague.adobe.com/docs/experience-platform/sources/api-tutorials/monitor.html?lang=nl-NL).
 
 ### Uw gegevensstroom bijwerken {#update-dataflow}
 
-Werk de details van uw gegevensstroom bij, zoals zijn naam en beschrijving, evenals zijn looppas programma en bijbehorende kaartreeksen door een PATCH- verzoek aan het `/flows` eindpunt van [!DNL Flow Service] API te doen, terwijl het verstrekken van identiteitskaart van uw gegevensstroom. Wanneer u een PATCH-aanvraag indient, moet u de unieke `etag` gegevens van uw gegevensstroom opgeven in de `If-Match` -header. Voor volledige API voorbeelden, lees de gids bij [ het bijwerken bronnen dataflows gebruikend API ](https://experienceleague.adobe.com/docs/experience-platform/sources/api-tutorials/update-dataflows.html)
+Werk de details van uw gegevensstroom bij, zoals zijn naam en beschrijving, evenals zijn looppas programma en bijbehorende kaartreeksen door een PATCH- verzoek aan het `/flows` eindpunt van [!DNL Flow Service] API te doen, terwijl het verstrekken van identiteitskaart van uw gegevensstroom. Wanneer u een PATCH-aanvraag indient, moet u de unieke `etag` gegevens van uw gegevensstroom opgeven in de `If-Match` -header. Voor volledige API voorbeelden, lees de gids bij [ het bijwerken bronnen dataflows gebruikend API ](https://experienceleague.adobe.com/docs/experience-platform/sources/api-tutorials/update-dataflows.html?lang=nl-NL)
 
 ### Uw account bijwerken {#update-account}
 
-Werk de naam, beschrijving en gegevens van uw bronaccount bij door een PATCH-aanvraag uit te voeren naar de [!DNL Flow Service] API en uw basis-verbindings-id op te geven als een queryparameter. Wanneer u een PATCH-aanvraag indient, moet u de unieke `etag` naam van uw bronaccount opgeven in de header van `If-Match` . Voor volledige API voorbeelden, lees de gids bij [ het bijwerken van uw bronrekening gebruikend API ](https://experienceleague.adobe.com/docs/experience-platform/sources/api-tutorials/update.html).
+Werk de naam, beschrijving en gegevens van uw bronaccount bij door een PATCH-aanvraag uit te voeren naar de [!DNL Flow Service] API en uw basis-verbindings-id op te geven als een queryparameter. Wanneer u een PATCH-aanvraag indient, moet u de unieke `etag` naam van uw bronaccount opgeven in de header van `If-Match` . Voor volledige API voorbeelden, lees de gids bij [ het bijwerken van uw bronrekening gebruikend API ](https://experienceleague.adobe.com/docs/experience-platform/sources/api-tutorials/update.html?lang=nl-NL).
 
 ### Uw gegevensstroom verwijderen {#delete-dataflow}
 
-Verwijder uw gegevensstroom door een DELETE-aanvraag uit te voeren naar de [!DNL Flow Service] API terwijl u de id opgeeft van de gegevensstroom die u wilt verwijderen als onderdeel van de queryparameter. Voor volledige API voorbeelden, lees de gids op [ schrappend uw dataflows gebruikend API ](https://experienceleague.adobe.com/docs/experience-platform/sources/api-tutorials/delete-dataflows.html).
+Verwijder uw gegevensstroom door een DELETE-aanvraag uit te voeren naar de [!DNL Flow Service] API terwijl u de id opgeeft van de gegevensstroom die u wilt verwijderen als onderdeel van de queryparameter. Voor volledige API voorbeelden, lees de gids op [ schrappend uw dataflows gebruikend API ](https://experienceleague.adobe.com/docs/experience-platform/sources/api-tutorials/delete-dataflows.html?lang=nl-NL).
 
 ### Uw account verwijderen {#delete-account}
 
-Verwijder uw account door een DELETE-aanvraag uit te voeren naar de [!DNL Flow Service] API terwijl u de basis-verbindings-id opgeeft van het account dat u wilt verwijderen. Voor volledige API voorbeelden, lees de gids bij [ het schrappen van uw bronrekening gebruikend API ](https://experienceleague.adobe.com/docs/experience-platform/sources/api-tutorials/delete.html).
+Verwijder uw account door een DELETE-aanvraag uit te voeren naar de [!DNL Flow Service] API terwijl u de basis-verbindings-id opgeeft van het account dat u wilt verwijderen. Voor volledige API voorbeelden, lees de gids bij [ het schrappen van uw bronrekening gebruikend API ](https://experienceleague.adobe.com/docs/experience-platform/sources/api-tutorials/delete.html?lang=nl-NL).

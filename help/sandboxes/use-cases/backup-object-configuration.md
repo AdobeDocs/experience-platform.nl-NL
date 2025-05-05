@@ -40,7 +40,7 @@ Als u dit geval wilt gebruiken, moet u meerdere gebieden van Adobe Experience Pl
 - [Gegevenssets](../../catalog/datasets/overview.md)
 - [Schema&#39;s](../../xdm//home.md)
 - [Doelgroepen](../../segmentation/home.md)
-- [ reizen van Adobe Journey Optimizer ](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/orchestrate-journeys/journey)
+- [ reizen van Adobe Journey Optimizer ](https://experienceleague.adobe.com/nl/docs/journey-optimizer/using/orchestrate-journeys/journey)
 
 ## Hoe het gebruiksgeval te bereiken: overzicht op hoog niveau {#achieve-the-use-case-high-level}
 

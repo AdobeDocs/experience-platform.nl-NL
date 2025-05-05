@@ -30,7 +30,7 @@ Adobe Experience Platform is het krachtigste, meest flexibele en open systeem op
 
 [!DNL Experience Platform] -documentatie wordt in meerdere indelingen geleverd voor een groot aantal functies en toepassingen. Meer over de types van documentatie leren die beschikbaar zijn, gelieve het [ de documentatieoverzicht van Experience Platform ](documentation/overview.md) te bezoeken.
 
-Beginnen meer over de specifieke [!DNL Experience Platform] dienst te leren, terugkeer aan de [ documentatie landend pagina ](https://experienceleague.adobe.com/docs/experience-platform.html) en selecteer de aangewezen gids.
+Beginnen meer over de specifieke [!DNL Experience Platform] dienst te leren, terugkeer aan de [ documentatie landend pagina ](https://experienceleague.adobe.com/docs/experience-platform.html?lang=nl-NL) en selecteer de aangewezen gids.
 
 ### Documentatie voor op [!DNL Experience Platform] gebaseerde toepassingen
 
@@ -38,10 +38,10 @@ Adobe heeft meerdere toepassingen gebouwd boven op Experience Platform. De docum
 
 * [[!DNL Adobe Real-Time Customer Data Platform (Real-Time CDP)]](../rtcdp/overview.md)
 * [[!DNL Real-Time Customer Data Platform (Real-Time CDP) B2B Edition]](../rtcdp/b2b-overview.md)
-* [[!DNL Adobe Journey Optimizer]](https://experienceleague.adobe.com/docs/journey-optimizer.html)
-* [[!DNL Customer Journey Analytics]](https://experienceleague.adobe.com/docs/customer-journey-analytics.html)
-* [[!DNL Journey Orchestration]](https://experienceleague.adobe.com/docs/journey-orchestration.html)
-* [[!DNL Adobe Mix Modeler]](https://experienceleague.adobe.com/docs/mix-modeler/using/overview.html?lang=en)
+* [[!DNL Adobe Journey Optimizer]](https://experienceleague.adobe.com/docs/journey-optimizer.html?lang=nl-NL)
+* [[!DNL Customer Journey Analytics]](https://experienceleague.adobe.com/docs/customer-journey-analytics.html?lang=nl-NL)
+* [[!DNL Journey Orchestration]](https://experienceleague.adobe.com/docs/journey-orchestration.html?lang=nl-NL)
+* [[!DNL Adobe Mix Modeler]](https://experienceleague.adobe.com/docs/mix-modeler/using/overview.html?lang=nl-NL)
 
 In de onderstaande video worden de gebruiksgevallen beschreven van elke toepassing die boven op Experience Platform is gebouwd.
 
@@ -64,7 +64,7 @@ Bezoek de [ zelfstudies van Experience Platform ](https://www.adobe.com/go/platf
 * [**Verklarende woordenlijst**](glossary.md)\
   Adobe Experience Platform-terminologie controleren.
 
-* [**de nota&#39;s van de Versie** ](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)\
+* [**de nota&#39;s van de Versie** ](https://experienceleague.adobe.com/nl/docs/experience-platform/release-notes/latest)\
   Meer informatie over de meest recente release van [!DNL Experience Platform] en revisie in het verleden.
 
 * [**gids van het Oplossen van problemen**](troubleshooting.md)\

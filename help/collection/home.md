@@ -23,7 +23,7 @@ Gegevensverzameling wordt ondersteund voor de volgende clientbronnen:
 
 De inzameling van gegevens concentreert zich op de ontdekkingsbaarheid en de toegankelijkheid van ingebedde datasets, die het volgende omvatten:
 
-* [ Adobe Experience Platform Edge Network ](https://experienceleague.adobe.com/docs/web-sdk-learn/tutorials/introduction-to-web-sdk-and-edge-network.html)
+* [ Adobe Experience Platform Edge Network ](https://experienceleague.adobe.com/docs/web-sdk-learn/tutorials/introduction-to-web-sdk-and-edge-network.html?lang=nl-NL)
 * [Tags](../tags/home.md)
 * [Gegevensstromen](../datastreams/overview.md)
 * [Gebeurtenis doorsturen](../tags/ui/event-forwarding/overview.md)

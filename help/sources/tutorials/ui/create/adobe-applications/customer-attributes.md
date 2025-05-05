@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # Een bronverbinding voor klantkenmerken maken in de gebruikersinterface
 
-Deze zelfstudie bevat stappen voor het maken van een bronverbinding in de gebruikersinterface om profielgegevens van klantkenmerken over te brengen naar Adobe Experience Platform. Voor meer informatie over de Attributen van de Klant, zie het [ overzicht van de Attributen van de Klant ](https://experienceleague.adobe.com/docs/core-services/interface/customer-attributes/attributes.html).
+Deze zelfstudie bevat stappen voor het maken van een bronverbinding in de gebruikersinterface om profielgegevens van klantkenmerken over te brengen naar Adobe Experience Platform. Voor meer informatie over de Attributen van de Klant, zie het [ overzicht van de Attributen van de Klant ](https://experienceleague.adobe.com/docs/core-services/interface/customer-attributes/attributes.html?lang=nl-NL).
 
 >[!IMPORTANT]
 >

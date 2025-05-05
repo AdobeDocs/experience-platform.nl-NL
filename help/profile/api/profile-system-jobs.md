@@ -16,7 +16,7 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
->De volgende eindpunten kunnen verschillen tussen implementaties van Adobe Experience Platform die worden uitgevoerd op Microsoft Azure en Amazon Web Services (AWS). Experience Platform die op AWS wordt uitgevoerd, is momenteel beschikbaar voor een beperkt aantal klanten. Meer over de gesteunde infrastructuur van Experience Platform leren, zie het [ multi-wolkenoverzicht van Experience Platform ](https://experienceleague.adobe.com/en/docs/experience-platform/landing/multi-cloud).
+>De volgende eindpunten kunnen verschillen tussen implementaties van Adobe Experience Platform die worden uitgevoerd op Microsoft Azure en Amazon Web Services (AWS). Experience Platform die op AWS wordt uitgevoerd, is momenteel beschikbaar voor een beperkt aantal klanten. Meer over de gesteunde infrastructuur van Experience Platform leren, zie het [ multi-wolkenoverzicht van Experience Platform ](https://experienceleague.adobe.com/nl/docs/experience-platform/landing/multi-cloud).
 
 Met Adobe Experience Platform kunt u gegevens uit meerdere bronnen invoeren en robuuste profielen voor individuele klanten maken. Gegevens die in [!DNL Experience Platform] worden ingevoerd, worden opgeslagen in [!DNL Data Lake] en als de gegevenssets zijn ingeschakeld voor Profiel, worden die gegevens ook opgeslagen in de [!DNL Real-Time Customer Profile] -gegevensopslag. Soms kan het nodig zijn om profielgegevens die zijn gekoppeld aan een gegevensset te verwijderen uit de profielenopslag om gegevens te verwijderen die niet meer nodig zijn of die ten onrechte zijn toegevoegd. Hiervoor moet u de API van [!DNL Real-Time Customer Profile] gebruiken om een [!DNL Profile] -systeemtaak te maken, of &quot;aanvraag verwijderen&quot;.
 

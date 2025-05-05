@@ -26,7 +26,7 @@ In Adobe Analytics kunnen aangepaste productgegevens worden verzameld via specia
 
 Deze variabelen worden ook wel handelsvariabelen in de productsyntaxis genoemd. Op deze manier kunt u informatie verzamelen, zoals een &quot;kortingsbedrag&quot; per product of informatie over de &quot;locatie op pagina&quot; van het product in de zoekresultaten van de klant.
 
-Meer leren over het gebruiken van de productsyntaxis, te lezen gelieve de documentatie van Adobe Analytics op [ uitvoerend eVars gebruikend productsyntaxis ](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/evar-merchandising.html#implement-using-product-syntax).
+Meer leren over het gebruiken van de productsyntaxis, te lezen gelieve de documentatie van Adobe Analytics op [ uitvoerend eVars gebruikend productsyntaxis ](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/evar-merchandising.html?lang=nl-NL#implement-using-product-syntax).
 
 In de volgende secties worden de XDM-velden beschreven die nodig zijn voor toegang tot de variabelen voor handelsdoeleinden in uw gegevensset [!DNL Analytics] :
 
@@ -127,7 +127,7 @@ Bij het rapporteren zijn de bestellingen, opbrengsten, productweergaven en winke
 | intern zoeken:zomershirt | 19,99 | 1 | 1 | 1 |
 | interne zoekopdracht:winterhoed | 12,99 | 1 | 1 | 1 |
 
-Om meer over het gebruiken van de syntaxis van de omzetvariabele te leren, te lezen gelieve de documentatie van Adobe Analytics op [ uitvoerend eVars gebruikend de syntaxis van de omzettingsvariabele ](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/evar-merchandising.html#implement-using-conversion-variable-syntax).
+Om meer over het gebruiken van de syntaxis van de omzetvariabele te leren, te lezen gelieve de documentatie van Adobe Analytics op [ uitvoerend eVars gebruikend de syntaxis van de omzettingsvariabele ](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/evar-merchandising.html?lang=nl-NL#implement-using-conversion-variable-syntax).
 
 Hieronder worden de XDM-velden weergegeven die de syntaxis van de conversievariabele in uw [!DNL Analytics] -dataset produceren:
 

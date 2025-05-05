@@ -13,7 +13,7 @@ ht-degree: 0%
 
 [!UICONTROL Partner Prospect Details (Sample)] is een standaardgroep van het schemagebied voor de [[!DNL XDM ExperienceEvent]  klasse ](../../classes/experienceevent.md). [!UICONTROL Partner Prospect Details (Sample)] verstrekt een steekproefkader voor diverse details met betrekking tot het profiel van een vooruitzicht. Dit kader stroomlijnt het proces van het organiseren en beheren van diverse informatie met betrekking tot het vooruitzicht.
 
-Deze gebiedsgroep breidt de [ Individuele klasse van het Profiel van het Vooruitzicht ](https://experienceleague.adobe.com/docs/experience-platform/xdm/classes/prospect.html) binnen de context van een partner uit.
+Deze gebiedsgroep breidt de [ Individuele klasse van het Profiel van het Vooruitzicht ](https://experienceleague.adobe.com/docs/experience-platform/xdm/classes/prospect.html?lang=nl-NL) binnen de context van een partner uit.
 
 ![ A diagram van de [!UICONTROL Partner Prospect Details (Sample)] gebiedsgroep.](../../images/field-groups/partner/partner-prospect-details-sample.png)
 

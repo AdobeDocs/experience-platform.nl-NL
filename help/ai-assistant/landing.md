@@ -31,14 +31,14 @@ Begin met het lezen van het materiaal in de koppelingen hieronder om uzelf vertr
     <div><strong> verbeter uw het leren </strong><br/> ontdekt, problemen oplost, en versterkt uw begrip van productkennis zonder uw werkschema's te onderbreken.</div>
     </td>
     <td>
-    <a href="https://experienceleague.adobe.com/en/playlists/experience-platform-get-started-with-ai-assistant"><img src="./assets/landing/ai-videos.png" style="width:100%;max-height:100%"></a>
+    <a href="https://experienceleague.adobe.com/nl/playlists/experience-platform-get-started-with-ai-assistant"><img src="./assets/landing/ai-videos.png" style="width:100%;max-height:100%"></a>
     <div><strong> Bezoek de AI Hulp videoplaylist </strong><br/> Leer over de vele verschillende uitdagingen en gebruiksgevallen die u met AI Medewerker kunt richten.</div>
     </td>
   </tr>
   <tr style="border: 0;">
     <td align="center"><a href="./home.md"><img src="../rtcdp/assets/do-not-localize/learn-more-button.svg"></a></td>
     <td align="center"><a href="./home.md#product-knowledge"><img src="../rtcdp/assets/do-not-localize/learn-more-button.svg"></a></td>
-    <td align="center"><a href="https://experienceleague.adobe.com/en/playlists/experience-platform-get-started-with-ai-assistant"><img src="../rtcdp/assets/do-not-localize/learn-more-button.svg"></a></td>
+    <td align="center"><a href="https://experienceleague.adobe.com/nl/playlists/experience-platform-get-started-with-ai-assistant"><img src="../rtcdp/assets/do-not-localize/learn-more-button.svg"></a></td>
     </tr>
 </table>
 
@@ -460,9 +460,9 @@ Blader naar de onderstaande koppelingen voor meer inzicht in AIR Assistant-gebru
 <a href="./home.md" target="_blank"> Documentatie </a> - <a href="./ui-guide.md" target="_blank"> gids UI </a> - <a href="./access.md" target="_blank"> de Medewerker van de Toegang AI </a> - <a href="./privacy.md" target="_blank"> Privacy, veiligheid, en bestuur </a> - <a href="./faq.md" target="_blank"> Veelgestelde vragen </a>
 </td>
 <td><strong> Adobe Journey Optimizer </strong><br/>
-<a href="https://experienceleague.adobe.com/en/docs/journey-optimizer/using/get-started/ai-assistant" target="_blank"> Documentatie </a>
+<a href="https://experienceleague.adobe.com/nl/docs/journey-optimizer/using/get-started/ai-assistant" target="_blank"> Documentatie </a>
 </td>
 <td><strong> Customer Journey Analytics </strong><br/>
-<a href="https://experienceleague.adobe.com/en/docs/analytics-platform/using/ai-assistant" target="_blank"> Documentatie </a>
+<a href="https://experienceleague.adobe.com/nl/docs/analytics-platform/using/ai-assistant" target="_blank"> Documentatie </a>
 </td>
 </tr></table>

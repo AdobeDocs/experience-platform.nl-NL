@@ -31,5 +31,5 @@ ht-degree: 28%
    * [Overzicht van modelkaarten](./model-cards/overview.md)
    * AI-modelkaarten {#ai-model-cards}
       * [AI-proENTIEscore van klanten](./model-cards/ai-model-cards/customer-ai.md)
-* [Releaseopmerkingen bij Experience Platform](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)
+* [Releaseopmerkingen bij Experience Platform](https://experienceleague.adobe.com/nl/docs/experience-platform/release-notes/latest)
 

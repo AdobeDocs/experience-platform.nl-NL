@@ -14,7 +14,7 @@ ht-degree: 0%
 
 Zodra uw organisatie is ingericht voor Adobe Experience Platform, kan uw beheerder u toegang verlenen tot [!DNL Query Service]. Voordat u alle door [!DNL Query Service] geboden functies kunt gebruiken, moet u echter eerst gegevens in Adobe Experience Platform invoeren.
 
-Deze [ video van de gegevensopname van gegevens ](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html) verstrekt een overzicht bij het creëren van een dataset, het in kaart brengen van een dataset aan een schema, het toevoegen van gegevens aan de dataset, en het bevestigen van zijn opname. De [ documentatie van het inperkingsoverzicht ](../../ingestion/home.md) vult dit aan en verstrekt meer diepgaande informatie en verbindingen aan andere het leren middelen.
+Deze [ video van de gegevensopname van gegevens ](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html?lang=nl-NL) verstrekt een overzicht bij het creëren van een dataset, het in kaart brengen van een dataset aan een schema, het toevoegen van gegevens aan de dataset, en het bevestigen van zijn opname. De [ documentatie van het inperkingsoverzicht ](../../ingestion/home.md) vult dit aan en verstrekt meer diepgaande informatie en verbindingen aan andere het leren middelen.
 
 Nadat u uw gegevens in Adobe Experience Platform hebt opgenomen, kunt u beginnen werkend met [!DNL Query Service] gebruikend of [[!DNL Query Editor]  in Experience Platform UI ](../ui/user-guide.md) of [[!DNL Query Service]  API ](../api/getting-started.md). Volledige documentatie over het gebruik van elk van deze gereedschappen vindt u in de desbetreffende secties.
 

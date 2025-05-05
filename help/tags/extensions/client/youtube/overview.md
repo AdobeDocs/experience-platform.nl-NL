@@ -98,7 +98,7 @@ De volgende video-extensieobjecten moeten worden opgenomen.
 
 >[!TIP]
 > 
->Voor implementaties waar de veelvoudige steunen of eVars voor elk videoelement niet kunnen worden gebruikt, kunnen de waarden van het gegevenselement binnen Experience Platform worden samengevoegd, die in classificatierapporten worden geparseerd gebruikend het hulpmiddel van de Bouwer van de Regel van de Classificatie, zoals die in [ https://experienceleague.adobe.com/docs/analytics/components/classifications/classifications-rulebuilder/classification-rule-builder.html ](https://experienceleague.adobe.com/docs/analytics/components/classifications/classifications-rulebuilder/classification-rule-builder.html) wordt verklaard, en dan als segment in Analysis Workspace worden toegepast.
+>Voor implementaties waar de veelvoudige steunen of eVars voor elk videoelement niet kunnen worden gebruikt, kunnen de waarden van het gegevenselement binnen Experience Platform worden samengevoegd, die in classificatierapporten worden geparseerd gebruikend het hulpmiddel van de Bouwer van de Regel van de Classificatie, zoals die in [ https://experienceleague.adobe.com/docs/analytics/components/classifications/classifications-rulebuilder/classification-rule-builder.html?lang=nl-NL ](https://experienceleague.adobe.com/docs/analytics/components/classifications/classifications-rulebuilder/classification-rule-builder.html?lang=nl-NL) wordt verklaard, en dan als segment in Analysis Workspace worden toegepast.
 
 Als u videogegevenswaarden wilt samenvoegen, maakt u een nieuw gegevenselement met de naam &quot;Videometagegevens&quot; en programmeert u dit om alle videogegevenselementen (hierboven vermeld) te verzamelen en samen te voegen. Bijvoorbeeld:
 

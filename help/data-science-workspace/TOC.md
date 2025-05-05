@@ -65,4 +65,4 @@ ht-degree: 16%
    * [Geautomatiseerde training en scoring op een service (UI) plannen](models-recipes/schedule-models-ui.md)
 * [Handleiding voor probleemoplossing](troubleshooting-guide.md)
 * [ API verwijzing ](https://developer.adobe.com/experience-platform-apis/references/sensei-machine-learning/)
-* [Releaseopmerkingen bij Experience Platform](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)
+* [Releaseopmerkingen bij Experience Platform](https://experienceleague.adobe.com/nl/docs/experience-platform/release-notes/latest)

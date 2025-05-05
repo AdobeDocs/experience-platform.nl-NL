@@ -13,7 +13,7 @@ ht-degree: 2%
 
 # Selecteer een productprofiel om de toegangsbeheermachtigingen te beheren
 
-Als u toegangsbeheer voor [!DNL Experience Platform] via de Adobe Admin Console wilt configureren, moet u een beheerder zijn voor een organisatie die een abonnement heeft op [!DNL Experience Platform] . Terwijl Adobe flexibele beheerderhiërarchieën voor organisaties steunt, moet u systeembeheerder, productbeheerder, of de beheerdervoorrechten van het productprofiel hebben om toegangsbeheer te vormen. Zie het artikel van het Centrum van de Hulp van Adobe op [ administratieve rollen ](https://helpx.adobe.com/enterprise/using/admin-roles.html) voor meer informatie.
+Als u toegangsbeheer voor [!DNL Experience Platform] via de Adobe Admin Console wilt configureren, moet u een beheerder zijn voor een organisatie die een abonnement heeft op [!DNL Experience Platform] . Terwijl Adobe flexibele beheerderhiërarchieën voor organisaties steunt, moet u systeembeheerder, productbeheerder, of de beheerdervoorrechten van het productprofiel hebben om toegangsbeheer te vormen. Zie het artikel van het Centrum van de Hulp van Adobe op [ administratieve rollen ](https://helpx.adobe.com/nl/enterprise/using/admin-roles.html) voor meer informatie.
 
 Als u geen beheerdersrechten hebt, neemt u contact op met de systeembeheerder om toegang te krijgen.
 

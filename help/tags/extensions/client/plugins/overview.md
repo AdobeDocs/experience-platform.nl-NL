@@ -71,4 +71,4 @@ De volgende gegevenselementen zijn beschikbaar in de Common Analytics Plugins-ex
 
 >[!NOTE]
 >
->Voor meer informatie over de bovengenoemde stoppen, gelieve de [ documentatie van Analytics ](https://experienceleague.adobe.com/docs/analytics/implementation/vars/plugins/impl-plugins.html) te raadplegen.
+>Voor meer informatie over de bovengenoemde stoppen, gelieve de [ documentatie van Analytics ](https://experienceleague.adobe.com/docs/analytics/implementation/vars/plugins/impl-plugins.html?lang=nl-NL) te raadplegen.

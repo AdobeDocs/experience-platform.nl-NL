@@ -16,7 +16,7 @@ ht-degree: 0%
 
 [!DNL Bizible] is de toonaangevende B2B-attributieoplossing die u een ongeëvenaarde zichtbaarheid in uw gegevens biedt, zodat u slimme beslissingen kunt nemen die groei stimuleren.
 
-[!DNL Bizible] is een e-mailextensie in Adobe Experience Platform. Voor meer informatie over Bizible, lees [ Attributie van de Marketing ](https://experienceleague.adobe.com/docs/bizible/using/introduction-to-bizible/overview-resources/marketing-attribution.html) in de Bizible overzichtsmiddelen.
+[!DNL Bizible] is een e-mailextensie in Adobe Experience Platform. Voor meer informatie over Bizible, lees [ Attributie van de Marketing ](https://experienceleague.adobe.com/docs/bizible/using/introduction-to-bizible/overview-resources/marketing-attribution.html?lang=nl-NL) in de Bizible overzichtsmiddelen.
 
 Dit doel is een tagextensie. Voor meer informatie over hoe de uitbreidingen van markeringen in Experience Platform werken, zie het [ overzicht van markeringsuitbreidingen ](../launch-extensions/overview.md).
 

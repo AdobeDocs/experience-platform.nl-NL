@@ -13,7 +13,7 @@ ht-degree: 1%
 
 # Adobe-bepaalde SQL functies in de Dienst van de Vraag
 
-Adobe-bepaalde functies, hier genoemd ADFs, zijn prebuilt functies in de Dienst van de Vraag van Adobe Experience Platform die helpen gemeenschappelijke zaken-gerelateerde taken op [!DNL Experience Event] gegevens uitvoeren. Deze omvatten functies voor [ Sessionisatie ](https://experienceleague.adobe.com/docs/analytics/components/virtual-report-suites/vrs-mobile-visit-processing.html) en [ Attributie ](https://experienceleague.adobe.com/docs/analytics/analyze/analysis-workspace/attribution/overview.html) als die gevonden in Adobe Analytics.
+Adobe-bepaalde functies, hier genoemd ADFs, zijn prebuilt functies in de Dienst van de Vraag van Adobe Experience Platform die helpen gemeenschappelijke zaken-gerelateerde taken op [!DNL Experience Event] gegevens uitvoeren. Deze omvatten functies voor [ Sessionisatie ](https://experienceleague.adobe.com/docs/analytics/components/virtual-report-suites/vrs-mobile-visit-processing.html?lang=nl-NL) en [ Attributie ](https://experienceleague.adobe.com/docs/analytics/analyze/analysis-workspace/attribution/overview.html?lang=nl-NL) als die gevonden in Adobe Analytics.
 
 Dit document bevat informatie over door de Adobe gedefinieerde functies die beschikbaar zijn in [!DNL Query Service] .
 
@@ -47,7 +47,7 @@ Wanneer u werkt met [!DNL Experience Event] -gegevens die afkomstig zijn van een
 
 Deze groepering, of zitting van gegevens, helpt de gebeurtenissen associëren om meer context over de klantenervaring te ontdekken.
 
-Voor meer informatie over zittingssessie in Adobe Analytics, zie de documentatie over [ context-bewuste zittingen ](https://experienceleague.adobe.com/docs/analytics/components/virtual-report-suites/vrs-mobile-visit-processing.html).
+Voor meer informatie over zittingssessie in Adobe Analytics, zie de documentatie over [ context-bewuste zittingen ](https://experienceleague.adobe.com/docs/analytics/components/virtual-report-suites/vrs-mobile-visit-processing.html?lang=nl-NL).
 
 **syntaxis van de Vraag**
 

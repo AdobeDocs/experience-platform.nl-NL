@@ -99,4 +99,4 @@ De gegevens verwerkte attributen leiden automatisch de etiketten van het gegeven
 
 ## Hoe gebruik ik berekende kenmerken met Adobe Journey Optimizer?
 
-Als u berekende kenmerken wilt gebruiken tijdens reizen, moet u de veldgroep `SystemComputedAttributes` toevoegen aan de gegevensbron van het Experience Platform. Voor meer informatie bij het vormen van de gegevensbron van het Experience Platform, te lezen gelieve de [ gegevensbrongids van Adobe Experience Platform ](https://experienceleague.adobe.com/docs/journey-optimizer/using/configuration/configure-journeys/data-source-journeys/adobe-experience-platform-data-source.html).
+Als u berekende kenmerken wilt gebruiken tijdens reizen, moet u de veldgroep `SystemComputedAttributes` toevoegen aan de gegevensbron van het Experience Platform. Voor meer informatie bij het vormen van de gegevensbron van het Experience Platform, te lezen gelieve de [ gegevensbrongids van Adobe Experience Platform ](https://experienceleague.adobe.com/docs/journey-optimizer/using/configuration/configure-journeys/data-source-journeys/adobe-experience-platform-data-source.html?lang=nl-NL).

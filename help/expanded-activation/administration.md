@@ -19,7 +19,7 @@ Op deze pagina wordt uitgelegd hoe u een gebruikersaccount in de Admin Console m
 
 Voordat u [!DNL Audience Manager Expanded Activation] kunt gebruiken, moet u een gebruikersaccount maken.
 
-Om een gebruikersrekening voor [!DNL Expanded Activation] tot stand te brengen, volg de instructies op het leiden van gebruikers van de [ Adobe Admin Console ](https://helpx.adobe.com/enterprise/using/manage-users-individually.html) documentatie.
+Om een gebruikersrekening voor [!DNL Expanded Activation] tot stand te brengen, volg de instructies op het leiden van gebruikers van de [ Adobe Admin Console ](https://helpx.adobe.com/nl/enterprise/using/manage-users-individually.html) documentatie.
 
 ## Gebruikers toevoegen aan machtigingsrol {#permissions}
 

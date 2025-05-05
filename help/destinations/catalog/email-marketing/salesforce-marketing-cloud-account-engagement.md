@@ -34,7 +34,7 @@ Raadpleeg de onderstaande secties voor alle voorwaarden die u in Experience Plat
 
 ### Vereisten in Experience Platform {#prerequisites-in-experience-platform}
 
-Alvorens gegevens aan de [!DNL Marketing Cloud Account Engagement] bestemming te activeren, moet u a [ schema ](/help/xdm/schema/composition.md), a [ dataset ](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html) hebben, en [ segmenten ](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html) die in [!DNL Experience Platform] worden gecreeerd.
+Alvorens gegevens aan de [!DNL Marketing Cloud Account Engagement] bestemming te activeren, moet u a [ schema ](/help/xdm/schema/composition.md), a [ dataset ](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html?lang=nl-NL) hebben, en [ segmenten ](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html?lang=nl-NL) die in [!DNL Experience Platform] worden gecreeerd.
 
 ### Vereisten in [!DNL Marketing Cloud Account Engagement] {#prerequisites-destination}
 

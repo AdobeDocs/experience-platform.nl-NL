@@ -68,7 +68,7 @@ window.adobe.target.init(window, document, {
 });
 ```
 
-[Meer informatie](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/functions-overview/targetgobalsettings.html)
+[Meer informatie](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/functions-overview/targetgobalsettings.html?lang=nl-NL)
 
 
 ### De SDK van het Web configureren
@@ -83,7 +83,7 @@ Als u at.js 2.x gebruikt en de instelling `pageLoadEnabled` inschakelt, wordt in
 
 ### Web SDK gebruiken
 
-De inhoud die binnen Adobe Target [ wordt gecreeerd Visuele Composer van de Ervaring ](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html) kan automatisch door SDK worden teruggewonnen en worden teruggegeven.
+De inhoud die binnen Adobe Target [ wordt gecreeerd Visuele Composer van de Ervaring ](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html?lang=nl-NL) kan automatisch door SDK worden teruggewonnen en worden teruggegeven.
 
 Als u Target-aanbiedingen wilt aanvragen en automatisch wilt renderen, gebruikt u de opdracht `sendEvent` en stelt u de optie `renderDecisions` in op `true` . Hierdoor wordt de SDK gedwongen om automatisch gepersonaliseerde inhoud te renderen die in aanmerking komt voor automatische rendering.
 
@@ -215,7 +215,7 @@ adobe.target.getOffers({
 .catch(console.error);
 ```
 
-[Meer informatie](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/functions-overview/cmp-atjs-functions.html)
+[Meer informatie](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/functions-overview/cmp-atjs-functions.html?lang=nl-NL)
 
 ### Web SDK gebruiken
 
@@ -300,7 +300,7 @@ adobe.target.getOffers({
 .catch(console.error);
 ```
 
-[Meer informatie](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/functions-overview/cmp-atjs-functions.html)
+[Meer informatie](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/functions-overview/cmp-atjs-functions.html?lang=nl-NL)
 
 
 ### Web SDK gebruiken
@@ -438,7 +438,7 @@ adobe.target.getOffers({...})
   .catch(error => console.log("Error", error));
 ```
 
-Leer meer over het `applyOffers` bevel van de [ specifieke documentatie ](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/functions-overview/adobe-target-applyoffers-atjs-2.html).
+Leer meer over het `applyOffers` bevel van de [ specifieke documentatie ](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/functions-overview/adobe-target-applyoffers-atjs-2.html?lang=nl-NL).
 
 
 ### Web SDK gebruiken
@@ -490,7 +490,7 @@ adobe.target.sendNotifications({
 });
 ```
 
-[Meer informatie](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/functions-overview/adobe-target-trackevent.html)
+[Meer informatie](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/functions-overview/adobe-target-trackevent.html?lang=nl-NL)
 
 ### Web SDK gebruiken
 
@@ -665,7 +665,7 @@ Gebruik de functie `adobe.target.triggerView` . Deze functie kan worden aangeroe
 adobe.target.triggerView("homeView")
 ```
 
-[Meer informatie](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/functions-overview/adobe-target-triggerview-atjs-2.html)
+[Meer informatie](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/functions-overview/adobe-target-triggerview-atjs-2.html?lang=nl-NL)
 
 
 ### Web SDK gebruiken
@@ -691,7 +691,7 @@ alloy("sendEvent", {
 
 ## Respontokens gebruiken
 
-De inhoud van Personalization die van Adobe Target is teruggekeerd omvat [ reactietokens ](https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html), die details over de activiteit, de aanbieding, de ervaring, het gebruikersprofiel, geo informatie, en meer zijn. Deze details kunnen met derdehulpmiddelen worden gedeeld of voor het zuiveren worden gebruikt. De tokens van de reactie kunnen in het gebruikersinterface van Adobe Target worden gevormd.
+De inhoud van Personalization die van Adobe Target is teruggekeerd omvat [ reactietokens ](https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html?lang=nl-NL), die details over de activiteit, de aanbieding, de ervaring, het gebruikersprofiel, geo informatie, en meer zijn. Deze details kunnen met derdehulpmiddelen worden gedeeld of voor het zuiveren worden gebruikt. De tokens van de reactie kunnen in het gebruikersinterface van Adobe Target worden gevormd.
 
 ### At.js gebruiken
 
@@ -705,7 +705,7 @@ document.addEventListener(adobe.target.event.REQUEST_SUCCEEDED, function(e) {
 }); 
 ```
 
-[Meer informatie](https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html)
+[Meer informatie](https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html?lang=nl-NL)
 
 
 ### Web SDK gebruiken
@@ -714,7 +714,7 @@ document.addEventListener(adobe.target.event.REQUEST_SUCCEEDED, function(e) {
 >
 >Zorg ervoor dat u Experience Platform Web SDK versie 2.6.0 of later gebruikt.
 
-De reactietokens worden geretourneerd als onderdeel van de `propositions` die worden weergegeven in het resultaat van de opdracht `sendEvent` . Elke propositie bevat een array van `items` en elk item heeft een `meta` -object dat is gevuld met reactietokens als deze zijn ingeschakeld in de interface van Target-beheerder. [Meer informatie](https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html)
+De reactietokens worden geretourneerd als onderdeel van de `propositions` die worden weergegeven in het resultaat van de opdracht `sendEvent` . Elke propositie bevat een array van `items` en elk item heeft een `meta` -object dat is gevuld met reactietokens als deze zijn ingeschakeld in de interface van Target-beheerder. [Meer informatie](https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html?lang=nl-NL)
 
 **Voorbeeld**
 
@@ -880,7 +880,7 @@ Vervolgens worden de gegevens als volgt gestroomd:
 
 ![ Diagram die het Zijhet Registreren werkschema van de Server van de Analyse tonen ](assets/a4t-server-side-atjs.png)
 
-[ leer meer ](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4timplementation.html)
+[ leer meer ](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4timplementation.html?lang=nl-NL)
 
 ### Web SDK gebruiken
 
@@ -964,7 +964,7 @@ window.targetGlobalSettings = {
 };
 ```
 
-[Meer informatie](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/functions-overview/targetgobalsettings.html)
+[Meer informatie](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/functions-overview/targetgobalsettings.html?lang=nl-NL)
 
 ### Web SDK gebruiken
 
@@ -1064,7 +1064,7 @@ adobe.target.getOffers({
 .catch(console.error);
 ```
 
-[Meer informatie](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/functions-overview/adobe-target-getoffers-atjs-2.html)
+[Meer informatie](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/functions-overview/adobe-target-getoffers-atjs-2.html?lang=nl-NL)
 
 
 ### Web SDK gebruiken
@@ -1144,7 +1144,7 @@ window.targetPageParams = function() {
 };
 ```
 
-[Meer informatie](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/functions-overview/targetpageparams.html)
+[Meer informatie](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/functions-overview/targetpageparams.html?lang=nl-NL)
 
 ### Web SDK gebruiken
 

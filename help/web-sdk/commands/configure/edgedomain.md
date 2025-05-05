@@ -11,9 +11,9 @@ ht-degree: 1%
 
 # `edgeDomain`
 
-Met de eigenschap `edgeDomain` kunt u het domein wijzigen waar de Web SDK gegevens verzendt. Dit bezit wordt vaak gebruikt door organisaties die [ eerste partijkoekjes ](https://experienceleague.adobe.com/docs/core-services/interface/administration/ec-cookies/cookies-first-party.html) gebruiken. Het gegeven wordt verzonden naar het eigen domein van de organisatie, dan een verslag CNAME door:sturen die gegevens aan Adobe.
+Met de eigenschap `edgeDomain` kunt u het domein wijzigen waar de Web SDK gegevens verzendt. Dit bezit wordt vaak gebruikt door organisaties die [ eerste partijkoekjes ](https://experienceleague.adobe.com/docs/core-services/interface/administration/ec-cookies/cookies-first-party.html?lang=nl-NL) gebruiken. Het gegeven wordt verzonden naar het eigen domein van de organisatie, dan een verslag CNAME door:sturen die gegevens aan Adobe.
 
-Uw organisatie bepaalt de correcte waarde voor dit bezit wanneer vestiging [ eerste partijkoekjes ](https://experienceleague.adobe.com/docs/core-services/interface/administration/ec-cookies/cookies-first-party.html). Een organisatie gebruikt voor dit doel doorgaans een speciaal subdomein. Als u bijvoorbeeld het domein `example.com` gebruikt, kunt u cookies van eerste partijen instellen op `data.example.com` .
+Uw organisatie bepaalt de correcte waarde voor dit bezit wanneer vestiging [ eerste partijkoekjes ](https://experienceleague.adobe.com/docs/core-services/interface/administration/ec-cookies/cookies-first-party.html?lang=nl-NL). Een organisatie gebruikt voor dit doel doorgaans een speciaal subdomein. Als u bijvoorbeeld het domein `example.com` gebruikt, kunt u cookies van eerste partijen instellen op `data.example.com` .
 
 ## Een Edge-domein configureren met de webSDK-tagextensie
 

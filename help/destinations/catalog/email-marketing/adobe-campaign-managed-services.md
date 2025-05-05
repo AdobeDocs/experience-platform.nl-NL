@@ -13,11 +13,11 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
->Deze integratie werkt met [ versie 8.4 van Adobe Campaign of hoger ](https://experienceleague.adobe.com/docs/campaign/campaign-v8/new/release-notes.html#release-8-4-1).
+>Deze integratie werkt met [ versie 8.4 van Adobe Campaign of hoger ](https://experienceleague.adobe.com/docs/campaign/campaign-v8/new/release-notes.html?lang=nl-NL#release-8-4-1).
 
 ## Overzicht {#overview}
 
-Adobe Campaign Managed Cloud Services biedt een platform voor het ontwerpen van de ervaringen van klanten over meerdere kanalen en een omgeving voor visuele campagneorchestratie, real-time interactiebeheer en uitvoering via meerdere kanalen. [ krijgen Begonnen met Campagne ](https://experienceleague.adobe.com/docs/campaign/campaign-v8/start/get-started.html)
+Adobe Campaign Managed Cloud Services biedt een platform voor het ontwerpen van de ervaringen van klanten over meerdere kanalen en een omgeving voor visuele campagneorchestratie, real-time interactiebeheer en uitvoering via meerdere kanalen. [ krijgen Begonnen met Campagne ](https://experienceleague.adobe.com/docs/campaign/campaign-v8/start/get-started.html?lang=nl-NL)
 
 Campagne gebruiken om:
 
@@ -60,7 +60,7 @@ Om u beter te helpen begrijpen hoe en wanneer u de bestemming van de Dienst van 
   >
   >Synchronisatie van profielkenmerken is beschikbaar voor profielen die al aanwezig zijn in de Adobe Campaign-database.
 
-[ Leer meer op de integratie van Adobe Campaign met Adobe Experience Platform ](https://experienceleague.adobe.com/docs/campaign/campaign-v8/connect/ac-aep.html)
+[ Leer meer op de integratie van Adobe Campaign met Adobe Experience Platform ](https://experienceleague.adobe.com/docs/campaign/campaign-v8/connect/ac-aep.html?lang=nl-NL)
 
 ## Ondersteunde identiteiten {#supported-identities}
 
@@ -105,7 +105,7 @@ Als u details voor de bestemming wilt configureren, vult u de vereiste en option
 * **[!UICONTROL Name]**: Een naam waarmee u dit doel in de toekomst herkent.
 * **[!UICONTROL Description]**: Een beschrijving die u zal helpen deze bestemming in de toekomst identificeren.
 * **[!UICONTROL Select instance]**: Uw **[!DNL Campaign]** marketinginstantie.
-* **[!UICONTROL Target mapping]**: selecteer de doeltoewijzing die u in **[!DNL Adobe Campaign]** gebruikt om leveringen te verzenden. [Meer informatie](https://experienceleague.adobe.com/docs/campaign/campaign-v8/profiles-and-audiences/add-profiles/target-mappings.html).
+* **[!UICONTROL Target mapping]**: selecteer de doeltoewijzing die u in **[!DNL Adobe Campaign]** gebruikt om leveringen te verzenden. [Meer informatie](https://experienceleague.adobe.com/docs/campaign/campaign-v8/profiles-and-audiences/add-profiles/target-mappings.html?lang=nl-NL).
 * **[!UICONTROL Select sync type]** :
 
    * **[!UICONTROL Audience sync]**: gebruik deze optie om Adobe Experience Platform-publiek naar Adobe Campaign te sturen.
@@ -130,7 +130,7 @@ Voor meer informatie over marketing acties, zie de [ pagina van het het beleidso
 >* Om gegevens te activeren, hebt u **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, en **[!UICONTROL View Segments]** [ toegangsbeheertoestemmingen ](/help/access-control/home.md#permissions) nodig. Lees het [ overzicht van de toegangscontrole ](/help/access-control/ui/overview.md) of contacteer uw productbeheerder om de vereiste toestemmingen te verkrijgen.
 >* Om *identiteiten* uit te voeren, hebt u de **[!UICONTROL View Identity Graph]** [ toegangsbeheertoestemming ](/help/access-control/home.md#permissions) nodig. <br> ![ Uitgezochte identiteit namespace die in het werkschema wordt benadrukt om publiek aan bestemmingen te activeren.](/help/destinations/assets/overview/export-identities-to-destination.png " Uitgezochte identiteit namespace die in het werkschema wordt benadrukt om publiek aan bestemmingen te activeren."){width="100" zoomable="yes"}
 
-Lees [ activeer publieksgegevens aan de uitvoerbestemmingen van het partijprofiel ](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations.html) voor instructies bij het activeren van publieksgegevens aan deze bestemming.
+Lees [ activeer publieksgegevens aan de uitvoerbestemmingen van het partijprofiel ](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations.html?lang=nl-NL) voor instructies bij het activeren van publieksgegevens aan deze bestemming.
 
 ### Kenmerken en identiteiten toewijzen {#map}
 

@@ -25,7 +25,7 @@ Bekijk de nieuwste verbeteringen in Real-Time CDP-producten en -documentatie. Be
 
 Samenstelling van Federated-doelgroep stelt ondernemingen in staat om gegevens samen te stellen voor een betere toepassing in diverse gebruikssecenario&#39;s. Met deze nieuwe aanpak kunt u als gebruiker van Adobe Real-Time Customer Data Platform en/of Adobe Journey Optimizer datasets rechtstreeks vanuit uw bestaande datawarehouse samenvoegen om Adobe Experience Platform-doelgroepen en -kenmerken in één systeem te maken en te verrijken.
 
-[![ beeld ](assets/do-not-localize/learn-more-button.svg) ](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/home)
+[![ beeld ](assets/do-not-localize/learn-more-button.svg) ](https://experienceleague.adobe.com/nl/docs/federated-audience-composition/using/home)
 
 >[!TAB Van het Geval gebruik Playbooks]  
 
@@ -156,11 +156,11 @@ Bekijk deze drie inleidende video&#39;s voor een beter begrip van Real-Time CDP,
 <table style="margin-top: 0 !important">
 <tr>
   <td>
-    <a href="https://experienceleague.adobe.com/docs/platform-learn/tutorials/intro-to-platform/native-applications.html">
+    <a href="https://experienceleague.adobe.com/docs/platform-learn/tutorials/intro-to-platform/native-applications.html?lang=nl-NL">
       <img alt="Real-Time CDP als onderdeel van de Adobe Experience Cloud-video" src="/help/rtcdp/assets/platform-apps-overview.png" />
     </a>
     <div>
-      <a href="https://experienceleague.adobe.com/docs/platform-learn/tutorials/intro-to-platform/native-applications.html">
+      <a href="https://experienceleague.adobe.com/docs/platform-learn/tutorials/intro-to-platform/native-applications.html?lang=nl-NL">
     <strong> Real-Time CDP als deel van Adobe Experience Cloud </strong>
     </a>
     </div>
@@ -169,11 +169,11 @@ Bekijk deze drie inleidende video&#39;s voor een beter begrip van Real-Time CDP,
     <p>
   </td>
   <td>
-    <a href="https://experienceleague.adobe.com/docs/platform-learn/tutorials/intro-to-platform/basic-architecture.html">
+    <a href="https://experienceleague.adobe.com/docs/platform-learn/tutorials/intro-to-platform/basic-architecture.html?lang=nl-NL">
       <img alt="miniatuurafbeelding voor de &apos;Basisarchitectuur van Adobe Experience Platform&apos;-video" src="/help/rtcdp/assets/platform-architecture-overview.png" />
     </a>
     <div>
-      <a href="https://experienceleague.adobe.com/docs/platform-learn/tutorials/intro-to-platform/basic-architecture.html">
+      <a href="https://experienceleague.adobe.com/docs/platform-learn/tutorials/intro-to-platform/basic-architecture.html?lang=nl-NL">
     <strong> Basisarchitectuur van Adobe Experience Platform </strong>
     </a>
     </div>
@@ -182,11 +182,11 @@ Bekijk deze drie inleidende video&#39;s voor een beter begrip van Real-Time CDP,
     <p>
   </td>
   <td>
-    <a href="https://experienceleague.adobe.com/docs/platform-learn/tutorials/intro-to-platform/interface-tour.html?lang=en">
+    <a href="https://experienceleague.adobe.com/docs/platform-learn/tutorials/intro-to-platform/interface-tour.html?lang=nl-NL">
       <img alt="miniatuurafbeelding voor de video Interface tour of Adobe Experience Platform" src="/help/rtcdp/assets/rtcdp-ui-overview.png" />
     </a>
     <div>
-      <a href="https://experienceleague.adobe.com/docs/platform-learn/tutorials/intro-to-platform/interface-tour.html?lang=en">
+      <a href="https://experienceleague.adobe.com/docs/platform-learn/tutorials/intro-to-platform/interface-tour.html?lang=nl-NL">
     <strong> Rondleiding van de Interface van Adobe Experience Platform </strong>
     </a>
     </div>
@@ -203,10 +203,10 @@ Blader hieronder naar de links om meer inzicht te krijgen in Real-Time CDP-gebru
 
 <table style="table-layout:fixed"><tr style="border: 0;">
 <td><strong> Real-Time CDP </strong><br/>
-<a href="https://experienceleague.adobe.com/docs/platform-learn/tutorials/overview.html?lang=nl" target="_blank"> Leerprogramma's </a> - <a href="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html" target="_blank"> de beschrijving van het Product Real-Time CDP B2C Uitgave </a> - <a href="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html" target="_blank"> B2B edition </a> - <a href="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html" target="_blank"> B2B edition </a> - <a href="https://www.adobe.com/content/dam/cc/en/trust-center/ungated/whitepapers/experience-cloud/ADB_Experience_Platform_Security_Overview.pdf" target="_blank"> het overzicht van de Veiligheid (PDF) </a> - <a href="https://experienceleague.adobe.com/docs/blueprints-learn/architecture/overview.html" target="_blank"> de Blauwdrukken van de Uitvoering </a> - <a href="https://experienceleague.adobe.com/docs/experience-platform/landing/glossary.html" target="_blank"> Verklarende woordenlijst </a>
+<a href="https://experienceleague.adobe.com/docs/platform-learn/tutorials/overview.html?lang=nl" target="_blank"> Leerprogramma's </a> - <a href="https://helpx.adobe.com/nl/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html" target="_blank"> de beschrijving van het Product Real-Time CDP B2C Uitgave </a> - <a href="https://helpx.adobe.com/nl/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html" target="_blank"> B2B edition </a> - <a href="https://helpx.adobe.com/nl/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html" target="_blank"> B2B edition </a> - <a href="https://www.adobe.com/content/dam/cc/en/trust-center/ungated/whitepapers/experience-cloud/ADB_Experience_Platform_Security_Overview.pdf" target="_blank"> het overzicht van de Veiligheid (PDF) </a> - <a href="https://experienceleague.adobe.com/docs/blueprints-learn/architecture/overview.html?lang=nl-NL" target="_blank"> de Blauwdrukken van de Uitvoering </a> - <a href="https://experienceleague.adobe.com/docs/experience-platform/landing/glossary.html?lang=nl-NL" target="_blank"> Verklarende woordenlijst </a>
 </td>
 <td><strong> Adobe Experience Platform </strong><br/>
-<a href="https://experienceleague.adobe.com/docs/experience-platform/landing/home.html" target="_blank"> Documentatie </a> - <a href="https://developer.adobe.com/experience-platform-apis/" target="_blank"> API verwijzing - <a href="https://experienceleague.adobe.com/docs/courses/using/experienceplatform-u-1-2020-1.html" target="_blank"> Cursus: Inleiding aan Experience Platform </a> </a>
+<a href="https://experienceleague.adobe.com/docs/experience-platform/landing/home.html?lang=nl-NL" target="_blank"> Documentatie </a> - <a href="https://developer.adobe.com/experience-platform-apis/" target="_blank"> API verwijzing - <a href="https://experienceleague.adobe.com/docs/courses/using/experienceplatform-u-1-2020-1.html" target="_blank"> Cursus: Inleiding aan Experience Platform </a> </a>
 </td>
 </tr></table>
 

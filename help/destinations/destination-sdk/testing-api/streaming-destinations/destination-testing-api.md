@@ -26,8 +26,8 @@ U kunt de [ generatie API van de profielgeneratie van de Steekproef gebruiken ](
 
 >[!IMPORTANT]
 >
->* Als u deze API wilt gebruiken, moet u een bestaande verbinding met uw doel hebben in de interface van het Experience Platform. Lees [ verbind met bestemming ](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html) en [ activeer profielen en publiek aan een bestemming ](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-segment-streaming-destinations.html) voor meer informatie.
-> * Na het vestigen van de verbinding aan uw bestemming, krijg identiteitskaart van de bestemmingsinstantie die u in API vraag aan dit eindpunt zou moeten gebruiken wanneer [ doorbladert een verbinding met uw bestemming ](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/destination-details-page.html).
+>* Als u deze API wilt gebruiken, moet u een bestaande verbinding met uw doel hebben in de interface van het Experience Platform. Lees [ verbind met bestemming ](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html?lang=nl-NL) en [ activeer profielen en publiek aan een bestemming ](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-segment-streaming-destinations.html?lang=nl-NL) voor meer informatie.
+> * Na het vestigen van de verbinding aan uw bestemming, krijg identiteitskaart van de bestemmingsinstantie die u in API vraag aan dit eindpunt zou moeten gebruiken wanneer [ doorbladert een verbinding met uw bestemming ](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/destination-details-page.html?lang=nl-NL).
 >![UI beeld hoe te om identiteitskaart van de bestemmingsinstantie te krijgen ](../../assets/testing-api/get-destination-instance-id.png)
 
 ## Aan de slag met API-bewerkingen voor doeltesten {#get-started}

@@ -12,7 +12,7 @@ ht-degree: 0%
 
 # Gebeurtenistypen
 
-Op deze pagina worden de Adobe Experience Platform-gebeurtenistypen beschreven die worden geleverd door de tagextensie Adobe Experience Platform Web SDK. Deze worden gebruikt aan [ bouwt regels ](https://experienceleague.adobe.com/docs/platform-learn/data-collection/tags/build-rules.html) en zou niet met het `eventType` gebied in het [`xdm` voorwerp ](/help/web-sdk/commands/sendevent/xdm.md) moeten worden verward.
+Op deze pagina worden de Adobe Experience Platform-gebeurtenistypen beschreven die worden geleverd door de tagextensie Adobe Experience Platform Web SDK. Deze worden gebruikt aan [ bouwt regels ](https://experienceleague.adobe.com/docs/platform-learn/data-collection/tags/build-rules.html?lang=nl-NL) en zou niet met het `eventType` gebied in het [`xdm` voorwerp ](/help/web-sdk/commands/sendevent/xdm.md) moeten worden verward.
 
 ## Monitoringhaak geactiveerd {#monitoring-hook-triggered}
 
@@ -245,7 +245,7 @@ if (discountHtml) {
 
 ### Adobe Target-respontokens openen
 
-De inhoud van Personalization die van Adobe Target is teruggekeerd omvat [ reactietokens ](https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html), die details over de activiteit, de aanbieding, de ervaring, het gebruikersprofiel, geo informatie, en meer zijn. Deze details kunnen met derdehulpmiddelen worden gedeeld of voor het zuiveren worden gebruikt. De tokens van de reactie kunnen in het gebruikersinterface van Adobe Target worden gevormd.
+De inhoud van Personalization die van Adobe Target is teruggekeerd omvat [ reactietokens ](https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html?lang=nl-NL), die details over de activiteit, de aanbieding, de ervaring, het gebruikersprofiel, geo informatie, en meer zijn. Deze details kunnen met derdehulpmiddelen worden gedeeld of voor het zuiveren worden gebruikt. De tokens van de reactie kunnen in het gebruikersinterface van Adobe Target worden gevormd.
 
 In de actie van de Code van de Douane, die in de regel voor de behandeling van reactiegegevens is, kunt u tot verpersoonlijkingsvoorstellen toegang hebben die van de server zijn teruggekeerd. Voer hiertoe de volgende aangepaste code in:
 

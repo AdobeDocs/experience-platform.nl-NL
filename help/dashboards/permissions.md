@@ -19,7 +19,7 @@ Dit document bevat een overzicht van de beschikbare machtigingen voor dashboards
 
 ## Vereisten
 
-Als u toegangsbeheer voor [!DNL Experience Platform] wilt configureren, moet u beheerdersrechten hebben voor een organisatie die een [!DNL Experience Platform] -productintegratie heeft. Zie het artikel van het Centrum van de Hulp van Adobe op [ administratieve rollen ](https://helpx.adobe.com/enterprise/using/admin-roles.html) voor meer informatie.
+Als u toegangsbeheer voor [!DNL Experience Platform] wilt configureren, moet u beheerdersrechten hebben voor een organisatie die een [!DNL Experience Platform] -productintegratie heeft. Zie het artikel van het Centrum van de Hulp van Adobe op [ administratieve rollen ](https://helpx.adobe.com/nl/enterprise/using/admin-roles.html) voor meer informatie.
 
 ## Beschikbare dashboardmachtigingen {#available-permissions}
 

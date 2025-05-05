@@ -17,7 +17,7 @@ ht-degree: 0%
 >
 >Adobe Experience Platform-documentatie is onlangs verplaatst. Neem even de tijd om de nieuwe navigatie te bekijken en bestaande bladwijzers bij te werken.
 
-Adobe Experience Platform-documentatie is beschikbaar voor een aantal Experience Platform-functies en -services. Om tot de documentatie van Experience Platform toegang te hebben, terugkeer aan de [ documentatie landende pagina ](https://experienceleague.adobe.com/docs/experience-platform.html) en selecteer de gids u zou willen bekijken.
+Adobe Experience Platform-documentatie is beschikbaar voor een aantal Experience Platform-functies en -services. Om tot de documentatie van Experience Platform toegang te hebben, terugkeer aan de [ documentatie landende pagina ](https://experienceleague.adobe.com/docs/experience-platform.html?lang=nl-NL) en selecteer de gids u zou willen bekijken.
 
 ## Typen Experience Platform-documentatie
 

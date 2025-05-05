@@ -22,7 +22,7 @@ Deze gids toont u hoe te om toestemmingen voor de eigenschappen van de gegevensi
 
 ## Aan de slag
 
-Om toegangsbeheer voor gegevensinzameling te vormen, moet u beheerdervoorrechten voor een organisatie hebben die een productintegratie met de Inzameling van Gegevens van Adobe Experience Platform heeft. De minimumrol die toestemmingen kan verlenen of terugtrekken is de beheerder van het a **productprofiel**. Andere beheerderrollen die toestemmingen kunnen beheren zijn **productbeheerders** (kan alle profielen binnen een product beheren) en **systeembeheerders** (geen beperkingen). Zie het artikel op [ administratieve rollen ](https://helpx.adobe.com/enterprise/using/admin-roles.html) in de het beleidsgids van de Onderneming van Adobe voor meer informatie.
+Om toegangsbeheer voor gegevensinzameling te vormen, moet u beheerdervoorrechten voor een organisatie hebben die een productintegratie met de Inzameling van Gegevens van Adobe Experience Platform heeft. De minimumrol die toestemmingen kan verlenen of terugtrekken is de beheerder van het a **productprofiel**. Andere beheerderrollen die toestemmingen kunnen beheren zijn **productbeheerders** (kan alle profielen binnen een product beheren) en **systeembeheerders** (geen beperkingen). Zie het artikel op [ administratieve rollen ](https://helpx.adobe.com/nl/enterprise/using/admin-roles.html) in de het beleidsgids van de Onderneming van Adobe voor meer informatie.
 
 In deze handleiding wordt ervan uitgegaan dat u bekend bent met de basisbeginselen van Admin Console, zoals productprofielen en hoe u productmachtigingen toekent aan individuele gebruikers en groepen. Voor meer informatie, zie de [ gebruikersgids van Admin Console ](https://helpx.adobe.com/nl/enterprise/using/admin-console.html).
 
@@ -143,7 +143,7 @@ Als u gebruikers wilt toewijzen aan het productprofiel (en hun de geconfigureerd
 
 ![ Beeld dat het gebruikerslusje voor een productprofiel in Admin Console toont ](./images/permissions/manage-users.png)
 
-Voor meer informatie bij het beheren van gebruikers voor een productprofiel, zie de [ documentatie van Admin Console ](https://helpx.adobe.com/enterprise/using/manage-product-profiles.html).
+Voor meer informatie bij het beheren van gebruikers voor een productprofiel, zie de [ documentatie van Admin Console ](https://helpx.adobe.com/nl/enterprise/using/manage-product-profiles.html).
 
 ## Volgende stappen
 

@@ -1114,7 +1114,7 @@ Als u een GET-verzoek uitvoert om het schema nu op te zoeken, geeft de eigenscha
 
 Schema&#39;s worden gebruikt voor het opnemen van gegevens in [!DNL Experience Platform] . Dit gegeven wordt uiteindelijk gebruikt over de veelvoudige diensten om één enkele, verenigde mening van een individu tot stand te brengen. Om dit proces te helpen, kunnen de zeer belangrijke gebieden als &quot;Identiteit&quot;worden gemerkt en, bij gegevensinvoer, worden de gegevens in die gebieden opgenomen in de Grafiek van de Identiteit voor dat individu. De grafiekgegevens kunnen vervolgens worden benaderd door [[!DNL Real-Time Customer Profile]](../../profile/home.md) en andere [!DNL Experience Platform] -services voor een aan elkaar gekoppelde weergave van elke afzonderlijke klant.
 
-Velden die algemeen als &quot;Identiteit&quot;worden gemerkt omvatten: e-mailadres, telefoonaantal, [[!DNL Experience Cloud ID (ECID)] ](https://experienceleague.adobe.com/docs/id-service/using/home.html), identiteitskaart van CRM, of andere unieke gebieden van identiteitskaart Houd rekening met alle unieke id&#39;s die specifiek zijn voor uw organisatie, omdat dit ook goede identiteitsvelden kunnen zijn.
+Velden die algemeen als &quot;Identiteit&quot;worden gemerkt omvatten: e-mailadres, telefoonaantal, [[!DNL Experience Cloud ID (ECID)] ](https://experienceleague.adobe.com/docs/id-service/using/home.html?lang=nl-NL), identiteitskaart van CRM, of andere unieke gebieden van identiteitskaart Houd rekening met alle unieke id&#39;s die specifiek zijn voor uw organisatie, omdat dit ook goede identiteitsvelden kunnen zijn.
 
 Identiteitsdescriptors geven aan dat de `sourceProperty` van de `sourceSchema` een unieke id is die als een identiteit moet worden beschouwd.
 

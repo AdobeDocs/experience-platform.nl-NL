@@ -26,7 +26,7 @@ Hier volgen de stappen voor het samenstellen van nevenmodellen en het identifice
 
 2. Prioriteit geven aan gebruiksgevallen: welke zijn de hoogste prioriteiten voor het bedrijf?
 
-3. Bouw modellen in Klant AI: bekijk dit [ snelle leerprogramma ](https://experienceleague.adobe.com/docs/platform-learn/tutorials/intelligent-services/configure-customer-ai.html) en verwijs naar onze [ gids UI ](../customer-ai/user-guide/configure.md) voor een geleidelijke proces om een model te bouwen.
+3. Bouw modellen in Klant AI: bekijk dit [ snelle leerprogramma ](https://experienceleague.adobe.com/docs/platform-learn/tutorials/intelligent-services/configure-customer-ai.html?lang=nl-NL) en verwijs naar onze [ gids UI ](../customer-ai/user-guide/configure.md) voor een geleidelijke proces om een model te bouwen.
 
 4. [ bouwt segmenten ](../customer-ai/user-guide/create-segment.md) gebruikend modelresultaten.
 
@@ -49,8 +49,8 @@ De AI van de klant werkt door de volgende datasets te analyseren om te voorspell
 
 - De gegevens van Adobe Analytics die de [ bron van Analytics schakelaar ](../../sources/tutorials/ui/create/adobe-applications/analytics.md) gebruiken
 - Adobe Audience Manager gegevens die de [ bronVerbinding van Audience Manager gebruiken ](../../sources/tutorials/ui/create/adobe-applications/audience-manager.md)
-- [ dataset van de Gebeurtenis van de Ervaring ](https://experienceleague.adobe.com/docs/experience-platform/xdm/classes/experienceevent.html)
-- [ de dataset van de Gebeurtenis van de Ervaring van de consument ](https://experienceleague.adobe.com/docs/experience-platform/intelligent-services/data-preparation.html#cee-schema)
+- [ dataset van de Gebeurtenis van de Ervaring ](https://experienceleague.adobe.com/docs/experience-platform/xdm/classes/experienceevent.html?lang=nl-NL)
+- [ de dataset van de Gebeurtenis van de Ervaring van de consument ](https://experienceleague.adobe.com/docs/experience-platform/intelligent-services/data-preparation.html?lang=nl-NL#cee-schema)
 
 U kunt veelvoudige datasets van verschillende bronnen toevoegen als elk van de datasets het zelfde identiteitstype (namespace) zoals ECID deelt. Voor meer informatie bij het toevoegen van veelvoudige datasets, bezoek de [ AI gebruikersgids van de Klant ](../customer-ai/user-guide/configure.md).
 

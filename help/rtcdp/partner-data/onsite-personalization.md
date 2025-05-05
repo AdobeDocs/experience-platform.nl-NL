@@ -14,7 +14,7 @@ ht-degree: 1%
 
 >[!AVAILABILITY]
 >
->Deze functionaliteit is beschikbaar voor klanten met een licentie voor Real-Time CDP (App Service), Adobe Experience Platform Activation, Real-Time CDP, Real-Time CDP Prime, Real-Time CDP Ultimate. Lees meer over deze pakketten in de [ productbeschrijvingen ](https://helpx.adobe.com/legal/product-descriptions.html) en contacteer uw vertegenwoordiger van Adobe voor meer informatie.
+>Deze functionaliteit is beschikbaar voor klanten met een licentie voor Real-Time CDP (App Service), Adobe Experience Platform Activation, Real-Time CDP, Real-Time CDP Prime, Real-Time CDP Ultimate. Lees meer over deze pakketten in de [ productbeschrijvingen ](https://helpx.adobe.com/nl/legal/product-descriptions.html) en contacteer uw vertegenwoordiger van Adobe voor meer informatie.
 
 Leer hoe u met partnerondersteunde erkenning persoonlijke ervaringen kunt bieden aan bezoekers van webeigenschappen. Gebruik deze zelfstudie om inzicht te krijgen in de implementatiereeks van verschillende elementen in Experience Platform en andere Experience Cloud-oplossingen en om een persoonlijke ervaring weer te geven voor geverifieerde en niet-geverifieerde bezoekers.
 
@@ -73,7 +73,7 @@ Bekijk de videozelfstudie hieronder voor een analyse van hoe u onsite ervaringen
 1. Als a **klant**, vergunning u van de **gegevenspartner** de capaciteit om inzichten in real time op anders anonieme websitebezoekers te halen.
 2. Als a **klant**, stelt u cliënt-zijbibliotheken op uw eigenschappen op om **partner** APIs te roepen en u vormt SDK van het Web of Mobiele SDK om partner-Geleide signalen naar Real-Time CDP te verzenden.
 3. Wanneer het doorbladeren van uw website of app, wordt de **bezoeker** waarschijnlijk erkend door de **partner**, die attributen samen met een identiteitskaart terugkeert.
-4. Real-Time CDP stelt randsegmentatie in werking om inkomende gebeurtenisklappen te evalueren en handhaaft resultaten tegen het [ ECID herkenningsteken ](https://experienceleague.adobe.com/docs/id-service/using/home.html).
+4. Real-Time CDP stelt randsegmentatie in werking om inkomende gebeurtenisklappen te evalueren en handhaaft resultaten tegen het [ ECID herkenningsteken ](https://experienceleague.adobe.com/docs/id-service/using/home.html?lang=nl-NL).
 5. Adobe Target gebruikt de uitvoer van de randsegmentatie om de ervaring terug naar de **bezoeker** voor in-zittingsverpersoonlijking terug te geven.
 6. De gebeurtenis wordt in zijn geheel voor stroomafwaartse werkschema&#39;s zoals analyse en heroriëntering voortgezet.
 
@@ -157,7 +157,7 @@ Vul de vereiste velden in en selecteer **[!UICONTROL Save]** .
 
 ![ Vul vereiste gebieden voor uw nieuw bezit in.](/help/rtcdp/assets/partner-data/onsite-personalization/tag-property-fields.png)
 
-Krijg volledige informatie over hoe te [ tot een markeringsbezit ](https://experienceleague.adobe.com/docs/platform-learn/implement-in-websites/configure-tags/create-a-property.html) leiden.
+Krijg volledige informatie over hoe te [ tot een markeringsbezit ](https://experienceleague.adobe.com/docs/platform-learn/implement-in-websites/configure-tags/create-a-property.html?lang=nl-NL) leiden.
 
 Vervolgens moet u verschillende extensies installeren in de eigenschap. Selecteer de eigenschap tag en ga naar de sectie [!UICONTROL Extensions] .
 
@@ -175,7 +175,7 @@ In deze zelfstudie wordt aangegeven hoe u uw website kunt besturen met Web SDK. 
 
 Navigeer in het scherm om Web SDK te configureren naar de sectie **[!UICONTROL Datastreams]** en geef informatie over de Experience Platform-sandbox die u gebruikt. Selecteer de desbetreffende sandbox en de gegevensstroom die u in de vorige stappen van de volgende vervolgkeuzelijst hebt gemaakt. U kunt dezelfde sandbox- en gegevensstroomwaarden kiezen voor alle andere omgevingen. Laat de andere instellingen ongewijzigd en selecteer **[!UICONTROL Save]** .
 
-Krijg volledige informatie over [ hoe te om het Web SDK ](https://experienceleague.adobe.com/docs/platform-learn/implement-web-sdk/tags-configuration/install-web-sdk.html) te installeren.
+Krijg volledige informatie over [ hoe te om het Web SDK ](https://experienceleague.adobe.com/docs/platform-learn/implement-web-sdk/tags-configuration/install-web-sdk.html?lang=nl-NL) te installeren.
 
 #### ID-serviceversie installeren
 

@@ -23,9 +23,9 @@ ht-degree: 0%
 
 | Weergavenaam | Eigenschap | Gegevenstype | Vereist | Beschrijving |
 |-------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------|-----------|-----------|---------------------------------------------------------------------------------------|
-| [[!UICONTROL Bitrate]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/quality-parameters.html#average-bitrate) | `bitrate` | integer | Nee | De bitsnelheidwaarde (in kbps). |
-| [[!UICONTROL Dropped Frames]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/quality-parameters.html#dropped-frames) | `droppedFrames` | integer | Nee | Het totale aantal frames dat tijdens het afspelen is gedropt. |
-| [[!UICONTROL Frames Per Second]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/quality-parameters.html#frames-per-second) | `framesPerSecond` | integer | Nee | De huidige framesnelheid van de stream (in frames per seconde). |
-| [[!UICONTROL Time To Start]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/quality-parameters.html#time-to-start-1) | `timeToStart` | integer | Nee | Duur (in seconden) tussen het laden van de video en het starten. |
+| [[!UICONTROL Bitrate]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/quality-parameters.html?lang=nl-NL#average-bitrate) | `bitrate` | integer | Nee | De bitsnelheidwaarde (in kbps). |
+| [[!UICONTROL Dropped Frames]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/quality-parameters.html?lang=nl-NL#dropped-frames) | `droppedFrames` | integer | Nee | Het totale aantal frames dat tijdens het afspelen is gedropt. |
+| [[!UICONTROL Frames Per Second]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/quality-parameters.html?lang=nl-NL#frames-per-second) | `framesPerSecond` | integer | Nee | De huidige framesnelheid van de stream (in frames per seconde). |
+| [[!UICONTROL Time To Start]](https://experienceleague.adobe.com/docs/media-analytics/using/implementation/variables/quality-parameters.html?lang=nl-NL#time-to-start-1) | `timeToStart` | integer | Nee | Duur (in seconden) tussen het laden van de video en het starten. |
 
 {style="table-layout:auto"}

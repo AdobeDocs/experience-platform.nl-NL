@@ -16,14 +16,14 @@ De instructies tonen hieronder u hoe te om de het Webinterface van GitHub aan au
 >[!TIP]
 >
 >Raadpleeg ook de ondersteunende documentatie in de handleiding voor contribuanten van de Adobe:
->* [ installeer Git en de Authoring hulpmiddelen van de Prijsverhoging ](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/install-tools.html)
->* &lbrace;de plaats van de Git van de opstelling plaatselijk voor documentatie [&#128279;](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html)
->* [ GitHub bijdragewerkschema voor belangrijke veranderingen ](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/full-workflow.html).
+>* [ installeer Git en de Authoring hulpmiddelen van de Prijsverhoging ](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/install-tools.html?lang=nl-NL)
+>* &lbrace;de plaats van de Git van de opstelling plaatselijk voor documentatie [&#128279;](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html?lang=nl-NL)
+>* [ GitHub bijdragewerkschema voor belangrijke veranderingen ](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/full-workflow.html?lang=nl-NL).
 
 ## Opstelling uw GitHub auteursmilieu {#set-up-environment}
 
 1. Navigeer in uw browser naar `https://github.com/AdobeDocs/experience-platform.en` .
-2. Aan [ vork ](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html#fork-the-repository) de bewaarplaats, klik **Fork** zoals hieronder getoond. Dit leidt tot een exemplaar van de bewaarplaats van het Experience Platform in uw eigen rekening GitHub.
+2. Aan [ vork ](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html?lang=nl-NL#fork-the-repository) de bewaarplaats, klik **Fork** zoals hieronder getoond. Dit leidt tot een exemplaar van de bewaarplaats van het Experience Platform in uw eigen rekening GitHub.
 
    ![ de documentatiebewaarplaats van de Adobe van het Fork ](../assets/docs-framework/ssd-fork-repository.gif)
 
@@ -46,7 +46,7 @@ De instructies tonen hieronder u hoe te om de het Webinterface van GitHub aan au
    >
    >U kunt uw browservenster op elk gewenst moment sluiten en later opnieuw openen. Uw werk wordt automatisch opgeslagen en u zult op u wachten wanneer u browser opnieuw opent.
 3. Kopieer de inhoud van de prijsverhogingsredacteur in uw nieuw dossier in GitHub.
-4. Voor om het even welke screenshots of beelden die u op het gebruiken van plan bent, gebruik de interface GitHub om de dossiers aan `experience-platform.en/help/destinations/assets/catalog/[...]` te uploaden, waar `[...]` de gewenste categorie voor uw bestemming is. Als u bijvoorbeeld een aanpassingsdoel toevoegt aan het Experience Platform, selecteert u de categorie `personalization` . U moet een koppeling maken naar de afbeeldingen op de pagina die u maakt. Zie [ instructies hoe te om aan beelden ](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/linking.html#link-to-images) te verbinden.
+4. Voor om het even welke screenshots of beelden die u op het gebruiken van plan bent, gebruik de interface GitHub om de dossiers aan `experience-platform.en/help/destinations/assets/catalog/[...]` te uploaden, waar `[...]` de gewenste categorie voor uw bestemming is. Als u bijvoorbeeld een aanpassingsdoel toevoegt aan het Experience Platform, selecteert u de categorie `personalization` . U moet een koppeling maken naar de afbeeldingen op de pagina die u maakt. Zie [ instructies hoe te om aan beelden ](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/linking.html?lang=nl-NL#link-to-images) te verbinden.
 
    ![ upload beeld aan GitHub ](../assets/docs-framework/upload-image.gif)
 
@@ -82,4 +82,4 @@ De instructies tonen hieronder u hoe te om de het Webinterface van GitHub aan au
 
 >[!TIP]
 >
->Om beelden en verbindingen aan uw documentatie toe te voegen, en voor een andere vragen rond Markering, lees [ Gebruikend Markdown ](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/markdown.html) in de samenwerkingsgids van de Adobe het schrijven gids.
+>Om beelden en verbindingen aan uw documentatie toe te voegen, en voor een andere vragen rond Markering, lees [ Gebruikend Markdown ](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/markdown.html?lang=nl-NL) in de samenwerkingsgids van de Adobe het schrijven gids.

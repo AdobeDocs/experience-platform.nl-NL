@@ -34,7 +34,7 @@ De volgende punten worden vereist alvorens u begint de bestemming te vormen.
 
 ![](../../assets/catalog/email-marketing/sendgrid/01-api-key.jpg)
 
-Alvorens gegevens aan de bestemming te activeren SendGrid, moet u a [ schema ](https://experienceleague.adobe.com/docs/experience-platform/xdm/schema/composition.html), a [ dataset ](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html), en [ segmenten ](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html) hebben die in [!DNL Experience Platform] worden gecreeerd. Verwijs ook naar de [ grenzen ](#limits) sectie verder hieronder op deze pagina.
+Alvorens gegevens aan de bestemming te activeren SendGrid, moet u a [ schema ](https://experienceleague.adobe.com/docs/experience-platform/xdm/schema/composition.html?lang=nl-NL), a [ dataset ](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html?lang=nl-NL), en [ segmenten ](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html?lang=nl-NL) hebben die in [!DNL Experience Platform] worden gecreeerd. Verwijs ook naar de [ grenzen ](#limits) sectie verder hieronder op deze pagina.
 
 >[!IMPORTANT]
 >
@@ -98,7 +98,7 @@ Om met deze bestemming te verbinden, volg de stappen die in het [ leerprogramma 
 
 ### Doelgegevens invullen {#destination-details}
 
-Terwijl [ vestiging ](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html) deze bestemming, u de volgende informatie moet verstrekken:
+Terwijl [ vestiging ](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html?lang=nl-NL) deze bestemming, u de volgende informatie moet verstrekken:
 
 * **[!UICONTROL Name]**: De naam waarmee u dit doel in de toekomst herkent.
 * **[!UICONTROL Description]**: Een optionele beschrijving waarmee u deze bestemming in de toekomst kunt identificeren.

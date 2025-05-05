@@ -86,7 +86,7 @@ Nee. Elke Adobe Digital Experience-klant kan de Adobe Experience Platform Web SD
 * De klanten die ** hebben geen toegang tot Experience Platform of in real time CDP en wensen te gebruiken [!DNL Web SDK] zullen de juiste toestemmingen moeten vormen om schema&#39;s en gegevensstromen in de Inzameling UI van Gegevens of UI te creëren Experience Platform.
 * Klanten die toegang hebben tot Experience Platform of Real-time CDP en [!DNL Web SDK] willen gebruiken, moeten de juiste machtigingen configureren om schema&#39;s, gegevenssets, naamruimten en gegevensstromen te maken in de gebruikersinterface van de gegevensverzameling of de gebruikersinterface van Experience Platform.
 
-Voor meer informatie bij het vormen van deze toestemmingen zie onze documentatie over [ het beheer van de toestemmingen van de gegevensinzameling ](https://experienceleague.adobe.com/docs/experience-platform/collection/permissions.html).
+Voor meer informatie bij het vormen van deze toestemmingen zie onze documentatie over [ het beheer van de toestemmingen van de gegevensinzameling ](https://experienceleague.adobe.com/docs/experience-platform/collection/permissions.html?lang=nl-NL).
 
 ## Wie moet de Web SDK gebruiken?
 
@@ -152,7 +152,7 @@ Als u onze SDKs gebruikt en XDM naar Edge Network verzendt, staat deze nieuwe ei
 
 ## Wat is een CNAME of een Domein van de Eerste Partij en waarom maakt het van belang?
 
-Meer informatie over een NAAM is beschikbaar in de [ documentatie van Adobe ](https://experienceleague.adobe.com/docs/id-service/using/reference/analytics-reference/cname.html)
+Meer informatie over een NAAM is beschikbaar in de [ documentatie van Adobe ](https://experienceleague.adobe.com/docs/id-service/using/reference/analytics-reference/cname.html?lang=nl-NL)
 
 ## Gebruikt de Adobe Experience Platform Web SDK cookies? Zo ja, welke cookies gebruikt zij?
 

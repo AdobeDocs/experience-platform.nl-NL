@@ -14,7 +14,7 @@ ht-degree: 1%
 
 >[!AVAILABILITY]
 >
->* Deze functionaliteit is beschikbaar voor klanten met een licentie voor Real-Time CDP (App Service), Adobe Experience Platform Activation, Real-Time CDP, Real-Time CDP Prime, Real-Time CDP Ultimate. Lees meer over deze pakketten in de [ productbeschrijvingen ](https://helpx.adobe.com/legal/product-descriptions.html) en contacteer uw vertegenwoordiger van Adobe voor meer informatie.
+>* Deze functionaliteit is beschikbaar voor klanten met een licentie voor Real-Time CDP (App Service), Adobe Experience Platform Activation, Real-Time CDP, Real-Time CDP Prime, Real-Time CDP Ultimate. Lees meer over deze pakketten in de [ productbeschrijvingen ](https://helpx.adobe.com/nl/legal/product-descriptions.html) en contacteer uw vertegenwoordiger van Adobe voor meer informatie.
 
 Gebruik gegevensondersteuning van derden in Real-Time CDP om uw profielbasis uit te breiden met perspectiefprofielen van gegevenspartners en met hen in gesprek te gaan om nieuwe klanten te verkrijgen of te bereiken.
 

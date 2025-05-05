@@ -3,7 +3,7 @@ keywords: profiel;real-time profiel van de klant;het oplossen van problemen;gids
 title: Standaardhulplijnen voor Real-Time Customer Data Platform B2B edition
 type: Documentation
 description: Adobe Experience Platform gebruikt een sterk gedenormaliseerd hybride gegevensmodel dat verschilt van het traditionele relationele gegevensmodel. Dit document biedt standaardgebruiks- en tarieflimieten om u te helpen uw gegevens te modelleren voor optimale systeemprestaties met Adobe Real-Time Customer Data Platform B2B edition.
-badgeB2B: label="B2B edition" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
+badgeB2B: label="B2B edition" type="Informative" url="https://helpx.adobe.com/nl/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
 feature: Guardrails, B2B
 exl-id: 8eff8c3f-a250-4aec-92a1-719ce4281272
 source-git-commit: bc399f3af0524232671af780ea1380f1a71a5b7e
@@ -23,7 +23,7 @@ Met Real-Time Customer Data Platform B2B edition kunt u persoonlijke kanaalervar
 
 >[!IMPORTANT]
 >
->Controleer uw vergunningsrechten in uw Orde van de Verkoop en de overeenkomstige [ Beschrijving van het Product ](https://helpx.adobe.com/legal/product-descriptions.html) op daadwerkelijke gebruiksgrenzen naast deze guardrails pagina.
+>Controleer uw vergunningsrechten in uw Orde van de Verkoop en de overeenkomstige [ Beschrijving van het Product ](https://helpx.adobe.com/nl/legal/product-descriptions.html) op daadwerkelijke gebruiksgrenzen naast deze guardrails pagina.
 
 Dit document biedt standaardgebruiks- en tarieflimieten om u te helpen uw gegevens te modelleren voor optimale systeemprestaties. Bij het bekijken van de volgende instructies wordt aangenomen dat u de gegevens correct hebt gemodelleerd. Als u vragen hebt over het modelleren van uw gegevens, neemt u contact op met uw medewerker van de klantenservice.
 

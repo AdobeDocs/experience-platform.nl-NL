@@ -30,7 +30,7 @@ Voordat u een bronverbinding kunt maken om uw campagne v8 naar Experience Platfo
 
 >[!IMPORTANT]
 >
->U moet toegang hebben tot de Adobe Campaign v8 Client Console om uw logboekgegevens in Campagne te bekijken. Bezoek de [ documentatie van de Campagne v8 ](https://experienceleague.adobe.com/docs/campaign/campaign-v8/deploy/connect.html) voor informatie over hoe te om de cliëntconsole te downloaden en te installeren.
+>U moet toegang hebben tot de Adobe Campaign v8 Client Console om uw logboekgegevens in Campagne te bekijken. Bezoek de [ documentatie van de Campagne v8 ](https://experienceleague.adobe.com/docs/campaign/campaign-v8/deploy/connect.html?lang=nl-NL) voor informatie over hoe te om de cliëntconsole te downloaden en te installeren.
 
 Meld u via de clientconsole aan bij uw Campagne v8-exemplaar. Selecteer [!DNL Administration] onder de tab [!DNL Explorer] en selecteer vervolgens [!DNL Configuration] . Selecteer vervolgens [!DNL Data schemas] en pas vervolgens het filter `broadLog` toe voor de naam of het label. Selecteer in de lijst die wordt weergegeven, het bronschema voor de logbestand van de geadresseerde met de naam `broadLogRcp` .
 

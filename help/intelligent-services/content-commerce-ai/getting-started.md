@@ -67,6 +67,6 @@ Deze gids verstrekt voorbeeld API vraag om aan te tonen hoe te om uw verzoeken t
 
 Zodra u al uw referenties hebt, kunt u een aangepaste worker instellen voor [!DNL Content tagging] . De volgende documenten helpen bij het begrijpen van het uitbreidingsframework en de omgeving.
 
-Meer over het Kader van de Rekbaarheid leren, begin door de [ inleiding aan rekbaarheid ](https://experienceleague.adobe.com/docs/asset-compute/using/extend/understand-extensibility.html) document te lezen. In dit document worden de voorwaarden en de inrichtingsvereisten beschreven.
+Meer over het Kader van de Rekbaarheid leren, begin door de [ inleiding aan rekbaarheid ](https://experienceleague.adobe.com/docs/asset-compute/using/extend/understand-extensibility.html?lang=nl-NL) document te lezen. In dit document worden de voorwaarden en de inrichtingsvereisten beschreven.
 
-Om meer over vestiging te leren een milieu voor [!DNL Content tagging], begin door de gids voor [ te lezen vestiging een ontwikkelaarmilieu ](https://experienceleague.adobe.com/docs/asset-compute/using/extend/setup-environment.html). Dit document bevat instellingsinstructies waarmee u de service Asset compute kunt ontwikkelen.
+Om meer over vestiging te leren een milieu voor [!DNL Content tagging], begin door de gids voor [ te lezen vestiging een ontwikkelaarmilieu ](https://experienceleague.adobe.com/docs/asset-compute/using/extend/setup-environment.html?lang=nl-NL). Dit document bevat instellingsinstructies waarmee u de service Asset compute kunt ontwikkelen.

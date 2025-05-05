@@ -62,7 +62,7 @@ U kunt de lijst van gebieden vinden die u in de [ Web van de weerverwijzing ](we
 
 ### Adobe Customer Journey Analytics {#cja}
 
-In [!DNL Adobe Customer Journey Analytics] zijn de weergegevens beschikbaar in de gegevensset die in de gegevensstroom is opgegeven. Zolang de weerattributen [ aan uw schema ](#prerequisites-prerequisites) worden toegevoegd, zijn zij beschikbaar aan [ toevoegen aan een gegevensmening ](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-dataviews/create-dataview.html) in [!DNL Customer Journey Analytics].
+In [!DNL Adobe Customer Journey Analytics] zijn de weergegevens beschikbaar in de gegevensset die in de gegevensstroom is opgegeven. Zolang de weerattributen [ aan uw schema ](#prerequisites-prerequisites) worden toegevoegd, zijn zij beschikbaar aan [ toevoegen aan een gegevensmening ](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-dataviews/create-dataview.html?lang=nl-NL) in [!DNL Customer Journey Analytics].
 
 ### Real-Time Customer Data Platform {#rtcdp}
 

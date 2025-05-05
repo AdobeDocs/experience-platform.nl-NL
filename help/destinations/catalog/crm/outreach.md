@@ -28,7 +28,7 @@ Als marketeer kunt u persoonlijke ervaringen aan uw vooruitzichten bieden op bas
 
 ### Experience Platform-voorwaarden {#prerequisites-in-experience-platform}
 
-Alvorens gegevens aan de [!DNL Outreach] bestemming te activeren, moet u a [ schema ](/help/xdm/schema/composition.md), a [ dataset ](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html) hebben, en [ segmenten ](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html) die in [!DNL Experience Platform] worden gecreeerd.
+Alvorens gegevens aan de [!DNL Outreach] bestemming te activeren, moet u a [ schema ](/help/xdm/schema/composition.md), a [ dataset ](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-ingestion/create-datasets-and-ingest-data.html?lang=nl-NL) hebben, en [ segmenten ](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html?lang=nl-NL) die in [!DNL Experience Platform] worden gecreeerd.
 
 Verwijs naar de documentatie van Adobe voor [ het schemagroep van de Details van het Lidmaatschap van het Publiek ](/help/xdm/field-groups/profile/segmentation.md) als u begeleiding op publieksstatistieken nodig hebt.
 

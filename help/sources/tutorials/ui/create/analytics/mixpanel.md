@@ -65,7 +65,7 @@ Als u een nieuwe account maakt, selecteert u **[!UICONTROL New account]** en gee
 >id="platform_sources_mixpanel_timezone"
 >title="Tijdzone instellen voor opnemen in Mixpanel"
 >abstract="De tijdzone moet hetzelfde zijn als de tijdzone-instelling van uw Mixpanel-profiel, omdat Experience Platform de toegewezen projecttijdzone gebruikt om relevante gegevens in te voeren vanuit Mixpanel. Mixpanel zal zijn timezone aanpassen om met uw projecttimezone te coördineren alvorens de gebeurtenis aan een Mixpanel gegevensopslag te registreren."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/sources/ui-tutorials/create/analytics/mixpanel.html#project-id-and-timezone" text="Meer informatie in documentatie"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/sources/ui-tutorials/create/analytics/mixpanel.html?lang=nl-NL#project-id-and-timezone" text="Meer informatie in documentatie"
 
 Nadat de bron is geverifieerd, geeft u uw project-id en tijdzone op en selecteert u **[!UICONTROL Select]** .
 

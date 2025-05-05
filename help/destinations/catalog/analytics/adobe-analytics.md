@@ -42,7 +42,7 @@ Selecteer de eigenschap tag waarin u de extensie wilt installeren. U kunt ook ee
 
 De werkstroom neemt u aan de UI van de Inzameling van Gegevens om de installatie te voltooien.
 
-Voor informatie over de opties van de uitbreidingsconfiguratie, zie de [ de uitbreidingspagina van Adobe Analytics ](https://experienceleague.adobe.com/docs/platform-learn/implement-in-websites/implement-solutions/analytics.html) de markeringsdocumentatie.
+Voor informatie over de opties van de uitbreidingsconfiguratie, zie de [ de uitbreidingspagina van Adobe Analytics ](https://experienceleague.adobe.com/docs/platform-learn/implement-in-websites/implement-solutions/analytics.html?lang=nl-NL) de markeringsdocumentatie.
 
 U kunt de uitbreiding direct in [ de Inzameling UI van Gegevens ](https://experience.adobe.com/#/data-collection/) ook installeren. Zie de gids op [ toevoegend een nieuwe uitbreiding ](../../../tags/ui/managing-resources/extensions/overview.md#add-a-new-extension) voor meer informatie.
 

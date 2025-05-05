@@ -16,7 +16,7 @@ De eigenschap `thirdPartyCookiesEnabled` is een Booleaanse waarde die bepaalt of
 
 De eigenschap `thirdPartyCookiesEnabled` bepaalt ook of een [`CORE ID`](../../identity/overview.md#tracking-coreid-web-sdk) kan worden opgevraagd voor [`getIdentity`](../getidentity.md) -aanroepen.
 
-Als deze optie is ingeschakeld, gebruikt de Web SDK Adobe Audience Manager om een bezoeker te identificeren. Wanneer deze optie is uitgeschakeld, wordt de aanroep naar de Audience Manager uitgeschakeld. Zie [ Begrip vraag aan het domein van de Index ](https://experienceleague.adobe.com/docs/audience-manager/user-guide/reference/demdex-calls.html) in de gebruikersgids van de Audience Manager voor meer informatie.
+Als deze optie is ingeschakeld, gebruikt de Web SDK Adobe Audience Manager om een bezoeker te identificeren. Wanneer deze optie is uitgeschakeld, wordt de aanroep naar de Audience Manager uitgeschakeld. Zie [ Begrip vraag aan het domein van de Index ](https://experienceleague.adobe.com/docs/audience-manager/user-guide/reference/demdex-calls.html?lang=nl-NL) in de gebruikersgids van de Audience Manager voor meer informatie.
 
 ## Cookies van andere bedrijven inschakelen met de webSDK-tagextensie
 

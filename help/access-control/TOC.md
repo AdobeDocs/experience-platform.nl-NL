@@ -50,4 +50,4 @@ ht-degree: 44%
    * [Effectief beleid weergeven](api/effective-policies.md)
 * [Handleiding voor probleemoplossing](troubleshooting-guide.md)
 * [ API verwijzing ](https://www.adobe.io/experience-platform-apis/references/access-control/)
-* [Releaseopmerkingen bij Experience Platform](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)
+* [Releaseopmerkingen bij Experience Platform](https://experienceleague.adobe.com/nl/docs/experience-platform/release-notes/latest)

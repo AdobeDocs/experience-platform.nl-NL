@@ -46,7 +46,7 @@ Als u dit geval wilt gebruiken, moet u meerdere gebieden van Adobe Experience Pl
 - [Gegevenssets](../../catalog/datasets/overview.md)
 - [Schema&#39;s](../../xdm//home.md)
 - [Doelgroepen](../../segmentation/home.md)
-- [ reizen van Adobe Journey Optimizer ](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/orchestrate-journeys/journey)
+- [ reizen van Adobe Journey Optimizer ](https://experienceleague.adobe.com/nl/docs/journey-optimizer/using/orchestrate-journeys/journey)
 
 ## Hoe het gebruiksgeval te bereiken: overzicht op hoog niveau {#achieve-the-use-case-high-level}
 
@@ -89,7 +89,7 @@ Nu uw gouden sandboxpakket klaar is, hebt u een gestandaardiseerd expertisecentr
 
 >[!NOTE]
 >
-> De bovenstaande stappen volgen het proces in de gebruikersinterface van Experience Platform. Het is mogelijk om dezelfde stappen te volgen gebruikend API door diverse eindpunten. Verwijs naar de `sandboxes` [ eindpuntgids ](https://experienceleague.adobe.com/en/docs/experience-platform/sandbox/api/sandboxes#create) en de `packages` [ eindpuntgids ](https://experienceleague.adobe.com/en/docs/experience-platform/sandbox/sandbox-tooling-api/packages) voor informatie bij het maken van elk verzoek door API.
+> De bovenstaande stappen volgen het proces in de gebruikersinterface van Experience Platform. Het is mogelijk om dezelfde stappen te volgen gebruikend API door diverse eindpunten. Verwijs naar de `sandboxes` [ eindpuntgids ](https://experienceleague.adobe.com/nl/docs/experience-platform/sandbox/api/sandboxes#create) en de `packages` [ eindpuntgids ](https://experienceleague.adobe.com/nl/docs/experience-platform/sandbox/sandbox-tooling-api/packages) voor informatie bij het maken van elk verzoek door API.
 
 ## Andere gebruiksgevallen die worden bereikt via ondersteuning van partnergegevens {#other-use-cases}
 

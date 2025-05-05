@@ -46,8 +46,8 @@ Als u de id van een doelinstantie wilt ophalen, moet u eerst een verbinding make
 
 >[!IMPORTANT]
 >
->* Als u deze API wilt gebruiken, moet u een bestaande verbinding met uw doel hebben in de gebruikersinterface van Experience Platform. Lees [ verbind met bestemming ](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html) en [ activeer profielen en publiek aan een bestemming ](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-segment-streaming-destinations.html) voor meer informatie.
-> * Na het vestigen van de verbinding aan uw bestemming, krijg identiteitskaart van de bestemmingsinstantie die u in API vraag aan dit eindpunt zou moeten gebruiken wanneer [ doorbladert een verbinding met uw bestemming ](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/destination-details-page.html).
+>* Als u deze API wilt gebruiken, moet u een bestaande verbinding met uw doel hebben in de gebruikersinterface van Experience Platform. Lees [ verbind met bestemming ](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html?lang=nl-NL) en [ activeer profielen en publiek aan een bestemming ](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-segment-streaming-destinations.html?lang=nl-NL) voor meer informatie.
+> * Na het vestigen van de verbinding aan uw bestemming, krijg identiteitskaart van de bestemmingsinstantie die u in API vraag aan dit eindpunt zou moeten gebruiken wanneer [ doorbladert een verbinding met uw bestemming ](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/destination-details-page.html?lang=nl-NL).
 >![UI beeld hoe te om identiteitskaart van de bestemmingsinstantie te krijgen ](../../assets/testing-api/get-destination-instance-id.png)
 
 **API formaat**
@@ -180,10 +180,10 @@ Een succesvolle reactie keert status 200 van HTTP met het gespecificeerde aantal
 
 | Eigenschap | Beschrijving |
 | -------- | ----------- |
-| `segmentMembership` | A map object that describes the person&#39;s publiek membership. Voor meer informatie over `segmentMembership`, lees [ de Details van het Lidmaatschap van de Publiek ](https://experienceleague.adobe.com/docs/experience-platform/xdm/field-groups/profile/segmentation.html). |
+| `segmentMembership` | A map object that describes the person&#39;s publiek membership. Voor meer informatie over `segmentMembership`, lees [ de Details van het Lidmaatschap van de Publiek ](https://experienceleague.adobe.com/docs/experience-platform/xdm/field-groups/profile/segmentation.html?lang=nl-NL). |
 | `lastQualificationTime` | Een tijdstempel van de laatste keer dat dit profiel voor het segment kwalificeerde. |
 | `xdm:status` | Een tekenreeksveld dat aangeeft of het publieklidmaatschap is gerealiseerd als onderdeel van de huidige aanvraag. De volgende waarden worden geaccepteerd: <ul><li>`realized`: Het profiel maakt deel uit van het segment.</li><li>`exited`: Het profiel sluit het publiek af als onderdeel van de huidige aanvraag.</li></ul> |
-| `identityMap` | A map-type field that describes the various identity values for an individual, together with their associated namespaces. Voor meer informatie over `identityMap`, lees [ Basis van schemacompositie ](https://experienceleague.adobe.com/docs/experience-platform/xdm/schema/composition.html#identityMap). |
+| `identityMap` | A map-type field that describes the various identity values for an individual, together with their associated namespaces. Voor meer informatie over `identityMap`, lees [ Basis van schemacompositie ](https://experienceleague.adobe.com/docs/experience-platform/xdm/schema/composition.html?lang=nl-NL#identityMap). |
 
 {style="table-layout:auto"}
 

@@ -127,4 +127,4 @@ De volgende documenten bieden aanvullende informatie over nuances rond de [!DNL 
 * [ creeer een Rekening van de Dienst van Adobe (JWT) in het Portaal van Adobe Developer ](https://developer.adobe.com/developer-console/docs/guides/authentication/ServiceAccountIntegration/)
 * [Een schema maken in de API](../../../../../xdm/tutorials/create-schema-api.md)
 * [Een schema maken in de gebruikersinterface](../../../../../xdm/tutorials/create-schema-ui.md)
-* [ bepaalt de Gebieden van de Identiteit in UI ](https://experienceleague.adobe.com/docs/experience-platform/xdm/ui/fields/identity.html)
+* [ bepaalt de Gebieden van de Identiteit in UI ](https://experienceleague.adobe.com/docs/experience-platform/xdm/ui/fields/identity.html?lang=nl-NL)

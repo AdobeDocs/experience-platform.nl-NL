@@ -77,7 +77,7 @@ Als een bepaalde baan nog hangend is, of een fout heeft teruggekeerd, kunt u de 
 
 ## Toegang tot aanvraaggegevens {#access-request-data}
 
-Wanneer de gegevens-onderwerp informatie wordt gevraagd, keert elke dienst gegevens in een formaat terug dat met de manier verenigbaar is zij opslaan en die gegevens gebruiken. Nadat alle services de aanvraag hebben voltooid, wordt in de taakdetails een URL voor het ZIP-archiefbestand opgegeven, zodat deze gegevens kunnen worden gedownload. Zie de het oplossen van problemengids voor informatie over [ hoe te om de resultaten van de privacybaan ](https://experienceleague.adobe.com/docs/experience-platform/privacy/troubleshooting-guide.html?lang=en#how-do-i-download-the-results-of-my-completed-privacy-jobs%3F) te downloaden.
+Wanneer de gegevens-onderwerp informatie wordt gevraagd, keert elke dienst gegevens in een formaat terug dat met de manier verenigbaar is zij opslaan en die gegevens gebruiken. Nadat alle services de aanvraag hebben voltooid, wordt in de taakdetails een URL voor het ZIP-archiefbestand opgegeven, zodat deze gegevens kunnen worden gedownload. Zie de het oplossen van problemengids voor informatie over [ hoe te om de resultaten van de privacybaan ](https://experienceleague.adobe.com/docs/experience-platform/privacy/troubleshooting-guide.html?lang=nl-NL#how-do-i-download-the-results-of-my-completed-privacy-jobs%3F) te downloaden.
 
 Hieronder volgt een overzicht van de belangrijkste opmerkingen met betrekking tot het beheer van het gegevensarchief:
 

@@ -17,7 +17,7 @@ Gegevens die op Adobe Experience Platform zijn opgeslagen, worden in rust gecode
 
 >[!AVAILABILITY]
 >
->Adobe Experience Platform ondersteunt Customer Managed Keys (CMK) voor zowel Microsoft Azure als Amazon Web Services (AWS). Experience Platform die op AWS wordt uitgevoerd, is momenteel beschikbaar voor een beperkt aantal klanten. Als uw implementatie op AWS wordt uitgevoerd, kunt u de Key Management Service (KMS) voor Experience Platform-gegevenscodering gebruiken. Voor meer informatie over de gesteunde infrastructuur, zie het [ multi-wolkenoverzicht van Experience Platform ](https://experienceleague.adobe.com/en/docs/experience-platform/landing/multi-cloud).
+>Adobe Experience Platform ondersteunt Customer Managed Keys (CMK) voor zowel Microsoft Azure als Amazon Web Services (AWS). Experience Platform die op AWS wordt uitgevoerd, is momenteel beschikbaar voor een beperkt aantal klanten. Als uw implementatie op AWS wordt uitgevoerd, kunt u de Key Management Service (KMS) voor Experience Platform-gegevenscodering gebruiken. Voor meer informatie over de gesteunde infrastructuur, zie het [ multi-wolkenoverzicht van Experience Platform ](https://experienceleague.adobe.com/nl/docs/experience-platform/landing/multi-cloud).
 >
 >Om over encryptie zeer belangrijke verwezenlijking en beheer in AWS KMS te leren, verwijs naar de [ handleiding van de gegevensencryptie van AWS KMS ](./aws/configure-kms.md). Voor Azure implementaties, zie de [ Azure Zeer belangrijke de configuratiegids van de Vault ](./azure/azure-key-vault-config.md).
 
@@ -29,7 +29,7 @@ Dit document biedt een uitgebreid overzicht van het proces voor het inschakelen 
 
 >[!NOTE]
 >
->Voor klanten van Customer Journey Analytics, te volgen gelieve de instructies in de [ documentatie van Customer Journey Analytics ](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-privacy/cmk.html).
+>Voor klanten van Customer Journey Analytics, te volgen gelieve de instructies in de [ documentatie van Customer Journey Analytics ](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-privacy/cmk.html?lang=nl-NL).
 
 ## Vereisten
 
@@ -39,7 +39,7 @@ Om CMK in te schakelen, moet de hostingomgeving van uw platform ([!DNL Azure] of
 
 Als u de sectie [!UICONTROL Encryption] in Adobe Experience Platform wilt weergeven en openen, moet u een rol hebben gemaakt en de machtiging [!UICONTROL Manage Customer Managed Key] aan die rol hebben toegewezen.  Elke gebruiker met de machtiging [!UICONTROL Manage Customer Managed Key] kan CMK inschakelen voor zijn of haar organisatie.
 
-Voor meer informatie bij het toewijzen van rollen en toestemmingen in Experience Platform, verwijs naar [ vormen toestemmingendocumentatie ](https://experienceleague.adobe.com/docs/platform-learn/getting-started-for-data-architects-and-data-engineers/configure-permissions.html).
+Voor meer informatie bij het toewijzen van rollen en toestemmingen in Experience Platform, verwijs naar [ vormen toestemmingendocumentatie ](https://experienceleague.adobe.com/docs/platform-learn/getting-started-for-data-architects-and-data-engineers/configure-permissions.html?lang=nl-NL).
 
 ### Azure-specifieke voorwaarden
 
@@ -109,7 +109,7 @@ Het dashboard Profiel zal bijvoorbeeld gegevens van zijn geheime voorgeheugen bl
 
 >[!TIP]
 >
->Er zijn twee gebruik-geval-specifieke uitzonderingen op de zeven dagen datasetvervaldatum op niet primaire (caching/transient) gegevens. Raadpleeg de documentatie bij deze pagina voor meer informatie over deze functies.<ul><li>[ Adobe Journey Optimizer URL Shortener ](https://experienceleague.adobe.com/docs/journey-optimizer/using/sms/sms-configuration.html#message-preset-sms)</li><li>[ de Projecties van Edge ](https://experienceleague.adobe.com/docs/experience-platform/profile/home.html#edge-projections)</li></ul>
+>Er zijn twee gebruik-geval-specifieke uitzonderingen op de zeven dagen datasetvervaldatum op niet primaire (caching/transient) gegevens. Raadpleeg de documentatie bij deze pagina voor meer informatie over deze functies.<ul><li>[ Adobe Journey Optimizer URL Shortener ](https://experienceleague.adobe.com/docs/journey-optimizer/using/sms/sms-configuration.html?lang=nl-NL#message-preset-sms)</li><li>[ de Projecties van Edge ](https://experienceleague.adobe.com/docs/experience-platform/profile/home.html?lang=nl-NL#edge-projections)</li></ul>
 
 ## Volgende stappen
 

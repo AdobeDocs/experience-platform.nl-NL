@@ -16,7 +16,7 @@ ht-degree: 0%
 
 Met Adobe Live kunt u een constante stroom door gebruikers gegenereerde inhoud op uw website detecteren, organiseren en publiceren om authentieke en zeer persoonlijke ervaringen te creëren.
 
-Adobe Livefyre is een sociale extensie in Adobe Experience Platform. Voor meer informatie over het Leven van Adobe, lees de [ Leven implementatiegids ](https://experienceleague.adobe.com/docs/livefyre/implementation/home.html).
+Adobe Livefyre is een sociale extensie in Adobe Experience Platform. Voor meer informatie over het Leven van Adobe, lees de [ Leven implementatiegids ](https://experienceleague.adobe.com/docs/livefyre/implementation/home.html?lang=nl-NL).
 
 Dit doel is een tagextensie. Voor meer informatie over hoe de uitbreidingen van markeringen in Experience Platform werken, zie het [ overzicht van markeringsuitbreidingen ](../launch-extensions/overview.md).
 

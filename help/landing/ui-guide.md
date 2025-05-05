@@ -159,16 +159,16 @@ In de sectie **[!UICONTROL Monitoring]** kunt u de opname via batches en streami
 
 ### [!UICONTROL Federated data]
 
-In de sectie **[!UICONTROL Models]** kunt u gegevensmodellen en -schema&#39;s ontwerpen en maken die de structuur, relaties en beperkingen van uw gegevens definiëren. U kunt meer informatie over de gegevensmodellen en de schema&#39;s in de [ Federated de gebruikersgids van de Samenstelling van de Auditie ](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/config/datamodel/schemas) vinden.
+In de sectie **[!UICONTROL Models]** kunt u gegevensmodellen en -schema&#39;s ontwerpen en maken die de structuur, relaties en beperkingen van uw gegevens definiëren. U kunt meer informatie over de gegevensmodellen en de schema&#39;s in de [ Federated de gebruikersgids van de Samenstelling van de Auditie ](https://experienceleague.adobe.com/nl/docs/federated-audience-composition/using/config/datamodel/schemas) vinden.
 
 De sectie **[!UICONTROL Audit trail]** biedt een gedetailleerd en chronologisch overzicht van alle acties en gebeurtenissen die in realtime in uw omgeving zijn uitgevoerd. U kunt meer informatie over het controletraject in de [ Federated de gebruikersgids van de Samenstelling van de Auditie ](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/audit-trail/audit-trail) vinden.
 
 
-Met de sectie **[!UICONTROL Federated databases]** kunt u Adobe Experience Platform verbinden met uw zakelijke gegevenspakhuis. U kunt meer informatie over verbinding aan gefederaliseerde gegevensbestanden in de [ Federated de gebruikersgids van de Samenstelling van de Auditie ](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/config/federated-db) vinden.
+Met de sectie **[!UICONTROL Federated databases]** kunt u Adobe Experience Platform verbinden met uw zakelijke gegevenspakhuis. U kunt meer informatie over verbinding aan gefederaliseerde gegevensbestanden in de [ Federated de gebruikersgids van de Samenstelling van de Auditie ](https://experienceleague.adobe.com/nl/docs/federated-audience-composition/using/config/federated-db) vinden.
 
 ### [!UICONTROL Decisioning]
 
-Adobe Journey Optimizer is een toepassingsservice die op Experience Platform is gebouwd. Het staat u toe om krachtige beslissingstechnologieën te gebruiken om de beste aanbieding en ervaring aan uw klanten over alle aanrakingspunten op het juiste ogenblik te leveren. Meer over Journey Optimizer leren, met inbegrip van het werken met [!UICONTROL Offers] en [!UICONTROL Activities] bezoek de [ documentatie van Journey Optimizer ](https://experienceleague.adobe.com/docs/journey-optimizer.html).
+Adobe Journey Optimizer is een toepassingsservice die op Experience Platform is gebouwd. Het staat u toe om krachtige beslissingstechnologieën te gebruiken om de beste aanbieding en ervaring aan uw klanten over alle aanrakingspunten op het juiste ogenblik te leveren. Meer over Journey Optimizer leren, met inbegrip van het werken met [!UICONTROL Offers] en [!UICONTROL Activities] bezoek de [ documentatie van Journey Optimizer ](https://experienceleague.adobe.com/docs/journey-optimizer.html?lang=nl-NL).
 
 ### [!UICONTROL Administration]
 

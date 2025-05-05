@@ -76,7 +76,7 @@ Opstelling een gebeurtenis door:sturen binnen Platform om verzamelde gegevens va
 
 Zorg ervoor dat de extensie voor herbestemming buiten de site is gekoppeld aan een geldige gebeurtenisregel in de gegevensverzameling van Adobe Experience Platform. Doorgaans moet een algemene regel worden gemaakt die op toetshandelingen, zoals `page load` of specifieke gebruikersinteracties, wordt geactiveerd.
 
-Meer leren over het vormen van de uitbreiding, lees de [ Gebeurtenis door:sturen ](https://experienceleague.adobe.com/en/docs/experience-platform/tags/event-forwarding/getting-started) documentatie.
+Meer leren over het vormen van de uitbreiding, lees de [ Gebeurtenis door:sturen ](https://experienceleague.adobe.com/nl/docs/experience-platform/tags/event-forwarding/getting-started) documentatie.
 
 ## Andere gebruiksgevallen {#other-use-cases}
 

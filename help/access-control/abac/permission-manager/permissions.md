@@ -23,7 +23,7 @@ Gebruik eenvoudige query&#39;s in de [!UICONTROL Permission Manager] om beknopte
 >id="platform_permission_manager"
 >title="Machtigingsmanager"
 >abstract="Gebruik de dropdown selecteurs op de pagina om de rapporten van het toegangsniveau van verschillende granularity niveaus voor gebruikers en rollen te krijgen."
-<!-- >additional-url="https://experienceleague.adobe.com/docs/experience-platform/access-control/abac/permissions-manager/permissions.html" text="Permission manager" -->
+<!-- >additional-url="https://experienceleague.adobe.com/docs/experience-platform/access-control/abac/permissions-manager/permissions.html?lang=nl-NL" text="Permission manager" -->
 
 Selecteer het kenmerk **[!UICONTROL Users]** met het keuzemenu.
 

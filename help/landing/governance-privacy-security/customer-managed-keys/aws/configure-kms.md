@@ -13,13 +13,13 @@ ht-degree: 0%
 
 >[!AVAILABILITY]
 >
->Dit document is van toepassing op implementaties van Experience Platform die op Amazon Web Services (AWS) worden uitgevoerd. Experience Platform die op AWS wordt uitgevoerd, is momenteel beschikbaar voor een beperkt aantal klanten. Meer over de gesteunde infrastructuur van Experience Platform leren, zie het [ multi-wolkenoverzicht van Experience Platform ](https://experienceleague.adobe.com/en/docs/experience-platform/landing/multi-cloud).
+>Dit document is van toepassing op implementaties van Experience Platform die op Amazon Web Services (AWS) worden uitgevoerd. Experience Platform die op AWS wordt uitgevoerd, is momenteel beschikbaar voor een beperkt aantal klanten. Meer over de gesteunde infrastructuur van Experience Platform leren, zie het [ multi-wolkenoverzicht van Experience Platform ](https://experienceleague.adobe.com/nl/docs/experience-platform/landing/multi-cloud).
 >
 >[ Klant Beheerde Sleutels ](../overview.md) (CMK) op AWS worden gesteund voor Privacy en het Schild van de Veiligheid maar zijn niet beschikbaar voor het Schild van de Gezondheidszorg. CMK on Azure wordt ondersteund voor zowel het privacyschild als het beveiligingsschild.
 
 Met deze handleiding kunt u uw gegevens beveiligen met Amazon Web Services (AWS) Key Management Service (KMS) door coderingssleutels voor Adobe Experience Platform te maken, te beheren en te beheren. Deze integratie vereenvoudigt naleving, stroomlijnt verrichtingen door automatisering, en elimineert de behoefte om uw eigen zeer belangrijke beheerinfrastructuur te handhaven.
 
-Voor Customer Journey Analytics-specifieke instructies, verwijs naar de [ documentatie van Customer Journey Analytics CMK ](https://experienceleague.adobe.com/en/docs/analytics-platform/using/cja-privacy/cmk)
+Voor Customer Journey Analytics-specifieke instructies, verwijs naar de [ documentatie van Customer Journey Analytics CMK ](https://experienceleague.adobe.com/nl/docs/analytics-platform/using/cja-privacy/cmk)
 
 >[!IMPORTANT]
 >
