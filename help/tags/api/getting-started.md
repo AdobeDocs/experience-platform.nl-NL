@@ -2,7 +2,7 @@
 title: De Reactor-API verifiëren en openen
 description: Leer hoe u aan de slag kunt met de Reactor-API, inclusief stappen voor het genereren van de vereiste toegangsreferenties.
 exl-id: fc1acc1d-6cfb-43c1-9ba9-00b2730cad5a
-source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
+source-git-commit: 31e52dce23c558aaba822fe27d2e58ed6a7ce18d
 workflow-type: tm+mt
 source-wordcount: '894'
 ht-degree: 0%
@@ -16,6 +16,8 @@ Om [ Reactor API ](https://developer.adobe.com/experience-platform-apis/referenc
 * `Authorization: Bearer {ACCESS_TOKEN}`
 * `x-api-key: {API_KEY}`
 * `x-gw-ims-org-id: {ORG_ID}`
+* `Accept: application/vnd.api+json;revision=1`
+* `Content-Type: application/vnd.api+json`
 
 In deze handleiding wordt uitgelegd hoe u de Adobe Developer Console kunt gebruiken om de waarden voor elk van deze kopteksten te verzamelen, zodat u aanroepen kunt starten naar de Reactor-API.
 
@@ -51,7 +53,7 @@ Selecteer vervolgens het verificatietype dat u wilt genereren voor toegangstoken
 
 >[!IMPORTANT]
 >
->Selecteer de methode **[!UICONTROL OAuth Server-to-Server]** omdat dit de enige methode is die u kunt gebruiken om door te gaan. De methode **[!UICONTROL Service Account (JWT)]** is vervangen. Terwijl de integratie die de authentificatiemethode JWT gebruikt tot 1 Januari, 2025 zal blijven werken, adviseert Adobe sterk dat u bestaande integratie aan de nieuwe server-aan-server methode OAuth vóór die datum migreert. Krijg meer informatie in de sectie [!BADGE &#x200B; Afgekeurd &#x200B;]{type=negative}[ produceer een Token van het Web JSON (JWT) ](/help/landing/api-authentication.md#jwt) in het de authentificatieleerprogramma van Experience Platform API.
+>Selecteer de methode **[!UICONTROL OAuth Server-to-Server]** omdat dit de enige methode is die u kunt gebruiken om door te gaan. De methode **[!UICONTROL Service Account (JWT)]** is vervangen. Terwijl de integratie die de authentificatiemethode JWT gebruikt tot 1 Januari, 2025 zal blijven werken, adviseert Adobe sterk dat u bestaande integratie aan de nieuwe server-aan-server methode OAuth vóór die datum migreert. Krijg meer informatie in de sectie [!BADGE  Vervangen ]{type=negative} [ een Symbolisch van het Web JSON (JWT) ](/help/landing/api-authentication.md#jwt) in het de authentificatieleerprogramma van Experience Platform API.
 
 Selecteer **daarna** om verder te gaan.
 
