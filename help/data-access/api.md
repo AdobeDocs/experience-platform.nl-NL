@@ -15,7 +15,7 @@ ht-degree: 1%
 
 >[!IMPORTANT]
 >
->De Toegang API van Gegevens is nu verouderd ****. U wordt aangeraden Doelen te gebruiken voor het exporteren van gegevens uit Adobe Experience Platform. Voor meer informatie, gelieve te verwijzen naar de [ documentatie van de de uitvoerbestemmingen van de dataset ](../destinations/destination-types.md#dataset-export-destinations).
+>De Toegang API van Gegevens is nu verouderd **&#x200B;**. U wordt aangeraden Doelen te gebruiken voor het exporteren van gegevens uit Adobe Experience Platform. Voor meer informatie, gelieve te verwijzen naar de [ documentatie van de de uitvoerbestemmingen van de dataset ](../destinations/destination-types.md#dataset-export-destinations).
 
 De API voor gegevenstoegang ondersteunt Adobe Experience Platform door gebruikers een RESTful-interface te bieden die is gericht op de detecteerbaarheid en toegankelijkheid van opgenomen datasets binnen [!DNL Experience Platform] .
 

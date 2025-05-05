@@ -140,7 +140,7 @@ Begin door te navigeren en **[!UICONTROL Workflows]** te selecteren in de linker
 >
 > In de [ brondossiers van het Pakket in een Recipe ](./package-source-files-recipe.md) leerprogramma, werd een Docker URL verstrekt aan het eind van de bouw van het Retailrecept van de Verkoop gebruikend Python brondossiers.
 
-Zodra u op de **Uitgezochte bron** pagina bent, kleef het Dok URL die aan het verpakte recept beantwoordt dat gebruikend [!DNL Python] brondossiers in het **[!UICONTROL Source URL]** gebied wordt gebouwd. Daarna, voer het verstrekte configuratiedossier door te slepen en te laten vallen in, of gebruik Browser van het dossiersysteem ****. Het opgegeven configuratiebestand is te vinden op `experience-platform-dsw-reference/recipes/python/retail/retail.config.json` . Selecteer **[!UICONTROL Python]** in de **Runtime** daling neer en **[!UICONTROL Classification]** in de **Type** daling. Zodra alles is ingevuld, uitgezochte **[!UICONTROL Next]** in de hoger-juiste hoek om aan **te werk te gaan leidt schema&#39;s**.
+Zodra u op de **Uitgezochte bron** pagina bent, kleef het Dok URL die aan het verpakte recept beantwoordt dat gebruikend [!DNL Python] brondossiers in het **[!UICONTROL Source URL]** gebied wordt gebouwd. Daarna, voer het verstrekte configuratiedossier door te slepen en te laten vallen in, of gebruik Browser van het dossiersysteem **&#x200B;**. Het opgegeven configuratiebestand is te vinden op `experience-platform-dsw-reference/recipes/python/retail/retail.config.json` . Selecteer **[!UICONTROL Python]** in de **Runtime** daling neer en **[!UICONTROL Classification]** in de **Type** daling. Zodra alles is ingevuld, uitgezochte **[!UICONTROL Next]** in de hoger-juiste hoek om aan **te werk te gaan leidt schema&#39;s**.
 
 >[!NOTE]
 >
@@ -152,7 +152,7 @@ Daarna, selecteer de de input en outputschema&#39;s van de Verkoop van de Detail
 
 ![](../images/models-recipes/import-package-ui/recipe_schema.png)
 
-Onder de **sectie van het Beheer van de Eigenschap 0} {, selecteer op uw huurdersidentificatie in de schemakijker om het de inputschema van de Verkoop van de Detailhandel uit te breiden.** Selecteer de invoer- en uitvoerfuncties door de gewenste functie te markeren en selecteer **[!UICONTROL Input Feature]** of **[!UICONTROL Target Feature]** in het rechtervenster **[!UICONTROL Field Properties]** . In deze zelfstudie stelt u **[!UICONTROL weeklySales]** in als de **[!UICONTROL Target Feature]** en alles als **[!UICONTROL Input Feature]** . Selecteer **[!UICONTROL Next]** om uw nieuwe geconfigureerde recept te bekijken.
+Onder de **sectie van het Beheer van de Eigenschap 0&rbrace; &lbrace;, selecteer op uw huurdersidentificatie in de schemakijker om het de inputschema van de Verkoop van de Detailhandel uit te breiden.** Selecteer de invoer- en uitvoerfuncties door de gewenste functie te markeren en selecteer **[!UICONTROL Input Feature]** of **[!UICONTROL Target Feature]** in het rechtervenster **[!UICONTROL Field Properties]** . In deze zelfstudie stelt u **[!UICONTROL weeklySales]** in als de **[!UICONTROL Target Feature]** en alles als **[!UICONTROL Input Feature]** . Selecteer **[!UICONTROL Next]** om uw nieuwe geconfigureerde recept te bekijken.
 
 Bekijk het recept, voeg configuraties toe, wijzig of verwijder configuraties zoals nodig. Selecteer **[!UICONTROL Finish]** om het recept te maken.
 
@@ -174,7 +174,7 @@ Begin door te navigeren en **[!UICONTROL Workflows]** te selecteren in de linker
 >
 > In de [ brondossiers van het Pakket in een Recipe ](./package-source-files-recipe.md) leerprogramma, werd een Docker URL verstrekt aan het eind van de bouw van het Retailrecept van de Verkoop gebruikend R brondossiers.
 
-Zodra u op de **Uitgezochte bron** pagina bent, kleef het Docker URL die aan het verpakte recept beantwoordt dat gebruikend R brondossiers in het **[!UICONTROL Source URL]** gebied wordt gebouwd. Daarna, voer het verstrekte configuratiedossier door te slepen en te laten vallen in, of gebruik Browser van het dossiersysteem ****. Het opgegeven configuratiebestand is te vinden op `experience-platform-dsw-reference/recipes/R/Retail\ -\ GradientBoosting/retail.config.json` . Selecteer **[!UICONTROL R]** in de **Runtime** daling neer en **[!UICONTROL Classification]** in de **Type** daling. Zodra alles is ingevuld, uitgezochte **[!UICONTROL Next]** in de hoger-juiste hoek om aan **te werk te gaan leidt schema&#39;s**.
+Zodra u op de **Uitgezochte bron** pagina bent, kleef het Docker URL die aan het verpakte recept beantwoordt dat gebruikend R brondossiers in het **[!UICONTROL Source URL]** gebied wordt gebouwd. Daarna, voer het verstrekte configuratiedossier door te slepen en te laten vallen in, of gebruik Browser van het dossiersysteem **&#x200B;**. Het opgegeven configuratiebestand is te vinden op `experience-platform-dsw-reference/recipes/R/Retail\ -\ GradientBoosting/retail.config.json` . Selecteer **[!UICONTROL R]** in de **Runtime** daling neer en **[!UICONTROL Classification]** in de **Type** daling. Zodra alles is ingevuld, uitgezochte **[!UICONTROL Next]** in de hoger-juiste hoek om aan **te werk te gaan leidt schema&#39;s**.
 
 >[!NOTE]
 >
@@ -186,7 +186,7 @@ Daarna, selecteer de de input en outputschema&#39;s van de Verkoop van de Detail
 
 ![](../images/models-recipes/import-package-ui/recipe_schema.png)
 
-Onder de *sectie van het Beheer van de Eigenschap 0} {, selecteer op uw huurdersidentificatie in de schemakijker om het de inputschema van de Verkoop van de Detailhandel uit te breiden.* Selecteer de invoer- en uitvoerfuncties door de gewenste functie te markeren en selecteer **[!UICONTROL Input Feature]** of **[!UICONTROL Target Feature]** in het rechtervenster **[!UICONTROL Field Properties]** . In deze zelfstudie stelt u **[!UICONTROL weeklySales]** in als de **[!UICONTROL Target Feature]** en alles als **[!UICONTROL Input Feature]** . Selecteer **[!UICONTROL Next]** om uw nieuwe gevormde recept te herzien.
+Onder de *sectie van het Beheer van de Eigenschap 0&rbrace; &lbrace;, selecteer op uw huurdersidentificatie in de schemakijker om het de inputschema van de Verkoop van de Detailhandel uit te breiden.* Selecteer de invoer- en uitvoerfuncties door de gewenste functie te markeren en selecteer **[!UICONTROL Input Feature]** of **[!UICONTROL Target Feature]** in het rechtervenster **[!UICONTROL Field Properties]** . In deze zelfstudie stelt u **[!UICONTROL weeklySales]** in als de **[!UICONTROL Target Feature]** en alles als **[!UICONTROL Input Feature]** . Selecteer **[!UICONTROL Next]** om uw nieuwe gevormde recept te herzien.
 
 Bekijk het recept, voeg configuraties toe, wijzig of verwijder configuraties zoals nodig. Selecteer **Afwerking** om het recept tot stand te brengen.
 
@@ -208,7 +208,7 @@ Begin door te navigeren en **[!UICONTROL Workflows]** te selecteren in de linker
 >
 > In de [ brondossiers van het Pakket in een Recipe ](./package-source-files-recipe.md) leerprogramma, werd een Docker URL verstrekt aan het eind van de bouw van het Retailrecept van de Verkoop gebruikend PySpark brondossiers.
 
-Zodra u op de **Uitgezochte bron** pagina bent, kleef het Docker URL die aan het verpakte recept beantwoordt dat gebruikend PySpark brondossiers in het **[!UICONTROL Source URL]** gebied wordt gebouwd. Daarna, voer het verstrekte configuratiedossier door te slepen en te laten vallen in, of gebruik Browser van het dossiersysteem ****. Het opgegeven configuratiebestand is te vinden op `experience-platform-dsw-reference/recipes/pyspark/retail/pipeline.json` . Selecteer **[!UICONTROL PySpark]** in de **Runtime** daling neer. Wanneer de PySpark-runtime is geselecteerd, wordt het standaardartefact automatisch gevuld tot **[!UICONTROL Docker]** . Daarna, selecteer **[!UICONTROL Classification]** in de **Type** daling neer. Zodra alles is ingevuld, uitgezochte **[!UICONTROL Next]** in de hoger-juiste hoek om aan **te werk te gaan leidt schema&#39;s**.
+Zodra u op de **Uitgezochte bron** pagina bent, kleef het Docker URL die aan het verpakte recept beantwoordt dat gebruikend PySpark brondossiers in het **[!UICONTROL Source URL]** gebied wordt gebouwd. Daarna, voer het verstrekte configuratiedossier door te slepen en te laten vallen in, of gebruik Browser van het dossiersysteem **&#x200B;**. Het opgegeven configuratiebestand is te vinden op `experience-platform-dsw-reference/recipes/pyspark/retail/pipeline.json` . Selecteer **[!UICONTROL PySpark]** in de **Runtime** daling neer. Wanneer de PySpark-runtime is geselecteerd, wordt het standaardartefact automatisch gevuld tot **[!UICONTROL Docker]** . Daarna, selecteer **[!UICONTROL Classification]** in de **Type** daling neer. Zodra alles is ingevuld, uitgezochte **[!UICONTROL Next]** in de hoger-juiste hoek om aan **te werk te gaan leidt schema&#39;s**.
 
 >[!NOTE]
 >
@@ -220,7 +220,7 @@ Daarna, selecteer de de input en outputschema&#39;s van de Verkoop van de Detail
 
 ![ beheert schema&#39;s ](../images/models-recipes/import-package-ui/manage-schemas.png)
 
-Onder de **sectie van het Beheer van de Eigenschap 0} {, selecteer op uw huurdersidentificatie in de schemakijker om het de inputschema van de Verkoop van de Detailhandel uit te breiden.** Selecteer de invoer- en uitvoerfuncties door de gewenste functie te markeren en selecteer **[!UICONTROL Input Feature]** of **[!UICONTROL Target Feature]** in het rechtervenster **[!UICONTROL Field Properties]** . In deze zelfstudie stelt u **[!UICONTROL weeklySales]** in als de **[!UICONTROL Target Feature]** en alles als **[!UICONTROL Input Feature]** . Selecteer **[!UICONTROL Next]** om uw nieuwe geconfigureerde recept te bekijken.
+Onder de **sectie van het Beheer van de Eigenschap 0&rbrace; &lbrace;, selecteer op uw huurdersidentificatie in de schemakijker om het de inputschema van de Verkoop van de Detailhandel uit te breiden.** Selecteer de invoer- en uitvoerfuncties door de gewenste functie te markeren en selecteer **[!UICONTROL Input Feature]** of **[!UICONTROL Target Feature]** in het rechtervenster **[!UICONTROL Field Properties]** . In deze zelfstudie stelt u **[!UICONTROL weeklySales]** in als de **[!UICONTROL Target Feature]** en alles als **[!UICONTROL Input Feature]** . Selecteer **[!UICONTROL Next]** om uw nieuwe geconfigureerde recept te bekijken.
 
 ![](../images/models-recipes/import-package-ui/recipe_schema.png)
 
@@ -256,7 +256,7 @@ Daarna, selecteer de de input en outputschema&#39;s van de Verkoop van de Detail
 
 ![ beheert schema&#39;s ](../images/models-recipes/import-package-ui/manage-schemas.png)
 
-Onder de **sectie van het Beheer van de Eigenschap 0} {, selecteer op uw huurdersidentificatie in de schemakijker om het de inputschema van de Verkoop van de Detailhandel uit te breiden.** Selecteer de invoer- en uitvoerfuncties door de gewenste functie te markeren en selecteer **[!UICONTROL Input Feature]** of **[!UICONTROL Target Feature]** in het rechtervenster **[!UICONTROL Field Properties]** . Voor deze zelfstudie stelt u &quot;[!UICONTROL weeklySales]&quot; in als de **[!UICONTROL Target Feature]** en alles als **[!UICONTROL Input Feature]** . Selecteer **[!UICONTROL Next]** om uw nieuwe geconfigureerde recept te bekijken.
+Onder de **sectie van het Beheer van de Eigenschap 0&rbrace; &lbrace;, selecteer op uw huurdersidentificatie in de schemakijker om het de inputschema van de Verkoop van de Detailhandel uit te breiden.** Selecteer de invoer- en uitvoerfuncties door de gewenste functie te markeren en selecteer **[!UICONTROL Input Feature]** of **[!UICONTROL Target Feature]** in het rechtervenster **[!UICONTROL Field Properties]** . Voor deze zelfstudie stelt u &quot;[!UICONTROL weeklySales]&quot; in als de **[!UICONTROL Target Feature]** en alles als **[!UICONTROL Input Feature]** . Selecteer **[!UICONTROL Next]** om uw nieuwe geconfigureerde recept te bekijken.
 
 ![](../images/models-recipes/import-package-ui/recipe_schema.png)
 

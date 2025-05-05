@@ -111,14 +111,14 @@ Vul de vereiste velden hieronder in. Verwijs naar [ verzamelen de  [!DNL HubSpot
 * **[!UICONTROL Bearer token]**: het toegangstoken voor uw [!DNL HubSpot] persoonlijke app.
 
 Selecteer **[!UICONTROL Connect to destination]** als u wilt verifiëren bij het doel.
-{het schermschot van 0} Experience Platform UI die toont hoe te voor authentiek te verklaren.](../../assets/catalog/crm/hubspot/authenticate-destination.png)![
+{het schermschot van 0} Experience Platform UI die toont hoe te voor authentiek te verklaren.![&#128279;](../../assets/catalog/crm/hubspot/authenticate-destination.png)
 
 Als de opgegeven gegevens geldig zijn, geeft de gebruikersinterface de status **[!UICONTROL Connected]** weer met een groen vinkje. Vervolgens kunt u verdergaan met de volgende stap.
 
 ### Doelgegevens invullen {#destination-details}
 
 Als u details voor de bestemming wilt configureren, vult u de vereiste en optionele velden hieronder in. Een sterretje naast een veld in de gebruikersinterface geeft aan dat het veld verplicht is.
-{het schermschot van 0} Experience Platform UI die de bestemmingsdetails toont.](../../assets/catalog/crm/hubspot/destination-details.png)![
+{het schermschot van 0} Experience Platform UI die de bestemmingsdetails toont.![&#128279;](../../assets/catalog/crm/hubspot/destination-details.png)
 
 * **[!UICONTROL Name]**: Een naam waarmee u dit doel in de toekomst herkent.
 * **[!UICONTROL Description]**: Een beschrijving die u zal helpen deze bestemming in de toekomst identificeren.
@@ -147,11 +147,11 @@ Voer de onderstaande stappen uit om uw XDM-velden correct toe te wijzen aan de [
 
 De identiteit van `Email` is een verplichte toewijzing voor dit doel. Voer de onderstaande stappen uit om deze toe te wijzen:
 1. Selecteer **[!UICONTROL Add new mapping]** in de stap **[!UICONTROL Mapping]** . U ziet nu een nieuwe toewijzingsrij op het scherm.
-   {het schermschot van 0} Experience Platform UI met toegevoegde nieuwe benadrukte toewijzingsknoop.](../../assets/catalog/crm/hubspot/mapping-add-new-mapping.png)![
+   {het schermschot van 0} Experience Platform UI met toegevoegde nieuwe benadrukte toewijzingsknoop.![&#128279;](../../assets/catalog/crm/hubspot/mapping-add-new-mapping.png)
 1. Kies in het **[!UICONTROL Select source field]** -venster de **[!UICONTROL Select identity namespace]** en selecteer een identiteit.
-   {het schermschot van 0} Experience Platform UI die e-mail als bronattribuut selecteert om als identiteit in kaart te brengen.](../../assets/catalog/crm/hubspot/mapping-select-source-identity.png)![
+   {het schermschot van 0} Experience Platform UI die e-mail als bronattribuut selecteert om als identiteit in kaart te brengen.![&#128279;](../../assets/catalog/crm/hubspot/mapping-select-source-identity.png)
 1. Kies in het **[!UICONTROL Select target field]** -venster de **[!UICONTROL Select attributes]** en selecteer `email` .
-   {het schermschot van 0} Experience Platform UI die e-mail als doelattribuut selecteert om als identiteit in kaart te brengen.](../../assets/catalog/crm/hubspot/mapping-select-target-identity.png)![
+   {het schermschot van 0} Experience Platform UI die e-mail als doelattribuut selecteert om als identiteit in kaart te brengen.![&#128279;](../../assets/catalog/crm/hubspot/mapping-select-target-identity.png)
 
 | Source-veld | Doelveld | Verplicht |
 | --- | --- | --- |
@@ -164,11 +164,11 @@ Hieronder ziet u een voorbeeld met de identiteitstoewijzing:
 
 Als u andere kenmerken wilt toevoegen die u tussen het XDM-profielschema en uw [!DNL HubSpot] -account wilt bijwerken, herhaalt u de onderstaande stappen:
 1. Selecteer **[!UICONTROL Add new mapping]** in de stap **[!UICONTROL Mapping]** . U ziet nu een nieuwe toewijzingsrij op het scherm.
-   {het schermschot van 0} Experience Platform UI met toegevoegde nieuwe benadrukte toewijzingsknoop.](../../assets/catalog/crm/hubspot/mapping-add-new-mapping.png)![
+   {het schermschot van 0} Experience Platform UI met toegevoegde nieuwe benadrukte toewijzingsknoop.![&#128279;](../../assets/catalog/crm/hubspot/mapping-add-new-mapping.png)
 1. Kies in het venster **[!UICONTROL Select source field]** de categorie **[!UICONTROL Select attributes]** en selecteer het XDM-kenmerk.
    ![ het schermschot van Experience Platform UI die Voornaam als bronattribuut selecteert.](../../assets/catalog/crm/hubspot/mapping-select-source-attribute.png)
 1. Kies in het venster **[!UICONTROL Select target field]** de categorie **[!UICONTROL Select attributes]** en selecteer een van de kenmerken die automatisch worden ingevuld in uw [!DNL HubSpot] -account. De bestemming gebruikt [[!DNL HubSpot]  Eigenschappen ](https://developers.hubspot.com/docs/api/crm/properties) API om deze informatie terug te winnen. Zowel [!DNL HubSpot] [ standaardeigenschappen ](https://knowledge.hubspot.com/contacts/hubspots-default-contact-properties) als om het even welke douaneeigenschappen worden teruggewonnen voor selectie als doelgebieden.
-   {het schermschot van 0} Experience Platform UI die Voornaam als doelattribuut selecteert.](../../assets/catalog/crm/hubspot/mapping-select-target-attribute.png)![
+   {het schermschot van 0} Experience Platform UI die Voornaam als doelattribuut selecteert.![&#128279;](../../assets/catalog/crm/hubspot/mapping-select-target-attribute.png)
 
 Hieronder worden enkele beschikbare toewijzingen weergegeven tussen uw XDM-profielschema en [!DNL Hubspot] :
 

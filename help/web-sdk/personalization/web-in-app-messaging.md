@@ -44,7 +44,7 @@ Voor meer informatie over het vormen van CSP, zie de [ specifieke documentatie ]
 
 Verwijs naar de [ pagina van de de agentenconfiguratie van SDK van het Web ](../../tags/extensions/client/web-sdk/web-sdk-extension-configuration.md) om te begrijpen waar u de hieronder beschreven montages kunt vinden.
 
-Nadat u [ ](../../tags/extensions/client/web-sdk/web-sdk-extension-configuration.md#install-the-web-sdk-tag-extension) de de markeringsuitbreiding van SDK van het Web hebt geïnstalleerd, volg de stappen hieronder om de uitbreiding voor Web in-app Overseinen te vormen.
+Nadat u [&#128279;](../../tags/extensions/client/web-sdk/web-sdk-extension-configuration.md#install-the-web-sdk-tag-extension) de de markeringsuitbreiding van SDK van het Web hebt geïnstalleerd, volg de stappen hieronder om de uitbreiding voor Web in-app Overseinen te vormen.
 
 Schakel in de sectie **[!UICONTROL Personalization]** de optie **[!UICONTROL Enable personalization storage]** in. Met deze optie kan de SDK van het Web bijhouden welke ervaringen de gebruiker heeft gezien bij het laden van pagina&#39;s.
 

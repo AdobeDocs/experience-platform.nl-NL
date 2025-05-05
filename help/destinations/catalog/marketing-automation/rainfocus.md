@@ -37,7 +37,7 @@ Een merk voor financiële diensten moet een reeks roadshows ontvangen die zich r
 Voordat u het doel van [!DNL RainFocus] kunt gebruiken, moet u aan de volgende voorwaarden voldoen:
 
 * Maak een [!DNL RainFocus] API-profiel met OAuth (Global).
-   * Het **eindpunt van de Opslag van 0} Aanwezigen {moet worden toegelaten.**
+   * Het **eindpunt van de Opslag van 0&rbrace; Aanwezigen &lbrace;moet worden toegelaten.**
    * A **identiteitskaart van de Cliënt** en **Geheime cliënt** zal moeten worden geproduceerd.
 
 U moet ook een herkenningsteken van de gebeurteniscode RainFocus **hebben**, waarin u profielen zou willen die naar worden verzonden.
@@ -58,7 +58,7 @@ In deze sectie wordt beschreven welk type publiek u naar dit doel kunt exportere
 
 | Oorsprong publiek | Ondersteund | Beschrijving |
 ---------|----------|----------|
-| [!DNL Segmentation Service] | ✓ | Het publiek produceerde door de Dienst van de Segmentatie van Experience Platform [ ](../../../segmentation/home.md). |
+| [!DNL Segmentation Service] | ✓ | Het publiek produceerde door de Dienst van de Segmentatie van Experience Platform [&#128279;](../../../segmentation/home.md). |
 | Aangepaste uploads | ✓ | Het publiek [ ingevoerde ](../../../segmentation/ui/overview.md#import-audience) in Experience Platform van Csv- dossiers. |
 
 {style="table-layout:auto"}

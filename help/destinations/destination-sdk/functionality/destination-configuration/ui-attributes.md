@@ -33,7 +33,7 @@ U kunt attributen UI via het `/authoring/destinations` eindpunt vormen. Zie de v
 
 In dit artikel worden alle ondersteunde UI-kenmerken beschreven die u voor uw doel kunt gebruiken en wordt aangegeven welke klanten in de gebruikersinterface van Experience Platform kunnen bekijken.
 
-{het schermschot van 0} UI die de attributen UI in de interface van Experience Platform toont ](../../assets/functionality/destination-configuration/ui-attributes.png)![
+{het schermschot van 0} UI die de attributen UI in de interface van Experience Platform toont ![&#128279;](../../assets/functionality/destination-configuration/ui-attributes.png)
 
 >[!IMPORTANT]
 >

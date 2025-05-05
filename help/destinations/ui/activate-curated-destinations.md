@@ -12,7 +12,7 @@ ht-degree: 0%
 
 # Het publiek activeren op gekrulde doelen op basis van LiveRamp-id&#39;s
 
-Gebruik de Adobe Real-Time CDP-integratie met [!DNL LiveRamp] om het publiek te activeren naar een gekrulde lijst met doelen die [!DNL [LiveRamp RampID]](https://docs.liveramp.com/connect/en/interpreting-rampid,-liveramp-s-people-based-identifier.html) gebruiken voor activering, waaronder aangesloten tv- en audiodoelen, zoals de hieronder vermelde doelen.
+Gebruik de Adobe Real-Time CDP-integratie met [!DNL LiveRamp] om het publiek te activeren naar een gekrulde lijst met doelen die [[!DNL [LiveRamp RampID]]](https://docs.liveramp.com/connect/en/interpreting-rampid,-liveramp-s-people-based-identifier.html) gebruiken voor activering, waaronder aangesloten tv- en audiodoelen, zoals de hieronder vermelde doelen.
 
 >[!IMPORTANT]
 >
@@ -87,7 +87,7 @@ Nadat u met succes uw publiek naar LiveRamp hebt uitgevoerd, ga aan [ stap 2 ](#
 
 ### Stap 2: Activeer het publiek aan boord naar aangesloten tv- en audiodoelen, via de [!DNL LiveRamp - Distribution] -bestemming {#distribution}
 
-Nadat u [ ](../catalog/advertising/liveramp-onboarding.md#exported-data) hebt bevestigd dat uw publiek met succes naar LiveRamp is uitgevoerd, is het tijd om het publiek aan uw aangewezen bestemmingen, zoals [[!DNL Roku]](../catalog/advertising/liveramp-distribution.md#roku), [[!DNL Disney]](../catalog/advertising/liveramp-distribution.md#disney), en meer te activeren.
+Nadat u [&#128279;](../catalog/advertising/liveramp-onboarding.md#exported-data) hebt bevestigd dat uw publiek met succes naar LiveRamp is uitgevoerd, is het tijd om het publiek aan uw aangewezen bestemmingen, zoals [[!DNL Roku]](../catalog/advertising/liveramp-distribution.md#roku), [[!DNL Disney]](../catalog/advertising/liveramp-distribution.md#disney), en meer te activeren.
 
 U activeert het publiek (die in [ wordt uitgevoerd stap 1 ](#onboarding)) door de **[!DNL LiveRamp - Distribution]** bestemming te gebruiken.
 
@@ -97,7 +97,7 @@ Leren hoe te om de **[!DNL LiveRamp - Distribution]** bestemming te vormen en he
 
 >[!IMPORTANT]
 >
->In de **stap van de 0} publieksselectie {van de **[!DNL LiveRamp - Distribution]**bestemming, moet u het *nauwkeurige zelfde publiek* selecteren dat u naar [ LiveRamp - Onboarding ](../catalog/advertising/liveramp-onboarding.md) bestemming in [ stap 1 ](#onboarding) hebt uitgevoerd.**
+>In de **stap van de 0&rbrace; publieksselectie &lbrace;van de &#x200B;** [!DNL LiveRamp - Distribution]&#x200B;**bestemming, moet u het *nauwkeurige zelfde publiek* selecteren dat u naar [ LiveRamp - Onboarding ](../catalog/advertising/liveramp-onboarding.md) bestemming in [ stap 1 ](#onboarding) hebt uitgevoerd.**
 
 Wanneer u de **[!DNL LiveRamp - Distribution]** bestemming vormt, moet u een specifieke verbinding voor elke stroomafwaartse bestemming tot stand brengen die u (Roku, Disney, etc.) wilt gebruiken.
 
@@ -107,7 +107,7 @@ Wanneer u de **[!DNL LiveRamp - Distribution]** bestemming vormt, moet u een spe
 ><br>
 >Voorbeeld: `LiveRamp - Roku` .
 
-{het schermschot van 0} Experience Platform UI die veelvoudige bestemmingen LiveRamp toont.](../assets/ui/activate-curated-destinations-liveramp/liveramp-naming.png)![
+{het schermschot van 0} Experience Platform UI die veelvoudige bestemmingen LiveRamp toont.![&#128279;](../assets/ui/activate-curated-destinations-liveramp/liveramp-naming.png)
 
 ## Geëxporteerde gegevens/Gegevens valideren bij exporteren {#exported-data}
 

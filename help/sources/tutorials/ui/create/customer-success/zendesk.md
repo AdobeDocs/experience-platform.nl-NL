@@ -49,7 +49,7 @@ Selecteer in de gebruikersinterface van Experience Platform de optie **[!UICONTR
 
 U kunt de juiste categorie selecteren in de catalogus aan de linkerkant van het scherm. U kunt ook de specifieke bron vinden waarmee u wilt werken met de zoekoptie.
 
-Onder de *categorie van het Succes van de Klant 0} {, selecteer **[!UICONTROL Zendesk]**, en selecteer dan **[!UICONTROL Add data]**.*
+Onder de *categorie van het Succes van de Klant 0&rbrace; &lbrace;, selecteer **[!UICONTROL Zendesk]**, en selecteer dan **[!UICONTROL Add data]**.*
 
 ![ catalogus ](../../../../images/tutorials/create/zendesk/catalog.png)
 

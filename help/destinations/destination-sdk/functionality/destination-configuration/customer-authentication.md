@@ -20,7 +20,7 @@ Om te begrijpen waar deze component in een integratie past die met Destination S
 * [Destination SDK gebruiken om een streamingbestemming te configureren](../../guides/configure-destination-instructions.md#create-destination-configuration)
 * [Destination SDK gebruiken om een bestandsgebaseerde bestemming te configureren](../../guides/configure-file-based-destination-instructions.md#create-destination-configuration)
 
-Alvorens de klanten gegevens van Experience Platform naar uw bestemming kunnen uitvoeren, moeten zij een nieuwe verbinding tussen Experience Platform en uw bestemming tot stand brengen, door de stappen te volgen die in het ](../../../ui/connect-destination.md) leerprogramma worden beschreven 0} bestemmingsverbinding {.[
+Alvorens de klanten gegevens van Experience Platform naar uw bestemming kunnen uitvoeren, moeten zij een nieuwe verbinding tussen Experience Platform en uw bestemming tot stand brengen, door de stappen te volgen die in het [&#128279;](../../../ui/connect-destination.md) leerprogramma worden beschreven 0&rbrace; bestemmingsverbinding &lbrace;.
 
 Wanneer [ creërend een bestemming ](../../authoring-api/destination-configuration/create-destination-configuration.md) door Destination SDK, bepaalt de `customerAuthenticationConfigurations` sectie welke klanten in het [ authentificatiescherm ](../../../ui/connect-destination.md#authenticate) zien. Afhankelijk van het type van bestemmingsauthentificatie, moeten de klanten diverse authentificatiedetails, zoals verstrekken:
 

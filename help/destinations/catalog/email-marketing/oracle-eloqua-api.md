@@ -104,7 +104,7 @@ Vul de vereiste velden hieronder in. Verwijs naar de [ Gather  [!DNL Oracle Eloq
 * **[!UICONTROL Username]**: Een samengevoegde tekenreeks die bestaat uit uw [!DNL Oracle Eloqua] bedrijfsnaam en de [!DNL Oracle Eloqua] gebruikersnaam.<br> de samengevoegde waarde neemt de vorm van `{COMPANY_NAME}\{USERNAME}`.<br> Opmerking: gebruik geen accolades of spaties en zorg dat de `\` behouden blijft. <br> Bijvoorbeeld als uw [!DNL Oracle Eloqua] Bedrijfsnaam `MyCompany` is en [!DNL Oracle Eloqua] Gebruikersnaam `Username` is, is de samengevoegde waarde u in het **[!UICONTROL Username]** gebied zult gebruiken `MyCompany\Username`.
 
 Selecteer **[!UICONTROL Connect to destination]** als u wilt verifiëren bij het doel.
-{het schermschot van 0} Experience Platform UI die toont hoe te voor authentiek te verklaren.](../../assets/catalog/email-marketing/oracle-eloqua-api/authenticate-destination.png)![
+{het schermschot van 0} Experience Platform UI die toont hoe te voor authentiek te verklaren.![&#128279;](../../assets/catalog/email-marketing/oracle-eloqua-api/authenticate-destination.png)
 
 Als de opgegeven gegevens geldig zijn, geeft de gebruikersinterface de status **[!UICONTROL Connected]** weer met een groen vinkje. Vervolgens kunt u verdergaan met de volgende stap.
 
@@ -118,7 +118,7 @@ Als de opgegeven gegevens geldig zijn, geeft de gebruikersinterface de status **
 <!-- >additional-url="https://support.oracle.com/knowledge/Oracle%20Cloud/2307176_1.html" text="Oracle Knowledge base - find out your Pod number" -->
 
 Als u details voor de bestemming wilt configureren, vult u de vereiste en optionele velden hieronder in. Een sterretje naast een veld in de gebruikersinterface geeft aan dat het veld verplicht is.
-{het schermschot van 0} Experience Platform UI die de bestemmingsdetails toont.](../../assets/catalog/email-marketing/oracle-eloqua-api/destination-details.png)![
+{het schermschot van 0} Experience Platform UI die de bestemmingsdetails toont.![&#128279;](../../assets/catalog/email-marketing/oracle-eloqua-api/destination-details.png)
 
 * **[!UICONTROL Name]**: Een naam waarmee u dit doel in de toekomst herkent.
 * **[!UICONTROL Description]**: Een beschrijving die u zal helpen deze bestemming in de toekomst identificeren.
@@ -165,6 +165,7 @@ Voer de volgende stappen uit om uw XDM-velden toe te wijzen aan de [!DNL Oracle 
      | `xdm: workAddress.city` | `Attribute: city` | |
 
    * Hieronder ziet u een voorbeeld met de bovenstaande toewijzingen:
+
      ![ het schermschot van Experience Platform UI met attributenafbeeldingen.](../../assets/catalog/email-marketing/oracle-eloqua-api/mappings.png)
 
 >[!IMPORTANT]
@@ -208,7 +209,7 @@ Volg onderstaande stappen om te controleren of u de bestemming correct hebt inge
 
 1. Meld u aan bij de [!DNL Oracle Eloqua] -website en navigeer naar de **[!UICONTROL Contacts Overview]** -pagina om te controleren of de profielen van het publiek zijn toegevoegd. Blader omlaag naar een **[!UICONTROL Contact Detail]** -pagina en controleer of het contactveld met de naam van het geselecteerde publiek als voorvoegsel is gemaakt om de publieksstatus weer te geven.
 
-{het schermschot van 0} Oracle Eloqua UI die de pagina van de Details van het Contact met het gebied van het douanecontract toont dat met de publieksnaam wordt gecreeerd.](../../assets/catalog/email-marketing/oracle-eloqua-api/contact.png)![
+{het schermschot van 0} Oracle Eloqua UI die de pagina van de Details van het Contact met het gebied van het douanecontract toont dat met de publieksnaam wordt gecreeerd.![&#128279;](../../assets/catalog/email-marketing/oracle-eloqua-api/contact.png)
 
 ## Gegevensgebruik en -beheer {#data-usage-governance}
 
@@ -217,7 +218,7 @@ Alle [!DNL Adobe Experience Platform] -doelen zijn compatibel met het beleid voo
 ## Fouten en problemen oplossen {#errors-and-troubleshooting}
 
 Wanneer u het doel maakt, ontvangt u mogelijk een van de volgende foutberichten: `400: There was a validation error` of `400 BAD_REQUEST` . Dit gebeurt wanneer u de 250 grens van de gebieden van het douanecontact overschrijdt, zoals die in de [ wordt beschreven guardrails ](#guardrails) sectie. U kunt deze fout verhelpen door de limiet van het aangepaste contactveld in [!DNL Oracle Eloqua] niet te overschrijden.
-{het schermschot van 0} Experience Platform UI die fout toont.](../../assets/catalog/email-marketing/oracle-eloqua-api/error.png)![
+{het schermschot van 0} Experience Platform UI die fout toont.![&#128279;](../../assets/catalog/email-marketing/oracle-eloqua-api/error.png)
 
 Verwijs naar de [[!DNL Oracle Eloqua]  de statuscodes van HTTP ](https://docs.oracle.com/en/cloud/saas/marketing/eloqua-rest-api/APIRequests_HTTPStatusCodes.html) en [[!DNL Oracle Eloqua]  fouten van de Bevestiging ](https://docs.oracle.com/en/cloud/saas/marketing/eloqua-rest-api/APIRequests_HTTPValidationErrors.html) pagina&#39;s voor een uitvoerige lijst van status en foutencodes met verklaringen.
 
@@ -236,7 +237,7 @@ Deze sectie vangt de functionaliteit en de significante documentatieupdates aan 
 
 | Releasedatum | Type bijwerken | Beschrijving |
 |---|---|---|
-| April 2023 | Documentatie bijgewerkt | <ul><li>Wij hebben de [ gebruik-gevallen ](#use-cases) sectie met een duidelijker voorbeeld bijgewerkt van wanneer de klanten van het gebruiken van deze bestemming zouden profiteren.</li> <li>Wij hebben de [ afbeelding ](#mapping-considerations-example) sectie met duidelijke voorbeelden van zowel verplichte als facultatieve afbeeldingen bijgewerkt.</li> <li>Wij hebben [ bijgewerkt verbind met de bestemmings ](#connect) sectie met een voorbeeld op hoe te om de samengevoegde waarde voor het **[!UICONTROL Username]** gebied te construeren gebruikend de [!DNL Oracle Eloqua] Naam van het Bedrijf en [!DNL Oracle Eloqua] Gebruikersnaam. (PLATIR-28343)</li><li>Wij hebben de  [!DNL Oracle Eloqua]  geloofsbrieven ](#gather-credentials) van de Vergroting [ bijgewerkt en [ vullen in de secties van bestemmingsdetails ](#destination-details) met begeleiding op [!DNL Oracle Eloqua] **[!UICONTROL Pod]** selectie. De *&quot;Pod&quot;* waarde wordt gebruikt door de bestemming om de basis URL voor de API vraag te construeren. De [[!DNL Oracle Eloqua]  eerste vereisten ](#prerequisites-destination) sectie werd ook bijgewerkt met begeleiding bij het toewijzen van *&quot;Geavanceerde Gebruikers - de toestemmingen van de Marketing&quot;* als vereiste *&quot;Groepen van de Veiligheid&quot;* voor uw [!DNL Oracle Eloqua] instantie.</li></ul> |
+| April 2023 | Documentatie bijgewerkt | <ul><li>Wij hebben de [ gebruik-gevallen ](#use-cases) sectie met een duidelijker voorbeeld bijgewerkt van wanneer de klanten van het gebruiken van deze bestemming zouden profiteren.</li> <li>Wij hebben de [ afbeelding ](#mapping-considerations-example) sectie met duidelijke voorbeelden van zowel verplichte als facultatieve afbeeldingen bijgewerkt.</li> <li>Wij hebben [ bijgewerkt verbind met de bestemmings ](#connect) sectie met een voorbeeld op hoe te om de samengevoegde waarde voor het **[!UICONTROL Username]** gebied te construeren gebruikend de [!DNL Oracle Eloqua] Naam van het Bedrijf en [!DNL Oracle Eloqua] Gebruikersnaam. (PLATIR-28343)</li><li>Wij hebben de  [!DNL Oracle Eloqua]  geloofsbrieven [&#128279;](#gather-credentials) van de Vergroting  bijgewerkt en [ vullen in de secties van bestemmingsdetails ](#destination-details) met begeleiding op [!DNL Oracle Eloqua] **[!UICONTROL Pod]** selectie. De *&quot;Pod&quot;* waarde wordt gebruikt door de bestemming om de basis URL voor de API vraag te construeren. De [[!DNL Oracle Eloqua]  eerste vereisten ](#prerequisites-destination) sectie werd ook bijgewerkt met begeleiding bij het toewijzen van *&quot;Geavanceerde Gebruikers - de toestemmingen van de Marketing&quot;* als vereiste *&quot;Groepen van de Veiligheid&quot;* voor uw [!DNL Oracle Eloqua] instantie.</li></ul> |
 | Maart 2023 | Eerste release | Oorspronkelijke doelversie en documentatie publiceren. |
 
 {style="table-layout:auto"}

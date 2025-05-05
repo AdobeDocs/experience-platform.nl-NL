@@ -29,7 +29,7 @@ Campagne gebruiken om:
 
 Houd rekening met de volgende instructies wanneer u de Adobe Campaign Managed Cloud Services-verbinding gebruikt:
 
-* U kunt [ ](#activate) een maximum van 25 publiek aan deze bestemming activeren.
+* U kunt [&#128279;](#activate) een maximum van 25 publiek aan deze bestemming activeren.
 
   U kunt deze grens veranderen door de waarde van **NmsCdp_Aep_Audience_List_Limit** optie in **[!UICONTROL Administration]** > **[!UICONTROL Platform]** > **[!UICONTROL Options]** omslag van de ontdekkingsreiziger van de Campagne bij te werken.
 

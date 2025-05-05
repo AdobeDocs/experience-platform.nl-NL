@@ -10,7 +10,7 @@ ht-degree: 0%
 
 ---
 
-# Creeer a ** bronVerbinding van UUR {in UI
+# Creeer a ** bronVerbinding van UUR &lbrace;in UI
 
 *aangezien u door dit malplaatje gaat, vervang of schrap alle paragrafen in cursief (beginnend met dit).*
 
@@ -53,7 +53,7 @@ Selecteer in de gebruikersinterface van Experience Platform de optie **[!UICONTR
 
 U kunt de juiste categorie selecteren in de catalogus aan de linkerkant van het scherm. U kunt ook de specifieke bron vinden waarmee u wilt werken met de zoekoptie.
 
-Onder de {*categorie 1} van de CATEGORIE van 0} JUURSOURCE, selecteer* JUURSOURCE *, en selecteer dan **[!UICONTROL Add data]**.*
+Onder de {*categorie 1} van de CATEGORIE van 0&rbrace; JUURSOURCE, selecteer* JUURSOURCE *, en selecteer dan **[!UICONTROL Add data]**.*
 
 >[!TIP]
 >
@@ -79,7 +79,7 @@ Als u een nieuwe account maakt, selecteert u **[!UICONTROL New account]** en gee
 
 *de Werkschema&#39;s voor de resterende stappen van het creëren van een dataflow worden gemoduleerd. Als er om het even welke specifieke vraag-outs zijn u betreffende uw bron wilt maken, gelieve de extra middelensectie hieronder te zien.*
 
-Door dit leerprogramma te volgen, hebt u een verbinding aan uw ** rekening van UUR {gevestigd. U kunt nu aan het volgende leerprogramma verdergaan en [ een dataflow vormen om gegevens in Experience Platform ](https://experienceleague.adobe.com/docs/experience-platform/sources/ui-tutorials/dataflow/crm.html) te brengen.
+Door dit leerprogramma te volgen, hebt u een verbinding aan uw ** rekening van UUR &lbrace;gevestigd. U kunt nu aan het volgende leerprogramma verdergaan en [ een dataflow vormen om gegevens in Experience Platform ](https://experienceleague.adobe.com/docs/experience-platform/sources/ui-tutorials/dataflow/crm.html) te brengen.
 
 ## Aanvullende bronnen
 

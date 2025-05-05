@@ -115,7 +115,7 @@ Wanneer het lezen van datasets met PySpark en Nota&#39;s Scala, hebt u de optie 
 
 ## Python-laptops {#python-notebook}
 
-Met [!DNL Python] -laptops kunt u gegevens pagineren wanneer u gegevenssets opent. De voorbeeldcode voor het lezen van gegevens met en zonder paginering wordt hieronder getoond. Voor meer informatie over de beschikbare starter laptops van de Python, bezoek de ](./overview.md#launcher) sectie van de Lanceerinrichting [[!DNL JupyterLab]  binnen de JupyterLab gebruikersgids.
+Met [!DNL Python] -laptops kunt u gegevens pagineren wanneer u gegevenssets opent. De voorbeeldcode voor het lezen van gegevens met en zonder paginering wordt hieronder getoond. Voor meer informatie over de beschikbare starter laptops van de Python, bezoek de [&#128279;](./overview.md#launcher) sectie van de Lanceerinrichting [!DNL JupyterLab]  binnen de JupyterLab gebruikersgids.
 
 In de onderstaande Python-documentatie worden de volgende concepten beschreven:
 
@@ -242,7 +242,7 @@ df = dataset_reader.\
 
 ## R-laptops {#r-notebooks}
 
-Met R-laptops kunt u gegevens pagineren wanneer u gegevenssets opent. De voorbeeldcode voor het lezen van gegevens met en zonder paginering wordt hieronder getoond. Voor meer informatie over de beschikbare aanzetR laptops, bezoek de ](./overview.md#launcher) sectie van de Lanceerinrichting [[!DNL JupyterLab]  binnen de JupyterLab gebruikersgids.
+Met R-laptops kunt u gegevens pagineren wanneer u gegevenssets opent. De voorbeeldcode voor het lezen van gegevens met en zonder paginering wordt hieronder getoond. Voor meer informatie over de beschikbare aanzetR laptops, bezoek de [&#128279;](./overview.md#launcher) sectie van de Lanceerinrichting [!DNL JupyterLab]  binnen de JupyterLab gebruikersgids.
 
 In de onderstaande R-documentatie worden de volgende concepten beschreven:
 

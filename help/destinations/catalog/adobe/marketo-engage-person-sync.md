@@ -45,7 +45,7 @@ In deze sectie wordt beschreven welke soorten publiek u naar dit doel kunt expor
 
 | Oorsprong publiek | Ondersteund | Beschrijving |
 | -------------------- | :-------: | ------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Segmentatieservice | ✓ | Het publiek produceerde door de Dienst van de Segmentatie van het Experience Platform [ ](https://experienceleague.adobe.com/en/docs/experience-platform/segmentation/home). |
+| Segmentatieservice | ✓ | Het publiek produceerde door de Dienst van de Segmentatie van het Experience Platform [&#128279;](https://experienceleague.adobe.com/en/docs/experience-platform/segmentation/home). |
 | Aangepaste uploads | ✓ | Soorten publiek dat uit CSV-bestanden in het Experience Platform is geïmporteerd. |
 
 ## Type en frequentie exporteren {#export-type-and-frequency}
@@ -68,7 +68,7 @@ Als uw bedrijf toegang tot veelvoudige organisaties heeft, zorg ervoor dat u de 
 
 >[!IMPORTANT]
 >
->De gebruiker die opstelling de bestemming moet ](https://experienceleague.adobe.com/en/docs/marketo/using/product-docs/administration/users-and-roles/descriptions-of-role-permissions#access-database) toestemming van de Persoon [ hebben uitgeven in de instantie en de verdeling van Marketo.
+>De gebruiker die opstelling de bestemming moet [&#128279;](https://experienceleague.adobe.com/en/docs/marketo/using/product-docs/administration/users-and-roles/descriptions-of-role-permissions#access-database) toestemming van de Persoon  hebben uitgeven in de instantie en de verdeling van Marketo.
 
 ![ verbind met Bestemming ](../../assets/catalog/adobe/marketo-engage-person-sync/connect-to-destination.png)
 

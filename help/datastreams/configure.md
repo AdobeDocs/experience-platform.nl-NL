@@ -63,7 +63,7 @@ Met de instellingen van **[!UICONTROL Device Lookup]** kunt u apparaatspecifieke
 
 Vouw de sectie **[!UICONTROL Device Lookup]** uit om de hieronder beschreven instellingen te configureren.
 
-{het configuratiescherm van 0} DataStream met de benadrukte montages van de apparatenraadpleging.](assets/configure/device-lookup.png)![
+{het configuratiescherm van 0} DataStream met de benadrukte montages van de apparatenraadpleging.![&#128279;](assets/configure/device-lookup.png)
 
 >[!IMPORTANT]
 >
@@ -111,7 +111,7 @@ Nadat u een nieuwe gegevensstroom hebt geconfigureerd of een bestaande gegevenss
 
 ![ de detailspagina van DataStream.](assets/configure/view-details.png)
 
-Van het scherm van gegevensstroomdetails, kunt u [ de diensten ](#add-services) toevoegen om mogelijkheden van de producten van Adobe Experience Cloud toe te laten u toegang tot hebt. U kunt de 0} basisconfiguratie van de gegevensstroom ](#create) ook uitgeven, zijn [ kaartregels ](./data-prep.md) bijwerken, [ exemplaar de datastream ](#copy), of het volledig schrappen.[
+Van het scherm van gegevensstroomdetails, kunt u [ de diensten ](#add-services) toevoegen om mogelijkheden van de producten van Adobe Experience Cloud toe te laten u toegang tot hebt. U kunt de 0&rbrace; basisconfiguratie van de gegevensstroom [&#128279;](#create) ook uitgeven, zijn [ kaartregels ](./data-prep.md) bijwerken, [ exemplaar de datastream ](#copy), of het volledig schrappen.
 
 ## Services toevoegen aan een gegevensstroom {#add-services}
 

@@ -53,7 +53,7 @@ Zie de documentatie op [ het intekenen aan de gebeurtenissen van de Privacy Serv
 
 Om al uw gegevens van de privacybaan terug te winnen die op om het even welke gespecificeerde filters worden gebaseerd, **voert een verzoek van de GET aan het `/jobs` eindpunt** uit. Deze API-aanroep is handig om een weergave op hoog niveau te bieden van de huidige taakstatus voor grote sets met taak-id&#39;s met slechts één aanvraag. Het gebrek aan gedetailleerde productreacties, maar zij kunnen worden gevonden gebruikend het [`/jobs/{jobID}` eindpunt ](#retrieve-detailed-responses-for-specific-jobs).
 
-Een verzoek van de GET aan het `/jobs` eindpunt wordt best gebruikt om de statusgegevens van een grote reeks baan IDs te verzamelen of te vergelijken maar **** bedoeld niet voor regelmatige het opiniepeilingstype activiteiten.
+Een verzoek van de GET aan het `/jobs` eindpunt wordt best gebruikt om de statusgegevens van een grote reeks baan IDs te verzamelen of te vergelijken maar **&#x200B;**&#x200B;bedoeld niet voor regelmatige het opiniepeilingstype activiteiten.
 
 **Recommendations:**
 
@@ -65,7 +65,7 @@ De Privacy Service API documentatie bevat details op [ de beschikbare filters va
 
 ### Gedetailleerde antwoorden ophalen voor één taak {#retrieve-detailed-responses-for-specific-jobs}
 
-Om gedetailleerde reacties voor één enkele baan terug te winnen, **voer een verzoek van de GET aan het /jobs/{jobID} eindpunt** uit. Deze methode is bedoeld voor het verdiepen van informatie, zoals productspecifieke reacties en succesberichten. Een vraag aan dit eindpunt is de beste manier om te zien welke producten hebben gereageerd en die nog hangend zijn, hoewel het **** niet {voor regelmatige opiniepeilingsactiviteit bedoeld is.
+Om gedetailleerde reacties voor één enkele baan terug te winnen, **voer een verzoek van de GET aan het /jobs/{jobID} eindpunt** uit. Deze methode is bedoeld voor het verdiepen van informatie, zoals productspecifieke reacties en succesberichten. Een vraag aan dit eindpunt is de beste manier om te zien welke producten hebben gereageerd en die nog hangend zijn, hoewel het **&#x200B;**&#x200B;niet &lbrace;voor regelmatige opiniepeilingsactiviteit bedoeld is.
 
 Zie de `/jobs/{JOB_ID}` eindpuntdocumentatie voor details op [ hoe te om het statuut van een specifieke baan ](./api/privacy-jobs.md#check-status) te controleren.
 

@@ -150,7 +150,7 @@ U kunt bestanden uploaden met de API voor kleine bestanden uploaden. Als uw best
 
 >[!INFO]
 >
->De voorbeelden hieronder gebruiken het [ Apache 1} dossierformaat van het Pakket {. ](https://parquet.apache.org/docs/) Een voorbeeld dat het JSON dossierformaat gebruikt kan in de [ handleiding van de partijontwikkelaar ](api-overview.md) worden gevonden.
+>De voorbeelden hieronder gebruiken het [ Apache 1&rbrace; dossierformaat van het Pakket &lbrace;. ](https://parquet.apache.org/docs/) Een voorbeeld dat het JSON dossierformaat gebruikt kan in de [ handleiding van de partijontwikkelaar ](api-overview.md) worden gevonden.
 
 ### Kleine bestandsupload
 

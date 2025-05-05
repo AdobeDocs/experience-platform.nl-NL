@@ -54,7 +54,7 @@ Via attribuut-gebaseerde toegangscontrole, kunnen de beheerders van uw organisat
 
 | Functie | Beschrijving |
 | --- | --- |
-| Configuratie van beleidssandbox voor machtigingen | De nieuwe ](../../access-control/abac/ui/policies.md) eigenschap van de de zandbakconfiguratie van het 1} toestemmingsbeleid staat u toe om een attribuut gebaseerd toegangsbeheerbeleid op allen of een geselecteerd aantal zandbakken af te dwingen, afhankelijk van uw behoeften en vereisten.[ |
+| Configuratie van beleidssandbox voor machtigingen | De nieuwe [&#128279;](../../access-control/abac/ui/policies.md) eigenschap van de de zandbakconfiguratie van het 1&rbrace; toestemmingsbeleid staat u toe om een attribuut gebaseerd toegangsbeheerbeleid op allen of een geselecteerd aantal zandbakken af te dwingen, afhankelijk van uw behoeften en vereisten. |
 
 {style="table-layout:auto"}
 

@@ -25,7 +25,7 @@ Met behulp van invloedrijke factoren kan de AI van de Klant u vertellen wat een 
 
 AI van de klant bevindt zich op het tabblad **[!UICONTROL Services]** onder **[!UICONTROL Adobe services]** .
 
-](../assets/overview/rtcdp-customer-ai.png) de plaats van AI van de Klant 0}![
+![&#128279;](../assets/overview/rtcdp-customer-ai.png) de plaats van AI van de Klant 0&rbrace;
 
 ## Aan de slag met Customer AI
 

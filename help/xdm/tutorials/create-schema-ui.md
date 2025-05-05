@@ -50,7 +50,7 @@ Het dialoogvenster [!UICONTROL Create a schema] wordt weergegeven. In dit dialoo
 
 ![ creeer een schemadialoog met de werkschemaopties en selecteer benadrukt.](../images/tutorials/create-schema/create-a-schema-dialog.png)
 
-### [!BADGE  Beta ]{type=Informative} Handboek of ML-bijgestaan schemaverwezenlijking {#manual-or-assisted}
+### [!BADGE &#x200B; Beta &#x200B;]{type=Informative} Handboek of ML-bijgestaan schemaverwezenlijking {#manual-or-assisted}
 
 Leren hoe u een algoritme van XML kunt gebruiken om een schemastructuur te adviseren die op een geupload dossier wordt gebaseerd, zie de [ machine het leren-bijgewoonde gids van de schemaverwezenlijking ](../ui/ml-assisted-schema-creation.md). Deze UI-handleiding is gericht op de workflow voor handmatig maken.
 

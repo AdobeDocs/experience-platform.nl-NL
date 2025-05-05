@@ -121,7 +121,7 @@ Volg onderstaande stappen om te controleren of u de bron juist hebt ingesteld en
 
 Selecteer in de gebruikersinterface van Experience Platform de optie **[!UICONTROL View Dataflows]** naast het kaartmenu [!DNL Pinterest Ads] op de cataloguspagina. Vervolgens kunt u [!UICONTROL Preview dataset] selecteren om de gegevens te verifiëren die zijn ingevoerd.
 
-{het schermschot van 0} Experience Platform UI voor de Dataset van de Voorproef van Pinterest Adds.](../../../../images/tutorials/create/advertising/pinterest-ads/preview-dataset.png)![
+{het schermschot van 0} Experience Platform UI voor de Dataset van de Voorproef van Pinterest Adds.![&#128279;](../../../../images/tutorials/create/advertising/pinterest-ads/preview-dataset.png)
 
 U kunt de gegevens verifiëren op basis van de tellingen die zichtbaar zijn op de gebruikersinterface van [!DNL Pinterest]
 
@@ -131,7 +131,7 @@ U kunt de gegevens verifiëren op basis van de tellingen die zichtbaar zijn op d
 
 ![ Pinterest Campaigns pagina.](../../../../images/tutorials/create/advertising/pinterest-ads/pinterest-campaigns.png)
 
->[!TAB  voeg groepen ] toe
+>[!TAB voeg groepen  toe]
 
 ![ Pinterest en groepenpagina.](../../../../images/tutorials/create/advertising/pinterest-ads/pinterest-ad-groups.png)
 

@@ -112,7 +112,7 @@ De volgende standaardnaamruimten kunnen door alle organisaties in Experience Pla
 | Telefoon (SHA256) | Een naamruimte die telefoonnummers vertegenwoordigt die moeten worden gehasht met behulp van SHA256. U moet symbolen, letters en voorloopnullen verwijderen. U moet ook het land toevoegen dat code als prefix roept. |
 | Telefoon (SHA256_E.164) | A namespace that represents raw phone numbers that need to be hashed using both SHA256 and E.164 format. |
 | TNTID | Een naamruimte die Adobe Target vertegenwoordigt. Zie het volgende document op [ Doel ](https://experienceleague.adobe.com/docs/target/using/target-home.html) voor meer informatie. |
-| Windows-ID | Een naamruimte die een Windows Advertising-id vertegenwoordigt. Zie het volgende document op [ identiteitskaart van Advertising van Vensters 1} voor meer informatie.](https://docs.microsoft.com/en-us/uwp/api/windows.system.userprofile.advertisingmanager.advertisingid?view=winrt-19041) |
+| Windows-ID | Een naamruimte die een Windows Advertising-id vertegenwoordigt. Zie het volgende document op [ identiteitskaart van Advertising van Vensters 1&rbrace; voor meer informatie.](https://docs.microsoft.com/en-us/uwp/api/windows.system.userprofile.advertisingmanager.advertisingid?view=winrt-19041) |
 
 ### Identiteitsnaamruimten weergeven {#view-identity-namespaces}
 

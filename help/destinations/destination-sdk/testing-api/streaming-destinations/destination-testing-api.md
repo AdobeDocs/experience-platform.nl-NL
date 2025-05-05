@@ -156,7 +156,7 @@ Een succesvolle reactie keert status 200 van HTTP samen met de API reactie van h
 
 | Eigenschap | Beschrijving |
 | -------- | ----------- |
-| `aggregationKey` | Omvat informatie over het samenvoegingsbeleid dat voor de bestemming wordt gevormd. Voor meer informatie, lees de ](../../functionality/destination-configuration/aggregation-policy.md) documentatie van het beleid van de Samenvoeging 0} {.[ |
+| `aggregationKey` | Omvat informatie over het samenvoegingsbeleid dat voor de bestemming wordt gevormd. Voor meer informatie, lees de [&#128279;](../../functionality/destination-configuration/aggregation-policy.md) documentatie van het beleid van de Samenvoeging 0&rbrace; &lbrace;. |
 | `traceId` | Een unieke id voor de bewerking. Wanneer het ontmoeten van fouten, kunt u deze identiteitskaart met het team van de Adobe voor het oplossen van problemendoeleinden delen. |
 | `results.httpCalls.request` | Omvat het verzoek dat door Adobe naar uw bestemming werd verzonden. |
 | `results.httpCalls.response` | Omvat de reactie die door Adobe van uw bestemming wordt ontvangen. |

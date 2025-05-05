@@ -89,7 +89,7 @@ Voer de volgende stappen uit om het rapport voor gegevenssetoverlapping met Post
 |---|---|
 | `date` | Geef de datum op van het rapport dat moet worden geretourneerd. Als er meerdere rapporten op de datum werden uitgevoerd, wordt het meest recente rapport voor die datum geretourneerd. Wanneer een rapport niet bestaat voor de opgegeven datum, wordt een HTTP status 404 (Not Found)-fout geretourneerd. Als er geen datum is opgegeven, wordt het meest recente rapport geretourneerd. <br/> Formaat: JJJ-MM-DD. Voorbeeld: `date=2024-12-31` |
 
-Nadat het verzoektype, de kopballen, de waarden, en de weg volledig zijn, verzenden de uitgezochte **** om het API verzoek te verzenden en het rapport te produceren.
+Nadat het verzoektype, de kopballen, de waarden, en de weg volledig zijn, verzenden de uitgezochte **&#x200B;**&#x200B;om het API verzoek te verzenden en het rapport te produceren.
 
 ![](../images/dataset-overlap-report/postman-request.png)
 

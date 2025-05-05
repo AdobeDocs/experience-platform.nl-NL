@@ -107,7 +107,7 @@ U hebt toegang tot de configuratie-JSON via elke klassemethode die `config_prope
 dataset_id = str(config_properties.get(dataset_id))
 ```
 
-Zie het {](https://github.com/adobe/experience-platform-dsw-reference/blob/master/recipes/feature_pipeline_recipes/pyspark/pipeline.json) dossier 0} pipe.json dat door de Wetenschap van Gegevens Workspace voor een meer diepgaand configuratievoorbeeld wordt verstrekt.[
+Zie het {[&#128279;](https://github.com/adobe/experience-platform-dsw-reference/blob/master/recipes/feature_pipeline_recipes/pyspark/pipeline.json) dossier 0} pipe.json dat door de Wetenschap van Gegevens Workspace voor een meer diepgaand configuratievoorbeeld wordt verstrekt.
 
 ### De invoergegevens voorbereiden met DataLoader {#prepare-the-input-data-with-dataloader}
 
@@ -412,7 +412,7 @@ Gebruikend uw onlangs gecreeerd `engineID`, moet u [ een MLIstance ](../api/mlin
 
 ### Een experiment maken {#create-experiment}
 
-Daarna, moet u een Experiment ](../api/experiments.md#create-an-experiment) creëren [. Om een Experiment tot stand te brengen moet u uw uniek herkenningsteken MLIstance (`id`) hebben en een POST verzoek indienen aan het `/experiment` eindpunt. Een succesvolle reactie keert een nuttige lading terug die de details van de pas gecreëerde Experiment met inbegrip van zijn uniek herkenningsteken (`id`) bevat die in de volgende API vraag wordt gebruikt.
+Daarna, moet u een Experiment [&#128279;](../api/experiments.md#create-an-experiment) creëren . Om een Experiment tot stand te brengen moet u uw uniek herkenningsteken MLIstance (`id`) hebben en een POST verzoek indienen aan het `/experiment` eindpunt. Een succesvolle reactie keert een nuttige lading terug die de details van de pas gecreëerde Experiment met inbegrip van zijn uniek herkenningsteken (`id`) bevat die in de volgende API vraag wordt gebruikt.
 
 ### Specificeer de de eigenschappijpleidingstaak van de in werking stellen Experimenteer {#specify-feature-pipeline-task}
 

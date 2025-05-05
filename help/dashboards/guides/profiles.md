@@ -191,7 +191,7 @@ Voor alle nieuwe Adobe Experience Platform-instanties wordt een standaardwidgetb
 
 >[!NOTE]
 >
->Vanaf 26 juli 2023 zijn de dashboards met het overzicht [!UICONTROL Profiles] , [!UICONTROL Audiences] en [!UICONTROL Destinations] opnieuw ingesteld op een nieuwe standaardwidgetbelasting voor alle gebruikers die hun weergaven in de afgelopen zes maanden niet hebben gewijzigd. Verwijs naar de documentatie in de [ Doelen ](./destinations.md#default-widgets) en [ de 3} standaardwidgetsecties van het publiek {voor details waarop widgets als deel van standaard widget lading-outs inbegrepen zijn. ](./audiences.md#default-widgets) U kunt uw dashboardwidgets op dezelfde manier blijven aanpassen als voorheen.
+>Vanaf 26 juli 2023 zijn de dashboards met het overzicht [!UICONTROL Profiles] , [!UICONTROL Audiences] en [!UICONTROL Destinations] opnieuw ingesteld op een nieuwe standaardwidgetbelasting voor alle gebruikers die hun weergaven in de afgelopen zes maanden niet hebben gewijzigd. Verwijs naar de documentatie in de [ Doelen ](./destinations.md#default-widgets) en [ de 3&rbrace; standaardwidgetsecties van het publiek &lbrace;voor details waarop widgets als deel van standaard widget lading-outs inbegrepen zijn. ](./audiences.md#default-widgets) U kunt uw dashboardwidgets op dezelfde manier blijven aanpassen als voorheen.
 
 ## AI-widgets van klant {#customer-ai-profiles-widgets}
 
@@ -306,7 +306,7 @@ De widget [!UICONTROL Profile count trend] gebruikt een lijngrafiek om de trend 
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_profiles_profilescountchange"
 >title="Wijziging van aantal profielen"
->abstract="Deze widget toont het totale aantal samengevoegde profielen **** toegevoegd aan de opslag van het Profiel op het tijdstip van de laatste momentopname. Het getal is afhankelijk van het geselecteerde samenvoegbeleid dat wordt toegepast op de profielgegevens."
+>abstract="Deze widget toont het totale aantal samengevoegde profielen **&#x200B;**&#x200B;toegevoegd aan de opslag van het Profiel op het tijdstip van de laatste momentopname. Het getal is afhankelijk van het geselecteerde samenvoegbeleid dat wordt toegepast op de profielgegevens."
 
 De **[!UICONTROL Profile count change]** -widget geeft het aantal samengevoegde profielen weer dat sinds de vorige momentopname aan de profielopslag is toegevoegd. Dit getal is het resultaat van het geselecteerde samenvoegbeleid dat wordt toegepast op de profielgegevens om profielfragmenten samen te voegen tot één profiel voor elke persoon. U kunt de keuzekiezer gebruiken om het aantal toegevoegde profielen weer te geven in de afgelopen 30 dagen, 90 dagen of 12 maanden.
 

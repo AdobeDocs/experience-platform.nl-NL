@@ -127,7 +127,7 @@ Met [!DNL Query Service] kunt u standaard-SQL gebruiken om query&#39;s uit te vo
 
 | Functie | Beschrijving |
 | --- | --- |
-| `table_exists` | De nieuwe eigenschapbevel wordt gebruikt om te bevestigen of een lijst momenteel in het systeem bestaat of niet. Het bevel keert een booleaanse waarde terug: `true` als de lijst **** bestaat, en `false` als de lijst **niet** bestaat. Zie de [ SQL syntaxisdocumentatie ](../../query-service/sql/syntax.md) voor meer informatie. |
+| `table_exists` | De nieuwe eigenschapbevel wordt gebruikt om te bevestigen of een lijst momenteel in het systeem bestaat of niet. Het bevel keert een booleaanse waarde terug: `true` als de lijst **&#x200B;**&#x200B;bestaat, en `false` als de lijst **niet** bestaat. Zie de [ SQL syntaxisdocumentatie ](../../query-service/sql/syntax.md) voor meer informatie. |
 
 {style="table-layout:auto"}
 

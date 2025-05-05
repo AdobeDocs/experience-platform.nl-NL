@@ -15,7 +15,7 @@ ht-degree: 0%
 
 [!UICONTROL Web page details] is een standaardgegevenstype van het Gegevensmodel van de Ervaring (XDM) dat details over een Web-pagina beschrijft die net is geladen en bekeken, zoals geregistreerd door een ExperienceEvent.
 
-Het gegevenstype is bedoeld voor alle paginagegevens en voor het eerst laden van webtoepassingen van één pagina (SPA). Voor interactie die op een geladen pagina gebeuren die geen nieuwe paginading teweegbrengt, zie het ](./web-interaction.md) gegevenstype van de 0} Webinteractie {.[
+Het gegevenstype is bedoeld voor alle paginagegevens en voor het eerst laden van webtoepassingen van één pagina (SPA). Voor interactie die op een geladen pagina gebeuren die geen nieuwe paginading teweegbrengt, zie het [&#128279;](./web-interaction.md) gegevenstype van de 0&rbrace; Webinteractie &lbrace;.
 
 ![ Web-pagina details ](../images/data-types/web-page-details.PNG){width="500"}
 

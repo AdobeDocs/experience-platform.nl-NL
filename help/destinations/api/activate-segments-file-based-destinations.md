@@ -186,7 +186,7 @@ curl --location --request GET 'https://platform.adobe.io/data/foundation/flowser
 
 **Verzoek**
 
-++ + ophalen [!DNL connection spec] voor [!DNL Azure Data Lake Gen 2(ADLS Gen2])
++++ ophalen [!DNL connection spec] voor [!DNL Azure Data Lake Gen 2(ADLS Gen2])
 
 ```shell
 curl --location --request GET 'https://platform.adobe.io/data/foundation/flowservice/connectionSpecs/be2c3209-53bc-47e7-ab25-145db8b873e1' \
@@ -4364,7 +4364,7 @@ De id in de reactie vertegenwoordigt de unieke id van het invoerschema dat u heb
 
 ### Toewijzingsset maken {#create-mapping-set}
 
-Daarna, gebruik prep API van 0} gegevens ](https://developer.adobe.com/experience-platform-apis/references/data-prep/#tag/Mapping-sets/operation/createMappingSet) om de afbeelding tot stand te brengen die door input schemaidentiteitskaart, identiteitskaart van het outputschema, en de gewenste gebiedstoewijzingen te gebruiken wordt geplaatst.[
+Daarna, gebruik prep API van 0&rbrace; gegevens [&#128279;](https://developer.adobe.com/experience-platform-apis/references/data-prep/#tag/Mapping-sets/operation/createMappingSet) om de afbeelding tot stand te brengen die door input schemaidentiteitskaart, identiteitskaart van het outputschema, en de gewenste gebiedstoewijzingen te gebruiken wordt geplaatst.
 
 >[!BEGINSHADEBOX]
 
@@ -4560,7 +4560,7 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
 
 **Reactie**
 
-++ + Voeg een marketingactie toe - Reactie
++++ Voeg een marketingactie toe - Reactie
 
 Een geslaagde reactie retourneert de antwoordcode `200` samen met de id van de bijgewerkte gegevensstroom en de bijgewerkte eTag.
 
@@ -4615,7 +4615,7 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
 
 +++
 
-++ + Voeg een XDM-kenmerk toe als verplicht veld - Verzoek
++++ Voeg een XDM-kenmerk toe als verplicht veld - Verzoek
 
 ```shell
 curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flowservice/flows/{DATAFLOW_ID}' \
@@ -4641,7 +4641,7 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
 
 **Reactie**
 
-++ + Voeg een verplicht veld toe - Reactie
++++ Voeg een verplicht veld toe - Reactie
 
 ```json
 {
@@ -4726,7 +4726,7 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
 
 **Reactie**
 
-++ + Voeg een verplicht veld toe - Reactie
++++ Voeg een verplicht veld toe - Reactie
 
 ```json
 {

@@ -11,7 +11,7 @@ ht-degree: 0%
 
 # Weather data field mappings
 
-Adobe heeft met [!DNL [The Weather Company]](https://www.ibm.com/weather) samengewerkt om de extra context van het weer in de Verenigde Staten te brengen aan de gegevens die via gegevensstromen worden verzameld. U kunt deze gegevens gebruiken voor analyses, het richten van en het segmentverwezenlijking in Experience Platform.
+Adobe heeft met [[!DNL [The Weather Company]]](https://www.ibm.com/weather) samengewerkt om de extra context van het weer in de Verenigde Staten te brengen aan de gegevens die via gegevensstromen worden verzameld. U kunt deze gegevens gebruiken voor analyses, het richten van en het segmentverwezenlijking in Experience Platform.
 
 Deze pagina bevat een lijst met alle beschikbare velden die u kunt gebruiken om uw publieksgegevens te verrijken.
 
@@ -110,7 +110,7 @@ Het voorspelde weer voor de gebruiker, gebaseerd op locatie, op een specifiek ti
 | [!DNL Day 1 Forecast Night Snow Range] | Weer één dag voorspeld. Weer informatie voor een nachtelijke periode. Emmertje van mogelijke sneeuwval (1-3 inch, 3-6 inch enz.). | `weather.forecast.day01Forecast.night.snowRange` |
 | [!DNL Day 1 Forecast Night Temperature Celsius] | Weer één dag voorspeld. Weer informatie voor een nachtelijke periode. Temperatuur in de gedefinieerde maateenheid. Tussen -140 en 140. Temperatuur in graden Celsius | `weather.forecast.day01Forecast.night.temperature.celsius` |
 | [!DNL Day 1 Forecast Night Temperature Fahrenheit] | Weer één dag voorspeld. Weer informatie voor een nachtelijke periode. Temperatuur in de gedefinieerde maateenheid. Tussen -140 en 140. Temperatuur in graden Fahrenheit | `weather.forecast.day01Forecast.night.temperature.fahrenheit` |
-| [!DNL  Day 1 Forecast Night Temperature Heat Index Celsius] | Weer één dag voorspeld. Weer informatie voor een nachtelijke periode. Temperatuur zoals deze zou voelen voor een persoon die blootgesteld wordt op basis van temperatuur en vochtigheid. Temperatuur in graden Celsius | `weather.forecast.day01Forecast.night.temperatureHeatIndex.celsius` |
+| [!DNL &#x200B; Day 1 Forecast Night Temperature Heat Index Celsius] | Weer één dag voorspeld. Weer informatie voor een nachtelijke periode. Temperatuur zoals deze zou voelen voor een persoon die blootgesteld wordt op basis van temperatuur en vochtigheid. Temperatuur in graden Celsius | `weather.forecast.day01Forecast.night.temperatureHeatIndex.celsius` |
 | [!DNL Day 1 Forecast Night Temperature Heat Index Fahrenheit] | Weer één dag voorspeld. Weer informatie voor een nachtelijke periode. Temperatuur zoals deze zou voelen voor een persoon die blootgesteld wordt op basis van temperatuur en vochtigheid. Temperatuur in graden Fahrenheit | `weather.forecast.day01Forecast.night.temperatureHeatIndex.fahrenheit` |
 | [!DNL Day 1 Forecast Night Temperature Wind Chill Celsius] | Weer één dag voorspeld. Weer informatie voor een nachtelijke periode. Temperatuur zoals deze zou voelen voor een persoon die blootgesteld wordt op basis van temperatuur en windsnelheid. Temperatuur in graden Celsius | `weather.forecast.day01Forecast.night.temperatureWindChill.celsius` |
 | [!UICONTROL Day 1 Forecast Night Temperature Wind Chill Fahrenheit] | Weer één dag voorspeld. Weer informatie voor een nachtelijke periode. Temperatuur zoals deze zou voelen voor een persoon die blootgesteld wordt op basis van temperatuur en windsnelheid. Temperatuur in graden Fahrenheit | `weather.forecast.day01Forecast.night.temperatureWindChill.fahrenheit` |

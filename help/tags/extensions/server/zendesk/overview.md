@@ -11,7 +11,7 @@ ht-degree: 1%
 
 # [!DNL Zendesk] Overzicht van de API-extensie voor gebeurtenissen
 
-[ Zendesk ](https://www.zendesk.com) is een oplossing van de klantendienst en verkoophulpmiddel. De gebeurtenis die van Zendesk [ ](../../../ui/event-forwarding/overview.md) uitbreidingshoofdhefboomwerkingen [[!DNL Zendesk Events API] ](https://developer.zendesk.com/documentation/ticketing/events/about-the-events-api/) door:sturen gebeurtenissen van de Edge Network van Adobe Experience Platform naar Zendesk voor verdere verwerking. U kunt de uitbreiding gebruiken om de interactie van het klantenprofiel voor gebruik in stroomafwaartse analyse en actie te verzamelen.
+[ Zendesk ](https://www.zendesk.com) is een oplossing van de klantendienst en verkoophulpmiddel. De gebeurtenis die van Zendesk [&#128279;](../../../ui/event-forwarding/overview.md) uitbreidingshoofdhefboomwerkingen [[!DNL Zendesk Events API] ](https://developer.zendesk.com/documentation/ticketing/events/about-the-events-api/) door:sturen gebeurtenissen van de Edge Network van Adobe Experience Platform naar Zendesk voor verdere verwerking. U kunt de uitbreiding gebruiken om de interactie van het klantenprofiel voor gebruik in stroomafwaartse analyse en actie te verzamelen.
 
 In dit document wordt beschreven hoe u de extensie in de gebruikersinterface kunt installeren en configureren.
 

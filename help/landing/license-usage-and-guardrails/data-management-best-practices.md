@@ -147,7 +147,7 @@ Hieronder volgt een lijst met aanbevolen tips die u kunt volgen om ervoor te zor
 * Gebruik het [ dashboard van het vergunningsgebruik ](../../dashboards/guides/license-usage.md) om trends van het klantengebruik te volgen en te controleren. Hierdoor kunt u eventuele overschrijdingen die zich kunnen voordoen, overtreffen.
 * Vorm [ innamefilters ](#ingestion-filters) door de gebeurtenissen te identificeren die voor uw segmentatie en het verpersoonlijkingsgebruik worden vereist gevallen. Op deze manier kunt u alleen belangrijke gebeurtenissen verzenden die vereist zijn voor uw gebruiksgevallen.
 * Zorg ervoor dat u slechts [ toegelaten datasets voor profiel ](#ingestion-filters) hebt die voor uw segmentatie en verpersoonlijkingsgebruiksgevallen worden vereist.
-* Vorm {de Verlopen van de Gebeurtenis van 0} Ervaring ](#event-expirations) en [ Pseudoniem de gegevensvervalsing van het Profiel ](#pseudonymous-profile-expirations) voor high-frequency gegevens zoals Webgegevens.[
+* Vorm {de Verlopen van de Gebeurtenis van 0} Ervaring [&#128279;](#event-expirations) en [ Pseudoniem de gegevensvervalsing van het Profiel ](#pseudonymous-profile-expirations) voor high-frequency gegevens zoals Webgegevens.
 * Controleer periodiek de [ Rapporten van de Samenstelling van het Profiel ](#profile-store-composition-reports) om uw de opslagsamenstelling van het Profiel te begrijpen. Op deze manier kunt u de gegevensbronnen begrijpen die het meest bijdragen aan het gebruik van uw licentie.
 
 ## Overzicht en beschikbaarheid van functies {#feature-summary}

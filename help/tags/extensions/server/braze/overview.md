@@ -200,7 +200,7 @@ Gebruikerskenmerken kunnen een JSON-object zijn dat velden bevat waarmee een ken
 
 ## Gegevens valideren binnen [!DNL Braze] {#validate}
 
-Als de gebeurtenisinzameling en [!DNL Adobe Experience Platform] integratie succesvol waren, zult u gebeurtenissen binnen de [!DNL Braze] console zien wanneer [ het bekijken gebruikersprofielen ](https://www.braze.com/docs/user_guide/engagement_tools/segments/user_profiles/). Specifiek, worden de nieuwe gebeurtenisgegevens die naar [!DNL Braze] worden verzonden weerspiegeld in de [!DNL Purchases] sectie van het 2} overzicht tabel van een bepaalde gebruiker ](https://www.braze.com/docs/user_guide/engagement_tools/segments/user_profiles/#overview-tab).[
+Als de gebeurtenisinzameling en [!DNL Adobe Experience Platform] integratie succesvol waren, zult u gebeurtenissen binnen de [!DNL Braze] console zien wanneer [ het bekijken gebruikersprofielen ](https://www.braze.com/docs/user_guide/engagement_tools/segments/user_profiles/). Specifiek, worden de nieuwe gebeurtenisgegevens die naar [!DNL Braze] worden verzonden weerspiegeld in de [!DNL Purchases] sectie van het 2&rbrace; overzicht tabel van een bepaalde gebruiker [&#128279;](https://www.braze.com/docs/user_guide/engagement_tools/segments/user_profiles/#overview-tab).
 
 ## Volgende stappen
 

@@ -17,7 +17,7 @@ ht-degree: 0%
 >
 >De bron [!DNL SAP Commerce] is in bèta. Zie het [ overzicht van bronnen ](../../home.md#terms-and-conditions) voor meer informatie bij het gebruiken van bèta-geëtiketteerde bronnen.
 
-[[!DNL SAP Commerce] ](https://www.sap.com/india/products/acquired-brands/what-is-hybris.html), is een op wolk-gebaseerde e-commerceplatformoplossing voor B2B en B2C ondernemingen beschikbaar als deel van de portefeuille van de Ervaring van de Klant van SAP. [[!DNL SAP]  het Factureren van het Abonnement 1} is een product onder de portefeuille en laat volledig beheer van de abonnementslevenscyclus met vereenvoudigde het verkopen en betaling ervaringen door gestandaardiseerde integratie toe.](https://www.sap.com/products/financial-management/subscription-billing.html)
+[[!DNL SAP Commerce] ](https://www.sap.com/india/products/acquired-brands/what-is-hybris.html), is een op wolk-gebaseerde e-commerceplatformoplossing voor B2B en B2C ondernemingen beschikbaar als deel van de portefeuille van de Ervaring van de Klant van SAP. [[!DNL SAP]  het Factureren van het Abonnement 1&rbrace; is een product onder de portefeuille en laat volledig beheer van de abonnementslevenscyclus met vereenvoudigde het verkopen en betaling ervaringen door gestandaardiseerde integratie toe.](https://www.sap.com/products/financial-management/subscription-billing.html)
 
 De [!DNL SAP Commerce] bron staat u toe om klanten en contactinformatie in Experience Platform van de [[!DNL SAP]  Billing van het Abonnement ](https://www.sap.com/products/financial-management/subscription-billing.html) BedrijfsPartners API eindpunten hieronder in te voeren:
 
@@ -28,7 +28,7 @@ Bovendien, als [!DNL SAP Commerce] in werking wordt gesteld om klantengegevens t
 
 ## IP adres lijst van gewenste personen {#ip-allow-list}
 
-Een lijst van IP adressen kan vereisen om aan een lijst van gewenste personen worden toegevoegd alvorens met bronschakelaars te werken. Het niet toevoegen van uw regio-specifieke IP adressen aan uw lijst van gewenste personen kan tot fouten of niet-prestaties leiden wanneer het gebruiken van bronnen. Zie de ](../../ip-address-allow-list.md) pagina van de lijst van gewenste personen van het 0} IP adres {voor meer informatie.[
+Een lijst van IP adressen kan vereisen om aan een lijst van gewenste personen worden toegevoegd alvorens met bronschakelaars te werken. Het niet toevoegen van uw regio-specifieke IP adressen aan uw lijst van gewenste personen kan tot fouten of niet-prestaties leiden wanneer het gebruiken van bronnen. Zie de [&#128279;](../../ip-address-allow-list.md) pagina van de lijst van gewenste personen van het 0&rbrace; IP adres &lbrace;voor meer informatie.
 
 ## Vereisten {#prerequisites}
 

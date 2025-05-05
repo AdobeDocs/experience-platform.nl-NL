@@ -59,7 +59,7 @@ De pagina **[!UICONTROL Bot Detection Rules]** wordt weergegeven.
 
 Op de pagina Bot Detection Rules kunt u beide detectie configureren met de volgende functies:
 
-* De [!DNL [IAB/ABC International Spiders and Bots List]](https://www.iab.com/guidelines/iab-abc-international-spiders-bots-list/) gebruiken.
+* De [[!DNL [IAB/ABC International Spiders and Bots List]]](https://www.iab.com/guidelines/iab-abc-international-spiders-bots-list/) gebruiken.
 * Uw eigen regels voor botdetectie maken.
 
 ### De IAB/ABC International Spiders and Bots List gebruiken {#iab-list}

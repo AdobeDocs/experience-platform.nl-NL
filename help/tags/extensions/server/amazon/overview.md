@@ -96,7 +96,7 @@ Zodra al uw gegevenselementen opstelling zijn, kunt u gebeurtenis tot stand bren
 
 - Selecteer **houden Veranderingen** om de regel te bewaren.
 
-{de parameters van de gebeurtenis in actieconfiguratie die samen met de knoop van de lusjeveranderingen wordt benadrukt.](../../../images/extensions/server/amazon/5.png)![
+&lbrace;de parameters van de gebeurtenis in actieconfiguratie die samen met de knoop van de lusjeveranderingen wordt benadrukt.![&#128279;](../../../images/extensions/server/amazon/5.png)
 
 ![ Extra gebeurtenisparameters in actieconfiguratie die samen met de knoop van de lusjeveranderingen wordt benadrukt.](../../../images/extensions/server/amazon/6.png)
 

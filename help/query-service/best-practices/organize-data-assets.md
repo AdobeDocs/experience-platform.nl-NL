@@ -17,7 +17,7 @@ Het is belangrijk om uw gegevenselementen logisch te ordenen binnen de Experienc
 
 ## Aan de slag
 
-Alvorens met dit document verder te gaan, zou u een goed begrip van ](../home.md) eigenschappen van de Dienst van de Vraag moeten hebben [ en de [ gids van het gebruikersinterface ](../ui/user-guide.md) gelezen.
+Alvorens met dit document verder te gaan, zou u een goed begrip van [&#128279;](../home.md) eigenschappen van de Dienst van de Vraag moeten hebben  en de [ gids van het gebruikersinterface ](../ui/user-guide.md) gelezen.
 
 ## Gegevens ordenen in Query Service
 

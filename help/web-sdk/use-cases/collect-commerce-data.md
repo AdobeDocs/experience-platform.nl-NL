@@ -13,7 +13,7 @@ ht-degree: 0%
 
 Als uw organisatie producten of diensten verkoopt, kunt u deze pagina als gids voor gebruiken hoe te om die producten en de diensten te volgen.
 
-Deze pagina gebruikt de XDM ](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/commerce.schema.md) gebiedsgroep van het Schema van Commerce 0} {.[
+Deze pagina gebruikt de XDM [&#128279;](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/commerce.schema.md) gebiedsgroep van het Schema van Commerce 0&rbrace; &lbrace;.
 
 Deze veldgroep bestaat uit twee hoofddelen:
 

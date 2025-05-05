@@ -88,7 +88,7 @@ Voor meer informatie, te zien gelieve het [ overzicht van zandbakken ](../../san
 | Functie | Beschrijving |
 | ------- | ----------- |
 | Iteratieve handelingen | [!DNL Data Prep] Mapper ondersteunt nu het uitvoeren van herhalende bewerkingen in een hiërarchie. |
-| Mapper, functie | [!DNL Data Prep] Mapper heeft nu de capaciteit om **** geen attribuut van de bron aan het doel XDM te kopiëren. |
+| Mapper, functie | [!DNL Data Prep] Mapper heeft nu de capaciteit om **&#x200B;**&#x200B;geen attribuut van de bron aan het doel XDM te kopiëren. |
 
 Voor meer informatie, gelieve te zien het [[!DNL Data Prep]  overzicht ](../../data-prep/home.md).
 

@@ -94,7 +94,7 @@ De volgende JSON vertegenwoordigt een vereenvoudigd XDM-schema waarvan met behul
 
 >[!NOTE]
 >
->Wanneer het behandelen van `xdm:sourceProperty` en `xdm:destinationProperty` attributen van [!DNL Experience Data Model] (XDM) beschrijvers, moeten om het even welke `properties` sleutels **** van het koord van de Aanwijzer JSON worden uitgesloten. Zie de [!DNL Schema Registry] sub-gids van de ontwikkelaar van API op [ beschrijvers ](../xdm/api/descriptors.md) voor meer informatie.
+>Wanneer het behandelen van `xdm:sourceProperty` en `xdm:destinationProperty` attributen van [!DNL Experience Data Model] (XDM) beschrijvers, moeten om het even welke `properties` sleutels **&#x200B;**&#x200B;van het koord van de Aanwijzer JSON worden uitgesloten. Zie de [!DNL Schema Registry] sub-gids van de ontwikkelaar van API op [ beschrijvers ](../xdm/api/descriptors.md) voor meer informatie.
 
 ## JSON Patch {#json-patch}
 

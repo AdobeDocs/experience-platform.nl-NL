@@ -75,7 +75,7 @@ Wanneer een Dienst wordt gecreeerd, erft het gebrek die configuraties scoring. U
 
 ![](../images/models-recipes/publish-model/scoring_configs.png)
 
-Op de pagina van het Overzicht van de Dienst ****, worden de details van de nieuwe het scoren baan en zijn vooruitgang getoond. Nadat de taak is voltooid, wordt de header **[!UICONTROL Most Recent]** in de container van **[!UICONTROL Scoring]** bijgewerkt.
+Op de pagina van het Overzicht van de Dienst **&#x200B;**, worden de details van de nieuwe het scoren baan en zijn vooruitgang getoond. Nadat de taak is voltooid, wordt de header **[!UICONTROL Most Recent]** in de container van **[!UICONTROL Scoring]** bijgewerkt.
 
 ![](../images/models-recipes/publish-model/pending_scoring.png)
 

@@ -27,7 +27,7 @@ De [ bron van Audience Manager schakelaar ](../sources/connectors/adobe-applicat
 
 Volg de gids op hoe te om [ een bron van Audience Manager verbinding ](../sources/tutorials/ui/create/adobe-applications/audience-manager.md) tot stand te brengen om uw bronschakelaar te vormen.
 
-{het beeld van 0} Experience Platform UI die het Bronlusje met de bron van Audience Manager verbinding toont.](assets/sources-tab.png)![
+{het beeld van 0} Experience Platform UI die het Bronlusje met de bron van Audience Manager verbinding toont.![&#128279;](assets/sources-tab.png)
 
 >[!TIP]
 >
@@ -41,7 +41,7 @@ Het publiek dat u via Audience Manager naar de uitgebreide activering stuurt, ku
 
 Ga naar **[!UICONTROL Customer]** -> **[!UICONTROL Audiences]** -> **[!UICONTROL Browse]** om uw publiek weer te geven.
 
-{het beeld van 0} Experience Platform UI die de pagina van het publiek toont.](assets/audiences-browse.png)![
+{het beeld van 0} Experience Platform UI die de pagina van het publiek toont.![&#128279;](assets/audiences-browse.png)
 
 >[!IMPORTANT]
 >
@@ -58,7 +58,7 @@ Ga in de linkerzijbalk naar **[!UICONTROL Connections]** -> **[!UICONTROL Destin
 
 De beschikbare bestemmingscategorieën voor [!DNL Expanded Activation] zijn [ reclame ](../destinations/catalog/advertising/overview.md) en [ sociaal ](../destinations/catalog/social/overview.md).
 
-{het beeld van 0} Experience Platform UI die de bestemmingscatalogus voor Uitgebreide Activering toont.](assets/destination-catalog.png)![
+{het beeld van 0} Experience Platform UI die de bestemmingscatalogus voor Uitgebreide Activering toont.![&#128279;](assets/destination-catalog.png)
 
 Om een nieuwe verbinding aan een bestemmingsplatform tot stand te brengen, volg de gids op [ hoe te om een nieuwe bestemmingsverbinding ](../destinations/ui/connect-destination.md) tot stand te brengen. Dan, beweging aan [ stap 3 ](#activate-audiences).
 
@@ -66,7 +66,7 @@ Om een nieuwe verbinding aan een bestemmingsplatform tot stand te brengen, volg 
 
 Nadat u met succes [ hebt opgenomen Audience Manager publiek ](#configure-source) en [ creeerde een nieuwe bestemmingsverbinding ](#create-destination-connection), kunt u uw publiek aan het bestemmingsplatform van uw keus nu activeren.
 
-{het beeld van 0} Experience Platform UI die de bestemmingscatalogus voor Uitgebreide Activering toont.](assets/activate-audiences.png)![
+{het beeld van 0} Experience Platform UI die de bestemmingscatalogus voor Uitgebreide Activering toont.![&#128279;](assets/activate-audiences.png)
 
 Om publiek aan uw bestemming te activeren, volg de gids op [ hoe te om publiek aan het stromen bestemmingen ](../destinations/ui/activate-segment-streaming-destinations.md) te activeren.
 

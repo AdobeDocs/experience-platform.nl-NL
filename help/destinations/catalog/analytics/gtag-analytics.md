@@ -42,7 +42,7 @@ Selecteer de eigenschap waarin u de extensie wilt installeren. U kunt ook een ni
 
 Het werkschema begeleidt u door de stappen om de installatie te voltooien.
 
-Voor informatie over de opties van de uitbreidingsconfiguratie, zie de pagina van Adobe Exchange van de uitbreiding [ ](https://exchange.adobe.com/experiencecloud.details.101437.google-global-site-tag-gtag.html).
+Voor informatie over de opties van de uitbreidingsconfiguratie, zie de pagina van Adobe Exchange van de uitbreiding [&#128279;](https://exchange.adobe.com/experiencecloud.details.101437.google-global-site-tag-gtag.html).
 
 U kunt de uitbreiding direct in [ de Inzameling UI van Gegevens ](https://experience.adobe.com/#/data-collection/) ook installeren. Voor meer informatie, zie de sectie op [ toevoegend een nieuwe uitbreiding ](../../../tags/ui/managing-resources/extensions/overview.md#add-a-new-extension) in de markeringsdocumentatie.
 

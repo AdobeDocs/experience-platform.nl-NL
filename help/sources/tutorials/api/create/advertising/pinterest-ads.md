@@ -143,7 +143,7 @@ curl -X GET \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
->[!TAB  voeg Groepen ] toe
+>[!TAB voeg Groepen  toe]
 
 Voor [!DNL Pinterest Ads] wordt de waarde voor `{SOURCE_PARAMS}` doorgegeven als `{"ad_account_id":"123456789000","object_ids":"000123456789,100123456789","object_type":"ad_groups"}` wanneer de API voor Advertentiegroepen Analytics wordt gebruikt. Wanneer gecodeerd in base64 komt deze overeen met `eyJhZF9hY2NvdW50X2lkIjoiMTIzNDU2Nzg5MDAwIiwib2JqZWN0X2lkcyI6IjAwMDEyMzQ1Njc4OSwxMDAxMjM0NTY3ODkiLCJvYmplY3RfdHlwZSI6ImFkX2dyb3VwcyJ9` zoals hieronder weergegeven.
 
@@ -248,7 +248,7 @@ Een geslaagde reactie retourneert de gegevensstructuur van de overeenkomende [!D
 }
 ```
 
->[!TAB  voeg Groepen ] toe
+>[!TAB voeg Groepen  toe]
 
 ```json
 {
@@ -493,7 +493,7 @@ curl -X POST \
 | `params.object_type` | Aangezien het eindpunt van de API voor campagneanalyse van [!DNL Pinterest] is vereist, is de waarde `campaigns` . |
 | `params.object_ids` | De door komma&#39;s gescheiden lijst met [!DNL Pinterest] campagne-id&#39;s. |
 
->[!TAB  voeg Groepen ] toe
+>[!TAB voeg Groepen  toe]
 
 ```shell
 curl -X POST \

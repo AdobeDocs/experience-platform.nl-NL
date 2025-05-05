@@ -12,7 +12,7 @@ ht-degree: 0%
 
 # [!DNL SAP Commerce] verbinding
 
-[!DNL SAP Commerce], vroeger gekend als [[!DNL Hybris] ](https://www.sap.com/india/products/acquired-brands/what-is-hybris.html), is een op wolk-gebaseerde e-commerceoplossing voor B2B en B2C ondernemingen en beschikbaar als deel van de portefeuille van de Ervaring van de Klant van SAP. [[!DNL SAP]  het Factureren van het Abonnement 1} is een product onder de portefeuille en laat volledig beheer van de abonnementslevenscyclus met vereenvoudigde het verkopen en betaling ervaringen door gestandaardiseerde integratie toe.](https://www.sap.com/products/financial-management/subscription-billing.html)
+[!DNL SAP Commerce], vroeger gekend als [[!DNL Hybris] ](https://www.sap.com/india/products/acquired-brands/what-is-hybris.html), is een op wolk-gebaseerde e-commerceoplossing voor B2B en B2C ondernemingen en beschikbaar als deel van de portefeuille van de Ervaring van de Klant van SAP. [[!DNL SAP]  het Factureren van het Abonnement 1&rbrace; is een product onder de portefeuille en laat volledig beheer van de abonnementslevenscyclus met vereenvoudigde het verkopen en betaling ervaringen door gestandaardiseerde integratie toe.](https://www.sap.com/products/financial-management/subscription-billing.html)
 
 Dit [!DNL Adobe Experience Platform] [ bestemming ](/help/destinations/home.md) gebruikt [[!DNL SAP Subscription Billing]  klantenbeheer API ](https://api.sap.com/api/BusinessPartner_APIs/path/PUT_customers-customerNumber), om uw klantendetails binnen [!DNL SAP Commerce] van een bestaand publiek van Experience Platform na activering bij te werken.
 
@@ -121,7 +121,7 @@ Deze bestemming ondersteunt ook de activering van het publiek dat in de ondersta
 
 | Type publiek | Ondersteund | Beschrijving |
 | ------------- | --------- | ----------- |
-| [!DNL Segmentation Service] | ✓ | Het publiek produceerde door de Dienst van de Segmentatie van Experience Platform [ ](../../../segmentation/home.md). |
+| [!DNL Segmentation Service] | ✓ | Het publiek produceerde door de Dienst van de Segmentatie van Experience Platform [&#128279;](../../../segmentation/home.md). |
 | Aangepaste uploads | ✓ | Het publiek [ ingevoerde ](../../../segmentation/ui/audience-portal.md#import-audience) in Experience Platform van Csv- dossiers. |
 
 {style="table-layout:auto"}
@@ -196,11 +196,11 @@ Als u uw publieksgegevens correct vanuit Adobe Experience Platform naar de [!DNL
 De identiteit van `customerNumberSAP` is een verplichte toewijzing voor dit doel. Voer de onderstaande stappen uit om deze toe te wijzen:
 
 1. Selecteer **[!UICONTROL Add new mapping]** in de stap **[!UICONTROL Mapping]** . U ziet nu een nieuwe toewijzingsrij op het scherm.
-   {het schermschot van 0} Experience Platform UI met toegevoegde nieuwe benadrukte toewijzingsknoop.](../../assets/catalog/ecommerce/sap-commerce/mapping-add-new-mapping.png)![
+   {het schermschot van 0} Experience Platform UI met toegevoegde nieuwe benadrukte toewijzingsknoop.![&#128279;](../../assets/catalog/ecommerce/sap-commerce/mapping-add-new-mapping.png)
 1. Kies in het **[!UICONTROL Select source field]** -venster de **[!UICONTROL Select identity namespace]** en selecteer `customerNumberSAP` .
-   {het schermschot van 0} Experience Platform UI die e-mail als bronattribuut selecteert om als identiteit in kaart te brengen.](../../assets/catalog/ecommerce/sap-commerce/mapping-select-source-identity.png)![
+   {het schermschot van 0} Experience Platform UI die e-mail als bronattribuut selecteert om als identiteit in kaart te brengen.![&#128279;](../../assets/catalog/ecommerce/sap-commerce/mapping-select-source-identity.png)
 1. Kies in het **[!UICONTROL Select target field]** -venster de **[!UICONTROL Select identity namespace]** en selecteer de `customerNumber` -identiteit.
-   {het schermschot van 0} Experience Platform UI die e-mail als doelattribuut selecteert om als identiteit in kaart te brengen.](../../assets/catalog/ecommerce/sap-commerce/mapping-select-target-identity.png)![
+   {het schermschot van 0} Experience Platform UI die e-mail als doelattribuut selecteert om als identiteit in kaart te brengen.![&#128279;](../../assets/catalog/ecommerce/sap-commerce/mapping-select-target-identity.png)
 
 | Source-veld | Doelveld | Verplicht |
 | --- | --- | --- |
@@ -214,11 +214,11 @@ Hieronder ziet u een voorbeeld met de identiteitstoewijzing:
 Herhaal de onderstaande stappen om andere kenmerken toe te voegen die u tussen het XDM-profielschema en uw [!DNL SAP Subscription Billing] -account wilt bijwerken:
 
 1. Selecteer **[!UICONTROL Add new mapping]** in de stap **[!UICONTROL Mapping]** . U ziet nu een nieuwe toewijzingsrij op het scherm.
-   {het schermschot van 0} Experience Platform UI met toegevoegde nieuwe benadrukte toewijzingsknoop.](../../assets/catalog/ecommerce/sap-commerce/mapping-add-new-mapping.png)![
+   {het schermschot van 0} Experience Platform UI met toegevoegde nieuwe benadrukte toewijzingsknoop.![&#128279;](../../assets/catalog/ecommerce/sap-commerce/mapping-add-new-mapping.png)
 1. Kies in het venster **[!UICONTROL Select source field]** de categorie **[!UICONTROL Select attributes]** en selecteer het XDM-kenmerk.
    ![ het schermschot van Experience Platform UI die Achternaam als bronattribuut selecteren.](../../assets/catalog/ecommerce/sap-commerce/mapping-select-source-attribute.png)
 1. In het **[!UICONTROL Select target field]** venster, kies **[!UICONTROL Select custom attributes]** categorie en typ de naam van het [!DNL SAP Subscription Billing] attribuut van de lijst van klant [ schema ](https://api.sap.com/api/BusinessPartner_APIs/schema) attributen.
-   {het schermschot van 0} Experience Platform UI waar lastName als doelattribuut wordt bepaald.](../../assets/catalog/ecommerce/sap-commerce/mapping-select-target-attribute.png)![
+   {het schermschot van 0} Experience Platform UI waar lastName als doelattribuut wordt bepaald.![&#128279;](../../assets/catalog/ecommerce/sap-commerce/mapping-select-target-attribute.png)
 
 >[!IMPORTANT]
 >

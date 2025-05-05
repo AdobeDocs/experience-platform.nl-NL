@@ -17,7 +17,7 @@ ht-degree: 0%
 >
 >De gebieden van de Inzameling van media vangen gegevens en verzenden het naar andere diensten van Adobe voor verdere verwerking. Media Reporting-velden worden door Adobe-services gebruikt voor het analyseren van de velden Media Collection die door gebruikers worden verzonden. Deze gegevens worden, samen met andere specifieke maatstaven voor gebruikers, berekend en gerapporteerd.
 
-++ + selecteren om een diagram van het gegevenstype [!UICONTROL Media Collection details] weer te geven.
++++ selecteren om een diagram van het gegevenstype [!UICONTROL Media Collection details] weer te geven.
 ![ een diagram van het [!UICONTROL Media Collection details information] gegevenstype.](../images/data-types/media-collection-details.png)
 +++
 

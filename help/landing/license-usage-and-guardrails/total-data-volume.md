@@ -15,7 +15,7 @@ Het totale Volume van Gegevens vervangt vorige Gemiddelde Metrisch van de Rijhei
 
 **Totale Volume van Gegevens = Adresseerbare Publiek × Gemiddelde Rijheid van het Profiel**
 
-Deze metrisch wijst op de totale hoeveelheid gegevens die in de **Opslag van het Profiel** worden opgeslagen en beschikbaar voor gebruik in de de betrokkenheidswerkschema&#39;s van het Profiel van de Klant in real time. Het omvat **** geen gegevens die in het **gegevens meer** worden opgeslagen. Deze wijziging zorgt voor een meer gerichte en transparante weergave van gegevens die relevant zijn voor op profielen gebaseerde personalisatie en betrokkenheid.
+Deze metrisch wijst op de totale hoeveelheid gegevens die in de **Opslag van het Profiel** worden opgeslagen en beschikbaar voor gebruik in de de betrokkenheidswerkschema&#39;s van het Profiel van de Klant in real time. Het omvat **&#x200B;**&#x200B;geen gegevens die in het **gegevens meer** worden opgeslagen. Deze wijziging zorgt voor een meer gerichte en transparante weergave van gegevens die relevant zijn voor op profielen gebaseerde personalisatie en betrokkenheid.
 
 ## Veelgestelde vragen {#faq}
 
@@ -35,7 +35,7 @@ Nee. U krijgt nog steeds de voordelen van de machtigingspakketten die u eerder h
 
 ### Hoe komt het dat ik een andere waarde zie voor mijn Totale Volume van Gegevens vergeleken met mijn de opslagrechten van het Profiel?
 
-Het totale Volume van Gegevens vertegenwoordigt de **totale** hoeveelheid gegevens beschikbaar voor Profiel aan gebruik in betrokkenheidswerkschema&#39;s. De meting is bijgewerkt om deterministischer en verklaarbaarder te zijn. De meeste gebruikers zouden **** geen significante verandering tussen hun Totaal Volume van Gegevens en hun totale profielopslag moeten zien. Als u zich zorgen maakt, kunt u een ticket voorleggen aan uw medewerker van de klantenservice.
+Het totale Volume van Gegevens vertegenwoordigt de **totale** hoeveelheid gegevens beschikbaar voor Profiel aan gebruik in betrokkenheidswerkschema&#39;s. De meting is bijgewerkt om deterministischer en verklaarbaarder te zijn. De meeste gebruikers zouden **&#x200B;**&#x200B;geen significante verandering tussen hun Totaal Volume van Gegevens en hun totale profielopslag moeten zien. Als u zich zorgen maakt, kunt u een ticket voorleggen aan uw medewerker van de klantenservice.
 
 ### Hoe wordt het totale gegevensvolume berekend? Omvat het de opslag van het Data Lake?
 
@@ -43,7 +43,7 @@ Het totale gegevensvolume wordt berekend met behulp van de volgende formule:
 
 **Totale Volume van Gegevens = Adresseerbare Publiek × Gemiddelde Rijheid van het Profiel**
 
-Deze maatstaf geeft de totale hoeveelheid gegevens weer die in de profielenopslag is opgeslagen en die beschikbaar is voor realtime klantprofiel voor gebruik in betrokkenheidsworkflows. Het omvat **** geen gegevens die in het gegevenshoeveelheid worden opgeslagen.
+Deze maatstaf geeft de totale hoeveelheid gegevens weer die in de profielenopslag is opgeslagen en die beschikbaar is voor realtime klantprofiel voor gebruik in betrokkenheidsworkflows. Het omvat **&#x200B;**&#x200B;geen gegevens die in het gegevenshoeveelheid worden opgeslagen.
 
 Eerder, gebruikten sommige erfenisaanbiedingen een &quot;totale opslag&quot;metrisch die zowel de Opslag van het Profiel als het Gebruik van het meer van Gegevens combineerde. Het totale gegevensvolume is echter beperkt tot alleen de profielopslag en biedt een meer gerichte weergave van gegevens die relevant zijn voor op profielen gebaseerde betrokkenheid.
 

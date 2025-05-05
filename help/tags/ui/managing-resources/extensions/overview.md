@@ -53,7 +53,7 @@ De pagina Extensies biedt drie weergaven:
 
 Selecteer **[!UICONTROL Extensions]** om alle geïnstalleerde extensies weer te geven. U kunt de catalogus ook gebruiken om een lijst weer te geven met alle beschikbare extensies en extensies waarvoor updates beschikbaar zijn.
 
-Zie {de Verwijzing van Uitbreidingen 0} ](../../../extensions/client/overview.md) voor details over de Adobe-bezeten uitbreidingen.[
+Zie {de Verwijzing van Uitbreidingen 0} [&#128279;](../../../extensions/client/overview.md) voor details over de Adobe-bezeten uitbreidingen.
 
 ## Een nieuwe extensie toevoegen {#add-a-new-extension}
 

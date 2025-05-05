@@ -160,17 +160,17 @@ Voer de onderstaande stappen uit om te controleren of u de bron juist hebt inges
 
 * U kunt de pagina [!DNL Pendo] **[!UICONTROL Reports]** > **[!UICONTROL Chat History]** controleren om de gebeurtenissen te identificeren die door [!DNL Pendo] worden vastgelegd.
 
-{het schermschot van 0} van de Buigmachine UI die praatjegeschiedenis toont ](../../../../images/tutorials/create/analytics-pendo-webhook/pendo-events.png)![
+{het schermschot van 0} van de Buigmachine UI die praatjegeschiedenis toont ![&#128279;](../../../../images/tutorials/create/analytics-pendo-webhook/pendo-events.png)
 
 * Selecteer in de gebruikersinterface van Experience Platform de optie **[!UICONTROL View Dataflows]** naast het kaartmenu [!DNL Pendo] in de catalogus met bronnen. Selecteer vervolgens **[!UICONTROL Preview dataset]** om de gegevens te verifiëren die zijn ingevoerd voor de webhooks die u hebt geconfigureerd in [!DNL Pendo] .
 
-{het schermschot van 0} Experience Platform UI die ingebedde gebeurtenissen ](../../../../images/tutorials/create/analytics-pendo-webhook/platform-dataset.png) toont![
+{het schermschot van 0} Experience Platform UI die ingebedde gebeurtenissen ![&#128279;](../../../../images/tutorials/create/analytics-pendo-webhook/platform-dataset.png) toont
 
 ### Fouten en problemen oplossen {#errors-and-troubleshooting}
 
 Bij het controleren van een gegevensstroomuitvoering kan het volgende foutbericht optreden: `The message can't be validated ... uniqueID:expected minLength:1, actual 0].`
 
-{het schermschot van 0} Experience Platform UI die fout toont.](../../../../images/tutorials/create/analytics-pendo-webhook/error.png)![
+{het schermschot van 0} Experience Platform UI die fout toont.![&#128279;](../../../../images/tutorials/create/analytics-pendo-webhook/error.png)
 
 Om deze fout te bevestigen, moet u verifiëren dat de ** afbeelding uniqueID opstelling is geweest. Voor extra begeleiding, verwijs naar de [ Mpping ](#mapping) sectie.
 

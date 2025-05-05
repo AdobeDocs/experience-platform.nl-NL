@@ -92,15 +92,15 @@ De volgende video-uitbreidingsobjecten moeten worden opgenomen:
 
       * De gebeurtenis voor **VideoBegin** (voorbeeld: event17)
       * Prop/eVar voor het **VideoNaam** gegevenselement (voorbeeld: eVar10)
-      * Prop/eVar voor het **gegevenselement van de Duur 0} Video (voorbeeld: eVar11)**
-      * Prop/eVar voor het **Huidige Video 1} gegevenselement van de Plaats van de Plaats {(voorbeeld: eVar12)**
+      * Prop/eVar voor het **gegevenselement van de Duur 0&rbrace; Video (voorbeeld: eVar11)**
+      * Prop/eVar voor het **Huidige Video 1&rbrace; gegevenselement van de Plaats van de Plaats &lbrace;(voorbeeld: eVar12)**
 
    1. De handeling Analytics &quot;Send Beacon&quot; (`s.tl`)
    1. De actie Analytics &quot;Clear Variables&quot;
 
 >[!TIP]
 >
->Voor degenen die niet veelvoudige eVars of steunen voor elk video element zouden kunnen willen verstrekken, worden de waarden van het gegevenselement aaneengeschakeld als alternatieve methode. Daarna worden ze geparseerd in classificatierapporten met het gereedschap Classificatieregel Builder. Zie de ](https://experienceleague.adobe.com/docs/analytics/components/classifications/classifications-rulebuilder/classification-rule-builder.html) documentatie van de Bouwer van de Regel van de Classificatie van 0} {voor meer informatie. [ Tot slot worden zij in Analysis Workspace als een segment toegepast.
+>Voor degenen die niet veelvoudige eVars of steunen voor elk video element zouden kunnen willen verstrekken, worden de waarden van het gegevenselement aaneengeschakeld als alternatieve methode. Daarna worden ze geparseerd in classificatierapporten met het gereedschap Classificatieregel Builder. Zie de [&#128279;](https://experienceleague.adobe.com/docs/analytics/components/classifications/classifications-rulebuilder/classification-rule-builder.html) documentatie van de Bouwer van de Regel van de Classificatie van 0&rbrace; &lbrace;voor meer informatie.  Tot slot worden zij in Analysis Workspace als een segment toegepast.
 >
 >Hiertoe maakt u een nieuw gegevenselement, bijvoorbeeld &quot;Video MetaData&quot;, en programmeert u dit om alle videogegevenselementen (hierboven vermeld) aan elkaar te koppelen.
 

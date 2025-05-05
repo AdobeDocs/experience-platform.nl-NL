@@ -268,7 +268,7 @@ In de onderstaande voorbeeldaanvraag wordt een record met een ontbrekende bronna
 
 >[!NOTE]
 >
->De volgende API vraag **** vereist geen authentificatiekopballen.
+>De volgende API vraag **&#x200B;**&#x200B;vereist geen authentificatiekopballen.
 
 ```shell
 curl -X POST https://dcs.adobedc.net/collection/{CONNECTION_ID}?syncValidation=true \

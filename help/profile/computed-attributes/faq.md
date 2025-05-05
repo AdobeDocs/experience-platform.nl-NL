@@ -65,7 +65,7 @@ Met berekende kenmerken wordt de profielverrijking bevorderd door de gebeurtenis
 
 ## Hoe vaak worden berekende kenmerken geëvalueerd? Heeft dit betrekking op het beoordelingsschema voor de doelgroep?
 
-De gegevens verwerkte attributen worden geëvalueerd in a **partij** frequentie die **** aan het programma van uw publiek, bestemming, en reisevaluatie onafhankelijk is. Dit betekent dat, ongeacht het segmentatietype (batchsegmentatie of streamingsegmentatie), het berekende kenmerk volgens zijn eigen schema (per uur, per dag, per week of per maand) wordt geëvalueerd.
+De gegevens verwerkte attributen worden geëvalueerd in a **partij** frequentie die **&#x200B;**&#x200B;aan het programma van uw publiek, bestemming, en reisevaluatie onafhankelijk is. Dit betekent dat, ongeacht het segmentatietype (batchsegmentatie of streamingsegmentatie), het berekende kenmerk volgens zijn eigen schema (per uur, per dag, per week of per maand) wordt geëvalueerd.
 
 De eerste tijdevaluatie van uw gegevens verwerkte attributen gebeurt binnen de 24 uren van zijn **verwezenlijking**. De daaropvolgende batchevaluaties vinden plaats op een uur-, dag-, week- of maandbasis, afhankelijk van de gedefinieerde terugzoekperiode.
 

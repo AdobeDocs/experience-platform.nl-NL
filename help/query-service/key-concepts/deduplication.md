@@ -34,7 +34,7 @@ In het geval van dubbele Gebeurtenissen van de Ervaring, zult u waarschijnlijk d
 >
 >Voor veel datasets in [!DNL Experience Platform], waaronder die welke door de Adobe Analytics Data Connector worden geproduceerd, is al deduplicatie op ervaringsniveau op gebeurtenisniveau toegepast. Daarom is het opnieuw toepassen van dit niveau van deduplicatie onnodig en zal uw vraag vertragen.
 >
->Het is belangrijk om de bron van uw datasets te begrijpen en te weten of is deduplicatie op ervaring-gebeurtenis-niveau reeds toegepast. Voor om het even welke datasets die (bijvoorbeeld, die van Adobe Target) worden gestroomd, zult u **** ervaring-gebeurtenis-vlakke deduplicatie moeten toepassen, aangezien die gegevensbronnen &quot;minstens eens&quot;semantiek hebben.
+>Het is belangrijk om de bron van uw datasets te begrijpen en te weten of is deduplicatie op ervaring-gebeurtenis-niveau reeds toegepast. Voor om het even welke datasets die (bijvoorbeeld, die van Adobe Target) worden gestroomd, zult u **&#x200B;**&#x200B;ervaring-gebeurtenis-vlakke deduplicatie moeten toepassen, aangezien die gegevensbronnen &quot;minstens eens&quot;semantiek hebben.
 
 **Reikwijdte:** Globaal
 
@@ -89,7 +89,7 @@ FROM experience_events
 
 >[!NOTE]
 >
->In sommige gevallen waar de originele gegevens van de Analyse dubbele aankoop IDs over bezoeker IDs hebben, kunt u **** de dubbele telling van aankoopidentiteitskaart over alle bezoekers in werking moeten stellen. Wanneer de aankoop-id niet aanwezig is, moet u met deze methode een voorwaarde opnemen die in plaats daarvan de gebeurtenis-id gebruikt om de query zo snel mogelijk te houden.
+>In sommige gevallen waar de originele gegevens van de Analyse dubbele aankoop IDs over bezoeker IDs hebben, kunt u **&#x200B;**&#x200B;de dubbele telling van aankoopidentiteitskaart over alle bezoekers in werking moeten stellen. Wanneer de aankoop-id niet aanwezig is, moet u met deze methode een voorwaarde opnemen die in plaats daarvan de gebeurtenis-id gebruikt om de query zo snel mogelijk te houden.
 
 ### Volledig voorbeeld
 

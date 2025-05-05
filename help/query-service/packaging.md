@@ -69,7 +69,7 @@ In de volgende tabel worden de effecten van de machtiging [!DNL Manage Queries] 
 
 ### Relevante SQL Insights-machtigingen {#sql-insights-permissions}
 
-Om de Gegevens Distiller [ SQL Inzichten ](./data-distiller/sql-insights/overview.md) binnen dashboards tot stand te brengen, moeten de volgende toestemmingen **** binnen Admin Console worden toegelaten.
+Om de Gegevens Distiller [ SQL Inzichten ](./data-distiller/sql-insights/overview.md) binnen dashboards tot stand te brengen, moeten de volgende toestemmingen **&#x200B;**&#x200B;binnen Admin Console worden toegelaten.
 
 | Machtiging | Functie |
 |---|---|

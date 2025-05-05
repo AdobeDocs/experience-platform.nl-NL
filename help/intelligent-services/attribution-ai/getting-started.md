@@ -53,7 +53,7 @@ Deze gids verstrekt voorbeeld API vraag om aan te tonen hoe te om uw verzoeken t
 
 ## Toegangsbeheer {#access-control}
 
-Wanneer het gebruiken van op rol-gebaseerd toegangsbeheer, verlenen de **Eigenschappen AI van de Attributie van de Mening** en **de voorrechten van AI van de Attributie** toegang tot verschillende functies van Attributie AI. **beheert Attributie AI** laat u **** creëren, **kloon**, **uitgeven**, **schrapping**, **toelaten**, of **onbruikbaar maken** een instantie terwijl **de Attributie AI van de Mening** u **laat lezen of** mening **het.** **creeer**, **geef** uit en **schrap** acties worden geregistreerd door controlelogboeken.
+Wanneer het gebruiken van op rol-gebaseerd toegangsbeheer, verlenen de **Eigenschappen AI van de Attributie van de Mening** en **de voorrechten van AI van de Attributie** toegang tot verschillende functies van Attributie AI. **beheert Attributie AI** laat u **&#x200B;**&#x200B;creëren, **kloon**, **uitgeven**, **schrapping**, **toelaten**, of **onbruikbaar maken** een instantie terwijl **de Attributie AI van de Mening** u **laat lezen of** mening **het.** **creeer**, **geef** uit en **schrap** acties worden geregistreerd door controlelogboeken.
 
 Zie de documentatie om [ te leren toewijzend toestemmingen voor toegangscontrole ](../../../help/access-control/home.md) of hoe te [ controlelogboeken gebruiken om toegang en activiteit ](../../../help/landing/governance-privacy-security/audit-logs/overview.md) te controleren.
 

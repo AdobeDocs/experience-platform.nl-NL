@@ -25,7 +25,7 @@ Lees deze sectie voor de vereiste stappen die u moet voltooien om de [!DNL SFTP]
 
 ### IP adres lijst van gewenste personen
 
-Een lijst van IP adressen moet aan een lijst van gewenste personen worden toegevoegd alvorens met bronschakelaars te werken. Het niet toevoegen van uw regio-specifieke IP adressen aan uw lijst van gewenste personen kan tot fouten of niet-prestaties leiden wanneer het gebruiken van bronnen. Zie de ](../../ip-address-allow-list.md) pagina van de lijst van gewenste personen van het 0} IP adres {voor meer informatie.[
+Een lijst van IP adressen moet aan een lijst van gewenste personen worden toegevoegd alvorens met bronschakelaars te werken. Het niet toevoegen van uw regio-specifieke IP adressen aan uw lijst van gewenste personen kan tot fouten of niet-prestaties leiden wanneer het gebruiken van bronnen. Zie de [&#128279;](../../ip-address-allow-list.md) pagina van de lijst van gewenste personen van het 0&rbrace; IP adres &lbrace;voor meer informatie.
 
 ### Naamgevingsbeperkingen voor bestanden en mappen
 
@@ -48,7 +48,7 @@ De [!DNL SFTP] -bron ondersteunt verificatie met behulp van de [!DNL Base64] -ge
 
 ### [!DNL Windows] gebruikers
 
-Als u een [!DNL Windows] machine gebruikt, open omhoog het **2} menu van het Begin {en selecteer dan** Montages **.**
+Als u een [!DNL Windows] machine gebruikt, open omhoog het **2&rbrace; menu van het Begin &lbrace;en selecteer dan** Montages **.**
 
 ![ montages ](../../images/tutorials/create/sftp/settings.png)
 
@@ -60,7 +60,7 @@ Daarna, uitgezochte **Facultatieve eigenschappen**.
 
 ![ facultatief-eigenschappen ](../../images/tutorials/create/sftp/optional-features.png)
 
-Er wordt een lijst met optionele functies weergegeven. Als **Cliënt OpenSSH** reeds vooraf geïnstalleerd in uw machine is, dan zal het in de **Geïnstalleerde 3} lijst van eigenschappen** Facultatieve eigenschappen **worden omvat.**
+Er wordt een lijst met optionele functies weergegeven. Als **Cliënt OpenSSH** reeds vooraf geïnstalleerd in uw machine is, dan zal het in de **Geïnstalleerde 3&rbrace; lijst van eigenschappen** Facultatieve eigenschappen **worden omvat.**
 
 ![ open-ssh ](../../images/tutorials/create/sftp/open-ssh.png)
 

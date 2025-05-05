@@ -506,7 +506,7 @@ Een geslaagde reactie retourneert HTTP-status 200 met details van de tags die to
 >
 >Alleen de systeembeheerder en de productbeheerder kunnen deze API-aanroep gebruiken om een nieuwe tag te maken in een opgegeven tagcategorie.
 >
->Als u een niet-gecategoriseerde markering creeert, hebt u **** geen beheerdertoestemmingen nodig.
+>Als u een niet-gecategoriseerde markering creeert, hebt u **&#x200B;**&#x200B;geen beheerdertoestemmingen nodig.
 
 U kunt een nieuwe tag maken door een POST aan te vragen bij het eindpunt van `/tags` .
 

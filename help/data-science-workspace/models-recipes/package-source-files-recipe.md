@@ -90,7 +90,7 @@ Als u dit nog niet hebt gedaan, kloont u de [!DNL GitHub] -opslagplaats op uw lo
 git clone https://github.com/adobe/experience-platform-dsw-reference.git
 ```
 
-Navigeer naar de map `experience-platform-dsw-reference/recipes/python/retail` . Hier vindt u de scripts `login.sh` en `build.sh` die worden gebruikt om u aan te melden bij Docker en de [!DNL Python Docker] -afbeelding te maken. Als u uw ](#docker-based-model-authoring) klaar geloofsbrieven van het 0} Dock hebt, ga de volgende bevelen in orde in:[
+Navigeer naar de map `experience-platform-dsw-reference/recipes/python/retail` . Hier vindt u de scripts `login.sh` en `build.sh` die worden gebruikt om u aan te melden bij Docker en de [!DNL Python Docker] -afbeelding te maken. Als u uw [&#128279;](#docker-based-model-authoring) klaar geloofsbrieven van het 0&rbrace; Dock hebt, ga de volgende bevelen in orde in:
 
 ```BASH
 # for logging in to Docker
@@ -119,7 +119,7 @@ Als u dit nog niet hebt gedaan, kloont de [!DNL GitHub] gegevensopslagruimte op 
 git clone https://github.com/adobe/experience-platform-dsw-reference.git
 ```
 
-Navigeer naar de map `experience-platform-dsw-reference/recipes/R/Retail - GradientBoosting` in uw gekloonde opslagplaats. Hier vindt u de bestanden `login.sh` en `build.sh` waarmee u zich aanmeldt bij Docker en de R Docker-afbeelding maakt. Als u uw ](#docker-based-model-authoring) klaar geloofsbrieven van het 0} Dock hebt, ga de volgende bevelen in orde in:[
+Navigeer naar de map `experience-platform-dsw-reference/recipes/R/Retail - GradientBoosting` in uw gekloonde opslagplaats. Hier vindt u de bestanden `login.sh` en `build.sh` waarmee u zich aanmeldt bij Docker en de R Docker-afbeelding maakt. Als u uw [&#128279;](#docker-based-model-authoring) klaar geloofsbrieven van het 0&rbrace; Dock hebt, ga de volgende bevelen in orde in:
 
 ```BASH
 # for logging in to Docker
@@ -148,7 +148,7 @@ Begin met het klonen van de [!DNL GitHub] -opslagplaats op uw lokale systeem met
 git clone https://github.com/adobe/experience-platform-dsw-reference.git
 ```
 
-Navigeer naar de map `experience-platform-dsw-reference/recipes/pyspark/retail` . De scripts `login.sh` en `build.sh` bevinden zich hier en worden gebruikt om u aan te melden bij Docker en om de Docker-afbeelding te maken. Als u uw ](#docker-based-model-authoring) klaar geloofsbrieven van het 0} Dock hebt, ga de volgende bevelen in orde in:[
+Navigeer naar de map `experience-platform-dsw-reference/recipes/pyspark/retail` . De scripts `login.sh` en `build.sh` bevinden zich hier en worden gebruikt om u aan te melden bij Docker en om de Docker-afbeelding te maken. Als u uw [&#128279;](#docker-based-model-authoring) klaar geloofsbrieven van het 0&rbrace; Dock hebt, ga de volgende bevelen in orde in:
 
 ```BASH
 # for logging in to Docker

@@ -105,7 +105,7 @@ Zoek in **[!UICONTROL Destinations]** > **[!UICONTROL Catalog]** naar [!DNL Sale
 
 Selecteer **[!UICONTROL Connect to destination]** als u wilt verifiëren bij het doel. U gaat naar de aanmeldingspagina van [!DNL Salesforce] . Voer uw [!DNL Marketing Cloud Account Engagement] -accountgegevens in en selecteer [!DNL Log In] .
 
-{het schermschot van 0} Experience Platform UI die tonen hoe te om aan de Betrokkenheid van de Rekening van Marketing Cloud voor authentiek te verklaren.](../../assets/catalog/email-marketing/salesforce-marketing-cloud-account-engagement/authenticate-destination.png)![
+{het schermschot van 0} Experience Platform UI die tonen hoe te om aan de Betrokkenheid van de Rekening van Marketing Cloud voor authentiek te verklaren.![&#128279;](../../assets/catalog/email-marketing/salesforce-marketing-cloud-account-engagement/authenticate-destination.png)
 
 Daarna, selecteer [!UICONTROL Allow] in het verdere venster om toestemmingen aan **Adobe Experience Platform** app te geven om tot uw [!DNL Salesforce Marketing Cloud Account Engagement] rekening toegang te hebben. *u zult dit slechts eenmaal* moeten doen.
 
@@ -117,7 +117,7 @@ Als de verstrekte details geldig zijn, toont UI een bericht: *u met succes verbo
 
 Als u details voor de bestemming wilt configureren, vult u de vereiste en optionele velden hieronder in. Een sterretje naast een veld in de gebruikersinterface geeft aan dat het veld verplicht is. Verwijs naar de [ Gather  [!DNL Marketing Cloud Account Engagement]  geloofsbrieven ](#gather-credentials) sectie voor om het even welke begeleiding.
 
-{het schermschot van 0} Experience Platform UI die de bestemmingsdetails toont.](../../assets/catalog/email-marketing/salesforce-marketing-cloud-account-engagement/destination-details.png)![
+{het schermschot van 0} Experience Platform UI die de bestemmingsdetails toont.![&#128279;](../../assets/catalog/email-marketing/salesforce-marketing-cloud-account-engagement/destination-details.png)
 
 | Veld | Beschrijving |
 | --- | --- |
@@ -161,6 +161,7 @@ Voer de onderstaande stappen uit om uw XDM-velden correct toe te wijzen aan de [
      | `xdm: person.name.firstName` | `Attribute: firstName` | |
 
    * Hieronder ziet u een voorbeeld met de bovenstaande toewijzingen:
+
      ![ Experience Platform UI het screenshot voorbeeld dat de afbeeldingen van het Doel toont.](../../assets/catalog/email-marketing/salesforce-marketing-cloud-account-engagement/mappings.png)
 
 Wanneer u klaar bent met het opgeven van de toewijzingen voor uw doelverbinding, selecteert u **[!UICONTROL Next]** .
@@ -173,10 +174,10 @@ Volg onderstaande stappen om te controleren of u de bestemming correct hebt inge
    ![ het het schermschot van Experience Platform UI die identiteitskaart van de Toewijzing voor een geselecteerd segment tonen.](../../assets/catalog/email-marketing/salesforce-marketing-cloud-account-engagement/selected-segment-mapping-id.png)
 
 1. Meld u aan bij de [[!DNL Salesforce] ](https://login.salesforce.com/) -website. Navigeer vervolgens naar de pagina **[!DNL Account Engagement]** > **[!DNL Prospects]** > **[!DNL Pardot Prospects]** en controleer of de perspectieven van het publiek zijn toegevoegd of bijgewerkt. U kunt ook toegang krijgen tot [[!DNL Salesforce Pardot] ](https://pi.pardot.com/) en tot de pagina **[!DNL Prospects]** .
-   {het schermschot van 0} Salesforce UI die de pagina van Vooruitzichten toont.](../../assets/catalog/email-marketing/salesforce-marketing-cloud-account-engagement/prospects.png)![
+   {het schermschot van 0} Salesforce UI die de pagina van Vooruitzichten toont.![&#128279;](../../assets/catalog/email-marketing/salesforce-marketing-cloud-account-engagement/prospects.png)
 
 1. Om te controleren of de vooruitzichten zijn bijgewerkt, selecteer een vooruitzicht en verifieer of is het gebied van het douanevooruitzicht bijgewerkt met de het publieksstatus van Experience Platform.
-   {het schermschot van 0} Salesforce UI die de geselecteerde pagina van het Vooruitzicht toont, wordt het gebied van het douanevooruitzicht bijgewerkt met de publieksstatus.](../../assets/catalog/email-marketing/salesforce-marketing-cloud-account-engagement/prospect.png)![
+   {het schermschot van 0} Salesforce UI die de geselecteerde pagina van het Vooruitzicht toont, wordt het gebied van het douanevooruitzicht bijgewerkt met de publieksstatus.![&#128279;](../../assets/catalog/email-marketing/salesforce-marketing-cloud-account-engagement/prospect.png)
 
 ## Gegevensgebruik en -beheer {#data-usage-governance}
 

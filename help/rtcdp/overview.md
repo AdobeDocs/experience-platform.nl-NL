@@ -82,4 +82,4 @@ De volgende documentatie wordt aanbevolen om u te helpen aan de slag te gaan met
 
 ## Woordenlijst
 
-Gebruik de **](/help/landing/glossary.md)pagina van de Verklarende woordenlijst[** {om de terminologie van Real-Time CDP en van Adobe Experience Platform te herzien.
+Gebruik de **[&#128279;](/help/landing/glossary.md)pagina van de Verklarende woordenlijst** &lbrace;om de terminologie van Real-Time CDP en van Adobe Experience Platform te herzien.

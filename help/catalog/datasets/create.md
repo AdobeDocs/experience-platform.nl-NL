@@ -55,7 +55,7 @@ Deze standaarddefinities maken het mogelijk dat gegevens consistent worden geïn
 
 ## Een gegevenssetschema opzoeken
 
-Dit leerprogramma begint waar het ](../../xdm/tutorials/create-schema-api.md) eind van het leerprogramma van de Registratie van het 0} Schema API, makend gebruik van het schema van Leden Loyalty dat tijdens dat leerprogramma wordt gecreeerd.[
+Dit leerprogramma begint waar het [&#128279;](../../xdm/tutorials/create-schema-api.md) eind van het leerprogramma van de Registratie van het 0&rbrace; Schema API, makend gebruik van het schema van Leden Loyalty dat tijdens dat leerprogramma wordt gecreeerd.
 
 Als u de zelfstudie van [!DNL Schema Registry] niet hebt voltooid, begint u daar en gaat u verder met deze zelfstudie over de gegevensset nadat u het vereiste schema hebt samengesteld.
 
@@ -211,7 +211,7 @@ curl -X POST \
 
 >[!NOTE]
 >
->Dit leerprogramma gebruikt het ](https://parquet.apache.org/docs/) dossierformaat van het Pakket van 0} Apache {voor al zijn voorbeelden. [ Een voorbeeld dat het JSON dossierformaat gebruikt kan in de [ gids van de de partijontwikkelaar van de batch ingestitie ](../../ingestion/batch-ingestion/api-overview.md) worden gevonden
+>Dit leerprogramma gebruikt het [&#128279;](https://parquet.apache.org/docs/) dossierformaat van het Pakket van 0&rbrace; Apache &lbrace;voor al zijn voorbeelden.  Een voorbeeld dat het JSON dossierformaat gebruikt kan in de [ gids van de de partijontwikkelaar van de batch ingestitie ](../../ingestion/batch-ingestion/api-overview.md) worden gevonden
 
 **Reactie**
 

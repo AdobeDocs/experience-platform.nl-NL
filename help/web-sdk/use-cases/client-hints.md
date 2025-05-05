@@ -64,7 +64,7 @@ Wanneer moderne browsers een gebruiker naar een webserver sturen, wordt de volle
 
 ## Browserondersteuning {#browser-support}
 
-{de wenken van de de agentencliënt van de Gebruiker 1} werden geïntroduceerd met [!DNL Google Chrome] versie 89.[](https://developer.chrome.com/docs/privacy-sandbox/user-agent/)
+{de wenken van de de agentencliënt van de Gebruiker 1} werden geïntroduceerd met [!DNL Google Chrome] versie 89.[&#128279;](https://developer.chrome.com/docs/privacy-sandbox/user-agent/)
 
 Aanvullende op chroom gebaseerde browsers ondersteunen de client Hints-API, zoals:
 
@@ -125,7 +125,7 @@ De [ dimensie van het Werkende systeem ](https://experienceleague.adobe.com/docs
 
 [!DNL Google] heeft de browserfunctionaliteit van [!DNL Chrome] bijgewerkt om de informatie die via de header van `User-Agent` wordt verzameld, tot een minimum te beperken. Dientengevolge, zullen de klanten die van de Audience Manager [ DIL ](https://experienceleague.adobe.com/docs/audience-manager/user-guide/dil-api/dil-overview.html) gebruiken geen betrouwbare die informatie voor eigenschappen meer ontvangen op [ platform-vlakke sleutels ](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/traits/trait-device-targeting.html) worden gebaseerd.
 
-De klanten van de Audience Manager die platform-vlakke sleutels voor het richten gebruiken moeten op ](/help/web-sdk/home.md) in plaats van [ Experience Platform van SDK van het Web ](https://experienceleague.adobe.com/docs/audience-manager/user-guide/dil-api/dil-overview.html) schakelen, en [ Hoge Hints van de Cliënt Entropy ](#enabling-high-entropy-client-hints) toelaten om betrouwbare gegevens van de eigenschap te blijven ontvangen.[
+De klanten van de Audience Manager die platform-vlakke sleutels voor het richten gebruiken moeten op [&#128279;](/help/web-sdk/home.md) in plaats van [ Experience Platform van SDK van het Web ](https://experienceleague.adobe.com/docs/audience-manager/user-guide/dil-api/dil-overview.html) schakelen, en [ Hoge Hints van de Cliënt Entropy ](#enabling-high-entropy-client-hints) toelaten om betrouwbare gegevens van de eigenschap te blijven ontvangen.
 
 ## Hoog entropclient-hints inschakelen {#enabling-high-entropy-client-hints}
 

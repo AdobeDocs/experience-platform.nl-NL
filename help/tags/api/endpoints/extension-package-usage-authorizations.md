@@ -13,7 +13,7 @@ ht-degree: 1%
 
 Een uitbreidingspakket vertegenwoordigt een [ uitbreiding ](./extensions.md) zoals authored door een uitbreidingsontwikkelaar. Aanvullende functies die beschikbaar kunnen worden gesteld aan gebruikers van tags, worden gedefinieerd door een extensiepakket. Deze mogelijkheden kunnen belangrijkste modules en gedeelde modules omvatten, hoewel zij het vaakst als [ regelcomponenten ](./rule-components.md) (gebeurtenissen, voorwaarden, en acties) en [ gegevenselementen ](./data-elements.md) worden verstrekt.
 
-Een uitbreidingspakket wordt bezeten door het bedrijf van de ontwikkelaar [ ](./companies.md). Eigenaars van extensiepakketten kunnen andere bedrijven toestaan hun persoonlijke versies van de pakketten te gebruiken. Elke geautoriseerde onderneming krijgt een gebruiksvergunning voor één extensiepakket, dat geldig is voor alle toekomstige en huidige privéversies van het pakket.
+Een uitbreidingspakket wordt bezeten door het bedrijf van de ontwikkelaar [&#128279;](./companies.md). Eigenaars van extensiepakketten kunnen andere bedrijven toestaan hun persoonlijke versies van de pakketten te gebruiken. Elke geautoriseerde onderneming krijgt een gebruiksvergunning voor één extensiepakket, dat geldig is voor alle toekomstige en huidige privéversies van het pakket.
 
 ## Aan de slag
 

@@ -267,7 +267,7 @@ Nadat u het trainingsvenster hebt geselecteerd, selecteert u **[!UICONTROL Finis
 
 ## Volgende stappen
 
-Aan de hand van deze zelfstudie hebt u een service-instantie gemaakt in Attribution AI. Zodra de instantie gebeëindigd het scoren (sta tot 24 uren toe), bent u bereid om de Inzichten van AI van de Attributie ](./discover-insights.md) te ontdekken. [ Bovendien, als u wenst om uw het sorteren resultaten te downloaden, bezoek de [ downloadende scores ](./download-scores.md) documentatie.
+Aan de hand van deze zelfstudie hebt u een service-instantie gemaakt in Attribution AI. Zodra de instantie gebeëindigd het scoren (sta tot 24 uren toe), bent u bereid om de Inzichten van AI van de Attributie [&#128279;](./discover-insights.md) te ontdekken.  Bovendien, als u wenst om uw het sorteren resultaten te downloaden, bezoek de [ downloadende scores ](./download-scores.md) documentatie.
 
 ## Aanvullende bronnen
 

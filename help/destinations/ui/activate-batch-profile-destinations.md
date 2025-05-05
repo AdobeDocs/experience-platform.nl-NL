@@ -588,9 +588,9 @@ Voer de onderstaande stappen uit om verrijkingskenmerken voor elk extern publiek
 
 Als u een extern publiek naar uw doelen wilt activeren zonder kenmerken te exporteren, schakelt u de schakeloptie **[!UICONTROL Exclude enrichment attributes]** in. Met deze optie exporteert u de profielen van het externe publiek, maar de bijbehorende kenmerken worden niet naar uw bestemming verzonden.
 
-{het beeld van 0} UI die de knoop toont van de attributen van de exclusief verrijking.](../assets/ui/activate-batch-profile-destinations/exclude-enrichment-attributes.png)![
+{het beeld van 0} UI die de knoop toont van de attributen van de exclusief verrijking.![&#128279;](../assets/ui/activate-batch-profile-destinations/exclude-enrichment-attributes.png)
 
-Selecteer **[!UICONTROL Next]** om aan de [ 2} stap van het Overzicht {te bewegen.](#review)
+Selecteer **[!UICONTROL Next]** om aan de [ 2&rbrace; stap van het Overzicht &lbrace;te bewegen.](#review)
 
 ## Controleren {#review}
 

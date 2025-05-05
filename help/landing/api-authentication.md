@@ -100,7 +100,7 @@ Selecteer vervolgens het verificatietype **[!UICONTROL OAuth Server-to-Server]**
 
 >[!IMPORTANT]
 >
->De methode **[!UICONTROL OAuth Server-to-Server]** is de enige ondersteunde methode voor het genereren van tokens die vooruit gaat. De eerder ondersteunde **[!UICONTROL Service Account (JWT)]** -methode is vervangen en kan niet worden geselecteerd voor nieuwe integraties. Hoewel bestaande integratie met behulp van de JWT-verificatiemethode tot 30 juni 2025 blijft werken, raadt Adobe u ten zeerste aan om vóór die datum bestaande integratie te migreren naar de nieuwe [!UICONTROL OAuth Server-to-Server] -methode. Krijg meer informatie in de sectie [!BADGE  Afgekeurd ]{type=negative}[ produceer een Token van het Web JSON (JWT) ](#jwt).
+>De methode **[!UICONTROL OAuth Server-to-Server]** is de enige ondersteunde methode voor het genereren van tokens die vooruit gaat. De eerder ondersteunde **[!UICONTROL Service Account (JWT)]** -methode is vervangen en kan niet worden geselecteerd voor nieuwe integraties. Hoewel bestaande integratie met behulp van de JWT-verificatiemethode tot 30 juni 2025 blijft werken, raadt Adobe u ten zeerste aan om vóór die datum bestaande integratie te migreren naar de nieuwe [!UICONTROL OAuth Server-to-Server] -methode. Krijg meer informatie in de sectie [!BADGE &#x200B; Afgekeurd &#x200B;]{type=negative}[ produceer een Token van het Web JSON (JWT) ](#jwt).
 
 ![ selecteer de server-aan-Server authentificatiemethode OAuth voor Experience Platform API.](./images/api-authentication/oauth-authentication-method.png)
 
@@ -110,7 +110,7 @@ Selecteer in het scherm **[!UICONTROL Configure API]** de optie **[!UICONTROL AE
 
 >[!IMPORTANT]
 >
-Om toegang tot bepaalde eigenschappen in Experience Platform te krijgen, hebt u ook een systeembeheerder nodig om u de noodzakelijke op attribuut-gebaseerde toegangsbeheertoestemmingen te verlenen. Lees meer in de sectie [ krijgt de noodzakelijke op attributen-gebaseerde toegangsbeheertoestemmingen ](#get-abac-permissions).
+>Om toegang tot bepaalde eigenschappen in Experience Platform te krijgen, hebt u ook een systeembeheerder nodig om u de noodzakelijke op attribuut-gebaseerde toegangsbeheertoestemmingen te verlenen. Lees meer in de sectie [ krijgt de noodzakelijke op attributen-gebaseerde toegangsbeheertoestemmingen ](#get-abac-permissions).
 
 ![ Uitgezochte productprofielen voor uw integratie.](./images/api-authentication/select-product-profiles.png)
 
@@ -149,7 +149,7 @@ De volgende stap bestaat uit het genereren van een `{ACCESS_TOKEN}` -referentie 
 
 >[!TIP]
 >
-U kunt ook een Postman-omgeving en -verzameling gebruiken om toegangstokens te genereren. Voor meer informatie, lees de sectie over [ gebruikend Postman om API vraag ](#use-postman) voor authentiek te verklaren en te testen.
+>U kunt ook een Postman-omgeving en -verzameling gebruiken om toegangstokens te genereren. Voor meer informatie, lees de sectie over [ gebruikend Postman om API vraag ](#use-postman) voor authentiek te verklaren en te testen.
 
 ## Verificatiegegevens rechtstreeks in de API-naslagdocumentatie maken en ophalen {#get-credentials-functionality}
 
@@ -169,17 +169,17 @@ Gebruik vervolgens de keuzelijst om het venster met referenties te openen, een t
 
 >[!TIP]
 >
-Het onderwerpblok van de bovenste pagina blijft zichtbaar wanneer u navigeert tussen verschillende eindpuntpagina&#39;s in de Experience Platform API-naslagdocumentatie.
+>Het onderwerpblok van de bovenste pagina blijft zichtbaar wanneer u navigeert tussen verschillende eindpuntpagina&#39;s in de Experience Platform API-naslagdocumentatie.
 
-## [!BADGE  Vervangen ] {type=negative} produceer een Symbolisch van het Web JSON (JWT) {#jwt}
+## [!BADGE &#x200B; Vervangen &#x200B;] &lbrace;type=negative&rbrace; produceer een Symbolisch van het Web JSON (JWT) {#jwt}
 
 >[!WARNING]
 >
-De JWT-methode voor het genereren van toegangstokens is afgekeurd. Alle nieuwe integraties moeten worden gecreeerd gebruikend de [ Server-aan-Server authentificatiemethode ](#select-oauth-server-to-server). Adobe vereist ook dat u uw bestaande integratie aan de methode OAuth tegen 30 juni 2025 migreert opdat uw integratie blijft werken. Lees de volgende belangrijke documentatie:
+>De JWT-methode voor het genereren van toegangstokens is afgekeurd. Alle nieuwe integraties moeten worden gecreeerd gebruikend de [ Server-aan-Server authentificatiemethode ](#select-oauth-server-to-server). Adobe vereist ook dat u uw bestaande integratie aan de methode OAuth tegen 30 juni 2025 migreert opdat uw integratie blijft werken. Lees de volgende belangrijke documentatie:
 > 
-* [ gids van de Migratie voor uw toepassingen van JWT aan OAuth ](https://developer.adobe.com/developer-console/docs/guides/authentication/ServerToServerAuthentication/migration/)
-* [ gids van de Implementatie voor nieuwe en oude toepassingen met OAuth ](https://developer.adobe.com/developer-console/docs/guides/authentication/ServerToServerAuthentication/implementation/)
-* [ Voordelen om de Server-aan-Server geloofsbrieven te gebruiken OAuth methode ](https://developer.adobe.com/developer-console/docs/guides/authentication/ServerToServerAuthentication/migration/#why-oauth-server-to-server-credentials)
+>* [ gids van de Migratie voor uw toepassingen van JWT aan OAuth ](https://developer.adobe.com/developer-console/docs/guides/authentication/ServerToServerAuthentication/migration/)
+>* [ gids van de Implementatie voor nieuwe en oude toepassingen met OAuth ](https://developer.adobe.com/developer-console/docs/guides/authentication/ServerToServerAuthentication/implementation/)
+>* [ Voordelen om de Server-aan-Server geloofsbrieven te gebruiken OAuth methode ](https://developer.adobe.com/developer-console/docs/guides/authentication/ServerToServerAuthentication/migration/#why-oauth-server-to-server-credentials)
 
 +++ Vervangen gegevens weergeven
 
@@ -187,9 +187,9 @@ De volgende stap bestaat uit het genereren van een JSON Web Token (JWT) op basis
 
 >[!IMPORTANT]
 >
-In deze zelfstudie wordt beschreven hoe u een JWT kunt genereren in Developer Console. Deze generatiemethode mag echter alleen voor test- en evaluatiedoeleinden worden gebruikt.
+>In deze zelfstudie wordt beschreven hoe u een JWT kunt genereren in Developer Console. Deze generatiemethode mag echter alleen voor test- en evaluatiedoeleinden worden gebruikt.
 >
-Voor normaal gebruik moet de JWT automatisch worden gegenereerd. Voor meer informatie over hoe te om JWTs programmatically te produceren, zie de [ gids van de de authentificatieauthentificatie van de de dienstrekening ](https://www.adobe.io/developer-console/docs/guides/authentication/JWT/) op Adobe Developer.
+>Voor normaal gebruik moet de JWT automatisch worden gegenereerd. Voor meer informatie over hoe te om JWTs programmatically te produceren, zie de [ gids van de de authentificatieauthentificatie van de de dienstrekening ](https://www.adobe.io/developer-console/docs/guides/authentication/JWT/) op Adobe Developer.
 
 Selecteer **[!UICONTROL Service Account (JWT)]** in de linkernavigatie en selecteer vervolgens **[!UICONTROL Generate JWT]** .
 
@@ -227,7 +227,7 @@ curl -X POST https://ims-na1.adobelogin.com/ims/exchange/jwt \
 
 >[!NOTE]
 >
-U kunt dezelfde API-sleutel, clientgeheim en JWT gebruiken om een nieuw toegangstoken voor elke sessie te genereren. Hierdoor kunt u het genereren van toegangstoken in uw toepassingen automatiseren.
+>U kunt dezelfde API-sleutel, clientgeheim en JWT gebruiken om een nieuw toegangstoken voor elke sessie te genereren. Hierdoor kunt u het genereren van toegangstoken in uw toepassingen automatiseren.
 
 **Reactie**
 
@@ -290,7 +290,7 @@ Als uw reactie vergelijkbaar is met de hieronder weergegeven reactie, zijn uw ge
 
 >[!IMPORTANT]
 >
-Terwijl de vraag hierboven volstaat om uw toegangsgeloofsbrieven te testen, ben zich ervan bewust dat u niet tot verscheidene middelen zult kunnen toegang hebben of wijzigen zonder het hebben van de juiste op attribuut-gebaseerde toegangsbeheertoestemmingen. Lees meer in **krijgt de noodzakelijke op attributen-gebaseerde toestemmingen van de toegangscontrole** hieronder sectie.
+>Terwijl de vraag hierboven volstaat om uw toegangsgeloofsbrieven te testen, ben zich ervan bewust dat u niet tot verscheidene middelen zult kunnen toegang hebben of wijzigen zonder het hebben van de juiste op attribuut-gebaseerde toegangsbeheertoestemmingen. Lees meer in **krijgt de noodzakelijke op attributen-gebaseerde toestemmingen van de toegangscontrole** hieronder sectie.
 
 ## Krijg de noodzakelijke op attributen-gebaseerde toegangsbeheertoestemmingen {#get-abac-permissions}
 
@@ -330,7 +330,7 @@ Voordat u integratie op Adobe Developer Console kunt maken, moet uw account ontw
 
 >[!NOTE]
 >
-Alleen systeembeheerders kunnen API-referenties weergeven en beheren in Machtigingen.
+>Alleen systeembeheerders kunnen API-referenties weergeven en beheren in Machtigingen.
 
 ### Ontwikkelaars toevoegen aan productprofiel {#add-developers-to-product-profile}
 
@@ -360,7 +360,7 @@ De ontwikkelaar is toegevoegd en wordt weergegeven op het tabblad **[!UICONTROL 
 
 >[!NOTE]
 >
-Alleen een systeembeheerder kan API&#39;s toewijzen aan rollen in de gebruikersinterface van Experience Platform.
+>Alleen een systeembeheerder kan API&#39;s toewijzen aan rollen in de gebruikersinterface van Experience Platform.
 
 Als een systeembeheerder bewerkingen op Experience Platform API&#39;s wil gebruiken en uitvoeren, moet hij de API-referenties toevoegen naast de machtigingen die een rol heeft gegeven. Krijg meer informatie in de sectie over [ het leiden API geloofsbrieven voor een rol ](../access-control/abac/ui/permissions.md#manage-api-credentials-for-a-role).
 

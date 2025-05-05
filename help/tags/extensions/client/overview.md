@@ -99,7 +99,7 @@ Hieronder volgt een lijst met documentatie voor tags van clientzijde. Voor een l
 * [ Pepperjam ](https://exchange.adobe.com/apps/ec/103587)*
 * [ Persado verbindt ](https://exchange.adobe.com/apps/ec/103745)*
 * [ het Volgen van de Omzetting van Pinterest ](https://exchange.adobe.com/apps/ec/100523)*
-* ](https://exchange.adobe.com/apps/ec/100152)* van de Lader van 0} pixel[
+* [&#128279;](https://exchange.adobe.com/apps/ec/100152)* van de Lader van 0&rbrace; pixel
 * [ de Terugkoppeling van de Website van Qualtrics ](https://exchange.adobe.com/apps/ec/101569)*
 * [ Metrisch van Quantum ](https://exchange.adobe.com/apps/ec/101535)*
 * [ Los Momentum ](https://exchange.adobe.com/apps/ec/108352)*

@@ -22,7 +22,7 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
->Deze bronschakelaar en documentatiepagina worden gecreeerd en door het ** team van de JONGE {gehandhaafd. Voor om het even welke onderzoeken of updateverzoeken, gelieve hen direct bij *verbinding of e-mailadres van het Tussenvoegsel te contacteren waar u voor updates* kunt worden bereikt.
+>Deze bronschakelaar en documentatiepagina worden gecreeerd en door het ** team van de JONGE &lbrace;gehandhaafd. Voor om het even welke onderzoeken of updateverzoeken, gelieve hen direct bij *verbinding of e-mailadres van het Tussenvoegsel te contacteren waar u voor updates* kunt worden bereikt.
 
 ## Vereisten
 
@@ -51,7 +51,7 @@ Voor meer informatie over deze geloofsbrieven, zie *JONGE* authentificatiedocume
 
 ## Verbind *UUR* met Experience Platform gebruikend [!DNL Flow Service] API
 
-Het volgende leerprogramma loopt u door de stappen om a ** bronverbinding tot stand te brengen JUURSOURCE {en een dataflow tot stand te brengen om ** gegevens te brengen YOURSOURCE aan Experience Platform gebruikend [[!DNL Flow Service]  API ](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+Het volgende leerprogramma loopt u door de stappen om a **&#x200B; bronverbinding tot stand te brengen JUURSOURCE &lbrace;en een dataflow tot stand te brengen om &#x200B;** gegevens te brengen YOURSOURCE aan Experience Platform gebruikend [[!DNL Flow Service]  API ](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
 ### Een bronverbinding maken {#source-connection}
 
@@ -172,7 +172,7 @@ curl -X POST \
 | `name` | De naam van de doelverbinding. Zorg ervoor dat de naam van uw doelverbinding beschrijvend is aangezien u dit kunt gebruiken om informatie over uw doelverbinding op te zoeken. |
 | `description` | Een optionele waarde die u kunt opnemen voor meer informatie over de doelverbinding. |
 | `connectionSpec.id` | De id van de verbindingsspecificatie die correspondeert met data Lake. Deze vaste id is: `c604ff05-7f1a-43c0-8e18-33bf874cb11c` . |
-| `data.format` | Het formaat van de ** gegevens van UUR {die u aan Experience Platform wilt brengen. |
+| `data.format` | Het formaat van de ** gegevens van UUR &lbrace;die u aan Experience Platform wilt brengen. |
 | `params.dataSetId` | De doel dataset ID die in een vorige stap wordt teruggewonnen. |
 
 

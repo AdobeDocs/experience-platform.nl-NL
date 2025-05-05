@@ -78,4 +78,4 @@ Data Science Workspace heeft momenteel de volgende sandboxbeperking:
 
 In dit document worden de verschillende soorten toegang en functies beschreven die beschikbaar zijn in Data Science Workspace.
 
-Om meer over de Wetenschap van Gegevens Workspace, zoals een volledig dagelijks werkschema te leren, gelieve te beginnen door de ](./walkthrough.md) documentatie van Workspace van de Wetenschap van 0} Gegevens te lezen. [ Voor meer algemene informatie, bezoek het [ overzicht van Workspace van de Wetenschap van Gegevens ](./home.md).
+Om meer over de Wetenschap van Gegevens Workspace, zoals een volledig dagelijks werkschema te leren, gelieve te beginnen door de [&#128279;](./walkthrough.md) documentatie van Workspace van de Wetenschap van 0&rbrace; Gegevens te lezen.  Voor meer algemene informatie, bezoek het [ overzicht van Workspace van de Wetenschap van Gegevens ](./home.md).

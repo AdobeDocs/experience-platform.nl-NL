@@ -33,7 +33,7 @@ In deze sectie worden de actietypen beschreven die beschikbaar zijn in de extens
 
 **Munchkin identiteitskaart: (vereist)** identiteitskaart van de Rekening Munchkin die onder Admin > Integratie > menu Munchkin wordt gevonden.
 
-**Configuraties:** Alle configureerbare parameters zijn hier gedocumenteerd [ ](https://developers.marketo.com/javascript-api/lead-tracking/configuration/)
+**Configuraties:** Alle configureerbare parameters zijn hier gedocumenteerd [&#128279;](https://developers.marketo.com/javascript-api/lead-tracking/configuration/)
 
 ### Webpagina bezoeken
 

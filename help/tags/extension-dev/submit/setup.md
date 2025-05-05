@@ -35,7 +35,7 @@ Dit programma is voor het raadplegen van bedrijven die klanten van de Adobe help
 
 >[!NOTE]
 >
->De Partners van de oplossing moeten ](https://partners.adobe.com/exchangeprogram/experiencecloud/prereg.html) voor het Programma van de Partner van de Uitwisseling ook registreren aangezien de overeenkomst van de Uitwisseling de voorwaarden voor de uitbreidingsontwikkeling van Adobe Experience Platform bevat.[
+>De Partners van de oplossing moeten [&#128279;](https://partners.adobe.com/exchangeprogram/experiencecloud/prereg.html) voor het Programma van de Partner van de Uitwisseling ook registreren aangezien de overeenkomst van de Uitwisseling de voorwaarden voor de uitbreidingsontwikkeling van Adobe Experience Platform bevat.
 >
 >Voordat u uw Exchange-registratie voltooit, stuurt u een e-mail naar Exchange-beheerder op <ExchangeHelpEC@adobe.com> en legt u uit dat u zich registreert, zodat u uw extensie kunt promoten. Als u dit niet doet, wordt uw toepassing waarschijnlijk geweigerd en verwijst u naar de SPP.
 >

@@ -64,4 +64,4 @@ Meer over vergunningsgebruik in Experience Platform leren, zie de [ documentatie
 
 ## Volgende stappen {#next-steps}
 
-Nu u minstens één gebruikersrekening met de correcte toegang tot Uitgebreide Activering hebt gevormd, kunt u beginnen de rekening te gebruiken om publiek ](activate-audiences.md) te activeren.[
+Nu u minstens één gebruikersrekening met de correcte toegang tot Uitgebreide Activering hebt gevormd, kunt u beginnen de rekening te gebruiken om publiek [&#128279;](activate-audiences.md) te activeren.

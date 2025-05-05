@@ -79,7 +79,7 @@ Voor meer informatie over [!DNL Data Prep] raadpleegt u het [[!DNL Data Prep] ov
 | Bestemming | Beschrijving |
 | ----------- | ----------- |
 | [ verbinding van Adobe Target ](../../destinations/catalog/personalization/adobe-target-connection.md) | Adobe Target is een toepassing die realtime, door AI aangedreven personalisatie en experimenteren biedt in alle inkomende klantinteracties voor websites, mobiele apps en nog veel meer. Adobe Target is een personalisatieverbinding in Adobe Experience Platform. |
-| ](../../destinations/catalog/personalization/custom-personalization.md) de verpersoonlijkingsverbinding van 0} Douane[ | Deze verpersoonlijkingsverbinding verstrekt een manier om segmentinformatie van Adobe Experience Platform aan externe verpersoonlijkingsplatforms, inhoudsbeheersystemen, en servers, en andere toepassingen terug te winnen die op klantenwebsites lopen. |
+| [&#128279;](../../destinations/catalog/personalization/custom-personalization.md) de verpersoonlijkingsverbinding van 0&rbrace; Douane | Deze verpersoonlijkingsverbinding verstrekt een manier om segmentinformatie van Adobe Experience Platform aan externe verpersoonlijkingsplatforms, inhoudsbeheersystemen, en servers, en andere toepassingen terug te winnen die op klantenwebsites lopen. |
 
 Voor meer algemene informatie over bestemmingen raadpleegt u het [overzicht van bestemmingen](../../destinations/home.md).
 

@@ -166,7 +166,7 @@ Voeg met het voorbeeld van de Facebook-extensie een gebeurtenis toe telkens wann
 
 Het `Window Loaded` **Type van Gebeurtenis** zorgt ervoor dat om het even welke tijd een pagina op de testplaats laadt deze regel zal worden teweeggebracht. Selecteer **houden Veranderingen**. Voor dit voorbeeld, negeer **Voorwaarden** aangezien de regel voor om het even welke pagina op de testplaats zou moeten worden teweeggebracht.
 
-Onder **ACTIES** uitgezocht **voeg** toe. Het **scherm van de Configuratie van de Actie** verschijnt.Daarna moet u de uitbreiding kiezen dat de regel moet worden toegepast op, en de actie om voor te komen wanneer de regel wordt teweeggebracht. Selecteer **het Pixel van Facebook** van de **3} dropdown lijst van de Uitbreiding {, en** verzend de Mening van de Pagina **van het** Type van Actie **dropdown lijst.** Selecteer **houden Veranderingen**, en dan **sparen** op het volgende **uitgeven het scherm van de Regel**.
+Onder **ACTIES** uitgezocht **voeg** toe. Het **scherm van de Configuratie van de Actie** verschijnt.Daarna moet u de uitbreiding kiezen dat de regel moet worden toegepast op, en de actie om voor te komen wanneer de regel wordt teweeggebracht. Selecteer **het Pixel van Facebook** van de **3&rbrace; dropdown lijst van de Uitbreiding &lbrace;, en** verzend de Mening van de Pagina **van het** Type van Actie **dropdown lijst.** Selecteer **houden Veranderingen**, en dan **sparen** op het volgende **uitgeven het scherm van de Regel**.
 
 ![](../images/getting-started/action-configuration.png)
 
@@ -180,7 +180,7 @@ In de belangrijkste navigatie, uitgezochte **het Publiceren**, dan op **voeg Nie
 
 Een bibliotheek is een set instructies voor hoe extensies, gegevenselementen en regels met elkaar en met een website communiceren. Bibliotheken worden gecompileerd in builds. Een bibliotheek kan net zoveel wijzigingen bevatten als een gebruiker op een gemakkelijke manier tegelijk kan maken of testen.
 
-Op **creeer Bibliotheek** scherm, voeg een naam op het **3} tekstgebied van de Naam {toe.** De markeringen verstrekken een standaardontwikkelomgeving genoemd **Ontwikkeling**. Selecteer **Ontwikkeling** van de **milieu** dropdown lijst. Voeg voor het gemak alle beschikbare bronnen toe. Selecteer **toevoegen Alle Gewijzigde Middelen**, dan uitgezocht **sparen**.
+Op **creeer Bibliotheek** scherm, voeg een naam op het **3&rbrace; tekstgebied van de Naam &lbrace;toe.** De markeringen verstrekken een standaardontwikkelomgeving genoemd **Ontwikkeling**. Selecteer **Ontwikkeling** van de **milieu** dropdown lijst. Voeg voor het gemak alle beschikbare bronnen toe. Selecteer **toevoegen Alle Gewijzigde Middelen**, dan uitgezocht **sparen**.
 
 >[!NOTE]
 >
@@ -200,7 +200,7 @@ De tagbibliotheek is nu gepubliceerd en beschikbaar voor gebruik. De testpagina 
 
 ## Tags op een testsite installeren {#install-data-collection-tags}
 
-Installatie-instructies zijn beschikbaar op het tabblad Omgevingen. Op deze pagina worden alle beschikbare omgevingen weergegeven en kunt u meer maken. Aangezien de bibliotheek aan het milieu van de Ontwikkeling werd gepubliceerd selecteer het bakpictogram in de **INSTALLEER** kolom op de **3} rij van de Ontwikkeling.**
+Installatie-instructies zijn beschikbaar op het tabblad Omgevingen. Op deze pagina worden alle beschikbare omgevingen weergegeven en kunt u meer maken. Aangezien de bibliotheek aan het milieu van de Ontwikkeling werd gepubliceerd selecteer het bakpictogram in de **INSTALLEER** kolom op de **3&rbrace; rij van de Ontwikkeling.**
 
 ![](../images/getting-started/launch-installation-instructions.png)
 

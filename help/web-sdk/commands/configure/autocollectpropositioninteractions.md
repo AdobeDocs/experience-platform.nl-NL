@@ -125,7 +125,7 @@ alloy("sendEvent", {
 1. Login aan [ experience.adobe.com ](https://experience.adobe.com) gebruikend uw referentie van Adobe ID.
 1. Navigeer aan **de Inzameling van Gegevens** > **Markeringen**.
 1. Selecteer de gewenste eigenschap voor tags.
-1. Navigeer aan **Uitbreidingen**, dan selecteren **** op de kaart van SDK van het Web van Adobe Experience Platform vormt.
+1. Navigeer aan **Uitbreidingen**, dan selecteren **&#x200B;**&#x200B;op de kaart van SDK van het Web van Adobe Experience Platform vormt.
 1. De rol neer aan de **[!UICONTROL Data Collection]** sectie, dan selecteert checkbox **laat voorstellingen en interactie het volgen** toe.
 1. Selecteer **sparen**, dan publiceer uw veranderingen.
 

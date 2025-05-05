@@ -34,7 +34,7 @@ In deze zelfstudie wordt in alle voorbeelden de bestemming [!DNL Adobe Campaign]
 
 ![ Overzicht - de stappen om een bestemming tot stand te brengen en publiek te activeren ](../assets/api/email-marketing/overview.png)
 
-Als u verkiest om het gebruikersinterface van Experience Platform te gebruiken om met een bestemming te verbinden en gegevens te activeren, [ verbind een bestemming ](../ui/connect-destination.md) en [ activeer publieksgegevens aan de 3} leerprogramma&#39;s van de partijprofieluitvoer.](../ui/activate-batch-profile-destinations.md)
+Als u verkiest om het gebruikersinterface van Experience Platform te gebruiken om met een bestemming te verbinden en gegevens te activeren, [ verbind een bestemming ](../ui/connect-destination.md) en [ activeer publieksgegevens aan de 3&rbrace; leerprogramma&#39;s van de partijprofieluitvoer.](../ui/activate-batch-profile-destinations.md)
 
 ## Aan de slag {#get-started}
 

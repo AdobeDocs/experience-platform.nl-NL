@@ -25,7 +25,7 @@ Gebruik de samenvoeging van meerdere bronnen van operationele gegevens in Adobe 
 
 ## Gebruiksscenario’s {#use-cases}
 
-Om u beter te helpen begrijpen hoe en wanneer u de *bestemming van de Automatiseringen van 0} Qualtrics {zou moeten gebruiken, zijn hier de gevallen van het steekproefgebruik die de klanten van Adobe Experience Platform kunnen oplossen door deze bestemming te gebruiken.*
+Om u beter te helpen begrijpen hoe en wanneer u de *bestemming van de Automatiseringen van 0&rbrace; Qualtrics &lbrace;zou moeten gebruiken, zijn hier de gevallen van het steekproefgebruik die de klanten van Adobe Experience Platform kunnen oplossen door deze bestemming te gebruiken.*
 
 ### Hoofdletters gebruiken #1 {#use-case-1}
 
@@ -72,7 +72,7 @@ Raadpleeg de onderstaande tabel voor informatie over het exporttype en de export
 
 | Item | Type | Notities |
 ---------|----------|---------|
-| Exporttype | **[!UICONTROL Segment export]** | U voert alle leden van een segment (publiek) met de herkenningstekens (naam, telefoonaantal, of anderen) uit die in de *bestemming van de Automatiseringen 0} worden gebruikt Qualtrics.* |
+| Exporttype | **[!UICONTROL Segment export]** | U voert alle leden van een segment (publiek) met de herkenningstekens (naam, telefoonaantal, of anderen) uit die in de *bestemming van de Automatiseringen 0&rbrace; worden gebruikt Qualtrics.* |
 | Exportfrequentie | **[!UICONTROL Streaming]** | Streaming doelen zijn &quot;altijd aan&quot; API-verbindingen. Zodra een profiel in Experience Platform wordt bijgewerkt dat op segmentevaluatie wordt gebaseerd, verzendt de schakelaar de update stroomafwaarts naar het bestemmingsplatform. Lees meer over [ het stromen bestemmingen ](/help/destinations/destination-types.md#streaming-destinations). |
 
 {style="table-layout:auto"}

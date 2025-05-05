@@ -64,7 +64,7 @@ Als nieuwe identiteiten moeten worden verbonden, dan moet u een extra dataset in
 
 * De identiteitsdataset moet zijn bijbehorend schema als [!DNL Profile] dataset hebben. Een afwijking van schema&#39;s kan tot inconsistent systeemgedrag leiden.
 * U moet er echter voor zorgen dat de identiteitsgegevensset anders is dan de gegevensset [!DNL Profile] . Als de datasets het zelfde zijn, dan zullen de gegevens in plaats van bijgewerkt worden beschreven.
-* Terwijl de aanvankelijke dataset voor [!DNL Profile] moet worden toegelaten, zou de identiteitsdataset **niet** voor [!DNL Profile] moeten worden toegelaten. Anders worden gegevens ook overschreven in plaats van bijgewerkt. Nochtans, zou de identiteitsdataset **** voor [!DNL Identity Service] moeten worden toegelaten.
+* Terwijl de aanvankelijke dataset voor [!DNL Profile] moet worden toegelaten, zou de identiteitsdataset **niet** voor [!DNL Profile] moeten worden toegelaten. Anders worden gegevens ook overschreven in plaats van bijgewerkt. Nochtans, zou de identiteitsdataset **&#x200B;**&#x200B;voor [!DNL Identity Service] moeten worden toegelaten.
 
 #### Vereiste gebieden in de schema&#39;s verbonden aan de identiteitsdataset {#identity-dataset-required-fileds}
 

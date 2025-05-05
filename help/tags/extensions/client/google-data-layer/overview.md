@@ -11,7 +11,7 @@ ht-degree: 0%
 
 # Google Data Layer-extensie
 
-Met de extensie Google-gegevenslaag kunt u een Google-gegevenslaag gebruiken in de implementatie van Tags. De uitbreiding kan onafhankelijk of gelijktijdig met de oplossingen van Google en met Google worden gebruikt open bron [ de Bibliotheek van de Helper van de Laag van Gegevens 0} ](https://github.com/google/data-layer-helper).
+Met de extensie Google-gegevenslaag kunt u een Google-gegevenslaag gebruiken in de implementatie van Tags. De uitbreiding kan onafhankelijk of gelijktijdig met de oplossingen van Google en met Google worden gebruikt open bron [ de Bibliotheek van de Helper van de Laag van Gegevens 0&rbrace; ](https://github.com/google/data-layer-helper).
 
 De Helperbibliotheek verstrekt gelijkaardige gebeurtenis-gedreven functionaliteit aan de Laag van de Gegevens van de Cliënt van de Adobe (ACDL). De gegevenselementen, de regels, en de acties van de uitbreiding van de Laag van de Gegevens van Google verstrekken gelijkaardige functionaliteit aan die in de [ uitbreiding ACDL ](../client-data-layer/overview.md).
 

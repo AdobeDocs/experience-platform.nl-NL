@@ -17,7 +17,7 @@ In dit document worden de structuur en het gebruiksscenario van de veldgroep Ana
 
 >[!NOTE]
 >
->Vanwege de grootte en het aantal herhaalde elementen in deze veldgroep zijn veel van de velden in deze handleiding samengevouwen om ruimte te besparen. Om de volledige structuur van deze gebiedsgroep te onderzoeken, kunt u het in Experience Platform UI ](../../ui/explore.md) opzoeken of het volledige schema in de [ openbare bewaarplaats XDM ](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/analytics/experienceevent-all.schema.json) bekijken.[
+>Vanwege de grootte en het aantal herhaalde elementen in deze veldgroep zijn veel van de velden in deze handleiding samengevouwen om ruimte te besparen. Om de volledige structuur van deze gebiedsgroep te onderzoeken, kunt u het in Experience Platform UI [&#128279;](../../ui/explore.md) opzoeken of het volledige schema in de [ openbare bewaarplaats XDM ](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/analytics/experienceevent-all.schema.json) bekijken.
 
 ## Groepsstructuur van veld
 
@@ -37,7 +37,7 @@ De veldgroep biedt één `_experience` -object aan een schema, dat zelf één `a
 
 ## `customDimensions` {#custom-dimensions}
 
-`customDimensions` vangt de afmetingen van de douane [ ](https://experienceleague.adobe.com/docs/analytics/components/dimensions/overview.html) die door Analytics worden gevolgd.
+`customDimensions` vangt de afmetingen van de douane [&#128279;](https://experienceleague.adobe.com/docs/analytics/components/dimensions/overview.html) die door Analytics worden gevolgd.
 
 ![ customDimensions gebied ](../../images/field-groups/analytics-full-extension/customDimensions.png)
 

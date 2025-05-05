@@ -54,7 +54,7 @@ curl -X POST \
 
 >[!NOTE]
 >
->Dit voorbeeld gebruikt het ](https://parquet.apache.org/docs/) dossierformaat van de Parket van 0} Apache {voor zijn `containerFormat` bezit. [ Een voorbeeld dat het JSON dossierformaat gebruikt kan in de [ handleiding van de partijontwikkelaar ](../../ingestion/batch-ingestion/api-overview.md) worden gevonden.
+>Dit voorbeeld gebruikt het [&#128279;](https://parquet.apache.org/docs/) dossierformaat van de Parket van 0&rbrace; Apache &lbrace;voor zijn `containerFormat` bezit.  Een voorbeeld dat het JSON dossierformaat gebruikt kan in de [ handleiding van de partijontwikkelaar ](../../ingestion/batch-ingestion/api-overview.md) worden gevonden.
 
 **Reactie**
 

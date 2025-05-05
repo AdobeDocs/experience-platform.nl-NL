@@ -74,11 +74,11 @@ Selecteer vervolgens het objecttype dat u aan Experience Platform wilt toevoegen
 
 >[!TAB  Contact ]
 
-{het schermschot van 0} Experience Platform UI voor de Entiteiten die van Oracle Netsuite configuratie met geselecteerde optie van het Contact tonen ](../../../../images/tutorials/create/marketing-automation/oracle-netsuite-entities/select-data-contact.png)![
+{het schermschot van 0} Experience Platform UI voor de Entiteiten die van Oracle Netsuite configuratie met geselecteerde optie van het Contact tonen ![&#128279;](../../../../images/tutorials/create/marketing-automation/oracle-netsuite-entities/select-data-contact.png)
 
 >[!TAB  Klant ]
 
-{het schermschot van 0} Experience Platform UI voor de Entiteiten van Oracle Netsuite die configuratie met geselecteerde optie van de Klant tonen ](../../../../images/tutorials/create/marketing-automation/oracle-netsuite-entities/select-data-customer.png)![
+{het schermschot van 0} Experience Platform UI voor de Entiteiten van Oracle Netsuite die configuratie met geselecteerde optie van de Klant tonen ![&#128279;](../../../../images/tutorials/create/marketing-automation/oracle-netsuite-entities/select-data-customer.png)
 
 >[!ENDTABS]
 

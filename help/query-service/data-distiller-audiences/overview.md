@@ -23,7 +23,7 @@ In dit document wordt beschreven hoe u de SQL-publieksextensie in Adobe Experien
 
 Voer de volgende stappen uit om uw publiek te maken, te beheren en te activeren. Gemaakt publiek integreert naadloos in de &#39;publieksstroom&#39;, zodat u segmenten kunt maken van het basispubliek en doelbestandsgebaseerde doelen (bijvoorbeeld CSV-uploads of cloudopslaglocaties) voor klantenservice. De &quot;stroom van het publiek&quot;verwijst naar het volledige proces om, publiek tot stand te brengen te leiden en te activeren, die naadloze integratie over bestemmingen verzekeren.
 
-Als deel van uw &quot;publieksstroom,&quot;gebruik de volgende SQL bevelen om ](#create-audience) tot stand te brengen, [ wijzigen ](#add-profiles-to-audience), en [ schrapt ](#delete-audience) publiek binnen Adobe Experience Platform.[
+Als deel van uw &quot;publieksstroom,&quot;gebruik de volgende SQL bevelen om [&#128279;](#create-audience) tot stand te brengen, [ wijzigen ](#add-profiles-to-audience), en [ schrapt ](#delete-audience) publiek binnen Adobe Experience Platform.
 
 ### Een publiek maken {#create-audience}
 

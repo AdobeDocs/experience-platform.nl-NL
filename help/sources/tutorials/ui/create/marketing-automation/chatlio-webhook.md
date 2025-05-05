@@ -163,10 +163,10 @@ Voer de onderstaande stappen uit om te controleren of u de bron juist hebt inges
 
 * U kunt de pagina [!DNL Chatlio] **[!UICONTROL Reports]** > **[!UICONTROL Chat History]** controleren om de gebeurtenissen te identificeren die door [!DNL Chatlio] worden vastgelegd.
 
-{het schermschot van 0} Chatlio UI die praatjegeschiedenis ](../../../../images/tutorials/create/marketing-automation/chatlio-webhook/chatlio-chat-history.png) tonen![
+{het schermschot van 0} Chatlio UI die praatjegeschiedenis ![&#128279;](../../../../images/tutorials/create/marketing-automation/chatlio-webhook/chatlio-chat-history.png) tonen
 
 * Selecteer in de gebruikersinterface van Experience Platform de optie **[!UICONTROL View Dataflows]** naast het kaartmenu [!DNL Chatlio] in de catalogus met bronnen. Selecteer vervolgens **[!UICONTROL Preview dataset]** om de gegevens te verifiëren die zijn ingevoerd voor de webhooks die u hebt geconfigureerd in [!DNL Chatlio] .
 
-{het schermschot van 0} Experience Platform UI die ingebedde gebeurtenissen ](../../../../images/tutorials/create/marketing-automation/chatlio-webhook/platform-dataset.png) toont![
+{het schermschot van 0} Experience Platform UI die ingebedde gebeurtenissen ![&#128279;](../../../../images/tutorials/create/marketing-automation/chatlio-webhook/platform-dataset.png) toont
 
 Voor extra informatie over [!DNL Chatlio], bezoek de [[!DNL Chatlio]  documentatie ](https://chatlio.com/docs/) en [ Veelgestelde vragen ](https://chatlio.com/pricing/#FAQ).

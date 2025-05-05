@@ -19,7 +19,7 @@ ht-degree: 0%
 
 Met de segmentatie van uw account kunt u in Adobe Experience Platform de volledige versnelling en verfijning van de segmentatieervaring van marketingmedewerkers van op mensen gebaseerde doelgroepen naar op account gebaseerde doelgroepen brengen.
 
-Accountpubliek kan worden gebruikt als input voor op account gebaseerde bestemmingen, zodat u zich kunt richten op de personen binnen die accounts in downstreamservices. Bijvoorbeeld, kunt u op rekening-gebaseerde publiek gebruiken om verslagen van alle rekeningen terug te winnen die **** geen contactinformatie voor om het even welke mensen met de titel HoofdWerkende Functionaris (COO) of HoofdMarketingFunctionaris (CMO) hebben.
+Accountpubliek kan worden gebruikt als input voor op account gebaseerde bestemmingen, zodat u zich kunt richten op de personen binnen die accounts in downstreamservices. Bijvoorbeeld, kunt u op rekening-gebaseerde publiek gebruiken om verslagen van alle rekeningen terug te winnen die **&#x200B;**&#x200B;geen contactinformatie voor om het even welke mensen met de titel HoofdWerkende Functionaris (COO) of HoofdMarketingFunctionaris (CMO) hebben.
 
 ## Terminologie {#terminology}
 
@@ -194,7 +194,7 @@ In de volgende sectie vindt u aanvullende informatie over het accountpubliek.
 >title="Inbreuk op beperking"
 >abstract="Het publiek schendt een beperking. Lees het gekoppelde document voor meer informatie."
 
-Wanneer het gebruiken van rekeningspubliek, moet het publiek **** aan de volgende beperkingen voldoen:
+Wanneer het gebruiken van rekeningspubliek, moet het publiek **&#x200B;**&#x200B;aan de volgende beperkingen voldoen:
 
 - Het maximumterugkijkvenster voor de Gebeurtenissen van de Ervaring is **30 dagen**.
 - De maximumdiepte van genestelde containers is **5**.

@@ -38,7 +38,7 @@ Als u [!DNL SugarCRM Events] wilt verbinden met Experience Platform, moet u waar
 
 Voordat u een [!DNL SugarCRM] -bronverbinding maakt, moet u er ook voor zorgen dat u eerst een Experience Platform-schema voor uw bron maakt. Zie het leerprogramma op [ creërend een schema van Experience Platform ](../../../../../xdm/schema/composition.md) voor uitvoerige stappen op hoe te om een schema tot stand te brengen.
 
-{het schermschot van 0} Experience Platform UI die een voorbeeldschema voor de Gebeurtenissen van SugarCRM ](../../../../images/tutorials/create/sugarcrm-events/sugarcrm-schema-events.png) toont![
+{het schermschot van 0} Experience Platform UI die een voorbeeldschema voor de Gebeurtenissen van SugarCRM ![&#128279;](../../../../images/tutorials/create/sugarcrm-events/sugarcrm-schema-events.png) toont
 
 >[!WARNING]
 >
@@ -52,7 +52,7 @@ U kunt de juiste categorie selecteren in de catalogus aan de linkerkant van het 
 
 Onder de *CRM* categorie, selecteer **[!UICONTROL SugarCRM Events]**, en selecteer dan **[!UICONTROL Add data]**.
 
-{het schermschot van 0} Experience Platform UI voor catalogus met de kaart van Gebeurtenissen SugarCRM ](../../../../images/tutorials/create/sugarcrm-events/catalog-sugarcrm-events.png)![
+{het schermschot van 0} Experience Platform UI voor catalogus met de kaart van Gebeurtenissen SugarCRM ![&#128279;](../../../../images/tutorials/create/sugarcrm-events/catalog-sugarcrm-events.png)
 
 De pagina **[!UICONTROL Connect SugarCRM Events account]** wordt weergegeven. Op deze pagina kunt u nieuwe of bestaande referenties gebruiken.
 

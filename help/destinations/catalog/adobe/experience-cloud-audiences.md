@@ -53,7 +53,7 @@ De verouderde integratie met het delen van het publiek maakte geen korrelige con
 
 De soorten publiek die u naar de bestemming van het publiek van de Experience Cloud verzendt verschijnen niet automatisch in Adobe Analytics.
 
-Alvorens u publiek naar Adobe Analytics kunt verzenden, moet u de Dienst van de Identiteit van het Experience Cloud voor Analytics en Audience Manager ](https://experienceleague.adobe.com/docs/id-service/using/implementation/setup-aam-analytics.html?lang=en) uitvoeren.[
+Alvorens u publiek naar Adobe Analytics kunt verzenden, moet u de Dienst van de Identiteit van het Experience Cloud voor Analytics en Audience Manager [&#128279;](https://experienceleague.adobe.com/docs/id-service/using/implementation/setup-aam-analytics.html?lang=en) uitvoeren.
 
 >[!IMPORTANT]
 >
@@ -124,7 +124,7 @@ In deze sectie wordt beschreven welk type publiek u naar dit doel kunt exportere
 
 | Oorsprong publiek | Ondersteund | Beschrijving |
 | ---------|----------|----------|
-| [!DNL Segmentation Service] | ✓ | Het publiek produceerde door de Dienst van de Segmentatie van het Experience Platform [ ](../../../segmentation/home.md). |
+| [!DNL Segmentation Service] | ✓ | Het publiek produceerde door de Dienst van de Segmentatie van het Experience Platform [&#128279;](../../../segmentation/home.md). |
 | Aangepaste uploads | ✓ | Het publiek [ ingevoerde ](../../../segmentation/ui/audience-portal.md#import-audience) in Experience Platform van Csv- dossiers. |
 
 {style="table-layout:auto"}

@@ -51,7 +51,7 @@ curl -X GET \
 
 **Reactie**
 
-Een succesvolle reactie keert een serie van voorwerpen terug, die het doelXDM middel en al zijn afhankelijke middelen vertegenwoordigen. In dit voorbeeld is het eerste object in de array een door de gebruiker gemaakt gegevenstype `Property` dat door de veldgroep `Restaurant` wordt gebruikt, terwijl het tweede object de veldgroep `Restaurant` zelf is. Deze nuttige lading kan dan worden gebruikt om het middel ](#import) in een verschillende zandbak of organisatie in te voeren [.
+Een succesvolle reactie keert een serie van voorwerpen terug, die het doelXDM middel en al zijn afhankelijke middelen vertegenwoordigen. In dit voorbeeld is het eerste object in de array een door de gebruiker gemaakt gegevenstype `Property` dat door de veldgroep `Restaurant` wordt gebruikt, terwijl het tweede object de veldgroep `Restaurant` zelf is. Deze nuttige lading kan dan worden gebruikt om het middel [&#128279;](#import) in een verschillende zandbak of organisatie in te voeren .
 
 Merk op dat alle instanties van de huurder ID van het middel door `<XDM_TENANTID_PLACEHOLDER>` worden vervangen. Dit staat de Registratie van het Schema toe om correcte huurdersidentiteitskaart op de middelen automatisch toe te passen afhankelijk van waar zij in de verdere de invoervraag worden verzonden.
 

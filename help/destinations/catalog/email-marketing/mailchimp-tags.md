@@ -88,7 +88,7 @@ In deze sectie wordt beschreven welk type publiek u naar dit doel kunt exportere
 
 | Oorsprong publiek | Ondersteund | Beschrijving |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | ✓ | Het publiek produceerde door de Dienst van de Segmentatie van Experience Platform [ ](../../../segmentation/home.md). |
+| [!DNL Segmentation Service] | ✓ | Het publiek produceerde door de Dienst van de Segmentatie van Experience Platform [&#128279;](../../../segmentation/home.md). |
 | Aangepaste uploads | ✓ | Het publiek [ ingevoerde ](../../../segmentation/ui/audience-portal.md#import-audience) in Experience Platform van Csv- dossiers. |
 
 {style="table-layout:auto"}
@@ -125,7 +125,7 @@ Als u voor verificatie bij het doel wilt zorgen, vult u de vereiste velden hiero
 
 {style="table-layout:auto"}
 
-{het schermschot van 0} Experience Platform UI die toont hoe te voor authentiek te verklaren.](../../assets/catalog/email-marketing/mailchimp-tags/authenticate-destination.png)![
+{het schermschot van 0} Experience Platform UI die toont hoe te voor authentiek te verklaren.![&#128279;](../../assets/catalog/email-marketing/mailchimp-tags/authenticate-destination.png)
 
 Als de opgegeven gegevens geldig zijn, geeft de gebruikersinterface de status **[!UICONTROL Connected]** weer met een groen vinkje. Vervolgens kunt u verdergaan met de volgende stap.
 
@@ -133,7 +133,7 @@ Als de opgegeven gegevens geldig zijn, geeft de gebruikersinterface de status **
 
 Als u details voor de bestemming wilt configureren, vult u de vereiste en optionele velden hieronder in. Een sterretje naast een veld in de gebruikersinterface geeft aan dat het veld verplicht is.
 
-{het schermschot van 0} Experience Platform UI die de bestemmingsdetails toont.](../../assets/catalog/email-marketing/mailchimp-tags/destination-details.png)![
+{het schermschot van 0} Experience Platform UI die de bestemmingsdetails toont.![&#128279;](../../assets/catalog/email-marketing/mailchimp-tags/destination-details.png)
 
 | Veld | Beschrijving |
 | --- | --- |
@@ -168,11 +168,11 @@ Voer de onderstaande stappen uit om uw XDM-velden correct toe te wijzen aan de [
 1. Selecteer **[!UICONTROL Add new mapping]** in de stap **[!UICONTROL Mapping]** . Er verschijnt een nieuwe toewijzingsrij op het scherm.
 1. Kies **[!UICONTROL Select identity namespace]** in het `Email` -venster en selecteer de naamruimte van de identiteit.**[!UICONTROL Select source field]**
 
-   {het schermschot van 0} Experience Platform UI met het gebied van Source als E-mail van identiteitsnamespace.](../../assets/catalog/email-marketing/mailchimp-tags/source-field.png)![
+   {het schermschot van 0} Experience Platform UI met het gebied van Source als E-mail van identiteitsnamespace.![&#128279;](../../assets/catalog/email-marketing/mailchimp-tags/source-field.png)
 
 1. Kies **[!UICONTROL Select identity namespace]** in het `Email` -venster en selecteer de naamruimte van de identiteit.**[!UICONTROL Select target field]**
 
-   {het schermschot van 0} Experience Platform UI met het gebied van het Doel als E-mail van identiteitsnamespace.](../../assets/catalog/email-marketing/mailchimp-tags/target-field.png)![
+   {het schermschot van 0} Experience Platform UI met het gebied van het Doel als E-mail van identiteitsnamespace.![&#128279;](../../assets/catalog/email-marketing/mailchimp-tags/target-field.png)
 
    De toewijzingen tussen uw XDM-profielschema en [!DNL Mailchimp Tags] zijn als volgt:
 
@@ -181,7 +181,7 @@ Voer de onderstaande stappen uit om uw XDM-velden correct toe te wijzen aan de [
    | `IdentityMap: Email` | `Identity: Email` | Ja |
 
    Hieronder ziet u een voorbeeld met de voltooide toewijzingen:
-   {het schermschot van 0} Experience Platform UI die gebiedsafbeeldingen toont.](../../assets/catalog/email-marketing/mailchimp-tags/mappings.png)![
+   {het schermschot van 0} Experience Platform UI die gebiedsafbeeldingen toont.![&#128279;](../../assets/catalog/email-marketing/mailchimp-tags/mappings.png)
 
 Wanneer u klaar bent met het opgeven van de toewijzingen voor uw doelverbinding, selecteert u **[!UICONTROL Next]** .
 
@@ -190,7 +190,7 @@ Wanneer u klaar bent met het opgeven van de toewijzingen voor uw doelverbinding,
 Volg onderstaande stappen om te controleren of u de bestemming correct hebt ingesteld:
 
 1. Meld u aan bij uw [[!DNL Mailchimp] ](https://login.mailchimp.com/) -account. Navigeer vervolgens naar de pagina **[!DNL Audience]** > **[!DNL All Contacts]** en controleer of de contacten van het publiek zijn toegevoegd en of de contacten binnen het publiek zijn bijgewerkt met de naam van het publiek.
-   {het schermschot van 0} Mailchimp UI die de pagina van het Publiek toont.](../../assets/catalog/email-marketing/mailchimp-tags/contacts.png)![
+   {het schermschot van 0} Mailchimp UI die de pagina van het Publiek toont.![&#128279;](../../assets/catalog/email-marketing/mailchimp-tags/contacts.png)
 
 ## Gegevensgebruik en -beheer {#data-usage-governance}
 

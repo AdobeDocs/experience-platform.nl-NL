@@ -56,7 +56,7 @@ Selecteer hieronder elk tabblad om de bijbehorende lading en de reacties weer te
 
 >[!BEGINTABS]
 
->[!TAB  wint alle configuraties van de bestemmingsserver ] terug
+>[!TAB wint alle configuraties van de bestemmingsserver  terug]
 
 Met de volgende aanvraag wordt de lijst opgehaald met doelserverconfiguraties waartoe u toegang hebt, op basis van [!DNL IMS Org ID] en sandboxconfiguratie.
 
@@ -151,7 +151,7 @@ Een succesvol antwoord retourneert HTTP-status 200 met een lijst van doelserverc
 
 +++
 
->[!TAB  wint een specifieke configuratie van de bestemmingsserver ] terug
+>[!TAB wint een specifieke configuratie van de bestemmingsserver  terug]
 
 Het volgende verzoek zal een specifieke configuraties van de bestemmingsserver terugwinnen die door de `{INSTANCE_ID}` parameter worden bepaald.
 

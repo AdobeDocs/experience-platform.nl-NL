@@ -25,7 +25,7 @@ Creeer a [ Datastream ](/help/tags/ui/event-forwarding/getting-started.md) en vo
 
 Een **[!DNL Snapchat]** [ BedrijfsManager ](https://business.snapchat.com/) rekening wordt vereist om Conversies API te gebruiken. Met Business Manager kunnen adverteerders de marketinginspanningen van **[!DNL Snapchat]** integreren in hun hele bedrijf en met externe partners. Zie **[!DNL Snapchat]** [ hulp centreert artikel ](https://businesshelp.snapchat.com/s/article/get-started?language=en_US) bij het creëren van een rekening van BedrijfsManager als u geen hebt.
 
-Er moet een [!DNL [Snap Pixel]](https://businesshelp.snapchat.com/s/article/pixel-website-install?language=en_US) zijn ingesteld in Snapchat Ads Manager en u moet toegang hebben om `Pixel ID` te kunnen bekijken. `Pixel ID` vindt u in de sectie [!UICONTROL [Events Manager]](https://businesshelp.snapchat.com/s/article/events-manager?language=en_US) .
+Er moet een [[!DNL [Snap Pixel]]](https://businesshelp.snapchat.com/s/article/pixel-website-install?language=en_US) zijn ingesteld in Snapchat Ads Manager en u moet toegang hebben om `Pixel ID` te kunnen bekijken. `Pixel ID` vindt u in de sectie [[!UICONTROL [Events Manager]]](https://businesshelp.snapchat.com/s/article/events-manager?language=en_US) .
 
 U hebt een statisch, langdurig API-token nodig. Zie [[!DNL Snapchat]  Conversies API documentatie ](https://developers.snap.com/api/marketing-api/Conversions-API/GetStarted#access-token) om dit teken te verkrijgen.
 

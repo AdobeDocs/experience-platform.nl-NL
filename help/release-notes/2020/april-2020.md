@@ -78,7 +78,7 @@ Het gegevensbeheerframework vereenvoudigt en stroomlijnt het proces voor het cat
 
 | Functie | Beschrijving |
 | -----------| ---------- |
-| Beleid voor gegevensgebruik beheren in de gebruikersinterface | Het beleid van het gegevensgebruik kan nu binnen de **1} werkruimte van Beleid {in [!DNL Experience Platform] UI worden geleid.** Zie de [ gids van de beleidsgebruiker ](../../data-governance/policies/user-guide.md) voor meer informatie. |
+| Beleid voor gegevensgebruik beheren in de gebruikersinterface | Het beleid van het gegevensgebruik kan nu binnen de **1&rbrace; werkruimte van Beleid &lbrace;in [!DNL Experience Platform] UI worden geleid.** Zie de [ gids van de beleidsgebruiker ](../../data-governance/policies/user-guide.md) voor meer informatie. |
 
 **Bekende kwesties**
 

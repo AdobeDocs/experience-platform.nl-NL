@@ -99,7 +99,7 @@ U kunt de aangepaste evaluatiefunctie gebruiken door de interface van `MLEvaluat
 > Niet dit: `metrics.add(new MLMetric("MAPE", mape, "measures"))`
 
 
-Eenmaal gedefinieerd in het recept, bestaat de volgende stap uit het inschakelen in de recepten. Dit wordt gedaan in het {](https://github.com/adobe/experience-platform-dsw-reference/blob/master/recipes/scala/src/main/resources/application.properties) dossier 0} application.properties in de omslag van het project `resources`. [ Hier wordt de `evaluation.class` ingesteld op de `Evaluator` -klasse die is gedefinieerd in `Evaluator.scala`
+Eenmaal gedefinieerd in het recept, bestaat de volgende stap uit het inschakelen in de recepten. Dit wordt gedaan in het {[&#128279;](https://github.com/adobe/experience-platform-dsw-reference/blob/master/recipes/scala/src/main/resources/application.properties) dossier 0} application.properties in de omslag van het project `resources`.  Hier wordt de `evaluation.class` ingesteld op de `Evaluator` -klasse die is gedefinieerd in `Evaluator.scala`
 
 ```scala
 evaluation.class=com.adobe.platform.ml.Evaluator
@@ -115,7 +115,7 @@ Op dit moment zijn er geen standaardevaluatiemetriek voor [!DNL Python] of [!DNL
 
 Voor aangepaste evaluatiemetrieken zijn er twee hoofdmethoden die voor de evaluator moeten worden geïmplementeerd: `split()` en `evaluate()` .
 
-Voor [!DNL Python], zouden deze methodes in [ evaluator.py ](https://github.com/adobe/experience-platform-dsw-reference/blob/master/recipes/python/retail/retail/evaluator.py) voor de `Evaluator` klasse worden bepaald. Volg de {](https://github.com/adobe/experience-platform-dsw-reference/blob/master/recipes/python/retail/retail/evaluator.py) verbinding 0} beoordelator.py voor een voorbeeld van `Evaluator`.[
+Voor [!DNL Python], zouden deze methodes in [ evaluator.py ](https://github.com/adobe/experience-platform-dsw-reference/blob/master/recipes/python/retail/retail/evaluator.py) voor de `Evaluator` klasse worden bepaald. Volg de {[&#128279;](https://github.com/adobe/experience-platform-dsw-reference/blob/master/recipes/python/retail/retail/evaluator.py) verbinding 0} beoordelator.py voor een voorbeeld van `Evaluator`.
 
 Voor het maken van evaluatiemetriek in [!DNL Python] moet de gebruiker de methoden `evaluate()` en `split()` implementeren.
 

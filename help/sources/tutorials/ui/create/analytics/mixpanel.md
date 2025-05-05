@@ -41,7 +41,7 @@ Selecteer in de gebruikersinterface van Experience Platform de optie **[!UICONTR
 
 U kunt de juiste categorie selecteren in de catalogus aan de linkerkant van het scherm. U kunt ook de specifieke bron vinden waarmee u wilt werken met de zoekoptie.
 
-Onder de ** categorie van Analytics, selecteer [!DNL Mixpanel], en selecteer dan **[!UICONTROL Add data]**.
+Onder de **&#x200B; categorie van Analytics, selecteer [!DNL Mixpanel], en selecteer dan &#x200B;** [!UICONTROL Add data]**.
 
 ![ catalogus ](../../../../images/tutorials/create/mixpanel-export-events/catalog.png)
 

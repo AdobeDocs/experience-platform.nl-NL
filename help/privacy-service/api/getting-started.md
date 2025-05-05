@@ -54,7 +54,7 @@ Selecteer vervolgens het verificatietype dat u wilt genereren voor toegangstoken
 
 >[!IMPORTANT]
 >
->Selecteer de methode **[!UICONTROL OAuth Server-to-Server]** omdat dit de enige methode is die u kunt gebruiken om door te gaan. De methode **[!UICONTROL Service Account (JWT)]** is vervangen. Terwijl de integratie die de authentificatiemethode JWT gebruikt tot 1 Januari, 2025 zal blijven werken, adviseert Adobe sterk dat u bestaande integratie aan de nieuwe server-aan-server methode OAuth vóór die datum migreert. Krijg meer informatie in de sectie [!BADGE  Afgekeurd ]{type=negative}[ produceer een Token van het Web JSON (JWT) ](/help/landing/api-authentication.md#jwt).
+>Selecteer de methode **[!UICONTROL OAuth Server-to-Server]** omdat dit de enige methode is die u kunt gebruiken om door te gaan. De methode **[!UICONTROL Service Account (JWT)]** is vervangen. Terwijl de integratie die de authentificatiemethode JWT gebruikt tot 1 Januari, 2025 zal blijven werken, adviseert Adobe sterk dat u bestaande integratie aan de nieuwe server-aan-server methode OAuth vóór die datum migreert. Krijg meer informatie in de sectie [!BADGE &#x200B; Afgekeurd &#x200B;]{type=negative}[ produceer een Token van het Web JSON (JWT) ](/help/landing/api-authentication.md#jwt).
 
 ![ Uitgezochte Oauth server-aan-Server authentificatiemethode.](/help/privacy-service/images/api/getting-started/select-oauth-authentication.png)
 
@@ -64,7 +64,7 @@ De laatste configuratiestap bestaat uit het selecteren van de productprofielen w
 
 >[!NOTE]
 >
-Productprofielen en de bijbehorende granulaire machtigingen worden door beheerders gemaakt en beheerd via Adobe Admin Console. Zie de gids op [ toestemmingen van Privacy Service ](../permissions.md) voor meer informatie.
+>Productprofielen en de bijbehorende granulaire machtigingen worden door beheerders gemaakt en beheerd via Adobe Admin Console. Zie de gids op [ toestemmingen van Privacy Service ](../permissions.md) voor meer informatie.
 
 Selecteer **[!UICONTROL Save configured API]** als u klaar bent.
 

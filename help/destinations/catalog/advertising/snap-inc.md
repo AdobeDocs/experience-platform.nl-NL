@@ -65,7 +65,7 @@ In deze sectie wordt beschreven welke soorten publiek u naar dit doel kunt expor
 
 | Oorsprong publiek | Ondersteund | Beschrijving |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | ✓ | Het publiek produceerde door de Dienst van de Segmentatie van Experience Platform [ ](../../../segmentation/home.md). |
+| [!DNL Segmentation Service] | ✓ | Het publiek produceerde door de Dienst van de Segmentatie van Experience Platform [&#128279;](../../../segmentation/home.md). |
 | Aangepaste uploads | ✓ | Het publiek [ ingevoerde ](../../../segmentation/ui/audience-portal.md#import-audience) in Experience Platform van Csv- dossiers. |
 | [!DNL Federated Audience Composition] | ✓ | Het publiek werd ingevoerd in Experience Platform door [ Federated Samenstelling van het Publiek ](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/start/audiences). |
 
@@ -133,7 +133,7 @@ Lees [ activeer profielen en publiek aan het stromen publiek uitvoerbestemmingen
 
 ## Gegevens exporteren valideren {#exported-data}
 
-Na het activeren van publiek aan de *Magnetische bestemming Inc.*, zult u het publiek in de Magnetische 2} sectie **van de Manager van Advertenties ](https://businesshelp.snapchat.com/s/article/audience-sharing) kunnen zien.[** Ga als volgt te werk om naar deze sectie te navigeren:
+Na het activeren van publiek aan de *Magnetische bestemming Inc.*, zult u het publiek in de Magnetische 2&rbrace; sectie **van de Manager van Advertenties [&#128279;](https://businesshelp.snapchat.com/s/article/audience-sharing) kunnen zien.** Ga als volgt te werk om naar deze sectie te navigeren:
 
 1. Logboek in de [ Magnetische Manager van Advertenties ](https://ads.snapchat.com/)
 2. Selecteer **Soorten publiek** van het pulldown menu in de hogere linkerhoek van het scherm. In de Audience Library ziet u het publiek dat u in Adobe Experience Platform hebt geactiveerd:

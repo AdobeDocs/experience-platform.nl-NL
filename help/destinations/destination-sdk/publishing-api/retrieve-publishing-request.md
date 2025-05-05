@@ -60,7 +60,7 @@ Selecteer hieronder elk tabblad om de bijbehorende lading weer te geven.
 
 >[!BEGINTABS]
 
->[!TAB  wint alle het publiceren verzoeken ] terug
+>[!TAB wint alle het publiceren verzoeken  terug]
 
 +++verzoek
 
@@ -127,7 +127,7 @@ De volgende reactie retourneert HTTP-status 200 met een lijst van alle doelen di
 
 +++
 
->[!TAB  wint een specifiek het publiceren verzoek ] terug
+>[!TAB wint een specifiek het publiceren verzoek  terug]
 
 +++verzoek
 

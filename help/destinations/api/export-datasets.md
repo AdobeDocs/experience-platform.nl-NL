@@ -205,7 +205,7 @@ curl --location --request GET 'https://platform.adobe.io/data/foundation/flowser
 
 **Verzoek**
 
-++ + ophalen [!DNL connection spec] voor [!DNL Azure Data Lake Gen 2(ADLS Gen2])
++++ ophalen [!DNL connection spec] voor [!DNL Azure Data Lake Gen 2(ADLS Gen2])
 
 ```shell
 curl --location --request GET 'https://platform.adobe.io/data/foundation/flowservice/connectionSpecs/be2c3209-53bc-47e7-ab25-145db8b873e1' \
@@ -2481,7 +2481,7 @@ De API-eindpunten in deze zelfstudie volgen de algemene beginselen van het Exper
 
 ## Bekende beperkingen {#known-limitations}
 
-Bekende beperkingen van de mening [ ](/help/destinations/ui/export-datasets.md#known-limitations) over datasetuitvoer.
+Bekende beperkingen van de mening [&#128279;](/help/destinations/ui/export-datasets.md#known-limitations) over datasetuitvoer.
 
 ## Veelgestelde vragen {#faq}
 

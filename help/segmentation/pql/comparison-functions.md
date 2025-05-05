@@ -34,7 +34,7 @@ homeAddress.countryISO = "CA"
 
 ## Niet gelijk
 
-De `!=` (niet gelijk aan) functie controleert of één waarde of uitdrukking **** niet gelijk aan een andere waarde of een uitdrukking is.
+De `!=` (niet gelijk aan) functie controleert of één waarde of uitdrukking **&#x200B;**&#x200B;niet gelijk aan een andere waarde of een uitdrukking is.
 
 **Formaat**
 

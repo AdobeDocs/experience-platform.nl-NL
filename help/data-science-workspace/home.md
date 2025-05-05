@@ -78,7 +78,7 @@ Gegevens zijn de hoeksteen van het leren van AI en machines.
 
 ### Prebuilt machine het leren recepten
 
-[!DNL Data Science Workspace] bevat vooraf gebouwde recepten voor machinaal leren voor algemene bedrijfsbehoeften, zoals de voorspelling van de detailhandel en anomaliedetectie, zodat wetenschappers en ontwikkelaars van gegevens niet helemaal hoeven te beginnen. Momenteel worden drie recepten aangeboden, {de voorspelling van de 0} productaankoop ](./pre-built-recipes/product-purchase-prediction.md), [ productaanbevelingen ](./pre-built-recipes/product-recommendations.md), en [ kleinhandelsverkoop ](./pre-built-recipes/retail-sales.md).[
+[!DNL Data Science Workspace] bevat vooraf gebouwde recepten voor machinaal leren voor algemene bedrijfsbehoeften, zoals de voorspelling van de detailhandel en anomaliedetectie, zodat wetenschappers en ontwikkelaars van gegevens niet helemaal hoeven te beginnen. Momenteel worden drie recepten aangeboden, {de voorspelling van de 0} productaankoop [&#128279;](./pre-built-recipes/product-purchase-prediction.md), [ productaanbevelingen ](./pre-built-recipes/product-recommendations.md), en [ kleinhandelsverkoop ](./pre-built-recipes/retail-sales.md).
 
 [//]: # (The built-in recipe gallery offers recommendations for prebuilt recipes based on your business needs.)
 

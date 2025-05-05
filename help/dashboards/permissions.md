@@ -27,7 +27,7 @@ De service [!DNL Dashboards] biedt drie machtigingen die, wanneer ze worden geco
 
 | Machtiging | Beschrijving |
 |---|---|
-| **beheert Standaard dashboards** | Deze toestemming is a **globale lees en schrijf toestemmingen**. Het staat u toe om douane widgets ](./customize/custom-widgets.md) tot stand te brengen en [ het widgetschema ](./customize/edit-schema.md) door [!UICONTROL Widget library] uit te geven.[ |
+| **beheert Standaard dashboards** | Deze toestemming is a **globale lees en schrijf toestemmingen**. Het staat u toe om douane widgets [&#128279;](./customize/custom-widgets.md) tot stand te brengen en [ het widgetschema ](./customize/edit-schema.md) door [!UICONTROL Widget library] uit te geven. |
 | **Standaarddashboards van de Mening** | Dit verstrekt **read-only** functionaliteit voor [!UICONTROL Profiles], [!UICONTROL Destinations], en [!UICONTROL Segments] dashboards en verleent toegang tot hen door de linkernavigatie van Experience Platform. De code voegt ook [!UICONTROL Dashboards] toe aan de linkernavigatie en toegang tot het tabblad [!UICONTROL Dashboards] voorraad en integratie. |
 | **Dashboard van het Gebruik van de Vergunning van de Mening** | Deze toestemming staat gebruikers **read-only** toegang toe tot [ het dashboard van het vergunningsgebruik ](./guides/license-usage.md) binnen Experience Platform UI. |
 

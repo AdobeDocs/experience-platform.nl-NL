@@ -44,7 +44,7 @@ De reacties van de fout zijn bedoeld om met [ JSON in overeenstemming te zijn:AP
 | `id` | Een unieke id voor dit specifieke exemplaar van het probleem. |
 | `status` | De HTTP-statuscode die op dit probleem van toepassing is, uitgedrukt als een tekenreekswaarde. |
 | `code` | Een toepassingsspecifieke foutcode, uitgedrukt als tekenreekswaarde. |
-| `title` | Een korte, mens-leesbare samenvatting van het probleem dat **** van voorkomen aan voorkomen, behalve voor localisatie niet zou moeten veranderen. |
+| `title` | Een korte, mens-leesbare samenvatting van het probleem dat **&#x200B;**&#x200B;van voorkomen aan voorkomen, behalve voor localisatie niet zou moeten veranderen. |
 | `detail` | Een door de mens leesbare verklaring specifiek voor dit voorkomen van het probleem. Net als `title` kan de waarde van dit veld worden gelokaliseerd. |
 | `source` | Een object met verwijzingen naar de bron van de fout, eventueel inclusief een van de volgende leden:<ul><li>`pointer`: a [ JSON Aanwijzer (RFC6901) ](https://datatracker.ietf.org/doc/html/rfc6901) koord dat verwijzingen de bijbehorende entiteit in het verzoekdocument (zoals `/data` voor een primair gegevensvoorwerp, of `/data/attributes/title` voor een specifiek attribuut).</li></ul> |
 | `meta` | Een object dat niet-standaard metagegevens over de fout bevat. |

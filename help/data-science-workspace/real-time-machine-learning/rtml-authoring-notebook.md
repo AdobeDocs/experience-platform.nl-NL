@@ -98,7 +98,7 @@ Als u een gegevensset wilt gebruiken vanuit Adobe Experience Platform, verwijder
 
 Om tot een dataset in uw [!DNL JupyterLab] notitieboekje toegang te hebben, selecteer het **lusje van Gegevens** in de linkernavigatie van [!DNL JupyterLab]. De mappen **[!UICONTROL Datasets]** en **[!UICONTROL Schemas]** worden weergegeven. Selecteer **[!UICONTROL Datasets]** en klik met de rechtermuisknop en selecteer vervolgens de optie **[!UICONTROL Explore Data in Notebook]** in het vervolgkeuzemenu in de gegevensset die u wilt gebruiken. Onder aan de laptop wordt een uitvoerbaar code-item weergegeven. Deze cel heeft uw `dataset_id` .
 
-{de toegang van 0} dataset ](../images/rtml/access-dataset.png)![
+{de toegang van 0} dataset ![&#128279;](../images/rtml/access-dataset.png)
 
 Klik met de rechtermuisknop en verwijder de cel die u onder aan de laptop hebt gegenereerd.
 
@@ -204,7 +204,7 @@ Voer de opgegeven cel uit om een voorbeeldresultaat te zien. De outputlijst die 
 
 ![ Voorbeeld van gegevenstransformaties ](../images/rtml/table-return.png)
 
-**de pijpleiding van 0} Opleiding**
+**de pijpleiding van 0&rbrace; Opleiding**
 
 Daarna moet u de trainingspijpleiding tot stand brengen. Dit zal gelijkaardig aan een ander dossier van de trainingspijpleiding kijken behalve u moet omzetten en een ONNX dossier produceren.
 
@@ -292,7 +292,7 @@ Deze sectie schetst het creëren van een DSL. U gaat de knooppunten ontwerpen di
 
 >[!NOTE]
 >
-> U hebt waarschijnlijk meerdere knooppunten op basis van het type gegevens dat wordt gebruikt. Het volgende voorbeeld schetst slechts één enkele knoop in het *in real time ML* malplaatje. Gelieve te bekijken de *malplaatjes* Authoring van de Knoop *sectie in real time van XML {voor de volledige codecel.*
+> U hebt waarschijnlijk meerdere knooppunten op basis van het type gegevens dat wordt gebruikt. Het volgende voorbeeld schetst slechts één enkele knoop in het *in real time ML* malplaatje. Gelieve te bekijken de *malplaatjes* Authoring van de Knoop *sectie in real time van XML &lbrace;voor de volledige codecel.*
 
 Het onderstaande Pandas-knooppunt gebruikt `"import": "map"` om de methodenaam als een tekenreeks in de parameters te importeren, gevolgd door het invoeren van de parameters als een kaartfunctie. In het onderstaande voorbeeld wordt dit gedaan met `{'arg': {'dataLayerNull': 'notgiven', 'no': 'no', 'yes': 'yes', 'notgiven': 'notgiven'}}` . Nadat u de kaart hebt geplaatst, kunt u `inplace` instellen als `True` of `False` . Stel `inplace` in als `True` of `False` op basis van of u transformatie wilt toepassen. Standaard maakt `"inplace": False` een nieuwe kolom. Ondersteuning voor het opgeven van een nieuwe kolomnaam is ingesteld om in een volgende release te worden toegevoegd. De laatste regel `cols` kan één kolomnaam of een lijst met kolommen zijn. Geef de kolommen op waarop u de transformatie wilt toepassen. In dit voorbeeld wordt `leasing` opgegeven. Voor meer informatie over de beschikbare knopen en hoe te om hen te gebruiken, bezoek de [ gids van de knoopverwijzing ](./node-reference.md).
 

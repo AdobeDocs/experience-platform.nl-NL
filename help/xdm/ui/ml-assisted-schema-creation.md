@@ -38,7 +38,7 @@ Selecteer de werkruimte **[!UICONTROL Schemas]** in de linkernavigatie van de ge
 
 ## Een schema maken {#create-a-schema}
 
-Het dialoogvenster [!UICONTROL Create a schema] wordt weergegeven. Selecteer de ]**schemaverwezenlijking 0} ML-Begeleidde **[!UICONTROL Select]**optie, die door wordt gevolgd om uw keus te bevestigen.**[
+Het dialoogvenster [!UICONTROL Create a schema] wordt weergegeven. Selecteer de &rbrack;**schemaverwezenlijking 0&rbrace; ML-Begeleidde &#x200B;** [!UICONTROL Select]&#x200B;**optie, die door wordt gevolgd om uw keus te bevestigen.**&lbrack;
 
 ![ de [!UICONTROL Create a schema] dialoog met [!UICONTROL ML- Assisted] benadrukte.](../images/ui/ml-schema-creation/use-sample-csv.png)
 

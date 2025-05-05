@@ -15,7 +15,7 @@ ht-degree: 0%
 
 [[!DNL Twitter] ](https://twitter.com/i/flow/login) is een online sociale media en de sociale voorzien van een netwerkdienst, waarop de gebruikers posten en met 280 karakter-lange berichten in wisselwerking staan die als tweets worden bekend. De gebruikers kunnen met Twitter in wisselwerking staan gebruikend browser, mobiele frontend software, of programmatically door zijn [ APIs ](https://developer.twitter.com/en/docs/twitter-api)
 
-De [!DNL Twitter] gebeurtenis die van de Conversies API van het Web [ ](../../../ui/event-forwarding/overview.md) uitbreiding door:sturen staat u toe aan hefboomwerkingsgegevens in de Edge Network van Adobe Experience Platform worden gevangen en het verzenden naar [!DNL Twitter]. Dit document behandelt de gebruiksgevallen van de uitbreiding, hoe te om het te installeren, en hoe te om zijn mogelijkheden in uw gebeurtenis te integreren die [ regels ](../../../ui/managing-resources/rules.md) door:sturen.
+De [!DNL Twitter] gebeurtenis die van de Conversies API van het Web [&#128279;](../../../ui/event-forwarding/overview.md) uitbreiding door:sturen staat u toe aan hefboomwerkingsgegevens in de Edge Network van Adobe Experience Platform worden gevangen en het verzenden naar [!DNL Twitter]. Dit document behandelt de gebruiksgevallen van de uitbreiding, hoe te om het te installeren, en hoe te om zijn mogelijkheden in uw gebeurtenis te integreren die [ regels ](../../../ui/managing-resources/rules.md) door:sturen.
 
 [!DNL Twitter] vereist [ OAuth 1.0 ](https://developer.twitter.com/en/docs/authentication/oauth-1-0a) voor authentificatie met [!DNL Twitter] [!DNL Web Conversions] API.
 
@@ -119,5 +119,5 @@ In deze handleiding wordt beschreven hoe conversiegebeurtenissen naar [!DNL Twit
 
 * [[!DNL Twitter]  APIs ](https://developer.twitter.com/en/docs/twitter-api)
 * [[!DNL Twitter]  de omzetting API van het Web ](https://developer.twitter.com/en/docs/twitter-ads-api/measurement/api-reference/conversions)
-* ](https://developer.twitter.com/en/docs/authentication/oauth-1-0a/obtaining-user-access-tokens) Token van de Toegang van 0} Gebruiker[[!DNL Twitter] 
+* [&#128279;](https://developer.twitter.com/en/docs/authentication/oauth-1-0a/obtaining-user-access-tokens) Token van de Toegang van 0&rbrace; Gebruiker[!DNL Twitter] 
 * [ identiteitskaart van het Pixel en omzetting die ](https://business.twitter.com/en/help/campaign-measurement-and-analytics/conversion-tracking-for-websites.html) volgen

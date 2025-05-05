@@ -64,7 +64,7 @@ Als u gegevensstroomoverschrijvingen voor een Adobe Target-gegevensstroom wilt c
 
 Zodra u de gegevensstroom hebt gecreeerd, geef de [ dienst van Adobe Target ](configure.md#target) uit die u hebt toegevoegd en gebruik de **[!UICONTROL Property Token Overrides]** sectie om de gewenste gegevensstroom met voeten te treden, zoals aangetoond in het hieronder beeld. Voeg één eigenschapstoken per regel toe.
 
-{het schermschot van 0} gegevensstromen UI die de de dienstmontages van Adobe Target toont, met de benadrukte de bezitstoken met voeten treedt.](assets/overrides/override-target.png)![
+{het schermschot van 0} gegevensstromen UI die de de dienstmontages van Adobe Target toont, met de benadrukte de bezitstoken met voeten treedt.![&#128279;](assets/overrides/override-target.png)
 
 Nadat u de gewenste overschrijvingen hebt toegevoegd, slaat u de gegevensstroominstellingen op.
 
@@ -78,7 +78,7 @@ Zodra u de gegevensstroom hebt gecreeerd, geef de [ dienst van Adobe Analytics ]
 
 Selecteer **[!UICONTROL Show Batch Mode]** om het in batch bewerken van de rapportsuite overschrijven in te schakelen. U kunt een lijst met rapportsuite-overschrijvingen kopiëren en plakken en per regel één rapportsuite invoeren.
 
-{het schermschot van 0} gegevensstromen UI die de de dienstmontages van Adobe Analytics toont, met de benadrukte de opheffing van de rapportreeks.](assets/overrides/override-analytics.png)![
+{het schermschot van 0} gegevensstromen UI die de de dienstmontages van Adobe Analytics toont, met de benadrukte de opheffing van de rapportreeks.![&#128279;](assets/overrides/override-analytics.png)
 
 Nadat u de gewenste overschrijvingen hebt toegevoegd, slaat u de gegevensstroominstellingen op.
 
@@ -90,7 +90,7 @@ Om gegevensstroomoverschrijvingen voor de gebeurtenisdatasets van Experience Pla
 
 Zodra u de gegevensstroom hebt gecreeerd, geef de [ dienst van Adobe Experience Platform ](configure.md#aep) uit die u hebt toegevoegd en selecteer de **[!UICONTROL Add Event Dataset]** optie om één of meerdere met voeten getreden gebeurtenisdatasets, zoals aangetoond in het hieronder beeld toe te voegen.
 
-{het schermschot van 0} gegevensstromen UI die de de dienstmontages van Adobe Experience Platform toont, met de benadrukte overschrijvingen van de gebeurtenisdataset.](assets/overrides/override-aep.png)![
+{het schermschot van 0} gegevensstromen UI die de de dienstmontages van Adobe Experience Platform toont, met de benadrukte overschrijvingen van de gebeurtenisdataset.![&#128279;](assets/overrides/override-aep.png)
 
 Nadat u de gewenste overschrijvingen hebt toegevoegd, slaat u de gegevensstroominstellingen op.
 

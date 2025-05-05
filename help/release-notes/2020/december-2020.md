@@ -47,7 +47,7 @@ Data Science Workspace maakt gebruik van machinaal leren en kunstmatige intellig
 | --- | ---|
 | Toevoeging Adobe Experience Platform Intelligence-pakket | Het Adobe Experience Platform Intelligence-pakket addon is een Data Science Workspace-upgrade die extra belangrijke functies zoals: <li> Door de gebruikersinterface gestuurde modelexperimenten en -evaluaties.</li><li> Mogelijkheid om modellen te implementeren en te exploiteren met geplande training en het afleiden van taken.</li><li> Ondersteuning voor diep leren in Tensorflow-modellen (GPU Compute).</li><li> Op park-gebaseerde verdeelde computer om te trainen en tegen grote datasets (10MM + rijen) te scoren.</li><li>En meer</li> |
 
-Om meer over het pakket van de Intelligentie van Adobe Experience Platform te leren addon, te zien gelieve de documentatie over {de toegang en de eigenschappen van Workspace van de Wetenschap van 0} Gegevens ](../../data-science-workspace/access-features-dsw.md).[
+Om meer over het pakket van de Intelligentie van Adobe Experience Platform te leren addon, te zien gelieve de documentatie over {de toegang en de eigenschappen van Workspace van de Wetenschap van 0} Gegevens [&#128279;](../../data-science-workspace/access-features-dsw.md).
 
 ## [!DNL Sources] {#sources}
 

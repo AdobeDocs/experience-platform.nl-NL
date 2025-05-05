@@ -183,7 +183,7 @@ curl -X POST \
 | --- | --- |
 | `entityType` | Elk item in de payload-array moet het type entiteit aangeven dat wordt gedefinieerd. Voor dit gebruik is de waarde altijd &quot;dataSet&quot;. |
 | `entityId` | Elk punt in de ladingsserie moet unieke identiteitskaart voor een dataset verstrekken. |
-| `entityMeta.fields` | (Facultatief) een serie van ](../../landing/api-fundamentals.md#json-pointer) koorden van de Aanwijzer 0} JSON, die specifieke gebieden in het schema van de dataset van verwijzingen voorzien. [ Als deze array is opgenomen, nemen alleen de velden in de array deel aan de evaluatie. Schema-velden die niet in de array zijn opgenomen, nemen niet deel aan de evaluatie.<br><br> als dit gebied niet inbegrepen is, zullen alle gebieden binnen het datasetschema in evaluatie worden omvat. |
+| `entityMeta.fields` | (Facultatief) een serie van [&#128279;](../../landing/api-fundamentals.md#json-pointer) koorden van de Aanwijzer 0&rbrace; JSON, die specifieke gebieden in het schema van de dataset van verwijzingen voorzien.  Als deze array is opgenomen, nemen alleen de velden in de array deel aan de evaluatie. Schema-velden die niet in de array zijn opgenomen, nemen niet deel aan de evaluatie.<br><br> als dit gebied niet inbegrepen is, zullen alle gebieden binnen het datasetschema in evaluatie worden omvat. |
 
 **Reactie**
 

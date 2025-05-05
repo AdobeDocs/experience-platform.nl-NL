@@ -24,7 +24,7 @@ Dit leerprogramma verstrekt stappen voor het creëren van a ** bronschakelaar va
 
 >[!IMPORTANT]
 >
->Deze bronschakelaar en documentatiepagina worden gecreeerd en door het ** team van de JONGE {gehandhaafd. Voor om het even welke onderzoeken of updateverzoeken, gelieve hen direct bij *verbinding of e-mailadres van het Tussenvoegsel te contacteren waar u voor updates* kunt worden bereikt.
+>Deze bronschakelaar en documentatiepagina worden gecreeerd en door het ** team van de JONGE &lbrace;gehandhaafd. Voor om het even welke onderzoeken of updateverzoeken, gelieve hen direct bij *verbinding of e-mailadres van het Tussenvoegsel te contacteren waar u voor updates* kunt worden bereikt.
 
 ## Vereisten
 
@@ -123,7 +123,7 @@ Als u het streamingeindpunt wilt ophalen, gaat u naar de [!UICONTROL Dataflow ac
 
 *de Werkschema&#39;s voor de resterende stappen van het creëren van een dataflow worden gemoduleerd. Als er om het even welke specifieke vraag-outs zijn u betreffende uw bron wilt maken, gelieve de extra middelensectie hieronder te zien.*
 
-Door dit leerprogramma te volgen, hebt u een verbinding aan uw ** rekening van UUR {gevestigd. U kunt nu aan het volgende leerprogramma verdergaan en [ een dataflow vormen om gegevens in Experience Platform ](https://experienceleague.adobe.com/docs/experience-platform/sources/ui-tutorials/dataflow/crm.html) te brengen.
+Door dit leerprogramma te volgen, hebt u een verbinding aan uw ** rekening van UUR &lbrace;gevestigd. U kunt nu aan het volgende leerprogramma verdergaan en [ een dataflow vormen om gegevens in Experience Platform ](https://experienceleague.adobe.com/docs/experience-platform/sources/ui-tutorials/dataflow/crm.html) te brengen.
 
 ## Aanvullende bronnen
 

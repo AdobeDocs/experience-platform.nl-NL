@@ -1,5 +1,5 @@
 ---
-description: Leer hoe te om dossier het formatteren opties voor op dossier-gebaseerde bestemmingen te vormen die met Adobe Experience Platform Destination SDK, via het `/bestemming-servers' eindpunt worden gebouwd.
+description: Leer hoe te om dossier het formatteren opties voor op dossier-gebaseerde bestemmingen te vormen die met Adobe Experience Platform Destination SDK, via het &grave;/bestemming-servers' eindpunt worden gebouwd.
 title: Configuratie bestandsindeling
 exl-id: 98fec559-9073-4517-a10e-34c2caf292d5
 source-git-commit: b4334b4f73428f94f5a7e5088f98e2459afcaf3c

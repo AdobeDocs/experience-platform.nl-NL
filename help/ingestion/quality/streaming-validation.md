@@ -144,7 +144,7 @@ Als synchrone validatie is ingeschakeld, bevat een geslaagde reactie eventuele v
 }
 ```
 
-De bovenstaande reactie geeft aan hoeveel schemaovertredingen zijn gevonden en wat de overtredingen zijn. In dit antwoord staat bijvoorbeeld dat de toetsen `workEmail` en `person` niet in het schema zijn gedefinieerd en daarom niet zijn toegestaan. De waarde voor `_id` wordt ook als onjuist gemarkeerd, aangezien het schema een `string` verwachtte, maar een `long` werd ingevoegd. Merk op dat zodra vijf fouten worden ontmoet, de bevestigingsdienst **** zal ophouden verwerkend dat bericht. Andere berichten blijven echter geparseerd.
+De bovenstaande reactie geeft aan hoeveel schemaovertredingen zijn gevonden en wat de overtredingen zijn. In dit antwoord staat bijvoorbeeld dat de toetsen `workEmail` en `person` niet in het schema zijn gedefinieerd en daarom niet zijn toegestaan. De waarde voor `_id` wordt ook als onjuist gemarkeerd, aangezien het schema een `string` verwachtte, maar een `long` werd ingevoegd. Merk op dat zodra vijf fouten worden ontmoet, de bevestigingsdienst **&#x200B;**&#x200B;zal ophouden verwerkend dat bericht. Andere berichten blijven echter geparseerd.
 
 ## Asynchrone validatie
 

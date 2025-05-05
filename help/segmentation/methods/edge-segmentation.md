@@ -35,12 +35,12 @@ Een vraag kan met randsegmentatie worden geëvalueerd als het aan om het even we
 | Segment van segmenten | Elke segmentdefinitie die een of meer batch- of randsegmenten bevat. **Nota:** als een segment van segmenten wordt gebruikt, zal de profielontzetting **elke 24 uren** gebeuren. | `inSegment("a730ed3f-119c-415b-a4ac-27c396ae2dff") and inSegment("8fbbe169-2da6-4c9d-a332-b6a6ecf559b9")` | ![ een voorbeeld van een segment van segmenten wordt getoond.](../images/methods/edge/segment-of-segments.png) |
 | Meerdere gebeurtenissen met een profielkenmerk | Om het even welke segmentdefinitie die naar veelvoudige gebeurtenissen **binnen de laatste 24 uren** verwijst en (naar keuze) heeft één of meerdere profielattributen. | `workAddress.country.equals("US", false) and CHAIN(xEvent, timestamp, [C0: WHAT(eventType.equals("directMarketing.emailClicked", false)) WHEN(today), C1: WHAT(eventType.equals("commerce.checkouts", false)) WHEN(today)])` | ![ een voorbeeld van veelvoudige gebeurtenissen met een profielattribuut wordt getoond.](../images/methods/edge/multiple-events-with-profile-attribute.png) |
 
-Bovendien, moet de segmentdefinitie **** aan een fusiebeleid worden gebonden dat op rand actief is. Voor meer informatie over samenvoegingsbeleid, te lezen gelieve de [ gids van het samenvoegingsbeleid ](../../profile/api/merge-policies.md).
+Bovendien, moet de segmentdefinitie **&#x200B;**&#x200B;aan een fusiebeleid worden gebonden dat op rand actief is. Voor meer informatie over samenvoegingsbeleid, te lezen gelieve de [ gids van het samenvoegingsbeleid ](../../profile/api/merge-policies.md).
 
 Een segmentdefinitie zal **niet** voor randsegmentatie in het volgende scenario in aanmerking komen:
 
 - De segmentdefinitie bevat een combinatie van één gebeurtenis en een `inSegment` -gebeurtenis.
-   - Nochtans, als de segmentdefinitie in de `inSegment` gebeurtenis profiel slechts is, zal de segmentdefinitie **** voor randsegmentatie worden toegelaten.
+   - Nochtans, als de segmentdefinitie in de `inSegment` gebeurtenis profiel slechts is, zal de segmentdefinitie **&#x200B;**&#x200B;voor randsegmentatie worden toegelaten.
 - In de segmentdefinitie wordt &quot;Jaar negeren&quot; gebruikt als onderdeel van de tijdbeperkingen.
 
 ## publiek maken {#create-audience}

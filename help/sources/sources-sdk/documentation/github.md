@@ -17,7 +17,7 @@ Dit document verstrekt stappen op hoe te om de het Webinterface van GitHub aan a
 
 >[!TIP]
 >
->De volgende documenten uit de bijdragende gids van Adobe kunnen worden gebruikt om uw documentatieproces verder te steunen: <ul><li>[ installeer Git en de Authoring hulpmiddelen van de Prijsverhoging ](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/install-tools.html)</li><li>{de plaats van de Git van de opstelling plaatselijk voor documentatie ](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html)[</li><li>[ GitHub bijdragewerkschema voor belangrijkste veranderingen ](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/full-workflow.html)</li></ul>
+>De volgende documenten uit de bijdragende gids van Adobe kunnen worden gebruikt om uw documentatieproces verder te steunen: <ul><li>[ installeer Git en de Authoring hulpmiddelen van de Prijsverhoging ](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/install-tools.html)</li><li>&lbrace;de plaats van de Git van de opstelling plaatselijk voor documentatie [&#128279;](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html)</li><li>[ GitHub bijdragewerkschema voor belangrijkste veranderingen ](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/full-workflow.html)</li></ul>
 
 ## Opstelling uw milieu GitHub
 
@@ -51,7 +51,7 @@ Geef het bronbestand een naam `YOURSOURCE.md` waarbij UURSOURCE de naam van uw b
 
 ## Auteur de documentatiepagina voor uw bron
 
-Beginnen uw nieuwe bron te documenteren, kleef de inhoud van het [ malplaatje van de brondocumentatie ](./template.md) in de het Webredacteur van GitHub. U kunt het malplaatje [ ](../assets/api-template.zip) ook hier downloaden.
+Beginnen uw nieuwe bron te documenteren, kleef de inhoud van het [ malplaatje van de brondocumentatie ](./template.md) in de het Webredacteur van GitHub. U kunt het malplaatje [&#128279;](../assets/api-template.zip) ook hier downloaden.
 
 Met het malplaatje dat over aan de interface van de Webredacteur van GitHub wordt gekopieerd, volg de instructies die op het malplaatje worden geschetst en geef de waarden uit die relevante informatie voor uw bron bevatten.
 

@@ -1,5 +1,5 @@
 ---
-description: Leer hoe te om specificaties van de bestemmingsserver in Adobe Experience Platform Destination SDK via `/authoring/bestemmings-servers te vormen.
+description: Leer hoe te om specificaties van de bestemmingsserver in Adobe Experience Platform Destination SDK via &grave;/authoring/bestemmings-servers te vormen.
 title: Serverspecificaties voor doelen die met Destination SDK zijn gemaakt
 exl-id: 62202edb-a954-42ff-9772-863cea37a889
 source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3

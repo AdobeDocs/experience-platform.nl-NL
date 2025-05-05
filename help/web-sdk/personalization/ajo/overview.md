@@ -84,7 +84,7 @@ Voer de onderstaande stappen uit om [!DNL Adobe Journey Optimizer] te gaan gebru
 
 ## Adobe Journey Optimizer Web-ervaringen maken {#create-ajo-web-experiences}
 
-Volg de ](https://experienceleague.adobe.com/docs/journey-optimizer/using/web/create-web.html#create-web-campaign) instructies van de [!DNL Adobe Journey Optimizer] [ Gids van de Ervaringen van het Web ](https://experienceleague.adobe.com/docs/journey-optimizer/using/web/create-web.html) [ campagne authoring {om [!DNL Journey Optimizer Web] campagnes en ervaringen tot stand te brengen.
+Volg de [&#128279;](https://experienceleague.adobe.com/docs/journey-optimizer/using/web/create-web.html#create-web-campaign) instructies van de [!DNL Adobe Journey Optimizer] [ Gids van de Ervaringen van het Web ](https://experienceleague.adobe.com/docs/journey-optimizer/using/web/create-web.html)  campagne authoring &lbrace;om [!DNL Journey Optimizer Web] campagnes en ervaringen tot stand te brengen.
 
 ## Aangepaste inhoud renderen {#rendering-personalized-content}
 

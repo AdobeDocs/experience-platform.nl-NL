@@ -65,7 +65,7 @@ Alle gebeurtenis die eigenschappen door:sturen maakt een lijst **[!UICONTROL Edg
 
 ### Extensies {#extensions}
 
-De gebeurtenis door:sturen heeft zijn eigen catalogus van compatibele uitbreidingen, zoals de ](../../extensions/server/core/overview.md) uitbreiding van de Kern [ en [ de 3} uitbreiding van de Verbinding van de Wolk van Adobe. ](../../extensions/server/cloud-connector/overview.md) U kunt de beschikbare extensies voor eigenschappen voor het doorsturen van gebeurtenissen weergeven in de gebruikersinterface door **[!UICONTROL Extensions]** te selecteren in de linkernavigatie, gevolgd door **[!UICONTROL Catalog]** .
+De gebeurtenis door:sturen heeft zijn eigen catalogus van compatibele uitbreidingen, zoals de [&#128279;](../../extensions/server/core/overview.md) uitbreiding van de Kern  en [ de 3&rbrace; uitbreiding van de Verbinding van de Wolk van Adobe. ](../../extensions/server/cloud-connector/overview.md) U kunt de beschikbare extensies voor eigenschappen voor het doorsturen van gebeurtenissen weergeven in de gebruikersinterface door **[!UICONTROL Extensions]** te selecteren in de linkernavigatie, gevolgd door **[!UICONTROL Catalog]** .
 
 U kunt extra middelen bekijken beschikbaar om meer over deze eigenschap te leren door ![ over ](../../images/ui/event-forwarding/overview/about.png) van het juiste paneel te selecteren.
 

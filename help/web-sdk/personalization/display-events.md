@@ -37,7 +37,7 @@ Web SDK verzendt de vertoningsgebeurtenissen onmiddellijk nadat om het even welk
 
 ## Weergavegebeurtenissen verzenden in volgende sendEvent-aanroepen {#send-sendEvent-calls}
 
-Vergeleken met [ ](#send-automatically) het automatisch verzenden van vertoningsgebeurtenissen, wanneer u hen in verdere `sendEvent` vraag omvat hebt u ook de kans om meer informatie over de paginading in de vraag te omvatten. Dit kan extra informatie zijn, die niet beschikbaar was bij het aanvragen van de gepersonaliseerde inhoud.
+Vergeleken met [&#128279;](#send-automatically) het automatisch verzenden van vertoningsgebeurtenissen, wanneer u hen in verdere `sendEvent` vraag omvat hebt u ook de kans om meer informatie over de paginading in de vraag te omvatten. Dit kan extra informatie zijn, die niet beschikbaar was bij het aanvragen van de gepersonaliseerde inhoud.
 
 Bovendien minimaliseert het verzenden van weergavegebeurtenissen in `sendEvent` -aanroepen de fout met de stuiterende frequentie wanneer u Adobe Analytics gebruikt.
 

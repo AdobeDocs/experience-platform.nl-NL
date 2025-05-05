@@ -140,7 +140,7 @@ Dit helpt u verschillend gegevensstroomgedrag dan de standaarddegenen teweegbren
 
 Hiermee verzendt u een mediagebeurtenis naar Adobe Experience Platform en/of Adobe Analytics. Deze handeling is handig wanneer u mediafouten op uw website bijhoudt. Selecteer een instantie (als u meerdere exemplaren hebt). De handeling vereist een `playerId` die een unieke id vertegenwoordigt voor een bijgehouden mediasessie. Bij het starten van een mediasessie is ook een **[!UICONTROL Quality of Experience]** - en `playhead` -gegevenselement nodig.
 
-{het beeld van 0} Experience Platform UI die het send scherm van de media gebeurtenis toont.](assets/send-media-event.png)![
+{het beeld van 0} Experience Platform UI die het send scherm van de media gebeurtenis toont.![&#128279;](assets/send-media-event.png)
 
 Het handelingstype **[!UICONTROL Send media event]** ondersteunt de volgende eigenschappen:
 

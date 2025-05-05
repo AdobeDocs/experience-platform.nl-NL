@@ -94,7 +94,7 @@ Een voorbeeld van de verwezenlijking van het douanegebied in [!DNL Salesforce], 
 
 >[!NOTE]
 >
->* De voorwerpen in Salesforce zijn beperkt tot 25 Externe gebieden, zie {de Attributen van het Gebied van 0} Douane ](https://help.salesforce.com/s/articleView?id=sf.custom_field_attributes.htm&amp;type=5).[
+>* De voorwerpen in Salesforce zijn beperkt tot 25 Externe gebieden, zie {de Attributen van het Gebied van 0} Douane [&#128279;](https://help.salesforce.com/s/articleView?id=sf.custom_field_attributes.htm&amp;type=5).
 >* Deze beperking houdt in dat u op elk moment maximaal 25 Experience Platform-publieksleden actief kunt hebben.
 >* Als u deze limiet in Salesforce hebt bereikt, moet u de aangepaste kenmerken uit Salesforce verwijderen die zijn gebruikt om de publieksstatus op te slaan tegen oudere gebruikers in Experience Platform voordat een nieuwe **[!UICONTROL Mapping ID]** kan worden gebruikt.
 
@@ -162,7 +162,7 @@ Als u voor verificatie bij het doel wilt zorgen, vult u de vereiste velden hiero
 | **[!UICONTROL Client ID]** | De [!DNL Salesforce] verbonden app `Consumer Key` . |
 | **[!UICONTROL Client Secret]** | De [!DNL Salesforce] verbonden app `Consumer Secret` . |
 
-{het schermschot van 0} Experience Platform UI die toont hoe te voor authentiek te verklaren.](../../assets/catalog/crm/salesforce/authenticate-destination.png)![
+{het schermschot van 0} Experience Platform UI die toont hoe te voor authentiek te verklaren.![&#128279;](../../assets/catalog/crm/salesforce/authenticate-destination.png)
 
 Als de opgegeven gegevens geldig zijn, geeft de gebruikersinterface een **[!UICONTROL Connected]** -status weer met een groen vinkje. Vervolgens kunt u verdergaan met de volgende stap.
 
@@ -175,7 +175,7 @@ Als u details voor de bestemming wilt configureren, vult u de vereiste en option
    * Selecteer **[!UICONTROL Contact]** als de identiteiten u wilt uitvoeren of bijwerken van type *Contact* zijn.
    * Selecteer **[!UICONTROL Lead]** als de identiteiten u wilt uitvoeren of bijwerken van type *Lood* zijn.
 
-{het schermschot van 0} Experience Platform UI die de bestemmingsdetails toont.](../../assets/catalog/crm/salesforce/destination-details.png)![
+{het schermschot van 0} Experience Platform UI die de bestemmingsdetails toont.![&#128279;](../../assets/catalog/crm/salesforce/destination-details.png)
 
 ### Waarschuwingen inschakelen {#enable-alerts}
 
@@ -222,6 +222,7 @@ Voer de volgende stappen uit om uw XDM-velden correct toe te wijzen aan de [!DNL
      | `xdm: personalEmail.address` | `Attribute: Email` | Het e-mailadres van de contactpersoon |
 
    * Hieronder ziet u een voorbeeld waarin deze toewijzingen worden gebruikt:
+
      ![ Experience Platform UI het screenshot voorbeeld dat de afbeeldingen van het Doel toont.](../../assets/catalog/crm/salesforce/mappings-contacts.png)
 
    **Werkend met Leads**
@@ -238,6 +239,7 @@ Voer de volgende stappen uit om uw XDM-velden correct toe te wijzen aan de [!DNL
      | `xdm: personalEmail.address` | `Attribute: Email` | Het e-mailadres van de lead. |
 
    * Hieronder ziet u een voorbeeld waarin deze toewijzingen worden gebruikt:
+
      ![ Experience Platform UI het screenshot voorbeeld dat de afbeeldingen van het Doel toont.](../../assets/catalog/crm/salesforce/mappings-leads.png)
 
 Wanneer u klaar bent met het opgeven van de toewijzingen voor uw doelverbinding, selecteert u **[!UICONTROL Next]** .
@@ -272,7 +274,7 @@ Herhaal deze sectie voor elk geactiveerd Experience Platform-segment.
 Volg onderstaande stappen om te controleren of u de bestemming correct hebt ingesteld:
 
 1. Selecteer **[!UICONTROL Destinations]** > **[!UICONTROL Browse]** om naar de lijst met doelen te navigeren.
-   {het schermschot van 0} Experience Platform UI die Browse Doelen toont.](../../assets/catalog/crm/salesforce/browse-destinations.png)![
+   {het schermschot van 0} Experience Platform UI die Browse Doelen toont.![&#128279;](../../assets/catalog/crm/salesforce/browse-destinations.png)
 
 1. Selecteer het doel en bevestig dat de status **[!UICONTROL enabled]** is.
    ![ het schermschot van Experience Platform UI die de Looppas van Doelen Dataflow toont.](../../assets/catalog/crm/salesforce/destination-dataflow-run.png)
@@ -288,17 +290,21 @@ Volg onderstaande stappen om te controleren of u de bestemming correct hebt inge
    **Werkend met Contacten**
 
    * Als u *Contacten* binnen uw segment van Experience Platform hebt geselecteerd, navigeer aan **[!DNL Apps]** > **[!DNL Contacts]** pagina.
+
      ![ het schermschot van Salesforce CRM die de pagina van Contacten met de profielen van het segment tonen.](../../assets/catalog/crm/salesforce/contacts.png)
 
    * Selecteer a *Contact* en controleer als de gebieden worden bijgewerkt. U kunt zien dat elke publieksstatus in [!DNL Salesforce CRM] met de overeenkomstige publieksstatus van Experience Platform werd bijgewerkt, die op de **[!UICONTROL Mapping ID]** waarde wordt gebaseerd tijdens het [ publiek dat ](#schedule-segment-export-example) plant.
+
      ![ het schermschot van Salesforce CRM die de pagina van de Details van het Contact met bijgewerkte publieksstatussen tonen.](../../assets/catalog/crm/salesforce/contact-info.png)
 
    **Werkend met Leads**
 
    * Als u *Leads* binnen uw segment van Experience Platform hebt geselecteerd, dan navigeer aan **[!DNL Apps]** > **[!DNL Leads]** pagina.
+
      ![ het schermschot van Salesforce CRM die de pagina van Leads met de profielen van het segment toont.](../../assets/catalog/crm/salesforce/leads.png)
 
    * Selecteer a *Lood* en controleer als de gebieden worden bijgewerkt. U kunt zien dat elke publieksstatus in [!DNL Salesforce CRM] met de overeenkomstige publieksstatus van Experience Platform werd bijgewerkt, die op de **[!UICONTROL Mapping ID]** waarde wordt gebaseerd tijdens het [ publiek dat ](#schedule-segment-export-example) plant.
+
      ![ het schermschot van CRM van Salesforce die de pagina van Details van het Lood met bijgewerkte publieksstatussen toont.](../../assets/catalog/crm/salesforce/lead-info.png)
 
 ## Gegevensgebruik en -beheer {#data-usage-governance}
@@ -310,7 +316,7 @@ Alle [!DNL Adobe Experience Platform] -doelen zijn compatibel met het beleid voo
 ### Onbekende fouten aangetroffen tijdens het naar de bestemming duwen van gebeurtenissen {#unknown-errors}
 
 * Bij het controleren van een gegevensstroomuitvoering kan het volgende foutbericht optreden: `Unknown errors encountered while pushing events to the destination. Please contact the administrator and try again.`
-  {het schermschot van 0} Experience Platform UI die fout toont.](../../assets/catalog/crm/salesforce/error.png)![
+  {het schermschot van 0} Experience Platform UI die fout toont.![&#128279;](../../assets/catalog/crm/salesforce/error.png)
 
    * Om deze fout te corrigeren, controleert u of de **[!UICONTROL Mapping ID]** die u in de activeringsworkflow hebt opgegeven voor het [!DNL Salesforce CRM] -doel exact overeenkomt met de waarde van het aangepaste veldtype dat u in [!DNL Salesforce] hebt gemaakt. Verwijs naar [ creeer douanegebieden binnen  [!DNL Salesforce]](#prerequisites-custom-field) sectie voor begeleiding.
 

@@ -20,7 +20,7 @@ ht-degree: 4%
 >  
 >Adobe Experience Platform Launch is omgedoopt tot een reeks technologieën voor dataverzameling in Adobe Experience Platform.  Als gevolg hiervan zijn er verschillende terminologiewijzigingen in de productdocumentatie doorgevoerd. Raadpleeg het volgende [ document ](https://experienceleague.adobe.com/docs/experience-platform/tags/term-updates.html) voor een geconsolideerde referentie van de terminologiewijzigingen.
 
-De gebeurtenis die van de Brievenchimp [ ](../../../ui/event-forwarding/overview.md) uitbreiding door:sturen verzendt gebeurtenissen naar de Marketing API van Mailchimp die e-mails voor de marketing van Mailchimp campagnes, reizen, of transacties kan teweegbrengen.
+De gebeurtenis die van de Brievenchimp [&#128279;](../../../ui/event-forwarding/overview.md) uitbreiding door:sturen verzendt gebeurtenissen naar de Marketing API van Mailchimp die e-mails voor de marketing van Mailchimp campagnes, reizen, of transacties kan teweegbrengen.
 
 In dit document wordt beschreven hoe u de extensie instelt en regels configureert met de handeling Gebeurtenis toevoegen.
 
@@ -130,7 +130,7 @@ In de onderstaande tabel vindt u meer details voor elke mogelijke waarde.
 
 >[!IMPORTANT]
 >  
->De **hierboven waarden van de weg van het 0} Voorbeeld {zijn slechts voorbeelden.** De gebiedsnamen en [ wegen ](../../../ui/event-forwarding/overview.md#data-element-path) die in die gegevenselementen van verwijzingen worden voorzien kunnen in uw bezit verschillend zijn, afhankelijk van hoe u genoemd en Web SDK in de stappen hierboven vormde.
+>De **hierboven waarden van de weg van het 0&rbrace; Voorbeeld &lbrace;zijn slechts voorbeelden.** De gebiedsnamen en [ wegen ](../../../ui/event-forwarding/overview.md#data-element-path) die in die gegevenselementen van verwijzingen worden voorzien kunnen in uw bezit verschillend zijn, afhankelijk van hoe u genoemd en Web SDK in de stappen hierboven vormde.
 
 In uw gebeurtenis die bezit door:sturen, kunt u een gegevenselement voor elk van de hierboven geschetste gebieden tot stand brengen. Nadat u een extensie hebt gemaakt, kunt u verwijzen naar de gegevenselementen in de handeling [!UICONTROL Add Event] van deze extensie.
 

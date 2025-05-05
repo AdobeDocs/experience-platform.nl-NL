@@ -22,7 +22,7 @@ Als markator wil ik een publiek van Adobe Experience Platform naar boordidentite
 
 ## Vereisten {#prerequisites}
 
-De [!DNL LiveRamp - Onboarding] verbinding voert dossiers uit gebruikend [ 2} opslag van SFTP van LiveRamp {.](https://docs.liveramp.com/connect/en/upload-a-file-via-liveramp-s-sftp.html)
+De [!DNL LiveRamp - Onboarding] verbinding voert dossiers uit gebruikend [ 2&rbrace; opslag van SFTP van LiveRamp &lbrace;.](https://docs.liveramp.com/connect/en/upload-a-file-via-liveramp-s-sftp.html)
 
 Voordat u gegevens van Experience Platform naar [!DNL LiveRamp - Onboarding] kunt verzenden, hebt u uw [!DNL LiveRamp] -referenties nodig. Neem contact op met uw [!DNL LiveRamp] -vertegenwoordiger om uw referenties te verkrijgen, als u deze nog niet hebt.
 
@@ -38,7 +38,7 @@ In deze sectie wordt beschreven welke soorten publiek u naar dit doel kunt expor
 
 | Oorsprong publiek | Ondersteund | Beschrijving |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | ✓ | Het publiek produceerde door de Dienst van de Segmentatie van Experience Platform [ ](../../../segmentation/home.md). |
+| [!DNL Segmentation Service] | ✓ | Het publiek produceerde door de Dienst van de Segmentatie van Experience Platform [&#128279;](../../../segmentation/home.md). |
 | Aangepaste uploads | ✓ | Het publiek [ ingevoerde ](../../../segmentation/ui/audience-portal.md#import-audience) in Experience Platform van Csv- dossiers. |
 
 {style="table-layout:auto"}
@@ -104,7 +104,7 @@ Als u voor verificatie bij het doel wilt zorgen, vult u de vereiste velden in en
 
 Als u details voor de bestemming wilt configureren, vult u de vereiste en optionele velden hieronder in. Een sterretje naast een veld in de gebruikersinterface geeft aan dat het veld verplicht is.
 
-{het schermschot van 0} Experience Platform UI die tonen hoe te om details voor uw bestemming in te vullen ](../../assets/catalog/advertising/liveramp-onboarding/liveramp-sftp-destination-details.png)![
+{het schermschot van 0} Experience Platform UI die tonen hoe te om details voor uw bestemming in te vullen ![&#128279;](../../assets/catalog/advertising/liveramp-onboarding/liveramp-sftp-destination-details.png)
 
 * **[!UICONTROL Name]**: Een naam waarmee u dit doel in de toekomst herkent.
 * **[!UICONTROL Description]**: Een beschrijving die u zal helpen deze bestemming in de toekomst identificeren.
@@ -135,13 +135,13 @@ Maak in de stap [!UICONTROL Scheduling] een exportschema voor elk publiek met de
 * **[!UICONTROL Frequency]**: [!UICONTROL Daily]
 * **[!UICONTROL Date]**: selecteer de begin- en eindtijd van het exporteren naar wens.
 
-{het schermschot van 0} Experience Platform UI die het publiek toont die stap plannen.](../../assets/catalog/advertising/liveramp-onboarding/liveramp_scheduling_screenshot.png)![
+{het schermschot van 0} Experience Platform UI die het publiek toont die stap plannen.![&#128279;](../../assets/catalog/advertising/liveramp-onboarding/liveramp_scheduling_screenshot.png)
 
 De geëxporteerde bestandsnaam kan momenteel niet door de gebruiker worden geconfigureerd. Alle bestanden die naar de [!DNL LiveRamp - Onboarding] -bestemming worden geëxporteerd, krijgen automatisch een naam op basis van de volgende sjabloon:
 
 `%ORGANIZATION_NAME%_%DESTINATION%_%DESTINATION_INSTANCE_ID%_%DATETIME%`
 
-{het schermschot van 0} Experience Platform UI die het uitgevoerde dossier - naammalplaatje toont.](../../assets/catalog/advertising/liveramp-onboarding/liveramp-file-name.png)![
+{het schermschot van 0} Experience Platform UI die het uitgevoerde dossier - naammalplaatje toont.![&#128279;](../../assets/catalog/advertising/liveramp-onboarding/liveramp-file-name.png)
 
 De naam van een geëxporteerd bestand voor een organisatie met de naam [!DNL Luma] kan er bijvoorbeeld als volgt uitzien:
 
@@ -211,7 +211,7 @@ De profielen in de geëxporteerde bestanden kunnen overeenkomen met een van de v
 * `Expired`: het profiel is niet langer gekwalificeerd voor het publiek, maar is in het verleden wel gekwalificeerd.
 * `""` (lege tekenreeks): Het profiel wordt nooit in aanmerking genomen voor het publiek.
 
-Bijvoorbeeld, een uitgevoerd CSV dossier met één `email` attribuut, twee publiek uit de Dienst van de Segmentatie van Experience Platform [ ](../../../segmentation/home.md) voortkomt, en één [ ingevoerd ](../../../segmentation/ui/audience-portal.md#import-audience) extern publiek, kon als dit kijken:
+Bijvoorbeeld, een uitgevoerd CSV dossier met één `email` attribuut, twee publiek uit de Dienst van de Segmentatie van Experience Platform [&#128279;](../../../segmentation/home.md) voortkomt, en één [ ingevoerd ](../../../segmentation/ui/audience-portal.md#import-audience) extern publiek, kon als dit kijken:
 
 ```csv
 email,ups_aa2e3d98-974b-4f8b-9507-59f65b6442df,ups_45d4e762-6e57-4f2f-a3e0-2d1893bcdd7f,CustomerAudienceUpload_7729e537-4e42-418e-be3b-dce5e47aaa1e

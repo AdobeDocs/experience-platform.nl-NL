@@ -40,7 +40,7 @@ Nadat u een model met beperkte informatie hebt gemaakt en de stap **[!UICONTROL 
 
 ![ de werkruimte van de Klant AI met de beperkte gebieden van de benadrukte resultaten van het de dienstmodel.](../images/user-guide/information-not-displayed-save-and-exit.png)
 
-Wanneer het gebruiken van toegangsbeheer, verlenen de **Klant AI van de Mening** en **AI van de Klant** voorrechten toegang tot verschillende functionaliteiten van Klant AI. De **beheert AI van de Klant** toestemming laat u **** creëren, **update**, **schrapt**, **toelaten**, of **onbruikbaar maken** een model terwijl **Klant AI van de Mening** u het laat lezen of bekijken. **creeer**, **update** en **schrapt** acties worden geregistreerd door controlelogboeken.
+Wanneer het gebruiken van toegangsbeheer, verlenen de **Klant AI van de Mening** en **AI van de Klant** voorrechten toegang tot verschillende functionaliteiten van Klant AI. De **beheert AI van de Klant** toestemming laat u **&#x200B;**&#x200B;creëren, **update**, **schrapt**, **toelaten**, of **onbruikbaar maken** een model terwijl **Klant AI van de Mening** u het laat lezen of bekijken. **creeer**, **update** en **schrapt** acties worden geregistreerd door controlelogboeken.
 
 Zie de documentatie om [ te leren toewijzend toestemmingen voor toegangscontrole ](../../../access-control/home.md) of hoe te [ controlelogboeken gebruiken om toegang en activiteit ](../../../landing/governance-privacy-security/audit-logs/overview.md) te controleren.
 

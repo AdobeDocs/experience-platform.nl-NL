@@ -131,7 +131,7 @@ In de volgende tabel worden de beschikbare machtigingen voor Experience Platform
 | [!DNL Adobe Mix Modeler] | [!UICONTROL View Adobe Mix Modeler Models Configurations] | Alleen-lezen toegang tot modelconfiguraties. |
 | [!DNL Adobe Mix Modeler] | [!UICONTROL Manage Adobe Mix Modeler Models Plans Configurations] | De capaciteit om planconfiguraties te bekijken en te wijzigen. |
 | [!DNL Adobe Mix Modeler] | [!UICONTROL View Adobe Mix Modeler Models Plans Configurations] | Alleen-lezen toegang tot planningsconfiguraties. |
-| [!DNL AI Assistant] | [!UICONTROL Enable AI Assistant] | Mogelijkheid om de [!DNL [AI assistant]](../ai-assistant/access.md) vragen te stellen. |
+| [!DNL AI Assistant] | [!UICONTROL Enable AI Assistant] | Mogelijkheid om de [[!DNL [AI assistant]]](../ai-assistant/access.md) vragen te stellen. |
 | [!DNL AI Assistant] | [!UICONTROL View Operational Insights] | Toegang om reacties op [ operationele inzichten ](../ai-assistant/home.md##operational-insights) vragen te verkrijgen. |
 | [!DNL AI Assistant] | [!UICONTROL Generate Content] | Gebruikers toestaan inhoud te genereren met de [!DNL AI Assistant] . |
 | [!DNL AI Assistant] | [!UICONTROL Manage Brand Kit] | Laat gebruikers toe om merkrichtlijnen tot stand te brengen gebruikend [!DNL AI Assistant]. |

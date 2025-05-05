@@ -15,7 +15,7 @@ In de weergave Extensieversie kunt u snel bepalen welke Adobe Experience Platfor
 
 ## Aan de slag met de weergaven van extensies
 
-Na [ vestiging Verzekering ](../tutorials/implement-assurance.md), in de **3} mening van het Huis {, uitgezocht **[!UICONTROL Extension Versions]****
+Na [ vestiging Verzekering ](../tutorials/implement-assurance.md), in de **3&rbrace; mening van het Huis &lbrace;, uitgezocht &#x200B;** [!UICONTROL Extension Versions]&#x200B;**&#x200B;**
 
 ![ Versies van de Uitbreiding ](./images/versions/versions-extension.png)
 

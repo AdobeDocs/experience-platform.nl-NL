@@ -120,7 +120,7 @@ De UI van de Redacteur van het Schema wordt toegankelijk gemaakt door de volgend
    * **omhoog en onderaan pijlen** kunnen worden gebruikt om de boom over te steken.
    * **Linker en juiste pijlen** kunnen worden gebruikt om knopen uit te breiden en samen te vouwen of zich tussen gealigneerde acties op de schemaboom te bewegen.
 * **gaat binnen (Terugkeer)** activeert individuele knoopdetails in het detailpaneel op het recht.
-* De **zeer belangrijke terugkeer van het 0} Huis {aan de bovenkant van de boom.**
+* De **zeer belangrijke terugkeer van het 0&rbrace; Huis &lbrace;aan de bovenkant van de boom.**
 * De **sleutel van het Eind** navigeert aan de bodem van de boom.
 * De schemastructuur bevat ook ARIA-labels voor schermlezers.
 

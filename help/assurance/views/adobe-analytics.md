@@ -19,7 +19,7 @@ Voer de volgende stappen uit om deze weergave te gebruiken:
 
 1. [ de Verzekering van Adobe Experience Platform van de Opstelling ](../tutorials/implement-assurance.md).
 2. [ creeer en verbind met een zitting van de Verzekering ](../tutorials/using-assurance.md).
-3. In de Verzekering UI van het linkernavigatie **** meningsmenu van het Huis, uitgezochte **Gebeurtenissen van Analytics**. Als u deze optie niet ziet, vormt de uitgezochte **** in de bodem linksonder van het venster, voegt de **Gebeurtenissen van de Analyse** toe, en selecteert **sparen**.
+3. In de Verzekering UI van het linkernavigatie **&#x200B;**&#x200B;meningsmenu van het Huis, uitgezochte **Gebeurtenissen van Analytics**. Als u deze optie niet ziet, vormt de uitgezochte **&#x200B;**&#x200B;in de bodem linksonder van het venster, voegt de **Gebeurtenissen van de Analyse** toe, en selecteert **sparen**.
 
 ## Analyse Edge
 

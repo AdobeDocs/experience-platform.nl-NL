@@ -35,7 +35,7 @@ Scoping parameters are usage limits that relate to the scoping of your required 
 
 ## Guardrails
 
-Zie het ](../guardrails.md) document van de Dienst van de Vraag 1} betreffende standaardgebruiksgrenzen voor de gegevens van de Dienst van de Vraag met betrekking tot uw verlenen van vergunningen.[
+Zie het [&#128279;](../guardrails.md) document van de Dienst van de Vraag 1&rbrace; betreffende standaardgebruiksgrenzen voor de gegevens van de Dienst van de Vraag met betrekking tot uw verlenen van vergunningen.
 
 <!-- Update these descriptions post 23.3 release
 ## Static limits

@@ -31,7 +31,7 @@ Als u met voeten treedt zowel in de configuratie van SDK van het Web als in een 
 
 >[!NOTE]
 >
->Als u een configuratieopheffing wilt ** onbruikbaar maken de dienst van het Experience Cloud, moet u ervoor zorgen dat de dienst eerst ** in de configuratie van de gegevensstroom wordt toegelaten. Zie de documentatie op hoe te [ gegevensstromen ](../../datastreams/configure.md#add-services) voor details vormen over hoe te om de diensten aan een gegevensstroom toe te voegen.
+>Als u een configuratieopheffing wilt **&#x200B; onbruikbaar maken de dienst van het Experience Cloud, moet u ervoor zorgen dat de dienst eerst &#x200B;** in de configuratie van de gegevensstroom wordt toegelaten. Zie de documentatie op hoe te [ gegevensstromen ](../../datastreams/configure.md#add-services) voor details vormen over hoe te om de diensten aan een gegevensstroom toe te voegen.
 
 ## Verstuur gegevensstroom met voeten treedt aan de Edge Network door de de markeringsuitbreiding van SDK van het Web {#tag-extension}
 

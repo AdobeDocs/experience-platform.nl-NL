@@ -44,11 +44,11 @@ De [!DNL SugarCRM Accounts & Contacts] ondersteunt meerdere API&#39;s. Dit betek
 
 >[!TAB  Rekeningen ]
 
-{het schermschot van 0} Experience Platform UI die een voorbeeldschema voor Rekeningen ](../../../../images/tutorials/create/sugarcrm-accounts-contacts/sugarcrm-schema-accounts.png) toont![
+{het schermschot van 0} Experience Platform UI die een voorbeeldschema voor Rekeningen ![&#128279;](../../../../images/tutorials/create/sugarcrm-accounts-contacts/sugarcrm-schema-accounts.png) toont
 
 >[!TAB  Contacten ]
 
-{het schermschot van 0} Experience Platform UI die een voorbeeldschema voor Contacten ](../../../../images/tutorials/create/sugarcrm-accounts-contacts/sugarcrm-schema-contacts.png) toont![
+{het schermschot van 0} Experience Platform UI die een voorbeeldschema voor Contacten ![&#128279;](../../../../images/tutorials/create/sugarcrm-accounts-contacts/sugarcrm-schema-contacts.png) toont
 
 >[!ENDTABS]
 
@@ -89,11 +89,11 @@ Tot slot moet u het objecttype selecteren dat u aan Experience Platform wilt toe
 
 >[!TAB  Rekeningen ]
 
-{het schermschot van 0} Experience Platform UI voor de Rekeningen van SugarCRM &amp; Contacten die configuratie met geselecteerde optie van de Rekening tonen ](../../../../images/tutorials/create/sugarcrm-accounts-contacts/configuration-accounts.png)![
+{het schermschot van 0} Experience Platform UI voor de Rekeningen van SugarCRM &amp; Contacten die configuratie met geselecteerde optie van de Rekening tonen ![&#128279;](../../../../images/tutorials/create/sugarcrm-accounts-contacts/configuration-accounts.png)
 
 >[!TAB  Contacten ]
 
-{het schermschot van 0} Experience Platform UI voor de Rekeningen van SugarCRM &amp; Contacten die configuratie met geselecteerde optie van Contacten tonen ](../../../../images/tutorials/create/sugarcrm-accounts-contacts/configuration-contacts.png)![
+{het schermschot van 0} Experience Platform UI voor de Rekeningen van SugarCRM &amp; Contacten die configuratie met geselecteerde optie van Contacten tonen ![&#128279;](../../../../images/tutorials/create/sugarcrm-accounts-contacts/configuration-contacts.png)
 
 >[!ENDTABS]
 

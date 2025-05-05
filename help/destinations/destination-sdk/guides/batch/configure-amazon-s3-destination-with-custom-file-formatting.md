@@ -13,7 +13,7 @@ ht-degree: 0%
 
 ## Overzicht {#overview}
 
-Deze pagina beschrijft hoe te om Destination SDK te gebruiken om een bestemming van Amazon S3 met douane [ dossier te vormen formatterend opties ](configure-file-formatting-options.md) en een de naamconfiguratie van het douanedossier [ ](../../functionality/destination-configuration/batch-configuration.md#file-name-configuration).
+Deze pagina beschrijft hoe te om Destination SDK te gebruiken om een bestemming van Amazon S3 met douane [ dossier te vormen formatterend opties ](configure-file-formatting-options.md) en een de naamconfiguratie van het douanedossier [&#128279;](../../functionality/destination-configuration/batch-configuration.md#file-name-configuration).
 
 Deze pagina toont alle configuratieopties beschikbaar voor Amazon S3 bestemmingen. U kunt de configuraties bewerken die in de onderstaande stappen worden weergegeven, of u kunt desgewenst bepaalde onderdelen van de configuraties verwijderen.
 

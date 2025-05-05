@@ -49,7 +49,7 @@ De verwachte latentie voor Analytics Data on Experience Platform wordt in de ond
 
 | Analysegegevens | Verwachte vertraging |
 | -------------- | ---------------- |
-| Nieuwe gegevens aan [!DNL Real-Time Customer Profile] (A4T **** toegelaten niet) | &lt; 2 minuten |
+| Nieuwe gegevens aan [!DNL Real-Time Customer Profile] (A4T **&#x200B;**&#x200B;toegelaten niet) | &lt; 2 minuten |
 | Nieuwe gegevens aan [!DNL Real-Time Customer Profile] (A4T **wordt** toegelaten) | tot 30 minuten |
 | Nieuwe gegevens voor Data Lake | &lt; 2,25 uur |
 | Nieuwe gegevens aan Customer Journey Analytics zonder [ stitching ](https://experienceleague.adobe.com/docs/analytics-platform/using/stitching/overview.html?lang=en) | &lt; 3,75 uur |

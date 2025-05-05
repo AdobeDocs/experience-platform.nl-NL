@@ -47,7 +47,7 @@ Bekijk de onderstaande video voor een kort overzicht van hoe u doelgroepen en pr
 
 ## Gebruiksscenario’s {#use-cases}
 
-De verpersoonlijkingsoplossingen van Adobe van het gebruik, zoals Adobe Target, of uw eigen platforms van de verpersoonlijkingspartner (bijvoorbeeld, [!DNL Optimizely], [!DNL Pega]), evenals merkgebonden systemen (bijvoorbeeld, in-huis CMS) om een diepere klantenverpersoonlijkheidservaring via de [ 3} bestemming van de Douane van Personalization {aan te drijven. ](../catalog/personalization/custom-personalization.md) Dit alles terwijl ook Experience Platform Edge Network-mogelijkheden voor gegevensverzameling en -segmentatie worden benut.
+De verpersoonlijkingsoplossingen van Adobe van het gebruik, zoals Adobe Target, of uw eigen platforms van de verpersoonlijkingspartner (bijvoorbeeld, [!DNL Optimizely], [!DNL Pega]), evenals merkgebonden systemen (bijvoorbeeld, in-huis CMS) om een diepere klantenverpersoonlijkheidservaring via de [ 3&rbrace; bestemming van de Douane van Personalization &lbrace;aan te drijven. ](../catalog/personalization/custom-personalization.md) Dit alles terwijl ook Experience Platform Edge Network-mogelijkheden voor gegevensverzameling en -segmentatie worden benut.
 
 De hieronder beschreven gebruiksgevallen omvatten zowel personalisatie van de site als gerichte on-site reclame.
 
@@ -55,7 +55,7 @@ Om deze gebruiksgevallen toe te laten, hebben de klanten een snelle, gestroomlij
 
 ### Zelfde paginagrootte {#same-page}
 
-Een gebruiker bezoekt een pagina van uw website. U kunt de huidige informatie van het paginabezoek (bijvoorbeeld verwijzend URL, browser taal, ingebedde productinfo) gebruiken om de volgende actie of besluit (bijvoorbeeld, verpersoonlijking) te selecteren, gebruikend de ](../catalog/personalization/custom-personalization.md) verbinding van de Aangepaste verpersoonlijking [ voor niet-Adobe platforms (bijvoorbeeld, [!DNL Pega], [!DNL Optimizely] of anderen.)
+Een gebruiker bezoekt een pagina van uw website. U kunt de huidige informatie van het paginabezoek (bijvoorbeeld verwijzend URL, browser taal, ingebedde productinfo) gebruiken om de volgende actie of besluit (bijvoorbeeld, verpersoonlijking) te selecteren, gebruikend de [&#128279;](../catalog/personalization/custom-personalization.md) verbinding van de Aangepaste verpersoonlijking  voor niet-Adobe platforms (bijvoorbeeld, [!DNL Pega], [!DNL Optimizely] of anderen.)
 
 ### Aanpassing van volgende pagina {#next-page}
 

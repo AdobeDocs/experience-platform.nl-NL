@@ -122,7 +122,7 @@ Een succesvolle reactie keert een chronologische lijst van veranderingen terug d
 | `id` | De `$id` van de bron die is gewijzigd. Deze waarde vertegenwoordigt typisch het middel dat in de verzoekweg wordt gespecificeerd, maar kan een afhankelijke middel vertegenwoordigen als dat de bron van de verandering is. |
 | `xdmType` | Het type bron dat is gewijzigd. |
 | `action` | Het type wijziging dat is aangebracht. |
-| `path` | A ](../../landing/api-fundamentals.md#json-pointer) koord dat van de Aanwijzer JSON [ op de weg wijst aan het specifieke gebied dat werd veranderd of toegevoegd. |
+| `path` | A [&#128279;](../../landing/api-fundamentals.md#json-pointer) koord dat van de Aanwijzer JSON  op de weg wijst aan het specifieke gebied dat werd veranderd of toegevoegd. |
 | `value` | De waarde die is toegewezen aan het nieuwe of bijgewerkte veld. |
 
 {style="table-layout:auto"}

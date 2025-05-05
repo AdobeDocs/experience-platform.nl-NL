@@ -15,7 +15,7 @@ ht-degree: 0%
 >
 >Adobe Experience Platform Launch is omgedoopt tot een reeks technologieën voor gegevensverzameling in Adobe Experience Platform. Diverse terminologische wijzigingen zijn als gevolg hiervan in de productdocumentatie doorgevoerd. Gelieve te verwijzen naar het volgende [ document ](../term-updates.md) voor een geconsolideerde verwijzing van de terminologieveranderingen.
 
-Een extensie is een set verpakte code die de functionaliteit uitbreidt die wordt geboden door tags of het doorsturen van gebeurtenissen. Als u een uitbreiding in een bibliotheek installeert, voegt de uitbreiding een reeks unieke gebeurtenissen, voorwaarden, en/of acties toe die in de de regelconfiguraties van die bibliotheek [ ](../ui/managing-resources/rules.md) kunnen worden gebruikt.
+Een extensie is een set verpakte code die de functionaliteit uitbreidt die wordt geboden door tags of het doorsturen van gebeurtenissen. Als u een uitbreiding in een bibliotheek installeert, voegt de uitbreiding een reeks unieke gebeurtenissen, voorwaarden, en/of acties toe die in de de regelconfiguraties van die bibliotheek [&#128279;](../ui/managing-resources/rules.md) kunnen worden gebruikt.
 
 Voor meer details op hoe de uitbreidingen binnen de markeringen werken en gebeurtenis die kaders door:sturen, zie het [ overzicht van uitbreidingen ](../ui/managing-resources/extensions/overview.md).
 

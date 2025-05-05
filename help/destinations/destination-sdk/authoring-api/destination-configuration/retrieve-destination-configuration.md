@@ -50,7 +50,7 @@ Selecteer hieronder elk tabblad om de bijbehorende lading weer te geven.
 
 >[!BEGINTABS]
 
->[!TAB  wint alle bestemmingsconfiguraties ] terug
+>[!TAB wint alle bestemmingsconfiguraties  terug]
 
 +++verzoek
 
@@ -174,7 +174,7 @@ Een succesvol antwoord retourneert HTTP-status 200 met een lijst van doelconfigu
 
 +++
 
->[!TAB  wint een specifieke bestemmingsconfiguratie ] terug
+>[!TAB wint een specifieke bestemmingsconfiguratie  terug]
 
 +++verzoek
 

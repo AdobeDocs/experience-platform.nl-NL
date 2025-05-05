@@ -21,7 +21,7 @@ Gebruik deze bestemming om uw [ rekeningspubliek ](/help/segmentation/types/acco
 
 >[!TIP]
 >
->Voor individueel-niveau (of zaken-aan-consument) gebruiksgevallen, adviseert Adobe dat u [ LinkedIn Gelijke 1} bestemming van het Publiek gebruikt.](/help/destinations/catalog/social/linkedin.md)
+>Voor individueel-niveau (of zaken-aan-consument) gebruiksgevallen, adviseert Adobe dat u [ LinkedIn Gelijke 1&rbrace; bestemming van het Publiek gebruikt.](/help/destinations/catalog/social/linkedin.md)
 
 ![ LinkedIn rekeningsbestemming die in Experience Platform UI wordt getoond.](/help/destinations/assets/catalog/social/linkedin-b2b/linkedin-b2b-destination.png)
 
@@ -31,7 +31,7 @@ In deze sectie wordt beschreven welk type publiek u naar dit doel kunt exportere
 
 | Oorsprong publiek | Ondersteund | Beschrijving |
 ---------|----------|----------|
-| [!DNL Segmentation Service] | ✓ | Het publiek produceerde door de Dienst van de Segmentatie van Experience Platform [ ](../../../segmentation/home.md). |
+| [!DNL Segmentation Service] | ✓ | Het publiek produceerde door de Dienst van de Segmentatie van Experience Platform [&#128279;](../../../segmentation/home.md). |
 | Aangepaste uploads | X | Het publiek [ ingevoerde ](../../../segmentation/ui/overview.md#import-audience) in Experience Platform van Csv- dossiers. |
 
 {style="table-layout:auto"}

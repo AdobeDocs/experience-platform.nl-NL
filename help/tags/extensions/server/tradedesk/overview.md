@@ -93,7 +93,7 @@ Een JSON-object dat meer informatie bevat. U kunt kiezen of u een beperkte set t
 
 ![ de [!DNL Object Request Parameters] sectie die beschikbare gebieden tonen.](../../../images/extensions/server/tradedesk/configure-object-request-params.png)
 
-Verwijs naar de ](https://partner.thetradedesk.com/v3/portal/data/doc/DataConversionEventsApi#properties-items) documentatie van de Gebeurtenis van de Conversies in real time [ voor meer informatie over [!UICONTROL Object Request Parameters] en hun eigenschappen.
+Verwijs naar de [&#128279;](https://partner.thetradedesk.com/v3/portal/data/doc/DataConversionEventsApi#properties-items) documentatie van de Gebeurtenis van de Conversies in real time  voor meer informatie over [!UICONTROL Object Request Parameters] en hun eigenschappen.
 
 **[!UICONTROL Configuration Overrides]**
 

@@ -100,7 +100,7 @@ In het veld **[!UICONTROL Key Identifier]** wordt de URI-id voor de sleutel weer
 
 ![ Microsoft Azure Belangrijkste details van het dashboard met [!DNL Permitted operations] en de benadrukt secties van de exemplaarsleutel URL.](../../../images/governance-privacy-security/customer-managed-keys/copy-key-url.png)
 
-Wanneer u de instructie [!DNL Key vault URI] hebt gekregen, gaat u terug naar de [!UICONTROL Customer Managed Keys configuration] -weergave en voert u een beschrijving in **[!UICONTROL Configuration name]** . Voeg vervolgens de [!DNL Key Identifier] toe die u van de detailpagina Azure Key hebt genomen in de **[!UICONTROL Key vault key identifier]** en selecteer **[!UICONTROL  Save]** .
+Wanneer u de instructie [!DNL Key vault URI] hebt gekregen, gaat u terug naar de [!UICONTROL Customer Managed Keys configuration] -weergave en voert u een beschrijving in **[!UICONTROL Configuration name]** . Voeg vervolgens de [!DNL Key Identifier] toe die u van de detailpagina Azure Key hebt genomen in de **[!UICONTROL Key vault key identifier]** en selecteer **[!UICONTROL &#x200B; Save]** .
 
 ![ de [!UICONTROL Customer Managed Keys configuration] mening met [!UICONTROL Configuration name] en [!UICONTROL Key vault key identifier] benadrukte secties.](../../../images/governance-privacy-security/customer-managed-keys/configuration-name.png)
 

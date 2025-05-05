@@ -69,4 +69,4 @@ Dit kan bijvoorbeeld worden geretourneerd als de browser van de gebruiker Chrome
 
 ## Volgende stappen
 
-* Volg het [ Overzicht van het Proces van de Verzending ](./submit/overview.md) en voorbereidingen om [ ](./submit/upload-and-test.md#validate) te bevestigen en [ ](./submit/upload-and-test.md#integration) uw uitbreiding voor het testen binnen het ecosysteem van de Markering te uploaden.
+* Volg het [ Overzicht van het Proces van de Verzending ](./submit/overview.md) en voorbereidingen om [&#128279;](./submit/upload-and-test.md#validate) te bevestigen en [&#128279;](./submit/upload-and-test.md#integration) uw uitbreiding voor het testen binnen het ecosysteem van de Markering te uploaden.

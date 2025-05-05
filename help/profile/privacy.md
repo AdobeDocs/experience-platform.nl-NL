@@ -26,7 +26,7 @@ In dit document worden de belangrijkste concepten besproken die betrekking hebbe
 
 >[!IMPORTANT]
 >
->Het privacyverzoek in deze gids **** behandelt geen B2B niet-persoonentiteiten.
+>Het privacyverzoek in deze gids **&#x200B;**&#x200B;behandelt geen B2B niet-persoonentiteiten.
 
 ## Aan de slag
 

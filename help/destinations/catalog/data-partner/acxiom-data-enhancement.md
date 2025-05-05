@@ -41,7 +41,7 @@ Het gebruiksgeval wordt uitgevoerd door een combinatie van zowel bestemmings als
 
 U zou beginnen door uw bestaande klantenverslagen voor verrijking te exporteren gebruikend deze bestemmingsschakelaar. De service van Acxiom zoekt naar het bestand, haalt het op, verrijkt het met de gegevens van Acxiom en genereert een bestand.
 
-De klant zou dan de overeenkomstige ](/help/sources/connectors/data-partners/acxiom-data-ingestion.md) bronkaart van de Opname van Gegevens van 0} Acxiom gebruiken {om de gehydrateerde klantenprofielen terug in Adobe Real-Time CDP in te nemen.[
+De klant zou dan de overeenkomstige [&#128279;](/help/sources/connectors/data-partners/acxiom-data-ingestion.md) bronkaart van de Opname van Gegevens van 0&rbrace; Acxiom gebruiken &lbrace;om de gehydrateerde klantenprofielen terug in Adobe Real-Time CDP in te nemen.
 
 ## Vereisten {#prerequisites}
 
@@ -56,7 +56,7 @@ In deze sectie wordt beschreven welk type publiek u naar dit doel kunt exportere
 
 | Oorsprong publiek | Ondersteund | Beschrijving |
 |-----------------------------|-----------|---------------------------------------------------------------------------------------------------------------------|
-| [!DNL Segmentation Service] | ✓ | Het publiek produceerde door de Dienst van de Segmentatie van het Experience Platform [ ](../../../segmentation/home.md). |
+| [!DNL Segmentation Service] | ✓ | Het publiek produceerde door de Dienst van de Segmentatie van het Experience Platform [&#128279;](../../../segmentation/home.md). |
 | Aangepaste uploads | x | Het publiek [ ingevoerde ](../../../segmentation/ui/audience-portal.md#import-audience) in Experience Platform van Csv- dossiers. |
 
 {style="table-layout:auto"}

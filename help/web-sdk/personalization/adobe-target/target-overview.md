@@ -17,7 +17,7 @@ ht-degree: 1%
 >
 >Leer hoe te om uw implementatie van het Doel aan het Web SDK van Experience Platform met [ te migreren Migrate Doel van at.js 2.x aan het Web SDK van Experience Platform ](https://experienceleague.adobe.com/docs/platform-learn/migrate-target-to-websdk/introduction.html) leerprogramma.
 >
->Leer hoe te om Doel voor het eerst met [ uit te voeren Adobe Experience Cloud met het 1} leerprogramma van SDK van het Web {. ](https://experienceleague.adobe.com/docs/platform-learn/implement-web-sdk/overview.html) Voor informatie specifiek voor Doel, zie de tutorial sectie getiteld [ Vastgestelde Doel van de Opstelling met het Web SDK van Experience Platform ](https://experienceleague.adobe.com/docs/platform-learn/implement-web-sdk/applications-setup/setup-target.html).
+>Leer hoe te om Doel voor het eerst met [ uit te voeren Adobe Experience Cloud met het 1&rbrace; leerprogramma van SDK van het Web &lbrace;. ](https://experienceleague.adobe.com/docs/platform-learn/implement-web-sdk/overview.html) Voor informatie specifiek voor Doel, zie de tutorial sectie getiteld [ Vastgestelde Doel van de Opstelling met het Web SDK van Experience Platform ](https://experienceleague.adobe.com/docs/platform-learn/implement-web-sdk/applications-setup/setup-target.html).
 
 
 De volgende functies zijn getest en worden momenteel ondersteund in [!DNL Target] :

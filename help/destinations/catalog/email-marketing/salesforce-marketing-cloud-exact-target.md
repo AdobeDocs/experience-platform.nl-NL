@@ -137,7 +137,7 @@ In deze sectie wordt beschreven welke soorten publiek u naar dit doel kunt expor
 
 | Oorsprong publiek | Ondersteund | Beschrijving |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | ✓ | Het publiek produceerde door de Dienst van de Segmentatie van Experience Platform [ ](../../../segmentation/home.md). |
+| [!DNL Segmentation Service] | ✓ | Het publiek produceerde door de Dienst van de Segmentatie van Experience Platform [&#128279;](../../../segmentation/home.md). |
 | Aangepaste uploads | X | Het publiek [ ingevoerde ](../../../segmentation/ui/audience-portal.md#import-audience) in Experience Platform van Csv- dossiers. |
 
 {style="table-layout:auto"}
@@ -173,14 +173,14 @@ Als u voor verificatie bij het doel wilt zorgen, vult u de vereiste velden hiero
 | **[!UICONTROL Client ID]** | Uw [!DNL Salesforce Marketing Cloud] `Client ID` . |
 | **[!UICONTROL Client Secret]** | Uw [!DNL Salesforce Marketing Cloud] `Client Secret` . |
 
-{het schermschot van 0} Experience Platform UI die tonen hoe te om aan Salesforce Marketing Cloud voor authentiek te verklaren.](../../assets/catalog/email-marketing/salesforce-marketing-cloud-exact-target/authenticate-destination.png)![
+{het schermschot van 0} Experience Platform UI die tonen hoe te om aan Salesforce Marketing Cloud voor authentiek te verklaren.![&#128279;](../../assets/catalog/email-marketing/salesforce-marketing-cloud-exact-target/authenticate-destination.png)
 
 Als de opgegeven gegevens geldig zijn, geeft de gebruikersinterface een **[!UICONTROL Connected]** -status weer met een groen vinkje. Vervolgens kunt u verdergaan met de volgende stap.
 
 ### Doelgegevens invullen {#destination-details}
 
 Als u details voor de bestemming wilt configureren, vult u de vereiste en optionele velden hieronder in. Een sterretje naast een veld in de gebruikersinterface geeft aan dat het veld verplicht is.
-{het schermschot van 0} Experience Platform UI die de bestemmingsdetails toont.](../../assets/catalog/email-marketing/salesforce-marketing-cloud-exact-target/destination-details.png)![
+{het schermschot van 0} Experience Platform UI die de bestemmingsdetails toont.![&#128279;](../../assets/catalog/email-marketing/salesforce-marketing-cloud-exact-target/destination-details.png)
 
 * **[!UICONTROL Name]**: Een naam waarmee u dit doel in de toekomst herkent.
 * **[!UICONTROL Description]**: Een beschrijving die u zal helpen deze bestemming in de toekomst identificeren.
@@ -226,6 +226,7 @@ Voer de onderstaande stappen uit om uw XDM-velden correct toe te wijzen aan de [
      | `xdm: person.name.firstName` | `Attribute: First Name` uit de gewenste [!DNL Salesforce Marketing Cloud] -gegevensextensie. | - |
 
    * Hieronder ziet u een voorbeeld waarin deze toewijzingen worden gebruikt:
+
      ![ Experience Platform UI het screenshot voorbeeld dat de afbeeldingen van het Doel toont.](../../assets/catalog/email-marketing/salesforce-marketing-cloud-exact-target/mappings.png)
 
 Wanneer u klaar bent met het opgeven van de toewijzingen voor uw doelverbinding, selecteert u **[!UICONTROL Next]** .
@@ -243,7 +244,7 @@ Hieronder ziet u een voorbeeldkenmerk van [!DNL Salesforce Marketing Cloud] :
 
 Hieronder ziet u een voorbeeld van de locatie van [!DNL (API) Salesforce Marketing Cloud] **[!UICONTROL Mapping ID]** :
 
-{het screenshot voorbeeld van 0} Experience Platform UI die het publiek van het Programma tonen uitvoer.](../../assets/catalog/email-marketing/salesforce-marketing-cloud-exact-target/schedule-segment-export.png)![
+{het screenshot voorbeeld van 0} Experience Platform UI die het publiek van het Programma tonen uitvoer.![&#128279;](../../assets/catalog/email-marketing/salesforce-marketing-cloud-exact-target/schedule-segment-export.png)
 
 Zoals u ziet, moet [!DNL (API) Salesforce Marketing Cloud] **[!UICONTROL Mapping ID]** exact overeenkomen met de waarde die is opgegeven binnen [!DNL Salesforce Marketing Cloud] **[!UICONTROL FIELD NAME]** .
 
@@ -261,7 +262,7 @@ Een typisch voorbeeld op basis van de bovenstaande afbeelding zou kunnen zijn.
 Volg onderstaande stappen om te controleren of u de bestemming correct hebt ingesteld:
 
 1. Selecteer **[!UICONTROL Destinations]** > **[!UICONTROL Browse]** om naar de lijst met doelen te navigeren.
-   {het schermschot van 0} Experience Platform UI die Browse Doelen toont.](../../assets/catalog/email-marketing/salesforce-marketing-cloud-exact-target/browse-destinations.png)![
+   {het schermschot van 0} Experience Platform UI die Browse Doelen toont.![&#128279;](../../assets/catalog/email-marketing/salesforce-marketing-cloud-exact-target/browse-destinations.png)
 
 1. Selecteer het doel en bevestig dat de status **[!UICONTROL enabled]** is.
    ![ het schermschot van Experience Platform UI die de Looppas van Doelen Dataflow toont.](../../assets/catalog/email-marketing/salesforce-marketing-cloud-exact-target/destination-dataflow-run.png)
@@ -276,7 +277,7 @@ Volg onderstaande stappen om te controleren of u de bestemming correct hebt inge
    ![ Salesforce Marketing Cloud UI het schermschot die de pagina van Contacten met profielen toont die in het segment worden gebruikt.](../../assets/catalog/email-marketing/salesforce-marketing-cloud-exact-target/contacts.png)
 
 1. Als u wilt controleren of er profielen zijn bijgewerkt, navigeert u naar de pagina **[!UICONTROL Email]** en controleert u of de kenmerkwaarden voor het profiel van de doelgroep zijn bijgewerkt. Als succesvol, kunt u zien dat elke publieksstatus in [!DNL Salesforce Marketing Cloud] met de overeenkomstige publieksstatus van Experience Platform werd bijgewerkt, die op de **[!UICONTROL Mapping ID]** waarde wordt gebaseerd die in het [ publiek wordt verstrekt die ](#schedule-segment-export-example) stap plant.
-   {het schermschot van 0} Salesforce Marketing Cloud UI die de geselecteerde E-mailpagina van Contacten met bijgewerkte publieksstatussen toont.](../../assets/catalog/email-marketing/salesforce-marketing-cloud-exact-target/contact-detail.png)![
+   {het schermschot van 0} Salesforce Marketing Cloud UI die de geselecteerde E-mailpagina van Contacten met bijgewerkte publieksstatussen toont.![&#128279;](../../assets/catalog/email-marketing/salesforce-marketing-cloud-exact-target/contact-detail.png)
 
 ## Gegevensgebruik en -beheer {#data-usage-governance}
 
@@ -287,7 +288,7 @@ Alle [!DNL Adobe Experience Platform] -doelen zijn compatibel met het beleid voo
 ### Onbekende fouten aangetroffen tijdens het verplaatsen van gebeurtenissen naar Salesforce Marketing Cloud {#unknown-errors}
 
 * Bij het controleren van een gegevensstroomuitvoering kan het volgende foutbericht optreden: `Unknown errors encountered while pushing events to the destination. Please contact the administrator and try again.`
-  {het schermschot van 0} Experience Platform UI die fout toont.](../../assets/catalog/email-marketing/salesforce-marketing-cloud-exact-target/error.png)![
+  {het schermschot van 0} Experience Platform UI die fout toont.![&#128279;](../../assets/catalog/email-marketing/salesforce-marketing-cloud-exact-target/error.png)
 
    * Om deze fout te corrigeren, controleert u of de **[!UICONTROL Mapping ID]** die u in de activeringsworkflow hebt opgegeven voor het [!DNL (API) Salesforce Marketing Cloud] -doel exact overeenkomt met de naam van het kenmerk dat u in [!DNL Salesforce Marketing Cloud] hebt gemaakt. Verwijs naar [ creeer attribuut binnen  [!DNL Salesforce Marketing Cloud]](#prerequisites-custom-field) sectie voor begeleiding.
 

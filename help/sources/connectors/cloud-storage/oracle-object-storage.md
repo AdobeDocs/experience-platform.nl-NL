@@ -19,7 +19,7 @@ Opslagbronnen in de cloud kunnen uw gegevens naar Experience Platform brengen zo
 
 ## IP adres lijst van gewenste personen
 
-Een lijst van IP adressen moet aan een lijst van gewenste personen worden toegevoegd alvorens met bronschakelaars te werken. Het niet toevoegen van uw regio-specifieke IP adressen aan uw lijst van gewenste personen kan tot fouten of niet-prestaties leiden wanneer het gebruiken van bronnen. Zie het ](../../ip-address-allow-list.md) document van de lijst van gewenste personen van het 0} IP adres {voor meer informatie.[
+Een lijst van IP adressen moet aan een lijst van gewenste personen worden toegevoegd alvorens met bronschakelaars te werken. Het niet toevoegen van uw regio-specifieke IP adressen aan uw lijst van gewenste personen kan tot fouten of niet-prestaties leiden wanneer het gebruiken van bronnen. Zie het [&#128279;](../../ip-address-allow-list.md) document van de lijst van gewenste personen van het 0&rbrace; IP adres &lbrace;voor meer informatie.
 
 ## Naamgevingsbeperkingen voor bestanden en mappen
 

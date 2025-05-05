@@ -104,7 +104,7 @@ Er zijn verschillende sleutelvelden in de CEE-veldgroep die moeten worden gebrui
 
 ### Verplichte velden
 
-Terwijl het gebruik van alle zeer belangrijke gebieden sterk wordt geadviseerd, zijn er twee gebieden die **** worden vereist opdat [!DNL Intelligent Services] werken:
+Terwijl het gebruik van alle zeer belangrijke gebieden sterk wordt geadviseerd, zijn er twee gebieden die **&#x200B;**&#x200B;worden vereist opdat [!DNL Intelligent Services] werken:
 
 * [Een primair identiteitsveld](#identity)
 * [xdm:tijdstempel](#timestamp)

@@ -149,7 +149,7 @@ U kunt de juiste categorie selecteren in de catalogus aan de linkerkant van het 
 
 Onder de *eCommerce* categorie, selecteer **[!UICONTROL SAP Commerce]**, en selecteer dan **[!UICONTROL Add data]**.
 
-{het schermschot van 0} Experience Platform UI voor catalogus met de kaart van SAP Commerce ](../../../../images/tutorials/create/ecommerce/sap-commerce/catalog-card.png)![
+{het schermschot van 0} Experience Platform UI voor catalogus met de kaart van SAP Commerce ![&#128279;](../../../../images/tutorials/create/ecommerce/sap-commerce/catalog-card.png)
 
 De pagina **[!UICONTROL Connect SAP Commerce account]** wordt weergegeven. Op deze pagina kunt u nieuwe of bestaande referenties gebruiken.
 
@@ -157,13 +157,13 @@ De pagina **[!UICONTROL Connect SAP Commerce account]** wordt weergegeven. Op de
 
 Als u een bestaande account wilt gebruiken, selecteert u de [!DNL SAP Commerce] -account waarmee u een nieuwe gegevensstroom wilt maken en selecteert u vervolgens **[!UICONTROL Next]** om door te gaan.
 
-{het schermschot van 0} Experience Platform UI om de rekening van SAP Commerce met een bestaande rekening te verbinden ](../../../../images/tutorials/create/ecommerce/sap-commerce/existing.png)![
+{het schermschot van 0} Experience Platform UI om de rekening van SAP Commerce met een bestaande rekening te verbinden ![&#128279;](../../../../images/tutorials/create/ecommerce/sap-commerce/existing.png)
 
 ### Nieuwe account {#new-account}
 
 Als u een nieuwe account maakt, selecteert u **[!UICONTROL New account]** en geeft u een naam, een optionele beschrijving en uw referenties op. Als u klaar bent, selecteert u **[!UICONTROL Connect to source]** en laat u de nieuwe verbinding enige tijd tot stand brengen.
 
-{het schermschot van 0} Experience Platform UI om de rekening van SAP Commerce met een nieuwe rekening te verbinden ](../../../../images/tutorials/create/ecommerce/sap-commerce/new.png)![
+{het schermschot van 0} Experience Platform UI om de rekening van SAP Commerce met een nieuwe rekening te verbinden ![&#128279;](../../../../images/tutorials/create/ecommerce/sap-commerce/new.png)
 
 ### Gegevens selecteren {#select-data}
 
@@ -180,13 +180,13 @@ Tot slot moet u het objecttype selecteren dat u aan Experience Platform wilt toe
 
 Als u klantgegevens wilt invoeren, selecteert u **[!UICONTROL Customers]** als objecttype en selecteert u vervolgens **[!UICONTROL Next]** .
 
-{het schermschot van 0} Experience Platform UI voor SAP Commerce die configuratie met geselecteerde optie van Klanten toont ](../../../../images/tutorials/create/ecommerce/sap-commerce/configuration-customers.png)![
+{het schermschot van 0} Experience Platform UI voor SAP Commerce die configuratie met geselecteerde optie van Klanten toont ![&#128279;](../../../../images/tutorials/create/ecommerce/sap-commerce/configuration-customers.png)
 
 >[!TAB  Contacten ]
 
 Als u contactgegevens wilt invoeren, selecteert u **[!UICONTROL Contacts]** als objecttype en selecteert u vervolgens **[!UICONTROL Next]** .
 
-{het schermschot van 0} Experience Platform UI voor SAP Commerce die configuratie met geselecteerde optie van Contacten toont ](../../../../images/tutorials/create/ecommerce/sap-commerce/configuration-contacts.png)![
+{het schermschot van 0} Experience Platform UI voor SAP Commerce die configuratie met geselecteerde optie van Contacten toont ![&#128279;](../../../../images/tutorials/create/ecommerce/sap-commerce/configuration-contacts.png)
 
 >[!ENDTABS]
 

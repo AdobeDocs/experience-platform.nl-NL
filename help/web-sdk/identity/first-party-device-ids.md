@@ -68,7 +68,7 @@ Ongeacht de instelling die u kiest voor de aanvankelijke vervaldatum van een coo
 Er zijn verschillende cookiemarkeringen die van invloed zijn op de manier waarop cookies in verschillende browsers worden verwerkt:
 
 * [&quot;HTTPOnly&quot;](#http-only)
-* [&quot;Secure`](#secure)
+* [&quot;Secure&grave;](#secure)
 * [` SameSite`](#same-site)
 
 ### `HTTPOnly` {#http-only}
@@ -164,9 +164,9 @@ Als u deze functionaliteit wilt gebruiken, moet u de cookie [!DNL FPID] op het h
 
 >[!IMPORTANT]
 >
->Deze eigenschap vereist dat u ](https://experienceleague.adobe.com/docs/core-services/interface/administration/ec-cookies/cookies-first-party.html?lang=en) toegelaten de Inzameling van Gegevens van de Eerste Partij [ hebt.
+>Deze eigenschap vereist dat u [&#128279;](https://experienceleague.adobe.com/docs/core-services/interface/administration/ec-cookies/cookies-first-party.html?lang=en) toegelaten de Inzameling van Gegevens van de Eerste Partij  hebt.
 
-**Stap 2.**[!UICONTROL First Party ID Cookie]**functionaliteit voor uw datastream inschakelen**
+**Stap 2.**&#x200B;[!UICONTROL First Party ID Cookie]&#x200B;**functionaliteit voor uw datastream inschakelen**
 
 Nadat u uw CNAME hebt gevormd, moet u **[!UICONTROL First Party ID Cookie]** optie voor uw gegevensstroom toelaten. Dit het plaatsen vertelt Edge Network om naar een gespecificeerd koekje te verwijzen wanneer het kijken omhoog identiteitskaart van het eerste-partijapparaat, in plaats van het opzoeken van deze waarde in het [ identiteitskaart ](#identityMap).
 

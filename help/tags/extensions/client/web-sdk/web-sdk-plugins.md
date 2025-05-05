@@ -29,16 +29,16 @@ Deze sectie verstrekt een verwijzing voor de opties beschikbaar wanneer het vorm
 
 Geen configuratie is noodzakelijk om een stop in uw bibliotheek buiten het gebruiken van de volgende inheemse gegevenselementen te initialiseren of toe te voegen die door de Gemeenschappelijke uitbreiding van de Insteekmodules van SDK van het Web worden verstrekt:
 
-* [getAndPersistValue`](#getAndPersistValue)
-* [getGeoCoordinates`](#getGeoCoordinates)
+* [getAndPersistValue&grave;](#getAndPersistValue)
+* [getGeoCoordinates&grave;](#getGeoCoordinates)
 * [` getNewRepeat`](#getNewRepeat)
-* [getPagename`](#getPagename)
-* [getPreviousValue`](#getPreviousValue)
+* [getPagename&grave;](#getPagename)
+* [getPreviousValue&grave;](#getPreviousValue)
 * [` getQueryParam`](#getQueryParam)
-* [getTimeParting`](#getTimeParting)
-* [getTimeSinceLastVisit`](#getTimeSInceLastVisit)
-* [getValOnce`](#getValOnce)
-* [getVisitDuration`](#getVisitDuration)
+* [getTimeParting&grave;](#getTimeParting)
+* [getTimeSinceLastVisit&grave;](#getTimeSInceLastVisit)
+* [getValOnce&grave;](#getValOnce)
+* [getVisitDuration&grave;](#getVisitDuration)
 * [` getVisitNum`](#getVisitNum)
 * [&quot;pFo&quot;](#pFo)
 

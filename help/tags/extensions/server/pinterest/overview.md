@@ -33,7 +33,7 @@ Voor meer informatie over gebruiksgevallen specifiek voor [!DNL Pinterest], verw
 
 U moet een geldige [!DNL Pinterest] [ bedrijfsrekening ](https://help.pinterest.com/en/business/article/get-a-business-account) hebben om deze uitbreiding te gebruiken. Ga naar de [[!DNL Pinterest]  registratiepagina ](https://www.pinterest.com/business/create/) om een rekening te registreren en tot stand te brengen als u niet reeds hebt.
 
-U hebt ook een [!DNL Pinterest] -ontwikkelaarsaccount nodig, die aan uw [!DNL Pinterest] -zakelijke account moet worden gekoppeld. Om uw ontwikkelaarrekening met uw bedrijfsrekening te associëren, verwijs naar de [[!DNL Pinterest ]  ontwikkelaarrekening ](https://developers.pinterest.com/account-setup/).
+U hebt ook een [!DNL Pinterest] -ontwikkelaarsaccount nodig, die aan uw [!DNL Pinterest] -zakelijke account moet worden gekoppeld. Om uw ontwikkelaarrekening met uw bedrijfsrekening te associëren, verwijs naar de [[!DNL Pinterest &#x200B;]  ontwikkelaarrekening ](https://developers.pinterest.com/account-setup/).
 
 ### Verzamel vereiste configuratiedetails {#configuration-details}
 

@@ -22,7 +22,7 @@ Een veld met het opschrift identity mag alleen aan de volgende criteria voldoen:
 - Identificaties worden alleen opgenomen in gegevens uit records- en tijdreeksen
 - Alleen PII-velden moeten als identiteit worden gemarkeerd. Als u een veld met meer generieke gegevens kiest, worden relaties minder nauwkeurig en kunnen er fouten optreden bij de toegang tot verwante identiteiten in de identiteitsgrafiek
 
-Voor instructies op hoe te om de Registratie API van het Schema te gebruiken om een gebied als identiteit te etiketteren, bezoek {de gids van het 0} beschrijvingseindpunt ](../../xdm/api/descriptors.md#create).[
+Voor instructies op hoe te om de Registratie API van het Schema te gebruiken om een gebied als identiteit te etiketteren, bezoek {de gids van het 0} beschrijvingseindpunt [&#128279;](../../xdm/api/descriptors.md#create).
 
 ## Volgende stappen
 

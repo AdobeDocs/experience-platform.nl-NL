@@ -19,13 +19,13 @@ Een publiek van de mensen is een publiek dat gebruikend **klant** profielgegeven
 
 Voor meer gedetailleerde informatie over mensen publiek, gelieve het [ overzicht van het personenpubliek ](./people-audiences.md) te lezen.
 
-## [!BADGE  B2C Edition ] kijkt-als publiek
+## [!BADGE &#x200B; B2C Edition &#x200B;] kijkt-als publiek
 
 Een publiek met een vergelijkbare vormgeving is een publiek dat wordt gecreëerd door een publiek met een hoge waarde te analyseren met een model van &#39;look-alike machine learning&#39;. Met het model dat er op lijkt, kunt u een publiek maken dat overeenkomt met de drempel voor gelijkenis van het geanalyseerde publiek met een hoge waarde.
 
 Voor meer gedetailleerde informatie over blik-gelijkaardig publiek, te lezen gelieve [ blik-gelijkaardig publiek overzicht ](./lookalike-audiences.md).
 
-## [!BADGE  B2B edition ] [!BADGE  B2P het publiek van de Uitgave ] van de Rekening
+## [!BADGE &#x200B; B2B edition &#x200B;] [!BADGE &#x200B; B2P het publiek van de Uitgave &#x200B;] van de Rekening
 
 Een rekeningspubliek is een publiek dat gebruikend **rekening** profielgegevens wordt gecreeerd. Accountprofielgegevens kunnen worden gebruikt om een publiek te maken dat zich richt op personen binnen downstreamaccounts.
 

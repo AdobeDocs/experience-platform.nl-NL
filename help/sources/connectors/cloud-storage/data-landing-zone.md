@@ -307,7 +307,7 @@ Navigeer ten slotte naar de gegenereerde URL om u rechtstreeks aan te melden bij
 >
 >- Als u verbinding wilt maken met de bron, hebt u de toegangsbeheermachtigingen **[!UICONTROL View Sources]** en **[!UICONTROL Manage Sources]** nodig. Voor meer informatie, lees het [ overzicht van de toegangscontrole ](../../../access-control/home.md) of contacteer uw productbeheerder om de vereiste toestemmingen te verkrijgen.
 >
->- Privékoppelingen worden momenteel niet ondersteund wanneer verbinding wordt gemaakt met Experience Platform via [!DNL Data Landing Zone] . De enige gesteunde methodes voor toegang zijn de hier vermelde methodes [ ](#manage-the-contents-of-your-data-landing-zone).
+>- Privékoppelingen worden momenteel niet ondersteund wanneer verbinding wordt gemaakt met Experience Platform via [!DNL Data Landing Zone] . De enige gesteunde methodes voor toegang zijn de hier vermelde methodes [&#128279;](#manage-the-contents-of-your-data-landing-zone).
 
 In de onderstaande documentatie vindt u informatie over het overbrengen van gegevens van uw [!DNL Data Landing Zone] -container naar Adobe Experience Platform met behulp van API&#39;s of de gebruikersinterface.
 

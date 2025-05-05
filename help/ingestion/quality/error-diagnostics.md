@@ -284,7 +284,7 @@ Als de partij één of meerdere fouten heeft en toegelaten foutendiagnostiek hee
 >
 >Als de foutdiagnostiek niet beschikbaar is, wordt in plaats daarvan het volgende foutbericht weergegeven:
 >
-```json
+>```json
 >{
 >       "errors": [{
 >               "code": "INGEST-1211-400",

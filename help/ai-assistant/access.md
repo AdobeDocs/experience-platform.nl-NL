@@ -28,7 +28,7 @@ Als u geen van deze twee stappen hebt voltooid die aan de voorwaarde voldoen, wo
 
 >[!BEGINTABS]
 
->[!TAB  Uw organisatie kan geen Medewerker van AI ] gebruiken
+>[!TAB Uw organisatie kan geen Medewerker van AI  gebruiken]
 
 Het volgende bericht wordt weergegeven als u een organisatie gebruikt die wettelijk niet gemachtigd is om AI Assistant te gebruiken. In dit scenario moet u contact opnemen met uw Adobe-accountteam om de toegang te regelen.
 

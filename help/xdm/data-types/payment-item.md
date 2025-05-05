@@ -15,7 +15,7 @@ ht-degree: 0%
 
 [!UICONTROL Payment Item] is een standaard XDM-gegevenstype (Experience Data Model) waarmee een betaling wordt beschreven voor een bestelling die het type betaling, het bedrag en de bijbehorende valuta definieert.
 
-{het beeld van het 0} betalingspunt ](../images/data-types/payment-item.PNG) {width= 400}![
+{het beeld van het 0} betalingspunt ![&#128279;](../images/data-types/payment-item.PNG) {width= 400}
 
 | Eigenschap | Gegevenstype | Beschrijving |
 | --- | --- | --- |

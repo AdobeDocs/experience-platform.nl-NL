@@ -25,7 +25,7 @@ U kunt vraagmalplaatjes door twee methodes tot stand brengen, of door een POST- 
 
 ### Gebruik de Redacteur van de Vraag om een vraag te ontwerpen en als malplaatje op te slaan
 
-Zie de documentatie voor instructies op hoe te om de Redacteur van de Vraag te gebruiken [ ](./user-guide.md#query-authoring) schrijven en [ sparen vragen ](./user-guide.md#saving-queries). Nadat u een naam hebt gegeven aan de query en deze hebt opgeslagen, kunt u deze opnieuw gebruiken als een querysjabloon op het tabblad [!UICONTROL Templates] .
+Zie de documentatie voor instructies op hoe te om de Redacteur van de Vraag te gebruiken [&#128279;](./user-guide.md#query-authoring) schrijven en [ sparen vragen ](./user-guide.md#saving-queries). Nadat u een naam hebt gegeven aan de query en deze hebt opgeslagen, kunt u deze opnieuw gebruiken als een querysjabloon op het tabblad [!UICONTROL Templates] .
 
 >[!TIP]
 >

@@ -254,7 +254,7 @@ PUT /query-templates/{TEMPLATE_ID}
 
 >[!NOTE]
 >
->Het verzoek van de PUT vereist zowel sql als naamgebied om worden gevuld, en zal **** de huidige inhoud van dat vraagmalplaatje beschrijven.
+>Het verzoek van de PUT vereist zowel sql als naamgebied om worden gevuld, en zal **&#x200B;**&#x200B;de huidige inhoud van dat vraagmalplaatje beschrijven.
 
 ```shell
 curl -X PUT https://platform.adobe.io/data/foundation/query/query-templates/0094d000-9062-4e6a-8fdb-05606805f08f

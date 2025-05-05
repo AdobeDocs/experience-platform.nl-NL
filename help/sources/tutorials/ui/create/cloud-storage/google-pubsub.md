@@ -51,7 +51,7 @@ U moet waarden opgeven voor de verbindingseigenschappen die hieronder worden bes
 
 >[!ENDTABS]
 
-Voor meer informatie over deze waarden, zie het volgende ](https://cloud.google.com/pubsub/docs/authentication) document PubSub authentificatie [. Als u de dienst op rekening-gebaseerde authentificatie gebruikt, zie de volgende [ gids PubSub ](https://cloud.google.com/docs/authentication/production#create_service_account) voor stappen op hoe te om uw geloofsbrieven te produceren.
+Voor meer informatie over deze waarden, zie het volgende [&#128279;](https://cloud.google.com/pubsub/docs/authentication) document PubSub authentificatie . Als u de dienst op rekening-gebaseerde authentificatie gebruikt, zie de volgende [ gids PubSub ](https://cloud.google.com/docs/authentication/production#create_service_account) voor stappen op hoe te om uw geloofsbrieven te produceren.
 
 >[!TIP]
 >

@@ -64,11 +64,11 @@ Gebruikers kunnen kenmerken van hun XDM-bronprofiel toewijzen aan aangepaste ken
 
 Gebruikers moeten de naam van het aangepaste doelkenmerk handmatig invoeren wanneer zij de doelveldtoewijzing selecteren.
 
-{het schermschot van 0} Experience Platform UI die aangepaste attributenselectie toont.](../../assets/functionality/destination-configuration/mapping-streaming-select-custom-attribute.png)![
+{het schermschot van 0} Experience Platform UI die aangepaste attributenselectie toont.![&#128279;](../../assets/functionality/destination-configuration/mapping-streaming-select-custom-attribute.png)
 
 De resulterende ervaring met de gebruikersinterface wordt weergegeven in de onderstaande afbeelding.
 
-{het schermschot van 0} Experience Platform UI die xdm- kenmerkafbeelding aan douanekenmerken voor het stromen bestemmingen toont.](../../assets/functionality/destination-configuration/mapping-streaming-xdm-custom.png)![
+{het schermschot van 0} Experience Platform UI die xdm- kenmerkafbeelding aan douanekenmerken voor het stromen bestemmingen toont.![&#128279;](../../assets/functionality/destination-configuration/mapping-streaming-xdm-custom.png)
 
 ### Identiteitsnaamruimten toewijzen aan naamruimten van partners {#streaming-identity-to-identity}
 
@@ -76,7 +76,7 @@ Gebruikers kunnen aangepaste of algemene naamruimten van Experience Platform toe
 
 De resulterende ervaring met de gebruikersinterface wordt weergegeven in de onderstaande afbeelding.
 
-{het schermschot van 0} Experience Platform UI die identiteitstoewijzing aan identiteit voor het stromen bestemmingen toont.](../../assets/functionality/destination-configuration/mapping-streaming-identity-identity.png)![
+{het schermschot van 0} Experience Platform UI die identiteitstoewijzing aan identiteit voor het stromen bestemmingen toont.![&#128279;](../../assets/functionality/destination-configuration/mapping-streaming-identity-identity.png)
 
 ## Ondersteunde toewijzingen voor op bestanden gebaseerde doelen {#batch-mappings}
 
@@ -122,7 +122,7 @@ De resulterende ervaring met de gebruikersinterface wordt weergegeven in de onde
 
 Gebruikers kunnen de standaardnaam op hun plaats laten of een aangepaste kenmerknaam invoeren in het selectiescherm van het doelveld.
 
-{het schermschot van 0} Experience Platform UI die de selectie van het douanedoelattribuut voor op dossier-gebaseerde bestemmingen toont.](../../assets/functionality/destination-configuration/mapping-batch-custom-attribute.png)![
+{het schermschot van 0} Experience Platform UI die de selectie van het douanedoelattribuut voor op dossier-gebaseerde bestemmingen toont.![&#128279;](../../assets/functionality/destination-configuration/mapping-batch-custom-attribute.png)
 
 ### Naamruimten toewijzen aan aangepaste kenmerken {#batch-identity-to-custom}
 
@@ -130,11 +130,11 @@ Gebruikers kunnen aangepaste of algemene naamruimten van Experience Platform toe
 
 Wanneer u een naamruimte van een identiteit als een bronveld selecteert, wordt het doelveld automatisch gevuld met een equivalente naamruimte. Als u het doelveld wilt vervangen door een aangepast kenmerk, moeten gebruikers een aangepaste kenmerknaam invoeren in het selectiescherm van het doelveld.
 
-{het schermschot van 0} Experience Platform UI die de selectie van het douanedoelattribuut voor op dossier-gebaseerde bestemmingen toont.](../../assets/functionality/destination-configuration/mapping-batch-custom-attribute.png)![
+{het schermschot van 0} Experience Platform UI die de selectie van het douanedoelattribuut voor op dossier-gebaseerde bestemmingen toont.![&#128279;](../../assets/functionality/destination-configuration/mapping-batch-custom-attribute.png)
 
 De resulterende ervaring met de gebruikersinterface wordt weergegeven in de onderstaande afbeelding.
 
-{het schermschot van 0} Experience Platform UI die identiteitstoewijzing aan douanekenmerken voor op dossier-gebaseerde bestemmingen toont.](../../assets/functionality/destination-configuration/mapping-batch-identity-custom.png)![
+{het schermschot van 0} Experience Platform UI die identiteitstoewijzing aan douanekenmerken voor op dossier-gebaseerde bestemmingen toont.![&#128279;](../../assets/functionality/destination-configuration/mapping-batch-identity-custom.png)
 
 ### Identiteitsnaamruimten toewijzen aan naamruimten van partners {#batch-identity-to-identity}
 

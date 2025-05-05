@@ -145,7 +145,7 @@ There are inline features for chat including doc, expalin, fix and test
 
 U kunt een meer traditionele praatjeinterface met een specifieke praatjezijbalk gebruiken om ideeën en strategie te vormen, codeerkwesties op te lossen, en implementatiedetails te bespreken. Selecteer het praatjepictogram (![ het pictogram van het Praatje van de Kopiër.](../images/clients/github-copilot/chat-icon.png) ) in de zijbalk van [!DNL VS Code] om een speciaal chatvenster te openen.
 
-![ sidebar van het 1} praatje met het benadrukte praatjepictogram.](../images/clients/github-copilot/chat-sidebar.png)[!DNL GitHub Copilot]
+![ sidebar van het 1&rbrace; praatje met het benadrukte praatjepictogram.](../images/clients/github-copilot/chat-sidebar.png) [!DNL GitHub Copilot]
 
 U kunt tot praatjegeschiedenis ook toegang hebben door het geschiedenispictogram te selecteren (![ het geschiedenispictogram.](../images/clients/github-copilot/history-icon.png) ) boven aan het venster Chat.
 

@@ -39,7 +39,7 @@ In het volgende voorbeeld wordt een hypothetische online e-commercesite gebruikt
 
   ![ beeld van de website die van de steekproef een homepage toont.](assets/web-spa-home.png)
 
-* Aangezien de klant meer in de producten geinteresseerd wordt die de zaken verkopen, besluiten zij om de **1} verbinding van Mannen {te klikken.** Gelijkaardig aan de homepage, kan de volledige **Mannen** pagina als mening worden bepaald. Deze mening zou &quot;mannen&quot;kunnen worden genoemd.
+* Aangezien de klant meer in de producten geinteresseerd wordt die de zaken verkopen, besluiten zij om de **1&rbrace; verbinding van Mannen &lbrace;te klikken.** Gelijkaardig aan de homepage, kan de volledige **Mannen** pagina als mening worden bepaald. Deze mening zou &quot;mannen&quot;kunnen worden genoemd.
 
   ![ beeld van de website die van de steekproef een specifieke mening toont.](assets/web-spa-men.png)
 

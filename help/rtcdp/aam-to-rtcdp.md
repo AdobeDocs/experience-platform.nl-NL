@@ -33,11 +33,11 @@ Adobe raadt u aan de segmenten als volgt te categoriseren:
 
 ## 2. Welke segmenten zijn van essentieel belang om door te sturen via [!UICONTROL Audience Manager Source Connector]?
 
-Gebaseerd op hun evaluatiecriteria, zouden de segmenten die geen gegevensgebiedsdelen, geen bestemming of activeringsuitdagingen hebben, en hun segmentatieregels door de gegevensinzameling van Real-Time CDP zoals ](/help/web-sdk/faq.md) kunnen worden gecreeerd van het Web SDK van 0} Adobe Experience Platform op een recentere datum door de Schakelaar van Source van de Audience Manager zouden moeten worden verzonden.[
+Gebaseerd op hun evaluatiecriteria, zouden de segmenten die geen gegevensgebiedsdelen, geen bestemming of activeringsuitdagingen hebben, en hun segmentatieregels door de gegevensinzameling van Real-Time CDP zoals [&#128279;](/help/web-sdk/faq.md) kunnen worden gecreeerd van het Web SDK van 0&rbrace; Adobe Experience Platform op een recentere datum door de Schakelaar van Source van de Audience Manager zouden moeten worden verzonden.
 
 ## 3. Gebruikt u het doel [!UICONTROL Experience Cloud Audiences] om gegevens terug te brengen naar de Audience Manager?
 
-De segmenten die regels hebben die in Real-Time CDP kunnen worden gesteund maar activeringsgebiedsdelen aan Audience Manager kunnen worden verzonden naar Audience Manager via de ](/help/destinations/catalog/adobe/experience-cloud-audiences.md) bestemmingskaart van het publiek 0} van het Experience Cloud {.[
+De segmenten die regels hebben die in Real-Time CDP kunnen worden gesteund maar activeringsgebiedsdelen aan Audience Manager kunnen worden verzonden naar Audience Manager via de [&#128279;](/help/destinations/catalog/adobe/experience-cloud-audiences.md) bestemmingskaart van het publiek 0&rbrace; van het Experience Cloud &lbrace;.
 
 ## 4. Welke bestemmingen hebt u vandaag in Audience Manager die u kunt beginnen naar Real-Time CDP te verhuizen?
 

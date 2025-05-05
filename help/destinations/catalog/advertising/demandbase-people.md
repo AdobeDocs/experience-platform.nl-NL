@@ -15,7 +15,7 @@ Activeer profielen voor uw Demandbase-campagnes voor doelgroepen, personalisatie
 
 >[!IMPORTANT]
 >
->Voor B2B gebruiksgevallen waar u rekeningspubliek ](../../ui/activate-account-audiences.md) moet [ activeren, gebruik in plaats daarvan de [ Demandbase ](demandbase.md) bestemmingsschakelaar.
+>Voor B2B gebruiksgevallen waar u rekeningspubliek [&#128279;](../../ui/activate-account-audiences.md) moet  activeren, gebruik in plaats daarvan de [ Demandbase ](demandbase.md) bestemmingsschakelaar.
 
 ## Gebruiksscenario {#use-case}
 
@@ -41,7 +41,7 @@ In deze sectie wordt beschreven welk type publiek u naar dit doel kunt exportere
 
 | Oorsprong publiek | Ondersteund | Beschrijving |
 ---------|----------|----------|
-| [!DNL Segmentation Service] | ✓ | Het publiek produceerde door de Dienst van de Segmentatie van Experience Platform [ ](../../../segmentation/home.md). |
+| [!DNL Segmentation Service] | ✓ | Het publiek produceerde door de Dienst van de Segmentatie van Experience Platform [&#128279;](../../../segmentation/home.md). |
 | Aangepaste uploads | X | Het publiek [ ingevoerde ](../../../segmentation/ui/overview.md#import-audience) in Experience Platform van Csv- dossiers. |
 
 {style="table-layout:auto"}

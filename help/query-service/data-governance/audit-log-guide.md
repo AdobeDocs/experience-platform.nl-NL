@@ -82,7 +82,7 @@ Welke filters beschikbaar zijn, is afhankelijk van de categorie die u in de verv
 | Categorie | Zie de [[!DNL Query Service]  sectie van het controlelogboek ](#audit-log-categories) voor een volledige lijst van beschikbare categorieën. |
 | Actie | Wanneer het verwijzen naar [!DNL Query Service] controlecategorieën, is de update a **wijziging aan de bestaande vorm**, schrapt is de **verwijdering van het programma of het malplaatje**, creeer **creeert een nieuw programma of malplaatje**, en voert is **in werking stellend een vraag** uit. |
 | Gebruiker | Voer de volledige gebruikersnaam in (bijvoorbeeld johndoe@acme.com) om te filteren op gebruiker. |
-| Status | De [!UICONTROL Allow], [!UICONTROL Success], en [!UICONTROL Failure] opties filtreren de logboeken die op de &quot;Status&quot;of &quot;Status van de Gebeurtenis&quot;worden gebaseerd terwijl de [!UICONTROL Deny] optie **** logboeken zal filtreren. |
+| Status | De [!UICONTROL Allow], [!UICONTROL Success], en [!UICONTROL Failure] opties filtreren de logboeken die op de &quot;Status&quot;of &quot;Status van de Gebeurtenis&quot;worden gebaseerd terwijl de [!UICONTROL Deny] optie **&#x200B;**&#x200B;logboeken zal filtreren. |
 | Datum | Selecteer een begindatum en/of een einddatum om een datumbereik te definiëren waarop de resultaten moeten worden gefilterd. |
 
 ## Volgende stappen

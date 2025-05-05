@@ -2,7 +2,7 @@
 keywords: Experience Platform;thuis;populaire onderwerpen;gegevens prep;api gids;steekproefgegevens;
 solution: Experience Platform
 title: API-eindpunt voor voorbeeldgegevens
-description: U kunt het `-/steekproeven' eindpunt in Adobe Experience Platform API gebruiken om kaartsteekproefgegevens programmatically terug te winnen, tot stand te brengen bij te werken en te bevestigen.
+description: U kunt het &grave;-/steekproeven' eindpunt in Adobe Experience Platform API gebruiken om kaartsteekproefgegevens programmatically terug te winnen, tot stand te brengen bij te werken en te bevestigen.
 source-git-commit: 81f48de908b274d836f551bec5693de13c5edaf1
 workflow-type: tm+mt
 source-wordcount: '405'

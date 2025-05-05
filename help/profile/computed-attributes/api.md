@@ -28,7 +28,7 @@ Alvorens verder te gaan, te herzien gelieve [ Profiel API die begonnen gids ](..
 Raadpleeg ook de documentatie bij de volgende service:
 
 - [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md): Het gestandaardiseerde framework waarmee [!DNL Experience Platform] gegevens voor de klantervaring indeelt.
-   - {de Registratie van 0} Schema die begonnen gids ](../../xdm/api/getting-started.md#know-your-tenant_id) wordt: De informatie over uw `{TENANT_ID}`, die in reacties door deze gids verschijnt, wordt verstrekt.[
+   - {de Registratie van 0} Schema die begonnen gids [&#128279;](../../xdm/api/getting-started.md#know-your-tenant_id) wordt: De informatie over uw `{TENANT_ID}`, die in reacties door deze gids verschijnt, wordt verstrekt.
 
 ## Een lijst met berekende kenmerken ophalen {#list}
 

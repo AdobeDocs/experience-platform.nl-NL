@@ -85,7 +85,7 @@ Kies in **[!UICONTROL Destinations]** > **[!UICONTROL Catalog]** Zoeken naar [!D
 ### Verifiëren voor bestemming {#authenticate}
 
 Selecteer **[!UICONTROL Connect to destination]** als u wilt verifiëren bij het doel.
-{het schermschot van 0} Experience Platform UI die toont hoe te voor authentiek te verklaren.](../../assets/catalog/mobile-engagement/line/authenticate-destination.png)![
+{het schermschot van 0} Experience Platform UI die toont hoe te voor authentiek te verklaren.![&#128279;](../../assets/catalog/mobile-engagement/line/authenticate-destination.png)
 
 Vul de vereiste velden hieronder in.
 * **[!UICONTROL Bearer token]**: Uw [!DNL LINE Channel access token (long-lived)] vanuit de [!DNL LINE] ontwikkelaarsconsole. Verwijs naar [ verzamelen geloofsbrieven ](#gather-credentials) sectie.
@@ -95,7 +95,7 @@ Als de opgegeven gegevens geldig zijn, geeft de gebruikersinterface de status **
 ### Doelgegevens invullen {#destination-details}
 
 Als u details voor de bestemming wilt configureren, vult u de vereiste en optionele velden hieronder in. Een sterretje naast een veld in de gebruikersinterface geeft aan dat het veld verplicht is.
-{het schermschot van 0} Experience Platform UI die de bestemmingsdetails toont.](../../assets/catalog/mobile-engagement/line/destination-details.png)![
+{het schermschot van 0} Experience Platform UI die de bestemmingsdetails toont.![&#128279;](../../assets/catalog/mobile-engagement/line/destination-details.png)
 
 * **[!UICONTROL Name]**: Een naam waarmee u dit doel in de toekomst herkent.
 * **[!UICONTROL Description]**: Een beschrijving die u zal helpen deze bestemming in de toekomst identificeren.
@@ -145,7 +145,7 @@ Volg onderstaande stappen om te controleren of u de bestemming correct hebt inge
 
 1. Het bijgewerkte volume komt overeen met de telling binnen het segment.
 
-1. De *kolom van het Type* {zal **[!UICONTROL UserID]** vermelden als de identiteiten u uitvoerde van type *UserID* zijn. Op dezelfde manier zal de *kolom van het Type* **[!UICONTROL Mobile ad Id]** vermelden als de identiteiten u uitvoerde van type *IDFA* zijn.
+1. De *kolom van het Type* &lbrace;zal **[!UICONTROL UserID]** vermelden als de identiteiten u uitvoerde van type *UserID* zijn. Op dezelfde manier zal de *kolom van het Type* **[!UICONTROL Mobile ad Id]** vermelden als de identiteiten u uitvoerde van type *IDFA* zijn.
 
 Hieronder ziet u een voorbeeldinstelling in [!DNL LINE] :
 ![ het schermschot van de LIJN UI die het publieksvolume toont.](../../assets/catalog/mobile-engagement/line/audience-volume.png)

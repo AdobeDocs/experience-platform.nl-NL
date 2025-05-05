@@ -198,7 +198,7 @@ Deze veldgroep bevat verschillende informatie over acties die gebruikers op uw w
 
 +++Details eindgebruiker-id (veldgroep)
 
-De ](/help/xdm/field-groups/event/enduserids.md) het gebiedsgroep van de Details van de Gebruiker van 0} Eind {omvat diverse informatie over uw gebruikers, zoals of zij op uw plaats wanneer het bezoeken voor authentiek worden verklaard, en informatie over hun identiteit.[
+De [&#128279;](/help/xdm/field-groups/event/enduserids.md) het gebiedsgroep van de Details van de Gebruiker van 0&rbrace; Eind &lbrace;omvat diverse informatie over uw gebruikers, zoals of zij op uw plaats wanneer het bezoeken voor authentiek worden verklaard, en informatie over hun identiteit.
 
 +++
 

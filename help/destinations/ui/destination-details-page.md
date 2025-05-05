@@ -82,7 +82,7 @@ Het tabblad [!UICONTROL Dataflow runs] bevat metrische gegevens over uw gegevens
 
 >[!NOTE]
 >
->* Doelen die functionaliteit controleren wordt momenteel gesteund voor alle bestemmingen in Experience Platform *behalve* de [ Adobe Target ](/help/destinations/catalog/personalization/adobe-target-connection.md), [ Verpersoonlijking van de Douane ](/help/destinations/catalog/personalization/custom-personalization.md) en [ 7} bestemmingen van het publiek van Experience Cloud.](/help/destinations/catalog/adobe/experience-cloud-audiences.md)
+>* Doelen die functionaliteit controleren wordt momenteel gesteund voor alle bestemmingen in Experience Platform *behalve* de [ Adobe Target ](/help/destinations/catalog/personalization/adobe-target-connection.md), [ Verpersoonlijking van de Douane ](/help/destinations/catalog/personalization/custom-personalization.md) en [ 7&rbrace; bestemmingen van het publiek van Experience Cloud.](/help/destinations/catalog/adobe/experience-cloud-audiences.md)
 >* Voor de [ Kinesis van Amazon ](/help/destinations/catalog/cloud-storage/amazon-kinesis.md), [ Azure Gebeurtenishubs ](/help/destinations/catalog/cloud-storage/azure-event-hubs.md), en [ HTTP API ](/help/destinations/catalog/streaming/http-destination.md) bestemmingen, worden de metriek met betrekking tot identiteiten uitgesloten, ontbroken, en geactiveerd geschat. Hogere volumes activeringsgegevens leiden tot een hogere nauwkeurigheid van de meetwaarden.
 
 ![ Dataflow looppas mening ](../assets/ui/details-page/dataflow-runs.png)

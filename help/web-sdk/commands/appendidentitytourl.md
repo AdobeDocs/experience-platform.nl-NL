@@ -104,4 +104,4 @@ document.addEventListener("click", event => {
 
 ## Object Response
 
-Als u besluit om reacties ](command-responses.md) met dit bevel [ te behandelen, bevat het reactievoorwerp **`url`**, nieuwe URL met identiteitsinformatie die als parameter van het vraagkoord wordt toegevoegd.
+Als u besluit om reacties [&#128279;](command-responses.md) met dit bevel  te behandelen, bevat het reactievoorwerp **`url`**, nieuwe URL met identiteitsinformatie die als parameter van het vraagkoord wordt toegevoegd.

@@ -21,7 +21,7 @@ ht-degree: 0%
 >
 >De onderstaande velden worden niet rechtstreeks gebruikt om aanvragen te maken. In plaats daarvan wordt de verzameling van velden die naar Adobe Experience Platform of Adobe Analytics worden verzonden, samengesteld op basis van uw aanvraaggegevens en worden metrische gegevens vervolgens opgenomen of verwerkt door de serverinfrastructuur. Hoewel Experience Platform verschillende typen gebruikersgebeurtenissen verzamelt, richten de geretourneerde rapporten zich op specifieke gebeurtenissen, zoals `media.sessionStart` , `media.adStart` en `media.sessionComplete` . Dit betekent dat hoewel u 12 types van gebeurtenissen tijdens inzameling overbrengt, uw rapporten slechts onderverdelingen zullen voorstellen die op de vijf hieronder vermelde gebeurtenissen worden gebaseerd.
 
-++ + selecteren om een diagram van het gegevenstype [!UICONTROL Media Reporting Details] weer te geven.
++++ selecteren om een diagram van het gegevenstype [!UICONTROL Media Reporting Details] weer te geven.
 ![ een diagram van het [!UICONTROL Media Reporting Details] gegevenstype.](../images/data-types/media-reporting-details.png)
 +++
 

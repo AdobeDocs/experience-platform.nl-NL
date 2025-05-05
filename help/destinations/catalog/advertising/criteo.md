@@ -16,7 +16,7 @@ ht-degree: 10%
 
 >[!IMPORTANT]
 >
->Deze bestemmingsschakelaar en documentatiepagina worden gecreeerd en door Criteo gehandhaafd. Voor om het even welke onderzoeken of updateverzoeken, gelieve direct contactCiteo [ ](mailto:criteoTechnicalPartnerships@criteo.com).
+>Deze bestemmingsschakelaar en documentatiepagina worden gecreeerd en door Criteo gehandhaafd. Voor om het even welke onderzoeken of updateverzoeken, gelieve direct contactCiteo [&#128279;](mailto:criteoTechnicalPartnerships@criteo.com).
 
 Criteo maakt betrouwbare en effectieve reclame mogelijk om elke consument op het open internet een rijkere ervaring te bieden. Met &#39;s werelds grootste set handelsgegevens en de best-in-class AI zorgt Criteo ervoor dat elk contactpunt tijdens het winkeltraject gepersonaliseerd is om klanten op het juiste moment met de juiste advertentie te bereiken.
 

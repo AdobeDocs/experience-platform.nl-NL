@@ -19,7 +19,7 @@ In dit document worden de stappen beschreven voor het verbinden van het database
 
 Deze handleiding vereist dat u al toegang hebt tot de bureaubladtoepassing van [!DNL DbVisualizer] en dat u bekend bent met de manier waarop u door de interface kunt navigeren. Om [!DNL DbVisualizer] Desktop app of voor meer informatie te downloaden, zie de [ officiële  [!DNL DbVisualizer]  documentatie ](https://www.dbvis.com/download/).
 
-U hebt toegang tot de werkruimte Query&#39;s in de gebruikersinterface van Experience Platform nodig om de referenties te verkrijgen waarmee u [!DNL  DbVisualizer] kunt verbinden met Experience Platform. Neem contact op met uw organisatiebeheerder als u momenteel geen toegang hebt tot de werkruimte Query&#39;s.
+U hebt toegang tot de werkruimte Query&#39;s in de gebruikersinterface van Experience Platform nodig om de referenties te verkrijgen waarmee u [!DNL &#x200B; DbVisualizer] kunt verbinden met Experience Platform. Neem contact op met uw organisatiebeheerder als u momenteel geen toegang hebt tot de werkruimte Query&#39;s.
 
 ## Een databaseverbinding maken {#connect-database}
 

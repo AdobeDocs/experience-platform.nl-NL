@@ -71,7 +71,7 @@ Zie [ CSV aan de gids van het schemaomzettingseindpunt ](./export.md) voor meer 
 
 >[!NOTE]
 >
->U kunt UI ook gebruiken om een CSV aan een schema in kaart te brengen gebruikend AI-Gegenereerde aanbevelingen ](../../ingestion/tutorials/map-csv/recommendations.md) (momenteel in bèta).[
+>U kunt UI ook gebruiken om een CSV aan een schema in kaart te brengen gebruikend AI-Gegenereerde aanbevelingen [&#128279;](../../ingestion/tutorials/map-csv/recommendations.md) (momenteel in bèta).
 
 ## Exporteren {#export}
 

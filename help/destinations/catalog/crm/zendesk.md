@@ -81,14 +81,14 @@ Vul de vereiste velden hieronder in. Verwijs naar de [ Gather  [!DNL Zendesk]  g
 * **[!UICONTROL Bearer Token]**: Het toegangstoken dat u in uw [!DNL Zendesk] -account hebt gegenereerd.
 
 Selecteer **[!UICONTROL Connect to destination]** als u wilt verifiëren bij het doel.
-{het schermschot van 0} Experience Platform UI die toont hoe te voor authentiek te verklaren.](../../assets/catalog/crm/zendesk/authenticate-destination.png)![
+{het schermschot van 0} Experience Platform UI die toont hoe te voor authentiek te verklaren.![&#128279;](../../assets/catalog/crm/zendesk/authenticate-destination.png)
 
 Als de opgegeven gegevens geldig zijn, geeft de gebruikersinterface de status **[!UICONTROL Connected]** weer met een groen vinkje. Vervolgens kunt u verdergaan met de volgende stap.
 
 ### Doelgegevens invullen {#destination-details}
 
 Als u details voor de bestemming wilt configureren, vult u de vereiste en optionele velden hieronder in. Een sterretje naast een veld in de gebruikersinterface geeft aan dat het veld verplicht is.
-{het schermschot van 0} Experience Platform UI die de bestemmingsdetails toont.](../../assets/catalog/crm/zendesk/destination-details.png)![
+{het schermschot van 0} Experience Platform UI die de bestemmingsdetails toont.![&#128279;](../../assets/catalog/crm/zendesk/destination-details.png)
 
 * **[!UICONTROL Name]**: Een naam waarmee u dit doel in de toekomst herkent.
 * **[!UICONTROL Description]**: Een beschrijving die u zal helpen deze bestemming in de toekomst identificeren.
@@ -131,6 +131,7 @@ Voer de volgende stappen uit om uw XDM-velden correct toe te wijzen aan de [!DNL
      | `xdm: person.name.firstName` | `xdm: first_name` | |
 
    * Hieronder ziet u een voorbeeld waarin deze toewijzingen worden gebruikt:
+
      ![ het schermschot van Experience Platform UI met attributenafbeeldingen.](../../assets/catalog/crm/zendesk/mappings.png)
 
 >[!IMPORTANT]
@@ -146,7 +147,7 @@ In de stap [[!UICONTROL Schedule audience export]](/help/destinations/ui/activat
 Hiervoor selecteert u elk segment en voert u in [!DNL Zendesk] in het veld **[!UICONTROL Mapping ID]** het bijbehorende aangepaste veldkenmerk in.
 
 Hieronder ziet u een voorbeeld:
-{het screenshot voorbeeld van 0} Experience Platform UI die het publiek van het Programma tonen uitvoer.](../../assets/catalog/crm/zendesk/schedule-segment-export.png)![
+{het screenshot voorbeeld van 0} Experience Platform UI die het publiek van het Programma tonen uitvoer.![&#128279;](../../assets/catalog/crm/zendesk/schedule-segment-export.png)
 
 ## Gegevens exporteren valideren {#exported-data}
 
@@ -160,10 +161,10 @@ Volg onderstaande stappen om te controleren of u de bestemming correct hebt inge
    ![ het schermschot van Experience Platform UI die Segment toont.](../../assets/catalog/crm/zendesk/segment.png)
 
 1. Meld u aan bij de [!DNL Zendesk] -website en navigeer naar de **[!UICONTROL Contacts]** -pagina om te controleren of de profielen van het publiek zijn toegevoegd. Deze lijst kan worden gevormd om kolommen voor de extra gebieden te tonen die met publiek* worden gecreeerd* [!UICONTROL Mapping ID]** en publieksstatus.
-   {het schermschot van 0} Zendesk UI die de pagina van Contacten met de extra gebieden toont die met de publieksnaam worden gecreeerd.](../../assets/catalog/crm/zendesk/contacts.png)![
+   {het schermschot van 0} Zendesk UI die de pagina van Contacten met de extra gebieden toont die met de publieksnaam worden gecreeerd.![&#128279;](../../assets/catalog/crm/zendesk/contacts.png)
 
 1. U kunt ook omlaag naar een afzonderlijke **[!UICONTROL Person]** -pagina gaan en de **[!UICONTROL Additional fields]** -sectie met de publieksnaam en de publieksstatus controleren.
-   {het schermschot van 0} Zendesk UI die de pagina van de Persoon met de extra gebiedssectie toont die de publieksnaam en de publieksstatus toont.](../../assets/catalog/crm/zendesk/contact.png)![
+   {het schermschot van 0} Zendesk UI die de pagina van de Persoon met de extra gebiedssectie toont die de publieksnaam en de publieksstatus toont.![&#128279;](../../assets/catalog/crm/zendesk/contact.png)
 
 ## Gegevensgebruik en -beheer {#data-usage-governance}
 

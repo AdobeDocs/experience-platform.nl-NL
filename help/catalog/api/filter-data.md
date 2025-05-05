@@ -653,7 +653,7 @@ Als u een arrayveld met meerdere waarden wilt filteren, gebruikt u voor elke waa
 
 >[!NOTE]
 >
->Het vereiste om `id` of `created` te omvatten wanneer het filtreren van veelvoudige gebieden **** is niet van toepassing wanneer het filtreren van veelvoudige waarden binnen een seriegebied.
+>Het vereiste om `id` of `created` te omvatten wanneer het filtreren van veelvoudige gebieden **&#x200B;**&#x200B;is niet van toepassing wanneer het filtreren van veelvoudige waarden binnen een seriegebied.
 
 De voorbeeldquery hieronder geeft alleen resultaten van de array die zowel `val1` als `val2` bevat.
 

@@ -41,7 +41,7 @@ Ga naar [ Adobe Developer Console ](https://www.adobe.com/go/devs_console_ui) en
 
 >[!NOTE]
 >
->De meldingsgebeurtenis voor gegevensinvoer is afgekeurd in Adobe I/O. In plaats daarvan, zou u de **I/O gebeurtenis van de Looppas van de Stroom van 0} Bronnen moeten gebruiken.**
+>De meldingsgebeurtenis voor gegevensinvoer is afgekeurd in Adobe I/O. In plaats daarvan, zou u de **I/O gebeurtenis van de Looppas van de Stroom van 0&rbrace; Bronnen moeten gebruiken.**
 
 Nadat u een nieuw project hebt gemaakt, navigeert u naar het overzichtsscherm van dat project. Selecteer **[!UICONTROL Add event]** van hier.
 

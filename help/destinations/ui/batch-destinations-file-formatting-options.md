@@ -15,7 +15,7 @@ ht-degree: 0%
 > 
 >De opmaakopties voor bestanden die in dit document worden beschreven, zijn momenteel alleen beschikbaar voor CSV-bestanden.
 
-De optie om diverse dossier te vormen formatterend opties voor de uitgevoerde dossiers is beschikbaar aan u wanneer u [ ](/help/destinations/ui/connect-destination.md) met een op dossier-gebaseerde bestemming, zoals [ Amazon S3 ](/help/destinations/catalog/cloud-storage/amazon-s3.md#connect), [ Azure Blob ](/help/destinations/catalog/cloud-storage/azure-blob.md#connect) verbindt, of [ SFTP ](/help/destinations/catalog/cloud-storage/sftp.md#connect).
+De optie om diverse dossier te vormen formatterend opties voor de uitgevoerde dossiers is beschikbaar aan u wanneer u [&#128279;](/help/destinations/ui/connect-destination.md) met een op dossier-gebaseerde bestemming, zoals [ Amazon S3 ](/help/destinations/catalog/cloud-storage/amazon-s3.md#connect), [ Azure Blob ](/help/destinations/catalog/cloud-storage/azure-blob.md#connect) verbindt, of [ SFTP ](/help/destinations/catalog/cloud-storage/sftp.md#connect).
 
 U kunt verschillende opmaakopties voor geëxporteerde bestanden configureren met de gebruikersinterface van Experience Platform. U kunt verschillende eigenschappen van de geëxporteerde bestanden aanpassen aan de vereisten van het systeem voor het ontvangen van bestanden aan uw zijde, zodat u de bestanden die u van Experience Platform hebt ontvangen, optimaal kunt lezen en interpreteren.
 

@@ -175,4 +175,4 @@ val sandboxName: String = sparkSession.sparkContext.getConf.get("sandboxName", "
 
 ## Volgende stappen
 
-Adobe Experience Platform Data Science Workspace biedt een Scala (Spark)-receptvoorbeeld waarin de bovenstaande codevoorbeelden worden gebruikt om gegevens te lezen en te schrijven. Als u meer over wilt leren hoe te om Vonk voor de toegang tot van uw gegevens te gebruiken, te herzien gelieve de ](https://github.com/adobe/experience-platform-dsw-reference/tree/master/recipes/scala) Bewaarplaats van de Opslag van GitHub van de Werkruimte van de Wetenschap van 0} Gegevens Scala GitHub.[
+Adobe Experience Platform Data Science Workspace biedt een Scala (Spark)-receptvoorbeeld waarin de bovenstaande codevoorbeelden worden gebruikt om gegevens te lezen en te schrijven. Als u meer over wilt leren hoe te om Vonk voor de toegang tot van uw gegevens te gebruiken, te herzien gelieve de [&#128279;](https://github.com/adobe/experience-platform-dsw-reference/tree/master/recipes/scala) Bewaarplaats van de Opslag van GitHub van de Werkruimte van de Wetenschap van 0&rbrace; Gegevens Scala GitHub.

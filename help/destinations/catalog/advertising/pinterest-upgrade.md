@@ -49,7 +49,7 @@ Vervolgens moet u de gegevensstromen naar de nieuwe **[!UICONTROL Pinterest]** -
 
 1. Ga naar **[!UICONTROL Destinations > Browse]** en gebruik het filter op het scherm om alleen het **[!UICONTROL Pinterest]** -doel te filteren.
    ![ dataflows van Pinterest van de Filter slechts in het Browse lusje ](/help/destinations/assets/catalog/advertising/pinterest-migration/filter-pinterest-browse.png)
-2. Selecteer de hyperlinked verbindingsnaam (de campagne van de Loyalty in het het schermschot hierboven) aan de **[!UICONTROL Pinterest]** bestemming en schakelaar **[!UICONTROL Enable]** knevel aan ****.
+2. Selecteer de hyperlinked verbindingsnaam (de campagne van de Loyalty in het het schermschot hierboven) aan de **[!UICONTROL Pinterest]** bestemming en schakelaar **[!UICONTROL Enable]** knevel aan **&#x200B;**.
    ![ knevel aan voor nieuwe verbindingen en weg voor oude verbindingen ](/help/destinations/assets/catalog/advertising/pinterest-migration/enable-disable-toggle-new-destination.png)
 
 <!--

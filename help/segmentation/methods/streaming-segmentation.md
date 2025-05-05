@@ -37,7 +37,7 @@ Een segmentdefinitie zal **niet** voor het stromen segmentatie in de volgende sc
 - De segmentdefinitie omvat Adobe Audience Manager (AAM)-segmenten of -kenmerken.
 - De segmentdefinitie omvat meerdere entiteiten (vragen van meerdere entiteiten).
 - De segmentdefinitie bevat een combinatie van één gebeurtenis en een `inSegment` -gebeurtenis.
-   - Nochtans, als de segmentdefinitie in de `inSegment` gebeurtenis profiel slechts is, zal de segmentdefinitie **** voor het stromen segmentatie worden toegelaten.
+   - Nochtans, als de segmentdefinitie in de `inSegment` gebeurtenis profiel slechts is, zal de segmentdefinitie **&#x200B;**&#x200B;voor het stromen segmentatie worden toegelaten.
 - In de segmentdefinitie wordt &quot;Jaar negeren&quot; gebruikt als onderdeel van de tijdbeperkingen.
 
 Houd rekening met de volgende richtlijnen die van toepassing zijn op streamingsegmenteringsvragen:

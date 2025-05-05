@@ -51,7 +51,7 @@ Selecteer hieronder elk tabblad om de bijbehorende lading weer te geven.
 
 >[!BEGINTABS]
 
->[!TAB  wint alle publieksmalplaatjes ] terug
+>[!TAB wint alle publieksmalplaatjes  terug]
 
 Met de volgende aanvraag wordt de lijst met publiekssjablonen opgehaald die u kunt gebruiken op basis van de configuratie van [!DNL IMS Org ID] en de sandbox.
 
@@ -180,7 +180,7 @@ Een geslaagde reactie geeft HTTP-status 200 weer met een lijst van publiekssjabl
 
 +++
 
->[!TAB  wint een specifiek publiekssjabloon ] terug
+>[!TAB wint een specifiek publiekssjabloon  terug]
 
 Met de volgende aanvraag wordt de lijst met publiekssjablonen opgehaald die u kunt gebruiken op basis van de configuratie van [!DNL IMS Org ID] en de sandbox.
 

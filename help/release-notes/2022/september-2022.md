@@ -155,7 +155,7 @@ XDM is een open-bronspecificatie die algemene structuren en definities (schema&#
 
 | Functie | Beschrijving |
 | --- | --- |
-| UI-ondersteuning voor opsommingen en voorgestelde waarden | Naast lijsten die gegevensbevestiging toelaten, kunt u voorgestelde waarden ](../../xdm/ui/fields/enum.md) voor standaard of douanekoordgebieden nu toevoegen of verwijderen zodat de gebruikers van Experience Platform een vriendschappelijke lijst van te selecteren waarden hebben wanneer het creëren van segmenten.[ |
+| UI-ondersteuning voor opsommingen en voorgestelde waarden | Naast lijsten die gegevensbevestiging toelaten, kunt u voorgestelde waarden [&#128279;](../../xdm/ui/fields/enum.md) voor standaard of douanekoordgebieden nu toevoegen of verwijderen zodat de gebruikers van Experience Platform een vriendschappelijke lijst van te selecteren waarden hebben wanneer het creëren van segmenten. |
 
 **Nieuwe componenten XDM**
 

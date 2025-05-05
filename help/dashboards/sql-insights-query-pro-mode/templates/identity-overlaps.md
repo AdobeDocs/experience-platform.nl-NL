@@ -22,7 +22,7 @@ Het dialoogvenster **[!UICONTROL Filters]** wordt weergegeven. In deze weergave 
 
 1. Selecteer een **[!UICONTROL Audience]**: Kies het doelgroepsegment u (bijvoorbeeld, **Canada - Alberta**) wilt analyseren.
 2. Specificeer a **[!UICONTROL Merge Policy]**: Bepaal het fusiebeleid dat dicteert hoe de identiteiten over het geselecteerde publiek worden gecombineerd (in het voorbeeldscreenshot, wordt het **Gebaseerde op tijd gebaseerde** beleid geselecteerd).
-3. Selecteer een **[!UICONTROL Identity A]** en **[!UICONTROL  Identity B]** ter vergelijking**: kies de twee identiteitstypen die u wilt vergelijken. In het voorbeeld, **Identiteit A** wordt geselecteerd als &quot;crmId&quot; en **Identiteit B** wordt geselecteerd als &quot;e-mail.&quot;
+3. Selecteer een **[!UICONTROL Identity A]** en **[!UICONTROL &#x200B; Identity B]** ter vergelijking&#x200B;**: kies de twee identiteitstypen die u wilt vergelijken. In het voorbeeld, &#x200B;** Identiteit A **&#x200B; wordt geselecteerd als &quot;crmId&quot; en &#x200B;** Identiteit B** wordt geselecteerd als &quot;e-mail.&quot;
 4. **plaats een datumwaaier**: Kies een vooraf bepaalde waaier zoals &quot;vandaag&quot;of plaats manueel de begin en einddata gebruikend de kalendergebieden.
 
 ![ de dialoog van Filters op het Dashboard van de Identiteit van het Publiek.](../../images/sql-insights-query-pro-mode/templates/audience-identity-overlaps-filters-dialog.png)
@@ -78,9 +78,9 @@ Na het analyseren van identiteitsoverlappingen, kunt u de gegevens voor off-line
 
 ![ het Overlappende dashboard van de Identiteit van het publiek met de Uitvoer benadrukte.](../../images/sql-insights-query-pro-mode/templates/audience-identity-overlaps-export.png)
 
-Het **dashboard van de Identiteit van het publiek 0} {overlapt essentiële inzichten in hoe de verschillende identiteiten over uw geselecteerde publiek snijden.** Door gebruik te maken van deze inzichten, kun je identiteitsverstikkende strategieën verfijnen, redundantie verminderen en ervoor zorgen dat je doelgroepsegmentatie nauwkeuriger en effectiever is.
+Het **dashboard van de Identiteit van het publiek 0&rbrace; &lbrace;overlapt essentiële inzichten in hoe de verschillende identiteiten over uw geselecteerde publiek snijden.** Door gebruik te maken van deze inzichten, kun je identiteitsverstikkende strategieën verfijnen, redundantie verminderen en ervoor zorgen dat je doelgroepsegmentatie nauwkeuriger en effectiever is.
 
 ## Volgende stappen
 
-Na het lezen van dit document, hebt u geleerd hoe te om waardevolle inzichten in identiteitsoverlap voor geselecteerde doelgroepen te verkrijgen gebruikend het **dashboard van de Identiteit van het publiek 0} {.** Om je inzicht in doelgroepsegmentatie en identiteitbeheer verder te verbeteren, verken je andere Data Distiller Templates die uitgebreide inzichten bieden. Verwijs naar de [ Trends van het Publiek ](./trends.md), [ Vergelijking van het Publiek ](./comparison.md), en [ Geavanceerde gidsen van de Overlapping van het Publiek ](./overlaps.md) UI om uw het richten en betrokkenheidsstrategieën verder te verbeteren.
+Na het lezen van dit document, hebt u geleerd hoe te om waardevolle inzichten in identiteitsoverlap voor geselecteerde doelgroepen te verkrijgen gebruikend het **dashboard van de Identiteit van het publiek 0&rbrace; &lbrace;.** Om je inzicht in doelgroepsegmentatie en identiteitbeheer verder te verbeteren, verken je andere Data Distiller Templates die uitgebreide inzichten bieden. Verwijs naar de [ Trends van het Publiek ](./trends.md), [ Vergelijking van het Publiek ](./comparison.md), en [ Geavanceerde gidsen van de Overlapping van het Publiek ](./overlaps.md) UI om uw het richten en betrokkenheidsstrategieën verder te verbeteren.
 

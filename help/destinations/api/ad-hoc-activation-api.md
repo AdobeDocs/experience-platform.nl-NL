@@ -103,7 +103,7 @@ Nadat u een activeringsstroom voor uw partijbestemming vormt, beginnen de geplan
 
 Voordat u de ad-hocactiveringstaak kunt uitvoeren, moet u de id van de laatste doelexporttaak opvragen. U moet deze id doorgeven in de aanvraag voor een ad-hocactiveringstaak.
 
-Volg de hier beschreven instructies [ ](../../segmentation/api/export-jobs.md#retrieve-list) om een lijst van alle banen van de publieksuitvoer terug te winnen.
+Volg de hier beschreven instructies [&#128279;](../../segmentation/api/export-jobs.md#retrieve-list) om een lijst van alle banen van de publieksuitvoer terug te winnen.
 
 In de reactie, zoek het eerste verslag dat het schemabezit hieronder omvat.
 

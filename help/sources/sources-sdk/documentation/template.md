@@ -47,7 +47,7 @@ Voor meer informatie over deze geloofsbrieven, zie *JONGE* authentificatiedocume
 
 ## Verbind *UUR* met Experience Platform gebruikend [!DNL Flow Service] API
 
-Het volgende leerprogramma loopt u door de stappen om a ** bronverbinding tot stand te brengen JUURSOURCE {en een dataflow tot stand te brengen om ** gegevens te brengen YOURSOURCE aan Experience Platform gebruikend [[!DNL Flow Service]  API ](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+Het volgende leerprogramma loopt u door de stappen om a **&#x200B; bronverbinding tot stand te brengen JUURSOURCE &lbrace;en een dataflow tot stand te brengen om &#x200B;** gegevens te brengen YOURSOURCE aan Experience Platform gebruikend [[!DNL Flow Service]  API ](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
 ### Een basisverbinding maken {#base-connection}
 
@@ -352,7 +352,7 @@ curl -X POST \
 | `name` | De naam van de doelverbinding. Zorg ervoor dat de naam van uw doelverbinding beschrijvend is aangezien u dit kunt gebruiken om informatie over uw doelverbinding op te zoeken. |
 | `description` | Een optionele waarde die u kunt opnemen voor meer informatie over de doelverbinding. |
 | `connectionSpec.id` | De verbindingsspecificatie-id die overeenkomt met [!DNL Data Lake] . Deze vaste id is: `c604ff05-7f1a-43c0-8e18-33bf874cb11c` . |
-| `data.format` | Het formaat van de ** gegevens van UUR {die u aan Experience Platform wilt brengen. |
+| `data.format` | Het formaat van de ** gegevens van UUR &lbrace;die u aan Experience Platform wilt brengen. |
 | `params.dataSetId` | De doel dataset ID die in een vorige stap wordt teruggewonnen. |
 
 

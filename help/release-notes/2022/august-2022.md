@@ -145,7 +145,7 @@ Met Adobe Experience Platform kunt u uw klanten gecoördineerde, consistente en 
 
 | Functie | Beschrijving |
 | ------- | ----------- |
-| Harde limiet voor beleid samenvoegen | Experience Platform zal nu een harde grens van **vijf** fusiebeleid per zandbak afdwingen. Als uw zandbak momenteel meer dan vijf fusiebeleid heeft, zult u **** geen nieuw fusiebeleid kunnen tot stand brengen tot de zandbak minder dan vijf fusiebeleid heeft. |
+| Harde limiet voor beleid samenvoegen | Experience Platform zal nu een harde grens van **vijf** fusiebeleid per zandbak afdwingen. Als uw zandbak momenteel meer dan vijf fusiebeleid heeft, zult u **&#x200B;**&#x200B;geen nieuw fusiebeleid kunnen tot stand brengen tot de zandbak minder dan vijf fusiebeleid heeft. |
 | Opschonen van kenmerken van rand met zwevend profiel | Voor alle organisaties, verwijdert de Dienst van het Profiel nu randattributen van gebruikersactiviteitengebied op een dagelijkse basis om een nauwkeurigere vertegenwoordiging van uw profielen in uw systeem te geven. Deze opruiming vindt plaats nadat alle profielfragmenten voor een bepaald profiel zijn verwijderd en heeft invloed op profielen die worden samengevoegd uit gegevenssets waarin `com_adobe_aep_profile_region_dataset` is gemarkeerd als `true` . Dit kan een daling in &quot;Adressable publiek&quot;metrisch in het dashboard van het vergunningsgebruik tonen en kan een daling in &quot;Aantal van het Profiel&quot;metrisch in het dashboard van het Profiel tonen, aangezien deze metriek de fragmenten van het de randattribuut van het leftover voorafgaand aan deze versie omvatte. |
 
 {style="table-layout:auto"}

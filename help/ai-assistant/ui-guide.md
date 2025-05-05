@@ -65,7 +65,7 @@ In dit voorbeeld retourneert AI Assistant aanvullende informatie over de bestaan
 
 U kunt antwoorden verifiëren die door AI Assistant aan u zijn geretourneerd door citaten te bekijken die beschikbaar zijn bij elk antwoord op de productkennis.
 
-++ + selecteren om een voorbeeld te bekijken van hoe te om bronnen te tonen
++++ selecteren om een voorbeeld te bekijken van hoe te om bronnen te tonen
 
 Selecteer **[!UICONTROL Show sources]** als u citaties wilt weergeven en de reactie van AI Assistant wilt valideren.
 

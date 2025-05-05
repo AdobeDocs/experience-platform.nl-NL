@@ -71,8 +71,8 @@ Aantal klassen: 50000
 Met een aangewezen vraag kunt u de gebeurtenissen in de dataset in zinvolle, numerieke eigenschappen verzamelen die kunnen worden gebruikt om een aandrijvingsmodel te trainen. Voorbeelden van gebeurtenissen worden hieronder weergegeven:
 
 - **Aantal e-mails** die voor marketing doeleinden werden verzonden en door de gebruiker werden ontvangen.
-- Gedeelte van deze e-mails die **** werden geopend.
-- Het gedeelte van deze e-mails waar de gebruiker **** de verbinding selecteerde.
+- Gedeelte van deze e-mails die **&#x200B;**&#x200B;werden geopend.
+- Het gedeelte van deze e-mails waar de gebruiker **&#x200B;**&#x200B;de verbinding selecteerde.
 - **Aantal producten** die werden bekeken.
 - Aantal **voorstellingen die met** werden in wisselwerking gestaan.
 - Aantal **voorstellen die** werden verworpen.

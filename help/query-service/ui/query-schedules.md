@@ -71,7 +71,7 @@ Selecteer **[!UICONTROL Create and append into new dataset]** om een gegevensset
 
 >[!IMPORTANT]
 >
-> Aangezien u of bestaand gebruikt of een nieuwe dataset creeert, te hoeven u **** niet `INSERT INTO` of `CREATE TABLE AS SELECT` als deel van de vraag te omvatten, aangezien de datasets reeds worden geplaatst. Als u `INSERT INTO` of `CREATE TABLE AS SELECT` opneemt als onderdeel van uw geplande query&#39;s, treedt er een fout op.
+> Aangezien u of bestaand gebruikt of een nieuwe dataset creeert, te hoeven u **&#x200B;**&#x200B;niet `INSERT INTO` of `CREATE TABLE AS SELECT` als deel van de vraag te omvatten, aangezien de datasets reeds worden geplaatst. Als u `INSERT INTO` of `CREATE TABLE AS SELECT` opneemt als onderdeel van uw geplande query&#39;s, treedt er een fout op.
 
 ![ het paneel van de Details van het Programma met de details van de Dataset en de [!UICONTROL Create and append into new dataset] benadrukte opties.](../images/ui/query-schedules/dataset-details-create-and-append.png)
 

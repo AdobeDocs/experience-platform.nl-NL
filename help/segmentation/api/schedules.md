@@ -282,7 +282,7 @@ PATCH /config/schedules/{SCHEDULE_ID}
 
 >[!TAB  de planningsstaat van de Update ]
 
-U kunt een JSON-patchbewerking gebruiken om de status van de planning bij te werken. Als u de status wilt bijwerken, declareert u de eigenschap `path` als `/state` en stelt u de eigenschap `value` in op `active` of `inactive` . Voor meer informatie over Reparatie JSON, te lezen gelieve de ](https://datatracker.ietf.org/doc/html/rfc6902) documentatie van het Reparatie 0} JSON {.[
+U kunt een JSON-patchbewerking gebruiken om de status van de planning bij te werken. Als u de status wilt bijwerken, declareert u de eigenschap `path` als `/state` en stelt u de eigenschap `value` in op `active` of `inactive` . Voor meer informatie over Reparatie JSON, te lezen gelieve de [&#128279;](https://datatracker.ietf.org/doc/html/rfc6902) documentatie van het Reparatie 0&rbrace; JSON &lbrace;.
 
 **Verzoek**
 
@@ -317,7 +317,7 @@ Een geslaagde reactie retourneert HTTP-status 204 (Geen inhoud).
 
 >[!TAB  Update bouwt programma ]
 
-U kunt een JSON-reparatiebewerking gebruiken om het uitsnijdschema bij te werken. Als u het schema wilt bijwerken, declareert u de eigenschap `path` als `/schedule` en stelt u de eigenschap `value` in op een geldig uitsnijdschema. Voor meer informatie over Reparatie JSON, te lezen gelieve de ](https://datatracker.ietf.org/doc/html/rfc6902) documentatie van het Reparatie 0} JSON {. [ Voor meer informatie over kroonprogramma&#39;s, te lezen gelieve het bijlage op het [ formaat van de cron uitdrukking ](#appendix).
+U kunt een JSON-reparatiebewerking gebruiken om het uitsnijdschema bij te werken. Als u het schema wilt bijwerken, declareert u de eigenschap `path` als `/schedule` en stelt u de eigenschap `value` in op een geldig uitsnijdschema. Voor meer informatie over Reparatie JSON, te lezen gelieve de [&#128279;](https://datatracker.ietf.org/doc/html/rfc6902) documentatie van het Reparatie 0&rbrace; JSON &lbrace;.  Voor meer informatie over kroonprogramma&#39;s, te lezen gelieve het bijlage op het [ formaat van de cron uitdrukking ](#appendix).
 
 >[!ENDTABS]
 

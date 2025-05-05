@@ -585,4 +585,4 @@ Door dit document te lezen, begrijpt u nu de SQL die dashboardinzichten producee
 
 Zie de [ documentatie van de Mening SQL ](../view-sql.md) voor meer informatie over hoe te om SQL van uw inzichten direct door PLatform UI aan te passen.
 
-U kunt SQL ook lezen en begrijpen die inzichten voor [ Profielen ](./profiles.md), [ Profielen van de Rekening ](./account-profiles.md) en [ Doelen ](./destinations.md) dashboards van Doelen {produceert.
+U kunt SQL ook lezen en begrijpen die inzichten voor [ Profielen ](./profiles.md), [ Profielen van de Rekening ](./account-profiles.md) en [ Doelen ](./destinations.md) dashboards van Doelen &lbrace;produceert.

@@ -139,8 +139,8 @@ XDM is een open-bronspecificatie die algemene structuren en definities (schema&#
 | Veldgroep | (Meerdere) | [ toegevoegde verscheidene XDM gebeurtenistypen voor [!UICONTROL Media Reporting] ](https://github.com/adobe/xdm/pull/1670/files). |
 | Veldgroep | [!UICONTROL Workfront Change Event] | De veldgroepen `Full Record` en `Accessor Employee Ids` zijn toegevoegd. |
 | Gegevenstype | [[!UICONTROL Product list item]](https://github.com/adobe/xdm/pull/1685/files) | [!UICONTROL Refund Amount] is toegevoegd om het bedrag aan te geven dat voor het item is terugbetaald, indien van toepassing. |
-| Gegevenstype | [[!UICONTROL Order ]](https://github.com/adobe/xdm/pull/1685/files) | [!UICONTROL Refunds List] is toegevoegd aan de lijst met terugbetalingen voor deze bestelling. |
-| Gegevenstype | [[!UICONTROL Product List Item ]](https://github.com/adobe/xdm/pull/1677/files) | Productcategorieën zijn toegevoegd aan de lijst met categoriegegevens van dit product. |
+| Gegevenstype | [[!UICONTROL Order &#x200B;]](https://github.com/adobe/xdm/pull/1685/files) | [!UICONTROL Refunds List] is toegevoegd aan de lijst met terugbetalingen voor deze bestelling. |
+| Gegevenstype | [[!UICONTROL Product List Item &#x200B;]](https://github.com/adobe/xdm/pull/1677/files) | Productcategorieën zijn toegevoegd aan de lijst met categoriegegevens van dit product. |
 | Gegevenstype | [!UICONTROL Session details information] | Toegevoegd het `pev3` koordgebied dat [ op het type van de media stroom wijst die voor het melden van ](https://github.com/adobe/xdm/pull/1676/files) wordt gebruikt. De eigenschap `pccr` wordt ook toegevoegd om aan te geven of een omleiding heeft plaatsgevonden. |
 | Gegevenstype | [!UICONTROL Requisition List] | Verstrekt de [ eigenschappen van de verzoeklijst ](https://github.com/adobe/xdm/pull/1675/files). Deze bevatten naam, id en beschrijving. |
 | Gegevenstype | [!UICONTROL Commerce] | Het [ gegevenstype van Commerce werd bijgewerkt ](https://github.com/adobe/xdm/pull/1675/files) om `requisitionListOpens`, `requisitionListAdds`, `requisitionListRemovals`, en `requisitionList` te omvatten. |

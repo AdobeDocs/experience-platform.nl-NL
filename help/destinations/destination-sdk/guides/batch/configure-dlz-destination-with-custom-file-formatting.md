@@ -13,7 +13,7 @@ ht-degree: 0%
 
 ## Overzicht {#overview}
 
-Deze pagina beschrijft hoe te om Destination SDK te gebruiken om a [!DNL Data Landing Zone] bestemming met het douane[ dossier te vormen formatterend opties ](configure-file-formatting-options.md) en een de naamconfiguratie van het douanedossier [ ](../../functionality/destination-configuration/batch-configuration.md#file-name-configuration).
+Deze pagina beschrijft hoe te om Destination SDK te gebruiken om a [!DNL Data Landing Zone] bestemming met het douane[ dossier te vormen formatterend opties ](configure-file-formatting-options.md) en een de naamconfiguratie van het douanedossier [&#128279;](../../functionality/destination-configuration/batch-configuration.md#file-name-configuration).
 
 Op deze pagina worden alle configuratieopties weergegeven die beschikbaar zijn voor [!DNL Data Landing Zone] -doelen. U kunt de configuraties bewerken die in de onderstaande stappen worden weergegeven, of u kunt desgewenst bepaalde onderdelen van de configuraties verwijderen.
 

@@ -46,9 +46,9 @@ Nadat u een nieuwe gegevensstroom hebt gemaakt of een bestaande gegevensstroom h
 
 | Veld DataStream | Waarde |
 | --- | --- |
-| [!UICONTROL Sandbox] | De naam van de zandbak van Experience Platform [ ](../../../sandboxes/home.md) die de vereiste het stromen verbinding en datasets aan opstelling bevat de datastream. |
+| [!UICONTROL Sandbox] | De naam van de zandbak van Experience Platform [&#128279;](../../../sandboxes/home.md) die de vereiste het stromen verbinding en datasets aan opstelling bevat de datastream. |
 | [!UICONTROL Event Dataset] | Een [!DNL XDM ExperienceEvent] dataset die u van plan bent om gebeurtenisgegevens naar het gebruiken van SDK te verzenden. Hoewel u een gebeurtenissendataset moet verstrekken om een Experience Platform datastream te creëren, gelieve te merken dat toestemmingsgegevens die via gebeurtenissen worden verzonden niet in stroomafwaartse handhavingswerkschema&#39;s worden nageleefd. |
-| [!UICONTROL Profile Dataset] | [!DNL Profile] - toegelaten dataset met de gebieden van de klantentoestemming die u [ ](#prerequisites) creeerde. |
+| [!UICONTROL Profile Dataset] | [!DNL Profile] - toegelaten dataset met de gebieden van de klantentoestemming die u [&#128279;](#prerequisites) creeerde. |
 
 Als u klaar bent, selecteert u **[!UICONTROL Save]** onder aan het scherm en gaat u verder met het volgen van eventuele extra aanwijzingen om de configuratie te voltooien.
 

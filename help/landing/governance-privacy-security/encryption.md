@@ -23,7 +23,7 @@ Alle gegevens in doorgang tussen Experience Platform en om het even welke extern
 
 In het algemeen worden gegevens op drie manieren naar Experience Platform overgebracht:
 
-- ](../../collection/home.md) mogelijkheden van de inzameling van 0} Gegevens {staan websites en mobiele toepassingen toe om gegevens naar Experience Platform Edge Network voor het opvoeren en voorbereiding voor opname te verzenden.[
+- [&#128279;](../../collection/home.md) mogelijkheden van de inzameling van 0&rbrace; Gegevens &lbrace;staan websites en mobiele toepassingen toe om gegevens naar Experience Platform Edge Network voor het opvoeren en voorbereiding voor opname te verzenden.
 - [ de schakelaars van Source ](../../sources/home.md) stroomgegevens direct aan Experience Platform van de toepassingen van Adobe Experience Cloud en andere bronnen van ondernemingsgegevens.
 - De niet-Adobe ETL (extract, transformatie, lading) hulpmiddelen verzenden gegevens naar [ partij ingestie API ](../../ingestion/batch-ingestion/overview.md) voor consumptie.
 
@@ -36,7 +36,7 @@ Nadat het gegeven in het systeem is gebracht en [ in rust ](#at-rest) gecodeerd,
 
 U kunt Wederzijdse Veiligheid van de Laag van het Vervoer (mTLS) nu gebruiken om verbeterde veiligheid in uitgaande verbindingen aan de [ bestemming van HTTP API ](../../destinations/catalog/streaming/http-destination.md) en de douaneacties van Adobe Journey Optimizer [ te verzekeren ](https://experienceleague.adobe.com/nl/docs/journey-optimizer/using/orchestrate-journeys/about-journey-building/using-custom-actions). mTLS is een end-to-end veiligheidsmethode voor wederzijdse authentificatie die ervoor zorgt dat beide partijen die informatie delen wie zij beweren te zijn alvorens de gegevens worden gedeeld. mTLS bevat een extra stap in vergelijking met TLS, waarin de server ook om het certificaat van de client vraagt en dit aan het einde verifieert.
 
-Als u mTLS met de douaneacties van Adobe Journey Optimizer ](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/configuration/configure-journeys/action-journeys/about-custom-action-configuration) en de bestemmingswerkschema&#39;s van HTTP van Experience Platform wilt [ gebruiken API, moet het serveradres u in de UI van de klantenactie van Adobe Journey Optimizer of de Doelen UI heeft onbruikbaar gemaakte protocollen van TLS hebben en slechts mTLS toegelaten. Als het TLS 1.2 protocol nog op dat eindpunt wordt toegelaten, wordt geen certificaat verzonden voor de cliëntauthentificatie. Dit betekent dat om mTLS met deze werkschema&#39;s te gebruiken, moet uw &quot;ontvangende&quot;servereindpunt een mTLS **slechts** toegelaten verbindingspunt zijn.
+Als u mTLS met de douaneacties van Adobe Journey Optimizer [&#128279;](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/configuration/configure-journeys/action-journeys/about-custom-action-configuration) en de bestemmingswerkschema&#39;s van HTTP van Experience Platform wilt  gebruiken API, moet het serveradres u in de UI van de klantenactie van Adobe Journey Optimizer of de Doelen UI heeft onbruikbaar gemaakte protocollen van TLS hebben en slechts mTLS toegelaten. Als het TLS 1.2 protocol nog op dat eindpunt wordt toegelaten, wordt geen certificaat verzonden voor de cliëntauthentificatie. Dit betekent dat om mTLS met deze werkschema&#39;s te gebruiken, moet uw &quot;ontvangende&quot;servereindpunt een mTLS **slechts** toegelaten verbindingspunt zijn.
 
 >[!IMPORTANT]
 >

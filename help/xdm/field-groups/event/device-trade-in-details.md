@@ -19,7 +19,7 @@ ht-degree: 0%
 
 [!UICONTROL Device Trade-In Details] is een standaardgroep van het schemagebied voor de [[!DNL XDM ExperienceEvent]  klasse ](../../classes/experienceevent.md). Het verstrekt één enkel gebied (`deviceTradeInDetails`) dat een apparaat handel-binnen transactie, met inbegrip van handel-binnen waarde, originele apparatenidentiteitskaart, en nieuwe apparatenidentiteitskaart beschrijft.
 
-![ dossier-binnen structuur van Details van het Apparaat {](../../images/field-groups/device-trade-in-details.png)
+![ dossier-binnen structuur van Details van het Apparaat &lbrace;](../../images/field-groups/device-trade-in-details.png)
 
 | Eigenschap | Gegevenstype | Beschrijving |
 | --- | --- | --- |

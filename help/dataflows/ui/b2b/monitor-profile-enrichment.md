@@ -19,7 +19,7 @@ In [ Experience Platform UI ](https://platform.adobe.com), selecteer **[!UICONTR
 
 ## Verrijking van het accountprofiel {#related-accounts}
 
-Het [!UICONTROL Related accounts] dashboard toont basismetriek en het statuut van de dagelijkse baan specifiek voor de [ Verwante 2} profielverrijking van Rekeningen {.](/help/rtcdp/b2b-ai-ml-services/related-accounts.md)
+Het [!UICONTROL Related accounts] dashboard toont basismetriek en het statuut van de dagelijkse baan specifiek voor de [ Verwante 2&rbrace; profielverrijking van Rekeningen &lbrace;.](/help/rtcdp/b2b-ai-ml-services/related-accounts.md)
 
 ![ Visuele aanwijzing van hoe te om aan de de verrijking van het Profiel te krijgen banen controlerend het scherm in Experience Platform UI.](/help/dataflows/assets/ui/b2b/monitoring-profile-enrichment-jobs.png)
 

@@ -30,15 +30,15 @@ Met Experience Platform kunt u gegevens die u uit verschillende bronnen verzamel
 
 De volgende bronnen zijn beschikbaar aan [ Adobe Real-Time Customer Data Platform Ultimate ](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html) slechts klanten.
 
-- [[!DNL Amazon Kinesis]](connectors/cloud-storage/kinesis.md) [!BADGE  Streaming ]{type=Positive}
-- [[!DNL Amazon Redshift]](connectors/databases/redshift.md) [!BADGE  Partij ]{type=Informative}
-- [[!DNL Azure Databricks]](connectors/databases/databricks.md) [!BADGE  Partij ]{type=Informative}
-- [[!DNL Azure Event Hubs]](connectors/cloud-storage/eventhub.md) [!BADGE  Streaming ]{type=Positive}
-- [[!DNL Azure Synapse Analytics]](connectors/databases/synapse-analytics.md) [!BADGE  Partij ]{type=Informative}
-- [[!DNL Google BigQuery]](connectors/databases/bigquery.md) [!BADGE  Partij ]{type=Informative}
-- [[!DNL Google PubSub]](connectors/cloud-storage/google-pubsub.md) [!BADGE  Streaming ]{type=Positive}
-- [[!DNL Snowflake]](connectors/databases/snowflake-streaming.md) [!BADGE  Streaming ]{type=Positive}
-- [[!DNL Snowflake]](connectors/databases/snowflake.md) [!BADGE  Partij ]{type=Informative}
+- [[!DNL Amazon Kinesis]](connectors/cloud-storage/kinesis.md) [!BADGE &#x200B; Streaming &#x200B;]{type=Positive}
+- [[!DNL Amazon Redshift]](connectors/databases/redshift.md) [!BADGE &#x200B; Partij &#x200B;]{type=Informative}
+- [[!DNL Azure Databricks]](connectors/databases/databricks.md) [!BADGE &#x200B; Partij &#x200B;]{type=Informative}
+- [[!DNL Azure Event Hubs]](connectors/cloud-storage/eventhub.md) [!BADGE &#x200B; Streaming &#x200B;]{type=Positive}
+- [[!DNL Azure Synapse Analytics]](connectors/databases/synapse-analytics.md) [!BADGE &#x200B; Partij &#x200B;]{type=Informative}
+- [[!DNL Google BigQuery]](connectors/databases/bigquery.md) [!BADGE &#x200B; Partij &#x200B;]{type=Informative}
+- [[!DNL Google PubSub]](connectors/cloud-storage/google-pubsub.md) [!BADGE &#x200B; Streaming &#x200B;]{type=Positive}
+- [[!DNL Snowflake]](connectors/databases/snowflake-streaming.md) [!BADGE &#x200B; Streaming &#x200B;]{type=Positive}
+- [[!DNL Snowflake]](connectors/databases/snowflake.md) [!BADGE &#x200B; Partij &#x200B;]{type=Informative}
 
 ## Door Adobe gebouwde en door partners gebouwde bronnen {#adobe-and-partner-built-sources}
 
@@ -73,94 +73,94 @@ Experience Platform staat toe dat gegevens worden ingevoerd van andere Adobe-toe
 
 Experience Platform biedt ondersteuning voor het opnemen van gegevens uit een derde-advertentiesysteem. Zie de volgende verwante documenten voor meer informatie over specifieke bronschakelaars:
 
-- [ Google Adds ](connectors/advertising/ads.md) [!BADGE  Partij ]{type=Informative}
+- [ Google Adds ](connectors/advertising/ads.md) [!BADGE &#x200B; Partij &#x200B;]{type=Informative}
 
 ### Analytics {#analytics}
 
 Experience Platform biedt ondersteuning voor het opnemen van gegevens van een extern analyseplatform. Lees de volgende verwante documenten voor meer informatie:
 
-- [[!DNL Mixpanel]](connectors/analytics/mixpanel.md) [!BADGE  Partij ]{type=Informative}
-- [[!DNL Pendo]](connectors/analytics/pendo-webhook.md) [!BADGE  Streaming ]{type=Positive}
-- [[!DNL RainFocus]](connectors/analytics/rainfocus.md) [!BADGE  Streaming ]{type=Positive}
+- [[!DNL Mixpanel]](connectors/analytics/mixpanel.md) [!BADGE &#x200B; Partij &#x200B;]{type=Informative}
+- [[!DNL Pendo]](connectors/analytics/pendo-webhook.md) [!BADGE &#x200B; Streaming &#x200B;]{type=Positive}
+- [[!DNL RainFocus]](connectors/analytics/rainfocus.md) [!BADGE &#x200B; Streaming &#x200B;]{type=Positive}
 
 ### Cloud Storage {#cloud-storage}
 
 Opslagbronnen in de cloud kunnen uw eigen gegevens naar Experience Platform brengen zonder dat ze hoeven te worden gedownload, opgemaakt of geüpload. Ingebedde gegevens kunnen worden opgemaakt als XDM JSON, XDM Parquet, of afgebakend. Elke stap van het proces is geïntegreerd in het Bronwerkschema gebruikend het gebruikersinterface. Zie de volgende verwante documenten voor meer informatie:
 
-- [[!DNL Azure Data Lake Storage Gen2]](connectors/cloud-storage/adls-gen2.md) [!BADGE  Partij ]{type=Informative}
-- [[!DNL Azure Blob]](connectors/cloud-storage/blob.md) [!BADGE  Partij ]{type=Informative}
-- [[!DNL Amazon S3]](connectors/cloud-storage/s3.md) [!BADGE  Partij ]{type=Informative}
-- [[!DNL Apache HDFS]](connectors/cloud-storage/hdfs.md) [!BADGE  Partij ]{type=Informative}
-- [[!DNL Azure File Storage]](connectors/cloud-storage/azure-file-storage.md) [!BADGE  Partij ]{type=Informative}
-- [[!DNL Data Landing Zone]](connectors/cloud-storage/data-landing-zone.md) [!BADGE  Partij ]{type=Informative}
-- [[!DNL FTP]](connectors/cloud-storage/ftp.md) [!BADGE  Partij ]{type=Informative}
-- [[!DNL Google Cloud Storage]](connectors/cloud-storage/google-cloud-storage.md) [!BADGE  Partij ]{type=Informative}
-- [[!DNL Oracle Object Storage]](connectors/cloud-storage/oracle-object-storage.md) [!BADGE  Partij ]{type=Informative}
-- [[!DNL SFTP]](connectors/cloud-storage/sftp.md) [!BADGE  Partij ]{type=Informative}
+- [[!DNL Azure Data Lake Storage Gen2]](connectors/cloud-storage/adls-gen2.md) [!BADGE &#x200B; Partij &#x200B;]{type=Informative}
+- [[!DNL Azure Blob]](connectors/cloud-storage/blob.md) [!BADGE &#x200B; Partij &#x200B;]{type=Informative}
+- [[!DNL Amazon S3]](connectors/cloud-storage/s3.md) [!BADGE &#x200B; Partij &#x200B;]{type=Informative}
+- [[!DNL Apache HDFS]](connectors/cloud-storage/hdfs.md) [!BADGE &#x200B; Partij &#x200B;]{type=Informative}
+- [[!DNL Azure File Storage]](connectors/cloud-storage/azure-file-storage.md) [!BADGE &#x200B; Partij &#x200B;]{type=Informative}
+- [[!DNL Data Landing Zone]](connectors/cloud-storage/data-landing-zone.md) [!BADGE &#x200B; Partij &#x200B;]{type=Informative}
+- [[!DNL FTP]](connectors/cloud-storage/ftp.md) [!BADGE &#x200B; Partij &#x200B;]{type=Informative}
+- [[!DNL Google Cloud Storage]](connectors/cloud-storage/google-cloud-storage.md) [!BADGE &#x200B; Partij &#x200B;]{type=Informative}
+- [[!DNL Oracle Object Storage]](connectors/cloud-storage/oracle-object-storage.md) [!BADGE &#x200B; Partij &#x200B;]{type=Informative}
+- [[!DNL SFTP]](connectors/cloud-storage/sftp.md) [!BADGE &#x200B; Partij &#x200B;]{type=Informative}
 
 ### Toestemming en voorkeuren {#consent}
 
 Experience Platform biedt ondersteuning voor het opnemen van gegevens van een platform voor toestemming en voorkeurenbeheer van derden. Zie de volgende verwante documenten voor meer informatie:
 
-- [[!DNL OneTrust Integration]](connectors/consent-and-preferences/onetrust.md) [!BADGE  Partij ]{type=Informative}
+- [[!DNL OneTrust Integration]](connectors/consent-and-preferences/onetrust.md) [!BADGE &#x200B; Partij &#x200B;]{type=Informative}
 
 ### Customer Relationship Management (CRM) {#customer-relationship-management}
 
 De systemen van CRM verstrekken gegevens die klantenverhoudingen kunnen helpen bouwen, die beurtelings, loyaliteit creëren en klantenbehoud drijven. Experience Platform biedt ondersteuning voor het opnemen van CRM-gegevens van [!DNL Microsoft Dynamics 365] en [!DNL Salesforce] . Zie de volgende verwante documenten voor meer informatie:
 
-- [[!DNL Microsoft Dynamics]](connectors/crm/ms-dynamics.md) [!BADGE  Partij ]{type=Informative}
-- [[!DNL Salesforce]](connectors/crm/salesforce.md) [!BADGE  Partij ]{type=Informative}
-- [[!DNL SugarCRM]](connectors/crm/sugarcrm.md) [!BADGE  Partij ]{type=Informative}
-- [[!DNL Veeva CRM]](connectors/crm/veeva.md) [!BADGE  Partij ]{type=Informative}
-- [[!DNL Zoho CRM]](connectors/crm/zoho.md) [!BADGE  Partij ]{type=Informative}
+- [[!DNL Microsoft Dynamics]](connectors/crm/ms-dynamics.md) [!BADGE &#x200B; Partij &#x200B;]{type=Informative}
+- [[!DNL Salesforce]](connectors/crm/salesforce.md) [!BADGE &#x200B; Partij &#x200B;]{type=Informative}
+- [[!DNL SugarCRM]](connectors/crm/sugarcrm.md) [!BADGE &#x200B; Partij &#x200B;]{type=Informative}
+- [[!DNL Veeva CRM]](connectors/crm/veeva.md) [!BADGE &#x200B; Partij &#x200B;]{type=Informative}
+- [[!DNL Zoho CRM]](connectors/crm/zoho.md) [!BADGE &#x200B; Partij &#x200B;]{type=Informative}
 
 ### Klant geslaagd {#customer-success}
 
 Experience Platform biedt ondersteuning voor het opnemen van gegevens van een toepassing voor klantsucces van derden. Zie de volgende verwante documenten voor meer informatie:
 
-- [[!DNL Oracle Service Cloud]](connectors/customer-success/oracle-service-cloud.md) [!BADGE  Partij ]{type=Informative}
-- [[!DNL Salesforce Service Cloud]](connectors/customer-success/salesforce-service-cloud.md) [!BADGE  Partij ]{type=Informative}
-- [[!DNL ServiceNow]](connectors/customer-success/servicenow.md) [!BADGE  Partij ]{type=Informative}
-- [[!DNL Zendesk]](connectors/customer-success/zendesk.md) [!BADGE  Partij ]{type=Informative}
+- [[!DNL Oracle Service Cloud]](connectors/customer-success/oracle-service-cloud.md) [!BADGE &#x200B; Partij &#x200B;]{type=Informative}
+- [[!DNL Salesforce Service Cloud]](connectors/customer-success/salesforce-service-cloud.md) [!BADGE &#x200B; Partij &#x200B;]{type=Informative}
+- [[!DNL ServiceNow]](connectors/customer-success/servicenow.md) [!BADGE &#x200B; Partij &#x200B;]{type=Informative}
+- [[!DNL Zendesk]](connectors/customer-success/zendesk.md) [!BADGE &#x200B; Partij &#x200B;]{type=Informative}
 
 ### Database {#database}
 
 Experience Platform biedt ondersteuning voor het opnemen van gegevens uit een database van derden. Zie de volgende verwante documenten voor meer informatie over specifieke bronschakelaars:
 
-- [[!DNL Apache Hive on Azure HDInsights]](connectors/databases/hive.md) [!BADGE  Partij ]{type=Informative}
-- [[!DNL Apache Spark on Azure HDInsights]](connectors/databases/spark.md) [!BADGE  Partij ]{type=Informative}
-- [[!DNL Azure Data Explorer]](connectors/databases/data-explorer.md) [!BADGE  Partij ]{type=Informative}
-- [[!DNL Azure Table Storage]](connectors/databases/ats.md) [!BADGE  Partij ]{type=Informative}
-- [[!DNL Couchbase]](connectors/databases/couchbase.md) [!BADGE  Partij ]{type=Informative}
-- [[!DNL GreenPlum]](connectors/databases/greenplum.md) [!BADGE  Partij ]{type=Informative}
-- [[!DNL HP Vertica]](connectors/databases/hp-vertica.md) [!BADGE  Partij ]{type=Informative}
-- [[!DNL IBM DB2]](connectors/databases/ibm-db2.md) [!BADGE  Partij ]{type=Informative}
-- [[!DNL MariaDB]](connectors/databases/mariadb.md) [!BADGE  Partij ]{type=Informative}
-- [[!DNL Microsoft SQL Server]](connectors/databases/sql-server.md) [!BADGE  Partij ]{type=Informative}
-- [[!DNL MySQL]](connectors/databases/mysql.md) [!BADGE  Partij ]{type=Informative}
-- [[!DNL Oracle]](connectors/databases/oracle.md) [!BADGE  Partij ]{type=Informative}
-- [[!DNL Phoenix]](connectors/databases/phoenix.md) [!BADGE  Partij ]{type=Informative}
-- [[!DNL PostgreSQL]](connectors/databases/postgres.md) [!BADGE  Partij ]{type=Informative}
-- [[!DNL Teradata Vantage]](connectors/databases/teradata-vantage.md) [!BADGE  Partij ]{type=Informative}
+- [[!DNL Apache Hive on Azure HDInsights]](connectors/databases/hive.md) [!BADGE &#x200B; Partij &#x200B;]{type=Informative}
+- [[!DNL Apache Spark on Azure HDInsights]](connectors/databases/spark.md) [!BADGE &#x200B; Partij &#x200B;]{type=Informative}
+- [[!DNL Azure Data Explorer]](connectors/databases/data-explorer.md) [!BADGE &#x200B; Partij &#x200B;]{type=Informative}
+- [[!DNL Azure Table Storage]](connectors/databases/ats.md) [!BADGE &#x200B; Partij &#x200B;]{type=Informative}
+- [[!DNL Couchbase]](connectors/databases/couchbase.md) [!BADGE &#x200B; Partij &#x200B;]{type=Informative}
+- [[!DNL GreenPlum]](connectors/databases/greenplum.md) [!BADGE &#x200B; Partij &#x200B;]{type=Informative}
+- [[!DNL HP Vertica]](connectors/databases/hp-vertica.md) [!BADGE &#x200B; Partij &#x200B;]{type=Informative}
+- [[!DNL IBM DB2]](connectors/databases/ibm-db2.md) [!BADGE &#x200B; Partij &#x200B;]{type=Informative}
+- [[!DNL MariaDB]](connectors/databases/mariadb.md) [!BADGE &#x200B; Partij &#x200B;]{type=Informative}
+- [[!DNL Microsoft SQL Server]](connectors/databases/sql-server.md) [!BADGE &#x200B; Partij &#x200B;]{type=Informative}
+- [[!DNL MySQL]](connectors/databases/mysql.md) [!BADGE &#x200B; Partij &#x200B;]{type=Informative}
+- [[!DNL Oracle]](connectors/databases/oracle.md) [!BADGE &#x200B; Partij &#x200B;]{type=Informative}
+- [[!DNL Phoenix]](connectors/databases/phoenix.md) [!BADGE &#x200B; Partij &#x200B;]{type=Informative}
+- [[!DNL PostgreSQL]](connectors/databases/postgres.md) [!BADGE &#x200B; Partij &#x200B;]{type=Informative}
+- [[!DNL Teradata Vantage]](connectors/databases/teradata-vantage.md) [!BADGE &#x200B; Partij &#x200B;]{type=Informative}
 
 ### Gegevens- en identiteitspartners {#data-partner}
 
 Experience Platform biedt ondersteuning voor het opnemen van gegevens van een data- en identiteitspartner. Zie de volgende verwante documenten voor meer informatie over specifieke bronschakelaars:
 
-- [[!DNL Acxiom Data Ingestion]](connectors/data-partners/acxiom-data-ingestion.md) [!BADGE  Partij ]{type=Informative}
-- [[!DNL Acxiom Prospecting Data Import]](connectors/data-partners/acxiom-prospecting-data-import.md) [!BADGE  Partij ]{type=Informative}
-- [[!DNL Algolia User Profiles]](connectors/data-partners/algolia-user-profiles.md) [!BADGE  Partij ]{type=Informative}
-- [[!DNL Bombora Intent]](connectors/data-partners/bombora.md) [!BADGE  Partij ]{type=Informative}
-- [[!DNL Demandbase Intent]](connectors/data-partners/demandbase.md) [!BADGE  Partij ]{type=Informative}
-- [[!DNL Merkury Enterprise Identity Resolution]](connectors/data-partners/merkury.md) [!BADGE  Partij ]{type=Informative}
+- [[!DNL Acxiom Data Ingestion]](connectors/data-partners/acxiom-data-ingestion.md) [!BADGE &#x200B; Partij &#x200B;]{type=Informative}
+- [[!DNL Acxiom Prospecting Data Import]](connectors/data-partners/acxiom-prospecting-data-import.md) [!BADGE &#x200B; Partij &#x200B;]{type=Informative}
+- [[!DNL Algolia User Profiles]](connectors/data-partners/algolia-user-profiles.md) [!BADGE &#x200B; Partij &#x200B;]{type=Informative}
+- [[!DNL Bombora Intent]](connectors/data-partners/bombora.md) [!BADGE &#x200B; Partij &#x200B;]{type=Informative}
+- [[!DNL Demandbase Intent]](connectors/data-partners/demandbase.md) [!BADGE &#x200B; Partij &#x200B;]{type=Informative}
+- [[!DNL Merkury Enterprise Identity Resolution]](connectors/data-partners/merkury.md) [!BADGE &#x200B; Partij &#x200B;]{type=Informative}
 
 ### eCommerce {#ecommerce}
 
 Experience Platform biedt ondersteuning voor het opnemen van gegevens van een eCommerce-systeem van derden. Zie de volgende verwante documenten voor meer informatie over specifieke bronschakelaars:
 
-- [[!DNL SAP Commerce]](connectors/ecommerce/sap-commerce.md) [!BADGE  Partij ]{type=Informative}
-- [[!DNL Shopify]](connectors/ecommerce/shopify.md) [!BADGE  Partij ]{type=Informative}
-- [[!DNL Shopify]](connectors/ecommerce/shopify-streaming.md) [!BADGE  Streaming ]{type=Positive}
+- [[!DNL SAP Commerce]](connectors/ecommerce/sap-commerce.md) [!BADGE &#x200B; Partij &#x200B;]{type=Informative}
+- [[!DNL Shopify]](connectors/ecommerce/shopify.md) [!BADGE &#x200B; Partij &#x200B;]{type=Informative}
+- [[!DNL Shopify]](connectors/ecommerce/shopify-streaming.md) [!BADGE &#x200B; Streaming &#x200B;]{type=Positive}
 
 ### Lokaal systeem {#local-system}
 
@@ -172,15 +172,15 @@ Experience Platform biedt ondersteuning voor het opnemen van gegevens van uw lok
 
 Experience Platform biedt ondersteuning voor het opnemen van gegevens van een derde marketingautomatiseringssysteem. Zie de volgende verwante documenten voor meer informatie over specifieke bronschakelaars:
 
-- [[!DNL Braze]](connectors/marketing-automation/braze.md) [!BADGE  Streaming ]{type=Positive}
-- [[!DNL Chatlio]](connectors/marketing-automation/chatlio-webhook.md) [!BADGE  Streaming ]{type=Positive}
-- [[!DNL Customer.io]](connectors/marketing-automation/customerio-webhook.md) [!BADGE  Streaming ]{type=Positive}
-- [[!DNL HubSpot]](connectors/marketing-automation/hubspot.md) [!BADGE  Partij ]{type=Informative}
-- [[!DNL Mailchimp]](connectors/marketing-automation/mailchimp.md) [!BADGE  Partij ]{type=Informative}
-- [[!DNL Oracle Eloqua]](connectors/marketing-automation/oracle-eloqua.md) [!BADGE  Partij ]{type=Informative}
-- [[!DNL Oracle NetSuite]](connectors/marketing-automation/oracle-netsuite.md) [!BADGE  Partij ]{type=Informative}
-- [[!DNL PathFactory]](connectors/marketing-automation/pathfactory.md) [!BADGE  Partij ]{type=Informative}
-- [[!DNL Salesforce Marketing Cloud]](connectors/marketing-automation/salesforce-marketing-cloud.md) [!BADGE  Partij ]{type=Informative}
+- [[!DNL Braze]](connectors/marketing-automation/braze.md) [!BADGE &#x200B; Streaming &#x200B;]{type=Positive}
+- [[!DNL Chatlio]](connectors/marketing-automation/chatlio-webhook.md) [!BADGE &#x200B; Streaming &#x200B;]{type=Positive}
+- [[!DNL Customer.io]](connectors/marketing-automation/customerio-webhook.md) [!BADGE &#x200B; Streaming &#x200B;]{type=Positive}
+- [[!DNL HubSpot]](connectors/marketing-automation/hubspot.md) [!BADGE &#x200B; Partij &#x200B;]{type=Informative}
+- [[!DNL Mailchimp]](connectors/marketing-automation/mailchimp.md) [!BADGE &#x200B; Partij &#x200B;]{type=Informative}
+- [[!DNL Oracle Eloqua]](connectors/marketing-automation/oracle-eloqua.md) [!BADGE &#x200B; Partij &#x200B;]{type=Informative}
+- [[!DNL Oracle NetSuite]](connectors/marketing-automation/oracle-netsuite.md) [!BADGE &#x200B; Partij &#x200B;]{type=Informative}
+- [[!DNL PathFactory]](connectors/marketing-automation/pathfactory.md) [!BADGE &#x200B; Partij &#x200B;]{type=Informative}
+- [[!DNL Salesforce Marketing Cloud]](connectors/marketing-automation/salesforce-marketing-cloud.md) [!BADGE &#x200B; Partij &#x200B;]{type=Informative}
 <!-- 
 - [[!DNL Oracle Responsys]](connectors/marketing-automation/oracle-responsys.md)
 -->
@@ -189,22 +189,22 @@ Experience Platform biedt ondersteuning voor het opnemen van gegevens van een de
 
 Experience Platform biedt ondersteuning voor het opnemen van gegevens uit een betalingssysteem van derden. Zie de volgende verwante documenten voor meer informatie over specifieke bronschakelaars:
 
-- [[!DNL PayPal]](connectors/payments/paypal.md) [!BADGE  Partij ]{type=Informative}
-- [[!DNL Square]](connectors/payments/square.md) [!BADGE  Partij ]{type=Informative}
-- [[!DNL Stripe]](connectors/payments/stripe.md) [!BADGE  Partij ]{type=Informative}
+- [[!DNL PayPal]](connectors/payments/paypal.md) [!BADGE &#x200B; Partij &#x200B;]{type=Informative}
+- [[!DNL Square]](connectors/payments/square.md) [!BADGE &#x200B; Partij &#x200B;]{type=Informative}
+- [[!DNL Stripe]](connectors/payments/stripe.md) [!BADGE &#x200B; Partij &#x200B;]{type=Informative}
 
 ### Streaming {#streaming}
 
 Experience Platform biedt ondersteuning voor het opnemen van gegevens uit streamingbronnen. Zie de volgende verwante documenten voor meer informatie over specifieke bronschakelaars:
 
-- [[!DNL HTTP API]](connectors/streaming/http.md) [!BADGE  Streaming ]{type=Positive}
+- [[!DNL HTTP API]](connectors/streaming/http.md) [!BADGE &#x200B; Streaming &#x200B;]{type=Positive}
 
 ### Protocollen {#protocols}
 
 Experience Platform verleent steun voor het opnemen van gegevens van een systeem van derdeprotocollen. Zie de volgende verwante documenten voor meer informatie over specifieke bronschakelaars:
 
-- [[!DNL Generic OData]](connectors/protocols/odata.md) [!BADGE  Partij ]{type=Informative}
-- [[!DNL Generic REST API]](connectors/protocols/generic-rest.md) [!BADGE  Partij ]{type=Informative}
+- [[!DNL Generic OData]](connectors/protocols/odata.md) [!BADGE &#x200B; Partij &#x200B;]{type=Informative}
+- [[!DNL Generic REST API]](connectors/protocols/generic-rest.md) [!BADGE &#x200B; Partij &#x200B;]{type=Informative}
 
 ## Toegangsbeheer voor bronnen bij gegevensinvoer
 

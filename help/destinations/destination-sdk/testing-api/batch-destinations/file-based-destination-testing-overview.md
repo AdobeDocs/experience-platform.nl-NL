@@ -14,7 +14,7 @@ ht-degree: 0%
 
 De op een bestand gebaseerde API voor het testen van doelen is een reeks eindpunten die u kunt gebruiken om de configuratie van uw op een bestand gebaseerde doelen te valideren die via de Destination SDK zijn gemaakt.
 
-Wij adviseren gebruikend deze hulpmiddelen om uw configuratie te bevestigen alvorens [ ](../../guides/submit-destination.md) uw bestemming voor overzicht aan Adobe voor te leggen.
+Wij adviseren gebruikend deze hulpmiddelen om uw configuratie te bevestigen alvorens [&#128279;](../../guides/submit-destination.md) uw bestemming voor overzicht aan Adobe voor te leggen.
 
 Voor de beste testresultaten raden we u aan deze API te gebruiken op basis van het onderstaande stroomdiagram.
 

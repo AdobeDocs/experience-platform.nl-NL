@@ -48,7 +48,7 @@ Maak het aangepaste veld van het type `Simple` met het veldgegevenstype `Single 
 Verwijs naar [!DNL Dynamics 365] [ creeer of geef een gebied (attribuut) uit ](https://docs.microsoft.com/en-us/dynamics365/customerengagement/on-premises/customize/create-edit-fields?view=op-9-1) documentatie als u extra begeleiding nodig hebt.
 
 Schrijf de **[!UICONTROL Customization prefix]** op van het aangepaste veld dat u in [!DNL Dynamics 365] maakt. U zult dit voorvoegsel tijdens [ nodig hebben vult in bestemmingsdetails ](#destination-details) stap. Verwijs naar [ creeer en geef gebieden ](https://learn.microsoft.com/en-us/dynamics365/customerengagement/on-premises/customize/create-edit-fields?view=op-9-1#create-and-edit-fields) sectie van de [!DNL Dynamics 365] documentatie voor verdere details uit.
-{de het schermschot van de Dynamiek 365 UI die van de aanpassingsprefix toont.](../../assets/catalog/crm/microsoft-dynamics-365/dynamics-365-customization-prefix.png)![
+&lbrace;de het schermschot van de Dynamiek 365 UI die van de aanpassingsprefix toont.![&#128279;](../../assets/catalog/crm/microsoft-dynamics-365/dynamics-365-customization-prefix.png)
 
 Hieronder ziet u een voorbeeldinstelling in [!DNL Dynamics 365] :
 ![ Dynamiek 365 UI het schermschot die de douanegebieden tonen.](../../assets/catalog/crm/microsoft-dynamics-365/dynamics-365-fields.png)
@@ -120,7 +120,7 @@ Kies in **[!UICONTROL Destinations]** > **[!UICONTROL Catalog]** Zoeken naar [!D
 ### Verifiëren voor bestemming {#authenticate}
 
 Selecteer **[!UICONTROL Connect to destination]** als u wilt verifiëren bij het doel.
-{het schermschot van 0} Experience Platform UI die toont hoe te voor authentiek te verklaren.](../../assets/catalog/crm/microsoft-dynamics-365/authenticate-destination.png)![
+{het schermschot van 0} Experience Platform UI die toont hoe te voor authentiek te verklaren.![&#128279;](../../assets/catalog/crm/microsoft-dynamics-365/authenticate-destination.png)
 
 Vul de vereiste velden hieronder in. Verwijs naar de [ Dynamica 365 van de Verzameling geloofsbrieven ](#gather-credentials) sectie voor om het even welke begeleiding.
 * **[!UICONTROL Client ID]**: De [!DNL Dynamics 365] client-id voor uw [!DNL Azure Active Directory] -toepassing.
@@ -134,7 +134,7 @@ Als de opgegeven gegevens geldig zijn, geeft de gebruikersinterface de status **
 ### Doelgegevens invullen {#destination-details}
 
 Als u details voor de bestemming wilt configureren, vult u de vereiste en optionele velden hieronder in. Een sterretje naast een veld in de gebruikersinterface geeft aan dat het veld verplicht is.
-{het schermschot van 0} Experience Platform UI die de bestemmingsdetails toont.](../../assets/catalog/crm/microsoft-dynamics-365/destination-details.png)![
+{het schermschot van 0} Experience Platform UI die de bestemmingsdetails toont.![&#128279;](../../assets/catalog/crm/microsoft-dynamics-365/destination-details.png)
 
 * **[!UICONTROL Name]**: Een naam waarmee u dit doel in de toekomst herkent.
 * **[!UICONTROL Description]**: Een beschrijving die u zal helpen deze bestemming in de toekomst identificeren.
@@ -167,6 +167,7 @@ Als u uw publieksgegevens correct vanuit Adobe Experience Platform naar de [!DNL
 
 1. Selecteer in het **[!UICONTROL Select target field]** -venster het type doelveld waaraan u het bronveld wilt toewijzen.
    * **[!UICONTROL Select identity namespace]**: selecteer deze optie om het bronveld toe te wijzen aan een naamruimte in de lijst.
+
      ![ het schermschot van Experience Platform UI die de afbeelding van het Doel voor contact tonen.](../../assets/catalog/crm/microsoft-dynamics-365/target-mapping-contactid.png)
 
    * Voeg de volgende toewijzing toe tussen uw XDM-profielschema en uw [!DNL Dynamics 365] -instantie:
@@ -176,7 +177,8 @@ Als u uw publieksgegevens correct vanuit Adobe Experience Platform naar de [!DNL
      | `contactid` | `contactid` | Ja |
 
    * **[!UICONTROL Select custom attributes]**: selecteer deze optie om het bronveld toe te wijzen aan een aangepast kenmerk dat u in het veld **[!UICONTROL Attribute name]** definieert. Verwijs naar [[!DNL Dynamics 365]  documentatie ](https://docs.microsoft.com/en-us/dynamics365/customerengagement/on-premises/developer/entities/contact?view=op-9-1#entity-properties) voor een uitvoerige lijst van gesteunde attributen.
-     {het schermschot van 0} Experience Platform UI die de afbeelding van het Doel voor e-mail toont.](../../assets/catalog/crm/microsoft-dynamics-365/target-mapping-email.png)![
+
+     {het schermschot van 0} Experience Platform UI die de afbeelding van het Doel voor e-mail toont.![&#128279;](../../assets/catalog/crm/microsoft-dynamics-365/target-mapping-email.png)
 
      >[!IMPORTANT]
      >
@@ -206,14 +208,14 @@ U doet dit door elk publiek te selecteren en vervolgens het bijbehorende aangepa
 >De waarde die voor de **[!UICONTROL Mapping ID]** wordt gebruikt, moet exact overeenkomen met de naam van het aangepaste veldkenmerk dat in [!DNL Dynamics 365] is gemaakt. Zie [[!DNL Dynamics 365]  documentatie ](https://docs.microsoft.com/en-us/dynamics365/customerengagement/on-premises/customize/create-edit-fields?view=op-9-1) als u begeleiding bij het vinden van uw attributen van het douanegebied nodig hebt.
 
 Hieronder ziet u een voorbeeld:
-{het screenshot voorbeeld van 0} Experience Platform UI die het publiek van het Programma tonen uitvoer.](../../assets/catalog/crm/microsoft-dynamics-365/schedule-segment-export.png)![
+{het screenshot voorbeeld van 0} Experience Platform UI die het publiek van het Programma tonen uitvoer.![&#128279;](../../assets/catalog/crm/microsoft-dynamics-365/schedule-segment-export.png)
 
 ## Gegevens exporteren valideren {#exported-data}
 
 Volg onderstaande stappen om te controleren of u de bestemming correct hebt ingesteld:
 
 1. Selecteer **[!UICONTROL Destinations]** > **[!UICONTROL Browse]** om naar de lijst met doelen te navigeren.
-   {het schermschot van 0} Experience Platform UI die Browse Doelen toont.](../../assets/catalog/crm/microsoft-dynamics-365/browse-destinations.png)![
+   {het schermschot van 0} Experience Platform UI die Browse Doelen toont.![&#128279;](../../assets/catalog/crm/microsoft-dynamics-365/browse-destinations.png)
 
 1. Selecteer het doel en bevestig dat de status **[!UICONTROL enabled]** is.
    ![ het schermschot van Experience Platform UI die de Looppas van Doelen Dataflow toont.](../../assets/catalog/crm/microsoft-dynamics-365/destination-dataflow-run.png)
@@ -222,10 +224,10 @@ Volg onderstaande stappen om te controleren of u de bestemming correct hebt inge
    ![ het schermschot van Experience Platform UI die de Gegevens van de Activering van Doelen toont.](../../assets/catalog/crm/microsoft-dynamics-365/destinations-activation-data.png)
 
 1. Controleer het overzicht van het publiek en zorg ervoor dat het aantal profielen overeenkomt met het aantal profielen dat in het publiek is gemaakt.
-   {het schermschot van 0} Experience Platform UI die publiek toont.](../../assets/catalog/crm/microsoft-dynamics-365/segment.png)![
+   {het schermschot van 0} Experience Platform UI die publiek toont.![&#128279;](../../assets/catalog/crm/microsoft-dynamics-365/segment.png)
 
 1. Meld u aan bij de [!DNL Dynamics 365] -website, navigeer naar de pagina [!DNL Customers] > [!DNL Contacts] en controleer of de profielen van het publiek zijn toegevoegd. U kunt zien dat elke publieksstatus in [!DNL Dynamics 365] met de overeenkomstige publieksstatus van Experience Platform werd bijgewerkt, die op de **[!UICONTROL Mapping ID]** waarde wordt gebaseerd die tijdens de [ publiek wordt verstrekt die ](#schedule-audience-export-example) stap plant.
-   {de het schermschot van de Dynamiek 365 UI die de pagina van Contacten met bijgewerkte publieksstatussen toont.](../../assets/catalog/crm/microsoft-dynamics-365/contacts.png)![
+   &lbrace;de het schermschot van de Dynamiek 365 UI die de pagina van Contacten met bijgewerkte publieksstatussen toont.![&#128279;](../../assets/catalog/crm/microsoft-dynamics-365/contacts.png)
 
 ## Gegevensgebruik en -beheer {#data-usage-governance}
 

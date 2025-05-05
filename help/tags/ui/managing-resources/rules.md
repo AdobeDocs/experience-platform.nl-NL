@@ -53,7 +53,7 @@ Maak een regel door op te geven welke handelingen worden uitgevoerd als aan een 
 
 >[!TIP]
 >
->U kunt extra bronnen weergeven die beschikbaar zijn voor meer informatie over deze functie door een info](../../images/ui/event-forwarding/overview/about.png) over te selecteren ![in het rechterdeelvenster.
+>U kunt extra bronnen weergeven die beschikbaar zijn voor meer informatie over deze functie door een info![&#128279;](../../images/ui/event-forwarding/overview/about.png) over te selecteren in het rechterdeelvenster.
 
 1. Open het [!UICONTROL Rules] tabblad en selecteer **[!UICONTROL Create New Rule]** vervolgens .
 
@@ -119,7 +119,7 @@ Maak een regel door op te geven welke handelingen worden uitgevoerd als aan een 
 
 1. Controleer uw regel en selecteer vervolgens **[!UICONTROL Save Rule]** .
 
-   Later, wanneer u [ ](../publishing/overview.md) publiceert, zult u deze regel aan een bibliotheek toevoegen en het opstellen.
+   Later, wanneer u [&#128279;](../publishing/overview.md) publiceert, zult u deze regel aan een bibliotheek toevoegen en het opstellen.
 
 Wanneer het creëren van of het uitgeven van regels, kunt u sparen en aan uw [ actieve bibliotheek ](../publishing/libraries.md#active-library) bouwen. Hiermee slaat u de wijziging onmiddellijk op in uw bibliotheek en wordt een build uitgevoerd. De status van de build wordt weergegeven.
 

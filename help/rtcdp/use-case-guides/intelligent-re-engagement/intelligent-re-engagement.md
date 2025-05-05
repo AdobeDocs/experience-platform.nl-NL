@@ -126,7 +126,7 @@ Het schema met klantkenmerken wordt vertegenwoordigd door een [[!UICONTROL XDM I
 
 +++Groepen van het Toegelaten en van het Referentieveld (de Groep van het Gebied)
 
-De [ Inhoud en de 1} het gebiedsgroep van Voorkeur {verstrekt één enkel voorwerp-type gebied, toestemmingen, om toestemming en voorkeurinformatie te vangen.](/help/xdm/field-groups//profile/consents.md)
+De [ Inhoud en de 1&rbrace; het gebiedsgroep van Voorkeur &lbrace;verstrekt één enkel voorwerp-type gebied, toestemmingen, om toestemming en voorkeurinformatie te vangen.](/help/xdm/field-groups//profile/consents.md)
 
 | Velden | Vereiste |
 | --- | --- |
@@ -165,7 +165,7 @@ De klasse [[!UICONTROL XDM ExperienceEvent]](/help/xdm/classes/experienceevent.m
 
 +++Details eindgebruiker-id (veldgroep)
 
-De ](/help/xdm/field-groups/event/enduserids.md) het gebiedsgroep van de Details van de Gebruiker van het 0} Eind {wordt gebruikt om de identiteitsinformatie van een individu over verscheidene toepassingen van Adobe te beschrijven.[
+De [&#128279;](/help/xdm/field-groups/event/enduserids.md) het gebiedsgroep van de Details van de Gebruiker van het 0&rbrace; Eind &lbrace;wordt gebruikt om de identiteitsinformatie van een individu over verscheidene toepassingen van Adobe te beschrijven.
 
 | Velden | Beschrijving |
 | --- | --- |
@@ -281,7 +281,7 @@ De klasse [[!UICONTROL XDM ExperienceEvent]](/help/xdm/classes/experienceevent.m
 
 +++Adobe Analytics ExperienceEvent-sjabloon (veldgroep)
 
-De ](/help/xdm/field-groups/event/analytics-full-extension.md) het gebiedsgroep van 1} van Adobe Analytics ExperienceEvent vangt gemeenschappelijke metriek die door Adobe Analytics worden verzameld.[
+De [&#128279;](/help/xdm/field-groups/event/analytics-full-extension.md) het gebiedsgroep van 1&rbrace; van Adobe Analytics ExperienceEvent vangt gemeenschappelijke metriek die door Adobe Analytics worden verzameld.
 
 | Velden | Beschrijving |
 | --- | --- |

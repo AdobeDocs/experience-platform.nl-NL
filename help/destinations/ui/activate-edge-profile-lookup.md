@@ -43,7 +43,7 @@ Voor het opzoeken van Edge-profielen gelden de specifieke prestatieaanwijzingen 
 
 ## Stap 1: Een gegevensstroom maken en configureren {#create-datastream}
 
-Volg de stappen in de ](../../datastreams/configure.md#create-a-datastream) documentatie van de 0} gegevensstroomconfiguratie {om een nieuwe gegevensstroom met de volgende **[!UICONTROL Service]** montages tot stand te brengen:[
+Volg de stappen in de [&#128279;](../../datastreams/configure.md#create-a-datastream) documentatie van de 0&rbrace; gegevensstroomconfiguratie &lbrace;om een nieuwe gegevensstroom met de volgende **[!UICONTROL Service]** montages tot stand te brengen:
 
 * **[!UICONTROL Service]**: [!UICONTROL Adobe Experience Platform]
 * **[!UICONTROL Personalization Destinations]**: Enabled
@@ -54,7 +54,7 @@ Volg de stappen in de ](../../datastreams/configure.md#create-a-datastream) docu
     >
     >Enabling edge segmentation limits the maximum number of lookup requests to 1500 request per second. If you need a higher request throughput, disable edge segmentation for your datastream. See the [guardrails documentation](../guardrails.md#edge-destinations-activation) for detailed information. -->
 
-  {het beeld van 0} Experience Platform UI die het scherm van de gegevensstroomconfiguratie toont.](../assets/ui/activate-edge-profile-lookup/datastream-config.png)![
+  {het beeld van 0} Experience Platform UI die het scherm van de gegevensstroomconfiguratie toont.![&#128279;](../assets/ui/activate-edge-profile-lookup/datastream-config.png)
 
 
 ## Stap 2: Vorm uw publiek voor randevaluatie {#audience-edge-evaluation}

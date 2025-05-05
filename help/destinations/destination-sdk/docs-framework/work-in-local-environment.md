@@ -17,7 +17,7 @@ In de instructies op deze pagina ziet u hoe u een teksteditor kunt gebruiken om 
 >
 >Zie ook de ondersteunende documentatie in de handleiding voor contribuanten van Adobe:
 >* [ installeer Git en de Authoring hulpmiddelen van de Prijsverhoging ](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/install-tools.html)
->* {de plaats van de Git van de opstelling plaatselijk voor documentatie ](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html)[
+>* &lbrace;de plaats van de Git van de opstelling plaatselijk voor documentatie [&#128279;](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html)
 >* [ GitHub bijdragewerkschema voor belangrijke veranderingen ](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/full-workflow.html).
 
 ## Verbind met GitHub en opstelling uw lokale auteursmilieu {#set-up-environment}
@@ -27,7 +27,7 @@ In de instructies op deze pagina ziet u hoe u een teksteditor kunt gebruiken om 
 
    ![ de documentatiebewaarplaats van Adobe van het Fork ](../assets/docs-framework/ssd-fork-repository.gif)
 
-3. Kloont de opslagplaats naar uw lokale computer. Selecteer **Code > HTTPS > Open met Desktop GitHub**, zoals hieronder getoond. Zorg ervoor u ](https://desktop.github.com/) geïnstalleerde Desktop GitHub [ hebt. Voor verdere verwijzing, lees [ een lokale kloon van de bewaarplaats ](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html#create-a-local-clone-of-the-repository) in de de contributorgids van Adobe creëren.
+3. Kloont de opslagplaats naar uw lokale computer. Selecteer **Code > HTTPS > Open met Desktop GitHub**, zoals hieronder getoond. Zorg ervoor u [&#128279;](https://desktop.github.com/) geïnstalleerde Desktop GitHub  hebt. Voor verdere verwijzing, lees [ een lokale kloon van de bewaarplaats ](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html#create-a-local-clone-of-the-repository) in de de contributorgids van Adobe creëren.
 
    ![ de documentatiebewaarplaats van Adobe van de Kloon aan lokaal milieu ](../assets/docs-framework/clone-local.png)
 

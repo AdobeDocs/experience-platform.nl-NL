@@ -24,7 +24,7 @@ Voor informatie over hoe te om de plaats en de grootte van widgets te wijzigen d
 
 ## De widgetbibliotheek openen {#access}
 
-Van om het even welk dashboard (bijvoorbeeld, het dashboard van Profielen), selecteer **[!UICONTROL Add widget]** om direct aan de widgetbibliotheek te navigeren waar u widgets [ ](#add-widgets) aan uw dashboard kunt toevoegen.
+Van om het even welk dashboard (bijvoorbeeld, het dashboard van Profielen), selecteer **[!UICONTROL Add widget]** om direct aan de widgetbibliotheek te navigeren waar u widgets [&#128279;](#add-widgets) aan uw dashboard kunt toevoegen.
 
 ![ het lusje van het het overzichtsoverzicht van Profielen met de Add benadrukte widgetknoop.](../images/customization/profiles-overview-add-widget.png)
 

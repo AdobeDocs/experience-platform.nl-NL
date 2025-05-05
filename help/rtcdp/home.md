@@ -27,7 +27,7 @@ Samenstelling van Federated-doelgroep stelt ondernemingen in staat om gegevens s
 
 [![ beeld ](assets/do-not-localize/learn-more-button.svg) ](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/home)
 
->] Van het Geval gebruik Playbooks [!TAB 
+>[!TAB Van het Geval gebruik Playbooks]  
 
 De [!UICONTROL Use Case Playbooks]-functionaliteit is nu algemeen beschikbaar voor alle Real-Time CDP- en Adobe Journey Optimizer-klanten. [!UICONTROL Use Case Playbooks] zijn ontworpen om gebruikers te helpen uitdagingen te overwinnen, wanneer ze met Real-time Customer Data Platform of Adobe Journey Optimizer beginnen. Als u niet zeker weet waar u moet beginnen of hoe u de juiste assets voor uw gewenste gebruiksscenario&#39;s kunt maken, biedt Playbooks voor gebruiksscenario&#39;s inspiratie en maakt verschillende assets die u kunt testen en in productieomgevingen importeren, zodra ze klaar zijn.
 

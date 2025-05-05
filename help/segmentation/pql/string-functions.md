@@ -247,7 +247,7 @@ person.name.matches("(?i)^John")
 
 >[!NOTE]
 >
->Als u regelmatige uitdrukkingsfuncties zoals `\w` gebruikt, moet u **** ontsnappen backslash karakter. Dus in plaats van alleen te schrijven `\w` moet u een extra backslash en schrijven `\\w` opnemen.
+>Als u regelmatige uitdrukkingsfuncties zoals `\w` gebruikt, moet u **&#x200B;**&#x200B;ontsnappen backslash karakter. Dus in plaats van alleen te schrijven `\w` moet u een extra backslash en schrijven `\\w` opnemen.
 
 ## Groep met reguliere expressies
 
@@ -269,7 +269,7 @@ emailAddress.regexGroup("@(\\w+)", 1)
 
 >[!NOTE]
 >
->Als u regelmatige uitdrukkingsfuncties zoals `\w` gebruikt, moet u **** ontsnappen backslash karakter. Dus in plaats van alleen te schrijven `\w` moet u een extra backslash en schrijven `\\w` opnemen.
+>Als u regelmatige uitdrukkingsfuncties zoals `\w` gebruikt, moet u **&#x200B;**&#x200B;ontsnappen backslash karakter. Dus in plaats van alleen te schrijven `\w` moet u een extra backslash en schrijven `\\w` opnemen.
 
 ## Volgende stappen
 

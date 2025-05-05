@@ -15,7 +15,7 @@ Adobe Experience Platform migreert naar Gen2 Data Lake. Dit is een nieuwe genera
 
 ## Gevolgen voor de gebruiker
 
-Terwijl Adobe het meer van Gegevens van Gen1 aan Gen 2 migreert, zullen de gebruikers **** van het meer van Gegevens kunnen lezen, maar alle mogelijkheden die **** in het meer van Gegevens schrijft zullen worden beïnvloed. Hieronder volgt een lijst met beïnvloede mogelijkheden:
+Terwijl Adobe het meer van Gegevens van Gen1 aan Gen 2 migreert, zullen de gebruikers **&#x200B;**&#x200B;van het meer van Gegevens kunnen lezen, maar alle mogelijkheden die **&#x200B;**&#x200B;in het meer van Gegevens schrijft zullen worden beïnvloed. Hieronder volgt een lijst met beïnvloede mogelijkheden:
 
 - **Bronnen**: De gegevens die van de bronnen en diverse werkschema&#39;s komen van de gegevensopname zullen worden vertraagd. Gebruikers zien hun gegevens nadat de migratie is voltooid.
 - **Dienst van de Vraag**: De gebruikers kunnen vragen uitvoeren maar zullen niet de output van de vraag in een dataset kunnen schrijven.

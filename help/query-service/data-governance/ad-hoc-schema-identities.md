@@ -76,6 +76,6 @@ Hieronder wordt een voorbeeld van een geretourneerde tabel weergegeven.
 
 In de volgende lijst worden belangrijke overwegingen beschreven voor het bijwerken van identiteiten in bestaande gegevenssets bij het gebruik van XDM.
 
-* Om een kolom als identiteit te specificeren, moet u **** ook namespace bepalen die als meta-gegevens voor de kolom moet worden bewaard.
+* Om een kolom als identiteit te specificeren, moet u **&#x200B;**&#x200B;ook namespace bepalen die als meta-gegevens voor de kolom moet worden bewaard.
 * XDM ondersteunt het opgeven van een kolomnaam in het naamruimtekenmerk niet.
-* Als uw schema het `identityMap` XDM gebied gebruikt, moet het wortel of top-level `identityMap` voorwerp **** als identiteit of primaire identiteit worden geëtiketteerd.
+* Als uw schema het `identityMap` XDM gebied gebruikt, moet het wortel of top-level `identityMap` voorwerp **&#x200B;**&#x200B;als identiteit of primaire identiteit worden geëtiketteerd.

@@ -118,7 +118,7 @@ Als u voor verificatie bij het doel wilt zorgen, vult u de vereiste velden hiero
 
 {style="table-layout:auto"}
 
-{het schermschot van 0} Experience Platform UI die toont hoe te voor authentiek te verklaren.](../../assets/catalog/email-marketing/mailchimp-interest-categories/authenticate-destination.png)![
+{het schermschot van 0} Experience Platform UI die toont hoe te voor authentiek te verklaren.![&#128279;](../../assets/catalog/email-marketing/mailchimp-interest-categories/authenticate-destination.png)
 
 Als de opgegeven gegevens geldig zijn, geeft de gebruikersinterface de status **[!UICONTROL Connected]** weer met een groen vinkje. Vervolgens kunt u verdergaan met de volgende stap.
 
@@ -126,7 +126,7 @@ Als de opgegeven gegevens geldig zijn, geeft de gebruikersinterface de status **
 
 Als u details voor de bestemming wilt configureren, vult u de vereiste en optionele velden hieronder in. Een sterretje naast een veld in de gebruikersinterface geeft aan dat het veld verplicht is.
 
-{het schermschot van 0} Experience Platform UI die de bestemmingsdetails toont.](../../assets/catalog/email-marketing/mailchimp-interest-categories/destination-details.png)![
+{het schermschot van 0} Experience Platform UI die de bestemmingsdetails toont.![&#128279;](../../assets/catalog/email-marketing/mailchimp-interest-categories/destination-details.png)
 
 | Veld | Beschrijving |
 | --- | --- |
@@ -192,7 +192,7 @@ Voer de onderstaande stappen uit om uw XDM-velden correct toe te wijzen aan de [
    U wilt bijvoorbeeld de waarde voor `country` bijwerken met de bestaande adresvelden `addr1` , `city` , `state` en `zip` van de contactpersoon als `132, My Street, Kingston` , `New York` , `New York` en `12401` . Om `country` bij te werken moet u de bestaande waarden met veranderingen *(als om het even welk)* en de nieuwe waarde voor land overgaan. De waarden in uw gegevensset moeten dus `132, My Street, Kingston`, `New York`, `New York`, `12401` en `US` zijn. Als u alleen `country` doorgeeft en geen waarden voor `addr1` , `city` , `state` en `zip` opgeeft, worden deze door `NULL` overschreven.
 
    Hieronder ziet u een voorbeeld met de voltooide toewijzingen:
-   {het schermschot van 0} Experience Platform UI die gebiedsafbeeldingen toont.](../../assets/catalog/email-marketing/mailchimp-interest-categories/mappings.png)![
+   {het schermschot van 0} Experience Platform UI die gebiedsafbeeldingen toont.![&#128279;](../../assets/catalog/email-marketing/mailchimp-interest-categories/mappings.png)
 
 Wanneer u klaar bent met het opgeven van de toewijzingen voor uw doelverbinding, selecteert u **[!UICONTROL Next]** .
 
@@ -202,14 +202,14 @@ Volg onderstaande stappen om te controleren of u de bestemming correct hebt inge
 
 * Meld u aan bij uw [[!DNL Mailchimp] ](https://login.mailchimp.com/) -account. Navigeer vervolgens naar de pagina **[!DNL Audience]** . Vouw vervolgens het menu **[!DNL Manage Contacts]** uit en selecteer **[!DNL Groups]** .
 
-{het schermschot van 0} Mailchimp UI die de de groepspagina van het Publiek toont.](../../assets/catalog/email-marketing/mailchimp-interest-categories/audience-groups.png)![
+{het schermschot van 0} Mailchimp UI die de de groepspagina van het Publiek toont.![&#128279;](../../assets/catalog/email-marketing/mailchimp-interest-categories/audience-groups.png)
 
 * Selecteer de groep en controleer of het geselecteerde publiek is gemaakt als categorieën met de publieksnaam uit Experience Platform, die kunnen worden gevolgd door een automatisch gegenereerd achtervoegsel.
    * Deze bestemming gebruikt de geselecteerde segmenten&#39; namen om de rentecategorie tot stand te brengen door [[!DNL Mailchimp]  te gebruiken voeg rentecategorie API ](https://mailchimp.com/developer/marketing/api/interest-categories/add-interest-category/) toe. Als u een nieuw doel maakt en hetzelfde publiek weer activeert, voegt [!DNL Mailchimp] een achtervoegsel toe om onderscheid te maken tussen de bestaande en de nieuwe segmenten.
 * Contacten waarvan de e-mails niet in de groep bestonden, worden toegevoegd aan de nieuwe categorie.
 * Voor contacten die reeds binnen de groep bestaan, worden de gegevens van het attributengebied bijgewerkt, en het contact toegevoegd aan de pas gecreëerde categorie.
 
-{het schermschot van 0} Mailchimp UI die de de groepscategorieën van het Publiek toont.](../../assets/catalog/email-marketing/mailchimp-interest-categories/audience-groups-category.png)![
+{het schermschot van 0} Mailchimp UI die de de groepscategorieën van het Publiek toont.![&#128279;](../../assets/catalog/email-marketing/mailchimp-interest-categories/audience-groups-category.png)
 
 ## Gegevensgebruik en -beheer {#data-usage-governance}
 

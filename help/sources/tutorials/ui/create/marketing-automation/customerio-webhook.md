@@ -57,7 +57,7 @@ Voordat u een [!DNL Customer.io] -bronverbinding maakt, moet u een bronschema op
 
 U moet er ook voor zorgen dat u een Experience Platform-schema maakt dat u voor uw bron kunt gebruiken. Zie het leerprogramma op [ creërend een schema van Experience Platform ](../../../../../xdm/schema/composition.md) voor uitvoerige stappen op hoe te om een schema tot stand te brengen.
 
-{het schermschot van 0} Experience Platform UI die een voorbeeldschema voor Customer.io toont ](../../../../images/tutorials/create/marketing-automation/customerio-webhook/schema.png)![
+{het schermschot van 0} Experience Platform UI die een voorbeeldschema voor Customer.io toont ![&#128279;](../../../../images/tutorials/create/marketing-automation/customerio-webhook/schema.png)
 
 ## Sluit uw [!DNL Customer.io] -account aan {#connect-account}
 
@@ -67,7 +67,7 @@ Gebruik het menu *[!UICONTROL Categories]* om bronnen op categorie te filteren. 
 
 Ga naar de categorie [!UICONTROL Marketing automation] om de [!DNL Customer.io] bronkaart te zien. Selecteer eerst **[!UICONTROL Add data]** .
 
-{het schermschot van 0} Experience Platform UI voor catalogus met Customer.io kaart ](../../../../images/tutorials/create/marketing-automation/customerio-webhook/catalog.png)![
+{het schermschot van 0} Experience Platform UI voor catalogus met Customer.io kaart ![&#128279;](../../../../images/tutorials/create/marketing-automation/customerio-webhook/catalog.png)
 
 ## Gegevens selecteren {#select-data}
 
@@ -176,8 +176,8 @@ Voer de onderstaande stappen uit om te controleren of u de bron juist hebt inges
 
 * U kunt de pagina [!DNL Customer.io] **[!UICONTROL Activity Logs]** controleren om de gebeurtenissen te identificeren die door [!DNL Customer.io] worden vastgelegd.
 
-{het schermschot van 0} Customer.io die activiteitenlogboeken tonen ](../../../../images/tutorials/create/marketing-automation/customerio-webhook/activity-logs.png)![
+{het schermschot van 0} Customer.io die activiteitenlogboeken tonen ![&#128279;](../../../../images/tutorials/create/marketing-automation/customerio-webhook/activity-logs.png)
 
 * Selecteer in de gebruikersinterface van Experience Platform de optie **[!UICONTROL View Dataflows]** naast het kaartmenu [!DNL Customer.io] in de catalogus met bronnen. Selecteer vervolgens **[!UICONTROL Preview dataset]** om de gegevens te verifiëren die zijn ingevoerd voor de gebeurtenissen die u in [!DNL Customer.io] hebt geselecteerd.
 
-{het schermschot van 0} Experience Platform UI die ingebedde gebeurtenissen ](../../../../images/tutorials/create/marketing-automation/customerio-webhook/platform-dataset.png) toont![
+{het schermschot van 0} Experience Platform UI die ingebedde gebeurtenissen ![&#128279;](../../../../images/tutorials/create/marketing-automation/customerio-webhook/platform-dataset.png) toont

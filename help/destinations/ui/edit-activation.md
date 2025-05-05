@@ -46,13 +46,13 @@ Voer de onderstaande stappen uit om door de bestaande activeringsgegevens te bla
 
 Met de schakeloptie **[!UICONTROL Enabled]/[!UICONTROL Disabled]** kunt u alle gegevens die u exporteert naar het doel starten of pauzeren.
 
-{het beeld van 0} Experience Platform UI die toegelaten/Gehandicapte dataflow looppas tonen knevel.](../assets/ui/edit-activation/enable-toggle.png)![
+{het beeld van 0} Experience Platform UI die toegelaten/Gehandicapte dataflow looppas tonen knevel.![&#128279;](../assets/ui/edit-activation/enable-toggle.png)
 
 ## Soorten publiek toevoegen aan een activeringsgegevensstroom {#add-audiences}
 
 Selecteer **[!UICONTROL Activate audiences]** in het rechterspoor om te wijzigen welk publiek naar het doel moet worden verzonden. Hiermee gaat u naar de activeringsworkflow.
 
-{het beeld van 0} Experience Platform UI die de Activate de looppasoptie van het publiek toont dataflow.](../assets/ui/edit-activation/activate-audiences.png)![
+{het beeld van 0} Experience Platform UI die de Activate de looppasoptie van het publiek toont dataflow.![&#128279;](../assets/ui/edit-activation/activate-audiences.png)
 
 In de stap **[!UICONTROL Select audiences]** van de activeringsworkflow kunt u bestaande doelgroepen verwijderen of nieuwe doelgroepen toevoegen aan de activeringsworkflow.
 
@@ -66,7 +66,7 @@ De activeringsworkflow verschilt enigszins afhankelijk van het doeltype. Lees de
 
 Selecteer **[!UICONTROL Activate audiences]** in de rechtertrack. Hiermee gaat u naar de activeringsworkflow.
 
-{het beeld van 0} Experience Platform UI die de Activate de looppasoptie van het publiek toont dataflow.](../assets/ui/edit-activation/activate-audiences.png)![
+{het beeld van 0} Experience Platform UI die de Activate de looppasoptie van het publiek toont dataflow.![&#128279;](../assets/ui/edit-activation/activate-audiences.png)
 
 Selecteer de **[!UICONTROL Scheduling]** -stap in de activeringsworkflow om het activeringsschema en de exportfrequentie voor de gegevensstroom te bewerken. Deze stap staat u toe om te vormen hoe vaak de gegevens naar de bestemming worden uitgevoerd.
 
@@ -84,7 +84,7 @@ De het plannen verrichtingen die u kunt uitvoeren variëren lichtjes afhankelijk
 
 Selecteer **[!UICONTROL Activate audiences]** in de rechtertrack. Hiermee gaat u naar de activeringsworkflow.
 
-{het beeld van 0} Experience Platform UI die de Activate de looppasoptie van het publiek toont dataflow.](../assets/ui/edit-activation/activate-audiences.png)![
+{het beeld van 0} Experience Platform UI die de Activate de looppasoptie van het publiek toont dataflow.![&#128279;](../assets/ui/edit-activation/activate-audiences.png)
 
 Selecteer de stap **[!UICONTROL Mapping]** in de activeringsworkflow om de toegewezen kenmerken en identiteiten voor de activeringsgegevensstroom te bewerken. Op deze manier kunt u aanpassen welke profielkenmerken en identiteiten naar de bestemming moeten worden geëxporteerd.
 
@@ -110,7 +110,7 @@ Selecteer **[!UICONTROL Export datasets]** in het rechterspoor om extra datasets
 >
 >Deze optie is slechts zichtbaar voor [ bestemmingen die datasetuitvoer ](export-datasets.md#supported-destinations) steunen.
 
-{het beeld van 0} Experience Platform UI die de Datasets van de Uitvoer dataflow looppas optie toont.](../assets/ui/edit-activation/export-datasets.png)![
+{het beeld van 0} Experience Platform UI die de Datasets van de Uitvoer dataflow looppas optie toont.![&#128279;](../assets/ui/edit-activation/export-datasets.png)
 
 
 

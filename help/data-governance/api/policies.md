@@ -580,7 +580,7 @@ U kunt een aangepast beleid verwijderen door de `id` ervan op te nemen in het pa
 
 >[!WARNING]
 >
->Nadat beleidsregels zijn verwijderd, kunnen ze niet meer worden hersteld. Het is beste praktijken om een raadpleging (GET) verzoek ](#lookup) eerst uit te voeren om het beleid te bekijken en het te bevestigen is het correcte beleid u wenst te verwijderen.[
+>Nadat beleidsregels zijn verwijderd, kunnen ze niet meer worden hersteld. Het is beste praktijken om een raadpleging (GET) verzoek [&#128279;](#lookup) eerst uit te voeren om het beleid te bekijken en het te bevestigen is het correcte beleid u wenst te verwijderen.
 
 **API formaat**
 

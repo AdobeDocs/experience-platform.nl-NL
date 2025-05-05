@@ -71,4 +71,4 @@ Controleer of de kanaalconfiguraties zijn geconfigureerd via de interface van Ex
 
 ## Volgende stappen {#next-steps}
 
-Nu u dit document hebt gelezen, zou u moeten weten hoe te opstelling een inspirerende zandbak en vertrouwd met verschillende manieren om tot gebruikscaseplaybooks binnen Experience Platform toegang te hebben. Als volgende stap, lees over hoe te [ ](/help/use-case-playbooks/playbooks/choose.md) het juiste playbook kiezen.
+Nu u dit document hebt gelezen, zou u moeten weten hoe te opstelling een inspirerende zandbak en vertrouwd met verschillende manieren om tot gebruikscaseplaybooks binnen Experience Platform toegang te hebben. Als volgende stap, lees over hoe te [&#128279;](/help/use-case-playbooks/playbooks/choose.md) het juiste playbook kiezen.

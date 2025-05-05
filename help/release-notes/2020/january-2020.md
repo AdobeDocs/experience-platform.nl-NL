@@ -54,7 +54,7 @@ De nieuwe wettelijke en organisatorische verordeningen geven gebruikers het rech
 | Nieuwe API-eindpunten | Het basispad voor de [!DNL Privacy Service] API is bijgewerkt van `/data/privacy/gdpr` tot `/data/core/privacy/jobs` . |
 | Nieuwe vereiste `regulation`-eigenschap | Wanneer u nieuwe taken maakt in de [!DNL Privacy Service]-API, moet de eigenschap `regulation` in de payload van de aanvraag worden opgegeven om aan te geven onder welke regeling de taak moet worden bijgehouden. Accepteerde waarden zijn `gdpr` en `ccpa` . |
 | Ondersteuning voor [!DNL Adobe Primetime Authentication] | [!DNL Privacy Service] accepteert nu toegang-/verwijderaanvragen van Adobe [!DNL Primetime Authentication] en gebruikt `primetimeAuthentication` als de productwaarde. |
-| Verbeteringen voor de gebruikersinterface van Privacy Service | Afzonderlijke pagina&#39;s voor het volgen van taken voor GDPR en CCPA verordeningen. Nieuw **Type verordening **dropdown om tussen het volgen gegevens voor GDPR en CCPA te schakelen. |
+| Verbeteringen voor de gebruikersinterface van Privacy Service | Afzonderlijke pagina&#39;s voor het volgen van taken voor GDPR en CCPA verordeningen. Nieuw **Type verordening &#x200B;** dropdown om tussen het volgen gegevens voor GDPR en CCPA te schakelen. |
 
 **Bekende kwesties**
 

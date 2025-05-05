@@ -17,7 +17,7 @@ De instructies tonen hieronder u hoe te om de het Webinterface van GitHub aan au
 >
 >Raadpleeg ook de ondersteunende documentatie in de handleiding voor contribuanten van de Adobe:
 >* [ installeer Git en de Authoring hulpmiddelen van de Prijsverhoging ](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/install-tools.html)
->* {de plaats van de Git van de opstelling plaatselijk voor documentatie ](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html)[
+>* &lbrace;de plaats van de Git van de opstelling plaatselijk voor documentatie [&#128279;](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html)
 >* [ GitHub bijdragewerkschema voor belangrijke veranderingen ](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/full-workflow.html).
 
 ## Opstelling uw GitHub auteursmilieu {#set-up-environment}
