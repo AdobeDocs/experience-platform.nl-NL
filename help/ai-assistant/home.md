@@ -90,7 +90,7 @@ Voor vragen over operationele inzichten weerspiegelen de antwoorden mogelijk nie
 
 Bekijk de volgende video voor aanvullende informatie over operationele inzichten van AI Assistant:
 
->[!VIDEO](https://video.tv.adobe.com/v/3444031?learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3444038?learn=on&enablevpops&captions=dut)
 
 ### Functiebereik {#feature-scope}
 

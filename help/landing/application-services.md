@@ -22,4 +22,4 @@ Adobe heeft verschillende toepassingen bovenop Experience Platform gebouwd. Docu
 
 In de onderstaande video worden de gebruiksgevallen beschreven van elke toepassing die boven op het Experience Platform is gebouwd.
 
->[!VIDEO](https://video.tv.adobe.com/v/32554/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3428521/?learn=on&captions=dut)

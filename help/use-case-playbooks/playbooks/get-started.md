@@ -26,7 +26,7 @@ Als u een uitgebreide galerie met gebruikscase-afspeelboeken wilt openen in de g
 
 Bekijk deze video voor meer informatie over de stappen die nodig zijn om uw sandbox te maken, machtigingen te configureren en kanaaloppervlakken te configureren voor e-mail-, push- en SMS-berichten in Journey Optimizer.
 
->[!VIDEO](https://video.tv.adobe.com/v/3426987?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3449832?learn=on&captions=dut)
 
 ## Een ontwikkelingssandbox maken {#create-development-sandbox}
 

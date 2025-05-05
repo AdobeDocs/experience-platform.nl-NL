@@ -23,4 +23,4 @@ Deze video biedt een snelle rondleiding van de gebruikersinterface van Adobe Exp
 >De gebruikersinterface van het Experience Platform wordt vaak bijgewerkt en kan sinds de opname van deze video zijn veranderd. Voor de meest bijgewerkte informatie, gelieve te bezoeken de [ gids UI van Adobe Experience Platform ](../ui-guide.md).
 
 
->[!VIDEO](https://video.tv.adobe.com/v/32792?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3430437?quality=12&learn=on&captions=dut)

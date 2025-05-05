@@ -15,4 +15,4 @@ ht-degree: 0%
 
 Deze video biedt een korte inleiding op [!DNL Experience Platform] en schetst enkele bedrijfsuitdagingen die erin worden opgelost.
 
->[!VIDEO](https://video.tv.adobe.com/v/32797?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3428498?quality=12&learn=on&captions=dut)

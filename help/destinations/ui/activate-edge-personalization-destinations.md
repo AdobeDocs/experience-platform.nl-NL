@@ -39,11 +39,11 @@ Bekijk de onderstaande video voor een kort overzicht van het configureren van de
 >
 >De Experience Platform-gebruikersinterface wordt vaak bijgewerkt en kan zijn gewijzigd sinds de opname van deze video. Raadpleeg de configuratiestappen in de onderstaande secties voor de meest actuele informatie.
 
->[!VIDEO](https://video.tv.adobe.com/v/3418799/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3449799/?quality=12&learn=on&captions=dut)
 
 Bekijk de onderstaande video voor een kort overzicht van hoe u doelgroepen en profielkenmerken kunt delen met Adobe Target en aangepaste verpersoonlijkingsdoelen.
 
->[!VIDEO](https://video.tv.adobe.com/v/3419036/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3447361/?quality=12&learn=on&captions=dut)
 
 ## Gebruiksscenario’s {#use-cases}
 

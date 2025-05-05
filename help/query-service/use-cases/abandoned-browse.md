@@ -59,7 +59,7 @@ order by price desc)D;
 
 De onderstaande videopresentatie biedt een holistische, realistische gebruikscase voor uw Experience Platform-gegevens die zijn toegespitst op [!DNL Query Service] - en Adobe-analysemogelijkheden.
 
->[!VIDEO](https://video.tv.adobe.com/v/342533?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3454948?quality=12&learn=on&captions=dut)
 
 ## Voordelen van [!DNL Query Service] {#benefits}
 

@@ -47,7 +47,7 @@ Aangezien u overweegt om uw eigen first-party profielen met attributen van gegev
 
 Bekijk hieronder het videoleerprogramma voor een analyse van hoe te om het eerste partijpubliek met partner-verstrekte attributen aan te vullen:
 
->[!VIDEO](https://video.tv.adobe.com/v/3423075/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3452459/?learn=on&captions=dut)
 
 ## Hoe het gebruiksgeval te bereiken: overzicht op hoog niveau {#achieve-the-use-case-high-level}
 

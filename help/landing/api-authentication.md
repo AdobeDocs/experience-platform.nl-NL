@@ -366,7 +366,7 @@ Als een systeembeheerder bewerkingen op Experience Platform API&#39;s wil gebrui
 
 Een analyse van de hierboven beschreven stappen voor het toevoegen van ontwikkelaars aan productprofielen en het toewijzen van APIs aan rollen is ook beschikbaar in de videozelfstudie hieronder:
 
->[!VIDEO](https://video.tv.adobe.com/v/3426407/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3446404/?learn=on&captions=dut)
 
 ## Aanvullende bronnen {#additional-resources}
 

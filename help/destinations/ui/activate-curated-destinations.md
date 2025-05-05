@@ -62,7 +62,7 @@ Nadat u het publiek hebt geëxporteerd, activeert u het publiek met de bestemmin
 
 Bekijk de onderstaande video voor een end-to-end uitleg van de workflow die in deze pagina wordt beschreven.
 
->[!VIDEO](https://video.tv.adobe.com/v/3425367)
+>[!VIDEO](https://video.tv.adobe.com/v/3452663?captions=dut)
 
 ### Stap 1: verzend uw publiek van Experience Platform naar LiveRamp, via de [!DNL LiveRamp - Onboarding] -bestemming {#onboarding}
 

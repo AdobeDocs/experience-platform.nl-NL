@@ -59,5 +59,5 @@ Neem contact op met het accountteam van uw Adobe om toegang te krijgen tot AI As
 
 Bekijk de volgende video voor meer informatie over het gebruik van AI Assistant voor Klantenondersteuning om probleemloos problemen op te lossen zonder uw workflows te verlaten.
 
->[!VIDEO](https://video.tv.adobe.com/v/3443183?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3443189?learn=on&captions=dut)
 

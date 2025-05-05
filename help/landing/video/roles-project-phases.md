@@ -18,4 +18,4 @@ ht-degree: 0%
 
 Deze video biedt een overzicht van de rollen, fasen en belangrijke resultaten die bij een succesvol Adobe Experience Platform-project betrokken zijn.
 
->[!VIDEO](https://video.tv.adobe.com/v/32807?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3430454?quality=12&learn=on&captions=dut)

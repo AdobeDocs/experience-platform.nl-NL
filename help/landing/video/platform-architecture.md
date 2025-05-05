@@ -18,4 +18,4 @@ ht-degree: 0%
 
 Deze video loopt door een high-level architectuurdiagram dat de primaire componenten van Experience Platform verklaart.
 
->[!VIDEO](https://video.tv.adobe.com/v/32456?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3432347?quality=12&learn=on&captions=dut)

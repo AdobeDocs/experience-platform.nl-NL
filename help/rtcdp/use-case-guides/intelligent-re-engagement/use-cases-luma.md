@@ -16,12 +16,12 @@ Leer hoe Adobe de Intelligent Re-engagement gebruikscase heeft aangepast om met 
 
 ## Implementatie
 
->[!VIDEO](https://video.tv.adobe.com/v/3425184/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3454279/?quality=12&learn=on&captions=dut)
 
 ## Reisconfiguratie
 
->[!VIDEO](https://video.tv.adobe.com/v/3427101/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3453967/?quality=12&learn=on&captions=dut)
 
 ## Configuratie publiek en bestemming
 
->[!VIDEO](https://video.tv.adobe.com/v/3427451/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3452914/?quality=12&learn=on&captions=dut)

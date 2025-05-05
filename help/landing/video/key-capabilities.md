@@ -24,4 +24,4 @@ In deze video worden de belangrijkste mogelijkheden van Experience Platform beke
 1. Verbeter levering en personalisatie van real-time ervaringen
 1. Versterken van het vertrouwen in governance, veiligheid en privacycontrole
 
->[!VIDEO](https://video.tv.adobe.com/v/32502?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3428510?quality=12&learn=on&captions=dut)

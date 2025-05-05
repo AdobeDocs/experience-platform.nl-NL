@@ -247,4 +247,4 @@ Voor meer informatie over op attribuut-gebaseerde toegangsbeheer, zie het [ op a
 
 De volgende video is bedoeld om uw begrip van op attribuut-gebaseerde toegangscontrole te steunen, en schetst hoe te om rollen, middelen, en beleid te vormen.
 
->[!VIDEO](https://video.tv.adobe.com/v/345641?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3451837?learn=on&captions=dut)

@@ -258,7 +258,7 @@ Wanneer het importeren is voltooid, ontvangt u een melding in de gebruikersinter
 
 De volgende video is bedoeld ter ondersteuning van uw begrip van gereedschappen voor sandboxen en beschrijft hoe u een nieuw pakket kunt maken, een pakket kunt publiceren en importeren.
 
->[!VIDEO](https://video.tv.adobe.com/v/3424763/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3446091/?learn=on&captions=dut)
 
 ## Volgende stappen
 

@@ -53,7 +53,7 @@ Als een sandbox is geselecteerd, wordt het scherm vernieuwd en wordt de door u g
 
 Gebruik de volgende video voor een snel overzicht van het gebruik van sandboxen in Experience Platform.
 
->[!VIDEO](https://video.tv.adobe.com/v/29838/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3430294/?quality=12&learn=on&captions=dut)
 
 Als u een nieuwe sandbox wilt maken, selecteert u **[!UICONTROL Create sandbox]** in de rechterbovenhoek van het scherm.
 

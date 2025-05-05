@@ -23,4 +23,4 @@ Deze video biedt een overzicht van vier belangrijke gebruiksgevallen van Experie
 * Levering en kanaaloverschrijdende ervaring
 * Ontwikkeling van toepassingen voor klanten
 
->[!VIDEO](https://video.tv.adobe.com/v/32806?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3430460?quality=12&learn=on&captions=dut)
