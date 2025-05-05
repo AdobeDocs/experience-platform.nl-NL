@@ -53,7 +53,7 @@ Selecteer vervolgens het verificatietype dat u wilt genereren voor toegangstoken
 
 >[!IMPORTANT]
 >
->Selecteer de methode **[!UICONTROL OAuth Server-to-Server]** omdat dit de enige methode is die u kunt gebruiken om door te gaan. De methode **[!UICONTROL Service Account (JWT)]** is vervangen. Terwijl de integratie die de authentificatiemethode JWT gebruikt tot 1 Januari, 2025 zal blijven werken, adviseert Adobe sterk dat u bestaande integratie aan de nieuwe server-aan-server methode OAuth vóór die datum migreert. Krijg meer informatie in de sectie [!BADGE  Vervangen ]{type=negative} [ een Symbolisch van het Web JSON (JWT) ](/help/landing/api-authentication.md#jwt) in het de authentificatieleerprogramma van Experience Platform API.
+>Selecteer de methode **[!UICONTROL OAuth Server-to-Server]** omdat dit de enige methode is die u kunt gebruiken om door te gaan. De methode **[!UICONTROL Service Account (JWT)]** is vervangen. Terwijl de integratie die de authentificatiemethode JWT gebruikt tot 1 Januari, 2025 zal blijven werken, adviseert Adobe sterk dat u bestaande integratie aan de nieuwe server-aan-server methode OAuth vóór die datum migreert. Krijg meer informatie in de sectie [!BADGE &#x200B; Vervangen &#x200B;]{type=negative} [ een Symbolisch van het Web JSON (JWT) ](/help/landing/api-authentication.md#jwt) in het de authentificatieleerprogramma van Experience Platform API.
 
 Selecteer **daarna** om verder te gaan.
 
