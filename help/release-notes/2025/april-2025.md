@@ -2,10 +2,10 @@
 title: Aanvullende informatie van april 2025 voor Adobe Experience Platform
 description: Aanvullende informatie van april 2025 voor Adobe Experience Platform.
 exl-id: a3b1e2e8-d780-4e23-b323-37e1a631f716
-source-git-commit: be9e1a995e62fa5a437be82aa15187815bbc5a9d
+source-git-commit: b0ed9e38dbc3b4a4f4f7cde5751c2edd35355b59
 workflow-type: tm+mt
-source-wordcount: '2133'
-ht-degree: 29%
+source-wordcount: '2183'
+ht-degree: 28%
 
 ---
 
@@ -15,10 +15,10 @@ ht-degree: 29%
 >
 >Raadpleeg de volgende documentatie voor opmerkingen bij andere Adobe Experience Platform-toepassingen:
 >
->- [ Adobe Journey Optimizer ](https://experienceleague.adobe.com/nl/docs/journey-optimizer/using/whats-new/release-notes)
->- [ Adobe Journey Optimizer B2B ](https://experienceleague.adobe.com/nl/docs/journey-optimizer-b2b/user/release-notes)
->- [Customer Journey Analytics](https://experienceleague.adobe.com/nl/docs/analytics-platform/using/releases/latest)
->- [ Real-Time CDP Collaboration ](https://experienceleague.adobe.com/nl/docs/real-time-cdp-collaboration/using/latest)
+>- [ Adobe Journey Optimizer ](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/whats-new/release-notes)
+>- [ Adobe Journey Optimizer B2B ](https://experienceleague.adobe.com/en/docs/journey-optimizer-b2b/user/release-notes)
+>- [Customer Journey Analytics](https://experienceleague.adobe.com/en/docs/analytics-platform/using/releases/latest)
+>- [ Real-Time CDP Collaboration ](https://experienceleague.adobe.com/en/docs/real-time-cdp-collaboration/using/latest)
 
 **Releasedatum: woensdag 29 april 2025**
 
@@ -41,7 +41,7 @@ Experience League is een uitgebreid trainingsplatform dat u helpt uw vaardighede
 
 | Functie | Beschrijving |
 | --- | --- |
-| Persoonlijke homepage | De toegang en past uw gepersonaliseerde homepage op [ Experience League ](https://experienceleague.adobe.com/nl/home#) aan. Meld u aan met uw Adobe-gebruikersgegevens en selecteer vervolgens **[!UICONTROL Experience League]** in het bovenste menu om uw leerervaring te optimaliseren: <ul><li>**Bladwijzers**: Gebruik de [!UICONTROL Bookmarks] eigenschap om uw favoriete middelen op één plaats te bewaren en te verzamelen. U kunt diverse inhoud opslaan, zoals afspeellijsten, artikelen en zelfstudies.</li><li>**pas uw het leren** aan: Verbeter uw het leren ervaring door uw profiel van Experience League met de rollen, de industrieën, de producten, en het ervaringsniveau bij te werken dat het beste uw behoeften aanpast.</li><li>**Aanbevelingen**: De het leren van mening adviseerde inhoud die op uw recente activiteit wordt gebaseerd.</li><li>**onlangs bekeken**: Gebruik de [!UICONTROL Recently viewed] sectie om snel terug naar onlangs bekeken inhoud zoals documentatie en video&#39;s te navigeren.</li><li>**Lerende middelen**: Gebruik het [!UICONTROL All learning resources] paneel om aan leerprogramma&#39;s, documentatie, gemeenschap, gebeurtenissen, en certificatie te navigeren.</li><li>**wat** nieuw is: Bekijk de [!UICONTROL What's new] sectie voor een stroom van de recentste inhoud op Experience League.</li><li>**Controle voorbij gebeurtenissen op bestelling**: Bekijk eerder geregistreerde levende stromen op productspots, gebruiksgevallen, en leerprogramma&#39;s met de [!UICONTROL Watch past events on-demand] sectie.</li></ul><br> ![ Persoonlijke homepage op Experience League.](../2025/assets/april/personalized-home-page.png " Persoonlijke homepage op Experience League."){width="250" align="center" zoomable="yes"} |
+| Persoonlijke homepage | De toegang en past uw gepersonaliseerde homepage op [ Experience League ](https://experienceleague.adobe.com/en/home#) aan. Meld u aan met uw Adobe-gebruikersgegevens en selecteer vervolgens **[!UICONTROL Experience League]** in het bovenste menu om uw leerervaring te optimaliseren: <ul><li>**Bladwijzers**: Gebruik de [!UICONTROL Bookmarks] eigenschap om uw favoriete middelen op één plaats te bewaren en te verzamelen. U kunt diverse inhoud opslaan, zoals afspeellijsten, artikelen en zelfstudies.</li><li>**pas uw het leren** aan: Verbeter uw het leren ervaring door uw profiel van Experience League met de rollen, de industrieën, de producten, en het ervaringsniveau bij te werken dat het beste uw behoeften aanpast.</li><li>**Aanbevelingen**: De het leren van mening adviseerde inhoud die op uw recente activiteit wordt gebaseerd.</li><li>**onlangs bekeken**: Gebruik de [!UICONTROL Recently viewed] sectie om snel terug naar onlangs bekeken inhoud zoals documentatie en video&#39;s te navigeren.</li><li>**Lerende middelen**: Gebruik het [!UICONTROL All learning resources] paneel om aan leerprogramma&#39;s, documentatie, gemeenschap, gebeurtenissen, en certificatie te navigeren.</li><li>**wat** nieuw is: Bekijk de [!UICONTROL What's new] sectie voor een stroom van de recentste inhoud op Experience League.</li><li>**Controle voorbij gebeurtenissen op bestelling**: Bekijk eerder geregistreerde levende stromen op productspots, gebruiksgevallen, en leerprogramma&#39;s met de [!UICONTROL Watch past events on-demand] sectie.</li></ul><br> ![ Persoonlijke homepage op Experience League.](../2025/assets/april/personalized-home-page.png " Persoonlijke homepage op Experience League."){width="250" align="center" zoomable="yes"} |
 
 {style="table-layout:auto"}
 
@@ -53,6 +53,7 @@ Adobe Experience Platform biedt een reeks technologieën waarmee u klantervaring
 
 | Functie | Beschrijving |
 | --- | --- |
+| [!DNL Adform] extension | Met de serverextensie [!DNL Adform] kunnen merken het publiek gemakkelijk offline richten met behulp van ECID&#39;s. Deze server-side extensie is niet afhankelijk van cookies van derden of cookie-alternatieve id&#39;s. Bovendien, omdat dit volledig server-kant wordt gedaan, zijn geen extra pixel of andere cliënt-zijveranderingen nodig. Voor meer informatie, zie het [ Adform uitbreidingsoverzicht ](/help/tags/extensions/server/adform/overview.md). |
 | [!DNL Amazon] API-extensie voor webgebeurtenissen | Met de API-extensie [!DNL Amazon] Conversies kunnen adverteerders website-interacties rechtstreeks delen met [!DNL Amazon] , waardoor de toewijzing, betrouwbaarheid van gegevens en de optimalisatie van de campagne zijn verbeterd. Deze extensie ondersteunt het doorsturen van gebeurtenissen, zodat u conversiegebeurtenissen zoals aankopen, winkelwagentaanvullingen en meer kunt verzenden en er tegelijkertijd voor zorgt dat de deduplicatie correct wordt uitgevoerd voor een juiste rapportage. Voor meer informatie, zie het [ de uitbreidingsoverzicht van Amazon ](/help/tags/extensions/server/amazon/overview.md). |
 
 {style="table-layout:auto"}
@@ -107,7 +108,7 @@ Met Identity Service van Adobe Experience Platform krijgt u een uitgebreid beeld
 
 | Functie | Beschrijving |
 | --- | --- |
-| [!BADGE &#x200B; Beperkte Beschikbaarheid &#x200B;]{type=Informative} [!DNL Identity Graph Linking Rules] | De Regels van de Vereniging van de Grafiek van de identiteit zijn nu in Beperkte Beschikbaarheid, en kunnen door alle klanten in ontwikkelingszandbakken worden betreden. <ul><li>**de vereisten van de Activering**: De eigenschap zal inactief blijven tot u vormt en uw [!DNL Identity Settings] bewaart. Zonder deze configuratie, zal het systeem normaal, zonder veranderingen in gedrag blijven werken.</li><li>**Belangrijke nota&#39;s**: Tijdens deze Beperkte fase van de Beschikbaarheid, kan de segmentatie van Edge onverwachte resultaten van het segmentlidmaatschap veroorzaken. Streaming en batchsegmentatie functioneren echter naar behoren.</li><li>**Volgende stappen**: Voor informatie over hoe te om deze eigenschap in productiestanddozen toe te laten, gelieve uw Adobe accountteam te contacteren.</li></ul> |
+| [!BADGE  Beperkte Beschikbaarheid ]{type=Informative} [!DNL Identity Graph Linking Rules] | De Regels van de Vereniging van de Grafiek van de identiteit zijn nu in Beperkte Beschikbaarheid, en kunnen door alle klanten in ontwikkelingszandbakken worden betreden. <ul><li>**de vereisten van de Activering**: De eigenschap zal inactief blijven tot u vormt en uw [!DNL Identity Settings] bewaart. Zonder deze configuratie, zal het systeem normaal, zonder veranderingen in gedrag blijven werken.</li><li>**Belangrijke nota&#39;s**: Tijdens deze Beperkte fase van de Beschikbaarheid, kan de segmentatie van Edge onverwachte resultaten van het segmentlidmaatschap veroorzaken. Streaming en batchsegmentatie functioneren echter naar behoren.</li><li>**Volgende stappen**: Voor informatie over hoe te om deze eigenschap in productiestanddozen toe te laten, gelieve uw Adobe accountteam te contacteren.</li></ul> |
 
 {style="table-layout:auto"}
 
@@ -166,7 +167,7 @@ Gebruik bronnen in Experience Platform om gegevens vanuit een Adobe-applicatie o
 | Functie | Beschrijving |
 | --- | --- |
 | [!BADGE Beta]{type=Informative} [!DNL Algolia User Profiles] | De [[!DNL Algolia User Profiles]](../../sources/connectors/data-partners/algolia-user-profiles.md) -bron is nu beschikbaar. Gebruik deze bron om gegevens over gebruikersprofielen van [!DNL Algolia] naar Experience Platform te brengen. U kunt deze gegevens dan gebruiken om de betrokkenheid van gebruikers, conversietarieven, en algemene klantenervaring te verbeteren door krachtige onderzoeksoplossingen voor websites, e-commerceplatforms, en toepassingen te verstrekken. Voor meer informatie, leest de gids op hoe te [  [!DNL Algolia User Profiles]  gegevens aan Experience Platform ](../../sources/tutorials/ui/create/data-partners/algolia-user-profiles.md) innemen. |
-| [!BADGE &#x200B; Beta &#x200B;]{type=Informative} API steun voor [!DNL Azure Databricks] | De [!DNL Azure Databricks] -bron is nu beschikbaar in de API. Gebruik de [!DNL Flow Service] API om uw [!DNL Databricks] -account te verbinden en uw [!DNL Databricks] -gegevens naar Experience Platform te brengen. Lees de documentatie bij [[!DNL Azure Databricks]](../../sources/connectors/databases/databricks.md) voor meer informatie. |
+| [!BADGE  Beta ]{type=Informative} API steun voor [!DNL Azure Databricks] | De [!DNL Azure Databricks] -bron is nu beschikbaar in de API. Gebruik de [!DNL Flow Service] API om uw [!DNL Databricks] -account te verbinden en uw [!DNL Databricks] -gegevens naar Experience Platform te brengen. Lees de documentatie bij [[!DNL Azure Databricks]](../../sources/connectors/databases/databricks.md) voor meer informatie. |
 
 {style="table-layout:auto"}
 
@@ -192,7 +193,7 @@ In Use Case Playbooks (Engelstalig) is een overgang gemaakt van een detectiegere
 
 | Functie | Beschrijving |
 | --- | --- |
-| [!BADGE &#x200B; Beta &#x200B;]{type=Informative} Auteur en deel uw eigen playbooks | Met een nieuw Playbook Authoring Framework kunt u uw eigen praktijkafspeelboeken maken, beheren en delen. Dit omvat ondersteuning voor het vastleggen van belangrijke metagegevens, het bewerken van reiskaarten en het koppelen van relevante technische elementen. U kunt Playbooks over organisaties delen om marketing benaderingen te standaardiseren en consistentie te handhaven. |
+| [!BADGE  Beta ]{type=Informative} Auteur en deel uw eigen playbooks | Met een nieuw Playbook Authoring Framework kunt u uw eigen praktijkafspeelboeken maken, beheren en delen. Dit omvat ondersteuning voor het vastleggen van belangrijke metagegevens, het bewerken van reiskaarten en het koppelen van relevante technische elementen. U kunt Playbooks over organisaties delen om marketing benaderingen te standaardiseren en consistentie te handhaven. |
 
 {style="table-layout:auto"}
 
