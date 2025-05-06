@@ -2,8 +2,8 @@
 keywords: Experience Platform;home;populaire onderwerpen;API-foutcodes;API-foutcode;API voor foutcode;API voor foutcodes;API-aanvraagfout;API-probleemoplossing;API-fout
 solution: Experience Platform
 title: Adobe Experience Platform - Veelgestelde vragen en handleiding voor probleemoplossing
-description: Vind antwoorden op veelgestelde vragen en een handleiding voor het oplossen van veelvoorkomende problemen in Experience Platform.
-landing-page-description: Vind antwoorden op veelgestelde vragen en een handleiding voor het oplossen van veelvoorkomende problemen in Experience Platform.
+description: Vind antwoorden op veelgestelde vragen en een handleiding voor het oplossen van veelvoorkomende problemen in Adobe Experience Platform.
+landing-page-description: Vind antwoorden op veelgestelde vragen en een handleiding voor het oplossen van veelvoorkomende problemen in Adobe Experience Platform.
 short-description: Vind antwoorden op veelgestelde vragen en een handleiding voor het oplossen van veelvoorkomende problemen in Experience Platform.
 type: Documentation
 role: Developer
@@ -36,7 +36,7 @@ Voor meer informatie bij het formatteren van API verzoeken, gelieve te bezoeken 
 
 ## Wat is mijn organisatie? {#what-is-my-ims-organization}
 
-Een organisatie is een Adobe-representatie van een klant. Alle in licentie gegeven Adobe-oplossingen zijn geïntegreerd met deze klantenorganisatie. Wanneer een organisatie [!DNL Experience Platform] mag gebruiken, kan zij toegang toewijzen aan ontwikkelaars. De organisatie-id (`x-gw-ims-org-id`) vertegenwoordigt de organisatie waarvoor een API-aanroep moet worden uitgevoerd en is daarom vereist als een header in alle API-aanvragen. Deze identiteitskaart kan door [ Adobe Developer Console ](https://www.adobe.com/go/devs_console_ui) worden gevonden: in het **3&rbrace; lusje van de Integraties &lbrace;, navigeer aan de** sectie van het Overzicht **voor om het even welke bijzondere integratie om identiteitskaart onder** de Geloofsbrieven van de Cliënt **te vinden.** Voor een geleidelijke analyse van hoe te in [!DNL Experience Platform] voor authentiek te verklaren, zie het [ authentificatieleerprogramma ](https://www.adobe.com/go/platform-api-authentication-en).
+Een organisatie is een Adobe-representatie van een klant. Alle in licentie gegeven Adobe-oplossingen zijn geïntegreerd met deze klantenorganisatie. Wanneer een organisatie [!DNL Experience Platform] mag gebruiken, kan zij toegang toewijzen aan ontwikkelaars. De organisatie-id (`x-gw-ims-org-id`) vertegenwoordigt de organisatie waarvoor een API-aanroep moet worden uitgevoerd en is daarom vereist als een header in alle API-aanvragen. Deze identiteitskaart kan door [ Adobe Developer Console ](https://www.adobe.com/go/devs_console_ui) worden gevonden: in het **3} lusje van de Integraties {, navigeer aan de** sectie van het Overzicht **voor om het even welke bijzondere integratie om identiteitskaart onder** de Geloofsbrieven van de Cliënt **te vinden.** Voor een geleidelijke analyse van hoe te in [!DNL Experience Platform] voor authentiek te verklaren, zie het [ authentificatieleerprogramma ](https://www.adobe.com/go/platform-api-authentication-en).
 
 ## Waar kan ik mijn API-sleutel vinden? {#where-can-i-find-my-api-key}
 

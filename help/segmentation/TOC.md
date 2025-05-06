@@ -1,6 +1,6 @@
 ---
 audience: user
-user-guide-title: Adobe Experience Platform Segmentation Service
+user-guide-title: Adobe Experience Platform-segmentatieservice
 breadcrumb-title: Gids voor Segmentation Service
 user-guide-description: Stel doelgroepen samen op basis van uw gegevens voor realtimeklantprofielen met behulp van door Adobe Experience Platform gegenereerde segmentdefinities of externe bronnen.
 feature: Segments
@@ -13,11 +13,11 @@ ht-degree: 24%
 ---
 
 
-# Adobe Experience Platform Segmentation Service {#segmentation}
+# Adobe Experience Platform-segmentatieservice {#segmentation}
 
 - [Overzicht van segmentatieservice](home.md)
 - [Segmenteringsgegevenstypen](data-types.md)
-- [ de gidsen van de segmentatie ](https://experienceleague.adobe.com/docs/experience-platform/profile/guardrails.html?lang=nl-NL#segmentation-guardrails)
+- [ de gidsen van de segmentatie ](https://experienceleague.adobe.com/docs/experience-platform/profile/guardrails.html#segmentation-guardrails)
 - Segmentatie-API {#api}
    - [Overzicht](api/overview.md)
    - [Aan de slag](api/getting-started.md)
@@ -34,7 +34,7 @@ ht-degree: 24%
    - [Poort publiek](ui/audience-portal.md)
    - [Samenstelling publiek](ui/audience-composition.md)
    - [Segment Builder](ui/segment-builder.md)
-   - [Samenstelling van Federated-doelgroep](https://experienceleague.adobe.com/nl/docs/federated-audience-composition/using/home)
+   - [Samenstelling van Federated-doelgroep](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/home)
    - [Update voor jaartijdbeperking negeren](ui/ignore-year.md)
    - [Tijd beperkingen refactoring](ui/segment-refactoring.md)
    - Segmentovereenkomst {#segment-match}
@@ -46,13 +46,13 @@ ht-degree: 24%
    - [Streaming segmentering](methods/streaming-segmentation.md)
    - [Edge-segmentatie](methods/edge-segmentation.md)
    - [Flexibele publieksevaluatie](methods/flexible-audience-evaluation.md)
-- Typen publiek {#types}
+- Typen soorten publiek {#types}
    - [Overzicht](types/overview.md)
    - [Personen](types/people-audiences.md)
    - [Doelgroepen](types/prospect-audiences.md)
    - [Accountdoelgroepen](types/account-audiences.md)
    - [Soortgelijk publiek](types/lookalike-audiences.md)
-- Zelfstudies {#tutorials}
+- Tutorials {#tutorials}
    - [Een segmentdefinitie maken](tutorials/create-a-segment.md)
    - [Een segmentdefinitie maken (video)](video/create-segment.md)
    - [Een dynamische segmentdefinitie maken (video)](video/create-a-dynamic-segment.md)
@@ -80,4 +80,4 @@ ht-degree: 24%
 - [Update voor kwalificatiecriteria](./eligibility-criteria-update.md)
 - [Veelgestelde vragen](./faq.md)
 - [ API verwijzing ](https://www.adobe.io/experience-platform-apis/references/segmentation/)
-- [ de versienota&#39;s van het Platform ](https://experienceleague.adobe.com/nl/docs/experience-platform/release-notes/latest)
+- [ de versienota&#39;s van het Platform ](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)
