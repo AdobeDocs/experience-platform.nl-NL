@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Vervaldatum van gegevens van pseudoniem profiel
 description: Dit document biedt algemene richtlijnen voor het configureren van gegevensvervaldatum voor Pseudoniem-profielen in Adobe Experience Platform.
 exl-id: e8d31718-0b50-44b5-a15b-17668a063a9c
-source-git-commit: aeb9d6636f0d843bf13d09bcb4c12754e2890046
+source-git-commit: 8734b85914d965eebc2f8ccd8c09dd1ffede8cf9
 workflow-type: tm+mt
-source-wordcount: '1241'
+source-wordcount: '1260'
 ht-degree: 0%
 
 ---
@@ -31,7 +31,7 @@ In Adobe Experience Platform kunt u de vervaltijden van gegevens configureren vo
 Een profiel wordt overwogen voor Pseudoniem gegevensvervaldatum als het aan de volgende voorwaarden voldoet:
 
 - De identiteitsnaamruimten van het verbonden profiel komen overeen met de naamruimte die de klant heeft opgegeven als een pseudoniem of onbekend naamgebied.
-   - Als de naamruimte van de identiteit van het profiel bijvoorbeeld `ECID`, `GAID` of `AAID` is. Het gekoppelde profiel heeft geen id&#39;s van een andere naamruimte. In dit voorbeeld, heeft een vastgemaakt profiel **&#x200B;**&#x200B;of geen e-mail of identiteit van CRM.
+   - Als de naamruimte van de identiteit van het profiel bijvoorbeeld `ECID`, `GAID` of `AAID` is. Het gekoppelde profiel heeft geen id&#39;s van een andere naamruimte. In dit voorbeeld, heeft een vastgemaakt profiel **** of geen e-mail of identiteit van CRM.
 - Er heeft zich geen activiteit voorgedaan in een door de gebruiker gedefinieerde hoeveelheid tijd. De activiteit wordt bepaald of door om het even welke Gebeurtenissen van de Ervaring die of klant-in werking gestelde updates aan de profielattributen worden opgenomen.
    - Bijvoorbeeld, wordt een nieuwe gebeurtenis van de paginamening of de update van het paginakenmerk beschouwd als een activiteit. Nochtans, wordt een niet-gebruiker-in werking gestelde update van het publiekslidmaatschap **niet** beschouwd als een activiteit. Op dit moment is het bijhouden van gegevens op profielniveau gebaseerd op de tijd van de gebeurtenis voor Experience Events en de tijd van inname voor profielkenmerken om de gegevensvervaldatum te berekenen.
 
@@ -43,8 +43,9 @@ Een profiel wordt overwogen voor Pseudoniem gegevensvervaldatum als het aan de v
 >
 >- Profielinstellingen beheren
 >- Profielen weergeven
+>- Identiteitsnaamruimten weergeven
 >
->De **beheert de toestemmingen van de Montages van het Profiel** laten u de gegevensvervalsingen plaatsen, terwijl de **toestemming van de Profielen van de Mening** u de gegevensvervalsingen laat bekijken.
+>De **beheert de toestemmingen van de Montages van het Profiel** laten u de gegevensvervalsingen plaatsen, de **toestemming van de Profielen van de Mening** laat u de gegevensvervalsingen bekijken, en de **toestemming van de Namespaces van de Identiteit van de Mening** laat u de beschikbare identiteitsnaamruimten bekijken die u kunt gebruiken.
 >
 >Meer informatie over toestemmingen binnen Experience Platform kan in het [ overzicht van de toegangscontrole ](../access-control/home.md#permissions) worden gevonden.
 
@@ -78,7 +79,7 @@ De gegevensvervaldatum van de Gebeurtenis van de ervaring werkt op het niveau va
 
 #### Identiteitstypen
 
-De pseudoniem gegevens van het Profiel verlopen **slechts** overweegt profielen die identiteitsgrafieken hebben die identiteitsnamespaces bevatten die door de klant, zoals `ECID`, `AAID`, of andere soorten koekjes werden geselecteerd. Als het profiel **om het even welke** extra identiteitsnamespace bevat die **niet** in de geselecteerde lijst van de klant was, zal het profiel **&#x200B;**&#x200B;niet worden geschrapt.
+De pseudoniem gegevens van het Profiel verlopen **slechts** overweegt profielen die identiteitsgrafieken hebben die identiteitsnamespaces bevatten die door de klant, zoals `ECID`, `AAID`, of andere soorten koekjes werden geselecteerd. Als het profiel **om het even welke** extra identiteitsnamespace bevat die **niet** in de geselecteerde lijst van de klant was, zal het profiel **** niet worden geschrapt.
 
 De gegevensvervaldatum van de Gebeurtenis van de ervaring verwijdert gebeurtenissen **slechts** die op timestamp van het gebeurtenisverslag wordt gebaseerd. De inbegrepen identiteitsnamespaces zijn **genegeerd** voor vervaldoeleinden.
 
