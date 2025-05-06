@@ -108,7 +108,7 @@ Met Identity Service van Adobe Experience Platform krijgt u een uitgebreid beeld
 
 | Functie | Beschrijving |
 | --- | --- |
-| [!BADGE  Beperkte Beschikbaarheid ]{type=Informative} [!DNL Identity Graph Linking Rules] | De Regels van de Vereniging van de Grafiek van de identiteit zijn nu in Beperkte Beschikbaarheid, en kunnen door alle klanten in ontwikkelingszandbakken worden betreden. <ul><li>**de vereisten van de Activering**: De eigenschap zal inactief blijven tot u vormt en uw [!DNL Identity Settings] bewaart. Zonder deze configuratie, zal het systeem normaal, zonder veranderingen in gedrag blijven werken.</li><li>**Belangrijke nota&#39;s**: Tijdens deze Beperkte fase van de Beschikbaarheid, kan de segmentatie van Edge onverwachte resultaten van het segmentlidmaatschap veroorzaken. Streaming en batchsegmentatie functioneren echter naar behoren.</li><li>**Volgende stappen**: Voor informatie over hoe te om deze eigenschap in productiestanddozen toe te laten, gelieve uw Adobe accountteam te contacteren.</li></ul> |
+| [!BADGE &#x200B; Beperkte Beschikbaarheid &#x200B;]{type=Informative} [!DNL Identity Graph Linking Rules] | De Regels van de Vereniging van de Grafiek van de identiteit zijn nu in Beperkte Beschikbaarheid, en kunnen door alle klanten in ontwikkelingszandbakken worden betreden. <ul><li>**de vereisten van de Activering**: De eigenschap zal inactief blijven tot u vormt en uw [!DNL Identity Settings] bewaart. Zonder deze configuratie, zal het systeem normaal, zonder veranderingen in gedrag blijven werken.</li><li>**Belangrijke nota&#39;s**: Tijdens deze Beperkte fase van de Beschikbaarheid, kan de segmentatie van Edge onverwachte resultaten van het segmentlidmaatschap veroorzaken. Streaming en batchsegmentatie functioneren echter naar behoren.</li><li>**Volgende stappen**: Voor informatie over hoe te om deze eigenschap in productiestanddozen toe te laten, gelieve uw Adobe accountteam te contacteren.</li></ul> |
 
 {style="table-layout:auto"}
 
@@ -167,7 +167,7 @@ Gebruik bronnen in Experience Platform om gegevens vanuit een Adobe-applicatie o
 | Functie | Beschrijving |
 | --- | --- |
 | [!BADGE Beta]{type=Informative} [!DNL Algolia User Profiles] | De [[!DNL Algolia User Profiles]](../../sources/connectors/data-partners/algolia-user-profiles.md) -bron is nu beschikbaar. Gebruik deze bron om gegevens over gebruikersprofielen van [!DNL Algolia] naar Experience Platform te brengen. U kunt deze gegevens dan gebruiken om de betrokkenheid van gebruikers, conversietarieven, en algemene klantenervaring te verbeteren door krachtige onderzoeksoplossingen voor websites, e-commerceplatforms, en toepassingen te verstrekken. Voor meer informatie, leest de gids op hoe te [  [!DNL Algolia User Profiles]  gegevens aan Experience Platform ](../../sources/tutorials/ui/create/data-partners/algolia-user-profiles.md) innemen. |
-| [!BADGE  Beta ]{type=Informative} API steun voor [!DNL Azure Databricks] | De [!DNL Azure Databricks] -bron is nu beschikbaar in de API. Gebruik de [!DNL Flow Service] API om uw [!DNL Databricks] -account te verbinden en uw [!DNL Databricks] -gegevens naar Experience Platform te brengen. Lees de documentatie bij [[!DNL Azure Databricks]](../../sources/connectors/databases/databricks.md) voor meer informatie. |
+| [!BADGE &#x200B; Beta &#x200B;]{type=Informative} API steun voor [!DNL Azure Databricks] | De [!DNL Azure Databricks] -bron is nu beschikbaar in de API. Gebruik de [!DNL Flow Service] API om uw [!DNL Databricks] -account te verbinden en uw [!DNL Databricks] -gegevens naar Experience Platform te brengen. Lees de documentatie bij [[!DNL Azure Databricks]](../../sources/connectors/databases/databricks.md) voor meer informatie. |
 
 {style="table-layout:auto"}
 
@@ -193,7 +193,7 @@ In Use Case Playbooks (Engelstalig) is een overgang gemaakt van een detectiegere
 
 | Functie | Beschrijving |
 | --- | --- |
-| [!BADGE  Beta ]{type=Informative} Auteur en deel uw eigen playbooks | Met een nieuw Playbook Authoring Framework kunt u uw eigen praktijkafspeelboeken maken, beheren en delen. Dit omvat ondersteuning voor het vastleggen van belangrijke metagegevens, het bewerken van reiskaarten en het koppelen van relevante technische elementen. U kunt Playbooks over organisaties delen om marketing benaderingen te standaardiseren en consistentie te handhaven. |
+| [!BADGE &#x200B; Beta &#x200B;]{type=Informative} Auteur en deel uw eigen playbooks | Met een nieuw Playbook Authoring Framework kunt u uw eigen praktijkafspeelboeken maken, beheren en delen. Dit omvat ondersteuning voor het vastleggen van belangrijke metagegevens, het bewerken van reiskaarten en het koppelen van relevante technische elementen. U kunt Playbooks over organisaties delen om marketing benaderingen te standaardiseren en consistentie te handhaven. |
 
 {style="table-layout:auto"}
 
