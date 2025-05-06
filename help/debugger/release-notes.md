@@ -4,14 +4,20 @@ description: De nieuwste aanvullende informatie voor Adobe Experience Platform D
 keywords: foutopsporing;Experience Platform Debugger-extensie;Chrome;extensie;aanvullende informatie
 uuid: 47a5d6f3-c074-4ad5-ad4b-e6030496689b
 exl-id: 3eed44da-5f85-413e-a783-3a0df03a2baf
-source-git-commit: a5af5c194bc6b3bf9a6e119a2f147efa85f263f0
+source-git-commit: c4048b83c916f4b3b4b5acb3cccb957b65ee25c8
 workflow-type: tm+mt
-source-wordcount: '850'
-ht-degree: 93%
+source-wordcount: '864'
+ht-degree: 92%
 
 ---
 
 # Aanvullende informatie over Adobe Experience Platform Debugger
+
+## Versie 1.6.4 - woensdag 6 mei 2025
+
+### Oplossingen en verbeteringen
+
+* Probleem opgelost waarbij aanmelden niet beschikbaar was.
 
 ## Versie 1.6.3 - 30 april 2025
 
