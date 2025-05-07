@@ -15,7 +15,7 @@ Reddit is een platform voor sociale media met een diverse gebruikersbasis, waard
 
 Gebruik de [[!DNL Reddit]  uitbreiding van Conversies API ](https://ads-api.reddit.com/docs/v2/#tag/Conversions-API) om de gebeurtenissen van de gebruikersinteractie te verzenden die in Adobe Experience Platform Edge Network aan [!DNL Reddit Ads] worden gevangen. Gebruik deze extensie om uw merk te helpen een publiek van meer dan 379 miljoen actieve gebruikers per week te bereiken, en om het gedrag van gebruikers beter te begrijpen en gerichte advertenties uit te voeren.
 
-Lees deze gids om te leren hoe te installeren, te vormen en, de [!DNL Reddit] uitbreiding van Conversies API in uw gebeurtenis te gebruiken die [ regels ](https://experienceleague.adobe.com/en/docs/experience-platform/tags/ui/rules) door:sturen.
+Lees deze gids om te leren hoe te installeren, te vormen en, de [!DNL Reddit] uitbreiding van Conversies API in uw gebeurtenis te gebruiken die [ regels ](https://experienceleague.adobe.com/nl/docs/experience-platform/tags/ui/rules) door:sturen.
 
 ## Belangrijkste voordelen {#benefits}
 
@@ -42,7 +42,7 @@ Als u de Experience Platform wilt verbinden met [!DNL Reddit] , hebt u de volgen
 
 Voer de volgende stappen uit om de API-extensie [!DNL Reddit] Conversies te installeren en te configureren:
 
-1. Selecteer in de gebruikersinterface van de Experience Platform-gegevensverzameling de optie [!UICONTROL Extensions] in de linkernavigatie voor toegang tot de catalogus van [!UICONTROL Extensions] . Dan [ creeer een nieuwe gebeurtenis door:sturen bezit ](https://experienceleague.adobe.com/en/docs/experience-platform/tags/event-forwarding/overview#properties) of selecteer een bestaand bezit.
+1. Selecteer in de gebruikersinterface van de Experience Platform-gegevensverzameling de optie [!UICONTROL Extensions] in de linkernavigatie voor toegang tot de catalogus van [!UICONTROL Extensions] . Dan [ creeer een nieuwe gebeurtenis door:sturen bezit ](https://experienceleague.adobe.com/nl/docs/experience-platform/tags/event-forwarding/overview#properties) of selecteer een bestaand bezit.
 2. Navigeer naar **[!UICONTROL Extensions]** in het navigatievenster aan de linkerkant. Selecteer **[!UICONTROL Catalog]** en selecteer vervolgens de extensie **[!DNL Reddit]** .
    ![ de catalogus van de Uitbreidingen van Adobe Experience Platform met benadrukte reddit uitbreiding.](../../../images/extensions/server/reddit/reddit-extension.png)
 3. Geef de volgende configuratiedetails op:
@@ -55,7 +55,7 @@ Voer de volgende stappen uit om de API-extensie [!DNL Reddit] Conversies te inst
 
 Nadat u de gegevenselementen hebt ingesteld, maakt u regels voor het doorsturen van gebeurtenissen om te bepalen wanneer en hoe gebeurtenissen naar [!DNL Reddit Ads] worden verzonden.
 
-1. Navigeer aan **Regels** in uw gebeurtenis door:sturen bezit en creeer een nieuwe [ regel ](https://experienceleague.adobe.com/en/docs/experience-platform/tags/ui/rules).
+1. Navigeer aan **Regels** in uw gebeurtenis door:sturen bezit en creeer een nieuwe [ regel ](https://experienceleague.adobe.com/nl/docs/experience-platform/tags/ui/rules).
 2. Onder **Acties**, voeg een nieuwe actie toe en plaats de uitbreiding aan **[!DNL Reddit CAPI]**.
 3. Plaats het **Type van Actie** aan **verzendt Gebeurtenis**.
    ![ Gebeurtenis die regelconfiguratieinterface voor Reddit Conversies API uitbreiding door:sturen, met de benadrukte gebieden van het uitbreidings en actietype.](../../../images/extensions/server/reddit/reddit-rule.png)
