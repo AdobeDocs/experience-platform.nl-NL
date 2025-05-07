@@ -1,13 +1,13 @@
 ---
-keywords: Experience Platform;huis;populaire onderwerpen;de vraagdienst;de dienst van de vraag;geplande vragen;geplande vraag;
+keywords: Experience Platform;home;populaire onderwerpen;queryservice;Query-service;geplande query's;geplande query;
 solution: Experience Platform
 title: Planningeindpunt
 description: De volgende secties lopen door de diverse API vraag u voor geplande vragen met de Dienst API van de Vraag kunt maken.
 role: Developer
 exl-id: f57dbda5-da50-4812-a924-c8571349f1cd
-source-git-commit: c16ce1020670065ecc5415bc3e9ca428adbbd50c
+source-git-commit: a39fae1b72533261fb43e0acc95e50e5a6acd8df
 workflow-type: tm+mt
-source-wordcount: '1214'
+source-wordcount: '1224'
 ht-degree: 0%
 
 ---
@@ -20,7 +20,7 @@ Nu u begrijpt welke headers u moet gebruiken, bent u klaar om aanroepen uit te v
 
 ### Hiermee wordt een lijst met geplande query&#39;s opgehaald
 
-U kunt een lijst van alle geplande vragen voor uw organisatie terugwinnen door een verzoek van de GET tot het `/schedules` eindpunt te richten.
+U kunt een lijst van alle geplande vragen voor uw organisatie terugwinnen door een GET- verzoek aan het `/schedules` eindpunt te doen.
 
 **API formaat**
 
@@ -124,7 +124,7 @@ Een succesvolle reactie keert status 200 van HTTP met een lijst van geplande vra
 
 ### Nieuwe geplande query maken
 
-U kunt een nieuwe geplande vraag tot stand brengen door een verzoek van de POST aan het `/schedules` eindpunt te doen. Wanneer u een geplande query maakt in de API, kunt u deze ook zien in de Query-editor. Voor meer informatie over geplande vragen in UI, te lezen gelieve de [ documentatie van de Redacteur van de Vraag ](../ui/user-guide.md#scheduled-queries).
+U kunt een nieuwe geplande query maken door een POST-aanvraag in te dienen bij het `/schedules` -eindpunt. Wanneer u een geplande query maakt in de API, kunt u deze ook zien in de Query-editor. Voor meer informatie over geplande vragen in UI, te lezen gelieve de [ documentatie van de Redacteur van de Vraag ](../ui/user-guide.md#scheduled-queries).
 
 **API formaat**
 
@@ -158,10 +158,11 @@ curl -X POST https://platform.adobe.io/data/foundation/query/schedules
 
 | Eigenschap | Beschrijving |
 | -------- | ----------- |
-| `query.dbName` | De naam van de database waarvoor u een geplande query maakt. |
-| `query.sql` | De SQL-query die u wilt maken. |
+| `query.dbName` | De naam van het gegevensbestand waar de geplande vraag zal lopen. |
+| `query.sql` | De SQL-query die moet worden uitgevoerd volgens het gedefinieerde schema. |
 | `query.name` | De naam van de geplande query. |
-| `schedule.schedule` | Het uitsnijdschema voor de query. Voor meer informatie over kroonprogramma&#39;s, te lezen gelieve het [ formaat van de cron uitdrukking ](https://www.quartz-scheduler.org/documentation/quartz-2.3.0/tutorials/crontrigger.html) documentatie. In dit voorbeeld betekent &quot;30 * * *&quot;dat de vraag elk uur bij het minteken van 30 minuten zal lopen.<br><br> Alternatief, kunt u de volgende steno uitdrukkingen gebruiken:<ul><li>`@once`: de query wordt slechts één keer uitgevoerd.</li><li>`@hourly`: de query wordt elk uur uitgevoerd aan het begin van het uur. Dit is gelijk aan de expressie voor uitsnijden `0 * * * *` .</li><li>`@daily`: De query wordt eenmaal per dag om middernacht uitgevoerd. Dit is gelijk aan de expressie voor uitsnijden `0 0 * * *` .</li><li>`@weekly`: de query wordt één keer per week uitgevoerd, op zondag, om middernacht. Dit is gelijk aan de expressie voor uitsnijden `0 0 * * 0` .</li><li>`@monthly`: De query wordt één keer per maand uitgevoerd, op de eerste dag van de maand, om middernacht. Dit is gelijk aan de expressie voor uitsnijden `0 0 1 * *` .</li><li>`@yearly`: De query wordt één keer per jaar uitgevoerd, op 1 januari om middernacht. Dit is gelijk aan de expressie voor uitsnijden `1 0 0 1 1 *` . |
+| `query.description` | Een optionele beschrijving voor de geplande query. |
+| `schedule.schedule` | Het uitsnijdschema voor de query. Verwijs naar [ Crontab.guru ](https://crontab.guru/) voor een interactieve manier om te creëren, te bevestigen, en gezamenlijke uitdrukkingen te begrijpen. In dit voorbeeld betekent &quot;30 * * *&quot;dat de vraag elk uur bij het minteken van 30 minuten zal lopen.<br><br> Alternatief, kunt u de volgende steno uitdrukkingen gebruiken:<ul><li>`@once`: de query wordt slechts één keer uitgevoerd.</li><li>`@hourly`: de query wordt elk uur uitgevoerd aan het begin van het uur. Dit is gelijk aan de expressie voor uitsnijden `0 * * * *` .</li><li>`@daily`: De query wordt eenmaal per dag om middernacht uitgevoerd. Dit is gelijk aan de expressie voor uitsnijden `0 0 * * *` .</li><li>`@weekly`: de query wordt één keer per week uitgevoerd, op zondag, om middernacht. Dit is gelijk aan de expressie voor uitsnijden `0 0 * * 0` .</li><li>`@monthly`: De query wordt één keer per maand uitgevoerd, op de eerste dag van de maand, om middernacht. Dit is gelijk aan de expressie voor uitsnijden `0 0 1 * *` .</li><li>`@yearly`: De query wordt één keer per jaar uitgevoerd, op 1 januari om middernacht. Dit is gelijk aan de expressie voor uitsnijden `0 0 1 1 *` . |
 | `schedule.startDate` | De begindatum voor uw geplande query, geschreven als een UTC-tijdstempel. |
 
 **Reactie**
@@ -223,7 +224,7 @@ Een succesvolle reactie keert status 202 (Toegelaten) van HTTP met details van u
 
 ### Gegevens van een opgegeven geplande query aanvragen
 
-U kunt informatie voor een specifieke geplande vraag terugwinnen door een verzoek van de GET tot het `/schedules` eindpunt te richten en zijn identiteitskaart in de verzoekweg te verstrekken.
+U kunt informatie voor een specifieke geplande vraag terugwinnen door een GET- verzoek aan het `/schedules` eindpunt te doen en zijn identiteitskaart in de verzoekweg te verstrekken.
 
 **API formaat**
 
@@ -306,9 +307,9 @@ Een succesvolle reactie keert status 200 van HTTP met details van de gespecifice
 
 ### Details van een opgegeven geplande query bijwerken
 
-U kunt de details voor een gespecificeerde geplande vraag bijwerken door een verzoek van PATCH aan het `/schedules` eindpunt en door zijn identiteitskaart in de verzoekweg te verstrekken.
+U kunt de details voor een gespecificeerde geplande vraag bijwerken door een PATCH- verzoek aan het `/schedules` eindpunt en door zijn identiteitskaart in de verzoekweg te verstrekken.
 
-De aanvraag PATCH ondersteunt twee verschillende paden: `/state` en `/schedule/schedule` .
+De PATCH-aanvraag ondersteunt twee verschillende paden: `/state` en `/schedule/schedule` .
 
 ### Geplande querystatus bijwerken
 
@@ -417,7 +418,7 @@ Een succesvolle reactie retourneert HTTP-status 202 (geaccepteerd) met het volge
 
 ### Opgegeven geplande query verwijderen
 
-U kunt een gespecificeerde geplande vraag schrappen door een verzoek van DELETE aan het `/schedules` eindpunt te doen en identiteitskaart van de geplande vraag te verstrekken u in de verzoekweg wilt schrappen.
+U kunt een gespecificeerde geplande vraag schrappen door een DELETE- verzoek aan het `/schedules` eindpunt te doen en identiteitskaart van de geplande vraag te verstrekken u in de verzoekweg wilt schrappen.
 
 >[!NOTE]
 >
