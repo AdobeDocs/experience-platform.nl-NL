@@ -2,9 +2,9 @@
 title: Behoud de Dataset van de Gebeurtenis van de Ervaring in het meer van Gegevens beheren gebruikend TTL
 description: Leer hoe u het behoud van de Experience Event-gegevensset in het datumpomeer kunt evalueren, instellen en beheren met TL-configuraties (Time-to-Live) met Adobe Experience Platform API's. In deze handleiding wordt uitgelegd hoe de vervaldatum van TTL op rijniveau het beleid voor gegevensbewaring ondersteunt, de opslagefficiëntie optimaliseert en een effectief beheer van de levenscyclus van gegevens garandeert. Het verstrekt ook gebruiksgevallen en beste praktijken om u te helpen TTL effectief toepassen.
 exl-id: d688d4d0-aa8b-4e93-a74c-f1a1089d2df0
-source-git-commit: 767e9536862799e31d1ab5c77588d485f80c59e9
+source-git-commit: 06b58d714047cb69f237469ecd548bb824e565ab
 workflow-type: tm+mt
-source-wordcount: '2406'
+source-wordcount: '2455'
 ht-degree: 0%
 
 ---
@@ -17,7 +17,7 @@ Deze gids verklaart hoe te om TTL te evalueren, te plaatsen en te beheren gebrui
 
 >[!IMPORTANT]
 >
-> TTL is ontworpen om beheer van de gegevenslevenscyclus en opslagefficiency te optimaliseren. Het is geen nalevingsinstrument en mag niet worden gebruikt voor regelgevingsvereisten. De naleving vereist vaak bredere strategieën voor gegevensbeheer.
+>TTL is ontworpen om beheer van de gegevenslevenscyclus en opslagefficiency te optimaliseren. Het is geen nalevingsinstrument en mag niet worden gebruikt voor regelgevingsvereisten. De naleving vereist vaak bredere strategieën voor gegevensbeheer.
 
 ## Waarom TTL voor rij-vlakke gegevensbeheer gebruiken
 
@@ -33,14 +33,18 @@ TTL is nuttig wanneer het beheren van tijd-gevoelige gegevens die relevantie in 
 >[!NOTE]
 >
 >De Behoud van de Dataset van de Gebeurtenis van de ervaring is op gebeurtenisgegevens van toepassing die in het gegevensmeer worden opgeslagen. Als u behoud in Real-Time Customer Data Platform beheert, overweeg het gebruiken van [ Verlopen van de Gebeurtenis van de Ervaring ](../../profile/event-expirations.md) en [ de Zijdeloze Verlopen van het Profiel ](../../profile/pseudonymous-profiles.md) naast de montages van het het behoud van het gegevensmeer.
+
+Gebruik TTL-configuraties om opslag te optimaliseren op basis van rechten. Hoewel gegevens uit de profielopslag (gebruikt in Real-Time CDP) na 30 dagen als &#39;stale&#39; en &#39;verwijder&#39; kunnen worden beschouwd, kunnen dezelfde gebeurtenisgegevens in het datumpomeer gedurende 12-13 maanden (of langer op basis van &#39;machtiging&#39;) beschikbaar blijven voor gebruik door Analytics en Data Distiller.
+
+>[!TIP]
 >
->De configuraties van TTL helpen u opslag optimaliseren die op aanspraken wordt gebaseerd. Hoewel gegevens uit de profielopslag (gebruikt in Real-Time CDP) na 30 dagen als &#39;stale&#39; en &#39;verwijder&#39; kunnen worden beschouwd, kunnen dezelfde gebeurtenisgegevens in het datumpomeer gedurende 12-13 maanden (of langer op basis van &#39;machtiging&#39;) beschikbaar blijven voor gebruik door Analytics en Data Distiller.
+>De rechten hebben betrekking op de opslag- en bewaarrechten die zijn vastgelegd in uw Adobe-abonnement- en -licentieovereenkomsten.
 
 ### Voorbeeld van industrie {#industry-example}
 
 Neem bijvoorbeeld een service voor videostreaming die gebruikersinteracties bijhoudt, zoals videoweergaven, zoekopdrachten en aanbevelingen. Terwijl recente betrokkenheidsgegevens van cruciaal belang zijn voor personalisatie, verliezen oudere activiteitenlogboeken (bijvoorbeeld interacties van meer dan een jaar geleden) de relevantie. Door rijverloop te gebruiken, verwijdert Experience Platform automatisch verouderde logboeken, die ervoor zorgen slechts huidige en zinvolle gegevens voor analyses en aanbevelingen worden gebruikt.
 
-## Evalueer de geschiktheid van TTL
+## Evalueer de geschiktheid van TTL {#evaluate-ttl-suitability}
 
 Alvorens een behoudbeleid toe te passen, bepaal of uw dataset een goede kandidaat voor rij-vlakke afloop is. Overweeg het volgende:
 
@@ -50,9 +54,39 @@ Alvorens een behoudbeleid toe te passen, bepaal of uw dataset een goede kandidaa
 
 Indien historische gegevens van essentieel belang zijn voor langetermijnanalyse of bedrijfsactiviteiten, is TTL wellicht niet de juiste aanpak. Als u deze factoren controleert, zorgt u ervoor dat TTL wordt afgestemd op de behoeften voor gegevensopslag zonder dat dit negatieve gevolgen heeft voor de beschikbaarheid van gegevens.
 
-## Uw vragen plannen {#plan-queries}
+## Aanbevolen procedures voor het instellen van TTL {#best-practices}
 
-Alvorens TTL toe te passen, is het belangrijk om datasetgrootte en gegevensrelevantie te beoordelen, en te evalueren hoeveel historische gegevens moeten worden behouden. Het volgende visuele overzicht schetst het volledige proces om TTL uit te voeren, van planningsvragen aan de doeltreffendheid van het toezicht.
+Selecteer de juiste TTL-waarde om ervoor te zorgen dat het beleid voor het bewaren van gegevens van de Dataset van de Gebeurtenis een evenwicht biedt tussen gegevensbewaring, opslagefficiëntie en analytische behoeften. Een TTL die te kort is kan gegevensverlies veroorzaken, terwijl één die te lang is kan opslagkosten en onnodige gegevensaccumulatie verhogen. Zorg ervoor dat TTL zich aan het doel van uw dataset door te overwegen richt hoe vaak de gegevens worden betreden en hoe lang het relevant blijft.
+
+De lijst hieronder verstrekt gemeenschappelijke aanbevelingen van TTL die op datasettype en gebruikspatronen worden gebaseerd:
+
+| Type gegevensset | Aanbevolen TTL | Gebruiksscenario&#39;s |
+|-----------------------------|------------------------|-------------------|
+| Veelgebruikte gegevenssets | 30-90 dagen | Logbestanden voor betrokkenheid van gebruikers, klikstreamgegevens van websites, gegevens over prestaties van campagnes op korte termijn. |
+| Gegevensbestanden archiveren | 1 jaar of meer | Logboeken van financiële transacties, nalevingsgegevens, trendanalyse op lange termijn, gegevensreeksen voor opleiding van machinaal leren. |
+| Door toepassingen beheerde gegevenssets | Tot 13 maanden | De systeem-beheerde datasets hebben vooraf bepaalde beperkingen van TTL, die automatisch worden afgedwongen om aan systeem-opgelegde grenzen te voldoen. |
+| Door de klant beheerde gegevenssets | 30 dagen - Max TTL | Datasets die zijn gemaakt via de UI, API&#39;s of Data Distiller. De GVTO moet ten minste 30 dagen zijn en binnen de vastgestelde maximale TTL liggen. |
+
+Controleer periodiek de montages van TTL om ervoor te zorgen zij zich aan uw opslagbeleid, analytische behoeften, en bedrijfsvereisten blijven richten.
+
+### Belangrijke overwegingen bij het instellen van TTL {#key-considerations}
+
+Volg deze beste praktijken om ervoor te zorgen dat de montages van TTL zich aan uw strategie van het gegevensbehoud richten:
+
+- Wijzigingen in TTL regelmatig controleren. Elke update van TTL activeert een controlegebeurtenis. De controlelogboeken van het gebruik om de wijzigingen van TTL voor naleving, gegevensbeheer, en het oplossen van problemendoeleinden te volgen.
+- Schakel TTL uit als de gegevens voor onbepaalde tijd moeten worden bewaard. Als u TTL wilt uitschakelen, stelt u `ttlValue` in op `null` . Hiermee voorkomt u automatische vervaldatums en behoudt u alle records permanent. Houd rekening met de gevolgen voor de opslag voordat u deze wijziging aanbrengt.
+
+## Beperkingen van TTL {#limitations}
+
+Houd rekening met de volgende beperkingen bij het gebruik van TTL:
+
+- **het Behouden van de Dataset van de Gebeurtenis van de Ervaring gebruikend TTL is op rij-vlakke afloop**, niet datasetschrapping van toepassing. TTL verwijdert verslagen die op een bepaalde bewaartermijn worden gebaseerd maar schrapt geen volledige datasets. Om een dataset te verwijderen, gebruik het [ eindpunt van de gegevenssetvervalsing ](../../hygiene/api/dataset-expiration.md) of handschrapping.
+- **de configuratie van TTL blijft actief tot uitdrukkelijk gehandicapt**. De configuratie blijft van kracht tot u het onbruikbaar maakt. Als u TTL uitschakelt, wordt de vervaldatum beëindigd en blijven alle records in de gegevensset behouden.
+- **TTL is geen nalevingshulpmiddel**. Terwijl TTL opslag en levenscyclusbeheer optimaliseert, moet u bredere beheersstrategieën uitvoeren om regelgevende naleving te verzekeren.
+
+## De grootte en relevantie van gegevenssets analyseren voordat u TTL toepast {#analyze-dataset-size}
+
+Alvorens TTL toe te passen, gebruik vragen om datasetgrootte en relevantie te analyseren. Voer gerichte query&#39;s uit (zoals het tellen van records binnen specifieke datumbereiken) om een voorvertoning te bekijken van de impact van verschillende TTL-waarden. Gebruik deze informatie vervolgens om een optimale retentieperiode te kiezen waarin het nut en de kosteneffectiviteit van de gegevens op elkaar worden afgestemd.
 
 ![ een visuele werkschema voor het uitvoeren van TTL op de Datasets van de Gebeurtenis van de Ervaring. De stappen omvatten: beoordelen gegevenslevensduur en effect van verwijdering, bevestigen de montages van TTL met vragen, vormen TTL door de Dienst API van de Catalogus, en controleren onophoudelijk de gevolgen van TTL en maken aanpassingen.](../images/datasets/dataset-retention-ttl-guide/manage-experience-event-dataset-retention-in-the-data-lake.png)
 
@@ -72,13 +106,17 @@ Voordat u de bewaring van de Dataset van de Gebeurtenis van de Ervaring kunt eva
 >
 >Dit document behandelt rij-vlakke afloop, die individuele verlopen rijen binnen een dataset schrapt terwijl het houden van de dataset zelf intact. Het is niet op datasetvervaldatum van toepassing, die volledige datasets verwijdert en door een afzonderlijke eigenschap wordt beheerd. Voor dataset-vlakke afloop, verwijs naar de [ API documentatie van de datasetvervaldatum ](../../hygiene/api/dataset-expiration.md).
 
-### Hoe te om huidige montages van TTL te controleren
+### Controleer uw beperkingen van TTL {#check-ttl-constraints}
 
-Om met uw beheer van TTL te beginnen, controleer eerst huidige montages van TTL. Maak een GET verzoek aan het `/ttl/{datasetId}` eindpunt om de standaard, maximum, en minimum montages van TTL voor een dataset terug te winnen. Deze stap is noodzakelijk omdat de regels van TTL gebaseerd op het datasettype kunnen variëren.
+Gebruik het eindpunt van de API van de Hygiëne van Gegevens `/ttl/{DATASET_ID}` helpen configuraties plannen TTL. Dit eindpunt keert de minimum en maximumwaarden van TTL terug die voor uw organisatie, samen met een geadviseerde waarde (`defaultValue`) voor het datasettype worden gesteund.
+
+Zie de Adobe Developer [ documentatie van de Hygiëne API van Gegevens ](https://developer.adobe.com/experience-platform-apis/references/data-hygiene/#operation/getTtl) voor meer informatie.
+
+Om [ te controleren TTL momenteel toegepast op een dataset ](#check-applied-ttl-values), doe een verzoek van GET aan het [ de dienstAPI van de Catalogus ](https://developer.adobe.com/experience-platform-apis/references/catalog/) `/dataSets/{DATASET_ID}` eindpunt in plaats daarvan.
 
 >[!TIP]
 >
->De Experience Platform Gateway-URL en het basispad voor de Catalog Service API zijn: `https://platform.adobe.io/data/foundation/catalog` .
+>De Experience Platform Gateway-URL en het basispad voor de Catalog Service API zijn: `https://platform.adobe.io/data/foundation/catalog` . Het basispad voor de API voor gegevenshygiëne is: `https://platform.adobe.io/data/core/hygiene`
 
 **API formaat**
 
@@ -92,11 +130,11 @@ GET /ttl/{DATASET_ID}
 
 **Verzoek**
 
-Het volgende verzoek wint de montages van TTL van uw organisatie voor een bepaalde dataset terug.
+Het volgende verzoek wint de beperkingen van TTL van uw organisatie voor een bepaalde dataset terug.
 
 ```shell
 curl -X GET \
-  'https://platform.adobe.io/data/foundation/catalog/ttl/5ba9452f7de80408007fc52a' \
+  'https://platform.adobe.io/data/foundation/catalog/ttl/{DATASET_ID}' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {ORG_ID}' \
@@ -106,51 +144,21 @@ curl -X GET \
 
 **Reactie**
 
-Een succesvolle reactie keert de configuratie van TTL voor de dataset, met inbegrip van het gebrek, maximum, en minimumwaarden van TTL voor zowel `adobe_lakeHouse` als `adobe_unifiedProfile` opslag terug.
+Een succesvolle reactie keert de geadviseerde, maximum, en minimumwaarden van TTL terug die op de aanspraken van uw organisatie, samen met voorgestelde TTL (`defaultValue`) voor de dataset worden gebaseerd. Deze `defaultValue` is een aanbevolen TTL-duur, alleen ter begeleiding. Het wordt niet toegepast tenzij uitdrukkelijk gevormd door u. De reactie bevat geen aangepaste TTL-waarden die mogelijk al zijn ingesteld. Om huidige TTL voor een dataset te bekijken, gebruik het GET `/catalog/dataSets/{DATASET_ID}` eindpunt.
 
 +++Selecteren om het antwoord weer te geven
 
 ```json
 {
-    "67976f0b4878252ab887ccd9": {
-        "name": "Acme Sales Data",
-        "description": "This dataset contains sales transaction records for Acme Corporation.",
-        "imsOrg": "{ORG_ID}",
-        "sandboxId": "{SANDBOX_ID}",
-        "tags": {
-            "adobe/pqs/table": [
-                "acme_sales_20250127_113331_106"
-            ],
-            "adobe/siphon/table/format": [
-                "delta"
-            ]
-        },
-        "extensions": {
-            "adobe_lakeHouse": {  
-                "rowExpiration": {
-                    "defaultValue": "P12M",
-                    "maxValue": "P12M",
-                    "minValue": "P30D"
-                }
-            },
-            "adobe_unifiedProfile": {  
-                "rowExpiration": {
-                    "defaultValue": "P12M",
-                    "maxValue": "P12M",
-                    "minValue": "P7D"
-                }
-            }
-        },
-        "version": "1.0.0",
-        "created": 1737977611118,
-        "updated": 1737977611118,
-        "createdClient": "acme_data_pipeline",
-        "createdUser": "john.snow@acmecorp.com",
-        "updatedUser": "arya.stark@acmecorp.com",
-        "classification": {
-            "managedBy": "CUSTOMER"
-        }
+  "extensions": {
+    "adobe_lakeHouse": {
+      "rowExpiration": {
+        "defaultValue": "P12M",
+        "maxValue": "P12M",
+        "minValue": "P7D"
+      }
     }
+  }
 }
 ```
 
@@ -158,19 +166,65 @@ Een succesvolle reactie keert de configuratie van TTL voor de dataset, met inbeg
 
 | Eigenschap | Beschrijving |
 |--------------|-------------|
-| `defaultValue` | De standaard toegepaste periode van TTL als geen aangepaste TTL wordt geplaatst. |
-| `maxValue` | De langste TTL die voor de dataset wordt toegestaan. Indien null, is er geen maximumlimiet. |
-| `minValue` | De kortste TTL stond toe om naleving van systeembeleid te verzekeren. |
+| `defaultValue` | Een geadviseerde waarde van TTL voor uw dataset. Deze waarde wordt **niet** automatisch toegepast. U moet uitdrukkelijk plaatsen TTL voor het van kracht worden. |
+| `maxValue` | De maximale TTL-duur die wordt toegestaan door de machtiging van uw organisatie. Doorgaans is deze duur 10 jaar (`P10Y`). |
+| `minValue` | De minimale TTL-duur die wordt toegestaan door de machtiging van uw organisatie. Doorgaans is deze duur 30 dagen (`P30D`). |
 
-<!-- Q) what is the default Max and Min values and are they system-imposed? -->
+### Hoe te om toegepaste waarden van TTL te controleren {#check-applied-ttl-values}
 
-### Hoe te om TTL voor een dataset te plaatsen {#set-ttl}
+Om de huidige waarde van TTL te controleren die op een dataset is toegepast, gebruik de volgende API vraag:
+
+```http
+GET /dataSets/{DATASET_ID}
+```
+
+Deze aanroep retourneert de huidige `ttlValue` (indien ingesteld) sectie `extensions.adobe_lakeHouse.rowExpiration` .
+
+**Verzoek**
+
+Het volgende verzoek wint de waarde van TTL van uw organisatie voor een bepaalde dataset terug.
+
+```shell
+curl -X GET \
+https://platform.adobe.io/data/foundation/catalog/dataSets/{DATASET_ID} \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}'
+```
+
+**Reactie**
+
+Een succesvolle reactie omvat het `extensions` voorwerp, dat de huidige configuratie van TTL bevat die op de dataset wordt toegepast. Het onderstaande voorbeeld is afgekapt voor bondigheid.
+
+```json
+{
+    "{DATASET_ID}": {
+        "name": "Acme Sales Data",
+        "description": "This dataset contains sales transaction records for Acme Corporation.",
+        "imsOrg": "{ORG_ID}",
+        "sandboxId": "{SANDBOX_ID}",
+        "extensions": {
+            "adobe_lakeHouse": {
+            "rowExpiration": {
+                "ttlValue": "P3M",
+            }
+            }
+        }
+        ...
+    }
+}
+```
+
+### TTL voor een dataset instellen of bijwerken {#set-update-ttl}
 
 >[!IMPORTANT]
 >
->Rij-vervaldatum kan slechts op gebeurtenisdatasets worden toegepast die een tijdreeksschema gebruiken. Voordat u TTL instelt, controleert u of het schema van de gegevensset `https://ns.adobe.com/xdm/data/time-series` wordt uitgebreid om ervoor te zorgen dat de API-aanvraag succesvol is. Gebruik de API voor schemaregistratie om de schemagegevens op te halen en de eigenschap `meta:extends` te verifiëren. Verwijs naar de [ documentatie van het eindpunt van het Schema ](../../xdm/api/schemas.md#lookup) voor begeleiding op hoe te om dit te doen.
+>Op TTL-Gebaseerde rij-vlakke afloop kan slechts op gebeurtenisdatasets worden toegepast die een tijdreeksschema gebruiken. Dit omvat datasets die op de standaard klasse XDM ExperienceEvent evenals douaneschema&#39;s worden gebaseerd die het schema van de Reeks van de Tijd uitbreiden (`https://ns.adobe.com/xdm/data/time-series`).
+>
+>Alvorens u TTL toepast, gebruik de Registratie API van het Schema om te verifiëren dat het schema van de dataset de correcte uitbreiding door het `meta:extends` bezit te controleren omvat. Zie de [ documentatie van het eindpunt van het Schema ](../../xdm/api/schemas.md#lookup) voor begeleiding op hoe te om dit te doen.
 
-Om het Behouden van de Dataset van de Gebeurtenis van de Ervaring voor uw dataset te vormen, plaats een nieuwe waarde van TTL door een verzoek van PATCH aan het `/v2/datasets/{ID}` eindpunt te doen.
+U kunt het Behouden van de Dataset van de Gebeurtenis van de Ervaring vormen door een nieuwe TTL te plaatsen of een bestaande TTL bij te werken gebruikend de zelfde API methode. Gebruik een PATCH-aanvraag voor het `/v2/datasets/{DATASET_ID}` -eindpunt om TTL toe te passen of aan te passen.
 
 **API formaat**
 
@@ -184,15 +238,15 @@ PATCH /v2/datasets/{DATASET_ID}
 
 **Verzoek**
 
-In de onderstaande voorbeeldaanvraag wordt `ttlValue` ingesteld op `P3M` . Hierdoor worden records ouder dan drie maanden automatisch verwijderd. U kunt de bewaarperiode aanpassen aan uw bedrijfsbehoeften met behulp van waarden zoals `P6M` gedurende zes maanden of `P12M` gedurende één jaar.
+In het onderstaande voorbeeld wordt `ttlValue` ingesteld op `P3M` . Dit betekent dat records ouder dan drie maanden automatisch worden verwijderd. Pas de bewaarperiode aan uw bedrijfsbehoeften aan (bijvoorbeeld `P6M` gedurende zes maanden of `P12M` gedurende één jaar).
 
 ```shell
 curl -X PATCH \
   'https://platform.adobe.io/data/foundation/catalog/v2/datasets/{DATASET_ID}' \
-  -h 'Authorization: Bearer {ACCESS_TOKEN}' \
-  -h 'Content-Type: application/json' \
-  -h 'x-api-key: {API_KEY}' \
-  -h 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'Content-Type: application/json' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -d '{
     "extensions": {
         "adobe_lakeHouse": {
@@ -204,93 +258,31 @@ curl -X PATCH \
 }
 ```
 
-**Reactie**
-
-Een succesvolle reactie toont de configuratie van TTL voor de dataset. Dit bevat details over verloopinstellingen op rijniveau voor zowel `adobe_lakeHouse` als `adobe_unifiedProfile` -opslag.
-
-+++Selecteren om het antwoord weer te geven
-
-```JSON
-{
-    "67976f0b4878252ab887ccd9": {
-        "name": "Acme Sales Data",
-        "description": "This dataset contains sales transaction records for Acme Corporation.",
-        "imsOrg": "{ORG_ID}",
-        "sandboxId": "{SANDBOX_ID}",
-        "tags": {
-            "adobe/pqs/table": [
-                "acme_sales_20250127_113331_106"
-            ],
-            "adobe/siphon/table/format": [
-                "delta"
-            ]
-        },
-        "extensions": {
-            "adobe_lakeHouse": {
-                "rowExpiration": {
-                "ttlValue": "P3M",
-                    "valueStatus": "custom",
-                    "setBy": "user",
-                    "updated": 1737977766499
-                }
-            },
-            "adobe_unifiedProfile": {  
-                "rowExpiration": {
-                    "ttlValue": "P3M",
-                    "valueStatus": "custom",
-                    "setBy": "user",
-                    "updated": 1737977766499
-                }
-            }
-        },
-        "version": "1.0.0",
-        "created": 1737977611118,
-        "updated": 1737977611118,
-        "createdClient": "acme_data_pipeline",
-        "createdUser": "john.snow@acmecorp.com",
-        "updatedUser": "arya.stark@acmecorp.com",
-        "classification": {
-            "managedBy": "CUSTOMER"
-        }
-    }
-}
-```
-
-+++
-
 | Eigenschap | Beschrijving |
 |----------------------------------|-------------|
-| `extensions` | Een container voor aanvullende metagegevens die betrekking hebben op de gegevensset. |
-| `extensions.adobe_lakeHouse` | Specificeert montages met betrekking tot opslagarchitectuur, met inbegrip van rij-vlakke vervalconfiguraties |
-| `rowExpiration` | Het object bevat TTL-instellingen die de retentieperiode voor de gegevensset definiëren. |
-| `rowExpiration.ttlValue` | Bepaalt de duur alvorens de verslagen in de dataset automatisch worden verwijderd. Gebruikt de notatie ISO-8601 punt (bijvoorbeeld `P3M` gedurende 3 maanden of `P30D` gedurende één week). |
-| `rowExpiration.valueStatus` | De tekenreeks geeft aan of de TTL-instelling een standaardsysteemwaarde is of een aangepaste waarde die door een gebruiker is ingesteld. Mogelijke waarden zijn: `default` , `custom` . |
-| `rowExpiration.setBy` | Geeft aan wie de TTL-instelling het laatst heeft gewijzigd. Mogelijke waarden zijn: `user` (handmatig ingesteld) of `service` (automatisch toegewezen). |
-| `rowExpiration.updated` | De tijdstempel van de laatste TTL-update. Deze waarde geeft aan wanneer de TTL-instelling voor het laatst is gewijzigd. |
+| `rowExpiration.ttlValue` | Bepaalt de duur alvorens de verslagen in de dataset automatisch worden verwijderd. Gebruikt de notatie ISO-8601 punt (bijvoorbeeld `P3M` gedurende 3 maanden of `P30D` gedurende 30 dagen). |
 
-### TTL bijwerken {#update-ttl}
+**Reactie**
 
-Breid of verkort de bewaartermijn uit om uw bedrijfsbehoeften aan te passen door TTL aan te passen. Wanneer het platform voor videostreaming bijvoorbeeld eerder wordt genoemd, kan het platform de TTL aanvankelijk instellen op drie maanden om ervoor te zorgen dat er nieuwe betrokkenheidsgegevens beschikbaar zijn voor personalisatie. Als uit hun analyse echter blijkt dat interactiepatronen ouder dan drie maanden nog steeds waardevolle inzichten opleveren, kunnen zij de periode van de GVTO verlengen tot zes maanden om oudere registers bij te houden voor betere aanbevolen modellen.
+Een succesvolle reactie keert een verwijzing naar de bijgewerkte dataset terug maar omvat niet uitdrukkelijk de montages van TTL. Om de configuratie van TTL te bevestigen, doe een follow-up `GET /dataSets/{DATASET_ID}` verzoek.
 
-Als u een bestaande TTL-waarde wilt wijzigen, gebruikt u de methode `PATCH` op het `/v2/datasets/{DATASET_ID}` -eindpunt.
-
-#### API-indeling
-
-```http
-PATCH /v2/datasets/{DATASET_ID}
+```JSON
+[
+  "@/dataSets/{DATASET_ID}"
+]
 ```
 
-**Verzoek**
+#### Voorbeeldscenario {#example-scenario}
 
-In het volgende verzoek wordt de TTL bijgewerkt tot zes maanden (`P6M`) die de periode van het registreren vóór automatische schrapping verlengen.
+Overweeg een videostreamingplatform dat de TTL aanvankelijk op drie maanden zet om nieuwe betrokkenheidsgegevens voor personalisatie te verzekeren. Als uit een latere analyse echter blijkt dat oudere interacties nog steeds waardevolle inzichten opleveren, kan de GVTO tot zes maanden worden verlengd met het volgende verzoek:
 
 ```shell
 curl -X PATCH \
   'https://platform.adobe.io/data/foundation/catalog/v2/datasets/{DATASET_ID}' \
-  -h 'Authorization: Bearer {ACCESS_TOKEN}' \
-  -h 'Content-Type: application/json' \
-  -h 'x-api-key: {API_KEY}' \
-  -h 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'Content-Type: application/json' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
   -d '{
     "extensions": {
         "adobe_lakeHouse": {
@@ -302,95 +294,41 @@ curl -X PATCH \
 }
 ```
 
-<!-- Q) For Clarity, should this example show both data stores being updated by expanding the example payload above? -->
-
-**Reactie**
-
-```JSON
-{  "extensions": {
-        "adobe_lakeHouse": {
-            "rowExpiration": {
-              "ttlValue": "P6M",
-              "valueStatus": "custom",
-              "setBy": "user",
-              "updated": "1737977766499"
-            }
-        },
-        "adobe_unifiedProfile": {
-            "rowExpiration": {
-                "ttlValue": "P3M",
-                "valueStatus": "custom",
-                "setBy": "user",
-                "updated": "17379754766355"
-            }
-        }
-    }
-}
-```
-
-## Aanbevolen procedures voor het instellen van TTL {#best-practices}
-
-Het kiezen van de juiste TTL-waarde is van cruciaal belang om ervoor te zorgen dat uw beleid voor het bewaren van gegevens van de Dataset van de Gebeurtenis een evenwicht biedt tussen gegevensbewaring, opslagefficiëntie en analytische behoeften. Een TTL die te kort is kan gegevensverlies veroorzaken, terwijl één die te lang is kan opslagkosten en onnodige gegevensaccumulatie verhogen. Zorg ervoor dat TTL zich aan het doel van uw dataset door te overwegen richt hoe vaak de gegevens worden betreden en hoe lang het relevant blijft.
-
-De lijst hieronder verstrekt gemeenschappelijke aanbevelingen van TTL die op datasettype en gebruikspatronen worden gebaseerd:
-
-| Type gegevensset | Aanbevolen TTL | Gebruiksscenario&#39;s |
-|-----------------------------|------------------------|-------------------|
-| Veelgebruikte gegevenssets | 30-90 dagen | Logbestanden voor betrokkenheid van gebruikers, klikstreamgegevens van websites, gegevens over prestaties van campagnes op korte termijn. |
-| Gegevensbestanden archiveren | 1 jaar of meer | Logboeken van financiële transacties, nalevingsgegevens, trendanalyse op lange termijn, gegevensreeksen voor opleiding van machinaal leren. |
-| Door toepassingen beheerde gegevenssets | Tot 13 maanden | De systeem-beheerde datasets hebben vooraf bepaalde beperkingen van TTL, die automatisch worden afgedwongen om aan systeem-opgelegde grenzen te voldoen. |
-| Door de klant beheerde gegevenssets | 30 dagen - Max TTL | Datasets die zijn gemaakt via de UI, API&#39;s of Data Distiller. De GVTO moet ten minste 30 dagen zijn en binnen de vastgestelde maximale TTL liggen. |
-
-Controleer periodiek de montages van TTL om ervoor te zorgen zij zich aan uw opslagbeleid, analytische behoeften, en bedrijfsvereisten blijven richten.
-
-### Belangrijke overwegingen bij het instellen van TTL
-
-<!-- What are the default TTL limits for system-generated Profile Store and data lake datasets? -->
-
-<!-- Q) Are the limits: 90 days for data in the Profile store and 13 months for data in the data lake? This is true for Journey Optimizer. -->
-
-Volg deze beste praktijken om ervoor te zorgen dat de montages van TTL zich aan uw strategie van het gegevensbehoud richten:
-
-- Wijzigingen in TTL regelmatig controleren. Elke update van TTL activeert een controlegebeurtenis. De controlelogboeken van het gebruik om de wijzigingen van TTL voor naleving, gegevensbeheer, en het oplossen van problemendoeleinden te volgen.
-- Verwijder TTL als de gegevens voor onbepaalde tijd moeten worden bewaard. Als u TTL wilt uitschakelen, stelt u `ttlValue` in op `null` . Hiermee voorkomt u automatische vervaldatums en behoudt u alle records permanent. Houd rekening met de gevolgen voor de opslag voordat u deze wijziging aanbrengt.
-
-<!-- Q) Are there any specific system constraints or impacts of setting TTL to null? -->
-
-## Beperkingen van TTL {#limitations}
-
-Houd rekening met de volgende beperkingen bij het gebruik van TTL:
-
-- **het Behouden van de Dataset van de Gebeurtenis van de Ervaring gebruikend TTL is op rij-vlakke afloop**, niet datasetschrapping van toepassing. TTL verwijdert verslagen die op een bepaalde bewaartermijn worden gebaseerd maar schrapt geen volledige datasets. Om een dataset te verwijderen, gebruik het [ eindpunt van de gegevenssetvervalsing ](../../hygiene/api/dataset-expiration.md) of handschrapping.
-- **TTL kan niet worden verwijderd**, slechts worden bijgewerkt. Zodra toegepast, kan TTL niet worden geschrapt, maar u kunt [ de behoudperiode ](#update-ttl) wijzigen om het te verlengen of te verkorten. Om gegevens voor onbepaalde tijd te behouden, plaats voldoende lange TTL in plaats van het proberen om het te verwijderen.
-- **TTL is geen nalevingshulpmiddel**. TTL optimaliseert opslag en gegevenslevenscyclusbeheer maar voldoet niet aan de vereisten van de regelgevende gegevensbewaring. Omwille van de naleving moeten bredere strategieën voor gegevensbeheer worden geïmplementeerd.
-
 ## Veelgestelde vragen over beleid voor gegevensbewaring {#faqs}
 
-In deze sectie worden antwoorden gegeven op veelgestelde vragen over het beleid voor het bewaren van gegevenssets in Adobe Experience Platform.
+In deze veelgestelde vragen wordt ingegaan op praktische vragen over banen voor gegevenssetbehoud, de onmiddellijke gevolgen van veranderingen van TTL, terugwinningsopties, en hoe de bewaartermijnen tussen de diensten van het Platform verschillen.
 
 ### Op welke soorten datasets kan ik de regels van het behoudbeleid toepassen?
 
 +++Antwoord
-U kunt retentiebeleid toepassen op gegevenssets die zijn gemaakt met de klasse XDM ExperienceEvent. Voor de diensten van het Profiel, zijn het behoudbeleid slechts van toepassing op de datasets van de Gebeurtenis van de Ervaring die profiel-toegelaten zijn geweest.
+U kunt op TTL-Gebaseerd behoudbeleid op om het even welke dataset toepassen die een tijdreeksschema gebruikt. Dit omvat datasets die op de standaardklasse XDM ExperienceEvent worden gebaseerd, evenals douaneschema&#39;s die de klasse van de Reeks van de Tijd XDM uitbreiden.
+
+Voor de vervaldatum op rijniveau gelden de volgende technische voorwaarden:
+
+- Het schema moet de basisklasse van de Reeks van de Tijd XDM uitbreiden.
+- Het schema moet een tijdstempelveld bevatten dat wordt gebruikt om de vervaldatum te evalueren.
+- In de gegevensset moeten gegevens op gebeurtenisniveau worden opgeslagen, meestal met behulp van de klasse XDM ExperienceEvent of door deze uit te breiden.
+- De dataset moet in de Dienst van de Catalogus worden geregistreerd, aangezien de montages van TTL via `extensions.adobe_lakeHouse.rowExpiration` worden toegepast.
+- TTL-waarden moeten de ISO-8601-duurnotatie gebruiken (bijvoorbeeld `P30D`, `P6M`, `P1Y`).
 +++
 
 ### Hoe snel zal de baan van het Behoud Dataset gegevens van de diensten van het gegevenspeer schrappen?
 
 +++Antwoord
-Dataset-TTL&#39;s worden wekelijks geëvalueerd en verwerkt, waarbij alle verlopen records worden verwijderd. Een gebeurtenis wordt als verlopen beschouwd als deze meer dan 30 dagen geleden in Experience Platform is ingeslikt (innamedatum > 30 dagen) en de gebeurtenisdatum ervan de gedefinieerde retentieperiode (TTL) overschrijdt.
+Dataset-TTL&#39;s worden elke 30 dagen geëvalueerd en verwerkt, waarbij alle verlopen records worden verwijderd. Een gebeurtenis wordt als verlopen beschouwd als deze meer dan 30 dagen geleden in Experience Platform is ingeslikt (innamedatum > 30 dagen) en de gebeurtenisdatum ervan de gedefinieerde retentieperiode (TTL) overschrijdt.
 +++
 
-### Hoe snel zal de baan van het Behoud Dataset gegevens van de diensten van het Profiel schrappen?
+<!-- ### How soon will the Dataset Retention job delete data from Profile services?
 
-+++Antwoord
-Nadat een retentiebeleid is ingesteld, worden bestaande gebeurtenissen in Experience Platform onmiddellijk verwijderd als de tijdstempel van de gebeurtenis de retentieperiode (TTL) overschrijdt. Nieuwe gebeurtenissen worden verwijderd als de tijdstempel langer is dan de retentieperiode.
++++Answer
+Once a retention policy is set, existing events that already exceed the newly defined TTL are immediately deleted. Newer events remain until their timestamps surpass the retention period.
 
-Als u bijvoorbeeld op 15 mei een vervalbeleid van 30 dagen toepast, gebeurt het volgende:
+For example, if you apply a 30-day expiration policy on May 15th, the following occurs:
 
-- Nieuwe gebeurtenissen krijgen een vervaldatum van 30 dagen wanneer ze worden opgenomen.
-- Bestaande gebeurtenissen met een tijdstempel die ouder is dan 15 april, worden onmiddellijk verwijderd.
-- Bestaande gebeurtenissen met een tijdstempel na 15 april verlopen 30 dagen na hun tijdstempel (een gebeurtenis vanaf 18 april wordt bijvoorbeeld op 18 mei verwijderd).
-+++
+- New events receive a 30-day expiration as they are ingested.
+- Existing events with a timestamp older than April 15th are immediately deleted.
+- Existing events with a timestamp after April 15th are set to expire 30 days after their timestamp (for example, an event from April 18th would be deleted on May 18th).
++++ -->
 
 ### Kan ik verschillende bewaarbeleid voor de diensten van het gegevensmeer en van het Profiel plaatsen?
 
@@ -410,6 +348,12 @@ Raadpleeg het dashboard Licentiegebruik voor informatie over gebruik op sandboxn
 
 +++Antwoord
 U kunt de laatste baan van het gegevensbehoud verifiëren door zijn timestamp in de [ Configuratie UI van het Behoud van de Dataset ](./user-guide.md#data-retention-policy) of op de pagina van de Inventaris van Gegevens te controleren.
+
+U kunt ook een GET-aanvraag indienen bij het volgende eindpunt:
+
+`GET https://platform.adobe.io/data/foundation/catalog/dataSets/{DATASET_ID}`
+
+De reactie bevat de eigenschap `extensions.adobe_lakeHouse.rowExpiration.lastCompleted` die de Unix-tijdstempel (in milliseconden) aangeeft wanneer de meest recente TTL-taak is voltooid.
 
 Historische rapportage van gegevenssetgebruik is momenteel niet beschikbaar.
 +++
