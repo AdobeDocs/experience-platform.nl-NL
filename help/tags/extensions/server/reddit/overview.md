@@ -48,6 +48,7 @@ Voer de volgende stappen uit om de API-extensie [!DNL Reddit] Conversies te inst
 3. Geef de volgende configuratiedetails op:
    - **identiteitskaart van het Pixel**: ga uw [!DNL Reddit Ads] identiteitskaart van het Pixel in.
    - **Token van de Toegang van de Omzetting**: Ga het teken in dat in uw [!DNL Reddit Ads] rekening wordt geproduceerd en selecteer **[!UICONTROL Save]** wanneer gebeëindigd.
+
      ![ de details van de Configuratie voor de Reddit uitbreiding van Conversies API, met inbegrip van gebieden voor identiteitskaart van het Pixel en Token van de Toegang van de Omzetting.](../../../images/extensions/server/reddit/reddit-capi-details.png)
 
 ## Vorm een gebeurtenis door:sturen regel {#config-rule}
