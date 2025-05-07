@@ -2,9 +2,9 @@
 title: Implementatiegids voor koppelingsregels voor identiteitsgrafieken
 description: Leer de aanbevolen stappen die u moet volgen wanneer u uw gegevens implementeert met configuraties van regels voor identiteitsgrafieken.
 exl-id: 368f4d4e-9757-4739-aaea-3f200973ef5a
-source-git-commit: a309f0dca5ebe75fcb7abfeb98605aec2692324d
+source-git-commit: d0380844eb8dd98bd7c349beb035cce4c7ccb44f
 workflow-type: tm+mt
-source-wordcount: '1876'
+source-wordcount: '1874'
 ht-degree: 0%
 
 ---
@@ -113,7 +113,7 @@ Tijdens uw pre-implementatieproces, moet u ervoor zorgen dat de voor authentiek 
 
 Als uw systeem twee persoonsidentificators verzendt, kan de implementatie de single-person namespace vereiste ontbreken. Bijvoorbeeld, als identityMap in uw webSDK implementatie CRMID, een customerID, en een ECID namespace bevat, dan is er geen garantie dat elke enige gebeurtenis zowel CRMID als customerID zal bevatten.
 
-In het ideale geval moet u een lading verzenden die lijkt op het volgende:
+U zou **niet** een nuttige lading als hieronder moeten verzenden:
 
 ```json
 {
