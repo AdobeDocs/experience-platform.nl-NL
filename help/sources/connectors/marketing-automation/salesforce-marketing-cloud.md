@@ -4,9 +4,9 @@ title: Salesforce Marketing Cloud Source - Overzicht
 description: Leer hoe u Salesforce Marketing Cloud met Adobe Experience Platform kunt verbinden via API's of de gebruikersinterface.
 exl-id: 2177d68c-0cef-4031-a0e7-8bf22ee2e70b
 last-substantial-update: 2025-04-29T00:00:00Z
-source-git-commit: 7ff0709b62590bb80c1ed664368f28cdc4a950ea
+source-git-commit: ce96dbc64845fddb40ebee709828c56d51a6c6ba
 workflow-type: tm+mt
-source-wordcount: '376'
+source-wordcount: '382'
 ht-degree: 0%
 
 ---
@@ -38,7 +38,11 @@ Voor meer informatie over werkingsgebied met inbegrip van een lijst van hun verw
 
 ## IP adres lijst van gewenste personen
 
-Een lijst van IP adressen moet aan een lijst van gewenste personen worden toegevoegd alvorens met bronschakelaars te werken. Het niet toevoegen van uw regio-specifieke IP adressen aan uw lijst van gewenste personen kan tot fouten of niet-prestaties leiden wanneer het gebruiken van bronnen. Zie de [&#128279;](../../ip-address-allow-list.md) pagina van de lijst van gewenste personen van het 0&rbrace; IP adres &lbrace;voor meer informatie.
+U moet gebied-specifieke IP adressen aan uw lijst van gewenste personen toevoegen alvorens uw bronnen aan Experience Platform aan te sluiten. Voor meer informatie, lees de gids op [ voegend op lijst van gewenste personen IP adressen om met Experience Platform ](../../ip-address-allow-list.md) voor meer informatie te verbinden.
+
+>[!WARNING]
+>
+>Als u niet de noodzakelijke IP adressen aan uw lijst van gewenste personen toevoegt, zal uw [!DNL Salesforce Marketing Cloud] rekening niet met Experience Platform verbinden.
 
 ## Verbinding maken [!DNL Salesforce Marketing Cloud] met Experience Platform via API&#39;s
 
