@@ -177,7 +177,7 @@ Gelieve te verwijzen naar de [ Verwijzing van de Uitbreiding van de Kern ](./ove
 
 v1.7.3
 
-* {de verhoging van de het gebiedslengte van de Tekst **- de inputgebieden van de Tekst werden veranderd in een flex lay-out om het het schermbreedte van de gebruiker beter te gebruiken, en meer ruimte voor langere tekstkoorden te geven.**
+* &lbrace;de verhoging van de het gebiedslengte van de Tekst **- de inputgebieden van de Tekst werden veranderd in een flex lay-out om het het schermbreedte van de gebruiker beter te gebruiken, en meer ruimte voor langere tekstkoorden te geven.**
 
 ## 1 november 2019
 
