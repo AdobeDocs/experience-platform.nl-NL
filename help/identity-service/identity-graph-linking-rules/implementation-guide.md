@@ -2,9 +2,9 @@
 title: Implementatiegids voor koppelingsregels voor identiteitsgrafieken
 description: Leer de aanbevolen stappen die u moet volgen wanneer u uw gegevens implementeert met configuraties van regels voor identiteitsgrafieken.
 exl-id: 368f4d4e-9757-4739-aaea-3f200973ef5a
-source-git-commit: d0380844eb8dd98bd7c349beb035cce4c7ccb44f
+source-git-commit: 1a6ca508f0f5e95ddad9014d6507a7a829592673
 workflow-type: tm+mt
-source-wordcount: '1874'
+source-wordcount: '1946'
 ht-degree: 0%
 
 ---
@@ -160,6 +160,8 @@ In grafieksimulatie kan deze opname er als volgt uitzien:
 ![ de grafieksimulatie UI met een getoonde voorbeeldgrafiek.](../images/implementation/example-graph.png)
 
 >[!TAB  Voor authentiek verklaarde gebeurtenissen zonder enige persoonherkenningstekens ]
+
+In dit voorbeeld kunt u ervan uitgaan dat de volgende gebeurtenis naar Experience Platform is verzonden terwijl John (de eindgebruiker) tijdens de verificatie door uw website bladert. Hoewel Experience Platform wel geautoriseerd is, kan het John niet identificeren vanwege het gebrek aan persoonsidentificatoren in de gebeurtenis. Daarom wordt deze gebeurtenis geïnterpreteerd als een anonieme gebruiker die door de Adobe Business-website bladert, in plaats van deze te herkennen als een onlineactiviteit die specifiek aan John is gekoppeld.
 
 ```json
 {
