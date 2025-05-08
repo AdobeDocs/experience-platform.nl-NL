@@ -2,9 +2,9 @@
 title: Opmerkingen bij de release Core Extension
 description: De nieuwste release bevat informatie over de Core-extensie in Adobe Experience Platform.
 exl-id: a049b2d5-7a00-435d-bcc7-112658a53a1e
-source-git-commit: 1ce579fc1f8548d1eb5c01d63e9fa4e8b32e2a4f
+source-git-commit: 1342461c95fa096496739fc14c92a7edd5aa6b57
 workflow-type: tm+mt
-source-wordcount: '1651'
+source-wordcount: '1693'
 ht-degree: 4%
 
 ---
@@ -14,6 +14,14 @@ ht-degree: 4%
 >[!NOTE]
 >
 >Adobe Experience Platform Launch is omgedoopt tot een reeks technologieën voor dataverzameling in Adobe Experience Platform.  Als gevolg hiervan zijn er verschillende terminologiewijzigingen in de productdocumentatie doorgevoerd. Raadpleeg het volgende [ document ](../../../term-updates.md) voor een geconsolideerde referentie van de terminologiewijzigingen.
+
+## vrijdag 8 mei 2025
+
+v3.4.3
+
+* Verhelpt een kwestie waar **Elementen van Gegevens** > **Hulpmiddelen Javascript** > **Eenvoudige Vervangen** een checkbox aan **toont vervangen allen** maar veroorzaakt een fout wanneer het proberen om de Regel met toegelaten checkbox te bewaren.
+* Hiermee wordt @adobe/response-spectrum bijgewerkt naar v3.41.0.
+* Hiermee wordt @adobe/reactor-sandbox bijgewerkt naar 13.2.1.
 
 ## donderdag 23 oktober 2024
 
@@ -94,7 +102,7 @@ v3.0.0
 
 * PDCL-6153: Voegt steun toe om volledig - gekwalificeerde URL voor caching acties van de douanecode betrouwbaar te trekken.
 
-v3.0.0 van de uitbreiding van de Kern wordt gekoppeld aan veranderingen in [ v27.2.0 van TurbineWeb runtime ](https://github.com/adobe/reactor-turbine/releases/tag/v27.2.0), die gebruikers toestaat om hun bibliotheek onder vele Adobe-beheerde ontvangende gebieden te laden als het bedrijf van de gebruiker Premium CDN steunt.
+v3.0.0 van de uitbreiding van de Kern wordt gekoppeld aan veranderingen in [ v27.2.0 van het Web van Turbines runtime ](https://github.com/adobe/reactor-turbine/releases/tag/v27.2.0), die gebruikers toestaat om hun bibliotheek onder vele Adobe-Beheerde ontvangende gebieden te laden als het bedrijf van de gebruiker Premium CDN steunt.
 
 Deze upgrade is optioneel en achterwaarts compatibel voor gebruikers zonder Premium CDN en is verplicht voor klanten die Premium CDN op hun bedrijf hebben ingeschakeld.
 
@@ -161,7 +169,7 @@ v1.8.1
 v1.8.0
 
 * **Verbintenissen in de Code van de Douane** - de voorwaarden van de Code van de Douane en de acties van JavaScript die niet in het globale werkingsgebied uitvoeren kunnen nu Beloften terugkeren.  U kunt deze gebruiken om volgende voorwaarden en handelingen te laten wachten tot een asynchroon proces in de aangepaste code is voltooid voordat u naar het volgende item gaat.
-* **Callbacks in de Acties van de Code van de Douane van de HTML** - u kunt het zelfde ding in de acties van de Code van de Douane van de HTML bereiken gebruikend `onCustomCodeSuccess()` en `onCustomCodeFailure()` callbacks.
+* **Callbacks in de Acties van de Code van de Douane van HTML** - u kunt het zelfde ding in de acties van de Code van de Douane van HTML bereiken gebruikend `onCustomCodeSuccess()` en `onCustomCodeFailure()` callbacks.
 
 Gelieve te verwijzen naar de [ Verwijzing van de Uitbreiding van de Kern ](./overview.md) in de Voorwaarden > de Code van de Douane en de Acties > de Code van de Douane voor meer gedetailleerde informatie.
 
@@ -169,7 +177,7 @@ Gelieve te verwijzen naar de [ Verwijzing van de Uitbreiding van de Kern ](./ove
 
 v1.7.3
 
-* &lbrace;de verhoging van de het gebiedslengte van de Tekst **- de inputgebieden van de Tekst werden veranderd in een flex lay-out om het het schermbreedte van de gebruiker beter te gebruiken, en meer ruimte voor langere tekstkoorden te geven.**
+* {de verhoging van de het gebiedslengte van de Tekst **- de inputgebieden van de Tekst werden veranderd in een flex lay-out om het het schermbreedte van de gebruiker beter te gebruiken, en meer ruimte voor langere tekstkoorden te geven.**
 
 ## 1 november 2019
 
