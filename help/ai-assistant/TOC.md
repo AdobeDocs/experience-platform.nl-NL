@@ -4,10 +4,10 @@ user-guide-title: AI Assistant in Adobe Experience Platform Guide
 user-guide-description: Leer hoe u AI Assistant gebruikt om uw workflow met Adobe Experience Platform en Real-time Customer Data Platform te versnellen.
 description: In dit document wordt de inhoudsopgave voor AI Assistant in Adobe Experience Platform weergegeven.
 role: Admin,User,Developer,Leader
-source-git-commit: 7c6b73509d2ba3f53c62c53d70c33969b0b4157b
+source-git-commit: 79a6076a509f15b32ce07e5e4a5fb5d7a2eee3ef
 workflow-type: tm+mt
-source-wordcount: '115'
-ht-degree: 28%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -30,6 +30,7 @@ ht-degree: 28%
 * Modelkaarten {#model-cards}
    * [Overzicht van modelkaarten](./model-cards/overview.md)
    * AI-modelkaarten {#ai-model-cards}
+      * [AI Assistent Natural Operational Insights Language to SQL](./model-cards/ai-model-cards/natural-language-to-sql.md)
       * [AI-proENTIEscore van klanten](./model-cards/ai-model-cards/customer-ai.md)
-* [Releaseopmerkingen bij Experience Platform](https://experienceleague.adobe.com/nl/docs/experience-platform/release-notes/latest)
+* [Releaseopmerkingen bij Experience Platform](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)
 
