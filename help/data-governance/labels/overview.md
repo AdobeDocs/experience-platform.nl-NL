@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Overzicht van labels voor gegevensgebruik
 description: Leer hoe labels voor gegevensgebruik worden gebruikt om naleving van gegevensbeheer in Adobe Experience Platform af te dwingen.
 exl-id: 4f113000-b9a1-4dfb-9502-6a5d08f0b26f
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 916eb01ea7878366620b859c1d6a667a88b850c9
 workflow-type: tm+mt
 source-wordcount: '786'
 ht-degree: 0%
@@ -44,7 +44,7 @@ Voor meer informatie over hoe de automatische handhaving in Experience Platform 
 
 [!DNL Experience Platform] heeft de mogelijkheid om segmenten te delen met Adobe Audience Manager. Alle besturingselementen voor gegevensexport die zijn toegepast op Audience Manager-segmenten, worden omgezet in equivalente labels en marketingacties die worden herkend door [!DNL Experience Platform] Data Governance.
 
-Voor een verwijzing op hoe de specifieke Controles van de Uitvoer van Gegevens aan de etiketten van het gegevensgebruik in [!DNL Experience Platform] in kaart brengen, gelieve te verwijzen naar de [ documentatie van Audience Manager ](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html?lang=nl-NL#aam-data-export-control-in-aep).
+Voor een verwijzing op hoe de specifieke Controles van de Uitvoer van Gegevens aan de etiketten van het gegevensgebruik in [!DNL Experience Platform] in kaart brengen, gelieve te verwijzen naar de [ documentatie van Audience Manager ](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html#aam-data-export-control-in-aep).
 
 ## Labels voor gegevensgebruik beheren in [!DNL Experience Platform] {#manage-labels}
 
@@ -57,7 +57,7 @@ U kunt labels voor gegevensgebruik beheren met behulp van [!DNL Experience Platf
 
 ### UI gebruiken
 
-Met de werkruimte van **[!UICONTROL Policies]** in de gebruikersinterface van [!DNL Experience Platform] kunt u kern- en aangepaste labels voor uw organisatie weergeven en beheren. U kunt de **[!UICONTROL Schemas]** werkruimte gebruiken [ labels op uw schema&#39;s van de Gegevens van de Ervaring toepassen Model (XDM) ](../../xdm/tutorials/labels.md), of leren hoe te [ douaneetiketten in ** [!UICONTROL Policies] UI ](./user-guide.md) creëren en beheren door de gebruikersgids van de etiketten van het gegevensgebruik in plaats daarvan te lezen.
+Met de werkruimte van **[!UICONTROL Policies]** in de gebruikersinterface van [!DNL Experience Platform] kunt u kern- en aangepaste labels voor uw organisatie weergeven en beheren. U kunt de **[!UICONTROL Schemas]** werkruimte gebruiken om [ etiketten op uw schema&#39;s van de Gegevens van de Ervaring toe te passen (XDM) ](../../xdm/tutorials/labels.md), of te leren hoe te [ douaneetiketten in **[!UICONTROL Policies]** UI ](./user-guide.md) creëren en te beheren door de gebruikersgids van de etiketten van het gegevensgebruik in plaats daarvan te lezen.
 
 >[!IMPORTANT]
 >

@@ -2,9 +2,9 @@
 title: Behoud de Dataset van de Gebeurtenis van de Ervaring in het meer van Gegevens beheren gebruikend TTL
 description: Leer hoe u het behoud van de Experience Event-gegevensset in het datumpomeer kunt evalueren, instellen en beheren met TL-configuraties (Time-to-Live) met Adobe Experience Platform API's. In deze handleiding wordt uitgelegd hoe de vervaldatum van TTL op rijniveau het beleid voor gegevensbewaring ondersteunt, de opslagefficiëntie optimaliseert en een effectief beheer van de levenscyclus van gegevens garandeert. Het verstrekt ook gebruiksgevallen en beste praktijken om u te helpen TTL effectief toepassen.
 exl-id: d688d4d0-aa8b-4e93-a74c-f1a1089d2df0
-source-git-commit: 06b58d714047cb69f237469ecd548bb824e565ab
+source-git-commit: 13db0477c0f42d0808647937d40c25b47a270894
 workflow-type: tm+mt
-source-wordcount: '2455'
+source-wordcount: '2451'
 ht-degree: 0%
 
 ---
@@ -301,11 +301,11 @@ In deze veelgestelde vragen wordt ingegaan op praktische vragen over banen voor 
 ### Op welke soorten datasets kan ik de regels van het behoudbeleid toepassen?
 
 +++Antwoord
-U kunt op TTL-Gebaseerd behoudbeleid op om het even welke dataset toepassen die een tijdreeksschema gebruikt. Dit omvat datasets die op de standaardklasse XDM ExperienceEvent worden gebaseerd, evenals douaneschema&#39;s die de klasse van de Reeks van de Tijd XDM uitbreiden.
+U kunt op TTL-Gebaseerd behoudbeleid op om het even welke dataset toepassen die tijd-reeksen gedrag gebruikt. Dit omvat datasets die op de standaardklasse XDM ExperienceEvent worden gebaseerd, evenals douaneschema&#39;s die worden ontworpen om tijd-reeksgegevens te vangen.
 
 Voor de vervaldatum op rijniveau gelden de volgende technische voorwaarden:
 
-- Het schema moet de basisklasse van de Reeks van de Tijd XDM uitbreiden.
+- Het schema moet worden ontworpen om tijd-reeksgegevens te vangen.
 - Het schema moet een tijdstempelveld bevatten dat wordt gebruikt om de vervaldatum te evalueren.
 - In de gegevensset moeten gegevens op gebeurtenisniveau worden opgeslagen, meestal met behulp van de klasse XDM ExperienceEvent of door deze uit te breiden.
 - De dataset moet in de Dienst van de Catalogus worden geregistreerd, aangezien de montages van TTL via `extensions.adobe_lakeHouse.rowExpiration` worden toegepast.
