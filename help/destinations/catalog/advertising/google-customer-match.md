@@ -3,9 +3,9 @@ keywords: Google klant match;Google klant match;Google Customer Match
 title: Google Customer Match-verbinding
 description: Met Google Customer Match kunt u uw online- en offline gegevens gebruiken om klanten te bereiken en opnieuw contact op te nemen met andere door Google bediende en bediende eigendommen, zoals Zoeken, Winkelen en Gmail.
 exl-id: 8209b5eb-b05c-4ef7-9fdc-22a528d5f020
-source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
+source-git-commit: 98d83e8d09b6e469daf515063e2887bfbf9b8be6
 workflow-type: tm+mt
-source-wordcount: '2008'
+source-wordcount: '2322'
 ht-degree: 1%
 
 ---
@@ -20,7 +20,7 @@ ht-degree: 1%
 ><br/>
 >De klanten die de Privacy &amp; het Schild van de Veiligheid van Adobe hebben gekocht en het beleid van de a [ toestemming ](../../../data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) gevormd om niet-goedgekeurde profielen uit te filteren hoeven geen actie te ondernemen.
 ><br/>
->De klanten die geen de Privacy &amp; het Schild van de Veiligheid van Adobe hebben gekocht moeten de [&#128279;](../../../segmentation/home.md#segment-definitions) mogelijkheden van de segmentdefinitie  binnen [ de Bouwer van het Segment ](../../../segmentation/ui/segment-builder.md) aan filter uit niet-goedgekeurde profielen gebruiken, om de bestaande bestemmingen van Real-Time CDP Google zonder onderbreking te blijven gebruiken.
+>De klanten die geen de Privacy &amp; het Schild van de Veiligheid van Adobe hebben gekocht moeten de ](../../../segmentation/home.md#segment-definitions) mogelijkheden van de segmentdefinitie [ binnen [ de Bouwer van het Segment ](../../../segmentation/ui/segment-builder.md) aan filter uit niet-goedgekeurde profielen gebruiken, om de bestaande bestemmingen van Real-Time CDP Google zonder onderbreking te blijven gebruiken.
 
 [[!DNL Google Customer Match] ](https://support.google.com/google-ads/answer/6379332?hl=en) laat u uw online en off-line gegevens gebruiken om met uw klanten over Google bezeten en in werking gestelde eigenschappen, zoals: [!DNL Search], [!DNL Shopping], en [!DNL Gmail] te bereiken en opnieuw in dienst te nemen.
 
@@ -58,11 +58,15 @@ Sommige bestemmingen in Experience Platform hebben bepaalde regels en verplichti
 
 | Doelidentiteit | Beschrijving | Overwegingen |
 |---|---|---|
-| GAID | GOOGLE ADVERTISING ID | Selecteer deze doelidentiteit wanneer uw bronidentiteit een GAID-naamruimte is. |
-| IDFA | Apple-id voor adverteerders | Selecteer deze doelidentiteit wanneer uw bronidentiteit een IDFA-naamruimte is. |
-| phone_sha256_e.164 | Telefoonnummers in E164-indeling, gehasht met het SHA256-algoritme | Adobe Experience Platform biedt ondersteuning voor zowel platte tekst- als SHA256-telefoonnummers. Volg de instructies in de [ passende vereisten van identiteitskaart ](#id-matching-requirements-id-matching-requirements) sectie en gebruik aangewezen namespaces voor gewone teksten en gehakt telefoonaantallen, respectievelijk. Wanneer het bronveld hashingkenmerken bevat, schakelt u de optie **[!UICONTROL Apply transformation]** in om de gegevens automatisch te laten hashen bij activering door [!DNL Experience Platform] . |
-| email_lc_sha256 | E-mailadressen die met het algoritme SHA256 worden gehasht | Adobe Experience Platform biedt ondersteuning voor zowel platte tekst- als SHA256-e-mailadressen met hashing. Volg de instructies in de [ passende vereisten van identiteitskaart ](#id-matching-requirements-id-matching-requirements) sectie en gebruik aangewezen namespaces voor gewone teksten en gehakt e-mailadressen, respectievelijk. Wanneer het bronveld hashingkenmerken bevat, schakelt u de optie **[!UICONTROL Apply transformation]** in om de gegevens automatisch te laten hashen bij activering door [!DNL Experience Platform] . |
-| user_id | Aangepaste gebruikers-id&#39;s | Selecteer deze doelidentiteit wanneer uw bronidentiteit een aangepaste naamruimte is. |
+| `GAID` | GOOGLE ADVERTISING ID | Selecteer deze doelidentiteit wanneer uw bronidentiteit een GAID-naamruimte is. |
+| `IDFA` | Apple-id voor adverteerders | Selecteer deze doelidentiteit wanneer uw bronidentiteit een IDFA-naamruimte is. |
+| `phone_sha256_e.164` | Telefoonnummers in E164-indeling, gehasht met het SHA256-algoritme | Adobe Experience Platform biedt ondersteuning voor zowel platte tekst- als SHA256-telefoonnummers. Volg de instructies in de [ passende vereisten van identiteitskaart ](#id-matching-requirements-id-matching-requirements) sectie en gebruik aangewezen namespaces voor gewone teksten en gehakt telefoonaantallen, respectievelijk. Wanneer het bronveld hashingkenmerken bevat, schakelt u de optie **[!UICONTROL Apply transformation]** in om de gegevens automatisch te laten hashen bij activering door [!DNL Experience Platform] . |
+| `email_lc_sha256` | E-mailadressen die met het algoritme SHA256 worden gehasht | Adobe Experience Platform biedt ondersteuning voor zowel platte tekst- als SHA256-e-mailadressen met hashing. Volg de instructies in de [ passende vereisten van identiteitskaart ](#id-matching-requirements-id-matching-requirements) sectie en gebruik aangewezen namespaces voor gewone teksten en gehakt e-mailadressen, respectievelijk. Wanneer het bronveld hashingkenmerken bevat, schakelt u de optie **[!UICONTROL Apply transformation]** in om de gegevens automatisch te laten hashen bij activering door [!DNL Experience Platform] . |
+| `user_id` | Aangepaste gebruikers-id&#39;s | Selecteer deze doelidentiteit wanneer uw bronidentiteit een aangepaste naamruimte is. |
+| `address_info_first_name` | Voornaam gebruiker | Deze doelidentiteit moet samen met `address_info_last_name`, `address_info_country_code` en `address_info_postal_code` worden gebruikt wanneer u adresgegevens naar uw bestemming wilt verzenden. <br><br> om Google te verzekeren past het adres aan, moet u alle vier adresgebieden (`address_info_first_name` in kaart brengen, `address_info_last_name`, `address_info_country_code`, en `address_info_postal_code`) en ervoor zorgen dat geen van deze gebieden gegevens in de uitgevoerde profielen missen. <br> Als een veld niet is toegewezen of ontbrekende gegevens bevat, komt Google niet overeen met het adres. |
+| `address_info_last_name` | Achternaam van de gebruiker | Deze doelidentiteit moet samen met `address_info_first_name`, `address_info_country_code` en `address_info_postal_code` worden gebruikt wanneer u adresgegevens naar uw bestemming wilt verzenden. <br><br> om Google te verzekeren past het adres aan, moet u alle vier adresgebieden (`address_info_first_name` in kaart brengen, `address_info_last_name`, `address_info_country_code`, en `address_info_postal_code`) en ervoor zorgen dat geen van deze gebieden gegevens in de uitgevoerde profielen missen. <br> Als een veld niet is toegewezen of ontbrekende gegevens bevat, komt Google niet overeen met het adres. |
+| `address_info_country_code` | Landcode gebruikersadres | Deze doelidentiteit moet samen met `address_info_first_name`, `address_info_last_name` en `address_info_postal_code` worden gebruikt wanneer u adresgegevens naar uw bestemming wilt verzenden. <br><br> om Google te verzekeren past het adres aan, moet u alle vier adresgebieden (`address_info_first_name` in kaart brengen, `address_info_last_name`, `address_info_country_code`, en `address_info_postal_code`) en ervoor zorgen dat geen van deze gebieden gegevens in de uitgevoerde profielen missen. <br> Als een veld niet is toegewezen of ontbrekende gegevens bevat, komt Google niet overeen met het adres. <br><br> Toegelaten formaat: Kleine letters, 2-brief landcodes in [ ISO 3166-1 alpha-2 ](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2) formaat. |
+| `address_info_postal_code` | Postcode van gebruikersadres | Deze doelidentiteit moet samen met `address_info_first_name`, `address_info_last_name` en `address_info_country_code` worden gebruikt wanneer u adresgegevens naar uw bestemming wilt verzenden. <br><br> om Google te verzekeren past het adres aan, moet u alle vier adresgebieden (`address_info_first_name` in kaart brengen, `address_info_last_name`, `address_info_country_code`, en `address_info_postal_code`) en ervoor zorgen dat geen van deze gebieden gegevens in de uitgevoerde profielen missen. <br> Als een veld niet is toegewezen of ontbrekende gegevens bevat, komt Google niet overeen met het adres. |
 
 {style="table-layout:auto"}
 
@@ -72,7 +76,7 @@ In deze sectie wordt beschreven welke soorten publiek u naar dit doel kunt expor
 
 | Oorsprong publiek | Ondersteund | Beschrijving |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | ✓ | Het publiek produceerde door de Dienst van de Segmentatie van Experience Platform [&#128279;](../../../segmentation/home.md). |
+| [!DNL Segmentation Service] | ✓ | Het publiek produceerde door de Dienst van de Segmentatie van Experience Platform [ ](../../../segmentation/home.md). |
 | Aangepaste uploads | ✓ | Het publiek [ ingevoerde ](../../../segmentation/ui/audience-portal.md#import-audience) in Experience Platform van Csv- dossiers. |
 
 {style="table-layout:auto"}
@@ -227,6 +231,10 @@ Kenmerkbrongegevens worden niet automatisch gehasht. Wanneer het bronveld hashin
 ## Doel van monitor {#monitor-destination}
 
 Na het verbinden met de bestemming en het vestigen van een bestemmingsdataflow, kunt u de [ controlefunctionaliteit ](/help/dataflows/ui/monitor-destinations.md) in Real-Time CDP gebruiken om uitgebreide informatie over de profielverslagen te krijgen die aan uw bestemming in elke dataflow in werking worden gesteld.
+
+>[!IMPORTANT]
+>
+>Wanneer u de vier aan het adres gerelateerde doelidentiteiten (`address_info_first_name`, `address_info_last_name`, `address_info_country_code` en `address_info_postal_code`) toewijst, worden ze geteld als afzonderlijke identiteiten voor elk profiel in de controlepagina voor gegevensstroom.
 
 ## Controleren of publieksactivering is gelukt {#verify-activation}
 
