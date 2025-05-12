@@ -2,10 +2,10 @@
 title: Aanvullende informatie van april 2025 voor Adobe Experience Platform
 description: Aanvullende informatie van april 2025 voor Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: a79efc5d64862850d17cff0fd0633c73fd08207d
+source-git-commit: 6558046e9708267cd0ceda36e7c0bdba6b2f758a
 workflow-type: tm+mt
-source-wordcount: '2183'
-ht-degree: 94%
+source-wordcount: '2178'
+ht-degree: 93%
 
 ---
 
@@ -15,10 +15,10 @@ ht-degree: 94%
 >
 >Raadpleeg de volgende documentatie voor aanvullende informatie voor andere Adobe Experience Platform-toepassingen:
 >
->- [Adobe Journey Optimizer](https://experienceleague.adobe.com/nl/docs/journey-optimizer/using/whats-new/release-notes)
->- [Adobe Journey Optimizer B2B](https://experienceleague.adobe.com/nl/docs/journey-optimizer-b2b/user/release-notes)
->- [Customer Journey Analytics](https://experienceleague.adobe.com/nl/docs/analytics-platform/using/releases/latest)
->- [Real-Time CDP Collaboration](https://experienceleague.adobe.com/nl/docs/real-time-cdp-collaboration/using/latest)
+>- [Adobe Journey Optimizer](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/whats-new/release-notes)
+>- [Adobe Journey Optimizer B2B](https://experienceleague.adobe.com/en/docs/journey-optimizer-b2b/user/release-notes)
+>- [Customer Journey Analytics](https://experienceleague.adobe.com/en/docs/analytics-platform/using/releases/latest)
+>- [Real-Time CDP Collaboration](https://experienceleague.adobe.com/en/docs/real-time-cdp-collaboration/using/latest)
 
 **Releasedatum: woensdag 29 april 2025**
 
@@ -108,7 +108,7 @@ Met Identity Service van Adobe Experience Platform krijgt u een uitgebreid beeld
 
 | Functie | Beschrijving |
 | --- | --- |
-| [!BADGE Beperkte beschikbaarheid]{type=Informative}[!DNL Identity Graph Linking Rules] | Koppelingsregels voor identiteitsgrafieken zitten nu in de fase Beperkte beschikbaarheid. Alle klanten hebben toegang ertoe in ontwikkelingssandboxes. <ul><li>**Activeringsvereisten**: de functie blijft inactief totdat u de [!DNL Identity Settings] configureert en opslaat. Zonder deze configuratie blijft het systeem normaal werken, zonder veranderingen in gedrag.</li><li>**Belangrijke opmerkingen**: tijdens de fase Beperkte beschikbaarheid kunt u bij Edge-segmentatie onverwachte resultaten van segmentlidmaatschappen ervaren. De segmentatie van streaming en batches functioneert echter zoals gewoonlijk.</li><li>**Volgende stappen**: neem contact op met uw Adobe-accountteam voor informatie over hoe u deze functie in productiesandboxes inschakelt.</li></ul> |
+| ]{type=Informative} [!DNL Identity Graph Linking Rules] De Beperkte Regels van de Grafiek van de Identiteit van de Beschikbaarheid [!BADGE  kunnen nu door alle klanten in ontwikkelingszandbakken worden betreden. <ul><li>**Activeringsvereisten**: de functie blijft inactief totdat u de [!DNL Identity Settings] configureert en opslaat. Zonder deze configuratie blijft het systeem normaal werken, zonder veranderingen in gedrag.</li><li>**Belangrijke opmerkingen**: tijdens de fase Beperkte beschikbaarheid kunt u bij Edge-segmentatie onverwachte resultaten van segmentlidmaatschappen ervaren. De segmentatie van streaming en batches functioneert echter zoals gewoonlijk.</li><li>**Volgende stappen**: neem contact op met uw Adobe-accountteam voor informatie over hoe u deze functie in productiesandboxes inschakelt.</li></ul> |
 
 {style="table-layout:auto"}
 

@@ -2,10 +2,10 @@
 title: Aanvullende informatie van april 2025 voor Adobe Experience Platform
 description: Aanvullende informatie van april 2025 voor Adobe Experience Platform.
 exl-id: a3b1e2e8-d780-4e23-b323-37e1a631f716
-source-git-commit: b0ed9e38dbc3b4a4f4f7cde5751c2edd35355b59
+source-git-commit: 6558046e9708267cd0ceda36e7c0bdba6b2f758a
 workflow-type: tm+mt
-source-wordcount: '2183'
-ht-degree: 28%
+source-wordcount: '2178'
+ht-degree: 93%
 
 ---
 
@@ -13,12 +13,12 @@ ht-degree: 28%
 
 >[!TIP]
 >
->Raadpleeg de volgende documentatie voor opmerkingen bij andere Adobe Experience Platform-toepassingen:
+>Raadpleeg de volgende documentatie voor aanvullende informatie voor andere Adobe Experience Platform-toepassingen:
 >
->- [ Adobe Journey Optimizer ](https://experienceleague.adobe.com/nl/docs/journey-optimizer/using/whats-new/release-notes)
->- [ Adobe Journey Optimizer B2B ](https://experienceleague.adobe.com/nl/docs/journey-optimizer-b2b/user/release-notes)
->- [Customer Journey Analytics](https://experienceleague.adobe.com/nl/docs/analytics-platform/using/releases/latest)
->- [ Real-Time CDP Collaboration ](https://experienceleague.adobe.com/nl/docs/real-time-cdp-collaboration/using/latest)
+>- [Adobe Journey Optimizer](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/whats-new/release-notes)
+>- [Adobe Journey Optimizer B2B](https://experienceleague.adobe.com/en/docs/journey-optimizer-b2b/user/release-notes)
+>- [Customer Journey Analytics](https://experienceleague.adobe.com/en/docs/analytics-platform/using/releases/latest)
+>- [Real-Time CDP Collaboration](https://experienceleague.adobe.com/en/docs/real-time-cdp-collaboration/using/latest)
 
 **Releasedatum: woensdag 29 april 2025**
 
@@ -27,7 +27,7 @@ Updates van bestaande functies en documentatie in Adobe Experience Platform:
 - [Experience League](#experience-league)
 - [Dataverzameling](#data-collection)
 - [Bestemmingen](#destinations)
-- [Experience Data Model](#xdm)
+- [Experience-datamodel](#xdm)
 - [Identiteitsservice](#identity)
 - [Query-service](#query-service)
 - [Realtime-klantenprofiel](#profile)
@@ -37,11 +37,11 @@ Updates van bestaande functies en documentatie in Adobe Experience Platform:
 
 ## Experience League {#experience-league}
 
-Experience League is een uitgebreid trainingsplatform dat u helpt uw vaardigheden met Adobe-producten te verbeteren. Het biedt een verscheidenheid van middelen, met inbegrip van cursussen, documentatie, communautaire pagina&#39;s, gebeurtenissen, en toegang tot certificatie aan.
+Experience League is een uitgebreid leerplatform dat is ontworpen om uw vaardigheden met Adobe-producten te verbeteren. Het biedt een verscheidenheid aan middelen, zoals cursussen, documentatie, communitypagina&#39;s, events en toegang tot certificeringen.
 
 | Functie | Beschrijving |
 | --- | --- |
-| Persoonlijke homepage | De toegang en past uw gepersonaliseerde homepage op [ Experience League ](https://experienceleague.adobe.com/nl/home#) aan. Meld u aan met uw Adobe-gebruikersgegevens en selecteer vervolgens **[!UICONTROL Experience League]** in het bovenste menu om uw leerervaring te optimaliseren: <ul><li>**Bladwijzers**: Gebruik de [!UICONTROL Bookmarks] eigenschap om uw favoriete middelen op één plaats te bewaren en te verzamelen. U kunt diverse inhoud opslaan, zoals afspeellijsten, artikelen en zelfstudies.</li><li>**pas uw het leren** aan: Verbeter uw het leren ervaring door uw profiel van Experience League met de rollen, de industrieën, de producten, en het ervaringsniveau bij te werken dat het beste uw behoeften aanpast.</li><li>**Aanbevelingen**: De het leren van mening adviseerde inhoud die op uw recente activiteit wordt gebaseerd.</li><li>**onlangs bekeken**: Gebruik de [!UICONTROL Recently viewed] sectie om snel terug naar onlangs bekeken inhoud zoals documentatie en video&#39;s te navigeren.</li><li>**Lerende middelen**: Gebruik het [!UICONTROL All learning resources] paneel om aan leerprogramma&#39;s, documentatie, gemeenschap, gebeurtenissen, en certificatie te navigeren.</li><li>**wat** nieuw is: Bekijk de [!UICONTROL What's new] sectie voor een stroom van de recentste inhoud op Experience League.</li><li>**Controle voorbij gebeurtenissen op bestelling**: Bekijk eerder geregistreerde levende stromen op productspots, gebruiksgevallen, en leerprogramma&#39;s met de [!UICONTROL Watch past events on-demand] sectie.</li></ul><br> ![ Persoonlijke homepage op Experience League.](../2025/assets/april/personalized-home-page.png " Persoonlijke homepage op Experience League."){width="250" align="center" zoomable="yes"} |
+| Gepersonaliseerde startpagina | De toegang en past uw gepersonaliseerde homepage op [ Experience League ](https://experienceleague.adobe.com/nl/home#) aan. Meld u aan met uw Adobe-referenties en selecteer vervolgens **[!UICONTROL Experience League]** in het bovenste menu om uw leerervaring te optimaliseren: <ul><li>**Bladwijzers**: gebruik de functie [!UICONTROL Bookmarks] om uw favoriete bronnen op één plek op te slaan en te verzamelen. U kunt verschillende inhoud opslaan, zoals afspeellijsten, artikelen en tutorials.</li><li>**Pas uw leerervaring aan**: verbeter uw leerervaring door uw Experience League-profiel bij te werken met de rollen, branches, producten en het ervaringsniveau die het beste bij uw behoeften passen.</li><li>**Aanbevelingen**: bekijk leerinhoud die wordt aanbevolen op basis van uw recente activiteit.</li><li>**Recent bekeken**: gebruik de sectie [!UICONTROL Recently viewed] om snel terug te gaan naar recent bekeken inhoud, zoals documentatie en video&#39;s.</li><li>**Learning-bronnen**: gebruik het deelvenster [!UICONTROL All learning resources] om naar tutorials, documentatie, community, evenementen en certificeringen te gaan.</li><li>**Nieuw**: bekijk de sectie [!UICONTROL What's new] voor een overzicht van de recentste inhoud op Experience League.</li><li>**Bekijk eerdere evenementen op vraag**: bekijk eerder opgenomen livestreams over productpresentaties, use cases en tutorials met de sectie [!UICONTROL Watch past events on-demand].</li></ul><br> ![Gepersonaliseerde startpagina op Experience League.](../2025/assets/april/personalized-home-page.png "Gepersonaliseerde startpagina op Experience League."){width="250" align="center" zoomable="yes"} |
 
 {style="table-layout:auto"}
 
@@ -66,35 +66,35 @@ Adobe Experience Platform biedt een reeks technologieën waarmee u klantervaring
 
 | Bestemming | Beschrijving |
 | --- | --- |
-| [ Marketo Engage Person Sync ](/help/destinations/catalog/adobe/marketo-engage-person-sync.md) | Adobe heeft het doel van [!DNL Marketo Engage Person Sync] bijgewerkt om een probleem op te lossen dat van invloed was op klanten wanneer er meerdere e-mails in de identiteitskaart stonden. |
-| [ (V2) Pega CDH Realtime Audience connection ](/help/destinations/catalog/personalization/pega-v2.md) | Gebruik de [!DNL (V2) Pega Customer Decision Hub Realtime Audience] bestemming in Adobe Experience Platform om profielattributen en de gegevens van het publiekslidmaatschap naar de Hub van het Besluit van de Klant van Pega voor volgende-best-actie besluit te verzenden, wanneer u veelvoudige toepassingen hebt van de Hub van het Besluit van de Klant van Pega die in uw rekening worden gevormd Pega. |
+| [Marketo Engage Person Sync](/help/destinations/catalog/adobe/marketo-engage-person-sync.md) | Adobe heeft het doel [!DNL Marketo Engage Person Sync] bijgewerkt om een probleem op te lossen dat klanten ondervonden wanneer er meerdere e-mails in de identiteitsafbeelding waren. |
+| [(V2) Pega CDH Realtime Audience-verbinding](/help/destinations/catalog/personalization/pega-v2.md) | Gebruik het doel [!DNL (V2) Pega Customer Decision Hub Realtime Audience] in Adobe Experience Platform om profielkenmerken en gegevens over doelgroeplidmaatschap naar Pega Customer Decision Hub te sturen voor het nemen van de best mogelijke vervolgbeslissing, wanneer u meerdere Pega Customer Decision Hub-toepassingen hebt geconfigureerd in uw Pega-account. |
 
 **Nieuwe of bijgewerkte functionaliteit** {#destinations-new-updated-functionality}
 
 | Functie | Beschrijving |
 | --- | --- |
-| **wekelijks** en **Maandelijks** het plannen opties voor volledige dossieruitvoer | U kunt de volledige dossieruitvoer voor mensen en het potentiële publiek nu plannen op een wekelijkse of maandelijkse basis wanneer het activeren aan op dossier-gebaseerde bestemmingen van de cloudopslag. [ las meer ](/help/destinations/ui/activate-batch-profile-destinations.md#export-full-files) over het plannen van opties. |
+| **Wekelijkse** en **maandelijkse** planningsopties voor volledige bestandsexporten | U kunt nu volledige bestandsexporten voor personen en potentiële doelgroepen plannen op een wekelijkse of maandelijkse basis wanneer u activeert naar op bestanden gebaseerde bestemmingen in de cloudopslag. [Lees meer](/help/destinations/ui/activate-batch-profile-destinations.md#export-full-files) over planningsopties. |
 
 {style="table-layout:auto"}
 
-**Bevestigingen, verhogingen, en andere aankondigingen** {#destinations-fixes-and-enhancements}
+**Oplossingen, verbeteringen en andere meldingen** {#destinations-fixes-and-enhancements}
 
-- **Handhaving van gegevensset de einddata van de uitvoer vertraagde aan 1 September, 2025**\
-  Als deel van de [ Versie van september 2024 ](/help/release-notes/2024/september-2024.md#destinations-new-updated-functionality), plaatste Adobe een standaardeinddatum van 1 Mei, 2025, voor om het even welke gegevensset uitgevoerde dataflows die *vóór die versie* worden gecreeerd. Adobe breidt nu deze handhavingsdeadline tot **1 September, 2025** uit om klanten van extra tijd te voorzien om hun programma&#39;s bij te werken. Verwijs naar de het plannen sectie van het [ de leerprogramma&#39;s van de uitvoerdatasets ](../../destinations/ui/export-datasets.md#schedule-dataset-export) voor informatie over hoe te om de einddatum van een datasetuitvoer dataflow uit te geven.
+- **De opgelegde einddatum voor het exporteren van datasets is verschoven naar 1 september 2025**\
+  Als onderdeel van de [release van september 2024](/help/release-notes/2024/september-2024.md#destinations-new-updated-functionality) heeft Adobe een standaardeinddatum van 1 mei 2025 ingesteld voor alle dataset-exportgegevensstromen die *vóór die release* zijn gemaakt. Adobe heeft deze opgelegde einddatum nu verschoven naar **1 september 2025** zodat klanten extra tijd hebben om hun planningen bij te werken. Raadpleeg de planningssectie van de [tutorial over het exporteren van datasets](../../destinations/ui/export-datasets.md#schedule-dataset-export) voor informatie over hoe u de einddatum van een dataset-exportgegevensstroom bewerkt.
 
-- **Verbeterde behandeling van ontbroken overdrachten SFTP voor LiveRamp onboarding**\
-  Adobe heeft een moeilijke situatie voor een kwestie uitgevoerd die dossieruitvoer aan [ LiveRamp Onboarding ](/help/destinations/catalog/advertising/liveramp-onboarding.md) bestemming via SFTP beïnvloedt. Soms zijn bestandsoverdrachten mislukt als gevolg van voorbijgaande serverproblemen en zijn tijdelijke bestanden van mislukte pogingen op de server gebleven. Deze onbewerkbare bestanden blokkeerden volgende pogingen, omdat Adobe geen toestemming had om deze te overschrijven.\
-  Als het tijdelijke bestand niet kan worden verwijderd bij een nieuwe poging, genereert Adobe met de fix een nieuw bestand met het achtervoegsel `attempt2` , om ervoor te zorgen dat het nieuwe bestand correct wordt voltooid.
+- **Verbeterde afhandeling van mislukte SFTP-overdrachten voor LiveRamp Onboarding**\
+  Adobe heeft een probleem met de bestandsuitvoer naar de [LiveRamp Onboarding](/help/destinations/catalog/advertising/liveramp-onboarding.md)-bestemming via SFTP opgelost. Zo nu en dan mislukten bestandsoverdrachten als gevolg van kortstondige problemen aan de serverkant en bleven er tijdelijke bestanden van mislukte pogingen op de server achter. Deze niet-verwijderbare bestanden blokkeerden daaropvolgende pogingen, omdat Adobe geen toestemming had om ze te overschrijven.\
+  Als het tijdelijke bestand niet kan worden verwijderd bij een nieuwe poging, genereert Adobe dankzij de oplossing een nieuw bestand met het achtervoegsel `attempt2` zodat de nieuwe poging wordt voltooid.
 
 ## Experience-datamodel (XDM) {#xdm}
 
 XDM is een open-bronspecificatie die algemene structuren en definities (schema&#39;s) biedt voor gegevens die in Adobe Experience Platform worden geïmporteerd. Door de XDM-standaarden te hanteren, kunnen alle gegevens over de klantervaring worden opgenomen in een gemeenschappelijke weergave. Zo worden inzichten sneller en beter geïntegreerd verkregen. U kunt waardevolle inzichten verkrijgen uit klantacties, klantdoelgroepen definiëren via segmenten en klantkenmerken gebruiken voor personalisatiedoeleinden.
 
-**Bijgewerkte componenten XDM**
+**Bijgewerkte XDM-onderdelen**
 
 | Functie | Beschrijving |
 | --- | --- |
-| Tekenreeksvelden ontvangen een minimumwaarde van één | Nieuwe tekenreeksvelden krijgen standaard een minimale lengte van één. Null-waarden voor niet-vereiste velden zijn nog steeds acceptabel. Voor meer informatie over beste praktijken, lees de gids over [ beste praktijken voor gegevens modelleren ](../../xdm/schema/best-practices.md#data-integrity-tips) |
+| Tekenreeksvelden ontvangen een minimumwaarde van één | Nieuwe tekenreeksvelden krijgen standaard een minimale lengte van één. Null-waarden voor niet-vereiste velden zijn nog steeds acceptabel. Raadpleeg de gids over [beste praktijken voor datamodeling](../../xdm/schema/best-practices.md#data-integrity-tips) voor meer informatie over beste praktijken. |
 
 {style="table-layout:auto"}
 
@@ -108,11 +108,11 @@ Met Identity Service van Adobe Experience Platform krijgt u een uitgebreid beeld
 
 | Functie | Beschrijving |
 | --- | --- |
-| [!BADGE &#x200B; Beperkte Beschikbaarheid &#x200B;]{type=Informative} [!DNL Identity Graph Linking Rules] | De Regels van de Vereniging van de Grafiek van de identiteit zijn nu in Beperkte Beschikbaarheid, en kunnen door alle klanten in ontwikkelingszandbakken worden betreden. <ul><li>**de vereisten van de Activering**: De eigenschap zal inactief blijven tot u vormt en uw [!DNL Identity Settings] bewaart. Zonder deze configuratie, zal het systeem normaal, zonder veranderingen in gedrag blijven werken.</li><li>**Belangrijke nota&#39;s**: Tijdens deze Beperkte fase van de Beschikbaarheid, kan de segmentatie van Edge onverwachte resultaten van het segmentlidmaatschap veroorzaken. Streaming en batchsegmentatie functioneren echter naar behoren.</li><li>**Volgende stappen**: Voor informatie over hoe te om deze eigenschap in productiestanddozen toe te laten, gelieve uw Adobe accountteam te contacteren.</li></ul> |
+| [!BADGE Beperkte beschikbaarheid]{type=Informative}[!DNL Identity Graph Linking Rules] | De Regels van de Vereniging van de Grafiek van de identiteit kunnen nu door alle klanten in ontwikkelingszandbakken worden betreden. <ul><li>**Activeringsvereisten**: de functie blijft inactief totdat u de [!DNL Identity Settings] configureert en opslaat. Zonder deze configuratie blijft het systeem normaal werken, zonder veranderingen in gedrag.</li><li>**Belangrijke opmerkingen**: tijdens de fase Beperkte beschikbaarheid kunt u bij Edge-segmentatie onverwachte resultaten van segmentlidmaatschappen ervaren. De segmentatie van streaming en batches functioneert echter zoals gewoonlijk.</li><li>**Volgende stappen**: neem contact op met uw Adobe-accountteam voor informatie over hoe u deze functie in productiesandboxes inschakelt.</li></ul> |
 
 {style="table-layout:auto"}
 
-Voor meer informatie, lees de [[!DNL Identity Graph Linking Rules]  documentatie ](../../identity-service/identity-graph-linking-rules/overview.md).
+Raadpleeg de [[!DNL Identity Graph Linking Rules] documentatie](../../identity-service/identity-graph-linking-rules/overview.md) voor meer informatie.
 
 ## Query-service {#query-service}
 
@@ -122,11 +122,11 @@ Voer query&#39;s uit op gegevens in het Adobe Experience Platform-data lake met 
 
 | Functie | Beschrijving |
 | --- | --- |
-| SQL-publiek overschrijven | Vernieuw het publiekslidmaatschap door bestaande profielen met de resultaten van een nieuwe SQL vraag te beschrijven. Hierdoor kunt u het dynamische publiek efficiënter beheren door verouderde records te verwijderen en bijgewerkte records in één bewerking in te voegen. Voor meer informatie, zie de [ SQL gids van de publieksuitbreiding ](../../query-service/data-distiller-audiences/overview.md#replace-audience). |
-| Zoekresultaten downloaden en kopiëren | [ de vraagresultaten van de Download direct van de Redacteur van de Vraag ](../../query-service/ui/overview.md#download-query-results) als CSV, XLSX, of JSON- dossiers, of [ exemplaarresultaten aan uw klembord ](../../query-service/ui/overview.md#copy-results) als komma-gescheiden waarden (CSV) voor snel gebruik in spreadsheettoepassingen zoals Excel. Deze verbeteringen stroomlijnen de workflows voor offline analyse, rapportage en gegevensvalidatie. |
-| Zoekresultaten op volledig scherm weergeven | [ de vraagresultaten van de Voorproef in een volledig-schermdialoog ](../../query-service/ui/overview.md#view-results) om leesbaarheid te verbeteren, gemakkelijk grote datasets af te tasten, en rijen voor het kopiëren te selecteren. De weergave Volledig scherm biedt een aanpasbare rasterlay-out waarmee u brede tabellen en gedetailleerde uitvoer efficiënter kunt bekijken. |
-| Verbeterde kolomselectie in modelvoorspelling | Selecteer specifieke kolommen en pas aliassen toe gebruikend de uitgebreide `model_predict` syntaxis. Hiermee haalt u tussentijdse voorspellingsresultaten op, zoals eigenschapvectoren en kansscores. Voor de verbeterde selectie is activering van een functiemarkering vereist. Zie [ documentatie van de modellevenscyclus ](../../query-service/advanced-statistics/models.md#select-specific-output-fields) voor syntaxisvoorbeelden en details van de eigenschapvlag. |
-| Modelvoorspellingsuitvoer opslaan met CREATE TABLE en INVOEGEN IN | [ sparen geselecteerde voorspelling output in nieuwe lijsten gebruikend CREEER LIJST ALS UITGEZOCHT of neem in bestaande lijsten op gebruikend TUSSENVOEGSEL IN UITGEZOCHT ](../../query-service/advanced-statistics/models.md#predict). Als de verbeterde kolomselectie wordt toegelaten, kunnen de middenresultaten zoals eigenschapvectoren en de waarschijnlijkheid ook naast definitieve voorspellingen worden voortgeduurd. Voor gebruiksvoorbeelden, verwijs naar de [ SQL syntaxisdocumentatie ](../../query-service/sql/syntax.md#create-table-as-select). |
+| SQL-doelgroepen overschrijven | Vernieuw het doelgroepslidmaatschap door bestaande profielen met de resultaten van een nieuwe SQL-query te overschrijven. Door in één bewerking verouderde records te verwijderen en bijgewerkte records in te voegen, kunt u dynamische doelgroepen efficiënter beheren. Zie de [gids over SQL-doelgroepextensies](../../query-service/data-distiller-audiences/overview.md#replace-audience) voor meer informatie. |
+| Queryresultaten downloaden en kopiëren | [Download queryresultaten direct vanuit de Query-editor](../../query-service/ui/overview.md#download-query-results) als CSV-, XLSX- of JSON-bestanden, of [kopieer resultaten naar het klembord](../../query-service/ui/overview.md#copy-results) als komma-gescheiden waarden (CSV) om ze snel in spreadsheettoepassingen zoals Excel te gebruiken. Deze verbeteringen stroomlijnen de workflows voor offline analyse, rapportage en gegevensvalidatie. |
+| Queryresultaten op volledig scherm weergeven | [Bekijk een voorvertoning van de queryresultaten in een dialoogvenster dat het volledige scherm inneemt](../../query-service/ui/overview.md#view-results) om de leesbaarheid te verbeteren, gemakkelijk grote datasets te scannen, en rijen te selecteren die u wilt kopiëren. De weergave Volledig scherm biedt een aanpasbare rasterlay-out waarmee u brede tabellen en gedetailleerde output efficiënter kunt bekijken. |
+| Verbeterde kolomselectie in modelvoorspelling | Selecteer specifieke kolommen en pas aliassen toe met behulp van de uitgebreide `model_predict`-syntaxis. Haal tussentijdse voorspellingsresultaten op, zoals functievectoren en kansscores. Voor de verbeterde selectie is activering van een functiemarkering vereist. Zie [documentatie van de modellevenscyclus](../../query-service/advanced-statistics/models.md#select-specific-output-fields) voor syntaxisvoorbeelden en informatie over de functiemarkering. |
+| Outputs van modelvoorspellingen opslaan met CREATE TABLE en INSERT INTO | [Sla geselecteerde outputs van voorspellingen op in nieuwe tabellen met behulp van CREATE TABLE AS SELECT of voeg ze in bestaande tabellen in met behulp van INSERT INTO SELECT](../../query-service/advanced-statistics/models.md#predict). Als u verbeterde kolomselectie hebt ingeschakeld, kunnen tussentijdse resultaten zoals functievectoren en kansscores ook naast definitieve voorspellingen worden weergegeven. Raadpleeg de [SQL-syntaxisdocumentatie](../../query-service/sql/syntax.md#create-table-as-select) voor gebruiksvoorbeelden. |
 
 Voor meer informatie over [!DNL Query Service] raadpleegt u het [[!DNL Query Service] overzicht](../../query-service/home.md).
 
@@ -136,7 +136,7 @@ Met Adobe Experience Platform kunt u uw klanten gecoördineerde, consistente en 
 
 | Functie | Beschrijving |
 | ------- | ----------- |
-| Vervaldatum van pseudoniem profielgegevens | Het verlopen van uw Pseudoniem-profielgegevens beheren in het dashboard Profiel. Om meer over deze eigenschap en Pseudoniem Profielen te leren, te lezen gelieve de [ Pseudoniem gids van de gegevensvervalsing van het Profiel ](../../profile/pseudonymous-profiles.md). |
+| Vervaldatum voor gegevens van pseudonieme profielen | Beheer de vervaldatum voor gegevens van pseudonieme profielen in het profieldashboard. Raadpleeg de [gids over de vervaldatum voor gegevens van pseudonieme profielen](../../profile/pseudonymous-profiles.md) om meer te weten te komen over deze functie en pseudonieme profielen. |
 
 {style="table-layout:auto"}
 
@@ -150,7 +150,7 @@ Adobe Experience Platform is ontworpen om digitale ervaringstoepassingen wereldw
 
 | Functie | Beschrijving |
 | --- | --- |
-| Sandbox-plug-in ondersteunt uitbreiding | Aangepaste handelingen kunnen nu als een afhankelijk object worden gekopieerd wanneer u Reis-objecten dupliceert in gereedschappen in de sandbox. Daarnaast kunt u bestaande handelingen selecteren die u opnieuw wilt gebruiken in de doelsandbox. Ze kunnen ook afzonderlijk aan een pakket worden toegevoegd. Voor volledige informatie over de gesteunde voorwerpen van Adobe Journey Optimizer, lees de [ zandbak het gebruiken ](../../sandboxes/ui/sandbox-tooling.md#adobe-journey-optimizer-objects) gids. |
+| Ondersteuning van plug-in voor sandbox-tools uitgebreid | U kunt nu aangepaste handelingen als afhankelijke objecten kopiëren wanneer u Journey-objecten in sandbox-tools dupliceert. Daarnaast kunt u bestaande handelingen selecteren die u in de doelsandbox opnieuw wilt gebruiken. U kunt ze ook afzonderlijk aan een pakket toevoegen. Raadpleeg de gids over [sandbox-tools](../../sandboxes/ui/sandbox-tooling.md#adobe-journey-optimizer-objects) voor volledige informatie over de ondersteunde Adobe Journey Optimizer-objecten. |
 
 {style="table-layout:auto"}
 
@@ -166,8 +166,8 @@ Gebruik bronnen in Experience Platform om gegevens vanuit een Adobe-applicatie o
 
 | Functie | Beschrijving |
 | --- | --- |
-| [!BADGE Beta]{type=Informative} [!DNL Algolia User Profiles] | De [[!DNL Algolia User Profiles]](../../sources/connectors/data-partners/algolia-user-profiles.md) -bron is nu beschikbaar. Gebruik deze bron om gegevens over gebruikersprofielen van [!DNL Algolia] naar Experience Platform te brengen. U kunt deze gegevens dan gebruiken om de betrokkenheid van gebruikers, conversietarieven, en algemene klantenervaring te verbeteren door krachtige onderzoeksoplossingen voor websites, e-commerceplatforms, en toepassingen te verstrekken. Voor meer informatie, leest de gids op hoe te [  [!DNL Algolia User Profiles]  gegevens aan Experience Platform ](../../sources/tutorials/ui/create/data-partners/algolia-user-profiles.md) innemen. |
-| [!BADGE &#x200B; Beta &#x200B;]{type=Informative} API steun voor [!DNL Azure Databricks] | De [!DNL Azure Databricks] -bron is nu beschikbaar in de API. Gebruik de [!DNL Flow Service] API om uw [!DNL Databricks] -account te verbinden en uw [!DNL Databricks] -gegevens naar Experience Platform te brengen. Lees de documentatie bij [[!DNL Azure Databricks]](../../sources/connectors/databases/databricks.md) voor meer informatie. |
+| [!BADGE Beta]{type=Informative} [!DNL Algolia User Profiles] | De [[!DNL Algolia User Profiles]](../../sources/connectors/data-partners/algolia-user-profiles.md)-bron is nu beschikbaar. Gebruik deze bron om de affiniteitsgegevens van uw [!DNL Algolia]-gebruikersprofielen naar Experience Platform te brengen. U kunt deze gegevens vervolgens gebruiken om de betrokkenheid van gebruikers, conversiepercentages en de algehele klantervaring te verbeteren door hoogwaardige zoekoplossingen te bieden voor websites, e-commerceplatforms en toepassingen. Voor meer informatie kunt u de gids over het [opnemen [!DNL Algolia User Profiles] van gegevens in Experience Platform](../../sources/tutorials/ui/create/data-partners/algolia-user-profiles.md) raadplegen. |
+| [!BADGE Beta]{type=Informative} API-ondersteuning voor [!DNL Azure Databricks] | De [!DNL Azure Databricks]-bron is nu beschikbaar in de API. Gebruik de [!DNL Flow Service]-API om uw [!DNL Databricks] account te koppelen en uw [!DNL Databricks] gegevens over te brengen naar Experience Platform. Raadpleeg de documentatie over [[!DNL Azure Databricks]](../../sources/connectors/databases/databricks.md) voor meer informatie. |
 
 {style="table-layout:auto"}
 
@@ -175,28 +175,28 @@ Gebruik bronnen in Experience Platform om gegevens vanuit een Adobe-applicatie o
 
 | Functie | Beschrijving |
 | --- | --- |
-| Bijgewerkte XDM-velden voor het opnemen van Streaming Media-gegevens in Experience Platform. | De nieuwe XDM-veldgroep, `mediaReporting` , is nu beschikbaar voor het opnemen van Streaming Media-gegevens via de Adobe Analytics-bron in Experience Platform. Dit veld vervangt het veld `media.mediaTimed` .</br> <br> Gedurende een overgangsperiode van drie maanden, zal gegevensinvoer op `media.mediaTimed` gebieden verdergaan. Eind juli 2025 zijn de velden `media.mediaTimed` echter volledig verouderd en niet meer zichtbaar in de gebruikersinterface van het Experience Platform-schema. Gegevens worden alleen verzonden met behulp van de velden `mediaReporting` .</br><br> als u de bron van Analytics hebt uitgevoerd om het stromen gegevens van Media in Platform vóór 22 April, 2025 te verzamelen, dan moet u uw bestaande configuraties migreren om gegevens te verzenden gebruikend de nieuwe gebiedsgroep. Deze migratie moet eind juli 2025 zijn voltooid. Neem contact op met uw Adobe-accountteam voor ondersteuning van migratie. |
-| Nieuwe verificatietypen voor [!DNL MariaDB] en [!DNL PostgreSQL] | U kunt nu basisverificatie gebruiken om uw [!DNL MariaDB] - en [!DNL PostgreSQL] -bronnen op Experience Platform te verifiëren. Lees de volgende documentatie voor meer informatie: <ul><li>[[!DNL MariaDB]](../../sources/connectors/databases/mariadb.md)</li><li>[[!DNL PostgreSQL]](../../sources/connectors/databases/postgres.md) |
-| Ondersteuning voor filteren op rijniveau voor [!DNL Amazon Redshift] | U kunt filtermogelijkheden op rijniveau gebruiken voor uw [!DNL Amazon Redshift] -gegevens op Experience Platform. Voor meer informatie, lees de gids over [ het filtreren rij-vlakke gegevens voor bronnen in API ](../../sources/tutorials/api/filter.md). |
+| Bijgewerkte XDM-velden voor het toevoegen van Streaming Media-gegevens op het Experience Platform. | De nieuwe XDM-veldgroep, `mediaReporting`, is nu beschikbaar voor het toevoegen van Streaming Media-gegevens via de Adobe Analytics-bron op het Experience Platform. Dit veld vervangt het veld `media.mediaTimed`.</br> <br>Gedurende een overgangsperiode van drie maanden blijft data-opname voor `media.mediaTimed`-velden doorgaan. Eind juli 2025 zijn de `media.mediaTimed`-velden echter volledig verouderd en niet meer zichtbaar in de gebruikersinterface van het Experience Platform-schema. Gegevens worden alleen verzonden met behulp van de `mediaReporting`-velden.</br><br>Als u de Analytics-bron hebt geïmplementeerd om Streaming Media-gegevens vóór 22 april 2025 op het Platform te verzamelen, dan moet u de bestaande configuraties migreren om gegevens te verzenden met behulp van de nieuwe veldgroep. Deze migratie moet eind juli 2025 zijn voltooid. Neem contact op met uw Adobe-accountteam voor ondersteuning bij migratie. |
+| Nieuwe authenticatietypen voor [!DNL MariaDB] en [!DNL PostgreSQL] | U kunt nu basisauthenticatie gebruiken om uw [!DNL MariaDB]- en [!DNL PostgreSQL]-bronnen op het Experience Platform te authenticeren. Raadpleeg de volgende documentatie voor meer informatie: <ul><li>[[!DNL MariaDB]](../../sources/connectors/databases/mariadb.md)</li><li>[[!DNL PostgreSQL]](../../sources/connectors/databases/postgres.md) |
+| Ondersteuning van filteren op rijniveau voor [!DNL Amazon Redshift] | U kunt filtermogelijkheden op rijniveau gebruiken voor uw [!DNL Amazon Redshift]-gegevens op het Experience Platform. Raadpleeg de gids over [het filtreren van gegevens op rijniveau voor bronnen in de API](../../sources/tutorials/api/filter.md) voor meer informatie. |
 
 {style="table-layout:auto"}
 
-Voor meer informatie, raadpleegt u het [overzicht van bronnen](../../sources/home.md).
+Voor meer informatie raadpleegt u het [overzicht van bronnen](../../sources/home.md).
 
 ## Playbooks voor gebruiksscenario&#39;s {#use-case-playbooks}
 
-Afspeelboeken met hoofdletters zijn oorspronkelijk ontworpen om u te helpen uitdagingen het hoofd te bieden wanneer u aan de slag gaat met Real-Time Customer Data Platform of Adobe Journey Optimizer. Ze blijven evolueren en stellen u nu in staat om belangrijke gevallen van marketinggebruik te beginnen en inspiratie en vooraf gebouwde middelen te bieden om te testen en in productie te gaan.
+Playbooks voor gebruiksscenario&#39;s zijn oorspronkelijk ontworpen om u te helpen bij het overwinnen van uitdagingen bij het aan de slag gaan met Real-Time Customer Data Platform of Adobe Journey Optimizer. Ze worden steeds verder ontwikkeld en geven u nu de mogelijkheid om belangrijke gebruiksscenario&#39;s voor marketing een boost te geven. Daarnaast voorzien ze u van inspiratie en standaardassets om te testen en in gebruik te nemen.
 
-In Use Case Playbooks (Engelstalig) is een overgang gemaakt van een detectiegereedschap naar een samenwerkingskader. Met deze programma&#39;s kunt u nu uw eigen afspeelboeken samenstellen, beheren en delen in verschillende organisaties.
+Playbooks voor gebruiksscenario&#39;s zijn van een ontdekkingstool veranderd in een samenwerkingskader. Met deze playbooks kunt u nu uw eigen playbooks samenstellen, beheren en met verschillende organisaties delen.
 
 **Bijgewerkte functies**
 
 | Functie | Beschrijving |
 | --- | --- |
-| [!BADGE &#x200B; Beta &#x200B;]{type=Informative} Auteur en deel uw eigen playbooks | Met een nieuw Playbook Authoring Framework kunt u uw eigen praktijkafspeelboeken maken, beheren en delen. Dit omvat ondersteuning voor het vastleggen van belangrijke metagegevens, het bewerken van reiskaarten en het koppelen van relevante technische elementen. U kunt Playbooks over organisaties delen om marketing benaderingen te standaardiseren en consistentie te handhaven. |
+| [!BADGE Beta]{type=Informative} Maak en deel uw eigen playbooks | Met een nieuw kader voor het creëren van playbooks kunt u uw eigen playbooks voor gebruiksscenario&#39;s maken, beheren en delen. Dit omvat ondersteuning voor het vastleggen van belangrijke metadata, het bewerken van trajectkaarten en het koppelen van relevante technische assets. U kunt playbooks binnen een organisatie delen om marketingbenaderingen te standaardiseren en consistentie te handhaven. |
 
 {style="table-layout:auto"}
 
-Leren hoe u auteur kunt en uw eigen playbooks delen, de [ Auteur lezen en uw eigen playbooks ](/help/use-case-playbooks/playbooks/author.md) document delen.
+Als u wilt weten hoe u uw eigen playbooks kunt schrijven en delen, raadpleegt u het document [Uw eigen playbooks schrijven en delen](/help/use-case-playbooks/playbooks/author.md).
 
-Voor meer informatie, lees het [ overzicht van de Playbooks van het Geval van het Gebruik ](/help/use-case-playbooks/playbooks/overview.md), dat een overzicht van de functionaliteit van playbooks, hun doel, en een demonstratie van begin tot eind, met inbegrip van hoe te om instanties tot stand te brengen en geproduceerde activa in andere zandbakmilieu&#39;s in te voeren verstrekt.
+Raadoleeg het [overzicht van playbooks voor gebruiksscenario&#39;s](/help/use-case-playbooks/playbooks/overview.md) voor meer informatie. Dit is een overzicht van de functionaliteit van playbooks, hun doel en een demonstratie van begin tot eind, met inbegrip van hoe u instanties kunt maken en gegenereerde assets in andere sandboxomgevingen kunt invoeren.
