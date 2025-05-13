@@ -25,13 +25,13 @@ In Adobe Experience Platform kunt u de vervaltijden van gegevens configureren vo
 
 >[!CONTEXTUALHELP]
 >id="platform_profile_pseudonymousprofile_dataexpiration"
->title="Vervaldatum van pseudoniem profielgegevens"
+>title="Vervaldatum voor gegevens van pseudonieme profielen"
 >abstract="De vervaldatum van de Pseudoniem-profielgegevens geeft het aantal dagen aan dat een Pseudoniem-profiel in Adobe Experience Platform overblijft voordat het wordt verwijderd. Deze waarde moet op minstens 1 worden ingesteld. Het kan maximaal drie dagen duren voordat het Pseudoniem-profiel is verwijderd."
 
 Een profiel wordt overwogen voor Pseudoniem gegevensvervaldatum als het aan de volgende voorwaarden voldoet:
 
 - De identiteitsnaamruimten van het verbonden profiel komen overeen met de naamruimte die de klant heeft opgegeven als een pseudoniem of onbekend naamgebied.
-   - Als de naamruimte van de identiteit van het profiel bijvoorbeeld `ECID`, `GAID` of `AAID` is. Het gekoppelde profiel heeft geen id&#39;s van een andere naamruimte. In dit voorbeeld, heeft een vastgemaakt profiel **&#x200B;**&#x200B;of geen e-mail of identiteit van CRM.
+   - Als de naamruimte van de identiteit van het profiel bijvoorbeeld `ECID`, `GAID` of `AAID` is. Het gekoppelde profiel heeft geen id&#39;s van een andere naamruimte. In dit voorbeeld, heeft een vastgemaakt profiel **** of geen e-mail of identiteit van CRM.
 - Er heeft zich geen activiteit voorgedaan in een door de gebruiker gedefinieerde hoeveelheid tijd. De activiteit wordt bepaald of door om het even welke Gebeurtenissen van de Ervaring die of klant-in werking gestelde updates aan de profielattributen worden opgenomen.
    - Bijvoorbeeld, wordt een nieuwe gebeurtenis van de paginamening of de update van het paginakenmerk beschouwd als een activiteit. Nochtans, wordt een niet-gebruiker-in werking gestelde update van het publiekslidmaatschap **niet** beschouwd als een activiteit. Op dit moment is het bijhouden van gegevens op profielniveau gebaseerd op de tijd van de gebeurtenis voor Experience Events en de tijd van inname voor profielkenmerken om de gegevensvervaldatum te berekenen.
 
@@ -79,7 +79,7 @@ De gegevensvervaldatum van de Gebeurtenis van de ervaring werkt op het niveau va
 
 #### Identiteitstypen
 
-De pseudoniem gegevens van het Profiel verlopen **slechts** overweegt profielen die identiteitsgrafieken hebben die identiteitsnamespaces bevatten die door de klant, zoals `ECID`, `AAID`, of andere soorten koekjes werden geselecteerd. Als het profiel **om het even welke** extra identiteitsnamespace bevat die **niet** in de geselecteerde lijst van de klant was, zal het profiel **&#x200B;**&#x200B;niet worden geschrapt.
+De pseudoniem gegevens van het Profiel verlopen **slechts** overweegt profielen die identiteitsgrafieken hebben die identiteitsnamespaces bevatten die door de klant, zoals `ECID`, `AAID`, of andere soorten koekjes werden geselecteerd. Als het profiel **om het even welke** extra identiteitsnamespace bevat die **niet** in de geselecteerde lijst van de klant was, zal het profiel **** niet worden geschrapt.
 
 De gegevensvervaldatum van de Gebeurtenis van de ervaring verwijdert gebeurtenissen **slechts** die op timestamp van het gebeurtenisverslag wordt gebaseerd. De inbegrepen identiteitsnamespaces zijn **genegeerd** voor vervaldoeleinden.
 
