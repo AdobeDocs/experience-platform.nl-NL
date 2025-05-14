@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Verlopen van gebeurtenissen ervaren
 description: Dit document biedt algemene richtlijnen voor het configureren van vervaltijden voor afzonderlijke Experience Events in een Adobe Experience Platform-gegevensset.
 exl-id: a91f2cd2-3a5d-42e6-81c3-0ec5bc644f5f
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 71634a1dd0e0cd3f731272a179b4f1fe221eb046
 workflow-type: tm+mt
-source-wordcount: '858'
+source-wordcount: '884'
 ht-degree: 0%
 
 ---
@@ -30,7 +30,7 @@ Nadat de Verlopen van de Gebeurtenis van de Ervaring op een profiel-Toegelaten d
 
 >[!WARNING]
 >
->Zodra toegepast, wordt om het even welke gegevens die ouder zijn dan het aantal dagen dat door de vervalwaarde wordt toegewezen permanent geschrapt **&#x200B;**&#x200B;en kan niet worden hersteld.
+>Zodra toegepast, wordt om het even welke gegevens die ouder zijn dan het aantal dagen dat door de vervalwaarde wordt toegewezen permanent geschrapt **** en kan niet worden hersteld.
 
 Als u bijvoorbeeld op 15 mei een vervalwaarde van 30 dagen hebt toegepast, worden de volgende stappen uitgevoerd:
 
@@ -48,6 +48,10 @@ Daarom zou u de zelfde waarde van de Vervaltijd van de Gebeurtenis van de Ervari
 
 In de volgende sectie worden vaak gestelde vragen over het verlopen van Experience Event-gegevens weergegeven:
 
+### Wat is de minimale duur waarvoor ik een gegevensvervaldatum van de Gebeurtenis van de Ervaring kan plaatsen?
+
+De minimumduur voor een de gegevensvervaldatum van de Gebeurtenis van de Ervaring is **één dag**.
+
 ### Hoe vervalt de geldigheidstermijn van de gegevens van de Gebeurtenis van de gegevensvervaldatum van het Pseudoniem Profiel?
 
 De de gegevensvervaldatum van de Ervaring van de Gebeurtenisgegevens en de gegevensvervaldatum van het Pseudoniem Profiel zijn complementaire eigenschappen.
@@ -62,7 +66,7 @@ De pseudoniem gegevens van het Profiel vervalsen werken op a **zandbak** niveau.
 
 De gegevensvervaldatum van de Gebeurtenis van de ervaring verwijdert gebeurtenissen **slechts** die op timestamp van het gebeurtenisverslag wordt gebaseerd. De inbegrepen identiteitsnamespaces zijn **genegeerd** voor vervaldoeleinden.
 
-De pseudoniem gegevens van het Profiel verlopen **slechts** overweegt profielen die identiteitsgrafieken hebben die identiteitsnamespaces bevatten die door de klant, zoals `ECID`, `AAID`, of andere soorten koekjes werden geselecteerd. Als het profiel **om het even welke** extra identiteitsnamespace bevat die **niet** in de geselecteerde lijst van de klant was, zal het profiel **&#x200B;**&#x200B;niet worden geschrapt.
+De pseudoniem gegevens van het Profiel verlopen **slechts** overweegt profielen die identiteitsgrafieken hebben die identiteitsnamespaces bevatten die door de klant, zoals `ECID`, `AAID`, of andere soorten koekjes werden geselecteerd. Als het profiel **om het even welke** extra identiteitsnamespace bevat die **niet** in de geselecteerde lijst van de klant was, zal het profiel **** niet worden geschrapt.
 
 #### Verwijderde items
 
