@@ -102,7 +102,7 @@ Als u een schema hebt waarin een aangepaste klasse wordt gebruikt die is geopend
 
 >[!IMPORTANT]
 >
->Wanneer het bouwen van een schema dat een klasse uitvoert die door uw organisatie wordt bepaald, herinner dat de groepen van het schemagebied voor gebruik slechts met compatibele klassen beschikbaar zijn. Aangezien de klasse die u hebt gedefinieerd nieuw is, worden er geen compatibele veldgroepen weergegeven in het dialoogvenster **[!UICONTROL Add field group]** . In plaats daarvan, zult u nieuwe gebiedsgroepen ](./field-groups.md#create) voor gebruik met die klasse moeten creëren [. De volgende keer dat u een schema samenstelt dat de nieuwe klasse implementeert, worden de gedefinieerde veldgroepen weergegeven en beschikbaar voor gebruik.
+>Wanneer het bouwen van een schema dat een klasse uitvoert die door uw organisatie wordt bepaald, herinner dat de groepen van het schemagebied voor gebruik slechts met compatibele klassen beschikbaar zijn. Aangezien de klasse die u hebt gedefinieerd nieuw is, worden er geen compatibele veldgroepen weergegeven in het dialoogvenster **[!UICONTROL Add field group]** . In plaats daarvan, zult u nieuwe gebiedsgroepen [&#128279;](./field-groups.md#create) voor gebruik met die klasse moeten creëren . De volgende keer dat u een schema samenstelt dat de nieuwe klasse implementeert, worden de gedefinieerde veldgroepen weergegeven en beschikbaar voor gebruik.
 
 ![ de Redacteur van het Schema met toevoegt benadrukte knoop.](../../images/ui/resources/classes/add-field.png)
 
@@ -112,7 +112,7 @@ Als u een schema hebt waarin een aangepaste klasse wordt gebruikt die is geopend
 
 Er verschijnt een tijdelijke aanduiding **[!UICONTROL Untitled Field]** in het canvas en de rechterrails worden bijgewerkt om besturingselementen weer te geven waarmee de eigenschappen van het veld worden geconfigureerd. Selecteer onder **[!UICONTROL Assign to]** de optie **[!UICONTROL Class]** .
 
-![ een naamloos gebied op het canvas van de Redacteur van het Schema met Toewijzen aan [!UICONTROL Class] geselecteerd en benadrukt gebiedsbezit 1}.](../../images/ui/resources/classes/assign-to-class.png)
+![ een naamloos gebied op het canvas van de Redacteur van het Schema met Toewijzen aan [!UICONTROL Class] geselecteerd en benadrukt gebiedsbezit 1&rbrace;.](../../images/ui/resources/classes/assign-to-class.png)
 
 Zie de gids op [ definiërend gebieden in UI ](../fields/overview.md#define) voor specifieke stappen op om het gebied aan de klasse te vormen en toe te voegen. Ga door met het toevoegen van zoveel velden als nodig zijn voor de klasse. Als u klaar bent, selecteert u **[!UICONTROL Save]** om zowel het schema als de klasse op te slaan.
 
