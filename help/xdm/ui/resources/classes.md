@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Klassen maken en bewerken in de gebruikersinterface
 description: Leer hoe u klassen maakt en bewerkt in de gebruikersinterface van Experience Platform.
 exl-id: 1b4c3996-2319-45dd-9edd-a5bcad46578b
-source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
+source-git-commit: a05ee385694b028b513e2fa632079e665ba815bb
 workflow-type: tm+mt
-source-wordcount: '1563'
+source-wordcount: '1562'
 ht-degree: 0%
 
 ---
@@ -102,7 +102,7 @@ Als u een schema hebt waarin een aangepaste klasse wordt gebruikt die is geopend
 
 >[!IMPORTANT]
 >
->Wanneer het bouwen van een schema dat een klasse uitvoert die door uw organisatie wordt bepaald, herinner dat de groepen van het schemagebied voor gebruik slechts met compatibele klassen beschikbaar zijn. Aangezien de klasse die u hebt gedefinieerd nieuw is, worden er geen compatibele veldgroepen weergegeven in het dialoogvenster **[!UICONTROL Add field group]** . In plaats daarvan, zult u nieuwe gebiedsgroepen [&#128279;](./field-groups.md#create) voor gebruik met die klasse moeten creëren . De volgende keer dat u een schema samenstelt dat de nieuwe klasse implementeert, worden de gedefinieerde veldgroepen weergegeven en beschikbaar voor gebruik.
+>Wanneer het bouwen van een schema dat een klasse uitvoert die door uw organisatie wordt bepaald, herinner dat de groepen van het schemagebied voor gebruik slechts met compatibele klassen beschikbaar zijn. Aangezien de klasse die u hebt gedefinieerd nieuw is, worden er geen compatibele veldgroepen weergegeven in het dialoogvenster **[!UICONTROL Add field group]** . In plaats daarvan, zult u nieuwe gebiedsgroepen ](./field-groups.md#create) voor gebruik met die klasse moeten creëren [. De volgende keer dat u een schema samenstelt dat de nieuwe klasse implementeert, worden de gedefinieerde veldgroepen weergegeven en beschikbaar voor gebruik.
 
 ![ de Redacteur van het Schema met toevoegt benadrukte knoop.](../../images/ui/resources/classes/add-field.png)
 
@@ -112,7 +112,7 @@ Als u een schema hebt waarin een aangepaste klasse wordt gebruikt die is geopend
 
 Er verschijnt een tijdelijke aanduiding **[!UICONTROL Untitled Field]** in het canvas en de rechterrails worden bijgewerkt om besturingselementen weer te geven waarmee de eigenschappen van het veld worden geconfigureerd. Selecteer onder **[!UICONTROL Assign to]** de optie **[!UICONTROL Class]** .
 
-![ een naamloos gebied op het canvas van de Redacteur van het Schema met Toewijzen aan [!UICONTROL Class] geselecteerd en benadrukt gebiedsbezit 1&rbrace;.](../../images/ui/resources/classes/assign-to-class.png)
+![ een naamloos gebied op het canvas van de Redacteur van het Schema met Toewijzen aan [!UICONTROL Class] geselecteerd en benadrukt gebiedsbezit 1}.](../../images/ui/resources/classes/assign-to-class.png)
 
 Zie de gids op [ definiërend gebieden in UI ](../fields/overview.md#define) voor specifieke stappen op om het gebied aan de klasse te vormen en toe te voegen. Ga door met het toevoegen van zoveel velden als nodig zijn voor de klasse. Als u klaar bent, selecteert u **[!UICONTROL Save]** om zowel het schema als de klasse op te slaan.
 
@@ -120,7 +120,7 @@ Zie de gids op [ definiërend gebieden in UI ](../fields/overview.md#define) voo
 
 Als u eerder schema&#39;s hebt gecreeerd die deze klasse gebruiken, zullen de onlangs toegevoegde gebieden automatisch in die schema&#39;s verschijnen.
 
-## Een klasse bewerken (#edit-a-class)
+## Een klasse bewerken {#edit-a-class}
 
 >[!NOTE]
 >
