@@ -4,9 +4,9 @@ title: HTTP API-verbinding
 description: Gebruik de HTTP API-bestemming in Adobe Experience Platform om profielgegevens naar het HTTP-eindpunt van derden te verzenden om uw eigen analyses uit te voeren of andere bewerkingen uit te voeren die u nodig hebt voor profielgegevens die uit Experience Platform zijn geëxporteerd.
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 165a8085-c8e6-4c9f-8033-f203522bb288
-source-git-commit: 2fa6997c043ef7ff24b1383dd8626cfe1cca4f54
+source-git-commit: d78b7a06318dabff5dac763068ca7c21a5a86633
 workflow-type: tm+mt
-source-wordcount: '2607'
+source-wordcount: '2598'
 ht-degree: 0%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
-> Deze bestemming is beschikbaar slechts aan [ Adobe Real-Time Customer Data Platform Ultimate ](https://helpx.adobe.com/nl/legal/product-descriptions/real-time-customer-data-platform.html) klanten.
+> Deze bestemming is beschikbaar slechts aan [ Adobe Real-Time Customer Data Platform Ultimate ](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform.html) klanten.
 
 De HTTP API-bestemming is een [!DNL Adobe Experience Platform] streamingbestemming die u helpt profielgegevens naar HTTP-eindpunten van derden te verzenden.
 
@@ -35,7 +35,7 @@ In deze sectie wordt beschreven welke soorten publiek u naar dit doel kunt expor
 
 | Oorsprong publiek | Ondersteund | Beschrijving |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | ✓ | Het publiek produceerde door de Dienst van de Segmentatie van Experience Platform [&#128279;](../../../segmentation/home.md). |
+| [!DNL Segmentation Service] | ✓ | Het publiek produceerde door de Dienst van de Segmentatie van Experience Platform [ ](../../../segmentation/home.md). |
 | Aangepaste uploads | ✓ | Het publiek [ ingevoerde ](../../../segmentation/ui/audience-portal.md#import-audience) in Experience Platform van Csv- dossiers. |
 
 {style="table-layout:auto"}
@@ -71,13 +71,11 @@ U kunt [!DNL Mutual Transport Layer Security] ([!DNL mTLS]) gebruiken om verbete
 
 Als u [!DNL mTLS] met [!DNL HTTP API] bestemmingen wilt gebruiken, moet het serveradres u in de [ bestemmingsdetails ](#destination-details) pagina zetten [!DNL TLS] gehandicapte protocollen hebben en slechts [!DNL mTLS] toegelaten. Als het [!DNL TLS] 1.2 protocol nog op het eindpunt wordt toegelaten, wordt geen certificaat verzonden voor de cliëntauthentificatie. Dit betekent dat om [!DNL mTLS] met uw [!DNL HTTP API] bestemming te gebruiken, uw &quot;ontvangende&quot;servereindpunt een [!DNL mTLS] - slechts toegelaten verbindingspunt moet zijn.
 
-### Certificaat downloaden {#certificate}
+### Certificaatdetails ophalen en inspecteren {#certificate}
 
-Als u [!DNL Common Name] (CN) en [!DNL Subject Alternative Names] (SAN) wilt controleren voor extra validatie door derden, kunt u het volgende certificaat downloaden:
+Als u certificaatdetails zoals [!DNL Common Name] (CN) en [!DNL Subject Alternative Names] (SAN) voor extra derdebevestiging wilt inspecteren, gebruik API om het certificaat terug te winnen en die gebieden uit de reactie te halen.
 
-* [HTTP API mTLS, openbaar certificaat](../../../landing/images/governance-privacy-security/encryption/destinations-public-certificate.zip)
-
-U kunt openbare certificaten ook veilig terugwinnen door een verzoek van GET aan het eindpunt MTLS te doen. Zie de [ openbare documentatie van het certificaateindpunt ](../../../data-governance/mtls-api/public-certificate-endpoint.md) voor meer informatie.
+Zie de [ openbare documentatie van het certificaateindpunt ](../../../data-governance/mtls-api/public-certificate-endpoint.md) voor meer informatie.
 
 ## IP adres lijst van gewenste personen {#ip-address-allowlist}
 

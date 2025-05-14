@@ -3,20 +3,24 @@ title: Eindpunt van openbaar certificaat
 description: Leer hoe te om uw openbare certificaten terug te winnen gebruikend het /public-certificate eindpunt van de Dienst MTLS API.
 role: Developer
 exl-id: 8369c783-e595-476f-9546-801cf4f10f71
-source-git-commit: 754044621cdaf1445f809bceaa3e865261eb16f0
+source-git-commit: d74353e70e992150c031397009d0c8add3df5e7b
 workflow-type: tm+mt
-source-wordcount: '358'
-ht-degree: 1%
+source-wordcount: '471'
+ht-degree: 0%
 
 ---
 
 # Openbaar certificaateindpunt
 
-Deze gids verklaart hoe te om het openbare certificaateindpunt te gebruiken om openbare certificaten voor de toepassingen van de Adobe van uw organisatie veilig terug te winnen. Het omvat een voorbeeld API vraag en gedetailleerde instructies om ontwikkelaars te helpen voor authentiek verklaren en gegevensuitwisseling verifiëren.
+>[!NOTE]
+>
+>Adobe biedt geen ondersteuning meer voor het statische downloaden van openbare mTLS-certificaten. Gebruik deze API om geldige certificaten op te halen voor uw integratie. Automatisch ophalen is nu vereist om onderbreking van de service te voorkomen.
+
+Deze gids verklaart hoe te om het openbare certificaateindpunt te gebruiken om openbare certificaten voor de toepassingen van Adobe van uw organisatie veilig terug te winnen. Het omvat een voorbeeld API vraag en gedetailleerde instructies om ontwikkelaars te helpen voor authentiek verklaren en gegevensuitwisseling verifiëren.
 
 ## Aan de slag
 
-Alvorens verder te gaan, te herzien gelieve [ begonnen gids ](./getting-started.md) voor belangrijke informatie die u moet kennen om vraag aan API met succes te maken, met inbegrip van vereiste kopballen en hoe te om voorbeeld API vraag te lezen.
+Alvorens verder te gaan, herzie [ begonnen gids ](./getting-started.md) voor belangrijke details over vereiste kopballen en hoe te om voorbeeld API vraag te interpreteren.
 
 ## API-paden {#paths}
 
@@ -28,7 +32,7 @@ De volgende informatie is de essentiële API-paden die u nodig hebt om de mTLS S
 
 ## Uw openbare certificaten ophalen {#list}
 
-U kunt de openbare certificaten voor om het even welk van de toepassingen van de Adobe van uw organisatie terugwinnen door een verzoek van de GET tot het `/v1/certificate/public-certificate` eindpunt te richten.
+Voer een GET-verzoek in bij het `/v1/certificate/public-certificate` -eindpunt om de openbare certificaten op te halen voor Adobe-toepassingen van uw organisatie.
 
 **API formaat**
 
@@ -105,10 +109,19 @@ Een succesvolle reactie keert status 200 van HTTP terug en maakt een lijst van d
 
 +++
 
+## Automatisering van certificaatlevenscyclus {#certificate-lifecycle-automation}
+
+Adobe automatiseert de levenscyclus van openbare mTLS certificaten om continuïteit te verzekeren en de onderbrekingen van de dienst te verminderen.
+
+- Certificaten worden 60 dagen voor het verstrijken opnieuw afgegeven.
+- Certificaten worden 30 dagen voor het verlopen ingetrokken.
+
+>[!NOTE]
+>
+>Deze chronologie zal in tijd korten in groepering met [ CA/B de richtlijnen van het Forum ](https://www.digicert.com/blog/tls-certificate-lifetimes-will-officially-reduce-to-47-days), die erop gericht zijn certificaatlevens tot een maximum van 47 dagen te verminderen.
+
+U moet uw integratie bijwerken om geautomatiseerde herwinning via API te steunen. Vertrouw niet op handmatige certificaatdownloads of statische kopieën, aangezien deze kunnen resulteren in verlopen of ingetrokken certificaten.
+
 ## Volgende stappen
 
-Na het lezen van deze handleiding leert u nu hoe u uw openbare certificaten kunt ophalen met de Adobe Experience Platform API. Meer leren over het beheren van klantengegevens om naleving van verordeningen en organisatorisch beleid te verzekeren, zie het [ overzicht van het Beheer van Gegevens ](../home.md).
-
-<!-- To test this API call, navigate to the [MTLS API reference page]() to interact with the Experience Platform API endpoints. -->
-
-<!-- Add link after developer page is live -->
+Nadat u uw openbare certificaten hebt opgehaald met behulp van de API, werkt u uw integratie bij om dit eindpunt regelmatig aan te roepen voordat certificaten verlopen. Om deze vraag interactively te testen, bezoek de [ MTLS API verwijzingspagina ](https://developer.adobe.com/experience-platform-apis/references/mtls-service/). Voor bredere begeleiding op op certificaat-gebaseerde integratie, zie de [ encryptie van Gegevens in het overzicht van Adobe Experience Platform ](../../landing/governance-privacy-security/encryption.md) of het [ overzicht van het Beheer van Gegevens ](../home.md).
