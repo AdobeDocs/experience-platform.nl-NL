@@ -5,7 +5,7 @@ exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
 source-git-commit: 6558046e9708267cd0ceda36e7c0bdba6b2f758a
 workflow-type: tm+mt
 source-wordcount: '2178'
-ht-degree: 93%
+ht-degree: 99%
 
 ---
 
@@ -15,10 +15,10 @@ ht-degree: 93%
 >
 >Raadpleeg de volgende documentatie voor aanvullende informatie voor andere Adobe Experience Platform-toepassingen:
 >
->- [Adobe Journey Optimizer](https://experienceleague.adobe.com/nl/docs/journey-optimizer/using/whats-new/release-notes)
->- [Adobe Journey Optimizer B2B](https://experienceleague.adobe.com/nl/docs/journey-optimizer-b2b/user/release-notes)
->- [Customer Journey Analytics](https://experienceleague.adobe.com/nl/docs/analytics-platform/using/releases/latest)
->- [Real-Time CDP Collaboration](https://experienceleague.adobe.com/nl/docs/real-time-cdp-collaboration/using/latest)
+>- [Adobe Journey Optimizer](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/whats-new/release-notes)
+>- [Adobe Journey Optimizer B2B](https://experienceleague.adobe.com/en/docs/journey-optimizer-b2b/user/release-notes)
+>- [Customer Journey Analytics](https://experienceleague.adobe.com/en/docs/analytics-platform/using/releases/latest)
+>- [Real-Time CDP Collaboration](https://experienceleague.adobe.com/en/docs/real-time-cdp-collaboration/using/latest)
 
 **Releasedatum: woensdag 29 april 2025**
 
@@ -41,7 +41,7 @@ Experience League is een uitgebreid leerplatform dat is ontworpen om uw vaardigh
 
 | Functie | Beschrijving |
 | --- | --- |
-| Gepersonaliseerde startpagina | De toegang en past uw gepersonaliseerde homepage op [ Experience League ](https://experienceleague.adobe.com/nl/home#) aan. Meld u aan met uw Adobe-referenties en selecteer vervolgens **[!UICONTROL Experience League]** in het bovenste menu om uw leerervaring te optimaliseren: <ul><li>**Bladwijzers**: gebruik de functie [!UICONTROL Bookmarks] om uw favoriete bronnen op één plek op te slaan en te verzamelen. U kunt verschillende inhoud opslaan, zoals afspeellijsten, artikelen en tutorials.</li><li>**Pas uw leerervaring aan**: verbeter uw leerervaring door uw Experience League-profiel bij te werken met de rollen, branches, producten en het ervaringsniveau die het beste bij uw behoeften passen.</li><li>**Aanbevelingen**: bekijk leerinhoud die wordt aanbevolen op basis van uw recente activiteit.</li><li>**Recent bekeken**: gebruik de sectie [!UICONTROL Recently viewed] om snel terug te gaan naar recent bekeken inhoud, zoals documentatie en video&#39;s.</li><li>**Learning-bronnen**: gebruik het deelvenster [!UICONTROL All learning resources] om naar tutorials, documentatie, community, evenementen en certificeringen te gaan.</li><li>**Nieuw**: bekijk de sectie [!UICONTROL What's new] voor een overzicht van de recentste inhoud op Experience League.</li><li>**Bekijk eerdere evenementen op vraag**: bekijk eerder opgenomen livestreams over productpresentaties, use cases en tutorials met de sectie [!UICONTROL Watch past events on-demand].</li></ul><br> ![Gepersonaliseerde startpagina op Experience League.](../2025/assets/april/personalized-home-page.png "Gepersonaliseerde startpagina op Experience League."){width="250" align="center" zoomable="yes"} |
+| Gepersonaliseerde startpagina | Krijg toegang tot uw gepersonaliseerde startpagina op [Experience League](https://experienceleague.adobe.com/nl/home#), waar u die ook kunt aanpassen. Meld u aan met uw Adobe-referenties en selecteer vervolgens **[!UICONTROL Experience League]** in het bovenste menu om uw leerervaring te optimaliseren: <ul><li>**Bladwijzers**: gebruik de functie [!UICONTROL Bookmarks] om uw favoriete bronnen op één plek op te slaan en te verzamelen. U kunt verschillende inhoud opslaan, zoals afspeellijsten, artikelen en tutorials.</li><li>**Pas uw leerervaring aan**: verbeter uw leerervaring door uw Experience League-profiel bij te werken met de rollen, branches, producten en het ervaringsniveau die het beste bij uw behoeften passen.</li><li>**Aanbevelingen**: bekijk leerinhoud die wordt aanbevolen op basis van uw recente activiteit.</li><li>**Recent bekeken**: gebruik de sectie [!UICONTROL Recently viewed] om snel terug te gaan naar recent bekeken inhoud, zoals documentatie en video&#39;s.</li><li>**Learning-bronnen**: gebruik het deelvenster [!UICONTROL All learning resources] om naar tutorials, documentatie, community, evenementen en certificeringen te gaan.</li><li>**Nieuw**: bekijk de sectie [!UICONTROL What's new] voor een overzicht van de recentste inhoud op Experience League.</li><li>**Bekijk eerdere evenementen op vraag**: bekijk eerder opgenomen livestreams over productpresentaties, use cases en tutorials met de sectie [!UICONTROL Watch past events on-demand].</li></ul><br> ![Gepersonaliseerde startpagina op Experience League.](../2025/assets/april/personalized-home-page.png "Gepersonaliseerde startpagina op Experience League."){width="250" align="center" zoomable="yes"} |
 
 {style="table-layout:auto"}
 
@@ -53,8 +53,8 @@ Adobe Experience Platform biedt een reeks technologieën waarmee u klantervaring
 
 | Functie | Beschrijving |
 | --- | --- |
-| [!DNL Adform] extension | Met de serverextensie [!DNL Adform] kunnen merken het publiek gemakkelijk offline richten met behulp van ECID&#39;s. Deze server-side extensie is niet afhankelijk van cookies van derden of cookie-alternatieve id&#39;s. Bovendien, omdat dit volledig server-kant wordt gedaan, zijn geen extra pixel of andere cliënt-zijveranderingen nodig. Voor meer informatie, zie het [ Adform uitbreidingsoverzicht ](/help/tags/extensions/server/adform/overview.md). |
-| [!DNL Amazon] API-extensie voor webgebeurtenissen | Met de API-extensie [!DNL Amazon] Conversies kunnen adverteerders website-interacties rechtstreeks delen met [!DNL Amazon] , waardoor de toewijzing, betrouwbaarheid van gegevens en de optimalisatie van de campagne zijn verbeterd. Deze extensie ondersteunt het doorsturen van gebeurtenissen, zodat u conversiegebeurtenissen zoals aankopen, winkelwagentaanvullingen en meer kunt verzenden en er tegelijkertijd voor zorgt dat de deduplicatie correct wordt uitgevoerd voor een juiste rapportage. Voor meer informatie, zie het [ de uitbreidingsoverzicht van Amazon ](/help/tags/extensions/server/amazon/overview.md). |
+| [!DNL Adform] extensie | Met de server-side-extensie [!DNL Adform] kunnen merken eenvoudig doelgroepen buiten de site opnieuw targeten met behulp van ECID&#39;s. Deze server-side-extensie is niet afhankelijk van cookies van derden of alternatieve cookie-ID&#39;s. Omdat dit volledig aan de server-kant gebeurt, zijn er geen extra pixels of andere wijzigingen aan de kant van de klant nodig. Zie het [Adform-extensieoverzicht](/help/tags/extensions/server/adform/overview.md) voor meer informatie. |
+| [!DNL Amazon] webgebeurtenissen API-extensie | Met de Conversions API-extensie van [!DNL Amazon] kunnen adverteerders website-interacties rechtstreeks delen met [!DNL Amazon], wat zorgt voor verbeterde attributie, betrouwbaarheid van de gegevens en campagneoptimalisatie. Deze extensie ondersteunt het doorsturen van gebeurtenissen, zodat u conversiegebeurtenissen zoals aankopen, toevoegingen aan winkelwagentjes en meer kunt verzenden, terwijl de juiste deduplicatie wordt gegarandeerd voor nauwkeurige rapportage. Zie het [Amazon-extensieoverzicht](/help/tags/extensions/server/amazon/overview.md) voor meer informatie. |
 
 {style="table-layout:auto"}
 
@@ -108,7 +108,7 @@ Met Identity Service van Adobe Experience Platform krijgt u een uitgebreid beeld
 
 | Functie | Beschrijving |
 | --- | --- |
-| &rbrack;{type=Informative} [!DNL Identity Graph Linking Rules] De Beperkte Regels van de Grafiek van de Identiteit van de Beschikbaarheid kunnen nu door alle klanten in ontwikkelingszandbakken worden betreden. <ul><li>**Activeringsvereisten**: de functie blijft inactief totdat u de [!DNL Identity Settings] configureert en opslaat. Zonder deze configuratie blijft het systeem normaal werken, zonder veranderingen in gedrag.</li><li>**Belangrijke opmerkingen**: tijdens de fase Beperkte beschikbaarheid kunt u bij Edge-segmentatie onverwachte resultaten van segmentlidmaatschappen ervaren. De segmentatie van streaming en batches functioneert echter zoals gewoonlijk.</li><li>**Volgende stappen**: neem contact op met uw Adobe-accountteam voor informatie over hoe u deze functie in productiesandboxes inschakelt.</li></ul> |
+| ]{type=Informative} [!DNL Identity Graph Linking Rules] De Beperkte Regels van de Grafiek van de Identiteit van de Beschikbaarheid [!BADGE  kunnen nu door alle klanten in ontwikkelingszandbakken worden betreden. <ul><li>**Activeringsvereisten**: de functie blijft inactief totdat u de [!DNL Identity Settings] configureert en opslaat. Zonder deze configuratie blijft het systeem normaal werken, zonder veranderingen in gedrag.</li><li>**Belangrijke opmerkingen**: tijdens de fase Beperkte beschikbaarheid kunt u bij Edge-segmentatie onverwachte resultaten van segmentlidmaatschappen ervaren. De segmentatie van streaming en batches functioneert echter zoals gewoonlijk.</li><li>**Volgende stappen**: neem contact op met uw Adobe-accountteam voor informatie over hoe u deze functie in productiesandboxes inschakelt.</li></ul> |
 
 {style="table-layout:auto"}
 
