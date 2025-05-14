@@ -2,7 +2,7 @@
 title: XDM-velden definiëren in de API voor schemaregister
 description: Leer hoe u verschillende velden definieert bij het maken van XDM-bronnen (Custom Experience Data Model) in de Schema Registry API.
 exl-id: d79332e3-8448-42af-b250-882bcb0f1e7d
-source-git-commit: 7521273c0ea4383b7141e9d7a82953257ff18c34
+source-git-commit: 6c6104a6aa0a80c886f4f02486a7645eb95da781
 workflow-type: tm+mt
 source-wordcount: '1166'
 ht-degree: 0%
@@ -11,7 +11,7 @@ ht-degree: 0%
 
 # XDM-velden definiëren in de API voor het schemaregister
 
-Alle gebieden van de Gegevens van de Ervaring Model (XDM) worden bepaald gebruikend de standaard [&#128279;](https://json-schema.org/) beperkingen van het Schema JSON  die op hun gebiedstype van toepassing zijn, met extra beperkingen voor gebiedsnamen die door Adobe Experience Platform worden afgedwongen. Met de API voor het schemaregister kunt u aangepaste velden in uw schema&#39;s definiëren met behulp van indelingen en optionele beperkingen. XDM-veldtypen worden weergegeven door het kenmerk op veldniveau, `meta:xdmType` .
+Alle gebieden van de Gegevens van de Ervaring Model (XDM) worden bepaald gebruikend de standaard ](https://json-schema.org/) beperkingen van het Schema JSON [ die op hun gebiedstype van toepassing zijn, met extra beperkingen voor gebiedsnamen die door Adobe Experience Platform worden afgedwongen. Met de API voor het schemaregister kunt u aangepaste velden in uw schema&#39;s definiëren met behulp van indelingen en optionele beperkingen. XDM-veldtypen worden weergegeven door het kenmerk op veldniveau, `meta:xdmType` .
 
 >[!NOTE]
 >
@@ -101,7 +101,7 @@ U kunt desgewenst labels voor klanten opgeven voor elke waarde onder een eigensc
 
 >[!NOTE]
 >
->De `meta:enum` waarde verklaart **&#x200B;**&#x200B;geen opsomming of drijft om het even welke gegevensbevestiging op zijn. In de meeste gevallen worden onder `meta:enum` verschafte tekenreeksen ook onder `enum` opgegeven om ervoor te zorgen dat er beperkingen gelden voor gegevens. Er zijn echter enkele gebruiksgevallen waarin `meta:enum` wordt geleverd zonder overeenkomende `enum` -array. Zie het leerprogramma op [ bepalend gesuggereerde waarden ](../tutorials/suggested-values.md) voor meer informatie.
+>De `meta:enum` waarde verklaart **** geen opsomming of drijft om het even welke gegevensbevestiging op zijn. In de meeste gevallen worden onder `meta:enum` verschafte tekenreeksen ook onder `enum` opgegeven om ervoor te zorgen dat er beperkingen gelden voor gegevens. Er zijn echter enkele gebruiksgevallen waarin `meta:enum` wordt geleverd zonder overeenkomende `enum` -array. Zie het leerprogramma op [ bepalend gesuggereerde waarden ](../tutorials/suggested-values.md) voor meer informatie.
 
 U kunt desgewenst een eigenschap `default` opgeven die de standaardwaarde `enum` aangeeft die het veld gebruikt wanneer geen waarde wordt opgegeven.
 
@@ -188,7 +188,7 @@ Het equivalent van een [!UICONTROL Long] gebied dat door de Bouwer van het Schem
 
 ## [!UICONTROL Short] {#short}
 
-Het equivalent van een [!UICONTROL Short] gebied dat door de Bouwer van het Schema UI wordt gecreeerd is een [`integer` typegebied ](#integer) met specifieke `minimum` en `maximum` waarden (`-32768` en `32768`, respectievelijk).
+Het equivalent van een [!UICONTROL Short] gebied dat door de Bouwer van het Schema UI wordt gecreeerd is een [`integer` typegebied ](#integer) met specifieke `minimum` en `maximum` waarden (`-32768` en `32767`, respectievelijk).
 
 ```json
 "sampleField": {
@@ -196,13 +196,13 @@ Het equivalent van een [!UICONTROL Short] gebied dat door de Bouwer van het Sche
   "description": "An example short field.",
   "type": "integer",
   "minimum": -32768,
-  "maximum": 32768
+  "maximum": 32767
 }
 ```
 
 ## [!UICONTROL Byte] {#byte}
 
-Het equivalent van een [!UICONTROL Byte] gebied dat door de Bouwer van het Schema UI wordt gecreeerd is een [`integer` typegebied ](#integer) met specifieke `minimum` en `maximum` waarden (`-128` en `128`, respectievelijk).
+Het equivalent van een [!UICONTROL Byte] gebied dat door de Bouwer van het Schema UI wordt gecreeerd is een [`integer` typegebied ](#integer) met specifieke `minimum` en `maximum` waarden (`-128` en `127`, respectievelijk).
 
 ```json
 "sampleField": {
@@ -210,7 +210,7 @@ Het equivalent van een [!UICONTROL Byte] gebied dat door de Bouwer van het Schem
   "description": "An example byte field.",
   "type": "integer",
   "minimum": -128,
-  "maximum": 128
+  "maximum": 127
 }
 ```
 
