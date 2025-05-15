@@ -2,10 +2,10 @@
 title: Gebruikersinterface Identiteitsinstellingen
 description: Leer hoe u de gebruikersinterface voor identiteitsinstellingen gebruikt.
 exl-id: 738b7617-706d-46e1-8e61-a34855ab976e
-source-git-commit: a309f0dca5ebe75fcb7abfeb98605aec2692324d
+source-git-commit: 44457b95b354e20808c1218ca3c8e698071f0528
 workflow-type: tm+mt
-source-wordcount: '679'
-ht-degree: 0%
+source-wordcount: '675'
+ht-degree: 10%
 
 ---
 
@@ -15,9 +15,9 @@ ht-degree: 0%
 >
 >De Regels van de Vereniging van de Grafiek van de identiteit zijn momenteel in Beperkte Beschikbaarheid, en kunnen door alle klanten in ontwikkelingszandbakken worden betreden.
 >
->* **de vereisten van de Activering**: De eigenschap zal inactief blijven tot u vormt en uw [!DNL Identity Settings] bewaart. Zonder deze configuratie, zal het systeem normaal, zonder veranderingen in gedrag blijven werken.
->* **Belangrijke nota&#39;s**: Tijdens deze Beperkte fase van de Beschikbaarheid, kan de segmentatie van Edge onverwachte resultaten van het segmentlidmaatschap veroorzaken. Streaming en batchsegmentatie functioneren echter naar behoren.
->* **Volgende stappen**: Voor informatie over hoe te om deze eigenschap in productiestanddozen toe te laten, gelieve uw Adobe accountteam te contacteren.
+>* **Activeringsvereisten**: de functie blijft inactief totdat u de [!DNL Identity Settings] configureert en opslaat. Zonder deze configuratie blijft het systeem normaal werken, zonder veranderingen in gedrag.
+>* **Belangrijke opmerkingen**: tijdens de fase Beperkte beschikbaarheid kunt u bij Edge-segmentatie onverwachte resultaten van segmentlidmaatschappen ervaren. De segmentatie van streaming en batches functioneert echter zoals gewoonlijk.
+>* **Volgende stappen**: neem contact op met uw Adobe-accountteam voor informatie over hoe u deze functie in productiesandboxes inschakelt.
 
 Identiteitsinstellingen zijn een functie in de gebruikersinterface van de Adobe Experience Platform Identity Service die u kunt gebruiken om unieke naamruimten aan te wijzen en naamruimteprioriteit te configureren.
 
@@ -81,7 +81,7 @@ Van hier, moet u het volgende bevestigen alvorens tot de definitieve stap te wer
 >
 >* De definitieve stap is een ander bevestigingsbericht erop wijst dat de bestaande grafieken slechts door het grafiekalgoritme **zullen worden beïnvloed slechts als de grafieken na het opslaan van uw montages** worden bijgewerkt, en dat de primaire identiteit van gebeurtenisfragmenten op het Profiel van de Klant in real time niet zal worden bijgewerkt zelfs na namespace prioritaire veranderingen.
 >
->* Bovendien, wordt u meegedeeld dat het tot **zes uren** voor uw nieuwe of bijgewerkte montages zal duren om van kracht te worden. Voer de naam van de sandbox in en selecteer **[!UICONTROL Confirm]** om deze te bevestigen.
+>* Het zal tot **24 uren** voor uw nieuwe of bijgewerkte montages duren om van kracht te worden. Voer de naam van de sandbox in en selecteer **[!UICONTROL Confirm]** om deze te bevestigen.
 
 ![ het bevestigingsvenster dat een waarschuwing over een vertraging van zes uur toont alvorens de configuraties worden verwerkt.](../images/rules/complete.png)
 
