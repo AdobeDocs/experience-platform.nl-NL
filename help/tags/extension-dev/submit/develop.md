@@ -2,10 +2,10 @@
 title: Een extensie ontwikkelen
 description: Dit document biedt een algemeen overzicht van het ontwikkelingsproces van de tagextensie met koppelingen naar verdere documentatie voor meer gedetailleerde processen.
 exl-id: fb2f7275-a5da-4a41-b915-822c71c02e5c
-source-git-commit: dc81da58594fac4ce304f9d030f2106f0c3de271
+source-git-commit: cfcc70d66a34fa51bf0e21525539ba88de7fc367
 workflow-type: tm+mt
-source-wordcount: '473'
-ht-degree: 0%
+source-wordcount: '462'
+ht-degree: 10%
 
 ---
 
@@ -13,18 +13,18 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch is omgedoopt tot een reeks technologieën voor gegevensverzameling in Adobe Experience Platform. Diverse terminologische wijzigingen zijn als gevolg hiervan in de productdocumentatie doorgevoerd. Gelieve te verwijzen naar het volgende [ document ](../../term-updates.md) voor een geconsolideerde verwijzing van de terminologieveranderingen.
+>Adobe Experience Platform Launch is omgedoopt tot een reeks technologieën voor dataverzameling in Adobe Experience Platform.  Als gevolg hiervan zijn er verschillende terminologiewijzigingen in de productdocumentatie doorgevoerd. Raadpleeg het volgende [ document ](../../term-updates.md) voor een geconsolideerde referentie van de terminologiewijzigingen.
 
 Een uitbreiding van een tag moet worden beschouwd als een (klein) product met eigen vereisten. Bepalen hoe een Adobe Experience Platform-gebruiker de extensie wil gebruiken, kan u helpen de functionaliteit te sorteren op welke gebeurtenistypen, gebeurtenistypen, actietypen en gegevenselementen uw extensie moet bieden.
 
 Met die kennis, kunt u plannen welke componenten in uw uitbreiding zouden moeten worden verstrekt.
 
-## Handleidingen
+## Gidsen
 
 Met een plan op zijn plaats, kunnen deze gidsen u het proces van de uitbreidingsontwikkeling begrijpen:
 
 * De [ begonnen gids ](../getting-started.md) en andere documenten onder **ontwikkeling van de Uitbreiding** in de linkernavigatie zijn groot verwijzingsmateriaal voor het begrip van uitbreidingen. Deze bevatten informatie over wat extensies kunnen doen, hoe gebruikersgegevens worden opgeslagen en doorgegeven tussen uw extensie en Adobe Experience Platform, hoe uw code in bibliotheken wordt opgenomen en hoe uw extensiecode wordt geïnterpreteerd en gebruikt tijdens runtime in de browser.
-* De [ video van het uitbreidingsleerprogramma ](https://youtu.be/rxjtC9o4rl0) is een grote plaats om te beginnen.
+<!-- * The [extension tutorial video](https://youtu.be/rxjtC9o4rl0) is a great place to start. -->
 * De [ Inleiding aan de playlist van Uitbreidingen ](https://www.youtube.com/playlist?list=PLOdw8u2F8CIgynzKrPEwCPuDxzHW1WP5m) YouTube loopt door het proces om uitbreidingspakketten tot stand te brengen.
 * [ Begrijpend JSON Schema ](https://spacetelescope.github.io/understanding-json-schema/index.html#) artikel.
 * [ JSON Lint/Validator ](https://jsonlint.com/).
@@ -51,8 +51,8 @@ Er zijn voorbeelduitbreidingen op GitHub u kunt herzien of als starterprojecten 
 * [ Typekit voorbeelduitbreiding ](https://github.com/jeffchasin/extension-typekit)
 * [ de voorbeelduitbreiding van Pinterest ](https://github.com/jeffchasin/extension-pinterest)
 
-## De werkruimte Slack
+## Slack-werkruimte
 
-U kunt toegang tot de de communautaire werkruimte van de Slack verzoeken waar de uitbreidingsauteurs elkaar kunnen steunen gebruikend dit [ verzoekvorm ](https://docs.google.com/forms/d/e/1FAIpQLScq1m63YkDrRpvPLhzUqtfoleWiDDTTXZsSivIXRfFdlSMzpQ/viewform).
+U kunt toegang tot de de communautaire werkruimte van Slack verzoeken waar de uitbreidingsauteurs elkaar kunnen steunen gebruikend dit [ verzoekvorm ](https://docs.google.com/forms/d/e/1FAIpQLScq1m63YkDrRpvPLhzUqtfoleWiDDTTXZsSivIXRfFdlSMzpQ/viewform).
 
-**gelieve nota te nemen van**: terwijl er leden van Adobe in deze werkruimte van de Slack zijn, is het een communautair middel niet gesponsord door of door Adobe gematigd.
+**gelieve nota te nemen van**: terwijl er leden van Adobe in deze werkruimte van Slack zijn, is het een communautaire middel niet gesponsord door of gemodereerd door Adobe.
