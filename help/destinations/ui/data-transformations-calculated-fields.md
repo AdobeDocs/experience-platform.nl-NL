@@ -16,7 +16,7 @@ ht-degree: 0%
 >id="platform_destinations_export_arrays_flat_files"
 >title="Berekende velden toevoegen"
 >abstract="<p>Gebruik **voegt berekende gebied** controle toe om diverse gegevenstransformaties op gegevens uit te voeren die naar de bestemmingen van de wolkenopslag worden uitgevoerd. U kunt bijvoorbeeld hashing toepassen op gegevens, arrays samenvoegen tot tekenreeksen, enzovoort."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/data-transformations-calculated-fields.html?lang=nl-NL#examples" text="Voorbeelden"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/data-transformations-calculated-fields.html#examples" text="Voorbeelden"
 
 >[!AVAILABILITY]
 >
@@ -44,7 +44,7 @@ Berekende velden gebruiken voor gegevenstransformaties:
 >[!CONTEXTUALHELP]
 >id="platform_destinations_export_arrays_calculated_field_disabled"
 >title="Berekende velden uitgeschakeld toevoegen"
->abstract="Deze controle wordt onbruikbaar gemaakt omdat u de **series van de Uitvoer, kaarten, voorwerpen** knevel **&#x200B; wanneer vestiging deze bestemmingsverbinding selecteerde. Om berekende gebieden en de functies te gebruiken beschikbaar binnen, opstelling een nieuwe bestemmingsverbinding met de &#x200B;** series van de Uitvoer, kaarten, voorwerpen** knevel *weg*."
+>abstract="Deze controle wordt onbruikbaar gemaakt omdat u de **series van de Uitvoer, kaarten, voorwerpen** knevel ** wanneer vestiging deze bestemmingsverbinding selecteerde. Om berekende gebieden en de functies te gebruiken beschikbaar binnen, opstelling een nieuwe bestemmingsverbinding met de **series van de Uitvoer, kaarten, voorwerpen** knevel *weg*."
 
 >[!IMPORTANT]
 >
