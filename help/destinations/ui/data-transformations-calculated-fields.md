@@ -3,9 +3,9 @@ title: Transformaties uitvoeren op gegevens die naar cloudopslagbestemmingen wor
 type: Tutorial
 description: Begrijp hoe te om de berekende gebiedsfunctionaliteit te gebruiken om transformaties op gegevens uit te voeren die naar de bestemmingen van de wolkenopslag worden uitgevoerd
 exl-id: 1e14f964-4c03-4d0c-be8d-c3dcb48a335a
-source-git-commit: 14c672ef57e0b0247020075552c782ed18db8484
+source-git-commit: bd9efc1bcf6058827cc5c603b9976c9e42c7ec9e
 workflow-type: tm+mt
-source-wordcount: '1574'
+source-wordcount: '1604'
 ht-degree: 0%
 
 ---
@@ -16,15 +16,7 @@ ht-degree: 0%
 >id="platform_destinations_export_arrays_flat_files"
 >title="Berekende velden toevoegen"
 >abstract="<p>Gebruik **voegt berekende gebied** controle toe om diverse gegevenstransformaties op gegevens uit te voeren die naar de bestemmingen van de wolkenopslag worden uitgevoerd. U kunt bijvoorbeeld hashing toepassen op gegevens, arrays samenvoegen tot tekenreeksen, enzovoort."
-
-<!--
-
-disable additional URLs for a while
-
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/export-arrays-maps-objects.html?lang=nl-NL#examples" text="Examples"
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/export-arrays-maps-objects.html?lang=nl-NL#known-limitations" text="Known limitations"
-
--->
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/data-transformations-calculated-fields.html#examples" text="Voorbeelden"
 
 >[!AVAILABILITY]
 >
@@ -52,7 +44,11 @@ Berekende velden gebruiken voor gegevenstransformaties:
 >[!CONTEXTUALHELP]
 >id="platform_destinations_export_arrays_calculated_field_disabled"
 >title="Berekende velden uitgeschakeld toevoegen"
->abstract="Deze controle wordt onbruikbaar gemaakt omdat u de **series van de Uitvoer, kaarten, voorwerpen** knevel **&#x200B; wanneer vestiging deze bestemmingsverbinding selecteerde. Om berekende gebieden en de functies te gebruiken beschikbaar binnen, opstelling een nieuwe bestemmingsverbinding met de &#x200B;** series van de Uitvoer, kaarten, voorwerpen** knevel *weg*."
+>abstract="Deze controle wordt onbruikbaar gemaakt omdat u de **series van de Uitvoer, kaarten, voorwerpen** knevel ** wanneer vestiging deze bestemmingsverbinding selecteerde. Om berekende gebieden en de functies te gebruiken beschikbaar binnen, opstelling een nieuwe bestemmingsverbinding met de **series van de Uitvoer, kaarten, voorwerpen** knevel *weg*."
+
+>[!IMPORTANT]
+>
+>Wanneer u met berekende velden werkt, moet u, naast de gegevenstransformatiefuncties die u toepast, ook de functie `array_to_string` gebruiken om velden samen te voegen tot een tekenreeks.
 
 Selecteer **[!UICONTROL Add calculated field]** in de toewijzingsstap van de activeringsworkflow voor bestemmingen voor cloudopslag.
 
