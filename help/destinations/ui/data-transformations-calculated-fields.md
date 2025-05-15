@@ -44,7 +44,7 @@ Berekende velden gebruiken voor gegevenstransformaties:
 >[!CONTEXTUALHELP]
 >id="platform_destinations_export_arrays_calculated_field_disabled"
 >title="Berekende velden uitgeschakeld toevoegen"
->abstract="Deze controle wordt onbruikbaar gemaakt omdat u de **series van de Uitvoer, kaarten, voorwerpen** knevel ** wanneer vestiging deze bestemmingsverbinding selecteerde. Om berekende gebieden en de functies te gebruiken beschikbaar binnen, opstelling een nieuwe bestemmingsverbinding met de **series van de Uitvoer, kaarten, voorwerpen** knevel *weg*."
+>abstract="Deze controle wordt onbruikbaar gemaakt omdat u de **series van de Uitvoer, kaarten, voorwerpen** knevel **&#x200B; wanneer vestiging deze bestemmingsverbinding selecteerde. Om berekende gebieden en de functies te gebruiken beschikbaar binnen, opstelling een nieuwe bestemmingsverbinding met de &#x200B;** series van de Uitvoer, kaarten, voorwerpen** knevel *weg*."
 
 >[!IMPORTANT]
 >
