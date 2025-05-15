@@ -2,9 +2,9 @@
 description: Leer over de IP adressen die u aan uw lijst van gewenste personen moet toevoegen om de bronnen van Adobe Experience Platform met succes te gebruiken.
 title: IP de Lijst van gewenste personen van het Adres voor Bronnen
 exl-id: 40093c80-dbdb-4dc1-97bb-81a8200b731f
-source-git-commit: 719f1bca20d5118de14ebe324675bb0aab6161e8
+source-git-commit: e2403b235b4cfee37761ebd683a1fb8662061406
 workflow-type: tm+mt
-source-wordcount: '242'
+source-wordcount: '243'
 ht-degree: 0%
 
 ---
@@ -290,6 +290,10 @@ U moet de volgende IP adressen aan uw lijst van gewenste personen toevoegen om v
 
 ## IP adressen aan lijst van gewenste personen voor bronverbinding aan Experience Platform op [!DNL Amazon Web Services] (AWS) {#aws}
 
-U moet het volgende IP adres aan uw lijst van gewenste personen toevoegen om uw bron aan Ervaring op AWS te verbinden:
+U moet het volgende IP adres aan uw lijst van gewenste personen toevoegen om uw bron aan Ervaring op AWS te verbinden:.
 
-- `66.117.18.0/24`
+### VA6
+
+- `34.193.63.59`
+- `44.217.93.240`
+- `44.194.79.229`
