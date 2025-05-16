@@ -2,9 +2,9 @@
 title: Aanvullende informatie van april 2025 voor Adobe Experience Platform
 description: Aanvullende informatie van april 2025 voor Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 6558046e9708267cd0ceda36e7c0bdba6b2f758a
+source-git-commit: e0740ca9cd6e1d0b92d5504a2869ac03c28d4980
 workflow-type: ht
-source-wordcount: '2178'
+source-wordcount: '2055'
 ht-degree: 100%
 
 ---
@@ -15,10 +15,10 @@ ht-degree: 100%
 >
 >Raadpleeg de volgende documentatie voor aanvullende informatie voor andere Adobe Experience Platform-toepassingen:
 >
->- [Adobe Journey Optimizer](https://experienceleague.adobe.com/nl/docs/journey-optimizer/using/whats-new/release-notes)
->- [Adobe Journey Optimizer B2B](https://experienceleague.adobe.com/nl/docs/journey-optimizer-b2b/user/release-notes)
->- [Customer Journey Analytics](https://experienceleague.adobe.com/nl/docs/analytics-platform/using/releases/latest)
->- [Real-Time CDP Collaboration](https://experienceleague.adobe.com/nl/docs/real-time-cdp-collaboration/using/latest)
+>- [Adobe Journey Optimizer](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/whats-new/release-notes)
+>- [Adobe Journey Optimizer B2B](https://experienceleague.adobe.com/en/docs/journey-optimizer-b2b/user/release-notes)
+>- [Customer Journey Analytics](https://experienceleague.adobe.com/en/docs/analytics-platform/using/releases/latest)
+>- [Real-Time CDP Collaboration](https://experienceleague.adobe.com/en/docs/real-time-cdp-collaboration/using/latest)
 
 **Releasedatum: woensdag 29 april 2025**
 
@@ -30,7 +30,6 @@ Updates van bestaande functies en documentatie in Adobe Experience Platform:
 - [Experience-datamodel](#xdm)
 - [Identiteitsservice](#identity)
 - [Query-service](#query-service)
-- [Realtime-klantenprofiel](#profile)
 - [Sandboxes](#sandboxes)
 - [Bronnen](#sources)
 - [Playbooks voor gebruiksscenario&#39;s](#use-case-playbooks)
@@ -129,18 +128,6 @@ Voer query&#39;s uit op gegevens in het Adobe Experience Platform-data lake met 
 | Outputs van modelvoorspellingen opslaan met CREATE TABLE en INSERT INTO | [Sla geselecteerde outputs van voorspellingen op in nieuwe tabellen met behulp van CREATE TABLE AS SELECT of voeg ze in bestaande tabellen in met behulp van INSERT INTO SELECT](../../query-service/advanced-statistics/models.md#predict). Als u verbeterde kolomselectie hebt ingeschakeld, kunnen tussentijdse resultaten zoals functievectoren en kansscores ook naast definitieve voorspellingen worden weergegeven. Raadpleeg de [SQL-syntaxisdocumentatie](../../query-service/sql/syntax.md#create-table-as-select) voor gebruiksvoorbeelden. |
 
 Voor meer informatie over [!DNL Query Service] raadpleegt u het [[!DNL Query Service] overzicht](../../query-service/home.md).
-
-## Realtime-klantenprofiel {#profile}
-
-Met Adobe Experience Platform kunt u uw klanten gecoördineerde, consistente en relevante ervaringen bieden, ongeacht waar of wanneer ze met uw merk in aanraking komen. Met Real-Time Customer Profile krijgt u een holistisch beeld van elke individuele klant, waarbij gegevens uit meerdere kanalen worden gecombineerd, waaronder online, offline, CRM en gegevens van derden. Met Profile kunt u klantgegevens samenvoegen tot één overzichtelijk overzicht, dat een bruikbaar overzicht met tijdstempel biedt van elke klantinteractie.
-
-| Functie | Beschrijving |
-| ------- | ----------- |
-| Vervaldatum voor gegevens van pseudonieme profielen | Beheer de vervaldatum voor gegevens van pseudonieme profielen in het profieldashboard. Raadpleeg de [gids over de vervaldatum voor gegevens van pseudonieme profielen](../../profile/pseudonymous-profiles.md) om meer te weten te komen over deze functie en pseudonieme profielen. |
-
-{style="table-layout:auto"}
-
-Voor meer informatie over Real-Time Customer Profile, raadpleegt u het [overzicht van profielen](../../profile/home.md)
 
 ## Sandboxes {#sandboxes}
 
