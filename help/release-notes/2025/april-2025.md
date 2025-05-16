@@ -2,10 +2,10 @@
 title: Aanvullende informatie van april 2025 voor Adobe Experience Platform
 description: Aanvullende informatie van april 2025 voor Adobe Experience Platform.
 exl-id: a3b1e2e8-d780-4e23-b323-37e1a631f716
-source-git-commit: 6558046e9708267cd0ceda36e7c0bdba6b2f758a
+source-git-commit: e0740ca9cd6e1d0b92d5504a2869ac03c28d4980
 workflow-type: tm+mt
-source-wordcount: '2178'
-ht-degree: 93%
+source-wordcount: '2055'
+ht-degree: 99%
 
 ---
 
@@ -15,10 +15,10 @@ ht-degree: 93%
 >
 >Raadpleeg de volgende documentatie voor aanvullende informatie voor andere Adobe Experience Platform-toepassingen:
 >
->- [Adobe Journey Optimizer](https://experienceleague.adobe.com/nl/docs/journey-optimizer/using/whats-new/release-notes)
->- [Adobe Journey Optimizer B2B](https://experienceleague.adobe.com/nl/docs/journey-optimizer-b2b/user/release-notes)
->- [Customer Journey Analytics](https://experienceleague.adobe.com/nl/docs/analytics-platform/using/releases/latest)
->- [Real-Time CDP Collaboration](https://experienceleague.adobe.com/nl/docs/real-time-cdp-collaboration/using/latest)
+>- [Adobe Journey Optimizer](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/whats-new/release-notes)
+>- [Adobe Journey Optimizer B2B](https://experienceleague.adobe.com/en/docs/journey-optimizer-b2b/user/release-notes)
+>- [Customer Journey Analytics](https://experienceleague.adobe.com/en/docs/analytics-platform/using/releases/latest)
+>- [Real-Time CDP Collaboration](https://experienceleague.adobe.com/en/docs/real-time-cdp-collaboration/using/latest)
 
 **Releasedatum: woensdag 29 april 2025**
 
@@ -30,7 +30,6 @@ Updates van bestaande functies en documentatie in Adobe Experience Platform:
 - [Experience-datamodel](#xdm)
 - [Identiteitsservice](#identity)
 - [Query-service](#query-service)
-- [Realtime-klantenprofiel](#profile)
 - [Sandboxes](#sandboxes)
 - [Bronnen](#sources)
 - [Playbooks voor gebruiksscenario&#39;s](#use-case-playbooks)
@@ -41,7 +40,7 @@ Experience League is een uitgebreid leerplatform dat is ontworpen om uw vaardigh
 
 | Functie | Beschrijving |
 | --- | --- |
-| Gepersonaliseerde startpagina | De toegang en past uw gepersonaliseerde homepage op [ Experience League ](https://experienceleague.adobe.com/nl/home#) aan. Meld u aan met uw Adobe-referenties en selecteer vervolgens **[!UICONTROL Experience League]** in het bovenste menu om uw leerervaring te optimaliseren: <ul><li>**Bladwijzers**: gebruik de functie [!UICONTROL Bookmarks] om uw favoriete bronnen op één plek op te slaan en te verzamelen. U kunt verschillende inhoud opslaan, zoals afspeellijsten, artikelen en tutorials.</li><li>**Pas uw leerervaring aan**: verbeter uw leerervaring door uw Experience League-profiel bij te werken met de rollen, branches, producten en het ervaringsniveau die het beste bij uw behoeften passen.</li><li>**Aanbevelingen**: bekijk leerinhoud die wordt aanbevolen op basis van uw recente activiteit.</li><li>**Recent bekeken**: gebruik de sectie [!UICONTROL Recently viewed] om snel terug te gaan naar recent bekeken inhoud, zoals documentatie en video&#39;s.</li><li>**Learning-bronnen**: gebruik het deelvenster [!UICONTROL All learning resources] om naar tutorials, documentatie, community, evenementen en certificeringen te gaan.</li><li>**Nieuw**: bekijk de sectie [!UICONTROL What's new] voor een overzicht van de recentste inhoud op Experience League.</li><li>**Bekijk eerdere evenementen op vraag**: bekijk eerder opgenomen livestreams over productpresentaties, use cases en tutorials met de sectie [!UICONTROL Watch past events on-demand].</li></ul><br> ![Gepersonaliseerde startpagina op Experience League.](../2025/assets/april/personalized-home-page.png "Gepersonaliseerde startpagina op Experience League."){width="250" align="center" zoomable="yes"} |
+| Gepersonaliseerde startpagina | Krijg toegang tot uw gepersonaliseerde startpagina op [Experience League](https://experienceleague.adobe.com/nl/home#), waar u die ook kunt aanpassen. Meld u aan met uw Adobe-referenties en selecteer vervolgens **[!UICONTROL Experience League]** in het bovenste menu om uw leerervaring te optimaliseren: <ul><li>**Bladwijzers**: gebruik de functie [!UICONTROL Bookmarks] om uw favoriete bronnen op één plek op te slaan en te verzamelen. U kunt verschillende inhoud opslaan, zoals afspeellijsten, artikelen en tutorials.</li><li>**Pas uw leerervaring aan**: verbeter uw leerervaring door uw Experience League-profiel bij te werken met de rollen, branches, producten en het ervaringsniveau die het beste bij uw behoeften passen.</li><li>**Aanbevelingen**: bekijk leerinhoud die wordt aanbevolen op basis van uw recente activiteit.</li><li>**Recent bekeken**: gebruik de sectie [!UICONTROL Recently viewed] om snel terug te gaan naar recent bekeken inhoud, zoals documentatie en video&#39;s.</li><li>**Learning-bronnen**: gebruik het deelvenster [!UICONTROL All learning resources] om naar tutorials, documentatie, community, evenementen en certificeringen te gaan.</li><li>**Nieuw**: bekijk de sectie [!UICONTROL What's new] voor een overzicht van de recentste inhoud op Experience League.</li><li>**Bekijk eerdere evenementen op vraag**: bekijk eerder opgenomen livestreams over productpresentaties, use cases en tutorials met de sectie [!UICONTROL Watch past events on-demand].</li></ul><br> ![Gepersonaliseerde startpagina op Experience League.](../2025/assets/april/personalized-home-page.png "Gepersonaliseerde startpagina op Experience League."){width="250" align="center" zoomable="yes"} |
 
 {style="table-layout:auto"}
 
@@ -53,8 +52,8 @@ Adobe Experience Platform biedt een reeks technologieën waarmee u klantervaring
 
 | Functie | Beschrijving |
 | --- | --- |
-| [!DNL Adform] extension | Met de serverextensie [!DNL Adform] kunnen merken het publiek gemakkelijk offline richten met behulp van ECID&#39;s. Deze server-side extensie is niet afhankelijk van cookies van derden of cookie-alternatieve id&#39;s. Bovendien, omdat dit volledig server-kant wordt gedaan, zijn geen extra pixel of andere cliënt-zijveranderingen nodig. Voor meer informatie, zie het [ Adform uitbreidingsoverzicht ](/help/tags/extensions/server/adform/overview.md). |
-| [!DNL Amazon] API-extensie voor webgebeurtenissen | Met de API-extensie [!DNL Amazon] Conversies kunnen adverteerders website-interacties rechtstreeks delen met [!DNL Amazon] , waardoor de toewijzing, betrouwbaarheid van gegevens en de optimalisatie van de campagne zijn verbeterd. Deze extensie ondersteunt het doorsturen van gebeurtenissen, zodat u conversiegebeurtenissen zoals aankopen, winkelwagentaanvullingen en meer kunt verzenden en er tegelijkertijd voor zorgt dat de deduplicatie correct wordt uitgevoerd voor een juiste rapportage. Voor meer informatie, zie het [ de uitbreidingsoverzicht van Amazon ](/help/tags/extensions/server/amazon/overview.md). |
+| [!DNL Adform] extensie | Met de server-side-extensie [!DNL Adform] kunnen merken eenvoudig doelgroepen buiten de site opnieuw targeten met behulp van ECID&#39;s. Deze server-side-extensie is niet afhankelijk van cookies van derden of alternatieve cookie-ID&#39;s. Omdat dit volledig aan de server-kant gebeurt, zijn er geen extra pixels of andere wijzigingen aan de kant van de klant nodig. Zie het [Adform-extensieoverzicht](/help/tags/extensions/server/adform/overview.md) voor meer informatie. |
+| [!DNL Amazon] webgebeurtenissen API-extensie | Met de Conversions API-extensie van [!DNL Amazon] kunnen adverteerders website-interacties rechtstreeks delen met [!DNL Amazon], wat zorgt voor verbeterde attributie, betrouwbaarheid van de gegevens en campagneoptimalisatie. Deze extensie ondersteunt het doorsturen van gebeurtenissen, zodat u conversiegebeurtenissen zoals aankopen, toevoegingen aan winkelwagentjes en meer kunt verzenden, terwijl de juiste deduplicatie wordt gegarandeerd voor nauwkeurige rapportage. Zie het [Amazon-extensieoverzicht](/help/tags/extensions/server/amazon/overview.md) voor meer informatie. |
 
 {style="table-layout:auto"}
 
@@ -129,18 +128,6 @@ Voer query&#39;s uit op gegevens in het Adobe Experience Platform-data lake met 
 | Outputs van modelvoorspellingen opslaan met CREATE TABLE en INSERT INTO | [Sla geselecteerde outputs van voorspellingen op in nieuwe tabellen met behulp van CREATE TABLE AS SELECT of voeg ze in bestaande tabellen in met behulp van INSERT INTO SELECT](../../query-service/advanced-statistics/models.md#predict). Als u verbeterde kolomselectie hebt ingeschakeld, kunnen tussentijdse resultaten zoals functievectoren en kansscores ook naast definitieve voorspellingen worden weergegeven. Raadpleeg de [SQL-syntaxisdocumentatie](../../query-service/sql/syntax.md#create-table-as-select) voor gebruiksvoorbeelden. |
 
 Voor meer informatie over [!DNL Query Service] raadpleegt u het [[!DNL Query Service] overzicht](../../query-service/home.md).
-
-## Realtime-klantenprofiel {#profile}
-
-Met Adobe Experience Platform kunt u uw klanten gecoördineerde, consistente en relevante ervaringen bieden, ongeacht waar of wanneer ze met uw merk in aanraking komen. Met Real-Time Customer Profile krijgt u een holistisch beeld van elke individuele klant, waarbij gegevens uit meerdere kanalen worden gecombineerd, waaronder online, offline, CRM en gegevens van derden. Met Profile kunt u klantgegevens samenvoegen tot één overzichtelijk overzicht, dat een bruikbaar overzicht met tijdstempel biedt van elke klantinteractie.
-
-| Functie | Beschrijving |
-| ------- | ----------- |
-| Vervaldatum voor gegevens van pseudonieme profielen | Beheer de vervaldatum voor gegevens van pseudonieme profielen in het profieldashboard. Raadpleeg de [gids over de vervaldatum voor gegevens van pseudonieme profielen](../../profile/pseudonymous-profiles.md) om meer te weten te komen over deze functie en pseudonieme profielen. |
-
-{style="table-layout:auto"}
-
-Voor meer informatie over Real-Time Customer Profile, raadpleegt u het [overzicht van profielen](../../profile/home.md)
 
 ## Sandboxes {#sandboxes}
 

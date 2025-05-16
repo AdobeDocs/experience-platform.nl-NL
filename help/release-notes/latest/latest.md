@@ -3,7 +3,7 @@ title: Aanvullende informatie van april 2025 voor Adobe Experience Platform
 description: Aanvullende informatie van april 2025 voor Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
 source-git-commit: e0740ca9cd6e1d0b92d5504a2869ac03c28d4980
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '2055'
 ht-degree: 100%
 
@@ -15,10 +15,10 @@ ht-degree: 100%
 >
 >Raadpleeg de volgende documentatie voor aanvullende informatie voor andere Adobe Experience Platform-toepassingen:
 >
->- [Adobe Journey Optimizer](https://experienceleague.adobe.com/nl/docs/journey-optimizer/using/whats-new/release-notes)
->- [Adobe Journey Optimizer B2B](https://experienceleague.adobe.com/nl/docs/journey-optimizer-b2b/user/release-notes)
->- [Customer Journey Analytics](https://experienceleague.adobe.com/nl/docs/analytics-platform/using/releases/latest)
->- [Real-Time CDP Collaboration](https://experienceleague.adobe.com/nl/docs/real-time-cdp-collaboration/using/latest)
+>- [Adobe Journey Optimizer](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/whats-new/release-notes)
+>- [Adobe Journey Optimizer B2B](https://experienceleague.adobe.com/en/docs/journey-optimizer-b2b/user/release-notes)
+>- [Customer Journey Analytics](https://experienceleague.adobe.com/en/docs/analytics-platform/using/releases/latest)
+>- [Real-Time CDP Collaboration](https://experienceleague.adobe.com/en/docs/real-time-cdp-collaboration/using/latest)
 
 **Releasedatum: woensdag 29 april 2025**
 
