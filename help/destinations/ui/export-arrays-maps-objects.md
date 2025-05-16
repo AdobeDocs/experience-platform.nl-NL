@@ -3,9 +3,9 @@ title: Arrays, kaarten en objecten exporteren vanuit Real-Time CDP
 type: Tutorial
 description: Leer hoe u arrays, kaarten en objecten van Real-Time CDP naar cloudopslagdoelen exporteert.
 exl-id: ff13d8b7-6287-4315-ba71-094e2270d039
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: f7ff10dd6489842adb8de49b3f8634c20d77cc71
 workflow-type: tm+mt
-source-wordcount: '1081'
+source-wordcount: '1062'
 ht-degree: 0%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 0%
 >
 >De functionaliteit voor het exporteren van arrays en andere complexe objecten naar cloudopslagdoelen is over het algemeen beschikbaar voor de volgende doelen: [[!DNL Azure Data Lake Storage Gen2]](../../destinations/catalog/cloud-storage/adls-gen2.md), [[!DNL Data Landing Zone]](../../destinations/catalog/cloud-storage/data-landing-zone.md), [[!DNL Google Cloud Storage]](../../destinations/catalog/cloud-storage/google-cloud-storage.md), [[!DNL Amazon S3]](../../destinations/catalog/cloud-storage/amazon-s3.md), [[!DNL Azure Blob]](../../destinations/catalog/cloud-storage/azure-blob.md), [[!DNL SFTP]](../../destinations/catalog/cloud-storage/sftp.md) .
 >
->Bovendien, kunt u kaart-type gebieden naar de volgende bestemmingen uitvoeren: [ Amazon Kinesis ](/help/destinations/catalog/cloud-storage/amazon-kinesis.md), [ HTTP API ](/help/destinations/catalog/streaming/http-destination.md), [ Azure Event Hubs ](/help/destinations/catalog/cloud-storage/azure-event-hubs.md), [ Adobe Target ](/help/destinations/catalog/personalization/adobe-target-connection.md).
+>Bovendien, kunt u kaart-type gebieden naar de volgende bestemmingen uitvoeren: [ Amazon Kinesis ](/help/destinations/catalog/cloud-storage/amazon-kinesis.md), [ HTTP API ](/help/destinations/catalog/streaming/http-destination.md), [ Azure Event Hubs ](/help/destinations/catalog/cloud-storage/azure-event-hubs.md).
 
 
 Leer hoe te om series, kaarten, en voorwerpen van Real-Time CDP naar [ wolkenopslagbestemmingen ](/help/destinations/catalog/cloud-storage/overview.md) uit te voeren. Bovendien, kunt u kaart-type gebieden naar [ ondernemingsbestemmingen ](/help/destinations/destination-types.md#advanced-enterprise-destinations) en beperkte [ de bestemmingen van de randverpersoonlijking ](/help/destinations/destination-types.md#edge-personalization-destinations) uitvoeren. Lees dit document om inzicht te krijgen in de exportworkflow, de gebruiksgevallen die door deze functionaliteit worden ingeschakeld en de bekende beperkingen. Bekijk de lijst hieronder om de functionaliteit te begrijpen beschikbaar per bestemmingstype.
@@ -28,7 +28,7 @@ Leer hoe te om series, kaarten, en voorwerpen van Real-Time CDP naar [ wolkenops
 | Bestaande aangepaste, door partners samengestelde cloudopslagdoelen (aangepaste, op bestanden gebaseerde doelen die via Destination SDK zijn gemaakt) | Nee |
 | Enterprise-bestemmingen (Amazon Kinesis, Azure Event Hubs, HTTP API) | gedeeltelijk. In de toewijzingsstap van de activeringsworkflow kunt u objecten van het type map selecteren en exporteren. |
 | Streaming doelen (bijvoorbeeld: Facebook, Braze, Google Customer Match, enzovoort) | Nee |
-| Edge-personalisatiebestemmingen (Adobe Target) | gedeeltelijk. In de toewijzingsstap van de activeringsworkflow kunt u objecten van het type map selecteren en exporteren. |
+| Edge-verpersoonlijkingsdoelen | Nee |
 
 {style="table-layout:auto"}
 
