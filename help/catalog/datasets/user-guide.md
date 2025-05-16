@@ -4,9 +4,9 @@ solution: Experience Platform
 title: UI-gids voor gegevensbestanden
 description: Leer hoe u algemene handelingen uitvoert wanneer u werkt met gegevenssets in de Adobe Experience Platform-gebruikersinterface.
 exl-id: f0d59d4f-4ebd-42cb-bbc3-84f38c1bf973
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 52412c5d6231e10fc875d16971dbd8cbfb116d21
 workflow-type: tm+mt
-source-wordcount: '3885'
+source-wordcount: '3920'
 ht-degree: 0%
 
 ---
@@ -54,6 +54,10 @@ Deze gebruikershandleiding vereist een goed begrip van de volgende onderdelen va
 >title="Bewaring van gegevensset"
 >abstract="Datalake bewaart regels voor hoe lang gegevens worden opgeslagen en wanneer het in de verschillende diensten zou moeten worden geschrapt. Dit zorgt voor naleving van de regelgeving, het beheer van opslagkosten en het behoud van de gegevenskwaliteit."
 
+>[!CONTEXTUALHELP]
+>id="platform_datasets_orchestratedCampaigns_toggle"
+>title="Geordende campagnes"
+>abstract="Schakel deze schakeloptie in om het gebruik van de geselecteerde gegevensset in Adobe Journey Optimizer Orchestrated Campaigns toe te staan. De dataset moet een relationeel schema gebruiken en slechts één dataset kan per schema worden gecreeerd."
 
 Selecteer in de gebruikersinterface van [!DNL Experience Platform] de optie **[!UICONTROL Datasets]** in de linkernavigatie om het dashboard van **[!UICONTROL Datasets]** te openen. Het dashboard maakt een lijst van alle beschikbare datasets voor uw organisatie. De details worden getoond voor elke vermelde dataset, met inbegrip van zijn naam, het schema de dataset zich aan, en het statuut van de meest recente opnamelooppas aansluit.
 
