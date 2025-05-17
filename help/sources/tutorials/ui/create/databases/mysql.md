@@ -1,20 +1,17 @@
 ---
-keywords: Experience Platform;home;populaire onderwerpen;mysql;MySQL
-solution: Experience Platform
-title: Een MySQL Source-verbinding maken in de gebruikersinterface
-type: Tutorial
-description: Leer hoe u een MySQL-bronverbinding maakt met de gebruikersinterface van Adobe Experience Platform.
+title: MySQL verbinden met Experience Platform via de gebruikersinterface
+description: Leer hoe u uw MySQL-database met de gebruikersinterface verbindt met Experience Platform.
 exl-id: 75e74bde-6199-4970-93d2-f95ec3a59aa5
-source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
+source-git-commit: 659af23c6d05f184b745e13ab8545941f3892e7e
 workflow-type: tm+mt
-source-wordcount: '396'
-ht-degree: 1%
+source-wordcount: '515'
+ht-degree: 0%
 
 ---
 
 # Een [!DNL MySQL] bronverbinding maken in de gebruikersinterface
 
-Source-connectors in Adobe Experience Platform bieden de mogelijkheid om volgens een schema extern gesourceerde gegevens in te voeren. Deze zelfstudie bevat stappen voor het maken van een [!DNL MySQL] -bronverbinding met de gebruikersinterface van Adobe Experience Platform.
+Lees deze handleiding voor informatie over hoe u uw [!DNL MySQL] -database kunt verbinden met Adobe Experience Platform via de werkruimte voor bronnen in de Experience Platform-gebruikersinterface.
 
 ## Aan de slag
 
@@ -29,36 +26,62 @@ Als u reeds een [!DNL MySQL] verbinding hebt, kunt u de rest van dit document ov
 
 ### Vereiste referenties verzamelen
 
-Als u toegang wilt krijgen tot uw [!DNL MySQL] account op [!DNL Experience Platform] , moet u de volgende waarde opgeven:
+Lees het [[!DNL MySQL]  overzicht ](../../../../connectors/databases/mysql.md#prerequisites) voor informatie over authentificatie.
 
-| Credentials | Beschrijving |
-| ---------- | ----------- |
-| `connectionString` | De [!DNL MySQL] verbindingstekenreeks die aan uw account is gekoppeld. Het patroon van de [!DNL MySQL] verbindingstekenreeks is: `Server={SERVER};Port={PORT};Database={DATABASE};UID={USERNAME};PWD={PASSWORD}` . U kunt meer over verbindingskoorden leren en hoe te om hen te verkrijgen door het [[!DNL MySQL]  document ](https://dev.mysql.com/doc/connector-net/en/connector-net-connections-string.html) te lezen. |
+## Navigeren door de catalogus met bronnen
 
-## Sluit uw [!DNL MySQL] -account aan
+Selecteer in de gebruikersinterface van Experience Platform de optie **[!UICONTROL Sources]** in de linkernavigatie voor toegang tot de werkruimte van *[!UICONTROL Sources]* . Kies een categorie of gebruik de zoekbalk om de bron te zoeken.
 
-Nadat u de vereiste gegevens hebt verzameld, voert u de onderstaande stappen uit om uw [!DNL MySQL] -account te koppelen aan [!DNL Experience Platform] .
+Als u verbinding wilt maken met [!DNL MySQL] , gaat u naar de categorie *[!UICONTROL Databases]* , selecteert u de **[!UICONTROL MySQL]** bronkaart en selecteert u vervolgens **[!UICONTROL Set up]** .
 
-Login aan [ Adobe Experience Platform ](https://platform.adobe.com) en selecteer dan **[!UICONTROL Sources]** van de linkernavigatiebar om tot de **[!UICONTROL Sources]** werkruimte toegang te hebben. In het scherm **[!UICONTROL Catalog]** worden diverse bronnen weergegeven waarmee u een account kunt maken.
+>[!TIP]
+>
+>Bronnen in de catalogus met bronnen geven de optie **[!UICONTROL Set up]** weer wanneer een bepaalde bron nog geen geverifieerde account heeft. Zodra een geverifieerd account is gemaakt, verandert deze optie in **[!UICONTROL Add data]** .
 
-Selecteer onder de categorie **[!UICONTROL Databases]** de optie **[!UICONTROL MySQL]** . Selecteer **[!UICONTROL Configure]** als dit de eerste keer is dat u deze connector gebruikt. Anders selecteert u **[!UICONTROL Add data]** om een nieuwe [!DNL MySQL] -connector te maken.
+![ de broncatalogus met de MySQL geselecteerde bronkaart.](../../../../images/tutorials/create/my-sql/catalog.png)
 
-![](../../../../images/tutorials/create/my-sql/catalog.png)
+## Een bestaande account gebruiken {#existing}
 
-De pagina **[!UICONTROL Connect to MySQL]** wordt weergegeven. Op deze pagina kunt u nieuwe of bestaande referenties gebruiken.
+Als u een bestaande account wilt gebruiken, selecteert u **[!UICONTROL Existing account]** en vervolgens de [!DNL MySQL] -account die u wilt gebruiken.
 
-### Nieuwe account
+![ de bestaande rekeningeninterface in het bronwerkschema met &quot;Bestaande geselecteerde rekening&quot;.](../../../../images/tutorials/create/my-sql/existing.png)
 
-Selecteer **[!UICONTROL New account]** als u nieuwe referenties gebruikt. Geef in het invoerformulier dat wordt weergegeven een naam, een optionele beschrijving en uw [!DNL MySQL] -gegevens op. Als u klaar bent, selecteert u **[!UICONTROL Connect]** en laat u de nieuwe verbinding enige tijd tot stand brengen.
+## Een nieuwe account maken {#new}
 
-![](../../../../images/tutorials/create/my-sql/new.png)
+Als u een nieuwe account wilt maken, selecteert u **[!UICONTROL New account]** en geeft u een naam op en voegt u desgewenst een beschrijving voor uw account toe.
 
-### Bestaande account
+![ de nieuwe rekeningsinterface in het bronwerkschema met een rekeningsnaam en facultatieve verstrekte beschrijving.](../../../../images/tutorials/create/my-sql/new.png)
 
-Als u een bestaande account wilt verbinden, selecteert u de [!DNL MySQL] -account waarmee u verbinding wilt maken en selecteert u **[!UICONTROL Next]** om door te gaan.
+### Verbinding maken met Experience Platform on Azure {#azure}
 
-![](../../../../images/tutorials/create/my-sql/existing.png)
+U kunt uw [!DNL MySQL] -database op Azure verbinden met Experience Platform via accountsleutel of basisverificatie.
 
-## Volgende stappen
+>[!BEGINTABS]
 
-Aan de hand van deze zelfstudie hebt u een verbinding tot stand gebracht met uw MySQL-account. U kunt nu aan het volgende leerprogramma verdergaan en [ een dataflow vormen om gegevens in  [!DNL Experience Platform]](../../dataflow/databases.md) te brengen.
+>[!TAB  de belangrijkste authentificatie van de Rekening ]
+
+Om rekeningszeer belangrijke authentificatie te gebruiken, selecteer **[!UICONTROL Account key authentication]**, verstrek uw [ verbindingskoord ](../../../../connectors/databases/mysql.md#azure), en selecteer dan **[!UICONTROL Connect to source]**.
+
+![ de nieuwe rekeningsinterface in het bronwerkschema met &quot;de belangrijkste geselecteerde authentificatie van de Rekening&quot;.](../../../../images/tutorials/create/my-sql/account-key.png)
+
+>[!TAB  Basisauthentificatie ]
+
+Om basisauthentificatie te gebruiken, selecteer **[!UICONTROL Basic authentication]**, verstrek waarden voor uw [ authentificatiegeloofsbrieven ](../../../../connectors/databases/mysql.md#azure), en selecteer dan **[!UICONTROL Connect to source]**.
+
+![ de nieuwe rekeningsinterface in het bronwerkschema met &quot;Basisauthentificatie&quot;geselecteerd.](../../../../images/tutorials/create/my-sql/basic-auth.png)
+
+>[!ENDTABS]
+
+### Verbinding maken met Experience Platform op Amazon Web Services (AWS) {#aws}
+
+>[!AVAILABILITY]
+>
+>Deze sectie is van toepassing op implementaties van Experience Platform die op Amazon Web Services (AWS) worden uitgevoerd. Experience Platform die op AWS wordt uitgevoerd, is momenteel beschikbaar voor een beperkt aantal klanten. Meer over de gesteunde infrastructuur van Experience Platform leren, zie het [ multi-wolkenoverzicht van Experience Platform ](../../../../../landing/multi-cloud.md).
+
+Om een nieuwe [!DNL MySQL] rekening tot stand te brengen en met Experience Platform op AWS te verbinden, zorg ervoor dat u in een zandbak VA6 bent en dan de noodzakelijke [ geloofsbrieven voor authentificatie ](../../../../connectors/databases/mysql.md#aws) verstrekt.
+
+![ de nieuwe rekeningsinterface in het bronwerkschema om met AWS te verbinden.](../../../../images/tutorials/create/my-sql/aws.png)
+
+## Een gegevensstroom maken voor [!DNL MySQL] -gegevens
+
+Nu u met succes uw [!DNL MySQL] gegevensbestand hebt verbonden, kunt u [ nu tot een dataflow leiden en gegevens van uw gegevensbestand in Experience Platform ](../../dataflow/databases.md) opnemen.
