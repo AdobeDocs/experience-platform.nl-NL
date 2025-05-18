@@ -2,7 +2,7 @@
 title: Prioriteit naamruimte
 description: Leer over namespace prioriteit in de Dienst van de Identiteit.
 exl-id: bb04f02e-3826-45af-b935-752ea7e6ed7c
-source-git-commit: 44457b95b354e20808c1218ca3c8e698071f0528
+source-git-commit: 0bf62f5f527d50b59ed84cc0ad98200cf25b4c8e
 workflow-type: tm+mt
 source-wordcount: '2162'
 ht-degree: 4%
@@ -73,7 +73,7 @@ De prioriteit van Namespace kan worden gevormd gebruikend [ identiteitsmontages 
 
 ## Prioriteitsgebruik voor naamruimte
 
-Momenteel, beïnvloedt de nameprioriteit systeemgedrag van het Profiel van de Klant in real time. In het onderstaande diagram wordt dit concept geïllustreerd. Voor meer informatie, lees de gids op [ Adobe Experience Platform en de diagrammen van de toepassingsarchitectuur ](https://experienceleague.adobe.com/nl/docs/blueprints-learn/architecture/architecture-overview/platform-applications).
+Momenteel, beïnvloedt de nameprioriteit systeemgedrag van het Profiel van de Klant in real time. In het onderstaande diagram wordt dit concept geïllustreerd. Voor meer informatie, lees de gids op [ Adobe Experience Platform en de diagrammen van de toepassingsarchitectuur ](https://experienceleague.adobe.com/en/docs/blueprints-learn/architecture/architecture-overview/platform-applications).
 
 ![ een diagram van namespace prioritaire toepassingswerkingsgebied ](../images/namespace-priority/application-scope.png)
 
@@ -205,7 +205,7 @@ Voor meer informatie, lees het [ de dienstoverzicht van de Privacy ](../../priva
 
 ### Edge-segmentering en Edge Network-toepassingen
 
-In de context van [!DNL Identity Graph Linking Rules] zijn er twee belangrijke gedragsveranderingen om met betrekking tot Edge-segmentatie en Edge Network-toepassingen rekening te houden:
+In de context van [!DNL Identity Graph Linking Rules] zijn er twee belangrijke gedragsveranderingen om nota te nemen van met betrekking tot de segmentatie van Edge en de toepassingen van Edge Network:
 
 1. `identityMap` moet een naamruimte voor personen bevatten die als uniek is gemarkeerd. Velden die zijn gemarkeerd als een identiteit (identiteitsbeschrijvingen), worden niet ondersteund.
 2. De naamruimte van de persoon moet de `primary = true` -configuratie hebben wanneer een eindgebruiker bladert terwijl deze is geverifieerd.
@@ -216,12 +216,12 @@ In een bepaalde gebeurtenis, zorg ervoor dat al uw namespaces die een persoonent
 
 * **toepasselijkheid van de Gebeurtenis**: Dit gedrag is slechts op gebeurtenissen van toepassing die rechtstreeks naar Edge Network (zoals WebSDK en Mobiele SDK) worden verzonden. Gebeurtenissen die van [ worden ingegrepen de hub van Experience Platform ](../../landing/edge-and-hub-comparison.md), zoals die ingebed met de bron van HTTP API, andere het stromen bronnen, en partijbronnen, zijn niet onderworpen aan deze beperking.
 * **de segmenteringsspecificiteit van Edge**: Dit gedrag is specifiek voor randsegmentatie. De partij en het stromen segmentatie zijn de afzonderlijke diensten die op de hub worden geëvalueerd en volgen niet het zelfde proces. Lees de [ gids van de randsegmentatie ](../../segmentation/methods/edge-segmentation.md) voor meer informatie.
-* Lees de [ Adobe Experience Platform en de diagrammen van de toepassingsarchitectuur ](https://experienceleague.adobe.com/nl/docs/blueprints-learn/architecture/architecture-overview/platform-applications#detailed-architecture-diagram) en [ Edge Network en hubvergelijking ](../../landing/edge-and-hub-comparison.md) pagina&#39;s voor meer informatie.
+* Lees de [ Adobe Experience Platform en de diagrammen van de toepassingsarchitectuur ](https://experienceleague.adobe.com/en/docs/blueprints-learn/architecture/architecture-overview/platform-applications#detailed-architecture-diagram) en [ Edge Network en hubvergelijking ](../../landing/edge-and-hub-comparison.md) pagina&#39;s voor meer informatie.
 
 #### Edge Network-toepassingen
 
 Om ervoor te zorgen dat toepassingen op de Edge Network onverwijld toegang hebben tot het Edge-profiel, moet u ervoor zorgen dat uw gebeurtenissen `primary=true` op de CRMID worden opgenomen. Dit verzekert directe beschikbaarheid zonder het wachten op de updates van de identiteitsgrafiek van hub.
 
 * Toepassingen op Edge Network zoals Adobe Target, Offer Decisioning en Aangepaste Personalization-bestemmingen blijven afhankelijk van de primaire identiteit in gebeurtenissen voor toegang tot profielen via Edge Profile.
-* Lees het [ Experience Platform Web SDK &amp; Edge Network architectuurdiagram ](https://experienceleague.adobe.com/nl/docs/blueprints-learn/architecture/architecture-overview/deployment/websdk#experience-platform-webmobile-sdk-or-edge-network-server-api-deployment) voor meer informatie over het gedrag van Edge Network.
+* Lees het [ Experience Platform Web SDK &amp; Edge Network architectuurdiagram ](https://experienceleague.adobe.com/en/docs/blueprints-learn/architecture/architecture-overview/deployment/websdk#experience-platform-webmobile-sdk-or-edge-network-server-api-deployment) voor meer informatie over het gedrag van Edge Network.
 * Lees de documentatie over [ het elementtypes van Gegevens ](../../tags/extensions/client/web-sdk/data-element-types.md) en [ Gegevens van de Identiteit in SDK van het Web ](../../web-sdk/identity/overview.md) voor meer informatie over hoe te om primaire identiteit op SDK van het Web te vormen.

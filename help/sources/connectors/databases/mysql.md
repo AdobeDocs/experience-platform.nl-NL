@@ -3,16 +3,16 @@ title: Overzicht MySQL Source Connector
 description: Leer hoe u MySQL met Adobe Experience Platform kunt verbinden via API's of de gebruikersinterface.
 last-substantial-update: 2025-05-17T00:00:00Z
 exl-id: a18e8e69-880f-4bee-b339-726091d6f858
-source-git-commit: 7a5dae76c5b58b302b4f3295efc17f40dbb9b18b
+source-git-commit: f758479c37b72752bbb8a371de88bf653b2e6030
 workflow-type: tm+mt
-source-wordcount: '485'
+source-wordcount: '714'
 ht-degree: 0%
 
 ---
 
 # [!DNL MySQL]
 
-[!DNL MySQL] is een opensource relationeel databasebeheersysteem dat wordt gebruikt om gestructureerde gegevens op te slaan en te beheren. Het organiseert gegevens in lijsten en gebruikt SQL (Gestructureerde Taal van de Vraag) voor het vragen van en het bijwerken van informatie. [!DNL MySQL] wordt op grote schaal gebruikt in webtoepassingen, ondersteunt meerdere platforms en is bekend vanwege de snelheid, betrouwbaarheid en gebruiksgemak. Het is ideaal voor alles, van kleine websites tot grootschalige bedrijfssystemen.
+[!DNL MySQL] is een opensource relationeel databasebeheersysteem dat wordt gebruikt om gestructureerde gegevens op te slaan en te beheren. Het organiseert gegevens in lijsten en gebruikt SQL (Gestructureerde Taal van de Vraag) voor het vragen van en het bijwerken van informatie. [!DNL MySQL] wordt op grote schaal gebruikt in webtoepassingen, ondersteunt meerdere platforms en is bekend vanwege de snelheid, betrouwbaarheid en gebruiksgemak.
 
 U kunt de [!DNL MySQL] -bron gebruiken om uw account te verbinden en gegevens uit uw [!DNL MySQL] -database in te voeren in Adobe Experience Platform.
 
@@ -48,12 +48,29 @@ Geef waarden op voor de volgende referenties om uw [!DNL MySQL] -database te ver
 | Credentials | Beschrijving |
 | --- | --- |
 | `server` | De naam of het IP-adres van uw [!DNL MySQL] -database. |
-| `database` | De naam van de [!DNL MySQL] -database waarmee u verbinding wilt maken. |
 | `username` | De gebruikersnaam die is gekoppeld aan uw [!DNL MySQL] -databaseverificatie. |
 | `password` | Het wachtwoord dat is gekoppeld aan uw [!DNL MySQL] -databaseverificatie. |
+| `database` | De naam van de [!DNL MySQL] -database waarmee u verbinding wilt maken. |
 | `sslMode` | De methode [!DNL Secure Sockets Layer] (SSL) die op uw verbinding moet worden toegepast. De beschikbare waarden zijn: <ul><li>`DISABLED`: Gebruik deze optie om SSL uit te schakelen. Als uw server een SSL-configuratie vereist, mislukt de verbinding</li><li>`PREFERRED`: gebruik deze optie om SSL-verbindingen te verkiezen omdat de server deze ondersteunt. Met deze optie kunt u ook niet-SSL-verbindingen maken.</li><li>`REQUIRED`: Gebruik deze optie om SSL-verbindingen verplicht te maken. Als de server geen SSL ondersteunt, mislukken de verbindingen.</li><li>`Verify-Ca`: gebruik deze optie om servercertificaten te verifiëren wanneer er geen verbinding is als de server geen SSL ondersteunt.</li><li>`Verify Identity`: gebruik deze optie om servercertificaten met de naam van de host te verifiëren bij een verbroken verbinding als de server geen SSL ondersteunt.</li></ul> |
 
 >[!ENDTABS]
+
+### Verifiëren voor Experience Platform op Amazon Web Services (AWS) {#aws}
+
+>[!AVAILABILITY]
+>
+>Deze sectie is van toepassing op implementaties van Experience Platform die op Amazon Web Services (AWS) worden uitgevoerd. Experience Platform die op AWS wordt uitgevoerd, is momenteel beschikbaar voor een beperkt aantal klanten. Meer over de gesteunde infrastructuur van Experience Platform leren, zie het [ multi-wolkenoverzicht van Experience Platform ](../../../landing/multi-cloud.md).
+
+U moet waarden opgeven voor de volgende referenties om [!DNL MySQL] te verbinden met Experience Platform op AWS.
+
+| Credentials | Beschrijving |
+| --- | --- |
+| `server` | De naam of IP van uw [!DNL MySQL] database. |
+| `username` | De naam van uw database. |
+| `password` | De gebruikersnaam die overeenkomt met uw database. |
+| `database` | Het wachtwoord dat overeenkomt met uw database. |
+| `sslMode` | De methode [!DNL Secure Sockets Layer] (SSL) die op uw verbinding moet worden toegepast. De beschikbare waarden zijn: <ul><li>`DISABLED`: Gebruik deze optie om SSL uit te schakelen. Als uw server een SSL-configuratie vereist, mislukt de verbinding</li><li>`PREFERRED`: gebruik deze optie om SSL-verbindingen te verkiezen omdat de server deze ondersteunt. Met deze optie kunt u ook niet-SSL-verbindingen maken.</li><li>`REQUIRED`: Gebruik deze optie om SSL-verbindingen verplicht te maken. Als de server geen SSL ondersteunt, mislukken de verbindingen.</li><li>`Verify-Ca`: gebruik deze optie om servercertificaten te verifiëren wanneer er geen verbinding is als de server geen SSL ondersteunt.</li><li>`Verify Identity`: gebruik deze optie om servercertificaten met de naam van de host te verifiëren bij een verbroken verbinding als de server geen SSL ondersteunt.</li></ul> |
+| `connectionSpec.id` | De verbindingsspecificatie keert de schakelaareigenschappen van een bron, met inbegrip van authentificatiespecificaties met betrekking tot het creëren van de basis en bronverbindingen terug. De verbindingsspecificatie-id voor [!DNL MySQL] is `26d738e0-8963-47ea-aadf-c60de735468a` . **Nota**: Deze referentie wordt slechts vereist wanneer het verbinden door [!DNL Flow Service] API. |
 
 ## Verbinding maken [!DNL MySQL] met Experience Platform via API&#39;s
 
