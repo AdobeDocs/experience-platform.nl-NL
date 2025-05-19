@@ -3,9 +3,9 @@ title: Overzicht Snowflake Source Connector
 description: Leer hoe u Snowflake met Adobe Experience Platform kunt verbinden via API's of de gebruikersinterface.
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: df066463-1ae6-4ecd-ae0e-fb291cec4bd5
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 573691db9f71fcbe8b5edd4ea647d718ab3784e4
 workflow-type: tm+mt
-source-wordcount: '694'
+source-wordcount: '751'
 ht-degree: 0%
 
 ---
@@ -17,6 +17,10 @@ ht-degree: 0%
 >* De [!DNL Snowflake] -bron is in de broncatalogus beschikbaar voor gebruikers die Real-Time Customer Data Platform Ultimate hebben aangeschaft.
 >* Standaard wordt [!DNL Snowflake] source `null` geïnterpreteerd als een lege tekenreeks. Neem contact op met uw Adobe-vertegenwoordiger om ervoor te zorgen dat de `null` -waarden correct worden geschreven zoals `null` in Adobe Experience Platform.
 >* Experience Platform kan alleen gegevens invoeren als tijdzones voor alle batchbronnen op basis van tabellen zijn geconfigureerd voor UTC. Het enige tijdstempel dat wordt ondersteund voor de [!DNL Snowflake] -bron is TIMESTAMP_NTZ met UTC-tijd.
+
+>[!WARNING]
+>
+>De basisauthentificatie (of de authentificatie van de rekeningssleutel) voor [!DNL Snowflake] bron zal op November 2025 worden afgekeurd. U moet naar op sleutel-paar gebaseerde authentificatie bewegen om de bron te blijven gebruiken en gegevens van uw gegevensbestand in te voeren aan Experience Platform. Voor meer informatie over de veroudering, lees de [[!DNL Snowflake]  beste praktijkgids bij het verlichten van de risico&#39;s van credentieel compromis ](https://www.snowflake.com/en/resources/white-paper/best-practices-to-mitigate-the-risk-of-credential-compromise/).
 
 Adobe Experience Platform staat toe dat gegevens uit externe bronnen worden opgenomen en biedt u de mogelijkheid om inkomende gegevens te structureren, labelen en verbeteren met behulp van Experience Platform-services. U kunt gegevens invoeren uit verschillende bronnen, zoals Adobe-toepassingen, opslag in de cloud, databases en vele andere.
 
@@ -100,7 +104,7 @@ Nadat de codering is voltooid, kunt u die [!DNL Base64] gecodeerde persoonlijke 
 
 ## IP adres lijst van gewenste personen
 
-Een lijst van IP adressen moet aan een lijst van gewenste personen worden toegevoegd alvorens met bronschakelaars te werken. Het niet toevoegen van uw regio-specifieke IP adressen aan uw lijst van gewenste personen kan tot fouten of niet-prestaties leiden wanneer het gebruiken van bronnen. Zie de [&#128279;](../../ip-address-allow-list.md) pagina van de lijst van gewenste personen van het 0&rbrace; IP adres &lbrace;voor meer informatie.
+Een lijst van IP adressen moet aan een lijst van gewenste personen worden toegevoegd alvorens met bronschakelaars te werken. Het niet toevoegen van uw regio-specifieke IP adressen aan uw lijst van gewenste personen kan tot fouten of niet-prestaties leiden wanneer het gebruiken van bronnen. Zie de ](../../ip-address-allow-list.md) pagina van de lijst van gewenste personen van het 0} IP adres {voor meer informatie.[
 
 In de onderstaande documentatie vindt u informatie over het tot stand brengen van een verbinding tussen [!DNL Snowflake] en Experience Platform via API&#39;s of de gebruikersinterface:
 
