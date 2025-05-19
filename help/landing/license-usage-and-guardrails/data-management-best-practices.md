@@ -2,9 +2,9 @@
 title: Aanbevolen werkwijzen voor gegevensbeheerlicenties
 description: Meer informatie over best practices en tools die u kunt gebruiken om uw licentierechten beter te beheren met Adobe Experience Platform.
 exl-id: f23bea28-ebd2-4ed4-aeb1-f896d30d07c2
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: a14d94a87eb433dd0bb38e5bf3c9c3a04be9a5c6
 workflow-type: tm+mt
-source-wordcount: '2154'
+source-wordcount: '2338'
 ht-degree: 1%
 
 ---
@@ -15,13 +15,34 @@ Adobe Experience Platform is een open systeem dat uw gegevens omzet in robuuste 
 
 Experience Platform biedt licenties waarmee u kunt bepalen hoeveel profielen u kunt maken en hoeveel gegevens u kunt invoeren. Gezien de capaciteit om om het even welke bron, volume, of geschiedenis van gegevens in te voeren, is het mogelijk om uw vergunningsrechten te overschrijden aangezien uw gegevensvolumes groeien.
 
-In dit document worden aanbevolen procedures beschreven en gereedschappen waarmee u uw licentierechten beter kunt beheren met Adobe Experience Platform.
+Lees deze handleiding voor tips en trucs die u kunt gebruiken om uw licentierechten beter te beheren met Experience Platform.
 
-## Adobe Experience Platform-gegevensopslag
+## Overzicht van functies {#summary-of-features}
 
-Experience Platform bestaat voornamelijk uit twee gegevensopslagruimten: de [!DNL data lake] - en de Profile Store.
+Gebruik de beste werkwijzen en gereedschappen die in dit document worden beschreven om het gebruik van uw licentierechten in Experience Platform beter te beheren. Dit document wordt bijgewerkt wanneer extra functies worden uitgebracht die alle Experience Platform-klanten zichtbaar en bestuurbaar maken.
 
-De **[!DNL data lake]** heeft voornamelijk de volgende doelen:
+In de volgende tabel wordt de lijst met momenteel beschikbare functies weergegeven, zodat u uw gebruiksrechten voor licenties beter kunt beheren.
+
+| Functie | Beschrijving |
+| --- | --- |
+| [ Dataset UI - het gegevensbehoud van de Gebeurtenis van de Ervaring ](../../catalog/datasets/user-guide.md#data-retention-policy) | Configureer een vaste retentieperiode voor gegevens in de opslag van gegevens in het meer en het profiel. De verslagen worden geschrapt aangezien de gevormde bewaarperiode beëindigt. |
+| [ laat/maakt Datasets voor het Profiel van de Klant in real time toe ](../../catalog/datasets/user-guide.md) | Schakel gegevenssetinvoer in of uit in realtime-klantprofiel. |
+| [ Verlopen van de Gebeurtenis van de Ervaring in de opslag van het Profiel ](../../profile/event-expirations.md) | Pas een vervaltijd voor alle gebeurtenissen toe die in een profiel-Toegelaten dataset worden opgenomen. Neem contact op met uw Adobe-accountteam of de klantenservice om deze functie in te schakelen. |
+| [ Prep van Gegevens van Adobe Analytics filters ](../../sources/tutorials/ui/create/adobe-applications/analytics.md#filtering-for-real-time-customer-profile) | Pas [!DNL Kafka] -filters toe om onnodige gegevens uit te sluiten van inname. |
+| [ de bronschakelaarfilters van Adobe Audience Manager ](../../sources/tutorials/ui/create/adobe-applications/audience-manager.md) | Pas Audience Manager-bronverbindingsfilters toe om overbodige gegevens uit te sluiten van inname. |
+| [ Gebeurtenis die gegevensfilters ](../../tags/ui/event-forwarding/overview.md) door:sturen | Pas server-kant [!DNL Kafka] filters toe om onnodige gegevens van opname uit te sluiten.  Zie de documentatie over [ markeringsregels ](../../tags/ui/managing-resources/rules.md) voor extra informatie. |
+| [ het Dashboard UI van het Gebruik van de Vergunning ](../../dashboards/guides/license-usage.md#license-usage-dashboard-data) | De consumptie van Experience Platform-producten door uw organisatie controleren op basis van rechten waarvoor een vergunning is verleend. Toegang tot momentopnamen voor dagelijks gebruik, voorspellende trends en gedetailleerde gegevens op sandboxniveau ter ondersteuning van proactief licentiebeheer. |
+| [ Dataset overlap Rapport API ](../../profile/tutorials/dataset-overlap-report.md) | Output de datasets die het meest aan uw Adresseerbare Publiek bijdraagt. |
+| [ Identiteitsoverlapping Rapport API ](../../profile/api/preview-sample-status.md#generate-the-identity-namespace-overlap-report) | Output de identiteitsnaamruimten die het meest aan uw Adresseerbare Publiek bijdragen. |
+| [ Pseudoniem de gegevensvervalsing van het Profiel ](../../profile/pseudonymous-profiles.md) | Configureer de vervaltijden van gegevens voor Pseudoniem-profielen en verwijder automatisch gegevens uit de profielopslag. |
+
+{style="table-layout:auto"}
+
+## Experience Platform-gegevensopslag
+
+Experience Platform bestaat voornamelijk uit twee gegevensopslagruimten: het datumpeer en het Profile Store.
+
+Het datumpeer dient hoofdzakelijk de volgende doeleinden:
 
 * fungeert als testgebied voor gegevens aan boord in Experience Platform;
 * fungeert als de gegevensopslag op lange termijn voor alle Experience Platform-gegevens;
@@ -40,9 +61,9 @@ De **opslag van het Profiel** is waar de klantenprofielen worden gecreeerd en ho
 
 Wanneer u Experience Platform een licentie geeft, krijgt u gebruiksrechten voor licenties die afhankelijk zijn van de SKU:
 
-**[!DNL Addressable Audience]** - het totale aantal klantprofielen dat contractueel is toegestaan in Experience Platform, inclusief bekende en pseudoniem-profielen.
+**[!DNL Addressable Audience]**: het totale aantal klantprofielen dat contractueel is toegestaan in Experience Platform, inclusief bekende en pseudoniem-profielen.
 
-**[!DNL Total Data Volume]** - de totale hoeveelheid gegevens die beschikbaar is voor Adobe Experience Platform Profile Service voor gebruik in betrokkenheidsworkflows.
+**[!DNL Total Data Volume]**: de totale hoeveelheid gegevens die beschikbaar is voor realtime klantprofiel voor gebruik in betrokkenheidsworkflows.
 
 De beschikbaarheid van deze cijfers en de specifieke definitie van elk van deze cijfers variëren afhankelijk van de licenties die uw organisatie heeft aangeschaft.
 
@@ -123,7 +144,7 @@ De opslag van het Profiel is samengesteld uit de volgende componenten:
 
 {style="table-layout:auto"}
 
-#### Compositierapporten opslaan van profiel
+### Compositierapporten opslaan van profiel
 
 Er zijn een aantal rapporten beschikbaar om u te helpen de samenstelling van de opslag van het Profiel begrijpen. Met deze rapporten kunt u geïnformeerde beslissingen nemen over hoe en waar u de vervaldatum van de Experience Event moet instellen om uw licentiegebruik beter te optimaliseren:
 
@@ -132,13 +153,17 @@ Er zijn een aantal rapporten beschikbaar om u te helpen de samenstelling van de 
 <!-- * **Unknown Profiles Report API**: Exposes the impact of applying pseudonymous expirations for different time thresholds. You can use this report to identify which pseudonymous expirations threshold to apply. See the tutorial on [generating the unknown profiles report](../../profile/api/preview-sample-status.md#generate-the-unknown-profiles-report) for more information.
 -->
 
-#### Verlopen van gegevens van pseudoniem profiel {#pseudonymous-profile-expirations}
+### Verlopen van gegevens van pseudoniem profiel {#pseudonymous-profile-expirations}
 
-Met deze functie kunt u automatisch schijnbare profielen uit het profielarchief verwijderen. Voor meer informatie over deze eigenschap, te lezen gelieve het [ Pseudoniem overzicht van de gegevensvervalsing van het Profiel ](../../profile/pseudonymous-profiles.md).
+Met de gegevensvervalfunctie van de Pseudoniem-profielgegevens kunt u automatisch gegevens verwijderen die niet meer geldig of nuttig zijn voor uw gebruiksgevallen in het archief Profiel. Bij het verlopen van gegevens van een pseudoniem profiel worden zowel gebeurtenis- als profielrecords verwijderd. Dientengevolge, zal dit het plaatsen adresseerbare volumes van de Publiek verminderen. Voor meer informatie over deze eigenschap, te lezen gelieve het [ Pseudoniem overzicht van de gegevensvervalsing van het Profiel ](../../profile/pseudonymous-profiles.md).
 
-#### Verlopen van gebeurtenissen beleven {#event-expirations}
+### Dataset-interface - Behouden gegevensset voor gebeurtenissen ervaren {#data-retention}
 
-Dit vermogen staat u toe om gedragsgegevens uit een profiel-toegelaten dataset automatisch te verwijderen die niet meer waardevol voor uw gebruiksgevallen is. Zie het overzicht op [ Verlopen van de Gebeurtenis van de Ervaring ](../../profile/event-expirations.md) voor details over hoe dit proces werkt zodra het voor een dataset wordt toegelaten.
+Configureer de instellingen voor de vervaldatum en het behoud van gegevenssets om een vaste retentieperiode voor uw gegevens in de opslag van gegevens in het gegevensmeer en het profiel in te stellen. Wanneer de bewaarperiode is afgelopen, worden de gegevens verwijderd. De gegevensvervaldatum van de Gebeurtenis van de ervaring verwijdert slechts gebeurtenissen en verwijdert geen gegevens van de profielklasse, die [ totaal gegevensvolume ](total-data-volume.md) in metriek van het vergunningsgebruik zullen verminderen. Voor meer informatie, lees de gids over [ plaatsend het beleid van het gegevensbehoud ](../../catalog/datasets/user-guide.md#data-retention-policy).
+
+### Verlopen van gebeurtenissen voor profielervaring {#event-expirations}
+
+Vorm vervaltijden om gedragsgegevens uit uw profiel-toegelaten dataset automatisch te verwijderen zodra zij niet meer waardevol voor uw gebruiksgevallen zijn. Lees het overzicht op [ Verlopen van de Gebeurtenis van de Ervaring ](../../profile/event-expirations.md) voor meer informatie.
 
 ## Overzicht van best practices voor compatibiliteit met het gebruik van licenties {#best-practices}
 
@@ -147,24 +172,6 @@ Hieronder volgt een lijst met aanbevolen tips die u kunt volgen om ervoor te zor
 * Gebruik het [ dashboard van het vergunningsgebruik ](../../dashboards/guides/license-usage.md) om trends van het klantengebruik te volgen en te controleren. Hierdoor kunt u eventuele overschrijdingen die zich kunnen voordoen, overtreffen.
 * Vorm [ innamefilters ](#ingestion-filters) door de gebeurtenissen te identificeren die voor uw segmentatie en het verpersoonlijkingsgebruik worden vereist gevallen. Op deze manier kunt u alleen belangrijke gebeurtenissen verzenden die vereist zijn voor uw gebruiksgevallen.
 * Zorg ervoor dat u slechts [ toegelaten datasets voor profiel ](#ingestion-filters) hebt die voor uw segmentatie en verpersoonlijkingsgebruiksgevallen worden vereist.
-* Vorm {de Verlopen van de Gebeurtenis van 0} Ervaring [&#128279;](#event-expirations) en [ Pseudoniem de gegevensvervalsing van het Profiel ](#pseudonymous-profile-expirations) voor high-frequency gegevens zoals Webgegevens.
+* Vorm {de Verlopen van de Gebeurtenis van 0} Ervaring ](../../catalog/datasets/user-guide.md#data-retention-policy) en [ Pseudoniem de gegevensvervalsing van het Profiel ](../../profile/pseudonymous-profiles.md) voor high-frequency gegevens zoals Webgegevens.[
+* Vorm [ tijd-aan-Levende (TTL) bewaarbeleid voor de datasets van de Gebeurtenis van de Ervaring ](../../catalog/datasets/experience-event-dataset-retention-ttl-guide.md) in het gegevensmeer om verouderde verslagen automatisch te verwijderen en opslaggebruik in lijn met uw vergunningsrechten te optimaliseren.
 * Controleer periodiek de [ Rapporten van de Samenstelling van het Profiel ](#profile-store-composition-reports) om uw de opslagsamenstelling van het Profiel te begrijpen. Op deze manier kunt u de gegevensbronnen begrijpen die het meest bijdragen aan het gebruik van uw licentie.
-
-## Overzicht en beschikbaarheid van functies {#feature-summary}
-
-De beste praktijken en hulpmiddelen die in dit document worden geschetst zullen u helpen uw gebruik van de vergunningsbevoegdheid binnen Adobe Experience Platform beter beheren. Dit document wordt bijgewerkt wanneer extra functies worden vrijgegeven om alle Experience Platform-klanten zichtbaar en bestuurbaar te maken.
-
-In de volgende tabel wordt de lijst met momenteel beschikbare functies weergegeven, zodat u uw gebruiksrechten voor licenties beter kunt beheren.
-
-| Functie | Beschrijving |
-| --- | --- |
-| [ laat/maakt Datasets voor Profiel ](../../catalog/datasets/user-guide.md) toe onbruikbaar | Schakel gegevenssetinvoer in of uit in realtime-klantprofiel. |
-| [ Verlopen van de Gebeurtenis van de Ervaring ](../../profile/event-expirations.md) | Pas een vervaltijd voor alle gebeurtenissen toe die in een profiel-Toegelaten dataset worden opgenomen. Neem contact op met uw Adobe-accountteam of de klantenservice om deze functie in te schakelen. |
-| [ Prep van Gegevens van Adobe Analytics filters ](../../sources/tutorials/ui/create/adobe-applications/analytics.md) | [!DNL Kafka] -filters toepassen om onnodige gegevens uit te sluiten van inname |
-| [ de bronschakelaarfilters van Adobe Audience Manager ](../../sources/tutorials/ui/create/adobe-applications/audience-manager.md) | Audience Manager-bronverbindingsfilters toepassen om onnodige gegevens uit te sluiten van inname |
-| [ Gebeurtenis die gegevensfilters ](../../tags/ui/event-forwarding/overview.md) door:sturen | Pas server-kant [!DNL Kafka] filters toe om onnodige gegevens van opname uit te sluiten.  Zie de documentatie over [ markeringsregels ](../../tags/ui/managing-resources/rules.md) voor extra informatie. |
-| [ het Dashboard UI van het Gebruik van de Vergunning ](../../dashboards/guides/license-usage.md#license-usage-dashboard-data) | Een momentopname weergeven van de licentiegegevens van uw organisatie voor Experience Platform |
-| [ Dataset overlap Rapport API ](../../profile/tutorials/dataset-overlap-report.md) | Output de datasets die het meest aan uw Adresseerbare Publiek bijdraagt |
-| [ Identiteitsoverlapping Rapport API ](../../profile/api/preview-sample-status.md#generate-the-identity-namespace-overlap-report) | Hiermee worden de naamruimten uitgevoerd die het meest bijdragen aan uw adresseerbare publiek |
-
-{style="table-layout:auto"}
