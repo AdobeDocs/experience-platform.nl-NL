@@ -5,9 +5,9 @@ breadcrumb-title: Gids voor Query Service
 user-guide-description: Gebruik standaard SQL om gegevens te doorzoeken binnen de data lake in Experience Platform.
 feature: Queries
 role: User,Developer
-source-git-commit: 5e8dccf91e8c83b4734b363539cfb911b5c2ae29
+source-git-commit: 8b33d9231aeebd454fd614a81b356a9e971b757c
 workflow-type: tm+mt
-source-wordcount: '404'
+source-wordcount: '409'
 ht-degree: 14%
 
 ---
@@ -110,6 +110,7 @@ ht-degree: 14%
    - [Zoekopdrachtlogs](ui/query-logs.md)
    - [Geplande query&#39;s controleren](ui/monitor-queries.md)
    - [Referentiegids](ui/credentials.md)
+   - [JWT migreren naar OAuth-gebruikersgegevens](ui/migrate-jwt-to-oauth.md)
    - [Uitvoerdatasets genereren op basis van queryresultaten](ui/create-datasets.md)
 - Query Service-API {#api}
    - [Aan de slag](api/getting-started.md)
@@ -144,4 +145,4 @@ ht-degree: 14%
 - [Veelgestelde vragen](troubleshooting-guide.md)
 - [IP adres lijst van gewenste personen](ip-address-allowlist.md)
 - [ API verwijzing ](https://www.adobe.io/experience-platform-apis/references/query-service/)
-- [Releaseopmerkingen bij Experience Platform](https://experienceleague.adobe.com/nl/docs/experience-platform/release-notes/latest)
+- [Releaseopmerkingen bij Experience Platform](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)
