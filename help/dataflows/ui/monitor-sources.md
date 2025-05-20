@@ -2,9 +2,9 @@
 description: Leer hoe te om het controledashboard te gebruiken om gegevens te controleren die in gegevens meer worden opgenomen.
 title: Inname van meer gegevens controleren
 exl-id: 53fa4338-c5f8-4e1a-8576-3fe13d930846
-source-git-commit: f671188fbc694b0d2d808577265f91788cb0d8e9
+source-git-commit: 75970d41a316c97d98ebf6cefd3bfa0e58173030
 workflow-type: tm+mt
-source-wordcount: '1275'
+source-wordcount: '1427'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,9 @@ ht-degree: 0%
 >
 >Het stromen bronnen, zoals de [ bron van HTTP API ](../../sources/connectors/streaming/http.md) wordt momenteel niet gesteund door het controledashboard. Op dit moment kunt u het dashboard alleen gebruiken om batchbronnen te controleren.
 
-Lees dit document om te leren hoe u het dashboard voor bewaking kunt gebruiken om de opname van gegevens in het meer in de gebruikersinterface van Experience Platform te controleren.
+U kunt het controledashboard in de gebruikersinterface van Adobe Experience Platform gebruiken om metriek rond uw gegevensopname en gegevensbewaarnemings processen in gegevens meer terug te winnen. Gebruik de grafieken in de interface om inname- en retentietrends in de loop der tijd te controleren en de prestaties in al uw gegevensstromen van bronnen samen te vatten.
+
+Lees dit document om te leren hoe u het dashboard voor bewaking kunt gebruiken om alle gegevensverwerking in het datumpeer te controleren, inclusief inname en retentie.
 
 ## Aan de slag {#get-started}
 
@@ -60,6 +62,7 @@ Het onderste gedeelte van het dashboard toont een lijst die het huidige metriekr
 | --- | --- |
 | Ontvangen records | Het totale aantal records dat van een bepaalde bron is ontvangen. |
 | Opgenomen records | Het totale aantal records dat aan data Lake wordt ingesloten. |
+| Verslagen verwijderd | Het totale aantal records dat is verwijderd als gevolg van instellingen voor gegevensmeerbewaring of bewerkingen voor het vastleggen van gegevens. |
 | Records overgeslagen | Het totale aantal overgeslagen records. Een overgeslagen record verwijst naar velden die zijn overgeslagen omdat ze niet vereist waren voor inname. Bijvoorbeeld, als u een bronnen dataflow met gedeeltelijke toegelaten opname creeert, kunt u een aanvaardbare drempel van het foutentarief vormen. Tijdens het insluiten proces, zal de inname verslagen van gebieden overslaan die niet worden vereist, zoals identiteitsgebieden, zolang zij binnen de foutendrempel zijn. |
 | Records mislukt | Het totale aantal records dat niet kan worden opgenomen vanwege fouten. |
 | Verhoogde snelheid | Het percentage records dat is opgenomen, is gebaseerd op het totale aantal records dat is ontvangen. |
@@ -79,7 +82,19 @@ U kunt uw gegevens verder filteren met de opties boven de metrieke tabel:
 
 {style="table-layout:auto"}
 
+Om uw kolomvertoning aan te passen, selecteer het pictogram van kolommontages ![ kolom-pictogram ](/help/images/icons/column-settings.png).
+
+![ het controledashboard met het geselecteerde pictogram van kolommontages.](../assets/ui/monitor-sources/edit-columns.png)
+
+Gebruik vervolgens het venster *[!UICONTROL Customize table]* om de kolommen te selecteren die u op het dashboard wilt weergeven. Selecteer **[!UICONTROL Apply]** als u klaar bent.
+
+![ aanpast kolom pop-up venster in het controledashboard.](../assets/ui/monitor-sources/customize-table.png)
+
 Om de gegevens te controleren die in een specifieke dataflow worden opgenomen, selecteer het filterpictogram ![ filter ](/help/images/icons/filter-add.png) naast een bron.
+
+>[!TIP]
+>
+>U kunt het controledashboard gebruiken om gegevens te controleren schrappingsmetriek voor verslagen die gebruikend het beleid van het gegevensbehoud worden geschrapt. Voor meer informatie over gegevensbehoud, lees de gids over [ plaatsend het beleid van het gegevensbehoud ](../../catalog/datasets/user-guide.md#data-retention-policy).
 
 ![ Monitor een specifieke dataflow door het filterpictogram naast een bepaalde bron te selecteren.](../assets/ui/monitor-sources/monitor-dataflow.png)
 
