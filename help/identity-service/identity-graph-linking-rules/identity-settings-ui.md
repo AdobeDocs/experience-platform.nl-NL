@@ -2,22 +2,18 @@
 title: Gebruikersinterface Identiteitsinstellingen
 description: Leer hoe u de gebruikersinterface voor identiteitsinstellingen gebruikt.
 exl-id: 738b7617-706d-46e1-8e61-a34855ab976e
-source-git-commit: 44457b95b354e20808c1218ca3c8e698071f0528
+source-git-commit: 0aefcfbbbed675a08d9e3023b9f667ec59874e46
 workflow-type: tm+mt
-source-wordcount: '675'
-ht-degree: 10%
+source-wordcount: '609'
+ht-degree: 0%
 
 ---
 
 # Gebruikersinterface Identiteitsinstellingen
 
->[!AVAILABILITY]
+>[!IMPORTANT]
 >
->De Regels van de Vereniging van de Grafiek van de identiteit zijn momenteel in Beperkte Beschikbaarheid, en kunnen door alle klanten in ontwikkelingszandbakken worden betreden.
->
->* **Activeringsvereisten**: de functie blijft inactief totdat u de [!DNL Identity Settings] configureert en opslaat. Zonder deze configuratie blijft het systeem normaal werken, zonder veranderingen in gedrag.
->* **Belangrijke opmerkingen**: tijdens de fase Beperkte beschikbaarheid kunt u bij Edge-segmentatie onverwachte resultaten van segmentlidmaatschappen ervaren. De segmentatie van streaming en batches functioneert echter zoals gewoonlijk.
->* **Volgende stappen**: neem contact op met uw Adobe-accountteam voor informatie over hoe u deze functie in productiesandboxes inschakelt.
+>Neem contact op met uw Adobe-accountteam als u een bestaande sandbox hebt waarvoor samengevouwen grafieken moeten worden verwijderd (&quot;fixed&quot;) nadat u identiteitsinstellingen hebt ingeschakeld.
 
 Identiteitsinstellingen zijn een functie in de gebruikersinterface van de Adobe Experience Platform Identity Service die u kunt gebruiken om unieke naamruimten aan te wijzen en naamruimteprioriteit te configureren.
 
@@ -61,7 +57,7 @@ Om namespace prioriteit te vormen, selecteer een namespace in het menu van ident
 
 Als u een unieke naamruimte wilt toewijzen, schakelt u het selectievakje [!UICONTROL Unique per graph] in dat overeenkomt met die naamruimte. U kunt **tot een maximum van drie unieke namespaces** voor uw configuratie van identiteitsmontages selecteren.
 
-Wanneer uw unieke naamruimten zijn ingesteld, kunnen grafieken niet langer meerdere identiteiten hebben die een unieke naamruimte bevatten. Als u bijvoorbeeld CRMID hebt aangewezen als een unieke naamruimte, kan een grafiek slechts één identiteit hebben met de naamruimte CRMID. Voor meer informatie, lees het [ overzicht van het algoritme van de identiteitsoptimalisering ](./identity-optimization-algorithm.md#unique-namespace).
+Wanneer uw unieke naamruimten zijn ingesteld, kunnen grafieken niet langer meerdere identiteiten hebben die een unieke naamruimte bevatten. Als u bijvoorbeeld CRMID hebt aangewezen als een unieke naamruimte, kan een grafiek slechts één identiteit hebben met de naamruimte CRMID. Voor meer informatie, lees het [ overzicht van het Algoritme van de Optimalisering van de Identiteit ](./identity-optimization-algorithm.md#unique-namespace).
 
 Wanneer u klaar bent met uw configuraties, selecteert u **[!UICONTROL Next]** om door te gaan.
 

@@ -2,9 +2,9 @@
 title: Algoritme voor identiteitsoptimalisatie
 description: Leer over het Algoritme van de Optimalisering van de Identiteit in de Dienst van de Identiteit.
 exl-id: 5545bf35-3f23-4206-9658-e1c33e668c98
-source-git-commit: df89afb7131c57b9400788ce30c420b9830c022e
+source-git-commit: 28eab3488dccdcc6239b9499e875c31ff132fd48
 workflow-type: tm+mt
-source-wordcount: '1617'
+source-wordcount: '1527'
 ht-degree: 0%
 
 ---
@@ -16,19 +16,11 @@ ht-degree: 0%
 >title="Unieke naamruimte"
 >abstract="Een grafiek kan geen twee identiteiten met een unieke naamruimte hebben. Als een grafiek probeert deze limiet te overschrijden, blijven de meest recente koppelingen behouden en worden de oudste koppelingen verwijderd."
 
->[!AVAILABILITY]
->
->De Regels van de Vereniging van de Grafiek van de identiteit zijn momenteel in Beperkte Beschikbaarheid, en kunnen door alle klanten in ontwikkelingszandbakken worden betreden.
->
->* **de vereisten van de Activering**: De eigenschap zal inactief blijven tot u vormt en uw [!DNL Identity Settings] bewaart. Zonder deze configuratie, zal het systeem normaal, zonder veranderingen in gedrag blijven werken.
->* **Belangrijke nota&#39;s**: Tijdens deze Beperkte fase van de Beschikbaarheid, kan de segmentatie van Edge onverwachte resultaten van het segmentlidmaatschap veroorzaken. Streaming en batchsegmentatie functioneren echter naar behoren.
->* **Volgende stappen**: Voor informatie over hoe te om deze eigenschap in productiestanddozen toe te laten, gelieve uw Adobe accountteam te contacteren.
-
-Het algoritme voor identiteitsoptimalisatie is een grafiekalgoritme voor Identiteitsservice dat ervoor zorgt dat een identiteitsgrafiek representatief is voor één persoon, en dat daardoor ongewenste samenvoeging van identiteiten in Real-Time Klantprofiel voorkomt.
+Het algoritme van de Optimalisering van de Identiteit is een grafiekalgoritme op de Dienst van de Identiteit die helpt ervoor te zorgen dat een identiteitsgrafiek van één enkele persoon representatief is, en daarom, de ongewenste samenvoeging van identiteiten op het Profiel van de Klant in real time verhindert.
 
 ## Invoerparameters {#input-parameters}
 
-Lees deze sectie voor informatie over unieke naamruimten en namespace prioriteit. Deze twee concepten fungeren als invoerparameters die door het algoritme voor identiteitsoptimalisatie worden vereist.
+Lees deze sectie voor informatie over unieke naamruimten en namespace prioriteit. Deze twee concepten dienen als inputparameters die door het Algoritme van de Optimalisering van de Identiteit worden vereist.
 
 ### Unieke naamruimte {#unique-namespace}
 
@@ -36,7 +28,7 @@ Een unieke naamruimte bepaalt de koppelingen die worden verwijderd als de grafie
 
 Eén samengevoegd profiel en de bijbehorende identiteitsgrafiek moeten één persoon (persoon-entiteit) vertegenwoordigen. Eén individu wordt meestal vertegenwoordigd door CRMID&#39;s en/of aanmeldings-id&#39;s. De verwachting is dat geen twee individuen (CRMIDs) in één enkel profiel of grafiek worden samengevoegd.
 
-U moet opgeven welke naamruimten een personenentiteit in Identiteitsservice vertegenwoordigen met behulp van het algoritme voor identiteitsoptimalisatie. Als een CRM-database bijvoorbeeld een gebruikersaccount definieert die aan één CRMID en één e-mailadres moet worden gekoppeld, zien de identiteitsinstellingen voor deze sandbox er als volgt uit:
+U moet specificeren welke namespaces een persoonentiteit in de Dienst van de Identiteit gebruikend het Algoritme van de Optimalisering van de Identiteit vertegenwoordigen. Als een CRM-database bijvoorbeeld een gebruikersaccount definieert die aan één CRMID en één e-mailadres moet worden gekoppeld, zien de identiteitsinstellingen voor deze sandbox er als volgt uit:
 
 * CRMID-naamruimte = uniek
 * E-mailnaamruimte = uniek
@@ -51,7 +43,7 @@ Een naamruimte die u als uniek declareert, wordt automatisch geconfigureerd voor
 
 ### Prioriteit naamruimte {#namespace-priority}
 
-De prioriteit Namespace bepaalt hoe het algoritme van de identiteitsoptimalisering verbindingen verwijdert.
+De prioriteit Namespace bepaalt hoe het Algoritme van de Optimalisering van de Identiteit verbindingen verwijdert.
 
 Naamruimten in Identiteitsservice hebben een impliciete relatieve volgorde van belang. Bekijk een grafiek die gestructureerd is als een piramide. Er is één knoop op de hoogste laag, twee knopen op de middelste laag, en vier knopen op de bodemlaag. De prioriteit Namespace moet deze relatieve orde weerspiegelen om ervoor te zorgen dat een persoonentiteit correct wordt vertegenwoordigd.
 
@@ -61,14 +53,14 @@ Voor een diepgaande blik bij namespace prioriteit en zijn volledige functionalit
 
 ## Proces {#process}
 
-Bij het opnemen van nieuwe identiteiten, controleert de Dienst van de Identiteit als de nieuwe identiteiten en hun overeenkomstige namespaces aan unieke namespaceconfiguraties vasthouden. Als de configuraties worden gevolgd, gaat de opname verder en worden de nieuwe identiteiten aan de grafiek gekoppeld. Nochtans, als de configuraties niet worden gevolgd, dan zal het algoritme van de identiteitsoptimalisering:
+Bij het opnemen van nieuwe identiteiten, controleert de Dienst van de Identiteit als de nieuwe identiteiten en hun overeenkomstige namespaces aan unieke namespaceconfiguraties vasthouden. Als de configuraties worden gevolgd, gaat de opname verder en worden de nieuwe identiteiten aan de grafiek gekoppeld. Nochtans, als de configuraties niet worden gevolgd, dan zal het Algoritme van de Optimalisering van de Identiteit:
 
 * Ontvang de meest recente gebeurtenis, terwijl het nemen van namespace prioriteit rekening houdt.
 * Verwijder de koppeling waarmee twee personenentiteiten zouden worden samengevoegd uit de desbetreffende grafieklaag.
 
-## Details van het algoritme voor identiteitsoptimalisatie
+## Details van algoritme voor identiteitsoptimalisatie
 
-Wanneer de unieke naamruimtebeperking wordt overtreden, worden de koppelingen opnieuw afgespeeld en wordt de grafiek helemaal opnieuw samengesteld.
+Wanneer de unieke naamruimtebeperking wordt overtreden, worden de koppelingen opnieuw afgespeeld met het algoritme voor identiteitsoptimalisatie en wordt de grafiek helemaal opnieuw samengesteld.
 
 * Koppelingen worden in de volgende volgorde gesorteerd:
    * Laatste gebeurtenis.
@@ -76,11 +68,11 @@ Wanneer de unieke naamruimtebeperking wordt overtreden, worden de koppelingen op
 * De grafiek zou op basis van de bovenstaande volgorde opnieuw tot stand komen. Als het toevoegen van de koppeling de limietbeperking schendt (de grafiek bevat bijvoorbeeld twee of meer identiteiten met een unieke naamruimte), worden de koppelingen verwijderd.
 * De resulterende grafiek zal dan volgzaam met de unieke namespace beperking zijn die u vormde.
 
-![ A diagram dat identiteitsoptimaliseringsalgoritme visualiseert.](../images/ido_algorithm.png)
+![ een diagram dat het Algoritme van de Optimalisering van de Identiteit visualiseert.](../images/ido_algorithm.png)
 
 ## Voorbeeldscenario&#39;s voor algoritme voor identiteitsoptimalisatie
 
-In de volgende sectie wordt beschreven hoe het algoritme voor identiteitsoptimalisatie zich gedraagt, in situaties zoals een gedeeld apparaat of het opnemen van gegevens met dezelfde tijdstempel.
+De volgende sectie beschrijft hoe het Algoritme van de Optimalisering van de Identiteit zich gedraagt, in scenario&#39;s zoals gedeeld apparaat of het opnemen van gegevens met zelfde timestamp.
 
 ### Gedeeld apparaat
 
@@ -100,7 +92,7 @@ In dit voorbeeld worden zowel CRMID als e-mail aangewezen als unieke naamruimten
 
 * `timestamp=1`: Jane meldt zich met een laptop aan bij uw e-commercewebsite. Jane wordt vertegenwoordigd door haar CRMID en E-mail, terwijl de webbrowser op haar laptop die zij gebruikt wordt vertegenwoordigd door een ECID.
 * `timestamp=2`: John meldt zich met dezelfde laptop aan bij uw e-commercewebsite. John wordt vertegenwoordigd door zijn CRMID en E-mail, terwijl Webbrowser hij gebruikte reeds door een ECID wordt vertegenwoordigd. Omdat dezelfde ECID aan twee verschillende grafieken is gekoppeld, kan de Identity Service weten dat dit apparaat (laptop) een gedeeld apparaat is.
-* Vanwege de unieke naamruimte-configuratie die maximaal één CRMID-naamruimte en één E-mailnaamruimte per grafiek instelt, wordt de grafiek door het algoritme voor identiteitsoptimalisatie in twee opgesplitst.
+* Vanwege de unieke naamruimteconfiguratie die een maximum van één CRMID-naamruimte en één E-mailnaamruimte per grafiek instelt, wordt de grafiek in tweeën gesplitst.
    * Ten slotte, omdat John de laatste geverifieerde gebruiker is, blijft de ECID die de laptop vertegenwoordigt gekoppeld aan zijn grafiek in plaats van aan Jane.
 
 ![ gedeelde apparatengeval één ](../images/identity-settings/shared-device-case-one.png)
@@ -117,7 +109,7 @@ In dit voorbeeld wordt de naamruimte CRMID aangewezen als een unieke naamruimte.
 * `timestamp=1`: Jane meldt zich met een laptop aan bij uw e-commercewebsite. Ze wordt vertegenwoordigd door haar CRMID en de webbrowser op de laptop wordt vertegenwoordigd door de ECID.
 * `timestamp=2`: John meldt zich met dezelfde laptop aan bij uw e-commercewebsite. Hij wordt vertegenwoordigd door zijn CRMID en de webbrowser die hij gebruikt wordt door dezelfde ECID vertegenwoordigd.
    * Deze gebeurtenis verbindt twee onafhankelijke CRMIDs aan zelfde ECID, die de gevormde grens van één CRMID overschrijdt.
-   * Als gevolg hiervan verwijdert het algoritme voor identiteitsoptimalisatie de oudere koppeling, wat in dit geval Jane&#39;s CRMID is die bij `timestamp=1` was gekoppeld.
+   * Dientengevolge, verwijdert het Algoritme van de Optimalisering van de Identiteit de oudere verbinding, die in dit geval CRMID van Jane is die bij `timestamp=1` werd verbonden.
    * Nochtans, terwijl CRMID van Jane niet meer als grafiek op de Dienst van de Identiteit zal bestaan, zal het nog als profiel op het Profiel van de Klant in real time blijven. Dit komt omdat een identiteitsgrafiek minstens twee verbonden identiteiten moet bevatten, en als resultaat van het verwijderen van de verbindingen, heeft CRMID van Jane niet meer een andere identiteit om met te verbinden.
 
 ![ delen-apparaat-geval-twee ](../images/identity-settings/shared-device-case-two.png)
@@ -141,9 +133,9 @@ In dit voorbeeld worden de naamruimten CRMID en Email als uniek aangeduid. Overw
 * `timestamp=3`: Uw gegevenstechnicus neemt het CRM-record van Jane op, wat ertoe leidt dat haar CRMID wordt gekoppeld aan het slechte e-mailbericht.
 * `timestamp=4`: Uw gegevenstechnicus neemt het CRM-record van John in, wat ertoe leidt dat zijn CRMID wordt gekoppeld aan het slechte e-mailbericht.
    * Dit wordt dan een schending van de unieke namespaceconfiguratie aangezien het één enkele grafiek met twee CRMID namespaces leidt.
-   * Dientengevolge, schrapt het algoritme van de identiteitsoptimalisering de oudere verbinding, die in dit geval het verband tussen de identiteit van Jane met CRMID namespace en de identiteit met test <span>@test is.
+   * Dientengevolge, schrapt het Algoritme van de Optimalisering van de Identiteit de oudere verbinding, die in dit geval het verband tussen de identiteit van Jane met CRMID namespace en de identiteit met test <span>@test is.
 
-Met algoritme voor identiteitsoptimalisatie worden onjuiste identiteitswaarden zoals bogus-e-mails of telefoonnummers niet verspreid over verschillende identiteitsgrafieken.
+Met het Algoritme van de Optimalisering van de Identiteit, worden de slechte identiteitswaarden zoals bogus e-mails of telefoonaantallen niet verspreid over verscheidene verschillende identiteitsgrafieken.
 
 ![ slecht-e-mail ](../images/identity-settings/bad-email.png)
 

@@ -1,23 +1,15 @@
 ---
 title: De Gids van het oplossen van problemen voor de Regels van de Verbinding van de Grafiek van de Identiteit
-description: Leer hoe te om gemeenschappelijke kwesties in identiteitsgrafiek problemen op te lossen die regels verbinden.
+description: Leer hoe te om gemeenschappelijke kwesties in de grafiek van de Identiteit problemen op te lossen die Regels verbindt.
 exl-id: 98377387-93a8-4460-aaa6-1085d511cacc
-source-git-commit: a309f0dca5ebe75fcb7abfeb98605aec2692324d
+source-git-commit: 28eab3488dccdcc6239b9499e875c31ff132fd48
 workflow-type: tm+mt
-source-wordcount: '3368'
+source-wordcount: '3278'
 ht-degree: 0%
 
 ---
 
 # Handleiding voor probleemoplossing voor [!DNL Identity Graph Linking Rules]
-
->[!AVAILABILITY]
->
->De Regels van de Vereniging van de Grafiek van de identiteit zijn momenteel in Beperkte Beschikbaarheid, en kunnen door alle klanten in ontwikkelingszandbakken worden betreden.
->
->* **de vereisten van de Activering**: De eigenschap zal inactief blijven tot u vormt en uw [!DNL Identity Settings] bewaart. Zonder deze configuratie, zal het systeem normaal, zonder veranderingen in gedrag blijven werken.
->* **Belangrijke nota&#39;s**: Tijdens deze Beperkte fase van de Beschikbaarheid, kan de segmentatie van Edge onverwachte resultaten van het segmentlidmaatschap veroorzaken. Streaming en batchsegmentatie functioneren echter naar behoren.
->* **Volgende stappen**: Voor informatie over hoe te om deze eigenschap in productiestanddozen toe te laten, gelieve uw Adobe accountteam te contacteren.
 
 Terwijl u [!DNL Identity Graph Linking Rules] test en valideert, kan het gebeuren dat er problemen optreden met betrekking tot gegevensinvoer en grafiekgedrag. Lees dit document om te leren hoe u een aantal algemene problemen kunt oplossen die u kunt tegenkomen wanneer u met [!DNL Identity Graph Linking Rules] werkt.
 
@@ -190,7 +182,7 @@ In deze sectie worden algemene problemen beschreven die u kunt tegenkomen met be
 
 ### Unauthenticated ExperienceEvents worden gekoppeld aan het verkeerde geverifieerde profiel
 
-Het algoritme van de identiteitsoptimalisering zal [ de onlangs gevestigde verbindingen respecteren en de oudste verbindingen ](./identity-optimization-algorithm.md#identity-optimization-algorithm-details) verwijderen. Daarom is het mogelijk dat, zodra deze functie is ingeschakeld, ECID&#39;s opnieuw van de ene persoon naar de andere worden toegewezen (opnieuw gekoppeld). Volg onderstaande stappen om te begrijpen hoe een identiteit in de loop der tijd gekoppeld wordt:
+Het algoritme van de Optimalisering van de Identiteit zal [ de onlangs gevestigde verbindingen respecteren en de oudste verbindingen ](./identity-optimization-algorithm.md#identity-optimization-algorithm-details) verwijderen. Daarom is het mogelijk dat, zodra deze functie is ingeschakeld, ECID&#39;s opnieuw van de ene persoon naar de andere worden toegewezen (opnieuw gekoppeld). Volg onderstaande stappen om te begrijpen hoe een identiteit in de loop der tijd gekoppeld wordt:
 
 **de stappen van het Oplossen van problemen**
 
@@ -266,14 +258,14 @@ ORDER BY timestamp desc
 
 **de stappen van het Oplossen van problemen**
 
-Verwijs naar de documentatie op [ algoritme van de identiteitsoptimalisering ](./identity-optimization-algorithm.md), evenals de types van grafiekstructuren die worden gesteund.
+Verwijs naar de documentatie over [ Algoritme van de Optimalisering van de Identiteit ](./identity-optimization-algorithm.md), evenals de types van grafiekstructuren die worden gesteund.
 
 * Lees de [ gids van de grafiekconfiguratie ](./example-configurations.md) voor voorbeelden van gesteunde grafiekstructuren.
 * U kunt de [ implementatiegids ](./implementation-guide.md#appendix) voor voorbeelden van niet gesteunde grafiekstructuren ook lezen. Er zijn twee scenario&#39;s die zouden kunnen gebeuren:
    * Geen enkele naamruimte in al uw profielen.
    * Een [ &quot;gevaarlijk identiteitskaart&quot;](./implementation-guide.md#dangling-loginid-scenario) scenario komt voor. In dit scenario kan de Identiteitsdienst niet bepalen of de gevaarlijke id is gekoppeld aan een van de personen-entiteiten in de grafieken.
 
-U kunt het [ hulpmiddel van de grafieksimulatie in UI ](./graph-simulation.md) ook gebruiken om gebeurtenissen te simuleren en uw eigen unieke namespace en namespace prioritaire montages te vormen. Dit kan u helpen een basislijninzicht te geven in hoe het algoritme voor identiteitsoptimalisatie zich zou moeten gedragen.
+U kunt het [ hulpmiddel van de grafieksimulatie in UI ](./graph-simulation.md) ook gebruiken om gebeurtenissen te simuleren en uw eigen unieke namespace en namespace prioritaire montages te vormen. Dit kan u helpen een basislijninzicht in geven hoe het Algoritme van de Optimalisering van de Identiteit zich zou moeten gedragen.
 
 Als uw simulatieresultaten uw verwachtingen van het grafiekgedrag aanpassen, dan kunt u controleren en zien als uw [ identiteitsmontages ](./identity-settings-ui.md) de montages aanpast die u in uw simulatie hebt gevormd.
 
@@ -330,13 +322,13 @@ In deze sectie wordt een lijst met antwoorden op veelgestelde vragen over [!DNL 
 
 ## Algoritme voor identiteitsoptimalisatie {#identity-optimization-algorithm}
 
-Lees deze sectie voor antwoorden op vaak gestelde vragen over het [ algoritme van de identiteitsoptimalisering ](./identity-optimization-algorithm.md).
+Lees deze sectie voor antwoorden op vaak gestelde vragen over het [ Algoritme van de Optimalisering van de Identiteit ](./identity-optimization-algorithm.md).
 
 ### Ik heb een CRMID voor elk van mijn zaken verenigt (B2C CRMID, B2B CRMID), maar ik heb geen unieke namespace over al mijn profielen. Wat zal gebeuren als ik B2C CRMID en B2B CRMID als uniek merk, en mijn identiteitsmontages toelaat?
 
 Dit scenario wordt niet ondersteund. Daarom kunt u grafieken zien ineenstorten in gevallen waar een gebruiker hun B2C CRMID aan login gebruikt, en een andere gebruiker hun B2B CRMID aan login gebruikt. Voor meer informatie, lees de sectie over [ enige persoon namespace vereiste ](./implementation-guide.md#single-person-namespace-requirement) in de implementatiepagina.
 
-### Worden bestaande samengevouwen grafieken door algoritme voor identiteitsoptimalisatie gecorrigeerd?
+### Herstelt het algoritme voor identiteitsoptimalisatie bestaande samengevouwen grafieken?
 
 Bestaande samengevouwen grafieken worden alleen door het grafiekalgoritme beïnvloed (&#39;fixed&#39;) als deze grafieken worden bijgewerkt nadat u de nieuwe instellingen hebt opgeslagen.
 
@@ -389,7 +381,7 @@ Nee. De prioriteit Namespace zal slechts op de datasets van de Gebeurtenis van d
 
 ### Hoe werkt deze functie in overeenstemming met de identiteitsgrafiekinstructies van 50 identiteiten per grafiek? Heeft naamruimteprioriteit invloed op deze door het systeem gedefinieerde hulplijn?
 
-Het algoritme voor identiteitsoptimalisatie wordt eerst toegepast om te zorgen dat de persoon die entiteit vertegenwoordigt wordt vertegenwoordigd. Nadien, als de grafiek probeert om de [ graadmeter van de identiteitsgrafiek ](../guardrails.md) (50 identiteiten per grafiek) te overschrijden, dan zal deze logica worden toegepast. De prioriteit Namespace beïnvloedt niet de schrappingslogica van de 50 identiteit/grafiekbegeleiding.
+Het algoritme van de Optimalisering van de Identiteit zal eerst worden toegepast om de vertegenwoordiging van de persoonentiteit te verzekeren. Nadien, als de grafiek probeert om de [ graadmeter van de identiteitsgrafiek ](../guardrails.md) (50 identiteiten per grafiek) te overschrijden, dan zal deze logica worden toegepast. De prioriteit Namespace beïnvloedt niet de schrappingslogica van de 50 identiteit/grafiekbegeleiding.
 
 ## Testen
 

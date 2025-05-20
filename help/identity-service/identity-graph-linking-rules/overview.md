@@ -1,10 +1,10 @@
 ---
 title: Identiteitsgrafiekkoppelingsregels
-description: Leer over identiteitsgrafiek die regels in de Dienst van de Identiteit verbindt.
+description: Leer over de Regels van de Vereniging van de Grafiek van Identiteit in de Dienst van de Identiteit.
 exl-id: 317df52a-d3ae-4c21-bcac-802dceed4e53
-source-git-commit: a309f0dca5ebe75fcb7abfeb98605aec2692324d
+source-git-commit: 0aefcfbbbed675a08d9e3023b9f667ec59874e46
 workflow-type: tm+mt
-source-wordcount: '1497'
+source-wordcount: '1547'
 ht-degree: 0%
 
 ---
@@ -14,21 +14,13 @@ ht-degree: 0%
 >[!CONTEXTUALHELP]
 >id="platform_identities_linkingrules_overview"
 >title="Koppelingsregels voor identiteitsgrafiek"
->abstract="Om deze ongewenste samenvoegingen te verhinderen, kunt u configuraties gebruiken die door identiteitsgrafiek worden verstrekt die regels verbindt en voor nauwkeurige verpersoonlijking voor uw gebruikers toestaan."
+>abstract="Om deze ongewenste fusies te verhinderen, kunt u configuraties gebruiken die door de Regels van de Vereniging van de Grafiek van de Identiteit worden verstrekt en voor nauwkeurige verpersoonlijking voor uw gebruikers toestaan."
 
->[!AVAILABILITY]
+>[!IMPORTANT]
 >
->De Regels van de Vereniging van de Grafiek van de identiteit zijn momenteel in Beperkte Beschikbaarheid, en kunnen door alle klanten in ontwikkelingszandbakken worden betreden.
->
->* **de vereisten van de Activering**: De eigenschap zal inactief blijven tot u vormt en uw [!DNL Identity Settings] bewaart. Zonder deze configuratie, zal het systeem normaal, zonder veranderingen in gedrag blijven werken.
->* **Belangrijke nota&#39;s**: Tijdens deze Beperkte fase van de Beschikbaarheid, kan de segmentatie van Edge onverwachte resultaten van het segmentlidmaatschap veroorzaken. Streaming en batchsegmentatie functioneren echter naar behoren.
->* **Volgende stappen**: Voor informatie over hoe te om deze eigenschap in productiestanddozen toe te laten, gelieve uw Adobe accountteam te contacteren.
+>Neem contact op met uw Adobe-accountteam als u een bestaande sandbox hebt waarvoor samengevouwen grafieken moeten worden verwijderd (&quot;fixed&quot;) nadat u identiteitsinstellingen hebt ingeschakeld.
 
 Met Adobe Experience Platform Identity Service en Real-Time Customer Profile is het eenvoudig om aan te nemen dat uw gegevens perfect zijn opgenomen en dat alle samengevoegde profielen één persoon vertegenwoordigen via een personenteken, zoals een CRMID. Er zijn echter scenario&#39;s waarin bepaalde gegevens kunnen proberen meerdere verschillende profielen samen te voegen tot één profiel (grafiek samenvouwen). Om deze ongewenste samenvoegingen te voorkomen, kunt u configuraties gebruiken die via [!DNL Identity Graph Linking Rules] worden geleverd en nauwkeurige personalisatie voor uw gebruikers mogelijk maken.
-
-Bekijk de volgende video voor meer informatie over het gebruik van [!DNL Identity Graph Linking Rules] :
-
->[!VIDEO](https://video.tv.adobe.com/v/3448278/?learn=on&enablevpops&captions=dut)
 
 ## Aan de slag
 
@@ -41,6 +33,70 @@ De volgende documenten zijn essentieel voor het begrijpen van [!DNL Identity Gra
 * [Prioriteit naamruimte](./namespace-priority.md)
 * [UI voor grafieksimulatie](./graph-simulation.md)
 * [Gebruikersinterface voor identiteitsinstellingen](./identity-settings-ui.md)
+
+## Videobibliotheek
+
+Bekijk de volgende video&#39;s om meer te leren over enkele fundamentele aspecten van de regels voor identiteitsgrafiek.
+
+<!-- START CARDS HTML - DO NOT MODIFY BY HAND -->
+<div class="columns">
+    <div class="column is-half-tablet is-half-desktop is-one-third-widescreen" aria-label="Identity Graph Linking Rules: Overview">
+        <div class="card" style="height: 100%; display: flex; flex-direction: column; height: 100%;">
+            <div class="card-image">
+                <figure class="image x-is-16by9">
+                    <a href="https://video.tv.adobe.com/v/3448250/?learn=on&enablevpops" title="Identiteitskaart Grafiek verbindt Regels: Overzicht" target="_blank" rel="referrer">
+                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3429845/?format=jpeg&nocache=1732633205780" alt="Identiteitskaart Grafiek verbindt Regels: Overzicht"
+                             style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
+                    </a>
+                </figure>
+            </div>
+            <div class="card-content is-padded-small" style="display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between;">
+                <div class="top-card-content">
+                    <p class="headline is-size-6 has-text-weight-bold">
+                        <a href="https://video.tv.adobe.com/v/3448250/?learn=on&enablevpops" target="_blank" rel="referrer" title="Identiteitskaart Grafiek verbindt Regels: Overzicht"> Grafiek die van de Identiteit Regels verbindt: Overzicht </a>
+                    </p>
+                    <p class="is-size-6">Bekijk deze video voor een overzicht van de Lijnen van de Grafiek van de Identiteit en leer hoe u dit vermogen kunt gebruiken om grafiekondergang te verhinderen.</p>
+                </div>
+                <div style="display: flex; flex-direction; row;">
+                  <a href="https://video.tv.adobe.com/v/3448250/?learn=on&enablevpops" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
+                      <span class="spectrum-Button-label has-no-wrap has-text-weight-bold"> Controle </span>
+                  </a>
+                  <a href="./overview.md" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="margin-top: 1rem; margin-left: 0.5rem;">
+                      <span class="spectrum-Button-label has-no-wrap has-text-weight-bold"> Gelezen </span>
+                  </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="column is-half-tablet is-half-desktop is-one-third-widescreen" aria-label="Identity Graph Linking Rules: Identity Settings">
+        <div class="card" style="height: 100%; display: flex; flex-direction: column; height: 100%;">
+            <div class="card-image">
+                <figure class="image x-is-16by9">
+                    <a href="https://video.tv.adobe.com/v/3458487/?learn=on&enablevpops" title="Identiteitskaart Grafiek verbindt Regels: De Montages van de Identiteit" target="_blank" rel="referrer">
+                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3441066/?format=jpeg&nocache=1732633205785" alt="Identiteitskaart Grafiek verbindt Regels: De Montages van de Identiteit"
+                             style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
+                    </a>
+                </figure>
+            </div>
+            <div class="card-content is-padded-small" style="display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between;">
+                <div class="top-card-content">
+                    <p class="headline is-size-6 has-text-weight-bold">
+                        <a href="https://video.tv.adobe.com/v/3458487/?learn=on&enablevpops" target="_blank" rel="referrer" title="Identiteitskaart Grafiek verbindt Regels: De Montages van de Identiteit"> Grafiek die van de Identiteit Regels verbindt: De Montages van de Identiteit </a>
+                    </p>
+                    <p class="is-size-6">Bekijk deze video om te leren hoe u uw identiteitsinstellingen kunt configureren en identiteitsgrafieken van hoge kwaliteit en klantprofielen kunt maken voor Adobe Experience Platform-toepassingen zoals Real-Time CDP, Adobe Journey Optimizer en Customer Journey Analytics.</p>
+                </div>
+                <div style="display: flex; flex-direction: row;">
+                  <a href="https://video.tv.adobe.com/v/3458487/?learn=on&enablevpops" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
+                      <span class="spectrum-Button-label has-no-wrap has-text-weight-bold"> Controle </span>
+                  </a>
+                  <a href="identity-settings-ui.md" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="margin-top: 1rem; margin-left: 0.5rem;">
+                      <span class="spectrum-Button-label has-no-wrap has-text-weight-bold"> Gelezen </span>
+                  </a>
+                </div>            
+            </div>
+        </div>
+    </div>
+</div>
 
 ## Grafieksamenvouwscenario&#39;s {#graph-collapse-scenarios}
 
@@ -107,12 +163,12 @@ Met [!DNL Identity Graph Linking Rules] kunt u:
 | Terminologie | Beschrijving |
 | --- | --- |
 | Unieke naamruimte | Een unieke naamruimte is een naamruimte voor identiteiten die is ingesteld op scheiding binnen de context van een identiteitsgrafiek. U kunt een naamruimte zo configureren dat deze uniek is met behulp van de gebruikersinterface. Zodra een naamruimte als uniek is gedefinieerd, kan een grafiek slechts één identiteit hebben die die naamruimte bevat. |
-| Prioriteit naamruimte | De prioriteit Namespace verwijst naar het relatieve belang van namespaces in vergelijking met elkaar. De prioriteit van Namespace is configureerbaar door UI. U kunt naamruimten in een bepaalde identiteitsgrafiek rangschikken. Zodra toegelaten, zal de namenprioriteit in diverse scenario&#39;s, zoals input voor het algoritme van de identiteitsoptimalisering en het bepalen van primaire identiteit voor de fragmenten van de ervaringsgebeurtenis worden gebruikt. |
-| Algoritme voor identiteitsoptimalisatie | Het algoritme van de identiteitsoptimalisering zorgt ervoor dat de richtlijnen door unieke namespace en namespaceprioriteiten worden gecreeerd in een bepaalde identiteitsgrafiek worden afgedwongen. |
+| Prioriteit naamruimte | De prioriteit Namespace verwijst naar het relatieve belang van namespaces in vergelijking met elkaar. De prioriteit van Namespace is configureerbaar door UI. U kunt naamruimten in een bepaalde identiteitsgrafiek rangschikken. Zodra toegelaten, zal de namenprioriteit in diverse scenario&#39;s, zoals input voor het Algoritme van de Optimalisering van de Identiteit en bepalend primaire identiteit voor de fragmenten van de ervaringsgebeurtenis worden gebruikt. |
+| Algoritme voor identiteitsoptimalisatie | Het algoritme van de Optimalisering van de Identiteit zorgt ervoor dat de richtlijnen die door een unieke namespace en namespaceprioriteiten worden gecreeerd in een bepaalde identiteitsgrafiek worden gehandhaafd. |
 
 ### Unieke naamruimte {#unique-namespace}
 
-U kunt een naamruimte zo configureren dat deze uniek is met behulp van de gebruikersinterface voor identiteitsinstellingen. Hiermee wordt het algoritme voor identiteitsoptimalisatie aangegeven dat een bepaalde grafiek slechts één identiteit mag hebben die die unieke naamruimte bevat. Zo voorkomt u dat twee verschillende personen-id&#39;s in dezelfde grafiek worden samengevoegd.
+U kunt een naamruimte zo configureren dat deze uniek is met behulp van de gebruikersinterface voor identiteitsinstellingen. Het doen van dit, informeert het Algoritme van de Optimalisering van de Identiteit dat een bepaalde grafiek slechts één identiteit kan hebben die die unieke namespace bevat. Zo voorkomt u dat twee verschillende personen-id&#39;s in dezelfde grafiek worden samengevoegd.
 
 Overweeg het volgende scenario:
 
@@ -129,7 +185,7 @@ Als CRMID als unieke namespace werd gevormd, dan verdeelt het algoritme van de i
 
 Als u geen unieke naamruimte configureert, kan het gebeuren dat er ongewenste grafieksamenvoegingen plaatsvinden, zoals twee identiteiten met dezelfde CRMID-naamruimte, maar verschillende identiteitswaarden (scenario&#39;s zoals deze vertegenwoordigen vaak twee verschillende persoonentiteiten in dezelfde grafiek).
 
-U moet een unieke naamruimte configureren om het algoritme voor identiteitsoptimalisatie te informeren en beperkingen in te stellen op de identiteitsgegevens die in een bepaalde identiteitsgrafiek worden opgenomen.
+U moet een unieke naamruimte configureren om het algoritme voor identiteitsoptimalisatie te informeren om beperkingen op te leggen aan de identiteitsgegevens die in een bepaalde identiteitsgrafiek worden opgenomen.
 
 ### Prioriteit naamruimte {#namespace-priority}
 
@@ -141,7 +197,7 @@ Unieke naamruimten en naamruimteprioriteiten kunnen beide worden geconfigureerd 
 
 | | Identiteitsservice | Realtime-klantenprofiel |
 | --- | --- | --- |
-| Unieke naamruimte | In de Dienst van de Identiteit, verwijst het algoritme van de identiteitsoptimalisering naar unieke namespaces om de identiteitsgegevens te bepalen die aan een bepaalde identiteitsgrafiek worden opgenomen. | Unieke naamruimten zijn niet van invloed op het realtime klantprofiel. |
+| Unieke naamruimte | In de Dienst van de Identiteit, verwijst het Algoritme van de Optimalisering van de Identiteit naar unieke namespaces om de identiteitsgegevens te bepalen die aan een bepaalde identiteitsgrafiek worden opgenomen. | Unieke naamruimten zijn niet van invloed op het realtime klantprofiel. |
 | Prioriteit naamruimte | In de Dienst van de Identiteit, voor grafieken die veelvoudige lagen hebben, zal namespace prioriteit bepalen dat de aangewezen verbindingen worden verwijderd. | Wanneer een ervaringsgebeurtenis in Profiel wordt opgenomen, wordt namespace met de hoogste prioriteit de primaire identiteit van het profielfragment. |
 
 * De prioriteit Namespace heeft geen invloed op het grafiekgedrag wanneer de limiet van 50 identiteiten per grafiek wordt bereikt.
@@ -162,5 +218,5 @@ Lees de volgende documentatie voor meer informatie over [!DNL Identity Graph Lin
 * [Voorbeelden van grafiekconfiguraties](./example-configurations.md)
 * [Problemen oplossen en veelgestelde vragen](./troubleshooting.md)
 * [Prioriteit naamruimte](./namespace-priority.md)
-* [UI voor grafieksimulatie](./graph-simulation.md)
+* [UI grafieksimulatie](./graph-simulation.md)
 * [Gebruikersinterface voor identiteitsinstellingen](./identity-settings-ui.md)

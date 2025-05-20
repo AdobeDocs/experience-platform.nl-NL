@@ -2,10 +2,10 @@
 title: Prioriteit naamruimte
 description: Leer over namespace prioriteit in de Dienst van de Identiteit.
 exl-id: bb04f02e-3826-45af-b935-752ea7e6ed7c
-source-git-commit: 0bf62f5f527d50b59ed84cc0ad98200cf25b4c8e
+source-git-commit: 579489e711858c3e80ca5d14eb4ad9187ecf80f8
 workflow-type: tm+mt
-source-wordcount: '2162'
-ht-degree: 4%
+source-wordcount: '2102'
+ht-degree: 0%
 
 ---
 
@@ -15,14 +15,6 @@ ht-degree: 4%
 >id="platform_identities_namespacepriority"
 >title="Prioriteit naamruimte"
 >abstract="De prioriteit Namespace bepaalt hoe de verbindingen uit de identiteitsgrafiek worden verwijderd."
-
->[!AVAILABILITY]
->
->De Regels van de Vereniging van de Grafiek van de identiteit zijn momenteel in Beperkte Beschikbaarheid, en kunnen door alle klanten in ontwikkelingszandbakken worden betreden.
->
->* **Activeringsvereisten**: de functie blijft inactief totdat u de [!DNL Identity Settings] configureert en opslaat. Zonder deze configuratie blijft het systeem normaal werken, zonder veranderingen in gedrag.
->* **Belangrijke opmerkingen**: tijdens de fase Beperkte beschikbaarheid kunt u bij Edge-segmentatie onverwachte resultaten van segmentlidmaatschappen ervaren. De segmentatie van streaming en batches functioneert echter zoals gewoonlijk.
->* **Volgende stappen**: neem contact op met uw Adobe-accountteam voor informatie over hoe u deze functie in productiesandboxes inschakelt.
 
 Elke klantenimplementatie is uniek en gemaakt om de doelstellingen van een bepaalde organisatie te ontmoeten, en als dusdanig, varieert het belang van bepaalde namespace van klant tot klant. Voorbeelden in de praktijk zijn:
 
@@ -73,13 +65,13 @@ De prioriteit van Namespace kan worden gevormd gebruikend [ identiteitsmontages 
 
 ## Prioriteitsgebruik voor naamruimte
 
-Momenteel, beïnvloedt de nameprioriteit systeemgedrag van het Profiel van de Klant in real time. In het onderstaande diagram wordt dit concept geïllustreerd. Voor meer informatie, lees de gids op [ Adobe Experience Platform en de diagrammen van de toepassingsarchitectuur ](https://experienceleague.adobe.com/nl/docs/blueprints-learn/architecture/architecture-overview/platform-applications).
+Momenteel, beïnvloedt de nameprioriteit systeemgedrag van het Profiel van de Klant in real time. In het onderstaande diagram wordt dit concept geïllustreerd. Voor meer informatie, lees de gids op [ Adobe Experience Platform en de diagrammen van de toepassingsarchitectuur ](https://experienceleague.adobe.com/en/docs/blueprints-learn/architecture/architecture-overview/platform-applications).
 
 ![ een diagram van namespace prioritaire toepassingswerkingsgebied ](../images/namespace-priority/application-scope.png)
 
-## Identiteitsservice: algoritme voor identiteitsoptimalisatie
+## Identity Service: Identity Optimization Algorithm
 
-Voor relatief complexe grafiekstructuren speelt naamruimteprioriteit een belangrijke rol bij het verwijderen van de juiste koppelingen wanneer de scenario&#39;s voor het samenvouwen van grafieken worden uitgevoerd. Voor meer informatie lees het [ overzicht van het algoritme van de identiteitsoptimalisering ](../identity-graph-linking-rules/identity-optimization-algorithm.md).
+Voor relatief complexe grafiekstructuren speelt naamruimteprioriteit een belangrijke rol bij het verwijderen van de juiste koppelingen wanneer de scenario&#39;s voor het samenvouwen van grafieken worden uitgevoerd. Voor meer informatie lees het [ overzicht van het Algoritme van de Optimalisering van de Identiteit ](../identity-graph-linking-rules/identity-optimization-algorithm.md).
 
 ## Klantprofiel in realtime: primaire identiteitsbepaling voor ervaringsgebeurtenissen
 
@@ -216,12 +208,13 @@ In een bepaalde gebeurtenis, zorg ervoor dat al uw namespaces die een persoonent
 
 * **toepasselijkheid van de Gebeurtenis**: Dit gedrag is slechts op gebeurtenissen van toepassing die rechtstreeks naar Edge Network (zoals WebSDK en Mobiele SDK) worden verzonden. Gebeurtenissen die van [ worden ingegrepen de hub van Experience Platform ](../../landing/edge-and-hub-comparison.md), zoals die ingebed met de bron van HTTP API, andere het stromen bronnen, en partijbronnen, zijn niet onderworpen aan deze beperking.
 * **de segmenteringsspecificiteit van Edge**: Dit gedrag is specifiek voor randsegmentatie. De partij en het stromen segmentatie zijn de afzonderlijke diensten die op de hub worden geëvalueerd en volgen niet het zelfde proces. Lees de [ gids van de randsegmentatie ](../../segmentation/methods/edge-segmentation.md) voor meer informatie.
-* Lees de [ Adobe Experience Platform en de diagrammen van de toepassingsarchitectuur ](https://experienceleague.adobe.com/nl/docs/blueprints-learn/architecture/architecture-overview/platform-applications#detailed-architecture-diagram) en [ Edge Network en hubvergelijking ](../../landing/edge-and-hub-comparison.md) pagina&#39;s voor meer informatie.
+* Lees de [ Adobe Experience Platform en de diagrammen van de toepassingsarchitectuur ](https://experienceleague.adobe.com/en/docs/blueprints-learn/architecture/architecture-overview/platform-applications#detailed-architecture-diagram) en [ Edge Network en hubvergelijking ](../../landing/edge-and-hub-comparison.md) pagina&#39;s voor meer informatie.
 
 #### Edge Network-toepassingen
 
 Om ervoor te zorgen dat toepassingen op de Edge Network onverwijld toegang hebben tot het Edge-profiel, moet u ervoor zorgen dat uw gebeurtenissen `primary=true` op de CRMID worden opgenomen. Dit verzekert directe beschikbaarheid zonder het wachten op de updates van de identiteitsgrafiek van hub.
 
 * Toepassingen op Edge Network zoals Adobe Target, Offer Decisioning en Aangepaste Personalization-bestemmingen blijven afhankelijk van de primaire identiteit in gebeurtenissen voor toegang tot profielen via Edge Profile.
-* Lees het [ Experience Platform Web SDK &amp; Edge Network architectuurdiagram ](https://experienceleague.adobe.com/nl/docs/blueprints-learn/architecture/architecture-overview/deployment/websdk#experience-platform-webmobile-sdk-or-edge-network-server-api-deployment) voor meer informatie over het gedrag van Edge Network.
+* Lees het [ Experience Platform Web SDK &amp; Edge Network architectuurdiagram ](https://experienceleague.adobe.com/en/docs/blueprints-learn/architecture/architecture-overview/deployment/websdk#experience-platform-webmobile-sdk-or-edge-network-server-api-deployment) voor meer informatie over het gedrag van Edge Network.
 * Lees de documentatie over [ het elementtypes van Gegevens ](../../tags/extensions/client/web-sdk/data-element-types.md) en [ Gegevens van de Identiteit in SDK van het Web ](../../web-sdk/identity/overview.md) voor meer informatie over hoe te om primaire identiteit op SDK van het Web te vormen.
+* Zorg ervoor dat de ECID is opgenomen in de ervaringsgebeurtenis. Als de ECID ontbreekt, wordt deze met `primary=true` toegevoegd aan de gebeurtenislading, wat tot onverwachte resultaten kan leiden.

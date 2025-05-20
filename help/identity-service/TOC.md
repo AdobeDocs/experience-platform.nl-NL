@@ -5,7 +5,7 @@ breadcrumb-title: Handleiding voor Experience Platform Identity Service
 user-guide-description: Overbrug klantidentiteiten op verschillende apparaten en systemen om gepersonaliseerde digitale ervaringen te bieden.
 feature: Identities
 role: Admin,Developer
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 28eab3488dccdcc6239b9499e875c31ff132fd48
 workflow-type: tm+mt
 source-wordcount: '145'
 ht-degree: 22%
@@ -22,12 +22,12 @@ ht-degree: 22%
    - [Logica voor identiteitskoppeling](./features/identity-linking-logic.md)
    - [Naamgrafiekviewer](./features/identity-graph-viewer.md)
    - [Verwijderen in identiteitsservice](./features/deletion.md)
-   - Koppelingsregels voor identiteitsgrafiek {#identity-graph-linking-rules}
+   - Identiteitsgrafiekkoppelingsregels {#identity-graph-linking-rules}
       - [Overzicht van functies](./identity-graph-linking-rules/overview.md)
       - [Algoritme voor identiteitsoptimalisatie](./identity-graph-linking-rules/identity-optimization-algorithm.md)
       - [Implementatiegids voor koppelingsregels voor identiteitsgrafieken](./identity-graph-linking-rules/implementation-guide.md)
       - [Voorbeelden van grafiekconfiguraties](./identity-graph-linking-rules/example-configurations.md)
-      - [Problemen oplossen met regels voor identiteitsgrafieken](./identity-graph-linking-rules/troubleshooting.md)
+      - [Problemen met regels voor identiteitsgrafiekkoppeling oplossen](./identity-graph-linking-rules/troubleshooting.md)
       - [Prioriteit naamruimte](./identity-graph-linking-rules/namespace-priority.md)
       - [UI grafieksimulatie](./identity-graph-linking-rules/graph-simulation.md)
       - [Gebruikersinterface voor identiteitsinstellingen](./identity-graph-linking-rules/identity-settings-ui.md)
@@ -47,4 +47,4 @@ ht-degree: 22%
 - [Identiteitsvelden definiëren in de gebruikersinterface](label-identities.md)
 - [Verwerking van privacyverzoeken](privacy.md)
 - [Handleiding voor probleemoplossing](troubleshooting-guide.md)
-- [Releaseopmerkingen bij Experience Platform](https://experienceleague.adobe.com/nl/docs/experience-platform/release-notes/latest)
+- [Releaseopmerkingen bij Experience Platform](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)

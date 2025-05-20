@@ -1,23 +1,15 @@
 ---
 title: Implementatiegids voor koppelingsregels voor identiteitsgrafieken
-description: Leer de aanbevolen stappen die u moet volgen wanneer u uw gegevens implementeert met configuraties van regels voor identiteitsgrafieken.
+description: Leer de aanbevolen stappen die u moet volgen wanneer u uw gegevens implementeert met configuraties van Identity Graph Linking Rules.
 exl-id: 368f4d4e-9757-4739-aaea-3f200973ef5a
-source-git-commit: 1a6ca508f0f5e95ddad9014d6507a7a829592673
+source-git-commit: 28eab3488dccdcc6239b9499e875c31ff132fd48
 workflow-type: tm+mt
-source-wordcount: '1946'
+source-wordcount: '1852'
 ht-degree: 0%
 
 ---
 
-# Implementatiegids voor koppelingsregels voor identiteitsgrafieken
-
->[!AVAILABILITY]
->
->De Regels van de Vereniging van de Grafiek van de identiteit zijn momenteel in Beperkte Beschikbaarheid, en kunnen door alle klanten in ontwikkelingszandbakken worden betreden.
->
->* **de vereisten van de Activering**: De eigenschap zal inactief blijven tot u vormt en uw [!DNL Identity Settings] bewaart. Zonder deze configuratie, zal het systeem normaal, zonder veranderingen in gedrag blijven werken.
->* **Belangrijke nota&#39;s**: Tijdens deze Beperkte fase van de Beschikbaarheid, kan de segmentatie van Edge onverwachte resultaten van het segmentlidmaatschap veroorzaken. Streaming en batchsegmentatie functioneren echter naar behoren.
->* **Volgende stappen**: Voor informatie over hoe te om deze eigenschap in productiestanddozen toe te laten, gelieve uw Adobe accountteam te contacteren.
+# Implementatiehandleiding voor [!DNL Identity Graph Linking Rules]
 
 >[!IMPORTANT]
 >
@@ -29,7 +21,7 @@ Stapsgewijze omtrek:
 
 1. [Volledige voorwaarden voor implementatie](#prerequisites-for-implementation)
 2. [De benodigde naamruimten maken](#namespace)
-3. [Gebruik het grafieksimulatiehulpmiddel om met het algoritme van de identiteitsoptimalisering vertrouwd te maken](#graph-simulation)
+3. [Gebruik het hulpmiddel van de grafieksimulatie om zich met het Algoritme van de Optimalisering van de Identiteit vertrouwd te maken](#graph-simulation)
 4. [Gebruik de interface voor identiteitsinstellingen om uw unieke naamruimten aan te wijzen en prioriteitscijfers voor uw naamruimten te configureren](#identity-settings)
 5. [Een XDM-schema (Experience Data Model) maken](#schema)
 6. [Een gegevensset maken](#dataset)
@@ -203,7 +195,7 @@ Als dit voor uw gegevens nodig is, moet u eerst de juiste naamruimten voor uw or
 
 Daarna, navigeer aan het [ hulpmiddel van de grafieksimulatie ](./graph-simulation.md) in de werkruimte UI van de Dienst van de Identiteit. U kunt het hulpmiddel van de grafieksimulatie gebruiken om identiteitsgrafieken te simuleren, die met een verscheidenheid van verschillende unieke namespace en namespace prioritaire configuraties worden gebouwd.
 
-Door verschillende configuraties te maken, kunt u het gereedschap voor grafieksimulatie gebruiken om te leren en beter te begrijpen hoe het algoritme voor identiteitsoptimalisatie en bepaalde configuraties het gedrag van de grafiek beïnvloeden.
+Door verschillende configuraties te creëren, kunt u het hulpmiddel van de grafieksimulatie gebruiken om te leren en beter te begrijpen hoe het Algoritme van de Optimalisering van de Identiteit en bepaalde configuraties kunnen beïnvloeden hoe uw grafiek zich gedraagt.
 
 ## Identiteitsinstellingen configureren {#identity-settings}
 
