@@ -35,7 +35,7 @@ Om het even welke **nieuwe of uitgegeven** segmentdefinities die de volgende hee
 
 ## Tijdvenster {#time-window}
 
-Om een publiek met het stromen segmentatie te evalueren, moet het **** binnen een 24 uurstijdvenster worden beperkt.
+Om een publiek met het stromen segmentatie te evalueren, moet het **&#x200B;**&#x200B;binnen een 24 uurstijdvenster worden beperkt.
 
 ## Batchgegevens opnemen in streaming publiek {#include-batch-data}
 
@@ -87,4 +87,4 @@ inSegment("e3be6d7f-1727-401f-a41e-c296b45f607a") and inSegment("9e1646bb-57ff-4
 
 Om het even welke **nieuwe of uitgegeven** segmentdefinities die voor het stromen of randsegmentatie **kwalificeren moeten** op &quot;Actief op Edge&quot;fusiebeleid zijn.
 
-Als er geen actieve reeks van het fusiebeleid is, zult u uw fusiebeleid ](../profile/merge-policies/ui-guide.md#configure) moeten vormen en het plaatsen om op rand actief te zijn.[
+Als er geen actieve reeks van het fusiebeleid is, zult u uw fusiebeleid [&#128279;](../profile/merge-policies/ui-guide.md#configure) moeten vormen en het plaatsen om op rand actief te zijn.
