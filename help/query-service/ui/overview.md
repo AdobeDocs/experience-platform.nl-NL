@@ -4,9 +4,9 @@ solution: Experience Platform
 title: UI-gids voor zoekservice
 description: Adobe Experience Platform Query Service biedt een gebruikersinterface die kan worden gebruikt om query's te schrijven en uit te voeren, eerder uitgevoerde query's weer te geven en query's te openen die zijn opgeslagen door gebruikers binnen uw organisatie.
 exl-id: 99ad25e4-0ca4-4bd1-b701-ab463197930b
-source-git-commit: 7e1eee48b45311f9ac358496e46ca8980df0112b
+source-git-commit: 62e481925df33ddfae6f630c900febbb027a2059
 workflow-type: tm+mt
-source-wordcount: '2627'
+source-wordcount: '2338'
 ht-degree: 0%
 
 ---
@@ -104,49 +104,23 @@ Terwijl u in de Query-editor typt, voltooit de editor automatisch voor SQL geres
 
 ![ de werkruimte van de Redacteur van de Vraag.](../images/ui/overview/query-editor.png)
 
-### Zoekresultaten downloaden {#download-query-results}
+### Het tabblad Resultaten {#results-tab}
 
->[!AVAILABILITY]
->
->Downloadmogelijkheden zijn alleen beschikbaar voor klanten met de Data Distiller-invoegtoepassing. Neem contact op met uw Adobe-vertegenwoordiger voor meer informatie over Data Distiller.
+Op het tabblad [!UICONTROL Result] wordt de tabeluitvoer van de query na de uitvoering weergegeven. Op dit tabblad kunt u de resultaten controleren, de uitvoer valideren en de follow-upacties rechtstreeks in de interface uitvoeren. In deze weergave kunt u:
 
-U kunt vraagresultaten nu direct van het gebruikersinterface van de Redacteur van de Vraag downloaden. Nadat de query is uitgevoerd, kunt u de uitvoer downloaden in de bestandsindeling CSV, XLSX of JSON. Deze functionaliteit stroomlijnt werkschema&#39;s voor marketing en analytische teams door directe toegang tot vraagresultaten voor off-line analyse, rapportering, en op Excel-Gebaseerde processen toe te laten.
+- Download resultaten in de CSV-, XLSX- of JSON-indeling voor offline analyse. Zie [ de vraagresultaten van de Download ](./user-guide.md#download-query-results).
+- De resultaten van de mening in volledig scherm om grote lijsten of brede datasets in een resizable netlay-out te onderzoeken. Zie [ resultaten van de Mening in volledig scherm ](./user-guide.md#view-results).
+- Kopieer de resultaten naar het klembord in CSV-indeling, zodat u ze snel in spreadsheettoepassingen kunt plakken. Zie [ resultaten van het Exemplaar ](./user-guide.md#copy-results).
 
-Als u de queryresultaten wilt downloaden, selecteert u **[!UICONTROL Download]** in de rechterbovenhoek van het tabblad Query-editor **[!UICONTROL Result]** . Kies vervolgens **[!UICONTROL CSV]** , **[!UICONTROL XLSX]** of **[!UICONTROL JSON]** in het vervolgkeuzemenu. Het bestand wordt automatisch naar uw lokale computer gedownload.
+Deze functies zijn ontworpen om naadloze gegevensvalidatie, rapportage en het delen van workflows te ondersteunen, allemaal zonder de Query Editor te verlaten.
 
->[!NOTE]
->
->De knop **[!UICONTROL Download]** wordt alleen weergegeven wanneer een query resultaten retourneert. Als er geen records worden geretourneerd, wordt op het tabblad **[!UICONTROL Result]** het bericht &#39;Geen resultaten&#39; weergegeven en is de downloadoptie uitgeschakeld.
+### Parameterized vragen {#parameterized-queries}
 
-![ het resultatenlusje van de Redacteur van de Vraag met Gemarkeerde Download en dropdown menu.](../images/ui/overview/download-results.png)
+De redacteur van de vraag steunt parameters bepaalde vragen, die u toestaan om variabelen in uw SQL verklaringen op te nemen en dynamisch waarden bij runtime toe te wijzen. Deze functie vereenvoudigt herbruikbare query&#39;s en verbetert de flexibiliteit in workflows.
 
->[!NOTE]
->
->Wanneer het openen van een Csv- dossier in Excel, kunt u de volgende waarschuwing zien:<br> &quot;Mogelijke Verlies van Gegevens. Sommige eigenschappen zouden kunnen worden verloren als u dit werkboek in het komma-afgebakende formaat (.csv) opslaat. Als u deze functies wilt behouden, slaat u ze op in Excel-bestandsindeling.&quot;<br> bovendien, ben zich ervan bewust dat datum en tijd het formatteren per dossiertype kunnen variëren. CSV-bestanden behouden de indeling die wordt weergegeven in de zoekresultaten, terwijl XLSX-bestanden de gelokaliseerde opmaak automatisch kunnen toepassen in Excel.
+U kunt parameters definiëren wanneer u query&#39;s schrijft en vervolgens waarden toewijzen via het tabblad [!UICONTROL Query parameters] voordat u deze uitvoert. De parameters bepaalde vragen zijn vooral nuttig voor geplande vragen of vraagmalplaatjes die over uw organisatie worden gedeeld.
 
-### Resultaten op volledig scherm weergeven {#view-results}
-
-Nadat de query met succes is uitgevoerd, selecteert u **[!UICONTROL View results]** op het tabblad **[!UICONTROL Result]** om een tabelweergave op volledig scherm met uw resultaten te openen.
-
-In de weergave Volledig scherm wordt de uitvoer weergegeven in een raster waarvan de grootte kan worden gewijzigd, zodat u gemakkelijker grote gegevenssets kunt bekijken en over kolommen kunt scannen. Deze voorvertoningsmodus is vooral handig voor het analyseren van brede tabellen of het controleren van details op rijniveau.
-
->[!NOTE]
->
->De voorvertoning is alleen-lezen en wijzigt uw query of dataset niet.
-
-![ de dialoog van de volledig-schermvoorproef met de geselecteerde resultaten van de Mening.](../images/ui/overview/view-results-fullscreen.png)
-
-### Resultaten kopiëren {#copy-results}
-
-Gebruik de verbeterde exemplaareigenschap in de Redacteur van de Vraag om vraagresultaten als komma-gescheiden waarden (CSV) snel te kopiëren. Plak de gekopieerde gegevens gemakkelijk in spreadsheettoepassingen zoals Excel voor verdere analyse. Deze functionaliteit verbetert de leesbaarheid, behoudt de opmaak en stroomlijnt de workflows voor validatie en rapportage zonder afhankelijk te zijn van hulpmiddelen van derden.
-
-U kunt queryresultaten kopiëren via het tabblad [!UICONTROL Result] of vanuit de voorvertoning van de resultaten op het volledige scherm. Van het **[!UICONTROL Result]** lusje, selecteer het exemplaarpictogram (![ A exemplaarpictogram.](../../images/icons/copy.png)) om alle queryresultaten naar het klembord te kopiëren. Selecteer op het tabblad Resultaten van de Query-editor de afzonderlijke rijen of gebruik de kolomkop van het selectievakje om alle rijen te selecteren. Selecteer één rij om het kopieerpictogram in te schakelen.
-
-![ het resultatenlusje van de Redacteur van de Vraag met het benadrukte exemplaarpictogram.](../images/ui/overview/query-editor-copy-icon.png)
-
-U kunt ook **[!UICONTROL View results]** selecteren om de voorvertoning op volledig scherm te openen. Van dit dialoog, uitgezochte individuele rijen of gebruik checkbox in de upper-left hoek om alle rijen te selecteren, dan het exemplaarpictogram (![ A exemplaarpictogram te selecteren.](../../images/icons/copy.png) ) om de geselecteerde gegevens te kopiëren.
-
-![ de dialoog van de volledig-schermvoorproef met geselecteerde resultaatrijen en het benadrukte exemplaarpictogram.](../images/ui/overview/results-copy.png)
+Leren hoe te om parameters te bepalen en te gebruiken, zie [ Geparametereerde vragen in de Redacteur van de Vraag ](./parameterized-queries.md).
 
 ## Geplande query&#39;s {#scheduled-queries}
 

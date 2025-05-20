@@ -4,9 +4,9 @@ solution: Experience Platform
 title: UI-gids voor zoekprogramma
 description: De Query Editor is een interactief hulpmiddel dat wordt geleverd door de Adobe Experience Platform Query Service en waarmee u query's voor gegevens voor klantenervaring kunt schrijven, valideren en uitvoeren in de Experience Platform-gebruikersinterface. De Redacteur van de vraag steunt het ontwikkelen van vragen voor analyse en gegevensexploratie, en staat u toe om interactieve vragen voor ontwikkelingsdoeleinden evenals niet-interactieve vragen in werking te stellen om datasets in Experience Platform te bevolken.
 exl-id: d7732244-0372-467d-84e2-5308f42c5d51
-source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
+source-git-commit: bf9de8c5358f1ab90dd5d70b0607dcfba7d1e2f5
 workflow-type: tm+mt
-source-wordcount: '2601'
+source-wordcount: '3264'
 ht-degree: 0%
 
 ---
@@ -234,11 +234,69 @@ De console verstrekt informatie over de status en de verrichting van de Dienst v
 >
 >De console toont slechts fouten die uit de uitvoering van een vraag resulteerden. De code geeft niet de fouten van de queryvalidatie weer die optreden voordat een query wordt uitgevoerd.
 
-### Zoekresultaten {#query-results}
+## Zoekresultaten {#query-results}
 
 Nadat een query is voltooid, worden de resultaten weergegeven op het tabblad **[!UICONTROL Results]** , naast het tabblad **[!UICONTROL Console]** . Deze mening toont de tabelvormige output van uw vraag, die tussen 50 en 1000 rijen van resultaten afhankelijk van uw gekozen [ resultaattelling ](#result-count) toont. In deze weergave kunt u controleren of de query de verwachte uitvoer oplevert. Om een dataset met uw vraag te produceren, verwijder grenzen op teruggekeerde rijen, en stel de vraag met `CREATE TABLE tablename AS SELECT` in werking om een dataset met de output te produceren. Zie [ het produceren datasetleerprogramma ](./create-datasets.md) voor instructies op hoe te om een dataset van vraagresultaten in de Redacteur van de Vraag te produceren.
 
 ![ het lusje van Resultaten van de console die van de Redacteur van de Vraag de resultaten van een vraaglooppas toont.](../images/ui/query-editor/query-results.png)
+
+### Zoekresultaten downloaden {#download-query-results}
+
+>[!AVAILABILITY]
+>
+>Downloadmogelijkheden zijn alleen beschikbaar voor klanten met de Data Distiller-invoegtoepassing. Neem contact op met uw Adobe-vertegenwoordiger voor meer informatie over Data Distiller.
+
+Na het uitvoeren van een succesvolle vraag, download de resultaten in Csv, formaat XLSX, of formaat JSON aan gebruik in off-line analyse, rapportering, of spreadsheetwerkschema&#39;s. Deze functionaliteit stroomlijnt werkschema&#39;s voor marketing en analytische teams door directe toegang tot vraagresultaten voor off-line analyse, rapportering, en op Excel-Gebaseerde processen toe te laten.
+
+Als u de queryresultaten wilt downloaden, selecteert u **[!UICONTROL Download]** in de rechterbovenhoek van het tabblad Query-editor **[!UICONTROL Result]** . Kies vervolgens **[!UICONTROL CSV]** , **[!UICONTROL XLSX]** of **[!UICONTROL JSON]** in het vervolgkeuzemenu. Het bestand wordt automatisch naar uw lokale computer gedownload. Kies de indeling die past bij uw gebruiksscenario, CSV voor lichte exportbewerkingen, XLSX voor opgemaakte werkbladen of JSON voor gestructureerde gegevensverwerking.
+
+>[!NOTE]
+>
+>Controleer de zoekresultaten als de knop **[!UICONTROL Download]** ontbreekt. De knop wordt alleen weergegeven wanneer records worden geretourneerd. Als er geen records worden geretourneerd, wordt op het tabblad **[!UICONTROL Result]** het bericht &#39;Geen resultaten&#39; weergegeven en is de downloadoptie uitgeschakeld.
+
+![ het resultatenlusje van de Redacteur van de Vraag met Gemarkeerde Download en dropdown menu.](../images/ui/overview/download-results.png)
+
+>[!NOTE]
+>
+>Wanneer het openen van een Csv- dossier in Excel, kunt u de volgende waarschuwing zien:<br> &quot;Mogelijke Verlies van Gegevens. Sommige eigenschappen zouden kunnen worden verloren als u dit werkboek in het komma-afgebakende formaat (.csv) opslaat. Als u deze functies wilt behouden, slaat u ze op in Excel-bestandsindeling.&quot;<br> bovendien, ben zich ervan bewust dat datum en tijd het formatteren per dossiertype kunnen variëren. CSV-bestanden behouden de indeling die wordt weergegeven in de zoekresultaten, terwijl XLSX-bestanden de gelokaliseerde opmaak automatisch kunnen toepassen in Excel. Als deze waarschuwing verschijnt, kunt u veilig verdergaan. Als u Excel-specifieke opmaak wilt behouden, slaat u het bestand op als XLSX.
+
+### Resultaten op volledig scherm weergeven {#view-results}
+
+Nadat de query met succes is uitgevoerd, selecteert u **[!UICONTROL View results]** op het tabblad **[!UICONTROL Result]** om een tabelweergave op volledig scherm met uw resultaten te openen.
+
+Met de voorvertoning op volledig scherm kunt u gemakkelijk brede tabellen scannen en details op rijniveau inspecteren zonder horizontaal schuiven. In de weergave Volledig scherm wordt de uitvoer weergegeven in een raster waarvan de grootte kan worden gewijzigd, zodat u gemakkelijker grote gegevenssets kunt bekijken en over kolommen kunt scannen.
+
+>[!NOTE]
+>
+>De voorvertoning is alleen-lezen en wijzigt uw query of dataset niet.
+
+![ de dialoog van de volledig-schermvoorproef met de geselecteerde resultaten van de Mening.](../images/ui/overview/view-results-fullscreen.png)
+
+### Resultaten kopiëren {#copy-results}
+
+Gebruik de verbeterde exemplaareigenschap in de Redacteur van de Vraag om vraagresultaten als komma-gescheiden waarden (CSV) te kopiëren en hen te kleven in spreadsheethulpmiddelen zoals Excel voor directe bevestiging of het melden. Deze functionaliteit verbetert de leesbaarheid, behoudt de opmaak en stroomlijnt workflows zonder te vertrouwen op gereedschappen van derden.
+
+U kunt queryresultaten kopiëren via het tabblad [!UICONTROL Result] of vanuit de voorvertoning van de resultaten op het volledige scherm. Van het **[!UICONTROL Result]** lusje, selecteer het exemplaarpictogram (![ A exemplaarpictogram.](../../images/icons/copy.png)) om alle queryresultaten naar het klembord te kopiëren. Selecteer eerst een rij om het kopieerpictogram in te schakelen. U kunt afzonderlijke rijen selecteren of het selectievakje bovenaan gebruiken om alle rijen tegelijk te selecteren.
+
+![ het resultatenlusje van de Redacteur van de Vraag met het benadrukte exemplaarpictogram.](../images/ui/overview/query-editor-copy-icon.png)
+
+U kunt ook **[!UICONTROL View results]** selecteren om de voorvertoning op volledig scherm te openen. Van dit dialoog, uitgezochte individuele rijen of gebruik checkbox in de upper-left hoek om alle rijen te selecteren, dan het exemplaarpictogram (![ A exemplaarpictogram te selecteren.](../../images/icons/copy.png) ) om de geselecteerde gegevens te kopiëren.
+
+![ de dialoog van de volledig-schermvoorproef met geselecteerde resultaatrijen en het benadrukte exemplaarpictogram.](../images/ui/overview/results-copy.png)
+
+### Oudere resultatentabel (beperkte beschikbaarheid) {#legacy-results-table}
+
+>[!AVAILABILITY]
+>
+>De lijst van erfenisresultaten is slechts beschikbaar om gebruikers door een eigenschapvlag te selecteren en kan niet in uw huidige Ervaring van de Redacteur van de Vraag verschijnen. Als uw team afhankelijk is van workflows voor slepen en selecteren, neemt u contact op met uw Adobe-vertegenwoordiger om toegang aan te vragen.
+
+De oudere versie van de Redacteur van de Vraag is voorgenomen voor gebruikers die op flexibele, handgegevenswerkschema&#39;s zoals QA of op spreadsheet-gebaseerd overzicht vertrouwen.
+
+Het steunt inheemse browser-gebaseerde belemmering selectie, zodat kunt u om het even welk gedeelte van output benadrukken en kopiëren—met inbegrip van individuele cellen of blokken-gebruikend standaardselectiegedrag. Dit staat in schril contrast met de verbeterde lijst, die gestructureerde rijselectie en specifieke exemplaaracties gebruikt.
+
+De gekopieerde gegevens worden gescheiden door tabs, dus wanneer u deze plakt in gereedschappen zoals Excel, blijven de kolommen uitgelijnd en leesbaar. Kolomkoppen worden ook opgenomen wanneer u met slepen en selecteren over de koptekstrij gaat.
+
+![ de vertoning van resultaten in de erfenisredacteur met eenvoudige belemmering-aan-uitgezochte benadrukte resultaten.](../images/ui/query-editor/legacy-results-table.png)
 
 ## Voorbeelden {#examples}
 
