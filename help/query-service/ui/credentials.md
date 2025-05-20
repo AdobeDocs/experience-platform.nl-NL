@@ -52,7 +52,7 @@ De sectie **[!UICONTROL Expiring credentials]** bevat de volgende informatie:
 
 Gebruik de uitbreiding van Customer Journey Analytics BI met Power BI of Tableau om tot uw Customer Journey Analytics [ gegevensmeningen ](https://experienceleague.adobe.com/en/docs/analytics-platform/using/cja-dataviews/data-views) met SQL toegang te hebben. Door de Dienst van de Vraag met de uitbreiding te integreren BI, kunt u tot uw gegevensmeningen direct binnen de zittingen van de Dienst van de Vraag toegang hebben. Deze integratie stroomlijnt functionaliteit voor hulpmiddelen BI die de Dienst van de Vraag als hun interface PostgreSQL gebruiken. Deze functionaliteit elimineert de behoefte om gegevensmeningen in hulpmiddelen van BI te dupliceren, verzekert verenigbare rapportering over platforms, en vereenvoudigt de integratie van de gegevens van Customer Journey Analytics met andere bronnen in platforms van BI.
 
-Zie de documentatie leren hoe te om de Dienst van de Vraag aan een verscheidenheid van de toepassingen van de Desktopcliënt ](../clients/overview.md) zoals [ Power BI ](../clients/power-bi.md) of [ Tableau ](../clients/tableau.md) te verbinden[
+Zie de documentatie leren hoe te om de Dienst van de Vraag aan een verscheidenheid van de toepassingen van de Desktopcliënt [&#128279;](../clients/overview.md) zoals [ Power BI ](../clients/power-bi.md) of [ Tableau ](../clients/tableau.md) te verbinden
 
 >[!IMPORTANT]
 >
@@ -121,7 +121,7 @@ Nadat u alle vereiste gegevens hebt opgegeven, selecteert u **[!UICONTROL Genera
 
 >[!IMPORTANT]
 >
->Als **[!UICONTROL Generate credentials]** is geselecteerd, wordt een JSON-configuratiebestand gedownload naar uw lokale computer. Aangezien Adobe **** niet de geproduceerde geloofsbrieven registreert, moet u het gedownloade dossier veilig opslaan en een verslag van de referentie houden.
+>Als **[!UICONTROL Generate credentials]** is geselecteerd, wordt een JSON-configuratiebestand gedownload naar uw lokale computer. Aangezien Adobe **&#x200B;**&#x200B;niet de geproduceerde geloofsbrieven registreert, moet u het gedownloade dossier veilig opslaan en een verslag van de referentie houden.
 >
 >Bovendien, als de geloofsbrieven niet gedurende 90 dagen worden gebruikt, zullen de geloofsbrieven worden verklaard.
 
