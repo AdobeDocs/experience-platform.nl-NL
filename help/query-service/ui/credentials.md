@@ -46,11 +46,11 @@ De sectie **[!UICONTROL Expiring credentials]** bevat de volgende informatie:
 >
 >![ het de montageslusje van Admin Console met Privacy en Veiligheid, de montages van de Authentificatie, en Max benadrukt zittingsleven.](../images/ui/credentials/max-session-life.png)
 >
->Zie de documentatie van de Hulp van Adobe voor meer informatie over de [ Geavanceerde montages ](https://helpx.adobe.com/enterprise/using/authentication-settings.html#advanced-settings) die door Admin console worden aangeboden.
+>Zie de documentatie van de Hulp van Adobe voor meer informatie over de [ Geavanceerde montages ](https://helpx.adobe.com/nl/enterprise/using/authentication-settings.html#advanced-settings) die door Admin console worden aangeboden.
 
 ### Verbinding maken met Customer Journey Analytics-gegevens binnen querysessies {#connect-to-customer-journey-analytics}
 
-Gebruik de uitbreiding van Customer Journey Analytics BI met Power BI of Tableau om tot uw Customer Journey Analytics [ gegevensmeningen ](https://experienceleague.adobe.com/en/docs/analytics-platform/using/cja-dataviews/data-views) met SQL toegang te hebben. Door de Dienst van de Vraag met de uitbreiding te integreren BI, kunt u tot uw gegevensmeningen direct binnen de zittingen van de Dienst van de Vraag toegang hebben. Deze integratie stroomlijnt functionaliteit voor hulpmiddelen BI die de Dienst van de Vraag als hun interface PostgreSQL gebruiken. Deze functionaliteit elimineert de behoefte om gegevensmeningen in hulpmiddelen van BI te dupliceren, verzekert verenigbare rapportering over platforms, en vereenvoudigt de integratie van de gegevens van Customer Journey Analytics met andere bronnen in platforms van BI.
+Gebruik de uitbreiding van Customer Journey Analytics BI met Power BI of Tableau om tot uw Customer Journey Analytics [ gegevensmeningen ](https://experienceleague.adobe.com/nl/docs/analytics-platform/using/cja-dataviews/data-views) met SQL toegang te hebben. Door de Dienst van de Vraag met de uitbreiding te integreren BI, kunt u tot uw gegevensmeningen direct binnen de zittingen van de Dienst van de Vraag toegang hebben. Deze integratie stroomlijnt functionaliteit voor hulpmiddelen BI die de Dienst van de Vraag als hun interface PostgreSQL gebruiken. Deze functionaliteit elimineert de behoefte om gegevensmeningen in hulpmiddelen van BI te dupliceren, verzekert verenigbare rapportering over platforms, en vereenvoudigt de integratie van de gegevens van Customer Journey Analytics met andere bronnen in platforms van BI.
 
 Zie de documentatie leren hoe te om de Dienst van de Vraag aan een verscheidenheid van de toepassingen van de Desktopcliënt [&#128279;](../clients/overview.md) zoals [ Power BI ](../clients/power-bi.md) of [ Tableau ](../clients/tableau.md) te verbinden
 
@@ -68,7 +68,7 @@ Als u uw Customer Journey Analytics-gegevens in Power BI of Tableau wilt openen,
 
 U kunt uw gegevens van Customer Journey Analytics tot direct van de Redacteur van de Vraag of CLI van Postgres toegang hebben. U doet dit door naar de `cja` -database te verwijzen wanneer u uw query schrijft. Zie de redacteur van de Vraag [ vraag auteursgids ](./user-guide.md#query-authoring) voor meer informatie over hoe te schrijven, uit te voeren en, vragen te bewaren.
 
-Zie de [ BI uitbreidingsgids ](https://experienceleague.adobe.com/en/docs/analytics-platform/using/cja-dataviews/bi-extension) voor volledige instructies bij de toegang tot van uw de gegevensmeningen van Customer Journey Analytics met SQL.
+Zie de [ BI uitbreidingsgids ](https://experienceleague.adobe.com/nl/docs/analytics-platform/using/cja-dataviews/bi-extension) voor volledige instructies bij de toegang tot van uw de gegevensmeningen van Customer Journey Analytics met SQL.
 
 ## Niet-verlopen referenties {#non-expiring-credentials}
 
@@ -95,7 +95,7 @@ Voordat u niet-vervallende gegevens kunt genereren, moet u de volgende stappen i
 2. [Selecteer een productprofiel.](../../access-control/ui/browse.md)
 3. [ vormt zowel de **Sandboxes** als **de Toestemmingen van de Integratie van de Dienst van de Vraag** ](../../access-control/ui/permissions.md) voor het productprofiel.
 4. [ voeg een nieuwe gebruiker aan een productprofiel ](../../access-control/ui/users.md) toe zodat worden zij verleend zijn gevormde toestemmingen.
-5. [ voeg de gebruiker als admin van het productprofiel ](https://helpx.adobe.com/enterprise/using/manage-product-profiles.html) toe om een rekeningsverwezenlijking voor om het even welk actief productprofiel toe te staan.
+5. [ voeg de gebruiker als admin van het productprofiel ](https://helpx.adobe.com/nl/enterprise/using/manage-product-profiles.html) toe om een rekeningsverwezenlijking voor om het even welk actief productprofiel toe te staan.
 6. [ voeg de gebruiker als ontwikkelaar van het productprofiel ](https://helpx.adobe.com/nl/enterprise/using/manage-developers.html) toe om een integratie tot stand te brengen.
 
 Meer over leren hoe te om toestemmingen toe te wijzen, te lezen gelieve de documentatie op [ toegangsbeheer ](../../access-control/home.md).

@@ -145,4 +145,4 @@ ht-degree: 14%
 - [Veelgestelde vragen](troubleshooting-guide.md)
 - [IP adres lijst van gewenste personen](ip-address-allowlist.md)
 - [ API verwijzing ](https://www.adobe.io/experience-platform-apis/references/query-service/)
-- [Releaseopmerkingen bij Experience Platform](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)
+- [Releaseopmerkingen bij Experience Platform](https://experienceleague.adobe.com/nl/docs/experience-platform/release-notes/latest)
