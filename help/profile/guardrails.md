@@ -5,9 +5,9 @@ product: experience platform
 type: Documentation
 description: Leer over prestaties en door systemen afgedwongen richtlijnen voor profielgegevens en segmentatie. Zo zorgt u voor optimaal gebruik van de functie Real-Time CDP.
 exl-id: 33ff0db2-6a75-4097-a9c6-c8b7a9d8b78c
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: cfc221250a9c8f91b16aa1d4572263ecaf4eeccc
 workflow-type: tm+mt
-source-wordcount: '2615'
+source-wordcount: '2620'
 ht-degree: 1%
 
 ---
@@ -18,7 +18,7 @@ Met Adobe Experience Platform kunt u persoonlijke interkanaalervaringen bieden o
 
 >[!IMPORTANT]
 >
->Controleer uw vergunningsrechten in uw Orde van de Verkoop en de overeenkomstige [ Beschrijving van het Product ](https://helpx.adobe.com/nl/legal/product-descriptions.html) op daadwerkelijke gebruiksgrenzen naast deze guardrails pagina.
+>Controleer uw vergunningsrechten in uw Orde van de Verkoop en de overeenkomstige [ Beschrijving van het Product ](https://helpx.adobe.com/legal/product-descriptions.html) op daadwerkelijke gebruiksgrenzen naast deze guardrails pagina.
 
 Dit document biedt standaardgebruiks- en tarieflimieten om u te helpen uw profielgegevens te modelleren voor optimale systeemprestaties. Bij het bekijken van de volgende instructies wordt aangenomen dat u de gegevens correct hebt gemodelleerd. Als u vragen hebt over het modelleren van uw gegevens, neemt u contact op met uw medewerker van de klantenservice.
 
@@ -98,7 +98,7 @@ De volgende instructies verwijzen naar de gegevensgrootte en bieden aanbevolen l
 | Maximale framegrootte profiel | 50 MB | Door het systeem afgedwongen geleiding | **de maximumgrootte van één enkel profielfragment is 50MB.** de segmentatie, de uitvoer, en de raadplegingen kunnen voor om het even welk [ profielfragment ](#profile-fragments) ontbreken dat groter is dan 50MB. |
 | Maximale grootte voor profielopslag | 50 MB | Prestatiegerichting | **de maximumgrootte van een opgeslagen profiel is 50MB.** Toevoegend nieuwe [ profielfragmenten ](#profile-fragments) in een profiel dat groter is dan 50MB zal systeemprestaties beïnvloeden. Een profiel kan bijvoorbeeld één fragment bevatten dat 50 MB is of meerdere fragmenten kan bevatten voor meerdere datasets met een gecombineerde totale grootte van 50 MB. Het opslaan van een profiel met één fragment dat groter is dan 50 MB of meerdere fragmenten die samen meer dan 50 MB groot zijn, heeft invloed op de systeemprestaties. |
 | Aantal per dag ingenomen Profile- of ExperienceEvent-batches | 90 | Prestatiegerichting | **het maximumaantal per dag ingebedde partijen van het Profiel of van de ExperienceEvent is 90.** Dit betekent dat het gecombineerde totaal van de elke dag ingeslikte profielen Profile en ExperienceEvent niet meer dan 90 mag zijn. Door extra batches in te voeren worden de systeemprestaties beïnvloed. |
-| Aantal ExperienceEvents per profielrecord | 5000 | Prestatiegerichting | **het maximumaantal ExperienceEvents per profielverslag is 5000.** Profielen met meer dan 5000 ExperienceEvents zullen **niet** voor segmentatie worden overwogen. |
+| Aantal ExperienceEvents per profielrecord | 5000 | Prestatiegerichting | **het maximumaantal ExperienceEvents per profielverslag is 5000.** Profielen met meer dan 5000 ExperienceEvents zullen slechts **recentste** 5000 ExperienceEvents wanneer gebruikt met segmentatie gebruiken. |
 
 {style="table-layout:auto"}
 
@@ -188,7 +188,7 @@ De veelvoudige rapportsuites kunnen voor Profiel worden toegelaten zolang alle g
 Raadpleeg de volgende documentatie voor meer informatie over andere Experience Platform Services-instructies, informatie over end-to-end latentie en licentiegegevens uit Real-Time CDP Product Description-documenten:
 
 * [Real-Time CDP guardrails](/help/rtcdp/guardrails/overview.md)
-* [ de diagrammen van de de latentie van begin tot eind ](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/deployment/guardrails.html?lang=nl-NL#end-to-end-latency-diagrams) voor diverse diensten van Experience Platform.
-* [ Real-Time Customer Data Platform (B2C Uitgave - de Pakketten van Prime en van Ultimate) ](https://helpx.adobe.com/nl/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)
-* [ Real-Time Customer Data Platform (B2P - de Pakketten van Prime en van Ultimate) ](https://helpx.adobe.com/nl/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html)
-* [ Real-Time Customer Data Platform (B2B - de Pakketten van Prime en van Ultimate) ](https://helpx.adobe.com/nl/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html)
+* [ de diagrammen van de de latentie van begin tot eind ](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/deployment/guardrails.html?lang=en#end-to-end-latency-diagrams) voor diverse diensten van Experience Platform.
+* [ Real-Time Customer Data Platform (B2C Uitgave - de Pakketten van Prime en van Ultimate) ](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)
+* [ Real-Time Customer Data Platform (B2P - de Pakketten van Prime en van Ultimate) ](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html)
+* [ Real-Time Customer Data Platform (B2B - de Pakketten van Prime en van Ultimate) ](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html)
