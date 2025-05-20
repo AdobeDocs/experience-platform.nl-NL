@@ -2,10 +2,10 @@
 title: Sandbox Tooling
 description: U kunt Sandboxconfiguraties naadloos exporteren en importeren tussen sandboxen.
 exl-id: f1199ab7-11bf-43d9-ab86-15974687d182
-source-git-commit: 654a1c696d88d9e1748787402a1a50c8e232df57
+source-git-commit: 208c9c47b4bde211506867cf59b8743556db7fc8
 workflow-type: tm+mt
-source-wordcount: '2338'
-ht-degree: 0%
+source-wordcount: '2503'
+ht-degree: 1%
 
 ---
 
@@ -56,11 +56,10 @@ De onderstaande tabel bevat een lijst met [!DNL Adobe Journey Optimizer] -object
 | [!DNL Adobe Journey Optimizer] | Samenvoegbeleid | | Het samenvoegbeleid dat in de reis wordt gebruikt, kan als afhankelijke voorwerpen worden gekopieerd. In de doelzandbak, kunt u **niet** tot een nieuw fusiebeleid leiden, kunt u bestaande slechts gebruiken. |
 | [!DNL Adobe Journey Optimizer] | Reis | De volgende objecten die tijdens de rit worden gebruikt, worden als afhankelijke objecten gekopieerd. Tijdens de importworkflow kunt u **[!UICONTROL Create new]** of **[!UICONTROL Use existing]** selecteren voor elke optie: <ul><li>Doelgroepen</li><li>Schema&#39;s</li><li>Aangepaste acties</li><li>Gebeurtenissen</li><li>Fragmenten</li><li>Contentsjablonen</li><li>Canvasdetails</li></ul> | <ul><li>**[!UICONTROL Custom actions]**: Wanneer het selecteren **[!UICONTROL Use existing]** tijdens het de invoerproces wanneer het kopiëren van een reis aan een andere zandbak, de bestaande douaneacties u **selecteert moet** het zelfde zijn als de brondouaneactie. Als ze niet hetzelfde zijn, zal de nieuwe reis onoplosbare fouten bevatten.</li><li>De gebeurtenissen en gebeurtenisdetails die in de reis worden gebruikt worden gekopieerd. Er wordt altijd een nieuwe versie gemaakt in de doelsandbox.</li></ul> |
 | [!DNL Adobe Journey Optimizer] | Actie | | E-mail- en pushberichten die tijdens de rit worden gebruikt, kunnen als afhankelijke objecten worden gekopieerd. De activiteiten van de kanaalactie die op de reisgebieden worden gebruikt, die voor verpersoonlijking in het bericht worden gebruikt, worden niet gecontroleerd op volledigheid. Inhoudsblokken worden niet gekopieerd.<br><br> de actie van het updateprofiel die in de reis wordt gebruikt kan worden gekopieerd. Aangepaste acties kunnen onafhankelijk van elkaar aan een pakket worden toegevoegd. De details van de actie die tijdens de reis worden gebruikt, worden ook gekopieerd. Er wordt altijd een nieuwe versie gemaakt in de doelsandbox. |
+| [!DNL Adobe Journey Optimizer] | Aangepaste handelingen |  | Aangepaste acties kunnen onafhankelijk van elkaar aan een pakket worden toegevoegd. Wanneer een aangepaste handeling aan een reis is toegewezen, kan deze niet meer worden bewerkt. Als u aangepaste handelingen wilt bijwerken, moet u: <ul><li>aangepaste handelingen verplaatsen voordat u een reis maakt</li><li>updateconfiguraties (zoals aanvraagheaders, queryparameters en verificatie) voor aangepaste acties na migratie</li><li>Reisobjecten migreren met de aangepaste handelingen die u tijdens de eerste stap hebt toegevoegd</li></ul> |
 | [!DNL Adobe Journey Optimizer] | Inhoudssjabloon | | Een inhoudssjabloon kan worden gekopieerd als een afhankelijk object van het reisobject. Met standalone sjablonen kunt u eenvoudig aangepaste inhoud hergebruiken voor Journey Optimizer-campagnes en -reizen. |
 | [!DNL Adobe Journey Optimizer] | Fragment | Alle geneste fragmenten. | Een fragment kan worden gekopieerd als een afhankelijk object van het reisobject. Fragmenten zijn herbruikbare onderdelen waarnaar in een of meer e-mails van Journey Optimizer-campagnes en -reizen kan worden verwezen. |
-| [!DNL Adobe Journey Optimizer] | Campagnes | | Campagnes kunnen samen met alle punten worden gekopieerd met betrekking tot het profiel, het publiek, het schema, de gealigneerde berichten, en afhankelijke voorwerpen. Sommige items worden niet gekopieerd, zoals besluitvormingsitems, labels voor gegevensgebruik en taalinstellingen. Voor een volledige lijst van voorwerpen die niet kunnen worden gekopieerd, verwijs [ het uitvoeren voorwerpen naar een andere zandbak ] |
-
-<!-- | [!DNL Adobe Journey Optimizer] | Campaigns | The following objects used in the campaign are copied as dependent objects: <ul><li>Campaigns</li><li>Audiences</li><li>Schemas</li><li>Content templates</li><li>Fragments</li><li>Message/Content</li><li>Channel configuration</li><li>Unified decision objects</li><li>Experiment settings/variants</li></ul>| Campaigns can be copied along with all items related to the profile, audience, schema, inline messages, and dependent objects. Some items are not copied, such as decision items, data usage labels, and language settings. For a complete list of objects that cannot be copied, refer the [exporting objects to another sandbox](https://experienceleague.adobe.com/nl/docs/journey-optimizer/using/configuration/copy-objects-to-sandbox) guide. | -->
+| [!DNL Adobe Journey Optimizer] | Campagnes | De volgende objecten die in de campagne worden gebruikt, worden als afhankelijke objecten gekopieerd: <ul><li>Campagnes</li><li>Doelgroepen</li><li>Schema&#39;s</li><li>Contentsjablonen</li><li>Fragmenten</li><li>Bericht/inhoud</li><li>Kanaalconfiguratie</li><li>Verenigde beslissingsobjecten</li><li>Instellingen/varianten van experimenten</li></ul> | <ul><li>Campagnes kunnen samen met alle punten worden gekopieerd met betrekking tot het profiel, het publiek, het schema, de gealigneerde berichten, en afhankelijke voorwerpen. Sommige items worden niet gekopieerd, zoals labels voor gegevensgebruik en taalinstellingen. Voor een volledige lijst van voorwerpen die niet kunnen worden gekopieerd, verwijs naar de [ exporterende voorwerpen aan een andere zandbak ](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/configuration/copy-objects-to-sandbox) gids.</li><li>Het systeem zal automatisch een bestaand kanaalconfiguratievoorwerp in de doelzandbak ontdekken en opnieuw gebruiken als een identieke configuratie bestaat. Als er geen overeenkomende configuratie wordt gevonden, wordt de kanaalconfiguratie overgeslagen tijdens het importeren en moeten gebruikers de kanaalinstellingen in de doelsandbox voor deze reis handmatig bijwerken.</li><li>Gebruikers kunnen bestaande experimenten en doelgroepen in de doelsandbox opnieuw gebruiken als afhankelijke objecten van geselecteerde campagnes.</li></ul> |
 
 Oppervlakken (bijvoorbeeld voorinstellingen) worden niet overschreven. Het systeem selecteert automatisch de dichtstbijzijnde mogelijke overeenkomst op de bestemmingszandbak die op het berichttype en oppervlaknaam wordt gebaseerd. Als er geen oppervlakten op de doelzandbak worden gevonden, dan zal het oppervlakexemplaar ontbreken, veroorzakend het berichtexemplaar om te ontbreken omdat een bericht vereist een oppervlakte om voor opstelling beschikbaar te zijn. In dit geval moet ten minste één oppervlak worden gemaakt voor het rechterkanaal van het bericht, zodat de kopie kan werken.
 
@@ -258,7 +257,7 @@ Wanneer het importeren is voltooid, ontvangt u een melding in de gebruikersinter
 
 De volgende video is bedoeld ter ondersteuning van uw begrip van gereedschappen voor sandboxen en beschrijft hoe u een nieuw pakket kunt maken, een pakket kunt publiceren en importeren.
 
->[!VIDEO](https://video.tv.adobe.com/v/3446091/?learn=on&captions=dut)
+>[!VIDEO](https://video.tv.adobe.com/v/3424763/?learn=on)
 
 ## Volgende stappen
 
