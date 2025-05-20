@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Verlopen van gebeurtenissen ervaren
 description: Dit document biedt algemene richtlijnen voor het configureren van vervaltijden voor afzonderlijke Experience Events in een Adobe Experience Platform-gegevensset.
 exl-id: a91f2cd2-3a5d-42e6-81c3-0ec5bc644f5f
-source-git-commit: 71634a1dd0e0cd3f731272a179b4f1fe221eb046
+source-git-commit: 05479dcfd1a375b3589ce212168f324aa72af4ba
 workflow-type: tm+mt
-source-wordcount: '884'
+source-wordcount: '872'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 In Adobe Experience Platform, kunt u vervaltijden voor alle Gebeurtenissen van de Ervaring vormen die in een dataset worden opgenomen die voor [ in real time wordt toegelaten Profiel van de Klant ](./home.md). Hiermee kunt u automatisch gegevens verwijderen uit het profielarchief die niet meer geldig of nuttig zijn voor uw gebruiksgevallen.
 
-Verlopen van ervaringsgebeurtenissen kunnen niet worden geconfigureerd via de Experience Platform-gebruikersinterface of -API&#39;s. In plaats daarvan, moet u steun contacteren om de Verlopen van de Gebeurtenis van de Ervaring op uw vereiste datasets toe te laten.
+Leren hoe te om uw Verlopen van de Gebeurtenis van de Ervaring in uw datasets te beheren, lees de [ gids UI van de dataset ](../catalog/datasets/user-guide.md#data-retention-policy).
 
 >[!IMPORTANT]
 >
@@ -30,7 +30,7 @@ Nadat de Verlopen van de Gebeurtenis van de Ervaring op een profiel-Toegelaten d
 
 >[!WARNING]
 >
->Zodra toegepast, wordt om het even welke gegevens die ouder zijn dan het aantal dagen dat door de vervalwaarde wordt toegewezen permanent geschrapt **&#x200B;**&#x200B;en kan niet worden hersteld.
+>Zodra toegepast, wordt om het even welke gegevens die ouder zijn dan het aantal dagen dat door de vervalwaarde wordt toegewezen permanent geschrapt **** en kan niet worden hersteld.
 
 Als u bijvoorbeeld op 15 mei een vervalwaarde van 30 dagen hebt toegepast, worden de volgende stappen uitgevoerd:
 
@@ -66,7 +66,7 @@ De pseudoniem gegevens van het Profiel vervalsen werken op a **zandbak** niveau.
 
 De gegevensvervaldatum van de Gebeurtenis van de ervaring verwijdert gebeurtenissen **slechts** die op timestamp van het gebeurtenisverslag wordt gebaseerd. De inbegrepen identiteitsnamespaces zijn **genegeerd** voor vervaldoeleinden.
 
-De pseudoniem gegevens van het Profiel verlopen **slechts** overweegt profielen die identiteitsgrafieken hebben die identiteitsnamespaces bevatten die door de klant, zoals `ECID`, `AAID`, of andere soorten koekjes werden geselecteerd. Als het profiel **om het even welke** extra identiteitsnamespace bevat die **niet** in de geselecteerde lijst van de klant was, zal het profiel **&#x200B;**&#x200B;niet worden geschrapt.
+De pseudoniem gegevens van het Profiel verlopen **slechts** overweegt profielen die identiteitsgrafieken hebben die identiteitsnamespaces bevatten die door de klant, zoals `ECID`, `AAID`, of andere soorten koekjes werden geselecteerd. Als het profiel **om het even welke** extra identiteitsnamespace bevat die **niet** in de geselecteerde lijst van de klant was, zal het profiel **** niet worden geschrapt.
 
 #### Verwijderde items
 
