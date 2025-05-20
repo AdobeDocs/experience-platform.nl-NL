@@ -4,53 +4,87 @@ description: Leer over de updates van de segmenteringsgeschiktheidscriteria die 
 hide: true
 hidefromtoc: true
 exl-id: c91c0f75-9bc8-4fa7-9d27-9b07d0ea560c
-source-git-commit: e6deed1fe52a0a852f521100171323f0de23295b
+source-git-commit: eafb7337edacc5d2b2aa9c38540aff946c8d39c0
 workflow-type: tm+mt
-source-wordcount: '371'
+source-wordcount: '582'
 ht-degree: 0%
 
 ---
 
 # Update voor subsidiabiliteitscriteria voor segmentering
 
-Vanaf 23 mei 2025 zullen twee updates worden uitgevoerd die van invloed zijn op de segmenteringsgeschiktheid.
+>[!IMPORTANT]
+>
+>Alle bestaande segmentdefinities die momenteel worden geëvalueerd met behulp van streaming of randsegmentatie, blijven werken zoals ze zijn, tenzij ze worden bewerkt of bijgewerkt.
 
-1. querytypen voor streaming en randsegmentatie
-2. Samenvoegbeleid voor streaming en randsegmentatie
+Vanaf 20 mei 2025 zullen drie updates worden uitgevoerd die van invloed zijn op de segmenteringsgeschiktheid.
 
-## Type query
+1. In aanmerking komende regels
+2. Geschiktheid tijdvenster
+3. Batchgegevens opnemen in streaming publiek
+4. Actief samenvoegbeleid
 
-Om het even welke **nieuwe of uitgegeven** segmentdefinities die de volgende vraagtypes aanpassen zullen **niet meer** worden geëvalueerd gebruikend het stromen of randsegmentatie. In plaats daarvan worden ze geëvalueerd met behulp van batchsegmentatie.
+## Regelset {#ruleset}
+
+Om het even welke **nieuwe of uitgegeven** segmentdefinities die de volgende heersers aanpassen zullen **niet meer** worden geëvalueerd gebruikend het stromen of randsegmentatie. In plaats daarvan worden ze geëvalueerd met behulp van batchsegmentatie.
 
 - Eén gebeurtenis met een tijdvenster van meer dan 24 uur
    - Activeer een publiek met alle profielen die een webpagina in de afgelopen 3 dagen hebben bekeken.
 - Eén gebeurtenis zonder tijdvenster
    - Activeer een publiek met alle profielen die een webpagina hebben weergegeven.
 
-Als u een segmentdefinitie gebruikend het stromen of randsegmentatie moet evalueren die het bijgewerkte vraagtype aanpast, kunt u een partij en het stromen vraag uitdrukkelijk tot stand brengen en hen combineren gebruikend segment van segmenten.
+## Tijdvenster {#time-window}
 
-Als u bijvoorbeeld een publiek wilt activeren met alle profielen die een webpagina in de afgelopen 3 dagen hebben weergegeven met streaming segmentatie, kunt u de volgende query&#39;s maken:
+Om een publiek met het stromen segmentatie te evalueren, moet het **** binnen een 24 uurstijdvenster worden beperkt.
 
-- Q1 (Streaming): All profiles who viewed a web page in last 24 hours
-- Q2 (batch): alle profielen die de laatste drie dagen een webpagina hebben weergegeven
+## Batchgegevens opnemen in streaming publiek {#include-batch-data}
 
-Vervolgens kunt u ze combineren door te verwijzen naar Q1 of Q2.
+Voorafgaand aan deze update kunt u een definitie voor streaming publiek maken die zowel batch- als streaming gegevensbronnen combineert. Met de nieuwste update wordt het maken van een publiek met zowel batch- als streaming-gegevensbronnen echter geëvalueerd aan de hand van batchsegmentatie.
 
-Op dezelfde manier kunt u de volgende query&#39;s maken als u een publiek wilt activeren met alle profielen die een webpagina weergeven:
+Als u een segmentdefinitie moet evalueren met behulp van streaming of randsegmentatie die overeenkomt met de bijgewerkte linialen, moet u expliciet een batch- en streaming liniaal maken en deze combineren met behulp van segmentsegmenten. Deze partijheersers **moeten** op een profielschema worden gebaseerd.
 
-- Vraag 3 (Streaming): Alle profielen die een webpagina in de afgelopen 24 uur hebben weergegeven
-- V4 (batch): alle profielen die een webpagina hebben weergegeven.
+Bijvoorbeeld, laten wij zeggen u twee publiek hebt, met één publiek die het schemagegevens van het profiel en de andere gegevens van het de gebeurtenisschema van de huisvestingservaring huisvesten:
 
-Vervolgens kunt u ze combineren door naar Q3 of Q4 te verwijzen.
+| Doelgroep | Schema | Source-type | Query-definitie | Id van publiek |
+| -------- | ------ | ----------- | ---------------- | ----------- |
+| Inwoners uit Californië | Profiel | Batch | Het adres van het huis is in de staat van Californië | `e3be6d7f-1727-401f-a41e-c296b45f607a` |
+| Recente controles | Experience Event | Streaming | Heeft in de laatste 24 uur ten minste één afhandeling | `9e1646bb-57ff-4309-ba59-17d6c5bab6a1` |
+
+Als u de partijcomponent in uw het stromen publiek wilt gebruiken, zult u een verwijzing naar het partijpubliek moeten maken gebruikend segment van segmenten.
+
+Een voorbeeldregel die de twee soorten publiek samenvoegt, ziet er als volgt uit:
+
+```
+inSegment("e3be6d7f-1727-401f-a41e-c296b45f607a") and 
+CHAIN(xEvent, timestamp, [C0: WHAT(eventType.equals("commerce.checkouts", false)) 
+WHEN(<= 24 hours before now)])
+```
+
+Het resulterende publiek *zal* worden geëvalueerd gebruikend het stromen segmentatie, aangezien het hefboomwerkingen het lidmaatschap van het partijpubliek door naar de component van het partijpubliek te verwijzen.
+
+Nochtans, als u twee publiek met gebeurtenisgegevens wilt combineren, kunt u **niet** enkel de twee gebeurtenissen combineren. U moet beide soorten publiek maken en vervolgens een ander publiek maken dat `inSegment` gebruikt om naar beide soorten publiek te verwijzen.
+
+Bijvoorbeeld, laten wij zeggen u twee publiek hebt, met beide publiek woonachtig gebeurtenisschemagegevens:
+
+| Doelgroep | Schema | Source-type | Query-definitie | Id van publiek |
+| -------- | ------ | ----------- | ---------------- | ----------- |
+| Recente verlaten | Gebeurtenis Experience | Batch | Heeft ten minste één gebeurtenis voor verlaten in de afgelopen 24 uur | `e3be6d7f-1727-401f-a41e-c296b45f607a` |
+| Recente controles | Experience Event | Streaming | Heeft in de laatste 24 uur ten minste één afhandeling | `9e1646bb-57ff-4309-ba59-17d6c5bab6a1` |
+
+In deze situatie, zou u een derde publiek als volgt moeten creëren:
+
+```
+inSegment("e3be6d7f-1727-401f-a41e-c296b45f607a") and inSegment("9e1646bb-57ff-4309-ba59-17d6c5bab6a1")
+```
 
 >[!IMPORTANT]
 >
->Alle bestaande segmentdefinities die de vraagtypes aanpassen zullen geëvalueerd blijven gebruikend het stromen of randsegmentatie tot zij worden uitgegeven.
+>Alle bestaande segmentdefinities die overeenkomen met de regels, blijven geëvalueerd met streaming of randsegmentatie totdat ze worden bewerkt.
 >
 >Bovendien, zullen alle bestaande segmentdefinities die momenteel aan de andere het stromen of de evaluatiecriteria van de randsegmentatie voldoen geëvalueerd met het stromen of randsegmentatie blijven.
 
-## Samenvoegbeleid
+## Samenvoegbeleid {#merge-policy}
 
 Om het even welke **nieuwe of uitgegeven** segmentdefinities die voor het stromen of randsegmentatie **kwalificeren moeten** op &quot;Actief op Edge&quot;fusiebeleid zijn.
 
-All existing segment definitions that are evaluated using streaming or edge segmentation will continue to work as is.
+Als er geen actieve reeks van het fusiebeleid is, zult u uw fusiebeleid ](../profile/merge-policies/ui-guide.md#configure) moeten vormen en het plaatsen om op rand actief te zijn.[
