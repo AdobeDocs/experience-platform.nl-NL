@@ -3,9 +3,9 @@ keywords: platform;bestemmingen;bestemmingswerkruimte;werkruimte;ui;bestemmingen
 title: Werkruimte Doelen
 description: De werkruimte van Doelen bestaat uit vijf secties, Overzicht, Catalogus, doorbladeren, Rekeningen, en de Mening van het Systeem. Deze worden in de onderstaande secties beschreven.
 exl-id: 0f46f08d-0fe3-441d-933a-86bc146c0f19
-source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
+source-git-commit: a2420f86e650ce1ca8a5dc01d9a29548663d3f7c
 workflow-type: tm+mt
-source-wordcount: '1117'
+source-wordcount: '1175'
 ht-degree: 0%
 
 ---
@@ -69,9 +69,9 @@ Op het tabblad **[!UICONTROL Accounts]** vindt u meer informatie over de verbind
 
 >[!TIP]
 >
-> * Selecteer de ellips (`...`) in de [!UICONTROL Platform] kolom en gebruik ![ controle ](/help/images/icons/data-add.png)**[!UICONTROL Activate]**&#x200B;activeren/**[!UICONTROL Activate audiences]**/**[!UICONTROL Export datasets]**&#x200B;controle om publiek of datasets naar die bestemming uit te voeren.
-> * Selecteer de ellips (`...`) in de [!UICONTROL Platform] kolom en gebruik ![ uitgeven detailcontrole ](/help/images/icons/edit.png)**[!UICONTROL Edit details]**&#x200B;controle om [&#128279;](update-accounts.md) de details van een bestaande bestemmingsrekening bij te werken.
-> * Selecteer de ellips (`...`) in de [!UICONTROL Platform] kolom en gebruik de ![ controle van de Schrapping ](/help/images/icons/delete.png)**[!UICONTROL Delete]**&#x200B;controle [ om ](delete-destination-account.md) een bestaande bestemmingsrekening te schrappen.
+> * Selecteer de ellips (`...`) in de [!UICONTROL Platform] kolom en gebruik ![ controle ](/help/images/icons/data-add.png)**[!UICONTROL Activate]**activeren/**[!UICONTROL Activate audiences]**/**[!UICONTROL Export datasets]**controle om publiek of datasets naar die bestemming uit te voeren.
+> * Selecteer de ellips (`...`) in de [!UICONTROL Platform] kolom en gebruik ![ uitgeven detailcontrole ](/help/images/icons/edit.png)**[!UICONTROL Edit details]**controle om [ ](update-accounts.md) de details van een bestaande bestemmingsrekening bij te werken.
+> * Selecteer de ellips (`...`) in de [!UICONTROL Platform] kolom en gebruik de ![ controle van de Schrapping ](/help/images/icons/delete.png)**[!UICONTROL Delete]**controle [ om ](delete-destination-account.md) een bestaande bestemmingsrekening te schrappen.
 
 ![ Rekeningen tabel ](../assets/ui/workspace/destination-account-options.png)
 
@@ -82,6 +82,7 @@ Op het tabblad **[!UICONTROL Accounts]** vindt u meer informatie over de verbind
 | [!UICONTROL Username] | De gebruikersbenaming u in [ selecteerde verbind bestemmingswerkschema ](../catalog/email-marketing/overview.md#connect-destination). |
 | [!UICONTROL Connections] | Vertegenwoordigt het aantal unieke succesvolle bestemmingsdataflows die met basisinformatie worden verbonden voor een bestemming worden gecreeerd. |
 | [!UICONTROL Authorization date] | De datum waarop de verbinding met deze bestemming werd geautoriseerd. |
+| [!UICONTROL Expiration date] | De datum waarop de verbindingsvergunning aan deze bestemming zal verlopen. <br>**Belangrijk**: Deze kolom is momenteel beschikbaar slechts voor de [ verbinding van Facebook ](../catalog/social/facebook.md). |
 
 {style="table-layout:auto"}
 
@@ -91,19 +92,21 @@ Op het tabblad **[!UICONTROL Browse]** worden de doelen weergegeven waarmee u ee
 
 >[!TIP]
 >
-> * Selecteer de ellips (`...`) in de [!UICONTROL Name] kolom en gebruik ![ activeer de controle van het publiek ](/help/images/icons/data-add.png)**[!UICONTROL Activate]**&#x200B;controle om publiek of datasets naar die bestemming uit te voeren.
-> * Selecteer de ellips (`...`) in de [!UICONTROL Name] kolom en gebruik de ![ controle van de Schrapping ](/help/images/icons/delete.png)**[!UICONTROL Delete]**&#x200B;controle [ om ](delete-destinations.md) een bestaande verbinding aan een bestemming te verwijderen.
-> * Selecteer de ellips (`...`) in de [!UICONTROL Name] kolom en gebruik de ![ Mening in controle ](/help/images/icons/monitoring.png)**[!UICONTROL View in monitoring]**&#x200B;controle om activeringsinformatie voor deze bestemming in het [ controledashboard ](/help/dataflows/ui/monitor-destinations.md#monitoring-destinations-dashboard) te bekijken.
-> * Selecteer de ellips (`...`) in de [!UICONTROL Name] kolom en gebruik ![ Abonneren aan alarm ](/help/images/icons/alert-add.png)**[!UICONTROL Subscribe to alerts]**&#x200B;controle om aan bestemmingdataflow alarm in te tekenen. U kunt zich op alarm intekenen om berichten betreffende de status, het succes, of het mislukken van uw looppas te ontvangen. Zie [ aan in-context bestemmingsalarm ](alerts.md) voor gedetailleerde informatie over bestemmingdataflow alarm abonneren.
+> * Selecteer de ellips (`...`) in de [!UICONTROL Name] kolom en gebruik ![ activeer de controle van het publiek ](/help/images/icons/data-add.png)**[!UICONTROL Activate]**controle om publiek of datasets naar die bestemming uit te voeren.
+> * Selecteer de ellips (`...`) in de [!UICONTROL Name] kolom en gebruik de ![ controle van de Schrapping ](/help/images/icons/delete.png)**[!UICONTROL Delete]**controle [ om ](delete-destinations.md) een bestaande verbinding aan een bestemming te verwijderen.
+> * Selecteer de ellips (`...`) in de [!UICONTROL Name] kolom en gebruik de ![ Mening in controle ](/help/images/icons/monitoring.png)**[!UICONTROL View in monitoring]**controle om activeringsinformatie voor deze bestemming in het [ controledashboard ](/help/dataflows/ui/monitor-destinations.md#monitoring-destinations-dashboard) te bekijken.
+> * Selecteer de ellips (`...`) in de [!UICONTROL Name] kolom en gebruik ![ Abonneren aan alarm ](/help/images/icons/alert-add.png)**[!UICONTROL Subscribe to alerts]**controle om aan bestemmingdataflow alarm in te tekenen. U kunt zich op alarm intekenen om berichten betreffende de status, het succes, of het mislukken van uw looppas te ontvangen. Zie [ aan in-context bestemmingsalarm ](alerts.md) voor gedetailleerde informatie over bestemmingdataflow alarm abonneren.
 
 ![ doorbladert Lusje ](../assets/ui/workspace/browse-tab.png)
 
 | Element | Beschrijving |
 |---------|----------|
 | Naam | De naam die u hebt opgegeven voor de activeringsstroom naar dit doel. Dezelfde kolom bevat twee besturingselementen: [!UICONTROL Activate] en [!UICONTROL Delete destination] . |
-| [!UICONTROL Last Flow Run Status] | De status van de laatste gegevensstroomuitvoering. Zie [ de bestemmingsdetails van de Mening ](destination-details-page.md) voor meer informatie over dataflow looppas. |
-| [!UICONTROL Last Flow Run Date] | Tijd en datum waarop de laatste dataflow-run heeft plaatsgevonden. Zie [ de bestemmingsdetails van de Mening ](destination-details-page.md) voor meer informatie over dataflow looppas. |
+| Gegevenstype | Het type gegevens dat wordt ondersteund door de doelverbinding. Ondersteunde gegevenstypen: <ul><li>**[!UICONTROL Customers]**</li><li>**[!UICONTROL Prospects]**</li><li>**[!UICONTROL Accounts]**</li><li>**[!UICONTROL Datasets]**</li></ul> |
+| [!UICONTROL Last Dataflow Run Status] | De status van de laatste gegevensstroomuitvoering. Zie [ de bestemmingsdetails van de Mening ](destination-details-page.md) voor meer informatie over dataflow looppas. |
+| [!UICONTROL Last Dataflow Run Date] | Tijd en datum waarop de laatste dataflow-run heeft plaatsgevonden. Zie [ de bestemmingsdetails van de Mening ](destination-details-page.md) voor meer informatie over dataflow looppas. |
 | [!UICONTROL Destination] | Het doelplatform dat u hebt geselecteerd voor de activeringsstroom. |
+| [!UICONTROL Account Expiration Date] | De datum waarop de verbindingsvergunning aan deze bestemming zal verlopen. <br>**Belangrijk**: Deze kolom is momenteel beschikbaar slechts voor de [ verbinding van Facebook ](../catalog/social/facebook.md). |
 | [!UICONTROL Connection Type] | Vertegenwoordigt het verbindingstype aan uw opslagemmer of bestemming. <ul><li>Voor marketingdoelen voor e-mail: Kan S3, FTP of [!DNL Azure Blob] zijn.</li><li>Voor reclame-bestemmingen in real time: server-aan-server.</li><li>Voor streamingdoelen: kan [!DNL Azure Event Hubs] of [!DNL Amazon Kinesis] zijn.</li></ul> |
 | [!UICONTROL Username] | De accountgegevens die u hebt geselecteerd voor de doelstroom. |
 | [!UICONTROL Activation Data] | Geeft het aantal soorten publiek aan dat op dit doel wordt geactiveerd. Selecteer dit besturingselement om meer te weten te komen over het geactiveerde publiek. Verwijs naar [ Gegevens van de Activering ](/help/destinations/ui/destination-details-page.md#activation-data) in de pagina van bestemmingsdetails voor meer informatie over het geactiveerde publiek. |

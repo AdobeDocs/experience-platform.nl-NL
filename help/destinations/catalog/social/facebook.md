@@ -3,9 +3,9 @@ keywords: facebook-verbinding;facebook-verbinding;facebook-bestemmingen;facebook
 title: Facebook-verbinding
 description: Activeer profielen voor uw Facebook-campagnes voor doelgroepen, personalisatie en onderdrukking op basis van gehakte e-mails.
 exl-id: 51e8c8f0-5e79-45b9-afbc-110bae127f76
-source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
+source-git-commit: a2420f86e650ce1ca8a5dc01d9a29548663d3f7c
 workflow-type: tm+mt
-source-wordcount: '2042'
+source-wordcount: '2083'
 ht-degree: 0%
 
 ---
@@ -54,7 +54,7 @@ In deze sectie wordt beschreven welke soorten publiek u naar dit doel kunt expor
 
 | Oorsprong publiek | Ondersteund | Beschrijving |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | ✓ | Het publiek produceerde door de Dienst van de Segmentatie van Experience Platform [&#128279;](../../../segmentation/home.md). |
+| [!DNL Segmentation Service] | ✓ | Het publiek produceerde door de Dienst van de Segmentatie van Experience Platform [ ](../../../segmentation/home.md). |
 | Aangepaste uploads | ✓ | Het publiek [ ingevoerde ](../../../segmentation/ui/audience-portal.md#import-audience) in Experience Platform van Csv- dossiers. |
 
 {style="table-layout:auto"}
@@ -157,7 +157,15 @@ In de onderstaande video ziet u ook de stappen voor het configureren van een [!D
 
 ### Verificatiegegevens vernieuwen {#refresh-authentication-credentials}
 
-Facebook-tokens verlopen elke 60 dagen. Zodra het teken is verlopen, de gegevensuitvoer naar de bestemming houdt op werkend. Om deze situatie te verhinderen, verifieer opnieuw door de volgende stappen uit te voeren:
+Facebook-verificatietokens verlopen elke 60 dagen. Zodra het teken is verlopen, de gegevensuitvoer naar de bestemming houdt op werkend.
+
+U kunt de vervaldatums van uw token vanaf de kolom **[!UICONTROL Account expiration date]** controleren op de tabbladen **[!UICONTROL Accounts]** of **[!UICONTROL Browse]** .
+
+![ de kolom van het de rekeningsteken van Facebook vervaldatum in het Browse lusje ](../../assets/catalog/social/facebook/account-expiration-browse.png)
+
+![ de kolom van de de rekeningssymbolische vervaldatum van Facebook in het lusje van Rekeningen ](../../assets/catalog/social/facebook/account-expiration-accounts.png)
+
+Als u wilt voorkomen dat het verlopen van een token onderbrekingen veroorzaakt in de activeringsgegevensstroom, verifieert u dit opnieuw door de volgende stappen uit te voeren:
 
 1. Ga naar **[!UICONTROL Destinations]** > **[!UICONTROL Accounts]**
 2. (Optioneel) Gebruik de beschikbare filters op de pagina om alleen Facebook-accounts weer te geven.
