@@ -2,9 +2,9 @@
 title: SFTP-verbinding
 description: Maak een live uitgaande verbinding met uw SFTP-server om gescheiden gegevensbestanden periodiek vanuit Adobe Experience Platform te exporteren.
 exl-id: 27abfc38-ec19-4321-b743-169370d585a0
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 45f22addbff9ec81d64e9e756e4c27e8af4b477d
 workflow-type: tm+mt
-source-wordcount: '1046'
+source-wordcount: '1182'
 ht-degree: 0%
 
 ---
@@ -39,7 +39,7 @@ In deze sectie wordt beschreven welke soorten publiek u naar dit doel kunt expor
 
 | Oorsprong publiek | Ondersteund | Beschrijving |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | ✓ | Het publiek produceerde door de Dienst van de Segmentatie van Experience Platform [&#128279;](../../../segmentation/home.md). |
+| [!DNL Segmentation Service] | ✓ | Het publiek produceerde door de Dienst van de Segmentatie van Experience Platform [ ](../../../segmentation/home.md). |
 | Aangepaste uploads | ✓ | Het publiek [ ingevoerde ](../../../segmentation/ui/audience-portal.md#import-audience) in Experience Platform van Csv- dossiers. |
 
 {style="table-layout:auto"}
@@ -69,6 +69,18 @@ Deze bestemming steunt dataset de uitvoer. Voor volledige informatie over hoe te
 Wanneer het uitvoeren van *publieksgegevens*, leidt Experience Platform tot een `.csv`, `parquet`, of `.json` dossier in de opslagplaats die u verstrekte. Voor meer informatie over de dossiers, zie [ gesteunde dossierformaten voor de uitvoer ](../../ui/activate-batch-profile-destinations.md#supported-file-formats-export) sectie in het leerprogramma van de publiekactivering.
 
 Wanneer het uitvoeren van *datasets*, leidt Experience Platform tot een `.parquet` of `.json` dossier in de opslagplaats die u verstrekte. Voor meer informatie over de dossiers, zie [ succesvolle datasetuitvoer ](../../ui/export-datasets.md#verify) sectie in het de uitvoerdatasetleerprogramma verifiëren.
+
+## Vereisten voor SFTP-serververbinding {#sftp-connection-requirements}
+
+Om ervoor te zorgen dat gegevens succesvol worden geëxporteerd, moet u uw doel-SFTP-server configureren om een voldoende aantal gelijktijdige verbindingen toe te staan. Als uw server SFTP het aantal gelijktijdige verbindingen beperkt, kunt u de mislukkingen van de uitvoerbaan ervaren, vooral wanneer het uitvoeren van veelvoudige publiek of datasets tezelfdertijd.
+
+**Aanbeveling**
+Voor optimale prestaties, zou uw server SFTP minstens één gezamenlijke verbinding voor elk publiek of dataset moeten toestaan die worden uitgevoerd. De server moet minimaal 30% ondersteunen van het totale aantal soorten publiek of gegevenssets die tegelijkertijd worden geëxporteerd.
+
+**Voorbeeld**\
+Als u de uitvoer voor 100 publiek of datasets gelijktijdig plant, zou uw server SFTP minstens 30 gezamenlijke verbindingen moeten toestaan.
+
+Als u de verbindingslimieten van uw SFTP-server correct configureert, voorkomt u mislukte exportbewerkingen en bent u zeker van betrouwbare gegevenslevering vanuit Adobe Experience Platform.
 
 ## Verbinden met de bestemming {#connect}
 
@@ -148,4 +160,4 @@ Om te controleren of gegevens zijn geëxporteerd, controleert u de SFTP-opslag e
 
 ## IP adres lijst van gewenste personen {#ip-address-allow-list}
 
-Verwijs naar het [&#128279;](ip-address-allow-list.md) artikel van de lijst van gewenste personen van het 0&rbrace; IP adres &lbrace;als u Adobe IPs aan een lijst van gewenste personen moet toevoegen.
+Verwijs naar het ](ip-address-allow-list.md) artikel van de lijst van gewenste personen van het 0} IP adres {als u Adobe IPs aan een lijst van gewenste personen moet toevoegen.[
