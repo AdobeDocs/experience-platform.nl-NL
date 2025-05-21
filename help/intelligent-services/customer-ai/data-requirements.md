@@ -211,7 +211,7 @@ Hoewel de AI van de Klant een minimumperiode vereist om de gegevens binnen het s
 
 De AI van de Klant produceert verscheidene attributen voor individuele profielen die als verkiesbaar worden beschouwd. Er zijn twee manieren om de score (output) te verbruiken op basis van wat u hebt voorzien. Als u een in real time Klantprofiel-Toegelaten dataset in real time hebt, kunt u inzichten van het Profiel van de Klant in real time in de [ Bouwer van het Segment ](../../segmentation/ui/segment-builder.md) verbruiken. Als u geen profiel-toegelaten dataset hebt, kunt u [ de output van de Klant AI ](./user-guide/download-scores.md) dataset downloaden beschikbaar op het gegevensmeer.
 
-U kunt de outputdataset in de Experience Platform **** werkruimte van Datasets vinden {. Alle de outputdatasets beginnen van de Klant AI met de naam **Scores van de Klant - NAME_OF_APP**. Op dezelfde manier beginnen alle de outputschema&#39;s van AI van de Klant met het naam **Schema van de Klant AI - Name_of_app**.
+U kunt de outputdataset in de Experience Platform **&#x200B;**&#x200B;werkruimte van Datasets vinden &lbrace;. Alle de outputdatasets beginnen van de Klant AI met de naam **Scores van de Klant - NAME_OF_APP**. Op dezelfde manier beginnen alle de outputschema&#39;s van AI van de Klant met het naam **Schema van de Klant AI - Name_of_app**.
 
 ![ de noemende overeenkomst voor outputdatasets in Klant AI.](./images/user-guide/cai-schema-name-of-app.png)
 
