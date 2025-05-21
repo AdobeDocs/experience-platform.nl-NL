@@ -4,9 +4,9 @@ solution: Experience Platform
 title: UI-gids voor gegevensbestanden
 description: Leer hoe u algemene handelingen uitvoert wanneer u werkt met gegevenssets in de Adobe Experience Platform-gebruikersinterface.
 exl-id: f0d59d4f-4ebd-42cb-bbc3-84f38c1bf973
-source-git-commit: 52412c5d6231e10fc875d16971dbd8cbfb116d21
+source-git-commit: f66e85ee5fb3fdaf7036b131f9689082d9d96127
 workflow-type: tm+mt
-source-wordcount: '3920'
+source-wordcount: '4014'
 ht-degree: 0%
 
 ---
@@ -100,7 +100,7 @@ De datasets UI biedt nu een inzamelingen van gealigneerde acties voor elke besch
 * [[!UICONTROL Manage data and access labels]](#manage-and-enforce-data-governance)
 * [[!UICONTROL Enable unified profile]](#enable-profile)
 * [[!UICONTROL Manage tags]](#manage-tags)
-* [(Beta) [!UICONTROL Set data retention policy]](#data-retention-policy)
+* [[!UICONTROL Set data retention policy]](#data-retention-policy)
 * [[!UICONTROL Move to folders]](#move-to-folders)
 * [[!UICONTROL Delete]](#delete).
 
@@ -174,13 +174,15 @@ Zodra een markering aan een dataset is toegevoegd, kunnen de datasets op de over
 
 Voor meer informatie over hoe te om bedrijfsvoorwerpen voor gemakkelijkere ontdekking en categorisering te classificeren, zie de gids op [ het leiden meta-gegevenstaxonomieën ](../../administrative-tags/ui/managing-tags.md). In deze handleiding wordt uitgelegd hoe gebruikers met de juiste machtigingen vooraf gedefinieerde tags kunnen maken, deze aan categorieën kunnen toewijzen en alle gerelateerde CRUD-bewerkingen in de gebruikersinterface van Experience Platform kunnen beheren.
 
-### (Beta) Beleid voor gegevensbewaring instellen {#data-retention-policy}
-
->[!AVAILABILITY]
-> 
->De montages van het behoud van gegevens zijn momenteel in bèta en beschikbaar slechts in a **beperkte versie** voor uitgezochte organisaties. De gebruikersinterface weerspiegelt mogelijk niet de hieronder beschreven functie.
+### Beleid voor gegevensbewaring instellen {#data-retention-policy}
 
 U kunt de instellingen voor het verlopen en behouden van de gegevensset beheren met het inlineactiemenu op het tabblad [!UICONTROL Browse] van de werkruimte van [!UICONTROL Datasets] . U kunt deze eigenschap gebruiken om te vormen hoe lang de gegevens in het gegevensmeer en de opslag van het Profiel worden behouden. De vervaldatum is gebaseerd op wanneer de gegevens in Experience Platform werden opgenomen en uw gevormde bewaarperiode.
+
+>[!IMPORTANT]
+>
+>Om bewaarregels voor een dataset ExperienceEvent toe te passen of bij te werken, moet uw gebruikersrol **omvatten datasets** toestemming beheren. Dit op rol-gebaseerde toegangsbeheer zorgt ervoor dat slechts de gemachtigde gebruikers montages van het gegevenssetbehoud kunnen wijzigen.
+>
+>Zie het [ overzicht van de Toegangscontrole ](../../access-control/home.md#platform-permissions) voor meer informatie bij het toewijzen van toestemmingen in Adobe Experience Platform.
 
 >[!TIP]
 >
@@ -216,7 +218,7 @@ U kunt de visuele voorspelling gebruiken om het effect van verschillende bewaart
 
 >[!NOTE]
 >
->Het diagram van de distributie van de Gebeurtenis van de Ervaring is dataset-specifiek en wijst slechts op de geselecteerde gegevens van de dataset.
+>Het diagram van de distributie van de Gebeurtenis van de Ervaring is specifiek voor de geselecteerde dataset en wijst slechts op zijn gegevens. Zij is uitsluitend van toepassing op gegevens die in het datumpeer zijn opgeslagen.
 
 ![ de Vastgestelde dialoog van het gegevensbehoud met de Verspreidingsgrafiek van de Gebeurtenis van de Ervaring getoond.](../images/datasets/user-guide/visual-forecast.png)
 
@@ -226,7 +228,9 @@ Als u tevreden bent met de configuratie, selecteert u **[!UICONTROL Save]** om u
 >
 >Nadat de regels voor gegevensbewaring zijn toegepast, worden gegevens die ouder zijn dan het aantal dagen dat door de vervalwaarde is gedefinieerd, permanent verwijderd en kunnen deze niet meer worden hersteld.
 
-Na het vormen van uw bewaarmontages, gebruik de Controle UI om te bevestigen dat uw veranderingen door het systeem werden uitgevoerd. De controle UI verstrekt een gecentraliseerde mening van de activiteit van het gegevensbehoud over alle datasets. Daarna kunt u de uitvoering van de taak volgen, controleren hoeveel gegevens zijn verwijderd en controleren of het beleid voor het behoud naar behoren functioneert. Deze zichtbaarheid ondersteunt beheer, naleving en efficiënt beheer van de gegevenslevenscyclus.
+Na het vormen van uw bewaarmontages, gebruik de Controle UI om te bevestigen dat uw veranderingen door het systeem werden uitgevoerd. De controle UI verstrekt een gecentraliseerde mening van de activiteit van het gegevensbehoud over alle datasets. Daarna kunt u de uitvoering van de taak volgen, controleren hoeveel gegevens zijn verwijderd en controleren of het beleid voor het behoud naar behoren functioneert.
+
+Om te onderzoeken hoe het behoudbeleid over de verschillende diensten van toepassing is, zie de specifieke gidsen op [ het Behoud van de Dataset van de Gebeurtenis van de Ervaring in het Behouden van de Dataset van de Gebeurtenis van het Profiel ](../../profile/event-expirations.md) en [ het Behouden van de Dataset van de Gebeurtenis in het meer van Gegevens ](./experience-event-dataset-retention-ttl-guide.md). Deze zichtbaarheid ondersteunt beheer, naleving en efficiënt beheer van de gegevenslevenscyclus.
 
 Leren hoe te om het controledashboard te gebruiken om brondataflows in Experience Platform UI te volgen, zie de [ dataflows van de Monitor voor bronnen in de UI ](../../dataflows/ui/monitor-sources.md) documentatie.
 
@@ -234,15 +238,15 @@ Leren hoe te om het controledashboard te gebruiken om brondataflows in Experienc
 
 Voor meer informatie over de regels die datareeksen en beste praktijken bepalen van de gegevenssetvervaldatum voor het vormen van uw beleid van het gegevensbehoud, zie de [ vaak gestelde vragen pagina ](../catalog-faq.md).
 
-#### (Beta) Verbeterde zichtbaarheid van bewaartermijnen en opslagwaarden {#retention-and-storage-metrics}
+#### Verbeterde zichtbaarheid van retentieperioden en gegevens over opslag {#retention-and-storage-metrics}
 
-Er zijn vier nieuwe kolommen beschikbaar voor bètagebruikers om uw gegevensbeheer beter zichtbaar te maken: **[!UICONTROL Data Lake Storage]**, **[!UICONTROL Data Lake Retention]**, **[!UICONTROL Profile Storage]** en **[!UICONTROL Profile Retention]** . Deze gegevens laten zien hoeveel opslagruimte uw gegevens verbruiken en hoe lang deze gegevens bewaard blijven, zowel in de datumpeer- als in de profielservice.
+Vier nieuwe kolommen zorgen voor meer zichtbaarheid in uw gegevensbeheer: **[!UICONTROL Data Lake Storage]** , **[!UICONTROL Data Lake Retention]** , **[!UICONTROL Profile Storage]** en **[!UICONTROL Profile Retention]** . Deze gegevens laten zien hoeveel opslagruimte uw gegevens verbruiken en hoe lang deze gegevens bewaard blijven, zowel in de datumpeer- als in de profielservice.
 
-Deze verhoogde zichtbaarheid stelt u in staat geïnformeerde beslissingen te nemen en opslagkosten effectiever te beheren. Sorteer datasets op opslaggrootte om de grootste in uw huidige zandbak te identificeren. Deze inzichten steunen ook beter bestuur en helpen u uw gegevenslevenscyclus en betitelingsgebruik begrijpen.
+Deze verhoogde zichtbaarheid stelt u in staat geïnformeerde beslissingen te nemen en opslagkosten effectiever te beheren. Sorteer datasets op opslaggrootte om de grootste in uw huidige zandbak te identificeren. Deze inzichten ondersteunen de beste praktijken voor gegevensbeheer en helpen naleving van uw gelicentieerde rechten te verzekeren.
 
 ![ het Browse lusje van de werkruimte van Datasets met de vier nieuwe benadrukte opslag en bewaarkolommen.](../images/datasets/user-guide/storage-and-retention-columns.png)
 
-In de volgende tabel vindt u een overzicht van de nieuwe waarden voor retentie en opslag die beschikbaar zijn in de bètaversie. Het detailleert het doel van elke kolom en hoe het het beheren van gegevensbehoud en opslag steunt.
+In de volgende tabel vindt u een overzicht van de nieuwe waarden voor retentie en opslag. Het detailleert het doel van elke kolom en hoe het het beheren van gegevensbehoud en opslag steunt.
 
 | Kolomtitel | Beschrijving |
 |---|---|
@@ -252,6 +256,8 @@ In de volgende tabel vindt u een overzicht van de nieuwe waarden voor retentie e
 | [!UICONTROL Profile Retention] | De huidige bewaarperiode voor de datasets van het Profiel. U kunt deze waarde bijwerken om te bepalen hoe lang Profielgegevens behouden blijven. |
 
 {style="table-layout:auto"}
+
+Om op de inzichten van opslag en behoudmetriek te handelen, verwijs naar de [ gids van de de vergunningsrechten van het gegevensbeheer best practices ](../../landing/license-usage-and-guardrails/data-management-best-practices.md). Gebruik het om te beheren welke gegevens u en bewaart, filters en vervalsingsregels toepast, en gegevensgroei controleert om binnen uw vergunning gegeven gebruiksgrenzen te blijven.
 
 ### Verplaatsen naar mappen {#move-to-folders}
 
