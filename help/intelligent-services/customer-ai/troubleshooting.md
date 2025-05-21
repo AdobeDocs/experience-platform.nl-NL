@@ -6,9 +6,9 @@ title: Probleemoplossing van AI-fouten van klant
 description: Zoek antwoorden op algemene fouten in Customer AI.
 type: Documentation
 exl-id: 37ff4e85-da92-41ca-afd4-b7f3555ebd43
-source-git-commit: 32c1affecb4cf58412eb91fd90e1a13f4bc43541
+source-git-commit: 73dea391f8fcb1d2d491c814b453afb4e538459d
 workflow-type: tm+mt
-source-wordcount: '1720'
+source-wordcount: '1745'
 ht-degree: 0%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 0%
 
 De AI van de klant toont fouten wanneer de modelopleiding, het scoren, en de configuratie ontbreken. In de sectie **[!UICONTROL Service instances]** geeft een kolom voor **[!UICONTROL LAST RUN STATUS]** een van de volgende berichten weer: **[!UICONTROL Success]** , **[!UICONTROL Training issue]** en **[!UICONTROL Failed]** .
 
-![ laatste looppasstatus ](./images/errors/last-run-status.png)
+![ laatste looppasstatus die succes, opleidingskwestie, of ontbroken tonen.](./images/errors/last-run-status.png)
 
 Als **[!UICONTROL Failed]** of **[!UICONTROL Training issue]** wordt weergegeven, kunt u de uitvoerstatus selecteren om een zijpaneel te openen. Het zijpaneel bevat de **[!UICONTROL Last run status]** en **[!UICONTROL Last run details]** . **[!UICONTROL Last run details]** bevat informatie over de reden waarom de uitvoering is mislukt. Als de AI van de Klant geen details over uw fout kan verstrekken, contacteer steun met de foutencode die verstrekt wordt.
 
@@ -27,13 +27,13 @@ Als **[!UICONTROL Failed]** of **[!UICONTROL Training issue]** wordt weergegeven
 
 Er treden laadfouten op in de incognitomodus Google Chrome vanwege updates in de beveiligingsinstellingen van de incognitomodus Google Chrome. Dit probleem wordt momenteel actief besproken met Chrome om experience.adobe.com tot een vertrouwd domein te maken.
 
-![ beeld van de Fout ](./images/errors/error.PNG) {width= 500}
+![ beeld dat van de Fout een voorbeeld van een AI van de Klant foutbericht toont.](./images/errors/error.PNG){width=500}
 
 ### Aanbevolen correctie
 
 Als u dit probleem wilt oplossen, moet u experience.adobe.com toevoegen als een site die cookies altijd kan gebruiken. Begin door aan **chrome://settings/cookies** te navigeren. Daarna, scrol neer aan de **Aangepaste gedrags** sectie die door **wordt gevolgd te selecteren voegt** knoop naast &quot;plaatsen toe die koekjes&quot;altijd kunnen gebruiken. In popover die verschijnt, kopieer en plak `[*.]experience.adobe.com` dan **Including derdekoekjes** op deze plaats checkbox. Zodra volledig, uitgezochte **voeg** toe en herlaad Klant AI in incognito.
 
-![ geadviseerde moeilijke situatie ](./images/errors/cookies2.gif)
+![ Animatie die de stappen toont om experience.adobe.com als plaats toe te voegen die koekjes in de montages van Chrome altijd kan gebruiken.](./images/errors/cookies2.gif)
 
 ## Modelkwaliteit is slecht
 

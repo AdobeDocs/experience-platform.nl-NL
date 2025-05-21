@@ -5,9 +5,9 @@ feature: Customer AI
 title: Scores downloaden in AI van klant
 description: Met AI van de klant kunt u scores downloaden in de Parquet-bestandsindeling.
 exl-id: 08f05565-3fd4-4089-9c41-32467f0be751
-source-git-commit: 07a110f6d293abff38804b939014e28f308e3b30
+source-git-commit: 73dea391f8fcb1d2d491c814b453afb4e538459d
 workflow-type: tm+mt
-source-wordcount: '960'
+source-wordcount: '985'
 ht-degree: 0%
 
 ---
@@ -31,11 +31,11 @@ Er zijn momenteel twee manieren om AI-scores van klanten te downloaden:
 
 Binnen uw de dienstinstantie voor Inzichten van de Klant AI, klik *Meer acties* dropdown in de top-juiste navigatie dan selecteren **[!UICONTROL Access scores]**.
 
-![ meer acties ](../images/insights/more-actions.png)
+![ Meer acties dropdown menu die de optie van de &quot;scores van de Toegang tonen.](../images/insights/more-actions.png)
 
 Er wordt een nieuw dialoogvenster weergegeven met een koppeling naar de documentatie van downloadscores en de id van de gegevensset voor uw huidige instantie. Kopieer de id van de gegevensset naar het klembord en ga verder met de volgende stap.
 
-![ identiteitskaart van de Dataset ](../images/download-scores/access-scores.png)
+![ de dialoog van de Scores van de Toegang die dataset identiteitskaart voor de huidige instantie tonen.](../images/download-scores/access-scores.png)
 
 ## Batch-id ophalen {#retrieve-your-batch-id}
 
@@ -114,7 +114,7 @@ Een geslaagde reactie retourneert een lading die een batch-id-object bevat. In d
 
 ## De volgende API-aanroep ophalen met uw batch-id {#retrieve-the-next-api-call-with-your-batch-id}
 
-Als u eenmaal een batch-id hebt, kunt u een nieuwe aanvraag indienen bij `/batches` . De aanvraag retourneert een koppeling die wordt gebruikt als de volgende API-aanvraag.
+Als je eenmaal een batch-id hebt, kun je een nieuwe GET-aanvraag indienen bij `/batches` . De aanvraag retourneert een koppeling die wordt gebruikt als de volgende API-aanvraag.
 
 **API formaat**
 
@@ -168,7 +168,7 @@ Een geslaagde reactie retourneert een payload die een `_links` -object bevat. Bi
 
 ## Bestanden ophalen {#retrieving-your-files}
 
-Maak een nieuwe aanvraag voor het ophalen van de bestandsmap met de `href` -waarde die u in de vorige stap als API-aanroep hebt gekregen.
+Als u de `href` -waarde gebruikt die u in de vorige stap als API-aanroep hebt gekregen, moet u een nieuwe GET-aanvraag indienen om uw bestandsmap op te halen.
 
 **API formaat**
 
@@ -234,14 +234,13 @@ De reactie bevat een gegevensarray die één item kan hebben, of een lijst met b
 
 | Parameter | Beschrijving |
 | --------- | ----------- |
-| `_links.self.href` | De aanvraag-URL van de GET die wordt gebruikt om een bestand in uw map te downloaden. |
-
+| `_links.self.href` | De GET-aanvraag-URL waarmee een bestand in uw map wordt gedownload. |
 
 Kopieer de `href` -waarde voor een willekeurig bestandsobject in de `data` -array en ga vervolgens verder met de volgende stap.
 
 ## Bestandsgegevens downloaden
 
-Om uw dossiergegevens te downloaden, doe een verzoek van de GET aan de `"href"` waarde u in de vorige stap [ het terugwinnen van uw dossiers ](#retrieving-your-files) kopieerde.
+Om uw dossiergegevens te downloaden, doe een verzoek van GET aan de `"href"` waarde u in de vorige stap [ kopieerde het terugwinnen van uw dossiers ](#retrieving-your-files).
 
 >[!NOTE]
 >
@@ -277,7 +276,7 @@ curl -X GET 'https://platform.adobe.io:443/data/foundation/export/files/035e2520
 
 Het antwoord downloadt het bestand dat u in de huidige map hebt aangevraagd. In dit voorbeeld is de bestandsnaam &quot;filename.parquet&quot;.
 
-![ Eind ](../images/download-scores/response.png)
+![ Voorbeeld van een eindreactie die een succesvolle API vraag toont.](../images/download-scores/response.png)
 
 ## Een segment downloaden dat is geconfigureerd met Customer AI {#segment}
 

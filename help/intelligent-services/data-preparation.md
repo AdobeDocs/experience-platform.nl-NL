@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Gegevens voorbereiden voor gebruik in intelligente services
 description: Om de Intelligente Diensten inzichten van uw marketing gebeurtenisgegevens te ontdekken, moeten de gegevens semantisch worden verrijkt en in een standaardstructuur worden gehandhaafd. De intelligente diensten gebruiken de schema's van de Gegevens van de Ervaring (XDM) om dit te bereiken.
 exl-id: 17bd7cc0-da86-4600-8290-cd07bdd5d262
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 73dea391f8fcb1d2d491c814b453afb4e538459d
 workflow-type: tm+mt
-source-wordcount: '2814'
+source-wordcount: '2938'
 ht-degree: 0%
 
 ---
@@ -92,7 +92,7 @@ Het CEE-schema legt, net als alle XDM ExperienceEvent-schema&#39;s, de op tijdre
 
 [!DNL Intelligent Services] gebruikt verscheidene zeer belangrijke gebieden binnen dit schema om inzichten van uw gegevens van marketinggebeurtenissen te produceren, die allen op het wortelniveau kunnen worden gevonden en worden uitgebreid om hun vereiste subfields te tonen.
 
-![](./images/data-preparation/schema-expansion.gif)
+![ Demo van schemauitbreiding in Adobe Experience Platform UI, die navigatie en subfield details tonen.](./images/data-preparation/schema-expansion.gif)
 
 Net als alle XDM-schema&#39;s is de veldgroep van het CEE-schema uitbreidbaar. Met andere woorden, er kunnen extra velden worden toegevoegd aan de CEE-veldgroep en indien nodig kunnen verschillende variaties in meerdere schema&#39;s worden opgenomen.
 
@@ -104,7 +104,7 @@ Er zijn verschillende sleutelvelden in de CEE-veldgroep die moeten worden gebrui
 
 ### Verplichte velden
 
-Terwijl het gebruik van alle zeer belangrijke gebieden sterk wordt geadviseerd, zijn er twee gebieden die **&#x200B;**&#x200B;worden vereist opdat [!DNL Intelligent Services] werken:
+Terwijl het gebruik van alle zeer belangrijke gebieden sterk wordt geadviseerd, zijn er twee gebieden die **** worden vereist opdat [!DNL Intelligent Services] werken:
 
 * [Een primair identiteitsveld](#identity)
 * [xdm:tijdstempel](#timestamp)
@@ -134,19 +134,19 @@ Als u niet zeker bent welk gebied u als primaire identiteit zou moeten gebruiken
 
 Als u een primaire identiteit wilt instellen, navigeert u naar het schema op het tabblad **[!UICONTROL Schemas]** en selecteert u de hyperlink voor de schemanaam om het schema **[!DNL Schema Editor]** te openen.
 
-![ navigeer aan schema ](./images/data-preparation/navigate_schema.png)
+![ Navigatie aan het schema in Adobe Experience Platform UI.](./images/data-preparation/navigate_schema.png)
 
 Navigeer vervolgens naar het veld dat u als primaire identiteit wilt gebruiken en selecteer het. Het menu **[!UICONTROL Field properties]** wordt geopend voor dat veld.
 
-![ selecteer het gebied ](./images/data-preparation/find_field.png)
+![ het proces om het gewenste gebied in Adobe Experience Platform UI te selecteren.](./images/data-preparation/find_field.png)
 
 Blader in het menu **[!UICONTROL Field properties]** omlaag totdat u het selectievakje **[!UICONTROL Identity]** hebt gevonden. Nadat u het selectievakje hebt ingeschakeld, wordt de optie voor het instellen van de geselecteerde identiteit weergegeven als de **[!UICONTROL Primary identity]** . Selecteer dit vak ook.
 
-![ Uitgezochte checkbox ](./images/data-preparation/set_primary_identity.png)
+![ Checkbox om primaire identiteit in Adobe Experience Platform UI te plaatsen.](./images/data-preparation/set_primary_identity.png)
 
 Vervolgens moet u een **[!UICONTROL Identity namespace]** opgeven uit de lijst met vooraf gedefinieerde naamruimten in het vervolgkeuzemenu. In dit voorbeeld wordt de ECID-naamruimte geselecteerd omdat een Adobe Audience Manager-id `mcid.id` wordt gebruikt. Selecteer **[!UICONTROL Apply]** om de updates te bevestigen en selecteer vervolgens **[!UICONTROL Save]** in de rechterbovenhoek om de wijzigingen in het schema op te slaan.
 
-![ sparen de veranderingen ](./images/data-preparation/select_namespace.png)
+![ Vervolgkeuzemenu dat de selectie van ECID namespace in Adobe Experience Platform UI toont.](./images/data-preparation/select_namespace.png)
 
 #### xdm:tijdstempel {#timestamp}
 
@@ -160,7 +160,7 @@ Dit veld vertegenwoordigt de datum waarop de gebeurtenis heeft plaatsgevonden. D
 
 Dit gebied vertegenwoordigt het marketing kanaal met betrekking tot ExperienceEvent. Het veld bevat informatie over het kanaaltype, het mediatype en het locatietype.
 
-![](./images/data-preparation/channel.png)
+![ Diagram die de structuur van xdm tonen:kanaalgebied, met inbegrip van subfields zoals type, mediaType, en mediaAction.](./images/data-preparation/channel.png)
 
 **schema van het Voorbeeld**
 
@@ -198,7 +198,7 @@ De overige belangrijke velden worden in deze sectie beschreven. Hoewel deze veld
 
 Dit veld is een array van items die producten vertegenwoordigen die door een klant zijn geselecteerd, waaronder de SKU, naam, prijs en hoeveelheid van het product.
 
-![](./images/data-preparation/productListItems.png)
+![ xdm:productListItems gebied, met inbegrip van subfields zoals SKU, naam, currencyCode, hoeveelheid, en priceTotal.](./images/data-preparation/productListItems.png)
 
 **schema van het Voorbeeld**
 
@@ -227,7 +227,7 @@ Voor volledige informatie betreffende elk van vereiste subfields voor `xdm:produ
 
 Dit veld bevat handelspecifieke informatie over de ExperienceEvent, waaronder het inkoopordernummer en betalingsgegevens.
 
-![](./images/data-preparation/commerce.png)
+![ de structuur van xdm:handelgebied, met inbegrip van subgebieden zoals orde, aankopen, en betalingen.](./images/data-preparation/commerce.png)
 
 **schema van het Voorbeeld**
 
@@ -265,7 +265,7 @@ Voor volledige informatie betreffende elk van vereiste subfields voor `xdm:comme
 
 In dit veld worden de webdetails weergegeven die betrekking hebben op de ExperienceEvent, zoals de interactie, paginagegevens en de referentie.
 
-![](./images/data-preparation/web.png)
+![ xdm:Webgebied, met inbegrip van subfields zoals webPageDetails en webReferrer.](./images/data-preparation/web.png)
 
 **schema van het Voorbeeld**
 
@@ -295,7 +295,7 @@ Voor volledige informatie betreffende elk van de vereiste subfields voor `xdm:pr
 
 Dit veld bevat informatie over marketingactiviteiten die actief zijn met het aanraakpunt.
 
-![](./images/data-preparation/marketing.png)
+![ de structuur van xdm:marketing gebied, met inbegrip van subfields zoals trackingCode, campagneGroup, en campagneName.](./images/data-preparation/marketing.png)
 
 **schema van het Voorbeeld**
 

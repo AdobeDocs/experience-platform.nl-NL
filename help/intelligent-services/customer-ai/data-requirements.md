@@ -6,9 +6,9 @@ title: Gegevensvereisten in AI van de Klant
 topic-legacy: Getting started
 description: Meer informatie over de vereiste gebeurtenissen, invoer en uitvoer die door de AI van de Klant worden gebruikt.
 exl-id: 9b21a89c-bf48-4c45-9eb3-ace38368481d
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 73dea391f8fcb1d2d491c814b453afb4e538459d
 workflow-type: tm+mt
-source-wordcount: '2538'
+source-wordcount: '2539'
 ht-degree: 0%
 
 ---
@@ -26,7 +26,7 @@ Hier volgen de stappen voor het samenstellen van nevenmodellen en het identifice
 
 2. Prioriteit geven aan gebruiksgevallen: welke zijn de hoogste prioriteiten voor het bedrijf?
 
-3. Bouw modellen in Klant AI: bekijk dit [ snelle leerprogramma ](https://experienceleague.adobe.com/docs/platform-learn/tutorials/intelligent-services/configure-customer-ai.html?lang=nl-NL) en verwijs naar onze [ gids UI ](../customer-ai/user-guide/configure.md) voor een geleidelijke proces om een model te bouwen.
+3. Bouw modellen in Klant AI: bekijk dit [ snelle leerprogramma ](https://experienceleague.adobe.com/docs/platform-learn/tutorials/intelligent-services/configure-customer-ai.html) en verwijs naar onze [ gids UI ](../customer-ai/user-guide/configure.md) voor een geleidelijke proces om een model te bouwen.
 
 4. [ bouwt segmenten ](../customer-ai/user-guide/create-segment.md) gebruikend modelresultaten.
 
@@ -49,8 +49,8 @@ De AI van de klant werkt door de volgende datasets te analyseren om te voorspell
 
 - De gegevens van Adobe Analytics die de [ bron van Analytics schakelaar ](../../sources/tutorials/ui/create/adobe-applications/analytics.md) gebruiken
 - Adobe Audience Manager gegevens die de [ bronVerbinding van Audience Manager gebruiken ](../../sources/tutorials/ui/create/adobe-applications/audience-manager.md)
-- [ dataset van de Gebeurtenis van de Ervaring ](https://experienceleague.adobe.com/docs/experience-platform/xdm/classes/experienceevent.html?lang=nl-NL)
-- [ de dataset van de Gebeurtenis van de Ervaring van de consument ](https://experienceleague.adobe.com/docs/experience-platform/intelligent-services/data-preparation.html?lang=nl-NL#cee-schema)
+- [ dataset van de Gebeurtenis van de Ervaring ](https://experienceleague.adobe.com/docs/experience-platform/xdm/classes/experienceevent.html)
+- [ de dataset van de Gebeurtenis van de Ervaring van de consument ](https://experienceleague.adobe.com/docs/experience-platform/intelligent-services/data-preparation.html#cee-schema)
 
 U kunt veelvoudige datasets van verschillende bronnen toevoegen als elk van de datasets het zelfde identiteitstype (namespace) zoals ECID deelt. Voor meer informatie bij het toevoegen van veelvoudige datasets, bezoek de [ AI gebruikersgids van de Klant ](../customer-ai/user-guide/configure.md).
 
@@ -211,9 +211,9 @@ Hoewel de AI van de Klant een minimumperiode vereist om de gegevens binnen het s
 
 De AI van de Klant produceert verscheidene attributen voor individuele profielen die als verkiesbaar worden beschouwd. Er zijn twee manieren om de score (output) te verbruiken op basis van wat u hebt voorzien. Als u een in real time Klantprofiel-Toegelaten dataset in real time hebt, kunt u inzichten van het Profiel van de Klant in real time in de [ Bouwer van het Segment ](../../segmentation/ui/segment-builder.md) verbruiken. Als u geen profiel-toegelaten dataset hebt, kunt u [ de output van de Klant AI ](./user-guide/download-scores.md) dataset downloaden beschikbaar op het gegevensmeer.
 
-U kunt de outputdataset in de Experience Platform **&#x200B;**&#x200B;werkruimte van Datasets vinden &lbrace;. Alle de outputdatasets beginnen van de Klant AI met de naam **Scores van de Klant - NAME_OF_APP**. Op dezelfde manier beginnen alle de outputschema&#39;s van AI van de Klant met het naam **Schema van de Klant AI - Name_of_app**.
+U kunt de outputdataset in de Experience Platform **** werkruimte van Datasets vinden {. Alle de outputdatasets beginnen van de Klant AI met de naam **Scores van de Klant - NAME_OF_APP**. Op dezelfde manier beginnen alle de outputschema&#39;s van AI van de Klant met het naam **Schema van de Klant AI - Name_of_app**.
 
-![ Naam van de outputdatasets in Klant AI ](./images/user-guide/cai-schema-name-of-app.png)
+![ de noemende overeenkomst voor outputdatasets in Klant AI.](./images/user-guide/cai-schema-name-of-app.png)
 
 In de onderstaande tabel worden de verschillende kenmerken beschreven die in de uitvoer van AI van de Klant zijn aangetroffen:
 
