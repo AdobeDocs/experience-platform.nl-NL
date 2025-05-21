@@ -55,7 +55,7 @@ Bekijk de volgende video&#39;s om meer te leren over enkele fundamentele aspecte
             <div class="card-image">
                 <figure class="image x-is-16by9">
                     <a href="https://experienceleague.adobe.com/nl/docs/platform-learn/tutorials/identities/graph-linking-rules/overview" title="Overzicht van regels voor identiteitsgrafiek" target="_blank" rel="referrer">
-                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3448250/?format=jpeg&nocache=1747851655227" alt="Overzicht van regels voor identiteitsgrafiek"
+                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3448278/?format=jpeg&nocache=1747851655227&captions=dut" alt="Overzicht van regels voor identiteitsgrafiek"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
@@ -78,7 +78,7 @@ Bekijk de volgende video&#39;s om meer te leren over enkele fundamentele aspecte
             <div class="card-image">
                 <figure class="image x-is-16by9">
                     <a href="https://experienceleague.adobe.com/nl/docs/platform-learn/tutorials/identities/graph-linking-rules/graph-simulation" title="Identiteitsgrafiek die regels verbindt - de Simulatie van de Grafiek" target="_blank" rel="referrer">
-                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3444032/?format=jpeg&nocache=1747851655237" alt="Identiteitsgrafiek die regels verbindt - de Simulatie van de Grafiek"
+                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3444049/?format=jpeg&nocache=1747851655237&captions=dut" alt="Identiteitsgrafiek die regels verbindt - de Simulatie van de Grafiek"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
