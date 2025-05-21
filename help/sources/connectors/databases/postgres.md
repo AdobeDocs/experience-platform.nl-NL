@@ -1,11 +1,11 @@
 ---
 title: Overzicht van de PostSQL Source Connector
 description: Meer informatie over de PostgreSQL-bron op Adobe Experience Platform.
-last-substantial-update: 2025-04-29T00:00:00Z
+last-substantial-update: 2025-05-20T00:00:00Z
 exl-id: 27b891c5-5fc5-4539-8f98-e3a53e2eefe3
-source-git-commit: 04634c6edc13d8b8da01a01077161866235c61b1
+source-git-commit: f4200ca71479126e585ac76dd399af4092fdf683
 workflow-type: tm+mt
-source-wordcount: '694'
+source-wordcount: '667'
 ht-degree: 0%
 
 ---
@@ -35,7 +35,7 @@ Geef waarden op voor de volgende gebruikersgegevens om uw [!DNL PostgreSQL] -dat
 | Credentials | Beschrijving |
 | --- | --- |
 | `connectionString` | De verbindingstekenreeks die aan uw [!DNL PostgreSQL] account is gekoppeld. Het patroon van de [!DNL PostgreSQL] verbindingstekenreeks is: `Server={SERVER};Database={DATABASE};Port={PORT};UID={USERNAME};Password={PASSWORD}` . |
-| `connectionSpec.id` | De verbindingsspecificatie keert de schakelaareigenschappen van een bron, met inbegrip van authentificatiespecificaties met betrekking tot het creëren van de basis en bronverbindingen terug. De verbindingsspecificatie-id voor [!DNL PostgreSQL] is `74a1c565-4e59-48d7-9d67-7c03b8a13137` . |
+| `connectionSpec.id` | De verbindingsspecificatie keert de schakelaareigenschappen van een bron, met inbegrip van authentificatiespecificaties met betrekking tot het creëren van de basis en bronverbindingen terug. De verbindingsspecificatie-id voor [!DNL PostgreSQL] is `74a1c565-4e59-48d7-9d67-7c03b8a13137` . Deze referentie is alleen vereist wanneer verbinding wordt gemaakt via de API van [!DNL Flow Service] . |
 
 Lees de [[!DNL PostgreSQL]  documentatie ](https://www.postgresql.org/docs/current/) voor meer informatie.
 
@@ -51,6 +51,7 @@ Geef waarden op voor de volgende gebruikersgegevens om uw [!DNL PostgreSQL] -dat
 | `password` | Het wachtwoord dat is gekoppeld aan uw [!DNL PostgreSQL] -databaseverificatie. |
 | `database` | De naam van de [!DNL PostgreSQL] -database waarmee u verbinding wilt maken. |
 | `sslMode` | De methode [!DNL Secure Sockets Layer] (SSL) die op uw verbinding moet worden toegepast. De beschikbare waarden zijn: <ul><li>`Disable`: Gebruik deze optie om SSL uit te schakelen. Als voor uw server een SSL-configuratie is vereist, mislukt de verbinding.</li><li>`Allow`: gebruik deze optie om SSL-verbindingen toe te staan. Niet-SSL verbindingen kunnen nog worden gebruikt als de server hen steunt.</li><li>`Prefer`: gebruik deze optie om SSL-verbindingen te verkiezen omdat de server deze ondersteunt. Met deze optie kunt u ook niet-SSL-verbindingen maken.</li><li>`Require`: Gebruik deze optie om SSL-verbindingen verplicht te maken. Als de server geen SSL ondersteunt, mislukken de verbindingen.</li><li>`Verify-Ca`: gebruik deze optie om servercertificaten te verifiëren wanneer er geen verbinding is als de server geen SSL ondersteunt.</li><li>`Verify-Full`: gebruik deze optie om servercertificaten met de naam van de host te verifiëren bij een verbroken verbinding als de server geen SSL ondersteunt.</li></ul> |
+| `connectionSpec.id` | De verbindingsspecificatie keert de schakelaareigenschappen van een bron, met inbegrip van authentificatiespecificaties met betrekking tot het creëren van de basis en bronverbindingen terug. De verbindingsspecificatie-id voor [!DNL PostgreSQL] is `74a1c565-4e59-48d7-9d67-7c03b8a13137` . Deze referentie is alleen vereist wanneer verbinding wordt gemaakt via de API van [!DNL Flow Service] . |
 
 Lees de [[!DNL PostgreSQL]  documentatie ](https://www.postgresql.org/docs/current/) voor meer informatie.
 
@@ -71,7 +72,8 @@ Geef waarden op voor de volgende referenties om uw [!DNL PostgreSQL] -database o
 | `username` | De gebruikersnaam die is gekoppeld aan uw [!DNL PostgreSQL] -databaseverificatie. |
 | `password` | Het wachtwoord dat is gekoppeld aan uw [!DNL PostgreSQL] -databaseverificatie. |
 | `database` | De naam van de [!DNL PostgreSQL] -database waarmee u verbinding wilt maken. |
-| `sslMode` | De methode [!DNL Secure Sockets Layer] (SSL) die op uw verbinding moet worden toegepast. De beschikbare waarden zijn: <ul><li>`Disable`: Gebruik deze optie om SSL uit te schakelen. Als voor uw server een SSL-configuratie is vereist, mislukt de verbinding.</li><li>`Allow`: gebruik deze optie om SSL-verbindingen toe te staan. Niet-SSL verbindingen kunnen nog worden gebruikt als de server hen steunt.</li><li>`Prefer`: gebruik deze optie om SSL-verbindingen te verkiezen omdat de server deze ondersteunt. Met deze optie kunt u ook niet-SSL-verbindingen maken.</li><li>`Require`: Gebruik deze optie om SSL-verbindingen verplicht te maken. Als de server geen SSL ondersteunt, mislukken de verbindingen.</li><li>`Verify-Ca`: gebruik deze optie om servercertificaten te verifiëren wanneer er geen verbinding is als de server geen SSL ondersteunt.</li><li>`Verify-Full`: gebruik deze optie om servercertificaten met de naam van de host te verifiëren bij een verbroken verbinding als de server geen SSL ondersteunt.</li></ul> |
+| `sslMode` | Een Booleaanse waarde die bepaalt of SSL wordt afgedwongen, afhankelijk van uw serverondersteuning. Deze configuratie is standaard ingesteld op `false` . |
+| `connectionSpec.id` | De verbindingsspecificatie keert de schakelaareigenschappen van een bron, met inbegrip van authentificatiespecificaties met betrekking tot het creëren van de basis en bronverbindingen terug. De verbindingsspecificatie-id voor [!DNL PostgreSQL] is `74a1c565-4e59-48d7-9d67-7c03b8a13137` . Deze referentie is alleen vereist wanneer verbinding wordt gemaakt via de API van [!DNL Flow Service] . |
 
 Lees de [[!DNL PostgreSQL]  documentatie ](https://www.postgresql.org/docs/current/) voor meer informatie.
 

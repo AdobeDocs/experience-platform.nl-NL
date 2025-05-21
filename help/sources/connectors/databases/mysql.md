@@ -1,11 +1,11 @@
 ---
 title: Overzicht MySQL Source Connector
 description: Leer hoe u MySQL met Adobe Experience Platform kunt verbinden via API's of de gebruikersinterface.
-last-substantial-update: 2025-05-17T00:00:00Z
+last-substantial-update: 2025-05-20T00:00:00Z
 exl-id: a18e8e69-880f-4bee-b339-726091d6f858
-source-git-commit: f758479c37b72752bbb8a371de88bf653b2e6030
+source-git-commit: b73ced639100c95f6c62be92d4796a206a688958
 workflow-type: tm+mt
-source-wordcount: '714'
+source-wordcount: '625'
 ht-degree: 0%
 
 ---
@@ -69,7 +69,7 @@ U moet waarden opgeven voor de volgende referenties om [!DNL MySQL] te verbinden
 | `username` | De naam van uw database. |
 | `password` | De gebruikersnaam die overeenkomt met uw database. |
 | `database` | Het wachtwoord dat overeenkomt met uw database. |
-| `sslMode` | De methode [!DNL Secure Sockets Layer] (SSL) die op uw verbinding moet worden toegepast. De beschikbare waarden zijn: <ul><li>`DISABLED`: Gebruik deze optie om SSL uit te schakelen. Als uw server een SSL-configuratie vereist, mislukt de verbinding</li><li>`PREFERRED`: gebruik deze optie om SSL-verbindingen te verkiezen omdat de server deze ondersteunt. Met deze optie kunt u ook niet-SSL-verbindingen maken.</li><li>`REQUIRED`: Gebruik deze optie om SSL-verbindingen verplicht te maken. Als de server geen SSL ondersteunt, mislukken de verbindingen.</li><li>`Verify-Ca`: gebruik deze optie om servercertificaten te verifiëren wanneer er geen verbinding is als de server geen SSL ondersteunt.</li><li>`Verify Identity`: gebruik deze optie om servercertificaten met de naam van de host te verifiëren bij een verbroken verbinding als de server geen SSL ondersteunt.</li></ul> |
+| `sslMode` | Een Booleaanse waarde die bepaalt of SSL wordt afgedwongen, afhankelijk van uw serverondersteuning. Deze configuratie is standaard ingesteld op `false` . |
 | `connectionSpec.id` | De verbindingsspecificatie keert de schakelaareigenschappen van een bron, met inbegrip van authentificatiespecificaties met betrekking tot het creëren van de basis en bronverbindingen terug. De verbindingsspecificatie-id voor [!DNL MySQL] is `26d738e0-8963-47ea-aadf-c60de735468a` . **Nota**: Deze referentie wordt slechts vereist wanneer het verbinden door [!DNL Flow Service] API. |
 
 ## Verbinding maken [!DNL MySQL] met Experience Platform via API&#39;s

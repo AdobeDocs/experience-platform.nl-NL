@@ -2,14 +2,14 @@
 title: Connect PostSQL aan Experience Platform met behulp van de Flow Service API
 description: Leer hoe te om uw  [!DNL PostgreSQL]  gegevensbestand met Experience Platform te verbinden gebruikend APIs.
 exl-id: 5225368a-08c1-421d-aec2-d50ad09ae454
-source-git-commit: 5348158f6de9fea1a9fe186a14409afb7e7a376e
+source-git-commit: f4200ca71479126e585ac76dd399af4092fdf683
 workflow-type: tm+mt
-source-wordcount: '744'
+source-wordcount: '749'
 ht-degree: 0%
 
 ---
 
-# Een [!DNL PostgreSQL] basisverbinding maken met de [!DNL Flow Service] API
+# Verbinding maken met Experience Platform via de [!DNL Flow Service] API[!DNL PostgreSQL]
 
 Lees deze gids om te leren hoe te om uw [!DNL PostgreSQL] gegevensbestand met Adobe Experience Platform te verbinden gebruikend [[!DNL Flow Service]  API ](https://developer.adobe.com/experience-platform-apis/references/flow-service/).
 
@@ -135,12 +135,12 @@ curl -X POST \
       "auth": {
           "specName": "Basic Authentication",
           "params": {
-              "server": "{SERVER}",
-              "port": "{PORT}",
-              "database": "{DATABASE}",
-              "username": "{USERNAME}",
-              "password": "{PASSWORD}",
-              "sslMode": "{SSL_MODE}"
+              "server": "localhost",
+              "port": "3306",
+              "database": "postgresql-acme",
+              "username": "acme",
+              "password": "xxxx",
+              "sslMode": "Allow"
           }
       },
       "connectionSpec": {
@@ -217,12 +217,12 @@ curl -X POST \
       "auth": {
           "specName": "Basic Authentication",
           "params": {
-              "server": "{SERVER}",
-              "port": "{PORT}",
-              "database": "{DATABASE}",
-              "username": "{USERNAME}",
-              "password": "{PASSWORD}",
-              "sslMode": "{SSL_MODE}"
+              "server": "localhost",
+              "port": "3306",
+              "database": "postgresql-acme",
+              "username": "acme",
+              "password": "xxxx",
+              "sslMode": "false"
           }
       },
       "connectionSpec": {
@@ -239,7 +239,7 @@ curl -X POST \
 | `auth.params.database` | De naam van de [!DNL PostgreSQL] -database. |
 | `auth.params.username` | De gebruikersnaam die is gekoppeld aan uw [!DNL PostgreSQL] -databaseverificatie. |
 | `auth.params.password` | Het wachtwoord dat is gekoppeld aan uw [!DNL PostgreSQL] -databaseverificatie. |
-| `auth.params.sslMode` | De methode waarmee gegevens tijdens gegevensoverdracht worden gecodeerd. De beschikbare waarden zijn: `Disable` , `Allow` , `Prefer` , `Verify Ca` en `Verify Full` . |
+| `sslMode` | Een Booleaanse waarde die bepaalt of SSL wordt afgedwongen, afhankelijk van uw serverondersteuning. Deze configuratie is standaard ingesteld op `false` . |
 | `connectionSpec.id` | De [!DNL PostgreSQL] verbindingsspecificatie-id&#39;s: `74a1c565-4e59-48d7-9d67-7c03b8a13137` . |
 
 +++

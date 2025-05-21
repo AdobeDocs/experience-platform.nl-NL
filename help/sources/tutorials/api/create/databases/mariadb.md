@@ -2,9 +2,9 @@
 title: Verbinding maken met MariaDB naar Experience Platform met behulp van de Flow Service API
 description: Leer hoe u uw MariaDB-account met Experience Platform kunt verbinden via API's.
 exl-id: 9b7ff394-ca55-4ab4-99ef-85c80b04a6df
-source-git-commit: d5d47f9ca3c01424660fe33f8310586a70a32875
+source-git-commit: bca4f40d452f0a5e70a388872a65640d1fd58533
 workflow-type: tm+mt
-source-wordcount: '644'
+source-wordcount: '474'
 ht-degree: 0%
 
 ---
@@ -30,11 +30,11 @@ Lees het [[!DNL MariaDB]  overzicht ](../../../../connectors/databases/mariadb.m
 
 Lees de gids op [ begonnen wordt met Experience Platform APIs ](../../../../../landing/api-guide.md) voor informatie over hoe te met succes vraag aan Experience Platform APIs maken.
 
-## Verbind [!DNL MariaDB] met Experience Platform op Azure {#azure}
+## Verbinden [!DNL MariaDB] met Experience Platform
 
-Lees de onderstaande stappen voor informatie over hoe u uw [!DNL MariaDB] -account kunt verbinden met Experience Platform on Azure.
+Lees de onderstaande stappen voor informatie over hoe u uw [!DNL MariaDB] -account kunt verbinden met Experience Platform.
 
-### Een basisverbinding maken voor [!DNL MariaDB] op Experience Platform in Azure {#azure-base}
+### Een basisverbinding maken voor [!DNL MariaDB]
 
 Een basisverbinding behoudt informatie tussen uw bron en Experience Platform, met inbegrip van de verificatiereferenties van uw bron, de huidige status van de verbinding, en uw unieke identiteitskaart van de basisverbinding. Met de ID van de basisverbinding kunt u bestanden verkennen en door bestanden navigeren vanuit uw bron en kunt u de specifieke items identificeren die u wilt opnemen, inclusief informatie over hun gegevenstypen en indelingen.
 
@@ -165,82 +165,6 @@ Een succesvolle reactie keert details van de pas gecreëerde basisverbinding, me
 +++
 
 >[!ENDTABS]
-
-## Verbinden [!DNL MariaDB] met Experience Platform op Amazon Web Services {#aws}
-
->[!AVAILABILITY]
->
->Deze sectie is van toepassing op implementaties van Experience Platform die op Amazon Web Services (AWS) worden uitgevoerd. Experience Platform die op AWS wordt uitgevoerd, is momenteel beschikbaar voor een beperkt aantal klanten. Meer over de gesteunde infrastructuur van Experience Platform leren, zie het [ multi-wolkenoverzicht van Experience Platform ](../../../../../landing/multi-cloud.md).
-
-Lees de onderstaande stappen voor informatie over hoe u uw [!DNL MariaDB] -account kunt verbinden met Experience Platform op AWS.
-
-### Een basisverbinding maken voor [!DNL MariaDB] op Experience Platform op AWS {#aws-base}
-
-**API formaat**
-
-```https
-POST /connections
-```
-
-**Verzoek**
-
-Met de volgende aanvraag wordt een basisverbinding voor [!DNL MariaDB] gemaakt om verbinding te maken met Experience Platform op AWS.
-
-+++aanvraagvoorbeeld weergeven
-
-```shell
-curl -X POST \
-  'https://platform.adobe.io/data/foundation/flowservice/connections' \
-  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-  -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {ORG_ID}' \
-  -H 'x-sandbox-name: {SANDBOX_NAME}' \
-  -H 'Content-Type: application/json' \
-  -d '{
-      "name": "MariaDB on Experience Platform AWS",
-      "description": "MariaDB on Experience Platform AWS",
-      "auth": {
-          "specName": "Basic Authentication",
-          "params": {
-              "server": "{SERVER}",
-              "database": "{DATABASE}",
-              "username": "{USERNAME}",
-              "password": "{PASSWORD}",
-              "sslMode": "{SSLMODE}"
-          }
-      },
-      "connectionSpec": {
-          "id": "3000eb99-cd47-43f3-827c-43caf170f015",
-          "version": "1.0"
-      }
-  }'
-```
-
-| Eigenschap | Beschrijving |
-| --- | --- |
-| `auth.params.server` | De naam of IP van uw [!DNL MariaDB] database. |
-| `auth.params.database` | De naam van uw database. |
-| `auth.params.username` | De gebruikersnaam die overeenkomt met uw database. |
-| `auth.params.password` | Het wachtwoord dat overeenkomt met uw database. |
-| `auth.params.sslMode` | De methode waarmee gegevens tijdens gegevensoverdracht worden gecodeerd. |
-| `connectionSpec.id` | De [!DNL MariaDB] -id van de verbindingsspecificatie is: `3000eb99-cd47-43f3-827c-43caf170f015` . |
-
-+++
-
-**Reactie**
-
-Een succesvolle reactie keert details van de pas gecreëerde basisverbinding, met inbegrip van zijn uniek herkenningsteken (`id`) terug.
-
-+++Respons voorbeeld weergeven
-
-```json
-{
-    "id": "f847950c-1c12-4568-a550-d5312b16fdb8",
-    "etag": "\"0c0099f4-0000-0200-0000-67da91710000\""
-}
-```
-
-+++
 
 
 ## Volgende stappen

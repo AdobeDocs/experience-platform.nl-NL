@@ -2,9 +2,9 @@
 title: MySQL met Experience Platform verbinden met behulp van de Flow Service API
 description: Leer hoe u uw MySQL-database met API's kunt verbinden met Experience Platform.
 exl-id: 273da568-84ed-4a3d-bfea-0f5b33f1551a
-source-git-commit: 659af23c6d05f184b745e13ab8545941f3892e7e
+source-git-commit: b73ced639100c95f6c62be92d4796a206a688958
 workflow-type: tm+mt
-source-wordcount: '597'
+source-wordcount: '607'
 ht-degree: 0%
 
 ---
@@ -124,11 +124,12 @@ curl -X POST \
       "auth": {
           "specName": "Basic Authentication",
           "params": {
-              "server": "{SERVER}",
-              "database": "{DATABASE}",
-              "username": "{USERNAME}",
-              "password": "{PASSWORD}",
-              "sslMode": "{SSLMODE}"
+              "server": "localhost",
+              "port": "443",
+              "database": "mysql-acme",
+              "username": "acme",
+              "password": "xxxx",
+              "sslMode": "DISABLED"
           }
       },
       "connectionSpec": {
@@ -202,11 +203,12 @@ curl -X POST \
       "auth": {
           "specName": "Basic Authentication",
           "params": {
-              "server": "{SERVER}",
-              "database": "{DATABASE}",
-              "username": "{USERNAME}",
-              "password": "{PASSWORD}",
-              "sslMode": "{SSLMODE}"
+              "server": "localhost",
+              "port": "443",
+              "database": "mysql-acme",
+              "username": "acme",
+              "password": "xxxx",
+              "sslMode": "false"
           }
       },
       "connectionSpec": {
@@ -222,7 +224,7 @@ curl -X POST \
 | `auth.params.database` | De naam van uw database. |
 | `auth.params.username` | De gebruikersnaam die overeenkomt met uw database. |
 | `auth.params.password` | Het wachtwoord dat overeenkomt met uw database. |
-| `auth.params.sslMode` | De methode waarmee gegevens tijdens gegevensoverdracht worden gecodeerd. |
+| `auth.params.sslMode` | Een Booleaanse waarde die bepaalt of SSL wordt afgedwongen, afhankelijk van uw serverondersteuning. Deze configuratie is standaard ingesteld op `false` . |
 | `connectionSpec.id` | De [!DNL MySQL] -id van de verbindingsspecificatie is: `26d738e0-8963-47ea-aadf-c60de735468a` . |
 
 +++

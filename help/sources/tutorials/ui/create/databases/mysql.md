@@ -2,14 +2,14 @@
 title: MySQL verbinden met Experience Platform via de gebruikersinterface
 description: Leer hoe u uw MySQL-database met de gebruikersinterface verbindt met Experience Platform.
 exl-id: 75e74bde-6199-4970-93d2-f95ec3a59aa5
-source-git-commit: 659af23c6d05f184b745e13ab8545941f3892e7e
+source-git-commit: f4200ca71479126e585ac76dd399af4092fdf683
 workflow-type: tm+mt
 source-wordcount: '515'
 ht-degree: 0%
 
 ---
 
-# Een [!DNL MySQL] bronverbinding maken in de gebruikersinterface
+# Verbinding maken [!DNL MySQL] met Experience Platform via de gebruikersinterface
 
 Lees deze handleiding voor informatie over hoe u uw [!DNL MySQL] -database kunt verbinden met Adobe Experience Platform via de werkruimte voor bronnen in de Experience Platform-gebruikersinterface.
 

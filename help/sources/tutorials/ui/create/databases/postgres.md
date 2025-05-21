@@ -2,9 +2,9 @@
 title: Connect PostSQL met Experience Platform via de gebruikersinterface
 description: Leer hoe u uw PostSQL-database met Experience Platform kunt verbinden met behulp van de werkruimte voor bronnen in de Experience Platform-gebruikersinterface.
 exl-id: e556d867-a1eb-4900-b8a9-189666a4f3f1
-source-git-commit: 8cabf1cb86993fdde37d0b9d957f6c8ec23bb237
+source-git-commit: f4200ca71479126e585ac76dd399af4092fdf683
 workflow-type: tm+mt
-source-wordcount: '617'
+source-wordcount: '626'
 ht-degree: 0%
 
 ---
@@ -43,19 +43,20 @@ Hier volgt een voorbeeld van een [!DNL PostgreSQL] verbindingstekenreeks die is 
 
 Selecteer in de gebruikersinterface van Experience Platform de optie **[!UICONTROL Sources]** in de linkernavigatie voor toegang tot de werkruimte van *[!UICONTROL Sources]* . Selecteer de juiste categorie in het deelvenster *[!UICONTROL Categories]*. U kunt ook op de zoekbalk navigeren naar de specifieke bron die u wilt gebruiken.
 
-Als u [!DNL PostgreSQL] wilt gebruiken, selecteert u de **[!UICONTROL PostgreSQL]** bronkaart onder *[!UICONTROL Databases]* en selecteert u vervolgens **[!UICONTROL Set up]** .
+Als u [!DNL PostgreSQL] wilt gebruiken, selecteert u de **[!UICONTROL PostgreSQL DB]** bronkaart onder *[!UICONTROL Databases]* en selecteert u vervolgens **[!UICONTROL Set up]** .
 
 >[!TIP]
 >
 >Bronnen in de catalogus met bronnen geven de optie **[!UICONTROL Set up]** weer wanneer een bepaalde bron nog geen geverifieerde account heeft. Zodra een geverifieerd account is gemaakt, verandert deze optie in **[!UICONTROL Add data]** .
 
+![ de broncatalogus van bronnen met de PostgreSQL geselecteerde bronkaart.](../../../../images/tutorials/create/postgresql/catalog.png)
 
 
 ## Een bestaande account gebruiken {#existing}
 
 Als u een bestaande account wilt gebruiken, selecteert u **[!UICONTROL Existing account]** en vervolgens de [!DNL PostgreSQL] -account die u wilt gebruiken.
 
-![ de bestaande rekeningsinterface van het bronwerkschema.](../../../../images/tutorials/create/postgresql/catalog.png)
+![ de bestaande rekeningsinterface van het bronwerkschema.](../../../../images/tutorials/create/postgresql/existing.png)
 
 ## Een nieuwe account maken {#create}
 
@@ -63,7 +64,7 @@ Als u geen bestaand account hebt, moet u een nieuw account maken door de vereist
 
 Als u een nieuwe account wilt maken, selecteert u **[!UICONTROL New account]** en geeft u een naam op en voegt u desgewenst een beschrijving voor uw account toe.
 
-![ de nieuwe rekeningsinterface in het bronwerkschema met een rekeningsnaam en facultatieve verstrekte beschrijving.](../../../../images/tutorials/create/postgresql/existing.png)
+![ de nieuwe rekeningsinterface in het bronwerkschema met een rekeningsnaam en facultatieve verstrekte beschrijving.](../../../../images/tutorials/create/postgresql/new.png)
 
 ### Verbinding maken met Experience Platform on Azure {#azure}
 
@@ -93,7 +94,7 @@ Om basisauthentificatie te gebruiken, selecteer **[!UICONTROL Basic authenticati
 
 Om een nieuwe [!DNL PostgreSQL] rekening tot stand te brengen en met Experience Platform op AWS te verbinden, zorg ervoor dat u in een zandbak VA6 bent en dan de noodzakelijke [ geloofsbrieven voor authentificatie ](../../../../connectors/databases/postgres.md#aws) verstrekt.
 
-![ de nieuwe rekeningsinterface in het bronwerkschema om met AWS te verbinden.](../../../../images/tutorials/create/postgresql/basic-auth.png)
+![ de nieuwe rekeningsinterface in het bronwerkschema om met AWS te verbinden.](../../../../images/tutorials/create/postgresql/aws.png)
 
 ## Een gegevensstroom maken voor uw [!DNL PostgreSQL] -gegevens
 

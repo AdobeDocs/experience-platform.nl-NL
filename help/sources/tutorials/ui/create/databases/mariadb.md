@@ -2,9 +2,9 @@
 title: Verbinding maken tussen MariaDB en Experience Platform via de gebruikersinterface
 description: Leer hoe u uw MariaDB-account met Experience Platform kunt verbinden aan de hand van de werkruimte Bronnen in de Experience Platform-gebruikersinterface.
 exl-id: 259ca112-01f1-414a-bf9f-d94caf4c69df
-source-git-commit: 0bf31c76f86b4515688d3aa60deb8744e38b4cd5
+source-git-commit: bca4f40d452f0a5e70a388872a65640d1fd58533
 workflow-type: tm+mt
-source-wordcount: '564'
+source-wordcount: '466'
 ht-degree: 0%
 
 ---
@@ -54,9 +54,9 @@ Als u een nieuwe account wilt maken, selecteert u **[!UICONTROL New account]** e
 
 ![ de nieuwe rekeningsinterface in het bronwerkschema met een rekeningsnaam en facultatieve verstrekte beschrijving.](../../../../images/tutorials/create/maria-db/new.png)
 
-### Verbinding maken met Experience Platform on Azure {#azure}
+### Verbinding maken met Experience Platform
 
-U kunt uw [!DNL MariaDB] -account op Azure verbinden met Experience Platform met behulp van een accountsleutel of een basisverificatie.
+U kunt uw [!DNL MariaDB] -account verbinden met Experience Platform met behulp van een accountsleutel of basisverificatie.
 
 >[!BEGINTABS]
 
@@ -73,17 +73,5 @@ Om basisauthentificatie te gebruiken, selecteer **[!UICONTROL Basic authenticati
 ![ de nieuwe rekeningsinterface in het bronwerkschema met &quot;Basisauthentificatie&quot;geselecteerd.](../../../../images/tutorials/create/maria-db/basic-auth.png)
 
 >[!ENDTABS]
-
-### Verbinding maken met Experience Platform op Amazon Web Services (AWS) {#aws}
-
->[!AVAILABILITY]
->
->Deze sectie is van toepassing op implementaties van Experience Platform die op Amazon Web Services (AWS) worden uitgevoerd. Experience Platform die op AWS wordt uitgevoerd, is momenteel beschikbaar voor een beperkt aantal klanten. Meer over de gesteunde infrastructuur van Experience Platform leren, zie het [ multi-wolkenoverzicht van Experience Platform ](../../../../../landing/multi-cloud.md).
-
-Om een nieuwe [!DNL MariaDB] rekening tot stand te brengen en met Experience Platform op AWS te verbinden, zorg ervoor dat u in een zandbak VA6 bent en dan de noodzakelijke [ geloofsbrieven voor authentificatie ](../../../../connectors/databases/mariadb.md#aws) verstrekt.
-
-![ de nieuwe rekeningsinterface in het bronwerkschema om met AWS te verbinden.](../../../../images/tutorials/create/maria-db/basic-auth.png)
-
-## Volgende stappen
 
 Aan de hand van deze zelfstudie hebt u een verbinding tot stand gebracht met uw [!DNL MariaDB] -account. U kunt nu aan het volgende leerprogramma verdergaan en [ een dataflow vormen om gegevens in Experience Platform ](../../dataflow/databases.md) te brengen.
