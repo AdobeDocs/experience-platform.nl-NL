@@ -1,17 +1,17 @@
 ---
-title: Een Adobe Analytics Source Connection maken in de gebruikersinterface
-description: Leer hoe u een Adobe Analytics-bronverbinding maakt in de gebruikersinterface om consumentengegevens over te brengen naar Adobe Experience Platform.
+title: Adobe Analytics verbinden met Experience Platform
+description: Leer hoe u uw Adobe Analytics-rapportenpakket-gegevens naar Experience Platform kunt overbrengen
 exl-id: 5ddbaf63-feaa-44f5-b2f2-2d5ae507f423
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 086777a09eec17c94a7e0a5d2db58e4a1f6b523f
 workflow-type: tm+mt
-source-wordcount: '2554'
+source-wordcount: '2606'
 ht-degree: 0%
 
 ---
 
-# Een Adobe Analytics-bronverbinding maken in de gebruikersinterface
+# Adobe Analytics verbinden met Experience Platform
 
-Deze zelfstudie bevat stappen voor het maken van een Adobe Analytics-bronverbinding in de gebruikersinterface om Adobe Analytics-rapportsuite met gegevens naar Adobe Experience Platform te brengen.
+Lees deze handleiding om te leren hoe u de Adobe Analytics-bron kunt gebruiken om uw gegevens van de Analytics-rapportensuite in Adobe Experience Platform in te voeren.
 
 ## Aan de slag
 
@@ -25,12 +25,11 @@ Deze zelfstudie vereist een goed begrip van de volgende onderdelen van Experienc
 
 Het is belangrijk dat u de volgende belangrijke termen kent die in dit document worden gebruikt:
 
-* **Standaard attributen**: De standaardattributen zijn om het even welk attribuut dat door Adobe vooraf wordt bepaald. Ze bevatten dezelfde betekenis voor alle klanten en zijn beschikbaar in de [!DNL Analytics] brongegevens en [!DNL Analytics] -schemaveldgroepen.
-* **attributen van de Douane**: De attributen van de Douane zijn om het even welk attribuut in de hiërarchie van de douanevariabele in [!DNL Analytics]. De attributen van de douane worden gebruikt binnen een implementatie van Adobe Analytics om specifieke informatie in een rapportreeks te vangen, en zij kunnen in hun gebruik van rapportreeks aan rapportreeks verschillen. Aangepaste kenmerken zijn onder andere eVars, props en lijsten. Zie de volgende [[!DNL Analytics]  documentatie over omzettingsvariabelen ](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/conversion-variables/conversion-var-admin.html?lang=nl-NL) voor meer informatie over Vars.
+* **Standaard attributen**: De standaardattributen zijn om het even welk attribuut dat door Adobe vooraf wordt bepaald. Zij bevatten de zelfde betekenis voor alle klanten en zijn beschikbaar in de de brongegevens van de Analyse en het schemagebiedsgroepen van de Analyse.
+* **attributen van de Douane**: De attributen van de Douane zijn om het even welk attribuut in de hiërarchie van de douanevariabele in Analytics. De attributen van de douane worden gebruikt binnen een implementatie van Adobe Analytics om specifieke informatie in een rapportreeks te vangen, en zij kunnen in hun gebruik van rapportreeks aan rapportreeks verschillen. Aangepaste kenmerken zijn onder andere eVars, props en lijsten. Zie de volgende [ documentatie van Analytics over omzettingsvariabelen ](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/conversion-variables/conversion-var-admin.html) voor meer informatie over Vars.
 * **om het even welk attribuut in de gebiedsgroepen van de Douane**: De attributen die uit gebiedsgroepen voortkomen die door klanten worden gecreeerd zijn allen user-defined en worden beschouwd als noch standaard noch douanekenmerken.
-* **vriendschappelijke namen**: De vriendschappelijke namen zijn mens-verstrekte etiketten voor douanevariabelen in een [!DNL Analytics] implementatie. Zie de volgende [[!DNL Analytics]  documentatie over omzettingsvariabelen ](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/conversion-variables/conversion-var-admin.html?lang=nl-NL) voor meer informatie over vriendschappelijke namen.
 
-## Een bronverbinding maken met Adobe Analytics
+## Navigeren door de catalogus met bronnen
 
 >[!NOTE]
 >
@@ -39,99 +38,92 @@ Het is belangrijk dat u de volgende belangrijke termen kent die in dit document 
 >* Een dataflow die een 13 maanden backfill van historische gegevens van de rapportreeks in gegevens meer doet. Deze gegevensstroom eindigt wanneer de backfill volledig is.
 >* Een dataflow-flow die live-gegevens verzendt naar het data-meer en [!DNL Real-Time Customer Profile] . Deze gegevensstroom wordt voortdurend uitgevoerd.
 
-Selecteer in de gebruikersinterface van Experience Platform de optie **[!UICONTROL Sources]** in de linkernavigatie voor toegang tot de werkruimte van [!UICONTROL Sources] . In het scherm [!UICONTROL Catalog] worden diverse bronnen weergegeven waarmee u een account kunt maken.
+Selecteer in de gebruikersinterface van Experience Platform de optie **[!UICONTROL Sources]** in de linkernavigatie voor toegang tot de werkruimte van [!UICONTROL Sources] . Selecteer in de categorie *[!UICONTROL Adobe applications]* de Adobe Analytics-kaart en selecteer vervolgens **[!UICONTROL Add data]** .
 
-U kunt de juiste categorie selecteren in de catalogus aan de linkerkant van het scherm. U kunt de zoekbalk ook gebruiken om de weergegeven bronnen te beperken.
+![ de broncatalogus met de geselecteerde Adobe Analytics bronkaart.](../../../../images/tutorials/create/analytics/catalog.png)
 
-Selecteer onder de categorie **[!UICONTROL Adobe applications]** de optie **[!UICONTROL Adobe Analytics]** en selecteer vervolgens **[!UICONTROL Add data]** .
-
-![ catalogus ](../../../../images/tutorials/create/analytics/catalog.png)
-
-### Gegevens selecteren
+## Gegevens selecteren
 
 >[!IMPORTANT]
 >
->De op het scherm vermelde rapportsuites kunnen uit verschillende regio&#39;s afkomstig zijn. U bent verantwoordelijk voor het begrijpen van de beperkingen en verplichtingen van uw gegevens en hoe u die gegevens gebruikt in Adobe Experience Platform-regio&#39;s. Controleer of dit door uw bedrijf is toegestaan.
+>* De op het scherm vermelde rapportsuites kunnen uit verschillende regio&#39;s afkomstig zijn. U bent verantwoordelijk voor het begrijpen van de beperkingen en verplichtingen van uw gegevens en hoe u die gegevens gebruikt in Adobe Experience Platform-regio&#39;s. Controleer of dit door uw bedrijf is toegestaan.
+>* Gegevens uit meerdere rapportsuites kunnen alleen voor realtime-klantprofiel worden ingeschakeld als er geen gegevensconflicten zijn, zoals twee aangepaste eigenschappen (eVars, lijsten en props) die een andere betekenis hebben.
 
-De stap **[!UICONTROL Analytics source add data]** bevat een lijst met [!DNL Analytics] rapportsuite-gegevens waarmee u een bronverbinding kunt maken.
+Een rapportsuite is een container met gegevens die de basis vormt van analytische rapportage. Een organisatie kan vele rapportreeksen hebben, elk die verschillende datasets bevatten.
 
-Een rapportsuite is een container met gegevens die de basis vormt voor [!DNL Analytics] -rapportage. Een organisatie kan vele rapportreeksen hebben, elk die verschillende datasets bevatten.
-
-U kunt rapportsuites van om het even welk gebied (Verenigde Staten, Verenigd Koninkrijk, of Singapore) opnemen zolang zij aan de zelfde organisatie zoals de zandbakinstantie van Experience Platform worden in kaart gebracht waarin de bronverbinding wordt gecreeerd. Een rapportreeks kan worden opgenomen gebruikend slechts één enkele actieve dataflow. Er is al een rapportsuite die niet selecteerbaar is, opgenomen in de sandbox die u gebruikt of in een andere sandbox.
+U kunt rapportsuites van om het even welk gebied (Verenigde Staten, Verenigd Koninkrijk, of Singapore) opnemen zolang zij aan de zelfde organisatie zoals de zandbakinstantie van Experience Platform worden in kaart gebracht waarin de bronverbinding wordt gecreeerd. Een rapportreeks kan worden opgenomen gebruikend slechts één enkele actieve dataflow. Als een rapportsuite grijs is en niet kan worden geselecteerd, is deze al opgenomen in de sandbox die u gebruikt of in een andere sandbox.
 
 Er kunnen meerdere interne verbindingen worden gemaakt om meerdere rapportsuites over te brengen naar dezelfde sandbox. Als de rapportsuites verschillende schema&#39;s voor variabelen (zoals eVars of gebeurtenissen) hebben, zouden zij aan specifieke gebieden in de groepen van het douanegebied moeten worden in kaart gebracht en gegevensconflicten vermijden gebruikend [ Prep van Gegevens ](../../../../../data-prep/ui/mapping.md). Rapportsuites kunnen alleen aan één sandbox worden toegevoegd.
 
-![](../../../../images/tutorials/create/analytics/report-suite.png)
+Selecteer **[!UICONTROL Report suite]** en gebruik vervolgens de *[!UICONTROL Analytics source add data]* -interface om door de lijst te navigeren en de Analytics-rapportsuite te identificeren die u aan Experience Platform wilt toevoegen. Selecteer **[!UICONTROL Next]** om door te gaan.
 
->[!NOTE]
->
->Gegevens uit meerdere rapportsuites kunnen alleen voor realtime-klantprofiel worden ingeschakeld als er geen gegevensconflicten zijn, zoals twee aangepaste eigenschappen (eVars, lijsten en props) die een andere betekenis hebben.
-
-Als u een [!DNL Analytics] -bronverbinding wilt maken, selecteert u een rapportsuite en selecteert u **[!UICONTROL Next]** om door te gaan.
-
-![](../../../../images/tutorials/create/analytics/add-data.png)
+![ wordt een reeks van het analyserapport geselecteerd voor opname en de &quot;Volgende&quot;knoop wordt benadrukt ](../../../../images/tutorials/create/analytics/add-data.png)
 
 &lt;!—De Reeksen van het Rapport van Analytics kunnen voor één zandbak tegelijkertijd worden gevormd. Als u dezelfde rapportsuite in een andere sandbox wilt importeren, moet de gegevenssetstroom worden verwijderd en opnieuw worden geïnstantieerd via de configuratie voor een andere sandbox.—>
 
-### Toewijzing
+## Toewijzing {#mapping}
 
 >[!IMPORTANT]
 >
 >Transformaties van de Prep van gegevens kunnen latentie aan algemene dataflow toevoegen. De extra toegevoegde latentie is afhankelijk van de complexiteit van de transformatielogica.
 
-Voordat u de [!DNL Analytics] -gegevens kunt toewijzen aan het doel-XDM-schema, moet u eerst opgeven of u een standaardschema of een aangepast schema gebruikt.
+Voordat u de analysegegevens kunt toewijzen aan het doel-XDM-schema, moet u eerst bepalen of u een standaardschema of een aangepast schema gebruikt.
 
-Met een standaardschema wordt namens u een nieuw schema gemaakt dat de veldgroep [!DNL Adobe Analytics ExperienceEvent Template] bevat. Selecteer **[!UICONTROL Default schema]** als u een standaardschema wilt gebruiken.
+>[!BEGINTABS]
 
-![ gebrek-schema ](../../../../images/tutorials/create/analytics/default-schema.png)
+>[!TAB  Standaard schema ]
 
-Met een aangepast schema kunt u elk beschikbaar schema voor uw [!DNL Analytics] -gegevens kiezen, zolang dat schema de [!DNL Adobe Analytics ExperienceEvent Template] -veldgroep bevat. Selecteer **[!UICONTROL Custom schema]** als u een aangepast schema wilt gebruiken.
+Een standaardschema leidt tot een nieuw schema namens u. Dit nieuwe schema bevat de veldgroep [!DNL Adobe Analytics ExperienceEvent Template] . Selecteer **[!UICONTROL Default schema]** als u een standaardschema wilt gebruiken.
 
-![ douane-schema ](../../../../images/tutorials/create/analytics/custom-schema.png)
+![ de stap van de schemaselectie van het de bronwerkschema van Analytics, met &quot;Standaard geselecteerd schema&quot;.](../../../../images/tutorials/create/analytics/default-schema.png)
 
-De pagina [!UICONTROL Mapping] biedt een interface om bronvelden toe te wijzen aan hun juiste doelschemavelden. Van hier, kunt u douanevariabelen aan nieuwe groepen van het schemagebied in kaart brengen en berekeningen toepassen zoals die door de Prep van Gegevens worden gesteund. Selecteer een doelschema om het toewijzingsproces te starten.
+>[!TAB  Schema van de Douane ]
+
+Met een aangepast schema kunt u elk beschikbaar schema voor uw analysegegevens kiezen, zolang dat schema de veldgroep [!DNL Adobe Analytics ExperienceEvent Template] heeft. Selecteer **[!UICONTROL Custom schema]** als u een aangepast schema wilt gebruiken.
+
+![ de stap van de schemaselectie van het de bronwerkschema van Analytics, met &quot;geselecteerd schema van de Douane&quot;.](../../../../images/tutorials/create/analytics/custom-schema.png)
+
+>[!ENDTABS]
+
+Gebruik de *[!UICONTROL Mapping]* -interface om bronvelden toe te wijzen aan de desbetreffende doelschemavelden. U kunt aangepaste variabelen toewijzen aan nieuwe groepen schemavelden en berekeningen toepassen zoals wordt ondersteund door Gegevensvoorvoegsel. Selecteer een doelschema om het toewijzingsproces te starten.
 
 >[!TIP]
 >
->Alleen schema&#39;s met de veldgroep [!DNL Adobe Analytics ExperienceEvent Template] worden weergegeven in het menu Schema selecteren. Andere schema&#39;s worden weggelaten. Als er geen aangewezen schema&#39;s beschikbaar voor uw gegevens van de Reeks van het Rapport zijn, dan moet u een nieuw schema tot stand brengen. Voor gedetailleerde stappen bij het creëren van schema&#39;s, zie de gids bij [ het creëren van en het uitgeven van schema&#39;s in UI ](../../../../../xdm/ui/resources/schemas.md).
+>Alleen schema&#39;s met de veldgroep [!DNL Adobe Analytics ExperienceEvent Template] worden weergegeven in het menu Schema selecteren. Andere schema&#39;s worden weggelaten. Als er geen aangewezen schema&#39;s beschikbaar voor uw gegevens van de rapportreeks zijn, dan moet u een nieuw schema tot stand brengen. Voor gedetailleerde stappen bij het creëren van schema&#39;s, zie de gids bij [ het creëren van en het uitgeven van schema&#39;s in UI ](../../../../../xdm/ui/resources/schemas.md).
 
-![ selecteren-schema ](../../../../images/tutorials/create/analytics/select-schema.png)
+![ het paneel van de selectie van het doelschema van de interface van de Toewijzing.](../../../../images/tutorials/create/analytics/select-schema.png)
 
-In de sectie [!UICONTROL Map standard fields] worden deelvensters voor [!UICONTROL Standard mappings applied] , [!UICONTROL Non matching standard mappings] en [!UICONTROL Custom mappings] weergegeven. Zie de volgende tabel voor specifieke informatie over elke categorie:
+U kunt het deelvenster [!UICONTROL Map standard fields] raadplegen voor meetgegevens in uw [!UICONTROL Standard mappings applied] . [!UICONTROL Standard mappings with descriptor name conflicts] en [!DNL Custom mappings] .
 
 | Standaardvelden toewijzen | Beschrijving |
 | --- | --- |
-| [!UICONTROL Standard mappings applied] | In het deelvenster [!UICONTROL Standard mappings applied] wordt het totale aantal toegewezen kenmerken weergegeven. Standaardtoewijzingen hebben betrekking op toewijzingssets tussen alle kenmerken in de [!DNL Analytics] -brongegevens en de bijbehorende kenmerken in de [!DNL Analytics] -veldgroep. Deze zijn vooraf toegewezen en kunnen niet worden bewerkt. |
-| [!UICONTROL Non matching standard mappings] | Het deelvenster [!UICONTROL Non matching standard mappings] verwijst naar het aantal toegewezen kenmerken die conflicten met vriendschappelijke namen bevatten. Deze conflicten verschijnen wanneer u een schema opnieuw gebruikt dat reeds een bevolkte reeks gebiedsbeschrijvers van een verschillende Reeks van het Rapport heeft. U kunt doorgaan met uw [!DNL Analytics] -gegevensstroom, zelfs met conflicten met vriendelijke namen. |
-| [!UICONTROL Custom mappings] | In het deelvenster [!UICONTROL Custom mappings] wordt het aantal toegewezen aangepaste kenmerken weergegeven, waaronder eVars, props en lijsten. Aangepaste toewijzingen hebben betrekking op sets van toewijzingen tussen aangepaste kenmerken in de brongegevens [!DNL Analytics] en kenmerken in aangepaste veldgroepen die in het geselecteerde schema zijn opgenomen. |
+| [!UICONTROL Standard mappings applied] | In het deelvenster [!UICONTROL Standard mappings applied] wordt het totale aantal toegewezen kenmerken weergegeven. Standaardtoewijzingen verwijzen naar toewijzingen tussen alle kenmerken in de bron-analysegegevens en de corresponderende kenmerken in de veldgroep Analytics. Deze zijn vooraf toegewezen en kunnen niet worden bewerkt. |
+| [!UICONTROL Standard mappings with descriptor name conflicts] | Het deelvenster [!UICONTROL Standard mappings with descriptor name conflicts] verwijst naar het aantal toegewezen kenmerken die naamconflicten bevatten. Deze conflicten verschijnen wanneer u een schema opnieuw gebruikt dat reeds een bevolkte reeks gebiedsbeschrijvers van een verschillende rapportreeks heeft. U kunt doorgaan met de gegevensstroom van Analytics, zelfs met naamconflicten. |
+| [!UICONTROL Custom mappings] | In het deelvenster [!UICONTROL Custom mappings] wordt het aantal toegewezen aangepaste kenmerken weergegeven, waaronder eVars, props en lijsten. Aangepaste toewijzingen verwijzen naar toewijzingen tussen aangepaste kenmerken in de gegevens en kenmerken van de bron-analyse in aangepaste veldgroepen die in het geselecteerde schema zijn opgenomen. |
 
-![ kaart-standaard-gebieden ](../../../../images/tutorials/create/analytics/map-standard-fields.png)
+### Standaardtoewijzingen {#standard-mappings}
 
-Selecteer **[!UICONTROL View]** in het deelvenster [!UICONTROL Standard mappings applied] om een voorvertoning van de veldgroep met het [!DNL Analytics] ExperienceEvent-sjabloonschema weer te geven.
+Experience Platform detecteert automatisch de toewijzing voor naamconflicten. Als er geen conflicten zijn met de toewijzingen, selecteert u **[!UICONTROL Next]** om door te gaan.
 
-![ mening ](../../../../images/tutorials/create/analytics/view.png)
-
-De pagina [!UICONTROL Adobe Analytics ExperienceEvent Template Schema Field Group] biedt u een interface voor het inspecteren van de structuur van uw schema. Selecteer **[!UICONTROL Close]** als u klaar bent.
-
-![ gebied-groep-voorproef ](../../../../images/tutorials/create/analytics/field-group-preview.png)
-
-Experience Platform detecteert automatisch uw sets met toewijzingen voor eventuele conflicten met vriendschappelijke namen. Als er geen conflicten zijn met uw toewijzingsets, selecteert u **[!UICONTROL Next]** om door te gaan.
-
-![ afbeelding ](../../../../images/tutorials/create/analytics/mapping.png)
+![ de standaard toewijzingskopbal die geen naamconflicten toont ](../../../../images/tutorials/create/analytics/standard.png)
 
 >[!TIP]
 >
->Als er vriendschappelijke naamconflicten zijn tussen uw bronRapport Suite en uw geselecteerde schema, kunt u nog steeds doorgaan met uw [!DNL Analytics] dataflow, erkennend dat de gebiedsbeschrijvers niet zullen worden veranderd. U kunt er ook voor kiezen om een nieuw schema te maken met een lege set beschrijvingen.
+>Als er naamconflicten zijn tussen uw bronrapportsuite en uw geselecteerde schema, kunt u toch doorgaan met de gegevensstroom van Analytics, waarbij u erkent dat de velddescriptors niet worden gewijzigd. U kunt er ook voor kiezen om een nieuw schema te maken met een lege set beschrijvingen.
 
-#### Aangepaste toewijzingen
+## Aangepaste toewijzingen {#custom-mappings}
 
-U kunt de functies van de Prep van Gegevens gebruiken om nieuwe douanetoewijzing of berekende gebieden voor douaneattributen toe te voegen. Als u aangepaste toewijzingen wilt toevoegen, selecteert u **[!UICONTROL Custom]** .
+U kunt de functies van de Prep van Gegevens gebruiken om nieuwe douanetoewijzingen of berekende gebieden voor douanekenmerken toe te voegen. Als u aangepaste toewijzingen wilt toevoegen, selecteert u **[!UICONTROL Custom]** .
 
-![ douane ](../../../../images/tutorials/create/analytics/custom.png)
+![ het lusje van de douanetoewijzing in het bronwerkschema van Analytics.](../../../../images/tutorials/create/analytics/custom.png)
 
-Afhankelijk van uw behoeften kunt u ofwel **[!UICONTROL Add new mapping]** ofwel **[!UICONTROL Add calculated field]** selecteren en doorgaan met het maken van aangepaste toewijzingen voor uw aangepaste kenmerken. Voor uitvoerige stappen op hoe te om de functies van de Prep van Gegevens te gebruiken, te lezen gelieve de [ gids UI van de Prep van Gegevens ](../../../../../data-prep/ui/mapping.md).
+* **[!UICONTROL Filter fields]**: gebruik de [!UICONTROL Filter fields] -tekstinvoer om te filteren op specifieke toewijzingsvelden in uw toewijzingen.
+* **[!UICONTROL Add new mapping]**: Als u een nieuw bronveld en een nieuwe doelveldtoewijzing wilt toevoegen, selecteert u **[!UICONTROL Add new mapping]** .
+* **[!UICONTROL Add calculated field]**: Indien nodig kunt u **[!UICONTROL Add calculated field]** selecteren om een nieuw berekend veld voor uw toewijzingen te maken.
+* **[!UICONTROL Import mapping]**: U kunt de handmatige configuratietijd van het gegevensinvoerproces verkorten en fouten beperken door de functionaliteit voor importtoewijzing van Data Prep te gebruiken. Selecteer **[!UICONTROL Import mapping]** om toewijzingen uit een bestaande stroom of uit een geëxporteerd bestand te importeren. Voor meer informatie, lees [ de gids bij het invoeren en het uitvoeren van afbeeldingen ](../../../../../data-prep/ui/mapping.md#import-mapping).
+* **[!UICONTROL Download template]**: U kunt ook een CSV-kopie van uw toewijzingen downloaden en uw toewijzingen configureren in uw lokale apparaat. Selecteer **[!UICONTROL Download template]** om een CSV-kopie van uw toewijzingen te downloaden. U moet ervoor zorgen dat u slechts de gebieden gebruikt die in uw brondossier en doelschema worden verstrekt.
 
-De volgende documentatie verstrekt verdere middelen bij het begrip Prep van Gegevens, berekende gebieden, en kaartfuncties:
+Raadpleeg de volgende documentatie voor meer informatie over Data Prep.
 
 * [Overzicht van Data Prep](../../../../../data-prep/home.md)
 * [Toewijzingsfuncties van Data Prep](../../../../../data-prep/functions.md)
@@ -175,7 +167,7 @@ With your custom mapping set completed, select **[!UICONTROL Next]** to proceed.
 >title="Filterregels maken"
 >abstract="Bepaal rij en kolom-vlakke het filtreren regels wanneer het verzenden van gegevens naar het Profiel van de Klant in real time. Het rij-vlakke filtreren van het gebruik om voorwaarden toe te passen en te dicteren welke gegevens aan **voor het opnemen van het Profiel** omvatten. Het kolom-vlakke filtreren van het gebruik om de kolommen van gegevens te selecteren die u voor de opname van het Profiel **wilt uitsluiten**. Filterregels zijn niet van toepassing op gegevens die naar een datumpeer worden verzonden."
 
-Nadat u toewijzingen voor de gegevens van uw [!DNL Analytics] -rapportsuite hebt voltooid, kunt u filterregels en -voorwaarden toepassen om gegevens selectief op te nemen in of uit te sluiten van opname naar het Real-Time klantprofiel. Ondersteuning voor filteren is alleen beschikbaar voor [!DNL Analytics] -gegevens en gegevens worden alleen gefilterd voordat u [!DNL Profile.] invoert. Alle gegevens worden in het datumpomeer opgenomen.
+Nadat u toewijzingen voor de gegevens van uw Analytics-rapportsuite hebt voltooid, kunt u filterregels en -voorwaarden toepassen om gegevens selectief op te nemen in of uit te sluiten van opname in het Real-Time Klantprofiel. Ondersteuning voor filteren is alleen beschikbaar voor analysegegevens en gegevens worden alleen gefilterd voordat u [!DNL Profile.] opgeeft. Alle gegevens worden in het datumpeer opgenomen.
 
 >[!BEGINSHADEBOX]
 
@@ -183,8 +175,8 @@ Nadat u toewijzingen voor de gegevens van uw [!DNL Analytics] -rapportsuite hebt
 
 * U kunt de het filtreren functionaliteit voor gegevens gebruiken die naar Profiel gaan, maar niet voor gegevens die naar gegevens meer gaan.
 * U kunt filteren voor live-gegevens gebruiken, maar u kunt geen backfill-gegevens filteren.
-   * Er wordt geen back-up gemaakt van gegevens in het profiel van de [!DNL Analytics] -bron.
-* Als u de configuraties van de Prep van Gegevens tijdens de aanvankelijke opstelling van een [!DNL Analytics] stroom gebruikt, worden die veranderingen ook toegepast op automatische 13 maanden backfill.
+   * Er wordt geen back-up gemaakt van gegevens in Profiel.
+* Als u de configuraties van de Prep van Gegevens tijdens de aanvankelijke opstelling van een stroom Analytics gebruikt, worden die veranderingen toegepast ook op automatische 13 maanden backfill.
    * Dit is echter niet het geval voor filteren, omdat filteren alleen is gereserveerd voor live-gegevens.
 * Gegevensvoorinstelling wordt toegepast op streaming- en batchinvoerpaden. Als u een bestaande configuratie van de Prep van Gegevens wijzigt, worden die veranderingen dan toegepast op nieuwe inkomende gegevens over zowel het stromen als de weg van de partijopname.
    * De configuraties van Data Prep zijn echter niet van toepassing op gegevens die al in Experience Platform zijn opgenomen, ongeacht of het om streaming- of batchgegevens gaat.
@@ -202,19 +194,15 @@ Nadat u toewijzingen voor de gegevens van uw [!DNL Analytics] -rapportsuite hebt
 >
 >Het rij-vlakke filtreren van het gebruik om voorwaarden toe te passen en te dicteren welke gegevens aan **voor het opnemen van het Profiel** omvatten. Het kolom-vlakke filtreren van het gebruik om de kolommen van gegevens te selecteren die u voor de opname van het Profiel **wilt uitsluiten**.
 
-U kunt gegevens filteren voor opname in [!DNL Profile] op rijniveau en op kolomniveau. Door het filteren op rijniveau kunt u criteria definiëren, zoals tekenreeksen bevatten, gelijk zijn aan, beginnen of eindigen met. U kunt filteren op rijniveau ook gebruiken om voorwaarden te verbinden met `AND` en `OR` , en om voorwaarden te negeren met `NOT` .
+U kunt gegevens voor de opname van het Profiel op rij en kolom-niveau filtreren. Gebruik filter op rijniveau om criteria te definiëren, zoals een tekenreeks, is gelijk aan, begint of eindigt met. U kunt filteren op rijniveau ook gebruiken om voorwaarden te verbinden met `AND` en `OR` , en om voorwaarden te negeren met `NOT` .
 
-Als u de [!DNL Analytics] -gegevens op rijniveau wilt filteren, selecteert u **[!UICONTROL Row filter]** .
+Als u de analysegegevens op rijniveau wilt filteren, selecteert u **[!UICONTROL Row filter]** en gebruikt u de linkerrails om door de schemahiërarchie te navigeren en het schemakenmerk te identificeren dat u wilt selecteren.
 
-![ rij-filter ](../../../../images/tutorials/create/analytics/row-filter.png)
-
-Gebruik het linkerspoor om door de schemahiërarchie te navigeren en de schemaattributen van uw keus te selecteren om een bepaald schema verder te boren.
-
-![ left-rail ](../../../../images/tutorials/create/analytics/left-rail.png)
+![ de interface van de rijfilter voor de gegevens van Analytics.](../../../../images/tutorials/create/analytics/row-filter.png)
 
 Nadat u het kenmerk hebt geïdentificeerd dat u wilt configureren, selecteert u het kenmerk en sleept u het van de linkerspoorstaaf naar het filterdeelvenster.
 
-![ filtreren-paneel ](../../../../images/tutorials/create/analytics/filtering-panel.png)
+![ het &quot;Fabrikant&quot;attribuut dat voor het filtreren wordt geselecteerd.](../../../../images/tutorials/create/analytics/filtering-panel.png)
 
 Als u verschillende voorwaarden wilt configureren, selecteert u **[!UICONTROL equals]** en selecteert u vervolgens een voorwaarde in het vervolgkeuzevenster dat wordt weergegeven.
 
@@ -230,43 +218,33 @@ De lijst configureerbare voorwaarden omvat:
 * [!UICONTROL exists]
 * [!UICONTROL does not exist]
 
-![ voorwaarden ](../../../../images/tutorials/create/analytics/conditions.png)
+![ de voorwaarden dropdown met een lijst van voorwaardenexploitanten.](../../../../images/tutorials/create/analytics/conditions.png)
 
 Voer vervolgens de waarden in die u wilt opnemen op basis van het kenmerk dat u hebt geselecteerd. In het onderstaande voorbeeld worden [!DNL Apple] en [!DNL Google] geselecteerd voor opname als onderdeel van het kenmerk **[!UICONTROL Manufacturer]** .
 
-![ omvatten-fabrikant ](../../../../images/tutorials/create/analytics/include-manufacturer.png)
+![ het filtreren paneel met de geselecteerde attributen en de waarden inbegrepen.](../../../../images/tutorials/create/analytics/include.png)
 
-Om uw het filtreren voorwaarden verder te specificeren, voeg een ander attribuut van het schema toe en voeg dan waarden toe die op dat attribuut worden gebaseerd. In het onderstaande voorbeeld wordt het kenmerk **[!UICONTROL Model]** toegevoegd en worden modellen zoals [!DNL iPhone 13] en [!DNL Google Pixel 6] gefilterd voor opname.
+Om uw het filtreren voorwaarden verder te specificeren, voeg een ander attribuut van het schema toe en voeg dan waarden toe die op dat attribuut worden gebaseerd. In het onderstaande voorbeeld wordt het kenmerk **[!UICONTROL Model]** toegevoegd en worden modellen zoals [!DNL iPhone 16] en [!DNL Google Pixel 9] gefilterd voor opname.
 
-![ omvatten-model ](../../../../images/tutorials/create/analytics/include-model.png)
+![ Extra attributen en waarden inbegrepen in de container.](../../../../images/tutorials/create/analytics/include-model.png)
 
 Als u een nieuwe container wilt toevoegen, selecteert u de ellipsen (`...`) rechtsboven in de filterinterface en selecteert u vervolgens **[!UICONTROL Add container]** .
 
-![ toe:voegen-container ](../../../../images/tutorials/create/analytics/add-container.png)
+![ het &quot;Add container&quot;dropdown menu selecteerde.](../../../../images/tutorials/create/analytics/add-container.png)
 
-Wanneer een nieuwe container is toegevoegd, selecteert u **[!UICONTROL Include]** en selecteert u vervolgens **[!UICONTROL Exclude]** in het vervolgkeuzevenster dat wordt weergegeven.
+Nadat een nieuwe container is toegevoegd, selecteert u **[!UICONTROL Include]** en vervolgens **[!UICONTROL Exclude]** in het vervolgkeuzemenu. Voeg de kenmerken en waarden toe die u wilt uitsluiten en selecteer **[!UICONTROL Next]** als u klaar bent.
 
-![ sluit ](../../../../images/tutorials/create/analytics/exclude.png) uit
-
-Voltooi vervolgens hetzelfde proces door de schemakenmerken te slepen en de bijbehorende waarden toe te voegen die u niet wilt filteren. In het onderstaande voorbeeld worden [!DNL iPhone 12] , [!DNL iPhone 12 mini] en [!DNL Google Pixel 5] allemaal gefilterd van uitsluiting van het kenmerk **[!UICONTROL Model]** , wordt landschap uitgesloten van het kenmerk **[!UICONTROL Screen orientation]** en wordt modelnummer [!DNL A1633] uitgesloten van **[!UICONTROL Model number]** .
-
-Selecteer **[!UICONTROL Next]** als u klaar bent.
-
-![ uitsluiten-voorbeelden ](../../../../images/tutorials/create/analytics/exclude-examples.png)
+![ de attributen en de waarden voor uitsluiting worden gefiltreerd.](../../../../images/tutorials/create/analytics/exclude.png)
 
 ### Filteren op kolomniveau
 
 Selecteer **[!UICONTROL Column filter]** in de koptekst om filteren op kolomniveau toe te passen.
 
-![ kolom-filter ](../../../../images/tutorials/create/analytics/column-filter.png)
+De pagina wordt bijgewerkt in een interactieve schemastructuur, die uw schemakenattributen op kolom-niveau toont. Van hier, kunt u de kolommen van gegevens selecteren die u van de opname van het Profiel zou willen uitsluiten. U kunt ook een kolom uitvouwen en specifieke kenmerken voor uitsluiting selecteren.
 
-De pagina wordt bijgewerkt in een interactieve schemastructuur, die uw schemakenattributen op kolom-niveau toont. Van hier, kunt u de kolommen van gegevens selecteren die u van [!DNL Profile] opname zou willen uitsluiten. U kunt ook een kolom uitvouwen en specifieke kenmerken voor uitsluiting selecteren.
+Standaard gaan alle Analytics naar Profile (Profiel) en bij dit proces kunnen vertakkingen van XDM-gegevens worden uitgesloten van het opnemen van Profile (Profiel).
 
-Standaard gaat [!DNL Analytics] naar [!DNL Profile] en met dit proces kunnen vertakkingen van XDM-gegevens worden uitgesloten van [!DNL Profile] -invoer.
-
-Selecteer **[!UICONTROL Next]** als u klaar bent.
-
-![ kolommen-geselecteerd ](../../../../images/tutorials/create/analytics/columns-selected.png)
+![ de interface van de kolomfilter met de schemaboom.](../../../../images/tutorials/create/analytics/column-filter.png)
 
 ### Secundaire identiteiten filteren
 
@@ -274,13 +252,13 @@ Gebruik een kolomfilter om secundaire identiteiten uit te sluiten van profielopn
 
 Het filter is alleen van toepassing wanneer een identiteit als secundair wordt gemarkeerd. Als identiteiten zijn geselecteerd, maar een gebeurtenis aankomt met een van de identiteiten die als primair zijn gemarkeerd, worden deze niet uitgefilterd.
 
-![ secundair-identiteiten ](../../../../images/tutorials/create/analytics/secondary-identities.png)
+![ de secundaire identiteiten in de schemaboom voor kolom het filtreren.](../../../../images/tutorials/create/analytics/secondary-identities.png)
 
 ### Gegevens over gegevensstroom opgeven
 
 De stap **[!UICONTROL Dataflow detail]** wordt weergegeven. Hier moet u een naam en een optionele beschrijving voor de gegevensstroom opgeven. Selecteer **[!UICONTROL Next]** wanneer u klaar bent.
 
-![ dataflow-detail ](../../../../images/tutorials/create/analytics/dataflow-detail.png)
+![ de dataflow detailinterface. van de inlogworkflow.](../../../../images/tutorials/create/analytics/dataflow-detail.png)
 
 ### Controleren
 
@@ -289,19 +267,13 @@ De stap [!UICONTROL Review] wordt weergegeven, zodat u de nieuwe gegevens voor A
 * [!UICONTROL Connection]: geeft het bronplatform van de verbinding weer.
 * [!UICONTROL Data type]: geeft de geselecteerde rapportsuite en de bijbehorende rapportsuite-id weer.
 
-![ overzicht ](../../../../images/tutorials/create/analytics/review.png)
+![ de overzichtsinterface van het insluiten werkschema.](../../../../images/tutorials/create/analytics/review.png)
 
 ## Uw gegevensstroom controleren {#monitor-your-dataflow}
 
-Wanneer de gegevensstroom is voltooid, selecteert u **[!UICONTROL Dataflows]** in de broncatalogus om de activiteit en status van de gegevens te controleren.
+Wanneer de gegevensstroom is voltooid, kunt u de interface *[!UICONTROL Dataflows]* gebruiken om de status van de gegevensstroom voor Analytics te controleren.
 
-![ de broncatalogus met de geselecteerde dataflows tabel.](../../../../images/tutorials/create/analytics/select-dataflows.png)
-
-Er wordt een lijst weergegeven met bestaande analytische gegevens in uw organisatie. Van hier, selecteer een doeldataset om zijn respectieve insluitingsactiviteit te bekijken.
-
-![ een lijst van bestaande gegevens van Adobe Analytics in uw organisatie.](../../../../images/tutorials/create/analytics/select-target-dataset.png)
-
-De pagina [!UICONTROL Dataset activity] bevat informatie over de voortgang van gegevens die van Analytics naar Experience Platform worden verzonden. De interface toont metriek zoals het totaal van verslagen in de vorige maand, het totaal van ingegeten verslagen in de laatste zeven dagen, en de grootte van gegevens in de vorige maand.
+Gebruik de interface [!UICONTROL Dataset activity] voor informatie over de voortgang van gegevens die van Analytics naar Experience Platform worden verzonden. De interface toont metriek zoals het totaal van verslagen in de vorige maand, het totaal van ingegeten verslagen in de laatste zeven dagen, en de grootte van gegevens in de vorige maand.
 
 De bron concretiseert twee datasetstromen. De ene flow vertegenwoordigt de backfill-gegevens en de andere stroom is bedoeld voor live-gegevens. De gegevens van de backfill worden niet gevormd voor opname in het Profiel van de Klant in real time maar wordt verzonden naar het gegevenshoek voor analytische en gegevenswetenschappelijk gebruik-gevallen.
 
@@ -322,7 +294,7 @@ Als u de gegevensstroom Analytics wilt verwijderen, selecteert u **[!UICONTROL D
 
 ## Volgende stappen en extra bronnen
 
-Zodra de verbinding wordt gecreeerd, wordt de dataflow automatisch gecreeerd om de inkomende gegevens te bevatten en een dataset met uw geselecteerd schema te bevolken. Bovendien vindt de terugvulling van gegevens plaats en neemt deze tot 13 maanden aan historische gegevens in. Wanneer de eerste opname is voltooid, [!DNL Analytics] -gegevens en wordt deze gebruikt door downstream Experience Platform-services, zoals [!DNL Real-Time Customer Profile] en Segmentation Service. Raadpleeg de volgende documenten voor meer informatie:
+Zodra de verbinding wordt gecreeerd, wordt de dataflow automatisch gecreeerd om de inkomende gegevens te bevatten en een dataset met uw geselecteerd schema te bevolken. Bovendien vindt de terugvulling van gegevens plaats en neemt deze tot 13 maanden aan historische gegevens in. Wanneer de eerste opname is voltooid, worden de analysegegevens gebruikt door de Experience Platform-services stroomafwaarts, zoals [!DNL Real-Time Customer Profile] en Segmentation Service. Raadpleeg de volgende documenten voor meer informatie:
 
 * [[!DNL Real-Time Customer Profile]-overzicht](../../../../../profile/home.md)
 * [[!DNL Segmentation Service]-overzicht](../../../../../segmentation/home.md)
@@ -335,4 +307,5 @@ De volgende video is bedoeld als ondersteuning voor uw inzicht in het opnemen va
 >
 > De gebruikersinterface van [!DNL Experience Platform] in de volgende video is verouderd. Raadpleeg de bovenstaande documentatie voor de meest recente schermafbeeldingen en functionaliteit van de gebruikersinterface.
 
->[!VIDEO](https://video.tv.adobe.com/v/3430252?quality=12&learn=on&captions=dut)
+>[!VIDEO](https://video.tv.adobe.com/v/29687?quality=12&learn=on)
+
