@@ -25,7 +25,7 @@ Interne koppelingen, downloadkoppelingen en afsluitkoppelingen worden standaard 
 
 SDK van het Web steunt automatische klik het volgen voor verbindingen binnen **open DOM van de Schaduw** elementen.
 
-Vele moderne websites gebruiken {de Componenten van 0} Web ](https://developer.mozilla.org/en-US/docs/Web/Web_Components) om herbruikbare en ingekapselde gebruikersinterfaceelementen te bouwen. [ Deze componenten gebruiken vaak een technologie genoemd [**DOM van de Schaduw** ](https://developer.mozilla.org/en-US/docs/Web/API/Web_components/Using_shadow_DOM) om hun interne structuur en stijlen gescheiden van de rest van de pagina te houden.
+Vele moderne websites gebruiken {de Componenten van 0} Web [&#128279;](https://developer.mozilla.org/en-US/docs/Web/Web_Components) om herbruikbare en ingekapselde gebruikersinterfaceelementen te bouwen.  Deze componenten gebruiken vaak een technologie genoemd [**DOM van de Schaduw** ](https://developer.mozilla.org/en-US/docs/Web/API/Web_components/Using_shadow_DOM) om hun interne structuur en stijlen gescheiden van de rest van de pagina te houden.
 
 Er zijn twee soorten schaduw-DOM:
 
