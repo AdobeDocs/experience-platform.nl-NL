@@ -3,9 +3,9 @@ title: Opmerkingen bij de release Adobe Experience Platform Web SDK
 description: De nieuwste aanvullende informatie voor de Adobe Experience Platform Web SDK.
 keywords: Adobe Experience Platform Web SDK;Experience Platform Web SDK;Web SDK;release notes;
 exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
-source-git-commit: 7f3459f678c74ead1d733304702309522dd0018b
+source-git-commit: 5dc5e11962abf760692e0cb424cdd863d1905e87
 workflow-type: tm+mt
-source-wordcount: '2288'
+source-wordcount: '2355'
 ht-degree: 5%
 
 ---
@@ -15,6 +15,15 @@ ht-degree: 5%
 
 In dit document worden de opmerkingen bij de release voor de Adobe Experience Platform Web SDK besproken.
 Voor de recentste versienota&#39;s op de de markeringsuitbreiding van SDK van het Web, zie de [ nota&#39;s van de de marktextensie van SDK van het Web ](../tags/extensions/client/web-sdk/web-sdk-ext-release-notes.md).
+
+## Versie 2.27.0 - woensdag 20 mei 2025
+
+**Bevestigingen en verbeteringen**
+
+- Probleem verholpen met in-app berichten waarbij de aangepaste opmaak niet correct werd toegepast.
+- De indeling van de gebeurtenisgeschiedenis is gewijzigd. Hierdoor worden in-app berichten en inhoudskaarten opnieuw weergegeven terwijl de oude historiegegevens worden verwijderd.
+- Oplossing een kwestie waar de voorstellen in de gebruiksgevallen van het KUUROORD opnieuw zouden worden toegepast.
+- Probleem verholpen met klikken op volgen op schaduw-DOM-elementen.
 
 ## Versie 2.26.0 - 5 maart 2025
 
@@ -44,7 +53,7 @@ Voor de recentste versienota&#39;s op de de markeringsuitbreiding van SDK van he
 
 **Vaste en verbeteringen**
 
-- Oplossing van een gebiedsdeelkwestie met betrekking tot [ de Motor van de Regels van Adobe Experience Platform ](https://github.com/adobe/aepsdk-rulesengine-typescript/), die fouten in sommige klantenintegratie veroorzaakte. SDK van het Web vereist nu [&#128279;](https://github.com/adobe/aepsdk-rulesengine-typescript/) versie 2.0.3 van de Motor van de Regels van 0&rbrace; Adobe Experience Platform of later.
+- Oplossing van een gebiedsdeelkwestie met betrekking tot [ de Motor van de Regels van Adobe Experience Platform ](https://github.com/adobe/aepsdk-rulesengine-typescript/), die fouten in sommige klantenintegratie veroorzaakte. SDK van het Web vereist nu ](https://github.com/adobe/aepsdk-rulesengine-typescript/) versie 2.0.3 van de Motor van de Regels van 0} Adobe Experience Platform of later.[
 
 ## Versie 2.24.0 - vrijdag 31 oktober 2024
 
@@ -157,7 +166,7 @@ Voor de recentste versienota&#39;s op de de markeringsuitbreiding van SDK van he
 
 **Bevestigingen en verbeteringen**
 
-- SDK van het Web codeert nu de het koekjesbestemmingswaarden van Audience Manager, gelijkend op [ Data Integration Library (DIL) ](https://experienceleague.adobe.com/docs/audience-manager/user-guide/dil-api/dil-overview.html?lang=nl-NL).
+- SDK van het Web codeert nu de het koekjesbestemmingswaarden van Audience Manager, gelijkend op [ Data Integration Library (DIL) ](https://experienceleague.adobe.com/docs/audience-manager/user-guide/dil-api/dil-overview.html).
 
 ## Versie 2.16.0 - 25 april 2023
 

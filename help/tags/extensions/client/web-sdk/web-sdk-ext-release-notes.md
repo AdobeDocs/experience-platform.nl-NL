@@ -2,9 +2,9 @@
 title: Opmerkingen bij de release Adobe Experience Platform Web SDK
 description: Adobe Experience Platform Web SDK-tagextensie
 exl-id: 91de8c91-023a-45b6-9f67-ac75ee471e50
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 5dc5e11962abf760692e0cb424cdd863d1905e87
 workflow-type: tm+mt
-source-wordcount: '2570'
+source-wordcount: '2639'
 ht-degree: 5%
 
 ---
@@ -12,6 +12,24 @@ ht-degree: 5%
 # Opmerkingen bij de release Adobe Experience Platform Web SDK
 
 In dit document worden de releaseopmerkingen voor de Adobe Experience Platform Web SDK-tagextensie besproken. Voor de recentste versienota&#39;s op SDK zelf, zie de [ de versienota&#39;s van SDK van het Web van Experience Platform ](/help/web-sdk/release-notes.md).
+
+## Versie 2.30.0 - donderdag 21 mei 2025
+
+**Nieuwe functies**
+
+- U kunt nu een gegevenselement opgeven wanneer u cookies van andere leveranciers inschakelt.
+- Wissen van knoppen toegevoegd aan codevelden.
+- Bevat [ versie 2.27.0 ](../../../../web-sdk/release-notes.md#2-27-0) van het Web SDK van Adobe Experience Platform.
+
+**Bevestigingen en verbeteringen**
+
+- Toegevoegde validatie om te voorkomen dat `onBeforeLinkClickSend` wordt ingesteld wanneer gebeurtenisgroepering is ingeschakeld.
+
+## Versie 2.29.1 - vrijdag 8 mei 2025
+
+**Bevestigingen en verbeteringen**
+
+- Probleem verholpen waarbij instellingen niet werden opgeslagen wanneer na het bewerken meteen op &quot;Opslaan&quot; werd geklikt.
 
 ## Versie 2.29.0 - 5 maart 2025
 
