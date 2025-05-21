@@ -2,9 +2,9 @@
 title: Gebruikersinterface Identiteitsinstellingen
 description: Leer hoe u de gebruikersinterface voor identiteitsinstellingen gebruikt.
 exl-id: 738b7617-706d-46e1-8e61-a34855ab976e
-source-git-commit: 0aefcfbbbed675a08d9e3023b9f667ec59874e46
+source-git-commit: 6efd9c8fd1acce08027905f2e3c005a88a429a12
 workflow-type: tm+mt
-source-wordcount: '609'
+source-wordcount: '626'
 ht-degree: 0%
 
 ---
@@ -16,6 +16,10 @@ ht-degree: 0%
 >Neem contact op met uw Adobe-accountteam als u een bestaande sandbox hebt waarvoor samengevouwen grafieken moeten worden verwijderd (&quot;fixed&quot;) nadat u identiteitsinstellingen hebt ingeschakeld.
 
 Identiteitsinstellingen zijn een functie in de gebruikersinterface van de Adobe Experience Platform Identity Service die u kunt gebruiken om unieke naamruimten aan te wijzen en naamruimteprioriteit te configureren.
+
+Bekijk de volgende video voor aanvullende informatie over het gebruik van de interface [!DNL Graph Simulation] in de gebruikersinterface van de identiteitsservice:
+
+>[!VIDEO](https://video.tv.adobe.com/v/3458487/?learn=on&enablevpops)
 
 Lees deze gids om te leren hoe te om uw identiteitsmontages in UI te vormen.
 
