@@ -53,7 +53,7 @@ Voor de recentste versienota&#39;s op de de markeringsuitbreiding van SDK van he
 
 **Vaste en verbeteringen**
 
-- Oplossing van een gebiedsdeelkwestie met betrekking tot [ de Motor van de Regels van Adobe Experience Platform ](https://github.com/adobe/aepsdk-rulesengine-typescript/), die fouten in sommige klantenintegratie veroorzaakte. SDK van het Web vereist nu ](https://github.com/adobe/aepsdk-rulesengine-typescript/) versie 2.0.3 van de Motor van de Regels van 0} Adobe Experience Platform of later.[
+- Oplossing van een gebiedsdeelkwestie met betrekking tot [ de Motor van de Regels van Adobe Experience Platform ](https://github.com/adobe/aepsdk-rulesengine-typescript/), die fouten in sommige klantenintegratie veroorzaakte. SDK van het Web vereist nu [&#128279;](https://github.com/adobe/aepsdk-rulesengine-typescript/) versie 2.0.3 van de Motor van de Regels van 0&rbrace; Adobe Experience Platform of later.
 
 ## Versie 2.24.0 - vrijdag 31 oktober 2024
 
