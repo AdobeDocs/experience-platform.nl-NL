@@ -1,15 +1,15 @@
 ---
-title: De SDK van het web installeren met behulp van het NPM-pakket
+title: De Web SDK installeren met het NPM-pakket
 description: Gebruik een NPM-pakket om de Web SDK-bibliotheek te installeren en ernaar te verwijzen.
 exl-id: 4c70ec5d-33fd-4ef7-ba9e-5b92ff6c3e86
-source-git-commit: 8be502c9eea67119dc537a5d63a6c71e0bff1697
+source-git-commit: 8b6c958613923127880263679ce00ce359151300
 workflow-type: tm+mt
 source-wordcount: '167'
 ht-degree: 0%
 
 ---
 
-# De SDK van het web installeren met behulp van het NPM-pakket
+# De Web SDK installeren met het NPM-pakket
 
 SDK van het Web van Adobe Experience Platform is beschikbaar als [ NPM pakket ](https://www.npmjs.com). Door het NPM-pakket te installeren, hebt u controle over het constructieproces voor de Adobe Experience Platform Web SDK JavaScript-bibliotheek. Het NPM-pakket stelt EcmaScript versie 5-modules of EcmaScript versie 2015 (ES6)-modules beschikbaar die in de browser moeten worden uitgevoerd.
 
@@ -24,7 +24,7 @@ Het NPM-pakket van de Adobe Experience Platform Web SDK stelt een `createInstanc
 ```js
 import { createInstance } from "@adobe/alloy";
 const alloy = createInstance({ name: "alloy" });
-alloy("config", { ... });
+alloy("configure", { ... });
 alloy("sendEvent", { ... });
 ```
 
@@ -37,6 +37,6 @@ alloy("sendEvent", { ... });
 ```js
 var alloyLibrary = require("@adobe/alloy");
 var alloy = alloyLibrary.createInstance({ name: "alloy" });
-alloy("config", { ... });
+alloy("configure", { ... });
 alloy("sendEvent", { ... });
 ```
