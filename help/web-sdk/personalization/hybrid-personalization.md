@@ -3,9 +3,9 @@ title: Hybride personalisatie met Web SDK en Edge Network API
 description: In dit artikel wordt getoond hoe u de Web SDK in combinatie met de Edge Network API kunt gebruiken om hybride personalisatie op uw wegeigenschappen in te voeren.
 keywords: personalisatie; hybride; server-API; server-side; hybride implementatie;
 exl-id: 506991e8-701c-49b8-9d9d-265415779876
-source-git-commit: 7f3459f678c74ead1d733304702309522dd0018b
+source-git-commit: 7b91f4f486db67d4673877477a6be8287693533a
 workflow-type: tm+mt
-source-wordcount: '860'
+source-wordcount: '1188'
 ht-degree: 1%
 
 ---
@@ -39,7 +39,7 @@ In het onderstaande stroomdiagram wordt de volgorde beschreven van de stappen di
 1. De Edge Network API retourneert de personalisatie-inhoud naar uw toepassingsserver.
 1. De toepassingsserver keert een reactie van HTML op cliëntbrowser terug, die de [ identiteit en clusterkoekjes ](#cookies) bevatten.
 1. Op de clientpagina wordt de opdracht [!DNL Web SDK] `applyResponse` aangeroepen, waarbij de koppen en de hoofdtekst van het [!UICONTROL Edge Network API] -antwoord uit de vorige stap worden doorgegeven.
-1. [!DNL Web SDK] geeft de aanbiedingen van het Doel [[!DNL Visual Experience Composer (VEC)] ](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html?lang=nl-NL) en de punten van het Kanaal van Journey Optimizer automatisch terug, omdat de `renderDecisions` vlag aan `true` wordt geplaatst.
+1. [!DNL Web SDK] geeft de aanbiedingen van het Doel [[!DNL Visual Experience Composer (VEC)] ](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html) en de punten van het Kanaal van Journey Optimizer automatisch terug, omdat de `renderDecisions` vlag aan `true` wordt geplaatst.
 1. Doelformuliergebaseerde [!DNL HTML]/[!DNL JSON] -aanbiedingen en Journey Optimizer-ervaringen op basis van code worden handmatig toegepast via de `applyProposition` -methode om de [!DNL DOM] bij te werken op basis van de personalisatie-inhoud in het voorstel.
 1. Voor op vorm-gebaseerde [!DNL HTML]/ [!DNL JSON] aanbiedingen van het Doel en op code-gebaseerde ervaringen van Journey Optimizer, moeten de vertoningsgebeurtenissen manueel worden verzonden om erop te wijzen wanneer de teruggekeerde inhoud is getoond. Dit gebeurt via de opdracht `sendEvent` .
 
@@ -61,6 +61,39 @@ Edge Network API-aanvragen zijn vereist voor het ophalen van voorstellen en het 
 | Interactief verzoek om voorstellen terug te winnen | Applicatieserver |
 | Interactief verzoek om weergavemeldingen te verzenden | Applicatieserver |
 
+
+## Oprichting van de regionale host van Edge Network {#regional-host}
+
+Als u de regionale Edge Network-host wilt instellen, leest u eerst de locatiehint in het `kndctr_<orgId>_AdobeOrg_cluster` -cookie, die de volgende waarden kan hebben:
+
+* `va6`
+* `or2`
+* `irl1`
+* `ind1`
+* `sgp3`
+* `jpn3`
+* `aus3`
+
+Voorbeeld: `kndctr_53A16ACB5CC1D3760A495C99_AdobeOrg_cluster: va6`
+
+De regionale gastheer van Edge Network gebruikt het volgende formaat:`<location_hint>.server.adobedc.net` en kan de volgende waarden hebben:
+
+* `va6.server.adobedc.net`
+* `or2.server.adobedc.net`
+* `irl1.server.adobedc.net`
+* `ind1.server.adobedc.net`
+* `sgp3.server.adobedc.net`
+* `jpn3.server.adobedc.net`
+* `aus3.server.adobedc.net`
+
+Door deze specifieke hosts te gebruiken, worden de aanvragen doorgestuurd naar dezelfde Edge Network-locatie die de gebruiker eerder heeft bezocht. Het systeem kan de beste ervaring bieden, aangezien de gebruikersgegevens daar aanwezig zijn.
+
+Als er geen locatiehint (dus geen cookie) aanwezig is, gebruikt u de standaardhost: `server.adobedc.net` .
+
+>[!TIP]
+>
+>Als beste praktijken, zou u een lijst van toegestane plaatsen moeten gebruiken. Zo voorkomt u dat de locatiehint wordt gematigd, aangezien deze via cookies aan de clientzijde wordt geleverd.
+
 ## Analytische implicaties {#analytics}
 
 Bij het implementeren van hybride personalisatie moet u speciale aandacht besteden aan het tellen van pagina&#39;s in Analytics.
@@ -74,8 +107,7 @@ Het voorbeeld van deze implementatie gebruikt twee verschillende gegevensstromen
 
 Op deze manier registreert de server-side aanvraag geen Analytics-gebeurtenissen, maar de client-side aanvragen wel. Dit leidt ertoe dat de verzoeken van de Analyse nauwkeurig worden geteld.
 
-
-## Verzoek op de server {#server-side-request}
+## De serveraanvraag samenstellen {#server-side-request}
 
 De voorbeeldaanvraag hieronder illustreert een Edge Network API-aanvraag die uw toepassingsserver kan gebruiken om de personalisatie-inhoud op te halen.
 
@@ -145,16 +177,16 @@ curl -X POST "https://edge.adobedc.net/ee/v2/interact?dataStreamId={DATASTREAM_I
       "state":{
          "domain":"localhost",
          "cookiesEnabled":true,
-         "entries":[
-            {
-               "key":"kndctr_XXX_AdobeOrg_identity",
-               "value":"abc123"
-            },
-            {
-               "key":"kndctr_XXX_AdobeOrg_cluster",
-               "value":"or2"
-            }
-         ]
+         "entries": [{
+           "key": "kndctr_53A16ACB5CC1D3760A495C99_AdobeOrg_identity",
+           "value":"CiY0NzE0NzkwMTUyMzYzMzI4NDAxMjc3NDcwNzA2NTcxMjI3OTI1NVIRCJ_S-uCRMRABGAEqBElSTDHwAZ_S-uCRMQ=="
+         }, {
+           "key": "kndctr_53A16ACB5CC1D3760A495C99_AdobeOrg_consent",
+           "value": "general=in"
+         }, {
+            "key": "kndctr_53A16ACB5CC1D3760A495C99_AdobeOrg_cluster",
+            "value": "va6"
+         }]
       }
    }
 }'
@@ -165,10 +197,57 @@ curl -X POST "https://edge.adobedc.net/ee/v2/interact?dataStreamId={DATASTREAM_I
 | `dataStreamId` | `String` | Ja. | De id van de gegevensstroom die u gebruikt om de interacties door te geven aan de Edge Network. Zie het [ overzicht van gegevensstromen ](../../datastreams/overview.md) leren hoe te om een gegevensstroom te vormen. |
 | `requestId` | `String` | Nee | Een willekeurige id voor correlerende interne serveraanvragen. Als er niets wordt opgegeven, genereert de Edge Network er een en retourneert deze het antwoord. |
 
+### Proxyheaders {#proxy-headers}
+
+De volgende kopballen worden vereist om het verzoek correct te verwerken.
+
+* `Referer`
+* `X-Forwarded-For`
+* `X-Forwarded-Proto`
+* `X-Forwarded-Host`
+
+Zorg ervoor dat u deze op de juiste wijze instelt om naar de werkelijke clientgegevens te verwijzen. De header `X-Forwarded-For` moet bijvoorbeeld de client-IP bevatten, zodat een juiste geolocatie kan plaatsvinden.
+
+### Kopteksten van gebruikersagent {#user-agent-headers}
+
+Gebruik de volgende gebruiker-agent kopballen om het verzoek correct te verwerken.
+
+**Gebrek**
+
+* `User-Agent`
+
+**Lage entropie (verplicht):**
+
+* `Sec-CH-UA`
+* `Sec-CH-UA-Mobile`
+* `Sec-CH-UA-Platform`
+
+**Hoge entropie (facultatief):**
+
+* `Sec-CH-UA-Platform-Version`
+* `Sec-CH-UA-Arch`
+* `Sec-CH-UA-Model`
+* `Sec-CH-UA-Bitness`
+* `Sec-CH-UA-WoW64`
+
+Het verzoek moet worden verzonden zoals aangetoond in de [ Edge Network API specificatie ](https://developer.adobe.com/data-collection-apis/docs/endpoints/interact/). Zie de [ verpersoonlijkingsdocumentatie ](https://developer.adobe.com/data-collection-apis/docs/getting-started/personalization/) als uw gebruiksgeval het vereist.
+
 ### Serverreactie {#server-response}
 
-De voorbeeldreactie hieronder laat zien hoe de Edge Network API-respons eruit zou kunnen zien.
+Het Edge Network-antwoord bevat `state:store` instructies die moeten worden getransformeerd in `Set-Cookie` headers. Ze worden opgeslagen in de browser en de Web SDK-implementatie kan ze gebruiken.
 
+De koekjes zouden op het top-level domein moeten worden geplaatst, zodat zij samen met verzoeken naar de serverimplementatie evenals de cliënt worden verzonden. (Of ten minste een gemeenschappelijk subdomein dat door beide implementaties wordt gebruikt)
+
+Voorbeeld:
+
+* Aanroepen op de server gebruiken `api.example.com`
+* Het gebruik van gesprekken aan de clientzijde `adobe.example.com`
+
+Cookies moeten worden ingesteld op `.example.com` , zodat ze in beide gevallen worden gedeeld.
+
+De reactie aan de serverzijde wordt geordend in fragmenten die `Handles` worden genoemd, die afhankelijk van de configuratie van de gegevensstroom worden geproduceerd. Aanpassingsprogramma&#39;s in real-time retourneren bijvoorbeeld `personalization:decisions` -handgrepen terwijl de activeringsengine in real-time `activation:pull` -handgrepen produceert.
+
+De voorbeeldreactie hieronder laat zien hoe de Edge Network API-respons eruit zou kunnen zien.
 
 ```json
 {
@@ -200,6 +279,8 @@ De voorbeeldreactie hieronder laat zien hoe de Edge Network API-respons eruit zo
    ]
 }
 ```
+
+
 
 ## Aanvraag op de client {#client-request}
 
