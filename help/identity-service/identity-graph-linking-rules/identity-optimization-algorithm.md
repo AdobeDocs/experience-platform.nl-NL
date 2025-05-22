@@ -2,9 +2,9 @@
 title: Algoritme voor identiteitsoptimalisatie
 description: Leer over het Algoritme van de Optimalisering van de Identiteit in de Dienst van de Identiteit.
 exl-id: 5545bf35-3f23-4206-9658-e1c33e668c98
-source-git-commit: 28eab3488dccdcc6239b9499e875c31ff132fd48
+source-git-commit: 0587ddf1012adb13e6d399953839735f73fe151e
 workflow-type: tm+mt
-source-wordcount: '1527'
+source-wordcount: '1580'
 ht-degree: 0%
 
 ---
@@ -49,7 +49,7 @@ Naamruimten in Identiteitsservice hebben een impliciete relatieve volgorde van b
 
 Voor een diepgaande blik bij namespace prioriteit en zijn volledige functionaliteit en gebruik, lees de [ namespace prioritaire gids ](./namespace-priority.md).
 
-![ grafieklagen en namespace prioriteit ](../images/namespace-priority/graph-layers.png)
+![ de grafieklagen en namespace prioriteit.](../images/namespace-priority/graph-layers.png " de grafieklagen en namespace prioriteit."){zoomable="yes"}
 
 ## Proces {#process}
 
@@ -68,7 +68,7 @@ Wanneer de unieke naamruimtebeperking wordt overtreden, worden de koppelingen op
 * De grafiek zou op basis van de bovenstaande volgorde opnieuw tot stand komen. Als het toevoegen van de koppeling de limietbeperking schendt (de grafiek bevat bijvoorbeeld twee of meer identiteiten met een unieke naamruimte), worden de koppelingen verwijderd.
 * De resulterende grafiek zal dan volgzaam met de unieke namespace beperking zijn die u vormde.
 
-![ een diagram dat het Algoritme van de Optimalisering van de Identiteit visualiseert.](../images/ido_algorithm.png)
+![ een diagram dat het Algoritme van de Optimalisering van de Identiteit visualiseert.](../images/ido_algorithm.png " een diagram dat het Algoritme van de Optimalisering van de Identiteit visualiseert."){zoomable="yes"}
 
 ## Voorbeeldscenario&#39;s voor algoritme voor identiteitsoptimalisatie
 
@@ -95,7 +95,7 @@ In dit voorbeeld worden zowel CRMID als e-mail aangewezen als unieke naamruimten
 * Vanwege de unieke naamruimteconfiguratie die een maximum van één CRMID-naamruimte en één E-mailnaamruimte per grafiek instelt, wordt de grafiek in tweeën gesplitst.
    * Ten slotte, omdat John de laatste geverifieerde gebruiker is, blijft de ECID die de laptop vertegenwoordigt gekoppeld aan zijn grafiek in plaats van aan Jane.
 
-![ gedeelde apparatengeval één ](../images/identity-settings/shared-device-case-one.png)
+![ Geval één van gedeeld apparaat.](../images/identity-settings/shared-device-case-one.png " Geval één van gedeeld apparaat."){zoomable="yes"}
 
 >[!TAB  Voorbeeld twee ]
 
@@ -112,7 +112,7 @@ In dit voorbeeld wordt de naamruimte CRMID aangewezen als een unieke naamruimte.
    * Dientengevolge, verwijdert het Algoritme van de Optimalisering van de Identiteit de oudere verbinding, die in dit geval CRMID van Jane is die bij `timestamp=1` werd verbonden.
    * Nochtans, terwijl CRMID van Jane niet meer als grafiek op de Dienst van de Identiteit zal bestaan, zal het nog als profiel op het Profiel van de Klant in real time blijven. Dit komt omdat een identiteitsgrafiek minstens twee verbonden identiteiten moet bevatten, en als resultaat van het verwijderen van de verbindingen, heeft CRMID van Jane niet meer een andere identiteit om met te verbinden.
 
-![ delen-apparaat-geval-twee ](../images/identity-settings/shared-device-case-two.png)
+![ Geval twee van gedeeld apparaat.](../images/identity-settings/shared-device-case-two.png " Geval twee van gedeeld apparaat."){zoomable="yes"}
 
 >[!ENDTABS]
 
@@ -137,7 +137,7 @@ In dit voorbeeld worden de naamruimten CRMID en Email als uniek aangeduid. Overw
 
 Met het Algoritme van de Optimalisering van de Identiteit, worden de slechte identiteitswaarden zoals bogus e-mails of telefoonaantallen niet verspreid over verscheidene verschillende identiteitsgrafieken.
 
-![ slecht-e-mail ](../images/identity-settings/bad-email.png)
+![ een diagram van een slechte e-mailopname.](../images/identity-settings/bad-email.png " een diagram van een slechte e-mailopname."){zoomable="yes"}
 
 ## Anonieme gebeurtenisassociatie
 
@@ -154,7 +154,7 @@ Bekijk het onderstaande diagram om beter te begrijpen hoe anonieme gebeurtenisas
       * Vóór zijn eerste aanmelding vóór `timestamp=1`; en
       * Om het even welke activiteiten hij of Nora deed terwijl het doorbladeren anoniem in-tussen Kevin&#39;s eerste en tweede logins.
 
-![ anon-event-association ](../images/identity-settings/anon-event-association.png)
+![ een diagram van anonieme gebeurtenisvereniging.](../images/identity-settings/anon-event-association.png " een diagram van anonieme gebeurtenisvereniging."){zoomable="yes"}
 
 
 ## Volgende stappen

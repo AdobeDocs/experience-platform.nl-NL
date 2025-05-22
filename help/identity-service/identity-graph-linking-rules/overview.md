@@ -2,9 +2,9 @@
 title: Identiteitsgrafiekkoppelingsregels
 description: Leer over de Regels van de Vereniging van de Grafiek van Identiteit in de Dienst van de Identiteit.
 exl-id: 317df52a-d3ae-4c21-bcac-802dceed4e53
-source-git-commit: 6efd9c8fd1acce08027905f2e3c005a88a429a12
+source-git-commit: c9b5de33de91b93f179b4720f692eb876e94df72
 workflow-type: tm+mt
-source-wordcount: '1570'
+source-wordcount: '1600'
 ht-degree: 0%
 
 ---
@@ -18,7 +18,7 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
->Neem contact op met uw Adobe-accountteam als u een bestaande sandbox hebt waarvoor samengevouwen grafieken moeten worden verwijderd (&quot;fixed&quot;) nadat u identiteitsinstellingen hebt ingeschakeld.
+>[!DNL Identity Graph Linking Rules] is nu algemeen beschikbaar. Neem contact op met de Technische Ondersteuning van Adobe als u een bestaande sandbox hebt waarvoor samengevouwen grafieken moeten worden samengevouwen (&quot;fixed&quot;) nadat u identiteitsinstellingen hebt ingeschakeld.
 
 Met Adobe Experience Platform Identity Service en Real-Time Customer Profile is het eenvoudig om aan te nemen dat uw gegevens perfect zijn opgenomen en dat alle samengevoegde profielen één persoon vertegenwoordigen via een personenteken, zoals een CRMID. Er zijn echter scenario&#39;s waarin bepaalde gegevens kunnen proberen meerdere verschillende profielen samen te voegen tot één profiel (grafiek samenvouwen). Om deze ongewenste samenvoegingen te voorkomen, kunt u configuraties gebruiken die via [!DNL Identity Graph Linking Rules] worden geleverd en nauwkeurige personalisatie voor uw gebruikers mogelijk maken.
 
@@ -40,12 +40,12 @@ Bekijk de volgende video&#39;s om meer te leren over enkele fundamentele aspecte
 
 <!-- CARDS
 {target = _blank}
-* https://experienceleague.adobe.com/nl/docs/platform-learn/tutorials/identities/graph-linking-rules/overview
-* https://experienceleague.adobe.com/nl/docs/platform-learn/tutorials/identities/graph-linking-rules/graph-simulation 
+* https://experienceleague.adobe.com/en/docs/platform-learn/tutorials/identities/graph-linking-rules/overview
+* https://experienceleague.adobe.com/en/docs/platform-learn/tutorials/identities/graph-linking-rules/graph-simulation 
 
     {description = Learn how to use the graph simulator to test out identity graph linking rules.}
 
-* https://experienceleague.adobe.com/nl/docs/platform-learn/tutorials/identities/graph-linking-rules/identity-settings
+* https://experienceleague.adobe.com/en/docs/platform-learn/tutorials/identities/graph-linking-rules/identity-settings
     {description = Learn how to enable and configure identity graph linking rules to build accurate customer profiles}
 -->
 <!-- START CARDS HTML - DO NOT MODIFY BY HAND -->
@@ -54,8 +54,8 @@ Bekijk de volgende video&#39;s om meer te leren over enkele fundamentele aspecte
         <div class="card" style="height: 100%; display: flex; flex-direction: column; height: 100%;">
             <div class="card-image">
                 <figure class="image x-is-16by9">
-                    <a href="https://experienceleague.adobe.com/nl/docs/platform-learn/tutorials/identities/graph-linking-rules/overview" title="Overzicht van regels voor identiteitsgrafiek" target="_blank" rel="referrer">
-                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3448278/?format=jpeg&nocache=1747851655227&captions=dut" alt="Overzicht van regels voor identiteitsgrafiek"
+                    <a href="https://experienceleague.adobe.com/en/docs/platform-learn/tutorials/identities/graph-linking-rules/overview" title="Overzicht van regels voor identiteitsgrafiek" target="_blank" rel="referrer">
+                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3448250/?format=jpeg&nocache=1747851655227" alt="Overzicht van regels voor identiteitsgrafiek"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
@@ -63,11 +63,11 @@ Bekijk de volgende video&#39;s om meer te leren over enkele fundamentele aspecte
             <div class="card-content is-padded-small" style="display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between;">
                 <div class="top-card-content">
                     <p class="headline is-size-6 has-text-weight-bold">
-                        <a href="https://experienceleague.adobe.com/nl/docs/platform-learn/tutorials/identities/graph-linking-rules/overview" target="_blank" rel="referrer" title="Overzicht van regels voor identiteitsgrafiek"> grafiek die van de Identiteit regels verbindt overzicht </a>
+                        <a href="https://experienceleague.adobe.com/en/docs/platform-learn/tutorials/identities/graph-linking-rules/overview" target="_blank" rel="referrer" title="Overzicht van regels voor identiteitsgrafiek"> grafiek die van de Identiteit regels verbindt overzicht </a>
                     </p>
                     <p class="is-size-6">Krijg een overzicht van hoe de grafiek die van de identiteitsgrafiek regels verbindt gegevensarchitecten nauwkeurige klantenprofielen handhaaft en grafiekondergang verhindert.</p>
                 </div>
-                <a href="https://experienceleague.adobe.com/nl/docs/platform-learn/tutorials/identities/graph-linking-rules/overview" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
+                <a href="https://experienceleague.adobe.com/en/docs/platform-learn/tutorials/identities/graph-linking-rules/overview" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
                     <span class="spectrum-Button-label has-no-wrap has-text-weight-bold"> Controle </span>
                 </a>
             </div>
@@ -77,8 +77,8 @@ Bekijk de volgende video&#39;s om meer te leren over enkele fundamentele aspecte
         <div class="card" style="height: 100%; display: flex; flex-direction: column; height: 100%;">
             <div class="card-image">
                 <figure class="image x-is-16by9">
-                    <a href="https://experienceleague.adobe.com/nl/docs/platform-learn/tutorials/identities/graph-linking-rules/graph-simulation" title="Identiteitsgrafiek die regels verbindt - de Simulatie van de Grafiek" target="_blank" rel="referrer">
-                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3444049/?format=jpeg&nocache=1747851655237&captions=dut" alt="Identiteitsgrafiek die regels verbindt - de Simulatie van de Grafiek"
+                    <a href="https://experienceleague.adobe.com/en/docs/platform-learn/tutorials/identities/graph-linking-rules/graph-simulation" title="Identiteitsgrafiek die regels verbindt - de Simulatie van de Grafiek" target="_blank" rel="referrer">
+                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3444032/?format=jpeg&nocache=1747851655237" alt="Identiteitsgrafiek die regels verbindt - de Simulatie van de Grafiek"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
@@ -86,11 +86,11 @@ Bekijk de volgende video&#39;s om meer te leren over enkele fundamentele aspecte
             <div class="card-content is-padded-small" style="display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between;">
                 <div class="top-card-content">
                     <p class="headline is-size-6 has-text-weight-bold">
-                        <a href="https://experienceleague.adobe.com/nl/docs/platform-learn/tutorials/identities/graph-linking-rules/graph-simulation" target="_blank" rel="referrer" title="Identiteitsgrafiek die regels verbindt - de Simulatie van de Grafiek"> grafiek die van de Identiteit regels verbindt - de Simulatie van de Grafiek </a>
+                        <a href="https://experienceleague.adobe.com/en/docs/platform-learn/tutorials/identities/graph-linking-rules/graph-simulation" target="_blank" rel="referrer" title="Identiteitsgrafiek die regels verbindt - de Simulatie van de Grafiek"> grafiek die van de Identiteit regels verbindt - de Simulatie van de Grafiek </a>
                     </p>
                     <p class="is-size-6">Leer hoe u de koppelingsregels voor identiteitsgrafieken test met de grafieksimulator.</p>
                 </div>
-                <a href="https://experienceleague.adobe.com/nl/docs/platform-learn/tutorials/identities/graph-linking-rules/graph-simulation" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
+                <a href="https://experienceleague.adobe.com/en/docs/platform-learn/tutorials/identities/graph-linking-rules/graph-simulation" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
                     <span class="spectrum-Button-label has-no-wrap has-text-weight-bold"> Controle </span>
                 </a>
             </div>
@@ -100,7 +100,7 @@ Bekijk de volgende video&#39;s om meer te leren over enkele fundamentele aspecte
         <div class="card" style="height: 100%; display: flex; flex-direction: column; height: 100%;">
             <div class="card-image">
                 <figure class="image x-is-16by9">
-                    <a href="https://experienceleague.adobe.com/nl/docs/platform-learn/tutorials/identities/graph-linking-rules/identity-settings" title="Identiteitsgrafiekkoppelingsregels - Identiteitsinstellingen" target="_blank" rel="referrer">
+                    <a href="https://experienceleague.adobe.com/en/docs/platform-learn/tutorials/identities/graph-linking-rules/identity-settings" title="Identiteitsgrafiekkoppelingsregels - Identiteitsinstellingen" target="_blank" rel="referrer">
                         <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3458487/?format=jpeg&nocache=1747851655218" alt="Identiteitsgrafiekkoppelingsregels - Identiteitsinstellingen"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
@@ -109,11 +109,11 @@ Bekijk de volgende video&#39;s om meer te leren over enkele fundamentele aspecte
             <div class="card-content is-padded-small" style="display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between;">
                 <div class="top-card-content">
                     <p class="headline is-size-6 has-text-weight-bold">
-                        <a href="https://experienceleague.adobe.com/nl/docs/platform-learn/tutorials/identities/graph-linking-rules/identity-settings" target="_blank" rel="referrer" title="Identiteitsgrafiekkoppelingsregels - Identiteitsinstellingen"> grafiek die van de Identiteit regels verbindt - de montages van de Identiteit </a>
+                        <a href="https://experienceleague.adobe.com/en/docs/platform-learn/tutorials/identities/graph-linking-rules/identity-settings" target="_blank" rel="referrer" title="Identiteitsgrafiekkoppelingsregels - Identiteitsinstellingen"> grafiek die van de Identiteit regels verbindt - de montages van de Identiteit </a>
                     </p>
                     <p class="is-size-6">Leer hoe te om identiteitsgrafiek toe te laten en te vormen die regels verbindt om nauwkeurige klantenprofielen te bouwen</p>
                 </div>
-                <a href="https://experienceleague.adobe.com/nl/docs/platform-learn/tutorials/identities/graph-linking-rules/identity-settings" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
+                <a href="https://experienceleague.adobe.com/en/docs/platform-learn/tutorials/identities/graph-linking-rules/identity-settings" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
                     <span class="spectrum-Button-label has-no-wrap has-text-weight-bold"> Controle </span>
                 </a>
             </div>
@@ -142,7 +142,7 @@ Er zijn gevallen waarin meerdere aanmeldingen op één apparaat kunnen plaatsvin
 | Openbare kiosk | Reizigers op een luchthaven melden zich aan met hun loyaliteitsidentiteitskaart om zakken in te checken en instapkaarten af te drukken. |
 | Bellen | Het personeel van het centrum van de vraag login op één enkel apparaat namens klanten die klantensteun roepen om kwesties op te lossen. |
 
-![ een diagram van sommige gemeenschappelijke gedeelde apparaten.](../images/identity-settings/shared-devices.png)
+![ een diagram van sommige gemeenschappelijke gedeelde apparaten.](../images/identity-settings/shared-devices.png " een diagram van sommige gemeenschappelijke gedeelde apparaten."){zoomable="yes"}
 
 In deze gevallen, vanuit grafiekstandpunt, zonder toegelaten grenzen, zal één enkele ECID met veelvoudige CRMIDs worden verbonden.
 
@@ -155,7 +155,7 @@ Met [!DNL Identity Graph Linking Rules] kunt u:
 
 Er zijn ook instanties van gebruikers die valse waarden als telefoonaantallen en/of e-mailadressen verstrekken wanneer het registreren. In deze gevallen, als de grenzen niet worden toegelaten, dan zal telefoon/e-mail verwante identiteiten uiteindelijk worden verbonden met veelvoudige verschillende CRMIDs.
 
-![ een diagram dat ongeldige e-mail of telefoonscenario&#39;s vertegenwoordigt.](../images/identity-settings/invalid-email-phone.png)
+![ diagram van A dat ongeldige e-mail of telefoonscenario&#39;s vertegenwoordigt.](../images/identity-settings/invalid-email-phone.png " een diagram dat ongeldige e-mail of telefoonscenario&#39;s vertegenwoordigt."){zoomable="yes"}
 
 Met [!DNL Identity Graph Linking Rules] kunt u:
 
@@ -172,7 +172,7 @@ Er zijn gevallen waarin niet-unieke, onjuiste identiteitswaarden in het systeem 
 
 Deze identiteiten zouden in de volgende grafieken kunnen resulteren, waar veelvoudige CRMIDs samen met de &quot;slechte&quot;identiteit worden samengevoegd:
 
-![ een grafiekvoorbeeld van identiteitsgegevens met onjuiste of slechte identiteitswaarden.](../images/identity-settings/bad-data.png)
+![ een grafiekvoorbeeld van identiteitsgegevens met onjuiste of slechte identiteitswaarden.](../images/identity-settings/bad-data.png " een grafiekvoorbeeld van identiteitsgegevens met onjuiste of slechte identiteitswaarden."){zoomable="yes"}
 
 Met [!DNL Identity Graph Linking Rules] kunt u de CRMID configureren als de unieke id om te voorkomen dat ongewenst profiel samenvouwt als gevolg van dit type gegevens.
 

@@ -2,9 +2,9 @@
 title: Implementatiegids voor koppelingsregels voor identiteitsgrafieken
 description: Leer de aanbevolen stappen die u moet volgen wanneer u uw gegevens implementeert met configuraties van Identity Graph Linking Rules.
 exl-id: 368f4d4e-9757-4739-aaea-3f200973ef5a
-source-git-commit: 28eab3488dccdcc6239b9499e875c31ff132fd48
+source-git-commit: 0587ddf1012adb13e6d399953839735f73fe151e
 workflow-type: tm+mt
-source-wordcount: '1852'
+source-wordcount: '1943'
 ht-degree: 0%
 
 ---
@@ -41,7 +41,7 @@ U moet ervoor zorgen dat de unieke naamruimte met de hoogste prioriteit altijd a
 
 Zonder een unieke naamruimte die uw persoon-id vertegenwoordigt, kunt u eindigen met een grafiek die een koppeling bevat naar verschillende personen-id&#39;s voor dezelfde ECID. In dit voorbeeld zijn zowel B2BCRM als B2CCRM tegelijkertijd gekoppeld aan dezelfde ECID. Deze grafiek suggereert dat Tom, met zijn B2C-aanmeldingsaccount, een apparaat deelde met Summer, met haar B2B-aanmeldingsaccount. Het systeem herkent echter dat dit één profiel is (grafiek samenvouwen).
 
-![ de grafiekscenario van A waar twee persoonherkenningstekens met zelfde ECID verbonden zijn.](../images/graph-examples/multi_namespaces.png)
+![ een grafiekscenario waar twee persoon herkenningstekens met zelfde ECID verbonden zijn.](../images/graph-examples/multi_namespaces.png " de grafiekscenario van A waar twee persoonherkenningstekens met zelfde ECID verbonden zijn."){zoomable="yes"}
 
 +++
 
@@ -49,7 +49,7 @@ Zonder een unieke naamruimte die uw persoon-id vertegenwoordigt, kunt u eindigen
 
 Op basis van een unieke naamruimte (in dit geval een CRMID in plaats van twee verschillende naamruimten) kan de identiteitsdienst de persoon-id zien die het laatst aan de ECID is gekoppeld. In dit voorbeeld, omdat een unieke CRMID bestaat, kan de Dienst van de Identiteit een &quot;gedeeld apparaat&quot;scenario erkennen, waar twee entiteiten het zelfde apparaat delen.
 
-![ een gedeeld scenario van de apparatengrafiek, waar twee persoonherkenningstekens met zelfde ECID verbonden zijn, maar de oudere verbinding wordt verwijderd.](../images/graph-examples/crmid_only_multi.png)
+![ een gedeeld scenario van de apparatengrafiek, waar twee persoonherkenningstekens met zelfde ECID verbonden zijn, maar de oudere verbinding wordt verwijderd.](../images/graph-examples/crmid_only_multi.png " een gedeeld scenario van de apparatengrafiek, waar twee persoonherkenningstekens met zelfde ECID verbonden zijn, maar de oudere verbinding wordt verwijderd."){zoomable="yes"}
 
 +++
 
@@ -149,7 +149,7 @@ Daarom is het aan te raden slechts één persoon-id met uw geverifieerde gebeurt
 
 In grafieksimulatie kan deze opname er als volgt uitzien:
 
-![ de grafieksimulatie UI met een getoonde voorbeeldgrafiek.](../images/implementation/example-graph.png)
+![ de grafieksimulatie UI met een getoonde voorbeeldgrafiek.](../images/implementation/example-graph.png " de grafieksimulatie UI met een getoonde voorbeeldgrafiek."){zoomable="yes"}
 
 >[!TAB  Voor authentiek verklaarde gebeurtenissen zonder enige persoonherkenningstekens ]
 
@@ -201,7 +201,7 @@ Door verschillende configuraties te creëren, kunt u het hulpmiddel van de grafi
 
 Zodra u een beter idee van hebt hoe u uw grafiek wilt gedragen, navigeer aan de [ montages UI van de Identiteit ](./identity-settings-ui.md) in de werkruimte UI van de Dienst van de Identiteit. Als u de gebruikersinterface voor identiteitsinstellingen wilt openen, selecteert u **[!UICONTROL Identities]** in de navigatie links en selecteert u **[!UICONTROL Settings]** .
 
-![ de identiteiten doorbladeren pagina met de benadrukte montagesknoop.](../images/implementation/settings.png)
+![ de identiteiten doorbladeren pagina met de benadrukte montagesknoop.](../images/implementation/settings.png " de identiteiten doorbladeren pagina met de benadrukte montagesknoop."){zoomable="yes"}
 
 Gebruik de interface voor identiteitsinstellingen om uw unieke naamruimten aan te wijzen en uw naamruimten op volgorde van prioriteit te configureren. Zodra u met het toepassen van uw montages wordt gebeëindigd, moet u minstens zes uren wachten alvorens u te werk gaat om gegevens in te voeren, aangezien het minstens zes uren voor nieuwe montages om in de Dienst van de Identiteit moet worden weerspiegeld.
 
@@ -249,11 +249,11 @@ Gebruik het identiteitsdashboard voor inzicht in de staat van uw identiteitsgraf
 
 Selecteer de ellipsen (`...`) en selecteer vervolgens **[!UICONTROL View more]** voor meer informatie en om te controleren of er geen samengevouwen grafieken zijn.
 
-![ het identiteitsdashboard in de werkruimte UI van de Dienst van de Identiteit.](../images/implementation/identity_dashboard.png)
+![ het identiteitsdashboard in de werkruimte UI van de Dienst van de Identiteit.](../images/implementation/identity_dashboard.png " het identiteitsdashboard in de werkruimte UI van de Dienst van de Identiteit."){zoomable="yes"}
 
 Gebruik het venster dat verschijnt om informatie over uw samengevouwen grafieken te bekijken. In dit voorbeeld zijn zowel e-mail als telefoon gemarkeerd als unieke naamruimte. Er zijn daarom geen samengevouwen grafieken in uw sandbox.
 
-![ het pop-up venster voor grafieken met veelvoudige identiteiten.](../images/implementation/graphs.png)
+![ het pop-up venster voor grafieken met veelvoudige identiteiten.](../images/implementation/graphs.png " het pop-up venster voor grafieken met veelvoudige identiteiten."){zoomable="yes"}
 
 ## Bijlage {#appendix}
 
@@ -269,13 +269,13 @@ De volgende grafiek simuleert een &quot;gevaarlijk&quot;loginID scenario. In dit
 
 In dit voorbeeld blijft `{loginID: ID_C}` gevaarlijk en is het niet gekoppeld aan een CRMID. Aldus, wordt de persoonentiteit waaraan deze loginID zou moeten worden geassocieerd dubbelzinnig verlaten.
 
-![ een voorbeeld van een grafiek met een &quot;gevaarlijk&quot;loginID scenario.](../images/graph-examples/dangling_example.png)
+![ een voorbeeld van een grafiek met een &quot;gevaarlijk&quot;loginID scenario.](../images/graph-examples/dangling_example.png " een voorbeeld van een grafiek met een gevaarlijk loginID scenario."){zoomable="yes"}
 
 >[!TAB  loginID is verbonden met een CRMID ]
 
 In dit voorbeeld is `{loginID: ID_C}` gekoppeld aan `{CRMID: Tom}` . Daarom kan het systeem vaststellen dat deze loginID aan Tom is gekoppeld.
 
-![ LoginID is verbonden met een CRMID.](../images/graph-examples/id_c_tom.png)
+![ LoginID is verbonden met een CRMID.](../images/graph-examples/id_c_tom.png " LoginID is verbonden met een CRMID."){zoomable="yes"}
 
 >[!TAB  loginID is verbonden met een andere CRMID ]
 
@@ -283,7 +283,7 @@ In dit voorbeeld is `{loginID: ID_C}` gekoppeld aan `{CRMID: Summer}` . Daarom k
 
 In dit voorbeeld wordt ook getoond dat Tom en Summer verschillende persoonentiteiten moeten hebben die een apparaat delen, dat wordt vertegenwoordigd door `{ECID: 111}` .
 
-![ LoginID is verbonden met een andere CRMID.](../images/graph-examples/id_c_summer.png)
+![ LoginID is verbonden met een andere CRMID.](../images/graph-examples/id_c_summer.png " LoginID is verbonden met een andere CRMID."){zoomable="yes"}
 
 >[!ENDTABS]
 

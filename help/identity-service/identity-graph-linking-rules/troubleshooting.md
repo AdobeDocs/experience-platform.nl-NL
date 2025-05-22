@@ -2,9 +2,9 @@
 title: De Gids van het oplossen van problemen voor de Regels van de Verbinding van de Grafiek van de Identiteit
 description: Leer hoe te om gemeenschappelijke kwesties in de grafiek van de Identiteit problemen op te lossen die Regels verbindt.
 exl-id: 98377387-93a8-4460-aaa6-1085d511cacc
-source-git-commit: 28eab3488dccdcc6239b9499e875c31ff132fd48
+source-git-commit: c9b5de33de91b93f179b4720f692eb876e94df72
 workflow-type: tm+mt
-source-wordcount: '3278'
+source-wordcount: '3288'
 ht-degree: 0%
 
 ---
@@ -17,7 +17,7 @@ Terwijl u [!DNL Identity Graph Linking Rules] test en valideert, kan het gebeure
 
 Het volgende diagram is een vereenvoudigde weergave van hoe gegevens stromen naar Adobe Experience Platform en Toepassingen. Gebruik dit diagram als verwijzing om u te helpen een beter inzicht in de inhoud van deze pagina krijgen.
 
-![ een diagram van hoe de gegevensopname in de Dienst van de Identiteit stroomt.](../images/troubleshooting/dataflow_in_identity.png)
+![ een diagram van hoe de gegevensopname in de Dienst van de Identiteit stroomt.](../images/troubleshooting/dataflow_in_identity.png " een diagram van hoe de gegevensopname in de Dienst van de Identiteit stroomt."){zoomable="yes"}
 
 Het is van belang de volgende factoren in aanmerking te nemen:
 
