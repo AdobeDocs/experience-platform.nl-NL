@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Identiteitsvelden definiëren in de gebruikersinterface
 description: Leer hoe u een identiteitsveld definieert in de Experience Platform-gebruikersinterface.
 exl-id: 11a53345-4c3f-4537-b3eb-ee7a5952df2a
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 3570197ca6cff95368b4facb034386e793033fe2
 workflow-type: tm+mt
-source-wordcount: '644'
+source-wordcount: '657'
 ht-degree: 0%
 
 ---
@@ -17,7 +17,7 @@ In het Model van Gegevens van de Ervaring (XDM), vertegenwoordigt een identiteit
 
 ## Vereisten
 
-Identiteitsvelden vormen een cruciaal onderdeel van de manier waarop identiteitsgrafieken van klanten in Experience Platform worden samengesteld. Dit beïnvloedt uiteindelijk de manier waarop in Real-Time Customer Profile verschillende gegevensfragmenten worden samengevoegd om een volledig beeld van de klant te krijgen. Voordat u identiteitsvelden in uw schema&#39;s definieert, raadpleegt u de volgende documentatie voor meer informatie over de belangrijkste services en concepten met betrekking tot identiteitsvelden:
+Identiteitsvelden vormen een cruciaal onderdeel van de manier waarop identiteitsgrafieken van klanten in Experience Platform worden samengesteld. Dit beïnvloedt uiteindelijk de manier waarop in Real-Time Customer Profile verschillende gegevensfragmenten worden samengevoegd om een volledig beeld van de klant te krijgen. Alvorens identiteitsgebieden in uw schema&#39;s te bepalen, verwijs naar de volgende documentatie om over de belangrijkste diensten en de concepten met betrekking tot identiteitsgebieden te leren:
 
 * [ Dienst van de Identiteit van Adobe Experience Platform ](../../../identity-service/home.md): Brugshanden identiteiten over apparaten en systemen, die datasets verbinden samen op de identiteitsgebieden worden gebaseerd die door de schema&#39;s XDM worden bepaald zij met in overeenstemming zijn.
    * [ Identiteit namespaces ](../../../identity-service/features/namespaces.md): Identiteitsnaamruimten bepalen de verschillende soorten identiteitsinformatie die op één enkele persoon kunnen betrekking hebben, en een vereiste component voor elk identiteitsgebied zijn.
@@ -46,7 +46,7 @@ Als u klaar bent, selecteert u **[!UICONTROL Apply]** om de wijziging toe te pas
 
 >[!IMPORTANT]
 >
->Als er al een primair identiteitsveld is ingesteld, kunt u het primaire identiteitsveld in uw schema wijzigen door de bovenstaande stappen uit te voeren. Nochtans, moet u om het even welke bijbehorende datasets in het profiel voor de verandering onbruikbaar maken en dan opnieuw toelaten om te nemen beïnvloeden.
+>Zodra een schema voor gebruik in het Profiel van de Klant in real time wordt toegelaten en het gegeven is opgenomen, **u kunt niet het primaire identiteitsgebied** veranderen. Als u dit probeert, treedt er een validatiefout op. Als u een verschillende primaire identiteit moet gebruiken, moet u een nieuw schema en een nieuwe dataset met de bijgewerkte identiteitsconfiguratie tot stand brengen.
 
 ![](../../images/ui/fields/special/identity-config.png)
 
@@ -63,4 +63,3 @@ Als u een primaire identiteit voor het schema bepaalde, kunt u nu te werk gaan [
 Deze gids besprak hoe te om een identiteitsgebied in UI te bepalen. Aangezien het gegeven gebruikend dit schema wordt opgenomen, zullen de grafieken van uw klantenidentiteit worden bijgewerkt om op de de identiteitsgebieden van het schema te wijzen. Zie de gids op de [ kijker van de identiteitsgrafiek ](../../../identity-service/features/identity-graph-viewer.md) leren hoe te om de privé grafiek van uw organisatie in UI te onderzoeken.
 
 Zie het overzicht op [ bepalende gebieden in UI ](./overview.md#special) leren hoe te om andere XDM gebiedstypes in [!DNL Schema Editor] te bepalen.
-

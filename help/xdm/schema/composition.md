@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Basisbeginselen van de schemacompositie
 description: Leer over de schema's van de Gegevens van de Ervaring van het Model (XDM) en de bouwstenen, principes, en beste praktijken voor het samenstellen van schema's in Adobe Experience Platform.
 exl-id: d449eb01-bc60-4f5e-8d6f-ab4617878f7e
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: dcb6770d739d0da5cfa339584a769f5311a8c7e1
 workflow-type: tm+mt
-source-wordcount: '4331'
+source-wordcount: '4308'
 ht-degree: 0%
 
 ---
@@ -55,24 +55,24 @@ Zowel bevatten de verslag als de tijdreeksenschema&#39;s een kaart van identitei
 >title="Identiteiten in schema&#39;s"
 >abstract="Identiteiten zijn sleutelvelden in een schema die kunnen worden gebruikt om een onderwerp te identificeren, zoals een e-mailadres of een marketing-id. Deze gebieden worden gebruikt om de identiteitsgrafiek voor elk individu te construeren en klantenprofielen te bouwen. Zie de documentatie voor meer informatie over identiteiten in schema&#39;s."
 
-Schema&#39;s worden gebruikt voor het opnemen van gegevens in Experience Platform. Deze gegevens kunnen over de veelvoudige diensten worden gebruikt om één enkele, verenigde mening van een individuele entiteit tot stand te brengen. Daarom is het belangrijk om bij het ontwerpen van schema&#39;s voor klantenidentiteiten te overwegen welke gebieden kunnen worden gebruikt om een onderwerp te identificeren, ongeacht waar de gegevens uit kunnen komen.
+Schema&#39;s definiëren de structuur van gegevens die in Experience Platform worden ingevoerd. Die gegevens machtigen veelvoudige diensten binnen het Platform, en helpen om één enkele, verenigde mening van elk individu tot stand te brengen. Zo wanneer het ontwerpen van schema&#39;s, denk zorgvuldig over welke gebieden om als identiteit-deze controle te merken hoe de profielen over datasets worden vastgemaakt.
 
 Om dit proces te helpen, kunnen de belangrijkste gebieden binnen uw schema&#39;s als identiteiten worden gemerkt. Op gegevensopname, worden de gegevens in die gebieden opgenomen in &quot;[!UICONTROL Identity Graph]&quot;voor dat individu. De grafiekgegevens kunnen vervolgens worden benaderd door [[!DNL Real-Time Customer Profile]](../../profile/home.md) en andere Experience Platform-services om een samengevoegde weergave van elke afzonderlijke klant te bieden.
 
-Velden die algemeen als &quot;[!UICONTROL Identity]&quot;worden gemerkt omvatten: e-mailadres, telefoonaantal, [[!DNL Experience Cloud ID (ECID)] ](https://experienceleague.adobe.com/docs/id-service/using/home.html?lang=nl-NL), identiteitskaart van CRM, of andere unieke gebieden van identiteitskaart Overweeg om het even welke unieke herkenningstekens specifiek voor uw organisatie, aangezien zij ook goede &quot;[!UICONTROL Identity]&quot;gebieden kunnen zijn.
+Velden die algemeen als &quot;[!UICONTROL Identity]&quot;worden gemerkt omvatten: e-mailadres, telefoonaantal, [[!DNL Experience Cloud ID (ECID)] ](https://experienceleague.adobe.com/docs/id-service/using/home.html), identiteitskaart van CRM, of andere unieke gebieden van identiteitskaart Overweeg om het even welke unieke herkenningstekens specifiek voor uw organisatie, aangezien zij ook goede &quot;[!UICONTROL Identity]&quot;gebieden kunnen zijn.
 
-Het is belangrijk om over klantenidentiteiten tijdens de schema planningsfase te denken helpen ervoor zorgen dat de gegevens worden samengebracht om het robuustst mogelijke profiel te bouwen. Meer over leren hoe de identiteitsinformatie u kan helpen digitale ervaringen aan uw klanten leveren, zie het [ overzicht van de Dienst van de Identiteit ](../../identity-service/home.md). Zie het gegevens modellerend beste praktijkdocument voor [ uiteinden op het gebruik van identiteiten wanneer het creëren van een schema ](./best-practices.md#data-validation-fields).
+Meer over leren hoe de identiteitsinformatie u kan helpen digitale ervaringen aan uw klanten leveren, zie het [ overzicht van de Dienst van de Identiteit ](../../identity-service/home.md). Zie het gegevens modellerend beste praktijkdocument voor [ uiteinden op het gebruik van identiteiten wanneer het creëren van een schema ](./best-practices.md#data-validation-fields).
 
 Er zijn twee manieren om identiteitsgegevens naar Experience Platform te verzenden:
 
 1. Toevoegend identiteitsbeschrijvers aan individuele gebieden, of door [ de Redacteur UI van het Schema ](../ui/fields/identity.md) of het gebruiken van de [ Registratie API van het Schema ](../api/descriptors.md#create)
-1. Een [`identityMap` veld ](#identityMap) gebruiken
+2. Een [`identityMap` veld ](#identityMap) gebruiken
 
 #### `identityMap` {#identityMap}
 
 `identityMap` is een map-type gebied dat de diverse identiteitswaarden voor een individu, samen met hun bijbehorende namespaces beschrijft. Dit gebied kan worden gebruikt om identiteitsinformatie voor uw schema&#39;s te verstrekken, in plaats van het bepalen van identiteitswaarden binnen de structuur van het schema zelf.
 
-Het belangrijkste nadeel van het gebruik van `identityMap` is dat identiteiten in de gegevens worden ingesloten en daardoor minder zichtbaar worden. Als u onbewerkte gegevens opgeeft, moet u in plaats daarvan afzonderlijke identiteitsvelden definiëren binnen de daadwerkelijke schemastructuur.
+Het belangrijkste nadeel van het gebruik van `identityMap` is dat identiteitswaarden genest zijn en moeilijker te werken met hulpmiddelen die identiteitsgebieden op het hoogste niveau, zoals de Bouwer van het Segment of sommige derdesintegraties verwachten.
 
 >[!NOTE]
 >
@@ -129,17 +129,17 @@ In de volgende tabel wordt aangegeven welke wijzigingen worden ondersteund bij h
 
 | Ondersteunde wijzigingen | Wijzigingen doorlopen (niet ondersteund) |
 | --- | --- |
-| <ul><li>Nieuwe velden toevoegen aan de bron</li><li>Een vereist veld optioneel maken</li><li>Nieuwe vereiste velden maken*</li><li>De weergavenaam en beschrijving van de bron wijzigen</li><li>Het schema toestaan om aan Profiel deel te nemen</li></ul> | <ul><li>Eerder gedefinieerde velden verwijderen</li><li>Bestaande velden hernoemen of opnieuw definiëren</li><li>Eerder ondersteunde veldwaarden verwijderen of beperken</li><li>Bestaande velden verplaatsen naar een andere locatie in de structuur</li><li>Het schema verwijderen</li><li>Het schema uitschakelen om deel te nemen aan profiel</li></ul> |
+| <ul><li>Nieuwe velden toevoegen aan de bron</li><li>Een vereist veld optioneel maken</li><li>Nieuwe vereiste velden maken*</li><li>De weergavenaam en beschrijving van de bron wijzigen</li><li>Het schema toestaan om aan Profiel deel te nemen</li></ul> | <ul><li>Eerder gedefinieerde velden verwijderen</li><li>Bestaande velden hernoemen of opnieuw definiëren</li><li>Eerder ondersteunde veldwaarden verwijderen of beperken</li><li>Bestaande velden verplaatsen naar een andere locatie in de structuur</li><li>Het schema verwijderen</li><li>Het schema uitschakelen om deel te nemen aan profiel</li><li>Het primaire identiteitsveld wijzigen in een schema dat is ingeschakeld voor Profiel en waarin gegevens zijn opgenomen</li></ul> |
 
 \* *verwijs naar de sectie hieronder voor belangrijke overwegingen betreffende [ het plaatsen van nieuwe vereiste gebieden ](#post-ingestion-required-fields).*
 
 ### Vereiste velden
 
-De individuele schemagebieden kunnen [ zoals vereist ](../ui/fields/required.md) worden gemerkt, zo betekent het dat om het even welke ingebedde verslagen gegevens op die gebieden moeten bevatten om bevestiging over te gaan. Bijvoorbeeld, kan het plaatsen van het primaire identiteitsgebied van een schema zoals vereist helpen ervoor zorgen dat alle ingebedde verslagen aan het Profiel van de Klant in real time zullen deelnemen. Als u een tijdstempelveld instelt als vereist, blijven alle gebeurtenissen in de tijdreeks chronologisch behouden.
+De individuele schemagebieden kunnen [ zoals vereist ](../ui/fields/required.md) worden gemerkt, zo betekent het dat om het even welke ingebedde verslagen gegevens op die gebieden moeten bevatten om bevestiging over te gaan. Bijvoorbeeld, kan het plaatsen van het primaire identiteitsgebied van een schema zoals vereist helpen ervoor zorgen dat alle ingebedde verslagen aan het Profiel van de Klant in real time zullen deelnemen. Op dezelfde manier zorgt het plaatsen van een timestamp gebied zoals vereist ervoor dat alle tijd-reeksgebeurtenissen chronologisch worden bewaard.
 
 >[!IMPORTANT]
 >
->Ongeacht of een schemaveld verplicht is of niet, accepteert Experience Platform geen `null` of lege waarden voor een veld dat wordt ingevoerd. Als er geen waarde is voor een bepaald veld in een record of gebeurtenis, moet de sleutel voor dat veld worden uitgesloten van de opname-lading.
+>Ongeacht of een schemaveld verplicht is of niet, accepteert Experience Platform geen `null` of lege waarden voor een veld dat wordt ingevoerd. Als er geen waarde is voor een bepaald veld in een record of gebeurtenis, moet de sleutel voor dat veld worden uitgesloten van de inlaatlading.
 
 #### Velden instellen zoals vereist na invoegen {#post-ingestion-required-fields}
 
@@ -163,7 +163,7 @@ De schema&#39;s worden samengesteld gebruikend de volgende formule:
 
 **Klasse + de Groef&amp;amp van het Gebied van het Schema;ast; = XDM Schema**
 
-&ast;Een schema bestaat uit een klasse en nul of meer groepen schemavelden. Dit betekent dat u een datasetschema kon samenstellen zonder gebiedsgroepen bij allen te gebruiken.
+&amp;ast;Een schema bestaat uit een klasse en nul of meer groepen schemavelden. Dit betekent dat u een datasetschema kon samenstellen zonder gebiedsgroepen bij allen te gebruiken.
 
 ### Klasse {#class}
 
