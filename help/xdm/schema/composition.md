@@ -163,7 +163,7 @@ De schema&#39;s worden samengesteld gebruikend de volgende formule:
 
 **Klasse + de Groef&amp;amp van het Gebied van het Schema;ast; = XDM Schema**
 
-&amp;ast;Een schema bestaat uit een klasse en nul of meer groepen schemavelden. Dit betekent dat u een datasetschema kon samenstellen zonder gebiedsgroepen bij allen te gebruiken.
+&ast;Een schema bestaat uit een klasse en nul of meer groepen schemavelden. Dit betekent dat u een datasetschema kon samenstellen zonder gebiedsgroepen bij allen te gebruiken.
 
 ### Klasse {#class}
 
