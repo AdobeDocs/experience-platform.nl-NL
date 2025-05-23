@@ -3,9 +3,9 @@ keywords: facebook-verbinding;facebook-verbinding;facebook-bestemmingen;facebook
 title: Facebook-verbinding
 description: Activeer profielen voor uw Facebook-campagnes voor doelgroepen, personalisatie en onderdrukking op basis van gehakte e-mails.
 exl-id: 51e8c8f0-5e79-45b9-afbc-110bae127f76
-source-git-commit: a2420f86e650ce1ca8a5dc01d9a29548663d3f7c
+source-git-commit: 09146fac0719b62c6c2ec1b6c3aa66cb80c1698a
 workflow-type: tm+mt
-source-wordcount: '2083'
+source-wordcount: '2781'
 ht-degree: 0%
 
 ---
@@ -13,6 +13,14 @@ ht-degree: 0%
 # [!DNL Facebook] verbinding
 
 ## Overzicht {#overview}
+
+>[!IMPORTANT]
+>
+>* Vanaf 23 mei 2025 en gedurende juni 2025 ziet u wellicht tijdelijk twee **[!DNL Facebook Custom Audience]** doelkaarten in de lijst met bestemmingen, voor maximaal een paar uur. Dit is het gevolg van een interne upgrade naar de service voor doelen en de ondersteuning van nieuwe velden voor betere doelgerichtheid en betere overeenkomsten met profielen op Facebook-eigenschappen. Voor details over de nieuwe adres-verwante gebieden, zie de [ gesteunde identiteiten ](#supported-identities) sectie.
+>* Als u een kaart met het label **[!UICONTROL (New) Facebook Custom Audience]** ziet, gebruikt u deze kaart voor nieuwe gegevensstromen voor activering. De bestaande gegevensstromen worden automatisch bijgewerkt, dus u hoeft niets te doen. Wijzigingen die u aanbrengt in bestaande gegevensstromen tijdens deze periode, blijven na de upgrade behouden. Zodra de upgrade is voltooid, wordt de naam van de **[!UICONTROL (New) Facebook Custom Audience]** -doelkaart gewijzigd in **[!DNL Facebook Custom Audience]** .
+>* Als u dataflows gebruikend de [ Dienst API van de Stroom ](https://developer.adobe.com/experience-platform-apis/references/destinations/) creeert, moet u uw [!DNL flow spec ID] en [!DNL connection spec ID] aan de volgende waarden bijwerken:
+>   * Stroomspecificatie-ID: `bb181d00-58d7-41ba-9c15-9689fdc831d3`
+>   * Verbindingsspecificatie-ID: `c8b97383-2d65-4b7a-9913-db0fbfc71727`
 
 Activeer profielen voor uw [!DNL Facebook] -campagnes voor doelgroepen, personalisatie en onderdrukking op basis van gehakte e-mails.
 
@@ -42,11 +50,20 @@ Vervolgens kunnen ze hun offlinegegevens gebruiken, inclusief de bijbehorende id
 
 | Doelidentiteit | Beschrijving | Overwegingen |
 |---|---|---|
-| GAID | GOOGLE ADVERTISING ID | Selecteer de GAID doelidentiteit wanneer uw bronidentiteit een GAID-naamruimte is. |
-| IDFA | Apple-id voor adverteerders | Selecteer de IDFA doelidentiteit wanneer uw bronidentiteit een IDFA namespace is. |
-| phone_sha256 | Telefoonnummers die zijn hashed met het SHA256-algoritme | Adobe Experience Platform biedt ondersteuning voor zowel platte tekst- als SHA256-telefoonnummers. Volg de instructies in de [ passende vereisten van identiteitskaart ](#id-matching-requirements-id-matching-requirements) sectie en gebruik aangewezen namespaces voor gewone teksten en gehakt telefoonaantallen, respectievelijk. Wanneer het bronveld hashingkenmerken bevat, schakelt u de optie **[!UICONTROL Apply transformation]** in om de gegevens automatisch te laten hashen bij activering door [!DNL Experience Platform] . |
-| email_lc_sha256 | E-mailadressen die met het algoritme SHA256 worden gehasht | Adobe Experience Platform biedt ondersteuning voor zowel platte tekst- als SHA256-e-mailadressen met hashing. Volg de instructies in de [ passende vereisten van identiteitskaart ](#id-matching-requirements-id-matching-requirements) sectie en gebruik aangewezen namespaces voor gewone teksten en gehakt e-mailadressen, respectievelijk. Wanneer het bronveld hashingkenmerken bevat, schakelt u de optie **[!UICONTROL Apply transformation]** in om de gegevens automatisch te laten hashen bij activering door [!DNL Experience Platform] . |
-| extern_id | Aangepaste gebruikers-id&#39;s | Selecteer deze doelidentiteit wanneer uw bronidentiteit een aangepaste naamruimte is. |
+| `GAID` | GOOGLE ADVERTISING ID | Selecteer de GAID doelidentiteit wanneer uw bronidentiteit een GAID-naamruimte is. |
+| `IDFA` | Apple-id voor adverteerders | Selecteer de IDFA doelidentiteit wanneer uw bronidentiteit een IDFA namespace is. |
+| `phone_sha256` | Telefoonnummers die zijn hashed met het SHA256-algoritme | Adobe Experience Platform biedt ondersteuning voor zowel platte tekst- als SHA256-telefoonnummers. Volg de instructies in de [ passende vereisten van identiteitskaart ](#id-matching-requirements-id-matching-requirements) sectie en gebruik aangewezen namespaces voor gewone teksten en gehakt telefoonaantallen, respectievelijk. Wanneer het bronveld hashingkenmerken bevat, schakelt u de optie **[!UICONTROL Apply transformation]** in om de gegevens automatisch te laten hashen bij activering door [!DNL Experience Platform] . |
+| `email_lc_sha256` | E-mailadressen die met het algoritme SHA256 worden gehasht | Adobe Experience Platform biedt ondersteuning voor zowel platte tekst- als SHA256-e-mailadressen met hashing. Volg de instructies in de [ passende vereisten van identiteitskaart ](#id-matching-requirements-id-matching-requirements) sectie en gebruik aangewezen namespaces voor gewone teksten en gehakt e-mailadressen, respectievelijk. Wanneer het bronveld hashingkenmerken bevat, schakelt u de optie **[!UICONTROL Apply transformation]** in om de gegevens automatisch te laten hashen bij activering door [!DNL Experience Platform] . |
+| `extern_id` | Aangepaste gebruikers-id&#39;s | Selecteer deze doelidentiteit wanneer uw bronidentiteit een aangepaste naamruimte is. |
+| `gender` | Geslacht | Geaccepteerde waarden: <ul><li>`m` voor man</li><li>`f` voor vrouwelijk</li></ul> Experience Platform **hakt** automatisch deze waarde alvorens het naar Facebook te verzenden. Deze automatische hashing is vereist om te voldoen aan de beveiligings- en privacyvereisten van Facebook. Verstrek **** geen pre-gehakte waarden voor dit gebied, aangezien dit het passende proces om zal veroorzaken te ontbreken. |
+| `date_of_birth` | Geboortedatum | Geaccepteerde indeling: `yyyy-MM-DD`. <br> Experience Platform **hakt** automatisch deze waarde alvorens het naar Facebook te verzenden. Deze automatische hashing is vereist om te voldoen aan de beveiligings- en privacyvereisten van Facebook. Verstrek **** geen pre-gehakte waarden voor dit gebied, aangezien dit het passende proces om zal veroorzaken te ontbreken. |
+| `last_name` | Achternaam | Geaccepteerde indeling: Alleen kleine letters, `a-z` tekens en geen leestekens. Gebruik UTF-8-codering voor speciale tekens.  <br> Experience Platform **hakt** automatisch deze waarde alvorens het naar Facebook te verzenden. Deze automatische hashing is vereist om te voldoen aan de beveiligings- en privacyvereisten van Facebook. Verstrek **** geen pre-gehakte waarden voor dit gebied, aangezien dit het passende proces om zal veroorzaken te ontbreken. |
+| `first_name` | Voornaam | Geaccepteerde indeling: Alleen kleine letters, `a-z` tekens, geen leestekens, geen spaties. Gebruik UTF-8-codering voor speciale tekens.  <br> Experience Platform **hakt** automatisch deze waarde alvorens het naar Facebook te verzenden. Deze automatische hashing is vereist om te voldoen aan de beveiligings- en privacyvereisten van Facebook. Verstrek **** geen pre-gehakte waarden voor dit gebied, aangezien dit het passende proces om zal veroorzaken te ontbreken. |
+| `first_name_initial` | Voornaam oorspronkelijk | Geaccepteerde indeling: alleen kleine letters, `a-z` tekens. Gebruik UTF-8-codering voor speciale tekens.  <br> Experience Platform **hakt** automatisch deze waarde alvorens het naar Facebook te verzenden. Deze automatische hashing is vereist om te voldoen aan de beveiligings- en privacyvereisten van Facebook. Verstrek **** geen pre-gehakte waarden voor dit gebied, aangezien dit het passende proces om zal veroorzaken te ontbreken. |
+| `state` | Staat | Gebruik [ 2 karakter ANSI afkortingen code ](https://en.wikipedia.org/wiki/Federal_Information_Processing_Standard_state_code) in kleine letters. Voor staten buiten de VS gebruikt u kleine letters, geen leestekens, geen speciale karakters, en geen ruimten.  <br> Experience Platform **hakt** automatisch deze waarde alvorens het naar Facebook te verzenden. Deze automatische hashing is vereist om te voldoen aan de beveiligings- en privacyvereisten van Facebook. Verstrek **** geen pre-gehakte waarden voor dit gebied, aangezien dit het passende proces om zal veroorzaken te ontbreken. |
+| `city` | Plaats | Geaccepteerde indeling: Alleen kleine letters, `a-z` tekens, geen leestekens, geen speciale tekens, geen spaties.  <br> Experience Platform **hakt** automatisch deze waarde alvorens het naar Facebook te verzenden. Deze automatische hashing is vereist om te voldoen aan de beveiligings- en privacyvereisten van Facebook. Verstrek **** geen pre-gehakte waarden voor dit gebied, aangezien dit het passende proces om zal veroorzaken te ontbreken. |
+| `zip` | Postcode | Geaccepteerde indeling: Kleine letters, geen spaties. Gebruik voor Amerikaanse postcodes alleen de eerste 5 cijfers. Voor het Verenigd Koninkrijk gebruikt u de `Area/District/Sector` -indeling.  <br> Experience Platform **hakt** automatisch deze waarde alvorens het naar Facebook te verzenden. Deze automatische hashing is vereist om te voldoen aan de beveiligings- en privacyvereisten van Facebook. Verstrek **** geen pre-gehakte waarden voor dit gebied, aangezien dit het passende proces om zal veroorzaken te ontbreken. |
+| `country` | Land | Geaccepteerd formaat: Kleine letters, 2-brief landcodes in [ ISO 3166-1 alpha-2 ](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2) formaat.  <br> Experience Platform **hakt** automatisch deze waarde alvorens het naar Facebook te verzenden. Deze automatische hashing is vereist om te voldoen aan de beveiligings- en privacyvereisten van Facebook. Verstrek **** geen pre-gehakte waarden voor dit gebied, aangezien dit het passende proces om zal veroorzaken te ontbreken. |
 
 ## Ondersteunde doelgroepen {#supported-audiences}
 
@@ -54,7 +71,7 @@ In deze sectie wordt beschreven welke soorten publiek u naar dit doel kunt expor
 
 | Oorsprong publiek | Ondersteund | Beschrijving |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | ✓ | Het publiek produceerde door de Dienst van de Segmentatie van Experience Platform [&#128279;](../../../segmentation/home.md). |
+| [!DNL Segmentation Service] | ✓ | Het publiek produceerde door de Dienst van de Segmentatie van Experience Platform [ ](../../../segmentation/home.md). |
 | Aangepaste uploads | ✓ | Het publiek [ ingevoerde ](../../../segmentation/ui/audience-portal.md#import-audience) in Experience Platform van Csv- dossiers. |
 
 {style="table-layout:auto"}
@@ -93,6 +110,12 @@ Voordat u uw publiek naar [!DNL Facebook] kunt sturen, moet u controleren of aan
 [!DNL Facebook] vereist dat er geen PII&#39;s (Personal Identified Information) worden verzonden. Daarom kan het publiek dat aan [!DNL Facebook] wordt geactiveerd van *gehakt* herkenningstekens, zoals e-mailadressen of telefoonaantallen worden afgevinkt.
 
 Afhankelijk van het type id&#39;s dat u in Adobe Experience Platform invoert, moet u aan de desbetreffende vereisten voldoen.
+
+## Pakketten voor publiek maximaliseren {#match-rates}
+
+Als u de hoogste overeenkomende doelgroep in [!DNL Facebook] wilt bereiken, raden we u aan de doelidentiteiten `phone_sha256` en `email_lc_sha256` te gebruiken.
+
+Deze id&#39;s zijn de primaire id&#39;s die door [!DNL Facebook] worden gebruikt voor het afstemmen van soorten publiek op hun platforms. Zorg ervoor dat de brongegevens correct zijn toegewezen aan deze doelidentiteiten en voldoet aan de hashingvereisten van [!DNL Facebook's] .
 
 ## Vereisten voor hashing voor telefoonnummers {#phone-number-hashing-requirements}
 
