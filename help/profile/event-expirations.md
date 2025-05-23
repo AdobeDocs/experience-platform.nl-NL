@@ -32,7 +32,7 @@ Nadat de Verlopen van de Gebeurtenis van de Ervaring op een profiel-Toegelaten d
 
 >[!WARNING]
 >
->Zodra toegepast, wordt om het even welke gegevens die ouder zijn dan het aantal dagen dat door de vervalwaarde wordt toegewezen permanent geschrapt **** en kan niet worden hersteld.
+>Zodra toegepast, wordt om het even welke gegevens die ouder zijn dan het aantal dagen dat door de vervalwaarde wordt toegewezen permanent geschrapt **&#x200B;**&#x200B;en kan niet worden hersteld.
 
 Als u bijvoorbeeld op 15 mei een vervalwaarde van 30 dagen hebt toegepast, worden de volgende stappen uitgevoerd:
 
@@ -68,7 +68,7 @@ De pseudoniem gegevens van het Profiel vervalsen werken op a **zandbak** niveau.
 
 De gegevensvervaldatum van de Gebeurtenis van de ervaring verwijdert gebeurtenissen **slechts** die op timestamp van het gebeurtenisverslag wordt gebaseerd. De inbegrepen identiteitsnamespaces zijn **genegeerd** voor vervaldoeleinden.
 
-De pseudoniem gegevens van het Profiel verlopen **slechts** overweegt profielen die identiteitsgrafieken hebben die identiteitsnamespaces bevatten die door de klant, zoals `ECID`, `AAID`, of andere soorten koekjes werden geselecteerd. Als het profiel **om het even welke** extra identiteitsnamespace bevat die **niet** in de geselecteerde lijst van de klant was, zal het profiel **** niet worden geschrapt.
+De pseudoniem gegevens van het Profiel verlopen **slechts** overweegt profielen die identiteitsgrafieken hebben die identiteitsnamespaces bevatten die door de klant, zoals `ECID`, `AAID`, of andere soorten koekjes werden geselecteerd. Als het profiel **om het even welke** extra identiteitsnamespace bevat die **niet** in de geselecteerde lijst van de klant was, zal het profiel **&#x200B;**&#x200B;niet worden geschrapt.
 
 #### Verwijderde items
 
