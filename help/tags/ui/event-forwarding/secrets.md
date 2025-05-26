@@ -2,9 +2,9 @@
 title: Secreten configureren bij doorsturen van gebeurtenissen
 description: Leer hoe te om geheimen in UI te vormen voor authentiek te verklaren aan eindpunten die in gebeurtenis worden gebruikt door:sturen eigenschappen.
 exl-id: eefd87d7-457f-422a-b159-5b428da54189
-source-git-commit: 592acdd45b1db5da95430b4e707cd9a2c18c1645
+source-git-commit: 374c140a5db678adfa2e038b69478ad8c7f8dc95
 workflow-type: tm+mt
-source-wordcount: '2228'
+source-wordcount: '2363'
 ht-degree: 0%
 
 ---
@@ -17,6 +17,7 @@ De volgende geheime types worden momenteel gesteund:
 
 | Geheim type | Beschrijving |
 | --- | --- |
+| [!UICONTROL Amazon OAuth 2] | Schakelt beveiligde verificatie met [!DNL Amazon] -services in. Het systeem slaat het token veilig op en handelt de vernieuwing ervan met opgegeven intervallen af. |
 | [!UICONTROL Google OAuth 2] | Bevat verscheidene attributen om [ OAuth 2.0 ](https://datatracker.ietf.org/doc/html/rfc6749) authentificatiespecic voor gebruik in [ Google Ads API ](https://developers.google.com/google-ads/api/docs/oauth/overview) en [ Pub/Sub API ](https://cloud.google.com/pubsub/docs/reference/service_apis_overview) te steunen. Het systeem vraagt u om de vereiste informatie, dan behandelt de vernieuwing van deze tokens voor u op een gespecificeerd interval. |
 | [!UICONTROL HTTP] | Bevat respectievelijk twee tekenreekskenmerken voor een gebruikersnaam en wachtwoord. |
 | [!UICONTROL [!DNL LinkedIn] OAuth 2] | Het systeem vraagt u om de vereiste informatie, dan behandelt de vernieuwing van deze tokens voor u op een gespecificeerd interval. |
@@ -44,7 +45,7 @@ U hebt ook een goed inzicht in de publicatiestroom voor tags en het doorsturen v
 >id="platform_eventforwarding_secrets_environments"
 >title="Omgevingen voor geheimen"
 >abstract="Opdat een geheim door gebeurtenis te gebruiken door:sturen, moet het aan een bestaand milieu worden toegewezen. Als u geen milieu&#39;s hebt die voor uw gebeurtenis door:sturen bezit worden gecreeerd, moet u hen vormen alvorens verder te gaan."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/tags/publish/environments/environments.html?lang=nl-NL" text="Overzicht van omgevingen"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/tags/publish/environments/environments.html" text="Overzicht van omgevingen"
 
 Als u een geheim wilt maken, selecteert u **[!UICONTROL Event Forwarding]** in de linkernavigatie en opent u vervolgens de eigenschap voor het doorsturen van gebeurtenissen waaraan u het geheim onder wilt toevoegen. Selecteer vervolgens **[!UICONTROL Secrets]** in de linkernavigatie, gevolgd door **[!UICONTROL Create New Secret]** .
 
@@ -78,6 +79,7 @@ Van hier, verschillen de stappen om het geheim tot stand te brengen afhankelijk 
 * [[!UICONTROL OAuth 2 JWT]](#oauth2jwt)
 * [[!UICONTROL Google OAuth 2]](#google-oauth2)
 * [[!UICONTROL [!DNL LinkedIn] OAuth 2]](#linkedin-oauth2)
+* [[!UICONTROL [!DNL Amazon] OAuth 2]](#amazon-oauth2)
 
 ### [!UICONTROL Token] {#token}
 
@@ -186,7 +188,7 @@ Selecteer **[!UICONTROL [!DNL LinkedIn] OAuth 2]** in het vervolgkeuzemenu **[!U
 
 Er verschijnt een pop-up met de melding dat het geheim handmatig moet worden geautoriseerd via [!DNL LinkedIn] . Selecteer **[!UICONTROL Create & Authorize secret with [!DNL LinkedIn]]** om door te gaan.
 
-![[!DNL LinkedIn] pop-upmarkering voor autorisatie [!UICONTROL Create & Authorize secret with [!DNL LinkedIn]] . ](../../images/ui/event-forwarding/secrets/linkedin-authorization.png)
+![ LinkedIn vergunningspopover die het benadrukken van &quot;leidt tot &amp; machtigt geheim met LinkedIn&quot;knoop.](../../images/ui/event-forwarding/secrets/linkedin-authorization.png)
 
 Er wordt een dialoogvenster weergegeven waarin u wordt gevraagd uw [!DNL LinkedIn] -referenties in te voeren. Volg de herinneringen om gebeurtenis door:sturen toegang tot uw gegevens te verlenen.
 
@@ -209,6 +211,22 @@ U wordt omgeleid naar de tab [!UICONTROL Secrets] . De geheimen die op deze pagi
 ![ het [!UICONTROL Secret] lusje benadrukken [!UICONTROL Auth Needed] voor het [!DNL LinkedIn] geheim.](../../images/ui/event-forwarding/secrets/linkedin-reauthorization.png)
 
 Er wordt een dialoogvenster weergegeven waarin u wordt gevraagd uw [!DNL LinkedIn] -referenties in te voeren. Volg de aanwijzingen om uw geheim opnieuw toe te staan.
+
+### [!UICONTROL [!DNL Amazon] OAuth 2] {#amazon-oauth2}
+
+Als u een [!DNL Amazon] OAuth 2-geheim wilt maken, selecteert u **[!UICONTROL [!DNL Amazon] OAuth 2]** in de vervolgkeuzelijst **[!UICONTROL Type]** . Selecteer vervolgens **[!UICONTROL Create Secret]** .
+
+![ het [!UICONTROL Create Secret] lusje met het [!UICONTROL Type] benadrukte gebied.](../../images/ui/event-forwarding/secrets/amazon-oauth.png)
+
+Er verschijnt een pop-up met de melding dat het geheim handmatig moet worden geautoriseerd via [!DNL Amazon] . Selecteer **[!UICONTROL Create & Authorize secret with [!DNL Amazon]]** om door te gaan.
+
+![ Amazon autorisatiepopover benadrukkend &quot;creeer &amp; geef geheim met Amazon&quot;knoop toe.](../../images/ui/event-forwarding/secrets/amazon-authorization.png)
+
+Er wordt een dialoogvenster weergegeven waarin u wordt gevraagd uw [!DNL Amazon] -referenties in te voeren. Volg de herinneringen om gebeurtenis door:sturen toegang tot uw gegevens te verlenen.
+
+Nadat het autorisatieproces is voltooid, gaat u terug naar het tabblad **[!UICONTROL Secrets]** , waar u het zojuist gemaakte geheim kunt zien. Hier zie je de status van het geheim en de vervaldatum.
+
+![ het [!UICONTROL Secret] lusje die het pas gecreëerde geheim benadrukken.](../../images/ui/event-forwarding/secrets/amazon-new-secret.png)
 
 ## Een geheim bewerken
 
