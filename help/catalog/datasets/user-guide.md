@@ -4,9 +4,9 @@ solution: Experience Platform
 title: UI-gids voor gegevensbestanden
 description: Leer hoe u algemene handelingen uitvoert wanneer u werkt met gegevenssets in de Adobe Experience Platform-gebruikersinterface.
 exl-id: f0d59d4f-4ebd-42cb-bbc3-84f38c1bf973
-source-git-commit: f66e85ee5fb3fdaf7036b131f9689082d9d96127
+source-git-commit: 132024313dbe0d83c9af22d30927a01e32c9d94f
 workflow-type: tm+mt
-source-wordcount: '4014'
+source-wordcount: '4012'
 ht-degree: 0%
 
 ---
@@ -180,7 +180,7 @@ U kunt de instellingen voor het verlopen en behouden van de gegevensset beheren 
 
 >[!IMPORTANT]
 >
->Om bewaarregels voor een dataset ExperienceEvent toe te passen of bij te werken, moet uw gebruikersrol **omvatten datasets** toestemming beheren. Dit op rol-gebaseerde toegangsbeheer zorgt ervoor dat slechts de gemachtigde gebruikers montages van het gegevenssetbehoud kunnen wijzigen.
+>Als u bewaarregels voor een ExperienceEvent-gegevensset wilt toepassen of bijwerken, moet uw gebruikersrol de machtiging **[!UICONTROL Manage datasets]** bevatten. Dit op rol-gebaseerde toegangsbeheer zorgt ervoor dat slechts de gemachtigde gebruikers montages van het gegevenssetbehoud kunnen wijzigen.
 >
 >Zie het [ overzicht van de Toegangscontrole ](../../access-control/home.md#platform-permissions) voor meer informatie bij het toewijzen van toestemmingen in Adobe Experience Platform.
 
