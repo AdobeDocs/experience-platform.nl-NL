@@ -2,10 +2,10 @@
 title: Overzicht van extensie voor Cloud Connector
 description: Meer informatie over de Cloud Connector-gebeurtenis die extensie doorstuurt in Adobe Experience Platform.
 exl-id: f3713652-ac32-4171-8dda-127c8c235849
-source-git-commit: c7344d0ac5b65c6abae6a040304f27dc7cd77cbb
+source-git-commit: 3b9ff1d41c698feadd0215ab562f87747aaa91a1
 workflow-type: tm+mt
-source-wordcount: '1344'
-ht-degree: 0%
+source-wordcount: '1680'
+ht-degree: 2%
 
 ---
 
@@ -13,9 +13,9 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch is omgedoopt tot een reeks technologieën voor gegevensverzameling in Adobe Experience Platform. Diverse terminologische wijzigingen zijn als gevolg hiervan in de productdocumentatie doorgevoerd. Gelieve te verwijzen naar het volgende [ document ](../../../term-updates.md) voor een geconsolideerde verwijzing van de terminologieveranderingen.
+>Adobe Experience Platform Launch is omgedoopt tot een reeks technologieën voor dataverzameling in Adobe Experience Platform.  Als gevolg hiervan zijn er verschillende terminologiewijzigingen in de productdocumentatie doorgevoerd. Raadpleeg het volgende [ document ](../../../term-updates.md) voor een geconsolideerde referentie van de terminologiewijzigingen.
 
-Met de Cloud Connector-gebeurtenis die extensie doorstuurt, kunt u aangepaste HTTP-aanvragen maken om gegevens naar een bestemming te verzenden of gegevens van een bestemming op te halen. De uitbreiding van de Verbinding van de Wolk is als het hebben van Postman op de Edge Network van Adobe Experience Platform en kan worden gebruikt om gegevens naar een eindpunt te verzenden dat nog geen specifieke uitbreiding heeft.
+Met de Cloud Connector-gebeurtenis die extensie doorstuurt, kunt u aangepaste HTTP-aanvragen maken om gegevens naar een bestemming te verzenden of gegevens van een bestemming op te halen. De uitbreiding van de Verbinding van de Wolk is als het hebben van Postman op Adobe Experience Platform Edge Network en kan worden gebruikt om gegevens naar een eindpunt te verzenden dat nog geen specifieke uitbreiding heeft.
 
 Gebruik deze verwijzing voor informatie over de beschikbare opties wanneer het gebruiken van deze uitbreiding om een regel te bouwen.
 
@@ -29,7 +29,7 @@ Als u het type aanvraag wilt selecteren dat door het eindpunt wordt vereist, sel
 
 | Methode | Beschrijving |
 |---|---|
-| [ GET ](https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods/GET) | Vraagt om een vertegenwoordiging van de gespecificeerde bron. Verzoeken met GET moeten alleen gegevens ophalen. |
+| [ GET ](https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods/GET) | Vraagt om een vertegenwoordiging van de gespecificeerde bron. Aanvragen met GET mogen alleen gegevens ophalen. |
 | [ POST ](https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods/POST) | Verzendt een entiteit naar de opgegeven bron, die vaak een wijziging in status of bijwerkingen op de server veroorzaakt. |
 | [ PUT ](https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods/PUT) | Vervangt alle huidige vertegenwoordiging van het doelmiddel met de verzoeklading. |
 | [ PATCH ](https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods/PATCH) | Past gedeeltelijke wijzigingen op een middel toe. |
@@ -125,3 +125,41 @@ arc.ruleStash.[EXTENSION-NAME-HERE].responses.[RESPONSE-KEY-HERE]
 
 arc.ruleStash.adobe-cloud-connector.reponses.productDetails 
 ```
+
+## De Wederzijdse Veiligheid van de Laag van het Vervoer van het gebruik [!DNL mTLS] in Gebeurtenis door:sturen regels {#mtls-rules}
+
+Het [!DNL mTLS] -certificaat is een digitale referentie die de identiteit van een server of client in veilige communicatie aantoont. Wanneer u de service-API van [!DNL mTLS] gebruikt, kunt u met deze certificaten uw interactie met Adobe Experience Platform Event Forwarding verifiëren en coderen. Dit proces beschermt niet alleen uw gegevens maar zorgt er ook voor dat elke verbinding afkomstig is van een vertrouwde partner.
+
+### De extensie Adobe Cloud Connector installeren {#install}
+
+Om de uitbreiding te installeren, [ creeer een gebeurtenis door:sturen bezit ](../../../ui/event-forwarding/overview.md#properties) of selecteer een bestaand bezit in plaats daarvan uit te geven.
+
+Selecteer **[!UICONTROL Extensions]** in het linkerdeelvenster. Selecteer op het tabblad **[!UICONTROL Catalog]** de **[!UICONTROL Adobe Cloud Connector]** Real-Time Conversions API-kaart en selecteer vervolgens **[!UICONTROL Install]** .
+
+![ de uitbreidingscatalogus die [!DNL Adobe Cloud Connector] uitbreidingskaart tonen die installeert benadrukt.](../../../images/extensions/server/cloud-connector/install-extension.png)
+
+### Vorm een gebeurtenis door:sturen regel {#rule}
+
+>[!NOTE]
+>
+>Als u een regel wilt configureren om [!DNL mTLS] te gebruiken, moet u beschikken over Adobe Cloud Connector versie 1.2.4 of hoger.
+
+Nadat u de extensie hebt geïnstalleerd, kunt u een regel voor het doorsturen van gebeurtenissen maken die [!DNL mTLS] gebruikt en deze regel toevoegen aan uw bibliotheek.
+
+Creeer een nieuwe gebeurtenis door:sturen [ regel ](../../../ui/managing-resources/rules.md) in uw gebeurtenis door:sturen bezit. Geef uw regel een naam, en voeg vervolgens onder **[!UICONTROL Actions]** een nieuwe handeling toe en stel de extensie in op **[!UICONTROL Adobe Cloud Connector]** . Selecteer vervolgens **[!UICONTROL Make Fetch Call]** voor **[!UICONTROL Action Type]** .
+
+![ de Gebeurtenis die de mening van de Regels van het Bezit door:sturen, met de gebieden die worden vereist om een gebeurtenis toe te voegen die de benadrukte configuratie van de regelactie door:sturen.](../../../images/extensions/server/cloud-connector/event-action.png)
+
+Nadat u de selectie hebt gemaakt, worden aanvullende besturingselementen weergegeven om de methoden en de bestemming voor de aanvraag [!DNL mTLS] te configureren. Als u het gebruik van actieve certificaten in de omgevingen wilt inschakelen, selecteert u **[!UICONTROL Enable in [!DNL mTLS]]** en selecteert u **[!UICONTROL Keep Changes]** om de regel op te slaan.
+
+![ de Gebeurtenis die de mening van de Regels van het Bezit door:sturen, met de extra controlegebieden en houdt benadrukte veranderingen.](../../../images/extensions/server/cloud-connector/save-rule.png)
+
+Uw nieuwe regel is nu klaar. Selecteer **[!UICONTROL Save to Library]** en selecteer vervolgens **[!UICONTROL Build]** om het te implementeren. De aanvraag [!DNL mTLS] is nu actief en beschikbaar in uw bibliotheek.
+
+![ de Gebeurtenis die regel met sparen door:sturen aan bibliotheek en benadrukt bouwt.](../../../images/extensions/server/cloud-connector/save-build.png)
+
+## Volgende stappen
+
+Deze gids besprak hoe te opstellings mTLS regels in gebeurtenis het door:sturen. Voor meer details bij vestiging mTLS voor een milieu, verwijs naar de  [!DNL mTLS]  gids van de Veiligheid van de Laag van het Wederzijdse Vervoer [ ](../cloud-connector/mtls.md).
+
+Voor meer informatie over gebeurtenis die mogelijkheden in Experience Platform door:sturen, verwijs naar de [ gebeurtenis die overzicht ](../../../ui/event-forwarding/overview.md) door:sturen.
