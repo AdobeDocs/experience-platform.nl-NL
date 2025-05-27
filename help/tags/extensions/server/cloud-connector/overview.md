@@ -160,6 +160,6 @@ Uw nieuwe regel is nu klaar. Selecteer **[!UICONTROL Save to Library]** en selec
 
 ## Volgende stappen
 
-Deze gids besprak hoe te opstellings mTLS regels in gebeurtenis het door:sturen. Voor meer details bij vestiging mTLS voor een milieu, verwijs naar de  [!DNL mTLS]  gids van de Veiligheid van de Laag van het Wederzijdse Vervoer [ ](../cloud-connector/mtls.md).
+Deze gids besprak hoe te opstellings mTLS regels in gebeurtenis het door:sturen. Voor meer details bij vestiging mTLS voor een milieu, verwijs naar de  [!DNL mTLS]  gids van de Veiligheid van de Laag van het Wederzijdse Vervoer [&#128279;](../cloud-connector/mtls.md).
 
 Voor meer informatie over gebeurtenis die mogelijkheden in Experience Platform door:sturen, verwijs naar de [ gebeurtenis die overzicht ](../../../ui/event-forwarding/overview.md) door:sturen.
