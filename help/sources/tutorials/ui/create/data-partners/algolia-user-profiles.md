@@ -1,52 +1,54 @@
 ---
 title: Gebruikersprofielen van Algolië verbinden met Experience Platform via de gebruikersinterface
-description: Leer hoe u verbinding kunt maken met gebruikers van Algolië die op Experience Platform zijn ingesteld
+description: Leer hoe u de gegevens van de Algoliaanse gebruikersintentie koppelt aan Adobe Experience Platform
 exl-id: d4c936a7-4983-4a12-a813-03b672116e44
-source-git-commit: 9bc7d372eba9ffcfe64f90d2d58a532411e5f1ce
+source-git-commit: 2ba1f82fbefd9a7af7a1cf305ccafcb2c7814d7b
 workflow-type: tm+mt
-source-wordcount: '1106'
+source-wordcount: '1156'
 ht-degree: 0%
 
 ---
 
-# Gegevens [!DNL Algolia User Profiles] aan Experience Platform toevoegen met de gebruikersinterface
 
-Lees deze zelfstudie om te leren hoe u via de gebruikersinterface gegevens van uw [!DNL Algolia User Profiles] -account kunt invoeren naar Adobe Experience Platform.
+# [!DNL Algolia User Profiles] -gegevens in Experience Platform opnemen met de gebruikersinterface
+
+Deze zelfstudie begeleidt u door via de gebruikersinterface gegevens van uw [!DNL Algolia User Profiles] -account op te nemen in Adobe Experience Platform.
 
 ## Aan de slag
 
 >[!IMPORTANT]
 >
->Alvorens begonnen te worden, zorg ervoor dat u de in de eerste plaats vereiste stappen voltooit die in het [[!DNL Algolia User Profiles]  overzicht ](../../../../connectors/data-partners/algolia-user-profiles.md#prerequisites) worden geschetst.
+>Alvorens u begint, zorg ervoor u de eerste vereisten hebt voltooid die in het [[!DNL Algolia User Profiles]  overzicht ](../../../../connectors/data-partners/algolia-user-profiles.md#prerequisites) worden geschetst.
 
-Deze zelfstudie vereist een goed begrip van de volgende onderdelen van Experience Platform:
+In deze zelfstudie wordt vertrouwd gemaakt met de volgende Experience Platform-componenten:
 
-* [[!DNL Experience Data Model (XDM)]  Systeem ](../../../../../xdm/home.md): Het gestandaardiseerde kader waardoor Experience Platform gegevens van de klantenervaring organiseert.
-   * [ Grondbeginselen van schemacompositie ](../../../../../xdm/schema/composition.md): Leer over de basisbouwstenen van schema&#39;s XDM, met inbegrip van zeer belangrijke principes en beste praktijken in schemacompositie.
+* [[!DNL Experience Data Model (XDM)]  Systeem ](../../../../../xdm/home.md): Het gestandaardiseerde kader Experience Platform gebruikt om de gegevens van de klantenervaring te organiseren.
+
+   * [ Grondbeginselen van schemacompositie ](../../../../../xdm/schema/composition.md): Leer over schemacompositie, met inbegrip van zeer belangrijke principes en beste praktijken.
    * [ het leerprogramma van de Redacteur van het Schema ](../../../../../xdm/tutorials/create-schema-ui.md): Leer hoe te om douaneschema&#39;s tot stand te brengen gebruikend de Redacteur UI van het Schema.
-* [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md): biedt een uniform, real-time consumentenprofiel dat is gebaseerd op geaggregeerde gegevens van meerdere bronnen.
-* [ Bronnen ](../../../../home.md): Experience Platform staat gegevens toe om van diverse bronnen worden opgenomen terwijl het voorzien van u van de capaciteit om, inkomende gegevens te structureren te etiketteren en te verbeteren gebruikend de diensten van Experience Platform.
+* [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md): Een verenigd, real-time klantprofiel dat is gebaseerd op geaggregeerde gegevens van meerdere bronnen.
+* [ Bronnen ](../../../../home.md): Samenvatting gegevens uit diverse bronnen en gebruik de diensten van Experience Platform om de gegevens te structureren, te etiketteren en te verbeteren.
 
 ### Vereiste referenties verzamelen
 
-Als u [!DNL Algolia] wilt verbinden met Experience Platform, moet u waarden opgeven voor de volgende referenties:
+Geef de volgende gegevens op als u [!DNL Algolia] wilt verbinden met Adobe Experience Platform:
 
 | Credentials | Beschrijving |
-| --- | --- |
-| Toepassings-id | De toepassings-id van [!DNL Algolia] is een unieke id die is toegewezen aan uw [!DNL Algolia] -account. |
-| API-sleutel | De API-sleutel van [!DNL Algolia] is een referentie die wordt gebruikt voor het verifiëren en autoriseren van API-aanvragen voor de zoek- en indexservices van [!DNL Algolia] . |
+| -------------- | ----------------------------------------------------------------------------------------- |
+| Toepassings-id | De unieke id die aan uw [!DNL Algolia] -account is toegewezen. |
+| API-sleutel | De referentie voor het verifiëren en autoriseren van API-aanvragen bij de services van [!DNL Algolia] . |
 
-Voor meer informatie over deze geloofsbrieven, zie [!DNL Algolia] [ authentificatiedocumentatie ](https://www.algolia.com/doc/tools/cli/get-started/authentication/).
+Voor meer informatie, verwijs naar de [!DNL Algolia] [ authentificatiedocumentatie ](https://www.algolia.com/doc/tools/cli/get-started/authentication/).
 
 ## Sluit uw [!DNL Algolia] -account aan
 
-Selecteer in de gebruikersinterface van Experience Platform de optie **[!UICONTROL Sources]** in de linkernavigatie voor toegang tot de werkruimte van *[!UICONTROL Sources]* . U kunt de juiste categorie selecteren in het deelvenster *[!UICONTROL Categories]* . U kunt ook de zoekbalk gebruiken om naar de specifieke bron te navigeren die u wilt gebruiken.
+Selecteer in de gebruikersinterface van Experience Platform de optie **[!UICONTROL Sources]** in de linkernavigatie om de werkruimte van *[!UICONTROL Sources]* te openen. Gebruik het deelvenster *[!UICONTROL Categories]* of de zoekbalk om de gewenste bron te zoeken.
 
-Als u [!DNL Algolia] wilt gebruiken, selecteert u de **[!UICONTROL Algolia]** bronkaart onder *[!UICONTROL Data & Identity Partners]* en selecteert u vervolgens **[!UICONTROL Set up]** .
+Als u [!DNL Algolia] wilt verbinden, kiest u de **[!UICONTROL Algolia]** bronkaart onder *[!UICONTROL Data & Identity Partners]* en selecteert u **[!UICONTROL Set up]** .
 
 >[!TIP]
 >
->Bronnen in de catalogus met bronnen geven de optie **[!UICONTROL Set up]** weer wanneer een bepaalde bron nog geen geverifieerde account heeft. Zodra een geverifieerd account bestaat, verandert deze optie in **[!UICONTROL Add data]** .
+> Als een bron nog geen geverifieerd account heeft, wordt de optie **[!UICONTROL Set up]** weergegeven. Als de verificatie eenmaal is uitgevoerd, verandert deze in **[!UICONTROL Add data]** .
 
 ![ de broncatalogus met de geselecteerde bron van Profielen van de Gebruiker van Algolië.](../../../../images/tutorials/create/algolia/user-profiles/catalog.png)
 
@@ -54,48 +56,76 @@ Als u [!DNL Algolia] wilt gebruiken, selecteert u de **[!UICONTROL Algolia]** br
 
 ### Een bestaande account gebruiken
 
-Als u een bestaande account wilt gebruiken, selecteert u **[!UICONTROL Existing account]** en vervolgens de [!DNL Algolia User Profiles] -account die u wilt gebruiken. Selecteer **[!UICONTROL Next]** om door te gaan.
+Als u een bestaande account wilt gebruiken, kiest u **[!UICONTROL Existing account]** en selecteert u de [!DNL Algolia User Profiles] -account die u wilt gebruiken. Selecteer vervolgens **[!UICONTROL Next]** .
 
 ![ de bestaande rekeningsinterface.](../../../../images/tutorials/create/algolia/user-profiles/existing-account.png)
 
 ### Een nieuwe account maken
 
-Als u een nieuwe account maakt, selecteert u **[!UICONTROL New account]** en geeft u vervolgens een naam, een optionele beschrijving en [!DNL Algolia] referenties. Als u klaar bent, selecteert u **[!UICONTROL Connect to source]** en laat u de nieuwe verbinding enige tijd tot stand brengen.
+Als u een nieuwe account wilt maken, selecteert u **[!UICONTROL New account]** en voert u vervolgens een naam, een optionele beschrijving en uw [!DNL Algolia] -referenties in. Selecteer **[!UICONTROL Connect to source]** en wacht tot de verbinding tot stand is gebracht.
 
 ![ de nieuwe rekeningsinterface.](../../../../images/tutorials/create/algolia/user-profiles/new-account.png)
 
 ## Gegevens toevoegen
 
-Nadat u uw [!DNL Algolia User Profiles] -account hebt gemaakt, wordt de stap **[!UICONTROL Add data]** weergegeven. Deze stap bevat een interface waarmee u uw [!DNL Algolia] -gebruikersprofielen kunt verkennen die u naar Experience Platform wilt verzenden.
+Nadat uw [!DNL Algolia User Profiles] -account is gemaakt, wordt de stap **[!UICONTROL Add data]** weergegeven. Hiermee kunt u gebruikersprofielgegevens selecteren en hiervan een voorvertoning weergeven.
 
-* Het linkergedeelte van de interface is dat u optionele velden **[!UICONTROL Indices]** en **[!UICONTROL Affinity(s)]** invoert.
-* In het rechtergedeelte van de interface kunt u maximaal 100 rijen gebruikersprofielen voorvertonen.
+* Typ links optioneel **[!UICONTROL Indices]** en **[!UICONTROL Affinity(s)]** .
+* Aan de rechterkant kunt u maximaal 100 rijen gebruikersprofielen voorvertonen.
 
-Selecteer **[!UICONTROL Next]** als u klaar bent met het selecteren en voorvertonen van uw gegevens voor opname.
+Selecteer vervolgens **[!UICONTROL Next]** .
 
 ![ de uitgezochte gegevensstap van het werkschema.](../../../../images/tutorials/create/algolia/user-profiles/select-data.png)
 
 ## Gegevens over gegevensstroom opgeven
 
-Als u een bestaande dataset gebruikt, selecteer een dataset die met een schema wordt geassocieerd dat de [!DNL Algolia Profile] Groep van het Gebied gebruikt.
+Als u een bestaande gegevensset gebruikt, kiest u een gegevensset die is gekoppeld aan een schema dat de veldgroep [!DNL Algolia Profile] bevat. Zorg ervoor dat het veld [!DNL Algolia User Token] de naamruimte [!DNL Algolia User Token] identity gebruikt.  Als [!DNL Algolia User Token] momenteel niet wordt gecreeerd of toegewezen, worden de instructies hieronder verstrekt.
 
-![ de bestaande datasetstap van het bronwerkschema.](../../../../images/tutorials/create/algolia/user-profiles/dataflow-detail-existing-dataset.png)
+![ de bestaande datasetstap.](../../../../images/tutorials/create/algolia/user-profiles/dataflow-detail-existing-dataset.png)
 
-Als u een nieuwe dataset creeert, selecteer een schema dat de [!DNL Algolia Profile] gebiedsgroep gebruikt die in de toewijzingsstap wordt vereist.
+Als u een nieuwe gegevensset maakt, selecteert u een schema met de veldgroep [!DNL Algolia Profile] .
 
-![ de nieuwe datasetstap van het bronwerkschema.](../../../../images/tutorials/create/algolia/user-profiles/dataflow-detail-new-dataset.png)
+![ de nieuwe datasetstap.](../../../../images/tutorials/create/algolia/user-profiles/dataflow-detail-new-dataset.png)
+
+### Naamruimte [!DNL Algolia User Token] maken
+
+U moet de naamruimte [!DNL Algolia User Token] identity maken als deze nog niet bestaat in uw organisatie.
+
+Gebruik de linkernavigatie en selecteer **[!UICONTROL Identities]** om tot de [ werkruimte van de Dienst van de Identiteit ](../../../../../identity-service/home.md) UI toegang te hebben en dan **[!UICONTROL Create identity namespace]** te selecteren.
+
+Geef vervolgens een **[!UICONTROL Display Name]** en een **[!UICONTROL Identity Symbol]** op voor de aangepaste naamruimte. Tijdens deze stap, moet u het type van uw namespace ook vormen. Selecteer **[!UICONTROL Create]** als u klaar bent.
+
+![ creeer het scherm van identiteitskaart namespace.](../../../../images/tutorials/create/algolia/user-profiles/aep-identity-inputs.png)
+
+| Aangepaste naamruimte configureren | Waarde |
+| --- | --- |
+| **[!UICONTROL Display Name]** | [!DNL Algolia User Token] |
+| **[!UICONTROL Identity Symbol]** | [!DNL AlgoliaUserToken] |
+| **[!UICONTROL Select a type]** | [!DNL Cookie ID] |
+
+Nadat de naamruimte is toegevoegd, wordt deze in de lijst weergegeven. U kunt het nu toepassen in uw schema.
+
+![ Succesvolle verwezenlijking van Algolia Identiteit namespace.](../../../../images/tutorials/create/algolia/user-profiles/aep-algolia-user-token-identity.png)
+
+### Uw naamruimte toepassen op uw schema
+
+Gebruik de linkernavigatie en selecteer **[!UICONTROL Schemas]** om tot de [ werkruimte van Schema&#39;s ](../../../../../xdm/ui/overview.md) UI toegang te hebben. Gebruik de schemawerkruimte om een schema met de [!DNL Algolia Profile Details] gebiedsgroep tot stand te brengen of bij te werken. Navigeer vervolgens naar het veld **[!UICONTROL User Token]** en selecteer het vak **[!UICONTROL Identity]** met behulp van de rechterrail. Gebruik bovendien het invoervak om de naamruimte [!DNL Algolia User Token] identity te definiëren. Selecteer **[!UICONTROL Save]** als u klaar bent.
+
+![ vastgestelde identiteit op gebied.](../../../../images/tutorials/create/algolia/user-profiles/set-set-identity-on-field.png)
+
+Nadat aan het veld **[!UICONTROL User Token]** de naamruimte [!DNL Algolia User Token] identity is toegewezen, wordt de identiteit in het gebruikersprofiel voor elk profiel weergegeven.
+
+![ de interface van het gebruikersprofiel.](../../../../images/tutorials/create/algolia/user-profiles/user-profile.png)
 
 ## Gegevensvelden toewijzen aan een XDM-schema
 
-Gebruik de toewijzingsinterface om uw brongegevens toe te wijzen aan de aangewezen schemagebieden alvorens gegevens aan Experience Platform in te voeren.  Voor meer informatie, lees de [ kaartgids in UI ](../../../../../data-prep/ui/mapping.md).
+Gebruik de toewijzingsinterface om uw brongegevens toe te wijzen aan schemagebieden. Voor meer informatie, verwijs naar de [ kaartgids ](../../../../../data-prep/ui/mapping.md).
 
-![ de afbeeldingsstap van het bronwerkschema.](../../../../images/tutorials/create/algolia/user-profiles/mapping.png)
+![ de afbeeldingsstap.](../../../../images/tutorials/create/algolia/user-profiles/mapping.png)
 
 ## Planninguitvoering
 
 Daarna, gebruik de het plannen interface om het innameprogramma van uw dataflow te bepalen.
-
-<!-- The Scheduling step allows for configuration of the data/time to execute the [!DNL Algolia Uer Profiles] Source connector. There is configuration to backfill the data from [!DNL Algolia] which will pull all the profiles from the source system.  If the source is scheduled, then it will retrieve modified profiles from the [!DNL Algolia] based on the configured time interval. -->
 
 ![ de het plannen stap van het bronwerkschema.](../../../../images/tutorials/create/algolia/user-profiles/scheduling.png)
 
