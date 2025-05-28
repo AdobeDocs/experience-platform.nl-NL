@@ -2,9 +2,9 @@
 title: Overzicht van extensie voor Cloud Connector
 description: Meer informatie over de Cloud Connector-gebeurtenis die extensie doorstuurt in Adobe Experience Platform.
 exl-id: f3713652-ac32-4171-8dda-127c8c235849
-source-git-commit: 3b9ff1d41c698feadd0215ab562f87747aaa91a1
+source-git-commit: e832694fed5dbb86b5ed544473d6a79e500a6222
 workflow-type: tm+mt
-source-wordcount: '1680'
+source-wordcount: '1681'
 ht-degree: 2%
 
 ---
@@ -126,7 +126,7 @@ arc.ruleStash.[EXTENSION-NAME-HERE].responses.[RESPONSE-KEY-HERE]
 arc.ruleStash.adobe-cloud-connector.reponses.productDetails 
 ```
 
-## De Wederzijdse Veiligheid van de Laag van het Vervoer van het gebruik [!DNL mTLS] in Gebeurtenis door:sturen regels {#mtls-rules}
+## Voeg een Wederzijdse van de Veiligheid van de Laag van het Vervoer ([!DNL mTLS]) regel aan uw Gebeurtenis toe die bibliotheek door:sturen {#mtls-rules}
 
 Het [!DNL mTLS] -certificaat is een digitale referentie die de identiteit van een server of client in veilige communicatie aantoont. Wanneer u de service-API van [!DNL mTLS] gebruikt, kunt u met deze certificaten uw interactie met Adobe Experience Platform Event Forwarding verifiëren en coderen. Dit proces beschermt niet alleen uw gegevens maar zorgt er ook voor dat elke verbinding afkomstig is van een vertrouwde partner.
 
@@ -134,7 +134,7 @@ Het [!DNL mTLS] -certificaat is een digitale referentie die de identiteit van ee
 
 Om de uitbreiding te installeren, [ creeer een gebeurtenis door:sturen bezit ](../../../ui/event-forwarding/overview.md#properties) of selecteer een bestaand bezit in plaats daarvan uit te geven.
 
-Selecteer **[!UICONTROL Extensions]** in het linkerdeelvenster. Selecteer op het tabblad **[!UICONTROL Catalog]** de **[!UICONTROL Adobe Cloud Connector]** Real-Time Conversions API-kaart en selecteer vervolgens **[!UICONTROL Install]** .
+Selecteer **[!UICONTROL Extensions]** in het linkerdeelvenster. Selecteer op het tabblad **[!UICONTROL Catalog]** de **[!UICONTROL Adobe Cloud Connector]** -kaart en selecteer vervolgens **[!UICONTROL Install]** .
 
 ![ de uitbreidingscatalogus die [!DNL Adobe Cloud Connector] uitbreidingskaart tonen die installeert benadrukt.](../../../images/extensions/server/cloud-connector/install-extension.png)
 
@@ -142,7 +142,7 @@ Selecteer **[!UICONTROL Extensions]** in het linkerdeelvenster. Selecteer op het
 
 >[!NOTE]
 >
->Als u een regel wilt configureren om [!DNL mTLS] te gebruiken, moet u beschikken over Adobe Cloud Connector versie 1.2.4 of hoger.
+>Als u een regel wilt configureren om [!DNL mTLS] te gebruiken, moet u Adobe Cloud Connector versie 1.2.4 of hoger hebben geïnstalleerd.
 
 Nadat u de extensie hebt geïnstalleerd, kunt u een regel voor het doorsturen van gebeurtenissen maken die [!DNL mTLS] gebruikt en deze regel toevoegen aan uw bibliotheek.
 
@@ -150,7 +150,7 @@ Creeer een nieuwe gebeurtenis door:sturen [ regel ](../../../ui/managing-resourc
 
 ![ de Gebeurtenis die de mening van de Regels van het Bezit door:sturen, met de gebieden die worden vereist om een gebeurtenis toe te voegen die de benadrukte configuratie van de regelactie door:sturen.](../../../images/extensions/server/cloud-connector/event-action.png)
 
-Nadat u de selectie hebt gemaakt, worden aanvullende besturingselementen weergegeven om de methoden en de bestemming voor de aanvraag [!DNL mTLS] te configureren. Als u het gebruik van actieve certificaten in de omgevingen wilt inschakelen, selecteert u **[!UICONTROL Enable in [!DNL mTLS]]** en selecteert u **[!UICONTROL Keep Changes]** om de regel op te slaan.
+Nadat u de selectie hebt gemaakt, worden aanvullende besturingselementen weergegeven om de methode en de bestemming voor de [!DNL mTLS] -aanvraag te configureren. Als u het gebruik van actieve certificaten in de omgevingen wilt inschakelen, selecteert u **[!UICONTROL Enable in [!DNL mTLS]]** en selecteert u **[!UICONTROL Keep Changes]** om de regel op te slaan.
 
 ![ de Gebeurtenis die de mening van de Regels van het Bezit door:sturen, met de extra controlegebieden en houdt benadrukte veranderingen.](../../../images/extensions/server/cloud-connector/save-rule.png)
 
@@ -160,6 +160,6 @@ Uw nieuwe regel is nu klaar. Selecteer **[!UICONTROL Save to Library]** en selec
 
 ## Volgende stappen
 
-Deze gids besprak hoe te opstellings mTLS regels in gebeurtenis het door:sturen. Voor meer details bij vestiging mTLS voor een milieu, verwijs naar de  [!DNL mTLS]  gids van de Veiligheid van de Laag van het Wederzijdse Vervoer [&#128279;](../cloud-connector/mtls.md).
+Deze gids besprak hoe te opstellings mTLS regels in gebeurtenis het door:sturen. Voor meer details bij vestiging mTLS voor een milieu, verwijs naar de [ Wederzijdse Veiligheid van de Laag van het Vervoer ([!DNL mTLS]) gids ](../cloud-connector/mtls.md).
 
 Voor meer informatie over gebeurtenis die mogelijkheden in Experience Platform door:sturen, verwijs naar de [ gebeurtenis die overzicht ](../../../ui/event-forwarding/overview.md) door:sturen.

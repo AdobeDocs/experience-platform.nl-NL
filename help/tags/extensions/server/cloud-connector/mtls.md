@@ -1,14 +1,15 @@
 ---
 title: Het wederzijdse Overzicht van de Veiligheid van de Laag van het Vervoer (mTLS)
 description: Leer hoe u mTLS kunt gebruiken om openbare certificaten veilig op te halen die door Adobe zijn uitgegeven voor het doorsturen van gebeurtenissen.
-source-git-commit: 3b9ff1d41c698feadd0215ab562f87747aaa91a1
+exl-id: e8ee8655-213d-4d2a-93d4-d62824b53b1d
+source-git-commit: ab16cc3f70ec54460c7c4834e665c828d75d4d9e
 workflow-type: tm+mt
-source-wordcount: '604'
+source-wordcount: '605'
 ht-degree: 0%
 
 ---
 
-# Overzicht van wederzijdse beveiliging van transportlagen [!DNL mTLS]
+# Overzicht van wederzijdse beveiliging van transportlagen ([!DNL mTLS])
 
 Bind de Wederzijdse certificaten van de Veiligheid van de Laag van het Vervoer ([!DNL mTLS]) in [!UICONTROL Environments UI] om controle van de veiligheid van uw uitbreiding te nemen. Het [!DNL mTLS] -certificaat is een digitale referentie die de identiteit van een server of client in veilige communicatie aantoont. Wanneer u de service-API van [!DNL mTLS] gebruikt, kunt u met deze certificaten uw interactie met Adobe Experience Platform Event Forwarding verifiëren en coderen. Dit proces beschermt niet alleen uw gegevens maar zorgt er ook voor dat elke verbinding afkomstig is van een vertrouwde partner.
 
@@ -48,14 +49,14 @@ Als u de certificaatdetails voor een omgeving wilt weergeven, selecteert u het t
 
 De volgende certificaatdetails worden weergegeven:
 
-| Omgeving | Beschrijving |
+| Veldnaam | Beschrijving |
 | --- | --- |
 | Certificaat | Gegevens van het certificaat, met inbegrip van:<ul><li>**Naam**: De naam van het certificaat.</li><li>**gecreeerd Datum**: De datum toen het certificaat werd gecreeerd.</li><li>**Status**: De huidige status van het certificaat:<ul><li>**Huidige**: Het certificaat is actief in gebruik.</li><li>**verouderd**: Het certificaat is niet in gebruik maar nog niet verlopen. Deze kan nog steeds voor gebruik worden geselecteerd.</li><li>**Verlopen**: Het certificaat is verlopen, grijs uit, en niet meer beschikbaar voor gebruik.</li></ul></ul> |
 | Verloopt | De datum waarop het certificaat vervalt. |
 | Naam variabele | De variabelenaam van het certificaat. |
 | Status | De huidige status van het certificaat:<ul><li>**Gedepolyed**: Het certificaat is met succes opgesteld en is actief.</li><li>**die** opstelt: Het certificaat is in het proces om worden opgesteld.</li><li>**vereist Plaatsing**: Deze status verschijnt wanneer een verouderd certificaat wordt geselecteerd.</li></ul> |
 
-![ de Edit pagina van het Milieu van de Ontwikkeling, die [!UICONTROL Certificate] details benadrukt.](../../../images/extensions/server/cloud-connector/create-environment.png)
+![ de Edit pagina van het Milieu van de Ontwikkeling, die [!UICONTROL Certificate] details benadrukt.](../../../images/extensions/server/cloud-connector/certificate-details.png)
 
 ### Een verouderd certificaat selecteren en implementeren {#deploy-obsolete-certificate}
 
