@@ -1,34 +1,33 @@
 ---
-title: AI-assistent voor Klantenondersteuning
-description: Leer hoe u AI Medewerker kunt gebruiken om het oplossen van problemen en het proces van het etiketteren van de klantensteun te stroomlijnen.
-badge: Alpha
+title: Product Support Agent
+description: Leer hoe u de Agent van de Steun van het Product in AI Medewerker kunt gebruiken om het oplossen van problemen en het proces van het indienen van kaartjes van de klantensteun te stroomlijnen.
 exl-id: 263b8a44-8902-42b9-8390-d7da8e9b5129
-source-git-commit: e224716f8fba59529c5d7634d4b4a3013a0986a3
+source-git-commit: 6ab9302a40547349c8d0390baafd8591ed6859e1
 workflow-type: tm+mt
-source-wordcount: '374'
+source-wordcount: '402'
 ht-degree: 0%
 
 ---
 
-# AI-assistent voor Klantenondersteuning
+# Product Support Agent
 
 >[!AVAILABILITY]
 >
->Deze functie is in Alpha en is mogelijk niet beschikbaar voor uw organisatie. Neem contact op met het accountteam van uw Adobe als u wilt deelnemen aan het Alpha-programma en toegang wilt krijgen tot deze functie.
+>**beperkte-tijdtoegang**: Wij hopen u van het gebruiken van de Agent van de Steun van het Product geniet. De toegang tot dit vermogen zal op 30 november 2025 beëindigen. Als u de Product Support Agent zonder onderbreking wilt blijven gebruiken, vraagt u uw Adobe-accountvertegenwoordiger om meer te weten over de licentie voor de Product Support Agent.
 
-AI Assistant voor Klantenondersteuning is een zelfbedieningsfunctie voor foutopsporing en probleemoplossing van AI Assistant die u kunt gebruiken voor Adobe Experience Platform-functies en -toepassingen.
+De Agent van de Steun van het product is zelfbediening het zuiveren en het oplossen van problemenvermogen van AI Medewerker die u voor eigenschappen en toepassingen van Adobe Experience Platform kunt gebruiken.
 
-U kunt AI Assistant gebruiken voor Klantenondersteuning om probleemloos problemen op te lossen zonder uw workflows te verlaten. Ondersteuningsbeheerders kunnen nu, indien nodig, de AI Assistant voor Klantenondersteuning gebruiken om ondersteuningstickets te maken, compleet met context- en sessiedetails van uw interacties met AI Assistant. Bovendien kunt u de nieuwste updates van uw ondersteuningstickets nu controleren met AI Assistant.
+U kunt de Agent van de Steun van het Product in AI Medewerker gebruiken om probleemloos problemen op te lossen zonder uw werkschema te verlaten. Indien nodig, kunnen de steunbeheerders de Agent van de Steun van het Product nu gebruiken om klantensteunkaartjes, volledig met context en zittingsdetails van uw interactie met AI Medewerker tot stand te brengen. Bovendien kunt u de nieuwste updates van uw ondersteuningstickets nu controleren met AI Assistant.
 
-AI Assistant voor Klantenondersteuning bevat momenteel de volgende mogelijkheden voor oplossingen:
+De Agent van de Steun van het product omvat de volgende oplossingsmogelijkheden:
 
-## Hulp bij snelle probleemoplossing
+## Hulp bij snelle probleemoplossing {#quick-troubleshooting-help}
 
 Krijg onmiddellijke reacties op gemeenschappelijke steunvragen die uit deskundige-gebogen documentatie worden voortgebracht, zoals:
 
-* **de artikelen van de Kennis** die door de ondersteuningsteams van de Adobe worden geleid.
+* **de artikelen van de Kennis** die door de steunteams van Adobe worden geleid.
    * Voorbeeldvragen:
-      * &quot;Waarom verschilt mijn profielaantal op het Dashboard van het Gebruik van de Vergunning en de homepage van het Experience Platform?&quot;
+      * &quot;Waarom is mijn profielaantal verschillend op het Dashboard van het Gebruik van de Vergunning en de homepage van Experience Platform?&quot;
       * &quot;Wat zijn de redenen voor een reis die niet veroorzaakt wordt?&quot;
 * **leerprogramma&#39;s van het Product** voor zelf-geleid leren en vaardigheid het bouwen.
    * Voorbeeldvragen:
@@ -39,15 +38,15 @@ Krijg onmiddellijke reacties op gemeenschappelijke steunvragen die uit deskundig
       * &quot;Wat is de limiet voor batchsegmentatietaken bij Adobe Experience Platform Activation?&quot;
       * &quot;Wat is de gemiddelde rijkheidsgrens van het profiel in de Activering van Adobe Experience Platform?&quot;
 
-## Ondersteuning voor het maken van hoofdletters
+## Ondersteuning voor het maken van hoofdletters {#support-case-creation}
 
-Rechtstreeks ondersteuningsgevallen starten vanuit de AI Assistant voor Klantenondersteuning, die automatisch contextuele inzichten vastlegt om de oplossing van problemen te versnellen.
+Initieer rechtstreeks ondersteuningsgevallen van de Product Support Agent, die automatisch contextuele inzichten vastlegt om de oplossing van problemen te versnellen.
 
 * Voorbeeldvragen:
    * &quot;Maak een ondersteuningsticket.&quot;
    * &quot;Kun je me helpen een ondersteuningsticket te maken?&quot;
 
-## Voortgang hoofdletters/kleine letters volgen
+## Voortgang hoofdletters/kleine letters volgen {#track-case-progress}
 
 Naadloos de status van steunkwesties volgen.
 
@@ -55,9 +54,13 @@ Naadloos de status van steunkwesties volgen.
    * &quot;Wat is de laatste over mijn zaak E-12345?&quot;
    * &quot;Wat is de update op ticket E-67890?&quot;
 
-Neem contact op met het accountteam van uw Adobe om toegang te krijgen tot AI Assistant voor Klantenondersteuning.
+## Access Product Support Agent
 
-Bekijk de volgende video voor meer informatie over het gebruik van AI Assistant voor Klantenondersteuning om probleemloos problemen op te lossen zonder uw workflows te verlaten.
+Volg de [ toegangsgids ](../access.md) om te leren hoe te om toestemmingen toe te laten en tot AI Medewerker toegang te hebben.
 
->[!VIDEO](https://video.tv.adobe.com/v/3443189?learn=on&captions=dut)
+Zodra u deze stappen voltooit, zullen om het even welke steunbeheerders in uw geregistreerde organisatie kaartjes kunnen tot stand brengen gebruikend AI Medewerker.
+
+Voor meer informatie bekijkt u de volgende video om te leren hoe u de Agent van de Steun van het Product kunt gebruiken om probleemloos problemen op te lossen zonder uw werkschema te verlaten.
+
+>[!VIDEO](https://video.tv.adobe.com/v/3443183?learn=on)
 

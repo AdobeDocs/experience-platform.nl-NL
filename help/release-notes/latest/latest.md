@@ -2,10 +2,10 @@
 title: Aanvullende informatie voor Adobe Experience Platform mei 2025
 description: Aanvullende informatie van mei 2025 voor Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: cf88ed1082085fac28553dcc7c7be27c517adb22
+source-git-commit: 6ab9302a40547349c8d0390baafd8591ed6859e1
 workflow-type: tm+mt
-source-wordcount: '1360'
-ht-degree: 81%
+source-wordcount: '1522'
+ht-degree: 77%
 
 ---
 
@@ -15,9 +15,9 @@ ht-degree: 81%
 >
 >Raadpleeg de volgende documentatie voor aanvullende informatie voor andere Adobe Experience Platform-toepassingen:
 >
->- [Adobe Journey Optimizer](https://experienceleague.adobe.com/nl/docs/journey-optimizer/using/whats-new/release-notes)
->- [Adobe Journey Optimizer B2B](https://experienceleague.adobe.com/nl/docs/journey-optimizer-b2b/user/release-notes)
->- [Customer Journey Analytics](https://experienceleague.adobe.com/nl/docs/analytics-platform/using/releases/latest)
+>- [Adobe Journey Optimizer](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/whats-new/release-notes)
+>- [Adobe Journey Optimizer B2B](https://experienceleague.adobe.com/en/docs/journey-optimizer-b2b/user/release-notes)
+>- [Customer Journey Analytics](https://experienceleague.adobe.com/en/docs/analytics-platform/using/releases/latest)
 >- [Samenstelling van Federated-doelgroep](https://experienceleague.adobe.com/nl/docs/federated-audience-composition/using/release-notes)
 >- [Real-Time CDP Collaboration](https://experienceleague.adobe.com/nl/docs/real-time-cdp-collaboration/using/latest)
 
@@ -25,6 +25,7 @@ ht-degree: 81%
 
 Updates van bestaande functies en documentatie in Adobe Experience Platform:
 
+- [AI-assistent](#ai-assistant)
 - [Catalogusservice](#catalog-service)
 - [Gegevensvoorbereiding](#data-prep)
 - [Bestemmingen](#destinations)
@@ -33,6 +34,18 @@ Updates van bestaande functies en documentatie in Adobe Experience Platform:
 - [Sandboxes](#sandboxes)
 - [Segmentatieservice](#segmentation-service)
 - [Bronnen](#sources)
+
+## AI-assistent {#ai-assistant}
+
+AI-assistent in Adobe Experience Platform is een gesprekservaring waarmee u uw workflows in Adobe-applicaties kunt versnellen. Met AI-assistent krijgt u meer inzicht in productkennis, kunt u problemen oplossen of informatie doorzoeken en operationele inzichten verkrijgen. AI-assistent biedt ondersteuning voor Experience Platform, Real-time Customer Data Platform, Adobe Journey Optimizer en Customer Journey Analytics.
+
+**Bijgewerkte functies**
+
+| Functie | Beschrijving |
+| --- | --- |
+| Algemene beschikbaarheid van de Agent van de Steun van het Product | U kunt de Agent van de Steun van het Product in AI Medewerker nu gebruiken om probleemloos problemen op te lossen zonder uw werkschema te verlaten. De beheerders van de steun in uw organisatie kunnen de Agent van de Steun van het Product nu gebruiken om klantensteunkaartjes tot stand te brengen, volledig met context en zittingsdetails van uw interactie met AI Medewerker. <br><br> de Toegang tot de Agent van de Steun van het Product is beschikbaar tot 30 November, 2025. U moet contact opnemen met uw Adobe-accountvertegenwoordiger om een licentie te verkrijgen voor Product Support Agent en de functie na deze datum blijven gebruiken. Voor meer informatie, lees de [ documentatie van de Agent van de Steun van het Product ](../../ai-assistant/new-features/customer-support.md). |
+
+Voor meer informatie, raadpleegt u het [overzicht van de AI-assistent](../../ai-assistant/landing.md).
 
 ## Catalogusservice {#catalog-service}
 
@@ -68,7 +81,7 @@ Voor meer informatie, raadpleegt u het [Overzicht van Gegevensvoorbereiding](../
 
 | Functie | Beschrijving |
 | --- | --- |
-| [&#128279;](../../destinations/catalog/social/facebook.md) verbetering en steun van de Aangepaste Publiek van Facebook voor adres-verwante herkenningstekens | Vanaf 23 mei 2025 en gedurende juni 2025 ziet u wellicht tijdelijk twee **[!DNL Facebook Custom Audience]** doelkaarten in de lijst met bestemmingen, voor maximaal een paar uur. Dit is het gevolg van een interne upgrade naar de service voor doelen en de ondersteuning van nieuwe velden voor betere doelgerichtheid en betere overeenkomsten met profielen op Facebook-eigenschappen. Voor details over de nieuwe adres-verwante gebieden, zie de [ gesteunde identiteiten ](#supported-identities) sectie. <br><br> als u een kaart geëtiketteerd **[!UICONTROL (New) Facebook Custom Audience]** ziet, gebruik deze kaart voor nieuwe stromen van activeringsgegevens. De bestaande gegevensstromen worden automatisch bijgewerkt, dus u hoeft niets te doen. Wijzigingen die u aanbrengt in bestaande gegevensstromen tijdens deze periode, blijven na de upgrade behouden. Zodra de upgrade is voltooid, wordt de naam van de **[!UICONTROL (New) Facebook Custom Audience]** -doelkaart gewijzigd in **[!DNL Facebook Custom Audience]** . <br><br> als u dataflows gebruikend de [ Dienst API van de Stroom ](https://developer.adobe.com/experience-platform-apis/references/destinations/) creeert, moet u uw [!DNL flow spec ID] en [!DNL connection spec ID] aan de volgende waarden bijwerken: <ul><li>Stroomspecificatie-ID: `bb181d00-58d7-41ba-9c15-9689fdc831d3`</li><li>Verbindingsspecificatie-ID: `c8b97383-2d65-4b7a-9913-db0fbfc71727`</li></ul> |
+| ](../../destinations/catalog/social/facebook.md) verbetering en steun van de Aangepaste Publiek van Facebook voor adres-verwante herkenningstekens[ | Vanaf 23 mei 2025 en gedurende juni 2025 ziet u wellicht tijdelijk twee **[!DNL Facebook Custom Audience]** doelkaarten in de lijst met bestemmingen, voor maximaal een paar uur. Dit is het gevolg van een interne upgrade naar de service voor doelen en de ondersteuning van nieuwe velden voor betere doelgerichtheid en betere overeenkomsten met profielen op Facebook-eigenschappen. Voor details over de nieuwe adres-verwante gebieden, zie de [ gesteunde identiteiten ](#supported-identities) sectie. <br><br> als u een kaart geëtiketteerd **[!UICONTROL (New) Facebook Custom Audience]** ziet, gebruik deze kaart voor nieuwe stromen van activeringsgegevens. De bestaande gegevensstromen worden automatisch bijgewerkt, dus u hoeft niets te doen. Wijzigingen die u aanbrengt in bestaande gegevensstromen tijdens deze periode, blijven na de upgrade behouden. Zodra de upgrade is voltooid, wordt de naam van de **[!UICONTROL (New) Facebook Custom Audience]** -doelkaart gewijzigd in **[!DNL Facebook Custom Audience]** . <br><br> als u dataflows gebruikend de [ Dienst API van de Stroom ](https://developer.adobe.com/experience-platform-apis/references/destinations/) creeert, moet u uw [!DNL flow spec ID] en [!DNL connection spec ID] aan de volgende waarden bijwerken: <ul><li>Stroomspecificatie-ID: `bb181d00-58d7-41ba-9c15-9689fdc831d3`</li><li>Verbindingsspecificatie-ID: `c8b97383-2d65-4b7a-9913-db0fbfc71727`</li></ul> |
 | Mobiele reclame-id steun voor de [ Klantovereenkomst van Google + Vertoning &amp; Video 360 ](../../destinations/catalog/advertising/google-customer-match-dv360.md#supported-identities) bestemming | U kunt publiek aan de [ Klantovereenkomst van Google nu activeren + Vertoning &amp; Video 360 ](../../destinations/catalog/advertising/google-customer-match-dv360.md#supported-identities) bestemming die op mobiele reclame IDs, zoals [!DNL GAID] en [!DNL IDFA] wordt gebaseerd. |
 | Ondersteuning voor aanvullende identificatiegegevens voor [Google Customer Match](../../destinations/catalog/advertising/google-customer-match.md) | De Google Customer Match-bestemming ondersteunt nu het toewijzen van adresgerelateerde velden voor verbeterde afstemmingspercentages in het Google-platform. <br><br>Als u wilt dat Google het adres matcht, moet u alle vier de adresvelden in kaart brengen (`address_info_first_name`, `address_info_last_name`, `address_info_country_code` en `address_info_postal_code`) en controleren of er in deze velden geen gegevens in de geëxporteerde profielen ontbreken. <br> Als een veld niet is toegewezen of als er gegevens ontbreken, matcht Google het adres niet. |
 | De kolom voor het verlopen van accounts voor [Facebook](../../destinations/catalog/social/facebook.md)-verbindingen | U kunt de verloopdatums voor Facebook-accounttokens nu zien in de tabbladen [Verkennen](../../destinations/ui/destinations-workspace.md#browse) en [Accounts](../../destinations/ui/destinations-workspace.md#accounts). |

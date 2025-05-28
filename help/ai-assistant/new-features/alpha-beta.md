@@ -1,19 +1,20 @@
 ---
 title: Alpha- en Beta-functies voor AI Assistant
-description: Leer meer over de AI Assistant-functies die momenteel in de Alpha- of Beta-fase worden uitgevoerd.
+description: Meer informatie over de functies van AI Assistant die momenteel in Alpha- of Beta-fasen worden uitgevoerd.
 badge: Alpha
 exl-id: 48e7737e-9aee-4d01-8f24-bc562e443e3a
-source-git-commit: ed09335f7b703be49ed08448ed03ed7bc91831f1
+source-git-commit: 5b89a5fb30b64c0439543c06d559059e7553376c
 workflow-type: tm+mt
-source-wordcount: '66'
+source-wordcount: '67'
 ht-degree: 0%
 
 ---
 
 # Alpha- en Beta-functies voor AI Assistant
 
-Lees de volgende documenten voor meer informatie over functies in AI Assistant voor Adobe Experience Platform die zich momenteel in de Alpha- of Beta-fase bevinden:
+Lees de volgende documenten voor meer informatie over functies in AI Assistant voor Adobe Experience Platform die zich momenteel in Alpha- of Beta-fasen bevinden:
 
-* [AI-assistent voor Klantenondersteuning](./customer-support.md)
+* [Product Support Agent](./customer-support.md)
 * [Belangrijke wijzigingen en prognoses voor het publiek volgen](./audience-forecasting.md)
 * [Schatting van de natuurlijke taal](./natural-language.md)
+* [XDM-veld detecteren](./xdm-field-discovery.md)
