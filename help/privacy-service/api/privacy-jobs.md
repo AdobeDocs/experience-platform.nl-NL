@@ -2,17 +2,23 @@
 keywords: Experience Platform;startpagina;populaire onderwerpen
 solution: Experience Platform
 title: API-eindpunt voor privacytaken
-description: Leer hoe u privacytaken voor Experiencen Cloud-toepassingen beheert met de Privacy Service-API.
+description: Leer hoe u privacytaken voor Experience Cloud-toepassingen beheert met de Privacy Service API.
 role: Developer
 exl-id: 74a45f29-ae08-496c-aa54-b71779eaeeae
-source-git-commit: 26a50f21c1ebebf485eaf62712bd02de3406cceb
+source-git-commit: ec99b2a8f772e77d0a3957fc35b8cea112b91cba
 workflow-type: tm+mt
-source-wordcount: '1810'
+source-wordcount: '1861'
 ht-degree: 0%
 
 ---
 
 # Het eindpunt van privacytaken
+
+>[!IMPORTANT]
+>
+>Privacy Service wijzigt zijn `regulation_type` waarden om het groeiende aantal Amerikaanse wetten op het gebied van privacy te ondersteunen. Gebruik de nieuwe waarden die staatsafkortingen (bijvoorbeeld, `ucpa_ut_usa`) omvatten die **12 juni 2025** beginnen. De oudere waarden (bijvoorbeeld, `ucpa_usa`) houden het werken na **28 juli 2025** op.
+>
+>Werk uw integraties vóór deze deadline bij om mislukte aanvragen te voorkomen.
 
 In dit document wordt beschreven hoe u met privacytaken werkt met API-aanroepen. Het gaat specifiek over het gebruik van het eindpunt `/job` in de API van [!DNL Privacy Service] . Alvorens deze gids te lezen, verwijs naar [ begonnen gids ](./getting-started.md) voor belangrijke informatie die u moet kennen om vraag aan API met succes te maken, met inbegrip van vereiste kopballen en hoe te om voorbeeld API vraag te lezen.
 
@@ -22,11 +28,11 @@ In dit document wordt beschreven hoe u met privacytaken werkt met API-aanroepen.
 
 ## Alle taken weergeven {#list}
 
-U kunt een lijst van alle beschikbare privacybanen binnen uw organisatie bekijken door een verzoek van de GET tot het `/jobs` eindpunt te richten.
+U kunt een lijst weergeven met alle beschikbare privacytaken binnen uw organisatie door een GET-aanvraag in te dienen bij het eindpunt van `/jobs` .
 
 **API formaat**
 
-Deze verzoekformaat gebruikt een `regulation` vraagparameter op het `/jobs` eindpunt, daarom begint het met een vraagteken (`?`) zoals hieronder getoond. Wanneer het vermelden van middelen, keert Privacy Service API tot 1000 banen terug en pagineert de reactie. Gebruik andere queryparameters (`page` , `size` en datumfilters) om de reactie te filteren. U kunt veelvoudige parameters scheiden gebruikend ampersands (`&`).
+Deze verzoekformaat gebruikt een `regulation` vraagparameter op het `/jobs` eindpunt, daarom begint het met een vraagteken (`?`) zoals hieronder getoond. Wanneer bronnen worden vermeld, retourneert de Privacy Service API maximaal 1000 taken en pagineert deze de reactie. Gebruik andere queryparameters (`page` , `size` en datumfilters) om de reactie te filteren. U kunt veelvoudige parameters scheiden gebruikend ampersands (`&`).
 
 >[!TIP]
 >
@@ -42,7 +48,7 @@ GET /jobs?regulation={REGULATION}&fromDate={FROMDATE}&toDate={TODATE}&status={ST
 
 | Parameter | Beschrijving |
 | --- | --- |
-| `{REGULATION}` | Het regulatietype waarvoor u een query wilt uitvoeren. Tot de geaccepteerde waarden behoren: <ul><li>`apa_aus`</li><li>`ccpa`</li><li>`cpa_usa`</li><li>`cpra_usa`</li><li>`ctdpa_usa`</li><li>`dpdpa`</li><li>`fdbr_usa`</li><li>`gdpr`</li><li>`hipaa_usa`</li><li>`icdpa_usa`</li><li>`lgpd_bra`</li><li>`mcdpa_usa`</li><li>`mhmda_usa`</li><li>`ndpa_usa`</li><li>`nhpa_usa`</li><li>`njdpa_usa`</li><li>`nzpa_nzl`</li><li>`ocpa_usa`</li><li>`pdpa_tha`</li><li>`ql25`</li><li>`tdpsa_usa`</li><li>`ucpa_usa`</li><li>`vcdpa_usa`</li></ul><br> zie het overzicht op [ gesteunde verordeningen ](../regulations/overview.md) voor meer informatie over de privacyverordeningen die de bovengenoemde waarden vertegenwoordigen. |
+| `{REGULATION}` | Het regulatietype waarvoor u een query wilt uitvoeren. Tot de geaccepteerde waarden behoren: <ul><li>`apa_aus`</li><li>`ccpa`</li><li>`cpa_co_usa`</li><li>`cpra_ca_usa`</li><li>`ctdpa_ct_usa`</li><li>`dpdpa`</li><li>`fdbr_fl_usa`</li><li>`gdpr`</li><li>`hipaa_usa`</li><li>`icdpa_ia_usa`</li><li>`lgpd_bra`</li><li>`mcdpa_mn_usa`</li><li>`mcdpa_mt_usa`</li><li>`mhmda_wa_usa`</li><li>`ndpa_ne_usa`</li><li>`nhpa_nh_usa`</li><li>`njdpa_nj_usa`</li><li>`nzpa_nzl`</li><li>`ocpa_or_usa`</li><li>`pdpa_tha`</li><li>`ql25`</li><li>`tdpsa_tx_usa`</li><li>`tipa_tn_usa`</li><li>`ucpa_ut_usa`</li><li>`vcdpa_va_usa`</li></ul><br> zie het overzicht op [ gesteunde verordeningen ](../regulations/overview.md) voor meer informatie over de privacyverordeningen die de bovengenoemde waarden vertegenwoordigen. |
 | `{PAGE}` | De pagina met gegevens die moet worden weergegeven met een op 0 gebaseerde nummering. De standaardwaarde is `0` . |
 | `{SIZE}` | Het aantal resultaten dat op elke pagina moet worden weergegeven. De standaardwaarde is `100` en het maximum is `1000` . Als het maximum wordt overschreden, retourneert de API een fout van 400 code. |
 | `{status}` | Standaard worden alle statussen opgenomen. Als u een statustype opgeeft, worden alleen privacytaken geretourneerd die overeenkomen met dat statustype. De toegestane waarden zijn onder meer: <ul><li>`processing`</li><li>`complete`</li><li>`error`</li></ul> |
@@ -76,15 +82,15 @@ Om de volgende reeks resultaten in een gepagineerde reactie te halen, moet u een
 
 >[!IMPORTANT]
 >
->Privacy Service is alleen bedoeld voor betrokkenen en verzoeken om consumentenrechten. Elk ander gebruik van Privacy Service voor het opschonen of onderhouden van gegevens wordt niet ondersteund of toegestaan. Adobe is wettelijk verplicht deze tijdig te vervullen. Als zodanig is het testen van belasting op Privacy Service niet toegestaan, omdat dit een productieomgeving is en een onnodige achterstand oplevert bij geldige privacyverzoeken.
+>Privacy Service is alleen bedoeld voor de betrokkenen en verzoeken om consumentenrechten. Elk ander gebruik van Privacy Service voor het opschonen of onderhouden van gegevens wordt niet ondersteund of toegestaan. Adobe is wettelijk verplicht deze tijdig te vervullen. Daarom is het testen van belasting op Privacy Service niet toegestaan, omdat dit een productieomgeving is en een onnodige achterstand oplevert bij geldige privacyverzoeken.
 >
->Er is nu een vaste uploadlimiet voor dagelijks gebruik om misbruik van de service te voorkomen. Gebruikers die misbruik van het systeem kunnen maken, hebben toegang tot de service uitgeschakeld. Daarna zal er een vergadering met hen worden gehouden om hun acties te bespreken en te bespreken of Privacy Service aanvaardbaar is.
+>Er is nu een vaste uploadlimiet voor dagelijks gebruik om misbruik van de service te voorkomen. Gebruikers die misbruik van het systeem kunnen maken, hebben toegang tot de service uitgeschakeld. Daarna zal er een vergadering met hen worden gehouden om hun acties te bespreken en te bespreken hoe Privacy Service zich kan inzetten.
 
-Voordat u een nieuwe taakaanvraag maakt, moet u eerst identificatiegegevens verzamelen over de betrokkenen van wie u de gegevens wilt benaderen, verwijderen of niet wilt verkopen. Zodra u de vereiste gegevens hebt, moet het in de lading van een verzoek van de POST aan het `/jobs` eindpunt worden verstrekt.
+Voordat u een nieuwe taakaanvraag maakt, moet u eerst identificatiegegevens verzamelen over de betrokkenen van wie u de gegevens wilt benaderen, verwijderen of niet wilt verkopen. Zodra u de vereiste gegevens hebt, moet het in de lading van een POST- verzoek aan het `/jobs` eindpunt worden verstrekt.
 
 >[!NOTE]
 >
->Compatibele Adobe Experience Cloud-toepassingen gebruiken verschillende waarden voor het identificeren van betrokkenen. Zie de gids op [ Privacy Service en de toepassingen van het Experience Cloud ](../experience-cloud-apps.md) voor meer informatie over vereiste herkenningstekens voor uw toepassing(en). Voor meer algemene begeleiding bij het bepalen van welke IDs naar [!DNL Privacy Service] te verzenden, zie het document op [ identiteitsgegevens in privacyverzoeken ](../identity-data.md).
+>Compatibele Adobe Experience Cloud-toepassingen gebruiken verschillende waarden voor het identificeren van betrokkenen. Zie de gids op [ Privacy Service en de toepassingen van Experience Cloud ](../experience-cloud-apps.md) voor meer informatie over vereiste herkenningstekens voor uw toepassing(en). Voor meer algemene begeleiding bij het bepalen van welke IDs naar [!DNL Privacy Service] te verzenden, zie het document op [ identiteitsgegevens in privacyverzoeken ](../identity-data.md).
 
 De API van [!DNL Privacy Service] ondersteunt twee soorten taakaanvragen voor persoonlijke gegevens:
 
@@ -168,9 +174,9 @@ curl -X POST \
 
 | Eigenschap | Beschrijving |
 | --- | --- |
-| `companyContexts` **(Required)** | Een array met verificatiegegevens voor uw organisatie. Elke weergegeven id bevat de volgende kenmerken: <ul><li>`namespace`: De naamruimte van een id.</li><li>`value`: De waarde van de id.</li></ul>Het wordt **vereist** dat één van de herkenningstekens `imsOrgId` als zijn `namespace` gebruikt, met zijn `value` die unieke identiteitskaart voor uw organisatie bevatten. <br/><br/> de Extra herkenningstekens kunnen product-specifieke bedrijfkwalificfiers (bijvoorbeeld, `Campaign`) zijn, die een integratie met een toepassing van de Adobe identificeren die tot uw organisatie behoort. Mogelijke waarden zijn accountnamen, clientcodes, gebruikers-id&#39;s of andere toepassings-id&#39;s. |
+| `companyContexts` **(Required)** | Een array met verificatiegegevens voor uw organisatie. Elke weergegeven id bevat de volgende kenmerken: <ul><li>`namespace`: De naamruimte van een id.</li><li>`value`: De waarde van de id.</li></ul>Het wordt **vereist** dat één van de herkenningstekens `imsOrgId` als zijn `namespace` gebruikt, met zijn `value` die unieke identiteitskaart voor uw organisatie bevatten. <br/><br/> de Extra herkenningstekens kunnen product-specifieke bedrijfkwalificfiers (bijvoorbeeld, `Campaign`) zijn, die een integratie met een toepassing van Adobe identificeren die tot uw organisatie behoort. Mogelijke waarden zijn accountnamen, clientcodes, gebruikers-id&#39;s of andere toepassings-id&#39;s. |
 | `users` **(Required)** | Een array die een verzameling van ten minste één gebruiker bevat waarvan u de gegevens wilt openen of verwijderen. Een maximum van 1000 gebruikers kan in één enkel verzoek worden verstrekt. Elk gebruikersobject bevat de volgende informatie: <ul><li>`key`: Een id voor een gebruiker die wordt gebruikt om de afzonderlijke taak-id&#39;s in de reactiegegevens te kwalificeren. Het is aan te raden een unieke, gemakkelijk identificeerbare tekenreeks voor deze waarde te kiezen, zodat er later gemakkelijk naar kan worden verwezen of deze kan worden opgezocht.</li><li>`action`: Een array met de acties die moeten worden uitgevoerd op basis van de gegevens van de gebruiker. Afhankelijk van de handelingen die u wilt uitvoeren, moet deze array `access` , `delete` of beide bevatten.</li><li>`userIDs`: Een verzameling identiteiten voor de gebruiker. Het aantal identiteiten dat één gebruiker kan hebben, is beperkt tot negen. Elke identiteit bestaat uit een `namespace` , een `value` , en een namespace kwalificfier (`type`). Zie [ bijlage ](appendix.md) voor meer details over deze vereiste eigenschappen.</li></ul> Voor een meer gedetailleerde verklaring van `users` en `userIDs`, zie de [ het oplossen van problemengids ](../troubleshooting-guide.md#user-ids). |
-| `include` **(Required)** | Een array met producten van de Adobe die in de verwerking moeten worden opgenomen. Als deze waarde ontbreekt of anderszins leeg is, wordt het verzoek afgewezen. Omvat slechts producten die uw organisatie een integratie met heeft. Zie de sectie op [ erkende productwaarden ](appendix.md) in het bijlage voor meer informatie. |
+| `include` **(Required)** | Een array met Adobe-producten die in uw verwerking moeten worden opgenomen. Als deze waarde ontbreekt of anderszins leeg is, wordt het verzoek afgewezen. Omvat slechts producten die uw organisatie een integratie met heeft. Zie de sectie op [ erkende productwaarden ](appendix.md) in het bijlage voor meer informatie. |
 | `expandIDs` | Een optionele eigenschap die, indien ingesteld op `true`, een optimalisatie vertegenwoordigt voor het verwerken van de id&#39;s in de toepassingen (momenteel alleen ondersteund door [!DNL Analytics] ). Als deze waarde wordt weggelaten, wordt deze standaard ingesteld op `false` . |
 | `priority` | Een optionele eigenschap die door Adobe Analytics wordt gebruikt en die de prioriteit voor het verwerken van aanvragen instelt. Geaccepteerde waarden zijn `normal` en `low`. Wanneer `priority` wordt weggelaten, is het standaardgedrag `normal` . |
 | `mergePolicyId` | Wanneer het maken van privacyverzoeken voor het Profiel van de Klant in real time (`profileService`), kunt u naar keuze identiteitskaart van het specifieke [ fusiebeleid ](../../profile/merge-policies/overview.md) verstrekken dat u voor identiteitskaart het stitching wilt gebruiken. Door een samenvoegbeleid te specificeren, kunnen de privacyverzoeken publieksinformatie omvatten wanneer het terugkeren van gegevens over een klant. Per aanvraag kan slechts één samenvoegbeleid worden opgegeven. Als er geen samenvoegingsbeleid is opgegeven, wordt segmenteringsinformatie niet opgenomen in de reactie. |
@@ -234,7 +240,7 @@ Zodra u met succes het baanverzoek hebt voorgelegd, kunt u aan de volgende stap 
 
 ## De status van een taak controleren {#check-status}
 
-U kunt informatie over een specifieke baan, zoals zijn huidige verwerkingsstatus terugwinnen, door de baan `jobId` in de weg van een verzoek van de GET aan het `/jobs` eindpunt te omvatten.
+U kunt informatie over een specifieke baan, zoals zijn huidige verwerkingsstatus terugwinnen, door de baan `jobId` in de weg van een GET verzoek aan het `/jobs` eindpunt te omvatten.
 
 >[!IMPORTANT]
 >
@@ -369,4 +375,4 @@ In de volgende tabel worden de verschillende mogelijke taakstatuscategorieën en
 
 ## Volgende stappen
 
-U weet nu hoe u met de API [!DNL Privacy Service] privacytaken kunt maken en controleren. Voor informatie over hoe te om de zelfde taken uit te voeren gebruikend het gebruikersinterface, zie het [ overzicht van de Privacy Service UI ](../ui/overview.md).
+U weet nu hoe u met de API [!DNL Privacy Service] privacytaken kunt maken en controleren. Voor informatie over hoe te om de zelfde taken uit te voeren gebruikend het gebruikersinterface, zie het [ overzicht van Privacy Service UI ](../ui/overview.md).
