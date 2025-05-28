@@ -2,9 +2,9 @@
 title: Gebruikersinterface Identiteitsinstellingen
 description: Leer hoe u de gebruikersinterface voor identiteitsinstellingen gebruikt.
 exl-id: 738b7617-706d-46e1-8e61-a34855ab976e
-source-git-commit: 808562ac7b3bf91c4d133bc1d2106cfc3b0c9c84
+source-git-commit: 38d331bd9265f25a3aebdcbd20ae5fc30a93e960
 workflow-type: tm+mt
-source-wordcount: '628'
+source-wordcount: '647'
 ht-degree: 0%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
->[!DNL Identity Graph Linking Rules] is nu algemeen beschikbaar. Neem contact op met de Technische Ondersteuning van Adobe als u een bestaande sandbox hebt waarvoor samengevouwen grafieken moeten worden samengevouwen (&quot;fixed&quot;) nadat u identiteitsinstellingen hebt ingeschakeld.
+>[!DNL Identity Graph Linking Rules] is nu algemeen beschikbaar. Neem contact op met uw Adobe-accountteam of de ondersteuning van Adobe als u een bestaande sandbox hebt waarvoor samengevouwen grafieken moeten worden samengevouwen (&quot;fixed&quot;) nadat u identiteitsinstellingen hebt ingeschakeld.
 
 Identiteitsinstellingen zijn een functie in de gebruikersinterface van de Adobe Experience Platform Identity Service die u kunt gebruiken om unieke naamruimten aan te wijzen en naamruimteprioriteit te configureren.
 
@@ -82,6 +82,8 @@ Van hier, moet u het volgende bevestigen alvorens tot de definitieve stap te wer
 >* De definitieve stap is een ander bevestigingsbericht erop wijst dat de bestaande grafieken slechts door het grafiekalgoritme **zullen worden beïnvloed slechts als de grafieken na het opslaan van uw montages** worden bijgewerkt, en dat de primaire identiteit van gebeurtenisfragmenten op het Profiel van de Klant in real time niet zal worden bijgewerkt zelfs na namespace prioritaire veranderingen.
 >
 >* Het zal tot **24 uren** voor uw nieuwe of bijgewerkte montages duren om van kracht te worden. Voer de naam van de sandbox in en selecteer **[!UICONTROL Confirm]** om deze te bevestigen.
+>
+>* Uw gegevens worden pas gewijzigd wanneer u uw identiteitsinstellingen opslaat.
 
 ![ het bevestigingsvenster dat een waarschuwing over een vertraging van zes uur toont alvorens de configuraties worden verwerkt.](../images/rules/complete.png)
 
