@@ -32,5 +32,5 @@ ht-degree: 27%
    * AI-modelkaarten {#ai-model-cards}
       * [AI Assistent Natural Operational Insights Language to SQL](./model-cards/ai-model-cards/natural-language-to-sql.md)
       * [AI-proENTIEscore van klanten](./model-cards/ai-model-cards/customer-ai.md)
-* [Releaseopmerkingen bij Experience Platform](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)
+* [Releaseopmerkingen bij Experience Platform](https://experienceleague.adobe.com/nl/docs/experience-platform/release-notes/latest)
 
