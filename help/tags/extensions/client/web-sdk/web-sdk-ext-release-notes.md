@@ -2,9 +2,9 @@
 title: Opmerkingen bij de release Adobe Experience Platform Web SDK
 description: Adobe Experience Platform Web SDK-tagextensie
 exl-id: 91de8c91-023a-45b6-9f67-ac75ee471e50
-source-git-commit: 5dc5e11962abf760692e0cb424cdd863d1905e87
+source-git-commit: 03cc702eced26453b5923bb63739c0cb739e8c8f
 workflow-type: tm+mt
-source-wordcount: '2639'
+source-wordcount: '2664'
 ht-degree: 5%
 
 ---
@@ -12,6 +12,13 @@ ht-degree: 5%
 # Opmerkingen bij de release Adobe Experience Platform Web SDK
 
 In dit document worden de releaseopmerkingen voor de Adobe Experience Platform Web SDK-tagextensie besproken. Voor de recentste versienota&#39;s op SDK zelf, zie de [ de versienota&#39;s van SDK van het Web van Experience Platform ](/help/web-sdk/release-notes.md).
+
+
+## Versie 2.30.1 - woensdag 27 mei 2025
+
+**Bevestigingen en verbeteringen**
+
+- Probleem verholpen waarbij de weergave van de updatevariabele vastliep wanneer een organisatie geen standaardsandbox had ingesteld.
 
 ## Versie 2.30.0 - donderdag 21 mei 2025
 
