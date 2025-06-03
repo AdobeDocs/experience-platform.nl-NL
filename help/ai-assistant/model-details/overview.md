@@ -1,29 +1,29 @@
 ---
-title: Modelkaarten voor AI-modeltransparantie in Adobe Experience Platform
-description: Meer weten over modelkaarten in Adobe Experience Platform?
+title: Modeldetails voor AI-modeltransparantie in Adobe Experience Platform
+description: Meer informatie over modeldetails vindt u in Adobe Experience Platform.
 hide: true
 hidefromtoc: true
 exl-id: 74a8ef82-cff9-4a7e-95c8-f915eb664eda
-source-git-commit: dddd699f231d54ee44b33f86a5c9e59c0aedc30c
+source-git-commit: 6623c7dad0fc4ddb7cb79e8f474b824915f130fc
 workflow-type: tm+mt
 source-wordcount: '3171'
 ht-degree: 0%
 
 ---
 
-# Modelkaarten voor transparantie van AI-modellen in Adobe Experience Platform
+# Modeldetails voor transparantie van AI-modellen in Adobe Experience Platform
 
-Een AI-modelkaart is de standaardindeling waarmee transparantie van het AI-model wordt doorgegeven. Modelkaarten bieden uitgebreide informatie over het onderliggende model waarop een bepaald AI-gereedschap is gebouwd. Modelkaarten bevatten informatie zoals het doel van een AI-hulpprogramma, trainingsgegevens, prestatiegegevens, beperkingen en ethische overwegingen. U kunt de transparantie die modelkaarten bieden, gebruiken om de mogelijkheden en beperkingen van het model beter te begrijpen en om een verantwoord en eerlijk gebruik van AI beter te bevorderen.
+Een details van een AI-model is de standaardindeling waarmee transparantie van het AI-model wordt doorgegeven. Modeldetails bieden uitgebreide informatie over het onderliggende model waarop een bepaald AI-gereedschap is gebaseerd. De modeldetails omvatten informatie zoals het doel van een AI hulpmiddel, opleidingsgegevens, prestatiesmetriek, beperkingen, en ethische overwegingen. U kunt de transparantie gebruiken die modeldetails verstrekken om de mogelijkheden en beperkingen van het model beter te begrijpen, evenals om verantwoord en eerlijk gebruik van AI te bevorderen.
 
-Modelkaarten zijn openbaar en zijn bedoeld om zowel het bestaande als het toekomstige inzicht van klanten in de door Adobe gebruikte AI-modellen te verbeteren. Modelkaarten zijn doorgaans statisch. Er zijn echter verschillende aspecten van AI-modellen die in de loop der tijd kunnen veranderen, zoals lijntype, afwijking en andere transparantiekenmerken.
+Modeldetails zijn openbaar en zijn bedoeld om zowel het bestaande als het toekomstige inzicht van klanten in de door Adobe gebruikte AI-modellen te verbeteren. Modeldetails zijn doorgaans statisch. Er zijn echter verschillende aspecten van AI-modellen die in de loop der tijd kunnen veranderen, zoals lijntype, afwijking en andere transparantiekenmerken.
 
-Lees dit document voor meer informatie over modelkaarten in Adobe Experience Platform.
+Lees dit document voor meer informatie over modeldetails in Adobe Experience Platform.
 
-## Modelkaartsecties {#model-card-sections}
+## Modeldetailsecties {#model-detail-sections}
 
-Een modelkaart bestaat uit verschillende secties die elk op een bepaald aspect van het AI-model zijn toegespitst.
+Een modeldetail bestaat uit een verscheidenheid van verschillende secties, elk die zich op een bepaald aspect van het AI model concentreren.
 
-Lees het volgende voor een gids over de verschillende secties van een modelkaart, met inbegrip van informatie de vragen die zij behandelen.
+Lees het volgende voor een gids over de verschillende secties van een modeldetail, met inbegrip van informatie de vragen die zij behandelen.
 
 ### Modeloverzicht {#model-overview}
 
@@ -33,7 +33,7 @@ Het modeloverzicht bevat algemene informatie over een AI-model. Gebruik deze sec
 
 | Vraag | Benodigde informatie | Voorbeeldantwoord |
 | --- | --- | --- |
-| Wat is de naam van het model? | Officiële naam en versie van het AI-model | **<br> CustomerAI van de Propensiteit van 0&rbrace; KlantAI Score Model v2.0 &lbrace;is een op AI-Gerichte model dat wordt ontworpen om aandrijvingsscores voor gebruikers te produceren die op hun verleden gedrag en interactie met een zaken worden gebaseerd.** Het helpt de waarschijnlijkheid voorspellen dat een klant specifieke acties onderneemt, zoals het doen van een aankoop, het in dienst nemen van inhoud, of het koelen. Dit model wordt opgesteld binnen Adobe Experience Platform en integreert met diverse marketing en klantenanalytische werkschema&#39;s.</br> |
+| Wat is de naam van het model? | Officiële naam en versie van het AI-model | **<br> CustomerAI van de Propensiteit van 0} KlantAI Score Model v2.0 {is een op AI-Gerichte model dat wordt ontworpen om aandrijvingsscores voor gebruikers te produceren die op hun verleden gedrag en interactie met een zaken worden gebaseerd.** Het helpt de waarschijnlijkheid voorspellen dat een klant specifieke acties onderneemt, zoals het doen van een aankoop, het in dienst nemen van inhoud, of het koelen. Dit model wordt opgesteld binnen Adobe Experience Platform en integreert met diverse marketing en klantenanalytische werkschema&#39;s.</br> |
 | Wat is het doel van het model? | Een korte beschrijving van wat het model moet doen. | Het model is ontworpen om marketers en de teams van de klantenovereenkomst van actionable inzicht te voorzien door de waarschijnlijkheid te voorspellen dat een klant een bepaalde actie zal uitvoeren, zoals het maken van een aankoop, het aanmelden voor een abonnement, of het in dienst nemen van een e-mailcampagne. De output staat ondernemingen toe om publiekssegmentatie te optimaliseren en klanteninteractie aan te passen die op voorspeld gedrag wordt gebaseerd. |
 | Welk type model is het? | Het type model, zoals classificatie, regressie, generatief enz. | Dit is a s **onder toezicht het leren classificatiemodel** dat de waarschijnlijkheid van een gebeurtenis voorspelt die (b.v., aankoop, churn, overeenkomst) gegeven historische klantengegevens voorkomt. Het wordt getraind gebruikend gradient-versterkende beslissingsbomen (GBDT) met logistieke regressie aan modelaandrangscores. |
 | Wie zijn de beoogde gebruikers? | De interne en externe gebruikersgroepen waarvoor het model is bedoeld. | De belangrijkste gebruikers van dit model zijn marketingprofessionals, gegevensanalisten en teams voor klantbetrokkenheid die Adobe Experience Platform gebruiken om gegevensgestuurde marketingstrategieën te ontwikkelen. |

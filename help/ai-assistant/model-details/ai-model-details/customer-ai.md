@@ -1,31 +1,32 @@
 ---
-title: Klanten met AI-kwaliteitsscore
+title: Details van het door de klant gebruikte kwaliteitsscoremodel
 description: Leer meer over het AI-model dat wordt gebruikt voor de AI van de Klant.
 hide: true
 hidefromtoc: true
 exl-id: b2eeb1d2-3c2b-40a0-b5cd-91e99d99a906
-source-git-commit: dddd699f231d54ee44b33f86a5c9e59c0aedc30c
+source-git-commit: 6623c7dad0fc4ddb7cb79e8f474b824915f130fc
 workflow-type: tm+mt
-source-wordcount: '1013'
+source-wordcount: '1007'
 ht-degree: 0%
 
 ---
 
-# Klanten met AI-kwaliteitsscore
+# Details van het door de klant gebruikte kwaliteitsscoremodel
 
 ## Modeloverzicht {#model-overview}
 
-* Het Score-model van AI-betrouwbaarheid van de Klant is ontworpen om marketers en teams voor de betrokkenheid van klanten te voorzien van bruikbare inzichten door de waarschijnlijkheid te voorspellen dat een klant een bepaalde actie zal uitvoeren, zoals een aankoop doen, zich aanmelden voor een abonnement of een e-mailcampagne starten. De output staat ondernemingen toe om publiekssegmentatie te optimaliseren en klanteninteractie aan te passen die op voorspeld gedrag wordt gebaseerd.
-* De primaire gebruikers van dit model zijn marketing beroeps, gegevensanalisten, en de teams van de klantenovereenkomst die hefboomwerking [ Real-Time CDP ](../../../rtcdp/home.md) om gegeven-gedreven marketing strategieën te drijven.
-* Dit model wordt hoofdzakelijk gebruikt voor klantensegmentatie, gerichte marketing, en karnvoorspelling. De ondernemingen hefboomwerking dit model om klantenkoopintentie te voorspellen, marketing campagnes te optimaliseren, en verpersoonlijkingsinspanningen te verbeteren. Een e-commercebedrijf kan het model bijvoorbeeld gebruiken om klanten met een hoge intentie te identificeren en hen exclusieve promoties aan te bieden.
-* Marketers hebben vaak moeite met het identificeren van de juiste klanten om hun betrokkenheid te richten en te optimaliseren. Dit model vermindert giswerk door een gegeven-gedreven benadering van klantgericht te verstrekken, die ervoor zorgt dat de marketing middelen efficiënt worden toegewezen.
-* Het model mag niet worden gebruikt voor besluitvorming met een hoog risico, zoals financiële kredietscore, medische diagnostiek of juridische beoordelingen. Bovendien is het niet bedoeld om persoonlijk gevoelig gedrag (bijvoorbeeld gezondheidsomstandigheden, politieke voorkeuren) te voorspellen vanwege potentiële ethische bezwaren.
+* **Modelnaam en versie**: Het Scoremodel van de Volheid van AI van de Klant
+* **Model doel**: Het model wordt ontworpen om marketers en de teams van de klantenovereenkomst van actionable inzichten te voorzien door de waarschijnlijkheid te voorspellen dat een consument een bepaalde actie, zoals het maken van een aankoop, het ondertekenen omhoog voor een abonnement, of het in dienst nemen van een e-mailcampagne zal uitvoeren. De output staat ondernemingen toe om publiekssegmentatie te optimaliseren en consumenteninteractie te personaliseren die op voorspeld gedrag wordt gebaseerd.
+* **Beoogde gebruikers**: De primaire gebruikers van dit model zijn marketing beroeps, gegevensanalisten, en de teams van de klantenovereenkomst die hefboomwerking [ Real-Time CDP ](../../../rtcdp/home.md) om gegeven-gedreven marketing strategieën te drijven.
+* **de gevallen van het Gebruik**: Dit model wordt hoofdzakelijk gebruikt voor de segmentatie van de consument, gerichte marketing, en karnvoorspelling. Bedrijven gebruiken dit model om de aankoopintentie van de consument te voorspellen, marketingcampagnes te optimaliseren en de inspanningen op het gebied van personalisatie te verbeteren. Een e-commercebedrijf kan het model bijvoorbeeld gebruiken om klanten met een hoge intentie te identificeren en hen exclusieve promoties aan te bieden.
+* **Pijnpunten**: De verkopers worstelen vaak met het identificeren van de juiste consumenten om betrokkenheidsinspanningen te richten en te optimaliseren. Dit model vermindert giswerk door een gegevensgestuurde benadering van de doelgerichtheid van de consument te bieden, waarbij ervoor wordt gezorgd dat marketingmiddelen efficiënt worden toegewezen.
+* **Potentieel misbruik**: Het model zou niet voor hoog-risico gebruiksgevallen, zoals financieel krediet scoring, medische diagnostiek, of wettelijke beoordelingen moeten worden gebruikt. Bovendien mag het model niet worden gebruikt bij het voorspellen van persoonlijk gevoelig gedrag (zoals gezondheidsomstandigheden, politieke voorkeuren).
 
 ## Modeldetails {#model-details}
 
-* Dit is een onder toezicht staand classificatiemodel dat de waarschijnlijkheid voorspelt van een gebeurtenis (aankoop, churn, betrokkenheid) op basis van historische klantgegevens. Het wordt getraind gebruikend gradient-versterkende beslissingsbomen (GBDT) met logistieke regressie aan modelaandrangscores.
-* Het model verwerkt gedragsgegevens van klanten, demografische kenmerken, en historische interactie. Dit omvat gegevens zoals de frequentie van het websitebezoek, de aankoopgeschiedenis in het verleden, de betrokkenheid bij marketing e-mails, en demografische informatie.
-* Het model geeft een score tussen 0 en 100, waarbij hogere waarden een grotere kans op de voorspelde gebeurtenis tussen de gescoodeerde populatiecohort aangeven. Bovendien, verstrekt het eigenschapbelangrijkscores, die gebruikers toestaan om te begrijpen welke factoren de voorspelling beïnvloedden.
+* **Model type**: Dit is een onder toezicht lerend classificatiemodel dat de waarschijnlijkheid voorspelt van een gebeurtenis die (zoals aankoop, churn, overeenkomst) gegeven historische consumentengegevens voorkomt. Het wordt getraind gebruikend gradient-versterkende beslissingsbomen (GBDT) met logistieke regressie aan modelaandrangscores.
+* **Input**: Het model verwerkt het gedragsgegevens van de consument, demografische attributen, en historische interactie. Dit omvat gegevens zoals de frequentie van het websitebezoek, de aankoopgeschiedenis in het verleden, de betrokkenheid bij marketing e-mails, en demografische informatie.
+* **Output**: De modeloutput een score tussen 0 en 100, waar de hogere waarden op een hogere waarschijnlijkheid wijzen van de voorspelde gebeurtenis die onder de gescoorde bevolkingscohort voorkomt. Bovendien biedt het belangrijke scores voor functies, zodat marketers kunnen zien welke factoren de voorspelling beïnvloedden.
 
 **input van het Voorbeeld**
 
@@ -49,41 +50,35 @@ ht-degree: 0%
 
 ## Modeltraining {#model-training}
 
-* De trainingsdataset voor elke klant is rechtstreeks afkomstig uit de eigen gegevens in Experience Platform. Dit omvat de historische interactie van de klant, transactiegegevens, gedragsbetrokkenheidslogboeken en demografische informatie zoals verzameld en opgeslagen in hun Experience Platform-instantie. De dataset gebruikt klant-specifieke gegevens over hun gekozen tijdskader, die hun unieke seizoensgebonden tendensen en betrokkenheidspatronen vangen. Vóór gebruik, ondergaat de dataset van elke klant preprocessing die aan hun gegevenskenmerken wordt aangepast, met inbegrip van ontbrekende waardebehandeling, categoriale het coderen, eigenschapschaling, outlier opsporing, en eigenschaptechniek om optimale kwaliteit en bruikbaarheid voor hun specifiek gebruiksgeval te verzekeren.
-* Het model maakt gebruik van [!DNL LightGBM] met [!DNL GBM] , geoptimaliseerd voor gestructureerde gegevens. Het wordt getraind op historische reeksen van klantgebeurtenissen om voorspellende gedragspatronen te identificeren.
-* Het model is ontwikkeld met [!DNL LightGBM] en [!DNL scikit-learn] en is opgeleid op het gebied van Adobe AI-cloudinfrastructuur.
-* De computerbronnen die voor de modeltraining worden gebruikt, zijn [!DNL Databricks] clusters.
+* **de gegevens van de Opleiding en preprocessing**: De trainingsdataset voor elke klant wordt rechtstreeks afkomstig van hun eigen gegevens binnen Adobe Experience Platform. Dit omvat de historische interacties van de klant, transactiegegevens, gedragsbetrokkenheidslogboeken en demografische informatie zoals verzameld en opgeslagen in hun Adobe Experience Platform-instantie. De dataset gebruikt klant-specifieke gegevens over hun gekozen tijdskader, die hun unieke seizoensgebonden tendensen en betrokkenheidspatronen vangen. Vóór gebruik, ondergaat de dataset van elke klant preprocessing die aan hun gegevenskenmerken wordt aangepast, met inbegrip van ontbrekende waardebehandeling, categoriale het coderen, eigenschapschaling, outlier opsporing, en eigenschapengineering om optimale kwaliteit en bruikbaarheid voor hun specifiek gebruiksgeval te verzekeren
+* **Specificaties van de Opleiding**: De modelhefboomwerkingen [!DNL LightGBM] gebruikend [!DNL GBM], die voor gestructureerde gegevens worden geoptimaliseerd. Het wordt getraind op historische reeksen van klantgebeurtenissen om voorspellende gedragspatronen te identificeren.
+* **de kaders van de Opleiding**: Het model werd ontwikkeld gebruikend [!DNL LightGBM], en [!DNL scikit-learn], en op de wolkeninfrastructuur van Adobe AI getraind.
+* **de infrastructuur van de Opleiding**: [!DNL Databricks] clusters.
 
 ## Modelevaluatie {#model-evaluation}
 
-* De effectiviteit van het model wordt gemeten met [!DNL AUC-ROC] . Aangezien de AI van de Klant zich op een zeer brede waaier van klantengebruiksgevallen richt, kan het werkende waaier niet worden gekend. Daarom wordt de metrische waarde [!DNL AUC] gebruikt omdat deze onafhankelijk is van bereik en budget.
-* De gegevens van de evaluatie omvatten holdout klantenverslagen en zijn preprocessing vergelijkbaar met opleidingsgegevens met eigenschapnormalisatie, het coderen, en schoonmaakstappen om inputformaatverwachtingen aan te passen. Nadat het resultaatvenster is verstreken, kan de eindevaluatie worden uitgevoerd.
+* **de metriek en de procedures van de Evaluatie**: De doeltreffendheid van het model wordt gemeten gebruikend [!DNL AUC-ROC]. Aangezien de AI van de Klant zich op een zeer brede waaier van klantengebruiksgevallen richt, kan het werkende waaier niet worden gekend. We gebruiken dus een metrische [!DNL AUC] die onafhankelijk is van bereik en budget.
+* **de gegevens van de Evaluatie en preprocessing**: De gegevens van de evaluatie omvatten holdout consumentenverslagen en zijn preprocessing gelijkaardig aan opleidingsgegevens met eigenschapnormalisatie, het coderen, en schoonmaakstappen om inputformaatverwachtingen aan te passen. Nadat het resultaatvenster is overgegaan, kunnen wij een definitieve prestatiesevaluatie uitvoeren.
 
 ## Modelimplementatie {#model-deployment}
 
-* Het model wordt gehost op Experience Platform AI-services en is geïntegreerd met verschillende Adobe-toepassingen. Het is beschikbaar via API-eindpunten, zodat u naadloze toegang hebt tot realtime voorspellingen en batchverwerking voor alle workflows voor marketing en betrokkenheid van klanten.
-* Het model wordt voortdurend bewaakt via modelbewaking om te zien of de training is verlaten. Periodieke treinen (één keer in drie maanden) worden automatisch uitgevoerd.
-* Het model wordt één keer per maand (maximaal één keer per zes maanden) gehertraind met bijgewerkte gegevens over de interactie met de klant om de blijvende relevantie te waarborgen. Periodieke omscholing helpt het verschuiven van gegevens en seizoensschommelingen te beperken, wat een invloed kan hebben op de voorspellende nauwkeurigheid.
+* **Modelplaatsing**: Het model wordt ontvangen op de diensten van Adobe Experience Platform AI en met diverse toepassingen van Adobe geïntegreerd. Het is beschikbaar via API-eindpunten, zodat u naadloze toegang hebt tot realtime voorspellingen en batchverwerking voor alle workflows voor marketing en betrokkenheid van consumenten.
+* **Model controle**: Het model wordt onophoudelijk gecontroleerd via model controle om de verschuiving van de opleidingsopstelling te zien. Periodieke treinen (één keer in drie maanden) worden automatisch uitgevoerd.
+* **Model ipdate**: Het model wordt opnieuw opgeleid eens in verscheidene maanden (maximum eens in 6 maanden) gebruikend bijgewerkte gegevens van de consumenteninteractie om voortdurende relevantie te verzekeren. Periodieke omscholing helpt het verschuiven van gegevens en seizoensschommelingen te beperken, wat een invloed kan hebben op de voorspellende nauwkeurigheid.
 
 ## Uitlegbaarheid {#explainability}
 
-Het model gebruikt [!DNL SHapley Additive Explanations] (SHAP) om het effect van elke inputeigenschap op zijn voorspellingen te kwantificeren, die transparantie verstrekken in hoe de klantenattributen de aandrijvingsscores beïnvloeden. De waarden van de SHAP laten zowel globale interpretabiliteit toe, die de meest invloedrijke factoren over alle voorspellingen identificeert, als lokale interpretabiliteit, die individuele voorspellingen voor specifieke klanten verklaren. Het model ondersteunt ook [!DNL Local Interpretable Model-Agnostic Explanations] (LIME).
+**Model verklarbaarheid**: De modelhefboomwerkingen [!DNL SHapley Additive Explanations] (SCHAP) om het effect van elke inputeigenschap op zijn voorspellingen te kwantificeren, die transparantie verstrekken in hoe de attributen van de consument de aandrijvingsscores beïnvloeden. De waarden van SHAP laten zowel globale interpretabiliteit toe, die de meest invloedrijke factoren over alle voorspellingen identificeert, als lokale interpretabiliteit, die individuele voorspellingen voor specifieke consumenten verklaren. Het model ondersteunt ook [!DNL Local Interpretable Model-Agnostic Explanations] (LIME).
 
 ## Fairness en afwijking {#fairness-and-bias}
 
-* Dit model is getraind op geanonimiseerde gedragsgegevens in verband met cookie-id&#39;s, zonder toegang tot beschermde demografische kenmerken zoals leeftijd, geslacht of etniciteit. Als zodanig is het niet mogelijk de billijkheid van gevoelige groepen rechtstreeks te meten. Tot de inspanningen voor het beperken van vooronderstellingen behoren het normaliseren van de frequentie van de gebruikersactiviteit, het onderdrukken van al te dominante kenmerken en het uitvoeren van controles voor het kalibreren van de score bij cohorten.
-* Het model is verantwoordelijk voor de recentieafwijking en de blootstellingsafwijking van de monitor door modelvoorspellingen over het gerandomiseerde holdout-verkeer te evalueren. Er zijn doorlopende evaluaties beschikbaar om de versterking en feedback van voorkeuren tijdens de implementatie van het model te detecteren en te verminderen.
-* De dataset is voornamelijk afkomstig van gebruikers met een hoge betrokkenheid, wat selectievertekening kan veroorzaken. Om dit te beperken, past het model steekproefstrategieën toe.
+* **Model billijkheid**: Dit model wordt getraind op anonymized gedragsgegevens verbonden aan koekjesidentiteitskaarts, zonder toegang tot beschermde demografische attributen zoals leeftijd, geslacht, of etniciteit. Als zodanig is het niet mogelijk de billijkheid van gevoelige groepen rechtstreeks te meten. Tot de inspanningen voor het beperken van vooronderstellingen behoren het normaliseren van de frequentie van de gebruikersactiviteit, het onderdrukken van al te dominante kenmerken en het uitvoeren van controles voor het kalibreren van de score bij cohorten. Wij zijn verantwoordelijk voor de recentieverhouding en controleren de belichtingsafwijking door modelvoorspellingen over willekeurig holdout-verkeer te evalueren. Er zijn doorlopende evaluaties beschikbaar om de versterking en feedback van voorkeuren tijdens de implementatie van het model te detecteren en te verminderen.
+* **de vooroordelen van Gegevens**: De dataset is hoofdzakelijk afkomstig van high-engagement gebruikers, die selectievooroordelen kunnen introduceren. Om dit te beperken, past het model steekproefstrategieën toe. Afhankelijk van het gebruiksgeval, zouden de klanten moeten overwegen hoe de potentiële vooroordelen in modeloutput zich kunnen richten op of hun voorgenomen toepassing beïnvloeden.
 
 ## Robuustheid {#robustness}
 
-Het model handhaaft sterke generalisering aan nieuwe klantenverslagen. De prestaties blijven stabiel voor verschillende klantsegmenten, maar vertonen een lichte verslechtering wanneer het gedrag van de gebruiker aanzienlijk afwijkt van historische patronen.
-
-## Overwegingen met betrekking tot privacy en beveiliging {#privacy-and-security-considerations}
-
-* Het model verwerkt of behoudt geen persoonlijk identificeerbare informatie (PII) en alle gegevens die voor de opleiding worden gebruikt, worden geanonimiseerd en samengevoegd. Het houdt zich aan strikte naleving van het privacybeleid van de GDPR, de CCPA en de interne Adobe. Het model neemt differentiële privacytechnieken, het hakken, anonymization, en tokenization op om privacy te verzekeren.
-* Klant-AI houdt zich aan uw voorkeuren voor toestemming. Zodra u [ opstelling hebt en uw toestemmingsbeleid ](../../../data-governance/policies/user-guide.md#create-a-consent-policy) toegelaten, zal AI van de Klant de toestemmingsgegevens respecteren die van u worden verzameld. Alleen gegevens met toestemming worden gebruikt om het model te scoren in volgende uitvoeringen van het model. De nieuwe scores vervangen de oude scores en kunnen in segmentatie worden gebruikt. Deze functie is momenteel alleen beschikbaar voor klanten van het HealthCare Shield- en het Privacy- en beveiligingsschild.
+**Model robuustheid**: Het model handhaaft sterke generalisering aan nieuwe consumentenverslagen. De prestaties blijven stabiel in verschillende consumentensegmenten, maar vertonen een lichte verslechtering wanneer het gedrag van de gebruiker aanzienlijk afwijkt van historische patronen.
 
 ## Ethische overwegingen {#ethical-considerations}
 
-Het model zou in potentie een afwijking in de besluitvorming kunnen introduceren. Om dit te voorkomen, volgt Experience Platform de verantwoordelijke AI-richtsnoeren, waarbij ervoor wordt gezorgd dat modellen vóór de implementatie aan partijaudits, billijkheidstests en menselijk toezicht worden onderworpen.
+**Ethische overwegingen verbonden aan het model**: Dit model is bedoeld voor het op de markt brengen van gebruiksgevallen, en de klanten zouden verhoogde voorzichtigheid moeten uitoefenen als het toepassen van het in gevoelige of gereglementeerde domeinen zoals krediet of werkgelegenheid. De output is probabilistisch en afgeleid van gedragsgegevens, die historische of representatievooroordelen kunnen weerspiegelen. Klanten worden aangemoedigd om menselijk toezicht toe te passen. Adobe Experience Platform volgt de verantwoordelijke AI-richtlijnen, waarbij ervoor wordt gezorgd dat modellen vóór de implementatie onderworpen worden aan vertekende controles, aan een billijkheidstest en aan menselijk toezicht. Voor meer informatie, herzie de [ Beginselen van de Ethiek van Adobe AI ](https://www.adobe.com/content/dam/cc/en/ai-ethics/pdfs/Adobe-AI-Ethics-Principles.pdf?msockid=0d85c8269eb36f0801d0ddb49fd16ebc).
