@@ -15,19 +15,19 @@ ht-degree: 0%
 
 >[!AVAILABILITY]
 >
-> Deze bestemming is beschikbaar aan [ Adobe Real-Time Customer Data Platform Prime en Ultimate ](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform.html) klanten.
+> Deze bestemming is beschikbaar aan [ Adobe Real-Time Customer Data Platform Prime en Ultimate ](https://helpx.adobe.com/nl/legal/product-descriptions/real-time-customer-data-platform.html) klanten.
 
 Met deze bestemming activeert u het publiek van Real-Time CDP naar Audience Manager en Adobe Analytics.
 
-Als u een publiek naar Adobe Analytics wilt sturen, hebt u een Audience Manager-licentie nodig. Voor meer details, zie het [ overzicht van Audience Analytics ](https://experienceleague.adobe.com/docs/analytics/integration/audience-analytics/mc-audiences-aam.html?lang=en).
+Als u een publiek naar Adobe Analytics wilt sturen, hebt u een Audience Manager-licentie nodig. Voor meer details, zie het [ overzicht van Audience Analytics ](https://experienceleague.adobe.com/docs/analytics/integration/audience-analytics/mc-audiences-aam.html?lang=nl-NL).
 
 Om publiek naar andere oplossingen van Adobe te verzenden, gebruik de directe verbindingen van Real-Time CDP aan [ Adobe Target ](../personalization/adobe-target-connection.md), [ Adobe Advertising ](../advertising/adobe-advertising-cloud-connection.md), [ Adobe Campaign ](../email-marketing/adobe-campaign.md) en [ Marketo Engage ](../adobe/marketo-engage.md).
 
 >[!IMPORTANT]
 >
->Deze bestemming vervangt de [ erfenis publiek-delende integratie ](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html#aep-segments-in-aam) van Real-Time Customer Data Platform aan diverse oplossingen van Experience Cloud.
+>Deze bestemming vervangt de [ erfenis publiek-delende integratie ](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html?lang=nl-NL#aep-segments-in-aam) van Real-Time Customer Data Platform aan diverse oplossingen van Experience Cloud.
 > 
->Als u reeds publiek van Real-Time CDP aan Audience Manager en andere oplossingen van Experience Cloud via de [ erfenis publiek-delende integratie ](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html#aep-segments-in-aam) deelt, moet u de Zorg van de Klant contacteren om de erfenisintegratie onbruikbaar te maken alvorens deze bestemming te gebruiken.
+>Als u reeds publiek van Real-Time CDP aan Audience Manager en andere oplossingen van Experience Cloud via de [ erfenis publiek-delende integratie ](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html?lang=nl-NL#aep-segments-in-aam) deelt, moet u de Zorg van de Klant contacteren om de erfenisintegratie onbruikbaar te maken alvorens deze bestemming te gebruiken.
 
 ![ de bestemming van het publiek van Experience Cloud, die in de bestemmingscatalogus wordt benadrukt.](../../assets/catalog/adobe/experience-cloud-audiences/experience-cloud-audiences-destination-catalog.png)
 
@@ -39,8 +39,8 @@ Om u beter te helpen begrijpen hoe en wanneer u de [!UICONTROL Experience Cloud 
 
 In Audience Manager kunt u een Real-Time CDP-publiek gebruiken voor het gebruik van gegevensbeheerplatforms, zoals:
 
-* Het toevoegen van [ derdegegevens ](https://experienceleague.adobe.com/docs/audience-manager/user-guide/overview/data-types-collected.html#third-party-data) aan uw segmenten;
-* [ Algorithmic modelling ](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/algorithmic-models/look-alike-modeling/understanding-models.html);
+* Het toevoegen van [ derdegegevens ](https://experienceleague.adobe.com/docs/audience-manager/user-guide/overview/data-types-collected.html?lang=nl-NL#third-party-data) aan uw segmenten;
+* [ Algorithmic modelling ](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/algorithmic-models/look-alike-modeling/understanding-models.html?lang=nl-NL);
 * Het activeren van uw publiek naar op cookies gebaseerde doelen die nog niet worden ondersteund in de catalogus met Real-Time CDP-doelen.
 
 ### Kortere controle van het geëxporteerde publiek {#segments-control}
@@ -53,7 +53,7 @@ Dankzij de integratie van het publiek in het verleden was er geen korrelige cont
 
 Publiek dat u naar de bestemming van het publiek van Experience Cloud verzendt, verschijnt niet automatisch in Adobe Analytics.
 
-Alvorens u publiek naar Adobe Analytics kunt verzenden, moet u de Dienst van de Identiteit van Experience Cloud voor Analytics en Audience Manager [&#128279;](https://experienceleague.adobe.com/docs/id-service/using/implementation/setup-aam-analytics.html?lang=en) uitvoeren.
+Alvorens u publiek naar Adobe Analytics kunt verzenden, moet u de Dienst van de Identiteit van Experience Cloud voor Analytics en Audience Manager [&#128279;](https://experienceleague.adobe.com/docs/id-service/using/implementation/setup-aam-analytics.html?lang=nl-NL) uitvoeren.
 
 >[!IMPORTANT]
 >
@@ -80,7 +80,7 @@ Adobe raadt echter ten zeerste aan de volgende speciale doelkaarten te gebruiken
 
 ### Voor klanten die de oplossing voor het delen van het verouderde publiek gebruiken
 
-Als u reeds publiek van Real-Time CDP aan Audience Manager en andere oplossingen van Experience Cloud via de [ erfenis publiek-delende integratie ](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html#aep-segments-in-aam) deelt, moet u de Zorg van de Klant contacteren om de erfenisintegratie onbruikbaar te maken.
+Als u reeds publiek van Real-Time CDP aan Audience Manager en andere oplossingen van Experience Cloud via de [ erfenis publiek-delende integratie ](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html?lang=nl-NL#aep-segments-in-aam) deelt, moet u de Zorg van de Klant contacteren om de erfenisintegratie onbruikbaar te maken.
 
 De doorlooptijd om het uitstelticket op te lossen is zes werkdagen of minder. Nadat de bestaande erfenisintegratie is onbruikbaar gemaakt, kunt u te werk gaan [ een verbinding ](#connect) tot stand brengen via de zelfbediening bestemmingskaart.
 
@@ -94,7 +94,7 @@ Let op de volgende bekende beperkingen en belangrijke callouts bij gebruik van d
 
 * Momenteel kunt u de bestemming Experience Cloud-soorten publiek configureren in één sandbox per organisatie. Als u probeert een tweede doelverbinding te configureren in een andere sandbox, treedt een fout op.
 * Wanneer het verbinden met de bestemming, kunt u een optie zien om [ dataflow alarm ](../../ui/alerts.md) toe te laten. Hoewel zichtbaar in UI, **toelaat alarm optie momenteel niet wordt gesteund**.
-* **de backfill van het publiek steun**: De eerste uitvoer naar Audience Manager of andere oplossingen van Experience Cloud omvat een historische bevolking van het publiek. De gebruikers van de [ erfenis publiek-delende integratie ](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html#aep-segments-in-aam) die deze bestemming vormen zouden een backfill verschil van ongeveer zes uur moeten verwachten.
+* **de backfill van het publiek steun**: De eerste uitvoer naar Audience Manager of andere oplossingen van Experience Cloud omvat een historische bevolking van het publiek. De gebruikers van de [ erfenis publiek-delende integratie ](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html?lang=nl-NL#aep-segments-in-aam) die deze bestemming vormen zouden een backfill verschil van ongeveer zes uur moeten verwachten.
 * Het publiek dat uit [ Samenstelling van het Publiek ](../../../segmentation/ui/audience-composition.md) voortkomt wordt niet direct gesteund. Om samengesteld publiek aan deze bestemming te activeren moet u een publieksdefinitie door [ Bouwer van het Segment ](../../../segmentation/ui/segment-builder.md) tot stand brengen die op uw samengesteld publiek wordt gebaseerd, en het pas gecreëerde publiek activeren.
 
 ### Latentie bij activering van publiek {#audience-activation-latency}
@@ -177,7 +177,7 @@ Om succesvolle gegevensuitvoer te bevestigen, kunt u controleren dat uw publiek 
 
 ### Gegevens valideren in Audience Manager
 
-Uw publiek van Real-Time CDP verschijnt in Audience Manager als [ signalen ](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html#aep-segments-as-aam-signals), [ trekken ](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html#aep-segments-as-aam-traits), en [ segmenten ](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html#aep-segments-as-aam-segments). U kunt in Audience Manager controleren of de gegevens zijn weergegeven zoals beschreven in de bovenstaande documentatiekoppelingen.
+Uw publiek van Real-Time CDP verschijnt in Audience Manager als [ signalen ](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html?lang=nl-NL#aep-segments-as-aam-signals), [ trekken ](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html?lang=nl-NL#aep-segments-as-aam-traits), en [ segmenten ](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html?lang=nl-NL#aep-segments-as-aam-segments). U kunt in Audience Manager controleren of de gegevens zijn weergegeven zoals beschreven in de bovenstaande documentatiekoppelingen.
 
 Segmentnamen worden 15 minuten nadat het publiek vanuit Real-Time CDP is verstuurd, in Audience Manager ingevuld.
 
@@ -190,14 +190,14 @@ Na 72 uur zal de volledige bevolking in Audience Manager zichtbaar zijn en zulle
 Alle [!DNL Real-Time CDP] -doelen zijn compatibel met het beleid voor gegevensgebruik bij het verwerken van uw gegevens. Voor gedetailleerde informatie over hoe [!DNL Adobe Experience Platform] gegevensbeheer afdwingt, lees het [ overzicht van het Beleid van Gegevens ](/help/data-governance/home.md).
 
 Het bestuur van gegevens in Real-Time CDP wordt afgedwongen door zowel [ etiketten van het gegevensgebruik ](/help/data-governance/labels/reference.md) als marketing acties.
-Met labels voor gegevensgebruik worden toepassingen overgedragen, maar marketingacties niet. Dit betekent dat wanneer ze in Audience Manager landen, het publiek uit Real-Time CDP naar alle beschikbare bestemmingen kan worden geëxporteerd. In Audience Manager, kunt u [ controles van de gegevensuitvoer ](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/data-export-controls.html) gebruiken om publiek van het worden uitgevoerd naar bepaalde bestemmingen te blokkeren.
+Met labels voor gegevensgebruik worden toepassingen overgedragen, maar marketingacties niet. Dit betekent dat wanneer ze in Audience Manager landen, het publiek uit Real-Time CDP naar alle beschikbare bestemmingen kan worden geëxporteerd. In Audience Manager, kunt u [ controles van de gegevensuitvoer ](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/data-export-controls.html?lang=nl-NL) gebruiken om publiek van het worden uitgevoerd naar bepaalde bestemmingen te blokkeren.
 
 Soorten publiek dat is gemarkeerd met de marketingactie [!DNL HIPAA] , worden niet verzonden van Real-Time CDP naar Audience Manager.
 
 ### Machtigingenbeheer in Audience Manager
 
-Het publiek en de sporen in Audience Manager zijn onderworpen aan [ Op rol-Gebaseerde Controles van de Toegang ](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/administration/administration-overview.html) (RBAC).
+Het publiek en de sporen in Audience Manager zijn onderworpen aan [ Op rol-Gebaseerde Controles van de Toegang ](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/administration/administration-overview.html?lang=nl-NL) (RBAC).
 
 Uit Real-Time CDP geëxporteerde soorten publiek worden toegewezen aan een specifieke gegevensbron in Audience Manager met de naam **[!UICONTROL Experience Platform Segments]** .
 
-Om slechts bepaalde gebruikers toegang tot het publiek toe te staan, gebruik [ Op rol-Gebaseerde Controles van de Toegang ](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/administration/administration-overview.html) om gebruikerstoegang tot het publiek en sporen te vormen die van het publiek van Real-Time CDP worden gecreeerd.
+Om slechts bepaalde gebruikers toegang tot het publiek toe te staan, gebruik [ Op rol-Gebaseerde Controles van de Toegang ](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/administration/administration-overview.html?lang=nl-NL) om gebruikerstoegang tot het publiek en sporen te vormen die van het publiek van Real-Time CDP worden gecreeerd.
