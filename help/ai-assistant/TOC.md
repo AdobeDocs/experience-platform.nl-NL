@@ -4,7 +4,7 @@ user-guide-title: AI Assistant in Adobe Experience Platform Guide
 user-guide-description: Leer hoe u AI Assistant gebruikt om uw workflow met Adobe Experience Platform en Real-time Customer Data Platform te versnellen.
 description: In dit document wordt de inhoudsopgave voor AI Assistant in Adobe Experience Platform weergegeven.
 role: Admin,User,Developer,Leader
-source-git-commit: fd62a30f7227bf8a7a988fdd25b27a098caec016
+source-git-commit: 720534f3dc45a70ed7928f60ffa321bd218a5515
 workflow-type: tm+mt
 source-wordcount: '121'
 ht-degree: 27%
@@ -27,10 +27,10 @@ ht-degree: 27%
    * [Schatting van de natuurlijke taal](./new-features/natural-language.md)
    * [Product Support Agent](./new-features/customer-support.md)
    * [XDM-velddetectie voor publiek maken](./new-features/xdm-field-discovery.md)
-* Modelkaarten {#model-cards}
-   * [Overzicht van modelkaarten](./model-cards/overview.md)
-   * AI-modelkaarten {#ai-model-cards}
-      * [AI Assistent Natural Operational Insights Language to SQL](./model-cards/ai-model-cards/natural-language-to-sql.md)
-      * [AI-proENTIEscore van klanten](./model-cards/ai-model-cards/customer-ai.md)
-* [Releaseopmerkingen bij Experience Platform](https://experienceleague.adobe.com/nl/docs/experience-platform/release-notes/latest)
+* Modeldetails {#model-details}
+   * [Overzicht van modeldetails](./model-details/overview.md)
+   * AI-modeldetails {#ai-model-details}
+      * [AI Assistent Natural Operational Insights Language to SQL](./model-details/ai-model-details/natural-language-to-sql.md)
+      * [AI-proENTIEscore van klanten](./model-details/ai-model-details/customer-ai.md)
+* [Releaseopmerkingen bij Experience Platform](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)
 
