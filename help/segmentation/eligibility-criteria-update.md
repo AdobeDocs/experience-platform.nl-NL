@@ -4,7 +4,7 @@ description: Leer over de updates van de segmenteringsgeschiktheidscriteria die 
 hide: true
 hidefromtoc: true
 exl-id: c91c0f75-9bc8-4fa7-9d27-9b07d0ea560c
-source-git-commit: eafb7337edacc5d2b2aa9c38540aff946c8d39c0
+source-git-commit: 2af73be351cb818862006adc8d0f1a33f95d93cf
 workflow-type: tm+mt
 source-wordcount: '582'
 ht-degree: 0%
@@ -35,7 +35,7 @@ Om het even welke **nieuwe of uitgegeven** segmentdefinities die de volgende hee
 
 ## Tijdvenster {#time-window}
 
-Om een publiek met het stromen segmentatie te evalueren, moet het **&#x200B;**&#x200B;binnen een 24 uurstijdvenster worden beperkt.
+Om een publiek met het stromen segmentatie te evalueren, moet het **** binnen een 24 uurstijdvenster worden beperkt.
 
 ## Batchgegevens opnemen in streaming publiek {#include-batch-data}
 
@@ -68,13 +68,13 @@ Bijvoorbeeld, laten wij zeggen u twee publiek hebt, met beide publiek woonachtig
 
 | Doelgroep | Schema | Source-type | Query-definitie | Id van publiek |
 | -------- | ------ | ----------- | ---------------- | ----------- |
-| Recente verlaten | Gebeurtenis Experience | Batch | Heeft ten minste één gebeurtenis voor verlaten in de afgelopen 24 uur | `e3be6d7f-1727-401f-a41e-c296b45f607a` |
+| Recente verlaten | Gebeurtenis Experience | Batch | Heeft ten minste één gebeurtenis voor verlaten in de afgelopen 24 uur | `7deb246a-49b4-4687-95f9-6316df049948` |
 | Recente controles | Experience Event | Streaming | Heeft in de laatste 24 uur ten minste één afhandeling | `9e1646bb-57ff-4309-ba59-17d6c5bab6a1` |
 
 In deze situatie, zou u een derde publiek als volgt moeten creëren:
 
 ```
-inSegment("e3be6d7f-1727-401f-a41e-c296b45f607a") and inSegment("9e1646bb-57ff-4309-ba59-17d6c5bab6a1")
+inSegment("7deb246a-49b4-4687-95f9-6316df049948") and inSegment("9e1646bb-57ff-4309-ba59-17d6c5bab6a1")
 ```
 
 >[!IMPORTANT]
@@ -87,4 +87,4 @@ inSegment("e3be6d7f-1727-401f-a41e-c296b45f607a") and inSegment("9e1646bb-57ff-4
 
 Om het even welke **nieuwe of uitgegeven** segmentdefinities die voor het stromen of randsegmentatie **kwalificeren moeten** op &quot;Actief op Edge&quot;fusiebeleid zijn.
 
-Als er geen actieve reeks van het fusiebeleid is, zult u uw fusiebeleid [&#128279;](../profile/merge-policies/ui-guide.md#configure) moeten vormen en het plaatsen om op rand actief te zijn.
+Als er geen actieve reeks van het fusiebeleid is, zult u uw fusiebeleid ](../profile/merge-policies/ui-guide.md#configure) moeten vormen en het plaatsen om op rand actief te zijn.[

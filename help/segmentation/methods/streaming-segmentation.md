@@ -3,7 +3,7 @@ solution: Experience Platform
 title: Handleiding voor streaming segmentatie
 description: Leer over het stromen segmentatie met inbegrip van wat het is, hoe te om een publiek tot stand te brengen dat gebruikend het stromen segmentatie wordt geëvalueerd, en hoe te om uw publiek te bekijken die gebruikend het stromen segmentatie wordt gecreeerd.
 exl-id: cb9b32ce-7c0f-4477-8c49-7de0fa310b97
-source-git-commit: 8523ba35eab80a7496e17cb0ceb3e46a78dd6058
+source-git-commit: 4a8d509286c92a76a897be663a68709bb3b71391
 workflow-type: tm+mt
 source-wordcount: '2004'
 ht-degree: 0%
@@ -35,7 +35,7 @@ Om het even welke **nieuwe of uitgegeven** segmentdefinities die de volgende hee
 
 ## Tijdvenster {#time-window}
 
-Om een publiek met het stromen segmentatie te evalueren, moet het **&#x200B;**&#x200B;binnen een 24 uurstijdvenster worden beperkt.
+Om een publiek met het stromen segmentatie te evalueren, moet het **** binnen een 24 uurstijdvenster worden beperkt.
 
 ## Batchgegevens opnemen in streaming publiek {#include-batch-data}
 
@@ -87,7 +87,7 @@ inSegment("e3be6d7f-1727-401f-a41e-c296b45f607a") and inSegment("9e1646bb-57ff-4
 
 Om het even welke **nieuwe of uitgegeven** segmentdefinities die voor het stromen of randsegmentatie **kwalificeren moeten** op &quot;Actief op Edge&quot;fusiebeleid zijn.
 
-Als er geen actieve reeks van het fusiebeleid is, zult u uw fusiebeleid [&#128279;](../../profile/merge-policies/ui-guide.md#configure) moeten vormen en het plaatsen om op rand actief te zijn.
+Als er geen actieve reeks van het fusiebeleid is, zult u uw fusiebeleid ](../../profile/merge-policies/ui-guide.md#configure) moeten vormen en het plaatsen om op rand actief te zijn.[
 
 
 +++
@@ -102,7 +102,7 @@ Met streamingsegmentatie gebeurt de kwalificatie van het publiek nu terwijl stre
 
 >[!IMPORTANT]
 >
->Om het stromen segmentatie te gebruiken, moet u **&#x200B;**&#x200B;een fusiebeleid gebruiken dat &quot;Actief op Edge&quot;is. Voor meer informatie over fusiebeleid, te lezen gelieve het [ overzicht van het samenvoegbeleid ](../../profile/merge-policies/overview.md).
+>Om het stromen segmentatie te gebruiken, moet u **** een fusiebeleid gebruiken dat &quot;Actief op Edge&quot;is. Voor meer informatie over fusiebeleid, te lezen gelieve het [ overzicht van het samenvoegbeleid ](../../profile/merge-policies/overview.md).
 
 Een liniaal komt in aanmerking voor streamingsegmentatie als het voldoet aan een van de criteria die in de volgende tabel worden beschreven.
 
@@ -169,13 +169,13 @@ Bijvoorbeeld, laten wij zeggen u twee publiek hebt, met beide publiek woonachtig
 
 | Doelgroep | Schema | Source-type | Query-definitie | Id van publiek |
 | -------- | ------ | ----------- | ---------------- | ----------- |
-| Recente verlaten | Gebeurtenis Experience | Batch | Heeft ten minste één gebeurtenis voor verlaten in de afgelopen 24 uur | `e3be6d7f-1727-401f-a41e-c296b45f607a` |
+| Recente verlaten | Gebeurtenis Experience | Batch | Heeft ten minste één gebeurtenis voor verlaten in de afgelopen 24 uur | `7deb246a-49b4-4687-95f9-6316df049948` |
 | Recente controles | Experience Event | Streaming | Heeft in de laatste 24 uur ten minste één afhandeling | `9e1646bb-57ff-4309-ba59-17d6c5bab6a1` |
 
 In deze situatie, zou u een derde publiek als volgt moeten creëren:
 
 ```
-inSegment("e3be6d7f-1727-401f-a41e-c296b45f607a") and inSegment("9e1646bb-57ff-4309-ba59-17d6c5bab6a1")
+inSegment("7deb246a-49b4-4687-95f9-6316df049948) and inSegment("9e1646bb-57ff-4309-ba59-17d6c5bab6a1")
 ```
 
 ## publiek maken {#create-audience}
