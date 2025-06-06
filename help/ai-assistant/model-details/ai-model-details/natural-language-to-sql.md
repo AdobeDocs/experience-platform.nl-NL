@@ -4,9 +4,9 @@ description: Meer informatie over het AI Assistant Natural Language-model van SQ
 hide: true
 hidefromtoc: true
 exl-id: ca157945-5f74-45d0-9d40-c65d09a8e80d
-source-git-commit: a8cc7c6f202cdd2786a69e548810b3957d69fdb3
+source-git-commit: a7b69cd11ccbd9950cafa73dba51be1d67924bfe
 workflow-type: tm+mt
-source-wordcount: '632'
+source-wordcount: '639'
 ht-degree: 0%
 
 ---
@@ -46,13 +46,13 @@ WHERE
 
 ## Modelevaluatie {#model-evaluation}
 
-* **de metriek en de procedures van de Evaluatie**: Het model wordt geëvalueerd gebruikend nauwkeurigheid. Bijvoorbeeld, van alle [!DNL NL2SQL] verzoeken, hoeveel van de verzoeken de correcte SQL resultaten opleveren. Het evaluatieproces is een combinatie op regel-gebaseerde aanpassing (SQL normalisatie en dan directe SQL koordaanpassing), op LLM-Gebaseerde SQL solver, en menselijke evaluatie.
+* **de metriek en de procedures van de Evaluatie**: Het model wordt geëvalueerd door de [!DNL NL2SQL] verzoeken te bekijken en te beoordelen hoeveel verzoeken de correcte SQL resultaten opleveren. Het evaluatieproces is een combinatie op regel-gebaseerde aanpassing (SQL normalisatie en dan directe SQL koordaanpassing), op LLM-Gebaseerde SQL solver, en menselijke evaluatie.
 * **gegevens van de Evaluatie en preprocessing**: Wij gebruiken open reeks(s) voor regressietest en wij hebben ook wekelijkse annotatieprojecten om de prestaties van het model door bemonsterd echt klantenverkeer te controleren.
 
 ## Modelimplementatie {#model-deployment}
 
 * **Model controle**: Het basismodel wordt ontvangen door [!DNL Azure].
-* **Model update**: Het model wordt regelmatig bijgewerkt, op een wekelijkse basis, door vraagbankwisseluitbreiding. Het model wordt ook bijgewerkt door nieuwe het vragen strategieën en instructies wanneer nodig.
+* **Model update**: De Hulp van Adobe Experience Platform AI Operationele Taal van Inzichten van Natuurlijke Taal aan SQL Model wordt regelmatig bijgewerkt (wekelijks) door vraagbankwolatie. Het model wordt ook bijgewerkt door nieuwe het vragen strategieën en instructies wanneer nodig.
 
 ## Fairness en afwijking {#fairness-and-bias}
 

@@ -4,9 +4,9 @@ description: Leer meer over het AI-model dat wordt gebruikt voor de AI van de Kl
 hide: true
 hidefromtoc: true
 exl-id: b2eeb1d2-3c2b-40a0-b5cd-91e99d99a906
-source-git-commit: 6623c7dad0fc4ddb7cb79e8f474b824915f130fc
+source-git-commit: a7b69cd11ccbd9950cafa73dba51be1d67924bfe
 workflow-type: tm+mt
-source-wordcount: '1007'
+source-wordcount: '1016'
 ht-degree: 0%
 
 ---
@@ -50,7 +50,8 @@ ht-degree: 0%
 
 ## Modeltraining {#model-training}
 
-* **de gegevens van de Opleiding en preprocessing**: De trainingsdataset voor elke klant wordt rechtstreeks afkomstig van hun eigen gegevens binnen Adobe Experience Platform. Dit omvat de historische interacties van de klant, transactiegegevens, gedragsbetrokkenheidslogboeken en demografische informatie zoals verzameld en opgeslagen in hun Adobe Experience Platform-instantie. De dataset gebruikt klant-specifieke gegevens over hun gekozen tijdskader, die hun unieke seizoensgebonden tendensen en betrokkenheidspatronen vangen. Vóór gebruik, ondergaat de dataset van elke klant preprocessing die aan hun gegevenskenmerken wordt aangepast, met inbegrip van ontbrekende waardebehandeling, categoriale het coderen, eigenschapschaling, outlier opsporing, en eigenschapengineering om optimale kwaliteit en bruikbaarheid voor hun specifiek gebruiksgeval te verzekeren
+* **de gegevens van de Opleiding en preprocessing**: De trainingsdataset voor elke klant wordt rechtstreeks afkomstig van hun eigen gegevens binnen Adobe Experience Platform. Dit omvat de historische interacties van de klant, transactiegegevens, gedragsbetrokkenheidslogboeken en demografische informatie zoals verzameld en opgeslagen in hun Adobe Experience Platform-instantie. De dataset gebruikt klant-specifieke gegevens over hun gekozen tijdskader, die hun unieke seizoensgebonden tendensen en betrokkenheidspatronen vangen. Vóór gebruik, ondergaat de dataset van elke klant preprocessing die aan hun gegevenskenmerken wordt aangepast, met inbegrip van ontbrekende waardebehandeling, categoriale het coderen, eigenschapschaling, outlier opsporing, en eigenschaptechniek om optimale kwaliteit en bruikbaarheid voor hun specifiek gebruiksgeval te verzekeren.
+   * Consumentengegevens die voor training worden gebruikt, worden niet voor meerdere klanten gebruikt.
 * **Specificaties van de Opleiding**: De modelhefboomwerkingen [!DNL LightGBM] gebruikend [!DNL GBM], die voor gestructureerde gegevens worden geoptimaliseerd. Het wordt getraind op historische reeksen van klantgebeurtenissen om voorspellende gedragspatronen te identificeren.
 * **de kaders van de Opleiding**: Het model werd ontwikkeld gebruikend [!DNL LightGBM], en [!DNL scikit-learn], en op de wolkeninfrastructuur van Adobe AI getraind.
 * **de infrastructuur van de Opleiding**: [!DNL Databricks] clusters.
@@ -64,7 +65,7 @@ ht-degree: 0%
 
 * **Modelplaatsing**: Het model wordt ontvangen op de diensten van Adobe Experience Platform AI en met diverse toepassingen van Adobe geïntegreerd. Het is beschikbaar via API-eindpunten, zodat u naadloze toegang hebt tot realtime voorspellingen en batchverwerking voor alle workflows voor marketing en betrokkenheid van consumenten.
 * **Model controle**: Het model wordt onophoudelijk gecontroleerd via model controle om de verschuiving van de opleidingsopstelling te zien. Periodieke treinen (één keer in drie maanden) worden automatisch uitgevoerd.
-* **Model ipdate**: Het model wordt opnieuw opgeleid eens in verscheidene maanden (maximum eens in 6 maanden) gebruikend bijgewerkte gegevens van de consumenteninteractie om voortdurende relevantie te verzekeren. Periodieke omscholing helpt het verschuiven van gegevens en seizoensschommelingen te beperken, wat een invloed kan hebben op de voorspellende nauwkeurigheid.
+* **Model update**: Het model wordt opnieuw opgeleid eens in verscheidene maanden (het grootste eens in 6 maanden) gebruikend bijgewerkte gegevens van de consumenteninteractie om voortdurende relevantie te verzekeren. Periodieke omscholing helpt het verschuiven van gegevens en seizoensschommelingen te beperken, wat een invloed kan hebben op de voorspellende nauwkeurigheid.
 
 ## Uitlegbaarheid {#explainability}
 
