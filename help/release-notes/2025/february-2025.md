@@ -2,10 +2,10 @@
 title: Aanvullende informatie voor Adobe Experience Platform van februari 2025
 description: Aanvullende informatie voor Adobe Experience Platform van februari 2025.
 exl-id: 734a9484-516e-4dd7-9503-8fcdc50cbaac
-source-git-commit: 2d640b282feb783694276c69366b1fccadddfd78
+source-git-commit: c8fe5f05b7dcef7db2ae44d5b6575e123cbd014d
 workflow-type: tm+mt
-source-wordcount: '1638'
-ht-degree: 97%
+source-wordcount: '1670'
+ht-degree: 96%
 
 ---
 
@@ -54,7 +54,7 @@ Catalogusservice is het systeem voor het vastleggen van de locatie en herkomst v
 
 | Functie | Beschrijving |
 | --- | --- |
-| Nieuw API-eindpunt | Beheer de metadata van uw Adobe Experience Platform-dataset efficiënter met het nieuwe [eindpunt Catalogusservice-API /v2/dataSets/{DATASET_ID}](../../catalog/api/update-object.md#patch-v2-notation). U kunt eenvoudig complexe, diep geneste datasetkenmerken bijwerken, omdat het systeem automatisch ontbrekende padniveaus maakt. Zo bespaart u tijd, beperkt u het aantal handmatige stappen en minimaliseert u fouten. |
+| Nieuw API-eindpunt | Beheer efficiënter uw gegevens van de dataset van Adobe Experience Platform met de nieuwe [ Dienst API /v2/dataSets/{DATASET_ID} eindpunt ](../../catalog/api/update-object.md#patch-v2-notation) van de Catalogus. U kunt eenvoudig complexe, diep geneste datasetkenmerken bijwerken, omdat het systeem automatisch ontbrekende padniveaus maakt. Zo bespaart u tijd, beperkt u het aantal handmatige stappen en minimaliseert u fouten. |
 
 {style="table-layout:auto"}
 
@@ -101,7 +101,7 @@ Voor meer informatie, raadpleegt u het [Overzicht van Gegevensvoorbereiding](../
 
 {style="table-layout:auto"}
 
-**Opgeloste problemen en verbeteringen** {#destinations-fixes-and-enhancements}
+**Bevestigingen en verhogingen** {#destinations-fixes-and-enhancements}
 
 - Een probleem met de Destination SDK-testtools is opgelost. Sommige klanten of partners ondervonden problemen met de [tool voor het genereren van voorbeeldprofielen](/help/destinations/destination-sdk/testing-api/streaming-destinations/sample-profile-generation-api.md) vanwege een niet-ondersteunde indeling wanneer het schema dat werd gebruikt voor het genereren van profielen gegevenstypen met een `No format`-selector bevatte.
 - Een probleem met het bijwerken van de `targetConnection`-specificatie van bestemmingen met de Flow Service API is opgelost. In sommige gevallen gedroeg de PATCH-bewerking zich op een manier die vergelijkbaar is met een POST-bewerking, waardoor bestaande gegevensstromen beschadigd raken. Dit probleem is nu opgelost en alle klanten kunnen de Flow Service API gebruiken om hun `targetConnection`-specificatie bij te werken. [Meer informatie](/help/destinations/api/edit-destination.md#patch-target-connection).
@@ -117,7 +117,7 @@ Voor meer informatie raadpleegt u het [overzicht van bestemmingen](../../destina
 
 | Functie | Beschrijving |
 | ------- | ----------- |
-| Blijvende splitsing | Audience Composition ondersteunt nu permanente splitsingen. U kunt uw gesplitste publiek constant laten blijven wanneer het verdelen door profiel door een identiteitsnamespace aan uw Gesplitste blok toe te voegen. Meer informatie over deze eigenschap kan in de [ documentatie van de Samenstelling van het Publiek ](../../segmentation/ui/audience-composition.md) worden gevonden. |
+| Permanente splitsing | De optie Samenstelling van doelgroep ondersteunt nu permanente splitsingen. U kunt ervoor zorgen dat uw gesplitste doelgroepen constant blijven bij het splitsen op profiel door een Identity-naamruimte aan uw gesplitste blok toe te voegen. Meer informatie over deze nieuwe functie vindt u in de [documentatie voor Samenstelling van doelgroep](../../segmentation/ui/audience-composition.md). |
 
 Voor meer informatie over [!DNL Segmentation Service], raadpleegt u het [overzicht van segmentatie](../../segmentation/home.md).
 
@@ -132,6 +132,7 @@ Gebruik bronnen in Experience Platform om gegevens vanuit een Adobe-applicatie o
 | Functie | Beschrijving |
 | --- | --- |
 | Ondersteuning voor weergaven in [!DNL Microsoft Dynamics] | U kunt nu `"entityType": "view"` toevoegen wanneer u de [!DNL Microsoft Dynamics]-bron gebruikt. Voor meer informatie kunt u de handleiding over het [verbinden van een [!DNL Microsoft Dynamics] bron met Experience Platform](../../sources/tutorials/api/create/crm/ms-dynamics.md) raadplegen. |
+| Nieuwe IP adressen aan lijst van gewenste personen | U moet de volgende IP adressen aan uw lijst van gewenste personen toevoegen om de bronnen van Experience Platform met succes te gebruiken.<br></br>**VA7**<ul><li>`48.211.4.136/29`</li><li>`48.211.4.144/28`</li><li>`48.211.4.160/29`</li><li>`40.84.85.144/28`</li><li>`40.84.85.192/28`</li></ul>**AUS5**<ul><li>`20.213.194.144/29`</li><li>`20.227.120.32/27`</li></ul> <br></br> voor meer informatie, lees de [ bronIP gids van de lijst van gewenste personen van de bron ](../../sources/ip-address-allow-list.md). |
 
 {style="table-layout:auto"}
 
