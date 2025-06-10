@@ -3,9 +3,9 @@ keywords: Experience Platform;home;populaire onderwerpen;streamingverbinding;maa
 title: Een HTTP API voor streaming verbinding maken met de Flow Service API
 description: Deze zelfstudie bevat stappen voor het maken van een streamingverbinding met de HTTP API-bron voor Raw- en XDM-gegevens met de Flow Service API.
 exl-id: 9f7fbda9-4cd3-4db5-92ff-6598702adc34
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: bad1e0a9d86dcce68f1a591060989560435070c5
 workflow-type: tm+mt
-source-wordcount: '1656'
+source-wordcount: '1684'
 ht-degree: 0%
 
 ---
@@ -457,6 +457,10 @@ Een succesvolle reactie keert details van de pas gecreëerde afbeelding met inbe
 ```
 
 ## Een gegevensstroom maken
+
+>[!NOTE]
+>
+>Nadat u een streaming gegevensstroom hebt gemaakt of bijgewerkt, moet u de gegevensinvoer kort na vijf minuten pauzeren om te voorkomen dat gegevens verloren gaan of dat gegevens verloren gaan.
 
 Wanneer uw bron- en doelverbindingen zijn gemaakt, kunt u nu een gegevensstroom maken. De dataflow is verantwoordelijk voor het plannen en verzamelen van gegevens uit een bron. U kunt een gegevensstroom tot stand brengen door een POST- verzoek aan het `/flows` eindpunt uit te voeren.
 

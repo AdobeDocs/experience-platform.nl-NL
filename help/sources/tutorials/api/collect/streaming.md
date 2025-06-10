@@ -5,9 +5,9 @@ title: Een gegevensstroom voor streaming maken voor Raw-gegevens met de Flow Ser
 type: Tutorial
 description: In deze zelfstudie worden de stappen beschreven voor het ophalen van streaminggegevens en het plaatsen van deze gegevens naar Experience Platform met behulp van bronconnectors en API's.
 exl-id: 898df7fe-37a9-4495-ac05-30029258a6f4
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: bad1e0a9d86dcce68f1a591060989560435070c5
 workflow-type: tm+mt
-source-wordcount: '1180'
+source-wordcount: '1208'
 ht-degree: 0%
 
 ---
@@ -414,6 +414,10 @@ Een succesvolle reactie keert een lijst van dataflow specificaties terug. De geg
 ```
 
 ## Een gegevensstroom maken
+
+>[!NOTE]
+>
+>Nadat u een streaming gegevensstroom hebt gemaakt of bijgewerkt, moet u de gegevensinvoer kort na vijf minuten pauzeren om te voorkomen dat gegevens verloren gaan of dat gegevens verloren gaan.
 
 De laatste stap op weg naar het verzamelen van streaminggegevens is het maken van een gegevensstroom. Momenteel zijn de volgende vereiste waarden voorbereid:
 

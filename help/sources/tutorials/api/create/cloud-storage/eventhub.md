@@ -3,9 +3,9 @@ title: Een Azure Event Hubs Source Connection maken met de Flow Service API
 description: Leer hoe u Adobe Experience Platform verbindt met een Azure Event Hubs-account met behulp van de Flow Service API.
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: a4d0662d-06e3-44f3-8cb7-4a829c44f4d9
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: bad1e0a9d86dcce68f1a591060989560435070c5
 workflow-type: tm+mt
-source-wordcount: '1496'
+source-wordcount: '1524'
 ht-degree: 0%
 
 ---
@@ -384,6 +384,10 @@ curl -X POST \
 | `params.dataType` | Deze parameter bepaalt het type van de gegevens die worden opgenomen. Tot de ondersteunde gegevenstypen behoren: `raw` en `xdm` . |
 | `params.reset` | Deze parameter bepaalt hoe de gegevens worden gelezen. Gebruik `latest` om te beginnen met het lezen van de meest recente gegevens en gebruik `earliest` om te beginnen met het lezen van de eerste beschikbare gegevens in de stream. Deze parameter is optioneel en wordt standaard ingesteld op `earliest` als deze niet wordt opgegeven. |
 | `params.consumerGroup` | Het publicatie- of abonnementsmechanisme dat voor [!DNL Event Hubs] moet worden gebruikt. Deze parameter is optioneel en wordt standaard ingesteld op `$Default` als deze niet wordt opgegeven. Verwijs naar deze [[!DNL Event Hubs]  gids op gebeurtenisconsumenten ](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-features#event-consumers) voor meer informatie. **Nota**: Een [!DNL Event Hubs] consumentengroep kan slechts voor één enkele stroom in een bepaalde tijd worden gebruikt. |
+
+>[!NOTE]
+>
+>Nadat u een streaming gegevensstroom hebt gemaakt of bijgewerkt, moet u de gegevensinvoer kort na vijf minuten pauzeren om te voorkomen dat gegevens verloren gaan of dat gegevens verloren gaan.
 
 ## Volgende stappen
 

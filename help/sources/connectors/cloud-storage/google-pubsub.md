@@ -3,9 +3,9 @@ title: Google PubSub Source - Overzicht
 description: Leer hoe u Google PubSub met Adobe Experience Platform kunt verbinden via API's of de gebruikersinterface.
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 7c78173d-2639-47cb-8935-77fb7841a121
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: bad1e0a9d86dcce68f1a591060989560435070c5
 workflow-type: tm+mt
-source-wordcount: '829'
+source-wordcount: '857'
 ht-degree: 0%
 
 ---
@@ -82,6 +82,10 @@ U moet **plaatsen uw het bewaarduur van het abonnementsbericht om 24 uur of meer
 >U kunt slechts één brongegevensstroom maken per [!DNL Google PubSub] -abonnement. Als u een abonnement opnieuw gebruikt, zelfs in verschillende sandboxen, gaan er gegevens verloren.
 
 ## Verbinden [!DNL Google PubSub] met Experience Platform
+
+>[!NOTE]
+>
+>Nadat u een streaming gegevensstroom hebt gemaakt of bijgewerkt, moet u de gegevensinvoer kort na vijf minuten pauzeren om te voorkomen dat gegevens verloren gaan of dat gegevens verloren gaan.
 
 In de onderstaande documentatie vindt u informatie over het tot stand brengen van een verbinding tussen [!DNL Google PubSub] en Experience Platform via API&#39;s of de gebruikersinterface:
 

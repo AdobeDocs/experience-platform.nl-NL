@@ -3,9 +3,9 @@ title: Sluit uw Snowflake Streaming-account aan op Adobe Experience Platform
 description: Leer hoe u Adobe Experience Platform verbindt met Snowflake Streaming met behulp van de Flow Service API.
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 3fc225a4-746c-4a91-aa77-bbeb091ec364
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: bad1e0a9d86dcce68f1a591060989560435070c5
 workflow-type: tm+mt
-source-wordcount: '852'
+source-wordcount: '880'
 ht-degree: 0%
 
 ---
@@ -212,6 +212,10 @@ Een geslaagde reactie retourneert uw bron-verbindings-id en de bijbehorende tag.
 ```
 
 ## Een gegevensstroom maken
+
+>[!NOTE]
+>
+>Nadat u een streaming gegevensstroom hebt gemaakt of bijgewerkt, moet u de gegevensinvoer kort na vijf minuten pauzeren om te voorkomen dat gegevens verloren gaan of dat gegevens verloren gaan.
 
 Als u een gegevensstroom wilt maken om gegevens van een tour [!DNL Snowflake] -account naar Experience Platform te streamen, moet u een POST-aanvraag indienen bij het `/flows` -eindpunt en de volgende waarden opgeven:
 

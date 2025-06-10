@@ -4,9 +4,9 @@ description: Leer hoe u een bronverbinding en gegevensstroom kunt maken om strea
 badgeUltimate: label="Ultimate" type="Positive"
 last-substantial-update: 2023-09-24T00:00:00Z
 exl-id: ed937689-e844-487e-85fb-e3536c851fe5
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: bad1e0a9d86dcce68f1a591060989560435070c5
 workflow-type: tm+mt
-source-wordcount: '820'
+source-wordcount: '841'
 ht-degree: 0%
 
 ---
@@ -36,7 +36,7 @@ In de volgende sectie worden de vereiste stappen beschreven die moeten worden ui
 
 ### Werk uw IP lijst van gewenste personen van het adres bij
 
-Een lijst van IP adressen moet aan een lijst van gewenste personen worden toegevoegd alvorens met bronschakelaars te werken. Het niet toevoegen van uw regio-specifieke IP adressen aan uw lijst van gewenste personen kan tot fouten of niet-prestaties leiden wanneer het gebruiken van bronnen. Zie de [&#128279;](../../ip-address-allow-list.md#ip-address-allow-list-for-streaming-sources) pagina van de lijst van gewenste personen van het 0&rbrace; IP adres &lbrace;voor meer informatie.
+Een lijst van IP adressen moet aan een lijst van gewenste personen worden toegevoegd alvorens met bronschakelaars te werken. Het niet toevoegen van uw regio-specifieke IP adressen aan uw lijst van gewenste personen kan tot fouten of niet-prestaties leiden wanneer het gebruiken van bronnen. Zie de ](../../ip-address-allow-list.md#ip-address-allow-list-for-streaming-sources) pagina van de lijst van gewenste personen van het 0} IP adres {voor meer informatie.[
 
 In de onderstaande documentatie vindt u informatie over het tot stand brengen van een verbinding tussen [!DNL Amazon Redshift] en Experience Platform via API&#39;s of de gebruikersinterface:
 
@@ -86,6 +86,10 @@ Voor meer informatie over rol en voorrechtbeheer, verwijs naar de [[!DNL Snowfla
       * `TIMESTAMP_TZ` kan niet worden gebruikt in een tijdstempelkolom of in een toewijzing.
 
 ## Volgende stappen
+
+>[!NOTE]
+>
+>Nadat u een streaming gegevensstroom hebt gemaakt of bijgewerkt, moet u de gegevensinvoer kort na vijf minuten pauzeren om te voorkomen dat gegevens verloren gaan of dat gegevens verloren gaan.
 
 In de volgende zelfstudie worden stappen beschreven voor het verbinden van uw [!DNL Snowflake] -streamingbron met Experience Platform met behulp van de API:
 
