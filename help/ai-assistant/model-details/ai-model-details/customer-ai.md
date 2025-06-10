@@ -4,7 +4,7 @@ description: Leer meer over het AI-model dat wordt gebruikt voor de AI van de Kl
 hide: true
 hidefromtoc: true
 exl-id: b2eeb1d2-3c2b-40a0-b5cd-91e99d99a906
-source-git-commit: a7b69cd11ccbd9950cafa73dba51be1d67924bfe
+source-git-commit: 8230c71c9b7896dfb71506632754d48583d0dc21
 workflow-type: tm+mt
 source-wordcount: '1016'
 ht-degree: 0%
@@ -53,7 +53,7 @@ ht-degree: 0%
 * **de gegevens van de Opleiding en preprocessing**: De trainingsdataset voor elke klant wordt rechtstreeks afkomstig van hun eigen gegevens binnen Adobe Experience Platform. Dit omvat de historische interacties van de klant, transactiegegevens, gedragsbetrokkenheidslogboeken en demografische informatie zoals verzameld en opgeslagen in hun Adobe Experience Platform-instantie. De dataset gebruikt klant-specifieke gegevens over hun gekozen tijdskader, die hun unieke seizoensgebonden tendensen en betrokkenheidspatronen vangen. Vóór gebruik, ondergaat de dataset van elke klant preprocessing die aan hun gegevenskenmerken wordt aangepast, met inbegrip van ontbrekende waardebehandeling, categoriale het coderen, eigenschapschaling, outlier opsporing, en eigenschaptechniek om optimale kwaliteit en bruikbaarheid voor hun specifiek gebruiksgeval te verzekeren.
    * Consumentengegevens die voor training worden gebruikt, worden niet voor meerdere klanten gebruikt.
 * **Specificaties van de Opleiding**: De modelhefboomwerkingen [!DNL LightGBM] gebruikend [!DNL GBM], die voor gestructureerde gegevens worden geoptimaliseerd. Het wordt getraind op historische reeksen van klantgebeurtenissen om voorspellende gedragspatronen te identificeren.
-* **de kaders van de Opleiding**: Het model werd ontwikkeld gebruikend [!DNL LightGBM], en [!DNL scikit-learn], en op de wolkeninfrastructuur van Adobe AI getraind.
+* **de kaders van de Opleiding**: Het model werd ontwikkeld gebruikend [!DNL LightGBM], en [!DNL scikit-learn], en op de wolkeninfrastructuur van Adobe AI ontvangen.
 * **de infrastructuur van de Opleiding**: [!DNL Databricks] clusters.
 
 ## Modelevaluatie {#model-evaluation}
