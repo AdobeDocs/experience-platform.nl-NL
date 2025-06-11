@@ -21,9 +21,9 @@ ht-degree: 41%
 >
 >Raadpleeg de volgende documentatie voor aanvullende informatie voor andere Adobe Experience Platform-toepassingen:
 >
->- [Adobe Journey Optimizer](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/whats-new/release-notes)
->- [Adobe Journey Optimizer B2B](https://experienceleague.adobe.com/en/docs/journey-optimizer-b2b/user/release-notes)
->- [Customer Journey Analytics](https://experienceleague.adobe.com/en/docs/analytics-platform/using/releases/latest)
+>- [Adobe Journey Optimizer](https://experienceleague.adobe.com/nl/docs/journey-optimizer/using/whats-new/release-notes)
+>- [Adobe Journey Optimizer B2B](https://experienceleague.adobe.com/nl/docs/journey-optimizer-b2b/user/release-notes)
+>- [Customer Journey Analytics](https://experienceleague.adobe.com/nl/docs/analytics-platform/using/releases/latest)
 >- [Samenstelling van Federated-doelgroep](https://experienceleague.adobe.com/nl/docs/federated-audience-composition/using/release-notes)
 >- [Real-Time CDP Collaboration](https://experienceleague.adobe.com/nl/docs/real-time-cdp-collaboration/using/latest)
 
@@ -120,9 +120,9 @@ Samenstelling van Federated-doelgroep stelt ondernemingen in staat om gegevens s
 
 | Nieuwe functie | Beschrijving |
 | ----------- | ----------- |
-| Gereedheid van HIPAA | Federated Audience Composition is nu HIPAA-compatibel. Voor meer informatie over de privacy en de veiligheidsmaatregelen van de Samenstelling van de Federatieve Publiek, lees de [ privacy en de veiligheid in het Federated overzicht van de Samenstelling van de Publiek ](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/start/privacy-security). Voor meer informatie over de naleving van HIPAA voor de producten van Experience Platform in het algemeen, lees [ HIPAA en het overzicht van de Producten en van de Diensten van Adobe ](https://www.adobe.com/trust/compliance/hipaa-ready.html). |
+| Gereedheid van HIPAA | Federated Audience Composition is nu HIPAA-compatibel. Voor meer informatie over de privacy en de veiligheidsmaatregelen van de Samenstelling van de Federatieve Publiek, lees de [ privacy en de veiligheid in het Federated overzicht van de Samenstelling van de Publiek ](https://experienceleague.adobe.com/nl/docs/federated-audience-composition/using/start/privacy-security). Voor meer informatie over de naleving van HIPAA voor de producten van Experience Platform in het algemeen, lees [ HIPAA en het overzicht van de Producten en van de Diensten van Adobe ](https://www.adobe.com/trust/compliance/hipaa-ready.html). |
 
-Raadpleeg voor meer informatie de [documentatie over Samenstelling van Federated-doelgroep](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/home).
+Raadpleeg voor meer informatie de [documentatie over Samenstelling van Federated-doelgroep](https://experienceleague.adobe.com/nl/docs/federated-audience-composition/using/home).
 
 ## [!DNL Privacy Service] {#privacy}
 
@@ -132,7 +132,7 @@ Verschillende wettelijke en organisatorische voorschriften geven gebruikers het 
 
 | Functie | Beschrijving |
 |--- | ---|
-| Ondersteuning voor Tennessee- en Minnesota Privacy-wetten | Privacy Service ondersteunt nu de Tennessee Information Protection Act (`tipa_tn_usa`) en de Minnesota Consumer Data Privacy Act (`mcdpa_mn_usa` ). U kunt toegangs en schrappingsverzoeken in overeenstemming met deze nieuwe staat-vlakke verordeningen verwerken. Zie het [ overzicht van Verordeningen ](https://experienceleague.adobe.com/en/docs/experience-platform/privacy/regulations/overview) voor meer details. |
+| Ondersteuning voor Tennessee- en Minnesota Privacy-wetten | Privacy Service ondersteunt nu de Tennessee Information Protection Act (`tipa_tn_usa`) en de Minnesota Consumer Data Privacy Act (`mcdpa_mn_usa` ). U kunt toegangs en schrappingsverzoeken in overeenstemming met deze nieuwe staat-vlakke verordeningen verwerken. Zie het [ overzicht van Verordeningen ](https://experienceleague.adobe.com/nl/docs/experience-platform/privacy/regulations/overview) voor meer details. |
 
 Zie het [overzicht van de Privacy Service](../privacy-service/home.md) voor meer informatie over de service.
 
