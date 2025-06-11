@@ -17,7 +17,7 @@ De controle van de toegang voor Adobe Experience Platform wordt verstrekt door *
 
 ## Toegangsbeheerhiërarchie en -workflow
 
-Om toegangsbeheer voor Experience Platform te configureren, moet u systeem- of productbeheerdersrechten hebben voor een organisatie die een Experience Platform-product heeft. De minimumrol die toestemmingen kan verlenen of intrekken is een productbeheerder. Andere beheerderrollen die toestemmingen kunnen beheren zijn systeembeheerders (geen beperkingen). Zie het artikel van het Centrum van de Hulp van Adobe op [ administratieve rollen ](https://helpx.adobe.com/enterprise/using/admin-roles.html) voor meer informatie.
+Om toegangsbeheer voor Experience Platform te configureren, moet u systeem- of productbeheerdersrechten hebben voor een organisatie die een Experience Platform-product heeft. De minimumrol die toestemmingen kan verlenen of intrekken is een productbeheerder. Andere beheerderrollen die toestemmingen kunnen beheren zijn systeembeheerders (geen beperkingen). Zie het artikel van het Centrum van de Hulp van Adobe op [ administratieve rollen ](https://helpx.adobe.com/nl/enterprise/using/admin-roles.html) voor meer informatie.
 
 >[!NOTE]
 >
