@@ -5,9 +5,9 @@ breadcrumb-title: Handleiding voor Experience Platform Identity Service
 user-guide-description: Overbrug klantidentiteiten op verschillende apparaten en systemen om gepersonaliseerde digitale ervaringen te bieden.
 feature: Identities
 role: Admin,Developer
-source-git-commit: 28eab3488dccdcc6239b9499e875c31ff132fd48
+source-git-commit: 6690854048324567f9a8a1f000bd10f45d7c8340
 workflow-type: tm+mt
-source-wordcount: '145'
+source-wordcount: '144'
 ht-degree: 22%
 
 ---
@@ -26,7 +26,7 @@ ht-degree: 22%
       - [Overzicht van functies](./identity-graph-linking-rules/overview.md)
       - [Algoritme voor identiteitsoptimalisatie](./identity-graph-linking-rules/identity-optimization-algorithm.md)
       - [Implementatiegids voor koppelingsregels voor identiteitsgrafieken](./identity-graph-linking-rules/implementation-guide.md)
-      - [Voorbeelden van grafiekconfiguraties](./identity-graph-linking-rules/example-configurations.md)
+      - [Configuratiegids](./identity-graph-linking-rules/example-configurations.md)
       - [Problemen met regels voor identiteitsgrafiekkoppeling oplossen](./identity-graph-linking-rules/troubleshooting.md)
       - [Prioriteit naamruimte](./identity-graph-linking-rules/namespace-priority.md)
       - [UI grafieksimulatie](./identity-graph-linking-rules/graph-simulation.md)
@@ -47,4 +47,4 @@ ht-degree: 22%
 - [Identiteitsvelden definiëren in de gebruikersinterface](label-identities.md)
 - [Verwerking van privacyverzoeken](privacy.md)
 - [Handleiding voor probleemoplossing](troubleshooting-guide.md)
-- [Releaseopmerkingen bij Experience Platform](https://experienceleague.adobe.com/nl/docs/experience-platform/release-notes/latest)
+- [Releaseopmerkingen bij Experience Platform](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)

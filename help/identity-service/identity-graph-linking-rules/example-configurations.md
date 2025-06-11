@@ -1,15 +1,17 @@
 ---
-title: Voorbeelden van grafiekconfiguraties
-description: Leer over gemeenschappelijke grafiekscenario's die u zou kunnen ontmoeten wanneer het werken met de Lijnen van de Grafiek van de Identiteit en identiteitsgegevens.
+title: Configuratie-handleiding voor identiteitsgrafiekkoppelingsregels
+description: Leer over de verschillende implementatietypen die u het gebruiken van de Regels van de Verenigingsgrafiek kunt vormen die Regels verbinden.
+hide: true
+hidefromtoc: true
 exl-id: fd0afb0b-a368-45b9-bcdc-f2f3b7508cee
-source-git-commit: cd9104e253cda4ce9a004f7931b9c38907874941
+source-git-commit: b65a5e8e9727da47729191e56c1a32838ec2c6c4
 workflow-type: tm+mt
-source-wordcount: '3316'
+source-wordcount: '1934'
 ht-degree: 1%
 
 ---
 
-# Voorbeelden van grafiekconfiguraties {#examples-of-graph-configurations}
+# [!DNL Identity Graph Linking Rules] -configuratiegids {#configurations-guide}
 
 >[!CONTEXTUALHELP]
 >id="platform_identities_algorithmconfiguration"
@@ -21,740 +23,547 @@ ht-degree: 1%
 >* &#39;CRMID&#39; en &#39;loginID&#39; zijn aangepaste naamruimten. In dit document is &#39;CRMID&#39; een persoon-id en is &#39;loginID&#39; een aanmeldings-id die aan een bepaalde persoon is gekoppeld.
 >* Als u de voorbeeldgrafiekscenario&#39;s wilt simuleren die in dit document worden beschreven, moet u eerst twee aangepaste naamruimten maken, een met het identiteitssymbool &quot;CRMID&quot; en een ander met het identiteitssymbool &quot;loginID&quot;. Identiteitssymbolen zijn hoofdlettergevoelig.
 
-In dit document worden voorbeelden van grafiekconfiguratie beschreven van veelvoorkomende scenario&#39;s die u kunt tegenkomen wanneer u met [!DNL Identity Graph Linking Rules] en identiteitsgegevens werkt.
+Lees dit document voor meer informatie over verschillende implementatietypen die u kunt configureren met [!DNL Identity Graph Linking Rules] .
 
-## alleen CRMID
+De de grafiekscenario&#39;s van de klant kunnen in drie verschillende categorieën worden gegroepeerd.
 
-Dit is een voorbeeld van een eenvoudig implementatiescenario waarbij online gebeurtenissen (CRMID en ECID) worden opgenomen en offlinegebeurtenissen (profielrecords) alleen tegen de CRMID worden opgeslagen.
+* **Basis**: [ Basisimplementaties ](#basic-implementations) omvatten grafieken die het vaakst eenvoudige implementaties omvatten. Deze implementaties draaien doorgaans rond één apparaatnaamruimte (bijvoorbeeld CRMID). Terwijl de basisimplementaties vrij ongecompliceerd zijn, kan de grafiekondergang nog voorkomen, vaak toe te schrijven aan **gedeelde apparaat** scenario&#39;s.
+* **Middelen**: [ Tussenliggende implementaties ](#intermediate-implementations) omvatten verscheidene variabelen zoals **veelvoudige dwars-apparaat namespaces**, **niet-unieke identiteiten**, en **veelvoudige unieke namespaces**.
+* **Geavanceerd**: [ Geavanceerde implementaties ](#advanced-implementations) impliceren complexe en multi-layered grafiekscenario&#39;s. Voor geavanceerde implementaties is het van essentieel belang dat de juiste naamruimte-prioriteitsvolgorde wordt ingesteld om ervoor te zorgen dat de juiste koppelingen worden verwijderd, zodat de grafiek niet wordt samengevouwen.
 
-**Implementatie:**
+## Aan de slag
 
-| Gebruikte naamruimten | Webgedragsverzamelingsmethode |
-| --- | --- |
-| CRMID, ECID | Web SDK |
+Voordat u gaat induiken in het volgende document, moet u zich vertrouwd maken met verschillende belangrijke concepten Identiteitsservice en [!DNL Identity Graph Linking Rules] .
 
-**Gebeurtenissen:**
+* [Overzicht van identiteitsservice](../home.md)
+* [[!DNL Identity Graph Linking Rules]-overzicht](../identity-graph-linking-rules/namespace-priority.md)
+* [Prioriteit naamruimte](namespace-priority.md)
+* [Unieke naamruimte](overview.md#unique-namespace)
+* [Grafieksimulatie](graph-simulation.md)
 
-U kunt dit scenario in grafieksimulatie tot stand brengen door de volgende gebeurtenissen aan tekstwijze te kopiëren:
+## Basisimplementaties {#basic-implementations}
 
-```shell
-CRMID: Tom, ECID: 111
+Lees deze sectie voor basisimplementaties van [!DNL Identity Graph Linking Rules].
+
+### Hoofdlettergebruik: eenvoudige implementatie die gebruikmaakt van één naamruimte tussen apparaten
+
+Over het algemeen hebben Adobe-klanten één apparaatoverschrijdende naamruimte die wordt gebruikt voor al hun eigenschappen, zoals het web, mobiele apparaten en toepassingen. Dit systeem is zowel industrie als geografisch agnostisch aangezien de klanten in kleinhandel, telecommunicatie, en de financiële diensten dit type van implementatie gebruiken.
+
+Doorgaans wordt een eindgebruiker vertegenwoordigd door een apparaatoverschrijdende naamruimte (vaak een CRMID). Daarom moet de CRMID worden geclassificeerd als een unieke naamruimte. Een eindgebruiker die eigenaar is van een computer en een [!DNL iPhone] en zijn apparaat niet deelt, kan een identiteitsgrafiek als deze hebben.
+
+Veronderstel dat u een gegevensarchitect bij een e-commercebedrijf genoemd **ACME** bent. John en Jane zijn uw klanten. Het zijn eindgebruikers die samenwonen in San Jose, Californië. Ze delen een desktopcomputer en gebruiken deze computer om door uw website te bladeren. Op dezelfde manier delen John en Jane ook een [!DNL iPad] en gebruiken ze dit [!DNL iPad] soms om op internet te surfen, inclusief uw website.
+
+**wijze van de Tekst**
+
+```json
+CRMID: John, ECID: 123
+CRMID: John, ECID: 999, IDFA: a-b-c
 ```
 
-**configuratie van het Algoritme:**
+**de configuratie van het Algoritme (de Montages van de Identiteit)**
 
-U kunt dit scenario in grafieksimulatie tot stand brengen door de volgende opstelling voor uw algoritmeconfiguratie te vormen:
+Vorm de volgende montages in de interface van de Simulatie van de Grafiek alvorens u uw grafiek simuleert.
 
-| Prioriteit | Weergavenaam | Identiteitstype | Uniek per grafiek |
-| ---| --- | --- | --- |
-| 1 | CRMID | CROSS_DEVICE | Ja |
-| 2 | ECID | COOKIE | Nee |
+| Weergavenaam | Identiteitssymbool | Identiteitstype | Uniek per grafiek | Prioriteit naamruimte |
+| --- | --- | --- | --- | --- |
+| CRMID | CRMID | CROSS_DEVICE | ✔️ | 1 |
+| ECID | ECID | COOKIE | | 2 |
+| IDFA | IDFA | APPARAAT | | 3 |
 
-**Primaire identiteitsselectie voor Real-Time Profiel van de Klant:**
+**Gesimuleerde grafiek**
 
-Binnen de context van deze configuratie, zal de primaire identiteit als volgt worden bepaald:
++++Selecteren om gesimuleerde grafiek weer te geven
 
-| Verificatiestatus | Naamruimte(s) in gebeurtenissen | Primaire identiteit |
-| --- | --- | --- |
-| Geverifieerd | CRMID, ECID | CRMID |
-| Niet geverifieerd | ECID | ECID |
+In deze grafiek wordt John (de eindgebruiker) vertegenwoordigd door CRMID. {ECID: 123} vertegenwoordigt de webbrowser die John op zijn computer heeft gebruikt om uw e-commerceplatform te bezoeken. {ECID: 999} vertegenwoordigt de browser die hij op zijn [!DNL iPhone] en {IDFA: a-b-c} representeert. [!DNL iPhone]
 
-**Voorbeelden van de Grafiek**
+![ een eenvoudige implementatie met één dwars-apparaat namespace.](../images/configs/basic/simple-implementation.png)
+
++++
+
+### Uitoefening
+
+Simuleer de volgende configuratie in de Simulatie van de Grafiek. U kunt uw eigen gebeurtenissen maken of kopiëren en plakken met de tekstmodus.
 
 >[!BEGINTABS]
 
->[!TAB  Ideale single-person grafiek ]
+>[!TAB  Gedeeld apparaat (PC) ]
 
-Hieronder ziet u een voorbeeld van een ideale eenpersoonsgrafiek, waarbij CRMID uniek is en de hoogste prioriteit krijgt.
+**Gedeeld apparaat (PC)**
 
-![ een gesimuleerd voorbeeld van een ideale eenpersoonsgrafiek, waar CRMID uniek is en de hoogste prioriteit wordt gegeven.](../images/graph-examples/crmid_only_single.png " A gesimuleerd voorbeeld van een ideale single-person grafiek, waar CRMID uniek is en de hoogste prioriteit wordt gegeven."){zoomable="yes"}
+**wijze van de Tekst:**
 
->[!TAB  Multi-person grafiek ]
-
-Hier volgt een voorbeeld van een grafiek met meerdere personen. Dit voorbeeld toont een &quot;gedeeld apparaat&quot;scenario, waar er twee CRMIDs zijn en met de oudere gevestigde verbinding wordt verwijderd.
-
-![ een gesimuleerd voorbeeld van een multi-persoongrafiek. Dit voorbeeld toont een gedeeld apparatenscenario, waar er twee CRMIDs zijn en de oudere gevestigde verbinding wordt verwijderd.](../images/graph-examples/crmid_only_multi.png " een gesimuleerd voorbeeld van een multi-persoongrafiek. Dit voorbeeld toont een gedeeld apparatenscenario, waar er twee CRMIDs zijn en de oudere gevestigde verbinding wordt verwijderd."){zoomable="yes"}
-
-**de simulatiegebeurtenissen van de Grafiek input**
-
-```shell
-CRMID: Tom, ECID: 111
-CRMID: Summer, ECID: 111
+```json
+CRMID: John, ECID: 111
+CRMID: Jane, ECID: 111
 ```
+
+**Gesimuleerde grafiek**
+
++++Selecteren om gesimuleerde grafiek weer te geven
+
+In deze grafiek worden John en Jane vertegenwoordigd door hun eigen respectieve CRMID&#39;s:
+
+* {CRMID: John}
+* {CRMID: Jane}
+
+De browser op de bureaubladcomputer die beide gebruiken om uw e-commerceplatform te bezoeken, wordt aangeduid met {ECID: 111} . In dit grafiekscenario is Jane de laatst geverifieerde eindgebruiker en daarom wordt de koppeling tussen {ECID: 111} en {CRMID: John} verwijderd.
+
+![ A gesimuleerde grafiek voor een gedeeld apparaat (PC).](../images/configs/basic/shared-device-pc.png)
+
++++
+
+>[!TAB  Gedeeld apparaat (mobiel) ]
+
+**Gedeeld apparaat (mobiel)**
+
+**wijze van de Tekst:**
+
+```json
+CRMID: John, ECID: 111, IDFA: a-b-c
+CRMID: Jane, ECID: 111, IDFA: a-b-c
+```
+
+**Gesimuleerde grafiek**
+
++++Selecteren om gesimuleerde grafiek weer te geven
+
+In deze grafiek worden John en Jane allebei vertegenwoordigd door hun eigen respectieve CRMIDs. De browser die ze gebruiken, wordt vertegenwoordigd door {ECID: 111} en de [!DNL iPad] die ze delen, wordt vertegenwoordigd door {IDFA: a-b-c} . In dit grafiekscenario is Jane de laatst geverifieerde eindgebruiker en daarom worden de koppelingen van {ECID: 111} en {IDFA: a-b-c} to {CRMID: John} verwijderd.
+
+![ A gesimuleerde grafiek voor een gedeeld apparaat (mobiel).](../images/configs/basic/shared-device-mobile.png)
+
++++
 
 >[!ENDTABS]
 
-## CRMID met gehashte e-mail
+## Tussentijdse implementaties {#intermediate-implementations}
 
-In dit scenario wordt een CRMID opgenomen die zowel online (ervaringsgebeurtenis) als offline (profielrecord) gegevens vertegenwoordigt. Dit scenario impliceert ook de opname van een gehakt e-mail, die een andere namespace vertegenwoordigt die in de het recorddataset van CRM samen met CRMID wordt verzonden.
+Lees deze sectie voor tussentijdse implementaties van [!DNL Identity Graph Linking Rules].
 
->[!IMPORTANT]
+### Hoofdlettergebruik: uw gegevens bevatten niet-unieke identiteiten
+
+>[!TIP]
 >
->**het is cruciaal dat CRMID altijd voor elke gebruiker** wordt verzonden. Als u dit niet doet, kan dit leiden tot een &quot;gevaarlijk&quot; login-id-scenario, waarbij één individuele persoon wordt verondersteld een apparaat met een andere persoon te delen.
+>* A **niet-unieke identiteit** is een identiteit verbonden aan een niet-unieke namespace.
+>
+>* In de onderstaande voorbeelden is `CChash` een aangepaste naamruimte die een gehasht creditcardnummer vertegenwoordigt.
 
-**Implementatie:**
+Je bent een gegevensarchitect die werkt voor een commerciële bank die creditcards uitgeeft. Uw marketingteam heeft aangegeven dat zij de transactiegeschiedenis van creditcardtransacties in het verleden aan een profiel willen toevoegen. Deze identiteitsgrafiek kan er als volgt uitzien.
 
-| Gebruikte naamruimten | Webgedragsverzamelingsmethode |
-| --- | --- |
-| CRMID, Email_LC_SHA256, ECID | Web SDK |
+**wijze van de Tekst:**
 
-**Gebeurtenissen:**
-
-U kunt dit scenario in grafieksimulatie tot stand brengen door de volgende gebeurtenissen aan tekstwijze te kopiëren:
-
-```shell
-CRMID: Tom, Email_LC_SHA256: tom<span>@acme.com
-CRMID: Tom, ECID: 111
-CRMID: Summer, Email_LC_SHA256: summer<span>@acme.com
-CRMID: Summer, ECID: 222
+```json
+CRMID: John, CChash: 1111-2222 
+CRMID: John, CChash: 3333-4444 
+CRMID: John, ECID: 123 
+CRMID: John, ECID: 999, IDFA: a-b-c
 ```
 
-**configuratie van het Algoritme:**
+**de configuratie van het Algoritme (de Montages van de Identiteit)**
 
-U kunt dit scenario in grafieksimulatie tot stand brengen door de volgende opstelling voor uw algoritmeconfiguratie te vormen:
+Vorm de volgende montages in de interface van de Simulatie van de Grafiek alvorens u uw grafiek simuleert.
 
-| Prioriteit | Weergavenaam | Identiteitstype | Uniek per grafiek |
-| ---| --- | --- | --- |
-| 1 | CRMID | CROSS_DEVICE | Ja |
-| 2 | E-mails (SHA256, verlaagd) | Email | Nee |
-| 3 | ECID | COOKIE | Nee |
+| Weergavenaam | Identiteitssymbool | Identiteitstype | Uniek per grafiek | Prioriteit naamruimte |
+| --- | --- | --- | --- | --- |
+| CRMID | CRMID | CROSS_DEVICE | ✔️ | 1 |
+| Uitknippen | Uitknippen | CROSS_DEVICE | | 2 |
+| ECID | ECID | COOKIE | | 3 |
+| IDFA | IDFA | APPARAAT | | 4 |
 
-**Primaire identiteitsselectie voor Profiel:**
+**Gesimuleerde grafiek**
 
-Binnen de context van deze configuratie, zal de primaire identiteit als volgt worden bepaald:
++++Selecteren om gesimuleerde grafiek weer te geven
 
-| Verificatiestatus | Naamruimte(s) in gebeurtenissen | Primaire identiteit |
-| --- | --- | --- |
-| Geverifieerd | CRMID, ECID | CRMID |
-| Niet geverifieerd | ECID | ECID |
+![ Beeld van de gesimuleerde grafiek ](../images/configs/basic/simple-implementation-non-unique.png)
 
-**Voorbeelden van de Grafiek**
++++
+
+Er zijn geen garanties dat deze creditcardnummers of andere niet-unieke naamruimten altijd aan één eindgebruiker worden gekoppeld. Twee eindgebruikers kunnen zich registreren bij dezelfde creditcard. Er kunnen niet-unieke plaatsaanduidingswaarden zijn die ten onrechte zijn ingevoerd. Eenvoudig gezegd, er is geen garantie dat niet-unieke naamruimten geen grafiek doen samenvouwen.
+
+Om deze kwestie op te lossen, verwijdert de Dienst van de Identiteit de oudste verbindingen en behoudt de meest recente verbindingen. Zo voorkomt u dat er maar één CRMID in een grafiek voorkomt.
+
+### Uitoefening
+
+Simuleer de volgende configuraties in de Simulatie van de Grafiek. U kunt uw eigen gebeurtenissen maken of kopiëren en plakken met de tekstmodus.
 
 >[!BEGINTABS]
 
->[!TAB  Ideale single-person grafiek ]
+>[!TAB  twee eind-gebruikers met de zelfde creditcard ]
 
-Hieronder volgen voorbeelden van ideale eenpersoonsgrafieken, waarbij elke CRMID is gekoppeld aan hun respectievelijke gehashte e-mailnaamruimte en ECID.
+Twee verschillende eindgebruikers melden zich aan voor uw e-commercewebsite met dezelfde creditcard. Uw marketingteam wil het samenvouwen van grafieken voorkomen door ervoor te zorgen dat de creditcard aan slechts één profiel is gekoppeld.
 
-![ In dit voorbeeld, worden twee afzonderlijke grafieken geproduceerd, elk die een enig-persoonentiteit vertegenwoordigen.](../images/graph-examples/crmid_hashed_single.png " een gesimuleerd voorbeeld van een multi-persoongrafiek. Dit voorbeeld toont een gedeeld apparatenscenario, waar er twee CRMIDs zijn en de oudere gevestigde verbinding wordt verwijderd."){zoomable="yes"}
+**wijze van de Tekst:**
 
->[!TAB  multi-persoongrafiek: gedeeld apparaat ]
-
-Hieronder ziet u een voorbeeld van een grafiekscenario met meerdere personen waarbij een apparaat door twee personen wordt gedeeld.
-
-![ In dit voorbeeld, toont de gesimuleerde grafiek een &quot;gedeeld apparaat&quot;scenario omdat zowel Tom als Zomer met zelfde ECID worden geassocieerd.](../images/graph-examples/crmid_hashed_shared_device.png " een gesimuleerd voorbeeld van een multi-persoongrafiek. Dit voorbeeld toont een gedeeld apparatenscenario, waar er twee CRMIDs zijn en de oudere gevestigde verbinding wordt verwijderd."){zoomable="yes"}
-
-**de simulatiegebeurtenissen van de Grafiek input**
-
-```shell
-CRMID: Tom, Email_LC_SHA256: aabbcc
-CRMID: Tom, ECID: 111
-CRMID: Summer, Email_LC_SHA256: ddeeff
-CRMID: Summer, ECID: 222
-CRMID: Summer, ECID: 111
+```json
+CRMID: John, CChash: 1111-2222
+CRMID: Jane, CChash: 1111-2222
+CRMID: John, ECID: 123
+CRMID: Jane, ECID:456
 ```
 
->[!TAB  Multi-person grafiek: niet-unieke e-mail ]
+**Gesimuleerde grafiek**
 
-Hieronder ziet u een voorbeeld van een grafiekscenario met meerdere personen waarbij e-mail niet uniek is en aan twee verschillende CRMID&#39;s is gekoppeld.
++++Selecteren om gesimuleerde grafiek weer te geven
 
-![ Dit scenario is gelijkaardig aan een &quot;gedeeld apparaat&quot;scenario. In plaats van dat de personen die entiteiten ECID delen, zijn ze in plaats daarvan gekoppeld aan hetzelfde e-mailaccount. &quot;Een gesimuleerd voorbeeld van een grafiek met meerdere personen. Dit voorbeeld toont een gedeeld apparatenscenario, waar er twee CRMIDs zijn en de oudere gevestigde verbinding wordt verwijderd.&quot;](../images/graph-examples/crmid_hashed_nonunique_email.png){zoomable="yes"}
+![ een grafiek waar twee eind-gebruikers omhoog met de zelfde creditcard ondertekenen.](../images/configs/intermediate/graph-with-same-credit-card.png)
 
-**de simulatiegebeurtenissen van de Grafiek input**
++++
 
-```shell
-CRMID: Tom, Email_LC_SHA256: aabbcc
-CRMID: Tom, ECID: 111
-CRMID: Summer, Email_LC_SHA256: ddeeff
-CRMID: Summer, ECID: 222
-CRMID: Summer, Email_LC_SHA256: aabbcc
+>[!TAB  Ongeldig creditcardaantal ]
+
+Als gevolg van onzuivere gegevens wordt een ongeldig creditcardnummer in Experience Platform ingevoerd.
+
+**wijze van de Tekst:**
+
+```json
+CRMID: John, CChash: undefined
+CRMID: Jane, CChash: undefined
+CRMID: Jack, CChash: undefined
+CRMID: Jill, CChash: undefined
 ```
+
+**Gesimuleerde grafiek**
+
++++Selecteren om gesimuleerde grafiek weer te geven
+
+![ een grafiek waar het hakken in een ongeldige creditcard resulteert.](../images/configs/intermediate/graph-with-invalid-credit-card.png)
+
++++
 
 >[!ENDTABS]
 
-## CRMID met gehashte e-mail, gehashte telefoon, GAID, en IDFA
+### Hoofdlettergebruik: uw gegevens bevatten zowel gehashte als niet-gehashte CRMID&#39;s
 
-Dit scenario is vergelijkbaar met het vorige scenario. In dit scenario worden gehashte e-mail en telefoon echter gemarkeerd als identiteiten die moeten worden gebruikt in [[!DNL Segment Match]](../../segmentation/ui/segment-match/overview.md) .
+U neemt zowel een niet-gehakte (offline) CRMID als een gehakt (online) CRMID op. Zij verwachten een direct verband tussen zowel unhashed als hashed CRMIDs. Wanneer een eindgebruiker met een voor authentiek verklaarde rekening doorbladert, wordt gehakt CRMID verzonden samen met apparatenidentiteitskaart (die op de Dienst van de Identiteit als ECID wordt vertegenwoordigd).
 
->[!IMPORTANT]
->
->**het is cruciaal dat CRMID altijd voor elke gebruiker** wordt verzonden. Als u dit niet doet, kan dit leiden tot een &quot;gevaarlijk&quot; login-id-scenario, waarbij één individuele persoon wordt verondersteld een apparaat met een andere persoon te delen.
+**de configuratie van het Algoritme (de Montages van de Identiteit)**
 
-**Implementatie:**
+Vorm de volgende montages in de interface van de Simulatie van de Grafiek alvorens u uw grafiek simuleert.
 
-| Gebruikte naamruimten | Webgedragsverzamelingsmethode |
-| --- | --- |
-| CRMID, Email_LC_SHA256, Phone_SHA256, GAID, IDFA, ECID | Web SDK |
+| Weergavenaam | Identiteitssymbool | Identiteitstype | Uniek per grafiek | Prioriteit naamruimte |
+| --- | --- | --- | --- | --- | 
+| CRMID | CRMID | CROSS_DEVICE | ✔️ | 1 |
+| CRMIDhash | CRMIDhash | CROSS_DEVICE | ✔️ | 2 |
+| ECID | ECID | COOKIE | | 3 |
 
-**Gebeurtenissen:**
 
-U kunt dit scenario in grafieksimulatie tot stand brengen door de volgende gebeurtenissen aan tekstwijze te kopiëren:
+**Uitoefening**
 
-```shell
-CRMID: Tom, Email_LC_SHA256: aabbcc, Phone_SHA256: 123-4567
-CRMID: Tom, ECID: 111
-CRMID: Tom, ECID: 222, IDFA: A-A-A
-CRMID: Summer, Email_LC_SHA256: ddeeff, Phone_SHA256: 765-4321
-CRMID: Summer, ECID: 333
-CRMID: Summer, ECID: 444, GAID:B-B-B
-```
-
-**configuratie van het Algoritme:**
-
-U kunt dit scenario in grafieksimulatie tot stand brengen door de volgende opstelling voor uw algoritmeconfiguratie te vormen:
-
-| Prioriteit | Weergavenaam | Identiteitstype | Uniek per grafiek |
-| ---| --- | --- | --- |
-| 1 | CRMID | CROSS_DEVICE | Ja |
-| 2 | E-mails (SHA256, verlaagd) | Email | Nee |
-| 3 | Telefoon (SHA256) | Telefoon | Nee |
-| 4 | Google-advertentie-ID (GAID) | APPARAAT | Nee |
-| 5 | Apple IDFA (ID voor Apple) | APPARAAT | Nee |
-| 6 | ECID | COOKIE | Nee |
-
-**Primaire identiteitsselectie voor Profiel:**
-
-Binnen de context van deze configuratie, zal de primaire identiteit als volgt worden bepaald:
-
-| Verificatiestatus | Naamruimte(s) in gebeurtenissen | Primaire identiteit |
-| --- | --- | --- |
-| Geverifieerd | CRMID, IDFA, ECID | CRMID |
-| Geverifieerd | CRMID, GAID, ECID | CRMID |
-| Geverifieerd | CRMID, ECID | CRMID |
-| Niet geverifieerd | GAID, ECID | GAID |
-| Niet geverifieerd | IDFA, ECID | IDFA |
-| Niet geverifieerd | ECID | ECID |
-
-**Voorbeelden van de Grafiek**
+Simuleer de volgende configuraties in de Simulatie van de Grafiek. U kunt uw eigen gebeurtenissen maken of kopiëren en plakken met de tekstmodus.
 
 >[!BEGINTABS]
 
->[!TAB  Ideale single-person grafiek ]
+>[!TAB  Scenario 1: gedeeld apparaat ]
 
-Hieronder ziet u een ideaal grafiekscenario voor één persoon waarbij gehashte e-mail en gehashte telefoon worden gemarkeerd als identiteiten voor gebruik in [!DNL Segment Match] . In dit scenario worden de grafieken in tweeën gesplitst om de entiteiten van verschillende personen te vertegenwoordigen.
+John en Jane delen een apparaat.
 
-![ een ideaal single-person grafiekscenario.](../images/graph-examples/crmid_hashed_single_seg_match.png " een gesimuleerd voorbeeld van een multi-persoongrafiek. Dit voorbeeld toont een gedeeld apparatenscenario, waar er twee CRMIDs zijn en de oudere gevestigde verbinding wordt verwijderd."){zoomable="yes"}
+**wijze van de Tekst:**
 
->[!TAB  multi-persoongrafiek: gedeeld apparaat, gedeelde computer ]
-
-Hieronder volgt een grafiekscenario met meerdere personen waarbij een apparaat (computer) door twee personen wordt gedeeld. In dit scenario wordt de gedeelde computer vertegenwoordigd door `{ECID: 111}` en is deze gekoppeld aan `{CRMID: Summer}` , omdat die koppeling de laatst ingestelde koppeling is. `{CRMID: Tom}` wordt verwijderd omdat de koppeling tussen `{CRMID: Tom}` en `{ECID: 111}` ouder is en omdat CRMID de toegewezen unieke naamruimte in deze configuratie is.
-
-![ een multi-persoongrafiekscenario waar twee gebruikers een computer delen.](../images/graph-examples/shared_device_shared_computer.png " een gesimuleerd voorbeeld van een multi-persoongrafiek. Dit voorbeeld toont een gedeeld apparatenscenario, waar er twee CRMIDs zijn en de oudere gevestigde verbinding wordt verwijderd."){zoomable="yes"}
-
-**de simulatiegebeurtenissen van de Grafiek input**
-
-```shell
-CRMID: Tom, Email_LC_SHA256: aabbcc, Phone_SHA256: 123-4567
-CRMID: Tom, ECID: 111
-CRMID: Tom, ECID: 222, IDFA: A-A-A
-CRMID: Summer, Email_LC_SHA256: ddeeff, Phone_SHA256: 765-4321
-CRMID: Summer, ECID: 333
-CRMID: Summer, ECID: 444, GAID:B-B-B
-CRMID: Summer, ECID: 111
+```json
+CRMID: John, CRMIDhash: John
+CRMID: Jane, CRMIDhash: Jane
+CRMIDhash: John, ECID: 111 
+CRMIDhash: Jane, ECID: 111
 ```
 
->[!TAB  multi-persoongrafiek: gedeeld apparaat, Android mobiel apparaat ]
+![ placeholder ](../images/configs/intermediate/shared-device-hashed-crmid.png)
 
-Het volgende is een multi-persoongrafiekscenario waar een android apparaat door twee mensen wordt gedeeld. In dit scenario wordt CRMID geconfigureerd als een unieke naamruimte en daarom vervangt de nieuwere koppeling van `{CRMID: Tom, GAID: B-B-B, ECID:444}` de oudere `{CRMID: Summer, GAID: B-B-B, ECID:444}` .
+>[!TAB  Scenario 2: slechte gegevens ]
 
-![ een multi-persoongrafiekscenario waar twee gebruikers een Android mobiel apparaat delen.](../images/graph-examples/shared_device_android.png " een gesimuleerd voorbeeld van een multi-persoongrafiek. Dit voorbeeld toont een gedeeld apparatenscenario, waar er twee CRMIDs zijn en de oudere gevestigde verbinding wordt verwijderd."){zoomable="yes"}
+Als gevolg van fouten in het hashingproces wordt een niet-unieke gehashte CRMID gegenereerd en naar de identiteitsservice verzonden.
 
-**de simulatiegebeurtenissen van de Grafiek input**
+**wijze van de Tekst:**
 
-```shell
-CRMID: Tom, Email_LC_SHA256: aabbcc, Phone_SHA256: 123-4567
-CRMID: Tom, ECID: 111
-CRMID: Tom, ECID: 222, IDFA: A-A-A
-CRMID: Summer, Email_LC_SHA256: ddeeff, Phone_SHA256: 765-4321
-CRMID: Summer, ECID: 333
-CRMID: Summer, ECID: 444, GAID: B-B-B
-CRMID: Tom, ECID: 444, GAID: B-B-B
+```json
+CRMID: John, CRMIDhash: aaaa
+CRMID: Jane, CRMIDhash: aaaa
 ```
 
->[!TAB  Multi-person grafiek: gedeeld apparaat, appel mobiel apparaat, geen ECID terugstellen ]
+![ A gedeelde apparatengrafiek met een fout in het het hakken proces, die tot een niet-unieke gehakt CRMID leiden.](../images/configs/intermediate/hashing-error.png)
 
-Hieronder volgt een grafiekscenario met meerdere personen waarbij een Apple-apparaat door twee personen wordt gedeeld. In dit scenario wordt de IDFA gedeeld, maar wordt de ECID niet opnieuw ingesteld.
+>[!ENDTABS]
+<!-- 
+### Use case: You are using Real-Time CDP and Adobe Commerce
 
-![ een multi-persoongrafiekscenario waar twee gebruikers een mobiel apparaat van Apple delen.](../images/graph-examples/shared_device_apple_no_reset.png " een gesimuleerd voorbeeld van een multi-persoongrafiek. Dit voorbeeld toont een gedeeld apparatenscenario, waar er twee CRMIDs zijn en de oudere gevestigde verbinding wordt verwijderd."){zoomable="yes"}
+You have two types of end-users:
 
-**de simulatiegebeurtenissen van de Grafiek input**
+* **Members**: An end-user who is assigned a CRMID and has an email account registered to your system.
+* **Guests**: An end-user who is not a member. They do not have an assigned CRMID and their email accounts are not registered to your system.
 
-```shell
-CRMID: Tom, Email_LC_SHA256: aabbcc, Phone_SHA256: 123-4567
-CRMID: Tom, ECID: 111
-CRMID: Tom, ECID: 222, IDFA: A-A-A
-CRMID: Summer, Email_LC_SHA256: ddeeff, Phone_SHA256: 765-4321
-CRMID: Summer, ECID: 333
-CRMID: Summer, ECID: 444, GAID: B-B-B
-CRMID: Summer, ECID: 222, IDFA: A-A-A
+In this scenario, your customers are sending data from Adobe Commerce to Real-Time CDP.
+
+**Exercise**
+
+Simulate the following configurations in the graph simulation tool. You can either create your own events, or copy and paste using text mode.
+
+>[!BEGINTABS]
+
+>[!TAB Shared device between two members]
+
+In this scenario, two members share the same device to browse an e-commerce website.
+
+**Text mode**
+
+```json
+CRMID: John, Email: john@g
+CRMID: Jane, Email: jane@g
+CRMID: John, ECID: 111
+CRMID: Jane, ECID: 111
 ```
 
->[!TAB  Multi-person grafiek: het gedeelde apparaat, appel, ECID stelt terug ]
+![A graph that displays two authenticated members who share a device.](../images/configs/intermediate/shared-device-two-members.png)
 
-Hieronder volgt een grafiekscenario met meerdere personen waarbij een Apple-apparaat door twee personen wordt gedeeld. In dit scenario wordt de ECID opnieuw ingesteld, maar de IDFA blijft hetzelfde.
+>[!TAB Shared device between two guests]
 
-![ een multi-persoongrafiekscenario waar twee gebruikers een mobiel Apple apparaat delen, maar ECID wordt teruggesteld.](../images/graph-examples/shared_device_apple_with_reset.png " een gesimuleerd voorbeeld van een multi-persoongrafiek. Dit voorbeeld toont een gedeeld apparatenscenario, waar er twee CRMIDs zijn en de oudere gevestigde verbinding wordt verwijderd."){zoomable="yes"}
+In this scenario, two guests share the same device to browse an e-commerce website.
 
-**de simulatiegebeurtenissen van de Grafiek input**
+**Text mode**
 
-```shell
-CRMID: Tom, Email_LC_SHA256: aabbcc, Phone_SHA256: 123-4567
-CRMID: Tom, ECID: 111
-CRMID: Tom, ECID: 222, IDFA: A-A-A
-CRMID: Summer, Email_LC_SHA256: ddeeff, Phone_SHA256: 765-4321
-CRMID: Summer, ECID: 333
-CRMID: Summer, ECID: 444, GAID: B-B-B
-CRMID: Summer, ECID: 555, IDFA: A-A-A
+```json
+Email: john@g, ECID: 111
+Email: jane@g, ECID: 111
 ```
 
->[!TAB  multi-persoongrafiek: Niet-unieke telefoon ]
+![A graph that displays two guests who share a device.](../images/configs/intermediate/shared-device-two-guests.png)
 
-Het volgende is een multi-persoongrafiekscenario waar het zelfde telefoonaantal door twee mensen wordt gedeeld.
+>[!TAB Shared device between a member and a guest]
 
-![ een multi-persoongrafiekscenario waar telefoon namespace niet uniek is.](../images/graph-examples/non_unique_phone.png " een gesimuleerd voorbeeld van een multi-persoongrafiek. Dit voorbeeld toont een gedeeld apparatenscenario, waar er twee CRMIDs zijn en de oudere gevestigde verbinding wordt verwijderd."){zoomable="yes"}
+In this scenario, a member and a guest share the same device to browse an e-commerce website.
 
-**de simulatiegebeurtenissen van de Grafiek input**
+**Text mode**
 
-```shell
-CRMID: Tom, Email_LC_SHA256: aabbcc, Phone_SHA256: 123-4567
-CRMID: Tom, ECID: 111
-CRMID: Tom, ECID: 222, IDFA: A-A-A
-CRMID: Summer, Email_LC_SHA256: ddeeff, Phone_SHA256: 765-4321
-CRMID: Summer, ECID: 333
-CRMID: Summer, ECID: 444, GAID: B-B-B
-CRMID: Summer, Phone_SHA256: 123-4567
+```json
+CRMID: John, Email: john@g
+CRMID: John, ECID: 111
+Email: jane@g, ECID: 111
 ```
 
-In dit voorbeeld wordt `{Phone_SHA256}` ook gemarkeerd als een unieke naamruimte. Een grafiek kan daarom niet meer dan één identiteit hebben met de naamruimte `{Phone_SHA256}` . In dit scenario is `{Phone_SHA256: 765-4321}` niet gekoppeld aan `{CRMID: Summer}` en `{Email_LC_SHA256: ddeeff}` omdat het de oudere koppeling is,
+![A graph that displays a member and a guest who share a device.](../images/configs/intermediate/shared-device-member-and-guest.png)
 
-![ een multi-persoongrafiekscenario waar Phone_SHA256 uniek is.](../images/graph-examples/unique_phone.png " een gesimuleerd voorbeeld van een multi-persoongrafiek. Dit voorbeeld toont een gedeeld apparatenscenario, waar er twee CRMIDs zijn en de oudere gevestigde verbinding wordt verwijderd."){zoomable="yes"}
+>[!ENDTABS] -->
 
->[!TAB  Multi-person grafiek: Niet-unieke e-mail ]
+### Hoofdlettergebruik: uw gegevens bevatten drie unieke naamruimten
 
-Het volgende is een grafiekscenario met meerdere personen waarbij e-mail wordt gedeeld door twee personen.
+Uw klant definieert als volgt een entiteit van één persoon:
 
-![ Een multi-persoongrafiekscenario waar het e-mail niet uniek ](../images/graph-examples/non_unique_email.png " A gesimuleerd voorbeeld van een multi-persoongrafiek is. Dit voorbeeld toont een gedeeld apparatenscenario, waar er twee CRMIDs zijn en de oudere gevestigde verbinding wordt verwijderd."){zoomable="yes"}
+* Een eindgebruiker met toegewezen CRMID.
+* Een eindgebruiker die aan een gehasht e-mailadres wordt geassocieerd, zodat de profielen aan bestemmingen kunnen worden geactiveerd die gehashte e-mail (bijvoorbeeld, [!DNL Facebook]) steunen.
+* Een eindgebruiker die aan een e-mailadres is gekoppeld, zodat ondersteuningspersoneel hun profiel op Real-Time CDP kan opzoeken aan de hand van het opgegeven e-mailadres.
 
-**de simulatiegebeurtenissen van de Grafiek input**
+| Weergavenaam | Identiteitssymbool | Identiteitstype | Uniek per grafiek | Prioriteit naamruimte |
+| --- | --- | --- | --- | --- |
+| CRMID | CRMID | CROSS_DEVICE | ✔️ | 1 |
+| Email | Email | Email | ✔️ | 2 |
+| Email_LC_SHA256 | Email_LC_SHA256 | Email | ✔️ | 3 |
+| ECID | ECID | COOKIE | | 4 |
 
-```shell
-CRMID: Tom, Email_LC_SHA256: aabbcc, Phone_SHA256: 123-4567
-CRMID: Tom, ECID: 111
-CRMID: Tom, ECID: 222, IDFA: A-A-A
-CRMID: Summer, Email_LC_SHA256: ddeeff, Phone_SHA256: 765-4321
-CRMID: Summer, ECID: 333
-CRMID: Summer, ECID: 444, GAID: B-B-B
-CRMID: Summer, Email_LC_SHA256: aabbcc
+Simuleer de volgende configuraties in het gereedschap voor grafieksimulatie. U kunt uw eigen gebeurtenissen maken of kopiëren en plakken met de tekstmodus.
+
+>[!BEGINTABS]
+
+>[!TAB  twee eindgebruikerlogin ]
+
+In dit scenario, login John en Jane allebei aan een e-commercewebsite.
+
+**wijze van de Tekst**
+
+```json
+CRMID: John, Email: john@g, Email_LC_SHA256: john_hash 
+CRMID: Jane, Email: jane@g, Email_LC_SHA256: jane_hash 
+CRMID: John, ECID: 111 
+CRMID: Jane, ECID: 111
 ```
+
+![ een grafiek die twee eind-gebruikers toont die login aan uw website gebruikend het zelfde apparaat.](../images/configs/intermediate/two-end-users-log-ing.png)
+
+>[!TAB  een eindgebruiker verandert hun e-mail ]
+
+**wijze van de Tekst**
+
+```json
+CRMID: John, Email: john@g, Email_LC_SHA256: john_hash
+CRMID: John, Email: john@y, Email_LC_SHA256: john_y_hash
+```
+
+![ een grafiek die een eind-gebruiker toont die hun e-mail heeft veranderd.](../images/configs/intermediate/end-user-changes-email.png)
 
 >[!ENDTABS]
 
-## Eén CRMID met meerdere aanmeldings-id&#39;s (eenvoudige versie)
+## Geavanceerde implementaties {#advanced-implementations}
 
-In dit scenario is er één CRMID die een persoonentiteit vertegenwoordigt. Een personenentiteit kan echter meerdere aanmeldings-id&#39;s hebben:
+Geavanceerde implementaties omvatten complexe en gelaagde grafiekscenario&#39;s. Deze types van implementaties omvatten het gebruik van **namespace prioriteit** om de correcte verbindingen te identificeren die moeten worden verwijderd om grafiekineenstorting te verhinderen.
 
-* Een bepaalde persoon kan verschillende accounttypen hebben (persoonlijk of zakelijk, account per staat, account per merk, enz.)
-* Een bepaalde persoon mag voor elk willekeurig aantal accounts verschillende e-mailadressen gebruiken.
+**prioriteit Namespace** is meta-gegevens die van namespaces door hun belang rangschikt. Als een grafiek twee identiteiten bevat, elk met verschillende unieke naamruimten, gebruikt de Dienst van de Identiteit namespace prioriteit om te beslissen welke verbindingen om te verwijderen. Voor meer informatie, lees de [ documentatie over namespace prioriteit ](../identity-graph-linking-rules/namespace-priority.md).
 
->[!IMPORTANT]
->
->**het is cruciaal dat CRMID altijd voor elke gebruiker** wordt verzonden. Als u dit niet doet, kan dit leiden tot een &quot;gevaarlijk&quot; login-id-scenario, waarbij één individuele persoon wordt verondersteld een apparaat met een andere persoon te delen.
+De prioriteit Namespace speelt een kritieke rol in complexe grafiekscenario&#39;s. Grafieken kunnen veelvoudige lagen hebben - een eindgebruiker kan met veelvoudige login IDs worden geassocieerd, en deze login IDs kon worden gehakt. Bovendien kunnen verschillende ECID&#39;s worden gekoppeld aan verschillende aanmeldings-id&#39;s. Om ervoor te zorgen dat de juiste verbinding, in de juiste laag wordt verwijderd, moeten uw configuraties van de namespaceprioriteit correct zijn.
 
-**Implementatie:**
+Lees deze sectie voor geavanceerde implementaties van [!DNL Identity Graph Linking Rules].
 
-| Gebruikte naamruimten | Webgedragsverzamelingsmethode |
-| --- | --- |
-| CRMID, loginID, ECID | Web SDK |
+### Gebruik hoofdletters/kleine letters: u hebt ondersteuning nodig voor meerdere bedrijfsregels
 
-**Gebeurtenissen:**
+Uw eindgebruikers hebben twee verschillende accounts: een persoonlijke account en een zakelijke account. Elk account wordt geïdentificeerd door een andere id. In dit scenario ziet een grafiek er als volgt uit:
 
-U kunt dit scenario in grafieksimulatie tot stand brengen door de volgende gebeurtenissen aan tekstwijze te kopiëren:
+**wijze van de Tekst***
 
-```shell
-CRMID: Tom, loginID: ID_A
-CRMID: Tom, loginID: ID_B
-loginID: ID_A, ECID: 111
-CRMID: Summer, loginID: ID_C
-CRMID: Summer, loginID: ID_D
-loginID: ID_C, ECID: 222
+```json
+CRMID: John, loginID: JohnPersonal
+CRMID: John, loginID: JohnBusiness
+loginID: JohnPersonal, ECID: 111
+loginID: JohnPersonal, ECID: 222
+loginID: JohnBusiness, ECID: 222
 ```
 
-**configuratie van het Algoritme:**
+**de configuratie van het Algoritme (de Montages van de Identiteit)**
 
-U kunt dit scenario in grafieksimulatie tot stand brengen door de volgende opstelling voor uw algoritmeconfiguratie te vormen:
+Vorm de volgende montages in de interface van de Simulatie van de Grafiek alvorens u uw grafiek simuleert.
 
-| Prioriteit | Weergavenaam | Identiteitstype | Uniek per grafiek |
-| ---| --- | --- | --- |
-| 1 | CRMID | CROSS_DEVICE | Ja |
-| 2 | loginID | CROSS_DEVICE | Nee |
-| 3 | ECID | COOKIE | Nee |
+| Weergavenaam | Identiteitssymbool | Identiteitstype | Uniek per grafiek | Prioriteit naamruimte |
+| --- | --- | --- | --- | --- |
+| CRMID | CRMID | CROSS_DEVICE | ✔️ | 1 |
+| loginID | loginID | CROSS_DEVICE | | 2 |
+| ECID | ECID | COOKIE | | 3 |
 
-**Primaire identiteitsselectie voor Profiel:**
+**Gesimuleerde grafiek**
 
-Binnen de context van deze configuratie, zal de primaire identiteit als volgt worden bepaald:
++++Selecteren om gesimuleerde grafiek weer te geven
 
-| Verificatiestatus | Naamruimte(s) in gebeurtenissen | Primaire identiteit |
-| --- | --- | --- |
-| Geverifieerd | loginID, ECID | loginID |
-| Geverifieerd | loginID, ECID | loginID |
-| Geverifieerd | CRMID, loginID, ECID | CRMID |
-| Geverifieerd | CRMID, ECID | CRMID |
-| Niet geverifieerd | ECID | ECID |
+![ een identiteitsgrafiek voor een eindgebruiker met zaken en een persoonlijke e-mail.](../images/configs/advanced/advanced.png)
 
-**Voorbeelden van de Grafiek**
++++
+
+
+**Uitoefening**
+
+Simuleer de volgende configuratie in de Simulatie van de Grafiek. U kunt uw eigen gebeurtenissen maken of kopiëren en plakken met de tekstmodus.
 
 >[!BEGINTABS]
 
->[!TAB  Ideaal single-person scenario ]
+>[!TAB  Gedeeld apparaat ]
 
-Het volgende is een single-person grafiekscenario met één enkele CRMID en veelvoudige loginIDs.
+**wijze van de Tekst**
 
-![ een grafiekscenario dat één enkele CRMID en veelvoudige loginIDs omvat.](../images/graph-examples/single_crmid.png " een gesimuleerd voorbeeld van een multi-persoongrafiek. Dit voorbeeld toont een gedeeld apparatenscenario, waar er twee CRMIDs zijn en de oudere gevestigde verbinding wordt verwijderd."){zoomable="yes"}
-
->[!TAB  Multi-person grafiekscenario: gedeeld apparaat ]
-
-Het volgende is een grafiekscenario met meerdere personen waarbij een apparaat door twee personen wordt gedeeld. In dit scenario is `{ECID:111}` gekoppeld aan zowel `{loginID:ID_A}` als `{loginID:ID_C}` en wordt de oudere, gevestigde koppeling van `{ECID:111, loginID:ID_A}` verwijderd.
-
-![ een multi-persoon gedeeld apparatenscenario.](../images/graph-examples/single_crmid_shared_device.png " een gesimuleerd voorbeeld van een multi-persoongrafiek. Dit voorbeeld toont een gedeeld apparatenscenario, waar er twee CRMIDs zijn en de oudere gevestigde verbinding wordt verwijderd."){zoomable="yes"}
-
-**de simulatiegebeurtenissen van de Grafiek input**
-
-```shell
-CRMID: Tom, loginID: ID_A
-CRMID: Tom, loginID: ID_B
-loginID: ID_A, ECID: 111
-CRMID: Summer, loginID: ID_C
-CRMID: Summer, loginID: ID_D
-loginID: ID_C, ECID: 222
-loginID: ID_C, ECID: 111
+```json
+CRMID: John, loginID: JohnPersonal
+CRMID: John, loginID: JohnBusiness
+CRMID: Jane, loginID: JanePersonal
+CRMID: Jane, loginID: JaneBusiness
+loginID: JohnPersonal, ECID: 111
+loginID: JanePersonal, ECID: 111
 ```
 
->[!TAB  Multi-person grafiekscenario: slechte gegevens ]
+![ een grafiek van een geavanceerd gedeeld apparaat.](../images/configs/advanced/advanced-shared-device.png)
 
-Het volgende is een multi-persoongrafiekscenario dat slechte gegevens impliceert. In dit scenario is `{loginID:ID_D}` ten onrechte gekoppeld aan twee verschillende gebruikers en wordt de koppeling met de oudere tijdstempel verwijderd, ten gunste van de meer recent ingestelde koppeling.
+>[!TAB  het Onjuiste gegeven wordt verzonden naar Real-Time CDP ]
 
-![ een multi-persoongrafiekscenario met slechte gegevens.](../images/graph-examples/single_crmid_bad_data.png " een gesimuleerd voorbeeld van een multi-persoongrafiek. Dit voorbeeld toont een gedeeld apparatenscenario, waar er twee CRMIDs zijn en de oudere gevestigde verbinding wordt verwijderd."){zoomable="yes"}
-
-**de simulatiegebeurtenissen van de Grafiek input**
-
-```shell
-CRMID: Tom, loginID: ID_A
-CRMID: Tom, loginID: ID_B
-loginID: ID_A, ECID: 111
-CRMID: Summer, loginID: ID_C
-CRMID: Summer, loginID: ID_D
-loginID: ID_C, ECID: 222
-CRMID: Tom, loginID: ID_D
+```json
+CRMID: John, loginID: JohnPersonal
+CRMID: John, loginID: error
+CRMID: Jane, loginID: JanePersonal
+CRMID: Jane, loginID: error
+loginID: JohnPersonal, ECID: 111
+loginID: JanePersonal, ECID: 222
 ```
 
->[!TAB  &#39;Dangling&#39; loginID ]
-
-De volgende grafiek simuleert een &quot;gevaarlijk&quot;loginID scenario. In dit voorbeeld zijn twee verschillende loginID&#39;s gebonden aan dezelfde ECID. `{loginID:ID_C}` is echter niet gekoppeld aan de CRMID. Daarom is er geen manier voor de Dienst van de Identiteit om te ontdekken dat deze twee loginIDs twee verschillende entiteiten vertegenwoordigen.
-
-![ een gevaarlijk loginID scenario.](../images/graph-examples/dangling_example.png " een gevaarlijk loginID scenario."){zoomable="yes"}
-
-**de simulatiegebeurtenissen van de Grafiek input**
-
-```shell
-CRMID: Tom, loginID: ID_A
-CRMID: Tom, loginID: ID_B
-loginID: ID_A, ECID: 111
-loginID: ID_C, ECID: 111
-```
+![ een grafiek die een scenario toont waar de slechte gegevens naar Real-Time CDP worden verzonden.](../images/configs/advanced/advanced-bad-data.png)
 
 >[!ENDTABS]
 
-## Eén CRMID met meerdere aanmeldings-id&#39;s (complexe versie)
+### Hoofdlettergebruik: u hebt complexe implementaties die meerdere naamruimten vereisen
 
-In dit scenario is er één CRMID die een persoonentiteit vertegenwoordigt. Een personenentiteit kan echter meerdere aanmeldings-id&#39;s hebben:
+U bent een bedrijf voor media en entertainment en uw eindgebruikers hebben het volgende:
+* EEN CRMID
+* Een loyaal-id
+Bovendien kunnen eindgebruikers een aankoop doen op de e-commercewebsite en deze gegevens zijn gekoppeld aan hun e-mailadres. Gebruikersgegevens worden ook verrijkt door een externe databaseleverancier en worden in batches naar Experience Platform verzonden.
 
-* Een bepaalde persoon kan verschillende accounttypen hebben (persoonlijk of zakelijk, account per staat, account per merk, enz.)
-* Een bepaalde persoon mag voor elk willekeurig aantal accounts verschillende e-mailadressen gebruiken.
+**wijze van de Tekst**
 
->[!IMPORTANT]
->
->**het is cruciaal dat CRMID altijd voor elke gebruiker** wordt verzonden. Als u dit niet doet, kan dit leiden tot een &quot;gevaarlijk&quot; login-id-scenario, waarbij één individuele persoon wordt verondersteld een apparaat met een andere persoon te delen.
-
-**Implementatie:**
-
-| Gebruikte naamruimten | Webgedragsverzamelingsmethode |
-| --- | --- |
-| CRMID, Email_LC_SHA256, Phone_SHA256, loginID, ECID | Adobe Analytics-bronaansluiting. <br> **Nota:** Door gebrek, wordt AIDs geblokkeerd in de Dienst van de Identiteit, daarom moet u een hogere prioriteit op uw ECIDs plaatsen dan AIDs, wanneer het gebruiken van de bron van Analytics. Lees de [ implementatiegids ](./implementation-guide.md#ingest-your-data) voor meer informatie.</br> |
-
-**Gebeurtenissen:**
-
-U kunt dit scenario in grafieksimulatie tot stand brengen door de volgende gebeurtenissen aan tekstwijze te kopiëren:
-
-```shell
-CRMID: Tom, Email_LC_SHA256: aabbcc, Phone_SHA256: 123-4567
-CRMID: Tom, loginID: ID_A
-CRMID: Tom, loginID: ID_B
-loginID: ID_A, ECID: 111
-CRMID: Summer, Email_LC_SHA256: ddeeff, Phone_SHA256: 765-4321
-CRMID: Summer, loginID: ID_C
-CRMID: Summer, loginID: ID_D
-loginID: ID_C, ECID: 222
+```json
+CRMID: John, loyaltyID: John, Email: john@g
+Email: john@g, orderID: aaa
+CRMID: John, thirdPartyID: xyz
+CRMID: John, ECID: 111
 ```
 
-**configuratie van het Algoritme:**
+**de configuratie van het Algoritme (de Montages van de Identiteit)**
 
-U kunt dit scenario in grafieksimulatie tot stand brengen door de volgende opstelling voor uw algoritmeconfiguratie te vormen:
+Vorm de volgende montages in de interface van de Simulatie van de Grafiek alvorens u uw grafiek simuleert.
 
-| Prioriteit | Weergavenaam | Identiteitstype | Uniek per grafiek |
-| ---| --- | --- | --- | 
-| 1 | CRMID | CROSS_DEVICE | Ja |
-| 2 | Email_LC_SHA256 | Email | Nee |
-| 3 | Phone_SHA256 | Telefoon | Nee |
-| 4 | loginID | CROSS_DEVICE | Nee |
-| 5 | ECID | COOKIE | Nee |
-| 6 | STEUN | COOKIE | Nee |
+| Weergavenaam | Identiteitssymbool | Identiteitstype | Uniek per grafiek | Prioriteit naamruimte |
+| --- | --- | --- | --- | --- |
+| CRMID | CRMID | CROSS_DEVICE | ✔️ | 1 |
+| loyaltyID | loyaltyID | CROSS_DEVICE | | 2 |
+| Email | Email | Email | | 3 |
+| thirdPartyID | thirdPartyID | CROSS_DEVICE | | 4 |
+| orderID | orderID | CROSS_DEVICE | | 5 |
+| ECID | ECID | COOKIE | | 6 |
 
-**Primaire identiteitsselectie voor Profiel:**
+**Uitoefening**
 
-Binnen de context van deze configuratie, zal de primaire identiteit als volgt worden bepaald:
-
-| Verificatiestatus | Naamruimte(s) in gebeurtenissen | Primaire identiteit |
-| --- | --- | --- |
-| Geverifieerd | loginID, ECID | loginID |
-| Geverifieerd | loginID, ECID | loginID |
-| Geverifieerd | CRMID, loginID, ECID | CRMID |
-| Geverifieerd | CRMID, ECID | CRMID |
-| Niet geverifieerd | ECID | ECID |
-
-**Voorbeelden van de Grafiek**
+Simuleer de volgende configuratie in de Simulatie van de Grafiek. U kunt uw eigen gebeurtenissen maken of kopiëren en plakken met de tekstmodus.
 
 >[!BEGINTABS]
 
->[!TAB  Ideale single-person grafiek ]
+>[!TAB  Gedeeld apparaat ]
 
-Hieronder ziet u een voorbeeld van twee single-person-grafieken met elk één CRMID en meerdere login-id&#39;s.
+**wijze van de Tekst**
 
-![ een single-person grafiek die één CRMID en veelvoudige loginIDs impliceert.](../images/graph-examples/complex_single_person.png " een single-person grafiek die één CRMID en veelvoudige loginIDs impliceert."){zoomable="yes"}
-
->[!TAB  multi-persoongrafiek: gedeeld apparaat 1 ]
-
-Hieronder ziet u een gezamenlijk apparaatscenario voor meerdere personen waarbij `{ECID:111}` is gekoppeld aan zowel `{loginID:ID_A}` als `{loginID:ID_C}` . In dit geval worden de oudere, gevestigde koppelingen verwijderd ten gunste van de meer recent gevestigde koppelingen.
-
-![ een multi-persoon gedeeld scenario van de apparatengrafiek.](../images/graph-examples/complex_shared_device_one.png " Meerpersoonsgedeeld scenario van de apparatengrafiek."){zoomable="yes"}
-
-**de simulatiegebeurtenissen van de Grafiek input**
-
-```shell
-CRMID: Tom, Email_LC_SHA256: aabbcc, Phone_SHA256: 123-4567
-CRMID: Tom, loginID: ID_A
-CRMID: Tom, loginID: ID_B
-loginID: ID_A, ECID: 111
-CRMID: Summer, Email_LC_SHA256: ddeeff, Phone_SHA256: 765-4321
-CRMID: Summer, loginID: ID_C
-CRMID: Summer, loginID: ID_D
-loginID: ID_C, ECID: 222
-loginID: ID_C, ECID: 111
+```json
+CRMID: John, loyaltyID: John, Email: john@g
+CRMID: Jane, loyaltyID: Jane, Email: jane@g
+Email: john@g, orderID: aaa 
+CRMID: John, thirdPartyID: xyz 
+CRMID: John, ECID: 111
+CRMID: Jane, ECID: 111
 ```
 
->[!TAB  multi-persoongrafiek: gedeeld apparaat 2 ]
+![ Een complex grafiekvoorbeeld van gedeeld apparaat.](../images/configs/advanced/complex-shared-device.png)
 
-In dit scenario, in plaats van slechts loginID te verzenden, zowel worden loginID als CRMID verzonden als ervaringsgebeurtenissen.
+>[!TAB  Eind-gebruiker verandert hun e-mailadres ]
 
-![ een multi-person gedeeld scenario van de apparatengrafiek waar zowel loginID als CRMID als ervaringsgebeurtenissen worden verzonden.](../images/graph-examples/complex_shared_device_two.png " Van meerdere personen het gedeelde scenario van de apparatengrafiek waar zowel loginID als CRMID als ervaringsgebeurtenissen worden verzonden."){zoomable="yes"}
+**wijze van de Tekst**
 
-**de simulatiegebeurtenissen van de Grafiek input**
-
-```shell
-CRMID: Tom, Email_LC_SHA256: aabbcc, Phone_SHA256: 123-4567
-CRMID: Tom, loginID: ID_A
-CRMID: Tom, loginID: ID_B
-loginID: ID_A, ECID: 111
-CRMID: Summer, Email_LC_SHA256: ddeeff, Phone_SHA256: 765-4321
-CRMID: Summer, loginID: ID_C
-CRMID: Summer, loginID: ID_D
-loginID: ID_C, ECID: 222
-CRMID: Summer, loginID: ID_C, ECID: 111
-loginID: ID_A, ECID: 111
+```json
+CRMID: John, loyaltyID: John, Email: john@g
+CRMID: John, loyaltyID: John, Email: john@y
 ```
 
->[!TAB  Multi-person grafiek: slechte loginID gegevens ]
+![ een grafiek die identiteitsgedrag toont gegeven een e-mailverandering.](../images/configs/advanced/complex-email-change.png)
 
-In dit scenario is `{loginID:ID_C}` gekoppeld aan zowel `{CRMID:Tom}` als `{CRMID:Summer}` en wordt het daarom als ongeldige gegevens beschouwd, omdat ideale grafiekscenario&#39;s niet dezelfde loginID&#39;s moeten koppelen aan twee verschillende gebruikers. In dit geval worden de oudere gevestigde koppelingen verwijderd ten gunste van de meer recent opgerichte koppelingen.
+>[!TAB  de derdePartyID verenigingsveranderingen ]
 
-![ een multi-persoongrafiekscenario dat slechte login gegevens impliceert.](../images/graph-examples/complex_bad_data.png " een multi-persoongrafiekscenario dat slechte login gegevens impliceert."){zoomable="yes"}
+**wijze van de Tekst**
 
-**de simulatiegebeurtenissen van de Grafiek input**
-
-```shell
-CRMID: Tom, Email_LC_SHA256: aabbcc, Phone_SHA256: 123-4567
-CRMID: Tom, loginID: ID_A
-CRMID: Tom, loginID: ID_B
-loginID: ID_A, ECID: 111
-CRMID: Summer, Email_LC_SHA256: ddeeff, Phone_SHA256: 765-4321
-CRMID: Summer, loginID: ID_C
-CRMID: Summer, loginID: ID_D
-loginID: ID_C, ECID: 222
-CRMID: Tom, loginID: ID_C
+```json
+CRMID: John, loyaltyID: John, Email: john@g
+CRMID: Jane, loyaltyID: Jane, Email: jane@g
+CRMID: John, thirdPartyID: xyz
+CRMID: Jane, thirdPartyID: xyz
 ```
 
->[!TAB  Multi-person grafiek: niet-unieke e-mail ]
+![ een grafiek die identiteitsgedrag toont gegeven een verandering in derdeidentiteitskaart vereniging.](../images/configs/advanced/complex-third-party-change.png)
 
-In dit scenario wordt een niet-unieke e-mail gekoppeld aan twee verschillende CRMID&#39;s, zodat de oudere gevestigde koppelingen worden verwijderd ten gunste van de meer recent gevestigde koppelingen.
+>[!TAB  Niet-unieke orderID ]
 
-![ een multi-persoongrafiekscenario dat een niet unieke e-mail impliceert.](../images/graph-examples/complex_non_unique_email.png " een multi-persoongrafiekscenario dat een niet-unieke e-mail impliceert."){zoomable="yes"}
+**wijze van de Tekst**
 
-**de simulatiegebeurtenissen van de Grafiek input**
-
-```shell
-CRMID: Tom, Email_LC_SHA256: aabbcc, Phone_SHA256: 123-4567
-CRMID: Tom, loginID: ID_A
-CRMID: Tom, loginID: ID_B
-loginID: ID_A, ECID: 111
-CRMID: Summer, Email_LC_SHA256: ddeeff, Phone_SHA256: 765-4321
-CRMID: Summer, loginID: ID_C
-CRMID: Summer, loginID: ID_D
-loginID: ID_C, ECID: 222
-CRMID: Summer, Email_LC_SHA256: aabbcc
+```json
+CRMID: John, loyaltyID: John, Email: john@g
+CRMID: Jane, loyaltyID: Jane, Email: jane@g
+Email: john@g, orderID: aaa
+Email: jane@g, orderID: aaa
 ```
 
->[!TAB  multi-persoongrafiek: niet-unieke telefoon ]
+![ een grafiek die identiteitsgedrag toont dat een niet-unieke orde identiteitskaart wordt gegeven.](../images/configs/advanced/complex-non-unique.png)
 
-In dit scenario, wordt een niet-uniek telefoonaantal verbonden met twee verschillende CRMIDs, worden de oudere gevestigde verbindingen verwijderd ten gunste van de recentere gevestigde verbindingen.
+>[!TAB  Onjuiste loyaltyID ]
 
-![ een multi-persoongrafiekscenario dat een niet-uniek telefoonaantal impliceert.](../images/graph-examples/complex_non_unique_phone.png " een multi-persoongrafiekscenario dat een niet-uniek telefoonaantal impliceert."){zoomable="yes"}
+**wijze van de Tekst**
 
-**de simulatiegebeurtenissen van de Grafiek input**
-
-```shell
-CRMID: Tom, Email_LC_SHA256: aabbcc, Phone_SHA256: 123-4567
-CRMID: Tom, loginID: ID_A
-CRMID: Tom, loginID: ID_B
-loginID: ID_A, ECID: 111
-CRMID: Summer, Email_LC_SHA256: ddeeff, Phone_SHA256: 765-4321
-CRMID: Summer, loginID: ID_C
-CRMID: Summer, loginID: ID_D
-loginID: ID_C, ECID: 222
-CRMID: Tom, Phone_SHA256: 111-1111
-CRMID: Summer, Phone_SHA256: 111-1111
+```json
+CRMID: John, loyaltyID: aaa, Email: john@g
+CRMID: Jane, loyaltyID: aaa, Email: jane@g
 ```
 
->[!ENDTABS]
-
-## Gebruik in andere Adobe Commerce
-
-In de voorbeelden van grafiekconfiguratie in deze sectie worden gebruiksscenario&#39;s voor Adobe Commerce beschreven. De voorbeelden hieronder zijn gericht op retailklanten met twee gebruikerstypen:
-
-* Geregistreerde gebruiker (gebruikers die een account hebben gemaakt)
-* Gastgebruikers (gebruikers die alleen een e-mailadres hebben)
-
->[!IMPORTANT]
->
->**het is cruciaal dat CRMID altijd voor elke gebruiker** wordt verzonden. Als u dit niet doet, kan dit leiden tot een &quot;gevaarlijk&quot; login-id-scenario, waarbij één individuele persoon wordt verondersteld een apparaat met een andere persoon te delen.
-
-**Implementatie:**
-
-| Gebruikte naamruimten | Webgedragsverzamelingsmethode |
-| --- | --- |
-| CRMID, E-mail, ECID | Web SDK |
-
-**Gebeurtenissen:**
-
-U kunt dit scenario in grafieksimulatie tot stand brengen door de volgende gebeurtenissen aan tekstwijze te kopiëren:
-
-```shell
-CRMID: Tom, Email: tom@acme.com
-CRMID: Tom, ECID: 111
-```
-
-**configuratie van het Algoritme:**
-
-U kunt dit scenario in grafieksimulatie tot stand brengen door de volgende opstelling voor uw algoritmeconfiguratie te vormen:
-
-| Prioriteit | Weergavenaam | Identiteitstype | Uniek per grafiek |
-| ---| --- | --- | --- | 
-| 1 | CRMID | CROSS_DEVICE | Ja |
-| 2 | Email | Email | Ja |
-| 5 | ECID | COOKIE | Nee |
-
-**Primaire identiteitsselectie voor Profiel:**
-
-Binnen de context van deze configuratie, zal de primaire identiteit als volgt worden bepaald:
-
-| Gebruikersactiviteit | Naamruimte(s) in gebeurtenissen | Primaire identiteit |
-| --- | --- | --- |
-| Geverifieerd bladeren | CRMID, ECID | CRMID |
-| Uitchecken door gast | E-mail, ECID | Email |
-| Niet-geverifieerd bladeren | ECID | ECID |
-
->[!WARNING]
->
->Geregistreerde gebruikers moeten zowel CRMID als e-mail in hun profielen opnemen, zodat de volgende grafiekscenario&#39;s werken.
-
-**Voorbeelden van de Grafiek**
-
->[!BEGINTABS]
-
->[!TAB  Ideale single-person grafiek ]
-
-Hieronder ziet u een voorbeeld van een ideale eenpersoonsgrafiek.
-
-![ een voorbeeld van een ideale eenpersoonsgrafiek met één e-mailnamespace.](../images/graph-examples/single_person_email.png " een voorbeeld van een ideale single-person grafiek met één e-mailnamespace."){zoomable="yes"}
-
->[!TAB  Multi-person grafieken ]
-
-Hieronder ziet u een voorbeeld van een grafiek met meerdere personen waarin twee geregistreerde gebruikers met hetzelfde apparaat bladeren.
-
-![ een multi-persoongrafiekscenario waar twee geregistreerde gebruikers doorbladeren gebruikend het zelfde apparaat.](../images/graph-examples/two_registered_users.png " een multi-persoongrafiekscenario waar twee geregistreerde gebruikers doorbladeren gebruikend het zelfde apparaat."){zoomable="yes"}
-
-**de simulatiegebeurtenissen van de Grafiek input**
-
-```shell
-CRMID: Tom, Email: tom@acme.com
-CRMID: Summer, Email: summer@acme.com
-CRMID: Tom, ECID: 111
-CRMID: Summer, ECID: 111
-```
-
-In dit scenario, delen een geregistreerde gebruiker en een gastgebruiker het zelfde apparaat.
-
-![ een multi-persoongrafiekvoorbeeld waar een geregistreerde gebruiker en een gast het zelfde apparaat delen.](../images/graph-examples/one_guest.png " een multi-persoongrafiekvoorbeeld waar een geregistreerde gebruiker en een gast het zelfde apparaat delen."){zoomable="yes"}
-
-**de simulatiegebeurtenissen van de Grafiek input**
-
-```shell
-CRMID: Tom, Email: tom@acme.com
-CRMID: Tom, ECID: 111
-Email: summer@acme.com, ECID: 111
-```
-
-In dit scenario, delen een geregistreerde gebruiker en een gastgebruiker een apparaat. Er treedt echter een implementatiefout op omdat de CRMID geen overeenkomstige e-mailnaamruimte bevat. In dit scenario is Tom de geregistreerde gebruiker, en Summer is de gastgebruiker. In tegenstelling tot het vorige scenario worden de twee entiteiten samengevoegd omdat er geen gemeenschappelijke e-mailnaamruimten over de twee persoonentiteiten zijn.
-
-![ een meerpersoonsgrafiekvoorbeeld waar een geregistreerde gebruiker en een gast het zelfde apparaat delen, echter, komt een implementatiefout voor aangezien CRMID geen e-mailnamespace bevat.](../images/graph-examples/no_email_namespace_in_crmid.png " Een multi-persoongrafiekvoorbeeld waar een geregistreerde gebruiker en een gast het zelfde apparaat delen, echter, komt een implementatiefout voor aangezien CRMID geen e-mailnamespace bevat."){zoomable="yes"}
-
-**de simulatiegebeurtenissen van de Grafiek input**
-
-```shell
-CRMID: Tom, ECID: 111
-Email: summer@acme.com, ECID: 111
-```
-
-In dit scenario, delen twee gastgebruikers het zelfde apparaat.
-
-![ een multi-persoongrafiekscenario waar twee gastgebruikers het zelfde apparaat delen.](../images/graph-examples/two_guests.png){zoomable="yes"}
-
-**de simulatiegebeurtenissen van de Grafiek input**
-
-```shell
-Email: tom@acme.com, ECID: 111
-Email: summer@acme.com, ECID: 111
-```
-
-In dit scenario, controleert een gastgebruiker een punt en registreert dan gebruikend het zelfde apparaat.
-
-![ een grafiekscenario waar een gastgebruiker en punt koopt, en dan voor een rekening registreert.](../images/graph-examples/guest_purchase.png " een grafiekscenario waar een gastgebruiker en punt koopt, en dan voor een rekening registreert."){zoomable="yes"}
-
-**de simulatiegebeurtenissen van de Grafiek input**
-
-```shell
-Email: tom@acme.com, ECID: 111
-Email: tom@acme.com, CRMID: Tom
-CRMID: Tom, ECID: 111
-```
+![ een grafiek die identiteitsgedrag toont dat een onjuiste loyaliteitsidentiteitskaart wordt gegeven.](../images/configs/advanced/complex-error.png)
 
 >[!ENDTABS]
 
