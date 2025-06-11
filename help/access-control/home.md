@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Overzicht van toegangsbeheer
 description: Via de Adobe Admin Console wordt het toegangsbeheer voor Adobe Experience Platform verzorgd. Deze functionaliteit maakt gebruik van productprofielen in Admin Console, die gebruikers koppelen aan machtigingen en sandboxen.
 exl-id: 591d59ad-2784-4ae4-a509-23649ce712c9
-source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
+source-git-commit: 6a466770495b226f890ab67b21c5cb027fd46e02
 workflow-type: tm+mt
-source-wordcount: '3224'
+source-wordcount: '3254'
 ht-degree: 0%
 
 ---
@@ -17,7 +17,7 @@ De controle van de toegang voor Adobe Experience Platform wordt verstrekt door *
 
 ## Toegangsbeheerhiërarchie en -workflow
 
-Om toegangsbeheer voor Experience Platform te configureren, moet u systeem- of productbeheerdersrechten hebben voor een organisatie die een Experience Platform-product heeft. De minimumrol die toestemmingen kan verlenen of intrekken is een productbeheerder. Andere beheerderrollen die toestemmingen kunnen beheren zijn systeembeheerders (geen beperkingen). Zie het artikel van het Centrum van de Hulp van Adobe op [ administratieve rollen ](https://helpx.adobe.com/nl/enterprise/using/admin-roles.html) voor meer informatie.
+Om toegangsbeheer voor Experience Platform te configureren, moet u systeem- of productbeheerdersrechten hebben voor een organisatie die een Experience Platform-product heeft. De minimumrol die toestemmingen kan verlenen of intrekken is een productbeheerder. Andere beheerderrollen die toestemmingen kunnen beheren zijn systeembeheerders (geen beperkingen). Zie het artikel van het Centrum van de Hulp van Adobe op [ administratieve rollen ](https://helpx.adobe.com/enterprise/using/admin-roles.html) voor meer informatie.
 
 >[!NOTE]
 >
@@ -131,7 +131,7 @@ In de volgende tabel worden de beschikbare machtigingen voor Experience Platform
 | [!DNL Adobe Mix Modeler] | [!UICONTROL View Adobe Mix Modeler Models Configurations] | Alleen-lezen toegang tot modelconfiguraties. |
 | [!DNL Adobe Mix Modeler] | [!UICONTROL Manage Adobe Mix Modeler Models Plans Configurations] | De capaciteit om planconfiguraties te bekijken en te wijzigen. |
 | [!DNL Adobe Mix Modeler] | [!UICONTROL View Adobe Mix Modeler Models Plans Configurations] | Alleen-lezen toegang tot planningsconfiguraties. |
-| [!DNL AI Assistant] | [!UICONTROL Enable AI Assistant] | Mogelijkheid om de [[!DNL [AI assistant]]](../ai-assistant/access.md) vragen te stellen. |
+| [!DNL AI Assistant] | [!UICONTROL Enable AI Assistant] | Mogelijkheid om de [!DNL [AI assistant]](../ai-assistant/access.md) vragen te stellen. |
 | [!DNL AI Assistant] | [!UICONTROL View Operational Insights] | Toegang om reacties op [ operationele inzichten ](../ai-assistant/home.md##operational-insights) vragen te verkrijgen. |
 | [!DNL AI Assistant] | [!UICONTROL Generate Content] | Gebruikers toestaan inhoud te genereren met de [!DNL AI Assistant] . |
 | [!DNL AI Assistant] | [!UICONTROL Manage Brand Kit] | Laat gebruikers toe om merkrichtlijnen tot stand te brengen gebruikend [!DNL AI Assistant]. |
@@ -193,10 +193,11 @@ In de volgende tabel worden de beschikbare machtigingen voor Experience Platform
 | [!DNL Customer Managed Keys] | [!UICONTROL Manage Customer Managed Keys] | Toegang om door klanten beheerde sleutels te bekijken en te vormen. |
 | [!DNL Dashboards] | [!UICONTROL View License Usage Dashboard] | Alleen-lezen toegang om het dashboard voor het licentiegebruik weer te geven. |
 | [!DNL Dashboards] | [!UICONTROL Manage Standard Dashboards] | Voeg douanekenmerken toe die nog niet in het gegevenspakhuis zijn. |
-| [!DNL Dashboards] | [!UICONTROL View Standard Dashboards] | Alleen-lezen toegang om het dashboard voor het licentiegebruik weer te geven. |
+| [!DNL Dashboards] | [!UICONTROL View Standard Dashboards] | Alleen-lezen toegang tot de dashboards van profielen, doelen en segmenten. Biedt ook toegang tot dashboards in de linkernavigatie en het tabblad Dashboards voorraad en integratie. |
 | [!DNL Dashboards] | [!UICONTROL Manage Custom Dashboards] | Toegang tot het maken of bewerken van een dashboard. |
 | [!DNL Dashboards] | [!UICONTROL View Custom Dashboards] | Alleen-lezen toegang tot door de gebruiker gedefinieerde dashboards. |
 | [!DNL Dashboards] | [!UICONTROL Manage Report Schedules] | Mogelijkheid om planningen te maken. |
+| [!DNL Dashboards] | [!UICONTROL Export Dashboard Data] | Controls a user&#39;s ability to export tabular data from query pro mode dashboards. |
 | [!DNL Data Collection] | [!UICONTROL Manage Datastreams] | Toegang tot het lezen, maken en bewerken van gegevensstromen. |
 | [!DNL Data Collection] | [!UICONTROL View Datastreams] | Alleen-lezen toegang tot gegevensstreams. |
 | [!DNL Data Governance] | [!UICONTROL Manage Usage Labels] | Toegang tot het lezen, maken en verwijderen van gebruikslabels. |

@@ -2,34 +2,64 @@
 title: Meer weergeven
 description: Meer informatie over de verschillende weergaveopties voor de door SQL geanalyseerde gegevens. Vanuit het aangepaste dashboard kunt u de resultaten van uw analyse met tabs bekijken of de verwerkte gegevens in CSV-indeling downloaden.
 exl-id: f57d85cf-dbd2-415c-bf01-8faa49871377
-source-git-commit: ddf886052aedc025ff125c03ab63877cb049583d
+source-git-commit: 87675263b817a2026741d6bdd094010831d6ea28
 workflow-type: tm+mt
-source-wordcount: '527'
+source-wordcount: '749'
 ht-degree: 0%
 
 ---
 
 # Meer weergeven {#view-more}
 
-Zodra u a [ douaneinzicht ](./overview.md) met [ vraag pro wijze ](./overview.md#query-pro-mode) hebt gecreeerd, kunt u uw grafiekgegevens in verschillende formaten bekijken. U kunt een tabelvorm van de resultaten weergeven of de gegevens downloaden als een CSV-bestand om te bekijken in een spreadsheet.
+Na het creëren van a [ douane insight ](./overview.md) gebruikend [ vraag pro wijze ](./overview.md#query-pro-mode), kunt u de grafiekgegevens in veelvoudige formaten bekijken. U kunt een tabelvorm van de resultaten weergeven of de gegevens exporteren in CSV-indeling of via e-mail.
 
 ## Resultaten in tabelvorm {#tabulated-results}
 
-Voor elke grafiek die gebruikend de vraag pro wijze door SQL wordt ontworpen, kunt u de lussenresultaten van uw analyse binnen de Experience Platform UI bekijken.
+Voor elke grafiek die met de vraag pro wijze door SQL wordt ontworpen, kunt u de lussenresultaten van uw analyse binnen Experience Platform UI bekijken.
 
 Selecteer in het aangepaste dashboard de ellipsen (`...`) op een willekeurige widget voor toegang tot de opties [!UICONTROL View more] en [!UICONTROL View SQL] .
 
-![ een douanedashboard van A met de ellipsen van een inzicht dropdown menu en de Mening meer en benadrukte SQL opties van de Mening.](../images/sql-insights-query-pro-mode/ellipses-dropdown.png)
+![ een douanedashboard van A met een insight ellipsen dropdown menu en de Mening meer en benadrukte SQL opties van de Mening.](../images/sql-insights-query-pro-mode/ellipses-dropdown.png)
 
-## CSV downloaden {#download-csv}
+## Exporteren {#export}
 
-Met de functie [!UICONTROL View more] worden de specifieke gegevenspunten voor het diagram in tabelvorm weergegeven. Als u het delen en bewerken van gegevens wilt vereenvoudigen, kunt u de verwerkte gegevens in CSV-indeling downloaden vanuit dit dialoogvenster. Selecteer **[!UICONTROL Download CSV]** om uw gegevens te downloaden.
+Exporteer de tabelgegevens vanuit het dialoogvenster **[!UICONTROL View more]** door een CSV-bestand rechtstreeks te downloaden of door later een koppeling naar uw e-mail te verzenden voor een beveiligde download.
+
+>[!IMPORTANT]
+>
+>Voor toegang tot de exportopties moet uw beheerder u de machtiging **[!UICONTROL Export Dashboard Data]** verlenen. Neem contact op met de beheerder als de knop [!UICONTROL Export] grijs wordt weergegeven. Zie het [ overzicht van de Toegangscontrole ](../../access-control/home.md) voor meer informatie over dashboardtoestemmingen.
+
+>[!NOTE]
+>
+>Voor het exporteren met alleen visualisatie is de machtiging [!UICONTROL Export Dashboard Data] niet vereist. Bijvoorbeeld, het uitvoeren van verwerkte gegevens van uw [ inzichten van het douanedashboard in formaat PDF ](./export-pdf.md), of van [ de dashboardinzichten van het Platform UI ](../download.md).
+
+### CSV downloaden {#download-csv}
+
+Selecteer **[!UICONTROL Export]** in het dialoogvenster [!UICONTROL View more] en kies vervolgens **[!UICONTROL Download CSV]** om de grafiekgegevens in CSV-indeling te downloaden.
 
 >[!NOTE]
 >
 >Het downloaden CSV is beperkt tot de eerste 500 records.
 
-![ dialoog van A die een voorproef van uw inzicht en in tabelvorm resultaten van uw SQL toont die het inzicht produceerde.](../images/sql-insights-query-pro-mode/view-more-download-csv.png)
+![ dialoog die van A een voorproef van uw insight en de in tabelvorm gegeven resultaten van uw SQL toont die insight produceerde.](../images/sql-insights-query-pro-mode/view-more-download-csv.png)
+
+### Verzenden als e-mail {#send-as-email}
+
+Als u meer dan 500 records wilt exporteren, selecteert u **[!UICONTROL Export]** en kiest u **[!UICONTROL Send as email]** in het dialoogvenster [!UICONTROL Export file] . Met deze optie wordt veilig een downloadkoppeling naar uw aan Adobe gekoppeld e-mailadres verzonden. De naam en het geregistreerde Adobe-e-mailadres van de ontvanger worden weergegeven in de sectie [!UICONTROL Recipients] van het dialoogvenster.
+
+![ de Mening meer grafiekgegevens met de Uitvoer en verzendt als e-mailopties benadrukte.](../images/sql-insights-query-pro-mode/send-as-email.png)
+
+Nadat u [!UICONTROL Send as email] hebt geselecteerd, genereert Adobe een rapport en verzendt het een e-mail naar het geregistreerde Adobe-adres. Het e-mailbericht bevat een beveiligde downloadkoppeling waarvoor verificatie via Experience Platform is vereist.
+
+>[!NOTE]
+>
+>U moet het rapport downloaden binnen 24 uur na het genereren van de koppeling; daarna verloopt het bestand.
+
+![ UI van Experience Platform met de succesvolle dialoog van de generatie van het Dossier getoond die de het rapportoptie van de Download bevatten.](../images/sql-insights-query-pro-mode/download-report.png)
+
+Om uw gegevens te beschermen, bewaart Adobe veilig uitgevoerde dossiers eerder dan het verzenden van hen als gehechtheid. Toegang vereist verificatie via de gebruikersinterface van Experience Platform en Adobe controleert of het bestand alleen door de beoogde ontvanger is gedownload.
+
+Deze methode staat u toe om **tot 10.000 verslagen** uit te voeren en verzekert veilige toegang tot gevoelige gegevens.
 
 ## Sorteren op kolom {#sort-column}
 
@@ -65,6 +95,6 @@ U kunt maximaal 500 records per pagina zien. Als u door de records wilt navigere
 
 ## Volgende stappen
 
-Nadat u dit document hebt gelezen, weet u nu hoe u de tabellarische resultaten van de SQL-analyse van uw aangepaste diagram kunt bekijken en de gegevens als een CSV-bestand kunt downloaden. Zie het meningSQL document leren hoe te [ SQL achter uw douaneinzichten ](./view-sql.md) bekijken.
+Nadat u dit document hebt gelezen, weet u nu hoe u de resultaten met tabs kunt weergeven die afkomstig zijn van de SQL-analyse van uw aangepaste diagram en hoe u die gegevens veilig kunt exporteren. Zie het meningSQL document leren hoe te [ SQL achter uw douaneinzichten ](./view-sql.md) bekijken.
 
 U kunt ook leren hoe te om grafieken van bestaande gegevensmodellen in Adobe Experience Platform UI met de [ geleide gids van de ontwerpwijze ](../standard-dashboards.md) te produceren.
