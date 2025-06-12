@@ -3,10 +3,10 @@ title: Opmerkingen bij de release Experience Platform
 description: Een voorvertoning van de meest recente releaseopmerkingen voor Adobe Experience Platform.
 hide: true
 hidefromtoc: true
-source-git-commit: c34c41d384fbc4f309dffa8bba97a0f6f3468efc
+source-git-commit: c716bac1db556fe7a47462e38ee64d7b46bbefcc
 workflow-type: tm+mt
-source-wordcount: '1465'
-ht-degree: 41%
+source-wordcount: '1284'
+ht-degree: 44%
 
 ---
 
@@ -21,10 +21,10 @@ ht-degree: 41%
 >
 >Raadpleeg de volgende documentatie voor aanvullende informatie voor andere Adobe Experience Platform-toepassingen:
 >
->- [Adobe Journey Optimizer](https://experienceleague.adobe.com/nl/docs/journey-optimizer/using/whats-new/release-notes)
->- [Adobe Journey Optimizer B2B](https://experienceleague.adobe.com/nl/docs/journey-optimizer-b2b/user/release-notes)
->- [Customer Journey Analytics](https://experienceleague.adobe.com/nl/docs/analytics-platform/using/releases/latest)
->- [Samenstelling van Federated-doelgroep](https://experienceleague.adobe.com/nl/docs/federated-audience-composition/using/release-notes)
+>- [Adobe Journey Optimizer](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/whats-new/release-notes)
+>- [Adobe Journey Optimizer B2B](https://experienceleague.adobe.com/en/docs/journey-optimizer-b2b/user/release-notes)
+>- [Customer Journey Analytics](https://experienceleague.adobe.com/en/docs/analytics-platform/using/releases/pre-release-notes)
+>- [Samenstelling van Federated-doelgroep](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/e-release-notes)
 >- [Real-Time CDP Collaboration](https://experienceleague.adobe.com/nl/docs/real-time-cdp-collaboration/using/latest)
 
 **Releasedatum: donderdag 18 juni 2025**
@@ -38,7 +38,6 @@ Nieuwe functies en updates voor bestaande functies in Adobe Experience Platform:
 - [Bestemmingen](#destinations)
 - [Samenstelling van Federated-doelgroep](#fac)
 - [Privacyservice](#privacy-service)
-- [Query-service](#query-service)
 - [Sandboxes](#sandboxes)
 - [Bronnen](#sources)
 
@@ -120,9 +119,9 @@ Samenstelling van Federated-doelgroep stelt ondernemingen in staat om gegevens s
 
 | Nieuwe functie | Beschrijving |
 | ----------- | ----------- |
-| Gereedheid van HIPAA | Federated Audience Composition is nu HIPAA-compatibel. Voor meer informatie over de privacy en de veiligheidsmaatregelen van de Samenstelling van de Federatieve Publiek, lees de [ privacy en de veiligheid in het Federated overzicht van de Samenstelling van de Publiek ](https://experienceleague.adobe.com/nl/docs/federated-audience-composition/using/start/privacy-security). Voor meer informatie over de naleving van HIPAA voor de producten van Experience Platform in het algemeen, lees [ HIPAA en het overzicht van de Producten en van de Diensten van Adobe ](https://www.adobe.com/trust/compliance/hipaa-ready.html). |
+| Gereedheid van HIPAA | Federated Audience Composition is nu HIPAA-compatibel. Voor meer informatie over de privacy en de veiligheidsmaatregelen van de Samenstelling van de Federatieve Publiek, lees de [ privacy en de veiligheid in het Federated overzicht van de Samenstelling van de Publiek ](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/start/privacy-security). Voor meer informatie over de naleving van HIPAA voor de producten van Experience Platform in het algemeen, lees [ HIPAA en het overzicht van de Producten en van de Diensten van Adobe ](https://www.adobe.com/trust/compliance/hipaa-ready.html). |
 
-Raadpleeg voor meer informatie de [documentatie over Samenstelling van Federated-doelgroep](https://experienceleague.adobe.com/nl/docs/federated-audience-composition/using/home).
+Raadpleeg voor meer informatie de [documentatie over Samenstelling van Federated-doelgroep](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/home).
 
 ## [!DNL Privacy Service] {#privacy}
 
@@ -132,30 +131,9 @@ Verschillende wettelijke en organisatorische voorschriften geven gebruikers het 
 
 | Functie | Beschrijving |
 |--- | ---|
-| Ondersteuning voor Tennessee- en Minnesota Privacy-wetten | Privacy Service ondersteunt nu de Tennessee Information Protection Act (`tipa_tn_usa`) en de Minnesota Consumer Data Privacy Act (`mcdpa_mn_usa` ). U kunt toegangs en schrappingsverzoeken in overeenstemming met deze nieuwe staat-vlakke verordeningen verwerken. Zie het [ overzicht van Verordeningen ](https://experienceleague.adobe.com/nl/docs/experience-platform/privacy/regulations/overview) voor meer details. |
+| Ondersteuning voor Tennessee- en Minnesota Privacy-wetten | Privacy Service ondersteunt nu de Tennessee Information Protection Act (`tipa_tn_usa`) en de Minnesota Consumer Data Privacy Act (`mcdpa_mn_usa` ). U kunt toegangs en schrappingsverzoeken in overeenstemming met deze nieuwe staat-vlakke verordeningen verwerken. Zie het [ overzicht van Verordeningen ](https://experienceleague.adobe.com/en/docs/experience-platform/privacy/regulations/overview) voor meer details. |
 
 Zie het [overzicht van de Privacy Service](../privacy-service/home.md) voor meer informatie over de service.
-
-## Query-service {#query-service}
-
-Voer query&#39;s uit op gegevens in het Adobe Experience Platform-data lake met behulp van standaard SQL met Query Service. Combineer naadloos datasets en produceer nieuwe degenen van uw vraagresultaten aan macht rapportering, laat de werkschema&#39;s van de gegevenswetenschap toe, of vergemakkelijkt opname in het Profiel van de Klant in real time.
-
-**Nieuwe functies**
-
-| Functie | Beschrijving |
-| --- | --- |
-| Geavanceerde statistische functies | **de schetsdoorsnede van de Theta**: De nieuwe functie voor gegevensverwerkingsreeks snijpunten die de eta schetsen voor benaderend verschillend tellen en vastgestelde verrichtingen gebruiken. **KLL histogrammen**: Verbeterde histogrammogelijkheden die KLL (Kth kleinst, L grootste, Grote punten) schetsen gebruiken voor kwantitatieve raming en verdelingsanalyse. Deze functies zijn beschikbaar voor Distiller-klanten van Data. |
-| SQL-sjabloonbibliotheek | Er is nu een uitgebreide bibliotheek met SQL-sjablonen voor algemene gebruiksgevallen beschikbaar. Deze functie versnelt de ontwikkeling van query&#39;s door sjablonen voor best practices voor frequente analytische patronen te bieden, waardoor klanten van Data Distiller efficiënter complexe analyses kunnen implementeren. |
-
-**Bijgewerkte functies**
-
-| Functie | Beschrijving |
-| --- | --- |
-| Voorbeeld van RFM-modellen | Een uitgebreid voorbeeld van Recency, Frequency, Monetary (RFM) modellering voor klanten van Data Distiller. Dit omvat gedetailleerde documentatie en implementatiegidsen voor klantensegmentatie en waardeanalyse gebruikend technieken RFM. |
-
-{style="table-layout:auto"}
-
-Voor meer informatie over [!DNL Query Service] raadpleegt u het [[!DNL Query Service] overzicht](../query-service/home.md).
 
 ## Sandboxes {#sandboxes}
 
