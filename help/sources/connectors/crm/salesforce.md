@@ -2,9 +2,9 @@
 title: Overzicht Salesforce Source Connector
 description: Leer hoe u Salesforce met Adobe Experience Platform kunt verbinden via API's of de gebruikersinterface.
 exl-id: 597778ad-3cf8-467c-ad5b-e2850967fdeb
-source-git-commit: 1665c15c39667521bb74cca216694cf6b46bf26b
+source-git-commit: d8d9303e358c66c4cd891d6bf59a801c09a95f8e
 workflow-type: tm+mt
-source-wordcount: '1599'
+source-wordcount: '1635'
 ht-degree: 0%
 
 ---
@@ -14,6 +14,10 @@ ht-degree: 0%
 >[!IMPORTANT]
 >
 >U kunt nu de [!DNL Salesforce] -bron gebruiken wanneer u Adobe Experience Platform uitvoert op Amazon Web Services (AWS). Experience Platform die op AWS wordt uitgevoerd, is momenteel beschikbaar voor een beperkt aantal klanten. Meer over de gesteunde infrastructuur van Experience Platform leren, zie het [ multi-wolkenoverzicht van Experience Platform ](../../../landing/multi-cloud.md).
+
+>[!WARNING]
+>
+>Basisverificatie voor de [!DNL Salesforce] -bron wordt in januari 2026 afgekeurd. U moet naar OAuth 2 Client Credential-verificatie gaan om de bron te kunnen blijven gebruiken en gegevens van uw [!DNL Salesforce] -account te kunnen invoeren naar Experience Platform.
 
 Adobe Experience Platform staat toe dat gegevens uit externe bronnen worden opgenomen en biedt u de mogelijkheid om inkomende gegevens te structureren, labelen en verbeteren met behulp van Experience Platform-services. U kunt gegevens invoeren uit verschillende bronnen, zoals Adobe-toepassingen, opslag in de cloud, databases en vele andere.
 
@@ -249,7 +253,7 @@ De volgende tabel bevat voorbeeldwaarden en aanvullende informatie over het vull
 | `TENANT_ID` | Een id die wordt gebruikt om ervoor te zorgen dat de bronnen die u maakt, correct worden genoemd en zich binnen uw organisatie bevinden. | `b2bcdpproductiontest` |
 | `PLATFORM_URL` | Het URL-eindpunt waarnaar u API-aanroepen maakt. Deze waarde is vast en wordt altijd ingesteld op: `http://platform.adobe.io/` . | `http://platform.adobe.io/` |
 | `munchkinId` | De unieke id voor uw [!DNL Marketo] -account. Zie het leerprogramma op [ voor authentiek verklaren uw  [!DNL Marketo]  instantie ](../adobe-applications/marketo/marketo-auth.md) voor informatie over hoe te om uw `munchkinId` terug te winnen. | `123-ABC-456` |
-| `sfdc_org_id` | De organisatie-id voor uw [!DNL Salesforce] -account. Zie de volgende [[!DNL Salesforce]  gids ](https://help.salesforce.com/articleView?id=000325251&amp;type=1&amp;mode=1) voor meer informatie bij het verwerven van uw [!DNL Salesforce] organisatie identiteitskaart | `00D4W000000FgYJUA0` |
+| `sfdc_org_id` | De organisatie-id voor uw [!DNL Salesforce] -account. Zie de volgende [[!DNL Salesforce]  gids ](https://help.salesforce.com/articleView?id=000325251&type=1&mode=1) voor meer informatie bij het verwerven van uw [!DNL Salesforce] organisatie identiteitskaart | `00D4W000000FgYJUA0` |
 | `has_abm` | Een booleaanse waarde die aangeeft of u bent geabonneerd op [!DNL Marketo Account-Based Marketing] . | `false` |
 | `has_msi` | Een booleaanse waarde die aangeeft of u bent geabonneerd op [!DNL Marketo Sales Insight] . | `false` |
 

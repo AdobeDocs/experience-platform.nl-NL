@@ -4,9 +4,9 @@ type: Tutorial
 description: Leer hoe u een Snowflake-bronverbinding maakt met de interface van Adobe Experience Platform.
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: fb2038b9-7f27-4818-b5de-cc8072122127
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: d8d9303e358c66c4cd891d6bf59a801c09a95f8e
 workflow-type: tm+mt
-source-wordcount: '1126'
+source-wordcount: '1183'
 ht-degree: 1%
 
 ---
@@ -20,6 +20,10 @@ ht-degree: 1%
 Lees deze handleiding voor informatie over hoe u uw [!DNL Snowflake] -account kunt verbinden met Adobe Experience Platform via de gebruikersinterface.
 
 ## Aan de slag
+
+>[!WARNING]
+>
+>De basisauthentificatie (of de authentificatie van de rekeningssleutel) voor [!DNL Snowflake] bron zal op November 2025 worden afgekeurd. U moet naar op sleutel-paar gebaseerde authentificatie bewegen om de bron te blijven gebruiken en gegevens van uw gegevensbestand in te voeren aan Experience Platform. Voor meer informatie over de veroudering, lees de [[!DNL Snowflake]  beste praktijkgids bij het verlichten van de risico&#39;s van credentieel compromis ](https://www.snowflake.com/en/resources/white-paper/best-practices-to-mitigate-the-risk-of-credential-compromise/).
 
 Deze zelfstudie vereist een goed begrip van de volgende onderdelen van Experience Platform:
 

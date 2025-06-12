@@ -3,9 +3,9 @@ title: Snowflake verbinden met Experience Platform via de Flow Service API
 description: Leer hoe u Adobe Experience Platform met Snowflake verbindt via de Flow Service API.
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 0ef34d30-7b4c-43f5-8e2e-cde05da05aa5
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: d8d9303e358c66c4cd891d6bf59a801c09a95f8e
 workflow-type: tm+mt
-source-wordcount: '1194'
+source-wordcount: '1251'
 ht-degree: 1%
 
 ---
@@ -36,6 +36,10 @@ In de volgende sectie vindt u aanvullende informatie die u moet weten als u verb
 Lees de onderstaande stappen voor informatie over hoe u uw [!DNL Snowflake] -bron kunt verbinden met Experience Platform on Azure.
 
 ### Vereiste referenties verzamelen
+
+>[!WARNING]
+>
+>De basisauthentificatie (of de authentificatie van de rekeningssleutel) voor [!DNL Snowflake] bron zal op November 2025 worden afgekeurd. U moet naar op sleutel-paar gebaseerde authentificatie bewegen om de bron te blijven gebruiken en gegevens van uw gegevensbestand in te voeren aan Experience Platform. Voor meer informatie over de veroudering, lees de [[!DNL Snowflake]  beste praktijkgids bij het verlichten van de risico&#39;s van credentieel compromis ](https://www.snowflake.com/en/resources/white-paper/best-practices-to-mitigate-the-risk-of-credential-compromise/).
 
 U moet waarden opgeven voor de volgende referentie-eigenschappen om de [!DNL Snowflake] -bron te verifiëren.
 

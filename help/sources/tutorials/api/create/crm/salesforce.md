@@ -2,9 +2,9 @@
 title: Salesforce verbinden met Experience Platform met behulp van de Flow Service API
 description: Leer hoe u Adobe Experience Platform verbindt met een Salesforce-account met behulp van de Flow Service API.
 exl-id: 43dd9ee5-4b87-4c8a-ac76-01b83c1226f6
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: eab6303a3b420d4622185316922d242a4ce8a12d
 workflow-type: tm+mt
-source-wordcount: '1082'
+source-wordcount: '1118'
 ht-degree: 0%
 
 ---
@@ -29,6 +29,10 @@ Voor informatie over hoe te om vraag aan Experience Platform APIs met succes te 
 Lees de onderstaande stappen voor informatie over hoe u de [!DNL Salesforce] -bron kunt verbinden met Experience Platform op [!DNL Azure] .
 
 ### Vereiste referenties verzamelen
+
+>[!WARNING]
+>
+>Basisverificatie voor de [!DNL Salesforce] -bron wordt in januari 2026 afgekeurd. U moet naar OAuth 2 Client Credential-verificatie gaan om de bron te kunnen blijven gebruiken en gegevens van uw [!DNL Salesforce] -account te kunnen invoeren naar Experience Platform.
 
 De [!DNL Salesforce] -bron ondersteunt basisverificatie en OAuth2 Client Credential.
 
@@ -61,7 +65,7 @@ Als u uw [!DNL Salesforce] -account wilt verbinden met [!DNL Flow Service] via O
 | `apiVersion` | De REST API-versie van de instantie [!DNL Salesforce] die u gebruikt. De waarde voor de API-versie moet met een decimaal worden opgemaakt. Als u bijvoorbeeld API-versie `52` gebruikt, moet u de waarde invoeren als `52.0` . Als dit veld niet wordt ingevuld, gebruikt Experience Platform automatisch de meest recente beschikbare versie. Deze waarde is verplicht voor OAuth2 Client Credential-verificatie. |
 | `connectionSpec.id` | De verbindingsspecificatie keert de schakelaareigenschappen van een bron, met inbegrip van authentificatiespecificaties met betrekking tot het creëren van de basis en bronverbindingen terug. De verbindingsspecificatie-id voor [!DNL Salesforce] is: `cfc0fee1-7dc0-40ef-b73e-d8b134c436f5` . |
 
-Voor meer informatie bij het gebruiken van OAuth voor [!DNL Salesforce], lees de [[!DNL Salesforce]  gids over de Stroom van de Vergunning OAuth ](https://help.salesforce.com/s/articleView?id=sf.remoteaccess_oauth_flows.htm&amp;type=5).
+Voor meer informatie bij het gebruiken van OAuth voor [!DNL Salesforce], lees de [[!DNL Salesforce]  gids over de Stroom van de Vergunning OAuth ](https://help.salesforce.com/s/articleView?id=sf.remoteaccess_oauth_flows.htm&type=5).
 
 >[!ENDTABS]
 
