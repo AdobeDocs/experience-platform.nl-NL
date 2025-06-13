@@ -4,9 +4,9 @@ description: Leer over de verschillende implementatietypen die u het gebruiken v
 hide: true
 hidefromtoc: true
 exl-id: fd0afb0b-a368-45b9-bcdc-f2f3b7508cee
-source-git-commit: b65a5e8e9727da47729191e56c1a32838ec2c6c4
+source-git-commit: f793dbda0520366b3ee69b3aa0f912b005957561
 workflow-type: tm+mt
-source-wordcount: '1934'
+source-wordcount: '1999'
 ht-degree: 1%
 
 ---
@@ -43,6 +43,10 @@ Voordat u gaat induiken in het volgende document, moet u zich vertrouwd maken me
 
 ## Basisimplementaties {#basic-implementations}
 
+>[!TIP]
+>
+>U moet een aangepaste apparaatoverschrijdende naamruimte voor &#39;CRMID&#39; maken om de onderstaande basisimplementatieoefeningen te voltooien.
+
 Lees deze sectie voor basisimplementaties van [!DNL Identity Graph Linking Rules].
 
 ### Hoofdlettergebruik: eenvoudige implementatie die gebruikmaakt van één naamruimte tussen apparaten
@@ -72,15 +76,11 @@ Vorm de volgende montages in de interface van de Simulatie van de Grafiek alvore
 
 **Gesimuleerde grafiek**
 
-+++Selecteren om gesimuleerde grafiek weer te geven
-
-In deze grafiek wordt John (de eindgebruiker) vertegenwoordigd door CRMID. {ECID: 123} vertegenwoordigt de webbrowser die John op zijn computer heeft gebruikt om uw e-commerceplatform te bezoeken. {ECID: 999} vertegenwoordigt de browser die hij op zijn [!DNL iPhone] en {IDFA: a-b-c} representeert. [!DNL iPhone]
+In deze grafiek wordt John (de eindgebruiker) vertegenwoordigd door CRMID. `{ECID: 123}` vertegenwoordigt Webbrowser die John op zijn personal computer gebruikte om uw e-commerceplatform te bezoeken. `{ECID: 999}` vertegenwoordigt de browser die hij op zijn [!DNL iPhone] en `{IDFA: a-b-c}` gebruikt vertegenwoordigt zijn [!DNL iPhone].
 
 ![ een eenvoudige implementatie met één dwars-apparaat namespace.](../images/configs/basic/simple-implementation.png)
 
-+++
-
-### Uitoefening
+**Uitoefening**
 
 Simuleer de volgende configuratie in de Simulatie van de Grafiek. U kunt uw eigen gebeurtenissen maken of kopiëren en plakken met de tekstmodus.
 
@@ -99,18 +99,14 @@ CRMID: Jane, ECID: 111
 
 **Gesimuleerde grafiek**
 
-+++Selecteren om gesimuleerde grafiek weer te geven
-
 In deze grafiek worden John en Jane vertegenwoordigd door hun eigen respectieve CRMID&#39;s:
 
-* {CRMID: John}
-* {CRMID: Jane}
+* `{CRMID: John}`
+* `{CRMID: Jane}`
 
-De browser op de bureaubladcomputer die beide gebruiken om uw e-commerceplatform te bezoeken, wordt aangeduid met {ECID: 111} . In dit grafiekscenario is Jane de laatst geverifieerde eindgebruiker en daarom wordt de koppeling tussen {ECID: 111} en {CRMID: John} verwijderd.
+De browser op de bureaubladcomputer die beide gebruiken om uw e-commerceplatform te bezoeken, wordt aangeduid met `{ECID: 111}` . In dit grafiekscenario is Jane de laatst geverifieerde eindgebruiker en daarom wordt de koppeling tussen `{ECID: 111}` en `{CRMID: John}` verwijderd.
 
 ![ A gesimuleerde grafiek voor een gedeeld apparaat (PC).](../images/configs/basic/shared-device-pc.png)
-
-+++
 
 >[!TAB  Gedeeld apparaat (mobiel) ]
 
@@ -125,13 +121,9 @@ CRMID: Jane, ECID: 111, IDFA: a-b-c
 
 **Gesimuleerde grafiek**
 
-+++Selecteren om gesimuleerde grafiek weer te geven
-
-In deze grafiek worden John en Jane allebei vertegenwoordigd door hun eigen respectieve CRMIDs. De browser die ze gebruiken, wordt vertegenwoordigd door {ECID: 111} en de [!DNL iPad] die ze delen, wordt vertegenwoordigd door {IDFA: a-b-c} . In dit grafiekscenario is Jane de laatst geverifieerde eindgebruiker en daarom worden de koppelingen van {ECID: 111} en {IDFA: a-b-c} to {CRMID: John} verwijderd.
+In deze grafiek worden John en Jane allebei vertegenwoordigd door hun eigen respectieve CRMIDs. De browser die ze gebruiken, wordt aangeduid met `{ECID: 111}` en de [!DNL iPad] die ze delen, wordt aangeduid met `{IDFA: a-b-c}` . In dit grafiekscenario is Jane de laatst geverifieerde eindgebruiker en daarom worden de koppelingen van `{ECID: 111}` en `{IDFA: a-b-c}` naar `{CRMID: John}` verwijderd.
 
 ![ A gesimuleerde grafiek voor een gedeeld apparaat (mobiel).](../images/configs/basic/shared-device-mobile.png)
-
-+++
 
 >[!ENDTABS]
 
@@ -145,9 +137,9 @@ Lees deze sectie voor tussentijdse implementaties van [!DNL Identity Graph Linki
 >
 >* A **niet-unieke identiteit** is een identiteit verbonden aan een niet-unieke namespace.
 >
->* In de onderstaande voorbeelden is `CChash` een aangepaste naamruimte die een gehasht creditcardnummer vertegenwoordigt.
+>* U moet aangepaste apparaatnaamruimten voor &quot;CRMID&quot; en &quot;Chash&quot; maken om de onderstaande tussentijdse implementatieoefeningen te voltooien. &quot;CCHash&quot; is een aangepaste naamruimte die een gehasht creditcardnummer vertegenwoordigt.
 
-Je bent een gegevensarchitect die werkt voor een commerciële bank die creditcards uitgeeft. Uw marketingteam heeft aangegeven dat zij de transactiegeschiedenis van creditcardtransacties in het verleden aan een profiel willen toevoegen. Deze identiteitsgrafiek kan er als volgt uitzien.
+Stel je voor dat je een gegevensarchitect bent die werkt voor een commerciële bank die creditcards uitgeeft. Uw marketingteam heeft aangegeven dat zij de transactiegeschiedenis van creditcardtransacties in het verleden aan een profiel willen toevoegen. Deze identiteitsgrafiek kan er als volgt uitzien.
 
 **wijze van de Tekst:**
 
@@ -171,21 +163,32 @@ Vorm de volgende montages in de interface van de Simulatie van de Grafiek alvore
 
 **Gesimuleerde grafiek**
 
-+++Selecteren om gesimuleerde grafiek weer te geven
-
 ![ Beeld van de gesimuleerde grafiek ](../images/configs/basic/simple-implementation-non-unique.png)
-
-+++
 
 Er zijn geen garanties dat deze creditcardnummers of andere niet-unieke naamruimten altijd aan één eindgebruiker worden gekoppeld. Twee eindgebruikers kunnen zich registreren bij dezelfde creditcard. Er kunnen niet-unieke plaatsaanduidingswaarden zijn die ten onrechte zijn ingevoerd. Eenvoudig gezegd, er is geen garantie dat niet-unieke naamruimten geen grafiek doen samenvouwen.
 
 Om deze kwestie op te lossen, verwijdert de Dienst van de Identiteit de oudste verbindingen en behoudt de meest recente verbindingen. Zo voorkomt u dat er maar één CRMID in een grafiek voorkomt.
 
-### Uitoefening
+**Uitoefening**
 
 Simuleer de volgende configuraties in de Simulatie van de Grafiek. U kunt uw eigen gebeurtenissen maken of kopiëren en plakken met de tekstmodus.
 
 >[!BEGINTABS]
+
+>[!TAB  Gedeeld apparaat ]
+
+**wijze van de Tekst:**
+
+```json
+CRMID: John, CChash: 1111-2222
+CRMID: Jane, CChash: 3333-4444
+CRMID: John, ECID: 123
+CRMID: Jane, ECID:123
+```
+
+**Gesimuleerde grafiek**
+
+![ een middengedeelde apparatengrafiek met knoeiboel.](../images/configs/intermediate/intermediate-shared-device.png)
 
 >[!TAB  twee eind-gebruikers met de zelfde creditcard ]
 
@@ -202,11 +205,7 @@ CRMID: Jane, ECID:456
 
 **Gesimuleerde grafiek**
 
-+++Selecteren om gesimuleerde grafiek weer te geven
-
 ![ een grafiek waar twee eind-gebruikers omhoog met de zelfde creditcard ondertekenen.](../images/configs/intermediate/graph-with-same-credit-card.png)
-
-+++
 
 >[!TAB  Ongeldig creditcardaantal ]
 
@@ -223,17 +222,17 @@ CRMID: Jill, CChash: undefined
 
 **Gesimuleerde grafiek**
 
-+++Selecteren om gesimuleerde grafiek weer te geven
-
 ![ een grafiek waar het hakken in een ongeldige creditcard resulteert.](../images/configs/intermediate/graph-with-invalid-credit-card.png)
-
-+++
 
 >[!ENDTABS]
 
 ### Hoofdlettergebruik: uw gegevens bevatten zowel gehashte als niet-gehashte CRMID&#39;s
 
-U neemt zowel een niet-gehakte (offline) CRMID als een gehakt (online) CRMID op. Zij verwachten een direct verband tussen zowel unhashed als hashed CRMIDs. Wanneer een eindgebruiker met een voor authentiek verklaarde rekening doorbladert, wordt gehakt CRMID verzonden samen met apparatenidentiteitskaart (die op de Dienst van de Identiteit als ECID wordt vertegenwoordigd).
+>[!TIP]
+>
+>U moet aangepaste apparaatnaamruimten voor &quot;CRMID&quot; en &quot;CRMIDhash&quot; maken om de onderstaande tussentijdse implementatieoefeningen te voltooien.
+
+U gebruikt zowel een niet-gehakte (offline) CRMID als een gehashte (online) CRMID. De verwachting is dat er een direct verband tussen zowel unhashed als hashed CRMIDs is. Wanneer een eindgebruiker met een voor authentiek verklaarde rekening doorbladert, wordt gehakt CRMID verzonden samen met apparatenidentiteitskaart (die op de Dienst van de Identiteit als ECID wordt vertegenwoordigd).
 
 **de configuratie van het Algoritme (de Montages van de Identiteit)**
 
@@ -252,7 +251,7 @@ Simuleer de volgende configuraties in de Simulatie van de Grafiek. U kunt uw eig
 
 >[!BEGINTABS]
 
->[!TAB  Scenario 1: gedeeld apparaat ]
+>[!TAB  Gedeeld apparaat ]
 
 John en Jane delen een apparaat.
 
@@ -265,9 +264,9 @@ CRMIDhash: John, ECID: 111
 CRMIDhash: Jane, ECID: 111
 ```
 
-![ placeholder ](../images/configs/intermediate/shared-device-hashed-crmid.png)
+![ Gedeelde apparatengrafiek met gehakt CRMID ](../images/configs/intermediate/shared-device-hashed-crmid.png)
 
->[!TAB  Scenario 2: slechte gegevens ]
+>[!TAB  Onjuiste gegevens ]
 
 Als gevolg van fouten in het hashingproces wordt een niet-unieke gehashte CRMID gegenereerd en naar de identiteitsservice verzonden.
 
@@ -360,7 +359,7 @@ Simuleer de volgende configuraties in het gereedschap voor grafieksimulatie. U k
 
 >[!BEGINTABS]
 
->[!TAB  twee eindgebruikerlogin ]
+>[!TAB  Gedeeld apparaat ]
 
 In dit scenario, login John en Jane allebei aan een e-commercewebsite.
 
@@ -399,6 +398,10 @@ De prioriteit Namespace speelt een kritieke rol in complexe grafiekscenario&#39;
 Lees deze sectie voor geavanceerde implementaties van [!DNL Identity Graph Linking Rules].
 
 ### Gebruik hoofdletters/kleine letters: u hebt ondersteuning nodig voor meerdere bedrijfsregels
+
+>[!TIP]
+>
+>U moet aangepaste apparaatnaamruimten voor &quot;CRMID&quot; en &quot;loginID&quot; maken om de hieronder beschreven geavanceerde implementatieoefeningen te kunnen voltooien.
 
 Uw eindgebruikers hebben twee verschillende accounts: een persoonlijke account en een zakelijke account. Elk account wordt geïdentificeerd door een andere id. In dit scenario ziet een grafiek er als volgt uit:
 
@@ -469,9 +472,15 @@ loginID: JanePersonal, ECID: 222
 
 ### Hoofdlettergebruik: u hebt complexe implementaties die meerdere naamruimten vereisen
 
+>[!TIP]
+>
+>U moet aangepaste apparaatnaamruimten maken voor &quot;CRMID&quot;, &quot;loyaltyID&quot;, &quot;thirdPartyID&quot; en &quot;orderID&quot; om de hieronder beschreven geavanceerde implementatieoefeningen te voltooien.
+
 U bent een bedrijf voor media en entertainment en uw eindgebruikers hebben het volgende:
+
 * EEN CRMID
 * Een loyaal-id
+
 Bovendien kunnen eindgebruikers een aankoop doen op de e-commercewebsite en deze gegevens zijn gekoppeld aan hun e-mailadres. Gebruikersgegevens worden ook verrijkt door een externe databaseleverancier en worden in batches naar Experience Platform verzonden.
 
 **wijze van de Tekst**
