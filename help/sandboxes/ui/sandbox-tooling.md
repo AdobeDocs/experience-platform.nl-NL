@@ -2,9 +2,9 @@
 title: Sandbox Tooling
 description: U kunt Sandboxconfiguraties naadloos exporteren en importeren tussen sandboxen.
 exl-id: f1199ab7-11bf-43d9-ab86-15974687d182
-source-git-commit: 208c9c47b4bde211506867cf59b8743556db7fc8
+source-git-commit: b5330e10dc8b395d1ef299073182c836f5c3af7f
 workflow-type: tm+mt
-source-wordcount: '2503'
+source-wordcount: '3210'
 ht-degree: 1%
 
 ---
@@ -59,7 +59,7 @@ De onderstaande tabel bevat een lijst met [!DNL Adobe Journey Optimizer] -object
 | [!DNL Adobe Journey Optimizer] | Aangepaste handelingen |  | Aangepaste acties kunnen onafhankelijk van elkaar aan een pakket worden toegevoegd. Wanneer een aangepaste handeling aan een reis is toegewezen, kan deze niet meer worden bewerkt. Als u aangepaste handelingen wilt bijwerken, moet u: <ul><li>aangepaste handelingen verplaatsen voordat u een reis maakt</li><li>updateconfiguraties (zoals aanvraagheaders, queryparameters en verificatie) voor aangepaste acties na migratie</li><li>Reisobjecten migreren met de aangepaste handelingen die u tijdens de eerste stap hebt toegevoegd</li></ul> |
 | [!DNL Adobe Journey Optimizer] | Inhoudssjabloon | | Een inhoudssjabloon kan worden gekopieerd als een afhankelijk object van het reisobject. Met standalone sjablonen kunt u eenvoudig aangepaste inhoud hergebruiken voor Journey Optimizer-campagnes en -reizen. |
 | [!DNL Adobe Journey Optimizer] | Fragment | Alle geneste fragmenten. | Een fragment kan worden gekopieerd als een afhankelijk object van het reisobject. Fragmenten zijn herbruikbare onderdelen waarnaar in een of meer e-mails van Journey Optimizer-campagnes en -reizen kan worden verwezen. |
-| [!DNL Adobe Journey Optimizer] | Campagnes | De volgende objecten die in de campagne worden gebruikt, worden als afhankelijke objecten gekopieerd: <ul><li>Campagnes</li><li>Doelgroepen</li><li>Schema&#39;s</li><li>Contentsjablonen</li><li>Fragmenten</li><li>Bericht/inhoud</li><li>Kanaalconfiguratie</li><li>Verenigde beslissingsobjecten</li><li>Instellingen/varianten van experimenten</li></ul> | <ul><li>Campagnes kunnen samen met alle punten worden gekopieerd met betrekking tot het profiel, het publiek, het schema, de gealigneerde berichten, en afhankelijke voorwerpen. Sommige items worden niet gekopieerd, zoals labels voor gegevensgebruik en taalinstellingen. Voor een volledige lijst van voorwerpen die niet kunnen worden gekopieerd, verwijs naar de [ exporterende voorwerpen aan een andere zandbak ](https://experienceleague.adobe.com/nl/docs/journey-optimizer/using/configuration/copy-objects-to-sandbox) gids.</li><li>Het systeem zal automatisch een bestaand kanaalconfiguratievoorwerp in de doelzandbak ontdekken en opnieuw gebruiken als een identieke configuratie bestaat. Als er geen overeenkomende configuratie wordt gevonden, wordt de kanaalconfiguratie overgeslagen tijdens het importeren en moeten gebruikers de kanaalinstellingen in de doelsandbox voor deze reis handmatig bijwerken.</li><li>Gebruikers kunnen bestaande experimenten en doelgroepen in de doelsandbox opnieuw gebruiken als afhankelijke objecten van geselecteerde campagnes.</li></ul> |
+| [!DNL Adobe Journey Optimizer] | Campagnes | De volgende objecten die in de campagne worden gebruikt, worden als afhankelijke objecten gekopieerd: <ul><li>Campagnes</li><li>Doelgroepen</li><li>Schema&#39;s</li><li>Contentsjablonen</li><li>Fragmenten</li><li>Bericht/inhoud</li><li>Kanaalconfiguratie</li><li>Verenigde beslissingsobjecten</li><li>Instellingen/varianten van experimenten</li></ul> | <ul><li>Campagnes kunnen samen met alle punten worden gekopieerd met betrekking tot het profiel, het publiek, het schema, de gealigneerde berichten, en afhankelijke voorwerpen. Sommige items worden niet gekopieerd, zoals labels voor gegevensgebruik en taalinstellingen. Voor een volledige lijst van voorwerpen die niet kunnen worden gekopieerd, verwijs naar de [ exporterende voorwerpen aan een andere zandbak ](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/configuration/copy-objects-to-sandbox) gids.</li><li>Het systeem zal automatisch een bestaand kanaalconfiguratievoorwerp in de doelzandbak ontdekken en opnieuw gebruiken als een identieke configuratie bestaat. Als er geen overeenkomende configuratie wordt gevonden, wordt de kanaalconfiguratie overgeslagen tijdens het importeren en moeten gebruikers de kanaalinstellingen in de doelsandbox voor deze reis handmatig bijwerken.</li><li>Gebruikers kunnen bestaande experimenten en doelgroepen in de doelsandbox opnieuw gebruiken als afhankelijke objecten van geselecteerde campagnes.</li></ul> |
 
 Oppervlakken (bijvoorbeeld voorinstellingen) worden niet overschreven. Het systeem selecteert automatisch de dichtstbijzijnde mogelijke overeenkomst op de bestemmingszandbak die op het berichttype en oppervlaknaam wordt gebaseerd. Als er geen oppervlakten op de doelzandbak worden gevonden, dan zal het oppervlakexemplaar ontbreken, veroorzakend het berichtexemplaar om te ontbreken omdat een bericht vereist een oppervlakte om voor opstelling beschikbaar te zijn. In dit geval moet ten minste één oppervlak worden gemaakt voor het rechterkanaal van het bericht, zodat de kopie kan werken.
 
@@ -253,11 +253,99 @@ In het dialoogvenster **[!UICONTROL Import summary]** wordt een percentage weerg
 
 Wanneer het importeren is voltooid, ontvangt u een melding in de gebruikersinterface van Experience Platform. U kunt deze meldingen openen via het waarschuwingspictogram. U kunt hier naar probleemoplossing navigeren als een taak mislukt.
 
+## Updates van iteratieve objectconfiguraties overbrengen naar andere sandboxen via sandboxgereedschappen {#move-configs}
+
+U kunt sandboxgereedschappen gebruiken om objectconfiguraties tussen verschillende sandboxen over te brengen. Eerder moesten configuratieupdates voor uw objecten (zoals schema&#39;s, veldgroepen en gegevenstypen) handmatig opnieuw worden gemaakt of geïmporteerd om te kunnen worden overgebracht naar andere sandboxen. Met deze functie kunt u sandboxgereedschappen gebruiken om uw workflows te versnellen en potentiële fouten te beperken door uw configuratie-updates naadloos over te brengen naar verschillende sandboxen.
+
+![ een diagram dat toont hoe de updates over zandbakken worden bewogen.](../images/ui/sandbox-tooling/move-updates-diagram.png)
+
+>[!TIP]
+>
+> Zorg ervoor dat u aan de volgende voorwaarden voldoet voordat u probeert objectconfiguraties over te brengen naar verschillende sandboxen.
+>
+>- De juiste machtigingen voor toegang tot gereedschappen in sandboxen.
+>- Een nieuw gemaakt of bijgewerkt object (zoals een schema) in uw bronsandbox.
+
+>[!BEGINSHADEBOX]
+
+### Ondersteunde objecttypen voor updatebewerking
+
+Hieronder vindt u ondersteunde objecttypen voor bijwerken:
+
+- Schema&#39;s
+- Veldgroepen
+- Datatypen
+
+| Ondersteunde updates | Niet-ondersteunde updates |
+| --- | --- |
+| <ul><li>Nieuwe velden/veldgroepen toevoegen aan de bron.</li><li>Een vereist veld optioneel maken.</li><li>Nieuwe vereiste velden introduceren.</li><li>Inleiding tot een nieuw relatieveld.</li><li>Introductie van een nieuw identiteitsveld.</li><li>De weergavenaam en beschrijving van de bron wijzigen.</li></ul> | <ul><li>Eerder gedefinieerde velden verwijderen.</li><li>Bestaande velden opnieuw definiëren wanneer het schema is ingeschakeld voor Real-Time Klantprofiel.</li><li>Eerder ondersteunde veldwaarden verwijderen of beperken.</li><li>Bestaande velden naar een andere locatie in de schemastructuur verplaatsen - hierdoor wordt een nieuw veld in de doelsandbox gemaakt, maar het vorige veld wordt niet verwijderd.</li><li>Het in- of uitschakelen van het schema om deel te nemen aan Profiel - deze bewerking wordt overgeslagen bij een diff-vergelijking.</li><li>Toegangsbeheerlabels.</li></ul> |
+
+>[!ENDSHADEBOX]
+
+Volg de onderstaande stappen om te leren hoe u sandboxgereedschappen kunt gebruiken om objectconfiguraties over verschillende sandboxen te verplaatsen.
+
+### Eerder geïmporteerde objecten
+
+Voer de volgende stappen uit als uw gebruiksscenario bestaande objecten in uw bronsandbox betreft waarvoor configuratieupdates nodig zijn, nadat deze al zijn verpakt en geïmporteerd naar andere sandboxen.
+
+Werk eerst het object in de bronsandbox bij. Navigeer bijvoorbeeld naar de werkruimte van **[!UICONTROL Schemas]** , selecteer het schema en voeg een nieuwe veldgroep toe.
+
+![ de schemawerkruimte met een bijgewerkt schema.](../images/ui/sandbox-tooling/update-schema.png)
+
+Nadat u het schema hebt bijgewerkt, navigeert u naar **[!UICONTROL Sandboxes]**, selecteert u **[!UICONTROL Packages]** en zoekt u het bestaande pakket.
+
+![ zandbak het tooling interface met een geselecteerd pakket ](../images/ui/sandbox-tooling/select-package.png)
+
+Gebruik de interface van pakketten om uw veranderingen te verifiëren. Selecteer **[!UICONTROL Check for updates]** om eventuele wijzigingen in de artefacten in het pakket weer te geven. Selecteer vervolgens **[!UICONTROL View diff]** om een gedetailleerd overzicht te ontvangen van alle wijzigingen die zijn uitgevoerd op basis van uw artefacten.
+
+![ de pakketinterface met geselecteerde mening diff knoop.](../images/ui/sandbox-tooling/view-diff.png)
+
+De interface [!UICONTROL View diff] wordt weergegeven. Zie deze tol voor informatie over uw bron en doelartefacten, evenals de veranderingen die op hen moeten worden toegepast.
+
+![ de samenvatting van veranderingen.](../images/ui/sandbox-tooling/summary-of-changes.png)
+
+Tijdens deze stap kunt u ook [!UICONTROL Summarize with AI] selecteren voor een stapsgewijze samenvatting van alle wijzigingen.
+
+![ de samenvatting met AI-Toegelaten.](../images/ui/sandbox-tooling/ai-summary.png)
+
+Als u klaar bent, selecteert u **[!UICONTROL Update package]** en vervolgens **[!UICONTROL Confirm]** in het pop-upvenster dat wordt weergegeven. Nadat de taak is voltooid, kunt u de pagina vernieuwen en **[!UICONTROL View history]** selecteren om de versie van het pakket te verifiëren.
+
+![ het bevestigingsvenster.](../images/ui/sandbox-tooling/confirm-changes.png)
+
+Als u uw wijzigingen wilt importeren, navigeert u terug naar de map [!UICONTROL Packages] en selecteert u de ovalen (`...` ) naast het pakket en selecteert u vervolgens **[!UICONTROL Import package]** . Experience Platform selecteert automatisch [!UICONTROL Update existing objects] . Controleer de wijzigingen en selecteer vervolgens **[!UICONTROL Finish]** .
+
+>[!NOTE]
+>
+>Alle afhankelijke objecten worden automatisch bijgewerkt in de doelsandbox als onderdeel van deze workflow.
+
+![ de invoer objectieve interface.](../images/ui/sandbox-tooling/import-objective.png)
+
+Navigeer naar de doelsandbox en bekijk het bijgewerkte object handmatig vanuit die sandbox om het importproces verder te valideren.
+
+### Handmatig in doelsandbox gemaakte objecten
+
+Voer de volgende stappen uit als uw gebruiksscenario configuratiewijzigingen toepast op objecten die handmatig in afzonderlijke sandboxen zijn gemaakt.
+
+Maak en publiceer eerst een nieuw pakket met het bijgewerkte object.
+
+Importeer vervolgens het pakket naar de doelsandbox met de objecten die u ook wilt bijwerken. Selecteer tijdens het importproces **[!UICONTROL Update existing objects]** en gebruik vervolgens de objectnavigator om handmatig de doelobjecten te selecteren waarop de updates moeten worden toegepast.
+
+>[!NOTE]
+>
+>- Het is optioneel om een doeltoewijzing in een andere sandbox te selecteren voor afhankelijke objecten. Als er geen is geselecteerd, wordt er een nieuwe gemaakt.
+>- Voor naamruimte voor identiteit detecteert het systeem automatisch of een nieuwe identiteit moet worden gemaakt als een bestaande identiteit opnieuw moet worden gebruikt in de doelsandbox.
+
+![ de invoer objectieve interface met placeholders voor de doelvoorwerpen die moeten worden bijgewerkt.](../images/ui/sandbox-tooling/update-existing-objects.png)
+
+Selecteer **[!UICONTROL Finish]** als u de doelobjecten hebt geïdentificeerd die u wilt bijwerken.
+
+![ de geselecteerde doelvoorwerpen.](../images/ui/sandbox-tooling/add-updated-objects.png)
+
 ## Videotutorial
 
 De volgende video is bedoeld ter ondersteuning van uw begrip van gereedschappen voor sandboxen en beschrijft hoe u een nieuw pakket kunt maken, een pakket kunt publiceren en importeren.
 
->[!VIDEO](https://video.tv.adobe.com/v/3446091/?learn=on&captions=dut)
+>[!VIDEO](https://video.tv.adobe.com/v/3424763/?learn=on)
 
 ## Volgende stappen
 
