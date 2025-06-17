@@ -56,4 +56,4 @@ ht-degree: 27%
       - [Door de klant beheerde sleutels](customer-ai/cai-data-governance/customer-managed-keys.md)
       - [Datagovernance](customer-ai/cai-data-governance/data-governance.md)
       - [Beleid inzake governance](customer-ai/cai-data-governance/governance-policies.md)
-- [Releaseopmerkingen bij Experience Platform](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)
+- [Releaseopmerkingen bij Experience Platform](https://experienceleague.adobe.com/nl/docs/experience-platform/release-notes/latest)
