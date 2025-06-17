@@ -3,11 +3,11 @@ title: Azure Databricks
 description: Leer over de noodzakelijke stappen nodig om Azure Databricks aan Experience Platform te verbinden.
 badgeUltimate: label="Ultimate" type="Positive"
 badgeBeta: label="Beta" type="Informative"
-last-substantial-update: 2025-04-29T00:00:00Z
+last-substantial-update: 2025-06-17T00:00:00Z
 exl-id: 2f082898-aa0e-47a1-a4bf-077c21afdfee
-source-git-commit: c466c30bddf4e67117c88072bea00818d755e408
+source-git-commit: 11ec772f2b877ceac820f2b8a06ac27377e9b2e9
 workflow-type: tm+mt
-source-wordcount: '612'
+source-wordcount: '616'
 ht-degree: 0%
 
 ---
@@ -18,7 +18,7 @@ ht-degree: 0%
 >
 >* De [!DNL Azure Databricks] -bron is in de broncatalogus beschikbaar voor gebruikers die Real-Time CDP Ultimate hebben aangeschaft.
 >
->* De bron [!DNL Azure Databricks] is in bèta. Lees de [ voorwaarden ](../../home.md#terms-and-conditions) in het bronoverzicht voor meer informatie bij het gebruiken van bèta-geëtiketteerde bronnen.
+>* De bron [!DNL Azure Databricks] is in bèta. Lees de [ termijnen en voorwaarden ](../../home.md#terms-and-conditions) in het bronoverzicht voor meer informatie bij het gebruiken van bèta-geëtiketteerde bronnen.
 
 [!DNL Azure Databricks] is een op de cloud gebaseerd platform dat is ontworpen voor gegevensanalyse, leren van machines en AI. U kunt [!DNL Databricks] gebruiken om met [!DNL Azure] te integreren en een holistische omgeving te verstrekken voor de bouw van, het opstellen van, en het beheren van gegevensoplossingen op schaal.
 
@@ -161,6 +161,9 @@ fs.azure.sas.{CONTAINER_NAME}.{STORAGE-ACCOUNT}.blob.core.windows.net {SAS-TOKEN
 
 ![ de Databases UI op Azure.](../../images/tutorials/create/databricks/databricks-ui.png)
 
-## Verbinding maken [!DNL Databricks] met Experience Platform via API&#39;s
+## Verbinden [!DNL Databricks] met Experience Platform
 
-Nu u de in de eerste plaats vereiste stappen hebt voltooid, kunt u nu aan de gids op [ te werk gaan die uw  [!DNL Databricks]  rekening met Experience Platform verbindt gebruikend API ](../../tutorials/api/create/databases/databricks.md).
+Nu u de vereiste stappen hebt uitgevoerd, kunt u nu doorgaan en uw [!DNL Databricks] -account verbinden met Experience Platform:
+
+* [Verbinding maken via de API](../../tutorials/api/create/databases/databricks.md)
+* [Verbind door de bronwerkruimte in UI](../../tutorials/ui/create/databases/databricks.md)

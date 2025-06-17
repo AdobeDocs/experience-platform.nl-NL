@@ -4,9 +4,9 @@ description: Leer hoe u Azure Databricks met behulp van API's verbindt met Exper
 badgeUltimate: label="Ultimate" type="Positive"
 badgeBeta: label="Beta" type="Informative"
 exl-id: c3974bab-8e67-49a1-b1a5-d453cf7bfd1d
-source-git-commit: 0c8ff1029beee3f58cbf536b11b40551b6f6c2ed
+source-git-commit: 9df2f9cc70876834aa635d50d548a882f45e3190
 workflow-type: tm+mt
-source-wordcount: '528'
+source-wordcount: '534'
 ht-degree: 0%
 
 ---
@@ -47,6 +47,8 @@ Geef waarden op voor de volgende referenties om [!DNL Databricks] te verbinden m
 | `accessToken` | Het toegangstoken dat uw [!DNL Databricks] account verifieert. U kunt uw toegangstoken produceren gebruikend de [!DNL Databricks] werkruimte. |
 | `database` | De naam van uw database in het delta-meer. |
 | `connectionSpec.Id` | De verbindingsSPEC identiteitskaart keert de schakelaareigenschappen van een bron, met inbegrip van authentificatiespecificaties met betrekking tot het creëren van de basis en bronverbindingen terug. De verbindingsspecificatie-id voor [!DNL Databricks] is `e9d7ec6b-0873-4e57-ad21-b3a7c65e310b` . |
+
+Voor meer informatie, lees het [[!DNL Azure Databricks]  overzicht ](../../../../connectors/databases/databricks.md).
 
 ## Een basisverbinding maken
 
