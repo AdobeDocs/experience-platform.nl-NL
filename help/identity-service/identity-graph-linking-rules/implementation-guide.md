@@ -2,9 +2,9 @@
 title: Implementatiegids voor koppelingsregels voor identiteitsgrafieken
 description: Leer de aanbevolen stappen die u moet volgen wanneer u uw gegevens implementeert met configuraties van Identity Graph Linking Rules.
 exl-id: 368f4d4e-9757-4739-aaea-3f200973ef5a
-source-git-commit: 0587ddf1012adb13e6d399953839735f73fe151e
+source-git-commit: a9c9543783eb85dcaadef64b1c0deb84f850d40e
 workflow-type: tm+mt
-source-wordcount: '1943'
+source-wordcount: '1944'
 ht-degree: 0%
 
 ---
@@ -35,7 +35,7 @@ In deze sectie worden de vereiste stappen beschreven die u moet uitvoeren voorda
 
 #### Naamruimtevereiste voor één persoon {#single-person-namespace-requirement}
 
-U moet ervoor zorgen dat de unieke naamruimte met de hoogste prioriteit altijd aanwezig is in elk profiel. Hierdoor kan de identiteitsdienst de juiste persoon-id in een bepaalde grafiek detecteren.
+U moet ervoor zorgen dat de unieke naamruimte met de hoogste prioriteit altijd aanwezig is in elk bekend profiel. Hierdoor kan de identiteitsdienst de juiste persoon-id in een bepaalde grafiek detecteren.
 
 +++Selecteren om een voorbeeld weer te geven van een grafiek zonder naamruimte voor één persoon
 

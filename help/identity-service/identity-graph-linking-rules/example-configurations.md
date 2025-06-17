@@ -4,9 +4,9 @@ description: Leer over de verschillende implementatietypen die u het gebruiken v
 hide: true
 hidefromtoc: true
 exl-id: fd0afb0b-a368-45b9-bcdc-f2f3b7508cee
-source-git-commit: f793dbda0520366b3ee69b3aa0f912b005957561
+source-git-commit: 2a5c8b3bd58d3659d0fcf519407b180bf5f091b4
 workflow-type: tm+mt
-source-wordcount: '1999'
+source-wordcount: '1951'
 ht-degree: 1%
 
 ---
@@ -17,11 +17,6 @@ ht-degree: 1%
 >id="platform_identities_algorithmconfiguration"
 >title="Algorithm Configuration"
 >abstract="Vorm unieke namespace en namespace prioriteit die aan uw ingebedde identiteiten wordt aangepast."
-
->[!NOTE]
->
->* &#39;CRMID&#39; en &#39;loginID&#39; zijn aangepaste naamruimten. In dit document is &#39;CRMID&#39; een persoon-id en is &#39;loginID&#39; een aanmeldings-id die aan een bepaalde persoon is gekoppeld.
->* Als u de voorbeeldgrafiekscenario&#39;s wilt simuleren die in dit document worden beschreven, moet u eerst twee aangepaste naamruimten maken, een met het identiteitssymbool &quot;CRMID&quot; en een ander met het identiteitssymbool &quot;loginID&quot;. Identiteitssymbolen zijn hoofdlettergevoelig.
 
 Lees dit document voor meer informatie over verschillende implementatietypen die u kunt configureren met [!DNL Identity Graph Linking Rules] .
 
@@ -43,9 +38,9 @@ Voordat u gaat induiken in het volgende document, moet u zich vertrouwd maken me
 
 ## Basisimplementaties {#basic-implementations}
 
->[!TIP]
+>[!NOTE]
 >
->U moet een aangepaste apparaatoverschrijdende naamruimte voor &#39;CRMID&#39; maken om de onderstaande basisimplementatieoefeningen te voltooien.
+>Als u de onderstaande implementaties wilt voltooien, moet u een aangepaste naamruimte maken met het identiteitssymbool (hoofdlettergevoelig): `CRMID` .
 
 Lees deze sectie voor basisimplementaties van [!DNL Identity Graph Linking Rules].
 
@@ -90,7 +85,7 @@ Simuleer de volgende configuratie in de Simulatie van de Grafiek. U kunt uw eige
 
 **Gedeeld apparaat (PC)**
 
-**wijze van de Tekst:**
+**wijze van de Tekst**
 
 ```json
 CRMID: John, ECID: 111
@@ -112,7 +107,7 @@ De browser op de bureaubladcomputer die beide gebruiken om uw e-commerceplatform
 
 **Gedeeld apparaat (mobiel)**
 
-**wijze van de Tekst:**
+**wijze van de Tekst**
 
 ```json
 CRMID: John, ECID: 111, IDFA: a-b-c
@@ -129,19 +124,23 @@ In deze grafiek worden John en Jane allebei vertegenwoordigd door hun eigen resp
 
 ## Tussentijdse implementaties {#intermediate-implementations}
 
+>[!TIP]
+>
+>A **niet-unieke identiteit** is een identiteit verbonden aan een niet-unieke namespace.
+
 Lees deze sectie voor tussentijdse implementaties van [!DNL Identity Graph Linking Rules].
 
 ### Hoofdlettergebruik: uw gegevens bevatten niet-unieke identiteiten
 
->[!TIP]
+>[!NOTE]
 >
->* A **niet-unieke identiteit** is een identiteit verbonden aan een niet-unieke namespace.
->
->* U moet aangepaste apparaatnaamruimten voor &quot;CRMID&quot; en &quot;Chash&quot; maken om de onderstaande tussentijdse implementatieoefeningen te voltooien. &quot;CCHash&quot; is een aangepaste naamruimte die een gehasht creditcardnummer vertegenwoordigt.
+>Als u de onderstaande implementaties wilt voltooien, moet u de volgende aangepaste naamruimten maken met de identiteitssymbolen (hoofdlettergevoelig):
+>* `CRMID`
+>* `CCHash` (Dit is een aangepaste naamruimte die een gehasht creditcardnummer vertegenwoordigt.)
 
 Stel je voor dat je een gegevensarchitect bent die werkt voor een commerciële bank die creditcards uitgeeft. Uw marketingteam heeft aangegeven dat zij de transactiegeschiedenis van creditcardtransacties in het verleden aan een profiel willen toevoegen. Deze identiteitsgrafiek kan er als volgt uitzien.
 
-**wijze van de Tekst:**
+**wijze van de Tekst**
 
 ```json
 CRMID: John, CChash: 1111-2222 
@@ -177,7 +176,7 @@ Simuleer de volgende configuraties in de Simulatie van de Grafiek. U kunt uw eig
 
 >[!TAB  Gedeeld apparaat ]
 
-**wijze van de Tekst:**
+**wijze van de Tekst**
 
 ```json
 CRMID: John, CChash: 1111-2222
@@ -194,7 +193,7 @@ CRMID: Jane, ECID:123
 
 Twee verschillende eindgebruikers melden zich aan voor uw e-commercewebsite met dezelfde creditcard. Uw marketingteam wil het samenvouwen van grafieken voorkomen door ervoor te zorgen dat de creditcard aan slechts één profiel is gekoppeld.
 
-**wijze van de Tekst:**
+**wijze van de Tekst**
 
 ```json
 CRMID: John, CChash: 1111-2222
@@ -211,7 +210,7 @@ CRMID: Jane, ECID:456
 
 Als gevolg van onzuivere gegevens wordt een ongeldig creditcardnummer in Experience Platform ingevoerd.
 
-**wijze van de Tekst:**
+**wijze van de Tekst**
 
 ```json
 CRMID: John, CChash: undefined
@@ -228,9 +227,11 @@ CRMID: Jill, CChash: undefined
 
 ### Hoofdlettergebruik: uw gegevens bevatten zowel gehashte als niet-gehashte CRMID&#39;s
 
->[!TIP]
+>[!NOTE]
 >
->U moet aangepaste apparaatnaamruimten voor &quot;CRMID&quot; en &quot;CRMIDhash&quot; maken om de onderstaande tussentijdse implementatieoefeningen te voltooien.
+>Als u de onderstaande implementaties wilt voltooien, moet u aangepaste naamruimten maken met de identiteitssymbolen (hoofdlettergevoelig):
+>* `CRMID`
+>* `CRMIDhash`
 
 U gebruikt zowel een niet-gehakte (offline) CRMID als een gehashte (online) CRMID. De verwachting is dat er een direct verband tussen zowel unhashed als hashed CRMIDs is. Wanneer een eindgebruiker met een voor authentiek verklaarde rekening doorbladert, wordt gehakt CRMID verzonden samen met apparatenidentiteitskaart (die op de Dienst van de Identiteit als ECID wordt vertegenwoordigd).
 
@@ -255,7 +256,7 @@ Simuleer de volgende configuraties in de Simulatie van de Grafiek. U kunt uw eig
 
 John en Jane delen een apparaat.
 
-**wijze van de Tekst:**
+**wijze van de Tekst**
 
 ```json
 CRMID: John, CRMIDhash: John
@@ -270,7 +271,7 @@ CRMIDhash: Jane, ECID: 111
 
 Als gevolg van fouten in het hashingproces wordt een niet-unieke gehashte CRMID gegenereerd en naar de identiteitsservice verzonden.
 
-**wijze van de Tekst:**
+**wijze van de Tekst**
 
 ```json
 CRMID: John, CRMIDhash: aaaa
@@ -342,6 +343,10 @@ Email: jane@g, ECID: 111
 
 ### Hoofdlettergebruik: uw gegevens bevatten drie unieke naamruimten
 
+>[!NOTE]
+>
+>Als u de onderstaande implementaties wilt voltooien, moet u een aangepaste naamruimte maken met het identiteitssymbool (hoofdlettergevoelig): `CRMID` .
+
 Uw klant definieert als volgt een entiteit van één persoon:
 
 * Een eindgebruiker met toegewezen CRMID.
@@ -399,13 +404,15 @@ Lees deze sectie voor geavanceerde implementaties van [!DNL Identity Graph Linki
 
 ### Gebruik hoofdletters/kleine letters: u hebt ondersteuning nodig voor meerdere bedrijfsregels
 
->[!TIP]
+>[!NOTE]
 >
->U moet aangepaste apparaatnaamruimten voor &quot;CRMID&quot; en &quot;loginID&quot; maken om de hieronder beschreven geavanceerde implementatieoefeningen te kunnen voltooien.
+>Als u de onderstaande implementaties wilt voltooien, moet u aangepaste naamruimten maken met de identiteitssymbolen (hoofdlettergevoelig):
+>* `CRMID`
+>* `loginID`
 
 Uw eindgebruikers hebben twee verschillende accounts: een persoonlijke account en een zakelijke account. Elk account wordt geïdentificeerd door een andere id. In dit scenario ziet een grafiek er als volgt uit:
 
-**wijze van de Tekst***
+**wijze van de Tekst**
 
 ```json
 CRMID: John, loginID: JohnPersonal
@@ -427,12 +434,7 @@ Vorm de volgende montages in de interface van de Simulatie van de Grafiek alvore
 
 **Gesimuleerde grafiek**
 
-+++Selecteren om gesimuleerde grafiek weer te geven
-
 ![ een identiteitsgrafiek voor een eindgebruiker met zaken en een persoonlijke e-mail.](../images/configs/advanced/advanced.png)
-
-+++
-
 
 **Uitoefening**
 
@@ -457,6 +459,8 @@ loginID: JanePersonal, ECID: 111
 
 >[!TAB  het Onjuiste gegeven wordt verzonden naar Real-Time CDP ]
 
+**wijze van de Tekst**
+
 ```json
 CRMID: John, loginID: JohnPersonal
 CRMID: John, loginID: error
@@ -472,9 +476,12 @@ loginID: JanePersonal, ECID: 222
 
 ### Hoofdlettergebruik: u hebt complexe implementaties die meerdere naamruimten vereisen
 
->[!TIP]
+>[!NOTE]
 >
->U moet aangepaste apparaatnaamruimten maken voor &quot;CRMID&quot;, &quot;loyaltyID&quot;, &quot;thirdPartyID&quot; en &quot;orderID&quot; om de hieronder beschreven geavanceerde implementatieoefeningen te voltooien.
+>Als u de onderstaande implementaties wilt voltooien, moet u aangepaste naamruimten maken met de identiteitssymbolen (hoofdlettergevoelig):
+>* `CRMID`
+>* `loyaltyID`
+>* `thirdPartyID`
 
 U bent een bedrijf voor media en entertainment en uw eindgebruikers hebben het volgende:
 
@@ -499,8 +506,8 @@ Vorm de volgende montages in de interface van de Simulatie van de Grafiek alvore
 | Weergavenaam | Identiteitssymbool | Identiteitstype | Uniek per grafiek | Prioriteit naamruimte |
 | --- | --- | --- | --- | --- |
 | CRMID | CRMID | CROSS_DEVICE | ✔️ | 1 |
-| loyaltyID | loyaltyID | CROSS_DEVICE | | 2 |
-| Email | Email | Email | | 3 |
+| loyaltyID | loyaltyID | CROSS_DEVICE | ✔️ | 2 |
+| Email | Email | Email | ✔️ | 3 |
 | thirdPartyID | thirdPartyID | CROSS_DEVICE | | 4 |
 | orderID | orderID | CROSS_DEVICE | | 5 |
 | ECID | ECID | COOKIE | | 6 |
