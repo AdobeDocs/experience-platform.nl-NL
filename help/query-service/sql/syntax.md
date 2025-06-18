@@ -289,7 +289,7 @@ Houd rekening met de volgende beperkingen wanneer u de component `TRANSFORM` geb
 
 >[!NOTE]
 >
->Voor meer details over beschikbare transformatiefuncties en hun outputtypes, zie {de gegevenstypen van de transformatieoutput van 0} Eigenschap ](../advanced-statistics/feature-transformation.md#available-transformations).[
+>Voor meer details over beschikbare transformatiefuncties en hun outputtypes, zie {de gegevenstypen van de transformatieoutput van 0} Eigenschap [&#128279;](../advanced-statistics/feature-transformation.md#available-transformations).
 
 
 ### TRANSFORM, component {#transform}
@@ -426,7 +426,7 @@ DROP SCHEMA [IF EXISTS] db_name.schema_name [ RESTRICT | CASCADE]
 | Parameters | Beschrijving |
 | ------ | ------ |
 | `IF EXISTS` | Als deze parameter wordt gespecificeerd en het schema **niet** bestaat, wordt geen uitzondering geworpen. |
-| `RESTRICT` | De standaardwaarde voor de modus. Indien gespecificeerd, daalt het schema slechts als het **** geen lijsten bevat. |
+| `RESTRICT` | De standaardwaarde voor de modus. Indien gespecificeerd, daalt het schema slechts als het **&#x200B;**&#x200B;geen lijsten bevat. |
 | `CASCADE` | Indien opgegeven, wordt het schema neergezet samen met alle tabellen in het schema. |
 
 ## WEERGAVE MAKEN {#create-view}
@@ -750,7 +750,7 @@ Zie de [ logische organisatie van gegevensactiva ](../best-practices/organize-da
 
 ## Tabel bestaat
 
-De SQL-opdracht `table_exists` wordt gebruikt om te bevestigen of een tabel momenteel in het systeem bestaat. Het bevel keert een booleaanse waarde terug: `true` als de lijst **** bestaat, en `false` als de lijst **niet** bestaat.
+De SQL-opdracht `table_exists` wordt gebruikt om te bevestigen of een tabel momenteel in het systeem bestaat. Het bevel keert een booleaanse waarde terug: `true` als de lijst **&#x200B;**&#x200B;bestaat, en `false` als de lijst **niet** bestaat.
 
 Door te controleren of een tabel bestaat voordat de instructies worden uitgevoerd, vereenvoudigt de functie `table_exists` het schrijven van een anoniem blok, zodat zowel de gebruiksgevallen `CREATE` als `INSERT INTO` worden behandeld.
 

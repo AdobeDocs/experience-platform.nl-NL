@@ -134,7 +134,7 @@ Zie de documentatie voor volledige begeleiding op [ hoe te met genestelde gegeve
 ### Hoe kan ik een vraag over een dataset versnellen die series bevat?
 
 +++Antwoord
-Om de prestaties van vragen op datasets te verbeteren die series bevatten, zou u de serie ](https://spark.apache.org/docs/latest/api/sql/index.html#explode) als vraag van a [ CTAS ](./sql/syntax.md#create-table-as-select) op runtime moeten ontploffen, en dan het voor verdere kansen onderzoeken om zijn verwerkingstijd te verbeteren.[
+Om de prestaties van vragen op datasets te verbeteren die series bevatten, zou u de serie [&#128279;](https://spark.apache.org/docs/latest/api/sql/index.html#explode) als vraag van a [ CTAS ](./sql/syntax.md#create-table-as-select) op runtime moeten ontploffen, en dan het voor verdere kansen onderzoeken om zijn verwerkingstijd te verbeteren.
 +++
 
 ### Waarom verwerkt mijn vraag CTAS nog na vele uren voor slechts een klein aantal rijen?
