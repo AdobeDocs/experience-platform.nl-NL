@@ -1,7 +1,7 @@
 ---
 title: Algolië
 description: Gebruik deze connector om het publiek naar Algolië te activeren voor personalisatie en gebruik in zoekopdrachten en aanbevelingen. Vervolgens kunt u de bronconnector van het Algoliegebruikersprofiel gebruiken om de profielen te importeren in Real-Time CDP om een rijk publiek te maken.
-source-git-commit: 2205ba48a6c17b8f34c4796c1777bfc53a6a7fe5
+source-git-commit: 01e8739952ce2f56eaafcbb0731fb88d5961b21d
 workflow-type: tm+mt
 source-wordcount: '1006'
 ht-degree: 0%
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
->De [!DNL Algolia] bestemmings schakelaar en documentatiepagina worden gecreeerd en door het team van de Diensten van de Integratie van Algolia gehandhaafd. Voor onderzoeken of updateverzoeken, contacteer hen in [ adobe-algolia-solutions@algolia.com ](adobe-algolia-solutions@algolia.com).
+>De [!DNL Algolia] bestemmings schakelaar en documentatiepagina worden gecreeerd en door het team van de Diensten van de Integratie van Algolia gehandhaafd. Voor onderzoeken of updateverzoeken, contacteer hen in [ adobe-algolia-solutions@algolia.com ](mailto:adobe-algolia-solutions@algolia.com).
 
 Gebruik de [!DNL Algolia] doelverbinding om Adobe Experience Platform-publiek naar Algolië te sturen voor gepersonaliseerde zoekopdrachten en aanbevelingen. Voordat u de [!DNL Algolia] doelconnector kunt gebruiken, moet u eerst de [[!DNL Algolia User Profiles]](/help/sources/connectors/data-partners/algolia-user-profiles.md) bronconnector instellen. Tijdens het programma voor het instellen van de bronaansluiting maakt u de identiteit van het token van de gebruiker Algolia. Deze identiteit wordt vereist voor afbeelding wanneer u de bestemmingsschakelaar vormt.
 
@@ -48,7 +48,7 @@ Gebruik vervolgens de bijbehorende [[!DNL Algolia User Profiles]](/help/sources/
 
 ## Ondersteunde identiteiten {#supported-identities}
 
-[!DNL Algolia] ondersteunt de activering van identiteiten die in de onderstaande tabel worden beschreven. Leer meer over [ identiteiten ](https://experienceleague.adobe.com/nl/docs/experience-platform/identity/features/namespaces).
+[!DNL Algolia] ondersteunt de activering van identiteiten die in de onderstaande tabel worden beschreven. Leer meer over [ identiteiten ](https://experienceleague.adobe.com/en/docs/experience-platform/identity/features/namespaces).
 
 | Doelidentiteit | Beschrijving | Overwegingen |
 |---------|---------|----------|
@@ -62,7 +62,7 @@ In deze sectie wordt beschreven welk type publiek u naar dit doel kunt exportere
 
 | Oorsprong publiek | Ondersteund | Beschrijving |
 |---------|---------|----------|
-| [!DNL Segmentation Service] | ✓ | Het publiek produceerde door de Dienst van de Segmentatie van Experience Platform [&#128279;](../../../segmentation/home.md). |
+| [!DNL Segmentation Service] | ✓ | Het publiek produceerde door de Dienst van de Segmentatie van Experience Platform [ ](../../../segmentation/home.md). |
 | Aangepaste uploads | ✓ | Het publiek [ ingevoerde ](../../../segmentation/ui/audience-portal.md#import-audience) in Experience Platform van Csv- dossiers. |
 
 {style="table-layout:auto"}
@@ -119,9 +119,9 @@ Wanneer u klaar bent met het opgeven van details voor uw doelverbinding, selecte
 >[!IMPORTANT]
 > 
 >* Om gegevens te activeren, hebt u **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, en **[!UICONTROL View Segments]** [ toegangsbeheertoestemmingen ](/help/access-control/home.md#permissions) nodig. Lees het [ overzicht van de toegangscontrole ](/help/access-control/ui/overview.md) of contacteer uw productbeheerder om de vereiste toestemmingen te verkrijgen.
->* Om identiteiten uit te voeren, hebt u de Grafiek van de Identiteit van de Mening [ toegangsbeheertoestemming ](https://experienceleague.adobe.com/nl/docs/experience-platform/access-control/home#permissions) nodig.
+>* Om identiteiten uit te voeren, hebt u de Grafiek van de Identiteit van de Mening [ toegangsbeheertoestemming ](https://experienceleague.adobe.com/en/docs/experience-platform/access-control/home#permissions) nodig.
 
-Lees [ activeer profielen en publiek aan het stromen publiek uitvoerbestemmingen ](https://experienceleague.adobe.com/nl/docs/experience-platform/destinations/ui/activate/activate-segment-streaming-destinations) voor instructies bij het activeren van publiek aan deze bestemming.
+Lees [ activeer profielen en publiek aan het stromen publiek uitvoerbestemmingen ](https://experienceleague.adobe.com/en/docs/experience-platform/destinations/ui/activate/activate-segment-streaming-destinations) voor instructies bij het activeren van publiek aan deze bestemming.
 
 ### Kenmerken en identiteiten toewijzen {#mapping-attributes-identities}
 
@@ -137,7 +137,7 @@ Als u wilt controleren of het publiek naar de gebruikersprofielen is geëxportee
 
 ## Gegevensgebruik en -beheer {#data-usage-governance}
 
-Alle [!DNL Adobe Experience Platform] -doelen zijn compatibel met het beleid voor gegevensgebruik bij het verwerken van uw gegevens. Voor gedetailleerde informatie over hoe [!DNL Adobe Experience Platform] gegevensbeheer afdwingt, lees het [ overzicht van het Beleid van Gegevens ](https://experienceleague.adobe.com/docs/experience-platform/data-governance/home.html?lang=nl-NL).
+Alle [!DNL Adobe Experience Platform] -doelen zijn compatibel met het beleid voor gegevensgebruik bij het verwerken van uw gegevens. Voor gedetailleerde informatie over hoe [!DNL Adobe Experience Platform] gegevensbeheer afdwingt, lees het [ overzicht van het Beleid van Gegevens ](https://experienceleague.adobe.com/docs/experience-platform/data-governance/home.html).
 
 ## Aanvullende bronnen {#additional-resources}
 
