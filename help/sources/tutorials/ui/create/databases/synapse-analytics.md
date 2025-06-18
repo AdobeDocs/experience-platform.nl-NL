@@ -3,9 +3,9 @@ title: Een Azure Synapse Analytics Source Connection maken in de gebruikersinter
 description: Leer hoe u een Azure Synapse Analytics-bronverbinding (hierna "Synapse" genoemd) maakt met behulp van de Adobe Experience Platform-gebruikersinterface.
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 1f1ce317-eaaf-4ad2-a5fb-236983220bd7
-source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
+source-git-commit: f8eb8640360205e8ae9579d4b664d4880bf8a368
 workflow-type: tm+mt
-source-wordcount: '425'
+source-wordcount: '439'
 ht-degree: 0%
 
 ---
@@ -16,55 +16,67 @@ ht-degree: 0%
 >
 >De [!DNL Azure Synapse Analytics] -bron is in de broncatalogus beschikbaar voor gebruikers die Real-Time Customer Data Platform Ultimate hebben aangeschaft.
 
-Deze zelfstudie bevat stappen voor het maken van een [!DNL Azure Synapse Analytics] (hierna &quot;[!DNL Synapse]&quot; genoemd) bronconnector met behulp van de [!DNL Experience Platform] -gebruikersinterface.
+Lees deze handleiding voor informatie over hoe u uw [!DNL Azure Synapse Analytics] -account kunt verbinden met Adobe Experience Platform via de werkruimte voor bronnen in de gebruikersinterface.
 
 ## Aan de slag
 
-Deze zelfstudie vereist een goed begrip van de volgende onderdelen van Adobe Experience Platform:
+Deze zelfstudie vereist een goed begrip van de volgende onderdelen van Experience Platform:
 
 * [[!DNL Experience Data Model (XDM)]  Systeem ](../../../../../xdm/home.md): Het gestandaardiseerde kader waardoor [!DNL Experience Platform] gegevens van de klantenervaring organiseert.
    * [ Grondbeginselen van schemacompositie ](../../../../../xdm/schema/composition.md): Leer over de basisbouwstenen van schema&#39;s XDM, met inbegrip van zeer belangrijke principes en beste praktijken in schemacompositie.
    * [ het leerprogramma van de Redacteur van het Schema ](../../../../../xdm/tutorials/create-schema-ui.md): Leer hoe te om douaneschema&#39;s tot stand te brengen gebruikend de Redacteur UI van het Schema.
 * [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md): biedt een uniform, real-time consumentenprofiel dat is gebaseerd op geaggregeerde gegevens van meerdere bronnen.
 
-Als u reeds een geldige [!DNL Synapse] verbinding hebt, kunt u de rest van dit document overslaan en aan het leerprogramma te werk gaan op [ vormend een dataflow ](../../dataflow/databases.md).
+Als u reeds een geldige [!DNL Azure Synapse Analytics] verbinding hebt, kunt u de rest van dit document overslaan en aan het leerprogramma te werk gaan op [ vormend een dataflow ](../../dataflow/databases.md).
 
 ### Vereiste referenties verzamelen
 
-Als u toegang wilt krijgen tot uw [!DNL Synapse] account op [!DNL Experience Platform] , moet u de volgende waarden opgeven:
+Lees het [[!DNL Azure Synapse Analytics]  overzicht ](../../../../connectors/databases/synapse-analytics.md#prerequisites) voor informatie over authentificatie.
 
-| Credentials | Beschrijving |
-| ---------- | ----------- |
-| `connectionString` | De verbindingstekenreeks die aan uw [!DNL Synapse] -verificatie is gekoppeld. Het patroon van de [!DNL Synapse] verbindingstekenreeks is `Server=tcp:{SERVER_NAME}.database.windows.net,1433;Database={DATABASE};User ID={USERNAME}@{SERVER_NAME};Password={PASSWORD};Trusted_Connection=False;Encrypt=True;Connection Timeout=30` . |
+## Navigeren door de catalogus met bronnen
 
-Voor meer informatie over deze waarde, verwijs naar [ dit  [!DNL Synapse]  document ](https://docs.microsoft.com/en-us/azure/data-factory/connector-azure-sql-data-warehouse).
+Selecteer in de gebruikersinterface van Experience Platform de optie **[!UICONTROL Sources]** in de linkernavigatie voor toegang tot de werkruimte van *[!UICONTROL Sources]* . Kies een categorie of gebruik de zoekbalk om de bron te zoeken.
 
-## Sluit uw [!DNL Synapse] -account aan
+Als u verbinding wilt maken met [!DNL Azure Synapse Analytics] , gaat u naar de categorie *[!UICONTROL Databases]* , selecteert u de **[!UICONTROL Azure Synapse analytics]** bronkaart en selecteert u vervolgens **[!UICONTROL Set up]** .
 
-Nadat u de vereiste gegevens hebt verzameld, voert u de onderstaande stappen uit om uw [!DNL Synapse] -account te koppelen aan [!DNL Experience Platform] .
+>[!TIP]
+>
+>Bronnen in de catalogus met bronnen geven de optie **[!UICONTROL Set up]** weer wanneer een bepaalde bron nog geen geverifieerde account heeft. Zodra een geverifieerd account is gemaakt, verandert deze optie in **[!UICONTROL Add data]** .
 
-Login aan [ Adobe Experience Platform ](https://platform.adobe.com) en selecteer dan **[!UICONTROL Sources]** van de linkernavigatiebar om tot de **[!UICONTROL Sources]** werkruimte toegang te hebben. In het scherm **[!UICONTROL Catalog]** worden diverse bronnen weergegeven waarmee u een account kunt maken.
+![ de broncatalogus met &quot;Analytics van Azure Synapse&quot;geselecteerd.](../../../../images/tutorials/create/azure-synapse-analytics/catalog.png)
 
-U kunt de juiste categorie selecteren in de catalogus aan de linkerkant van het scherm. U kunt ook de specifieke bron vinden waarmee u wilt werken met de zoekoptie.
+## Een bestaande account gebruiken {#existing}
 
-Selecteer onder de categorie **[!UICONTROL Databases]** de optie **[!UICONTROL Azure Synapse Analytics]** . Selecteer **[!UICONTROL Configure]** als dit de eerste keer is dat u deze connector gebruikt. Anders selecteert u **[!UICONTROL Add data]** om een nieuwe [!DNL Synapse] -connector te maken.
+Als u een bestaande account wilt gebruiken, selecteert u **[!UICONTROL Existing account]** en vervolgens de [!DNL Azure Synapse Analytics] -account die u wilt gebruiken.
 
-![](../../../../images/tutorials/create/azure-synapse-analytics/catalog.png)
+![ de bestaande rekeningsinterface van het bronwerkschema.](../../../../images/tutorials/create/azure-synapse-analytics/existing.png)
 
-De pagina **[!UICONTROL Connect to Azure Synapse Analytics]** wordt weergegeven. Op deze pagina kunt u nieuwe of bestaande referenties gebruiken.
+## Een nieuwe account maken {#new}
 
-### Nieuwe account
+Als u een nieuwe account wilt maken, selecteert u **[!UICONTROL New account]** en geeft u een naam op en voegt u desgewenst een beschrijving voor uw account toe.
 
-Selecteer **[!UICONTROL New account]** als u nieuwe referenties gebruikt. Geef in het invoerformulier dat wordt weergegeven een naam, een optionele beschrijving en uw [!DNL Synapse] -gegevens op. Als u klaar bent, selecteert u **[!UICONTROL Connect]** en laat u de nieuwe verbinding enige tijd tot stand brengen.
+![ de nieuwe rekeningsinterface van het bronwerkschema.](../../../../images/tutorials/create/azure-synapse-analytics/new.png)
 
-![](../../../../images/tutorials/create/azure-synapse-analytics/new.png)
+### Verbinding maken met Experience Platform
 
-### Bestaande account
+U kunt uw [!DNL Azure Synapse Analytics] -account verbinden met Experience Platform met behulp van accountsleutelverificatie of service principal en sleutelverificatie.
 
-Als u een bestaande account wilt verbinden, selecteert u de [!DNL Synapse] -account waarmee u verbinding wilt maken en selecteert u **[!UICONTROL Next]** om door te gaan.
+>[!BEGINTABS]
 
-![](../../../../images/tutorials/create/azure-synapse-analytics/existing.png)
+>[!TAB  de belangrijkste authentificatie van de Rekening ]
 
-## Volgende stappen
+Om rekeningszeer belangrijke authentificatie te gebruiken, selecteer **[!UICONTROL Account key authentication]**, verstrek uw [ verbindingskoord ](../../../../connectors/databases/synapse-analytics.md#prerequisites), en selecteer dan **[!UICONTROL Connect to source]**.
 
-Aan de hand van deze zelfstudie hebt u een verbinding tot stand gebracht met uw [!DNL Synapse] -account. U kunt nu aan het volgende leerprogramma verdergaan en [ een dataflow vormen om gegevens in  [!DNL Experience Platform]](../../dataflow/databases.md) te brengen.
+![ &quot;creeer nieuwe rekening&quot;stap in het bronwerkschema met &quot;geselecteerde de authentificatie van de rekeningssleutel.](../../../../images/tutorials/create/azure-synapse-analytics/account-key-auth.png)
+
+>[!TAB  het hoofd van de dienst en zeer belangrijke authentificatie ]
+
+Alternatief, selecteer **[!UICONTROL Service principal and key authentication]**, verstrek waarden voor uw [ authentificatiegeloofsbrieven ](../../../../connectors/databases/synapse-analytics.md#prerequisites), en selecteer dan **[!UICONTROL Connect to source]**.
+
+![ &quot;creeer nieuwe rekening&quot;stap in het bronwerkschema met de &quot;dienst belangrijkste en zeer belangrijke geselecteerde authentificatie&quot;.](../../../../images/tutorials/create/azure-synapse-analytics/service-principal.png)
+
+>[!ENDTABS]
+
+## Een gegevensstroom maken voor [!DNL Azure Synapse Analytics] -gegevens
+
+Nu u met succes uw [!DNL Azure Synapse Analytics] gegevensbestand hebt verbonden, kunt u [ nu tot een dataflow leiden en gegevens van uw gegevensbestand in Experience Platform ](../../dataflow/databases.md) opnemen.
