@@ -4,14 +4,23 @@ title: Braze verbinding
 description: Braze is een uitgebreid platform voor klantbetrokkenheid dat relevante en gedenkwaardige ervaringen tussen klanten en de merken die ze leuk vinden, mogelijk maakt.
 last-substantial-update: 2024-08-20T00:00:00Z
 exl-id: 508e79ee-7364-4553-b153-c2c00cc85a73
-source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
+source-git-commit: 37e78035f2656a3693a771ab5a9622f5446a4c9d
 workflow-type: tm+mt
-source-wordcount: '1070'
-ht-degree: 0%
+source-wordcount: '1169'
+ht-degree: 3%
 
 ---
 
 # [!DNL Braze] verbinding
+
+>[!IMPORTANT]
+>
+>* Vanaf vrijdag 19 juni 2025 kunt u twee **[!DNL Braze]**-kaarten naast elkaar zien in de bestemmingencatalogus. Dit komt door een interne upgrade van de bestemmingsservice. De naam van de bestaande [!DNL Braze] doelconnector is gewijzigd in **[!UICONTROL (Deprecated) Braze]** en u hebt nu een nieuwe kaart met de naam **[!UICONTROL Braze]** beschikbaar.
+>* Gebruik de **[!UICONTROL Braze]** -verbinding in de catalogus voor nieuwe gegevensstromen voor activering. Als u actieve gegevens naar de **[!UICONTROL (Deprecated) Braze]** -bestemming hebt, worden deze automatisch bijgewerkt, zodat u geen actie hoeft te ondernemen.
+>* Als u dataflows door de [ Dienst API van de Stroom ](https://developer.adobe.com/experience-platform-apis/references/destinations/) creeert, moet u uw [!DNL flow spec ID] en [!DNL connection spec ID] aan de volgende waarden bijwerken:
+>   * Stroomspecificatie-ID: `cb7919bd-69aa-462d-bcc0-db7cdc7fdf51`
+>   * Verbindingsspecificatie-ID: `ab957205-5a78-4393-b901-b930ed548220`
+
 
 ## Overzicht {#overview}
 
@@ -51,7 +60,7 @@ In deze sectie wordt beschreven welke soorten publiek u naar dit doel kunt expor
 
 | Oorsprong publiek | Ondersteund | Beschrijving |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | ✓ | Het publiek produceerde door de Dienst van de Segmentatie van Experience Platform [&#128279;](../../../segmentation/home.md). |
+| [!DNL Segmentation Service] | ✓ | Het publiek produceerde door de Dienst van de Segmentatie van Experience Platform [ ](../../../segmentation/home.md). |
 | Aangepaste uploads | ✓ | Het publiek [ ingevoerde ](../../../segmentation/ui/audience-portal.md#import-audience) in Experience Platform van Csv- dossiers. |
 
 {style="table-layout:auto"}
