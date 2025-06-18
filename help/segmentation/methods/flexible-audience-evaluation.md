@@ -3,9 +3,9 @@ title: Flexibele gids voor de evaluatie van het publiek
 description: Leer hoe te om flexibele publieksevaluatie te gebruiken om partijsegmentatietaken op bestelling in werking te stellen.
 role: Developer, User
 exl-id: b85bf735-be02-4bf7-bd63-8d74ae905e58
-source-git-commit: 9aa638903eaf9bf29ce1da3d62f8e69c15ffe50a
+source-git-commit: 7a0a98ea035892943a0e9a9a2b059701f6f1f612
 workflow-type: tm+mt
-source-wordcount: '1068'
+source-wordcount: '1124'
 ht-degree: 0%
 
 ---
@@ -326,7 +326,7 @@ Nadat u hebt bevestigd dat het juiste publiek wordt vermeld, kunt u doorgaan met
 
 In de volgende video ziet u hoe u een flexibele publieksevaluatie in Experience Platform kunt openen en gebruiken.
 
->[!VIDEO](https://video.tv.adobe.com/v/3453646?&captions=dut)
+>[!VIDEO](https://video.tv.adobe.com/v/3453640?)
 
 ## Veelgestelde vragen {#faq}
 
@@ -396,3 +396,10 @@ De flexibele de looppas van de publieksevaluatie die of gebruikend API of de tel
 
 +++
 
+### Moet ik alle afhankelijke doelgroepen evalueren bij het evalueren van het grote publiek met een flexibele publieksevaluatie?
+
++++ Antwoord
+
+Nee. De flexibele publieksevaluatie zal automatisch alle afhankelijke publiek evalueren. Bijvoorbeeld, als het Publiek A van Publiek B afhangt, moet u slechts Publiek B evalueren. De flexibele publieksevaluatie zal Publiek A en dan Publiek B automatisch evalueren.
+
++++
