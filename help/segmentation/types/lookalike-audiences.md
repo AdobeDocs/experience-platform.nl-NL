@@ -32,14 +32,14 @@ Met look-alike soorten publiek, kunt u uitgebreide soorten publiek tot stand bre
 
 Zorg ervoor dat u de volgende concepten begrijpt voordat u aan de slag gaat met look-alike-soorten:
 
-- **het publiek van de Basis**: Het basispubliek is het publiek dat u meer inzichten over wilt weten. Dit is het publiek dat het blik-gelijke model **** op gebaseerd is.
+- **het publiek van de Basis**: Het basispubliek is het publiek dat u meer inzichten over wilt weten. Dit is het publiek dat het blik-gelijke model **&#x200B;**&#x200B;op gebaseerd is.
 - **blik-gelijkaardig model**: Een blik-gelijkaardig model is een machine het leren model dat op elk geschikt basispubliek zonder enige klanteninput wordt getraind. Elk model ziet er hetzelfde uit en creëert de invloedrijke factoren en grafieken van de gelijkenis. Een blik-gelijkaardig model wordt **niet** gescoord.
 - **kijkt-als publiek**: Een blik-gelijkaardig publiek is het publiek dat wordt gecreeerd wanneer een blik-gelijkaardig model met een geselecteerde gelijkenisdrempel op het basispubliek wordt toegepast. U kunt veelvoudige blik-alike publiek tot stand brengen gebruikend het zelfde blik-als model. Het publiek ziet er hetzelfde uit: wat wordt er gescoord.
 - **Totale adresseerbare publieksgrootte**: De totale adresseerbare publieksgrootte is het totale aantal profielen in de afgelopen 30 dagen minus de populatie van het basispubliek in de afgelopen 30 dagen. Bijvoorbeeld, als een klant 10 miljoen profielen in de afgelopen 30 dagen heeft, en het basispubliek 1 miljoen profielen in de afgelopen 30 dagen heeft, is de totale adresseerbare publieksgrootte 9 miljoen profielen.
 
 ## Subsidiabiliteit {#eligibility}
 
-Om blik-gelijke inzichten te gebruiken, moet het basispubliek **** aan de volgende toelatingscriteria voldoen:
+Om blik-gelijke inzichten te gebruiken, moet het basispubliek **&#x200B;**&#x200B;aan de volgende toelatingscriteria voldoen:
 
 - Het basispubliek **moet** binnen Experience Platform worden gecreeerd.
    - Extern-geproduceerd publiek is **niet** geschikt voor blik-gelijke inzichten.
