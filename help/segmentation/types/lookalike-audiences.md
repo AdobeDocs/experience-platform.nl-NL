@@ -3,18 +3,26 @@ solution: Experience Platform
 title: Soortgelijke soorten publiek
 description: Leer hoe u nieuwe hoogwaardige doelgroepen in Adobe Experience Platform kunt kiezen met behulp van look-alike-soorten publiek.
 exl-id: c43dac6c-18a0-482f-803e-b75e1b211e98
-source-git-commit: f6d700087241fb3a467934ae8e64d04f5c1d98fa
+source-git-commit: d978437479bedd0f943a6d68de78073f318cccb5
 workflow-type: tm+mt
-source-wordcount: '2158'
+source-wordcount: '2262'
 ht-degree: 0%
 
 ---
 
 # Hulplijn voor vergelijkbaar publiek
 
->[!IMPORTANT]
+>[!AVAILABILITY]
 >
 >De blik-gelijke inzichten en het blik-gelijke publiek zijn slechts beschikbaar in de **B2C- uitgave**.
+
+>[!IMPORTANT]
+>
+>Zichtbare inzichten en het kijkachtige publiek worden automatisch onbruikbaar gemaakt voor milieu&#39;s die laag gebruik tonen. Laag gebruik wordt gedefinieerd als het niet weergeven van look-alike-inzichten gedurende de laatste drie maanden of het niet maken van een nieuw soort publiek voor de afgelopen zes maanden.
+>
+>Als look-alike inzichten voor uw omgeving zijn uitgeschakeld, kunt u toegang aanvragen door een e-mail te sturen naar het Adobe Customer Care-team, met inbegrip van uw organisatie-id en de omgevingsdetails in uw bericht.
+>
+>Na bevestiging door de klantenservice van Adobe worden alle look-alike inzichten en publiek ingeschakeld voor alle sandboxen in uw omgeving.
 
 In Adobe Experience Platform bieden look-alike-gebruikers intelligente inzichten op elk van uw doelgroepen en maken ze gebruik van op computers gebaseerde inzichten om klanten met een hoge waarde te identificeren en als doel in te stellen met uw marketingcampagnes.
 
@@ -24,14 +32,14 @@ Met look-alike soorten publiek, kunt u uitgebreide soorten publiek tot stand bre
 
 Zorg ervoor dat u de volgende concepten begrijpt voordat u aan de slag gaat met look-alike-soorten:
 
-- **het publiek van de Basis**: Het basispubliek is het publiek dat u meer inzichten over wilt weten. Dit is het publiek dat het blik-gelijke model **&#x200B;**&#x200B;op gebaseerd is.
+- **het publiek van de Basis**: Het basispubliek is het publiek dat u meer inzichten over wilt weten. Dit is het publiek dat het blik-gelijke model **** op gebaseerd is.
 - **blik-gelijkaardig model**: Een blik-gelijkaardig model is een machine het leren model dat op elk geschikt basispubliek zonder enige klanteninput wordt getraind. Elk model ziet er hetzelfde uit en creëert de invloedrijke factoren en grafieken van de gelijkenis. Een blik-gelijkaardig model wordt **niet** gescoord.
 - **kijkt-als publiek**: Een blik-gelijkaardig publiek is het publiek dat wordt gecreeerd wanneer een blik-gelijkaardig model met een geselecteerde gelijkenisdrempel op het basispubliek wordt toegepast. U kunt veelvoudige blik-alike publiek tot stand brengen gebruikend het zelfde blik-als model. Het publiek ziet er hetzelfde uit: wat wordt er gescoord.
 - **Totale adresseerbare publieksgrootte**: De totale adresseerbare publieksgrootte is het totale aantal profielen in de afgelopen 30 dagen minus de populatie van het basispubliek in de afgelopen 30 dagen. Bijvoorbeeld, als een klant 10 miljoen profielen in de afgelopen 30 dagen heeft, en het basispubliek 1 miljoen profielen in de afgelopen 30 dagen heeft, is de totale adresseerbare publieksgrootte 9 miljoen profielen.
 
 ## Subsidiabiliteit {#eligibility}
 
-Om blik-gelijke inzichten te gebruiken, moet het basispubliek **&#x200B;**&#x200B;aan de volgende toelatingscriteria voldoen:
+Om blik-gelijke inzichten te gebruiken, moet het basispubliek **** aan de volgende toelatingscriteria voldoen:
 
 - Het basispubliek **moet** binnen Experience Platform worden gecreeerd.
    - Extern-geproduceerd publiek is **niet** geschikt voor blik-gelijke inzichten.
@@ -75,7 +83,9 @@ De volgende rechten gelden voor het gebruik van look-alike-soorten:
 
 Pakketten met invoegtoepassingen, die later beschikbaar zullen zijn, verhogen de rechten voor de productie van sandboxen met 20 soorten publiek per verpakking.
 
-Neem contact op met uw Adobe-vertegenwoordiger om te bevestigen dat u toegang hebt tot look-alike soorten publiek.
+## Toegang {#access}
+
+Om te bevestigen als u toegang tot look-alike publiek hebt, selecteer om het even welk publiek binnen de Portaal van het Publiek en controleer als het **[!UICONTROL Look-alike insights]** lusje zichtbaar is.
 
 ## Zichtbare inzichten weergeven {#view}
 
@@ -94,7 +104,7 @@ De pagina met publieksdetails wordt weergegeven. Selecteer het tabblad **[!UICON
 >title="Gelijksoortigheid en bereik"
 >abstract="Met de gelijkenis en het bereik van de grafiek wordt het verwachte bereik van een publiek dat er uitziet boven een bepaalde score voor gelijkenis weergegeven. U kunt de muisaanwijzer boven een specifiek punt in de grafiek plaatsen om het percentage voor gelijkenis en het verwachte aantal profielen voor het momenteel gemarkeerde punt weer te geven."
 
-De gelijkenis en bereiksectie toont een grafiek die het verwachte bereik van een publiek dat van look-alike bestaat uit profielen boven een bepaalde gelijkenisscore in kaart brengt. De gelijkenisscore vertegenwoordigt de **afstand** van gelijkenis tussen het profiel van het basispubliek en het blik-gelijke profiel van het inzicht.
+De gelijkenis en bereiksectie toont een grafiek die het verwachte bereik van een publiek dat van look-alike bestaat uit profielen boven een bepaalde gelijkenisscore in kaart brengt. De gelijkenisscore vertegenwoordigt de **afstand** van gelijkenis tussen het profiel van het basispubliek en het blik-gelijke profiel van insight.
 
 ![ de gelijkenis en bereikgrafiek wordt benadrukt.](../images/types/lookalike/similarity-and-reach.png)
 
@@ -118,7 +128,7 @@ De blik-gelijke sectie van publiek toont een lijst van alle blik-gelijke publiek
 >id="platform_audiences_lookAlike_influentialFactors"
 >title="Influentiële factoren"
 >abstract="Influentiële factoren zijn kenmerken, gebeurtenissen en publiekslidmaatschappen die belangrijk zijn voor het verklaren van gelijkenis van een profiel aan leden van het basispubliek. De etiketten en het beleid van het gegevensgebruik kunnen worden gebruikt om bepaalde gegevens uit te sluiten om als invloedrijke factoren in blik-gelijkaardige modellen worden beschouwd."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/types/lookalike-audiences.html?lang=nl-NL#exclude" text="Gegevens uitsluiten"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/types/lookalike-audiences.html#exclude" text="Gegevens uitsluiten"
 
 In de sectie met invloedrijke factoren worden de 100 belangrijkste factoren weergegeven die van invloed zijn op het model dat er op lijkt voor het geselecteerde basispubliek. Deze invloedrijke factoren zijn de profielattributen, de ervaringsgebeurtenissen, en de publiekslidmaatschappen die het belangrijkst in het verklaren van gelijkenissen in het basispubliek zijn. Met een goed begrip van de belangrijkste invloedrijke factoren kunt u uw marketinginhoud beter aanpassen aan dit publiek en aan elk publiek dat u eruit maakt. Niet alle invloedrijke factoren die van invloed zijn op het model dat er op lijkt, worden weergegeven.
 
