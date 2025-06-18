@@ -2,9 +2,9 @@
 title: Verbinding maken met Experience Platform via de gebruikersinterface van uw Salesforce Marketing Cloud-account
 description: Leer hoe u uw Salesforce Marketing Cloud-account via de gebruikersinterface met Experience Platform kunt verbinden.
 exl-id: 1d9bde60-31e0-489c-9c1c-b6471e0ea554
-source-git-commit: 7ff0709b62590bb80c1ed664368f28cdc4a950ea
+source-git-commit: 0c6a51d06e57eb6de063a350bd4b17022555a0b4
 workflow-type: tm+mt
-source-wordcount: '526'
+source-wordcount: '555'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 0%
 >
 >De [!DNL Salesforce Marketing Cloud] -bron wordt afgekeurd in januari 2026. Later dit jaar zal een nieuwe bron worden vrijgegeven als alternatief. Zodra de nieuwe bron wordt vrijgegeven, moet u van plan zijn om aan de nieuwe bron te migreren door nieuwe rekeningsverbindingen en dataflows vóór eind Januari 2026 te creëren.
 
-Deze zelfstudie biedt stappen voor het verbinden van uw [!DNL Salesforce Marketing Cloud] -account met Adobe Experience Platform via de gebruikersinterface.
+Lees deze handleiding voor informatie over hoe u uw [!DNL Salesforce Marketing Cloud] -account kunt verbinden met Adobe Experience Platform via de werkruimte Bronnen in de Experience Platform-gebruikersinterface.
 
 ## Aan de slag
 
@@ -30,46 +30,51 @@ Als u reeds een [!DNL Salesforce Marketing Cloud] rekening hebt, kunt u de rest 
 
 ### Vereiste referenties verzamelen
 
-Als u toegang wilt krijgen tot uw [!DNL Salesforce Marketing Cloud] -account op Experience Platform, moet u de volgende waarden opgeven:
+Lees het [[!DNL Salesforce Marketing Cloud]  overzicht ](../../../../connectors/marketing-automation/salesforce-marketing-cloud.md#prerequisites) voor informatie over authentificatie.
 
-| Credentials | Beschrijving |
-| ---------- | ----------- |
-| Host | De hostserver van uw toepassing. Dit is vaak uw subdomein. **Nota:** wanneer het ingaan van uw `host` waarde, moet u `{subdomain}.rest.marketingcloudapis.com` specificeren. Als de host-URL bijvoorbeeld `https://acme-ab12c3d4e5fg6hijk7lmnop8qrst.auth.marketingcloudapis.com/` is, moet u `acme-ab12c3d4e5fg6hijk7lmnop8qrst.rest.marketingcloudapis.com/` als waarde voor de host invoeren. |
-| Client-id | De client-id die aan uw [!DNL Salesforce Marketing Cloud] -toepassing is gekoppeld. |
-| Clientgeheim | Het clientgeheim dat aan de toepassing [!DNL Salesforce Marketing Cloud] is gekoppeld. |
-
-Voor meer informatie over authentificatie voor [!DNL Salesforce Marketing Cloud], bezoek de [[!DNL Salesforce]  authentificatiedocumentatie ](https://developer.salesforce.com/docs/atlas.en-us.mc-apis.meta/mc-apis/authentication.htm).
-
-## Sluit uw [!DNL Salesforce Marketing Cloud] -account aan
+## Navigeren door de catalogus met bronnen
 
 >[!IMPORTANT]
 >
 >Aangepaste objectinvoer wordt momenteel niet ondersteund door de bronintegratie van [!DNL Salesforce Marketing Cloud] .
 
-Selecteer in de gebruikersinterface van Experience Platform de optie **[!UICONTROL Sources]** in de linkernavigatie voor toegang tot de werkruimte van [!UICONTROL Sources] . In [!UICONTROL Catalog] worden diverse bronnen weergegeven die door Experience Platform worden ondersteund.
 
-U kunt de juiste categorie selecteren in de lijst met categorieën. U kunt de zoekbalk ook gebruiken om te filteren op een bepaalde bron.
+Selecteer in de gebruikersinterface van Experience Platform de optie **[!UICONTROL Sources]** in de linkernavigatie voor toegang tot de werkruimte van *[!UICONTROL Sources]* . Kies een categorie of gebruik de zoekbalk om de bron te zoeken.
 
-Selecteer onder de categorie [!UICONTROL Marketing automation] de optie **[!UICONTROL Salesforce Marketing Cloud]** en selecteer vervolgens **[!UICONTROL Set up]** .
+Als u verbinding wilt maken met [!DNL Salesforce Marketing Cloud] , gaat u naar de categorie *[!UICONTROL Marketing Automation]* , selecteert u de **[!UICONTROL Salesforce Marketing Cloud]** bronkaart en selecteert u vervolgens **[!UICONTROL Set up]** .
 
-![ de broncatalogus met de geselecteerde bron van Salesforce Marketing Cloud.](../../../../images/tutorials/create/salesforce-marketing-cloud/catalog.png)
+>[!TIP]
+>
+>Bronnen in de catalogus met bronnen geven de optie **[!UICONTROL Set up]** weer wanneer een bepaalde bron nog geen geverifieerde account heeft. Zodra een geverifieerd account is gemaakt, verandert deze optie in **[!UICONTROL Add data]** .
 
-De pagina **[!UICONTROL Connect to Salesforce Marketing Cloud]** wordt weergegeven. Op deze pagina kunt u een nieuw account maken of een bestaand account gebruiken.
+![ de broncatalogus van bronnen met de Salesforce Marketing Cloud geselecteerde bronkaart.](../../../../images/tutorials/create/salesforce-marketing-cloud/catalog.png)
 
-### Nieuwe account
+## Een bestaande account gebruiken {#existing}
 
-Als u een nieuwe account wilt maken, selecteert u **[!UICONTROL New account]** en geeft u een naam voor uw account, een optionele beschrijving en de verificatiereferenties die overeenkomen met uw [!DNL Salesforce Marketing Cloud] -account.
+Als u een bestaande account wilt gebruiken, selecteert u **[!UICONTROL Existing account]** en vervolgens de [!DNL Salesforce Marketing Cloud] -account die u wilt gebruiken.
 
-Als u klaar bent, selecteert u **[!UICONTROL Connect to source]** en laat u de nieuwe verbinding enige tijd tot stand brengen.
+![ de bestaande rekeningeninterface in het bronwerkschema met &quot;Bestaande geselecteerde rekening&quot;.](../../../../images/tutorials/create/salesforce-marketing-cloud/existing.png)
 
-![ de nieuwe rekeningsinterface waar u een nieuwe rekening voor Salesforce Marketing Cloud kunt voor authentiek verklaren.](../../../../images/tutorials/create/salesforce-marketing-cloud/new.png)
+## Een nieuwe account maken {#new}
 
-### Bestaande account
+U kunt de [!DNL Salesforce Marketing Cloud] -bron gebruiken om verbinding te maken met Experience Platform op [!DNL Azure] of [!DNL Amazon Web Services] (AWS).
 
-Als u al een bestaande account hebt, selecteert u **[!UICONTROL Existing account]** en selecteert u vervolgens de account die u wilt gebruiken in de lijst die wordt weergegeven.
+### Verbinding maken met Experience Platform op [!DNL Azure] {#azure}
 
-![ de bestaande rekeningsinterface waar u van een lijst van bestaande rekeningen van Salesforce Marketing Cloud kunt selecteren.](../../../../images/tutorials/create/salesforce-marketing-cloud/existing.png)
+Om met Experience Platform op [!DNL Azure] te verbinden, verstrek een rekeningsnaam, een facultatieve beschrijving, en uw [ geloofsbrieven van de rekeningsauthentificatie ](../../../../connectors/marketing-automation/salesforce-marketing-cloud.md#azure). Als u klaar bent, selecteert u **[!UICONTROL Connect to source]** en laat de verbinding enkele ogenblikken tot stand komen.
 
-## Volgende stappen
+![ de nieuwe rekeningsinterface in het bronwerkschema voor verbinding aan Experience Platform op Azure.](../../../../images/tutorials/create/salesforce-marketing-cloud/new-azure.png)
 
-Aan de hand van deze zelfstudie hebt u een verbinding tot stand gebracht tussen uw [!DNL Salesforce Marketing Cloud] -account en Experience Platform. U kunt nu aan het volgende leerprogramma verdergaan en [ een dataflow creëren om uw gegevens van de marketing automatisering in Experience Platform ](../../dataflow/marketing-automation.md) te brengen.
+### Verbinding maken met Experience Platform op Amazon Web Services (AWS) {#aws}
+
+>[!AVAILABILITY]
+>
+>Deze sectie is van toepassing op implementaties van Experience Platform die op Amazon Web Services (AWS) worden uitgevoerd. Experience Platform die op AWS wordt uitgevoerd, is momenteel beschikbaar voor een beperkt aantal klanten. Meer over de gesteunde infrastructuur van Experience Platform leren, zie het [ multi-wolkenoverzicht van Experience Platform ](../../../../../landing/multi-cloud.md).
+
+Om met Experience Platform op [!DNL AWS] te verbinden, zorg ervoor dat u in een zandbak VA6 bent en een rekeningsnaam, een facultatieve beschrijving, en uw [ geloofsbrieven van de rekeningsauthentificatie ](../../../../connectors/marketing-automation/salesforce-marketing-cloud.md#aws) verstrekt. Als u klaar bent, selecteert u **[!UICONTROL Connect to source]** en laat de verbinding enkele ogenblikken tot stand komen.
+
+![ de nieuwe rekeningsinterface in het bronwerkschema voor verbinding aan Experience Platform op AWS ](../../../../images/tutorials/create/salesforce-marketing-cloud/new-aws.png)
+
+## Een gegevensstroom maken voor [!DNL Salesforce Marketing Cloud] -gegevens
+
+Nu u met succes uw [!DNL Salesforce Marketing Cloud] hebt verbonden, kunt u [ nu tot een dataflow en gegevens van uw marketing automatiseringsleverancier in Experience Platform ](../../dataflow/marketing-automation.md) leiden.

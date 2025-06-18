@@ -1,30 +1,31 @@
 ---
-title: Een Salesforce Marketing Cloud Base Connection maken met de Flow Service API
-description: Leer hoe u uw Salesforce Marketing Cloud-account op Experience Platform verifieert met behulp van de Flow Service API.
+title: Salesforce Marketing Cloud met Experience Platform verbinden met behulp van de Flow Service API
+description: Leer hoe u uw Salesforce Marketing Cloud-account met Experience Platform kunt verbinden via API's.
 exl-id: fbf68d3a-f8b1-4618-bd56-160cc6e3346d
-source-git-commit: 7ff0709b62590bb80c1ed664368f28cdc4a950ea
+source-git-commit: 0c0a58df4beae499008e52c118b40bed86ff0596
 workflow-type: tm+mt
-source-wordcount: '544'
+source-wordcount: '587'
 ht-degree: 0%
 
 ---
 
-# Een [!DNL Salesforce Marketing Cloud] basisverbinding maken met de [!DNL Flow Service] API
+# Verbinding maken met Experience Platform via de [!DNL Flow Service] API[!DNL Salesforce Marketing Cloud]
 
 >[!WARNING]
 >
 >De [!DNL Salesforce Marketing Cloud] -bron wordt afgekeurd in januari 2026. Later dit jaar zal een nieuwe bron worden vrijgegeven als alternatief. Zodra de nieuwe bron wordt vrijgegeven, moet u van plan zijn om aan de nieuwe bron te migreren door nieuwe rekeningsverbindingen en dataflows vóór eind Januari 2026 te creëren.
 
-Een basisverbinding vertegenwoordigt de geverifieerde verbinding tussen een bron en Adobe Experience Platform.
-
-Dit leerprogramma begeleidt u door de stappen om een basisverbinding voor [!DNL Salesforce Marketing Cloud] tot stand te brengen gebruikend [[!DNL Flow Service]  API ](<https://www.adobe.io/experience-platform-apis/references/flow-service/>).
+Lees deze gids om te leren hoe te om uw [!DNL Salesforce Marketing Cloud] rekening met Adobe Experience Platform te verbinden gebruikend [[!DNL Flow Service]  API ](https://developer.adobe.com/experience-platform-apis/references/flow-service/).
 
 ## Aan de slag
 
-Deze handleiding vereist een goed begrip van de volgende onderdelen van Adobe Experience Platform:
+Deze handleiding vereist een goed begrip van de volgende onderdelen van Experience Platform:
 
 * [ Bronnen ](../../../../home.md): Experience Platform staat gegevens toe om van diverse bronnen worden opgenomen terwijl het voorzien van u van de capaciteit om, inkomende gegevens te structureren te etiketteren en te verbeteren gebruikend de diensten van Experience Platform.
 * [ Sandboxes ](../../../../../sandboxes/home.md): Experience Platform verstrekt virtuele zandbakken die één enkele instantie van Experience Platform in afzonderlijke virtuele milieu&#39;s verdelen helpen digitale ervaringstoepassingen ontwikkelen en ontwikkelen.
+
+In de volgende secties vindt u aanvullende informatie die u moet weten voordat u verbinding kunt maken met [!DNL Azure Synapse Analytics] via de [!DNL Flow Service] API.
+
 
 ### Experience Platform API&#39;s gebruiken
 
@@ -34,26 +35,31 @@ In de volgende sectie vindt u aanvullende informatie die u moet weten als u verb
 
 ### Vereiste referenties verzamelen
 
-[!DNL Flow Service] kan alleen verbinding maken met [!DNL Salesforce Marketing Cloud] als u de volgende verbindingseigenschappen opgeeft:
+Lees het [[!DNL Salesforce Marketing Cloud]  authentificatieoverzicht ](../../../../connectors/marketing-automation/salesforce-marketing-cloud.md) voor informatie over authentificatie.
 
-| Credentials | Beschrijving |
-| ---------- | ----------- |
-| `host` | De hostserver van uw toepassing. Dit is vaak uw subdomein. **Nota:** wanneer het ingaan van uw `host` waarde, moet u `{subdomain}.rest.marketingcloudapis.com` specificeren. Als de host-URL bijvoorbeeld `https://acme-ab12c3d4e5fg6hijk7lmnop8qrst.auth.marketingcloudapis.com/` is, moet u `acme-ab12c3d4e5fg6hijk7lmnop8qrst.rest.marketingcloudapis.com/` als waarde voor de host invoeren. |
-| `clientId` | De client-id die aan uw [!DNL Salesforce Marketing Cloud] -toepassing is gekoppeld. |
-| `clientSecret` | Het clientgeheim dat aan de toepassing [!DNL Salesforce Marketing Cloud] is gekoppeld. |
-| `connectionSpec.id` | De verbindingsspecificatie keert de schakelaareigenschappen van een bron, met inbegrip van authentificatiespecificaties met betrekking tot het creëren van de basis en bronverbindingen terug. De verbindingsspecificatie-id voor [!DNL Salesforce Marketing Cloud] is: `ea1c2a08-b722-11eb-8529-0242ac130003` . |
+### Experience Platform API&#39;s gebruiken
 
-Voor meer informatie over begonnen worden, verwijs naar dit [[!DNL Salesforce Marketing Cloud]  document ](<https://developer.salesforce.com/docs/atlas.en-us.mc-apis.meta/mc-apis/authentication.htm>).
+Lees de gids op [ begonnen wordt met Experience Platform APIs ](../../../../../landing/api-guide.md) voor informatie over hoe te met succes vraag aan Experience Platform APIs maken.
 
-## Een basisverbinding maken
+## Verbinding maken [!DNL Salesforce Marketing Cloud] met Experience Platform op [!DNL Azure]
+
+Lees het volgende voor meer informatie over het maken van een basisverbinding en het verbinden van uw [!DNL Salesforce Marketing Cloud] -account met Experience Platform op [!DNL Azure] .
+
+### Een basisverbinding maken {#azure-base}
 
 >[!IMPORTANT]
 >
 >Aangepaste objectinvoer wordt momenteel niet ondersteund door de bronintegratie van [!DNL Salesforce Marketing Cloud] .
 
-Een basisverbinding behoudt informatie tussen uw bron en Experience Platform, met inbegrip van de verificatiereferenties van uw bron, de huidige status van de verbinding, en uw unieke identiteitskaart van de basisverbinding. Met de ID van de basisverbinding kunt u bestanden verkennen en door bestanden navigeren vanuit uw bron en kunt u de specifieke items identificeren die u wilt opnemen, inclusief informatie over hun gegevenstypen en indelingen.
+A **basisverbinding** slaat zeer belangrijke informatie op die uw bronsysteem met Adobe Experience Platform verbindt. Dit omvat het volgende:
 
-Als u een basis-verbindings-id wilt maken, vraagt u een POST-aanvraag naar het `/connections` -eindpunt en geeft u de [!DNL Salesforce Marketing Cloud] -verificatiegegevens op als onderdeel van de aanvraagprocedure.
+* Verificatiegegevens van uw bron
+* De huidige status van de verbinding
+* Een unieke **identiteitskaart van de basisverbinding**
+
+De **identiteitskaart van de basisverbinding** staat u toe om dossiers van uw bron te doorbladeren en te onderzoeken, die u helpen welke punten identificeren om in te voeren, samen met hun gegevenstypen en formaten.
+
+Als u een basis-verbindings-id wilt maken, verzendt u een POST-aanvraag naar het `/connections` -eindpunt, inclusief de [!DNL Salesforce Marketing Cloud] -verificatiereferenties in de aanvraagparameters.
 
 **API formaat**
 
@@ -63,43 +69,50 @@ POST /connections
 
 **Verzoek**
 
-Met de volgende aanvraag wordt een basisverbinding voor [!DNL Salesforce Marketing Cloud] gemaakt:
+Met de volgende aanvraag wordt een basisverbinding voor [!DNL Salesforce Marketing Cloud] gemaakt.
+
++++Voorbeeldverzoek weergeven
 
 ```shell
 curl -X POST \
-  'https://platform.adobe.io/data/foundation/flowservice/connections' \
-  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-  -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {ORG_ID}' \
-  -H 'x-sandbox-name: {SANDBOX_NAME}' \
-  -H 'Content-Type: application/json' \
-  -d '{
-      "name": "Salesforce Marketing Cloud base connection",
-      "description": "Salesforce Marketing Cloud base connection",
-      "auth": {
-          "specName": "Client-Id-Secret Based Authentication",
-          "params": {
-              "host": "acme-ab12c3d4e5fg6hijk7lmnop8qrst"
-              "clientId": "acme-salesforce-marketing-cloud",
-              "clientSecret": "xxxx"
-          }
-      },
-      "connectionSpec": {
-          "id": "ea1c2a08-b722-11eb-8529-0242ac130003",
-          "version": "1.0"
-      }
-  }'
+  'https://platform.adobe.io/data/foundation/flowservice/connections' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Content-Type: application/json' \
+  -d '{
+    "name": "Salesforce Marketing Cloud base connection for Azure",
+    "description": "Salesforce Marketing Cloud base connection for Azure",
+    "auth": {
+      "specName": "Client-Id-Secret Based Authentication",
+      "params": {
+        "host": "acme-ab12c3d4e5fg6hijk7lmnop8qrst",
+        "clientId": "acme-salesforce-marketing-cloud",
+        "clientSecret": "xxxx"
+      }
+    },
+    "connectionSpec": {
+      "id": "ea1c2a08-b722-11eb-8529-0242ac130003",
+      "version": "1.0"
+    }
+  }'
 ```
 
 | Eigenschap | Beschrijving |
-| -------- | ----------- |
+| --- | --- |
+| `auth.params.host` |
 | `auth.params.clientId` | De client-id die aan uw [!DNL Salesforce Marketing Cloud] -toepassing is gekoppeld. |
 | `auth.params.clientSecret` | Het clientgeheim dat aan de toepassing [!DNL Salesforce Marketing Cloud] is gekoppeld. |
 | `connectionSpec.id` | The [!DNL Salesforce Marketing Cloud] connection specification ID: `ea1c2a08-b722-11eb-8529-0242ac130003` . |
 
++++
+
++++Voorbeeldreactie van weergave
+
 **Reactie**
 
-Een succesvolle reactie keert de pas gecreëerde verbinding, met inbegrip van zijn unieke verbindings herkenningsteken (`id`) terug. Deze id is vereist om uw gegevens te kunnen bekijken in de volgende zelfstudie.
+Een succesvolle reactie keert details van de pas gecreëerde basisverbinding, met inbegrip van zijn uniek herkenningsteken (`id`) terug.
 
 ```json
 {
@@ -108,9 +121,74 @@ Een succesvolle reactie keert de pas gecreëerde verbinding, met inbegrip van zi
 }
 ```
 
-## Volgende stappen
++++
 
-Aan de hand van deze zelfstudie hebt u een [!DNL Salesforce Marketing Cloud] basisverbinding gemaakt met de [!DNL Flow Service] API. U kunt deze basis verbindings-id in de volgende zelfstudies gebruiken:
+## Verbinden [!DNL Salesforce Marketing Cloud] met Experience Platform op Amazon Web Services {#aws}
 
-* [Onderzoek de structuur en de inhoud van uw gegevenslijsten gebruikend  [!DNL Flow Service]  API](../../explore/tabular.md)
-* [Creeer een dataflow om marketing automatiseringsgegevens aan Experience Platform te brengen gebruikend  [!DNL Flow Service]  API](../../collect/marketing-automation.md)
+>[!AVAILABILITY]
+>
+>Deze sectie is van toepassing op implementaties van Experience Platform die op Amazon Web Services (AWS) worden uitgevoerd. Experience Platform die op AWS wordt uitgevoerd, is momenteel beschikbaar voor een beperkt aantal klanten. Meer over de gesteunde infrastructuur van Experience Platform leren, zie het [ multi-wolkenoverzicht van Experience Platform ](../../../../../landing/multi-cloud.md).
+
+Lees de onderstaande stappen voor informatie over hoe u uw [!DNL Salesforce Marketing Cloud] -account kunt verbinden met Experience Platform op AWS.
+
+### Een basisverbinding maken {#aws-base}
+
+**API formaat**
+
+```https
+POST /connections
+```
+
+**Verzoek**
+
+Met de volgende aanvraag wordt een basisverbinding voor [!DNL Salesforce Service Cloud] gemaakt om verbinding te maken met Experience Platform op AWS.
+
++++aanvraagvoorbeeld weergeven
+
+```shell
+curl -X POST \
+  'https://platform.adobe.io/data/foundation/flowservice/connections' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Content-Type: application/json' \
+  -d '{
+    "name": "Salesforce Marketing Cloud base connection for AWS",
+    "description": "Salesforce Marketing Cloud base connection for AWS",
+    "auth": {
+      "specName": "OAuth2 Client Credential",
+      "params": {
+        "subdomain": "mc563885gzs27c5t9-63k636ttgm",
+        "clientId": "3a1b2c3d4e5f67890123456789abcdef",
+        "clientSecret": "xxxx"
+      }
+    },
+    "connectionSpec": {
+      "id": "ea1c2a08-b722-11eb-8529-0242ac130003",
+      "version": "1.0"
+    }
+  }'
+```
+
++++
+
+**Reactie**
+
+Een succesvolle reactie keert details van de pas gecreëerde basisverbinding, met inbegrip van zijn uniek herkenningsteken (`id`) terug.
+
++++Respons voorbeeld weergeven
+
+```json
+{
+    "id": "2fce94c1-9a93-4971-8e94-c19a93097129",
+    "etag": "\"d403848a-0000-0200-0000-5e978f7b0000\""
+}
+```
+
++++
+
+
+## Een gegevensstroom maken voor [!DNL Salesforce Marketing Cloud] -gegevens
+
+Nu u met succes uw [!DNL Salesforce Marketing Cloud] rekening hebt verbonden, kunt u [ nu tot een dataflow en gegevens van uw marketing automatiseringsleverancier in Experience Platform ](../../collect/marketing-automation.md) leiden.
