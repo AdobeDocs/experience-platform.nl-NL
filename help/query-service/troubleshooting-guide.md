@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Query Service en Data Distiller hebben vaak vragen gesteld
 description: Dit document bevat algemene vragen en antwoorden met betrekking tot Query Service en Data Distiller. De onderwerpen omvatten, het uitvoeren van gegevens, derdehulpmiddelen, en fouten PSQL.
 exl-id: 14cdff7a-40dd-4103-9a92-3f29fa4c0809
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: cd4734b2d837bc04e1de015771a74a48ff37173f
 workflow-type: tm+mt
-source-wordcount: '5011'
+source-wordcount: '5037'
 ht-degree: 0%
 
 ---
@@ -134,7 +134,7 @@ Zie de documentatie voor volledige begeleiding op [ hoe te met genestelde gegeve
 ### Hoe kan ik een vraag over een dataset versnellen die series bevat?
 
 +++Antwoord
-Om de prestaties van vragen op datasets te verbeteren die series bevatten, zou u de serie [&#128279;](https://spark.apache.org/docs/latest/api/sql/index.html#explode) als vraag van a [ CTAS ](./sql/syntax.md#create-table-as-select) op runtime moeten ontploffen, en dan het voor verdere kansen onderzoeken om zijn verwerkingstijd te verbeteren.
+Om de prestaties van vragen op datasets te verbeteren die series bevatten, zou u de serie ](https://spark.apache.org/docs/latest/api/sql/index.html#explode) als vraag van a [ CTAS ](./sql/syntax.md#create-table-as-select) op runtime moeten ontploffen, en dan het voor verdere kansen onderzoeken om zijn verwerkingstijd te verbeteren.[
 +++
 
 ### Waarom verwerkt mijn vraag CTAS nog na vele uren voor slechts een klein aantal rijen?
@@ -717,12 +717,18 @@ and timestamp < to_timestamp('2022-07-23');
 De SAMENVOEGING IN SQL-constructie wordt niet ondersteund door Data Distiller of Query Service.
 +++
 
-## ITAS-query&#39;s
+## ITAS-query&#39;s {#itas-queries}
 
 ### Wat zijn ITAS query&#39;s?
 
 +++Antwoord
 HET INVOEGEN IN vragen wordt genoemd ITAS vragen. Merk op dat CREATE de vragen van de LIJST als vragen van CTAS worden bedoeld.
++++
+
+### Steunt de Dienst van de Vraag update en schrapt verrichtingen?
+
++++Antwoord
+Nee, Query Service ondersteunt geen update- of verwijderbewerkingen. Het steunt slechts toevoegt-slechts verrichtingen gebruikend ITAS.
 +++
 
 ## Gereedschappen van derden {#third-party-tools}

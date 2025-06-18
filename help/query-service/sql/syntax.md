@@ -4,9 +4,9 @@ solution: Experience Platform
 title: SQL-syntaxis in Query-service
 description: In dit document wordt de SQL-syntaxis beschreven die wordt ondersteund door de Adobe Experience Platform Query Service.
 exl-id: 2bd4cc20-e663-4aaa-8862-a51fde1596cc
-source-git-commit: a0b7cd9e406b4a140ef70f8d80cb27ba6817c0cd
+source-git-commit: cd4734b2d837bc04e1de015771a74a48ff37173f
 workflow-type: tm+mt
-source-wordcount: '4649'
+source-wordcount: '4686'
 ht-degree: 1%
 
 ---
@@ -289,7 +289,7 @@ Houd rekening met de volgende beperkingen wanneer u de component `TRANSFORM` geb
 
 >[!NOTE]
 >
->Voor meer details over beschikbare transformatiefuncties en hun outputtypes, zie {de gegevenstypen van de transformatieoutput van 0} Eigenschap [&#128279;](../advanced-statistics/feature-transformation.md#available-transformations).
+>Voor meer details over beschikbare transformatiefuncties en hun outputtypes, zie {de gegevenstypen van de transformatieoutput van 0} Eigenschap ](../advanced-statistics/feature-transformation.md#available-transformations).[
 
 
 ### TRANSFORM, component {#transform}
@@ -335,6 +335,10 @@ De volgende beperkingen zijn van toepassing wanneer u `TRANSFORM` met `CREATE TA
 ## INVOEGEN IN
 
 De opdracht `INSERT INTO` wordt als volgt gedefinieerd:
+
+>[!IMPORTANT]
+>
+>De Dienst van de vraag steunt **toevoegt-slechts verrichtingen** gebruikend de motor van ITAS. `INSERT INTO` is het enige gesteunde bevel van de gegevensmanipulatie, **update** en **schrapt** verrichtingen zijn niet beschikbaar. Als u wijzigingen in uw gegevens wilt doorvoeren, voegt u nieuwe records in die de gewenste staat aangeven.
 
 ```sql
 INSERT INTO table_name select_query
@@ -422,7 +426,7 @@ DROP SCHEMA [IF EXISTS] db_name.schema_name [ RESTRICT | CASCADE]
 | Parameters | Beschrijving |
 | ------ | ------ |
 | `IF EXISTS` | Als deze parameter wordt gespecificeerd en het schema **niet** bestaat, wordt geen uitzondering geworpen. |
-| `RESTRICT` | De standaardwaarde voor de modus. Indien gespecificeerd, daalt het schema slechts als het **&#x200B;**&#x200B;geen lijsten bevat. |
+| `RESTRICT` | De standaardwaarde voor de modus. Indien gespecificeerd, daalt het schema slechts als het **** geen lijsten bevat. |
 | `CASCADE` | Indien opgegeven, wordt het schema neergezet samen met alle tabellen in het schema. |
 
 ## WEERGAVE MAKEN {#create-view}
@@ -746,7 +750,7 @@ Zie de [ logische organisatie van gegevensactiva ](../best-practices/organize-da
 
 ## Tabel bestaat
 
-De SQL-opdracht `table_exists` wordt gebruikt om te bevestigen of een tabel momenteel in het systeem bestaat. Het bevel keert een booleaanse waarde terug: `true` als de lijst **&#x200B;**&#x200B;bestaat, en `false` als de lijst **niet** bestaat.
+De SQL-opdracht `table_exists` wordt gebruikt om te bevestigen of een tabel momenteel in het systeem bestaat. Het bevel keert een booleaanse waarde terug: `true` als de lijst **** bestaat, en `false` als de lijst **niet** bestaat.
 
 Door te controleren of een tabel bestaat voordat de instructies worden uitgevoerd, vereenvoudigt de functie `table_exists` het schrijven van een anoniem blok, zodat zowel de gebruiksgevallen `CREATE` als `INSERT INTO` worden behandeld.
 
