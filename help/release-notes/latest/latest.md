@@ -2,10 +2,10 @@
 title: Aanvullende informatie van juni 2025 voor Adobe Experience Platform
 description: In de release van juni 2025 staat Adobe Experience Platform vermeld.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: b39de456b40acda77c67d25ebeba2c8a41c5d3f6
+source-git-commit: fb34e033c90c269742a2045025bf0c964b513679
 workflow-type: tm+mt
-source-wordcount: '1613'
-ht-degree: 49%
+source-wordcount: '1646'
+ht-degree: 48%
 
 ---
 
@@ -16,10 +16,10 @@ ht-degree: 49%
 >
 >Raadpleeg de volgende documentatie voor aanvullende informatie voor andere Adobe Experience Platform-toepassingen:
 >
->- [Adobe Journey Optimizer](https://experienceleague.adobe.com/nl/docs/journey-optimizer/using/whats-new/release-notes)
->- [Adobe Journey Optimizer B2B](https://experienceleague.adobe.com/nl/docs/journey-optimizer-b2b/user/release-notes)
->- [Customer Journey Analytics](https://experienceleague.adobe.com/nl/docs/analytics-platform/using/releases/pre-release-notes)
->- [Samenstelling van Federated-doelgroep](https://experienceleague.adobe.com/nl/docs/federated-audience-composition/using/e-release-notes)
+>- [Adobe Journey Optimizer](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/whats-new/release-notes)
+>- [Adobe Journey Optimizer B2B](https://experienceleague.adobe.com/en/docs/journey-optimizer-b2b/user/release-notes)
+>- [Customer Journey Analytics](https://experienceleague.adobe.com/en/docs/analytics-platform/using/releases/pre-release-notes)
+>- [Samenstelling van Federated-doelgroep](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/e-release-notes)
 >- [Real-Time CDP Collaboration](https://experienceleague.adobe.com/nl/docs/real-time-cdp-collaboration/using/latest)
 
 **Releasedatum: donderdag 18 juni 2025**
@@ -113,13 +113,12 @@ Raadpleeg voor meer informatie het [overzicht van datagovernance](../../data-gov
 
 | Functie | Beschrijving |
 | --- | --- |
+| [ Klantovereenkomst van Google + DV360 ](../../destinations/catalog/advertising/google-customer-match-dv360.md) algemene beschikbaarheid | De Google Customer Match + DV360-bestemming is nu beschikbaar voor alle Experience Platform-gebruikers. De documentatie omvat nu gedetailleerde begeleiding voor [ rekening die ](../../destinations/catalog/advertising/google-customer-match-dv360.md#linking) verbindt tussen [!DNL Adobe] en [!DNL Google] reclame rekeningen. |
 | [ publiek-vlakke controle ](../../dataflows/ui/monitor-destinations.md#audience-level-dataflow-runs-for-streaming-destinations) voor het stromen bestemmingen | De controle op het niveau van het publiek is nu beschikbaar voor de volgende bestemmingen: <ul><li>[[!DNL (API) Oracle Eloqua] verbinding](../../destinations/catalog/email-marketing/oracle-eloqua-api.md)</li><li>[[!DNL (V2) Marketo Engage]](../../destinations/catalog/adobe/marketo-engage.md)</li><li>[[!DNL Airship Attributes]](../../destinations/catalog/mobile-engagement/airship-attributes.md)</li><li>[[!DNL Amazon Kinesis]](../../destinations/catalog/cloud-storage/amazon-kinesis.md)</li><li>[[!DNL Azure Event Hubs]](../../destinations/catalog/cloud-storage/azure-event-hubs.md)</li><li>[[!DNL Google Customer Match + Display & Video 360]](../../destinations/catalog/advertising/google-customer-match-dv360.md)</li><li>[[!DNL HTTP API]](../../destinations/catalog/streaming/http-destination.md)</li><li>[[!DNL HubSpot]](../../destinations/catalog/crm/hubspot.md)</li><li>[[!DNL Magnite: Real-time]](../../destinations/catalog/advertising/magnite-streaming.md)</li><li>[[!DNL Marketo Engage Person Sync]](../../destinations/catalog/adobe/marketo-engage-person-sync.md)</li><li>[[!DNL Microsoft Dynamics 365]](../../destinations/catalog/crm/microsoft-dynamics-365.md)</li><li>[[!DNL Moengage]](../../destinations/catalog/mobile-engagement/moengage.md)</li><li>[[!DNL Outreach]](../../destinations/catalog/crm/outreach.md)</li><li>[[!DNL PubMatic Connect]](../../destinations/catalog/advertising/pubmatic.md)</li><li>[[!DNL PubMatic Connect (Custom Audience ID Mapping)]](../../destinations/catalog/advertising/pubmatic.md)</li><li>[[!DNL Qualtrics Automations]](../../destinations/catalog/survey/qualtrics-automations.md)</li><li>[[!DNL RainFocus Attendee Profiles]](../../destinations/catalog/marketing-automation/rainfocus.md)</li><li>[[!DNL SAP Commerce]](../../destinations/catalog/ecommerce/sap-commerce.md)</li><li>[[!DNL Snowflake]](../../destinations/catalog/cloud-storage/snowflake.md)</li><li>[[!DNL Yahoo DataX]](../../destinations/catalog/advertising/datax.md)</li><li>[[!DNL Zendesk]](../../destinations/catalog/crm/zendesk.md)</li></ul> |
 | Extra herkenningstekensteun voor [ Facebook ](../../destinations/catalog/social/facebook.md#supported-identities) bestemmingen | Het doel van [!DNL Facebook] ondersteunt nu het toewijzen van nieuwe adresgerelateerde velden zodat u deze beter kunt richten op en beter kunt afstemmen op profielen op Facebook-eigenschappen. Voor details over de nieuwe adres-verwante gebieden, zie de [ gesteunde identiteiten ](../../destinations/catalog/social/facebook.md#supported-identities) sectie. <br> ![ beeld UI van het Platform die de extra gebieden voor Facebook toont.](../2025/assets/june/facebook-destination-fields.png " beeld UI van het Platform dat de extra gebieden voor Facebook toont."){width="200" align="center" zoomable="yes"} |
 | [[!DNL Braze]](../../destinations/catalog/mobile-engagement/braze.md) doelupgrade | Vanaf vrijdag 19 juni 2025 kunt u twee **[!DNL Braze]**-kaarten naast elkaar zien in de bestemmingencatalogus. Dit komt door een interne upgrade van de bestemmingsservice. De naam van de bestaande bestemmingsconnector [!DNL Braze] is gewijzigd in **[!UICONTROL (Deprecated) Braze]** en er is nu een nieuwe kaart met de naam **[!UICONTROL Braze]** voor u beschikbaar. <br> Gebruik de **[!UICONTROL Braze]**-verbinding in de catalogus voor nieuwe activeringsgegevensstromen. Als u actieve gegevensstromen naar de bestemming **[!UICONTROL (Deprecated) Braze]** hebt, worden deze automatisch bijgewerkt. U hoeft dus niets te doen. <br> Als u gegevensstromen maakt via de [Flow Service API](https://developer.adobe.com/experience-platform-apis/references/destinations/), moet u uw [!DNL flow spec ID] en [!DNL connection spec ID] bijwerken naar de volgende waarden: <ul><li>Stroomspecificatie-ID: `cb7919bd-69aa-462d-bcc0-db7cdc7fdf51`</li><li>Verbindingsspecificatie-ID: `ab957205-5a78-4393-b901-b930ed548220`</li></ul> |
 
 {style="table-layout:auto"}
-
-<!-- | [Google Customer Match + DV360](../../destinations/catalog/advertising/google-customer-match-dv360.md) general availability | The Google Customer Match + DV360 destination is now available for all Experience Platform users. The documentation now includes detailed guidance for [account linking](../../destinations/catalog/advertising/google-customer-match-dv360.md#linking) between [!DNL Adobe] and [!DNL Google] advertising accounts. | -->
 
 Voor meer informatie leest u het [overzicht van bestemmingen](../../destinations/home.md).
 
@@ -129,9 +128,9 @@ Samenstelling van Federated-doelgroep stelt ondernemingen in staat om gegevens s
 
 | Nieuwe functie | Beschrijving |
 | ----------- | ----------- |
-| Algemene beschikbaarheid voor Adobe Healthcare Shield-klanten | Federated Audience Composition zal eind juni beschikbaar zijn voor klanten van het Adobe Healthcare Shield voor het creëren van publiek, verrijking en het gebruik van profielverrijking. Voor meer informatie over de privacy en de veiligheidsmaatregelen van de Samenstelling van de Federatieve Publiek, lees de [ privacy en de veiligheid in het Federated overzicht van de Samenstelling van de Publiek ](https://experienceleague.adobe.com/nl/docs/federated-audience-composition/using/start/privacy-security). Voor meer informatie over de naleving van HIPAA voor de producten van Experience Platform in het algemeen, lees [ HIPAA en het overzicht van de Producten en van de Diensten van Adobe ](https://www.adobe.com/trust/compliance/hipaa-ready.html). |
+| Algemene beschikbaarheid voor Adobe Healthcare Shield-klanten | Federated Audience Composition zal eind juni beschikbaar zijn voor klanten van het Adobe Healthcare Shield voor het creëren van publiek, verrijking en het gebruik van profielverrijking. Voor meer informatie over de privacy en de veiligheidsmaatregelen van de Samenstelling van de Federatieve Publiek, lees de [ privacy en de veiligheid in het Federated overzicht van de Samenstelling van de Publiek ](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/start/privacy-security). Voor meer informatie over de naleving van HIPAA voor de producten van Experience Platform in het algemeen, lees [ HIPAA en het overzicht van de Producten en van de Diensten van Adobe ](https://www.adobe.com/trust/compliance/hipaa-ready.html). |
 
-Raadpleeg voor meer informatie de [documentatie over Samenstelling van Federated-doelgroep](https://experienceleague.adobe.com/nl/docs/federated-audience-composition/using/home).
+Raadpleeg voor meer informatie de [documentatie over Samenstelling van Federated-doelgroep](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/home).
 
 ## [!DNL Privacy Service] {#privacy}
 
@@ -141,7 +140,7 @@ Verschillende wettelijke en organisatorische voorschriften geven gebruikers het 
 
 | Functie | Beschrijving |
 | --- | ---|
-| Ondersteuning voor Tennessee- en Minnesota Privacy-wetten | Privacy Service ondersteunt nu de Tennessee Information Protection Act (`tipa_tn_usa`) en de Minnesota Consumer Data Privacy Act (`mcdpa_mn_usa` ). U kunt toegangs en schrappingsverzoeken in overeenstemming met deze nieuwe staat-vlakke verordeningen verwerken. Zie het [ overzicht van Verordeningen ](https://experienceleague.adobe.com/nl/docs/experience-platform/privacy/regulations/overview) voor meer details. |
+| Ondersteuning voor Tennessee- en Minnesota Privacy-wetten | Privacy Service ondersteunt nu de Tennessee Information Protection Act (`tipa_tn_usa`) en de Minnesota Consumer Data Privacy Act (`mcdpa_mn_usa` ). U kunt toegangs en schrappingsverzoeken in overeenstemming met deze nieuwe staat-vlakke verordeningen verwerken. Zie het [ overzicht van Verordeningen ](https://experienceleague.adobe.com/en/docs/experience-platform/privacy/regulations/overview) voor meer details. |
 
 Zie het [overzicht van de Privacy Service](../../privacy-service/home.md) voor meer informatie over de service.
 
@@ -177,7 +176,7 @@ Experience Platform biedt een RESTful-API en een interactieve gebruikersinterfac
 
 | Functie | Beschrijving |
 | --- | --- |
-| [!BADGE &#x200B; Beta &#x200B;]{type=Informative} UI steun voor [!DNL Azure Databricks] | U kunt uw [!DNL Azure Databricks] -account nu verbinden met Experience Platform via de werkruimte voor bronnen in de gebruikersinterface. Lees de gids op [ verbindend  [!DNL Databricks]  met Experience Platform in UI ](../../sources/connectors/databases/databricks.md) voor meer informatie. |
+| [!BADGE  Beta ]{type=Informative} UI steun voor [!DNL Azure Databricks] | U kunt uw [!DNL Azure Databricks] -account nu verbinden met Experience Platform via de werkruimte voor bronnen in de gebruikersinterface. Lees de gids op [ verbindend  [!DNL Databricks]  met Experience Platform in UI ](../../sources/connectors/databases/databricks.md) voor meer informatie. |
 | Ondersteuning voor nieuw verificatietype voor [!DNL Azure Synapse Analytics] | [!DNL Azure Synapse Analytics] zal nu ook de dienst belangrijkste authentificatie, naast de bestaande authentificatie van het verbindingskoord steunen. Voor meer informatie, lees het [[!DNL Azure Synapse Analytics]  authentificatieoverzicht ](../../sources/connectors/databases/synapse-analytics.md) |
 | [!DNL Salesforce] Basisversie van verificatie | De basisAuthentificatie voor [ Salesforce CRM ](../../sources/connectors/crm/salesforce.md) en [ de Wolk van de Dienst van Salesforce ](../../sources/connectors/customer-success/salesforce-service-cloud.md) zal tegen Januari 2026 worden afgekeurd. Klanten moeten naar OAuth 2.0-verificatie migreren om connectiviteit te behouden. Deze verandering beïnvloedt zowel bronschakelaars en verzekert betere veiligheid en naleving van de Salesforce authentificatienormen. |
 
