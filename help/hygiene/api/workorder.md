@@ -1,38 +1,80 @@
 ---
-title: Eindpunt van API voor werkvolgorde
+title: Verzoeken om verwijdering opnemen (werkordereindpunt)
 description: Het /workorder eindpunt in de Hygiene API van Gegevens staat u toe om schrappingstaken voor identiteiten programmatically te beheren.
-badgeBeta: label="Beta" type="Informative"
 role: Developer
-badge: Beta
 exl-id: f6d9c21e-ca8a-4777-9e5f-f4b2314305bf
-source-git-commit: bf819d506b0ee6f3aba6850f598ee46f16695dfa
+source-git-commit: d569b1d04fa76e0a0e48364a586e8a1a773b9bf2
 workflow-type: tm+mt
-source-wordcount: '1278'
-ht-degree: 0%
+source-wordcount: '1505'
+ht-degree: 1%
 
 ---
 
-# Werkordereindpunt {#work-order-endpoint}
+# Verzoeken om gegevens te verwijderen (eindpunt van werkorder) {#work-order-endpoint}
 
 Met het `/workorder` -eindpunt in de Data Hygiene API kunt u aanvragen voor het verwijderen van records in Adobe Experience Platform programmatisch beheren.
 
 >[!IMPORTANT]
 > 
->De eigenschap van de Schrapping van het Verslag is momenteel in Beta en beschikbaar slechts in a **beperkte versie**. Het is niet beschikbaar voor alle klanten. Registratie-verwijderingsverzoeken zijn alleen beschikbaar voor organisaties in de beperkte release.
->
 >Gegevens verwijderen uit records moeten worden gebruikt voor het opschonen van gegevens, het verwijderen van anonieme gegevens of het minimaliseren van gegevens. Zij zijn **niet** om voor de verzoeken van de rechten van gegevenssubject (naleving) zoals met betrekking tot privacyverordeningen zoals de Algemene Verordening van de Bescherming van Gegevens (GDPR) te worden gebruikt. Voor alle gevallen van het nalevingsgebruik, gebruik [ Adobe Experience Platform Privacy Service ](../../privacy-service/home.md) in plaats daarvan.
 
 ## Aan de slag
 
-Het eindpunt dat in deze handleiding wordt gebruikt, maakt deel uit van de Data Hygiene API. Alvorens verder te gaan, te herzien gelieve het [ overzicht ](./overview.md) voor verbindingen aan verwante documentatie, een gids aan het lezen van de steekproefAPI vraag in dit document, en belangrijke informatie betreffende vereiste kopballen die nodig zijn om vraag aan om het even welk Experience Platform API met succes te maken.
+Het eindpunt dat in deze handleiding wordt gebruikt, maakt deel uit van de Data Hygiene API. Alvorens verder te gaan, te herzien gelieve het [ overzicht ](./overview.md) voor verbindingen aan verwante documentatie, een gids aan het lezen van de steekproefAPI vraag in dit document, en belangrijke informatie betreffende vereiste kopballen die nodig zijn om vraag aan om het even welke Experience Platform API met succes te maken.
+
+## Quoten en verwerkingstijdlijnen {#quotas}
+
+Aanvragen voor het verwijderen van records zijn onderworpen aan dagelijkse en maandelijkse indieningslimieten voor id&#39;s, die worden bepaald door de licentierechten van uw organisatie. Deze limieten gelden voor verwijderingsaanvragen voor zowel de gebruikersinterface als de API.
+
+>[!NOTE]
+>
+>U kunt tot **1.000.000 herkenningstekens per dag** voorleggen, maar slechts als uw resterende maandquotum het toestaat. Als uw maandelijks maximum minder dan 1 miljoen bedraagt, kan uw dagelijkse inzending die limiet niet overschrijden.
+
+### Maandelijkse indieningstoeslagrechten per product {#quota-limits}
+
+In de onderstaande tabel worden de indieningslimieten voor id&#39;s per product en machtigingsniveau weergegeven. Voor elk product is de maandelijkse limiet de laagste van twee waarden: een vast identificatieplafond of een op percentage gebaseerde drempel die is gekoppeld aan uw gelicentieerde gegevensvolume.
+
+| Product | Beschrijving van rechten | Maandelijkse limiet (Welke lager is) |
+|----------|-------------------------|---------------------------------|
+| Real-Time CDP of Adobe Journey Optimizer | Zonder &#39;Privacy and Security Shield&#39; of &#39;Healthcare Shield Add-on&#39; | 2.000.000 ID&#39;s of 5% van het adresseerbare publiek |
+| Real-Time CDP of Adobe Journey Optimizer | Met privacy- en beveiligingsschild of de invoegtoepassing Gezondheidsschild | 15.000.000 id&#39;s of 10% van het adresseerbare publiek |
+| Customer Journey Analytics | Zonder &#39;Privacy and Security Shield&#39; of &#39;Healthcare Shield Add-on&#39; | 2.000.000 ID&#39;s of 100 ID&#39;s per miljoen CJA rijen met rechten |
+| Customer Journey Analytics | Met privacy- en beveiligingsschild of de invoegtoepassing Gezondheidsschild | 15.000.000 ID&#39;s of 200 ID&#39;s per miljoen CJA rijen met rechten |
+
+>[!NOTE]
+>
+> De meeste organisaties zullen lagere maandelijkse grenzen hebben die op hun werkelijk adresseerbare publiek of de rijaanspraken van CJA worden gebaseerd.
+
+De quota zijn opnieuw ingesteld op de eerste dag van elke kalendermaand. Ongebruikte quota **niet** draagt over.
+
+>[!NOTE]
+>
+>De quota&#39;s zijn gebaseerd op de vergunning gegeven maandelijkse bevoegdheid van uw organisatie voor **voorgelegde herkenningstekens**. Deze worden niet afgedwongen door systeemtrails, maar kunnen worden gecontroleerd en herzien.
+>
+>De Schrapping van het verslag is a **gedeelde dienst**. Uw maandelijkse limiet weerspiegelt de hoogste rechten voor Real-Time CDP, Adobe Journey Optimizer, Customer Journey Analytics en alle toepasselijke add-ons voor schild.
+
+### Tijdlijnen verwerken voor id-verzending {#sla-processing-timelines}
+
+Na verzending worden aanvragen voor het verwijderen van records in de wachtrij geplaatst en verwerkt op basis van uw machtigingsniveau.
+
+| Beschrijving van product en rechten | Duur wachtrij | Maximale verwerkingstijd (SLA) |
+|------------------------------------------------------------------------------------|---------------------|-------------------------------|
+| Zonder &#39;Privacy and Security Shield&#39; of &#39;Healthcare Shield Add-on&#39; | Tot 15 dagen | 30 dagen |
+| Met privacy- en beveiligingsschild of de invoegtoepassing Gezondheidsschild | Doorgaans 24 uur | 15 dagen |
+
+Als uw organisatie hogere limieten nodig heeft, neemt u contact op met uw Adobe-vertegenwoordiger voor een beoordeling van uw rechten.
+
+>[!TIP]
+>
+>Om uw huidige quotagebruik of machtigingsrij te controleren, zie de [ gids van de de verwijzingsverwijzing van de Quota ](../api/quota.md).
 
 ## Een verzoek tot het verwijderen van records maken {#create}
 
-U kunt één of meerdere identiteiten van één enkele dataset of alle datasets schrappen door een verzoek van de POST aan het `/workorder` eindpunt te doen.
+U kunt één of meerdere identiteiten van één enkele dataset of alle datasets schrappen door een POST- verzoek aan het `/workorder` eindpunt te doen.
 
->[!IMPORTANT]
-> 
->Er zijn verschillende limieten voor het totale aantal unieke identiteitsrecords dat elke maand kan worden verzonden. Deze limieten zijn gebaseerd op uw licentieovereenkomst. Organisaties die alle edities van Adobe Real-time Customer Data Platform en Adobe Journey Optimizer hebben aangeschaft, kunnen maximaal 100.000 identiteitsgegevens verzenden en elke maand verwijderen. De organisaties die **het Schild van de Gezondheidszorg van de Adobe** of **de Privacy en het Schild van de Adobe** hebben gekocht kunnen tot 600.000 identiteitsverslag voorleggen schrapt elke maand.<br> Één enkel [ verslag schrapt verzoek door UI ](../ui/record-delete.md) staat u toe om 10.000 IDs in één keer voor te leggen. Met de API-methode voor het verwijderen van records kunnen 100.000 id&#39;s tegelijk worden verzonden.<br> het is beste praktijken om zoveel mogelijk IDs per verzoek, tot uw grens van identiteitskaart voor te leggen. Wanneer u een hoog volume id&#39;s wilt verwijderen, moet u een laag volume of één id per record verwijderen.
+>[!TIP]
+>
+>Elk verslag schrapt verzoek dat door API wordt voorgelegd kan tot **100.000 identiteiten** omvatten. Om de efficiëntie te maximaliseren, dient u zoveel mogelijk identiteiten per aanvraag in en vermijdt u kleine verzendingen, zoals werkorders met één id.
 
 **API formaat**
 
@@ -130,7 +172,7 @@ Als de reactie succesvol was, worden de details van de record delete geretournee
 
 ## De status van een record verwijderen {#lookup}
 
-Nadat u [ een verslag creeert schrapt verzoek ](#create), kunt u zijn status controleren gebruikend een verzoek van de GET.
+Nadat u [ een verslag creeert schrapt verzoek ](#create), kunt u zijn status controleren gebruikend een verzoek van GET.
 
 **API formaat**
 
@@ -207,7 +249,7 @@ Een geslaagde reactie retourneert de details van de verwijderingsbewerking, incl
 
 ## Een verzoek tot het verwijderen van records bijwerken
 
-U kunt de `displayName` en `description` voor een record verwijderen door een PUT aan te vragen.
+U kunt de `displayName` en `description` voor een record verwijderen door een PUT-aanvraag in te dienen.
 
 **API formaat**
 

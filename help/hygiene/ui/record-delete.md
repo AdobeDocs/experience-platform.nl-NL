@@ -1,24 +1,20 @@
 ---
-title: Records verwijderen
+title: Verzoeken om verwijdering opnemen (gebruikersinterface-workflow)
 description: Leer hoe u records verwijdert in de gebruikersinterface van Adobe Experience Platform.
-badgeBeta: label="Beta" type="Informative"
 exl-id: 5303905a-9005-483e-9980-f23b3b11b1d9
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 07e09cfe2e2c3ff785caf0b310cbe2f2cc381c17
 workflow-type: tm+mt
-source-wordcount: '1507'
+source-wordcount: '1730'
 ht-degree: 0%
 
 ---
 
-# Records verwijderen {#record-delete}
+# Aanvragen voor het verwijderen van records (gebruikersinterface-workflow) {#record-delete}
 
 Gebruik de [[!UICONTROL Data Lifecycle] werkruimte ](./overview.md) om records in Adobe Experience Platform te verwijderen op basis van hun primaire identiteit. Deze gegevens kunnen worden gekoppeld aan individuele consumenten of aan elke andere entiteit die in de identiteitsgrafiek is opgenomen.
 
 >[!IMPORTANT]
-> 
->De eigenschap van de Schrapping van het Verslag is momenteel in Beta en beschikbaar slechts in a **beperkte versie**. Het is niet beschikbaar voor alle klanten. Registratie-verwijderingsverzoeken zijn alleen beschikbaar voor organisaties in de beperkte release.
-> 
-> 
+>
 >Recordverwijderingen moeten worden gebruikt voor het opschonen van gegevens, het verwijderen van anonieme gegevens of het minimaliseren van gegevens. Zij zijn **niet** om voor de verzoeken van de rechten van gegevenssubject (naleving) zoals met betrekking tot privacyverordeningen zoals de Algemene Verordening van de Bescherming van Gegevens (GDPR) te worden gebruikt. Voor alle gevallen van het nalevingsgebruik, gebruik [ Adobe Experience Platform Privacy Service ](../../privacy-service/home.md) in plaats daarvan.
 
 ## Vereisten {#prerequisites}
@@ -134,13 +130,59 @@ Om meer identiteiten toe te voegen, selecteer het plusteken (![ A plus pictogram
 
 ![ het werkschema van de verzoekverwezenlijking met het plusteken en toevoegt benadrukte identiteitspictogram.](../images/ui/record-delete/more-identities.png)
 
+## Quoten en verwerkingstijdlijnen {#quotas}
+
+Aanvragen voor het verwijderen van records zijn onderworpen aan dagelijkse en maandelijkse indieningslimieten voor id&#39;s, die worden bepaald door de licentierechten van uw organisatie. Deze limieten gelden voor verwijderingsaanvragen voor zowel de gebruikersinterface als de API.
+
+>[!NOTE]
+>
+>U kunt tot **1.000.000 herkenningstekens per dag** voorleggen, maar slechts als uw resterende maandquotum het toestaat. Als uw maandelijks maximum minder dan 1 miljoen bedraagt, kan uw dagelijkse inzending die limiet niet overschrijden.
+
+### Maandelijkse indieningstoeslagrechten per product {#quota-limits}
+
+In de onderstaande tabel worden de indieningslimieten voor id&#39;s per product en machtigingsniveau weergegeven. Voor elk product is de maandelijkse limiet de laagste van twee waarden: een vast identificatieplafond of een op percentage gebaseerde drempel die is gekoppeld aan uw gelicentieerde gegevensvolume.
+
+| Product | Beschrijving van rechten | Maandelijkse limiet (Welke lager is) |
+|----------|-------------------------|---------------------------------|
+| Real-Time CDP of Adobe Journey Optimizer | Zonder &#39;Privacy and Security Shield&#39; of &#39;Healthcare Shield Add-on&#39; | 2.000.000 ID&#39;s of 5% van het adresseerbare publiek |
+| Real-Time CDP of Adobe Journey Optimizer | Met privacy- en beveiligingsschild of de invoegtoepassing Gezondheidsschild | 15.000.000 id&#39;s of 10% van het adresseerbare publiek |
+| Customer Journey Analytics | Zonder &#39;Privacy and Security Shield&#39; of &#39;Healthcare Shield Add-on&#39; | 2.000.000 ID&#39;s of 100 ID&#39;s per miljoen CJA rijen met rechten |
+| Customer Journey Analytics | Met privacy- en beveiligingsschild of de invoegtoepassing Gezondheidsschild | 15.000.000 ID&#39;s of 200 ID&#39;s per miljoen CJA rijen met rechten |
+
+>[!NOTE]
+>
+> De meeste organisaties zullen lagere maandelijkse grenzen hebben die op hun werkelijk adresseerbare publiek of de rijaanspraken van CJA worden gebaseerd.
+
+De quota zijn opnieuw ingesteld op de eerste dag van elke kalendermaand. Ongebruikte quota **niet** draagt over.
+
+>[!NOTE]
+>
+>De quota&#39;s zijn gebaseerd op de vergunning gegeven maandelijkse bevoegdheid van uw organisatie voor **voorgelegde herkenningstekens**. Deze worden niet afgedwongen door systeemtrails, maar kunnen worden gecontroleerd en herzien.
+>
+>De Schrapping van het verslag is a **gedeelde dienst**. Uw maandelijkse limiet weerspiegelt de hoogste rechten voor Real-Time CDP, Adobe Journey Optimizer, Customer Journey Analytics en alle toepasselijke add-ons voor schild.
+
+### Tijdlijnen verwerken voor id-verzending {#sla-processing-timelines}
+
+Na verzending worden aanvragen voor het verwijderen van records in de wachtrij geplaatst en verwerkt op basis van uw machtigingsniveau.
+
+| Beschrijving van product en rechten | Duur wachtrij | Maximale verwerkingstijd (SLA) |
+|------------------------------------------------------------------------------------|---------------------|-------------------------------|
+| Zonder &#39;Privacy and Security Shield&#39; of &#39;Healthcare Shield Add-on&#39; | Tot 15 dagen | 30 dagen |
+| Met privacy- en beveiligingsschild of de invoegtoepassing Gezondheidsschild | Doorgaans 24 uur | 15 dagen |
+
+Als uw organisatie hogere limieten nodig heeft, neemt u contact op met uw Adobe-vertegenwoordiger voor een beoordeling van uw rechten.
+
+>[!TIP]
+>
+>Om uw huidige quotagebruik of machtigingsrij te controleren, zie de [ gids van de de verwijzingsverwijzing van de Quota ](../api/quota.md).
+
 ## De aanvraag verzenden {#submit}
 
 Nadat u de gewenste id&#39;s aan de aanvraag hebt toegevoegd, voert u onder **[!UICONTROL Request settings]** een naam en een optionele beschrijving voor de aanvraag in voordat u **[!UICONTROL Submit]** selecteert.
 
->[!IMPORTANT]
-> 
->Er zijn verschillende limieten voor het totale aantal unieke identiteitsrecords dat elke maand kan worden verzonden. Deze limieten zijn gebaseerd op uw licentieovereenkomst. Organisaties die alle edities van Adobe Real-Time Customer Data Platform of Adobe Journey Optimizer hebben aangeschaft, kunnen maximaal 100.000 identiteitsgegevens verzenden en elke maand verwijderen. De organisaties die **het Schild van de Gezondheidszorg van Adobe** of **de Privacy &amp; het Schild van de Veiligheid van Adobe** hebben gekocht kunnen tot 600.000 identiteitsverslag voorleggen schrapt elke maand.<br> één enkel verslag schrapt verzoek door UI staat u toe om 10.000 IDs in één keer voor te leggen. De [ API methode om verslagen ](../api/workorder.md#create) te schrappen staat voor de voorlegging van 100.000 IDs toe tegelijkertijd.<br> het is beste praktijken om zoveel mogelijk IDs per verzoek, tot uw grens van identiteitskaart voor te leggen. Wanneer u een hoog volume id&#39;s wilt verwijderen, moet u een laag volume of één id per record verwijderen.
+>[!TIP]
+>
+>U kunt maximaal 10.000 identiteiten per verzoek indienen via de interface. Om grotere volumes (tot 100.000 IDs per verzoek) voor te leggen, gebruik de [ API methode ](../api/workorder.md#create).
 
 ![ het verzoek plaatst [!UICONTROL Name] en [!UICONTROL Description] gebieden met [!UICONTROL Submit] benadrukt.](../images/ui/record-delete/submit.png)
 

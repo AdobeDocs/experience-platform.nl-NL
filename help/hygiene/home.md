@@ -2,9 +2,9 @@
 title: Overzicht van geavanceerd gegevenslevenscyclusbeheer
 description: Met Advanced Data Lifecycle Management kunt u de levenscyclus van uw gegevens beheren door verouderde of onjuiste gegevens bij te werken of te wissen.
 exl-id: 104a2bb8-3242-4a20-b98d-ad6df8071a16
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 9ffd2db5555a4c157171d488deb9641aadbb08b4
 workflow-type: tm+mt
-source-wordcount: '821'
+source-wordcount: '854'
 ht-degree: 0%
 
 ---
@@ -42,6 +42,11 @@ De gebruikersinterface van [!UICONTROL Data Lifecycle] is gebaseerd op de API vo
 
 [ schrapt het Verslag ](./ui/record-delete.md) en de verzoeken van de datasetvervalsing elk hun eigen verwerkingschronologie hebben en transparantie updates op zeer belangrijke punten in hun respectieve werkschema&#39;s verstrekken.
 
+>[!TIP]
+>
+>Om uw huidig gebruik tegen quotagrenzen te controleren, zie de [ gids van de de verwijzingsverwijzing van de Quota ](./api/quota.md).\
+>Voor betitelingsregels, maandelijkse kappen, de chronologie van SLA, en uitzondering behandelend beleid, zie het [ Verslag schrapt (UI) ](./ui/record-delete.md#quotas) en [ Werkorder (API) ](./api/workorder.md#quotas) documentatie.
+
 Het volgende vindt plaats wanneer het verzoek van de a [ datasetvervaldatum ](./ui/dataset-expiration.md) wordt gecreeerd:
 
 | Stadium | Tijd na geplande vervaldatum | Beschrijving |
@@ -51,7 +56,7 @@ Het volgende vindt plaats wanneer het verzoek van de a [ datasetvervaldatum ](./
 | Gegevensset wordt verwijderd | 3 uur | **Één uur nadat de dataset voor schrapping** wordt gemarkeerd, wordt het volledig verwijderd uit het systeem. Op dit punt, wordt de dataset gelaten vallen van de [ pagina van de datasetinventaris ](../catalog/datasets/user-guide.md) in UI. De gegevens in het datumpigment worden echter in dit stadium slechts weinig verwijderd en blijven dat zo totdat het proces voor het verwijderen van harde gegevens is voltooid. |
 | Aantal profielen bijgewerkt | 30 uur | Afhankelijk van de inhoud van de dataset die wordt geschrapt, kunnen sommige profielen uit het systeem worden verwijderd als alle hun componentenattributen aan die dataset worden gebonden. 30 uren nadat de dataset wordt geschrapt, worden om het even welke resulterende veranderingen in algemene profieltellingen weerspiegeld in [ dashboard widgets ](../dashboards/guides/profiles.md#profile-count-trend) en andere rapporten. |
 | Soorten publiek bijgewerkt | 48 uur | Zodra alle beïnvloede profielen worden bijgewerkt, worden alle verwante [ publiek ](../segmentation/home.md) bijgewerkt om op hun nieuwe grootte te wijzen. Afhankelijk van de gegevensset die is verwijderd en de kenmerken waarop u segmenteert, kan de grootte van elk publiek toenemen of afnemen als gevolg van de verwijdering. |
-| Reizen en bestemmingen bijgewerkt | 50 uur | [ de Reizen ](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/about-journeys/journey.html?lang=nl-NL), [ campagnes ](https://experienceleague.adobe.com/docs/journey-optimizer/using/campaigns/get-started-with-campaigns.html?lang=nl-NL), en [ bestemmingen ](../destinations/home.md) worden bijgewerkt volgens veranderingen in verwante segmenten. |
+| Reizen en bestemmingen bijgewerkt | 50 uur | [ de Reizen ](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/about-journeys/journey.html), [ campagnes ](https://experienceleague.adobe.com/docs/journey-optimizer/using/campaigns/get-started-with-campaigns.html), en [ bestemmingen ](../destinations/home.md) worden bijgewerkt volgens veranderingen in verwante segmenten. |
 | Harde verwijdering voltooid | 15 dagen | Alle gegevens met betrekking tot de gegevensset zijn hard verwijderd uit het datumpeer. De [ status van de baan van de gegevenslevenscyclus ](./ui/browse.md#view-details) die de dataset schrapte wordt bijgewerkt om dit te weerspiegelen. |
 
 {style="table-layout:auto"}
@@ -72,7 +77,7 @@ The following takes place when a [record delete request](./ui/record-delete.md) 
 | Request is submitted | 0 hours | A data steward or privacy analyist submits a record delete request. The request is visible in the [!UICONTROL Data Lifecycle UI] after it has been submitted. |
 | Profile lookups updated | 3 hours | The change in profile counts caused by the deleted identity are reflected in [dashboard widgets](../dashboards/guides/profiles.md#profile-count-trend) and other reports. |
 | Segments updated | 24 hours | Once profiles are removed, all related [segments](../segmentation/home.md) are updated to reflect their new size. |
-| Journeys and destinations updated | 26 hours | [Journeys](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/about-journeys/journey.html?lang=nl-NL), [campaigns](https://experienceleague.adobe.com/docs/journey-optimizer/using/campaigns/get-started-with-campaigns.html?lang=nl-NL), and [destinations](../destinations/home.md) are updated according to changes in related segments. |
+| Journeys and destinations updated | 26 hours | [Journeys](https://experienceleague.adobe.com/docs/journey-optimizer/using/orchestrate-journeys/about-journeys/journey.html), [campaigns](https://experienceleague.adobe.com/docs/journey-optimizer/using/campaigns/get-started-with-campaigns.html), and [destinations](../destinations/home.md) are updated according to changes in related segments. |
 | Records soft deleted in data lake | 7 days | The data is soft deleted from the data lake. |
 | Data vacuuming completed | 14 days | The [status of the lifecycle job](./ui/browse.md#view-details) updates to indicate that the job has completed, meaning that data vacuuming has been completed on the data lake and the relevant records have been hard deleted. |
 
