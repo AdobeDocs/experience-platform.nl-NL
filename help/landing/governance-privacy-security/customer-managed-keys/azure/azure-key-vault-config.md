@@ -4,9 +4,9 @@ description: Leer hoe u een nieuwe bedrijfsaccount maakt met Azure of een bestaa
 role: Developer
 feature: Privacy
 exl-id: 670e3ca3-a833-4b28-9ad4-73685fa5d74d
-source-git-commit: f4100506947da7584de5b9fb42946ac877c8c102
+source-git-commit: c920f78363ee5f040964dbd3a0d0815474094b07
 workflow-type: tm+mt
-source-wordcount: '588'
+source-wordcount: '675'
 ht-degree: 0%
 
 ---
@@ -57,6 +57,14 @@ Als uw Key Vault is geconfigureerd om de toegang van het publiek tot bepaalde vi
 
 Selecteer **[!DNL Networking]** in de linkernavigatie. Selecteer onder **[!DNL Firewalls and virtual networks]** het selectievakje **[!DNL Allow trusted Microsoft services to bypass this firewall]** en selecteer vervolgens **[!DNL Apply]** .
 
+>[!NOTE]
+>
+>Als uw sleutelkluis beperkte netwerktoegang gebruikt, adviseert Adobe dat u het volgende statische IP adres toevoegt: `20.88.123.53`. Door dit IP-adres toe te voegen, kunnen Adobe-services de connectiviteit beter controleren en waarschuwingen op het platform geven wanneer toegangsproblemen worden gedetecteerd.
+>
+>Om meer over te leren wanneer om het IP van Adobe adres te lijsten van gewenste personen, hoe het alarm werkt, en hoe te aan zeer belangrijke berichten van de toegangsmislukking antwoorden, zie [ Alarm en IP Toegang voor Azure CMK ](./alerts-and-ip-access.md) vormen.
+>
+>Als uw sleutelkluis reeds wordt gevormd om openbare netwerktoegang toe te staan, wordt geen verdere actie vereist.
+
 ![ het [!DNL Networking] lusje van [!DNL Microsoft Azure] met [!DNL Networking] en [!DNL Allow trusted Microsoft surfaces to bypass this firewall] benadrukte uitzondering.](../../../images/governance-privacy-security/customer-managed-keys/networking.png)
 
 ### Een sleutel genereren {#generate-a-key}
@@ -69,7 +77,7 @@ Gebruik de verstrekte vorm om een naam voor de sleutel te verstrekken, en of **R
 
 >[!NOTE]
 >
->Onthoud de naam die u voor de sleutel opgeeft, omdat deze nodig is om de sleutel naar de Adobe te verzenden.
+>Onthoud de naam die u voor de sleutel opgeeft, omdat deze nodig is om de sleutel naar Adobe te verzenden.
 
 Gebruik de resterende besturingselementen om de sleutel te configureren die u naar wens wilt genereren of importeren. Selecteer **[!DNL Create]** als u klaar bent.
 

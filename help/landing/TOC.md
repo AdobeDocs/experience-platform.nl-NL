@@ -3,9 +3,9 @@ audience: user
 user-guide-title: Overzicht van Adobe Experience Platform
 breadcrumb-title: Overzicht van Experience Platform
 user-guide-description: Ontdek hoe u met Experience Platform uw klanten in real time persoonlijke ervaringen kunt bieden met handleidingen, documentatie en zelfstudies.
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: e53616a183cc8fe834782c82c56f8483d7b43eb1
 workflow-type: tm+mt
-source-wordcount: '324'
+source-wordcount: '332'
 ht-degree: 20%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 20%
 * [Experience Platform-overzicht (video)](video/platform-overview.md)
 * [Overzicht van meerdere wolken](multi-cloud.md)
 * [Edge Network- en hubvergelijking](./edge-and-hub-comparison.md)
-* [ zelfstudies van Experience Platform ](https://experienceleague.adobe.com/docs/platform-learn/tutorials/overview.html?lang=nl-NL)
+* [ zelfstudies van Experience Platform ](https://experienceleague.adobe.com/docs/platform-learn/tutorials/overview.html)
 * [Een klantervaring met Experience Platform (video)](video/customer-experience.md)
 * [Achter de schermen van een klantervaring met Experience Platform (video)](video/customer-experience-bts.md)
 * Aan de slag {#getting-started}
@@ -26,7 +26,7 @@ ht-degree: 20%
    * [Hoofdgebruik (video)](video/platform-use-cases.md)
    * [Experience Platform-architectuur (video)](video/platform-architecture.md)
    * [Rollen en projectfasen (video)](video/roles-project-phases.md)
-* Experience Platform-gebruikersinterface {#platform-ui}
+* EXPERIENCE PLATFORM UI {#platform-ui}
    * [Handleiding Experience Platform UI](ui-guide.md)
    * [Rondleiding door Experience Platform UI (video)](video/platform-ui.md)
    * [Handleiding Workflows-gebruikersinterface](workflows.md)
@@ -43,14 +43,14 @@ ht-degree: 20%
    * [Taalondersteuning](documentation/language-support.md)
 * Op Experience Platform gebaseerde toepassingen {#ecosystem}
    * [Overzicht](application-services.md)
-   * [ Adobe Real-Time Customer Data Platform (alle uitgaven) ](https://experienceleague.adobe.com/docs/real-time-customer-data-platform.html?lang=nl-NL)
+   * [ Adobe Real-Time Customer Data Platform (alle uitgaven) ](https://experienceleague.adobe.com/docs/real-time-customer-data-platform.html)
    * [Application and Intelligent Services (video)](video/application-intelligent-services.md)
-   * [Customer Journey Analytics](https://experienceleague.adobe.com/docs/customer-journey-analytics.html?lang=nl-NL)
-   * [ Adobe Journey Optimizer ](https://experienceleague.adobe.com/docs/journey-optimizer.html?lang=nl-NL)
-   * [Journey Orchestration](https://experienceleague.adobe.com/docs/journey-orchestration.html?lang=nl-NL)
-   * [[!DNL Adobe Mix Modeler]](https://experienceleague.adobe.com/docs/mix-modeler.html?lang=nl-NL)
+   * [Customer Journey Analytics](https://experienceleague.adobe.com/docs/customer-journey-analytics.html)
+   * [Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer.html)
+   * [Journey Orchestration](https://experienceleague.adobe.com/docs/journey-orchestration.html)
+   * [[!DNL Adobe Mix Modeler]](https://experienceleague.adobe.com/docs/mix-modeler.html)
    * [Experience Platform-integratie met Experience Cloud (video)](video/experience-cloud-integrations.md)
-* Beheer, privacy en beveiliging {#governance-privacy-security}
+* Bestuur, privacy en beveiliging {#governance-privacy-security}
    * [Overzicht](./governance-privacy-security/overview.md)
    * Toestemmingsbeheer {#consent}
       * Adobe-standaard {#adobe}
@@ -74,17 +74,18 @@ ht-degree: 20%
          * [Een Azure Key Vault configureren](./governance-privacy-security/customer-managed-keys/azure/azure-key-vault-config.md)
          * [De API gebruiken om CMK in te stellen](./governance-privacy-security/customer-managed-keys/azure/api-set-up.md)
          * [De gebruikersinterface gebruiken om CMK in te stellen](./governance-privacy-security/customer-managed-keys/azure/ui-set-up.md)
+         * [Vorm alarm en IP lijst van gewenste personen voor Azure CMK](./governance-privacy-security/customer-managed-keys/azure/alerts-and-ip-access.md)
       * Amazon Web Services {#aws}
          * [AWS KMS voor CMK configureren](./governance-privacy-security/customer-managed-keys/aws/configure-kms.md)
          * [De gebruikersinterface gebruiken om CMK in te stellen op AWS](./governance-privacy-security/customer-managed-keys/aws/ui-set-up.md)
-* Licentiegebruik en instructies {#license}
+* Licentiegebruik en guardrails {#license}
    * [ De beste praktijken van de het beheersvergunning van Gegevens best ](./license-usage-and-guardrails/data-management-best-practices.md)
    * [Het gebruiksdashboard voor licenties](./license-usage-and-guardrails/license-usage-dashboard.md)
    * [Totaal gegevensvolume](./license-usage-and-guardrails/total-data-volume.md)
-   * [ de guardrails van Adobe Journey Optimizer ](https://experienceleague.adobe.com/docs/journey-optimizer/using/get-started/guardrails.html?lang=nl-NL)
-   * [ de guardrails van Customer Journey Analytics ](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-admin/guardrails.html?lang=nl-NL)
-   * [ de guardrails van Real-Time CDP ](https://experienceleague.adobe.com/docs/experience-platform/rtcdp/guardrails/overview.html?lang=nl-NL)
+   * [ de guardrails van Adobe Journey Optimizer ](https://experienceleague.adobe.com/docs/journey-optimizer/using/get-started/guardrails.html)
+   * [ de guardrails van Customer Journey Analytics ](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-admin/guardrails.html)
+   * [ de guardrails van Real-Time CDP ](https://experienceleague.adobe.com/docs/experience-platform/rtcdp/guardrails/overview.html)
 * [Handleiding voor probleemoplossing](troubleshooting.md)
 * [Gen2-gegevensmeermigratie](adls2-gen2-migration.md)
 * [Woordenlijst](glossary.md)
-* [Aanvullende informatie](https://experienceleague.adobe.com/nl/docs/experience-platform/release-notes/latest)
+* [Aanvullende informatie](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)
