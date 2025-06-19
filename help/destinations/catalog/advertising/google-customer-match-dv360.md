@@ -1,12 +1,11 @@
 ---
 title: Google Customer Match + Display & Video 360-verbinding
 description: Met de Google Customer Match + Display & Video 360-doelconnector kunt u uw online- en offline gegevens van Experience Platform gebruiken om uw klanten te bereiken en opnieuw contact op te nemen met andere, door Google bediende en bediende eigenschappen, zoals Zoeken, Winkelen, Gmail en YouTube.
-badgeBeta: label="Beta" type="Informative"
 exl-id: f6da3eae-bf3f-401a-99a1-2cca9a9058d2
-source-git-commit: cf88ed1082085fac28553dcc7c7be27c517adb22
+source-git-commit: feb3077daf8b3632ff00b57099195523bbeac358
 workflow-type: tm+mt
-source-wordcount: '1993'
-ht-degree: 3%
+source-wordcount: '2213'
+ht-degree: 1%
 
 ---
 
@@ -18,10 +17,6 @@ Bepaalde door Google geïntegreerde derden, zoals Adobe Real-Time CDP, kunnen [!
 
 Dankzij de nieuwe mogelijkheid om [!DNL Customer Matched] publiek in [!DNL Display & Video 360] te kunnen gebruiken, kunt u nu doelgroepen kiezen in een uitgevouwen rooster met inventarisbronnen.
 
->[!IMPORTANT]
->
->Deze bestemmingsconnector bevindt zich in de bètafase en is alleen beschikbaar voor geselecteerde klanten. Neem contact op met uw Adobe-vertegenwoordiger om toegang aan te vragen.
-
 ![ Klantovereenkomst van Google + bestemming DV360 in Adobe Experience Platform UI.](/help/destinations/assets/catalog/advertising/gcm-dv360/catalog.png)
 
 ## Belangrijke kennisgeving over wijzigingen aan Google-bestemmingen in verband met geactualiseerde toestemmingsvereisten in de Europese Unie
@@ -29,12 +24,12 @@ Dankzij de nieuwe mogelijkheid om [!DNL Customer Matched] publiek in [!DNL Displ
 >[!IMPORTANT]
 >
 > Google geeft veranderingen in de [ Adds API van Google ](https://developers.google.com/google-ads/api/docs/start), [ Overeenkomst van de Klant ](https://ads-developers.googleblog.com/2023/10/updates-to-customer-match-conversion.html) vrij, en [ Vertoning &amp; Video 360 API ](https://developers.google.com/display-video/api/guides/getting-started/overview) om de naleving en toestemmings-gerelateerde vereisten te steunen die onder de [ Wet van de Markten ](https://digital-markets-act.ec.europa.eu/index_nl) (DMA) worden bepaald in de Europese Unie ([ EU het Beleid van de Toestemming van de Gebruiker ](https://www.google.com/about/company/user-consent-policy/)). De handhaving van deze wijzigingen in de toestemmingsvereisten is vanaf 6 maart 2024 van kracht.
-><br/>
->Om zich aan het EU-beleid inzake instemming van gebruikers te houden en door te gaan met het opstellen van publiekslijsten voor gebruikers in de Europese Economische Ruimte (EER), moeten adverteerders en partners ervoor zorgen dat zij toestemming van de eindgebruiker geven bij het uploaden van publieksgegevens. Als Google-partner beschikt Adobe over de benodigde tools om te voldoen aan deze toestemmingsvereisten in het kader van de DMA in de Europese Unie.
-><br/>
->De klanten die de Privacy &amp; het Schild van de Veiligheid van Adobe hebben gekocht en het beleid van de a [ toestemming ](../../../data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) gevormd om niet-goedgekeurde profielen uit te filteren hoeven geen actie te ondernemen.
-><br/>
->De klanten die geen de Privacy &amp; het Schild van de Veiligheid van Adobe hebben gekocht moeten de [&#128279;](../../../segmentation/home.md#segment-definitions) mogelijkheden van de segmentdefinitie  binnen [ de Bouwer van het Segment ](../../../segmentation/ui/segment-builder.md) aan filter uit niet-goedgekeurde profielen gebruiken, om de bestaande bestemmingen van Real-Time CDP Google zonder onderbreking te blijven gebruiken.
+> ><br/>
+> >Om zich aan het EU-beleid inzake instemming van gebruikers te houden en door te gaan met het opstellen van publiekslijsten voor gebruikers in de Europese Economische Ruimte (EER), moeten adverteerders en partners ervoor zorgen dat zij toestemming van de eindgebruiker geven bij het uploaden van publieksgegevens. Als Google-partner beschikt Adobe over de benodigde tools om te voldoen aan deze toestemmingsvereisten in het kader van de DMA in de Europese Unie.
+> ><br/>
+> >De klanten die de Privacy &amp; het Schild van de Veiligheid van Adobe hebben gekocht en het beleid van de a [ toestemming ](../../../data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) gevormd om niet-goedgekeurde profielen uit te filteren hoeven geen actie te ondernemen.
+> ><br/>
+> >De klanten die geen de Privacy &amp; het Schild van de Veiligheid van Adobe hebben gekocht moeten de ](../../../segmentation/home.md#segment-definitions) mogelijkheden van de segmentdefinitie [ binnen [ de Bouwer van het Segment ](../../../segmentation/ui/segment-builder.md) aan filter uit niet-goedgekeurde profielen gebruiken, om de bestaande bestemmingen van Real-Time CDP Google zonder onderbreking te blijven gebruiken.
 
 ## Wanneer gebruikt u deze bestemming
 
@@ -77,7 +72,7 @@ In deze sectie wordt beschreven welke soorten publiek u naar dit doel kunt expor
 
 | Oorsprong publiek | Ondersteund | Beschrijving |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | ✓ | Het publiek produceerde door de Dienst van de Segmentatie van Experience Platform [&#128279;](../../../segmentation/home.md). |
+| [!DNL Segmentation Service] | ✓ | Het publiek produceerde door de Dienst van de Segmentatie van Experience Platform [ ](../../../segmentation/home.md). |
 | Aangepaste uploads | ✓ | Het publiek [ ingevoerde ](../../../segmentation/ui/audience-portal.md#import-audience) in Experience Platform van Csv- dossiers. |
 
 {style="table-layout:auto"}
@@ -97,7 +92,33 @@ Raadpleeg de onderstaande tabel voor informatie over het exporttype en de export
 
 Alvorens vestiging een [!DNL Google Customer Match] bestemming in Experience Platform, zorg ervoor u leest en aan het beleid van Google hanteert voor het gebruiken van [!DNL Customer Match], die in de [ de steundocumentatie van Google ](https://support.google.com/google-ads/answer/6299717) wordt geschetst.
 
-Controleer vervolgens of uw [!DNL Google] -account is geconfigureerd voor een machtigingsniveau van [!DNL Standard] of hoger. Zie de [ documentatie van Ads van Google ](https://support.google.com/google-ads/answer/9978556?visit_id=637611563637058259-4176462731&amp;rd=1) voor details.
+Controleer vervolgens of uw [!DNL Google] -account is geconfigureerd voor een machtigingsniveau van [!DNL Standard] of hoger. Zie de [ documentatie van Ads van Google ](https://support.google.com/google-ads/answer/9978556?visit_id=637611563637058259-4176462731&rd=1) voor details.
+
+### Vereisten voor het koppelen van accounts {#linking}
+
+Voordat u deze bestemmingsconnector kunt configureren, moet u uw Google-account-id koppelen aan de Adobe Google-account-id: `4641108541` .
+
+De gegevensexport mislukt als je Google-account niet correct is gekoppeld aan de Adobe-account-id.
+
+>[!NOTE]
+>
+>Adobe heeft de Google Partner Account ID bijgewerkt van `6219889373` tot `4641108541` .
+>
+>**als uw rekening van Google momenteel met oude identiteitskaart van de Rekening van de Partner van Adobe (`6219889373`) wordt verbonden volg de hieronder stappen:**
+>
+>1. Koppel uw Google-account los van de oude Adobe Partner Account ID (`6219889373`)
+>2. Koppel uw Google-account aan de nieuwe Adobe Partner Account ID (`4641108541`)
+>3. Alle soorten publiek verwijderen uit uw bestaande gegevensstromen
+>4. Nieuwe gegevensstromen maken en uw publiek toewijzen
+>
+>Als uw Google-account al is gekoppeld aan de nieuwe Adobe Partner Account ID (`4641108541`), hoeft u geen actie te ondernemen.
+
+**voor organisaties met managerrekeningen:**
+
+Als uw organisatie a [ manager  [!DNL Google]  rekening ](https://support.google.com/google-ads/answer/6139186) gebruikt om veelvoudige cliëntrekeningen te beheren, deze specifieke het verbinden vereisten volgen:
+
+* **om naar een specifieke cliëntrekening uit te voeren:** Koppel die individuele cliëntrekening (niet de managerrekening) aan Adobe Google rekeningidentiteitskaart: `4641108541`
+* **de rekening die van de Manager alleen verbindt is niet voldoende** en zal de mislukkingen van de gegevensuitvoer veroorzaken
 
 ### Lijst van gewenste personen {#allowlist}
 
@@ -133,7 +154,6 @@ Raadpleeg de volgende secties in de documentatie bij Google voor meer informatie
 * [[!DNL Customer Match]  met telefoonaantal ](https://developers.google.com/google-ads/api/docs/remarketing/audience-types/customer-match#customer_match_with_phone_number)
 * [[!DNL Customer Match]  met mobiele apparaat IDs ](https://developers.google.com/google-ads/api/docs/remarketing/audience-types/customer-match#customer_match_with_mobile_device_ids)
 
-
 Om over het opnemen van e-mailadressen in Experience Platform te leren, zie het [ overzicht van de partijopname ](../../../ingestion/batch-ingestion/overview.md) en [ het stromen ingestitieoverzicht ](../../../ingestion/streaming-ingestion/overview.md).
 
 Als u ervoor kiest om de e-mailadressen zelf te hashen, moet u voldoen aan de Google-vereisten die in de bovenstaande koppelingen worden beschreven.
@@ -154,6 +174,11 @@ The video below demonstrates the steps to configure a [!DNL Google Customer Matc
 >[!VIDEO](https://video.tv.adobe.com/v/332599/?quality=12&learn=on&captions=eng) -->
 
 ## Verbinden met de bestemming {#connect}
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_gcm_dv360_accountID"
+>title="Google- en Adobe-accounts koppelen"
+>abstract="Controleer of de Google-account-id die u hier invoert, al is gekoppeld aan uw Adobe-account. Als u een Google-beheeraccount met meerdere clientaccounts hebt en u van plan bent gegevens van Experience Platform naar een specifieke clientaccount te exporteren, moet u dat clientaccount koppelen aan uw Adobe-account en hier de account-id invoeren."
 
 >[!IMPORTANT]
 > 
@@ -239,4 +264,4 @@ Wanneer het vormen van deze bestemming, kunt u de volgende fout ontvangen:
 
 `{"message":"Google Customer Match Error: OperationAccessDenied.ACTION_NOT_PERMITTED","code":"400 BAD_REQUEST"}`
 
-Deze fout komt voor wanneer de klantenrekeningen niet aan de [ eerste vereisten ](#google-account-prerequisites) voldoen. Neem contact op met Google om dit probleem op te lossen en zorg ervoor dat uw account op de lijst met toegestane items staat en geconfigureerd is voor een machtigingsniveau van [!DNL Standard] of hoger. Zie de [ documentatie van Ads van Google ](https://support.google.com/google-ads/answer/9978556?visit_id=637611563637058259-4176462731&amp;rd=1) voor details.
+Deze fout komt voor wanneer de klantenrekeningen niet aan de [ eerste vereisten ](#google-account-prerequisites) voldoen. Neem contact op met Google om dit probleem op te lossen en zorg ervoor dat uw account op de lijst met toegestane items staat en geconfigureerd is voor een machtigingsniveau van [!DNL Standard] of hoger. Zie de [ documentatie van Ads van Google ](https://support.google.com/google-ads/answer/9978556?visit_id=637611563637058259-4176462731&rd=1) voor details.
