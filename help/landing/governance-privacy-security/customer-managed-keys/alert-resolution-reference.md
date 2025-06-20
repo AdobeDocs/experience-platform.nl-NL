@@ -94,13 +94,13 @@ Deze waarschuwing kan om de volgende redenen voorkomen:
 
 +++
 
-++ als de MultiTenant-app is verwijderd
++++ als de MultiTenant-app is verwijderd
 
 Dit is een baanbrekende verandering. U moet contact opnemen met Adobe om de MultiTenant-app te herstellen of opnieuw te genereren.
 
 +++
 
-++ als de instellingen voor de MultiTenant-app zijn gewijzigd
++++ als de instellingen voor de MultiTenant-app zijn gewijzigd
 
 1. Hiermee worden de wijzigingen in de eigenschappen van de MultiTenant-app hersteld.
 
@@ -141,14 +141,14 @@ Deze waarschuwing wordt doorgaans geactiveerd wanneer de sleutelvafirewall niet 
 
 ### Resolutie
 
-++ als de Key Vault of Key niet meer bestaat
++++ als de Key Vault of Key niet meer bestaat
 
 1. Controleer of de Key Vault en de coderingssleutel nog steeds bestaan.
 2. Als de sleutel is verwijderd, volgt u de herstelstappen voor soft-delete onder &#39;Toetstoegang uitgeschakeld&#39;.
 
 +++
 
-++ als de MultiTenant App-machtigingen ontbreken of zijn gewijzigd
++++ als de MultiTenant App-machtigingen ontbreken of zijn gewijzigd
 
 1. Controleer of de MultiTenant-app van Adobe de volgende machtigingen heeft:
    - `get` , `wrapKey` en `unwrapKey` op de toets.
