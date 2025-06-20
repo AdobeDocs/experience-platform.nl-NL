@@ -1,9 +1,10 @@
 ---
 title: Overzicht van extensie Algolië-tags
 description: Meer informatie over de extensie Algolië Tags in Adobe Experience Platform.
-source-git-commit: 5b488a596472fe61b487f75ad62d741237caa820
+exl-id: 8409bf8b-fae2-44cc-8466-9942f7d92613
+source-git-commit: 605f89a09f58568c2ec2492f788bedbe610292ae
 workflow-type: tm+mt
-source-wordcount: '1421'
+source-wordcount: '1565'
 ht-degree: 0%
 
 ---
@@ -60,7 +61,7 @@ In de configuratieweergave die wordt weergegeven, moet u de volgende details opg
 >
 >In de meeste gevallen is het raadzaam [!DNL Algolia] Inzichten te laden op elke pagina van uw site.
 
-Voeg de handeling **[!UICONTROL Load Insights]** toe aan de labelregel waar dit het meest zinvol is voor het laden van [!DNL Algolia] -inzichten die zijn gebaseerd op de context van uw regel. Met deze handeling wordt de `search-insights.js` -bibliotheek op de pagina geladen.
+Voeg de handeling **[!UICONTROL Load Insights]** toe aan de labelregel waar dit het meest zinvol is voor het laden van [!DNL Algolia] -inzichten op basis van de context van uw regel. Met deze handeling wordt de `search-insights.js` -bibliotheek op de pagina geladen.
 
 Maak een nieuwe labelregel of open een bestaande regel. Definieer de voorwaarden volgens uw vereisten en selecteer vervolgens **[!UICONTROL Algolia]** als de [!UICONTROL Extension] en selecteer **[!UICONTROL Load Insights]** als de [!UICONTROL Action Type] .
 
@@ -79,9 +80,18 @@ Voeg de handeling **[!UICONTROL Click]** toe aan de tagregel om aangeklikte gebe
 | Eigenschap | Beschrijving |
 | --- | --- |
 | [!UICONTROL Event Name] | De naam van de gebeurtenis die kan worden gebruikt om deze klikgebeurtenis verder te verfijnen. |
-| Gegevenselement voor gebeurtenisdetails | Het gegevenselement dat de gebeurtenisdetails inclusief `indexName` , `objectIDs` en optioneel `queryID` , `position` ophaalt. Als zowel `queryID` als `position` inbegrepen zijn, zal de gebeurtenis worden gecategoriseerd als *Gepliceerde objecten IDs na Onderzoek* anders zal het als a *geklikt voorwerp IDs* gebeurtenis worden behandeld. Als het gegevenselement geen indexnaam levert, wordt de standaardindexnaam gebruikt bij het verzenden van de gebeurtenis. |
+| Gegevenselement voor gebeurtenisdetails | Het gegevenselement retourneert gebeurtenisdetails, waaronder: <ul><li>`indexName`</li><li>`objectIDs`</li><li>`queryID` (optioneel)</li><li>`position` (optioneel)</li></ul> |
+
+>[!NOTE]
+>
+>Als zowel `queryID` als `position` inbegrepen zijn, wordt de gebeurtenis geclassificeerd als **Gepliceerde voorwerp IDs na Onderzoek**. Anders, is het geclassificeerd als a **Geklikte voorwerp IDs** gebeurtenis.
+>><br><br>
+>>Als het Element van Gegevens geen `indexName` verstrekt, zal de **Naam Standaard van de Index** worden gebruikt wanneer de gebeurtenis wordt verzonden.
 
 ![](../../../images/extensions/client/algolia/clicked.png)
+
+Voor meer informatie over de gebeurteniscategorieën, zie [ Gecliceerde objecten IDs na onderzoek ](https://www.algolia.com/doc/api-reference/api-methods/clicked-object-ids-after-search/)
+en [ klikte objecten IDs ](https://www.algolia.com/doc/api-reference/api-methods/clicked-object-ids/) gidsen.
 
 ### Omgezet {#converted}
 
@@ -90,9 +100,17 @@ Voeg de handeling **[!UICONTROL Converted]** toe aan de labelregel om geconverte
 | Eigenschap | Beschrijving |
 | --- | --- |
 | Gebeurtenisnaam | De Naam van de Gebeurtenis die zal worden gebruikt om deze **te verfijnen zet** gebeurtenis om. |
-| Gegevenselement voor gebeurtenisdetails | Het gegevenselement dat de gebeurtenisdetails inclusief `indexName` , `objectId` en optioneel `queryId` ophaalt. Als het Element van Gegevens `queryId` bevat, zal de gebeurtenis als *na Onderzoek* anders worden geclassificeerd zal het als a *Omgezette* gebeurtenisklasse worden beschouwd. Als het gegevenselement geen indexnaam levert, wordt de standaardindexnaam gebruikt bij het verzenden van de gebeurtenis. |
+| Gegevenselement voor gebeurtenisdetails | Het gegevenselement retourneert gebeurtenisdetails, waaronder: <ul><li>`indexName`</li><li>`objectIDs`</li><li>`queryID` (optioneel)</li></ul> |
+
+>[!NOTE]
+>
+>Als het Element van Gegevens `queryId` bevat, wordt de gebeurtenis geclassificeerd als **na Onderzoek** wordt omgezet. Anders, zal het als a **Omgezette** gebeurtenis worden geclassificeerd.
+>><br><br>
+>>Als het Element van Gegevens geen `indexName` verstrekt, zal de **Naam Standaard van de Index** worden gebruikt wanneer de gebeurtenis wordt verzonden.
 
 ![](../../../images/extensions/client/algolia/converted.png)
+
+Voor meer informatie over de gebeurteniscategorieën, zie [ Omgezette objecten IDs na onderzoek ](https://www.algolia.com/doc/api-reference/api-methods/converted-object-ids-after-search/) en [ Omgezette objecten IDs ](https://www.algolia.com/doc/api-reference/api-methods/converted-object-ids/) gidsen.
 
 ### Toegevoegd aan winkelwagentje {#added-to-cart}
 
@@ -101,32 +119,60 @@ Voeg de handeling **[!UICONTROL Added to Cart]** toe aan de labelregel om toegev
 | Eigenschap | Beschrijving |
 | --- | --- |
 | Gebeurtenisnaam | De Naam van de Gebeurtenis die zal worden gebruikt om deze **te verfijnen zet** gebeurtenis om. |
-| Gegevenselement voor gebeurtenisdetails | Het gegevenselement dat de gebeurtenisdetails inclusief `indexName` , `objectId` en optioneel `queryId` , `objectData` ophaalt. Als het Element van Gegevens `queryId` bevat, zal de gebeurtenis als *worden geclassificeerd Toegevoegd aan kart voorwerp IDs na onderzoek* anders zal het als a *worden beschouwd Toegevoegd aan de gebeurtenisklasse van kartelobjecten IDs*. Als het gegevenselement geen indexnaam levert, wordt de standaardindexnaam gebruikt bij het verzenden van de gebeurtenis. |
-| Valuta | Geeft het valutatype aan, bijvoorbeeld `USD` . |
+| Gegevenselement voor gebeurtenisdetails | Het gegevenselement retourneert gebeurtenisdetails, waaronder: <ul><li>`indexName`</li><li>`objectIDs`</li><li>`objectData`<ul><li>`queryID` (optioneel)</li><li>`price`</li><li>`quantity`</li><li>`discount`</li></ul></li><li>`queryID` (optioneel)</li></ul>. |
+| Valuta | Geeft het type valuta aan, bijvoorbeeld `USD` . |
+
+>[!NOTE]
+>
+>Als het Element van Gegevens `queryId` bevat, zal de gebeurtenis als **worden geclassificeerd die aan kart voorwerp IDs na Onderzoek** wordt toegevoegd. Anders, zal het als a **worden geclassificeerd Toegevoegd aan de gebeurtenis van identiteitskaarts van het wortelvoorwerp**.
+>><br><br>
+>>Als het Element van Gegevens geen `indexName` verstrekt, zal de **Naam Standaard van de Index** worden gebruikt wanneer de gebeurtenis wordt verzonden.
+>><br><br>
+>>Als de standaardgegevenselementen niet aan uw vereisten voldoen, kan een aangepast gegevenselement worden gemaakt om de gewenste gebeurtenisdetails te retourneren.
 
 ![](../../../images/extensions/client/algolia/added-to-cart.png)
 
+Voor meer informatie over de gebeurteniscategorieën, zie [ Toegevoegd aan kart voorwerp IDs na onderzoek ](https://www.algolia.com/doc/api-reference/api-methods/added-to-cart-object-ids-after-search/) en [ Toegevoegd aan de gidsen van identiteitskaarts van het wortelvoorwerp ](https://www.algolia.com/doc/api-reference/api-methods/added-to-cart-object-ids/).
+
 ### Aangeschaft {#purchased}
 
-Voeg de handeling **[!UICONTROL Added to Cart]** toe aan de tagregel om aangeschafte gebeurtenissen naar [!DNL Algolia] te verzenden. Maak een nieuwe labelregel of open een bestaande regel. Definieer de voorwaarden volgens uw vereisten en selecteer vervolgens **[!UICONTROL Algolia]** als de [!UICONTROL Extension] en selecteer **[!UICONTROL Purchased]** als de [!UICONTROL Action Type] .
+Voeg de handeling **[!UICONTROL Purchased]** toe aan de tagregel om aangeschafte gebeurtenissen naar [!DNL Algolia] te verzenden. Maak een nieuwe labelregel of open een bestaande regel. Definieer de voorwaarden volgens uw vereisten en selecteer vervolgens **[!UICONTROL Algolia]** als de [!UICONTROL Extension] en selecteer **[!UICONTROL Purchased]** als de [!UICONTROL Action Type] .
 
 | Eigenschap | Beschrijving |
 | --- | --- |
 | Gebeurtenisnaam | De Naam van de Gebeurtenis die zal worden gebruikt om deze **aankoop** gebeurtenis verder te verfijnen. |
-| Gegevenselement voor gebeurtenisdetails | Het gegevenselement dat de gebeurtenisdetails inclusief `indexName` , `objectId` en optioneel `queryId` ophaalt. Als het Element van Gegevens `queryId` bevat, zal de gebeurtenis als *Aangeschafte voorwerp IDs na onderzoek* anders worden geclassificeerd zal het als a *Aangeschafte voorwerp IDs* gebeurtenisklasse worden beschouwd. Als het gegevenselement geen indexnaam levert, wordt de standaardindexnaam gebruikt bij het verzenden van de gebeurtenis. |
+| Gegevenselement voor gebeurtenisdetails | Het gegevenselement retourneert gebeurtenisdetails, waaronder: <ul><li>`indexName`</li><li>`objectIDs`</li><li>`objectData`<ul><li>`queryID` (optioneel)</li><li>`price`</li><li>`quantity`</li><li>`discount`</li></ul></li><li>`queryID` (optioneel)</li></ul>. |
+| Valuta | Geeft het type valuta aan, bijvoorbeeld `USD` . |
+
+>[!NOTE]
+>
+>Als het Element van Gegevens `queryId` bevat, zal de gebeurtenis als **Aangeschafte voorwerp IDs na Onderzoek** worden geclassificeerd. Anders zal het als a **Aangeschafte voorwerp IDs** gebeurtenis worden geclassificeerd.
+>><br><br>
+>>Als het Element van Gegevens geen `indexName` verstrekt, zal de **Naam Standaard van de Index** worden gebruikt wanneer de gebeurtenis wordt verzonden.
+>><br><br>
+>>Als de standaardgegevenselementen niet aan uw vereisten voldoen, kan een aangepast gegevenselement worden gemaakt om de gewenste gebeurtenisdetails te retourneren.
 
 ![](../../../images/extensions/client/algolia/purchased.png)
 
+Voor meer informatie over de gebeurteniscategorieën, zie [ Aangeschafte objecten IDs na onderzoek ](https://www.algolia.com/doc/api-reference/api-methods/purchased-object-ids-after-search/)
+en [ Gekochte objecten IDs ](https://www.algolia.com/doc/api-reference/api-methods/purchased-object-ids/) gidsen.
+
 ### Weergegeven {#viewed}
 
-Voeg de handeling **[!UICONTROL Added to Cart]** toe aan de tagregel om aangeschafte gebeurtenissen naar [!DNL Algolia] te verzenden. Maak een nieuwe labelregel of open een bestaande regel. Definieer de voorwaarden volgens uw vereisten en selecteer vervolgens **[!UICONTROL Algolia]** als de [!UICONTROL Extension] en selecteer **[!UICONTROL Viewed]** als de [!UICONTROL Action Type] .
-
-![](../../../images/extensions/client/algolia/viewed.png)
+Voeg de handeling **[!UICONTROL Viewed]** toe aan de tagregel om aangeschafte gebeurtenissen naar [!DNL Algolia] te verzenden. Maak een nieuwe labelregel of open een bestaande regel. Definieer de voorwaarden volgens uw vereisten en selecteer vervolgens **[!UICONTROL Algolia]** als de [!UICONTROL Extension] en selecteer **[!UICONTROL Viewed]** als de [!UICONTROL Action Type] .
 
 | Eigenschap | Beschrijving |
 | --- | --- |
 | Gebeurtenisnaam | De Naam van de Gebeurtenis die zal worden gebruikt om deze **mening** gebeurtenis verder te verfijnen. |
-| Gegevenselement voor gebeurtenisdetails | Het gegevenselement dat de gebeurtenisdetails inclusief `indexName` en `objectId` ophaalt. Als `indexName` niet beschikbaar is, wordt de standaard indexnaam gebruikt bij het verzenden van de gebeurtenissen. |
+| Gegevenselement voor gebeurtenisdetails | Het gegevenselement retourneert gebeurtenisdetails, waaronder: <ul><li>`indexName`</li><li>`objectIDs`</li></ul> |
+
+>[!NOTE]
+>
+>Als het Element van Gegevens geen `indexName` verstrekt, zal de **Naam Standaard van de Index** worden gebruikt wanneer het verzenden van de gebeurtenis.
+
+![](../../../images/extensions/client/algolia/viewed.png)
+
+Voor meer informatie over de meningsgebeurtenis, zie [ Bekeken voorwerp IDs ](https://www.algolia.com/doc/api-reference/api-methods/viewed-object-ids/) gids.
 
 ## [!DNL Algolia] Insights-gegevenselementen voor extensies {#data-elements}
 
@@ -148,10 +194,10 @@ Dit gegevenselement retourneert:
 ```javascript
 {
   timestamp,
-    queryID,
-    indexName,
-    objectIDs,
-    positions
+  queryID,
+  indexName,
+  objectIDs,
+  positions
 }
 ```
 
@@ -186,9 +232,9 @@ Dit gegevenselement retourneert:
 ```javascript
 {
   timestamp,
-    queryID,
-    indexName,
-    objectIDs
+  queryID,
+  indexName,
+  objectIDs
 }
 ```
 
@@ -211,9 +257,9 @@ Dit gegevenselement retourneert wat is opgeslagen in de Session Storage.
 ```javascript
 {
   timestamp,
-    queryID,
-    indexName,
-    objectIDs
+  queryID,
+  indexName,
+  objectIDs
 }
 ```
 
@@ -228,6 +274,7 @@ Dit gegevenselement retourneert wat is opgeslagen in de Session Storage.
 * [[!DNL Algolia]  Opslagplaats van de Bewaarplaats van de Uitbreiding GitHub van de Lancering ](https://github.com/algolia/algolia-launch-extension)
 * [ Documentatie InstantSearch.js ](https://www.algolia.com/doc/guides/building-search-ui/what-is-instantsearch/js/)
 * [[!DNL Algolia]  Inzichten API Documentatie ](https://www.algolia.com/doc/rest-api/insights/)
+* [ Algolië de Reparatie van de Code van de Uitbreiding van de Lancering ](https://github.com/algolia/algolia-launch-extension)
 
 ## Volgende stappen {#next-steps}
 
