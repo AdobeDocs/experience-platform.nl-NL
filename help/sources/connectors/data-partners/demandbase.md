@@ -2,12 +2,12 @@
 title: Demandbase-intentie
 description: Meer informatie over de Demandbase Intent-bron op Experience Platform.
 last-substantial-update: 2025-03-26T00:00:00Z
-badgeB2B: label="B2B edition" type="Informative" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=nl-NL#rtcdp-editions newtab=true"
-badgeB2P: label="B2P Edition" type="Positive" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=nl-NL#rtcdp-editions newtab=true"
+badgeB2B: label="B2B edition" type="Informative" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=en#rtcdp-editions newtab=true"
+badgeB2P: label="B2P Edition" type="Positive" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=en#rtcdp-editions newtab=true"
 exl-id: 62dd27e0-b846-4c04-977f-8a3ab99bc464
-source-git-commit: a1af85c6b76cc7bded07ab4acaec9c3213a94397
+source-git-commit: 5757bc84a9aeec18eb5fe21d6f02160b2ba55166
 workflow-type: tm+mt
-source-wordcount: '1471'
+source-wordcount: '1476'
 ht-degree: 0%
 
 ---
@@ -71,6 +71,7 @@ Het [!DNL Demandbase] schema wordt genoemd {de Intentie van het 1} Bedrijf Wekel
 | `duration_type` | TEKENREEKS | TRUE | JA | Het type duur. In het algemeen kan deze waarde dagelijks, wekelijks of maandelijks zijn, afhankelijk van de gekozen roll-up duur. Voor dit gegevensvoorbeeld is deze waarde `week` . |
 | `keyword_set_id` | TEKENREEKS | TRUE | JA | De trefwoordenset-id. Dit is uniek per bepaalde klant. |
 | `keyword_set` | TEKENREEKS | TRUE | JA | De naam van de trefwoordset. |
+| `keyword` | TEKENREEKS | TRUE | | Het trefwoord intent. |
 | `is_trending` | TEKENREEKS | TRUE | | De huidige toestand van een bepaalde trend. De trendstaat wordt gemeten als een uitbarsting van de intentactiviteit in de laatste week ten opzichte van gemiddelden in de voorafgaande zeven weken. |
 | `intent_strength` | ENUM [ TEKENREEKS ] | TRUE | | Een gekwantificeerde maat van de sterkte van de intentie. Tot de geaccepteerde waarden behoren: `HIGH`, `MED` en `LOW` . |
 | `num_people_researching` | INTEGER | TRUE | | Het aantal personen dat in de afgelopen zeven dagen tot het trefwoord `company_id` behoort dat het trefwoord onderzoekt. |
