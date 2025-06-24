@@ -48,7 +48,7 @@ De [!DNL SFTP] -bron ondersteunt verificatie met behulp van de [!DNL Base64] -ge
 
 ### [!DNL Windows] gebruikers
 
-Als u een [!DNL Windows] machine gebruikt, open omhoog het **2} menu van het Begin {en selecteer dan** Montages **.**
+Als u een [!DNL Windows] machine gebruikt, open omhoog het **2&rbrace; menu van het Begin &lbrace;en selecteer dan** Montages **.**
 
 ![ montages ](../../images/tutorials/create/sftp/settings.png)
 
@@ -60,7 +60,7 @@ Daarna, uitgezochte **Facultatieve eigenschappen**.
 
 ![ facultatief-eigenschappen ](../../images/tutorials/create/sftp/optional-features.png)
 
-Er wordt een lijst met optionele functies weergegeven. Als **Cliënt OpenSSH** reeds vooraf geïnstalleerd in uw machine is, dan zal het in de **Geïnstalleerde 3} lijst van eigenschappen** Facultatieve eigenschappen **worden omvat.**
+Er wordt een lijst met optionele functies weergegeven. Als **Cliënt OpenSSH** reeds vooraf geïnstalleerd in uw machine is, dan zal het in de **Geïnstalleerde 3&rbrace; lijst van eigenschappen** Facultatieve eigenschappen **worden omvat.**
 
 ![ open-ssh ](../../images/tutorials/create/sftp/open-ssh.png)
 
