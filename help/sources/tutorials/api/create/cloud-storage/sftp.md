@@ -2,9 +2,9 @@
 title: Een SFTP-basisverbinding maken met de Flow Service API
 description: Leer hoe u Adobe Experience Platform verbindt met een SFTP-server (Secure File Transfer Protocol) met behulp van de Flow Service API.
 exl-id: b965b4bf-0b55-43df-bb79-c89609a9a488
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 4816a6b627dc6551e351bfe3cdc4bc8c8ea8b17e
 workflow-type: tm+mt
-source-wordcount: '761'
+source-wordcount: '751'
 ht-degree: 0%
 
 ---
@@ -50,7 +50,7 @@ Als u een basis-verbindings-id wilt maken, vraagt u een POST-aanvraag naar het `
 
 >[!IMPORTANT]
 >
->De [!DNL SFTP] schakelaar steunt een sleutel van RSA of DSA type OpenSSH. Zorg ervoor dat de inhoud van het sleutelbestand begint met `"-----BEGIN [RSA/DSA] PRIVATE KEY-----"` en eindigt met `"-----END [RSA/DSA] PRIVATE KEY-----"` . Als het bestand met de persoonlijke sleutel een PPK-bestand is, gebruikt u het gereedschap PuTTY om de PPK-indeling om te zetten in de OpenSSH-indeling.
+>De [!DNL SFTP] -connector ondersteunt `ed25519` , `RSA` - of `DSA` OpenSSH-toets. Zorg ervoor dat de inhoud van het sleutelbestand begint met `"-----BEGIN [RSA/DSA] PRIVATE KEY-----"` en eindigt met `"-----END [RSA/DSA] PRIVATE KEY-----"` . Als het bestand met de persoonlijke sleutel een PPK-bestand is, gebruikt u het gereedschap PuTTY om de PPK-indeling om te zetten in de OpenSSH-indeling.
 
 **API formaat**
 
@@ -160,7 +160,7 @@ curl -X POST \
 | `auth.params.host` | De hostnaam van de [!DNL SFTP] -server. |
 | `auth.params.port` | De poort van de SFTP-server. Deze gehele waarde is standaard ingesteld op 22. |
 | `auth.params.username` | De gebruikersnaam die aan de [!DNL SFTP] -server is gekoppeld. |
-| `auth.params.privateKeyContent` | De Base64-gecodeerde SSH-inhoud voor persoonlijke sleutels. Het type van sleutel OpenSSH moet als of RSA of DSA worden geclassificeerd. |
+| `auth.params.privateKeyContent` | De Base64-gecodeerde inhoud van de privé sleutel van SSH. De ondersteunde OpenSSH-sleuteltypen zijn `ed25519` , `RSA` en `DSA` . |
 | `auth.params.passPhrase` | De wachtwoordgroep of het wachtwoord voor het decoderen van de persoonlijke sleutel als het sleutelbestand of de sleutelinhoud wordt beveiligd door een wachtwoordgroep. Als PrivateKeyContent met een wachtwoord beveiligd is, moet deze parameter worden gebruikt met de wachtwoordzin van PrivateKeyContent als waarde. |
 | `auth.params.maxConcurrentConnections` | Het maximumaantal gezamenlijke verbindingen dat is opgegeven bij het verbinden van Experience Platform met SFTP. Wanneer deze optie is ingeschakeld, moet deze waarde op ten minste 1 worden ingesteld. |
 | `auth.params.folderPath` | Het pad naar de map waartoe u toegang wilt verlenen. |

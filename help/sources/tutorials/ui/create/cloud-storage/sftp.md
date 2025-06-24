@@ -2,9 +2,9 @@
 title: Een SFTP Source-verbinding maken in de gebruikersinterface
 description: Leer hoe u een SFTP-bronverbinding maakt met de Adobe Experience Platform-gebruikersinterface.
 exl-id: 1a00ed27-3c95-4e57-9f94-45ff256bf75c
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 4816a6b627dc6551e351bfe3cdc4bc8c8ea8b17e
 workflow-type: tm+mt
-source-wordcount: '641'
+source-wordcount: '638'
 ht-degree: 0%
 
 ---
@@ -56,7 +56,7 @@ Als u een bestaande account wilt verbinden, selecteert u de FTP- of SFTP-account
 >
 >* Nadat u een [!DNL SFTP] basisverbinding hebt gemaakt, kunt u het verificatietype niet wijzigen. Als u het verificatietype wilt wijzigen, moet u een nieuwe basisverbinding maken.
 >
->* SFTP steunt een RSA of DSA type OpenSSH sleutel. Zorg ervoor dat de inhoud van het sleutelbestand begint met `"-----BEGIN [RSA/DSA] PRIVATE KEY-----"` en eindigt met `"-----END [RSA/DSA] PRIVATE KEY-----"` . Als het bestand met de persoonlijke sleutel een PPK-bestand is, gebruikt u het gereedschap PuTTY om de PPK-indeling om te zetten in de OpenSSH-indeling.
+>* SFTP biedt ondersteuning voor het type `ed25519` , `RSA` of `DSA` OpenSSH-toets. Zorg ervoor dat de inhoud van het sleutelbestand begint met `"-----BEGIN [RSA/DSA] PRIVATE KEY-----"` en eindigt met `"-----END [RSA/DSA] PRIVATE KEY-----"` . Als het bestand met de persoonlijke sleutel een PPK-bestand is, gebruikt u het gereedschap PuTTY om de PPK-indeling om te zetten in de OpenSSH-indeling.
 
 Als u een nieuwe account maakt, selecteert u **[!UICONTROL New account]** en geeft u een naam en een optionele beschrijving voor uw nieuwe [!DNL SFTP] -account.
 

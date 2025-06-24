@@ -2,9 +2,9 @@
 title: Overzicht SFTP Source-connector
 description: Leer hoe u een SFTP-server verbindt met Adobe Experience Platform via API's of de gebruikersinterface.
 exl-id: d5bced3d-cd33-40ea-bce0-32c76ecd2790
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 4816a6b627dc6551e351bfe3cdc4bc8c8ea8b17e
 workflow-type: tm+mt
-source-wordcount: '1226'
+source-wordcount: '1215'
 ht-degree: 0%
 
 ---
@@ -25,7 +25,7 @@ Lees deze sectie voor de vereiste stappen die u moet voltooien om de [!DNL SFTP]
 
 ### IP adres lijst van gewenste personen
 
-Een lijst van IP adressen moet aan een lijst van gewenste personen worden toegevoegd alvorens met bronschakelaars te werken. Het niet toevoegen van uw regio-specifieke IP adressen aan uw lijst van gewenste personen kan tot fouten of niet-prestaties leiden wanneer het gebruiken van bronnen. Zie de [&#128279;](../../ip-address-allow-list.md) pagina van de lijst van gewenste personen van het 0&rbrace; IP adres &lbrace;voor meer informatie.
+Een lijst van IP adressen moet aan een lijst van gewenste personen worden toegevoegd alvorens met bronschakelaars te werken. Het nalaten om uw gebied-specifieke IP adressen aan uw lijst van gewenste personen toe te voegen kan tot fouten of niet-prestaties leiden wanneer het gebruiken van bronnen. Zie de [ IP pagina van de lijst van gewenste personen van het adres ](../../ip-address-allow-list.md) voor meer informatie.
 
 ### Naamgevingsbeperkingen voor bestanden en mappen
 
@@ -48,7 +48,7 @@ De [!DNL SFTP] -bron ondersteunt verificatie met behulp van de [!DNL Base64] -ge
 
 ### [!DNL Windows] gebruikers
 
-Als u een [!DNL Windows] machine gebruikt, open omhoog het **2&rbrace; menu van het Begin &lbrace;en selecteer dan** Montages **.**
+Als u een [!DNL Windows] machine gebruikt, open omhoog het **2} menu van het Begin {en selecteer dan** Montages **.**
 
 ![ montages ](../../images/tutorials/create/sftp/settings.png)
 
@@ -60,7 +60,7 @@ Daarna, uitgezochte **Facultatieve eigenschappen**.
 
 ![ facultatief-eigenschappen ](../../images/tutorials/create/sftp/optional-features.png)
 
-Er wordt een lijst met optionele functies weergegeven. Als **Cliënt OpenSSH** reeds vooraf geïnstalleerd in uw machine is, dan zal het in de **Geïnstalleerde 3&rbrace; lijst van eigenschappen** Facultatieve eigenschappen **worden omvat.**
+Er wordt een lijst met optionele functies weergegeven. Als **Cliënt OpenSSH** reeds vooraf geïnstalleerd in uw machine is, dan zal het in de **Geïnstalleerde 3} lijst van eigenschappen** Facultatieve eigenschappen **worden omvat.**
 
 ![ open-ssh ](../../images/tutorials/create/sftp/open-ssh.png)
 
@@ -183,7 +183,7 @@ Geef de juiste waarden op voor de volgende referenties om uw [!DNL SFTP] -server
 | `port` | De [!DNL SFTP] serverpoort waarmee u verbinding maakt. Als deze waarde niet wordt opgegeven, wordt deze standaard ingesteld op `22` . |
 | `username` | De gebruikersnaam met toegang tot de [!DNL SFTP] -server. |
 | `password` | Het wachtwoord voor uw [!DNL SFTP] -server. |
-| `privateKeyContent` | De Base64-gecodeerde SSH-inhoud voor persoonlijke sleutels. Het type van sleutel OpenSSH moet als of RSA of DSA worden geclassificeerd. |
+| `privateKeyContent` | De Base64-gecodeerde inhoud van de privé sleutel van SSH. De ondersteunde OpenSSH-sleuteltypen zijn `ed25519` , `RSA` en `DSA` . |
 | `passPhrase` | De wachtwoordgroep of het wachtwoord voor het decoderen van de persoonlijke sleutel als het sleutelbestand of de sleutelinhoud wordt beveiligd door een wachtwoordgroep. Als PrivateKeyContent met een wachtwoord beveiligd is, moet deze parameter worden gebruikt met de wachtwoordzin van PrivateKeyContent als waarde. |
 | `maxConcurrentConnections` | Met deze parameter kunt u een maximumlimiet opgeven voor het aantal gelijktijdige verbindingen dat Experience Platform maakt wanneer verbinding wordt gemaakt met uw SFTP-server. U moet deze waarde instellen op een waarde die kleiner is dan de limiet die door SFTP is ingesteld. **Nota**: Wanneer dit het plaatsen voor een bestaande rekening van SFTP wordt toegelaten, zal het slechts toekomstige dataflows en niet bestaande dataflows beïnvloeden. |
 | `folderPath` | Het pad naar de map waartoe u toegang wilt verlenen. [!DNL SFTP] -bron, kunt u het mappad opgeven waarmee u gebruikerstoegang tot de submap van uw keuze kunt opgeven. |
