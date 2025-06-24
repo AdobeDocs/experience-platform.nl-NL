@@ -1,10 +1,8 @@
 ---
 title: Configuratie-handleiding voor identiteitsgrafiekkoppelingsregels
 description: Leer over de verschillende implementatietypen die u het gebruiken van de Regels van de Verenigingsgrafiek kunt vormen die Regels verbinden.
-hide: true
-hidefromtoc: true
 exl-id: fd0afb0b-a368-45b9-bcdc-f2f3b7508cee
-source-git-commit: 2a5c8b3bd58d3659d0fcf519407b180bf5f091b4
+source-git-commit: 54a50cd3e122df7f653c06232e0598fa878eeac5
 workflow-type: tm+mt
 source-wordcount: '1951'
 ht-degree: 1%
@@ -136,7 +134,7 @@ Lees deze sectie voor tussentijdse implementaties van [!DNL Identity Graph Linki
 >
 >Als u de onderstaande implementaties wilt voltooien, moet u de volgende aangepaste naamruimten maken met de identiteitssymbolen (hoofdlettergevoelig):
 >* `CRMID`
->* `CCHash` (Dit is een aangepaste naamruimte die een gehasht creditcardnummer vertegenwoordigt.)
+>* `CChash` (Dit is een aangepaste naamruimte die een gehasht creditcardnummer vertegenwoordigt.)
 
 Stel je voor dat je een gegevensarchitect bent die werkt voor een commerciële bank die creditcards uitgeeft. Uw marketingteam heeft aangegeven dat zij de transactiegeschiedenis van creditcardtransacties in het verleden aan een profiel willen toevoegen. Deze identiteitsgrafiek kan er als volgt uitzien.
 
@@ -482,6 +480,7 @@ loginID: JanePersonal, ECID: 222
 >* `CRMID`
 >* `loyaltyID`
 >* `thirdPartyID`
+>* `orderID`
 
 U bent een bedrijf voor media en entertainment en uw eindgebruikers hebben het volgende:
 
