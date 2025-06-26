@@ -2,14 +2,14 @@
 title: Amazon S3-verbinding
 description: Creeer een levende uitgaande verbinding aan uw opslag van Amazon Web Services (AWS) S3 om CSV- gegevensdossiers van Adobe Experience Platform in uw eigen S3 emmers periodiek uit te voeren.
 exl-id: 6a2a2756-4bbf-4f82-88e4-62d211cbbb38
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 7aff8d9eafb699133e90d3af8ef24f3135f3cade
 workflow-type: tm+mt
-source-wordcount: '1461'
+source-wordcount: '1773'
 ht-degree: 0%
 
 ---
 
-# [!DNL Amazon S3] verbinding {#s3-connection}
+# [!DNL Amazon S3]-verbinding {#s3-connection}
 
 ## Doelwijziging {#changelog}
 
@@ -36,7 +36,7 @@ In deze sectie wordt beschreven welke soorten publiek u naar dit doel kunt expor
 
 | Oorsprong publiek | Ondersteund | Beschrijving |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | ✓ | Het publiek produceerde door de Dienst van de Segmentatie van Experience Platform [&#128279;](../../../segmentation/home.md). |
+| [!DNL Segmentation Service] | ✓ | Het publiek produceerde door de Dienst van de Segmentatie van Experience Platform [ ](../../../segmentation/home.md). |
 | Aangepaste uploads | ✓ | Het publiek [ ingevoerde ](../../../segmentation/ui/audience-portal.md#import-audience) in Experience Platform van Csv- dossiers. |
 
 {style="table-layout:auto"}
@@ -87,7 +87,7 @@ Als u voor verificatie bij het doel wilt zorgen, vult u de vereiste velden in en
 * Toegangstoets en geheime sleutelverificatie
 * Veronderstelde rolauthentificatie
 
-#### Toegangstoets en geheime sleutelverificatie
+#### Verificatie met S3 toegangstoets en geheime sleutel
 
 Gebruik deze verificatiemethode als u de Amazon S3-toegangstoets en de geheime sleutel wilt invoeren, zodat Experience Platform gegevens kan exporteren naar uw Amazon S3-eigenschappen.
 
@@ -98,21 +98,103 @@ Gebruik deze verificatiemethode als u de Amazon S3-toegangstoets en de geheime s
 
   ![ Beeld dat een voorbeeld van een correct geformatteerde sleutel PGP in UI toont.](../../assets/catalog/cloud-storage/sftp/pgp-key.png)
 
-#### Veronderstelde rol {#assumed-role-authentication}
+#### Authentificatie met S3 veronderstelde rol {#assumed-role-authentication}
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_connect_s3_assumed_role"
 >title="Veronderstelde rolauthentificatie"
 >abstract="Gebruik dit verificatietype als u accountsleutels en geheime sleutels niet wilt delen met Adobe. Experience Platform maakt in plaats daarvan verbinding met uw Amazon S3-locatie via op rollen gebaseerde toegang. Plak de ARN van de rol die u in AWS voor de Adobe-gebruiker hebt gemaakt. Het patroon is vergelijkbaar met `arn:aws:iam::800873819705:role/destinations-role-customer` "
 
-![ Beeld van de vereiste gebieden wanneer het selecteren van veronderstelde rolauthentificatie.](/help/destinations/assets/catalog/cloud-storage/amazon-s3/assumed-role-authentication.png)
-
 Gebruik dit verificatietype als u accountsleutels en geheime sleutels niet wilt delen met Adobe. Experience Platform maakt in plaats daarvan verbinding met uw Amazon S3-locatie via op rollen gebaseerde toegang.
 
-Om dit te doen, moet u in de console van AWS een veronderstelde gebruiker voor Adobe met het [ recht vereiste toestemmingen ](#minimum-permissions-iam-user) tot stand brengen om aan uw emmers van Amazon S3 te schrijven. Maak een **[!UICONTROL Trusted entity]** in AWS met de Adobe-account **[!UICONTROL 670664943635]** . Voor meer informatie, verwijs naar de [ documentatie van AWS bij het creëren van rollen ](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_create_for-user.html).
+![ Beeld van de vereiste gebieden wanneer het selecteren van veronderstelde rolauthentificatie.](/help/destinations/assets/catalog/cloud-storage/amazon-s3/assumed-role-authentication.png)
 
-* **[!DNL Role]**: plak de ARN van de rol die u in AWS voor de Adobe-gebruiker hebt gemaakt. Het patroon is vergelijkbaar met `arn:aws:iam::800873819705:role/destinations-role-customer` .
+* **[!DNL Role]**: plak de ARN van de rol die u in AWS voor de Adobe-gebruiker hebt gemaakt. Het patroon is vergelijkbaar met `arn:aws:iam::800873819705:role/destinations-role-customer` . Zie de stappen hieronder voor gedetailleerde begeleiding op hoe te om S3 toegang correct te vormen.
 * **[!UICONTROL Encryption key]**: U kunt desgewenst een openbare sleutel met RSA-indeling toevoegen om versleuteling toe te voegen aan uw geëxporteerde bestanden. Bekijk een voorbeeld van een correct opgemaakte coderingssleutel in de onderstaande afbeelding.
+
+Om dit te doen, moet u in de console van AWS een veronderstelde rol voor Adobe met het [ recht vereiste toestemmingen ](#minimum-permissions-iam-user) tot stand brengen om aan uw emmers van Amazon S3 te schrijven.
+
+**creeer een beleid met de vereiste toestemmingen**
+
+1. Open de AWS-console en ga naar IAM > Beleid > Beleid maken
+2. Selecteer Beleidseditor > JSON en voeg de onderstaande machtigingen toe.
+
+   ```json
+   {
+       "Version": "2012-10-17",
+       "Statement": [
+           {
+               "Sid": "VisualEditor0",
+               "Effect": "Allow",
+               "Action": [
+                   "s3:PutObject",
+                   "s3:GetObject",
+                   "s3:DeleteObject",
+                   "s3:GetBucketLocation",
+                   "s3:ListMultipartUploadParts"
+               ],
+               "Resource": "arn:aws:s3:::bucket/folder/*"
+           },
+           {
+               "Sid": "VisualEditor1",
+               "Effect": "Allow",
+               "Action": [
+                   "s3:ListBucket"
+               ],
+               "Resource": "arn:aws:s3:::bucket"
+           }
+       ]
+   }
+   ```
+
+3. Voer op de volgende pagina een naam in voor uw beleid en sla dit op ter referentie. In de volgende stap hebt u deze beleidsnaam nodig wanneer u de rol maakt.
+
+**creeer gebruikersrol in uw S3 klantenrekening**
+
+1. Open de AWS-console en ga naar IAM > Rollen > Nieuwe rol maken
+2. Selecteer **Vertrouwd entiteitstype** > **AWS rekening**
+3. Selecteer **een rekening van AWS** > **Een andere rekening van AWS** en ga Adobe rekeningidentiteitskaart in: `670664943635`
+4. Machtigingen toevoegen met behulp van het eerder gemaakte beleid
+5. Voer een rolnaam in (bijvoorbeeld `destinations-role-customer` ). De rolnaam moet vertrouwelijk worden behandeld, gelijkend op een wachtwoord. De tag kan maximaal 64 tekens lang zijn en kan alfanumerieke tekens en de volgende speciale tekens bevatten: `+=,.@-_` . Controleer vervolgens of:
+   * De Adobe-account-id `670664943635` staat in de **[!UICONTROL Select trusted entities]** -sectie
+   * Het eerder gemaakte beleid is aanwezig in **[!UICONTROL Permissions policy summary]**
+
+**verstrek de rol voor Adobe om** te veronderstellen
+
+Nadat u de rol in AWS hebt gemaakt, moet u de rol ARN aan Adobe geven. De ARN volgt dit patroon: `arn:aws:iam::800873819705:role/destinations-role-customer`
+
+U kunt de ARN op de hoofdpagina vinden nadat u de rol in de AWS-console hebt gemaakt. U zult dit ARN gebruiken wanneer het creëren van de bestemming.
+
+**verifieer roltoestemmingen en vertrouwensverhoudingen**
+
+Zorg ervoor dat uw rol de volgende configuratie heeft:
+
+* **Toestemmingen**: De rol zou toestemmingen moeten hebben om tot S3 toegang te hebben (of volledige toegang of de minimale toestemmingen die in **worden verstrekt leiden tot een beleid met de vereiste toestemmingen** stap hierboven)
+* **Vertrouwensverhoudingen**: De rol zou de rekening van wortelAdobe (`670664943635`) in zijn vertrouwensverhoudingen moeten hebben
+
+**Alternatief: Beperk tot specifieke gebruiker van Adobe (Facultatief)**
+
+Als u liever niet het volledige Adobe-account toestaat, kunt u de toegang beperken tot alleen de specifieke Adobe-gebruiker. Om dit te doen, geef het vertrouwensbeleid met de volgende configuratie uit:
+
+```json
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Principal": {
+                "AWS": "arn:aws:iam::670664943635:user/destinations-adobe-user"
+            },
+            "Action": "sts:AssumeRole",
+            "Condition": {}
+        }
+    ]
+}
+```
+
+Voor meer informatie, verwijs naar de [ documentatie van AWS bij het creëren van rollen ](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_create_for-user.html).
+
+
 
 ### Doelgegevens invullen {#destination-details}
 
@@ -125,7 +207,7 @@ Om dit te doen, moet u in de console van AWS een veronderstelde gebruiker voor A
 >id="platform_destinations_connect_s3_folderpath"
 >title="Mappad"
 >abstract="Moet alleen de tekens A-Z, a-z, 0-9 bevatten en mag de volgende speciale tekens bevatten: `/!-_.'()"^[]+$%.*"` . Als u een map per publieksbestand wilt maken, voegt u de macro `/%SEGMENT_NAME%` of `/%SEGMENT_ID%` of `/%SEGMENT_NAME%/%SEGMENT_ID%` in het tekstveld in. Macro&#39;s kunnen alleen aan het einde van het mappad worden ingevoegd. Macrovoorbeelden weergeven in de documentatie."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/cloud-storage/overview.html?lang=nl-NL#use-macros" text="Macro&#39;s gebruiken om een map te maken op uw opslaglocatie"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/cloud-storage/overview.html#use-macros" text="Macro&#39;s gebruiken om een map te maken op uw opslaglocatie"
 
 Als u details voor de bestemming wilt configureren, vult u de vereiste en optionele velden hieronder in. Een sterretje naast een veld in de gebruikersinterface geeft aan dat het veld verplicht is.
 
@@ -220,4 +302,4 @@ Om te controleren of gegevens zijn geëxporteerd, controleert u de [!DNL Amazon 
 
 ## IP adres lijst van gewenste personen {#ip-address-allow-list}
 
-Verwijs naar het [&#128279;](ip-address-allow-list.md) artikel van de lijst van gewenste personen van het 0&rbrace; IP adres &lbrace;als u Adobe IPs aan een lijst van gewenste personen moet toevoegen.
+Verwijs naar het ](ip-address-allow-list.md) artikel van de lijst van gewenste personen van het 0} IP adres {als u Adobe IPs aan een lijst van gewenste personen moet toevoegen.[
