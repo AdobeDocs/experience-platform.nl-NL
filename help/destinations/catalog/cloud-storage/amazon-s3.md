@@ -207,7 +207,7 @@ Voor meer informatie, verwijs naar de [ documentatie van AWS bij het creëren va
 >id="platform_destinations_connect_s3_folderpath"
 >title="Mappad"
 >abstract="Moet alleen de tekens A-Z, a-z, 0-9 bevatten en mag de volgende speciale tekens bevatten: `/!-_.'()"^[]+$%.*"` . Als u een map per publieksbestand wilt maken, voegt u de macro `/%SEGMENT_NAME%` of `/%SEGMENT_ID%` of `/%SEGMENT_NAME%/%SEGMENT_ID%` in het tekstveld in. Macro&#39;s kunnen alleen aan het einde van het mappad worden ingevoegd. Macrovoorbeelden weergeven in de documentatie."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/cloud-storage/overview.html#use-macros" text="Macro&#39;s gebruiken om een map te maken op uw opslaglocatie"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/cloud-storage/overview.html?lang=nl-NL#use-macros" text="Macro&#39;s gebruiken om een map te maken op uw opslaglocatie"
 
 Als u details voor de bestemming wilt configureren, vult u de vereiste en optionele velden hieronder in. Een sterretje naast een veld in de gebruikersinterface geeft aan dat het veld verplicht is.
 
