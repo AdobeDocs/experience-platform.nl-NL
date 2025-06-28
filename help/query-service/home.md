@@ -17,7 +17,7 @@ Adobe Experience Platform neemt gegevens op uit een groot aantal verschillende b
 
 U kunt de Dienst van de Vraag gebruiken om de online-aan-off-line klantenreis aan te sluiten en omni-channel attributie voor uw merk te begrijpen. De volgende video toont hoe een ervaringszaken de Dienst van de Vraag kunnen gebruiken om zeer belangrijke gebruiksgevallen te richten en hoe de Dienst van de Vraag werkt.
 
->[!VIDEO](https://video.tv.adobe.com/v/29795?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3464267?quality=12&learn=on&captions=dut)
 
 ## Query-service gebruiken {#usage}
 
