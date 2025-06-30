@@ -2,10 +2,10 @@
 title: Aanvullende informatie voor Adobe Experience Platform, november 2022
 description: Aanvullende informatie voor Adobe Experience platform, november 2022.
 exl-id: 1048cfae-6e7a-4d05-a004-c5c095a17fc4
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 2e41a1716e057cd33e4635c11ba9c3cfc185418a
 workflow-type: tm+mt
-source-wordcount: '456'
-ht-degree: 52%
+source-wordcount: '312'
+ht-degree: 60%
 
 ---
 
@@ -45,18 +45,4 @@ XDM is een open-bronspecificatie die algemene structuren en definities (schema&#
 
 {style="table-layout:auto"}
 
-Voor meer informatie over XDM in Experience Platform, zie het [ XDM overzicht van het Systeem ](../../xdm/home.md).
-
-## Bronnen {#sources}
-
-Adobe Experience Platform kan gegevens uit externe bronnen invoeren, terwijl u die gegevens kunt structureren, labelen en verbeteren met behulp van Experience Platform-services. U kunt gegevens opnemen uit verschillende bronnen, zoals Adobe-toepassingen, cloudopslag, software van derden en uw CRM-systeem.
-
-Experience Platform biedt een RESTful-API en een interactieve gebruikersinterface waarmee u eenvoudig bronverbindingen voor verschillende gegevensproviders kunt instellen. Met deze bronverbindingen kunt u externe opslagsystemen en CRM-services verifiëren en er verbinding mee maken, tijden voor opnameruns instellen en de doorvoer van gegevensopname beheren.
-
-**Bijgewerkte functies**
-
-| Functie | Beschrijving |
-| --- | --- | 
-| Beta-beschikbaarheid van Oracle Service Cloud-bron | Gebruik de Oracle Service Cloud-bron om gegevens van uw Oracle Service Cloud-account in te voeren naar Experience Platform. Voor meer informatie, lees de documentatie over de [ bron van de Wolk van de Dienst van Oracle ](../../sources/connectors/customer-success/oracle-service-cloud.md). |
-
-Voor meer informatie over bronnen leest u het [overzicht van bronnen](../../sources/home.md).
+Raadpleeg het [XDM-systeemoverzicht](../../xdm/home.md) voor meer informatie over XDM in Experience Platform.

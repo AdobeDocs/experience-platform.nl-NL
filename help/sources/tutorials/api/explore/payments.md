@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Een betalingssysteem verkennen met de Flow Service API
 description: Deze zelfstudie gebruikt de Flow Service API om betalingstoepassingen te verkennen.
 exl-id: 7d0231de-46c0-49df-8a10-aeb42a2c8822
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 104db777446b19fa9e3ea7538ae1dda6f51a00b1
 workflow-type: tm+mt
-source-wordcount: '596'
+source-wordcount: '567'
 ht-degree: 0%
 
 ---
@@ -28,7 +28,10 @@ De volgende secties bevatten aanvullende informatie die u moet weten om verbindi
 
 ### Vereiste referenties verzamelen
 
-Deze zelfstudie vereist dat u een geldige verbinding hebt met de externe toepassing voor betalingen waarvan u gegevens wilt invoeren. Een geldige verbinding heeft betrekking op de verbindingsspecificatie-id en de verbinding-id van uw toepassing. Meer informatie over het creëren van een betalingsverbinding en het terugwinnen van deze waarden kan in [ worden gevonden een betalingsbron aan Experience Platform ](../../api/create/payments/paypal.md) leerprogramma verbinden.
+U moet een actieve verbinding met een betalingstoepassing hebben om de bestanden en de bestandsstructuur van uw bron te kunnen bekijken. Lees de volgende documenten voor meer informatie:
+
+* [[!DNL Square]](../create/payments/square.md)
+* [[!DNL Stripe]](../create/payments/stripe.md)
 
 ### API-voorbeeldaanroepen lezen
 
@@ -83,29 +86,29 @@ Een geslaagde reactie retourneert een array met tabellen van uw betalingssysteem
 [
     {
         "type": "table",
-        "name": "PayPal.Billing_Plans",
-        "path": "PayPal.Billing_Plans",
+        "name": "Stripe.Billing_Plans",
+        "path": "Stripe.Billing_Plans",
         "canPreview": true,
         "canFetchSchema": true
     },
     {
         "type": "table",
-        "name": "PayPal.Billing_Plans_Payment_Definition",
-        "path": "PayPal.Billing_Plans_Payment_Definition",
+        "name": "Stripe.Billing_Plans_Payment_Definition",
+        "path": "Stripe.Billing_Plans_Payment_Definition",
         "canPreview": true,
         "canFetchSchema": true
     },
     {
         "type": "table",
-        "name": "PayPal.Billing_Plans_Payment_Definition_Charge_Models",
-        "path": "PayPal.Billing_Plans_Payment_Definition_Charge_Models",
+        "name": "Stripe.Billing_Plans_Payment_Definition_Charge_Models",
+        "path": "Stripe.Billing_Plans_Payment_Definition_Charge_Models",
         "canPreview": true,
         "canFetchSchema": true
     },
     {
         "type": "table",
-        "name": "PayPal.Catalog_Products",
-        "path": "PayPal.Catalog_Products",
+        "name": "Stripe.Catalog_Products",
+        "path": "Stripe.Catalog_Products",
         "canPreview": true,
         "canFetchSchema": true
     }

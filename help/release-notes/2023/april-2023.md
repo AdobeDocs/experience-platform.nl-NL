@@ -2,10 +2,10 @@
 title: Aanvullende informatie van april 2023 voor Adobe Experience Platform
 description: Aanvullende informatie van april 2023 voor Adobe Experience Platform.
 exl-id: 7b501467-99a7-4aee-ae86-66c851250ecf
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 2e41a1716e057cd33e4635c11ba9c3cfc185418a
 workflow-type: tm+mt
-source-wordcount: '2013'
-ht-degree: 29%
+source-wordcount: '1983'
+ht-degree: 30%
 
 ---
 
@@ -23,7 +23,7 @@ Updates voor bestaande functies in Adobe Experience Platform:
 - [Gegevensvoorbereiding](#data-prep)
 - [Dataverzameling](#data-collection)
 - [Bestemmingen](#destinations)
-- [Experience Data Model](#xdm)
+- [Experience-datamodel](#xdm)
 - [Real-Time Customer Data Platform](#rtcdp)
 - [Realtime-klantenprofiel](#profile)
 - [Segmentatieservice](#segmentation)
@@ -33,7 +33,7 @@ Updates voor bestaande functies in Adobe Experience Platform:
 
 Adobe Experience Platform biedt meerdere dashboards waarmee u belangrijke inzichten kunt bekijken over de gegevens van uw organisatie, zoals vastgelegd tijdens dagelijkse momentopnamen.
 
-**Nieuwe of bijgewerkte eigenschappen** {#dashboards-new-updated-features}
+**Nieuwe of bijgewerkte functies** {#dashboards-new-updated-features}
 
 | Functie | Beschrijving |
 | --- | --- |
@@ -67,9 +67,9 @@ Adobe Experience Platform biedt een reeks technologieën waarmee u klantervaring
 | Functie | Beschrijving |
 | --- | --- |
 | IP adresverwarring voor gegevensstromen | U kunt gedeeltelijke of volledige datastream-vlakke IP verduisteringsopties in de [ configuratie UI van de datastream ](../../datastreams/configure.md) nu bepalen. <br><br> de datastream-vlakke IP verwarring het plaatsen neemt belangrijkheid over om het even welke IP die obfuscatie in Adobe Target en Audience Manager wordt gevormd. <br><br> gegevens die naar Adobe Analytics worden verzonden worden niet beïnvloed door het datastream-niveau [!UICONTROL IP Obfuscation] plaatsen. Adobe Analytics ontvangt momenteel onopvallende IP-adressen. Voor Analytics om verduisterde IP adressen te ontvangen, moet u IP verduistering afzonderlijk vormen, in Adobe Analytics. Dit gedrag wordt in toekomstige versies bijgewerkt.<br><br> voor meer details over IP verwarring en instructies op hoe te om het te vormen, zie de [ documentatie van de gegevensstroomconfiguratie ](../../datastreams/configure.md#advanced-options). |
-| [ de configuratietreedt van DataStream ](../../datastreams/overrides.md) | U kunt extra configuratieopties voor gegevensstromen nu bepalen, die u kunt gebruiken om specifieke montages met voeten te treden, zoals gebeurtenisdatasets, de bezitstokens van het Doel, de containers van de synchronisatie van identiteitskaart, en de rapportreeksen van Analytics. <br><br> met voeten treedt de configuraties van de gegevensstroom is een proces in twee stappen: <ol><li>Eerst, moet u uw configuratie van de gegevensstroom met voeten treden in de [ gegevenstream configuratiepagina ](../../datastreams/configure.md).</li><li>Dan, moet u de met voeten treden naar Edge Network of via een bevel van SDK van het Web, of door de de markeringsuitbreiding van SDK van het Web te gebruiken [&#128279;](/help/tags/extensions/client/web-sdk/web-sdk-extension-configuration.md).</li></ol> |
-| OAuth JWT Secret | [ OAuth JWT Geheim ](https://experienceleague.adobe.com/docs/experience-platform/tags/event-forwarding/secrets.html?lang=nl-NL) staat klanten toe om de tokens van de Dienst van Adobe en van Google te gebruiken om server-aan-server interactie in Gebeurtenis te steunen die door:sturen. |
-| [!DNL Pinterest Conversions API] extension | Met de [[!DNL Pinterest Conversions API] ](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/pinterest/overview.html?lang=nl-NL) -extensie voor het doorsturen van gebeurtenissen kunt u gegevens die zijn vastgelegd in Adobe Experience Platform Edge Network, gebruiken en naar [!DNL Pinterest] verzenden in de vorm van gebeurtenissen aan de serverzijde met behulp van [!DNL Pinterest Conversions API] . |
+| [ de configuratietreedt van DataStream ](../../datastreams/overrides.md) | U kunt extra configuratieopties voor gegevensstromen nu bepalen, die u kunt gebruiken om specifieke montages met voeten te treden, zoals gebeurtenisdatasets, de bezitstokens van het Doel, de containers van de synchronisatie van identiteitskaart, en de rapportreeksen van Analytics. <br><br> met voeten treedt de configuraties van de gegevensstroom is een proces in twee stappen: <ol><li>Eerst, moet u uw configuratie van de gegevensstroom met voeten treden in de [ gegevenstream configuratiepagina ](../../datastreams/configure.md).</li><li>Dan, moet u de met voeten treden naar Edge Network of via een bevel van SDK van het Web, of door de de markeringsuitbreiding van SDK van het Web te gebruiken [ ](/help/tags/extensions/client/web-sdk/web-sdk-extension-configuration.md).</li></ol> |
+| OAuth JWT Secret | [ OAuth JWT Geheim ](https://experienceleague.adobe.com/docs/experience-platform/tags/event-forwarding/secrets.html) staat klanten toe om de tokens van de Dienst van Adobe en van Google te gebruiken om server-aan-server interactie in Gebeurtenis te steunen die door:sturen. |
+| [!DNL Pinterest Conversions API] extensie | Met de [[!DNL Pinterest Conversions API] ](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/server/pinterest/overview.html) -extensie voor het doorsturen van gebeurtenissen kunt u gegevens die zijn vastgelegd in Adobe Experience Platform Edge Network, gebruiken en naar [!DNL Pinterest] verzenden in de vorm van gebeurtenissen aan de serverzijde met behulp van [!DNL Pinterest Conversions API] . |
 
 {style="table-layout:auto"}
 
@@ -89,13 +89,13 @@ Adobe Experience Platform biedt een reeks technologieën waarmee u klantervaring
 
 | Functionaliteit | Beschrijving |
 | ----------- | ----------- |
-| Dataflow-controle voor [!DNL Custom Personalization] - en [!DNL Adobe Commerce] -doelen | <p> U kunt activeringsmetriek voor [ Adobe Commerce ](/help/destinations/catalog/personalization/adobe-commerce.md), [ Douane Personalization ](../../destinations/catalog/personalization/custom-personalization.md) en [ Douane Personalization met Attributen ](../../destinations/catalog/personalization/custom-personalization.md) verbindingen nu zien. </p> <p>![ het beeld van Adobe Commerce {de metriek van 1} Adobe Commerce "){width="100" zoomable="yes"}] (/help/destinations/assets/common/adobe-commerce-metrics.png "</p>  Zie [ dataflows van de Monitor in de werkruimte van Doelen ](../../dataflows/ui/monitor-destinations.md#monitor-dataflows-in-the-destinations-workspace) voor meer details. |
+| Dataflow-controle voor [!DNL Custom Personalization] - en [!DNL Adobe Commerce] -doelen | <p> U kunt activeringsmetriek voor [ Adobe Commerce ](/help/destinations/catalog/personalization/adobe-commerce.md), [ Douane Personalization ](../../destinations/catalog/personalization/custom-personalization.md) en [ Douane Personalization met Attributen ](../../destinations/catalog/personalization/custom-personalization.md) verbindingen nu zien. </p> <p>![ het beeld van Adobe Commerce {de metriek van 1} Adobe Commerce "){width="100" zoomable="yes"}](/help/destinations/assets/common/adobe-commerce-metrics.png "</p>  Zie [ dataflows van de Monitor in de werkruimte van Doelen ](../../dataflows/ui/monitor-destinations.md#monitor-dataflows-in-the-destinations-workspace) voor meer details. |
 | Nieuw veld **[!UICONTROL Append segment ID to segment name]** voor de doelen [!DNL Google Ad Manager] en [!DNL Google Ad Manager 360] | <p>U kunt nu de segmentnaam opnemen in [[!DNL Google Ad Manager]](/help/destinations/catalog/advertising/google-ad-manager.md#parameters) en [[!DNL Google Ad Manager 360]](/help/destinations/catalog/advertising/google-ad-manager-360-connection.md#destination-details) de segment-id van Experience Platform, zoals in het volgende voorbeeld: `Segment Name (Segment ID)` .</p><p>![ voeg segmentidentiteitskaart beeld ](/help/destinations/assets/common/append-segment-id-to-segment-name.png " Nieuw toe toevoegt segmentidentiteitskaart aan segmentnaamgebied "){width="100" zoomable="yes"}</p> |
 | Geplande terugvullingen voor publiek | <p>Voor de [[!DNL Google Display & Video 360]](/help/destinations/catalog/advertising/google-dv360.md#specifics) bestemming, is de activering van publieksbackfills aan de bestemming gepland om 24 tot 48 uur voor te komen nadat een segment eerst aan een bestemmingsverbinding in kaart wordt gebracht. Deze update is een reactie op het Google-beleid om 24 uur te wachten tot er gegevens zijn ingevoerd. De overeenkomst tussen Real-Time CDP en [!DNL Google Display & Video 360] wordt hierdoor verbeterd.</p> <p>Merk op dat dit een achtergrondconfiguratie is die op deze bestemming slechts van toepassing is en die niet met om het even welke klant-configureerbare het plannen opties in UI verwant is.</p> |
 
 {style="table-layout:auto"}
 
-**Opgeloste problemen en verbeteringen** {#destinations-fixes-and-enhancements}
+**Bevestigingen en verhogingen** {#destinations-fixes-and-enhancements}
 
 - Wij hebben een kwestie in de **Uitgesloten Identiteiten** rapporteringsmetriek voor op dossier-gebaseerde bestemmingsuitvoer opgelost. Klanten ontvingen alle geëxporteerde id&#39;s van de geactiveerde exportbewerking zoals verwacht. Nochtans, de **Uitgesloten Identiteiten** rapporterend metrisch in UI tonen verkeerd hoge aantallen uitgesloten identiteiten toe te schrijven aan verkeerd tellende identiteiten die nooit werden verondersteld om te worden uitgevoerd. (PLAT-149774)
 - Wij hebben een kwestie in de **Plannende** stap van het activeringswerkschema opgelost. Voor bestemmingen die een afbeeldingID vereisen, konden de klanten geen afbeeldingidentiteitskaart voor segmenten toevoegen die aan bestaande bestemmingsverbindingen worden toegevoegd. (PLAT-148808)
@@ -115,7 +115,7 @@ XDM is een open-bronspecificatie die algemene structuren en definities (schema&#
 
 | Functie | Beschrijving |
 | --- | --- |
-| Schakelen tussen weergavenamen | De Schema-editor biedt nu een schakeloptie tussen de oorspronkelijke veldnamen en de meer leesbare weergavenamen.<br>![ de Redacteur van het Schema met de benadrukte knevel van de vertoningsnaam."){width="100" zoomable="yes"}<br> van de de vertoningsnaam van de Redacteur van het 0&rbrace; Schema knevel &lbrace;Deze flexibiliteit staat voor betere gebiedsontdekkingsbekwaamheid en het uitgeven van uw schema&#39;s toe. ] (../../xdm/images/ui/resources/schemas/display-name-toggle.png " De weergavenamen voor standaardveldgroepen worden gegenereerd door het systeem, maar kunnen indien nodig ook via de gebruikersinterface worden aangepast. Gelieve te lezen de [ documentatie van de knevel van de vertoningsnaam ](https://experienceleague.adobe.com/docs/experience-platform/xdm/ui/resources/schemas.html?lang=nl-NL#display-name-toggle) om meer te leren. |
+| Schakelen tussen weergavenamen | De Schema-editor biedt nu een schakeloptie tussen de oorspronkelijke veldnamen en de meer leesbare weergavenamen.<br>![ de Redacteur van het Schema met de benadrukte knevel van de vertoningsnaam."){width="100" zoomable="yes"}<br> van de de vertoningsnaam van de Redacteur van het 0} Schema knevel {Deze flexibiliteit staat voor betere gebiedsontdekkingsbekwaamheid en het uitgeven van uw schema&#39;s toe. ](../../xdm/images/ui/resources/schemas/display-name-toggle.png " De weergavenamen voor standaardveldgroepen worden gegenereerd door het systeem, maar kunnen indien nodig ook via de gebruikersinterface worden aangepast. Gelieve te lezen de [ documentatie van de knevel van de vertoningsnaam ](https://experienceleague.adobe.com/docs/experience-platform/xdm/ui/resources/schemas.html#display-name-toggle) om meer te leren. |
 
 {style="table-layout:auto"}
 
@@ -127,7 +127,7 @@ XDM is een open-bronspecificatie die algemene structuren en definities (schema&#
 
 {style="table-layout:auto"}
 
-**Bijgewerkte componenten XDM**
+**Bijgewerkte XDM-onderdelen**
 
 | Componenttype | Naam | Beschrijving |
 | --- | --- | --- |
@@ -162,7 +162,7 @@ Met Adobe Experience Platform kunt u uw klanten gecoördineerde, consistente en 
 
 | Functie | Beschrijving |
 | ------- | ----------- |
-| Vervaldatum van pseudoniem profielgegevens | De vervaldatum van pseudoniem profielgegevens is nu over het algemeen beschikbaar. Deze release verwijdert ononderbroken pseudoniem-profielen uit uw Experience Platform-exemplaar als deze zijn ingeschakeld. Om meer over deze eigenschap en Pseudoniem Profielen te leren, te lezen gelieve de [ Pseudoniem gids van de gegevensvervalsing van het Profiel ](../../profile/pseudonymous-profiles.md). |
+| Vervaldatum van pseudoniem profielgegevens | De vervaldatum van pseudoniem profielgegevens is nu over het algemeen beschikbaar. Deze release verwijdert ononderbroken pseudoniem-profielen uit uw Experience Platform-exemplaar als deze zijn ingeschakeld. Raadpleeg de [gids over de vervaldatum voor gegevens van pseudonieme profielen](../../profile/pseudonymous-profiles.md) om meer te weten te komen over deze functie en pseudonieme profielen. |
 
 {style="table-layout:auto"}
 
@@ -193,7 +193,6 @@ Experience Platform biedt een RESTful-API en een interactieve gebruikersinterfac
 | API-ondersteuning voor het filteren van gegevens op rijniveau voor Salesforce CRM-bron. | Gebruik logische operatoren en vergelijkingsoperatoren om gegevens op rijniveau te filteren voor de Salesforce CRM-bron. Lees de gids over [ het filtreren gegevens voor een bron gebruikend API ](../../sources/tutorials/api/filter.md) voor meer informatie. |
 | Beta-beschikbaarheid van Shopify Streaming | [ Shopify Streaming bron ](../../sources/connectors/ecommerce/shopify-streaming.md) is nu beschikbaar in bèta. Gebruik de Shopify Streaming-bron om gegevens van uw Shopify-partneraccount naar Experience Platform te streamen. |
 | Algemene beschikbaarheid van OneTrust Integration | De [ bron van de Integratie OneTrust ](../../sources/connectors/consent-and-preferences/onetrust.md) is nu GA. Gebruik de OneTrust Integration-bron om toestemmings- en voorkeursgegevens van uw OneTrust Integration-account naar Experience Platform te verzenden. |
-| Algemene beschikbaarheid van Oracle Service Cloud | De [ bron van de Wolk van de Dienst van Oracle ](../../sources/connectors/customer-success/oracle-service-cloud.md) is nu GA. Gebruik de Oracle Service Cloud-bron om uw Oracle Service Cloud-gegevens naar Experience Platform te sturen. |
 
 {style="table-layout:auto"}
 

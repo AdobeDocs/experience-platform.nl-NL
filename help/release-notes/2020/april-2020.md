@@ -6,9 +6,9 @@ last-update: April 13, 2020
 author: ens71067
 keywords: opmerkingen bij de release;
 exl-id: 0f68c71e-3c9d-453b-a953-1cd1b6ca2e35
-source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
+source-git-commit: 104db777446b19fa9e3ea7538ae1dda6f51a00b1
 workflow-type: tm+mt
-source-wordcount: '985'
+source-wordcount: '972'
 ht-degree: 26%
 
 ---
@@ -78,7 +78,7 @@ Het gegevensbeheerframework vereenvoudigt en stroomlijnt het proces voor het cat
 
 | Functie | Beschrijving |
 | -----------| ---------- |
-| Beleid voor gegevensgebruik beheren in de gebruikersinterface | Het beleid van het gegevensgebruik kan nu binnen de **1&rbrace; werkruimte van Beleid &lbrace;in [!DNL Experience Platform] UI worden geleid.** Zie de [ gids van de beleidsgebruiker ](../../data-governance/policies/user-guide.md) voor meer informatie. |
+| Beleid voor gegevensgebruik beheren in de gebruikersinterface | Het beleid van het gegevensgebruik kan nu binnen de **1} werkruimte van Beleid {in [!DNL Experience Platform] UI worden geleid.** Zie de [ gids van de beleidsgebruiker ](../../data-governance/policies/user-guide.md) voor meer informatie. |
 
 **Bekende kwesties**
 
@@ -130,8 +130,7 @@ Adobe Experience Platform kan gegevens uit externe bronnen invoeren, terwijl u d
 
 | Functie | Beschrijving |
 | ------- | ----------- |
-| API- en UI-ondersteuning voor databases | Nieuwe bronaansluitingen voor [!DNL Apache Spark] (op HDInsights), [!DNL Azure Synapse Analytics] , [!DNL Azure Table Storage] , [!DNL Hive] (op HDInsights) en [!DNL Phoenix] . |
-| API- en UI-ondersteuning voor op betalingen gebaseerde toepassingen | Nieuwe bronconnectors voor [!DNL PayPal]. |
+| API- en UI-ondersteuning voor databases | Nieuwe bronaansluitingen voor [!DNL Apache Spark] (op HDInsights), [!DNL Azure Synapse Analytics] , [!DNL Azure Table Storage] en [!DNL Hive] . |
 | API- en UI-ondersteuning voor op protocollen gebaseerde toepassingen | Nieuwe bronconnectors voor [!DNL Generic OData]. |
 
 **Bekende kwesties**

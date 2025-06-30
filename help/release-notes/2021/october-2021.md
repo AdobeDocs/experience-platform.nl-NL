@@ -2,10 +2,10 @@
 title: Aanvullende informatie van oktober 2021 voor Adobe Experience Platform
 description: Aanvullende informatie van oktober 2021 voor Adobe Experience Platform.
 exl-id: 8f8bcb24-6478-4281-9362-9559158384af
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 2e41a1716e057cd33e4635c11ba9c3cfc185418a
 workflow-type: tm+mt
-source-wordcount: '463'
-ht-degree: 18%
+source-wordcount: '433'
+ht-degree: 19%
 
 ---
 
@@ -59,6 +59,5 @@ Experience Platform biedt een RESTful-API en een interactieve gebruikersinterfac
 | --- | --- |
 | [!DNL Amazon S3] bronverbeteringen | U kunt de parameter `s3SessionToken` nu gebruiken om uw [!DNL Amazon S3] -account aan te sluiten op Experience Platform met behulp van tijdelijke beveiligingsgegevens. Met dit token kunt u gebruikers in niet-vertrouwde omgevingen op korte termijn tijdelijke toegang geven tot uw [!DNL Amazon S3] -bronnen. Zie de [[!DNL Amazon S3]  documentatie ](../../sources/connectors/cloud-storage/s3.md#prerequisites) voor meer informatie. |
 | [!DNL Generic REST API] (Beta) | U kunt een [!DNL Generic REST API] bronverbinding nu tot stand brengen gebruikend [[!DNL Flow Service]  API ](../../sources/tutorials/api/create/protocols/generic-rest.md) om gegevens van een generische toepassing van REST aan Experience Platform te brengen. Zie het [[!DNL Generic REST API]  overzicht ](../../sources/connectors/protocols/generic-rest.md) voor meer informatie. |
-| [!DNL Zoho CRM] (Beta) | U kunt een [!DNL Zoho CRM] bronverbinding nu tot stand brengen gebruikend [[!DNL Flow Service]  API ](../../sources/tutorials/api/create/crm/zoho.md) of het [ gebruikersinterface ](../../sources/tutorials/ui/create/crm/zoho.md) om gegevens van uw [!DNL Zoho CRM] rekening aan Experience Platform te brengen. Zie het [[!DNL Zoho CRM]  overzicht ](../../sources/connectors/crm/zoho.md) voor meer informatie. |
 
 Meer over bronnen leren, zie het [ overzicht van bronnen ](../../sources/home.md).
