@@ -2,9 +2,9 @@
 title: Verzoeken om verwijdering opnemen (gebruikersinterface-workflow)
 description: Leer hoe u records verwijdert in de gebruikersinterface van Adobe Experience Platform.
 exl-id: 5303905a-9005-483e-9980-f23b3b11b1d9
-source-git-commit: 07e09cfe2e2c3ff785caf0b310cbe2f2cc381c17
+source-git-commit: 9ee5225c7494c28023c26181dfe626780133bb5d
 workflow-type: tm+mt
-source-wordcount: '1730'
+source-wordcount: '1781'
 ht-degree: 0%
 
 ---
@@ -45,19 +45,28 @@ De workflow voor het maken van aanvragen wordt weergegeven. Standaard is de opti
 
 ## Gegevenssets selecteren {#select-dataset}
 
-De volgende stap is te bepalen of u verslagen van één enkele dataset of alle datasets wilt schrappen. Als deze optie niet beschikbaar aan u is, ga aan [ blijven verstrekken identiteiten ](#provide-identities) sectie van de gids.
+De volgende stap is te bepalen of u verslagen van één enkele dataset of alle datasets wilt schrappen. Afhankelijk van de configuratie van uw organisatie, kan de optie van de datasetselectie niet beschikbaar zijn. Als u deze optie niet ziet, blijf aan [ verstrekken identiteiten ](#provide-identities) sectie van de gids.
 
-Gebruik onder de sectie **[!UICONTROL Record Details]** het keuzerondje om te selecteren tussen een specifieke gegevensset en alle gegevenssets. Als u **[!UICONTROL Select dataset]** kiest, ga te werk om het gegevensbestandpictogram (![ het gegevensbestandpictogram ](/help/images/icons/database.png)) te selecteren om een dialoog te openen die een lijst van beschikbare datasets verstrekt. Selecteer de gewenste gegevensset in de lijst gevolgd door **[!UICONTROL Done]** .
+Selecteer in de sectie **[!UICONTROL Record Details]** een keuzerondje om een specifieke gegevensset of alle gegevenssets te kiezen.
+
+Om van een specifieke dataset te schrappen, selecteer **[!UICONTROL Select dataset]**, dan het gegevensbestandpictogram (![ het gegevensbestandpictogram ](/help/images/icons/database.png)). Kies in het dialoogvenster dat wordt weergegeven een gegevensset en selecteer **[!UICONTROL Done]** om te bevestigen.
 
 ![ de [!UICONTROL Select dataset] dialoog met een geselecteerde dataset en [!UICONTROL Done] benadrukte.](../images/ui/record-delete/select-dataset.png)
 
-Selecteer **[!UICONTROL All datasets]** als u records uit alle gegevenssets wilt verwijderen.
+Selecteer **[!UICONTROL All datasets]** als u gegevens uit alle gegevenssets wilt verwijderen. Met deze optie vergroot u het bereik van de bewerking en moet u alle relevante identiteitstypen opgeven.
 
 ![ de [!UICONTROL Select dataset] dialoog met de [!UICONTROL All datasets] geselecteerde optie.](../images/ui/record-delete/all-datasets.png)
 
->[!NOTE]
+>[!WARNING]
 >
->Als u de optie **[!UICONTROL All datasets]** selecteert, kan het verwijderen langer duren en wordt de record mogelijk niet correct verwijderd.
+>Als u **[!UICONTROL All datasets]** selecteert, wordt de bewerking uitgebreid naar alle gegevenssets in uw organisatie. Elke dataset kan een verschillend primair identiteitstype gebruiken. U moet **alle vereiste identiteitstypes** verstrekken om nauwkeurige aanpassing te verzekeren.
+>
+>Als een identiteitstype ontbreekt, kunnen sommige records tijdens het verwijderen worden overgeslagen. Dit kan verwerking vertragen en tot **gedeeltelijke resultaten** leiden.
+
+Elke dataset in Experience Platform ondersteunt slechts één primair identiteitstype.
+
+* Wanneer het schrappen van a **enige dataset**, moeten alle identiteiten in uw verzoek het **zelfde type** gebruiken.
+* Wanneer het schrappen van **alle datasets**, kunt u **veelvoudige identiteitstypes** omvatten, aangezien de verschillende datasets op verschillende primaire identiteiten kunnen vertrouwen.&quot;
 
 ## Identiteiten opgeven {#provide-identities}
 
@@ -80,8 +89,6 @@ Zoals alle identiteitsgebieden in Experience Platform, wordt een identiteit name
 >Als u de naamruimte voor een bepaalde gegevensset niet kent, kunt u deze vinden in de gebruikersinterface van Experience Platform. Selecteer in de werkruimte **[!UICONTROL Datasets]** de desbetreffende gegevensset in de lijst. Op de detailspagina voor de dataset, houd over de naam van het schema van de dataset in het juiste spoor. De naamruimte voor identiteit wordt samen met de naam en beschrijving van het schema weergegeven.
 >
 >![ het dashboard van Datasets met een geselecteerde dataset, en een schemadialoog die van het paneel van de Details van de dataset wordt geopend. De primaire identiteitskaart van de dataset wordt benadrukt.](../images/ui/record-delete/dataset-primary-identity.png)
-
-Als u verslagen van één enkele dataset schrapt, moeten alle identiteiten u verstrekt het zelfde type hebben, aangezien een dataset slechts één identiteit namespace kan hebben. Als u van alle datasets schrapt, kunt u veelvoudige identiteitstypes omvatten aangezien de verschillende datasets verschillende primaire identiteiten kunnen hebben.
 
 Er zijn twee opties om id&#39;s op te geven wanneer u records verwijdert:
 
