@@ -102,7 +102,7 @@ U kunt extra gebieden aan het Portaal van het Publiek toevoegen door ![ het pict
 | ----- | ----------- |
 | [!UICONTROL Name] | De naam van het publiek. |
 | [!UICONTROL Profile count] | Het totale aantal profielen dat voor het publiek in aanmerking komt. |
-| [!UICONTROL Origin] | De oorsprong van het publiek. Dit geeft aan waar het publiek vandaan komt. De mogelijke waarden omvatten [ Dienst van de Segmentatie ](#segment-builder), [ Douane uploadt ](#import-audience), [ compositie van het publiek ](#audience-composition), [ Audience Manager ](https://experienceleague.adobe.com/nl/docs/audience-manager/user-guide/aam-home), [ look-alike publiek ](../types/lookalike-audiences.md), [ Federated Audience Composition ](#fac), [ Customer Journey Analytics ](https://experienceleague.adobe.com/nl/docs/analytics-platform/using/cja-overview/cja-overview), [ Distiller van Gegevens ](#data-distiller). [ AJO B2B, en ](https://experienceleague.adobe.com/nl/docs/journey-optimizer-b2b/user/guide-overview) Real-Time CDP Collaboration [.](https://experienceleague.adobe.com/nl/docs/real-time-cdp-collaboration/using/destinations/experience-platform#audience-portal) |
+| [!UICONTROL Origin] | De oorsprong van het publiek. Dit geeft aan waar het publiek vandaan komt. De mogelijke waarden omvatten [ Dienst van de Segmentatie ](#segment-builder), [ Douane uploadt ](#import-audience), [ compositie van het publiek ](#audience-composition), [ Audience Manager ](https://experienceleague.adobe.com/en/docs/audience-manager/user-guide/aam-home), [ look-alike publiek ](../types/lookalike-audiences.md), [ Federated Audience Composition ](#fac), [ Customer Journey Analytics ](https://experienceleague.adobe.com/en/docs/analytics-platform/using/cja-overview/cja-overview), [ Distiller van Gegevens ](#data-distiller). [ AJO B2B, en ](https://experienceleague.adobe.com/en/docs/journey-optimizer-b2b/user/guide-overview) Real-Time CDP Collaboration [.](https://experienceleague.adobe.com/en/docs/real-time-cdp-collaboration/using/destinations/experience-platform#audience-portal) |
 | [!UICONTROL Lifecycle status] | De status van het publiek. Mogelijke waarden voor dit veld zijn `Draft` , `Inactive` en `Published` . Meer informatie over levenscyclusstatussen, met inbegrip van wat de verschillende staten betekenen en hoe te om publiek naar verschillende levenscyclusstaten te bewegen, lees de [ sectie van de levenscyclusstatus van de Segmentatie FAQ ](../faq.md#lifecycle-status). |
 | [!UICONTROL Update frequency] | Een waarde die aangeeft hoe vaak de gegevens van het publiek worden bijgewerkt. Mogelijke waarden voor dit veld zijn [!UICONTROL Batch] , [!UICONTROL Streaming] , [!UICONTROL Edge] en [!UICONTROL Not Scheduled] . |
 | [!UICONTROL Last updated by] | De naam van de persoon die het publiek het laatst heeft bijgewerkt. |
@@ -118,9 +118,9 @@ Als er een splitsing is geselecteerd, wordt in de weergave een staafgrafiek weer
 
 | Status | Beschrijving |
 | ------ | ----------- |
-| [!UICONTROL Realized] | De telling van profielen die **&#x200B;**&#x200B;voor het publiek in de laatste 24 uren kwalificeerde sinds de laatste baan van het partijsegment liep. |
-| [!UICONTROL Existing] | De telling van profielen die **&#x200B;**&#x200B;in het publiek in de laatste 24 uren sinds de laatste baan van het partijsegment bleven lopen. Dit gebied wordt berekend **&#x200B;**&#x200B;en verschijnt niet in het [`segmentMembership` voorwerp ](../../xdm/field-groups/profile/segmentation.md). |
-| [!UICONTROL Exiting] | De telling van profielen die **&#x200B;**&#x200B;het publiek in de laatste 24 uren sinds de laatste baan van het partijsegment verliet. |
+| [!UICONTROL Realized] | De telling van profielen die **** voor het publiek in de laatste 24 uren kwalificeerde sinds de laatste baan van het partijsegment liep. |
+| [!UICONTROL Existing] | De telling van profielen die **** in het publiek in de laatste 24 uren sinds de laatste baan van het partijsegment bleven lopen. Dit gebied wordt berekend **** en verschijnt niet in het [`segmentMembership` voorwerp ](../../xdm/field-groups/profile/segmentation.md). |
+| [!UICONTROL Exiting] | De telling van profielen die **** het publiek in de laatste 24 uren sinds de laatste baan van het partijsegment verliet. |
 
 Nadat u de velden hebt geselecteerd die u wilt weergeven, kunt u ook de breedte van de weergegeven kolommen vergroten of verkleinen. U kunt of dit doen door het gebied tussen de kolommen te slepen of door het ![ pijlpictogram ](/help/images/icons/chevron-down.png) van de kolom te selecteren u wilt re-size, die door **[!UICONTROL Resize column]** wordt gevolgd.
 
@@ -138,7 +138,7 @@ Als u [!DNL Unified Search] wilt gebruiken, voegt u de term die u wilt zoeken to
 
 ![ de onderzoeksbar wordt benadrukt.](../images/ui/audience-portal/browse-audience-search.png)
 
-Voor meer informatie over [!DNL Unified Search], met inbegrip van gesteunde eigenschappen, te lezen gelieve de [ Verenigde documentatie van het Onderzoek ](https://experienceleague.adobe.com/docs/core-services/interface/services/search-experience-cloud.html?lang=nl-NL).
+Voor meer informatie over [!DNL Unified Search], met inbegrip van gesteunde eigenschappen, te lezen gelieve de [ Verenigde documentatie van het Onderzoek ](https://experienceleague.adobe.com/docs/core-services/interface/services/search-experience-cloud.html).
 
 #### Tags {#tags}
 
@@ -175,7 +175,7 @@ Selecteer **[!UICONTROL Create folder]** als u een map wilt maken waarin uw publ
 >
 >U kunt alleen een map maken als u zich in een andere map bevindt. Dit betekent u **niet** een omslag kan tot stand brengen als u **[!UICONTROL All Audiences]** op de linkernavigatiebar hebt geselecteerd.
 
-Er wordt een pop-up weergegeven, waarin u de nieuwe map een naam kunt geven. Selecteer **[!UICONTROL Save]** na de naam van de map om het maken van de map te voltooien. Gelieve te merken op dat de namen **&#x200B;**&#x200B;aan de ouderomslag uniek moeten zijn.
+Er wordt een pop-up weergegeven, waarin u de nieuwe map een naam kunt geven. Selecteer **[!UICONTROL Save]** na de naam van de map om het maken van de map te voltooien. Gelieve te merken op dat de namen **** aan de ouderomslag uniek moeten zijn.
 
 ![ sparen knoop op creeert de omslagdialoog wordt benadrukt.](../images/ui/audience-portal/create-folder-dialog.png)
 
@@ -203,7 +203,7 @@ De lijst met beschikbare filters wordt weergegeven.
 
 | Filter | Beschrijving |
 | ------ | ----------- |
-| [!UICONTROL Origin] | Hiermee kunt u filteren op basis van de oorsprong van het publiek. De mogelijke waarden omvatten [ Dienst van de Segmentatie ](#segment-builder), [ Douane uploadt ](#import-audience), [ compositie van het publiek ](#audience-composition), [ Audience Manager ](https://experienceleague.adobe.com/nl/docs/audience-manager/user-guide/aam-home), [ look-alike publiek ](../types/lookalike-audiences.md), [ Federated Audience Composition ](#fac), [ Customer Journey Analytics ](https://experienceleague.adobe.com/nl/docs/analytics-platform/using/cja-overview/cja-overview), [ Distiller van Gegevens ](#data-distiller). [ AJO B2B, en ](https://experienceleague.adobe.com/nl/docs/journey-optimizer-b2b/user/guide-overview) Real-Time CDP Collaboration [.](https://experienceleague.adobe.com/nl/docs/real-time-cdp-collaboration/using/destinations/experience-platform#audience-portal) |
+| [!UICONTROL Origin] | Hiermee kunt u filteren op basis van de oorsprong van het publiek. De mogelijke waarden omvatten [ Dienst van de Segmentatie ](#segment-builder), [ Douane uploadt ](#import-audience), [ compositie van het publiek ](#audience-composition), [ Audience Manager ](https://experienceleague.adobe.com/en/docs/audience-manager/user-guide/aam-home), [ look-alike publiek ](../types/lookalike-audiences.md), [ Federated Audience Composition ](#fac), [ Customer Journey Analytics ](https://experienceleague.adobe.com/en/docs/analytics-platform/using/cja-overview/cja-overview), [ Distiller van Gegevens ](#data-distiller). [ AJO B2B, en ](https://experienceleague.adobe.com/en/docs/journey-optimizer-b2b/user/guide-overview) Real-Time CDP Collaboration [.](https://experienceleague.adobe.com/en/docs/real-time-cdp-collaboration/using/destinations/experience-platform#audience-portal) |
 | [!UICONTROL Has any tag] | Hiermee kunt u filteren op tags. U kunt kiezen tussen **[!UICONTROL Has any tag]** en **[!UICONTROL Has all tags]** . Wanneer **[!UICONTROL Has any tag]** wordt geselecteerd, zal het gefiltreerde publiek **om het even welk** van de markeringen omvatten u hebt toegevoegd. Wanneer **[!UICONTROL Has all tags]** wordt geselecteerd, moet het gefiltreerde publiek **alle** van de markeringen omvatten u hebt toegevoegd. |
 | [!UICONTROL Lifecycle status] | Hiermee kunt u filteren op basis van de levenscyclusstatus van de doelgroep. Beschikbare opties zijn [!UICONTROL Deleted] , [!UICONTROL Draft] , [!UICONTROL Inactive] en [!UICONTROL Published] . |
 | [!UICONTROL Update frequency] | Hiermee kunt u filteren op basis van de updatefrequentie van het publiek (evaluatiemethode). Beschikbare opties zijn [!UICONTROL Batch] , [!UICONTROL Streaming] en [!UICONTROL Edge] |
@@ -223,7 +223,7 @@ Wanneer u acties in grote hoeveelheden toepast op soorten publiek, gelden de vol
 
 - U **kunt** publiek van verschillende pagina&#39;s selecteren.
 - U **kunt niet** een publiek schrappen dat in een bestemmingsactivering wordt gebruikt.
-- Als u een filter selecteert, zal het geselecteerde publiek **&#x200B;**&#x200B;terugstellen.
+- Als u een filter selecteert, zal het geselecteerde publiek **** terugstellen.
 
 #### Flexibele publieksevaluatie {#flexible-audience-evaluation}
 
@@ -411,7 +411,7 @@ Meer informatie over Gegevens Distiller kan in het [ bouwpubliek worden gevonden
 
 >[!IMPORTANT]
 >
->Om een extern geproduceerd publiek in te voeren, moet u **&#x200B;**&#x200B;de volgende toestemmingen hebben: [!UICONTROL View segments], [!UICONTROL Manage segments], en [!UICONTROL Import audience]. Voor meer informatie over deze toestemming, lees het [ overzicht van de toegangscontrole ](../../access-control/home.md#permissions).
+>Om een extern geproduceerd publiek in te voeren, moet u **** de volgende toestemmingen hebben: [!UICONTROL View segments], [!UICONTROL Manage segments], en [!UICONTROL Import audience]. Voor meer informatie over deze toestemming, lees het [ overzicht van de toegangscontrole ](../../access-control/home.md#permissions).
 
 U kunt **[!UICONTROL Import audience]** selecteren om een extern gegenereerd publiek te importeren.
 
@@ -435,7 +435,7 @@ Nadat u het CSV-bestand hebt geselecteerd dat u wilt importeren, wordt een lijst
 
 De pagina **[!UICONTROL Audience details]** wordt weergegeven. U kunt informatie over uw publiek, met inbegrip van zijn naam, beschrijving, primaire identiteit, en de waarde van identiteitskaart toevoegen namespace.
 
-Wanneer u het extern gegenereerde publiek importeert, moet u een van de kolommen selecteren als primair identiteitsveld en de naamruimtewaarde opgeven. Gelieve te merken op dat alle resterende gebieden als **ladingsattributen** zullen worden beschouwd. Deze attributen worden beschouwd als **niet-duurzaam**, aangezien zij slechts met dit publiek voor verpersoonlijking zullen worden geassocieerd, en **&#x200B;**&#x200B;niet &lbrace;met het profiel verbonden zijn.
+Wanneer u het extern gegenereerde publiek importeert, moet u een van de kolommen selecteren als primair identiteitsveld en de naamruimtewaarde opgeven. Gelieve te merken op dat alle resterende gebieden als **ladingsattributen** zullen worden beschouwd. Deze attributen worden beschouwd als **niet-duurzaam**, aangezien zij slechts met dit publiek voor verpersoonlijking zullen worden geassocieerd, en **** niet {met het profiel verbonden zijn.
 
 ![ de [!UICONTROL Audience details] pagina wordt getoond.](../images/ui/audience-portal/import-audience-audience-details.png)
 
@@ -454,7 +454,7 @@ U kunt ook desgewenst extra details toevoegen aan uw extern gegenereerde publiek
 
 >[!NOTE]
 >
->De vervaldatum van douanegegevens plaatst het aantal dagen dat de profielen **&#x200B;**&#x200B;in het publiekslidmaatschap zullen blijven. Nadat de gegevensvervaldatum is verstreken, sluiten de profielen het publiekslidmaatschap. Deze waarde kan worden ingesteld van 1 tot 180 dagen.
+>De vervaldatum van douanegegevens plaatst het aantal dagen dat de profielen **** in het publiekslidmaatschap zullen blijven. Nadat de gegevensvervaldatum is verstreken, sluiten de profielen het publiekslidmaatschap. Deze waarde kan worden ingesteld van 1 tot 180 dagen.
 
 Selecteer **[!UICONTROL Next]** nadat u de publieksdetails hebt ingevuld.
 
@@ -470,7 +470,7 @@ Nadat u hebt bevestigd dat de gegevens juist zijn, selecteert u **[!UICONTROL Fi
 >
 >Extern gegenereerde doelgroepen hebben standaard een gegevensvervaldatum van 30 dagen. De gegevensvervaldatum wordt opnieuw ingesteld als het publiek op om het even welke manier wordt bijgewerkt of gewijzigd.
 >
->Bovendien, als uw extern geproduceerd publiek gevoelige en/of op gezondheidszorg betrekking hebbende informatie bevat, moet u **&#x200B;**&#x200B;de noodzakelijke etiketten van het gegevensgebruik toepassen alvorens het aan om het even welke bestemming te activeren. Aangezien de variabelen van extern geproduceerd publiek in het gegevensmeer eerder dan binnen het Profiel van de Klant in real time worden opgeslagen, zou u **niet** toestemmingsgegevens binnen uw Csv- dossier moeten omvatten.
+>Bovendien, als uw extern geproduceerd publiek gevoelige en/of op gezondheidszorg betrekking hebbende informatie bevat, moet u **** de noodzakelijke etiketten van het gegevensgebruik toepassen alvorens het aan om het even welke bestemming te activeren. Aangezien de variabelen van extern geproduceerd publiek in het gegevensmeer eerder dan binnen het Profiel van de Klant in real time worden opgeslagen, zou u **niet** toestemmingsgegevens binnen uw Csv- dossier moeten omvatten.
 >
 >Voor meer informatie bij het toepassen van de etiketten van het gegevensgebruik, te lezen gelieve de documentatie over [ het leiden etiketten ](../../access-control/abac/ui/labels.md). Om over de etiketten van het gegevensgebruik op Experience Platform in het algemeen te leren, te lezen gelieve het [ overzicht van de etiketten van het gegevensgebruik ](../../data-governance/labels/overview.md). Om over te leren hoe de toestemming in extern geproduceerd publiek werkt, te lezen gelieve [ FAQ van het publiek ](../faq.md#consent).
 
