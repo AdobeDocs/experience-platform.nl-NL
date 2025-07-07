@@ -3,9 +3,9 @@ title: Soorten publiek activeren om exportdoelen voor batchprofielen te gebruike
 type: Tutorial
 description: Leer hoe u het publiek in Adobe Experience Platform activeert door het naar batchbestemmingen te sturen.
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
-source-git-commit: 6b91527afe172530597de30b9669b86ff0262e13
+source-git-commit: 13adf42a23458d10e217d216d8fe79e8ce33376d
 workflow-type: tm+mt
-source-wordcount: '4424'
+source-wordcount: '4423'
 ht-degree: 1%
 
 ---
@@ -120,7 +120,7 @@ Als u meerdere schema&#39;s tegelijk wilt bewerken, selecteert u het publiek met
 >id="platform_destinations_activate_exportoptions"
 >title="Exportopties voor bestanden"
 >abstract="Selecteer **de Uitvoer volledige dossiers** om een volledige momentopname van alle profielen uit te voeren die voor het publiek kwalificeren. Selecteer **de Incrementele dossiers van de Uitvoer** om slechts de profielen uit te voeren die voor het publiek sinds de laatste uitvoer kwalificeerden. <br> De eerste incrementele bestandsuitvoer bevat alle profielen die in aanmerking komen voor het publiek en die fungeren als backfill. Toekomstige incrementele bestanden bevatten alleen de profielen die voor het publiek in aanmerking zijn gekomen sinds de eerste incrementele bestandsexport."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations.html?lang=nl-NL#export-incremental-files" text="Incrementele bestanden exporteren"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations.html#export-incremental-files" text="Incrementele bestanden exporteren"
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activationchaining_aftersegmentevaluation"
@@ -252,7 +252,7 @@ Nadat u alle soorten publiek hebt geconfigureerd, selecteert u **[!UICONTROL Nex
 
 In deze stap moet u de profielkenmerken selecteren die u wilt toevoegen aan de bestanden die naar de doelbestemming zijn geëxporteerd. Profielkenmerken en -identiteiten selecteren voor exporteren:
 
-1. Selecteer **[!UICONTROL Add new mapping]** op de pagina **[!UICONTROL Mapping]** .
+1. Selecteer **[!UICONTROL Mapping]** op de pagina **[!UICONTROL Add new mapping]** .
 
    ![ voeg nieuwe gebiedscontrole toe die in het toewijzingswerkschema wordt benadrukt.](../assets/ui/activate-batch-profile-destinations/add-new-field-mapping.png)
 
@@ -348,7 +348,7 @@ Laten we eens kijken naar de volgende twee profielen.
   "identityMap": {
     "Email": [
       {
-        "id": "johndoe_1@example.com"
+        "id": "johndoe@example.com"
       },
       {
         "id": "doejohn_1@example.com"
@@ -382,7 +382,7 @@ Laten we eens kijken naar de volgende twee profielen.
   "identityMap": {
     "Email": [
       {
-        "id": "johndoe_2@example.com"
+        "id": "johndoe@example.com"
       },
       {
         "id": "doejohn_2@example.com"
@@ -425,7 +425,7 @@ Als deduplicatie wordt verondersteld door de naamruimte [!DNL Email] , bevat het
 
 | E-mail* | PersonalEmail | firstName | lastName |
 |---|---|---|---|
-| johndoe_2@example.com | johndoe@example.com | John | D |
+| johndoe@example.com | johndoe@example.com | John | D |
 | doejohn_2@example.com | johndoe@example.com | John | D |
 
 ### Gebruiksscenario voor deduplicatie 3: deduplicatie op basis van één profielkenmerk {#deduplication-use-case-3}
@@ -450,7 +450,7 @@ Adobe raadt u aan een naamruimte voor identiteiten, zoals een [!DNL CRM ID] - of
 
 ### Gedrag van deduplicatie voor profielen met dezelfde tijdstempel {#deduplication-same-timestamp}
 
-Wanneer u profielen exporteert naar bestandsgebaseerde bestemmingen en meerdere profielen dezelfde deduplicatiesleutel en dezelfde referentietijdstempel hebben, zorgt deduplicatie ervoor dat er slechts één profiel wordt geëxporteerd. Deze tijdstempel geeft aan op welk moment het publiekslidmaatschap of de identiteitsgrafiek van een profiel voor het laatst is bijgewerkt. Voor meer informatie over hoe de profielen worden bijgewerkt en worden uitgevoerd, zie het [ document van de profieluitvoer ](https://experienceleague.adobe.com/nl/docs/experience-platform/destinations/how-destinations-work/profile-export-behavior#what-determines-a-data-export-and-what-is-included-in-the-export-2).
+Wanneer u profielen exporteert naar bestandsgebaseerde bestemmingen en meerdere profielen dezelfde deduplicatiesleutel en dezelfde referentietijdstempel hebben, zorgt deduplicatie ervoor dat er slechts één profiel wordt geëxporteerd. Deze tijdstempel geeft aan op welk moment het publiekslidmaatschap of de identiteitsgrafiek van een profiel voor het laatst is bijgewerkt. Voor meer informatie over hoe de profielen worden bijgewerkt en worden uitgevoerd, zie het [ document van de profieluitvoer ](https://experienceleague.adobe.com/en/docs/experience-platform/destinations/how-destinations-work/profile-export-behavior#what-determines-a-data-export-and-what-is-included-in-the-export-2).
 
 #### Belangrijkste overwegingen
 
@@ -530,7 +530,7 @@ Als tijdelijke oplossing kunt u:
 
 Voor op profiel gebaseerde bestemmingen, moet u de profielattributen selecteren die u naar de doelbestemming wilt verzenden.
 
-1. Selecteer **[!UICONTROL Add new field]** op de pagina **[!UICONTROL Select attributes]** .
+1. Selecteer **[!UICONTROL Select attributes]** op de pagina **[!UICONTROL Add new field]** .
 
    ![ Beeld die de Add nieuwe gebiedsknoop benadrukt.](../assets/ui/activate-batch-profile-destinations/add-new-field.png)
 
@@ -554,9 +554,10 @@ Voor op profiel gebaseerde bestemmingen, moet u de profielattributen selecteren 
 >
 >Vanwege een bekende beperking kunt u momenteel het venster **[!UICONTROL Select field]** niet gebruiken om `segmentMembership.seg_namespace.seg_id.status` toe te voegen aan het exporteren van bestanden. In plaats daarvan moet u de waarde `xdm: segmentMembership.seg_namespace.seg_id.status` handmatig in het schemaveld plakken, zoals hieronder wordt weergegeven.
 >
->![ opname die van het Scherm de werkruimte van het publiekslidmaatschap in de afbeeldingsstap van het activeringswerkschema toont.](..//assets/ui/activate-batch-profile-destinations/segment-membership.gif)
+>![ opname die van het Scherm de werkruimte van het publiekslidmaatschap in de afbeeldingsstap van het activeringswerkschema toont.](../assets/ui/activate-batch-profile-destinations/segment-membership.gif)
 
 Het exporteren van bestanden kan op de volgende manieren variëren, afhankelijk van het feit of `segmentMembership.seg_namespace.seg_id.status` is geselecteerd:
+
 * Als het veld `segmentMembership.seg_namespace.seg_id.status` is geselecteerd, bevatten geëxporteerde bestanden **[!UICONTROL Active]** leden in de eerste volledige momentopname en **[!UICONTROL Active]** en **[!UICONTROL Expired]** leden in volgende incrementele exportbewerkingen.
 * Als het veld `segmentMembership.seg_namespace.seg_id.status` niet is geselecteerd, bevatten geëxporteerde bestanden alleen **[!UICONTROL Active]** -leden in de eerste volledige momentopname en in volgende incrementele exportbewerkingen.
 
@@ -588,9 +589,9 @@ Voer de onderstaande stappen uit om verrijkingskenmerken voor elk extern publiek
 
 Als u een extern publiek naar uw doelen wilt activeren zonder kenmerken te exporteren, schakelt u de schakeloptie **[!UICONTROL Exclude enrichment attributes]** in. Met deze optie exporteert u de profielen van het externe publiek, maar de bijbehorende kenmerken worden niet naar uw bestemming verzonden.
 
-{het beeld van 0} UI die de knoop toont van de attributen van de exclusief verrijking.![&#128279;](../assets/ui/activate-batch-profile-destinations/exclude-enrichment-attributes.png)
+{het beeld van 0} UI die de knoop toont van de attributen van de exclusief verrijking.![](../assets/ui/activate-batch-profile-destinations/exclude-enrichment-attributes.png)
 
-Selecteer **[!UICONTROL Next]** om aan de [ 2&rbrace; stap van het Overzicht &lbrace;te bewegen.](#review)
+Selecteer **[!UICONTROL Next]** om aan de [ 2} stap van het Overzicht {te bewegen.](#review)
 
 ## Controleren {#review}
 
@@ -632,7 +633,7 @@ Als u tevreden bent met de selectie en er zijn geen beleidsovertredingen vastges
 
 ## Activering van publiek controleren {#verify}
 
-Bij het exporteren van soorten publiek naar opslaglocaties in de cloud maakt Adobe Experience Platform een bestand `.csv` , `.json` of `.parquet` in de opslaglocatie die u hebt opgegeven. Er wordt een nieuw bestand verwacht dat op uw opslaglocatie wordt gemaakt volgens het schema dat u instelt in de workflow. Het standaarddossierformaat wordt getoond hieronder, maar u kunt [ de componenten van het dossier uitgeven - naam ](#file-names):
+Bij het exporteren van soorten publiek naar opslaglocaties in de cloud maakt Adobe Experience Platform een bestand `.csv` , `.json` of `.parquet` in de opslaglocatie die u hebt opgegeven. Er wordt een nieuw bestand verwacht dat op uw opslaglocatie wordt gemaakt volgens het schema dat u instelt in de workflow. Het standaarddossierformaat wordt getoond hieronder, maar u kunt [ de componenten van het dossier uitgeven - naam ](#configure-file-names):
 `<destinationName>_segment<segmentID>_<timestamp-yyyymmddhhmmss>.csv`
 
 Als u bijvoorbeeld een dagelijkse exportfrequentie selecteert, kunnen de bestanden die u op drie opeenvolgende dagen ontvangt er als volgt uitzien:
