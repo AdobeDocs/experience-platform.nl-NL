@@ -2,9 +2,9 @@
 title: Behoud de Dataset van de Gebeurtenis van de Ervaring in het meer van Gegevens beheren gebruikend TTL
 description: Leer hoe u het behoud van de Experience Event-gegevensset in het datumpomeer kunt evalueren, instellen en beheren met TL-configuraties (Time-to-Live) met Adobe Experience Platform API's. In deze handleiding wordt uitgelegd hoe de vervaldatum van TTL op rijniveau het beleid voor gegevensbewaring ondersteunt, de opslagefficiëntie optimaliseert en een effectief beheer van de levenscyclus van gegevens garandeert. Het verstrekt ook gebruiksgevallen en beste praktijken om u te helpen TTL effectief toepassen.
 exl-id: d688d4d0-aa8b-4e93-a74c-f1a1089d2df0
-source-git-commit: 13db0477c0f42d0808647937d40c25b47a270894
+source-git-commit: 65a132609bc30233ac9f7efbe1981d4f75f3acb9
 workflow-type: tm+mt
-source-wordcount: '2451'
+source-wordcount: '2457'
 ht-degree: 0%
 
 ---
@@ -333,7 +333,7 @@ For example, if you apply a 30-day expiration policy on May 15th, the following 
 ### Kan ik verschillende bewaarbeleid voor de diensten van het gegevensmeer en van het Profiel plaatsen?
 
 +++Antwoord
-Ja, u kunt verschillende behoudsbeleid voor de diensten van het gegevensmeer en van het Profiel plaatsen. De retentieperiode voor profiel mag echter niet korter zijn dan die voor data Lake.
+Ja, u kunt verschillende behoudsbeleid voor de diensten van het gegevensmeer en van het Profiel plaatsen. De bewaarperiode voor de opslag van het Profiel kan korter of langer zijn dan de bewaartermijn van het gegevenspeer, afhankelijk van de behoeften van uw organisatie.
 +++
 
 ### Hoe kan ik mijn huidige gegevenssetgebruik controleren?
