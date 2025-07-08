@@ -1,9 +1,10 @@
 ---
 title: Referentie van CMK-waarschuwingsresolutie
 description: Identificeer, los problemen op, en los gemeenschappelijke alarm op die door Klant Beheerde Zeer belangrijke (CMK) misconfiguraties in Adobe Experience Platform worden teweeggebracht. Gebruik deze handleiding om duidelijke, stapsgewijze instructies te volgen en veilige toetstoegang te herstellen.
-source-git-commit: 0d9cc046956dd380bb8816f0d8bf497bbad6140b
+exl-id: ffe2eadc-dfb5-418b-a201-2c20dcc9cfe4
+source-git-commit: e8cfed9ebd50cf50f03e232755eddef1cb8c0d3b
 workflow-type: tm+mt
-source-wordcount: '918'
+source-wordcount: '904'
 ht-degree: 0%
 
 ---
@@ -22,11 +23,7 @@ In de volgende secties worden de typen waarschuwingen beschreven die kunnen word
 
 ## Sleuteltoegang uitgeschakeld {#key-access-disabled}
 
-Deze waarschuwing geeft aan dat Adobe Experience Platform geen toegang kan krijgen tot de geconfigureerde CMK omdat de sleutel wordt uitgeschakeld of niet toegankelijk wordt gemaakt door gerelateerde problemen met sleutelconfiguratie.
-
->[!IMPORTANT]
->
->In dit geval behandelt Adobe CMK de toegangsfout als een doelbewuste verwijdering en worden alle gegevens die aan uw organisatie zijn gekoppeld, op basis van uw SLA gewist.
+Deze waarschuwing geeft aan dat Adobe Experience Platform geen toegang heeft tot de geconfigureerde CMK omdat de toets wegens de configuratie is uitgeschakeld of niet toegankelijk. In dergelijke gevallen behandelt het systeem de voorwaarde als een opzettelijke verwijdering van sleuteltoegang.
 
 ### Wanneer dit gebeurt
 
@@ -94,13 +91,13 @@ Deze waarschuwing kan om de volgende redenen voorkomen:
 
 +++
 
-+++ als de MultiTenant-app is verwijderd
+++ als de MultiTenant-app is verwijderd
 
 Dit is een baanbrekende verandering. U moet contact opnemen met Adobe om de MultiTenant-app te herstellen of opnieuw te genereren.
 
 +++
 
-+++ als de instellingen voor de MultiTenant-app zijn gewijzigd
+++ als de instellingen voor de MultiTenant-app zijn gewijzigd
 
 1. Hiermee worden de wijzigingen in de eigenschappen van de MultiTenant-app hersteld.
 
@@ -141,14 +138,14 @@ Deze waarschuwing wordt doorgaans geactiveerd wanneer de sleutelvafirewall niet 
 
 ### Resolutie
 
-+++ als de Key Vault of Key niet meer bestaat
+++ als de Key Vault of Key niet meer bestaat
 
 1. Controleer of de Key Vault en de coderingssleutel nog steeds bestaan.
 2. Als de sleutel is verwijderd, volgt u de herstelstappen voor soft-delete onder &#39;Toetstoegang uitgeschakeld&#39;.
 
 +++
 
-+++ als de MultiTenant App-machtigingen ontbreken of zijn gewijzigd
+++ als de MultiTenant App-machtigingen ontbreken of zijn gewijzigd
 
 1. Controleer of de MultiTenant-app van Adobe de volgende machtigingen heeft:
    - `get` , `wrapKey` en `unwrapKey` op de toets.
