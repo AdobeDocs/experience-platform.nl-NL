@@ -2,9 +2,9 @@
 title: Zoekplanningen
 description: Leer hoe te om geplande vraaglooppas te automatiseren, een vraagprogramma te schrappen of onbruikbaar te maken, en de beschikbare het plannen opties door de UI van Adobe Experience Platform te gebruiken.
 exl-id: 984d5ddd-16e8-4a86-80e4-40f51f37a975
-source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
+source-git-commit: 04b804b81b605040c74db040bc5118e0392ddd32
 workflow-type: tm+mt
-source-wordcount: '1934'
+source-wordcount: '2089'
 ht-degree: 0%
 
 ---
@@ -17,9 +17,24 @@ U kunt vraaglooppas automatiseren door vraagprogramma&#39;s te creëren. Gepland
 >
 >U kunt alleen een schema toevoegen aan een query die al is gemaakt en opgeslagen.
 
-Alle geplande query&#39;s worden toegevoegd aan de lijst op het tabblad [!UICONTROL Scheduled queries] . Van die werkruimte kunt u het statuut van alle geplande vraagbanen door UI controleren. Op het tabblad [!UICONTROL Scheduled queries] vindt u belangrijke informatie over de query en kunt u zich abonneren op waarschuwingen. De beschikbare informatie omvat de status, de planningsdetails, en foutenmeldingen/codes als een looppas ontbreekt. Zie het [ Monitor geplande vraagdocument ](./monitor-queries.md) voor meer informatie.
+## Accountvereisten voor geplande query&#39;s {#technical-account-user-requirements}
 
-Dit werkschema behandelt het het plannen proces in de Dienst UI van de Vraag. Leren hoe te om programma&#39;s toe te voegen gebruikend API, te lezen gelieve de [ geplande gids van het vraageindpunt ](../api/scheduled-queries.md).
+Om geplande vragen te helpen betrouwbaar lopen, adviseert Adobe dat de beheerders een technische rekening (gebruikend de geloofsbrieven van Server-aan-Server van OAuth) verstrekken voor het creëren van geplande vragen. De geplande vragen kunnen ook met een persoonlijke gebruikersrekening worden gecreeerd, maar de vragen die op deze manier worden gecreeerd zullen ophouden lopend als de toegang van die gebruiker wordt verwijderd of onbruikbaar gemaakt.
+
+Voor details bij vestiging technische rekeningen en het toewijzen van de vereiste toestemmingen, zie de [ Verantwoordelijkheden van de gids van Geloofsbrieven ](./credentials.md#prerequisites) en [ API authentificatie ](../../landing/api-authentication.md).
+
+Raadpleeg voor aanvullende informatie over het maken en configureren van een technische account:
+
+- [ de opstelling van Developer Console ](https://experienceleague.adobe.com/en/docs/platform-learn/getting-started-for-data-architects-and-data-engineers/set-up-developer-console-and-postman): Step-by-step instructies voor het vormen van Adobe Developer Console en het verkrijgen van geloofsbrieven OAuth.
+- [ technische de rekeningsopstelling van begin tot eind ](https://experienceleague.adobe.com/en/docs/platform-learn/tutorial-comprehensive-technical/setup): Een uitvoerige analyse voor het creëren van en het vormen van een technische rekening in Adobe Experience Platform.
+
+Als u slechts de Dienst UI van de Vraag gebruikt, zorg ervoor u de noodzakelijke toestemmingen hebt of met een beheerder coördineert die technische rekeningen beheert. Alle geplande query&#39;s worden toegevoegd aan de lijst op het tabblad [!UICONTROL Scheduled queries] , waar u de status, de planningsdetails en de foutberichten voor alle geplande querytaken kunt controleren en zich kunt abonneren op waarschuwingen. Voor meer informatie bij het controleren van en het beheren van uw vragen, zie het [ document van de controlemonitor geplande vragen ](./monitor-queries.md).
+
+Dit werkschema behandelt het het plannen proces in de Dienst UI van de Vraag. Leren hoe te om programma&#39;s toe te voegen gebruikend API, verwijs naar de [ geplande gids van het vraageindpunt ](../api/scheduled-queries.md).
+
+>[!NOTE]
+>
+>Gebruik een technische rekening om ervoor te zorgen dat de geplande vragen blijven lopen zelfs als de gebruikers de organisatie verlaten of hun rollen veranderen. Kies waar mogelijk een technisch account voor ononderbroken zoekopdrachtautomatisering.
 
 ## Een queryschema maken {#create-schedule}
 
@@ -71,7 +86,7 @@ Selecteer **[!UICONTROL Create and append into new dataset]** om een gegevensset
 
 >[!IMPORTANT]
 >
-> Aangezien u of bestaand gebruikt of een nieuwe dataset creeert, te hoeven u **&#x200B;**&#x200B;niet `INSERT INTO` of `CREATE TABLE AS SELECT` als deel van de vraag te omvatten, aangezien de datasets reeds worden geplaatst. Als u `INSERT INTO` of `CREATE TABLE AS SELECT` opneemt als onderdeel van uw geplande query&#39;s, treedt er een fout op.
+> Aangezien u of bestaand gebruikt of een nieuwe dataset creeert, te hoeven u **** niet `INSERT INTO` of `CREATE TABLE AS SELECT` als deel van de vraag te omvatten, aangezien de datasets reeds worden geplaatst. Als u `INSERT INTO` of `CREATE TABLE AS SELECT` opneemt als onderdeel van uw geplande query&#39;s, treedt er een fout op.
 
 ![ het paneel van de Details van het Programma met de details van de Dataset en de [!UICONTROL Create and append into new dataset] benadrukte opties.](../images/ui/query-schedules/dataset-details-create-and-append.png)
 
@@ -163,7 +178,6 @@ De volgende lijst verstrekt beschrijvingen van elke kolom beschikbaar in de deta
 >[!NOTE]
 >
 >De gegevens over rekenuren zijn beschikbaar vanaf 15-08-2024. Gegevens vóór deze datum worden weergegeven als &#39;Niet beschikbaar&#39;.
-
 
 Zie de [ monitor geplande gevraagde gids ](./monitor-queries.md#inline-actions) voor volledige informatie over hoe te om het statuut van alle vraagbanen door UI te controleren.
 

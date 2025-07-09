@@ -5,18 +5,32 @@ title: Planningeindpunt
 description: De volgende secties lopen door de diverse API vraag u voor geplande vragen met de Dienst API van de Vraag kunt maken.
 role: Developer
 exl-id: f57dbda5-da50-4812-a924-c8571349f1cd
-source-git-commit: a39fae1b72533261fb43e0acc95e50e5a6acd8df
+source-git-commit: 10c0c5c639226879b1ca25391fc4a1006cf40003
 workflow-type: tm+mt
-source-wordcount: '1224'
+source-wordcount: '1410'
 ht-degree: 0%
 
 ---
 
 # Planningeindpunt
 
+Leer hoe te om, geplande vragen tot stand te brengen te beheren en te controleren programmatically gebruikend de API van de Programma&#39;s van de Dienst van de Vraag met gedetailleerde informatie en voorbeelden.
+
+## Eisen en voorwaarden
+
+U kunt geplande vragen tot stand brengen gebruikend of een technische rekening (voor authentiek verklaard via de geloofsbrieven van Server-aan-Server van OAuth) of een persoonlijke gebruikersrekening (gebruikerstoken). Adobe raadt echter ten zeerste aan een technische account te gebruiken om ervoor te zorgen dat de geplande query&#39;s zonder onderbreking en veilig worden uitgevoerd, met name bij langdurige of productiewerklasten.
+
+Vragen die met een persoonlijke gebruikersaccount zijn gemaakt, mislukken als de toegang van die gebruiker is ingetrokken of als hun account is uitgeschakeld. Technische rekeningen zorgen voor meer stabiliteit omdat ze niet gekoppeld zijn aan de arbeidsstatus of toegangsrechten van een individuele gebruiker.
+
+>[!IMPORTANT]
+>
+>Belangrijke overwegingen wanneer het beheren van geplande vragen:<ul><li>Gepland vragen zullen ontbreken als de rekening (technisch of gebruiker) die wordt gebruikt om hen tot stand te brengen toegang of toestemmingen verliest.</li><li>Geplande query&#39;s moeten worden uitgeschakeld voordat ze kunnen worden verwijderd via de API of UI.</li><li>Het voor onbepaalde tijd plannen zonder een einddatum wordt niet gesteund; een einddatum moet altijd worden gespecificeerd.</li></ul>
+
+Voor gedetailleerde begeleiding op rekeningsvereisten, toestemmingsopstelling, en het beheren van geplande vragen, zie de [ documentatie van de programma&#39;s van de Vraag ](../ui/query-schedules.md#technical-account-user-requirements). Voor geleidelijke instructies bij het creëren van en het vormen van een technische rekening, verwijs naar [ de opstelling van Developer Console ](https://experienceleague.adobe.com/en/docs/platform-learn/getting-started-for-data-architects-and-data-engineers/set-up-developer-console-and-postman) en [ technische de rekeningsopstelling van begin tot eind ](https://experienceleague.adobe.com/en/docs/platform-learn/tutorial-comprehensive-technical/setup).
+
 ## Voorbeeld-API-aanroepen
 
-Nu u begrijpt welke headers u moet gebruiken, bent u klaar om aanroepen uit te voeren naar de [!DNL Query Service] API. De volgende secties doorlopen de verschillende API-aanroepen die u met de [!DNL Query Service] API kunt maken. Elke vraag omvat het algemene API formaat, een steekproefverzoek die vereiste kopballen toont, en een steekproefreactie.
+Zodra u de noodzakelijke authentificatiekopballen (zie de [ API authentificatiegids ](../../landing/api-authentication.md)) hebt gevormd, kunt u beginnen het maken vraag aan [!DNL Query Service] API. In de volgende secties worden verschillende API-aanroepen met algemene indelingen getoond, bijvoorbeeld aanvragen met vereiste koppen en voorbeeldantwoorden.
 
 ### Hiermee wordt een lijst met geplande query&#39;s opgehaald
 
