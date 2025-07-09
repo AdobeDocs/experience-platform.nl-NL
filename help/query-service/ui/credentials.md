@@ -121,7 +121,7 @@ Nadat u alle vereiste gegevens hebt opgegeven, selecteert u **[!UICONTROL Genera
 
 >[!IMPORTANT]
 >
->Als **[!UICONTROL Generate credentials]** is geselecteerd, wordt een JSON-configuratiebestand gedownload naar uw lokale computer. Aangezien Adobe **** niet de geproduceerde geloofsbrieven registreert, moet u het gedownloade dossier veilig opslaan en een verslag van de referentie houden.
+>Als **[!UICONTROL Generate credentials]** is geselecteerd, wordt een JSON-configuratiebestand gedownload naar uw lokale computer. Aangezien Adobe **&#x200B;**&#x200B;niet de geproduceerde geloofsbrieven registreert, moet u het gedownloade dossier veilig opslaan en een verslag van de referentie houden.
 >
 >Bovendien, als de geloofsbrieven niet gedurende 90 dagen worden gebruikt, zullen de geloofsbrieven worden verklaard.
 
@@ -172,7 +172,7 @@ In de onderstaande tabel worden de parameters beschreven die doorgaans vereist z
 >[!NOTE]
 >
 >Wanneer u verbinding maakt met een host die niet-vervallende gegevens gebruikt, moet u nog steeds alle parameters gebruiken die in de sectie [!UICONTROL EXPIRING CREDENTIALS] worden vermeld, behalve het wachtwoord en de gebruikersnaam.
->>Voor de notatie voor het invoeren van uw gebruikersnaam en wachtwoord worden door dubbele punten gescheiden waarden gebruikt, zoals in dit voorbeeld `username:{your_username}` en `password:{password_string}` wordt getoond.
+>&#x200B;>Voor de notatie voor het invoeren van uw gebruikersnaam en wachtwoord worden door dubbele punten gescheiden waarden gebruikt, zoals in dit voorbeeld `username:{your_username}` en `password:{password_string}` wordt getoond.
 
 | Parameter | Beschrijving | Voorbeeld |
 |---|---|---|
