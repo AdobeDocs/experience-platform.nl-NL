@@ -3,9 +3,9 @@ title: Aanvullende informatie voor Adobe Experience Platform van juni 2025
 description: Aanvullende informatie voor Adobe Experience Platform van juni 2025
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
 source-git-commit: c78dc0e83976499403e066b314a0889df803c976
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1646'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -16,8 +16,8 @@ ht-degree: 99%
 >
 >Raadpleeg de volgende documentatie voor aanvullende informatie voor andere Adobe Experience Platform-toepassingen:
 >
->- [Adobe Journey Optimizer](https://experienceleague.adobe.com/nl/docs/journey-optimizer/using/whats-new/release-notes)
->- [Adobe Journey Optimizer B2B](https://experienceleague.adobe.com/nl/docs/journey-optimizer-b2b/user/release-notes)
+>- [Adobe Journey Optimizer](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/whats-new/release-notes)
+>- [Adobe Journey Optimizer B2B](https://experienceleague.adobe.com/en/docs/journey-optimizer-b2b/user/release-notes)
 >- [Customer Journey Analytics](https://experienceleague.adobe.com/nl/docs/analytics-platform/using/releases/pre-release-notes)
 >- [Samenstelling van Federated-doelgroep](https://experienceleague.adobe.com/nl/docs/federated-audience-composition/using/e-release-notes)
 >- [Real-Time CDP Collaboration](https://experienceleague.adobe.com/nl/docs/real-time-cdp-collaboration/using/latest)
@@ -177,7 +177,7 @@ Experience Platform biedt een RESTful-API en een interactieve gebruikersinterfac
 | Functie | Beschrijving |
 | --- | --- |
 | [!BADGE Beta]{type=Informative} UI-ondersteuning voor [!DNL Azure Databricks] | U kunt uw [!DNL Azure Databricks]-account nu verbinden met Experience Platform via de bronnenwerkruimte in de gebruikersinterface. Raadpleeg de handleiding over [verbinding maken [!DNL Databricks]  met Experience Platform in de gebruikersinterface](../../sources/connectors/databases/databricks.md) voor meer informatie. |
-| Ondersteuning voor nieuw verificatietype voor [!DNL Azure Synapse Analytics] | [!DNL Azure Synapse Analytics] ondersteunt nu ook de belangrijkste verificatie van de service, naast verificatie van de bestaande verbindingstekenreeks. Voor meer informatie, lees het [[!DNL Azure Synapse Analytics]  authentificatieoverzicht ](../../sources/connectors/databases/synapse-analytics.md). |
+| Ondersteuning voor nieuw verificatietype voor [!DNL Azure Synapse Analytics] | [!DNL Azure Synapse Analytics] ondersteunt nu ook de belangrijkste verificatie van de service, naast verificatie van de bestaande verbindingstekenreeks. Raadpleeg het [[!DNL Azure Synapse Analytics] verificatieoverzicht](../../sources/connectors/databases/synapse-analytics.md) voor meer informatie. |
 | [!DNL Salesforce] Afschaffing van basisverificatie | De basisverificatie voor [Salesforce CRM](../../sources/connectors/crm/salesforce.md) en [Salesforce Service Cloud](../../sources/connectors/customer-success/salesforce-service-cloud.md) wordt vanaf januari 2026 afgeschaft. Klanten moeten naar OAuth 2.0-verificatie migreren om connectiviteit te behouden. Deze wijziging is van invloed op beide bronconnectoren en zorgt voor verbeterde beveiliging en naleving van de verificatienormen van Salesforce. |
 
 {style="table-layout:auto"}
