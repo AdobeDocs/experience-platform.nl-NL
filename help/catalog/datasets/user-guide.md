@@ -4,9 +4,9 @@ solution: Experience Platform
 title: UI-gids voor gegevensbestanden
 description: Leer hoe u algemene handelingen uitvoert wanneer u werkt met gegevenssets in de Adobe Experience Platform-gebruikersinterface.
 exl-id: f0d59d4f-4ebd-42cb-bbc3-84f38c1bf973
-source-git-commit: 132024313dbe0d83c9af22d30927a01e32c9d94f
+source-git-commit: 47cb1e9851a288961ecca01cf609b72342c58631
 workflow-type: tm+mt
-source-wordcount: '4012'
+source-wordcount: '4316'
 ht-degree: 0%
 
 ---
@@ -108,11 +108,13 @@ Meer informatie over deze beschikbare acties vindt u in de desbetreffende sectie
 
 ### Een voorbeeld van een gegevensset bekijken {#preview}
 
-U kunt voorbeeldgegevens van gegevenssets voorvertonen via zowel de inlineopties van het tabblad [!UICONTROL Browse] als de weergave [!UICONTROL Dataset activity] . Selecteer op het tabblad [!UICONTROL Browse] de ovalen (...) naast de naam van de gegevensset die u wilt voorvertonen. Er wordt een menulijst met opties weergegeven. Selecteer vervolgens **[!UICONTROL Preview dataset]** in de lijst met beschikbare opties. Als de gegevensset leeg is, wordt de voorvertoningskoppeling gedeactiveerd en wordt in plaats daarvan aangegeven dat de voorvertoning niet beschikbaar is.
+U kunt voorbeeldgegevens van gegevenssets voorvertonen via zowel de inlineopties van het tabblad [!UICONTROL Browse] als de weergave [!UICONTROL Dataset activity] . Een nieuw venster van de datasetvoorproef is beschikbaar met extra navigatie en contextverhogingen.
+
+Selecteer op het tabblad [!UICONTROL Browse] de ellips (...) naast de naam van de gegevensset waarvan u een voorvertoning wilt weergeven. Er wordt een lijst met opties weergegeven. Selecteer vervolgens [!UICONTROL Preview dataset] uit de beschikbare opties. Als de gegevensset leeg is, wordt de voorvertoningskoppeling gedeactiveerd en wordt aangegeven dat de voorvertoning niet beschikbaar is.
 
 ![ het Browse lusje van de werkruimte van Datasets met de ellips en de optie van de dataset van de Voorproef die voor de gekozen dataset wordt benadrukt.](../images/datasets/user-guide/preview-dataset-option.png)
 
-Dit opent het voorproefvenster, waar de hiërarchische mening van het schema voor de dataset op het recht wordt getoond.
+Dit opent het voorproefvenster, waar de hiërarchische schemamening voor de dataset op de linkerzijde wordt getoond.
 
 >[!NOTE]
 >
@@ -120,11 +122,49 @@ Dit opent het voorproefvenster, waar de hiërarchische mening van het schema voo
 
 ![ de dialoog van de datasetvoorproef met informatie over de structuur, evenals steekproefwaarden, voor de dataset wordt getoond.](../images/datasets/user-guide/preview-dataset.png)
 
-U kunt ook **[!UICONTROL Preview dataset]** in de rechterbovenhoek van het scherm selecteren in het **[!UICONTROL Dataset activity]** -scherm om een voorvertoning weer te geven van maximaal 100 rijen gegevens.
+U kunt ook **[!UICONTROL Dataset activity]** in de rechterbovenhoek van het scherm selecteren in het **[!UICONTROL Preview dataset]** -scherm om een voorvertoning weer te geven van maximaal 100 rijen gegevens.
 
 ![ de knoop van de dataset van de Voorproef wordt benadrukt.](../images/datasets/user-guide/select-preview.png)
 
-Voor robuustere methoden voor toegang tot uw gegevens biedt [!DNL Experience Platform] downstreamservices, zoals [!DNL Query Service] en [!DNL JupyterLab] , voor het verkennen en analyseren van gegevens. Raadpleeg de volgende documenten voor meer informatie:
+Het venster van de datasetvoorproef verstrekt een gestroomlijnde interface voor het onderzoeken van en het bevestigen van datasets.
+
+#### Voorvertoningsvenster voor gegevensset {#dataset-preview-window}
+
+De volgende animatie toont het venster van de datasetvoorproef met zijn navigatie en de eigenschappen van de gegevensexploratie:
+
+![ opname die van het Scherm het venster van de datasetvoorproef toont. De opname benadrukt de objecten browser sidebar, gegevenstype indicatoren, SQL vraagvertoning, en geformatteerde gegevenslijst.](../images/datasets/user-guide/dataset-preview-demo.gif)
+
+Het voorvertoningsvenster van de gegevensset bevat:
+
+* Een objectbrowser op de linkerzijde voor het navigeren en filteren van gegevenssetvelden.
+* Gegevenstype-indicatoren die naast elke kolomnaam worden weergegeven, zodat insight snel in de structuur van de gegevensset kan worden opgenomen.
+* Een SQL vraagvertoning bij de bovenkant van het venster, die de vraag toont die wordt gebruikt om de dataset te produceren.
+* Een opgemaakte tabelweergave van maximaal 100 rijen rechtsonder voor efficiënte gegevensrevisie.
+* Directe navigatie aan de Redacteur van de Vraag voor de gebruikers van Gegevens Distiller, met de SQL vraag die voor verdere exploratie of wijziging wordt bevolkt.
+
+Deze eigenschappen steunen snelle navigatie, schema begrip, en transparante datasetbevestiging.
+
+Selecteer **[!UICONTROL Preview dataset]** in de inline-handelingen of in het [!UICONTROL Dataset activity] -scherm om het voorvertoningsvenster te openen.
+
+>[!NOTE]
+>
+>In het voorvertoningsvenster wordt een voorbeeld van maximaal 100 rijen weergegeven. Velden zonder gegevens worden niet weergegeven.
+
+#### Sneltoets Geavanceerde zoekeditor {#query-editor-shortcut}
+
+Als uw organisatie een Data Distiller-licentie heeft, hebt u rechtstreeks vanuit het voorvertoningsvenster van de dataset toegang tot de Advanced Query Editor.
+
+>[!AVAILABILITY]
+>
+>Alleen gebruikers met de vereiste Data Distiller-licentie hebben toegang tot deze functionaliteit. Als uw organisatie Data Distiller niet heeft, is de optie [!UICONTROL Advanced query editor] niet zichtbaar.
+
+Selecteer **[!UICONTROL Advanced query editor]** rechtsboven in het voorvertoningsvenster om de Query-editor te openen. De huidige voorvertoningsquery is vooraf geladen en klaar voor uitvoering of verdere analyse.
+
+![ de voorproefvenster van de Dataset die de Geavanceerde knoop van de vraagredacteur in het hogere recht tonen.](../images/datasets/user-guide/dataset-preview-advanced-query-editor.png)
+
+Deze kortere weg laat u toe om naadloos van het voorvertonen van steekproefgegevens aan het lopen en het raffineren van vragen in de Dienst van de Vraag te bewegen zonder SQL of context opnieuw in te gaan.
+
+Voor extra gegevenstoegang en analyse, gebruik de stroomafwaartse diensten zoals [!DNL Query Service] en [!DNL JupyterLab]. Raadpleeg de volgende documenten voor meer informatie:
 
 * [Overzicht van Query Service](../../query-service/home.md)
 * [Gebruikershandleiding voor JupyterLab](../../data-science-workspace/jupyterlab/overview.md)
@@ -393,7 +433,7 @@ Datasets kunnen van de lijst van beschikbare datasets in UI met de schemafilter 
 
 ### Een gegevensset maken met een CSV-bestand {#csv}
 
-Wanneer een dataset gebruikend een Csv- dossier wordt gecreeerd, wordt een ad hoc schema gecreeerd om de dataset van een structuur te voorzien die het verstrekte Csv- dossier aanpast. Selecteer **[!UICONTROL Create dataset from CSV file]** in het **[!UICONTROL Create dataset]** -scherm.
+Wanneer een dataset gebruikend een Csv- dossier wordt gecreeerd, wordt een ad hoc schema gecreeerd om de dataset van een structuur te voorzien die het verstrekte Csv- dossier aanpast. Selecteer **[!UICONTROL Create dataset]** in het **[!UICONTROL Create dataset from CSV file]** -scherm.
 
 ![ Create dataset van Csv- dossierknoop wordt benadrukt.](../images/datasets/user-guide/create-dataset-csv.png)
 
@@ -411,7 +451,7 @@ De stap **[!UICONTROL Add data]** wordt weergegeven. Upload het CSV-bestand door
 
 ## Gegevens bijhouden
 
-Selecteer **[!UICONTROL Monitoring]** in de gebruikersinterface van [!DNL Experience Platform] in de linkernavigatie. Met het dashboard **[!UICONTROL Monitoring]** kunt u de status van binnenkomende gegevens van batch- of streaming invoer bekijken. Als u de status van afzonderlijke batches wilt weergeven, selecteert u **[!UICONTROL Batch end-to-end]** of **[!UICONTROL Streaming end-to-end]** . De dashboards maken een lijst van alle partij of het stromen ingangen, met inbegrip van die die succesvol zijn, ontbroken, of nog lopend. Elke lijst verstrekt details van de partij, met inbegrip van partijidentiteitskaart, de naam van de doeldataset, en het aantal verslagen die worden opgenomen. Als de doeldataset voor [!DNL Profile] wordt toegelaten, wordt het aantal ingebedde identiteit en profielverslagen ook getoond.
+Selecteer [!DNL Experience Platform] in de gebruikersinterface van **[!UICONTROL Monitoring]** in de linkernavigatie. Met het dashboard **[!UICONTROL Monitoring]** kunt u de status van binnenkomende gegevens van batch- of streaming invoer bekijken. Als u de status van afzonderlijke batches wilt weergeven, selecteert u **[!UICONTROL Batch end-to-end]** of **[!UICONTROL Streaming end-to-end]** . De dashboards maken een lijst van alle partij of het stromen ingangen, met inbegrip van die die succesvol zijn, ontbroken, of nog lopend. Elke lijst verstrekt details van de partij, met inbegrip van partijidentiteitskaart, de naam van de doeldataset, en het aantal verslagen die worden opgenomen. Als de doeldataset voor [!DNL Profile] wordt toegelaten, wordt het aantal ingebedde identiteit en profielverslagen ook getoond.
 
 ![ het controlerende batch scherm van begin tot eind wordt getoond. Zowel worden de controle als partij-aan-partij benadrukt.](../images/datasets/user-guide/batch-listing.png)
 
