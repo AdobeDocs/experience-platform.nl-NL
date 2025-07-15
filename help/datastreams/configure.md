@@ -111,7 +111,7 @@ Nadat u een nieuwe gegevensstroom hebt geconfigureerd of een bestaande gegevenss
 
 ![ de detailspagina van DataStream.](assets/configure/view-details.png)
 
-Van het scherm van gegevensstroomdetails, kunt u [ de diensten ](#add-services) toevoegen om mogelijkheden van de producten van Adobe Experience Cloud toe te laten u toegang tot hebt. U kunt de 0} basisconfiguratie van de gegevensstroom [ ook uitgeven, zijn ](#create) kaartregels [ bijwerken, ](./data-prep.md) exemplaar de datastream [, of het volledig schrappen.](#copy)
+Van het scherm van gegevensstroomdetails, kunt u [ de diensten ](#add-services) toevoegen om mogelijkheden van de producten van Adobe Experience Cloud toe te laten u toegang tot hebt. U kunt de 0&rbrace; basisconfiguratie van de gegevensstroom [ ook uitgeven, zijn ](#create) kaartregels [ bijwerken, ](./data-prep.md) exemplaar de datastream [, of het volledig schrappen.](#copy)
 
 ## Services toevoegen aan een gegevensstroom {#add-services}
 
