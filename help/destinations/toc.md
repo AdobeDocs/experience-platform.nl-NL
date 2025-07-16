@@ -5,9 +5,9 @@ user-guide-description: Activeer uw bekende en onbekende gegevens voor cross-cha
 description: In dit document wordt de inhoudsopgave voor Adobe Experience Platform-doelen weergegeven
 feature: Destinations
 role: Admin,User
-source-git-commit: 75dec8987827a84cf791ed08f725baed5a8865ae
+source-git-commit: c3f570ad3fcae50f2381e344bb88d8a9cace57be
 workflow-type: tm+mt
-source-wordcount: '1293'
+source-wordcount: '1295'
 ht-degree: 2%
 
 ---
@@ -32,7 +32,7 @@ ht-degree: 2%
    * [Doelaccounts verwijderen](./api/delete-destination-account.md)
    * [Doelgegevens verwijderen](./api/delete-destination-dataflow.md)
    * [Gegevensbestanden exporteren](/help/destinations/api/export-datasets.md)
-   * [ Soort en filter API reacties voor bestemmingen ](https://experienceleague.adobe.com/docs/experience-platform/dataflows/api/sort-and-filter.html?lang=nl-NL#use-cases)
+   * [ Soort en filter API reacties voor bestemmingen ](https://experienceleague.adobe.com/docs/experience-platform/dataflows/api/sort-and-filter.html#use-cases)
 * UI-hulplijnen {#ui}
    * [Werkruimte Doelen](./ui/destinations-workspace.md)
    * [Een nieuwe doelverbinding maken](./ui/connect-destination.md)
@@ -67,7 +67,7 @@ ht-degree: 2%
       * [Marketo Engage-verbinding](./catalog/adobe/marketo-engage.md)
       * [(Beta) Marketo Engage Person Sync verbinding](./catalog/adobe/marketo-engage-person-sync.md)
       * [Marketo Measure Ultimate-verbinding](./catalog/adobe/marketo-measure-ultimate.md)
-      * [ het publiek dat van Experience Platform  deelt](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html?lang=nl-NL)
+      * [ het publiek dat van Experience Platform ](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html) deelt
       * [ Federated de verbinding van de Samenstelling van het publiek ](https://www.adobe.com/go/destinations-federated-audience-composition)
    * Advertising-bestemmingen{#advertising}
       * [(Beta) Acxiom Audience Distribution](./catalog/advertising/acxiom-audience-distribution.md)
@@ -91,7 +91,7 @@ ht-degree: 2%
       * [Google Ad Manager-verbinding](./catalog/advertising/google-ad-manager.md)
       * [(Beta) Google Ad Manager 360-verbinding](./catalog/advertising/google-ad-manager-360-connection.md)
       * [Google Customer Match-verbinding](./catalog/advertising/google-customer-match.md)
-      * [Google Customer Match + DV360-verbinding](./catalog/advertising/google-customer-match-dv360.md)
+      * [(Beperkte beschikbaarheid) Google Customer Match + DV360-verbinding](./catalog/advertising/google-customer-match-dv360.md)
       * [Google Display &amp; Video 360-verbinding](./catalog/advertising/google-dv360.md)
       * [Google-tag-extensie](./catalog/advertising/gtag-advertising.md)
       * [LinkedIn Insight-tagextensie](./catalog/advertising/linkedin.md)
@@ -213,7 +213,7 @@ ht-degree: 2%
       * [(Bedrijven) LinkedIn-verbinding voor passend publiek](./catalog/social/linkedin-b2b.md)
       * [Verbinding LinkedIn met soorten publiek](./catalog/social/linkedin.md)
       * [TikTok-verbinding](./catalog/social/tiktok.md)
-      * [[!DNL Twitter Custom Audiences] verbinding](./catalog/social/twitter.md)
+      * [[!DNL Twitter Custom Audiences]-verbinding](./catalog/social/twitter.md)
    * Streaming doelen {#streaming}
       * [HTTP API-verbinding](./catalog/streaming/http-destination.md)
       * [IP adres lijst van gewenste personen voor het stromen bestemmingen](./catalog/streaming/ip-address-allow-list.md)
@@ -319,4 +319,4 @@ ht-degree: 2%
       * [Zelfbedieningssjabloon voor documentatie](./destination-sdk/docs-framework/self-service-template.md)
       * [Aanbevolen werkwijzen ontwerpen](./destination-sdk/docs-framework/authoring-best-practices.md)
 * [Veelgestelde vragen](./destinations-faq.md)
-* [Releaseopmerkingen bij Experience Platform](https://experienceleague.adobe.com/nl/docs/experience-platform/release-notes/latest)
+* [Releaseopmerkingen bij Experience Platform](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)
