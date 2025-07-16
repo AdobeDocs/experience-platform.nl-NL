@@ -4,9 +4,9 @@ title: HTTP API-verbinding
 description: Gebruik de HTTP API-bestemming in Adobe Experience Platform om profielgegevens naar het HTTP-eindpunt van derden te verzenden om uw eigen analyses uit te voeren of andere bewerkingen uit te voeren die u nodig hebt voor profielgegevens die uit Experience Platform zijn geëxporteerd.
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 165a8085-c8e6-4c9f-8033-f203522bb288
-source-git-commit: 678f80445212edc1edd3f4799999990ddcc2a039
+source-git-commit: b757f61a46930f08fe05be4c0f701113597567a4
 workflow-type: tm+mt
-source-wordcount: '2596'
+source-wordcount: '2652'
 ht-degree: 0%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
-> Deze bestemming is beschikbaar slechts aan [ Adobe Real-Time Customer Data Platform Ultimate ](https://helpx.adobe.com/nl/legal/product-descriptions/real-time-customer-data-platform.html) klanten.
+> Deze bestemming is beschikbaar slechts aan [ Adobe Real-Time Customer Data Platform Ultimate ](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform.html) klanten.
 
 De HTTP API-bestemming is een [!DNL Adobe Experience Platform] streamingbestemming die u helpt profielgegevens naar HTTP-eindpunten van derden te verzenden.
 
@@ -35,7 +35,7 @@ In deze sectie wordt beschreven welke soorten publiek u naar dit doel kunt expor
 
 | Oorsprong publiek | Ondersteund | Beschrijving |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | ✓ | Het publiek produceerde door de Dienst van de Segmentatie van Experience Platform [&#128279;](../../../segmentation/home.md). |
+| [!DNL Segmentation Service] | ✓ | Het publiek produceerde door de Dienst van de Segmentatie van Experience Platform [ ](../../../segmentation/home.md). |
 | Aangepaste uploads | ✓ | Het publiek [ ingevoerde ](../../../segmentation/ui/audience-portal.md#import-audience) in Experience Platform van Csv- dossiers. |
 
 {style="table-layout:auto"}
@@ -45,7 +45,7 @@ In deze sectie wordt beschreven welke soorten publiek u naar dit doel kunt expor
 Raadpleeg de onderstaande tabel voor informatie over het exporttype en de exportfrequentie van de bestemming.
 
 | Item | Type | Notities |
----------|----------|---------|
+| ---------|----------|---------|
 | Exporttype | **[!UICONTROL Profile-based]** | U exporteert alle leden van een segment, samen met de gewenste schemagebieden (bijvoorbeeld: e-mailadres, telefoonaantal, achternaam), zoals gekozen in het kaartscherm van het [ werkschema van de bestemmingsactivering ](../../ui/activate-segment-streaming-destinations.md#mapping). |
 | Exportfrequentie | **[!UICONTROL Streaming]** | Streaming doelen zijn &quot;altijd aan&quot; API-verbindingen. Zodra een profiel in Experience Platform wordt bijgewerkt dat op publieksevaluatie wordt gebaseerd, verzendt de schakelaar de update stroomafwaarts naar het bestemmingsplatform. Lees meer over [ het stromen bestemmingen ](/help/destinations/destination-types.md#streaming-destinations). |
 
@@ -58,6 +58,7 @@ Als u de HTTP API-bestemming wilt gebruiken om gegevens uit Experience Platform 
 * U moet een eindpunt van HTTP hebben dat REST API steunt.
 * Het HTTP-eindpunt moet het Experience Platform-profielschema ondersteunen. Transformatie naar een extern payload-schema wordt niet ondersteund in de HTTP API-bestemming. Verwijs naar de [ uitgevoerde gegevens ](#exported-data) sectie voor een voorbeeld van het de outputschema van Experience Platform.
 * Uw eindpunt van HTTP moet kopballen steunen.
+* Uw eindpunt van HTTP moet binnen 2 seconden antwoorden om juiste gegevensverwerking te verzekeren en onderbrekingsfouten te vermijden.
 
 >[!TIP]
 >
@@ -363,3 +364,7 @@ Hieronder vindt u meer voorbeelden van geëxporteerde gegevens, afhankelijk van 
 In 95 percent van de tijd, probeert Experience Platform om een productietolerantie van minder dan 10 minuten voor met succes verzonden berichten met een tarief van minder dan 10.000 verzoeken per seconde voor elke dataflow aan een bestemming van HTTP aan te bieden.
 
 In het geval van mislukte verzoeken aan uw bestemming van HTTP API, slaat Experience Platform de ontbroken verzoeken op en probeert tweemaal om de verzoeken naar uw eindpunt te verzenden.
+
+## Problemen oplossen {#troubleshooting}
+
+Om betrouwbare gegevenslevering te verzekeren en onderbrekingskwesties te vermijden zorg ervoor dat uw eindpunt van HTTP binnen 2 seconden aan Experience Platform verzoeken antwoordt, zoals die in de [ eerste vereisten ](#prerequisites) sectie worden gespecificeerd. Reacties die langer duren, resulteren in time-outfouten.
