@@ -5,9 +5,9 @@ breadcrumb-title: Gids voor Segmentation Service
 user-guide-description: Stel doelgroepen samen op basis van uw gegevens voor realtimeklantprofielen met behulp van door Adobe Experience Platform gegenereerde segmentdefinities of externe bronnen.
 feature: Segments
 role: User
-source-git-commit: a0543777e9a72f3a9ed6ff19e8b11973eb647b6b
+source-git-commit: 74fa66e78ac36c8007eb89e8c271d989845c96f0
 workflow-type: tm+mt
-source-wordcount: '203'
+source-wordcount: '208'
 ht-degree: 24%
 
 ---
@@ -17,12 +17,14 @@ ht-degree: 24%
 
 - [Overzicht van segmentatieservice](home.md)
 - [Segmenteringsgegevenstypen](data-types.md)
-- [ de gidsen van de segmentatie ](https://experienceleague.adobe.com/docs/experience-platform/profile/guardrails.html?lang=nl-NL#segmentation-guardrails)
+- [ de gidsen van de segmentatie ](https://experienceleague.adobe.com/docs/experience-platform/profile/guardrails.html#segmentation-guardrails)
 - Segmentatie-API {#api}
    - [Overzicht](api/overview.md)
    - [Aan de slag](api/getting-started.md)
+   - [Metagegevens voor het publiek maken](api/create-audience.md)
    - [Doelgroepen](api/audiences.md)
    - [Exporttaken](api/export-jobs.md)
+   - [Extern publiek](api/external-audiences.md)
    - [Voorvertoningen en ramingen](api/previews-and-estimates.md)
    - [Planningen](api/schedules.md)
    - [Segmentdefinities](api/segment-definitions.md)
@@ -80,4 +82,4 @@ ht-degree: 24%
 - [Update voor kwalificatiecriteria](./eligibility-criteria-update.md)
 - [Veelgestelde vragen](./faq.md)
 - [ API verwijzing ](https://www.adobe.io/experience-platform-apis/references/segmentation/)
-- [ de versienota&#39;s van het Platform ](https://experienceleague.adobe.com/nl/docs/experience-platform/release-notes/latest)
+- [ de versienota&#39;s van het Platform ](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)
