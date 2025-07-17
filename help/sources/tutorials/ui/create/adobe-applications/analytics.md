@@ -2,9 +2,9 @@
 title: Adobe Analytics verbinden met Experience Platform
 description: Leer hoe u uw Adobe Analytics-rapportenpakket-gegevens naar Experience Platform kunt overbrengen
 exl-id: 5ddbaf63-feaa-44f5-b2f2-2d5ae507f423
-source-git-commit: 086777a09eec17c94a7e0a5d2db58e4a1f6b523f
+source-git-commit: d6a290b9891b3507d531a595a5428955c7e9ee90
 workflow-type: tm+mt
-source-wordcount: '2606'
+source-wordcount: '2625'
 ht-degree: 0%
 
 ---
@@ -26,7 +26,7 @@ Deze zelfstudie vereist een goed begrip van de volgende onderdelen van Experienc
 Het is belangrijk dat u de volgende belangrijke termen kent die in dit document worden gebruikt:
 
 * **Standaard attributen**: De standaardattributen zijn om het even welk attribuut dat door Adobe vooraf wordt bepaald. Zij bevatten de zelfde betekenis voor alle klanten en zijn beschikbaar in de de brongegevens van de Analyse en het schemagebiedsgroepen van de Analyse.
-* **attributen van de Douane**: De attributen van de Douane zijn om het even welk attribuut in de hiërarchie van de douanevariabele in Analytics. De attributen van de douane worden gebruikt binnen een implementatie van Adobe Analytics om specifieke informatie in een rapportreeks te vangen, en zij kunnen in hun gebruik van rapportreeks aan rapportreeks verschillen. Aangepaste kenmerken zijn onder andere eVars, props en lijsten. Zie de volgende [ documentatie van Analytics over omzettingsvariabelen ](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/conversion-variables/conversion-var-admin.html?lang=nl-NL) voor meer informatie over Vars.
+* **attributen van de Douane**: De attributen van de Douane zijn om het even welk attribuut in de hiërarchie van de douanevariabele in Analytics. De attributen van de douane worden gebruikt binnen een implementatie van Adobe Analytics om specifieke informatie in een rapportreeks te vangen, en zij kunnen in hun gebruik van rapportreeks aan rapportreeks verschillen. Aangepaste kenmerken zijn onder andere eVars, props en lijsten. Zie de volgende [ documentatie van Analytics over omzettingsvariabelen ](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/conversion-variables/conversion-var-admin.html) voor meer informatie over Vars.
 * **om het even welk attribuut in de gebiedsgroepen van de Douane**: De attributen die uit gebiedsgroepen voortkomen die door klanten worden gecreeerd zijn allen user-defined en worden beschouwd als noch standaard noch douanekenmerken.
 
 ## Navigeren door de catalogus met bronnen
@@ -287,6 +287,10 @@ Voor meer informatie over backfill, levende gegevens, en hun respectieve latenti
 
 ## Uw gegevensstroom verwijderen {#delete-dataflow}
 
+>[!NOTE]
+>
+>U kunt een gegevensstroom voor Analytics niet uitschakelen. Om de stroom van de gegevens van Analytics tegen te houden, moet u **** volledig schrappen dataflow.
+
 Als u de gegevensstroom Analytics wilt verwijderen, selecteert u **[!UICONTROL Dataflows]** in de bovenste koptekst van de werkruimte Bronnen. Gebruik de dataflows pagina om van de dataflow van Analytics de plaats te bepalen die u wilt schrappen en dan de ellipsen (`...`) naast het selecteren. Gebruik vervolgens het vervolgkeuzemenu en selecteer **[!UICONTROL Delete]** .
 
 * Het schrappen van de levende Dataflow van Analytics zal ook zijn onderliggende dataset schrappen.
@@ -307,5 +311,5 @@ De volgende video is bedoeld als ondersteuning voor uw inzicht in het opnemen va
 >
 > De gebruikersinterface van [!DNL Experience Platform] in de volgende video is verouderd. Raadpleeg de bovenstaande documentatie voor de meest recente schermafbeeldingen en functionaliteit van de gebruikersinterface.
 
->[!VIDEO](https://video.tv.adobe.com/v/3430252?quality=12&learn=on&captions=dut)
+>[!VIDEO](https://video.tv.adobe.com/v/29687?quality=12&learn=on)
 
