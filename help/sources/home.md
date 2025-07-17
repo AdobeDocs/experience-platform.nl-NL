@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Overzicht Source Connectors
 description: Adobe Experience Platform staat toe dat gegevens uit externe bronnen worden opgenomen en biedt u de mogelijkheid om inkomende gegevens te structureren, labelen en verbeteren met behulp van Experience Platform-services. U kunt gegevens invoeren uit verschillende bronnen, zoals Adobe-toepassingen, opslag in de cloud, databases en vele andere.
 exl-id: efdbed4d-5697-43ef-a47a-a8bcf0f13237
-source-git-commit: 2e4df13bae9f4afa24f761e650790704da44da90
+source-git-commit: 952fc2fac819c545304aca4505208fe59841097f
 workflow-type: tm+mt
-source-wordcount: '1524'
+source-wordcount: '1610'
 ht-degree: 0%
 
 ---
@@ -26,19 +26,7 @@ Met Experience Platform kunt u gegevens die u uit verschillende bronnen verzamel
 <div id="recs-overview-body-5"></div>
 <div id="recs-overview-body-6"></div>
 
-## Geavanceerde bedrijfsbronnen {#advanced-enterprise-sources}
-
-De volgende bronnen zijn beschikbaar aan [ Adobe Real-Time Customer Data Platform Ultimate ](https://helpx.adobe.com/nl/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html) slechts klanten.
-
-- [[!DNL Amazon Kinesis]](connectors/cloud-storage/kinesis.md) [!BADGE &#x200B; Streaming &#x200B;]{type=Positive}
-- [[!DNL Amazon Redshift]](connectors/databases/redshift.md) [!BADGE &#x200B; Partij &#x200B;]{type=Informative}
-- [[!DNL Azure Databricks]](connectors/databases/databricks.md) [!BADGE &#x200B; Partij &#x200B;]{type=Informative}
-- [[!DNL Azure Event Hubs]](connectors/cloud-storage/eventhub.md) [!BADGE &#x200B; Streaming &#x200B;]{type=Positive}
-- [[!DNL Azure Synapse Analytics]](connectors/databases/synapse-analytics.md) [!BADGE &#x200B; Partij &#x200B;]{type=Informative}
-- [[!DNL Google BigQuery]](connectors/databases/bigquery.md) [!BADGE &#x200B; Partij &#x200B;]{type=Informative}
-- [[!DNL Google PubSub]](connectors/cloud-storage/google-pubsub.md) [!BADGE &#x200B; Streaming &#x200B;]{type=Positive}
-- [[!DNL Snowflake]](connectors/databases/snowflake-streaming.md) [!BADGE &#x200B; Streaming &#x200B;]{type=Positive}
-- [[!DNL Snowflake]](connectors/databases/snowflake.md) [!BADGE &#x200B; Partij &#x200B;]{type=Informative}
+>[!BEGINSHADEBOX]
 
 ## Door Adobe gebouwde en door partners gebouwde bronnen {#adobe-and-partner-built-sources}
 
@@ -46,161 +34,243 @@ Sommige schakelaars in de Experience Platform broncatalogus worden gebouwd en do
 
 Voor partner-authored en onderhouden schakelaars, betekent dit dat de kwesties met de schakelaar door het partnerteam zouden kunnen moeten worden opgelost (contactmethode die in de nota in de documentatiepagina wordt verstrekt). Neem voor problemen met door Adobe ontworpen en onderhouden connectors contact op met uw Adobe-vertegenwoordiger of de klantenservice.
 
-## Broncategorieën
+>[!ENDSHADEBOX]
 
-Bronnen in Experience Platform zijn gegroepeerd in de volgende categorieën:
+## Broncatalogus
+
+Lees de volgende secties voor een lijst van alle bronnen beschikbaar in de broncatalogus.
 
 ### Adobe-toepassingen {#adobe-applications}
 
-Experience Platform staat toe dat gegevens worden ingevoerd van andere Adobe-toepassingen, zoals Adobe Analytics en Adobe Audience Manager. Zie de volgende verwante documenten voor meer informatie:
+Experience Platform staat toe dat gegevens worden ingevoerd van andere Adobe-toepassingen, zoals Adobe Analytics en Adobe Audience Manager. Lees de volgende verwante documenten voor meer informatie:
 
-- [Adobe Audience Manager-bronoverzicht](connectors/adobe-applications/audience-manager.md)
+- [Adobe Audience Manager](connectors/adobe-applications/audience-manager.md)
    - [Een Adobe Audience Manager-bronverbinding maken in de gebruikersinterface](./tutorials/ui/create/adobe-applications/audience-manager.md)
-- [Overzicht van Adobe Analytics Classifications Data source](connectors/adobe-applications/classifications.md)
+- [Adobe Analytics-classificatiegegevens](connectors/adobe-applications/classifications.md)
    - [Een gegevensbronverbinding voor Adobe Analytics Classifications maken in de gebruikersinterface](./tutorials/ui/create/adobe-applications/classifications.md)
-- [Overzicht van Adobe Analytics Report Suite-gegevensbron](connectors/adobe-applications/analytics.md)
+- [Adobe Analytics Report Suite-gegevens](connectors/adobe-applications/analytics.md)
    - [Een Adobe Analytics-bronverbinding maken in de gebruikersinterface](./tutorials/ui/create/adobe-applications/analytics.md)
-- [Adobe Campaign Managed Cloud Services-bronoverzicht](connectors/adobe-applications/campaign.md)
+- [Adobe Campaign Managed Cloud Services](connectors/adobe-applications/campaign.md)
    - [Een Adobe Campaign Managed Cloud Services-bronverbinding maken in de gebruikersinterface](./tutorials/ui/create/adobe-applications/campaign.md)
-- [Adobe Commerce-bronoverzicht](connectors/adobe-applications/commerce.md)
-- [Overzicht van Adobe-gegevensbron voor gegevensverzameling](connectors/adobe-applications/data-collection.md)
+- [Adobe Commerce](connectors/adobe-applications/commerce.md)
+- [Adobe-gegevensverzameling](connectors/adobe-applications/data-collection.md)
    - [Een bronverbinding voor klantkenmerken maken in de gebruikersinterface](./tutorials/ui/create/adobe-applications/customer-attributes.md)
-- [[!DNL Marketo Engage] bronoverzicht](connectors/adobe-applications/marketo/marketo.md)
+- [[!DNL Marketo Engage]](connectors/adobe-applications/marketo/marketo.md)
    - [Creeer a [!DNL Marketo Engage]  bronverbinding in UI](./tutorials/ui/create/adobe-applications/marketo.md)
    - [Creeer a  [!DNL Marketo Engage]  bronverbinding en dataflow voor de gegevens van de douaneactiviteit](./tutorials/ui/create/adobe-applications/marketo-custom-activities.md)
 
+### Geavanceerde bedrijfsbronnen {#advanced-enterprise-sources}
+
+De volgende bronnen zijn beschikbaar aan [ Adobe Real-Time Customer Data Platform Ultimate ](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html) slechts klanten.
+
+| Source | Categorie | Type ontsteking | Wolk |
+| --- | --- | --- | --- |
+| [[!DNL Amazon Kinesis]](connectors/cloud-storage/kinesis.md) | Cloud-opslag | Streaming | Azure, AWS |
+| [[!DNL Amazon Redshift]](connectors/databases/redshift.md) | Database | Batch | Azure, AWS |
+| [[!DNL Azure Databricks]](connectors/databases/databricks.md) | Database | Batch | Azure |
+| [[!DNL Azure Event Hubs]](connectors/cloud-storage/eventhub.md) | Cloud Storage | Streaming | Azure, AWS |
+| [[!DNL Azure Synapse Analytics]](connectors/databases/synapse-analytics.md) | Database | Batch | Azure |
+| [[!DNL Google BigQuery]](connectors/databases/bigquery.md) | Database | Batch | Azure |
+| [[!DNL Google PubSub]](connectors/cloud-storage/google-pubsub.md) | Cloud Storage | Streaming | Azure |
+| [[!DNL Snowflake]](connectors/databases/snowflake-streaming.md) | Database | Streaming | Azure, AWS |
+| [[!DNL Snowflake]](connectors/databases/snowflake.md) | Database | Batch | Azure, AWS |
+
+{style="table-layout:auto"}
+
 ### Advertising {#advertising}
 
-Experience Platform biedt ondersteuning voor het opnemen van gegevens uit een derde-advertentiesysteem. Zie de volgende verwante documenten voor meer informatie over specifieke bronschakelaars:
+U kunt de volgende bronnen gebruiken om advertentiegegevens in te voeren naar Experience Platform.
 
-- [ Google Adds ](connectors/advertising/ads.md) [!BADGE &#x200B; Partij &#x200B;]{type=Informative}
+| Source | Type ontsteking | Wolk |
+| --- | --- | --- |
+| [ Advertentie Google ](connectors/advertising/ads.md) | Batch | Azure |
+
+{style="table-layout:auto"}
 
 ### Analytics {#analytics}
 
-Experience Platform biedt ondersteuning voor het opnemen van gegevens van een extern analyseplatform. Lees de volgende verwante documenten voor meer informatie:
+U kunt de volgende bronnen gebruiken om analysegegevens in te voeren naar Experience Platform.
 
-- [[!DNL Mixpanel]](connectors/analytics/mixpanel.md) [!BADGE &#x200B; Partij &#x200B;]{type=Informative}
-- [[!DNL Pendo]](connectors/analytics/pendo-webhook.md) [!BADGE &#x200B; Streaming &#x200B;]{type=Positive}
-- [[!DNL RainFocus]](connectors/analytics/rainfocus.md) [!BADGE &#x200B; Streaming &#x200B;]{type=Positive}
+| Source | Type ontsteking | Wolk |
+| --- | --- | --- |
+| [[!DNL Mixpanel]](connectors/analytics/mixpanel.md) | Batch | Azure |
+| [[!DNL Pendo]](connectors/analytics/pendo-webhook.md) | Streaming | Azure |
+| [[!DNL RainFocus]](connectors/analytics/rainfocus.md) | Streaming | Azure |
+
+{style="table-layout:auto"}
 
 ### Cloud Storage {#cloud-storage}
 
 Opslagbronnen in de cloud kunnen uw eigen gegevens naar Experience Platform brengen zonder dat ze hoeven te worden gedownload, opgemaakt of geüpload. Ingebedde gegevens kunnen worden opgemaakt als XDM JSON, XDM Parquet, of afgebakend. Elke stap van het proces is geïntegreerd in het Bronwerkschema gebruikend het gebruikersinterface. Zie de volgende verwante documenten voor meer informatie:
 
-- [[!DNL Azure Data Lake Storage Gen2]](connectors/cloud-storage/adls-gen2.md) [!BADGE &#x200B; Partij &#x200B;]{type=Informative}
-- [[!DNL Azure Blob]](connectors/cloud-storage/blob.md) [!BADGE &#x200B; Partij &#x200B;]{type=Informative}
-- [[!DNL Amazon S3]](connectors/cloud-storage/s3.md) [!BADGE &#x200B; Partij &#x200B;]{type=Informative}
-- [[!DNL Apache HDFS]](connectors/cloud-storage/hdfs.md) [!BADGE &#x200B; Partij &#x200B;]{type=Informative}
-- [[!DNL Azure File Storage]](connectors/cloud-storage/azure-file-storage.md) [!BADGE &#x200B; Partij &#x200B;]{type=Informative}
-- [[!DNL Data Landing Zone]](connectors/cloud-storage/data-landing-zone.md) [!BADGE &#x200B; Partij &#x200B;]{type=Informative}
-- [[!DNL FTP]](connectors/cloud-storage/ftp.md) [!BADGE &#x200B; Partij &#x200B;]{type=Informative}
-- [[!DNL Google Cloud Storage]](connectors/cloud-storage/google-cloud-storage.md) [!BADGE &#x200B; Partij &#x200B;]{type=Informative}
-- [[!DNL Oracle Object Storage]](connectors/cloud-storage/oracle-object-storage.md) [!BADGE &#x200B; Partij &#x200B;]{type=Informative}
-- [[!DNL SFTP]](connectors/cloud-storage/sftp.md) [!BADGE &#x200B; Partij &#x200B;]{type=Informative}
+U kunt de volgende bronnen gebruiken om gegevens over cloudopslag in Experience Platform op te nemen.
+
+| Source | Type ontsteking | Wolk |
+| --- | --- | --- |
+| [[!DNL Azure Data Lake Storage Gen2]](connectors/cloud-storage/adls-gen2.md) | Batch | Azure |
+| [[!DNL Azure Blob]](connectors/cloud-storage/blob.md) | Batch | Azure |
+| [[!DNL Amazon S3]](connectors/cloud-storage/s3.md) | Batch | Azure, AWS |
+| [[!DNL Apache HDFS]](connectors/cloud-storage/hdfs.md) | Batch | Azure |
+| [[!DNL Azure File Storage]](connectors/cloud-storage/azure-file-storage.md) | Batch | Azure |
+| [[!DNL Data Landing Zone]](connectors/cloud-storage/data-landing-zone.md) | Batch | Azure, AWS |
+| [[!DNL FTP]](connectors/cloud-storage/ftp.md) | Batch | Azure |
+| [[!DNL Google Cloud Storage]](connectors/cloud-storage/google-cloud-storage.md) | Batch | Azure |
+| [[!DNL Oracle Object Storage]](connectors/cloud-storage/oracle-object-storage.md) | Batch | Azure |
+| [[!DNL SFTP]](connectors/cloud-storage/sftp.md) | Batch | Azure |
+
+{style="table-layout:auto"}
 
 ### Toestemming en voorkeuren {#consent}
 
-Experience Platform biedt ondersteuning voor het opnemen van gegevens van een platform voor toestemming en voorkeurenbeheer van derden. Zie de volgende verwante documenten voor meer informatie:
+U kunt de volgende bronnen gebruiken om toestemmings- en voorkeursgegevens in te voeren voor Experience Platform.
 
-- [[!DNL OneTrust Integration]](connectors/consent-and-preferences/onetrust.md) [!BADGE &#x200B; Partij &#x200B;]{type=Informative}
+| Source | Type ontsteking | Wolk |
+| --- | --- | --- |
+| [[!DNL OneTrust Integration]](connectors/consent-and-preferences/onetrust.md) | Batch | Azure |
+
+{style="table-layout:auto"}
 
 ### Customer Relationship Management (CRM) {#customer-relationship-management}
 
 De systemen van CRM verstrekken gegevens die klantenverhoudingen kunnen helpen bouwen, die beurtelings, loyaliteit creëren en klantenbehoud drijven. Experience Platform biedt ondersteuning voor het opnemen van CRM-gegevens van [!DNL Microsoft Dynamics 365] en [!DNL Salesforce] . Zie de volgende verwante documenten voor meer informatie:
 
-- [[!DNL Microsoft Dynamics]](connectors/crm/ms-dynamics.md) [!BADGE &#x200B; Partij &#x200B;]{type=Informative}
-- [[!DNL Salesforce]](connectors/crm/salesforce.md) [!BADGE &#x200B; Partij &#x200B;]{type=Informative}
-- [[!DNL SugarCRM]](connectors/crm/sugarcrm.md) [!BADGE &#x200B; Partij &#x200B;]{type=Informative}
-- [[!DNL Veeva CRM]](connectors/crm/veeva.md) [!BADGE &#x200B; Partij &#x200B;]{type=Informative}
+U kunt de volgende bronnen gebruiken om CRM-gegevens in te voeren naar Experience Platform.
+
+| Source | Type ontsteking | Wolk |
+| --- | --- | --- |
+| [[!DNL Microsoft Dynamics]](connectors/crm/ms-dynamics.md) | Batch | Azure |
+| [[!DNL Salesforce]](connectors/crm/salesforce.md) | Batch | Azure, AWS |
+| [[!DNL SugarCRM]](connectors/crm/sugarcrm.md) | Batch | Azure |
+| [[!DNL Veeva CRM]](connectors/crm/veeva.md) | Batch | Azure |
+
+{style="table-layout:auto"}
 
 ### Klant geslaagd {#customer-success}
 
-Experience Platform biedt ondersteuning voor het opnemen van gegevens van een toepassing voor klantsucces van derden. Zie de volgende verwante documenten voor meer informatie:
+U kunt de volgende bronnen gebruiken om succesgegevens van klanten aan Experience Platform toe te voegen.
 
-- [[!DNL Salesforce Service Cloud]](connectors/customer-success/salesforce-service-cloud.md) [!BADGE &#x200B; Partij &#x200B;]{type=Informative}
-- [[!DNL ServiceNow]](connectors/customer-success/servicenow.md) [!BADGE &#x200B; Partij &#x200B;]{type=Informative}
-- [[!DNL Zendesk]](connectors/customer-success/zendesk.md) [!BADGE &#x200B; Partij &#x200B;]{type=Informative}
+| Source | Type ontsteking | Wolk |
+| --- | --- | --- |
+| [[!DNL Salesforce Service Cloud]](connectors/customer-success/salesforce-service-cloud.md) | Batch | Azure |
+| [[!DNL ServiceNow]](connectors/customer-success/servicenow.md) | Batch | Azure |
+| [[!DNL Zendesk]](connectors/customer-success/zendesk.md) | Batch | Azure |
+
+{style="table-layout:auto"}
 
 ### Database {#database}
 
 Experience Platform biedt ondersteuning voor het opnemen van gegevens uit een database van derden. Zie de volgende verwante documenten voor meer informatie over specifieke bronschakelaars:
 
-- [[!DNL Apache Hive on Azure HDInsights]](connectors/databases/hive.md) [!BADGE &#x200B; Partij &#x200B;]{type=Informative}
-- [[!DNL Apache Spark on Azure HDInsights]](connectors/databases/spark.md) [!BADGE &#x200B; Partij &#x200B;]{type=Informative}
-- [[!DNL Azure Data Explorer]](connectors/databases/data-explorer.md) [!BADGE &#x200B; Partij &#x200B;]{type=Informative}
-- [[!DNL Azure Table Storage]](connectors/databases/ats.md) [!BADGE &#x200B; Partij &#x200B;]{type=Informative}
-- [[!DNL GreenPlum]](connectors/databases/greenplum.md) [!BADGE &#x200B; Partij &#x200B;]{type=Informative}
-- [[!DNL HP Vertica]](connectors/databases/hp-vertica.md) [!BADGE &#x200B; Partij &#x200B;]{type=Informative}
-- [[!DNL IBM DB2]](connectors/databases/ibm-db2.md) [!BADGE &#x200B; Partij &#x200B;]{type=Informative}
-- [[!DNL MariaDB]](connectors/databases/mariadb.md) [!BADGE &#x200B; Partij &#x200B;]{type=Informative}
-- [[!DNL Microsoft SQL Server]](connectors/databases/sql-server.md) [!BADGE &#x200B; Partij &#x200B;]{type=Informative}
-- [[!DNL MySQL]](connectors/databases/mysql.md) [!BADGE &#x200B; Partij &#x200B;]{type=Informative}
-- [[!DNL Oracle]](connectors/databases/oracle.md) [!BADGE &#x200B; Partij &#x200B;]{type=Informative}
-- [[!DNL PostgreSQL]](connectors/databases/postgres.md) [!BADGE &#x200B; Partij &#x200B;]{type=Informative}
-- [[!DNL Teradata Vantage]](connectors/databases/teradata-vantage.md) [!BADGE &#x200B; Partij &#x200B;]{type=Informative}
+U kunt de volgende bronnen gebruiken om gegevens van uw database in te voeren naar Experience Platform.
+
+| Source | Type ontsteking | Wolk |
+| --- | --- | --- |
+| [[!DNL Apache Hive on Azure HDInsights]](connectors/databases/hive.md) | Batch | Azure |
+| [[!DNL Apache Spark on Azure HDInsights]](connectors/databases/spark.md) | Batch | Azure |
+| [[!DNL Azure Data Explorer]](connectors/databases/data-explorer.md) | Batch | Azure |
+| [[!DNL Azure Table Storage]](connectors/databases/ats.md) | Batch | Azure |
+| [[!DNL GreenPlum]](connectors/databases/greenplum.md) | Batch | Azure |
+| [[!DNL HP Vertica]](connectors/databases/hp-vertica.md) | Batch | Azure |
+| [[!DNL IBM DB2]](connectors/databases/ibm-db2.md) | Batch | Azure |
+| [[!DNL MariaDB]](connectors/databases/mariadb.md) | Batch | Azure |
+| [[!DNL Microsoft SQL Server]](connectors/databases/sql-server.md) | Batch | Azure |
+| [[!DNL MySQL]](connectors/databases/mysql.md) | Batch | Azure, AWS |
+| [[!DNL Oracle]](connectors/databases/oracle.md) | Batch | Azure |
+| [[!DNL PostgreSQL]](connectors/databases/postgres.md) | Batch | Azure, AWS |
+| [[!DNL Teradata Vantage]](connectors/databases/teradata-vantage.md) | Batch | Azure |
+
+{style="table-layout:auto"}
 
 ### Gegevens- en identiteitspartners {#data-partner}
 
-Experience Platform biedt ondersteuning voor het opnemen van gegevens van een data- en identiteitspartner. Zie de volgende verwante documenten voor meer informatie over specifieke bronschakelaars:
+U kunt de volgende bronnen gebruiken om gegevens en identiteitspartnergegevens in te voeren aan Experience Platform.
 
-- [[!DNL Acxiom Data Ingestion]](connectors/data-partners/acxiom-data-ingestion.md) [!BADGE &#x200B; Partij &#x200B;]{type=Informative}
-- [[!DNL Acxiom Prospecting Data Import]](connectors/data-partners/acxiom-prospecting-data-import.md) [!BADGE &#x200B; Partij &#x200B;]{type=Informative}
-- [[!DNL Algolia User Profiles]](connectors/data-partners/algolia-user-profiles.md) [!BADGE &#x200B; Partij &#x200B;]{type=Informative}
-- [[!DNL Bombora Intent]](connectors/data-partners/bombora.md) [!BADGE &#x200B; Partij &#x200B;]{type=Informative}
-- [[!DNL Demandbase Intent]](connectors/data-partners/demandbase.md) [!BADGE &#x200B; Partij &#x200B;]{type=Informative}
-- [[!DNL Merkury Enterprise Identity Resolution]](connectors/data-partners/merkury.md) [!BADGE &#x200B; Partij &#x200B;]{type=Informative}
+| Source | Type ontsteking | Wolk |
+| --- | --- | --- |
+| [[!DNL Acxiom Data Ingestion]](connectors/data-partners/acxiom-data-ingestion.md) | Batch | Azure |
+| [[!DNL Acxiom Prospecting Data Import]](connectors/data-partners/acxiom-prospecting-data-import.md) | Batch | Azure |
+| [[!DNL Algolia User Profiles]](connectors/data-partners/algolia-user-profiles.md) | Batch | Azure |
+| [[!DNL Bombora Intent]](connectors/data-partners/bombora.md) | Batch | Azure |
+| [[!DNL Demandbase Intent]](connectors/data-partners/demandbase.md) | Batch | Azure |
+| [[!DNL Merkury Enterprise Identity Resolution]](connectors/data-partners/merkury.md) | Batch | Azure |
 
-### eCommerce {#ecommerce}
+{style="table-layout:auto"}
 
-Experience Platform biedt ondersteuning voor het opnemen van gegevens van een eCommerce-systeem van derden. Zie de volgende verwante documenten voor meer informatie over specifieke bronschakelaars:
+### e-handel {#ecommerce}
 
-- [[!DNL SAP Commerce]](connectors/ecommerce/sap-commerce.md) [!BADGE &#x200B; Partij &#x200B;]{type=Informative}
-- [[!DNL Shopify]](connectors/ecommerce/shopify.md) [!BADGE &#x200B; Partij &#x200B;]{type=Informative}
-- [[!DNL Shopify]](connectors/ecommerce/shopify-streaming.md) [!BADGE &#x200B; Streaming &#x200B;]{type=Positive}
+U kunt de volgende bronnen gebruiken om e-commercegegevens in te voeren naar Experience Platform.
+
+| Source | Type ontsteking | Wolk |
+| --- | --- | --- |
+| [[!DNL SAP Commerce]](connectors/ecommerce/sap-commerce.md) | Batch | Azure |
+| [[!DNL Shopify]](connectors/ecommerce/shopify.md) | Batch | Azure |
+| [[!DNL Shopify]](connectors/ecommerce/shopify-streaming.md) | Streaming | Azure |
+
+{style="table-layout:auto"}
 
 ### Lokaal systeem {#local-system}
 
-Experience Platform biedt ondersteuning voor het opnemen van gegevens van uw lokale systeem. Zie de volgende verwante documenten voor meer informatie over specifieke bronschakelaars:
+U kunt de volgende bronnen gebruiken om gegevens van uw lokale systeem aan Experience Platform in te voeren.
 
-- [Lokale bestanden uploaden](connectors/local-system/local-file-upload.md)
+| Source | Type ontsteking | Wolk |
+| --- | --- | --- |
+| [ Lokale dossier uploadt ](connectors/local-system/local-file-upload.md) | Batch | Azure |
+
+{style="table-layout:auto"}
 
 ### Marketing Automation {#marketing-automation}
 
-Experience Platform biedt ondersteuning voor het opnemen van gegevens van een derde marketingautomatiseringssysteem. Zie de volgende verwante documenten voor meer informatie over specifieke bronschakelaars:
+U kunt de volgende bronnen gebruiken om gegevens over marketingautomatisering in te voeren naar Experience Platform.
 
-- [[!DNL Braze]](connectors/marketing-automation/braze.md) [!BADGE &#x200B; Streaming &#x200B;]{type=Positive}
-- [[!DNL Chatlio]](connectors/marketing-automation/chatlio-webhook.md) [!BADGE &#x200B; Streaming &#x200B;]{type=Positive}
-- [[!DNL Customer.io]](connectors/marketing-automation/customerio-webhook.md) [!BADGE &#x200B; Streaming &#x200B;]{type=Positive}
-- [[!DNL HubSpot]](connectors/marketing-automation/hubspot.md) [!BADGE &#x200B; Partij &#x200B;]{type=Informative}
-- [[!DNL Mailchimp]](connectors/marketing-automation/mailchimp.md) [!BADGE &#x200B; Partij &#x200B;]{type=Informative}
-- [[!DNL Oracle Eloqua]](connectors/marketing-automation/oracle-eloqua.md) [!BADGE &#x200B; Partij &#x200B;]{type=Informative}
-- [[!DNL Oracle NetSuite]](connectors/marketing-automation/oracle-netsuite.md) [!BADGE &#x200B; Partij &#x200B;]{type=Informative}
-- [[!DNL PathFactory]](connectors/marketing-automation/pathfactory.md) [!BADGE &#x200B; Partij &#x200B;]{type=Informative}
-- [[!DNL Salesforce Marketing Cloud]](connectors/marketing-automation/salesforce-marketing-cloud.md) [!BADGE &#x200B; Partij &#x200B;]{type=Informative}
+| Source | Type ontsteking | Wolk |
+| --- | --- | --- |
+| [[!DNL Braze]](connectors/marketing-automation/braze.md) | Streaming | Azure |
+| [[!DNL Chatlio]](connectors/marketing-automation/chatlio-webhook.md) | Streaming | Azure |
+| [[!DNL Customer.io]](connectors/marketing-automation/customerio-webhook.md) | Streaming | Azure |
+| [[!DNL HubSpot]](connectors/marketing-automation/hubspot.md) | Batch | Azure |
+| [[!DNL Mailchimp]](connectors/marketing-automation/mailchimp.md) | Batch | Azure |
+| [[!DNL Oracle Eloqua]](connectors/marketing-automation/oracle-eloqua.md) | Batch | Azure |
+| [[!DNL Oracle NetSuite]](connectors/marketing-automation/oracle-netsuite.md) | Batch | Azure |
+| [[!DNL PathFactory]](connectors/marketing-automation/pathfactory.md) | Batch | Azure |
+| [[!DNL Salesforce Marketing Cloud]](connectors/marketing-automation/salesforce-marketing-cloud.md) | Batch | Azure, AWS |
+
+{style="table-layout:auto"}
 
 ### Betalingen {#payments}
 
-Experience Platform biedt ondersteuning voor het opnemen van gegevens uit een betalingssysteem van derden. Zie de volgende verwante documenten voor meer informatie over specifieke bronschakelaars:
+U kunt de volgende bronnen gebruiken om betalingsgegevens in te voeren naar Experience Platform.
 
-- [[!DNL Square]](connectors/payments/square.md) [!BADGE &#x200B; Partij &#x200B;]{type=Informative}
-- [[!DNL Stripe]](connectors/payments/stripe.md) [!BADGE &#x200B; Partij &#x200B;]{type=Informative}
+| Source | Type ontsteking | Wolk |
+| --- | --- | --- |
+| [[!DNL Square]](connectors/payments/square.md) | Batch | Azure |
+| [[!DNL Stripe]](connectors/payments/stripe.md) | Batch | Azure |
+
+{style="table-layout:auto"}
 
 ### Streaming {#streaming}
 
-Experience Platform biedt ondersteuning voor het opnemen van gegevens uit streamingbronnen. Zie de volgende verwante documenten voor meer informatie over specifieke bronschakelaars:
+U kunt de volgende bronnen gebruiken om gegevens te streamen naar Experience Platform.
 
-- [[!DNL HTTP API]](connectors/streaming/http.md) [!BADGE &#x200B; Streaming &#x200B;]{type=Positive}
+| Source | Type ontsteking | Ondersteuning voor cloud |
+| --- | --- | --- |
+| [[!DNL HTTP API]](connectors/streaming/http.md) | Streaming | Azure, AWS |
+
+{style="table-layout:auto"}
 
 ### Protocollen {#protocols}
 
-Experience Platform verleent steun voor het opnemen van gegevens van een systeem van derdeprotocollen. Zie de volgende verwante documenten voor meer informatie over specifieke bronschakelaars:
+U kunt de volgende bronnen gebruiken om protocolgegevens in te voeren naar Experience Platform.
 
-- [[!DNL Generic OData]](connectors/protocols/odata.md) [!BADGE &#x200B; Partij &#x200B;]{type=Informative}
-- [[!DNL Generic REST API]](connectors/protocols/generic-rest.md) [!BADGE &#x200B; Partij &#x200B;]{type=Informative}
+| Source | Type ontsteking | Ondersteuning voor cloud |
+| --- | --- | --- |
+| [[!DNL Generic OData]](connectors/protocols/odata.md) | Batch | Azure |
+| [[!DNL Generic REST API]](connectors/protocols/generic-rest.md) | Batch | Azure |
+
+{style="table-layout:auto"}
 
 ## Toegangsbeheer voor bronnen bij gegevensinvoer
 
-Machtigingen voor bronnen in gegevensinvoer kunnen binnen de Adobe Admin Console worden beheerd. U hebt toegang tot machtigingen via het tabblad **[!UICONTROL Permissions]** in een bepaald productprofiel. Via het menu-item **[!UICONTROL data ingestion]** hebt u via het deelvenster **[!UICONTROL Edit Permissions]** toegang tot de machtigingen voor bronnen. De machtiging **[!UICONTROL View Sources]** verleent alleen-lezen toegang tot beschikbare bronnen op het tabblad **[!UICONTROL Catalog]** en voor authentiek verklaarde bronnen op het tabblad **[!UICONTROL Browse]** , terwijl met de machtiging **[!UICONTROL Manage Sources]** volledige toegang wordt verleend tot het lezen, maken, bewerken en uitschakelen van bronnen.
+Machtigingen voor bronnen in gegevensinvoer kunnen binnen de Adobe Admin Console worden beheerd. U hebt toegang tot machtigingen via het tabblad **[!UICONTROL Permissions]** in een bepaald productprofiel. Via het menu-item **[!UICONTROL Edit Permissions]** hebt u via het deelvenster **[!UICONTROL data ingestion]** toegang tot de machtigingen voor bronnen. De machtiging **[!UICONTROL View Sources]** verleent alleen-lezen toegang tot beschikbare bronnen op het tabblad **[!UICONTROL Catalog]** en voor authentiek verklaarde bronnen op het tabblad **[!UICONTROL Browse]** , terwijl met de machtiging **[!UICONTROL Manage Sources]** volledige toegang wordt verleend tot het lezen, maken, bewerken en uitschakelen van bronnen.
 
 De volgende lijst schetst hoe UI zich gedraagt gebaseerd op verschillende combinaties van deze toestemmingen:
 
