@@ -289,7 +289,7 @@ Voor meer informatie over backfill, levende gegevens, en hun respectieve latenti
 
 >[!NOTE]
 >
->U kunt een gegevensstroom voor Analytics niet uitschakelen. Om de stroom van de gegevens van Analytics tegen te houden, moet u **** volledig schrappen dataflow.
+>U kunt een gegevensstroom voor Analytics niet uitschakelen. Om de stroom van de gegevens van Analytics tegen te houden, moet u **&#x200B;**&#x200B;volledig schrappen dataflow.
 
 Als u de gegevensstroom Analytics wilt verwijderen, selecteert u **[!UICONTROL Dataflows]** in de bovenste koptekst van de werkruimte Bronnen. Gebruik de dataflows pagina om van de dataflow van Analytics de plaats te bepalen die u wilt schrappen en dan de ellipsen (`...`) naast het selecteren. Gebruik vervolgens het vervolgkeuzemenu en selecteer **[!UICONTROL Delete]** .
 
