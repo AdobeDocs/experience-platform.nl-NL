@@ -3,13 +3,13 @@ title: API-eindpunt voor extern publiek
 description: Leer hoe u de API voor extern publiek kunt gebruiken om uw externe publiek te maken, bij te werken, te activeren en te verwijderen uit Adobe Experience Platform.
 hide: true
 hidefromtoc: true
-source-git-commit: 74fa66e78ac36c8007eb89e8c271d989845c96f0
+exl-id: eaa83933-d301-48cb-8a4d-dfeba059bae1
+source-git-commit: 3acadf73b5c82d6f5f0f1eaec41387bec897558d
 workflow-type: tm+mt
-source-wordcount: '2312'
+source-wordcount: '2405'
 ht-degree: 1%
 
 ---
-
 
 # Eindpunt voor extern publiek
 
@@ -98,7 +98,7 @@ curl -X POST https://platform.adobe.io/data/core/ais/external-audience/ \
 | `description` | String | Een optionele beschrijving voor het externe publiek. |
 | `customAudienceId` | String | Een optionele id voor uw externe publiek. |
 | `fields` | Array van objecten | De lijst met velden en hun gegevenstypen. Wanneer u de lijst met velden maakt, kunt u de volgende items toevoegen: <ul><li>`name`: **Vereiste** de naam van het gebied dat deel van de externe publieksspecificatie uitmaakt.</li><li>`type`: **Vereiste** het type van gegevens dat in het gebied gaat. Tot de ondersteunde waarden behoren `string`, `number`, `long`, `integer`, `date` (`2025-05-13`), `datetime` (`2025-05-23T20:19:00+00:00`) en `boolean` .</li>`identityNs`: **Vereist voor identiteitsgebied** namespace die door het identiteitsgebied wordt gebruikt. Tot de ondersteunde waarden behoren alle geldige naamruimten, zoals `ECID` of `email` .li><li>`labels`: *Facultatieve* een serie van toegangsbeheeretiketten voor het gebied. Meer informatie over de beschikbare etiketten van de toegangscontrole kan in de [ verklarende woordenlijst van de de etiketten van het gegevensgebruik ](/help/data-governance/labels/reference.md) worden gevonden. </li></ul> |
-| `sourceSpec` | Object | Een object dat de informatie bevat waar het externe publiek zich bevindt. Wanneer het gebruiken van dit voorwerp, moet u **&#x200B;**&#x200B;de volgende informatie omvatten: <ul><li>`path`: **Vereist**: De plaats van het externe publiek of de omslag die het externe publiek binnen de bron bevat.</li><li>`type`: **Vereist** het type van het voorwerp u uit de bron terugwint. Deze waarde kan `file` of `folder` zijn.</li><li>`sourceType`: *Facultatieve* het type van bron u van terugwint. Momenteel is de enige ondersteunde waarde `Cloud Storage` .</li><li>`cloudType`: *Facultatieve* het type van wolkenopslag, die van het brontype wordt gebaseerd. Tot de ondersteunde waarden behoren `S3` , `DLZ` , `GCS` en `SFTP` .</li><li>`baseConnectionId`: De id van de basisverbinding en wordt geleverd door uw bronprovider. Deze waarde wordt **vereist** als het gebruiken van een `cloudType` waarde van `S3`, `GCS`, of `SFTP`. Voor meer informatie, te lezen gelieve het [ overzicht van bronschakelaars ](../../sources/home.md) li></ul> |
+| `sourceSpec` | Object | Een object dat de informatie bevat waar het externe publiek zich bevindt. Wanneer het gebruiken van dit voorwerp, moet u **** de volgende informatie omvatten: <ul><li>`path`: **Vereist**: De plaats van het externe publiek of de omslag die het externe publiek binnen de bron bevat.</li><li>`type`: **Vereist** het type van het voorwerp u uit de bron terugwint. Deze waarde kan `file` of `folder` zijn.</li><li>`sourceType`: *Facultatieve* het type van bron u van terugwint. Momenteel is de enige ondersteunde waarde `Cloud Storage` .</li><li>`cloudType`: *Facultatieve* het type van wolkenopslag, die van het brontype wordt gebaseerd. Tot de ondersteunde waarden behoren `S3` , `DLZ` , `GCS` en `SFTP` .</li><li>`baseConnectionId`: De id van de basisverbinding en wordt geleverd door uw bronprovider. Deze waarde wordt **vereist** als het gebruiken van een `cloudType` waarde van `S3`, `GCS`, of `SFTP`. Voor meer informatie, te lezen gelieve het [ overzicht van bronschakelaars ](../../sources/home.md) li></ul> |
 | `ttlInDays` | Geheel | De gegevensvervaldatum voor het externe publiek, in dagen. Deze waarde kan van 1 tot 90 worden geplaatst. De gegevensvervaldatum wordt standaard ingesteld op 30 dagen. |
 | `audienceType` | String | Het publiekstype voor het externe publiek. Momenteel wordt alleen `people` ondersteund. |
 | `originName` | String | **Vereiste** de oorsprong van het publiek. Dit geeft aan waar het publiek vandaan komt. Gebruik `CUSTOM_UPLOAD` voor externe doelgroepen. |
@@ -370,7 +370,7 @@ Een geslaagde reactie retourneert HTTP-status 200 met details van het bijgewerkt
 
 >[!IMPORTANT]
 >
->U zult **&#x200B;**&#x200B;niet een nieuwe opname voor het externe publiek kunnen beginnen als een vorige publieksinname reeds lopend is.
+>U zult **** niet een nieuwe opname voor het externe publiek kunnen beginnen als een vorige publieksinname reeds lopend is.
 
 >[!NOTE]
 >
@@ -381,7 +381,7 @@ U kunt een publieksopname beginnen door een POST- verzoek aan het volgende eindp
 **API formaat**
 
 ```http
-POST /external-audience/{AUDIENCE_ID}/run
+POST /external-audience/{AUDIENCE_ID}/runs
 ```
 
 **Verzoek**
@@ -391,7 +391,7 @@ De volgende aanvraag activeert een opname die voor het externe publiek wordt uit
 +++ Een voorbeeldaanvraag om een opname voor het publiek te starten.
 
 ```shell
-curl -X POST https://platform.adobe.io/data/core/ais/external-audience/60ccea95-1435-4180-97a5-58af4aa285ab/run \
+curl -X POST https://platform.adobe.io/data/core/ais/external-audience/60ccea95-1435-4180-97a5-58af4aa285ab/runs \
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
  -H 'x-gw-ims-org-id: {ORG_ID}' \
  -H 'x-api-key: {API_KEY}' \
@@ -442,6 +442,10 @@ Een geslaagde reactie retourneert HTTP status 200 met details over de opname run
 +++
 
 ## Specifieke inspraakstatus van het publiek ophalen {#retrieve-ingestion-status}
+
+>[!NOTE]
+>
+>Als u het volgende eindpunt wilt gebruiken, moet u zowel de `audienceId` van uw externe publiek als de `runId` van de id van de invoeringsuitvoering hebben. U kunt `audienceId` van een succesvolle vraag aan het `GET /external-audiences/operations/{OPERATION_ID}` eindpunt en uw `runId` van een vorige succesvolle vraag van het `POST /external-audience/{AUDIENCE_ID}/runs` eindpunt krijgen.
 
 U kunt de status van een publieksinvoer terugwinnen door een GET- verzoek aan het volgende eindpunt te doen terwijl het verstrekken van zowel het publiek als looppas IDs.
 
@@ -514,9 +518,13 @@ Een succesvolle reactie keert status 200 van HTTP met details van de externe pub
 
 +++
 
-## Status van opnemen voor publiek weergeven {#list-ingestion-statuses}
+## Voer publieksinvoer weergeven {#list-ingestion-runs}
 
-U kunt alle ingangsstatussen voor het geselecteerde externe publiek terugwinnen door een GET- verzoek aan het volgende eindpunt te doen terwijl het verstrekken van publiekID. De veelvoudige parameters kunnen worden omvat, die door ampersands (`&`) worden gescheiden.
+>[!NOTE]
+>
+>Om het volgende eindpunt te gebruiken, moet u `audienceId` van uw extern publiek hebben. U kunt `audienceId` van een succesvolle vraag aan het `GET /external-audiences/operations/{OPERATION_ID}` eindpunt krijgen.
+
+U kunt alle ingestitielooppas voor het geselecteerde externe publiek terugwinnen door een verzoek van GET aan het volgende eindpunt te doen terwijl het verstrekken van publiekID. De veelvoudige parameters kunnen worden omvat, die door ampersands (`&`) worden gescheiden.
 
 **API formaat**
 
@@ -534,16 +542,16 @@ GET /external-audience/{AUDIENCE_ID}/runs?{QUERY_PARAMETERS}
 | Parameter | Beschrijving | Voorbeeld |
 | --------- | ----------- | ------- |
 | `limit` | Het maximumaantal items dat in de reactie wordt geretourneerd. Deze waarde kan variëren van 1 tot 40. Standaard is de limiet ingesteld op 20. | `limit=30` |
-| `sortBy` | De volgorde waarin de geretourneerde items worden gesorteerd. U kunt sorteren op `name` of op `ingestionTime` . Bovendien, kunt u a `-` teken aan soort toevoegen door **dalende** orde in plaats van **het stijgen** orde. De items worden standaard in aflopende volgorde gesorteerd op `ingestionTime` . | `sortBy=name` |
-| `property` | Een filter om te bepalen welke populatietests worden weergegeven. U kunt filteren op de volgende eigenschappen: <ul><li>`name`: hiermee kunt u filteren op de naam van het publiek. Als u deze eigenschap gebruikt, kunt u het vergelijken met `=` , `!=` , `=contains` of `!=contains` . </li><li>`ingestionTime`: Hiermee kunt u filteren op de tijd van inname. Als u deze eigenschap gebruikt, kunt u vergelijken met `>=` of `<=` .</li><li>`status`: Hiermee kunt u filteren op de status van de invoeringsrun. Als u deze eigenschap gebruikt, kunt u het vergelijken met `=` , `!=` , `=contains` of `!=contains` . </li></ul> | `property=ingestionTime<1683669114845`<br/>`property=name=demo_audience`<br/>`property=status=SUCCESS` |
+| `sortBy` | De volgorde waarin de geretourneerde items worden gesorteerd. U kunt sorteren op `name` of op `createdAt` . Bovendien, kunt u a `-` teken aan soort toevoegen door **dalende** orde in plaats van **het stijgen** orde. De items worden standaard in aflopende volgorde gesorteerd op `createdAt` . | `sortBy=name` |
+| `property` | Een filter om te bepalen welke populatietests worden weergegeven. U kunt filteren op de volgende eigenschappen: <ul><li>`name`: hiermee kunt u filteren op de naam van het publiek. Als u deze eigenschap gebruikt, kunt u het vergelijken met `=` , `!=` , `=contains` of `!=contains` . </li><li>`createdAt`: Hiermee kunt u filteren op de tijd van inname. Als u deze eigenschap gebruikt, kunt u vergelijken met `>=` of `<=` .</li><li>`status`: Hiermee kunt u filteren op de status van de invoeringsrun. Als u deze eigenschap gebruikt, kunt u het vergelijken met `=` , `!=` , `=contains` of `!=contains` . </li></ul> | `property=createdAt<1683669114845`<br/>`property=name=demo_audience`<br/>`property=status=SUCCESS` |
 
 +++
 
 **Verzoek**
 
-Het volgende verzoek wint alle innamestatus voor het externe publiek terug.
+Het volgende verzoek wint alle ingestitielooppas voor het externe publiek terug.
 
-+++ Een voorbeeldverzoek om een lijst met publieksinvoerstatussen op te halen.
++++ Een steekproefverzoek om een lijst van publieksinname looppas te krijgen.
 
 ```shell
 curl -X GET https://platform.adobe.io/data/core/ais/external-audience/60ccea95-1435-4180-97a5-58af4aa285ab/runs \
@@ -557,9 +565,9 @@ curl -X GET https://platform.adobe.io/data/core/ais/external-audience/60ccea95-1
 
 **Reactie**
 
-Een geslaagde reactie retourneert HTTP-status 200 met een lijst van innamestatus voor het opgegeven externe publiek.
+Een succesvolle reactie keert status 200 van HTTP met een lijst van ingestitielooppas voor het gespecificeerde externe publiek terug.
 
-+++ Een voorbeeldreactie wanneer u een lijst van de status van de publieksinname terugwint.
++++ Een voorbeeldreactie wanneer u een lijst van de publieksinname terugwint looppas.
 
 ```json
 {
@@ -573,19 +581,7 @@ Een geslaagde reactie retourneert HTTP-status 200 met een lijst van innamestatus
             "dataFilterStartTime": 764245635,
             "dataFilterEndTime": 3456788568,
             "createdAt": 1785678909,
-            "createdBy": "{USER_NAME}",
-            "details": [
-                {
-                    "stage": "DATASET_INGEST",
-                    "status": "SUCCESS",
-                    "flowRunId": "{FLOW_RUN_ID}"
-                },
-                {
-                    "stage": "PROFILE_STORE_INGEST",
-                    "status": "SUCCESS",
-                    "flowRunId": "{FLOW_RUN_ID}"
-                }
-            ]
+            "createdBy": "{USER_NAME}"
         },
         {
             "audienceName": "Sample external audience 2",
@@ -596,19 +592,7 @@ Een geslaagde reactie retourneert HTTP-status 200 met een lijst van innamestatus
             "dataFilterStartTime": 764245635,
             "dataFilterEndTime": 3456788568,
             "createdAt": 1749324248,
-            "createdBy": "{USER_ID}",
-            "details": [
-                {
-                    "stage": "DATASET_INGEST",
-                    "status": "SUCCESS",
-                    "flowRunId": "{FLOW_RUN_ID}"
-                },
-                {
-                    "stage": "PROFILE_STORE_INGEST",
-                    "status": "SUCCESS",
-                    "flowRunId": "{FLOW_RUN_ID}"
-                }
-            ]
+            "createdBy": "{USER_ID}"
         }
     ],
     "_page": {
@@ -627,6 +611,10 @@ Een geslaagde reactie retourneert HTTP-status 200 met een lijst van innamestatus
 +++
 
 ## Een extern publiek verwijderen {#delete-audience}
+
+>[!NOTE]
+>
+>Om het volgende eindpunt te gebruiken, moet u `audienceId` van uw extern publiek hebben. U kunt `audienceId` van een succesvolle vraag aan het `GET /external-audiences/operations/{OPERATION_ID}` eindpunt krijgen.
 
 U kunt een extern publiek schrappen door een verzoek van DELETE aan het volgende eindpunt te doen terwijl het verstrekken van publiekID.
 
