@@ -3,9 +3,9 @@ title: Soorten publiek activeren om exportdoelen voor batchprofielen te gebruike
 type: Tutorial
 description: Leer hoe u het publiek in Adobe Experience Platform activeert door het naar batchbestemmingen te sturen.
 exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
-source-git-commit: 00cec76319c1209e4527e31fad36992b7e778367
+source-git-commit: ec0a51bc8a6151a6d713d8f4639d6733989bbb16
 workflow-type: tm+mt
-source-wordcount: '4472'
+source-wordcount: '4506'
 ht-degree: 1%
 
 ---
@@ -120,7 +120,7 @@ Als u meerdere schema&#39;s tegelijk wilt bewerken, selecteert u het publiek met
 >id="platform_destinations_activate_exportoptions"
 >title="Exportopties voor bestanden"
 >abstract="Selecteer **de Uitvoer volledige dossiers** om een volledige momentopname van alle profielen uit te voeren die voor het publiek kwalificeren. Selecteer **de Incrementele dossiers van de Uitvoer** om slechts de profielen uit te voeren die voor het publiek sinds de laatste uitvoer kwalificeerden. <br> De eerste incrementele bestandsuitvoer bevat alle profielen die in aanmerking komen voor het publiek en die fungeren als backfill. Toekomstige incrementele bestanden bevatten alleen de profielen die voor het publiek in aanmerking zijn gekomen sinds de eerste incrementele bestandsexport."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations.html?lang=nl-NL#export-incremental-files" text="Incrementele bestanden exporteren"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations.html#export-incremental-files" text="Incrementele bestanden exporteren"
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activationchaining_aftersegmentevaluation"
@@ -284,6 +284,10 @@ In deze stap moet u de profielkenmerken selecteren die u wilt toevoegen aan de b
 
 
 1. Het veld dat u hebt geselecteerd voor export, wordt nu weergegeven in de toewijzingsweergave. Desgewenst kunt u de naam van de koptekst in het geëxporteerde bestand bewerken. Selecteer hiertoe het pictogram in het doelveld.
+
+   >[!NOTE]
+   >
+   >Stippen (`.`) worden niet ondersteund in veldnamen in geëxporteerde bestanden. Als een veldnaam stippen bevat (zoals `person.name.firstName` ), wordt elke stip vervangen door een onderstrepingsteken (`_` ) in de geëxporteerde kolomnaam. `person.name.firstName` wordt bijvoorbeeld `person_name_firstName` in het geëxporteerde bestand.
 
    ![ Modal venster dat profielattributen toont die naar de bestemming kunnen worden uitgevoerd.](../assets/ui/activate-batch-profile-destinations/mapping-step-select-target-field.png)
 
@@ -462,7 +466,7 @@ Adobe raadt u aan een naamruimte voor identiteiten, zoals een [!DNL CRM ID] - of
 
 ### Gedrag van deduplicatie voor profielen met dezelfde tijdstempel {#deduplication-same-timestamp}
 
-Wanneer u profielen exporteert naar bestandsgebaseerde bestemmingen en meerdere profielen dezelfde deduplicatiesleutel en dezelfde referentietijdstempel hebben, zorgt deduplicatie ervoor dat er slechts één profiel wordt geëxporteerd. Deze tijdstempel geeft aan op welk moment het publiekslidmaatschap of de identiteitsgrafiek van een profiel voor het laatst is bijgewerkt. Voor meer informatie over hoe de profielen worden bijgewerkt en worden uitgevoerd, zie het [ document van de profieluitvoer ](https://experienceleague.adobe.com/nl/docs/experience-platform/destinations/how-destinations-work/profile-export-behavior#what-determines-a-data-export-and-what-is-included-in-the-export-2).
+Wanneer u profielen exporteert naar bestandsgebaseerde bestemmingen en meerdere profielen dezelfde deduplicatiesleutel en dezelfde referentietijdstempel hebben, zorgt deduplicatie ervoor dat er slechts één profiel wordt geëxporteerd. Deze tijdstempel geeft aan op welk moment het publiekslidmaatschap of de identiteitsgrafiek van een profiel voor het laatst is bijgewerkt. Voor meer informatie over hoe de profielen worden bijgewerkt en worden uitgevoerd, zie het [ document van de profieluitvoer ](https://experienceleague.adobe.com/en/docs/experience-platform/destinations/how-destinations-work/profile-export-behavior#what-determines-a-data-export-and-what-is-included-in-the-export-2).
 
 #### Belangrijkste overwegingen
 
@@ -474,9 +478,9 @@ Bekijk de volgende gegevens, waarbij de deduplicatietoets de `Email` -kolom is:
 
 | E-mail* | first_name | last_name | tijdstempel |
 |---|---|---|---|  
-| `test1@test.com` | John | Morris | 2024-10-12T09:50 |
-| `test1@test.com` | John | Doe | 2024-10-12T09:50 |
-| `test2@test.com` | Frank | Smith | 2024-10-12T09:50 |
+| `test1@test.com` | John | Morris | 2024-10-12T09 :50 |
+| `test1@test.com` | John | Doe | 2024-10-12T09 :50 |
+| `test2@test.com` | Frank | Smith | 2024-10-12T09 :50 |
 
 {style="table-layout:auto"}
 
@@ -484,8 +488,8 @@ Na deduplicatie bevat het exportbestand:
 
 | E-mail* | first_name | last_name | tijdstempel |
 |---|---|---|---|  
-| `test1@test.com` | John | Doe | 2024-10-12T09:50 |
-| `test2@test.com` | Frank | Smith | 2024-10-12T09:50 |
+| `test1@test.com` | John | Doe | 2024-10-12T09 :50 |
+| `test2@test.com` | Frank | Smith | 2024-10-12T09 :50 |
 
 {style="table-layout:auto"}
 
@@ -603,7 +607,7 @@ Als u een extern publiek naar uw doelen wilt activeren zonder kenmerken te expor
 
 {het beeld van 0} UI die de knoop toont van de attributen van de exclusief verrijking.![](../assets/ui/activate-batch-profile-destinations/exclude-enrichment-attributes.png)
 
-Selecteer **[!UICONTROL Next]** om aan de [ 2&rbrace; stap van het Overzicht &lbrace;te bewegen.](#review)
+Selecteer **[!UICONTROL Next]** om aan de [ 2} stap van het Overzicht {te bewegen.](#review)
 
 ## Controleren {#review}
 
