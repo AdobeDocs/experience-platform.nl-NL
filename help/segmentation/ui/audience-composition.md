@@ -3,9 +3,9 @@ solution: Experience Platform
 title: UI-gids voor soorten publiek
 description: De Samenstelling van het publiek in Adobe Experience Platform UI verstrekt een rijke werkruimte die u toestaat om met de gegevenselementen van het Profiel in wisselwerking te staan. De werkruimte biedt intuïtieve besturingselementen voor het maken en bewerken van soorten publiek voor uw organisatie.
 exl-id: 0dda0cb1-49e0-478b-8004-84572b6cf625
-source-git-commit: f6d700087241fb3a467934ae8e64d04f5c1d98fa
+source-git-commit: 65a3b5b904a9dfc6a2fbc09ab869e5642e088363
 workflow-type: tm+mt
-source-wordcount: '2242'
+source-wordcount: '2258'
 ht-degree: 0%
 
 ---
@@ -38,7 +38,7 @@ De pop-up **[!UICONTROL Composition properties]** wordt weergegeven. U kunt hier
 
 >[!NOTE]
 >
->Als u **niet** uw samenstelling een titel geeft, zal het een titel van &quot;Samenstelling&quot;hebben die door de aanmaakdatum en de tijd door gebrek wordt gevolgd. Bovendien, moet elke samenstelling **&#x200B;**&#x200B;zijn eigen unieke naam hebben.
+>Als u **niet** uw samenstelling een titel geeft, zal het een titel van &quot;Samenstelling&quot;hebben die door de aanmaakdatum en de tijd door gebrek wordt gevolgd. Bovendien, moet elke samenstelling **** zijn eigen unieke naam hebben.
 
 Nadat u de details van uw compositie hebt bijgewerkt, selecteert u **[!UICONTROL Save]** om deze updates te bevestigen. Het canvas van de publiekscompositie verschijnt opnieuw.
 
@@ -164,7 +164,7 @@ Er wordt een lijst met profielkenmerken weergegeven. Selecteer het kenmerktype d
 
 >[!IMPORTANT]
 >
->Wanneer exclusief door attribuut, kunt u **slechts één** waarde specificeren om uit te sluiten. Als u een scheidingsteken gebruikt, zoals een komma of puntkomma, wordt die exacte waarde alleen uitgesloten. Bijvoorbeeld, zal het plaatsen van de waarde als `red, blue` in het uitsluiten van de termijn `red, blue` van de attributen resulteren, maar zal **&#x200B;**&#x200B;niet in het uitsluiten van of de termijn `red` of `blue` resulteren.
+>Wanneer exclusief door attribuut, kunt u **slechts één** waarde specificeren om uit te sluiten. Als u een scheidingsteken gebruikt, zoals een komma of puntkomma, wordt die exacte waarde alleen uitgesloten. Bijvoorbeeld, zal het plaatsen van de waarde als `red, blue` in het uitsluiten van de termijn `red, blue` van de attributen resulteren, maar zal **** niet in het uitsluiten van of de termijn `red` of `blue` resulteren.
 
 ## [!UICONTROL Enrich] {#enrich-block}
 
@@ -310,6 +310,10 @@ Bovendien kunt u het aantal geretourneerde profielen beperken door de schakelopt
 >id="platform_segmentation_ao_split_otherprofiles_text"
 >title="Andere profielen"
 >abstract="Met de schakeloptie Andere profielen kunt u een extra pad maken met de resterende profielen die niet overeenkomen met de opgegeven voorwaarden van de andere paden."
+
+>[!NOTE]
+>
+>Om het **[!UICONTROL Split]** blok te gebruiken, moet u **** minstens 10 profielen in uw publiek hebben.
 
 Met het bloktype **[!UICONTROL Split]** kunt u uw nieuwe publiek opsplitsen in verschillende deelsoorten. U kunt dit publiek splitsen op basis van een percentage of op basis van een kenmerk.
 
