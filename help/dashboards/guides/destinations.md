@@ -33,7 +33,7 @@ De datum en tijd van de meest recente momentopname worden getoond bij de bovenka
 
 >[!NOTE]
 >
->Als uw organisatie nieuw is voor Experience Platform en nog geen actieve doelen heeft, zijn het dashboard Doelen en het tabblad [!UICONTROL Overview] niet zichtbaar. Als u in plaats daarvan [!UICONTROL Destinations] selecteert in de linkernavigatie, wordt het tabblad [!UICONTROL Catalog] weergegeven. Raadpleeg de [[!UICONTROL Destinations] handleiding voor de werkruimte ](../../destinations/ui/destinations-workspace.md) voor meer informatie over de tab [!UICONTROL Catalog] .
+>Als uw organisatie nieuw is voor Experience Platform en nog geen actieve doelen heeft, zijn het dashboard Doelen en het tabblad [!UICONTROL Overview] niet zichtbaar. Als u in plaats daarvan [!UICONTROL Destinations] selecteert in de linkernavigatie, wordt het tabblad [!UICONTROL Catalog] weergegeven. Raadpleeg de [!UICONTROL Catalog] handleiding voor de werkruimte [[!UICONTROL Destinations] voor meer informatie over de tab ](../../destinations/ui/destinations-workspace.md) .
 
 ![ het Overzicht van Doelen UI van Experience Platform met de meest recente benadrukte momentopname.](../images/destinations/snapshot-timestamp.png)
 
@@ -66,7 +66,7 @@ Voor alle nieuwe Adobe Experience Platform-instanties wordt een standaardwidgetb
 >[!NOTE]
 >
 >Vanaf 26 juli 2023 zijn [!UICONTROL Profiles] , [!UICONTROL Audiences] en [!UICONTROL Destinations] overzichtsdashboards opnieuw ingesteld op een nieuwe standaardwidgetbelasting voor alle gebruikers die hun weergaven in de afgelopen zes maanden niet hebben gewijzigd.
->Verwijs naar de documentatie in de [ Profielen ](./profiles.md#default-widgets) en [ de 3&rbrace; standaardwidgetsecties van het publiek &lbrace;voor details waarop widgets als deel van standaard widget lading-outs inbegrepen zijn. ](./audiences.md#default-widgets) U kunt uw dashboardwidgets op dezelfde manier blijven aanpassen als voorheen.
+>>Verwijs naar de documentatie in de [ Profielen ](./profiles.md#default-widgets) en [ de 3} standaardwidgetsecties van het publiek {voor details waarop widgets als deel van standaard widget lading-outs inbegrepen zijn. ](./audiences.md#default-widgets) U kunt uw dashboardwidgets op dezelfde manier blijven aanpassen als voorheen.
 
 ## Standaardwidgets {#standard-widgets}
 
@@ -105,7 +105,7 @@ Als u meer wilt weten over elk van de beschikbare standaardwidgets, selecteert u
 >[!CONTEXTUALHELP]
 >id="platform_dashboards_destinations_mostuseddestinations"
 >title="Meest gebruikte bestemmingen"
->abstract="Deze widget geeft de meest actieve doelen van uw organisatie weer op basis van het aantal toegewezen doelgroepen. Deze getallen zijn nauwkeurig op het moment van de laatste opname. Deze rangschikking biedt inzicht in welke bestemmingen momenteel het meest worden gebruikt en markeert de doelen die mogelijk onderbenut zijn."
+>abstract="Deze widget geeft de meest actieve doelen van uw organisatie weer op basis van het aantal toegewezen doelgroepen. Deze getallen zijn nauwkeurig op het moment van de laatste opname. Deze rangschikking verstrekt insight waarin de bestemmingen momenteel het meest worden gebruikt terwijl het benadrukken van die die kunnen worden onderbenut."
 
 Met de widget **[!UICONTROL Most used destinations]** worden de belangrijkste doelen van uw organisatie weergegeven op basis van het aantal toegewezen doelgroepen, vanaf de laatste momentopname. Deze rangschikking verstrekt insight waarin de bestemmingen worden gebruikt terwijl ook potentieel het tonen van die die kunnen worden onderbenut.
 
