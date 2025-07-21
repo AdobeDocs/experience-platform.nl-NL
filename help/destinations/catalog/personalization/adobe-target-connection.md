@@ -72,13 +72,13 @@ In deze sectie wordt beschreven welke soorten publiek u naar dit doel kunt expor
 >[!IMPORTANT]
 >
 >Wanneer het activeren van *randpubliek voor zelfde-pagina en volgende-pagina het gebruikscase van de verpersoonlijking*, moet het publiek ** een [ actief-op-rand fusiebeleid ](../../../segmentation/ui/segment-builder.md#merge-policies) gebruiken. Het [!DNL active-on-edge] fusiebeleid zorgt ervoor dat het publiek constant [ op de rand ](../../../segmentation/methods/edge-segmentation.md) wordt geëvalueerd en beschikbaar voor real time en volgende-pagina het gebruikscase van de verpersoonlijking is.  Lees over [ alle beschikbare gebruiksgevallen ](#parameter), die op implementatietype wordt gebaseerd.
->>Als u randpubliek toewijst dat een verschillend fusiebeleid aan de bestemmingen van Adobe Target gebruikt, zullen die publiek niet voor real time en volgende-paginagebeurtenissen worden geëvalueerd.
->>Volg de instructies op [ creërend een fusiebeleid ](../../../profile/merge-policies/ui-guide.md#create-a-merge-policy), en zorg ervoor om **[!UICONTROL Active-On-Edge Merge Policy]** knevel toe te laten.
+>&#x200B;>Als u randpubliek toewijst dat een verschillend fusiebeleid aan de bestemmingen van Adobe Target gebruikt, zullen die publiek niet voor real time en volgende-paginagebeurtenissen worden geëvalueerd.
+>&#x200B;>Volg de instructies op [ creërend een fusiebeleid ](../../../profile/merge-policies/ui-guide.md#create-a-merge-policy), en zorg ervoor om **[!UICONTROL Active-On-Edge Merge Policy]** knevel toe te laten.
 
 
 | Oorsprong publiek | Ondersteund | Beschrijving |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | ✓ | Het publiek produceerde door de Dienst van de Segmentatie van Experience Platform [ ](../../../segmentation/home.md). |
+| [!DNL Segmentation Service] | ✓ | Het publiek produceerde door de Dienst van de Segmentatie van Experience Platform [&#128279;](../../../segmentation/home.md). |
 | Aangepaste uploads | X | Het publiek [ ingevoerde ](../../../segmentation/ui/audience-portal.md#import-audience) in Experience Platform van Csv- dossiers. |
 
 {style="table-layout:auto"}
@@ -140,8 +140,8 @@ Terwijl [ vestiging ](../../ui/connect-destination.md) deze bestemming, u de vol
 >[!NOTE]
 >
 >Wanneer het gebruiken van een werkruimte van het douaneDoel voor [ zelfde-pagina en volgende-pagina verpersoonlijking met attributen ](../../ui/activate-edge-personalization-destinations.md), slechts wordt het [ geselecteerde publiek ](../../ui/activate-edge-personalization-destinations.md#select-audiences) verzonden naar de geselecteerde werkruimte van het Doel. De [ in kaart gebrachte attributen ](../../ui/activate-edge-personalization-destinations.md#mapping) worden verzonden naar de standaardwerkruimte van het Doel.
->><br>
->>Dit gedrag verandert in een toekomstige update.
+>&#x200B;><br>
+>&#x200B;>Dit gedrag verandert in een toekomstige update.
 
 ### Waarschuwingen inschakelen {#enable-alerts}
 
