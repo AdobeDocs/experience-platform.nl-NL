@@ -3,10 +3,10 @@ keywords: aangepaste personalisatie; bestemming; ervaring met aangepaste bestemm
 title: Aangepaste verpersoonlijkingsverbinding
 description: Deze bestemming verstrekt externe verpersoonlijking, inhoudsbeheersystemen, en servers, en andere toepassingen die op uw plaats lopen een manier om publieksinformatie van Adobe Experience Platform terug te winnen. Deze bestemming verstrekt verpersoonlijking in real time die op het gebruikersprofiellidmaatschap wordt gebaseerd.
 exl-id: 2382cc6d-095f-4389-8076-b890b0b900e3
-source-git-commit: 25697d341b2970eeb20d9f2507ee701ade8046d3
+source-git-commit: c037e75da7fa419051a7e38b365a5b6b3a1fc346
 workflow-type: tm+mt
-source-wordcount: '926'
-ht-degree: 0%
+source-wordcount: '923'
+ht-degree: 1%
 
 ---
 
@@ -51,7 +51,7 @@ In deze sectie wordt beschreven welke soorten publiek u naar dit doel kunt expor
 
 | Oorsprong publiek | Ondersteund | Beschrijving |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | ✓ | Het publiek produceerde door de Dienst van de Segmentatie van Experience Platform [&#128279;](../../../segmentation/home.md). |
+| [!DNL Segmentation Service] | ✓ | Het publiek produceerde door de Dienst van de Segmentatie van Experience Platform [ ](../../../segmentation/home.md). |
 | Aangepaste uploads | ✓ | Het publiek [ ingevoerde ](../../../segmentation/ui/audience-portal.md#import-audience) in Experience Platform van Csv- dossiers. |
 
 {style="table-layout:auto"}
@@ -67,9 +67,9 @@ In deze sectie wordt beschreven welke soorten publiek u naar dit doel kunt expor
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_custom_personalization_datastream"
->title="Informatie over gegevensstroom-id&#39;s"
+>title="Gegevensstromen"
 >abstract="Met deze optie bepaalt u in welke gegevensverzamelingsgegevensstroom het publiek wordt opgenomen in het antwoord op de pagina. Het drop-down menu toont slechts gegevensstromen die de toegelaten bestemmingsconfiguratie hebben. U moet een gegevensstroom vormen alvorens u uw bestemming kunt vormen."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/datastreams/configure.html?lang=nl-NL" text="Leer hoe u een gegevensstroom configureert"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/datastreams/configure.html" text="Leer hoe u een gegevensstroom configureert"
 
 >[!IMPORTANT]
 > 
@@ -84,7 +84,7 @@ Terwijl [ vestiging ](../../ui/connect-destination.md) deze bestemming, u de vol
 * **[!UICONTROL Name]**: vul de voorkeursnaam voor dit doel in.
 * **[!UICONTROL Description]**: voer een beschrijving in voor uw doel. U kunt bijvoorbeeld opgeven voor welke campagne u deze bestemming wilt gebruiken. Dit veld is optioneel.
 * **[!UICONTROL Integration alias]**: deze waarde wordt als een JSON-objectnaam verzonden naar de Experience Platform Web SDK.
-* **[!UICONTROL Datastream ID]**: hiermee bepaalt u in welke gegevensstroom voor gegevensverzameling het publiek wordt opgenomen in de reactie op de pagina. Het drop-down menu toont slechts gegevensstromen die de toegelaten bestemmingsconfiguratie hebben. Zie [ Vormend een datastream ](../../../datastreams/overview.md) voor meer details.
+* **[!UICONTROL Datastream]**: hiermee bepaalt u in welke gegevensstroom voor gegevensverzameling het publiek wordt opgenomen in de reactie op de pagina. Het drop-down menu toont slechts gegevensstromen die de toegelaten bestemmingsconfiguratie hebben. Zie [ Vormend een datastream ](../../../datastreams/overview.md) voor meer details.
 
 ### Waarschuwingen inschakelen {#enable-alerts}
 
