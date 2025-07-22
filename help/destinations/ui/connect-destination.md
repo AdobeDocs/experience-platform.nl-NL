@@ -3,9 +3,9 @@ title: Een nieuwe doelverbinding maken
 type: Tutorial
 description: Leer hoe u verbinding maakt met een doel in Adobe Experience Platform, waarschuwingen inschakelt en marketingacties instelt voor de verbonden bestemming.
 exl-id: 56d7799a-d1da-4727-ae79-fb2c775fe5a5
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 59ff77ff9f4a6fe147b5d8231fd3caa2550ae20e
 workflow-type: tm+mt
-source-wordcount: '1107'
+source-wordcount: '1138'
 ht-degree: 0%
 
 ---
@@ -41,7 +41,7 @@ Voordat u publieksgegevens naar een bestemming kunt verzenden, moet u een verbin
 
    ![ Schermafbeelding van Experience Platform UI, die de pagina van de bestemmingscatalogus met Activate benadrukt publiek toont.](../assets/ui/connect-destinations/activate-segments.png)
 
-3. Als u **[!UICONTROL Set up]** selecteerde, skip aan de volgende stap, [&#128279;](#authenticate) aan de bestemming voor authentiek verklaren.
+3. Als u **[!UICONTROL Set up]** selecteerde, skip aan de volgende stap, [ ](#authenticate) aan de bestemming voor authentiek verklaren.
 
    Als u **[!UICONTROL Activate]**, **[!UICONTROL Activate audiences]** of **[!UICONTROL Export datasets]** hebt geselecteerd, wordt nu een lijst met bestaande doelverbindingen weergegeven.
 
@@ -50,6 +50,11 @@ Voordat u publieksgegevens naar een bestemming kunt verzenden, moet u een verbin
    ![ Schermafbeelding van Experience Platform UI, die een lijst van beschikbare bestemmingen en vormt nieuwe benadrukte bestemmingscontrole toont.](../assets/ui/connect-destinations/configure-new-destination.png)
 
 ## Verifiëren voor bestemming {#authenticate}
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_account_name"
+>title="Accountnaam"
+>abstract="Voer een naam in waarmee u dit doelaccount in de toekomst gemakkelijk kunt herkennen. Dit is vooral handig als u meerdere verbindingen met hetzelfde doeltype hebt."
 
 De eerste stap in het verbinden met een bestemming moet aan het bestemmingsplatform voor authentiek verklaren.
 
