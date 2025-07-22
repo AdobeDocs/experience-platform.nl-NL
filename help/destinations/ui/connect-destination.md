@@ -41,7 +41,7 @@ Voordat u publieksgegevens naar een bestemming kunt verzenden, moet u een verbin
 
    ![ Schermafbeelding van Experience Platform UI, die de pagina van de bestemmingscatalogus met Activate benadrukt publiek toont.](../assets/ui/connect-destinations/activate-segments.png)
 
-3. Als u **[!UICONTROL Set up]** selecteerde, skip aan de volgende stap, [ ](#authenticate) aan de bestemming voor authentiek verklaren.
+3. Als u **[!UICONTROL Set up]** selecteerde, skip aan de volgende stap, [&#128279;](#authenticate) aan de bestemming voor authentiek verklaren.
 
    Als u **[!UICONTROL Activate]**, **[!UICONTROL Activate audiences]** of **[!UICONTROL Export datasets]** hebt geselecteerd, wordt nu een lijst met bestaande doelverbindingen weergegeven.
 
