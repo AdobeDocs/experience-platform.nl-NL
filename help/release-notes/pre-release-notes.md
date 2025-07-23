@@ -4,9 +4,9 @@ description: Een voorvertoning van de meest recente releaseopmerkingen voor Adob
 hide: true
 hidefromtoc: true
 exl-id: f2c41dc8-9255-4570-b459-4f9fc28ee58b
-source-git-commit: d30778ef3152b779157206ce0d416c0e61ba98c3
+source-git-commit: fddefb7de85b5dcb8c8721e14d04efc0567ccae4
 workflow-type: tm+mt
-source-wordcount: '1375'
+source-wordcount: '1352'
 ht-degree: 22%
 
 ---
@@ -21,8 +21,8 @@ ht-degree: 22%
 >
 >Raadpleeg de volgende documentatie voor aanvullende informatie voor andere Adobe Experience Platform-toepassingen:
 >
->- [Adobe Journey Optimizer](https://experienceleague.adobe.com/nl/docs/journey-optimizer/using/whats-new/release-notes)
->- [Adobe Journey Optimizer B2B](https://experienceleague.adobe.com/nl/docs/journey-optimizer-b2b/user/release-notes)
+>- [Adobe Journey Optimizer](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/whats-new/release-notes)
+>- [Adobe Journey Optimizer B2B](https://experienceleague.adobe.com/en/docs/journey-optimizer-b2b/user/release-notes)
 >- [Customer Journey Analytics](https://experienceleague.adobe.com/nl/docs/analytics-platform/using/releases/pre-release-notes)
 >- [Samenstelling van Federated-doelgroep](https://experienceleague.adobe.com/nl/docs/federated-audience-composition/using/e-release-notes)
 >- [Real-Time CDP Collaboration](https://experienceleague.adobe.com/nl/docs/real-time-cdp-collaboration/using/latest)
@@ -53,10 +53,9 @@ Nieuwe functies en updates van bestaande functies in Adobe Experience Platform:
 
 | Functie | Beschrijving |
 | --- | --- |
-| Ondersteuning voor gegevenslandingszone (DLZ)-doelcodering | Toegevoegde encryptiesteun voor de bestemming van de Gebied van Gegevens Landing. U kunt nu openbare sleutels met RSA-indeling toevoegen om versleuteling toe te voegen aan geëxporteerde bestanden, waardoor u over meer beveiliging beschikt voor het exporteren van vertrouwelijke gegevens. |
-| Verbeterde gegevensstroominformatie voor Edge-doelen | Verbeterde right-rail informatie voor de bestemmingen van Adobe Target en van de Douane Personalization toont nu zowel de naam DataStream als de gebieden van identiteitskaart DataStream, die duidelijkere zichtbaarheid in bijbehorende gegevensstroomconfiguraties verstrekken en verwarring verminderen wanneer het herzien van bestaande gegevensstromen. De **[!UICONTROL Datastream ID]** -kiezer in het doelconfiguratiescherm is bijgewerkt naar **[!UICONTROL Datastream]** voor meer duidelijkheid in de gebruikersinterface. |
-| Zichtbaarheid van marketingacties in doelselectie | Marketingacties worden nu weergegeven in de rechtertrack van de stap [!UICONTROL Select Destination] wanneer u een gegevensstroom configureert, zodat wijzigingen in marketingacties direct zichtbaar zijn zonder dat navigatie naar de weergavepagina is vereist. Deze verbetering verbetert de gebruikerservaring door het gemakkelijker te maken om marketing actieconfiguraties tijdens bestemmingsopstelling te verifiëren. |
-| Marketing-acties voor doelen bewerken | U kunt nu marketingacties voor bestaande doelen bewerken. |
+| Verbeterde gegevensstroominformatie voor Edge-doelen | De verbeterde juiste spoorinformatie voor bestemmingen Adobe Target en van de Douane Personalization toont nu de gegevensstroomnaam, die duidelijkere zichtbaarheid in bijbehorende configuraties van de gegevensstroom verstrekt en verwarring vermindert wanneer het herzien van bestaande gegevensstromen. De **[!UICONTROL Datastream ID]** -kiezer in het doelconfiguratiescherm is bijgewerkt naar **[!UICONTROL Datastream]** voor meer duidelijkheid in de gebruikersinterface. |
+| Zichtbaarheid van marketingacties in doelselectie | Marketingacties worden nu weergegeven in de rechtertrack van het doeltabblad **[!UICONTROL Browse]** en op de pagina **[!UICONTROL Dataflow runs]** , zodat wijzigingen in marketingacties direct zichtbaar zijn zonder dat navigatie naar de weergavepagina is vereist. Deze verbetering verbetert de gebruikerservaring door het gemakkelijker te maken om marketing actieconfiguraties tijdens bestemmingsopstelling te verifiëren. |
+| (Beperkte bètaversie) Marketing-acties voor doelen bewerken | U kunt nu marketingacties voor bestaande doelen bewerken. Deze functionaliteit is in beperkte bèta. Neem contact op met uw Adobe-vertegenwoordiger als u toegang tot de site wilt aanvragen. |
 | Accountnamen en beschrijvingen voor doelverbindingen | U kunt nu accountnamen en beschrijvingen toevoegen wanneer u verbinding maakt met doelen, waardoor u beter beheer van doelen met meerdere accounts kunt maken. |
 
 **Oplossingen**
