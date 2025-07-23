@@ -2,9 +2,9 @@
 title: SFTP-hosts
 description: Leer hoe u tags in Adobe Experience Platform configureert om bibliotheekbuilds te leveren aan een beveiligde, zelfgehoste SFTP-server.
 exl-id: 3c1dc43b-291c-4df4-94f7-a03b25dbb44c
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: a077d3a1b14d9b7786d3181a556c49e940a42c2f
 workflow-type: tm+mt
-source-wordcount: '861'
+source-wordcount: '796'
 ht-degree: 5%
 
 ---
@@ -37,27 +37,11 @@ De persoonlijke sleutel wordt gebruikt om de openbare sleutel te coderen. U moet
 
 ### Experience Platform IP-adressen voor Lijst van gewenste personen
 
->[!IMPORTANT]
->
-> Op 23 juni 2025 werkt Adobe Launch externe IP-adressen bij die worden gebruikt ter ondersteuning van SFTP Host Type en Callback API-functionaliteit. Om één van beiden van deze eigenschappen verder te gebruiken, zorg ervoor uw firewallregels verkeer van de nieuwe IP adressen toestaan.
->
-> Om ononderbroken toegang te handhaven, adviseren wij nu toevoegend nieuwe IPs en verwijderend oude degenen na 23 juni, 2025.
->
->**Oude IP adressen:**
-> * `184.72.239.68`
-> * `23.20.85.113`
-> * `54.226.193.184`
->
->**Nieuwe IP adressen:**
-> * `34.227.138.75 `
-> * `44.194.43.191`
-> * `3.215.163.18`
-
 Mogelijk moet u een set IP-adressen goedkeuren die binnen uw bedrijfsfirewall moet worden gebruikt, zodat Experience Platform uw SFTP-server kan bereiken en er verbinding mee kan maken. Deze IP Adressen zijn:
 
-* `184.72.239.68`
-* `23.20.85.113`
-* `54.226.193.184`
+* `34.227.138.75`
+* `44.194.43.191`
+* `3.215.163.18`
 
 >[!NOTE]
 >
@@ -71,7 +55,7 @@ Selecteer **[!UICONTROL Hosts]** in de linkernavigatie, gevolgd door **[!UICONTR
 
 ![ Beeld dat de Add knoop toont van de Gastheer die in UI wordt geselecteerd ](../../../images/ui/publishing/sftp-hosts/add-host-button.png)
 
-Het dialoogvenster voor het maken van de host wordt weergegeven. Geef een naam op voor de host en selecteer **[!UICONTROL SFTP]** onder **[!UICONTROL Type]** .
+Het dialoogvenster voor het maken van de host wordt weergegeven. Geef een naam op voor de host en selecteer **[!UICONTROL Type]** onder **[!UICONTROL SFTP]** .
 
 ![ Beeld dat SFTP toont die optie wordt geselecteerd ](../../../images/ui/publishing/sftp-hosts/select-sftp.png)
 
