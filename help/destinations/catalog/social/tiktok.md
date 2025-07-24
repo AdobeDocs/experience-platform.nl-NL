@@ -3,9 +3,9 @@ title: TikTok-verbinding
 description: Bouw een aangepast publiek op TikTok met uw gegevens voor doelgerichte advertentiecampagnes. Dit soort publiek zou kunnen bestaan uit mensen die uw website hebben bezocht of interactie hebben gehad met uw inhoud. Snel en veilig het gewenste publiek van Adobe Experience Platform naar TikTok duwen met Adobe in real-time integratie met TikTok Ads Manager.
 last-substantial-update: 2023-03-20T00:00:00Z
 exl-id: 7b12d17f-7d9a-4615-9830-92bffe3f6927
-source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
+source-git-commit: c1f54e02bbc4affb775b3dc9e95f3852dc5a8e39
 workflow-type: tm+mt
-source-wordcount: '1050'
+source-wordcount: '1111'
 ht-degree: 1%
 
 ---
@@ -40,8 +40,8 @@ TikTok ondersteunt de activering van identiteiten die in de onderstaande tabel w
 
 | Doelidentiteit | Beschrijving | Overwegingen |
 |---|---|---|
-| GAID | GOOGLE ADVERTISING ID | Selecteer de GAID doelidentiteit wanneer uw bronidentiteit een GAID-naamruimte is. |
-| IDFA | Apple-id voor adverteerders | Selecteer de IDFA doelidentiteit wanneer uw bronidentiteit een IDFA namespace is. |
+| GAID | GOOGLE ADVERTISING ID | Selecteer de GAID doelidentiteit wanneer uw bronidentiteit een GAID-naamruimte is. Zowel onbewerkte tekst als SHA256 gehashte GAID-waarden worden ondersteund door Adobe Experience Platform. Wanneer het bronveld hashingkenmerken bevat, schakelt u de optie **[!UICONTROL Apply transformation]** in om de gegevens automatisch te laten hashen bij activering door [!DNL Experience Platform] . |
+| IDFA | Apple-id voor adverteerders | Selecteer de IDFA doelidentiteit wanneer uw bronidentiteit een IDFA namespace is. Zowel onbewerkte tekst als SHA256 hashed IDFA-waarden worden ondersteund door Adobe Experience Platform. Wanneer het bronveld hashingkenmerken bevat, schakelt u de optie **[!UICONTROL Apply transformation]** in om de gegevens automatisch te laten hashen bij activering door [!DNL Experience Platform] . |
 | Telefoonnummer | Telefoonnummers die zijn hashed met het SHA256-algoritme | Onbewerkte tekst en gehashte telefoonnummers van SHA256 worden ondersteund door Adobe Experience Platform en moeten de indeling E.164 hebben. Wanneer het bronveld hashingkenmerken bevat, schakelt u de optie **[!UICONTROL Apply transformation]** in om de gegevens automatisch te laten hashen bij activering door [!DNL Experience Platform] . |
 | Email | E-mailadressen die met het algoritme SHA256 worden gehasht | Adobe Experience Platform biedt ondersteuning voor zowel platte tekst- als SHA256-e-mailadressen met hashing. Wanneer het bronveld hashingkenmerken bevat, schakelt u de optie **[!UICONTROL Apply transformation]** in om de gegevens automatisch te laten hashen bij activering door [!DNL Experience Platform] . |
 
@@ -53,7 +53,7 @@ In deze sectie wordt beschreven welke soorten publiek u naar dit doel kunt expor
 
 | Oorsprong publiek | Ondersteund | Beschrijving |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | ✓ | Het publiek produceerde door de Dienst van de Segmentatie van Experience Platform [&#128279;](../../../segmentation/home.md). |
+| [!DNL Segmentation Service] | ✓ | Het publiek produceerde door de Dienst van de Segmentatie van Experience Platform [ ](../../../segmentation/home.md). |
 | Aangepaste uploads | ✓ | Het publiek [ ingevoerde ](../../../segmentation/ui/audience-portal.md#import-audience) in Experience Platform van Csv- dossiers. |
 | [!DNL Federated Audience Composition] | ✓ | Het publiek werd ingevoerd in Experience Platform door [ Federated Samenstelling van het Publiek ](https://experienceleague.adobe.com/nl/docs/federated-audience-composition/using/start/audiences). |
 
@@ -82,7 +82,7 @@ Om met deze bestemming te verbinden, volg de stappen die in het [ leerprogramma 
 
 Als u zich wilt verifiëren bij de bestemming, wordt u omgeleid naar uw [!DNL TikTok Ads Manager] -account en geeft u Adobe toestemming om namens u het publiek te beheren.
 
-![&#128279;](/help/destinations/assets/catalog/social/tiktok/tiktok-authenticate-destination.png " Beeld van de toestemmingsselectie van TikTok van TikTok UI voor het selecteren van toestemmingen ")
+![ Beeld van de toestemmingsselectie van TikTok van TikTok UI voor het selecteren van toestemmingen ](/help/destinations/assets/catalog/social/tiktok/tiktok-authenticate-destination.png "")
 
 ### Doelgegevens invullen {#destination-details}
 
