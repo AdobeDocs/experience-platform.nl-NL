@@ -142,7 +142,7 @@ Het creëren van een publiek met B2B-entiteiten via de API wordt afgekeurd. De l
 * Marketinglijst
 * Lid van de marketinglijst
 
-Lees de [ gids van het 0} segment definities eindpunt API ](../segmentation/api/segment-definitions.md) voor meer informatie.
+Lees de [ gids van het 0&rbrace; segment definities eindpunt API ](../segmentation/api/segment-definitions.md) voor meer informatie.
 
 ### Wijzigingen in het importeren van publiek van meerdere entiteiten in gereedschappen voor sandboxen
 
