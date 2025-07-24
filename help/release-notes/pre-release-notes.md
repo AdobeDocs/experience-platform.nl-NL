@@ -4,9 +4,9 @@ description: Een voorvertoning van de meest recente releaseopmerkingen voor Adob
 hide: true
 hidefromtoc: true
 exl-id: f2c41dc8-9255-4570-b459-4f9fc28ee58b
-source-git-commit: fddefb7de85b5dcb8c8721e14d04efc0567ccae4
+source-git-commit: 7e91181f71b84fdaf04a39e003cbbd415827e282
 workflow-type: tm+mt
-source-wordcount: '1352'
+source-wordcount: '1381'
 ht-degree: 22%
 
 ---
@@ -21,8 +21,8 @@ ht-degree: 22%
 >
 >Raadpleeg de volgende documentatie voor aanvullende informatie voor andere Adobe Experience Platform-toepassingen:
 >
->- [Adobe Journey Optimizer](https://experienceleague.adobe.com/nl/docs/journey-optimizer/using/whats-new/release-notes)
->- [Adobe Journey Optimizer B2B](https://experienceleague.adobe.com/nl/docs/journey-optimizer-b2b/user/release-notes)
+>- [Adobe Journey Optimizer](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/whats-new/release-notes)
+>- [Adobe Journey Optimizer B2B](https://experienceleague.adobe.com/en/docs/journey-optimizer-b2b/user/release-notes)
 >- [Customer Journey Analytics](https://experienceleague.adobe.com/nl/docs/analytics-platform/using/releases/pre-release-notes)
 >- [Samenstelling van Federated-doelgroep](https://experienceleague.adobe.com/nl/docs/federated-audience-composition/using/e-release-notes)
 >- [Real-Time CDP Collaboration](https://experienceleague.adobe.com/nl/docs/real-time-cdp-collaboration/using/latest)
@@ -56,6 +56,7 @@ Nieuwe functies en updates van bestaande functies in Adobe Experience Platform:
 | Verbeterde gegevensstroominformatie voor Edge-doelen | De verbeterde juiste spoorinformatie voor bestemmingen Adobe Target en van de Douane Personalization toont nu de gegevensstroomnaam, die duidelijkere zichtbaarheid in bijbehorende configuraties van de gegevensstroom verstrekt en verwarring vermindert wanneer het herzien van bestaande gegevensstromen. De **[!UICONTROL Datastream ID]** -kiezer in het doelconfiguratiescherm is bijgewerkt naar **[!UICONTROL Datastream]** voor meer duidelijkheid in de gebruikersinterface. |
 | Zichtbaarheid van marketingacties in doelselectie | Marketingacties worden nu weergegeven in de rechtertrack van het doeltabblad **[!UICONTROL Browse]** en op de pagina **[!UICONTROL Dataflow runs]** , zodat wijzigingen in marketingacties direct zichtbaar zijn zonder dat navigatie naar de weergavepagina is vereist. Deze verbetering verbetert de gebruikerservaring door het gemakkelijker te maken om marketing actieconfiguraties tijdens bestemmingsopstelling te verifiëren. |
 | (Beperkte bètaversie) Marketing-acties voor doelen bewerken | U kunt nu marketingacties voor bestaande doelen bewerken. Deze functionaliteit is in beperkte bèta. Neem contact op met uw Adobe-vertegenwoordiger als u toegang tot de site wilt aanvragen. |
+| (Beperkte bètaversie) Doelen bewerken | U kunt de doelconfiguratie nu bewerken nadat u deze hebt gemaakt. Deze functionaliteit is in beperkte bèta. Neem contact op met uw Adobe-vertegenwoordiger als u toegang tot de site wilt aanvragen. |
 | Accountnamen en beschrijvingen voor doelverbindingen | U kunt nu accountnamen en beschrijvingen toevoegen wanneer u verbinding maakt met doelen, waardoor u beter beheer van doelen met meerdere accounts kunt maken. |
 
 **Oplossingen**
