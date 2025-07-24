@@ -3,18 +3,31 @@ title: Opmerkingen bij de release Adobe Experience Platform Web SDK
 description: De nieuwste aanvullende informatie voor de Adobe Experience Platform Web SDK.
 keywords: Adobe Experience Platform Web SDK;Experience Platform Web SDK;Web SDK;release notes;
 exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
-source-git-commit: 5dc5e11962abf760692e0cb424cdd863d1905e87
+source-git-commit: cf8912aea5c46b3414486f638b92eebf556528a9
 workflow-type: tm+mt
-source-wordcount: '2355'
+source-wordcount: '2438'
 ht-degree: 5%
 
 ---
 
 
-# Aanvullende informatie
+# Opmerkingen bij de release Web SDK
 
 In dit document worden de opmerkingen bij de release voor de Adobe Experience Platform Web SDK besproken.
 Voor de recentste versienota&#39;s op de de markeringsuitbreiding van SDK van het Web, zie de [ nota&#39;s van de de marktextensie van SDK van het Web ](../tags/extensions/client/web-sdk/web-sdk-ext-release-notes.md).
+
+## Versie 2.28.0 - vrijdag 24 juli 2025
+
+**Nieuwe functies**
+
+- Toegevoegde ondersteuning voor Adobe Journey Optimizer-regels voor ongeschiktheid.
+
+**Bevestigingen en verbeteringen**
+
+- Oplossing een fout in de [ Tracker van Analytics van Media ](commands/getmediaanalyticstracker.md) waar het `length` bezit van het media voorwerp verkeerd erkende ongeldige gegevenstypes.
+- Verbeterde [ fout behandeling van het 0} identiteitsbeheer {om belofteverwervingen behoorlijk te verwerken wanneer de identiteitsraadpleging ontbreekt.](identity/overview.md)
+- Oplossing van een kwestie waar [ verpersoonlijkingsinhoud ](personalization/rendering-personalization-content.md) met de inhoudspunten van HTML er niet in slaagde met een fout met betrekking tot ontbrekende `renderStatusHandler` terug te geven.
+- Vaste activiteitenkaart [ inzameling URL ](commands/configure/clickcollectionenabled.md) om niet-HTTP URLs behoorlijk te behandelen.
 
 ## Versie 2.27.0 - woensdag 20 mei 2025
 
@@ -53,7 +66,7 @@ Voor de recentste versienota&#39;s op de de markeringsuitbreiding van SDK van he
 
 **Vaste en verbeteringen**
 
-- Oplossing van een gebiedsdeelkwestie met betrekking tot [ de Motor van de Regels van Adobe Experience Platform ](https://github.com/adobe/aepsdk-rulesengine-typescript/), die fouten in sommige klantenintegratie veroorzaakte. SDK van het Web vereist nu [&#128279;](https://github.com/adobe/aepsdk-rulesengine-typescript/) versie 2.0.3 van de Motor van de Regels van 0&rbrace; Adobe Experience Platform of later.
+- Oplossing van een gebiedsdeelkwestie met betrekking tot [ de Motor van de Regels van Adobe Experience Platform ](https://github.com/adobe/aepsdk-rulesengine-typescript/), die fouten in sommige klantenintegratie veroorzaakte. SDK van het Web vereist nu [ versie 2.0.3 van de Motor van de Regels van 0} Adobe Experience Platform of later.](https://github.com/adobe/aepsdk-rulesengine-typescript/)
 
 ## Versie 2.24.0 - vrijdag 31 oktober 2024
 
@@ -166,7 +179,7 @@ Voor de recentste versienota&#39;s op de de markeringsuitbreiding van SDK van he
 
 **Bevestigingen en verbeteringen**
 
-- SDK van het Web codeert nu de het koekjesbestemmingswaarden van Audience Manager, gelijkend op [ Data Integration Library (DIL) ](https://experienceleague.adobe.com/docs/audience-manager/user-guide/dil-api/dil-overview.html?lang=nl-NL).
+- SDK van het Web codeert nu de het koekjesbestemmingswaarden van Audience Manager, gelijkend op [ Data Integration Library (DIL) ](https://experienceleague.adobe.com/docs/audience-manager/user-guide/dil-api/dil-overview.html).
 
 ## Versie 2.16.0 - 25 april 2023
 

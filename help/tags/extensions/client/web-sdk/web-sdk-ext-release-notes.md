@@ -2,17 +2,29 @@
 title: Opmerkingen bij de release Adobe Experience Platform Web SDK
 description: Adobe Experience Platform Web SDK-tagextensie
 exl-id: 91de8c91-023a-45b6-9f67-ac75ee471e50
-source-git-commit: 03cc702eced26453b5923bb63739c0cb739e8c8f
+source-git-commit: cf8912aea5c46b3414486f638b92eebf556528a9
 workflow-type: tm+mt
-source-wordcount: '2664'
+source-wordcount: '2720'
 ht-degree: 5%
 
 ---
 
-# Opmerkingen bij de release Adobe Experience Platform Web SDK
+
+# Opmerkingen bij de release Web SDK
 
 In dit document worden de releaseopmerkingen voor de Adobe Experience Platform Web SDK-tagextensie besproken. Voor de recentste versienota&#39;s op SDK zelf, zie de [ de versienota&#39;s van SDK van het Web van Experience Platform ](/help/web-sdk/release-notes.md).
 
+## Versie 2.31.0 - vrijdag 24 juli 2025
+
+**Nieuwe functies**
+
+- Bevat [ versie 2.28.0 ](../../../../web-sdk/release-notes.md#2-28-0) van het Web SDK van Adobe Experience Platform.
+
+**Bevestigingen en verbeteringen**
+
+- Probleem verholpen waarbij een fout werd gegenereerd wanneer een gegevensstroomoverschrijving is ingeschakeld via een gegevenselement.
+- Probleem verholpen waarbij lege `idSyncContainerId` overschrijvingen een fout zouden veroorzaken.
+- Bij het omzetten van media-gegevenselementen wordt het gebeurtenisobject nu opgenomen.
 
 ## Versie 2.30.1 - woensdag 27 mei 2025
 
