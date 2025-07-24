@@ -47,12 +47,12 @@ ht-degree: 16%
    * [Doelen in Real-Time CDP B2B edition](destinations/b2b.md)
 * Guardrails {#guardrails}
    * [Overzicht van Real-Time CDP-instructies](guardrails/overview.md)
-   * [ Guardrails voor gegevensopname](https://experienceleague.adobe.com/docs/experience-platform/ingestion/guardrails.html){target="_blank"}
+   * [ Guardrails voor gegevensopname](https://experienceleague.adobe.com/docs/experience-platform/ingestion/guardrails.html?lang=nl-NL){target="_blank"}
    * [ Guardrails voor  [!DNL Edge Network API]](https://developer.adobe.com/data-collection-apis/docs/getting-started/guardrails/){target="_blank"}
-   * [ Guardrails voor  [!DNL Real-Time Customer Profile]  gegevens en segmentatie](https://experienceleague.adobe.com/docs/experience-platform/profile/guardrails.html){target="_blank"}
-   * [ Guardrails voor  [!DNL Identity Service]  gegevens](https://experienceleague.adobe.com/docs/experience-platform/identity/guardrails.html){target="_blank"}
-   * [ Guardrails voor  [!DNL Query Service]](https://experienceleague.adobe.com/docs/experience-platform/query/guardrails.html){target="_blank"}
-   * [ Grafieken voor gegevensactivering door bestemmingen](https://experienceleague.adobe.com/docs/experience-platform/destinations/guardrails.html){target="_blank"}
+   * [ Guardrails voor  [!DNL Real-Time Customer Profile]  gegevens en segmentatie](https://experienceleague.adobe.com/docs/experience-platform/profile/guardrails.html?lang=nl-NL){target="_blank"}
+   * [ Guardrails voor  [!DNL Identity Service]  gegevens](https://experienceleague.adobe.com/docs/experience-platform/identity/guardrails.html?lang=nl-NL){target="_blank"}
+   * [ Guardrails voor  [!DNL Query Service]](https://experienceleague.adobe.com/docs/experience-platform/query/guardrails.html?lang=nl-NL){target="_blank"}
+   * [ Grafieken voor gegevensactivering door bestemmingen](https://experienceleague.adobe.com/docs/experience-platform/destinations/guardrails.html?lang=nl-NL){target="_blank"}
 * Identiteiten {#identity}
    * [Identiteiten en naamruimten](profile/identities-overview.md)
 * Beleid samenvoegen {#merge-policies}
@@ -88,5 +88,5 @@ ht-degree: 16%
       * [Evolueer eenmalig klantenwaarde aan levenwaarde](/help/rtcdp/use-case-guides/evolve-one-time-value-lifetime-value/evolve-one-time-value-to-lifetime-value.md)
       * [Neem op intelligente wijze uw klanten opnieuw aan](/help/rtcdp/use-case-guides/intelligent-re-engagement/intelligent-re-engagement.md)
       * [Neem op intelligente wijze contact op met uw klanten: Luma-voorbeelden](/help/rtcdp/use-case-guides/intelligent-re-engagement/use-cases-luma.md)
-* [ de Nota&#39;s van de Versie van Experience Platform ](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)
+* [ de Nota&#39;s van de Versie van Experience Platform ](https://experienceleague.adobe.com/nl/docs/experience-platform/release-notes/latest)
 * [ Verklarende woordenlijst van Experience Platform ](https://www.adobe.com/go/platform-glossary-en)
