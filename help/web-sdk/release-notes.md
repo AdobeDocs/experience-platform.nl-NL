@@ -25,7 +25,7 @@ Voor de recentste versienota&#39;s op de de markeringsuitbreiding van SDK van he
 **Bevestigingen en verbeteringen**
 
 - Oplossing een fout in de [ Tracker van Analytics van Media ](commands/getmediaanalyticstracker.md) waar het `length` bezit van het media voorwerp verkeerd erkende ongeldige gegevenstypes.
-- Verbeterde [ fout behandeling van het 0} identiteitsbeheer {om belofteverwervingen behoorlijk te verwerken wanneer de identiteitsraadpleging ontbreekt.](identity/overview.md)
+- Verbeterde [ fout behandeling van het 0&rbrace; identiteitsbeheer &lbrace;om belofteverwervingen behoorlijk te verwerken wanneer de identiteitsraadpleging ontbreekt.](identity/overview.md)
 - Oplossing van een kwestie waar [ verpersoonlijkingsinhoud ](personalization/rendering-personalization-content.md) met de inhoudspunten van HTML er niet in slaagde met een fout met betrekking tot ontbrekende `renderStatusHandler` terug te geven.
 - Vaste activiteitenkaart [ inzameling URL ](commands/configure/clickcollectionenabled.md) om niet-HTTP URLs behoorlijk te behandelen.
 
@@ -66,7 +66,7 @@ Voor de recentste versienota&#39;s op de de markeringsuitbreiding van SDK van he
 
 **Vaste en verbeteringen**
 
-- Oplossing van een gebiedsdeelkwestie met betrekking tot [ de Motor van de Regels van Adobe Experience Platform ](https://github.com/adobe/aepsdk-rulesengine-typescript/), die fouten in sommige klantenintegratie veroorzaakte. SDK van het Web vereist nu [ versie 2.0.3 van de Motor van de Regels van 0} Adobe Experience Platform of later.](https://github.com/adobe/aepsdk-rulesengine-typescript/)
+- Oplossing van een gebiedsdeelkwestie met betrekking tot [ de Motor van de Regels van Adobe Experience Platform ](https://github.com/adobe/aepsdk-rulesengine-typescript/), die fouten in sommige klantenintegratie veroorzaakte. SDK van het Web vereist nu [ versie 2.0.3 van de Motor van de Regels van 0&rbrace; Adobe Experience Platform of later.](https://github.com/adobe/aepsdk-rulesengine-typescript/)
 
 ## Versie 2.24.0 - vrijdag 31 oktober 2024
 
