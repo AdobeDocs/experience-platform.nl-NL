@@ -5,9 +5,9 @@ product: experience platform
 type: Documentation
 description: Leer over prestaties en door systemen afgedwongen richtlijnen voor profielgegevens en segmentatie. Zo zorgt u voor optimaal gebruik van de functie Real-Time CDP.
 exl-id: 33ff0db2-6a75-4097-a9c6-c8b7a9d8b78c
-source-git-commit: cfc221250a9c8f91b16aa1d4572263ecaf4eeccc
+source-git-commit: 1536201961211aeb747e418794196c146d86e869
 workflow-type: tm+mt
-source-wordcount: '2620'
+source-wordcount: '2634'
 ht-degree: 1%
 
 ---
@@ -18,7 +18,7 @@ Met Adobe Experience Platform kunt u persoonlijke interkanaalervaringen bieden o
 
 >[!IMPORTANT]
 >
->Controleer uw vergunningsrechten in uw Orde van de Verkoop en de overeenkomstige [ Beschrijving van het Product ](https://helpx.adobe.com/nl/legal/product-descriptions.html) op daadwerkelijke gebruiksgrenzen naast deze guardrails pagina.
+>Controleer uw vergunningsrechten in uw Orde van de Verkoop en de overeenkomstige [ Beschrijving van het Product ](https://helpx.adobe.com/legal/product-descriptions.html) op daadwerkelijke gebruiksgrenzen naast deze guardrails pagina.
 
 Dit document biedt standaardgebruiks- en tarieflimieten om u te helpen uw profielgegevens te modelleren voor optimale systeemprestaties. Bij het bekijken van de volgende instructies wordt aangenomen dat u de gegevens correct hebt gemodelleerd. Als u vragen hebt over het modelleren van uw gegevens, neemt u contact op met uw medewerker van de klantenservice.
 
@@ -120,9 +120,9 @@ De instructies in deze sectie hebben betrekking op het aantal en de aard van de 
 | --------- | ----- | ---------- | ----------- |
 | Soorten publiek per sandbox | 4000 | Prestatiegerichting | U kunt tot 4000 **actieve** publiek per zandbak hebben. U kunt meer dan 4000 soorten publiek per organisatie hebben, zolang er minder dan 4000 soorten publiek in elke **individuele** zandbak zijn. Dit is inclusief publiek in batch, streaming en edge. Pogingen om extra publiek te creëren kunnen systeemprestaties beïnvloeden. Lees meer over [ creërend publiek ](/help/segmentation/ui/segment-builder.md) door de segmentbouwer. |
 | Edge-publiek per sandbox | 150 | Prestatiegerichting | U kunt tot 150 **actieve** randpubliek per zandbak hebben. U kunt meer dan 150 randpubliek per organisatie hebben, zolang er minder dan 150 randpubliek in elke **individuele** zandbak zijn. Poging om extra randpubliek te maken kan van invloed zijn op de systeemprestaties. Lees meer over [ randpubliek ](/help/segmentation/methods/edge-segmentation.md). |
-| Edge-doorvoer door alle sandboxen | 1500 RPS | Prestatiegerichting | Edge-segmentatie ondersteunt een piekwaarde van 1500 inkomende gebeurtenissen per seconde die de Adobe Experience Platform Edge Network binnenkomen. Edge-segmentatie kan tot 350 milliseconden duren om een binnenkomende gebeurtenis te verwerken nadat deze de Adobe Experience Platform Edge Network is binnengekomen. Lees meer over [ randpubliek ](/help/segmentation/methods/edge-segmentation.md). |
+| Edge-doorvoer door alle sandboxen | 1500 RPS | Prestatiegerichting | De segmentatie van Edge steunt een gecombineerde piekwaarde van 1500 binnenkomende gebeurtenissen per seconde die Adobe Experience Platform Edge Network over uw productie en ontwikkelingszandbakken ingaan. Edge-segmentatie kan tot 350 milliseconden duren om een binnenkomende gebeurtenis te verwerken nadat deze de Adobe Experience Platform Edge Network is binnengekomen. Lees meer over [ randpubliek ](/help/segmentation/methods/edge-segmentation.md). |
 | Streaming publiek per sandbox | 500 | Prestatiegerichting | U kunt tot 500 **actieve** het stromen publiek per zandbak hebben. U kunt meer dan 500 het stromen publiek per organisatie hebben, zolang er minder dan 500 het stromen publiek in elke **individuele** zandbak zijn. Dit geldt zowel voor streaming als voor randpubliek. Het maken van extra streaming publiek kan van invloed zijn op de systeemprestaties. Lees meer over [ het stromen publiek ](/help/segmentation/methods/streaming-segmentation.md). |
-| Doorvoer streamen voor alle sandboxen | 1500 RPS | Prestatiegerichting | Streaming segmentatie ondersteunt een piekwaarde van 1500 inkomende gebeurtenissen per seconde. Het kan tot 5 minuten duren voordat streamingsegmentatie in aanmerking komt voor een profiel voor segmentlidmaatschap. Lees meer over [ het stromen publiek ](/help/segmentation/methods/streaming-segmentation.md). |
+| Doorvoer streamen voor alle sandboxen | 1500 RPS | Prestatiegerichting | Streaming segmentatie ondersteunt een gecombineerde piekwaarde van 1500 inkomende gebeurtenissen per seconde voor uw productie- en ontwikkelingssandboxen. Het kan tot 5 minuten duren voordat streamingsegmentatie in aanmerking komt voor een profiel voor segmentlidmaatschap. Lees meer over [ het stromen publiek ](/help/segmentation/methods/streaming-segmentation.md). |
 | Batchpubliek per sandbox | 4000 | Prestatiegerichting | U kunt tot 4000 **actieve** partijpubliek per zandbak hebben. U kunt meer dan 4000 partijpubliek per organisatie hebben, zolang er minder dan 4000 partijpubliek in elke **individuele** zandbak zijn. Het maken van extra batchdoelgroepen kan van invloed zijn op de systeemprestaties. |
 | Accountsoorten per sandbox | 50 | Door het systeem afgedwongen geleiding | U kunt maximaal 50 accountsoorten gebruiken in een sandbox. Wanneer u 50 soorten publiek bereikt in een sandbox, wordt het besturingselement **[!UICONTROL Create audience]** uitgeschakeld wanneer u een nieuw publiek voor een account probeert te maken. Lees meer over [ rekeningspubliek ](/help/segmentation/types/account-audiences.md). |
 | Gepubliceerde composities per sandbox | 10 | Prestatiegerichting | U kunt maximaal 10 gepubliceerde composities in een sandbox hebben. Lees meer over [ publiekssamenstelling in de gids UI ](/help/segmentation/ui/audience-composition.md). |
@@ -188,7 +188,7 @@ De veelvoudige rapportsuites kunnen voor Profiel worden toegelaten zolang alle g
 Raadpleeg de volgende documentatie voor meer informatie over andere Experience Platform Services-instructies, informatie over end-to-end latentie en licentiegegevens uit Real-Time CDP Product Description-documenten:
 
 * [Real-Time CDP guardrails](/help/rtcdp/guardrails/overview.md)
-* [ de diagrammen van de de latentie van begin tot eind ](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/deployment/guardrails.html?lang=nl-NL#end-to-end-latency-diagrams) voor diverse diensten van Experience Platform.
-* [ Real-Time Customer Data Platform (B2C Uitgave - de Pakketten van Prime en van Ultimate) ](https://helpx.adobe.com/nl/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)
-* [ Real-Time Customer Data Platform (B2P - de Pakketten van Prime en van Ultimate) ](https://helpx.adobe.com/nl/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html)
-* [ Real-Time Customer Data Platform (B2B - de Pakketten van Prime en van Ultimate) ](https://helpx.adobe.com/nl/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html)
+* [ de diagrammen van de de latentie van begin tot eind ](https://experienceleague.adobe.com/docs/blueprints-learn/architecture/architecture-overview/deployment/guardrails.html?lang=en#end-to-end-latency-diagrams) voor diverse diensten van Experience Platform.
+* [ Real-Time Customer Data Platform (B2C Edition - Prime en de Pakketten van Ultimate) ](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html)
+* [ Real-Time Customer Data Platform (B2P - de Pakketten van Prime en van Ultimate) ](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html)
+* [ Real-Time Customer Data Platform (B2B - de Pakketten van Prime en van Ultimate) ](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html)
