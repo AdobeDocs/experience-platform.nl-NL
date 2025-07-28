@@ -1,13 +1,11 @@
 ---
-keywords: Experience Platform;home;populaire onderwerpen;database;externe database
-solution: Experience Platform
 title: Creeer een Dataflow voor de Bronnen van het Gegevensbestand Gebruikend de Dienst API van de Stroom
 type: Tutorial
 description: In deze zelfstudie worden de stappen beschreven voor het ophalen van gegevens uit een database en het opnemen ervan in Experience Platform met behulp van bronconnectors en API's.
 exl-id: 1e1f9bbe-eb5e-40fb-a03c-52df957cb683
-source-git-commit: 104db777446b19fa9e3ea7538ae1dda6f51a00b1
+source-git-commit: b184319f6c5f5430a5ae1e9de4728b5074bca9b8
 workflow-type: tm+mt
-source-wordcount: '1428'
+source-wordcount: '1453'
 ht-degree: 0%
 
 ---
@@ -62,58 +60,60 @@ POST /sourceConnections
 
 ```shell
 curl -X POST \
-    'https://platform.adobe.io/data/foundation/flowservice/sourceConnections' \
-    -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-    -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {ORG_ID}' \
-    -H 'x-sandbox-name: {SANDBOX_NAME}' \
-    -H 'Content-Type: application/json' \
-    -d '{
-        "name": "Database source connection",
-        "baseConnectionId": "6990abad-977d-41b9-a85d-17ea8cf1c0e4",
-        "description": "Database source connection",
-        "data": {
-            "format": "tabular"
+  'https://platform.adobe.io/data/foundation/flowservice/sourceConnections' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Content-Type: application/json' \
+  -d '{
+    "name": "Database source connection",
+    "baseConnectionId": "6990abad-977d-41b9-a85d-17ea8cf1c0e4",
+    "description": "Database source connection",
+    "data": {
+      "format": "tabular"
+    },
+    "params": {
+      "tableName": "test1.Mytable",
+      "columns": [
+        {
+          "name": "TestID",
+          "type": "string",
+          "xdm": {
+            "type": "string"
+          }
         },
-        "params": {
-            "tableName": "test1.Mytable",
-            "columns": [
-                {
-                    "name": "TestID",
-                    "type": "string",
-                    "xdm": {
-                        "type": "string"
-                    }
-                },
-                {
-                    "name": "Name",
-                    "type": "string",
-                    "xdm": {
-                        "type": "string"
-                    }
-                },
-                {
-                    "name": "Datefield",
-                    "type": "string",
-                    "meta:xdmType": "date-time",
-                    "xdm": {
-                        "type": "string",
-                        "format": "date-time"
-                    }
-                }
-            ]
+        {
+          "name": "Name",
+          "type": "string",
+          "xdm": {
+            "type": "string"
+          }
         },
-        "connectionSpec": {
-            "id": "3c9b37f8-13a6-43d8-bad3-b863b941fedd",
-            "version": "1.0"
+        {
+          "name": "Datefield",
+          "type": "string",
+          "meta:xdmType": "date-time",
+          "xdm": {
+            "type": "string",
+            "format": "date-time"
+          }
         }
-    }'
+      ],
+      "cdcEnabled": true
+    },
+    "connectionSpec": {
+      "id": "3c9b37f8-13a6-43d8-bad3-b863b941fedd",
+      "version": "1.0"
+    }
+  }'
 ```
 
 | Eigenschap | Beschrijving |
 | -------- | ----------- |
 | `baseConnectionId` | De verbinding-id van uw databasebron. |
-| `params.path` | Het pad van het bronbestand. |
+| `params.tableName` | Het pad van het bronbestand. |
+| `params.cdcEnabled` | Een booleaanse waarde die aangeeft of het vastleggen van de wijzigingshistorie is ingeschakeld. Deze eigenschap wordt ondersteund door de volgende databasebronnen: <ul><li>[!DNL Azure Databricks]</li><li>[!DNL Google BigQuery]</li><li>[!DNL Snowflake]</li></ul> Voor meer informatie, lees de gids bij het gebruiken van [ veranderingsgegevens vangen in bronnen ](../change-data-capture.md). |
 | `connectionSpec.id` | De id van de verbindingsspecificatie van uw databasebron. Zie [ Bijlage ](#appendix) voor een lijst van gegevensbestand specifieke IDs. |
 
 **Reactie**

@@ -1,13 +1,11 @@
 ---
-keywords: Experience Platform;home;populaire onderwerpen;database van derden;databasestroom-service
-solution: Experience Platform
 title: Een database verkennen met de Flow Service API
 description: Deze zelfstudie gebruikt de Flow Service API om de inhoud en de bestandsstructuur van een database van derden te verkennen.
 exl-id: 94935492-a7be-48dc-8089-18476590bf98
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 46e1a62e558a209ffed4a693cfd71ad5e76d7d98
 workflow-type: tm+mt
-source-wordcount: '561'
-ht-degree: 0%
+source-wordcount: '386'
+ht-degree: 1%
 
 ---
 
@@ -19,38 +17,18 @@ In deze zelfstudie wordt de API van [!DNL Flow Service] gebruikt om de inhoud en
 
 Deze handleiding vereist een goed begrip van de volgende onderdelen van Adobe Experience Platform:
 
-* [ Bronnen ](../../../home.md): [!DNL Experience Platform] staat gegevens toe om van diverse bronnen worden opgenomen terwijl het voorzien van u van de capaciteit om, inkomende gegevens te structureren te etiketteren en te verbeteren gebruikend [!DNL Experience Platform] diensten.
-* [ Sandboxen ](../../../../sandboxes/home.md): [!DNL Experience Platform] verstrekt virtuele zandbakken die één enkele [!DNL Experience Platform] instantie in afzonderlijke virtuele milieu&#39;s verdelen helpen digitale ervaringstoepassingen ontwikkelen en ontwikkelen.
+* [ Bronnen ](../../../home.md): Experience Platform staat gegevens toe om van diverse bronnen worden opgenomen terwijl het voorzien van u van de capaciteit om, inkomende gegevens te structureren te etiketteren en te verbeteren gebruikend de diensten van Experience Platform.
+* [ Sandboxes ](../../../../sandboxes/home.md): Experience Platform verstrekt virtuele zandbakken die één enkele instantie van Experience Platform in afzonderlijke virtuele milieu&#39;s verdelen helpen digitale ervaringstoepassingen ontwikkelen en ontwikkelen.
 
 De volgende secties bevatten aanvullende informatie die u moet weten om verbinding te kunnen maken met een database van derden met de [!DNL Flow Service] API.
 
-### Vereiste referenties verzamelen
+### Experience Platform API&#39;s gebruiken
 
-Deze zelfstudie vereist dat u een geldige verbinding hebt met de database van derden waarvan u gegevens wilt invoeren. Een geldige verbinding heeft betrekking op de verbindingsspecificatie-id en de verbinding-id van uw database. Meer informatie over het creëren van een gegevensbestandverbinding en het terugwinnen van deze waarden kan in het [ overzicht van bronschakelaars ](./../../../home.md#database) worden gevonden.
-
-### API-voorbeeldaanroepen lezen
-
-Deze zelfstudie biedt voorbeeld-API-aanroepen om aan te tonen hoe uw verzoeken moeten worden opgemaakt. Dit zijn paden, vereiste kopteksten en correct opgemaakte ladingen voor aanvragen. Voorbeeld-JSON die wordt geretourneerd in API-reacties, wordt ook verschaft. Voor informatie over de overeenkomsten die in documentatie voor steekproef API vraag worden gebruikt, zie de sectie op [ hoe te om voorbeeld API vraag ](../../../../landing/troubleshooting.md#how-do-i-format-an-api-request) in de [!DNL Experience Platform] het oplossen van problemengids te lezen.
-
-### Waarden verzamelen voor vereiste koppen
-
-Om vraag aan [!DNL Experience Platform] APIs te maken, moet u het [ authentificatieleerprogramma ](https://www.adobe.com/go/platform-api-authentication-en) eerst voltooien. Het voltooien van het authentificatieleerprogramma verstrekt de waarden voor elk van de vereiste kopballen in alle vraag E [!DNL xperience Experience Platform] API, zoals hieronder getoond:
-
-* `Authorization: Bearer {ACCESS_TOKEN}`
-* `x-api-key: {API_KEY}`
-* `x-gw-ims-org-id: {ORG_ID}`
-
-Alle bronnen in [!DNL Experience Platform], inclusief bronnen die tot [!DNL Flow Service] behoren, zijn geïsoleerd naar specifieke virtuele sandboxen. Alle aanvragen naar [!DNL Experience Platform] API&#39;s vereisen een header die de naam van de sandbox opgeeft waarin de bewerking plaatsvindt:
-
-* `x-sandbox-name: {SANDBOX_NAME}`
-
-Alle verzoeken die een lading (POST, PUT, PATCH) bevatten vereisen een extra media typekopbal:
-
-* `Content-Type: application/json`
+Voor informatie over hoe te om vraag aan Experience Platform APIs met succes te maken, zie de gids op [ begonnen wordt met Experience Platform APIs ](../../../../landing/api-guide.md).
 
 ## Uw gegevenstabellen verkennen
 
-Met de verbindings-id voor uw database kunt u uw gegevenstabellen verkennen door GET-aanvragen uit te voeren. Gebruik de volgende aanroep om het pad te zoeken van de tabel die u wilt inspecteren of waarin u wilt opnemen [!DNL Experience Platform].
+Met de verbindings-id voor uw database kunt u uw gegevenstabellen verkennen door GET-aanvragen uit te voeren. Gebruik de volgende vraag om de weg van de lijst te vinden u wenst om te inspecteren of in Experience Platform in te gaan.
 
 **API formaat**
 
@@ -75,7 +53,7 @@ curl -X GET \
 
 **Reactie**
 
-Een geslaagde reactie retourneert een array met tabellen uit uw database. Zoek de tabel die u wilt opnemen in [!DNL Experience Platform] en neem nota van de eigenschap `path` ervan, aangezien u deze in de volgende stap moet opgeven om de structuur te inspecteren.
+Een geslaagde reactie retourneert een array met tabellen uit uw database. Zoek de tabel die u naar Experience Platform wilt brengen en neem nota van de eigenschap `path` ervan, aangezien u deze in de volgende stap moet verstrekken om de structuur te inspecteren.
 
 ```json
 [
@@ -146,10 +124,14 @@ Een geslaagde reactie retourneert de structuur van de opgegeven tabel. De detail
                 }
             }
         ]
+    },
+    "data": [],
+    "cdcMetadata": {
+      "columnDetected": true
     }
 }
 ```
 
 ## Volgende stappen
 
-Aan de hand van deze zelfstudie hebt u uw database verkend, het pad van de tabel gevonden waarin u de gegevens wilt invoeren [!DNL Experience Platform] en informatie verkregen over de structuur ervan. U kunt deze informatie in het volgende leerprogramma gebruiken [ gegevens van uw gegevensbestand verzamelen en het brengen in Experience Platform ](../collect/database-nosql.md).
+Door deze zelfstudie te volgen, hebt u uw database verkend, het pad van de tabel gevonden die u in Experience Platform wilt opnemen en hebt u informatie gekregen over de structuur ervan. U kunt deze informatie in het volgende leerprogramma gebruiken [ gegevens van uw gegevensbestand verzamelen en het brengen in Experience Platform ](../collect/database-nosql.md).
