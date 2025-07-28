@@ -5,9 +5,9 @@ breadcrumb-title: Gids voor Source Connectors
 user-guide-description: Neem gegevens uit diverse bronnen op. Leer hoe u opgenomen gegevens kunt structureren, labelen en verbeteren.
 feature: Sources
 role: Developer
-source-git-commit: 079c1d7ac790fb7df72a6127a980080bdaa49518
+source-git-commit: 44c01678e96f2649dbf731dd4531004c1df28058
 workflow-type: tm+mt
-source-wordcount: '1045'
+source-wordcount: '1047'
 ht-degree: 7%
 
 ---
@@ -59,6 +59,7 @@ ht-degree: 7%
       - [SFTP-aansluiting](connectors/cloud-storage/sftp.md)
       - [Amazon S3- en Azure Blob-connector](connectors/cloud-storage/blob-s3.md)
    - Toestemming en voorkeuren {#consent}
+      - [Didomi](connectors/consent-and-preferences/didomi.md)
       - [OneTrust-integratie](connectors/consent-and-preferences/onetrust.md)
    - CRM {#crm}
       - [Microsoft Dynamics-connector](connectors/crm/ms-dynamics.md)
@@ -264,6 +265,7 @@ ht-degree: 7%
          - [SFTP](tutorials/ui/create/cloud-storage/sftp.md)
          - [Amazon S3 en Blob](tutorials/ui/create/cloud-storage/blob-s3.md)
       - Toestemming en voorkeuren {#consent}
+         - [Didomi](tutorials/ui/create/consent-and-preferences/didomi.md)
          - [OneTrust-integratie](tutorials/ui/create/consent-and-preferences/onetrust.md)
       - CRM {#crm}
          - [Microsoft Dynamics](tutorials/ui/create/crm/dynamics.md)
@@ -389,4 +391,4 @@ ht-degree: 7%
 - [IP adres lijst van gewenste personen](ip-address-allow-list.md)
 - [Veelgestelde vragen](./troubleshooting.md)
 - [ API verwijzing ](https://www.adobe.io/experience-platform-apis/references/flow-service/)
-- [Releaseopmerkingen bij Experience Platform](https://experienceleague.adobe.com/nl/docs/experience-platform/release-notes/latest)
+- [Releaseopmerkingen bij Experience Platform](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)
