@@ -2,9 +2,9 @@
 title: Opmerkingen bij de release Adobe Experience Platform Web SDK
 description: Adobe Experience Platform Web SDK-tagextensie
 exl-id: 91de8c91-023a-45b6-9f67-ac75ee471e50
-source-git-commit: cf8912aea5c46b3414486f638b92eebf556528a9
+source-git-commit: 99a2bb12fb0ed8b6bb9001d25f2bddc17201c8cf
 workflow-type: tm+mt
-source-wordcount: '2720'
+source-wordcount: '2788'
 ht-degree: 5%
 
 ---
@@ -25,6 +25,11 @@ In dit document worden de releaseopmerkingen voor de Adobe Experience Platform W
 - Probleem verholpen waarbij een fout werd gegenereerd wanneer een gegevensstroomoverschrijving is ingeschakeld via een gegevenselement.
 - Probleem verholpen waarbij lege `idSyncContainerId` overschrijvingen een fout zouden veroorzaken.
 - Bij het omzetten van media-gegevenselementen wordt het gebeurtenisobject nu opgenomen.
+
+**Bekende kwesties**
+
+- Na de versie van v2.31.0, werd een probleem geïdentificeerd met [ de componenten van de douanevorm bouwen ](/help/web-sdk/install/create-custom-build.md) proces. Terwijl de douane bouwt blijft werken, zijn alle componenten momenteel inbegrepen in de bouwstijl, resulterend in een volledig-gerangschikt pakket ongeacht componentenselectie. Er wordt een oplossing voor dit probleem ontwikkeld. Als u gebruikmaakt van de selectie van aangepaste componenten om de grootte van de build te minimaliseren, is het raadzaam te wachten op een toekomstige release.
+
 
 ## Versie 2.30.1 - woensdag 27 mei 2025
 
