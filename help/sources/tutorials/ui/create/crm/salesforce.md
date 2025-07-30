@@ -2,16 +2,16 @@
 title: Salesforce-account verbinden via de Experience Platform-gebruikersinterface
 description: Leer hoe u verbinding maakt met uw Salesforce-account en uw CRM-gegevens via de gebruikersinterface naar Experience Platform brengt.
 exl-id: b67fa4c4-d8ff-4d2d-aa76-5d9d32aa22d6
-source-git-commit: eab6303a3b420d4622185316922d242a4ce8a12d
+source-git-commit: 56307d8457ba6d0046ad80a7c97405220aa6161c
 workflow-type: tm+mt
-source-wordcount: '940'
+source-wordcount: '971'
 ht-degree: 0%
 
 ---
 
 # Sluit uw [!DNL Salesforce] -account aan op Experience Platform via de gebruikersinterface
 
-Deze zelfstudie bevat stappen voor het verbinden van uw [!DNL Salesforce] -account en het doorgeven van uw CRM-gegevens aan Adobe Experience Platform via de Experience Platform-gebruikersinterface.
+Lees deze handleiding voor meer informatie over het verbinden van uw [!DNL Salesforce] -account en het overbrengen van uw CRM-gegevens naar Adobe Experience Platform via de Experience Platform-gebruikersinterface.
 
 ## Aan de slag
 
@@ -58,6 +58,7 @@ U moet waarden opgeven voor de volgende referenties om uw [!DNL Salesforce] -acc
 | Client-id | De client-id wordt gebruikt in combinatie met het clientgeheim als onderdeel van OAuth2-verificatie. Met de client-id en het clientgeheim kan uw toepassing samen namens uw account werken door uw toepassing aan te duiden op [!DNL Salesforce] . |
 | Clientgeheim | Het clientgeheim wordt gebruikt in combinatie met de client-id als onderdeel van OAuth2-verificatie. Met de client-id en het clientgeheim kan uw toepassing samen namens uw account werken door uw toepassing aan te duiden op [!DNL Salesforce] . |
 | API-versie | De REST API-versie van de instantie [!DNL Salesforce] die u gebruikt. De waarde voor de API-versie moet met een decimaal worden opgemaakt. Als u bijvoorbeeld API-versie `52` gebruikt, moet u de waarde invoeren als `52.0` . Als dit veld niet wordt ingevuld, gebruikt Experience Platform automatisch de meest recente beschikbare versie. |
+| Verwijderde objecten opnemen | Een booleaanse waarde die wordt gebruikt om te bepalen of zachte verwijderde records moeten worden opgenomen. Indien ingesteld op true, kunnen elektronisch verwijderde records worden opgenomen in uw [!DNL Salesforce] -query en van uw account worden opgenomen in Experience Platform. Als u de configuratie niet opgeeft, wordt deze waarde standaard ingesteld op `false` . |
 
 Voor meer informatie bij het gebruiken van OAuth voor [!DNL Salesforce], lees de [[!DNL Salesforce]  gids over de Stroom van de Vergunning OAuth ](https://help.salesforce.com/s/articleView?id=sf.remoteaccess_oauth_flows.htm&type=5).
 
@@ -67,13 +68,13 @@ Nadat u de vereiste gegevens hebt verzameld, voert u de onderstaande stappen uit
 
 ## Sluit uw [!DNL Salesforce] -account aan
 
-Selecteer in de gebruikersinterface van Experience Platform de optie **[!UICONTROL Sources]** in de linkernavigatie voor toegang tot de werkruimte van [!UICONTROL Sources] . U kunt de juiste categorie selecteren in de catalogus aan de linkerkant van het scherm. U kunt ook de specifieke bron vinden waarmee u wilt werken met de zoekoptie.
+Navigeer in de gebruikersinterface van Experience Platform naar **[!UICONTROL Sources]** in het linkermenu om de werkruimte van [!UICONTROL Sources] te openen. Gebruik de catalogus aan de linkerkant om door categorieën te bladeren, of gebruik de zoekbalk om snel de bron te vinden waarmee u verbinding wilt maken.
 
 Selecteer **[!DNL Salesforce]** onder de categorie *[!UICONTROL CRM]* en selecteer vervolgens **[!UICONTROL Add data]** .
 
 >[!TIP]
 >
->Bronnen in de catalogus met bronnen geven de optie **[!UICONTROL Set up]** weer wanneer een bepaalde bron nog geen geverifieerde account heeft. Zodra een geverifieerd account bestaat, verandert deze optie in **[!UICONTROL Add data]** .
+>In de catalogus met bronnen ziet u **[!UICONTROL Set up]** als er geen verbinding is met een account, of **[!UICONTROL Add data]** als er al een account is geverifieerd.
 
 ![ de broncatalogus op Experience Platform UI met geselecteerde Salesforce bronkaart.](../../../../images/tutorials/create/salesforce/catalog.png)
 
@@ -116,10 +117,11 @@ Selecteer **[!UICONTROL OAuth2 Client Credential]** voor OAuth 2 Client Credenti
 * Client-id
 * Clientgeheim
 * API-versie
+* Inclusief verwijderobjecten
 
 Selecteer **[!UICONTROL Connect to source]** als u klaar bent.
 
-![ de interface OAuth voor de rekeningsverwezenlijking van Salesforce.](../../../../images/tutorials/create/salesforce/oauth2.png)
+![ de interface OAuth voor de rekeningsverwezenlijking van Salesforce.](../../../../images/tutorials/create/salesforce/oauth.png)
 
 >[!ENDTABS]
 

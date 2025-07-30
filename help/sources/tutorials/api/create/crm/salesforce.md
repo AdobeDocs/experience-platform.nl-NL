@@ -2,14 +2,14 @@
 title: Salesforce verbinden met Experience Platform met behulp van de Flow Service API
 description: Leer hoe u Adobe Experience Platform verbindt met een Salesforce-account met behulp van de Flow Service API.
 exl-id: 43dd9ee5-4b87-4c8a-ac76-01b83c1226f6
-source-git-commit: eab6303a3b420d4622185316922d242a4ce8a12d
+source-git-commit: 56307d8457ba6d0046ad80a7c97405220aa6161c
 workflow-type: tm+mt
-source-wordcount: '1118'
+source-wordcount: '1175'
 ht-degree: 0%
 
 ---
 
-# Verbinding maken met Experience Platform via de [!DNL Flow Service] API[!DNL Salesforce]
+# Verbinding maken met Experience Platform via de [!DNL Salesforce] API[!DNL Flow Service]
 
 Lees deze gids om te leren hoe u uw [!DNL Salesforce] bronrekening met Adobe Experience Platform kunt verbinden gebruikend [[!DNL Flow Service]  API ](https://developer.adobe.com/experience-platform-apis/references/flow-service/).
 
@@ -63,6 +63,7 @@ Als u uw [!DNL Salesforce] -account wilt verbinden met [!DNL Flow Service] via O
 | `clientId` | De client-id wordt gebruikt in combinatie met het clientgeheim als onderdeel van OAuth2-verificatie. Met de client-id en het clientgeheim kan uw toepassing samen namens uw account werken door uw toepassing aan te duiden op [!DNL Salesforce] . |
 | `clientSecret` | Het clientgeheim wordt gebruikt in combinatie met de client-id als onderdeel van OAuth2-verificatie. Met de client-id en het clientgeheim kan uw toepassing samen namens uw account werken door uw toepassing aan te duiden op [!DNL Salesforce] . |
 | `apiVersion` | De REST API-versie van de instantie [!DNL Salesforce] die u gebruikt. De waarde voor de API-versie moet met een decimaal worden opgemaakt. Als u bijvoorbeeld API-versie `52` gebruikt, moet u de waarde invoeren als `52.0` . Als dit veld niet wordt ingevuld, gebruikt Experience Platform automatisch de meest recente beschikbare versie. Deze waarde is verplicht voor OAuth2 Client Credential-verificatie. |
+| `includeDeletedObjects` | Een booleaanse waarde die wordt gebruikt om te bepalen of zachte verwijderde records moeten worden opgenomen. Als deze optie is ingesteld op true, kunnen elektronisch verwijderde records worden opgenomen in uw [!DNL Salesforce] -query en vanuit uw account worden opgenomen in Experience Platform. Als u de configuratie niet opgeeft, wordt deze waarde standaard ingesteld op `false` . |
 | `connectionSpec.id` | De verbindingsspecificatie keert de schakelaareigenschappen van een bron, met inbegrip van authentificatiespecificaties met betrekking tot het creëren van de basis en bronverbindingen terug. De verbindingsspecificatie-id voor [!DNL Salesforce] is: `cfc0fee1-7dc0-40ef-b73e-d8b134c436f5` . |
 
 Voor meer informatie bij het gebruiken van OAuth voor [!DNL Salesforce], lees de [[!DNL Salesforce]  gids over de Stroom van de Vergunning OAuth ](https://help.salesforce.com/s/articleView?id=sf.remoteaccess_oauth_flows.htm&type=5).
@@ -162,7 +163,8 @@ curl -X POST \
             "environmentUrl": "https://acme-enterprise-3126.my.salesforce.com",
             "clientId": "xxxx",
             "clientSecret": "xxxx",
-            "apiVersion": "60.0"
+            "apiVersion": "60.0",
+            "includeDeletedObjects": true
         }
       },
       "connectionSpec": {
@@ -178,6 +180,7 @@ curl -X POST \
 | `auth.params.clientId` | De client-id die aan uw [!DNL Salesforce] -account is gekoppeld. |
 | `auth.params.clientSecret` | Het clientgeheim dat aan uw [!DNL Salesforce] -account is gekoppeld. |
 | `auth.params.apiVersion` | De REST API-versie van de instantie [!DNL Salesforce] die u gebruikt. |
+| `auth.params.includeDeletedObjects` | Een booleaanse waarde die wordt gebruikt om te bepalen of zachte verwijderde records moeten worden opgenomen. |
 | `connectionSpec.id` | The [!DNL Salesforce] connection specification ID: `cfc0fee1-7dc0-40ef-b73e-d8b134c436f5` . |
 
 +++

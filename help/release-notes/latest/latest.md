@@ -2,10 +2,10 @@
 title: Aanvullende informatie van juli 2025 voor Adobe Experience Platform
 description: Aanvullende informatie van juli 2025 voor Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: ec87cb1c8755f52233a5725aa3bb0c80a135d60c
+source-git-commit: 2a8d5576ea937cdda70f10218b5eec35613fd264
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '1617'
+ht-degree: 24%
 
 ---
 
@@ -16,8 +16,8 @@ ht-degree: 0%
 >
 >Raadpleeg de volgende documentatie voor aanvullende informatie voor andere Adobe Experience Platform-toepassingen:
 >
->- [Adobe Journey Optimizer](https://experienceleague.adobe.com/nl/docs/journey-optimizer/using/whats-new/release-notes)
->- [Adobe Journey Optimizer B2B](https://experienceleague.adobe.com/nl/docs/journey-optimizer-b2b/user/release-notes)
+>- [Adobe Journey Optimizer](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/whats-new/release-notes)
+>- [Adobe Journey Optimizer B2B](https://experienceleague.adobe.com/en/docs/journey-optimizer-b2b/user/release-notes)
 >- [Customer Journey Analytics](https://experienceleague.adobe.com/nl/docs/analytics-platform/using/releases/pre-release-notes)
 >- [Samenstelling van Federated-doelgroep](https://experienceleague.adobe.com/nl/docs/federated-audience-composition/using/e-release-notes)
 >- [Real-Time CDP Collaboration](https://experienceleague.adobe.com/nl/docs/real-time-cdp-collaboration/using/latest)
@@ -28,11 +28,11 @@ Nieuwe functies en updates van bestaande functies in Adobe Experience Platform:
 
 - [Capaciteit](#capacity)
 - [Bestemmingen](#destinations)
-- [Gegevensopname](#ingestion)
-- [Query-service](#query-service)
+- [Gegevensopname](#data-ingestion)
+- [ Dienst van de Vraag ] (#query-dienst
 - [Real-Time CDP B2B Edition](#b2b)
 - [Sandboxes](#sandboxes)
-- [Segmentatieservice](#segmentation)
+- [Segmentatieservice](#segmentation-service)
 - [Bronnen](#sources)
 
 ## Capaciteit {#capacity}
@@ -41,7 +41,7 @@ Nieuwe functies en updates van bestaande functies in Adobe Experience Platform:
 >
 >Deze functie is afhankelijk van uw regio beschikbaar voor gebruik. Voor gebruikers in Amerika, zal dit vanaf 11 augustus beschikbaar zijn. Voor gebruikers in Europa zal dit vanaf 25 augustus beschikbaar zijn. Voor gebruikers in Azië is deze vanaf 8 september beschikbaar.
 
-De capaciteit verstrekt een uitvoerige mening van 0&rbrace; begeleidingen van uw organisatie [ en geeft aanbevelingen op hoe te om potentiële capaciteitsschendingen op te lossen door uw capaciteiten op een zandbakniveau toe te wijzen. ](../../rtcdp/guardrails/overview.md) Met deze release kunt u uw capaciteit voor zowel streaming opname als streaming segmentatie bekijken.
+De capaciteit verstrekt een uitvoerige mening van 0} begeleidingen van uw organisatie [ en geeft aanbevelingen op hoe te om potentiële capaciteitsschendingen op te lossen door uw capaciteiten op een zandbakniveau toe te wijzen. ](../../rtcdp/guardrails/overview.md) Met deze release kunt u uw capaciteit voor zowel streaming opname als streaming segmentatie bekijken.
 
 Voor meer informatie, te lezen gelieve het [ overzicht van de Capaciteit ](../../landing/license-usage-and-guardrails/capacity.md).
 
@@ -62,8 +62,8 @@ Voor meer informatie, te lezen gelieve het [ overzicht van de Capaciteit ](../..
 | Accountnamen en beschrijvingen voor doelverbindingen | U kunt [ rekeningsnamen en beschrijvingen ](/help/destinations/ui/connect-destination.md) nu toevoegen wanneer het verbinden met bestemmingen, toelatend beter beheer van bestemmingen met veelvoudige rekeningen. |
 | Verbeterde gegevensstroominformatie voor Edge-doelen | De recht-spoorinformatie voor [ Adobe Target ](/help/destinations/catalog/personalization/adobe-target-v2.md) en [ de bestemmingen van de Douane Personalization ](/help/destinations/catalog/personalization/custom-personalization.md) is verbeterd om de gegevensstroomnaam te tonen, die duidelijkere zichtbaarheid in bijbehorende configuraties aanbieden datastream en die verwarring helpen verminderen wanneer het herzien van bestaande dataflows. De **[!UICONTROL Datastream ID]** -kiezer in het doelconfiguratiescherm is bijgewerkt naar **[!UICONTROL Datastream]** voor meer duidelijkheid in de gebruikersinterface. |
 | Zichtbaarheid van marketingacties in doelselectie | Marketingacties worden nu weergegeven in de rechtertrack van het tabblad **[[!UICONTROL Browse]](/help/destinations/ui/destinations-workspace.md#browse)** in de werkruimte Doelen en op de pagina **[[!UICONTROL Dataflow runs]](/help/dataflows/ui/monitor-destinations.md)** , zodat wijzigingen in marketingacties direct zichtbaar zijn zonder dat u naar de weergavepagina hoeft te navigeren. Deze verbetering verbetert de gebruikerservaring door het gemakkelijker te maken om marketing actieconfiguraties tijdens bestemmingsopstelling te verifiëren. |
-| [!BADGE &#x200B; Beperkte bèta &#x200B;]{type=Informative} geeft marketing acties voor bestemmingen uit | U kunt [ marketing acties ](/help/destinations/ui/edit-activation.md#edit-marketing-actions) voor bestaande bestemmingen nu uitgeven. Deze functie is momenteel in beperkte bèta. Neem contact op met uw Adobe-vertegenwoordiger om toegang aan te vragen. |
-| [!BADGE &#x200B; Beperkte bèta &#x200B;]{type=Informative} geeft bestemmingen uit | U kunt [ uw bestemmingsconfiguratie ](/help/destinations/ui/edit-destination.md) nu uitgeven nadat het is gecreeerd. Deze functie is momenteel in beperkte bèta. Neem contact op met uw Adobe-vertegenwoordiger om toegang aan te vragen. |
+| [!BADGE  Beperkte bèta ]{type=Informative} geeft marketing acties voor bestemmingen uit | U kunt [ marketing acties ](/help/destinations/ui/edit-activation.md#edit-marketing-actions) voor bestaande bestemmingen nu uitgeven. Deze functie is momenteel in beperkte bèta. Neem contact op met uw Adobe-vertegenwoordiger om toegang aan te vragen. |
+| [!BADGE  Beperkte bèta ]{type=Informative} geeft bestemmingen uit | U kunt [ uw bestemmingsconfiguratie ](/help/destinations/ui/edit-destination.md) nu uitgeven nadat het is gecreeerd. Deze functie is momenteel in beperkte bèta. Neem contact op met uw Adobe-vertegenwoordiger om toegang aan te vragen. |
 
 **Oplossingen**
 
@@ -155,5 +155,6 @@ Experience Platform biedt een RESTful-API en een interactieve gebruikersinterfac
 | Functie | Beschrijving |
 | --- | --- |
 | Ondersteuning voor het vastleggen van wijzigingsgegevens in bepaalde bronnen met de API van [!DNL Flow Service] | U kunt nu gegevensstromen tot stand brengen die veranderingsgegevens toelaten vangen voor stijgende opname gebruikend bronschakelaars. Met deze functie kunnen klanten het gegevenstype wijzigen voor incrementele inname, waardoor de gegevensversheid toeneemt en de verwerkingsoverhead afneemt. Voor meer informatie, lees de documentatie over [ gebruikend veranderingsgegevens vangen voor bronnen ](../../sources/tutorials/api/change-data-capture.md) |
+| Ondersteuning voor zachte verwijdering van records in [!DNL Salesforce] | De [!DNL Salesforce] -bron ondersteunt nu het opnemen van schermverwijderde records via een optionele `includeDeletedObjects` -parameter. Wanneer deze waarde is ingesteld op true, kunnen klanten geneste verwijderde records opnemen in hun [!DNL Salesforce] query&#39;s en deze records naar Experience Platform overbrengen. Lees de [[!DNL Salesforce]  brondocumentatie ](../../sources/connectors/crm/salesforce.md) voor meer informatie. |
 
 Voor meer informatie raadpleegt u het [overzicht van bronnen](../../sources/home.md).
