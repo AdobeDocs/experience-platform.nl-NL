@@ -4,9 +4,9 @@ title: Activeringsgegevens bewerken
 type: Tutorial
 description: Voer de stappen in dit artikel uit om een bestaande activeringsgegevensstroom in Adobe Experience Platform te bewerken.
 exl-id: 0d79fbff-bfde-4109-8353-c7530e9719fb
-source-git-commit: 24951f7680f134beb64c7679a94bac9b18042af1
+source-git-commit: ec87cb1c8755f52233a5725aa3bb0c80a135d60c
 workflow-type: tm+mt
-source-wordcount: '830'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
@@ -20,6 +20,7 @@ In Adobe Experience Platform kunt u verschillende componenten van bestaande acti
 * [Toegewezen kenmerken en identiteiten bewerken](#edit-mapped-attributes)
 * [Het activeringsschema en de exportfrequentie bewerken](#edit-schedule-frequency)
 * [ voeg extra datasets ](#add-datasets) aan activeringswerkschema toe
+* [ geef marketing acties ](#edit-marketing-actions) voor uw activeringsdataflows uit
 * [ pas toegangslabels ](#apply-access-labels) op uitgevoerde gegevens toe
 * [ geeft namen en beschrijvingen ](#edit-names-descriptions) voor uw activeringsdataflows uit
 
@@ -108,6 +109,23 @@ Selecteer **[!UICONTROL Export datasets]** in het rechterspoor om extra datasets
 >Deze optie is slechts zichtbaar voor [ bestemmingen die datasetuitvoer ](export-datasets.md#supported-destinations) steunen.
 
 {het beeld van 0} Experience Platform UI die de Datasets van de Uitvoer dataflow looppas optie toont.![](../assets/ui/edit-activation/export-datasets.png)
+
+## [!BADGE  Beta ]{type=Informative} geeft marketing acties uit {#edit-marketing-actions}
+
+>[!NOTE]
+>
+>Deze eigenschap is momenteel in **bèta**. Neem contact op met uw Adobe-vertegenwoordiger als u toegang tot de site wilt aanvragen.
+
+U kunt marketingacties toevoegen of verwijderen die u instelt wanneer u aanvankelijk verbinding maakt met de bestemming.
+
+Selecteer **[!UICONTROL Edit marketing actions]** in het rechterspoor om het selectiescherm voor marketingacties te openen.
+
+![ het beeld van Experience Platform UI die uitgeeft de marketing actiesoptie.](../assets/ui/edit-activation/edit-marketing-actions.png)
+
+Selecteer de toepasselijke marketingacties en selecteer vervolgens **[!UICONTROL Save]** om de wijzigingen toe te passen.
+
+![ het beeld van Experience Platform UI die uitgeeft het marketing actiesscherm.](../assets/ui/edit-activation/edit-marketing-actions-screen.png)
+
 
 ## Toegangslabels toepassen {#apply-access-labels}
 
