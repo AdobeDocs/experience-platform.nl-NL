@@ -1,12 +1,12 @@
 ---
 title: Accountsoorten
 description: Leer hoe u accountpubliek kunt maken en gebruiken om accountprofielen in downstreamdoelen te gebruiken.
-badgeB2B: label="B2B edition" type="Informative" url="https://helpx.adobe.com/nl/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
-badgeB2P: label="B2P Edition" type="Informative" url="https://helpx.adobe.com/nl/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html newtab=true"
+badgeB2B: label="B2B edition" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
+badgeB2P: label="B2P Edition" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2p-edition-prime-and-ultimate-packages.html newtab=true"
 exl-id: 047930d6-939f-4418-bbcb-8aafd2cf43ba
-source-git-commit: f6d700087241fb3a467934ae8e64d04f5c1d98fa
+source-git-commit: 1e508ec11b6d371524c87180a41e05ffbacc2798
 workflow-type: tm+mt
-source-wordcount: '1465'
+source-wordcount: '1498'
 ht-degree: 0%
 
 ---
@@ -19,7 +19,11 @@ ht-degree: 0%
 
 Met de segmentatie van uw account kunt u in Adobe Experience Platform de volledige versnelling en verfijning van de segmentatieervaring van marketingmedewerkers van op mensen gebaseerde doelgroepen naar op account gebaseerde doelgroepen brengen.
 
-Accountpubliek kan worden gebruikt als input voor op account gebaseerde bestemmingen, zodat u zich kunt richten op de personen binnen die accounts in downstreamservices. Bijvoorbeeld, kunt u op rekening-gebaseerde publiek gebruiken om verslagen van alle rekeningen terug te winnen die **&#x200B;**&#x200B;geen contactinformatie voor om het even welke mensen met de titel HoofdWerkende Functionaris (COO) of HoofdMarketingFunctionaris (CMO) hebben.
+Accountpubliek kan worden gebruikt als input voor op account gebaseerde bestemmingen, zodat u zich kunt richten op de personen binnen die accounts in downstreamservices. Bijvoorbeeld, kunt u op rekening-gebaseerde publiek gebruiken om verslagen van alle rekeningen terug te winnen die **** geen contactinformatie voor om het even welke mensen met de titel HoofdWerkende Functionaris (COO) of HoofdMarketingFunctionaris (CMO) hebben.
+
+>[!NOTE]
+>
+>Als onderdeel van de B2B-architectuurupgrade worden de schattingen van de publieksgrootte voor soorten publiek met B2B-entiteiten nu precies berekend. Deze schattingen zijn beschikbaar tijdens de voorvertoning en bieden nauwkeurigere en betrouwbaardere inzichten voor het publiek dat complexe B2B-relaties omvat. <br> voor meer informatie, lees het [ overzicht van de de architectuurverbeteringen van Real-Time CDP B2B edition ](../../rtcdp/b2b-architecture-upgrade.md).
 
 ## Terminologie {#terminology}
 
@@ -126,8 +130,8 @@ In de volgende sectie vindt u aanvullende informatie over het accountpubliek.
 
 >[!CONTEXTUALHELP]
 >id="platform_audiences_account_constraint_eventLookbackWindow"
->title="Maximale fout in terugzoekvenster"
->abstract="Het maximale terugkijkvenster voor Experience Events is 30 dagen."
+>title="Venster Opzoeken"
+>abstract="Gebruik het terugkijkvenster om de volledige geschiedenis van persoon-vlakke gebeurtenissen te bekijken."
 
 >[!CONTEXTUALHELP]
 >id="platform_audiences_account_constraint_combinationMaxDepth"
@@ -194,20 +198,21 @@ In de volgende sectie vindt u aanvullende informatie over het accountpubliek.
 >title="Inbreuk op beperking"
 >abstract="Het publiek schendt een beperking. Lees het gekoppelde document voor meer informatie."
 
-Wanneer het gebruiken van rekeningspubliek, moet het publiek **&#x200B;**&#x200B;aan de volgende beperkingen voldoen:
+Wanneer het gebruiken van rekeningspubliek, moet het publiek **** aan de volgende beperkingen voldoen:
 
-- Het maximumterugkijkvenster voor de Gebeurtenissen van de Ervaring is **30 dagen**.
 - De maximumdiepte van genestelde containers is **5**.
    - Dit betekent dat u **niet** meer dan vijf genestelde containers kunt hebben wanneer het creëren van uw publiek.
 - Het maximumaantal regels binnen één enkele container is **5**.
    - Dit betekent dat uw publiek **niet** meer dan vijf regels kan hebben die uw publiek samenstellen.
 - Het maximumaantal dwars entiteiten die kunnen worden gebruikt is **5**.
    - Een kruisentiteit is wanneer u tussen verschillende entiteiten in uw publiek verandert. Bijvoorbeeld, ga van een Rekening naar een Persoon aan een Lijst van de Marketing.
-- De entiteiten van de douane **kunnen niet** worden gebruikt.
 - Het maximumaantal waarden dat voor één enkel gebied kan worden gecontroleerd is **50**.
    - Als u bijvoorbeeld een veld hebt met de naam &quot;City&quot;, kunt u die waarde controleren op 50 namen van steden.
-- Het publiek van de rekening **kan niet** gebruiken `inSegment` gebeurtenissen.
 - Het publiek van de rekening **kan** geen opeenvolgende gebeurtenissen gebruiken.
 - Het publiek van de rekening **kan** geen kaarten gebruiken.
 - De maximumdiepte van genestelde series is **5**.
 - Het maximumaantal genestelde voorwerpen is **10**.
+
+<!-- - The maximum lookback window for Experience Events is **30 days**. -->
+<!-- - Account audiences **cannot** use `inSegment` events. -->
+<!-- - Custom entities **cannot** be used. -->
