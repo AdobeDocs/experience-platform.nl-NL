@@ -110,7 +110,7 @@ Selecteer **[!UICONTROL Export datasets]** in het rechterspoor om extra datasets
 
 {het beeld van 0} Experience Platform UI die de Datasets van de Uitvoer dataflow looppas optie toont.![](../assets/ui/edit-activation/export-datasets.png)
 
-## [!BADGE  Beta ]{type=Informative} geeft marketing acties uit {#edit-marketing-actions}
+## [!BADGE &#x200B; Beta &#x200B;]{type=Informative} geeft marketing acties uit {#edit-marketing-actions}
 
 >[!NOTE]
 >
