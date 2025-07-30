@@ -27,7 +27,7 @@ Verschillende componenten van een bestaande doelverbinding bewerken:
 
 1. Ga naar **[!UICONTROL Destinations]** > **[!UICONTROL Browse]**.
 2. Selecteer het gewenste doel dat u wilt bewerken.
-3. Selecteer de ellips (`...`) in de [!UICONTROL Name] kolom en gebruik ![ uitgeven bestemmingscontrole ](/help/images/icons/edit.png)**[!UICONTROL Edit destination]**controle om bestaande bestemmingsverbindingen uit te geven.
+3. Selecteer de ellips (`...`) in de [!UICONTROL Name] kolom en gebruik ![ uitgeven bestemmingscontrole ](/help/images/icons/edit.png)**[!UICONTROL Edit destination]**&#x200B;controle om bestaande bestemmingsverbindingen uit te geven.
 4. Bewerk de gewenste instellingen in het modale venster. Selecteer **[!UICONTROL Save]** wanneer gereed.
 
 In het bewerkingsbestemmingsvenster, kunt u om het even welke montages bijwerken die u vormde toen u aanvankelijk met de bestemming verbond. Deze instellingen zijn anders op basis van het doelplatform dat u bijwerkt.
