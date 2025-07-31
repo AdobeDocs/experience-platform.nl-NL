@@ -282,12 +282,12 @@ Om deze updates in VEC te maken, zijn de volgende stappen vereist:
 2. Voeg op de site producten toe aan het winkelwagentje.
 3. Selecteer het winkelwagentje in de rechterbovenhoek van de site.
 4. Selecteer **Controle uw Orde**.
-5. Selecteer het **Uitdrukkelijke 1} radioknoop van de Levering {** Voorkeur van de Levering **.**
+5. Selecteer het **Uitdrukkelijke 1&rbrace; radioknoop van de Levering &lbrace;** Voorkeur van de Levering **.**
 6. Selecteer **samenstellen** in VEC.
 7. Verander de **de knoopkleur van het Betalen** in rood.
 
 >[!NOTE]
 >
->De &quot;controle-uitdrukkelijke&quot;Mening verschijnt niet in het paneel van Veranderingen tot het **Uitdrukkelijke radioknoop van de Levering** wordt geselecteerd. Dit is omdat de `sendEvent()` functie wordt uitgevoerd wanneer het **Uitdrukkelijke 2} radioknoop van de Levering {wordt geselecteerd, daarom is VEC niet bewust van de &quot;controle-uit-uitdrukkelijke&quot;Mening tot het radioknoop wordt geselecteerd.**
+>De &quot;controle-uitdrukkelijke&quot;Mening verschijnt niet in het paneel van Veranderingen tot het **Uitdrukkelijke radioknoop van de Levering** wordt geselecteerd. Dit is omdat de `sendEvent()` functie wordt uitgevoerd wanneer het **Uitdrukkelijke 2&rbrace; radioknoop van de Levering &lbrace;wordt geselecteerd, daarom is VEC niet bewust van de &quot;controle-uit-uitdrukkelijke&quot;Mening tot het radioknoop wordt geselecteerd.**
 
 ![ Visuele Composer die van de Ervaring leveringsvoorkeur selecteur tonen.](assets/vec-delivery-preference.png)

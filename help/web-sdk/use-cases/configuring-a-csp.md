@@ -59,7 +59,7 @@ style-src 'unsafe-inline'
 
 >[!NOTE]
 >
->Adobe **** adviseert niet het specificeren `unsafe-inline` omdat het voor om het even welk manuscript om op de pagina toestaat te lopen, die de voordelen van CSP beperkt.
+>Adobe **&#x200B;**&#x200B;adviseert niet het specificeren `unsafe-inline` omdat het voor om het even welk manuscript om op de pagina toestaat te lopen, die de voordelen van CSP beperkt.
 
 ## Een CSP configureren voor In-App Messaging {#in-app-messaging}
 

@@ -64,7 +64,7 @@ Wanneer moderne browsers een gebruiker naar een webserver sturen, wordt de volle
 
 ## Browserondersteuning {#browser-support}
 
-{de wenken van de de agentencliënt van de Gebruiker 1} werden geïntroduceerd met [ versie 89.](https://developer.chrome.com/docs/privacy-sandbox/user-agent/)[!DNL Google Chrome]
+{de wenken van de de agentencliënt van de Gebruiker 1} werden geïntroduceerd met [ versie 89.](https://developer.chrome.com/docs/privacy-sandbox/user-agent/) [!DNL Google Chrome]
 
 Aanvullende op chroom gebaseerde browsers ondersteunen de client Hints-API, zoals:
 
