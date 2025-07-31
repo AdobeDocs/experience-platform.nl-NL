@@ -5,7 +5,7 @@ title: Het publiek activeren naar batchbestemmingen via de API voor ad-hocactive
 description: Dit artikel illustreert de end-to-end workflow voor het activeren van het publiek via de API voor ad-hocactivering, inclusief de segmentatietaken die plaatsvinden vóór activering.
 type: Tutorial
 exl-id: 1a09f5ff-0b04-413d-a9f6-57911a92b4e4
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 35429ec2dffacb9c0f2c60b608561988ea487606
 workflow-type: tm+mt
 source-wordcount: '1617'
 ht-degree: 0%
@@ -103,7 +103,7 @@ Nadat u een activeringsstroom voor uw partijbestemming vormt, beginnen de geplan
 
 Voordat u de ad-hocactiveringstaak kunt uitvoeren, moet u de id van de laatste doelexporttaak opvragen. U moet deze id doorgeven in de aanvraag voor een ad-hocactiveringstaak.
 
-Volg de hier beschreven instructies [&#128279;](../../segmentation/api/export-jobs.md#retrieve-list) om een lijst van alle banen van de publieksuitvoer terug te winnen.
+Volg de hier beschreven instructies [ ](../../segmentation/api/export-jobs.md#retrieve-list) om een lijst van alle banen van de publieksuitvoer terug te winnen.
 
 In de reactie, zoek het eerste verslag dat het schemabezit hieronder omvat.
 

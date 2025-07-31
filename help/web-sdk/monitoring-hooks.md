@@ -1,19 +1,19 @@
 ---
-title: Koppelingen voor Adobe Experience Platform Web SDK controleren
-description: Leer hoe te om de controlehaken te gebruiken die door het Web SDK van Adobe Experience Platform worden verstrekt om uw implementatie te zuiveren en de logboeken van SDK van het Web te vangen.
-source-git-commit: 3dacc991fd7760c1c358bec07aca83ffeb4f4f4d
+title: Haken voor Adobe Experience Platform Web SDK controleren
+description: Leer hoe u de controlemakken van Adobe Experience Platform Web SDK gebruikt om fouten in uw implementatie op te sporen en Web SDK-logboeken vast te leggen.
+exl-id: 56633311-2f89-4024-8524-57d45c7d38f7
+source-git-commit: 35429ec2dffacb9c0f2c60b608561988ea487606
 workflow-type: tm+mt
 source-wordcount: '1244'
 ht-degree: 1%
 
 ---
 
+# Houten voor Web SDK controleren
 
-# De haken van de controle voor Web SDK
+De Adobe Experience Platform Web SDK bevat controleluks die u kunt gebruiken om verschillende systeemgebeurtenissen te controleren. Deze hulpmiddelen zijn nuttig om uw eigen het zuiveren hulpmiddelen te ontwikkelen en de logboeken van SDK van het Web te vangen.
 
-De SDK van het Web van Adobe Experience Platform omvat controlemaakjes die u kunt gebruiken om diverse systeemgebeurtenissen te controleren. Deze hulpmiddelen zijn nuttig om uw eigen het zuiveren hulpmiddelen te ontwikkelen en de logboeken van SDK van het Web te vangen.
-
-SDK van het Web brengt de controlerende functies teweeg ongeacht of u [ het zuiveren ](commands/configure/debugenabled.md) hebt toegelaten.
+Het Web SDK brengt de controlerende functies teweeg ongeacht of u [ het zuiveren ](commands/configure/debugenabled.md) hebt toegelaten.
 
 ## `onInstanceCreated` {#onInstanceCreated}
 
@@ -33,7 +33,7 @@ onInstanceCreated(data) {
 
 ## `onInstanceConfigured` {#onInstanceConfigured}
 
-Deze callback functie wordt teweeggebracht door het Web SDK wanneer het [`configure`](commands/configure/overview.md) bevel met succes wordt opgelost. Zie het voorbeeld hieronder voor meer informatie over de functieparameters.
+Deze callbackfunctie wordt geactiveerd door de Web SDK wanneer de opdracht [`configure`](commands/configure/overview.md) correct is omgezet. Zie het voorbeeld hieronder voor meer informatie over de functieparameters.
 
 ```js
  onInstanceConfigured(data) {
@@ -49,7 +49,7 @@ Deze callback functie wordt teweeggebracht door het Web SDK wanneer het [`config
 
 ## `onBeforeCommand` {#onBeforeCommand}
 
-Deze callback functie wordt teweeggebracht door Web SDK alvorens een ander bevel wordt uitgevoerd. U kunt deze functie gebruiken om de configuratieopties van een specifiek bevel terug te winnen. Zie het voorbeeld hieronder voor meer informatie over de functieparameters.
+Deze callback functie wordt teweeggebracht door SDK van het Web alvorens een ander bevel wordt uitgevoerd. U kunt deze functie gebruiken om de configuratieopties van een specifiek bevel terug te winnen. Zie het voorbeeld hieronder voor meer informatie over de functieparameters.
 
 ```js
 onBeforeCommand(data) {
@@ -83,7 +83,7 @@ onCommandResolved(data) {
 | `data.instanceName` | String | De naam van de globale variabele waar de instantie van SDK van het Web wordt opgeslagen. |
 | `data.commandName` | String | De naam van het uitgevoerde bevel van SDK van het Web. |
 | `data.options` | Object | Een object dat de opties bevat die aan de opdracht Web SDK zijn doorgegeven. |
-| `data.result` | Object | Een voorwerp dat het resultaat van het bevel van SDK van het Web bevat. |
+| `data.result` | Object | Een object dat het resultaat bevat van de opdracht Web SDK. |
 
 ## `onCommandRejected` {#onCommandRejected}
 
@@ -177,7 +177,7 @@ onNetworkError(data) {
 
 ## `onBeforeLog` {#onBeforeLog}
 
-Deze callback functie wordt teweeggebracht alvorens SDK van het Web om het even wat aan de console registreert. Zie het voorbeeld hieronder voor meer informatie over de functieparameters.
+Deze callback functie wordt teweeggebracht alvorens het Web SDK om het even wat aan de console registreert. Zie het voorbeeld hieronder voor meer informatie over de functieparameters.
 
 ```js
 onBeforeLog(data) {
@@ -214,7 +214,7 @@ Deze callbackfunctie wordt geactiveerd door de component `personalization` in ve
 | `data.instanceName` | String | De naam van de globale variabele waar de instantie van SDK van het Web wordt opgeslagen. |
 | `data.componentName` | String | De naam van de component die het logboekbericht produceerde. |
 | `data.payload` | Object | Het payload-object dat wordt omgezet in JSON-indeling en in de hoofdtekst van de aanvraag wordt verzonden via een `POST` -methode. |
-| `data.status` | String | De component `personalization` informeert de Web SDK over de status van rendering.  Ondersteunde waarden: <ul><li>`rendering-started`: Geeft aan dat de Web SDK op het punt staat voorstellingen te renderen. Voordat de SDK van het Web een beslissingsbereik of een weergave begint te renderen, kunt u in het `data` -object de voorstellingen zien die op het punt staan te worden gerenderd door de component `personalization` en de naam van het bereik.</li><li>`no-offers`: Geeft aan dat er geen payload is ontvangen voor de aangevraagde parameters.</li> <li>`rendering-failed`: geeft aan dat de Web SDK er niet in is geslaagd een voorstel te renderen.</li><li>`rendering-succeeded`: geeft aan dat rendering is voltooid voor een beslissingsbereik.</li> <li>`rendering-redirect`: Geeft aan dat Web SDK een omleidingsvoorstel rendert.</li></ul> |
+| `data.status` | String | De component `personalization` informeert de Web SDK over de status van rendering.  Ondersteunde waarden: <ul><li>`rendering-started`: Geeft aan dat de Web SDK op het punt staat voorstellingen te renderen. Voordat de Web SDK een beslissingsbereik of een weergave begint te renderen, kunt u in het `data` -object de voorstellingen zien die door de `personalization` -component en de bereiknaam worden gerenderd.</li><li>`no-offers`: Geeft aan dat er geen payload is ontvangen voor de aangevraagde parameters.</li> <li>`rendering-failed`: geeft aan dat Web SDK geen voorstel heeft weergegeven.</li><li>`rendering-succeeded`: geeft aan dat rendering is voltooid voor een beslissingsbereik.</li> <li>`rendering-redirect`: geeft aan dat Web SDK een omleidingsvoorstel zal renderen.</li></ul> |
 
 ## `onContentHiding` {#onContentHiding}
 
@@ -234,9 +234,9 @@ onContentHiding(data) {
 | `data.componentName` | String | De naam van de component die het logboekbericht produceerde. |
 | `data.status` | String | De component `personalization` informeert de Web SDK over de status van rendering. Ondersteunde waarden: <ul><li>`hide-containers`</li><li>`show-containers`</ul> |
 
-## Hoe te om controlehaken te specificeren wanneer het gebruiken van het pakket NPM {#specify-monitoris-npm}
+## Hoe te om controlehaken te specificeren wanneer het gebruiken van het pakket NPM {#specify-monitoring-npm}
 
-Als u SDK van het Web door het [ NPM pakket ](install/npm.md) gebruikt, kunt u controlehaken in de `createInstasnce` functie specificeren, zoals hieronder getoond.
+Als u het Web SDK door het [ NPM pakket ](install/npm.md) gebruikt, kunt u controlehaken in de `createInstance` functie specificeren, zoals hieronder getoond.
 
 ```js
 var monitor = {
@@ -253,9 +253,9 @@ alloy("sendEvent", { ... });
 
 ## Voorbeeld {#example}
 
-De SDK van het Web zoekt naar een serie van voorwerpen in een globale variabele genoemd `__alloyMonitors`.
+De Web SDK zoekt naar een array met objecten in een algemene variabele met de naam `__alloyMonitors` .
 
-Om alle gebeurtenissen van SDK van het Web te vangen, moet u uw controlehaken bepalen alvorens de code van SDK van het Web op uw pagina wordt geladen. Elke controlemethode vangt een gebeurtenis van SDK van het Web.
+Als u alle Web SDK-gebeurtenissen wilt vastleggen, moet u uw controlemakken definiëren voordat de Web SDK-code op uw pagina wordt geladen. Elke controlemethode vangt een gebeurtenis van SDK van het Web.
 
 U kunt controlehaken *bepalen nadat* de code van SDK van het Web op uw pagina laadt, maar om het even welke haken die vóór paginading hebben teweeggebracht zullen *niet* worden gevangen.
 

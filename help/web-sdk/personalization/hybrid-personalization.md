@@ -3,7 +3,7 @@ title: Hybride personalisatie met Web SDK en Edge Network API
 description: In dit artikel wordt getoond hoe u de Web SDK in combinatie met de Edge Network API kunt gebruiken om hybride personalisatie op uw wegeigenschappen in te voeren.
 keywords: personalisatie; hybride; server-API; server-side; hybride implementatie;
 exl-id: 506991e8-701c-49b8-9d9d-265415779876
-source-git-commit: 7b91f4f486db67d4673877477a6be8287693533a
+source-git-commit: 35429ec2dffacb9c0f2c60b608561988ea487606
 workflow-type: tm+mt
 source-wordcount: '1188'
 ht-degree: 1%
@@ -14,7 +14,7 @@ ht-degree: 1%
 
 ## Overzicht {#overview}
 
-Hybdrid verpersoonlijking beschrijft het proces om verpersoonlijkingsinhoud server-kant terug te winnen, gebruikend [ Edge Network API ](https://developer.adobe.com/data-collection-apis/docs/api/), en het terug te geven cliënt-kant, gebruikend [ SDK van het Web ](../home.md).
+De hybride verpersoonlijking beschrijft het proces om verpersoonlijkingsinhoud server-kant terug te winnen, gebruikend [ Edge Network API ](https://developer.adobe.com/data-collection-apis/docs/api/), en het terug te geven cliënt-kant, gebruikend [ SDK van het Web ](../home.md).
 
 U kunt hybride personalisatie met verpersoonlijkingsoplossingen zoals Adobe Target, Adobe Journey Optimizer, of Offer Decisioning gebruiken, het verschil is de inhoud van de [!UICONTROL Edge Network API] lading.
 
@@ -39,7 +39,7 @@ In het onderstaande stroomdiagram wordt de volgorde beschreven van de stappen di
 1. De Edge Network API retourneert de personalisatie-inhoud naar uw toepassingsserver.
 1. De toepassingsserver keert een reactie van HTML op cliëntbrowser terug, die de [ identiteit en clusterkoekjes ](#cookies) bevatten.
 1. Op de clientpagina wordt de opdracht [!DNL Web SDK] `applyResponse` aangeroepen, waarbij de koppen en de hoofdtekst van het [!UICONTROL Edge Network API] -antwoord uit de vorige stap worden doorgegeven.
-1. [!DNL Web SDK] geeft de aanbiedingen van het Doel [[!DNL Visual Experience Composer (VEC)] ](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html?lang=nl-NL) en de punten van het Kanaal van Journey Optimizer automatisch terug, omdat de `renderDecisions` vlag aan `true` wordt geplaatst.
+1. [!DNL Web SDK] geeft de aanbiedingen van het Doel [[!DNL Visual Experience Composer (VEC)] ](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html) en de punten van het Kanaal van Journey Optimizer automatisch terug, omdat de `renderDecisions` vlag aan `true` wordt geplaatst.
 1. Doelformuliergebaseerde [!DNL HTML]/[!DNL JSON] -aanbiedingen en Journey Optimizer-ervaringen op basis van code worden handmatig toegepast via de `applyProposition` -methode om de [!DNL DOM] bij te werken op basis van de personalisatie-inhoud in het voorstel.
 1. Voor op vorm-gebaseerde [!DNL HTML]/ [!DNL JSON] aanbiedingen van het Doel en op code-gebaseerde ervaringen van Journey Optimizer, moeten de vertoningsgebeurtenissen manueel worden verzonden om erop te wijzen wanneer de teruggekeerde inhoud is getoond. Dit gebeurt via de opdracht `sendEvent` .
 
@@ -92,7 +92,7 @@ Als er geen locatiehint (dus geen cookie) aanwezig is, gebruikt u de standaardho
 
 >[!TIP]
 >
->Als beste praktijken, zou u een lijst van toegestane plaatsen moeten gebruiken. Zo voorkomt u dat de locatiehint wordt gematigd, aangezien deze via cookies aan de clientzijde wordt geleverd.
+>Als beste praktijken, zou u een lijst van toegestane plaatsen moeten gebruiken. Zo voorkomt u dat er met de locatiehint wordt geknoeid, aangezien deze via cookies aan de clientzijde wordt geleverd.
 
 ## Analytische implicaties {#analytics}
 

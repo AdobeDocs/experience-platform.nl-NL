@@ -2,7 +2,7 @@
 title: Ondersteuning voor Web In-app Messaging in Web SDK configureren
 description: Leer hoe u de Web SDK-tagextensie configureert voor ondersteuning van Web In-app Messaging.
 exl-id: 90a19ef4-e94c-4f16-a26a-8919ad2dbd6f
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 35429ec2dffacb9c0f2c60b608561988ea487606
 workflow-type: tm+mt
 source-wordcount: '886'
 ht-degree: 0%
@@ -19,9 +19,9 @@ Door in-app berichten te gebruiken, kunt u effectief met uw publiek in gesprek g
 
 >[!IMPORTANT]
 >
->Het Overseinen van het Web in-app is een [ Adobe Journey Optimizer ](https://experienceleague.adobe.com/docs/journey-optimizer/using/ajo-home.html?lang=nl-NL) eigenschap, die het Web SDK gebruikt om de gepersonaliseerde inhoud te leveren.
+>Het Overseinen van het Web in-app is een [ Adobe Journey Optimizer ](https://experienceleague.adobe.com/docs/journey-optimizer/using/ajo-home.html) eigenschap, die het Web SDK gebruikt om de gepersonaliseerde inhoud te leveren.
 >
->Voor gedetailleerde instructies op hoe te om uw het Overseinen van het Web in-App campagne te vormen, zie de [ documentatie van Adobe Journey Optimizer ](https://experienceleague.adobe.com/docs/journey-optimizer/using/in-app/create-in-app-web.html?lang=nl-NL).
+>Voor gedetailleerde instructies op hoe te om uw het Overseinen van het Web in-App campagne te vormen, zie de [ documentatie van Adobe Journey Optimizer ](https://experienceleague.adobe.com/docs/journey-optimizer/using/in-app/create-in-app-web.html).
 
 
 ## Vereisten {#prerequisites}
@@ -44,7 +44,7 @@ Voor meer informatie over het vormen van CSP, zie de [ specifieke documentatie ]
 
 Verwijs naar de [ pagina van de de agentenconfiguratie van SDK van het Web ](../../tags/extensions/client/web-sdk/web-sdk-extension-configuration.md) om te begrijpen waar u de hieronder beschreven montages kunt vinden.
 
-Nadat u [&#128279;](../../tags/extensions/client/web-sdk/web-sdk-extension-configuration.md#install-the-web-sdk-tag-extension) de de markeringsuitbreiding van SDK van het Web hebt geïnstalleerd, volg de stappen hieronder om de uitbreiding voor Web in-app Overseinen te vormen.
+Nadat u [ ](../../tags/extensions/client/web-sdk/web-sdk-extension-configuration.md#install-the-web-sdk-tag-extension) de de markeringsuitbreiding van SDK van het Web hebt geïnstalleerd, volg de stappen hieronder om de uitbreiding voor Web in-app Overseinen te vormen.
 
 Schakel in de sectie **[!UICONTROL Personalization]** de optie **[!UICONTROL Enable personalization storage]** in. Met deze optie kan de SDK van het Web bijhouden welke ervaringen de gebruiker heeft gezien bij het laden van pagina&#39;s.
 
@@ -71,7 +71,7 @@ Selecteer het markeringsbezit dat uw uitbreiding van SDK van het Web bevat, en [
 
 Vervolgens moet u een handeling toevoegen aan de regel die u hebt gemaakt.
 
-1. Selecteer **[!UICONTROL Add]** in de sectie [!DNL Actions] .
+1. Selecteer [!DNL Actions] in de sectie **[!UICONTROL Add]** .
    ![ Beeld dat uitgeeft regelscherm.](assets/web-in-app-messaging/add-action.png)
 
 2. Gebruik de volgende **[!UICONTROL Action]** -instellingen:
@@ -105,14 +105,14 @@ Selecteer het markeringsbezit dat uw uitbreiding van SDK van het Web bevat, en [
 
 1. **[!UICONTROL Extension]**: [!UICONTROL Core]
 2. **[!UICONTROL Event Type]**: [!UICONTROL Click]
-3. Stel de trigger voor een specifiek element op de pagina in, herkenbaar aan een CSS-kiezer van uw keuze.
+3. Stel de trigger in voor een specifiek element op de pagina dat wordt geïdentificeerd door een CSS-kiezer van uw keuze.
 
    ![ Beeld dat het scherm van de gebeurtenisconfiguratie toont.](assets/web-in-app-messaging/event-configuration-manual.png)
 
 
 Vervolgens moet u een handeling toevoegen aan de regel die u hebt gemaakt.
 
-1. Selecteer **[!UICONTROL Add]** in de sectie [!DNL Actions] .
+1. Selecteer [!DNL Actions] in de sectie **[!UICONTROL Add]** .
    ![ Beeld dat uitgeeft regelscherm.](assets/web-in-app-messaging/add-action.png)
 
 2. Gebruik de volgende **[!UICONTROL Action]** -instellingen:
@@ -184,5 +184,5 @@ Met de configuratieoptie `personalizationStorageEnabled` kunt u ervoor kiezen om
 
 In de [ configuratie van SDK van het Web ](../commands/configure/overview.md) plaats de `personalizationStorageEnabled` optie volgens uw behoeften:
 
-* `personalizationStorageEnabled: true` brengt het in-app bericht met de frequentie teweeg u in de [ campagne van Adobe Journey Optimizer ](https://experienceleague.adobe.com/docs/journey-optimizer/using/in-app/create-in-app-web.html?lang=nl-NL#configure-inapp) bepaalde.
+* `personalizationStorageEnabled: true` brengt het in-app bericht met de frequentie teweeg u in de [ campagne van Adobe Journey Optimizer ](https://experienceleague.adobe.com/docs/journey-optimizer/using/in-app/create-in-app-web.html#configure-inapp) bepaalde.
 * `personalizationStorageEnabled: false` activeert het bericht in de app bij het laden van elke pagina.

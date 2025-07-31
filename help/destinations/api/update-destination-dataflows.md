@@ -5,7 +5,7 @@ title: Doelgegevens bijwerken met de Flow Service API
 type: Tutorial
 description: Deze zelfstudie behandelt de stappen voor het bijwerken van een doelgegevensstroom. Leer hoe u de gegevensstroom in- of uitschakelt, de basisinformatie bijwerkt of soorten publiek en kenmerken toevoegt en verwijdert met behulp van de Flow Service API.
 exl-id: 3f69ad12-940a-4aa1-a1ae-5ceea997a9ba
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 35429ec2dffacb9c0f2c60b608561988ea487606
 workflow-type: tm+mt
 source-wordcount: '2410'
 ht-degree: 1%
@@ -646,7 +646,7 @@ Zie de voorbeelden hieronder voor meer voorbeelden van publiekscomponenten die u
 
 +++ Klik hier om een voorbeeld te zien waarin een doelpubliek dat wordt geëxporteerd, elke dag op een bepaald tijdstip wordt geactiveerd, tot elke dag nadat de segmentatietaak voor de Experience Platform-batch is voltooid.
 
-Het publiek wordt elke dag om 16:00 UTC geëxporteerd.
+Het publiek wordt uitgevoerd elke dag bij 16 :00 UTC.
 
 ```json
 {

@@ -1,11 +1,11 @@
 ---
 title: Client-tips voor gebruikersagent
-description: Leer hoe de wenken van de gebruikersagentencliënt in Web SDK werken. Met clienttips hebben eigenaars van websites toegang tot veel van dezelfde gegevens die beschikbaar zijn in de userAgent-tekenreeks, maar op een meer privacyvriendelijke manier.
+description: Leer hoe de wenken van de gebruikersagent van de cliënt in Web SDK werken. Met clienttips hebben eigenaars van websites toegang tot veel van dezelfde gegevens die beschikbaar zijn in de userAgent-tekenreeks, maar op een meer privacyvriendelijke manier.
 keywords: user-agent;client hints; tekenreeks; user-agent tekenreeks; lage entropie; hoge entropie
 exl-id: a909b1d1-be9d-43ba-bb4b-d28b0c609f65
-source-git-commit: 89dfe037e28bae51e335dc67185afa42b2c418e3
+source-git-commit: 35429ec2dffacb9c0f2c60b608561988ea487606
 workflow-type: tm+mt
-source-wordcount: '1245'
+source-wordcount: '1244'
 ht-degree: 1%
 
 ---
@@ -64,7 +64,7 @@ Wanneer moderne browsers een gebruiker naar een webserver sturen, wordt de volle
 
 ## Browserondersteuning {#browser-support}
 
-{de wenken van de de agentencliënt van de Gebruiker 1} werden geïntroduceerd met [!DNL Google Chrome] versie 89.[&#128279;](https://developer.chrome.com/docs/privacy-sandbox/user-agent/)
+{de wenken van de de agentencliënt van de Gebruiker 1} werden geïntroduceerd met [ versie 89.](https://developer.chrome.com/docs/privacy-sandbox/user-agent/)[!DNL Google Chrome]
 
 Aanvullende op chroom gebaseerde browsers ondersteunen de client Hints-API, zoals:
 
@@ -86,7 +86,7 @@ Er zijn twee categorieën van de cliëntwenken van de gebruikersagent:
 
 Lage entropieclienthints bevatten basisinformatie die niet kan worden gebruikt voor vingerafdrukgebruikers. Informatie zoals het merk van de browser, het platform en of de aanvraag afkomstig is van een mobiel apparaat.
 
-De lage wenken van de entropycliënt worden toegelaten door gebrek in Web SDK, en worden overgegaan op elk verzoek.
+Lage entropy cliëntwenken worden toegelaten door gebrek in Web SDK, en op elk verzoek overgegaan.
 
 | HTTP-header | JavaScript | Standaard opgenomen in gebruikersagent | Standaard opgenomen in clienttips |
 |---|---|---|---|
@@ -103,15 +103,15 @@ Hoog entropy cliëntwenken zijn meer gedetailleerde informatie over het cliënta
 | Versie besturingssysteem | De versie van het besturingssysteem. | `Sec-CH-UA-Platform-Version` | `xdm.environment.browserDetails.`<br>`userAgentClientHints.platformVersion` | `10.15.7` | Ja | Nee |
 | Architectuur | De onderliggende CPU-architectuur. | `Sec-CH-UA-Arch` | `xdm.environment.browserDetails.`<br>`userAgentClientHints.architecture` | `x86` | Ja | Nee |
 | Apparaatmodel | De naam van het gebruikte apparaat. | `Sec-CH-UA-Model` | `xdm.environment.browserDetails.`<br>`userAgentClientHints.model` | `Intel Mac OS X 10_15_7` | Ja | Nee |
-| Bitsheid | Het aantal beetjes dat de onderliggende architectuur van cpu steunt. | `Sec-CH-UA-Bitness` | `xdm.environment.browserDetails.`<br>`userAgentClientHints.bitness` | `64` | Ja | Nee |
+| Bitsheid | Het aantal bits dat de onderliggende CPU-architectuur ondersteunt. | `Sec-CH-UA-Bitness` | `xdm.environment.browserDetails.`<br>`userAgentClientHints.bitness` | `64` | Ja | Nee |
 | Browserleverancier | Het bedrijf dat de browser heeft gemaakt. Dit element wordt ook verzameld door de lage entropiehint `Sec-CH-UA` . | `Sec-CH-UA-Full-Version-List` | `xdm.environment.browserDetails.`<br>`userAgentClientHints.vendor` | `Google` | Ja | Nee |
 | Browsernaam | De gebruikte browser. Dit element wordt ook verzameld door de lage entropiehint `Sec-CH-UA` . | `Sec-UA-Full-Version-List` | `xdm.environment.browserDetails.`<br>`userAgentClientHints.brand` | `Chrome` | Ja | Nee |
 | Browserversie | De significante versie van de browser. Dit element wordt ook verzameld door de lage entropiehint `Sec-CH-UA` . Exacte browserversie wordt niet automatisch verzameld. | `Sec-UA-Full-Version-List` | `xdm.environment.browserDetails.`<br>`userAgentClientHints.version` | `105` | Ja | Nee |
 
 
-Hoog de wenken van de entropiecliënt worden onbruikbaar gemaakt door gebrek in Web SDK. Om hen toe te laten moet u SDK van het Web manueel vormen om hoge entropy cliëntwenken te verzoeken.
+Hoog entropiecliëntwenken worden onbruikbaar gemaakt door gebrek in Web SDK. Om hen toe te laten moet u het Web SDK manueel vormen om hoge entropy cliëntwenken te verzoeken.
 
-## Hoog entropclient-tips beïnvloeden de oplossingen van Experiencen Cloud {#impact-in-experience-cloud-solutions}
+## Hoog entropclient-tips beïnvloeden Experience Cloud-oplossingen {#impact-in-experience-cloud-solutions}
 
 Sommige Adobe Experience Cloud-oplossingen vertrouwen bij het genereren van rapporten op informatie die is opgenomen in hoge entropietips.
 
@@ -119,17 +119,17 @@ Als u geen hoge entropieclientiptips inschakelt in uw omgeving, werken de Adobe 
 
 ### Adobe Analytics rapporteert op basis van hoge entropclient-hints {#analytics}
 
-De [ dimensie van het Werkende systeem ](https://experienceleague.adobe.com/docs/analytics/components/dimensions/operating-systems.html?lang=nl-NL) omvat werkende systeemversie die als hoge entropiecliëntwenk wordt opgeslagen. Als de hoge wenken van entropiecliënten niet wordt toegelaten, kan de versie van het werkende systeem voor klappen die van browsers Chromium worden verzameld onnauwkeurig zijn.
+De [ dimensie van het Werkende systeem ](https://experienceleague.adobe.com/docs/analytics/components/dimensions/operating-systems.html) omvat werkend systeemversie die als hoge entropie cliëntwenk wordt opgeslagen. Als de hoge wenken van entropiecliënten niet wordt toegelaten, kan de versie van het werkende systeem voor klappen die van browsers Chromium worden verzameld onnauwkeurig zijn.
 
-### Audience Manager-eigenschappen die afhankelijk zijn van hoge entropieclientiptips {#aam}
+### Audience Manager-kenmerken die afhankelijk zijn van hoge entropclientijdenten {#aam}
 
-[!DNL Google] heeft de browserfunctionaliteit van [!DNL Chrome] bijgewerkt om de informatie die via de header van `User-Agent` wordt verzameld, tot een minimum te beperken. Dientengevolge, zullen de klanten die van de Audience Manager [ DIL ](https://experienceleague.adobe.com/docs/audience-manager/user-guide/dil-api/dil-overview.html?lang=nl-NL) gebruiken geen betrouwbare die informatie voor eigenschappen meer ontvangen op [ platform-vlakke sleutels ](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/traits/trait-device-targeting.html?lang=nl-NL) worden gebaseerd.
+[!DNL Google] heeft de browserfunctionaliteit van [!DNL Chrome] bijgewerkt om de informatie die via de header van `User-Agent` wordt verzameld, tot een minimum te beperken. Dientengevolge, zullen de klanten van Audience Manager die [ DIL ](https://experienceleague.adobe.com/docs/audience-manager/user-guide/dil-api/dil-overview.html) gebruiken geen betrouwbare informatie voor eigenschappen meer ontvangen die op [ worden gebaseerd platform-vlakke sleutels ](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/traits/trait-device-targeting.html).
 
-De klanten van de Audience Manager die platform-vlakke sleutels voor het richten gebruiken moeten op [&#128279;](/help/web-sdk/home.md) in plaats van [ Experience Platform van SDK van het Web ](https://experienceleague.adobe.com/docs/audience-manager/user-guide/dil-api/dil-overview.html?lang=nl-NL) schakelen, en [ Hoge Hints van de Cliënt Entropy ](#enabling-high-entropy-client-hints) toelaten om betrouwbare gegevens van de eigenschap te blijven ontvangen.
+De klanten van Audience Manager die platform-vlakke sleutels voor het richten gebruiken moeten aan [ SDK van het Web van Experience Platform ](/help/web-sdk/home.md) in plaats van [ DIL ](https://experienceleague.adobe.com/docs/audience-manager/user-guide/dil-api/dil-overview.html) schakelen, en [ Hoge Hints van de Cliënt Entropy ](#enabling-high-entropy-client-hints) toelaten om betrouwbare gegevens van het dienblad te blijven ontvangen.
 
 ## Hoog entropclient-hints inschakelen {#enabling-high-entropy-client-hints}
 
-Als u hoge entropy client hints wilt inschakelen voor uw Web SDK-implementatie, moet u de extra `highEntropyUserAgentHints` contextoptie opnemen in het veld [`context`](/help/web-sdk/commands/configure/context.md) .
+Als u hoge entropy client hints wilt inschakelen bij uw Web SDK-implementatie, moet u de extra `highEntropyUserAgentHints` context-optie opnemen in het veld [`context`](/help/web-sdk/commands/configure/context.md) .
 
 Als u bijvoorbeeld hoge entropientroy-clienthints wilt ophalen van westeigenschappen, ziet uw configuratie er als volgt uit:
 

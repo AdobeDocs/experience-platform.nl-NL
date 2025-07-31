@@ -5,7 +5,7 @@ description: Leer hoe u een CSP configureert voor de Experience Platform Web SDK
 seo-description: Learn how to configure a CSP for the Experience Platform Web SDK
 keywords: configureren;configuratie;SDK;edge;Web SDK;configure;context;web;apparaat;omgeving;web SDK-instellingen;content-beveiligingsbeleid;
 exl-id: 661d0001-9e10-479e-84c1-80e58f0e9c0b
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 35429ec2dffacb9c0f2c60b608561988ea487606
 workflow-type: tm+mt
 source-wordcount: '339'
 ht-degree: 0%
@@ -59,7 +59,7 @@ style-src 'unsafe-inline'
 
 >[!NOTE]
 >
->Adobe **&#x200B;**&#x200B;adviseert niet het specificeren `unsafe-inline` omdat het voor om het even welk manuscript om op de pagina toestaat te lopen, die de voordelen van CSP beperkt.
+>Adobe **** adviseert niet het specificeren `unsafe-inline` omdat het voor om het even welk manuscript om op de pagina toestaat te lopen, die de voordelen van CSP beperkt.
 
 ## Een CSP configureren voor In-App Messaging {#in-app-messaging}
 

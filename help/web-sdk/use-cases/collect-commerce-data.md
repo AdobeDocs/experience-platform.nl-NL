@@ -1,8 +1,8 @@
 ---
-title: Verzamel handel, product, en ordeinformatie gebruikend SDK van het Web van Adobe Experience Platform
+title: Verzamel handel, product, en ordeinformatie gebruikend het Web SDK van Adobe Experience Platform
 description: Leer hoe u gegevens met betrekking tot producten of een winkelwagentje toevoegt met de Adobe Experience Platform Web SDK.
 exl-id: 3c79e776-89ef-494b-a2ea-3c23efce09ae
-source-git-commit: b6e084d2beed58339191b53d0f97b93943154f7c
+source-git-commit: 35429ec2dffacb9c0f2c60b608561988ea487606
 workflow-type: tm+mt
 source-wordcount: '785'
 ht-degree: 0%
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 Als uw organisatie producten of diensten verkoopt, kunt u deze pagina als gids voor gebruiken hoe te om die producten en de diensten te volgen.
 
-Deze pagina gebruikt de XDM [&#128279;](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/commerce.schema.md) gebiedsgroep van het Schema van Commerce 0&rbrace; &lbrace;.
+Deze pagina gebruikt de XDM [ gebiedsgroep van het Schema van Commerce 0} {.](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/commerce.schema.md)
 
 Deze veldgroep bestaat uit twee hoofddelen:
 
@@ -53,7 +53,7 @@ Vouw de onderstaande sectie uit om een voorbeeld van een Web SDK-opdracht te zie
 
 +++`productViews`
 
-Een eenvoudige Web SDK-aanroep `sendEvent` die het `productViews` veld instelt op `1` :
+Een standaard SDK-aanroep voor het web `sendEvent` die het `productViews` veld instelt op `1` :
 
 ```javascript
 alloy("sendEvent", {
@@ -89,7 +89,7 @@ In deze sectie worden alle velden beschreven die door het object `order` worden 
 
 ### Voorbeelden van Order-objecten
 
-Vouw de onderstaande sectie uit om een voorbeeld van een Web SDK-opdracht weer te geven met het `commerce` -object.
+Vouw de onderstaande sectie uit om een voorbeeld van een Web SDK-opdracht weer te geven met behulp van het `commerce` -object.
 
 +++`Order` objectvoorbeeld
 

@@ -1,9 +1,9 @@
 ---
-title: Persoonlijke inhoud renderen met de SDK van het Adobe Experience Platform-web
-description: Leer hoe u gepersonaliseerde inhoud kunt renderen met de SDK van Adobe Experience Platform Web.
+title: Aangepaste inhoud renderen met Adobe Experience Platform Web SDK
+description: Leer hoe u persoonlijke inhoud kunt renderen met de Adobe Experience Platform Web SDK.
 keywords: personalisatie;renderDecisions;sendEvent;DecisionScopes;proposities;
 exl-id: 6a3252ca-cdec-48a0-a001-2944ad635805
-source-git-commit: 9489b5345c2b13b9d05b26d646aa7f1576840fb8
+source-git-commit: 35429ec2dffacb9c0f2c60b608561988ea487606
 workflow-type: tm+mt
 source-wordcount: '947'
 ht-degree: 0%
@@ -12,11 +12,11 @@ ht-degree: 0%
 
 # Aangepaste inhoud renderen
 
-Adobe Experience Platform Web SDK steunt het terugwinnen van gepersonaliseerde inhoud van de oplossingen van de Adobe verpersoonlijking, met inbegrip van [ Adobe Target ](https://business.adobe.com/products/target/adobe-target.html), [ Offer decisioning ](https://experienceleague.adobe.com/docs/offer-decisioning/using/get-started/starting-offer-decisioning.html?lang=nl) en [ Adobe Journey Optimizer ](https://experienceleague.adobe.com/docs/journey-optimizer/using/get-started/get-started.html?lang=nl).
+Adobe Experience Platform Web SDK steunt het terugwinnen van gepersonaliseerde inhoud van de verpersoonlijkingsoplossingen van Adobe, met inbegrip van [ Adobe Target ](https://business.adobe.com/products/target/adobe-target.html), [ Offer Decisioning ](https://experienceleague.adobe.com/docs/offer-decisioning/using/get-started/starting-offer-decisioning.html?lang=nl) en [ Adobe Journey Optimizer ](https://experienceleague.adobe.com/docs/journey-optimizer/using/get-started/get-started.html?lang=nl).
 
 Bovendien, de bevoegdheden van SDK van het Web op dezelfde pagina en volgende-pagina verpersoonlijkingsmogelijkheden door de verpersoonlijkingsbestemmingen van Adobe Experience Platform, zoals [ Adobe Target ](../../destinations/catalog/personalization/adobe-target-connection.md) en de [ verbinding van de douaneverpersoonlijking ](../../destinations/catalog/personalization/custom-personalization.md). Leren hoe te om Experience Platform voor zelfde-pagina en volgende-pagina verpersoonlijking te vormen, zie de [ specifieke gids ](../../destinations/ui/activate-edge-personalization-destinations.md).
 
-De inhoud die binnen Adobe Target [ wordt gecreeerd Visuele Composer van de Ervaring ](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html?lang=nl-NL) en de Campagne UI van het Web van Adobe Journey Optimizer [&#128279;](https://experienceleague.adobe.com/docs/journey-optimizer/using/web/create-web.html?lang=nl-NL) kan automatisch door SDK worden teruggewonnen en worden teruggegeven. De inhoud die binnen Adobe Target [ op vorm-gebaseerde Composer van de Ervaring ](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html?lang=nl-NL) wordt gecreeerd, Adobe Journey Optimizer [ op code-gebaseerd Kanaal van de Ervaring ](https://experienceleague.adobe.com/nl/docs/journey-optimizer/using/code-based-experience/get-started-code-based) of Offer decisioning kan niet automatisch door SDK worden teruggegeven. In plaats daarvan moet u deze inhoud aanvragen met de SDK en de inhoud vervolgens zelf handmatig renderen.
+De inhoud die binnen Adobe Target [ wordt gecreeerd Visuele Composer van de Ervaring ](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html) en de Campagne UI van het Web van Adobe Journey Optimizer [ ](https://experienceleague.adobe.com/docs/journey-optimizer/using/web/create-web.html) kan automatisch worden teruggewonnen en door SDK worden teruggegeven. De inhoud die binnen Adobe Target [ op vorm-gebaseerde Composer van de Ervaring ](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html) wordt gecreeerd, Adobe Journey Optimizer [ op code-gebaseerd Kanaal van de Ervaring ](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/code-based-experience/get-started-code-based) of Offer Decisioning kan niet automatisch door SDK worden teruggegeven. In plaats daarvan moet u deze inhoud aanvragen via de SDK en de inhoud vervolgens zelf handmatig renderen.
 
 ## Inhoud automatisch renderen {#automatic}
 
@@ -103,9 +103,9 @@ De array `propositions` kan er ongeveer als volgt uitzien:
 ]
 ```
 
-In het voorbeeld is de optie `renderDecisions` niet ingesteld op `true` toen de opdracht `sendEvent` werd uitgevoerd. De SDK heeft dus niet geprobeerd om inhoud automatisch te renderen. De SDK heeft echter nog steeds automatisch de inhoud opgehaald die in aanmerking komt voor automatische rendering. U hebt deze opgehaald om de inhoud handmatig te renderen als u dat wilt. Voor elk propositieobject is de eigenschap `renderAttempted` ingesteld op `false` .
+In het voorbeeld is de optie `renderDecisions` niet ingesteld op `true` wanneer de opdracht `sendEvent` werd uitgevoerd. De SDK heeft dus niet geprobeerd om inhoud automatisch te renderen. De SDK heeft echter nog steeds automatisch de inhoud opgehaald die in aanmerking komt voor automatische rendering. U hebt deze inhoud als u dat wilt handmatig renderen. Voor elk propositieobject is de eigenschap `renderAttempted` ingesteld op `false` .
 
-Als u in plaats daarvan de optie `renderDecisions` op `true` zou hebben ingesteld tijdens het verzenden van de gebeurtenis, zou de SDK hebben geprobeerd om eventuele profielen te renderen die in aanmerking komen voor automatische rendering (zoals eerder beschreven). Als gevolg hiervan zou de eigenschap `renderAttempted` van elk propositieobject zijn ingesteld op `true` . In dit geval is het niet nodig deze voorstellen handmatig weer te geven.
+Als u in plaats daarvan de optie `renderDecisions` op `true` zou hebben ingesteld tijdens het verzenden van de gebeurtenis, zou de SDK hebben geprobeerd om alle profielen te renderen die in aanmerking komen voor automatische rendering (zoals eerder beschreven). Als gevolg hiervan zou de eigenschap `renderAttempted` van elk propositieobject zijn ingesteld op `true` . In dit geval is het niet nodig deze voorstellen handmatig weer te geven.
 
 Tot dusver, hebben wij slechts verpersoonlijkingsinhoud besproken die voor automatische teruggeven (namelijk om het even welke inhoud die in de Composer van de Visual Experience van Adobe Target of de Campagne UI van het Web van Adobe Journey Optimizer wordt gecreeerd) verkiesbaar is. Om om het even welke verpersoonlijkingsinhoud _terug te winnen niet_ geschikt voor automatische teruggeven, moet u de inhoud verzoeken door de `decisionScopes` optie te bevolken wanneer het verzenden van de gebeurtenis. Een werkingsgebied is een koord dat een bepaald voorstel identificeert u van de server zou willen terugwinnen.
 
@@ -224,7 +224,7 @@ Op dit punt kunt u propositie-inhoud naar eigen inzicht renderen. In dit voorbee
 
 1. Extraheer voorstellen uit het `result` -object.
 1. Doorloop elk voorstel en zoek het voorstel met een bereik van `discount` .
-1. Als u een voorstel vindt, doorloopt u elk item in het voorstel en zoekt u het item dat de inhoud van HTML is. (Het is beter om te controleren dan om te veronderstellen.)
+1. Als u een voorstel vindt, doorloopt u elk item in het voorstel en zoekt u het item dat HTML-inhoud is. (Het is beter om te controleren dan om te veronderstellen.)
 1. Als u een item vindt dat HTML-inhoud bevat, zoekt u het `daily-special` -element op de pagina en vervangt u de HTML door de gepersonaliseerde inhoud.
 1. Nadat de inhoud is gerenderd, verzendt u een `display` -gebeurtenis.
 
@@ -252,7 +252,7 @@ alloy("sendEvent", {
   var discountHtml;
   if (discountProposition) {
     // Find the item from proposition that should be rendered.
-    // Rather than assuming there a single item that has HTML
+    // Rather than assuming there is a single item that has HTML
     // content, find the first item whose schema indicates
     // it contains HTML content.
     for (var j = 0; j < discountProposition.items.length; j++) {
@@ -263,7 +263,7 @@ alloy("sendEvent", {
         var dailySpecialElement = document.getElementById("daily-special");
         dailySpecialElement.innerHTML = discountHtml;
         
-        // For this example, we assume there is only a signle place to update in the HTML.
+        // For this example, we assume there is only a single place to update in the HTML.
         break;  
       }
     }
@@ -341,7 +341,7 @@ alloy("applyPropositions", {
 
 ### Hoofdlettergebruik 2: voorvertoningen renderen die geen kiezer hebben
 
-Dit gebruiksgeval is op ervaringen van toepassing die gebruikend [!DNL Target Form-based Experience Composer] of Adobe Journey Optimizer [ op code-Gebaseerd Kanaal van de Ervaring ](https://experienceleague.adobe.com/nl/docs/journey-optimizer/using/code-based-experience/get-started-code-based) worden geschreven.
+Dit gebruiksgeval is op ervaringen van toepassing die gebruikend [!DNL Target Form-based Experience Composer] of Adobe Journey Optimizer [ op code-Gebaseerd Kanaal van de Ervaring ](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/code-based-experience/get-started-code-based) worden geschreven.
 
 U moet de kiezer, de handeling en het bereik opgeven in de aanroep van `applyPropositions` .
 

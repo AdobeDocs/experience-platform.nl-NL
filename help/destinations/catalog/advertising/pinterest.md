@@ -1,15 +1,15 @@
 ---
-title: Verbinding met pinterest Customer List
+title: Verbinding met Pinterest Customer List
 description: Maak een publiek op basis van uw klantlijsten, personen die uw site hebben bezocht of personen die al met uw inhoud hebben gewerkt op Pinterest.
 exl-id: e601f75f-0d40-4cd0-93ca-54d7439f1db7
-source-git-commit: 83e2c014e62509fee2843505d7975cde368665ef
+source-git-commit: 35429ec2dffacb9c0f2c60b608561988ea487606
 workflow-type: tm+mt
-source-wordcount: '798'
+source-wordcount: '778'
 ht-degree: 1%
 
 ---
 
-# [!DNL Pinterest Customer List] verbinding
+# [!DNL Pinterest Customer List]-verbinding
 
 ## Overzicht {#overview}
 
@@ -26,14 +26,14 @@ Maak een publiek op basis van uw klantlijsten, personen die uw site hebben bezoc
 
 ## Ondersteunde identiteiten {#supported-identities}
 
-Het doel van [!DNL Pinterest Customer List] ondersteunt de activering van de identiteiten die in de onderstaande tabel worden beschreven. Leer meer over [ identiteiten ](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html?lang=nl-NL#getting-started).
+Het doel van [!DNL Pinterest Customer List] ondersteunt de activering van de identiteiten die in de onderstaande tabel worden beschreven. Leer meer over [ identiteiten ](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html#getting-started).
 
-In de [ toewijzingsstap ](/help/destinations/ui/activate-segment-streaming-destinations.md#mapping) van het werkschema van de bestemmingsactivering, kaart de gewenste identiteiten aan het doelgebied *pinterest_publiek*. Identiteiten worden onderscheiden en opgelost na gegevensinvoer in Pinterest.
+In de [ toewijzingsstap ](/help/destinations/ui/activate-segment-streaming-destinations.md#mapping) van het werkschema van de bestemmingsactivering, kaart de gewenste identiteiten aan het doelgebied *pinterest_publiek* in kaart. Identiteiten worden onderscheiden en opgelost na gegevensinvoer in Pinterest.
 
 | Doelidentiteit | Beschrijving | Overwegingen |
 |---|---|---|
-| GAID | [!DNL Google Advertising ID] | Wijs *GAID* bronIdentiteitsnaamruimte aan het gebied van de doelidentiteit *pinterest_publiek* toe. Identiteiten worden onderscheiden en opgelost na gegevensinvoer in Pinterest. |
-| IDFA | [!DNL Apple ID for Advertisers] | Wijs *IDFA* bronidentiteit namespace aan het gebied van de doelidentiteit *pinterest_publiek* toe. Identiteiten worden onderscheiden en opgelost na gegevensinvoer in Pinterest. |
+| GAID | [!DNL Google Advertising ID] | Wijs *GAID* bronIdentiteit namespace aan het gebied van de doelidentiteit *toe pinterest_publiek*. |
+| IDFA | [!DNL Apple ID for Advertisers] | Wijs *IDFA* bronidentiteit namespace aan het gebied van de doelidentiteit *toe pinterest_publiek*. |
 | EMAIL | E-mailadressen (tekst wissen of hashed met het algoritme SHA256) | Adobe Experience Platform biedt ondersteuning voor zowel platte tekst- als SHA256-e-mailadressen met hashing. <br> Kaart *E-mail* of *Email_LC_SHA256* bron identiteitsnaamruimte aan het gebied van de doelidentiteit *pinterest_publiek* in kaart. |
 
 {style="table-layout:auto"}
@@ -106,7 +106,7 @@ Lees [ activeer profielen en publiek aan het stromen publiek uitvoerbestemmingen
 
 ## Gegevensgebruik en -beheer {#data-usage-governance}
 
-Alle [!DNL Adobe Experience Platform] -doelen zijn compatibel met het beleid voor gegevensgebruik bij het verwerken van uw gegevens. Voor gedetailleerde informatie over hoe [!DNL Adobe Experience Platform] gegevensbeheer afdwingt, zie het [ overzicht van het Beleid van Gegevens ](https://experienceleague.adobe.com/docs/experience-platform/data-governance/home.html?lang=nl-NL).
+Alle [!DNL Adobe Experience Platform] -doelen zijn compatibel met het beleid voor gegevensgebruik bij het verwerken van uw gegevens. Voor gedetailleerde informatie over hoe [!DNL Adobe Experience Platform] gegevensbeheer afdwingt, zie het [ overzicht van het Beleid van Gegevens ](https://experienceleague.adobe.com/docs/experience-platform/data-governance/home.html).
 
 ## Aanvullende bronnen {#additional-resources}
 

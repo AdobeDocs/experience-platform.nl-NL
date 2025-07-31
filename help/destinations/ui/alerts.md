@@ -3,7 +3,7 @@ keywords: Experience Platform;home;populaire onderwerpen; waarschuwingen;doelen
 description: U kunt op alarm intekenen wanneer het creëren van een gegevensstroom, om waakzame berichten betreffende de status, het succes, of het mislukken van uw stroom te ontvangen in werking stellen.
 title: Abonneren op in-context-bestemmingswaarschuwingen
 exl-id: 134144a0-cdfe-49a8-bd8b-e36a4f053de5
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 35429ec2dffacb9c0f2c60b608561988ea487606
 workflow-type: tm+mt
 source-wordcount: '935'
 ht-degree: 3%
@@ -83,7 +83,7 @@ De pagina [!UICONTROL Dataflow run details] wordt weergegeven. In de bovenste he
 
 ![ beeld UI die de dataflow looppas detailpagina toont.](../assets/ui/alerts/dataflow-overview.png)
 
-In de onderste helft van de pagina worden alle [!UICONTROL Dataflow run errors] weergegeven die zijn uitgevoerd tijdens het werkgebied waarin de gegevensstroom is uitgevoerd. Van hier, kunt u foutendiagnostiek voorproef of [[!DNL Data Access]  API ](https://www.adobe.io/experience-platform-apis/references/data-access/) gebruiken om foutendiagnostiek of dossiermanifest te downloaden die aan uw dataflow beantwoordt.
+In de onderste helft van de pagina worden alle [!UICONTROL Dataflow run errors] weergegeven die zich tijdens het werkgebied met gegevensstroom hebben voorgedaan. Van hier, kunt u foutendiagnostiek voorproef of [[!DNL Data Access]  API ](https://www.adobe.io/experience-platform-apis/references/data-access/) gebruiken om foutendiagnostiek of dossiermanifest te downloaden die aan uw dataflow beantwoordt.
 
 ![ beeld UI die de dataflow looppas detailpagina toont, met een hoogtepunt op de foutensectie.](../assets/ui/alerts/dataflow-run-error.png)
 
