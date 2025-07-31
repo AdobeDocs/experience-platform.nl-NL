@@ -1,12 +1,11 @@
 ---
 title: Architectuurupgrades naar Real-Time CDP B2B edition
 description: Lees dit document voor meer informatie over de uitgebreide architectuurupgrades naar Real-Time CDP B2B edition.
-badgeB2B: label="B2B edition" type="Informative" url="https://helpx.adobe.com/nl/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
-hide: true
-hidefromtoc: true
-source-git-commit: 78444555178773a8305ba27aaaf7998fe279a71d
+badgeB2B: label="B2B edition" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
+exl-id: d958a947-e195-4dd4-a04c-63ad82829728
+source-git-commit: 1a3be99ca3c270dda6e8dc559359cbe21bb8f4fb
 workflow-type: tm+mt
-source-wordcount: '1135'
+source-wordcount: '1074'
 ht-degree: 0%
 
 ---
@@ -15,7 +14,7 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
->In dit document worden architectuurupgrades naar Real-Time CDP B2B en B2P Editions beschreven. **Geen actie wordt vereist van u** op dit punt. Raadpleeg dit document voor informatie over de gevolgen van de upgrades voor de bestaande functies van Adobe Experience Platform. Neem contact op met uw Adobe-accountteam als u vragen hebt.
+>In dit document worden architectuurupgrades naar Real-Time CDP B2B en B2P Editions beschreven. Voor de upgrades zijn geen acties van de meeste klanten vereist. Er zijn echter soorten publiek die niet automatisch kunnen worden bijgewerkt. Adobe werkt rechtstreeks met u samen om deze scenario&#39;s aan te pakken. Raadpleeg dit document voor informatie over de gevolgen van de upgrades voor de bestaande functies van Adobe Experience Platform. Neem contact op met uw Adobe-accountteam als u vragen hebt.
 
 Adobe heeft de Real-Time CDP B2B- en B2P-edities opnieuw ontworpen om de schaalbaarheid, prestaties en betrouwbaarheid te verbeteren, en ondersteunt ook meer geavanceerde B2B-gebruiksscenario&#39;s. Om ervoor te zorgen dat alle klanten van deze verbeteringen profiteren, zal Adobe alle bestaande B2B- en B2P-klanten upgraden naar de nieuwe architectuur.
 
@@ -52,19 +51,6 @@ Met deze upgrade kunt u nu:
 
 Lees de documentatie over [ rekeningspubliek ](../segmentation/types/account-audiences.md) voor meer informatie.
 
-### Volledige zoekopdracht naar gebeurtenissen op persoonniveau in accountpubliek
-
-Accountpubliek kan nu de volledige geschiedenis van gebeurtenissen op persoonniveau benutten en deze gebeurtenissen overschrijden het vorige terugzoekvenster van 30 dagen.
-
-Met deze upgrade kunt u nu:
-
-* Uitgebreider publiek maken op basis van de volledige geschiedenis van verwante gebeurtenissen op persoonniveau.
-* Verrijkere en nauwkeuriger publieksdefinities door gedragsgegevens op lange termijn te gebruiken.
-* Hoogwaardige accounts identificeren op basis van diepere betrokkenheidspatronen in de loop der tijd.
-* Ondersteuning van gebruiksgevallen die inzichten vereisen van historische handelingen, zoals lange verkoopcycli of vertraagde aankoopsignalen.
-
-Lees de documentatie over [ rekeningspubliek ](../segmentation/types/account-audiences.md) voor meer informatie.
-
 ## Verbeteringen aan bestaande functies
 
 De volgende functies zijn bijgewerkt als onderdeel van de B2B-architectuurupgrades.
@@ -73,16 +59,33 @@ De volgende functies zijn bijgewerkt als onderdeel van de B2B-architectuurupgrad
 
 Als onderdeel van de nieuwe architectuurupgrade kunnen de filters van de Gebeurtenis van de Ervaring niet meer binnen één enkele multi-entiteitspubliek worden gebruikt dat B2B attributen omvat.
 
-Om de zelfde publiekslogica te bereiken, gebruik de segment-van-segment benadering:
+Om de zelfde publiekslogica te bereiken, kunt u de segmentbouwer gebruiken om [ publiek en verwijzingspubliek ](../segmentation/ui/segment-builder.md#adding-audiences) toe te voegen
 
-1. Creeer een publiek van de Gebeurtenis van de Ervaring: bepaal afzonderlijk de gedragstoestand. Bijvoorbeeld: &quot;Personen die de prijspagina de afgelopen drie dagen hebben bezocht.&quot;
-2. Creeer een multi-entiteitpubliek met B2B attributen: Verwijs het publiek van de Gebeurtenis van de Ervaring als deel van de criteria van dit publiek. Bijvoorbeeld: &quot;Mensen die a **&quot;Beslissingsmaker&quot;** van om het even welke kans zijn waar de rekening in de **&quot;Financiën&quot;** industrie en lid van het mensen publiek is die de het tarief pagina in de laatste drie dagen bezochten.
+Bijvoorbeeld:
 
-Zodra de verbetering volledig is, moet om het even welk nieuw multi-entiteitpubliek met B2B attributen en de Gebeurtenissen van de Ervaring worden gecreeerd gebruikend de segment-van-segmentbenadering. Daarnaast moet u het lidmaatschap van het publiek valideren om het verwachte gedrag te garanderen.
+* Een Experience Event-publiek maken
+   * De gedragsconditie afzonderlijk definiëren. Bijvoorbeeld: &quot;Personen die de prijspagina de afgelopen drie dagen hebben bezocht.&quot;
+* Maak een publiek met meerdere entiteiten met B2B-kenmerken.
+   * Van hieruit kunt u het publiek van de Gebeurtenis van de Ervaring als deel van de criteria van dit publiek van verwijzingen voorzien. Bijvoorbeeld: &quot;Mensen die a **&quot;Beslissingsmaker&quot;** van om het even welke kans zijn waar de rekening in de **&quot;Financiën&quot;** industrie en lid van het mensen publiek is die de het tarief pagina in de laatste drie dagen bezochten.
+
+Zodra de verbetering volledig is, moet om het even welk nieuw multi-entiteitpubliek met attributen B2B en de Gebeurtenissen van de Ervaring worden gecreeerd gebruikend de [ segment-van-segment ](../segmentation/methods/edge-segmentation.md#edge-segmentation-query-types) benadering.
+
+>[!TIP]
+>
+>A **segment van segmenten** is om het even welke segmentdefinitie die één of meerdere partij of randsegmenten bevat. **Nota**: als u een segment van segmenten gebruikt, zal de profielontzetting **om de 24 uur** gebeuren.
 
 ### Afwikkeling van entiteiten en tijdsprioriteit bij samenvoeging in B2B-publiek
 
-Als onderdeel van de architectuurupgrade heeft Adobe een entiteitsresolutie voor accounts en mogelijkheden geïntroduceerd, die dagelijks wordt uitgevoerd. Dankzij deze verbetering kan Experience Platform meerdere records identificeren en consolideren die dezelfde real-world entiteit vertegenwoordigen. Hierdoor wordt de gegevensconsistentie verbeterd en wordt de publiekssegmentatie nauwkeuriger.
+Als onderdeel van de architectuurupgrade introduceert Adobe entiteitresolutie voor accounts en mogelijkheden. De afwikkeling van entiteiten is gebaseerd op deterministische ID-matching en op de meest recente gegevens. Entiteitsafwikkelingstaak wordt dagelijks uitgevoerd tijdens batchsegmentering, voordat het publiek met meerdere entiteiten met B2B-kenmerken wordt geëvalueerd.
+
+>[!BEGINSHADEBOX]
+
+#### Hoe werkt het oplossen van entiteiten?
+
+* **vóór**: Als een aantal van het Systeem van de Nummering van Gegevens Universele (DUNS) als extra identiteit werd gebruikt en het aantal DUNS van de rekening werd bijgewerkt in een bronsysteem zoals CRM, wordt rekeningidentiteitskaart verbonden met zowel oude als nieuwe DUNS aantallen.
+* **na**: Als het aantal DUNS als extra identiteit werd gebruikt en het aantal DUNS van de rekening in een bronsysteem als CRM werd bijgewerkt, wordt rekeningidentiteitskaart slechts verbonden met het nieuwe aantal DUNS, daardoor die nauwkeuriger op de huidige staat van rekening wijst.
+
+>[!ENDSHADEBOX]
 
 Met deze upgrade kunt u nu:
 
@@ -94,8 +97,6 @@ Lees [[!DNL Profile Access]  API ](../profile/api/entities.md) voor meer informa
 ### Ondersteuning van samenvoegingsbeleid in het B2B-publiek met meerdere entiteiten
 
 Het publiek van meerdere entiteiten met B2B-attributen steunt nu één enkel fusiebeleid - het standaardfusiebeleid dat u vormt - in plaats van veelvoudige fusiebeleid.
-
-Het publiek dat eerder op een niet-standaard fusiebeleid baseerde kan verschillende resultaten veroorzaken. Om de potentiële veranderingen in publiekssamenstelling te begrijpen, herzie en test om het even welk publiek dat op een niet-gebrek fusiebeleid baseert. Bovendien, de resultaten van de monitoractivering om het even welke verschuivingen in publiekssamenstelling wegens de verandering van het fusiebeleid te ontdekken.
 
 Lees de [ handleiding van het de gebruikscase van de segmentatie voor Real-Time CDP B2B edition ](./segmentation/b2b.md) voor meer informatie.
 
@@ -127,25 +128,25 @@ Lees [[!DNL Profile Access]  API ](../profile/api/entities.md) voor meer informa
 
 U kunt account- en opportuniteitsschema&#39;s nu alleen ophalen als entiteiten met een zoekdimensie nadat ze het dagelijkse proces voor het oplossen van entiteiten hebben voltooid. Nieuw opgenomen records zijn pas beschikbaar voor profielverrijking of segmentdefinities als de volgende cyclus met entiteitresolutie is voltooid (meestal elke 24 uur).
 
-U wordt aangeraden alle gebruiksgevallen te bekijken waarvoor realtime toegang tot account- en opportuniteitsgegevens vereist is. Bovendien, wordt u geadviseerd om voor een latentieperiode van 24 uur te plannen wanneer het ontwerpen van of het bijwerken van werkschema&#39;s die van raadpleging-gebaseerde segmentatie of verpersoonlijking met rekening en opportuniteitsentiteiten afhangen.
+<!-- ### Deprecation of audience creation via API for B2B entities
 
-### Veroudering van publiek creëren via API voor B2B-entiteiten
-
-Het creëren van een publiek met B2B-entiteiten via de API wordt afgekeurd. De lijst van betrokken B2B-entiteiten omvat:
+Creation of audiences using B2B entities via API is being deprecated. The list of affected B2B entities include:
 
 * Account
 * Opportunity
-* Relatie account-persoon
-* Opportunity-Person relatie
+* Account-Person Relation
+* Opportunity-Person Relation
 * Campaign
-* Campagnelid
-* Marketinglijst
-* Lid van de marketinglijst
+* Campaign Member
+* Marketing List
+* Marketing List Member
 
-Lees de [ gids van het 0&rbrace; segment definities eindpunt API ](../segmentation/api/segment-definitions.md) voor meer informatie.
+Read the [segment definitions endpoint API guide](../segmentation/api/segment-definitions.md) for more information. -->
 
 ### Wijzigingen in het importeren van publiek van meerdere entiteiten in gereedschappen voor sandboxen
 
-Met de architectuuractupgrades kunt u geen publiek met meerdere entiteiten meer importeren met B2B-kenmerken en Experience Events als deze werden geëxporteerd vóór de upgrade. Deze doelgroepen kunnen niet worden geïmporteerd en kunnen niet automatisch worden geconverteerd naar de nieuwe architectuur. Als u deze beperking wilt omzeilen, moet u deze doelgroepen opnieuw exporteren en deze vervolgens met behulp van sandboxgereedschappen importeren in de desbetreffende doelsandboxen.
+Met de architectuurupgrades kunt u geen publiek met meerdere entiteiten meer importeren met B2B-kenmerken en Experience Events als een pakket met deze soorten publiek vóór de upgrade is gepubliceerd. Deze doelgroepen kunnen niet worden geïmporteerd en kunnen niet automatisch worden geconverteerd naar de nieuwe architectuur. Als u deze beperking wilt omzeilen, moet u een nieuw pakket maken met het bijgewerkte publiek en deze met behulp van sandboxgereedschappen importeren in de respectievelijke doelsandboxen.
+
+Ontwikkelingssandboxen worden opgewaardeerd naar de nieuwe architectuur. De soorten publiek die automatisch kunnen worden bijgewerkt, worden bijgewerkt; de soorten die niet kunnen worden uitgeschakeld. Uitgeschakelde doelgroepen moeten na de upgrade opnieuw worden gemaakt.
 
 Lees de [ zandbak tooling gids ](../sandboxes/ui/sandbox-tooling.md) voor meer informatie.
