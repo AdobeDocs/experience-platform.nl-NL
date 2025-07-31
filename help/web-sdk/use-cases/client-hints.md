@@ -119,13 +119,13 @@ Als u geen hoge entropieclientiptips inschakelt in uw omgeving, werken de Adobe 
 
 ### Adobe Analytics rapporteert op basis van hoge entropclient-hints {#analytics}
 
-De [ dimensie van het Werkende systeem ](https://experienceleague.adobe.com/docs/analytics/components/dimensions/operating-systems.html) omvat werkend systeemversie die als hoge entropie cliëntwenk wordt opgeslagen. Als de hoge wenken van entropiecliënten niet wordt toegelaten, kan de versie van het werkende systeem voor klappen die van browsers Chromium worden verzameld onnauwkeurig zijn.
+De [ dimensie van het Werkende systeem ](https://experienceleague.adobe.com/docs/analytics/components/dimensions/operating-systems.html?lang=nl-NL) omvat werkend systeemversie die als hoge entropie cliëntwenk wordt opgeslagen. Als de hoge wenken van entropiecliënten niet wordt toegelaten, kan de versie van het werkende systeem voor klappen die van browsers Chromium worden verzameld onnauwkeurig zijn.
 
 ### Audience Manager-kenmerken die afhankelijk zijn van hoge entropclientijdenten {#aam}
 
-[!DNL Google] heeft de browserfunctionaliteit van [!DNL Chrome] bijgewerkt om de informatie die via de header van `User-Agent` wordt verzameld, tot een minimum te beperken. Dientengevolge, zullen de klanten van Audience Manager die [ DIL ](https://experienceleague.adobe.com/docs/audience-manager/user-guide/dil-api/dil-overview.html) gebruiken geen betrouwbare informatie voor eigenschappen meer ontvangen die op [ worden gebaseerd platform-vlakke sleutels ](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/traits/trait-device-targeting.html).
+[!DNL Google] heeft de browserfunctionaliteit van [!DNL Chrome] bijgewerkt om de informatie die via de header van `User-Agent` wordt verzameld, tot een minimum te beperken. Dientengevolge, zullen de klanten van Audience Manager die [ DIL ](https://experienceleague.adobe.com/docs/audience-manager/user-guide/dil-api/dil-overview.html?lang=nl-NL) gebruiken geen betrouwbare informatie voor eigenschappen meer ontvangen die op [ worden gebaseerd platform-vlakke sleutels ](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/traits/trait-device-targeting.html?lang=nl-NL).
 
-De klanten van Audience Manager die platform-vlakke sleutels voor het richten gebruiken moeten aan [ SDK van het Web van Experience Platform ](/help/web-sdk/home.md) in plaats van [ DIL ](https://experienceleague.adobe.com/docs/audience-manager/user-guide/dil-api/dil-overview.html) schakelen, en [ Hoge Hints van de Cliënt Entropy ](#enabling-high-entropy-client-hints) toelaten om betrouwbare gegevens van het dienblad te blijven ontvangen.
+De klanten van Audience Manager die platform-vlakke sleutels voor het richten gebruiken moeten aan [ SDK van het Web van Experience Platform ](/help/web-sdk/home.md) in plaats van [ DIL ](https://experienceleague.adobe.com/docs/audience-manager/user-guide/dil-api/dil-overview.html?lang=nl-NL) schakelen, en [ Hoge Hints van de Cliënt Entropy ](#enabling-high-entropy-client-hints) toelaten om betrouwbare gegevens van het dienblad te blijven ontvangen.
 
 ## Hoog entropclient-hints inschakelen {#enabling-high-entropy-client-hints}
 

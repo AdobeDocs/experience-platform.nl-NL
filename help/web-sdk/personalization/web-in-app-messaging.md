@@ -19,9 +19,9 @@ Door in-app berichten te gebruiken, kunt u effectief met uw publiek in gesprek g
 
 >[!IMPORTANT]
 >
->Het Overseinen van het Web in-app is een [ Adobe Journey Optimizer ](https://experienceleague.adobe.com/docs/journey-optimizer/using/ajo-home.html) eigenschap, die het Web SDK gebruikt om de gepersonaliseerde inhoud te leveren.
+>Het Overseinen van het Web in-app is een [ Adobe Journey Optimizer ](https://experienceleague.adobe.com/docs/journey-optimizer/using/ajo-home.html?lang=nl-NL) eigenschap, die het Web SDK gebruikt om de gepersonaliseerde inhoud te leveren.
 >
->Voor gedetailleerde instructies op hoe te om uw het Overseinen van het Web in-App campagne te vormen, zie de [ documentatie van Adobe Journey Optimizer ](https://experienceleague.adobe.com/docs/journey-optimizer/using/in-app/create-in-app-web.html).
+>Voor gedetailleerde instructies op hoe te om uw het Overseinen van het Web in-App campagne te vormen, zie de [ documentatie van Adobe Journey Optimizer ](https://experienceleague.adobe.com/docs/journey-optimizer/using/in-app/create-in-app-web.html?lang=nl-NL).
 
 
 ## Vereisten {#prerequisites}
@@ -184,5 +184,5 @@ Met de configuratieoptie `personalizationStorageEnabled` kunt u ervoor kiezen om
 
 In de [ configuratie van SDK van het Web ](../commands/configure/overview.md) plaats de `personalizationStorageEnabled` optie volgens uw behoeften:
 
-* `personalizationStorageEnabled: true` brengt het in-app bericht met de frequentie teweeg u in de [ campagne van Adobe Journey Optimizer ](https://experienceleague.adobe.com/docs/journey-optimizer/using/in-app/create-in-app-web.html#configure-inapp) bepaalde.
+* `personalizationStorageEnabled: true` brengt het in-app bericht met de frequentie teweeg u in de [ campagne van Adobe Journey Optimizer ](https://experienceleague.adobe.com/docs/journey-optimizer/using/in-app/create-in-app-web.html?lang=nl-NL#configure-inapp) bepaalde.
 * `personalizationStorageEnabled: false` activeert het bericht in de app bij het laden van elke pagina.
