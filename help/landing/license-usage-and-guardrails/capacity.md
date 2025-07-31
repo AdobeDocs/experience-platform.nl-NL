@@ -1,15 +1,13 @@
 ---
 title: Gebruik en capaciteit van licenties
 description: Meer informatie over het gebruik van licenties en capaciteitsbeperkingen in Adobe Experience Platform.
-hide: true
-hidefromtoc: true
-source-git-commit: b3b0792a1a1dd5270dec697539ed58d895814fc8
+exl-id: 38dad2f1-bd0f-4cc3-a3a6-5105ea866ea4
+source-git-commit: 326710e48ea9d6eb16f62b9f288311a1d255b287
 workflow-type: tm+mt
-source-wordcount: '575'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
-
 
 # Gebruik van licenties en capaciteiten
 
@@ -41,7 +39,7 @@ Capaciteit ondersteunt momenteel de volgende services:
 
 Binnen deze diensten, worden de volgende gidsen gevolgd:
 
-- Maximumaantal streamingdeelnemers is 500
+- Het maximumaantal streamingdeelnemers is 500
    - Van deze 500 streamingdeelnemers is het maximumaantal randsoorten 150
 - De maximale gecombineerde doorvoer voor streamingsegmentatie is 1500 records per seconde (rps)
 
