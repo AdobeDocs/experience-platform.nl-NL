@@ -1,14 +1,12 @@
 ---
 title: Aanvullende informatie van juli 2025 voor Adobe Experience Platform
 description: Aanvullende informatie van juli 2025 voor Adobe Experience Platform.
-exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 2553b8f016a20678550eed50671e3549ec42aae7
+source-git-commit: fff6318e7f70176aee5fafe2e024c71922496aff
 workflow-type: tm+mt
-source-wordcount: '1451'
-ht-degree: 22%
+source-wordcount: '1553'
+ht-degree: 23%
 
 ---
-
 
 # Aanvullende informatie voor Adobe Experience Platform
 
@@ -16,8 +14,8 @@ ht-degree: 22%
 >
 >Raadpleeg de volgende documentatie voor aanvullende informatie voor andere Adobe Experience Platform-toepassingen:
 >
->- [Adobe Journey Optimizer](https://experienceleague.adobe.com/nl/docs/journey-optimizer/using/whats-new/release-notes)
->- [Adobe Journey Optimizer B2B](https://experienceleague.adobe.com/nl/docs/journey-optimizer-b2b/user/release-notes)
+>- [Adobe Journey Optimizer](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/whats-new/release-notes)
+>- [Adobe Journey Optimizer B2B](https://experienceleague.adobe.com/en/docs/journey-optimizer-b2b/user/release-notes)
 >- [Customer Journey Analytics](https://experienceleague.adobe.com/nl/docs/analytics-platform/using/releases/pre-release-notes)
 >- [Samenstelling van Federated-doelgroep](https://experienceleague.adobe.com/nl/docs/federated-audience-composition/using/e-release-notes)
 >- [Real-Time CDP Collaboration](https://experienceleague.adobe.com/nl/docs/real-time-cdp-collaboration/using/latest)
@@ -34,13 +32,14 @@ Nieuwe functies en updates van bestaande functies in Adobe Experience Platform:
 - [Segmentatieservice](#segmentation-service)
 - [Bronnen](#sources)
 
+
 ## Capaciteit {#capacity}
 
 >[!AVAILABILITY]
 >
 >Deze functie is afhankelijk van uw regio beschikbaar voor gebruik. Voor gebruikers in Amerika, zal dit vanaf 11 augustus beschikbaar zijn. Voor gebruikers in Europa zal dit vanaf 25 augustus beschikbaar zijn. Voor gebruikers in Azië is deze vanaf 8 september beschikbaar.
 
-De capaciteit verstrekt een uitvoerige mening van 0&rbrace; begeleidingen van uw organisatie [ en geeft aanbevelingen op hoe te om potentiële capaciteitsschendingen op te lossen door uw capaciteiten op een zandbakniveau toe te wijzen. ](../../rtcdp/guardrails/overview.md) Met deze release kunt u uw capaciteit voor zowel streaming opname als streaming segmentatie bekijken.
+De capaciteit verstrekt een uitvoerige mening van 0} begeleidingen van uw organisatie [ en geeft aanbevelingen op hoe te om potentiële capaciteitsschendingen op te lossen door uw capaciteiten op een zandbakniveau toe te wijzen. ](../../rtcdp/guardrails/overview.md) Met deze release kunt u uw capaciteit voor zowel streaming opname als streaming segmentatie bekijken.
 
 Voor meer informatie, te lezen gelieve het [ overzicht van de Capaciteit ](../../landing/license-usage-and-guardrails/capacity.md).
 
@@ -53,6 +52,7 @@ Voor meer informatie, te lezen gelieve het [ overzicht van de Capaciteit ](../..
 | Bestemming | Beschrijving |
 | --- | --- |
 | Beperkte beschikbaarheid van de [ Klantovereenkomst van Google + Vertoning &amp; Video 360 ](/help/destinations/catalog/advertising/google-customer-match-dv360.md) verbinding | Nadat Adobe in juni kort beschikbaar was voor alle klanten, heeft het deze integratie teruggegeven aan beperkte beschikbaarheid. Momenteel is de toegang tot deze bestemming beperkt tot klanten die al zijn ingeschakeld, terwijl Adobe en Google werken aan het oplossen van implementatieproblemen. Als u geïnteresseerd bent in deze integratie wanneer de bredere rollout wordt hervat, neemt u contact op met uw Adobe-vertegenwoordiger om uw intentie uit te drukken. |
+| [[!DNL The Trade Desk]](../../destinations/catalog/advertising/tradedesk.md) interne upgrade | Vanaf vrijdag 31 juli 2025 kunt u twee [!DNL The Trade Desk]-kaarten naast elkaar zien in de bestemmingencatalogus. Dit komt door een interne upgrade van de bestemmingsservice. <br><br> De bestaande [!DNL The Trade Desk] bestemmingsschakelaar is anders genoemd aan **[!UICONTROL (Deprecated) The Trade Desk]** en een nieuwe kaart met de naam **[!UICONTROL The Trade Desk]** is nu beschikbaar. Gebruik de nieuwe **[!UICONTROL The Trade Desk]** -verbinding in de catalogus voor nieuwe gegevensstromen voor activering. <br><br> als u om het even welke actieve dataflows aan de **[!UICONTROL (Deprecated) The Trade Desk]** bestemming hebt, zullen zij automatisch worden bijgewerkt, zodat wordt geen actie vereist van u. <br><br> als u dataflows door de [ Dienst API van de Stroom ](https://developer.adobe.com/experience-platform-apis/references/destinations/) creeert, moet u uw [!DNL flow spec ID] en [!DNL connection spec ID] aan de volgende waarden bijwerken:<ul><li>Stroomspecificatie-ID: `86134ea1-b014-49e8-8bd3-689f4ce70578`</li><li>Verbindingsspecificatie-ID: `1029798b-a97f-4c21-81b2-e0301471166e`</li></ul> |
 
 **Nieuwe of bijgewerkte functionaliteit**
 
@@ -61,8 +61,8 @@ Voor meer informatie, te lezen gelieve het [ overzicht van de Capaciteit ](../..
 | Accountnamen en beschrijvingen voor doelverbindingen | U kunt [ rekeningsnamen en beschrijvingen ](/help/destinations/ui/connect-destination.md) nu toevoegen wanneer het verbinden met bestemmingen, toelatend beter beheer van bestemmingen met veelvoudige rekeningen. |
 | Verbeterde gegevensstroominformatie voor Edge-doelen | De recht-spoorinformatie voor [ Adobe Target ](/help/destinations/catalog/personalization/adobe-target-v2.md) en [ de bestemmingen van de Douane Personalization ](/help/destinations/catalog/personalization/custom-personalization.md) is verbeterd om de gegevensstroomnaam te tonen, die duidelijkere zichtbaarheid in bijbehorende configuraties aanbieden datastream en die verwarring helpen verminderen wanneer het herzien van bestaande dataflows. De **[!UICONTROL Datastream ID]** -kiezer in het doelconfiguratiescherm is bijgewerkt naar **[!UICONTROL Datastream]** voor meer duidelijkheid in de gebruikersinterface. |
 | Zichtbaarheid van marketingacties in doelselectie | Marketingacties worden nu weergegeven in de rechtertrack van het tabblad **[[!UICONTROL Browse]](/help/destinations/ui/destinations-workspace.md#browse)** in de werkruimte Doelen en op de pagina **[[!UICONTROL Dataflow runs]](/help/dataflows/ui/monitor-destinations.md)** , zodat wijzigingen in marketingacties direct zichtbaar zijn zonder dat u naar de weergavepagina hoeft te navigeren. Deze verbetering verbetert de gebruikerservaring door het gemakkelijker te maken om marketing actieconfiguraties tijdens bestemmingsopstelling te verifiëren. |
-| [!BADGE &#x200B; Beperkte bèta &#x200B;]{type=Informative} geeft marketing acties voor bestemmingen uit | U kunt [ marketing acties ](/help/destinations/ui/edit-activation.md#edit-marketing-actions) voor bestaande bestemmingen nu uitgeven. Deze functie is momenteel in beperkte bèta. Neem contact op met uw Adobe-vertegenwoordiger om toegang aan te vragen. |
-| [!BADGE &#x200B; Beperkte bèta &#x200B;]{type=Informative} geeft bestemmingen uit | U kunt [ uw bestemmingsconfiguratie ](/help/destinations/ui/edit-destination.md) nu uitgeven nadat het is gecreeerd. Deze functie is momenteel in beperkte bèta. Neem contact op met uw Adobe-vertegenwoordiger om toegang aan te vragen. |
+| [!BADGE  Beperkte bèta ]{type=Informative} geeft marketing acties voor bestemmingen uit | U kunt [ marketing acties ](/help/destinations/ui/edit-activation.md#edit-marketing-actions) voor bestaande bestemmingen nu uitgeven. Deze functie is momenteel in beperkte bèta. Neem contact op met uw Adobe-vertegenwoordiger om toegang aan te vragen. |
+| [!BADGE  Beperkte bèta ]{type=Informative} geeft bestemmingen uit | U kunt [ uw bestemmingsconfiguratie ](/help/destinations/ui/edit-destination.md) nu uitgeven nadat het is gecreeerd. Deze functie is momenteel in beperkte bèta. Neem contact op met uw Adobe-vertegenwoordiger om toegang aan te vragen. |
 
 **Oplossingen**
 
@@ -144,3 +144,4 @@ Experience Platform biedt een RESTful-API en een interactieve gebruikersinterfac
 | Ondersteuning voor zachte verwijdering van records in [!DNL Salesforce] | De [!DNL Salesforce] -bron ondersteunt nu het opnemen van schermverwijderde records via een optionele `includeDeletedObjects` -parameter. Wanneer deze waarde is ingesteld op true, kunnen klanten geneste verwijderde records opnemen in hun [!DNL Salesforce] query&#39;s en deze records naar Experience Platform overbrengen. Lees de [[!DNL Salesforce]  brondocumentatie ](../../sources/connectors/crm/salesforce.md) voor meer informatie. |
 
 Voor meer informatie raadpleegt u het [overzicht van bronnen](../../sources/home.md).
+
