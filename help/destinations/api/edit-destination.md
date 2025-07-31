@@ -4,9 +4,9 @@ title: Doelverbindingen bewerken met de Flow Service API
 type: Tutorial
 description: Leer hoe u verschillende componenten van een doelverbinding kunt bewerken met de Flow Service API.
 exl-id: d6d27d5a-e50c-4170-bb3a-c4cbf2b46653
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: ea397360e5277bef478b2173bfb5e4be4ac1fab4
 workflow-type: tm+mt
-source-wordcount: '1601'
+source-wordcount: '1614'
 ht-degree: 2%
 
 ---
@@ -17,7 +17,7 @@ Deze zelfstudie behandelt de stappen voor het bewerken van verschillende compone
 
 >[!NOTE]
 >
-> De bewerkingen die in deze zelfstudie worden beschreven, worden momenteel alleen ondersteund via de Flow Service API.
+> De bewerkingen die in deze zelfstudie worden beschreven, worden ook ondersteund in de gebruikersinterface van Experience Platform. Lees het leerprogramma op hoe te [ bestemmingen in UI ](/help/destinations/ui/edit-destination.md) voor meer informatie uitgeven.
 
 ## Aan de slag {#get-started}
 

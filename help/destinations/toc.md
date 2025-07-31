@@ -5,9 +5,9 @@ user-guide-description: Activeer uw bekende en onbekende gegevens voor cross-cha
 description: In dit document wordt de inhoudsopgave voor Adobe Experience Platform-doelen weergegeven
 feature: Destinations
 role: Admin,User
-source-git-commit: c3f570ad3fcae50f2381e344bb88d8a9cace57be
+source-git-commit: bef5176048bad269c9e32e56d1e331a93eb80e13
 workflow-type: tm+mt
-source-wordcount: '1295'
+source-wordcount: '1298'
 ht-degree: 2%
 
 ---
@@ -32,7 +32,7 @@ ht-degree: 2%
    * [Doelaccounts verwijderen](./api/delete-destination-account.md)
    * [Doelgegevens verwijderen](./api/delete-destination-dataflow.md)
    * [Gegevensbestanden exporteren](/help/destinations/api/export-datasets.md)
-   * [ Soort en filter API reacties voor bestemmingen ](https://experienceleague.adobe.com/docs/experience-platform/dataflows/api/sort-and-filter.html?lang=nl-NL#use-cases)
+   * [ Soort en filter API reacties voor bestemmingen ](https://experienceleague.adobe.com/docs/experience-platform/dataflows/api/sort-and-filter.html#use-cases)
 * UI-hulplijnen {#ui}
    * [Werkruimte Doelen](./ui/destinations-workspace.md)
    * [Een nieuwe doelverbinding maken](./ui/connect-destination.md)
@@ -52,6 +52,7 @@ ht-degree: 2%
       * [Arrays, kaarten en objecten exporteren](/help/destinations/ui/export-arrays-maps-objects.md)
       * [Transformaties uitvoeren op gegevens die naar cloudopslagbestemmingen worden geëxporteerd](/help/destinations/ui/data-transformations-calculated-fields.md)
    * [Doelgegevens weergeven](./ui/destination-details-page.md)
+   * [(Beta) Doelen bewerken](./ui/edit-destination.md)
    * [Doelaccounts bijwerken](./ui/update-accounts.md)
    * [Doelaccounts verwijderen](./ui/delete-destination-account.md)
    * [Activeringsgegevens bewerken](./ui/edit-activation.md)
@@ -67,7 +68,7 @@ ht-degree: 2%
       * [Marketo Engage-verbinding](./catalog/adobe/marketo-engage.md)
       * [(Beta) Marketo Engage Person Sync verbinding](./catalog/adobe/marketo-engage-person-sync.md)
       * [Marketo Measure Ultimate-verbinding](./catalog/adobe/marketo-measure-ultimate.md)
-      * [ het publiek dat van Experience Platform  deelt](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html?lang=nl-NL)
+      * [ het publiek dat van Experience Platform ](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html) deelt
       * [ Federated de verbinding van de Samenstelling van het publiek ](https://www.adobe.com/go/destinations-federated-audience-composition)
    * Advertising-bestemmingen{#advertising}
       * [(Beta) Acxiom Audience Distribution](./catalog/advertising/acxiom-audience-distribution.md)
@@ -319,4 +320,4 @@ ht-degree: 2%
       * [Zelfbedieningssjabloon voor documentatie](./destination-sdk/docs-framework/self-service-template.md)
       * [Aanbevolen werkwijzen ontwerpen](./destination-sdk/docs-framework/authoring-best-practices.md)
 * [Veelgestelde vragen](./destinations-faq.md)
-* [Releaseopmerkingen bij Experience Platform](https://experienceleague.adobe.com/nl/docs/experience-platform/release-notes/latest)
+* [Releaseopmerkingen bij Experience Platform](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)
