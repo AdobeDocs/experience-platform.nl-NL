@@ -765,7 +765,7 @@ POST /packages/import
 
 **Verzoek**
 
-Met de volgende aanvraag worden pakketten opgehaald die moeten worden geïmporteerd. De nuttige lading is een kaart van substituties waar, als een ingang bestaat, de sleutel `artifactId` door het pakket wordt verstrekt, en het alternatief is de waarde. Als de kaart of de nuttige lading **** leeg is, worden geen substituties uitgevoerd.
+Met de volgende aanvraag worden pakketten opgehaald die moeten worden geïmporteerd. De nuttige lading is een kaart van substituties waar, als een ingang bestaat, de sleutel `artifactId` door het pakket wordt verstrekt, en het alternatief is de waarde. Als de kaart of de nuttige lading **&#x200B;**&#x200B;leeg is, worden geen substituties uitgevoerd.
 
 ```shell
 curl -X POST \
@@ -1270,7 +1270,7 @@ curl -X POST  \
 | `linkingID` | De id van het verzoek om delen waarop u reageert. | String | Ja |
 | `status` | De actie die wordt ondernomen naar aanleiding van het verzoek om delen. Acceptabele waarden zijn `APPROVED` of `REJECTED` . | String | Ja |
 | `reason` | De reden waarom de actie wordt ondernomen. | String | Ja |
-| `targetIMSOrgDetails` | De details over de doelorganisatie waar de id waarde identiteitskaart van de doelorganisatie **** zou moeten zijn, zou de naamwaarde de 2} NAAM van de doelorganisaties **moeten zijn, en de gebiedwaarde zou de doelorganisaties** REGIO **moeten zijn.** | Object | Ja |
+| `targetIMSOrgDetails` | De details over de doelorganisatie waar de id waarde identiteitskaart van de doelorganisatie **&#x200B;**&#x200B;zou moeten zijn, zou de naamwaarde de 2&rbrace; NAAM van de doelorganisaties **moeten zijn, en de gebiedwaarde zou de doelorganisaties** REGIO **moeten zijn.** | Object | Ja |
 
 **Reactie**
 
