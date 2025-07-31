@@ -3,9 +3,9 @@ title: Een nieuwe doelverbinding maken
 type: Tutorial
 description: Leer hoe u verbinding maakt met een doel in Adobe Experience Platform, waarschuwingen inschakelt en marketingacties instelt voor de verbonden bestemming.
 exl-id: 56d7799a-d1da-4727-ae79-fb2c775fe5a5
-source-git-commit: 59ff77ff9f4a6fe147b5d8231fd3caa2550ae20e
+source-git-commit: ec6f055de02610e23f30051c4fed4f362e9fbc53
 workflow-type: tm+mt
-source-wordcount: '1138'
+source-wordcount: '1236'
 ht-degree: 0%
 
 ---
@@ -41,7 +41,7 @@ Voordat u publieksgegevens naar een bestemming kunt verzenden, moet u een verbin
 
    ![ Schermafbeelding van Experience Platform UI, die de pagina van de bestemmingscatalogus met Activate benadrukt publiek toont.](../assets/ui/connect-destinations/activate-segments.png)
 
-3. Als u **[!UICONTROL Set up]** selecteerde, skip aan de volgende stap, [&#128279;](#authenticate) aan de bestemming voor authentiek verklaren.
+3. Als u **[!UICONTROL Set up]** selecteerde, skip aan de volgende stap, [ ](#authenticate) aan de bestemming voor authentiek verklaren.
 
    Als u **[!UICONTROL Activate]**, **[!UICONTROL Activate audiences]** of **[!UICONTROL Export datasets]** hebt geselecteerd, wordt nu een lijst met bestaande doelverbindingen weergegeven.
 
@@ -54,15 +54,24 @@ Voordat u publieksgegevens naar een bestemming kunt verzenden, moet u een verbin
 >[!CONTEXTUALHELP]
 >id="platform_destinations_account_name"
 >title="Accountnaam"
->abstract="Voer een naam in waarmee u dit doelaccount in de toekomst gemakkelijk kunt herkennen. Dit is vooral handig als u meerdere verbindingen met hetzelfde doeltype hebt."
+>abstract="Voer een naam in waarmee u dit doelaccount in de toekomst gemakkelijk kunt herkennen. Dit is vooral handig als u meerdere verbindingen met hetzelfde doel hebt."
 
 De eerste stap in het verbinden met een bestemming moet aan het bestemmingsplatform voor authentiek verklaren.
 
-Afhankelijk van het doel waarmee u verbinding maakt, kunt u naar de pagina van de bestemmingspartner worden gebracht voor verificatie, of u wordt gevraagd om verificatiegegevens rechtstreeks in te voeren in de Experience Platform-workflow. Hieronder ziet u een voorbeeld van de vereiste invoer voor verificatie bij een [!DNL Amazon S3] -doel. Gedetailleerde instructies over de vereiste invoer worden gegeven op elke pagina met doeldocumentatie (zie bijvoorbeeld de verificatiesectie voor [[!DNL Amazon S3]](/help/destinations/catalog/cloud-storage/amazon-s3.md#authenticate) en voor [[!DNL Facebook]](/help/destinations/catalog/social/facebook.md#authenticate) ).
+Afhankelijk van het doel waarmee u verbinding maakt, kunt u naar de pagina van de bestemmingspartner worden gebracht voor verificatie, of u wordt gevraagd om verificatiegegevens rechtstreeks in te voeren in de Experience Platform-workflow.
+
+Wanneer u een nieuwe doelverbinding instelt, moet u een **[!UICONTROL Account name]** en (optioneel) een **[!UICONTROL Description]** opgeven. Deze velden zijn beschikbaar voor alle doelen.
+
+* **[!UICONTROL Account name]**: voer een naam in die u helpt dit doelaccount in de toekomst gemakkelijk te identificeren. Dit is vooral handig als u meerdere verbindingen met hetzelfde doel hebt.
+* **[!UICONTROL Description]** (optioneel): voeg aanvullende gegevens toe die u of uw team helpen onderscheid te maken tussen accounts, zoals het doel van de verbinding of de relevante zakelijke context.
+
+Als u duidelijke en beschrijvende informatie in deze velden opgeeft, kunt u de juiste doelaccount eenvoudiger beheren en selecteren wanneer u een publiek activeert.
+
+Hieronder ziet u een voorbeeld van de vereiste invoer voor verificatie bij een [!DNL Amazon S3] -doel. Gedetailleerde instructies over de vereiste invoer worden gegeven op elke pagina met doeldocumentatie (zie bijvoorbeeld de verificatiesectie voor [[!DNL Amazon S3]](/help/destinations/catalog/cloud-storage/amazon-s3.md#authenticate) en voor [[!DNL Facebook]](/help/destinations/catalog/social/facebook.md#authenticate) ).
 
 **[!DNL Amazon S3]vereiste en optionele verificatieparameters**
 
-![ Beeld dat de vereiste en facultatieve inputparameters toont wanneer het voor authentiek verklaren aan een bestemming van Amazon S3.](../assets/ui/connect-destinations/authenticate-amazon-s3-example.png)
+![ Beeld dat de vereiste en facultatieve inputparameters toont wanneer het voor authentiek verklaren aan een bestemming van Amazon S3.](../assets/ui/connect-destinations/s3-new-acc.png)
 
 ## Verbindingsparameters instellen {#set-up-connection-parameters}
 
