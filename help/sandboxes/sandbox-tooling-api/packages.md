@@ -2,9 +2,9 @@
 title: API-eindpunt voor sandbox Tooling Packages
 description: Het /packages eindpunt in Sandbox Tooling API staat u toe om pakketten in Adobe Experience Platform programmatically te beheren.
 exl-id: 46efee26-d897-4941-baf4-d5ca0b8311f0
-source-git-commit: 47e4616e5465ec97512647b9280f461c6971aa42
+source-git-commit: 1d8c29178927c7ee3aceb0b68f97baeaefd9f695
 workflow-type: tm+mt
-source-wordcount: '2547'
+source-wordcount: '2933'
 ht-degree: 1%
 
 ---
@@ -17,7 +17,7 @@ Met het `/packages` -eindpunt in de API voor gereedheid voor sandboxen kunt u pr
 
 ## Een pakket maken {#create}
 
-U kunt een multi-artefactenpakket tot stand brengen, door een verzoek van de POST aan het `/packages` eindpunt terwijl het verstrekken van waarden voor de naam en het pakkettype van uw pakket.
+U kunt een pakket met meerdere artefacten maken door een POST-aanvraag in te dienen bij het eindpunt van `/packages` en tegelijkertijd waarden op te geven voor de naam en het pakkettype van uw pakket.
 
 **API formaat**
 
@@ -100,7 +100,7 @@ Een geslaagde reactie retourneert het zojuist gemaakte pakket. De reactie bevat 
 
 ## Een pakket bijwerken {#update}
 
-U kunt een pakket bijwerken door een PUT aan het `/packages` eindpunt te vragen.
+Gebruik het eindpunt `/packages` in de API voor gereedschappen in de sandbox om een pakket bij te werken.
 
 ### Artefacten toevoegen aan een pakket {#add-artifacts}
 
@@ -139,7 +139,7 @@ curl -X PUT \
 | `id` | De id van het pakket dat moet worden bijgewerkt. | String | Ja |
 | `action` | Om artefacten in het pakket toe te voegen, zou de actiewaarde **moeten zijn ADD**. Deze actie wordt gesteund voor slechts **GEDEELTELIJKE** pakkettypes. | String | Ja |
 | `artifacts` | Een lijst met artefacten die in het pakket moeten worden toegevoegd. Er zou geen verandering in het pakket zijn als de lijst **ongeldig** of **leeg** is. Artefacten worden gedupliceerd voordat ze aan het pakket worden toegevoegd. Zie de onderstaande tabel voor een volledige lijst met ondersteunde artefacten. | Array | Nee |
-| `expiry` | Het tijdstempel dat de vervaldatum voor het pakket definieert. De standaardwaarde is 90 dagen vanaf het moment dat de PUT-API wordt aangeroepen als de vervaldatum niet is opgegeven in de payload. Het veld voor het verstrijken van de reactie is een tijdperk in UTC-tijd. | Tekenreeks (UTC-tijdstempelindeling) | Nee |
+| `expiry` | Het tijdstempel dat de vervaldatum voor het pakket definieert. De standaardwaarde is 90 dagen vanaf het moment dat de PUT API wordt aangeroepen als de vervaldatum niet is opgegeven in de payload. Het veld voor het verstrijken van de reactie is een tijdperk in UTC-tijd. | Tekenreeks (UTC-tijdstempelindeling) | Nee |
 
 De volgende artefacttypen worden momenteel ondersteund.
 
@@ -345,7 +345,7 @@ Een geslaagde reactie retourneert het bijgewerkte pakket. De reactie bevat de ov
 
 ## Een pakket verwijderen {#delete}
 
-Als u een pakket wilt verwijderen, vraagt u een DELETE-aanvraag naar het `/packages` -eindpunt en geeft u de id op van het pakket dat u wilt verwijderen.
+Als u een pakket wilt verwijderen, vraagt u DELETE het `/packages` -eindpunt aan en geeft u de id op van het pakket dat u wilt verwijderen.
 
 **API formaat**
 
@@ -380,9 +380,9 @@ Een geslaagde reactie retourneert een reden die aangeeft dat de pakket-id is ver
 }
 ```
 
-## Publish een pakket {#publish}
+## Een pakket publiceren {#publish}
 
-Als u het importeren van een pakket in een sandbox wilt inschakelen, moet u het publiceren. Breng een verzoek van de GET tot het `/packages` eindpunt terwijl het specificeren van identiteitskaart van het pakket u wilt publiceren.
+Als u het importeren van een pakket in een sandbox wilt inschakelen, moet u het publiceren. Voer een GET-aanvraag in bij het eindpunt van `/packages` terwijl u de id opgeeft van het pakket dat u wilt publiceren.
 
 **API formaat**
 
@@ -433,7 +433,7 @@ Een geslaagde reactie retourneert het gepubliceerde pakket.
 
 ## Een pakket opzoeken {#look-up-package}
 
-U kunt een afzonderlijk pakket opzoeken door een verzoek van de GET te richten aan het `/packages` eindpunt dat overeenkomstige identiteitskaart van het pakket in de verzoekweg omvat.
+U kunt een afzonderlijk pakket opzoeken door een GET-aanvraag in te dienen bij het `/packages` -eindpunt dat de overeenkomende id van het pakket bevat in het aanvraagpad.
 
 **API formaat**
 
@@ -501,7 +501,7 @@ Een geslaagde reactie retourneert details voor de id van het gevraagde pakket. H
 
 ## Lijstpakketten {#list-packages}
 
-U kunt van alle pakketten in uw organisatie een lijst maken, door een verzoek van de GET tot het `/packages` eindpunt te richten.
+U kunt alle pakketten in uw organisatie weergeven door een GET-aanvraag in te dienen bij het `/packages` -eindpunt.
 
 **API formaat**
 
@@ -753,7 +753,7 @@ Conflicten worden geretourneerd in de reactie. In het antwoord wordt het oorspro
 >
 >Het is inherent aan conflictoplossing dat het alternatieve artefact al bestaat in de doelsandbox.
 
-U kunt een importbewerking voor een pakket verzenden nadat u conflicten hebt gecontroleerd en vervangende items hebt opgegeven door een aanvraag voor POST in te dienen bij het `/packages` -eindpunt. Het resultaat wordt opgegeven als een payload, die de importtaak start voor de doelsandbox zoals opgegeven in de payload.
+U kunt een importbewerking voor een pakket verzenden nadat u conflicten hebt gecontroleerd en vervangende items hebt opgegeven door een POST-aanvraag in te dienen bij het `/packages` -eindpunt. Het resultaat wordt opgegeven als een payload, die de importtaak start voor de doelsandbox zoals opgegeven in de payload.
 
 Payload accepteert ook de door de gebruiker opgegeven taaknaam en beschrijving voor de importtaak. Als de door de gebruiker opgegeven naam en beschrijving niet beschikbaar zijn, worden de pakketnaam en beschrijving gebruikt voor de naam en beschrijving van de taak.
 
@@ -765,7 +765,7 @@ POST /packages/import
 
 **Verzoek**
 
-Met de volgende aanvraag worden pakketten opgehaald die moeten worden geïmporteerd. De nuttige lading is een kaart van substituties waar, als een ingang bestaat, de sleutel `artifactId` door het pakket wordt verstrekt, en het alternatief is de waarde. Als de kaart of de nuttige lading **&#x200B;**&#x200B;leeg is, worden geen substituties uitgevoerd.
+Met de volgende aanvraag worden pakketten opgehaald die moeten worden geïmporteerd. De nuttige lading is een kaart van substituties waar, als een ingang bestaat, de sleutel `artifactId` door het pakket wordt verstrekt, en het alternatief is de waarde. Als de kaart of de nuttige lading **** leeg is, worden geen substituties uitgevoerd.
 
 ```shell
 curl -X POST \
@@ -820,7 +820,7 @@ curl -X POST \
 
 ## Alle afhankelijke objecten weergeven {#dependent-objects}
 
-Maak een lijst van alle afhankelijke voorwerpen voor de uitgevoerde voorwerpen in een pakket door een verzoek van de POST aan het `/packages` eindpunt terwijl het specificeren van identiteitskaart van het pakket.
+Maak een lijst van alle afhankelijke voorwerpen voor de uitgevoerde voorwerpen in een pakket door een POST- verzoek aan het `/packages` eindpunt te doen terwijl het specificeren van identiteitskaart van het pakket.
 
 **API formaat**
 
@@ -900,7 +900,7 @@ Een geslaagde reactie retourneert een lijst met onderliggende objecten voor de o
 
 ## Op rollen gebaseerde machtigingen controleren om alle pakketartefacten te importeren {#role-based-permissions}
 
-U kunt controleren of u machtigingen hebt om pakketartefacten te importeren door een GET-aanvraag in te dienen bij het eindpunt `/packages` terwijl de id van het pakket en de naam van de doelsandbox wordt opgegeven.
+U kunt controleren of u machtigingen hebt om pakketartefacten te importeren door een GET-aanvraag in te dienen bij het `/packages` -eindpunt terwijl de id van het pakket en de naam van de doelsandbox wordt opgegeven.
 
 **API formaat**
 
@@ -1165,7 +1165,7 @@ Met het eindpunt `/handshake` in de API voor het bewerken van sandboxen kunt u m
 
 ### Een aanvraag voor delen verzenden {#send-request}
 
-Verzend een verzoek naar een organisatie van de doelpartner voor het delen van goedkeuring door een verzoek van de POST aan het `/handshake/bulkCreate` eindpunt te doen. Dit is vereist voordat u persoonlijke pakketten kunt delen.
+Verzend een verzoek naar een organisatie van de doelpartner voor het delen van goedkeuring door een POST- verzoek aan het `/handshake/bulkCreate` eindpunt te doen. Dit is vereist voordat u persoonlijke pakketten kunt delen.
 
 **API formaat**
 
@@ -1223,7 +1223,7 @@ Een geslaagde reactie geeft details over uw aanvraag voor delen.
             "modifiedByName": "{MODIFIED_BY}",
             "modifiedByIMSOrgId": "{ORG_ID}",
             "statusHistory": "[{\"actionTakenBy\":\"acme@98ff67fa661fdf6549420b.e\",\"actionTakenByName\":\"{NAME}\",\"actionTakenByImsOrgID\":\"{ORG_ID}\",\"action\":\"INITIATED\",\"actionTimeStamp\":1724938816885}]",
-            "linkingId": "{LINKIND_ID}"
+            "linkingId": "{LINKING_ID}"
         }
     },
     "failedRequests": {}
@@ -1232,7 +1232,7 @@ Een geslaagde reactie geeft details over uw aanvraag voor delen.
 
 ### Ontvangen aanvragen voor delen goedkeuren {#approve-requests}
 
-Goedkeuren van verzoeken om delen van organisaties van doelpartners door een verzoek van de POST aan het `/handshake/action` eindpunt te richten. Na goedkeuring, kunnen de organisaties van de bronpartner privé pakketten delen.
+Goedkeuren van verzoeken om delen van organisaties van doelpartners door een POST-verzoek in te dienen bij het `/handshake/action` eindpunt. Na goedkeuring, kunnen de organisaties van de bronpartner privé pakketten delen.
 
 **API formaat**
 
@@ -1270,7 +1270,7 @@ curl -X POST  \
 | `linkingID` | De id van het verzoek om delen waarop u reageert. | String | Ja |
 | `status` | De actie die wordt ondernomen naar aanleiding van het verzoek om delen. Acceptabele waarden zijn `APPROVED` of `REJECTED` . | String | Ja |
 | `reason` | De reden waarom de actie wordt ondernomen. | String | Ja |
-| `targetIMSOrgDetails` | De details over de doelorganisatie waar de id waarde identiteitskaart van de doelorganisatie **&#x200B;**&#x200B;zou moeten zijn, zou de naamwaarde de 2&rbrace; NAAM van de doelorganisaties **moeten zijn, en de gebiedwaarde zou de doelorganisaties** REGIO **moeten zijn.** | Object | Ja |
+| `targetIMSOrgDetails` | De details over de doelorganisatie waar de id waarde identiteitskaart van de doelorganisatie **** zou moeten zijn, zou de naamwaarde de 2} NAAM van de doelorganisaties **moeten zijn, en de gebiedwaarde zou de doelorganisaties** REGIO **moeten zijn.** | Object | Ja |
 
 **Reactie**
 
@@ -1300,7 +1300,7 @@ Een succesvolle reactie retourneert details met betrekking tot het goedgekeurde 
 
 ### Uitgaande/binnenkomende verzoeken voor delen weergeven {#outgoing-and-incoming-requests}
 
-Maak een lijst van uitgaande en inkomende aandeelverzoeken door een verzoek van de GET tot het `handshake/list?property=status%3D%3DAPPROVED&requestType=INCOMING` eindpunt te richten.
+Maak een lijst van uitgaande en binnenkomende verzoeken van het aandeel door een GET- verzoek aan het `handshake/list?property=status%3D%3DAPPROVED&requestType=INCOMING` eindpunt te doen.
 
 **API formaat**
 
@@ -1374,7 +1374,7 @@ Gebruik het eindpunt `/transfer` in de API voor gereedschappen in de sandbox om 
 
 ### Nieuwe aanvraag voor delen {#share-request}
 
-Zoek het pakket van een gepubliceerde bronorganisatie en deel het met een doelorganisatie door een verzoek van de POST aan het `/transfer` eindpunt te doen terwijl het verstrekken van pakket identiteitskaart en identiteitskaart van de doelorganisatie.
+Zoek het pakket van een gepubliceerde bronorganisatie en deel het met een doelorganisatie door een POST- verzoek aan het `/transfer` eindpunt te doen terwijl het verstrekken van pakketidentiteitskaart en identiteitskaart van de doelorganisatie.
 
 **API formaat**
 
@@ -1434,7 +1434,7 @@ Een succesvol antwoord geeft details van het gevraagde pakket en zijn aandeelsta
 
 ### Aanvraag voor delen ophalen met id {#fetch-transfer-by-id}
 
-Haal de details van een deelverzoek door een verzoek van de GET tot het `/transfer/{TRANSFER_ID}` eindpunt te richten terwijl het verstrekken van identiteitskaart
+Haal de details van een verzoek van het aandeel door een GET- verzoek aan het `/transfer/{TRANSFER_ID}` eindpunt te doen terwijl het verstrekken van identiteitskaart
 
 **API formaat**
 
@@ -1481,7 +1481,7 @@ Een succesantwoord retourneert details van een aandelenaanvraag.
 
 ### Ophaallijst {#transfers-list}
 
-Haal een lijst van overdrachtsverzoeken door een verzoek van de GET tot het `/transfer/list?{QUERY_PARAMETERS}` eindpunt te richten, veranderend de vraagparameters zoals nodig.
+Haal een lijst van overdrachtsverzoeken door een GET- verzoek aan het `/transfer/list?{QUERY_PARAMETERS}` eindpunt te doen, veranderend de vraagparameters zoals nodig.
 
 **API formaat**
 
@@ -1557,7 +1557,7 @@ Een succesvolle reactie keert een lijst van alle overdrachtverzoeken van de vers
 
 ### Pakketbeschikbaarheid bijwerken van privé naar openbaar {#update-availability}
 
-Verander een pakket van privé in openbaar door een verzoek van de GET aan het `/packages/update` eindpunt te doen. Standaard wordt een pakket gemaakt met persoonlijke beschikbaarheid.
+Verander een pakket van privé in openbaar door een GET- verzoek aan het `/packages/update` eindpunt te doen. Standaard wordt een pakket gemaakt met persoonlijke beschikbaarheid.
 
 **API formaat**
 
@@ -1628,7 +1628,7 @@ Een geslaagde reactie retourneert details over een pakket en de zichtbaarheid er
 
 ### Verzoek om een openbaar pakket te importeren {#pull-public-package}
 
-Importeer een pakket van een bronorganisatie met openbare beschikbaarheid door een verzoek van de POST aan het `/transfer/pullRequest` eindpunt te richten.
+Importeer een pakket van een bronorganisatie met openbare beschikbaarheid door een POST-verzoek in te dienen op het `/transfer/pullRequest` eindpunt.
 
 **API formaat**
 
@@ -1684,7 +1684,7 @@ Als u met succes reageert, worden details over het geïmporteerde openbare pakke
 
 ### Openbare pakketten weergeven {#list-public-packages}
 
-Vestig een lijst van pakketten met openbare zichtbaarheid door een verzoek van de GET aan het `/transfer/list?{QUERY_PARAMS}` eindpunt te richten.
+Zoek een lijst met pakketten die zichtbaar zijn voor het publiek door een GET-aanvraag in te dienen bij het eindpunt van `/transfer/list?{QUERY_PARAMS}` .
 
 **API formaat**
 
@@ -1935,7 +1935,7 @@ Een succesvol antwoord geeft een lijst met openbare pakketten en hun details.
 
 ## Pakketlading kopiëren (#package-payload)
 
-U kunt de lading van een openbaar pakket kopiëren door een verzoek van de GET aan het `/packages/payload` eindpunt te richten dat overeenkomstige identiteitskaart van het pakket in de verzoekweg omvat.
+U kunt de lading van een openbaar pakket kopiëren door een GET- verzoek aan het `/packages/payload` eindpunt te doen dat overeenkomstige identiteitskaart van het pakket in de verzoekweg omvat.
 
 **API formaat**
 
@@ -1975,5 +1975,497 @@ Een geslaagde reactie retourneert de lading van het pakket.
 {
     "imsOrgId": "{ORG_ID}",
     "packageId": "{PACKAGE_ID}"
+}
+```
+
+## Updates van objectconfiguratie migreren
+
+Gebruik het /packages eindpunt in sandbox tooling API om objecten configuratieupdates te migreren.
+
+### Bewerkingen bijwerken (#update-bewerkingen)
+
+Vergelijk een opgegeven of laatste versie van een pakketmomentopname met de huidige status van de bronsandbox of een eerder gebruikte doelsandbox waarin het pakket is geïmporteerd door een POST-aanvraag in te dienen bij het `/packages/{packageId}/version/compare` -eindpunt, waarbij de pakket-id wordt opgegeven.
+
+***API formaat***
+
+```http
+PATCH /packages/{packageId}/version/compare
+```
+
+| Eigenschap | Beschrijving | Type | Vereist |
+| --- | --- | --- | --- |
+| `packageId` | De id van het pakket. | String | Ja |
+
+**Verzoek**
+
+```shell
+curl -X POST \
+  https://platform-stage.adobe.io/data/foundation/exim/packages/{PACKAGE_ID}/version/compare/ \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'Accept: application/json' \
+  -H 'Content-Type: application/json' \
+  -d '{
+      "triggerNew": true,
+      "targetSandbox": "{SANDBOX_NAME}"
+  }'
+```
+
+| Eigenschap | Beschrijving | Type | Vereist |
+| --- | --- | --- | --- |
+| `triggerNew` | Markering om de nieuwe vergelijkingstaak voor Diff te activeren, zelfs als er al een actieve of voltooide taak bestaat. | Boolean | Nee |
+| `targetSandbox` | Geeft de naam aan van de doelsandbox waarmee de diff moet worden berekend. Indien niet opgegeven, wordt de bronsandbox gebruikt als doelsandbox. | String | Nee |
+
+**Reactie**
+
+Een geslaagde reactie voor een eerder voltooide taak retourneert het taakobject met de eerder berekende diff-resultaten. Een nieuw voltooide baan keert JobId terug.
+
++++Antwoord weergeven (verzonden taak)
+
+```json
+{
+    "status": "OK",
+    "type": "SUCCESS",
+    "ajo": false,
+    "message": "Job with ID: {JOB_ID}",
+    "object": {
+        "id": "c4b7d07ae4c646279e2070a31c50bd5c",
+        "name": "Compute Job Package: {SNAPSHOT_ID}",
+        "description": null,
+        "visibility": "TENANT",
+        "requestType": "VERSION",
+        "expiry": 0,
+        "snapshotId": "{SNAPSHOT_ID}",
+        "packageVersion": 0,
+        "createdTimestamp": 0,
+        "modifiedTimestamp": 0,
+        "type": "PARTIAL",
+        "jobStatus": "SUCCESS",
+        "jobType": "COMPUTE",
+        "counter": 0,
+        "imsOrgId": "{ORG_ID}",
+        "sourceSandbox": {
+            "name": "prod",
+            "imsOrgId": "{ORG_ID}",
+            "empty": false
+        },
+        "destinationSandbox": {
+            "name": "amanda-1",
+            "imsOrgId": "{ORG_ID}",
+            "empty": false
+        },
+        "deltaPackageVersion": {
+            "packageId": "{PACKAGE_ID}",
+            "currentVersion": 0,
+            "validated": false,
+            "rootArtifacts": [
+                {
+                    "id": "https://ns.adobe.com/sandboxtoolingstage/schemas/355f461cbfb662fd0d12d06aeab34e206efcfa5d913604de",
+                    "type": "REGISTRY_SCHEMA",
+                    "found": false,
+                    "count": 0
+                }
+            ],
+            "eximGraphDelta": {
+                "vertices": [],
+                "pluginDeltas": [
+                    {
+                        "sourceArtifact": {
+                            "id": "https://ns.adobe.com/sandboxtoolingstage/mixins/9fad8b185640a2db7daf9bb1295543ee8cb5965d80a21e8d",
+                            "type": "REGISTRY_MIXIN",
+                            "found": false,
+                            "count": 0,
+                            "title": "Custom FieldGroup 2"
+                        },
+                        "targetArtifact": {
+                            "id": "https://ns.adobe.com/sandboxtoolingstage/mixins/b7fa3024777ef11b68c5121e937d8543677093f4f0e63a5f",
+                            "type": "REGISTRY_MIXIN",
+                            "found": false,
+                            "count": 0,
+                            "title": "Custom FieldGroup 2_1738766274074"
+                        },
+                        "changes": [
+                            {
+                                "op": "replace",
+                                "path": "/title",
+                                "oldValue": "Custom FieldGroup 2_1738766274074",
+                                "newValue": "Custom FieldGroup 2"
+                            },
+                            {
+                                "op": "replace",
+                                "path": "/description",
+                                "oldValue": "Description for furnished object",
+                                "newValue": ""
+                            }
+                        ]
+                    },
+                    {
+                        "sourceArtifact": {
+                            "id": "https://ns.adobe.com/sandboxtoolingstage/mixins/304ac900943716c8bd99e6aaf6aa840aac91995729f1987f",
+                            "type": "REGISTRY_MIXIN",
+                            "found": false,
+                            "count": 0,
+                            "title": "Custom FieldGroup 4"
+                        },
+                        "targetArtifact": {
+                            "id": "https://ns.adobe.com/sandboxtoolingstage/mixins/34c9add91cce4a40d68a0e715c9f0a16048871734f8c8b74",
+                            "type": "REGISTRY_MIXIN",
+                            "found": false,
+                            "count": 0,
+                            "title": "Custom FieldGroup 4_1738766274074"
+                        },
+                        "changes": [
+                            {
+                                "op": "replace",
+                                "path": "/title",
+                                "oldValue": "Custom FieldGroup 4_1738766274074",
+                                "newValue": "Custom FieldGroup 4"
+                            },
+                            {
+                                "op": "replace",
+                                "path": "/description",
+                                "oldValue": "Description for furnished object",
+                                "newValue": ""
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+        "importReplacementMap": {
+            "https://ns.adobe.com/sandboxtoolingstage/mixins/9fad8b185640a2db7daf9bb1295543ee8cb5965d80a21e8d": "https://ns.adobe.com/sandboxtoolingstage/mixins/b7fa3024777ef11b68c5121e937d8543677093f4f0e63a5f",
+            "5a45f8cd309d5ed5797be9a0af65e89152a51d57a6c74b52": "4ae041fa182d6faf2e7c56463399170d913138a7c5712909",
+            "https://ns.adobe.com/sandboxtoolingstage/schemas/b2b7705e770a35341b8bc5ec5e3644d9c7387266777fe4ba": "https://ns.adobe.com/sandboxtoolingstage/schemas/838c4e21ad81543ac14238ac1756012f7f98f0e0bec6b425",
+            "https://ns.adobe.com/sandboxtoolingstage/schemas/355f461cbfb662fd0d12d06aeab34e206efcfa5d913604de": "https://ns.adobe.com/sandboxtoolingstage/schemas/9a55692d527169d0239e126137a694ed9db2406c9bcbd06a",
+            "8f45c79235c91e7f0c09af676a77d170a34b5ee0ad5de72c": "65d755cc3300674c3cfcec620c59876af07f046884afd359",
+            "f04b8e461396ff426f8ba8dc5544f799bf287baa8e0fa5c": "b6fa821ada8cb97cac384f0b0354bbe74209ec97fb6a83a3",
+            "https://ns.adobe.com/sandboxtoolingstage/mixins/304ac900943716c8bd99e6aaf6aa840aac91995729f1987f": "https://ns.adobe.com/sandboxtoolingstage/mixins/34c9add91cce4a40d68a0e715c9f0a16048871734f8c8b74",
+            "c8304f3cb7986e8c9b613cd8d832125bd867fb4a5aedf67a": "4d21e9bf89ce0042b52d7d41ff177a7697d695e2617d1fc1"
+        },
+        "schemaFieldMappings": null
+    }
+}
+```
+
++++
+
++++Reactie weergeven (nieuw ingediende taak)
+
+```json
+{
+    "status": "OK",
+    "type": "SUCCESS",
+    "ajo": false,
+    "message": "Job with ID: {JOB_ID}",
+    "object": {
+        "id": "aa5cfacf35a8478c8cf44a675fab1c30 ",
+        "name": "Compute Job Package: {SNAPSHOT_ID}",
+        "description": null,
+        "visibility": "TENANT",
+        "requestType": "VERSION",
+        "expiry": 0,
+        "snapshotId": "{SNAPSHOT_ID}",
+        "packageVersion": 0,
+        "createdTimestamp": 0,
+        "modifiedTimestamp": 0,
+        "type": "PARTIAL",
+        "jobStatus": "IN_PROGRESS",
+        "jobType": "COMPUTE",
+        "counter": 0,
+        "imsOrgId": "{ORG_ID}",
+        "sourceSandbox": {
+            "name": "prod",
+            "imsOrgId": "{ORG_ID}",
+            "empty": false
+        },
+        "destinationSandbox": {
+            "name": "amanda-1",
+            "imsOrgId": "{ORG_ID}",
+            "empty": false
+        },
+        "schemaFieldMappings": null
+    }
+}
+```
+
++++
+
+### Pakketversie bijwerken (#package-versioning)
+
+Voer een upgrade van het pakket uit naar een nieuwe versie met behulp van de meest recente momentopname van de bronsandbox voor elk object door een GET-aanvraag in te dienen bij het `/packages/{packageId}/version/save` -eindpunt en de pakket-id op te geven.
+
+***API formaat***
+
+```http
+PATCH /packages/{packageId}/version/save
+```
+
+| Eigenschap | Beschrijving | Type | Vereist |
+| --- | --- | --- | --- |
+| `packageId` | De id van het pakket. | String | Ja |
+
+**Verzoek**
+
+```shell
+curl -X POST \
+  https://platform-stage.adobe.io/data/foundation/exim/packages/{PACKAGE_ID}/version/save/ \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'Accept: application/json' \
+  -H 'Content-Type: application/json' \
+```
+
+**Reactie**
+
+Een geslaagde reactie retourneert de taakstatus voor de versieupgrade.
+
+```json
+{
+    "id": "3cec9bae662e43d9b9106fcbf7744a75",
+    "name": "Version Job Package: {JOB_ID}",
+    "description": null,
+    "visibility": "TENANT",
+    "requestType": "VERSION",
+    "expiry": 0,
+    "snapshotId": "{SNAPSHOT_ID}",
+    "packageVersion": 2,
+    "createdTimestamp": 0,
+    "modifiedTimestamp": 0,
+    "type": "PARTIAL",
+    "jobStatus": "PENDING",
+    "jobType": "UPGRADE",
+    "counter": 0,
+    "imsOrgId": "{ORG_ID}",
+    "sourceSandbox": {
+        "name": "prod",
+        "imsOrgId": "{ORG_ID}",
+        "empty": false
+    },
+    "destinationSandbox": {
+        "name": "prod",
+        "imsOrgId": "{ORG_ID}",
+        "empty": false
+    },
+    "schemaFieldMappings": null
+}
+```
+
+### De versiehistorie van het pakket ophalen (#package-version-history)
+
+Haal de versiegeschiedenis van het pakket op, inclusief de tijdstempel en modifier, door een GET-aanvraag in te dienen bij het `/packages/{packageId}/history` -eindpunt en de pakket-id op te geven.
+
+***API formaat***
+
+```http
+PATCH /packages/{packageId}/history
+```
+
+| Eigenschap | Beschrijving | Type | Vereist |
+| --- | --- | --- | --- |
+| `packageId` | De id van het pakket. | String | Ja |
+
+**Verzoek**
+
+```shell
+curl -X POST \
+  https://platform-stage.adobe.io/data/foundation/exim/packages/{PACKAGE_ID}/history/ \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'Accept: application/json' \
+  -H 'Content-Type: application/json' \
+```
+
+**Reactie**
+
+Een geslaagde reactie retourneert de versiegeschiedenis van een pakket.
+
+```json
+[
+    {
+        "id": "cb68591a1ed941e191e7f52e33637a26",
+        "version": 0,
+        "createdDate": 1739516784000,
+        "modifiedDate": 1739516784000,
+        "createdBy": "{CREATED_BY}",
+        "modifiedBy": "{MODIFIED_BY}",
+        "imsOrgId": "{ORG_ID}",
+        "packageVersion": 3
+    },
+    {
+        "id": "e26189e6e4df476bb66c3fc3e66a1499",
+        "version": 0,
+        "createdDate": 1739343268000,
+        "modifiedDate": 1739343268000,
+        "createdBy": "{CREATED_BY}",
+        "modifiedBy": "{MODIFIED_BY}",
+        "imsOrgId": "{ORG_ID}",
+        "packageVersion": 2
+    },
+    {
+        "id": "11af34c0eee449ac84ef28c66d9383e3",
+        "version": 0,
+        "createdDate": 1739343073000,
+        "modifiedDate": 1739343073000,
+        "createdBy": "{CREATED_BY}",
+        "modifiedBy": "{MODIFIED_BY}",
+        "imsOrgId": "{ORG_ID}",
+        "packageVersion": 1
+    }
+]
+```
+
+### Een updatetaak verzenden (#submit-update)
+
+Verhoog nieuwe updates in de doelsandboxobjecten door een PATCH-aanvraag in te dienen bij het eindpunt van `/packages/{packageId}/import` en de pakket-id op te geven.
+
+***API formaat***
+
+```http
+PATCH /packages/{packageId}/import
+```
+
+| Eigenschap | Beschrijving | Type | Vereist |
+| --- | --- | --- | --- |
+| `packageId` | De id van het pakket. | String | Ja |
+
+**Verzoek**
+
+```shell
+curl -X POST \
+  https://platform-stage.adobe.io/data/foundation/exim/packages/{PACKAGE_ID}/import/ \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'Accept: application/json' \
+  -H 'Content-Type: application/json' \
+  -d '{
+      "id": "50fd94f8072b4f248737a2b57b41058f",
+      "name": "Test Update",
+      "destinationSandbox": {
+        "name": "test-sandbox-sbt",
+        "imsOrgId": "{ORG_ID}"
+      },
+      "overwriteMappings": {
+        "https://ns.adobe.com/sandboxtoolingstage/schemas/327a48c83a5359f8160420a00d5a07f0ba8631a1fd466f9e" : {
+            "id" : "https://ns.adobe.com/sandboxtoolingstage/schemas/e346bb2cd7b26576cb51920d214aebbd42940a9bf94a75cd",
+            "type" : "REGISTRY_SCHEMA"
+        }
+      }
+  }'
+```
+
+**Reactie**
+
+Een geslaagde reactie retourneert de taak-id voor de update.
+
+```json
+{
+    "id": "3cec9bae662e43d9b9106fcbf7744a75",
+    "name": "Update Job Name",
+    "description": "Update Job Description",
+    "visibility": "TENANT",
+    "requestType": "IMPORT",
+    "expiry": 0,
+    "snapshotId": "{SNAPSHOT_ID}",
+    "packageVersion": 2,
+    "createdTimestamp": 0,
+    "modifiedTimestamp": 0,
+    "type": "PARTIAL",
+    "jobStatus": "PENDING",
+    "jobType": "UPDATE",
+    "counter": 0,
+    "imsOrgId": "{ORG_ID}",
+    "sourceSandbox": {
+        "name": "prod",
+        "imsOrgId": "{ORG_ID}",
+        "empty": false
+    },
+    "destinationSandbox": {
+        "name": "amanda-1",
+        "imsOrgId": "{ORG_ID}",
+        "empty": false
+    },
+    "schemaFieldMappings": null
+}
+```
+
+### Update en overschrijving uitschakelen voor een pakket (#disable-update)
+
+Schakel update en overschrijving uit voor pakketten die ze niet ondersteunen door een GET-aanvraag in te dienen bij het `/packages/{packageId}/?{QUERY_PARAMS}` -eindpunt en de pakket-id op te geven.
+
+***API formaat***
+
+```http
+PATCH /packages/{packageId}?{QUERY_PARAMS}
+```
+
+| Eigenschap | Beschrijving | Type | Vereist |
+| --- | --- | --- | --- |
+| `packageId` | De id van het pakket. | String | Ja |
+| {QUERY_PARAM} | De getCapabilites-queryparameter. Deze moet worden ingesteld op `true` of `false` | Boolean | Ja |
+
+**Verzoek**
+
+```shell
+curl -X POST \
+  https://platform-stage.adobe.io/data/foundation/exim/packages/{PACKAGE_ID}?getCapabilities=true'/ \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'Accept: application/json' \
+  -H 'Content-Type: application/json' \
+```
+
+**Reactie**
+
+Een succesvol antwoord geeft een lijst van de mogelijkheden van het pakket terug.
+
+```json
+{
+    "id": "80230dde96574a828191144709bb9b51",
+    "version": 3,
+    "createdDate": 1749808582000,
+    "modifiedDate": 1749808648000,
+    "createdBy": "{CREATED_BY}",
+    "modifiedBy": "{MODIFIED_BY}",
+    "name": "Ankit_Primary_Descriptor_Test",
+    "description": "RestPackage",
+    "imsOrgId": "{ORG_ID}",
+    "clientId": "usecasebuilder",
+    "packageType": "PARTIAL",
+    "expiry": 1757584598000,
+    "publishDate": 1749808648000,
+    "status": "PUBLISHED",
+    "packageVisibility": "PRIVATE",
+    "latestPackageVersion": 0,
+    "packageAccessType": "TENANT",
+    "artifactsList": [
+        {
+            "id": "https://ns.adobe.com/sandboxtoolingstage/schemas/1c767056056de64d8030380d1b9f570d26bc15501a1e0e95",
+            "altId": null,
+            "type": "REGISTRY_SCHEMA",
+            "found": false,
+            "count": 0
+        }
+    ],
+    "schemaMapping": {},
+    "sourceSandbox": {
+        "name": "atul-sandbox",
+        "imsOrgId": "{ORG_ID}",
+        "empty": false
+    },
+    "packageCapabilities": {
+        "capabilities": [
+            "VERSIONABLE"
+        ]
+    }
 }
 ```
