@@ -2,9 +2,9 @@
 title: API-eindpunt voor extern publiek
 description: Leer hoe u de API voor extern publiek kunt gebruiken om uw externe publiek te maken, bij te werken, te activeren en te verwijderen uit Adobe Experience Platform.
 exl-id: eaa83933-d301-48cb-8a4d-dfeba059bae1
-source-git-commit: 3e1eb697569d75d0ef3af53be1a556bdcd8a293b
+source-git-commit: bc74f86dca62a62dde39ad2e167e66b511d59086
 workflow-type: tm+mt
-source-wordcount: '2219'
+source-wordcount: '2189'
 ht-degree: 1%
 
 ---
@@ -78,10 +78,12 @@ curl -X POST https://platform.adobe.io/data/core/ais/external-audience/ \
             }
         ],
         "sourceSpec": {
-            "path": "activation/sample-source/example.csv",
-            "type": "file",
-            "sourceType": "Cloud Storage",
-            "baseConnectionId": "1d1d4bc5-b527-46a3-9863-530246a61b2b"
+            "params": {
+                "path": "activation/sample-source/example.csv",
+                "type": "file",
+                "sourceType": "Cloud Storage",
+                "baseConnectionId": "1d1d4bc5-b527-46a3-9863-530246a61b2b"
+            }
         },
         "ttlInDays": "40",
         "labels": ["core/C1"],
@@ -95,8 +97,8 @@ curl -X POST https://platform.adobe.io/data/core/ais/external-audience/ \
 | `name` | String | De naam voor het externe publiek. |
 | `description` | String | Een optionele beschrijving voor het externe publiek. |
 | `customAudienceId` | String | Een optionele id voor uw externe publiek. |
-| `fields` | Array van objecten | De lijst met velden en hun gegevenstypen. Wanneer u de lijst met velden maakt, kunt u de volgende items toevoegen: <ul><li>`name`: **Vereiste** de naam van het gebied dat deel van de externe publieksspecificatie uitmaakt.</li><li>`type`: **Vereiste** het type van gegevens dat in het gebied gaat. Tot de ondersteunde waarden behoren `string`, `number`, `long`, `integer`, `date` (`2025-05-13`), `datetime` (`2025-05-23T20:19:00+00:00`) en `boolean` .</li>`identityNs`: **Vereist voor identiteitsgebied** namespace die door het identiteitsgebied wordt gebruikt. Tot de ondersteunde waarden behoren alle geldige naamruimten, zoals `ECID` of `email` .li><li>`labels`: *Facultatieve* een serie van toegangsbeheeretiketten voor het gebied. Meer informatie over de beschikbare etiketten van de toegangscontrole kan in de [ verklarende woordenlijst van de de etiketten van het gegevensgebruik ](/help/data-governance/labels/reference.md) worden gevonden. </li></ul> |
-| `sourceSpec` | Object | Een object dat de informatie bevat waar het externe publiek zich bevindt. Wanneer het gebruiken van dit voorwerp, moet u **&#x200B;**&#x200B;de volgende informatie omvatten: <ul><li>`path`: **Vereist**: De plaats van het externe publiek of de omslag die het externe publiek binnen de bron bevat.</li><li>`type`: **Vereist** het type van het voorwerp u uit de bron terugwint. Deze waarde kan `file` of `folder` zijn.</li><li>`sourceType`: *Facultatieve* het type van bron u van terugwint. Momenteel is de enige ondersteunde waarde `Cloud Storage` .</li><li>`cloudType`: *Facultatieve* het type van wolkenopslag, die van het brontype wordt gebaseerd. Tot de ondersteunde waarden behoren `S3` , `DLZ` , `GCS` en `SFTP` .</li><li>`baseConnectionId`: De id van de basisverbinding en wordt geleverd door uw bronprovider. Deze waarde wordt **vereist** als het gebruiken van een `cloudType` waarde van `S3`, `GCS`, of `SFTP`. Voor meer informatie, te lezen gelieve het [ overzicht van bronschakelaars ](../../sources/home.md) li></ul> |
+| `fields` | Array van objecten | De lijst met velden en hun gegevenstypen. Wanneer u de lijst met velden maakt, kunt u de volgende items toevoegen: <ul><li>`name`: **Vereiste** de naam van het gebied dat deel van de externe publieksspecificatie uitmaakt.</li><li>`type`: **Vereiste** het type van gegevens dat in het gebied gaat. Tot de ondersteunde waarden behoren `string`, `number`, `long`, `integer`, `date` (`2025-05-13`), `datetime` (`2025-05-23T20:19:00+00:00`) en `boolean` .</li><li>`identityNs`: **Vereist voor identiteitsgebied** namespace die door het identiteitsgebied wordt gebruikt. Tot de ondersteunde waarden behoren alle geldige naamruimten, zoals `ECID` of `email` .</li><li>`labels`: *Facultatieve* een serie van toegangsbeheeretiketten voor het gebied. Meer informatie over de beschikbare etiketten van de toegangscontrole kan in de [ verklarende woordenlijst van de de etiketten van het gegevensgebruik ](/help/data-governance/labels/reference.md) worden gevonden. </li></ul> |
+| `sourceSpec` | Object | Een object dat de informatie bevat waar het externe publiek zich bevindt. Wanneer het gebruiken van dit voorwerp, moet u **** de volgende informatie omvatten: <ul><li>`path`: **Vereist**: De plaats van het externe publiek of de omslag die het externe publiek binnen de bron bevat.</li><li>`type`: **Vereist** het type van het voorwerp u uit de bron terugwint. Deze waarde kan `file` of `folder` zijn.</li><li>`sourceType`: *Facultatieve* het type van bron u van terugwint. Momenteel is de enige ondersteunde waarde `Cloud Storage` .</li><li>`cloudType`: *Facultatieve* het type van wolkenopslag, die van het brontype wordt gebaseerd. Tot de ondersteunde waarden behoren `S3` , `DLZ` , `GCS` en `SFTP` .</li><li>`baseConnectionId`: De id van de basisverbinding en wordt geleverd door uw bronprovider. Deze waarde wordt **vereist** als het gebruiken van een `cloudType` waarde van `S3`, `GCS`, of `SFTP`. Voor meer informatie, te lezen gelieve het [ overzicht van bronschakelaars ](../../sources/home.md)</li></ul> |
 | `ttlInDays` | Geheel | De gegevensvervaldatum voor het externe publiek, in dagen. Deze waarde kan van 1 tot 90 worden geplaatst. De gegevensvervaldatum wordt standaard ingesteld op 30 dagen. |
 | `audienceType` | String | Het publiekstype voor het externe publiek. Momenteel wordt alleen `people` ondersteund. |
 | `originName` | String | **Vereiste** de oorsprong van het publiek. Dit geeft aan waar het publiek vandaan komt. Gebruik `CUSTOM_UPLOAD` voor externe doelgroepen. |
@@ -139,11 +141,13 @@ Een geslaagde reactie retourneert HTTP-status 202 met details van het nieuwe ext
             }
         ],
         "sourceSpec": {
-            "path": "activation/sample-source/example.csv",
-            "type": "file",
-            "sourceType": "Cloud Storage",
-            "baseConnectionId": "1d1d4bc5-b527-46a3-9863-530246a61b2b"
-            },
+            "params": {
+                "path": "activation/sample-source/example.csv",
+                "type": "file",
+                "sourceType": "Cloud Storage",
+                "baseConnectionId": "1d1d4bc5-b527-46a3-9863-530246a61b2b"
+            }
+        },
         "ttlInDays": 40,
         "labels": ["core/C1"],
         "audienceType": "people",
@@ -231,11 +235,13 @@ Een succesvolle reactie keert status 200 van HTTP met details van de de taakstat
             }
         ],
         "sourceSpec": {
-            "path": "activation/sample-source/example.csv",
-            "type": "file",
-            "sourceType": "Cloud Storage",
-            "baseConnectionId": "1d1d4bc5-b527-46a3-9863-530246a61b2b"
-            },
+            "params": {
+                "path": "activation/sample-source/example.csv",
+                "type": "file",
+                "sourceType": "Cloud Storage",
+                "baseConnectionId": "1d1d4bc5-b527-46a3-9863-530246a61b2b"
+            }
+        },
         "ttlInDays": 40,
         "labels": ["core/C1"],
         "audienceType": "people",
@@ -276,6 +282,7 @@ Wanneer u dit eindpunt gebruikt, kunt u de volgende velden bijwerken:
 - Beschrijving van het publiek
 - Toegangsbeheerlabels op veldniveau
 - Toegangsbeheerlabels op het niveau van het publiek
+- Vervaldatum van de gegevens van het publiek
 
 Het bijwerken van het gebied gebruikend dit eindpunt **vervangt** de inhoud van het gebied u vroeg.
 
@@ -368,7 +375,7 @@ Een geslaagde reactie retourneert HTTP-status 200 met details van het bijgewerkt
 
 >[!IMPORTANT]
 >
->U zult **&#x200B;**&#x200B;niet een nieuwe opname voor het externe publiek kunnen beginnen als een vorige publieksinname reeds lopend is.
+>U zult **** niet een nieuwe opname voor het externe publiek kunnen beginnen als een vorige publieksinname reeds lopend is.
 
 >[!NOTE]
 >
@@ -403,7 +410,6 @@ curl -X POST https://platform.adobe.io/data/core/ais/external-audience/60ccea95-
 | -------- | ---- | ----------- |
 | `dataFilterStartTime` | Tijdstempel tijdperk | **Vereist** de waaier die de beginnende tijd specificeren die de stroom zal lopen om te selecteren welke dossiers zullen worden verwerkt. |
 | `dataFilterEndTime` | Tijdstempel tijdperk | Het bereik dat de eindtijd opgeeft die de flow moet gebruiken om te selecteren welke bestanden worden verwerkt. |
-| `differentialIngestion` | Boolean | Een veld dat bepaalt of de opname een gedeeltelijke opname is op basis van het verschil sinds de laatste opname of een volledige opname door het publiek. Deze waarde is standaard `true` . |
 
 +++
 
