@@ -3,22 +3,30 @@ keywords: reclame, bureau voor de handel, reclamebureau
 title: De verbinding van de handelsbureau
 description: De Trade Desk is een zelfbedieningsplatform waarmee adverteerders doelgerichte digitale campagnes kunnen voeren op het hele scherm, de video en mobiele inventarisatiebronnen.
 exl-id: b8f638e8-dc45-4aeb-8b4b-b3fa2906816d
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 0954b5f22d609b0b12352de70f6c618cc88757c8
 workflow-type: tm+mt
-source-wordcount: '743'
-ht-degree: 0%
+source-wordcount: '974'
+ht-degree: 4%
 
 ---
 
-# [!DNL The Trade Desk] verbinding
+# [!DNL The Trade Desk]-verbinding
 
 ## Overzicht {#overview}
+
+>[!IMPORTANT]
+>
+>* Vanaf vrijdag 31 juli 2025 kunt u twee **[!DNL The Trade Desk]**-kaarten naast elkaar zien in de bestemmingencatalogus. Dit komt door een interne upgrade van de bestemmingsservice. De naam van de bestaande **[!DNL The Trade Desk]** doelconnector is gewijzigd in **[!UICONTROL (Deprecated) The Trade Desk]** en u hebt nu een nieuwe kaart met de naam **[!UICONTROL The Trade Desk]** beschikbaar.
+>* Gebruik de nieuwe **[!UICONTROL The Trade Desk]** -verbinding in de catalogus voor nieuwe gegevensstromen voor activering. Als u actieve gegevens naar de **[!UICONTROL (Deprecated) The Trade Desk]** -bestemming hebt, worden deze automatisch bijgewerkt, zodat u geen actie hoeft te ondernemen.
+>* Als u dataflows door de [ Dienst API van de Stroom ](https://developer.adobe.com/experience-platform-apis/references/destinations/) creeert, moet u uw [!DNL flow spec ID] en [!DNL connection spec ID] aan de volgende waarden bijwerken:
+>   * Stroomspecificatie-ID: `86134ea1-b014-49e8-8bd3-689f4ce70578`
+>   * Verbindingsspecificatie-ID: `1029798b-a97f-4c21-81b2-e0301471166e`
 
 Gebruik deze doelconnector om profielgegevens naar [!DNL The Trade Desk] te verzenden. Deze schakelaar verzendt gegevens naar het [!DNL The Trade Desk] eerste partijeindpunt. De integratie tussen Adobe Experience Platform en [!DNL The Trade Desk] biedt geen ondersteuning voor het exporteren van gegevens naar het eindpunt van derden voor [!DNL The Trade Desk] .
 
 [!DNL The Trade Desk] is een zelfbedieningsplatform dat kopers van advertenties in staat stelt doelgerichte digitale campagnes uit te voeren voor alle weergave-, video- en mobiele-inventarisbronnen.
 
-Als u profielgegevens naar [!DNL Trade Desk] wilt verzenden, moet u eerst verbinding maken met het doel, zoals wordt beschreven in de volgende secties van deze pagina.
+Als u profielgegevens naar [!DNL The Trade Desk] wilt verzenden, moet u eerst verbinding maken met het doel, zoals wordt beschreven in de volgende secties van deze pagina.
 
 ## Gebruiksscenario’s {#use-cases}
 
@@ -28,11 +36,16 @@ Als markator, wil ik publiek kunnen gebruiken dat van [!DNL Trade Desk IDs] of a
 
 [!DNL The Trade Desk] ondersteunt de activering van soorten publiek op basis van de identiteiten in de onderstaande tabel. Leer meer over [ identiteiten ](/help/identity-service/features/namespaces.md).
 
-| Identiteit | Beschrijving |
-|---|---|
-| GAID | [!DNL Google Advertising ID] |
-| IDFA | [!DNL Apple ID for Advertisers] |
-| Handelsbureau-id | Advertiser-id in het Trade Desk-platform |
+Hieronder ziet u de identiteiten die worden ondersteund door het doel van [!DNL The Trade Desk] . Deze identiteiten kunnen worden gebruikt om het publiek te activeren naar [!DNL The Trade Desk] .
+
+Alle identiteiten in de onderstaande tabel zijn verplichte toewijzingen.
+
+| Doelidentiteit | Beschrijving | Overwegingen |
+|---|---|---|
+| GAID | GOOGLE ADVERTISING ID | Selecteer de GAID doelidentiteit wanneer uw bronidentiteit een GAID-naamruimte is. |
+| IDFA | Apple-id voor adverteerders | Selecteer de IDFA doelidentiteit wanneer uw bronidentiteit een IDFA namespace is. |
+| ECID | Experience Cloud-id | Deze identiteit is verplicht voor de integratie, maar wordt niet gebruikt voor activering van het publiek. |
+| Handelsbureau-id | Advertiser-id in het [!DNL The Trade Desk] -platform | Gebruik deze identiteit wanneer het activeren van publiek dat op bedrijfseigen identiteitskaart van het Bureau wordt gebaseerd. |
 
 {style="table-layout:auto"}
 
@@ -42,7 +55,7 @@ In deze sectie wordt beschreven welke soorten publiek u naar dit doel kunt expor
 
 | Oorsprong publiek | Ondersteund | Beschrijving |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | ✓ | Het publiek produceerde door de Dienst van de Segmentatie van Experience Platform [&#128279;](../../../segmentation/home.md). |
+| [!DNL Segmentation Service] | ✓ | Het publiek produceerde door de Dienst van de Segmentatie van Experience Platform [ ](../../../segmentation/home.md). |
 | Aangepaste uploads | ✓ | Het publiek [ ingevoerde ](../../../segmentation/ui/audience-portal.md#import-audience) in Experience Platform van Csv- dossiers. |
 
 {style="table-layout:auto"}
@@ -62,7 +75,7 @@ Raadpleeg de onderstaande tabel voor informatie over het exporttype en de export
 
 >[!IMPORTANT]
 >
->Als u uw eerste bestemming met [!DNL The Trade Desk] wilt tot stand brengen en niet de [ functionaliteit van de Synchronisatie van identiteitskaart ](https://experienceleague.adobe.com/nl/docs/id-service/using/id-service-api/methods/idsync) in de Dienst van identiteitskaart van Experience Cloud in het verleden (met Adobe Audience Manager of andere toepassingen) hebt toegelaten, te bereiken gelieve uit aan Adobe Consulting of de Zorg van de Klant om de syncs van identiteitskaart toe te laten. Als u eerder [!DNL The Trade Desk] -integraties hebt ingesteld in Audience Manager, worden de id-syncs die u hebt ingesteld, overgedragen naar Experience Platform.
+>Als u uw eerste bestemming met [!DNL The Trade Desk] wilt tot stand brengen en niet de [ functionaliteit van de Synchronisatie van identiteitskaart ](https://experienceleague.adobe.com/en/docs/id-service/using/id-service-api/methods/idsync) in de Dienst van identiteitskaart van Experience Cloud in het verleden (met Adobe Audience Manager of andere toepassingen) hebt toegelaten, te bereiken gelieve uit aan Adobe Consulting of de Zorg van de Klant om de syncs van identiteitskaart toe te laten. Als u eerder [!DNL The Trade Desk] -integraties hebt ingesteld in Audience Manager, worden de id-syncs die u hebt ingesteld, overgedragen naar Experience Platform.
 
 ## Verbinden met de bestemming {#connect}
 
@@ -78,14 +91,15 @@ Terwijl [ vestiging ](../../ui/connect-destination.md) deze bestemming, u de vol
 
 * **[!UICONTROL Name]**: Een naam waarmee u dit doel in de toekomst herkent.
 * **[!UICONTROL Description]**: Een beschrijving die u zal helpen deze bestemming in de toekomst identificeren.
-* **[!UICONTROL Account ID]**: Uw [!DNL Trade Desk] [!UICONTROL Account ID] .
-* **[!UICONTROL Server Location]**: Vraag uw [!DNL Trade Desk] -vertegenwoordiger welke regionale server u moet gebruiken. Hieronder ziet u de beschikbare regionale servers waaruit u kunt kiezen:
-   * **[!UICONTROL Europe]**
-   * **[!UICONTROL Singapore]**
+* **[!UICONTROL Account ID]**: Uw [!DNL The Trade Desk] [!UICONTROL Account ID] .
+* **[!UICONTROL Server Location]**: Vraag uw [!DNL The Trade Desk] -vertegenwoordiger welke regionale server u moet gebruiken. Hieronder ziet u de beschikbare regionale servers waaruit u kunt kiezen:
+
+   * **[!UICONTROL APAC]**
+   * **[!UICONTROL China]**
    * **[!UICONTROL Tokyo]**
-   * **[!UICONTROL North America East]**
-   * **[!UICONTROL North America West]**
-   * **[!UICONTROL Latin America]**
+   * **[!UICONTROL UK/EU]**
+   * **[!UICONTROL US East Coast]**
+   * **[!UICONTROL US West Coast]**
 
 ### Waarschuwingen inschakelen {#enable-alerts}
 
@@ -106,10 +120,19 @@ In het [ programma van het Publiek ](../../ui/activate-segment-streaming-destina
 
 Bij het toewijzen van soorten publiek raadt Adobe u aan de Experience Platform-publieksnaam of een kortere vorm ervan te gebruiken, zodat u deze eenvoudig kunt gebruiken. De gebruikers-id of naam in uw bestemming hoeft echter niet overeen te komen met de naam in uw Experience Platform-account. Elke waarde die u in het toewijzingsveld invoegt, wordt weerspiegeld door het doel.
 
-Als u meerdere apparaattoewijzingen gebruikt (cookie-id&#39;s, [!DNL IDFA], [!DNL GAID] ), moet u voor alle drie toewijzingen dezelfde toewijzingswaarde gebruiken. [!DNL The Trade Desk] zal alle hen in één enkel segment, met een apparaat-vlakke onderbreking bijeenvoegen.
+### Verplichte toewijzingen {#mandatory-mappings}
 
-![ Identiteitskaart van de Afbeelding van het Segment ](../../assets/common/segment-mapping-id.png)
+Alle doelidentiteiten die in de [ gesteunde identiteiten ](#supported-identities) sectie worden beschreven zijn verplicht en moeten tijdens het proces van de publiekactivering in kaart worden gebracht. Dit omvat het volgende:
+
+* **GAID** (identiteitskaart van Advertising van Google)
+* **IDFA** (identiteitskaart van Apple voor Advertisers)
+* **ECID** (identiteitskaart van Experience Cloud)
+* **identiteitskaart van het Handelsbureau**
+
+Als u niet alle vereiste identiteiten toewijst, voorkomt u dat het publiek wordt geactiveerd naar [!DNL The Trade Desk] . Elke identiteit dient een specifiek doel in de integratie en alle id&#39;s zijn vereist voor een correcte bestemming.
+
+![ Schermschot die de verplichte afbeeldingen ](../../assets/catalog/advertising/tradedesk/mandatory-mappings.png) tonen
 
 ## Geëxporteerde gegevens {#exported-data}
 
-Controleer uw [!DNL Trade Desk] -account om te controleren of gegevens naar de [!DNL The Trade Desk] -bestemming zijn geëxporteerd. Als de activering succesvol was, worden de soorten publiek in uw account ingevuld.
+Controleer uw [!DNL The Trade Desk] -account om te controleren of gegevens naar de [!DNL The Trade Desk] -bestemming zijn geëxporteerd. Als de activering succesvol was, worden de soorten publiek in uw account ingevuld.
