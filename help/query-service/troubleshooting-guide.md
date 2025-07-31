@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Query Service en Data Distiller hebben vaak vragen gesteld
 description: Dit document bevat algemene vragen en antwoorden met betrekking tot Query Service en Data Distiller. De onderwerpen omvatten, het uitvoeren van gegevens, derdehulpmiddelen, en fouten PSQL.
 exl-id: 14cdff7a-40dd-4103-9a92-3f29fa4c0809
-source-git-commit: cd4734b2d837bc04e1de015771a74a48ff37173f
+source-git-commit: f0656fcde077fc6c983a7a2d8dc21d2548fa7605
 workflow-type: tm+mt
-source-wordcount: '5037'
+source-wordcount: '5168'
 ht-degree: 0%
 
 ---
@@ -134,7 +134,7 @@ Zie de documentatie voor volledige begeleiding op [ hoe te met genestelde gegeve
 ### Hoe kan ik een vraag over een dataset versnellen die series bevat?
 
 +++Antwoord
-Om de prestaties van vragen op datasets te verbeteren die series bevatten, zou u de serie [&#128279;](https://spark.apache.org/docs/latest/api/sql/index.html#explode) als vraag van a [ CTAS ](./sql/syntax.md#create-table-as-select) op runtime moeten ontploffen, en dan het voor verdere kansen onderzoeken om zijn verwerkingstijd te verbeteren.
+Om de prestaties van vragen op datasets te verbeteren die series bevatten, zou u de serie [ als vraag van a ](https://spark.apache.org/docs/latest/api/sql/index.html#explode) CTAS [ op runtime moeten ontploffen, en dan het voor verdere kansen onderzoeken om zijn verwerkingstijd te verbeteren.](./sql/syntax.md#create-table-as-select)
 +++
 
 ### Waarom verwerkt mijn vraag CTAS nog na vele uren voor slechts een klein aantal rijen?
@@ -406,7 +406,7 @@ De consoleoutput die in de Dienst UI van de Vraag wordt verstrekt is een meer me
 
 #### Omzetten vanuit de UTC-tijdstempel
 
-De `from_utc_timestamp()` methode interpreteert de bepaalde parameters **van timestamp van uw lokale timezone** en verstrekt gelijkwaardige timestamp van het gewenste gebied in formaat UTC. In het onderstaande voorbeeld is het uur 2:40PM in de lokale tijdzone van de gebruiker. De tijdzone van Seoul die als variabele wordt overgegaan is negen uur vóór lokale timezone.
+De `from_utc_timestamp()` methode interpreteert de bepaalde parameters **van timestamp van uw lokale timezone** en verstrekt gelijkwaardige timestamp van het gewenste gebied in formaat UTC. In het voorbeeld hieronder, is het uur 2 :40PM in lokale timezone van de gebruiker. De tijdzone van Seoul die als variabele wordt overgegaan is negen uur vóór lokale timezone.
 
 ```SQL
 SELECT from_utc_timestamp('2021-08-31 14:40:00.0', 'Asia/Seoul');
@@ -647,6 +647,14 @@ De rekenuren voor een vraag kunnen als gevolg van veelvoudige factoren fluctuere
 De achtergrondinfrastructuur wordt constant verbeterd om het gebruik en de verwerkingstijd van de Rekenuren te optimaliseren. Hierdoor kunnen er na verloop van tijd wijzigingen optreden wanneer prestatieverbeteringen worden geïmplementeerd.
 +++
 
+### Verschillen de prestaties van Data Distiller tussen ontwikkeling en productie zandbakken?
+
++++Antwoord
+U kunt vergelijkbare prestaties verwachten wanneer u query&#39;s uitvoert in zowel ontwikkelings- als productiesandboxen. Beide omgevingen zijn ontworpen om hetzelfde niveau van verwerkingscapaciteit te bieden. Nochtans, kunnen de verschillen in gegevens verwerken uren voorkomen, afhankelijk van de hoeveelheid gegevens u verwerkt en algemene systeemactiviteit op het tijdstip dat u uw vraag in werking stelt.
+
+Houd uw gegevens verwerkt uurgebruik in het [ dashboard van het Gebruik van de Vergunning ](../dashboards/guides/license-usage.md) in Experience Platform UI bij.
++++
+
 ## Gebruikersinterface voor query&#39;s
 
 ### De &quot;Create query&quot; zit vast &quot;Initializing connection...&quot; wanneer u probeert verbinding te maken met Query Service. Hoe los ik het probleem op?
@@ -752,6 +760,12 @@ Ja, kunnen de derdeDesktopcliënten met de Dienst van de Vraag door een éénmal
 +++Antwoord
 De waarde voor niet-verlopen referenties zijn de samengevoegde argumenten van de `technicalAccountID` en de `credential` die uit het JSON-configuratiebestand zijn genomen. De wachtwoordwaarde heeft de notatie: `{{technicalAccountId}:{credential}}`.
 Zie de documentatie voor meer informatie over hoe te [ met externe cliënten met geloofsbrieven ](./ui/credentials.md#using-credentials-to-connect-to-external-clients) verbinden.
++++
+
+### Zijn er om het even welke beperkingen op speciale karakters voor niet vervallende geloofsbrieven wachtwoorden?
+
++++Antwoord
+Ja. Wanneer u een wachtwoord instelt voor referenties die niet verlopen, moet u ten minste één getal, één kleine letter, één hoofdletter en één speciaal teken opnemen. Het dollarteken ($) wordt niet ondersteund. Gebruik in plaats hiervan speciale tekens zoals !, @, #, ^ of &amp;.
 +++
 
 ### Welk soort redacteurs van derdeSQL kan ik met de Redacteur van de Dienst van de Vraag verbinden?

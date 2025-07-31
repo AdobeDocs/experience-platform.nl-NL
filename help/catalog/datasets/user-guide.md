@@ -4,9 +4,9 @@ solution: Experience Platform
 title: UI-gids voor gegevensbestanden
 description: Leer hoe u algemene handelingen uitvoert wanneer u werkt met gegevenssets in de Adobe Experience Platform-gebruikersinterface.
 exl-id: f0d59d4f-4ebd-42cb-bbc3-84f38c1bf973
-source-git-commit: 47cb1e9851a288961ecca01cf609b72342c58631
+source-git-commit: 24b0df7025971a999453cd988813aa32b449ba0f
 workflow-type: tm+mt
-source-wordcount: '4316'
+source-wordcount: '4244'
 ht-degree: 0%
 
 ---
@@ -108,25 +108,26 @@ Meer informatie over deze beschikbare acties vindt u in de desbetreffende sectie
 
 ### Een voorbeeld van een gegevensset bekijken {#preview}
 
-U kunt voorbeeldgegevens van gegevenssets voorvertonen via zowel de inlineopties van het tabblad [!UICONTROL Browse] als de weergave [!UICONTROL Dataset activity] . Een nieuw venster van de datasetvoorproef is beschikbaar met extra navigatie en contextverhogingen.
+U kunt een voorvertoning weergeven van maximaal 100 rijen met voorbeeldgegevens voor elke gegevensset, via de inline-opties op het tabblad [!UICONTROL Browse] of vanuit de weergave [!UICONTROL Dataset activity] .
 
-Selecteer op het tabblad [!UICONTROL Browse] de ellips (...) naast de naam van de gegevensset waarvan u een voorvertoning wilt weergeven. Er wordt een lijst met opties weergegeven. Selecteer vervolgens [!UICONTROL Preview dataset] uit de beschikbare opties. Als de gegevensset leeg is, wordt de voorvertoningskoppeling gedeactiveerd en wordt aangegeven dat de voorvertoning niet beschikbaar is.
+Selecteer op het tabblad [!UICONTROL Browse] de ellips (...) naast de naam van de gegevensset en kies [!UICONTROL Preview dataset] . Als de dataset leeg is, wordt de voorproefoptie gedeactiveerd. U kunt ook **[!UICONTROL Dataset activity]** in de rechterbovenhoek van het scherm selecteren in het **[!UICONTROL Preview dataset]** -scherm.
 
 ![ het Browse lusje van de werkruimte van Datasets met de ellips en de optie van de dataset van de Voorproef die voor de gekozen dataset wordt benadrukt.](../images/datasets/user-guide/preview-dataset-option.png)
 
-Dit opent het voorproefvenster, waar de hiërarchische schemamening voor de dataset op de linkerzijde wordt getoond.
+Dit opent het voorproefvenster, waar de hiërarchische schemamening voor de dataset op de linkerzijde verschijnt.
 
 >[!NOTE]
 >
->Het schemadiagram op de linkerkant van de mening toont slechts gebieden die gegevens bevatten. Velden zonder gegevens worden automatisch verborgen om de interface te stroomlijnen en de focus op relevante informatie te richten.
+>Het schemadiagram op de linkerzijde toont slechts gebieden die gegevens bevatten. Velden zonder gegevens worden automatisch verborgen om de interface te stroomlijnen en de focus op relevante informatie te richten.
 
 ![ de dialoog van de datasetvoorproef met informatie over de structuur, evenals steekproefwaarden, voor de dataset wordt getoond.](../images/datasets/user-guide/preview-dataset.png)
 
-U kunt ook **[!UICONTROL Dataset activity]** in de rechterbovenhoek van het scherm selecteren in het **[!UICONTROL Preview dataset]** -scherm om een voorvertoning weer te geven van maximaal 100 rijen gegevens.
+U kunt ook in het scherm **[!UICONTROL Dataset activity]** de optie **[!UICONTROL Preview dataset]** selecteren om het voorvertoningsvenster te openen en een voorbeeld van de structuur en waarden van de gegevensset te bekijken.
 
 ![ de knoop van de dataset van de Voorproef wordt benadrukt.](../images/datasets/user-guide/select-preview.png)
 
-Het venster van de datasetvoorproef verstrekt een gestroomlijnde interface voor het onderzoeken van en het bevestigen van datasets.
+Het venster van de datasetvoorproef verstrekt een snelle manier om de structuur en de gegevens van uw dataset te onderzoeken en te bevestigen.
+
 
 #### Voorvertoningsvenster voor gegevensset {#dataset-preview-window}
 
@@ -137,34 +138,25 @@ De volgende animatie toont het venster van de datasetvoorproef met zijn navigati
 Het voorvertoningsvenster van de gegevensset bevat:
 
 * Een objectbrowser op de linkerzijde voor het navigeren en filteren van gegevenssetvelden.
-* Gegevenstype-indicatoren die naast elke kolomnaam worden weergegeven, zodat insight snel in de structuur van de gegevensset kan worden opgenomen.
+* Gegevenstype-indicatoren naast elke kolomnaam voor insight in de structuur van de gegevensset.
 * Een SQL vraagvertoning bij de bovenkant van het venster, die de vraag toont die wordt gebruikt om de dataset te produceren.
-* Een opgemaakte tabelweergave van maximaal 100 rijen rechtsonder voor efficiënte gegevensrevisie.
-* Directe navigatie aan de Redacteur van de Vraag voor de gebruikers van Gegevens Distiller, met de SQL vraag die voor verdere exploratie of wijziging wordt bevolkt.
+* Een opgemaakte tabelweergave van maximaal 100 rijen voor efficiënte gegevensrevisie.
 
-Deze eigenschappen steunen snelle navigatie, schema begrip, en transparante datasetbevestiging.
-
-Selecteer **[!UICONTROL Preview dataset]** in de inline-handelingen of in het [!UICONTROL Dataset activity] -scherm om het voorvertoningsvenster te openen.
-
->[!NOTE]
->
->In het voorvertoningsvenster wordt een voorbeeld van maximaal 100 rijen weergegeven. Velden zonder gegevens worden niet weergegeven.
+Deze functies helpen u navigeren, schemadetails begrijpen en steekproefgegevens efficiënt bevestigen.
 
 #### Sneltoets Geavanceerde zoekeditor {#query-editor-shortcut}
 
-Als uw organisatie een Data Distiller-licentie heeft, hebt u rechtstreeks vanuit het voorvertoningsvenster van de dataset toegang tot de Advanced Query Editor.
+Als uw organisatie een Data Distiller-licentie heeft, hebt u rechtstreeks toegang tot [!UICONTROL Advanced Query Editor] vanuit het voorvertoningsvenster van de gegevensset. Gebruik deze kortere weg om naadloos van het voorvertonen van steekproefgegevens aan het lopen en het raffineren van vragen in de Dienst van de Vraag te bewegen.
 
 >[!AVAILABILITY]
 >
->Alleen gebruikers met de vereiste Data Distiller-licentie hebben toegang tot deze functionaliteit. Als uw organisatie Data Distiller niet heeft, is de optie [!UICONTROL Advanced query editor] niet zichtbaar.
+>De toegang tot [!UICONTROL Advanced Query Editor] is beperkt tot organisaties met een Data Distiller SKU-licentie. Als uw organisatie niet de vereiste vergunning heeft, verschijnt deze optie niet in het venster van de datasetvoorproef.
 
-Selecteer **[!UICONTROL Advanced query editor]** rechtsboven in het voorvertoningsvenster om de Query-editor te openen. De huidige voorvertoningsquery is vooraf geladen en klaar voor uitvoering of verdere analyse.
+Selecteer [!UICONTROL Advanced Query Editor] in de rechterbovenhoek van het voorvertoningsvenster om de Query Service te openen met uw huidige SQL-query vooraf geladen en uitgevoerd. U kunt de SQL blijven analyseren of wijzigen zonder de query opnieuw in te voeren.
 
-![ de voorproefvenster van de Dataset die de Geavanceerde knoop van de vraagredacteur in het hogere recht tonen.](../images/datasets/user-guide/dataset-preview-advanced-query-editor.png)
+![ de voorproefvenster van de Dataset die de Geavanceerde knoop van de Redacteur van de Vraag in het hogere recht tonen.](../images/datasets/user-guide/dataset-preview-advanced-query-editor.png)
 
-Deze kortere weg laat u toe om naadloos van het voorvertonen van steekproefgegevens aan het lopen en het raffineren van vragen in de Dienst van de Vraag te bewegen zonder SQL of context opnieuw in te gaan.
-
-Voor extra gegevenstoegang en analyse, gebruik de stroomafwaartse diensten zoals [!DNL Query Service] en [!DNL JupyterLab]. Raadpleeg de volgende documenten voor meer informatie:
+Gebruik downstreamservices, zoals [!DNL Query Service] en [!DNL JupyterLab] , voor extra analyse. Raadpleeg de volgende documenten voor meer informatie:
 
 * [Overzicht van Query Service](../../query-service/home.md)
 * [Gebruikershandleiding voor JupyterLab](../../data-science-workspace/jupyterlab/overview.md)

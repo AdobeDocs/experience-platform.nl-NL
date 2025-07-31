@@ -2,9 +2,9 @@
 title: Een globaal filter maken
 description: Leer hoe u uw gegevensinzichten kunt filteren met een aangepast, globaal toegepast filter.
 exl-id: a0084039-8809-4883-9f68-c666dcac5881
-source-git-commit: 473aaa8dedd549cf524d77c9b0a37d71b4688805
+source-git-commit: 60b0c73766c89b98685810b4f58cfe1a40316dc9
 workflow-type: tm+mt
-source-wordcount: '478'
+source-wordcount: '518'
 ht-degree: 0%
 
 ---
@@ -21,13 +21,17 @@ Als u een algemeen filter wilt maken, selecteert u eerst **[!UICONTROL Add filte
 
 U kunt de inzichten die door uw SQL met aangepaste globale filters worden verstrekt snel veranderen.
 
-Het dialoogvenster [!UICONTROL Create a global filter] wordt geopend. Het maken van een algemeen filter volgt hetzelfde proces als het maken van inzicht in SQL. Eerst, selecteer een gegevensbestand (het gegevensmodel van inzichten) aan vraag, dan input uw douane SQL in de Redacteur van de Vraag, en selecteer definitief het looppaspictogram (![ A looppas pictogram.](/help/images/icons/play.png)).
+Het dialoogvenster [!UICONTROL Create a global filter] wordt geopend. Het maken van een algemeen filter volgt hetzelfde proces als het maken van een insight met SQL. Eerst, selecteer een gegevensbestand (het gegevensmodel van inzichten) aan vraag, dan input uw douane SQL in de Redacteur van de Vraag, en selecteer definitief het looppaspictogram (![ A looppas pictogram.](/help/images/icons/play.png)).
 
 >[!IMPORTANT]
 >
 >Wanneer u een algemeen filter maakt, moet u een id en een waarde opnemen. Met de voorbeeldwaarden kunt u de SQL-instructie uitvoeren en het diagram samenstellen. De voorbeeldwaarden die u opgeeft bij het samenstellen van de instructie, worden vervangen door de werkelijke waarden die u tijdens runtime voor de datum of het algemene filter selecteert.
 
 Nadat de query is uitgevoerd, worden de resultaten weergegeven op het tabblad Resultaten. Selecteer **[!UICONTROL Next]**.
+
+>[!NOTE]
+>
+>Zoekresultaten zijn standaard beperkt tot 100 rijen. Als u meer rijen wilt retourneren, voegt u een LIMIT-component toe aan uw SQL-query met het gewenste aantal rijen. Als u alle rijen wilt ophalen en de standaardlimiet wilt verwijderen, gebruikt u LIMIT 0 in de query.
 
 ![ [!UICONTROL Create a global filter dialog] met het dataset dropdown menu, het looppaspictogram en daarna benadrukte.](../../images/sql-insights-query-pro-mode/global-filter.png)
 
@@ -41,7 +45,7 @@ Selecteer ten slotte **[!UICONTROL Select]** om terug te keren naar de dashboard
 
 ![ [!UICONTROL Create a global filter dialog] met Uitgezocht en de benadrukte het etikettekstinput van de Filter.](../../images/sql-insights-query-pro-mode/global-filter-label.png)
 
-## Globaal filter inschakelen voor elk inzicht {#enable-global-filter}
+## Het algemene filter inschakelen voor elke insight {#enable-global-filter}
 
 >[!TIP]
 >
@@ -53,7 +57,7 @@ Nadat u het algemene filter voor het dashboard hebt gemaakt, wordt de schakelopt
 
 >[!IMPORTANT]
 >
->Zorg ervoor dat de algemene filterparameter is opgenomen in de SQL van elk inzicht.
+>Zorg ervoor dat de algemene filterparameter is opgenomen in de SQL van elke insight.
 
 ## Een algemeen filter selecteren {#select-global-filter}
 
