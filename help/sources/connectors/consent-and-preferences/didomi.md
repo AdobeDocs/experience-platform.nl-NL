@@ -2,16 +2,20 @@
 title: Didomi Source - Overzicht
 description: Leer hoe u Didomi via de gebruikersinterface met Adobe Experience Platform kunt verbinden.
 last-substantial-update: 2025-07-29T00:00:00Z
+badge: Beta
 exl-id: c59bcfb8-e831-4a13-8b0e-4c6d538f1059
-source-git-commit: 7596a87309105897a2727faa8e22b06cdf5547c3
+source-git-commit: b0c2d5535bb4cdf7d00eaca43d65f744276494f3
 workflow-type: tm+mt
-source-wordcount: '871'
+source-wordcount: '893'
 ht-degree: 0%
 
 ---
 
 # [!DNL Didomi]
 
+>[!AVAILABILITY]
+>
+>De bron [!DNL Didomi] is in bèta. Lees de [ termijnen en voorwaarden ](../../home.md#terms-and-conditions) in het bronoverzicht voor meer informatie bij het gebruiken van bèta-geëtiketteerde bronnen.
 
 [!DNL Didomi] is een platform voor toestemmings- en voorkeursbeheer dat organisaties helpt bij het verzamelen, beheren en afdwingen van gebruikerskeuzes met betrekking tot persoonlijke gegevens op websites, apps en interne tools.
 
@@ -71,7 +75,7 @@ Als u een gegevensset wilt maken, selecteert u [!UICONTROL Datasets] in de linke
 
 Met [!DNL Webhooks] kunt u zich abonneren op gebeurtenissen die op het [!DNL Didomi] -platform worden geactiveerd wanneer gebruikers werken met hun voorkeuren voor toestemming. Wanneer een relevante gebeurtenis plaatsvindt — bijvoorbeeld wanneer een gebruiker toestemming geeft of intrekt — verzendt [!DNL Didomi] een realtime HTTP POST-aanvraag met een JSON-payload naar het geconfigureerde [!DNL webhook] -eindpunt.
 
-![ didomi-console 0&rbrace;](../../images/tutorials/create/didomi/didomi-console.png)
+![ didomi-console 0}](../../images/tutorials/create/didomi/didomi-console.png)
 
 Voor compatibiliteit met Experience Platform moet uw webhaak aan de volgende vereisten voldoen.
 
