@@ -2,9 +2,9 @@
 title: Sandbox Tooling
 description: U kunt Sandboxconfiguraties naadloos exporteren en importeren tussen sandboxen.
 exl-id: f1199ab7-11bf-43d9-ab86-15974687d182
-source-git-commit: b5330e10dc8b395d1ef299073182c836f5c3af7f
+source-git-commit: a3db2b69400a43abe399f90036041aaeaf0bd0a0
 workflow-type: tm+mt
-source-wordcount: '3210'
+source-wordcount: '3294'
 ht-degree: 1%
 
 ---
@@ -24,6 +24,17 @@ U kunt de functie voor gereedschappen in de sandbox gebruiken om verschillende o
 Met de functie voor het gereedmaken van de sandbox kunt u [!DNL Adobe Real-Time Customer Data Platform] - en [!DNL Adobe Journey Optimizer] -objecten exporteren naar een pakket.
 
 ### Real-time Customer Data Platform-objecten {#real-time-cdp-objects}
+
+>[!BEGINSHADEBOX]
+
+### Wijzigingen in de import van meerdere personen
+
+Met de [ B2B architectuurverbeteringen ](../../rtcdp/b2b-architecture-upgrade.md), zult u multi-entiteitpubliek met B2B attributen en de Gebeurtenissen van de Ervaring niet meer kunnen invoeren als een pakket dat deze doelgroepen omvatte vóór de verbetering werd gepubliceerd. Deze doelgroepen kunnen niet worden geïmporteerd en kunnen niet automatisch worden geconverteerd naar de nieuwe architectuur.
+
+Als u deze beperking wilt omzeilen, moet u een nieuw pakket maken met het bijgewerkte publiek en deze met behulp van sandboxgereedschappen importeren in de respectievelijke doelsandboxen.
+
+
+>[!ENDSHADEBOX]
 
 De onderstaande tabel bevat een lijst met [!DNL Adobe Real-Time Customer Data Platform] -objecten die momenteel worden ondersteund voor gereedschappen in sandboxen:
 
@@ -54,12 +65,12 @@ De onderstaande tabel bevat een lijst met [!DNL Adobe Journey Optimizer] -object
 | [!DNL Adobe Journey Optimizer] | Doelgroep | | Een publiek kan als afhankelijk voorwerp van het reisvoorwerp worden gekopieerd. U kunt een nieuw publiek maken of een bestaand publiek in de doelsandbox opnieuw gebruiken. |
 | [!DNL Adobe Journey Optimizer] | Schema | | De schema&#39;s die in de reis worden gebruikt kunnen als afhankelijke voorwerpen worden gekopieerd. U kunt een nieuw schema selecteren of een bestaand schema in de doelzandbak opnieuw gebruiken. |
 | [!DNL Adobe Journey Optimizer] | Samenvoegbeleid | | Het samenvoegbeleid dat in de reis wordt gebruikt, kan als afhankelijke voorwerpen worden gekopieerd. In de doelzandbak, kunt u **niet** tot een nieuw fusiebeleid leiden, kunt u bestaande slechts gebruiken. |
-| [!DNL Adobe Journey Optimizer] | Reis | De volgende objecten die tijdens de rit worden gebruikt, worden als afhankelijke objecten gekopieerd. Tijdens de importworkflow kunt u **[!UICONTROL Create new]** of **[!UICONTROL Use existing]** selecteren voor elke optie: <ul><li>Doelgroepen</li><li>Schema&#39;s</li><li>Aangepaste acties</li><li>Gebeurtenissen</li><li>Fragmenten</li><li>Contentsjablonen</li><li>Canvasdetails</li></ul> | <ul><li>**[!UICONTROL Custom actions]**: Wanneer het selecteren **[!UICONTROL Use existing]** tijdens het de invoerproces wanneer het kopiëren van een reis aan een andere zandbak, de bestaande douaneacties u **selecteert moet** het zelfde zijn als de brondouaneactie. Als ze niet hetzelfde zijn, zal de nieuwe reis onoplosbare fouten bevatten.</li><li>De gebeurtenissen en gebeurtenisdetails die in de reis worden gebruikt worden gekopieerd. Er wordt altijd een nieuwe versie gemaakt in de doelsandbox.</li></ul> |
+| [!DNL Adobe Journey Optimizer] | Reis | De volgende objecten die tijdens de rit worden gebruikt, worden als afhankelijke objecten gekopieerd. Tijdens de importworkflow kunt u kiezen tussen **[!UICONTROL Create new]** en **[!UICONTROL Use existing]** voor elke optie: <ul><li>Doelgroepen</li><li>Canvasdetails</li><li>Contentsjablonen</li><li>Aangepaste acties</li><li>Gegevensbronnen</li><li>Gebeurtenissen</li><li>Veldgroepen</li><li>Fragmenten</li><li>Schema&#39;s</li></ul> | Wanneer u **[!UICONTROL Use existing]** tijdens het de invoerproces selecteert om een reis aan een andere zandbak te kopiëren, moeten de bestaande douaneacties u **** kiezen een nauwkeurige gelijke aan de brondouaneactie zijn. Als deze niet overeenkomen, leidt de nieuwe rit tot onoplosbare fouten.<br> het systeem kopieert de gebeurtenissen en gebeurtenisdetails die in de reis worden gebruikt en leidt tot een nieuwe versie in de doelzandbak. |
 | [!DNL Adobe Journey Optimizer] | Actie | | E-mail- en pushberichten die tijdens de rit worden gebruikt, kunnen als afhankelijke objecten worden gekopieerd. De activiteiten van de kanaalactie die op de reisgebieden worden gebruikt, die voor verpersoonlijking in het bericht worden gebruikt, worden niet gecontroleerd op volledigheid. Inhoudsblokken worden niet gekopieerd.<br><br> de actie van het updateprofiel die in de reis wordt gebruikt kan worden gekopieerd. Aangepaste acties kunnen onafhankelijk van elkaar aan een pakket worden toegevoegd. De details van de actie die tijdens de reis worden gebruikt, worden ook gekopieerd. Er wordt altijd een nieuwe versie gemaakt in de doelsandbox. |
 | [!DNL Adobe Journey Optimizer] | Aangepaste handelingen |  | Aangepaste acties kunnen onafhankelijk van elkaar aan een pakket worden toegevoegd. Wanneer een aangepaste handeling aan een reis is toegewezen, kan deze niet meer worden bewerkt. Als u aangepaste handelingen wilt bijwerken, moet u: <ul><li>aangepaste handelingen verplaatsen voordat u een reis maakt</li><li>updateconfiguraties (zoals aanvraagheaders, queryparameters en verificatie) voor aangepaste acties na migratie</li><li>Reisobjecten migreren met de aangepaste handelingen die u tijdens de eerste stap hebt toegevoegd</li></ul> |
 | [!DNL Adobe Journey Optimizer] | Inhoudssjabloon | | Een inhoudssjabloon kan worden gekopieerd als een afhankelijk object van het reisobject. Met standalone sjablonen kunt u eenvoudig aangepaste inhoud hergebruiken voor Journey Optimizer-campagnes en -reizen. |
 | [!DNL Adobe Journey Optimizer] | Fragment | Alle geneste fragmenten. | Een fragment kan worden gekopieerd als een afhankelijk object van het reisobject. Fragmenten zijn herbruikbare onderdelen waarnaar in een of meer e-mails van Journey Optimizer-campagnes en -reizen kan worden verwezen. |
-| [!DNL Adobe Journey Optimizer] | Campagnes | De volgende objecten die in de campagne worden gebruikt, worden als afhankelijke objecten gekopieerd: <ul><li>Campagnes</li><li>Doelgroepen</li><li>Schema&#39;s</li><li>Contentsjablonen</li><li>Fragmenten</li><li>Bericht/inhoud</li><li>Kanaalconfiguratie</li><li>Verenigde beslissingsobjecten</li><li>Instellingen/varianten van experimenten</li></ul> | <ul><li>Campagnes kunnen samen met alle punten worden gekopieerd met betrekking tot het profiel, het publiek, het schema, de gealigneerde berichten, en afhankelijke voorwerpen. Sommige items worden niet gekopieerd, zoals labels voor gegevensgebruik en taalinstellingen. Voor een volledige lijst van voorwerpen die niet kunnen worden gekopieerd, verwijs naar de [ exporterende voorwerpen aan een andere zandbak ](https://experienceleague.adobe.com/nl/docs/journey-optimizer/using/configuration/copy-objects-to-sandbox) gids.</li><li>Het systeem zal automatisch een bestaand kanaalconfiguratievoorwerp in de doelzandbak ontdekken en opnieuw gebruiken als een identieke configuratie bestaat. Als er geen overeenkomende configuratie wordt gevonden, wordt de kanaalconfiguratie overgeslagen tijdens het importeren en moeten gebruikers de kanaalinstellingen in de doelsandbox voor deze reis handmatig bijwerken.</li><li>Gebruikers kunnen bestaande experimenten en doelgroepen in de doelsandbox opnieuw gebruiken als afhankelijke objecten van geselecteerde campagnes.</li></ul> |
+| [!DNL Adobe Journey Optimizer] | Campagnes | De volgende objecten die in de campagne worden gebruikt, worden als afhankelijke objecten gekopieerd: <ul><li>Campagnes</li><li>Doelgroepen</li><li>Schema&#39;s</li><li>Contentsjablonen</li><li>Fragmenten</li><li>Bericht/inhoud</li><li>Kanaalconfiguratie</li><li>Verenigde beslissingsobjecten</li><li>Instellingen/varianten van experimenten</li></ul> | <ul><li>Campagnes kunnen samen met alle punten worden gekopieerd met betrekking tot het profiel, het publiek, het schema, de gealigneerde berichten, en afhankelijke voorwerpen. Sommige items worden niet gekopieerd, zoals labels voor gegevensgebruik en taalinstellingen. Voor een volledige lijst van voorwerpen die niet kunnen worden gekopieerd, verwijs naar de [ exporterende voorwerpen aan een andere zandbak ](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/configuration/copy-objects-to-sandbox) gids.</li><li>Het systeem zal automatisch een bestaand kanaalconfiguratievoorwerp in de doelzandbak ontdekken en opnieuw gebruiken als een identieke configuratie bestaat. Als er geen overeenkomende configuratie wordt gevonden, wordt de kanaalconfiguratie overgeslagen tijdens het importeren en moeten gebruikers de kanaalinstellingen in de doelsandbox voor deze reis handmatig bijwerken.</li><li>Gebruikers kunnen bestaande experimenten en doelgroepen in de doelsandbox opnieuw gebruiken als afhankelijke objecten van geselecteerde campagnes.</li></ul> |
 
 Oppervlakken (bijvoorbeeld voorinstellingen) worden niet overschreven. Het systeem selecteert automatisch de dichtstbijzijnde mogelijke overeenkomst op de bestemmingszandbak die op het berichttype en oppervlaknaam wordt gebaseerd. Als er geen oppervlakten op de doelzandbak worden gevonden, dan zal het oppervlakexemplaar ontbreken, veroorzakend het berichtexemplaar om te ontbreken omdat een bericht vereist een oppervlakte om voor opstelling beschikbaar te zijn. In dit geval moet ten minste één oppervlak worden gemaakt voor het rechterkanaal van het bericht, zodat de kopie kan werken.
 
@@ -98,7 +109,7 @@ Selecteer **[!UICONTROL Schemas]** in de linkernavigatie en selecteer vervolgens
 
 ![ Lijst van schema&#39;s die het dropdown menu tonen dat de [!UICONTROL Add to package] controle benadrukt.](../images/ui/sandbox-tooling/add-to-package.png)
 
-Selecteer de optie **[!UICONTROL Create new package]** in het dialoogvenster **[!UICONTROL Add to package]** . Geef een [!UICONTROL Name] voor het pakket op en een optioneel [!UICONTROL Description] en selecteer vervolgens **[!UICONTROL Add]** .
+Selecteer de optie **[!UICONTROL Add to package]** in het dialoogvenster **[!UICONTROL Create new package]** . Geef een [!UICONTROL Name] voor het pakket op en een optioneel [!UICONTROL Description] en selecteer vervolgens **[!UICONTROL Add]** .
 
 ![ de [!UICONTROL Add to package] dialoog met [!UICONTROL Create new package] geselecteerd en het benadrukken [!UICONTROL Add].](../images/ui/sandbox-tooling/create-new-package.png)
 
@@ -345,7 +356,7 @@ Selecteer **[!UICONTROL Finish]** als u de doelobjecten hebt geïdentificeerd di
 
 De volgende video is bedoeld ter ondersteuning van uw begrip van gereedschappen voor sandboxen en beschrijft hoe u een nieuw pakket kunt maken, een pakket kunt publiceren en importeren.
 
->[!VIDEO](https://video.tv.adobe.com/v/3446091/?learn=on&captions=dut)
+>[!VIDEO](https://video.tv.adobe.com/v/3424763/?learn=on)
 
 ## Volgende stappen
 

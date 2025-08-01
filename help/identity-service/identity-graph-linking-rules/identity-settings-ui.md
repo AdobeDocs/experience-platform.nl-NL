@@ -2,7 +2,7 @@
 title: Gebruikersinterface Identiteitsinstellingen
 description: Leer hoe u de gebruikersinterface voor identiteitsinstellingen gebruikt.
 exl-id: 738b7617-706d-46e1-8e61-a34855ab976e
-source-git-commit: 38d331bd9265f25a3aebdcbd20ae5fc30a93e960
+source-git-commit: 7596a87309105897a2727faa8e22b06cdf5547c3
 workflow-type: tm+mt
 source-wordcount: '647'
 ht-degree: 0%
@@ -85,7 +85,7 @@ Van hier, moet u het volgende bevestigen alvorens tot de definitieve stap te wer
 >
 >* Uw gegevens worden pas gewijzigd wanneer u uw identiteitsinstellingen opslaat.
 
-![ het bevestigingsvenster dat een waarschuwing over een vertraging van zes uur toont alvorens de configuraties worden verwerkt.](../images/rules/complete.png)
+![ het bevestigingsvenster dat een waarschuwing over een vertraging van 24 uur toont alvorens de configuraties worden verwerkt.](../images/rules/complete.png)
 
 ## Volgende stappen
 

@@ -2,7 +2,7 @@
 title: Implementatiegids voor koppelingsregels voor identiteitsgrafieken
 description: Leer de aanbevolen stappen die u moet volgen wanneer u uw gegevens implementeert met configuraties van Identity Graph Linking Rules.
 exl-id: 368f4d4e-9757-4739-aaea-3f200973ef5a
-source-git-commit: a9c9543783eb85dcaadef64b1c0deb84f850d40e
+source-git-commit: 7596a87309105897a2727faa8e22b06cdf5547c3
 workflow-type: tm+mt
 source-wordcount: '1944'
 ht-degree: 0%
@@ -203,7 +203,11 @@ Zodra u een beter idee van hebt hoe u uw grafiek wilt gedragen, navigeer aan de 
 
 ![ de identiteiten doorbladeren pagina met de benadrukte montagesknoop.](../images/implementation/settings.png " de identiteiten doorbladeren pagina met de benadrukte montagesknoop."){zoomable="yes"}
 
-Gebruik de interface voor identiteitsinstellingen om uw unieke naamruimten aan te wijzen en uw naamruimten op volgorde van prioriteit te configureren. Zodra u met het toepassen van uw montages wordt gebeëindigd, moet u minstens zes uren wachten alvorens u te werk gaat om gegevens in te voeren, aangezien het minstens zes uren voor nieuwe montages om in de Dienst van de Identiteit moet worden weerspiegeld.
+Gebruik de interface voor identiteitsinstellingen om uw unieke naamruimten aan te wijzen en uw naamruimten op volgorde van prioriteit te configureren.
+
+>[!IMPORTANT]
+>
+>Zodra u met het toepassen van uw montages wordt gebeëindigd, moet u minstens 24 uren wachten alvorens u aan ingeste gegevens kunt te werk gaan, aangezien het minstens 24 uren voor nieuwe montages vergt om in de Dienst van de Identiteit worden weerspiegeld.
 
 Voor meer informatie, lees de [ gids UI van de identiteitsmontages ](./identity-settings-ui.md).
 

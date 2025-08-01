@@ -3,9 +3,9 @@ title: API-handleiding voor segmentatieservice
 description: Met de segmentatieservice-API kunnen ontwikkelaars segmentatiebewerkingen in Adobe Experience Platform programmatisch beheren. Volg deze gids voor het uitvoeren van de belangrijkste bewerkingen met de API.
 role: Developer
 exl-id: cebecaf3-9746-4b0b-9c50-11789fba66c3
-source-git-commit: f6d700087241fb3a467934ae8e64d04f5c1d98fa
+source-git-commit: af79493c831c401c0bf14e391eb36a8175b4a2dd
 workflow-type: tm+mt
-source-wordcount: '557'
+source-wordcount: '614'
 ht-degree: 2%
 
 ---
@@ -29,6 +29,12 @@ Voor meer informatie bij het gebruiken van dit eindpunt, te lezen gelieve de [ g
 De banen van de uitvoer zijn asynchrone processen die worden gebruikt om de leden van het publiekssegment aan datasets voort te zetten. U kunt het eindpunt `/export/jobs` gebruiken om alle uitvoerbanen terug te winnen, een nieuwe uitvoerbaan tot stand te brengen, details van een specifieke uitvoerbaan terug te winnen, of een specifieke uitvoerbaan te annuleren.
 
 Voor meer informatie bij het gebruiken van dit eindpunt, te lezen gelieve de [ gids van het de baaneindpunt van de uitvoer ](./export-jobs.md).
+
+## Extern publiek
+
+U kunt externe doelgroepen importeren in Experience Platform, de aanmaakstatus van een publiek opvragen, een extern publiek bijwerken, een uitvoering voor het opnemen van het publiek starten, een externe status voor het opnemen van het publiek opvragen, de uitvoering van het opnemen van het publiek in de lijst weergeven en een extern publiek verwijderen door het `/core/ais/external-audiences` -eindpunt te gebruiken.
+
+Voor meer informatie bij het gebruiken van dit eindpunt, te lezen gelieve de [ externe gids van het doelpubliek ](./external-audiences.md).
 
 ## Voorvertoningen en ramingen
 

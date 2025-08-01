@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Overzicht Source Connectors
 description: Adobe Experience Platform staat toe dat gegevens uit externe bronnen worden opgenomen en biedt u de mogelijkheid om inkomende gegevens te structureren, labelen en verbeteren met behulp van Experience Platform-services. U kunt gegevens invoeren uit verschillende bronnen, zoals Adobe-toepassingen, opslag in de cloud, databases en vele andere.
 exl-id: efdbed4d-5697-43ef-a47a-a8bcf0f13237
-source-git-commit: 952fc2fac819c545304aca4505208fe59841097f
+source-git-commit: 7596a87309105897a2727faa8e22b06cdf5547c3
 workflow-type: tm+mt
-source-wordcount: '1610'
+source-wordcount: '1612'
 ht-degree: 0%
 
 ---
@@ -61,7 +61,7 @@ Experience Platform staat toe dat gegevens worden ingevoerd van andere Adobe-toe
 
 ### Geavanceerde bedrijfsbronnen {#advanced-enterprise-sources}
 
-De volgende bronnen zijn beschikbaar aan [ Adobe Real-Time Customer Data Platform Ultimate ](https://helpx.adobe.com/nl/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html) slechts klanten.
+De volgende bronnen zijn beschikbaar aan [ Adobe Real-Time Customer Data Platform Ultimate ](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html) slechts klanten.
 
 | Source | Categorie | Type ontsteking | Wolk |
 | --- | --- | --- | --- |
@@ -126,6 +126,7 @@ U kunt de volgende bronnen gebruiken om toestemmings- en voorkeursgegevens in te
 
 | Source | Type ontsteking | Wolk |
 | --- | --- | --- |
+| [[!DNL Didomi]](../sources/connectors/consent-and-preferences/didomi.md) | Streaming | Azure |
 | [[!DNL OneTrust Integration]](connectors/consent-and-preferences/onetrust.md) | Batch | Azure |
 
 {style="table-layout:auto"}
