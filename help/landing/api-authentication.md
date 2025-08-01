@@ -100,7 +100,7 @@ Selecteer vervolgens het verificatietype **[!UICONTROL OAuth Server-to-Server]**
 
 >[!IMPORTANT]
 >
->De methode **[!UICONTROL OAuth Server-to-Server]** is de enige ondersteunde methode voor het genereren van tokens die vooruit gaat. De eerder ondersteunde **[!UICONTROL Service Account (JWT)]** -methode is vervangen en kan niet worden geselecteerd voor nieuwe integraties. Hoewel bestaande integratie met behulp van de JWT-verificatiemethode tot 30 juni 2025 blijft werken, raadt Adobe u ten zeerste aan om vóór die datum bestaande integratie te migreren naar de nieuwe [!UICONTROL OAuth Server-to-Server] -methode. Krijg meer informatie in de sectie [!BADGE  Afgekeurde ]{type=negative} [ produceert een Symbolisch van het Web JSON (JWT) ](#jwt).
+>De methode **[!UICONTROL OAuth Server-to-Server]** is de enige ondersteunde methode voor het genereren van tokens die vooruit gaat. De eerder ondersteunde **[!UICONTROL Service Account (JWT)]** -methode is vervangen en kan niet worden geselecteerd voor nieuwe integraties. Hoewel bestaande integratie met behulp van de JWT-verificatiemethode tot 30 juni 2025 blijft werken, raadt Adobe u ten zeerste aan om vóór die datum bestaande integratie te migreren naar de nieuwe [!UICONTROL OAuth Server-to-Server] -methode. Krijg meer informatie in de sectie [!BADGE &#x200B; Afgekeurde &#x200B;]{type=negative} [ produceert een Symbolisch van het Web JSON (JWT) ](#jwt).
 
 ![ selecteer de server-aan-Server authentificatiemethode OAuth voor Experience Platform API.](./images/api-authentication/oauth-authentication-method.png)
 
@@ -171,7 +171,7 @@ Gebruik vervolgens de keuzelijst om het venster met referenties te openen, een t
 >
 >Het onderwerpblok van de bovenste pagina blijft zichtbaar wanneer u navigeert tussen verschillende eindpuntpagina&#39;s in de Experience Platform API-naslagdocumentatie.
 
-## [!BADGE  Vervangen ]{type=negative} produceer een Symbolisch van het Web JSON (JWT) {#jwt}
+## [!BADGE &#x200B; Vervangen &#x200B;]{type=negative} produceer een Symbolisch van het Web JSON (JWT) {#jwt}
 
 >[!WARNING]
 >
