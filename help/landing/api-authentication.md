@@ -8,7 +8,7 @@ feature: API
 exl-id: dfe8a7be-1b86-4d78-a27e-87e4ed8b3d42
 source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
 workflow-type: tm+mt
-source-wordcount: '2409'
+source-wordcount: '2408'
 ht-degree: 1%
 
 ---
@@ -52,7 +52,7 @@ Voordat u integratie op Adobe Developer Console kunt maken, moet uw account ontw
 
 ### Toegang voor ontwikkelaars verkrijgen {#gain-developer-access}
 
-Neem contact op met een Admin Console-beheerder in uw organisatie om u als ontwikkelaar toe te voegen aan een Experience Platform-productprofiel. Zie de documentatie van Admin Console voor specifieke instructies op hoe te [ ontwikkelaartoegang voor productprofielen ](https://helpx.adobe.com/nl/enterprise/admin-guide.html/enterprise/using/manage-developers.ug.html) beheren.
+Neem contact op met een Admin Console-beheerder in uw organisatie om u als ontwikkelaar toe te voegen aan een Experience Platform-productprofiel. Zie de documentatie van Admin Console voor specifieke instructies op hoe te [ ontwikkelaartoegang voor productprofielen ](https://helpx.adobe.com/enterprise/admin-guide.html/enterprise/using/manage-developers.ug.html) beheren.
 
 Zodra u als ontwikkelaar wordt toegewezen, kunt u beginnen integraties in [ Adobe Developer Console ](https://www.adobe.com/go/devs_console_ui) tot stand te brengen. Deze integratie is een pijplijn van externe apps en services naar Adobe API&#39;s.
 
@@ -60,7 +60,7 @@ Zodra u als ontwikkelaar wordt toegewezen, kunt u beginnen integraties in [ Adob
 
 Uw Admin Console-beheerder moet u ook als gebruiker toevoegen aan hetzelfde productprofiel. Met gebruikerstoegang, kunt u in UI het resultaat van de API verrichtingen zien die u uitvoert.
 
-Zie de gids op [ het leiden gebruikersgroepen in Admin Console ](https://helpx.adobe.com/nl/enterprise/admin-guide.html/enterprise/using/user-groups.ug.html) voor meer informatie.
+Zie de gids op [ het leiden gebruikersgroepen in Admin Console ](https://helpx.adobe.com/enterprise/admin-guide.html/enterprise/using/user-groups.ug.html) voor meer informatie.
 
 ## Een API-sleutel (client-id) en organisatie-id genereren {#generate-credentials}
 
@@ -100,7 +100,7 @@ Selecteer vervolgens het verificatietype **[!UICONTROL OAuth Server-to-Server]**
 
 >[!IMPORTANT]
 >
->De methode **[!UICONTROL OAuth Server-to-Server]** is de enige ondersteunde methode voor het genereren van tokens die vooruit gaat. De eerder ondersteunde **[!UICONTROL Service Account (JWT)]** -methode is vervangen en kan niet worden geselecteerd voor nieuwe integraties. Hoewel bestaande integratie met behulp van de JWT-verificatiemethode tot 30 juni 2025 blijft werken, raadt Adobe u ten zeerste aan om vóór die datum bestaande integratie te migreren naar de nieuwe [!UICONTROL OAuth Server-to-Server] -methode. Krijg meer informatie in de sectie [!BADGE &#x200B; Afgekeurd &#x200B;]{type=negative}[ produceer een Token van het Web JSON (JWT) ](#jwt).
+>De methode **[!UICONTROL OAuth Server-to-Server]** is de enige ondersteunde methode voor het genereren van tokens die vooruit gaat. De eerder ondersteunde **[!UICONTROL Service Account (JWT)]** -methode is vervangen en kan niet worden geselecteerd voor nieuwe integraties. Hoewel bestaande integratie met behulp van de JWT-verificatiemethode tot 30 juni 2025 blijft werken, raadt Adobe u ten zeerste aan om vóór die datum bestaande integratie te migreren naar de nieuwe [!UICONTROL OAuth Server-to-Server] -methode. Krijg meer informatie in de sectie [!BADGE  Afgekeurde ]{type=negative} [ produceert een Symbolisch van het Web JSON (JWT) ](#jwt).
 
 ![ selecteer de server-aan-Server authentificatiemethode OAuth voor Experience Platform API.](./images/api-authentication/oauth-authentication-method.png)
 
@@ -171,15 +171,15 @@ Gebruik vervolgens de keuzelijst om het venster met referenties te openen, een t
 >
 >Het onderwerpblok van de bovenste pagina blijft zichtbaar wanneer u navigeert tussen verschillende eindpuntpagina&#39;s in de Experience Platform API-naslagdocumentatie.
 
-## [!BADGE &#x200B; Vervangen &#x200B;] &lbrace;type=negative&rbrace; produceer een Symbolisch van het Web JSON (JWT) {#jwt}
+## [!BADGE  Vervangen ]{type=negative} produceer een Symbolisch van het Web JSON (JWT) {#jwt}
 
 >[!WARNING]
 >
 >De JWT-methode voor het genereren van toegangstokens is afgekeurd. Alle nieuwe integraties moeten worden gecreeerd gebruikend de [ Server-aan-Server authentificatiemethode ](#select-oauth-server-to-server). Adobe vereist ook dat u uw bestaande integratie aan de methode OAuth tegen 30 juni 2025 migreert opdat uw integratie blijft werken. Lees de volgende belangrijke documentatie:
 > 
->* [ gids van de Migratie voor uw toepassingen van JWT aan OAuth ](https://developer.adobe.com/developer-console/docs/guides/authentication/ServerToServerAuthentication/migration/)
->* [ gids van de Implementatie voor nieuwe en oude toepassingen met OAuth ](https://developer.adobe.com/developer-console/docs/guides/authentication/ServerToServerAuthentication/implementation/)
->* [ Voordelen om de Server-aan-Server geloofsbrieven te gebruiken OAuth methode ](https://developer.adobe.com/developer-console/docs/guides/authentication/ServerToServerAuthentication/migration/#why-oauth-server-to-server-credentials)
+> * [ gids van de Migratie voor uw toepassingen van JWT aan OAuth ](https://developer.adobe.com/developer-console/docs/guides/authentication/ServerToServerAuthentication/migration/)
+> * [ gids van de Implementatie voor nieuwe en oude toepassingen met OAuth ](https://developer.adobe.com/developer-console/docs/guides/authentication/ServerToServerAuthentication/implementation/)
+> * [ Voordelen om de Server-aan-Server geloofsbrieven te gebruiken OAuth methode ](https://developer.adobe.com/developer-console/docs/guides/authentication/ServerToServerAuthentication/migration/#why-oauth-server-to-server-credentials)
 
 +++ Vervangen gegevens weergeven
 
@@ -241,7 +241,7 @@ curl -X POST https://ims-na1.adobelogin.com/ims/exchange/jwt \
 
 | Eigenschap | Beschrijving |
 | --- | --- |
-| `token_type` | Het type of token dat wordt geretourneerd. Voor toegangstokens is deze waarde altijd `bearer` . |
+| `token_type` | Het type token dat wordt geretourneerd. Voor toegangstokens is deze waarde altijd `bearer` . |
 | `access_token` | De gegenereerde `{ACCESS_TOKEN}` . Deze waarde, voorafgegaan door het woord `Bearer` , is vereist als de `Authentication` -header voor alle Experience Platform API-aanroepen. |
 | `expires_in` | Het aantal milliseconden dat resteert tot het toegangstoken verloopt. Zodra deze waarde 0 bereikt, moet een nieuw toegangstoken worden geproduceerd om Experience Platform APIs te blijven gebruiken. |
 
@@ -360,13 +360,13 @@ De ontwikkelaar is toegevoegd en wordt weergegeven op het tabblad **[!UICONTROL 
 
 >[!NOTE]
 >
->Alleen een systeembeheerder kan API&#39;s toewijzen aan rollen in de gebruikersinterface van Experience Platform.
+> Alleen een systeembeheerder kan API&#39;s toewijzen aan rollen in de gebruikersinterface van Experience Platform.
 
 Als een systeembeheerder bewerkingen op Experience Platform API&#39;s wil gebruiken en uitvoeren, moet hij de API-referenties toevoegen naast de machtigingen die een rol heeft gegeven. Krijg meer informatie in de sectie over [ het leiden API geloofsbrieven voor een rol ](../access-control/abac/ui/permissions.md#manage-api-credentials-for-a-role).
 
 Een analyse van de hierboven beschreven stappen voor het toevoegen van ontwikkelaars aan productprofielen en het toewijzen van APIs aan rollen is ook beschikbaar in de videozelfstudie hieronder:
 
->[!VIDEO](https://video.tv.adobe.com/v/3446404/?learn=on&captions=dut)
+>[!VIDEO](https://video.tv.adobe.com/v/3426407/?learn=on)
 
 ## Aanvullende bronnen {#additional-resources}
 
