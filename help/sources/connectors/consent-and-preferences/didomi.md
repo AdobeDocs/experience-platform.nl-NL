@@ -75,7 +75,7 @@ Als u een gegevensset wilt maken, selecteert u [!UICONTROL Datasets] in de linke
 
 Met [!DNL Webhooks] kunt u zich abonneren op gebeurtenissen die op het [!DNL Didomi] -platform worden geactiveerd wanneer gebruikers werken met hun voorkeuren voor toestemming. Wanneer een relevante gebeurtenis plaatsvindt — bijvoorbeeld wanneer een gebruiker toestemming geeft of intrekt — verzendt [!DNL Didomi] een realtime HTTP POST-aanvraag met een JSON-payload naar het geconfigureerde [!DNL webhook] -eindpunt.
 
-![ didomi-console 0}](../../images/tutorials/create/didomi/didomi-console.png)
+![ didomi-console 0&rbrace;](../../images/tutorials/create/didomi/didomi-console.png)
 
 Voor compatibiliteit met Experience Platform moet uw webhaak aan de volgende vereisten voldoen.
 

@@ -40,7 +40,7 @@ Nieuwe functies en updates van bestaande functies in Adobe Experience Platform:
 >
 >Deze functie is afhankelijk van uw regio beschikbaar voor gebruik. Voor gebruikers in Amerika, zal dit vanaf 11 augustus beschikbaar zijn. Voor gebruikers in Europa zal dit vanaf 25 augustus beschikbaar zijn. Voor gebruikers in Azië is deze vanaf 8 september beschikbaar.
 
-De capaciteit verstrekt een uitvoerige mening van 0} begeleidingen van uw organisatie [ en geeft aanbevelingen op hoe te om potentiële capaciteitsschendingen op te lossen door uw capaciteiten op een zandbakniveau toe te wijzen. ](../../rtcdp/guardrails/overview.md) Met deze release kunt u uw capaciteit voor zowel streaming opname als streaming segmentatie bekijken.
+De capaciteit verstrekt een uitvoerige mening van 0&rbrace; begeleidingen van uw organisatie [ en geeft aanbevelingen op hoe te om potentiële capaciteitsschendingen op te lossen door uw capaciteiten op een zandbakniveau toe te wijzen. ](../../rtcdp/guardrails/overview.md) Met deze release kunt u uw capaciteit voor zowel streaming opname als streaming segmentatie bekijken.
 
 Voor meer informatie, te lezen gelieve het [ overzicht van de Capaciteit ](../../landing/license-usage-and-guardrails/capacity.md).
 
@@ -62,8 +62,8 @@ Voor meer informatie, te lezen gelieve het [ overzicht van de Capaciteit ](../..
 | Accountnamen en beschrijvingen voor doelverbindingen | U kunt [ rekeningsnamen en beschrijvingen ](/help/destinations/ui/connect-destination.md) nu toevoegen wanneer het verbinden met bestemmingen, toelatend beter beheer van bestemmingen met veelvoudige rekeningen. |
 | Verbeterde gegevensstroominformatie voor Edge-doelen | De recht-spoorinformatie voor [ Adobe Target ](/help/destinations/catalog/personalization/adobe-target-v2.md) en [ de bestemmingen van de Douane Personalization ](/help/destinations/catalog/personalization/custom-personalization.md) is verbeterd om de gegevensstroomnaam te tonen, die duidelijkere zichtbaarheid in bijbehorende configuraties aanbieden datastream en die verwarring helpen verminderen wanneer het herzien van bestaande dataflows. De **[!UICONTROL Datastream ID]** -kiezer in het doelconfiguratiescherm is bijgewerkt naar **[!UICONTROL Datastream]** voor meer duidelijkheid in de gebruikersinterface. |
 | Zichtbaarheid van marketingacties in doelselectie | Marketingacties worden nu weergegeven in de rechtertrack van het tabblad **[[!UICONTROL Browse]](/help/destinations/ui/destinations-workspace.md#browse)** in de werkruimte Doelen en op de pagina **[[!UICONTROL Dataflow runs]](/help/dataflows/ui/monitor-destinations.md)** , zodat wijzigingen in marketingacties direct zichtbaar zijn zonder dat u naar de weergavepagina hoeft te navigeren. Deze verbetering verbetert de gebruikerservaring door het gemakkelijker te maken om marketing actieconfiguraties tijdens bestemmingsopstelling te verifiëren. |
-| [!BADGE  Beperkte bèta ]{type=Informative} geeft marketing acties voor bestemmingen uit | U kunt [ marketing acties ](/help/destinations/ui/edit-activation.md#edit-marketing-actions) voor bestaande bestemmingen nu uitgeven. Deze functie is momenteel in beperkte bèta. Neem contact op met uw Adobe-vertegenwoordiger om toegang aan te vragen. |
-| [!BADGE  Beperkte bèta ]{type=Informative} geeft bestemmingen uit | U kunt [ uw bestemmingsconfiguratie ](/help/destinations/ui/edit-destination.md) nu uitgeven nadat het is gecreeerd. Deze functie is momenteel in beperkte bèta. Neem contact op met uw Adobe-vertegenwoordiger om toegang aan te vragen. |
+| [!BADGE &#x200B; Beperkte bèta &#x200B;]{type=Informative} geeft marketing acties voor bestemmingen uit | U kunt [ marketing acties ](/help/destinations/ui/edit-activation.md#edit-marketing-actions) voor bestaande bestemmingen nu uitgeven. Deze functie is momenteel in beperkte bèta. Neem contact op met uw Adobe-vertegenwoordiger om toegang aan te vragen. |
+| [!BADGE &#x200B; Beperkte bèta &#x200B;]{type=Informative} geeft bestemmingen uit | U kunt [ uw bestemmingsconfiguratie ](/help/destinations/ui/edit-destination.md) nu uitgeven nadat het is gecreeerd. Deze functie is momenteel in beperkte bèta. Neem contact op met uw Adobe-vertegenwoordiger om toegang aan te vragen. |
 
 **Oplossingen**
 
@@ -135,7 +135,7 @@ Experience Platform biedt een RESTful-API en een interactieve gebruikersinterfac
 
 | Source | Beschrijving |
 | --- | --- |
-| [!BADGE  Beta ]{type=Informative} Steun voor [!DNL Didomi] (het stromen SDK) | Gebruik de [!DNL Didomi] -bron om gegevens van toestemmings- en voorkeursbeheer van [!DNL Didomi] in te voeren, die de naleving van privacyregels en op toestemming gebaseerde marketingstrategieën ondersteunen. Lees het [[!DNL Didomi]  bronoverzicht ](../../sources/connectors/consent-and-preferences/didomi.md) voor informatie over hoe te om opstelling te krijgen. Voor stappen bij het creëren van een bronverbinding, lees de [[!DNL Didomi]  gids van de bronverbinding ](../../sources/tutorials/ui/create/consent-and-preferences/didomi.md). |
+| [!BADGE &#x200B; Beta &#x200B;]{type=Informative} Steun voor [!DNL Didomi] (het stromen SDK) | Gebruik de [!DNL Didomi] -bron om gegevens van toestemmings- en voorkeursbeheer van [!DNL Didomi] in te voeren, die de naleving van privacyregels en op toestemming gebaseerde marketingstrategieën ondersteunen. Lees het [[!DNL Didomi]  bronoverzicht ](../../sources/connectors/consent-and-preferences/didomi.md) voor informatie over hoe te om opstelling te krijgen. Voor stappen bij het creëren van een bronverbinding, lees de [[!DNL Didomi]  gids van de bronverbinding ](../../sources/tutorials/ui/create/consent-and-preferences/didomi.md). |
 
 **Nieuwe of bijgewerkte functionaliteit**
 
