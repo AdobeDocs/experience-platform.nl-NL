@@ -52,7 +52,7 @@ Voordat u integratie op Adobe Developer Console kunt maken, moet uw account ontw
 
 ### Toegang voor ontwikkelaars verkrijgen {#gain-developer-access}
 
-Neem contact op met een Admin Console-beheerder in uw organisatie om u als ontwikkelaar toe te voegen aan een Experience Platform-productprofiel. Zie de documentatie van Admin Console voor specifieke instructies op hoe te [ ontwikkelaartoegang voor productprofielen ](https://helpx.adobe.com/enterprise/admin-guide.html/enterprise/using/manage-developers.ug.html) beheren.
+Neem contact op met een Admin Console-beheerder in uw organisatie om u als ontwikkelaar toe te voegen aan een Experience Platform-productprofiel. Zie de documentatie van Admin Console voor specifieke instructies op hoe te [ ontwikkelaartoegang voor productprofielen ](https://helpx.adobe.com/nl/enterprise/admin-guide.html/enterprise/using/manage-developers.ug.html) beheren.
 
 Zodra u als ontwikkelaar wordt toegewezen, kunt u beginnen integraties in [ Adobe Developer Console ](https://www.adobe.com/go/devs_console_ui) tot stand te brengen. Deze integratie is een pijplijn van externe apps en services naar Adobe API&#39;s.
 
@@ -60,7 +60,7 @@ Zodra u als ontwikkelaar wordt toegewezen, kunt u beginnen integraties in [ Adob
 
 Uw Admin Console-beheerder moet u ook als gebruiker toevoegen aan hetzelfde productprofiel. Met gebruikerstoegang, kunt u in UI het resultaat van de API verrichtingen zien die u uitvoert.
 
-Zie de gids op [ het leiden gebruikersgroepen in Admin Console ](https://helpx.adobe.com/enterprise/admin-guide.html/enterprise/using/user-groups.ug.html) voor meer informatie.
+Zie de gids op [ het leiden gebruikersgroepen in Admin Console ](https://helpx.adobe.com/nl/enterprise/admin-guide.html/enterprise/using/user-groups.ug.html) voor meer informatie.
 
 ## Een API-sleutel (client-id) en organisatie-id genereren {#generate-credentials}
 
