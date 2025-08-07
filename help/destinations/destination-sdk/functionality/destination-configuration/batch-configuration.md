@@ -2,7 +2,7 @@
 description: Leer hoe u de exportinstellingen voor bestanden configureert voor doelen die met Destination SDK zijn gemaakt.
 title: Batchconfiguratie
 exl-id: 0ffbd558-a83c-4c3d-b4fc-b6f7a23a163a
-source-git-commit: a149e0b96b68c8ac61e355cf8605742feb4eec41
+source-git-commit: 8e7356bdc5692678e46a61b538d4b6748792a423
 workflow-type: tm+mt
 source-wordcount: '1031'
 ht-degree: 0%
@@ -95,7 +95,7 @@ De waarden die u opstelling hier wordt aangehaald in de [ stap van de de publiek
 | `defaultExportMode` | Enum | Definieert de standaardmodus voor het exporteren van bestanden. Ondersteunde waarden:<ul><li>`DAILY_FULL_EXPORT`</li><li>`FIRST_FULL_THEN_INCREMENTAL`</li></ul> De standaardwaarde is `DAILY_FULL_EXPORT` . Zie de [ documentatie van de partijactivering ](../../../ui/activate-batch-profile-destinations.md#scheduling) voor details over dossieruitvoer die plannen. |
 | `allowedExportModes` | Lijst | Hiermee definieert u de exportmodi voor bestanden die beschikbaar zijn voor klanten. Ondersteunde waarden:<ul><li>`DAILY_FULL_EXPORT`</li><li>`FIRST_FULL_THEN_INCREMENTAL`</li></ul> |
 | `allowedScheduleFrequency` | Lijst | Hiermee definieert u de exportfrequentie voor bestanden die beschikbaar is voor klanten. Ondersteunde waarden:<ul><li>`ONCE`</li><li>`EVERY_3_HOURS`</li><li>`EVERY_6_HOURS`</li><li>`EVERY_8_HOURS`</li><li>`EVERY_12_HOURS`</li><li>`DAILY`</li><li>`WEEKLY`</li><li>`MONTHLY`</li></ul> |
-| `defaultFrequency` | Enum | Definieert de standaard exportfrequentie voor bestanden.Ondersteunde waarden:<ul><li>`ONCE`</li><li>`EVERY_3_HOURS`</li><li>`EVERY_6_HOURS`</li><li>`EVERY_8_HOURS`</li><li>`EVERY_12_HOURS`</li><li>`DAILY`</li></ul> De standaardwaarde is `DAILY` . |
+| `defaultFrequency` | Enum | Definieert de standaard exportfrequentie voor bestanden.Ondersteunde waarden:<ul><li>`ONCE`</li><li>`EVERY_3_HOURS`</li><li>`EVERY_6_HOURS`</li><li>`EVERY_8_HOURS`</li><li>`EVERY_12_HOURS`</li><li>`DAILY`</li><li>`WEEKLY`</li><li>`MONTHLY`</li></ul> De standaardwaarde is `DAILY` . |
 | `defaultStartTime` | String | Hiermee definieert u de standaardbegintijd voor het exporteren van het bestand. Gebruikt een bestandsindeling van 24 uur. De standaardwaarde is &quot;00 :00&quot;. |
 | `filenameConfig.allowedFilenameAppendOptions` | String | *Vereiste*. Lijst met beschikbare bestandsnaammacro&#39;s waaruit gebruikers kunnen kiezen. Op deze manier bepaalt u welke items aan geëxporteerde bestandsnamen worden toegevoegd (gebruikers-id, naam van de organisatie, datum en tijd van export, enzovoort). Zorg er bij het instellen van `defaultFilename` voor dat dubbele macro&#39;s worden vermeden. <br><br> Gesteunde waarden: <ul><li>`DESTINATION`</li><li>`SEGMENT_ID`</li><li>`SEGMENT_NAME`</li><li>`DESTINATION_INSTANCE_ID`</li><li>`DESTINATION_INSTANCE_NAME`</li><li>`ORGANIZATION_NAME`</li><li>`SANDBOX_NAME`</li><li>`DATETIME`</li><li>`CUSTOM_TEXT`</li></ul>Ongeacht de volgorde waarin u de macro&#39;s definieert, geeft de Experience Platform-interface deze altijd weer in de volgorde die hier wordt weergegeven. <br><br> Als `defaultFilename` leeg is, moet de lijst `allowedFilenameAppendOptions` minstens één macro bevatten. |
 | `filenameConfig.defaultFilenameAppendOptions` | String | *Vereiste*. Vooraf geselecteerde standaardbestandsnaammacro&#39;s die gebruikers kunnen uitschakelen.<br><br> De macro&#39;s in deze lijst zijn een subset van de gedefinieerde macro&#39;s in `allowedFilenameAppendOptions` . |
