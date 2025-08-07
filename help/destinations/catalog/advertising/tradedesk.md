@@ -3,9 +3,9 @@ keywords: reclame, bureau voor de handel, reclamebureau
 title: De verbinding van de handelsbureau
 description: De Trade Desk is een zelfbedieningsplatform waarmee adverteerders doelgerichte digitale campagnes kunnen voeren op het hele scherm, de video en mobiele inventarisatiebronnen.
 exl-id: b8f638e8-dc45-4aeb-8b4b-b3fa2906816d
-source-git-commit: 92ba27aeb35685741151a618e64c78b4c8318865
+source-git-commit: 564ee7fbd45677c35057c56de049158f3282d7ad
 workflow-type: tm+mt
-source-wordcount: '872'
+source-wordcount: '979'
 ht-degree: 1%
 
 ---
@@ -13,6 +13,23 @@ ht-degree: 1%
 # [!DNL The Trade Desk]-verbinding
 
 ## Overzicht {#overview}
+
+
+>[!IMPORTANT]
+>
+> Na de [ interne verbetering ](../../../release-notes/2025/july-2025.md#destinations) aan de bestemmingsdienst van juli 2025, kunt u a **daling in het aantal geactiveerde profielen** in uw dataflows [!DNL The Trade Desk] ervaren.
+> > Dit daling wordt veroorzaakt door de introductie van het **ECID afbeeldingsvereiste** voor alle activiteiten aan dit bestemmingsplatform. Zie de [ verplichte afbeelding ](#mandatory-mappings) sectie in deze pagina voor gedetailleerde informatie.
+>
+>**wat veranderde:**
+>
+>* De afbeelding van ECID (identiteitskaart van Experience Cloud) is nu **verplicht** voor alle profielactiviteiten.
+>* Profielen zonder ECID-toewijzing zullen **weggelaten worden** uit bestaande activeringsgegevens.
+>
+>**wat u moet doen:**
+>
+>* Controleer de publieksgegevens om te controleren of profielen geldige ECID-waarden hebben.
+>* Controleer de activeringsgegevens om te controleren of het profiel wordt verwacht.
+
 
 Gebruik deze doelconnector om profielgegevens naar [!DNL The Trade Desk] te verzenden. Deze schakelaar verzendt gegevens naar het [!DNL The Trade Desk] eerste partijeindpunt. De integratie tussen Adobe Experience Platform en [!DNL The Trade Desk] biedt geen ondersteuning voor het exporteren van gegevens naar het eindpunt van derden voor [!DNL The Trade Desk] .
 
@@ -47,7 +64,7 @@ In deze sectie wordt beschreven welke soorten publiek u naar dit doel kunt expor
 
 | Oorsprong publiek | Ondersteund | Beschrijving |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | ✓ | Het publiek produceerde door de Dienst van de Segmentatie van Experience Platform [&#128279;](../../../segmentation/home.md). |
+| [!DNL Segmentation Service] | ✓ | Het publiek produceerde door de Dienst van de Segmentatie van Experience Platform [ ](../../../segmentation/home.md). |
 | Aangepaste uploads | ✓ | Het publiek [ ingevoerde ](../../../segmentation/ui/audience-portal.md#import-audience) in Experience Platform van Csv- dossiers. |
 
 {style="table-layout:auto"}
@@ -67,7 +84,7 @@ Raadpleeg de onderstaande tabel voor informatie over het exporttype en de export
 
 >[!IMPORTANT]
 >
->Als u uw eerste bestemming met [!DNL The Trade Desk] wilt tot stand brengen en niet de [ functionaliteit van de Synchronisatie van identiteitskaart ](https://experienceleague.adobe.com/nl/docs/id-service/using/id-service-api/methods/idsync) in de Dienst van identiteitskaart van Experience Cloud in het verleden (met Adobe Audience Manager of andere toepassingen) hebt toegelaten, te bereiken gelieve uit aan Adobe Consulting of de Zorg van de Klant om de syncs van identiteitskaart toe te laten. Als u eerder [!DNL The Trade Desk] -integraties hebt ingesteld in Audience Manager, worden de id-syncs die u hebt ingesteld, overgedragen naar Experience Platform.
+>Als u uw eerste bestemming met [!DNL The Trade Desk] wilt tot stand brengen en niet de [ functionaliteit van de Synchronisatie van identiteitskaart ](https://experienceleague.adobe.com/en/docs/id-service/using/id-service-api/methods/idsync) in de Dienst van identiteitskaart van Experience Cloud in het verleden (met Adobe Audience Manager of andere toepassingen) hebt toegelaten, te bereiken gelieve uit aan Adobe Consulting of de Zorg van de Klant om de syncs van identiteitskaart toe te laten. Als u eerder [!DNL The Trade Desk] -integraties hebt ingesteld in Audience Manager, worden de id-syncs die u hebt ingesteld, overgedragen naar Experience Platform.
 
 ## Verbinden met de bestemming {#connect}
 
@@ -121,7 +138,7 @@ Alle doelidentiteiten die in de [ gesteunde identiteiten ](#supported-identities
 * **ECID** (identiteitskaart van Experience Cloud)
 * **identiteitskaart van het Handelsbureau**
 
-Als u niet alle vereiste identiteiten toewijst, voorkomt u dat het publiek wordt geactiveerd naar [!DNL The Trade Desk] . Elke identiteit dient een specifiek doel in de integratie en alle id&#39;s zijn vereist voor een correcte bestemming.
+Als u niet alle vereiste identiteiten toewijst, kunt u de activeringsworkflow niet voltooien. Elke identiteit dient een specifiek doel in de integratie en alle id&#39;s zijn vereist voor een correcte bestemming.
 
 ![ Schermschot die de verplichte afbeeldingen ](../../assets/catalog/advertising/tradedesk/mandatory-mappings.png) tonen
 
