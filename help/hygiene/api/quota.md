@@ -3,33 +3,33 @@ title: Quota API-eindpunt
 description: Met het /quota-eindpunt in de Data Hygiene-API kunt u het gebruik van Advanced Data Lifecycle Management controleren op basis van de maandelijkse quotalimieten van uw organisatie voor elk taaktype.
 role: Developer
 exl-id: 91858a13-e5ce-4b36-a69c-9da9daf8cd66
-source-git-commit: 4d34ae1885f8c4b05c7bb4ff9de9c0c0e26154bd
+source-git-commit: 2c2907c5ed38ce4c87b1b73f96e1a0e64586cb97
 workflow-type: tm+mt
-source-wordcount: '492'
-ht-degree: 0%
+source-wordcount: '372'
+ht-degree: 1%
 
 ---
 
 # Quota-eindpunt
 
-Met het `/quota` -eindpunt in de Data Hygiene-API kunt u het gebruik van Advanced Data Lifecycle Management controleren op basis van de quota van uw organisatie voor elk taaktype.
+Gebruik het `/quota` eindpunt in de API van de Hygiëne van Gegevens om het huidige gebruik en de grenzen van uw organisatie te controleren. De quota variëren op basis van rechten, zoals privacy en beveiligingsschild of gezondheidsschild.
 
-Het quotagebruik wordt bijgehouden voor elk taaktype van de Levenscyclus van Gegevens. Uw huidige quota&#39;s zijn afhankelijk van de machtigingen van uw organisatie en kunnen regelmatig worden herzien. Verlopen van gegevenssets zijn onderworpen aan een harde limiet voor het aantal taken die tegelijkertijd actief zijn.
+Controleer uw huidige quotagebruik om naleving van organisatorische grenzen voor elk baantype te verzekeren.
 
 ## Aan de slag
 
 Het eindpunt dat in deze handleiding wordt gebruikt, maakt deel uit van de Data Hygiene API. Alvorens verder te gaan, te herzien gelieve het [ overzicht ](./overview.md) voor de volgende informatie:
 
-* Koppelingen naar gerelateerde documentatie
-* Een handleiding voor het lezen van de voorbeeld-API-aanroepen in dit document
-* Belangrijke informatie over de vereiste kopballen die nodig zijn om vraag aan om het even welke Experience Platform API te maken
+* Gerelateerde documentatiekoppelingen
+* Hoe te om steekproefAPI vraag te lezen
+* Vereiste headers voor Experience Platform API-aanroepen
 
 ## Quoten en verwerkingstijdlijnen {#quotas}
 
 Aanvragen voor het verwijderen van records zijn onderhevig aan quota&#39;s en verwachtingen op serviceniveau op basis van uw licentierechten. Deze limieten gelden voor verwijderingsaanvragen voor zowel de gebruikersinterface als de API.
 
 >[!TIP]
-> 
+>
 >In dit document wordt weergegeven hoe u uw gebruik kunt afstemmen op op op machtigingen gebaseerde limieten. Voor een volledige beschrijving van quotalagen, registreert schrappingsaanspraken, en het gedrag van SLA, zie [ op UI-Gebaseerd verslag schrapping ](../ui/record-delete.md#quotas) of [ op API-Gebaseerd verslag schrapt ](./workorder.md#quotas) documenten.
 
 ## Quota weergeven {#list}
@@ -43,9 +43,15 @@ GET /quota
 GET /quota?quotaType={QUOTA_TYPE}
 ```
 
+>[!NOTE]
+>
+>Het verbruik van de quota stelt dagelijks en maandelijks op de eerste van elke maand bij 00 :00 GMT terug.
+>
+>Alleen geaccepteerde aanvragen tellen mee voor uw quota. Geweigerde werkorders verlagen uw quota niet.
+
 | Parameter | Beschrijving |
 | --- | --- |
-| `{QUOTA_TYPE}` | Een optionele queryparameter die het type quota opgeeft dat moet worden opgehaald. Als er geen parameter `quotaType` is opgegeven, worden alle quotumwaarden geretourneerd in de API-reactie. Tot de toegestane tekstwaarden behoren:<ul><li>`datasetExpirationQuota`: Dit voorwerp toont het aantal gelijktijdig actieve datasettermijnen voor uw organisatie, en uw totale toelage van verlopen. </li><li>`dailyConsumerDeleteIdentitiesQuota`: Dit object toont het totale aantal verzoeken om record te verwijderen dat uw organisatie vandaag heeft ingediend en uw totale dagvergoeding.<br> Nota: Slechts worden de toegelaten verzoeken geteld. Als een werkorder wordt geweigerd omdat de validatie is mislukt, tellen deze identiteitsverwijderingen niet mee voor uw quota.</li><li>`monthlyConsumerDeleteIdentitiesQuota`: Dit object toont het totale aantal verzoeken om het verwijderen van records dat uw organisatie deze maand heeft ingediend en uw totale maandelijkse toelage.</li><li>`monthlyUpdatedFieldIdentitiesQuota`: Dit object toont het totale aantal aanvragen voor updates van records dat uw organisatie deze maand heeft ingediend en uw totale maandelijkse toelage.</li></ul> |
+| `{QUOTA_TYPE}` | Een optionele queryparameter die het type quota opgeeft dat moet worden opgehaald. Als er geen parameter `quotaType` is opgegeven, worden alle quotumwaarden geretourneerd in de API-reactie. Tot de geaccepteerde waarden behoren:<ul><li>`datasetExpirationQuota`: Het aantal actieve gegevenssetvervaldatums en uw totale toegestane aantal.</li><li>`dailyConsumerDeleteIdentitiesQuota`: Het aantal records dat u vandaag verwijdert en uw dagelijkse quota.</li><li>`monthlyConsumerDeleteIdentitiesQuota`: Deze maand en uw maandquotum worden verwijderd door het aantal records.</li></ul> |
 
 **Verzoek**
 
@@ -67,27 +73,21 @@ Als u met succes reageert, worden de details van de levenscyclusquota van uw geg
   "quotas": [
     {
       "name": "datasetExpirationQuota",
-      "description": "The number of concurrently active Expiration Dataset Delete in all workorder requests for the organization.",
-      "consumed": 12,
-      "quota": 50
+      "description": "The number of concurrently active dataset-expiration delete operations in all work order requests for the organization.",
+      "consumed": 11,
+      "quota": 75
     },
     {
       "name": "dailyConsumerDeleteIdentitiesQuota",
-      "description": "The consumed number of deleted identities in all workorder requests for the organization for today.",
-      "consumed": 0,
-      "quota": 1000000
+      "description": "The consumed number of deleted identities in all work order requests for the organization for today.",
+      "consumed": 314,
+      "quota": 700000
     },
     {
       "name": "monthlyConsumerDeleteIdentitiesQuota",
-      "description": "The consumed number of deleted identities in all workorder requests for the organization for this month.",
-      "consumed": 841,
-      "quota": 2000000
-    },
-    {
-      "name": "monthlyUpdatedFieldIdentitiesQuota",
-      "description": "The consumed number of updated identities in all workorder requests for the organization for this month.",
-      "consumed": 0,
-      "quota": 0
+      "description": "The consumed number of deleted identities in all work order requests for the organization this month.",
+      "consumed": 2764,
+      "quota": 12000000
     }
   ]
 }
@@ -95,4 +95,8 @@ Als u met succes reageert, worden de details van de levenscyclusquota van uw geg
 
 | Eigenschap | Beschrijving |
 | -------- | ------- |
-| `quotas` | Hiermee geeft u de quotumgegevens weer voor elk taaktype van de levenscyclus van de gegevens. Elk quotaobject bevat de volgende eigenschappen:<ul><li>`name`: Het taaktype van de gegevenslevenscyclus:<ul><li>`expirationDatasetQuota`: Verlopen gegevensset</li><li>`deleteIdentityWorkOrderDatasetQuota`: record verwijdert</li></ul></li><li>`description`: Een beschrijving van het taaktype van de gegevenslevenscyclus.</li><li>`consumed`: Het aantal taken van dit type wordt uitgevoerd in de huidige periode. De objectnaam geeft de contingentperiode aan.</li><li>`quota`: De toewijzing voor dit taaktype voor uw organisatie. Voor het verwijderen en bijwerken van records geeft het quotum het aantal banen weer dat voor elke maandelijkse periode kan worden uitgevoerd. Voor gegevenssetvervaldatums, vertegenwoordigt het quotum het aantal banen die op om het even welk bepaald ogenblik gelijktijdig actief kunnen zijn.</li></ul> |
+| `quotas` | Hiermee geeft u de quotumgegevens weer voor elk taaktype van de levenscyclus van de gegevens. Elk quotaobject bevat de volgende eigenschappen:<ul><li>`name`</li><li>`description`</li><li>`consumed`</li><li>`quota`</li></ul> |
+| `name` | De id voor het contingenttype. |
+| `description` | Een beschrijving van de grenzen van dit contingent. |
+| `consumed` | De hoeveelheid quota die momenteel wordt verbruikt. De verbruikte hoeveelheid stelt op de eerste van de maand bij 00 :00 GMT en 00 :00 GMT voor dagelijkse quota terug. |
+| `quota` | De maximale toewijzing van dit contingenttype voor uw organisatie. |
