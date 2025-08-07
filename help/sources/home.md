@@ -4,10 +4,10 @@ solution: Experience Platform
 title: Overzicht Source Connectors
 description: Adobe Experience Platform staat toe dat gegevens uit externe bronnen worden opgenomen en biedt u de mogelijkheid om inkomende gegevens te structureren, labelen en verbeteren met behulp van Experience Platform-services. U kunt gegevens invoeren uit verschillende bronnen, zoals Adobe-toepassingen, opslag in de cloud, databases en vele andere.
 exl-id: efdbed4d-5697-43ef-a47a-a8bcf0f13237
-source-git-commit: 7596a87309105897a2727faa8e22b06cdf5547c3
+source-git-commit: 79d614ddddde2ca1b982c66f4916d3255d6cffa4
 workflow-type: tm+mt
-source-wordcount: '1612'
-ht-degree: 0%
+source-wordcount: '1613'
+ht-degree: 1%
 
 ---
 
@@ -61,9 +61,9 @@ Experience Platform staat toe dat gegevens worden ingevoerd van andere Adobe-toe
 
 ### Geavanceerde bedrijfsbronnen {#advanced-enterprise-sources}
 
-De volgende bronnen zijn beschikbaar aan [ Adobe Real-Time Customer Data Platform Ultimate ](https://helpx.adobe.com/nl/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html) slechts klanten.
+De volgende bronnen zijn beschikbaar aan [ Adobe Real-Time Customer Data Platform Ultimate ](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html) slechts klanten.
 
-| Source | Categorie | Type ontsteking | Wolk |
+| Bron | Categorie | Type ontsteking | Wolk |
 | --- | --- | --- | --- |
 | [[!DNL Amazon Kinesis]](connectors/cloud-storage/kinesis.md) | Cloud-opslag | Streaming | Azure, AWS |
 | [[!DNL Amazon Redshift]](connectors/databases/redshift.md) | Database | Batch | Azure, AWS |
@@ -81,7 +81,7 @@ De volgende bronnen zijn beschikbaar aan [ Adobe Real-Time Customer Data Platfor
 
 U kunt de volgende bronnen gebruiken om advertentiegegevens in te voeren naar Experience Platform.
 
-| Source | Type ontsteking | Wolk |
+| Bron | Type ontsteking | Wolk |
 | --- | --- | --- |
 | [ Advertentie Google ](connectors/advertising/ads.md) | Batch | Azure |
 
@@ -91,7 +91,7 @@ U kunt de volgende bronnen gebruiken om advertentiegegevens in te voeren naar Ex
 
 U kunt de volgende bronnen gebruiken om analysegegevens in te voeren naar Experience Platform.
 
-| Source | Type ontsteking | Wolk |
+| Bron | Type ontsteking | Wolk |
 | --- | --- | --- |
 | [[!DNL Mixpanel]](connectors/analytics/mixpanel.md) | Batch | Azure |
 | [[!DNL Pendo]](connectors/analytics/pendo-webhook.md) | Streaming | Azure |
@@ -105,7 +105,7 @@ Opslagbronnen in de cloud kunnen uw eigen gegevens naar Experience Platform bren
 
 U kunt de volgende bronnen gebruiken om gegevens over cloudopslag in Experience Platform op te nemen.
 
-| Source | Type ontsteking | Wolk |
+| Bron | Type ontsteking | Wolk |
 | --- | --- | --- |
 | [[!DNL Azure Data Lake Storage Gen2]](connectors/cloud-storage/adls-gen2.md) | Batch | Azure |
 | [[!DNL Azure Blob]](connectors/cloud-storage/blob.md) | Batch | Azure |
@@ -124,7 +124,7 @@ U kunt de volgende bronnen gebruiken om gegevens over cloudopslag in Experience 
 
 U kunt de volgende bronnen gebruiken om toestemmings- en voorkeursgegevens in te voeren voor Experience Platform.
 
-| Source | Type ontsteking | Wolk |
+| Bron | Type ontsteking | Wolk |
 | --- | --- | --- |
 | [[!DNL Didomi]](../sources/connectors/consent-and-preferences/didomi.md) | Streaming | Azure |
 | [[!DNL OneTrust Integration]](connectors/consent-and-preferences/onetrust.md) | Batch | Azure |
@@ -137,7 +137,7 @@ De systemen van CRM verstrekken gegevens die klantenverhoudingen kunnen helpen b
 
 U kunt de volgende bronnen gebruiken om CRM-gegevens in te voeren naar Experience Platform.
 
-| Source | Type ontsteking | Wolk |
+| Bron | Type ontsteking | Wolk |
 | --- | --- | --- |
 | [[!DNL Microsoft Dynamics]](connectors/crm/ms-dynamics.md) | Batch | Azure |
 | [[!DNL Salesforce]](connectors/crm/salesforce.md) | Batch | Azure, AWS |
@@ -150,7 +150,7 @@ U kunt de volgende bronnen gebruiken om CRM-gegevens in te voeren naar Experienc
 
 U kunt de volgende bronnen gebruiken om succesgegevens van klanten aan Experience Platform toe te voegen.
 
-| Source | Type ontsteking | Wolk |
+| Bron | Type ontsteking | Wolk |
 | --- | --- | --- |
 | [[!DNL Salesforce Service Cloud]](connectors/customer-success/salesforce-service-cloud.md) | Batch | Azure |
 | [[!DNL ServiceNow]](connectors/customer-success/servicenow.md) | Batch | Azure |
@@ -164,7 +164,7 @@ Experience Platform biedt ondersteuning voor het opnemen van gegevens uit een da
 
 U kunt de volgende bronnen gebruiken om gegevens van uw database in te voeren naar Experience Platform.
 
-| Source | Type ontsteking | Wolk |
+| Bron | Type ontsteking | Wolk |
 | --- | --- | --- |
 | [[!DNL Apache Hive on Azure HDInsights]](connectors/databases/hive.md) | Batch | Azure |
 | [[!DNL Apache Spark on Azure HDInsights]](connectors/databases/spark.md) | Batch | Azure |
@@ -176,7 +176,7 @@ U kunt de volgende bronnen gebruiken om gegevens van uw database in te voeren na
 | [[!DNL MariaDB]](connectors/databases/mariadb.md) | Batch | Azure |
 | [[!DNL Microsoft SQL Server]](connectors/databases/sql-server.md) | Batch | Azure |
 | [[!DNL MySQL]](connectors/databases/mysql.md) | Batch | Azure, AWS |
-| [[!DNL Oracle]](connectors/databases/oracle.md) | Batch | Azure |
+| [[!DNL Oracle]](connectors/databases/oracle.md) | Batch | Azure, AWS |
 | [[!DNL PostgreSQL]](connectors/databases/postgres.md) | Batch | Azure, AWS |
 | [[!DNL Teradata Vantage]](connectors/databases/teradata-vantage.md) | Batch | Azure |
 
@@ -186,7 +186,7 @@ U kunt de volgende bronnen gebruiken om gegevens van uw database in te voeren na
 
 U kunt de volgende bronnen gebruiken om gegevens en identiteitspartnergegevens in te voeren aan Experience Platform.
 
-| Source | Type ontsteking | Wolk |
+| Bron | Type ontsteking | Wolk |
 | --- | --- | --- |
 | [[!DNL Acxiom Data Ingestion]](connectors/data-partners/acxiom-data-ingestion.md) | Batch | Azure |
 | [[!DNL Acxiom Prospecting Data Import]](connectors/data-partners/acxiom-prospecting-data-import.md) | Batch | Azure |
@@ -201,7 +201,7 @@ U kunt de volgende bronnen gebruiken om gegevens en identiteitspartnergegevens i
 
 U kunt de volgende bronnen gebruiken om e-commercegegevens in te voeren naar Experience Platform.
 
-| Source | Type ontsteking | Wolk |
+| Bron | Type ontsteking | Wolk |
 | --- | --- | --- |
 | [[!DNL SAP Commerce]](connectors/ecommerce/sap-commerce.md) | Batch | Azure |
 | [[!DNL Shopify]](connectors/ecommerce/shopify.md) | Batch | Azure |
@@ -213,7 +213,7 @@ U kunt de volgende bronnen gebruiken om e-commercegegevens in te voeren naar Exp
 
 U kunt de volgende bronnen gebruiken om gegevens van uw lokale systeem aan Experience Platform in te voeren.
 
-| Source | Type ontsteking | Wolk |
+| Bron | Type ontsteking | Wolk |
 | --- | --- | --- |
 | [ Lokale dossier uploadt ](connectors/local-system/local-file-upload.md) | Batch | Azure |
 
@@ -223,7 +223,7 @@ U kunt de volgende bronnen gebruiken om gegevens van uw lokale systeem aan Exper
 
 U kunt de volgende bronnen gebruiken om gegevens over marketingautomatisering in te voeren naar Experience Platform.
 
-| Source | Type ontsteking | Wolk |
+| Bron | Type ontsteking | Wolk |
 | --- | --- | --- |
 | [[!DNL Braze]](connectors/marketing-automation/braze.md) | Streaming | Azure |
 | [[!DNL Chatlio]](connectors/marketing-automation/chatlio-webhook.md) | Streaming | Azure |
@@ -241,7 +241,7 @@ U kunt de volgende bronnen gebruiken om gegevens over marketingautomatisering in
 
 U kunt de volgende bronnen gebruiken om betalingsgegevens in te voeren naar Experience Platform.
 
-| Source | Type ontsteking | Wolk |
+| Bron | Type ontsteking | Wolk |
 | --- | --- | --- |
 | [[!DNL Square]](connectors/payments/square.md) | Batch | Azure |
 | [[!DNL Stripe]](connectors/payments/stripe.md) | Batch | Azure |
@@ -252,7 +252,7 @@ U kunt de volgende bronnen gebruiken om betalingsgegevens in te voeren naar Expe
 
 U kunt de volgende bronnen gebruiken om gegevens te streamen naar Experience Platform.
 
-| Source | Type ontsteking | Ondersteuning voor cloud |
+| Bron | Type ontsteking | Ondersteuning voor cloud |
 | --- | --- | --- |
 | [[!DNL HTTP API]](connectors/streaming/http.md) | Streaming | Azure, AWS |
 
@@ -262,7 +262,7 @@ U kunt de volgende bronnen gebruiken om gegevens te streamen naar Experience Pla
 
 U kunt de volgende bronnen gebruiken om protocolgegevens in te voeren naar Experience Platform.
 
-| Source | Type ontsteking | Ondersteuning voor cloud |
+| Bron | Type ontsteking | Ondersteuning voor cloud |
 | --- | --- | --- |
 | [[!DNL Generic OData]](connectors/protocols/odata.md) | Batch | Azure |
 | [[!DNL Generic REST API]](connectors/protocols/generic-rest.md) | Batch | Azure |

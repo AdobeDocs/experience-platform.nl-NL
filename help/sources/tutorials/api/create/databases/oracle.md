@@ -1,48 +1,113 @@
 ---
-keywords: Experience Platform;home;populaire onderwerpen;Oracle;orakel
-solution: Experience Platform
-title: Een Oracle Base Connection maken met de Flow Service API
-type: Tutorial
-description: Leer hoe u Oracle met Experience Platform verbindt via de Flow Service API.
+title: Oracle DB verbinden met Experience Platform met behulp van de Flow Service API
+description: Leer hoe u Oracle DB met API's kunt verbinden met Experience Platform.
 exl-id: b1cea714-93ff-425f-8e12-6061da97d094
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: aa5496be968ee6f117649a6fff2c9e83a4ed7681
 workflow-type: tm+mt
-source-wordcount: '424'
+source-wordcount: '556'
 ht-degree: 0%
 
 ---
 
-# Een [!DNL Oracle] basisverbinding maken met de [!DNL Flow Service] API
+# Verbinding maken met Experience Platform via de [!DNL Oracle DB] API[!DNL Flow Service]
 
-Een basisverbinding vertegenwoordigt de geverifieerde verbinding tussen een bron en Adobe Experience Platform.
-
-Dit leerprogramma begeleidt u door de stappen om een basisverbinding voor [!DNL Oracle] tot stand te brengen gebruikend [[!DNL Flow Service]  API ](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+Lees deze gids om te leren hoe te om uw [!DNL Oracle DB] rekening met Adobe Experience Platform te verbinden gebruikend [[!DNL Flow Service]  API ](https://developer.adobe.com/experience-platform-apis/references/flow-service/).
 
 ## Aan de slag
 
-Deze handleiding vereist een goed begrip van de volgende onderdelen van Adobe Experience Platform:
+Deze handleiding vereist een goed begrip van de volgende onderdelen van Experience Platform:
 
-* [ Bronnen ](../../../../home.md): [!DNL Experience Platform] staat gegevens toe om van diverse bronnen worden opgenomen terwijl het voorzien van u van de capaciteit om, inkomende gegevens te structureren te etiketteren en te verbeteren gebruikend [!DNL Experience Platform] diensten.
-* [ Sandboxen ](../../../../../sandboxes/home.md): [!DNL Experience Platform] verstrekt virtuele zandbakken die één enkele [!DNL Experience Platform] instantie in afzonderlijke virtuele milieu&#39;s verdelen helpen digitale ervaringstoepassingen ontwikkelen en ontwikkelen.
+* [ Bronnen ](../../../../home.md): Experience Platform staat gegevens toe om van diverse bronnen worden opgenomen terwijl het voorzien van u van de capaciteit om, inkomende gegevens te structureren te etiketteren en te verbeteren gebruikend de diensten van Experience Platform.
+* [ Sandboxes ](../../../../../sandboxes/home.md): Experience Platform verstrekt virtuele zandbakken die één enkele instantie van Experience Platform in afzonderlijke virtuele milieu&#39;s verdelen helpen digitale ervaringstoepassingen ontwikkelen en ontwikkelen.
 
 In de volgende secties vindt u aanvullende informatie die u moet weten voordat u verbinding kunt maken met [!DNL Oracle] via de [!DNL Flow Service] API.
-
-| Credentials | Beschrijving |
-| ---------- | ----------- |
-| `connectionString` | De verbindingstekenreeks waarmee verbinding wordt gemaakt met [!DNL Oracle] . Het patroon van de [!DNL Oracle] verbindingstekenreeks is: `Host={HOST};Port={PORT};Sid={SID};User Id={USERNAME};Password={PASSWORD}` . |
-| `connectionSpec.id` | De verbindingsspecificatie keert de schakelaareigenschappen van een bron, met inbegrip van authentificatiespecificaties met betrekking tot het creëren van de basis en bronverbindingen terug. De verbindingsspecificatie-id voor [!DNL Oracle] is `d6b52d86-f0f8-475f-89d4-ce54c8527328` . |
-
-Voor meer informatie over begonnen worden verwijs naar dit [[!DNL Oracle]  document ](https://docs.oracle.com/database/121/ODPNT/featConnecting.htm#ODPNT199).
 
 ### Experience Platform API&#39;s gebruiken
 
 Voor informatie over hoe te om vraag aan Experience Platform APIs met succes te maken, zie de gids op [ begonnen wordt met Experience Platform APIs ](../../../../../landing/api-guide.md).
 
-## Een basisverbinding maken
+### Vereiste referenties verzamelen
 
-Een basisverbinding behoudt informatie tussen uw bron en Experience Platform, met inbegrip van de verificatiereferenties van uw bron, de huidige status van de verbinding, en uw unieke identiteitskaart van de basisverbinding. Met de ID van de basisverbinding kunt u bestanden verkennen en door bestanden navigeren vanuit uw bron en kunt u de specifieke items identificeren die u wilt opnemen, inclusief informatie over hun gegevenstypen en indelingen.
+Lees het [[!DNL Oracle DB]  overzicht ](../../../../connectors/databases/oracle.md#prerequisites) voor informatie over authentificatie.
 
-Als u een basis-verbindings-id wilt maken, vraagt u een POST-aanvraag naar het `/connections` -eindpunt en geeft u de [!DNL Oracle] -verificatiegegevens op als onderdeel van de aanvraagparameters.
+## Verbind [!DNL Oracle DB] met Experience Platform op Azure {#azure}
+
+Lees de onderstaande stappen voor informatie over hoe u uw [!DNL Oracle DB] -account kunt verbinden met Experience Platform on Azure.
+
+### Een basisverbinding maken voor [!DNL Oracle DB] op Experience Platform in Azure {#azure-base}
+
+Een basisverbinding koppelt uw bron aan Experience Platform, die authentificatiedetails, verbindingsstatus, en een unieke identiteitskaart opslaat. Met deze id kunt u door bronbestanden bladeren en specifieke items identificeren die u wilt invoeren, inclusief de gegevenstypen en indelingen.
+
+**API formaat**
+
+```https
+POST /connections
+```
+
+Als u een basis-verbindings-id wilt maken, vraagt u een POST-aanvraag naar het `/connections` -eindpunt en geeft u de verificatiegegevens van [!DNL Oracle DB] op als onderdeel van de aanvraagparameters.
+
+**Verzoek**
+
+Met de volgende aanvraag wordt een basisverbinding voor [!DNL Oracle DB] gemaakt via verificatie van verbindingstekenreeksen.
+
++++verzoek weergeven
+
+
+```shell
+curl -X POST \
+  'https://platform.adobe.io/data/foundation/flowservice/connections' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Content-Type: application/json' \
+  -d '{
+    "name": "Oracle DB base connection",
+    "description": "A base connection to connect Oracle DB to Experience Platform on Azure",
+    "auth": {
+      "specName": "ConnectionString",
+      "params": {
+        "connectionString": "Host={HOST};Port={PORT};Sid={SID};UserId={USERNAME};Password={PASSWORD}"
+      }
+    },
+    "connectionSpec": {
+      "id": "d6b52d86-f0f8-475f-89d4-ce54c8527328",
+      "version": "1.0"
+    }
+  }'
+```
+
+| Parameter | Beschrijving |
+| --------- | ----------- |
+| `auth.params.connectionString` | De verbindingstekenreeks waarmee verbinding wordt gemaakt met [!DNL Oracle DB] . Het patroon van de [!DNL Oracle DB] verbindingstekenreeks is: `Host={HOST};Port={PORT};Sid={SID};User Id={USERNAME};Password={PASSWORD}` . |
+| `connectionSpec.id` | The [!DNL Oracle] connection specification ID: `d6b52d86-f0f8-475f-89d4-ce54c8527328` . |
+
++++
+
+**Reactie**
+
+Een succesvolle reactie keert details van de pas gecreëerde basisverbinding, met inbegrip van zijn uniek herkenningsteken (`id`) terug.
+
++++reactie weergeven
+
+```json
+{
+    "id": "f088e4f2-2464-480c-88e4-f22464b80c90",
+    "etag": "\"43011faa-0000-0200-0000-5ea740cd0000\""
+}
+```
+
++++
+
+## Verbinden [!DNL Oracle DB] met Experience Platform op Amazon Web Services {#aws}
+
+>[!AVAILABILITY]
+>
+>Deze sectie is van toepassing op implementaties van Experience Platform die op Amazon Web Services (AWS) worden uitgevoerd. Experience Platform die op AWS wordt uitgevoerd, is momenteel beschikbaar voor een beperkt aantal klanten. Meer over de gesteunde infrastructuur van Experience Platform leren, zie het [ multi-wolkenoverzicht van Experience Platform ](../../../../../landing/multi-cloud.md).
+
+Lees de onderstaande stappen voor informatie over hoe u uw [!DNL Oracle DB] -account kunt verbinden met Experience Platform op AWS.
+
+### Een basisverbinding maken voor [!DNL Oracle DB] op Experience Platform op AWS {#aws-base}
 
 **API formaat**
 
@@ -52,51 +117,69 @@ POST /connections
 
 **Verzoek**
 
-Met de volgende aanvraag wordt een basisverbinding voor [!DNL Oracle] gemaakt:
+Met de volgende aanvraag wordt een basisverbinding voor [!DNL Oracle DB] gemaakt om verbinding te maken met Experience Platform op AWS.
+
++++verzoek weergeven
 
 ```shell
 curl -X POST \
-    'https://platform.adobe.io/data/foundation/flowservice/connections' \
-    -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-    -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {ORG_ID}' \
-    -H 'x-sandbox-name: {SANDBOX_NAME}' \
-    -H 'Content-Type: application/json' \
-    -d '{
-        "name": "Oracle connection",
-        "description": "A connection for Oracle",
-        "auth": {
-            "specName": "ConnectionString",
-            "params": {
-                    "connectionString": "Host={HOST};Port={PORT};Sid={SID};UserId={USERNAME};Password={PASSWORD}"
-                }
-        },
-        "connectionSpec": {
-            "id": "d6b52d86-f0f8-475f-89d4-ce54c8527328",
-            "version": "1.0"
-        }
-    }'
+  'https://platform.adobe.io/data/foundation/flowservice/connections' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Content-Type: application/json' \
+  -d '{
+      "name": "Oracle DB on Experience Platform AWS",
+      "description": "Oracle DB on Experience Platform AWS",
+      "auth": {
+          "specName": "Basic Authentication",
+          "params": {
+              "server": "diy.us-dawkins-1.oraclecloud.com",
+              "port": "1521",
+              "database": "mcmg_profits_diy.oraclecloud.com",
+              "username": "Admin",
+              "password": "xxxx",
+              "schema": "ADMIN",
+              "sslMode": "true"
+          }
+      },
+      "connectionSpec": {
+          "id": "26d738e0-8963-47ea-aadf-c60de735468a",
+          "version": "1.0"
+      }
+  }'
 ```
 
-| Parameter | Beschrijving |
-| --------- | ----------- |
-| `auth.params.connectionString` | De verbindingstekenreeks die wordt gebruikt om verbinding te maken met uw [!DNL Oracle] -database. Het patroon van de [!DNL Oracle] verbindingstekenreeks is: `Host={HOST};Port={PORT};Sid={SID};User Id={USERNAME};Password={PASSWORD}` . |
-| `connectionSpec.id` | The [!DNL Oracle] connection specification ID: `d6b52d86-f0f8-475f-89d4-ce54c8527328` . |
+| Eigenschap | Beschrijving |
+| --- | --- |
+| `auth.params.server` | Het IP-adres of de hostnaam van de [!DNL Oracle DB] -server. |
+| `auth.params.port` | Het poortnummer van de [!DNL Oracle DB] -server. |
+| `auth.params.database` | De naam van de instantie [!DNL Oracle DB] waarmee u verbinding maakt. |
+| `auth.params.username` | De gebruikersaccount die aan uw [!DNL Oracle DB] -instantie is gekoppeld. |
+| `auth.prams.password` | Het wachtwoord dat overeenkomt met uw [!DNL Oracle DB] -gebruikersaccount. |
+| `auth.params.schema` | Het schema dat uw databaseobjecten bevat. |
+| `auth.params.sslMode` | Een booleaanse waarde die aangeeft of SSL-maatregelen worden afgedwongen of niet. |
+| `connectionSpec.id` | De verbindingsspecificatie-id die overeenkomt met de bron [!DNL Oracle DB] . Deze ID-waarde is vast als: `d6b52d86-f0f8-475f-89d4-ce54c8527328.` |
+
++++
 
 **Reactie**
 
-Een succesvolle reactie keert details van de pas gecreëerde verbinding, met inbegrip van zijn uniek herkenningsteken (`id`) terug. Deze id is vereist om uw gegevens te kunnen bekijken in de volgende zelfstudie.
+Een succesvolle reactie keert details van de pas gecreëerde basisverbinding, met inbegrip van zijn uniek herkenningsteken (`id`) en het overeenkomstige terug. U kunt identiteitskaart gebruiken om [ bronverbinding ](../../collect/database-nosql.md#create-a-source-connection) tot stand te brengen en `etag` om [ uw rekening ](../../update.md) bij te werken.
+
++++reactie weergeven
 
 ```json
 {
-    "id": "f088e4f2-2464-480c-88e4-f22464b80c90",
-    "etag": "\"43011faa-0000-0200-0000-5ea740cd0000\""
+    "id": "f847950c-1c12-4568-a550-d5312b16fdb8",
+    "etag": "\"0c0099f4-0000-0200-0000-67da91710000\""
 }
 ```
 
-## Volgende stappen
++++
 
-Aan de hand van deze zelfstudie hebt u een [!DNL Oracle] basisverbinding gemaakt met de [!DNL Flow Service] API. U kunt deze basis verbindings-id in de volgende zelfstudies gebruiken:
 
-* [Onderzoek de structuur en de inhoud van uw gegevenslijsten gebruikend  [!DNL Flow Service]  API](../../explore/tabular.md)
-* [Creeer een dataflow om gegevensbestandgegevens aan Experience Platform te brengen gebruikend  [!DNL Flow Service]  API](../../collect/database-nosql.md)
+## Een gegevensstroom maken voor [!DNL Oracle DB] -gegevens
+
+Nu u met succes uw [!DNL Oracle DB] rekening hebt verbonden, kunt u [ nu tot een dataflow leiden en gegevens van uw gegevensbestand in Experience Platform ](../../collect/database-nosql.md) opnemen.

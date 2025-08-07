@@ -1,35 +1,65 @@
 ---
-keywords: Experience Platform;home;populaire onderwerpen;Oracle;orakel
-solution: Experience Platform
-title: Overzicht Oracle Source Connector
+title: Overzicht Oracle DB Source Connector
 description: Leer hoe u Oracle met Adobe Experience Platform kunt verbinden via API's of de gebruikersinterface.
+last-substantial-update: 2025-08-06T00:00:00Z
 exl-id: be422cf8-fb24-48c7-8369-34f0f2ec95fc
-source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
+source-git-commit: aa5496be968ee6f117649a6fff2c9e83a4ed7681
 workflow-type: tm+mt
-source-wordcount: '192'
-ht-degree: 0%
+source-wordcount: '477'
+ht-degree: 1%
 
 ---
 
-# [!DNL Oracle] -connector
+# [!DNL Oracle DB]
 
-Adobe Experience Platform biedt native connectiviteit voor databaseproviders zoals [!DNL Microsoft] , MySQL en [!DNL Azure] . U kunt uw gegevens van deze systemen overbrengen naar [!DNL Experience Platform] .
+[!DNL Oracle DB] is een krachtig relationeel databasebeheersysteem dat is ontwikkeld door [!DNL Oracle Corporation] . Met [!DNL Oracle DB] kunt u grote volumes gestructureerde gegevens efficiënt en veilig opslaan, beheren en ophalen.
 
-Verschillende soorten derdegegevensbestanden worden gesteund, met inbegrip van relationele, NoSQL, of gegevenspakhuizen. Ondersteuning voor databaseproviders is inclusief [!DNL Oracle] .
+Gebruik de [!DNL Oracle DB] -bron in de Adobe Experience Platform-broncatalogus om uw database te verbinden en gegevens in te voeren in Experience Platform.
 
-## IP adres lijst van gewenste personen
+## Vereisten {#prerequisites}
 
-Een lijst van IP adressen moet aan een lijst van gewenste personen worden toegevoegd alvorens met bronschakelaars te werken. Het niet toevoegen van uw regio-specifieke IP adressen aan uw lijst van gewenste personen kan tot fouten of niet-prestaties leiden wanneer het gebruiken van bronnen. Zie de [&#128279;](../../ip-address-allow-list.md) pagina van de lijst van gewenste personen van het 0&rbrace; IP adres &lbrace;voor meer informatie.
+Lees de volgende secties om de vereiste instellingen te voltooien voordat u uw [!DNL Oracle DB] -account aansluit op Experience Platform.
 
-In de onderstaande documentatie vindt u informatie over het tot stand brengen van een verbinding tussen [!DNL Oracle] en [!DNL Experience Platform] via API&#39;s of de gebruikersinterface:
+### IP adres lijst van gewenste personen
+
+U moet gebied-specifieke IP adressen aan uw lijst van gewenste personen toevoegen alvorens uw bronnen aan Experience Platform op of Azure of Amazon Web Services (AWS) aan te sluiten. Voor meer informatie, lees de gids op [ voegend op lijst van gewenste personen IP adressen om met Experience Platform op Azure en AWS ](../../ip-address-allow-list.md) voor meer informatie te verbinden.
+
+### Verifiëren voor Experience Platform in Azure {#azure}
+
+Geef een verbindingstekenreeks op om uw [!DNL Oracle DB] -account te verifiëren en aan te sluiten op Experience Platform on Azure.
+
+| Credentials | Beschrijving |
+| --- | --- |
+| Verbindingstekenreeks | Een verbindingstekenreeks is een tekenreeks die wordt gebruikt door toepassingen om verbinding te maken met een database. Het patroon van de [!DNL Oracle DB] verbindingstekenreeks is: `Host={HOST};Port={PORT};Sid={SID};User Id={USERNAME};Password={PASSWORD}` . |
+| Verbinding, specificatie-id | De verbindingsSPC identiteitskaart keert de schakelaareigenschappen van een bron, met inbegrip van authentificatiespecs op het creëren van de basis en bronverbindingen terug. De verbindingsspecificatie-id voor [!DNL Oracle] is `d6b52d86-f0f8-475f-89d4-ce54c8527328` . **Nota**: Deze referentie wordt slechts vereist wanneer het verbinden door [!DNL Flow Service] API. |
+
+### Verifiëren voor Experience Platform op Amazon Web Services {#aws}
+
+>[!AVAILABILITY]
+>
+>Deze sectie is van toepassing op implementaties van Experience Platform die op Amazon Web Services (AWS) worden uitgevoerd. Experience Platform die op AWS wordt uitgevoerd, is momenteel beschikbaar voor een beperkt aantal klanten. Meer over de gesteunde infrastructuur van Experience Platform leren, zie het [ multi-wolkenoverzicht van Experience Platform ](../../../landing/multi-cloud.md).
+
+Geef waarden op voor de volgende referenties om uw [!DNL Oracle DB] -account te verifiëren en aan te sluiten op Experience Platform op AWS.
+
+| Credentials | Beschrijving |
+| --- | --- |
+| Server | Het IP-adres of hostmodel van de [!DNL Oracle DB] -server. |
+| Poort | Het poortnummer van de databaseserver. Het standaardpoortnummer is `1521` . |
+| Gebruikersnaam | Het [!DNL Oracle DB] -gebruikersaccount dat wordt gebruikt voor verificatie en toegang tot de database. |
+| Wachtwoord | De geheime sleutel verbonden aan uw gebruikersbenaming, die voor authentificatie wordt gebruikt. |
+| Database | De specifieke [!DNL Oracle] database-instantie waarmee u verbinding wilt maken. |
+| Schema | De container voor databaseobjecten, zoals tabellen, weergaven of procedures. |
+| SSL-modus | Een booleaanse waarde die bepaalt of SSL wordt afgedwongen of niet. Deze configuratie is afhankelijk van uw serverondersteuning en is standaard ingesteld op `false` . |
+| Verbinding, specificatie-id | De verbindingsSPC identiteitskaart keert de schakelaareigenschappen van een bron, met inbegrip van authentificatiespecs op het creëren van de basis en bronverbindingen terug. De verbindingsspecificatie-id voor [!DNL Oracle] is `d6b52d86-f0f8-475f-89d4-ce54c8527328` . **Nota**: Deze referentie wordt slechts vereist wanneer het verbinden door [!DNL Flow Service] API. |
+
 
 ## Verbind [!DNL Oracle] met [!DNL Experience Platform] gebruikend APIs
 
-- [Een Oracle-basisverbinding maken met de Flow Service API](../../tutorials/api/create/databases/oracle.md)
+- [Connect Oracle DB met behulp van de Flow Service API](../../tutorials/api/create/databases/oracle.md)
 - [Gegevenstabellen verkennen met de Flow Service API](../../tutorials/api/explore/tabular.md)
 - [Een gegevensstroom maken voor een databasebron met behulp van de Flow Service API](../../tutorials/api/collect/database-nosql.md)
 
 ## Verbind [!DNL Oracle] met [!DNL Experience Platform] gebruikend UI
 
-- [Een Oracle-bronverbinding maken in de gebruikersinterface](../../tutorials/ui/create/databases/oracle.md)
+- [Verbind Oracle DB gebruikend de werkruimte van de UI van Experience Platform.](../../tutorials/ui/create/databases/oracle.md)
 - [Een gegevensstroom maken voor een databasebronverbinding in de gebruikersinterface](../../tutorials/ui/dataflow/databases.md)
