@@ -15,8 +15,8 @@ ht-degree: 90%
 >
 >Raadpleeg de volgende documentatie voor aanvullende informatie voor andere Adobe Experience Platform-toepassingen:
 >
->- [Adobe Journey Optimizer](https://experienceleague.adobe.com/nl/docs/journey-optimizer/using/whats-new/release-notes)
->- [Adobe Journey Optimizer B2B](https://experienceleague.adobe.com/nl/docs/journey-optimizer-b2b/user/release-notes)
+>- [Adobe Journey Optimizer](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/whats-new/release-notes)
+>- [Adobe Journey Optimizer B2B](https://experienceleague.adobe.com/en/docs/journey-optimizer-b2b/user/release-notes)
 >- [Customer Journey Analytics](https://experienceleague.adobe.com/nl/docs/analytics-platform/using/releases/pre-release-notes)
 >- [Samenstelling van Federated-doelgroep](https://experienceleague.adobe.com/nl/docs/federated-audience-composition/using/e-release-notes)
 >- [Real-Time CDP Collaboration](https://experienceleague.adobe.com/nl/docs/real-time-cdp-collaboration/using/latest)
@@ -135,7 +135,7 @@ Experience Platform biedt een RESTful-API en een interactieve gebruikersinterfac
 
 | Bron | Beschrijving |
 | --- | --- |
-| [!BADGE &#x200B; Beta &#x200B;]{type=Informative} Steun voor [!DNL Didomi] (het stromen SDK) | Gebruik de [!DNL Didomi]-bron om gegevens over toestemming en voorkeurenbeheer toe te voegen uit [!DNL Didomi], ter ondersteuning van de naleving van privacyregels en op toestemming gebaseerde marketingstrategieën. Raadpleeg het [[!DNL Didomi] bronoverzicht](../../sources/connectors/consent-and-preferences/didomi.md) voor informatie over hoe u aan de slag kunt gaan. Raadpleeg de [[!DNL Didomi] handleiding bronverbinding](../../sources/tutorials/ui/create/consent-and-preferences/didomi.md) voor stappen over het maken van een bronverbinding. |
+| [!BADGE  Beta ]{type=Informative} Steun voor [!DNL Didomi] (het stromen SDK) | Gebruik de [!DNL Didomi]-bron om gegevens over toestemming en voorkeurenbeheer toe te voegen uit [!DNL Didomi], ter ondersteuning van de naleving van privacyregels en op toestemming gebaseerde marketingstrategieën. Raadpleeg het [[!DNL Didomi] bronoverzicht](../../sources/connectors/consent-and-preferences/didomi.md) voor informatie over hoe u aan de slag kunt gaan. Raadpleeg de [[!DNL Didomi] handleiding bronverbinding](../../sources/tutorials/ui/create/consent-and-preferences/didomi.md) voor stappen over het maken van een bronverbinding. |
 
 **Nieuwe of bijgewerkte functionaliteit**
 
