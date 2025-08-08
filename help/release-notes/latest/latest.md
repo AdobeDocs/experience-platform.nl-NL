@@ -135,7 +135,7 @@ Experience Platform biedt een RESTful-API en een interactieve gebruikersinterfac
 
 | Bron | Beschrijving |
 | --- | --- |
-| [!BADGE  Beta ]{type=Informative} Steun voor [!DNL Didomi] (het stromen SDK) | Gebruik de [!DNL Didomi]-bron om gegevens over toestemming en voorkeurenbeheer toe te voegen uit [!DNL Didomi], ter ondersteuning van de naleving van privacyregels en op toestemming gebaseerde marketingstrategieën. Raadpleeg het [[!DNL Didomi] bronoverzicht](../../sources/connectors/consent-and-preferences/didomi.md) voor informatie over hoe u aan de slag kunt gaan. Raadpleeg de [[!DNL Didomi] handleiding bronverbinding](../../sources/tutorials/ui/create/consent-and-preferences/didomi.md) voor stappen over het maken van een bronverbinding. |
+| [!BADGE &#x200B; Beta &#x200B;]{type=Informative} Steun voor [!DNL Didomi] (het stromen SDK) | Gebruik de [!DNL Didomi]-bron om gegevens over toestemming en voorkeurenbeheer toe te voegen uit [!DNL Didomi], ter ondersteuning van de naleving van privacyregels en op toestemming gebaseerde marketingstrategieën. Raadpleeg het [[!DNL Didomi] bronoverzicht](../../sources/connectors/consent-and-preferences/didomi.md) voor informatie over hoe u aan de slag kunt gaan. Raadpleeg de [[!DNL Didomi] handleiding bronverbinding](../../sources/tutorials/ui/create/consent-and-preferences/didomi.md) voor stappen over het maken van een bronverbinding. |
 
 **Nieuwe of bijgewerkte functionaliteit**
 
