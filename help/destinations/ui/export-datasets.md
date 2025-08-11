@@ -3,9 +3,9 @@ title: Datasets exporteren naar cloudopslagdoelen
 type: Tutorial
 description: Leer hoe u gegevenssets van Adobe Experience Platform naar de gewenste locatie voor cloudopslag exporteert.
 exl-id: e89652d2-a003-49fc-b2a5-5004d149b2f4
-source-git-commit: b423e51e3e048a5dd7c2c15f80c8c1fcf5c2657b
+source-git-commit: 69a1ae08fefebb7fed54564ed06f42af523d2903
 workflow-type: tm+mt
-source-wordcount: '2657'
+source-wordcount: '2656'
 ht-degree: 0%
 
 ---
@@ -18,7 +18,7 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
->**het punt van de Actie**: De [ versie van September 2024 van Experience Platform ](/help/release-notes/latest/latest.md#destinations) introduceerde de optie om een `endTime` datum voor de gegevens van de uitvoerdataset te plaatsen. Adobe heeft ook een standaardeinddatum van 1 september 2025 voor alle gegevens van de datasetuitvoer gecreeerd *vóór de versie van september 2024* geïntroduceerd.
+>**het punt van de Actie**: De [ versie van September 2024 van Experience Platform ](/help/release-notes/latest/latest.md#destinations) introduceerde de optie om een `endTime` datum voor de gegevens van de uitvoerdataset te plaatsen. Adobe heeft ook een standaardeinddatum van 1 september 2025 voor alle gegevens van de datasetuitvoer gecreeerd *vóór 1 November, 2024* geïntroduceerd.
 >
 >Voor om het even welke dataflows, moet u de einddatum in dataflow manueel bijwerken vóór de einddatum, anders zal uw uitvoer op die datum ophouden. Gebruik de gebruikersinterface van Experience Platform om te bekijken welke dataflows op 1 september 2025 worden ingesteld.
 >
@@ -50,16 +50,16 @@ Gebruik de onderstaande tabel om te begrijpen welke gegevenstypen u kunt exporte
   </tr>
   <tr>
     <td>Ultimate</td>
-    <td><ul><li>De datasets van de Gebeurtenis van het profiel en van de Ervaring die in de UI van Experience Platform na het opnemen van of het verzamelen van gegevens door Bronnen, Web SDK, Mobiele SDK, de Verbinding van Gegevens van Analytics, en Audience Manager worden gecreeerd.</li><li> <a href="https://experienceleague.adobe.com/docs/experience-platform/dashboards/query.html?lang=nl-NL#profile-attribute-datasets"> systeem-geproduceerde dataset van de Momentopname van het Profiel </a>.</li></td>
+    <td><ul><li>De datasets van de Gebeurtenis van het profiel en van de Ervaring die in de UI van Experience Platform na het opnemen van of het verzamelen van gegevens door Bronnen, Web SDK, Mobiele SDK, de Verbinding van Gegevens van Analytics, en Audience Manager worden gecreeerd.</li><li> <a href="https://experienceleague.adobe.com/docs/experience-platform/dashboards/query.html#profile-attribute-datasets"> systeem-geproduceerde dataset van de Momentopname van het Profiel </a>.</li></td>
   </tr>
   <tr>
     <td rowspan="2">Adobe Journey Optimizer</td>
     <td>Prime</td>
-    <td>Raadpleeg de <a href="https://experienceleague.adobe.com/docs/journey-optimizer/using/data-management/datasets/export-datasets.html?lang=nl-NL#datasets"> documentatie van Adobe Journey Optimizer </a> .</td>
+    <td>Raadpleeg de <a href="https://experienceleague.adobe.com/docs/journey-optimizer/using/data-management/datasets/export-datasets.html#datasets"> documentatie van Adobe Journey Optimizer </a> .</td>
   </tr>
   <tr>
     <td>Ultimate</td>
-    <td>Raadpleeg de <a href="https://experienceleague.adobe.com/docs/journey-optimizer/using/data-management/datasets/export-datasets.html?lang=nl-NL#datasets"> documentatie van Adobe Journey Optimizer </a> .</td>
+    <td>Raadpleeg de <a href="https://experienceleague.adobe.com/docs/journey-optimizer/using/data-management/datasets/export-datasets.html#datasets"> documentatie van Adobe Journey Optimizer </a> .</td>
   </tr>
   <tr>
     <td>Customer Journey Analytics</td>
@@ -78,7 +78,7 @@ Gebruik de onderstaande tabel om te begrijpen welke gegevenstypen u kunt exporte
 
 Bekijk de onderstaande video voor een end-to-end uitleg van de workflow die op deze pagina wordt beschreven, de voordelen van het gebruik van de functie voor het exporteren van gegevenssets en enkele gebruiksscenario&#39;s.
 
->[!VIDEO](https://video.tv.adobe.com/v/3448824?captions=dut)
+>[!VIDEO](https://video.tv.adobe.com/v/3424392/)
 
 ## Ondersteunde doelen {#supported-destinations}
 
@@ -280,7 +280,7 @@ Om datasets uit een bestaande gegevensstroom te verwijderen, volg de stappen hie
 
 ## Uitvoerrechten gegevensset {#licensing-entitlement}
 
-Raadpleeg de productbeschrijvingsdocumenten om te begrijpen hoeveel gegevens u per jaar voor elke Experience Platform-toepassing mag exporteren. Bijvoorbeeld, kunt u de Beschrijving van het Product van Real-Time CDP [ hier ](https://helpx.adobe.com/nl/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html) bekijken.
+Raadpleeg de productbeschrijvingsdocumenten om te begrijpen hoeveel gegevens u per jaar voor elke Experience Platform-toepassing mag exporteren. Bijvoorbeeld, kunt u de Beschrijving van het Product van Real-Time CDP [ hier ](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html) bekijken.
 
 De gegevensuitvoerrechten voor verschillende aanvragen zijn niet additief. Dit betekent bijvoorbeeld dat als u Real-Time CDP Ultimate en Adobe Journey Optimizer Ultimate koopt, de uitvoerrechten voor profielen de hoogste van de twee rechten zijn, zoals beschreven in de productbeschrijvingen. Uw volumeregelingen worden berekend door het totale aantal gelicentieerde profielen te nemen en te vermenigvuldigen met 500 kB voor Real-Time CDP Prime of 700 kB voor Real-Time CDP Ultimate om te bepalen hoeveel hoeveelheid gegevens u hebt.
 
