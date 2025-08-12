@@ -3,16 +3,38 @@ keywords: reclame; banden;
 title: Microsoft Bing-verbinding
 description: Met de bestemming van de Microsoft Bing-verbinding kunt u gerichte digitale campagnes opnieuw richten en publieksgericht voeren op het gehele Microsoft Advertising-netwerk, waaronder Weergaveadvertenties, Zoeken en Native.
 exl-id: e1c0273b-7e3c-4d77-ae14-d1e528ca0294
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: c52cdd0f2a3aff506bff31ec0775420c66bea11f
 workflow-type: tm+mt
-source-wordcount: '662'
-ht-degree: 1%
+source-wordcount: '945'
+ht-degree: 5%
 
 ---
 
-# [!DNL Microsoft Bing] verbinding {#bing-destination}
+# [!DNL Microsoft Bing]-verbinding {#bing-destination}
 
 ## Overzicht {#overview}
+
+
+>[!IMPORTANT]
+>
+>* Vanaf dinsdag 11 augustus 2025 kunt u twee **[!DNL Microsoft Bing]**-kaarten naast elkaar zien in de bestemmingencatalogus. Dit komt door een interne upgrade van de bestemmingsservice. De naam van de bestaande **[!DNL Microsoft Bing]** doelconnector is gewijzigd in **[!UICONTROL (Deprecated) Microsoft Bing]** en u hebt nu een nieuwe kaart met de naam **[!UICONTROL Microsoft Bing]** beschikbaar.
+>* Gebruik de nieuwe **[!UICONTROL Microsoft Bing]**-verbinding in de catalogus voor nieuwe activeringsgegevensstromen. Als u actieve gegevens naar de **[!UICONTROL (Deprecated) Microsoft Bing]** -bestemming hebt, worden deze automatisch bijgewerkt, zodat u geen actie hoeft te ondernemen.
+>* Als u dataflows door de [ Dienst API van de Stroom ](https://developer.adobe.com/experience-platform-apis/references/destinations/) creeert, moet u uw [!DNL flow spec ID] en [!DNL connection spec ID] aan de volgende waarden bijwerken:
+>   * Stroomspecificatie-ID: `8d42c81d-9ba7-4534-9bf6-cf7c64fbd12e`
+>   * Verbindingsspecificatie-ID: `dd69fc59-3bc5-451e-8ec2-1e74a670afd4`
+>
+> Na deze verbetering, kunt u a **daling in het aantal geactiveerde profielen** in uw dataflows [!DNL Microsoft Bing] ervaren.
+> > Dit daling wordt veroorzaakt door de introductie van het **ECID afbeeldingsvereiste** voor alle activiteiten aan dit bestemmingsplatform. Zie de [ verplichte afbeelding ](#mandatory-mappings) sectie in deze pagina voor gedetailleerde informatie.
+>
+>**wat veranderde:**
+>
+>* De afbeelding van ECID (identiteitskaart van Experience Cloud) is nu **verplicht** voor alle profielactiviteiten.
+>* Profielen zonder ECID-toewijzing zullen **weggelaten worden** uit bestaande activeringsgegevens.
+>
+>**wat u moet doen:**
+>
+>* Controleer de publieksgegevens om te controleren of profielen geldige ECID-waarden hebben.
+>* Controleer de activeringsgegevens om te controleren of het profiel wordt verwacht.
 
 Gebruik de bestemming [!DNL Microsoft Bing] om profielgegevens naar de volledige [!DNL Microsoft Advertising Network], inclusief [!DNL Display Advertising] , [!DNL Search] en [!DNL Native] te verzenden.
 
@@ -31,6 +53,7 @@ Als markator wil ik het publiek dat is samengesteld uit [!DNL Microsoft Advertis
 | Identiteit | Beschrijving |
 |---|---|
 | GEMAAKT | MICROSOFT ADVERTISING ID |
+| ECID | Experience Cloud-id. Deze identiteit is verplicht voor de integratie, maar wordt niet gebruikt voor activering van het publiek. |
 
 {style="table-layout:auto"}
 
@@ -40,7 +63,7 @@ In deze sectie wordt beschreven welke soorten publiek u naar dit doel kunt expor
 
 | Oorsprong publiek | Ondersteund | Beschrijving |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | ✓ | Het publiek produceerde door de Dienst van de Segmentatie van Experience Platform [&#128279;](../../../segmentation/home.md). |
+| [!DNL Segmentation Service] | ✓ | Het publiek produceerde door de Dienst van de Segmentatie van Experience Platform [ ](../../../segmentation/home.md). |
 | Aangepaste uploads | ✓ | Het publiek [ ingevoerde ](../../../segmentation/ui/audience-portal.md#import-audience) in Experience Platform van Csv- dossiers. |
 
 {style="table-layout:auto"}
@@ -62,7 +85,7 @@ Raadpleeg de onderstaande tabel voor informatie over het exporttype en de export
 
 >[!IMPORTANT]
 >
->Als u uw eerste bestemming met [!DNL Microsoft Bing] wilt tot stand brengen en niet de [ functionaliteit van de Synchronisatie van identiteitskaart ](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/idsync.html?lang=nl-NL) in de Dienst van identiteitskaart van Experience Cloud in het verleden (met Adobe Audience Manager of andere toepassingen) hebt toegelaten, te bereiken gelieve uit aan Adobe Consulting of de Zorg van de Klant om de syncs van identiteitskaart toe te laten. Als u eerder [!DNL Microsoft Bing] -integraties hebt ingesteld in Audience Manager, worden de id-syncs die u hebt ingesteld, overgedragen naar Experience Platform.
+>Als u uw eerste bestemming met [!DNL Microsoft Bing] wilt tot stand brengen en niet de [ functionaliteit van de Synchronisatie van identiteitskaart ](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/idsync.html) in de Dienst van identiteitskaart van Experience Cloud in het verleden (met Adobe Audience Manager of andere toepassingen) hebt toegelaten, te bereiken gelieve uit aan Adobe Consulting of de Zorg van de Klant om de syncs van identiteitskaart toe te laten. Als u eerder [!DNL Microsoft Bing] -integraties hebt ingesteld in Audience Manager, worden de id-syncs die u hebt ingesteld, overgedragen naar Experience Platform.
 
 Wanneer het vormen van de bestemming, moet u de volgende informatie verstrekken:
 
@@ -105,8 +128,17 @@ Zie [ publieksgegevens aan het stromen publiek de uitvoerbestemmingen ](../../ui
 
 In het [ programma van het Publiek ](../../ui/activate-segment-streaming-destinations.md#scheduling) stap, moet u de publieksnaam op het [!UICONTROL Mapping ID] gebied manueel in kaart brengen. Zo zorgt u ervoor dat de metagegevens van het publiek correct worden doorgegeven aan [!DNL Bing] .
 
-{het beeld van 0} UI die het scherm van het publieksprogramma met een voorbeeld van toont hoe te om de publieksnaam aan Bing Mapping identiteitskaart in kaart te brengen.![&#128279;](../../assets/catalog/advertising/bing/mapping-id.png)
+{het beeld van 0} UI die het scherm van het publieksprogramma met een voorbeeld van toont hoe te om de publieksnaam aan Bing Mapping identiteitskaart in kaart te brengen.![](../../assets/catalog/advertising/bing/mapping-id.png)
+
+### Verplichte toewijzingen {#mandatory-mappings}
+
+Alle doelidentiteiten die in de [ gesteunde identiteiten ](#supported-identities) sectie worden beschreven zijn verplicht en moeten tijdens het proces van de publiekactivering in kaart worden gebracht. Dit omvat het volgende:
+
+* **GEMAAKT** (identiteitskaart van Advertising van Microsoft)
+* **ECID** (identiteitskaart van Experience Cloud)
+
+Als u niet alle vereiste identiteiten toewijst, kunt u de activeringsworkflow niet voltooien. Elke identiteit dient een specifiek doel in de integratie en alle id&#39;s zijn vereist voor een correcte bestemming.
 
 ## Geëxporteerde gegevens {#exported-data}
 
-Controleer uw [!DNL Microsoft Bing Ads] -account om te controleren of gegevens naar de [!DNL Microsoft Bing] -bestemming zijn geëxporteerd. Als de activering succesvol was, worden de soorten publiek in uw account ingevuld.
+Controleer uw [!DNL Microsoft Bing] -account om te controleren of gegevens naar de [!DNL Microsoft Bing Ads] -bestemming zijn geëxporteerd. Als de activering succesvol was, worden de soorten publiek in uw account ingevuld.
