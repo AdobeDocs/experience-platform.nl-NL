@@ -4,10 +4,10 @@ description: Een voorvertoning van de meest recente releaseopmerkingen voor Adob
 hide: true
 hidefromtoc: true
 exl-id: f2c41dc8-9255-4570-b459-4f9fc28ee58b
-source-git-commit: 7e91181f71b84fdaf04a39e003cbbd415827e282
+source-git-commit: a26ad18b1e44b3198db9e8a36ad3749ed8a0afa2
 workflow-type: tm+mt
-source-wordcount: '1381'
-ht-degree: 22%
+source-wordcount: '1105'
+ht-degree: 38%
 
 ---
 
@@ -21,108 +21,75 @@ ht-degree: 22%
 >
 >Raadpleeg de volgende documentatie voor aanvullende informatie voor andere Adobe Experience Platform-toepassingen:
 >
->- [Adobe Journey Optimizer](https://experienceleague.adobe.com/nl/docs/journey-optimizer/using/whats-new/release-notes)
->- [Adobe Journey Optimizer B2B](https://experienceleague.adobe.com/nl/docs/journey-optimizer-b2b/user/release-notes)
+>- [Adobe Journey Optimizer](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/whats-new/release-notes)
+>- [Adobe Journey Optimizer B2B](https://experienceleague.adobe.com/en/docs/journey-optimizer-b2b/user/release-notes)
 >- [Customer Journey Analytics](https://experienceleague.adobe.com/nl/docs/analytics-platform/using/releases/pre-release-notes)
 >- [Samenstelling van Federated-doelgroep](https://experienceleague.adobe.com/nl/docs/federated-audience-composition/using/e-release-notes)
 >- [Real-Time CDP Collaboration](https://experienceleague.adobe.com/nl/docs/real-time-cdp-collaboration/using/latest)
 
-**Releasedatum: woensdag 29 juli 2025**
+**Datum van de Versie: Augustus 2025**
 
 Nieuwe functies en updates van bestaande functies in Adobe Experience Platform:
 
+- [Waarschuwingen](#alerts)
 - [Bestemmingen](#destinations)
-- [Gegevensopname](#ingestion)
-- [Query-service](#query-service)
-- [Real-Time CDP B2B Edition](#b2b)
-- [Sandboxes](#sandboxes)
-- [Segmentatieservice](#segmentation)
+- [Experience-datamodel (XDM)](#xdm)
+- [Segmentatieservice](#segmentation-service)
 - [Bronnen](#sources)
 
-## Bestemmingen {#destinations}
+## Waarschuwingen {#alerts}
 
-[!DNL Destinations] zijn pre-built integraties met bestemmingsplatforms die de naadloze activering van gegevens van Adobe Experience Platform mogelijk maken. U kunt bestemmingen gebruiken om uw bekende en onbekende gegevens te activeren voor cross-channel marketingcampagnes, e-mailcampagnes, gerichte advertenties en vele andere gebruiksscenario&#39;s.
-
-**Bijgewerkte bestemmingen**
-
-| Bestemming | Beschrijving |
-| --- | --- |
-| Consolidatie van Marketo-doelkaarten | Marketo V2 en Marketo Engage Person Sync bestemmingskaarten zijn geconsolideerd in één, verenigde doelkaart. Deze consolidatie vereenvoudigt het proces van de bestemmingsselectie en verstrekt een meer gestroomlijnde ervaring voor de integratie van Marketo. |
-
-**Nieuwe of bijgewerkte functionaliteit**
-
-| Functie | Beschrijving |
-| --- | --- |
-| Verbeterde gegevensstroominformatie voor Edge-doelen | De verbeterde juiste spoorinformatie voor bestemmingen Adobe Target en van de Douane Personalization toont nu de gegevensstroomnaam, die duidelijkere zichtbaarheid in bijbehorende configuraties van de gegevensstroom verstrekt en verwarring vermindert wanneer het herzien van bestaande gegevensstromen. De **[!UICONTROL Datastream ID]** -kiezer in het doelconfiguratiescherm is bijgewerkt naar **[!UICONTROL Datastream]** voor meer duidelijkheid in de gebruikersinterface. |
-| Zichtbaarheid van marketingacties in doelselectie | Marketingacties worden nu weergegeven in de rechtertrack van het doeltabblad **[!UICONTROL Browse]** en op de pagina **[!UICONTROL Dataflow runs]** , zodat wijzigingen in marketingacties direct zichtbaar zijn zonder dat navigatie naar de weergavepagina is vereist. Deze verbetering verbetert de gebruikerservaring door het gemakkelijker te maken om marketing actieconfiguraties tijdens bestemmingsopstelling te verifiëren. |
-| (Beperkte bètaversie) Marketing-acties voor doelen bewerken | U kunt nu marketingacties voor bestaande doelen bewerken. Deze functionaliteit is in beperkte bèta. Neem contact op met uw Adobe-vertegenwoordiger als u toegang tot de site wilt aanvragen. |
-| (Beperkte bètaversie) Doelen bewerken | U kunt de doelconfiguratie nu bewerken nadat u deze hebt gemaakt. Deze functionaliteit is in beperkte bèta. Neem contact op met uw Adobe-vertegenwoordiger als u toegang tot de site wilt aanvragen. |
-| Accountnamen en beschrijvingen voor doelverbindingen | U kunt nu accountnamen en beschrijvingen toevoegen wanneer u verbinding maakt met doelen, waardoor u beter beheer van doelen met meerdere accounts kunt maken. |
-
-**Oplossingen**
-
-| Probleem | Beschrijving |
-| --- | --- |
-| Functionaliteit voor schuiven in categorieën | Probleem verholpen waarbij het categorieszijmenu in de catalogus met doelen en bronnen niet goed door de muis werd geschoven, wat de navigatiebruikbaarheid voor gebruikers die door doelcategorieën bladeren, verbeterde. |
-
-Voor meer informatie leest u het [overzicht van bestemmingen](../destinations/home.md).
-
-## Gegevensopname {#ingestion}
-
-Experience Platform biedt een uitgebreid raamwerk voor gegevensinvoer dat zowel batch- als streaming gegevensinvoer uit verschillende bronnen ondersteunt.
+Met Experience Platform kunt u zich aanmelden voor gebeurtenisgebaseerde waarschuwingen voor verschillende Experience Platform-activiteiten. U kunt zich aanmelden voor verschillende waarschuwingsregels via het tabblad [!UICONTROL Alerts] in de gebruikersinterface van Experience Platform, en u kunt ervoor kiezen waarschuwingsmeldingen te ontvangen in de gebruikersinterface zelf of via e-mailberichten.
 
 **Nieuwe functies**
 
 | Functie | Beschrijving |
 | ------- | ----------- |
-| Ondersteuning voor het controleren van het opnemen van streaming-profielen | Controle in real time voor het stromen van profielopname is nu beschikbaar, die transparantie in productie, latentie, en de metriek van de gegevenskwaliteit verstrekt. Dit steunt pro-actieve alarmering en actionable inzichten om gegevensingenieurs te helpen capaciteitsschendingen en inspraakkwesties identificeren. |
+| Waarschuwing over streamingdoorvoer | Met drie nieuwe waarschuwingen kunnen gebruikers zich abonneren op en waarschuwingen configureren om de prestaties van streaming doorvoercapaciteit proactief te beheren en te bewaken. Nieuwe waarschuwingen zijn onder andere wanneer de streamingdoorvoer 80%, 90% of meer bedraagt dan de capaciteitslimiet. Voor meer informatie, lees de [ gids van de capaciteitsalarm regels ](../observability/alerts/rules.md#capacity). |
 
-Voor meer informatie, lees het [ overzicht van de gegevensopname ](../ingestion/home.md).
+Raadpleeg het [[!DNL Observability Insights] overzicht](../observability/home.md) voor meer informatie over meldingen.
 
-## Query-service {#query-service}
+## Bestemmingen {#destinations}
 
-Adobe Experience Platform Query Service biedt een robuuste SQL-interface voor gegevensanalyse en -exploratie op het hele platform.
+[!DNL Destinations] zijn vooraf gebouwde integratie met bestemmingsplatforms die voor de naadloze activering van gegevens van Experience Platform toestaan. U kunt bestemmingen gebruiken om uw bekende en onbekende gegevens te activeren voor cross-channel marketingcampagnes, e-mailcampagnes, gerichte advertenties en vele andere gebruiksscenario&#39;s.
 
-**Nieuwe of bijgewerkte functies**
+**Nieuwe bestemmingen**
 
-| Functie | Beschrijving |
-| ------- | ----------- |
-| Verbeterd sessiebeheer | Data Distiller bevat nu verbeterde mogelijkheden voor sessiebeheer, die betere controle bieden over gebruikerssessies en verbeterde prestatietoezicht in ontwikkelings- en productieomgevingen. |
-| Ondersteuning voor niet-verlopen tekenbeperkingen voor het wachtwoord voor referenties. | Data Distiller biedt nu ondersteuning voor niet-verlopen referenties met specifieke tekenbeperkingen. Wachtwoorden vereisen minstens één getal, één kleine letter, één hoofdletter en één speciaal teken, maar het dollarteken ($) wordt niet ondersteund. Aanbevolen speciale tekens zijn onder andere `!, @, #, ^, or &` . |
-| Verbeterde prestatiesconsistentie over milieu&#39;s | Distiller-prestaties van gegevens zijn nu consistent tussen ontwikkelings- en productiesandboxen, met vergelijkbare back-endbronnen in beide omgevingen. De verbruikte computeruren kunnen variëren op basis van het gegevensvolume en de beschikbare back-end computerbronnen tijdens de verwerking. |
+| Bestemming | Beschrijving |
+| --- | --- |
+| [!DNL Acxiom Real ID Audience] doel | Gebruik de [!DNL Acxiom Real ID Audience Connection] bestemming om publiek met [!DNL Acxiom's] [ Echte ID™ ](https://www.acxiom.com/real-id/real-id/) technologie te verbeteren en publiek aan veelvoudige platforms, zoals [!DNL Altice], [!DNL Ampersand], [!DNL Comcast], en meer te activeren. |
 
-Voor meer informatie, lees het [ overzicht van de Dienst van de Vraag ](../query-service/home.md).
 
-## Real-Time CDP B2B Edition {#b2b}
+**Bijgewerkte bestemmingen**
 
-Real-Time CDP B2B edition biedt uitgebreide B2B-mogelijkheden voor klantgegevensbeheer, waardoor organisaties uniforme klantprofielen kunnen maken, een geavanceerd B2B-publiek kunnen maken en gegevens op verschillende marketingkanalen kunnen activeren.
+| Bestemming | Beschrijving |
+| --- | --- |
+| Gegevens over vervaldatum van verificatie voor [!DNL LinkedIn] doelen | Maak u nooit meer zorgen over verlopen referenties. Accountvervalgegevens zijn nu rechtstreeks zichtbaar in de Experience Platform-interface, zodat u kunt zien wanneer de [!DNL LinkedIn] -verificatie verloopt en wordt vernieuwd voordat de gegevensstroom wordt onderbroken. |
+| Coderingsondersteuning voor [!DNL Data Landing Zone] -doelen | Bescherm de geëxporteerde gegevens met codering. U kunt nu openbare sleutels met RSA-indeling koppelen om uw geëxporteerde bestanden te coderen, zodat u over hetzelfde beveiligingsniveau beschikt als andere bestemmingen voor cloudopslag voor uw vertrouwelijke gegevens. |
+| [[!DNL Microsoft Bing]](../destinations/catalog/advertising/bing.md) interne upgrade | Vanaf dinsdag 11 augustus 2025 kunt u twee **[!DNL Microsoft Bing]**-kaarten naast elkaar zien in de bestemmingencatalogus. Dit komt door een interne upgrade van de bestemmingsservice. De naam van de bestaande bestemmingsconnector **[!DNL Microsoft Bing]** is gewijzigd in **[!UICONTROL (Deprecated) Microsoft Bing]** en er is nu een nieuwe kaart met de naam **[!UICONTROL Microsoft Bing]** voor u beschikbaar. Gebruik de nieuwe **[!UICONTROL Microsoft Bing]**-verbinding in de catalogus voor nieuwe activeringsgegevensstromen. Als u actieve gegevensstromen naar de bestemming **[!UICONTROL (Deprecated) Microsoft Bing]** hebt, worden deze automatisch bijgewerkt. U hoeft dus niets te doen. <br><br>Als u gegevensstromen maakt via de [Flow Service API](https://developer.adobe.com/experience-platform-apis/references/destinations/), moet u uw [!DNL flow spec ID] en [!DNL connection spec ID] bijwerken naar de volgende waarden:<ul><li>Stroomspecificatie-ID: `8d42c81d-9ba7-4534-9bf6-cf7c64fbd12e`</li><li>Verbindingsspecificatie-ID: `dd69fc59-3bc5-451e-8ec2-1e74a670afd4`</li></ul> Na deze verbetering, kunt u a **daling in het aantal geactiveerde profielen** in uw dataflows [!DNL Microsoft Bing] ervaren. Dit daling wordt veroorzaakt door de introductie van het **ECID afbeeldingsvereiste** voor alle activiteiten aan dit bestemmingsplatform. |
+| Aanvullende id&#39;s voor [!DNL Amazon Ads] -doelen | De bestemming Amazon Ads ondersteunt nu nieuwe identiteiten ( `firstName` , `lastName` , `street` , `city` , `state` , `zip` , `country` ). Deze velden zijn bedoeld om de weergavesnelheden van de doelgroep te verbeteren en worden doorgegeven in normale tekst, met optionele SHA256-hashing. |
+| [!DNL Marketo] consolidatie van doelkaarten | Vereenvoudig uw [!DNL Marketo] doelinstelling met onze geïntegreerde doelkaart. We hebben [!DNL Marketo] V2- en V3-kaarten samengevoegd tot één gestroomlijnde optie, waardoor het eenvoudiger is om de juiste bestemming te kiezen en snel aan de slag te gaan. |
 
-**Nieuwe of bijgewerkte functies**
-
-| Functie | Beschrijving |
-| ------- | ----------- |
-| B2B-architectuurupgrade | Experience Platform werkt aan een upgrade naar een nieuwe B2B-architectuur die aanzienlijke verbeteringen doorvoert voor het publiek met meerdere entiteiten met B2B-kenmerken. Deze upgrade consolideert de ondersteuning voor samenvoegbeleid, verbetert de nauwkeurigheid van het aantal gebruikers en verbetert de mogelijkheden voor het oplossen van entiteiten. |
-| Consolidatie van het beleid voor meerdere soorten publiek samenvoegen | Het publiek met meerdere entiteiten met B2B-kenmerken ondersteunt nu slechts één enkel samenvoegingsbeleid — het standaardsamenvoegbeleid — in plaats van het ondersteunen van meerdere samenvoegingsbeleidsregels. Deze verandering verzekert verenigbare publiekssamenstelling en vereenvoudigt het beheer van de fusielogica. |
-| Updates voor beperkingen voor het accountpubliek | Accountgebruikers hebben niet langer de vorige beperkingen van een terugzoekvenster van 30 dagen voor Experience Events, beperkingen van aangepaste entiteiten of beperkingen bij het gebruik van `inSegment` -gebeurtenissen. Deze updates bieden meer flexibiliteit bij het maken van complexe B2B-publieksdefinities. |
-| Verbeterde publiekscijfers voor B2B-entiteiten | De schattingen van de omvang van het publiek voor soorten publiek met B2B-entiteiten zoals Accounts en Opportunity zijn nu precies, gebaseerd op de resultaten van realtime segmentatie. Deze verbetering levert nauwkeurigere en betrouwbaardere schattingen op voor het publiek dat complexe B2B-relaties omvat. |
-| Momentopnamen van account voor publieksleden | De details van het publiek van het lidmaatschap van de Publiek zijn nu inbegrepen voor de entiteiten van de Rekening in momentopname uitvoer, toelatend toegang tot account-vlakke publieksstatus, timestamps, en lidmaatschapsindicatoren. Dit brengt eigenschappariteit tussen Profiel (Persoon) en de segmentatiemodellen van de Rekening. |
-| Wijzigingen in het gereedschap Sandbox voor gebruikers met meerdere entiteiten | Het importeren van publiek met meerdere entiteiten met B2B-entiteiten en Experience Events die vóór de migratie zijn geëxporteerd, wordt niet meer ondersteund. Deze doelgroepen kunnen niet automatisch worden geconverteerd naar de nieuwe architectuur en kunnen niet worden gevalideerd bij het importeren. Soorten publiek moet na migratie opnieuw worden geëxporteerd voordat het kan worden geïmporteerd in doelsandboxen. |
-| B2B Entiteit API-afschriften | Het publiek wordt nu afgekeurd via API voor B2B-entiteiten (Account, Opportunity, Account-Person Relation, Opportunity-Person Relation, Campaign, Campaign Member, Marketing List en Marketing List Member). Bovendien zijn de opzoekings- en verwijderingsbewerkingen van de API voor profieltoegang voor deze B2B-entiteiten ook afgekeurd. |
-| Updates van naamruimte voor entiteit oplossen | Account en Opportunity-entiteiten gebruiken nu op tijd gebaseerde samenvoeging met specifieke naamruimten (`b2b_account` voor account, `b2b_opportunity` voor opportunity). Alle andere entiteiten zijn verenigd met primaire identiteitsoverlappingen die worden samengevoegd met samenvoeging op basis van tijdprioriteit. |
-
-Voor meer informatie, lees het [ overzicht van B2B edition van Real-Time CDP ](../rtcdp/b2b-overview.md).
-
-## Sandboxes {#sandboxes}
-
-Experience Platform is ontworpen om toepassingen voor digitale beleving wereldwijd te verrijken. Bedrijven gebruiken vaak meerdere digitale ervaringstoepassingen parallel en moeten de ontwikkeling, het testen en de implementatie van deze toepassingen verzorgen en tegelijkertijd de operationele naleving waarborgen.
-
-**Nieuwe of bijgewerkte functies**
+**Nieuwe of bijgewerkte functionaliteit**
 
 | Functie | Beschrijving |
 | --- | --- |
-| Wijzigingen in de import van meerdere personen | Sandbox tooling is bijgewerkt om de nieuwe B2B architectuurverbetering te steunen. Meerdere entiteiten die B2B-entiteiten en Experience Events bevatten, moeten na de architectuurupgrade opnieuw worden geëxporteerd voordat ze via sandboxgereedschappen naar doelsandboxen kunnen worden geïmporteerd. Het importeren van pre-upgradeversies zal mislukken. |
+| Breid dataset de uitvoerprogramma&#39;s voor dataflows uit die vóór November 2024 werden gecreeerd | Als uw organisatie dataflows van de gegevenssetuitvoer heeft die vóór November 2024 worden gecreeerd, zullen deze dataflows ophouden werkend op 1 September, 2025. Als u de dataflows nodig hebt om het uitvoeren van gegevens na 1 september, 2025 te houden, moet u hun programma&#39;s voor elke bestemming uitbreiden waarnaar u datasets uitvoert, door de stappen in [ te volgen deze gids ](../destinations/ui/dataset-expiration-update.md). |
+| Verbeterde mogelijkheden voor zoeken, filteren en labelen voor doelen | Verbeter uw workflow voor bestemmingsbeheer met verbeterde mogelijkheden voor zoeken, filteren en labelen op de tabbladen Bladeren en Accounts. U kunt nu zoeken naar specifieke gegevensstromen en rekeningen door naam, filter door diverse criteria met inbegrip van bestemmingsplatform, status, en data, en douanetags tot stand brengen om uw bestemmingen te organiseren. Kolomsortering is ook beschikbaar voor belangrijke velden, zoals de laatste dataflow-runtime, zodat u de doelverbindingen gemakkelijker kunt identificeren en beheren. |
 
-Voor meer informatie over sandboxes, lees het [ overzicht van sandboxes](../sandboxes/home.md).
+Voor meer informatie leest u het [overzicht van bestemmingen](../destinations/home.md).
+
+## Experience-datamodel (XDM) {#xdm}
+
+XDM is een open-bronspecificatie die gemeenschappelijke structuren en definities (schema&#39;s) voor gegevens verstrekt die in Experience Platform worden gebracht. Door de XDM-standaarden te hanteren, kunnen alle gegevens over de klantervaring worden opgenomen in een gemeenschappelijke weergave. Zo worden inzichten sneller en beter geïntegreerd verkregen. U kunt waardevolle inzichten verkrijgen uit klantacties, klantdoelgroepen definiëren via segmenten en klantkenmerken gebruiken voor personalisatiedoeleinden.
+
+**Nieuwe functies**
+
+| Functie | Beschrijving |
+| ------- | ----------- |
+| Op modellen gebaseerde schema&#39;s | Vereenvoudig uw gegevensmodellering met Model-Gebaseerde Schema&#39;s. U kunt schema&#39;s nu gemakkelijker met uitvoerige hoe te voorbeelden en begeleiding tot stand brengen. Deze functie is momenteel beschikbaar voor Campaign Orchestration-licentiehouders en zal worden uitgebreid naar Distiller-klanten van Data bij GA, waardoor gegevensmodellering toegankelijker en efficiënter wordt. |
+
+Voor meer informatie, lees het [ XDM overzicht ](../xdm/home.md).
 
 ## Segmentatieservice {#segmentation-service}
 
@@ -132,23 +99,49 @@ Voor meer informatie over sandboxes, lees het [ overzicht van sandboxes](../sand
 
 | Functie | Beschrijving |
 | ------- | ----------- |
-| API voor extern publiek | Met de API voor extern publiek kunt u extern gegenereerde soorten publiek programmatisch importeren in Adobe Experience Platform. |
+| Publiek schattingen | De schattingen van het publiek worden nu automatisch gegenereerd binnen Segment Builder. Deze waarde wordt bijgewerkt wanneer u het publiek wijzigt en weerspiegelt altijd de meest recente publieksregels. |
+
+Voor meer informatie, lees het [[!DNL Segmentation Service]  overzicht ](../segmentation/home.md).
 
 ## Bronnen {#sources}
 
 Experience Platform biedt een RESTful-API en een interactieve gebruikersinterface waarmee u eenvoudig bronverbindingen voor verschillende gegevensproviders kunt instellen. Met deze bronverbindingen kunt u externe opslagsystemen en CRM-services verifiëren en er verbinding mee maken, tijden voor opnameruns instellen en de doorvoer van gegevensopname beheren.
 
-**Nieuwe bronnen**
-
-| Source | Beschrijving |
-| --- | --- |
-| Ondersteuning voor [!DNL Didomi] (Streaming SDK) | Met de [!DNL Didomi] -bronaansluiting kunt u gegevens voor het beheer van toestemmingen invoeren vanaf het platform van [!DNL Didomi] , zodat u de privacyregels en op toestemming gebaseerde marketingstrategieën kunt naleven. |
-
 **Nieuwe of bijgewerkte functionaliteit**
 
 | Functie | Beschrijving |
 | --- | --- |
-| Ondersteuning voor het vastleggen van wijzigingsgegevens in bepaalde bronnen | U kunt nu gegevensstromen tot stand brengen die veranderingsgegevens toelaten vangen voor stijgende opname gebruikend bronschakelaars. Met deze functie kunnen klanten het gegevenstype wijzigen voor incrementele inname, waardoor de gegevensversheid toeneemt en de verwerkingsoverhead afneemt. |
-| Ondersteuning voor zachte verwijdering van records in [!DNL Salesforce] | De [!DNL Salesforce] -bron ondersteunt nu het opnemen van schermverwijderde records via een optionele `includeDeletedObjects` -parameter. Wanneer deze waarde is ingesteld op true, kunnen klanten geneste verwijderde records opnemen in hun [!DNL Salesforce] query&#39;s en deze records naar Experience Platform overbrengen. |
+| [!BADGE  Beta ]{type=Informative} Azure Steun van de Privé Verbinding in UI | Houd uw gegevens veilig met privé netwerkverbindingen. U kunt nu persoonlijke eindpunten maken en gegevensstromen instellen die het openbare internet omzeilen, waardoor u betere beveiliging en netwerkisolatie krijgt voor uw vertrouwelijke gegevens. |
+| [!DNL Marketo] updates van brondocumentatie | Volledige zichtbaarheid in de manier waarop uw [!DNL Marketo] -gegevens worden getransformeerd wanneer deze in Experience Platform worden ingevoerd. Alle veldtoewijzingen bevatten nu gedetailleerde uitleg van gegevenstransformaties, zodat u precies kunt zien hoe de `PersonID` wordt `leadID` en `eventType` wordt `activityType` . |
+| Ondersteuning voor service principal-verificatie voor [!DNL Azure Blob Storage] | U kunt uw [!DNL Azure Blob Storage] -account nu verbinden met Experience Platform met de belangrijkste verificatie van de service. |
 
 Voor meer informatie raadpleegt u het [overzicht van bronnen](../sources/home.md).
+
+<!--
+
+## Query Service {#query-service}
+
+Adobe Experience Platform Query Service provides a robust SQL interface for data analysis and exploration across the platform.
+
+**New or updated features**
+
+| Feature | Description |
+| ------- | ----------- |
+| Data Distiller Session Management | Take control of your data analysis sessions with enhanced session management. You can now monitor and manage your sessions more effectively across development and production environments, giving you better visibility into your query performance and resource usage. |
+
+For more information, read the [Query Service overview](../query-service/home.md).
+
+## B2B CDP {#b2b-cdp}
+
+Real-Time CDP B2B Edition provides comprehensive B2B customer data management capabilities, enabling organizations to build unified customer profiles, create sophisticated B2B audiences, and activate data across various marketing channels.
+
+**New or updated features**
+
+| Feature | Description |
+| ------- | ----------- |
+| Lookup Support for B2B Classes Only | Streamline your B2B data access with focused lookup support. You can now look up Person (Profile), Experience Events, Account, and Opportunity entities directly through the Entities API. This simplified approach helps you access the most important B2B data more efficiently while reducing complexity. |
+| B2B Namespace and Schema Updates | Experience a cleaner, more streamlined B2B data model. We've simplified the B2B namespace and schema structure by removing complex relationship mappings and non-primary identity support for certain B2B classes. This makes your B2B data easier to work with and understand. |
+
+For more information, read the [Real-Time CDP B2B Edition overview](../rtcdp/b2b-overview.md).
+
+-->
