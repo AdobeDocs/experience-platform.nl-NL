@@ -3,7 +3,7 @@ audience: user
 user-guide-title: Overzicht van Adobe Experience Platform
 breadcrumb-title: Overzicht van Experience Platform
 user-guide-description: Ontdek hoe u met Experience Platform uw klanten in real time persoonlijke ervaringen kunt bieden met handleidingen, documentatie en zelfstudies.
-source-git-commit: 77b542e98e1c58e1d6f63b15b4daa6129d92c94a
+source-git-commit: 9df876a730cc1568162f3353bc75258c5ce0e3dd
 workflow-type: tm+mt
 source-wordcount: '340'
 ht-degree: 20%
@@ -17,7 +17,7 @@ ht-degree: 20%
 * [Experience Platform-overzicht (video)](video/platform-overview.md)
 * [Overzicht van meerdere wolken](multi-cloud.md)
 * [Edge Network- en hubvergelijking](./edge-and-hub-comparison.md)
-* [ zelfstudies van Experience Platform ](https://experienceleague.adobe.com/docs/platform-learn/tutorials/overview.html?lang=nl-NL)
+* [ zelfstudies van Experience Platform ](https://experienceleague.adobe.com/docs/platform-learn/tutorials/overview.html)
 * [Een klantervaring met Experience Platform (video)](video/customer-experience.md)
 * [Achter de schermen van een klantervaring met Experience Platform (video)](video/customer-experience-bts.md)
 * Aan de slag {#getting-started}
@@ -43,12 +43,12 @@ ht-degree: 20%
    * [Taalondersteuning](documentation/language-support.md)
 * Op Experience Platform gebaseerde toepassingen {#ecosystem}
    * [Overzicht](application-services.md)
-   * [ Adobe Real-Time Customer Data Platform (alle uitgaven) ](https://experienceleague.adobe.com/docs/real-time-customer-data-platform.html?lang=nl-NL)
+   * [ Adobe Real-Time Customer Data Platform (alle uitgaven) ](https://experienceleague.adobe.com/docs/real-time-customer-data-platform.html)
    * [Application and Intelligent Services (video)](video/application-intelligent-services.md)
-   * [Customer Journey Analytics](https://experienceleague.adobe.com/docs/customer-journey-analytics.html?lang=nl-NL)
-   * [Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer.html?lang=nl-NL)
-   * [Journey Orchestration](https://experienceleague.adobe.com/docs/journey-orchestration.html?lang=nl-NL)
-   * [[!DNL Adobe Mix Modeler]](https://experienceleague.adobe.com/docs/mix-modeler.html?lang=nl-NL)
+   * [Customer Journey Analytics](https://experienceleague.adobe.com/docs/customer-journey-analytics.html)
+   * [Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer.html)
+   * [Journey Orchestration](https://experienceleague.adobe.com/docs/journey-orchestration.html)
+   * [[!DNL Adobe Mix Modeler]](https://experienceleague.adobe.com/docs/mix-modeler.html)
    * [Experience Platform-integratie met Experience Cloud (video)](video/experience-cloud-integrations.md)
 * Bestuur, privacy en beveiliging {#governance-privacy-security}
    * [Overzicht](./governance-privacy-security/overview.md)
@@ -80,14 +80,14 @@ ht-degree: 20%
          * [De gebruikersinterface gebruiken om CMK in te stellen op AWS](./governance-privacy-security/customer-managed-keys/aws/ui-set-up.md)
       * [CMK-waarschuwingsresolutieverwijzing](./governance-privacy-security/customer-managed-keys/alert-resolution-reference.md)
 * Licentiegebruik en guardrails {#license}
-   * [ De beste praktijken van de het beheersvergunning van Gegevens best ](./license-usage-and-guardrails/data-management-best-practices.md)
+   * [Aanbevolen best practices voor licentierechten voor gegevensbeheer](./license-usage-and-guardrails/data-management-best-practices.md)
    * [Het gebruiksdashboard voor licenties](./license-usage-and-guardrails/license-usage-dashboard.md)
    * [ het gebruik en de capaciteit van de Vergunning ](./license-usage-and-guardrails/capacity.md)
    * [Totaal gegevensvolume](./license-usage-and-guardrails/total-data-volume.md)
-   * [ de guardrails van Adobe Journey Optimizer ](https://experienceleague.adobe.com/docs/journey-optimizer/using/get-started/guardrails.html?lang=nl-NL)
-   * [ de guardrails van Customer Journey Analytics ](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-admin/guardrails.html?lang=nl-NL)
-   * [ de guardrails van Real-Time CDP ](https://experienceleague.adobe.com/docs/experience-platform/rtcdp/guardrails/overview.html?lang=nl-NL)
+   * [ de guardrails van Adobe Journey Optimizer ](https://experienceleague.adobe.com/docs/journey-optimizer/using/get-started/guardrails.html)
+   * [ de guardrails van Customer Journey Analytics ](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-admin/guardrails.html)
+   * [ de guardrails van Real-Time CDP ](https://experienceleague.adobe.com/docs/experience-platform/rtcdp/guardrails/overview.html)
 * [Handleiding voor probleemoplossing](troubleshooting.md)
 * [Gen2-gegevensmeermigratie](adls2-gen2-migration.md)
 * [Woordenlijst](glossary.md)
-* [Aanvullende informatie](https://experienceleague.adobe.com/nl/docs/experience-platform/release-notes/latest)
+* [Aanvullende informatie](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)
