@@ -3,10 +3,10 @@ keywords: reclame; banden;
 title: Microsoft Bing-verbinding
 description: Met de bestemming van de Microsoft Bing-verbinding kunt u gerichte digitale campagnes opnieuw richten en publieksgericht voeren op het gehele Microsoft Advertising-netwerk, waaronder Weergaveadvertenties, Zoeken en Native.
 exl-id: e1c0273b-7e3c-4d77-ae14-d1e528ca0294
-source-git-commit: c52cdd0f2a3aff506bff31ec0775420c66bea11f
+source-git-commit: 34520b42554a4ff72b05e9254bd923173629d611
 workflow-type: tm+mt
-source-wordcount: '945'
-ht-degree: 5%
+source-wordcount: '851'
+ht-degree: 1%
 
 ---
 
@@ -17,14 +17,9 @@ ht-degree: 5%
 
 >[!IMPORTANT]
 >
->* Vanaf dinsdag 11 augustus 2025 kunt u twee **[!DNL Microsoft Bing]**-kaarten naast elkaar zien in de bestemmingencatalogus. Dit komt door een interne upgrade van de bestemmingsservice. De naam van de bestaande **[!DNL Microsoft Bing]** doelconnector is gewijzigd in **[!UICONTROL (Deprecated) Microsoft Bing]** en u hebt nu een nieuwe kaart met de naam **[!UICONTROL Microsoft Bing]** beschikbaar.
->* Gebruik de nieuwe **[!UICONTROL Microsoft Bing]**-verbinding in de catalogus voor nieuwe activeringsgegevensstromen. Als u actieve gegevens naar de **[!UICONTROL (Deprecated) Microsoft Bing]** -bestemming hebt, worden deze automatisch bijgewerkt, zodat u geen actie hoeft te ondernemen.
->* Als u dataflows door de [ Dienst API van de Stroom ](https://developer.adobe.com/experience-platform-apis/references/destinations/) creeert, moet u uw [!DNL flow spec ID] en [!DNL connection spec ID] aan de volgende waarden bijwerken:
->   * Stroomspecificatie-ID: `8d42c81d-9ba7-4534-9bf6-cf7c64fbd12e`
->   * Verbindingsspecificatie-ID: `dd69fc59-3bc5-451e-8ec2-1e74a670afd4`
+>Na een interne verbetering aan de bestemmingsdienst van Augustus 2025, kunt u a **daling in het aantal geactiveerde profielen** in uw dataflows [!DNL Microsoft Bing] ervaren.
 >
-> Na deze verbetering, kunt u a **daling in het aantal geactiveerde profielen** in uw dataflows [!DNL Microsoft Bing] ervaren.
-> &#x200B;> Dit daling wordt veroorzaakt door de introductie van het **ECID afbeeldingsvereiste** voor alle activiteiten aan dit bestemmingsplatform. Zie de [ verplichte afbeelding ](#mandatory-mappings) sectie in deze pagina voor gedetailleerde informatie.
+> Dit daling wordt veroorzaakt door de introductie van het **ECID afbeeldingsvereiste** voor alle activiteiten aan dit bestemmingsplatform. Zie de [ verplichte afbeelding ](#mandatory-mappings) sectie in deze pagina voor gedetailleerde informatie.
 >
 >**wat veranderde:**
 >
@@ -63,7 +58,7 @@ In deze sectie wordt beschreven welke soorten publiek u naar dit doel kunt expor
 
 | Oorsprong publiek | Ondersteund | Beschrijving |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | ✓ | Het publiek produceerde door de Dienst van de Segmentatie van Experience Platform [&#128279;](../../../segmentation/home.md). |
+| [!DNL Segmentation Service] | ✓ | Het publiek produceerde door de Dienst van de Segmentatie van Experience Platform [ ](../../../segmentation/home.md). |
 | Aangepaste uploads | ✓ | Het publiek [ ingevoerde ](../../../segmentation/ui/audience-portal.md#import-audience) in Experience Platform van Csv- dossiers. |
 
 {style="table-layout:auto"}
@@ -85,7 +80,7 @@ Raadpleeg de onderstaande tabel voor informatie over het exporttype en de export
 
 >[!IMPORTANT]
 >
->Als u uw eerste bestemming met [!DNL Microsoft Bing] wilt tot stand brengen en niet de [ functionaliteit van de Synchronisatie van identiteitskaart ](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/idsync.html?lang=nl-NL) in de Dienst van identiteitskaart van Experience Cloud in het verleden (met Adobe Audience Manager of andere toepassingen) hebt toegelaten, te bereiken gelieve uit aan Adobe Consulting of de Zorg van de Klant om de syncs van identiteitskaart toe te laten. Als u eerder [!DNL Microsoft Bing] -integraties hebt ingesteld in Audience Manager, worden de id-syncs die u hebt ingesteld, overgedragen naar Experience Platform.
+>Als u uw eerste bestemming met [!DNL Microsoft Bing] wilt tot stand brengen en niet de [ functionaliteit van de Synchronisatie van identiteitskaart ](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/idsync.html) in de Dienst van identiteitskaart van Experience Cloud in het verleden (met Adobe Audience Manager of andere toepassingen) hebt toegelaten, te bereiken gelieve uit aan Adobe Consulting of de Zorg van de Klant om de syncs van identiteitskaart toe te laten. Als u eerder [!DNL Microsoft Bing] -integraties hebt ingesteld in Audience Manager, worden de id-syncs die u hebt ingesteld, overgedragen naar Experience Platform.
 
 Wanneer het vormen van de bestemming, moet u de volgende informatie verstrekken:
 
