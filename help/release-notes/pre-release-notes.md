@@ -4,10 +4,10 @@ description: Een voorvertoning van de meest recente releaseopmerkingen voor Adob
 hide: true
 hidefromtoc: true
 exl-id: f2c41dc8-9255-4570-b459-4f9fc28ee58b
-source-git-commit: a26ad18b1e44b3198db9e8a36ad3749ed8a0afa2
+source-git-commit: bcf3045fbbf4f9673e954a5ebf95d1225d4cdcd7
 workflow-type: tm+mt
-source-wordcount: '1105'
-ht-degree: 38%
+source-wordcount: '1063'
+ht-degree: 40%
 
 ---
 
@@ -21,8 +21,8 @@ ht-degree: 38%
 >
 >Raadpleeg de volgende documentatie voor aanvullende informatie voor andere Adobe Experience Platform-toepassingen:
 >
->- [Adobe Journey Optimizer](https://experienceleague.adobe.com/nl/docs/journey-optimizer/using/whats-new/release-notes)
->- [Adobe Journey Optimizer B2B](https://experienceleague.adobe.com/nl/docs/journey-optimizer-b2b/user/release-notes)
+>- [Adobe Journey Optimizer](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/whats-new/release-notes)
+>- [Adobe Journey Optimizer B2B](https://experienceleague.adobe.com/en/docs/journey-optimizer-b2b/user/release-notes)
 >- [Customer Journey Analytics](https://experienceleague.adobe.com/nl/docs/analytics-platform/using/releases/pre-release-notes)
 >- [Samenstelling van Federated-doelgroep](https://experienceleague.adobe.com/nl/docs/federated-audience-composition/using/e-release-notes)
 >- [Real-Time CDP Collaboration](https://experienceleague.adobe.com/nl/docs/real-time-cdp-collaboration/using/latest)
@@ -53,28 +53,31 @@ Raadpleeg het [[!DNL Observability Insights] overzicht](../observability/home.md
 
 [!DNL Destinations] zijn vooraf gebouwde integratie met bestemmingsplatforms die voor de naadloze activering van gegevens van Experience Platform toestaan. U kunt bestemmingen gebruiken om uw bekende en onbekende gegevens te activeren voor cross-channel marketingcampagnes, e-mailcampagnes, gerichte advertenties en vele andere gebruiksscenario&#39;s.
 
+>[!IMPORTANT]
+>
+>**de uitvoerprogrammauitbreiding van de Dataset**
+>
+>Als uw organisatie dataflows van de gegevenssetuitvoer heeft die vóór November 2024 worden gecreeerd, zullen deze dataflows ophouden werkend op **1 September, 2025**. Als u de dataflows nodig hebt om het uitvoeren van gegevens na 1 september, 2025 te houden, moet u hun programma&#39;s voor elke bestemming uitbreiden waarnaar u datasets uitvoert, door de stappen in [ te volgen deze gids ](../destinations/ui/dataset-expiration-update.md).
+
 **Nieuwe bestemmingen**
 
 | Bestemming | Beschrijving |
 | --- | --- |
 | [!DNL Acxiom Real ID Audience] doel | Gebruik de [!DNL Acxiom Real ID Audience Connection] bestemming om publiek met [!DNL Acxiom's] [ Echte ID™ ](https://www.acxiom.com/real-id/real-id/) technologie te verbeteren en publiek aan veelvoudige platforms, zoals [!DNL Altice], [!DNL Ampersand], [!DNL Comcast], en meer te activeren. |
 
-
 **Bijgewerkte bestemmingen**
 
 | Bestemming | Beschrijving |
 | --- | --- |
-| Gegevens over vervaldatum van verificatie voor [!DNL LinkedIn] doelen | Maak u nooit meer zorgen over verlopen referenties. Accountvervalgegevens zijn nu rechtstreeks zichtbaar in de Experience Platform-interface, zodat u kunt zien wanneer de [!DNL LinkedIn] -verificatie verloopt en wordt vernieuwd voordat de gegevensstroom wordt onderbroken. |
+| Gegevens over het verlopen van verificatie voor [!DNL LinkedIn] - en [!DNL Pinterest] -doelen | De vervalgegevens van accounts zijn nu rechtstreeks zichtbaar in de Experience Platform-interface, zodat u kunt zien wanneer de verificatie van [!DNL LinkedIn] en [!DNL Pinterest] verloopt en wordt vernieuwd voordat de gegevensstroom wordt onderbroken. |
 | Coderingsondersteuning voor [!DNL Data Landing Zone] -doelen | Bescherm de geëxporteerde gegevens met codering. U kunt nu openbare sleutels met RSA-indeling koppelen om uw geëxporteerde bestanden te coderen, zodat u over hetzelfde beveiligingsniveau beschikt als andere bestemmingen voor cloudopslag voor uw vertrouwelijke gegevens. |
 | [[!DNL Microsoft Bing]](../destinations/catalog/advertising/bing.md) interne upgrade | Vanaf dinsdag 11 augustus 2025 kunt u twee **[!DNL Microsoft Bing]**-kaarten naast elkaar zien in de bestemmingencatalogus. Dit komt door een interne upgrade van de bestemmingsservice. De naam van de bestaande bestemmingsconnector **[!DNL Microsoft Bing]** is gewijzigd in **[!UICONTROL (Deprecated) Microsoft Bing]** en er is nu een nieuwe kaart met de naam **[!UICONTROL Microsoft Bing]** voor u beschikbaar. Gebruik de nieuwe **[!UICONTROL Microsoft Bing]**-verbinding in de catalogus voor nieuwe activeringsgegevensstromen. Als u actieve gegevensstromen naar de bestemming **[!UICONTROL (Deprecated) Microsoft Bing]** hebt, worden deze automatisch bijgewerkt. U hoeft dus niets te doen. <br><br>Als u gegevensstromen maakt via de [Flow Service API](https://developer.adobe.com/experience-platform-apis/references/destinations/), moet u uw [!DNL flow spec ID] en [!DNL connection spec ID] bijwerken naar de volgende waarden:<ul><li>Stroomspecificatie-ID: `8d42c81d-9ba7-4534-9bf6-cf7c64fbd12e`</li><li>Verbindingsspecificatie-ID: `dd69fc59-3bc5-451e-8ec2-1e74a670afd4`</li></ul> Na deze verbetering, kunt u a **daling in het aantal geactiveerde profielen** in uw dataflows [!DNL Microsoft Bing] ervaren. Dit daling wordt veroorzaakt door de introductie van het **ECID afbeeldingsvereiste** voor alle activiteiten aan dit bestemmingsplatform. |
-| Aanvullende id&#39;s voor [!DNL Amazon Ads] -doelen | De bestemming Amazon Ads ondersteunt nu nieuwe identiteiten ( `firstName` , `lastName` , `street` , `city` , `state` , `zip` , `country` ). Deze velden zijn bedoeld om de weergavesnelheden van de doelgroep te verbeteren en worden doorgegeven in normale tekst, met optionele SHA256-hashing. |
 | [!DNL Marketo] consolidatie van doelkaarten | Vereenvoudig uw [!DNL Marketo] doelinstelling met onze geïntegreerde doelkaart. We hebben [!DNL Marketo] V2- en V3-kaarten samengevoegd tot één gestroomlijnde optie, waardoor het eenvoudiger is om de juiste bestemming te kiezen en snel aan de slag te gaan. |
 
 **Nieuwe of bijgewerkte functionaliteit**
 
 | Functie | Beschrijving |
 | --- | --- |
-| Breid dataset de uitvoerprogramma&#39;s voor dataflows uit die vóór November 2024 werden gecreeerd | Als uw organisatie dataflows van de gegevenssetuitvoer heeft die vóór November 2024 worden gecreeerd, zullen deze dataflows ophouden werkend op 1 September, 2025. Als u de dataflows nodig hebt om het uitvoeren van gegevens na 1 september, 2025 te houden, moet u hun programma&#39;s voor elke bestemming uitbreiden waarnaar u datasets uitvoert, door de stappen in [ te volgen deze gids ](../destinations/ui/dataset-expiration-update.md). |
 | Verbeterde mogelijkheden voor zoeken, filteren en labelen voor doelen | Verbeter uw workflow voor bestemmingsbeheer met verbeterde mogelijkheden voor zoeken, filteren en labelen op de tabbladen Bladeren en Accounts. U kunt nu zoeken naar specifieke gegevensstromen en rekeningen door naam, filter door diverse criteria met inbegrip van bestemmingsplatform, status, en data, en douanetags tot stand brengen om uw bestemmingen te organiseren. Kolomsortering is ook beschikbaar voor belangrijke velden, zoals de laatste dataflow-runtime, zodat u de doelverbindingen gemakkelijker kunt identificeren en beheren. |
 
 Voor meer informatie leest u het [overzicht van bestemmingen](../destinations/home.md).
@@ -111,7 +114,7 @@ Experience Platform biedt een RESTful-API en een interactieve gebruikersinterfac
 
 | Functie | Beschrijving |
 | --- | --- |
-| [!BADGE &#x200B; Beta &#x200B;]{type=Informative} Azure Steun van de Privé Verbinding in UI | Houd uw gegevens veilig met privé netwerkverbindingen. U kunt nu persoonlijke eindpunten maken en gegevensstromen instellen die het openbare internet omzeilen, waardoor u betere beveiliging en netwerkisolatie krijgt voor uw vertrouwelijke gegevens. |
+| [!BADGE  Beta ]{type=Informative} Azure Steun van de Privé Verbinding in UI | Houd uw gegevens veilig met privé netwerkverbindingen. U kunt nu persoonlijke eindpunten maken en gegevensstromen instellen die het openbare internet omzeilen, waardoor u betere beveiliging en netwerkisolatie krijgt voor uw vertrouwelijke gegevens. |
 | [!DNL Marketo] updates van brondocumentatie | Volledige zichtbaarheid in de manier waarop uw [!DNL Marketo] -gegevens worden getransformeerd wanneer deze in Experience Platform worden ingevoerd. Alle veldtoewijzingen bevatten nu gedetailleerde uitleg van gegevenstransformaties, zodat u precies kunt zien hoe de `PersonID` wordt `leadID` en `eventType` wordt `activityType` . |
 | Ondersteuning voor service principal-verificatie voor [!DNL Azure Blob Storage] | U kunt uw [!DNL Azure Blob Storage] -account nu verbinden met Experience Platform met de belangrijkste verificatie van de service. |
 
