@@ -114,7 +114,7 @@ Experience Platform biedt een RESTful-API en een interactieve gebruikersinterfac
 
 | Functie | Beschrijving |
 | --- | --- |
-| [!BADGE  Beta ]{type=Informative} Azure Steun van de Privé Verbinding in UI | Houd uw gegevens veilig met privé netwerkverbindingen. U kunt nu persoonlijke eindpunten maken en gegevensstromen instellen die het openbare internet omzeilen, waardoor u betere beveiliging en netwerkisolatie krijgt voor uw vertrouwelijke gegevens. |
+| [!BADGE &#x200B; Beta &#x200B;]{type=Informative} Azure Steun van de Privé Verbinding in UI | Houd uw gegevens veilig met privé netwerkverbindingen. U kunt nu persoonlijke eindpunten maken en gegevensstromen instellen die het openbare internet omzeilen, waardoor u betere beveiliging en netwerkisolatie krijgt voor uw vertrouwelijke gegevens. |
 | [!DNL Marketo] updates van brondocumentatie | Volledige zichtbaarheid in de manier waarop uw [!DNL Marketo] -gegevens worden getransformeerd wanneer deze in Experience Platform worden ingevoerd. Alle veldtoewijzingen bevatten nu gedetailleerde uitleg van gegevenstransformaties, zodat u precies kunt zien hoe de `PersonID` wordt `leadID` en `eventType` wordt `activityType` . |
 | Ondersteuning voor service principal-verificatie voor [!DNL Azure Blob Storage] | U kunt uw [!DNL Azure Blob Storage] -account nu verbinden met Experience Platform met de belangrijkste verificatie van de service. |
 
