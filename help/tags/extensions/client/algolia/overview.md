@@ -2,9 +2,9 @@
 title: Overzicht van extensie Algolië-tags
 description: Meer informatie over de extensie Algolië Tags in Adobe Experience Platform.
 exl-id: 8409bf8b-fae2-44cc-8466-9942f7d92613
-source-git-commit: 24d2dc76fc4208f8e1555d90fd3c3ef2cf55643e
+source-git-commit: 904200c5d3ef2be58582e4679109390e8d4aebc1
 workflow-type: tm+mt
-source-wordcount: '1565'
+source-wordcount: '1802'
 ht-degree: 0%
 
 ---
@@ -42,12 +42,12 @@ In de configuratieweergave die wordt weergegeven, moet u de volgende details opg
 
 | Eigenschap | Beschrijving |
 | --- | --- |
-| Toepassings-id | Ga [!UICONTROL Application Id] in u eerder in de [ configuratiedetails ](#configuration-details) sectie vergaarde. |
-| API-sleutel zoeken | Ga [!UICONTROL Search API Key] in u eerder in de [ configuratiedetails ](#configuration-details) sectie vergaarde. |
-| Indexnaam | [!UICONTROL Index Name] bevat de producten of inhoud.  Deze index wordt als standaard gebruikt. |
-| Gegevenselement gebruikerstoken | Het gegevenselement dat het gebruikerstoken zal terugkeren. |
-| Geverifieerd gegevenselement voor gebruikerstoken | Stel het gegevenselement in dat het geverifieerde gebruikerstoken retourneert. |
-| Valuta | Selecteer een valutatype.  De standaardwaarde wordt ingesteld op `USD` . |
+| [!UICONTROL Application ID] | Ga [!UICONTROL Application Id] in u eerder in de [ configuratiedetails ](#configuration-details) sectie vergaarde. |
+| [!UICONTROL Search API Key] | Ga [!UICONTROL Search API Key] in u eerder in de [ configuratiedetails ](#configuration-details) sectie vergaarde. |
+| [!UICONTROL Index Name] | [!UICONTROL Index Name] bevat de producten of inhoud.  Deze index wordt als standaard gebruikt. |
+| [!UICONTROL User Token Data Element] | Het gegevenselement dat het gebruikerstoken zal terugkeren. |
+| [!UICONTROL Authenticated User Token Data Element] | Stel het gegevenselement in dat het geverifieerde gebruikerstoken retourneert. |
+| [!UICONTROL Currency] | Selecteer een valutatype. De standaardwaarde wordt ingesteld op `USD` . |
 
 ![](../../../images/extensions/client/algolia/configure.png)
 
@@ -80,13 +80,14 @@ Voeg de handeling **[!UICONTROL Click]** toe aan de tagregel om aangeklikte gebe
 | Eigenschap | Beschrijving |
 | --- | --- |
 | [!UICONTROL Event Name] | De naam van de gebeurtenis die kan worden gebruikt om deze klikgebeurtenis verder te verfijnen. |
-| Gegevenselement voor gebeurtenisdetails | Het gegevenselement retourneert gebeurtenisdetails, waaronder: <ul><li>`indexName`</li><li>`objectIDs`</li><li>`queryID` (optioneel)</li><li>`position` (optioneel)</li></ul> |
+| [!UICONTROL Event Details Data Element] | Het gegevenselement retourneert gebeurtenisdetails, waaronder: <ul><li>`indexName`</li><li>`objectIDs`</li><li>`queryID` (optioneel)</li><li>`position` (optioneel)</li></ul> |
+| [!UICONTROL Record ID Data Element] | De record-id wordt gebruikt als een sleutel voor de gebeurtenisgegevens die tijdens een `click` -gebeurtenis in de opslag van de browser worden opgeslagen. Standaard fungeert de pagina-URL als de record-id. Gebruik deze eigenschap om dit gedrag te negeren en een gegevenselement op te geven dat de record-id als een tekenreeks retourneert. |
 
 >[!NOTE]
 >
 >Als zowel `queryID` als `position` inbegrepen zijn, wordt de gebeurtenis geclassificeerd als **Gepliceerde voorwerp IDs na Onderzoek**. Anders, is het geclassificeerd als a **Geklikte voorwerp IDs** gebeurtenis.
->&#x200B;><br>
->&#x200B;>Als het Element van Gegevens geen `indexName` verstrekt, zal de **Naam Standaard van de Index** worden gebruikt wanneer de gebeurtenis wordt verzonden.
+>><br>
+>>Als het Element van Gegevens geen `indexName` verstrekt, zal de **Naam Standaard van de Index** worden gebruikt wanneer de gebeurtenis wordt verzonden.
 
 ![](../../../images/extensions/client/algolia/clicked.png)
 
@@ -99,14 +100,16 @@ Voeg de handeling **[!UICONTROL Converted]** toe aan de labelregel om geconverte
 
 | Eigenschap | Beschrijving |
 | --- | --- |
-| Gebeurtenisnaam | De Naam van de Gebeurtenis die zal worden gebruikt om deze **te verfijnen zet** gebeurtenis om. |
-| Gegevenselement voor gebeurtenisdetails | Het gegevenselement retourneert gebeurtenisdetails, waaronder: <ul><li>`indexName`</li><li>`objectIDs`</li><li>`queryID` (optioneel)</li></ul> |
+| [!UICONTROL Event Name] | De Naam van de Gebeurtenis die zal worden gebruikt om deze **te verfijnen zet** gebeurtenis om. |
+| [!UICONTROL Event Details Data Element] | Het gegevenselement retourneert gebeurtenisdetails, waaronder: <ul><li>`indexName`</li><li>`objectIDs`</li><li>`queryID` (optioneel)</li></ul> |
+| [!UICONTROL Disable Removal of Event Data] | Bij een conversiegebeurtenis worden de gebeurtenisgegevens uit de opslag verwijderd. Als deze gegevens nodig zijn voor volgende conversiegebeurtenissen, schakelt u het verwijderingsproces uit om ervoor te zorgen dat de gebeurtenisgegevens beschikbaar blijven. |
+| [!UICONTROL Record ID Data Element] | De record-id wordt gebruikt als sleutel om de gebeurtenisgegevens op te zoeken die in de browseropslag zijn opgeslagen. De pagina-URL is de standaard-record-id. Gebruik deze eigenschap om dit gedrag te negeren en een gegevenselement op te geven dat de record-id als een tekenreeks retourneert. |
 
 >[!NOTE]
 >
 >Als het Element van Gegevens `queryId` bevat, wordt de gebeurtenis geclassificeerd als **na Onderzoek** wordt omgezet. Anders, zal het als a **Omgezette** gebeurtenis worden geclassificeerd.
->&#x200B;><br>
->&#x200B;>Als het Element van Gegevens geen `indexName` verstrekt, zal de **Naam Standaard van de Index** worden gebruikt wanneer de gebeurtenis wordt verzonden.
+>><br>
+>>Als het Element van Gegevens geen `indexName` verstrekt, zal de **Naam Standaard van de Index** worden gebruikt wanneer de gebeurtenis wordt verzonden.
 
 ![](../../../images/extensions/client/algolia/converted.png)
 
@@ -118,17 +121,17 @@ Voeg de handeling **[!UICONTROL Added to Cart]** toe aan de labelregel om toegev
 
 | Eigenschap | Beschrijving |
 | --- | --- |
-| Gebeurtenisnaam | De Naam van de Gebeurtenis die zal worden gebruikt om deze **te verfijnen zet** gebeurtenis om. |
-| Gegevenselement voor gebeurtenisdetails | Het gegevenselement retourneert gebeurtenisdetails, waaronder: <ul><li>`indexName`</li><li>`objectIDs`</li><li>`objectData`<ul><li>`queryID` (optioneel)</li><li>`price`</li><li>`quantity`</li><li>`discount`</li></ul></li><li>`queryID` (optioneel)</li></ul>. |
-| Valuta | Geeft het type valuta aan, bijvoorbeeld `USD` . |
+| [!UICONTROL Event Name] | De Naam van de Gebeurtenis die zal worden gebruikt om deze **te verfijnen zet** gebeurtenis om. |
+| [!UICONTROL Event Details Data Element] | Het gegevenselement retourneert gebeurtenisdetails, waaronder: <ul><li>`indexName`</li><li>`objectIDs`</li><li>`objectData`<ul><li>`queryID` (optioneel)</li><li>`price`</li><li>`quantity`</li><li>`discount`</li></ul></li><li>`queryID` (optioneel)</li></ul>. |
+| [!UICONTROL Currency] | Selecteer een valutatype. De standaardwaarde wordt ingesteld op `USD` . |
 
 >[!NOTE]
 >
 >Als het Element van Gegevens `queryId` bevat, zal de gebeurtenis als **worden geclassificeerd die aan kart voorwerp IDs na Onderzoek** wordt toegevoegd. Anders, zal het als a **worden geclassificeerd Toegevoegd aan de gebeurtenis van identiteitskaarts van het wortelvoorwerp**.
->&#x200B;><br>
->&#x200B;>Als het Element van Gegevens geen `indexName` verstrekt, zal de **Naam Standaard van de Index** worden gebruikt wanneer de gebeurtenis wordt verzonden.
->&#x200B;><br>
->&#x200B;>Als de standaardgegevenselementen niet aan uw vereisten voldoen, kan een aangepast gegevenselement worden gemaakt om de gewenste gebeurtenisdetails te retourneren.
+>><br>
+>>Als het Element van Gegevens geen `indexName` verstrekt, zal de **Naam Standaard van de Index** worden gebruikt wanneer de gebeurtenis wordt verzonden.
+>><br>
+>>Als de standaardgegevenselementen niet aan uw vereisten voldoen, kan een aangepast gegevenselement worden gemaakt om de gewenste gebeurtenisdetails te retourneren.
 
 ![](../../../images/extensions/client/algolia/added-to-cart.png)
 
@@ -140,17 +143,17 @@ Voeg de handeling **[!UICONTROL Purchased]** toe aan de tagregel om aangeschafte
 
 | Eigenschap | Beschrijving |
 | --- | --- |
-| Gebeurtenisnaam | De Naam van de Gebeurtenis die zal worden gebruikt om deze **aankoop** gebeurtenis verder te verfijnen. |
-| Gegevenselement voor gebeurtenisdetails | Het gegevenselement retourneert gebeurtenisdetails, waaronder: <ul><li>`indexName`</li><li>`objectIDs`</li><li>`objectData`<ul><li>`queryID` (optioneel)</li><li>`price`</li><li>`quantity`</li><li>`discount`</li></ul></li><li>`queryID` (optioneel)</li></ul>. |
-| Valuta | Geeft het type valuta aan, bijvoorbeeld `USD` . |
+| [!UICONTROL Event Name] | De Naam van de Gebeurtenis die zal worden gebruikt om deze **aankoop** gebeurtenis verder te verfijnen. |
+| [!UICONTROL Event Details Data Element] | Het gegevenselement retourneert gebeurtenisdetails, waaronder: <ul><li>`indexName`</li><li>`objectIDs`</li><li>`objectData`<ul><li>`queryID` (optioneel)</li><li>`price`</li><li>`quantity`</li><li>`discount`</li></ul></li><li>`queryID` (optioneel)</li></ul>. |
+| [!UICONTROL Currency] | Selecteer een valutatype. De standaardwaarde wordt ingesteld op `USD` . |
 
 >[!NOTE]
 >
 >Als het Element van Gegevens `queryId` bevat, zal de gebeurtenis als **Aangeschafte voorwerp IDs na Onderzoek** worden geclassificeerd. Anders zal het als a **Aangeschafte voorwerp IDs** gebeurtenis worden geclassificeerd.
->&#x200B;><br>
->&#x200B;>Als het Element van Gegevens geen `indexName` verstrekt, zal de **Naam Standaard van de Index** worden gebruikt wanneer de gebeurtenis wordt verzonden.
->&#x200B;><br>
->&#x200B;>Als de standaardgegevenselementen niet aan uw vereisten voldoen, kan een aangepast gegevenselement worden gemaakt om de gewenste gebeurtenisdetails te retourneren.
+>><br>
+>>Als het Element van Gegevens geen `indexName` verstrekt, zal de **Naam Standaard van de Index** worden gebruikt wanneer de gebeurtenis wordt verzonden.
+>><br>
+>>Als de standaardgegevenselementen niet aan uw vereisten voldoen, kan een aangepast gegevenselement worden gemaakt om de gewenste gebeurtenisdetails te retourneren.
 
 ![](../../../images/extensions/client/algolia/purchased.png)
 
@@ -163,8 +166,8 @@ Voeg de handeling **[!UICONTROL Viewed]** toe aan de tagregel om aangeschafte ge
 
 | Eigenschap | Beschrijving |
 | --- | --- |
-| Gebeurtenisnaam | De Naam van de Gebeurtenis die zal worden gebruikt om deze **mening** gebeurtenis verder te verfijnen. |
-| Gegevenselement voor gebeurtenisdetails | Het gegevenselement retourneert gebeurtenisdetails, waaronder: <ul><li>`indexName`</li><li>`objectIDs`</li></ul> |
+| [!UICONTROL Event Name] | De Naam van de Gebeurtenis die zal worden gebruikt om deze **mening** gebeurtenis verder te verfijnen. |
+| [!UICONTROL Event Details Data Element] | Het gegevenselement retourneert gebeurtenisdetails, waaronder: <ul><li>`indexName`</li><li>`objectIDs`</li></ul> |
 
 >[!NOTE]
 >
@@ -184,8 +187,12 @@ Het gegevenselement DataSet haalt gegevens op die zijn gekoppeld aan HTML-elemen
 
 | Eigenschap | Beschrijving |
 | --- | --- |
-| Div/klassenaam voor element aanpassen | De HTML-elementnaam en/of CSS-klassenaam die de gegevenssetkenmerken bevat, inclusief `data-insights-object-id` en optioneel `data-insights-query-id` en `data-insights-position` op het HTML-element. |
-| Index Name Element Div/Class Name | De HTML-elementnaam en/of CSS-klassenaam die de gegevenssetkenmerken (`data-indexname`) heeft op het HTML-element. |
+| [!UICONTROL Hit Element Div/Class Name] | De HTML-elementnaam en/of CSS-klassenaam die de gegevenssetkenmerken bevat, inclusief `data-insights-object-id` en optioneel `data-insights-query-id` en `data-insights-position` op het HTML-element. |
+| [!UICONTROL Index Name Element Div/Class Name] | De HTML-elementnaam en/of CSS-klassenaam die de gegevenssetkenmerken (`data-indexname`) heeft op het HTML-element. |
+| [!UICONTROL Query ID Data Element] | Identiteitskaart van de Vraag wordt teruggewonnen van de dataset op het element van HTML. Om dit gedrag met voeten te treden, gebruik dit bezit om een gegevenselement te verstrekken dat identiteitskaart van de Vraag als koord terugkeert. |
+| [!UICONTROL Object IDs Data Element] | De object-id&#39;s worden opgehaald uit de gegevensset in het HTML-element. Als u dit gedrag wilt overschrijven, gebruikt u deze eigenschap om een gegevenselement op te geven dat de object-id&#39;s als een array retourneert. |
+| [!UICONTROL Positions Data Element] | De posities worden opgehaald uit de dataset op het HTML-element. Als u dit gedrag wilt overschrijven, gebruikt u deze eigenschap om een gegevenselement op te geven dat de posities als een array retourneert. |
+| [!UICONTROL Index Name Data Element] | De indexnaam wordt opgehaald uit de dataset in het HTML-element. Als u dit gedrag wilt overschrijven, gebruikt u deze eigenschap om een gegevenselement op te geven dat de indexnaam als een tekenreeks retourneert. |
 
 ![](../../../images/extensions/client/algolia/dataset.png)
 
@@ -220,10 +227,10 @@ Het gegevenselement Tekenreeks extraheert gegevens uit de URL-queryreeks die moe
 
 | Eigenschap | Beschrijving |
 | --- | --- |
-| Paraatheidsnaam van object-id | De naam van het vraagparam die Voorwerp ID bevat. |
-| Naam indexnaam parameternaam (optioneel) | De naam van het vraagparam die de Naam van de Index bevat. |
-| Naam van parameternaam voor query-id (optioneel) | De naam van het vraagparam die Vraag ID bevat. |
-| Paramanaam plaatsen (optioneel) | De naam van het vraagparam die de Positie bevat. |
+| [!UICONTROL Object ID Param Name] | De naam van het vraagparam die identiteitskaart van Objecten bevat. |
+| [!UICONTROL Index Name Param Name] | De naam van het vraagparam die de Naam van de Index bevat. |
+| [!UICONTROL Query ID Param Name] | De naam van het vraagparam die identiteitskaart van de Vraag bevat. |
+| [!UICONTROL Position Param Name] | De naam van het vraagparam die de Positie bevat. |
 
 ![](../../../images/extensions/client/algolia/query-string.png)
 
@@ -249,6 +256,10 @@ Een voorbeeld van HTML dat queryparameters bevat.
 Het Storage Data Element haalt gegevens op van Session Storage voor gebruik in [!DNL Algolia] -handelingen.
 
 Dit gegevenselement haalt gebeurtenisdetails van de Opslag van de Zitting op. Er is geen configuratie vereist. Het gegeven wordt automatisch toegevoegd tijdens de *klik* gebeurtenisactie en verwijderd tijdens *zet* gebeurtenisactie om.
+
+| Eigenschap | Beschrijving |
+| --- | --- |
+| [!UICONTROL Record ID Data Element] | De record-id wordt gebruikt als sleutel om de gebeurtenisgegevens op te zoeken die in de browseropslag zijn opgeslagen. De pagina-URL is de standaard-record-id. Gebruik deze eigenschap om dit gedrag te negeren en een gegevenselement op te geven dat de record-id als een tekenreeks retourneert. |
 
 ![](../../../images/extensions/client/algolia/storage.png)
 
