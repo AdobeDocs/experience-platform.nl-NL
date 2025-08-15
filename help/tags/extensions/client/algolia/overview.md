@@ -86,8 +86,8 @@ Voeg de handeling **[!UICONTROL Click]** toe aan de tagregel om aangeklikte gebe
 >[!NOTE]
 >
 >Als zowel `queryID` als `position` inbegrepen zijn, wordt de gebeurtenis geclassificeerd als **Gepliceerde voorwerp IDs na Onderzoek**. Anders, is het geclassificeerd als a **Geklikte voorwerp IDs** gebeurtenis.
->><br>
->>Als het Element van Gegevens geen `indexName` verstrekt, zal de **Naam Standaard van de Index** worden gebruikt wanneer de gebeurtenis wordt verzonden.
+>&#x200B;><br>
+>&#x200B;>Als het Element van Gegevens geen `indexName` verstrekt, zal de **Naam Standaard van de Index** worden gebruikt wanneer de gebeurtenis wordt verzonden.
 
 ![](../../../images/extensions/client/algolia/clicked.png)
 
@@ -108,8 +108,8 @@ Voeg de handeling **[!UICONTROL Converted]** toe aan de labelregel om geconverte
 >[!NOTE]
 >
 >Als het Element van Gegevens `queryId` bevat, wordt de gebeurtenis geclassificeerd als **na Onderzoek** wordt omgezet. Anders, zal het als a **Omgezette** gebeurtenis worden geclassificeerd.
->><br>
->>Als het Element van Gegevens geen `indexName` verstrekt, zal de **Naam Standaard van de Index** worden gebruikt wanneer de gebeurtenis wordt verzonden.
+>&#x200B;><br>
+>&#x200B;>Als het Element van Gegevens geen `indexName` verstrekt, zal de **Naam Standaard van de Index** worden gebruikt wanneer de gebeurtenis wordt verzonden.
 
 ![](../../../images/extensions/client/algolia/converted.png)
 
@@ -128,10 +128,10 @@ Voeg de handeling **[!UICONTROL Added to Cart]** toe aan de labelregel om toegev
 >[!NOTE]
 >
 >Als het Element van Gegevens `queryId` bevat, zal de gebeurtenis als **worden geclassificeerd die aan kart voorwerp IDs na Onderzoek** wordt toegevoegd. Anders, zal het als a **worden geclassificeerd Toegevoegd aan de gebeurtenis van identiteitskaarts van het wortelvoorwerp**.
->><br>
->>Als het Element van Gegevens geen `indexName` verstrekt, zal de **Naam Standaard van de Index** worden gebruikt wanneer de gebeurtenis wordt verzonden.
->><br>
->>Als de standaardgegevenselementen niet aan uw vereisten voldoen, kan een aangepast gegevenselement worden gemaakt om de gewenste gebeurtenisdetails te retourneren.
+>&#x200B;><br>
+>&#x200B;>Als het Element van Gegevens geen `indexName` verstrekt, zal de **Naam Standaard van de Index** worden gebruikt wanneer de gebeurtenis wordt verzonden.
+>&#x200B;><br>
+>&#x200B;>Als de standaardgegevenselementen niet aan uw vereisten voldoen, kan een aangepast gegevenselement worden gemaakt om de gewenste gebeurtenisdetails te retourneren.
 
 ![](../../../images/extensions/client/algolia/added-to-cart.png)
 
@@ -150,10 +150,10 @@ Voeg de handeling **[!UICONTROL Purchased]** toe aan de tagregel om aangeschafte
 >[!NOTE]
 >
 >Als het Element van Gegevens `queryId` bevat, zal de gebeurtenis als **Aangeschafte voorwerp IDs na Onderzoek** worden geclassificeerd. Anders zal het als a **Aangeschafte voorwerp IDs** gebeurtenis worden geclassificeerd.
->><br>
->>Als het Element van Gegevens geen `indexName` verstrekt, zal de **Naam Standaard van de Index** worden gebruikt wanneer de gebeurtenis wordt verzonden.
->><br>
->>Als de standaardgegevenselementen niet aan uw vereisten voldoen, kan een aangepast gegevenselement worden gemaakt om de gewenste gebeurtenisdetails te retourneren.
+>&#x200B;><br>
+>&#x200B;>Als het Element van Gegevens geen `indexName` verstrekt, zal de **Naam Standaard van de Index** worden gebruikt wanneer de gebeurtenis wordt verzonden.
+>&#x200B;><br>
+>&#x200B;>Als de standaardgegevenselementen niet aan uw vereisten voldoen, kan een aangepast gegevenselement worden gemaakt om de gewenste gebeurtenisdetails te retourneren.
 
 ![](../../../images/extensions/client/algolia/purchased.png)
 
