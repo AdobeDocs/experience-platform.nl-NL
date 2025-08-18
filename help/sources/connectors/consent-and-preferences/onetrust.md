@@ -1,13 +1,10 @@
 ---
-keywords: Experience Platform;home;populaire onderwerpen;OneTrust;onTrust;toestemming;toestemming;toestemming en voorkeuren;naleving
-solution: Experience Platform
 title: Overzicht OneTrust Integration Source Connector
 description: Leer hoe u OneTrust Integration kunt verbinden met Adobe Experience Platform via API's of de gebruikersinterface.
-last-substantial-update: 2023-04-26T00:00:00Z
 exl-id: f2229d4d-8aa6-483a-9156-403309f80007
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 0b3053e23f5b13fd7ebf0cf41a64c1bc5b71f2db
 workflow-type: tm+mt
-source-wordcount: '190'
+source-wordcount: '169'
 ht-degree: 0%
 
 ---
@@ -16,13 +13,15 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->De bron [!DNL OneTrust Integration] ondersteunt alleen het opnemen van toestemmings- en voorkeursgegevens en geen cookies. Voor problemen met de bronaansluiting kunt u contact opnemen met OneTrust-ondersteuning op https://support.onetrust.com
+>De bron [!DNL OneTrust Integration] ondersteunt alleen het opnemen van toestemmings- en voorkeursgegevens en geen cookies. Voor kwesties met de bronschakelaar, de steun van het contact [[!DNL OneTrust]  ](https://support.onetrust.com).
 
-Adobe Experience Platform staat toe dat gegevens uit externe bronnen worden opgenomen en biedt u de mogelijkheid om inkomende gegevens te structureren, labelen en verbeteren met behulp van Experience Platform-services. U kunt gegevens invoeren uit verschillende bronnen, zoals Adobe-toepassingen, opslag in de cloud, databases en vele andere.
+[!DNL OneTrust] is een platform voor privacy, beveiliging en vertrouwensbeheer dat is ontworpen om organisaties te helpen gegevens op een verantwoordelijke manier te beheren, aan de regelgeving te voldoen en vertrouwen te scheppen met klanten en belanghebbenden. Het biedt een uniforme reeks hulpmiddelen voor gegevensbeheer, risicobeheer en nalevingsautomatisering.
 
-Experience Platform biedt ondersteuning voor het opnemen van gegevens van een platform voor toestemming en voorkeurenbeheer van derden. Tot de ondersteuning voor toestemmings- en voorkeurenproviders behoren [!DNL OneTrust Integration] .
+Gebruik de [!DNL OneTrust Integration] -bron om uw account te verbinden en toestemmings- en voorkeursgegevens in te voeren op Experience Platform.
 
-In de onderstaande documentatie vindt u informatie over het tot stand brengen van een verbinding tussen [!DNL OneTrust Integration] en Experience Platform via API&#39;s of de gebruikersinterface:
+>[!IMPORTANT]
+>
+>Met de [!DNL OneTrust Integration] -bron voegt elke uitvoering alleen nieuwe gegevens in die na de vorige uitvoering zijn gemaakt, zelfs als de vorige uitvoering niet correct is voltooid.
 
 ## Verbinding maken [!DNL OneTrust Integration] met Experience Platform via API&#39;s
 
