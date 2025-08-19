@@ -131,7 +131,7 @@ Zodra de rapportsuites in kaart zijn gebracht, kunt u deze onlangs in kaart gebr
 >id="platform_segmentation_segmentbuilder_externalaudiences"
 >title="Extern publiek"
 >abstract="Het publiek dat via het tabblad Soorten publiek wordt geïmporteerd, wordt nu automatisch opgezocht via het Poort publiek. Soorten publiek dat wordt opgenomen uit Audience Manager, Customer Journey Analytics, Segment Match en andere aangepaste integraties zijn gemakkelijk beschikbaar, zonder dat u eerst hoeft te configureren in Segment Builder. Vanaf 1 september 2025 worden alle soorten publiek uitsluitend opgehaald via Unified Search en wordt de vorige workflow niet meer ondersteund."
->additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/segmentation/ui/audience-portal#list" text="Poort publiek"
+>additional-url="https://experienceleague.adobe.com/nl/docs/experience-platform/segmentation/ui/audience-portal#list" text="Poort publiek"
 
 >[!NOTE]
 >
@@ -386,7 +386,7 @@ Als u een samenvoegbeleid voor uw segmentdefinitie wilt selecteren, selecteert u
 >id="platform_segments_createsegment_segmentbuilder_refreshestimate"
 >title="Ramingen vernieuwen"
 >abstract="U kunt de ramingen van uw segmentdefinitie verfrissen om onmiddellijk een voorproef van te zien hoeveel profielen voor de voorgestelde segmentdefinitie zouden kwalificeren. De schattingen van het publiek worden geproduceerd door een steekproefgrootte van de steekproefgegevens van die dag te gebruiken."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/tutorials/create-a-segment.html#estimate-and-preview-an-audience" text="Een publiek schatten en voorvertonen"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/tutorials/create-a-segment.html?lang=nl-NL#estimate-and-preview-an-audience" text="Een publiek schatten en voorvertonen"
 
 >[!CONTEXTUALHELP]
 >id="platform_segments_createsegment_segmentbuilder_qualifiedprofiles"
