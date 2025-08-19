@@ -4,35 +4,51 @@ title: IP adres lijst van gewenste personen voor het stromen bestemmingen
 type: Documentation
 description: Deze pagina verstrekt IP waaiers die u aan uw lijst van gewenste personen kunt toevoegen, om gegevens van Experience Platform veilig naar uw eindpunt van HTTP REST API, Amazon Kinesis, of de instantie van de Hubs van de Gebeurtenis te uitvoeren Azure.
 exl-id: f41303bd-c886-4c67-9e39-21efc3f5b768
-source-git-commit: 5c67466f5321038e75d22e216a8be2e745adac49
+source-git-commit: 851565b4c40452d102eff134533c9d44ea19ca76
 workflow-type: tm+mt
-source-wordcount: '310'
+source-wordcount: '407'
 ht-degree: 0%
 
 ---
 
-# IP adres lijst van gewenste personen voor het stromen bestemmingen {#ip-address-allowlist}
+
+# IP adres lijst van gewenste personen voor het stromen API-Gebaseerde bestemmingen {#ip-address-allowlist}
 
 >[!IMPORTANT]
 >
 > * Adobe raadt u aan deze pagina als bladwijzer te bekijken en deze elke drie maanden opnieuw te bekijken om te controleren op de meest recente IP-adressen. Adobe geeft geen melding van nieuwe IP-bereiken.
-> * De lijst van hier gedocumenteerde IPs *is niet* op om het even welke bestemmingen van toepassing u gebruikend [[!DNL Destination SDK]](/help/destinations/destination-sdk/overview.md) bouwt.
 
 ## Overzicht {#overview}
 
-De hier gedocumenteerde IP waaiers zijn op de volgende bestemmingen van toepassing:
+De IP waaiers die in deze pagina worden gedocumenteerd zijn op de volgende bestemmingen van toepassing:
 
-* [HTTP API-bestemming](./http-destination.md)
-* [[!DNL Amazon Kinesis]](/help/destinations/catalog/cloud-storage/amazon-kinesis.md)
-* [[!DNL Azure Event Hubs]](/help/destinations/catalog/cloud-storage/azure-event-hubs.md)
+* [ Geavanceerde ondernemingsbestemmingen ](../../destination-types.md#advanced-enterprise-destinations): [ HTTP API bestemming ](./http-destination.md), [[!DNL Amazon Kinesis]](/help/destinations/catalog/cloud-storage/amazon-kinesis.md), [[!DNL Azure Event Hubs]](/help/destinations/catalog/cloud-storage/azure-event-hubs.md)
+* [ het stromen publiek de uitvoerbestemmingen van de publiek ](../../destination-types.md#streaming-destinations), zoals [ PegCDH Realtime Publiek ](/help/destinations/catalog/personalization/pega-v2.md), op API-Gebaseerde integratie met [ Salesforce Marketing Cloud ](/help/destinations/catalog/email-marketing/salesforce-marketing-cloud-exact-target.md) en [ Oracle Eloqua ](/help/destinations/catalog/email-marketing/oracle-eloqua-api.md)
+* Openbare of privé bestemmingen die door [ Destination SDK ](../../destination-sdk/getting-started.md) worden gebouwd
 
 Het uitgaande verkeer van Experience Platform aan deze bestemmingen gaat altijd door IPs op deze pagina wordt vermeld die.
 
-Deze pagina verstrekt IP waaiers die u aan uw lijst van gewenste personen kunt toevoegen, om gegevens van Experience Platform naar uw eindpunt van HTTP veilig uit te voeren, [!DNL Amazon Kinesis], of [!DNL Azure Event Hubs] instantie. Deze functionaliteit is vooral nuttig als uw eindpunt van HTTP achter een ondernemingsfirewall wordt gevestigd of als uw bedrijfveiligheid en nalevingsnormen een lijst van IP waaiers vereisen om worden gevoegd op lijst van gewenste personen.
+Deze pagina verstrekt IP waaiers die u aan uw lijst van gewenste personen kunt toevoegen, om gegevens van Experience Platform naar de hierboven vermelde bestemmingen veilig uit te voeren. Deze functionaliteit is vooral nuttig als uw eindpunt van HTTP achter een ondernemingsfirewall wordt gevestigd of als uw bedrijfveiligheid en nalevingsnormen een lijst van IP waaiers vereisen om worden gevoegd op lijst van gewenste personen.
 
 U kunt besturingselementen voor netwerktoegang definiëren via uw netwerkfirewall. Door de aangewezen IP waaier te specificeren, kunt u verkeer voor de dienst van de gegevensoverdracht toestaan.
 
-Adobe adviseert dat u de volgende IP waaiers aan een lijst van gewenste personen voorafgaand aan het werken met de hierboven vermelde bestemmingen op deze pagina toevoegt. Als u er niet in slaagt om uw regiospecifieke IP-bereik aan uw lijst van gewenste personen toe te voegen, kan dit leiden tot fouten of niet-prestaties bij het gebruik van deze streamingdoelen.
+## Wanneer om IPs in deze pagina te lijsten van gewenste personen {#when-to-allowlist}
+
+Als uw organisatiebeleid u vereist om IPs voor inkomend verkeer te lijsten van gewenste personen, moet u de IP waaiers van de volgende categorieën aan uw lijst van gewenste personen toevoegen voorafgaand aan het werken met de hierboven vermelde bestemmingen op deze pagina:
+
+1. Alle [ globale IP adressen ](#global)
+2. Naast de globale IP adressen, voeg de IP adressen toe die aan het gebied beantwoorden u binnen, van de lijst verder onderaan de pagina wordt voorzien. Als u er niet in slaagt om uw regiospecifieke IP-bereik aan uw lijst van gewenste personen toe te voegen, kan dit leiden tot fouten of niet-prestaties bij het gebruik van deze streamingdoelen.
+
+## Algemene IP-adressen {#global}
+
+* `3.209.222.108`
+* `3.211.230.204`
+* `35.169.227.49`
+* `66.117.18.133`
+* `66.117.18.134`
+* `66.117.18.135`
+
+Naast deze globale IP adressen, moet u de IP adressen voor het gebied lijsten van gewenste personen waar uw organisatie van de lijst hieronder wordt voorzien.
 
 ## VA7: Amerikaanse en Amerikaanse klanten {#us-americas}
 
@@ -209,3 +225,4 @@ Het onderstaande IP-bereik is van toepassing op Experience Platform-klanten die 
 * `20.244.79.192/28`
 * `20.244.79.208/28`
 * `20.244.79.224/28`
+
