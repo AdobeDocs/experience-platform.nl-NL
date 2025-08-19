@@ -1,19 +1,17 @@
 ---
-title: Een Azure Blob Base Connection maken met de Flow Service API
+title: Connect Azure Blob Storage naar Experience Platform met behulp van de Flow Service API
 description: Leer hoe u Adobe Experience Platform verbindt met Azure Blob met behulp van de Flow Service API.
 exl-id: 4ab8033f-697a-49b6-8d9c-1aadfef04a04
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 7acdc090c020de31ee1a010d71a2969ec9e5bbe1
 workflow-type: tm+mt
-source-wordcount: '772'
+source-wordcount: '651'
 ht-degree: 0%
 
 ---
 
-# Een [!DNL Azure Blob] basisverbinding maken met de [!DNL Flow Service] API
+# Verbind [!DNL Azure Blob Storage] met Experience Platform gebruikend API
 
-Een basisverbinding vertegenwoordigt de geverifieerde verbinding tussen een bron en Adobe Experience Platform.
-
-Dit leerprogramma verstrekt stappen om een basisverbinding voor [!DNL Azure Blob] tot stand te brengen (verder die als &quot; [!DNL Blob] wordt bedoeld&quot;) gebruikend [[!DNL Flow Service]  API ](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+Lees deze gids om te leren hoe te om uw [!DNL Azure Blobg Storage] rekening met Adobe Experience Platform te verbinden gebruikend [[!DNL Flow Service]  API ](https://developer.adobe.com/experience-platform-apis/references/flow-service/).
 
 ## Aan de slag
 
@@ -22,65 +20,45 @@ Deze handleiding vereist een goed begrip van de volgende onderdelen van Adobe Ex
 * [ Bronnen ](../../../../home.md): Experience Platform staat gegevens toe om van diverse bronnen worden opgenomen terwijl het voorzien van u van de capaciteit om, inkomende gegevens te structureren te etiketteren en te verbeteren gebruikend de diensten van Experience Platform.
 * [ Sandboxes ](../../../../../sandboxes/home.md): Experience Platform verstrekt virtuele zandbakken die één enkele instantie van Experience Platform in afzonderlijke virtuele milieu&#39;s verdelen helpen digitale ervaringstoepassingen ontwikkelen en ontwikkelen.
 
-De volgende secties bevatten aanvullende informatie die u moet weten om een [!DNL Blob] -bronverbinding met de [!DNL Flow Service] API te kunnen maken.
-
-### Vereiste referenties verzamelen
-
-[!DNL Flow Service] kan alleen verbinding maken met uw [!DNL Blob] -opslag als u waarden opgeeft voor de volgende eigenschap connection:
-
->[!BEGINTABS]
-
->[!TAB  het koordauthentificatie van de Verbinding ]
-
-| Credentials | Beschrijving |
-| --- | --- |
-| `connectionString` | Een tekenreeks die de machtigingsgegevens bevat die nodig zijn voor verificatie van [!DNL Blob] naar Experience Platform. Het patroon van de [!DNL Blob] verbindingstekenreeks is: `DefaultEndpointsProtocol=https;AccountName={ACCOUNT_NAME};AccountKey={ACCOUNT_KEY}` . Voor meer informatie over verbindingskoorden, zie dit [!DNL Blob] document op [ vormend verbindingskoorden ](https://docs.microsoft.com/en-us/azure/storage/common/storage-configure-connection-string). |
-| `connectionSpec.id` | De verbindingsspecificatie keert de schakelaareigenschappen van een bron, met inbegrip van authentificatiespecificaties met betrekking tot het creëren van de basis en bronverbindingen terug. De verbindingsspecificatie-id voor [!DNL Blob] is: `d771e9c1-4f26-40dc-8617-ce58c4b53702` . |
-
->[!TAB  de authentificatie van SAS URI ]
-
-| Credentials | Beschrijving |
-| --- | --- |
-| `sasUri` | De URI van de handtekening voor gedeelde toegang die u kunt gebruiken als alternatief verificatietype om uw [!DNL Blob] -account te verbinden. Het [!DNL Blob] patroon van SAS URI is: `https://{ACCOUNT_NAME}.blob.core.windows.net/?sv=<storage version>&st={START_TIME}&se={EXPIRE_TIME}&sr={RESOURCE}&sp={PERMISSIONS}>&sip=<{IP_RANGE}>&spr={PROTOCOL}&sig={SIGNATURE}>` voor meer informatie, zie dit [!DNL Blob] document op [ gedeelde toegangshandtekening URIs ](https://docs.microsoft.com/en-us/azure/data-factory/connector-azure-blob-storage#shared-access-signature-authentication). |
-| `container` | De naam van de container die u toegang tot wilt aanwijzen. Wanneer u een nieuw account maakt met de [!DNL Blob] -bron, kunt u een containernaam opgeven om gebruikerstoegang tot de submap van uw keuze op te geven. |
-| `folderPath` | Het pad naar de map waartoe u toegang wilt verlenen. |
-| `connectionSpec.id` | De verbindingsspecificatie keert de schakelaareigenschappen van een bron, met inbegrip van authentificatiespecificaties met betrekking tot het creëren van de basis en bronverbindingen terug. De verbindingsspecificatie-id voor [!DNL Blob] is: `d771e9c1-4f26-40dc-8617-ce58c4b53702` . |
-
->[!ENDTABS]
-
 ### Experience Platform API&#39;s gebruiken
 
 Voor informatie over hoe te om vraag aan Experience Platform APIs met succes te maken, zie de gids op [ begonnen wordt met Experience Platform APIs ](../../../../../landing/api-guide.md).
 
-## Een basisverbinding maken
+### Vereiste referenties verzamelen
 
->[!TIP]
+Lees het [[!DNL Azure Blob Storage]  overzicht ](../../../../connectors/cloud-storage/blob.md#authentication) voor informatie over authentificatie.
+
+## Sluit uw [!DNL Azure Blob Storage] -account aan op Experience Platform {#connect}
+
+Lees de onderstaande stappen voor informatie over hoe u uw [!DNL Azure Blob Storage] -account kunt verbinden met Experience Platform.
+
+### Een basisverbinding maken
+
+>[!NOTE]
 >
->Nadat u een [!DNL Blob] basisverbinding hebt gemaakt, kunt u het verificatietype niet wijzigen. Als u het verificatietype wilt wijzigen, moet u een nieuwe basisverbinding maken.
+>Nadat u een [!DNL Azure Blob Storage] basisverbinding hebt gemaakt, kunt u het verificatietype niet wijzigen. Als u het verificatietype wilt wijzigen, moet u een nieuwe basisverbinding maken.
 
-Een basisverbinding behoudt informatie tussen uw bron en Experience Platform, met inbegrip van de verificatiereferenties van uw bron, de huidige status van de verbinding, en uw unieke identiteitskaart van de basisverbinding. Met de ID van de basisverbinding kunt u bestanden verkennen en door bestanden navigeren vanuit uw bron en kunt u de specifieke items identificeren die u wilt opnemen, inclusief informatie over hun gegevenstypen en indelingen.
+Een basisverbinding koppelt uw bron aan Experience Platform, die authentificatiedetails, verbindingsstatus, en een unieke identiteitskaart opslaat. Met deze id kunt u door bronbestanden bladeren en specifieke items identificeren die u wilt invoeren, inclusief de gegevenstypen en indelingen.
 
-De [!DNL Blob] -bron ondersteunt verificatie met zowel een verbindingstekenreeks als een gedeelde toegangshandtekening (SAS). Een gedeelde toegangshandtekening (SAS) URI maakt beveiligde gedelegeerde autorisatie voor uw [!DNL Blob] -account mogelijk. Met SAS kunt u verificatiereferenties maken met verschillende toegangsgraden, aangezien een SAS-gebaseerde verificatie u in staat stelt machtigingen, begin- en vervaldatums en bepalingen voor specifieke bronnen in te stellen.
+U kunt uw [!DNL Azure Blob Storage] -account verbinden met Experience Platform door de volgende verificatietypen te gebruiken:
 
-Tijdens deze stap kunt u ook de submappen aangeven waartoe uw account toegang heeft door de naam van de container en het pad naar de submap te definiëren.
-
-Als u een basis-verbindings-id wilt maken, vraagt u een POST-aanvraag naar het `/connections` -eindpunt en geeft u de [!DNL Blob] -verificatiegegevens op als onderdeel van de aanvraagparameters.
+* **de belangrijkste authentificatie van de Rekening**: Gebruikt de toegangssleutel van de opslagrekening om met uw [!DNL Azure Blob Storage] rekening voor authentiek te verklaren en te verbinden.
+* **Gedeelde toegangshandtekening (SAS)**: Gebruikt een SAS URI om gedelegeerde, tijd-beperkte toegang tot middelen in uw [!DNL Azure Blob Storage] rekening te verlenen.
+* **de hoofd gebaseerde authentificatie van de Dienst**: Gebruikt een Azure Actieve de dienstprincipal van de Folder (AAD) (cliënt identiteitskaart en geheim) om aan uw rekening van de Opslag van Azure Blob veilig voor authentiek te verklaren.
 
 **API formaat**
 
-```http
+```https
 POST /connections
 ```
 
-**Verzoek**
+Om een identiteitskaart van de basisverbinding tot stand te brengen, doe een POST- verzoek aan het `/connections` eindpunt en verstrek uw authentificatiegeloofsbrieven als deel van de verzoekparameters.
 
 >[!BEGINTABS]
 
->[!TAB  Koord van de Verbinding ]
+>[!TAB  de belangrijkste authentificatie van de Rekening ]
 
-Met de volgende aanvraag wordt een basisverbinding voor [!DNL Blob] gemaakt met verificatie op basis van een verbindingstekenreeks:
-
-+++verzoek
+Geef waarden op voor uw `connectionString` , `container` en `folderPath` om verificatie met de accountsleutel te gebruiken.
 
 ```shell
 curl -X POST \
@@ -91,48 +69,33 @@ curl -X POST \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -H 'Content-Type: application/json' \
   -d '{
-      "name": "Azure Blob connection using connectionString",
-      "description": "Azure Blob connection using connectionString",
-      "auth": {
-          "specName": "ConnectionString",
-          "params": {
-              "connectionString": "DefaultEndpointsProtocol=https;AccountName={ACCOUNT_NAME};AccountKey={ACCOUNT_KEY}",
-              "container": "acme-blob-container",
-              "folderPath": "/acme/customers/salesData"
-          }
-      },
-      "connectionSpec": {
-          "id": "4c10e202-c428-4796-9208-5f1f5732b1cf",
-          "version": "1.0"
+    "name": "Azure Blob Storage connection using connectingString",
+    "description": "Azure Blob Storage connection using connectionString",
+    "auth": {
+      "specName": "ConnectionString",
+      "params": {
+        "connectionString": "DefaultEndpointsProtocol=https;AccountName={ACCOUNT_NAME};AccountKey={ACCOUNT_KEY}",
+        "container": "acme-blob-container",
+        "folderPath": "/acme/customers/salesData"
       }
+    },
+    "connectionSpec": {
+      "id": "4c10e202-c428-4796-9208-5f1f5732b1cf",
+      "version": "1.0"
+    }
   }'
 ```
 
-| Eigenschap | Beschrijving |
-| -------- | ----------- |
-| `auth.params.connectionString` | De verbindingstekenreeks die is vereist voor toegang tot gegevens in de blob-opslag. Het patroon van de Blob-verbindingstekenreeks is: `DefaultEndpointsProtocol=https;AccountName={ACCOUNT_NAME};AccountKey={ACCOUNT_KEY}` . |
-| `connectionSpec.id` | De Klob-specificatie voor de verbinding is: `4c10e202-c428-4796-9208-5f1f5732b1cf` |
+| Parameter | Beschrijving |
+| --- | --- |
+| `connectionString` | De verbindingstekenreeks voor uw [!DNL Azure Blob Storage] -account. Het patroon van de verbindingstekenreeks is: `DefaultEndpointsProtocol=https;AccountName={ACCOUNT_NAME};AccountKey={ACCOUNT_KEY};EndpointSuffix=core.windows.net` . |
+| `container` | De naam van de [!DNL Azure Blob Storage] -container waarin uw gegevensbestanden zijn opgeslagen. |
+| `folderPath` | Het pad binnen de opgegeven container waarin de bestanden zich bevinden. |
+| `connectionSpec.id` | De verbindingsspecificatie-id van de [!DNL Azure Blob Storage] -bron. Deze id is vast als: `4c10e202-c428-4796-9208-5f1f5732b1cf`. |
 
-+++
+>[!TAB  Gedeelde toegangshandtekening ]
 
-+++Response
-
-Een succesvolle reactie keert details van de pas gecreëerde basisverbinding, met inbegrip van zijn uniek herkenningsteken (`id`) terug. Deze id is vereist in de volgende stap om een bronverbinding te maken.
-
-```json
-{
-    "id": "4cb0c374-d3bb-4557-b139-5712880adc55",
-    "etag": "\"1700c57b-0000-0200-0000-5e3b3f440000\""
-}
-```
-
-+++
-
->[!TAB  de Authentificatie van SAS URI ]
-
-Als u een [!DNL Blob] -verbinding wilt maken met de URI van een handtekening voor gedeelde toegang, dient u een POST-aanvraag in bij de [!DNL Flow Service] API en geeft u waarden op voor uw [!DNL Blob] `sasUri` -handtekening.
-
-+++verzoek
+Als u een handtekening voor gedeelde toegang wilt gebruiken, geeft u waarden op voor de tekens `sasUri`, `container` en `folderPath` .
 
 ```shell
 curl -X POST \
@@ -143,44 +106,87 @@ curl -X POST \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -H 'Content-Type: application/json' \
   -d '{
-      "name": "Azure Blob source connection using SAS URI",
-      "description": "Azure Blob source connection using SAS URI",
-      "auth": {
-          "specName": "SAS URI Authentication",
-          "params": {
-              "sasUri": "https://{ACCOUNT_NAME}.blob.core.windows.net/?sv={STORAGE_VERSION}&st={START_TIME}&se={EXPIRE_TIME}&sr={RESOURCE}&sp={PERMISSIONS}>&sip=<{IP_RANGE}>&spr={PROTOCOL}&sig={SIGNATURE}>",
-              "container": "acme-blob-container",
-              "folderPath": "/acme/customers/salesData"
-          }
-      },
-      "connectionSpec": {
-          "id": "4c10e202-c428-4796-9208-5f1f5732b1cf",
-          "version": "1.0"
+    "name": "Azure Blob Storage source connection using SAS URI",
+    "description": "Azure Blob Storage source connection using SAS URI",
+    "auth": {
+      "specName": "SAS URI Authentication",
+      "params": {
+        "sasUri": "https://{ACCOUNT_NAME}.blob.core.windows.net/?sv={STORAGE_VERSION}&st={START_TIME}&se={EXPIRE_TIME}&sr={RESOURCE}&sp={PERMISSIONS}>&sip=<{IP_RANGE}>&spr={PROTOCOL}&sig={SIGNATURE}>",
+        "container": "acme-blob-container",
+        "folderPath": "/acme/customers/salesData"
       }
+    },
+    "connectionSpec": {
+      "id": "4c10e202-c428-4796-9208-5f1f5732b1cf",
+      "version": "1.0"
+    }
   }'
 ```
 
-| Eigenschap | Beschrijving |
-| -------- | ----------- |
-| `auth.params.connectionString` | De SAS-URI die vereist is voor toegang tot gegevens in uw [!DNL Blob] -opslag. Het [!DNL Blob] SAS URI-patroon is: `https://{ACCOUNT_NAME}.blob.core.windows.net/?sv=<storage version>&st={START_TIME}&se={EXPIRE_TIME}&sr={RESOURCE}&sp={PERMISSIONS}>&sip=<{IP_RANGE}>&spr={PROTOCOL}&sig={SIGNATURE}>` . |
-| `connectionSpec.id` | De specificatie-id voor de [!DNL Blob] opslagverbinding is: `4c10e202-c428-4796-9208-5f1f5732b1cf` |
+| Parameter | Beschrijving |
+| --- | --- |
+| `sasUri` | De URI van de handtekening voor gedeelde toegang die u kunt gebruiken als alternatief verificatietype om uw account te verbinden. Het patroon van SAS URI is: `https://{ACCOUNT_NAME}.blob.core.windows.net/?sv={STORAGE_VERSION}&st={START_TIME}&se={EXPIRE_TIME}&sr={RESOURCE}&sp={PERMISSIONS}>&sip=<{IP_RANGE}>&spr={PROTOCOL}&sig={SIGNATURE}`. |
+| `container` | De naam van de [!DNL Azure Blob Storage] -container waarin uw gegevensbestanden zijn opgeslagen. |
+| `folderPath` | Het pad binnen de opgegeven container waarin de bestanden zich bevinden. |
+| `connectionSpec.id` | De verbindingsspecificatie-id van de [!DNL Azure Blob Storage] -bron. Deze id is vast als: `4c10e202-c428-4796-9208-5f1f5732b1cf`. |
 
-+++
+>[!TAB  de dienst belangrijkste gebaseerde authentificatie ]
 
-+++Response
+Als u verbinding wilt maken via verificatie op basis van serviceprincipal, geeft u waarden op voor uw: `serviceEndpoint`, `servicePrincipalId`, `servicePrincipalKey`, `accountKind`, `tenant`, `container` en `folderPath` .
 
-Een succesvolle reactie keert details van de pas gecreëerde basisverbinding, met inbegrip van zijn uniek herkenningsteken (`id`) terug. Deze id is vereist in de volgende stap om een bronverbinding te maken.
-
-```json
-{
-    "id": "4cb0c374-d3bb-4557-b139-5712880adc55",
-    "etag": "\"1700c57b-0000-0200-0000-5e3b3f440000\""
-}
+```shell
+curl -X POST \
+  'https://platform.adobe.io/data/foundation/flowservice/connections' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Content-Type: application/json' \
+  -d '{
+    "name": "Azure Blob Storage source connection using service principal based authentication",
+    "description": "Azure Blob Storage source connection using service principal based authentication",
+    "auth": {
+      "specName": "Service Principal Based Authentication",
+      "params": {
+        "serviceEndpoint": "{SERVICE_ENDPOINT}",
+        "servicePrincipalId": "{SERVICE_PRINCIPAL_ID}",
+        "servicePrincipalKey": "{SERVICE_PRINCIPAL_KEY}",
+        "accountKind": "{ACCOUNT_KIND}",
+        "tenant": "{TENANT}",
+        "container": "acme-blob-container",
+        "folderPath": "/acme/customers/salesData"
+      }
+    },
+    "connectionSpec": {
+      "id": "4c10e202-c428-4796-9208-5f1f5732b1cf",
+      "version": "1.0"
+    }
+  }'
 ```
 
-+++
+| Parameter | Beschrijving |
+| --- | --- |
+| `serviceEndpoint` | Het eindpunt-URL van uw [!DNL Azure Blob Storage] -account. Doorgaans in de notatie: `https://{ACCOUNT_NAME}.blob.core.windows.net`. |
+| `servicePrincipalId` | De client/toepassings-id van de Azure Active Directory (AAD) service principal die voor verificatie wordt gebruikt. |
+| `servicePrincipalKey` | Het clientgeheim of wachtwoord dat aan de Azure service principal is gekoppeld. |
+| `accountKind` | Het type van uw [!DNL Azure Blob Storage] account. Veelvoorkomende waarden zijn `StorageV2` , `BlobStorage` of `Storage` . |
+| `tenant` | De Azure Active Directory (AAD) huurder-id waar de serviceprincipal is geregistreerd. |
+| `container` | De naam van de [!DNL Azure Blob Storage] -container waarin uw gegevensbestanden zijn opgeslagen. |
+| `folderPath` | Het pad binnen de opgegeven container waarin de bestanden zich bevinden. |
+| `connectionSpec.id` | De verbindingsspecificatie-id van de [!DNL Azure Blob Storage] -bron. Deze id is vast als: `4c10e202-c428-4796-9208-5f1f5732b1cf`. |
 
 >[!ENDTABS]
+
+Een succesvolle reactie keert details van de pas gecreëerde basisverbinding, met inbegrip van zijn uniek herkenningsteken (`id`) terug. Deze id is vereist in de volgende stap om een bronverbinding te maken.
+
+```json
+{
+    "id": "4cb0c374-d3bb-4557-b139-5712880adc55",
+    "etag": "\"1700c57b-0000-0200-0000-5e3b3f440000\""
+}
+```
+
+
 
 ## Volgende stappen
 

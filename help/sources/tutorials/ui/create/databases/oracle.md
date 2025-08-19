@@ -2,14 +2,14 @@
 title: Oracle DB verbinden met Experience Platform via de gebruikersinterface
 description: Leer hoe u uw Oracle DB-instantie met Experience Platform kunt verbinden via de gebruikersinterface.
 exl-id: 4ca6ecc6-0382-4cee-acc5-1dec7eeb9443
-source-git-commit: aa5496be968ee6f117649a6fff2c9e83a4ed7681
+source-git-commit: 7acdc090c020de31ee1a010d71a2969ec9e5bbe1
 workflow-type: tm+mt
 source-wordcount: '445'
 ht-degree: 0%
 
 ---
 
-# Een [!DNL Oracle DB] bronverbinding maken in de gebruikersinterface
+# Verbinding maken [!DNL Oracle DB] met Experience Platform via de gebruikersinterface
 
 Lees deze handleiding voor informatie over hoe u [!DNL Oracle DB] -instantie kunt verbinden met Adobe Experience Platform via de werkruimte Bronnen in de Experience Platform-gebruikersinterface.
 
