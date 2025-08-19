@@ -1,8 +1,7 @@
 ---
 title: Aanvullende informatie van augustus 2025 voor Adobe Experience Platform
 description: Aanvullende informatie van augustus 2025 voor Adobe Experience Platform.
-exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 8b67b2b33b37d631f73d9ea13786cae0e0db59ce
+source-git-commit: 6b99f9f0bef18b8a4d04a18f817e300cc4c5d9a3
 workflow-type: tm+mt
 source-wordcount: '1425'
 ht-degree: 42%
@@ -22,6 +21,7 @@ ht-degree: 42%
 >- [Real-Time CDP Collaboration](https://experienceleague.adobe.com/nl/docs/real-time-cdp-collaboration/using/latest)
 
 **Releasedatum: woensdag 19 augustus 2025**
+
 
 Nieuwe functies en updates van bestaande functies in Adobe Experience Platform:
 
@@ -104,6 +104,7 @@ Voor meer informatie over de Dienst van de Catalogus, lees het [ overzicht van d
 | --- | --- |
 | [[!DNL Microsoft Bing]](../../destinations/catalog/advertising/bing.md) interne upgrade | Vanaf dinsdag 11 augustus 2025 kunt u twee **[!DNL Microsoft Bing]**-kaarten naast elkaar zien in de bestemmingencatalogus. Dit komt door een interne upgrade van de bestemmingsservice. De naam van de bestaande bestemmingsconnector **[!DNL Microsoft Bing]** is gewijzigd in **[!UICONTROL (Deprecated) Microsoft Bing]** en er is nu een nieuwe kaart met de naam **[!UICONTROL Microsoft Bing]** voor u beschikbaar. Gebruik de nieuwe **[!UICONTROL Microsoft Bing]**-verbinding in de catalogus voor nieuwe activeringsgegevensstromen. Als u actieve gegevensstromen naar de bestemming **[!UICONTROL (Deprecated) Microsoft Bing]** hebt, worden deze automatisch bijgewerkt. U hoeft dus niets te doen. <br><br>Als u gegevensstromen maakt via de [Flow Service API](https://developer.adobe.com/experience-platform-apis/references/destinations/), moet u uw [!DNL flow spec ID] en [!DNL connection spec ID] bijwerken naar de volgende waarden:<ul><li>Stroomspecificatie-ID: `8d42c81d-9ba7-4534-9bf6-cf7c64fbd12e`</li><li>Verbindingsspecificatie-ID: `dd69fc59-3bc5-451e-8ec2-1e74a670afd4`</li></ul> Na deze verbetering, kunt u a **daling in het aantal geactiveerde profielen** in uw dataflows [!DNL Microsoft Bing] ervaren. Dit daling wordt veroorzaakt door de introductie van het **ECID afbeeldingsvereiste** voor alle activiteiten aan dit bestemmingsplatform. |
 
+
 **Nieuwe of bijgewerkte functionaliteit**
 
 | Functie | Beschrijving |
@@ -171,3 +172,7 @@ Experience Platform biedt een RESTful-API en een interactieve gebruikersinterfac
 | Verbeterde verificatie voor [!DNL Azure Blob Storage] | U kunt nu op service principal gebaseerde verificatie gebruiken om uw [!DNL Azure Blob Storage] -bron te verbinden met Experience Platform. De dienst belangrijkste gebaseerde authentificatie van het gebruik voor verbeterde veiligheid, gemakkelijkere credentiële omwenteling, en een meer korrelige toegangsbeheer voor uw rekening. Voor meer informatie, lees het [[!DNL Azure Blob Storage]  overzicht ](../../sources/connectors/cloud-storage/blob.md). |
 
 Voor meer informatie raadpleegt u het [overzicht van bronnen](../../sources/home.md).
+
+<!--
+| [!DNL Marketo] source documentation updates | Get complete visibility into how your [!DNL Marketo] data is transformed when it enters Experience Platform. All field mappings now include detailed explanations of data transformations, so you can understand exactly how your `PersonID` becomes `leadID` and `eventType` becomes `activityType`. |
+-->
