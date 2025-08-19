@@ -14,7 +14,7 @@ ht-degree: 3%
 
 >[!NOTE]
 >
->Het doel van [!DNL Acxiom Audience Distribution] is in bèta. Deze doelconnector en documentatiepagina worden gemaakt en onderhouden door het team van [!DNL Acxiom] . Voor om het even welke onderzoeken of updateverzoeken, direct contactAcxiom [ ](mailto:acxiom-adobe-help@acxiom.com).
+>Het doel van [!DNL Acxiom Audience Distribution] is in bèta. Deze doelconnector en documentatiepagina worden gemaakt en onderhouden door het team van [!DNL Acxiom] . Voor om het even welke onderzoeken of updateverzoeken, direct contactAcxiom [&#128279;](mailto:acxiom-adobe-help@acxiom.com).
 
 Gebruik de [!DNL Acxiom Audience Distribution] bestemming om publiek met [!DNL Acxiom's] [ Echte ID™ ](https://www.acxiom.com/real-id/real-id/) technologie te verbeteren en publiek aan veelvoudige platforms, zoals [!DNL Altice], [!DNL Ampersand], [!DNL Comcast], en meer te activeren.
 
@@ -96,7 +96,7 @@ Als u wilt dat de doelgegevens van [!DNL Acxiom Audience Distribution] correct w
 | Email | Standaard wordt dit veld gebruikt als deduplicatietoets om de records uniek te maken | Nee | 10 | 255 |
 | Telefoon | Het aantal van de telefoon van individu (gebiedscode + aantal) <br> door gebrek, wordt dit gebied gebruikt als deduplicatietoets om de verslagen uniek te maken. | Nee | 11 | 10 |
 
-Voer in de kolom **[!UICONTROL Source Field]** de naam in van elk van de bronkenmerken die u wilt toewijzen aan het corresponderende doelveld, of selecteer het pijlpictogram om het **[!UICONTROL  Select source field]** -scherm te openen.<br>
+Voer in de kolom **[!UICONTROL Source Field]** de naam in van elk van de bronkenmerken die u wilt toewijzen aan het corresponderende doelveld, of selecteer het pijlpictogram om het **[!UICONTROL &#x200B; Select source field]** -scherm te openen.<br>
 ![ het scherm van de Toewijzing ](../../assets/catalog/advertising/acxiom-audience-distribution/mapping_screen.png)
 
 Nadat u alle velden hebt toegewezen, selecteert u **[!UICONTROL Next]** .
