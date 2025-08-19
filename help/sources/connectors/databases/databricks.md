@@ -5,9 +5,9 @@ badgeUltimate: label="Ultimate" type="Positive"
 badgeBeta: label="Beta" type="Informative"
 last-substantial-update: 2025-06-17T00:00:00Z
 exl-id: 2f082898-aa0e-47a1-a4bf-077c21afdfee
-source-git-commit: 11ec772f2b877ceac820f2b8a06ac27377e9b2e9
+source-git-commit: e5ece120329a550204174b7bf588f06cdff45846
 workflow-type: tm+mt
-source-wordcount: '616'
+source-wordcount: '631'
 ht-degree: 0%
 
 ---
@@ -44,7 +44,7 @@ GET /data/foundation/connectors/landingzone/credentials?type=dlz_databricks_sour
 
 Met het volgende verzoek worden de gegevens voor uw Experience Platform [!DNL Azure Blob Storage] opgehaald.
 
-+++aanvraagvoorbeeld weergeven
++++Voorbeeld van een aanvraag weergeven
 
 ```shell
 curl -X GET \
@@ -62,7 +62,7 @@ curl -X GET \
 
 Een succesvol antwoord biedt uw referenties ( `containerName` , `SASToken` , `storageAccountName` ) voor toekomstig gebruik in [!DNL Apache Spark] configuration for [!DNL Databricks] .
 
-+++Respons voorbeeld weergeven
++++Reactievoorbeeld weergeven
 
 ```json
 {
@@ -102,7 +102,7 @@ POST /data/foundation/connectors/landingzone/credentials?type=dlz_databricks_sou
 
 In het volgende verzoek worden de referenties voor uw [!DNL Azure Blob Storage] vernieuwd.
 
-+++aanvraagvoorbeeld weergeven
++++Voorbeeld van een aanvraag weergeven
 
 ```shell
 curl -X POST \
@@ -120,7 +120,7 @@ curl -X POST \
 
 Met een succesvol antwoord worden uw nieuwe referenties geretourneerd.
 
-+++Respons voorbeeld weergeven
++++Reactievoorbeeld weergeven
 
 ```json
 {
@@ -147,7 +147,7 @@ Vervolgens moet u ervoor zorgen dat uw [!DNL Databricks] -cluster toegang heeft 
 
 Als u toegang wilt bieden, moet u een SAS-token configureren in de [!DNL Databricks] -cluster als onderdeel van uw [!DNL Apache Spark] -configuratie.
 
-Selecteer **[!DNL Advanced options]** in de interface van [!DNL Databricks] en voer vervolgens het volgende in het invoervak [!DNL Spark config] in.
+Selecteer [!DNL Databricks] in de interface van **[!DNL Advanced options]** en voer vervolgens het volgende in het invoervak [!DNL Spark config] in.
 
 ```shell
 fs.azure.sas.{CONTAINER_NAME}.{STORAGE-ACCOUNT}.blob.core.windows.net {SAS-TOKEN}
@@ -160,6 +160,12 @@ fs.azure.sas.{CONTAINER_NAME}.{STORAGE-ACCOUNT}.blob.core.windows.net {SAS-TOKEN
 | SAS-token | Het token voor gedeelde toegangshandtekeningen voor uw [!DNL Azure Blob Storage] . U kunt deze waarde verkrijgen door uw [!DNL Azure Blob Storage] -gegevens op te halen. |
 
 ![ de Databases UI op Azure.](../../images/tutorials/create/databricks/databricks-ui.png)
+
+Als deze niet is opgegeven, mislukt de kopieeractiviteit in de flowuitvoering en wordt de volgende fout geretourneerd:
+
+```shell
+Unable to access container '{CONTAINER_NAME}' in account '{STORAGE_ACCOUNT}.blob.core.windows.net' using anonymous credentials. No credentials found in the configuration. Public access is not permitted on this storage account.
+```
 
 ## Verbinden [!DNL Databricks] met Experience Platform
 
