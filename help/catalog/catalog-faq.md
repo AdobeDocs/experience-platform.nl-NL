@@ -3,9 +3,9 @@ keywords: catalogusservice; vragen; vaak gestelde vragen; vk; datasets faq
 title: Veelgestelde vragen
 description: Antwoorden op de vaakst gestelde vragen over de Dienst en datasets van de Catalogus van Adobe Experience Platform.
 exl-id: 70d2a352-75bd-4bbc-98e6-aeea16306f63
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 38f63f1fc985601c53925a529e603f47dc7fb58b
 workflow-type: tm+mt
-source-wordcount: '471'
+source-wordcount: '485'
 ht-degree: 1%
 
 ---
@@ -27,6 +27,10 @@ U kunt het beleid van het ophoudbehoud op datasets plaatsen die gebruikend de kl
 ### Kan ik verschillende behoudsbeleid voor de dienst van het gegevensmeer en van het Profiel plaatsen?
 
 +++Antwoord
+
+>[!NOTE]
+>
+>De bewaartermijn voor de Dienst van het Profiel kan slechts om de 30 dagen worden bijgewerkt.
 
 Ja, kunt u verschillende bewaarbeleid voor de gegevens toepassen meer en de Dienst van het Profiel.
 

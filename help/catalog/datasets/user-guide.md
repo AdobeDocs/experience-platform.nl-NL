@@ -4,9 +4,9 @@ solution: Experience Platform
 title: UI-gids voor gegevensbestanden
 description: Leer hoe u algemene handelingen uitvoert wanneer u werkt met gegevenssets in de Adobe Experience Platform-gebruikersinterface.
 exl-id: f0d59d4f-4ebd-42cb-bbc3-84f38c1bf973
-source-git-commit: 24b0df7025971a999453cd988813aa32b449ba0f
+source-git-commit: 1b278562c815953d2068a5142dbefcf1572baff5
 workflow-type: tm+mt
-source-wordcount: '4244'
+source-wordcount: '4259'
 ht-degree: 0%
 
 ---
@@ -237,6 +237,8 @@ Configureer de gewenste bewaarperiode in het dialoogvenster met instellingen voo
 >[!NOTE]
 > 
 >De minimale bewaarperiode voor het datumpeer is 30 dagen. De minimale bewaarperiode voor profielservice is één dag.
+>
+>Bovendien kunt u de retentieperiode voor profielservice slechts eenmaal om de 30 dagen bijwerken.
 
 Om transparantie en controle te steunen, worden timestamps verstrekt voor **laatste** en **volgende** de baanuitvoeringen van het gegevensbehoud. De tijdstempels helpen u begrijpen wanneer de laatste gegevensopruiming voorkwam en wanneer volgende wordt gepland.
 

@@ -2,9 +2,9 @@
 title: Behoud de Dataset van de Gebeurtenis van de Ervaring in het meer van Gegevens beheren gebruikend TTL
 description: Leer hoe u het behoud van de Experience Event-gegevensset in het datumpomeer kunt evalueren, instellen en beheren met TL-configuraties (Time-to-Live) met Adobe Experience Platform API's. In deze handleiding wordt uitgelegd hoe de vervaldatum van TTL op rijniveau het beleid voor gegevensbewaring ondersteunt, de opslagefficiëntie optimaliseert en een effectief beheer van de levenscyclus van gegevens garandeert. Het verstrekt ook gebruiksgevallen en beste praktijken om u te helpen TTL effectief toepassen.
 exl-id: d688d4d0-aa8b-4e93-a74c-f1a1089d2df0
-source-git-commit: 65a132609bc30233ac9f7efbe1981d4f75f3acb9
+source-git-commit: a4662d1042122fa9c3260c0e53c50bd78935cf31
 workflow-type: tm+mt
-source-wordcount: '2457'
+source-wordcount: '2471'
 ht-degree: 0%
 
 ---
@@ -333,7 +333,13 @@ For example, if you apply a 30-day expiration policy on May 15th, the following 
 ### Kan ik verschillende bewaarbeleid voor de diensten van het gegevensmeer en van het Profiel plaatsen?
 
 +++Antwoord
+
+>[!NOTE]
+>
+>De bewaartermijn voor de Dienst van het Profiel kan slechts om de 30 dagen worden bijgewerkt.
+
 Ja, u kunt verschillende behoudsbeleid voor de diensten van het gegevensmeer en van het Profiel plaatsen. De bewaarperiode voor de opslag van het Profiel kan korter of langer zijn dan de bewaartermijn van het gegevenspeer, afhankelijk van de behoeften van uw organisatie.
+
 +++
 
 ### Hoe kan ik mijn huidige gegevenssetgebruik controleren?
@@ -366,13 +372,13 @@ Neen, zodra een bewaarbeleid wordt toegepast, worden om het even welke gegevens 
 
 ### Wat is minimum TTL I kan vormen op een dataset van de Gebeurtenis van de Ervaring van het gegevensmeer?
 
-+++Antwoord
++++Antwoord 
 De minimale TTL voor een gegevensmeerervaringsgegevensset is 30 dagen. Het datumpeer functioneert als verwerkings steun en terugwinningssysteem tijdens eerste opname en verwerking. Daarom moeten de gegevens in het datumpeer gedurende ten minste 30 dagen na inname bewaard blijven voordat ze kunnen verlopen.
 +++
 
 ### Wat als ik sommige gebieden van het gegevensmeer langer dan mijn beleid van TTL moet behouden?
 
-+++Antwoord
++++Antwoord 
 Gebruik Data Distiller om specifieke velden buiten de TTL van uw dataset te behouden terwijl u binnen uw gebruiksgrenzen blijft. Creeer een baan die regelmatig slechts de noodzakelijke gebieden aan een afgeleide dataset schrijft. Deze workflow zorgt voor compatibiliteit met een kortere TTL en bewaart kritieke gegevens voor uitgebreid gebruik.
 
 Voor meer details, zie [ afgeleide datasets met SQL gids ](../../query-service/data-distiller/derived-datasets/create-derived-datasets-with-sql.md) creëren.
