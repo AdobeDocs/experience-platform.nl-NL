@@ -6,10 +6,10 @@ user-guide-description: Leer analyses, marketing en advertenties te implementere
 feature: Tags
 solution: Data Collection
 role: Developer
-source-git-commit: f038927d6a19db5e0187ccefd76d9ecc9df91b6a
+source-git-commit: 24ff17af89bc882f08ec0f331ebae53b61f35d78
 workflow-type: tm+mt
-source-wordcount: '785'
-ht-degree: 18%
+source-wordcount: '787'
+ht-degree: 19%
 
 ---
 
@@ -92,6 +92,7 @@ ht-degree: 18%
          * [Aanvullende informatie](./extensions/client/client-data-layer/release-notes.md)
       * Adobe Content Analytics {#content-analytics}
          * [Overzicht](./extensions/client/content-analytics/overview.md)
+         * [Aanvullende informatie](./extensions/client/content-analytics/release-notes.md)
       * Adobe ContextHub {#contexthub}
          * [Overzicht](./extensions/client/contexthub/overview.md)
       * [ Adobe Experience Manager Forms ](https://exchange.adobe.com/apps/ec/107493)
@@ -140,7 +141,7 @@ ht-degree: 18%
       * [ Advertiser MasterTag ](https://exchange.adobe.com/apps/ec/103176)
       * [ de Markering van de Omzetting van de won ](https://exchange.adobe.com/apps/ec/103240)
       * [ Menselijke context Beemray ](https://exchange.adobe.com/apps/ec/101063)
-      * [ Bing voegt de Universele Gebeurtenis die  volgen toe](https://exchange.adobe.com/apps/ec/100154)
+      * [ Bing voegt de Universele Gebeurtenis die ](https://exchange.adobe.com/apps/ec/100154) volgen toe
       * [ Tak ](https://exchange.adobe.com/apps/ec/101382)
       * [!DNL BrightCove] video bijhouden {#brightcove}
          * [Overzicht](./extensions/client/brightcove/overview.md)
@@ -196,7 +197,7 @@ ht-degree: 18%
       * [ de Lader van het Pixel ](https://exchange.adobe.com/apps/ec/100152)
       * [ de Terugkoppeling van de Website van Qualtrics ](https://exchange.adobe.com/apps/ec/101569)
       * [ Metrisch van Quantum ](https://exchange.adobe.com/apps/ec/101535)
-      * [ los Momentum  op](https://exchange.adobe.com/apps/ec/108352)
+      * [ los Momentum ](https://exchange.adobe.com/apps/ec/108352) op
       * [ Rokt ](https://exchange.adobe.com/apps/ec/107591)
       * [ SDI Onderzoek ](https://exchange.adobe.com/apps/ec/102991)
       * [ Toolkit SDI ](https://exchange.adobe.com/apps/ec/101460)
@@ -210,7 +211,7 @@ ht-degree: 18%
       * [ de Playback van Vimeo ](https://exchange.adobe.com/apps/ec/108937)
       * [ de VELLINGEN van het Web ](https://exchange.adobe.com/apps/ec/106769)
       * [ XDM Composer ](https://exchange.adobe.com/apps/ec/106062)
-      * [ Yext Omzetting die  volgt](https://exchange.adobe.com/apps/ec/103174)
+      * [ Yext Omzetting die ](https://exchange.adobe.com/apps/ec/103174) volgt
       * [[!DNL Youtube]  Playback ](https://exchange.adobe.com/apps/ec/104160)
       * [!DNL YouTube] video bijhouden {#youtube}
          * [Overzicht](./extensions/client/youtube/overview.md)
@@ -340,5 +341,5 @@ ht-degree: 18%
 * [Veelgestelde vragen](./faq.md)
 * [Terminologie-updates](./term-updates.md)
 * [Ondersteuning voor Internet Explorer 10 en 11 wordt afgeschaft](./ie-deprecation.md)
-* [Releaseopmerkingen bij Experience Platform](https://experienceleague.adobe.com/nl/docs/experience-platform/release-notes/latest)
+* [Releaseopmerkingen bij Experience Platform](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)
 
