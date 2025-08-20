@@ -141,7 +141,7 @@ ht-degree: 19%
       * [ Advertiser MasterTag ](https://exchange.adobe.com/apps/ec/103176)
       * [ de Markering van de Omzetting van de won ](https://exchange.adobe.com/apps/ec/103240)
       * [ Menselijke context Beemray ](https://exchange.adobe.com/apps/ec/101063)
-      * [ Bing voegt de Universele Gebeurtenis die ](https://exchange.adobe.com/apps/ec/100154) volgen toe
+      * [ Bing voegt de Universele Gebeurtenis die  volgen toe](https://exchange.adobe.com/apps/ec/100154)
       * [ Tak ](https://exchange.adobe.com/apps/ec/101382)
       * [!DNL BrightCove] video bijhouden {#brightcove}
          * [Overzicht](./extensions/client/brightcove/overview.md)
@@ -197,7 +197,7 @@ ht-degree: 19%
       * [ de Lader van het Pixel ](https://exchange.adobe.com/apps/ec/100152)
       * [ de Terugkoppeling van de Website van Qualtrics ](https://exchange.adobe.com/apps/ec/101569)
       * [ Metrisch van Quantum ](https://exchange.adobe.com/apps/ec/101535)
-      * [ los Momentum ](https://exchange.adobe.com/apps/ec/108352) op
+      * [ los Momentum  op](https://exchange.adobe.com/apps/ec/108352)
       * [ Rokt ](https://exchange.adobe.com/apps/ec/107591)
       * [ SDI Onderzoek ](https://exchange.adobe.com/apps/ec/102991)
       * [ Toolkit SDI ](https://exchange.adobe.com/apps/ec/101460)
@@ -211,7 +211,7 @@ ht-degree: 19%
       * [ de Playback van Vimeo ](https://exchange.adobe.com/apps/ec/108937)
       * [ de VELLINGEN van het Web ](https://exchange.adobe.com/apps/ec/106769)
       * [ XDM Composer ](https://exchange.adobe.com/apps/ec/106062)
-      * [ Yext Omzetting die ](https://exchange.adobe.com/apps/ec/103174) volgt
+      * [ Yext Omzetting die  volgt](https://exchange.adobe.com/apps/ec/103174)
       * [[!DNL Youtube]  Playback ](https://exchange.adobe.com/apps/ec/104160)
       * [!DNL YouTube] video bijhouden {#youtube}
          * [Overzicht](./extensions/client/youtube/overview.md)
