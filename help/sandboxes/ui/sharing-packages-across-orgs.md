@@ -1,9 +1,10 @@
 ---
-title: Pakketten delen in de hele organisatie met behulp van Sandbox-tools
+title: Pakketten delen in de hele organisatie met behulp van sandbox-gereedschappen
 description: Leer hoe u Sandbox Tooling in Adobe Experience Platform gebruikt om pakketten te delen tussen verschillende organisaties.
-source-git-commit: 77994c1cdd185cc8a2963c5aa2eb345c8702fe02
+exl-id: 02826a8d-f01d-44cb-9ae0-0fcde24de83e
+source-git-commit: 3183d265eda36df9b08d920ba731bd9e63d150cc
 workflow-type: tm+mt
-source-wordcount: '861'
+source-wordcount: '956'
 ht-degree: 0%
 
 ---
@@ -14,7 +15,7 @@ Verbeter de configuratienauwkeurigheid over zandbakken en voer naadloos zandbakc
 
 - **Privé pakket**
 
-[ Privé pakketten ](#private-packages) kunnen slechts met organisaties worden gedeeld die het het delen verzoek van de bronorganisatie hebben goedgekeurd.
+[ Privé pakketten ](#private-packages) kunnen slechts met organisaties worden gedeeld die het delen verzoek van de bronorganisatie hebben goedgekeurd.
 
 - **Openbaar pakket**
 
@@ -30,7 +31,7 @@ Gebruik de functie Sandbox Tooling om partnerschappen te maken, de status van pa
 
 ### Een aanvraag voor een partnerschap voor organisaties maken
 
-Navigeer naar het tabblad **[!UICONTROL Sandboxes]** **[!UICONTROL Partner orgs]** als u een verzoek voor samenwerking met organisaties wilt maken. Selecteer vervolgens **[!UICONTROL Manage partner orgs]** .
+Navigeer naar het tabblad **[!UICONTROL Sandboxes]** **[!UICONTROL Partner orgs]** als u een aanvraag voor een partnership voor organisatie wilt maken. Selecteer vervolgens **[!UICONTROL Manage partner orgs]** .
 
 ![ de zandbakken UI, met het lusje van de Organisaties van de Partner en leidt benadrukte partnerorganisaties.](../images/ui/sandbox-tooling/private-manage-partner-orgs.png)
 
@@ -44,9 +45,9 @@ Voer in het dialoogvenster [!UICONTROL Package partner management] de organisati
 
 De aanvraag voor delen wordt naar de partnerorganisatie verzonden en u gaat terug naar het tabblad [!UICONTROL Sandboxes] **[!UICONTROL Partner orgs]** , dat de **[!UICONTROL Outgoing request]** weergeeft.
 
-![ de organisatie van de Partner lusje met Uitgaand benadrukte verzoek.](../images/ui/sandbox-tooling/private-outgoing-request.png)
+![ het lusje van de Organisaties van de Partner met Uitgaand benadrukt verzoek.](../images/ui/sandbox-tooling/private-outgoing-request.png)
 
-### Een partnerschapverzoek toestaan {#authorize-request}
+### Een partnerschapsverzoek autoriseren {#authorize-request}
 
 Navigeer naar het tabblad [!UICONTROL Sandboxes] **[!UICONTROL Partner orgs]** als u een aanvraag voor een partnership voor organisatie wilt autoriseren. Selecteer vervolgens **[!UICONTROL Incoming request]** .
 
@@ -54,13 +55,13 @@ Navigeer naar het tabblad [!UICONTROL Sandboxes] **[!UICONTROL Partner orgs]** a
 
 Huidige **[!UICONTROL Status]** voor het verzoek, in dit stadium, is **In afwachting**. Als u de aanvraag wilt goedkeuren, selecteert u de ellips (`...`) naast de geselecteerde aanvraag en selecteert u vervolgens **[!UICONTROL Approve]** in de vervolgkeuzelijst.
 
-![ Lijst van inkomende verzoeken die het drop-down menu tonen met benadrukte Goedkeuren.](../images/ui/sandbox-tooling/private-approve-partner-org.png)
+![ Lijst van inkomende verzoeken die het dropdown menu tonen met benadrukt goedkeuren.](../images/ui/sandbox-tooling/private-approve-partner-org.png)
 
-Het dialoogvenster **[!UICONTROL Review partner org request]** bevat informatie over het partnerschapverzoek voor de organisatie. Voer een [!UICONTROL Reason] in voor goedkeuring en selecteer vervolgens **[!UICONTROL Approve]** .
+Het dialoogvenster **[!UICONTROL Review partner org request]** bevat informatie over de aanvraag voor een partnerschap voor organisaties. Voer een [!UICONTROL Reason] in voor goedkeuring en selecteer vervolgens **[!UICONTROL Approve]** .
 
-![ de dialoog van het de partnerorganisatieverzoek van het overzicht met Reden en benadrukte Goedkeuren.](../images/ui/sandbox-tooling/private-approval-partner-org.png)
+![ de partner van het overzicht of verzoek dialoog met Reden en keurt benadrukte goed.](../images/ui/sandbox-tooling/private-approval-partner-org.png)
 
-U keert terug naar de [!UICONTROL Incoming request] -pagina en de status van de aanvraag is bijgewerkt naar **[!UICONTROL Approved]** .
+U gaat terug naar de pagina [!UICONTROL Incoming request] en de status van de aanvraag is bijgewerkt naar **[!UICONTROL Approved]** .
 
 ![ Lijst van inkomende verzoeken met Goedgekeurd benadrukte.](../images/ui/sandbox-tooling/private-approved-partner-org.png)
 
@@ -72,11 +73,13 @@ Gebruik deze workflow/dit proces om pakketten te delen tussen uw organisatie en 
 >
 >Slechts kunnen de pakketten met de status **Gepubliceerde** worden gedeeld.
 
-Als u een pakket wilt delen met een erkende partnerorganisatie, navigeert u naar het tabblad [!UICONTROL Sandboxes] **[!UICONTROL Packages]** . Selecteer vervolgens de ellips (`...`) naast het pakket en selecteer **[!UICONTROL Share package]** in het vervolgkeuzemenu.
+#### Multiobjectpakketten delen {#multi-object-packages}
+
+Als u een pakket met meerdere objecten wilt delen met een erkende partnerorganisatie, navigeert u naar het tabblad [!UICONTROL Sandboxes] **[!UICONTROL Packages]** . Selecteer vervolgens de ellips (`...`) naast het pakket en selecteer **[!UICONTROL Share package]** in het vervolgkeuzemenu.
 
 ![ Lijst van pakketten die het dropdown menu met het benadrukte pakket van het Aandeel tonen.](../images/ui/sandbox-tooling/private-share-package.png)
 
-Selecteer in het dialoogvenster **[!UICONTROL Share package]** het pakket dat u wilt delen in de vervolgkeuzelijst **[!UICONTROL Share settings]** en selecteer vervolgens **[!UICONTROL Confirm]** .
+Selecteer in het dialoogvenster **[!UICONTROL Share package]** de organisaties waarmee u het pakket wilt delen in het vervolgkeuzemenu **[!UICONTROL Share settings]** en selecteer vervolgens **[!UICONTROL Confirm]** .
 
 >[!TIP]
 >
@@ -84,9 +87,24 @@ Selecteer in het dialoogvenster **[!UICONTROL Share package]** het pakket dat u 
 
 ![ het pakketdialoog van het Aandeel met de montages van het Aandeel en bevestigt benadrukte.](../images/ui/sandbox-tooling/private-share-package-confirm.png)
 
+#### Volledige sandboxpakketten delen {#entire-sandbox-packages}
+
+Als u een volledig sandboxpakket wilt delen met een erkende partnerorganisatie, navigeert u naar het tabblad [!UICONTROL Sandboxes] **[!UICONTROL Packages]** . Selecteer vervolgens de ellips (`...`) naast het pakket en selecteer **[!UICONTROL Share package]** in het vervolgkeuzemenu.
+
+![ het lusje dat van Pakketten een lijst van pakketten toont, die het drop-down menu tonen.](../images/ui/sandbox-tooling/private-share-entire-sandbox.png)
+
+Selecteer in het dialoogvenster **[!UICONTROL Share package]** de organisaties waarmee u het pakket wilt delen in het vervolgkeuzemenu **[!UICONTROL Share settings]** en selecteer vervolgens **[!UICONTROL Confirm]** .
+
+>[!TIP]
+>
+>U kunt meerdere organisaties selecteren. Geselecteerde organisaties worden weergegeven onder de vervolgkeuzelijst [!UICONTROL Share settings] .
+
+![ het pakketdialoog van het Aandeel met de montages van het Aandeel en bevestigt benadrukte.](../images/ui/sandbox-tooling/private-share-entire-sandbox-confirm.png)
+
+
 ## Openbare pakketten {#public-packages}
 
-Gebruik de functie Sandbox-gereedschappen om deelbare openbare pakketten te maken waarvoor geen extra goedkeuring nodig is en die gemakkelijk kunnen worden geïmporteerd met de lading van het pakket.
+Gebruik de functie Sandbox-samenvoeging om deelbare openbare pakketten te maken waarvoor geen extra goedkeuring vereist is en die gemakkelijk kunnen worden geïmporteerd met gebruik van de payload van het pakket.
 
 ### Pakketbeschikbaarheid bijwerken naar openbaar {#update-package}
 
@@ -98,7 +116,7 @@ Controleer in het dialoogvenster **[!UICONTROL Change package availability to pu
 
 >[!IMPORTANT]
 >
-> Zodra een pakket openbaar is gemaakt, kan het niet meer worden gewijzigd in een privé-pakket.
+> Wanneer een pakket openbaar is gemaakt, kan het niet meer worden vervangen door een privé-pakket.
 
 ![ het pakketbeschikbaarheid van de Verandering aan openbare dialoog met Bevestig benadrukte.](../images/ui/sandbox-tooling/change-package-availability.png)
 
@@ -128,10 +146,10 @@ Plak de gekopieerde pakketlading in het tekstgebied en selecteer **[!UICONTROL C
 
 Navigeer naar **[!UICONTROL Sharing status]** om de huidige status van uw aanvraag voor delen weer te geven. De huidige status van de aanvraag wordt weergegeven in de kolom **[!UICONTROL Sharing status]** .
 
-![ het het Delen statuslusje dat een handig ladingsverzoek toont.](../images/ui/sandbox-tooling/sharing-status.png)
+![ het Delende statuslusje dat een handig loonladingsverzoek toont.](../images/ui/sandbox-tooling/sharing-status.png)
 
 ## Volgende stappen {#next-steps}
 
-In dit document wordt uitgelegd hoe u de functie Sandbox-gereedschappen kunt gebruiken om pakketten te delen tussen verschillende organisaties. Voor extra informatie, verwijs naar de [ zandbak tooling gids ](../ui/sandbox-tooling.md).
+In dit document wordt getoond hoe u de functie Sandbox-gereedschappen kunt gebruiken om pakketten te delen tussen verschillende organisaties. Voor extra informatie, verwijs naar de [ zandbak tooling gids ](../ui/sandbox-tooling.md).
 
-Leren hoe te om verschillende handelingen uit te voeren gebruikend Sandbox API, zie de [ gids van de zandbakontwikkelaar ](../api/getting-started.md). Voor een overzicht op hoog niveau van sandboxen in Experience Platform, verwijs naar de [ overzichtsdocumentatie ](../home.md).
+Leren hoe te om verschillende verrichtingen uit te voeren gebruikend zandbak API, zie de [ gids van de zandbakontwikkelaar ](../api/getting-started.md). Voor een overzicht op hoog niveau van zandbakken in Experience Platform, verwijs naar de [ overzichtsdocumentatie ](../home.md).
