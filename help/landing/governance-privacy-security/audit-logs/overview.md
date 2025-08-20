@@ -36,7 +36,7 @@ Wanneer een gebruiker een actie uitvoert, worden twee soorten controlegebeurteni
 
 >[!NOTE]
 >
-> De meta-gegevens voor de acties **voegen gebruiker** toe en **verwijderen gebruiker** binnen het **5} middel van de Rol zal niet e-mailidentiteitskaart van de gebruiker bevatten die de actie uitvoerde.** In plaats daarvan worden in de logboeken de door het systeem gegenereerde e-mailadressen-id (system@adobe.com) weergegeven.
+> De meta-gegevens voor de acties **voegen gebruiker** toe en **verwijderen gebruiker** binnen het **5&rbrace; middel van de Rol zal niet e-mailidentiteitskaart van de gebruiker bevatten die de actie uitvoerde.** In plaats daarvan worden in de logboeken de door het systeem gegenereerde e-mailadressen-id (system@adobe.com) weergegeven.
 
 Dit document behandelt controlelogboeken in Experience Platform, met inbegrip van hoe te om hen in UI of API te bekijken en te beheren.
 
