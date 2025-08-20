@@ -79,7 +79,7 @@ Doelen waarvoor de schakeloptie **[!UICONTROL Enabled/Disabled]** is ingeschakel
 > ![ doorbladert Lusje ](../assets/ui/workspace/browse-tab.png)
 > 
 > * Selecteer de ellips (`...`) in de [!UICONTROL Name] kolom en gebruik ![ activeer de controle van het publiek ](/help/images/icons/data-add.png) **[!UICONTROL Activate audiences]** controle om publiek of datasets naar die bestemming uit te voeren.
-> * Selecteer de ellips (`...`) in de [!UICONTROL Name] kolom en gebruik ![ uitgeven bestemmingscontrole ](/help/images/icons/edit.png)**[!UICONTROL Edit destination]**controle om bestaande bestemmingsverbindingen uit te geven. Lees het leerprogramma op [ het uitgeven bestemmingen ](/help/destinations/ui/edit-destination.md) voor meer informatie.
+> * Selecteer de ellips (`...`) in de [!UICONTROL Name] kolom en gebruik ![ uitgeven bestemmingscontrole ](/help/images/icons/edit.png)**[!UICONTROL Edit destination]**&#x200B;controle om bestaande bestemmingsverbindingen uit te geven. Lees het leerprogramma op [ het uitgeven bestemmingen ](/help/destinations/ui/edit-destination.md) voor meer informatie.
 > * Selecteer de ellips (`...`) in de [!UICONTROL Name] kolom en gebruik ![ uitgeven marketing actiecontrole ](/help/images/icons/edit-marketing-actions.svg) **[!UICONTROL Edit marketing actions]** controle om [ de marketing acties ](/help/destinations/ui/edit-activation.md#edit-marketing-actions) voor de geselecteerde bestemming te veranderen.
 > * Selecteer de ellips (`...`) in de [!UICONTROL Name] kolom en gebruik de ![ controle van de Schrapping ](/help/images/icons/delete.png) **[!UICONTROL Delete]** controle [ verwijderen ](delete-destinations.md) een bestaande verbinding aan een bestemming.
 > * Selecteer de ellips (`...`) in de [!UICONTROL Name] kolom en gebruik de ![ Mening in controle ](/help/images/icons/monitoring.png) **[!UICONTROL View in monitoring]** controle om activeringsinformatie voor deze bestemming in het [ controledashboard ](/help/dataflows/ui/monitor-destinations.md#monitoring-destinations-dashboard) te bekijken.
@@ -183,9 +183,9 @@ Op het tabblad **[!UICONTROL Accounts]** vindt u meer informatie over de verbind
 
 >[!TIP]
 >
-> * Selecteer de ellips (`...`) in de [!UICONTROL Platform] kolom en gebruik ![ controle ](/help/images/icons/data-add.png)**[!UICONTROL Activate]**activeren/**[!UICONTROL Activate audiences]**/**[!UICONTROL Export datasets]**controle om publiek of datasets naar die bestemming uit te voeren.
-> * Selecteer de ellips (`...`) in de [!UICONTROL Platform] kolom en gebruik ![ uitgeven detailcontrole ](/help/images/icons/edit.png)**[!UICONTROL Edit details]**controle om [ ](update-accounts.md) de details van een bestaande bestemmingsrekening bij te werken.
-> * Selecteer de ellips (`...`) in de [!UICONTROL Platform] kolom en gebruik de ![ controle van de Schrapping ](/help/images/icons/delete.png)**[!UICONTROL Delete]**controle [ om ](delete-destination-account.md) een bestaande bestemmingsrekening te schrappen.
+> * Selecteer de ellips (`...`) in de [!UICONTROL Platform] kolom en gebruik ![ controle ](/help/images/icons/data-add.png)**[!UICONTROL Activate]**&#x200B;activeren/**[!UICONTROL Activate audiences]**/**[!UICONTROL Export datasets]**&#x200B;controle om publiek of datasets naar die bestemming uit te voeren.
+> * Selecteer de ellips (`...`) in de [!UICONTROL Platform] kolom en gebruik ![ uitgeven detailcontrole ](/help/images/icons/edit.png)**[!UICONTROL Edit details]**&#x200B;controle om [&#128279;](update-accounts.md) de details van een bestaande bestemmingsrekening bij te werken.
+> * Selecteer de ellips (`...`) in de [!UICONTROL Platform] kolom en gebruik de ![ controle van de Schrapping ](/help/images/icons/delete.png)**[!UICONTROL Delete]**&#x200B;controle [ om ](delete-destination-account.md) een bestaande bestemmingsrekening te schrappen.
 
 ![ Rekeningen tabel ](../assets/ui/workspace/accounts-tab.png)
 
