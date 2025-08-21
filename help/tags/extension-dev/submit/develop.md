@@ -2,9 +2,9 @@
 title: Een extensie ontwikkelen
 description: Dit document biedt een algemeen overzicht van het ontwikkelingsproces van de tagextensie met koppelingen naar verdere documentatie voor meer gedetailleerde processen.
 exl-id: fb2f7275-a5da-4a41-b915-822c71c02e5c
-source-git-commit: cfcc70d66a34fa51bf0e21525539ba88de7fc367
+source-git-commit: 73452d0735c6a040ddd25b4cd00cec4b91eaf7ae
 workflow-type: tm+mt
-source-wordcount: '462'
+source-wordcount: '447'
 ht-degree: 10%
 
 ---
@@ -24,8 +24,6 @@ Met die kennis, kunt u plannen welke componenten in uw uitbreiding zouden moeten
 Met een plan op zijn plaats, kunnen deze gidsen u het proces van de uitbreidingsontwikkeling begrijpen:
 
 * De [ begonnen gids ](../getting-started.md) en andere documenten onder **ontwikkeling van de Uitbreiding** in de linkernavigatie zijn groot verwijzingsmateriaal voor het begrip van uitbreidingen. Deze bevatten informatie over wat extensies kunnen doen, hoe gebruikersgegevens worden opgeslagen en doorgegeven tussen uw extensie en Adobe Experience Platform, hoe uw code in bibliotheken wordt opgenomen en hoe uw extensiecode wordt geïnterpreteerd en gebruikt tijdens runtime in de browser.
-<!-- * The [extension tutorial video](https://youtu.be/rxjtC9o4rl0) is a great place to start. -->
-* De [ Inleiding aan de playlist van Uitbreidingen ](https://www.youtube.com/playlist?list=PLOdw8u2F8CIgynzKrPEwCPuDxzHW1WP5m) YouTube loopt door het proces om uitbreidingspakketten tot stand te brengen.
 * [ Begrijpend JSON Schema ](https://spacetelescope.github.io/understanding-json-schema/index.html#) artikel.
 * [ JSON Lint/Validator ](https://jsonlint.com/).
 * [ JSON Viewer ](https://chrome.google.com/webstore/detail/json-viewer/gbmdgpbipfallnflgajpaliibnhdgobh) de uitbreiding van Chrome om JSON &amp; JSONP te benadrukken en te drukken.
