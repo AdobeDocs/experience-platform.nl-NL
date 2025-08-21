@@ -3,9 +3,9 @@ title: Azure Private Link gebruiken voor bronnen in de API
 description: Meer informatie over het maken en gebruiken van persoonlijke koppelingen voor Adobe Experience Platform Sources
 badge: Beta
 exl-id: 9b7fc1be-5f42-4e29-b552-0b0423a40aa1
-source-git-commit: 52365851aef0e0e0ad532ca19a8e0ddccacf7af7
+source-git-commit: 65063d3b81d7082fc7780949c6ebd2ce09461b88
 workflow-type: tm+mt
-source-wordcount: '1380'
+source-wordcount: '1657'
 ht-degree: 0%
 
 ---
@@ -398,9 +398,13 @@ curl -X GET \
 
 +++
 
-## Interactieve ontwerpen inschakelen {#enable-interactive-authoring}
+## [!DNL Interactive Authoring] inschakelen {#enable-interactive-authoring}
 
-Interactief ontwerpen wordt gebruikt voor functies zoals het verkennen van een verbinding of account en het voorvertonen van gegevens. Als u interactief ontwerpen wilt inschakelen, vraagt u een POST-aanvraag naar `/privateEndpoints/interactiveAuthoring` en geeft u `enable` op als een operator in de queryparameters.
+>[!IMPORTANT]
+>
+>U moet [!DNL Interactive Authoring] inschakelen voordat u een flow maakt of bijwerkt en voordat u een verbinding maakt, bijwerkt of verkent.
+
+[!DNL Interactive Authoring] wordt gebruikt voor functies zoals het verkennen van een verbinding of account en het voorvertonen van gegevens. Als u [!DNL Interactive Authoring] wilt inschakelen, moet u een POST-aanvraag indienen bij `/privateEndpoints/interactiveAuthoring` en `enable` opgeven als een operator in de queryparameters.
 
 **API formaat**
 
@@ -410,11 +414,11 @@ POST /privateEndpoints/interactiveAuthoring?op=enable
 
 | Query-parameter | Beschrijving |
 | --- | --- |
-| `op` | De bewerking die u wilt uitvoeren. Stel de waarde `op` in op `enable` als u interactief ontwerpen wilt inschakelen. |
+| `op` | De bewerking die u wilt uitvoeren. Als u [!DNL Interactive Authoring] wilt inschakelen, stelt u de `op` waarde in op `enable` . |
 
 **Verzoek**
 
-Het volgende verzoek laat interactieve creatie voor uw privé eindpunt toe en plaatst TTL aan 60 minuten.
+Het volgende verzoek laat [!DNL Interactive Authoring] voor uw privé eindpunt toe en plaatst TTL aan 60 minuten.
 
 +++Selecteren om aanvraagvoorbeeld weer te geven
 
@@ -433,7 +437,7 @@ curl -X POST \
 
 | Eigenschap | Beschrijving |
 | --- | --- |
-| `autoTerminationMinutes` | De interactieve ontwerpings-TTL (tijd-aan-levende) in notulen. Interactief ontwerpen wordt gebruikt voor functies zoals het verkennen van een verbinding of account en het voorvertonen van gegevens. U kunt een maximum TTL van 120 minuten plaatsen. De standaard TTL is 60 minuten. |
+| `autoTerminationMinutes` | De [!DNL Interactive Authoring] TTL (time-to-live) in minuten. [!DNL Interactive Authoring] wordt gebruikt voor functies zoals het verkennen van een verbinding of account en het voorvertonen van gegevens. U kunt een maximum TTL van 120 minuten plaatsen. De standaard TTL is 60 minuten. |
 
 +++
 
@@ -441,9 +445,9 @@ curl -X POST \
 
 Een geslaagde reactie retourneert HTTP-status 202 (geaccepteerd).
 
-## Interactieve ontwerpstatus ophalen {#retrieve-interactive-authoring-status}
+## [!DNL Interactive Authoring] status ophalen {#retrieve-interactive-authoring-status}
 
-Als u de huidige status van interactief ontwerpen voor uw persoonlijke eindpunt wilt bekijken, vraagt u GET om `/privateEndpoints/interactiveAuthoring` .
+Als u de huidige status van [!DNL Interactive Authoring] voor uw persoonlijke eindpunt wilt weergeven, vraagt u GET om `/privateEndpoints/interactiveAuthoring` .
 
 **API formaat**
 
@@ -453,7 +457,7 @@ GET /privateEndpoints/interactiveAuthoring
 
 **Verzoek**
 
-In het volgende verzoek wordt de status van interactief ontwerpen opgehaald:
+Met de volgende aanvraag wordt de status van [!DNL Interactive Authoring] opgehaald:
 
 +++Selecteren om aanvraagvoorbeeld weer te geven
 
@@ -481,7 +485,7 @@ curl -X GET \
 
 | Eigenschap | Beschrijving |
 | --- | --- |
-| `status` | De status van interactief ontwerpen. Geldige waarden zijn: `disabled` , `enabling` , `enabled` . |
+| `status` | De status van [!DNL Interactive Authoring] . Geldige waarden zijn: `disabled` , `enabling` , `enabled` . |
 
 +++
 
@@ -819,3 +823,124 @@ Een geslaagde reactie retourneert alle verbindingen die aan persoonlijke eindpun
 ```
 
 +++
+
+## Bijlage
+
+Lees deze sectie voor meer informatie met [!DNL Azure] persoonlijke koppelingen in de API.
+
+### Uw [!DNL Snowflake] -account configureren voor verbinding met persoonlijke koppelingen
+
+U moet de volgende stappen uitvoeren om de [!DNL Snowflake] -bron te kunnen gebruiken met persoonlijke koppelingen.
+
+Eerst, moet u een steunkaartje in [!DNL Snowflake] opheffen en om **identiteitskaart van het eindpuntdienstmiddel** van het [!DNL Azure] gebied van uw [!DNL Snowflake] rekening verzoeken. Voer de onderstaande stappen uit om een [!DNL Snowflake] -ticket op te halen:
+
+1. Navigeer aan [[!DNL Snowflake]  UI ](https://app.snowflake.com) en teken binnen met uw e-mailrekening. Tijdens deze stap moet u controleren of uw e-mail is geverifieerd in de profielinstellingen.
+2. Selecteer uw **gebruikersmenu** en selecteer dan **steun** om tot [!DNL Snowflake] steun toegang te hebben.
+3. Selecteer **[!DNL + Support Case]** als u een draagtas wilt maken. Vul vervolgens het formulier in met relevante gegevens en voeg de benodigde bestanden bij.
+4. Als u klaar bent, verzendt u de kwestie.
+
+De eindpuntmiddel identiteitskaart wordt geformatteerd als volgt:
+
+```shell
+subscriptions/{SUBSCRIPTION_ID}/resourceGroups/az{REGION}-privatelink/providers/microsoft.network/privatelinkservices/sf-pvlinksvc-az{REGION}
+```
+
++++Selecteren om voorbeeld weer te geven
+
+```shell
+/subscriptions/4575fb04-6859-4781-8948-7f3a92dc06a3/resourceGroups/azwestus2-privatelink/providers/microsoft.network/privatelinkservices/sf-pvlinksvc-azwestus2
+```
+
++++
+
+| Parameter | Beschrijving | Voorbeeld |
+| --- | --- | --- |
+| `{SUBSCRIPTION_ID}` | De unieke id die uw [!DNL Azure] -abonnement aangeeft. | `a1b2c3d4-5678-90ab-cdef-1234567890ab` |
+| `{REGION}` | Het [!DNL Azure] gebied van uw [!DNL Snowflake] account. | `azwestus2` |
+
+### Haal de configuratiegegevens van uw persoonlijke koppeling op
+
+Als u de configuratiegegevens van uw persoonlijke koppeling wilt ophalen, moet u de volgende opdracht uitvoeren in [!DNL Snowflake] :
+
+```sql
+USE ROLE accountadmin;
+SELECT key, value::varchar
+FROM TABLE(FLATTEN(input => PARSE_JSON(SYSTEM$GET_PRIVATELINK_CONFIG())));
+```
+
+Vervolgens haalt u waarden op voor de volgende eigenschappen:
+
+* `privatelink-account-url`
+* `regionless-privatelink-account-url`
+* `privatelink_ocsp-url`
+
+Nadat u de waarden hebt opgehaald, kunt u de volgende aanroep uitvoeren om een persoonlijke koppeling voor [!DNL Snowflake] te maken.
+
+**Verzoek**
+
+Met de volgende aanvraag wordt een privéeindpunt voor [!DNL Snowflake] gemaakt:
+
+>[!BEGINTABS]
+
+>[!TAB  Malplaatje ]
+
+```shell
+curl -X POST \
+  'https://platform.adobe.io/data/foundation/connectors/privateEndpoints/' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Content-Type: application/json' \
+  -d '{
+    "name": "{ENDPOINT_NAME}",
+    "subscriptionId": "{AZURE_SUBSCRIPTION_ID}",
+    "resourceGroupName": "{RESOURCE_GROUP_NAME}",
+    "resourceName": "{SNOWFLAKE_ENDPOINT_SERVICE_NAME}",
+    "fqdns": [
+      "{PRIVATELINK_ACCOUNT_URL}",
+      "{REGIONLESS_PRIVATELINK_ACCOUNT_URL}",
+      "{PRIVATELINK_OCSP_URL}"
+    ],
+    "connectionSpec": {
+      "id": "b2e08744-4f1a-40ce-af30-7abac3e23cf3",
+      "version": "1.0"
+    }
+  }'
+```
+
+>[!TAB  Voorbeeld ]
+
+```shell
+curl -X POST \
+  'https://platform.adobe.io/data/foundation/connectors/privateEndpoints/' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Content-Type: application/json' \
+  -d '{
+    "name": "TEST_Snowflake_PE",
+    "subscriptionId": "4575fb04-6859-4781-8948-7f3a92dc06a3",
+    "resourceGroupName": "azwestus2-privatelink",
+    "resourceName": "sf-pvlinksvc-azwestus2",
+    "fqdns": [
+      "hf06619.west-us-2.privatelink.snowflakecomputing.com",
+      "adobe-segmentationdbint.privatelink.snowflakecomputing.com",
+      "ocsp.hf06619.west-us-2.privatelink.snowflakecomputing.com"
+    ],
+    "connectionSpec": {
+      "id": "b2e08744-4f1a-40ce-af30-7abac3e23cf3",
+      "version": "1.0"
+    }
+  }'
+```
+
+
+>[!ENDTABS]
+
+### Een privé-eindpunt goedkeuren voor [!DNL Azure Blob] en [!DNL Azure Data Lake Gen2]
+
+Als u een aanvraag voor een privéeindpunt voor de bronnen [!DNL Azure Blob] en [!DNL Azure Data Lake Gen2] wilt goedkeuren, meldt u zich aan bij de map [!DNL Azure Portal] . Selecteer in de linkernavigatie **[!DNL Data storage]** , ga naar de tab **[!DNL Security + networking]** en kies **[!DNL Networking]** . Selecteer vervolgens **[!DNL Private endpoints]** om een lijst weer te geven met persoonlijke eindpunten die zijn gekoppeld aan uw account en de huidige verbindingsstatussen. Als u een aanvraag in behandeling wilt goedkeuren, selecteert u het gewenste eindpunt en klikt u op **[!DNL Approve]** .
+
+![ het Azure portaal met een lijst van hangende privé eindpunten.](../../images/tutorials/private-links/azure.png)
