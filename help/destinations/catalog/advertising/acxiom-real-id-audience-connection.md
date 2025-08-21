@@ -14,7 +14,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->Het doel van [!DNL Acxiom Real ID™ Audience Connection] is in bèta. Deze doelconnector en documentatiepagina worden gemaakt en onderhouden door het team van [!DNL Acxiom] . Voor om het even welke onderzoeken of updateverzoeken, direct contactAcxiom [ ](mailto:acxiom-adobe-help@acxiom.com).
+>Het doel van [!DNL Acxiom Real ID™ Audience Connection] is in bèta. Deze doelconnector en documentatiepagina worden gemaakt en onderhouden door het team van [!DNL Acxiom] . Voor om het even welke onderzoeken of updateverzoeken, direct contactAcxiom [&#128279;](mailto:acxiom-adobe-help@acxiom.com).
 
 Gebruik de [!DNL Acxiom Real ID Audience Connection] bestemming om publiek met [!DNL Acxiom's] [ Echte ID™ ](https://www.acxiom.com/real-id/real-id/) technologie te verbeteren en publiek aan veelvoudige platforms, zoals [!DNL Altice], [!DNL Ampersand], [!DNL Comcast], en meer te activeren.
 
@@ -53,7 +53,7 @@ In deze sectie wordt beschreven welke soorten publiek u naar dit doel kunt expor
 
 | Oorsprong publiek | Ondersteund | Beschrijving |
 |---------------|----------------|----------------|
-| Segmentatieservice | ✓ | Het publiek produceerde door de Dienst van de Segmentatie van Experience Platform [ ](https://experienceleague.adobe.com/en/docs/experience-platform/segmentation/home). |
+| Segmentatieservice | ✓ | Het publiek produceerde door de Dienst van de Segmentatie van Experience Platform [&#128279;](https://experienceleague.adobe.com/en/docs/experience-platform/segmentation/home). |
 | Aangepaste uploads | ✓ | Het publiek [ ingevoerde ](https://experienceleague.adobe.com/en/docs/experience-platform/segmentation/ui/audience-portal#import-audience) in Experience Platform van Csv- dossiers. |
 
 
@@ -114,7 +114,7 @@ Als u wilt dat het doel van [!DNL Acxiom Real ID Audience Connection] de publiek
 
 
 
-Voer in de kolom **[!UICONTROL Source Field]** de naam in van het bronkenmerk dat u wilt toewijzen aan het corresponderende doelveld, of selecteer het pijlpictogram om het **[!UICONTROL  Select source field]** -scherm te openen. Selecteer vervolgens **[!UICONTROL Next]** .
+Voer in de kolom **[!UICONTROL Source Field]** de naam in van het bronkenmerk dat u wilt toewijzen aan het corresponderende doelveld, of selecteer het pijlpictogram om het **[!UICONTROL &#x200B; Select source field]** -scherm te openen. Selecteer vervolgens **[!UICONTROL Next]** .
 ![ het scherm van de Toewijzing ](../../assets/catalog/advertising/acxiom-real-id-audience-connection/real_id_mapping_screen.png)
 
 
