@@ -1,17 +1,16 @@
 ---
-title: De Steun van de privé Verbinding in Bronnen
+title: Azure Private Link gebruiken voor bronnen in de API
 description: Meer informatie over het maken en gebruiken van persoonlijke koppelingen voor Adobe Experience Platform Sources
 badge: Beta
-hide: true
-hidefromtoc: true
-source-git-commit: 4c91ffc60a2537fcc76ce935bf3b163984fdc5e4
+exl-id: 9b7fc1be-5f42-4e29-b552-0b0423a40aa1
+source-git-commit: 52365851aef0e0e0ad532ca19a8e0ddccacf7af7
 workflow-type: tm+mt
-source-wordcount: '1326'
+source-wordcount: '1380'
 ht-degree: 0%
 
 ---
 
-# De Steun van de privé Verbinding in Bronnen
+# [!DNL Azure Private Link] gebruiken voor bronnen in de API
 
 >[!AVAILABILITY]
 >
@@ -22,11 +21,13 @@ ht-degree: 0%
 >* [[!DNL Azure File Storage]](../../connectors/cloud-storage/azure-file-storage.md)
 >* [[!DNL Snowflake]](../../connectors/databases/snowflake.md)
 
-Lees deze gids om te leren hoe u een privé eindpuntverbinding aan op Azure-Gebaseerde bronnen door een privé verbinding kunt vestigen, en voor een veiliger overdrachtmechanisme voor uw gegevens toestaan.
+Met de functie [!DNL Azure Private Link] kunt u persoonlijke eindpunten maken waarmee uw Adobe Experience Platform-bronnen verbinding kunnen maken. Sluit veilig uw bronnen aan een virtueel netwerk aan gebruikend privé IP adressen, die de behoefte aan openbare IPs elimineren en uw aanvalsoppervlakte verminderen.Vereenvoudig uw netwerkopstelling door de behoefte aan complexe firewall of de configuraties van de Vertaling van het Adres van het Netwerk te verwijderen, terwijl het verzekeren van gegevensverkeer slechts goedgekeurde diensten bereikt.
+
+Lees deze gids om te leren hoe u APIs kunt gebruiken om een privé eindpunt tot stand te brengen en te gebruiken.
 
 ## Aan de slag
 
-Deze handleiding vereist een goed begrip van de volgende onderdelen van Adobe Experience Platform:
+Deze handleiding vereist een goed begrip van de volgende onderdelen van Experience Platform:
 
 * [ Bronnen ](../../home.md): Experience Platform staat gegevens toe om van diverse bronnen worden opgenomen terwijl het voorzien van u van de capaciteit om, inkomende gegevens te structureren te etiketteren en te verbeteren gebruikend [!DNL Platform] diensten.
 * [ Sandboxes ](../../../sandboxes/home.md): Experience Platform verstrekt virtuele zandbakken die één enkele [!DNL Platform] instantie in afzonderlijke virtuele milieu&#39;s verdelen helpen digitale ervaringstoepassingen ontwikkelen en ontwikkelen.

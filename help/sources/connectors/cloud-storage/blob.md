@@ -2,9 +2,9 @@
 title: Azure Blob Source Connector - Overzicht
 description: Leer hoe u uw Azure Blob-account kunt verbinden met Experience Platform
 exl-id: 62adc74f-3570-42c7-9ae6-3ddbc09eccc7
-source-git-commit: f659d78eebc1c5e74021f9a41a2a489389a6588e
+source-git-commit: 8e932a25026bef2b785cfddfb8b668b1dd47eb0d
 workflow-type: tm+mt
-source-wordcount: '1015'
+source-wordcount: '1021'
 ht-degree: 0%
 
 ---
@@ -81,7 +81,7 @@ Geef waarden op voor de volgende referenties om uw [!DNL Azure Blob Storage] -ac
 | Credentials | Beschrijving |
 | --- | --- |
 | `serviceEndpoint` | Het eindpunt-URL van uw [!DNL Azure Blob Storage] -account. Doorgaans in de notatie: `https://{ACCOUNT_NAME}.blob.core.windows.net`. |
-| `accountKind` | Het type van uw [!DNL Azure Blob Storage] account. Veelvoorkomende waarden zijn `StorageV2` , `BlobStorage` of `Storage` . |
+| `accountKind` | Het type van uw [!DNL Azure Blob Storage] account. Veelvoorkomende waarden zijn `Storage` (general purpose V1), `StorageV2` (general purpose V2), `BlobStorage` en `BlockBlobStorage` . |
 | `servicePrincipalId` | De client/toepassings-id van de Azure Active Directory (AAD) service principal die voor verificatie wordt gebruikt. |
 | `servicePrincipalKey` | Het clientgeheim of wachtwoord dat aan de Azure service principal is gekoppeld. |
 | `tenant` | De Azure Active Directory (AAD) huurder-id waar de serviceprincipal is geregistreerd. |

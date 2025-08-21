@@ -2,9 +2,9 @@
 title: Connect Azure Blob Storage naar Experience Platform met behulp van de Flow Service API
 description: Leer hoe u Adobe Experience Platform verbindt met Azure Blob met behulp van de Flow Service API.
 exl-id: 4ab8033f-697a-49b6-8d9c-1aadfef04a04
-source-git-commit: 7acdc090c020de31ee1a010d71a2969ec9e5bbe1
+source-git-commit: 8e932a25026bef2b785cfddfb8b668b1dd47eb0d
 workflow-type: tm+mt
-source-wordcount: '651'
+source-wordcount: '657'
 ht-degree: 0%
 
 ---
@@ -169,7 +169,7 @@ curl -X POST \
 | `serviceEndpoint` | Het eindpunt-URL van uw [!DNL Azure Blob Storage] -account. Doorgaans in de notatie: `https://{ACCOUNT_NAME}.blob.core.windows.net`. |
 | `servicePrincipalId` | De client/toepassings-id van de Azure Active Directory (AAD) service principal die voor verificatie wordt gebruikt. |
 | `servicePrincipalKey` | Het clientgeheim of wachtwoord dat aan de Azure service principal is gekoppeld. |
-| `accountKind` | Het type van uw [!DNL Azure Blob Storage] account. Veelvoorkomende waarden zijn `StorageV2` , `BlobStorage` of `Storage` . |
+| `accountKind` | Het type van uw [!DNL Azure Blob Storage] account. Veelvoorkomende waarden zijn `Storage` (general purpose V1), `StorageV2` (general purpose V2), `BlobStorage` en `BlockBlobStorage` . |
 | `tenant` | De Azure Active Directory (AAD) huurder-id waar de serviceprincipal is geregistreerd. |
 | `container` | De naam van de [!DNL Azure Blob Storage] -container waarin uw gegevensbestanden zijn opgeslagen. |
 | `folderPath` | Het pad binnen de opgegeven container waarin de bestanden zich bevinden. |
