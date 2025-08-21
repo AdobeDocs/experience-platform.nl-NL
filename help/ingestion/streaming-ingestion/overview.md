@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Overzicht van streaming inscriptie
 description: Streaming opname voor Adobe Experience Platform biedt gebruikers een methode om gegevens van client- en serverapparaten in real-time naar Experience Platform te verzenden.
 exl-id: 851f15fd-7ac5-4a9f-934d-6b907057da87
-source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
+source-git-commit: f5ae9170b312d9f24c863a14b8cc2310fcaf1cb2
 workflow-type: tm+mt
-source-wordcount: '424'
+source-wordcount: '419'
 ht-degree: 0%
 
 ---
@@ -39,7 +39,7 @@ Voor meer informatie bij het toelaten van een dataset voor [!DNL Profile] en [!D
 
 >[!IMPORTANT]
 >
->Hulplijnen voor het opnemen van streaming worden berekend op organisatieniveau en niet op sandboxniveau. Dit betekent dat uw gegevensgebruik per sandbox is gebonden aan de totale gebruiksrechten voor licenties die overeenkomen met uw volledige organisatie. Daarnaast is het gebruik van gegevens in ontwikkelingssandboxen beperkt tot 10% van uw totale profielen. Voor meer informatie over de gebruiksrechten van de vergunning, lees de [ gids van de beste praktijken van het gegevensbeheer ](../../landing/license-usage-and-guardrails/data-management-best-practices.md).
+>Guardrails voor het streamen van inname zijn gebonden aan de totale gebruiksrechten voor licenties die overeenkomen met de volledige organisatie. Daarnaast is het gebruik van gegevens in ontwikkelingssandboxen beperkt tot 10% van uw totale profielen. Voor meer informatie over de gebruiksrechten van de vergunning, lees de [ gids van de beste praktijken van het gegevensbeheer ](../../landing/license-usage-and-guardrails/data-management-best-practices.md). Leren hoe te om grenzen aan uw het stromen productie te plaatsen, lees het [ overzicht van de Capaciteit ](../../landing/license-usage-and-guardrails/capacity.md).
 
 | Bestemming | Verwachte vertraging |
 | --------- | ---------------- |
@@ -61,4 +61,4 @@ In de onderstaande tabel vindt u een overzicht van de aanvraag per seconden voor
 
 ## Adobe Experience Platform-extensie
 
-Met de Adobe Experience Platform-extensie kunt u een nieuwe streamingverbinding maken. De extensie [!DNL Experience Platform] biedt acties voor het verzenden van bakens die zijn opgemaakt in [!DNL Experience Data Model] (XDM) voor realtime invoer naar [!DNL Experience Platform] . Bezoek de [&#128279;](../../tags/extensions/client/web-sdk/overview.md) documentatie van de Uitbreiding van 0&rbrace; Experience Platform &lbrace;voor meer informatie.
+Met de Adobe Experience Platform-extensie kunt u een nieuwe streamingverbinding maken. De extensie [!DNL Experience Platform] biedt acties voor het verzenden van bakens die zijn opgemaakt in [!DNL Experience Data Model] (XDM) voor realtime invoer naar [!DNL Experience Platform] . Bezoek de [ documentatie van de Uitbreiding van 0} Experience Platform {voor meer informatie.](../../tags/extensions/client/web-sdk/overview.md)

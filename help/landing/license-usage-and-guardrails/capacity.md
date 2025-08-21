@@ -2,7 +2,7 @@
 title: Gebruik en capaciteit van licenties
 description: Meer informatie over het gebruik van licenties en capaciteitsbeperkingen in Adobe Experience Platform.
 exl-id: 38dad2f1-bd0f-4cc3-a3a6-5105ea866ea4
-source-git-commit: 1bde1f2c1bd33756bd20a2524b50d5a2b4bc464e
+source-git-commit: d0b54e15f132d85964d6458da0769548d231a9c4
 workflow-type: tm+mt
 source-wordcount: '1521'
 ht-degree: 0%
@@ -19,7 +19,7 @@ ht-degree: 0%
 >- **Dashboard van het Gebruik van de Vergunning van de Mening**
 >   - Deze toestemming laat u **mening** het capaciteitshuis.
 >- **beheert Sandboxes**
->   - Deze toestemming laat u **&#x200B;**&#x200B;uw capaciteitstoewijzingen uitgeven.
+>   - Deze toestemming laat u **** uw capaciteitstoewijzingen uitgeven.
 >
 >Meer informatie over toestemmingen binnen Experience Platform kan in het [ overzicht van de toegangscontrole ](/help/access-control/home.md#permissions) worden gevonden
 >
@@ -103,7 +103,7 @@ Op dit moment wordt er capaciteitsinformatie weergegeven over streamingdoorvoer,
 
 #### Streaming doorvoer {#streaming-throughput}
 
-De het stromen productiesectie toont informatie over de het stromen productie door de zandbakken van uw organisatie. De het stromen productiewaarde meet de gecombineerde piekbinnenkomende gebeurtenissen per seconde voor het stromen opname in de dienst van het Profiel.
+In de sectie voor streamingdoorvoer wordt informatie weergegeven over de streamingdoorvoer in de sandboxen van uw organisatie. De het stromen productiewaarde meet de gecombineerde piekbinnenkomende gebeurtenissen per seconde voor het stromen opname in de dienst van het Profiel.
 
 ![ de het stromen productiesectie binnen de pagina van capaciteitsdetails wordt getoond.](/help/landing/images/capacity/streaming-throughput-section.png)
 
@@ -166,7 +166,7 @@ Bovendien kunt u naar uw gegevensstromen kijken en zien of kunt u uw gegevensstr
 | bijdragende factor | Wat het is | Gevolgen van het gebruik | Best practices |
 | --- | --- | --- | --- |
 | Batch naar streaming conversie | Batchwerklasten die in streaming worden omgezet, kunnen de doorvoer aanzienlijk verhogen, wat van invloed is op de prestaties en de toewijzing van bronnen. Bijvoorbeeld het uitvoeren van een bulkprofielupdate na een gebeurtenis zonder tariefgrenzen. | Streaming strategieën zijn niet nodig voor batchgebruik wanneer verwerking met lage latentie niet vereist is. | Evalueer de eisen van het gebruikscase. Voor partij uitgaande marketing, denk na gebruikend [ partij ingestie ](/help/ingestion/batch-ingestion/overview.md) in plaats van het stromen om gegevensopname efficiënter te beheren. |
-| Onnodige gegevensinvoer | Het invoeren van gegevens die niet voor verpersoonlijking worden vereist verhoogt productie zonder waarde toe te voegen, die middelen verspillen. Bijvoorbeeld, het opnemen van al analyseverkeer in profielen ongeacht relevantie. | Overbodige, niet-relevante gegevens zorgen voor ruis, waardoor het moeilijker wordt om onechte gegevenspunten te identificeren. Het kan ook wrijving veroorzaken wanneer het bepalen van en het leiden van publiek en profielen. | Vermeld alleen de gegevens die nodig zijn voor uw gebruiksgevallen. Zorg ervoor dat u overbodige gegevens verwijdert.<ul><li>**Adobe Analytics**: Het 2&rbrace; rij-vlakke filtreren van het gebruik [ om uw gegevensopname te optimaliseren.](/help/sources/tutorials/ui/create/adobe-applications/analytics.md#filtering-for-real-time-customer-profile)</li><li>**Bronnen**: Gebruik [[!DNL Flow Service]  API aan filter rij-vlakke gegevens ](/help/sources/tutorials/api/filter.md) voor gesteunde bronnen zoals [!DNL Snowflake] en [!DNL Google BigQuery].</li></li>**Edge datastream**: Vorm [ dynamische gegevensstromen ](/help/datastreams/configure-dynamic-datastream.md) om rij-vlakke het filtreren van verkeer uit te voeren dat binnen van WebSDK komt.</li></ul> |
+| Onnodige gegevensinvoer | Het invoeren van gegevens die niet voor verpersoonlijking worden vereist verhoogt productie zonder waarde toe te voegen, die middelen verspillen. Bijvoorbeeld, het opnemen van al analyseverkeer in profielen ongeacht relevantie. | Overbodige, niet-relevante gegevens zorgen voor ruis, waardoor het moeilijker wordt om onechte gegevenspunten te identificeren. Het kan ook wrijving veroorzaken wanneer het bepalen van en het leiden van publiek en profielen. | Vermeld alleen de gegevens die nodig zijn voor uw gebruiksgevallen. Zorg ervoor dat u overbodige gegevens verwijdert.<ul><li>**Adobe Analytics**: Het 2} rij-vlakke filtreren van het gebruik [ om uw gegevensopname te optimaliseren.](/help/sources/tutorials/ui/create/adobe-applications/analytics.md#filtering-for-real-time-customer-profile)</li><li>**Bronnen**: Gebruik [[!DNL Flow Service]  API aan filter rij-vlakke gegevens ](/help/sources/tutorials/api/filter.md) voor gesteunde bronnen zoals [!DNL Snowflake] en [!DNL Google BigQuery].</li></li>**Edge datastream**: Vorm [ dynamische gegevensstromen ](/help/datastreams/configure-dynamic-datastream.md) om rij-vlakke het filtreren van verkeer uit te voeren dat binnen van WebSDK komt.</li></ul> |
 
 ## Veelgestelde vragen {#faq}
 
