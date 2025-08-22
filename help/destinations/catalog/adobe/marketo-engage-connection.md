@@ -45,7 +45,7 @@ Ze kunnen hun publiek in Marketo Engage activeren en het **[!UICONTROL Audience 
 
 ## Vereisten {#prerequisites}
 
-De gebruiker die opstelling de bestemming moet [ hebben uitgeeft Persoon ](https://experienceleague.adobe.com/en/docs/marketo/using/product-docs/administration/users-and-roles/descriptions-of-role-permissions#access-database) toestemming in hun instantie en verdeling van Marketo.
+De gebruiker die opstelling de bestemming moet [ hebben uitgeeft Persoon ](https://experienceleague.adobe.com/nl/docs/marketo/using/product-docs/administration/users-and-roles/descriptions-of-role-permissions#access-database) toestemming in hun instantie en verdeling van Marketo.
 
 ## Ondersteunde identiteiten {#supported-identities}
 
@@ -144,7 +144,7 @@ Als u details voor de bestemming wilt configureren, vult u de vereiste en option
    * **[!UICONTROL Profile only]**: selecteer deze optie als u de Marketo-lead-profielen up-to-date wilt houden met de meest recente informatie van Experience Platform.
    * **[!UICONTROL Audience only]**: selecteer deze optie als u leden van het publiek wilt toevoegen aan Marketo-lijsten zonder hun profielgegevens bij te werken.
 * **[!UICONTROL Partition]**: *de selectie van de Verdeling is beschikbaar slechts wanneer het kiezen **[!UICONTROL Profile only]**&#x200B;of **[!UICONTROL Audience and profile]**&#x200B;synchronisatietypen*. Selecteer een Marketo-partitie-id die is gekoppeld aan uw gekozen werkruimte. Op deze manier kunt u opgeven welke hoofdpartitie in Marketo de geëxporteerde gegevens ontvangt. Als u geen specifieke partitie kiest, worden uw gegevens naar de **[!UICONTROL Default]** -partitie in Marketo verzonden.
-* **[!UICONTROL Marketo deduplication field]**: selecteer het Marketo-deduplicatieveld dat u wilt gebruiken bij het bijwerken van bestaande Marketo-leads. Deze kiezer toont de velden die u hebt gemarkeerd als deduplicatievelden in Marketo. Als u een specifiek gebied van Marketo als deduplicatieveld wilt tonen, moet u het gebied als a [ doorzoekbaar gebied ](https://experienceleague.adobe.com/en/docs/marketo-developer/marketo/rest/lead-database/lead-database) in Marketo merken.
+* **[!UICONTROL Marketo deduplication field]**: selecteer het Marketo-deduplicatieveld dat u wilt gebruiken bij het bijwerken van bestaande Marketo-leads. Deze kiezer toont de velden die u hebt gemarkeerd als deduplicatievelden in Marketo. Als u een specifiek gebied van Marketo als deduplicatieveld wilt tonen, moet u het gebied als a [ doorzoekbaar gebied ](https://experienceleague.adobe.com/nl/docs/marketo-developer/marketo/rest/lead-database/lead-database) in Marketo merken.
 
   >[!NOTE]
   >

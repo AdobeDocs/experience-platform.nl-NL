@@ -82,7 +82,7 @@ Raadpleeg de onderstaande tabel voor informatie over het exporttype en de export
 >* Om met de bestemming te verbinden, hebt u **[!UICONTROL View Destinations]** en **[!UICONTROL Manage Destinations]** [ toegangsbeheertoestemmingen ](/help/access-control/home.md#permissions) nodig.
 >* Om gegevens te activeren, hebt u **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, en **[!UICONTROL View Segments]** [ toegangsbeheertoestemmingen ](/help/access-control/home.md#permissions) nodig. Lees het [ overzicht van de toegangscontrole ](/help/access-control/ui/overview.md) of contacteer uw productbeheerder om de vereiste toestemmingen te verkrijgen.
 
-Voor gedetailleerde instructies op hoe te opstelling de bestemming en het publiek te activeren, lees [ duw een Push een Publiek van Adobe Experience Platform aan een Statische Lijst van Marketo ](https://experienceleague.adobe.com/docs/marketo/using/product-docs/core-marketo-concepts/smart-lists-and-static-lists/static-lists/push-an-adobe-experience-cloud-segment-to-a-marketo-static-list.html) in de documentatie van Marketo.
+Voor gedetailleerde instructies op hoe te opstelling de bestemming en het publiek te activeren, lees [ duw een Push een Publiek van Adobe Experience Platform aan een Statische Lijst van Marketo ](https://experienceleague.adobe.com/docs/marketo/using/product-docs/core-marketo-concepts/smart-lists-and-static-lists/static-lists/push-an-adobe-experience-cloud-segment-to-a-marketo-static-list.html?lang=nl-NL) in de documentatie van Marketo.
 
 In de onderstaande video ziet u ook de stappen voor het configureren van een Marketo-bestemming en het activeren van het publiek.
 
@@ -105,4 +105,4 @@ De monitoringinformatie voor de [!DNL Marketo Engage] -verbinding bevat informat
 
 ## Gegevensgebruik en -beheer {#data-usage-governance}
 
-Alle [!DNL Adobe Experience Platform] -doelen zijn compatibel met het beleid voor gegevensgebruik bij het verwerken van uw gegevens. Voor gedetailleerde informatie over hoe [!DNL Adobe Experience Platform] gegevensbeheer afdwingt, zie het [ gegeven beheer overzicht ](https://experienceleague.adobe.com/docs/experience-platform/data-governance/home.html).
+Alle [!DNL Adobe Experience Platform] -doelen zijn compatibel met het beleid voor gegevensgebruik bij het verwerken van uw gegevens. Voor gedetailleerde informatie over hoe [!DNL Adobe Experience Platform] gegevensbeheer afdwingt, zie het [ gegeven beheer overzicht ](https://experienceleague.adobe.com/docs/experience-platform/data-governance/home.html?lang=nl-NL).
