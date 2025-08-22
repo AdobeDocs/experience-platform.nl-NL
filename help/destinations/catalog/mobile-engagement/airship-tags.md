@@ -3,16 +3,24 @@ keywords: luchtschepen, codes;bestemming van het luchtschip
 title: Koppeling met vliegtuigcodes
 description: Geef naadloos Adobe Audience Data door aan het luchtschip als Publiek Tags om zich binnen het luchtschip te richten.
 exl-id: 84cf5504-f0b5-48d8-8da1-ff91ee1dc171
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 5619424024eff81fca21408288494402e2a4d4ff
 workflow-type: tm+mt
-source-wordcount: '936'
-ht-degree: 0%
+source-wordcount: '1036'
+ht-degree: 4%
 
 ---
 
-# [!DNL Airship Tags] verbinding {#airship-tags-destination}
+# [!DNL Airship Tags]-verbinding {#airship-tags-destination}
 
 ## Overzicht
+
+>[!IMPORTANT]
+>
+>* Vanaf vrijdag 21 augustus 2025 kunt u twee **[!DNL Airship Tags]**-kaarten naast elkaar zien in de bestemmingencatalogus. Dit komt door een interne upgrade van de bestemmingsservice. De naam van de bestaande **[!DNL Airship Tags]** doelconnector is gewijzigd in **[!UICONTROL (Deprecated) Airship Tags]** en u hebt nu een nieuwe kaart met de naam **[!UICONTROL Airship Tags]** beschikbaar.
+>* Gebruik de nieuwe **[!UICONTROL Airship Tags]**-verbinding in de catalogus voor nieuwe activeringsgegevensstromen. Als u actieve gegevens naar de **[!UICONTROL (Deprecated) Airship Tags]** -bestemming hebt, worden deze automatisch bijgewerkt, zodat u geen actie hoeft te ondernemen.
+>* Als u dataflows door de [ Dienst API van de Stroom ](https://developer.adobe.com/experience-platform-apis/references/destinations/) creeert, moet u uw [!DNL flow spec ID] en [!DNL connection spec ID] aan de volgende waarden bijwerken:
+>   * Stroomspecificatie-ID: `0c7e71c8-4d60-4685-a216-77f57e37b04a`
+>   * Verbindingsspecificatie-ID: `aec13e22-8226-4b5d-9961-6baa35b251d2`
 
 [!DNL Airship] is het toonaangevende platform voor betrokkenheid van klanten, waarmee u in elke fase van de levenscyclus van de klant betekenisvolle, gepersonaliseerde omnichannel berichten voor uw gebruikers kunt leveren.
 
@@ -42,7 +50,7 @@ In deze sectie wordt beschreven welke soorten publiek u naar dit doel kunt expor
 
 | Oorsprong publiek | Ondersteund | Beschrijving |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | ✓ | Het publiek produceerde door de Dienst van de Segmentatie van Experience Platform [&#128279;](../../../segmentation/home.md). |
+| [!DNL Segmentation Service] | ✓ | Het publiek produceerde door de Dienst van de Segmentatie van Experience Platform [ ](../../../segmentation/home.md). |
 | Aangepaste uploads | ✓ | Het publiek [ ingevoerde ](../../../segmentation/ui/audience-portal.md#import-audience) in Experience Platform van Csv- dossiers. |
 
 {style="table-layout:auto"}
