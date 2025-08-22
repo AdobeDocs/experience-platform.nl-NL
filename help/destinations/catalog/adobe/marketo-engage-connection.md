@@ -63,7 +63,7 @@ In deze sectie wordt beschreven welke soorten publiek u naar dit doel kunt expor
 
 | Oorsprong publiek | Ondersteund | Beschrijving |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | ✓ | Het publiek produceerde door de Dienst van de Segmentatie van Experience Platform [ ](../../../segmentation/home.md). |
+| [!DNL Segmentation Service] | ✓ | Het publiek produceerde door de Dienst van de Segmentatie van Experience Platform [&#128279;](../../../segmentation/home.md). |
 | Alle andere doelgroepen | ✓ | Deze categorie omvat alle oorsprong van het publiek buiten het publiek dat via [!DNL Segmentation Service] wordt gegenereerd. Lees over de [ diverse publieksoorsprong ](/help/segmentation/ui/audience-portal.md#customize). Voorbeelden zijn: <ul><li> de douane uploadt publiek [ ingevoerde ](../../../segmentation/ui/audience-portal.md#import-audience) in Experience Platform van Csv- dossiers,</li><li> gelijksoortige doelgroepen, </li><li> federaal publiek, </li><li> publiek dat wordt gegenereerd in andere Experience Platform-apps, zoals Adobe Journey Optimizer; </li><li> en meer. </li></ul> <br> |
 
 {style="table-layout:auto"}
@@ -143,7 +143,7 @@ Als u details voor de bestemming wilt configureren, vult u de vereiste en option
    * **[!UICONTROL Audience and profile]**: selecteer deze optie als u zowel publieksleden wilt toevoegen aan Marketo-lijsten als hun profielgegevens up-to-date wilt houden.
    * **[!UICONTROL Profile only]**: selecteer deze optie als u de Marketo-lead-profielen up-to-date wilt houden met de meest recente informatie van Experience Platform.
    * **[!UICONTROL Audience only]**: selecteer deze optie als u leden van het publiek wilt toevoegen aan Marketo-lijsten zonder hun profielgegevens bij te werken.
-* **[!UICONTROL Partition]**: *de selectie van de Verdeling is beschikbaar slechts wanneer het kiezen **[!UICONTROL Profile only]**of **[!UICONTROL Audience and profile]**synchronisatietypen*. Selecteer een Marketo-partitie-id die is gekoppeld aan uw gekozen werkruimte. Op deze manier kunt u opgeven welke hoofdpartitie in Marketo de geëxporteerde gegevens ontvangt. Als u geen specifieke partitie kiest, worden uw gegevens naar de **[!UICONTROL Default]** -partitie in Marketo verzonden.
+* **[!UICONTROL Partition]**: *de selectie van de Verdeling is beschikbaar slechts wanneer het kiezen **[!UICONTROL Profile only]**&#x200B;of **[!UICONTROL Audience and profile]**&#x200B;synchronisatietypen*. Selecteer een Marketo-partitie-id die is gekoppeld aan uw gekozen werkruimte. Op deze manier kunt u opgeven welke hoofdpartitie in Marketo de geëxporteerde gegevens ontvangt. Als u geen specifieke partitie kiest, worden uw gegevens naar de **[!UICONTROL Default]** -partitie in Marketo verzonden.
 * **[!UICONTROL Marketo deduplication field]**: selecteer het Marketo-deduplicatieveld dat u wilt gebruiken bij het bijwerken van bestaande Marketo-leads. Deze kiezer toont de velden die u hebt gemarkeerd als deduplicatievelden in Marketo. Als u een specifiek gebied van Marketo als deduplicatieveld wilt tonen, moet u het gebied als a [ doorzoekbaar gebied ](https://experienceleague.adobe.com/en/docs/marketo-developer/marketo/rest/lead-database/lead-database) in Marketo merken.
 
   >[!NOTE]
