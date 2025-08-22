@@ -3,9 +3,9 @@ keywords: platform;bestemmingen;bestemmingswerkruimte;werkruimte;ui;bestemmingen
 title: Werkruimte Doelen
 description: De werkruimte van Doelen bestaat uit vijf secties, Overzicht, Catalogus, doorbladeren, Rekeningen, en de Mening van het Systeem. Deze worden in de onderstaande secties beschreven.
 exl-id: 0f46f08d-0fe3-441d-933a-86bc146c0f19
-source-git-commit: 73d84174a9960e180a81c3db938f3f18f68f3beb
+source-git-commit: c8eedc1f020b8605c9565015461cb1dfd47bba1f
 workflow-type: tm+mt
-source-wordcount: '2053'
+source-wordcount: '2058'
 ht-degree: 0%
 
 ---
@@ -79,7 +79,7 @@ Doelen waarvoor de schakeloptie **[!UICONTROL Enabled/Disabled]** is ingeschakel
 > ![ doorbladert Lusje ](../assets/ui/workspace/browse-tab.png)
 > 
 > * Selecteer de ellips (`...`) in de [!UICONTROL Name] kolom en gebruik ![ activeer de controle van het publiek ](/help/images/icons/data-add.png) **[!UICONTROL Activate audiences]** controle om publiek of datasets naar die bestemming uit te voeren.
-> * Selecteer de ellips (`...`) in de [!UICONTROL Name] kolom en gebruik ![ uitgeven bestemmingscontrole ](/help/images/icons/edit.png)**[!UICONTROL Edit destination]**&#x200B;controle om bestaande bestemmingsverbindingen uit te geven. Lees het leerprogramma op [ het uitgeven bestemmingen ](/help/destinations/ui/edit-destination.md) voor meer informatie.
+> * Selecteer de ellips (`...`) in de [!UICONTROL Name] kolom en gebruik ![ uitgeven bestemmingscontrole ](/help/images/icons/edit.png)**[!UICONTROL Edit destination]**controle om bestaande bestemmingsverbindingen uit te geven. Lees het leerprogramma op [ het uitgeven bestemmingen ](/help/destinations/ui/edit-destination.md) voor meer informatie.
 > * Selecteer de ellips (`...`) in de [!UICONTROL Name] kolom en gebruik ![ uitgeven marketing actiecontrole ](/help/images/icons/edit-marketing-actions.svg) **[!UICONTROL Edit marketing actions]** controle om [ de marketing acties ](/help/destinations/ui/edit-activation.md#edit-marketing-actions) voor de geselecteerde bestemming te veranderen.
 > * Selecteer de ellips (`...`) in de [!UICONTROL Name] kolom en gebruik de ![ controle van de Schrapping ](/help/images/icons/delete.png) **[!UICONTROL Delete]** controle [ verwijderen ](delete-destinations.md) een bestaande verbinding aan een bestemming.
 > * Selecteer de ellips (`...`) in de [!UICONTROL Name] kolom en gebruik de ![ Mening in controle ](/help/images/icons/monitoring.png) **[!UICONTROL View in monitoring]** controle om activeringsinformatie voor deze bestemming in het [ controledashboard ](/help/dataflows/ui/monitor-destinations.md#monitoring-destinations-dashboard) te bekijken.
@@ -128,7 +128,6 @@ Gebruik de zoekbalk boven aan de tabel om snel gegevens op naam te zoeken. Terwi
 Gebruik de filters in de linkerzijbalk om de zoekopdracht te beperken.
 
 ![ de filters van de Bestemming in het Browse lusje ](../assets/ui/workspace/destination-filters.png)
-
 
 * **[!UICONTROL Destination platform]**: filtergegevens die door specifieke doelplatforms worden gefilterd (bijvoorbeeld [!DNL Amazon S3] , [!DNL Facebook Custom Audience] , [!DNL LinkedIn Matched Audience] , enz.). U kunt meerdere platforms tegelijk selecteren.
 * **[!UICONTROL Has any tag]**: filtergegevensstromen waaraan specifieke tags zijn toegewezen. Op deze manier kunt u gegevensstromen ordenen en zoeken op basis van uw aangepaste tags.
@@ -183,9 +182,9 @@ Op het tabblad **[!UICONTROL Accounts]** vindt u meer informatie over de verbind
 
 >[!TIP]
 >
-> * Selecteer de ellips (`...`) in de [!UICONTROL Platform] kolom en gebruik ![ controle ](/help/images/icons/data-add.png)**[!UICONTROL Activate]**&#x200B;activeren/**[!UICONTROL Activate audiences]**/**[!UICONTROL Export datasets]**&#x200B;controle om publiek of datasets naar die bestemming uit te voeren.
-> * Selecteer de ellips (`...`) in de [!UICONTROL Platform] kolom en gebruik ![ uitgeven detailcontrole ](/help/images/icons/edit.png)**[!UICONTROL Edit details]**&#x200B;controle om [&#128279;](update-accounts.md) de details van een bestaande bestemmingsrekening bij te werken.
-> * Selecteer de ellips (`...`) in de [!UICONTROL Platform] kolom en gebruik de ![ controle van de Schrapping ](/help/images/icons/delete.png)**[!UICONTROL Delete]**&#x200B;controle [ om ](delete-destination-account.md) een bestaande bestemmingsrekening te schrappen.
+> * Selecteer de ellips (`...`) in de [!UICONTROL Platform] kolom en gebruik ![ controle ](/help/images/icons/data-add.png)**[!UICONTROL Activate]**activeren/**[!UICONTROL Activate audiences]**/**[!UICONTROL Export datasets]**controle om publiek of datasets naar die bestemming uit te voeren.
+> * Selecteer de ellips (`...`) in de [!UICONTROL Platform] kolom en gebruik ![ uitgeven detailcontrole ](/help/images/icons/edit.png)**[!UICONTROL Edit details]**controle om [ ](update-accounts.md) de details van een bestaande bestemmingsrekening bij te werken.
+> * Selecteer de ellips (`...`) in de [!UICONTROL Platform] kolom en gebruik de ![ controle van de Schrapping ](/help/images/icons/delete.png)**[!UICONTROL Delete]**controle [ om ](delete-destination-account.md) een bestaande bestemmingsrekening te schrappen.
 
 ![ Rekeningen tabel ](../assets/ui/workspace/accounts-tab.png)
 
@@ -197,7 +196,7 @@ Op het tabblad **[!UICONTROL Accounts]** vindt u meer informatie over de verbind
 | [!UICONTROL Username] | De gebruikersbenaming u in [ selecteerde verbind bestemmingswerkschema ](../catalog/email-marketing/overview.md#connect-destination). |
 | [!UICONTROL Connections] | Vertegenwoordigt het aantal unieke succesvolle bestemmingsdataflows die met basisinformatie worden verbonden voor een bestemming worden gecreeerd. |
 | [!UICONTROL Authorization date] | De datum waarop de verbinding met deze bestemming werd geautoriseerd. |
-| [!UICONTROL Expiration date] | De datum waarop de verbindingsvergunning aan deze bestemming zal verlopen. <br>**Belangrijk**: Deze kolom is momenteel beschikbaar slechts voor de [ verbinding van Facebook ](../catalog/social/facebook.md). |
+| [!UICONTROL Expiration date] | De datum waarop de verbindingsvergunning aan deze bestemming zal verlopen. <br>**Belangrijk**: Deze kolom is momenteel beschikbaar slechts voor [ Facebook ](../catalog/social/facebook.md), [ LinkedIn ](../catalog/social/linkedin.md), en [ LinkedIn Gelijke Publiek ](../catalog/social/linkedin-b2b.md) verbindingen. |
 
 {style="table-layout:auto"}
 

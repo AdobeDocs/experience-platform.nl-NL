@@ -2,10 +2,10 @@
 title: Aanvullende informatie van augustus 2025 voor Adobe Experience Platform
 description: Aanvullende informatie van augustus 2025 voor Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: cb32846bcbd917f267cba587b60dc323f6bc7d96
+source-git-commit: d2b605925a8fd7ea06f198ba8a9f85747a2e585b
 workflow-type: tm+mt
-source-wordcount: '1459'
-ht-degree: 38%
+source-wordcount: '1617'
+ht-degree: 34%
 
 ---
 
@@ -15,8 +15,8 @@ ht-degree: 38%
 >
 >Raadpleeg de volgende documentatie voor aanvullende informatie voor andere Adobe Experience Platform-toepassingen:
 >
->- [Adobe Journey Optimizer](https://experienceleague.adobe.com/nl/docs/journey-optimizer/using/whats-new/release-notes)
->- [Adobe Journey Optimizer B2B](https://experienceleague.adobe.com/nl/docs/journey-optimizer-b2b/user/release-notes)
+>- [Adobe Journey Optimizer](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/whats-new/release-notes)
+>- [Adobe Journey Optimizer B2B](https://experienceleague.adobe.com/en/docs/journey-optimizer-b2b/user/release-notes)
 >- [Customer Journey Analytics](https://experienceleague.adobe.com/nl/docs/analytics-platform/using/releases/pre-release-notes)
 >- [Samenstelling van Federated-doelgroep](https://experienceleague.adobe.com/nl/docs/federated-audience-composition/using/e-release-notes)
 >- [Real-Time CDP Collaboration](https://experienceleague.adobe.com/nl/docs/real-time-cdp-collaboration/using/latest)
@@ -70,7 +70,7 @@ Voor meer informatie over de Dienst van de Catalogus, lees het [ overzicht van d
 
 >[!IMPORTANT]
 >
->{de update van de lijst van gewenste personen van 0} IP die voor op API-Gebaseerde bestemmingen wordt vereist **&#x200B;**
+>{de update van de lijst van gewenste personen van 0} IP die voor op API-Gebaseerde bestemmingen wordt vereist ****
 >
 >Wegens verbeteringen aan de het stromen motor van de bestemmingenuitvoer, moeten de organisaties die [ IP gebruiken lijsten van gewenste personen ](../../destinations/catalog/streaming/ip-address-allow-list.md) voor op API-Gebaseerde bestemmingen de volgende IP adressen aan hun lijsten van gewenste personen **vóór 15 September, 2025** toevoegen:
 >
@@ -97,12 +97,14 @@ Voor meer informatie over de Dienst van de Catalogus, lees het [ overzicht van d
 | Bestemming | Beschrijving |
 | --- | --- |
 | [[!DNL Acxiom Real ID Audience Connection]](../../destinations/catalog/advertising/acxiom-real-id-audience-connection.md) doel | Gebruik de [!DNL Acxiom Real ID Audience Connection] bestemming om publiek met [!DNL Acxiom's] [ Echte identiteitskaart ](https://www.acxiom.com/real-id/real-id/) technologie te verbeteren en publiek aan veelvoudige platforms, zoals [!DNL Altice], [!DNL Ampersand], [!DNL Comcast], en meer te activeren. |
+| Verbeterd doel [[!DNL Marketo Engage]](../../destinations/catalog/adobe/marketo-engage-connection.md) | Het verbeterde doel van [[!DNL Marketo Engage]](../../destinations/catalog/adobe/marketo-engage-connection.md) is een geüpgrade versie van de bestaande [[!DNL (Legacy) (V2) Marketo Engage]](../../destinations/catalog/adobe/marketo-engage.md) -connector. Deze nieuwe connector biedt niet alleen de bestaande publiekssynchronisatiemogelijkheden van de oudere connector, maar zorgt ook voor een betere integratie met [!DNL Marketo Engage] . <br> De [[!DNL (Legacy) (V2) Marketo Engage]](../../destinations/catalog/adobe/marketo-engage.md) schakelaar zal in **Maart 2026** worden afgekeurd. Voor een vloeiende overgang naar het nieuwe **[[!UICONTROL Marketo Engage]](../../destinations/catalog/adobe/marketo-engage-connection.md)** -doel bekijkt u de volgende belangrijke punten en vereiste handelingen: <ul><li>Alle gebruikers van de bestaande **[!UICONTROL (Legacy) (V2) Marketo Engage]** moeten tegen maart 2026 migreren naar de nieuwe **[!UICONTROL Marketo Engage]** -bestemming.</li><li> **Bestaande gegevensstromen zullen niet automatisch worden gemigreerd.** u moet [ opstelling een nieuwe verbinding ](../../destinations/ui/connect-destination.md) aan de nieuwe **[!UICONTROL Marketo Engage]** bestemming en uw publiek daar activeren.</li></ul> |
 
 **Bijgewerkte bestemmingen**
 
 | Bestemming | Beschrijving |
 | --- | --- |
 | [[!DNL Microsoft Bing]](../../destinations/catalog/advertising/bing.md) interne upgrade | Vanaf 11 augustus 2025 hebt u gedurende een korte periode twee **[!DNL Microsoft Bing]** kaarten naast elkaar gezien in de lijst met doelen. Dit komt door een interne upgrade van de bestemmingsservice. De naam van de bestaande bestemmingsconnector **[!DNL Microsoft Bing]** is gewijzigd in **[!UICONTROL (Deprecated) Microsoft Bing]** en er is nu een nieuwe kaart met de naam **[!UICONTROL Microsoft Bing]** voor u beschikbaar. <br> De upgrade is voltooid en de verouderde kaart is verwijderd uit de doelcatalogus. Gebruik de **[!UICONTROL Microsoft Bing]** -verbinding in de catalogus voor nieuwe gegevensstromen voor activering. Als u actieve gegevens naar de **[!UICONTROL (Deprecated) Microsoft Bing]** bestemming had, zullen zij automatisch worden bijgewerkt, zodat wordt geen actie van u vereist. <br><br>Als u gegevensstromen maakt via de [Flow Service API](https://developer.adobe.com/experience-platform-apis/references/destinations/), moet u uw [!DNL flow spec ID] en [!DNL connection spec ID] bijwerken naar de volgende waarden:<ul><li>Stroomspecificatie-ID: `8d42c81d-9ba7-4534-9bf6-cf7c64fbd12e`</li><li>Verbindingsspecificatie-ID: `dd69fc59-3bc5-451e-8ec2-1e74a670afd4`</li></ul> Na deze verbetering, kunt u a **daling in het aantal geactiveerde profielen** in uw dataflows [!DNL Microsoft Bing] ervaren. Dit daling wordt veroorzaakt door de introductie van het **ECID afbeeldingsvereiste** voor alle activiteiten aan dit bestemmingsplatform. |
+| De vervaldatum van de authentificatie details voor [[!DNL LinkedIn]](../../destinations/catalog/social/linkedin.md) en [ LinkedIn Gelijke Publiek ](../../destinations/catalog/social/linkedin-b2b.md) bestemmingen | De vervalinformatie van de authentificatie voor [!DNL LinkedIn] bestemmingen is nu zichtbaar direct in de interface van Experience Platform, zodat kunt u zien wanneer uw authentificatie zal verlopen en het vernieuwen alvorens het om het even welke verstoringen aan uw gegevensstromen veroorzaakt. U kunt de vervaldatums van uw token vanaf de kolom **[!UICONTROL Account expiration date]** controleren op de tabbladen **[[!UICONTROL Accounts]](../../destinations/ui/destinations-workspace.md#accounts)** of **[[!UICONTROL Browse]](../../destinations/ui/destinations-workspace.md#browse)** . |
 
 **Nieuwe of bijgewerkte functionaliteit**
 
@@ -168,7 +170,7 @@ Experience Platform biedt een RESTful-API en een interactieve gebruikersinterfac
 
 | Functie | Beschrijving |
 | --- | --- |
-| [!BADGE &#x200B; Beta &#x200B;]{type=Informative} Steun voor [!DNL Azure Private Links] in UI | U kunt [!DNL Azure Private Links] nu gebruiken voor een geselecteerde groep bronnen in de gebruikersinterface. Gebruik deze eigenschap om een privé eindpunt tot stand te brengen dat uw bron met kan verbinden. Met privé eindpunten, kunt u opstellingsverbindingen en gegevensstromen die openbaar Internet overslaan, die u verbeterde veiligheid en netwerkisolatie voor uw gevoelige gegevens geven. Ondersteuning voor [!DNL Azure Private Links] is beschikbaar voor de volgende bronnen: <ul><li>[[!DNL Azure Blob Storage]](../../sources/connectors/cloud-storage/blob.md)</li><li>[[!DNL ADLS Gen2]](../../sources/connectors/cloud-storage/adls-gen2.md)</li><li>[[!DNL Azure File Storage]](../../sources/connectors/cloud-storage/azure-file-storage.md)</li><li>[[!DNL Snowflake]](../../sources/connectors/databases/snowflake.md)</li></ul> Lees de handleiding op [[!DNL Azure Private Links]](../../sources/tutorials/ui/private-link.md) voor meer informatie. |
+| [!BADGE  Beta ]{type=Informative} Steun voor [!DNL Azure Private Links] in UI | U kunt [!DNL Azure Private Links] nu gebruiken voor een geselecteerde groep bronnen in de gebruikersinterface. Gebruik deze eigenschap om een privé eindpunt tot stand te brengen dat uw bron met kan verbinden. Met privé eindpunten, kunt u opstellingsverbindingen en gegevensstromen die openbaar Internet overslaan, die u verbeterde veiligheid en netwerkisolatie voor uw gevoelige gegevens geven. Ondersteuning voor [!DNL Azure Private Links] is beschikbaar voor de volgende bronnen: <ul><li>[[!DNL Azure Blob Storage]](../../sources/connectors/cloud-storage/blob.md)</li><li>[[!DNL ADLS Gen2]](../../sources/connectors/cloud-storage/adls-gen2.md)</li><li>[[!DNL Azure File Storage]](../../sources/connectors/cloud-storage/azure-file-storage.md)</li><li>[[!DNL Snowflake]](../../sources/connectors/databases/snowflake.md)</li></ul> Lees de handleiding op [[!DNL Azure Private Links]](../../sources/tutorials/ui/private-link.md) voor meer informatie. |
 | Verbeterde verificatie voor [!DNL Azure Blob Storage] | U kunt nu op service principal gebaseerde verificatie gebruiken om uw [!DNL Azure Blob Storage] -bron te verbinden met Experience Platform. De dienst belangrijkste gebaseerde authentificatie van het gebruik voor verbeterde veiligheid, gemakkelijkere credentiële omwenteling, en een meer korrelige toegangsbeheer voor uw rekening. Voor meer informatie, lees het [[!DNL Azure Blob Storage]  overzicht ](../../sources/connectors/cloud-storage/blob.md). |
 
 Voor meer informatie raadpleegt u het [overzicht van bronnen](../../sources/home.md).
