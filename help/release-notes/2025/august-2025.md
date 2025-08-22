@@ -2,10 +2,10 @@
 title: Aanvullende informatie van augustus 2025 voor Adobe Experience Platform
 description: Aanvullende informatie van augustus 2025 voor Adobe Experience Platform.
 exl-id: d93e98f3-d165-4710-ad1d-2ad3857cd0f8
-source-git-commit: 6672ed3fd4ee4f48952dcf5ffb6561de026fe55b
+source-git-commit: cb32846bcbd917f267cba587b60dc323f6bc7d96
 workflow-type: tm+mt
-source-wordcount: '1437'
-ht-degree: 41%
+source-wordcount: '1459'
+ht-degree: 38%
 
 ---
 
@@ -15,8 +15,8 @@ ht-degree: 41%
 >
 >Raadpleeg de volgende documentatie voor aanvullende informatie voor andere Adobe Experience Platform-toepassingen:
 >
->- [Adobe Journey Optimizer](https://experienceleague.adobe.com/nl/docs/journey-optimizer/using/whats-new/release-notes)
->- [Adobe Journey Optimizer B2B](https://experienceleague.adobe.com/nl/docs/journey-optimizer-b2b/user/release-notes)
+>- [Adobe Journey Optimizer](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/whats-new/release-notes)
+>- [Adobe Journey Optimizer B2B](https://experienceleague.adobe.com/en/docs/journey-optimizer-b2b/user/release-notes)
 >- [Customer Journey Analytics](https://experienceleague.adobe.com/nl/docs/analytics-platform/using/releases/pre-release-notes)
 >- [Samenstelling van Federated-doelgroep](https://experienceleague.adobe.com/nl/docs/federated-audience-composition/using/e-release-notes)
 >- [Real-Time CDP Collaboration](https://experienceleague.adobe.com/nl/docs/real-time-cdp-collaboration/using/latest)
@@ -71,7 +71,7 @@ Voor meer informatie over de Dienst van de Catalogus, lees het [ overzicht van d
 
 >[!IMPORTANT]
 >
->{de update van de lijst van gewenste personen van 0} IP die voor op API-Gebaseerde bestemmingen wordt vereist **&#x200B;**
+>{de update van de lijst van gewenste personen van 0} IP die voor op API-Gebaseerde bestemmingen wordt vereist ****
 >
 >Wegens verbeteringen aan de het stromen motor van de bestemmingenuitvoer, moeten de organisaties die [ IP gebruiken lijsten van gewenste personen ](../../destinations/catalog/streaming/ip-address-allow-list.md) voor op API-Gebaseerde bestemmingen de volgende IP adressen aan hun lijsten van gewenste personen **vóór 15 September, 2025** toevoegen:
 >
@@ -103,7 +103,7 @@ Voor meer informatie over de Dienst van de Catalogus, lees het [ overzicht van d
 
 | Bestemming | Beschrijving |
 | --- | --- |
-| [[!DNL Microsoft Bing]](../../destinations/catalog/advertising/bing.md) interne upgrade | Vanaf dinsdag 11 augustus 2025 kunt u twee **[!DNL Microsoft Bing]**-kaarten naast elkaar zien in de bestemmingencatalogus. Dit komt door een interne upgrade van de bestemmingsservice. De naam van de bestaande bestemmingsconnector **[!DNL Microsoft Bing]** is gewijzigd in **[!UICONTROL (Deprecated) Microsoft Bing]** en er is nu een nieuwe kaart met de naam **[!UICONTROL Microsoft Bing]** voor u beschikbaar. Gebruik de nieuwe **[!UICONTROL Microsoft Bing]**-verbinding in de catalogus voor nieuwe activeringsgegevensstromen. Als u actieve gegevensstromen naar de bestemming **[!UICONTROL (Deprecated) Microsoft Bing]** hebt, worden deze automatisch bijgewerkt. U hoeft dus niets te doen. <br><br>Als u gegevensstromen maakt via de [Flow Service API](https://developer.adobe.com/experience-platform-apis/references/destinations/), moet u uw [!DNL flow spec ID] en [!DNL connection spec ID] bijwerken naar de volgende waarden:<ul><li>Stroomspecificatie-ID: `8d42c81d-9ba7-4534-9bf6-cf7c64fbd12e`</li><li>Verbindingsspecificatie-ID: `dd69fc59-3bc5-451e-8ec2-1e74a670afd4`</li></ul> Na deze verbetering, kunt u a **daling in het aantal geactiveerde profielen** in uw dataflows [!DNL Microsoft Bing] ervaren. Dit daling wordt veroorzaakt door de introductie van het **ECID afbeeldingsvereiste** voor alle activiteiten aan dit bestemmingsplatform. |
+| [[!DNL Microsoft Bing]](../../destinations/catalog/advertising/bing.md) interne upgrade | Vanaf 11 augustus 2025 hebt u gedurende een korte periode twee **[!DNL Microsoft Bing]** kaarten naast elkaar gezien in de lijst met doelen. Dit komt door een interne upgrade van de bestemmingsservice. De naam van de bestaande bestemmingsconnector **[!DNL Microsoft Bing]** is gewijzigd in **[!UICONTROL (Deprecated) Microsoft Bing]** en er is nu een nieuwe kaart met de naam **[!UICONTROL Microsoft Bing]** voor u beschikbaar. <br> De upgrade is voltooid en de verouderde kaart is verwijderd uit de doelcatalogus. Gebruik de **[!UICONTROL Microsoft Bing]** -verbinding in de catalogus voor nieuwe gegevensstromen voor activering. Als u actieve gegevens naar de **[!UICONTROL (Deprecated) Microsoft Bing]** bestemming had, zullen zij automatisch worden bijgewerkt, zodat wordt geen actie van u vereist. <br><br>Als u gegevensstromen maakt via de [Flow Service API](https://developer.adobe.com/experience-platform-apis/references/destinations/), moet u uw [!DNL flow spec ID] en [!DNL connection spec ID] bijwerken naar de volgende waarden:<ul><li>Stroomspecificatie-ID: `8d42c81d-9ba7-4534-9bf6-cf7c64fbd12e`</li><li>Verbindingsspecificatie-ID: `dd69fc59-3bc5-451e-8ec2-1e74a670afd4`</li></ul> Na deze verbetering, kunt u a **daling in het aantal geactiveerde profielen** in uw dataflows [!DNL Microsoft Bing] ervaren. Dit daling wordt veroorzaakt door de introductie van het **ECID afbeeldingsvereiste** voor alle activiteiten aan dit bestemmingsplatform. |
 
 
 **Nieuwe of bijgewerkte functionaliteit**
@@ -169,7 +169,7 @@ Experience Platform biedt een RESTful-API en een interactieve gebruikersinterfac
 
 | Functie | Beschrijving |
 | --- | --- |
-| [!BADGE &#x200B; Beta &#x200B;]{type=Informative} Steun voor [!DNL Azure Private Links] in UI | U kunt [!DNL Azure Private Links] nu gebruiken voor een geselecteerde groep bronnen in de gebruikersinterface. Gebruik deze eigenschap om een privé eindpunt tot stand te brengen dat uw bron met kan verbinden. Met privé eindpunten, kunt u opstellingsverbindingen en gegevensstromen die openbaar Internet overslaan, die u verbeterde veiligheid en netwerkisolatie voor uw gevoelige gegevens geven. Ondersteuning voor [!DNL Azure Private Links] is beschikbaar voor de volgende bronnen: <ul><li>[[!DNL Azure Blob Storage]](../../sources/connectors/cloud-storage/blob.md)</li><li>[[!DNL ADLS Gen2]](../../sources/connectors/cloud-storage/adls-gen2.md)</li><li>[[!DNL Azure File Storage]](../../sources/connectors/cloud-storage/azure-file-storage.md)</li><li>[[!DNL Snowflake]](../../sources/connectors/databases/snowflake.md)</li></ul> Lees de handleiding op [[!DNL Azure Private Links]](../../sources/tutorials/ui/private-link.md) voor meer informatie. |
+| [!BADGE  Beta ]{type=Informative} Steun voor [!DNL Azure Private Links] in UI | U kunt [!DNL Azure Private Links] nu gebruiken voor een geselecteerde groep bronnen in de gebruikersinterface. Gebruik deze eigenschap om een privé eindpunt tot stand te brengen dat uw bron met kan verbinden. Met privé eindpunten, kunt u opstellingsverbindingen en gegevensstromen die openbaar Internet overslaan, die u verbeterde veiligheid en netwerkisolatie voor uw gevoelige gegevens geven. Ondersteuning voor [!DNL Azure Private Links] is beschikbaar voor de volgende bronnen: <ul><li>[[!DNL Azure Blob Storage]](../../sources/connectors/cloud-storage/blob.md)</li><li>[[!DNL ADLS Gen2]](../../sources/connectors/cloud-storage/adls-gen2.md)</li><li>[[!DNL Azure File Storage]](../../sources/connectors/cloud-storage/azure-file-storage.md)</li><li>[[!DNL Snowflake]](../../sources/connectors/databases/snowflake.md)</li></ul> Lees de handleiding op [[!DNL Azure Private Links]](../../sources/tutorials/ui/private-link.md) voor meer informatie. |
 | Verbeterde verificatie voor [!DNL Azure Blob Storage] | U kunt nu op service principal gebaseerde verificatie gebruiken om uw [!DNL Azure Blob Storage] -bron te verbinden met Experience Platform. De dienst belangrijkste gebaseerde authentificatie van het gebruik voor verbeterde veiligheid, gemakkelijkere credentiële omwenteling, en een meer korrelige toegangsbeheer voor uw rekening. Voor meer informatie, lees het [[!DNL Azure Blob Storage]  overzicht ](../../sources/connectors/cloud-storage/blob.md). |
 
 Voor meer informatie raadpleegt u het [overzicht van bronnen](../../sources/home.md).
