@@ -1,25 +1,35 @@
 ---
-title: Personen synchroniseren Marketo Engage
-description: Gebruik de schakelaar van de Synchronisatie van de Persoon van het Marketo Engage om updates van een persoonpubliek aan de overeenkomstige verslagen in uw Marketo Engage te stromen.
+title: Marketo Engage Person Sync
+description: Gebruik de connector Marketo Engage Person Sync om updates te streamen van een persoonlijk publiek naar de corresponderende records in uw Marketo Engage.
 last-substantial-update: 2025-01-14T00:00:00Z
 badgeBeta: label="Beta" type="Informative"
-source-git-commit: c5543997747daa336b0a5bb40c46aa720e8bcadd
+exl-id: 2c909633-b169-4ec8-9f58-276395cb8df2
+source-git-commit: 88864353d4872d62258914d6490b90331692fa96
 workflow-type: tm+mt
-source-wordcount: '1027'
-ht-degree: 0%
+source-wordcount: '1087'
+ht-degree: 2%
 
 ---
 
-
-# Verbinding persoon synchroniseren Marketo Engage {#marketo-engage-person-sync}
+# Marketo Engage Person Sync verbinding {#marketo-engage-person-sync}
 
 >[!IMPORTANT]
 >
->Deze bestemmingsschakelaar is in bèta en slechts beschikbaar om klanten te selecteren. Neem contact op met uw Adobe als u toegang wilt aanvragen.
+>Deze bestemmingsconnector bevindt zich in de bètafase en is alleen beschikbaar voor geselecteerde klanten. Neem contact op met uw Adobe-vertegenwoordiger om toegang aan te vragen.
+
+>[!IMPORTANT]
+>
+>De **[!UICONTROL Marketo Engage Person Sync]** bestemmingskaart zal in **Maart 2026** worden afgekeurd.
+>
+>Voor een vloeiende overgang naar het nieuwe **[[!UICONTROL Marketo Engage]](marketo-engage-connection.md)** -doel bekijkt u de volgende belangrijke punten en vereiste handelingen:
+>
+>* Alle gebruikers van **[!UICONTROL Marketo Engage Person Sync]** -doelen moeten tegen maart 2026 migreren naar het nieuwe **[[!UICONTROL Marketo Engage]](marketo-engage-connection.md)** -doel.
+>* **Bestaande gegevensstromen zullen niet automatisch worden gemigreerd.** u moet [ opstelling een nieuwe verbinding ](marketo-engage-connection.md#connect-to-the-destination) aan de nieuwe **[!UICONTROL Marketo Engage]** bestemming en uw publiek daar activeren.
+
 
 ## Overzicht {#overview}
 
-Gebruik de schakelaar van de Synchronisatie van de Persoon van het Marketo Engage om updates van persoonpubliek aan de overeenkomstige verslagen in uw instantie van het Marketo Engage te stromen.
+Gebruik de connector Marketo Engage Person Sync om updates te streamen van het persoonlijke publiek naar de corresponderende records in uw Marketo Engage-instantie.
 
 >[!IMPORTANT]
 > 
@@ -37,7 +47,7 @@ Gebruik de schakelaar van de Synchronisatie van de Persoon van het Marketo Engag
 
 ### Ondersteunde kenmerken {#supported-attributes}
 
-U kunt kenmerken van het Experience Platform toewijzen aan alle kenmerken waartoe uw organisatie toegang heeft in Marketo. In Marketo, kunt u [ gebruiken beschrijf API ](https://developer.adobe.com/marketo-apis/api/mapi/#tag/Leads/operation/describeUsingGET_6) verzoek om de attributengebieden terug te winnen die uw organisatie toegang heeft tot.
+U kunt kenmerken van Experience Platform toewijzen aan alle kenmerken waartoe uw organisatie in Marketo toegang heeft. In Marketo, kunt u [ gebruiken beschrijf API ](https://developer.adobe.com/marketo-apis/api/mapi/#tag/Leads/operation/describeUsingGET_6) verzoek om de attributengebieden terug te winnen die uw organisatie toegang heeft tot.
 
 ## Ondersteunde doelgroepen {#supported-audiences}
 
@@ -45,8 +55,8 @@ In deze sectie wordt beschreven welke soorten publiek u naar dit doel kunt expor
 
 | Oorsprong publiek | Ondersteund | Beschrijving |
 | -------------------- | :-------: | ------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Segmentatieservice | ✓ | Het publiek produceerde door de Dienst van de Segmentatie van het Experience Platform [&#128279;](https://experienceleague.adobe.com/nl/docs/experience-platform/segmentation/home). |
-| Aangepaste uploads | ✓ | Soorten publiek dat uit CSV-bestanden in het Experience Platform is geïmporteerd. |
+| Segmentatieservice | ✓ | Het publiek produceerde door de Dienst van de Segmentatie van Experience Platform [ ](https://experienceleague.adobe.com/en/docs/experience-platform/segmentation/home). |
+| Aangepaste uploads | ✓ | Soorten publiek dat uit CSV-bestanden in Experience Platform is geïmporteerd. |
 
 ## Type en frequentie exporteren {#export-type-and-frequency}
 
@@ -68,18 +78,18 @@ Als uw bedrijf toegang tot veelvoudige organisaties heeft, zorg ervoor dat u de 
 
 >[!IMPORTANT]
 >
->De gebruiker die opstelling de bestemming moet [&#128279;](https://experienceleague.adobe.com/nl/docs/marketo/using/product-docs/administration/users-and-roles/descriptions-of-role-permissions#access-database) toestemming van de Persoon  hebben uitgeven in de instantie en de verdeling van Marketo.
+>De gebruiker die opstelling de bestemming moet [ toestemming van de Persoon ](https://experienceleague.adobe.com/en/docs/marketo/using/product-docs/administration/users-and-roles/descriptions-of-role-permissions#access-database) hebben uitgeven in de instantie en de verdeling van Marketo.
 
 ![ verbind met Bestemming ](../../assets/catalog/adobe/marketo-engage-person-sync/connect-to-destination.png)
 
 * **[!UICONTROL Name]**: Een naam waarmee u dit doel in de toekomst herkent.
 * **[!UICONTROL Description]**: Een beschrijving die u zal helpen deze bestemming in de toekomst identificeren.
 * **[!UICONTROL Munchkin ID]**: De Munchkin-id is de unieke id voor een specifieke Marketo-instantie.
-* **[!UICONTROL Partition]**: een concept in Marketo Engage dat wordt gebruikt om loodrecords te scheiden op bedrijfsniveau
+* **[!UICONTROL Partition]**: een concept in Marketo Engage dat wordt gebruikt om hoofdrecords te scheiden op bedrijfsniveau
 * **[!UICONTROL First searchable field]**: veld dat moet worden gededupliceerd. Het veld moet aanwezig zijn in elke eerstvolgende record van de invoer. Standaard e-mailadres
 * **[!UICONTROL First searchable field]**: Een secundair veld dat moet worden gededupliceerd. Het veld moet aanwezig zijn in elke eerstvolgende record van de invoer. Optioneel
 
-Nadat u de instantie hebt geselecteerd, moet u ook de partitie Lead selecteren waarmee u de configuratie wilt integreren. A [ de Verdeling van de Lood ](https://experienceleague.adobe.com/nl/docs/marketo/using/product-docs/administration/workspaces-and-person-partitions/understanding-workspaces-and-person-partitions) is een concept in Marketo Engage wordt gebruikt om loodverslagen door bedrijfszorg, zoals een merk of een verkoopgebied te scheiden dat. Als uw Marketo-abonnement niet over de functie Werkruimten en Partities beschikt of als uw abonnement geen extra partities bevat, is alleen de standaardpartitie beschikbaar. Één enkele configuratie kan slechts loodverslagen bijwerken die in zijn gevormde verdeling bestaan.
+Nadat u de instantie hebt geselecteerd, moet u ook de partitie Lead selecteren waarmee u de configuratie wilt integreren. A [ de Verdeling van de Lood ](https://experienceleague.adobe.com/en/docs/marketo/using/product-docs/administration/workspaces-and-person-partitions/understanding-workspaces-and-person-partitions) is een concept in Marketo Engage dat wordt gebruikt om loodverslagen door bedrijfszorg, zoals een merk of een verkoopgebied te scheiden. Als uw Marketo-abonnement niet over de functie Werkruimten en Partities beschikt of als uw abonnement geen extra partities bevat, is alleen de standaardpartitie beschikbaar. Één enkele configuratie kan slechts loodverslagen bijwerken die in zijn gevormde verdeling bestaan.
 
 >[!IMPORTANT]
 > 
@@ -90,7 +100,7 @@ Nadat u de instantie hebt geselecteerd, moet u ook de partitie Lead selecteren w
 Wanneer updates naar Marketo worden verzonden, worden records geselecteerd op basis van de geselecteerde partitie en een of twee door de gebruiker geselecteerde velden. Als uw bestemming met de verdeling van Noord-Amerika wordt gevormd, en E-mailAdres en de Naam van het Bedrijf heeft die als deduplicatiegebieden wordt gevormd, dan moeten alle drie gebieden aanpassen om veranderingen op een bestaand verslag toe te passen. Bijvoorbeeld:
 
 * De bestemming wordt gevormd met de verdeling van Noord-Amerika
-* De persoon met E-mail <test@example.com> en het Voorbeeld Inc. van de Bedrijfsnaam in Experience Platform past het bestemmingspubliek aan
+* Persoon met e-mail <test@example.com> en Company name Example Inc. in Experience Platform komt overeen met het doelpubliek
 * Tenzij er al een record met deze waarden bestaat op de Noord-Amerikaanse partitie in Marketo, wordt een nieuwe lead record gemaakt
 
 Als er geen overeenkomende lead-record wordt gevonden, wordt een nieuwe record gemaakt.
@@ -111,13 +121,13 @@ In de stap Soorten publiek activeren kunt u een publiek selecteren dat voor u zi
 
 ## Veldtoewijzing {#field-mapping}
 
-Als u wilt dat wijzigingen in een bepaald personeels-kenmerk naar het Marketo Engage worden verzonden, moet het veld worden toegewezen van een Real-Time CDP-veld naar een Marketo-veld.
+Voor het verzenden van wijzigingen aan een bepaald persoonkenmerk naar Marketo Engage, moet het veld worden toegewezen van een Real-Time CDP-veld naar een Marketo-veld.
 
 ![ Toewijzing van het Gebied ](../../assets/catalog/adobe/marketo-engage-person-sync/field-mapping.png)
 
-Datatypes van het Experience Platform en Marketo datatypes kunnen op de volgende manieren in kaart worden gebracht:
+Experience Platform-datatypen en Marketo-datatypen kunnen op de volgende manieren worden toegewezen:
 
-| Gegevenstype Experience Platform | Marketo-gegevenstype |
+| Experience Platform-gegevenstype | Marketo-gegevenstype |
 | ----------------------------- | ------------------------------------ |
 | String | Tekenreeks, tekstgebied, URL, telefoon, e-mail |
 | Enum | String |
