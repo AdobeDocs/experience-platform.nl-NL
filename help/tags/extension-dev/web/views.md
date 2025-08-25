@@ -2,9 +2,9 @@
 title: Weergaven in webextensies
 description: Leer hoe u weergaven voor bibliotheekmodules definieert in uw Adobe Experience Platform-webextensies.
 exl-id: 4471df3e-75e2-4257-84c0-dd7b708be417
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 1bfa2e27e554dc899efc8a32900a926e787a58ac
 workflow-type: tm+mt
-source-wordcount: '2063'
+source-wordcount: '2148'
 ht-degree: 2%
 
 ---
@@ -68,15 +68,22 @@ De inhoud van elk van de methoden moet worden gewijzigd om aan uw specifieke wee
 De methode `init` wordt aangeroepen door tags zodra de weergave in het iframe is geladen. Het zal één enkel argument (`info`) worden overgegaan dat een voorwerp moet zijn dat de volgende eigenschappen bevat:
 
 | Eigenschap | Beschrijving |
-| --- | --- |
+|---------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | `settings` | Een object met instellingen die eerder in deze weergave zijn opgeslagen. Als `settings` wel `null` is, wordt hiermee aangegeven dat de gebruiker de eerste instellingen maakt in plaats van een opgeslagen versie te laden. Als `settings` een object is, moet u het gebruiken om de weergave te vullen, aangezien de gebruiker ervoor kiest om de eerder blijvend instellingen te bewerken. |
 | `extensionSettings` | Instellingen die zijn opgeslagen in de configuratieweergave van de extensie. Dit kan nuttig zijn om tot uitbreidingsmontages in meningen toegang te hebben die niet de mening van de uitbreidingsconfiguratie zijn. Gebruik `settings` als de huidige weergave de configuratieweergave van de extensie is. |
 | `propertySettings` | Een object met instellingen voor de eigenschap. Zie de [ turbineobjecten gids ](../turbine.md#property-settings) voor details op wat in dit voorwerp bevat is. |
 | `tokens` | Een object met API-tokens. Als u Adobe API&#39;s vanuit de weergave wilt openen, moet u doorgaans een IMS-token gebruiken onder `tokens.imsAccess` . Deze token wordt alleen beschikbaar gesteld voor extensies die door Adobe zijn ontwikkeld. Als u een werknemer van Adobe die een uitbreiding vertegenwoordigen door Adobe wordt authored, gelieve [ het team van de de ingenieurswetenschappen van de gegevensinzameling ](mailto:reactor@adobe.com) te e-mailen en de naam van de uitbreiding te verstrekken zodat kunnen wij het aan de lijst van gewenste personen toevoegen. |
-| `company` | Een object met één eigenschap, `orgId` , die zelf uw Adobe Experience Cloud-id vertegenwoordigt (een alfanumerieke tekenreeks van 24 tekens). |
+| `company` | Een object dat de volgende tekens bevat: `orgId` (uw 24-letterige Adobe Experience Cloud-id), `id` (de unieke id van uw bedrijf in de Reactor-API) en `tenantId` (de unieke id voor een organisatie in het Adobe Identity Management-systeem). |
 | `schema` | Een voorwerp in [ JSON Schema ](https://json-schema.org/) formaat. Dit voorwerp zal uit [ uitbreidingsmanifest ](../manifest.md) komen en kan in het bevestigen van uw vorm nuttig zijn. |
+| `apiEndpoints` | Een object met `reactor` dat een verwijzing bevat naar het webadres van de Reactor-API. |
+| `userConsentPermissions` | Een voorwerp dat toestemmingsvlaggen van de Gegevens van het Gebruik van het Product van Adobe [ ](https://experienceleague.adobe.com/en/docs/core-services/interface/features/account-preferences#product-usage-data) bevat. Gebruik opgeslagen in `globalDataCollectionAndUsage` vlag om te begrijpen als uw uitbreiding *om het even welke* klantengegevens mag verzamelen. |
+| `preferredLanguages` | Een array van taaltekenreeksen. |
 
 Uw mening zou deze informatie moeten gebruiken om zijn vorm terug te geven en te beheren. Waarschijnlijk hoeft u alleen met `info.settings` om te gaan, maar voor het geval dat dat nodig is, wordt de andere informatie wel gegeven.
+
+>[!IMPORTANT]
+>
+>Als u de extensie GDPR compatibel wilt houden, moet u de markering `userConsentPermissions.globalDataCollectionAndUsage` gebruiken om te bepalen of uw extensie gegevens over de gebruiker mag verzamelen.
 
 ### [!DNL validate]
 
@@ -130,7 +137,7 @@ Als deze methode wordt aangeroepen, wordt een modaal teken weergegeven waarmee e
 | Eigenschap | Beschrijving |
 | --- | --- |
 | `pattern` | Het reguliere-expressiepatroon dat moet worden gebruikt als de beginwaarde van het patroonveld in het meetapparaat. Dit wordt meestal opgegeven wanneer de gebruiker een bestaande reguliere expressie bewerkt. Als dit niet is opgegeven, is het patroonveld aanvankelijk leeg. |
-| `flags` | De reguliere-expressiemarkeringen die moeten worden gebruikt door de tester. `gi` geeft bijvoorbeeld de markering voor algemene overeenkomst en de markering voor negeren van hoofdletters en kleine letters aan. Deze markeringen kunnen niet worden gewijzigd door de gebruiker in de tester, maar worden gebruikt om de specifieke markeringen aan te tonen die de extensie zal gebruiken bij het uitvoeren van de reguliere expressie. Als dit niet is opgegeven, worden er geen vlaggen gebruikt binnen de tester. Zie {de documentatie van RegExp van 0} MDN [&#128279;](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp) voor meer informatie over regelmatige uitdrukkingsvlaggen.<br><br> een gemeenschappelijk scenario is een uitbreiding die gebruikers toestaat om gevalgevoeligheid voor een regelmatige uitdrukking van een knevel te voorzien. Om dit te ondersteunen, zou de extensie doorgaans een selectievakje binnen de extensieweergave bieden dat, als deze optie is ingeschakeld, niet-hoofdlettergevoeligheid inschakelt (weergegeven door de markering `i` ). Het instellingenobject dat door de weergave wordt opgeslagen, moet aangeven of het selectievakje is ingeschakeld, zodat de bibliotheekmodule die de reguliere expressie uitvoert, kan weten of de markering `i` moet worden gebruikt. Wanneer de extensieweergave het algemene expressietestbestand wil openen, moet de markering `i` ook worden doorgegeven als het selectievakje voor hoofdlettergevoeligheid is ingeschakeld. Hierdoor kan de gebruiker de reguliere expressie op de juiste manier testen waarbij hoofdletterongevoeligheid is ingeschakeld. |
+| `flags` | De reguliere-expressiemarkeringen die moeten worden gebruikt door de tester. `gi` geeft bijvoorbeeld de markering voor algemene overeenkomst en de markering voor negeren van hoofdletters en kleine letters aan. Deze markeringen kunnen niet worden gewijzigd door de gebruiker in de tester, maar worden gebruikt om de specifieke markeringen aan te tonen die de extensie zal gebruiken bij het uitvoeren van de reguliere expressie. Als dit niet is opgegeven, worden er geen vlaggen gebruikt binnen de tester. Zie {de documentatie van RegExp van 0} MDN [ voor meer informatie over regelmatige uitdrukkingsvlaggen.](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp)<br><br> een gemeenschappelijk scenario is een uitbreiding die gebruikers toestaat om gevalgevoeligheid voor een regelmatige uitdrukking van een knevel te voorzien. Om dit te ondersteunen, zou de extensie doorgaans een selectievakje binnen de extensieweergave bieden dat, als deze optie is ingeschakeld, niet-hoofdlettergevoeligheid inschakelt (weergegeven door de markering `i` ). Het instellingenobject dat door de weergave wordt opgeslagen, moet aangeven of het selectievakje is ingeschakeld, zodat de bibliotheekmodule die de reguliere expressie uitvoert, kan weten of de markering `i` moet worden gebruikt. Wanneer de extensieweergave het algemene expressietestbestand wil openen, moet de markering `i` ook worden doorgegeven als het selectievakje voor hoofdlettergevoeligheid is ingeschakeld. Hierdoor kan de gebruiker de reguliere expressie op de juiste manier testen waarbij hoofdletterongevoeligheid is ingeschakeld. |
 
 ### [!DNL openDataElementSelector] {#open-data-element}
 
