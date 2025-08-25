@@ -2,9 +2,9 @@
 description: Deze pagina illustreert de API vraag die wordt gebruikt om een credentiële configuratie Adobe Experience Platform Destination SDK tot stand te brengen.
 title: Een referentieconfiguratie maken
 exl-id: 9844c9c5-d2dc-4d4b-ae93-759bf23b87fa
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 560200a6553a1aae66c608eef7901b3248c886b4
 workflow-type: tm+mt
-source-wordcount: '565'
+source-wordcount: '586'
 ht-degree: 2%
 
 ---
@@ -27,7 +27,7 @@ Deze pagina illustreert de API-aanvraag en -lading die u kunt gebruiken om een r
 
 Gebruik dit API-eindpunt om alleen een referentie-configuratie te maken als er een algemeen verificatiesysteem is tussen Adobe en uw doelplatform. De [!DNL Experience Platform] -klant hoeft geen verificatiegegevens op te geven om verbinding te maken met uw bestemming. In dit geval moet u een referentieconfiguratie maken met het API-eindpunt van `/credentials` .
 
-Wanneer het gebruiken van een globaal authentificatiesysteem, moet u `"authenticationRule":"PLATFORM_AUTHENTICATION"` in de [&#128279;](../functionality/destination-configuration/destination-delivery.md) 2&rbrace; configuratie van de bestemmingslevering plaatsen, wanneer [ creërend een nieuwe bestemmingsconfiguratie ](../authoring-api/destination-configuration/create-destination-configuration.md).
+Wanneer het gebruiken van een globaal authentificatiesysteem, moet u `"authenticationRule":"PLATFORM_AUTHENTICATION"` in de [ 2} configuratie van de bestemmingslevering plaatsen, wanneer ](../functionality/destination-configuration/destination-delivery.md) creërend een nieuwe bestemmingsconfiguratie [. ](../authoring-api/destination-configuration/create-destination-configuration.md) Dan, moet u de configuratie van de a [ geloofsbrieven ](../credentials-api/create-credential-configuration.md) tot stand brengen en identiteitskaart van de referentie objecten in de `authenticationId` parameter in de [ configuratie van de bestemmingslevering ](/help/destinations/destination-sdk/functionality/destination-configuration/destination-delivery.md#platform-authentication) overgaan.
 
 >[!IMPORTANT]
 >
@@ -57,7 +57,7 @@ Selecteer hieronder elk tabblad om de bijbehorende lading weer te geven.
 
 **creeer een basiscredentiële configuratie**
 
-+++verzoek
++++Verzoek
 
 ```shell
 curl -X POST https://platform.adobe.io/data/core/activation/authoring/credentials \
@@ -86,7 +86,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/credential
 
 +++
 
-+++Response
++++Antwoord
 
 Een succesvolle reactie keert status 200 van HTTP met details van uw pas gecreëerde geloofsgeloofsconfiguratie terug.
 
@@ -123,7 +123,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/credential
 
 +++
 
-+++Response
++++Antwoord
 
 Een succesvolle reactie keert status 200 van HTTP met details van uw pas gecreëerde geloofsgeloofsconfiguratie terug.
 
@@ -133,7 +133,7 @@ Een succesvolle reactie keert status 200 van HTTP met details van uw pas gecreë
 
 **creeer een SSH credentiële configuratie**
 
-+++verzoek
++++Verzoek
 
 ```shell
 curl -X POST https://platform.adobe.io/data/core/activation/authoring/credentials \
@@ -160,7 +160,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/credential
 
 +++
 
-+++Response
++++Antwoord
 
 Een succesvolle reactie keert status 200 van HTTP met details van uw pas gecreëerde geloofsgeloofsconfiguratie terug.
 
@@ -170,7 +170,7 @@ Een succesvolle reactie keert status 200 van HTTP met details van uw pas gecreë
 
 **creeer een [!DNL Azure Data Lake Storage] credentiële configuratie**
 
-+++verzoek
++++Verzoek
 
 ```shell
 curl -X POST https://platform.adobe.io/data/core/activation/authoring/credentials \
@@ -201,7 +201,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/credential
 
 +++
 
-+++Response
++++Antwoord
 
 Een succesvolle reactie keert status 200 van HTTP met details van uw pas gecreëerde geloofsgeloofsconfiguratie terug.
 
@@ -211,7 +211,7 @@ Een succesvolle reactie keert status 200 van HTTP met details van uw pas gecreë
 
 **creeer een [!DNL Azure Blob Storage] credentiële configuratie**
 
-+++verzoek
++++Verzoek
 
 ```shell
 curl -X POST https://platform.adobe.io/data/core/activation/authoring/credentials \
@@ -236,7 +236,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/credential
 
 +++
 
-+++Response
++++Antwoord
 
 Een succesvolle reactie keert status 200 van HTTP met details van uw pas gecreëerde geloofsgeloofsconfiguratie terug.
 

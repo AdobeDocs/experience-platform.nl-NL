@@ -2,9 +2,9 @@
 description: Deze pagina bevat een overzicht en beschrijving van de stappen voor het configureren van een bestandsgebaseerde bestemming met Destination SDK.
 title: Destination SDK gebruiken om een bestandsgebaseerde bestemming te configureren
 exl-id: 84d73452-88e4-4e0f-8fc7-d0d8e10f9ff5
-source-git-commit: 804370a778a4334603f3235df94edaa91b650223
+source-git-commit: 560200a6553a1aae66c608eef7901b3248c886b4
 workflow-type: tm+mt
-source-wordcount: '732'
+source-wordcount: '745'
 ht-degree: 0%
 
 ---
@@ -413,8 +413,7 @@ Afhankelijk van of u `"authenticationRule": "CUSTOMER_AUTHENTICATION"` of `"auth
    * [SFTP-verificatie met SSH-sleutel](../functionality/destination-configuration/customer-authentication.md#sftp-ssh)
    * [SFTP-verificatie met wachtwoord](../functionality/destination-configuration/customer-authentication.md#sftp-password)
 
-* Als u `"authenticationRule": "PLATFORM_AUTHENTICATION"` selecteerde, verwijs naar de [ referentie configuratie API documentatie ](../credentials-api/create-credential-configuration.md#when-to-use).
-
+* Als u `"authenticationRule": "PLATFORM_AUTHENTICATION"` selecteerde, moet u de configuratie van de a [ geloofsbrieven ](../credentials-api/create-credential-configuration.md) tot stand brengen en identiteitskaart van het credentievoorwerp in de `authenticationId` parameter in de [ configuratie van de bestemmingslevering ](/help/destinations/destination-sdk/functionality/destination-configuration/destination-delivery.md#platform-authentication) overgaan.
 
 ## Stap 5: Test uw bestemming {#test-destination}
 
@@ -423,7 +422,7 @@ Na vestiging kunt uw bestemming die de configuratieeindpunten in de vorige stapp
 Als onderdeel van het proces om uw bestemming te testen, moet u Experience Platform UI gebruiken om publiek tot stand te brengen, dat u aan uw bestemming zult activeren. Raadpleeg de twee onderstaande bronnen voor instructies voor het maken van soorten publiek in Experience Platform:
 
 * [Een publiek maken - documentatiepagina](/help/segmentation/ui/audience-portal.md#create-audience)
-* [ creeer een publiek - videoanalyse ](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html?lang=nl-NL)
+* [ creeer een publiek - videoanalyse ](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html)
 
 ## Stap 6: Uw doel publiceren {#publish-destination}
 

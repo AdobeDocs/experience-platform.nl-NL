@@ -2,9 +2,9 @@
 description: Op deze pagina vindt u een overzicht en beschrijving van de stappen voor het configureren van een streamingbestemming met Destination SDK.
 title: Destination SDK gebruiken om een streamingbestemming te configureren
 exl-id: d8aa7353-ba55-4a0d-81c4-ea2762387638
-source-git-commit: 804370a778a4334603f3235df94edaa91b650223
+source-git-commit: 560200a6553a1aae66c608eef7901b3248c886b4
 workflow-type: tm+mt
-source-wordcount: '865'
+source-wordcount: '879'
 ht-degree: 0%
 
 ---
@@ -275,7 +275,7 @@ Afhankelijk van of u `"authenticationRule": "CUSTOMER_AUTHENTICATION"` of `"auth
 
 Als u `"authenticationRule": "CUSTOMER_AUTHENTICATION"` in de bestemmingsconfiguratie en uw bestemming selecteerde steunt OAuth 2 authentificatiemethode, lees [ OAuth 2 authentificatie ](../functionality/destination-configuration/oauth2-authorization.md).
 
-Als u `"authenticationRule": "PLATFORM_AUTHENTICATION"` selecteerde, moet u de configuratie van de a [ geloofsbrieven ](../credentials-api/create-credential-configuration.md) tot stand brengen.
+Als u `"authenticationRule": "PLATFORM_AUTHENTICATION"` selecteerde, moet u de configuratie van de a [ geloofsbrieven ](../credentials-api/create-credential-configuration.md) tot stand brengen en identiteitskaart van het credentievoorwerp in de `authenticationId` parameter in de [ configuratie van de bestemmingslevering ](/help/destinations/destination-sdk/functionality/destination-configuration/destination-delivery.md#platform-authentication) overgaan.
 
 ## Stap 6: Test uw bestemming {#test-destination}
 
@@ -284,7 +284,7 @@ Na vestiging kunt uw bestemming die de configuratieeindpunten in de vorige stapp
 Als onderdeel van het proces om uw bestemming te testen, moet u Experience Platform UI gebruiken om segmenten tot stand te brengen, die u aan uw bestemming zult activeren. Raadpleeg de twee onderstaande bronnen voor instructies voor het maken van soorten publiek in Experience Platform:
 
 * [Een pagina met publieksdocumentatie maken](/help/segmentation/ui/audience-portal.md#create-audience)
-* [ creeer een analyse van de publieksvideo ](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html?lang=nl-NL)
+* [ creeer een analyse van de publieksvideo ](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html)
 
 ## Stap 7: Uw doel publiceren {#publish-destination}
 

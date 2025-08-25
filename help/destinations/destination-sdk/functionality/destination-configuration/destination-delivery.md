@@ -2,9 +2,9 @@
 description: Leer hoe te om de montages van de bestemmingslevering voor bestemmingen te vormen die met Destination SDK worden gebouwd, om erop te wijzen waar de uitgevoerde gegevens gaan en welke authentificatieregel in de plaats wordt gebruikt waar de gegevens zullen landen.
 title: Levering bestemming
 exl-id: ade77b6b-4b62-4b17-a155-ef90a723a4ad
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 560200a6553a1aae66c608eef7901b3248c886b4
 workflow-type: tm+mt
-source-wordcount: '564'
+source-wordcount: '641'
 ht-degree: 0%
 
 ---
@@ -48,7 +48,8 @@ Wanneer het vormen van uw montages van de bestemmingslevering, kunt u de paramet
 
 | Parameter | Type | Beschrijving |
 |---------|----------|------|
-| `authenticationRule` | String | Geeft aan hoe [!DNL Experience Platform] verbinding moet maken met uw doel. Ondersteunde waarden:<ul><li>`CUSTOMER_AUTHENTICATION`: Gebruik deze optie als de klanten van Experience Platform aan uw systeem via om het even welke beschreven authentificatiemethodes [ hier ](customer-authentication.md) login.</li><li>`PLATFORM_AUTHENTICATION`: Gebruik deze optie als er een wereldwijd verificatiesysteem is tussen Adobe en uw bestemming en de [!DNL Experience Platform] -klant geen verificatiereferenties hoeft op te geven om verbinding te maken met uw bestemming. In dit geval, moet u een geloofsbrieven tot stand brengen voorwerp gebruikend de [ geloofsbrieven API ](../../credentials-api/create-credential-configuration.md) configuratie. </li><li>`NONE`: gebruik deze optie als er geen verificatie vereist is om gegevens naar het doelplatform te verzenden. </li></ul> |
+| `authenticationRule` | String | Geeft aan hoe [!DNL Experience Platform] verbinding moet maken met uw doel. Ondersteunde waarden:<ul><li>`CUSTOMER_AUTHENTICATION`: Gebruik deze optie als de klanten van Experience Platform aan uw systeem via om het even welke beschreven authentificatiemethodes [ hier ](customer-authentication.md) login.</li><li>`PLATFORM_AUTHENTICATION`: Gebruik deze optie als er een wereldwijd verificatiesysteem is tussen Adobe en uw bestemming en de [!DNL Experience Platform] -klant geen verificatiereferenties hoeft op te geven om verbinding te maken met uw bestemming. In dit geval, moet u een geloofsbrieven tot stand brengen voorwerp gebruikend de [ geloofsbrieven API ](../../credentials-api/create-credential-configuration.md) configuratie en de `authenticationId` parameter aan de waarde van referentie objecten identiteitskaart plaatsen.</li><li>`NONE`: gebruik deze optie als er geen verificatie vereist is om gegevens naar het doelplatform te verzenden. </li></ul> |
+| `authenticationId` | String | The `instanceId` of the credential object&#39;s configuration ID to use for authentication. Deze parameter wordt slechts vereist wanneer u een bepaalde geloofsgeloofsconfiguratie moet specificeren. |
 | `destinationServerId` | String | `instanceId` van de [ bestemmingsserver ](../../authoring-api/destination-server/create-destination-server.md) die u gegevens naar wilt uitvoeren. |
 | `deliveryMatchers.type` | String | <ul><li>Wanneer het vormen van bestemmingslevering voor op dossier-gebaseerde bestemmingen, plaats altijd dit aan `SOURCE`.</li><li>Wanneer het vormen van bestemmingslevering voor een het stromen bestemming, wordt de `deliveryMatchers` sectie niet vereist.</li></ul> |
 | `deliveryMatchers.value` | String | <ul><li>Wanneer het vormen van bestemmingslevering voor op dossier-gebaseerde bestemmingen, plaats altijd dit aan `batch`.</li><li>Wanneer het vormen van bestemmingslevering voor een het stromen bestemming, wordt de `deliveryMatchers` sectie niet vereist.</li></ul> |
@@ -94,6 +95,32 @@ In het onderstaande voorbeeld ziet u hoe de instellingen voor de doellevering mo
          ],
          "authenticationRule":"CUSTOMER_AUTHENTICATION",
          "destinationServerId":"{{destinationServerId}}"
+      }
+   ]
+}
+```
+
+>[!ENDSHADEBOX]
+
+## Configuratie van platformverificatie {#platform-authentication}
+
+Wanneer u `PLATFORM_AUTHENTICATION` gebruikt, moet u de parameter `authenticationId` opgeven om uw doelconfiguratie te koppelen aan de configuratie van de referenties.
+
+1. Stel `destinationDelivery.authenticationRule` in op `"PLATFORM_AUTHENTICATION"` in de doelconfiguratie
+2. [ creeer het referentie voorwerp ](/help/destinations/destination-sdk/credentials-api/create-credential-configuration.md).
+3. Stel de parameter `authenticationId` in op de waarde `instanceId` van het referentie-object.
+
+**configuratie van het voorbeeld met PLATFORM_AUTHENTICATION:**
+
+>[!BEGINSHADEBOX]
+
+```json
+{
+   "destinationDelivery":[
+      {
+         "authenticationRule":"PLATFORM_AUTHENTICATION",
+         "authenticationId":"<string-here>",
+         "destinationServerId":"<string-here>"
       }
    ]
 }

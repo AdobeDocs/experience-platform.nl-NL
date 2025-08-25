@@ -2,9 +2,9 @@
 description: Deze pagina illustreert de API vraag die wordt gebruikt om een credentiële configuratie Adobe Experience Platform Destination SDK te schrappen.
 title: Een referentieconfiguratie verwijderen
 exl-id: a540e349-043c-4f04-8ca8-f650b9943492
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 560200a6553a1aae66c608eef7901b3248c886b4
 workflow-type: tm+mt
-source-wordcount: '397'
+source-wordcount: '418'
 ht-degree: 0%
 
 ---
@@ -27,7 +27,7 @@ Deze pagina illustreert de API-aanvraag en -lading die u kunt gebruiken om een r
 
 Gebruik dit API-eindpunt om alleen een referentie-configuratie te maken als er een algemeen verificatiesysteem is tussen Adobe en uw doelplatform. De [!DNL Experience Platform] -klant hoeft geen verificatiegegevens op te geven om verbinding te maken met uw bestemming. In dit geval moet u een referentieconfiguratie maken met het API-eindpunt van `/credentials` .
 
-Wanneer het gebruiken van een globaal authentificatiesysteem, moet u `"authenticationRule":"PLATFORM_AUTHENTICATION"` in de [&#128279;](../functionality/destination-configuration/destination-delivery.md) 2&rbrace; configuratie van de bestemmingslevering plaatsen, wanneer [ creërend een nieuwe bestemmingsconfiguratie ](../authoring-api/destination-configuration/create-destination-configuration.md).
+Wanneer het gebruiken van een globaal authentificatiesysteem, moet u `"authenticationRule":"PLATFORM_AUTHENTICATION"` in de [ 2} configuratie van de bestemmingslevering plaatsen, wanneer ](../functionality/destination-configuration/destination-delivery.md) creërend een nieuwe bestemmingsconfiguratie [. ](../authoring-api/destination-configuration/create-destination-configuration.md) Dan, moet u de configuratie van de a [ geloofsbrieven ](../credentials-api/create-credential-configuration.md) tot stand brengen en identiteitskaart van de referentie objecten in de `authenticationId` parameter in de [ configuratie van de bestemmingslevering ](/help/destinations/destination-sdk/functionality/destination-configuration/destination-delivery.md#platform-authentication) overgaan.
 
 >[!IMPORTANT]
 >
@@ -55,7 +55,7 @@ DELETE /authoring/credentials/{INSTANCE_ID}
 
 Met de volgende aanvraag wordt een referentieconfiguratie verwijderd die door de parameter `{INSTANCE_ID}` wordt gedefinieerd.
 
-+++verzoek
++++Verzoek
 
 ```shell
 curl -X DELETE https://platform.adobe.io/data/core/activation/authoring/credentials/{INSTANCE_ID} \
@@ -67,7 +67,7 @@ curl -X DELETE https://platform.adobe.io/data/core/activation/authoring/credenti
 
 +++
 
-+++Response
++++Antwoord
 
 Een geslaagde reactie retourneert HTTP-status 200 samen met een lege HTTP-respons.
 

@@ -2,9 +2,9 @@
 description: Leer hoe te om het partnerschema voor bestemmingen te vormen die met Destination SDK worden gebouwd.
 title: Configuratie partnerschema
 exl-id: 0548e486-206b-45c5-8d18-0d6427c177c5
-source-git-commit: 3c772e99e7f0417672e60d56ace962abda2b7d76
+source-git-commit: 560200a6553a1aae66c608eef7901b3248c886b4
 workflow-type: tm+mt
-source-wordcount: '1898'
+source-wordcount: '1912'
 ht-degree: 0%
 
 ---
@@ -148,7 +148,7 @@ In een dynamische schemaconfiguratie, wordt de `profileFields` serie vervangen d
 
 | Parameter | Type | Vereist/optioneel | Beschrijving |
 |---------|----------|------|---|
-| `dynamicEnum.authenticationRule` | String | Vereist | Geeft aan hoe [!DNL Experience Platform] -klanten verbinding maken met uw doel. Accepteerde waarden zijn `CUSTOMER_AUTHENTICATION` , `PLATFORM_AUTHENTICATION` , `NONE` . <br> <ul><li>Gebruik `CUSTOMER_AUTHENTICATION` als de klanten van Experience Platform zich in uw systeem via om het even welke beschreven authentificatiemethodes [ hier ](customer-authentication.md) registreren. </li><li> Gebruik `PLATFORM_AUTHENTICATION` als er een wereldwijd verificatiesysteem is tussen Adobe en uw bestemming en de klant van [!DNL Experience Platform] geen verificatiereferenties hoeft op te geven om verbinding te maken met uw bestemming. In dit geval, moet u [ een geloofsbrieven tot voorwerp ](../../credentials-api/create-credential-configuration.md) leiden gebruikend geloofsbrieven API. </li><li>Gebruik `NONE` als er geen verificatie vereist is om gegevens naar het doelplatform te verzenden. </li></ul> |
+| `dynamicEnum.authenticationRule` | String | Vereist | Geeft aan hoe [!DNL Experience Platform] -klanten verbinding maken met uw doel. Accepteerde waarden zijn `CUSTOMER_AUTHENTICATION` , `PLATFORM_AUTHENTICATION` , `NONE` . <br> <ul><li>Gebruik `CUSTOMER_AUTHENTICATION` als de klanten van Experience Platform zich in uw systeem via om het even welke beschreven authentificatiemethodes [ hier ](customer-authentication.md) registreren. </li><li> Gebruik `PLATFORM_AUTHENTICATION` als er een wereldwijd verificatiesysteem is tussen Adobe en uw bestemming en de klant van [!DNL Experience Platform] geen verificatiereferenties hoeft op te geven om verbinding te maken met uw bestemming. In dit geval, moet u [ een geloofsbrieven tot voorwerp ](../../credentials-api/create-credential-configuration.md) leiden gebruikend Credentials API en ga identiteitskaart van het referentie voorwerp in de `authenticationId` parameter in de [ configuratie van de bestemmingslevering ](/help/destinations/destination-sdk/functionality/destination-configuration/destination-delivery.md#platform-authentication) over. </li><li>Gebruik `NONE` als er geen verificatie vereist is om gegevens naar het doelplatform te verzenden. </li></ul> |
 | `dynamicEnum.destinationServerId` | String | Vereist | De `instanceId` van uw dynamische schemaserver. Deze bestemmingsserver omvat het API eindpunt dat Experience Platform zal roepen om het dynamische schema terug te winnen. |
 | `dynamicEnum.value` | String | Vereist | De naam van het dynamische schema, zoals die in de dynamische configuratie van de schemaserver wordt bepaald. |
 | `dynamicEnum.responseFormat` | String | Vereist | Altijd ingesteld op `SCHEMA` bij het definiëren van een dynamisch schema. |
