@@ -27,7 +27,7 @@ Deze pagina illustreert de API-aanvraag en -lading die u kunt gebruiken om een r
 
 Gebruik dit API-eindpunt om alleen een referentie-configuratie te maken als er een algemeen verificatiesysteem is tussen Adobe en uw doelplatform. De [!DNL Experience Platform] -klant hoeft geen verificatiegegevens op te geven om verbinding te maken met uw bestemming. In dit geval moet u een referentieconfiguratie maken met het API-eindpunt van `/credentials` .
 
-Wanneer het gebruiken van een globaal authentificatiesysteem, moet u `"authenticationRule":"PLATFORM_AUTHENTICATION"` in de [ 2} configuratie van de bestemmingslevering plaatsen, wanneer ](../functionality/destination-configuration/destination-delivery.md) creërend een nieuwe bestemmingsconfiguratie [. ](../authoring-api/destination-configuration/create-destination-configuration.md) Dan, moet u de configuratie van de a [ geloofsbrieven ](../credentials-api/create-credential-configuration.md) tot stand brengen en identiteitskaart van de referentie objecten in de `authenticationId` parameter in de [ configuratie van de bestemmingslevering ](/help/destinations/destination-sdk/functionality/destination-configuration/destination-delivery.md#platform-authentication) overgaan.
+Wanneer het gebruiken van een globaal authentificatiesysteem, moet u `"authenticationRule":"PLATFORM_AUTHENTICATION"` in de [ 2&rbrace; configuratie van de bestemmingslevering plaatsen, wanneer ](../functionality/destination-configuration/destination-delivery.md) creërend een nieuwe bestemmingsconfiguratie [. ](../authoring-api/destination-configuration/create-destination-configuration.md) Dan, moet u de configuratie van de a [ geloofsbrieven ](../credentials-api/create-credential-configuration.md) tot stand brengen en identiteitskaart van de referentie objecten in de `authenticationId` parameter in de [ configuratie van de bestemmingslevering ](/help/destinations/destination-sdk/functionality/destination-configuration/destination-delivery.md#platform-authentication) overgaan.
 
 >[!IMPORTANT]
 >
@@ -61,7 +61,7 @@ Selecteer hieronder elk tabblad om de bijbehorende lading weer te geven.
 
 >[!BEGINTABS]
 
->[!TAB  wint alle credentiële configuraties ] terug
+>[!TAB wint alle credentiële configuraties  terug]
 
 +++Verzoek
 
@@ -107,7 +107,7 @@ Een succesvol antwoord retourneert HTTP-status 200 met een lijst van referentiec
 
 +++
 
->[!TAB  wint een specifieke credentieconfiguratie ] terug
+>[!TAB wint een specifieke credentieconfiguratie  terug]
 
 +++Verzoek
 
