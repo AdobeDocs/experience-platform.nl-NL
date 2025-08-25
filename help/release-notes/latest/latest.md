@@ -15,8 +15,8 @@ ht-degree: 34%
 >
 >Raadpleeg de volgende documentatie voor aanvullende informatie voor andere Adobe Experience Platform-toepassingen:
 >
->- [Adobe Journey Optimizer](https://experienceleague.adobe.com/nl/docs/journey-optimizer/using/whats-new/release-notes)
->- [Adobe Journey Optimizer B2B](https://experienceleague.adobe.com/nl/docs/journey-optimizer-b2b/user/release-notes)
+>- [Adobe Journey Optimizer](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/whats-new/release-notes)
+>- [Adobe Journey Optimizer B2B](https://experienceleague.adobe.com/en/docs/journey-optimizer-b2b/user/release-notes)
 >- [Customer Journey Analytics](https://experienceleague.adobe.com/nl/docs/analytics-platform/using/releases/pre-release-notes)
 >- [Samenstelling van Federated-doelgroep](https://experienceleague.adobe.com/nl/docs/federated-audience-composition/using/e-release-notes)
 >- [Real-Time CDP Collaboration](https://experienceleague.adobe.com/nl/docs/real-time-cdp-collaboration/using/latest)
@@ -70,7 +70,7 @@ Voor meer informatie over de Dienst van de Catalogus, lees het [ overzicht van d
 
 >[!IMPORTANT]
 >
->{de update van de lijst van gewenste personen van 0} IP die voor op API-Gebaseerde bestemmingen wordt vereist **&#x200B;**
+>{de update van de lijst van gewenste personen van 0} IP die voor op API-Gebaseerde bestemmingen wordt vereist ****
 >
 >Wegens verbeteringen aan de het stromen motor van de bestemmingenuitvoer, moeten de organisaties die [ IP gebruiken lijsten van gewenste personen ](../../destinations/catalog/streaming/ip-address-allow-list.md) voor op API-Gebaseerde bestemmingen de volgende IP adressen aan hun lijsten van gewenste personen **vóór 15 September, 2025** toevoegen:
 >
@@ -170,7 +170,7 @@ Experience Platform biedt een RESTful-API en een interactieve gebruikersinterfac
 
 | Functie | Beschrijving |
 | --- | --- |
-| [!BADGE &#x200B; Beta &#x200B;]{type=Informative} Steun voor [!DNL Azure Private Links] in UI | U kunt [!DNL Azure Private Links] nu gebruiken voor een geselecteerde groep bronnen in de gebruikersinterface. Gebruik deze eigenschap om een privé eindpunt tot stand te brengen dat uw bron met kan verbinden. Met privé eindpunten, kunt u opstellingsverbindingen en gegevensstromen die openbaar Internet overslaan, die u verbeterde veiligheid en netwerkisolatie voor uw gevoelige gegevens geven. Ondersteuning voor [!DNL Azure Private Links] is beschikbaar voor de volgende bronnen: <ul><li>[[!DNL Azure Blob Storage]](../../sources/connectors/cloud-storage/blob.md)</li><li>[[!DNL ADLS Gen2]](../../sources/connectors/cloud-storage/adls-gen2.md)</li><li>[[!DNL Azure File Storage]](../../sources/connectors/cloud-storage/azure-file-storage.md)</li><li>[[!DNL Snowflake]](../../sources/connectors/databases/snowflake.md)</li></ul> Lees de handleiding op [[!DNL Azure Private Links]](../../sources/tutorials/ui/private-link.md) voor meer informatie. |
+| [!BADGE  Beta ]{type=Informative} Steun voor [!DNL Azure Private Links] in UI | U kunt [!DNL Azure Private Links] nu gebruiken voor een geselecteerde groep bronnen in de gebruikersinterface. Gebruik deze eigenschap om een privé eindpunt tot stand te brengen dat uw bron met kan verbinden. Met privé eindpunten, kunt u opstellingsverbindingen en gegevensstromen die openbaar Internet overslaan, die u verbeterde veiligheid en netwerkisolatie voor uw gevoelige gegevens geven. Ondersteuning voor [!DNL Azure Private Links] is beschikbaar voor de volgende bronnen: <ul><li>[[!DNL Azure Blob Storage]](../../sources/connectors/cloud-storage/blob.md)</li><li>[[!DNL ADLS Gen2]](../../sources/connectors/cloud-storage/adls-gen2.md)</li><li>[[!DNL Azure File Storage]](../../sources/connectors/cloud-storage/azure-file-storage.md)</li><li>[[!DNL Snowflake]](../../sources/connectors/databases/snowflake.md)</li></ul> Lees de handleiding op [[!DNL Azure Private Links]](../../sources/tutorials/ui/private-link.md) voor meer informatie. |
 | Verbeterde verificatie voor [!DNL Azure Blob Storage] | U kunt nu op service principal gebaseerde verificatie gebruiken om uw [!DNL Azure Blob Storage] -bron te verbinden met Experience Platform. De dienst belangrijkste gebaseerde authentificatie van het gebruik voor verbeterde veiligheid, gemakkelijkere credentiële omwenteling, en een meer korrelige toegangsbeheer voor uw rekening. Voor meer informatie, lees het [[!DNL Azure Blob Storage]  overzicht ](../../sources/connectors/cloud-storage/blob.md). |
 
 Voor meer informatie raadpleegt u het [overzicht van bronnen](../../sources/home.md).
