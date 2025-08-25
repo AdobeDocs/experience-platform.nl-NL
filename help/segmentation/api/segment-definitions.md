@@ -628,7 +628,7 @@ Met het volgende verzoek wordt het land van het werkadres van de VS naar Canada 
 
 >[!NOTE]
 >
->Aangezien deze API vraag **** vervangt de inhoud van de segmentdefinitie, gelieve te verzekeren **alle** gebieden u wilt houden zijn inbegrepen als deel van het verzoeklichaam.
+>Aangezien deze API vraag **&#x200B;**&#x200B;vervangt de inhoud van de segmentdefinitie, gelieve te verzekeren **alle** gebieden u wilt houden zijn inbegrepen als deel van het verzoeklichaam.
 
 +++ Een voorbeeldverzoek om een segmentdefinitie bij te werken.
 
