@@ -4,9 +4,9 @@ title: Segment Definition API Endpoint
 description: Het eindpunt van segmentdefinities in de Dienst API van de Segmentatie van Adobe Experience Platform staat u toe om segmentdefinities voor uw organisatie programmatically te beheren.
 role: Developer
 exl-id: e7811b96-32bf-4b28-9abb-74c17a71ffab
-source-git-commit: 424702d7d16eddabefe19d023c3829bd650c88ce
+source-git-commit: 5f19bd0601770115cae859fd6dc85bd9c9f6e92c
 workflow-type: tm+mt
-source-wordcount: '1558'
+source-wordcount: '1571'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 >[!WARNING]
 >
->Het maken van soorten publiek met B2B-entiteiten die gebruikmaken van de Segmentation Service API is afgekeurd. U kunt geen publiek meer tot stand brengen gebruikend de volgende B2B entiteiten: Rekening, rekening-Persoonlijke Verhouding, Campagne, Lid van de Campagne, de Lijst van de Marketing, Lid van de Lijst van de Marketing, Kans, en Kans-Persoon Verhouding.
+>Het maken van soorten publiek met B2B-entiteiten die gebruikmaken van de Segmentation Service API is afgekeurd. U kunt geen publiek meer tot stand brengen gebruikend de volgende B2B entiteiten: Rekening, rekening-Persoonlijke Verhouding, Campagne, Lid van de Campagne, de Lijst van de Marketing, Lid van de Lijst van de Marketing, Kans, en Kans-Persoon Verhouding. Voor meer informatie, lees de gids over [ de architectuurverbeteringen van Real-Time CDP B2B edition ](../../rtcdp/b2b-architecture-upgrade.md).
 
 Met Adobe Experience Platform kunt u segmentdefinities maken die een groep specifieke kenmerken of gedragingen definiëren op basis van een groep profielen. Een segmentdefinitie is een object dat een query omvat die is geschreven in [!DNL Profile Query Language] (PQL). Segmentdefinities worden toegepast op profielen om een publiek te maken. Dit object (segmentdefinitie) wordt ook wel een PQL-voorspelling genoemd. PQL voorspelt de regels voor de segmentdefinitie op basis van voorwaarden die gerelateerd zijn aan record- of tijdreeksgegevens die u aan [!DNL Real-Time Customer Profile] opgeeft. Zie de [ gids van PQL ](../pql/overview.md) voor meer informatie bij het schrijven van de vragen van PQL.
 
@@ -628,7 +628,7 @@ Met het volgende verzoek wordt het land van het werkadres van de VS naar Canada 
 
 >[!NOTE]
 >
->Aangezien deze API vraag **&#x200B;**&#x200B;vervangt de inhoud van de segmentdefinitie, gelieve te verzekeren **alle** gebieden u wilt houden zijn inbegrepen als deel van het verzoeklichaam.
+>Aangezien deze API vraag **** vervangt de inhoud van de segmentdefinitie, gelieve te verzekeren **alle** gebieden u wilt houden zijn inbegrepen als deel van het verzoeklichaam.
 
 +++ Een voorbeeldverzoek om een segmentdefinitie bij te werken.
 
