@@ -3,9 +3,9 @@ solution: Experience Platform
 title: Handleiding voor streaming segmentatie
 description: Leer over het stromen segmentatie met inbegrip van wat het is, hoe te om een publiek tot stand te brengen dat gebruikend het stromen segmentatie wordt geëvalueerd, en hoe te om uw publiek te bekijken die gebruikend het stromen segmentatie wordt gecreeerd.
 exl-id: cb9b32ce-7c0f-4477-8c49-7de0fa310b97
-source-git-commit: 6935cee30adb59d52db6c6fed7036f81b54edd52
+source-git-commit: c009eb89331758c512abd8ff7ef185489063b48f
 workflow-type: tm+mt
-source-wordcount: '2004'
+source-wordcount: '2033'
 ht-degree: 0%
 
 ---
@@ -18,7 +18,7 @@ ht-degree: 0%
 >
 >De subsidiabiliteitscriteria voor streamingsegmentatie zijn bijgewerkt op 20 mei 2025.
 
-+++Updates voor geschiktheid
++++Geschiktheidsupdates
 
 >[!IMPORTANT]
 >
@@ -35,9 +35,13 @@ Om het even welke **nieuwe of uitgegeven** segmentdefinities die de volgende hee
 
 ## Tijdvenster {#time-window}
 
-Om een publiek met het stromen segmentatie te evalueren, moet het **&#x200B;**&#x200B;binnen een 24 uurstijdvenster worden beperkt.
+Om een publiek met het stromen segmentatie te evalueren, moet het **** binnen een 24 uurstijdvenster worden beperkt.
 
 ## Batchgegevens opnemen in streaming publiek {#include-batch-data}
+
+>[!NOTE]
+>
+>Om het stromen segmentatie nauwkeurig te houden wanneer het gebruiken van partijgegevens, zorg ervoor dat het partijgegeven **** slechts binnen het partijpubliek wordt gehouden en binnen het het stromen publiek van verwijzingen wordt voorzien.
 
 Voorafgaand aan deze update kunt u een definitie voor streaming publiek maken die zowel batch- als streaming gegevensbronnen combineert. Met de nieuwste update wordt het maken van een publiek met zowel batch- als streaming-gegevensbronnen echter geëvalueerd aan de hand van batchsegmentatie.
 
@@ -87,7 +91,7 @@ inSegment("e3be6d7f-1727-401f-a41e-c296b45f607a") and inSegment("9e1646bb-57ff-4
 
 Om het even welke **nieuwe of uitgegeven** segmentdefinities die voor het stromen of randsegmentatie **kwalificeren moeten** op &quot;Actief op Edge&quot;fusiebeleid zijn.
 
-Als er geen actieve reeks van het fusiebeleid is, zult u uw fusiebeleid [&#128279;](../../profile/merge-policies/ui-guide.md#configure) moeten vormen en het plaatsen om op rand actief te zijn.
+Als er geen actieve reeks van het fusiebeleid is, zult u uw fusiebeleid [ moeten vormen en het plaatsen om op rand actief te zijn.](../../profile/merge-policies/ui-guide.md#configure)
 
 
 +++
@@ -102,7 +106,7 @@ Met streamingsegmentatie gebeurt de kwalificatie van het publiek nu terwijl stre
 
 >[!IMPORTANT]
 >
->Om het stromen segmentatie te gebruiken, moet u **&#x200B;**&#x200B;een fusiebeleid gebruiken dat &quot;Actief op Edge&quot;is. Voor meer informatie over fusiebeleid, te lezen gelieve het [ overzicht van het samenvoegbeleid ](../../profile/merge-policies/overview.md).
+>Om het stromen segmentatie te gebruiken, moet u **** een fusiebeleid gebruiken dat &quot;Actief op Edge&quot;is. Voor meer informatie over fusiebeleid, te lezen gelieve het [ overzicht van het samenvoegbeleid ](../../profile/merge-policies/overview.md).
 
 Een liniaal komt in aanmerking voor streamingsegmentatie als het voldoet aan een van de criteria die in de volgende tabel worden beschreven.
 
@@ -338,7 +342,7 @@ curl -X GET 'https://platform.adobe.io/data/core/ups/segment/definitions?evaluat
 
 Een succesvolle reactie keert status 200 van HTTP met een serie van segmentdefinities in uw organisatie terug die voor het stromen segmentatie worden toegelaten.
 
-+++A steekproefreactie die een lijst van alle het stromen-segmenteren-Toegelaten segmentdefinities in uw organisatie bevat
++++Een steekproefreactie die een lijst van alle streaming-segmentation-Toegelaten segmentdefinities in uw organisatie bevat
 
 ```json
 {
