@@ -5,18 +5,14 @@ type: Documentation
 description: Met Adobe Experience Platform hebt u toegang tot realtime gegevens van het klantprofiel met RESTful-API's of de gebruikersinterface. In deze handleiding wordt beschreven hoe u met behulp van de profiel-API toegang krijgt tot entiteiten, beter bekend als "profielen".
 role: Developer
 exl-id: 06a1a920-4dc4-4468-ac15-bf4a6dc885d4
-source-git-commit: 1e508ec11b6d371524c87180a41e05ffbacc2798
+source-git-commit: 40400ab8cc87a6c8d6d37f1a20eaf96ab49aabf7
 workflow-type: tm+mt
-source-wordcount: '1933'
+source-wordcount: '1981'
 ht-degree: 0%
 
 ---
 
 # Het eindpunt van entiteiten (de toegang van het Profiel)
-
->[!IMPORTANT]
->
->De zoekopdracht ExperienceEvent met de API voor toegang tot het profiel wordt afgekeurd. Gebruik functies zoals berekende kenmerken voor gebruiksgevallen die het opzoeken van ExperienceEvents vereisen. Neem voor meer informatie over deze wijziging contact op met de klantenservice van Adobe.
 
 Met Adobe Experience Platform hebt u toegang tot [!DNL Real-Time Customer Profile] -gegevens via RESTful API&#39;s of de gebruikersinterface. In deze handleiding wordt beschreven hoe u met de API toegang krijgt tot entiteiten die beter bekend staan als &quot;profielen&quot;. Voor meer informatie bij de toegang tot van profielen die [!DNL Experience Platform] UI gebruiken, gelieve te verwijzen naar de [ de gebruikersgids van het Profiel ](../ui/user-guide.md).
 
@@ -45,6 +41,12 @@ Als gevolg van deze update weerspiegelt de API van [!DNL Profile Access] nu de m
 
 ## Entiteiten ophalen {#retrieve-entity}
 
+>[!IMPORTANT]
+>
+>De volgende B2B-entiteiten worden niet meer ondersteund voor opzoekverzoeken via API: **Account-Person Relatie, Opportunity-Person Relatie, Campagne, Campagne Lid, Marketing List, en Lid van de Lijst van de Marketing** .
+>
+>Deze entiteiten worden niet meer ondersteund. Als u bestaande integraties of workflows hebt die afhankelijk zijn van de toegang tot deze entiteiten, moet u deze bijwerken om ondersteunde entiteitstypen te gebruiken om ervoor te zorgen dat de functionaliteit wordt voortgezet.
+
 U kunt een entiteit van het Profiel terugwinnen door een GET verzoek aan het `/access/entities` eindpunt samen met de vereiste vraagparameters te doen.
 
 >[!BEGINTABS]
@@ -63,7 +65,7 @@ Om tot een entiteit van het Profiel toegang te hebben, moet u **de volgende vraa
 
 - `schema.name`: De naam van het XDM-schema van de entiteit. In dit geval wordt de instructie `schema.name=_xdm.context.profile` gebruikt.
 - `entityId`: De id van de entiteit die u probeert op te halen.
-- `entityIdNS`: De naamruimte van de entiteit die u probeert op te halen. Deze waarde moet worden verstrekt als `entityId` **&#x200B;**&#x200B;geen XID is.
+- `entityIdNS`: De naamruimte van de entiteit die u probeert op te halen. Deze waarde moet worden verstrekt als `entityId` **** geen XID is.
 
 Een volledige lijst van geldige parameters wordt verstrekt in de [ sectie van vraagparameters ](#query-parameters) van appendix.
 
@@ -172,11 +174,11 @@ GET /access/entities?{QUERY_PARAMETERS}
 
 De parameters van de vraag die in de verzoekweg worden verstrekt specificeren welke gegevens aan toegang. U kunt meerdere parameters opnemen, gescheiden door en-tekens (&amp;).
 
-Om tot de B2B gegevens van de Rekening toegang te hebben, moet u **&#x200B;**&#x200B;de volgende vraagparameters verstrekken:
+Om tot de B2B gegevens van de Rekening toegang te hebben, moet u **** de volgende vraagparameters verstrekken:
 
 - `schema.name`: De naam van het XDM-schema van de entiteit. In dit geval is deze waarde `schema.name=_xdm.context.account` .
 - `entityId`: De id van de entiteit die u probeert op te halen.
-- `entityIdNS`: De naamruimte van de entiteit die u probeert op te halen. Deze waarde moet worden verstrekt als `entityId` **&#x200B;**&#x200B;geen XID is.
+- `entityIdNS`: De naamruimte van de entiteit die u probeert op te halen. Deze waarde moet worden verstrekt als `entityId` **** geen XID is.
 
 Een volledige lijst van geldige parameters wordt verstrekt in de [ sectie van vraagparameters ](#query-parameters) van appendix.
 
@@ -264,11 +266,11 @@ GET /access/entities?{QUERY_PARAMETERS}
 
 De parameters van de vraag die in de verzoekweg worden verstrekt specificeren welke gegevens aan toegang. U kunt meerdere parameters opnemen, gescheiden door en-tekens (&amp;).
 
-Om tot een entiteit van de Kans B2B toegang te hebben, moet u **&#x200B;**&#x200B;de volgende vraagparameters verstrekken:
+Om tot een entiteit van de Kans B2B toegang te hebben, moet u **** de volgende vraagparameters verstrekken:
 
 - `schema.name`: De naam van het XDM-schema van de entiteit. In dit geval wordt de instructie `schema.name=_xdm.context.opportunity` gebruikt.
 - `entityId`: De id van de entiteit die u probeert op te halen.
-- `entityIdNS`: De naamruimte van de entiteit die u probeert op te halen. Deze waarde moet worden verstrekt als `entityId` **&#x200B;**&#x200B;geen XID is.
+- `entityIdNS`: De naamruimte van de entiteit die u probeert op te halen. Deze waarde moet worden verstrekt als `entityId` **** geen XID is.
 
 Een volledige lijst van geldige parameters wordt verstrekt in de [ sectie van vraagparameters ](#query-parameters) van appendix.
 
@@ -1203,6 +1205,19 @@ Als de reactie is gelukt, wordt de volgende pagina met resultaten geretourneerd.
 
 ## Entiteiten verwijderen {#delete-entity}
 
+>[!IMPORTANT]
+>
+>Verzoeken voor de volgende B2B-entiteiten zijn afgekeurd:
+>
+>- Account
+>- Relatie account-persoon
+>- Opportunity
+>- Opportunity-Person relatie
+>- Campaign
+>- Campagnelid
+>- Marketinglijst
+>- Leden van de marketinglijst
+
 U kunt een entiteit van de Opslag van het Profiel schrappen door een verzoek van DELETE aan het `/access/entities` eindpunt samen met de vereiste vraagparameters te doen.
 
 **API formaat**
@@ -1213,11 +1228,11 @@ DELETE /access/entities?{QUERY_PARAMETERS}
 
 De parameters van de vraag die in de verzoekweg worden verstrekt specificeren welke gegevens aan toegang. U kunt meerdere parameters opnemen, gescheiden door en-tekens (&amp;).
 
-Om een entiteit te schrappen, moet u **&#x200B;**&#x200B;de volgende vraagparameters verstrekken:
+Om een entiteit te schrappen, moet u **** de volgende vraagparameters verstrekken:
 
 - `schema.name`: De naam van het XDM-schema van de entiteit. In dit gebruiksgeval, kunt u **slechts** gebruiken `schema.name=_xdm.context.profile`.
 - `entityId`: De id van de entiteit die u probeert op te halen.
-- `entityIdNS`: De naamruimte van de entiteit die u probeert op te halen. Deze waarde moet worden verstrekt als `entityId` **&#x200B;**&#x200B;geen XID is.
+- `entityIdNS`: De naamruimte van de entiteit die u probeert op te halen. Deze waarde moet worden verstrekt als `entityId` **** geen XID is.
 - `mergePolicyId`: De id van het samenvoegbeleid van de entiteit. Het samenvoegingsbeleid bevat informatie over identiteitsstitching en key-value XDM voorwerp het samenvoegen. Als deze waarde niet wordt opgegeven, wordt het standaardsamenvoegbeleid gebruikt.
 
 **Verzoek**
@@ -1255,10 +1270,10 @@ De volgende parameters worden gebruikt in de weg voor GET- verzoeken aan het `/a
 | Parameter | Beschrijving | Voorbeeld |
 | --------- | ----------- | ------- |
 | `schema.name` | **(Vereist)** De naam van het schema XDM van de entiteit. | `schema.name=_xdm.context.profile` |
-| `relatedSchema.name` | Als `schema.name` `_xdm.context.experienceevent` is, moet deze waarde **&#x200B;**&#x200B;het schema voor de profielentiteit specificeren dat de gebeurtenissen van de tijdreeks met betrekking tot zijn. | `relatedSchema.name=_xdm.context.profile` |
+| `relatedSchema.name` | Als `schema.name` `_xdm.context.experienceevent` is, moet deze waarde **** het schema voor de profielentiteit specificeren dat de gebeurtenissen van de tijdreeks met betrekking tot zijn. | `relatedSchema.name=_xdm.context.profile` |
 | `entityId` | **(Vereist)** identiteitskaart van de entiteit. Als de waarde van deze parameter geen XID is, moet een parameter van identiteitsnamespace (`entityIdNS`) ook worden verstrekt. | `entityId=janedoe@example.com` |
-| `entityIdNS` | Als `entityId` niet als XID wordt verstrekt, moet dit gebied **&#x200B;**&#x200B;de identiteit specificeren namespace. | `entityIdNS=email` |
-| `relatedEntityId` | Als `schema.name` `_xdm.context.experienceevent` is, moet deze waarde **&#x200B;**&#x200B;identiteitskaart van de verwante profielentiteit specificeren. Deze waarde volgt dezelfde regels als `entityId` . | `relatedEntityId=69935279872410346619186588147492736556` |
+| `entityIdNS` | Als `entityId` niet als XID wordt verstrekt, moet dit gebied **** de identiteit specificeren namespace. | `entityIdNS=email` |
+| `relatedEntityId` | Als `schema.name` `_xdm.context.experienceevent` is, moet deze waarde **** identiteitskaart van de verwante profielentiteit specificeren. Deze waarde volgt dezelfde regels als `entityId` . | `relatedEntityId=69935279872410346619186588147492736556` |
 | `relatedEntityIdNS` | Als `schema.name` &quot;_xdm.context.experienceEvent&quot; is, moet deze waarde de naamruimte van de identiteit opgeven voor de entiteit die is opgegeven in `relatedEntityId` . | `relatedEntityIdNS=CRMID` |
 | `fields` | Hiermee filtert u de gegevens die in de reactie worden geretourneerd. Gebruik dit om te specificeren welke waarden van het schemagebied in opgehaalde gegevens moeten omvatten. Voor meerdere velden scheidt u waarden met een komma zonder tussenruimten. | `fields=personalEmail,person.name,person.gender` |
 | `mergePolicyId` | Hiermee wordt het samenvoegbeleid aangegeven waarmee de geretourneerde gegevens moeten worden beheerd. Als niet in de vraag wordt gespecificeerd, zal het gebrek van uw organisatie voor dat schema worden gebruikt. Als er geen standaardsamenvoegbeleid is geconfigureerd, bestaat de standaardinstelling uit geen profielsamenvoeging en geen identiteitsstitching. | `mergePolicyId=5aa6885fcf70a301dabdfa4a` |
