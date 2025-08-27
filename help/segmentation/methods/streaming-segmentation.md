@@ -35,13 +35,13 @@ Om het even welke **nieuwe of uitgegeven** segmentdefinities die de volgende hee
 
 ## Tijdvenster {#time-window}
 
-Om een publiek met het stromen segmentatie te evalueren, moet het **** binnen een 24 uurstijdvenster worden beperkt.
+Om een publiek met het stromen segmentatie te evalueren, moet het **&#x200B;**&#x200B;binnen een 24 uurstijdvenster worden beperkt.
 
 ## Batchgegevens opnemen in streaming publiek {#include-batch-data}
 
 >[!NOTE]
 >
->Om het stromen segmentatie nauwkeurig te houden wanneer het gebruiken van partijgegevens, zorg ervoor dat het partijgegeven **** slechts binnen het partijpubliek wordt gehouden en binnen het het stromen publiek van verwijzingen wordt voorzien.
+>Om het stromen segmentatie nauwkeurig te houden wanneer het gebruiken van partijgegevens, zorg ervoor dat het partijgegeven **&#x200B;**&#x200B;slechts binnen het partijpubliek wordt gehouden en binnen het het stromen publiek van verwijzingen wordt voorzien.
 
 Voorafgaand aan deze update kunt u een definitie voor streaming publiek maken die zowel batch- als streaming gegevensbronnen combineert. Met de nieuwste update wordt het maken van een publiek met zowel batch- als streaming-gegevensbronnen echter geëvalueerd aan de hand van batchsegmentatie.
 
@@ -106,7 +106,7 @@ Met streamingsegmentatie gebeurt de kwalificatie van het publiek nu terwijl stre
 
 >[!IMPORTANT]
 >
->Om het stromen segmentatie te gebruiken, moet u **** een fusiebeleid gebruiken dat &quot;Actief op Edge&quot;is. Voor meer informatie over fusiebeleid, te lezen gelieve het [ overzicht van het samenvoegbeleid ](../../profile/merge-policies/overview.md).
+>Om het stromen segmentatie te gebruiken, moet u **&#x200B;**&#x200B;een fusiebeleid gebruiken dat &quot;Actief op Edge&quot;is. Voor meer informatie over fusiebeleid, te lezen gelieve het [ overzicht van het samenvoegbeleid ](../../profile/merge-policies/overview.md).
 
 Een liniaal komt in aanmerking voor streamingsegmentatie als het voldoet aan een van de criteria die in de volgende tabel worden beschreven.
 
