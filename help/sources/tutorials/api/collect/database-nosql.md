@@ -1,22 +1,22 @@
 ---
 title: Creeer een Dataflow voor de Bronnen van het Gegevensbestand Gebruikend de Dienst API van de Stroom
 type: Tutorial
-description: In deze zelfstudie worden de stappen beschreven voor het ophalen van gegevens uit een database en het opnemen ervan in Experience Platform met behulp van bronconnectors en API's.
+description: Leer hoe u de Flow Service API kunt gebruiken om een gegevensstroom te maken en gegevens van uw database in Experience Platform in te voeren.
 exl-id: 1e1f9bbe-eb5e-40fb-a03c-52df957cb683
-source-git-commit: b184319f6c5f5430a5ae1e9de4728b5074bca9b8
+source-git-commit: a5fa939d522b0bf828f42144657ea15f9c3347ed
 workflow-type: tm+mt
-source-wordcount: '1453'
+source-wordcount: '1455'
 ht-degree: 0%
 
 ---
 
 # Een gegevensstroom maken voor databasebronnen met de API [!DNL Flow Service]
 
-Dit leerprogramma behandelt de stappen om gegevens van een gegevensbestandbron terug te winnen en hen te brengen aan Experience Platform gebruikend [[!DNL Flow Service]  API ](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+Lees dit leerprogramma leren hoe te om een dataflow tot stand te brengen en gegevens van uw gegevensbestand aan Adobe Experience Platform in te voeren gebruikend [[!DNL Flow Service]  API ](https://developer.adobe.com/experience-platform-apis/references/flow-service/).
 
 >[!NOTE]
 >
->* Als u een gegevensstroom wilt maken, moet u al een geldige basis-verbindings-id met een databasebron hebben. Als u dit identiteitskaart niet hebt, dan zie het [ overzicht van bronnen ](../../../home.md#database) voor een lijst van gegevensbestandbronnen die u een basisverbinding kunt tot stand brengen met.
+>* Als u een gegevensstroom wilt maken, moet u al een geldige basis-verbindings-id met een databasebron hebben. Als u dit identiteitskaart niet hebt, dan bezoek de [ broncatalogus ](../../../home.md#database) voor een lijst van gegevensbestandbronnen die u een basisverbinding kunt tot stand brengen met.
 >* Experience Platform kan alleen gegevens invoeren als tijdzones voor alle batchbronnen op basis van tabellen zijn geconfigureerd voor UTC. De enige tijdstempel die voor de [[!DNL Snowflake]  bron ](../../../connectors/databases/snowflake.md) wordt gesteund is TIMESTAMP_NTZ met tijd UTC.
 
 ## Aan de slag

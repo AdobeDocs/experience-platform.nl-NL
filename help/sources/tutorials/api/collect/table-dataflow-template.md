@@ -1,15 +1,16 @@
 ---
-title: Een gegevensstroom maken om gegevens van een CRM in Experience Platform op te nemen
+title: Een gegevensstroom maken om Source-gegevens in Experience Platform te plaatsen
 description: Leer hoe u de Flow Service API gebruikt om een gegevensstroom te maken en brongegevens in Experience Platform in te voeren.
-exl-id: b07dd640-bce6-4699-9d2b-b7096746934a
-source-git-commit: fe310a326f423a32b278b8179578933295de3a87
+hide: true
+hidefromtoc: true
+source-git-commit: 4e9448170a6c3eb378e003bcd7520cb0e573e408
 workflow-type: tm+mt
-source-wordcount: '2095'
+source-wordcount: '2127'
 ht-degree: 0%
 
 ---
 
-# Een gegevensstroom maken om gegevens van een CRM in Experience Platform in te voeren
+# Een gegevensstroom maken om gegevens uit een bron in te voeren
 
 Lees deze gids om te leren hoe te om een dataflow tot stand te brengen en gegevens aan Adobe Experience Platform in te voeren gebruikend [[!DNL Flow Service]  API ](https://developer.adobe.com/experience-platform-apis/references/flow-service/).
 
@@ -29,9 +30,9 @@ Deze handleiding vereist een goed begrip van de volgende onderdelen van Experien
 
 Voor informatie over hoe te om vraag aan Experience Platform APIs met succes te maken, lees de gids op [ begonnen wordt met Experience Platform APIs ](../../../../landing/api-guide.md).
 
-### Basisverbinding maken {#base}
+### Basisverbinding maken
 
-Als u een gegevensstroom voor uw bron wilt maken, hebt u een volledig geverifieerde bronaccount en de bijbehorende basis-verbindings-id nodig. Als u dit identiteitskaart niet hebt, bezoek de [ broncatalogus ](../../../home.md) om een lijst van bronnen te vinden waarvoor u een basisverbinding kunt tot stand brengen.
+U moet een volledig voor authentiek verklaarde bronrekening hebben en het overeenkomstige identiteitskaart van de basisverbinding is met succes om een dataflow voor uw bron tot stand te brengen. Als u dit identiteitskaart niet hebt, bezoek de [ broncatalogus ](../../../home.md) voor een lijst van bronnen die u een basisverbinding kunt tot stand brengen met.
 
 ### Een doel-XDM-schema maken {#target-schema}
 
@@ -106,7 +107,7 @@ Een succesvolle reactie keert uw doeldataset ID terug. Deze id is later vereist 
 
 +++
 
-## Een bronverbinding maken {#source}
+## Een bronverbinding maken
 
 Een bronverbinding definieert hoe gegevens vanuit een externe bron naar Experience Platform worden overgebracht. Het specificeert zowel het bronsysteem als het formaat van de inkomende gegevens, en het verwijst een basisverbinding die authentificatiedetails bevat. Elke bronverbinding is uniek voor uw organisatie.
 
@@ -133,8 +134,8 @@ curl -X POST \
   -H 'Content-Type: application/json' \
   -d '{
     "name": "ACME source connection",
-    "description": "A source connection for ACME contact data",
     "baseConnectionId": "6990abad-977d-41b9-a85d-17ea8cf1c0e4",
+    "description": "A source connection for ACME contact data",
     "data": {
       "format": "tabular"
     },
@@ -164,7 +165,8 @@ curl -X POST \
             "format": "date-time"
           }
         }
-      ]
+      ],
+      "cdcEnabled": true
     },
     "connectionSpec": {
       "id": "cfc0fee1-7dc0-40ef-b73e-d8b134c436f5",
@@ -181,6 +183,7 @@ curl -X POST \
 | `data.format` | De indeling van de gegevens. Stel deze waarde in op `tabular` voor bronnen op basis van tabellen (zoals databases, CRM&#39;s en providers van marketingautomatisering). |
 | `params.tableName` | De naam van de tabel in uw bronaccount die u aan Experience Platform wilt toevoegen. |
 | `params.columns` | De specifieke tabelkolommen met gegevens die u aan Experience Platform wilt toevoegen. |
+| `params.cdcEnabled` | Een booleaanse waarde die aangeeft of het vastleggen van de wijzigingshistorie is ingeschakeld. Deze eigenschap wordt ondersteund door de volgende databasebronnen: <ul><li>[!DNL Azure Databricks]</li><li>[!DNL Google BigQuery]</li><li>[!DNL Snowflake]</li></ul> Voor meer informatie, lees de gids bij het gebruiken van [ veranderingsgegevens vangen in bronnen ](../change-data-capture.md). |
 | `connectionSpec.id` | De verbindingsspecificatie-id van de bron die u gebruikt. |
 
 **Reactie**
@@ -194,9 +197,9 @@ Een succesvolle reactie keert identiteitskaart van uw bronverbinding terug. Deze
 }
 ```
 
-## Een doelverbinding maken {#target}
+## Een doelverbinding maken {#target-connection}
 
-Een doelverbinding vertegenwoordigt de verbinding aan de bestemming waar de ingesloten gegevens binnen landen. Om een doelverbinding tot stand te brengen, moet u vaste identiteitskaart van de verbindingsspecificatie verstrekken verbonden aan het gegevens meer. Deze verbindingsspecificatie-id is: `c604ff05-7f1a-43c0-8e18-33bf874cb11c` .
+Een doelverbinding vertegenwoordigt de verbinding aan de bestemming waar de ingesloten gegevens binnen landen. Om een doelverbinding tot stand te brengen, moet u vaste identiteitskaart verstrekken van verbindingsspecificatie verbonden aan het meer van Gegevens. Deze verbindingsspecificatie-id is: `c604ff05-7f1a-43c0-8e18-33bf874cb11c` .
 
 **API formaat**
 
@@ -314,7 +317,7 @@ Een succesvolle reactie keert details van de pas gecreëerde afbeelding met inbe
 }
 ```
 
-## Gegevensstroomspecificaties ophalen {#flow-specs}
+## Gegevensstroomspecificaties ophalen
 
 Voordat u een gegevensstroom kunt maken, moet u eerst de dataflow-specificaties ophalen die overeenkomen met uw bron. Als u deze informatie wilt ophalen, vraagt u GET het `/flowSpecs` -eindpunt van de [!DNL Flow Service] API aan.
 
@@ -342,7 +345,7 @@ curl -X GET \
 
 Een succesvolle reactie retourneert de details van de gegevensstroomspecificatie die verantwoordelijk zijn voor het plaatsen van gegevens van uw bron naar Experience Platform. De reactie bevat de unieke flowspecificatie `id` die is vereist om een nieuwe gegevensstroom te maken.
 
-Controleer de array `items.sourceConnectionSpecIds` in de reactie om er zeker van te zijn dat u de juiste gegevensstroomspecificatie gebruikt. Bevestig dat de id van de verbindingsspecificatie voor uw bron in deze lijst is opgenomen.
+Controleer de array `items.sourceConnectionSpecIds` in de reactie om er zeker van te zijn dat u de juiste gegevensstroomspecificatie gebruikt. Controleer of de verbindingsspecificatie-id voor uw bron in deze lijst is opgenomen.
 
 +++Selecteren voor weergave
 
@@ -631,16 +634,16 @@ Controleer de array `items.sourceConnectionSpecIds` in de reactie om er zeker va
 
 +++
 
-## Een gegevensstroom maken {#dataflow}
+## Een gegevensstroom maken
 
 Een dataflow is een gevormde pijpleiding die gegevens over de diensten van Experience Platform overbrengt. Het bepaalt hoe het gegeven uit externe bronnen (zoals gegevensbestanden, wolkenopslag, of APIs) wordt opgenomen, verwerkt, en verpletterd aan doeldatasets. Deze datasets worden dan gebruikt door de diensten zoals de Dienst van de Identiteit, het Profiel van de Klant in real time, en Doelen voor activering en analyse.
 
 Als u een gegevensstroom wilt maken, moet u waarden hebben voor de volgende items:
 
-* [Source-verbinding-id](#source)
-* [Doel-verbindings-id](#target)
-* [Toewijzing-id](#mapping)
-* [Dataflow-specificatie-id](#flow-specs)
+* Source-verbinding-id
+* Doel-verbindings-id
+* Toewijzing-id
+* Dataflow-specificatie-id
 
 Tijdens deze stap, kunt u de volgende parameters in `scheduleParams` gebruiken om een innameschema voor uw gegevensstroom te vormen:
 
@@ -739,7 +742,7 @@ Een succesvolle reactie keert identiteitskaart (`id`) van nieuw gecreeerd datafl
 }
 ```
 
-### De gebruikersinterface gebruiken om uw API-workflow te valideren {#validate-in-ui}
+### De gebruikersinterface gebruiken om uw API-workflow te valideren
 
 U kunt de gebruikersinterface van Experience Platform gebruiken om het maken van uw gegevensstroom te bevestigen. Navigeer naar de catalogus *[!UICONTROL Sources]* in de gebruikersinterface van Experience Platform en selecteer vervolgens **[!UICONTROL Dataflows]** op de tabbladen voor kopteksten. Vervolgens gebruikt u de kolom [!UICONTROL Dataflow Name] en zoekt u de gegevensstroom die u met de API [!DNL Flow Service] hebt gemaakt.
 
