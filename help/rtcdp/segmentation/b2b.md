@@ -2,16 +2,20 @@
 title: Gebruiksscenario's voor segmentatie voor Real-Time Customer Data Platform B2B edition
 description: Een overzicht van de verschillende beschikbare Adobe Real-Time Customer Data Platform B2B edition-gebruiksgevallen.
 feature: Get Started, Audiences, Segments, B2B
-badgeB2B: label="B2B edition" type="Informative" url="https://helpx.adobe.com/nl/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
+badgeB2B: label="B2B edition" type="Informative" url="https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2b-edition-prime-and-ultimate-packages.html newtab=true"
 exl-id: 2a99b85e-71b3-4781-baf7-a4d5436339d3
-source-git-commit: d819a7e72e873ef3a47f9bb7946e242cb5fb7a8a
+source-git-commit: d1f48140922b4c98f75b4c9af9e1706a402319a4
 workflow-type: tm+mt
-source-wordcount: '1573'
+source-wordcount: '1605'
 ht-degree: 0%
 
 ---
 
 # Gebruiksgevallen voor segmentatie in Real-Time Customer Data Platform B2B edition
+
+>[!IMPORTANT]
+>
+>Soorten publiek dat ervaringsgebeurtenissen bevat die verwijzen naar B2B-entiteiten (zoals campagnes en marketinglijsten), worden niet meer ondersteund. Voor meer informatie, lees het overzicht van de [ de architectuurverbeteringen van B2B edition van Real-Time CDP ](../../rtcdp/b2b-architecture-upgrade.md).
 
 In dit document worden voorbeelden gegeven van segmentdefinities in Adobe Real-Time Customer Data Platform B2B edition en hoe verschillende typen kenmerken kunnen worden gecombineerd voor algemene B2B-gebruiksgevallen. Om te begrijpen hoe de bestemmingen in uw B2B- werkschema passen, gelieve te zien [ leerprogramma van begin tot eind ](../b2b-tutorial.md#create-a-segment-to-evaluate-your-data).
 
