@@ -1,16 +1,18 @@
 ---
-title: Azure Private Link voor bronnen in de gebruikersinterface gebruiken
+title: Ondersteuning voor privé-koppelingen voor bronnen in de gebruikersinterface
 description: Leer hoe u Azure Private Links voor Bronnen gebruikt in de gebruikersinterface van Experience Platform.
 badge: Beta
+hide: true
+hidefromtoc: true
 exl-id: 2882729e-2d46-48dc-9227-51dda5bf7dfb
-source-git-commit: b88cf63e907b3f127f83304aa95f82300b47ce0b
+source-git-commit: 45a50800f74a6a072e4246b11d338b0c134856e0
 workflow-type: tm+mt
-source-wordcount: '719'
+source-wordcount: '725'
 ht-degree: 0%
 
 ---
 
-# Gebruik [!DNL Azure Private Link] voor bronnen in de gebruikersinterface
+# Steun van de privé Verbinding voor Bronnen in UI
 
 >[!AVAILABILITY]
 >
@@ -21,13 +23,13 @@ ht-degree: 0%
 >* [[!DNL Azure File Storage]](../../connectors/cloud-storage/azure-file-storage.md)
 >* [[!DNL Snowflake]](../../connectors/databases/snowflake.md)
 
-Met de functie [!DNL Azure Private Link] kunt u persoonlijke eindpunten maken waarmee uw Adobe Experience Platform-bronnen verbinding kunnen maken. Sluit veilig uw bronnen aan een virtueel netwerk aan gebruikend privé IP adressen, die de behoefte aan openbare IPs elimineren en uw aanvalsoppervlakte verminderen.Vereenvoudig uw netwerkopstelling door de behoefte aan complexe firewall of de configuraties van de Vertaling van het Adres van het Netwerk te verwijderen, terwijl het verzekeren van gegevensverkeer slechts goedgekeurde diensten bereikt.
+Met de functie Privékoppelingen kunt u persoonlijke eindpunten maken waarmee uw Adobe Experience Platform-bronnen verbinding kunnen maken. Sluit veilig uw bronnen aan een virtueel netwerk aan gebruikend privé IP adressen, die de behoefte aan openbare IPs elimineren en uw aanvalsoppervlakte verminderen. Vereenvoudig uw netwerkopstelling door de behoefte aan complexe firewall of de configuraties van de Vertaling van het Adres van het Netwerk te verwijderen, terwijl het verzekeren van gegevensverkeer slechts de goedgekeurde diensten bereikt.
 
 Lees deze gids om te leren hoe u de bronwerkruimte in Experience Platform UI kunt gebruiken om een privé eindpunt tot stand te brengen en te gebruiken.
 
 ## Een privé-eindpunt maken
 
-Als u aan de slag wilt met [!DNL Azure Private Link] , navigeert u naar de *[!UICONTROL Sources]* catalogus van de gebruikersinterface van Experience Platform en selecteert u **[!UICONTROL Private endpoints]** in het tabmenu van de tabbladen in de werkruimte Bronnen.
+Als u aan de slag wilt met persoonlijke koppelingen, navigeert u naar de catalogus *[!UICONTROL Sources]* van de gebruikersinterface van Experience Platform en selecteert u **[!UICONTROL Private endpoints]** in het menu met tabbladen in de werkruimte Bronnen.
 
 ![ de broncatalogus met &quot;Privé eindpunten&quot;.](../../images/tutorials/private-links/catalog.png)
 

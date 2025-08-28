@@ -2,10 +2,10 @@
 title: Aanvullende informatie van augustus 2025 voor Adobe Experience Platform
 description: Aanvullende informatie van augustus 2025 voor Adobe Experience Platform.
 exl-id: d93e98f3-d165-4710-ad1d-2ad3857cd0f8
-source-git-commit: d2b605925a8fd7ea06f198ba8a9f85747a2e585b
+source-git-commit: 45a50800f74a6a072e4246b11d338b0c134856e0
 workflow-type: tm+mt
-source-wordcount: '1617'
-ht-degree: 34%
+source-wordcount: '1541'
+ht-degree: 81%
 
 ---
 
@@ -15,13 +15,13 @@ ht-degree: 34%
 >
 >Raadpleeg de volgende documentatie voor aanvullende informatie voor andere Adobe Experience Platform-toepassingen:
 >
->- [Adobe Journey Optimizer](https://experienceleague.adobe.com/nl/docs/journey-optimizer/using/whats-new/release-notes)
->- [Adobe Journey Optimizer B2B](https://experienceleague.adobe.com/nl/docs/journey-optimizer-b2b/user/release-notes)
+>- [Adobe Journey Optimizer](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/whats-new/release-notes)
+>- [Adobe Journey Optimizer B2B](https://experienceleague.adobe.com/en/docs/journey-optimizer-b2b/user/release-notes)
 >- [Customer Journey Analytics](https://experienceleague.adobe.com/nl/docs/analytics-platform/using/releases/pre-release-notes)
 >- [Samenstelling van Federated-doelgroep](https://experienceleague.adobe.com/nl/docs/federated-audience-composition/using/e-release-notes)
 >- [Real-Time CDP Collaboration](https://experienceleague.adobe.com/nl/docs/real-time-cdp-collaboration/using/latest)
 
-**Releasedatum: woensdag 19 augustus 2025**
+**Releasedatum: 19 augustus 2025**
 
 
 Nieuwe functies en updates van bestaande functies in Adobe Experience Platform:
@@ -29,8 +29,8 @@ Nieuwe functies en updates van bestaande functies in Adobe Experience Platform:
 - [Waarschuwingen](#alerts)
 - [Catalogusservice](#catalog-service)
 - [Bestemmingen](#destinations)
-- [Experience-datamodel (XDM)](#xdm)
-- [Realtime-klantenprofiel](#profile)
+- [Experience Data Model (XDM)](#xdm)
+- [Real-Time Customer Profile](#profile)
 - [Sandboxes](#sandboxes)
 - [Segmentatieservice](#segmentation-service)
 - [Bronnen](#sources)
@@ -43,7 +43,7 @@ Met Experience Platform kunt u zich aanmelden voor gebeurtenisgebaseerde waarsch
 
 | Functie | Beschrijving |
 | ------- | ----------- |
-| Waarschuwing over streamingdoorvoer | Met drie nieuwe waarschuwingen kunnen gebruikers zich abonneren op en waarschuwingen configureren om de prestaties van streaming doorvoercapaciteit proactief te beheren en te bewaken. Nieuwe waarschuwingen zijn onder andere wanneer de streamingdoorvoer 80%, 90% of meer bedraagt dan de capaciteitslimiet. Voor meer informatie, lees de [ gids van de capaciteitsalarm regels ](../../observability/alerts/rules.md#capacity). |
+| Waarschuwingen over de capaciteit van streamingdoorvoer | Met drie nieuwe waarschuwingen kunnen gebruikers zich abonneren op waarschuwingen en deze configureren om de prestaties van de streamingdoorvoercapaciteit proactief te beheren en te bewaken. De nieuwe waarschuwingen worden bijvoorbeeld gegeven wanneer de streamingdoorvoer 80% of 90% bereikt of de capaciteitslimieten overschrijdt. Voor meer informatie raadpleegt u de handleiding voor [capaciteitswaarschuwingsregels](../../observability/alerts/rules.md#capacity). |
 
 Raadpleeg het [[!DNL Observability Insights] overzicht](../../observability/home.md) voor meer informatie over meldingen.
 
@@ -55,27 +55,27 @@ Catalogusservice is het systeem voor het vastleggen van de locatie en herkomst v
 
 | Functie | Beschrijving |
 | --- | --- |
-| Bewaren van gegevens voor realtime klantprofiel | U kunt **slechts** de periode van het gegevensbehoud voor het Profiel van de Klant in real time eens om de 30 dagen bijwerken. |
+| Gegevensbewaring voor Real-Time Customer Profile | U kunt de termijn voor gegevensbewaring voor Real-Time Customer Profile **slechts** één keer per 30 dagen bijwerken. |
 
-Voor meer informatie over de Dienst van de Catalogus, lees het [ overzicht van de Dienst van de Catalogus ](../../catalog/home.md).
+Voor meer informatie over de catalogusservice raadpleegt u het [overzicht van de catalogusservice](../../catalog/home.md).
 
 ## Bestemmingen {#destinations}
 
-[!DNL Destinations] zijn vooraf gebouwde integratie met bestemmingsplatforms die voor de naadloze activering van gegevens van Experience Platform toestaan. U kunt bestemmingen gebruiken om uw bekende en onbekende gegevens te activeren voor cross-channel marketingcampagnes, e-mailcampagnes, gerichte advertenties en vele andere gebruiksscenario&#39;s.
+[!DNL Destinations] zijn vooraf gebouwde integraties met bestemmingsplatforms waarmee gegevens uit Experience Platform naadloos kunnen worden geactiveerd. U kunt bestemmingen gebruiken om uw bekende en onbekende gegevens te activeren voor cross-channel marketingcampagnes, e-mailcampagnes, gerichte advertenties en vele andere gebruiksscenario&#39;s.
 
 >[!IMPORTANT]
 >
->**de uitvoerprogrammauitbreiding van de Dataset**
+>**Extensie voor het exportschema voor datasets**
 >
->Als uw organisatie dataflows van de gegevenssetuitvoer heeft die vóór November 2024 worden gecreeerd, zullen deze dataflows ophouden werkend op **1 September, 2025**. Als u de dataflows nodig hebt om het uitvoeren van gegevens na 1 september, 2025 te houden, moet u hun programma&#39;s voor elke bestemming uitbreiden waarnaar u datasets uitvoert, door de stappen in [ te volgen deze gids ](../../destinations/ui/dataset-expiration-update.md).
+>Als uw organisatie gegevensstromen voor het exporteren van datasets heeft die vóór november 2024 zijn gemaakt, werken deze gegevensstromen vanaf **1 september 2025** niet meer. Als u wilt dat de gegevensstromen ook na 1 september 2025 gegevens blijven exporteren, moet u de schema&#39;s voor elke bestemming waarnaar u datasets exporteert, verlengen door de stappen in [deze handleiding](../../destinations/ui/dataset-expiration-update.md) te volgen.
 
 >[!IMPORTANT]
 >
->{de update van de lijst van gewenste personen van 0} IP die voor op API-Gebaseerde bestemmingen wordt vereist **&#x200B;**
+>**Update van de lijst met IP&#39;s van gewenste personen vereist voor API-gebaseerde bestemmingen**
 >
->Wegens verbeteringen aan de het stromen motor van de bestemmingenuitvoer, moeten de organisaties die [ IP gebruiken lijsten van gewenste personen ](../../destinations/catalog/streaming/ip-address-allow-list.md) voor op API-Gebaseerde bestemmingen de volgende IP adressen aan hun lijsten van gewenste personen **vóór 15 September, 2025** toevoegen:
+>Wegens verbeteringen aan de exportengine voor streamingbestemmingen moeten organisaties die voor API-gebaseerde bestemmingen [lijsten met IP&#39;s van gewenste personen](../../destinations/catalog/streaming/ip-address-allow-list.md) gebruiken, **vóór 15 september 2025** de volgende IP-adressen aan hun lijsten met gewenste personen toevoegen:
 >
->**Vereiste IP adressen:**
+>**Vereiste IP-adressen:**
 >
 >```
 >3.209.222.108
@@ -86,56 +86,56 @@ Voor meer informatie over de Dienst van de Catalogus, lees het [ overzicht van d
 >66.117.18.135
 >```
 >
->**Deze verandering is op de volgende bestemmingstypes van toepassing:**
+>**Deze wijziging geldt voor de volgende bestemmingstypen:**
 >
->- [ het stromen publiek exporteert bestemmingen ](../../destinations/destination-types.md#streaming-destinations) ([ PegCDH Realtime Publiek ](/help/destinations/catalog/personalization/pega-v2.md), op API-Gebaseerde integratie met [ Salesforce Marketing Cloud ](../../destinations/catalog/email-marketing/salesforce-marketing-cloud-exact-target.md) en [ Oracle Eloqua ](../../destinations/catalog/email-marketing/oracle-eloqua-api.md))
->- Openbare of privé bestemmingen die door [ Destination SDK ](../../destinations/destination-sdk/getting-started.md) worden gebouwd
+>- [Exportbestemmingen voor streamingdoelgroepen](../../destinations/destination-types.md#streaming-destinations) ([Pega CDH Realtime Audience](/help/destinations/catalog/personalization/pega-v2.md), API-gebaseerde integraties met [Salesforce Marketing Cloud](../../destinations/catalog/email-marketing/salesforce-marketing-cloud-exact-target.md) en [Oracle Eloqua](../../destinations/catalog/email-marketing/oracle-eloqua-api.md))
+>- Openbare of privébestemmingen die via [Destination SDK](../../destinations/destination-sdk/getting-started.md) zijn opgebouwd
 >
->**vereiste Actie:** als u met Adobe hebt gewerkt om het even welke IP adressen aan op API-Gebaseerde het stromen bestemmingen te lijsten van gewenste personen, moet u de IP adressen hierboven aan uw lijst van gewenste personen toevoegen om ononderbroken dataflows aan uw op API-Gebaseerde bestemmingen te verzekeren.
+>**Vereiste actie:** Als u met Adobe hebt samengewerkt om IP-adressen voor API-gebaseerde streamingbestemmingen op de lijst met gewenste personen te plaatsen, moet u de bovenstaande IP-adressen aan uw lijst met gewenste personen toevoegen om ononderbroken gegevensstromen naar uw API-gebaseerde bestemmingen te garanderen.
 
 **Nieuwe bestemmingen**
 
 | Bestemming | Beschrijving |
 | --- | --- |
-| [[!DNL Acxiom Real ID Audience Connection]](../../destinations/catalog/advertising/acxiom-real-id-audience-connection.md) doel | Gebruik de [!DNL Acxiom Real ID Audience Connection] bestemming om publiek met [!DNL Acxiom's] [ Echte identiteitskaart ](https://www.acxiom.com/real-id/real-id/) technologie te verbeteren en publiek aan veelvoudige platforms, zoals [!DNL Altice], [!DNL Ampersand], [!DNL Comcast], en meer te activeren. |
+| [[!DNL Acxiom Real ID Audience Connection]](../../destinations/catalog/advertising/acxiom-real-id-audience-connection.md)-bestemming | Gebruik de [!DNL Acxiom Real ID Audience Connection]-bestemming om uw doelgroepen te verbeteren met [!DNL Acxiom's] [Real ID](https://www.acxiom.com/real-id/real-id/)-technologie en doelgroepen activeren op meerdere platforms, zoals [!DNL Altice], [!DNL Ampersand], [!DNL Comcast] en meer. |
 | Verbeterd doel [[!DNL Marketo Engage]](../../destinations/catalog/adobe/marketo-engage-connection.md) | Het verbeterde doel van [[!DNL Marketo Engage]](../../destinations/catalog/adobe/marketo-engage-connection.md) is een geüpgrade versie van de bestaande [[!DNL (Legacy) (V2) Marketo Engage]](../../destinations/catalog/adobe/marketo-engage.md) -connector. Deze nieuwe connector biedt niet alleen de bestaande publiekssynchronisatiemogelijkheden van de oudere connector, maar zorgt ook voor een betere integratie met [!DNL Marketo Engage] . <br> De [[!DNL (Legacy) (V2) Marketo Engage]](../../destinations/catalog/adobe/marketo-engage.md) schakelaar zal in **Maart 2026** worden afgekeurd. Voor een vloeiende overgang naar het nieuwe **[[!UICONTROL Marketo Engage]](../../destinations/catalog/adobe/marketo-engage-connection.md)** -doel bekijkt u de volgende belangrijke punten en vereiste handelingen: <ul><li>Alle gebruikers van de bestaande **[!UICONTROL (Legacy) (V2) Marketo Engage]** moeten tegen maart 2026 migreren naar de nieuwe **[!UICONTROL Marketo Engage]** -bestemming.</li><li> **Bestaande gegevensstromen zullen niet automatisch worden gemigreerd.** u moet [ opstelling een nieuwe verbinding ](../../destinations/ui/connect-destination.md) aan de nieuwe **[!UICONTROL Marketo Engage]** bestemming en uw publiek daar activeren.</li></ul> |
 
 **Bijgewerkte bestemmingen**
 
 | Bestemming | Beschrijving |
 | --- | --- |
-| [[!DNL Microsoft Bing]](../../destinations/catalog/advertising/bing.md) interne upgrade | Vanaf 11 augustus 2025 hebt u gedurende een korte periode twee **[!DNL Microsoft Bing]** kaarten naast elkaar gezien in de lijst met doelen. Dit komt door een interne upgrade van de bestemmingsservice. De naam van de bestaande bestemmingsconnector **[!DNL Microsoft Bing]** is gewijzigd in **[!UICONTROL (Deprecated) Microsoft Bing]** en er is nu een nieuwe kaart met de naam **[!UICONTROL Microsoft Bing]** voor u beschikbaar. <br> De upgrade is voltooid en de verouderde kaart is verwijderd uit de doelcatalogus. Gebruik de **[!UICONTROL Microsoft Bing]** -verbinding in de catalogus voor nieuwe gegevensstromen voor activering. Als u actieve gegevens naar de **[!UICONTROL (Deprecated) Microsoft Bing]** bestemming had, zullen zij automatisch worden bijgewerkt, zodat wordt geen actie van u vereist. <br><br>Als u gegevensstromen maakt via de [Flow Service API](https://developer.adobe.com/experience-platform-apis/references/destinations/), moet u uw [!DNL flow spec ID] en [!DNL connection spec ID] bijwerken naar de volgende waarden:<ul><li>Stroomspecificatie-ID: `8d42c81d-9ba7-4534-9bf6-cf7c64fbd12e`</li><li>Verbindingsspecificatie-ID: `dd69fc59-3bc5-451e-8ec2-1e74a670afd4`</li></ul> Na deze verbetering, kunt u a **daling in het aantal geactiveerde profielen** in uw dataflows [!DNL Microsoft Bing] ervaren. Dit daling wordt veroorzaakt door de introductie van het **ECID afbeeldingsvereiste** voor alle activiteiten aan dit bestemmingsplatform. |
+| Interne [[!DNL Microsoft Bing]](../../destinations/catalog/advertising/bing.md)-upgrade | Vanaf 11 augustus 2025 hebt u gedurende een korte periode twee **[!DNL Microsoft Bing]** kaarten naast elkaar gezien in de lijst met doelen. Dit komt door een interne upgrade van de bestemmingsservice. De naam van de bestaande bestemmingsconnector **[!DNL Microsoft Bing]** is gewijzigd in **[!UICONTROL (Deprecated) Microsoft Bing]** en er is nu een nieuwe kaart met de naam **[!UICONTROL Microsoft Bing]** voor u beschikbaar. <br> De upgrade is voltooid en de verouderde kaart is verwijderd uit de doelcatalogus. Gebruik de **[!UICONTROL Microsoft Bing]** -verbinding in de catalogus voor nieuwe gegevensstromen voor activering. Als u actieve gegevens naar de **[!UICONTROL (Deprecated) Microsoft Bing]** bestemming had, zullen zij automatisch worden bijgewerkt, zodat wordt geen actie van u vereist. <br><br>Als u gegevensstromen maakt via de [Flow Service API](https://developer.adobe.com/experience-platform-apis/references/destinations/), moet u uw [!DNL flow spec ID] en [!DNL connection spec ID] bijwerken naar de volgende waarden:<ul><li>Stroomspecificatie-ID: `8d42c81d-9ba7-4534-9bf6-cf7c64fbd12e`</li><li>Verbindingsspecificatie-ID: `dd69fc59-3bc5-451e-8ec2-1e74a670afd4`</li></ul> Na deze upgrade kunt u in uw gegevensstromen naar [!DNL Microsoft Bing] een **daling in het aantal geactiveerde profielen** ervaren. Deze daling wordt veroorzaakt door de introductie van de **ECID-toewijzingsvereiste** voor alle activeringen op dit bestemmingsplatform. |
 | De vervaldatum van de authentificatie details voor [[!DNL LinkedIn]](../../destinations/catalog/social/linkedin.md) en [ LinkedIn Gelijke Publiek ](../../destinations/catalog/social/linkedin-b2b.md) bestemmingen | De vervalinformatie van de authentificatie voor [!DNL LinkedIn] bestemmingen is nu zichtbaar direct in de interface van Experience Platform, zodat kunt u zien wanneer uw authentificatie zal verlopen en het vernieuwen alvorens het om het even welke verstoringen aan uw gegevensstromen veroorzaakt. U kunt de vervaldatums van uw token vanaf de kolom **[!UICONTROL Account expiration date]** controleren op de tabbladen **[[!UICONTROL Accounts]](../../destinations/ui/destinations-workspace.md#accounts)** of **[[!UICONTROL Browse]](../../destinations/ui/destinations-workspace.md#browse)** . |
 
 **Nieuwe of bijgewerkte functionaliteit**
 
 | Functie | Beschrijving |
 | --- | --- |
-| Verbeterde mogelijkheden voor zoeken, filteren en labelen voor doelen | Verbeter uw werkschema van het bestemmingsbeheer met verbeterd onderzoek, het filtreren, en het etiketteren mogelijkheden over [ doorbladeren ](../../destinations/ui/destinations-workspace.md#browse) en [ Rekeningen ](../../destinations/ui/destinations-workspace.md#accounts) lusjes. <br> U kunt nu naar specifieke gegevensstromen en rekeningen door naam zoeken, filtreren door diverse criteria met inbegrip van bestemmingsplatform, status, en data, en douanetags creëren om uw bestemmingen te organiseren. Kolomsortering is ook beschikbaar voor belangrijke velden, zoals de laatste dataflow-runtime, zodat u de doelverbindingen gemakkelijker kunt identificeren en beheren. <br> ![ Geanimeerde demonstratie van het zoeken naar een bestemmingsdataflow in het Browse lusje ](../../destinations/assets/ui/workspace/search.gif) |
+| Verbeterde zoek-, filter- en tagmogelijkheden voor bestemmingen | Verbeter uw workflow voor bestemmingsbeheer met verbeterde zoek-, filter- en tagmogelijkheden op de tabbladen [Verkennen](../../destinations/ui/destinations-workspace.md#browse) en [Accounts](../../destinations/ui/destinations-workspace.md#accounts). <br> U kunt nu naar specifieke gegevensstromen en rekeningen door naam zoeken, filtreren door diverse criteria met inbegrip van bestemmingsplatform, status, en data, en douanetags creëren om uw bestemmingen te organiseren. Kolomsortering is ook beschikbaar voor belangrijke velden, zoals de laatste dataflow-runtime, zodat u de doelverbindingen gemakkelijker kunt identificeren en beheren. <br> ![ Geanimeerde demonstratie van het zoeken naar een bestemmingsdataflow in het Browse lusje ](../../destinations/assets/ui/workspace/search.gif) |
 
-## Experience-datamodel (XDM) {#xdm}
+## Experience Data Model (XDM) {#xdm}
 
-XDM is een open-bronspecificatie die gemeenschappelijke structuren en definities (schema&#39;s) voor gegevens verstrekt die in Experience Platform worden gebracht. Door de XDM-standaarden te hanteren, kunnen alle gegevens over de klantervaring worden opgenomen in een gemeenschappelijke weergave. Zo worden inzichten sneller en beter geïntegreerd verkregen. U kunt waardevolle inzichten verkrijgen uit klantacties, klantdoelgroepen definiëren via segmenten en klantkenmerken gebruiken voor personalisatiedoeleinden.
+XDM is een open-bronspecificatie die algemene structuren en definities (schema&#39;s) biedt voor gegevens die in Experience Platform worden geïmporteerd. Door de XDM-standaarden te hanteren, kunnen alle gegevens over de klantervaring worden opgenomen in een gemeenschappelijke weergave. Zo worden inzichten sneller en beter geïntegreerd verkregen. U kunt waardevolle inzichten verkrijgen uit klantacties, klantdoelgroepen definiëren via segmenten en klantkenmerken gebruiken voor personalisatiedoeleinden.
 
 **Nieuwe functies**
 
 | Functie | Beschrijving |
 | ------- | ----------- |
-| Op modellen gebaseerde schema&#39;s | Vereenvoudig uw gegevensmodellering met Model-Gebaseerde Schema&#39;s. U kunt schema&#39;s nu gemakkelijker met uitvoerige hoe te voorbeelden en begeleiding tot stand brengen. Deze functie is momenteel beschikbaar voor Campaign Orchestration-licentiehouders en zal worden uitgebreid naar Distiller-klanten van Data bij GA, waardoor gegevensmodellering toegankelijker en efficiënter wordt. |
+| Op modellen gebaseerde schema&#39;s | Vereenvoudig uw gegevensmodellering met op modellen gebaseerde schema&#39;s. U kunt nu eenvoudiger schema&#39;s maken met uitgebreide voorbeelden en richtlijnen. Deze functie is momenteel beschikbaar voor Campaign Orchestration-licentiehouders en zal worden uitgebreid naar Data Distiller-klanten bij GA, waardoor gegevensmodellering toegankelijker en efficiënter wordt. |
 
-Voor meer informatie, lees het [ XDM overzicht ](../../xdm/home.md).
+Voor meer informatie raadpleegt u het [overzicht van XDM](../../xdm/home.md).
 
-## Realtime-klantenprofiel {#profile}
+## Real-Time Customer Profile {#profile}
 
-Het profiel van de Klant in real time verstrekt een verenigde, actionable mening van elke klant door gegevens van alle kanalen in één enkel profiel te consolideren.
+Real-Time Customer Profile biedt een uniform, bruikbaar overzicht van elke klant door gegevens uit alle kanalen te consolideren in één profiel.
 
 **Nieuwe of bijgewerkte functies**
 
 | Functie | Beschrijving |
 | --- | --- |
-| Verbeterde opzoekfunctionaliteit in de Entiteiten-API | De Entities API ondersteunt nu het volgende: <ul><li>Persoon (profiel)</li><li>Experience Events</li><li>Account</li><li>Opportunity</li></ul> Deze update vereenvoudigt het gebruik van API&#39;s en helpt optimale prestaties en betrouwbaarheid te garanderen. Als u eerder raadplegingen voor andere entiteittypes-met inbegrip van zich aansluit bij lijsten en douane multi-Entiteit types-nu gebruikt is een grote kans om uw API gebruik te herzien en uit de betere ervaring voordeel te halen. Voor meer informatie, leest de [ Real-Time CDB B2B edition architectuurverbeteringsgids ](../../rtcdp/b2b-architecture-upgrade.md). |
+| Verbeterde zoekfunctionaliteit in de Entities-API | De Entities-API ondersteunt nu het volgende: <ul><li>Persoon (profiel)</li><li>Experience-gebeurtenissen</li><li>Account</li><li>Kans</li></ul> Deze update vereenvoudigt het gebruik van API&#39;s en helpt optimale prestaties en betrouwbaarheid te garanderen. Als u eerder opzoekacties voor andere entiteitstypen hebt gebruikt, zoals samenvoegtabellen en aangepaste multi-entiteitstypen, is dit een goed moment om uw API-gebruik te evalueren en te profiteren van de verbeterde ervaring. Voor meer informatie raadpleegt u de [handleiding voor de Real-Time CDB B2B Edition-architectuurupgrade](../../rtcdp/b2b-architecture-upgrade.md). |
 
-Voor meer informatie over het Profiel van de Klant in real time, lees het [ overzicht van het Profiel ](../../profile/home.md).
+Voor meer informatie over Real-Time Customer Profile raadpleegt u het [profieloverzicht](../../profile/home.md).
 
 ## Sandboxes {#sandboxes}
 
@@ -145,8 +145,8 @@ Experience Platform is ontworpen om digitale ervaringstoepassingen wereldwijd te
 
 | Functie | Beschrijving |
 | --- | --- |
-| Dependency object deduplicatie in importworkflow | Sandboxgereedschappen gebruiken nu altijd bestaande objecten opnieuw als objecten met dezelfde naam worden gedetecteerd, om objectproliferatie te voorkomen. Deze wijziging is van toepassing op de volgende objecten: <ul><li>Schema</li><li>Veldgroep</li><li>Doelgroep</li><li>`decisioning_ranking`</li><li>`decisioning_rules`</li></ul> Raadpleeg voor meer informatie de [gids over objecten die worden ondersteund voor sandboxtooling](../../sandboxes/ui/sandbox-tooling.md#objects-supported-for-sandbox-tooling). |
-| Volledige ondersteuning van sandboxen voor delen van orgs-pakketten | Sandbox het tooling steunt nu **Volledige zandbak** type in over org pakket het delen. U kunt nu pakketten met zowel volledige sandboxen als meerdere objecten delen tussen instanties. Voor meer informatie raadpleegt u de [handleiding over voorwerpen die voor sandboxgereedschappen](../../sandboxes/ui/sharing-packages-across-orgs.md) worden ondersteund. |
+| Deduplicatie van afhankelijkheidsobjecten in de importworkflow | Sandboxtools gebruiken voortaan altijd, als er objecten met dezelfde naam worden gedetecteerd, die bestaande objecten opnieuw om objectproliferatie te voorkomen. Deze wijziging is van toepassing op de volgende objecten: <ul><li>Schema</li><li>Veldgroepen</li><li>Doelgroep</li><li>`decisioning_ranking`</li><li>`decisioning_rules`</li></ul> Raadpleeg voor meer informatie de [handleiding voor objecten die worden ondersteund voor sandboxtooling](../../sandboxes/ui/sandbox-tooling.md#objects-supported-for-sandbox-tooling). |
+| Volledige sandboxondersteuning voor het delen van pakketten tussen organisaties | Sandboxtools ondersteunen nu bij het delen van pakketten tussen organisaties het type **Gehele sandbox**. U kunt nu pakketten met zowel volledige sandboxen als meerdere objecten tussen organisaties delen. Voor meer informatie raadpleegt u de [handleiding over voorwerpen die voor sandboxgereedschappen](../../sandboxes/ui/sharing-packages-across-orgs.md) worden ondersteund. |
 
 Voor meer informatie over sandboxes, lees het [ overzicht van sandboxes](../../sandboxes/home.md).
 
@@ -158,9 +158,9 @@ Voor meer informatie over sandboxes, lees het [ overzicht van sandboxes](../../s
 
 | Functie | Beschrijving |
 | ------- | ----------- |
-| Publiek schattingen | De schattingen van het publiek worden nu automatisch gegenereerd binnen Segment Builder. Deze waarde wordt bijgewerkt wanneer u het publiek wijzigt en weerspiegelt altijd de meest recente publieksregels. Bovendien, zal de schatting nu als a **waaier** worden getoond, die op het betrouwbaarheidsinterval van de steekproefgegevens gebaseerd is. |
+| Doelgroepinschattingen | Doelgroepinschattingen worden binnen Segment Builder nu automatisch gegenereerd. Deze waarde wordt bijgewerkt wanneer u de doelgroep wijzigt en weerspiegelt altijd de nieuwste doelgroepregels. Bovendien wordt de schatting nu weergegeven als een **bereik** dat is gebaseerd op het vertrouwensinterval van de steekproefgegevens. |
 
-Voor meer informatie, lees het [[!DNL Segmentation Service]  overzicht ](../../segmentation/home.md).
+Voor meer informatie raadpleegt u het [[!DNL Segmentation Service] overzicht](../../segmentation/home.md).
 
 ## Bronnen {#sources}
 
@@ -170,11 +170,11 @@ Experience Platform biedt een RESTful-API en een interactieve gebruikersinterfac
 
 | Functie | Beschrijving |
 | --- | --- |
-| [!BADGE &#x200B; Beta &#x200B;]{type=Informative} Steun voor [!DNL Azure Private Links] in UI | U kunt [!DNL Azure Private Links] nu gebruiken voor een geselecteerde groep bronnen in de gebruikersinterface. Gebruik deze eigenschap om een privé eindpunt tot stand te brengen dat uw bron met kan verbinden. Met privé eindpunten, kunt u opstellingsverbindingen en gegevensstromen die openbaar Internet overslaan, die u verbeterde veiligheid en netwerkisolatie voor uw gevoelige gegevens geven. Ondersteuning voor [!DNL Azure Private Links] is beschikbaar voor de volgende bronnen: <ul><li>[[!DNL Azure Blob Storage]](../../sources/connectors/cloud-storage/blob.md)</li><li>[[!DNL ADLS Gen2]](../../sources/connectors/cloud-storage/adls-gen2.md)</li><li>[[!DNL Azure File Storage]](../../sources/connectors/cloud-storage/azure-file-storage.md)</li><li>[[!DNL Snowflake]](../../sources/connectors/databases/snowflake.md)</li></ul> Lees de handleiding op [[!DNL Azure Private Links]](../../sources/tutorials/ui/private-link.md) voor meer informatie. |
-| Verbeterde verificatie voor [!DNL Azure Blob Storage] | U kunt nu op service principal gebaseerde verificatie gebruiken om uw [!DNL Azure Blob Storage] -bron te verbinden met Experience Platform. De dienst belangrijkste gebaseerde authentificatie van het gebruik voor verbeterde veiligheid, gemakkelijkere credentiële omwenteling, en een meer korrelige toegangsbeheer voor uw rekening. Voor meer informatie, lees het [[!DNL Azure Blob Storage]  overzicht ](../../sources/connectors/cloud-storage/blob.md). |
+| Verbeterde verificatie voor [!DNL Azure Blob Storage] | U kunt nu verificatie op basis van de belangrijkste service gebruiken om uw [!DNL Azure Blob Storage]-bron met Experience Platform te verbinden. U kunt nu verificatie op basis van de belangrijkste service gebruiken voor verbeterde veiligheid, eenvoudigere rotatie van aanmeldingsgegevens en een nauwkeurigere toegangscontrole voor uw account. Voor meer informatie raadpleegt u het [[!DNL Azure Blob Storage] overzicht](../../sources/connectors/cloud-storage/blob.md). |
 
 Voor meer informatie raadpleegt u het [overzicht van bronnen](../../sources/home.md).
 
 <!--
 | [!DNL Marketo] source documentation updates | Get complete visibility into how your [!DNL Marketo] data is transformed when it enters Experience Platform. All field mappings now include detailed explanations of data transformations, so you can understand exactly how your `PersonID` becomes `leadID` and `eventType` becomes `activityType`. |
+| [!BADGE Beta]{type=Informative} Support for [!DNL Azure Private Links] in the UI | You can now use [!DNL Azure Private Links] for a select group of sources in the UI. Use this feature to create a private endpoint that which your source can connect to. With private endpoints, you can set up connections and dataflows that bypass the public internet, giving you enhanced security and network isolation for your sensitive data. Support for [!DNL Azure Private Links] is available to the following following sources: <ul><li>[[!DNL Azure Blob Storage]](../../sources/connectors/cloud-storage/blob.md)</li><li>[[!DNL ADLS Gen2]](../../sources/connectors/cloud-storage/adls-gen2.md)</li><li>[[!DNL Azure File Storage]](../../sources/connectors/cloud-storage/azure-file-storage.md)</li><li>[[!DNL Snowflake]](../../sources/connectors/databases/snowflake.md)</li></ul> For more information, read the guide on [[!DNL Azure Private Links]](../../sources/tutorials/ui/private-link.md). |
 -->
