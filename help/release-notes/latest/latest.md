@@ -2,10 +2,10 @@
 title: Aanvullende informatie van augustus 2025 voor Adobe Experience Platform
 description: Aanvullende informatie van augustus 2025 voor Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 45a50800f74a6a072e4246b11d338b0c134856e0
+source-git-commit: bbeab81e64a86a59a1f85ca139935abf220ef361
 workflow-type: tm+mt
-source-wordcount: '1541'
-ht-degree: 81%
+source-wordcount: '1422'
+ht-degree: 79%
 
 ---
 
@@ -15,8 +15,8 @@ ht-degree: 81%
 >
 >Raadpleeg de volgende documentatie voor aanvullende informatie voor andere Adobe Experience Platform-toepassingen:
 >
->- [Adobe Journey Optimizer](https://experienceleague.adobe.com/nl/docs/journey-optimizer/using/whats-new/release-notes)
->- [Adobe Journey Optimizer B2B](https://experienceleague.adobe.com/nl/docs/journey-optimizer-b2b/user/release-notes)
+>- [Adobe Journey Optimizer](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/whats-new/release-notes)
+>- [Adobe Journey Optimizer B2B](https://experienceleague.adobe.com/en/docs/journey-optimizer-b2b/user/release-notes)
 >- [Customer Journey Analytics](https://experienceleague.adobe.com/nl/docs/analytics-platform/using/releases/pre-release-notes)
 >- [Samenstelling van Federated-doelgroep](https://experienceleague.adobe.com/nl/docs/federated-audience-composition/using/e-release-notes)
 >- [Real-Time CDP Collaboration](https://experienceleague.adobe.com/nl/docs/real-time-cdp-collaboration/using/latest)
@@ -29,7 +29,6 @@ Nieuwe functies en updates van bestaande functies in Adobe Experience Platform:
 - [Catalogusservice](#catalog-service)
 - [Bestemmingen](#destinations)
 - [Experience Data Model (XDM)](#xdm)
-- [Real-Time Customer Profile](#profile)
 - [Sandboxes](#sandboxes)
 - [Segmentatieservice](#segmentation-service)
 - [Bronnen](#sources)
@@ -125,17 +124,21 @@ XDM is een open-bronspecificatie die algemene structuren en definities (schema&#
 
 Voor meer informatie raadpleegt u het [overzicht van XDM](../../xdm/home.md).
 
+<!--
+
 ## Real-Time Customer Profile {#profile}
 
-Real-Time Customer Profile biedt een uniform, bruikbaar overzicht van elke klant door gegevens uit alle kanalen te consolideren in één profiel.
+Real-Time Customer Profile provides a unified, actionable view of each customer by consolidating data from all channels into a single profile.
 
-**Nieuwe of bijgewerkte functies**
+**New or updated features**
 
-| Functie | Beschrijving |
+| Feature | Description |
 | --- | --- |
-| Verbeterde zoekfunctionaliteit in de Entities-API | De Entities-API ondersteunt nu het volgende: <ul><li>Persoon (profiel)</li><li>Experience-gebeurtenissen</li><li>Account</li><li>Kans</li></ul> Deze update vereenvoudigt het gebruik van API&#39;s en helpt optimale prestaties en betrouwbaarheid te garanderen. Als u eerder opzoekacties voor andere entiteitstypen hebt gebruikt, zoals samenvoegtabellen en aangepaste multi-entiteitstypen, is dit een goed moment om uw API-gebruik te evalueren en te profiteren van de verbeterde ervaring. Voor meer informatie raadpleegt u de [handleiding voor de Real-Time CDB B2B Edition-architectuurupgrade](../../rtcdp/b2b-architecture-upgrade.md). |
+| Enhanced lookup functionality in the Entities API | The Entities API now supports the following: <ul><li>Person (Profile)</li><li>Experience Events</li><li>Account</li><li>Opportunity</li></ul> This update simplifies API usage and helps ensure optimal performance and reliability. If you previously used lookups for other entity types—including join tables and custom Multi-Entity types—now is a great opportunity to review your API usage and take advantage of the improved experience. For more information, read the [Real-Time CDB B2B Edition architecture upgrade guide](../../rtcdp/b2b-architecture-upgrade.md). |
 
-Voor meer informatie over Real-Time Customer Profile raadpleegt u het [profieloverzicht](../../profile/home.md).
+For more information on Real-Time Customer Profile, read the [Profile overview](../../profile/home.md).
+
+-->
 
 ## Sandboxes {#sandboxes}
 
