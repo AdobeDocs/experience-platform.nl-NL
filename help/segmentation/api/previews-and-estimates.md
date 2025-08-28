@@ -4,7 +4,7 @@ title: Voorvertoningen en schattingen van API-eindpunten
 description: Terwijl segmentdefinitie wordt ontwikkeld, kunt u met de rastergereedschappen en voorvertoningsgereedschappen in Adobe Experience Platform informatie op overzichtsniveau weergeven, zodat u zeker weet dat u het verwachte publiek isoleert.
 role: Developer
 exl-id: 2c204f29-825f-4a5e-a7f6-40fc69263614
-source-git-commit: bf90e478b38463ec8219276efe71fcc1aab6b2aa
+source-git-commit: d9fc1fa6a1bbc6b13b2600a5ec9400a0b488056a
 workflow-type: tm+mt
 source-wordcount: '1016'
 ht-degree: 0%
@@ -31,8 +31,8 @@ De eindpunten die in deze handleiding worden gebruikt, maken deel uit van de API
 
 Wanneer de opname van records in het archief Profiel het totale aantal profielen met meer dan 5% verhoogt of verlaagt, wordt een samplingtaak geactiveerd om het aantal bij te werken. De manier waarop gegevensbemonstering wordt gestart, hangt af van de wijze van inname:
 
-* **Inname van de Partij:** voor partijingestie, binnen 15 minuten van met succes het opnemen van een partij in de opslag van het Profiel, als de 5% verhoging of dalingsdrempel wordt ontmoet, wordt een baan in werking gesteld om de telling bij te werken.
-* **Streaming opname:** voor het stromen gegevenswerkschema&#39;s, wordt een controle gedaan op een uurbasis om te bepalen als de 5% verhoging of dalingsdrempel is voldaan aan. Als dit het geval is, wordt er automatisch een taak geactiveerd om de telling bij te werken.
+* **Inname van de Partij:** voor partijingestie, binnen 15 minuten van met succes het opnemen van een partij in de opslag van het Profiel, als de 3% verhoging of dalingsdrempel wordt ontmoet, wordt een baan in werking gesteld om de telling bij te werken.
+* **Streaming opname:** voor het stromen gegevenswerkschema&#39;s, wordt een controle gedaan op een uurbasis om te bepalen als de 3% verhoging of dalingsdrempel is voldaan aan. Als dit het geval is, wordt er automatisch een taak geactiveerd om de telling bij te werken.
 
 De voorbeeldgrootte van de scan is afhankelijk van het totale aantal entiteiten in de profielopslag. Deze steekproefgrootte wordt vertegenwoordigd in de volgende lijst:
 
@@ -48,7 +48,7 @@ De voorbeeldgrootte van de scan is afhankelijk van het totale aantal entiteiten 
 
 ## Een nieuwe voorvertoning maken {#create-preview}
 
-U kunt een nieuwe voorvertoning maken door een POST aan te vragen bij het eindpunt van `/preview` .
+U kunt een nieuwe voorvertoning maken door een POST-aanvraag in te dienen bij het eindpunt van `/preview` .
 
 >[!NOTE]
 >
@@ -114,7 +114,7 @@ Een succesvol antwoord retourneert HTTP-status 201 (Gemaakt) met details van de 
 
 ## De resultaten van een specifieke voorvertoning ophalen {#get-preview}
 
-U kunt gedetailleerde informatie over een specifieke voorproef terugwinnen door een verzoek van de GET aan het `/preview` eindpunt te richten en voorproef identiteitskaart in de verzoekweg te verstrekken.
+U kunt gedetailleerde informatie over een specifieke voorvertoning ophalen door een GET-aanvraag in te dienen bij het `/preview` -eindpunt en de voorbeeld-id op te geven in het aanvraagpad.
 
 **API formaat**
 
@@ -199,7 +199,7 @@ Een geslaagde reactie retourneert HTTP-status 200 met gedetailleerde informatie 
 
 ## De resultaten van een specifieke geschatte taak ophalen {#get-estimate}
 
-Als u een voorvertoningstaak hebt gemaakt, kunt u de `previewId` ervan gebruiken in het pad van een aanvraag van een GET naar het `/estimate` -eindpunt om statistische informatie weer te geven over de segmentdefinitie, zoals de geprojecteerde publieksgrootte, het betrouwbaarheidsinterval en de standaardafwijking voor fouten.
+Als u een voorvertoningstaak hebt gemaakt, kunt u de `previewId` ervan gebruiken in het pad van een GET-aanvraag naar het `/estimate` -eindpunt om statistische informatie weer te geven over de segmentdefinitie, zoals de geprojecteerde publieksgrootte, het betrouwbaarheidsinterval en de standaardafwijking voor fouten.
 
 **API formaat**
 

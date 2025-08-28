@@ -4,7 +4,7 @@ title: Een segmentdefinitie maken met de segmentatieservice-API
 type: Tutorial
 description: Volg deze zelfstudie om te leren hoe u een segmentdefinitie kunt ontwikkelen, testen, voorvertonen en opslaan met de Adobe Experience Platform Segmentation Service API.
 exl-id: 78684ae0-3721-4736-99f1-a7d1660dc849
-source-git-commit: f6d700087241fb3a467934ae8e64d04f5c1d98fa
+source-git-commit: d9fc1fa6a1bbc6b13b2600a5ec9400a0b488056a
 workflow-type: tm+mt
 source-wordcount: '1067'
 ht-degree: 0%
@@ -76,8 +76,8 @@ Aangezien gegevens die voor het Profiel van de Klant in real time worden toegela
 
 De wijze waarop het monster wordt geactiveerd, hangt af van het type inname dat wordt gebruikt:
 
-- Voor het stromen gegevenswerkschema&#39;s, wordt een controle uitgevoerd op uurbasis om te bepalen als de 5% verhoging of dalingsdrempel is voldaan. Als aan deze drempel is voldaan, wordt automatisch een voorbeeldtaak geactiveerd om de telling bij te werken.
-- Voor batch-opname wordt binnen 15 minuten na het correct innemen van een batch in de profielopslag een taak uitgevoerd om het aantal bij te werken als aan de drempel van 5% voor verhogen of verlagen is voldaan. Met behulp van de profiel-API kunt u een voorvertoning weergeven van de meest recente voorbeeldtaak en de distributie van het lijstprofiel via gegevensset en naamruimte op naam.
+- Voor het stromen gegevenswerkschema&#39;s, wordt een controle uitgevoerd op uurbasis om te bepalen als de 3% verhoging of dalingsdrempel is voldaan. Als aan deze drempel is voldaan, wordt automatisch een voorbeeldtaak geactiveerd om de telling bij te werken.
+- Voor batch-opname wordt binnen 15 minuten na het correct innemen van een batch in de profielopslag een taak uitgevoerd om het aantal bij te werken als aan de drempel voor 3% verhoging of verlaging is voldaan. Met behulp van de profiel-API kunt u een voorvertoning weergeven van de meest recente voorbeeldtaak en de distributie van het lijstprofiel via gegevensset en naamruimte op naam.
 
 De voorbeeldgrootte is afhankelijk van het totale aantal entiteiten in de profielopslag. Deze steekproefgrootte wordt vertegenwoordigd in de volgende lijst:
 

@@ -3,7 +3,7 @@ keywords: Experience Platform;profiel;real-time klantprofiel;problemen;API;veren
 title: Gebruikersgids voor realtime gebruikersprofiel
 description: Het profiel van de Klant in real time leidt tot een holistische mening van elk van uw individuele klanten, die gegevens van veelvoudige kanalen met inbegrip van online, off-line, CRM, en derdegegevens combineren. Dit document fungeert als richtlijn voor de interactie met Real-Time Klantprofiel in de Adobe Experience Platform-gebruikersinterface.
 exl-id: 792a3a73-58a4-4163-9212-4d43d24c2770
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: d9fc1fa6a1bbc6b13b2600a5ec9400a0b488056a
 workflow-type: tm+mt
 source-wordcount: '2135'
 ht-degree: 0%
@@ -60,7 +60,7 @@ Het aantal profielen omvat ook zowel profielen met kenmerken (recordgegevens) al
 
 #### De metrische waarde voor het aantal profielen bijwerken
 
-Wanneer de opname van records in de [!DNL Profile] store de telling met meer dan 5% verhoogt of verlaagt, wordt een baan teweeggebracht om de telling bij te werken. Voor het stromen gegevenswerkschema&#39;s, wordt een controle uitgevoerd op uurbasis om te bepalen als de 5% verhoging of dalingsdrempel is voldaan. Als dit het geval is, wordt er automatisch een taak geactiveerd om het aantal profielen bij te werken. Voor batch-opname wordt binnen 15 minuten na het correct innemen van een batch in de profielopslag een taak uitgevoerd om het aantal profielen bij te werken als aan de drempel van 5% verhoging of afname is voldaan.
+Wanneer de opname van records in de [!DNL Profile] store de telling met meer dan 3% verhoogt of verlaagt, wordt een baan teweeggebracht om de telling bij te werken. Voor het stromen gegevenswerkschema&#39;s, wordt een controle uitgevoerd op uurbasis om te bepalen als de 3% verhoging of dalingsdrempel is voldaan. Als dit het geval is, wordt er automatisch een taak geactiveerd om het aantal profielen bij te werken. Voor batch-opname wordt binnen 15 minuten na het correct innemen van een batch in de profielopslag een taak uitgevoerd om het aantal profielen bij te werken als aan de drempel voor 3% verhoging of verlaging is voldaan.
 
 ### [!UICONTROL Profiles by namespace] {#profiles-by-namespace}
 
@@ -108,7 +108,7 @@ Gebruik indien nodig de kiezer van **[!UICONTROL Merge policy]** om het dialoogv
 
 ![ dialoog A waar u het fusiebeleid kunt selecteren door wordt getoond te filtreren.](../images/user-guide/select-merge-policy.png)
 
-Vervolgens opent u het dialoogvenster **[!UICONTROL Select identity namespace]** met de kiezer van **[!UICONTROL Identity namespace]** en kiest u de naamruimte waarin u wilt zoeken. Als uw organisatie veel naamruimten heeft, kunt u de zoekbalk in het dialoogvenster gebruiken om de naam van een naamruimte te typen.
+Vervolgens opent u het dialoogvenster **[!UICONTROL Identity namespace]** met de kiezer van **[!UICONTROL Select identity namespace]** en kiest u de naamruimte waarin u wilt zoeken. Als uw organisatie veel naamruimten heeft, kunt u de zoekbalk in het dialoogvenster gebruiken om de naam van een naamruimte te typen.
 
 U kunt een naamruimte selecteren om aanvullende details weer te geven of het keuzerondje selecteren om een naamruimte te kiezen. Vervolgens kunt u **[!UICONTROL Select]** gebruiken om door te gaan.
 
