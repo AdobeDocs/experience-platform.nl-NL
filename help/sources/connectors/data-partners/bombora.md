@@ -2,12 +2,12 @@
 title: Bombora-intentie
 description: Meer informatie over de Bombora Intent-bron op Experience Platform.
 last-substantial-update: 2025-03-26T00:00:00Z
-badgeB2B: label="B2B edition" type="Informative" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=nl-NL#rtcdp-editions newtab=true"
-badgeB2P: label="B2P Edition" type="Positive" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=nl-NL#rtcdp-editions newtab=true"
+badgeB2B: label="B2B edition" type="Informative" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=en#rtcdp-editions newtab=true"
+badgeB2P: label="B2P Edition" type="Positive" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=en#rtcdp-editions newtab=true"
 exl-id: d2e81207-8ef5-4e52-bbac-a2fa262d8d08
-source-git-commit: 9ab2c4725d2188f772bde1f7a89db2bb47c7a46b
+source-git-commit: 8a5fdcfcf503df1b9d5aa338ff530181a2d03b5d
 workflow-type: tm+mt
-source-wordcount: '1611'
+source-wordcount: '1603'
 ht-degree: 0%
 
 ---
@@ -77,18 +77,27 @@ Voor meer informatie over deze geloofsbrieven, leest de [[!DNL Google Cloud Stor
 
 Lees deze sectie voor informatie over het schema en de gegevensstructuur van [!DNL Bombora] .
 
-Het [!DNL Bombora] schema wordt genoemd {Wekelijks 1} Intentie van de Rekening **.** Het is de wekelijkse intentinformatie (anonieme B2B-kopersonderzoek en inhoudconsumptie) over gespecificeerde rekeningen en onderwerpen. De gegevens hebben de parketindeling.
+Het [!DNL Bombora] schema wordt genoemd **B2B Bombora Intent van de Rekening**. Het is de wekelijkse intentinformatie (anonieme B2B-kopersonderzoek en inhoudconsumptie) over gespecificeerde rekeningen en onderwerpen. De gegevens hebben de parketindeling.
 
-| Veldnaam | Datatype | Vereist | Zakelijke sleutel | Notities |
-| --- | --- | --- | --- | --- |
-| `Account_Name` | TEKENREEKS | TRUE | JA | De canonieke naam van het bedrijf. |
-| `Domain` | TEKENREEKS | TRUE | JA | Het domein van de geïdentificeerde account dat de intentie weergeeft. |
-| `Topic_Id` | TEKENREEKS | TRUE | JA | De [!DNL Bombora] onderwerp-id. |
-| `Topic_Name` | TEKENREEKS | TRUE | | De naam van het onderwerp [!DNL Bombora] . |
-| `Cluster_Name` | TEKENREEKS | TRUE | | De clusternaam op [!DNL Bombora] voor een bepaald onderwerp. |
-| `Cluster_Id` | TEKENREEKS | TRUE | | De cluster-id die aan een bepaald onderwerp is gekoppeld. |
-| `Composite_Score` | INTEGER | TRUE | | De samengestelde score vertegenwoordigt het consumptiepatroon van een domein voor een bepaald onderwerp over een gespecificeerde tijdspanne. De samengestelde score wordt gemeten tussen 0 en 100, waarbij 100 de hoogst mogelijke score vertegenwoordigt en 0 de laagst mogelijke score. Een samengestelde score van meer dan 60 vertegenwoordigt een toename in rente in een bepaald onderwerp door een domein. Dit wordt ook wel een &quot;piek&quot; genoemd. |
-| `Partition_Date` | DATE | TRUE | | De kalenderdatum van een momentopname. Dit gebeurt wekelijks, aan het einde van de week, in `mm/dd/yyyy` formaat. |
+* Klasse - XDM [!DNL Bombora Account Intent]
+* Naamruimte - B2B [!DNL Bombora Account Intent]
+* Primaire identiteit - `intentID`
+* Relaties - B2B-account
+
+| Veldnaam | Gegevenstype | Beschrijving |
+|------------------------|-----------|----------------------------------------------------------------------------------------|
+| `extSourceSystemAudit` | OBJECT | Dit veld wordt door het systeem gebruikt voor de controle van het bronsysteem. |
+| `_id` | TEKENREEKS | Dit veld wordt door het systeem gebruikt als een unieke id. |
+| `accountDomain` | TEKENREEKS | Dit veld bevat het accountdomein. |
+| `accountID` | TEKENREEKS | Dit veld bevat de B2B-account-id waaraan deze intentrecord is gekoppeld. |
+| `bomboraAccountName` | TEKENREEKS | Dit veld bevat de bedrijfs-id in Bombora. |
+| `clusterID` | TEKENREEKS | Dit veld bevat de cluster-id. |
+| `clusterName` | TEKENREEKS | Dit veld bevat de clusternaam. |
+| `compositeScore` | INTEGER | Dit veld bevat de samengestelde score van de intentie. |
+| `intentID` | TEKENREEKS | Dit veld bevat een door het systeem gegenereerde unieke waarde. |
+| `partitionDate` | DATE | Dit veld bevat de datum van de partitie. Dit gebeurt wekelijks, aan het einde van de week, in `mm/dd/yyyy` formaat. |
+| `topicID` | TEKENREEKS | Dit gebied bevat intent onderwerpidentiteitskaart van Bombora. |
+| `topicName` | TEKENREEKS | Dit veld bevat de intentonderwerpnaam uit Bombora. |
 
 {style="table-layout:auto"}
 

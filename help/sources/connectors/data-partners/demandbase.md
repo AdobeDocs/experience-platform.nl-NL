@@ -2,12 +2,12 @@
 title: Demandbase-intentie
 description: Meer informatie over de Demandbase Intent-bron op Experience Platform.
 last-substantial-update: 2025-03-26T00:00:00Z
-badgeB2B: label="B2B edition" type="Informative" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=nl-NL#rtcdp-editions newtab=true"
-badgeB2P: label="B2P Edition" type="Positive" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=nl-NL#rtcdp-editions newtab=true"
+badgeB2B: label="B2B edition" type="Informative" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=en#rtcdp-editions newtab=true"
+badgeB2P: label="B2P Edition" type="Positive" url=" https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=en#rtcdp-editions newtab=true"
 exl-id: 62dd27e0-b846-4c04-977f-8a3ab99bc464
-source-git-commit: 5757bc84a9aeec18eb5fe21d6f02160b2ba55166
+source-git-commit: 8a5fdcfcf503df1b9d5aa338ff530181a2d03b5d
 workflow-type: tm+mt
-source-wordcount: '1476'
+source-wordcount: '1474'
 ht-degree: 0%
 
 ---
@@ -60,25 +60,33 @@ Voor meer informatie over deze geloofsbrieven, leest de [[!DNL Google Cloud Stor
 
 Lees deze sectie voor informatie over het schema en de gegevensstructuur van [!DNL Demandbase] .
 
-Het [!DNL Demandbase] schema wordt genoemd {de Intentie van het 1} Bedrijf Wekelijks **.** Het is de wekelijkse intentinformatie (anonieme B2B-kopersonderzoek en inhoudsverbruik) voor opgegeven account en trefwoorden. De gegevens hebben de parketindeling.
+Het [!DNL Demandbase] schema wordt genoemd **B2B Intent van de Rekening van de Demandbase**. Het is de wekelijkse intentinformatie (anonieme B2B-kopersonderzoek en inhoudsverbruik) voor opgegeven account en trefwoorden. De gegevens hebben de parketindeling.
 
-| Veldnaam | Datatype | Vereist | Zakelijke sleutel | Notities |
-| --- | --- | --- | --- | --- |
-| `company_id` | TEKENREEKS | TRUE | JA | De canonieke bedrijfs-id. |
-| `domain` | TEKENREEKS | TRUE | JA | Het geïdentificeerde domein van de rekening die intent toont. |
-| `start_date` | DATE | TRUE | JA | De begindatum van het tijdstip waarop de activiteit van de intentie zich in de periode voordeed. |
-| `end_date` | DATE | TRUE | JA | De einddatum van het tijdstip waarop de activiteit van de intentie zich tijdens de periode heeft voorgedaan. |
-| `duration_type` | TEKENREEKS | TRUE | JA | Het type duur. In het algemeen kan deze waarde dagelijks, wekelijks of maandelijks zijn, afhankelijk van de gekozen roll-up duur. Voor dit gegevensvoorbeeld is deze waarde `week` . |
-| `keyword_set_id` | TEKENREEKS | TRUE | JA | De trefwoordenset-id. Dit is uniek per bepaalde klant. |
-| `keyword_set` | TEKENREEKS | TRUE | JA | De naam van de trefwoordset. |
-| `keyword` | TEKENREEKS | TRUE | | Het trefwoord intent. |
-| `is_trending` | TEKENREEKS | TRUE | | De huidige toestand van een bepaalde trend. De trendstaat wordt gemeten als een uitbarsting van de intentactiviteit in de laatste week ten opzichte van gemiddelden in de voorafgaande zeven weken. |
-| `intent_strength` | ENUM [ TEKENREEKS ] | TRUE | | Een gekwantificeerde maat van de sterkte van de intentie. Tot de geaccepteerde waarden behoren: `HIGH`, `MED` en `LOW` . |
-| `num_people_researching` | INTEGER | TRUE | | Het aantal personen dat in de afgelopen zeven dagen tot het trefwoord `company_id` behoort dat het trefwoord onderzoekt. |
-| `num_trending_days` | INTEGER | TRUE | | Het aantal dagen dat het trefwoord in een bepaalde periode trending. |
-| `trending_score` | INTEGER | TRUE | | De trending score. |
-| `record_id` | TEKENREEKS | TRUE | | De unieke primaire record-id. |
-| `partition_date` | DATE | TRUE | | De kalenderdatum van de momentopname. Dit gebeurt wekelijks, aan het einde van de week. |
+* Klasse - XDM [!DNL Demandbase Account Intent]
+* Naamruimte - B2B [!DNL Demandbase Account Intent]
+* Primaire identiteit - `intentID`
+* Relaties - B2B-account
+
+| Veldnaam | Gegevenstype | Beschrijving |
+|--------------------------|-----------|-------------------------------------------------------------------------------------------------------------|
+| `extSourceSystemAudit` | OBJECT | Dit gebied bevat de informatie van de systeemcontrole van de externe bron. |
+| `_id` | TEKENREEKS | Dit is de unieke systeem-id voor de record. |
+| `accountDomain` | TEKENREEKS | Dit veld bevat het accountdomein. |
+| `accountID` | TEKENREEKS | Dit is de B2B-account-id waaraan deze intentrecord is gekoppeld. |
+| `demandbaseAccountID` | TEKENREEKS | Dit is de bedrijfs-id in [!DNL Demandbase] . |
+| `durationType` | TEKENREEKS | In dit veld wordt het type geldigheidsperiode van de intentie opgegeven, bijvoorbeeld &quot;week&quot;. |
+| `endDate` | DATE | Dit is de einddatum van de geldigheidsperiode van de intentie. |
+| `intentID` | TEKENREEKS | Dit is een door het systeem gegenereerde unieke waarde voor de intentrecord. |
+| `intentStrength` | TEKENREEKS | In dit veld wordt het geldigheidstype van de intentie opgegeven, zoals &quot;DAG&quot;, &quot;WEEK&quot; of &quot;MAAND&quot;. |
+| `isTrending` | BOOLEAN | In dit veld wordt aangegeven of het trefwoord trending is, waarbij de mogelijke waarden Laag, Medium of Hoog zijn. |
+| `keyword` | TEKENREEKS | Dit veld bevat het trefwoord of de woordgroep die de intentie van [!DNL Demandbase] aangeeft. |
+| `keywordSetID` | TEKENREEKS | Dit is de id voor de trefwoordenset. |
+| `keywordSetName` | TEKENREEKS | Dit is de naam van de trefwoordenset. |
+| `numTrendingDays` | INTEGER | In dit veld wordt het aantal dagen aangegeven dat het trefwoord wordt afgebroken. |
+| `partitionDate` | DATE | Dit is de verdelingsdatum voor het verslag. |
+| `peopleResearchingCount` | INTEGER | Dit gebied wijst op het aantal mensen die het sleutelwoord onderzoeken. |
+| `startDate` | DATE | Dit is de begindatum van de geldigheidsperiode van de intentie. |
+| `trendingScore` | INTEGER | Dit gebied bevat de trending score voor het sleutelwoord. |
 
 {style="table-layout:auto"}
 
