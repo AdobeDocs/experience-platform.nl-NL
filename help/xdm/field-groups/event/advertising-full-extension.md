@@ -103,8 +103,8 @@ Het object conversionDetails legt trackinggegevens vast voor conversies van adve
 
 | Eigenschap | Gegevenstype | Beschrijving |
 | --- | --- | --- |
-| `trackingCode` | String | De conversietrackingcode voor de gebeurtenis. Voor een lijst van mogelijke formaten, zie {de Formaten van identiteitskaart 0} AMO [.](https://experienceleague.adobe.com/en/docs/advertising/integrations/customer-journey-analytics/ids#amo-id-formats) |
-| `trackingIdentities` | String | De EF-id of identiteitsgegevens voor het bijhouden van een gebeurtenis. Voor een lijst van mogelijke formaten, zie [ EF identiteitskaart Formaten ](https://experienceleague.adobe.com/en/docs/advertising/integrations/customer-journey-analytics/ids#ef-id-formats). |
+| `trackingCode` | String | De conversietrackingcode voor de gebeurtenis. Voor een lijst van mogelijke formaten, zie {de Formaten van identiteitskaart 0} AMO [.](https://experienceleague.adobe.com/nl/docs/advertising/integrations/customer-journey-analytics/ids#amo-id-formats) |
+| `trackingIdentities` | String | De EF-id of identiteitsgegevens voor het bijhouden van een gebeurtenis. Voor een lijst van mogelijke formaten, zie [ EF identiteitskaart Formaten ](https://experienceleague.adobe.com/nl/docs/advertising/integrations/customer-journey-analytics/ids#ef-id-formats). |
 | `conversionProperties` | Object | Een kaart met omzettingseigenschappen, die als serie van zeer belangrijk-waardepaarkoorden (zoals `subscriptions=253` wordt vertegenwoordigd). |
 
 ## `fees` {#fees}
