@@ -3,7 +3,7 @@ title: API-eindpunt voor soorten publiek
 description: Gebruik het publiek eindpunt in de API van de Dienst van de Segmentatie van Adobe Experience Platform om, publiek voor uw organisatie programmatically tot stand te brengen te beheren en bij te werken.
 role: Developer
 exl-id: cb1a46e5-3294-4db2-ad46-c5e45f48df15
-source-git-commit: 2ec6bacb44dc9b31fcd5cb4c457ba109a921aa84
+source-git-commit: 63fa87ac9777b3ac66d990dd4bfbd202f07b0eba
 workflow-type: tm+mt
 source-wordcount: '1592'
 ht-degree: 0%
@@ -33,7 +33,7 @@ GET /audiences?{QUERY_PARAMETERS}
 
 >[!NOTE]
 >
->Als u dit eindpunt zonder enige vraagparameters gebruikt, zal het inactieve publiek **niet** zijn teruggekeerd. Nochtans, als u dit eindpunt samen met de `property=audienceId` vraagparameter gebruikt, zal het inactieve publiek **&#x200B;**&#x200B;zijn teruggekeerd.
+>Als u dit eindpunt zonder enige vraagparameters gebruikt, zal het inactieve publiek **niet** zijn teruggekeerd. Nochtans, als u dit eindpunt samen met de `property=audienceId` vraagparameter gebruikt, zal het inactieve publiek **** zijn teruggekeerd.
 
 De volgende vraagparameters kunnen worden gebruikt wanneer het terugwinnen van een lijst van publiek:
 
@@ -43,15 +43,15 @@ De volgende vraagparameters kunnen worden gebruikt wanneer het terugwinnen van e
 | `limit` | Hiermee geeft u het maximale aantal bezoekers per pagina op. | `limit=10` |
 | `sort` | Hiermee geeft u de volgorde op waarin de resultaten moeten worden gesorteerd. Dit wordt geschreven in de indeling `attributeName:[desc/asc]` . | `sort=updateTime:desc` |
 | `property` | Een filter dat u toestaat om publiek te specificeren dat **precies** de waarde van een attribuut aanpast. Dit wordt geschreven in de indeling `property=` | `property=audienceId==test-audience-id` |
-| `name` | Een filter dat u toestaat om publiek te specificeren de waarvan namen **&#x200B;**&#x200B;bevatten de verstrekte waarde. Deze waarde is niet hoofdlettergevoelig. | `name=Sample` |
-| `description` | Een filter dat u toestaat om publiek te specificeren de waarvan beschrijvingen **&#x200B;**&#x200B;bevatten de verstrekte waarde. Deze waarde is niet hoofdlettergevoelig. | `description=Test Description` |
+| `name` | Een filter dat u toestaat om publiek te specificeren de waarvan namen **** bevatten de verstrekte waarde. Deze waarde is niet hoofdlettergevoelig. | `name=Sample` |
+| `description` | Een filter dat u toestaat om publiek te specificeren de waarvan beschrijvingen **** bevatten de verstrekte waarde. Deze waarde is niet hoofdlettergevoelig. | `description=Test Description` |
 | `entityType` | Een filter waarmee u het type publiek kunt opgeven dat u zoekt. | `entityType=_xdm.context.account` |
 
 **Verzoek**
 
 Het volgende verzoek wint de laatste twee publiek terug dat in uw organisatie wordt gecreeerd.
 
-+++A steekproefverzoek om een lijst van publiek terug te winnen.
++++Een voorbeeldverzoek om een lijst met soorten publiek op te halen.
 
 ```shell
 curl -X GET https://platform.adobe.io/data/core/ups/audiences?limit=2 \
@@ -67,7 +67,7 @@ curl -X GET https://platform.adobe.io/data/core/ups/audiences?limit=2 \
 
 Een geslaagde reactie retourneert HTTP-status 200 met een lijst van soorten publiek die in uw organisatie als JSON zijn gemaakt.
 
-+++A steekproefreactie die de laatste twee gecreeerde publiek bevat dat tot uw organisatie behoort
++++Een voorbeeldreactie die de laatste twee gecreëerde soorten publiek bevat die tot uw organisatie behoren
 
 ```json
 {
@@ -166,7 +166,12 @@ Een geslaagde reactie retourneert HTTP-status 200 met een lijst van soorten publ
     ],
     "_page":{
       "totalCount": 111,
-      "pageSize": 2,
+      "totalPages": 21,
+      "sortField": "name",
+      "sort": "asc", 
+      "pageSize": 5,
+      "limit": 5,
+      "start": "0",
       "next": "1"
    },
    "_links":{
@@ -255,7 +260,7 @@ curl -X POST https://platform.adobe.io/data/core/ups/audiences
 
 Een succesvolle reactie keert status 200 van HTTP met informatie over uw pas gecreeerd publiek terug.
 
-+++Een voorbeeldreactie bij het creëren van een Platform-geproduceerd publiek.
++++Een voorbeeldreactie bij het maken van een publiek dat via een platform wordt gegenereerd.
 
 ```json
 {
@@ -339,7 +344,7 @@ GET /audiences/{AUDIENCE_ID}
 
 **Verzoek**
 
-+++Een voorbeeldverzoek om een publiek terug te winnen
++++Een voorbeeldverzoek om een publiek op te halen
 
 ```shell
 curl -X GET https://platform.adobe.io/data/core/ups/audiences/60ccea95-1435-4180-97a5-58af4aa285ab \
@@ -355,7 +360,7 @@ curl -X GET https://platform.adobe.io/data/core/ups/audiences/60ccea95-1435-4180
 
 Een succesvolle reactie keert status 200 van HTTP met informatie over het gespecificeerde publiek terug.
 
-+++A steekproefreactie wanneer het terugwinnen van een Platform-geproduceerd publiek.
++++Een steekproefreactie wanneer het terugwinnen van een Platform-geproduceerd publiek.
 
 ```json
 {
@@ -438,7 +443,7 @@ PUT /audiences/{AUDIENCE_ID}
 
 **Verzoek**
 
-+++A voorbeeldverzoek om een volledig publiek bij te werken.
++++Een voorbeeldverzoek om een volledig publiek bij te werken.
 
 ```shell
 curl -X PUT https://platform.adobe.io/data/core/ups/audiences/4afe34ae-8c98-4513-8a1d-67ccaa54bc05 \
@@ -484,7 +489,7 @@ curl -X PUT https://platform.adobe.io/data/core/ups/audiences/4afe34ae-8c98-4513
 
 Een geslaagde reactie retourneert HTTP status 200 met details over uw onlangs bijgewerkte publiek. Houd er rekening mee dat de details van uw publiek verschillen, afhankelijk van het publiek dat via een Experience-Platform wordt gegenereerd of een publiek dat extern wordt gegenereerd.
 
-+++A voorbeeldreactie wanneer het bijwerken van een volledig publiek.
++++Een voorbeeldreactie bij het bijwerken van een volledig publiek.
 
 ```json
 {
@@ -559,7 +564,7 @@ curl -X PATCH https://platform.adobe.io/data/core/ups/audiences/60ccea95-1435-41
 
 Een geslaagde reactie retourneert HTTP-status 200 met het bijgewerkte publiek.
 
-+++Een voorbeeldreactie bij het repareren van een veld in een publiek.
++++Een voorbeeldreactie bij het patchen van een veld in een publiek.
 
 ```json
 {
