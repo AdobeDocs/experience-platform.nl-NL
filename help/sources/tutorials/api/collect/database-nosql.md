@@ -3,20 +3,20 @@ title: Creeer een Dataflow voor de Bronnen van het Gegevensbestand Gebruikend de
 type: Tutorial
 description: Leer hoe u de Flow Service API kunt gebruiken om een gegevensstroom te maken en gegevens van uw database in Experience Platform in te voeren.
 exl-id: 1e1f9bbe-eb5e-40fb-a03c-52df957cb683
-source-git-commit: a5fa939d522b0bf828f42144657ea15f9c3347ed
+source-git-commit: b4f8d44c3ce9507ff158cf051b7a4b524b293c64
 workflow-type: tm+mt
-source-wordcount: '1455'
+source-wordcount: '1456'
 ht-degree: 0%
 
 ---
 
 # Een gegevensstroom maken voor databasebronnen met de API [!DNL Flow Service]
 
-Lees dit leerprogramma leren hoe te om een dataflow tot stand te brengen en gegevens van uw gegevensbestand aan Adobe Experience Platform in te voeren gebruikend [[!DNL Flow Service]  API ](https://developer.adobe.com/experience-platform-apis/references/flow-service/).
+Lees dit leerprogramma leren hoe te om een dataflow tot stand te brengen en gegevens van uw gegevensbestand in Adobe Experience Platform in te voeren gebruikend [[!DNL Flow Service]  API ](https://developer.adobe.com/experience-platform-apis/references/flow-service/).
 
 >[!NOTE]
 >
->* Als u een gegevensstroom wilt maken, moet u al een geldige basis-verbindings-id met een databasebron hebben. Als u dit identiteitskaart niet hebt, dan bezoek de [ broncatalogus ](../../../home.md#database) voor een lijst van gegevensbestandbronnen die u een basisverbinding kunt tot stand brengen met.
+>* Als u een gegevensstroom wilt maken, moet u al een geldige basis-verbindings-id met een databasebron hebben. Als u dit identiteitskaart niet hebt, dan bezoek de [ broncatalogus ](../../../home.md#database) om een lijst van gegevensbestandbronnen te bekijken die u een basisverbinding kunt tot stand brengen met.
 >* Experience Platform kan alleen gegevens invoeren als tijdzones voor alle batchbronnen op basis van tabellen zijn geconfigureerd voor UTC. De enige tijdstempel die voor de [[!DNL Snowflake]  bron ](../../../connectors/databases/snowflake.md) wordt gesteund is TIMESTAMP_NTZ met tijd UTC.
 
 ## Aan de slag

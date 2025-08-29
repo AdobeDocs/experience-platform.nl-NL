@@ -2,23 +2,23 @@
 title: Een gegevensstroom maken om gegevens van een CRM in Experience Platform op te nemen
 description: Leer hoe u de Flow Service API gebruikt om een gegevensstroom te maken en brongegevens in Experience Platform in te voeren.
 exl-id: b07dd640-bce6-4699-9d2b-b7096746934a
-source-git-commit: fe310a326f423a32b278b8179578933295de3a87
+source-git-commit: b4f8d44c3ce9507ff158cf051b7a4b524b293c64
 workflow-type: tm+mt
-source-wordcount: '2095'
+source-wordcount: '2102'
 ht-degree: 0%
 
 ---
 
 # Een gegevensstroom maken om gegevens van een CRM in Experience Platform in te voeren
 
-Lees deze gids om te leren hoe te om een dataflow tot stand te brengen en gegevens aan Adobe Experience Platform in te voeren gebruikend [[!DNL Flow Service]  API ](https://developer.adobe.com/experience-platform-apis/references/flow-service/).
+Lees deze gids om te leren hoe te om een dataflow tot stand te brengen en gegevens in Adobe Experience Platform in te voeren gebruikend [[!DNL Flow Service]  API ](https://developer.adobe.com/experience-platform-apis/references/flow-service/).
 
 ## Aan de slag
 
 Deze handleiding vereist een goed begrip van de volgende onderdelen van Experience Platform:
 
-* [ Inname van de Partij ](../../../../ingestion/batch-ingestion/overview.md): Ontdek hoe u grote volumes van gegevens efficiënt in partijen kunt uploaden.
-* [ de Dienst van de Catalogus ](../../../../catalog/datasets/overview.md): Organiseer en houd spoor van uw datasets binnen Experience Platform.
+* [ Inname van de Partij ](../../../../ingestion/batch-ingestion/overview.md): Ontdek hoe u grote volumes van gegevens in partijen snel en efficiënt kunt uploaden.
+* [ de Dienst van de Catalogus ](../../../../catalog/datasets/overview.md): Organiseer en houd spoor van uw datasets in Experience Platform.
 * [ Prep van Gegevens ](../../../../data-prep/home.md): Transformeer en breng uw inkomende gegevens in kaart om uw schemavereisten aan te passen.
 * [ Dataflows ](../../../../dataflows/home.md): Opstelling en beheer de pijpleidingen die uw gegevens van bronnen aan bestemmingen bewegen.
 * [ Schema&#39;s van de Gegevens van de Ervaring Model (XDM) ](../../../../xdm/home.md): Structuur uw gegevens gebruikend schema&#39;s XDM zodat is het klaar voor gebruik in Experience Platform.
@@ -37,7 +37,7 @@ Als u een gegevensstroom voor uw bron wilt maken, hebt u een volledig geverifiee
 
 Een schema van de Gegevens van de Ervaring van het Model (XDM) verstrekt een gestandaardiseerde manier om gegevens van de klantenervaring binnen Experience Platform te organiseren en te beschrijven. Om uw brongegevens in Experience Platform in te voeren, moet u eerst een doelXDM schema tot stand brengen dat de structuur en de soorten gegevens bepaalt u wilt opnemen. Dit schema dient als blauwdruk voor de dataset van Experience Platform waar uw opgenomen gegevens zullen verblijven.
 
-Een doelXDM schema kan worden gecreeerd door een POST- verzoek aan de [ Registratie API van het Schema ](https://developer.adobe.com/experience-platform-apis/references/schema-registry/) uit te voeren. Lees de volgende hulplijnen voor gedetailleerde informatie over stappen voor het maken van een doel-XDM-schema:
+Een doelXDM schema kan worden gecreeerd door een POST- verzoek aan de [ Registratie API van het Schema ](https://developer.adobe.com/experience-platform-apis/references/schema-registry/) uit te voeren. Lees de volgende hulplijnen voor gedetailleerde stappen over het maken van een doel-XDM-schema:
 
 * [ creeer een schema gebruikend API ](../../../../xdm/api/schemas.md).
 * [ creeer een schema gebruikend UI ](../../../../xdm/tutorials/create-schema-ui.md).
@@ -46,7 +46,7 @@ Zodra gecreeerd, zal het doelXDM schema `$id` later voor uw doeldataset en afbee
 
 ### Een doelgegevensset maken {#target-dataset}
 
-Een dataset is een opslag en beheersconstructie voor een inzameling van gegevens, typisch een lijst, die een schema (kolommen) en gebieden (rijen) bevat. De gegevens die met succes in Experience Platform worden opgenomen worden opgeslagen binnen het gegevensmeer als datasets. Tijdens deze stap, kunt u een nieuwe dataset tot stand brengen of een bestaande dataset gebruiken.
+Een dataset is een opslag en beheersconstructie voor een inzameling van gegevens, typisch gestructureerd zoals een lijst met kolommen (schema) en rijen (gebieden). De gegevens die met succes in Experience Platform worden opgenomen worden opgeslagen binnen het gegevensmeer als datasets. Tijdens deze stap, kunt u of een nieuwe dataset tot stand brengen of bestaande gebruiken.
 
 U kunt een doeldataset tot stand brengen door een POST- verzoek aan de [ Dienst API van de Catalogus ](https://developer.adobe.com/experience-platform-apis/references/catalog/) te doen, terwijl het verstrekken van identiteitskaart van het doelschema binnen de nuttige lading. Voor gedetailleerde stappen op hoe te om een doeldataset tot stand te brengen, lees de gids bij [ het creëren van een dataset gebruikend API ](../../../../catalog/api/create-dataset.md).
 
@@ -64,7 +64,7 @@ POST /dataSets
 
 **Verzoek**
 
-Het volgende voorbeeld toont hoe te om een doeldataset tot stand te brengen die voor Echte - tijdInname van het Profiel van de Klant wordt toegelaten. In deze aanvraag wordt de eigenschap `unifiedProfile` ingesteld op `true` (onder het `tags` -object), die Experience Platform opgeeft deze gegevensset op te nemen in Real-Time Customer Profile.
+Het volgende voorbeeld toont hoe te om een doeldataset tot stand te brengen die voor Echte - tijdInname van het Profiel van de Klant wordt toegelaten. In deze aanvraag wordt de eigenschap `unifiedProfile` ingesteld op `true` (onder het `tags` -object), die Experience Platform opgeeft de gegevensset op te nemen in Real-Time Customer Profile.
 
 ```shell
 curl -X POST \
@@ -92,11 +92,11 @@ curl -X POST \
 | --- | --- |
 | `name` | Een beschrijvende naam voor uw doeldataset. Gebruik een duidelijke en unieke naam om het gemakkelijker te maken om uw dataset in toekomstige verrichtingen te identificeren en te beheren. |
 | `schemaRef.id` | De id van uw doel-XDM-schema. |
-| `tags.unifiedProfile` | Een Booleaanse waarde die Experience Platform laat weten of de gegevens moeten worden ingevoerd in Real-Time Customer Profile. |
+| `tags.unifiedProfile` | Een Booleaanse waarde die Experience Platform laat weten of de gegevens moeten worden ingevoerd in Real-Time klantprofiel. |
 
 **Reactie**
 
-Een succesvolle reactie keert uw doeldataset ID terug. Deze id is later vereist om een doelverbinding te maken.
+Een succesvolle reactie keert identiteitskaart van uw doeldataset terug. Deze id is later vereist om een doelverbinding te maken.
 
 ```json
 [
@@ -180,7 +180,7 @@ curl -X POST \
 | `baseConnectionId` | De `id` van uw basisverbinding. U kunt deze id ophalen door de bron te verifiëren bij Experience Platform met de API van [!DNL Flow Service] . |
 | `data.format` | De indeling van de gegevens. Stel deze waarde in op `tabular` voor bronnen op basis van tabellen (zoals databases, CRM&#39;s en providers van marketingautomatisering). |
 | `params.tableName` | De naam van de tabel in uw bronaccount die u aan Experience Platform wilt toevoegen. |
-| `params.columns` | De specifieke tabelkolommen met gegevens die u aan Experience Platform wilt toevoegen. |
+| `params.columns` | De specifieke tabelkolommen met gegevens die u in Experience Platform wilt invoeren. |
 | `connectionSpec.id` | De verbindingsspecificatie-id van de bron die u gebruikt. |
 
 **Reactie**
@@ -243,7 +243,7 @@ curl -X POST \
 
 ## Toewijzing {#mapping}
 
-Daarna, moet u uw brongegevens aan het doelschema in kaart brengen dat uw doeldataset volgt aan. Om een afbeelding tot stand te brengen, doe een POST- verzoek aan het `mappingSets` eindpunt van [[!DNL Data Prep]  API ](https://developer.adobe.com/experience-platform-apis/references/data-prep/), verstrek uw doelXDM schema identiteitskaart en de details van de mappingsreeksen u wilt tot stand brengen.
+Daarna, kaart uw brongegevens aan het doelschema dat uw doeldataset volgt aan. Om een afbeelding tot stand te brengen, doe een POST verzoek aan het `mappingSets` eindpunt van [[!DNL Data Prep]  API ](https://developer.adobe.com/experience-platform-apis/references/data-prep/). Neem de doel-XDM-schema-id op en de details van de toewijzingssets die u wilt maken.
 
 **API formaat**
 
@@ -635,7 +635,7 @@ Controleer de array `items.sourceConnectionSpecIds` in de reactie om er zeker va
 
 Een dataflow is een gevormde pijpleiding die gegevens over de diensten van Experience Platform overbrengt. Het bepaalt hoe het gegeven uit externe bronnen (zoals gegevensbestanden, wolkenopslag, of APIs) wordt opgenomen, verwerkt, en verpletterd aan doeldatasets. Deze datasets worden dan gebruikt door de diensten zoals de Dienst van de Identiteit, het Profiel van de Klant in real time, en Doelen voor activering en analyse.
 
-Als u een gegevensstroom wilt maken, moet u waarden hebben voor de volgende items:
+Als u een gegevensstroom wilt maken, moet u waarden opgeven voor de volgende items:
 
 * [Source-verbinding-id](#source)
 * [Doel-verbindings-id](#target)
@@ -647,8 +647,8 @@ Tijdens deze stap, kunt u de volgende parameters in `scheduleParams` gebruiken o
 | Parameter plannen | Beschrijving |
 | --- | --- |
 | `startTime` | De epoche-tijd (in seconden) waarop de gegevensstroom moet worden gestart. |
-| `frequency` | De frequentie van inname. Vorm frequentie om erop te wijzen hoe vaak dataflow zou moeten lopen. U kunt de frequentie instellen op: <ul><li>`once`: stel de frequentie in op `once` om een eenmalige opname te maken. Configuraties voor interval en backfill zijn niet beschikbaar wanneer u een eenmalige gegevensstroom maakt. Standaard wordt de planningsfrequentie ingesteld op één keer.</li><li>`minute`: stel de frequentie in op `minute` om de gegevensstroom te plannen en gegevens per minuut in te voeren.</li><li>`hour`: stel de frequentie in op `hour` om de gegevensstroom te plannen en gegevens per uur in te voeren.</li><li>`day`: stel de frequentie in op `day` om de gegevensstroom te plannen en gegevens per dag in te voeren.</li><li>`week`: stel de frequentie in op `week` om de gegevensstroom te plannen en gegevens per week in te voeren.</li></ul> |
-| `interval` | Het interval tussen opeenvolgende inname (vereist voor alle frequenties behalve `once`). Vorm het interval plaatsen om het tijdkader tussen elke opname te vestigen. Bijvoorbeeld, als u uw frequentie aan dag plaatst en het interval aan 15 vormt, dan zal uw dataflow om de 15 dagen lopen. U kunt het interval niet instellen op nul. De minimaal toegestane intervalwaarde voor elke frequentie is als volgt:<ul><li>`once`: n.v.t.</li><li>`minute`: 15</li><li>`hour` : 1</li><li>`day` : 1</li><li>`week` : 1</li></ul> |
+| `frequency` | De frequentie van inname. Vorm frequentie om erop te wijzen hoe vaak dataflow zou moeten lopen. U kunt de frequentie instellen op: <ul><li>`once`: stel de frequentie in op `once` om een eenmalige opname te maken. Instellingen voor interval en backfill zijn niet beschikbaar voor eenmalige innametaken. Standaard wordt de planningsfrequentie ingesteld op één keer.</li><li>`minute`: stel de frequentie in op `minute` om de gegevensstroom te plannen en gegevens per minuut in te voeren.</li><li>`hour`: stel de frequentie in op `hour` om de gegevensstroom te plannen en gegevens per uur in te voeren.</li><li>`day`: stel de frequentie in op `day` om de gegevensstroom te plannen en gegevens per dag in te voeren.</li><li>`week`: stel de frequentie in op `week` om de gegevensstroom te plannen en gegevens per week in te voeren.</li></ul> |
+| `interval` | Het interval tussen opeenvolgende inname (vereist voor alle frequenties behalve `once`). Vorm het interval plaatsen om het tijdkader tussen elke opname te vestigen. Bijvoorbeeld, als uw frequentie aan dag wordt geplaatst en het interval 15 is, zal dataflow om 15 dagen lopen. U kunt het interval niet instellen op nul. De minimaal toegestane intervalwaarde voor elke frequentie is als volgt:<ul><li>`once`: n.v.t.</li><li>`minute`: 15</li><li>`hour` : 1</li><li>`day` : 1</li><li>`week` : 1</li></ul> |
 | `backfill` | Geeft aan of historische gegevens moeten worden ingevoerd vóór de `startTime` . |
 
 {style="table-layout:auto"}
@@ -723,7 +723,7 @@ curl -X POST \
 | `transformations.params.mappingId` | De toewijzing-id die in een eerdere stap is gegenereerd. |
 | `scheduleParams.startTime` | De begintijd voor de dataflow in epoche tijd (seconden sinds Unix epoch). Bepaalt wanneer de dataflow met zijn eerste looppas zal beginnen. |
 | `scheduleParams.frequency` | De frequentie waarmee de gegevensstroom zal lopen. Acceptabele waarden zijn: `once`, `minute`, `hour`, `day` of `week` . |
-| `scheduleParams.interval` | Het interval tussen opeenvolgende dataflow loopt, die op de geselecteerde frequentie wordt gebaseerd. Dit moet een geheel getal zijn dat niet gelijk is aan nul. Een interval van bijvoorbeeld `15` met frequentie `minute` betekent dat de gegevensstroom elke 15 minuten wordt uitgevoerd. |
+| `scheduleParams.interval` | Het interval tussen opeenvolgende dataflow loopt, die op de geselecteerde frequentie wordt gebaseerd. Dit moet een geheel getal zijn dat niet gelijk is aan nul. Bijvoorbeeld, als uw frequentie aan minuut wordt geplaatst en het interval 15 is, dataflow zal om de 15 minuten lopen. |
 | `scheduleParams.backfill` | Een booleaanse waarde (`true` of `false` ) die bepaalt of historische gegevens (backfill) moeten worden ingevoerd wanneer de gegevensstroom voor het eerst wordt gemaakt. |
 
 {style="table-layout:auto"}
@@ -755,11 +755,11 @@ Deze zelfstudie begeleidde u door het proces voor het maken van een gegevensstro
 
 ### Uw gegevensstroom controleren
 
-Zodra uw gegevensstroom is gecreeerd, kunt u de gegevens controleren die door het worden opgenomen om informatie over innamesnelheden, succes, en fouten te bekijken. Voor meer informatie over hoe te om dataflow te controleren, bezoek het leerprogramma op [ controlerekeningen en dataflows ](../../../../dataflows/ui/monitor-sources.md).
+Zodra uw gegevensstroom wordt gecreeerd, kunt u zijn prestaties direct in de UI van Experience Platform controleren. Dit omvat het volgen van ingangssnelheden, succesmetriek, en om het even welke fouten die voorkomen. Voor meer informatie over hoe te om dataflow te controleren, bezoek het leerprogramma op [ controlerekeningen en dataflows ](../../../../dataflows/ui/monitor-sources.md).
 
 ### Uw gegevensstroom bijwerken
 
-Om configuraties voor uw dataflows bij te werken die, afbeelding, en algemene informatie plannen, bezoek het leerprogramma op [ het bijwerken van bronnen dataflows ](../../api/update-dataflows.md).
+Om configuraties voor uw dataflows bij te werken die plannen, in kaart brengen, of algemene informatie, bezoek het leerprogramma op [ het bijwerken van bronnen dataflows ](../../api/update-dataflows.md).
 
 ## Uw gegevensstroom verwijderen
 
