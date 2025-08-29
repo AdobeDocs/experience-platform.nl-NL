@@ -1,9 +1,10 @@
 ---
 title: Marketo Engage-bestemming
 description: Marketo Engage is de enige CXM-oplossing (end-to-end Customer Experience Management) voor marketing, reclame, analyse en handel. Hiermee kunt u activiteiten automatiseren en beheren van CRM-beheer en de betrokkenheid van klanten tot marketing en inkomstentoewijzing op basis van account.
-source-git-commit: 47d808b4dd1736f3444ddb479c3a460c289d09f8
+exl-id: 5ae5f114-47ba-4ff6-8e42-f8f43eb079f7
+source-git-commit: 891484b279d2521115c6b1edc58f45c594a55382
 workflow-type: tm+mt
-source-wordcount: '908'
+source-wordcount: '847'
 ht-degree: 1%
 
 ---
@@ -12,14 +13,17 @@ ht-degree: 1%
 
 ## Doelwijziging {#changelog}
 
+<!--
 >[!IMPORTANT]
 >
->**[!UICONTROL (Legacy) (V2) Marketo Engage]** zal in **Maart 2026** worden afgekeurd.
+>The **[!UICONTROL (Legacy) (V2) Marketo Engage]** will be deprecated in **March 2026**.
 >
->Voor een vloeiende overgang naar het nieuwe **[[!UICONTROL Marketo Engage]](marketo-engage-connection.md)** -doel bekijkt u de volgende belangrijke punten en vereiste handelingen:
+>To ensure a smooth transition to the new **[[!UICONTROL Marketo Engage]](marketo-engage-connection.md)** destination, review the following key points and required actions:
 >
->* Alle gebruikers van de bestaande **[!UICONTROL (Legacy) (V2) Marketo Engage]** moeten tegen maart 2026 migreren naar de nieuwe **[!UICONTROL Marketo Engage]** -bestemming.
->* **Bestaande gegevensstromen zullen niet automatisch worden gemigreerd.** u moet [ opstelling een nieuwe verbinding ](../../ui/connect-destination.md) aan de nieuwe **[!UICONTROL Marketo Engage]** bestemming en uw publiek daar activeren.
+>* All users of the existing **[!UICONTROL (Legacy) (V2) Marketo Engage]** must migrate to the new **[!UICONTROL Marketo Engage]** destination by March 2026.
+>* **Existing dataflows will not be migrated automatically.** You must [set up a new connection](../../ui/connect-destination.md) to the new **[!UICONTROL Marketo Engage]** destination and activate your audiences there.
+
+-->
 
 ![ Beeld van de twee de bestemmingskaarten van Marketo in een zij-aan-zij mening.](../..//assets/catalog/adobe/marketo-side-by-side-view.png)
 
@@ -59,7 +63,7 @@ In deze sectie wordt beschreven welke soorten publiek u naar dit doel kunt expor
 
 | Oorsprong publiek | Ondersteund | Beschrijving |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | ✓ | Het publiek produceerde door de Dienst van de Segmentatie van Experience Platform [&#128279;](../../../segmentation/home.md). |
+| [!DNL Segmentation Service] | ✓ | Het publiek produceerde door de Dienst van de Segmentatie van Experience Platform [ ](../../../segmentation/home.md). |
 | Aangepaste uploads | ✓ | Het publiek [ ingevoerde ](../../../segmentation/ui/audience-portal.md#import-audience) in Experience Platform van Csv- dossiers. |
 
 {style="table-layout:auto"}
@@ -82,7 +86,7 @@ Raadpleeg de onderstaande tabel voor informatie over het exporttype en de export
 >* Om met de bestemming te verbinden, hebt u **[!UICONTROL View Destinations]** en **[!UICONTROL Manage Destinations]** [ toegangsbeheertoestemmingen ](/help/access-control/home.md#permissions) nodig.
 >* Om gegevens te activeren, hebt u **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, en **[!UICONTROL View Segments]** [ toegangsbeheertoestemmingen ](/help/access-control/home.md#permissions) nodig. Lees het [ overzicht van de toegangscontrole ](/help/access-control/ui/overview.md) of contacteer uw productbeheerder om de vereiste toestemmingen te verkrijgen.
 
-Voor gedetailleerde instructies op hoe te opstelling de bestemming en het publiek te activeren, lees [ duw een Push een Publiek van Adobe Experience Platform aan een Statische Lijst van Marketo ](https://experienceleague.adobe.com/docs/marketo/using/product-docs/core-marketo-concepts/smart-lists-and-static-lists/static-lists/push-an-adobe-experience-cloud-segment-to-a-marketo-static-list.html?lang=nl-NL) in de documentatie van Marketo.
+Voor gedetailleerde instructies op hoe te opstelling de bestemming en het publiek te activeren, lees [ duw een Push een Publiek van Adobe Experience Platform aan een Statische Lijst van Marketo ](https://experienceleague.adobe.com/docs/marketo/using/product-docs/core-marketo-concepts/smart-lists-and-static-lists/static-lists/push-an-adobe-experience-cloud-segment-to-a-marketo-static-list.html) in de documentatie van Marketo.
 
 In de onderstaande video ziet u ook de stappen voor het configureren van een Marketo-bestemming en het activeren van het publiek.
 
@@ -95,7 +99,7 @@ In de onderstaande video ziet u ook de stappen voor het configureren van een Mar
 >* De twee beperkingen die in de video worden aangeroepen, zijn niet meer van toepassing. U kunt nu veel andere profielkenmerkvelden toewijzen naast de lidmaatschapsgegevens voor het publiek die werden ondersteund op het moment dat de video werd opgenomen. U kunt ook publieksleden exporteren naar Marketo die nog niet in uw statische Marketo-lijsten voorkomen. Deze personen worden toegevoegd aan de lijsten.
 >* In **[!UICONTROL Schedule audience step]** van de activeringsworkflow moest u in Marketo V1 handmatig een **[!UICONTROL Mapping ID]** toevoegen om gegevens te kunnen exporteren naar Marketo. Deze handmatige stap is niet meer vereist in Marketo V2.
 
->[!VIDEO](https://video.tv.adobe.com/v/3440164?quality=12&captions=dut)
+>[!VIDEO](https://video.tv.adobe.com/v/338248?quality=12)
 
 ## Doel van monitor {#monitor-destination}
 
@@ -105,4 +109,4 @@ De monitoringinformatie voor de [!DNL Marketo Engage] -verbinding bevat informat
 
 ## Gegevensgebruik en -beheer {#data-usage-governance}
 
-Alle [!DNL Adobe Experience Platform] -doelen zijn compatibel met het beleid voor gegevensgebruik bij het verwerken van uw gegevens. Voor gedetailleerde informatie over hoe [!DNL Adobe Experience Platform] gegevensbeheer afdwingt, zie het [ gegeven beheer overzicht ](https://experienceleague.adobe.com/docs/experience-platform/data-governance/home.html?lang=nl-NL).
+Alle [!DNL Adobe Experience Platform] -doelen zijn compatibel met het beleid voor gegevensgebruik bij het verwerken van uw gegevens. Voor gedetailleerde informatie over hoe [!DNL Adobe Experience Platform] gegevensbeheer afdwingt, zie het [ gegeven beheer overzicht ](https://experienceleague.adobe.com/docs/experience-platform/data-governance/home.html).
