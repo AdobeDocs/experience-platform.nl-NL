@@ -33,7 +33,7 @@ GET /audiences?{QUERY_PARAMETERS}
 
 >[!NOTE]
 >
->Als u dit eindpunt zonder enige vraagparameters gebruikt, zal het inactieve publiek **niet** zijn teruggekeerd. Nochtans, als u dit eindpunt samen met de `property=audienceId` vraagparameter gebruikt, zal het inactieve publiek **** zijn teruggekeerd.
+>Als u dit eindpunt zonder enige vraagparameters gebruikt, zal het inactieve publiek **niet** zijn teruggekeerd. Nochtans, als u dit eindpunt samen met de `property=audienceId` vraagparameter gebruikt, zal het inactieve publiek **&#x200B;**&#x200B;zijn teruggekeerd.
 
 De volgende vraagparameters kunnen worden gebruikt wanneer het terugwinnen van een lijst van publiek:
 
@@ -43,8 +43,8 @@ De volgende vraagparameters kunnen worden gebruikt wanneer het terugwinnen van e
 | `limit` | Hiermee geeft u het maximale aantal bezoekers per pagina op. | `limit=10` |
 | `sort` | Hiermee geeft u de volgorde op waarin de resultaten moeten worden gesorteerd. Dit wordt geschreven in de indeling `attributeName:[desc/asc]` . | `sort=updateTime:desc` |
 | `property` | Een filter dat u toestaat om publiek te specificeren dat **precies** de waarde van een attribuut aanpast. Dit wordt geschreven in de indeling `property=` | `property=audienceId==test-audience-id` |
-| `name` | Een filter dat u toestaat om publiek te specificeren de waarvan namen **** bevatten de verstrekte waarde. Deze waarde is niet hoofdlettergevoelig. | `name=Sample` |
-| `description` | Een filter dat u toestaat om publiek te specificeren de waarvan beschrijvingen **** bevatten de verstrekte waarde. Deze waarde is niet hoofdlettergevoelig. | `description=Test Description` |
+| `name` | Een filter dat u toestaat om publiek te specificeren de waarvan namen **&#x200B;**&#x200B;bevatten de verstrekte waarde. Deze waarde is niet hoofdlettergevoelig. | `name=Sample` |
+| `description` | Een filter dat u toestaat om publiek te specificeren de waarvan beschrijvingen **&#x200B;**&#x200B;bevatten de verstrekte waarde. Deze waarde is niet hoofdlettergevoelig. | `description=Test Description` |
 | `entityType` | Een filter waarmee u het type publiek kunt opgeven dat u zoekt. | `entityType=_xdm.context.account` |
 
 **Verzoek**
