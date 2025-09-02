@@ -4,22 +4,22 @@ solution: Experience Platform
 title: Overzicht Microsoft Dynamics Source Connector
 description: Leer hoe u Microsoft Dynamics met Adobe Experience Platform kunt verbinden via API's of de gebruikersinterface.
 exl-id: 6ca162ce-2016-4270-b741-301cf4230233
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 16fe5340582dcea0ff40000fb516c1b72d5f150e
 workflow-type: tm+mt
-source-wordcount: '285'
-ht-degree: 1%
+source-wordcount: '284'
+ht-degree: 0%
 
 ---
 
-# Microsoft Dynamics-connector
+# [!DNL Microsoft Dynamics] bron
 
-Adobe Experience Platform staat toe dat gegevens uit externe bronnen worden opgenomen en biedt u de mogelijkheid om inkomende gegevens te structureren, labelen en verbeteren met [!DNL Experience Platform] -services. U kunt gegevens invoeren uit verschillende bronnen, zoals Adobe-toepassingen, opslag in de cloud, databases en vele andere.
+[!DNL Microsoft Dynamics] is een reeks bedrijfstoepassingen die u kunt gebruiken om uw verrichtingen effectiever te beheren. Of het nu gaat om het toezicht op relaties met klanten, financiën of toeleveringsketens, [!DNL Microsoft Dynamics] biedt u de tools om uw workflows te stroomlijnen en slimmere beslissingen te nemen. Het platform wordt gebouwd om zowel ondernemingsmiddel planning als het beheer van de klantenverhouding te steunen (CRM), toestaand u om uw bedrijfsprocessen in één geïntegreerd systeem te verenigen.
 
-[!DNL Experience Platform] biedt ondersteuning voor het opnemen van gegevens van een extern CRM-systeem. Tot de ondersteuning voor CRM-providers behoren [!DNL Microsoft Dynamics] .
+U kunt de [!DNL Microsoft Dynamics] -bron gebruiken om gegevens van uw [!DNL Microsoft Dynamics] -account in te voeren in Adobe Experience Platform.
 
 ## IP adres lijst van gewenste personen
 
-Een lijst van IP adressen moet aan een lijst van gewenste personen worden toegevoegd alvorens met bronschakelaars te werken. Het niet toevoegen van uw regio-specifieke IP adressen aan uw lijst van gewenste personen kan tot fouten of niet-prestaties leiden wanneer het gebruiken van bronnen. Zie de [&#128279;](../../ip-address-allow-list.md) pagina van de lijst van gewenste personen van het 0&rbrace; IP adres &lbrace;voor meer informatie.
+U moet gebied-specifieke IP adressen aan uw lijst van gewenste personen toevoegen alvorens uw bronnen aan Experience Platform aan te sluiten. Lees de gids op [ voegend op lijst van gewenste personen IP adressen om met Experience Platform ](../../ip-address-allow-list.md) voor meer informatie te verbinden.
 
 ## Veldtoewijzing van [!DNL Microsoft Dynamics] naar XDM
 
