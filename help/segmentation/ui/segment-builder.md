@@ -3,9 +3,9 @@ solution: Experience Platform
 title: UI-gids voor segmentBuilder
 description: De segmentbouwer in Adobe Experience Platform UI verstrekt een rijke werkruimte die u toestaat om met de gegevenselementen van het Profiel in wisselwerking te staan. De werkruimte biedt intuïtieve besturingselementen voor het maken en bewerken van regels, zoals tegels voor slepen en neerzetten die worden gebruikt om gegevenseigenschappen te vertegenwoordigen.
 exl-id: b27516ea-8749-4b44-99d0-98d3dc2f4c65
-source-git-commit: 52571689c97fdc2ed052b53537e736f03d666ad5
+source-git-commit: 8fe725ee41472d49cbc8411a0d2db665ac3c1814
 workflow-type: tm+mt
-source-wordcount: '5089'
+source-wordcount: '5113'
 ht-degree: 0%
 
 ---
@@ -50,7 +50,7 @@ De basisbouwstenen van segmentdefinities zijn attributen en gebeurtenissen. Daar
 >
 >Samenvattingsgegevens worden weergegeven als het kenmerk aan de volgende criteria voldoet: alle waarden van het kenmerk zijn 100 tekens of minder en er zijn 3000 of minder unieke waarden voor het kenmerk.
 >
->Nochtans, zal een attribuut **&#x200B;**&#x200B;geen summiere gegevens hebben als het multi-entiteitgegevens verbonden aan het profiel door een verhouding is. Bijvoorbeeld, als u een douaneschema genoemd `Vehicle` hebt, zullen de **eigenschappen** binnen het `Vehicle` schema **&#x200B;**&#x200B;geen summiere gegevens hebben.
+>Nochtans, zal een attribuut **** geen summiere gegevens hebben als het multi-entiteitgegevens verbonden aan het profiel door een verhouding is. Bijvoorbeeld, als u een douaneschema genoemd `Vehicle` hebt, zullen de **eigenschappen** binnen het `Vehicle` schema **** geen summiere gegevens hebben.
 
 U kunt deze bouwstenen zien in de sectie **[!UICONTROL Fields]** aan de linkerkant van de [!DNL Segment Builder] -werkruimte. **[!UICONTROL Fields]** bevat een lusje voor elk van de belangrijkste bouwstenen: &quot;[!UICONTROL Attributes]&quot;, &quot;[!UICONTROL Events]&quot;, en &quot;[!UICONTROL Audiences]&quot;.
 
@@ -131,7 +131,7 @@ Zodra de rapportsuites in kaart zijn gebracht, kunt u deze onlangs in kaart gebr
 >id="platform_segmentation_segmentbuilder_externalaudiences"
 >title="Extern publiek"
 >abstract="Het publiek dat via het tabblad Soorten publiek wordt geïmporteerd, wordt nu automatisch opgezocht via het Poort publiek. Soorten publiek dat wordt opgenomen uit Audience Manager, Customer Journey Analytics, Segment Match en andere aangepaste integraties zijn gemakkelijk beschikbaar, zonder dat u eerst hoeft te configureren in Segment Builder. Vanaf 1 september 2025 worden alle soorten publiek uitsluitend opgehaald via Unified Search en wordt de vorige workflow niet meer ondersteund."
->additional-url="https://experienceleague.adobe.com/nl/docs/experience-platform/segmentation/ui/audience-portal#list" text="Poort publiek"
+>additional-url="https://experienceleague.adobe.com/en/docs/experience-platform/segmentation/ui/audience-portal#list" text="Poort publiek"
 
 >[!NOTE]
 >
@@ -330,7 +330,7 @@ De lijst van beschikbare tijdbeperkingen voor deze verrichting verschilt van de 
 >[!NOTE]
 >
 >Wanneer u de tijdbeperking &quot;Na&quot; gebruikt, kan de laatste gebeurtenis meer plaatsvinden dan de hoeveelheid tijd die binnen de tijdbeperking wordt vermeld. >
->&#x200B;>Als u bijvoorbeeld een gebeurtenis Paginaweergave en een uitcheckgebeurtenis hebt en u de tijdbeperking Na 1 uur tussen deze twee gebeurtenissen plaatst, komt een segmentdefinitie met een uitcheckgebeurtenis 2 uur na de gebeurtenis Paginaweergave in aanmerking.
+>>Als u bijvoorbeeld een gebeurtenis Paginaweergave en een uitcheckgebeurtenis hebt en u de tijdbeperking Na 1 uur tussen deze twee gebeurtenissen plaatst, komt een segmentdefinitie met een uitcheckgebeurtenis 2 uur na de gebeurtenis Paginaweergave in aanmerking.
 >
 >Bovendien kunnen deze twee tijdsbeperkingen in overleg met elkaar worden gebruikt.
 >
@@ -386,7 +386,7 @@ Als u een samenvoegbeleid voor uw segmentdefinitie wilt selecteren, selecteert u
 >id="platform_segments_createsegment_segmentbuilder_refreshestimate"
 >title="Ramingen vernieuwen"
 >abstract="U kunt de ramingen van uw segmentdefinitie verfrissen om onmiddellijk een voorproef van te zien hoeveel profielen voor de voorgestelde segmentdefinitie zouden kwalificeren. De schattingen van het publiek worden geproduceerd door een steekproefgrootte van de steekproefgegevens van die dag te gebruiken."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/tutorials/create-a-segment.html?lang=nl-NL#estimate-and-preview-an-audience" text="Een publiek schatten en voorvertonen"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/segmentation/tutorials/create-a-segment.html#estimate-and-preview-an-audience" text="Een publiek schatten en voorvertonen"
 
 >[!CONTEXTUALHELP]
 >id="platform_segments_createsegment_segmentbuilder_qualifiedprofiles"
@@ -402,14 +402,11 @@ Wanneer het bouwen van een segmentdefinitie, **[!UICONTROL Audience properties]*
 
 **[!UICONTROL Qualified Profiles]** wijst op het **daadwerkelijke** aantal profielen die de regels van de segmentdefinitie aanpassen. Dit aantal werkt om de 24 uur bij, nadat de baan van de segmentevaluatie is gelopen.
 
-De timestamp voor gekwalificeerde profielen wijst op de meest recente **partij** baan van de segmentevaluatie en **&#x200B;**&#x200B;getoond niet &lbrace;voor gesegmenteerde definities gebruikend het stromen of randsegmentatie. Als u de segmentdefinitie uitgeeft, zal het aantal gekwalificeerde profielen het zelfde blijven tot de volgende baan van de segmentevaluatie in werking wordt gesteld.
+De timestamp voor gekwalificeerde profielen wijst op de meest recente **partij** baan van de segmentevaluatie en **** getoond niet {voor gesegmenteerde definities gebruikend het stromen of randsegmentatie. Als u de segmentdefinitie uitgeeft, zal het aantal gekwalificeerde profielen het zelfde blijven tot de volgende baan van de segmentevaluatie in werking wordt gesteld.
 
 **[!UICONTROL Estimated Profiles]** wijst op een **benaderende waaier** van profielen, die van de **steekproefbaan** worden gebaseerd. Dit betekent dat de steekproefgegevens worden geprojecteerd op de grotere profielreeks, resulterend in een geschat aantal dat van het daadwerkelijke aantal gekwalificeerde profielen kan verschillen. Het geschatte profielmonster heeft een 95% betrouwbaarheidsinterval.
 
-Dit aantal wordt bijgewerkt in twee scenario&#39;s:
-
-1. De klantgegevens worden met meer dan 3% gewijzigd of de laatste voorbeeldtaak is ouder dan drie dagen.
-2. De regels voor het publiek zijn gewijzigd of verwijderd.
+Wanneer u wijzigingen aanbrengt in de regels van het publiek, kunt u de knop **[!UICONTROL Refresh estimate]** selecteren om een bijgewerkte telling van geschatte profielen weer te geven. Dit aantal is echter nog steeds gebaseerd op de vorige voorbeeldtaak. De voorbeeldtaak wordt bijgewerkt wanneer de klantgegevens meer dan 3% veranderen of de laatste voorbeeldtaak ouder is dan drie dagen.
 
 Als u de informatiballon selecteert, geeft u de datum en tijd waarop de laatste voorbeeldtaak is uitgevoerd.
 
@@ -433,7 +430,7 @@ U kunt ook uw evaluatiemethode selecteren. Als u weet welke evaluatiemethode u w
 
 De pop-up [!UICONTROL Evaluation method eligibility] wordt weergegeven. Deze popover toont de beschikbare evaluatiemethodes, die partij, het stromen, en rand zijn. Uit de pop-up blijkt welke evaluatiemethoden subsidiabel en niet-subsidiabel zijn. Afhankelijk van de parameters u in uw segmentdefinitie gebruikte, kan het niet voor bepaalde evaluatiemethodes kwalificeren. Voor meer informatie over de vereisten voor elke evaluatiemethode, te lezen gelieve de [ het stromen segmentatie ](../methods/streaming-segmentation.md#query-types) of de [ randsegmentatie ](../methods/edge-segmentation.md#query-types) overzichten.
 
-U kunt de evaluatiemethode van de segmentdefinitie ook veranderen nadat u klaar bent met het creëren van het. Als u de evaluatiemethode van Edge of het Streamen in Partij verandert, zult u **&#x200B;**&#x200B;niet het terug naar Edge of het Streamen kunnen veranderen. De verandering in de evaluatiemethode zal **slechts** van kracht worden zodra u **[!UICONTROL Save]** in popover selecteert. Het annuleren van de dialoog zal **&#x200B;**&#x200B;de originele evaluatiemethode handhaven.
+U kunt de evaluatiemethode van de segmentdefinitie ook veranderen nadat u klaar bent met het creëren van het. Als u de evaluatiemethode van Edge of het Streamen in Partij verandert, zult u **** niet het terug naar Edge of het Streamen kunnen veranderen. De verandering in de evaluatiemethode zal **slechts** van kracht worden zodra u **[!UICONTROL Save]** in popover selecteert. Het annuleren van de dialoog zal **** de originele evaluatiemethode handhaven.
 
 ![ de geschiktheid van de evaluatiemethode verschijnt pop - op. Dit toont welke methodes van evaluatie verkiesbaar en niet verkiesbaar voor de segmentdefinitie zijn.](../images/ui/segment-builder/select-evaluation-method.png)
 

@@ -2,10 +2,10 @@
 title: Aanvullende informatie van augustus 2025 voor Adobe Experience Platform
 description: Aanvullende informatie van augustus 2025 voor Adobe Experience Platform.
 exl-id: d93e98f3-d165-4710-ad1d-2ad3857cd0f8
-source-git-commit: 35c3933f5debbba04c885f6000b908e292613395
+source-git-commit: 76acf488ad06ec7b3fe818cf34c86ea76dc614f4
 workflow-type: tm+mt
-source-wordcount: '1323'
-ht-degree: 85%
+source-wordcount: '1305'
+ht-degree: 97%
 
 ---
 
@@ -15,8 +15,8 @@ ht-degree: 85%
 >
 >Raadpleeg de volgende documentatie voor aanvullende informatie voor andere Adobe Experience Platform-toepassingen:
 >
->- [Adobe Journey Optimizer](https://experienceleague.adobe.com/nl/docs/journey-optimizer/using/whats-new/release-notes)
->- [Adobe Journey Optimizer B2B](https://experienceleague.adobe.com/nl/docs/journey-optimizer-b2b/user/release-notes)
+>- [Adobe Journey Optimizer](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/whats-new/release-notes)
+>- [Adobe Journey Optimizer B2B](https://experienceleague.adobe.com/en/docs/journey-optimizer-b2b/user/release-notes)
 >- [Customer Journey Analytics](https://experienceleague.adobe.com/nl/docs/analytics-platform/using/releases/pre-release-notes)
 >- [Samenstelling van Federated-doelgroep](https://experienceleague.adobe.com/nl/docs/federated-audience-composition/using/e-release-notes)
 >- [Real-Time CDP Collaboration](https://experienceleague.adobe.com/nl/docs/real-time-cdp-collaboration/using/latest)
@@ -102,14 +102,14 @@ Voor meer informatie over de catalogusservice raadpleegt u het [overzicht van de
 
 | Bestemming | Beschrijving |
 | --- | --- |
-| Interne [[!DNL Microsoft Bing]](../../destinations/catalog/advertising/bing.md)-upgrade | Vanaf 11 augustus 2025 hebt u gedurende een korte periode twee **[!DNL Microsoft Bing]** kaarten naast elkaar gezien in de lijst met doelen. Dit komt door een interne upgrade van de bestemmingsservice. De naam van de bestaande bestemmingsconnector **[!DNL Microsoft Bing]** is gewijzigd in **[!UICONTROL (Deprecated) Microsoft Bing]** en er is nu een nieuwe kaart met de naam **[!UICONTROL Microsoft Bing]** voor u beschikbaar. <br> De upgrade is voltooid en de verouderde kaart is verwijderd uit de doelcatalogus. Gebruik de **[!UICONTROL Microsoft Bing]** -verbinding in de catalogus voor nieuwe gegevensstromen voor activering. Als u actieve gegevens naar de **[!UICONTROL (Deprecated) Microsoft Bing]** bestemming had, zullen zij automatisch worden bijgewerkt, zodat wordt geen actie van u vereist. <br><br>Als u gegevensstromen maakt via de [Flow Service API](https://developer.adobe.com/experience-platform-apis/references/destinations/), moet u uw [!DNL flow spec ID] en [!DNL connection spec ID] bijwerken naar de volgende waarden:<ul><li>Stroomspecificatie-ID: `8d42c81d-9ba7-4534-9bf6-cf7c64fbd12e`</li><li>Verbindingsspecificatie-ID: `dd69fc59-3bc5-451e-8ec2-1e74a670afd4`</li></ul> Na deze upgrade kunt u in uw gegevensstromen naar [!DNL Microsoft Bing] een **daling in het aantal geactiveerde profielen** ervaren. Deze daling wordt veroorzaakt door de introductie van de **ECID-toewijzingsvereiste** voor alle activeringen op dit bestemmingsplatform. |
-| De vervaldatum van de authentificatie details voor [[!DNL LinkedIn]](../../destinations/catalog/social/linkedin.md) en [ LinkedIn Gelijke Publiek ](../../destinations/catalog/social/linkedin-b2b.md) bestemmingen | De vervalinformatie van de authentificatie voor [!DNL LinkedIn] bestemmingen is nu zichtbaar direct in de interface van Experience Platform, zodat kunt u zien wanneer uw authentificatie zal verlopen en het vernieuwen alvorens het om het even welke verstoringen aan uw gegevensstromen veroorzaakt. U kunt de vervaldatums van uw token vanaf de kolom **[!UICONTROL Account expiration date]** controleren op de tabbladen **[[!UICONTROL Accounts]](../../destinations/ui/destinations-workspace.md#accounts)** of **[[!UICONTROL Browse]](../../destinations/ui/destinations-workspace.md#browse)** . |
+| Interne [[!DNL Microsoft Bing]](../../destinations/catalog/advertising/bing.md)-upgrade | Vanaf 11 augustus 2025 is het mogelijk dat u gedurende een korte periode twee **[!DNL Microsoft Bing]**-kaarten naast elkaar in de bestemmingscatalogus hebt gezien. Dit komt door een interne upgrade van de bestemmingsservice. De naam van de bestaande bestemmingsconnector **[!DNL Microsoft Bing]** is gewijzigd in **[!UICONTROL (Deprecated) Microsoft Bing]** en er is nu een nieuwe kaart met de naam **[!UICONTROL Microsoft Bing]** voor u beschikbaar. <br> De upgrade is voltooid en de verouderde kaart is verwijderd uit de bestemmingscatalogus. Gebruik de **[!UICONTROL Microsoft Bing]**-verbinding in de catalogus voor nieuwe activeringsgegevensstromen. Als u actieve gegevensstromen naar de **[!UICONTROL (Deprecated) Microsoft Bing]**-bestemming hebt, worden deze automatisch bijgewerkt. U hoeft dus niets te doen. <br><br>Als u gegevensstromen maakt via de [Flow Service API](https://developer.adobe.com/experience-platform-apis/references/destinations/), moet u uw [!DNL flow spec ID] en [!DNL connection spec ID] bijwerken naar de volgende waarden:<ul><li>Stroomspecificatie-ID: `8d42c81d-9ba7-4534-9bf6-cf7c64fbd12e`</li><li>Verbindingsspecificatie-ID: `dd69fc59-3bc5-451e-8ec2-1e74a670afd4`</li></ul> Na deze upgrade kunt u in uw gegevensstromen naar [!DNL Microsoft Bing] een **daling in het aantal geactiveerde profielen** ervaren. Deze daling wordt veroorzaakt door de introductie van de **ECID-toewijzingsvereiste** voor alle activeringen op dit bestemmingsplatform. |
+| Informatie over de verloopdatum van de verificatie voor [[!DNL LinkedIn]](../../destinations/catalog/social/linkedin.md)- en [LinkedIn Matched Audiences](../../destinations/catalog/social/linkedin-b2b.md)-bestemmingen | Informatie over de verloopdatum van de verificatie voor [!DNL LinkedIn]-bestemmingen is nu rechtstreeks zichtbaar in de Experience Platform-interface. Zo kunt u zien wanneer uw verificatie verloopt en deze vernieuwen voordat er verstoringen in uw gegevensstromen ontstaan. U kunt de vervaldatums van uw tokens controleren in de kolom **[!UICONTROL Account expiration date]** op de tabbladen **[[!UICONTROL Accounts]](../../destinations/ui/destinations-workspace.md#accounts)** of **[[!UICONTROL Browse]](../../destinations/ui/destinations-workspace.md#browse)** . |
 
 **Nieuwe of bijgewerkte functionaliteit**
 
 | Functie | Beschrijving |
 | --- | --- |
-| Verbeterde zoek-, filter- en tagmogelijkheden voor bestemmingen | Verbeter uw workflow voor bestemmingsbeheer met verbeterde zoek-, filter- en tagmogelijkheden op de tabbladen [Verkennen](../../destinations/ui/destinations-workspace.md#browse) en [Accounts](../../destinations/ui/destinations-workspace.md#accounts). <br> U kunt nu naar specifieke gegevensstromen en rekeningen door naam zoeken, filtreren door diverse criteria met inbegrip van bestemmingsplatform, status, en data, en douanetags creëren om uw bestemmingen te organiseren. Kolomsortering is ook beschikbaar voor belangrijke velden, zoals de laatste dataflow-runtime, zodat u de doelverbindingen gemakkelijker kunt identificeren en beheren. <br> ![ Geanimeerde demonstratie van het zoeken naar een bestemmingsdataflow in het Browse lusje ](../../destinations/assets/ui/workspace/search.gif) |
+| Verbeterde zoek-, filter- en tagmogelijkheden voor bestemmingen | Verbeter uw workflow voor bestemmingsbeheer met verbeterde zoek-, filter- en tagmogelijkheden op de tabbladen [Verkennen](../../destinations/ui/destinations-workspace.md#browse) en [Accounts](../../destinations/ui/destinations-workspace.md#accounts). <br> U kunt nu op naam zoeken naar specifieke gegevensstromen en accounts, filteren op verschillende criteria zoals bestemmingsplatform, status en datums, en aangepaste tags maken om uw bestemmingen te ordenen. Kolomsortering is ook beschikbaar voor belangrijke velden als de laatste uitvoeringstijd van de gegevensstroom, zodat u de verbindingen met bestemmingen gemakkelijker kunt identificeren en beheren. <br> ![Geanimeerde demonstratie van het zoeken naar een bestemmingsgegevensstroom in het tabblad Verkennen](../../destinations/assets/ui/workspace/search.gif) |
 
 ## Experience Data Model (XDM) {#xdm}
 
@@ -159,7 +159,7 @@ Voor meer informatie over sandboxes, lees het [ overzicht van sandboxes](../../s
 
 | Functie | Beschrijving |
 | ------- | ----------- |
-| Doelgroepinschattingen | Doelgroepinschattingen worden binnen Segment Builder nu automatisch gegenereerd. Deze waarde wordt bijgewerkt wanneer u de doelgroep wijzigt en weerspiegelt altijd de nieuwste doelgroepregels. Bovendien wordt de schatting nu weergegeven als een **bereik** dat is gebaseerd op het vertrouwensinterval van de steekproefgegevens. |
+| Doelgroepinschattingen | De ramingen van het publiek worden nu getoond als a **waaier**, die op het betrouwbaarheidsinterval van de steekproefgegevens gebaseerd is. Meer over ramingen leren, lees de [ gids van de Bouwer van het Segment ](/help/segmentation/ui/segment-builder.md#audience-properties). |
 
 Voor meer informatie raadpleegt u het [[!DNL Segmentation Service] overzicht](../../segmentation/home.md).
 

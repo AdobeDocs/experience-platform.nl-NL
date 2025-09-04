@@ -2,10 +2,10 @@
 title: Aanvullende informatie van augustus 2025 voor Adobe Experience Platform
 description: Aanvullende informatie van augustus 2025 voor Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: 35c3933f5debbba04c885f6000b908e292613395
+source-git-commit: 76acf488ad06ec7b3fe818cf34c86ea76dc614f4
 workflow-type: tm+mt
-source-wordcount: '1323'
-ht-degree: 100%
+source-wordcount: '1305'
+ht-degree: 97%
 
 ---
 
@@ -15,8 +15,8 @@ ht-degree: 100%
 >
 >Raadpleeg de volgende documentatie voor aanvullende informatie voor andere Adobe Experience Platform-toepassingen:
 >
->- [Adobe Journey Optimizer](https://experienceleague.adobe.com/nl/docs/journey-optimizer/using/whats-new/release-notes)
->- [Adobe Journey Optimizer B2B](https://experienceleague.adobe.com/nl/docs/journey-optimizer-b2b/user/release-notes)
+>- [Adobe Journey Optimizer](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/whats-new/release-notes)
+>- [Adobe Journey Optimizer B2B](https://experienceleague.adobe.com/en/docs/journey-optimizer-b2b/user/release-notes)
 >- [Customer Journey Analytics](https://experienceleague.adobe.com/nl/docs/analytics-platform/using/releases/pre-release-notes)
 >- [Samenstelling van Federated-doelgroep](https://experienceleague.adobe.com/nl/docs/federated-audience-composition/using/e-release-notes)
 >- [Real-Time CDP Collaboration](https://experienceleague.adobe.com/nl/docs/real-time-cdp-collaboration/using/latest)
@@ -160,7 +160,7 @@ Voor meer informatie over sandboxes, lees het [ overzicht van sandboxes](../../s
 
 | Functie | Beschrijving |
 | ------- | ----------- |
-| Doelgroepinschattingen | Doelgroepinschattingen worden binnen Segment Builder nu automatisch gegenereerd. Deze waarde wordt bijgewerkt wanneer u de doelgroep wijzigt en weerspiegelt altijd de nieuwste doelgroepregels. Bovendien wordt de schatting nu weergegeven als een **bereik** dat is gebaseerd op het vertrouwensinterval van de steekproefgegevens. |
+| Doelgroepinschattingen | De ramingen van het publiek worden nu getoond als a **waaier**, die op het betrouwbaarheidsinterval van de steekproefgegevens gebaseerd is. Meer over ramingen leren, lees de [ gids van de Bouwer van het Segment ](/help/segmentation/ui/segment-builder.md#audience-properties). |
 
 Voor meer informatie raadpleegt u het [[!DNL Segmentation Service] overzicht](../../segmentation/home.md).
 
