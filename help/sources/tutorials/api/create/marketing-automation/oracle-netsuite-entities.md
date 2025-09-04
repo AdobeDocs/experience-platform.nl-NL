@@ -1,22 +1,15 @@
 ---
 title: Een bronverbinding en gegevensstroom maken voor Oracle NetSuite-entiteiten met behulp van de Flow Service API
 description: Leer hoe u een bronverbinding en gegevensstroom maakt om Oracle NetSuite-contactpersonen en -klantgegevens via de Flow Service API naar Experience Platform te sturen.
-hide: true
-hidefromtoc: true
-badge: Beta
 exl-id: ddbb413e-a6ca-49df-b68d-37c9d2aab61b
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 40c3745920204983f5388de6cba1402d87eda71c
 workflow-type: tm+mt
-source-wordcount: '2177'
+source-wordcount: '2160'
 ht-degree: 0%
 
 ---
 
 # Een bronverbinding en gegevensstroom maken voor [!DNL Oracle NetSuite Entities] met de Flow Service API
-
->[!NOTE]
->
->De bron [!DNL Oracle NetSuite Entities] is in bèta. Zie het [ overzicht van bronnen ](../../../../home.md#terms-and-conditions) voor meer informatie bij het gebruiken van bèta-geëtiketteerde bronnen.
 
 Lees het volgende leerprogramma leren hoe te om contacten en klantengegevens van uw [!DNL Oracle NetSuite Activities Entities] rekening aan Adobe Experience Platform te brengen gebruikend [[!DNL Flow Service]  API ](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
@@ -37,7 +30,7 @@ Lees het [[!DNL Oracle NetSuite]  overzicht ](../../../../connectors/marketing-a
 
 Voor informatie over hoe te om vraag aan Experience Platform APIs met succes te maken, zie de gids op [ begonnen wordt met Experience Platform APIs ](../../../../../landing/api-guide.md).
 
-## Verbinding maken met Experience Platform via de [!DNL Flow Service] API[!DNL Oracle NetSuite Entities]
+## Verbinding maken met Experience Platform via de [!DNL Oracle NetSuite Entities] API[!DNL Flow Service]
 
 In het volgende voorbeeld worden de stappen beschreven die u moet uitvoeren om de [!DNL Oracle NetSuite Entities] -bron te verifiëren, een bronverbinding te maken en een gegevensstroom te maken om uw klant en contactgegevens naar Experience Platform te sturen.
 
@@ -174,7 +167,7 @@ En afhankelijk van welk objecttype u de ontvangen reactie leveraging is de volge
 
 Een geslaagde reactie retourneert een structuur zoals hieronder.
 
-+++Selecteren om de JSON-payload weer te geven
++++Selecteren om de JSON-lading weer te geven
 
 ```json
     "format": "hierarchical",
@@ -490,7 +483,7 @@ Een geslaagde reactie retourneert een structuur zoals hieronder.
 
 Een geslaagde reactie retourneert een structuur zoals hieronder.
 
-+++Selecteren om de JSON-payload weer te geven
++++Selecteren om de JSON-lading weer te geven
 
 ```json
 {

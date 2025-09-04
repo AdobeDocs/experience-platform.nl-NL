@@ -3,18 +3,14 @@ title: Verkrijg betalingsgegevens van uw  [!DNL Stripe]  rekening aan Experience
 description: Leer hoe u betalingsgegevens van uw Stripe-account aan Experience Platform kunt toevoegen met de Flow Service API
 badge: Beta
 exl-id: a9cb3ef6-aab0-4a5b-894e-ce90b82f35a8
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 40c3745920204983f5388de6cba1402d87eda71c
 workflow-type: tm+mt
-source-wordcount: '2028'
+source-wordcount: '2006'
 ht-degree: 0%
 
 ---
 
 # Betalingsgegevens van uw [!DNL Stripe] -account aan Experience Platform toevoegen met behulp van API&#39;s
-
->[!NOTE]
->
->De bron [!DNL Stripe] is in bèta. Lees de [ termijnen en voorwaarden ](../../../../home.md#terms-and-conditions) in het bronoverzicht voor meer informatie bij het gebruiken van bèta-geëtiketteerde bronnen.
 
 Lees het volgende leerprogramma leren hoe te om uw betalingsgegevens van [!DNL Stripe] aan Adobe Experience Platform in te voeren gebruikend [[!DNL Flow Service]  API ](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
@@ -132,7 +128,7 @@ curl -X GET \
 
 Een geslaagde reactie retourneert een JSON-structuur als volgt:
 
-+++Selecteren om de JSON-payload weer te geven
++++Selecteren om de JSON-lading weer te geven
 
 ```json
 {
@@ -880,7 +876,7 @@ curl -X POST \
 | `transformations.params.mappingId` | [ afbeelding identiteitskaart ](#mapping) die in een vroegere stap wordt geproduceerd. |
 | `transformations.params.mappingVersion` | De corresponderende versie van de toewijzing-id. Deze waarde is standaard ingesteld op `0` . |
 | `scheduleParams.startTime` | De tijd waarop uw gegevensstroom zal beginnen. U moet de begintijdwaarde opgeven in de notatie van een Unix-tijdstempel. |
-| `scheduleParams.frequency` | De frequentie waarmee de gegevensstroom gegevens zal verzamelen. U kunt de innamefrequentie configureren naar:  <ul><li>**Eenmaal**: Plaats uw frequentie aan `once` om eenmalig te creëren. Configuraties voor interval en backfill zijn niet beschikbaar wanneer u een eenmalige gegevensstroom maakt. Standaard wordt de planningsfrequentie ingesteld op één keer.</li><li>**Minuut**: Plaats uw frequentie aan `minute` om uw gegevensstroom te plannen om gegevens op een per-minieme basis in te voeren.</li><li>**Uur**:Plaats uw frequentie aan `hour` om uw gegevensstroom te plannen om gegevens op een per-uurbasis in te voeren.</li><li>**Dag**: Plaats uw frequentie aan `day` om uw gegevensstroom te plannen om gegevens op een per-dagbasis in te voeren.</li><li>**Week**: Plaats uw frequentie aan `week` om uw gegevensstroom te plannen om gegevens op een per-weekbasis in te voeren.</li></ul> |
+| `scheduleParams.frequency` | De frequentie waarmee de gegevensstroom gegevens zal verzamelen. U kunt de innamefrequentie configureren naar:  <ul><li>**Eenmaal**: Plaats uw frequentie aan `once` om eenmalig te creëren. Configuraties voor interval en backfill zijn niet beschikbaar wanneer u een eenmalige gegevensstroom maakt. Standaard wordt de planningsfrequentie ingesteld op één keer.</li><li>**Minuut**: Plaats uw frequentie aan `minute` om uw gegevensstroom te plannen om gegevens op een per-minieme basis in te voeren.</li><li>**Uur**:Set uw frequentie aan `hour` om uw gegevensstroom te plannen om gegevens op een per-uurbasis in te voeren.</li><li>**Dag**: Plaats uw frequentie aan `day` om uw gegevensstroom te plannen om gegevens op een per-dagbasis in te voeren.</li><li>**Week**: Plaats uw frequentie aan `week` om uw gegevensstroom te plannen om gegevens op een per-weekbasis in te voeren.</li></ul> |
 | `scheduleParams.interval` | Het interval geeft de periode aan tussen twee opeenvolgende flowrun. Bijvoorbeeld, als u uw frequentie aan dag plaatst en het interval aan 15 vormt, dan zal uw dataflow om de 15 dagen lopen. De intervalwaarde moet een geheel getal zijn dat niet gelijk is aan nul. De minimaal toegestane intervalwaarde voor elke frequentie is als volgt:<ul><li>**Eenmaal**: n/a</li><li>**Minuut**: 15</li><li>**Uur**: 1</li><li>**Dag**: 1</li><li>**Week**: 1</li></ul> |
 
 **Reactie**

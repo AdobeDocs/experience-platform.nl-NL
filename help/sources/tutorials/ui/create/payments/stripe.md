@@ -3,18 +3,14 @@ title: Breng via de gebruikersinterface betalingsgegevens van uw Stripe-account 
 description: Leer hoe u via de gebruikersinterface betalingsgegevens van uw Stripe-account aan Experience Platform kunt toevoegen.
 badge: Beta
 exl-id: f20c5935-a7c0-4387-b29e-73e78cab4972
-source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
+source-git-commit: 40c3745920204983f5388de6cba1402d87eda71c
 workflow-type: tm+mt
-source-wordcount: '1611'
+source-wordcount: '1590'
 ht-degree: 0%
 
 ---
 
 # Betalingsgegevens vanuit uw [!DNL Stripe] -account aan Experience Platform toevoegen via de gebruikersinterface
-
->[!NOTE]
->
->De bron [!DNL Stripe] is in bèta. Lees de [ termijnen en voorwaarden ](../../../../home.md#terms-and-conditions) in het bronoverzicht voor meer informatie bij het gebruiken van bèta-geëtiketteerde bronnen.
 
 Lees de volgende zelfstudie om te leren hoe u via de gebruikersinterface betalingsgegevens van uw [!DNL Stripe] -account aan Adobe Experience Platform kunt toevoegen.
 
@@ -116,7 +112,7 @@ Als u al een bestaande dataset hebt, selecteert u **[!UICONTROL Existing dataset
 
 >[!ENDTABS]
 
-+++Selecteer voor stappen om de opname van het Profiel, de diagnostiek van de fout, en gedeeltelijke opname toe te laten.
++++Selecteer deze optie als u de stappen voor het inschakelen van profielopname, foutdiagnose en gedeeltelijke inname wilt uitvoeren.
 
 Als uw dataset voor het Profiel van de Klant in real time wordt toegelaten, dan tijdens deze stap, kunt u **[!UICONTROL Profile dataset]** van een knevel voorzien om uw gegevens voor Profiel-opname toe te laten. U kunt deze stap ook gebruiken om **[!UICONTROL Error diagnostics]** en **[!UICONTROL Partial ingestion]** in te schakelen.
 

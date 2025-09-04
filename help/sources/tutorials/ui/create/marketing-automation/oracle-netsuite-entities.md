@@ -1,22 +1,15 @@
 ---
 title: Creeer a [!DNL Oracle NetSuite Entities]  bronverbinding in UI
 description: Leer hoe u een Oracle NetSuite Entities-bronverbinding maakt met de Adobe Experience Platform-gebruikersinterface.
-hide: true
-hidefromtoc: true
-badge: Beta
 exl-id: ce0ea37f-16e0-4aef-9809-72c0b11e0440
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 40c3745920204983f5388de6cba1402d87eda71c
 workflow-type: tm+mt
-source-wordcount: '690'
+source-wordcount: '673'
 ht-degree: 1%
 
 ---
 
 # Een [!DNL Oracle NetSuite Entities] bronverbinding maken in de gebruikersinterface
-
->[!NOTE]
->
->De bron [!DNL Oracle NetSuite Entities] is in bèta. Zie het [ overzicht van bronnen ](../../../../home.md#terms-and-conditions) voor meer informatie bij het gebruiken van bèta-geëtiketteerde bronnen.
 
 Lees de volgende zelfstudie om te leren hoe u contactpersonen en klantgegevens van uw [!DNL Oracle NetSuite Entities] -account naar Adobe Experience Platform in de gebruikersinterface kunt brengen.
 
@@ -74,11 +67,11 @@ Selecteer vervolgens het objecttype dat u aan Experience Platform wilt toevoegen
 
 >[!TAB  Contact ]
 
-{het schermschot van 0} Experience Platform UI voor de Entiteiten die van Oracle Netsuite configuratie met geselecteerde optie van het Contact tonen ![&#128279;](../../../../images/tutorials/create/marketing-automation/oracle-netsuite-entities/select-data-contact.png)
+{het schermschot van 0} Experience Platform UI voor de Entiteiten die van Oracle Netsuite configuratie met geselecteerde optie van het Contact tonen ![](../../../../images/tutorials/create/marketing-automation/oracle-netsuite-entities/select-data-contact.png)
 
 >[!TAB  Klant ]
 
-{het schermschot van 0} Experience Platform UI voor de Entiteiten van Oracle Netsuite die configuratie met geselecteerde optie van de Klant tonen ![&#128279;](../../../../images/tutorials/create/marketing-automation/oracle-netsuite-entities/select-data-customer.png)
+{het schermschot van 0} Experience Platform UI voor de Entiteiten van Oracle Netsuite die configuratie met geselecteerde optie van de Klant tonen ![](../../../../images/tutorials/create/marketing-automation/oracle-netsuite-entities/select-data-customer.png)
 
 >[!ENDTABS]
 

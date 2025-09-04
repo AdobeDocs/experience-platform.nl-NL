@@ -2,20 +2,15 @@
 title: Overzicht van PathFactory Source
 description: Leer hoe u PathFactory via API's of de gebruikersinterface met Adobe Experience Platform kunt verbinden.
 last-substantial-update: 2024-04-30T00:00:00Z
-badge: Beta
 exl-id: befb73c4-fd6a-4512-9124-d23a1c27e0e0
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 40c3745920204983f5388de6cba1402d87eda71c
 workflow-type: tm+mt
-source-wordcount: '463'
+source-wordcount: '445'
 ht-degree: 0%
 
 ---
 
 # [!DNL PathFactory]
-
->[!NOTE]
->
->De bron [!DNL PathFactory] is in bèta. Gelieve te lezen het [ overzicht van bronnen ](../../home.md#terms-and-conditions) voor meer informatie bij het gebruiken van bèta-geëtiketteerde bronnen.
 
 [[!DNL PathFactory] ](https://www.pathfactory.com/) biedt een cloudplatform dat bedrijven helpt bij het beheren van inhoudsreizen en het aansturen van betrokkenheid via intelligente inzichten in inhoud. In deze handleiding wordt beschreven hoe u gegevens van PathFactory kunt integreren in Experience Platform en de connectors van PathFactory kunt gebruiken voor optimale gegevensinvoer.
 
@@ -29,7 +24,7 @@ Lees het onderstaande document voor informatie over hoe u uw [!DNL PathFactory] 
 
 ## IP adres lijst van gewenste personen {#ip-allow-list}
 
-Een lijst van IP adressen kan vereisen om aan een lijst van gewenste personen worden toegevoegd alvorens met bronschakelaars te werken. Het niet toevoegen van uw regio-specifieke IP adressen aan uw lijst van gewenste personen kan tot fouten of niet-prestaties leiden wanneer het gebruiken van bronnen. Zie de [&#128279;](../../ip-address-allow-list.md) pagina van de lijst van gewenste personen van het 0&rbrace; IP adres &lbrace;voor meer informatie.
+Een lijst van IP adressen kan vereisen om aan een lijst van gewenste personen worden toegevoegd alvorens met bronschakelaars te werken. Het niet toevoegen van uw regio-specifieke IP adressen aan uw lijst van gewenste personen kan tot fouten of niet-prestaties leiden wanneer het gebruiken van bronnen. Zie de [ pagina van de lijst van gewenste personen van het 0} IP adres {voor meer informatie.](../../ip-address-allow-list.md)
 
 ## Vereisten {#prerequisites}
 

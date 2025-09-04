@@ -1,22 +1,15 @@
 ---
 title: Creeer a [!DNL Oracle NetSuite Activities]  bronverbinding in UI
 description: Leer hoe u een Oracle NetSuite Activity-bronverbinding maakt met de Adobe Experience Platform-gebruikersinterface.
-hide: true
-hidefromtoc: true
-badge: Beta
 exl-id: 99ef0b50-c8d6-48d6-895f-46b7ade47520
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 40c3745920204983f5388de6cba1402d87eda71c
 workflow-type: tm+mt
-source-wordcount: '608'
-ht-degree: 0%
+source-wordcount: '591'
+ht-degree: 1%
 
 ---
 
 # Een [!DNL Oracle NetSuite Activities] bronverbinding maken in de gebruikersinterface
-
->[!NOTE]
->
->De bron [!DNL Oracle NetSuite Activities] is in bèta. Zie het [ overzicht van bronnen ](../../../../home.md#terms-and-conditions) voor meer informatie bij het gebruiken van bèta-geëtiketteerde bronnen.
 
 Lees de volgende zelfstudie om te leren hoe u gebeurtenisgegevens van uw [!DNL Oracle NetSuite Activities] -account naar Adobe Experience Platform kunt overbrengen in de gebruikersinterface.
 

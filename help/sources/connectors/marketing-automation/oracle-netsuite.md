@@ -2,20 +2,15 @@
 title: Oracle NetSuite Source - Overzicht
 description: Leer hoe u Oracle NetSuite met Adobe Experience Platform kunt verbinden via API's of de gebruikersinterface.
 last-substantial-update: 2024-01-30T00:00:00Z
-badge: Beta
 exl-id: 1dd30660-c990-4d3f-a64f-2a17e426f56d
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 40c3745920204983f5388de6cba1402d87eda71c
 workflow-type: tm+mt
-source-wordcount: '756'
+source-wordcount: '738'
 ht-degree: 0%
 
 ---
 
 # [!DNL Oracle NetSuite]
-
->[!NOTE]
->
->De bron [!DNL Oracle NetSuite] is in bèta. Gelieve te lezen het [ overzicht van bronnen ](../../home.md#terms-and-conditions) voor meer informatie bij het gebruiken van bèta-geëtiketteerde bronnen.
 
 Adobe Experience Platform staat toe dat gegevens uit externe bronnen worden opgenomen en biedt u de mogelijkheid om inkomende gegevens te structureren, labelen en verbeteren met behulp van Experience Platform-services. U kunt gegevens invoeren uit verschillende bronnen, zoals Adobe-toepassingen, opslag in de cloud, databases en vele andere.
 
@@ -30,7 +25,7 @@ U kunt twee verschillende bronnen gebruiken om gegevens in te voeren van [!DNL O
 
 In de volgende tabel vindt u meer informatie over de twee [!DNL Oracle NetSuite] -bronnen.
 
-| Source | Type | Beschrijving |
+| Bron | Type | Beschrijving |
 | --- | --- | --- |
 | [[!DNL Oracle NetSuite Activities]](#oracle-netsuite-activities) | Gebeurtenis | Haal geplande activiteiten op die aan uw kalender zijn toegevoegd. |
 | [[!DNL Oracle NetSuite Entities]](#oracle-netsuite-entities) | Klant | Haal specifieke klantgegevens op, zoals klantnamen, adressen en toetsidentificatoren. |
@@ -38,7 +33,7 @@ In de volgende tabel vindt u meer informatie over de twee [!DNL Oracle NetSuite]
 
 ## IP adres lijst van gewenste personen {#ip-allow-list}
 
-Een lijst van IP adressen kan vereisen om aan een lijst van gewenste personen worden toegevoegd alvorens met bronschakelaars te werken. Het niet toevoegen van uw regio-specifieke IP adressen aan uw lijst van gewenste personen kan tot fouten of niet-prestaties leiden wanneer het gebruiken van bronnen. Zie de [&#128279;](../../ip-address-allow-list.md) pagina van de lijst van gewenste personen van het 0&rbrace; IP adres &lbrace;voor meer informatie.
+Een lijst van IP adressen kan vereisen om aan een lijst van gewenste personen worden toegevoegd alvorens met bronschakelaars te werken. Het niet toevoegen van uw regio-specifieke IP adressen aan uw lijst van gewenste personen kan tot fouten of niet-prestaties leiden wanneer het gebruiken van bronnen. Zie de [ pagina van de lijst van gewenste personen van het 0} IP adres {voor meer informatie.](../../ip-address-allow-list.md)
 
 ## Vereisten {#prerequisites}
 

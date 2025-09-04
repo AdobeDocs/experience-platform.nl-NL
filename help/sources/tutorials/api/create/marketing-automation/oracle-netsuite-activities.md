@@ -1,22 +1,15 @@
 ---
 title: Een bronverbinding en gegevensstroom maken voor Oracle NetSuite-activiteiten met behulp van de Flow Service API
 description: Leer hoe u een bronverbinding en gegevensstroom maakt om gegevens van Oracle NetSuite-gebeurtenissen naar Experience Platform te brengen met behulp van de Flow Service API.
-hide: true
-hidefromtoc: true
-badge: Beta
 exl-id: 4f695389-2261-469c-8d40-7bd29a4e7f77
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 40c3745920204983f5388de6cba1402d87eda71c
 workflow-type: tm+mt
-source-wordcount: '1974'
+source-wordcount: '1957'
 ht-degree: 0%
 
 ---
 
 # Een bronverbinding en gegevensstroom maken voor [!DNL Oracle NetSuite Activities] met de Flow Service API
-
->[!NOTE]
->
->De bron [!DNL Oracle NetSuite Activities] is in bèta. Zie het [ overzicht van bronnen ](../../../../home.md#terms-and-conditions) voor meer informatie bij het gebruiken van bèta-geëtiketteerde bronnen.
 
 Lees het volgende leerprogramma leren hoe te om gebeurtenisgegevens van uw [!DNL Oracle NetSuite Activities] rekening aan Adobe Experience Platform te brengen gebruikend [[!DNL Flow Service]  API ](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
@@ -37,7 +30,7 @@ Lees het [[!DNL Oracle NetSuite]  overzicht ](../../../../connectors/marketing-a
 
 Voor informatie over hoe te om vraag aan Experience Platform APIs met succes te maken, zie de gids op [ begonnen wordt met Experience Platform APIs ](../../../../../landing/api-guide.md).
 
-## Verbinding maken met Experience Platform via de [!DNL Flow Service] API[!DNL Oracle NetSuite Activities]
+## Verbinding maken met Experience Platform via de [!DNL Oracle NetSuite Activities] API[!DNL Flow Service]
 
 Volg de onderstaande handleiding om te leren hoe u de [!DNL Oracle NetSuite Activities] -bron kunt verifiëren, een bronverbinding kunt maken en een gegevensstroom kunt maken om uw gebeurtenisgegevens over te brengen naar Experience Platform.
 
@@ -142,7 +135,7 @@ curl -X GET \
 
 Een geslaagde reactie retourneert een JSON-structuur als volgt:
 
-+++Selecteren om de JSON-payload weer te geven
++++Selecteren om de JSON-lading weer te geven
 
 ```json
 {
