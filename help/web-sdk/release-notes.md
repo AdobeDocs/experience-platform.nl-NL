@@ -3,9 +3,9 @@ title: Opmerkingen bij de release Adobe Experience Platform Web SDK
 description: De nieuwste aanvullende informatie voor de Adobe Experience Platform Web SDK.
 keywords: Adobe Experience Platform Web SDK;Experience Platform Web SDK;Web SDK;release notes;
 exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
-source-git-commit: 21140a6ff4f34db213032dd600d4099a5459e31d
+source-git-commit: 05b9893e17db0caeab1175f35f939cb6a1dd0291
 workflow-type: tm+mt
-source-wordcount: '2502'
+source-wordcount: '2573'
 ht-degree: 5%
 
 ---
@@ -15,6 +15,19 @@ ht-degree: 5%
 
 In dit document worden de opmerkingen bij de release voor de Adobe Experience Platform Web SDK besproken.
 Voor de recentste versienota&#39;s op de de markeringsuitbreiding van SDK van het Web, zie de [ nota&#39;s van de de marktextensie van SDK van het Web ](../tags/extensions/client/web-sdk/web-sdk-ext-release-notes.md).
+
+## Versie 2.29.0 - 4 september 2025
+
+**Nieuwe Eigenschappen**
+
+- Toegevoegde ondersteuning voor het verzamelen van Adobe Advertisement Data voor Adobe Journey Analytics
+- Extra ondersteuning voor het opnemen van gegevens van pushabonnementen in gebruikersprofielen.
+
+**Bevestigingen en verbeteringen**
+
+- Probleem verholpen waarbij gedeelten met configuratieoverschrijvingen werden samengevoegd in plaats van vervangen.
+- Probleem verholpen waarbij verzameling koppelingen de volledige documentinhoud als naam van de koppeling verzendt.
+- Probleem verholpen waarbij bepaalde voorstellen niet opnieuw konden worden weergegeven.
 
 ## Versie 2.28.1 - vrijdag 31 juli 2025
 
@@ -31,7 +44,7 @@ Voor de recentste versienota&#39;s op de de markeringsuitbreiding van SDK van he
 **Bevestigingen en verbeteringen**
 
 - Oplossing een fout in de [ Tracker van Analytics van Media ](commands/getmediaanalyticstracker.md) waar het `length` bezit van het media voorwerp verkeerd erkende ongeldige gegevenstypes.
-- Verbeterde [ fout behandeling van het 0&rbrace; identiteitsbeheer &lbrace;om belofteverwervingen behoorlijk te verwerken wanneer de identiteitsraadpleging ontbreekt.](identity/overview.md)
+- Verbeterde [ fout behandeling van het 0} identiteitsbeheer {om belofteverwervingen behoorlijk te verwerken wanneer de identiteitsraadpleging ontbreekt.](identity/overview.md)
 - Oplossing van een kwestie waar [ verpersoonlijkingsinhoud ](personalization/rendering-personalization-content.md) met de inhoudspunten van HTML er niet in slaagde met een fout met betrekking tot ontbrekende `renderStatusHandler` terug te geven.
 - Vaste activiteitenkaart [ inzameling URL ](commands/configure/clickcollectionenabled.md) om niet-HTTP URLs behoorlijk te behandelen.
 
@@ -76,7 +89,7 @@ Voor de recentste versienota&#39;s op de de markeringsuitbreiding van SDK van he
 
 **Vaste en verbeteringen**
 
-- Oplossing van een gebiedsdeelkwestie met betrekking tot [ de Motor van de Regels van Adobe Experience Platform ](https://github.com/adobe/aepsdk-rulesengine-typescript/), die fouten in sommige klantenintegratie veroorzaakte. SDK van het Web vereist nu [ versie 2.0.3 van de Motor van de Regels van 0&rbrace; Adobe Experience Platform of later.](https://github.com/adobe/aepsdk-rulesengine-typescript/)
+- Oplossing van een gebiedsdeelkwestie met betrekking tot [ de Motor van de Regels van Adobe Experience Platform ](https://github.com/adobe/aepsdk-rulesengine-typescript/), die fouten in sommige klantenintegratie veroorzaakte. SDK van het Web vereist nu [ versie 2.0.3 van de Motor van de Regels van 0} Adobe Experience Platform of later.](https://github.com/adobe/aepsdk-rulesengine-typescript/)
 
 ## Versie 2.24.0 - vrijdag 31 oktober 2024
 
@@ -189,7 +202,7 @@ Voor de recentste versienota&#39;s op de de markeringsuitbreiding van SDK van he
 
 **Bevestigingen en verbeteringen**
 
-- SDK van het Web codeert nu de het koekjesbestemmingswaarden van Audience Manager, gelijkend op [ Data Integration Library (DIL) ](https://experienceleague.adobe.com/docs/audience-manager/user-guide/dil-api/dil-overview.html?lang=nl-NL).
+- SDK van het Web codeert nu de het koekjesbestemmingswaarden van Audience Manager, gelijkend op [ Data Integration Library (DIL) ](https://experienceleague.adobe.com/docs/audience-manager/user-guide/dil-api/dil-overview.html).
 
 ## Versie 2.16.0 - 25 april 2023
 

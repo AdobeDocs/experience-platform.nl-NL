@@ -2,9 +2,9 @@
 title: Opmerkingen bij de release Adobe Experience Platform Web SDK
 description: Adobe Experience Platform Web SDK-tagextensie
 exl-id: 91de8c91-023a-45b6-9f67-ac75ee471e50
-source-git-commit: 54c609ec995ac8e48c1c6441390b205bfb5a01cc
+source-git-commit: 1cc62ee8c87ff2c1c1d55db2e462d485289120ed
 workflow-type: tm+mt
-source-wordcount: '2812'
+source-wordcount: '2934'
 ht-degree: 5%
 
 ---
@@ -13,6 +13,18 @@ ht-degree: 5%
 # Opmerkingen bij de release Web SDK
 
 In dit document worden de releaseopmerkingen voor de Adobe Experience Platform Web SDK-tagextensie besproken. Voor de recentste versienota&#39;s op SDK zelf, zie de [ de versienota&#39;s van SDK van het Web van Experience Platform ](/help/web-sdk/release-notes.md).
+
+## Versie 2.32.0 - 4 september 2025
+
+**Nieuwe functies**
+
+- Bevat [ versie 2.29.0 ](../../../../web-sdk/release-notes.md#2-29-0) van het Web SDK van Adobe Experience Platform.
+- Toegevoegde ondersteuning voor Adobe Advertising als een nieuwe aangepaste build-component. Vorm in de uitbreidingsconfiguratie en in verzend gebeurtenisvraag.
+- Extra ondersteuning voor het opnemen van gegevens voor pushabonnementen in Profiel. Dit gebeurt via een nieuwe handeling, &quot;Push subscription details&quot;
+
+**Bevestigingen en verbeteringen**
+
+- Verbeterde bewerking van XDM-gegevenselementen wanneer schema&#39;s of sandboxen niet beschikbaar zijn. U kunt nu XDM Object en Variabele gegevenselementen bewerken, zelfs als de schema&#39;s waarnaar wordt verwezen niet kunnen worden gevonden of als de sandboxen niet toegankelijk zijn. Dit lost kwesties op die algemeen tijdens organisatiemigraties aan nieuwe gegevenscentra voorkomen, waar schema IDs kan veranderen en eerder bewerkingsinterfaces veroorzaakte om fouten te tonen en onbruikbaar te worden.
 
 ## Versie 2.31.1 - vrijdag 31 juli 2025
 
@@ -34,7 +46,6 @@ In dit document worden de releaseopmerkingen voor de Adobe Experience Platform W
 **Bekende kwesties**
 
 - Na de versie van v2.31.0, werd een probleem geïdentificeerd met [ de componenten van de douanevorm bouwen ](/help/web-sdk/install/create-custom-build.md) proces. Terwijl de douane bouwt blijft werken, zijn alle componenten momenteel inbegrepen in de bouwstijl, resulterend in een volledig-gerangschikt pakket ongeacht componentenselectie. Er wordt een oplossing voor dit probleem ontwikkeld. Als u gebruikmaakt van de selectie van aangepaste componenten om de grootte van de build te minimaliseren, is het raadzaam te wachten op een toekomstige release.
-
 
 ## Versie 2.30.1 - woensdag 27 mei 2025
 
