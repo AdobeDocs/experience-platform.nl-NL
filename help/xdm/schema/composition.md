@@ -59,7 +59,7 @@ Schema&#39;s definiëren de structuur van gegevens die in Experience Platform wo
 
 Om dit proces te helpen, kunnen de belangrijkste gebieden binnen uw schema&#39;s als identiteiten worden gemerkt. Op gegevensopname, worden de gegevens in die gebieden opgenomen in &quot;[!UICONTROL Identity Graph]&quot;voor dat individu. De grafiekgegevens kunnen vervolgens worden benaderd door [[!DNL Real-Time Customer Profile]](../../profile/home.md) en andere Experience Platform-services om een samengevoegde weergave van elke afzonderlijke klant te bieden.
 
-Velden die algemeen als &quot;[!UICONTROL Identity]&quot;worden gemerkt omvatten: e-mailadres, telefoonaantal, [[!DNL Experience Cloud ID (ECID)] ](https://experienceleague.adobe.com/docs/id-service/using/home.html?lang=nl-NL), identiteitskaart van CRM, of andere unieke gebieden van identiteitskaart Overweeg om het even welke unieke herkenningstekens specifiek voor uw organisatie, aangezien zij ook goede &quot;[!UICONTROL Identity]&quot;gebieden kunnen zijn.
+Velden die algemeen als &quot;[!UICONTROL Identity]&quot;worden gemerkt omvatten: e-mailadres, telefoonaantal, [[!DNL Experience Cloud ID (ECID)] ](https://experienceleague.adobe.com/docs/id-service/using/home.html), identiteitskaart van CRM, of andere unieke gebieden van identiteitskaart Overweeg om het even welke unieke herkenningstekens specifiek voor uw organisatie, aangezien zij ook goede &quot;[!UICONTROL Identity]&quot;gebieden kunnen zijn.
 
 Meer over leren hoe de identiteitsinformatie u kan helpen digitale ervaringen aan uw klanten leveren, zie het [ overzicht van de Dienst van de Identiteit ](../../identity-service/home.md). Zie het gegevens modellerend beste praktijkdocument voor [ uiteinden op het gebruik van identiteiten wanneer het creëren van een schema ](./best-practices.md#data-validation-fields).
 
@@ -163,7 +163,7 @@ De schema&#39;s worden samengesteld gebruikend de volgende formule:
 
 **Klasse + de Groef&amp;amp van het Gebied van het Schema;ast; = XDM Schema**
 
-&ast;Een schema bestaat uit een klasse en nul of meer groepen schemavelden. Dit betekent dat u een datasetschema kon samenstellen zonder gebiedsgroepen bij allen te gebruiken.
+&amp;ast;Een schema bestaat uit een klasse en nul of meer groepen schemavelden. Dit betekent dat u een datasetschema kon samenstellen zonder gebiedsgroepen bij allen te gebruiken.
 
 ### Klasse {#class}
 
@@ -189,11 +189,11 @@ In de volgende schermafbeelding ziet u hoe klassen worden weergegeven in de gebr
 
 Voor de meest bijgewerkte lijst van beschikbare standaardXDM klassen, verwijs naar de [ officiële bewaarplaats XDM ](https://github.com/adobe/xdm/tree/master/components/classes). Alternatief, kunt u naar de gids verwijzen bij [ het onderzoeken van componenten XDM ](../ui/explore.md) als u verkiest om middelen in UI te bekijken.
 
-### Veldgroep {#field-group}
+### Veldgroepen {#field-group}
 
 >[!CONTEXTUALHELP]
 >id="platform_schemas_fieldgroup"
->title="Veldgroep"
+>title="Veldgroepen"
 >abstract="Veldgroepen zijn herbruikbare componenten waarmee u schema&#39;s met extra kenmerken kunt uitbreiden. De meeste veldgroepen zijn alleen compatibel met bepaalde klassen. U kunt standaardveldgroepen gebruiken die door Adobe zijn gedefinieerd, of u kunt handmatig uw eigen aangepaste veldgroepen definiëren. Zie de documentatie om meer over te leren hoe de gebiedsgroepen in schemacompositie betrokken zijn."
 
 >[!CONTEXTUALHELP]
