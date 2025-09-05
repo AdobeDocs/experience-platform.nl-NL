@@ -3,9 +3,9 @@ title: Breid dataset de uitvoerprogramma's voor dataflows uit die vóór Novembe
 description: Leer hoe te om het de uitvoerprogramma voor dataset uit te breiden uitvoerdataflows die vóór November 2024 worden gecreeerd die op 1 September, 2025 ophouden te werken.
 type: Tutorial
 exl-id: a756886b-3f4b-4427-bd26-817221ba68aa
-source-git-commit: 6f8b906729ec31cc0c4847ccd0ae0f89f63a1627
+source-git-commit: 0da592dd2846ed0f1eeb31102842c8895cac6952
 workflow-type: tm+mt
-source-wordcount: '648'
+source-wordcount: '668'
 ht-degree: 0%
 
 ---
@@ -87,8 +87,6 @@ Nu kunt u het uitvoerschema wijzigen om na 1 september 2025 te verlengen.
 
 ## Wat gebeurt er als ik de deadline van 1 september 2025 mis? {#missed-deadline}
 
-Als uw dataflows van de datasetuitvoer op 1 September, 2025 verlopen en u hun programma&#39;s niet hebt uitgebreid, is er een periode van de a **30 dagen respijtperiode** waar u Adobe kunt contacteren om uw dataflows zonder enig gegevensverlies opnieuw toe te laten. Dit geldt ook voor gegevens die niet zijn geëxporteerd tussen 1 september en de datum waarop u contact hebt opgenomen met Adobe.
+Als uw gegevensreeks de uitvoerdataflows op 1 September, 2025 verliep en u nog hen wilt uitbreiden, volg de stappen in de secties hierboven om hun programma uit te breiden.
 
->[!IMPORTANT]
->
->Hoewel Adobe deze respijtperiode biedt, raden we u ten zeerste aan uw schema&#39;s vóór de deadline van 1 september 2025 te verlengen om een ononderbroken gegevensexport te garanderen en mogelijke verstoringen van de service te voorkomen.
+Als u het uitvoerprogramma binnen 30 dagen uitbreidt (of minder als de [ tijd-aan-levende reeks op de uitgevoerde dataset ](/help/catalog/datasets/experience-event-dataset-retention-ttl-guide.md) minder dan 30 dagen is), kunt u nog een backfill van de gegevens krijgen die niet tussen 1 September en de datum werd uitgevoerd u de uitvoer opnieuw toelaten. Wanneer het plaatsen van een nieuwe eindtijd, zal er *niet* een volledige dossieruitvoer eerst zijn. In plaats daarvan zal de uitvoer stapsgewijs worden voortgezet vanaf het punt waar ze op 1 september zijn opgehouden.
