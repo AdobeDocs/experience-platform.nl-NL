@@ -55,7 +55,7 @@ In deze sectie wordt beschreven welke soorten publiek u naar dit doel kunt expor
 
 | Oorsprong publiek | Ondersteund | Beschrijving |
 | -------------------- | :-------: | ------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Segmentatieservice | ✓ | Het publiek produceerde door de Dienst van de Segmentatie van Experience Platform [ ](https://experienceleague.adobe.com/en/docs/experience-platform/segmentation/home). |
+| Segmentatieservice | ✓ | Het publiek produceerde door de Dienst van de Segmentatie van Experience Platform [&#128279;](https://experienceleague.adobe.com/en/docs/experience-platform/segmentation/home). |
 | Aangepaste uploads | ✓ | Soorten publiek dat uit CSV-bestanden in Experience Platform is geïmporteerd. |
 
 ## Type en frequentie exporteren {#export-type-and-frequency}
