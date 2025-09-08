@@ -3,16 +3,25 @@ keywords: gekoppeld in verbinding;gekoppeld in verbinding;gekoppeld in doelen;ge
 title: Koppeling in verbinding met passend publiek
 description: Activeer profielen voor uw campagnes LinkedIn voor publiek gericht, verpersoonlijking, en onderdrukking, die op gehakte e-mails worden gebaseerd.
 exl-id: 74c233e9-161a-4e4a-98ef-038a031feff0
-source-git-commit: c8eedc1f020b8605c9565015461cb1dfd47bba1f
+source-git-commit: 13b95db846d70c36233cf8ded491d19e1c93e4c0
 workflow-type: tm+mt
-source-wordcount: '1172'
-ht-degree: 0%
+source-wordcount: '1264'
+ht-degree: 5%
 
 ---
 
 # [!DNL LinkedIn Matched Audiences]-verbinding
 
 ## Overzicht {#overview}
+
+>[!IMPORTANT]
+>
+>* Vanaf woensdag 9 september 2025 ziet u in de bestemmingencatalogus twee **[!DNL LinkedIn Matched Audiences]**-kaarten naast elkaar. Dit komt door een interne upgrade van de bestemmingsservice. De naam van de bestaande **[!DNL LinkedIn Matched Audiences]** doelconnector is gewijzigd in **[!UICONTROL (Deprecated) LinkedIn Matched Audiences]** en u hebt nu een nieuwe kaart met de naam **[!UICONTROL LinkedIn Matched Audiences]** beschikbaar.
+>* Gebruik de nieuwe **[!UICONTROL LinkedIn Matched Audiences]**-verbinding in de catalogus voor nieuwe activeringsgegevensstromen. Als u actieve gegevens naar de **[!UICONTROL (Deprecated) LinkedIn Matched Audiences]** -bestemming hebt, worden deze automatisch bijgewerkt, zodat u geen actie hoeft te ondernemen.
+>* De nieuwe **[!UICONTROL LinkedIn Matched Audiences]** -verbinding ondersteunt [!DNL IDFA] -identiteiten niet meer.
+>* Als u dataflows door de [ Dienst API van de Stroom ](https://developer.adobe.com/experience-platform-apis/references/destinations/) creeert, moet u uw [!DNL flow spec ID] en [!DNL connection spec ID] aan de volgende waarden bijwerken:
+>   * Stroomspecificatie-ID: `963604d1-811d-4ce4-ac66-1fc78bde7c42`
+>   * Verbindingsspecificatie-ID: `393a7ce1-e527-4fdb-8d99-0b11dc910279`
 
 Activeer profielen voor uw [!DNL LinkedIn] -campagnes voor doelgroepen, personalisatie en onderdrukking op basis van gehakte e-mails en mobiele id&#39;s.
 
@@ -31,7 +40,6 @@ Een softwarebedrijf organiseert een conferentie en wil met deelnemers in contact
 | Doelidentiteit | Beschrijving | Overwegingen |
 |---|---|---|
 | GAID | GOOGLE ADVERTISING ID | Selecteer deze doelidentiteit wanneer uw bronidentiteit een GAID-naamruimte is. |
-| IDFA | Apple-id voor adverteerders | Selecteer deze doelidentiteit wanneer uw bronidentiteit een IDFA-naamruimte is. |
 | email_lc_sha256 | E-mailadressen die met het algoritme SHA256 worden gehasht | Adobe Experience Platform biedt ondersteuning voor zowel platte tekst- als SHA256-e-mailadressen met hashing. Volg de instructies in de [ passende vereisten van identiteitskaart ](#id-matching-requirements-id-matching-requirements) sectie en gebruik aangewezen namespaces voor gewone teksten en gehakte e-mails, respectievelijk. Wanneer het bronveld hashingkenmerken bevat, schakelt u de optie **[!UICONTROL Apply transformation]** in om de gegevens automatisch te laten hashen bij activering door [!DNL Experience Platform] . |
 
 {style="table-layout:auto"}
@@ -42,7 +50,7 @@ In deze sectie wordt beschreven welke soorten publiek u naar dit doel kunt expor
 
 | Oorsprong publiek | Ondersteund | Beschrijving |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | ✓ | Het publiek produceerde door de Dienst van de Segmentatie van Experience Platform [&#128279;](../../../segmentation/home.md). |
+| [!DNL Segmentation Service] | ✓ | Het publiek produceerde door de Dienst van de Segmentatie van Experience Platform [ ](../../../segmentation/home.md). |
 | Aangepaste uploads | ✓ | Het publiek [ ingevoerde ](../../../segmentation/ui/audience-portal.md#import-audience) in Experience Platform van Csv- dossiers. |
 
 {style="table-layout:auto"}
@@ -88,7 +96,7 @@ Als u ervoor kiest om de e-mailadressen zelf te hashen, moet u aan de volgende v
 >[!NOTE]
 >
 >Gegevens uit naamruimten zonder hashing worden automatisch gehasht door [!DNL Experience Platform] bij activering.
->&#x200B;> Kenmerkbrongegevens worden niet automatisch gehasht.
+>> Kenmerkbrongegevens worden niet automatisch gehasht.
 > 
 > Tijdens de [ stap van de Toewijzing van de Identiteit ](../../ui/activate-segment-streaming-destinations.md#mapping), wanneer uw brongebied unhashed attributen bevat, controleer de **[!UICONTROL Apply transformation]** optie, om [!DNL Experience Platform] automatisch de gegevens bij activering te hebben.
 > 
@@ -121,7 +129,7 @@ In de onderstaande video ziet u ook de stappen voor het configureren van een [!D
 
 ### Verificatiegegevens vernieuwen {#refresh-authentication-credentials}
 
-LinkedIn tokens verlopen elke 60 dagen. U kunt de vervaldatums van uw token vanaf de kolom **[!UICONTROL Account expiration date]** controleren op de tabbladen **[[!UICONTROL Accounts]](../../ui/destinations-workspace.md#accounts)** of **[[!UICONTROL Browse]](../../ui/destinations-workspace.md#browse)** .
+LinkedIn tokens verlopen elke 60 dagen. U kunt de vervaldatums van uw tokens controleren in de kolom **[!UICONTROL Account expiration date]** op de tabbladen **[[!UICONTROL Accounts]](../../ui/destinations-workspace.md#accounts)** of **[[!UICONTROL Browse]](../../ui/destinations-workspace.md#browse)** .
 
 Zodra het teken is verlopen, de gegevensuitvoer naar de bestemming houdt op werkend. Om deze situatie te verhinderen, verifieer opnieuw door de volgende stappen uit te voeren:
 
