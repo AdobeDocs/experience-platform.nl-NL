@@ -15,12 +15,12 @@ ht-degree: 8%
 >[!IMPORTANT]
 >
 > Google geeft veranderingen in de [ Adds API van Google ](https://developers.google.com/google-ads/api/docs/start), [ Overeenkomst van de Klant ](https://ads-developers.googleblog.com/2023/10/updates-to-customer-match-conversion.html) vrij, en [ Vertoning &amp; Video 360 API ](https://developers.google.com/display-video/api/guides/getting-started/overview) om de naleving en toestemmings-gerelateerde vereisten te steunen die onder de [ Wet van de Markten ](https://digital-markets-act.ec.europa.eu/index_nl) (DMA) worden bepaald in de Europese Unie ([ EU het Beleid van de Toestemming van de Gebruiker ](https://www.google.com/about/company/user-consent-policy/)). De handhaving van deze wijzigingen in de toestemmingsvereisten is vanaf 6 maart 2024 van kracht.
-> ><br/>
-> >Om zich aan het EU-beleid inzake instemming van gebruikers te houden en door te gaan met het opstellen van publiekslijsten voor gebruikers in de Europese Economische Ruimte (EER), moeten adverteerders en partners ervoor zorgen dat zij toestemming van de eindgebruiker geven bij het uploaden van publieksgegevens. Als Google-partner beschikt Adobe over de benodigde tools om te voldoen aan deze toestemmingsvereisten in het kader van de DMA in de Europese Unie.
-> ><br/>
-> >De klanten die de Privacy &amp; het Schild van de Veiligheid van Adobe hebben gekocht en het beleid van de a [ toestemming ](../../../data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) gevormd om niet-goedgekeurde profielen uit te filteren hoeven geen actie te ondernemen.
-> ><br/>
-> >De klanten die geen de Privacy &amp; het Schild van de Veiligheid van Adobe hebben gekocht moeten de [ mogelijkheden van de segmentdefinitie ](../../../segmentation/home.md#segment-definitions) binnen [ de Bouwer van het Segment ](../../../segmentation/ui/segment-builder.md) aan filter uit niet-goedgekeurde profielen gebruiken, om de bestaande bestemmingen van Real-Time CDP Google zonder onderbreking te blijven gebruiken.
+> &#x200B;><br/>
+> &#x200B;>Om zich aan het EU-beleid inzake instemming van gebruikers te houden en door te gaan met het opstellen van publiekslijsten voor gebruikers in de Europese Economische Ruimte (EER), moeten adverteerders en partners ervoor zorgen dat zij toestemming van de eindgebruiker geven bij het uploaden van publieksgegevens. Als Google-partner beschikt Adobe over de benodigde tools om te voldoen aan deze toestemmingsvereisten in het kader van de DMA in de Europese Unie.
+> &#x200B;><br/>
+> &#x200B;>De klanten die de Privacy &amp; het Schild van de Veiligheid van Adobe hebben gekocht en het beleid van de a [ toestemming ](../../../data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) gevormd om niet-goedgekeurde profielen uit te filteren hoeven geen actie te ondernemen.
+> &#x200B;><br/>
+> &#x200B;>De klanten die geen de Privacy &amp; het Schild van de Veiligheid van Adobe hebben gekocht moeten de [ mogelijkheden van de segmentdefinitie ](../../../segmentation/home.md#segment-definitions) binnen [ de Bouwer van het Segment ](../../../segmentation/ui/segment-builder.md) aan filter uit niet-goedgekeurde profielen gebruiken, om de bestaande bestemmingen van Real-Time CDP Google zonder onderbreking te blijven gebruiken.
 
 [[!DNL Google Customer Match] ](https://support.google.com/google-ads/answer/6379332?hl=en) laat u uw online en off-line gegevens gebruiken om met uw klanten over Google bezeten en in werking gestelde eigenschappen, zoals: [!DNL Search], [!DNL Shopping], en [!DNL Gmail] te bereiken en opnieuw in dienst te nemen.
 
@@ -76,7 +76,7 @@ In deze sectie wordt beschreven welke soorten publiek u naar dit doel kunt expor
 
 | Oorsprong publiek | Ondersteund | Beschrijving |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | ✓ | Het publiek produceerde door de Dienst van de Segmentatie van Experience Platform [ ](../../../segmentation/home.md). |
+| [!DNL Segmentation Service] | ✓ | Het publiek produceerde door de Dienst van de Segmentatie van Experience Platform [&#128279;](../../../segmentation/home.md). |
 | Aangepaste uploads | ✓ | Het publiek [ ingevoerde ](../../../segmentation/ui/audience-portal.md#import-audience) in Experience Platform van Csv- dossiers. |
 
 {style="table-layout:auto"}
@@ -139,9 +139,9 @@ Als u ervoor kiest om de e-mailadressen zelf te hashen, moet u voldoen aan de Go
 
 ### Hashingvereisten voor adresvelden {#address-field-hashing}
 
-Wanneer het in kaart brengen van adres-verwante gebieden aan [!DNL Google Customer Match], hakt Experience Platform **** automatisch de `address_info_first_name` en `address_info_last_name` waarden alvorens hen naar Google te verzenden. Deze automatische hashing is vereist om te voldoen aan de beveiligings- en privacyvereisten van Google.
+Wanneer het in kaart brengen van adres-verwante gebieden aan [!DNL Google Customer Match], hakt Experience Platform **&#x200B;**&#x200B;automatisch de `address_info_first_name` en `address_info_last_name` waarden alvorens hen naar Google te verzenden. Deze automatische hashing is vereist om te voldoen aan de beveiligings- en privacyvereisten van Google.
 
-Verstrek **** niet pre-gehakt waarden voor `address_info_first_name` of `address_info_last_name`. Als u al gehashte waarden opgeeft, mislukt het overeenkomende proces.
+Verstrek **&#x200B;**&#x200B;niet pre-gehakt waarden voor `address_info_first_name` of `address_info_last_name`. Als u al gehashte waarden opgeeft, mislukt het overeenkomende proces.
 
 ### Aangepaste naamruimten gebruiken {#custom-namespaces}
 
