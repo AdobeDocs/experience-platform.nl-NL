@@ -3,24 +3,24 @@ keywords: Google klant match;Google klant match;Google Customer Match
 title: Google Customer Match-verbinding
 description: Met Google Customer Match kunt u uw online- en offline gegevens gebruiken om klanten te bereiken en opnieuw contact op te nemen met andere door Google bediende en bediende eigendommen, zoals Zoeken, Winkelen en Gmail.
 exl-id: 8209b5eb-b05c-4ef7-9fdc-22a528d5f020
-source-git-commit: ce205622260f4252d1a7db7c5011366fb2ed4d3c
+source-git-commit: 4541e812ac1f44b5374b81685c1e41cb7f00993f
 workflow-type: tm+mt
-source-wordcount: '2372'
-ht-degree: 1%
+source-wordcount: '2413'
+ht-degree: 8%
 
 ---
 
-# [!DNL Google Customer Match] verbinding
+# [!DNL Google Customer Match]-verbinding
 
 >[!IMPORTANT]
 >
 > Google geeft veranderingen in de [ Adds API van Google ](https://developers.google.com/google-ads/api/docs/start), [ Overeenkomst van de Klant ](https://ads-developers.googleblog.com/2023/10/updates-to-customer-match-conversion.html) vrij, en [ Vertoning &amp; Video 360 API ](https://developers.google.com/display-video/api/guides/getting-started/overview) om de naleving en toestemmings-gerelateerde vereisten te steunen die onder de [ Wet van de Markten ](https://digital-markets-act.ec.europa.eu/index_nl) (DMA) worden bepaald in de Europese Unie ([ EU het Beleid van de Toestemming van de Gebruiker ](https://www.google.com/about/company/user-consent-policy/)). De handhaving van deze wijzigingen in de toestemmingsvereisten is vanaf 6 maart 2024 van kracht.
-><br/>
->Om zich aan het EU-beleid inzake instemming van gebruikers te houden en door te gaan met het opstellen van publiekslijsten voor gebruikers in de Europese Economische Ruimte (EER), moeten adverteerders en partners ervoor zorgen dat zij toestemming van de eindgebruiker geven bij het uploaden van publieksgegevens. Als Google-partner beschikt Adobe over de benodigde tools om te voldoen aan deze toestemmingsvereisten in het kader van de DMA in de Europese Unie.
-><br/>
->De klanten die de Privacy &amp; het Schild van de Veiligheid van Adobe hebben gekocht en het beleid van de a [ toestemming ](../../../data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) gevormd om niet-goedgekeurde profielen uit te filteren hoeven geen actie te ondernemen.
-><br/>
->De klanten die geen de Privacy &amp; het Schild van de Veiligheid van Adobe hebben gekocht moeten de [&#128279;](../../../segmentation/home.md#segment-definitions) mogelijkheden van de segmentdefinitie  binnen [ de Bouwer van het Segment ](../../../segmentation/ui/segment-builder.md) aan filter uit niet-goedgekeurde profielen gebruiken, om de bestaande bestemmingen van Real-Time CDP Google zonder onderbreking te blijven gebruiken.
+> ><br/>
+> >Om zich aan het EU-beleid inzake instemming van gebruikers te houden en door te gaan met het opstellen van publiekslijsten voor gebruikers in de Europese Economische Ruimte (EER), moeten adverteerders en partners ervoor zorgen dat zij toestemming van de eindgebruiker geven bij het uploaden van publieksgegevens. Als Google-partner beschikt Adobe over de benodigde tools om te voldoen aan deze toestemmingsvereisten in het kader van de DMA in de Europese Unie.
+> ><br/>
+> >De klanten die de Privacy &amp; het Schild van de Veiligheid van Adobe hebben gekocht en het beleid van de a [ toestemming ](../../../data-governance/enforcement/auto-enforcement.md#consent-policy-evaluation) gevormd om niet-goedgekeurde profielen uit te filteren hoeven geen actie te ondernemen.
+> ><br/>
+> >De klanten die geen de Privacy &amp; het Schild van de Veiligheid van Adobe hebben gekocht moeten de [ mogelijkheden van de segmentdefinitie ](../../../segmentation/home.md#segment-definitions) binnen [ de Bouwer van het Segment ](../../../segmentation/ui/segment-builder.md) aan filter uit niet-goedgekeurde profielen gebruiken, om de bestaande bestemmingen van Real-Time CDP Google zonder onderbreking te blijven gebruiken.
 
 [[!DNL Google Customer Match] ](https://support.google.com/google-ads/answer/6379332?hl=en) laat u uw online en off-line gegevens gebruiken om met uw klanten over Google bezeten en in werking gestelde eigenschappen, zoals: [!DNL Search], [!DNL Shopping], en [!DNL Gmail] te bereiken en opnieuw in dienst te nemen.
 
@@ -63,10 +63,10 @@ Sommige bestemmingen in Experience Platform hebben bepaalde regels en verplichti
 | `phone_sha256_e.164` | Telefoonnummers in E164-indeling, gehasht met het SHA256-algoritme | Adobe Experience Platform biedt ondersteuning voor zowel platte tekst- als SHA256-telefoonnummers. Volg de instructies in de [ passende vereisten van identiteitskaart ](#id-matching-requirements-id-matching-requirements) sectie en gebruik aangewezen namespaces voor gewone teksten en gehakt telefoonaantallen, respectievelijk. Wanneer het bronveld hashingkenmerken bevat, schakelt u de optie **[!UICONTROL Apply transformation]** in om de gegevens automatisch te laten hashen bij activering door [!DNL Experience Platform] . |
 | `email_lc_sha256` | E-mailadressen die met het algoritme SHA256 worden gehasht | Adobe Experience Platform biedt ondersteuning voor zowel platte tekst- als SHA256-e-mailadressen met hashing. Volg de instructies in de [ passende vereisten van identiteitskaart ](#id-matching-requirements-id-matching-requirements) sectie en gebruik aangewezen namespaces voor gewone teksten en gehakt e-mailadressen, respectievelijk. Wanneer het bronveld hashingkenmerken bevat, schakelt u de optie **[!UICONTROL Apply transformation]** in om de gegevens automatisch te laten hashen bij activering door [!DNL Experience Platform] . |
 | `user_id` | Aangepaste gebruikers-id&#39;s | Selecteer deze doelidentiteit wanneer uw bronidentiteit een aangepaste naamruimte is. |
-| `address_info_first_name` | Voornaam gebruiker | Deze doelidentiteit moet samen met `address_info_last_name`, `address_info_country_code` en `address_info_postal_code` worden gebruikt wanneer u adresgegevens naar uw bestemming wilt verzenden. <br><br> om Google te verzekeren past het adres aan, moet u alle vier adresgebieden (`address_info_first_name` in kaart brengen, `address_info_last_name`, `address_info_country_code`, en `address_info_postal_code`) en ervoor zorgen dat geen van deze gebieden gegevens in de uitgevoerde profielen missen. <br> Als een veld niet is toegewezen of ontbrekende gegevens bevat, komt Google niet overeen met het adres. |
-| `address_info_last_name` | Achternaam van de gebruiker | Deze doelidentiteit moet samen met `address_info_first_name`, `address_info_country_code` en `address_info_postal_code` worden gebruikt wanneer u adresgegevens naar uw bestemming wilt verzenden. <br><br> om Google te verzekeren past het adres aan, moet u alle vier adresgebieden (`address_info_first_name` in kaart brengen, `address_info_last_name`, `address_info_country_code`, en `address_info_postal_code`) en ervoor zorgen dat geen van deze gebieden gegevens in de uitgevoerde profielen missen. <br> Als een veld niet is toegewezen of ontbrekende gegevens bevat, komt Google niet overeen met het adres. |
-| `address_info_country_code` | Landcode gebruikersadres | Deze doelidentiteit moet samen met `address_info_first_name`, `address_info_last_name` en `address_info_postal_code` worden gebruikt wanneer u adresgegevens naar uw bestemming wilt verzenden. <br><br> om Google te verzekeren past het adres aan, moet u alle vier adresgebieden (`address_info_first_name` in kaart brengen, `address_info_last_name`, `address_info_country_code`, en `address_info_postal_code`) en ervoor zorgen dat geen van deze gebieden gegevens in de uitgevoerde profielen missen. <br> Als een veld niet is toegewezen of ontbrekende gegevens bevat, komt Google niet overeen met het adres. <br><br> Toegelaten formaat: Kleine letters, 2-brief landcodes in [ ISO 3166-1 alpha-2 ](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2) formaat. |
-| `address_info_postal_code` | Postcode van gebruikersadres | Deze doelidentiteit moet samen met `address_info_first_name`, `address_info_last_name` en `address_info_country_code` worden gebruikt wanneer u adresgegevens naar uw bestemming wilt verzenden. <br><br> om Google te verzekeren past het adres aan, moet u alle vier adresgebieden (`address_info_first_name` in kaart brengen, `address_info_last_name`, `address_info_country_code`, en `address_info_postal_code`) en ervoor zorgen dat geen van deze gebieden gegevens in de uitgevoerde profielen missen. <br> Als een veld niet is toegewezen of ontbrekende gegevens bevat, komt Google niet overeen met het adres. |
+| `address_info_first_name` | Voornaam gebruiker | Deze doelidentiteit moet samen met `address_info_last_name`, `address_info_country_code` en `address_info_postal_code` worden gebruikt wanneer u adresgegevens naar uw bestemming wilt verzenden. <br><br>Als u wilt dat Google het adres matcht, moet u alle vier de adresvelden in kaart brengen (`address_info_first_name`, `address_info_last_name`, `address_info_country_code` en `address_info_postal_code`) en controleren of er in deze velden geen gegevens in de geëxporteerde profielen ontbreken. <br> Als een veld niet is toegewezen of als er gegevens ontbreken, matcht Google het adres niet. |
+| `address_info_last_name` | Achternaam van de gebruiker | Deze doelidentiteit moet samen met `address_info_first_name`, `address_info_country_code` en `address_info_postal_code` worden gebruikt wanneer u adresgegevens naar uw bestemming wilt verzenden. <br><br>Als u wilt dat Google het adres matcht, moet u alle vier de adresvelden in kaart brengen (`address_info_first_name`, `address_info_last_name`, `address_info_country_code` en `address_info_postal_code`) en controleren of er in deze velden geen gegevens in de geëxporteerde profielen ontbreken. <br> Als een veld niet is toegewezen of als er gegevens ontbreken, matcht Google het adres niet. |
+| `address_info_country_code` | Landcode gebruikersadres | Deze doelidentiteit moet samen met `address_info_first_name`, `address_info_last_name` en `address_info_postal_code` worden gebruikt wanneer u adresgegevens naar uw bestemming wilt verzenden. <br><br>Als u wilt dat Google het adres matcht, moet u alle vier de adresvelden in kaart brengen (`address_info_first_name`, `address_info_last_name`, `address_info_country_code` en `address_info_postal_code`) en controleren of er in deze velden geen gegevens in de geëxporteerde profielen ontbreken. <br> Als een veld niet is toegewezen of ontbrekende gegevens bevat, komt Google niet overeen met het adres. <br><br> Toegelaten formaat: Kleine letters, 2-brief landcodes in [ ISO 3166-1 alpha-2 ](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2) formaat. |
+| `address_info_postal_code` | Postcode van gebruikersadres | Deze doelidentiteit moet samen met `address_info_first_name`, `address_info_last_name` en `address_info_country_code` worden gebruikt wanneer u adresgegevens naar uw bestemming wilt verzenden. <br><br>Als u wilt dat Google het adres matcht, moet u alle vier de adresvelden in kaart brengen (`address_info_first_name`, `address_info_last_name`, `address_info_country_code` en `address_info_postal_code`) en controleren of er in deze velden geen gegevens in de geëxporteerde profielen ontbreken. <br> Als een veld niet is toegewezen of als er gegevens ontbreken, matcht Google het adres niet. |
 
 {style="table-layout:auto"}
 
@@ -76,7 +76,7 @@ In deze sectie wordt beschreven welke soorten publiek u naar dit doel kunt expor
 
 | Oorsprong publiek | Ondersteund | Beschrijving |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | ✓ | Het publiek produceerde door de Dienst van de Segmentatie van Experience Platform [&#128279;](../../../segmentation/home.md). |
+| [!DNL Segmentation Service] | ✓ | Het publiek produceerde door de Dienst van de Segmentatie van Experience Platform [ ](../../../segmentation/home.md). |
 | Aangepaste uploads | ✓ | Het publiek [ ingevoerde ](../../../segmentation/ui/audience-portal.md#import-audience) in Experience Platform van Csv- dossiers. |
 
 {style="table-layout:auto"}
@@ -96,7 +96,7 @@ Raadpleeg de onderstaande tabel voor informatie over het exporttype en de export
 
 Alvorens vestiging een [!DNL Google Customer Match] bestemming in Experience Platform, zorg ervoor u leest en aan het beleid van Google hanteert voor het gebruiken van [!DNL Customer Match], die in de [ de steundocumentatie van Google ](https://support.google.com/google-ads/answer/6299717) wordt geschetst.
 
-Controleer vervolgens of uw [!DNL Google] -account is geconfigureerd voor een machtigingsniveau van [!DNL Standard] of hoger. Zie de [ documentatie van Ads van Google ](https://support.google.com/google-ads/answer/9978556?visit_id=637611563637058259-4176462731&amp;rd=1) voor details.
+Controleer vervolgens of uw [!DNL Google] -account is geconfigureerd voor een machtigingsniveau van [!DNL Standard] of hoger. Zie de [ documentatie van Ads van Google ](https://support.google.com/google-ads/answer/9978556?visit_id=637611563637058259-4176462731&rd=1) voor details.
 
 ### Lijst van gewenste personen {#allowlist}
 
@@ -139,9 +139,9 @@ Als u ervoor kiest om de e-mailadressen zelf te hashen, moet u voldoen aan de Go
 
 ### Hashingvereisten voor adresvelden {#address-field-hashing}
 
-Wanneer het in kaart brengen van adres-verwante gebieden aan [!DNL Google Customer Match], hakt Experience Platform **&#x200B;**&#x200B;automatisch de `address_info_first_name` en `address_info_last_name` waarden alvorens hen naar Google te verzenden. Deze automatische hashing is vereist om te voldoen aan de beveiligings- en privacyvereisten van Google.
+Wanneer het in kaart brengen van adres-verwante gebieden aan [!DNL Google Customer Match], hakt Experience Platform **** automatisch de `address_info_first_name` en `address_info_last_name` waarden alvorens hen naar Google te verzenden. Deze automatische hashing is vereist om te voldoen aan de beveiligings- en privacyvereisten van Google.
 
-Verstrek **&#x200B;**&#x200B;niet pre-gehakt waarden voor `address_info_first_name` of `address_info_last_name`. Als u al gehashte waarden opgeeft, mislukt het overeenkomende proces.
+Verstrek **** niet pre-gehakt waarden voor `address_info_first_name` of `address_info_last_name`. Als u al gehashte waarden opgeeft, mislukt het overeenkomende proces.
 
 ### Aangepaste naamruimten gebruiken {#custom-namespaces}
 
@@ -179,6 +179,10 @@ Terwijl [ vestiging ](../../ui/connect-destination.md) deze bestemming, u de vol
 * **[!UICONTROL Name]**: geef een naam op voor deze doelverbinding
 * **[!UICONTROL Description]**: geef een beschrijving voor deze doelverbinding
 * **[!UICONTROL Account ID]**: uw [ Google voegt klantenidentiteitskaart ](https://support.google.com/google-ads/answer/1704344?hl=en) toe. De indeling van de id is xxx-xxxx. Als u [!DNL Google Ads Manager Account (My Client Center)] gebruikt, gebruik dan niet uw account-id voor Manager. Gebruik in plaats hiervan [ Google Adds klant ID ](https://support.google.com/google-ads/answer/1704344?hl=en).
+
+>[!NOTE]
+>
+>Tijdens het OAuth2 verbindingsproces, kunt u &quot;de Test van Marketo&quot;zien die als Google OAuth projectnaam wordt getoond. Dit is een normaal gedrag, aangezien Adobe deze projectnaam voor de integratie van de Klant van Google gebruikt. Dit beïnvloedt uw bestemmingsconfiguratie niet.
 
 >[!IMPORTANT]
 >
@@ -256,4 +260,4 @@ Wanneer het vormen van deze bestemming, kunt u de volgende fout ontvangen:
 
 `{"message":"Google Customer Match Error: OperationAccessDenied.ACTION_NOT_PERMITTED","code":"400 BAD_REQUEST"}`
 
-Deze fout komt voor wanneer de klantenrekeningen niet aan de [ eerste vereisten ](#google-account-prerequisites) voldoen. Neem contact op met Google om dit probleem op te lossen en zorg ervoor dat uw account op de lijst met toegestane items staat en geconfigureerd is voor een machtigingsniveau van [!DNL Standard] of hoger. Zie de [ documentatie van Ads van Google ](https://support.google.com/google-ads/answer/9978556?visit_id=637611563637058259-4176462731&amp;rd=1) voor details.
+Deze fout komt voor wanneer de klantenrekeningen niet aan de [ eerste vereisten ](#google-account-prerequisites) voldoen. Neem contact op met Google om dit probleem op te lossen en zorg ervoor dat uw account op de lijst met toegestane items staat en geconfigureerd is voor een machtigingsniveau van [!DNL Standard] of hoger. Zie de [ documentatie van Ads van Google ](https://support.google.com/google-ads/answer/9978556?visit_id=637611563637058259-4176462731&rd=1) voor details.
