@@ -4,9 +4,9 @@ title: Activeer publiek aan op dossier-gebaseerde bestemmingen door de Dienst AP
 description: Leer hoe u de Flow Service API gebruikt om bestanden met gekwalificeerde profielen te exporteren naar cloudopslagbestemmingen.
 type: Tutorial
 exl-id: 62028c7a-3ea9-4004-adb7-5e27bbe904fc
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: eb7d1b9c167839db39cbb28bf497edac706c0b6c
 workflow-type: tm+mt
-source-wordcount: '4752'
+source-wordcount: '4900'
 ht-degree: 0%
 
 ---
@@ -118,7 +118,7 @@ U hebt deze IDs nodig om diverse entiteiten van de stroomdienst in de volgende s
 
 **Verzoek**
 
-+++Ophalen [!DNL connection spec] voor [!DNL Amazon S3]
++++[!DNL connection spec] ophalen voor [!DNL Amazon S3]
 
 ```shell
 curl --location --request GET 'https://platform.adobe.io/data/foundation/flowservice/connectionSpecs/4fce964d-3f37-408f-9778-e597338a21ee' \
@@ -152,7 +152,7 @@ curl --location --request GET 'https://platform.adobe.io/data/foundation/flowser
 
 **Verzoek**
 
-+++Ophalen [!DNL connection spec] voor [!DNL Azure Blob Storage]
++++[!DNL connection spec] ophalen voor [!DNL Azure Blob Storage]
 
 ```shell
 curl --location --request GET 'https://platform.adobe.io/data/foundation/flowservice/connectionSpecs/6d6b59bf-fb58-4107-9064-4d246c0e5bb2' \
@@ -186,7 +186,7 @@ curl --location --request GET 'https://platform.adobe.io/data/foundation/flowser
 
 **Verzoek**
 
-+++ ophalen [!DNL connection spec] voor [!DNL Azure Data Lake Gen 2(ADLS Gen2])
++++[!DNL connection spec] ophalen voor [!DNL Azure Data Lake Gen 2(ADLS Gen2] )
 
 ```shell
 curl --location --request GET 'https://platform.adobe.io/data/foundation/flowservice/connectionSpecs/be2c3209-53bc-47e7-ab25-145db8b873e1' \
@@ -220,7 +220,7 @@ curl --location --request GET 'https://platform.adobe.io/data/foundation/flowser
 
 **Verzoek**
 
-+++Ophalen [!DNL connection spec] voor [!DNL Data Landing Zone(DLZ)]
++++[!DNL connection spec] ophalen voor [!DNL Data Landing Zone(DLZ)]
 
 ```shell
 curl --location --request GET 'https://platform.adobe.io/data/foundation/flowservice/connectionSpecs/10440537-2a7b-4583-ac39-ed38d4b848e8' \
@@ -254,7 +254,7 @@ curl --location --request GET 'https://platform.adobe.io/data/foundation/flowser
 
 **Verzoek**
 
-+++Ophalen [!DNL connection spec] voor [!DNL Google Cloud Storage]
++++[!DNL connection spec] ophalen voor [!DNL Google Cloud Storage]
 
 ```shell
 curl --location --request GET 'https://platform.adobe.io/data/foundation/flowservice/connectionSpecs/c5d93acb-ea8b-4b14-8f53-02138444ae99' \
@@ -288,7 +288,7 @@ curl --location --request GET 'https://platform.adobe.io/data/foundation/flowser
 
 **Verzoek**
 
-+++ophalen [!DNL connection spec] voor SFTP
++++[!DNL connection spec] ophalen voor SFTP
 
 ```shell
 curl --location --request GET 'https://platform.adobe.io/data/foundation/flowservice/connectionSpecs/36965a81-b1c6-401b-99f8-22508f1e6a26' \
@@ -987,7 +987,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 **Verzoek**
 
-+++SFTP met wachtwoord - de Verzoek van de Verbinding van de basis
++++SFTP met wachtwoord - Aanvraag van de basisverbinding
 
 >[!TIP]
 >
@@ -1081,7 +1081,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 **Reactie**
 
-+++SFTP - De reactie van de basisverbinding
++++SFTP - Basisverbindingsreactie
 
 ```json
 {
@@ -1137,11 +1137,11 @@ U kunt desgewenst versleuteling toevoegen aan uw geëxporteerde bestanden. Hierv
             ]
 ```
 
-+++
++++ 
 
 **Verzoek**
 
-+++Voeg encryptie toe aan basisverbinding - Verzoek
++++Codering toevoegen aan basisverbinding - Aanvraag
 
 Maak een notitie van de gemarkeerde regels met inline opmerkingen in het aanvraagvoorbeeld, die aanvullende informatie bevatten. Verwijder de inline commentaren wanneer het kopiëren-kleeft van het verzoek in uw terminal van keus.
 
@@ -1181,7 +1181,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 **Reactie**
 
-+++Voeg encryptie toe aan basisverbinding - Reactie
++++Codering toevoegen aan basisverbinding - Reactie
 
 ```json
 {
@@ -2422,7 +2422,8 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
         "bucketName": "your-bucket-name",
         "path": "folder/subfolder",
         "compression": "NONE",
-        "fileType": "JSON"
+        "fileType": "JSON",
+        "includeFileManifest": true // Include this parameter if you want to enable manifest file generation for your destination
     },
     "connectionSpec": {
         "id": "4fce964d-3f37-408f-9778-e597338a21ee", // Amazon S3 connection spec id
@@ -2456,6 +2457,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
       "path":"folder/subfolder",
       "compression":"GZIP",
       "fileType":"CSV",
+      "includeFileManifest": true, //Include this parameter if you want to enable manifest file generation for your destination
       "csvOptions":{
          "nullValue":"null",
          "emptyValue":"",
@@ -2475,7 +2477,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 **Reactie**
 
-+++Target-verbinding - Reactie
++++Doelverbinding - Reactie
 
 ```json
 {
@@ -2514,7 +2516,8 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
         "container": "your-container-name",
         "path": "folder/subfolder",
         "compression": "NONE",
-        "fileType": "JSON"
+        "fileType": "JSON",
+        "includeFileManifest": true // Include this parameter if you want to enable manifest file generation for your destination
     },
     "connectionSpec": {
         "id": "6d6b59bf-fb58-4107-9064-4d246c0e5bb2", // Azure Blob Storage connection spec id
@@ -2548,6 +2551,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
       "path":"folder/subfolder",
       "compression":"GZIP",
       "fileType":"CSV",
+      "includeFileManifest": true, //Include this parameter if you want to enable manifest file generation for your destination
       "csvOptions":{
          "nullValue":"null",
          "emptyValue":"",
@@ -2567,7 +2571,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 **Reactie**
 
-+++Target-verbinding - Reactie
++++Doelverbinding - Reactie
 
 ```json
 {
@@ -2605,7 +2609,8 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
         "mode": "Server-to-server",
         "path": "folder/subfolder",
         "compression": "NONE",
-        "fileType": "JSON"
+        "fileType": "JSON",
+        "includeFileManifest": true // Include this parameter if you want to enable manifest file generation for your destination
     },
     "connectionSpec": {
         "id": "be2c3209-53bc-47e7-ab25-145db8b873e1", // Azure Data Lake Gen 2(ADLS Gen2) connection spec id
@@ -2639,6 +2644,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
       "path":"folder/subfolder",
       "compression":"GZIP",
       "fileType":"CSV",
+      "includeFileManifest": true, //Include this parameter if you want to enable manifest file generation for your destination
       "csvOptions":{
          "nullValue":"null",
          "emptyValue":"",
@@ -2658,7 +2664,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 **Reactie**
 
-+++Target-verbinding - Reactie
++++Doelverbinding - Reactie
 
 ```json
 {
@@ -2696,7 +2702,8 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
         "mode": "Server-to-server",
         "path": "folder/subfolder",
         "compression": "NONE",
-        "fileType": "JSON"
+        "fileType": "JSON",
+        "includeFileManifest": true // Include this parameter if you want to enable manifest file generation for your destination
     },
     "connectionSpec": {
         "id": "10440537-2a7b-4583-ac39-ed38d4b848e8", // Data Landing Zone connection spec id
@@ -2730,6 +2737,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
       "path":"folder/subfolder",
       "compression":"GZIP",
       "fileType":"CSV",
+      "includeFileManifest": true, //Include this parameter if you want to enable manifest file generation for your destination
       "csvOptions":{
          "nullValue":"null",
          "emptyValue":"",
@@ -2749,7 +2757,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 **Reactie**
 
-+++Target-verbinding - Reactie
++++Doelverbinding - Reactie
 
 ```json
 {
@@ -2788,7 +2796,8 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
         "bucketName": "your-bucket-name",
         "path": "folder/subfolder",
         "compression": "NONE",
-        "fileType": "JSON"
+        "fileType": "JSON",
+        "includeFileManifest": true // Include this parameter if you want to enable manifest file generation for your destination
     },
     "connectionSpec": {
         "id": "c5d93acb-ea8b-4b14-8f53-02138444ae99", // Google Cloud Storage connection spec id
@@ -2822,6 +2831,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
       "path":"folder/subfolder",
       "compression":"GZIP",
       "fileType":"CSV",
+      "includeFileManifest": true, //Include this parameter if you want to enable manifest file generation for your destination
       "csvOptions":{
          "nullValue":"null",
          "emptyValue":"",
@@ -2841,7 +2851,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 **Reactie**
 
-+++Target-verbinding - Reactie
++++Doelverbinding - Reactie
 
 ```json
 {
@@ -2856,7 +2866,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 **Verzoek**
 
-+++SFTP - verzoek van de Verbinding van het doel
++++SFTP - Aanvraag van de Verbinding van het doel
 
 >[!TIP]
 >
@@ -2879,7 +2889,8 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
         "mode": "Server-to-server",
         "remotePath": "folder/subfolder",
         "compression": "NONE",
-        "fileType": "JSON"
+        "fileType": "JSON",
+        "includeFileManifest": true // Include this parameter if you want to enable manifest file generation for your destination
     },
     "connectionSpec": {
         "id": "36965a81-b1c6-401b-99f8-22508f1e6a26", // SFTP connection spec id
@@ -2890,7 +2901,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 +++
 
-+++SFTP - doel verbindingsverzoek met opties CSV
++++SFTP - Doel verbindingsverzoek met CSV-opties
 
 >[!TIP]
 >
@@ -2913,6 +2924,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
       "path":"folder/subfolder",
       "compression":"GZIP",
       "fileType":"CSV",
+      "includeFileManifest": true, //Include this parameter if you want to enable manifest file generation for your destination
       "csvOptions":{
          "nullValue":"null",
          "emptyValue":"",
@@ -2932,7 +2944,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 **Reactie**
 
-+++Target-verbinding - Reactie
++++Doelverbinding - Reactie
 
 ```json
 {
@@ -2961,7 +2973,7 @@ De volgende stap in de bestemmingsconfiguratie moet een dataflow tot stand breng
 
 **Verzoek**
 
-+++Maak doelpubliek exportgegevens naar [!DNL Amazon S3] -doel - Verzoek
++++Doelgroep exportgegevens maken naar [!DNL Amazon S3] -doel - Aanvraag
 
 Maak een notitie van de gemarkeerde regels met inline opmerkingen in het aanvraagvoorbeeld, die aanvullende informatie bevatten. Verwijder de inline commentaren in het verzoek wanneer het kopiëren-kleeft van het verzoek in uw terminal van keus.
 
@@ -3009,7 +3021,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 **Verzoek**
 
-+++Maak doelpubliek exportgegevens naar [!DNL Azure Blob Storage] -doel - Verzoek
++++Doelgroep exportgegevens maken naar [!DNL Azure Blob Storage] -doel - Aanvraag
 
 Maak een notitie van de gemarkeerde regels met inline opmerkingen in het aanvraagvoorbeeld, die aanvullende informatie bevatten. Verwijder de inline commentaren in het verzoek wanneer het kopiëren-kleeft van het verzoek in uw terminal van keus.
 
@@ -3069,7 +3081,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 **Verzoek**
 
-+++Maak doelpubliek exportgegevens naar [!DNL Azure Data Lake Gen 2(ADLS Gen2)] -doel - Verzoek
++++Doelgroep exportgegevens maken naar [!DNL Azure Data Lake Gen 2(ADLS Gen2)] -doel - Aanvraag
 
 Maak een notitie van de gemarkeerde regels met inline opmerkingen in het aanvraagvoorbeeld, die aanvullende informatie bevatten. Verwijder de inline commentaren in het verzoek wanneer het kopiëren-kleeft van het verzoek in uw terminal van keus.
 
@@ -3117,7 +3129,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 **Verzoek**
 
-+++Maak doelpubliek exportgegevens naar [!DNL Data Landing Zone] -doel - Verzoek
++++Doelgroep exportgegevens maken naar [!DNL Data Landing Zone] -doel - Aanvraag
 
 Maak een notitie van de gemarkeerde regels met inline opmerkingen in het aanvraagvoorbeeld, die aanvullende informatie bevatten. Verwijder de inline commentaren in het verzoek wanneer het kopiëren-kleeft van het verzoek in uw terminal van keus.
 
@@ -3165,7 +3177,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 **Verzoek**
 
-+++Maak doelpubliek exportgegevens naar [!DNL Google Cloud Storage] -doel - Verzoek
++++Doelgroep exportgegevens maken naar [!DNL Google Cloud Storage] -doel - Aanvraag
 
 Maak een notitie van de gemarkeerde regels met inline opmerkingen in het aanvraagvoorbeeld, die aanvullende informatie bevatten. Verwijder de inline commentaren in het verzoek wanneer het kopiëren-kleeft van het verzoek in uw terminal van keus.
 
@@ -3213,7 +3225,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 **Verzoek**
 
-+++Gegevens voor publiek exporteren naar SFTP-doel maken - Aanvraag
++++Gegevensstroom voor het exporteren van publiek naar SFTP-bestemming maken - Aanvraag
 
 Maak een notitie van de gemarkeerde regels met inline opmerkingen in het aanvraagvoorbeeld, die aanvullende informatie bevatten. Verwijder de inline commentaren in het verzoek wanneer het kopiëren-kleeft van het verzoek in uw terminal van keus.
 
@@ -3292,7 +3304,7 @@ Hieronder vindt u voorbeelden van verzoeken en reacties om kenmerken en identite
 
 **Verzoek om attributen** te krijgen
 
-+++Beschikbare kenmerken ophalen uit uw vakschema - Verzoek
++++Beschikbare kenmerken ophalen uit uw vakschema - Aanvragen
 
 ```shell
 curl --location --request GET 'https://platform.adobe.io/data/core/ups/config/entityTypes/_xdm.context.profile?property=fullSchema==true&property=includeRelationshipDescriptors==true' \ 
@@ -3677,7 +3689,7 @@ Vervolgens moet u de reactie van boven kopiëren en deze gebruiken om uw invoers
 
 **Verzoek om inputschema** tot stand te brengen
 
-+++Een invoerschema maken - verzoek
++++Een invoerschema maken - aanvragen
 
 ```shell
 curl --location --request POST 'https://platform.adobe.io/data/foundation/conversion/schemas/' \ 
@@ -4034,7 +4046,7 @@ Vervolgens moet u een uitvoerschema maken. Kopieer de JSON-reactie die u hierbov
 
 **Verzoek**
 
-+++Een uitvoerschema maken - Verzoek
++++Een uitvoerschema maken - aanvragen
 
 ```shell
 curl --location --request POST 'https://platform.adobe.io/data/foundation/conversion/schemas' \
@@ -4364,7 +4376,7 @@ De id in de reactie vertegenwoordigt de unieke id van het invoerschema dat u heb
 
 ### Toewijzingsset maken {#create-mapping-set}
 
-Daarna, gebruik prep API van 0&rbrace; gegevens [&#128279;](https://developer.adobe.com/experience-platform-apis/references/data-prep/#tag/Mapping-sets/operation/createMappingSet) om de afbeelding tot stand te brengen die door input schemaidentiteitskaart, identiteitskaart van het outputschema, en de gewenste gebiedstoewijzingen te gebruiken wordt geplaatst.
+Daarna, gebruik prep API van 0} gegevens [ om de afbeelding tot stand te brengen die door input schemaidentiteitskaart, identiteitskaart van het outputschema, en de gewenste gebiedstoewijzingen te gebruiken wordt geplaatst.](https://developer.adobe.com/experience-platform-apis/references/data-prep/#tag/Mapping-sets/operation/createMappingSet)
 
 >[!BEGINSHADEBOX]
 
@@ -4504,7 +4516,7 @@ De reactie van de Dienst API van de Stroom keert identiteitskaart van bijgewerkt
 
 ![ Stappen om publiek te activeren die de huidige stap benadrukken die de gebruiker ](/help/destinations/assets/api/file-based-segment-export/step7.png) is
 
-Gebruik de bewerking `PATCH` om updates van de gegevensstroom uit te voeren. U kunt bijvoorbeeld een marketingactie toevoegen aan uw gegevensstroom. U kunt uw gegevensstromen ook bijwerken en velden selecteren als verplichte toetsen of als deduplicatietoetsen.
+Gebruik de bewerking `PATCH` om updates van de gegevensstroom uit te voeren. Bijvoorbeeld, kunt u een marketing actie aan uw gegevensstroom toevoegen, uw gegevensstromen bijwerken om gebieden als verplichte sleutels of deduplicatietoetsen te selecteren, of de productie van dossiermanifest aan bestaande bestemmingen toevoegen.
 
 ### Een marketingactie toevoegen {#add-marketing-action}
 
@@ -4526,7 +4538,7 @@ Om a [ marketing actie ](/help/data-governance/api/marketing-actions.md) toe te 
 >
 >Voordat u een marketingactie toevoegt aan een gegevensstroom, kunt u de bestaande core- en aangepaste marketingacties opzoeken. Bekijk [ hoe te om een lijst van bestaande marketing acties ](/help/data-governance/api/marketing-actions.md#list) terug te winnen.
 
-+++Voeg een marketing actie aan een bestemmingsdataflow toe - Verzoek
++++Een marketingactie toevoegen aan een doelgegevensstroom - Aanvragen
 
 ```shell
 curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flowservice/flows/{DATAFLOW_ID}' \
@@ -4560,7 +4572,7 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
 
 **Reactie**
 
-+++ Voeg een marketingactie toe - Reactie
++++Een marketingactie toevoegen - Reactie
 
 Een geslaagde reactie retourneert de antwoordcode `200` samen met de id van de bijgewerkte gegevensstroom en de bijgewerkte eTag.
 
@@ -4591,7 +4603,7 @@ Om a [ verplichte sleutel ](/help/destinations/ui/activate-batch-profile-destina
 
 **Verzoek**
 
-+++Voeg een identiteit toe als verplicht veld - Verzoek
++++Een id toevoegen als verplicht veld - Aanvraag
 
 ```shell
 curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flowservice/flows/{DATAFLOW_ID}' \
@@ -4615,7 +4627,7 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
 
 +++
 
-+++ Voeg een XDM-kenmerk toe als verplicht veld - Verzoek
++++Een XDM-kenmerk toevoegen als verplicht veld - Aanvraag
 
 ```shell
 curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flowservice/flows/{DATAFLOW_ID}' \
@@ -4641,7 +4653,7 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
 
 **Reactie**
 
-+++ Voeg een verplicht veld toe - Reactie
++++Een verplicht veld toevoegen - Reactie
 
 ```json
 {
@@ -4670,7 +4682,7 @@ Om a [ deduplicatiesleutel ](/help/destinations/ui/activate-batch-profile-destin
 
 **Verzoek**
 
-+++Een id toevoegen als deduplicatietoets - Verzoek
++++Een identiteit toevoegen als deduplicatietoets - Aanvragen
 
 ```shell
 curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flowservice/flows/{DATAFLOW_ID}' \
@@ -4697,7 +4709,7 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
 
 +++
 
-+++Voeg een XDM-kenmerk toe als deduplicatietoets - Verzoek
++++Een XDM-kenmerk toevoegen als deduplicatietoets - Verzoek
 
 ```shell
 curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flowservice/flows/{DATAFLOW_ID}' \
@@ -4726,7 +4738,7 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
 
 **Reactie**
 
-+++ Voeg een verplicht veld toe - Reactie
++++Een verplicht veld toevoegen - Reactie
 
 ```json
 {
@@ -4736,6 +4748,44 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
 ```
 
 +++
+
+>[!ENDSHADEBOX]
+
+### Bestandmanifest-generatie toevoegen aan bestaande bestemming {#add-file-manifest}
+
+Als u bestands-manifest-generatie wilt toevoegen aan een bestaand doel, moet u de parameters voor de doelverbinding bijwerken met de bewerking `PATCH` . Dit laat duidelijke dossiergeneratie voor uw bestemming toe, die meta-gegevens over de uitgevoerde dossiers verstrekt.
+
+>[!IMPORTANT]
+>
+>De header `If-Match` is vereist wanneer u een `PATCH` -aanvraag indient. De waarde voor deze header is de unieke versie van de doelverbinding die u wilt bijwerken. De etag waarde werkt met elke succesvolle update van een stroomentiteit zoals dataflow, doelverbinding, en anderen bij.
+>
+> Als u de laatste versie van de etag-waarde wilt ophalen, voert u een GET-aanvraag uit naar het `https://platform.adobe.io/data/foundation/flowservice/targetConnections/{ID}` -eindpunt, waarbij `{ID}` de doel-verbindings-id is die u wilt bijwerken.
+>
+> Zorg ervoor dat u de waarde van de header `If-Match` tussen dubbele aanhalingstekens plaatst, zoals in de onderstaande voorbeelden, wanneer u `PATCH` -aanvragen maakt.
+
+>[!BEGINSHADEBOX]
+
+**Verzoek**
+
++++Bestandmanifest toevoegen aan bestaande doelverbinding - Verzoek
+
+```shell
+curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flowservice/targetConnections/{TARGET_CONNECTION_ID}' \
+--header 'accept: application/json' \
+--header 'Content-Type: application/json' \
+--header 'x-api-key: {API_KEY}' \
+--header 'x-gw-ims-org-id: {ORG_ID}' \
+--header 'x-sandbox-name: {SANDBOX_NAME}' \
+--header 'Authorization: Bearer {ACCESS_TOKEN}' \
+--header 'If-Match: "{ETAG_HERE}"' \
+--data-raw '[
+  {
+    "op": "add",
+    "path": "/params/includeFileManifest",
+    "value": true
+  }
+]'
+```
 
 >[!ENDSHADEBOX]
 
@@ -4749,7 +4799,7 @@ Om de uitvoering van een gegevensstroom te controleren, gebruik Dataflow loops A
 
 **Verzoek**
 
-+++Dataflow-uitvoering ophalen - Verzoek
++++DataFlow-uitvoering ophalen - Aanvraag
 
 ```shell
 curl --location --request GET 'https://platform.adobe.io/data/foundation/flowservice/runs?property=flowId==eb54b3b3-3949-4f12-89c8-64eafaba858f' \
@@ -4765,7 +4815,7 @@ curl --location --request GET 'https://platform.adobe.io/data/foundation/flowser
 
 **Reactie**
 
-+++DataFlow-runtime ophalen
++++DataFlow-uitvoering ophalen - Reactie
 
 ```json
 {
