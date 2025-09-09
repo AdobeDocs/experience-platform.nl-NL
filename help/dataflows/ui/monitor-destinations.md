@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Dataflows voor Doelen in UI controleren
 type: Tutorial
 exl-id: 8eb7bb3c-f2dc-4dbc-9cf5-3d5d3224f5f1
-source-git-commit: fa7cfea74c5b76dd5643aaa2e9dd7447e9b9ef42
+source-git-commit: 9d92999df8e35ac6223986ece8a98af72ab6ace8
 workflow-type: tm+mt
-source-wordcount: '3452'
+source-wordcount: '3454'
 ht-degree: 0%
 
 ---
@@ -86,10 +86,10 @@ Er wordt een lijst met afzonderlijke reeksen en de bijbehorende maatstaven weerg
 
 Elke individuele dataflow run toont de volgende details:
 
-- **[!UICONTROL Dataflow run start]**: De tijd waarop de gegevensstroom is gestart. Voor het stromen dataflow looppas, legt Experience Platform metriek op het begin van dataflow looppas, in de vorm van uurmetriek vast. Dit betekent dat voor het stromen dataflow looppas, als een dataflow looppas bijvoorbeeld bij 10:30PM begon, metrisch de begintijd als 10:00 PM in UI toont.
+- **[!UICONTROL Dataflow run start]**: De tijd waarop de gegevensstroom is gestart. Voor het stromen dataflow looppas, legt Experience Platform metriek op het begin van dataflow looppas, in de vorm van uurmetriek vast. Dit betekent dat voor het stromen dataflow looppas, als een dataflow looppas bijvoorbeeld bij 10 :30PM begon, metrisch toont de begintijd zoals 10 :00 PM in UI.
 - **[!UICONTROL Processing time]**: De hoeveelheid tijd die nodig was voor het uitvoeren van de gegevensstroom om te verwerken.
    - Bij **[!UICONTROL completed]** -uitvoering wordt bij de verwerkingstijd altijd een uur gemeten.
-   - Voor dataflow-run die nog steeds de status **[!UICONTROL processing]** heeft, blijft het venster om alle metriek vast te leggen langer dan een uur open om alle metriek te verwerken die overeenkomen met de dataflow-run. Bijvoorbeeld, zou een dataflow looppas die bij 9:30 AM begon in een verwerkingsstaat één uur en dertig minuten kunnen blijven om alle metriek te vangen en te verwerken. Dan, zodra het verwerkingsvenster sluit en het statuut van de dataflow looppas updates aan **voltooide**, wordt de getoonde verwerkingstijd veranderd in één uur.
+   - Voor dataflow-run die nog steeds de status **[!UICONTROL processing]** heeft, blijft het venster om alle metriek vast te leggen langer dan een uur open om alle metriek te verwerken die overeenkomen met de dataflow-run. Bijvoorbeeld, zou een dataflow looppas die bij 9 :30 AM begon in een verwerkingsstaat één uur en dertig minuten kunnen blijven om alle metriek te vangen en te verwerken. Dan, zodra het verwerkingsvenster sluit en het statuut van de dataflow looppas updates aan **voltooide**, wordt de getoonde verwerkingstijd veranderd in één uur.
 - **[!UICONTROL Profiles received]**: Het totale aantal profielen dat is ontvangen in de gegevensstroom.
 - **[!UICONTROL Identities activated]**: Het totale aantal profielidentiteiten dat met succes aan de geselecteerde bestemming als deel van de dataflow looppas werd geactiveerd. Deze metrische waarde bevat identiteiten die zijn gemaakt, bijgewerkt en verwijderd uit geëxporteerde doelgroepen.
 - **[!UICONTROL Identities excluded]**: Het totale aantal profiel-id&#39;s dat van activering is uitgesloten op basis van ontbrekende kenmerken en schending van toestemming.
@@ -119,13 +119,13 @@ Op de detailpagina wordt ook een lijst met mislukte identiteiten en identiteiten
 
 ![ verslagen Dataflow voor het stromen bestemmingen met een benadrukt foutenmelding.](../assets/ui/monitor-destinations/dataflow-records-stream.png)
 
-#### [!BADGE &#x200B; Beta &#x200B;]{type=Informative} publiek-vlakke dataflow looppas controle voor het stromen bestemmingen {#audience-level-dataflow-runs-for-streaming-destinations}
+#### [!BADGE  Beta ]{type=Informative} publiek-vlakke dataflow looppas controle voor het stromen bestemmingen {#audience-level-dataflow-runs-for-streaming-destinations}
 
 U kunt informatie bekijken over de geactiveerde, uitgesloten of mislukte identiteiten uitgesplitst op publieksniveau, voor elk publiek dat deel van dataflow uitmaakt.
 
 De controle op het niveau van het publiek voor het stromen bestemmingen is momenteel beschikbaar slechts voor de volgende bestemmingen:
 
-- [[!DNL (API) Oracle Eloqua] verbinding](../../destinations/catalog/email-marketing/oracle-eloqua-api.md)
+- [[!DNL (API) Oracle Eloqua]-verbinding](../../destinations/catalog/email-marketing/oracle-eloqua-api.md)
 - [[!DNL (V2) Marketo Engage]](../../destinations/catalog/adobe/marketo-engage.md)
 - [[!DNL Airship Attributes]](../../destinations/catalog/mobile-engagement/airship-attributes.md)
 - [[!DNL Amazon Kinesis]](../../destinations/catalog/cloud-storage/amazon-kinesis.md)
@@ -159,7 +159,7 @@ De controle op het niveau van het publiek voor het stromen bestemmingen is momen
 >id="platform_monitoring_dataflow_run_details_activation"
 >title="Gegevens gegevensstroom uitvoeren"
 >abstract="De gegevens van de bestemmingdataflow looppas bevatten informatie over de activeringsstatus van een publiek en metriek die van het Profiel van de Klant in real time wordt genomen om unieke identiteiten te produceren. Raadpleeg de handleiding voor metrische definities voor meer informatie."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/dataflows/ui/monitor-destinations.html?lang=nl-NL#dataflow-runs-for-streaming-destinations" text="Dataflow wordt uitgevoerd voor streamingdoelen"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/dataflows/ui/monitor-destinations.html#dataflow-runs-for-streaming-destinations" text="Dataflow wordt uitgevoerd voor streamingdoelen"
 
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_profiles_received_batch"
@@ -236,7 +236,7 @@ U kunt ook selecteren om rijke informatie over een bepaalde gegevensstroom en zi
 >title="Activering"
 >abstract="De weergave voor doelactivering bevat informatie over de activeringsstatus van een publiek en maatstaven die vanuit het realtime-klantprofiel zijn genomen om unieke identiteiten te genereren."
 
-Om tot het [!UICONTROL Monitoring] dashboard toegang te hebben, selecteer **[!UICONTROL Monitoring]** (![ controlepictogram ](/help/images/icons/monitoring.png)) in de linkernavigatie. Selecteer [!UICONTROL Destinations] eenmaal op de [!UICONTROL Monitoring] -pagina. Het dashboard van [!UICONTROL Monitoring] bevat metriek en informatie over de banen van de bestemmingslooppas.
+Om tot het [!UICONTROL Monitoring] dashboard toegang te hebben, selecteer **[!UICONTROL Monitoring]** (![ controlepictogram ](/help/images/icons/monitoring.png)) in de linkernavigatie. Selecteer [!UICONTROL Monitoring] eenmaal op de [!UICONTROL Destinations] -pagina. Het dashboard van [!UICONTROL Monitoring] bevat metriek en informatie over de banen van de bestemmingslooppas.
 
 Gebruik het dashboard van [!UICONTROL Destinations] om een algemeen idee van de gezondheid van uw activeringsstromen te krijgen. Begin door inzichten op een bijeengevoegd niveau voor alle partij en het stromen bestemmingen te krijgen en dan neer in gedetailleerde meningen voor dataflows, dataflow looppas, en geactiveerd publiek voor een diepgaande blik op uw activeringsgegevens te boren. De schermen in het dashboard van [!UICONTROL Monitoring] verstrekken actionable inzichten door metriek en foutenbeschrijvingen om u te helpen om het even welke problemen oplossen die zich in uw activeringsscenario&#39;s zouden kunnen voordoen.
 
@@ -327,11 +327,27 @@ U activeert bijvoorbeeld een publiek met de naam &#39;Loyalty Member States in C
 >
 >- De publiek-vlakke mening is momenteel beschikbaar voor de hieronder vermelde bestemmingen. De uitrol is gepland voor verdere het stromen bestemmingen.
 >
->   - [[!DNL Google Customer Match + Display & Video 360]](/help/destinations/catalog/advertising/google-customer-match-dv360.md)
->   - [[!DNL (V2) Marketo Engage]](/help/destinations/catalog/adobe/marketo-engage.md)
->   - [[!DNL HTTP API]](/help/destinations/catalog/streaming/http-destination.md)
->   - [[!DNL Amazon Kinesis]](/help/destinations/catalog/cloud-storage/amazon-kinesis.md)
->   - [[!DNL Azure Event Hubs]](/help/destinations/catalog/cloud-storage/azure-event-hubs.md)
+>   - [[!DNL (API) Oracle Eloqua] verbinding](../../destinations/catalog/email-marketing/oracle-eloqua-api.md)
+>   - [[!DNL (V2) Marketo Engage]](../../destinations/catalog/adobe/marketo-engage.md)
+>   - [[!DNL Airship Attributes]](../../destinations/catalog/mobile-engagement/airship-attributes.md)
+>   - [[!DNL Amazon Kinesis]](../../destinations/catalog/cloud-storage/amazon-kinesis.md)
+>   - [[!DNL Azure Event Hubs]](../../destinations/catalog/cloud-storage/azure-event-hubs.md)
+>   - [[!DNL Google Customer Match + Display & Video 360]](../../destinations/catalog/advertising/google-customer-match-dv360.md)
+>   - [[!DNL HTTP API]](../../destinations/catalog/streaming/http-destination.md)
+>   - [[!DNL HubSpot]](../../destinations/catalog/crm/hubspot.md)
+>   - [[!DNL Magnite: Real-time]](../../destinations/catalog/advertising/magnite-streaming.md)
+>   - [[!DNL Marketo Engage Person Sync]](../../destinations/catalog/adobe/marketo-engage-person-sync.md)
+>   - [[!DNL Microsoft Dynamics 365]](../../destinations/catalog/crm/microsoft-dynamics-365.md)
+>   - [[!DNL Moengage]](../../destinations/catalog/mobile-engagement/moengage.md)
+>   - [[!DNL Outreach]](../../destinations/catalog/crm/outreach.md)
+>   - [[!DNL PubMatic Connect]](../../destinations/catalog/advertising/pubmatic.md)
+>   - [[!DNL PubMatic Connect (Custom Audience ID Mapping)]](../../destinations/catalog/advertising/pubmatic.md)
+>   - [[!DNL Qualtrics Automations]](../../destinations/catalog/survey/qualtrics-automations.md)
+>   - [[!DNL RainFocus Attendee Profiles]](../../destinations/catalog/marketing-automation/rainfocus.md)
+>   - [[!DNL SAP Commerce]](../../destinations/catalog/ecommerce/sap-commerce.md)
+>   - [[!DNL Snowflake]](../../destinations/catalog/cloud-storage/snowflake.md)
+>   - [[!DNL Yahoo DataX]](../../destinations/catalog/advertising/datax.md)
+>   - [[!DNL Zendesk]](../../destinations/catalog/crm/zendesk.md)
 >   - Batchbestemmingen (op basis van bestanden)
 > 
 >- Voor batchbestemmingen, worden de publiek-vlakke metriek momenteel geregistreerd voor succesvolle dataflow looppas slechts. Zij worden niet geregistreerd voor ontbroken dataflow looppas en uitgesloten verslagen. Voor dataflow-run op streamingdoelen worden meetgegevens vastgelegd en weergegeven voor geactiveerde en uitgesloten records.
