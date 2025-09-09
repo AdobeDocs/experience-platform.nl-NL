@@ -119,7 +119,7 @@ Op de detailpagina wordt ook een lijst met mislukte identiteiten en identiteiten
 
 ![ verslagen Dataflow voor het stromen bestemmingen met een benadrukt foutenmelding.](../assets/ui/monitor-destinations/dataflow-records-stream.png)
 
-#### [!BADGE  Beta ]{type=Informative} publiek-vlakke dataflow looppas controle voor het stromen bestemmingen {#audience-level-dataflow-runs-for-streaming-destinations}
+#### [!BADGE &#x200B; Beta &#x200B;]{type=Informative} publiek-vlakke dataflow looppas controle voor het stromen bestemmingen {#audience-level-dataflow-runs-for-streaming-destinations}
 
 U kunt informatie bekijken over de geactiveerde, uitgesloten of mislukte identiteiten uitgesplitst op publieksniveau, voor elk publiek dat deel van dataflow uitmaakt.
 
