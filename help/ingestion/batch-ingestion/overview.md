@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Overzicht van de API voor batchverwerking
 description: Met de Adobe Experience Platform Batch Ingestie-API kunt u gegevens als batchbestanden in Experience Platform invoeren. Gegevens die worden opgenomen kunnen de profielgegevens van een vlak dossier in een systeem van CRM (zoals een dossier van het Pakket), of gegevens zijn die aan een bekend schema in het register van het Model van de Gegevens van de Ervaring (XDM) in overeenstemming zijn.
 exl-id: ffd1dc2d-eff8-4ef7-a26b-f78988f050ef
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: dace7bc2f7940748422628b62f0f57854036ad3f
 workflow-type: tm+mt
-source-wordcount: '1390'
+source-wordcount: '1389'
 ht-degree: 1%
 
 ---
@@ -56,7 +56,7 @@ Bij het opnemen van gegevens is het belangrijk dat u begrijpt hoe [!DNL Experien
 
 Er is enige flexibiliteit wanneer het opnemen van gegevens - als een type niet aanpast wat in het doelschema is, zullen de gegevens in het uitgedrukt doeltype worden omgezet. Als dit niet het geval is, mislukt de batch met een `TypeCompatibilityException` .
 
-JSON en CSV hebben bijvoorbeeld geen `date` - of `date-time` -type. Dientengevolge, worden deze waarden uitgedrukt gebruikend [ ISO 8601 geformatteerde koorden ](https://www.iso.org/iso-8601-date-and-time-format.html) (&quot;2018-07-10T15 :05: 59.000-08:00&quot;) of Unix Tijd die in milliseconden (1531263959 wordt geformatteerd 000) en worden bij inname omgezet in het doel-XDM-type.
+JSON en CSV hebben bijvoorbeeld geen `date` - of `date-time` -type. Dientengevolge, worden deze waarden uitgedrukt gebruikend [ ISO 8601 geformatteerde koorden ](https://www.iso.org/iso-8601-date-and-time-format.html) (&quot;2018-07-10T15 :05: 59.000-08 :00&quot;) of Unix Tijd die in milliseconden (1531263950 wordt geformatteerd (00) en worden bij inname omgezet in het doel-XDM-type.
 
 In de onderstaande tabel worden de conversies weergegeven die worden ondersteund bij het invoeren van gegevens.
 
@@ -150,7 +150,7 @@ U kunt bestanden uploaden met de API voor kleine bestanden uploaden. Als uw best
 
 >[!INFO]
 >
->De voorbeelden hieronder gebruiken het [ Apache 1&rbrace; dossierformaat van het Pakket &lbrace;. ](https://parquet.apache.org/docs/) Een voorbeeld dat het JSON dossierformaat gebruikt kan in de [ handleiding van de partijontwikkelaar ](api-overview.md) worden gevonden.
+>De voorbeelden hieronder gebruiken het [ Apache 1} dossierformaat van het Pakket {. ](https://parquet.apache.org/docs/) Een voorbeeld dat het JSON dossierformaat gebruikt kan in de [ handleiding van de partijontwikkelaar ](api-overview.md) worden gevonden.
 
 ### Kleine bestandsupload
 
