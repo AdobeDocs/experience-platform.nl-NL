@@ -2,7 +2,7 @@
 title: Edge Segmentation Guide
 description: Leer hoe u Edge-segmentatie gebruikt om het publiek in Experience Platform direct aan de rand te evalueren, zodat dezelfde pagina en de volgende pagina voor het aanpassen van de paginascheiding kunnen worden gebruikt.
 exl-id: eae948e6-741c-45ce-8e40-73d10d5a88f1
-source-git-commit: 5de8597dd1d5249297a09976c804d1c1f3d822c5
+source-git-commit: 1b69fa4ecadb1f6b8575358ca4a81549221430e1
 workflow-type: tm+mt
 source-wordcount: '1133'
 ht-degree: 0%
@@ -31,17 +31,17 @@ Een vraag kan met randsegmentatie worden geëvalueerd als het aan om het even we
 
 | Type query | Details | Query | Voorbeeld |
 | ---------- | ------- | ----- | ------- |
-| Eén gebeurtenis binnen een tijdsvenster van minder dan 24 uur | Elke segmentdefinitie die verwijst naar één binnenkomende gebeurtenis binnen een tijdvenster van minder dan 24 uur. | `CHAIN(xEvent, timestamp, [C0: WHAT(eventType.equals("commerce.checkouts", false)) WHEN(today)])` | ![ een voorbeeld van één enkele gebeurtenis binnen een relatief tijdvenster wordt getoond.](../images/methods/edge/single-event.png) |
-| Alleen profiel | Elke segmentdefinitie die alleen naar een profielkenmerk verwijst. | `homeAddress.country.equals("US", false)` | ![ een voorbeeld van een getoonde profielattributen.](../images/methods/edge/profile-attribute.png) |
-| Eén gebeurtenis met een profielkenmerk binnen een relatief tijdvenster van minder dan 24 uur | Elke segmentdefinitie die verwijst naar één binnenkomende gebeurtenis, met een of meer profielkenmerken, en die optreedt binnen een relatief tijdvenster van minder dan 24 uur. | `workAddress.country.equals("US", false) and CHAIN(xEvent, timestamp, [C0: WHAT(eventType.equals("commerce.checkouts", false)) WHEN(today)])` | ![ een voorbeeld van één enkele gebeurtenis met een profielattribuut binnen een relatief tijdvenster wordt getoond.](../images/methods/edge/single-event-with-profile-attribute.png) |
-| Segment van segmenten | Elke segmentdefinitie die een of meer batch- of randsegmenten bevat. **Nota:** als een segment van segmenten wordt gebruikt, zal de profielontzetting **elke 24 uren** gebeuren. | `inSegment("a730ed3f-119c-415b-a4ac-27c396ae2dff") and inSegment("8fbbe169-2da6-4c9d-a332-b6a6ecf559b9")` | ![ een voorbeeld van een segment van segmenten wordt getoond.](../images/methods/edge/segment-of-segments.png) |
+| Eén gebeurtenis binnen een tijdsvenster van minder dan 24 uur | Elke segmentdefinitie die verwijst naar één binnenkomende gebeurtenis binnen een tijdvenster van minder dan 24 uur. | `CHAIN(xEvent, timestamp, [C0: WHAT(eventType.equals("commerce.checkouts", false)) WHEN(today)])` | ![ een voorbeeld van één enkele gebeurtenis binnen een relatief tijdvenster wordt getoond.](../images/methods/edge/single-event.png){zoomable="yes"} |
+| Alleen profiel | Elke segmentdefinitie die alleen naar een profielkenmerk verwijst. | `homeAddress.country.equals("US", false)` | ![ een voorbeeld van een getoonde profielattributen.](../images/methods/edge/profile-attribute.png){zoomable="yes"} |
+| Eén gebeurtenis met een profielkenmerk binnen een relatief tijdvenster van minder dan 24 uur | Elke segmentdefinitie die verwijst naar één binnenkomende gebeurtenis, met een of meer profielkenmerken, en die optreedt binnen een relatief tijdvenster van minder dan 24 uur. | `workAddress.country.equals("US", false) and CHAIN(xEvent, timestamp, [C0: WHAT(eventType.equals("commerce.checkouts", false)) WHEN(today)])` | ![ een voorbeeld van één enkele gebeurtenis met een profielattribuut binnen een relatief tijdvenster wordt getoond.](../images/methods/edge/single-event-with-profile-attribute.png){zoomable="yes"} |
+| Segment van segmenten | Elke segmentdefinitie die een of meer batch- of randsegmenten bevat. **Nota:** als een segment van segmenten wordt gebruikt, zal de profielontzetting **elke 24 uren** gebeuren. | `inSegment("a730ed3f-119c-415b-a4ac-27c396ae2dff") and inSegment("8fbbe169-2da6-4c9d-a332-b6a6ecf559b9")` | ![ een voorbeeld van een segment van segmenten wordt getoond.](../images/methods/edge/segment-of-segments.png){zoomable="yes"} |
 
-Bovendien, moet de segmentdefinitie **&#x200B;**&#x200B;aan een fusiebeleid worden gebonden dat op rand actief is. Voor meer informatie over samenvoegingsbeleid, te lezen gelieve de [ gids van het samenvoegingsbeleid ](../../profile/api/merge-policies.md).
+Bovendien, moet de segmentdefinitie **** aan een fusiebeleid worden gebonden dat op rand actief is. Voor meer informatie over samenvoegingsbeleid, te lezen gelieve de [ gids van het samenvoegingsbeleid ](../../profile/api/merge-policies.md).
 
 Een segmentdefinitie zal **niet** voor randsegmentatie in het volgende scenario in aanmerking komen:
 
 - De segmentdefinitie bevat een combinatie van één gebeurtenis en een `inSegment` -gebeurtenis.
-   - Nochtans, als de segmentdefinitie in de `inSegment` gebeurtenis profiel slechts is, zal de segmentdefinitie **&#x200B;**&#x200B;voor randsegmentatie worden toegelaten.
+   - Nochtans, als de segmentdefinitie in de `inSegment` gebeurtenis profiel slechts is, zal de segmentdefinitie **** voor randsegmentatie worden toegelaten.
 - In de segmentdefinitie wordt &quot;Jaar negeren&quot; gebruikt als onderdeel van de tijdbeperkingen.
 
 ## publiek maken {#create-audience}
@@ -153,15 +153,15 @@ Meer informatie over het gebruiken van dit eindpunt kan in de [ gids van het het
 
 Selecteer **[!UICONTROL Create audience]** in Audience Portal.
 
-![ Create publieksknoop wordt benadrukt in het Portaal van het Publiek.](../images/methods/edge/select-create-audience.png)
+![ Create publieksknoop wordt benadrukt in het Portaal van het Publiek.](../images/methods/edge/select-create-audience.png){zoomable="yes"}
 
 Er verschijnt een pop-up. Selecteer **[!UICONTROL Build rules]** om Segment Builder in te voeren.
 
-![ de knoop van de Regels van de Bouwstijl wordt benadrukt in creeer publiek popover.](../images/methods/edge/select-build-rules.png)
+![ de knoop van de Regels van de Bouwstijl wordt benadrukt in creeer publiek popover.](../images/methods/edge/select-build-rules.png){zoomable="yes"}
 
 Binnen de Bouwer van het Segment, creeer een segmentdefinitie die één van de [ in aanmerking komende vraagtypes ](#eligible-query-types) aanpast. Als de segmentdefinitie in aanmerking komt voor randsegmentatie, kunt u **[!UICONTROL Edge]** selecteren als **[!UICONTROL Evaluation method]** .
 
-![ de segmentdefinitie wordt getoond. Het evaluatietype wordt benadrukt, die de segmentdefinitie tonen kan worden geëvalueerd gebruikend randsegmentatie.](../images/methods/edge/edge-evaluation-method.png)
+![ de segmentdefinitie wordt getoond. Het evaluatietype wordt benadrukt, die de segmentdefinitie tonen kan worden geëvalueerd gebruikend randsegmentatie.](../images/methods/edge/edge-evaluation-method.png){zoomable="yes"}
 
 Om meer over het creëren van segmentdefinities te leren, te lezen gelieve de [ gids van de Bouwer van het Segment ](../ui/segment-builder.md)
 
@@ -297,11 +297,11 @@ De meer gedetailleerde informatie over de gesegmenteerde teruggekeerde definitie
 
 U kunt al publiek terugwinnen dat voor randsegmentatie binnen uw organisatie door filters in het Portaal van de Publiek wordt toegelaten te gebruiken. Selecteer het ![ pictogram van de filterfilter ](../../images/icons/filter.png) pictogram om de lijst van filters te tonen.
 
-![ het filterpictogram wordt benadrukt in het Portaal van het Publiek.](../images/methods/filter-audiences.png)
+![ het filterpictogram wordt benadrukt in het Portaal van het Publiek.](../images/methods/filter-audiences.png){zoomable="yes"}
 
 Binnen de beschikbare filters, ga naar **frequentie van de Update** en selecteer &quot;Edge&quot;. Met dit filter geeft u alle soorten publiek in uw organisatie weer die zijn geëvalueerd met behulp van randsegmentatie.
 
-![ de updatefrequentie van Edge wordt geselecteerd, tonend alle publiek in de organisatie die gebruikend randsegmentatie worden geëvalueerd.](../images/methods/edge/filter-edge.png)
+![ de updatefrequentie van Edge wordt geselecteerd, tonend alle publiek in de organisatie die gebruikend randsegmentatie worden geëvalueerd.](../images/methods/edge/filter-edge.png){zoomable="yes"}
 
 Meer over het bekijken van publiek in Experience Platform leren, gelieve de [ gids van het Portaal van het Publiek ](../ui/audience-portal.md) te lezen.
 
@@ -321,7 +321,7 @@ Voor gebruikers met randfunctionaliteit wordt de **[!UICONTROL Profiles over tim
 
 **[!UICONTROL New audience updated]** metrisch wordt vertegenwoordigd door een lijngrafiek die de verandering in publieksgrootte door randsegmentatie toont. U kunt het vervolgkeuzemenu aanpassen en de laatste 24 uur, vorige week of 30 dagen weergeven.
 
-![ De Profielen over tijdkaart wordt benadrukt.](../images/methods/edge/profiles-over-time.png)
+![ De Profielen over tijdkaart wordt benadrukt.](../images/methods/edge/profiles-over-time.png){zoomable="yes"}
 
 Voor meer details op publieksdetails, te lezen gelieve het [ Poortoverzicht van het Poort van het Publiek ](../ui/audience-portal.md#audience-details).
 

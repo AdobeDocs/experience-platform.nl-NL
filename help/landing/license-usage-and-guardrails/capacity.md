@@ -2,9 +2,9 @@
 title: Gebruik en capaciteit van licenties
 description: Meer informatie over het gebruik van licenties en capaciteitsbeperkingen in Adobe Experience Platform.
 exl-id: 38dad2f1-bd0f-4cc3-a3a6-5105ea866ea4
-source-git-commit: d0b54e15f132d85964d6458da0769548d231a9c4
+source-git-commit: 568a0ba7707402496167145ce2673181b240496e
 workflow-type: tm+mt
-source-wordcount: '1521'
+source-wordcount: '1577'
 ht-degree: 0%
 
 ---
@@ -19,7 +19,7 @@ ht-degree: 0%
 >- **Dashboard van het Gebruik van de Vergunning van de Mening**
 >   - Deze toestemming laat u **mening** het capaciteitshuis.
 >- **beheert Sandboxes**
->   - Deze toestemming laat u **&#x200B;**&#x200B;uw capaciteitstoewijzingen uitgeven.
+>   - Deze toestemming laat u **** uw capaciteitstoewijzingen uitgeven.
 >
 >Meer informatie over toestemmingen binnen Experience Platform kan in het [ overzicht van de toegangscontrole ](/help/access-control/home.md#permissions) worden gevonden
 >
@@ -55,11 +55,13 @@ Binnen deze diensten, worden de volgende gidsen gevolgd:
 
 - Het maximumaantal streamingdeelnemers is 500
    - Van deze 500 streamingdeelnemers is het maximumaantal randsoorten 150
-- De maximale gecombineerde doorvoer voor streamingsegmentatie is 1500 records per seconde (rps)
+- De aanvankelijke gecombineerde productie voor het stromen opname is 1500 verslagen per seconde (rps)
+   - Deze gecombineerde stroomproductie meet de gecombineerde piekbinnenkomende gebeurtenissen per seconde voor het stromen van opname in het Profiel van de Klant in real time over uw productie en ontwikkelingszandbakken.
+   - U kunt extra ondersteuning voor streamingsegmentatie aanschaffen voor maximaal 13.500 records per seconde. Meer informatie over het kopen van extra rechten kan in de [ het productbeschrijving van Real-Time CDP ](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html) worden gevonden.
 
 De publiekscapaciteit is op a **zandbak** niveau. Dit betekent dat u voor elke sandbox die u in uw organisatie hebt, 500 streaming publiek kunt hebben, waarvan 150 Edge-publiek.
 
-De productiecapaciteit is op een **organisatie** niveau en kan aan uw individuele zandbakken worden verdeeld. Met de 1500 rps voor het streamen van de segmentatiedoorvoer kunt u bijvoorbeeld de productie-sandbox instellen op 1350 rps en de ontwikkelingssandbox op 150 rps.
+De het stromen productiecapaciteit van de productie is op een **organisatie** niveau en kan aan uw individuele zandbakken worden verdeeld. Met de 1500 rps voor het streamen van opname-doorvoer kunt u bijvoorbeeld de productie-sandbox instellen op 1300 rps en de ontwikkelingssandbox op 200 rps.
 
 Experience Platform berekent de doorvoer van de sandbox in telkens 15 minuten. Deze productie wordt gemeten in real time, met de gegevens die elke 60 seconden verfrissen.
 
@@ -166,7 +168,7 @@ Bovendien kunt u naar uw gegevensstromen kijken en zien of kunt u uw gegevensstr
 | bijdragende factor | Wat het is | Gevolgen van het gebruik | Best practices |
 | --- | --- | --- | --- |
 | Batch naar streaming conversie | Batchwerklasten die in streaming worden omgezet, kunnen de doorvoer aanzienlijk verhogen, wat van invloed is op de prestaties en de toewijzing van bronnen. Bijvoorbeeld het uitvoeren van een bulkprofielupdate na een gebeurtenis zonder tariefgrenzen. | Streaming strategieën zijn niet nodig voor batchgebruik wanneer verwerking met lage latentie niet vereist is. | Evalueer de eisen van het gebruikscase. Voor partij uitgaande marketing, denk na gebruikend [ partij ingestie ](/help/ingestion/batch-ingestion/overview.md) in plaats van het stromen om gegevensopname efficiënter te beheren. |
-| Onnodige gegevensinvoer | Het invoeren van gegevens die niet voor verpersoonlijking worden vereist verhoogt productie zonder waarde toe te voegen, die middelen verspillen. Bijvoorbeeld, het opnemen van al analyseverkeer in profielen ongeacht relevantie. | Overbodige, niet-relevante gegevens zorgen voor ruis, waardoor het moeilijker wordt om onechte gegevenspunten te identificeren. Het kan ook wrijving veroorzaken wanneer het bepalen van en het leiden van publiek en profielen. | Vermeld alleen de gegevens die nodig zijn voor uw gebruiksgevallen. Zorg ervoor dat u overbodige gegevens verwijdert.<ul><li>**Adobe Analytics**: Het 2&rbrace; rij-vlakke filtreren van het gebruik [ om uw gegevensopname te optimaliseren.](/help/sources/tutorials/ui/create/adobe-applications/analytics.md#filtering-for-real-time-customer-profile)</li><li>**Bronnen**: Gebruik [[!DNL Flow Service]  API aan filter rij-vlakke gegevens ](/help/sources/tutorials/api/filter.md) voor gesteunde bronnen zoals [!DNL Snowflake] en [!DNL Google BigQuery].</li></li>**Edge datastream**: Vorm [ dynamische gegevensstromen ](/help/datastreams/configure-dynamic-datastream.md) om rij-vlakke het filtreren van verkeer uit te voeren dat binnen van WebSDK komt.</li></ul> |
+| Onnodige gegevensinvoer | Het invoeren van gegevens die niet voor verpersoonlijking worden vereist verhoogt productie zonder waarde toe te voegen, die middelen verspillen. Bijvoorbeeld, het opnemen van al analyseverkeer in profielen ongeacht relevantie. | Overbodige, niet-relevante gegevens zorgen voor ruis, waardoor het moeilijker wordt om onechte gegevenspunten te identificeren. Het kan ook wrijving veroorzaken wanneer het bepalen van en het leiden van publiek en profielen. | Vermeld alleen de gegevens die nodig zijn voor uw gebruiksgevallen. Zorg ervoor dat u overbodige gegevens verwijdert.<ul><li>**Adobe Analytics**: Het 2} rij-vlakke filtreren van het gebruik [ om uw gegevensopname te optimaliseren.](/help/sources/tutorials/ui/create/adobe-applications/analytics.md#filtering-for-real-time-customer-profile)</li><li>**Bronnen**: Gebruik [[!DNL Flow Service]  API aan filter rij-vlakke gegevens ](/help/sources/tutorials/api/filter.md) voor gesteunde bronnen zoals [!DNL Snowflake] en [!DNL Google BigQuery].</li></li>**Edge datastream**: Vorm [ dynamische gegevensstromen ](/help/datastreams/configure-dynamic-datastream.md) om rij-vlakke het filtreren van verkeer uit te voeren dat binnen van WebSDK komt.</li></ul> |
 
 ## Veelgestelde vragen {#faq}
 
@@ -202,11 +204,11 @@ U verzekert verenigbare prestaties tijdens piekgebeurtenissen, vermijdend techni
 
 +++
 
-### Wat zijn beste praktijken om het stromen segmenteringsproductie te beheren?
+### Wat zijn beste praktijken om het stromen inslikken productie te beheren?
 
 +++ Antwoord
 
-Om uw het stromen segmenteringsproductie het best te beheren, zou u uw datasets moeten evalueren om ervoor te zorgen zij aan gegevens noodzakelijk voor verpersoonlijking voorrang geven.
+Om uw het stromen inslikken productie het best te beheren, zou u uw datasets moeten evalueren om ervoor te zorgen zij aan gegevens noodzakelijk voor verpersoonlijking voorrang geven.
 
 
 Als verwerking in real time niet vereist is, moet u batch-opname gebruiken in plaats van streaming opname.
