@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Dataflows voor Doelen in UI controleren
 type: Tutorial
 exl-id: 8eb7bb3c-f2dc-4dbc-9cf5-3d5d3224f5f1
-source-git-commit: 9d92999df8e35ac6223986ece8a98af72ab6ace8
+source-git-commit: d9e137a34ad013e2396daa51eb55c22aef1e618e
 workflow-type: tm+mt
-source-wordcount: '3454'
+source-wordcount: '3475'
 ht-degree: 0%
 
 ---
@@ -89,7 +89,7 @@ Elke individuele dataflow run toont de volgende details:
 - **[!UICONTROL Dataflow run start]**: De tijd waarop de gegevensstroom is gestart. Voor het stromen dataflow looppas, legt Experience Platform metriek op het begin van dataflow looppas, in de vorm van uurmetriek vast. Dit betekent dat voor het stromen dataflow looppas, als een dataflow looppas bijvoorbeeld bij 10 :30PM begon, metrisch toont de begintijd zoals 10 :00 PM in UI.
 - **[!UICONTROL Processing time]**: De hoeveelheid tijd die nodig was voor het uitvoeren van de gegevensstroom om te verwerken.
    - Bij **[!UICONTROL completed]** -uitvoering wordt bij de verwerkingstijd altijd een uur gemeten.
-   - Voor dataflow-run die nog steeds de status **[!UICONTROL processing]** heeft, blijft het venster om alle metriek vast te leggen langer dan een uur open om alle metriek te verwerken die overeenkomen met de dataflow-run. Bijvoorbeeld, zou een dataflow looppas die bij 9 :30 AM begon in een verwerkingsstaat één uur en dertig minuten kunnen blijven om alle metriek te vangen en te verwerken. Dan, zodra het verwerkingsvenster sluit en het statuut van de dataflow looppas updates aan **voltooide**, wordt de getoonde verwerkingstijd veranderd in één uur.
+   - Voor dataflow-run die nog steeds de status **[!UICONTROL processing]** heeft, blijft het venster om alle metriek vast te leggen langer dan een uur open om alle metriek te verwerken die overeenkomen met de dataflow-run. Bijvoorbeeld, zou een dataflow looppas die bij 9 :30 AM begon in een verwerkingsstaat één uur en dertig minuten kunnen blijven om alle metriek te vangen en te verwerken. De duur van de verwerkingstijd wordt rechtstreeks beïnvloed door de pogingen die als resultaat van de ontbroken reactie van de bestemming worden gedaan. Dan, zodra het verwerkingsvenster sluit en het statuut van de dataflow looppas updates aan **voltooide**, wordt de getoonde verwerkingstijd veranderd in één uur.
 - **[!UICONTROL Profiles received]**: Het totale aantal profielen dat is ontvangen in de gegevensstroom.
 - **[!UICONTROL Identities activated]**: Het totale aantal profielidentiteiten dat met succes aan de geselecteerde bestemming als deel van de dataflow looppas werd geactiveerd. Deze metrische waarde bevat identiteiten die zijn gemaakt, bijgewerkt en verwijderd uit geëxporteerde doelgroepen.
 - **[!UICONTROL Identities excluded]**: Het totale aantal profiel-id&#39;s dat van activering is uitgesloten op basis van ontbrekende kenmerken en schending van toestemming.
@@ -119,7 +119,7 @@ Op de detailpagina wordt ook een lijst met mislukte identiteiten en identiteiten
 
 ![ verslagen Dataflow voor het stromen bestemmingen met een benadrukt foutenmelding.](../assets/ui/monitor-destinations/dataflow-records-stream.png)
 
-#### [!BADGE &#x200B; Beta &#x200B;]{type=Informative} publiek-vlakke dataflow looppas controle voor het stromen bestemmingen {#audience-level-dataflow-runs-for-streaming-destinations}
+#### [!BADGE  Beta ]{type=Informative} publiek-vlakke dataflow looppas controle voor het stromen bestemmingen {#audience-level-dataflow-runs-for-streaming-destinations}
 
 U kunt informatie bekijken over de geactiveerde, uitgesloten of mislukte identiteiten uitgesplitst op publieksniveau, voor elk publiek dat deel van dataflow uitmaakt.
 
@@ -159,7 +159,7 @@ De controle op het niveau van het publiek voor het stromen bestemmingen is momen
 >id="platform_monitoring_dataflow_run_details_activation"
 >title="Gegevens gegevensstroom uitvoeren"
 >abstract="De gegevens van de bestemmingdataflow looppas bevatten informatie over de activeringsstatus van een publiek en metriek die van het Profiel van de Klant in real time wordt genomen om unieke identiteiten te produceren. Raadpleeg de handleiding voor metrische definities voor meer informatie."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/dataflows/ui/monitor-destinations.html?lang=nl-NL#dataflow-runs-for-streaming-destinations" text="Dataflow wordt uitgevoerd voor streamingdoelen"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/dataflows/ui/monitor-destinations.html#dataflow-runs-for-streaming-destinations" text="Dataflow wordt uitgevoerd voor streamingdoelen"
 
 >[!CONTEXTUALHELP]
 >id="platform_monitoring_profiles_received_batch"
