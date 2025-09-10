@@ -19,7 +19,7 @@ In dit document wordt uitgelegd hoe u de tagextensie configureert in de gebruike
 
 ## De extensie van de Web SDK-tag installeren {#install}
 
-Voor de extensie van de SDK-tag Web moet een eigenschap zijn geïnstalleerd. Als u dit niet reeds hebt gedaan, zie de documentatie bij [ het creëren van een markeringsbezit ](https://experienceleague.adobe.com/docs/platform-learn/implement-in-websites/configure-tags/create-a-property.html).
+Voor de extensie van de SDK-tag Web moet een eigenschap zijn geïnstalleerd. Als u dit niet reeds hebt gedaan, zie de documentatie bij [ het creëren van een markeringsbezit ](https://experienceleague.adobe.com/docs/platform-learn/implement-in-websites/configure-tags/create-a-property.html?lang=nl-NL).
 
 Nadat u een eigenschap hebt gemaakt, opent u de eigenschap en selecteert u de tab **[!UICONTROL Extensions]** op de linkerzijbalk.
 
@@ -75,7 +75,7 @@ De configuratieopties boven aan de pagina vertellen Adobe Experience Platform wa
 
 * **[!UICONTROL Name]**: De extensie Adobe Experience Platform Web SDK ondersteunt meerdere exemplaren op de pagina. De naam wordt gebruikt om gegevens naar veelvoudige organisaties met een markeringsconfiguratie te verzenden. De instantienaam is standaard ingesteld op `alloy` . U kunt de instantienaam echter wijzigen in elke geldige JavaScript-objectnaam.
 * **[!UICONTROL IMS organization ID]**: De id van de organisatie waarnaar u de gegevens op Adobe wilt verzenden. Meestal gebruikt u de standaardwaarde die automatisch wordt ingevuld. Wanneer u meerdere exemplaren op de pagina hebt, vult u dit veld met de waarde van de tweede organisatie waarnaar u gegevens wilt verzenden.
-* **[!UICONTROL Edge domain]**: Het domein waarvan de extensie gegevens verzendt en ontvangt. Adobe raadt u aan een 1st-party-domein (CNAME) te gebruiken voor deze extensie. Het standaard domein van derden werkt voor ontwikkelomgevingen, maar is niet geschikt voor productieomgevingen. De instructies op hoe te opstelling zijn een eerste-partij CNAME vermeld [ hier ](https://experienceleague.adobe.com/docs/core-services/interface/ec-cookies/cookies-first-party.html).
+* **[!UICONTROL Edge domain]**: Het domein waarvan de extensie gegevens verzendt en ontvangt. Adobe raadt u aan een 1st-party-domein (CNAME) te gebruiken voor deze extensie. Het standaard domein van derden werkt voor ontwikkelomgevingen, maar is niet geschikt voor productieomgevingen. De instructies op hoe te opstelling zijn een eerste-partij CNAME vermeld [ hier ](https://experienceleague.adobe.com/docs/core-services/interface/ec-cookies/cookies-first-party.html?lang=nl-NL).
 * **[!UICONTROL Adobe Advertising]**: beschikbaar wanneer de `Advertising` -component is geselecteerd. Alleen instellingen voor organisaties met Adobe Advertising DSP:
    * **[!UICONTROL Adobe Advertising DSP]**: Schakelt weergave via bijhouden in.
    * **[!UICONTROL Advertisers]**: beschikbaar als [!UICONTROL Adobe Advertising DSP] is ingeschakeld. De adverteerders waarvoor om mening-door het volgen toe te laten.
