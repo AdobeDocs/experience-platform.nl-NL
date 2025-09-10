@@ -2,9 +2,9 @@
 title: De Web SDK-tagextensie configureren
 description: Leer hoe u de Experience Platform Web SDK-tagextensie configureert in de gebruikersinterface voor tags.
 exl-id: 22425daa-10bd-4f06-92de-dff9f48ef16e
-source-git-commit: 57b29c396531ee18c79fad7cce068ff3adf5f2a2
+source-git-commit: 7d5896a4427af54d3a6323744d726bf0b0c3137a
 workflow-type: tm+mt
-source-wordcount: '2775'
+source-wordcount: '2878'
 ht-degree: 0%
 
 ---
@@ -19,7 +19,7 @@ In dit document wordt uitgelegd hoe u de tagextensie configureert in de gebruike
 
 ## De extensie van de Web SDK-tag installeren {#install}
 
-Voor de extensie van de SDK-tag Web moet een eigenschap zijn geïnstalleerd. Als u dit niet reeds hebt gedaan, zie de documentatie bij [ het creëren van een markeringsbezit ](https://experienceleague.adobe.com/docs/platform-learn/implement-in-websites/configure-tags/create-a-property.html?lang=nl-NL).
+Voor de extensie van de SDK-tag Web moet een eigenschap zijn geïnstalleerd. Als u dit niet reeds hebt gedaan, zie de documentatie bij [ het creëren van een markeringsbezit ](https://experienceleague.adobe.com/docs/platform-learn/implement-in-websites/configure-tags/create-a-property.html).
 
 Nadat u een eigenschap hebt gemaakt, opent u de eigenschap en selecteert u de tab **[!UICONTROL Extensions]** op de linkerzijbalk.
 
@@ -42,19 +42,20 @@ Wanneer u een de bouwstijl van het douaneWeb SDK creeert, wordt de bouwstijl geb
 >[!IMPORTANT]
 >
 >Als u SDK-componenten van het web uitschakelt, kan dit de bestaande implementatie onderbreken. Elke keer dat u een component uitschakelt, moet u de implementatie grondig testen om ervoor te zorgen dat alle functies die u nodig hebt, naar behoren werken.
->&#x200B;>Wanneer u een component uitschakelt, kunt u de instellingen van die component niet meer bewerken.
+>>Wanneer u een component uitschakelt, kunt u de instellingen van die component niet meer bewerken.
 
 Als u een aangepaste Web SDK-build wilt maken met de Web SDK-tagextensie, volgt u de onderstaande stappen.
 
 1. Vouw de sectie **[!UICONTROL Custom build components]** uit op de configuratiepagina voor de tagextensie.
 1. Schakel de componenten in of uit op basis van uw behoeften. U kunt uit de volgende componenten selecteren:
    * **[!UICONTROL Activity collector]**: deze component schakelt automatische koppelingenverzameling en het bijhouden van activiteitenoverzichten in.
+   * **[!UICONTROL Advertising]**: deze component bevat alle JavaScript-code die nodig is voor Adobe Advertising. Er worden ook [!UICONTROL Adobe Advertising] -instellingen toegevoegd in de [!UICONTROL SDK Instances] -sectie en een [!UICONTROL Advertising] -instelling in labelregels om te bepalen hoe advertentiegegevens worden gebruikt voor attributiemeting.
    * **[!UICONTROL Audiences]**: deze componenten maken Audience Manager-integratie mogelijk, inclusief URL- en op cookies gebaseerde doelen, en ID-syncs.
    * **[!UICONTROL Consent]**: deze component maakt integratie van toestemming mogelijk. Als u deze component uitschakelt, worden de volgende elementen uitgeschakeld:
       * [ plaats toestemmings ](action-types.md#set-consent) actietype
    * **[!UICONTROL Context]**: deze component maakt het automatisch verzamelen van contextgegevens mogelijk.
    * **[!UICONTROL Event merge]**: _Afgekeurd_. Als u deze component uitschakelt, worden de volgende elementen uitgeschakeld:
-      * [&#128279;](action-types.md#data) gegevenselement van identiteitskaart van de Fusie van de Gebeurtenis
+      * [ gegevenselement van identiteitskaart van de Fusie van de Gebeurtenis](action-types.md#data)
       * **[!UICONTROL Reset event merge ID]** actietype
    * **[!UICONTROL Media analytics bridge]**: deze component schakelt Edge Network Streaming Media in via de Media Analytics-interface. Als u deze component uitschakelt, worden de volgende elementen uitgeschakeld:
       * [ krijgt de Traceur van de Analyse van Media ](action-types.md#get-media-analytics-tracker) actietype
@@ -74,7 +75,12 @@ De configuratieopties boven aan de pagina vertellen Adobe Experience Platform wa
 
 * **[!UICONTROL Name]**: De extensie Adobe Experience Platform Web SDK ondersteunt meerdere exemplaren op de pagina. De naam wordt gebruikt om gegevens naar veelvoudige organisaties met een markeringsconfiguratie te verzenden. De instantienaam is standaard ingesteld op `alloy` . U kunt de instantienaam echter wijzigen in elke geldige JavaScript-objectnaam.
 * **[!UICONTROL IMS organization ID]**: De id van de organisatie waarnaar u de gegevens op Adobe wilt verzenden. Meestal gebruikt u de standaardwaarde die automatisch wordt ingevuld. Wanneer u meerdere exemplaren op de pagina hebt, vult u dit veld met de waarde van de tweede organisatie waarnaar u gegevens wilt verzenden.
-* **[!UICONTROL Edge domain]**: Het domein waarvan de extensie gegevens verzendt en ontvangt. Adobe raadt u aan een 1st-party-domein (CNAME) te gebruiken voor deze extensie. Het standaard domein van derden werkt voor ontwikkelomgevingen, maar is niet geschikt voor productieomgevingen. De instructies op hoe te opstelling zijn een eerste-partij CNAME vermeld [ hier ](https://experienceleague.adobe.com/docs/core-services/interface/ec-cookies/cookies-first-party.html?lang=nl-NL).
+* **[!UICONTROL Edge domain]**: Het domein waarvan de extensie gegevens verzendt en ontvangt. Adobe raadt u aan een 1st-party-domein (CNAME) te gebruiken voor deze extensie. Het standaard domein van derden werkt voor ontwikkelomgevingen, maar is niet geschikt voor productieomgevingen. De instructies op hoe te opstelling zijn een eerste-partij CNAME vermeld [ hier ](https://experienceleague.adobe.com/docs/core-services/interface/ec-cookies/cookies-first-party.html).
+* **[!UICONTROL Adobe Advertising]**: beschikbaar wanneer de `Advertising` -component is geselecteerd. Alleen instellingen voor organisaties met Adobe Advertising DSP:
+   * **[!UICONTROL Adobe Advertising DSP]**: Schakelt weergave via bijhouden in.
+   * **[!UICONTROL Advertisers]**: beschikbaar als [!UICONTROL Adobe Advertising DSP] is ingeschakeld. De adverteerders waarvoor om mening-door het volgen toe te laten.
+   * **[!UICONTROL ID5 partner ID]**: optioneel. Beschikbaar wanneer [!UICONTROL Adobe Advertising DSP] is ingeschakeld. ID5-partner van uw organisatie. Met deze instelling kan Web SDK ID5 universele id&#39;s verzamelen.
+   * **[!UICONTROL RampID JavaScript path]**: optioneel. Beschikbaar wanneer [!UICONTROL Adobe Advertising DSP] is ingeschakeld. Het pad naar de [!DNL LiveRamp RampID] JavaScript-code van uw organisatie (`ats.js` ).  Met deze instelling kan Web SDK [!DNL RampID] universele id&#39;s verzamelen.
 
 ## Gegevensstroominstellingen configureren {#datastreams}
 
@@ -117,11 +123,10 @@ Deze sectie staat u toe om het gedrag van het Web SDK te bepalen wanneer het ove
 * **[!UICONTROL Use third-party cookies]**: Wanneer deze optie is ingeschakeld, probeert Web SDK een gebruikers-id op te slaan in een cookie van een andere fabrikant. Als dit gelukt is, wordt de gebruiker geïdentificeerd als één gebruiker terwijl deze in meerdere domeinen navigeert en niet als een afzonderlijke gebruiker op elk domein wordt geïdentificeerd. Als deze optie is ingeschakeld, kan de SDK de gebruikersnaam nog steeds niet opslaan in een cookie van een andere fabrikant als de browser cookies van derden niet ondersteunt of door de gebruiker is geconfigureerd om cookies van derden niet toe te staan. In dit geval slaat de SDK de id alleen op in het domein van de eerste partij.
 
   >[!IMPORTANT]
-  >&#x200B;>De koekjes van de derde zijn niet compatibel met de  functionaliteit 1&rbrace; van identiteitskaart van het eerste apparaat in SDK van het Web.
-  >&#x200B;>[&#128279;](../../../../web-sdk/identity/first-party-device-ids.md)
-  >&#x200B;>U kunt apparaat-id&#39;s van andere leveranciers gebruiken of cookies van andere leveranciers, maar u kunt beide functies niet tegelijkertijd gebruiken.
+  >>De koekjes van de derde zijn niet compatibel met de [ functionaliteit 1} van identiteitskaart van het eerste apparaat in SDK van het Web.
+  >>](../../../../web-sdk/identity/first-party-device-ids.md)
+  >>U kunt apparaat-id&#39;s van andere leveranciers gebruiken of cookies van andere leveranciers, maar u kunt beide functies niet tegelijkertijd gebruiken.
   >
-
 ## Aanpassingsinstellingen configureren {#personalization}
 
 In deze sectie kunt u configureren hoe u bepaalde delen van een pagina wilt verbergen terwijl gepersonaliseerde inhoud wordt geladen. Zo weet u zeker dat uw bezoekers alleen de gepersonaliseerde pagina zien.
@@ -173,7 +178,7 @@ Configuratieinstellingen voor gegevensverzameling beheren. Vergelijkbare instell
 
 >[!TIP]
 >
->Het veld **[!UICONTROL On before link click send]** is een afgekeurde callback die alleen zichtbaar is voor eigenschappen waarvoor deze al is geconfigureerd. De tag komt overeen met [`onBeforeLinkClickSend`](/help/web-sdk/commands/configure/onbeforelinkclicksend.md) in de JavaScript-bibliotheek. Gebruik de callback van **[!UICONTROL Filter click properties]** om klikgegevens te filteren of aan te passen, of **[!UICONTROL On before event send callback]** te gebruiken om de algemene lading te filtreren of aan te passen die naar Adobe wordt verzonden. Wanneer zowel de callback als de callback **[!UICONTROL On before link click send]** zijn ingesteld, wordt alleen de callback **[!UICONTROL Filter click properties]** uitgevoerd.**[!UICONTROL Filter click properties]**
+>Het veld **[!UICONTROL On before link click send]** is een afgekeurde callback die alleen zichtbaar is voor eigenschappen waarvoor deze al is geconfigureerd. De tag komt overeen met [`onBeforeLinkClickSend`](/help/web-sdk/commands/configure/onbeforelinkclicksend.md) in de JavaScript-bibliotheek. Gebruik de callback van **[!UICONTROL Filter click properties]** om klikgegevens te filteren of aan te passen, of **[!UICONTROL On before event send callback]** te gebruiken om de algemene lading te filtreren of aan te passen die naar Adobe wordt verzonden. Wanneer zowel de callback als de callback **[!UICONTROL Filter click properties]** zijn ingesteld, wordt alleen de callback **[!UICONTROL On before link click send]** uitgevoerd.**[!UICONTROL Filter click properties]**
 
 ## Instellingen voor mediaverzamelingen configureren {#media-collection}
 
@@ -207,7 +212,7 @@ Als alternatief voor het overgaan van de met voeten treedt door een bevel van SD
 
 >[!IMPORTANT]
 >
->DataStream-overschrijvingen moeten per omgeving worden geconfigureerd. De ontwikkelings-, staging- en productieomgevingen hebben allemaal verschillende overschrijvingen. U kunt de instellingen tussen de instellingen kopiëren met behulp van de speciale opties die in het onderstaande scherm worden weergegeven.
+> DataStream-overschrijvingen moeten per omgeving worden geconfigureerd. De ontwikkelings-, staging- en productieomgevingen hebben allemaal verschillende overschrijvingen. U kunt de instellingen tussen de instellingen kopiëren met behulp van de speciale opties die in het onderstaande scherm worden weergegeven.
 
 ![ Beeld dat de configuratie van de gegevensstroom toont treedt het gebruiken van de de markeringsuitbreidingspagina van SDK van het Web met voeten.](assets/datastream-overrides.png)
 
@@ -227,7 +232,7 @@ De onderstaande gegevensstroomoverschrijvingsinstellingen overschrijven alle con
 
 Gebruik de montages in deze sectie om gegevens met voeten te treden die aan de dienst van Adobe Analytics verpletteren.
 
-{het beeld van de de marktextensie UI van SDK van het 0} Web die de montages van de de gegevensstroom van Adobe Analytics met voeten treedt.![&#128279;](assets/datastream-override-analytics.png)
+{het beeld van de de marktextensie UI van SDK van het 0} Web die de montages van de de gegevensstroom van Adobe Analytics met voeten treedt.![](assets/datastream-override-analytics.png)
 
 * **[!UICONTROL Enabled]** / **[!UICONTROL Disabled]**: gebruik dit vervolgkeuzemenu om gegevensroutering naar de Adobe Analytics-service in of uit te schakelen.
 * **[!UICONTROL Report suites]**: De id&#39;s voor de bestemmingsrapportsuites in Adobe Analytics. De waarde moet een vooraf geconfigureerde rapportsuite (of een door komma&#39;s gescheiden lijst met rapportsuites) van uw gegevensstroomconfiguratie zijn. Deze instelling overschrijft de primaire rapportsuites.
@@ -237,7 +242,7 @@ Gebruik de montages in deze sectie om gegevens met voeten te treden die aan de d
 
 Gebruik de montages in deze sectie om gegevens met voeten te treden die aan de dienst van Adobe Audience Manager verpletteren.
 
-{het beeld van de de marktextensie UI van SDK van het 0} Web die de montages van de de gegevensstroom van Adobe Audience Manager met voeten treedt.![&#128279;](assets/datastream-override-audience-manager.png)
+{het beeld van de de marktextensie UI van SDK van het 0} Web die de montages van de de gegevensstroom van Adobe Audience Manager met voeten treedt.![](assets/datastream-override-audience-manager.png)
 
 * **[!UICONTROL Enabled]** / **[!UICONTROL Disabled]**: gebruik dit vervolgkeuzemenu om gegevensroutering naar de Adobe Audience Manager-service in of uit te schakelen.
 * **[!UICONTROL Third-party ID sync container]**: De id voor de synchronisatiecontainer van de doel-id van derden in Audience Manager. De waarde moet een preconfigured secundaire container van uw gegevensstroomconfiguratie zijn en treedt de primaire container met voeten.
@@ -246,7 +251,7 @@ Gebruik de montages in deze sectie om gegevens met voeten te treden die aan de d
 
 Gebruik de montages in deze sectie om gegevens met voeten te treden die aan de dienst van Adobe Experience Platform verpletteren.
 
-{het beeld van de de marktextensie UI van SDK van het 0} Web die de montages van de de gegevensstroom van Adobe Experience Platform met voeten treedt.![&#128279;](assets/datastream-override-experience-platform.png)
+{het beeld van de de marktextensie UI van SDK van het 0} Web die de montages van de de gegevensstroom van Adobe Experience Platform met voeten treedt.![](assets/datastream-override-experience-platform.png)
 
 * **[!UICONTROL Enabled]** / **[!UICONTROL Disabled]**: gebruik dit vervolgkeuzemenu om gegevensroutering naar de Adobe Experience Platform-service in of uit te schakelen.
 * **[!UICONTROL Event dataset]**: De id voor de gegevensset met doelgebeurtenissen in de Adobe Experience Platform. De waarde moet een preconfigured secundaire dataset van uw configuratie van de gegevensstroom zijn.
@@ -259,7 +264,7 @@ Gebruik de montages in deze sectie om gegevens met voeten te treden die aan de d
 
 Gebruik de montages in deze sectie om gegevens met voeten te treden die aan de server-zij gebeurtenis door:sturen dienst van Adobe verpletteren.
 
-{het beeld van de de markeringsuitbreiding UI van SDK van het 0} Web die de Server-zij Gebeurtenis toont die van Adobe gegevensstroom met voeten treedt montages.![&#128279;](assets/datastream-override-ssf.png)
+{het beeld van de de markeringsuitbreiding UI van SDK van het 0} Web die de Server-zij Gebeurtenis toont die van Adobe gegevensstroom met voeten treedt montages.![](assets/datastream-override-ssf.png)
 
 * **[!UICONTROL Enabled]** / **[!UICONTROL Disabled]**: gebruik dit vervolgkeuzemenu om het verzenden van gegevens naar de Adobe Server-Side Event Forwarding-service in of uit te schakelen.
 
@@ -267,7 +272,7 @@ Gebruik de montages in deze sectie om gegevens met voeten te treden die aan de s
 
 Gebruik de montages in deze sectie om gegevens met voeten te treden die aan de dienst van Adobe Target verpletteren.
 
-{het beeld van de de marktextensie UI van SDK van het 0} Web die de montages van de de gegevensstroom van Adobe Target met voeten treedt.![&#128279;](assets/datastream-override-target.png)
+{het beeld van de de marktextensie UI van SDK van het 0} Web die de montages van de de gegevensstroom van Adobe Target met voeten treedt.![](assets/datastream-override-target.png)
 
 * **[!UICONTROL Enabled]** / **[!UICONTROL Disabled]**: gebruik dit vervolgkeuzemenu om gegevensroutering naar de Adobe Target-service in of uit te schakelen.
 
