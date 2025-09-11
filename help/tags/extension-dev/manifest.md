@@ -2,9 +2,9 @@
 title: Extension Manifest
 description: Leer hoe u een JSON-manifestbestand configureert dat Adobe Experience Platform informeert over de juiste manier om uw extensie te gebruiken.
 exl-id: 7cac020b-3cfd-4a0a-a2d1-edee1be125d0
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: a7c66b9172421510510b6acf3466334c33cdaa3d
 workflow-type: tm+mt
-source-wordcount: '2606'
+source-wordcount: '2652'
 ht-degree: 1%
 
 ---
@@ -22,7 +22,7 @@ Een voorbeeld `extension.json` kan de [ uitbreiding van de Wereld van Hello ](ht
 Een extensiemanifest moet uit het volgende bestaan:
 
 | Eigenschap | Beschrijving |
-| --- | --- |
+|--------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | `name` | De naam van de extensie. Het moet van alle andere uitbreidingen uniek zijn en moet [ het noemen regels ](#naming-rules) naleven. **dit wordt gebruikt door markeringen als herkenningsteken en zou niet moeten worden veranderd nadat u uw uitbreiding publiceert.** |
 | `platform` | Het platform voor uw extensie. De enige waarde die op dit moment wordt geaccepteerd, is `web` . |
 | `version` | De versie van uw extensie. Het moet het [ semver ](https://semver.org/) versioning formaat volgen. Dit is verenigbaar met [ npm versiegebied ](https://docs.npmjs.com/files/package.json#version). |
@@ -30,6 +30,7 @@ Een extensiemanifest moet uit het volgende bestaan:
 | `description` | De beschrijving van de extensie. Dit wordt weergegeven aan Experience Platform-gebruikers. Als uw extensie gebruikers de mogelijkheid biedt om uw product te implementeren op hun website, moet u beschrijven wat uw product doet. Het is niet nodig om &quot;tags&quot; of &quot;extensie&quot; te vermelden. Gebruikers weten dan al dat ze naar een extensie voor tags kijken. |
 | `iconPath` *(Optioneel)* | Het relatieve pad naar het pictogram dat voor de extensie wordt weergegeven. Het mag niet beginnen met een slash. Het moet verwijzen naar een SVG-bestand met een `.svg` -extensie. De SVG moet vierkant zijn en kan door Experience Platform worden geschaald. |
 | `author` | De &quot;auteur&quot; is een object met de volgende structuur: <ul><li>`name`: De naam van de auteur van de extensie. De bedrijfsnaam kan hier ook worden gebruikt.</li><li>`url` *(Facultatief)*: Een URL waar u meer over de uitbreidingsauteur kunt weten.</li><li>`email` *(Facultatief)*: Het e-mailadres van de auteur van de uitbreiding.</li></ul>Dit is verenigbaar met [ npm auteursgebied ](https://docs.npmjs.com/files/package.json#people-fields-author-contributors) regels. |
+| `releaseNotesUrl` *(Optioneel)* | De URL naar de releaseopmerkingen van uw extensie als u over een locatie beschikt om deze gegevens te publiceren. Deze URL wordt gebruikt in de gebruikersinterface voor Adobe-tags om deze koppeling weer te geven tijdens de installatie en upgrade van de extensie. Deze eigenschap wordt alleen ondersteund voor Web- en Edge-extensies. |
 | `exchangeUrl` *(Vereist voor openbare extensies)* | De URL naar de aanbieding van je extensie op Adobe Exchange. Deze moet overeenkomen met het patroon `https://www.adobeexchange.com/experiencecloud.details.######.html` . |
 | `viewBasePath` | Het relatieve pad naar de submap met al uw weergaven en aan de weergave gerelateerde bronnen (HTML, JavaScript, CSS, afbeeldingen). Experience Platform host deze map op een webserver en laadt er iframe-inhoud uit. Dit is een verplicht veld en mag niet beginnen met een schuine streep. Als bijvoorbeeld al uw weergaven zich in `src/view/` bevinden, is de waarde van `viewBasePath` gelijk aan `src/view/` . |
 | `hostedLibFiles` *(Optioneel)* | Veel van onze gebruikers hebben de voorkeur aan het hosten van alle op tags betrekking hebbende dossiers op hun eigen server. Dit biedt gebruikers meer zekerheid over de beschikbaarheid van bestanden tijdens runtime en kan de code gemakkelijk scannen op beveiligingskwetsbaarheden. Als het bibliotheekgedeelte van uw extensie JavaScript-bestanden tijdens runtime moet laden, wordt u aangeraden deze eigenschap te gebruiken om deze bestanden weer te geven. De weergegeven bestanden worden samen met de tagruntimebibliotheek gehost. Uw uitbreiding kan de dossiers via URL dan laden die gebruikend [ wordt teruggewonnen getHostedLibFileUrl ](./turbine.md#get-hosted-lib-file) methode.<br><br> deze optie bevat een serie met relatieve wegen van derdebibliotheekdossiers die moeten worden ontvangen. |
@@ -74,20 +75,20 @@ Het configuratieobject moet als volgt zijn gestructureerd:
       <td><code>schema</code></td>
       <td>Een voorwerp van <a href="https://json-schema.org/"> JSON Schema </a> beschrijvend het formaat van een geldig voorwerp dat van de mening van de uitbreidingsconfiguratie wordt bewaard. Aangezien u de ontwikkelaar van de configuratiemening bent, is het uw verantwoordelijkheid om ervoor te zorgen dat om het even welk die montagesvoorwerp aan dit schema aanpast. Dit schema wordt ook gebruikt voor validatie wanneer gebruikers gegevens proberen op te slaan met Experience Platform-services.<br><br> een voorwerp van het voorbeeldschema is als volgt:
 <pre class="JSON language-JSON hljs">
-&lbrace;
+{
   "$schema": "http://json-schema.org/draft-04/schema#",
   "type": "object",
-  "properties": &lbrace;
-    "delay": &lbrace;
+  "properties": {
+    "delay": {
       "type": "number",
       "minimum": 1
-    &rbrace;
-  &rbrace;,
-  "required": &lbrack;
+    }
+  },
+  "required": [
     "delay"
-  &rbrack;,
+  ],
   "additionalProperties": false
-&rbrace;
+}
 </pre>
       Wij adviseren gebruikend een hulpmiddel zoals <a href="https://www.jsonschemavalidator.net/"> JSON- Schema validator </a> om uw schema manueel te testen.</td>
     </tr>
@@ -134,20 +135,20 @@ Een typedefinitie is een voorwerp dat wordt gebruikt om een gebeurtenis, een voo
       <td><code>schema</code></td>
       <td>Een voorwerp van <a href="https://json-schema.org/"> JSON Schema </a> beschrijvend het formaat van een geldig montagesvoorwerp dat door de gebruiker kan worden bewaard. De montages worden gewoonlijk gevormd en door een gebruiker bewaard gebruikend het gebruikersinterface van de Inzameling van Gegevens. In deze gevallen kan de weergave van de extensie de nodige stappen ondernemen om door de gebruiker opgegeven instellingen te valideren. Anderzijds kiezen sommige gebruikers ervoor om tags-API's rechtstreeks te gebruiken zonder de hulp van een gebruikersinterface. Het doel van dit schema is om Experience Platform toe te staan correct te bevestigen dat de montagesobjecten die door gebruikers worden bewaard, ongeacht of een gebruikersinterface wordt gebruikt, in een formaat zijn dat met de bibliotheekmodule compatibel is die op het montagesobject tijdens runtime zal handelen.<br><br> een voorwerp van het voorbeeldschema is als volgt:<br>
 <pre class="JSON language-JSON hljs">
-&lbrace;
+{
   "$schema": "http://json-schema.org/draft-04/schema#",
   "type": "object",
-  "properties": &lbrace;
-    "delay": &lbrace;
+  "properties": {
+    "delay": {
       "type": "number",
       "minimum": 1
-    &rbrace;
-  &rbrace;,
-  "required": &lbrack;
+    }
+  },
+  "required": [
     "delay"
-  &rbrack;,
+  ],
   "additionalProperties": false
-&rbrace;
+}
 </pre>
       Wij adviseren gebruikend een hulpmiddel zoals <a href="https://www.jsonschemavalidator.net/"> JSON- Schema validator </a> om uw schema manueel te testen.</td>
     </tr>
@@ -209,7 +210,7 @@ Wanneer de gebruiker de regel opslaat, ziet het instellingsobject dat in de weer
 
 Wanneer een regel die onze actie gebruikt, in de runtimebibliotheek van de tag wordt geactiveerd, willen we de code van de gebruiker uitvoeren en deze een gebruikersnaam doorgeven.
 
-Op het punt dat het instellingsobject wordt opgeslagen vanuit de weergave van het handelingstype, is de code van de gebruiker gewoon een tekenreeks. Dit is goed omdat het behoorlijk aan en van JSON kan behoorlijk in series worden vervaardigd; nochtans, is het ook slecht omdat het typisch in de markering runtime bibliotheek als koord evenals in plaats van een uitvoerbare functie zou worden uitgestoten. Hoewel u kon proberen om de code binnen de de bibliotheekmodule van uw actietype uit te voeren gebruikend [`eval` ](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/eval) of de aannemer van de Functie van a [&#128279;](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function), is het hoogst ontmoedigd toe te schrijven aan [ inhoudsveiligheidsbeleid ](https://developer.mozilla.org/en-US/docs/Web/Security/CSP) potentieel blokkerend uitvoering.
+Op het punt dat het instellingsobject wordt opgeslagen vanuit de weergave van het handelingstype, is de code van de gebruiker gewoon een tekenreeks. Dit is goed omdat het behoorlijk aan en van JSON kan behoorlijk in series worden vervaardigd; nochtans, is het ook slecht omdat het typisch in de markering runtime bibliotheek als koord evenals in plaats van een uitvoerbare functie zou worden uitgestoten. Hoewel u kon proberen om de code binnen de de bibliotheekmodule van uw actietype uit te voeren gebruikend [`eval` ](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/eval) of de aannemer van de Functie van a [ ](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function), is het hoogst ontmoedigd toe te schrijven aan [ inhoudsveiligheidsbeleid ](https://developer.mozilla.org/en-US/docs/Web/Security/CSP) potentieel blokkerend uitvoering.
 
 Als tussenoplossing voor deze situatie, vertelt het gebruiken van de functietransformatie Experience Platform om de code van de gebruiker in een uitvoerbare functie te verpakken wanneer het in de markering runtime bibliotheek wordt uitgegeven. Om ons voorbeeldprobleem op te lossen, zouden wij de transformatie op de typedefinitie in `extension.json` als volgt bepalen:
 
