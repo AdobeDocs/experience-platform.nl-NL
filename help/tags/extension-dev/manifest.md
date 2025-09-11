@@ -75,20 +75,20 @@ Het configuratieobject moet als volgt zijn gestructureerd:
       <td><code>schema</code></td>
       <td>Een voorwerp van <a href="https://json-schema.org/"> JSON Schema </a> beschrijvend het formaat van een geldig voorwerp dat van de mening van de uitbreidingsconfiguratie wordt bewaard. Aangezien u de ontwikkelaar van de configuratiemening bent, is het uw verantwoordelijkheid om ervoor te zorgen dat om het even welk die montagesvoorwerp aan dit schema aanpast. Dit schema wordt ook gebruikt voor validatie wanneer gebruikers gegevens proberen op te slaan met Experience Platform-services.<br><br> een voorwerp van het voorbeeldschema is als volgt:
 <pre class="JSON language-JSON hljs">
-{
+&lbrace;
   "$schema": "http://json-schema.org/draft-04/schema#",
   "type": "object",
-  "properties": {
-    "delay": {
+  "properties": &lbrace;
+    "delay": &lbrace;
       "type": "number",
       "minimum": 1
-    }
-  },
-  "required": [
+    &rbrace;
+  &rbrace;,
+  "required": &lbrack;
     "delay"
-  ],
+  &rbrack;,
   "additionalProperties": false
-}
+&rbrace;
 </pre>
       Wij adviseren gebruikend een hulpmiddel zoals <a href="https://www.jsonschemavalidator.net/"> JSON- Schema validator </a> om uw schema manueel te testen.</td>
     </tr>
@@ -135,20 +135,20 @@ Een typedefinitie is een voorwerp dat wordt gebruikt om een gebeurtenis, een voo
       <td><code>schema</code></td>
       <td>Een voorwerp van <a href="https://json-schema.org/"> JSON Schema </a> beschrijvend het formaat van een geldig montagesvoorwerp dat door de gebruiker kan worden bewaard. De montages worden gewoonlijk gevormd en door een gebruiker bewaard gebruikend het gebruikersinterface van de Inzameling van Gegevens. In deze gevallen kan de weergave van de extensie de nodige stappen ondernemen om door de gebruiker opgegeven instellingen te valideren. Anderzijds kiezen sommige gebruikers ervoor om tags-API's rechtstreeks te gebruiken zonder de hulp van een gebruikersinterface. Het doel van dit schema is om Experience Platform toe te staan correct te bevestigen dat de montagesobjecten die door gebruikers worden bewaard, ongeacht of een gebruikersinterface wordt gebruikt, in een formaat zijn dat met de bibliotheekmodule compatibel is die op het montagesobject tijdens runtime zal handelen.<br><br> een voorwerp van het voorbeeldschema is als volgt:<br>
 <pre class="JSON language-JSON hljs">
-{
+&lbrace;
   "$schema": "http://json-schema.org/draft-04/schema#",
   "type": "object",
-  "properties": {
-    "delay": {
+  "properties": &lbrace;
+    "delay": &lbrace;
       "type": "number",
       "minimum": 1
-    }
-  },
-  "required": [
+    &rbrace;
+  &rbrace;,
+  "required": &lbrack;
     "delay"
-  ],
+  &rbrack;,
   "additionalProperties": false
-}
+&rbrace;
 </pre>
       Wij adviseren gebruikend een hulpmiddel zoals <a href="https://www.jsonschemavalidator.net/"> JSON- Schema validator </a> om uw schema manueel te testen.</td>
     </tr>
@@ -210,7 +210,7 @@ Wanneer de gebruiker de regel opslaat, ziet het instellingsobject dat in de weer
 
 Wanneer een regel die onze actie gebruikt, in de runtimebibliotheek van de tag wordt geactiveerd, willen we de code van de gebruiker uitvoeren en deze een gebruikersnaam doorgeven.
 
-Op het punt dat het instellingsobject wordt opgeslagen vanuit de weergave van het handelingstype, is de code van de gebruiker gewoon een tekenreeks. Dit is goed omdat het behoorlijk aan en van JSON kan behoorlijk in series worden vervaardigd; nochtans, is het ook slecht omdat het typisch in de markering runtime bibliotheek als koord evenals in plaats van een uitvoerbare functie zou worden uitgestoten. Hoewel u kon proberen om de code binnen de de bibliotheekmodule van uw actietype uit te voeren gebruikend [`eval` ](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/eval) of de aannemer van de Functie van a [ ](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function), is het hoogst ontmoedigd toe te schrijven aan [ inhoudsveiligheidsbeleid ](https://developer.mozilla.org/en-US/docs/Web/Security/CSP) potentieel blokkerend uitvoering.
+Op het punt dat het instellingsobject wordt opgeslagen vanuit de weergave van het handelingstype, is de code van de gebruiker gewoon een tekenreeks. Dit is goed omdat het behoorlijk aan en van JSON kan behoorlijk in series worden vervaardigd; nochtans, is het ook slecht omdat het typisch in de markering runtime bibliotheek als koord evenals in plaats van een uitvoerbare functie zou worden uitgestoten. Hoewel u kon proberen om de code binnen de de bibliotheekmodule van uw actietype uit te voeren gebruikend [`eval` ](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/eval) of de aannemer van de Functie van a [&#128279;](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function), is het hoogst ontmoedigd toe te schrijven aan [ inhoudsveiligheidsbeleid ](https://developer.mozilla.org/en-US/docs/Web/Security/CSP) potentieel blokkerend uitvoering.
 
 Als tussenoplossing voor deze situatie, vertelt het gebruiken van de functietransformatie Experience Platform om de code van de gebruiker in een uitvoerbare functie te verpakken wanneer het in de markering runtime bibliotheek wordt uitgegeven. Om ons voorbeeldprobleem op te lossen, zouden wij de transformatie op de typedefinitie in `extension.json` als volgt bepalen:
 
