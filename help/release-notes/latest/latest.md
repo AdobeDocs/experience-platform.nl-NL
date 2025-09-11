@@ -5,7 +5,7 @@ exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
 source-git-commit: 40c3745920204983f5388de6cba1402d87eda71c
 workflow-type: tm+mt
 source-wordcount: '1416'
-ht-degree: 91%
+ht-degree: 93%
 
 ---
 
@@ -15,8 +15,8 @@ ht-degree: 91%
 >
 >Raadpleeg de volgende documentatie voor aanvullende informatie voor andere Adobe Experience Platform-toepassingen:
 >
->- [Adobe Journey Optimizer](https://experienceleague.adobe.com/nl/docs/journey-optimizer/using/whats-new/release-notes)
->- [Adobe Journey Optimizer B2B](https://experienceleague.adobe.com/nl/docs/journey-optimizer-b2b/user/release-notes)
+>- [Adobe Journey Optimizer](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/whats-new/release-notes)
+>- [Adobe Journey Optimizer B2B](https://experienceleague.adobe.com/en/docs/journey-optimizer-b2b/user/release-notes)
 >- [Customer Journey Analytics](https://experienceleague.adobe.com/nl/docs/analytics-platform/using/releases/pre-release-notes)
 >- [Samenstelling van Federated-doelgroep](https://experienceleague.adobe.com/nl/docs/federated-audience-composition/using/e-release-notes)
 >- [Real-Time CDP Collaboration](https://experienceleague.adobe.com/nl/docs/real-time-cdp-collaboration/using/latest)
@@ -160,7 +160,7 @@ Voor meer informatie over sandboxes, lees het [ overzicht van sandboxes](../../s
 
 | Functie | Beschrijving |
 | ------- | ----------- |
-| Doelgroepinschattingen | De ramingen van het publiek worden nu getoond als a **waaier**, die op het betrouwbaarheidsinterval van de steekproefgegevens gebaseerd is. Meer over ramingen leren, lees de [ gids van de Bouwer van het Segment ](/help/segmentation/ui/segment-builder.md#audience-properties). |
+| Doelgroepinschattingen | Doelgroepinschattingen worden nu weergegeven als een **bereik**, dat is gebaseerd op het betrouwbaarheidsinterval van de steekproefgegevens. Voor meer informatie over schattingen kunt u de [Segment Builder-handleiding](/help/segmentation/ui/segment-builder.md#audience-properties) raadplegen. |
 
 Voor meer informatie raadpleegt u het [[!DNL Segmentation Service] overzicht](../../segmentation/home.md).
 
