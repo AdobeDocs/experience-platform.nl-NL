@@ -39,7 +39,7 @@ Het dialoogvenster [!UICONTROL Create a schema] wordt weergegeven. In dit dialoo
 
 ![ creeer een schemadialoog met de werkschemaopties en selecteer benadrukt.](../../images/ui/resources/schemas/create-a-schema-dialog.png)
 
-### [!BADGE  Beta ]{type=Informative} Handboek of ML-bijgestaan schemaverwezenlijking {#manual-or-assisted}
+### [!BADGE &#x200B; Beta &#x200B;]{type=Informative} Handboek of ML-bijgestaan schemaverwezenlijking {#manual-or-assisted}
 
 Leren hoe u een algoritme van XML kunt gebruiken om een schemastructuur te adviseren die op een csv- dossier wordt gebaseerd, zie de [ machine het leren-bijgewoonde gids van de schemaverwezenlijking ](../ml-assisted-schema-creation.md). Deze UI-handleiding is gericht op de workflow voor handmatig maken.
 
@@ -172,7 +172,7 @@ Nadat u een veldgroep aan een schema hebt toegevoegd, kunt u velden globaal uit 
 >[!IMPORTANT]
 >
 >Het selecteren **[!UICONTROL Remove]** schrapt het gebied van de gebiedsgroep zelf, die *beïnvloedt alle* schema&#39;s die die gebiedsgroep gebruiken.
->>Gebruik deze optie niet tenzij u het gebied uit elk schema wilt **verwijderen dat de gebiedsgroep** omvat.
+>&#x200B;>Gebruik deze optie niet tenzij u het gebied uit elk schema wilt **verwijderen dat de gebiedsgroep** omvat.
 
 Als u een veld uit de veldgroep wilt verwijderen, selecteert u het veld op het canvas en selecteert u **[!UICONTROL Remove]** in de rechtertrack. In dit voorbeeld wordt het veld `taxId` van de groep **[!UICONTROL Demographic Details]** getoond.
 
