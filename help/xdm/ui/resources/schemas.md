@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Schema's maken en bewerken in de gebruikersinterface
 description: Leer de basisbeginselen van het maken en bewerken van schema's in de Experience Platform-gebruikersinterface.
 exl-id: be83ce96-65b5-4a4a-8834-16f7ef9ec7d1
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 0b03a8873f828faef78e5bf0b66c9773fc693206
 workflow-type: tm+mt
-source-wordcount: '3905'
+source-wordcount: '4001'
 ht-degree: 0%
 
 ---
@@ -39,7 +39,7 @@ Het dialoogvenster [!UICONTROL Create a schema] wordt weergegeven. In dit dialoo
 
 ![ creeer een schemadialoog met de werkschemaopties en selecteer benadrukt.](../../images/ui/resources/schemas/create-a-schema-dialog.png)
 
-### [!BADGE &#x200B; Beta &#x200B;]{type=Informative} Handboek of ML-bijgestaan schemaverwezenlijking {#manual-or-assisted}
+### [!BADGE  Beta ]{type=Informative} Handboek of ML-bijgestaan schemaverwezenlijking {#manual-or-assisted}
 
 Leren hoe u een algoritme van XML kunt gebruiken om een schemastructuur te adviseren die op een csv- dossier wordt gebaseerd, zie de [ machine het leren-bijgewoonde gids van de schemaverwezenlijking ](../ml-assisted-schema-creation.md). Deze UI-handleiding is gericht op de workflow voor handmatig maken.
 
@@ -167,27 +167,43 @@ Na het toevoegen van een gebiedsgroep aan een schema, kunt u optioneel [ bestaan
 
 ### Velden verwijderen die zijn toegevoegd uit veldgroepen {#remove-fields}
 
-Nadat u een veldgroep aan een schema hebt toegevoegd, kunt u alle velden verwijderen die u niet nodig hebt.
+Nadat u een veldgroep aan een schema hebt toegevoegd, kunt u velden globaal uit de veldgroep verwijderen of ze lokaal uit het huidige schema verbergen. Kennis van het verschil tussen deze acties is van essentieel belang om onbedoelde schemawijzigingen te voorkomen.
 
->[!NOTE]
+>[!IMPORTANT]
 >
->Het verwijderen van velden uit een veldgroep heeft alleen invloed op het schema waaraan wordt gewerkt en heeft geen invloed op de veldgroep zelf. Als u velden in één schema verwijdert, zijn deze velden nog steeds beschikbaar in alle andere schema&#39;s waarin dezelfde veldgroep wordt gebruikt.
+>Het selecteren **[!UICONTROL Remove]** schrapt het gebied van de gebiedsgroep zelf, die *beïnvloedt alle* schema&#39;s die die gebiedsgroep gebruiken.
+>>Gebruik deze optie niet tenzij u het gebied uit elk schema wilt **verwijderen dat de gebiedsgroep** omvat.
 
-In het volgende voorbeeld is de standaardveldgroep **[!UICONTROL Demographic Details]** toegevoegd aan een schema. Als u één veld, zoals `taxId` , wilt verwijderen, selecteert u het veld op het canvas en selecteert u vervolgens **[!UICONTROL Remove]** in de rechtertrack.
+Als u een veld uit de veldgroep wilt verwijderen, selecteert u het veld op het canvas en selecteert u **[!UICONTROL Remove]** in de rechtertrack. In dit voorbeeld wordt het veld `taxId` van de groep **[!UICONTROL Demographic Details]** getoond.
 
 ![ De [!DNL Schema Editor] with [!UICONTROL Remove] gemarkeerd. Deze actie verwijdert één enkel gebied.](../../images/ui/resources/schemas/remove-single-field.png)
 
-Als er meerdere velden zijn die u wilt verwijderen, kunt u de veldgroep als geheel beheren. Selecteer een veld dat tot de groep behoort op het canvas en selecteer vervolgens **[!UICONTROL Manage related fields]** in de rechtertrack.
+Als u meerdere velden in een schema wilt verbergen zonder deze uit de veldgroep zelf te verwijderen, gebruikt u de optie **[!UICONTROL Manage related fields]** . Selecteer een willekeurig veld in de groep op het canvas en selecteer vervolgens **[!UICONTROL Manage related fields]** in de rechtertrack.
 
 ![ [!DNL Schema Editor] met [!UICONTROL Manage related fields] benadrukte.](../../images/ui/resources/schemas/manage-related-fields.png)
 
-Er verschijnt een dialoogvenster met de structuur van de veldgroep in kwestie. Hier kunt u de beschikbare selectievakjes gebruiken om de velden die u nodig hebt in of uit te schakelen. Selecteer **[!UICONTROL Confirm]** als u tevreden bent.
+Er wordt een dialoogvenster weergegeven met de structuur van de veldgroep. Schakel de velden die u wilt opnemen in of uit met de selectievakjes.
 
 ![ de [!UICONTROL Manage related fields] dialoog met geselecteerde gebieden en [!UICONTROL Confirm] benadrukte.](../../images/ui/resources/schemas/select-fields.png)
 
-Het canvas verschijnt weer met alleen de geselecteerde velden in de schemastructuur.
+Selecteer **[!UICONTROL Confirm]** om het canvas bij te werken en de geselecteerde velden te weerspiegelen.
+
 
 ![ toegevoegde Gebieden ](../../images/ui/resources/schemas/fields-added.png)
+
+### Veldgedrag bij verwijderen of verwijderen van velden {#field-removal-deprecation-behavior}
+
+Gebruik de onderstaande tabel om het bereik van elke actie te begrijpen.
+
+| Actie | Alleen van toepassing op huidig schema | Hiermee wijzigt u de veldgroep | Beïnvloedt andere schema&#39;s | Beschrijving |
+|--------------------------|--------------------------------|----------------------|-----------------------|-------------|
+| **verwijder gebied** | Nee | Ja | Ja | Hiermee verwijdert u het veld uit de veldgroep. Dit verwijdert het uit alle schema&#39;s gebruikend die groep. |
+| **beheer verwante gebieden** | Ja | Nee | Nee | Hiermee verbergt u velden alleen van het huidige schema. De veldgroep blijft ongewijzigd. |
+| **verval gebied** | Nee | Ja | Ja | Hiermee markeert u het veld als afgekeurd in de veldgroep. Het is niet meer beschikbaar voor gebruik in om het even welk schema. |
+
+>[!NOTE]
+>
+>Dit gedrag is consistent in zowel op records gebaseerde als op gebeurtenissen gebaseerde schema&#39;s.
 
 ### Aangepaste velden toevoegen aan veldgroepen {#add-fields}
 
