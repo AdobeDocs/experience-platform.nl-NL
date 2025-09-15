@@ -62,5 +62,5 @@ Zodra u deze stappen voltooit, zullen om het even welke steunbeheerders in uw ge
 
 Voor meer informatie bekijkt u de volgende video om te leren hoe u de Agent van de Steun van het Product kunt gebruiken om probleemloos problemen op te lossen zonder uw werkschema te verlaten.
 
->[!VIDEO](https://video.tv.adobe.com/v/3443189?learn=on&captions=dut)
+>[!VIDEO](https://video.tv.adobe.com/v/3443183?learn=on)
 
