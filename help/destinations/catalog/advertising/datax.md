@@ -2,14 +2,14 @@
 title: Verizon MediaYahoo DataX-verbinding
 description: DataX is een geaggregeerde Verizon Media/Yahoo-infrastructuur die verschillende componenten host die Verizon Media/Yahoo in staat stellen gegevens met zijn externe partners op een veilige, geautomatiseerde en schaalbare manier uit te wisselen.
 exl-id: 7d02671d-8650-407d-9c9f-fad7da3156bc
-source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
+source-git-commit: 65809628e8535027edb08e54e84b308777036ab2
 workflow-type: tm+mt
 source-wordcount: '773'
 ht-degree: 1%
 
 ---
 
-# [!DNL Verizon Media/Yahoo DataX] verbinding
+# [!DNL Verizon Media/Yahoo DataX]-verbinding
 
 ## Overzicht {#overview}
 
@@ -17,7 +17,7 @@ ht-degree: 1%
 
 >[!IMPORTANT]
 >
->Deze doelconnector en documentatiepagina worden gemaakt en onderhouden door het [!DNL DataX] -team van [!DNL Verizon Media/Yahoo] . Voor om het even welke onderzoeken of updateverzoeken, gelieve hen direct in [ dataops@verizonmedia.com](mailto:dataops@verizonmedia.com) te contacteren
+>Deze doelconnector en documentatiepagina worden gemaakt en onderhouden door het [!DNL Verizon Media/Yahoo] -team van [!DNL DataX] . Voor om het even welke onderzoeken of updateverzoeken, gelieve hen direct in [ dataoperations@yahooinc.com](mailto:dataoperations@yahooinc.com) te contacteren
 
 ## Vereisten {#prerequisites}
 
@@ -67,7 +67,7 @@ Lees meer over [ Metagegevens van de Taxonomie ](https://developer.verizonmedia.
 
 ## Ondersteunde identiteiten {#supported-identities}
 
-[!DNL Verizon Media] ondersteunt de activering van identiteiten die in de onderstaande tabel worden beschreven. Leer meer over [ identiteiten ](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html?lang=nl-NL#getting-started).
+[!DNL Verizon Media] ondersteunt de activering van identiteiten die in de onderstaande tabel worden beschreven. Leer meer over [ identiteiten ](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html#getting-started).
 
 | Doelidentiteit | Beschrijving | Overwegingen |
 |---|---|---|
@@ -127,7 +127,7 @@ Lees [ activeer profielen en publiek aan een bestemming ](../../ui/activate-segm
 
 ## Gegevensgebruik en -beheer {#data-usage-governance}
 
-Alle [!DNL Adobe Experience Platform] -doelen zijn compatibel met het beleid voor gegevensgebruik bij het verwerken van uw gegevens. Voor gedetailleerde informatie over hoe [!DNL Adobe Experience Platform] gegevensbeheer afdwingt, zie het [ overzicht van het Beleid van Gegevens ](https://experienceleague.adobe.com/docs/experience-platform/data-governance/home.html?lang=nl-NL).
+Alle [!DNL Adobe Experience Platform] -doelen zijn compatibel met het beleid voor gegevensgebruik bij het verwerken van uw gegevens. Voor gedetailleerde informatie over hoe [!DNL Adobe Experience Platform] gegevensbeheer afdwingt, zie het [ overzicht van het Beleid van Gegevens ](https://experienceleague.adobe.com/docs/experience-platform/data-governance/home.html).
 
 ## Aanvullende bronnen {#additional-resources}
 
