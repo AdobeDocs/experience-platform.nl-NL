@@ -5,9 +5,9 @@ title: Verbinden met batchbestemmingen en gegevens activeren met de Flow Service
 description: Stapsgewijze instructies voor het gebruik van de Flow Service API om een batch-cloudopslag of e-mailmarketingbestemming in Experience Platform te maken en gegevens te activeren
 type: Tutorial
 exl-id: 41fd295d-7cda-4ab1-a65e-b47e6c485562
-source-git-commit: 81641f707dbd9fb2952589506bc42c3dd6cd83b3
+source-git-commit: 833e38559f7150c579840c69fa2658761fc9472c
 workflow-type: tm+mt
-source-wordcount: '3401'
+source-wordcount: '3435'
 ht-degree: 0%
 
 ---
@@ -34,7 +34,7 @@ In deze zelfstudie wordt in alle voorbeelden de bestemming [!DNL Adobe Campaign]
 
 ![ Overzicht - de stappen om een bestemming tot stand te brengen en publiek te activeren ](../assets/api/email-marketing/overview.png)
 
-Als u verkiest om het gebruikersinterface van Experience Platform te gebruiken om met een bestemming te verbinden en gegevens te activeren, [ verbind een bestemming ](../ui/connect-destination.md) en [ activeer publieksgegevens aan de 3&rbrace; leerprogramma&#39;s van de partijprofieluitvoer.](../ui/activate-batch-profile-destinations.md)
+Als u verkiest om het gebruikersinterface van Experience Platform te gebruiken om met een bestemming te verbinden en gegevens te activeren, [ verbind een bestemming ](../ui/connect-destination.md) en [ activeer publieksgegevens aan de 3} leerprogramma&#39;s van de partijprofieluitvoer.](../ui/activate-batch-profile-destinations.md)
 
 ## Aan de slag {#get-started}
 
@@ -591,18 +591,21 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
         "mode": "S3",
         "bucketName": "{BUCKET_NAME}",
         "path": "{FILEPATH}",
-        "format": "CSV"
+        "format": "CSV",
+        "includeFileManifest": true // Include this parameter if you want to enable manifest file generation for your destination
     }
     "params": {
         "mode": "AZURE_BLOB",
         "container": "{CONTAINER}",
         "path": "{FILEPATH}",
-        "format": "CSV"
+        "format": "CSV",
+        "includeFileManifest": true // Include this parameter if you want to enable manifest file generation for your destination
     }
     "params": {
         "mode": "FTP",
         "remotePath": "{REMOTE_PATH}",
-        "format": "CSV"
+        "format": "CSV",
+        "includeFileManifest": true // Include this parameter if you want to enable manifest file generation for your destination
     }        
 }'
 ```
@@ -638,7 +641,8 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
         "mode": "S3",
         "bucketName": "{BUCKET_NAME}",
         "path": "{FILEPATH}",
-        "format": "CSV"
+        "format": "CSV",
+        "includeFileManifest": true // Include this parameter if you want to enable manifest file generation for your destination
     }
 }'
 ```
@@ -674,7 +678,8 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
         "mode": "AZURE_BLOB",
         "container": "{CONTAINER}",
         "path": "{FILEPATH}",
-        "format": "CSV"
+        "format": "CSV",
+        "includeFileManifest": true // Include this parameter if you want to enable manifest file generation for your destination
     }
 }'
 ```
@@ -710,12 +715,14 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
         "mode": "S3",
         "bucketName": "{BUCKET_NAME}",
         "path": "{FILEPATH}",
-        "format": "CSV"
+        "format": "CSV",
+        "includeFileManifest": true // Include this parameter if you want to enable manifest file generation for your destination
     }
     "params": {
         "mode": "FTP",
         "remotePath": "{REMOTE_PATH}",
-        "format": "CSV"
+        "format": "CSV",
+        "includeFileManifest": true // Include this parameter if you want to enable manifest file generation for your destination
     }        
 }'
 ```
@@ -751,12 +758,14 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
         "mode": "S3",
         "bucketName": "{BUCKET_NAME}",
         "path": "{FILEPATH}",
-        "format": "CSV"
+        "format": "CSV",
+        "includeFileManifest": true // Include this parameter if you want to enable manifest file generation for your destination
     }
     "params": {
         "mode": "FTP",
         "remotePath": "{REMOTE_PATH}",
-        "format": "CSV"
+        "format": "CSV",
+        "includeFileManifest": true // Include this parameter if you want to enable manifest file generation for your destination
     }        
 }'
 ```
@@ -792,12 +801,14 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
         "mode": "S3",
         "bucketName": "{BUCKET_NAME}",
         "path": "{FILEPATH}",
-        "format": "CSV"
+        "format": "CSV",
+        "includeFileManifest": true // Include this parameter if you want to enable manifest file generation for your destination
     }
     "params": {
         "mode": "FTP",
         "remotePath": "{REMOTE_PATH}",
-        "format": "CSV"
+        "format": "CSV",
+        "includeFileManifest": true // Include this parameter if you want to enable manifest file generation for your destination
     }        
 }'
 ```
@@ -832,6 +843,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
     "params": {
         "mode": "FTP",
         "remotePath": "{REMOTE_PATH}",
+        "includeFileManifest": true // Include this parameter if you want to enable manifest file generation for your destination
     }
 }'
 ```
@@ -850,6 +862,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 | `params.bucketName` | Geef voor S3-verbindingen de naam op van het emmertje waar de bestanden worden geëxporteerd. |
 | `params.path` | Geef voor S3-verbindingen het bestandspad op in de opslaglocatie waar de bestanden worden geëxporteerd. |
 | `params.format` | `CSV` is momenteel het enige ondersteunde exporttype voor bestanden. |
+| `params.includeFileManifest` | *Facultatief*. Ingesteld op `true` om het genereren van manifestbestanden voor uw doel in te schakelen. Wanneer deze optie is ingeschakeld, wordt naast de geëxporteerde gegevensbestanden een manifestbestand gemaakt met metagegevens over de geëxporteerde bestanden. Bekijk a [ steekproef manifestdossier ](/help/destinations/assets/common/manifest-d0420d72-756c-4159-9e7f-7d3e2f8b501e-0ac8f3c0-29bd-40aa-82c1-f1b7e0657b19.json). |
 
 {style="table-layout:auto"}
 

@@ -4,9 +4,9 @@ title: Activeer publiek aan op dossier-gebaseerde bestemmingen door de Dienst AP
 description: Leer hoe u de Flow Service API gebruikt om bestanden met gekwalificeerde profielen te exporteren naar cloudopslagbestemmingen.
 type: Tutorial
 exl-id: 62028c7a-3ea9-4004-adb7-5e27bbe904fc
-source-git-commit: eb7d1b9c167839db39cbb28bf497edac706c0b6c
+source-git-commit: 833e38559f7150c579840c69fa2658761fc9472c
 workflow-type: tm+mt
-source-wordcount: '4900'
+source-wordcount: '4975'
 ht-degree: 0%
 
 ---
@@ -4376,7 +4376,7 @@ De id in de reactie vertegenwoordigt de unieke id van het invoerschema dat u heb
 
 ### Toewijzingsset maken {#create-mapping-set}
 
-Daarna, gebruik prep API van 0&rbrace; gegevens [ om de afbeelding tot stand te brengen die door input schemaidentiteitskaart, identiteitskaart van het outputschema, en de gewenste gebiedstoewijzingen te gebruiken wordt geplaatst.](https://developer.adobe.com/experience-platform-apis/references/data-prep/#tag/Mapping-sets/operation/createMappingSet)
+Daarna, gebruik prep API van 0} gegevens [ om de afbeelding tot stand te brengen die door input schemaidentiteitskaart, identiteitskaart van het outputschema, en de gewenste gebiedstoewijzingen te gebruiken wordt geplaatst.](https://developer.adobe.com/experience-platform-apis/references/data-prep/#tag/Mapping-sets/operation/createMappingSet)
 
 >[!BEGINSHADEBOX]
 
@@ -4752,6 +4752,14 @@ curl --location --request PATCH 'https://platform.adobe.io/data/foundation/flows
 >[!ENDSHADEBOX]
 
 ### Bestandmanifest-generatie toevoegen aan bestaande bestemming {#add-file-manifest}
+
+Manifest JSON-bestanden bevatten informatie over de exportlocatie, de exportgrootte en meer. Het manifest wordt genoemd gebruikend het formaat `manifest-<<destinationId>>-<<dataflowRunId>>.json`. Bekijk a [ steekproef manifestdossier ](/help/destinations/assets/common/manifest-d0420d72-756c-4159-9e7f-7d3e2f8b501e-0ac8f3c0-29bd-40aa-82c1-f1b7e0657b19.json). Het manifestbestand bevat de volgende velden:
+
+* `flowRunId`: De [ dataflow looppas ](/help/dataflows/ui/monitor-destinations.md#dataflow-runs-for-batch-destinations) die het uitgevoerde dossier produceerde.
+* `scheduledTime`: De tijd in UTC toen het bestand werd geëxporteerd.
+* `exportResults.sinkPath`: Het pad in uw opslaglocatie waar het geëxporteerde bestand is opgeslagen.
+* `exportResults.name`: De naam van het geëxporteerde bestand.
+* `size`: De grootte van het geëxporteerde bestand, in bytes.
 
 Als u bestands-manifest-generatie wilt toevoegen aan een bestaand doel, moet u de parameters voor de doelverbinding bijwerken met de bewerking `PATCH` . Dit laat duidelijke dossiergeneratie voor uw bestemming toe, die meta-gegevens over de uitgevoerde dossiers verstrekt.
 

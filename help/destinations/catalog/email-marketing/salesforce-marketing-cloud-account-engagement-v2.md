@@ -4,7 +4,7 @@ description: Leer hoe u de (V2) Salesforce Marketing Cloud-accountservice (voorh
 badge: label="Alpha" type="Informative"
 hide: true
 hidefromtoc: true
-source-git-commit: 21ca268d3ade99cf46b6c511360084297e8163d3
+source-git-commit: d1405237698271607fa672ccae1ac731d66df263
 workflow-type: tm+mt
 source-wordcount: '1742'
 ht-degree: 1%
@@ -22,9 +22,9 @@ Deze bestemming gebruikt [[!DNL Salesforce Import API v5] ](https://developer.sa
 
 >[!IMPORTANT]
 > 
-> Dit is de V2 versie van de [ 1&rbrace; bestemming van het Betrokkenheid van de Rekening van Marketing Cloud van Salesforce &lbrace;. ](help/destinations/catalog/email-marketing/salesforce-marketing-cloud-account-engagement.md) Deze versie vervangt de vorige bestemming en is momenteel in Alpha-versie.
-> &#x200B;> <br>
-> &#x200B;> Als u momenteel de vorige versie van de [ bestemming van de Rekening van Salesforce Marketing Cloud van ](help/destinations/catalog/email-marketing/salesforce-marketing-cloud-account-engagement.md) gebruikt, moet u aan deze V2 versie vóór **Januari 2026** migreren. Na januari 2026 zal Adobe de vorige versie uit bedrijf nemen en is deze niet meer beschikbaar.
+> Dit is de V2 versie van de [ 1} bestemming van het Betrokkenheid van de Rekening van Marketing Cloud van Salesforce {. ](/help/destinations/catalog/email-marketing/salesforce-marketing-cloud-account-engagement.md) Deze versie vervangt de vorige bestemming en is momenteel in Alpha-versie.
+> > <br>
+> > Als u momenteel de vorige versie van de [ bestemming van de Rekening van Salesforce Marketing Cloud van ](/help/destinations/catalog/email-marketing/salesforce-marketing-cloud-account-engagement.md) gebruikt, moet u aan deze V2 versie vóór **Januari 2026** migreren. Na januari 2026 zal Adobe de vorige versie uit bedrijf nemen en is deze niet meer beschikbaar.
 
 
 ## Gebruiksscenario’s {#use-cases}
