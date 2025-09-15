@@ -4376,7 +4376,7 @@ De id in de reactie vertegenwoordigt de unieke id van het invoerschema dat u heb
 
 ### Toewijzingsset maken {#create-mapping-set}
 
-Daarna, gebruik prep API van 0} gegevens [ om de afbeelding tot stand te brengen die door input schemaidentiteitskaart, identiteitskaart van het outputschema, en de gewenste gebiedstoewijzingen te gebruiken wordt geplaatst.](https://developer.adobe.com/experience-platform-apis/references/data-prep/#tag/Mapping-sets/operation/createMappingSet)
+Daarna, gebruik prep API van 0&rbrace; gegevens [ om de afbeelding tot stand te brengen die door input schemaidentiteitskaart, identiteitskaart van het outputschema, en de gewenste gebiedstoewijzingen te gebruiken wordt geplaatst.](https://developer.adobe.com/experience-platform-apis/references/data-prep/#tag/Mapping-sets/operation/createMappingSet)
 
 >[!BEGINSHADEBOX]
 
