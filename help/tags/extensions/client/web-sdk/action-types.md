@@ -3,9 +3,9 @@ title: Handelingstypen in de Adobe Experience Platform Web SDK Extension
 description: Meer informatie over de verschillende actietypen die worden geboden door de Adobe Experience Platform Web SDK-extensie.
 solution: Experience Platform
 exl-id: a4bf0bb9-59b4-4c43-97e6-387768176517
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: e274dda06c678bdbd230bc2f06204724bac633e8
 workflow-type: tm+mt
-source-wordcount: '1976'
+source-wordcount: '2145'
 ht-degree: 0%
 
 ---
@@ -111,7 +111,7 @@ Gebruik de kiezer van **[!UICONTROL Instance]** om uw Web SDK-instantie te kieze
 ![ het beeld van de Markeringen UI van Experience Platform die de het elementenmontages van Gegevens voor het Send actietype van de Gebeurtenis tonen.](assets/data.png)
 
 * **[!UICONTROL Type]**: In dit veld kunt u een gebeurtenistype opgeven dat wordt opgenomen in uw XDM-schema. Zie [`type`](/help/web-sdk/commands/sendevent/type.md) in het `sendEvent` bevel voor meer informatie.
-* **[!UICONTROL XDM]** :
+* **[!UICONTROL XDM]**:
 * **[!UICONTROL Data]**: Gebruik dit veld om gegevens te verzenden die niet overeenkomen met een XDM-schema. Dit veld is handig als u een Adobe Target-profiel wilt bijwerken of kenmerken voor doelaanbevelingen wilt verzenden. Zie [`data`](/help/web-sdk/commands/sendevent/data.md) in het `sendEvent` bevel voor meer informatie.
 * **[!UICONTROL Include rendered propositions]**: Schakel deze optie in om alle voorstellingen op te nemen die zijn gerenderd, maar er is geen weergavegebeurtenis verzonden. Gebruik dit in combinatie met **[!UICONTROL Automatically send a display event]** uitgeschakeld. Met deze instelling wordt het XDM-veld `_experience.decisioning` bijgewerkt met informatie over de gerenderde profielen.
 * **[!UICONTROL Document will unload]**: Schakel deze optie in om ervoor te zorgen dat de gebeurtenissen de server bereiken, zelfs als de gebruiker bij de pagina vandaan navigeert. Hierdoor kunnen gebeurtenissen de server bereiken, maar reacties worden genegeerd.
@@ -122,13 +122,28 @@ Gebruik de kiezer van **[!UICONTROL Instance]** om uw Web SDK-instantie te kieze
 ![ het beeld van de Markeringen UI van Experience Platform die de montages van Personalization voor het Send actietype van de Gebeurtenis tonen.](assets/personalization-settings.png)
 
 * **[!UICONTROL Scopes]**: selecteer het bereik (Adobe Target [!DNL mboxes] ) dat u expliciet wilt aanvragen voor personalisatie. U kunt het bereik handmatig invoeren of een gegevenselement opgeven.
-* **[!UICONTROL Surfaces]**: stel de weboppervlakken in die beschikbaar zijn op de pagina voor personalisatie. Zie de [ documentatie van Adobe Journey Optimizer ](https://experienceleague.adobe.com/docs/journey-optimizer/using/web/create-web.html?lang=nl-NL) voor meer details.
+* **[!UICONTROL Surfaces]**: stel de weboppervlakken in die beschikbaar zijn op de pagina voor personalisatie. Zie de [ documentatie van Adobe Journey Optimizer ](https://experienceleague.adobe.com/docs/journey-optimizer/using/web/create-web.html) voor meer details.
 * **geeft visuele verpersoonlijkingsbesluiten terug:** Als u gepersonaliseerde inhoud op uw pagina wilt teruggeven, controleer **[!UICONTROL Render visual personalization decisions]** checkbox. Indien nodig kunt u ook het beslissingsbereik en/of de oppervlakken opgeven. Zie de [ verpersoonlijkingsdocumentatie ](/help/web-sdk/personalization/rendering-personalization-content.md#automatically-rendering-content) voor meer informatie bij het teruggeven van gepersonaliseerde inhoud.
 * **[!UICONTROL Request default personalization]**: gebruik deze sectie om te bepalen of het bereik (globale mbox) voor de hele pagina en het standaardoppervlak (weboppervlak op basis van de huidige URL) worden aangevraagd. Deze wordt standaard automatisch aangevraagd tijdens de eerste `sendEvent` oproep van het laden van de pagina. U kunt uit de volgende opties kiezen:
    * **[!UICONTROL Automatic]**: dit is het standaardgedrag. Vraag slechts standaardverpersoonlijking aan wanneer het nog niet gevraagd is. Dit komt overeen met `requestDefaultPersonalization` niet ingesteld in de opdracht Web SDK.
    * **[!UICONTROL Enabled]**: vraag expliciet om het paginabereik en het standaardoppervlak. Dit werkt het de meningsgeheime voorgeheugen van het KUUROORD bij. Dit komt overeen met `requestDefaultPersonalization` ingesteld op `true` .
    * **[!UICONTROL Disabled]**: Hiermee onderdrukt u expliciet de aanvraag voor het paginabereik en het standaardoppervlak. Dit komt overeen met `requestDefaultPersonalization` ingesteld op `false` .
 * **[!UICONTROL Decision context]**: dit is een sleutel-waardekaart die wordt gebruikt wanneer het evalueren van de Adobe Journey Optimizer-regels voor het op-apparaat beslissen. U kunt de besluitvormingscontext manueel of door een gegevenselement verstrekken.
+
+### Advertising {#advertising}
+
+Wanneer u de **[!UICONTROL Advertising]** -component voor de aangepaste component Web SDK selecteert, bevatten de regelinstellingen voor `sendEvent` -acties een [!UICONTROL Advertising] -sectie die definieert hoe advertentiegegevens worden gebruikt voor attributiemeting. Deze instelling is handig wanneer de regel een reeks van meerdere handelingen bevat.
+
+![ het beeld van de Markeringen UI van Experience Platform die de montages van Advertising voor het Send actietype van de Gebeurtenis tonen.](assets/send-event-advertising.png)
+
+Het gedeelte **[!UICONTROL Request default Advertising data]** bevat de volgende opties:
+
+* **[!UICONTROL Automatic]**: Alle advertentiegegevens die beschikbaar zijn op het moment van deze gebeurtenis, worden automatisch toegevoegd aan XDM.
+* **[!UICONTROL Wait]**: Vertraag de uitvoering van deze aanroep totdat de advertentiegegevens zijn opgehaald en opgelost. Voeg vervolgens de gegevens toe aan XDM.
+* **[!UICONTROL Disabled]**: voeg geen advertentiegegevens toe aan XDM. Gebruik deze optie voor alle aanvragen die niet zijn bedoeld voor Customer Journey Analytics of Adobe Analytics.
+* **[!UICONTROL Provide a data element]**: gebruik een gegevenselement om advertentiegegevens op te nemen of uit te sluiten tijdens het laden van de pagina. De opgeloste waarden voor het gegevenselement kunnen `automatic`, `wait`, en `disabled` omvatten.
+
+Als u geen regel gebruikt om een handeling `sendEvent` te configureren, worden advertentiegegevens verzonden als een afzonderlijke gebeurtenis voor het verrijken van advertenties.
 
 ### DataStream-configuratieoverschrijvingen {#datastream-overrides}
 
@@ -140,7 +155,7 @@ Dit helpt u verschillend gegevensstroomgedrag dan de standaarddegenen teweegbren
 
 Hiermee verzendt u een mediagebeurtenis naar Adobe Experience Platform en/of Adobe Analytics. Deze handeling is handig wanneer u mediafouten op uw website bijhoudt. Selecteer een instantie (als u meerdere exemplaren hebt). De handeling vereist een `playerId` die een unieke id vertegenwoordigt voor een bijgehouden mediasessie. Bij het starten van een mediasessie is ook een **[!UICONTROL Quality of Experience]** - en `playhead` -gegevenselement nodig.
 
-{het beeld van 0} Experience Platform UI die het send scherm van de media gebeurtenis toont.![&#128279;](assets/send-media-event.png)
+{het beeld van 0} Experience Platform UI die het send scherm van de media gebeurtenis toont.![](assets/send-media-event.png)
 
 Het handelingstype **[!UICONTROL Send media event]** ondersteunt de volgende eigenschappen:
 
