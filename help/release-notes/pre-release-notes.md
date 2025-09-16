@@ -1,13 +1,11 @@
 ---
 title: Opmerkingen bij de release Experience Platform
 description: Een voorvertoning van de meest recente releaseopmerkingen voor Adobe Experience Platform.
-hide: true
-hidefromtoc: true
 exl-id: f2c41dc8-9255-4570-b459-4f9fc28ee58b
-source-git-commit: bcf3045fbbf4f9673e954a5ebf95d1225d4cdcd7
+source-git-commit: 491e0881167e3fb383a5a611924bd0d1df07b441
 workflow-type: tm+mt
-source-wordcount: '1063'
-ht-degree: 40%
+source-wordcount: '1263'
+ht-degree: 43%
 
 ---
 
@@ -21,21 +19,38 @@ ht-degree: 40%
 >
 >Raadpleeg de volgende documentatie voor aanvullende informatie voor andere Adobe Experience Platform-toepassingen:
 >
->- [Adobe Journey Optimizer](https://experienceleague.adobe.com/nl/docs/journey-optimizer/using/whats-new/release-notes)
->- [Adobe Journey Optimizer B2B](https://experienceleague.adobe.com/nl/docs/journey-optimizer-b2b/user/release-notes)
+>- [Adobe Journey Optimizer](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/whats-new/release-notes)
+>- [Adobe Journey Optimizer B2B](https://experienceleague.adobe.com/en/docs/journey-optimizer-b2b/user/release-notes)
 >- [Customer Journey Analytics](https://experienceleague.adobe.com/nl/docs/analytics-platform/using/releases/pre-release-notes)
 >- [Samenstelling van Federated-doelgroep](https://experienceleague.adobe.com/nl/docs/federated-audience-composition/using/e-release-notes)
 >- [Real-Time CDP Collaboration](https://experienceleague.adobe.com/nl/docs/real-time-cdp-collaboration/using/latest)
 
-**Datum van de Versie: Augustus 2025**
+**Datum van de Versie: September 2025**
 
 Nieuwe functies en updates van bestaande functies in Adobe Experience Platform:
 
+- [AI-assistent](#ai-assistant)
 - [Waarschuwingen](#alerts)
 - [Bestemmingen](#destinations)
-- [Experience-datamodel (XDM)](#xdm)
+- [Experience Data Model (XDM)](#xdm)
+- [Query-service](#query-service)
+- [Realtime-klantenprofiel](#profile)
 - [Segmentatieservice](#segmentation-service)
 - [Bronnen](#sources)
+
+## AI-assistent {#ai-assistant}
+
+Adobe Experience Platform AI Assistant is een conversatie-ervaring die u kunt gebruiken om workflows in Adobe Experience Cloud-toepassingen te versnellen en te optimaliseren.
+
+**Nieuwe functies**
+
+| Functie | Beschrijving |
+| --- | --- |
+| Agent Orchestrator | Adobe Experience Platform Agent Orchestrator is uw intelligente assistent voor Experience Cloud-toepassingen. Wanneer u vragen stelt of hulp vraagt, roept Agent Orchestrator automatisch op gespecialiseerde agenten om u de juiste antwoorden te krijgen. Agent Orchestrator herinnert uw gespreksgeschiedenis, toelatend u om op vorige vragen te bouwen natuurlijk zonder herhalende context, en combineert inzichten van veelvoudige agenten om u met duidelijke, verenigde reacties te presenteren. U kunt gebruikmaken van de Agent Orchestrator-mogelijkheden via de conversatie-interface van AI Assistant. |
+| Audience Agent | In de Audience Agent kunt u inzichten weergeven over het publiek, zoals het detecteren van belangrijke wijzigingen in de publieksgrootte, het detecteren van dubbele doelgroepen, het verkennen van uw publieksoverzicht en het ophalen van de grootte van uw publiek. |
+| Field Discovery Agent | De agent van de Ontdekking van het Gebied helpt gebruikers automatisch gegevensgebieden binnen hun schema&#39;s en datasets ontdekken en begrijpen. Deze intelligente agent analyseert uw gegevensstructuur en verstrekt inzicht over gebiedsgebruik, verhoudingen, en aanbevelingen voor optimalisering. |
+
+Voor meer informatie, raadpleegt u het [overzicht van de AI-assistent](../ai-assistant/home.md).
 
 ## Waarschuwingen {#alerts}
 
@@ -44,55 +59,57 @@ Met Experience Platform kunt u zich aanmelden voor gebeurtenisgebaseerde waarsch
 **Nieuwe functies**
 
 | Functie | Beschrijving |
-| ------- | ----------- |
-| Waarschuwing over streamingdoorvoer | Met drie nieuwe waarschuwingen kunnen gebruikers zich abonneren op en waarschuwingen configureren om de prestaties van streaming doorvoercapaciteit proactief te beheren en te bewaken. Nieuwe waarschuwingen zijn onder andere wanneer de streamingdoorvoer 80%, 90% of meer bedraagt dan de capaciteitslimiet. Voor meer informatie, lees de [ gids van de capaciteitsalarm regels ](../observability/alerts/rules.md#capacity). |
+| --- | --- |
+| Waarschuwing bij opnemen van streaming profiel | U kunt zich nu abonneren op twee nieuwe waarschuwingen voor het streamen van opname op gegevensstroomniveau: <ul><li>Streaming-insluitingsfout overschreden</li><li>Streaming inscriptie overgeslagen snelheid</li></ul> Waarschuwingen op het platform of in e-mailberichten geven een melding wanneer de drempelwaarden voor de standaarddrempel worden overschreden, of als er een aangepaste drempel wordt opgegeven. Voor meer informatie, lees het [ alarm van het Profiel ](../observability/alerts/rules.md#profile) gids. |
+
+{style="table-layout:auto"}
 
 Raadpleeg het [[!DNL Observability Insights] overzicht](../observability/home.md) voor meer informatie over meldingen.
 
 ## Bestemmingen {#destinations}
 
-[!DNL Destinations] zijn vooraf gebouwde integratie met bestemmingsplatforms die voor de naadloze activering van gegevens van Experience Platform toestaan. U kunt bestemmingen gebruiken om uw bekende en onbekende gegevens te activeren voor cross-channel marketingcampagnes, e-mailcampagnes, gerichte advertenties en vele andere gebruiksscenario&#39;s.
+[!DNL Destinations] zijn vooraf gebouwde integraties met bestemmingsplatforms waarmee gegevens uit Experience Platform naadloos kunnen worden geactiveerd. U kunt bestemmingen gebruiken om uw bekende en onbekende gegevens te activeren voor cross-channel marketingcampagnes, e-mailcampagnes, gerichte advertenties en vele andere gebruiksscenario&#39;s.
 
->[!IMPORTANT]
->
->**de uitvoerprogrammauitbreiding van de Dataset**
->
->Als uw organisatie dataflows van de gegevenssetuitvoer heeft die vóór November 2024 worden gecreeerd, zullen deze dataflows ophouden werkend op **1 September, 2025**. Als u de dataflows nodig hebt om het uitvoeren van gegevens na 1 september, 2025 te houden, moet u hun programma&#39;s voor elke bestemming uitbreiden waarnaar u datasets uitvoert, door de stappen in [ te volgen deze gids ](../destinations/ui/dataset-expiration-update.md).
-
-**Nieuwe bestemmingen**
+**Nieuwe of bijgewerkte bestemmingen**
 
 | Bestemming | Beschrijving |
 | --- | --- |
-| [!DNL Acxiom Real ID Audience] doel | Gebruik de [!DNL Acxiom Real ID Audience Connection] bestemming om publiek met [!DNL Acxiom's] [ Echte ID™ ](https://www.acxiom.com/real-id/real-id/) technologie te verbeteren en publiek aan veelvoudige platforms, zoals [!DNL Altice], [!DNL Ampersand], [!DNL Comcast], en meer te activeren. |
-
-**Bijgewerkte bestemmingen**
-
-| Bestemming | Beschrijving |
-| --- | --- |
-| Gegevens over het verlopen van verificatie voor [!DNL LinkedIn] - en [!DNL Pinterest] -doelen | De vervalgegevens van accounts zijn nu rechtstreeks zichtbaar in de Experience Platform-interface, zodat u kunt zien wanneer de verificatie van [!DNL LinkedIn] en [!DNL Pinterest] verloopt en wordt vernieuwd voordat de gegevensstroom wordt onderbroken. |
-| Coderingsondersteuning voor [!DNL Data Landing Zone] -doelen | Bescherm de geëxporteerde gegevens met codering. U kunt nu openbare sleutels met RSA-indeling koppelen om uw geëxporteerde bestanden te coderen, zodat u over hetzelfde beveiligingsniveau beschikt als andere bestemmingen voor cloudopslag voor uw vertrouwelijke gegevens. |
-| [[!DNL Microsoft Bing]](../destinations/catalog/advertising/bing.md) interne upgrade | Vanaf dinsdag 11 augustus 2025 kunt u twee **[!DNL Microsoft Bing]**-kaarten naast elkaar zien in de bestemmingencatalogus. Dit komt door een interne upgrade van de bestemmingsservice. De naam van de bestaande bestemmingsconnector **[!DNL Microsoft Bing]** is gewijzigd in **[!UICONTROL (Deprecated) Microsoft Bing]** en er is nu een nieuwe kaart met de naam **[!UICONTROL Microsoft Bing]** voor u beschikbaar. Gebruik de nieuwe **[!UICONTROL Microsoft Bing]**-verbinding in de catalogus voor nieuwe activeringsgegevensstromen. Als u actieve gegevensstromen naar de bestemming **[!UICONTROL (Deprecated) Microsoft Bing]** hebt, worden deze automatisch bijgewerkt. U hoeft dus niets te doen. <br><br>Als u gegevensstromen maakt via de [Flow Service API](https://developer.adobe.com/experience-platform-apis/references/destinations/), moet u uw [!DNL flow spec ID] en [!DNL connection spec ID] bijwerken naar de volgende waarden:<ul><li>Stroomspecificatie-ID: `8d42c81d-9ba7-4534-9bf6-cf7c64fbd12e`</li><li>Verbindingsspecificatie-ID: `dd69fc59-3bc5-451e-8ec2-1e74a670afd4`</li></ul> Na deze verbetering, kunt u a **daling in het aantal geactiveerde profielen** in uw dataflows [!DNL Microsoft Bing] ervaren. Dit daling wordt veroorzaakt door de introductie van het **ECID afbeeldingsvereiste** voor alle activiteiten aan dit bestemmingsplatform. |
-| [!DNL Marketo] consolidatie van doelkaarten | Vereenvoudig uw [!DNL Marketo] doelinstelling met onze geïntegreerde doelkaart. We hebben [!DNL Marketo] V2- en V3-kaarten samengevoegd tot één gestroomlijnde optie, waardoor het eenvoudiger is om de juiste bestemming te kiezen en snel aan de slag te gaan. |
+| [!BADGE  Beta ]{type=Informative} [!DNL Snowflake Batch] schakelaar | Er is nu een nieuwe [!DNL Snowflake Batch] -connector beschikbaar die een alternatief biedt voor de streamingconnector voor specifieke gebruiksgevallen. |
+| [!DNL Adform]-bestemming | [!DNL Adform] is een toonaangevende aanbieder van koop- en verkoopoplossingen voor programmatische media. Als u Adobe verbindt met de Adobe Experience Platform, kunt u uw eerste publiek activeren via Adform, op basis van de Experience Cloud-id (ECID). |
+| [!DNL Data Landing Zone] ondersteuning voor codering | U kunt nu openbare sleutels met RSA-indeling koppelen om uw geëxporteerde bestanden te coderen, zodat u over hetzelfde beveiligingsniveau beschikt als andere bestemmingen voor cloudopslag voor uw vertrouwelijke gegevens. |
+| Gegevens over vervaldatum van verificatie voor [!DNL Pinterest] doelen | Informatie over de verloopdatum van de verificatie voor [!DNL Pinterest]-bestemmingen is nu rechtstreeks zichtbaar in de Experience Platform-interface. Zo kunt u zien wanneer uw verificatie verloopt en deze vernieuwen voordat er verstoringen in uw gegevensstromen ontstaan. U kunt de vervaldatums van uw tokens controleren in de kolom **[!UICONTROL Account expiration date]** op de tabbladen **[[!UICONTROL Accounts]](../destinations/ui/destinations-workspace.md#accounts)** of **[[!UICONTROL Browse]](../destinations/ui/destinations-workspace.md#browse)** . |
 
 **Nieuwe of bijgewerkte functionaliteit**
 
 | Functie | Beschrijving |
 | --- | --- |
-| Verbeterde mogelijkheden voor zoeken, filteren en labelen voor doelen | Verbeter uw workflow voor bestemmingsbeheer met verbeterde mogelijkheden voor zoeken, filteren en labelen op de tabbladen Bladeren en Accounts. U kunt nu zoeken naar specifieke gegevensstromen en rekeningen door naam, filter door diverse criteria met inbegrip van bestemmingsplatform, status, en data, en douanetags tot stand brengen om uw bestemmingen te organiseren. Kolomsortering is ook beschikbaar voor belangrijke velden, zoals de laatste dataflow-runtime, zodat u de doelverbindingen gemakkelijker kunt identificeren en beheren. |
+| Verbeterde mogelijkheden voor bestemmingsbeheer in de gebruikersinterface van Experience Platform | Verbeter uw workflow voor bestemmingsbeheer met nieuwe sorteermogelijkheden op de tabbladen [[!UICONTROL Browse]](../destinations/ui/destinations-workspace.md#browse) en [[!UICONTROL Accounts]](../destinations/ui/destinations-workspace.md#accounts) . U kunt nu ook een visuele indicator zien wanneer uw accountverificatie bijna verloopt. |
 
 Voor meer informatie leest u het [overzicht van bestemmingen](../destinations/home.md).
 
-## Experience-datamodel (XDM) {#xdm}
+## Experience Data Model (XDM) {#xdm}
 
-XDM is een open-bronspecificatie die gemeenschappelijke structuren en definities (schema&#39;s) voor gegevens verstrekt die in Experience Platform worden gebracht. Door de XDM-standaarden te hanteren, kunnen alle gegevens over de klantervaring worden opgenomen in een gemeenschappelijke weergave. Zo worden inzichten sneller en beter geïntegreerd verkregen. U kunt waardevolle inzichten verkrijgen uit klantacties, klantdoelgroepen definiëren via segmenten en klantkenmerken gebruiken voor personalisatiedoeleinden.
+XDM is een open-bronspecificatie die algemene structuren en definities (schema&#39;s) biedt voor gegevens die in Experience Platform worden geïmporteerd. Door de XDM-standaarden te hanteren, kunnen alle gegevens over de klantervaring worden opgenomen in een gemeenschappelijke weergave. Zo worden inzichten sneller en beter geïntegreerd verkregen. U kunt waardevolle inzichten verkrijgen uit klantacties, klantdoelgroepen definiëren via segmenten en klantkenmerken gebruiken voor personalisatiedoeleinden.
 
 **Nieuwe functies**
 
 | Functie | Beschrijving |
 | ------- | ----------- |
-| Op modellen gebaseerde schema&#39;s | Vereenvoudig uw gegevensmodellering met Model-Gebaseerde Schema&#39;s. U kunt schema&#39;s nu gemakkelijker met uitvoerige hoe te voorbeelden en begeleiding tot stand brengen. Deze functie is momenteel beschikbaar voor Campaign Orchestration-licentiehouders en zal worden uitgebreid naar Distiller-klanten van Data bij GA, waardoor gegevensmodellering toegankelijker en efficiënter wordt. |
+| Op modellen gebaseerde schema&#39;s | Vereenvoudig uw gegevensmodellering met op modellen gebaseerde schema&#39;s. U kunt nu eenvoudiger schema&#39;s maken met uitgebreide voorbeelden en richtlijnen. Deze functie is momenteel beschikbaar voor Campaign Orchestration-licentiehouders en zal worden uitgebreid naar Distiller-klanten van Data bij GA, waardoor gegevensmodellering toegankelijker en efficiënter wordt. De functie biedt ondersteuning voor gegevens uit tijdreeksen en mogelijkheden voor het vastleggen van gegevens wijzigen. |
 
-Voor meer informatie, lees het [ XDM overzicht ](../xdm/home.md).
+Voor meer informatie raadpleegt u het [overzicht van XDM](../xdm/home.md).
+
+## Real-Time Customer Profile {#profile}
+
+Met Adobe Experience Platform kunt u uw klanten gecoördineerde, consistente en relevante ervaringen bieden, ongeacht waar of wanneer ze met uw merk in aanraking komen. Met Real-Time Customer Profile krijgt u een holistisch beeld van elke individuele klant, waarbij gegevens uit meerdere kanalen worden gecombineerd, waaronder online, offline, CRM en gegevens van derden. Met Profile kunt u klantgegevens samenvoegen tot één overzichtelijk overzicht, dat een bruikbaar overzicht met tijdstempel biedt van elke klantinteractie.
+
+**Bijgewerkte functies**
+
+| Functie | Beschrijving |
+| ------- | ----------- |
+| Verbeteringen voor profielviewer | In de release van september 2025 zijn de volgende verbeteringen aangebracht in de profielviewer. <ul><li>**Gecombineerde mening**: Attributen, gebeurtenissen, en inzichten zijn gecombineerd in één enkele mening.</li><li>**AI-Gegenereerde inzichten**: De pagina van profieldetails toont nu AI-Gegenereerde inzichten, latend u details die van uw profiel worden geproduceerd. Deze inzichten kunnen informatie omvatten zoals protiliteitsscores en trendanalyse.</li><li>**update van de Stijl**: De pagina van profieldetails is visueel verfrist.</li><li>**doorbladert**: U kunt uw profielen door een interactieve kaart-gebaseerde carrousel met onderzoek en aanpassing nu onderzoeken.</li></ul> |
+
+Voor meer informatie, lees het [ overzicht van het Profiel van de Klant in real time ](../profile/home.md).
 
 ## Segmentatieservice {#segmentation-service}
 
@@ -102,49 +119,25 @@ Voor meer informatie, lees het [ XDM overzicht ](../xdm/home.md).
 
 | Functie | Beschrijving |
 | ------- | ----------- |
-| Publiek schattingen | De schattingen van het publiek worden nu automatisch gegenereerd binnen Segment Builder. Deze waarde wordt bijgewerkt wanneer u het publiek wijzigt en weerspiegelt altijd de meest recente publieksregels. |
+| Accountpubliek met veroudering van ervaringsgebeurtenissen | Na de upgrade van de B2B-architectuur wordt het accountpubliek met ervaringsgebeurtenissen niet meer ondersteund. Gebruik in plaats daarvan het nieuwe segment van de segmentbenadering: maak een publiek Personen met Experience Events en verwijs naar het publiek Personen wanneer u een accountpubliek maakt. Dit biedt een flexibelere en onderhoudsvriendelijkere benadering van het creëren van B2B-publiek. |
 
-Voor meer informatie, lees het [[!DNL Segmentation Service]  overzicht ](../segmentation/home.md).
+**Belangrijke updates**
+
+| Bijwerken | Beschrijving |
+| ------- | ----------- |
+| Audience schat auto-refresh revert | De auto-verfrissingsverhoging voor publieksramingen is teruggekeerd. De schattingen van het publiek zullen binnen de Bouwer van het Segment verder worden geproduceerd, maar de automatische verfrissingsfunctionaliteit is verwijderd. |
+
+Voor meer informatie raadpleegt u het [[!DNL Segmentation Service] overzicht](../segmentation/home.md).
 
 ## Bronnen {#sources}
 
 Experience Platform biedt een RESTful-API en een interactieve gebruikersinterface waarmee u eenvoudig bronverbindingen voor verschillende gegevensproviders kunt instellen. Met deze bronverbindingen kunt u externe opslagsystemen en CRM-services verifiëren en er verbinding mee maken, tijden voor opnameruns instellen en de doorvoer van gegevensopname beheren.
 
-**Nieuwe of bijgewerkte functionaliteit**
+**Nieuwe of bijgewerkte functies**
 
 | Functie | Beschrijving |
 | --- | --- |
-| [!BADGE &#x200B; Beta &#x200B;]{type=Informative} Azure Steun van de Privé Verbinding in UI | Houd uw gegevens veilig met privé netwerkverbindingen. U kunt nu persoonlijke eindpunten maken en gegevensstromen instellen die het openbare internet omzeilen, waardoor u betere beveiliging en netwerkisolatie krijgt voor uw vertrouwelijke gegevens. |
-| [!DNL Marketo] updates van brondocumentatie | Volledige zichtbaarheid in de manier waarop uw [!DNL Marketo] -gegevens worden getransformeerd wanneer deze in Experience Platform worden ingevoerd. Alle veldtoewijzingen bevatten nu gedetailleerde uitleg van gegevenstransformaties, zodat u precies kunt zien hoe de `PersonID` wordt `leadID` en `eventType` wordt `activityType` . |
-| Ondersteuning voor service principal-verificatie voor [!DNL Azure Blob Storage] | U kunt uw [!DNL Azure Blob Storage] -account nu verbinden met Experience Platform met de belangrijkste verificatie van de service. |
+| Nieuwe bronnen in algemene beschikbaarheid | De volgende bronnen zijn nu beschikbaar in algemene beschikbaarheid: verschillende bronconnectors zijn bijgewerkt van Beta naar GA: <ul><li>[ de Ingestie van Gegevens van Acxiom ](../sources/connectors/data-partners/acxiom-data-ingestion.md)</li><li>[ de Ingestie van Gegevens van het Vooruitzicht van Acxiom ](../sources/connectors/data-partners/acxiom-prospecting-data-import.md)</li><li>[ Merkury Onderneming ](../sources/connectors/data-partners/merkury.md)</li><li>[ SAP Commerce ](../sources/connectors/ecommerce/sap-commerce.md)</li></ul>. Deze bronnen worden nu volledig ondersteund en zijn klaar voor gebruik bij de productie. |
+| [!DNL Snowflake] ondersteuning voor sleutelpaarverificatie | Uitgebreide beveiliging voor Snowflake-verbindingen met ondersteuning voor sleutelpaarverificatie. De basisauthentificatie (gebruikersbenaming/wachtwoord) zal tegen November 2025 worden afgekeurd, zodat worden de klanten aangemoedigd om aan zeer belangrijk-paarauthentificatie voor betere veiligheid te migreren. |
 
 Voor meer informatie raadpleegt u het [overzicht van bronnen](../sources/home.md).
-
-<!--
-
-## Query Service {#query-service}
-
-Adobe Experience Platform Query Service provides a robust SQL interface for data analysis and exploration across the platform.
-
-**New or updated features**
-
-| Feature | Description |
-| ------- | ----------- |
-| Data Distiller Session Management | Take control of your data analysis sessions with enhanced session management. You can now monitor and manage your sessions more effectively across development and production environments, giving you better visibility into your query performance and resource usage. |
-
-For more information, read the [Query Service overview](../query-service/home.md).
-
-## B2B CDP {#b2b-cdp}
-
-Real-Time CDP B2B Edition provides comprehensive B2B customer data management capabilities, enabling organizations to build unified customer profiles, create sophisticated B2B audiences, and activate data across various marketing channels.
-
-**New or updated features**
-
-| Feature | Description |
-| ------- | ----------- |
-| Lookup Support for B2B Classes Only | Streamline your B2B data access with focused lookup support. You can now look up Person (Profile), Experience Events, Account, and Opportunity entities directly through the Entities API. This simplified approach helps you access the most important B2B data more efficiently while reducing complexity. |
-| B2B Namespace and Schema Updates | Experience a cleaner, more streamlined B2B data model. We've simplified the B2B namespace and schema structure by removing complex relationship mappings and non-primary identity support for certain B2B classes. This makes your B2B data easier to work with and understand. |
-
-For more information, read the [Real-Time CDP B2B Edition overview](../rtcdp/b2b-overview.md).
-
--->
