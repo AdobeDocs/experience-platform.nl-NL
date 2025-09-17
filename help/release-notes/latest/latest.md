@@ -3,9 +3,9 @@ title: Aanvullende informatie van augustus 2025 voor Adobe Experience Platform
 description: Aanvullende informatie van augustus 2025 voor Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
 source-git-commit: 40c3745920204983f5388de6cba1402d87eda71c
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1416'
-ht-degree: 93%
+ht-degree: 100%
 
 ---
 
@@ -15,8 +15,8 @@ ht-degree: 93%
 >
 >Raadpleeg de volgende documentatie voor aanvullende informatie voor andere Adobe Experience Platform-toepassingen:
 >
->- [Adobe Journey Optimizer](https://experienceleague.adobe.com/nl/docs/journey-optimizer/using/whats-new/release-notes)
->- [Adobe Journey Optimizer B2B](https://experienceleague.adobe.com/nl/docs/journey-optimizer-b2b/user/release-notes)
+>- [Adobe Journey Optimizer](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/whats-new/release-notes)
+>- [Adobe Journey Optimizer B2B](https://experienceleague.adobe.com/en/docs/journey-optimizer-b2b/user/release-notes)
 >- [Customer Journey Analytics](https://experienceleague.adobe.com/nl/docs/analytics-platform/using/releases/pre-release-notes)
 >- [Samenstelling van Federated-doelgroep](https://experienceleague.adobe.com/nl/docs/federated-audience-composition/using/e-release-notes)
 >- [Real-Time CDP Collaboration](https://experienceleague.adobe.com/nl/docs/real-time-cdp-collaboration/using/latest)
@@ -172,9 +172,9 @@ Experience Platform biedt een RESTful-API en een interactieve gebruikersinterfac
 
 | Functie | Beschrijving |
 | --- | --- |
-| Algemene beschikbaarheid van de [!DNL Oracle NetSuite] -bron | De [!DNL Oracle NetSuite] -bron is nu algemeen beschikbaar. U kunt uw [!DNL Oracle NetSuite] -account nu verbinden met Experience Platform om activiteiten en gegevens van entiteiten in te voeren voor uniforme analyse en activering. Voor meer informatie raadpleegt u het [[!DNL Oracle NetSuite] overzicht](../../sources/connectors/marketing-automation/oracle-netsuite.md). |
-| Algemene beschikbaarheid van de [!DNL PathFactory] -bron | De [!DNL PathFactory] -bron is nu algemeen beschikbaar. U kunt uw [!DNL PathFactory] -account verbinden met Experience Platform om bezoekers, sessies en paginaweergaven gegevens in te voeren voor een uniforme analyse en activering. Voor meer informatie raadpleegt u het [[!DNL PathFactory] overzicht](../../sources/connectors/marketing-automation/pathfactory.md). |
-| Algemene beschikbaarheid van de [!DNL Stripe] -bron | De [!DNL Stripe] -bron is nu algemeen beschikbaar. U kunt uw [!DNL Stripe] -account verbinden met Experience Platform om betaling- en transactiegegevens in te voeren voor een uniforme analyse en activering. Voor meer informatie raadpleegt u het [[!DNL Stripe] overzicht](../../sources/connectors/payments/stripe.md). |
+| Algemene beschikbaarheid van de [!DNL Oracle NetSuite]-bron | De [!DNL Oracle NetSuite]-bron is nu algemeen beschikbaar. U kunt uw [!DNL Oracle NetSuite]-account nu verbinden met Experience Platform om activiteiten en gegevens van entiteiten in te voeren voor uniforme analyse en activering. Voor meer informatie raadpleegt u het [[!DNL Oracle NetSuite] overzicht](../../sources/connectors/marketing-automation/oracle-netsuite.md). |
+| Algemene beschikbaarheid van de [!DNL PathFactory]-bron | De [!DNL PathFactory]-bron is nu algemeen beschikbaar. U kunt uw [!DNL PathFactory]-account verbinden met Experience Platform om gegevens van bezoekers, sessies en paginaweergaven in te voeren voor een uniforme analyse en activering. Voor meer informatie raadpleegt u het [[!DNL PathFactory] overzicht](../../sources/connectors/marketing-automation/pathfactory.md). |
+| Algemene beschikbaarheid van de [!DNL Stripe]-bron | De [!DNL Stripe]-bron is nu algemeen beschikbaar. U kunt uw [!DNL Stripe]-account verbinden met Experience Platform om betalings- en transactiegegevens in te voeren voor een uniforme analyse en activering. Voor meer informatie raadpleegt u het [[!DNL Stripe] overzicht](../../sources/connectors/payments/stripe.md). |
 | Verbeterde verificatie voor [!DNL Azure Blob Storage] | U kunt nu verificatie op basis van de belangrijkste service gebruiken om uw [!DNL Azure Blob Storage]-bron met Experience Platform te verbinden. U kunt nu verificatie op basis van de belangrijkste service gebruiken voor verbeterde veiligheid, eenvoudigere rotatie van aanmeldingsgegevens en een nauwkeurigere toegangscontrole voor uw account. Voor meer informatie raadpleegt u het [[!DNL Azure Blob Storage] overzicht](../../sources/connectors/cloud-storage/blob.md). |
 
 Voor meer informatie raadpleegt u het [overzicht van bronnen](../../sources/home.md).
