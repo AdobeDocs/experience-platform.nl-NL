@@ -2,10 +2,10 @@
 title: Opmerkingen bij de release Experience Platform
 description: Een voorvertoning van de meest recente releaseopmerkingen voor Adobe Experience Platform.
 exl-id: f2c41dc8-9255-4570-b459-4f9fc28ee58b
-source-git-commit: 491e0881167e3fb383a5a611924bd0d1df07b441
+source-git-commit: c592d007932835f5263d7f78b2e8155790313840
 workflow-type: tm+mt
-source-wordcount: '1263'
-ht-degree: 43%
+source-wordcount: '1209'
+ht-degree: 45%
 
 ---
 
@@ -19,8 +19,8 @@ ht-degree: 43%
 >
 >Raadpleeg de volgende documentatie voor aanvullende informatie voor andere Adobe Experience Platform-toepassingen:
 >
->- [Adobe Journey Optimizer](https://experienceleague.adobe.com/nl/docs/journey-optimizer/using/whats-new/release-notes)
->- [Adobe Journey Optimizer B2B](https://experienceleague.adobe.com/nl/docs/journey-optimizer-b2b/user/release-notes)
+>- [Adobe Journey Optimizer](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/whats-new/release-notes)
+>- [Adobe Journey Optimizer B2B](https://experienceleague.adobe.com/en/docs/journey-optimizer-b2b/user/release-notes)
 >- [Customer Journey Analytics](https://experienceleague.adobe.com/nl/docs/analytics-platform/using/releases/pre-release-notes)
 >- [Samenstelling van Federated-doelgroep](https://experienceleague.adobe.com/nl/docs/federated-audience-composition/using/e-release-notes)
 >- [Real-Time CDP Collaboration](https://experienceleague.adobe.com/nl/docs/real-time-cdp-collaboration/using/latest)
@@ -46,9 +46,8 @@ Adobe Experience Platform AI Assistant is een conversatie-ervaring die u kunt ge
 
 | Functie | Beschrijving |
 | --- | --- |
-| Agent Orchestrator | Adobe Experience Platform Agent Orchestrator is uw intelligente assistent voor Experience Cloud-toepassingen. Wanneer u vragen stelt of hulp vraagt, roept Agent Orchestrator automatisch op gespecialiseerde agenten om u de juiste antwoorden te krijgen. Agent Orchestrator herinnert uw gespreksgeschiedenis, toelatend u om op vorige vragen te bouwen natuurlijk zonder herhalende context, en combineert inzichten van veelvoudige agenten om u met duidelijke, verenigde reacties te presenteren. U kunt gebruikmaken van de Agent Orchestrator-mogelijkheden via de conversatie-interface van AI Assistant. |
+| Agent Orchestrator | Adobe Experience Platform Agent Orchestrator is de intelligente laag die AI Assistant aandrijft. Wanneer u vragen stelt of hulp vraagt, roept Agent Orchestrator automatisch op gespecialiseerde agenten om u de juiste antwoorden te krijgen. Agent Orchestrator herinnert uw gespreksgeschiedenis, toelatend u om op vorige vragen te bouwen natuurlijk zonder herhalende context, en combineert inzichten van veelvoudige agenten om u met duidelijke, verenigde reacties te presenteren. |
 | Audience Agent | In de Audience Agent kunt u inzichten weergeven over het publiek, zoals het detecteren van belangrijke wijzigingen in de publieksgrootte, het detecteren van dubbele doelgroepen, het verkennen van uw publieksoverzicht en het ophalen van de grootte van uw publiek. |
-| Field Discovery Agent | De agent van de Ontdekking van het Gebied helpt gebruikers automatisch gegevensgebieden binnen hun schema&#39;s en datasets ontdekken en begrijpen. Deze intelligente agent analyseert uw gegevensstructuur en verstrekt inzicht over gebiedsgebruik, verhoudingen, en aanbevelingen voor optimalisering. |
 
 Voor meer informatie, raadpleegt u het [overzicht van de AI-assistent](../ai-assistant/home.md).
 
@@ -74,7 +73,7 @@ Raadpleeg het [[!DNL Observability Insights] overzicht](../observability/home.md
 
 | Bestemming | Beschrijving |
 | --- | --- |
-| [!BADGE &#x200B; Beta &#x200B;]{type=Informative} [!DNL Snowflake Batch] schakelaar | Er is nu een nieuwe [!DNL Snowflake Batch] -connector beschikbaar die een alternatief biedt voor de streamingconnector voor specifieke gebruiksgevallen. |
+| [!BADGE  Beta ]{type=Informative} [!DNL Snowflake Batch] schakelaar | Er is nu een nieuwe [!DNL Snowflake Batch] -connector beschikbaar die een alternatief biedt voor de streamingconnector voor specifieke gebruiksgevallen. |
 | [!DNL Adform]-bestemming | [!DNL Adform] is een toonaangevende aanbieder van koop- en verkoopoplossingen voor programmatische media. Als u Adobe verbindt met de Adobe Experience Platform, kunt u uw eerste publiek activeren via Adform, op basis van de Experience Cloud-id (ECID). |
 | [!DNL Data Landing Zone] ondersteuning voor codering | U kunt nu openbare sleutels met RSA-indeling koppelen om uw geëxporteerde bestanden te coderen, zodat u over hetzelfde beveiligingsniveau beschikt als andere bestemmingen voor cloudopslag voor uw vertrouwelijke gegevens. |
 | Gegevens over vervaldatum van verificatie voor [!DNL Pinterest] doelen | Informatie over de verloopdatum van de verificatie voor [!DNL Pinterest]-bestemmingen is nu rechtstreeks zichtbaar in de Experience Platform-interface. Zo kunt u zien wanneer uw verificatie verloopt en deze vernieuwen voordat er verstoringen in uw gegevensstromen ontstaan. U kunt de vervaldatums van uw tokens controleren in de kolom **[!UICONTROL Account expiration date]** op de tabbladen **[[!UICONTROL Accounts]](../destinations/ui/destinations-workspace.md#accounts)** of **[[!UICONTROL Browse]](../destinations/ui/destinations-workspace.md#browse)** . |
