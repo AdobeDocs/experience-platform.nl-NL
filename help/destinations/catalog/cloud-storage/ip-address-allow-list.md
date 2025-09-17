@@ -3,9 +3,9 @@ title: IP adres lijst van gewenste personen voor op dossier-gebaseerde cloudopsl
 type: Documentation
 description: Deze pagina verstrekt IP waaiers die u aan uw lijst van gewenste personen kunt toevoegen, om gegevens van Experience Platform naar de bestemmingen van de wolkenopslag veilig uit te voeren.
 exl-id: 0b8086aa-786e-4244-b2a5-a3f57ad59a8b
-source-git-commit: 7cf15550d7619e247052efc4d9b4c72c5d32641a
+source-git-commit: 4ae7ff58d02b46f1b213bd382d3e98b3f63819e8
 workflow-type: tm+mt
-source-wordcount: '284'
+source-wordcount: '290'
 ht-degree: 0%
 
 ---
@@ -27,7 +27,7 @@ De informatie over het IP-bereik op deze pagina is van toepassing op de volgende
 
 >[!IMPORTANT]
 >
->De IP waaiers die op deze pagina worden gedocumenteerd worden ** niet gesteund voor de volgende op dossier-gebaseerde bestemmingen van de wolkenopslag: [!UICONTROL Azure Blob], [!UICONTROL Azure Data Lake Storage Gen2] en [!UICONTROL Data Landing Zone].
+>De IP waaiers die op deze pagina worden gedocumenteerd worden ** niet gesteund voor de volgende op dossier-gebaseerde bestemmingen van de wolkenopslag: [!UICONTROL Azure Blob], [!UICONTROL Azure Data Lake Storage Gen2], [!UICONTROL Data Landing Zone], en servers SFTP die op Microsoft Azure worden ontvangen.
 
 ## Overzicht {#overview}
 
