@@ -2,9 +2,9 @@
 title: Opmerkingen bij de release Adobe Content Analytics Extension
 description: De meest recente release bevat informatie over de Content Analytics-tagextensie in Adobe Experience Platform.
 exl-id: 37b34915-655b-40de-b17b-43028c579e37
-source-git-commit: 77d19ab813f881cd3c48c27ed4a9ac02e268e23f
+source-git-commit: dcd880ed73cc8294e6019c43021cb27ea6dd9995
 workflow-type: tm+mt
-source-wordcount: '282'
+source-wordcount: '398'
 ht-degree: 0%
 
 ---
@@ -15,6 +15,7 @@ Hieronder volgt een lijst met releaseopmerkingen voor de Content Analytics-tagex
 
 | Versie | Datum | Oplossingen |
 |---|---|---|
+| 1,0,49 | 12 september 2025 | <ul><li>Probleem verholpen waarbij de interface voor extensie van tags helemaal niet zou worden geladen als de gebruiker geen gegevensstroommachtigingen had. De interface geeft nu een machtigingswaarschuwing weer in de gegevensstroomoptie **[!UICONTROL Choose from list]** en staat de gebruiker nog steeds toe handmatig waarden in te voeren.</li><li>Een padprobleem voor l10n is bijgewerkt.</li><li>Probleem verholpen waarbij in sommige afbeeldingen die onderliggende elementen van bovenliggende elementen buiten de afbeelding waren, niet op de juiste wijze werd geklikt op elementen van die onderliggende afbeelding.</li><li>Als een gebruiker WebSDK in markeringen met een verschillende instantienaam dan `alloy` heeft gevormd, zal de bibliotheek van Content Analytics de eerste instantie van de bibliotheek ontdekken WebSDK en zal gebruiken die om de gebeurtenissen van Content Analytics te verzenden.</li></ul> |
 | 1,0,48 | 25 augustus 2025 | <ul><li>Hiermee voegt u ondersteuning toe voor het bijhouden van elementen in de DOM-elementen van de schaduwhoofdmap van een document.</li></ul> |
 | 1,0,47 | 23 jul. 2025 | <ul><li>Het probleem dat optrad wanneer ervaringen niet waren ingeschakeld, is opgelost. Hierdoor is de reguliere-expressiecontrole op ervaringen mislukt. Door dit probleem konden geen Content Analytics-gegevens worden verzameld.</li><li>Probleem opgelost met de standaardtaalinstelling die ervoor zorgde dat de interface voor tags niet kon worden weergegeven voor sommige gebruikers die hun primaire standaardtaal niet in Experience Cloud hadden ingesteld.</li></ul> |
 | 1,0,46 | 18 jun. 2025 | <ul><li>Er is een pop-upmelding toegevoegd bij het opslaan van de extensieconfiguratie als er geen productiegegevensstroom aanwezig is.</li><li>Het zichtbaarheidsprobleem van de Content Analytics-lading is tijdelijk opgelost door de stringified payload-inhoud in plaats daarvan in de console te plaatsen.</li><li>Ondersteuning voor lokalisatie toegevoegd aan de gebruikersinterface van Extension.</li><li>Oplossing voor een CSS-probleem dat extra opvulling veroorzaakte rond de inhoud van de Extension UI.</li></ul> |
