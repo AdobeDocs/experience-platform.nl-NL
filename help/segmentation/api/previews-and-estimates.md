@@ -4,7 +4,7 @@ title: Voorvertoningen en schattingen van API-eindpunten
 description: Terwijl segmentdefinitie wordt ontwikkeld, kunt u met de rastergereedschappen en voorvertoningsgereedschappen in Adobe Experience Platform informatie op overzichtsniveau weergeven, zodat u zeker weet dat u het verwachte publiek isoleert.
 role: Developer
 exl-id: 2c204f29-825f-4a5e-a7f6-40fc69263614
-source-git-commit: d9fc1fa6a1bbc6b13b2600a5ec9400a0b488056a
+source-git-commit: a374d261e3b34b30869f1a9e8486d52f5bd658cb
 workflow-type: tm+mt
 source-wordcount: '1016'
 ht-degree: 0%
@@ -29,7 +29,7 @@ De eindpunten die in deze handleiding worden gebruikt, maken deel uit van de API
 
 ## Hoe schattingen worden gegenereerd
 
-Wanneer de opname van records in het archief Profiel het totale aantal profielen met meer dan 5% verhoogt of verlaagt, wordt een samplingtaak geactiveerd om het aantal bij te werken. De manier waarop gegevensbemonstering wordt gestart, hangt af van de wijze van inname:
+Wanneer de opname van records in het archief Profiel het totale aantal profielen met meer dan 3% verhoogt of verlaagt, wordt een samplingtaak geactiveerd om het aantal bij te werken. De manier waarop gegevensbemonstering wordt gestart, hangt af van de wijze van inname:
 
 * **Inname van de Partij:** voor partijingestie, binnen 15 minuten van met succes het opnemen van een partij in de opslag van het Profiel, als de 3% verhoging of dalingsdrempel wordt ontmoet, wordt een baan in werking gesteld om de telling bij te werken.
 * **Streaming opname:** voor het stromen gegevenswerkschema&#39;s, wordt een controle gedaan op een uurbasis om te bepalen als de 3% verhoging of dalingsdrempel is voldaan aan. Als dit het geval is, wordt er automatisch een taak geactiveerd om de telling bij te werken.

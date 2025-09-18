@@ -4,7 +4,7 @@ title: Een segmentdefinitie maken met de segmentatieservice-API
 type: Tutorial
 description: Volg deze zelfstudie om te leren hoe u een segmentdefinitie kunt ontwikkelen, testen, voorvertonen en opslaan met de Adobe Experience Platform Segmentation Service API.
 exl-id: 78684ae0-3721-4736-99f1-a7d1660dc849
-source-git-commit: d9fc1fa6a1bbc6b13b2600a5ec9400a0b488056a
+source-git-commit: a374d261e3b34b30869f1a9e8486d52f5bd658cb
 workflow-type: tm+mt
 source-wordcount: '1067'
 ht-degree: 0%
@@ -72,7 +72,7 @@ Er zijn twee vereiste stappen om een voorvertoning van uw segmentdefinitie weer 
 
 ### Hoe schattingen worden gegenereerd
 
-Aangezien gegevens die voor het Profiel van de Klant in real time worden toegelaten in Experience Platform worden opgenomen, wordt het opgeslagen binnen de gegevensopslag van het Profiel. Wanneer de opname van records in het archief Profiel het totale aantal profielen met meer dan 5% verhoogt of verlaagt, wordt een samplingtaak geactiveerd om het aantal bij te werken. Als het aantal profielen niet met meer dan 5% verandert, wordt de samplingtaak automatisch wekelijks uitgevoerd.
+Aangezien gegevens die voor het Profiel van de Klant in real time worden toegelaten in Experience Platform worden opgenomen, wordt het opgeslagen binnen de gegevensopslag van het Profiel. Wanneer de opname van records in het archief Profiel het totale aantal profielen met meer dan 3% verhoogt of verlaagt, wordt een samplingtaak geactiveerd om het aantal bij te werken. Als het aantal profielen niet met meer dan 3% verandert, wordt de samplingtaak automatisch wekelijks uitgevoerd.
 
 De wijze waarop het monster wordt geactiveerd, hangt af van het type inname dat wordt gebruikt:
 
