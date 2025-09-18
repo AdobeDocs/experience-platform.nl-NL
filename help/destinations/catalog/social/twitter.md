@@ -2,24 +2,16 @@
 title: Aangepaste doelpubliek Twitter-verbinding
 description: Richt uw bestaande volgers en klanten in Twitter en creeer relevante re-marketing campagnes door uw publiek te activeren dat binnen Adobe Experience Platform wordt gebouwd
 exl-id: fd244e58-cd94-4de7-81e4-c321eb673b65
-source-git-commit: 5b529a1af62c2745c3226029de1a1ff508bddfc7
+source-git-commit: ee7e85afd48f7b1c40f0152ad76c8c718b8f1432
 workflow-type: tm+mt
-source-wordcount: '927'
-ht-degree: 5%
+source-wordcount: '825'
+ht-degree: 1%
 
 ---
 
 # [!DNL Twitter Custom Audiences]-verbinding
 
 ## Overzicht {#overview}
-
->[!IMPORTANT]
->
->* Vanaf woensdag 9 september 2025 ziet u in de bestemmingencatalogus twee **[!DNL Twitter Custom Audiences]**-kaarten naast elkaar. Dit komt door een interne upgrade van de bestemmingsservice. De naam van de bestaande **[!DNL Twitter Custom Audiences]** doelconnector is gewijzigd in **[!UICONTROL (Deprecated) Twitter Custom Audiences]** en u hebt nu een nieuwe kaart met de naam **[!UICONTROL Twitter Custom Audiences]** beschikbaar.
->* Gebruik de nieuwe **[!UICONTROL Twitter Custom Audiences]**-verbinding in de catalogus voor nieuwe activeringsgegevensstromen. Als u actieve gegevens naar de **[!UICONTROL (Deprecated) Twitter Custom Audiences]** -bestemming hebt, worden deze automatisch bijgewerkt, zodat u geen actie hoeft te ondernemen.
->* Als u dataflows door de [ Dienst API van de Stroom ](https://developer.adobe.com/experience-platform-apis/references/destinations/) creeert, moet u uw [!DNL flow spec ID] en [!DNL connection spec ID] aan de volgende waarden bijwerken:
->   * Stroomspecificatie-ID: `903da9e4-7cf5-442a-9498-a237e4f064f9`
->   * Verbindingsspecificatie-ID: `9eb18875-a095-4b89-854e-39b9e29ccd41`
 
 Richt uw bestaande volgers en klanten in Twitter en creeer relevante re-marketing campagnes door uw publiek te activeren dat binnen Adobe Experience Platform wordt gebouwd.
 
@@ -32,7 +24,7 @@ Voordat u de [!DNL Twitter Custom Audiences] -bestemming configureert, moet u co
 
 ## Ondersteunde identiteiten {#supported-identities}
 
-[!DNL Twitter Custom Audiences] ondersteunt de activering van identiteiten die in de onderstaande tabel worden beschreven. Leer meer over [ identiteiten ](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html?lang=nl-NL#getting-started).
+[!DNL Twitter Custom Audiences] ondersteunt de activering van identiteiten die in de onderstaande tabel worden beschreven. Leer meer over [ identiteiten ](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html#getting-started).
 
 | Doelidentiteit | Beschrijving | Overwegingen |
 |---|---|---|
@@ -47,7 +39,7 @@ In deze sectie wordt beschreven welke soorten publiek u naar dit doel kunt expor
 
 | Oorsprong publiek | Ondersteund | Beschrijving |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | ✓ | Het publiek produceerde door de Dienst van de Segmentatie van Experience Platform [&#128279;](../../../segmentation/home.md). |
+| [!DNL Segmentation Service] | ✓ | Het publiek produceerde door de Dienst van de Segmentatie van Experience Platform [ ](../../../segmentation/home.md). |
 | Aangepaste uploads | ✓ | Het publiek [ ingevoerde ](../../../segmentation/ui/audience-portal.md#import-audience) in Experience Platform van Csv- dossiers. |
 
 {style="table-layout:auto"}
@@ -124,7 +116,7 @@ Wanneer u doelgroepen toewijst aan Twitter, geeft u voor mensen leesbare toewijz
 
 ## Gegevensgebruik en -beheer {#data-usage-governance}
 
-Alle [!DNL Adobe Experience Platform] -doelen zijn compatibel met het beleid voor gegevensgebruik bij het verwerken van uw gegevens. Voor gedetailleerde informatie over hoe [!DNL Adobe Experience Platform] gegevensbeheer afdwingt, zie het [ overzicht van het Beleid van Gegevens ](https://experienceleague.adobe.com/docs/experience-platform/data-governance/home.html?lang=nl-NL).
+Alle [!DNL Adobe Experience Platform] -doelen zijn compatibel met het beleid voor gegevensgebruik bij het verwerken van uw gegevens. Voor gedetailleerde informatie over hoe [!DNL Adobe Experience Platform] gegevensbeheer afdwingt, zie het [ overzicht van het Beleid van Gegevens ](https://experienceleague.adobe.com/docs/experience-platform/data-governance/home.html).
 
 ## Aanvullende bronnen {#additional-resources}
 
