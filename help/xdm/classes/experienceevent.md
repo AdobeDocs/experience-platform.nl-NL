@@ -17,7 +17,7 @@ ht-degree: 0%
 
 Een ervaringsgebeurtenis is een feitenverslag van wat voorkwam, met inbegrip van het tijdstip en de identiteit van de betrokken persoon. Gebeurtenissen kunnen expliciet (direct waarneembare menselijke acties) of impliciet (zonder directe menselijke actie) zijn en worden geregistreerd zonder aggregatie of interpretatie. Voor meer informatie op hoog niveau over het gebruik van deze klasse in het ecosysteem van Experience Platform, verwijs naar het [ XDM overzicht ](../home.md#data-behaviors).
 
-De [!DNL XDM ExperienceEvent] -klasse zelf biedt verschillende aan tijdreeksen gerelateerde velden voor een schema. Twee van deze gebieden (`_id` en `timestamp`) worden vereist **** voor alle schema&#39;s die op deze klasse worden gebaseerd, terwijl de rest facultatief is. De waarden van sommige velden worden automatisch ingevuld wanneer gegevens worden ingevoerd.
+De [!DNL XDM ExperienceEvent] -klasse zelf biedt verschillende aan tijdreeksen gerelateerde velden voor een schema. Twee van deze gebieden (`_id` en `timestamp`) worden vereist **&#x200B;**&#x200B;voor alle schema&#39;s die op deze klasse worden gebaseerd, terwijl de rest facultatief is. De waarden van sommige velden worden automatisch ingevuld wanneer gegevens worden ingevoerd.
 
 ![ de structuur van XDM ExperienceEvent aangezien het in Experience Platform UI verschijnt.](../images/classes/experienceevent/structure.png)
 
@@ -38,7 +38,7 @@ De volgende secties behandelen beste praktijken voor het ontwerpen van uw op geb
 
 ### Tijdstempels {#timestamps}
 
-Het wortel `timestamp` gebied van een gebeurtenisschema kan **slechts** de observatie van de gebeurtenis vertegenwoordigen zelf, en moet in het verleden voorkomen. Nochtans, moet de gebeurtenis **** vanaf 1970 plaatsvinden. Als voor uw segmentatiegebruik tijdstempels moeten worden gebruikt die in de toekomst kunnen voorkomen, moeten deze waarden elders in het schema van de Experience-gebeurtenis worden beperkt.
+Het wortel `timestamp` gebied van een gebeurtenisschema kan **slechts** de observatie van de gebeurtenis vertegenwoordigen zelf, en moet in het verleden voorkomen. Nochtans, moet de gebeurtenis **&#x200B;**&#x200B;vanaf 1970 plaatsvinden. Als voor uw segmentatiegebruik tijdstempels moeten worden gebruikt die in de toekomst kunnen voorkomen, moeten deze waarden elders in het schema van de Experience-gebeurtenis worden beperkt.
 
 Als een bedrijf in de reis- en gastensector bijvoorbeeld een gebeurtenis voor reservering van vluchten modelleert, geeft het veld op klasseniveau `timestamp` de tijd weer waarop de reserveringsgebeurtenis werd waargenomen. Andere tijdstempels die verband houden met de gebeurtenis, zoals de begindatum van de reisreservering, moeten worden vastgelegd in afzonderlijke velden die worden verschaft door standaard- of aangepaste veldgroepen.
 
