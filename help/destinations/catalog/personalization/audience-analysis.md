@@ -3,16 +3,18 @@ title: Doel van Auditieanalyse
 description: Bekijk het publiek waarvoor klanten in Customer Journey Analytics in aanmerking komen.
 badgeLimitedAvailability: label="Beperkte beschikbaarheid" type="Informative"
 exl-id: 81437237-d746-4ce9-b938-7d2541f0ed32
-source-git-commit: b48c24ac032cbf785a26a86b50a669d7fcae5d97
+hide: true
+hidefromtoc: true
+source-git-commit: 4bd94c292a13a80405a3d726295ebd6eaf86aaaa
 workflow-type: tm+mt
-source-wordcount: '760'
+source-wordcount: '758'
 ht-degree: 0%
 
 ---
 
 # Doel van Auditieanalyse
 
-De [!UICONTROL Audience Analysis] bestemming staat u toe om het publieksgegevens van Adobe Experience Platform in [ Customer Journey Analytics ](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-overview/cja-overview.html?lang=nl-NL) te verrijken. U kunt selecteren welk publiek u in de resulterende verrijkte gegevens wilt opnemen. De kwalificaties van het publiek zijn dan beschikbaar als afmetingen in [ Analysis Workspace ](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-workspace/home.html?lang=nl-NL) rapporterend.
+De [!UICONTROL Audience Analysis] bestemming staat u toe om het publieksgegevens van Adobe Experience Platform in [ Customer Journey Analytics ](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-overview/cja-overview.html) te verrijken. U kunt selecteren welk publiek u in de resulterende verrijkte gegevens wilt opnemen. De kwalificaties van het publiek zijn dan beschikbaar als afmetingen in [ Analysis Workspace ](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-workspace/home.html) rapporterend.
 
 >[!AVAILABILITY]
 >
@@ -47,7 +49,7 @@ De volgende soorten doelgroepen worden ondersteund bij gebruik van dit doel:
 
 | Oorsprong publiek | Ondersteund | Beschrijving |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | ✓ | Het publiek produceerde door de Dienst van de Segmentatie van Experience Platform [&#128279;](../../../segmentation/home.md). |
+| [!DNL Segmentation Service] | ✓ | Het publiek produceerde door de Dienst van de Segmentatie van Experience Platform [ ](../../../segmentation/home.md). |
 | Aangepaste uploads | ✓ | Het publiek [ ingevoerde ](../../../segmentation/ui/audience-portal.md#import-audience) in Experience Platform van Csv- dossiers. |
 
 {style="table-layout:auto"}
