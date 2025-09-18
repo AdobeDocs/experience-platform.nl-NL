@@ -3,9 +3,9 @@ keywords: Experience Platform;home;populaire onderwerpen;map csv;map csv-bestand
 title: UI-gids voor gegevenprepress
 description: Leer hoe u functies voor gegevensvoorvoegsels in de gebruikersinterface van Experience Platform gebruikt om CSV-bestanden toe te wijzen aan een XDM-schema.
 exl-id: fafa4aca-fb64-47ff-a97d-c18e58ae4dae
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: c9638cdca887f439c57f1dc01f93d63016869b29
 workflow-type: tm+mt
-source-wordcount: '1374'
+source-wordcount: '1405'
 ht-degree: 0%
 
 ---
@@ -151,6 +151,10 @@ Als u klaar bent, selecteert u **[!UICONTROL Upload file]** en selecteert u het 
 >[!ENDTABS]
 
 Als de toewijzingen zijn voltooid, kunt u nu **[!UICONTROL Finish]** selecteren en doorgaan naar de volgende stap om de gegevensstroom te voltooien.
+
+>[!TIP]
+>
+>Nadat u klaar bent met het maken van uw toewijzingen, wacht u tot 10 minuten voordat u de gegevensinvoer start. Deze wachttijd zorgt ervoor dat uw nieuwe toewijzingen volledig worden bewaard en beschikbaar in het systeem.
 
 ![ de kaartinterface met een volledige reeks afbeeldingen.](../images/ui/mapping/completed_mappings.png)
 
