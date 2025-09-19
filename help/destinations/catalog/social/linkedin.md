@@ -3,10 +3,10 @@ keywords: gekoppeld in verbinding;gekoppeld in verbinding;gekoppeld in doelen;ge
 title: Koppeling in verbinding met passend publiek
 description: Activeer profielen voor uw campagnes LinkedIn voor publiek gericht, verpersoonlijking, en onderdrukking, die op gehakte e-mails worden gebaseerd.
 exl-id: 74c233e9-161a-4e4a-98ef-038a031feff0
-source-git-commit: 653f43ac6afb25445fe8ef3c2832be8f1c4723fe
+source-git-commit: 6b3b830f822cc02c78d6f593c0a949d3e19ada37
 workflow-type: tm+mt
-source-wordcount: '1186'
-ht-degree: 2%
+source-wordcount: '1202'
+ht-degree: 1%
 
 ---
 
@@ -30,7 +30,7 @@ Een softwarebedrijf organiseert een conferentie en wil met deelnemers in contact
 
 >[!IMPORTANT]
 >
->Vanaf september 2025 ondersteunt de [!DNL LinkedIn Matched Audiences] -bestemming niet langer [!DNL IDFA] (Identifier for Advertisers)-identiteiten.  Deze wijziging is het gevolg van LinkedIn&#39;s vereisten en is niet gerelateerd aan Experience Platform-upgrades van de bestemmingsservice.
+>Vanaf september 2025 kunt u [!DNL IDFA] niet meer toewijzen als doelidentiteit, aangezien [!DNL IDFA] niet meer wordt ondersteund door het doel van [!DNL LinkedIn Matched Audiences] . Zie de [!DNL LinkedIn Matched Audiences] integratie [ documentatie ](https://learn.microsoft.com/en-us/linkedin/marketing/matched-audiences/create-and-manage-segment-users?view=li-lms-2025-07&tabs=http#idtypes) voor meer details. Deze wijziging is het gevolg van LinkedIn&#39;s vereisten en is niet gerelateerd aan Experience Platform-upgrades van de bestemmingsservice.
 
 
 | Doelidentiteit | Beschrijving | Overwegingen |
@@ -46,7 +46,7 @@ In deze sectie wordt beschreven welke soorten publiek u naar dit doel kunt expor
 
 | Oorsprong publiek | Ondersteund | Beschrijving |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | ✓ | Het publiek produceerde door de Dienst van de Segmentatie van Experience Platform [&#128279;](../../../segmentation/home.md). |
+| [!DNL Segmentation Service] | ✓ | Het publiek produceerde door de Dienst van de Segmentatie van Experience Platform [ ](../../../segmentation/home.md). |
 | Aangepaste uploads | ✓ | Het publiek [ ingevoerde ](../../../segmentation/ui/audience-portal.md#import-audience) in Experience Platform van Csv- dossiers. |
 
 {style="table-layout:auto"}
@@ -92,7 +92,7 @@ Als u ervoor kiest om de e-mailadressen zelf te hashen, moet u aan de volgende v
 >[!NOTE]
 >
 >Gegevens uit naamruimten zonder hashing worden automatisch gehasht door [!DNL Experience Platform] bij activering.
->&#x200B;> Kenmerkbrongegevens worden niet automatisch gehasht.
+>> Kenmerkbrongegevens worden niet automatisch gehasht.
 > 
 > Tijdens de [ stap van de Toewijzing van de Identiteit ](../../ui/activate-segment-streaming-destinations.md#mapping), wanneer uw brongebied unhashed attributen bevat, controleer de **[!UICONTROL Apply transformation]** optie, om [!DNL Experience Platform] automatisch de gegevens bij activering te hebben.
 > 

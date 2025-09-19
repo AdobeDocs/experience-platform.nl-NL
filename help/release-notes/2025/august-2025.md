@@ -2,10 +2,10 @@
 title: Aanvullende informatie van augustus 2025 voor Adobe Experience Platform
 description: Aanvullende informatie van augustus 2025 voor Adobe Experience Platform.
 exl-id: d93e98f3-d165-4710-ad1d-2ad3857cd0f8
-source-git-commit: 40c3745920204983f5388de6cba1402d87eda71c
+source-git-commit: 6b3b830f822cc02c78d6f593c0a949d3e19ada37
 workflow-type: tm+mt
-source-wordcount: '1416'
-ht-degree: 91%
+source-wordcount: '1469'
+ht-degree: 96%
 
 ---
 
@@ -15,8 +15,8 @@ ht-degree: 91%
 >
 >Raadpleeg de volgende documentatie voor aanvullende informatie voor andere Adobe Experience Platform-toepassingen:
 >
->- [Adobe Journey Optimizer](https://experienceleague.adobe.com/nl/docs/journey-optimizer/using/whats-new/release-notes)
->- [Adobe Journey Optimizer B2B](https://experienceleague.adobe.com/nl/docs/journey-optimizer-b2b/user/release-notes)
+>- [Adobe Journey Optimizer](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/whats-new/release-notes)
+>- [Adobe Journey Optimizer B2B](https://experienceleague.adobe.com/en/docs/journey-optimizer-b2b/user/release-notes)
 >- [Customer Journey Analytics](https://experienceleague.adobe.com/nl/docs/analytics-platform/using/releases/pre-release-notes)
 >- [Samenstelling van Federated-doelgroep](https://experienceleague.adobe.com/nl/docs/federated-audience-composition/using/e-release-notes)
 >- [Real-Time CDP Collaboration](https://experienceleague.adobe.com/nl/docs/real-time-cdp-collaboration/using/latest)
@@ -104,6 +104,7 @@ Voor meer informatie over de catalogusservice raadpleegt u het [overzicht van de
 | --- | --- |
 | Interne [[!DNL Microsoft Bing]](../../destinations/catalog/advertising/bing.md)-upgrade | Vanaf 11 augustus 2025 is het mogelijk dat u gedurende een korte periode twee **[!DNL Microsoft Bing]**-kaarten naast elkaar in de bestemmingscatalogus hebt gezien. Dit komt door een interne upgrade van de bestemmingsservice. De naam van de bestaande bestemmingsconnector **[!DNL Microsoft Bing]** is gewijzigd in **[!UICONTROL (Deprecated) Microsoft Bing]** en er is nu een nieuwe kaart met de naam **[!UICONTROL Microsoft Bing]** voor u beschikbaar. <br> De upgrade is voltooid en de verouderde kaart is verwijderd uit de bestemmingscatalogus. Gebruik de **[!UICONTROL Microsoft Bing]**-verbinding in de catalogus voor nieuwe activeringsgegevensstromen. Als u actieve gegevensstromen naar de **[!UICONTROL (Deprecated) Microsoft Bing]**-bestemming hebt, worden deze automatisch bijgewerkt. U hoeft dus niets te doen. <br><br>Als u gegevensstromen maakt via de [Flow Service API](https://developer.adobe.com/experience-platform-apis/references/destinations/), moet u uw [!DNL flow spec ID] en [!DNL connection spec ID] bijwerken naar de volgende waarden:<ul><li>Stroomspecificatie-ID: `8d42c81d-9ba7-4534-9bf6-cf7c64fbd12e`</li><li>Verbindingsspecificatie-ID: `dd69fc59-3bc5-451e-8ec2-1e74a670afd4`</li></ul> Na deze upgrade kunt u in uw gegevensstromen naar [!DNL Microsoft Bing] een **daling in het aantal geactiveerde profielen** ervaren. Deze daling wordt veroorzaakt door de introductie van de **ECID-toewijzingsvereiste** voor alle activeringen op dit bestemmingsplatform. |
 | Informatie over de verloopdatum van de verificatie voor [[!DNL LinkedIn]](../../destinations/catalog/social/linkedin.md)- en [LinkedIn Matched Audiences](../../destinations/catalog/social/linkedin-b2b.md)-bestemmingen | Informatie over de verloopdatum van de verificatie voor [!DNL LinkedIn]-bestemmingen is nu rechtstreeks zichtbaar in de Experience Platform-interface. Zo kunt u zien wanneer uw verificatie verloopt en deze vernieuwen voordat er verstoringen in uw gegevensstromen ontstaan. U kunt de vervaldatums van uw tokens controleren in de kolom **[!UICONTROL Account expiration date]** op de tabbladen **[[!UICONTROL Accounts]](../../destinations/ui/destinations-workspace.md#accounts)** of **[[!UICONTROL Browse]](../../destinations/ui/destinations-workspace.md#browse)** . |
+| [ LinkedIn Gelijke Soorten publiek ](../../destinations/catalog/social/linkedin-b2b.md) [!DNL IDFA] de verwijdering van de identiteitssteun | Vanaf september 2025 kunt u [!DNL IDFA] niet meer toewijzen als doelidentiteit, aangezien [!DNL IDFA] niet meer wordt ondersteund door het doel van [!DNL LinkedIn Matched Audiences] . Zie de [!DNL LinkedIn Matched Audiences] integratie [ documentatie ](https://learn.microsoft.com/en-us/linkedin/marketing/matched-audiences/create-and-manage-segment-users?view=li-lms-2025-07&tabs=http#idtypes) voor meer details. Deze wijziging is het gevolg van LinkedIn&#39;s vereisten en is niet gerelateerd aan Experience Platform-upgrades van de bestemmingsservice. |
 
 **Nieuwe of bijgewerkte functionaliteit**
 
@@ -159,7 +160,7 @@ Voor meer informatie over sandboxes, lees het [ overzicht van sandboxes](../../s
 
 | Functie | Beschrijving |
 | ------- | ----------- |
-| Doelgroepinschattingen | De ramingen van het publiek worden nu getoond als a **waaier**, die op het betrouwbaarheidsinterval van de steekproefgegevens gebaseerd is. Meer over ramingen leren, lees de [ gids van de Bouwer van het Segment ](/help/segmentation/ui/segment-builder.md#audience-properties). |
+| Doelgroepinschattingen | Doelgroepinschattingen worden nu weergegeven als een **bereik**, dat is gebaseerd op het betrouwbaarheidsinterval van de steekproefgegevens. Voor meer informatie over schattingen kunt u de [Segment Builder-handleiding](/help/segmentation/ui/segment-builder.md#audience-properties) raadplegen. |
 
 Voor meer informatie raadpleegt u het [[!DNL Segmentation Service] overzicht](../../segmentation/home.md).
 
@@ -171,9 +172,9 @@ Experience Platform biedt een RESTful-API en een interactieve gebruikersinterfac
 
 | Functie | Beschrijving |
 | --- | --- |
-| Algemene beschikbaarheid van de [!DNL Oracle NetSuite] -bron | De [!DNL Oracle NetSuite] -bron is nu algemeen beschikbaar. U kunt uw [!DNL Oracle NetSuite] -account nu verbinden met Experience Platform om activiteiten en gegevens van entiteiten in te voeren voor uniforme analyse en activering. Voor meer informatie raadpleegt u het [[!DNL Oracle NetSuite] overzicht](../../sources/connectors/marketing-automation/oracle-netsuite.md). |
-| Algemene beschikbaarheid van de [!DNL PathFactory] -bron | De [!DNL PathFactory] -bron is nu algemeen beschikbaar. U kunt uw [!DNL PathFactory] -account verbinden met Experience Platform om bezoekers, sessies en paginaweergaven gegevens in te voeren voor een uniforme analyse en activering. Voor meer informatie raadpleegt u het [[!DNL PathFactory] overzicht](../../sources/connectors/marketing-automation/pathfactory.md). |
-| Algemene beschikbaarheid van de [!DNL Stripe] -bron | De [!DNL Stripe] -bron is nu algemeen beschikbaar. U kunt uw [!DNL Stripe] -account verbinden met Experience Platform om betaling- en transactiegegevens in te voeren voor een uniforme analyse en activering. Voor meer informatie raadpleegt u het [[!DNL Stripe] overzicht](../../sources/connectors/payments/stripe.md). |
+| Algemene beschikbaarheid van de [!DNL Oracle NetSuite]-bron | De [!DNL Oracle NetSuite]-bron is nu algemeen beschikbaar. U kunt uw [!DNL Oracle NetSuite]-account nu verbinden met Experience Platform om activiteiten en gegevens van entiteiten in te voeren voor uniforme analyse en activering. Voor meer informatie raadpleegt u het [[!DNL Oracle NetSuite] overzicht](../../sources/connectors/marketing-automation/oracle-netsuite.md). |
+| Algemene beschikbaarheid van de [!DNL PathFactory]-bron | De [!DNL PathFactory]-bron is nu algemeen beschikbaar. U kunt uw [!DNL PathFactory]-account verbinden met Experience Platform om gegevens van bezoekers, sessies en paginaweergaven in te voeren voor een uniforme analyse en activering. Voor meer informatie raadpleegt u het [[!DNL PathFactory] overzicht](../../sources/connectors/marketing-automation/pathfactory.md). |
+| Algemene beschikbaarheid van de [!DNL Stripe]-bron | De [!DNL Stripe]-bron is nu algemeen beschikbaar. U kunt uw [!DNL Stripe]-account verbinden met Experience Platform om betalings- en transactiegegevens in te voeren voor een uniforme analyse en activering. Voor meer informatie raadpleegt u het [[!DNL Stripe] overzicht](../../sources/connectors/payments/stripe.md). |
 | Verbeterde verificatie voor [!DNL Azure Blob Storage] | U kunt nu verificatie op basis van de belangrijkste service gebruiken om uw [!DNL Azure Blob Storage]-bron met Experience Platform te verbinden. U kunt nu verificatie op basis van de belangrijkste service gebruiken voor verbeterde veiligheid, eenvoudigere rotatie van aanmeldingsgegevens en een nauwkeurigere toegangscontrole voor uw account. Voor meer informatie raadpleegt u het [[!DNL Azure Blob Storage] overzicht](../../sources/connectors/cloud-storage/blob.md). |
 
 Voor meer informatie raadpleegt u het [overzicht van bronnen](../../sources/home.md).
