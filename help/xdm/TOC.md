@@ -5,10 +5,10 @@ breadcrumb-title: Handleiding voor Experience Data Model (XDM)
 user-guide-description: Verken een overzicht van het systeem van Experience Data Model (XDM) binnen het Experience Platform en leer hoe u klassen en schemaveldgroepen kunt gebruiken om ervaringsgegevens te standaardiseren.
 feature: Schemas
 role: Developer
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 1385f91694f9b6dfe96b9d424af0da6f2a1443c2
 workflow-type: tm+mt
-source-wordcount: '697'
-ht-degree: 8%
+source-wordcount: '702'
+ht-degree: 9%
 
 ---
 
@@ -16,7 +16,7 @@ ht-degree: 8%
 # XDM-systeem (Experience Data Model) {#xdm}
 
 * [XDM System, overzicht](home.md)
-* Schemas {#schema}
+* Schema&#39;s {#schema}
    * [Basisbeginselen van de schemacompositie](schema/composition.md)
    * [Aanbevolen procedures voor gegevensmodellering](schema/best-practices.md)
    * [Gevoelige en persoonlijke gegevens](./schema/sensitive-and-personal-data.md)
@@ -112,6 +112,7 @@ ht-degree: 8%
       * [Details partnerperspectief (voorbeeld)](./field-groups/prospect-profile/partner-prospect-details.md)
    * XDM ExperienceEvent {#event}
       * [Adobe Analytics Full Extension](./field-groups/event/analytics-full-extension.md)
+      * [Volledige extensie Adobe Advertising Cloud](./field-groups/event/advertising-full-extension.md)
       * [Advertising-gegevens](./field-groups/event/advertising-details.md)
       * [Toepassingsdetails](./field-groups/event/application-details.md)
       * [Balansoverdrachten](./field-groups/event/balance-transfers.md)
@@ -140,9 +141,9 @@ ht-degree: 8%
       * [XDM Business Campaign - details](./field-groups/b2b-campaign/details.md)
    * XDM Business Campaign-leden {#b2b-campaign-members}
       * [XDM Business Campaign-leden - Gegevens](./field-groups/b2b-campaign-members/details.md)
-   * Medicatie {#medication}
+   * Geneesmiddelen {#medication}
       * [Geneesmiddelen voor gezondheidszorg](./field-groups/medication/healthcare-medication.md)
-   * Overzicht {#plan}
+   * Plan {#plan}
       * [Details van het zorgplan](./field-groups/plan/healthcare-plan-details.md)
    * Product {#product}
       * [Productcatalogus](./field-groups/product/product-catalog.md)
@@ -152,7 +153,7 @@ ht-degree: 8%
    * Gedeeld {#shared}
       * [Details externe Source System Audit](./field-groups/shared/external-source-system-audit-details.md)
    * [Updates van veldgroepnamen](./field-groups/name-updates.md)
-* Gegevenstypen {#data-types}
+* Datatypen {#data-types}
    * [Accountgegevens](./data-types/account-details.md)
    * [Ad Break](./data-types/ad-break.md)
    * [Adres](./data-types/address.md)
@@ -251,7 +252,7 @@ ht-degree: 8%
    * [Machine leren-ondersteund schema maken](./ui/ml-assisted-schema-creation.md)
    * [Voorbeeld-XDM-gegevens genereren](./ui/sample.md)
    * [XDM-schema&#39;s exporteren](./ui/export.md)
-* Schemaregister-API {#api}
+* Schema-register-API {#api}
    * [Overzicht](api/overview.md)
    * [Aan de slag](api/getting-started.md)
    * [Schema&#39;s](api/schemas.md)
@@ -269,7 +270,7 @@ ht-degree: 8%
    * [Ad-hocregelingen](api/ad-hoc.md)
    * [Mixinen (afgekeurd)](api/mixins.md)
    * [Bijlage](api/appendix.md)
-* Zelfstudies {#tutorials}
+* Tutorials {#tutorials}
    * [Een schema maken in de gebruikersinterface](tutorials/create-schema-ui.md)
    * [Een schema maken in de API](tutorials/create-schema-api.md)
    * [Specifieke velden toevoegen aan een schema (API)](./tutorials/specific-fields-api.md)
@@ -284,4 +285,4 @@ ht-degree: 8%
    * [Een ad-hocschema maken](tutorials/ad-hoc.md)
 * [Handleiding voor probleemoplossing](troubleshooting-guide.md)
 * [ API verwijzing ](https://www.adobe.io/experience-platform-apis/references/schema-registry/)
-* [Releaseopmerkingen bij Experience Platform](https://experienceleague.adobe.com/nl/docs/experience-platform/release-notes/latest)
+* [Releaseopmerkingen bij Experience Platform](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)
