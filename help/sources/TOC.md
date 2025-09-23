@@ -5,9 +5,9 @@ breadcrumb-title: Gids voor Source Connectors
 user-guide-description: Neem gegevens uit diverse bronnen op. Leer hoe u opgenomen gegevens kunt structureren, labelen en verbeteren.
 feature: Sources
 role: Developer
-source-git-commit: 197cdc89abd292d87276d792201dedb2373f5564
+source-git-commit: a05e20845b6c111139451f593ef24fb8f760b5bd
 workflow-type: tm+mt
-source-wordcount: '1056'
+source-wordcount: '1070'
 ht-degree: 7%
 
 ---
@@ -103,6 +103,8 @@ ht-degree: 7%
       - [Streaming optimaliseren](connectors/ecommerce/shopify-streaming.md)
    - Lokaal systeem {#local-system}
       - [ Lokale dossier uploadt schakelaar ](connectors/local-system/local-file-upload.md)
+   - Loyalty {#loyalty}
+      - [Capillary Streaming-gebeurtenissen](connectors/loyalty/capillary.md)
    - Marketing automatiseren {#marketing-automation}
       - [Braze huidige](connectors/marketing-automation/braze.md)
       - [Chatlio](connectors/marketing-automation/chatlio-webhook.md)
@@ -179,6 +181,8 @@ ht-degree: 7%
          - [SAP COMMERCE](tutorials/api/create/ecommerce/sap-commerce.md)
          - [Schopify](tutorials/api/create/ecommerce/shopify.md)
          - [Streaming optimaliseren](tutorials/api/create/ecommerce/shopify-streaming.md)
+      - Loyalty {#loyalty}
+         - [Capillary Streaming-gebeurtenissen](tutorials/api/create/loyalty/capillary.md)
       - Marketing automatiseren {#marketing-automation}
          - [Chatlio](tutorials/api/create/marketing-automation/chatlio-webhook.md)
          - [Customer.io](tutorials/api/create/marketing-automation/customerio-webhook.md)
@@ -311,6 +315,8 @@ ht-degree: 7%
          - [Streaming optimaliseren](tutorials/ui/create/ecommerce/shopify-streaming.md)
       - Lokaal systeem {#local-system}
          - [ Lokale dossier uploadt ](tutorials/ui/create/local-system/local-file-upload.md)
+      - Loyalty {#loyalty}
+         - [Capillary Streaming-gebeurtenissen](tutorials/ui/create/loyalty/capillary.md)
       - Marketing automatiseren {#marketing-automation}
          - [Braze huidige](tutorials/ui/create/marketing-automation/braze.md)
          - [Chatlio](tutorials/ui/create/marketing-automation/chatlio-webhook.md)
@@ -322,6 +328,7 @@ ht-degree: 7%
          - [Oracle NetSuite-activiteiten](tutorials/ui/create/marketing-automation/oracle-netsuite-activities.md)
          - [Oracle NetSuite-entiteiten](tutorials/ui/create/marketing-automation/oracle-netsuite-entities.md)
          - [PathFactory](tutorials/ui/create/marketing-automation/pathfactory.md)
+         - [Relay Connector](tutorials/ui/create/marketing-automation/relay-connector.md)
          - [Salesforce Marketing Cloud](tutorials/ui/create/marketing-automation/salesforce-marketing-cloud.md)
       - Betalingen {#payments}
          - [Vierkant](tutorials/ui/create/payments/square.md)
@@ -393,4 +400,4 @@ ht-degree: 7%
 - [IP adres lijst van gewenste personen](ip-address-allow-list.md)
 - [Veelgestelde vragen](./troubleshooting.md)
 - [ API verwijzing ](https://www.adobe.io/experience-platform-apis/references/flow-service/)
-- [Releaseopmerkingen bij Experience Platform](https://experienceleague.adobe.com/nl/docs/experience-platform/release-notes/latest)
+- [Releaseopmerkingen bij Experience Platform](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)
