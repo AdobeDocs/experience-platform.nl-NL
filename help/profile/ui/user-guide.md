@@ -127,7 +127,7 @@ In de sectie **[!UICONTROL Customer profile insights]** wordt een korte inleidin
 
 #### AI insight-widgets {#ai-insight-widgets}
 
-In de sectie **[!UICONTROL AI insight widgets]** worden widgets weergegeven die door AI zijn gegenereerd. Deze widgets bieden snel inzicht in het profiel, op basis van de profielgegevens, zoals demografie (zoals leeftijd, geslacht of locatie), gebruikersgedrag (zoals de aankoopgeschiedenis, de activiteiten van de website of betrokkenheid van sociale media), en psychografie (zoals interesses, voorkeur of keuzes in levensstijl). Alle AI widgets gebruiken gegevens die **&#x200B;**&#x200B;reeds in het profiel bestaat.
+In de sectie **[!UICONTROL AI insight widgets]** worden widgets weergegeven die door AI zijn gegenereerd. Deze widgets bieden snel inzicht in het profiel, op basis van de profielgegevens, zoals demografie (zoals leeftijd, geslacht of locatie), gebruikersgedrag (zoals de aankoopgeschiedenis, de activiteiten van de website of betrokkenheid van sociale media), en psychografie (zoals interesses, voorkeur of keuzes in levensstijl). Alle AI widgets gebruiken gegevens die **** reeds in het profiel bestaat.
 
 ![ wordt de AI insight widgets sectie getoond.](../images/user-guide/ai-insight-widgets.png)
 
