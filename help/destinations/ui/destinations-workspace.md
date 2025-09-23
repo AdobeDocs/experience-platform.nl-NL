@@ -3,9 +3,9 @@ keywords: platform;bestemmingen;bestemmingswerkruimte;werkruimte;ui;bestemmingen
 title: Werkruimte Doelen
 description: De werkruimte van Doelen bestaat uit vijf secties, Overzicht, Catalogus, doorbladeren, Rekeningen, en de Mening van het Systeem. Deze worden in de onderstaande secties beschreven.
 exl-id: 0f46f08d-0fe3-441d-933a-86bc146c0f19
-source-git-commit: c8eedc1f020b8605c9565015461cb1dfd47bba1f
+source-git-commit: ff566e6ec409d237d3831d787d7428859dd4b566
 workflow-type: tm+mt
-source-wordcount: '2058'
+source-wordcount: '2178'
 ht-degree: 0%
 
 ---
@@ -79,7 +79,7 @@ Doelen waarvoor de schakeloptie **[!UICONTROL Enabled/Disabled]** is ingeschakel
 > ![ doorbladert Lusje ](../assets/ui/workspace/browse-tab.png)
 > 
 > * Selecteer de ellips (`...`) in de [!UICONTROL Name] kolom en gebruik ![ activeer de controle van het publiek ](/help/images/icons/data-add.png) **[!UICONTROL Activate audiences]** controle om publiek of datasets naar die bestemming uit te voeren.
-> * Selecteer de ellips (`...`) in de [!UICONTROL Name] kolom en gebruik ![ uitgeven bestemmingscontrole ](/help/images/icons/edit.png)**[!UICONTROL Edit destination]**&#x200B;controle om bestaande bestemmingsverbindingen uit te geven. Lees het leerprogramma op [ het uitgeven bestemmingen ](/help/destinations/ui/edit-destination.md) voor meer informatie.
+> * Selecteer de ellips (`...`) in de [!UICONTROL Name] kolom en gebruik ![ uitgeven bestemmingscontrole ](/help/images/icons/edit.png)**[!UICONTROL Edit destination]**controle om bestaande bestemmingsverbindingen uit te geven. Lees het leerprogramma op [ het uitgeven bestemmingen ](/help/destinations/ui/edit-destination.md) voor meer informatie.
 > * Selecteer de ellips (`...`) in de [!UICONTROL Name] kolom en gebruik ![ uitgeven marketing actiecontrole ](/help/images/icons/edit-marketing-actions.svg) **[!UICONTROL Edit marketing actions]** controle om [ de marketing acties ](/help/destinations/ui/edit-activation.md#edit-marketing-actions) voor de geselecteerde bestemming te veranderen.
 > * Selecteer de ellips (`...`) in de [!UICONTROL Name] kolom en gebruik de ![ controle van de Schrapping ](/help/images/icons/delete.png) **[!UICONTROL Delete]** controle [ verwijderen ](delete-destinations.md) een bestaande verbinding aan een bestemming.
 > * Selecteer de ellips (`...`) in de [!UICONTROL Name] kolom en gebruik de ![ Mening in controle ](/help/images/icons/monitoring.png) **[!UICONTROL View in monitoring]** controle om activeringsinformatie voor deze bestemming in het [ controledashboard ](/help/dataflows/ui/monitor-destinations.md#monitoring-destinations-dashboard) te bekijken.
@@ -93,12 +93,13 @@ Zie de tabel hieronder voor alle informatie die voor elke bestemming wordt opgeg
 | Naam | De naam die u hebt opgegeven voor de activeringsstroom naar dit doel. |
 | Gegevenstype | Het type gegevens dat wordt ondersteund door de doelverbinding. Ondersteunde gegevenstypen: <ul><li>**[!UICONTROL Customers]**</li><li>**[!UICONTROL Prospects]**</li><li>**[!UICONTROL Accounts]**</li><li>**[!UICONTROL Datasets]**</li></ul> |
 | [!UICONTROL Last Dataflow Run Status] | De status van de laatste gegevensstroomuitvoering. Zie [ de bestemmingsdetails van de Mening ](destination-details-page.md) voor meer informatie over dataflow looppas. |
-| [!UICONTROL Last Dataflow Run Date] | Tijd en datum waarop de laatste dataflow-run heeft plaatsgevonden. Zie [ de bestemmingsdetails van de Mening ](destination-details-page.md) voor meer informatie over dataflow looppas. |
+| [!UICONTROL Last Dataflow Run Date] | Tijd en datum waarop de laatste dataflow-run heeft plaatsgevonden. Selecteer de kolomkop voor toegang tot sorteeropties (**[!UICONTROL Sort Ascending]**, **[!UICONTROL Sort Descending]** ). Zie [ de bestemmingsdetails van de Mening ](destination-details-page.md) voor meer informatie over dataflow looppas. |
 | [!UICONTROL Destination] | Het doelplatform dat u hebt geselecteerd voor de activeringsstroom. |
-| [!UICONTROL Account Expiration Date] | De datum waarop de verbindingsvergunning aan deze bestemming zal verlopen. <br>**Belangrijk**: Deze kolom is momenteel beschikbaar slechts voor de [ verbinding van Facebook ](../catalog/social/facebook.md). |
+| [!UICONTROL Account Expiration Date] | De datum waarop de verbindingsvergunning aan deze bestemming zal verlopen. <br> Een waarschuwingspictogram ![ Waarschuwing: het pictogram van de rekeningsvervaldatum ](/help/images/icons/alert-expiration.png) verschijnt vóór de vervaldatum om u te waarschuwen dat de verbinding zal verlopen en misschien vernieuwing zal vereisen. Gegevensstromen naar verlopen verbindingen worden gestopt en u moet opnieuw verifiëren om uw activeringsworkflows te hervatten. <br>**Belangrijk**: Deze kolom is momenteel beschikbaar slechts voor [ Pinterest ](../catalog/advertising/pinterest.md), [ LinkedIn ](../catalog/social/linkedin.md), en [ LinkedIn Gelijke Publiek ](../catalog/social/linkedin-b2b.md) verbindingen. <br> ![ Voorbeeld van de waarschuwing van de rekeningsvervalsing in Browse lusje ](../assets/ui/workspace/account-expiration-browse.png){width="100" zoomable="yes" alt="Screenshot showing the account expiration warning icon and expiration date in the Browse tab."} |
 | [!UICONTROL Username] | De accountgegevens die u hebt geselecteerd voor de doelstroom. |
 | [!UICONTROL Activation Data] | Geeft het aantal soorten publiek aan dat op dit doel wordt geactiveerd. Selecteer dit besturingselement om meer te weten te komen over het geactiveerde publiek. Verwijs naar [ Gegevens van de Activering ](/help/destinations/ui/destination-details-page.md#activation-data) in de pagina van bestemmingsdetails voor meer informatie over het geactiveerde publiek. |
-| [!UICONTROL Created] | De datum en UTC-tijd waarop de activeringsstroom naar het doel is gemaakt. Selecteer het pijl-omhoog/pijl-omlaag om de activeringsstromen eerst op de nieuwste of eerst op de oudste te sorteren. |
+| [!UICONTROL Created] | De datum en tijd waarop de activeringsstroom naar het doel is gemaakt. Selecteer het pijl-omhoog/pijl-omlaag om de activeringsstromen eerst op de nieuwste of eerst op de oudste te sorteren. |
+| [!UICONTROL Modified] | De datum en tijd waarop de activeringsstroom naar de bestemming voor het laatst is gewijzigd. |
 | [!UICONTROL Status] | `Enabled` of `Disabled` . Geeft aan of gegevens op dit doel worden geactiveerd. |
 | [!UICONTROL Access labels] | Toont om het even welke toegangslabels die aan dit bestemmingsgegeven werden toegevoegd. Lees meer over [ het toepassen van toegangslabels op bestemmingsdataflows ](/help/access-control/abac/apply-access-labels-destinations.md). |
 | [!UICONTROL Tags] | Hiermee geeft u alle tags weer die aan deze doelgegevensstroom zijn toegevoegd. Gebruik labels om uw gegevensstromen te ordenen en te categoriseren voor eenvoudiger beheer. |
@@ -121,7 +122,7 @@ Gebruik de zoekbalk boven aan de tabel om snel gegevens op naam te zoeken. Terwi
 >
 > Wanneer het zoeken naar gegevensstromen gebruikend de onderzoeksdoos, kunnen de resultaten dataflows omvatten die uw [ de etiketten van de gebruikerstoegang ](/help/access-control/abac/apply-access-labels-destinations.md) u van het zien beperken. Dit gedrag wordt in een toekomstige update gecorrigeerd. Als u dergelijke gegevensstromen selecteert, worden de gegevens niet weergegeven in de rechterrail en kunnen gebruikers zonder toegang tot de vereiste labels geen wijzigingen uitvoeren, zoals het toewijzen van soorten publiek aan de gegevensstroom of het bewerken van het bijbehorende schema.
 
-![ Geanimeerde demonstratie van het zoeken naar een bestemmingsdataflow in het Browse lusje ](../assets/ui/workspace/search.gif)
+![Geanimeerde demonstratie van het zoeken naar een bestemmingsgegevensstroom in het tabblad Verkennen](../assets/ui/workspace/search.gif)
 
 ### Filteropties {#filter-options-browse}
 
@@ -182,21 +183,21 @@ Op het tabblad **[!UICONTROL Accounts]** vindt u meer informatie over de verbind
 
 >[!TIP]
 >
-> * Selecteer de ellips (`...`) in de [!UICONTROL Platform] kolom en gebruik ![ controle ](/help/images/icons/data-add.png)**[!UICONTROL Activate]**&#x200B;activeren/**[!UICONTROL Activate audiences]**/**[!UICONTROL Export datasets]**&#x200B;controle om publiek of datasets naar die bestemming uit te voeren.
-> * Selecteer de ellips (`...`) in de [!UICONTROL Platform] kolom en gebruik ![ uitgeven detailcontrole ](/help/images/icons/edit.png)**[!UICONTROL Edit details]**&#x200B;controle om [&#128279;](update-accounts.md) de details van een bestaande bestemmingsrekening bij te werken.
-> * Selecteer de ellips (`...`) in de [!UICONTROL Platform] kolom en gebruik de ![ controle van de Schrapping ](/help/images/icons/delete.png)**[!UICONTROL Delete]**&#x200B;controle [ om ](delete-destination-account.md) een bestaande bestemmingsrekening te schrappen.
+> * Selecteer de ellips (`...`) in de [!UICONTROL Platform] kolom en gebruik ![ controle ](/help/images/icons/data-add.png)**[!UICONTROL Activate]**activeren/**[!UICONTROL Activate audiences]**/**[!UICONTROL Export datasets]**controle om publiek of datasets naar die bestemming uit te voeren.
+> * Selecteer de ellips (`...`) in de [!UICONTROL Platform] kolom en gebruik ![ uitgeven detailcontrole ](/help/images/icons/edit.png)**[!UICONTROL Edit details]**controle om [ ](update-accounts.md) de details van een bestaande bestemmingsrekening bij te werken.
+> * Selecteer de ellips (`...`) in de [!UICONTROL Platform] kolom en gebruik de ![ controle van de Schrapping ](/help/images/icons/delete.png)**[!UICONTROL Delete]**controle [ om ](delete-destination-account.md) een bestaande bestemmingsrekening te schrappen.
 
 ![ Rekeningen tabel ](../assets/ui/workspace/accounts-tab.png)
 
 | Element | Beschrijving |
 |---|---|
-| [!UICONTROL Name] | De naam u aan de bestemmingsrekening toewees terwijl [ vestiging ](connect-destination.md#authenticate) de bestemming. |
+| [!UICONTROL Name] | De naam u aan de bestemmingsrekening toewees terwijl [ vestiging ](connect-destination.md#authenticate) de bestemming. Selecteer de kolomkop voor toegang tot sorteeropties (**[!UICONTROL Sort Ascending]**, **[!UICONTROL Sort Descending]** ). |
 | [!UICONTROL Destination] | De bestemmingsschakelaar waarvoor u opstelling de verbinding hebt. |
 | [!UICONTROL Connection Type] | Vertegenwoordigt het type van rekeningsverbinding aan uw opslagemmer of bestemming. Afhankelijk van de bestemming, zijn de authentificatieopties: <ul><li>Voor e-mailmarketingbestemmingen: kan S3, FTP of Azure Blob zijn.</li><li>Voor reclame-bestemmingen in real time: Server-aan-server</li><li>Voor Amazon S3-cloudopslagdoelen: Toegangstoets </li><li>Voor SFTP-cloudopslagdoelen: basisverificatie voor SFTP</li><li>OAuth 1- of OAuth 2-verificatie</li><li>Toekennerverificatie</li></ul> |
 | [!UICONTROL Username] | De gebruikersbenaming u in [ selecteerde verbind bestemmingswerkschema ](../catalog/email-marketing/overview.md#connect-destination). |
 | [!UICONTROL Connections] | Vertegenwoordigt het aantal unieke succesvolle bestemmingsdataflows die met basisinformatie worden verbonden voor een bestemming worden gecreeerd. |
 | [!UICONTROL Authorization date] | De datum waarop de verbinding met deze bestemming werd geautoriseerd. |
-| [!UICONTROL Expiration date] | De datum waarop de verbindingsvergunning aan deze bestemming zal verlopen. <br>**Belangrijk**: Deze kolom is momenteel beschikbaar slechts voor [ Facebook ](../catalog/social/facebook.md), [ LinkedIn ](../catalog/social/linkedin.md), en [ LinkedIn Gelijke Publiek ](../catalog/social/linkedin-b2b.md) verbindingen. |
+| [!UICONTROL Expiration date] | De datum waarop de verbindingsvergunning aan deze bestemming zal verlopen. <br> Een waarschuwingspictogram ![ Het waarschuwingspictogram voor verlopen account.](/help/images/icons/alert-expiration.png) wordt vóór de vervaldatum weergegeven om u te waarschuwen dat de verbinding verloopt en mogelijk moet worden vernieuwd. Gegevensstromen naar verlopen verbindingen worden gestopt en u moet opnieuw verifiëren om uw activeringsworkflows te hervatten. <br>**Belangrijk**: Deze kolom is momenteel beschikbaar slechts voor [ Pinterest ](../catalog/advertising/pinterest.md), [ LinkedIn ](../catalog/social/linkedin.md), en [ LinkedIn Gelijke Publiek ](../catalog/social/linkedin-b2b.md) verbindingen. <br> ![](../assets/ui/workspace/expired-accounts.png){width="100" zoomable="yes"} |
 
 {style="table-layout:auto"}
 
