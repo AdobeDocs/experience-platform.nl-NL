@@ -1,21 +1,15 @@
 ---
 title: Importeren van Acrobat-perspectiefgegevens
 description: Leer hoe u via de gebruikersinterface verbinding maakt met Acrobat Prospecting Data naar Adobe Experience Platform en Adobe Real-Time Customer Data Platform.
-last-substantial-update: 2024-02-21T00:00:00Z
-badge: Beta
 exl-id: cde0bfe9-0604-41d3-8422-114f58a74d04
-source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
+source-git-commit: e402a58f51de49b26f9d279cebf551ec11e4698f
 workflow-type: tm+mt
-source-wordcount: '1819'
+source-wordcount: '1801'
 ht-degree: 0%
 
 ---
 
 # Een [!DNL Acxiom Prospecting Data Import] bronverbinding en gegevensstroom maken in de gebruikersinterface
-
->[!NOTE]
->
->De bron [!DNL Acxiom Prospecting Data Import] is in bèta. Gelieve te lezen het [ overzicht van bronnen ](../../../../home.md#terms-and-conditions) voor meer informatie bij het gebruiken van bèta-geëtiketteerde bronnen.
 
 De [!DNL Acxiom] -programma voor het doorvoeren van gegevens voor Adobe Real-Time Customer Data Platform is een proces voor het bieden van het meest productieve mogelijke publiek. [!DNL Acxiom] gebruikt Real-Time CDP-gegevens van de eerste partij via een beveiligde exportbewerking en voert deze gegevens uit via een bekroond systeem voor het oplossen van hygiëne en identiteit. Dit veroorzaakt een gegevensdossier dat als onderdrukkingslijst moet worden gebruikt. Dit gegevensdossier wordt dan aangepast tegen het Globale gegevensbestand van Acxiom, dat toelaat dat de perspectieflijsten worden gemaakt voor de invoer.
 

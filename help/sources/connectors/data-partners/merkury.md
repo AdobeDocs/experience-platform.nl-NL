@@ -1,21 +1,15 @@
 ---
 title: Source-overzicht van Merkury Enterprise Identity
 description: Leer hoe u Merkury Enterprise Identity Resolution via de gebruikersinterface kunt verbinden met Adobe Experience Platform.
-last-substantial-update: 2023-12-12T00:00:00Z
-badge: Beta
 exl-id: c5eaa561-d620-4c82-bce1-972d0a422c3f
-source-git-commit: 8be502c9eea67119dc537a5d63a6c71e0bff1697
+source-git-commit: e402a58f51de49b26f9d279cebf551ec11e4698f
 workflow-type: tm+mt
-source-wordcount: '498'
+source-wordcount: '486'
 ht-degree: 0%
 
 ---
 
 # [!DNL Merkury Enterprise Identity Resolution]
-
->[!NOTE]
->
->De bron [!DNL Merkury Enterprise Identity Resolution] is in bèta. Gelieve te lezen het [ overzicht van bronnen ](../../home.md#terms-and-conditions) voor meer informatie bij het gebruiken van bèta-geëtiketteerde bronnen.
 
 Adobe Experience Platform biedt ondersteuning voor het opnemen van gegevens van een toepassing voor gegevenspartners. Ondersteuning voor gegevenspartners is [!DNL Merkury Enterprise Identity Resolution] .
 
@@ -23,9 +17,9 @@ U kunt [!DNL Merkury] door [!DNL Merkle] gebruiken om meer digitale bezoekers te
 
 U kunt **persoonsidentiteitskaart** als deel van de [!DNL Merkury] bron gebruiken om alles te combineren dat uw organisatie over een individu in één enkel uitvoerig profiel kent. Deze details kunnen zijn:
 
-- digitaal gedrag
-- aankoopvoorkeuren
-- identificeert informatie zoals een naam, e-mailadres, fysiek adres of apparaat-id.
+- Digitaal gedrag
+- Kopervoorkeuren
+- Gegevens identificeren zoals een naam, e-mailadres, fysiek adres of apparaat-id.
 
 U kunt ingesloten gegevens opmaken als JSON, XDM Parquet of gescheiden Experience Data Model (XDM). Elke stap van het proces is geïntegreerd in het werk van bronnen
 
@@ -33,7 +27,7 @@ U kunt ingesloten gegevens opmaken als JSON, XDM Parquet of gescheiden Experienc
 
 ## IP adres lijst van gewenste personen
 
-Een lijst van IP adressen moet aan een lijst van gewenste personen worden toegevoegd alvorens met bronschakelaars te werken. Het niet toevoegen van uw regio-specifieke IP adressen aan uw lijst van gewenste personen kan tot fouten of niet-prestaties leiden wanneer het gebruiken van bronnen. Zie de [&#128279;](../../ip-address-allow-list.md) pagina van de lijst van gewenste personen van het 0&rbrace; IP adres &lbrace;voor meer informatie.
+Alvorens u bronschakelaars kunt gebruiken, moet u de vereiste IP adressen voor uw gebied aan uw lijst van gewenste personen toevoegen. Als u deze IP adressen niet toevoegt, kunnen de bronschakelaars niet correct werken of fouten veroorzaken. Voor gedetailleerde instructies en de lijst van IP adressen om toe te staan, lees de [ IP pagina van de adreslijst van gewenste personen ](../../ip-address-allow-list.md).
 
 ## Naamgevingsbeperkingen voor bestanden en mappen
 
@@ -59,4 +53,4 @@ U moet aan de volgende voorwaarden voldoen voordat u de [!DNL Merkury] -bron kun
 
 ## Volgende stappen
 
-Door dit document te lezen, hebt u de vereiste instellingen voltooid om gegevens van uw [!DNL Merkury] -account naar het Experience Platform te kunnen verzenden. U kunt aan de gids nu te werk gaan op [ verbindend  [!DNL Merkury]  met Experience Platform gebruikend het gebruikersinterface ](../../tutorials/ui/create/data-partners/merkury.md).
+Door dit document te lezen, hebt u de vereiste instellingen voltooid om gegevens van uw [!DNL Merkury] -account naar Experience Platform te kunnen verzenden. U kunt aan de gids nu te werk gaan op [ verbindend  [!DNL Merkury]  met Experience Platform gebruikend het gebruikersinterface ](../../tutorials/ui/create/data-partners/merkury.md).

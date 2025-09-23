@@ -1,22 +1,17 @@
 ---
 title: Acxiale gegevensinname
-description: Leer hoe te om  [!DNL Acxiom]  gegevens aan Real-time Customer Data Platform in te voeren, eerste-partijprofielen verrijken, en publiek verbeteren en over marketing kanalen activeren.
-badge: Beta
+description: Leer hoe te om  [!DNL Acxiom]  gegevens aan Real-Time Customer Data Platform in te voeren, eerste-partijprofielen verrijken, en publiek verbeteren en over marketing kanalen activeren.
 exl-id: 3bbbe4e1-5e34-4104-bf39-2c452865b807
-source-git-commit: 62bcaa532cdec68a2f4f62e5784c35b91b7d5743
+source-git-commit: e402a58f51de49b26f9d279cebf551ec11e4698f
 workflow-type: tm+mt
-source-wordcount: '469'
+source-wordcount: '457'
 ht-degree: 0%
 
 ---
 
 # [!DNL Acxiom Data Ingestion]
 
->[!NOTE]
->
->De bron [!DNL Acxiom Prospecting Data Import] is in bèta. Gelieve te lezen het [ overzicht van bronnen ](../../home.md#terms-and-conditions) voor meer informatie bij het gebruiken van bèta-geëtiketteerde bronnen.
-
-Gebruik de [!DNL Acxiom Data Ingestion] -bron om [!DNL Acxiom] -gegevens in te voeren in Real-time Customer Data Platform en om eerstelijns-profielen te verrijken. Vervolgens kunt u met uw [!DNL Acxiom] verrijkte first-party-profielen het publiek verbeteren en activeren via verschillende marketingkanalen.
+Gebruik de [!DNL Acxiom Data Ingestion] -bron om [!DNL Acxiom] -gegevens in te voeren in Real-Time Customer Data Platform en om eerstelijns-profielen te verrijken. Vervolgens kunt u met uw [!DNL Acxiom] verrijkte first-party-profielen het publiek verbeteren en activeren via verschillende marketingkanalen.
 
 ![ acxiom-gegeven-inname-werkschema ](../../images/tutorials/create/acxiom-data-enhancement-import/acxiom-data-ingestion.png)
 
@@ -24,7 +19,7 @@ Lees het onderstaande document voor informatie over hoe u uw [!DNL Acxiom Data I
 
 ## Vereisten {#prerequisites}
 
-Als u uw [!DNL Acxiom Data Ingestion] -account wilt verbinden met een Experience Platform, moet u waarden opgeven voor de volgende verificatiereferenties:
+Als u uw [!DNL Acxiom Data Ingestion] -account wilt verbinden met Experience Platform, moet u waarden opgeven voor de volgende verificatiereferenties:
 
 | Credentials | Beschrijving |
 | --- | --- |
@@ -35,11 +30,11 @@ Als u uw [!DNL Acxiom Data Ingestion] -account wilt verbinden met een Experience
 
 ## IP adres lijst van gewenste personen
 
-Een lijst van IP adressen moet aan een lijst van gewenste personen worden toegevoegd alvorens met bronschakelaars te werken. Het niet toevoegen van uw regio-specifieke IP adressen aan uw lijst van gewenste personen kan tot fouten of niet-prestaties leiden wanneer het gebruiken van bronnen. Zie de [&#128279;](../../ip-address-allow-list.md) pagina van de lijst van gewenste personen van het 0&rbrace; IP adres &lbrace;voor meer informatie.
+Alvorens u bronschakelaars kunt gebruiken, moet u de vereiste IP adressen voor uw gebied aan uw lijst van gewenste personen toevoegen. Als u deze IP adressen niet toevoegt, kunnen de bronschakelaars niet correct werken of fouten veroorzaken. Voor gedetailleerde instructies en de lijst van IP adressen om toe te staan, lees de [ IP pagina van de adreslijst van gewenste personen ](../../ip-address-allow-list.md).
 
 ### Machtigingen configureren voor Experience Platform
 
-U moet zowel **[!UICONTROL View Sources]** als **[!UICONTROL Manage Sources]** machtigingen hebben ingeschakeld voor uw account om uw [!DNL Acxiom Data Ingestion] -account aan Experience Platform te kunnen koppelen. Neem contact op met de productbeheerder om de benodigde machtigingen te verkrijgen. Voor meer informatie, lees de [ gids UI van de toegangscontrole ](../../../access-control/ui/overview.md).
+U moet zowel **[!UICONTROL View Sources]** - als **[!UICONTROL Manage Sources]** -machtigingen hebben ingeschakeld voor uw account om uw [!DNL Acxiom Data Ingestion] -account te kunnen verbinden met Experience Platform. Neem contact op met de productbeheerder om de benodigde machtigingen te verkrijgen. Voor meer informatie, lees de [ gids UI van de toegangscontrole ](../../../access-control/ui/overview.md).
 
 ### Naamgevingsbeperkingen voor bestanden en mappen
 
@@ -54,4 +49,4 @@ Met de onderstaande beperkingen moet rekening worden gehouden bij de naamgeving 
 
 ## Volgende stappen
 
-Door dit document te lezen, hebt u de vereiste instellingen voltooid die nodig zijn om gegevens van uw [!DNL Acxiom] -account naar het Experience Platform te kunnen verzenden. U kunt aan de gids nu te werk gaan op [ verbindend  [!DNL Acxiom Data Ingestion]  met Experience Platform gebruikend het gebruikersinterface ](../../tutorials/ui/create/data-partners/acxiom-data-ingestion.md).
+Door dit document te lezen, hebt u de vereiste instellingen voltooid die nodig zijn om gegevens van uw [!DNL Acxiom] -account naar Experience Platform te kunnen verzenden. U kunt aan de gids nu te werk gaan op [ verbindend  [!DNL Acxiom Data Ingestion]  met Experience Platform gebruikend het gebruikersinterface ](../../tutorials/ui/create/data-partners/acxiom-data-ingestion.md).

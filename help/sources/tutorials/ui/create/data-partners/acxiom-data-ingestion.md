@@ -1,21 +1,15 @@
 ---
 title: Acxiale gegevensinname
 description: Gebruik de Opname van Gegevens van Acxiom om gegevens van Acxiom in Real-Time CDP in te voeren en verrijkt first-party profielen. Gebruik uw door Acxiom verrijkte first-party profielen om het publiek te verbeteren en over marketing kanalen te activeren.
-last-substantial-update: 2024-03-19T00:00:00Z
-badge: Beta
 exl-id: a0a080ef-4603-437f-8a68-11dbf530ac90
-source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
+source-git-commit: e402a58f51de49b26f9d279cebf551ec11e4698f
 workflow-type: tm+mt
-source-wordcount: '1791'
+source-wordcount: '1769'
 ht-degree: 0%
 
 ---
 
 # Een [!DNL Acxiom Data Ingestion] bronverbinding en gegevensstroom maken in de gebruikersinterface
-
->[!NOTE]
->
->De bron [!DNL Acxiom Data Ingestion] is in bèta. Lees de [ termijnen en voorwaarden ](../../../../home.md#terms-and-conditions) in het bronoverzicht voor meer informatie bij het gebruiken van bèta-geëtiketteerde bronnen.
 
 Gebruik de [!DNL Acxiom Data Ingestion] -bron om [!DNL Acxiom] -gegevens in te voeren in Real-Time Customer Data Platform en om eerstelijns-profielen te verrijken. Vervolgens kunt u met uw [!DNL Acxiom] verrijkte first-party-profielen het publiek verbeteren en activeren via verschillende marketingkanalen.
 
@@ -125,7 +119,7 @@ U kunt **[!UICONTROL Advanced search]** selecteren om een venster van alle datas
 
 >[!ENDTABS]
 
-+++Selecteer voor stappen om de opname van het Profiel, de diagnostiek van de fout, en gedeeltelijke opname toe te laten.
++++Selecteer deze optie als u de stappen voor het inschakelen van profielopname, foutdiagnose en gedeeltelijke inname wilt uitvoeren.
 
 Als uw dataset voor het Profiel van de Klant in real time wordt toegelaten, dan tijdens deze stap, kunt u **[!UICONTROL Profile dataset]** van een knevel voorzien om uw gegevens voor Profiel-opname toe te laten. U kunt deze stap ook gebruiken om **[!UICONTROL Error diagnostics]** en **[!UICONTROL Partial ingestion]** in te schakelen.
 

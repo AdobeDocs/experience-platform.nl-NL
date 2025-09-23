@@ -1,21 +1,15 @@
 ---
 title: Maak een Merkury Enterprise Identity Resolution Source Connection and Dataflow in de gebruikersinterface
 description: Leer hoe u een Merkury Enterprise Identity Resolution-bronverbinding maakt met de gebruikersinterface van Adobe Experience Platform.
-last-substantial-update: 2023-12=12
-badge: Beta
 exl-id: 2af48c18-76f9-4615-8e76-8f030a312a8f
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: e402a58f51de49b26f9d279cebf551ec11e4698f
 workflow-type: tm+mt
-source-wordcount: '2075'
+source-wordcount: '2057'
 ht-degree: 0%
 
 ---
 
 # Een [!DNL Merkury Enterprise Identity Resolution] bronverbinding en gegevensstroom maken in de gebruikersinterface
-
->[!NOTE]
->
->De bron [!DNL Merkury Enterprise Identity Resolution] is in bèta. Gelieve te lezen het [ overzicht van bronnen ](../../../../home.md#terms-and-conditions) voor meer informatie bij het gebruiken van bèta-geëtiketteerde bronnen.
 
 Deze zelfstudie bevat stappen voor het maken van een [!DNL Merkury Enterprise Identity Resolution] bronverbinding en gegevensstroom via de Adobe Experience Platform-gebruikersinterface.
 
@@ -145,7 +139,7 @@ Om in een nieuwe dataset in te gaan, selecteer **[!UICONTROL New dataset]** en v
 
 ### Profiel- en foutdiagnostiek inschakelen
 
-+++Selecteer om stappen weer te geven om foutdiagnose en profielopname in te schakelen
++++Selecteer deze optie om de stappen voor het inschakelen van foutdiagnose en het opnemen van profielen weer te geven
 
 Selecteer vervolgens de schakeloptie **[!UICONTROL Profile dataset]** om uw gegevensset in te schakelen voor realtime klantprofiel. Hierdoor kunt u een holistische weergave maken van de kenmerken en het gedrag van een entiteit. De gegevens van alle profiel-toegelaten datasets zullen in Profiel worden omvat en de veranderingen worden toegepast wanneer u sparen uw gegevensstroom.
 
