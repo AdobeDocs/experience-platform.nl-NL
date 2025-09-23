@@ -1,24 +1,24 @@
 ---
-title: Snowflake Streaming-verbinding
+title: Snowflake Batch-verbinding
 description: Exporteer gegevens naar je Snowflake-account met privéaanbiedingen.
 badgeBeta: label="Beta" type="Informative"
-exl-id: 4a00e46a-dedb-4dd3-b496-b0f4185ea9b0
-source-git-commit: 183858daac3a2471cb842f1d7308f91cf514c5ee
+badgeUltimate: label="Ultimate" type="Positive"
+source-git-commit: 3500e5ba00727c6299331cff79c56a99009cfd37
 workflow-type: tm+mt
-source-wordcount: '1407'
-ht-degree: 1%
+source-wordcount: '1611'
+ht-degree: 0%
 
 ---
 
-# Snowflake Streaming-verbinding {#snowflake-destination}
+# Snowflake Batch-verbinding {#snowflake-destination}
 
 >[!IMPORTANT]
 >
->Deze bestemmingsconnector bevindt zich in de bètafase en is alleen beschikbaar voor geselecteerde klanten. Neem contact op met uw Adobe-vertegenwoordiger om toegang aan te vragen.
+>Deze doelconnector is in bèta beschikbaar voor Real-Time CDP Ultimate-klanten. De functionaliteit en documentatie kunnen worden gewijzigd.
 
 ## Overzicht {#overview}
 
-Gebruik de bestemmingsschakelaar van Snowflake om gegevens naar de instantie van Snowflake van Adobe uit te voeren, die Adobe dan met uw instantie door [ privé lijsten ](https://other-docs.snowflake.com/en/collaboration/collaboration-listings-about) deelt.
+Gebruik deze bestemming om publieksgegevens naar dynamische tabellen in uw Snowflake-account te verzenden. Dynamische tabellen bieden toegang tot uw gegevens zonder dat fysieke gegevenskopieën nodig zijn.
 
 Lees de volgende secties om te begrijpen hoe de bestemming van Snowflake werkt en hoe de gegevens tussen Adobe en Snowflake worden overgebracht.
 
@@ -26,29 +26,35 @@ Lees de volgende secties om te begrijpen hoe de bestemming van Snowflake werkt e
 
 Dit doel gebruikt een [!DNL Snowflake] gegevensuitwisseling, wat betekent dat er geen gegevens fysiek worden geëxporteerd of overgebracht naar uw eigen Snowflake-instantie. In plaats daarvan biedt Adobe u alleen-lezentoegang tot een live tabel die wordt gehost in de Snowflake-omgeving van Adobe. U kunt deze gedeelde tabel rechtstreeks vanaf uw Snowflake-account opvragen, maar u hebt geen eigenaar van de tabel en kunt de tabel niet wijzigen of behouden na de opgegeven bewaarperiode. Adobe beheert de levenscyclus en structuur van de gedeelde tabel volledig.
 
-De eerste keer dat je gegevens van een Adobe Snowflake-exemplaar naar jou deelt, wordt je gevraagd om de privé-aanbieding van Adobe te accepteren.
+De eerste keer nadat u een gegevensstroom hebt ingesteld van Adobe naar uw Snowflake-account, wordt u gevraagd om de persoonlijke aanbieding van Adobe te accepteren.
 
-![ Schermafbeelding die het privé scherm van de Snowflake van de lijstgoedkeuring toont ](../../assets/catalog/cloud-storage/snowflake/snowflake-accept-listing.png)
+![ Schermafbeelding die het privé scherm van de Snowflake van de lijstgoedkeuring toont ](../../assets/catalog/cloud-storage/snowflake-batch/snowflake-accept-listing.png)
 
 ### Bewaren van gegevens en Tijd-aan-Levende (TTL) {#ttl}
 
-Alle gegevens die via deze integratie worden gedeeld, hebben een vaste tijd-aan-Levende (TTL) van zeven dagen. Zeven dagen na de laatste uitvoer, verloopt de gedeelde lijst automatisch en wordt ontoegankelijk, ongeacht of dataflow nog actief is. Als u de gegevens langer dan zeven dagen moet bewaren, moet u de inhoud in een lijst kopiëren die u in uw eigen instantie van Snowflake bezit alvorens TTL verloopt.
+Alle gegevens die via deze integratie worden gedeeld, hebben een vaste tijd-aan-Levende (TTL) van zeven dagen. Zeven dagen na de laatste uitvoer, verloopt de dynamische lijst automatisch en wordt ontoegankelijk, ongeacht of dataflow nog actief is. Als u de gegevens langer dan zeven dagen moet bewaren, moet u de inhoud in een lijst kopiëren die u in uw eigen instantie van Snowflake bezit alvorens TTL verloopt.
+
+>[!IMPORTANT]
+>
+>Als u een gegevensstroom verwijdert in Experience Platform, verdwijnt de dynamische tabel van uw Snowflake-account.
 
 ### Updategedrag van publiek {#audience-update-behavior}
 
 Als uw publiek op [ partijwijze ](../../../segmentation/methods/batch-segmentation.md) wordt geëvalueerd, worden de gegevens in de gedeelde lijst verfrist om de 24 uur. Dit betekent dat er een vertraging van maximaal 24 uur kan optreden tussen wijzigingen in het lidmaatschap van het publiek en wanneer deze wijzigingen worden weerspiegeld in de gedeelde tabel.
 
-### Incrementele exportlogica {#incremental-export}
+### Batchgegevensdelingslogica {#batch-data-sharing}
 
-Wanneer een dataflow voor het eerst voor een publiek loopt, voert het backfill uit en deelt het alle momenteel gekwalificeerde profielen. Na deze eerste backfill worden alleen incrementele updates weergegeven in de gedeelde tabel. Dit betekent profielen die worden toegevoegd aan of verwijderd uit het publiek. Deze aanpak zorgt voor efficiënte updates en zorgt ervoor dat de gedeelde tabel up-to-date blijft.
+Wanneer een dataflow voor het eerst voor een publiek loopt, voert het backfill uit en deelt het alle momenteel gekwalificeerde profielen. Na deze aanvankelijke backfill, verstrekt de bestemming periodieke momentopnamen van het volledige publiekslidmaatschap. Elke momentopname vervangt de vorige gegevens in de gedeelde lijst, die ervoor zorgt dat u altijd de recentste volledige mening van het publiek zonder historische gegevens ziet.
 
 ## Streaming en delen van batchgegevens {#batch-vs-streaming}
 
-Experience Platform verstrekt twee soorten bestemmingen van Snowflake: [ Snowflake die ](snowflake.md) en [ de Partij van Snowflake stromen ](../cloud-storage/snowflake-batch.md) stroomt.
+Experience Platform verstrekt twee soorten bestemmingen van Snowflake: [ Snowflake die ](/help/destinations/catalog/cloud-storage/snowflake.md) en [ de Partij van Snowflake stromen ](snowflake-batch.md) stroomt.
 
-De lijst hieronder zal u helpen beslissen welke bestemming te gebruiken door de scenario&#39;s te schetsen waar elke gegevens het delen methode het meest aangewezen is.
+Terwijl beide bestemmingen u toegang tot uw gegevens in Snowflake op een nul-exemplaarmanier geven, zijn er sommige geadviseerde beste praktijken in termen van gebruiksgevallen voor elke schakelaar.
 
-|  | Kies [ Batch van Snowflake ](../cloud-storage/snowflake-batch.md) wanneer u nodig hebt | Kies [ Streaming Snowflake ](snowflake.md) wanneer u nodig hebt |
+De lijst hieronder zal u helpen beslissen welke schakelaar aan gebruik door de scenario&#39;s te schetsen waar elke gegevens het delen methode het meest aangewezen is.
+
+|  | Kies [ Batch van Snowflake ](snowflake-batch.md) wanneer u nodig hebt | Kies [ Streaming Snowflake ](/help/destinations/catalog/cloud-storage/snowflake.md) wanneer u nodig hebt |
 |--------|-------------------|----------------------|
 | **de frequentie van de Update** | Periodieke momentopnamen | Continue updates in realtime |
 | **de presentatie van Gegevens** | Volledige publieksopname die vorige gegevens vervangt | Incrementele updates op basis van profielwijzigingen |
@@ -56,26 +62,19 @@ De lijst hieronder zal u helpen beslissen welke bestemming te gebruiken door de 
 | **het beheer van Gegevens** | Altijd laatste volledige opname bekijken | Incrementele updates op basis van wijzigingen in het publiekslidmaatschap |
 | **de scenario&#39;s van het Voorbeeld** | Bedrijfsrapportage, gegevensanalyse, modeltraining in ML | Onderdrukking van marketingcampagnes, realtime personalisatie |
 
-Voor meer informatie over partijgegevens die delen, zie de [ de verbinding van de Partij van Snowflake ](../cloud-storage/snowflake-batch.md) documentatie.
+Voor meer informatie over het stromen gegevens die delen, zie de [ Snowflake Streaming verbinding ](../cloud-storage/snowflake.md) documentatie.
 
 ## Gebruiksscenario’s {#use-cases}
 
-Het delen van streaming gegevens is ideaal voor scenario&#39;s waarin u directe updates nodig hebt wanneer een profiel zijn lidmaatschap of andere kenmerken wijzigt. Dit is essentieel voor gebruiksgevallen die realtime responsiviteit vereisen, zoals:
+Het delen van batchgegevens is ideaal voor scenario&#39;s waarbij u een volledige momentopname van uw publiek nodig hebt en realtime updates niet vereist zijn, zoals:
 
-* **de campagneonderdrukking van de Marketing**: onderdruk onmiddellijk marketing campagnes voor gebruikers die specifieke acties, zoals het ondertekenen omhoog voor de dienst of het maken van een aankoop hebben ondernomen
-* **Realtime verpersoonlijking**: De ervaringen van de gebruiker van de update onmiddellijk wanneer de profielattributen veranderen, zoals wanneer een gebruiker een website bezoekt, een productpagina bekijkt, of punten aan een het winkelwagentje toevoegt
-* **Onmiddellijke actiescenario&#39;s**: Voer snelle onderdrukking en het retargeting uit die op gegevens in real time wordt gebaseerd om vertragingen te verminderen en marketing campagnes te verzekeren zijn relevanter en tijdiger
-* **Efficiëntie en nuance**: Laat grotere efficiency en nuance in marketing inspanningen toe door snelle reactie op veranderingen van het gebruikersgedrag toe te staan
-* **Real-time optimalisering van de klantenreis**: De ervaringen van de klant van de update onmiddellijk wanneer het segmentlidmaatschap of de profielattributen veranderen
+* **Analytische werklasten**: Wanneer het uitvoeren van gegevensanalyse, het melden, of bedrijfsintelligentietaken die een volledige mening van publieksenlidmaatschap vereisen
+* **machine die werkschema&#39;s** leert: Voor de modellen van opleidingsXML of lopende voorspellende analyse die van volledige publieksmomentopnamen profiteren
+* **het entrepot van Gegevens**: Wanneer u een huidig exemplaar van publieksgegevens in uw eigen instantie van Snowflake moet handhaven
+* **Periodieke rapportering**: Voor regelmatige zaken die waar u de recentste publieksstaat zonder historische verandering het volgen nodig hebt
+* **ETL processen**: Wanneer u publieksgegevens in partijen moet omzetten of verwerken
 
-Het stromen gegevens het delen verstrekt ononderbroken updates die op segmentveranderingen, veranderingen van de identiteitskaart, of attributenveranderingen worden gebaseerd, die het voor scenario&#39;s geschikt maken waar de latentie kritiek is en de directe updates worden vereist.
-
-## Vereisten {#prerequisites}
-
-Voordat u uw Snowflake-verbinding configureert, moet u aan de volgende voorwaarden voldoen:
-
-* U hebt toegang tot een [!DNL Snowflake] -account.
-* Je Snowflake-account is geabonneerd op privé-aanbiedingen. U of iemand in uw bedrijf die beheerdersrechten voor accounts heeft op Snowflake, kan dit configureren.
+Het delen van batchgegevens vereenvoudigt gegevensbeheer door volledige momentopnamen te bieden, zodat incrementele updates niet handmatig hoeven te worden beheerd of wijzigingen handmatig moeten worden samengevoegd.
 
 ## Ondersteunde doelgroepen {#supported-audiences}
 
@@ -88,6 +87,17 @@ In deze sectie wordt beschreven welke soorten publiek u naar dit doel kunt expor
 
 {style="table-layout:auto"}
 
+Ondersteund publiek per type publieksgegevens:
+
+| Gegevenstype Publiek | Ondersteund | Beschrijving | Gebruiksscenario’s |
+|--------------------|-----------|-------------|-----------|
+| [ het publiek van Mensen ](/help/segmentation/types/people-audiences.md) | ✓ | Gebaseerd op klantenprofielen, die u toestaan om specifieke groepen mensen voor marketing campagnes te richten. | Frequente kopers, winkeliers |
+| [ publiek van de Rekening ](/help/segmentation/types/account-audiences.md) | Nee | Doelpersonen binnen specifieke organisaties voor marketingstrategieën op basis van account. | B2B-marketing |
+| [ Het publiek van het Vooruitzicht ](/help/segmentation/types/prospect-audiences.md) | Nee | De individuen van het doel die nog geen klanten zijn maar eigenschappen met uw doelpubliek delen. | Waarschuwing met gegevens van derden |
+| [ de uitvoer van de Dataset ](/help/catalog/datasets/overview.md) | Nee | Verzamelingen gestructureerde gegevens die zijn opgeslagen in het Data Lake van Adobe Experience Platform. | Rapportage, workflows voor gegevenswetenschap |
+
+{style="table-layout:auto"}
+
 ## Type en frequentie exporteren {#export-type-frequency}
 
 Raadpleeg de onderstaande tabel voor informatie over het exporttype en de exportfrequentie van de bestemming.
@@ -95,7 +105,7 @@ Raadpleeg de onderstaande tabel voor informatie over het exporttype en de export
 | Item | Type | Notities |
 ---------|----------|---------|
 | Exporttype | **[!UICONTROL Audience export]** | U exporteert alle leden van een publiek met de id&#39;s (naam, telefoonnummer of andere) die in de [!DNL Snowflake] -bestemming worden gebruikt. |
-| Exportfrequentie | **[!UICONTROL Streaming]** | Streaming doelen zijn &quot;altijd aan&quot; API-verbindingen. Zodra een profiel in Experience Platform wordt bijgewerkt dat op publieksevaluatie wordt gebaseerd, verzendt de schakelaar de update stroomafwaarts naar het bestemmingsplatform. Lees meer over [ het stromen bestemmingen ](/help/destinations/destination-types.md#streaming-destinations). |
+| Exportfrequentie | **[!UICONTROL Batch]** | Deze bestemming verstrekt periodieke momentopnamen van volledig publiekslidmaatschap door de gegevens van Snowflake te delen. Elke momentopname vervangt de vorige gegevens, die ervoor zorgen u altijd de recentste volledige mening van uw publiek hebt. |
 
 {style="table-layout:auto"}
 
@@ -109,20 +119,20 @@ Om met deze bestemming te verbinden, volg de stappen die in het [ leerprogramma 
 
 ### Verifiëren voor bestemming {#authenticate}
 
-Selecteer **[!UICONTROL Connect to destination]** als u wilt verifiëren bij het doel.
+Selecteer **[!UICONTROL Connect to destination]** en geef een accountnaam en (optioneel) een accountbeschrijving op om de account bij de bestemming te verifiëren.
 
-![ het schermschot van de Steekproef die hoe te om aan de bestemming ](../../assets/catalog/cloud-storage/snowflake/authenticate-destination.png) voor authentiek te verklaren tonen
+![ het schermschot van de Steekproef die hoe te om aan de bestemming ](../../assets/catalog/cloud-storage/snowflake-batch/authenticate-destination.png) voor authentiek te verklaren tonen
 
 ### Doelgegevens invullen {#destination-details}
 
 >[!CONTEXTUALHELP]
->id="platform_destinations_snowflake_accountID"
+>id="platform_destinations_snowflake_batch_accountID"
 >title="Voer je Snowflake-account-id in"
 >abstract="Als uw account aan een organisatie is gekoppeld, gebruikt u deze indeling: `OrganizationName.AccountName`<br><br> Als uw account niet aan een organisatie is gekoppeld, gebruikt u deze indeling: `AccountName`"
 
 Als u details voor de bestemming wilt configureren, vult u de vereiste en optionele velden hieronder in. Een sterretje naast een veld in de gebruikersinterface geeft aan dat het veld verplicht is.
 
-![ het schermschot van de Steekproef die hoe te om details voor uw bestemming te vullen ](../../assets/catalog/cloud-storage/snowflake/configure-destination-details.png) tonen
+![ het schermschot van de Steekproef die hoe te om details voor uw bestemming te vullen ](../../assets/catalog/cloud-storage/snowflake-batch/configure-destination-details.png) tonen
 
 * **[!UICONTROL Name]**: Een naam waarmee u dit doel in de toekomst herkent.
 * **[!UICONTROL Description]**: Een beschrijving die u zal helpen deze bestemming in de toekomst identificeren.
@@ -148,19 +158,37 @@ Wanneer u klaar bent met het opgeven van details voor uw doelverbinding, selecte
 >* Om gegevens te activeren, hebt u **[!UICONTROL View Destinations]**, **[!UICONTROL Activate Destinations]**, **[!UICONTROL View Profiles]**, en **[!UICONTROL View Segments]** [ toegangsbeheertoestemmingen ](/help/access-control/home.md#permissions) nodig. Lees het [ overzicht van de toegangscontrole ](/help/access-control/ui/overview.md) of contacteer uw productbeheerder om de vereiste toestemmingen te verkrijgen.
 >* Om *identiteiten* uit te voeren, hebt u de **[!UICONTROL View Identity Graph]** [ toegangsbeheertoestemming ](/help/access-control/home.md#permissions) nodig. <br> ![ Uitgezochte identiteit namespace die in het werkschema wordt benadrukt om publiek aan bestemmingen te activeren.](/help/destinations/assets/overview/export-identities-to-destination.png " Uitgezochte identiteit namespace die in het werkschema wordt benadrukt om publiek aan bestemmingen te activeren."){width="100" zoomable="yes"}
 
-Lees [ activeer profielen en publiek aan het stromen publiek uitvoerbestemmingen ](/help/destinations/ui/activate-segment-streaming-destinations.md) voor instructies bij het activeren van publiek aan deze bestemming.
+Lees [ activeer publieksgegevens aan de uitvoerbestemmingen van het partijprofiel ](/help/destinations/ui/activate-batch-profile-destinations.md) voor instructies bij het activeren van publiek aan deze bestemming.
 
 ### Kenmerken Kaart {#map}
 
-De Snowflake-bestemming ondersteunt het toewijzen van profielkenmerken aan aangepaste kenmerken.
+U kunt identiteiten en profielkenmerken naar dit doel exporteren.
 
-![ Experience Platform gebruikersinterfacebeeld dat het kaartscherm voor de bestemming van Snowflake toont.](../../assets/catalog/cloud-storage/snowflake/mapping.png)
+![ Experience Platform gebruikersinterfacebeeld dat het kaartscherm voor de bestemming van Snowflake toont.](../../assets/catalog/cloud-storage/snowflake-batch/mapping.png)
+
+U kunt de [ berekende gebiedscontrole ](../../ui/data-transformations-calculated-fields.md) gebruiken om verrichtingen op series uit te voeren en uit te voeren.
 
 De doelkenmerken worden automatisch in Snowflake gemaakt met de kenmerknaam die u in het veld **[!UICONTROL Attribute name]** opgeeft.
 
 ## Geëxporteerde gegevens/Gegevens valideren bij exporteren {#exported-data}
 
-Controleer uw Snowflake-account om te controleren of de gegevens correct zijn geëxporteerd.
+De gegevens worden via een dynamische tabel gefaseerd opgeslagen in uw Snowflake-account. Controleer uw Snowflake-account om te controleren of de gegevens correct zijn geëxporteerd.
+
+### Gegevensstructuur {#data-structure}
+
+De dynamische tabel bevat de volgende kolommen:
+
+* **TS**: Een timestamp kolom die vertegenwoordigt wanneer elke rij het laatst werd bijgewerkt
+* **de attributen van de Toewijzing**: Elk toewijzingsattribuut dat u tijdens het activeringswerkschema selecteert wordt vertegenwoordigd als kolomkopbal in Snowflake
+* **het lidmaatschap van het publiek**: Het lidmaatschap aan om het even welk publiek dat aan dataflow wordt in kaart gebracht wordt vermeld via een `active` ingang in de overeenkomstige cel
+
+![ Schermschot die de interface van Snowflake met dynamische lijstgegevens tonen ](../../assets/catalog/cloud-storage/snowflake-batch/data-validation.png)
+
+## Bekende beperkingen {#known-limitations}
+
+### Beleid voor meerdere samenvoegingen
+
+Publiek met meerdere samenvoegbeleidsregels worden niet ondersteund in één gegevensstroom. Het verschillende samenvoegbeleid veroorzaakt verschillende momentopnamen, en in de praktijk, zouden de gegevens met betrekking tot één publiek door de gegevens van het andere publiek worden beschreven, in plaats van gegevens van allebei worden uitgevoerd zoals verwacht.
 
 ## Gegevensgebruik en -beheer {#data-usage-governance}
 
