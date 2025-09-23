@@ -4,9 +4,9 @@ title: UI-gids voor waarschuwingen
 description: Leer hoe u waarschuwingen beheert in de Experience Platform-gebruikersinterface.
 feature: Alerts
 exl-id: 4ba3ef2b-7394-405e-979d-0e5e1fe676f3
-source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
+source-git-commit: 57261ca37bf10e394f47ea4bb3c01856a18b197d
 workflow-type: tm+mt
-source-wordcount: '766'
+source-wordcount: '782'
 ht-degree: 4%
 
 ---
@@ -96,10 +96,12 @@ De drempelwaarden van de alarm kunnen voor de volgende waakzame types worden aan
 | Vertraging bij uitvoering van bestemming | Vertragingsdrempel |
 | Vertraging bij uitvoering identiteitsserviceworkflow | Vertragingsdrempel |
 | Vertraging bij uitvoering van profielworkflow | Vertragingsdrempel |
+| Foutsnelheid voor profielstreaming | Foutdrempel |
+| Overgeslagen snelheid van inname profiel streaming | Foutdrempel |
 | Vertraging bij uitvoering van workflow voor bronnen | Vertragingsdrempel |
+| Foutpercentage van opname van bronnen overschreden | Foutdrempel |
 | Vertraging bij het uitvoeren van query&#39;s | Vertragingsdrempel |
 | Activeringssnelheid overschreden | Foutdrempel |
-| Foutpercentage van opname van bronnen overschreden | Foutdrempel |
 
 Selecteer de ellips (**...**) naast de naam van een regel, een dropdown vertoningencontroles. Selecteer **[!UICONTROL Edit]**.
 
