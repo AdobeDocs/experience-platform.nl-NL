@@ -3,9 +3,9 @@ keywords: Experience Platform;profiel;real-time klantprofiel;problemen;API;veren
 title: Gebruikersgids voor realtime gebruikersprofiel
 description: Het profiel van de Klant in real time leidt tot een holistische mening van elk van uw individuele klanten, die gegevens van veelvoudige kanalen met inbegrip van online, off-line, CRM, en derdegegevens combineren. Dit document fungeert als richtlijn voor de interactie met Real-Time Klantprofiel in de Adobe Experience Platform-gebruikersinterface.
 exl-id: 792a3a73-58a4-4163-9212-4d43d24c2770
-source-git-commit: d9fc1fa6a1bbc6b13b2600a5ec9400a0b488056a
+source-git-commit: e4f303f9de2d36717288d2119458c8df95fc01bf
 workflow-type: tm+mt
-source-wordcount: '2135'
+source-wordcount: '1907'
 ht-degree: 0%
 
 ---
@@ -38,43 +38,15 @@ Meer leren, bezoek de [ gids van het profieldashboard ](../../dashboards/guides/
 
 ![ het dashboard van het Profiel wordt getoond.](../../dashboards/images/profiles/dashboard-overview.png)
 
-## [!UICONTROL Browse] tabmetriek
+## [!UICONTROL Browse] tab
 
-Selecteer het tabblad **[!UICONTROL Browse]** om verschillende metrische gegevens weer te geven die betrekking hebben op de profielgegevens van uw organisatie. U kunt dit lusje ook gebruiken om de opslag van het Profiel te doorbladeren gebruikend een samenvoegbeleid of een identiteit, zoals geschetst in de volgende sectie van deze gids.
+Op het **[!UICONTROL Browse]** lusje kunt u uw profielen of in a **kaart** mening of a **grafiek** mening bekijken door de knevel te selecteren.
 
-Op de rechterkant van het **[!UICONTROL Browse]** lusje is de [ profieltelling ](#profile-count) evenals een lijst van [ profielen door namespace ](#profiles-by-namespace).
+![ de kaart en de knevel van de grafiekmening wordt benadrukt.](../images/user-guide/card-graph-view.png)
 
->[!NOTE]
->
->Deze profielmetriek kan van de metriek variëren die op het [ profiel dashboard ](#profile-dashboard) wordt getoond omdat zij gebruikend het standaardsamenvoegbeleid van uw organisatie worden geëvalueerd. Voor meer informatie bij het werken met fusiebeleid, met inbegrip van hoe te om een standaardfusiebeleid te bepalen, zie het [ overzicht van het samenvoegingsbeleid ](../merge-policies/overview.md).
+Bovendien kunt u door uw profielen bladeren met behulp van een samenvoegbeleid of specifieke profielen opzoeken met behulp van een naamruimte en waarde voor identiteit.
 
-Naast deze metriek, verstrekt deze sectie een laatste bijgewerkte datum en tijd, die tonen wanneer de metriek het laatst werden geëvalueerd.
-
-![ de metriek van het Profiel wordt getoond en benadrukt.](../images/user-guide/browse-metrics.png)
-
-### Aantal profielen {#profile-count}
-
-Het aantal profielen geeft het totale aantal profielen weer dat uw organisatie in Experience Platform heeft, nadat het standaardsamenvoegbeleid van uw organisatie profielfragmenten heeft samengevoegd tot één profiel voor elke afzonderlijke klant. Met andere woorden, uw organisatie kan veelvoudige profielfragmenten met betrekking tot één enkele klant hebben die met uw merk over verschillende kanalen interactie heeft, maar deze fragmenten zouden samen (volgens het standaard fusiebeleid) worden samengevoegd en een telling van &quot;1&quot;profiel terugkeren omdat zij allen met het zelfde individu verwant zijn.
-
-Het aantal profielen omvat ook zowel profielen met kenmerken (recordgegevens) als profielen die alleen tijdreeksgegevens (gebeurtenisgegevens) bevatten, zoals Adobe Analytics-profielen. Het aantal profielen wordt regelmatig vernieuwd om een up-to-date totaal aantal profielen in Experience Platform te bieden.
-
-#### De metrische waarde voor het aantal profielen bijwerken
-
-Wanneer de opname van records in de [!DNL Profile] store de telling met meer dan 3% verhoogt of verlaagt, wordt een baan teweeggebracht om de telling bij te werken. Voor het stromen gegevenswerkschema&#39;s, wordt een controle uitgevoerd op uurbasis om te bepalen als de 3% verhoging of dalingsdrempel is voldaan. Als dit het geval is, wordt er automatisch een taak geactiveerd om het aantal profielen bij te werken. Voor batch-opname wordt binnen 15 minuten na het correct innemen van een batch in de profielopslag een taak uitgevoerd om het aantal profielen bij te werken als aan de drempel voor 3% verhoging of verlaging is voldaan.
-
-### [!UICONTROL Profiles by namespace] {#profiles-by-namespace}
-
-De metrische waarde **[!UICONTROL Profiles by namespace]** geeft het totale aantal en de totale verdeling van naamruimten over alle samengevoegde profielen in uw archief Profiel weer. Het totale aantal profielen per naamruimte (d.w.z. het optellen van de waarden voor elke naamruimte) zal altijd hoger zijn dan de metrische waarde van het aantal profielen, omdat aan één profiel meerdere naamruimten kunnen zijn gekoppeld. Bijvoorbeeld, als een klant met uw merk op meer dan één kanaal in wisselwerking staat, zullen de veelvoudige namespaces met die individuele klant worden geassocieerd.
-
-#### De metrische waarde van [!UICONTROL Profiles by namespace] bijwerken
-
-Gelijkaardig aan de [ profieltelling ](#profile-count) metrisch, wanneer het opnemen van verslagen in de [!DNL Profile] opslag de telling met meer dan 5% verhoogt of vermindert, wordt een baan teweeggebracht om de namespacemetriek bij te werken. Voor het stromen gegevenswerkschema&#39;s, wordt een controle uitgevoerd op uurbasis om te bepalen als de 5% verhoging of dalingsdrempel is voldaan. Als dit het geval is, wordt er automatisch een taak geactiveerd om het aantal profielen bij te werken. Voor batch-opname wordt binnen 15 minuten nadat een batch in de [!DNL Profile] store is opgenomen, een taak uitgevoerd om de metriek bij te werken als aan de drempel van 5% verhoging of verlaging is voldaan.
-
-## Tabblad [!UICONTROL Browse] gebruiken om profielen weer te geven
-
-Op het tabblad **[!UICONTROL Browse]** kunt u voorbeeldprofielen weergeven met behulp van een samenvoegbeleid of specifieke profielen opzoeken met behulp van een naamruimte en waarde voor identiteit.
-
-![ de Profielen die tot de organisatie behoren worden getoond.](../images/user-guide/none-selected.png)
+![ de Profielen die tot de organisatie behoren worden getoond.](../images/user-guide/profile-browse.png)
 
 ### Bladeren op [!UICONTROL Merge policy]
 
@@ -94,7 +66,7 @@ De profielen die worden getoond vertegenwoordigen een steekproef van maximaal 20
 
 Selecteer **[!UICONTROL Profile ID]** als u de details van een van de voorbeeldprofielen wilt weergeven. Voor meer informatie, zie de sectie later in deze gids op [ het bekijken van profieldetails ](#profile-detail).
 
-![ de profielen van de Steekproef die het fusiebeleid aanpassen worden getoond.](../images/user-guide/sample-profiles.png)
+![ de profielen van de Steekproef die het fusiebeleid aanpassen worden getoond.](../images/user-guide/profile-browse-table.png)
 
 Meer over samenvoegingsbeleid en hun rol binnen Experience Platform leren, zie het [ overzicht van het fusiebeleid ](../merge-policies/overview.md).
 
@@ -120,13 +92,13 @@ Nadat u een [!UICONTROL Identity namespace] hebt geselecteerd en terugkeert naar
 >
 >Deze waarde is specifiek voor een individueel klantprofiel en moet een geldige waarde zijn voor de opgegeven naamruimte. Als u bijvoorbeeld de naamruimte E-mail selecteert, hebt u een identiteitswaarde nodig in de vorm van een geldig e-mailadres.
 
-![ de identiteitswaarde die u wilt filtreren door wordt benadrukt.](../images/user-guide/filter-identity-value.png)
+![ de identiteitswaarde die u wilt filtreren door wordt benadrukt.](../images/user-guide/browse-identity.png)
 
-Wanneer een waarde is ingevoerd, selecteert u **[!UICONTROL View]** en geeft u één profiel dat overeenkomt met de waarde. Selecteer **[!UICONTROL Profile ID]** om de profieldetails te bekijken.
+Wanneer een waarde is ingevoerd, selecteert u **[!UICONTROL View]** en geeft u één profiel dat overeenkomt met de waarde. Selecteer de **[!UICONTROL Profile ID]** om een profiel weer te geven.
 
 ![ het profiel dat de identiteitswaarde aanpast wordt benadrukt.](../images/user-guide/filtered-identity-value.png)
 
-## Profieldetails weergeven {#profile-detail}
+## Profiel weergeven {#view-profile}
 
 >[!CONTEXTUALHELP]
 >id="platform_errors_uplib_201001_404"
@@ -135,17 +107,55 @@ Wanneer een waarde is ingevoerd, selecteert u **[!UICONTROL View]** en geeft u �
 
 Nadat u een **[!UICONTROL Profile ID]** -tab hebt geselecteerd, wordt het tabblad **[!UICONTROL Detail]** geopend. De profielgegevens die op het tabblad **[!UICONTROL Detail]** worden weergegeven, zijn samengevoegd vanuit meerdere profielfragmenten en vormen één weergave van de individuele klant. Dit omvat klantgegevens zoals basiskenmerken, gekoppelde identiteiten en kanaalvoorkeuren.
 
+Bovendien, kunt u andere details over profielen zoals zijn [ attributen ](#attributes) bekijken, [ gebeurtenissen ](#events), en [ publieksenlidmaatschap ](#audience-membership).
+
+### Tabblad Details {#profile-detail}
+
+Het tabblad **[!UICONTROL Details]** bevat gedetailleerdere informatie over het geselecteerde profiel. Deze secties zijn onderverdeeld in vier secties: Inzichten in het profiel van de klant, AI insight-widgets, aanpasbare widgets en automatisch geclassificeerde widgets.
+
+![ de pagina van profieldetails wordt getoond.](../images/user-guide/profile-details.png)
+
+Bovendien kunt u schakelen of de door AI gegenereerde inzichten worden weergegeven, de details voor de hub in vergelijking met de rand tonen en de details in de grafiekweergave bekijken.
+
+![ hierboven vermelde knevels (AI-Gegenereerde inzichten, de gegevens van Hub of van Edge, en Kaart of de mening van de Grafiek) worden benadrukt.](../images/user-guide/profile-toggles.png)
+
+#### Klantprofielinzichten {#customer-profile-insights}
+
+In de sectie **[!UICONTROL Customer profile insights]** wordt een korte inleiding weergegeven over de kenmerken van het profiel. Dit omvat de profiel-id, e-mail, het telefoonnummer, het geslacht, de geboortedatum, en de identiteiten en het lidmaatschap van het publiek van het profiel.
+
+![ de sectie van de het profielinzichten van de Klant wordt getoond.](../images/user-guide/customer-profile-insights.png)
+
+#### AI insight-widgets {#ai-insight-widgets}
+
+In de sectie **[!UICONTROL AI insight widgets]** worden widgets weergegeven die door AI zijn gegenereerd. Deze widgets bieden snel inzicht in het profiel, op basis van de profielgegevens, zoals demografie (zoals leeftijd, geslacht of locatie), gebruikersgedrag (zoals de aankoopgeschiedenis, de activiteiten van de website of betrokkenheid van sociale media), en psychografie (zoals interesses, voorkeur of keuzes in levensstijl). Alle AI widgets gebruiken gegevens die **** reeds in het profiel bestaat.
+
+![ wordt de AI insight widgets sectie getoond.](../images/user-guide/ai-insight-widgets.png)
+
+#### Aanpasbare widgets {#customizable-widgets}
+
+In de sectie **[!UICONTROL Customizable widgets]** worden widgets weergegeven die u kunt aanpassen aan uw bedrijfsbehoeften. U kunt kenmerken groeperen in afzonderlijke widgets, ongewenste widgets verwijderen of de lay-out van de widgets aanpassen.
+
 De weergegeven standaardvelden kunnen ook op organisatorisch niveau worden gewijzigd om de voorkeursprofielkenmerken weer te geven. Meer leren over het aanpassen van deze gebieden, met inbegrip van geleidelijke instructies voor het toevoegen van en het verwijderen van attributen en het resizing van dashboardpanelen, te lezen gelieve de [ gids van de profieldetail aanpassing ](profile-customization.md).
 
-![ het lusje van Details wordt benadrukt. De profieldetails worden getoond.](../images/user-guide/profile-detail-row-name.png)
+![ de klantgerichte widget sectie wordt getoond.](../images/user-guide/customizable-widgets.png)
 
 U kunt ook schakelen tussen het weergeven van de kenmerknamen als hun weergavenamen en hun padnamen voor velden. Als u wilt schakelen tussen deze twee weergaven, selecteert u de schakeloptie **[!UICONTROL Show display names]** .
 
-![ de knevel van vertoningsnamen van de Show wordt benadrukt, en de vertoningsnamen worden getoond onder de attributen.](../images/user-guide/profile-detail.png)
+![ de knevel van de showvertoningsnamen wordt benadrukt.](../images/user-guide/show-display-names.png)
 
-Selecteer een van de andere beschikbare tabbladen om aanvullende informatie over het profiel van de individuele klant weer te geven. Deze lusjes omvatten attributen, gebeurtenissen, en het lusje van het publiekslidmaatschap dat het publiek toont waarvoor het profiel momenteel gekwalificeerd is.
+#### Automatisch geclassificeerde widgets {#auto-classified-widgets}
 
-### Tabblad Kenmerken
+In de sectie **[!UICONTROL Auto-classified widgets]** worden widgets weergegeven die gebruikmaken van het samenvoegingsschema om te bepalen tot welke bronveldgroepen een kenmerk behoort. Hierdoor krijgt u een duidelijkere context waarin de gegevens afkomstig zijn. U kunt de zoekbalk gebruiken om gemakkelijker naar trefwoorden in uw widgets te zoeken.
+
+Deze widgets combineren zowel gebeurtenisgegevens (met de widget Gebeurtenissen beleven) als kenmerkgegevens, zodat u een uniforme weergave van uw profiel hebt. U kunt deze widgets gebruiken om de structuur van de gegevens van uw profiel te onderzoeken om uw [ klantgerichte widgets ](#customizable-widgets) beter te structureren.
+
+>[!NOTE]
+>
+>Als er veelvoudige brongebiedsgroepen zijn, zullen widgets **slechts één** van de beschikbare opties gebruiken.
+
+![ de auto-geclassificeerde widget sectie wordt getoond.](../images/user-guide/auto-classified-widgets.png)
+
+### Tabblad Kenmerken {#attributes}
 
 Het tabblad **[!UICONTROL Attributes]** bevat een lijstweergave met een overzicht van alle kenmerken die betrekking hebben op één profiel, nadat het opgegeven samenvoegbeleid is toegepast.
 
@@ -159,7 +169,7 @@ Als u de kenmerken wilt weergeven die beschikbaar zijn op de Edge, selecteert u 
 
 Voor meer informatie over randprofielen, te lezen gelieve de [ documentatie van randprofielen ](../edge-profiles.md).
 
-### Het tabblad Gebeurtenissen
+### Het tabblad Gebeurtenissen {#events}
 
 Het tabblad **[!UICONTROL Events]** bevat gegevens van de 100 meest recente ExperienceEvents die aan de klant zijn gekoppeld. Deze gegevens kunnen het openen van e-mail, winkelwagentjes en paginaweergaven omvatten. Als u **[!UICONTROL View all]** selecteert voor een afzonderlijke gebeurtenis, worden aanvullende velden en waarden vastgelegd als onderdeel van de gebeurtenis.
 
@@ -167,7 +177,7 @@ Gebeurtenissen kunnen ook als een JSON-object worden weergegeven door op **[!UIC
 
 ![ het lusje van Gebeurtenissen wordt benadrukt. De profielgebeurtenissen worden getoond.](../images/user-guide/events.png)
 
-### Tabblad Poortlidmaatschap
+### Tabblad Poortlidmaatschap {#audience-membership}
 
 Op het tabblad **[!UICONTROL Audience membership]** wordt een lijst weergegeven met de naam en beschrijving van het publiek waartoe het individuele klantprofiel momenteel behoort. Deze lijst wordt automatisch bijgewerkt wanneer het profiel in aanmerking komt of vervalt bij het publiek. Het totale aantal soorten publiek waarvoor het profiel momenteel is gekwalificeerd, wordt aan de rechterkant van het tabblad weergegeven.
 

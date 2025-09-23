@@ -3,9 +3,9 @@ keywords: Experience Platform;profiel;realtime klantprofiel;gebruikersinterface;
 title: Aanpassing profieldetails in de gebruikersinterface
 description: Deze handleiding bevat stapsgewijze instructies voor het aanpassen van de manier waarop gegevens van het realtime-klantprofiel worden weergegeven in de gebruikersinterface van Adobe Experience Platform.
 exl-id: 76cf8420-cc50-4a56-9f6d-5bfc01efcdb3
-source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
+source-git-commit: e253be0c4e02b82bfc8926ac4531589782b9c8fe
 workflow-type: tm+mt
-source-wordcount: '1316'
+source-wordcount: '1289'
 ht-degree: 0%
 
 ---
@@ -27,8 +27,6 @@ Nadat u het dashboard hebt gewijzigd, kunt u de kaarten opnieuw rangschikken doo
 ![ resize knoop wordt benadrukt binnen de Basis kenmerkkaart.](../images/profile-customization/resize.png)
 
 De geselecteerde kaart wordt aangepast aan de gewenste grootte en de omringende kaarten worden dynamisch verplaatst. Hierdoor kunnen sommige kaarten naar extra rijen worden verplaatst, waardoor u omlaag moet schuiven om alle kaarten weer te geven. Bijvoorbeeld, wanneer de &quot;[!UICONTROL Basic attributes]&quot;kaart resized de &quot;[!UICONTROL Linked identities]&quot;kaart niet meer op de hoogste rij zichtbaar is en nu op een nieuwe tweede rij binnen het profiel (getoond niet) verschijnt. Om &quot;[!UICONTROL Linked identities]&quot;kaart aan de hoogste rij terug te keren, kon u het slepen en in de huidige positie van &quot;[!UICONTROL Channel preferences]&quot;kaart laten vallen.
-
-![ wordt een re-gerangschikte kaart van A benadrukt.](../images/profile-customization/resized.png)
 
 ## Kaarten bewerken en verwijderen
 
@@ -70,8 +68,6 @@ Wanneer u terugkeert naar het scherm **[!UICONTROL Edit widget]** , moet de lijs
 
 Na het opslaan gaat u terug naar het tabblad **[!UICONTROL Detail]** waar de bijgewerkte kaart en kenmerken zichtbaar zijn.
 
-![ de onlangs toegevoegde attributen worden getoond op de kaart binnen het dashboard van het Profiel.](../images/profile-customization/added-attributes.png)
-
 ## Een nieuwe kaart toevoegen {#add-a-new-card}
 
 Als u de weergave van profielen in Experience Platform verder wilt aanpassen, kunt u ervoor kiezen nieuwe kaarten toe te voegen aan het dashboard en de kenmerken te selecteren die u op die kaarten wilt weergeven. Selecteer eerst **[!UICONTROL Modify dashboard]** op de tab **[!UICONTROL Detail]** .
@@ -99,8 +95,6 @@ Als u uw nieuwe kaart wilt opslaan, moet u eerst een **[!UICONTROL Card title]**
 ![ nieuwe widget wordt voorvertoond binnen het Edit widgetscherm.](../images/profile-customization/new-widget.png)
 
 Na het opslaan gaat u terug naar het tabblad **[!UICONTROL Detail]** waar uw nieuwe kaart en kenmerken zichtbaar zijn.
-
-![ nieuwe widget wordt toegevoegd aan het dashboard van het Profiel.](../images/profile-customization/added-widget.png)
 
 ## Standaardkaarten herstellen
 
