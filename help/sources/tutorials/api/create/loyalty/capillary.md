@@ -1,16 +1,20 @@
 ---
 title: Connect Capillary aan Experience Platform met behulp van de Flow Service API
 description: Leer hoe u Capillary kunt verbinden met Experience Platform via API's.
-hide: true
-hidefromtoc: true
-source-git-commit: 7119ca51e0a4db09c8adb68bcde41ab3837439d1
+badge: Beta
+exl-id: 763792d0-d5dc-40ac-b86a-6a0d26463b71
+source-git-commit: 91d6206c6ce387fde365fa72dc79ca79fc0e46fa
 workflow-type: tm+mt
-source-wordcount: '1112'
+source-wordcount: '1150'
 ht-degree: 0%
 
 ---
 
 # Verbinding maken met Experience Platform via de [!DNL Capillary Streaming Events] API[!DNL Flow Service]
+
+>[!AVAILABILITY]
+>
+>De bron [!DNL Capillary Streaming Events] is in bèta. Lees de [ termijnen en voorwaarden ](../../../../home.md#terms-and-conditions) in het bronoverzicht voor meer informatie bij het gebruiken van bèta-geëtiketteerde bronnen.
 
 Lees deze gids om te leren hoe te om [!DNL Capillary Streaming Events] en [[!DNL Flow Service]  API ](https://developer.adobe.com/experience-platform-apis/references/flow-service/) te gebruiken om gegevens van uw [!DNL Capillary] rekening aan Adobe Experience Platform te stromen.
 
@@ -39,7 +43,7 @@ Lees de gids op [ begonnen wordt met Experience Platform APIs ](../../../../../l
 4. Creeer a **doelverbinding** om ervoor te zorgen dat uw gegevens in gegevens meer landen.
 5. Met Gegevensvoorinstelling kunt u toewijzingen maken die uw [!DNL Capillary] -bronvelden toewijzen aan de juiste XDM-velden.
 6. Een gegevensstroom maken met de `sourceConnectionId` , `targetConnectionId` en `mappingID`
-7. Test met één voorbeeldprofiel/transactiegebeurtenissen om uw gegevensstroom te controleren.
+7. Testen met één voorbeeldprofiel/transactiegebeurtenissen om uw gegevensstroom te controleren.
 
 >[!ENDSHADEBOX]
 
@@ -230,9 +234,9 @@ Transacties maken handelsactiviteiten vast. Bekijk de volgende lading voor een v
 
 >[!ENDTABS]
 
-### Ondersteunde gebeurtenissen
+<!--### Supported Events
 
-De bron [!DNL Capillary] ondersteunt de volgende gebeurtenissen:
+The [!DNL Capillary] source supports the following events:
 
 * `pointsIssued`
 * `tierDowngraded`
@@ -247,8 +251,7 @@ De bron [!DNL Capillary] ondersteunt de volgende gebeurtenissen:
 * `pointsRedeemed`
 * `transactionAdded`
 * `tierRenewed`
-* `customerUpdated`
-
+* `customerUpdated`-->
 
 ### Historische gegevensmigratie
 
@@ -319,11 +322,15 @@ Wijs de Capillaire gebieden aan de overeenkomstige XDM schemagebieden als volgt 
 
 | Source-schema | Doelschema |
 |------------------------------|-------------------------------|
-| `identityMap.email.id` | `xdm:identityMap.email` |
-| `loyalty.points` | `xdm:loyaltyPoints` |
-| `loyalty.tier` | `xdm:loyaltyTier` |
+| `identityMap.email.id` | `xdm:identityMap.email[0].id` |
+| `loyalty.points` | `xdm:loyalty.points` |
+| `loyalty.tier` | `xdm:loyalty.tier` |
 | `commerce.order.priceTotal` | `xdm:commerce.order.priceTotal` |
 | `productLineItems.SKU` | `xdm:productListItems.SKU` |
+
+>[!TIP]
+>
+>U kunt de [ Gebeurtenissen en afbeeldingen van het Profiel ](../../../../images/tutorials/create/capillary/mappings.zip) voor [!DNL Capillary] downloaden en [ de dossiers invoeren aan Prep van Gegevens ](../../../../../data-prep/ui/mapping.md#import-mapping) wanneer u bereid bent om uw gegevens in kaart te brengen.
 
 ### Een gegevensstroom maken {#flow}
 
@@ -376,7 +383,7 @@ curl -X POST \
 
 **Reactie**
 
-Een succesvolle reactie keert uw gegevensstroom met het overeenkomstige dataflow identiteitskaart terug.
+Een succesvolle reactie keert uw gegevensstroom met zijn overeenkomstige dataflow ID terug.
 
 ```json
 {

@@ -1,16 +1,20 @@
 ---
-title: Connect Capillary aan Experience Platform via de gebruikersinterface
+title: Verbinding maken met Capillary met Experience Platform via de gebruikersinterface
 description: Leer hoe u Capillary kunt verbinden met Experience Platform via de gebruikersinterface
-hide: true
-hidefromtoc: true
-source-git-commit: 7b733831932c48240340b0a2136e15f5d2144635
+badge: Beta
+exl-id: c90e6500-b92c-44ba-8de6-84e772bd9db1
+source-git-commit: 91d6206c6ce387fde365fa72dc79ca79fc0e46fa
 workflow-type: tm+mt
-source-wordcount: '745'
+source-wordcount: '791'
 ht-degree: 0%
 
 ---
 
-# Verbinding maken [!DNL Capillary] met Experience Platform via de gebruikersinterface
+# Verbinding maken [!DNL Capillary Streaming Events] met Experience Platform via de gebruikersinterface
+
+>[!AVAILABILITY]
+>
+>De bron [!DNL Capillary Streaming Events] is in bèta. Lees de [ termijnen en voorwaarden ](../../../../home.md#terms-and-conditions) in het bronoverzicht voor meer informatie bij het gebruiken van bèta-geëtiketteerde bronnen.
 
 Lees deze handleiding voor informatie over hoe u uw [!DNL Capillary] -database kunt verbinden met Adobe Experience Platform via de werkruimte voor bronnen in de Experience Platform-gebruikersinterface.
 
@@ -74,19 +78,23 @@ Zodra uw dataset wordt gevormd, moet u details op uw gegevensstroom, met inbegri
 | --- | --- |
 | Naam gegevensstroom | De naam van de gegevensstroom.  Standaard wordt hiervoor de naam gebruikt van het bestand dat wordt geïmporteerd. |
 | Beschrijving | (Optioneel) Een korte beschrijving van uw gegevensstroom. |
-| Waarschuwingen | Experience Platform kan op gebeurtenissen gebaseerde waarschuwingen produceren waarop gebruikers zich kunnen abonneren. Deze opties zijn allemaal een doorlopende gegevensstroom om deze waarschuwingen te activeren.  Voor meer informatie, lees het [ alarm overzicht ](../../alerts.md) <ul><li>**het Begin van de Looppas van Bronnen Dataflow**: Selecteer dit alarm om een bericht te ontvangen wanneer uw dataflow looppas begint.</li><li>**Bronnen Dataflow de Succes van de Looppas**: Selecteer dit alarm om een bericht te ontvangen als uw dataflow zonder enige fouten beëindigt.</li><li>**de Uitval van de Looppas van Gegevensstroom van Bronnen**: Selecteer dit alarm om een bericht te ontvangen als uw dataflow looppas met om het even welke fouten beëindigt.</li></ul> |
+| Waarschuwingen | Experience Platform kan waarschuwingen op basis van gebeurtenissen produceren waarop gebruikers zich kunnen abonneren. Met deze opties kan een actieve gegevensstroom deze waarschuwingen activeren.  Voor meer informatie, lees het [ alarm overzicht ](../../alerts.md) <ul><li>**het Begin van de Looppas van Bronnen Dataflow**: Selecteer dit alarm om een bericht te ontvangen wanneer uw dataflow looppas begint.</li><li>**Bronnen Dataflow de Succes van de Looppas**: Selecteer dit alarm om een bericht te ontvangen als uw dataflow zonder enige fouten beëindigt.</li><li>**de Uitval van de Looppas van Gegevensstroom van Bronnen**: Selecteer dit alarm om een bericht te ontvangen als uw dataflow looppas met om het even welke fouten beëindigt.</li></ul> |
 
 {style="table-layout:auto"}
 
 ## Toewijzing
 
-Gebruik de toewijzingsinterface om uw brongegevens toe te wijzen aan de aangewezen schemagebieden alvorens gegevens aan Experience Platform in te voeren.  Voor meer informatie, lees de [ kaartgids in UI ](../../../../../data-prep/ui/mapping.md).
+Gebruik de toewijzingsinterface om uw brongegevens toe te wijzen aan de aangewezen schemagebieden alvorens gegevens aan Experience Platform in te voeren. Voor meer informatie, lees de [ kaartgids in UI ](../../../../../data-prep/ui/mapping.md).
+
+>[!TIP]
+>
+>U kunt de [ Gebeurtenissen en afbeeldingen van het Profiel ](../../../../images/tutorials/create/capillary/mappings.zip) voor [!DNL Capillary] downloaden en [ de dossiers invoeren aan Prep van Gegevens ](../../../../../data-prep/ui/mapping.md#import-mapping) wanneer u bereid bent om uw gegevens in kaart te brengen.
 
 ![ de kaartinterface voor Capillary.](../../../../images/tutorials/create/capillary/mappings.png)
 
 ## Controleren
 
-De stap *[!UICONTROL Review]* wordt weergegeven, zodat u de details van de gegevensstroom kunt bekijken voordat deze wordt gemaakt. De details zijn groep binnen de volgende categorieën:
+De stap *[!UICONTROL Review]* wordt weergegeven, zodat u de details van de gegevensstroom kunt bekijken voordat deze wordt gemaakt. De details worden gegroepeerd in de volgende categorieën:
 
 * **[!UICONTROL Connection]**: geeft de accountnaam, het bronplatform en de bronnaam weer.
 * **[!UICONTROL Assign dataset and map fields]**: toont de doeldataset en het schema dat de dataset volgt.

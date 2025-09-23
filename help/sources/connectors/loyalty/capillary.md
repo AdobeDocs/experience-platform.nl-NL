@@ -1,16 +1,21 @@
 ---
 title: Overzicht van Capillary Streaming-gebeurtenissen
 description: Leer hoe u gegevens kunt streamen van Capillary naar Experience Platform.
-hide: true
-hidefromtoc: true
-source-git-commit: 7b733831932c48240340b0a2136e15f5d2144635
+last-substantial-update: 2025-09-23T00:00:00Z
+badge: Beta
+exl-id: 3b8eb2f6-3b4a-4b91-89d4-b6d9027c6ab4
+source-git-commit: 91d6206c6ce387fde365fa72dc79ca79fc0e46fa
 workflow-type: tm+mt
-source-wordcount: '273'
+source-wordcount: '295'
 ht-degree: 0%
 
 ---
 
 # [!DNL Capillary Streaming Events]
+
+>[!AVAILABILITY]
+>
+>De bron [!DNL Capillary Streaming Events] is in bèta. Lees de [ termijnen en voorwaarden ](../../home.md#terms-and-conditions) in het bronoverzicht voor meer informatie bij het gebruiken van bèta-geëtiketteerde bronnen.
 
 [!DNL Capillary Technologies] is een toonaangevend platform voor loyaliteit en betrokkenheid dat door meer dan 300 merken over de hele wereld wordt vertrouwd. Gebruik de [!DNL Capillary Streaming Events] -bron om uw bedrijf in staat te stellen probleemloos klantenprofielen, loyaliteitsgegevens en transactionele gebeurtenissen van [!DNL Capillary] naar Adobe Experience Platform te streamen. Sluit de [!DNL Capillary] -bron aan om realtime personalisatie, geavanceerde publiekssegmentatie en omnichannel campagneorchestratie mogelijk te maken.
 
