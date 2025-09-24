@@ -279,7 +279,7 @@ Een succesvol antwoord retourneert HTTP-status 201 (Gemaakt) en een lading die d
 
 Het uitvoeren van een verzoek van GET aan [ lijst alle schema&#39;s ](#list) in de huurderscontainer zou nu het nieuwe schema omvatten. U kunt a [ raadpleging (GET) verzoek ](#lookup) uitvoeren gebruikend URL-Gecodeerde `$id` URI om het nieuwe schema direct te bekijken.
 
-Om extra gebieden aan een schema toe te voegen, kunt u de verrichting van a [ PATCH ](#patch) uitvoeren om gebiedsgroepen aan de 2} en `allOf` series van het schema toe te voegen.`meta:extends`
+Om extra gebieden aan een schema toe te voegen, kunt u de verrichting van a [ PATCH ](#patch) uitvoeren om gebiedsgroepen aan de 2&rbrace; en `allOf` series van het schema toe te voegen.`meta:extends`
 
 ## Een op een model gebaseerd schema maken {#create-model-based-schema}
 
@@ -291,7 +291,7 @@ Creeer een model-gebaseerd schema door een POST- verzoek aan het `/schemas` eind
 
 >[!IMPORTANT]
 >
->Stel `meta:extends` in op `"https://ns.adobe.com/xdm/data/adhoc-v2"` als u een op een model gebaseerd schema wilt maken. Dit is a **logisch gedragsherkenningsteken** (niet een fysiek gedrag of een klasse). **niet** verwijzingsklassen of gebiedsgroepen in `allOf`, en **** omvat geen klassen of gebiedsgroepen in `meta:extends`.
+>Stel `meta:extends` in op `"https://ns.adobe.com/xdm/data/adhoc-v2"` als u een op een model gebaseerd schema wilt maken. Dit is a **logisch gedragsherkenningsteken** (niet een fysiek gedrag of een klasse). **niet** verwijzingsklassen of gebiedsgroepen in `allOf`, en **&#x200B;**&#x200B;omvat geen klassen of gebiedsgroepen in `meta:extends`.
 
 Maak eerst het schema met `POST /tenant/schemas` . Dan voeg de vereiste beschrijvers met [ toe Beschrijvers API (`POST /tenant/descriptors`) ](../api/descriptors.md):
 
@@ -643,7 +643,7 @@ De reactie toont aan dat beide bewerkingen met succes zijn uitgevoerd. De veldgr
 
 ## Een schema inschakelen voor gebruik in realtime-klantprofiel {#union}
 
-Opdat een schema om aan [ in real time Profiel van de Klant ](../../profile/home.md) deel te nemen, moet u a `union` markering aan de 3} serie van het schema {toevoegen. `meta:immutableTags` U kunt dit bereiken door een PATCH-aanvraag voor het desbetreffende schema in te dienen.
+Opdat een schema om aan [ in real time Profiel van de Klant ](../../profile/home.md) deel te nemen, moet u a `union` markering aan de 3&rbrace; serie van het schema &lbrace;toevoegen. `meta:immutableTags` U kunt dit bereiken door een PATCH-aanvraag voor het desbetreffende schema in te dienen.
 
 >[!IMPORTANT]
 >
