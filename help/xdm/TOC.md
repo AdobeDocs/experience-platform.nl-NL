@@ -5,9 +5,9 @@ breadcrumb-title: Handleiding voor Experience Data Model (XDM)
 user-guide-description: Verken een overzicht van het systeem van Experience Data Model (XDM) binnen het Experience Platform en leer hoe u klassen en schemaveldgroepen kunt gebruiken om ervaringsgegevens te standaardiseren.
 feature: Schemas
 role: Developer
-source-git-commit: 1385f91694f9b6dfe96b9d424af0da6f2a1443c2
+source-git-commit: f6e63f3fe390c1e47347015e873282719508a0ec
 workflow-type: tm+mt
-source-wordcount: '702'
+source-wordcount: '707'
 ht-degree: 9%
 
 ---
@@ -21,6 +21,7 @@ ht-degree: 9%
    * [Aanbevolen procedures voor gegevensmodellering](schema/best-practices.md)
    * [Gevoelige en persoonlijke gegevens](./schema/sensitive-and-personal-data.md)
    * [Beperkingen voor XDM-veldtypen](schema/field-constraints.md)
+   * [Model-schema](./schema/model-based.md)
    * [Naamruimte in XDM](./schema/namespaces.md)
    * Industriële gegevensmodellen {#industries}
       * [Overzicht](./schema/industries/overview.md)
@@ -73,6 +74,8 @@ ht-degree: 9%
          * [Timing](./schema/healthcare/data-types/timing.md)
          * [Virtuele service](./schema/healthcare/data-types/virtual-service-detail.md)
    * [XDM-veldwoordenboek](schema/field-dictionary.md)
+* Data Mirror {#data-mirror}
+   * [Overzicht](./data-mirror/overview.md)
 * Klassen {#classes}
    * [Afzonderlijk XDM-profiel](./classes/individual-profile.md)
    * [XDM ExperienceEvent](./classes/experienceevent.md)
@@ -285,4 +288,4 @@ ht-degree: 9%
    * [Een ad-hocschema maken](tutorials/ad-hoc.md)
 * [Handleiding voor probleemoplossing](troubleshooting-guide.md)
 * [ API verwijzing ](https://www.adobe.io/experience-platform-apis/references/schema-registry/)
-* [Releaseopmerkingen bij Experience Platform](https://experienceleague.adobe.com/nl/docs/experience-platform/release-notes/latest)
+* [Releaseopmerkingen bij Experience Platform](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)

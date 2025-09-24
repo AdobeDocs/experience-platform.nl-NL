@@ -1,0 +1,153 @@
+---
+keywords: Experience Platform;data mirror;model-based schema;relationeel schema;change data capture;database sync;primary key;relationship
+solution: Experience Platform
+title: Data Mirror-overzicht
+description: Leer hoe Data Mirror veranderingsopname op rijniveau van externe gegevensbestanden in Adobe Experience Platform gebruikend model-gebaseerde schema's met gedwongen uniciteit, verhoudingen, en versioning toelaat.
+badge: Beperkte beschikbaarheid
+source-git-commit: 6ce214073f625a253fcc5bb14dfdb6a4a61e6e7b
+workflow-type: tm+mt
+source-wordcount: '1355'
+ht-degree: 0%
+
+---
+
+# Data Mirror-overzicht
+
+>[!AVAILABILITY]
+>
+>Data Mirror en op model-gebaseerde schema&#39;s zijn beschikbaar aan Adobe Journey Optimizer **Geordende campagnes** vergunninghouders. Zij zijn ook beschikbaar als a **beperkte versie** voor de gebruikers van Customer Journey Analytics, afhankelijk van uw vergunning en eigenschapenactivering. Neem contact op met uw Adobe-vertegenwoordiger voor toegang.
+
+Data Mirror is een vermogen van Adobe Experience Platform dat rij-vlakke veranderingsopname van externe gegevensbestanden in het gegevenshoek gebruikend model-gebaseerde schema&#39;s toelaat. Het bewaart gegevensverhoudingen, dwingt uniciteit af, en steunt versioning zonder upstream extractie, transformatie, lading (ETL) processen te vereisen.
+
+Met Data Mirror kunt u invoegen, bijwerken en verwijderen (muteerbare gegevens) van externe systemen zoals [!DNL Snowflake] , [!DNL Databricks] of [!DNL BigQuery] rechtstreeks in Experience Platform. Hierdoor kunt u de bestaande structuur en gegevensintegriteit van het databasemodel behouden wanneer u gegevens naar het platform overbrengt.
+
+## Capaciteiten en voordelen
+
+Data Mirror biedt de volgende essentiële mogelijkheden voor databasesynchronisatie:
+
+* **Primaire zeer belangrijke handhaving**: Zorgt voor uniciteit binnen datasets en verhindert dubbele verslagen tijdens opname.
+* **row-vlakke veranderingsopname**: Steunt korrelige gegevensveranderingen met inbegrip van upserts en schrapt met nauwkeurige controle.
+* **verhoudingen van het Schema**: Laat buitenlandse en primaire zeer belangrijke verhoudingen tussen datasets door beschrijvers toe.
+* **uit-van-orde gebeurtenis behandeling**: Verwerkt veranderingsgebeurtenissen gebruikend versie en timestamp beschrijvers, zelfs wanneer zij uit opeenvolging aankomen.
+* **Directe pakhuis integratie**: Verbindt met gesteunde de pakhuizen van wolkengegevens voor dichtbij synchronisatie van de verandering in real time.
+
+Gebruik Data Mirror om wijzigingen rechtstreeks van uw bronsystemen in te voeren, de schemacontegriteit af te dwingen en de gegevens beschikbaar te stellen voor analyses, reisorchestratie en compatibiliteitsworkflows. Data Mirror elimineert complexe stroomopwaartse processen ETL en versnelt implementatie door direct het weerspiegelen van bestaande gegevensbestandmodellen toe te laten.
+
+Plan voor schrapping en gegevenshygiënevereisten wanneer het uitvoeren van modelregelingen met Data Mirror. Alle toepassingen moeten in overweging nemen hoe schrappingen verwante datasets, nalevingswerkschema&#39;s, en stroomafwaartse processen vóór plaatsing beïnvloeden.
+
+## Vereisten {#prerequisites}
+
+Voordat u aan de slag gaat, moet u de volgende onderdelen van Experience Platform begrijpen en controleren of uw omgeving voldoet aan de technische en structurele vereisten:
+
+* [ creeer schema&#39;s in Experience Platform UI ](../ui/resources/schemas.md) of [ API ](../api/schemas.md)
+* [Cloubron-verbindingen configureren](../../sources/home.md#cloud-storage)
+* [ pas veranderingsgegevens toe vangen concepten ](../../sources/tutorials/api/change-data-capture.md) (upserts, schrapt)
+* Distinguish tussen [ standaard ](../schema/composition.md) en [ model-gebaseerde schema&#39;s ](../schema/model-based.md)
+* [Structurele relaties definiëren met descriptors](../api/descriptors.md)
+
+### Implementatievereisten
+
+Uw Platform-exemplaar en brongegevens moeten voldoen aan specifieke vereisten voor een correcte werking van Data Mirror. Data Mirror vereist **model-gebaseerde schema&#39;s**, die flexibele gegevensstructuren met gedwongen beperkingen zijn. Data Mirror werkt momenteel voornamelijk met modelgebaseerde schema&#39;s, hoewel integratie met standaard XDM-schema&#39;s wordt ondersteund door de volgende mogelijkheden voor aangepaste B2B-objecten (gepland voor oktober 2025).
+
+Omvat a **primaire sleutel en versiedescriptor** in alle schema&#39;s. Als u met een tijd-reeks schema werkt, wordt a **timestamp beschrijver** ook vereist.
+
+Uw externe database moet ondersteuning bieden voor het vastleggen van wijzigingsgegevens of voor metagegevens die invoegen, bijwerken en verwijderen identificeren. De gegevens van Source moeten **unieke herkenningstekens** omvatten, of één enkel gebied of een samengestelde primaire sleutel en **versieinformatie** zodat kan het systeem updates in de correcte orde toepassen.
+
+Om schrappingen te ontdekken, voeg een `_change_request_type` kolom toe die specificeert of elke verslag een upsert of een schrapping is.
+
+## Data Mirror implementeren {#implementation-workflow}
+
+In tegenstelling tot de standaardbenaderingen van de opname, behoudt Data Mirror de structuur van uw databasemodel binnen het Experience Platform-datumpomeer. Door deze consistentie in de gegevensstructuur is een externe voorbehandeling overbodig. Hieronder volgt een workflow voor Data Mirror-implementatie op hoog niveau. Kies de implementatiemethode op basis van de workflow en het bronsysteem van uw team.
+
+### De schemastructuur definiëren
+
+Creeer [ model-gebaseerde schema&#39;s ](../schema/model-based.md) met vereiste beschrijvers (meta-gegevens die schemagedrag en beperkingen bepalen). Kies een methode die in de workflow van uw team past, via de gebruikersinterface of rechtstreeks via de API.
+
+* **benadering UI**: [ creeer model-gebaseerde schema&#39;s in de Redacteur van het Schema ](../ui/resources/schemas.md#create-model-based-schema)
+* **API benadering**: [ creeer schema&#39;s via de Registratie API van het Schema ](../api/schemas.md#create-model-based-schema)
+
+### Relaties toewijzen en gegevensbeheer definiëren
+
+Bepaal verbindingen tussen datasets gebruikend relatiebeschrijvers. Relaties beheren en de gegevenskwaliteit in verschillende gegevenssets behouden. Deze taken zorgen voor consistente verbindingen en ondersteunen de naleving van de gegevenshygiënevoorschriften.
+
+* **relaties van het Schema**: [ bepalen verband tussen datasets gebruikend beschrijvers ](../api/descriptors.md)
+* **hygiëne van het Verslag**: [ beheer precisierecord schrapt ](../../hygiene/ui/record-delete.md#model-based-record-delete)
+
+### De bronverbinding configureren
+
+Selecteer een innamemethode op basis van uw bronsysteem en gebruikscase. Elke optie ondersteunt verschillende niveaus van automatisering, transformatie en schaalbaarheid.
+
+* [**Wolkenbronverbindingen configureren**](../../sources/home.md#cloud-storage)
+* **SQL-opname**: Gebruik Data Distiller om in relationele datasets te schrijven
+* [**uploadt het Dossier**](../ui/resources/schemas.md#upload-ddl-file): Upload manueel dossiers voor partij of eenmalig ingebed
+
+### Inname van vastleggen van gegevens wijzigen inschakelen
+
+Verbindingen voor het vastleggen van wijzigingsgegevens instellen met ondersteunde wolkengegevenspakhuizen. Breng veranderingen op rijniveau met behoud van uniciteit voor en pas updates in de correcte orde toe.
+
+* **Gegevens van de Verandering vangen**: [ laat veranderingsgegevens toe vangen in bronverbindingen ](../../sources/tutorials/api/change-data-capture.md)
+
+## Vaak voorkomende gebruiksscenario&#39;s {#use-cases}
+
+Bekijk hieronder de veelvoorkomende gebruiksgevallen waarin Data Mirror nauwkeurige gegevenssynchronisatie en relatiebehoud ondersteunt. Elk scenario toont hoe Data Mirror gemeenschappelijke bedrijfsbehoeften over analyses, orchestratie, en naleving steunt.
+
+### Relationele gegevensmodellering
+
+Het gebruik [ model-gebaseerde schema&#39;s ](../schema/model-based.md) (ook genoemd relationele schema&#39;s) in Data Mirror om entiteiten te vertegenwoordigen, procestussenvoegsels, updates, en schrapt op het rijniveau, en handhaaft de primaire en buitenlandse zeer belangrijke verhoudingen die in uw gegevensbronnen bestaan. Deze benadering brengt de beginselen van relationele gegevensmodellering naar Experience Platform en zorgt voor structurele consistentie tussen gegevensreeksen.
+
+### Synchronisatie van aardehuis naar meer
+
+De gebeurtenisgegevens van de spiegel, de logboeken van de klanteninteractie, campagnegebeurtenissen, en hulpgegevens van gesteunde de pakhuizen van wolkengegevens in Experience Platform. Dit steunt campagnegeschiktheid, richtend precisie, en berichtopeenvolging. Journey Optimizer en Real-Time CDP B2B baseren zich op dit voor bijna-real-time orchestratielogica.
+
+### Customer Journey Analytics-integratie
+
+Synchroniseer tijdreeksgebeurtenissen zoals Web klikt, productmeningen, aankopen, en steuninteractie van systemen zoals vraagcentra of praatjelogboeken. Een volledige veranderingsgeschiedenis steunt nauwkeurige trendanalyse en gedragssegmentatie. Experience Platform Data Mirror for Customer Journey Analytics gebruikt dit om updates en verwijderingen van bronsystemen te weerspiegelen.
+
+### B2B-relatiemodellen
+
+Relaties zoals account-aan-contact, abonnement-aan-rekening, of contact-aan-regio hiërarchieën behouden. Deze steunen segmentatie, lood scoring, kansen volgen, en multichannel coördinatie. In tegenstelling tot standaardopname die relaties afvlakt, handhaaft Data Mirror deze native met behulp van beschrijvingen voor nauwkeuriger modellering.
+
+### Abonnementsbeheer
+
+Gebeurtenissen bijhouden zoals vernieuwingen, annuleringen, upgrades, downgrades en wijzigingen in het plan met de volledige versiegeschiedenis. Dit steunt behoudcampagnes, kinnevoorspelling, en levenscyclusgebaseerde segmentatie. De volledige geschiedenis laat gedragsinzichten en nauwkeurige het richten toe.
+
+### Gegevenshygiëne
+
+Met de gegevensvastlegging voor wijzigingen kunt u nauwkeurige verwijderingen op recordniveau mogelijk maken voor naleving (bijv. gereglementeerde industrieën) en werkstromen opschonen. Data Mirror past schrappingen correct toe terwijl het bewaren van verwante gegevens over verbonden datasets.
+
+## Belangrijke overwegingen {#considerations}
+
+Herzie deze zeer belangrijke overwegingen om uw implementatie te verzekeren richt zich op gesteund schemagedrag, insluitingsmethodes, en relatiepatronen. Een goede planning helpt integratieproblemen te voorkomen en zorgt voor een nauwkeurige modellering van gegevens.
+
+### Gegevensverwijdering en hygiënevoorschriften
+
+Alle toepassingen die model-gebaseerde schema&#39;s en Data Mirror gebruiken moeten de implicaties van de gegevensschrapping begrijpen. Op modellen gebaseerde schema&#39;s maken nauwkeurige verwijderingen op recordniveau mogelijk die van invloed zijn op gerelateerde gegevens over verbonden gegevenssets. Deze verwijderingsmogelijkheden zijn van invloed op gegevensintegriteit, compatibiliteit en gedrag van downstreamtoepassingen, ongeacht uw specifieke gebruiksscenario. Herzie [ vereisten van de gegevenshygiëne ](../../hygiene/ui/record-delete.md#model-based-record-delete) en plan voor schrappingsscenario&#39;s vóór implementatie.
+
+### Selectie van schemagedrag
+
+Model-gebaseerde schema&#39;s gebrek aan **verslaggedrag**, dat entiteitstaat (klanten, rekeningen, enz.) vangt. Als u **tijd-reeksen gedrag** voor gebeurtenis het volgen nodig hebt, moet u het uitdrukkelijk vormen.
+
+### Vergelijking van de inscriptiemethode
+
+Gebruik deze vergelijkingstabel om de beste innamemethode voor uw gegevensbehoeften te kiezen, of u synchronisatie in real time, op SQL-Gebaseerde transformatie, of handmatige dossieruploads vereist.
+
+| Inktmethode | Gebruiksscenario |
+| ----------------------- | -------------------------------------------------------------- |
+| **gegevens van de Verandering vangen** | Synchronisatie in realtime van ondersteunde wolkenpakhuizen |
+| **Gegevens Distiller** | Workflows voor opname en transformatie op basis van SQL |
+| **uploadt het Dossier** | Batch/handmatige opname wanneer bronintegratie niet beschikbaar is |
+
+### Relatiebeperkingen
+
+Data Mirror steunt **één-aan-één** en **vele-aan-één** verhoudingen gebruikend beschrijvers. **vele-aan-vele** verhoudingen vereisen extra modellering en niet direct gesteund.
+
+## Volgende stappen
+
+Na het bekijken van dit overzicht, zou u moeten kunnen bepalen als Data Mirror uw gebruiksgeval past en de vereisten voor implementatie begrijpen. Aan de slag:
+
+1. **de architecten van Gegevens** zouden uw gegevensmodel moeten beoordelen om het primaire sleutels te verzekeren, versioning, en veranderingsvolgende mogelijkheden.
+2. **Bedrijfs belanghebbenden** zouden uw vergunning model-gebaseerde schemasteun en vereiste uitgaven van Experience Platform moeten bevestigen.
+3. **de ontwerpers van het Schema** zouden uw schemastructuur moeten plannen om vereiste beschrijvers, gebiedsverhoudingen, en de behoeften van het gegevensbeheer te identificeren.
+4. **de teams van de Implementatie** zouden een innamemethode moeten kiezen die op uw bronsystemen, vereisten in real time, en operationele werkschema&#39;s wordt gebaseerd.
+
+Voor implementatiedetails, zie de [ model-gebaseerde schemadocumentatie ](../schema/model-based.md).

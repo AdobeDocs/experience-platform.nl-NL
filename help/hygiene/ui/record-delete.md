@@ -2,9 +2,9 @@
 title: Verzoeken om verwijdering opnemen (gebruikersinterface-workflow)
 description: Leer hoe u records verwijdert in de gebruikersinterface van Adobe Experience Platform.
 exl-id: 5303905a-9005-483e-9980-f23b3b11b1d9
-source-git-commit: 9ee5225c7494c28023c26181dfe626780133bb5d
+source-git-commit: a25187339a930f7feab4a1e0059bc9ac09f1a707
 workflow-type: tm+mt
-source-wordcount: '1781'
+source-wordcount: '2353'
 ht-degree: 0%
 
 ---
@@ -204,6 +204,69 @@ Nadat de aanvraag is verzonden, wordt een werkorder gemaakt en wordt deze weerge
 >Verwijs naar de overzichtssectie op [ chronologie en transparantie ](../home.md#record-delete-transparency) voor details op hoe het verslag schrapt wordt verwerkt zodra zij worden uitgevoerd.
 
 ![ het [!UICONTROL Record] lusje van de [!UICONTROL Data Lifecycle] werkruimte met het nieuwe benadrukte verzoek.](../images/ui/record-delete/request-log.png)
+
+## Gegevens verwijderen uit op modellen gebaseerde gegevenssets {#model-based-record-delete}
+
+Als de dataset u uit een model-gebaseerd schema schrapt, herzie de volgende overwegingen om ervoor te zorgen de verslagen correct worden verwijderd en niet opnieuw worden opgenomen wegens wanverhoudingen tussen Experience Platform en uw bronsysteem.
+
+### gedrag voor verwijderen van records
+
+In de volgende tabel wordt beschreven hoe recordverwijderingen zich gedragen in Experience Platform en bronsystemen, afhankelijk van de innamemethode en de configuratie voor het vastleggen van gegevens.
+
+| Verhouding | Gedrag |
+|---------------------|--------------------------------------------------------------------------|
+| Platformverwijdering | Records worden verwijderd uit de dataset en het data-meer van Experience Platform. |
+| Bewaartermijn Source | De verslagen blijven in het bronsysteem tenzij uitdrukkelijk geschrapt daar. |
+| Volledige vernieuwingsinvloed | Als u volledig vernieuwt gebruikt, kunnen verwijderde records opnieuw worden ingepakt, tenzij ze uit de bron zijn verwijderd of uitgesloten. |
+| Gedrag voor gegevensvastlegging wijzigen | Records die zijn gemarkeerd met `_change_request_type = 'd'` , worden tijdens de opname verwijderd. U kunt records zonder vlag opnieuw invoegen. |
+
+Als u wilt voorkomen dat bestanden opnieuw worden ingevoerd, past u dezelfde verwijderingsmethode toe in zowel uw bronsysteem als Experience Platform, door records van beide systemen te verwijderen of door `_change_request_type = 'd'` op te nemen voor records die u wilt verwijderen.
+
+### Kolommen voor vastleggen en besturen van gegevens wijzigen
+
+Op modellen gebaseerde schema&#39;s die Bronnen gebruiken met de vangst van veranderingsgegevens kunnen de `_change_request_type` controlekolom gebruiken wanneer het onderscheiden schrapt van upserts. Tijdens opname worden records die zijn gemarkeerd met `d` verwijderd uit de gegevensset, terwijl records die zijn gemarkeerd met `u` of zonder kolom, worden behandeld als invoegtoepassingen. De kolom `_change_request_type` wordt alleen gelezen bij invoer en wordt niet opgeslagen in het doelschema of toegewezen aan XDM-velden.
+
+>[!NOTE]
+>
+>Het verwijderen van records via de interface van de gegevenslevenscyclus heeft geen invloed op het bronsysteem. Als u gegevens van beide locaties wilt verwijderen, verwijdert u deze zowel in Experience Platform als in de bron.
+
+### Aanvullende verwijderingsmethoden voor op modellen gebaseerde schema&#39;s
+
+Naast de standaard werkstroom voor het verwijderen van records ondersteunen modelschema&#39;s aanvullende methoden voor specifieke gebruiksgevallen:
+
+* **Veilige-exemplaardatasetbenadering**: Dupliceer de productieset en pas schrappingen op het exemplaar voor gecontroleerd testen of verzoening toe alvorens veranderingen op productiegegevens toe te passen.
+* **schrapt-slechts partijupload**: Upload een dossier dat slechts schrappingsverrichtingen voor gerichte hygiëne bevat wanneer u specifieke verslagen moet verwijderen zonder andere gegevens te beïnvloeden.
+
+### Beschrijvende steun voor hygiënische activiteiten {#descriptor-support}
+
+Modelgebaseerde schemabeschrijvingen bieden essentiële metagegevens voor nauwkeurige hygiënebewerkingen:
+
+* **Primaire zeer belangrijke beschrijver**: Identificeert verslagen uniek voor gerichte updates of schrapt, die ervoor zorgen dat de correcte verslagen worden beïnvloed.
+* **beschrijver van de Versie**: Verzekert schrapt en de updates zijn van toepassing in de correcte chronologische orde, die uit-van-opeenvolgingsverrichtingen verhinderen.
+* **de beschrijver van de tijdstempel (tijd-reeksen schema&#39;s)**: Lijnt schrapt verrichtingen met de tijden van gebeurtenisvoorkomen eerder dan ingangstijden uit.
+
+>[!NOTE]
+>
+>Hygiëne-processen werken op het niveau van de gegevensset. Voor voor profielen geschikte datasets, kunnen de extra profielwerkschema&#39;s worden vereist om consistentie over het profiel van de Klant in real time te handhaven.
+
+### Gepland behoud voor op model-gebaseerde schema&#39;s
+
+Voor geautomatiseerde hygiëne die op gegevensleeftijd eerder dan specifieke identiteiten wordt gebaseerd, zie [ het behoud van de dataset van de Gebeurtenis van de Ervaring beheren (TTL) ](../../catalog/datasets/experience-event-dataset-retention-ttl-guide.md) voor geplande rij-vlakke behoud in het gegevensmeer.
+
+>[!NOTE]
+>
+>Vervaldatum op rijniveau wordt alleen ondersteund voor gegevenssets die het gedrag van tijdreeksen gebruiken.
+
+### Tips en trucs voor op modellen gebaseerde verwijdering van records
+
+Om onbedoelde heropname te voorkomen en de consistentie van de gegevens in de verschillende systemen te handhaven, volgt u de volgende aanbevolen procedures:
+
+* **Coördinaat schrappingen**: Lijn verslagschrappingen met uw configuratie van de vangst van veranderingsgegevens en brongegevensbeheerstrategie uit.
+* **de veranderingsgegevens van de Monitor vangen stromen**: Na het schrappen van verslagen in Platform, controleert dataflows en bevestigt dat het bronsysteem of de zelfde verslagen verwijdert of hen met `_change_request_type = 'd'` omvat.
+* **Schoon de bron** op: Voor bronnen die volledig gebruiken verfrist opname of die die niet steunen schrapt door veranderingsgegevens vangen, schrapt direct verslagen van het bronsysteem om re-ingestie te vermijden.
+
+Voor meer details op schemavereisten, zie [ op model-gebaseerde vereisten van de schemabeschrijver ](../../xdm/schema/model-based.md#model-based-schemas).\
+Leren hoe de veranderingsgegevens werken met bronnen vangen, zie [ veranderingsgegevens toelaten vangen in bronnen ](../../sources/tutorials/api/change-data-capture.md#using-change-data-capture-with-model-based-schemas).
 
 ## Volgende stappen
 

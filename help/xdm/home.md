@@ -4,9 +4,9 @@ solution: Experience Platform
 title: XDM-systeemoverzicht
 description: Standaardisering en interoperabiliteit zijn de belangrijkste concepten achter Adobe Experience Platform. Het Model van Gegevens van de ervaring (XDM), dat door Adobe wordt gedreven, is een inspanning om de gegevens van de klantenervaring te standaardiseren en schema's voor het beheer van de klantenervaring te bepalen.
 exl-id: 294d5f02-850f-47ea-9333-8b94a0bb291e
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 7527732c91e55f6ffaefbf98c37a2c4aad3aa3b9
 workflow-type: tm+mt
-source-wordcount: '2095'
+source-wordcount: '2411'
 ht-degree: 0%
 
 ---
@@ -105,7 +105,41 @@ Om met het opnemen van gegevens in Experience Platform te beginnen, kunt u de Di
 
 Zie het [ overzicht van de Dienst van de Catalogus ](../catalog/home.md) voor meer informatie. Zie het [ overzicht van de Ingestie van Gegevens ](../ingestion/home.md) voor meer informatie over de Ingestie van Gegevens van Adobe Experience Platform.
 
-### Query-service {#query-service}
+### Data Mirror en op modellen gebaseerde schema&#39;s {#model-based-schemas}
+
+>[!AVAILABILITY]
+>
+>Data Mirror en op model-gebaseerde schema&#39;s zijn beschikbaar aan Adobe Journey Optimizer **Geordende campagnes** vergunninghouders. Zij zijn ook beschikbaar als a **beperkte versie** voor de gebruikers van Customer Journey Analytics, afhankelijk van uw vergunning en eigenschapenactivering. Neem contact op met uw Adobe-vertegenwoordiger voor toegang.
+
+Data Mirror is een Adobe Experience Platform-mogelijkheid die geavanceerde databasesynchronisatie mogelijk maakt met behulp van modelgebaseerde schema&#39;s. Voor een volledig overzicht van de mogelijkheden en gebruiksgevallen van Data Mirror, zie het [ overzicht van Data Mirror ](./data-mirror/overview.md).
+
+Data Mirror werkt via modelgebaseerde schema&#39;s, die zijn ontworpen voor gestructureerde, relationele gegevenspatronen. Zij dwingen primaire sleutels af, steunen versie herkenningstekens, en bepalen schema-aan-schema verhoudingen gebruikend primaire en buitenlandse sleutels. In tegenstelling tot standaard XDM-schema&#39;s, vereisen ze geen klassen of veldgroepen en zijn ze geoptimaliseerd voor workflows voor het vastleggen van gewijzigde gegevens.
+
+Voor details op hoe te om schema-aan-schema verhoudingen te bepalen, zie de [ documentatie van het beschrijvingseindpunt ](./api/descriptors.md).
+
+Gebruik Data Mirror wanneer u het volgende moet doen:
+
+* Gegevenswijzigingen synchroniseren vanaf externe systemen zoals Snowflake, Databricks of BigQuery
+* De relaties van de database behouden en gegevensintegriteit tijdens de invoer afdwingen
+* Geavanceerde analyses en reisorkest ondersteunen
+* Exacte wijzigingen bijhouden inschakelen met updates en verwijderen
+
+Als u een op een model gebaseerd schema wilt maken, selecteert u **[!UICONTROL model-based]** bij het maken van een schema. Op modellen gebaseerde schema&#39;s gebruiken geen klassen of veldgroepen. In plaats daarvan definieert u de structuur handmatig of uploadt u een DDL-bestand. Op modellen gebaseerde schema&#39;s vereisen een primaire sleutel, versie-id en, indien van toepassing, velden met tijdstempelidentificatie. U kunt extra gebieden dan vormen en verhoudingen met andere schema&#39;s bepalen.
+
+>[!NOTE]
+>
+>De controlecolommen die tijdens inname (zoals `_change_request_type` voor de werkschema&#39;s van de veranderingsgegevensvangst) worden gebruikt worden gelezen bij inname tijd en worden niet opgeslagen in het schema of in kaart gebracht aan gebieden XDM. Relationele schema&#39;s zijn beschikbaar met de juiste Experience Platform-rechten en functionaliteit.
+
+Zie voor gedetailleerde stappen en gebruiksaanwijzingen:
+
+* [ overzicht van Data Mirror ](./data-mirror/overview.md) - Mogelijkheden, gebruiksgevallen, en implementatie planning
+* [ Model-Gebaseerd schema technische verwijzing ](./schema/model-based.md) - Technische specificaties en beperkingen
+* [UI-zelfstudie](./ui/resources/schemas.md#create-model-based-schema)
+* [API-zelfstudie](./api/schemas.md#create-model-based-schema)
+* [Documentatie beschrijver (id)](./api/descriptors.md#relationship-descriptor)
+* [Vastleggen van wijzigingsgegevens inschakelen](../sources/tutorials/api/change-data-capture.md)
+
+### Queryservice {#query-service}
 
 U kunt standaard SQL gebruiken om Experience Platform-gegevens te vragen ter ondersteuning van vele verschillende gebruiksgevallen met Adobe Experience Platform Query Service.
 
@@ -113,7 +147,7 @@ Nadat een schema is samengesteld en een dataset is gecreeerd die verwijzingen da
 
 Verwijs naar het [ overzicht van de Dienst van de Vraag ](../query-service/home.md) voor meer informatie over de dienst.
 
-### Realtime-klantenprofiel {#real-time-customer-profile}
+### Real-Time Customer Profile {#real-time-customer-profile}
 
 Het profiel van de Klant in real time verstrekt een gecentraliseerd consumentenprofiel voor gericht en gepersonaliseerd ervaringsbeheer. Elk profiel bevat gegevens die op alle systemen zijn geaggregeerd en actioneerbare tijdstempelaccounts bevatten van gebeurtenissen die het onderwerp van het profiel betreffen. Deze gebeurtenissen kunnen hebben plaatsgevonden in elk systeem dat u gebruikt met Experience Platform.
 

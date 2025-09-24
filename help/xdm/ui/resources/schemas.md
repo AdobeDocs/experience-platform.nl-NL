@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Schema's maken en bewerken in de gebruikersinterface
 description: Leer de basisbeginselen van het maken en bewerken van schema's in de Experience Platform-gebruikersinterface.
 exl-id: be83ce96-65b5-4a4a-8834-16f7ef9ec7d1
-source-git-commit: 0b03a8873f828faef78e5bf0b66c9773fc693206
+source-git-commit: 974faad835b5dc2a4d47249bb672573dfb4d54bd
 workflow-type: tm+mt
-source-wordcount: '4001'
+source-wordcount: '4635'
 ht-degree: 0%
 
 ---
@@ -27,19 +27,100 @@ Deze handleiding vereist een goed begrip van XDM System. Verwijs naar het [ XDM 
 
 ## Een nieuw schema maken {#create}
 
+Selecteer in de werkruimte [!UICONTROL Schemas] de optie **[!UICONTROL Create schema]** in de rechterbovenhoek. Het vervolgkeuzemenu &#39;Schema-type selecteren&#39; wordt weergegeven met opties voor [!UICONTROL Standard] - of [!UICONTROL Model-based] -schema&#39;s.
+
+![ de werkruimte van Schema&#39;s met [!UICONTROL Create Schema] benadrukte en &quot;Uitgezochte schematype&quot;dropdown getoond ](../../images/ui/resources/schemas/create-schema.png).
+
+## Een op een model gebaseerd schema maken {#create-model-based-schema}
+
+>[!AVAILABILITY]
+>
+>Data Mirror en op model-gebaseerde schema&#39;s zijn beschikbaar aan Adobe Journey Optimizer **Geordende campagnes** vergunninghouders. Zij zijn ook beschikbaar als a **beperkte versie** voor de gebruikers van Customer Journey Analytics, afhankelijk van uw vergunning en eigenschapenactivering. Neem contact op met uw Adobe-vertegenwoordiger voor toegang.
+
+Selecteer **[!UICONTROL Model-based]** om gestructureerde, modelgebaseerde schema&#39;s met fijnkorrelige controle over verslagen te bepalen. Model-gebaseerde schema&#39;s steunen primaire zeer belangrijke handhaving, verslag-vlakke versioning, en schema-vlakke verhoudingen door primaire en buitenlandse sleutels. Ze zijn ook geoptimaliseerd voor incrementele inname met behulp van gegevensvastlegging voor wijzigingen en ondersteunen meerdere gegevensmodellen die worden gebruikt in Campagneorganisatie, Data Distiller en B2B-implementaties.
+
+Meer leren, zie [ Data Mirror ](../../data-mirror/overview.md) of [ op model-gebaseerd schema ](../../schema/model-based.md) overzicht.
+
+### Handmatig maken {#create-manually}
+
+>[!AVAILABILITY]
+>
+>Het uploaden van DDL-bestanden is alleen beschikbaar voor houders van een Adobe Journey Optimizer Orchestrated-campagnelicentie. De gebruikersinterface kan er anders uitzien.
+
+Het dialoogvenster **[!UICONTROL Create a model-based schema]** wordt weergegeven. U kunt **[!UICONTROL Create manually]** of [**[!UICONTROL Upload DDL file]**](#upload-ddl-file) kiezen om de schemastructuur te definiëren.
+
+Selecteer **[!UICONTROL Create a model-based schema]** in het dialoogvenster **[!UICONTROL Create manually]** en selecteer vervolgens **[!UICONTROL Next]** .
+
+![ creeer een op model-gebaseerd schemadialoog met Create manueel geselecteerd en daarna benadrukt.](../../images/ui/resources/schemas/relational-dialog.png)
+
+De pagina **[!UICONTROL Model-based schema details]** wordt weergegeven. Voer een weergavenaam en een optionele beschrijving in en selecteer vervolgens **[!UICONTROL Finish]** om het schema te maken.
+
+![ de model-Gebaseerde mening van schemadetails met [!UICONTROL Schema display name], [!UICONTROL Description], en [!UICONTROL Finish] benadrukt.](../../images/ui/resources/schemas/relational-details.png)
+
+De Schema-editor wordt geopend met een leeg canvas voor het definiëren van de schemastructuur. U kunt velden op de gebruikelijke manier toevoegen.
+
+#### Veld voor versie-id toevoegen {#add-version-identifier}
+
+Als u het bijhouden van versies en het vastleggen van wijzigingsgegevens wilt inschakelen, moet u een veld voor de versie-id in uw schema opgeven. In de Redacteur van het Schema, selecteer plus (![ A plus pictogram.](/help/images/icons/plus.png) ) naast de schemanaam om een nieuw gebied toe te voegen.
+
+Voer een veldnaam in, bijvoorbeeld `updateSequence` , en kies een gegevenstype **[!UICONTROL DateTime]** of **[!UICONTROL Number]** .
+
+Schakel in de rechtertrack het selectievakje **[!UICONTROL Version Identifier]** in en selecteer **[!UICONTROL Apply]** om het veld te bevestigen.
+
+![ de Redacteur van het Schema met een genoemd gebied DateTime `updateSequence` toegevoegd en geselecteerde checkbox van het Herkenningsteken van de Versie.](../../images/ui/resources/schemas/add-version-identifier.png)
+
+>[!IMPORTANT]
+>
+>Een model-gebaseerd schema moet een gebied van versie herkenningsteken omvatten om op verslagniveau updates te steunen en gegeven te veranderen vangt ingestie.
+
+Als u relaties wilt definiëren, selecteert u **[!UICONTROL Add Relationship]** in de Schema-editor om relaties op schemaniveau met primaire/externe sleutels te maken. Zie het leerprogramma op [ toevoegend schema-vlakke verhoudingen ](../../tutorials/relationship-ui.md#relationship-field) voor meer informatie.
+
+Daarna, ga aan [ te werk bepalen primaire sleutels ](../fields/identity.md#define-a-identity-field), en [ voeg extra gebieden ](#add-field-groups) toe zoals nodig. Voor begeleiding op hoe te om veranderingsgegevens toe te laten vangen in de Bronnen van Experience Platform, zie de [ gids van de de vangst van veranderingsgegevens vangen ](../../../sources/tutorials/api/change-data-capture.md).
+
 >[!NOTE]
 >
->In deze sectie wordt beschreven hoe u handmatig een nieuw schema maakt in de gebruikersinterface. Als u CSV gegevens in Experience Platform opneemt, kunt u het Leren van de Machine (ML) algoritmen gebruiken aan **een schema van steekproefCSV gegevens** produceren. Deze workflow komt overeen met uw gegevensindeling en maakt automatisch een nieuw schema op basis van de structuur en inhoud van uw CSV-bestand. Zie de [ ML-Begeleidde van de schemaverwezenlijking ](../ml-assisted-schema-creation.md) voor meer informatie over dit werkschema.
+>Nadat het [!UICONTROL Type] -veld in de [!UICONTROL  Schema properties] -zijbalk is opgeslagen, geeft dit aan dat het een [!UICONTROL Model-based] -schema is. Dit wordt ook vermeld in de detailszijbalk in de mening van de schemainventaris.
+>>![Het canvas van de Redacteur van het Schema die een lege op model-gebaseerde schemastructuur tonen met op model-Gebaseerd benadrukt type.](../../images/ui/resources/schemas/relational-empty-canvas.png)
 
-Selecteer in de werkruimte [!UICONTROL Schemas] de optie **[!UICONTROL Create schema]** in de rechterbovenhoek.
+### Een DDL-bestand uploaden {#upload-ddl-file}
 
-![ de werkruimte van Schema&#39;s met [!UICONTROL Create Schema] benadrukte.](../../images/ui/resources/schemas/create-schema.png)
+>[!AVAILABILITY]
+>
+>Het uploaden van DDL-bestanden is alleen beschikbaar voor houders van een Adobe Journey Optimizer Orchestrated-campagnelicentie.
 
-Het dialoogvenster [!UICONTROL Create a schema] wordt weergegeven. In dit dialoogvenster kunt u kiezen of u handmatig een schema wilt maken door velden en veldgroepen toe te voegen, of u kunt een CSV-bestand uploaden en XML-algoritmen gebruiken om een schema te genereren. Selecteer een workflow voor het maken van een schema in het dialoogvenster.
+Gebruik deze workflow om het schema te definiëren door een DDL-bestand te uploaden. Selecteer **[!UICONTROL Create a model-based schema]** in het dialoogvenster **[!UICONTROL Upload DDL file]** en sleep vervolgens een lokaal DDL-bestand van uw systeem of selecteer **[!UICONTROL Choose files]** . Experience Platform valideert het schema en geeft een groen vinkje weer als het uploaden van het bestand is gelukt. Selecteer **[!UICONTROL Next]** om het uploaden te bevestigen.
+
+![ creeer een op model-gebaseerd schemadialoog met [!UICONTROL Upload DDL file] geselecteerd en [!UICONTROL Next] benadrukt.](../../images/ui/resources/schemas/upload-ddl-file.png)
+
+Het dialoogvenster [!UICONTROL Select entities and fields to import] wordt weergegeven, zodat u een voorvertoning van het schema kunt weergeven. Controleer de schemastructuur, en gebruik de radioknopen en checkboxes om ervoor te zorgen dat elke entiteit een primaire sleutel en gespecificeerde versie-herkenningsteken heeft.
+
+>[!IMPORTANT]
+>
+>De lijststructuur moet a **primaire sleutel** en a **versie herkenningsteken**, zoals a `updateSequence` gebied van type datetime of aantal bevatten.
+>
+>Voor het opnemen van veranderingsgegevens, wordt een speciale kolom genoemd `_change_request_type` van typeKoord ook vereist om stijgende verwerking toe te laten. Dit veld geeft het type gegevenswijziging aan (bijvoorbeeld `u` (upsert) of `d` (delete)).
+
+Hoewel vereist tijdens opname, worden de controlecolommen zoals `_change_request_type` niet opgeslagen in het schema en verschijnen niet in de definitieve schemastructuur. Als alles er goed uitziet, selecteert u **[!UICONTROL Done]** om het schema te maken.
+
+>[!NOTE]
+>
+>De maximale ondersteunde bestandsgrootte voor een DDL-upload is 10 MB.
+
+![ de model-Gebaseerde mening van het schemaoverzicht met ingevoerde getoonde en [!UICONTROL Finish] benadrukte gebieden.](../../images/ui/resources/schemas/entities-and-files-to-inport.png)
+
+Het schema opent in de Redacteur van het Schema, waar u de structuur kunt aanpassen alvorens te bewaren.
+
+Daarna, ga aan [ extra gebieden ](#add-field-groups) toe, en [ voeg extra schema-vlakke verhoudingen ](../../tutorials/relationship-ui.md#relationship-field) toe zoals nodig.
+
+Voor begeleiding op hoe te om veranderingsgegevens toe te laten vangen in de Bronnen van Experience Platform, zie de [ gids van de de vangst van veranderingsgegevens vangen ](../../../sources/tutorials/api/change-data-capture.md).
+
+## Standaardschema maken {#standard-based-creation}
+
+Als u Standaardschematype selecteert in het vervolgkeuzemenu &#39;Selecteer een schematype&#39;, wordt het dialoogvenster [!UICONTROL Create a schema] weergegeven. In dit dialoogvenster kunt u kiezen of u handmatig een schema wilt maken door velden en veldgroepen toe te voegen, of u kunt een CSV-bestand uploaden en XML-algoritmen gebruiken om een schema te genereren. Selecteer een workflow voor het maken van een schema in het dialoogvenster.
 
 ![ creeer een schemadialoog met de werkschemaopties en selecteer benadrukt.](../../images/ui/resources/schemas/create-a-schema-dialog.png)
 
-### [!BADGE &#x200B; Beta &#x200B;]{type=Informative} Handboek of ML-bijgestaan schemaverwezenlijking {#manual-or-assisted}
+### [!BADGE  Beta ]{type=Informative} Handboek of ML-bijgestaan schemaverwezenlijking {#manual-or-assisted}
 
 Leren hoe u een algoritme van XML kunt gebruiken om een schemastructuur te adviseren die op een csv- dossier wordt gebaseerd, zie de [ machine het leren-bijgewoonde gids van de schemaverwezenlijking ](../ml-assisted-schema-creation.md). Deze UI-handleiding is gericht op de workflow voor handmatig maken.
 
@@ -172,7 +253,7 @@ Nadat u een veldgroep aan een schema hebt toegevoegd, kunt u velden globaal uit 
 >[!IMPORTANT]
 >
 >Het selecteren **[!UICONTROL Remove]** schrapt het gebied van de gebiedsgroep zelf, die *beïnvloedt alle* schema&#39;s die die gebiedsgroep gebruiken.
->&#x200B;>Gebruik deze optie niet tenzij u het gebied uit elk schema wilt **verwijderen dat de gebiedsgroep** omvat.
+>>Gebruik deze optie niet tenzij u het gebied uit elk schema wilt **verwijderen dat de gebiedsgroep** omvat.
 
 Als u een veld uit de veldgroep wilt verwijderen, selecteert u het veld op het canvas en selecteert u **[!UICONTROL Remove]** in de rechtertrack. In dit voorbeeld wordt het veld `taxId` van de groep **[!UICONTROL Demographic Details]** getoond.
 

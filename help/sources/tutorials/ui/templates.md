@@ -3,9 +3,9 @@ description: Leer hoe u sjablonen in de gebruikersinterface van Adobe Experience
 title: Een gegevensstroom voor bronnen maken met sjablonen in de gebruikersinterface
 badge1: Beta
 exl-id: 48aa36ca-656d-4b9d-954c-48c8da9df1e9
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 02a22362b9ecbfc5fd7fcf17dc167309a0ea45d5
 workflow-type: tm+mt
-source-wordcount: '2207'
+source-wordcount: '2271'
 ht-degree: 0%
 
 ---
@@ -51,7 +51,7 @@ Deze zelfstudie vereist een goed begrip van de volgende onderdelen van Experienc
 >id="platform_sources_templates_accounttype"
 >title="Bedrijfstype selecteren"
 >abstract="Selecteer het juiste bedrijfstype voor uw gebruiksscenario. De toegang hangt af van uw Real-Time Customer Data Platform-abonnementaccount."
->additional-url="https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html?lang=nl-NL" text="Real-Time CDP-overzicht"
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/rtcdp/intro/rtcdp-intro/overview.html" text="Real-Time CDP-overzicht"
 
 Selecteer in de gebruikersinterface van Experience Platform **[!UICONTROL Sources]** in de linkernavigatie voor toegang tot de werkruimte van [!UICONTROL Sources] en bekijk een catalogus met bronnen die beschikbaar zijn in Experience Platform.
 
@@ -65,6 +65,12 @@ Er verschijnt een pop-upvenster met de optie om sjablonen te doorbladeren of bes
 
 * **doorbladert malplaatjes**: De bronmalplaatjes leiden automatisch schema&#39;s, identiteiten, datasets, en dataflows met toewijzingsregels voor u. U kunt deze elementen naar wens aanpassen.
 * **Gebruik mijn bestaande activa**: Maak uw gegevens gebruikend bestaande datasets en schema&#39;s bekend die u creeerde. U kunt nieuwe datasets en schema&#39;s ook tot stand brengen indien nodig.
+
+>[!NOTE]
+>
+>Sjablonen kunnen op modellen gebaseerde schema&#39;s automatisch genereren wanneer u werkt met bronnen die workflows voor het vastleggen van wijzigingsgegevens vereisen of die meerdere gegevensmodellen ondersteunen. Deze schema&#39;s maken Data Mirror-mogelijkheden voor realtime gegevenssynchronisatie mogelijk.\
+>Wanneer u sjablonen gebruikt met modelgebaseerde schema&#39;s, bevatten de automatisch gegenereerde elementen de vereiste primaire sleutel, versie-id en tijdstempelid-velden.\
+>Voor meer informatie, zie het [ overzicht van Data Mirror ](../../../xdm/data-mirror/overview.md) en [ model-gebaseerde schema&#39;s technische verwijzing ](../../../xdm/schema/model-based.md).
 
 Als u automatisch gegenereerde elementen wilt gebruiken, selecteert u **[!UICONTROL Browse templates]** en selecteert u **[!UICONTROL Select]** .
 

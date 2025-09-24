@@ -4,26 +4,41 @@ solution: Experience Platform
 title: Descriptors API-eindpunt
 description: Het /descriptors eindpunt in de Registratie API van het Schema staat u toe om XDM beschrijvers binnen uw ervaringstoepassing programmatically te beheren.
 exl-id: bda1aabd-5e6c-454f-a039-ec22c5d878d2
-source-git-commit: d6015125e3e29bdd6a6c505b5f5ad555bd17a0e0
+source-git-commit: 02a22362b9ecbfc5fd7fcf17dc167309a0ea45d5
 workflow-type: tm+mt
-source-wordcount: '2190'
+source-wordcount: '2886'
 ht-degree: 0%
 
 ---
 
 # Het eindpunt van descriptors
 
-De schema&#39;s bepalen een statische mening van gegevensentiteiten, maar verstrekken geen specifieke details over hoe gegevens die op deze regelingen (datasets, bijvoorbeeld) worden gebaseerd op elkaar kunnen betrekking hebben. Met Adobe Experience Platform kunt u deze relaties en andere interpreterende metagegevens over een schema beschrijven aan de hand van beschrijvingen.
+De schema&#39;s bepalen de structuur van gegevensentiteiten maar specificeren niet hoe om het even welke datasets die van deze schema&#39;s worden gecreeerd op elkaar betrekking hebben. In Adobe Experience Platform kunt u beschrijvingen gebruiken om deze relaties te beschrijven en interpreterende metagegevens aan een schema toe te voegen.
 
-De beschrijvers van het schema zijn huurdersvlakke meta-gegevens, betekenend zij aan uw organisatie uniek zijn en alle beschrijvingsverrichtingen vinden in de huurderscontainer plaats.
+Descriptors zijn metagegevensobjecten op huurniveau die op schema&#39;s in Adobe Experience Platform zijn toegepast. Ze definiëren structurele relaties, sleutels en gedragsvelden (zoals tijdstempels of versioning) die van invloed zijn op de manier waarop gegevens worden gevalideerd, samengevoegd of downstream worden geïnterpreteerd.
 
-Op elk schema kunnen een of meer schemabeschrijvingsentiteiten zijn toegepast. Elke schemadescriptorentiteit bevat een descriptor `@type` en de `sourceSchema` waarop deze van toepassing is. Zodra toegepast, zullen deze beschrijvers op alle datasets van toepassing zijn die gebruikend het schema worden gecreeerd.
+Een schema kan een of meer beschrijvingen bevatten. Elke descriptor definieert een `@type` en de `sourceSchema` waarop deze van toepassing is. De beschrijver is automatisch op alle datasets van dat schema van toepassing.
+
+In Adobe Experience Platform is een descriptor metagegevens die gedragsregels of structurele betekenis toevoegen aan een schema.
+Er zijn verschillende typen descriptors, waaronder:
+
+- [ de beschrijver van de Identiteit ](#identity-descriptor) - merkt een gebied als identiteit
+- [ Primaire zeer belangrijke beschrijver ](#primary-key-descriptor) - dwingt uniciteit af
+- [ de beschrijver van de Verhouding ](#relationship-descriptor) - bepaalt een buitenlands-zeer belangrijk toetreden
+- [ Alternatieve de beschrijver van vertoningsinfo ](#friendly-name) - laat u een gebied in UI anders noemen
+- [ Versie ](#version-descriptor) en [ timestamp ](#timestamp-descriptor) beschrijvers - spoorgebeurtenis die en veranderingsopsporing opdracht geven
 
 Met het eindpunt `/descriptors` in de [!DNL Schema Registry] API kunt u beschrijvingen programmatisch beheren binnen uw ervaringstoepassing.
 
 ## Aan de slag
 
 Het eindpunt dat in deze gids wordt gebruikt maakt deel uit van [[!DNL Schema Registry]  API ](https://developer.adobe.com/experience-platform-apis/references/schema-registry/). Alvorens verder te gaan, te herzien gelieve [ begonnen gids ](./getting-started.md) voor verbindingen aan verwante documentatie, een gids aan het lezen van de steekproefAPI vraag in dit document, en belangrijke informatie betreffende vereiste kopballen die nodig zijn om vraag aan om het even welke Experience Platform API met succes te maken.
+
+Naast standaardbeschrijvers, steunt [!DNL Schema Registry] beschrijvingstypes voor model-gebaseerde schema&#39;s, zoals **primaire sleutel**, **versie** en **timestamp**. Deze dwingen eenheid af, controleren versioning, en bepalen tijd-reeksen gebieden op het schemaniveau. Als u met op model-gebaseerde schema&#39;s onbekend bent, herzie het [ overzicht van Data Mirror ](../data-mirror/overview.md) en [ model-gebaseerde schema&#39;s technische verwijzing ](../schema/model-based.md) alvorens verder te gaan.
+
+>[!IMPORTANT]
+>
+>Zie [ Bijlage ](#defining-descriptors) voor details op alle beschrijvingstypes.
 
 ## Een lijst met descriptoren ophalen {#list}
 
@@ -86,7 +101,7 @@ Wanneer u de header `link` `Accept` gebruikt, wordt elke descriptor weergegeven 
 
 ## Een descriptor opzoeken {#lookup}
 
-Als u de details van een specifieke descriptor wilt bekijken, kunt u een afzonderlijke descriptor opzoeken (GET) met behulp van de bijbehorende `@id` .
+Als u de details van een specifieke descriptor wilt bekijken, verzendt u een GET-aanvraag met behulp van de `@id` .
 
 **API formaat**
 
@@ -283,7 +298,7 @@ Een geslaagde reactie retourneert HTTP-status 204 (Geen inhoud) en een lege hoof
 
 Om de beschrijver te bevestigen is geschrapt, kunt u a [ raadplegingsverzoek ](#lookup) tegen de beschrijver `@id` uitvoeren. De reactie retourneert HTTP-status 404 (Niet gevonden) omdat de descriptor is verwijderd uit de [!DNL Schema Registry] .
 
-## Bijlage
+## Bijlage {#appendix}
 
 In de volgende sectie vindt u aanvullende informatie over het werken met descriptoren in de API van [!DNL Schema Registry] .
 
@@ -299,9 +314,9 @@ In de volgende secties vindt u een overzicht van de beschikbare descriptortypen,
 >
 >U kunt het naamruimteobject voor huurders niet labelen, omdat het systeem dat label zou toepassen op elk aangepast veld in die sandbox. In plaats daarvan, moet u de bladknoop onder dat voorwerp specificeren die u moet etiketteren.
 
-#### Identiteitsbeschrijving
+#### Identiteitsbeschrijving {#identity-descriptor}
 
-Een identiteitsbeschrijver signaleert dat &quot;[!UICONTROL sourceProperty]&quot;van &quot;[!UICONTROL sourceSchema]&quot;een [!DNL Identity] gebied is zoals die door [ wordt beschreven de Dienst van de Identiteit van Adobe Experience Platform ](../../identity-service/home.md).
+Een identiteitsbeschrijver signaleert dat &quot;[!UICONTROL sourceProperty]&quot;van &quot;[!UICONTROL sourceSchema]&quot;een [!DNL Identity] gebied is zoals die door [ wordt beschreven de Dienst van de Identiteit van Experience Platform ](../../identity-service/home.md).
 
 ```json
 {
@@ -371,21 +386,36 @@ Met beschrijvingen van vriendschappelijke namen kan een gebruiker de waarden `ti
 
 #### Relatiebeschrijving {#relationship-descriptor}
 
-Relationship-descriptors beschrijven een relatie tussen twee verschillende schema&#39;s, die u hebt afgesloten op de eigenschappen die worden beschreven in `sourceProperty` en `destinationProperty` . Zie het leerprogramma op [ bepalend een verband tussen twee schema&#39;s ](../tutorials/relationship-api.md) voor meer informatie.
+Relationship-descriptors beschrijven een relatie tussen twee verschillende schema&#39;s, die u hebt afgesloten op de eigenschappen die worden beschreven in `xdm:sourceProperty` en `xdm:destinationProperty` . Zie het leerprogramma op [ bepalend een verband tussen twee schema&#39;s ](../tutorials/relationship-api.md) voor meer informatie.
+
+Gebruik deze eigenschappen om te verklaren hoe een brongebied (buitenlandse sleutel) op een bestemmingsgebied ([ primaire sleutel ](#primary-key-descriptor) of kandidaat sleutel) betrekking heeft.
+
+>[!TIP]
+>
+>A **buitenlandse sleutel** is een gebied in het bronschema (dat door `xdm:sourceProperty` wordt bepaald) dat verwijzingen een zeer belangrijk gebied in een ander schema. A **kandidaat sleutel** is om het even welk gebied (of reeks gebieden) in het bestemmingsschema dat uniek een verslag identificeert en in plaats van de primaire sleutel kan worden gebruikt.
+
+De API ondersteunt twee patronen:
+
+- `xdm:descriptorOneToOne`: standaard 1 :1 verhouding.
+- `xdm:descriptorRelationship`: algemeen patroon voor nieuw werk en op model-gebaseerde schema&#39;s (steunt kardinaliteit, het noemen, en niet-primaire zeer belangrijke doelstellingen).
+
+##### Eén-op-één relatie (standaardschema&#39;s)
+
+Gebruik dit wanneer het handhaven van bestaande standaard-schema-integraties die reeds op `xdm:descriptorOneToOne` steunen.
 
 ```json
 {
   "@type": "xdm:descriptorOneToOne",
-  "xdm:sourceSchema":
-    "https://ns.adobe.com/{TENANT_ID}/schemas/fbc52b243d04b5d4f41eaa72a8ba58be",
+  "xdm:sourceSchema": "https://ns.adobe.com/{TENANT_ID}/schemas/{SOURCE_SCHEMA_ID}",
   "xdm:sourceVersion": 1,
   "xdm:sourceProperty": "/parentField/subField",
-  "xdm:destinationSchema": 
-    "https://ns.adobe.com/{TENANT_ID}/schemas/78bab6346b9c5102b60591e15e75d254",
+  "xdm:destinationSchema": "https://ns.adobe.com/{TENANT_ID}/schemas/{DEST_SCHEMA_ID}",
   "xdm:destinationVersion": 1,
   "xdm:destinationProperty": "/parentField/subField"
 }
 ```
+
+In de volgende tabel worden de velden beschreven die nodig zijn om een één-op-één relatiebeschrijving te definiëren.
 
 | Eigenschap | Beschrijving |
 | --- | --- |
@@ -397,7 +427,143 @@ Relationship-descriptors beschrijven een relatie tussen twee verschillende schem
 | `xdm:destinationVersion` | De belangrijkste versie van het referentieschema. |
 | `xdm:destinationProperty` | (Optioneel) Pad naar een doelveld binnen het referentieschema. Als deze eigenschap wordt weggelaten, wordt het doelveld afgeleid van velden die een overeenkomende ID-descriptor bevatten (zie hieronder). |
 
-{style="table-layout:auto"}
+##### Algemene relatie (modelgebaseerde schema&#39;s en aanbevolen voor nieuwe projecten)
+
+Gebruik deze beschrijver voor alle nieuwe implementaties en voor op model-gebaseerde schema&#39;s. Het staat u toe om de kardinaliteit van de verhouding (zoals één-aan-één of vele-aan-één) te bepalen, relatienamen te specificeren, en verbinding aan een bestemmingsgebied te verbinden dat niet de primaire sleutel (niet-primaire sleutel) is.
+
+In de volgende voorbeelden ziet u hoe u een algemene relatiebeschrijving definieert.
+
+**Minimaal voorbeeld:**
+
+Dit minimale voorbeeld omvat slechts de vereiste gebieden om een vele-aan-één verhouding tussen twee schema&#39;s te bepalen.
+
+```json
+{
+  "@type": "xdm:descriptorRelationship",
+  "xdm:sourceSchema": "https://ns.adobe.com/{TENANT_ID}/schemas/{SOURCE_SCHEMA_ID}",
+  "xdm:sourceProperty": "/customer_ref",
+  "xdm:sourceVersion": 1,
+  "xdm:destinationSchema": "https://ns.adobe.com/{TENANT_ID}/schemas/{DEST_SCHEMA_ID}",
+  "xdm:cardinality": "M:1"
+}
+```
+
+**Voorbeeld met alle facultatieve gebieden:**
+
+Dit voorbeeld bevat alle optionele velden, zoals relatienamen, weergavettels en een expliciet doelveld voor een niet-primaire sleutel.
+
+```json
+{
+  "@type": "xdm:descriptorRelationship",
+  "xdm:sourceSchema": "https://ns.adobe.com/{TENANT_ID}/schemas/{SOURCE_SCHEMA_ID}",
+  "xdm:sourceVersion": 1,
+  "xdm:sourceProperty": "/customer_ref",
+  "xdm:destinationSchema": "https://ns.adobe.com/{TENANT_ID}/schemas/{DEST_SCHEMA_ID}",
+  "xdm:destinationProperty": "/customer_id",
+  "xdm:sourceToDestinationName": "CampaignToCustomer",
+  "xdm:destinationToSourceName": "CustomerToCampaign",
+  "xdm:sourceToDestinationTitle": "Customer campaigns",
+  "xdm:destinationToSourceTitle": "Campaign customers",
+  "xdm:cardinality": "M:1"
+}
+```
+
+##### Een relatiebeschrijving kiezen
+
+Gebruik de volgende richtlijnen om te beslissen welke relatiebeschrijving u wilt toepassen:
+
+| Situatie | Te gebruiken beschrijver |
+| --------------------------------------------------------------------- | ----------------------------------------- |
+| Nieuwe werk- of modelgebaseerde schema&#39;s | `xdm:descriptorRelationship` |
+| Bestaande 1 :1 afbeelding in standaardschema&#39;s | Ga verder met `xdm:descriptorOneToOne` tenzij u functies nodig hebt die alleen door `xdm:descriptorRelationship` worden ondersteund. |
+| Veelvoudige of optionele kardinaliteit vereist (`1:1`, `1:0`, `M:1`, `M:0`) | `xdm:descriptorRelationship` |
+| Namen of titels voor gebruikersinterface/downstreamleesbaarheid vereisen | `xdm:descriptorRelationship` |
+| Hebt u een doeldoel nodig dat geen identiteit is | `xdm:descriptorRelationship` |
+
+>[!NOTE]
+>
+>Voor bestaande `xdm:descriptorOneToOne` -descriptors in standaardschema&#39;s blijven deze gebruiken, tenzij u functies nodig hebt zoals niet-primaire doeldoelen voor identiteitsdoeleinden, aangepaste naamgeving of uitgebreide standaardopties.
+
+##### Capaciteitsvergelijking
+
+In de volgende tabel worden de mogelijkheden van de twee descriptortypen vergeleken:
+
+| Capaciteit | `xdm:descriptorOneToOne` | `xdm:descriptorRelationship` |
+| ------------------ | ------------------------ | ------------------------------------------------------------------------ |
+| Kardinaal | 1:1 | 1 :1, 1 :0, M :1, M :0 (informatief) |
+| Doelstelling | Identiteit/expliciet veld | De primaire sleutel door gebrek, of niet-primaire sleutel via `xdm:destinationProperty` |
+| Namen van velden | Niet ondersteund | `xdm:sourceToDestinationName` , `xdm:destinationToSourceName` en titels |
+| Relationeel passend | Beperkt | Primair patroon voor op modellen gebaseerde schema&#39;s |
+
+##### Beperkingen en validatie
+
+Volg deze vereisten en aanbevelingen wanneer het bepalen van een algemene relatiebeschrijver:
+
+- Voor op model-gebaseerde schema&#39;s, plaats het brongebied (buitenlandse sleutel) op het wortelniveau. Dit is een huidige technische beperking voor inname, niet alleen een aanbeveling van best practices.
+- Zorg ervoor dat de gegevenstypen van bron- en doelvelden compatibel zijn (numeriek, datum, Boolean, tekenreeks).
+- Vergeet niet dat de kardinaliteit informatie is; opslag dwingt deze niet af. Geef een standaardindeling op in de notatie `<source>:<destination>` . Accepteerde waarden zijn: `1:1`, `1:0`, `M:1` of `M:0` .
+
+#### Descriptor primaire sleutel {#primary-key-descriptor}
+
+De primaire zeer belangrijke beschrijver (`xdm:descriptorPrimaryKey`) dwingt uniciteit en niet-krachtbeperkingen op één of meerdere gebieden in een schema af.
+
+```json
+{
+  "@type": "xdm:descriptorPrimaryKey",
+  "xdm:sourceSchema": "https://ns.adobe.com/{TENANT_ID}/schemas/{SCHEMA_ID}",
+  "xdm:sourceProperty": ["/orderId", "/orderLineId"]
+}
+```
+
+| Eigenschap | Beschrijving |
+| -------------------- | ----------------------------------------------------------------------------- |
+| `@type` | Moet `xdm:descriptorPrimaryKey` zijn. |
+| `xdm:sourceSchema` | `$id` URI van het schema. |
+| `xdm:sourceProperty` | JSON-aanwijzer(s) naar het veld of de velden met de primaire sleutel. Gebruik een array voor samengestelde sleutels. Voor tijdreeksschema&#39;s moet de samengestelde sleutel het tijdstempelveld bevatten om ervoor te zorgen dat de records uniek zijn. |
+
+#### Versiebeschrijving {#version-descriptor}
+
+>[!NOTE]
+>
+>In de Redacteur van het Schema UI, verschijnt de versiedescriptor als &quot;[!UICOTRNOL  herkenningsteken van de Versie ].&quot;
+
+De versiedescriptor (`xdm:descriptorVersion`) wijst een gebied aan om conflicten van uit-van-orde veranderingsgebeurtenissen te ontdekken en te verhinderen.
+
+```json
+{
+  "@type": "xdm:descriptorVersion",
+  "xdm:sourceSchema": "https://ns.adobe.com/{TENANT_ID}/schemas/{SCHEMA_ID}",
+  "xdm:sourceProperty": "/versionNumber"
+}
+```
+
+| Eigenschap | Beschrijving |
+| -------------------- | ------------------------------------------------------------- |
+| `@type` | Moet `xdm:descriptorVersion` zijn. |
+| `xdm:sourceSchema` | `$id` URI van het schema. |
+| `xdm:sourceProperty` | JSON-aanwijzer naar het versieveld. Moet worden gemarkeerd met `required` . |
+
+#### Tijdstempelbeschrijving {#timestamp-descriptor}
+
+>[!NOTE]
+>
+>In de Redacteur van het Schema UI, verschijnt de timestamp beschrijver als &quot;[!UICOTRNOL  herkenningsteken Tijdstempel ].&quot;
+
+In de tijdstempeldescriptor (`xdm:descriptorTimestamp`) wordt een datum-tijdveld aangewezen als tijdstempel voor schema&#39;s met `"meta:behaviorType": "time-series"` .
+
+```json
+{
+  "@type": "xdm:descriptorTimestamp",
+  "xdm:sourceSchema": "https://ns.adobe.com/{TENANT_ID}/schemas/{SCHEMA_ID}",
+  "xdm:sourceProperty": "/eventTime"
+}
+```
+
+| Eigenschap | Beschrijving |
+| -------------------- | ------------------------------------------------------------------------------------------ |
+| `@type` | Moet `xdm:descriptorTimestamp` zijn. |
+| `xdm:sourceSchema` | `$id` URI van het schema. |
+| `xdm:sourceProperty` | JSON-aanwijzer naar het tijdstempelveld. Moet zijn gemarkeerd met `required` en van het type `date-time` zijn. |
 
 ##### B2B-relatiebeschrijving {#B2B-relationship-descriptor}
 
@@ -427,7 +593,7 @@ De Real-Time CDP B2B edition introduceert een alternatieve manier om relaties tu
 | `xdm:sourceProperty` | Pad naar het veld in het bronschema waar de relatie wordt gedefinieerd. Moet beginnen met een &quot;/&quot; en niet eindigen met &quot;/&quot;. Plaats geen &quot;eigenschappen&quot; in het pad (bijvoorbeeld &quot;/PersonalEmail/address&quot; in plaats van &quot;/properties/PersonalEmail/properties/address&quot;). |
 | `xdm:destinationSchema` | De `$id` URI van het verwijzingsschema deze beschrijver bepaalt een verhouding met. |
 | `xdm:destinationVersion` | De belangrijkste versie van het referentieschema. |
-| `xdm:destinationProperty` | (Optioneel) Pad naar een doelveld binnen het referentieschema, dat de primaire id van het schema moet zijn. Als deze eigenschap wordt weggelaten, wordt het doelveld afgeleid van velden die een overeenkomende ID-descriptor bevatten (zie hieronder). |
+| `xdm:destinationProperty` | (Optioneel) Pad naar een doelveld binnen het referentieschema. Dit moet aan primaire identiteitskaart van het schema, of aan een ander gebied met een compatibel gegevenstype aan `xdm:sourceProperty` oplossen. Indien weggelaten, werkt de relatie mogelijk niet zoals verwacht. |
 | `xdm:destinationNamespace` | De naamruimte van de primaire id vanuit het referentieschema. |
 | `xdm:destinationToSourceTitle` | De vertoningsnaam van de verhouding van het verwijzingsschema aan het bronschema. |
 | `xdm:sourceToDestinationTitle` | De vertoningsnaam van de verhouding van het bronschema aan het verwijzingsschema. |

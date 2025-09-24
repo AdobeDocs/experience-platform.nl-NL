@@ -5,9 +5,9 @@ title: Een gegevensstroom maken voor Cloud Storage-bronnen met behulp van de Flo
 type: Tutorial
 description: In deze zelfstudie worden de stappen beschreven voor het ophalen van gegevens van externe cloudopslag en het naar Experience Platform brengen van deze gegevens via bronconnectors en API's.
 exl-id: 95373c25-24f6-4905-ae6c-5000bf493e6f
-source-git-commit: b184319f6c5f5430a5ae1e9de4728b5074bca9b8
+source-git-commit: 02a22362b9ecbfc5fd7fcf17dc167309a0ea45d5
 workflow-type: tm+mt
-source-wordcount: '1792'
+source-wordcount: '1834'
 ht-degree: 0%
 
 ---
@@ -101,7 +101,7 @@ curl -X POST \
 | `data.properties.compressionType` | (Optioneel) Een eigenschap die het gecomprimeerde bestandstype voor inname definieert. De ondersteunde gecomprimeerde bestandstypen zijn: `bzip2` , `gzip` , `deflate` , `zipDeflate` , `tarGzip` en `tar` . **Nota**: Het `compressionType` bezit kan slechts worden gebruikt wanneer het opnemen van afgebakende of JSON- dossiers. |
 | `params.path` | Het pad van het bronbestand dat u opent. Deze parameter verwijst naar een afzonderlijk bestand of naar een volledige map.  **Nota**: U kunt een asterisk in plaats van het dossier gebruiken - naam om de opname van een volledige omslag te specificeren. `/acme/summerCampaign/*.csv` voert bijvoorbeeld de gehele `/acme/summerCampaign/` -map in. |
 | `params.type` | Het bestandstype van het brongegevensbestand dat u opgeeft. Gebruik het type `file` om een afzonderlijk bestand in te voeren en gebruik het type `folder` om een volledige map in te voeren. |
-| `params.cdcEnabled` | Een booleaanse waarde die aangeeft of het vastleggen van de wijzigingshistorie is ingeschakeld. Deze eigenschap wordt ondersteund door de volgende bronnen voor cloudopslag: <ul><li>[!DNL Azure Blob]</li><li>[!DNL Data Landing Zone]</li><li>[!DNL Google Cloud Storage]</li><li>[!DNL SFTP]</li></ul> Voor meer informatie, lees de gids bij het gebruiken van [ veranderingsgegevens vangen in bronnen ](../change-data-capture.md). |
+| `params.cdcEnabled` | Een booleaanse waarde die aangeeft of het vastleggen van de wijzigingshistorie is ingeschakeld. Bij gebruik met op modellen gebaseerde schema&#39;s, baseert de vangst van veranderingsgegevens zich op de `_change_request_type` controlekolom (`u` — upsert, `d` — schrapping), die tijdens opneming maar niet opgeslagen in het doelschema wordt geëvalueerd. Deze eigenschap wordt ondersteund door de volgende bronnen voor cloudopslag: <ul><li>[!DNL Azure Blob]</li><li>[!DNL Data Landing Zone]</li><li>[!DNL Google Cloud Storage]</li><li>[!DNL SFTP]</li></ul>Voor een overzicht van dit vermogen, zie het [ overzicht van Data Mirror ](../../../../xdm/data-mirror/overview.md). Voor implementatiedetails, lees de gids bij het gebruiken van [ veranderingsgegevens vangen in bronnen ](../change-data-capture.md) en [ op model-gebaseerde schema&#39;s technische verwijzing ](../../../../xdm/schema/model-based.md). |
 | `connectionSpec.id` | De verbindingsspecificatie-id die is gekoppeld aan uw specifieke bron voor cloudopslag. Zie [ bijlage ](#appendix) voor een lijst van verbindingsspecificiteit IDs. |
 
 **Reactie**

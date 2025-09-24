@@ -1,12 +1,12 @@
 ---
-keywords: Experience Platform;home;populaire onderwerpen;api;API;XDM;XDM systeem;ervaringsgegevensmodel;Experience gegevensmodel;Experience Data Model;Gegevensmodel;Gegevensmodel;Schema register;Schema Register;Schema;Schema;schema's;Schema's;Maken
+keywords: Experience Platform;home;populaire onderwerpen;api;API;XDM;XDM-systeem;ervaringsgegevensmodel;Experience gegevensmodel;Experience Data Model;Gegevensmodel;Gegevensmodel;Schema register;Schema Register;Schema;Schema;Schema's;Schemas;create
 solution: Experience Platform
 title: Schemas API Endpoint
 description: Het /schemas eindpunt in de Registratie API van het Schema staat u toe om schema's XDM binnen uw ervaringstoepassing programmatically te beheren.
 exl-id: d0bda683-9cd3-412b-a8d1-4af700297abf
-source-git-commit: 983682489e2c0e70069dbf495ab90fc9555aae2d
+source-git-commit: 974faad835b5dc2a4d47249bb672573dfb4d54bd
 workflow-type: tm+mt
-source-wordcount: '1443'
+source-wordcount: '2095'
 ht-degree: 0%
 
 ---
@@ -17,11 +17,11 @@ Een schema kan worden beschouwd als de blauwdruk voor de gegevens die u in Adobe
 
 ## Aan de slag
 
-Het API eindpunt dat in deze gids wordt gebruikt maakt deel uit van [[!DNL Schema Registry]  API ](https://www.adobe.io/experience-platform-apis/references/schema-registry/). Alvorens verder te gaan, te herzien gelieve [ begonnen gids ](./getting-started.md) voor verbindingen aan verwante documentatie, een gids aan het lezen van de steekproefAPI vraag in dit document, en belangrijke informatie betreffende vereiste kopballen die nodig zijn om vraag aan om het even welk Experience Platform API met succes te maken.
+Het API eindpunt dat in deze gids wordt gebruikt maakt deel uit van [[!DNL Schema Registry]  API ](https://www.adobe.io/experience-platform-apis/references/schema-registry/). Alvorens verder te gaan, te herzien gelieve [ begonnen gids ](./getting-started.md) voor verbindingen aan verwante documentatie, een gids aan het lezen van de steekproefAPI vraag in dit document, en belangrijke informatie betreffende vereiste kopballen die nodig zijn om vraag aan om het even welke Experience Platform API met succes te maken.
 
 ## Een lijst met schema&#39;s ophalen {#list}
 
-U kunt alle schema&#39;s weergeven onder de container `global` of `tenant` door een aanvraag voor een GET in te dienen bij respectievelijk `/global/schemas` of `/tenant/schemas` .
+U kunt alle schema&#39;s weergeven onder de container `global` of `tenant` door een GET-aanvraag in te dienen bij respectievelijk `/global/schemas` of `/tenant/schemas` .
 
 >[!NOTE]
 >
@@ -35,7 +35,7 @@ GET /{CONTAINER_ID}/schemas?{QUERY_PARAMS}
 
 | Parameter | Beschrijving |
 | --- | --- |
-| `{CONTAINER_ID}` | De container waarin de schema&#39;s zijn opgeslagen die u wilt ophalen: `global` voor schema&#39;s die zijn gemaakt met een Adobe of `tenant` voor schema&#39;s die eigendom zijn van uw organisatie. |
+| `{CONTAINER_ID}` | De container waarin de schema&#39;s zijn opgeslagen die u wilt ophalen: `global` voor door Adobe gemaakte schema&#39;s of `tenant` voor schema&#39;s die eigendom zijn van uw organisatie. |
 | `{QUERY_PARAMS}` | Optionele queryparameters om resultaten te filteren op. Zie het [ bijlage document ](./appendix.md#query) voor een lijst van beschikbare parameters. |
 
 {style="table-layout:auto"}
@@ -99,7 +99,7 @@ In de bovenstaande aanvraag is de header `application/vnd.adobe.xed-id+json` `Ac
 
 ## Een schema opzoeken {#lookup}
 
-U kunt een specifiek schema opzoeken door een verzoek van de GET te doen dat identiteitskaart van het schema in de weg omvat.
+U kunt een specifiek schema opzoeken door een GET-aanvraag in te dienen die de schema-id in het pad bevat.
 
 **API formaat**
 
@@ -109,7 +109,7 @@ GET /{CONTAINER_ID}/schemas/{SCHEMA_ID}
 
 | Parameter | Beschrijving |
 | --- | --- |
-| `{CONTAINER_ID}` | De container waarin het schema is opgeslagen dat u wilt ophalen: `global` voor een schema dat is gemaakt met een Adobe of `tenant` voor een schema dat eigendom is van uw organisatie. |
+| `{CONTAINER_ID}` | De container waarin het schema is opgeslagen dat u wilt ophalen: `global` voor een Adobe-schema of `tenant` voor een schema dat eigendom is van uw organisatie. |
 | `{SCHEMA_ID}` | De `meta:altId` of URL-gecodeerde `$id` van het schema dat u wilt opzoeken. |
 
 {style="table-layout:auto"}
@@ -198,6 +198,8 @@ Een succesvolle reactie keert de details van het schema terug. Welke velden word
 
 Het proces van de schemacompositie begint door een klasse toe te wijzen. De klasse definieert de belangrijkste gedragsaspecten van de gegevens (record- of tijdreeks) en de minimale velden die vereist zijn om de gegevens te beschrijven die worden ingevoerd.
 
+Voor instructies bij het creëren van een schema zonder klassen of gebiedsgroepen, die als op model-gebaseerd schema worden bekend, zie [ een op model-gebaseerd schema ](#create-model-based-schema) sectie creëren.
+
 >[!NOTE]
 >
 >De voorbeeldaanroep hieronder is slechts een basislijnvoorbeeld van hoe u een schema in de API maakt, met de minimale compositievereisten van een klasse en geen veldgroepen. Voor volledige stappen op hoe te om een schema in API tot stand te brengen, met inbegrip van hoe te om gebieden toe te wijzen die gebiedsgroepen en gegevenstypes gebruiken, zie de [ zelfstudie van de schemaverwezenlijking ](../tutorials/create-schema-api.md).
@@ -275,13 +277,199 @@ Een succesvol antwoord retourneert HTTP-status 201 (Gemaakt) en een lading die d
 }
 ```
 
-Het uitvoeren van een verzoek van de GET aan [ lijst alle schema&#39;s ](#list) in de huurderscontainer zou nu het nieuwe schema omvatten. U kunt a [ raadpleging (GET) verzoek ](#lookup) uitvoeren gebruikend URL-Gecodeerde `$id` URI om het nieuwe schema direct te bekijken.
+Het uitvoeren van een verzoek van GET aan [ lijst alle schema&#39;s ](#list) in de huurderscontainer zou nu het nieuwe schema omvatten. U kunt a [ raadpleging (GET) verzoek ](#lookup) uitvoeren gebruikend URL-Gecodeerde `$id` URI om het nieuwe schema direct te bekijken.
 
-Om extra gebieden aan een schema toe te voegen, kunt u de verrichting van de a [ PATCH ](#patch) uitvoeren om gebiedsgroepen aan de 2&rbrace; en `meta:extends` series van het schema toe te voegen.`allOf`
+Om extra gebieden aan een schema toe te voegen, kunt u de verrichting van a [ PATCH ](#patch) uitvoeren om gebiedsgroepen aan de 2} en `allOf` series van het schema toe te voegen.`meta:extends`
+
+## Een op een model gebaseerd schema maken {#create-model-based-schema}
+
+>[!AVAILABILITY]
+>
+>Data Mirror en op model-gebaseerde schema&#39;s zijn beschikbaar aan Adobe Journey Optimizer **Geordende campagnes** vergunninghouders. Zij zijn ook beschikbaar als a **beperkte versie** voor de gebruikers van Customer Journey Analytics, afhankelijk van uw vergunning en eigenschapenactivering. Neem contact op met uw Adobe-vertegenwoordiger voor toegang.
+
+Creeer een model-gebaseerd schema door een POST- verzoek aan het `/schemas` eindpunt te doen. Model-gebaseerde schema&#39;s slaan gestructureerde, relationele-stijlgegevens **zonder** klassen of gebiedsgroepen op. Definieer velden rechtstreeks in het schema en identificeer het schema als op model gebaseerd met een logische gedragstag.
+
+>[!IMPORTANT]
+>
+>Stel `meta:extends` in op `"https://ns.adobe.com/xdm/data/adhoc-v2"` als u een op een model gebaseerd schema wilt maken. Dit is a **logisch gedragsherkenningsteken** (niet een fysiek gedrag of een klasse). **niet** verwijzingsklassen of gebiedsgroepen in `allOf`, en **** omvat geen klassen of gebiedsgroepen in `meta:extends`.
+
+Maak eerst het schema met `POST /tenant/schemas` . Dan voeg de vereiste beschrijvers met [ toe Beschrijvers API (`POST /tenant/descriptors`) ](../api/descriptors.md):
+
+- [ Primaire zeer belangrijke beschrijver ](../api/descriptors.md#primary-key-descriptor): Een primair-zeer belangrijk gebied moet op **wortel-niveau** zijn en **duidelijk zoals vereist**.
+- [ beschrijver van de Versie ](../api/descriptors.md#version-descriptor): **Vereist** wanneer een primaire sleutel bestaat.
+- [ beschrijver van de Verhouding ](../api/descriptors.md#relationship-descriptor): Facultatief, bepaalt toetreedt; kardinaliteit niet afgedwongen bij opname.
+- [ de beschrijver van de tijdstempel ](../api/descriptors.md#timestamp-descriptor): Voor tijd-reeksen schema&#39;s, moet de primaire sleutel a **samengestelde** sleutel zijn die het timestamp gebied omvat.
+
+>[!NOTE]
+>
+>In de Redacteur van het Schema UI, verschijnen de versiedescriptor en timestamp beschrijvers als &quot;[!UICOTRNOL  herkenningsteken van de Versie ]&quot; en &quot;[!UICOTRNOL  herkenningsteken van de Chronologie ]&quot; respectievelijk.
+
+<!-- >[!AVAILABILITY]
+>
+>Although `meta:behaviorType` technically accepts `time-series`, support is not currently available for model-based schemas. Set `meta:behaviorType` to `"record"`. -->
+
+>[!CAUTION]
+>
+>Model-gebaseerde schema&#39;s zijn **niet compatibel met unieschema&#39;s**. Pas de tag `union` niet toe op `meta:immutableTags` wanneer u werkt met modelgebaseerde schema&#39;s. Deze configuratie is geblokkeerd in de gebruikersinterface, maar wordt momenteel niet geblokkeerd door de API. Zie de [ gids van het vakbondseindpunt ](./unions.md) voor meer informatie over het gedrag van het unieschema.
+
+**API formaat**
+
+```http
+POST /tenant/schemas
+```
+
+**Verzoek**
+
+```shell
+curl --request POST \
+  --url https://platform.adobe.io/data/foundation/schemaregistry/tenant/schemas \
+  -H 'Accept: application/vnd.adobe.xed+json' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'Content-Type: application/json' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -d '{
+  "title": "marketing.customers",
+  "type": "object",
+  "description": "Schema of the Marketing Customers table.",
+  "definitions": {
+    "customFields": {
+      "type": "object",
+      "properties": {
+        "customer_id": {
+          "title": "Customer ID",
+          "description": "Primary key of the customer table.",
+          "type": "string",
+          "minLength": 1
+        },
+        "name": {
+          "title": "Name",
+          "description": "Name of the customer.",
+          "type": "string"
+        },
+        "email": {
+          "title": "Email",
+          "description": "Email of the customer.",
+          "type": "string",
+          "format": "email",
+          "minLength": 1
+        }
+      },
+      "required": ["customer_id"]
+    }
+  },
+  "allOf": [
+    {
+      "$ref": "#/definitions/customFields",
+      "meta:xdmType": "object"
+    }
+  ],
+  "meta:extends": ["https://ns.adobe.com/xdm/data/adhoc-v2"],
+  "meta:behaviorType": "record"
+}
+'
+```
+
+### Hoofdtekst aanvragen
+
+| Eigenschap | Type | Beschrijving |
+| ------------------------------- | ------ | --------------------------------------------------------- |
+| `title` | String | Naam van schema weergeven. |
+| `description` | String | Korte uitleg van het doel van het schema. |
+| `type` | String | Moet `"object"` zijn voor op een model gebaseerde schema&#39;s. |
+| `definitions` | Object | Bevat de objecten op hoofdniveau die uw schemavelden definiëren. |
+| `definitions.<name>.properties` | Object | Veldnamen en gegevenstypen |
+| `allOf` | Array | Verwijst naar de objectdefinitie op hoofdniveau (bijvoorbeeld `#/definitions/marketing_customers` ). |
+| `meta:extends` | Array | Moet `"https://ns.adobe.com/xdm/data/adhoc-v2"` bevatten om het schema als op model gebaseerd te identificeren. |
+| `meta:behaviorType` | String | Instellen op `"record"` . Gebruik `"time-series"` alleen wanneer deze is ingeschakeld en van toepassing is. |
+
+>[!IMPORTANT]
+>
+>De ontwikkeling van schema&#39;s voor op modellen gebaseerde schema&#39;s volgt dezelfde additieve regels als standaardschema&#39;s. U kunt nieuwe velden toevoegen met een PATCH-aanvraag. Wijzigingen als het hernoemen of verwijderen van velden zijn alleen toegestaan als er geen gegevens in de gegevensset zijn opgenomen.
+
+**Reactie**
+
+Een succesvol verzoek keert **HTTP 201 (Gemaakt)** en het gecreeerde schema terug.
+
+>[!NOTE]
+>
+>Op modellen gebaseerde schema&#39;s nemen vooraf ingestelde velden (bijvoorbeeld id, tijdstempel of eventType) niet over. Definieer alle vereiste velden expliciet in uw schema.
+
+**reactie van het Voorbeeld**
+
+```json
+{
+  "$id": "https://ns.adobe.com/<TENANT_ID>/schemas/<SCHEMA_UUID>",
+  "meta:altId": "_<SCHEMA_ALT_ID>",
+  "meta:resourceType": "schemas",
+  "version": "1.0",
+  "title": "marketing.customers",
+  "description": "Schema of the Marketing Customers table.",
+  "type": "object",
+  "definitions": {
+    "marketing_customers": {
+      "type": "object",
+      "properties": {
+        "customer_id": {
+          "title": "Customer ID",
+          "description": "Primary key of the customer table.",
+          "type": "string",
+          "minLength": 1
+        },
+        "name": {
+          "title": "Name",
+          "description": "Name of the customer.",
+          "type": "string"
+        },
+        "email": {
+          "title": "Email",
+          "description": "Email of the customer.",
+          "type": "string",
+          "format": "email",
+          "minLength": 1
+        }
+      },
+      "required": ["customer_id"]
+    }
+  },
+  "allOf": [
+    { "$ref": "#/definitions/marketing_customers" }
+  ],
+  "meta:extends": ["https://ns.adobe.com/xdm/data/adhoc-v2"],
+  "meta:behaviorType": "record",
+  "meta:containerId": "tenant"
+}
+```
+
+### Eigenschappen van het responslichaam
+
+| Eigenschap | Type | Beschrijving |
+| ------------------- | ------ | -------------------------- |
+| `$id` | String | De unieke URL van het gemaakte schema. Gebruik in volgende API-aanroepen. |
+| `meta:altId` | String | Een alternatieve id voor het schema. |
+| `meta:resourceType` | String | Het middeltype (altijd `"schemas"`). |
+| `version` | String | Een schemaversie die bij verwezenlijking wordt toegewezen. |
+| `title` | String | De weergavenaam van het schema. |
+| `description` | String | Een korte uitleg van het doel van het schema. |
+| `type` | String | Het schematype. |
+| `definitions` | Object | Hiermee definieert u herbruikbare objecten of veldgroepen die in het schema worden gebruikt. Dit omvat doorgaans de hoofdgegevensstructuur en wordt in de array `allOf` vermeld om de hoofdmap van het schema te definiëren. |
+| `allOf` | Array | Geeft het hoofdobject van het schema op door naar een of meer definities te verwijzen (bijvoorbeeld `#/definitions/marketing_customers` ). |
+| `meta:extends` | Array | Identifies the schema as model-based (`adhoc-v2`). |
+| `meta:behaviorType` | String | Gedragstype (`record` of `time-series` , indien ingeschakeld). |
+| `meta:containerId` | String | Container waarin het schema is opgeslagen (bijvoorbeeld `tenant`). |
+
+Om gebieden aan een op model-gebaseerd schema toe te voegen nadat het is gecreeerd, doe het verzoek van a [ PATCH ](#patch). Op modellen gebaseerde schema&#39;s nemen niet over of worden niet automatisch geëvolueerd. Structurele wijzigingen zoals het wijzigen van de naam of het verwijderen van velden zijn alleen toegestaan als er geen gegevens in de gegevensset zijn opgenomen. Zodra het gegeven bestaat, slechts **additieve veranderingen** (zoals het toevoegen van nieuwe gebieden) worden gesteund.
+
+U kunt nieuwe velden op hoofdniveau toevoegen (binnen de basisdefinitie of basiscode `properties` ), maar u kunt het type van bestaande velden niet verwijderen, hernoemen of wijzigen.
+
+>[!CAUTION]
+>
+>De evolutie van het schema wordt beperkt nadat een dataset gebruikend het schema wordt geïnitialiseerd. Namen en typen van velden vooraf zorgvuldig plannen, aangezien velden niet kunnen worden verwijderd of gewijzigd nadat gegevens zijn ingevoerd.
 
 ## Een schema bijwerken {#put}
 
-U kunt een volledig schema door een verrichting van de PUT vervangen, hoofdzakelijk herschrijvend het middel. Wanneer het bijwerken van een schema door een verzoek van de PUT, moet het lichaam alle gebieden omvatten die zouden worden vereist wanneer [ creërend een nieuw schema ](#create) in een verzoek van de POST.
+U kunt een volledig schema door een verrichting van PUT vervangen, hoofdzakelijk herschrijvend het middel. Wanneer het bijwerken van een schema door een verzoek van PUT, moet het lichaam alle gebieden omvatten die zouden worden vereist wanneer [ creërend een nieuw schema ](#create) in een POST- verzoek.
 
 >[!NOTE]
 >
@@ -362,13 +550,13 @@ Een succesvolle reactie keert de details van het bijgewerkte schema terug.
 
 ## Een gedeelte van een schema bijwerken {#patch}
 
-U kunt een gedeelte van een schema bijwerken door een verzoek van PATCH te gebruiken. [!DNL Schema Registry] ondersteunt alle standaard JSON-patchbewerkingen, inclusief `add` , `remove` en `replace` . Voor meer informatie over Reparatie JSON, zie de [ API fundamentals gids ](../../landing/api-fundamentals.md#json-patch).
+U kunt een gedeelte van een schema bijwerken door een PATCH-verzoek te gebruiken. [!DNL Schema Registry] ondersteunt alle standaard JSON-patchbewerkingen, inclusief `add` , `remove` en `replace` . Voor meer informatie over Reparatie JSON, zie de [ API fundamentals gids ](../../landing/api-fundamentals.md#json-patch).
 
 >[!NOTE]
 >
->Als u een volledig middel met nieuwe waarden in plaats van het bijwerken van individuele gebieden wilt vervangen, zie de sectie op [ het vervangen van een schema gebruikend een verrichting van de PUT ](#put).
+>Als u een volledig middel met nieuwe waarden in plaats van het bijwerken van individuele gebieden wilt vervangen, zie de sectie op [ het vervangen van een schema gebruikend een verrichting van PUT ](#put).
 
-Een van de meest gangbare PATCH-bewerkingen bestaat uit het toevoegen van eerder gedefinieerde veldgroepen aan een schema, zoals in het onderstaande voorbeeld wordt getoond.
+Een van de meest voorkomende PATCH-bewerkingen bestaat uit het toevoegen van eerder gedefinieerde veldgroepen aan een schema, zoals in het onderstaande voorbeeld wordt getoond.
 
 **API formaat**
 
@@ -455,7 +643,7 @@ De reactie toont aan dat beide bewerkingen met succes zijn uitgevoerd. De veldgr
 
 ## Een schema inschakelen voor gebruik in realtime-klantprofiel {#union}
 
-Opdat een schema om aan [ in real time Profiel van de Klant ](../../profile/home.md) deel te nemen, moet u a `union` markering aan de 3&rbrace; serie van het schema &lbrace;toevoegen. `meta:immutableTags` U kunt dit bereiken door een PATCH-verzoek voor het desbetreffende schema in te dienen.
+Opdat een schema om aan [ in real time Profiel van de Klant ](../../profile/home.md) deel te nemen, moet u a `union` markering aan de 3} serie van het schema {toevoegen. `meta:immutableTags` U kunt dit bereiken door een PATCH-aanvraag voor het desbetreffende schema in te dienen.
 
 >[!IMPORTANT]
 >
@@ -542,7 +730,7 @@ U kunt nu de samenvoeging voor de klasse van dit schema bekijken om te bevestige
 
 ## Schema verwijderen {#delete}
 
-Het kan soms noodzakelijk zijn om een schema uit de Registratie van het Schema te verwijderen. Dit wordt gedaan door een verzoek van de DELETE met schema identiteitskaart uit te voeren die in de weg wordt verstrekt.
+Het kan soms noodzakelijk zijn om een schema uit de Registratie van het Schema te verwijderen. Dit wordt gedaan door een DELETE- verzoek met schema-identiteitskaart uit te voeren die in de weg wordt verstrekt.
 
 **API formaat**
 
@@ -571,4 +759,4 @@ curl -X DELETE \
 
 Een geslaagde reactie retourneert HTTP-status 204 (Geen inhoud) en een lege hoofdtekst.
 
-U kunt de schrapping bevestigen door een raadpleging (GET) verzoek aan het schema te proberen. U moet een header `Accept` in de aanvraag opnemen, maar u moet de HTTP-status 404 (Niet gevonden) ontvangen omdat het schema uit de schemaregistratie is verwijderd.
+U kunt de verwijdering bevestigen door een opzoekverzoek (GET) in te dienen bij het schema. U moet een header `Accept` in de aanvraag opnemen, maar u moet de HTTP-status 404 (Niet gevonden) ontvangen omdat het schema uit de schemaregistratie is verwijderd.

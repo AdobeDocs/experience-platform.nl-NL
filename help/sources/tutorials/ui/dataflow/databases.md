@@ -5,9 +5,9 @@ title: Een gegevensstroom maken met een database-Source in de gebruikersinterfac
 type: Tutorial
 description: Een dataflow is een geplande taak die gegevens van een bron aan een dataset van Experience Platform terugwint en opneemt. Deze zelfstudie bevat stappen voor het maken van een gegevensstroom voor een databasebron met behulp van de gebruikersinterface van Experience Platform.
 exl-id: 9fd8a7ec-bbd8-4890-9860-e6defc6cade3
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 2f8589ec58d9afe69e21f909f905a941e43f710c
 workflow-type: tm+mt
-source-wordcount: '1531'
+source-wordcount: '1653'
 ht-degree: 0%
 
 ---
@@ -88,6 +88,16 @@ De stap [!UICONTROL Mapping] verschijnt, die u van een interface voorziet om de 
 
 Experience Platform biedt intelligente aanbevelingen voor automatisch toegewezen velden op basis van het doelschema of de gegevensset die u hebt geselecteerd. U kunt toewijzingsregels handmatig aanpassen aan uw gebruiksgevallen. Op basis van uw behoeften kunt u ervoor kiezen om velden rechtstreeks toe te wijzen of gegevens prep-functies te gebruiken om brongegevens om berekende of berekende waarden af te leiden. Voor uitvoerige stappen bij het gebruiken van de kaartperinterface en berekende gebieden, zie de [ gids UI van de Prep van Gegevens ](../../../../data-prep/ui/mapping.md).
 
+>[!NOTE]
+>
+>Wanneer het in kaart brengen aan model-gebaseerde schema&#39;s, zorg ervoor uw brongegevens de vereiste gebieden, zoals een primaire sleutel en een versie herkenningsteken, of een timestamp herkenningsteken voor tijdreeksschema&#39;s omvat,.
+
+Besturingskolommen, zoals `_change_request_type` , die worden gebruikt voor het vastleggen van wijzigingsgegevens, worden gelezen tijdens het opnemen, maar worden niet opgeslagen in het doelschema.
+
+Modelgebaseerde schema&#39;s ondersteunen ook relaties tussen gegevenssets met behulp van primaire en externe sleuteltoewijzingen.
+
+Voor meer informatie, zie het [ overzicht van Data Mirror ](../../../../xdm/data-mirror/overview.md) en [ model-gebaseerde schema&#39;s technische verwijzing ](../../../../xdm/schema/model-based.md).
+
 Selecteer **[!UICONTROL Next]** wanneer de brongegevens correct zijn toegewezen.
 
 ![ afbeelding ](../../../images/tutorials/dataflow/table-based/mapping.png)
@@ -123,7 +133,7 @@ Zie de lijst hieronder voor meer informatie over het plannen van configuraties.
 De stap **[!UICONTROL Review]** wordt weergegeven, zodat u de nieuwe gegevensstroom kunt bekijken voordat deze wordt gemaakt. De details worden gegroepeerd in de volgende categorieën:
 
 * **[!UICONTROL Connection]**: geeft het brontype, het relevante pad van het gekozen bronbestand en de hoeveelheid kolommen in dat bronbestand weer.
-* **[!UICONTROL Assign dataset & map fields]**: Toont welke dataset de brongegevens worden opgenomen in, met inbegrip van het schema dat de dataset volgt aan.
+* **[!UICONTROL Assign dataset & map fields]**: geeft de gegevensset weer waarin de brongegevens worden opgenomen, samen met het bijbehorende schema. Als u een model-gebaseerd schema gebruikt, verifieer dat de vereiste gebieden, zoals de primaire sleutel en versie herkenningsteken, correct in kaart worden gebracht. Ook, zorg ervoor dat om het even welke kolom van de de vangstcontrole van veranderingsgegevens behoorlijk wordt gevormd. Datasets die model-gebaseerde schema&#39;s gebruiken steunen veelvoudige gegevensmodellen en laten [ veranderingsgegevens toe vangen werkschema&#39;s ](../../api/change-data-capture.md).
 * **[!UICONTROL Scheduling]**: geeft de actieve periode, frequentie en interval van het innameschema weer.
 
 Nadat u de gegevensstroom hebt gereviseerd, selecteert u **[!UICONTROL Finish]** en laat u enige tijd over om de gegevensstroom te maken.

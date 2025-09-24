@@ -1,56 +1,123 @@
 ---
 title: Vastleggen van wijzigingsgegevens inschakelen voor bronverbindingen in de API
 description: Leer hoe u het vastleggen van wijzigingsgegevens inschakelt voor bronverbindingen in de API
-source-git-commit: d8b4557424e1f29dfdd8893932aef914226dd60d
+exl-id: 362f3811-7d1e-4f16-b45f-ce04f03798aa
+source-git-commit: 192e97c97ffcb2d695bcfa6269cc6920f5440832
 workflow-type: tm+mt
-source-wordcount: '815'
+source-wordcount: '1238'
 ht-degree: 0%
 
 ---
 
 # Vastleggen van wijzigingsgegevens inschakelen voor bronverbindingen in de API
 
-Het vastleggen van gegevens in Adobe Experience Platform-bronnen wijzigen is een mogelijkheid waarmee u gegevenssynchronisatie in real time tussen uw bron- en doelsystemen kunt onderhouden.
+Met de functie voor het vastleggen van wijzigingsgegevens in Adobe Experience Platform-bronnen zorgt u ervoor dat uw bron- en doelsystemen vrijwel realtime gesynchroniseerd blijven.
 
-Momenteel, steunt Experience Platform **stijgende gegevensexemplaar**, dat ervoor zorgt dat de pas gecreëerde of bijgewerkte verslagen in het bronsysteem periodiek aan de ingebedde datasets worden gekopieerd. Dit proces baseert zich op gebruik van de **timestamp kolom**, zoals `LastModified` om veranderingen te volgen en **slechts de onlangs opgenomen of bijgewerkte gegevens** te vangen. Deze methode houdt echter geen rekening met verwijderde records, wat in de loop der tijd tot inconsistenties in de gegevens kan leiden.
+Experience Platform steunt momenteel **stijgende gegevensexemplaar**, dat periodiek nieuw gecreeerde of bijgewerkte verslagen van het bronsysteem aan de ingebedde datasets overbrengt. Deze methode baseert zich op de kolom van a **timestamp** om veranderingen te volgen, maar het ontdekt geen schrappingen, die tot gegevensinconsistenties in tijd kunnen leiden.
 
-Bij het vastleggen van wijzigingsgegevens legt een bepaalde stroom alle wijzigingen vast en past deze toe, inclusief het invoegen, bijwerken en verwijderen. Op dezelfde manier blijven de datasets van Experience Platform volledig gesynchroniseerd met het bronsysteem.
+Als u daarentegen de gegevensopname wijzigt, worden de gegevens vastgelegd en worden invoegingen, updates en verwijderingen in bijna real-time toegepast. Deze uitvoerige verandering het volgen zorgt ervoor dat de datasets volledig gericht op het bronsysteem blijven en verstrekt een volledige veranderingsgeschiedenis, voorbij welke stijgende exemplaar steunt. Nochtans, schrapt verrichtingen vereisen speciale overweging aangezien zij alle toepassingen beïnvloeden die de doeldatasets gebruiken.
 
-U kunt het vangen van veranderingsgegevens voor de volgende bronnen gebruiken:
+De gegevens van de verandering vangen in Experience Platform vereist **[Data Mirror](../../../xdm/data-mirror/overview.md)** met [ model-gebaseerde schema&#39;s ](../../../xdm/schema/model-based.md) (ook genoemd relationele schema&#39;s). U kunt wijzigingsgegevens op twee manieren naar Data Mirror verzenden:
 
-## [!DNL Amazon S3]
+* **[Handmatige verandering het volgen](#file-based-sources)**: Omvat a `_change_request_type` kolom in uw dataset voor bronnen die niet natically veranderingsgegevens produceren vangen verslagen
+* **[de Inheemse vangst van veranderingsgegevens voert](#database-sources)** uit: De verslagen van de vangst van veranderingsgegevens van het gebruik direct uit uw bronsysteem worden uitgevoerd
 
-Zorg ervoor dat `_change_request_type` aanwezig is in het [!DNL Amazon S3] -bestand dat u wilt toevoegen aan Experience Platform. Daarnaast moet u ervoor zorgen dat de volgende geldige waarden in het bestand worden opgenomen:
+Beide benaderingen vereisen Data Mirror met model-gebaseerde schema&#39;s om verhoudingen te bewaren en uniciteit af te dwingen.
 
-* `u`: voor invoegen en bijwerken
-* `d` : voor verwijderingen.
+## Data Mirror met modelgebaseerde schema&#39;s
 
-Als `_change_request_type` niet aanwezig is in uw bestand, wordt de standaardwaarde van `u` gebruikt.
+>[!AVAILABILITY]
+>
+>Data Mirror en op model-gebaseerde schema&#39;s zijn beschikbaar aan Adobe Journey Optimizer **Geordende campagnes** vergunninghouders. Zij zijn ook beschikbaar als a **beperkte versie** voor de gebruikers van Customer Journey Analytics, afhankelijk van uw vergunning en eigenschapenactivering. Neem contact op met uw Adobe-vertegenwoordiger voor toegang.
 
-Lees de volgende documentatie voor stappen over het inschakelen van het vastleggen van wijzigingsgegevens voor uw [!DNL Amazon S3] bronverbinding:
+>[!NOTE]
+>
+>**Geordende campagnegebruikers**: Gebruik de mogelijkheden van Data Mirror die in dit document worden beschreven om met klantengegevens te werken die referentiële integriteit handhaven. Zelfs als uw bron geen opmaak voor het vastleggen van wijzigingsgegevens gebruikt, biedt Data Mirror ondersteuning voor relationele functies, zoals primaire toetsenbordhandhaving, upserts op recordniveau en schema-relaties. Deze eigenschappen verzekeren verenigbare en betrouwbare gegevensmodellering over verbonden datasets.
 
-* [ creeer a [!DNL Amazon S3]  basisverbinding ](../api/create/cloud-storage/s3.md).
-* [ creeer een bronverbinding voor een wolkenopslag ](../api/collect/cloud-storage.md#create-a-source-connection).
+Data Mirror gebruikt modelgebaseerde schema&#39;s om het vastleggen van wijzigingsgegevens uit te breiden en geavanceerde mogelijkheden voor databasesynchronisatie in te schakelen. Voor een overzicht van Data Mirror, zie [ overzicht van Data Mirror ](../../../xdm/data-mirror/overview.md).
 
-## [!DNL Azure Blob]
+Model-gebaseerde schema&#39;s breiden Experience Platform uit om primaire zeer belangrijke uniciteit af te dwingen, rij-vlakke veranderingen te volgen, en schema-vlakke verhoudingen te bepalen. Met veranderingsgegevens vangen, passen zij tussenvoegsels toe, updates, en schrapt direct in het gegevensmeer, die de behoefte aan Extraheren, Transformeren, Lading (ETL) of handverzoening verminderen.
 
-Zorg ervoor dat `_change_request_type` aanwezig is in het [!DNL Azure Blob] -bestand dat u wilt toevoegen aan Experience Platform. Daarnaast moet u ervoor zorgen dat de volgende geldige waarden in het bestand worden opgenomen:
+Zie [ Model-Gebaseerde schema&#39;s overzicht ](../../../xdm/schema/model-based.md) voor meer informatie.
 
-* `u`: voor invoegen en bijwerken
-* `d` : voor verwijderingen.
+### Op modellen gebaseerde schemavereisten voor het vastleggen van wijzigingsgegevens
 
-Als `_change_request_type` niet aanwezig is in uw bestand, wordt de standaardwaarde van `u` gebruikt.
+Voordat u een op een model gebaseerd schema gebruikt met het vastleggen van wijzigingsgegevens, configureert u de volgende id&#39;s:
 
-Lees de volgende documentatie voor stappen over het inschakelen van het vastleggen van wijzigingsgegevens voor uw [!DNL Azure Blob] bronverbinding:
+* Elke record op unieke wijze identificeren met een primaire sleutel.
+* Pas opeenvolgende updates toe met behulp van een versie-id.
+* Voeg een tijdstempel-id toe aan tijdreeksschema&#39;s.
 
-* [ creeer a [!DNL Azure Blob]  basisverbinding ](../api/create/cloud-storage/blob.md).
-* [ creeer een bronverbinding voor een wolkenopslag ](../api/collect/cloud-storage.md#create-a-source-connection).
+### Bediening van kolommen {#control-column-handling}
 
-## [!DNL Azure Databricks]
+Gebruik de kolom `_change_request_type` om op te geven hoe elke rij moet worden verwerkt:
 
-U moet **voer van veranderingsgegevens** in uw [!DNL Azure Databricks] lijst toelaten om veranderingsgegevens te gebruiken vangen in uw bronverbinding.
+* `u` — upsert (standaardwaarde als de kolom ontbreekt)
+* `d` — delete
 
-Gebruik de volgende opdrachten om de optie voor het doorvoeren van gegevens wijzigen expliciet in te schakelen in [!DNL Azure Databricks]
+Deze kolom wordt alleen geëvalueerd tijdens inname en wordt niet opgeslagen of toegewezen aan XDM-velden.
+
+### Workflow {#workflow}
+
+Om veranderingsgegevens toe te laten vangen met een model-gebaseerd schema:
+
+1. Maak een op een model gebaseerd schema.
+2. Voeg de vereiste beschrijvingen toe:
+   * [Descriptor primaire sleutel](../../../xdm/api/descriptors.md#primary-key-descriptor)
+   * [Versiebeschrijving](../../../xdm/api/descriptors.md#version-descriptor)
+   * [ de beschrijver van de tijdstempel ](../../../xdm/api/descriptors.md#timestamp-descriptor) (tijd-reeksen slechts)
+3. Creeer een dataset van het schema en laat veranderingsgegevens toe vangen.
+4. Alleen voor op een bestand gebaseerde invoer: voeg de kolom `_change_request_type` toe aan uw bronbestanden als u expliciet verwijderingsbewerkingen moet opgeven. CDC-exportconfiguraties verwerken dit automatisch voor databasebronnen.
+5. Voltooi de instelling van de bronverbinding om opname in te schakelen.
+
+>[!NOTE]
+>
+>De kolom `_change_request_type` is alleen vereist voor bestandsgebaseerde bronnen (Amazon S3, Azure Blob, Google Cloud Storage, SFTP) wanneer u wijzigingsgedrag op rijniveau expliciet wilt bepalen. Voor databasebronnen met native CDC-mogelijkheden worden wijzigingsbewerkingen automatisch afgehandeld via CDC-exportconfiguraties. Op bestand gebaseerde invoer gaat standaard uit van upserbewerkingen. U hoeft deze kolom alleen toe te voegen als u verwijderbewerkingen wilt opgeven in het uploaden van bestanden.
+
+>[!IMPORTANT]
+>
+>**de schrapping van Gegevens planning wordt vereist**. Alle toepassingen die op model-gebaseerde schema&#39;s gebruiken moeten schrappingsimplicaties begrijpen alvorens veranderingsgegevens uit te voeren vangen. Plan voor hoe schrappingen verwante datasets, nalevingsvereisten, en stroomafwaartse processen zullen beïnvloeden. Zie [ overwegingen van de gegevenshygiëne ](../../../hygiene/ui/record-delete.md#model-based-record-delete) voor begeleiding.
+
+## Wijzigingsgegevens opgeven voor op bestanden gebaseerde bronnen {#file-based-sources}
+
+>[!IMPORTANT]
+>
+>Voor het vastleggen van wijzigingsgegevens op basis van bestanden is Data Mirror met modelschema&#39;s vereist. Alvorens de dossier volgende formatterende stappen hieronder te volgen, zorg ervoor u het [ de opstellingswerkschema van Data Mirror ](#workflow) eerder in dit document beschreven hebt voltooid. In de onderstaande stappen wordt beschreven hoe u uw gegevensbestanden kunt opmaken met informatie over het bijhouden van wijzigingen die door Data Mirror wordt verwerkt.
+
+Voor bestandsgebaseerde bronnen ([!DNL Amazon S3] , [!DNL Azure Blob] , [!DNL Google Cloud Storage] en [!DNL SFTP] ) neemt u een `_change_request_type` -kolom op in uw bestanden.
+
+Gebruik de `_change_request_type` waarden die in de [ worden bepaald kolom behandelende ](#control-column-handling) sectie hierboven.
+
+>[!IMPORTANT]
+>
+>Voor **dossier-gebaseerde slechts bronnen**, kunnen bepaalde toepassingen een `_change_request_type` kolom met of `u` (upsert) of `d` (schrapping) vereisen om verandering volgende mogelijkheden te bevestigen. Bijvoorbeeld, vereist de Adobe Journey Optimizer **Geordende campagnes** eigenschap deze kolom om de &quot;Geordende campagneknevel&quot;toe te laten en datasetselectie voor het richten toe te staan. Toepassingsspecifieke validatievereisten kunnen variëren.
+
+Voer de onderstaande bronspecifieke stappen uit.
+
+### Opslagbronnen voor cloud {#cloud-storage-sources}
+
+Schakel het vastleggen van wijzigingsgegevens voor bronnen voor cloudopslag als volgt in:
+
+1. Maak een basisverbinding voor uw bron:
+
+   | Bron | Basisverbindingshulplijn |
+   |---|---|
+   | [!DNL Amazon S3] | [ creeer a [!DNL Amazon S3]  basisverbinding ](../api/create/cloud-storage/s3.md) |
+   | [!DNL Azure Blob] | [ creeer a [!DNL Azure Blob]  basisverbinding ](../api/create/cloud-storage/blob.md) |
+   | [!DNL Google Cloud Storage] | [ creeer a [!DNL Google Cloud Storage]  basisverbinding ](../api/create/cloud-storage/google.md) |
+   | [!DNL SFTP] | [ creeer a [!DNL SFTP]  basisverbinding ](../api/create/cloud-storage/sftp.md) |
+
+2. [ creeer een bronverbinding voor een wolkenopslag ](../api/collect/cloud-storage.md#create-a-source-connection).
+
+Alle bronnen van de wolkenopslag gebruiken het zelfde `_change_request_type` kolomformaat dat in de [ op dossier-gebaseerde bronnen ](#file-based-sources) hierboven wordt beschreven sectie.
+
+## Databasebronnen {#database-sources}
+
+### [!DNL Azure Databricks]
+
+Om veranderingsgegevens te gebruiken vangt met [!DNL Azure Databricks], moet u **gegevenstoevoer van de verandering** in uw bronlijsten toelaten en Data Mirror met model-gebaseerde schema&#39;s in Experience Platform vormen.
+
+Gebruik de volgende opdrachten om de invoer van wijzigingsgegevens in uw tabellen in te schakelen:
 
 **Nieuwe lijst**
 
@@ -83,20 +150,20 @@ Lees de volgende documentatie voor stappen over het inschakelen van het vastlegg
 * [ creeer a [!DNL Azure Databricks]  basisverbinding ](../api/create/databases/databricks.md).
 * [ creeer een bronverbinding voor een gegevensbestand ](../api/collect/database-nosql.md#create-a-source-connection).
 
-## [!DNL Data Landing Zone]
+### [!DNL Data Landing Zone]
 
-U moet **voer van veranderingsgegevens** in uw [!DNL Data Landing Zone] lijst toelaten om veranderingsgegevens te gebruiken vangen in uw bronverbinding.
-
-Gebruik de volgende opdrachten om de optie voor het doorvoeren van gegevens wijzigen expliciet in te schakelen in [!DNL Data Landing Zone] .
+Om veranderingsgegevens te gebruiken vangt met [!DNL Data Landing Zone], moet u **gegevenstoevoer van de verandering** in uw bronlijsten toelaten en Data Mirror met model-gebaseerde schema&#39;s in Experience Platform vormen.
 
 Lees de volgende documentatie voor stappen over het inschakelen van het vastleggen van wijzigingsgegevens voor uw [!DNL Data Landing Zone] bronverbinding:
 
 * [ creeer a [!DNL Data Landing Zone]  basisverbinding ](../api/create/cloud-storage/data-landing-zone.md).
 * [ creeer een bronverbinding voor een wolkenopslag ](../api/collect/cloud-storage.md#create-a-source-connection).
 
-## [!DNL Google BigQuery]
+### [!DNL Google BigQuery]
 
-Om veranderingsgegevens te gebruiken vangen in uw [!DNL Google BigQuery] bronverbinding. Navigeer naar de pagina [!DNL Google BigQuery] in de [!DNL Google Cloud] console en stel `enable_change_history` in op `TRUE` . Met deze eigenschap wordt de wijzigingshistorie voor uw gegevenstabel ingeschakeld.
+Als u wijzigingsgegevens wilt vastleggen met [!DNL Google BigQuery] , moet u de wijzigingshistorie in uw brontabellen inschakelen en Data Mirror configureren met modelschema&#39;s in Experience Platform.
+
+Als u wijzigingsgeschiedenis wilt inschakelen in uw [!DNL Google BigQuery] bronverbinding, navigeert u naar de [!DNL Google BigQuery] -pagina in de [!DNL Google Cloud] -console en stelt u `enable_change_history` in op `TRUE` . Met deze eigenschap wordt de wijzigingshistorie voor uw gegevenstabel ingeschakeld.
 
 Voor meer informatie, lees de gids over [ de taalverklaringen van de gegevensdefinitie in  [!DNL GoogleSQL] ](https://cloud.google.com/bigquery/docs/reference/standard-sql/data-definition-language#table_option_list).
 
@@ -105,39 +172,9 @@ Lees de volgende documentatie voor stappen over het inschakelen van het vastlegg
 * [ creeer a [!DNL Google BigQuery]  basisverbinding ](../api/create/databases/bigquery.md).
 * [ creeer een bronverbinding voor een gegevensbestand ](../api/collect/database-nosql.md#create-a-source-connection).
 
-## [!DNL Google Cloud Storage]
+### [!DNL Snowflake]
 
-Zorg ervoor dat `_change_request_type` aanwezig is in het [!DNL Google Cloud Storage] -bestand dat u wilt toevoegen aan Experience Platform. Daarnaast moet u ervoor zorgen dat de volgende geldige waarden in het bestand worden opgenomen:
-
-* `u`: voor invoegen en bijwerken
-* `d` : voor verwijderingen.
-
-Als `_change_request_type` niet aanwezig is in uw bestand, wordt de standaardwaarde van `u` gebruikt.
-
-Lees de volgende documentatie voor stappen over het inschakelen van het vastleggen van wijzigingsgegevens voor uw [!DNL Google Cloud Storage] bronverbinding:
-
-* [ creeer a [!DNL Google Cloud Storage]  basisverbinding ](../api/create/cloud-storage/google.md).
-* [ creeer een bronverbinding voor een wolkenopslag ](../api/collect/cloud-storage.md#create-a-source-connection).
-
-
-## [!DNL SFTP]
-
-Zorg ervoor dat `_change_request_type` aanwezig is in het [!DNL SFTP] -bestand dat u wilt toevoegen aan Experience Platform. Daarnaast moet u ervoor zorgen dat de volgende geldige waarden in het bestand worden opgenomen:
-
-* `u`: voor invoegen en bijwerken
-* `d` : voor verwijderingen.
-
-Als `_change_request_type` niet aanwezig is in uw bestand, wordt de standaardwaarde van `u` gebruikt.
-
-Lees de volgende documentatie voor stappen over het inschakelen van het vastleggen van wijzigingsgegevens voor uw [!DNL SFTP] bronverbinding:
-
-* [ creeer a [!DNL SFTP]  basisverbinding ](../api/create/cloud-storage/sftp.md).
-* [ creeer een bronverbinding voor een wolkenopslag ](../api/collect/cloud-storage.md#create-a-source-connection).
-
-
-## [!DNL Snowflake]
-
-U moet **verandering het volgen** in uw [!DNL Snowflake] lijsten toelaten om veranderingsgegevens te gebruiken vangen in uw bronverbindingen.
+Om veranderingsgegevens te gebruiken vangen met [!DNL Snowflake], moet u **verandering het volgen** in uw bronlijsten toelaten en Data Mirror met model-gebaseerde schema&#39;s in Experience Platform vormen.
 
 Schakel in [!DNL Snowflake] de optie Wijzigingen bijhouden in met de waarden `ALTER TABLE` en `CHANGE_TRACKING` op `TRUE` .
 
@@ -151,4 +188,3 @@ Lees de volgende documentatie voor stappen over het inschakelen van het vastlegg
 
 * [ creeer a [!DNL Snowflake]  basisverbinding ](../api/create/databases/snowflake.md).
 * [ creeer een bronverbinding voor een gegevensbestand ](../api/collect/database-nosql.md#create-a-source-connection).
-

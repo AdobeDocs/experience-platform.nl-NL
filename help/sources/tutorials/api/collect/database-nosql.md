@@ -3,9 +3,9 @@ title: Creeer een Dataflow voor de Bronnen van het Gegevensbestand Gebruikend de
 type: Tutorial
 description: Leer hoe u de Flow Service API kunt gebruiken om een gegevensstroom te maken en gegevens van uw database in Experience Platform in te voeren.
 exl-id: 1e1f9bbe-eb5e-40fb-a03c-52df957cb683
-source-git-commit: b4f8d44c3ce9507ff158cf051b7a4b524b293c64
+source-git-commit: 02a22362b9ecbfc5fd7fcf17dc167309a0ea45d5
 workflow-type: tm+mt
-source-wordcount: '1456'
+source-wordcount: '1489'
 ht-degree: 0%
 
 ---
@@ -113,7 +113,7 @@ curl -X POST \
 | -------- | ----------- |
 | `baseConnectionId` | De verbinding-id van uw databasebron. |
 | `params.tableName` | Het pad van het bronbestand. |
-| `params.cdcEnabled` | Een booleaanse waarde die aangeeft of het vastleggen van de wijzigingshistorie is ingeschakeld. Deze eigenschap wordt ondersteund door de volgende databasebronnen: <ul><li>[!DNL Azure Databricks]</li><li>[!DNL Google BigQuery]</li><li>[!DNL Snowflake]</li></ul> Voor meer informatie, lees de gids bij het gebruiken van [ veranderingsgegevens vangen in bronnen ](../change-data-capture.md). |
+| `params.cdcEnabled` | Een booleaanse waarde die aangeeft of het vastleggen van de wijzigingshistorie is ingeschakeld. Wanneer gebruikt met op model-gebaseerde schema&#39;s, verandert gegevens vangt sporen tussenvoegsels, updates, en schrapt om de doeldataset te houden die met de bron wordt gesynchroniseerd. Deze eigenschap wordt ondersteund door de volgende databasebronnen: <ul><li>[!DNL Azure Databricks]</li><li>[!DNL Google BigQuery]</li><li>[!DNL Snowflake]</li></ul> Voor een overzicht van dit vermogen, zie het [ overzicht van Data Mirror ](../../../../xdm/data-mirror/overview.md). Voor implementatiedetails, zie [ veranderingsgegevens vangen in bronnen gids ](../change-data-capture.md) en [ op model-gebaseerde schema&#39;s technische verwijzing ](../../../../xdm/schema/model-based.md). |
 | `connectionSpec.id` | De id van de verbindingsspecificatie van uw databasebron. Zie [ Bijlage ](#appendix) voor een lijst van gegevensbestand specifieke IDs. |
 
 **Reactie**

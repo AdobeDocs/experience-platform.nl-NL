@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Overzicht Source Connectors
 description: Adobe Experience Platform staat toe dat gegevens uit externe bronnen worden opgenomen en biedt u de mogelijkheid om inkomende gegevens te structureren, labelen en verbeteren met behulp van Experience Platform-services. U kunt gegevens invoeren uit verschillende bronnen, zoals Adobe-toepassingen, opslag in de cloud, databases en vele andere.
 exl-id: efdbed4d-5697-43ef-a47a-a8bcf0f13237
-source-git-commit: 91d6206c6ce387fde365fa72dc79ca79fc0e46fa
+source-git-commit: f424c5c7e436a7f4c45d37c004096d3924247158
 workflow-type: tm+mt
-source-wordcount: '1636'
+source-wordcount: '1666'
 ht-degree: 1%
 
 ---
@@ -61,7 +61,7 @@ Experience Platform staat toe dat gegevens worden ingevoerd van andere Adobe-toe
 
 ### Geavanceerde bedrijfsbronnen {#advanced-enterprise-sources}
 
-De volgende bronnen zijn beschikbaar aan [ Adobe Real-Time Customer Data Platform Ultimate ](https://helpx.adobe.com/nl/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html) slechts klanten.
+De volgende bronnen zijn beschikbaar aan [ Adobe Real-Time Customer Data Platform Ultimate ](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html) slechts klanten.
 
 | Bron | Categorie | Type ontsteking | Wolk |
 | --- | --- | --- | --- |
@@ -306,7 +306,11 @@ Met op attribuut-gebaseerde toegangsbeheer, kunt u toewijzingsconfiguraties op g
 
 - Pas etiketten op schemagebieden toe om toegang tot specifieke schemagebieden in uw organisatie te bepalen. Zodra de toegang tot specifieke schemagebieden wordt gevestigd, zullen de gebruikers slechts afbeeldingen voor de gebieden kunnen tot stand brengen die zij toegang hebben tot.
 - Gebruikers zonder de juiste rollen kunnen geen dataflows met toewijzingen maken of bijwerken die ontoegankelijke schemavelden bevatten. Bovendien kunnen onbevoegde gebruikers bestaande gegevensstromen met ontoegankelijke schemavelden niet bijwerken, verwijderen, inschakelen of uitschakelen.
-- Bovendien, moet een dataflow precies zelfde schema identiteitskaart en versie in zijn afbeelding, doeldataset, en doelverbinding hebben.
+- Bovendien, moet een dataflow precies zelfde schema identiteitskaart en versie in zijn afbeelding, doeldataset, en doelverbinding hebben. Dit geldt voor zowel standaard XDM-schema&#39;s als op model gebaseerde schema&#39;s.
+
+>[!NOTE]
+>
+>Op modellen gebaseerde schema&#39;s hebben aanvullende vereisten, waaronder velden voor primaire sleutel en versie-id. Voor meer informatie, zie het [ model-Gebaseerde schemaoverzicht ](../xdm/schema/model-based.md).
 
 Voor meer informatie over op attribuut-gebaseerde toegangsbeheer, lees het [ op attributen-gebaseerde toegangsbeheeroverzicht ](../access-control/abac/overview.md).
 

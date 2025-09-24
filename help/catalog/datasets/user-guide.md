@@ -4,7 +4,7 @@ solution: Experience Platform
 title: UI-gids voor gegevensbestanden
 description: Leer hoe u algemene handelingen uitvoert wanneer u werkt met gegevenssets in de Adobe Experience Platform-gebruikersinterface.
 exl-id: f0d59d4f-4ebd-42cb-bbc3-84f38c1bf973
-source-git-commit: 1b278562c815953d2068a5142dbefcf1572baff5
+source-git-commit: 2f8589ec58d9afe69e21f909f905a941e43f710c
 workflow-type: tm+mt
 source-wordcount: '4259'
 ht-degree: 0%
@@ -57,7 +57,7 @@ Deze gebruikershandleiding vereist een goed begrip van de volgende onderdelen va
 >[!CONTEXTUALHELP]
 >id="platform_datasets_orchestratedCampaigns_toggle"
 >title="Geordende campagnes"
->abstract="Schakel deze schakeloptie in om het gebruik van de geselecteerde gegevensset in Adobe Journey Optimizer Orchestrated Campaigns toe te staan. De dataset moet een relationeel schema gebruiken en slechts één dataset kan per schema worden gecreeerd."
+>abstract="Schakel deze schakeloptie in om het gebruik van de geselecteerde gegevensset in Adobe Journey Optimizer Orchestrated-campagnes toe te staan. De dataset moet een model-gebaseerd schema gebruiken en slechts één dataset kan per schema worden gecreeerd."
 
 Selecteer in de gebruikersinterface van [!DNL Experience Platform] de optie **[!UICONTROL Datasets]** in de linkernavigatie om het dashboard van **[!UICONTROL Datasets]** te openen. Het dashboard maakt een lijst van alle beschikbare datasets voor uw organisatie. De details worden getoond voor elke vermelde dataset, met inbegrip van zijn naam, het schema de dataset zich aan, en het statuut van de meest recente opnamelooppas aansluit.
 
