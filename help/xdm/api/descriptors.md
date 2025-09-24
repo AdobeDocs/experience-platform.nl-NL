@@ -525,7 +525,7 @@ De primaire zeer belangrijke beschrijver (`xdm:descriptorPrimaryKey`) dwingt uni
 
 >[!NOTE]
 >
->In de Redacteur van het Schema UI, verschijnt de versiedescriptor als &quot;[!UICOTRNOL  herkenningsteken van de Versie ].&quot;
+>In de Redacteur van het Schema UI, verschijnt de versiedescriptor als &quot;[ !UICOTRNOL  herkenningsteken van de Versie ].&quot;
 
 De versiedescriptor (`xdm:descriptorVersion`) wijst een gebied aan om conflicten van uit-van-orde veranderingsgebeurtenissen te ontdekken en te verhinderen.
 
@@ -547,7 +547,7 @@ De versiedescriptor (`xdm:descriptorVersion`) wijst een gebied aan om conflicten
 
 >[!NOTE]
 >
->In de Redacteur van het Schema UI, verschijnt de timestamp beschrijver als &quot;[!UICOTRNOL  herkenningsteken Tijdstempel ].&quot;
+>In de Redacteur van het Schema UI, verschijnt de timestamp beschrijver als &quot;[ !UICOTRNOL  herkenningsteken Tijdstempel ].&quot;
 
 In de tijdstempeldescriptor (`xdm:descriptorTimestamp`) wordt een datum-tijdveld aangewezen als tijdstempel voor schema&#39;s met `"meta:behaviorType": "time-series"` .
 

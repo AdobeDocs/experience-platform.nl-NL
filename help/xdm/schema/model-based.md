@@ -71,7 +71,7 @@ Gebruik een descriptor van de primaire sleutel om ervoor te zorgen dat elke reco
 
 >[!NOTE]
 >
->In de Redacteur van het Schema UI, verschijnen de versiedescriptor en timestamp beschrijvers als &quot;[!UICOTRNOL  herkenningsteken van de Versie ]&quot; en &quot;[!UICOTRNOL  herkenningsteken van de Chronologie ]&quot; respectievelijk.
+>In de Redacteur van het Schema UI, verschijnen de versiedescriptor en timestamp beschrijvers als &quot;[ !UICOTRNOL  herkenningsteken van de Versie ]&quot; en &quot;[ !UICOTRNOL  herkenningsteken van de Chronologie ]&quot; respectievelijk.
 
 **Voorbeeld (enig-gebied):**
 

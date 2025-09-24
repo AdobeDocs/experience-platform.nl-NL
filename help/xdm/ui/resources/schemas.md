@@ -79,8 +79,8 @@ Daarna, ga aan [ te werk bepalen primaire sleutels ](../fields/identity.md#defin
 
 >[!NOTE]
 >
->Nadat het [!UICONTROL Type] -veld in de [!UICONTROL  Schema properties] -zijbalk is opgeslagen, geeft dit aan dat het een [!UICONTROL Model-based] -schema is. Dit wordt ook vermeld in de detailszijbalk in de mening van de schemainventaris.
->>![Het canvas van de Redacteur van het Schema die een lege op model-gebaseerde schemastructuur tonen met op model-Gebaseerd benadrukt type.](../../images/ui/resources/schemas/relational-empty-canvas.png)
+>Nadat het [!UICONTROL Type] -veld in de [!UICONTROL &#x200B; Schema properties] -zijbalk is opgeslagen, geeft dit aan dat het een [!UICONTROL Model-based] -schema is. Dit wordt ook vermeld in de detailszijbalk in de mening van de schemainventaris.
+>&#x200B;>![Het canvas van de Redacteur van het Schema die een lege op model-gebaseerde schemastructuur tonen met op model-Gebaseerd benadrukt type.](../../images/ui/resources/schemas/relational-empty-canvas.png)
 
 ### Een DDL-bestand uploaden {#upload-ddl-file}
 
@@ -120,7 +120,7 @@ Als u Standaardschematype selecteert in het vervolgkeuzemenu &#39;Selecteer een 
 
 ![ creeer een schemadialoog met de werkschemaopties en selecteer benadrukt.](../../images/ui/resources/schemas/create-a-schema-dialog.png)
 
-### [!BADGE  Beta ]{type=Informative} Handboek of ML-bijgestaan schemaverwezenlijking {#manual-or-assisted}
+### [!BADGE &#x200B; Beta &#x200B;]{type=Informative} Handboek of ML-bijgestaan schemaverwezenlijking {#manual-or-assisted}
 
 Leren hoe u een algoritme van XML kunt gebruiken om een schemastructuur te adviseren die op een csv- dossier wordt gebaseerd, zie de [ machine het leren-bijgewoonde gids van de schemaverwezenlijking ](../ml-assisted-schema-creation.md). Deze UI-handleiding is gericht op de workflow voor handmatig maken.
 
@@ -253,7 +253,7 @@ Nadat u een veldgroep aan een schema hebt toegevoegd, kunt u velden globaal uit 
 >[!IMPORTANT]
 >
 >Het selecteren **[!UICONTROL Remove]** schrapt het gebied van de gebiedsgroep zelf, die *beïnvloedt alle* schema&#39;s die die gebiedsgroep gebruiken.
->>Gebruik deze optie niet tenzij u het gebied uit elk schema wilt **verwijderen dat de gebiedsgroep** omvat.
+>&#x200B;>Gebruik deze optie niet tenzij u het gebied uit elk schema wilt **verwijderen dat de gebiedsgroep** omvat.
 
 Als u een veld uit de veldgroep wilt verwijderen, selecteert u het veld op het canvas en selecteert u **[!UICONTROL Remove]** in de rechtertrack. In dit voorbeeld wordt het veld `taxId` van de groep **[!UICONTROL Demographic Details]** getoond.
 
