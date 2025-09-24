@@ -38,7 +38,7 @@ Gebruik modelgebaseerde schema&#39;s om:
 
 ## Hoe model-gebaseerde schema&#39;s van standaardXDM schema&#39;s verschillen
 
-De standaard XDM- schema&#39;s in Experience Platform volgen één van drie gegevensgedrag: Verslag, tijdreeks, of ad hoc. Voor definities en details, zie [ XDM gegevensgedrag ](https://experienceleague.adobe.com/en/docs/experience-platform/xdm/home#data-behaviors).
+De standaard XDM- schema&#39;s in Experience Platform volgen één van drie gegevensgedrag: Verslag, tijdreeks, of ad hoc. Voor definities en details, zie [ XDM gegevensgedrag ](https://experienceleague.adobe.com/nl/docs/experience-platform/xdm/home#data-behaviors).
 
 In het traditionele model, nemen het verslag en de tijd-reeksen schema&#39;s aan [ verenigingsschema&#39;s ](../api/unions.md) deel (zie ook de [ gids UI van het unieschema ](../../profile/ui/union-schema.md)). Deze schema&#39;s evolueren automatisch als gedeelde [ gebiedsgroepen ](./composition.md#field-group) worden bijgewerkt en de douanegebieden moeten onder een huurdersnamespace worden genest. Hoewel dit model krachtig is, kan het instappen vertragen, overdreven complexe schema&#39;s met ongebruikte gebieden produceren, en extra gegevenstoewijzing of transformatie vereisen. Deze factoren verhogen de leercurve en de voortdurende onderhoudsinspanningen.
 
