@@ -67,7 +67,7 @@ Raadpleeg het [[!DNL Observability Insights] overzicht](../../observability/home
 
 | Bestemming | Beschrijving |
 | --- | --- |
-| [!BADGE  Beta ]{type=Informative} [[!DNL Snowflake Batch]](../../destinations/catalog/cloud-storage/snowflake-batch.md) schakelaar | Er is nu een nieuwe [!DNL Snowflake Batch] -connector beschikbaar die een alternatief biedt voor de streamingconnector voor specifieke gebruiksgevallen. |
+| [!BADGE &#x200B; Beta &#x200B;]{type=Informative} [[!DNL Snowflake Batch]](../../destinations/catalog/cloud-storage/snowflake-batch.md) schakelaar | Er is nu een nieuwe [!DNL Snowflake Batch] -connector beschikbaar die een alternatief biedt voor de streamingconnector voor specifieke gebruiksgevallen. |
 | [[!DNL Data Landing Zone]](../../destinations/catalog/cloud-storage/data-landing-zone.md) ondersteuning voor codering | U kunt nu openbare sleutels met RSA-indeling koppelen om uw geëxporteerde bestanden te coderen, zodat u over hetzelfde beveiligingsniveau beschikt als andere bestemmingen voor cloudopslag voor uw vertrouwelijke gegevens. |
 | Gegevens over vervaldatum van verificatie voor [[!DNL Pinterest]](../../destinations/catalog/advertising/pinterest.md) doelen | Informatie over de verloopdatum van de verificatie voor [!DNL Pinterest]-bestemmingen is nu rechtstreeks zichtbaar in de Experience Platform-interface. Zo kunt u zien wanneer uw verificatie verloopt en deze vernieuwen voordat er verstoringen in uw gegevensstromen ontstaan. U kunt de vervaldatums van uw tokens controleren in de kolom **[!UICONTROL Account expiration date]** op de tabbladen **[[!UICONTROL Accounts]](../../destinations/ui/destinations-workspace.md#accounts)** of **[[!UICONTROL Browse]](../../destinations/ui/destinations-workspace.md#browse)** . |
 
