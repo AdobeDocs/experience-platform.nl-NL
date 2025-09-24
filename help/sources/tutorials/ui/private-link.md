@@ -1,13 +1,10 @@
 ---
 title: Ondersteuning voor privé-koppelingen voor bronnen in de gebruikersinterface
 description: Leer hoe u Azure Private Links voor Bronnen gebruikt in de gebruikersinterface van Experience Platform.
-badge: Beta
-hide: true
-hidefromtoc: true
 exl-id: 2882729e-2d46-48dc-9227-51dda5bf7dfb
-source-git-commit: 45a50800f74a6a072e4246b11d338b0c134856e0
+source-git-commit: 4d82b0a7f5ae9e0a7607fe7cb75261e4d3489eff
 workflow-type: tm+mt
-source-wordcount: '725'
+source-wordcount: '789'
 ht-degree: 0%
 
 ---
@@ -16,16 +13,29 @@ ht-degree: 0%
 
 >[!AVAILABILITY]
 >
->Deze functie is in bèta en wordt momenteel alleen ondersteund voor de volgende bronnen:
+>Deze functie wordt ondersteund door de volgende bronnen:
 >
 >* [[!DNL Azure Blob Storage]](../../connectors/cloud-storage/blob.md)
 >* [[!DNL ADLS Gen2]](../../connectors/cloud-storage/adls-gen2.md)
 >* [[!DNL Azure File Storage]](../../connectors/cloud-storage/azure-file-storage.md)
->* [[!DNL Snowflake]](../../connectors/databases/snowflake.md)
+>
+>Ondersteuning voor privé-koppelingen is momenteel alleen beschikbaar voor organisaties die Adobe Healthcare Shield of Adobe Privacy &amp; Security Shield hebben aangeschaft.
 
 Met de functie Privékoppelingen kunt u persoonlijke eindpunten maken waarmee uw Adobe Experience Platform-bronnen verbinding kunnen maken. Sluit veilig uw bronnen aan een virtueel netwerk aan gebruikend privé IP adressen, die de behoefte aan openbare IPs elimineren en uw aanvalsoppervlakte verminderen. Vereenvoudig uw netwerkopstelling door de behoefte aan complexe firewall of de configuraties van de Vertaling van het Adres van het Netwerk te verwijderen, terwijl het verzekeren van gegevensverkeer slechts de goedgekeurde diensten bereikt.
 
 Lees deze gids om te leren hoe u de bronwerkruimte in Experience Platform UI kunt gebruiken om een privé eindpunt tot stand te brengen en te gebruiken.
+
+>[!BEGINSHADEBOX]
+
+## Licentiegebruiksrechten voor ondersteuning van persoonlijke koppelingen
+
+De machtigingsgegevens voor het gebruik van licenties voor ondersteuning van persoonlijke koppelingen in bronnen zijn als volgt:
+
+* Klanten hebben recht op maximaal 2 TB per jaar gegevensoverdracht via ondersteunde bronnen ([!DNL Azure Blob Storage] , [!DNL ADLS Gen2] en [!DNL Azure File Storage] ) voor alle sandboxen en organisaties.
+* Elke organisatie kan een maximum van 10 eindpunten voor alle productie zandbakken hebben.
+* Elke organisatie kan een maximum van 1 eindpunt voor alle ontwikkelingszandbakken hebben.
+
+>[!ENDSHADEBOX]
 
 ## Een privé-eindpunt maken
 
@@ -45,7 +55,6 @@ Kies vervolgens de gewenste bron en voer waarden in voor de volgende eigenschapp
 | `subscriptionId` | De id die is gekoppeld aan uw [!DNL Azure] -abonnement. Voor meer informatie, lees de [!DNL Azure] gids op [ het terugwinnen van uw abonnement en huurder IDs van  [!DNL Azure Portal] ](https://learn.microsoft.com/en-us/azure/azure-portal/get-subscription-tenant-id). |
 | `resourceGroupName` | De naam van de bronnengroep op [!DNL Azure] . Een resourcegroep bevat gerelateerde bronnen voor een [!DNL Azure] -oplossing. Voor meer informatie, lees de [!DNL Azure] gids over [ het leiden middelgroepen ](https://learn.microsoft.com/en-us/azure/azure-resource-manager/management/manage-resource-groups-portal). |
 | `resourceGroup` | De naam van uw bron. In [!DNL Azure] verwijst een bron naar instanties zoals virtuele machines, webapps en databases. Voor meer informatie, lees de [!DNL Azure] gids op [ die de  [!DNL Azure]  middelmanager ](https://learn.microsoft.com/en-us/azure/azure-resource-manager/management/overview) begrijpt. |
-| `fqdns` | De volledig gekwalificeerde domeinnamen voor uw bron. **NOTA**: Dit bezit wordt vereist slechts wanneer het gebruiken van de [!DNL Snowflake] bron. |
 
 {style="table-layout:auto"}
 

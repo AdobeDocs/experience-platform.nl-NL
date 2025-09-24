@@ -1,13 +1,10 @@
 ---
 title: Ondersteuning voor persoonlijke koppelingen voor bronnen in de API
 description: Meer informatie over het maken en gebruiken van persoonlijke koppelingen voor Adobe Experience Platform Sources
-badge: Beta
-hide: true
-hidefromtoc: true
 exl-id: 9b7fc1be-5f42-4e29-b552-0b0423a40aa1
-source-git-commit: 45a50800f74a6a072e4246b11d338b0c134856e0
+source-git-commit: 4d82b0a7f5ae9e0a7607fe7cb75261e4d3489eff
 workflow-type: tm+mt
-source-wordcount: '1661'
+source-wordcount: '1515'
 ht-degree: 0%
 
 ---
@@ -16,23 +13,36 @@ ht-degree: 0%
 
 >[!AVAILABILITY]
 >
->Deze functie is in Beperkte Beschikbaarheid en wordt momenteel slechts gesteund door de volgende bronnen:
+>Deze functie wordt ondersteund door de volgende bronnen:
 >
->* [[!DNL Azure Blob]](../../connectors/cloud-storage/blob.md)
->* [[!DNL Azure Data Lake Gen2]](../../connectors/cloud-storage/adls-gen2.md)
+>* [[!DNL Azure Blob Storage]](../../connectors/cloud-storage/blob.md)
+>* [[!DNL ADLS Gen2]](../../connectors/cloud-storage/adls-gen2.md)
 >* [[!DNL Azure File Storage]](../../connectors/cloud-storage/azure-file-storage.md)
->* [[!DNL Snowflake]](../../connectors/databases/snowflake.md)
+>
+>Ondersteuning voor privé-koppelingen is momenteel alleen beschikbaar voor organisaties die Adobe Healthcare Shield of Adobe Privacy &amp; Security Shield hebben aangeschaft.
 
 Met de functie Private Link kunt u persoonlijke eindpunten maken waarmee uw Adobe Experience Platform-bronnen verbinding kunnen maken. Sluit veilig uw bronnen aan een virtueel netwerk aan gebruikend privé IP adressen, die de behoefte aan openbare IPs elimineren en uw aanvalsoppervlakte verminderen. Vereenvoudig uw netwerkopstelling door de behoefte aan complexe firewall of de configuraties van de Vertaling van het Adres van het Netwerk te verwijderen, terwijl het verzekeren van gegevensverkeer slechts de goedgekeurde diensten bereikt.
 
 Lees deze gids om te leren hoe u APIs kunt gebruiken om een privé eindpunt tot stand te brengen en te gebruiken.
 
+>[!BEGINSHADEBOX]
+
+## Licentiegebruiksrechten voor ondersteuning van persoonlijke koppelingen
+
+De machtigingsgegevens voor het gebruik van licenties voor ondersteuning van persoonlijke koppelingen in bronnen zijn als volgt:
+
+* Klanten hebben recht op maximaal 2 TB per jaar gegevensoverdracht via ondersteunde bronnen ([!DNL Azure Blob Storage] , [!DNL ADLS Gen2] en [!DNL Azure File Storage] ) voor alle sandboxen en organisaties.
+* Elke organisatie kan een maximum van 10 eindpunten voor alle productie zandbakken hebben.
+* Elke organisatie kan een maximum van 1 eindpunt voor alle ontwikkelingszandbakken hebben.
+
+>[!ENDSHADEBOX]
+
 ## Aan de slag
 
 Deze handleiding vereist een goed begrip van de volgende onderdelen van Experience Platform:
 
-* [ Bronnen ](../../home.md): Experience Platform staat gegevens toe om van diverse bronnen worden opgenomen terwijl het voorzien van u van de capaciteit om, inkomende gegevens te structureren te etiketteren en te verbeteren gebruikend [!DNL Platform] diensten.
-* [ Sandboxes ](../../../sandboxes/home.md): Experience Platform verstrekt virtuele zandbakken die één enkele [!DNL Platform] instantie in afzonderlijke virtuele milieu&#39;s verdelen helpen digitale ervaringstoepassingen ontwikkelen en ontwikkelen.
+* [ Bronnen ](../../home.md): Experience Platform staat gegevens toe om van diverse bronnen worden opgenomen terwijl het voorzien van u van de capaciteit om, inkomende gegevens te structureren te etiketteren en te verbeteren gebruikend de diensten van Experience Platform.
+* [ Sandboxes ](../../../sandboxes/home.md): Experience Platform verstrekt virtuele zandbakken die één enkele instantie van Experience Platform in afzonderlijke virtuele milieu&#39;s verdelen helpen digitale ervaringstoepassingen ontwikkelen en ontwikkelen.
 
 ### Platform-API&#39;s gebruiken
 
@@ -67,7 +77,6 @@ curl -X POST \
       "subscriptionId": "4281a16a-696f-4993-a7d3-a3da32b846f3",
       "resourceGroupName": "acme-sources-experience-platform",
       "resourceName": "acmeexperienceplatform",
-      "fqdns": [],
       "connectionSpec": {
           "id": "4c10e202-c428-4796-9208-5f1f5732b1cf",
           "version": "1.0"
@@ -81,7 +90,6 @@ curl -X POST \
 | `subscriptionId` | De id die is gekoppeld aan uw [!DNL Azure] -abonnement. Voor meer informatie, lees de [!DNL Azure] gids op [ het terugwinnen van uw abonnement en huurder IDs van  [!DNL Azure Portal] ](https://learn.microsoft.com/en-us/azure/azure-portal/get-subscription-tenant-id). |
 | `resourceGroupName` | De naam van de bronnengroep op [!DNL Azure] . Een resourcegroep bevat gerelateerde bronnen voor een [!DNL Azure] -oplossing. Voor meer informatie, lees de [!DNL Azure] gids over [ het leiden middelgroepen ](https://learn.microsoft.com/en-us/azure/azure-resource-manager/management/manage-resource-groups-portal). |
 | `resourceName` | De naam van uw bron. In [!DNL Azure] verwijst een bron naar instanties zoals virtuele machines, webapps en databases. Voor meer informatie, lees de [!DNL Azure] gids op [ die de  [!DNL Azure]  middelmanager ](https://learn.microsoft.com/en-us/azure/azure-resource-manager/management/overview) begrijpt. |
-| `fqdns` | De volledig gekwalificeerde domeinnamen voor uw bron. Deze eigenschap is alleen vereist bij gebruik van de [!DNL Snowflake] -bron. |
 | `connectionSpec.id` | De verbindingsspecificatie-id van de bron die u gebruikt. |
 | `connectionSpec.version` | De versie van de verbindingsspecificatie-id die u gebruikt. |
 
@@ -100,7 +108,6 @@ Een geslaagde reactie retourneert het volgende:
   "subscriptionId": "4281a16a-696f-4993-a7d3-a3da32b846f3",
   "resourceGroupName": "acme-sources-experience-platform",
   "resourceName": "acmeexperienceplatform",
-  "fqdns": [],
   "connectionSpec": {
       "id": "4c10e202-c428-4796-9208-5f1f5732b1cf",
       "version": "1.0"
@@ -116,7 +123,6 @@ Een geslaagde reactie retourneert het volgende:
 | `subscriptionId` | De id die is gekoppeld aan uw [!DNL Azure] -abonnement. Voor meer informatie, lees de [!DNL Azure] gids op [ het terugwinnen van uw abonnement en huurder IDs van  [!DNL Azure Portal] ](https://learn.microsoft.com/en-us/azure/azure-portal/get-subscription-tenant-id). |
 | `resourceGroupName` | De naam van de bronnengroep op [!DNL Azure] . Een resourcegroep bevat gerelateerde bronnen voor een [!DNL Azure] -oplossing. Voor meer informatie, lees de [!DNL Azure] gids over [ het leiden middelgroepen ](https://learn.microsoft.com/en-us/azure/azure-resource-manager/management/manage-resource-groups-portal). |
 | `resourceName` | De naam van uw bron. In [!DNL Azure] verwijst een bron naar instanties zoals virtuele machines, webapps en databases. Voor meer informatie, lees de [!DNL Azure] gids op [ die de  [!DNL Azure]  middelmanager ](https://learn.microsoft.com/en-us/azure/azure-resource-manager/management/overview) begrijpt. |
-| `fqdns` | De volledig gekwalificeerde domeinnamen voor uw bron. Deze eigenschap is alleen vereist bij gebruik van de [!DNL Snowflake] -bron. |
 | `connectionSpec.id` | De verbindingsspecificatie-id van de bron die u gebruikt. |
 | `connectionSpec.version` | De versie van de verbindingsspecificatie-id die u gebruikt. |
 | `state` | De huidige staat van uw privé eindpunt. Geldige statussen zijn: <ul><li>`Pending`</li><li>`Failed`</li><li>`Approved`</li><li>`Rejected`</li></ul> |
@@ -543,7 +549,7 @@ POST /connections/
 
 **Verzoek**
 
-Het volgende verzoek leidt tot een voor authentiek verklaarde basisverbinding voor [!DNL Snowflake], terwijl ook het gebruiken van een privé eindpunt.
+Het volgende verzoek leidt tot een voor authentiek verklaarde basisverbinding voor [!DNL Azure Blob Storage], terwijl ook het gebruiken van een privé eindpunt.
 
 +++Selecteren om aanvraagvoorbeeld weer te geven
 
@@ -556,8 +562,8 @@ curl -X POST \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -H 'Content-Type: application/json' \
   -d '{
-      "name": "Snowflake base connection",
-      "description": "A base connection for a Snowflake source that uses a private link.",
+      "name": "Azure Blob Storage base connection",
+      "description": "A base connection for a Azure Blob Storage source that uses a private link.",
       "auth": {
           "specName": "ConnectionString",
           "params": {
@@ -566,7 +572,7 @@ curl -X POST \
           }
       },
       "connectionSpec": {
-          "id": "b2e08744-4f1a-40ce-af30-7abac3e23cf3",
+          "id": "4c10e202-c428-4796-9208-5f1f5732b1cf",
           "version": "1.0"
       }
   }'
@@ -577,10 +583,10 @@ curl -X POST \
 | `name` | De naam van uw basisverbinding. |
 | `description` | (Optioneel) Een beschrijving met aanvullende informatie over de verbinding. |
 | `auth.specName` | De verificatie die wordt gebruikt om uw bron te verbinden met Experience Platform. |
-| `auth.params.connectionString` | De [!DNL Snowflake] verbindingstekenreeks. Voor meer informatie, lees de [[!DNL Snowflake]  API authentificatiegids ](../api/create/databases/snowflake.md). |
+| `auth.params.connectionString` | De [!DNL Azure Blob Storage] verbindingstekenreeks. Voor meer informatie, lees de [[!DNL Azure Blob Storage]  API authentificatiegids ](../api/create/cloud-storage/blob.md). |
 | `auth.params.usePrivateLink` | Een booleaanse waarde die bepaalt of u een privé eindpunt gebruikt of niet. Stel deze waarde in op `true` als u een privé-eindpunt gebruikt. |
-| `connectionSpec.id` | De verbindingsspecificatie-id van [!DNL Snowflake] . |
-| `connectionSpec.version` | De versie van uw [!DNL Snowflake] connection spec ID. |
+| `connectionSpec.id` | De verbindingsspecificatie-id van [!DNL Azure Blob Storage] . |
+| `connectionSpec.version` | De versie van uw [!DNL Azure Blob Storage] connection spec ID. |
 
 +++
 
@@ -830,24 +836,32 @@ Een geslaagde reactie retourneert alle verbindingen die aan persoonlijke eindpun
 
 Lees deze sectie voor meer informatie met [!DNL Azure] persoonlijke koppelingen in de API.
 
-### Uw [!DNL Snowflake] -account configureren voor verbinding met persoonlijke koppelingen
+### Een privé-eindpunt goedkeuren voor [!DNL Azure Blob] en [!DNL Azure Data Lake Gen2]
 
-U moet de volgende stappen uitvoeren om de [!DNL Snowflake] -bron te kunnen gebruiken met persoonlijke koppelingen.
+Als u een aanvraag voor een privéeindpunt voor de bronnen [!DNL Azure Blob] en [!DNL Azure Data Lake Gen2] wilt goedkeuren, meldt u zich aan bij de map [!DNL Azure Portal] . Selecteer in de linkernavigatie **[!DNL Data storage]** , ga naar de tab **[!DNL Security + networking]** en kies **[!DNL Networking]** . Selecteer vervolgens **[!DNL Private endpoints]** om een lijst weer te geven met persoonlijke eindpunten die zijn gekoppeld aan uw account en de huidige verbindingsstatussen. Als u een aanvraag in behandeling wilt goedkeuren, selecteert u het gewenste eindpunt en klikt u op **[!DNL Approve]** .
 
-Eerst, moet u een steunkaartje in [!DNL Snowflake] opheffen en om **identiteitskaart van het eindpuntdienstmiddel** van het [!DNL Azure] gebied van uw [!DNL Snowflake] rekening verzoeken. Voer de onderstaande stappen uit om een [!DNL Snowflake] -ticket op te halen:
+![ het Azure portaal met een lijst van hangende privé eindpunten.](../../images/tutorials/private-links/azure.png)
 
-1. Navigeer aan [[!DNL Snowflake]  UI ](https://app.snowflake.com) en teken binnen met uw e-mailrekening. Tijdens deze stap moet u controleren of uw e-mail is geverifieerd in de profielinstellingen.
-2. Selecteer uw **gebruikersmenu** en selecteer dan **steun** om tot [!DNL Snowflake] steun toegang te hebben.
-3. Selecteer **[!DNL + Support Case]** als u een draagtas wilt maken. Vul vervolgens het formulier in met relevante gegevens en voeg de benodigde bestanden bij.
-4. Als u klaar bent, verzendt u de kwestie.
+<!--
 
-De eindpuntmiddel identiteitskaart wordt geformatteerd als volgt:
+### Configure your [!DNL Snowflake] account to connect to private links
+
+You must complete the following prerequisite steps in order to use the [!DNL Snowflake] source with private links.
+
+First, you must raise a support ticket in [!DNL Snowflake] and request for the **endpoint service resource ID** of the [!DNL Azure] region of your [!DNL Snowflake] account. Follow the steps below to raise a [!DNL Snowflake] ticket:
+
+1. Navigate to the [[!DNL Snowflake] UI](https://app.snowflake.com) and sign in with your email account. During this step, you must ensure that your email is verified in profile settings.
+2. Select your **user menu** and then select **support** to access [!DNL Snowflake] support.
+3. To create a support case, select **[!DNL + Support Case]**. Then, fill out the form with relevant details and attach any necessary files.
+4. When finished, submit the case.
+
+The endpoint resource ID is formatted as follows:
 
 ```shell
 subscriptions/{SUBSCRIPTION_ID}/resourceGroups/az{REGION}-privatelink/providers/microsoft.network/privatelinkservices/sf-pvlinksvc-az{REGION}
 ```
 
-+++Selecteren om voorbeeld weer te geven
++++Select to view example
 
 ```shell
 /subscriptions/4575fb04-6859-4781-8948-7f3a92dc06a3/resourceGroups/azwestus2-privatelink/providers/microsoft.network/privatelinkservices/sf-pvlinksvc-azwestus2
@@ -855,14 +869,14 @@ subscriptions/{SUBSCRIPTION_ID}/resourceGroups/az{REGION}-privatelink/providers/
 
 +++
 
-| Parameter | Beschrijving | Voorbeeld |
+| Parameter | Description | Example |
 | --- | --- | --- |
-| `{SUBSCRIPTION_ID}` | De unieke id die uw [!DNL Azure] -abonnement aangeeft. | `a1b2c3d4-5678-90ab-cdef-1234567890ab` |
-| `{REGION}` | Het [!DNL Azure] gebied van uw [!DNL Snowflake] account. | `azwestus2` |
+| `{SUBSCRIPTION_ID}` | The unique ID that identifies your [!DNL Azure] subscription. | `a1b2c3d4-5678-90ab-cdef-1234567890ab` |
+| `{REGION}` | The [!DNL Azure] region of your [!DNL Snowflake] account. | `azwestus2` |
 
-### Haal de configuratiegegevens van uw persoonlijke koppeling op
+### Retrieve your private link configuration details
 
-Als u de configuratiegegevens van uw persoonlijke koppeling wilt ophalen, moet u de volgende opdracht uitvoeren in [!DNL Snowflake] :
+To retrieve your private link configuration details, you must run the following command in [!DNL Snowflake]:
 
 ```sql
 USE ROLE accountadmin;
@@ -870,21 +884,21 @@ SELECT key, value::varchar
 FROM TABLE(FLATTEN(input => PARSE_JSON(SYSTEM$GET_PRIVATELINK_CONFIG())));
 ```
 
-Vervolgens haalt u waarden op voor de volgende eigenschappen:
+Next, retrieve values for the following properties:
 
 * `privatelink-account-url`
 * `regionless-privatelink-account-url`
 * `privatelink_ocsp-url`
 
-Nadat u de waarden hebt opgehaald, kunt u de volgende aanroep uitvoeren om een persoonlijke koppeling voor [!DNL Snowflake] te maken.
+Once you have retrieved the values, you can make the following call to create a private link for [!DNL Snowflake].
 
-**Verzoek**
+**Request**
 
-Met de volgende aanvraag wordt een privéeindpunt voor [!DNL Snowflake] gemaakt:
+The following request creates a private endpoint for [!DNL Snowflake]:
 
 >[!BEGINTABS]
 
->[!TAB  Malplaatje ]
+>[!TAB Template]
 
 ```shell
 curl -X POST \
@@ -911,7 +925,7 @@ curl -X POST \
   }'
 ```
 
->[!TAB  Voorbeeld ]
+>[!TAB Example]
 
 ```shell
 curl -X POST \
@@ -938,11 +952,6 @@ curl -X POST \
   }'
 ```
 
-
 >[!ENDTABS]
 
-### Een privé-eindpunt goedkeuren voor [!DNL Azure Blob] en [!DNL Azure Data Lake Gen2]
-
-Als u een aanvraag voor een privéeindpunt voor de bronnen [!DNL Azure Blob] en [!DNL Azure Data Lake Gen2] wilt goedkeuren, meldt u zich aan bij de map [!DNL Azure Portal] . Selecteer in de linkernavigatie **[!DNL Data storage]** , ga naar de tab **[!DNL Security + networking]** en kies **[!DNL Networking]** . Selecteer vervolgens **[!DNL Private endpoints]** om een lijst weer te geven met persoonlijke eindpunten die zijn gekoppeld aan uw account en de huidige verbindingsstatussen. Als u een aanvraag in behandeling wilt goedkeuren, selecteert u het gewenste eindpunt en klikt u op **[!DNL Approve]** .
-
-![ het Azure portaal met een lijst van hangende privé eindpunten.](../../images/tutorials/private-links/azure.png)
+-->
