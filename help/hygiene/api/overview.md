@@ -3,9 +3,9 @@ title: API-handleiding voor gegevenshygiëne
 description: Leer hoe u de opgeslagen persoonlijke gegevens van uw klanten in Adobe Experience Platform programmatisch kunt corrigeren of verwijderen.
 role: Developer
 exl-id: 78c8b15b-b433-4168-a1e8-c97b96e4bf85
-source-git-commit: fded2f25f76e396cd49702431fa40e8e4521ebf8
+source-git-commit: 8aa8a1c42e9656716be746ba447a5f77a8155b4c
 workflow-type: tm+mt
-source-wordcount: '446'
+source-wordcount: '432'
 ht-degree: 0%
 
 ---
@@ -43,9 +43,6 @@ Een gegevenssetvervaldatum is een tijd-vertraagde actie &quot;schrapt een datase
 ## Opnemen wordt verwijderd
 
 >[!IMPORTANT]
->
->De schrappingsverzoeken van het verslag zijn slechts beschikbaar voor organisaties die **het Schild van de Gezondheidszorg van Adobe** hebben gekocht.
->
 >
 >Gegevens verwijderen uit records moeten worden gebruikt voor het opschonen van gegevens, het verwijderen van anonieme gegevens of het minimaliseren van gegevens. Zij zijn **niet** om voor de verzoeken van de rechten van gegevenssubject (naleving) zoals met betrekking tot privacyverordeningen zoals de Algemene Verordening van de Bescherming van Gegevens (GDPR) te worden gebruikt. Voor alle gevallen van het nalevingsgebruik, gebruik [ Adobe Experience Platform Privacy Service ](../../privacy-service/home.md) in plaats daarvan.
 

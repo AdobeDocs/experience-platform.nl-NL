@@ -4,9 +4,10 @@ solution: Experience Platform
 title: Op modellen gebaseerde schema's
 description: Leer over model-gebaseerde schema's (ook genoemd relationele schema's) in Adobe Experience Platform, met inbegrip van eigenschappen, vereiste gebieden, verhoudingen, en beperkingen.
 badge: Beperkte beschikbaarheid
-source-git-commit: 192e97c97ffcb2d695bcfa6269cc6920f5440832
+exl-id: 397e5937-b892-4fd3-b90e-29ed9229dc69
+source-git-commit: 4586a820556919aeb6cebd94d961c3f726637f16
 workflow-type: tm+mt
-source-wordcount: '1306'
+source-wordcount: '1302'
 ht-degree: 0%
 
 ---
@@ -37,7 +38,7 @@ Gebruik modelgebaseerde schema&#39;s om:
 
 ## Hoe model-gebaseerde schema&#39;s van standaardXDM schema&#39;s verschillen
 
-De standaard XDM- schema&#39;s in Experience Platform volgen één van drie gegevensgedrag: Verslag, tijdreeks, of ad hoc. Voor definities en details, zie [ XDM gegevensgedrag ](https://experienceleague.adobe.com/nl/docs/experience-platform/xdm/home#data-behaviors).
+De standaard XDM- schema&#39;s in Experience Platform volgen één van drie gegevensgedrag: Verslag, tijdreeks, of ad hoc. Voor definities en details, zie [ XDM gegevensgedrag ](https://experienceleague.adobe.com/en/docs/experience-platform/xdm/home#data-behaviors).
 
 In het traditionele model, nemen het verslag en de tijd-reeksen schema&#39;s aan [ verenigingsschema&#39;s ](../api/unions.md) deel (zie ook de [ gids UI van het unieschema ](../../profile/ui/union-schema.md)). Deze schema&#39;s evolueren automatisch als gedeelde [ gebiedsgroepen ](./composition.md#field-group) worden bijgewerkt en de douanegebieden moeten onder een huurdersnamespace worden genest. Hoewel dit model krachtig is, kan het instappen vertragen, overdreven complexe schema&#39;s met ongebruikte gebieden produceren, en extra gegevenstoewijzing of transformatie vereisen. Deze factoren verhogen de leercurve en de voortdurende onderhoudsinspanningen.
 
@@ -71,7 +72,7 @@ Gebruik een descriptor van de primaire sleutel om ervoor te zorgen dat elke reco
 
 >[!NOTE]
 >
->In de Redacteur van het Schema UI, verschijnen de versiedescriptor en timestamp beschrijvers als &quot;[ !UICOTRNOL  herkenningsteken van de Versie ]&quot; en &quot;[ !UICOTRNOL  herkenningsteken van de Chronologie ]&quot; respectievelijk.
+>In de Redacteur van het Schema UI, verschijnen de versiedescriptor en timestamp beschrijvers als &quot;[!UICONTROL Version identifier]&quot;en &quot;[!UICONTROL Timestamp identifier]&quot; respectievelijk.
 
 **Voorbeeld (enig-gebied):**
 
@@ -210,4 +211,3 @@ Controleer de volgende beperkingen voordat u op modellen gebaseerde schema&#39;s
 * De relaties zijn beperkt tot één-op-één en veel-op-één.
 * Beschikbaarheid is afhankelijk van uw licentie of functionaliteit.
 * Samengestelde primaire sleutels zijn vereist voor tijdreeksschema&#39;s.
-

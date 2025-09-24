@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Descriptors API-eindpunt
 description: Het /descriptors eindpunt in de Registratie API van het Schema staat u toe om XDM beschrijvers binnen uw ervaringstoepassing programmatically te beheren.
 exl-id: bda1aabd-5e6c-454f-a039-ec22c5d878d2
-source-git-commit: 02a22362b9ecbfc5fd7fcf17dc167309a0ea45d5
+source-git-commit: 4586a820556919aeb6cebd94d961c3f726637f16
 workflow-type: tm+mt
-source-wordcount: '2886'
+source-wordcount: '2882'
 ht-degree: 0%
 
 ---
@@ -525,7 +525,7 @@ De primaire zeer belangrijke beschrijver (`xdm:descriptorPrimaryKey`) dwingt uni
 
 >[!NOTE]
 >
->In de Redacteur van het Schema UI, verschijnt de versiedescriptor als &quot;[ !UICOTRNOL  herkenningsteken van de Versie ].&quot;
+>In de Redacteur van het Schema UI, verschijnt de versiedescriptor als &quot;[!UICONTROL Version identifier]&quot;.
 
 De versiedescriptor (`xdm:descriptorVersion`) wijst een gebied aan om conflicten van uit-van-orde veranderingsgebeurtenissen te ontdekken en te verhinderen.
 
@@ -547,7 +547,7 @@ De versiedescriptor (`xdm:descriptorVersion`) wijst een gebied aan om conflicten
 
 >[!NOTE]
 >
->In de Redacteur van het Schema UI, verschijnt de timestamp beschrijver als &quot;[ !UICOTRNOL  herkenningsteken Tijdstempel ].&quot;
+>In de Redacteur van het Schema UI, verschijnt de timestamp beschrijver als &quot;[!UICONTROL Timestamp identifier]&quot;.
 
 In de tijdstempeldescriptor (`xdm:descriptorTimestamp`) wordt een datum-tijdveld aangewezen als tijdstempel voor schema&#39;s met `"meta:behaviorType": "time-series"` .
 
