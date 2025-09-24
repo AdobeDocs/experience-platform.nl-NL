@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Overzicht Source Connectors
 description: Adobe Experience Platform staat toe dat gegevens uit externe bronnen worden opgenomen en biedt u de mogelijkheid om inkomende gegevens te structureren, labelen en verbeteren met behulp van Experience Platform-services. U kunt gegevens invoeren uit verschillende bronnen, zoals Adobe-toepassingen, opslag in de cloud, databases en vele andere.
 exl-id: efdbed4d-5697-43ef-a47a-a8bcf0f13237
-source-git-commit: f424c5c7e436a7f4c45d37c004096d3924247158
+source-git-commit: b3b1542f7e297f4ca872a155ac3801266bc1e6a6
 workflow-type: tm+mt
-source-wordcount: '1666'
+source-wordcount: '1644'
 ht-degree: 1%
 
 ---
@@ -61,7 +61,7 @@ Experience Platform staat toe dat gegevens worden ingevoerd van andere Adobe-toe
 
 ### Geavanceerde bedrijfsbronnen {#advanced-enterprise-sources}
 
-De volgende bronnen zijn beschikbaar aan [ Adobe Real-Time Customer Data Platform Ultimate ](https://helpx.adobe.com/nl/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html) slechts klanten.
+De volgende bronnen zijn beschikbaar aan [ Adobe Real-Time Customer Data Platform Ultimate ](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html) slechts klanten.
 
 | Bron | Categorie | Type ontsteking | Wolk |
 | --- | --- | --- | --- |
@@ -219,13 +219,18 @@ U kunt de volgende bronnen gebruiken om gegevens van uw lokale systeem aan Exper
 
 {style="table-layout:auto"}
 
+<!--
 ### Loyalty {#loyalty}
 
-U kunt de volgende bronnen gebruiken om gegevensloyaliteit aan Experience Platform in te voeren.
+You can use the following sources to ingest data loyalty to Experience Platform.
 
-| Bron | Type ontsteking | Wolk |
+| Source | Ingestion type | Cloud |
 | --- | --- | --- |
 | [[!DNL Capillary Streaming Events]](connectors/loyalty/capillary.md) | Streaming | Azure |
+
+| [[!DNL Relay Connector]](tutorials/ui/create/marketing-automation/relay-connector.md) | Streaming | Azure |
+
+-->
 
 ### Marketing Automation {#marketing-automation}
 
@@ -241,7 +246,6 @@ U kunt de volgende bronnen gebruiken om gegevens over marketingautomatisering in
 | [[!DNL Oracle Eloqua]](connectors/marketing-automation/oracle-eloqua.md) | Batch | Azure |
 | [[!DNL Oracle NetSuite]](connectors/marketing-automation/oracle-netsuite.md) | Batch | Azure |
 | [[!DNL PathFactory]](connectors/marketing-automation/pathfactory.md) | Batch | Azure |
-| [[!DNL Relay Connector]](tutorials/ui/create/marketing-automation/relay-connector.md) | Streaming | Azure |
 | [[!DNL Salesforce Marketing Cloud]](connectors/marketing-automation/salesforce-marketing-cloud.md) | Batch | Azure, AWS |
 
 {style="table-layout:auto"}

@@ -5,9 +5,9 @@ breadcrumb-title: Gids voor Source Connectors
 user-guide-description: Neem gegevens uit diverse bronnen op. Leer hoe u opgenomen gegevens kunt structureren, labelen en verbeteren.
 feature: Sources
 role: Developer
-source-git-commit: a05e20845b6c111139451f593ef24fb8f760b5bd
+source-git-commit: 96e395e3b3d977d7eb04c400f6fd290977bf1101
 workflow-type: tm+mt
-source-wordcount: '1070'
+source-wordcount: '1069'
 ht-degree: 7%
 
 ---
@@ -363,7 +363,7 @@ ht-degree: 7%
    - [Abonneren op waarschuwingen voor bronnen](tutorials/ui/alerts.md)
    - [Een gegevensstroom opslaan als concept](tutorials/ui/draft.md)
    - [Toegangslabels toepassen op een gegevensstroom](tutorials/ui/labels.md)
-   - [Een Azure Private-eindpunt maken](tutorials/ui/private-link.md)
+   - [Een privé-eindpunt maken](tutorials/ui/private-link.md)
 - Zelfbedieningsbronnen (Batch SDK) {#sdk}
    - [Overzicht](sources-sdk/overview.md)
    - Uw verbindingsspecificatie configureren {#config}
@@ -400,4 +400,4 @@ ht-degree: 7%
 - [IP adres lijst van gewenste personen](ip-address-allow-list.md)
 - [Veelgestelde vragen](./troubleshooting.md)
 - [ API verwijzing ](https://www.adobe.io/experience-platform-apis/references/flow-service/)
-- [Releaseopmerkingen bij Experience Platform](https://experienceleague.adobe.com/nl/docs/experience-platform/release-notes/latest)
+- [Releaseopmerkingen bij Experience Platform](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)

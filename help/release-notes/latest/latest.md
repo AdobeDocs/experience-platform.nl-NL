@@ -2,10 +2,10 @@
 title: Aanvullende informatie van augustus 2025 voor Adobe Experience Platform
 description: Aanvullende informatie van augustus 2025 voor Adobe Experience Platform.
 exl-id: f854f9e5-71be-4d56-a598-cfeb036716cb
-source-git-commit: e21381f2683070fdbf24c473fa6794b89160864b
+source-git-commit: ac180f045dd3cc7e8ad9de702a3672630d668ee5
 workflow-type: tm+mt
-source-wordcount: '1393'
-ht-degree: 43%
+source-wordcount: '1471'
+ht-degree: 40%
 
 ---
 
@@ -15,8 +15,8 @@ ht-degree: 43%
 >
 >Raadpleeg de volgende documentatie voor aanvullende informatie voor andere Adobe Experience Platform-toepassingen:
 >
->- [Adobe Journey Optimizer](https://experienceleague.adobe.com/nl/docs/journey-optimizer/using/whats-new/release-notes)
->- [Adobe Journey Optimizer B2B](https://experienceleague.adobe.com/nl/docs/journey-optimizer-b2b/user/release-notes)
+>- [Adobe Journey Optimizer](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/whats-new/release-notes)
+>- [Adobe Journey Optimizer B2B](https://experienceleague.adobe.com/en/docs/journey-optimizer-b2b/user/release-notes)
 >- [Customer Journey Analytics](https://experienceleague.adobe.com/nl/docs/analytics-platform/using/releases/pre-release-notes)
 >- [Samenstelling van Federated-doelgroep](https://experienceleague.adobe.com/nl/docs/federated-audience-composition/using/e-release-notes)
 >- [Real-Time CDP Collaboration](https://experienceleague.adobe.com/nl/docs/real-time-cdp-collaboration/using/latest)
@@ -68,7 +68,7 @@ Raadpleeg het [[!DNL Observability Insights] overzicht](../../observability/home
 
 | Bestemming | Beschrijving |
 | --- | --- |
-| [!BADGE &#x200B; Beta &#x200B;]{type=Informative} [[!DNL Snowflake Batch]](../../destinations/catalog/cloud-storage/snowflake-batch.md) schakelaar | Er is nu een nieuwe [!DNL Snowflake Batch] -connector beschikbaar die een alternatief biedt voor de streamingconnector voor specifieke gebruiksgevallen. |
+| [!BADGE  Beta ]{type=Informative} [[!DNL Snowflake Batch]](../../destinations/catalog/cloud-storage/snowflake-batch.md) schakelaar | Er is nu een nieuwe [!DNL Snowflake Batch] -connector beschikbaar die een alternatief biedt voor de streamingconnector voor specifieke gebruiksgevallen. |
 | [[!DNL Data Landing Zone]](../../destinations/catalog/cloud-storage/data-landing-zone.md) ondersteuning voor codering | U kunt nu openbare sleutels met RSA-indeling koppelen om uw geëxporteerde bestanden te coderen, zodat u over hetzelfde beveiligingsniveau beschikt als andere bestemmingen voor cloudopslag voor uw vertrouwelijke gegevens. |
 | Gegevens over vervaldatum van verificatie voor [[!DNL Pinterest]](../../destinations/catalog/advertising/pinterest.md) doelen | Informatie over de verloopdatum van de verificatie voor [!DNL Pinterest]-bestemmingen is nu rechtstreeks zichtbaar in de Experience Platform-interface. Zo kunt u zien wanneer uw verificatie verloopt en deze vernieuwen voordat er verstoringen in uw gegevensstromen ontstaan. U kunt de vervaldatums van uw tokens controleren in de kolom **[!UICONTROL Account expiration date]** op de tabbladen **[[!UICONTROL Accounts]](../../destinations/ui/destinations-workspace.md#accounts)** of **[[!UICONTROL Browse]](../../destinations/ui/destinations-workspace.md#browse)** . |
 
@@ -90,12 +90,9 @@ XDM is een open-bronspecificatie die algemene structuren en definities (schema&#
 | Functie | Beschrijving |
 | ------- | ----------- |
 | Op modellen gebaseerde schema&#39;s | Vereenvoudig uw gegevensmodellering met op modellen gebaseerde schema&#39;s. U kunt nu eenvoudiger schema&#39;s maken met uitgebreide voorbeelden en richtlijnen. Deze functie is momenteel beschikbaar voor Campaign Orchestration-licentiehouders en zal worden uitgebreid naar Distiller-klanten van Data bij GA, waardoor gegevensmodellering toegankelijker en efficiënter wordt. De functie biedt ondersteuning voor gegevens uit tijdreeksen en mogelijkheden voor het vastleggen van gegevens wijzigen. |
+| Data Mirror | Breng veranderingen op rijniveau van de pakhuizen van wolkengegevens (b.v., Snowflake, Databricks, BigQuery) in Adobe Experience Platform met model-gebaseerde schema&#39;s voor. Data Mirror elimineert stroomopwaartse ETL en bewaart verhoudingen, versioning, en schrappingen door bestaande gegevensbestandstructuren direct in het gegevensmeer te weerspiegelen. De tijdreeks en het gedrag van het registratieschema van de verslaggebeurtenis met de mogelijkheden van de verandering van gegevens vangen allen worden gesteund. Deze functie is momenteel beschikbaar voor Campaign Orchestration-licentiehouders en wordt uitgebreid via deze beperkte release, ook voor Customer Journey Analytics-klanten. Zie de [ documentatie van Data Mirror ](../../xdm/data-mirror/overview.md) voor meer details. Neem contact op met uw Adobe-vertegenwoordiger voor toegang. |
 
 Voor meer informatie raadpleegt u het [overzicht van XDM](../../xdm/home.md).
-<!--
-
-| Data Mirror | Ingest row-level changes from cloud data warehouses (e.g., Snowflake, Databricks, BigQuery) into Adobe Experience Platform using model-based schemas. Data Mirror eliminates upstream ETL and preserves relationships, versioning, and deletions by mirroring existing database structures directly into the data lake. Time-series and record event schema behavior with change data capture capabilities are all supported. This feature is currently available for Campaign Orchestration license holders and will expand through this limited release, also including Customer Journey Analytics customers. See the [Data Mirror documentation](../../xdm/data-mirror/overview.md) for more details. Contact your Adobe representative for access. |
--->
 
 ## Real-Time Customer Profile {#profile}
 
@@ -138,7 +135,10 @@ Experience Platform biedt een RESTful-API en een interactieve gebruikersinterfac
 | --- | --- |
 | Nieuwe bronnen in algemene beschikbaarheid | De volgende bronnen zijn nu beschikbaar in algemene beschikbaarheid: verschillende bronconnectors zijn bijgewerkt van Beta naar GA: <ul><li>[ de Ingestie van Gegevens van Acxiom ](../../sources/connectors/data-partners/acxiom-data-ingestion.md)</li><li>[ de Ingestie van Gegevens van het Vooruitzicht van Acxiom ](../../sources/connectors/data-partners/acxiom-prospecting-data-import.md)</li><li>[ Merkury Onderneming ](../../sources/connectors/data-partners/merkury.md)</li><li>[ SAP Commerce ](../../sources/connectors/ecommerce/sap-commerce.md)</li></ul>. Deze bronnen worden nu volledig ondersteund en zijn klaar voor gebruik bij de productie. |
 | [!DNL Snowflake] ondersteuning voor sleutelpaarverificatie | Uitgebreide beveiliging voor Snowflake-verbindingen met ondersteuning voor sleutelpaarverificatie. De basisauthentificatie (gebruikersbenaming/wachtwoord) zal tegen November 2025 worden afgekeurd, zodat worden de klanten aangemoedigd om aan zeer belangrijk-paarauthentificatie voor betere veiligheid te migreren. Raadpleeg de [[!DNL Snowflake] documentatie](../../sources/connectors/databases/snowflake.md) voor meer informatie. |
-| [!BADGE Beta]{type=Informative} [!DNL Capillary Streaming Events] | Gebruik de [[!DNL Capillary Streaming Events]  bron ](../../sources/connectors/loyalty/capillary.md) aan stroom loyaliteitsgegevens van uw [!DNL Capillary] rekening aan Experience Platform. |
 | Algemene Beschikbaarheid van Steun van de Privé Verbinding in bronnen | U kunt **privé verbindingen** voor een uitgezochte groep bronnen nu gebruiken. Met deze functie kunt u een privé-eindpunt maken waarmee uw bron verbinding kan maken. Met privé-eindpunten kunt u verbindingen en gegevensstromen instellen die het openbare internet omzeilen. Zo profiteert u van een betere beveiliging en netwerkisolatie voor uw gevoelige gegevens. De steun voor privé verbindingen is beschikbaar aan de volgende bronnen: <ul><li>[[!DNL Azure Blob Storage]](../../sources/connectors/cloud-storage/blob.md)</li><li>[[!DNL ADLS Gen2]](../../sources/connectors/cloud-storage/adls-gen2.md)</li><li>[[!DNL Azure File Storage]](../../sources/connectors/cloud-storage/azure-file-storage.md)</li></ul>. Voor meer informatie lees de gidsen bij het creëren van privé verbindingen [ in API ](../../sources/tutorials/api/private-link.md) en [ in UI ](../../sources/tutorials/ui/private-link.md). |
 
 Voor meer informatie raadpleegt u het [overzicht van bronnen](../../sources/home.md).
+
+<!--
+| [!BADGE Beta]{type=Informative} [!DNL Capillary Streaming Events] | Use the [[!DNL Capillary Streaming Events] source](../../sources/connectors/loyalty/capillary.md) to stream loyalty data from your [!DNL Capillary] account to Experience Platform. |
+-->

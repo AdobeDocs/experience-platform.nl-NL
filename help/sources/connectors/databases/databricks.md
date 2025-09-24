@@ -1,26 +1,26 @@
 ---
-title: Azure Databricks
-description: Leer over de noodzakelijke stappen nodig om Azure Databricks aan Experience Platform te verbinden.
+title: Databricks
+description: Leer over de noodzakelijke stappen nodig om Gegevensbestanden aan Experience Platform te verbinden.
 badgeUltimate: label="Ultimate" type="Positive"
 badgeBeta: label="Beta" type="Informative"
 last-substantial-update: 2025-06-17T00:00:00Z
 exl-id: 2f082898-aa0e-47a1-a4bf-077c21afdfee
-source-git-commit: e5ece120329a550204174b7bf588f06cdff45846
+source-git-commit: 96e395e3b3d977d7eb04c400f6fd290977bf1101
 workflow-type: tm+mt
-source-wordcount: '631'
+source-wordcount: '628'
 ht-degree: 0%
 
 ---
 
-# [!DNL Azure Databricks]
+# [!DNL Databricks]
 
 >[!AVAILABILITY]
 >
->* De [!DNL Azure Databricks] -bron is in de broncatalogus beschikbaar voor gebruikers die Real-Time CDP Ultimate hebben aangeschaft.
+>* De [!DNL Databricks] -bron is in de broncatalogus beschikbaar voor gebruikers die Real-Time CDP Ultimate hebben aangeschaft.
 >
->* De bron [!DNL Azure Databricks] is in bèta. Lees de [ termijnen en voorwaarden ](../../home.md#terms-and-conditions) in het bronoverzicht voor meer informatie bij het gebruiken van bèta-geëtiketteerde bronnen.
+>* De bron [!DNL Databricks] is in bèta. Lees de [ termijnen en voorwaarden ](../../home.md#terms-and-conditions) in het bronoverzicht voor meer informatie bij het gebruiken van bèta-geëtiketteerde bronnen.
 
-[!DNL Azure Databricks] is een op de cloud gebaseerd platform dat is ontworpen voor gegevensanalyse, leren van machines en AI. U kunt [!DNL Databricks] gebruiken om met [!DNL Azure] te integreren en een holistische omgeving te verstrekken voor de bouw van, het opstellen van, en het beheren van gegevensoplossingen op schaal.
+[!DNL Databricks] is een op de cloud gebaseerd platform dat is ontworpen voor gegevensanalyse, leren van machines en AI. U kunt [!DNL Databricks] gebruiken om een holistische omgeving te integreren en te verstrekken voor het bouwen, implementeren en beheren van gegevensoplossingen op schaal.
 
 Gebruik de [!DNL Databricks] -bron om uw account te verbinden en uw [!DNL Databricks] -gegevens in te voeren op Adobe Experience Platform.
 

@@ -1,25 +1,25 @@
 ---
-title: Connect Azure-databases naar Experience Platform met behulp van de Flow Service API
-description: Leer hoe u Azure Databricks met behulp van API's verbindt met Experience Platform.
+title: Databases verbinden met Experience Platform met behulp van de Flow Service API
+description: Leer hoe u databases met API's kunt verbinden met Experience Platform.
 badgeUltimate: label="Ultimate" type="Positive"
 badgeBeta: label="Beta" type="Informative"
 exl-id: c3974bab-8e67-49a1-b1a5-d453cf7bfd1d
-source-git-commit: 9df2f9cc70876834aa635d50d548a882f45e3190
+source-git-commit: 96e395e3b3d977d7eb04c400f6fd290977bf1101
 workflow-type: tm+mt
-source-wordcount: '534'
-ht-degree: 0%
+source-wordcount: '532'
+ht-degree: 1%
 
 ---
 
-# Verbinding maken met Experience Platform via de [!DNL Flow Service] API[!DNL Azure Databricks]
+# Verbinding maken met Experience Platform via de [!DNL Databricks] API[!DNL Flow Service]
 
 >[!AVAILABILITY]
 >
->* De [!DNL Azure Databricks] -bron is in de broncatalogus beschikbaar voor gebruikers die Real-Time CDP Ultimate hebben aangeschaft.
+>* De [!DNL Databricks] -bron is in de broncatalogus beschikbaar voor gebruikers die Real-Time CDP Ultimate hebben aangeschaft.
 >
->* De bron [!DNL Azure Databricks] is in bèta. Lees de [ termijnen en voorwaarden ](../../../../home.md#terms-and-conditions) in het bronoverzicht voor meer informatie bij het gebruiken van bèta-geëtiketteerde bronnen.
+>* De bron [!DNL Databricks] is in bèta. Lees de [ termijnen en voorwaarden ](../../../../home.md#terms-and-conditions) in het bronoverzicht voor meer informatie bij het gebruiken van bèta-geëtiketteerde bronnen.
 
-Lees deze gids om te leren hoe te om uw [!DNL Azure Databricks] rekening met Adobe Experience Platform te verbinden gebruikend [[!DNL Flow Service]  API ](https://developer.adobe.com/experience-platform-apis/references/flow-service/).
+Lees deze gids om te leren hoe te om uw [!DNL Databricks] rekening met Adobe Experience Platform te verbinden gebruikend [[!DNL Flow Service]  API ](https://developer.adobe.com/experience-platform-apis/references/flow-service/).
 
 ## Aan de slag
 
@@ -48,7 +48,7 @@ Geef waarden op voor de volgende referenties om [!DNL Databricks] te verbinden m
 | `database` | De naam van uw database in het delta-meer. |
 | `connectionSpec.Id` | De verbindingsSPEC identiteitskaart keert de schakelaareigenschappen van een bron, met inbegrip van authentificatiespecificaties met betrekking tot het creëren van de basis en bronverbindingen terug. De verbindingsspecificatie-id voor [!DNL Databricks] is `e9d7ec6b-0873-4e57-ad21-b3a7c65e310b` . |
 
-Voor meer informatie, lees het [[!DNL Azure Databricks]  overzicht ](../../../../connectors/databases/databricks.md).
+Voor meer informatie raadpleegt u het [[!DNL Databricks] overzicht](../../../../connectors/databases/databricks.md).
 
 ## Een basisverbinding maken
 
@@ -66,7 +66,7 @@ POST /connections
 
 Met de volgende aanvraag wordt een basisverbinding voor een [!DNL Databricks] -bron gemaakt met behulp van toegangstoken-verificatie.
 
-+++aanvraagvoorbeeld weergeven
++++Voorbeeld van een aanvraag weergeven
 
 ```shell
 curl -X POST \
@@ -109,7 +109,7 @@ curl -X POST \
 
 Een geslaagde reactie retourneert de zojuist gemaakte verbinding, inclusief de id van de basisverbinding.
 
-+++Respons voorbeeld weergeven
++++Reactievoorbeeld weergeven
 
 ```json
 {

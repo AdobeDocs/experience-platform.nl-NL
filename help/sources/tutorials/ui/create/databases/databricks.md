@@ -1,24 +1,25 @@
 ---
-title: Connect Azure-databases naar Experience Platform via de gebruikersinterface
-description: Leer hoe u Azure Databricks met Experience Platform kunt verbinden via de gebruikersinterface.
+title: Databases verbinden met Experience Platform via de gebruikersinterface
+description: Leer hoe u databases via de gebruikersinterface met Experience Platform kunt verbinden.
 badgeUltimate: label="Ultimate" type="Positive"
 badgeBeta: label="Beta" type="Informative"
-source-git-commit: 2bd16d5a55c5bbeedbc6a6012d9f0229eee8433a
+exl-id: 877e22c0-cb77-45bb-88c9-54fdde2d6905
+source-git-commit: 96e395e3b3d977d7eb04c400f6fd290977bf1101
 workflow-type: tm+mt
-source-wordcount: '462'
-ht-degree: 1%
+source-wordcount: '460'
+ht-degree: 2%
 
 ---
 
-# Verbinding maken [!DNL Azure Databricks] met Experience Platform in de gebruikersinterface
+# Verbinding maken [!DNL Databricks] met Experience Platform in de gebruikersinterface
 
 >[!AVAILABILITY]
 >
->* De [!DNL Azure Databricks] -bron is in de broncatalogus beschikbaar voor gebruikers die Real-Time CDP Ultimate hebben aangeschaft.
+>* De [!DNL Databricks] -bron is in de broncatalogus beschikbaar voor gebruikers die Real-Time CDP Ultimate hebben aangeschaft.
 >
->* De bron [!DNL Azure Databricks] is in bèta. Lees de [ termijnen en voorwaarden ](../../../../home.md#terms-and-conditions) in het bronoverzicht voor meer informatie bij het gebruiken van bèta-geëtiketteerde bronnen.
+>* De bron [!DNL Databricks] is in bèta. Lees de [ termijnen en voorwaarden ](../../../../home.md#terms-and-conditions) in het bronoverzicht voor meer informatie bij het gebruiken van bèta-geëtiketteerde bronnen.
 
-Lees deze handleiding voor informatie over hoe u uw [!DNL Azure Databricks] -account kunt verbinden met Adobe Experience Platform via de werkruimte voor bronnen in de gebruikersinterface.
+Lees deze handleiding voor informatie over hoe u uw [!DNL Databricks] -account kunt verbinden met Adobe Experience Platform via de werkruimte voor bronnen in de gebruikersinterface.
 
 ## Aan de slag
 
@@ -29,22 +30,22 @@ Deze handleiding vereist een goed begrip van de volgende onderdelen van Experien
 
 ### Vereiste referenties verzamelen
 
-Geef waarden op voor de volgende referenties om [!DNL Azure Databricks] te verbinden met Experience Platform.
+Geef waarden op voor de volgende referenties om [!DNL Databricks] te verbinden met Experience Platform.
 
 | Credentials | Beschrijving |
 | --- | --- |
-| Domein | De URL van de [!DNL Azure Databricks] -werkruimte. Bijvoorbeeld `https://adb-1234567890123456.7.azuredatabricks.net` . |
-| Cluster-id | De id van uw cluster in [!DNL Azure Databricks] . Deze cluster moet al een bestaande cluster zijn en moet een interactief cluster zijn. |
-| Toegangstoken | Het toegangstoken dat uw [!DNL Azure Databricks] account verifieert. U kunt uw toegangstoken produceren gebruikend de [!DNL Azure Databricks] werkruimte. |
+| Domein | De URL van de [!DNL Databricks] -werkruimte. Bijvoorbeeld `https://adb-1234567890123456.7.azuredatabricks.net` . |
+| Cluster-id | De id van uw cluster in [!DNL Databricks] . Deze cluster moet al een bestaande cluster zijn en moet een interactief cluster zijn. |
+| Toegangstoken | Het toegangstoken dat uw [!DNL Databricks] account verifieert. U kunt uw toegangstoken produceren gebruikend de [!DNL Databricks] werkruimte. |
 | Database | De naam van uw database in het delta-meer. |
 
-Voor meer informatie, lees het [[!DNL Azure Databricks]  overzicht ](../../../../connectors/databases/databricks.md).
+Voor meer informatie raadpleegt u het [[!DNL Databricks] overzicht](../../../../connectors/databases/databricks.md).
 
 ## Navigeren door de catalogus met bronnen
 
 Selecteer in de gebruikersinterface van Experience Platform de optie **[!UICONTROL Sources]** in de linkernavigatie voor toegang tot de werkruimte van *[!UICONTROL Sources]* . Kies een categorie of gebruik de zoekbalk om de bron te zoeken.
 
-Als u verbinding wilt maken met [!DNL Azure Databricks] , gaat u naar de categorie *[!UICONTROL Databases]* , selecteert u de **[!UICONTROL Azure Databricks]** bronkaart en selecteert u vervolgens **[!UICONTROL Set up]** .
+Als u verbinding wilt maken met [!DNL Databricks] , gaat u naar de categorie *[!UICONTROL Databases]* , selecteert u de **[!UICONTROL Azure Databricks]** bronkaart en selecteert u vervolgens **[!UICONTROL Set up]** .
 
 >[!TIP]
 >
