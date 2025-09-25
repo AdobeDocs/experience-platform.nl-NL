@@ -2,7 +2,7 @@
 title: Configuratie-handleiding voor identiteitsgrafiekkoppelingsregels
 description: Leer over de verschillende implementatietypen die u het gebruiken van de Regels van de Verenigingsgrafiek kunt vormen die Regels verbinden.
 exl-id: fd0afb0b-a368-45b9-bcdc-f2f3b7508cee
-source-git-commit: 54a50cd3e122df7f653c06232e0598fa878eeac5
+source-git-commit: 6af5f87c9c32212568e84edbed9f043a766870be
 workflow-type: tm+mt
 source-wordcount: '1951'
 ht-degree: 1%
@@ -133,6 +133,7 @@ Lees deze sectie voor tussentijdse implementaties van [!DNL Identity Graph Linki
 >[!NOTE]
 >
 >Als u de onderstaande implementaties wilt voltooien, moet u de volgende aangepaste naamruimten maken met de identiteitssymbolen (hoofdlettergevoelig):
+>
 >* `CRMID`
 >* `CChash` (Dit is een aangepaste naamruimte die een gehasht creditcardnummer vertegenwoordigt.)
 
@@ -228,6 +229,7 @@ CRMID: Jill, CChash: undefined
 >[!NOTE]
 >
 >Als u de onderstaande implementaties wilt voltooien, moet u aangepaste naamruimten maken met de identiteitssymbolen (hoofdlettergevoelig):
+>
 >* `CRMID`
 >* `CRMIDhash`
 
@@ -477,6 +479,7 @@ loginID: JanePersonal, ECID: 222
 >[!NOTE]
 >
 >Als u de onderstaande implementaties wilt voltooien, moet u aangepaste naamruimten maken met de identiteitssymbolen (hoofdlettergevoelig):
+>
 >* `CRMID`
 >* `loyaltyID`
 >* `thirdPartyID`

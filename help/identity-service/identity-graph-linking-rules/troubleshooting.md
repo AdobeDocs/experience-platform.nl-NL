@@ -2,9 +2,9 @@
 title: De Gids van het oplossen van problemen voor de Regels van de Verbinding van de Grafiek van de Identiteit
 description: Leer hoe te om gemeenschappelijke kwesties in de grafiek van de Identiteit problemen op te lossen die Regels verbindt.
 exl-id: 98377387-93a8-4460-aaa6-1085d511cacc
-source-git-commit: c9b5de33de91b93f179b4720f692eb876e94df72
+source-git-commit: 0381940206d8730f2f7ae2dce849d943316b0451
 workflow-type: tm+mt
-source-wordcount: '3288'
+source-wordcount: '3444'
 ht-degree: 0%
 
 ---
@@ -146,7 +146,27 @@ Er zijn verschillende redenen die ertoe bijdragen waarom uw ervaringsfragmenten 
    * Een ervaringsgebeurtenis moet bijvoorbeeld zowel een `_id` als een `timestamp` bevatten.
    * Bovendien moet `_id` uniek zijn voor elke gebeurtenis (record).
 
-In de context van naamruimteprioriteit weigert Profiel elke gebeurtenis die twee of meer identiteiten met de hoogste naamruimteprioriteit bevat. Als GAID bijvoorbeeld niet is gemarkeerd als een unieke naamruimte en als er twee identiteiten zijn binnengekomen met een GAID-naamruimte en er verschillende identiteitswaarden zijn binnengekomen, worden de gebeurtenissen niet opgeslagen in Profiel.
+In de context van namespace prioriteit, zal het Profiel om het even welke gebeurtenis verwerpen die twee of meer identiteiten met de hoogste namespace prioriteit in **bepaalde inkomende gebeurtenis** bevat. Stel bijvoorbeeld dat uw identiteitsinstellingen als volgt zijn geconfigureerd:
+
+| Naamruimte | Uniek per grafiek | Prioriteit |
+| --- | --- | --- |
+| CRMID | ✔️ | 1 |
+| GAID | | 2 |
+| ECID | | 3 |
+
+Voor elk scenario, veronderstel dat de Gebeurtenissen van de Ervaring de volgende gebeurtenissen bevatten:
+
+**Scenario 1: 2 GAIDs, 1 ECID**
+
+* In dit scenario, bevat een inkomende Gebeurtenis van de Ervaring 2 GAIDs en 1 ECID. Tussen deze naamruimten wordt GAID geconfigureerd als de naamruimte met de hoogste naamruimteprioriteit. Nochtans, omdat er 2 GAIDs zijn, slaat het Profiel **niet** deze Gebeurtenis van de Ervaring op.
+
+**Scenario 2: 2 CRMIDs, 1 GAID**
+
+* In dit scenario, bevat een inkomende Gebeurtenis van de Ervaring 2 CRMIDs en 1 GAID. Tussen deze naamruimten wordt CRMID geconfigureerd als de naamruimte met de hoogste naamruimteprioriteit. Nochtans, omdat er 2 GAIDs zijn, slaat het Profiel **niet** deze Gebeurtenis van de Ervaring op.
+
+**Scenario 3: 1 CRMID, 2 GAIDs**
+
+* In dit scenario bevat een binnenkomende Experience-gebeurtenis 1 CRMID en 2 GAID&#39;s. Tussen deze naamruimten wordt CRMID geconfigureerd als de naamruimte met de hoogste naamruimteprioriteit. Aangezien er slechts één CRMID is, zal het Profiel de Gebeurtenissen van de Ervaring opnemen omdat er slechts één geval van namespace met de hoogste namespaceprioriteit is.
 
 **de stappen van het Oplossen van problemen**
 

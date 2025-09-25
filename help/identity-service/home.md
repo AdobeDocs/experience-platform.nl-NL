@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Overzicht van identiteitsservice
 description: Met de Adobe Experience Platform Identity Service kunt u uw klant en zijn gedrag beter zien door identiteiten tussen apparaten en systemen te overbruggen, zodat u in real-time een indrukwekkende, persoonlijke digitale ervaring kunt bieden.
 exl-id: a22dc3f0-3b7d-4060-af3f-fe4963b45f18
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: f791940300036159ceaad11ff725eecfaa8332f4
 workflow-type: tm+mt
-source-wordcount: '1556'
+source-wordcount: '1574'
 ht-degree: 0%
 
 ---
@@ -38,7 +38,7 @@ Lees, voordat u op de details van Identity Service gaat duiken, de volgende tabe
 | Koppeling | Een koppeling of een koppeling is een methode om vast te stellen dat twee verschillende identiteiten dezelfde entiteit vertegenwoordigen. Bijvoorbeeld, betekent een verbinding tussen &quot;`Email` = julien <span>@acme.com&quot; en &quot;`Phone` = 555-555-1234&quot;dat beide identiteiten de zelfde entiteit vertegenwoordigen. Dit suggereert dat de klant die met uw merk met zowel het e-mailadres van julien <span>@acme.com als het telefoonnummer 555-555-1234 heeft gecommuniceerd het zelfde is. |
 | Identiteitsservice | Identity Service is een service in Experience Platform die identiteiten koppelt (of ontkoppelt) om identiteitsgrafieken te onderhouden. |
 | Identiteitsgrafiek | De identiteitsgrafiek is een inzameling van identiteiten die één enkele klant vertegenwoordigen. Voor meer informatie, lees de gids op [ gebruikend de kijker van de identiteitsgrafiek ](./features/identity-graph-viewer.md). |
-| Realtime-klantenprofiel | Real-Time klantprofiel is een service in Adobe Experience Platform die: <ul><li>Hiermee voegt u profielfragmenten samen om een profiel te maken op basis van een identiteitsgrafiek.</li><li>Segmenteert profielen zodat deze vervolgens naar de bestemming kunnen worden verzonden voor activering.</li></ul> |
+| Real-Time Customer Profile | Real-Time klantprofiel is een service in Adobe Experience Platform die: <ul><li>Hiermee voegt u profielfragmenten samen om een profiel te maken op basis van een identiteitsgrafiek.</li><li>Segmenteert profielen zodat deze vervolgens naar de bestemming kunnen worden verzonden voor activering.</li></ul> |
 | Profiel | Een profiel is een weergave van een onderwerp, een organisatie of een individu. Een profiel bestaat uit vier elementen: <ul><li>Attributen: kenmerken geven informatie zoals naam, leeftijd of geslacht.</li><li>Gedrag: gedrag geeft informatie over de activiteiten van een bepaald profiel. Een profielgedrag kan bijvoorbeeld zien of een bepaald profiel &quot;naar sandalen zoeken&quot; of &quot;naar t-shirts opdracht geven&quot; was.</li><li>Identiteiten: voor een samengevoegd profiel wordt hier informatie gegeven over alle identiteiten die aan de persoon zijn gekoppeld. Identiteiten kunnen in drie categorieën worden ingedeeld: Persoon (CRMID, e-mail, telefoon), apparaat (IDFA, GAID) en cookie (ECID, STEUN).</li><li>Lidmaatschap van het publiek: De groepen waarin het profiel tot (loyale gebruikers, gebruikers die in Californië wonen, enz.) behoort</li></ul> |
 
 {style="table-layout:auto"}
@@ -74,6 +74,10 @@ Identiteitsdienst verricht de volgende activiteiten om zijn opdracht te verwezen
 
 ## Identiteitsservice koppelt identiteiten
 
+>[!IMPORTANT]
+>
+>Identiteitsservice is hoofdlettergevoelig. Bijvoorbeeld, **abc <span>@gmail.com** en **ABC <span>@GMAIL.COM** zou als twee afzonderlijke E-mailidentiteiten worden behandeld.
+
 Er wordt een koppeling tussen twee identiteiten tot stand gebracht wanneer de naamruimte van de identiteit en de identiteitswaarden overeenkomen.
 
 Een typische login gebeurtenis **verzendt twee identiteiten** in Experience Platform:
@@ -89,7 +93,7 @@ Bekijk het volgende voorbeeld:
    * CRMID: ABC is de naamruimte en waarde die u als geverifieerde gebruiker vertegenwoordigt.
    * ECID: 123 is de naamruimte en waarde die het webbrowsergebruik op uw laptop vertegenwoordigt.
 * Als u zich vervolgens met dezelfde gegevens aanmeldt bij dezelfde e-commercewebsite, maar de webbrowser op uw telefoon gebruikt in plaats van de webbrowser op uw laptop, wordt een nieuwe ECID geregistreerd in Identity Service.
-* Achter de schermen verwerkt Identity Service deze nieuwe gebeurtenis als `{CRM_ID:ABC, ECID:456}` , waarbij CRM_ID: ABC uw geverifieerde klant-id en ECID:456 de webbrowser op uw mobiele apparaat vertegenwoordigt.
+* Achter de scènes, verwerkt de Dienst van de Identiteit deze nieuwe gebeurtenis als `{CRM_ID:ABC, ECID:456}`, waar CRM_ID: ABC uw voor authentiek verklaarde klant ID vertegenwoordigt en ECID :456 Webbrowser op uw mobiel apparaat vertegenwoordigt.
 
 Gezien de bovenstaande scenario&#39;s legt Identity Service een koppeling tot stand tussen `{CRM_ID:ABC, ECID:123}` en `{CRM_ID:ABC, ECID:456}` . Dit resulteert in een identiteitsgrafiek waarbij u drie identiteiten &quot;bezit&quot;: één voor persoon-id (CRMID) en twee voor cookie-id&#39;s (ECID&#39;s).
 
@@ -101,7 +105,7 @@ Een identiteitsgrafiek is een kaart van verhoudingen tussen verschillende identi
 
 De volgende video is bedoeld als ondersteuning voor uw begrip van identiteiten en identiteitsgrafieken.
 
->[!VIDEO](https://video.tv.adobe.com/v/3432349?quality=12&learn=on&captions=dut)
+>[!VIDEO](https://video.tv.adobe.com/v/27841?quality=12&learn=on)
 
 ## Inzicht in de rol van Identity Service binnen de Experience Platform-infrastructuur
 
