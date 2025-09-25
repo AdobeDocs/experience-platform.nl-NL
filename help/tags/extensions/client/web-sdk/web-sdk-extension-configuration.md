@@ -2,9 +2,9 @@
 title: De Web SDK-tagextensie configureren
 description: Leer hoe u de Experience Platform Web SDK-tagextensie configureert in de gebruikersinterface voor tags.
 exl-id: 22425daa-10bd-4f06-92de-dff9f48ef16e
-source-git-commit: 7d5896a4427af54d3a6323744d726bf0b0c3137a
+source-git-commit: 7c2afd6d823ebb2db0fabb4cc16ef30bcbfeef13
 workflow-type: tm+mt
-source-wordcount: '2878'
+source-wordcount: '2888'
 ht-degree: 0%
 
 ---
@@ -19,7 +19,7 @@ In dit document wordt uitgelegd hoe u de tagextensie configureert in de gebruike
 
 ## De extensie van de Web SDK-tag installeren {#install}
 
-Voor de extensie van de SDK-tag Web moet een eigenschap zijn geïnstalleerd. Als u dit niet reeds hebt gedaan, zie de documentatie bij [ het creëren van een markeringsbezit ](https://experienceleague.adobe.com/docs/platform-learn/implement-in-websites/configure-tags/create-a-property.html?lang=nl-NL).
+Voor de extensie van de SDK-tag Web moet een eigenschap zijn geïnstalleerd. Als u dit niet reeds hebt gedaan, zie de documentatie bij [ het creëren van een markeringsbezit ](https://experienceleague.adobe.com/docs/platform-learn/implement-in-websites/configure-tags/create-a-property.html).
 
 Nadat u een eigenschap hebt gemaakt, opent u de eigenschap en selecteert u de tab **[!UICONTROL Extensions]** op de linkerzijbalk.
 
@@ -42,7 +42,7 @@ Wanneer u een de bouwstijl van het douaneWeb SDK creeert, wordt de bouwstijl geb
 >[!IMPORTANT]
 >
 >Als u SDK-componenten van het web uitschakelt, kan dit de bestaande implementatie onderbreken. Elke keer dat u een component uitschakelt, moet u de implementatie grondig testen om ervoor te zorgen dat alle functies die u nodig hebt, naar behoren werken.
->&#x200B;>Wanneer u een component uitschakelt, kunt u de instellingen van die component niet meer bewerken.
+>>Wanneer u een component uitschakelt, kunt u de instellingen van die component niet meer bewerken.
 
 Als u een aangepaste Web SDK-build wilt maken met de Web SDK-tagextensie, volgt u de onderstaande stappen.
 
@@ -60,7 +60,8 @@ Als u een aangepaste Web SDK-build wilt maken met de Web SDK-tagextensie, volgt 
    * **[!UICONTROL Media analytics bridge]**: deze component schakelt Edge Network Streaming Media in via de Media Analytics-interface. Als u deze component uitschakelt, worden de volgende elementen uitgeschakeld:
       * [ krijgt de Traceur van de Analyse van Media ](action-types.md#get-media-analytics-tracker) actietype
    * **[!UICONTROL Personalization]**: deze component maakt de integratie van Adobe Target en Adobe Journey Optimizer mogelijk. Als u deze component uitschakelt, worden de volgende elementen uitgeschakeld:
-      * [ pas voorstellingenactie ](action-types.md) type toe
+      * [ pas pro-posities ](action-types.md#apply-propositions) actietype toe
+   * **[!UICONTROL Push notifications]**: deze component schakelt webpushmeldingen voor Adobe Journey Optimizer in.
    * **[!UICONTROL Rules engine]**: deze component schakelt de Adobe Journey Optimizer op het apparaat in. Als u deze component uitschakelt, worden de volgende elementen uitgeschakeld:
       * [ evalueert heersers ](action-types.md#evaluate-rulesets) actietype
       * [ Abonneren heersenet punten ](event-types.md#subscribe-ruleset-items) gebeurtenistype
@@ -75,7 +76,7 @@ De configuratieopties boven aan de pagina vertellen Adobe Experience Platform wa
 
 * **[!UICONTROL Name]**: De extensie Adobe Experience Platform Web SDK ondersteunt meerdere exemplaren op de pagina. De naam wordt gebruikt om gegevens naar veelvoudige organisaties met een markeringsconfiguratie te verzenden. De instantienaam is standaard ingesteld op `alloy` . U kunt de instantienaam echter wijzigen in elke geldige JavaScript-objectnaam.
 * **[!UICONTROL IMS organization ID]**: De id van de organisatie waarnaar u de gegevens op Adobe wilt verzenden. Meestal gebruikt u de standaardwaarde die automatisch wordt ingevuld. Wanneer u meerdere exemplaren op de pagina hebt, vult u dit veld met de waarde van de tweede organisatie waarnaar u gegevens wilt verzenden.
-* **[!UICONTROL Edge domain]**: Het domein waarvan de extensie gegevens verzendt en ontvangt. Adobe raadt u aan een 1st-party-domein (CNAME) te gebruiken voor deze extensie. Het standaard domein van derden werkt voor ontwikkelomgevingen, maar is niet geschikt voor productieomgevingen. De instructies op hoe te opstelling zijn een eerste-partij CNAME vermeld [ hier ](https://experienceleague.adobe.com/docs/core-services/interface/ec-cookies/cookies-first-party.html?lang=nl-NL).
+* **[!UICONTROL Edge domain]**: Het domein waarvan de extensie gegevens verzendt en ontvangt. Adobe raadt u aan een 1st-party-domein (CNAME) te gebruiken voor deze extensie. Het standaard domein van derden werkt voor ontwikkelomgevingen, maar is niet geschikt voor productieomgevingen. De instructies op hoe te opstelling zijn een eerste-partij CNAME vermeld [ hier ](https://experienceleague.adobe.com/docs/core-services/interface/ec-cookies/cookies-first-party.html).
 * **[!UICONTROL Adobe Advertising]**: beschikbaar wanneer de `Advertising` -component is geselecteerd. Alleen instellingen voor organisaties met Adobe Advertising DSP:
    * **[!UICONTROL Adobe Advertising DSP]**: Schakelt weergave via bijhouden in.
    * **[!UICONTROL Advertisers]**: beschikbaar als [!UICONTROL Adobe Advertising DSP] is ingeschakeld. De adverteerders waarvoor om mening-door het volgen toe te laten.
@@ -123,11 +124,10 @@ Deze sectie staat u toe om het gedrag van het Web SDK te bepalen wanneer het ove
 * **[!UICONTROL Use third-party cookies]**: Wanneer deze optie is ingeschakeld, probeert Web SDK een gebruikers-id op te slaan in een cookie van een andere fabrikant. Als dit gelukt is, wordt de gebruiker geïdentificeerd als één gebruiker terwijl deze in meerdere domeinen navigeert en niet als een afzonderlijke gebruiker op elk domein wordt geïdentificeerd. Als deze optie is ingeschakeld, kan de SDK de gebruikersnaam nog steeds niet opslaan in een cookie van een andere fabrikant als de browser cookies van derden niet ondersteunt of door de gebruiker is geconfigureerd om cookies van derden niet toe te staan. In dit geval slaat de SDK de id alleen op in het domein van de eerste partij.
 
   >[!IMPORTANT]
-  >&#x200B;>De koekjes van de derde zijn niet compatibel met de [&#128279;](../../../../web-sdk/identity/first-party-device-ids.md) functionaliteit 1&rbrace; van identiteitskaart van het eerste apparaat in SDK van het Web.
-  >&#x200B;>
-  >&#x200B;>U kunt apparaat-id&#39;s van andere leveranciers gebruiken of cookies van andere leveranciers, maar u kunt beide functies niet tegelijkertijd gebruiken.
+  >>De koekjes van de derde zijn niet compatibel met de [ functionaliteit 1} van identiteitskaart van het eerste apparaat in SDK van het Web.
+  >>](../../../../web-sdk/identity/first-party-device-ids.md)
+  >>U kunt apparaat-id&#39;s van andere leveranciers gebruiken of cookies van andere leveranciers, maar u kunt beide functies niet tegelijkertijd gebruiken.
   >
-
 ## Aanpassingsinstellingen configureren {#personalization}
 
 In deze sectie kunt u configureren hoe u bepaalde delen van een pagina wilt verbergen terwijl gepersonaliseerde inhoud wordt geladen. Zo weet u zeker dat uw bezoekers alleen de gepersonaliseerde pagina zien.

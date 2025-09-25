@@ -2,9 +2,9 @@
 title: Opmerkingen bij de release Adobe Experience Platform Web SDK
 description: Adobe Experience Platform Web SDK-tagextensie
 exl-id: 91de8c91-023a-45b6-9f67-ac75ee471e50
-source-git-commit: 1cc62ee8c87ff2c1c1d55db2e462d485289120ed
+source-git-commit: 7c2afd6d823ebb2db0fabb4cc16ef30bcbfeef13
 workflow-type: tm+mt
-source-wordcount: '2934'
+source-wordcount: '2957'
 ht-degree: 5%
 
 ---
@@ -13,6 +13,13 @@ ht-degree: 5%
 # Opmerkingen bij de release Web SDK
 
 In dit document worden de releaseopmerkingen voor de Adobe Experience Platform Web SDK-tagextensie besproken. Voor de recentste versienota&#39;s op SDK zelf, zie de [ de versienota&#39;s van SDK van het Web van Experience Platform ](/help/web-sdk/release-notes.md).
+
+## Versie 2.33.0 - 24 september 2025
+
+**Nieuwe functies**
+
+- Extra ondersteuning voor het weergeven van pushmeldingen
+- Bevat [ versie 2.30.0 ](../../../../web-sdk/release-notes.md#2-30-0) van het Web SDK van Adobe Experience Platform.
 
 ## Versie 2.32.0 - 4 september 2025
 
