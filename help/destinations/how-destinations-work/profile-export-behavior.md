@@ -2,9 +2,9 @@
 title: Exportgedrag profiel
 description: Leer hoe het gedrag van de profieluitvoer tussen de verschillende integratiepatronen varieert die in de bestemmingen van Experience Platform worden gesteund.
 exl-id: 2be62843-0644-41fa-a860-ccd65472562e
-source-git-commit: ede6f3ed4518babddb537a62cdb16915e2d37310
+source-git-commit: d0ee4b30716734b8fce3509a6f3661dfa572cc9f
 workflow-type: tm+mt
-source-wordcount: '2935'
+source-wordcount: '3068'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,8 @@ Er zijn verscheidene bestemmingstypes in Experience Platform, zoals aangetoond i
 
 >[!IMPORTANT]
 >
->Op deze documentatiepagina wordt alleen het gedrag voor het exporteren van profielen beschreven voor de verbindingen die onder aan het diagram worden gemarkeerd.
+>* Noteer de verandering van het uitvoergedrag die in September 2025 voor [ ondernemingsbestemmingen ](#enterprise-behavior) wordt geïntroduceerd
+>* Op deze documentatiepagina wordt alleen het gedrag voor het exporteren van profielen beschreven voor de verbindingen die onder aan het diagram worden gemarkeerd.
 
 ![ Types van bestemmingsdiagram ](/help/destinations/assets/how-destinations-work/types-of-destinations-v4.png)
 
@@ -42,7 +43,7 @@ Het samenvoegingsbeleid is configureerbaar, en de bestemmingsontwikkelaars kunne
 
 >[!IMPORTANT]
 >
-> De bestemmingen van de onderneming zijn beschikbaar slechts aan [ Adobe Real-Time Customer Data Platform Ultimate ](https://helpx.adobe.com/nl/legal/product-descriptions/real-time-customer-data-platform.html) klanten.
+> De bestemmingen van de onderneming zijn beschikbaar slechts aan [ Adobe Real-Time Customer Data Platform Ultimate ](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform.html) klanten.
 
 De [ ondernemingsbestemmingen ](/help/destinations/destination-types.md#advanced-enterprise-destinations) in Experience Platform zijn Amazon Kinesis, Azure Event Hubs, en HTTP API.
 
@@ -56,13 +57,13 @@ In alle hierboven beschreven gevallen worden alleen de profielen waarin relevant
 
 Alle toegewezen kenmerken worden geëxporteerd voor een profiel, ongeacht de locatie van de wijzigingen. In het voorbeeld hierboven worden alle toegewezen kenmerken voor deze vijf nieuwe profielen geëxporteerd, zelfs als de kenmerken zelf niet zijn gewijzigd.
 
-### Wat bepaalt een gegevensexport en wat wordt opgenomen in de export?
+### Wat bepaalt een gegevensexport en wat wordt opgenomen in de export? {#enterprise-behavior}
 
 Met betrekking tot het gegeven dat voor een bepaald profiel wordt uitgevoerd, is het belangrijk om de twee verschillende concepten *te begrijpen wat een gegevensuitvoer aan uw ondernemingsbestemming* en *bepaalt welke gegevens in de uitvoer* inbegrepen zijn.
 
 | Wat bepaalt de doelexport | Wat is inbegrepen in de doelexport |
 |---------|----------|
-| <ul><li>Toegewezen kenmerken en segmenten fungeren als actiepunt voor het exporteren van een bestemming. Dit betekent dat als de `segmentMembership` -status van een profiel verandert in `realized` of `exiting` of als toegewezen kenmerken worden bijgewerkt, een doelexport wordt uitgeschakeld.</li><li>Aangezien identiteiten momenteel niet aan ondernemingsbestemmingen kunnen worden in kaart gebracht, bepalen de veranderingen in om het even welke identiteit op een bepaald profiel ook bestemmingsuitvoer.</li><li>Een wijziging voor een kenmerk wordt gedefinieerd als een update voor het kenmerk, ongeacht of het dezelfde waarde heeft of niet. Dit houdt in dat een overschrijven van een kenmerk als een wijziging wordt beschouwd, zelfs als de waarde zelf niet is gewijzigd.</li></ul> | <ul><li>Het `segmentMembership` -object bevat het segment dat is toegewezen in de activeringsgegevensstroom, waarvoor de status van het profiel is gewijzigd na een kwalificatie- of segmentafsluitgebeurtenis. Merk op dat andere unmapped segmenten waarvoor het profiel dat voor wordt gekwalificeerd deel van de bestemmingsuitvoer kan uitmaken, als deze segmenten tot het zelfde [ fusiebeleid ](/help/profile/merge-policies/overview.md) behoren zoals het segment in kaart gebracht in activeringsdataflow. </li><li>Alle identiteiten in het `identityMap` -object worden ook opgenomen (Experience Platform ondersteunt momenteel geen identiteitstoewijzing in de doelmap van de onderneming).</li><li>Alleen de toegewezen kenmerken worden opgenomen in de doelexport.</li></ul> |
+| <ul><li>Toegewezen kenmerken en segmenten fungeren als actiepunt voor het exporteren van een bestemming. Dit betekent dat als de `segmentMembership` -status van een profiel verandert in `realized` of `exiting` of als toegewezen kenmerken worden bijgewerkt, een doelexport wordt uitgeschakeld.</li><li>Aangezien identiteiten momenteel niet aan ondernemingsbestemmingen kunnen worden in kaart gebracht, bepalen de veranderingen in om het even welke identiteit op een bepaald profiel ook bestemmingsuitvoer.</li><li>Een wijziging voor een kenmerk wordt gedefinieerd als een update voor het kenmerk, ongeacht of het dezelfde waarde heeft of niet. Dit houdt in dat een overschrijven van een kenmerk als een wijziging wordt beschouwd, zelfs als de waarde zelf niet is gewijzigd.</li></ul> | <ul><li>**Nota**: Het uitvoergedrag voor ondernemingsbestemmingen werd bijgewerkt met de versie van September 2025. Het nieuwe hieronder benadrukte gedrag is momenteel slechts op nieuwe ondernemingsbestemmingen van toepassing die na deze versie worden gecreeerd. Voor bestaande bedrijfsdoelen kunt u het oude exportgedrag blijven gebruiken of contact opnemen met Adobe om te migreren naar het nieuwe gedrag, waarbij alleen toegewezen doelgroepen worden geëxporteerd. Alle organisaties worden in 2026 geleidelijk naar het nieuwe gedrag gemigreerd. <br><br> <span class="preview"> **Nieuw de uitvoergedrag**: De segmenten die aan de bestemming in kaart worden gebracht en zijn veranderd zullen in het `segmentMembership` voorwerp worden omvat. In sommige scenario&#39;s zouden zij gebruikend veelvoudige vraag kunnen worden uitgevoerd. Ook, in sommige scenario&#39;s, zouden sommige segmenten die niet zijn veranderd in de vraag ook kunnen worden omvat. In elk geval, slechts zullen de segmenten in dataflow in kaart worden gebracht worden uitgevoerd.</span></li><br>**Oud gedrag**: Het `segmentMembership` voorwerp omvat het segment dat in de activeringsdataflow in kaart wordt gebracht, waarvoor het statuut van het profiel na een kwalificatie of een gebeurtenis van de segmentuitgang is veranderd. Andere unmapped segmenten waarvoor het profiel gekwalificeerd deel van de bestemmingsuitvoer kan uitmaken, als deze segmenten tot het zelfde [ fusiebeleid ](/help/profile/merge-policies/overview.md) behoren zoals het segment in kaart gebracht in activeringsdataflow.<li>Alle identiteiten in het `identityMap` -object worden ook opgenomen (Experience Platform ondersteunt momenteel geen identiteitstoewijzing in de doelmap van de onderneming).</li><li>Alleen de toegewezen kenmerken worden opgenomen in de doelexport.</li></ul> |
 
 {style="table-layout:fixed"}
 
@@ -76,7 +77,8 @@ Bijvoorbeeld, overweeg dit dataflow aan een bestemming van HTTP waar drie publie
 
 ![ gegevens van de ondernemingsbestemming ](/help/destinations/assets/catalog/http/profile-export-example-dataflow.png)
 
-Een profieluitvoer naar de bestemming kan door een profiel worden bepaald dat voor of het weggaan van één van *drie in kaart gebrachte segmenten* in aanmerking komt. In de gegevensexport kan in het `segmentMembership` -object echter een ander niet-toegewezen publiek worden weergegeven als dat specifieke profiel lid van dat publiek is en als deze hetzelfde samenvoegbeleid delen als het publiek dat de exportbewerking heeft gestart. Als een profiel voor de **Klant met de Auto&#39;s van DeLorean** maar ook een lid van de **Gecontroleerde &quot;Terug naar de Toekomstige&quot;film** en **de de fictieswaaiers van de Wetenschap** segmenten kwalificeert, dan zullen deze andere twee publiek ook in het `segmentMembership` voorwerp van de gegevensuitvoer aanwezig zijn, alhoewel deze niet in dataflow, als deze het zelfde fusiebeleid delen met de **Klant met het segment van de AutoAuto&#39;s van DeLorean**.
+Een profieluitvoer naar de bestemming kan door een profiel worden bepaald dat voor of het weggaan van één van *drie in kaart gebrachte segmenten* in aanmerking komt. In de gegevensexport kan in het `segmentMembership` -object een ander toegewezen publiek worden weergegeven, als dat specifieke profiel lid van dat publiek is en als deze hetzelfde samenvoegbeleid delen als het publiek dat de exportbewerking heeft gestart. Als een profiel voor de **Klant met de Auto&#39;s van DeLorean** kwalificeert en ook een lid van de **Basis Actieve Plaats en Stad - Dallas** segmenten is, dan zullen deze andere twee publiek ook in het `segmentMembership` voorwerp van de gegevensuitvoer aanwezig zijn, omdat deze in dataflow in kaart worden gebracht, als deze het zelfde fusiebeleid met de **Klant met de Codes van DeLorean delen ars** segment.
+
 
 Vanuit het oogpunt van profielkenmerken bepalen wijzigingen in de vier bovenstaande kenmerken de doelexport en zijn alle vier toegewezen kenmerken in het profiel aanwezig in de gegevensexport.
 
@@ -103,7 +105,7 @@ In alle hierboven beschreven gevallen worden alleen de profielen waarin relevant
 
 Alle toegewezen kenmerken worden geëxporteerd voor een profiel, ongeacht de locatie van de wijzigingen. In het voorbeeld hierboven worden alle toegewezen kenmerken voor deze vijf nieuwe profielen geëxporteerd, zelfs als de kenmerken zelf niet zijn gewijzigd.
 
-### Wat bepaalt een gegevensexport en wat wordt opgenomen in de export?
+### Wat bepaalt een gegevensexport en wat wordt opgenomen in de export? {#streaming-behavior}
 
 Met betrekking tot de gegevens die voor een bepaald profiel worden geëxporteerd, is het belangrijk dat u de twee verschillende concepten begrijpt van wat een gegevensexport naar uw streaming API-bestemming bepaalt en welke gegevens in de export worden opgenomen.
 
