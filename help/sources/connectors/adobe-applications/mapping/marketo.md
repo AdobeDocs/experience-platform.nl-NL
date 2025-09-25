@@ -171,7 +171,7 @@ Lees het [ XDM BedrijfsCampagne overzicht ](../../../../xdm/classes/b2b/business
 
 ## Lidmaatschap van programma {#program-memberships}
 
-Lees het [ XDM overzicht van de Leden Bedrijfs van de Campagne ](../../../../xdm/classes/b2b/business-campaign-members.md) voor meer informatie over de klasse XDM. Voor meer informatie over de XDM gebiedsgroepen, lees de [ gids van het het schemagebied van de Details van het Lid van de BedrijfsCampagne van de 0} XDM.](../../../../xdm/field-groups/b2b-campaign-members/details.md)
+Lees het [ XDM overzicht van de Leden Bedrijfs van de Campagne ](../../../../xdm/classes/b2b/business-campaign-members.md) voor meer informatie over de klasse XDM. Voor meer informatie over de XDM gebiedsgroepen, lees de [ gids van het het schemagebied van de Details van het Lid van de BedrijfsCampagne van de 0&rbrace; XDM.](../../../../xdm/field-groups/b2b-campaign-members/details.md)
 
 | Source-gegevensset | XDM-doelveld | Notities |
 | -------------- | --------------- | ----- |
@@ -361,7 +361,7 @@ Lees het [ XDM overzicht van de Verhouding van de Person van de Bedrijfs van de 
 
 ## Personen {#persons}
 
-Lees het [ XDM Individuele overzicht van het Profiel ](../../../../xdm/classes/individual-profile.md) voor meer informatie over de klasse XDM. Voor meer informatie over de XDM gebiedsgroepen, lees de [ gids van de het schemagroep van de Details van de BedrijfsPersoon van 0} XDM {en ](../../../../xdm/field-groups/profile/business-person-details.md) XDM van de BedrijfsPersoon de het schemagroep van Componenten van de Componenten [.](../../../../xdm/field-groups/profile/business-person-components.md)
+Lees het [ XDM Individuele overzicht van het Profiel ](../../../../xdm/classes/individual-profile.md) voor meer informatie over de klasse XDM. Voor meer informatie over de XDM gebiedsgroepen, lees de [ gids van de het schemagroep van de Details van de BedrijfsPersoon van 0&rbrace; XDM &lbrace;en ](../../../../xdm/field-groups/profile/business-person-details.md) XDM van de BedrijfsPersoon de het schemagroep van Componenten van de Componenten [.](../../../../xdm/field-groups/profile/business-person-components.md)
 
 | Source-veld | Doel XDM-veld | Notities |
 |---|---|---|
