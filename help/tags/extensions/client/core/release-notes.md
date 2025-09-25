@@ -2,9 +2,9 @@
 title: Opmerkingen bij de release Core Extension
 description: De nieuwste release bevat informatie over de Core-extensie in Adobe Experience Platform.
 exl-id: a049b2d5-7a00-435d-bcc7-112658a53a1e
-source-git-commit: 1342461c95fa096496739fc14c92a7edd5aa6b57
+source-git-commit: 1dab2b2778844ac08c1fbc013405dc81fa7dc0b5
 workflow-type: tm+mt
-source-wordcount: '1693'
+source-wordcount: '1723'
 ht-degree: 4%
 
 ---
@@ -14,6 +14,15 @@ ht-degree: 4%
 >[!NOTE]
 >
 >Adobe Experience Platform Launch is omgedoopt tot een reeks technologieën voor dataverzameling in Adobe Experience Platform.  Als gevolg hiervan zijn er verschillende terminologiewijzigingen in de productdocumentatie doorgevoerd. Raadpleeg het volgende [ document ](../../../term-updates.md) voor een geconsolideerde referentie van de terminologiewijzigingen.
+
+## vrijdag 25 september 2025
+
+v3.4.4
+
+* Voeg het veld `releaseNotesUrl` toe aan extension.json met deze pagina als waarde.
+* Afhankelijkheden controleren.
+* Verwijder Yarn en breng het bouwproces in overeenstemming met onze andere open-source bewaarplaatsen.
+
 
 ## vrijdag 8 mei 2025
 
@@ -177,7 +186,7 @@ Gelieve te verwijzen naar de [ Verwijzing van de Uitbreiding van de Kern ](./ove
 
 v1.7.3
 
-* &lbrace;de verhoging van de het gebiedslengte van de Tekst **- de inputgebieden van de Tekst werden veranderd in een flex lay-out om het het schermbreedte van de gebruiker beter te gebruiken, en meer ruimte voor langere tekstkoorden te geven.**
+* {de verhoging van de het gebiedslengte van de Tekst **- de inputgebieden van de Tekst werden veranderd in een flex lay-out om het het schermbreedte van de gebruiker beter te gebruiken, en meer ruimte voor langere tekstkoorden te geven.**
 
 ## 1 november 2019
 
