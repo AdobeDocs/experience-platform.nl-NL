@@ -42,7 +42,7 @@ Wanneer u een de bouwstijl van het douaneWeb SDK creeert, wordt de bouwstijl geb
 >[!IMPORTANT]
 >
 >Als u SDK-componenten van het web uitschakelt, kan dit de bestaande implementatie onderbreken. Elke keer dat u een component uitschakelt, moet u de implementatie grondig testen om ervoor te zorgen dat alle functies die u nodig hebt, naar behoren werken.
->>Wanneer u een component uitschakelt, kunt u de instellingen van die component niet meer bewerken.
+>&#x200B;>Wanneer u een component uitschakelt, kunt u de instellingen van die component niet meer bewerken.
 
 Als u een aangepaste Web SDK-build wilt maken met de Web SDK-tagextensie, volgt u de onderstaande stappen.
 
@@ -124,10 +124,11 @@ Deze sectie staat u toe om het gedrag van het Web SDK te bepalen wanneer het ove
 * **[!UICONTROL Use third-party cookies]**: Wanneer deze optie is ingeschakeld, probeert Web SDK een gebruikers-id op te slaan in een cookie van een andere fabrikant. Als dit gelukt is, wordt de gebruiker geïdentificeerd als één gebruiker terwijl deze in meerdere domeinen navigeert en niet als een afzonderlijke gebruiker op elk domein wordt geïdentificeerd. Als deze optie is ingeschakeld, kan de SDK de gebruikersnaam nog steeds niet opslaan in een cookie van een andere fabrikant als de browser cookies van derden niet ondersteunt of door de gebruiker is geconfigureerd om cookies van derden niet toe te staan. In dit geval slaat de SDK de id alleen op in het domein van de eerste partij.
 
   >[!IMPORTANT]
-  >>De koekjes van de derde zijn niet compatibel met de [ functionaliteit 1} van identiteitskaart van het eerste apparaat in SDK van het Web.
-  >>](../../../../web-sdk/identity/first-party-device-ids.md)
-  >>U kunt apparaat-id&#39;s van andere leveranciers gebruiken of cookies van andere leveranciers, maar u kunt beide functies niet tegelijkertijd gebruiken.
+  >&#x200B;>De koekjes van de derde zijn niet compatibel met de [&#128279;](../../../../web-sdk/identity/first-party-device-ids.md) functionaliteit 1&rbrace; van identiteitskaart van het eerste apparaat in SDK van het Web.
+  >&#x200B;>
+  >&#x200B;>U kunt apparaat-id&#39;s van andere leveranciers gebruiken of cookies van andere leveranciers, maar u kunt beide functies niet tegelijkertijd gebruiken.
   >
+
 ## Aanpassingsinstellingen configureren {#personalization}
 
 In deze sectie kunt u configureren hoe u bepaalde delen van een pagina wilt verbergen terwijl gepersonaliseerde inhoud wordt geladen. Zo weet u zeker dat uw bezoekers alleen de gepersonaliseerde pagina zien.
