@@ -3,14 +3,14 @@ title: Snowflake verbinden met Experience Platform via de Flow Service API
 description: Leer hoe u Adobe Experience Platform met Snowflake verbindt via de Flow Service API.
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 0ef34d30-7b4c-43f5-8e2e-cde05da05aa5
-source-git-commit: d8d9303e358c66c4cd891d6bf59a801c09a95f8e
+source-git-commit: 0476c42924bf0163380e650141fad8e50b98d4cf
 workflow-type: tm+mt
-source-wordcount: '1251'
-ht-degree: 1%
+source-wordcount: '880'
+ht-degree: 0%
 
 ---
 
-# Verbinding maken met Experience Platform via de [!DNL Flow Service] API[!DNL Snowflake]
+# Verbinding maken met Experience Platform via de [!DNL Snowflake] API[!DNL Flow Service]
 
 >[!IMPORTANT]
 >
@@ -31,48 +31,17 @@ Voor informatie over hoe te om vraag aan Experience Platform APIs met succes te 
 
 In de volgende sectie vindt u aanvullende informatie die u moet weten als u verbinding wilt maken met [!DNL Snowflake] via de [!DNL Flow Service] API.
 
-## Verbind [!DNL Snowflake] met Experience Platform op Azure {#azure}
-
-Lees de onderstaande stappen voor informatie over hoe u uw [!DNL Snowflake] -bron kunt verbinden met Experience Platform on Azure.
-
 ### Vereiste referenties verzamelen
+
+Lees het [[!DNL Snowflake]  overzicht ](../../../../connectors/databases/snowflake.md#prerequisites) voor informatie over authentificatie.
+
+## Verbind [!DNL Snowflake] met Experience Platform op Azure {#azure}
 
 >[!WARNING]
 >
 >De basisauthentificatie (of de authentificatie van de rekeningssleutel) voor [!DNL Snowflake] bron zal op November 2025 worden afgekeurd. U moet naar op sleutel-paar gebaseerde authentificatie bewegen om de bron te blijven gebruiken en gegevens van uw gegevensbestand in te voeren aan Experience Platform. Voor meer informatie over de veroudering, lees de [[!DNL Snowflake]  beste praktijkgids bij het verlichten van de risico&#39;s van credentieel compromis ](https://www.snowflake.com/en/resources/white-paper/best-practices-to-mitigate-the-risk-of-credential-compromise/).
 
-U moet waarden opgeven voor de volgende referentie-eigenschappen om de [!DNL Snowflake] -bron te verifiëren.
-
->[!BEGINTABS]
-
->[!TAB  de belangrijkste authentificatie van de Rekening ]
-
-| Credentials | Beschrijving |
-| ---------- | ----------- |
-| `account` | Een accountnaam vormt een unieke identificatie van een account binnen uw organisatie. In dit geval moet u een account op unieke wijze identificeren voor verschillende [!DNL Snowflake] -organisaties. Hiervoor moet u de naam van uw organisatie aan de accountnaam toevoegen. Bijvoorbeeld: `orgname-account_name` . Lees de gids bij [ het terugwinnen van uw  [!DNL Snowflake]  rekeningsherkenningsteken ](../../../../connectors/databases/snowflake.md#retrieve-your-account-identifier) voor extra begeleiding. Raadpleeg voor meer informatie de [[!DNL Snowflake] documentatie](https://docs.snowflake.com/en/user-guide/admin-account-identifier#format-1-preferred-account-name-in-your-organization). |
-| `warehouse` | Het [!DNL Snowflake] pakhuis beheert het proces van de vraaguitvoering voor de toepassing. Elk [!DNL Snowflake] -pakhuis is onafhankelijk van elkaar en moet afzonderlijk worden benaderd wanneer u gegevens naar Experience Platform overbrengt. |
-| `database` | De database [!DNL Snowflake] bevat de gegevens die u aan de Experience Platform wilt toevoegen. |
-| `username` | De gebruikersnaam voor de [!DNL Snowflake] -account. |
-| `password` | Het wachtwoord voor de [!DNL Snowflake] -gebruikersaccount. |
-| `role` | De standaardtoegangsbeheerrol die in de [!DNL Snowflake] -sessie moet worden gebruikt. De rol zou een bestaande moeten zijn die reeds aan de gespecificeerde gebruiker is toegewezen. De standaardrol is `PUBLIC` . |
-| `connectionString` | De verbindingstekenreeks die wordt gebruikt om verbinding te maken met de instantie [!DNL Snowflake] . Het patroon van de verbindingstekenreeks voor [!DNL Snowflake] is `jdbc:snowflake://{ACCOUNT_NAME}.snowflakecomputing.com/?user={USERNAME}&password={PASSWORD}&db={DATABASE}&warehouse={WAREHOUSE}` |
-
->[!TAB  zeer belangrijk-paar authentificatie ]
-
-Als u sleutelparverificatie wilt gebruiken, moet u een 2048-bits RSA-sleutelpaar genereren en de volgende waarden opgeven wanneer u een account voor uw [!DNL Snowflake] -bron maakt.
-
-| Credentials | Beschrijving |
-| --- | --- |
-| `account` | Een accountnaam vormt een unieke identificatie van een account binnen uw organisatie. In dit geval moet u een account op unieke wijze identificeren voor verschillende [!DNL Snowflake] -organisaties. Hiervoor moet u de naam van uw organisatie aan de accountnaam toevoegen. Bijvoorbeeld: `orgname-account_name` . Lees de gids bij [ het terugwinnen van uw  [!DNL Snowflake]  rekeningsherkenningsteken ](../../../../connectors/databases/snowflake.md#retrieve-your-account-identifier) voor extra begeleiding. Raadpleeg voor meer informatie de [[!DNL Snowflake] documentatie](https://docs.snowflake.com/en/user-guide/admin-account-identifier#format-1-preferred-account-name-in-your-organization). |
-| `username` | De gebruikersnaam van uw [!DNL Snowflake] -account. |
-| `privateKey` | De [!DNL Base64-] gecodeerde privé sleutel van uw [!DNL Snowflake] rekening. U kunt gecodeerde of niet-gecodeerde persoonlijke sleutels genereren. Als u een gecodeerde persoonlijke sleutel gebruikt, moet u ook een persoonlijke-sleutelwachtwoord opgeven bij verificatie met behulp van Experience Platform. Lees de gids op [ het terugwinnen van uw  [!DNL Snowflake]  privé sleutel ](../../../../connectors/databases/snowflake.md) voor meer informatie. |
-| `privateKeyPassphrase` | Persoonlijke sleutel passphrase is een extra laag van veiligheid die u moet gebruiken wanneer het voor authentiek verklaren met een gecodeerde privé sleutel. U hoeft de wachtwoordzin niet op te geven als u een niet-gecodeerde persoonlijke sleutel gebruikt. |
-| `database` | De [!DNL Snowflake] -database die de gegevens bevat die u aan Experience Platform wilt toevoegen. |
-| `warehouse` | Het [!DNL Snowflake] pakhuis beheert het proces van de vraaguitvoering voor de toepassing. Elk [!DNL Snowflake] -pakhuis is onafhankelijk van elkaar en moet afzonderlijk worden benaderd wanneer u gegevens naar Experience Platform overbrengt. |
-
-Voor meer informatie over deze waarden, verwijs de [[!DNL Snowflake]  sleutel-paar authentificatiegids ](https://docs.snowflake.com/en/user-guide/key-pair-auth.html).
-
->[!ENDTABS]
+Lees de onderstaande stappen voor informatie over hoe u uw [!DNL Snowflake] -bron kunt verbinden met Experience Platform on Azure.
 
 >[!NOTE]
 >
@@ -94,7 +63,7 @@ POST /connections
 
 >[!TAB  ConnectionString ]
 
-+++verzoek
++++Verzoek
 
 Met de volgende aanvraag wordt een basisverbinding voor [!DNL Snowflake] gemaakt:
 
@@ -129,7 +98,7 @@ curl -X POST \
 
 +++
 
-+++Response
++++Antwoord
 
 Een succesvolle reactie keert de pas gecreëerde verbinding, met inbegrip van zijn unieke verbindings herkenningsteken (`id`) terug. Deze id is vereist om uw gegevens te kunnen bekijken in de volgende zelfstudie.
 
@@ -145,7 +114,7 @@ Een succesvolle reactie keert de pas gecreëerde verbinding, met inbegrip van zi
 
 >[!TAB  zeer belangrijk-paar authentificatie met gecodeerde privé sleutel ]
 
-+++verzoek
++++Verzoek
 
 ```shell
 curl -X POST \
@@ -188,9 +157,9 @@ curl -X POST \
 
 +++
 
-+++Response
++++Antwoord
 
-Een succesvolle reactie keert de pas gecreëerde verbinding, met inbegrip van zijn unieke verbindings herkenningsteken (`id`) terug. Deze id is vereist om uw gegevens te kunnen bekijken in de volgende zelfstudie.
+Een succesvolle reactie keert details van de pas gecreëerde verbinding, met inbegrip van zijn uniek herkenningsteken (`id`) terug.
 
 ```json
 {
@@ -203,7 +172,7 @@ Een succesvolle reactie keert de pas gecreëerde verbinding, met inbegrip van zi
 
 >[!TAB  zeer belangrijk-paar authentificatie met niet gecodeerde privé sleutel ]
 
-+++verzoek
++++Verzoek
 
 ```shell
 curl -X POST \
@@ -214,8 +183,8 @@ curl -X POST \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -H 'Content-Type: application/json' \
   -d '{
-      "name": "Snowflake base connection with encrypted private key",
-      "description": "Snowflake base connection with encrypted private key",
+      "name": "Snowflake base connection with unencrypted private key",
+      "description": "Snowflake base connection with unencrypted private key",
       "auth": {
         "specName": "KeyPair Authentication",
         "params": {
@@ -244,9 +213,9 @@ curl -X POST \
 
 +++
 
-+++Response
++++Antwoord
 
-Een succesvolle reactie keert de pas gecreëerde verbinding, met inbegrip van zijn unieke verbindings herkenningsteken (`id`) terug. Deze id is vereist om uw gegevens te kunnen bekijken in de volgende zelfstudie.
+Een succesvolle reactie keert details van de pas gecreëerde verbinding, met inbegrip van zijn uniek herkenningsteken (`id`) terug.
 
 ```json
 {
@@ -275,11 +244,13 @@ Lees de onderstaande stappen voor informatie over hoe u uw [!DNL Snowflake] -bro
 POST /connections
 ```
 
-**Verzoek**
+>[!BEGINTABS]
 
-Met de volgende aanvraag wordt een basisverbinding gemaakt voor [!DNL Snowflake] om datum in te voeren naar Experience Platform op AWS:
+>[!TAB  Basisauthentificatie ]
 
-+++Selecteren om voorbeeld weer te geven
+Met de volgende aanvraag wordt een basisverbinding voor [!DNL Snowflake] gemaakt voor het invoeren van gegevens naar Experience Platform op AWS:
+
++++Verzoek
 
 ```shell
 curl -X POST \
@@ -323,11 +294,9 @@ curl -X POST \
 
 +++
 
-**Reactie**
++++Antwoord
 
-Een succesvolle reactie keert details van de pas gecreëerde verbinding, met inbegrip van zijn uniek herkenningsteken (`id`) terug. Deze id is vereist om uw opslag te verkennen in de volgende zelfstudie.
-
-+++Selecteren om voorbeeld weer te geven
+Een succesvolle reactie keert details van de pas gecreëerde verbinding, met inbegrip van zijn uniek herkenningsteken (`id`) terug.
 
 ```json
 {
@@ -337,6 +306,65 @@ Een succesvolle reactie keert details van de pas gecreëerde verbinding, met inb
 ```
 
 +++
+
+>[!TAB  zeer belangrijk-paar authentificatie met niet gecodeerde privé sleutel ]
+
++++Verzoek
+
+```shell
+curl -X POST \
+  'https://platform.adobe.io/data/foundation/flowservice/connections' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {ORG_ID}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Content-Type: application/json' \
+  -d '{
+      "name": "Snowflake base connection with unencrypted private key",
+      "description": "Snowflake base connection with unencrypted private key",
+      "auth": {
+        "specName": "KeyPair Authentication",
+        "params": {
+            "account": "acme-snowflake123",
+            "username": "acme-cj123",
+            "database": "ACME_DB",
+            "privateKey": "{BASE_64_ENCODED_PRIVATE_KEY}",
+            "warehouse": "COMPUTE_WH"
+        }
+    },
+    "connectionSpec": {
+        "id": "b2e08744-4f1a-40ce-af30-7abac3e23cf3",
+        "version": "1.0"
+    }
+  }'
+```
+
+| Eigenschap | Beschrijving |
+| -------- | ----------- |
+| `auth.params.account` | De naam van uw [!DNL Snowflake] account. |
+| `auth.params.username` | De gebruikersnaam die aan uw [!DNL Snowflake] -account is gekoppeld. |
+| `auth.params.database` | De [!DNL Snowflake] -database vanwaar de gegevens worden opgehaald. |
+| `auth.params.privateKey` | De [!DNL Base64-] gecodeerde niet gecodeerde privé sleutel van uw [!DNL Snowflake] rekening. |
+| `auth.params.warehouse` | Het [!DNL Snowflake] -pakhuis dat u gebruikt. |
+| `connectionSpec.id` | The [!DNL Snowflake] connection specification ID: `b2e08744-4f1a-40ce-af30-7abac3e23cf3` . |
+
++++
+
+
++++Antwoord
+
+Een succesvolle reactie keert details van de pas gecreëerde verbinding, met inbegrip van zijn uniek herkenningsteken (`id`) terug.
+
+```json
+{
+    "id": "4cb0c374-d3bb-4557-b139-5712880adc55",
+    "etag": "\"1700d77b-0000-0200-0000-5e3b41a10000\""
+}
+```
+
++++
+
+>[!ENDTABS]
 
 Aan de hand van deze zelfstudie hebt u een [!DNL Snowflake] basisverbinding gemaakt met de [!DNL Flow Service] API. U kunt deze basis verbindings-id in de volgende zelfstudies gebruiken:
 

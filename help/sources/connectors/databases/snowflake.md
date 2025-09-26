@@ -3,10 +3,10 @@ title: Overzicht Snowflake Source Connector
 description: Leer hoe u Snowflake met Adobe Experience Platform kunt verbinden via API's of de gebruikersinterface.
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: df066463-1ae6-4ecd-ae0e-fb291cec4bd5
-source-git-commit: 573691db9f71fcbe8b5edd4ea647d718ab3784e4
+source-git-commit: 0476c42924bf0163380e650141fad8e50b98d4cf
 workflow-type: tm+mt
-source-wordcount: '751'
-ht-degree: 0%
+source-wordcount: '1502'
+ht-degree: 1%
 
 ---
 
@@ -18,10 +18,6 @@ ht-degree: 0%
 >* Standaard wordt [!DNL Snowflake] source `null` geïnterpreteerd als een lege tekenreeks. Neem contact op met uw Adobe-vertegenwoordiger om ervoor te zorgen dat de `null` -waarden correct worden geschreven zoals `null` in Adobe Experience Platform.
 >* Experience Platform kan alleen gegevens invoeren als tijdzones voor alle batchbronnen op basis van tabellen zijn geconfigureerd voor UTC. Het enige tijdstempel dat wordt ondersteund voor de [!DNL Snowflake] -bron is TIMESTAMP_NTZ met UTC-tijd.
 
->[!WARNING]
->
->De basisauthentificatie (of de authentificatie van de rekeningssleutel) voor [!DNL Snowflake] bron zal op November 2025 worden afgekeurd. U moet naar op sleutel-paar gebaseerde authentificatie bewegen om de bron te blijven gebruiken en gegevens van uw gegevensbestand in te voeren aan Experience Platform. Voor meer informatie over de veroudering, lees de [[!DNL Snowflake]  beste praktijkgids bij het verlichten van de risico&#39;s van credentieel compromis ](https://www.snowflake.com/en/resources/white-paper/best-practices-to-mitigate-the-risk-of-credential-compromise/).
-
 Adobe Experience Platform staat toe dat gegevens uit externe bronnen worden opgenomen en biedt u de mogelijkheid om inkomende gegevens te structureren, labelen en verbeteren met behulp van Experience Platform-services. U kunt gegevens invoeren uit verschillende bronnen, zoals Adobe-toepassingen, opslag in de cloud, databases en vele andere.
 
 Experience Platform biedt ondersteuning voor het opnemen van gegevens uit een database van derden. Experience Platform kan verbinding maken met verschillende typen databases, zoals relationele databases, NoSQL-databases of gegevensopslagruimten. Ondersteuning voor databaseproviders is onder andere [!DNL Snowflake] .
@@ -29,6 +25,81 @@ Experience Platform biedt ondersteuning voor het opnemen van gegevens uit een da
 ## Vereisten {#prerequisites}
 
 In deze sectie worden de instellingstaken beschreven die u moet uitvoeren voordat u de [!DNL Snowflake] -bron kunt verbinden met Experience Platform.
+
+### IP adres lijst van gewenste personen
+
+U moet gebied-specifieke IP adressen aan uw lijst van gewenste personen toevoegen alvorens uw bronnen aan Experience Platform aan te sluiten. Voor meer informatie, lees de gids op [ voegend op lijst van gewenste personen IP adressen om met Experience Platform ](../../ip-address-allow-list.md) voor meer informatie te verbinden.
+
+### Vereiste referenties verzamelen
+
+U moet waarden opgeven voor de volgende referentie-eigenschappen om de [!DNL Snowflake] -bron te verifiëren.
+
+>[!BEGINTABS]
+
+>[!TAB  de zeer belangrijke authentificatie van de Rekening (Azure) ]
+
+Geef waarden op voor de volgende gebruikersgegevens om [!DNL Snowflake] in Azure te verbinden met Experience Platform met behulp van accountsleutelverificatie.
+
+| Credentials | Beschrijving |
+| ---------- | ----------- |
+| `account` | Een accountnaam vormt een unieke identificatie van een account binnen uw organisatie. In dit geval moet u een account op unieke wijze identificeren voor verschillende [!DNL Snowflake] -organisaties. Hiervoor moet u de naam van uw organisatie aan de accountnaam toevoegen. Bijvoorbeeld: `orgname-account_name` . Lees de sectie op [ het terugwinnen van uw  [!DNL Snowflake]  rekeningsherkenningsteken ](#retrieve-your-account-identifier) voor extra begeleiding. Raadpleeg voor meer informatie de [[!DNL Snowflake] documentatie](https://docs.snowflake.com/en/user-guide/admin-account-identifier#format-1-preferred-account-name-in-your-organization). |
+| `warehouse` | Het [!DNL Snowflake] pakhuis beheert het proces van de vraaguitvoering voor de toepassing. Elk [!DNL Snowflake] -pakhuis is onafhankelijk van elkaar en moet afzonderlijk worden benaderd wanneer u gegevens naar Experience Platform overbrengt. |
+| `database` | De database [!DNL Snowflake] bevat de gegevens die u aan de Experience Platform wilt toevoegen. |
+| `username` | De gebruikersnaam voor de [!DNL Snowflake] -account. |
+| `password` | Het wachtwoord voor de [!DNL Snowflake] -gebruikersaccount. |
+| `role` | De standaardtoegangsbeheerrol die in de [!DNL Snowflake] -sessie moet worden gebruikt. De rol zou een bestaande moeten zijn die reeds aan de gespecificeerde gebruiker is toegewezen. De standaardrol is `PUBLIC` . |
+| `connectionString` | De verbindingstekenreeks die wordt gebruikt om verbinding te maken met de instantie [!DNL Snowflake] . Het patroon van de verbindingstekenreeks voor [!DNL Snowflake] is `jdbc:snowflake://{ACCOUNT_NAME}.snowflakecomputing.com/?user={USERNAME}&password={PASSWORD}&db={DATABASE}&warehouse={WAREHOUSE}` . |
+
+>[!TAB  zeer belangrijk-paar authentificatie (Azure) ]
+
+Om zeer belangrijk-paarauthentificatie te gebruiken, produceer eerst een zeer belangrijk paar met 2048 bits RSA. Geef vervolgens waarden op voor de volgende gebruikersgegevens om in Azure verbinding te maken met Experience Platform met behulp van sleutelparverificatie.
+
+| Credentials | Beschrijving |
+| --- | --- |
+| `account` | Een accountnaam vormt een unieke identificatie van een account binnen uw organisatie. In dit geval moet u een account op unieke wijze identificeren voor verschillende [!DNL Snowflake] -organisaties. Hiervoor moet u de naam van uw organisatie aan de accountnaam toevoegen. Bijvoorbeeld: `orgname-account_name` . Lees de sectie op [ het terugwinnen van uw  [!DNL Snowflake]  rekeningsherkenningsteken ](#retrieve-your-account-identifier) voor extra begeleiding. Raadpleeg voor meer informatie de [[!DNL Snowflake] documentatie](https://docs.snowflake.com/en/user-guide/admin-account-identifier#format-1-preferred-account-name-in-your-organization). |
+| `username` | De gebruikersnaam van uw [!DNL Snowflake] -account. |
+| `privateKey` | De [!DNL Base64-] gecodeerde privé sleutel van uw [!DNL Snowflake] rekening. U kunt gecodeerde of niet-gecodeerde persoonlijke sleutels genereren. Als u een gecodeerde persoonlijke sleutel gebruikt, moet u ook een persoonlijke-sleutelwachtwoord opgeven bij verificatie met behulp van Experience Platform. Lees de sectie op [ het terugwinnen van uw privé sleutel ](#retrieve-your-private-key) voor meer informatie. |
+| `privateKeyPassphrase` | Persoonlijke sleutel passphrase is een extra laag van veiligheid die u moet gebruiken wanneer het voor authentiek verklaren met een gecodeerde privé sleutel. U hoeft de wachtwoordzin niet op te geven als u een niet-gecodeerde persoonlijke sleutel gebruikt. |
+| `port` | Het poortnummer dat door [!DNL Snowflake] wordt gebruikt wanneer verbinding wordt gemaakt met een server via internet. |
+| `database` | De [!DNL Snowflake] -database die de gegevens bevat die u aan Experience Platform wilt toevoegen. |
+| `warehouse` | Het [!DNL Snowflake] pakhuis beheert het proces van de vraaguitvoering voor de toepassing. Elk [!DNL Snowflake] -pakhuis is onafhankelijk van elkaar en moet afzonderlijk worden benaderd wanneer u gegevens naar Experience Platform overbrengt. |
+
+Voor meer informatie over deze waarden, verwijs de [[!DNL Snowflake]  sleutel-paar authentificatiegids ](https://docs.snowflake.com/en/user-guide/key-pair-auth.html).
+
+>[!TAB  Basisauthentificatie (AWS) ]
+
+Geef waarden op voor de volgende aanmeldingsgegevens om via basisverificatie verbinding te maken met Experience Platform op AWS. [!DNL Snowflake]
+
+>[!WARNING]
+>
+>De basisauthentificatie (of de authentificatie van de rekeningssleutel) voor [!DNL Snowflake] bron zal op November 2025 worden afgekeurd. U moet naar op sleutel-paar gebaseerde authentificatie bewegen om de bron te blijven gebruiken en gegevens van uw gegevensbestand in te voeren aan Experience Platform. Voor meer informatie over de veroudering, lees de [[!DNL Snowflake]  beste praktijkgids bij het verlichten van de risico&#39;s van credentieel compromis ](https://www.snowflake.com/en/resources/white-paper/best-practices-to-mitigate-the-risk-of-credential-compromise/).
+
+| Credentials | Beschrijving |
+| --- | --- |
+| `host` | De host-URL waarmee uw [!DNL Snowflake] -account verbinding maakt. |
+| `port` | Het poortnummer dat door [!DNL Snowflake] wordt gebruikt wanneer verbinding wordt gemaakt met een server via internet. |
+| `username` | De gebruikersnaam die aan uw [!DNL Snowflake] -account is gekoppeld. |
+| `password` | Het wachtwoord dat aan uw [!DNL Snowflake] account is gekoppeld. |
+| `database` | De [!DNL Snowflake] -database vanwaar de gegevens worden opgehaald. |
+| `schema` | De naam van het schema dat aan uw [!DNL Snowflake] database is gekoppeld. U moet ervoor zorgen dat de gebruiker u gegevensbestandtoegang tot wilt geven, ook toegang tot dit schema heeft. |
+| `warehouse` | Het [!DNL Snowflake] -pakhuis dat u gebruikt. |
+
+>[!TAB  zeer belangrijk-paar authentificatie (AWS) ]
+
+Om zeer belangrijk-paarauthentificatie te gebruiken, produceer eerst een zeer belangrijk paar met 2048 bits RSA. Geef vervolgens waarden op voor de volgende gebruikersgegevens om verbinding te maken met Experience Platform op AWS met behulp van sleutelparverificatie.
+
+| Credentials | Beschrijving |
+| --- | --- |
+| `account` | Een accountnaam vormt een unieke identificatie van een account binnen uw organisatie. In dit geval moet u een account op unieke wijze identificeren voor verschillende [!DNL Snowflake] -organisaties. Hiervoor moet u de naam van uw organisatie aan de accountnaam toevoegen. Bijvoorbeeld: `orgname-account_name` . Lees de gids bij [ het terugwinnen van uw  [!DNL Snowflake]  rekeningsherkenningsteken ](#etrieve-your-account-identifier) voor extra begeleiding. Raadpleeg voor meer informatie de [[!DNL Snowflake] documentatie](https://docs.snowflake.com/en/user-guide/admin-account-identifier#format-1-preferred-account-name-in-your-organization). |
+| `username` | De gebruikersnaam van uw [!DNL Snowflake] -account. |
+| `privateKey` | De persoonlijke sleutel voor uw [!DNL Snowflake] -gebruiker, base64-gecodeerd als één regel zonder kopteksten of regeleinden. Als u het bestand wilt voorbereiden, kopieert u de inhoud van het PEM-bestand, verwijdert u de `BEGIN`/`END` -regels en alle regeleinden en codeert u het resultaat met base64. Lees de sectie op [ het terugwinnen van uw privé sleutel ](#retrieve-your-private-key) voor meer informatie. **Nota:** Gecodeerde privé sleutels worden momenteel niet gesteund voor een verbinding van AWS. |
+| `port` | Het poortnummer dat door [!DNL Snowflake] wordt gebruikt wanneer verbinding wordt gemaakt met een server via internet. |
+| `database` | De [!DNL Snowflake] -database die de gegevens bevat die u aan Experience Platform wilt toevoegen. |
+| `warehouse` | Het [!DNL Snowflake] pakhuis beheert het proces van de vraaguitvoering voor de toepassing. Elk [!DNL Snowflake] -pakhuis is onafhankelijk van elkaar en moet afzonderlijk worden benaderd wanneer u gegevens naar Experience Platform overbrengt. |
+
+Voor meer informatie over deze waarden, verwijs de [[!DNL Snowflake]  sleutel-paar authentificatiegids ](https://docs.snowflake.com/en/user-guide/key-pair-auth.html).
+
+>[!ENDTABS]
 
 ### Uw account-id ophalen {#retrieve-your-account-identifier}
 
@@ -101,10 +172,6 @@ Om uw rol en pakhuis te verifiëren:
 ![ Snowflake UI waar u uw rol en pakhuis kunt verifiëren.](../../images/tutorials/create/snowflake/snowflake-configs.png)
 
 Nadat de codering is voltooid, kunt u die [!DNL Base64] gecodeerde persoonlijke sleutel op Experience Platform gebruiken om uw [!DNL Snowflake] -account te verifiëren.
-
-## IP adres lijst van gewenste personen
-
-Een lijst van IP adressen moet aan een lijst van gewenste personen worden toegevoegd alvorens met bronschakelaars te werken. Het niet toevoegen van uw regio-specifieke IP adressen aan uw lijst van gewenste personen kan tot fouten of niet-prestaties leiden wanneer het gebruiken van bronnen. Zie de [&#128279;](../../ip-address-allow-list.md) pagina van de lijst van gewenste personen van het 0&rbrace; IP adres &lbrace;voor meer informatie.
 
 In de onderstaande documentatie vindt u informatie over het tot stand brengen van een verbinding tussen [!DNL Snowflake] en Experience Platform via API&#39;s of de gebruikersinterface:
 
