@@ -157,7 +157,7 @@ Om met deze bestemming te verbinden, volg de stappen die in het [ leerprogramma 
 
 In de onderstaande video ziet u ook de stappen voor het configureren van een [!DNL Facebook] -bestemming en het activeren van het publiek.
 
->[!VIDEO](https://video.tv.adobe.com/v/332599/?quality=12&learn=on&captions=eng)
+>[!VIDEO](https://video.tv.adobe.com/v/3475119/?quality=12&learn=on&captions=dut)
 
 >[!NOTE]
 >
