@@ -1,10 +1,8 @@
 ---
 title: Connect Relay to Experience Platform in de gebruikersinterface
 description: Leer hoe te om een verbinding van de Verbinding van de Verbinding van de Relais douanebron tot stand te brengen gebruikend de UI van Adobe Experience Platform.
-hide: true
-hidefromtoc: true
 exl-id: f80855f5-0769-4253-b737-28c46e4dea6e
-source-git-commit: b3b1542f7e297f4ca872a155ac3801266bc1e6a6
+source-git-commit: bd5611b23740f16e41048f3bc65f62312593a075
 workflow-type: tm+mt
 source-wordcount: '544'
 ht-degree: 0%
@@ -83,5 +81,5 @@ Gebruik deze waarden aan opstelling webhaak in de **console van het Relais**. Vo
 
 ## Aanvullende bronnen
 
-* [ creeer een nieuwe verbindingsspecificatie gebruikend de Dienst API van de Stroom ](https://experienceleague.adobe.com/nl/docs/experience-platform/sources/sdk/streaming-sdk/create)
-* [ verbind met uw bron gebruikend UI ](https://experienceleague.adobe.com/nl/docs/experience-platform/sources/sdk/streaming-sdk/submit#test-your-source-using-the-ui)
+* [ creeer een nieuwe verbindingsspecificatie gebruikend de Dienst API van de Stroom ](https://experienceleague.adobe.com/en/docs/experience-platform/sources/sdk/streaming-sdk/create)
+* [ verbind met uw bron gebruikend UI ](https://experienceleague.adobe.com/en/docs/experience-platform/sources/sdk/streaming-sdk/submit#test-your-source-using-the-ui)

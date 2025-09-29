@@ -2,9 +2,9 @@
 title: Aanvullende informatie van september 2025 voor Adobe Experience Platform
 description: Aanvullende informatie voor de versie van september 2025 voor Adobe Experience Platform.
 exl-id: 9c5ab487-22b8-4590-b4ea-abec0f377703
-source-git-commit: ac180f045dd3cc7e8ad9de702a3672630d668ee5
+source-git-commit: bd5611b23740f16e41048f3bc65f62312593a075
 workflow-type: tm+mt
-source-wordcount: '1379'
+source-wordcount: '1406'
 ht-degree: 43%
 
 ---
@@ -15,8 +15,8 @@ ht-degree: 43%
 >
 >Raadpleeg de volgende documentatie voor aanvullende informatie voor andere Adobe Experience Platform-toepassingen:
 >
->- [Adobe Journey Optimizer](https://experienceleague.adobe.com/nl/docs/journey-optimizer/using/whats-new/release-notes)
->- [Adobe Journey Optimizer B2B](https://experienceleague.adobe.com/nl/docs/journey-optimizer-b2b/user/release-notes)
+>- [Adobe Journey Optimizer](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/whats-new/release-notes)
+>- [Adobe Journey Optimizer B2B](https://experienceleague.adobe.com/en/docs/journey-optimizer-b2b/user/release-notes)
 >- [Customer Journey Analytics](https://experienceleague.adobe.com/nl/docs/analytics-platform/using/releases/pre-release-notes)
 >- [Samenstelling van Federated-doelgroep](https://experienceleague.adobe.com/nl/docs/federated-audience-composition/using/e-release-notes)
 >- [Real-Time CDP Collaboration](https://experienceleague.adobe.com/nl/docs/real-time-cdp-collaboration/using/latest)
@@ -41,10 +41,10 @@ Adobe Experience Platform Agent Orchestrator is de nieuwe agentische laag in Ado
 
 | Functie | Beschrijving |
 | --- | --- |
-| Agent Orchestrator | Adobe Experience Platform Agent Orchestrator is de nieuwe agentische laag in Adobe Experience Platform. Experience Platform Agent Orchestrator is ontworpen om de rijke gegevens en de kennis van klanten van het platform te benutten en biedt de kracht om de intelligentie en redenering achter speciaal ontwikkelde Adobe Experience Platform Agents te gebruiken, waardoor ze complexe besluitvormings- en probleemoplossende taken op snelheid en schaal kunnen uitvoeren — allemaal met menselijk toezicht. Wanneer u vragen stelt of hulp via natuurlijke taal in een gespreksinterface zoals AI Medewerker verzoekt, roept Agent Orchestrator automatisch op gespecialiseerde agenten om u de juiste antwoorden te krijgen. Agent Orchestrator herinnert uw gespreksgeschiedenis, toelatend u om op vorige vragen te bouwen natuurlijk zonder herhalende context, en combineert inzichten van veelvoudige agenten om u met duidelijke, verenigde reacties te presenteren. Voor meer informatie, lees de [ documentatie van Agent Orchestrator ](https://experienceleague.adobe.com/nl/docs/experience-cloud-ai/experience-cloud-ai/agents/agent-orchestrator). |
-| Audience Agent | In de Audience Agent kunt u inzichten weergeven over het publiek, zoals het detecteren van belangrijke wijzigingen in de publieksgrootte, het detecteren van dubbele doelgroepen, het verkennen van uw publieksoverzicht en het ophalen van de grootte van uw publiek. Voor meer informatie, lees de [ documentatie van Audience Agent ](https://experienceleague.adobe.com/nl/docs/experience-cloud-ai/experience-cloud-ai/agents/audience). |
+| Agent Orchestrator | Adobe Experience Platform Agent Orchestrator is de nieuwe agentische laag in Adobe Experience Platform. Experience Platform Agent Orchestrator is ontworpen om de rijke gegevens en de kennis van klanten van het platform te benutten en biedt de kracht om de intelligentie en redenering achter speciaal ontwikkelde Adobe Experience Platform Agents te gebruiken, waardoor ze complexe besluitvormings- en probleemoplossende taken op snelheid en schaal kunnen uitvoeren — allemaal met menselijk toezicht. Wanneer u vragen stelt of hulp via natuurlijke taal in een gespreksinterface zoals AI Medewerker verzoekt, roept Agent Orchestrator automatisch op gespecialiseerde agenten om u de juiste antwoorden te krijgen. Agent Orchestrator herinnert uw gespreksgeschiedenis, toelatend u om op vorige vragen te bouwen natuurlijk zonder herhalende context, en combineert inzichten van veelvoudige agenten om u met duidelijke, verenigde reacties te presenteren. Voor meer informatie, lees de [ documentatie van Agent Orchestrator ](https://experienceleague.adobe.com/en/docs/experience-cloud-ai/experience-cloud-ai/agents/agent-orchestrator). |
+| Audience Agent | In de Audience Agent kunt u inzichten weergeven over het publiek, zoals het detecteren van belangrijke wijzigingen in de publieksgrootte, het detecteren van dubbele doelgroepen, het verkennen van uw publieksoverzicht en het ophalen van de grootte van uw publiek. Voor meer informatie, lees de [ documentatie van Audience Agent ](https://experienceleague.adobe.com/en/docs/experience-cloud-ai/experience-cloud-ai/agents/audience). |
 
-Voor meer informatie, lees de [ documentatie van Agent Orchestrator ](https://experienceleague.adobe.com/nl/docs/experience-cloud-ai/experience-cloud-ai/home).
+Voor meer informatie, lees de [ documentatie van Agent Orchestrator ](https://experienceleague.adobe.com/en/docs/experience-cloud-ai/experience-cloud-ai/home).
 
 ## Waarschuwingen {#alerts}
 
@@ -68,7 +68,7 @@ Raadpleeg het [[!DNL Observability Insights] overzicht](../../observability/home
 
 | Bestemming | Beschrijving |
 | --- | --- |
-| [!BADGE &#x200B; Beta &#x200B;]{type=Informative} [[!DNL Snowflake Batch]](../../destinations/catalog/cloud-storage/snowflake-batch.md) schakelaar | Er is nu een nieuwe [!DNL Snowflake Batch] -connector beschikbaar die een alternatief biedt voor de streamingconnector voor specifieke gebruiksgevallen. |
+| [!BADGE  Beta ]{type=Informative} [[!DNL Snowflake Batch]](../../destinations/catalog/cloud-storage/snowflake-batch.md) schakelaar | Er is nu een nieuwe [!DNL Snowflake Batch] -connector beschikbaar die een alternatief biedt voor de streamingconnector voor specifieke gebruiksgevallen. |
 | [[!DNL Data Landing Zone]](../../destinations/catalog/cloud-storage/data-landing-zone.md) ondersteuning voor codering | U kunt nu openbare sleutels met RSA-indeling koppelen om uw geëxporteerde bestanden te coderen, zodat u over hetzelfde beveiligingsniveau beschikt als andere bestemmingen voor cloudopslag voor uw vertrouwelijke gegevens. |
 | Gegevens over vervaldatum van verificatie voor [[!DNL Pinterest]](../../destinations/catalog/advertising/pinterest.md) doelen | Informatie over de verloopdatum van de verificatie voor [!DNL Pinterest]-bestemmingen is nu rechtstreeks zichtbaar in de Experience Platform-interface. Zo kunt u zien wanneer uw verificatie verloopt en deze vernieuwen voordat er verstoringen in uw gegevensstromen ontstaan. U kunt de vervaldatums van uw tokens controleren in de kolom **[!UICONTROL Account expiration date]** op de tabbladen **[[!UICONTROL Accounts]](../../destinations/ui/destinations-workspace.md#accounts)** of **[[!UICONTROL Browse]](../../destinations/ui/destinations-workspace.md#browse)** . |
 
@@ -139,10 +139,8 @@ Experience Platform biedt een RESTful-API en een interactieve gebruikersinterfac
 | --- | --- |
 | Nieuwe bronnen in algemene beschikbaarheid | De volgende bronnen zijn nu beschikbaar in algemene beschikbaarheid: verschillende bronconnectors zijn bijgewerkt van Beta naar GA: <ul><li>[ de Ingestie van Gegevens van Acxiom ](../../sources/connectors/data-partners/acxiom-data-ingestion.md)</li><li>[ de Ingestie van Gegevens van het Vooruitzicht van Acxiom ](../../sources/connectors/data-partners/acxiom-prospecting-data-import.md)</li><li>[ Merkury Onderneming ](../../sources/connectors/data-partners/merkury.md)</li><li>[ SAP Commerce ](../../sources/connectors/ecommerce/sap-commerce.md)</li></ul>. Deze bronnen worden nu volledig ondersteund en zijn klaar voor gebruik bij de productie. |
 | [!DNL Snowflake] ondersteuning voor sleutelpaarverificatie | Uitgebreide beveiliging voor Snowflake-verbindingen met ondersteuning voor sleutelpaarverificatie. De basisauthentificatie (gebruikersbenaming/wachtwoord) zal tegen November 2025 worden afgekeurd, zodat worden de klanten aangemoedigd om aan zeer belangrijk-paarauthentificatie voor betere veiligheid te migreren. Raadpleeg de [[!DNL Snowflake] documentatie](../../sources/connectors/databases/snowflake.md) voor meer informatie. |
+| [!BADGE Beta]{type=Informative} [!DNL Capillary Streaming Events] | Gebruik de [[!DNL Capillary Streaming Events]  bron ](../../sources/connectors/loyalty/capillary.md) aan stroom loyaliteitsgegevens van uw [!DNL Capillary] rekening aan Experience Platform. |
+| [!BADGE Beta]{type=Informative} [!DNL Relay Connector] | Gebruik [[!DNL Relay Connector]](../../sources/tutorials/ui/create/marketing-automation/relay-connector.md) om gebeurtenisgegevens te streamen vanaf uw [!DNL Relay Network] -integratie naar Experience Platform. |
 | Algemene Beschikbaarheid van Steun van de Privé Verbinding in bronnen | U kunt **privé verbindingen** voor een uitgezochte groep bronnen nu gebruiken. Met deze functie kunt u een privé-eindpunt maken waarmee uw bron verbinding kan maken. Met privé-eindpunten kunt u verbindingen en gegevensstromen instellen die het openbare internet omzeilen. Zo profiteert u van een betere beveiliging en netwerkisolatie voor uw gevoelige gegevens. De steun voor privé verbindingen is beschikbaar aan de volgende bronnen: <ul><li>[[!DNL Azure Blob Storage]](../../sources/connectors/cloud-storage/blob.md)</li><li>[[!DNL ADLS Gen2]](../../sources/connectors/cloud-storage/adls-gen2.md)</li><li>[[!DNL Azure File Storage]](../../sources/connectors/cloud-storage/azure-file-storage.md)</li></ul>. Voor meer informatie lees de gidsen bij het creëren van privé verbindingen [ in API ](../../sources/tutorials/api/private-link.md) en [ in UI ](../../sources/tutorials/ui/private-link.md). |
 
 Voor meer informatie raadpleegt u het [overzicht van bronnen](../../sources/home.md).
-
-<!--
-| [!BADGE Beta]{type=Informative} [!DNL Capillary Streaming Events] | Use the [[!DNL Capillary Streaming Events] source](../../sources/connectors/loyalty/capillary.md) to stream loyalty data from your [!DNL Capillary] account to Experience Platform. |
--->
