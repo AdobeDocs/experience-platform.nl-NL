@@ -4,9 +4,9 @@ title: UI-gids Unieschema
 type: Documentation
 description: In de gebruikersinterface van Adobe Experience Platform (UI) kunt u gemakkelijk om het even welk samenvoegingsschema binnen uw organisatie bekijken en voorproef de gebieden, de identiteiten, de verhoudingen, en bijdragende schema's voor een specifieke klasse. Deze gids verstrekt gedetailleerde informatie over hoe te om verenigingsschema's te bekijken en te onderzoeken gebruikend Experience Platform UI.
 exl-id: 52af0d77-e37d-4ed8-9dee-71a50b337b4e
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: b7f5f08d5b3632a2d80c39559a5fb5116d9567f8
 workflow-type: tm+mt
-source-wordcount: '1188'
+source-wordcount: '1190'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 In de gebruikersinterface van Adobe Experience Platform (UI) kunt u gemakkelijk om het even welk samenvoegingsschema binnen uw organisatie bekijken en voorproef de gebieden, de identiteiten, de verhoudingen, en bijdragende schema&#39;s voor een specifieke klasse. Deze gids verstrekt gedetailleerde informatie over hoe te om verenigingsschema&#39;s te bekijken en te onderzoeken gebruikend Experience Platform UI.
 
-## Aan de slag
+## Aan de slag {#getting-started}
 
 Deze UI-handleiding vereist inzicht in de verschillende [!DNL Experience Platform] -services die betrokken zijn bij het beheren van realtime-klantprofielgegevens. Voordat u deze handleiding leest of in de gebruikersinterface werkt, raadpleegt u de documentatie voor de volgende services:
 
@@ -23,7 +23,14 @@ Deze UI-handleiding vereist inzicht in de verschillende [!DNL Experience Platfor
 * [[!DNL Identity Service]](../../identity-service/home.md): schakelt [!DNL Real-Time Customer Profile] in door identiteiten te overbruggen van verschillende gegevensbronnen terwijl ze worden ingesloten in [!DNL Experience Platform] .
 * [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): Het gestandaardiseerde framework waarmee [!DNL Experience Platform] gegevens voor de klantervaring indeelt.
 
-## Verenigingsschema&#39;s begrijpen
+## Verenigingsschema&#39;s begrijpen {#understanding-union-schemas}
+
+>[!CONTEXTUALHELP]
+>id="rtcdp_collaboration_union_schema"
+>title="Unieregelingen"
+>abstract=""
+
+<!-- The above contextual help is used in the Collaboration UI for a read more link. -->
 
 Met het realtime klantprofiel kunt u robuuste, gecentraliseerde profielen maken met klantkenmerken en gebeurtenissen met een tijdstempel die door elke klant worden gebruikt voor systemen die met Adobe Experience Platform zijn geïntegreerd. Het formaat en de structuur van deze gegevens worden verstrekt door schema&#39;s van het Gegevensmodel van de Ervaring (XDM), met elk schema dat op een klasse XDM wordt gebaseerd en die gebieden bevatten die met die klasse compatibel zijn.
 
@@ -31,13 +38,13 @@ Schema&#39;s kunnen worden gemaakt voor meerdere gebruiksgevallen, waarbij wordt
 
 Het werken met unieschema&#39;s vereist een diep inzicht in schema&#39;s XDM. Voor meer informatie, gelieve te beginnen door de [ grondbeginselen van schemacompositie ](../../xdm/schema/composition.md) te lezen.
 
-## Verenigingsschema&#39;s weergeven
+## Verenigingsschema&#39;s weergeven {#view-union-schemas}
 
 Als u naar samenvoegingsschema&#39;s in de gebruikersinterface van Experience Platform wilt navigeren, selecteert u **[!UICONTROL Profiles]** in de linkernavigatie en selecteert u vervolgens het tabblad **[!UICONTROL Union Schema]** . Het tabblad [!UICONTROL Union Schema] wordt geopend om het samenvoegingsschema voor de geselecteerde klasse weer te geven.
 
 ![ de pagina van het Schema van de Unie wordt getoond, met het benadrukte lusje van het Schema van het Profiel en van de Vereniging.](../images/union-schema/landing.png)
 
-## Een klasse selecteren
+## Een klasse selecteren {#select-a-class}
 
 Selecteer de klasse in het vervolgkeuzemenu **[!UICONTROL Class]** om het samenvoegingsschema voor een specifieke XDM-klasse weer te geven. Vanwege het feit dat niet alle klassen vakbondsschema&#39;s hebben, zijn alleen klassen met vakbondsschema&#39;s (dat wil zeggen klassen met schema&#39;s die zijn ingeschakeld voor Profiel) beschikbaar in de vervolgkeuzelijst.
 
@@ -45,7 +52,7 @@ Nadat een klasse is geselecteerd, het schema dat wordt getoond werkt bij om op h
 
 ![ dropdown A die de klassen bevatten van het unieschema wordt benadrukt.](../images/union-schema/class.png)
 
-## Samenvoegingsschema&#39;s verkennen
+## Samenvoegingsschema&#39;s verkennen {#explore-union-schemas}
 
 U kunt het verenigingsschema onderzoeken door naar boven en naar onder te scrollen om de volledige schemastructuur te bekijken en door een recht punthaakje (`>`) te selecteren om genestelde gebieden uit te breiden.
 
@@ -61,7 +68,7 @@ Voor meer informatie over datasets, met inbegrip van het bekijken van datasetact
 
 ![ de lijst van datasets met betrekking tot het schema wordt benadrukt.](../images/union-schema/datasets.png)
 
-## Contribute-schema&#39;s weergeven
+## Contribute-schema&#39;s weergeven {#view-contributing-schemas}
 
 U kunt ook zien welke specifieke schema&#39;s bijdragen aan het samenvoegingsschema door **[!UICONTROL All contributing schemas]** te selecteren om de lijst met schema&#39;s uit te breiden. Afhankelijk van de klasse die u hebt geselecteerd en het aantal schema&#39;s dat uw organisatie binnen Experience Platform heeft gemaakt, kan dit een korte lijst zijn met één schema of een lange lijst met vele schema&#39;s.
 
@@ -71,7 +78,7 @@ Als u de naam van een specifiek schema selecteert, worden de velden binnen het s
 
 ![ het geselecteerde bijdragende schema wordt benadrukt. De gebieden die deel van het bijdragende schema uitmaken blijven in zwart, terwijl de gebieden die geen deel van het bijdragende schema uitmaken uit worden grijs.](../images/union-schema/select-schema.png)
 
-## Identiteiten weergeven
+## Identiteiten weergeven {#view-identities}
 
 Via de interface kunt u een lijst met identiteiten weergeven die in het samenvoegingsschema zijn opgenomen door **[!UICONTROL Identities]** te selecteren om de lijst uit te vouwen.
 
@@ -83,7 +90,7 @@ Het identiteitsveld wordt gemarkeerd in het samenvoegingsschema en de details va
 
 ![ de geselecteerde identiteit wordt benadrukt. De details over de geselecteerde identiteit worden getoond op rechterzijbalk.](../images/union-schema/select-identity.png)
 
-## Relaties weergeven
+## Relaties weergeven {#view-relationships}
 
 Het unieschema UI laat u ook toe om verhoudingen te zien die voor schema&#39;s zijn bepaald die op de geselecteerde schemaklasse worden gebaseerd. Het bepalen van een verhouding is een manier om twee regelingen te verbinden die tot verschillende klassen behoren om complexere inzichten in klantengegevens te bereiken.
 
