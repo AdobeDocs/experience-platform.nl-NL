@@ -6,9 +6,9 @@ breadcrumb-title: Handleiding voor Web SDK
 user-guide-description: Interactie met Experience Cloud-services via het Edge-netwerk.
 feature: Web SDK
 role: Developer
-source-git-commit: bed63cb9be1ffe39a538d1c3f8be9065ffb2ca28
+source-git-commit: c697d0e924545caf430382385797bde340b57d94
 workflow-type: tm+mt
-source-wordcount: '239'
+source-wordcount: '241'
 ht-degree: 18%
 
 ---
@@ -25,7 +25,7 @@ ht-degree: 18%
    * [De Web SDK installeren met het NPM-pakket](install/npm.md)
    * [Een aangepaste Web SDK-build maken met behulp van het NPM-pakket](install/create-custom-build.md)
 * Opdrachten {#commands}
-   * configure {#configure}
+   * vormen {#configure}
       * [Overzicht](commands/configure/overview.md)
       * [autoCollectPropositionInteractions](commands/configure/autocollectpropositioninteractions.md)
       * [clickCollectionEnabled](commands/configure/clickcollectionenabled.md)
@@ -43,6 +43,7 @@ ht-degree: 18%
       * [onBeforeLinkClickSend](commands/configure/onbeforelinkclicksend.md)
       * [orgId](commands/configure/orgid.md)
       * [prehideStyle](commands/configure/prehidingstyle.md)
+      * [pushNotifications](commands/configure/pushnotifications.md)
       * [targetMigrationEnabled](commands/configure/targetmigrationenabled.md)
       * [thirdPartyCookiesEnabled](commands/configure/thirdpartycookiesenabled.md)
    * sendEvent {#sendevent}
@@ -63,6 +64,7 @@ ht-degree: 18%
    * [setConsent](commands/setconsent.md)
    * [setDebug](commands/setdebug.md)
    * [sendMediaEvent](commands/sendmediaevent.md)
+   * [sendPushSubscription](commands/sendPushSubscription.md)
    * [subscribeRulesetItems](commands/subscriberulesetitems.md)
    * [Gegevensstroomoverschrijvingen configureren](commands/datastream-overrides.md)
    * [Opdrachtreacties](commands/command-responses.md)
@@ -83,7 +85,7 @@ ht-degree: 18%
       * [Toegang krijgen tot reactietokens](personalization/adobe-target/accessing-response-tokens.md)
       * [Dbox-id van derden gebruiken](personalization/adobe-target/using-mbox-3rdpartyid.md)
       * [De bibliotheek at.js vergelijken met de Web SDK](personalization/adobe-target/web-sdk-atjs-comparison.md)
-      * Analytics for Target (A4T) logging {#a4t}
+      * Analyses voor logboekregistratie van doel (A4T) {#a4t}
          * [Overzicht](personalization/adobe-target/analytics-logging/overview.md)
          * [Logboekregistratie op de client](personalization/adobe-target/analytics-logging/client-side.md)
          * [Logboekregistratie op de server](personalization/adobe-target/analytics-logging/server-side.md)
