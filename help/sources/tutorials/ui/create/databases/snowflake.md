@@ -23,12 +23,12 @@ Lees deze handleiding voor informatie over hoe u uw [!DNL Snowflake] -account ku
 
 >[!WARNING]
 >
->De basisauthentificatie (of de authentificatie van de rekeningssleutel) voor [!DNL Snowflake] bron zal op November 2025 worden afgekeurd. U moet naar op sleutel-paar gebaseerde authentificatie bewegen om de bron te blijven gebruiken en gegevens van uw gegevensbestand in te voeren aan Experience Platform. Voor meer informatie over de veroudering, lees de [[!DNL Snowflake]  beste praktijkgids bij het verlichten van de risico&#39;s van credentieel compromis ](https://www.snowflake.com/en/resources/white-paper/best-practices-to-mitigate-the-risk-of-credential-compromise/).
+>De basisauthentificatie (of de authentificatie van de rekeningssleutel) voor [!DNL Snowflake] bron zal op November 2025 worden afgekeurd. U moet naar op sleutel-paar gebaseerde authentificatie bewegen om de bron te blijven gebruiken en gegevens van uw gegevensbestand in te voeren aan Experience Platform. Voor meer informatie over de veroudering, lees de [[!DNL Snowflake]  beste praktijkgids bij het verlichten van de risico&#39;s van credentieel compromis &#x200B;](https://www.snowflake.com/en/resources/white-paper/best-practices-to-mitigate-the-risk-of-credential-compromise/).
 
 Deze zelfstudie vereist een goed begrip van de volgende onderdelen van Experience Platform:
 
-* [ Bronnen ](../../../../home.md): Experience Platform staat gegevens toe om van diverse bronnen worden opgenomen terwijl het voorzien van u van de capaciteit om, inkomende gegevens te structureren te etiketteren en te verbeteren gebruikend [!DNL Experience Platform] diensten.
-* [ Sandboxes ](../../../../../sandboxes/home.md): Experience Platform verstrekt virtuele zandbakken die één enkele instantie van Experience Platform in afzonderlijke virtuele milieu&#39;s verdelen helpen digitale ervaringstoepassingen ontwikkelen en ontwikkelen.
+* [&#x200B; Bronnen &#x200B;](../../../../home.md): Experience Platform staat gegevens toe om van diverse bronnen worden opgenomen terwijl het voorzien van u van de capaciteit om, inkomende gegevens te structureren te etiketteren en te verbeteren gebruikend [!DNL Experience Platform] diensten.
+* [&#x200B; Sandboxes &#x200B;](../../../../../sandboxes/home.md): Experience Platform verstrekt virtuele zandbakken die één enkele instantie van Experience Platform in afzonderlijke virtuele milieu&#39;s verdelen helpen digitale ervaringstoepassingen ontwikkelen en ontwikkelen.
 
 >[!NOTE]
 >
@@ -44,7 +44,7 @@ Selecteer **[!DNL Snowflake]** onder de categorie *[!UICONTROL Databases]* en se
 >
 >Bronnen in de catalogus met bronnen geven de optie **[!UICONTROL Set up]** weer wanneer een bepaalde bron nog geen geverifieerde account heeft. Zodra een geverifieerd account bestaat, verandert deze optie in **[!UICONTROL Add data]** .
 
-![ de broncatalogus met de geselecteerde kaart van Snowflake.](../../../../images/tutorials/create/snowflake/catalog.png)
+![&#x200B; de broncatalogus met de geselecteerde kaart van Snowflake.](../../../../images/tutorials/create/snowflake/catalog.png)
 
 ## Een bestaande account gebruiken {#existing}
 
@@ -52,7 +52,7 @@ Vervolgens gaat u naar de verificatiestap van de workflow voor bronnen. Hier kun
 
 Als u een bestaande account wilt gebruiken, selecteert u de [!DNL Snowflake] -account waarmee u verbinding wilt maken en selecteert u **[!UICONTROL Next]** om door te gaan.
 
-![ de bestaande rekeningsinterface in het bronwerkschema.](../../../../images/tutorials/create/snowflake/existing.png)
+![&#x200B; de bestaande rekeningsinterface in het bronwerkschema.](../../../../images/tutorials/create/snowflake/existing.png)
 
 ## Een nieuwe account maken {#create}
 
@@ -70,11 +70,11 @@ U kunt uw [!DNL Snowflake] -account op Azure verbinden met Experience Platform v
 
 Selecteer **[!UICONTROL Account key authentication]** als u accountsleutelverificatie wilt gebruiken, geef uw verbindingstekenreeks op in het invoerformulier en selecteer vervolgens **[!UICONTROL Connect to source]** .
 
-![ de interface van de rekeningszeer belangrijke authentificatie.](../../../../images/tutorials/create/snowflake/account-key-auth.png)
+![&#x200B; de interface van de rekeningszeer belangrijke authentificatie.](../../../../images/tutorials/create/snowflake/account-key-auth.png)
 
 | Credentials | Beschrijving |
 | --- | --- |
-| Account | Een accountnaam vormt een unieke identificatie van een account binnen uw organisatie. In dit geval moet u een account op unieke wijze identificeren voor verschillende [!DNL Snowflake] -organisaties. Hiervoor moet u de naam van uw organisatie aan de accountnaam toevoegen. Bijvoorbeeld: `orgname-account_name` . Lees de gids bij [ het terugwinnen van uw  [!DNL Snowflake]  rekeningsherkenningsteken ](../../../../connectors/databases/snowflake.md#retrieve-your-account-identifier) voor extra begeleiding. Raadpleeg voor meer informatie de [[!DNL Snowflake] documentatie](https://docs.snowflake.com/en/user-guide/admin-account-identifier#format-1-preferred-account-name-in-your-organization). |
+| Account | Een accountnaam vormt een unieke identificatie van een account binnen uw organisatie. In dit geval moet u een account op unieke wijze identificeren voor verschillende [!DNL Snowflake] -organisaties. Hiervoor moet u de naam van uw organisatie aan de accountnaam toevoegen. Bijvoorbeeld: `orgname-account_name` . Lees de gids bij [&#x200B; het terugwinnen van uw  [!DNL Snowflake]  rekeningsherkenningsteken &#x200B;](../../../../connectors/databases/snowflake.md#retrieve-your-account-identifier) voor extra begeleiding. Raadpleeg voor meer informatie de [[!DNL Snowflake] documentatie](https://docs.snowflake.com/en/user-guide/admin-account-identifier#format-1-preferred-account-name-in-your-organization). |
 | Warehouse | Het [!DNL Snowflake] pakhuis beheert het proces van de vraaguitvoering voor de toepassing. Elk [!DNL Snowflake] -pakhuis is onafhankelijk van elkaar en moet afzonderlijk worden benaderd wanneer u gegevens naar Experience Platform overbrengt. |
 | Database | De database [!DNL Snowflake] bevat de gegevens die u aan de Experience Platform wilt toevoegen. |
 | Gebruikersnaam | De gebruikersnaam voor de [!DNL Snowflake] -account. |
@@ -86,20 +86,20 @@ Selecteer **[!UICONTROL Account key authentication]** als u accountsleutelverifi
 
 Selecteer **[!UICONTROL KeyPair authentication]** als u sleutelpaarverificatie wilt gebruiken, geef waarden op voor uw account, gebruikersnaam, persoonlijke sleutel, persoonlijke sleutel, wachtwoordzin voor de persoonlijke sleutel, database en magazijn en selecteer vervolgens **[!UICONTROL Connect to source]** .
 
-![ de rekening zeer belangrijk-paar authentificatieinterface.](../../../../images/tutorials/create/snowflake/key-pair-auth.png)
+![&#x200B; de rekening zeer belangrijk-paar authentificatieinterface.](../../../../images/tutorials/create/snowflake/key-pair-auth.png)
 
 Met zeer belangrijk-paarauthentificatie, moet u een zeer belangrijk paar met 2048 bits RSA produceren en dan de volgende waarden verstrekken wanneer het creëren van een rekening voor uw [!DNL Snowflake] bron.
 
 | Credentials | Beschrijving |
 | --- | --- |
-| Account | Een accountnaam vormt een unieke identificatie van een account binnen uw organisatie. In dit geval moet u een account op unieke wijze identificeren voor verschillende [!DNL Snowflake] -organisaties. Hiervoor moet u de naam van uw organisatie aan de accountnaam toevoegen. Bijvoorbeeld: `orgname-account_name` . Lees de gids bij [ het terugwinnen van uw  [!DNL Snowflake]  rekeningsherkenningsteken ](../../../../connectors/databases/snowflake.md#retrieve-your-account-identifier) voor extra begeleiding. Raadpleeg voor meer informatie de [[!DNL Snowflake] documentatie](https://docs.snowflake.com/en/user-guide/admin-account-identifier#format-1-preferred-account-name-in-your-organization). |
+| Account | Een accountnaam vormt een unieke identificatie van een account binnen uw organisatie. In dit geval moet u een account op unieke wijze identificeren voor verschillende [!DNL Snowflake] -organisaties. Hiervoor moet u de naam van uw organisatie aan de accountnaam toevoegen. Bijvoorbeeld: `orgname-account_name` . Lees de gids bij [&#x200B; het terugwinnen van uw  [!DNL Snowflake]  rekeningsherkenningsteken &#x200B;](../../../../connectors/databases/snowflake.md#retrieve-your-account-identifier) voor extra begeleiding. Raadpleeg voor meer informatie de [[!DNL Snowflake] documentatie](https://docs.snowflake.com/en/user-guide/admin-account-identifier#format-1-preferred-account-name-in-your-organization). |
 | Gebruikersnaam | De gebruikersnaam van uw [!DNL Snowflake] -account. |
-| Persoonlijke sleutel | De [!DNL Base64-] gecodeerde privé sleutel van uw [!DNL Snowflake] rekening. U kunt gecodeerde of niet-gecodeerde persoonlijke sleutels genereren. Als u een gecodeerde persoonlijke sleutel gebruikt, moet u ook een persoonlijke-sleutelwachtwoord opgeven bij verificatie met behulp van Experience Platform. Lees de gids op [ het terugwinnen van uw  [!DNL Snowflake]  privé sleutel ](../../../../connectors/databases/snowflake.md) voor meer informatie. |
+| Persoonlijke sleutel | De [!DNL Base64-] gecodeerde privé sleutel van uw [!DNL Snowflake] rekening. U kunt gecodeerde of niet-gecodeerde persoonlijke sleutels genereren. Als u een gecodeerde persoonlijke sleutel gebruikt, moet u ook een persoonlijke-sleutelwachtwoord opgeven bij verificatie met behulp van Experience Platform. Lees de gids op [&#x200B; het terugwinnen van uw  [!DNL Snowflake]  privé sleutel &#x200B;](../../../../connectors/databases/snowflake.md) voor meer informatie. |
 | Wachtwoordgroep voor persoonlijke sleutel | Persoonlijke sleutel passphrase is een extra laag van veiligheid die u moet gebruiken wanneer het voor authentiek verklaren met een gecodeerde privé sleutel. U hoeft de wachtwoordzin niet op te geven als u een niet-gecodeerde persoonlijke sleutel gebruikt. |
 | Database | De [!DNL Snowflake] -database die de gegevens bevat die u aan Experience Platform wilt toevoegen. |
 | Warehouse | Het [!DNL Snowflake] pakhuis beheert het proces van de vraaguitvoering voor de toepassing. Elk [!DNL Snowflake] -pakhuis is onafhankelijk van elkaar en moet afzonderlijk worden benaderd wanneer u gegevens naar Experience Platform overbrengt. |
 
-Voor meer informatie over deze waarden, verwijs naar [ dit document van Snowflake ](https://docs.snowflake.com/en/user-guide/key-pair-auth.html).
+Voor meer informatie over deze waarden, verwijs naar [&#x200B; dit document van Snowflake &#x200B;](https://docs.snowflake.com/en/user-guide/key-pair-auth.html).
 
 >[!ENDTABS]
 
@@ -107,7 +107,7 @@ Voor meer informatie over deze waarden, verwijs naar [ dit document van Snowflak
 
 >[!AVAILABILITY]
 >
->Deze sectie is van toepassing op implementaties van Experience Platform die op Amazon Web Services (AWS) worden uitgevoerd. Experience Platform die op AWS wordt uitgevoerd, is momenteel beschikbaar voor een beperkt aantal klanten. Meer over de gesteunde infrastructuur van Experience Platform leren, zie het [ multi-wolkenoverzicht van Experience Platform ](../../../../../landing/multi-cloud.md).
+>Deze sectie is van toepassing op implementaties van Experience Platform die op Amazon Web Services (AWS) worden uitgevoerd. Experience Platform die op AWS wordt uitgevoerd, is momenteel beschikbaar voor een beperkt aantal klanten. Meer over de gesteunde infrastructuur van Experience Platform leren, zie het [&#x200B; multi-wolkenoverzicht van Experience Platform &#x200B;](../../../../../landing/multi-cloud.md).
 
 Als u een nieuwe [!DNL Snowflake] -account wilt maken en verbinding wilt maken met Experience Platform op AWS, controleert u of u zich in een VA6-sandbox bevindt en geeft u vervolgens de vereiste gegevens voor verificatie op.
 
@@ -115,19 +115,19 @@ Als u een nieuwe [!DNL Snowflake] -account wilt maken en verbinding wilt maken m
 
 >[!TAB  zeer belangrijk-paar authentificatie ]
 
-Als u verbinding wilt maken met behulp van sleutelparen, selecteert u **[!UICONTROL KeyPair Authentication]** , geeft u de verificatiereferenties op en selecteert u **[!UICONTROL Connect to source]** . Voor meer informatie over deze geloofsbrieven, lees het [[!DNL Snowflake]  partijoverzicht ](../../../../connectors/databases/snowflake.md#gather-required-credentials).
+Als u verbinding wilt maken met behulp van sleutelparen, selecteert u **[!UICONTROL KeyPair Authentication]** , geeft u de verificatiereferenties op en selecteert u **[!UICONTROL Connect to source]** . Voor meer informatie over deze geloofsbrieven, lees het [[!DNL Snowflake]  partijoverzicht &#x200B;](../../../../connectors/databases/snowflake.md#gather-required-credentials).
 
-![ de nieuwe stap van de rekeningsverwezenlijking voor zeer belangrijke paarauthentificatie.](../../../../images/tutorials/create/snowflake/key-pair-aws.png)
+![&#x200B; de nieuwe stap van de rekeningsverwezenlijking voor zeer belangrijke paarauthentificatie.](../../../../images/tutorials/create/snowflake/key-pair-aws.png)
 
 >[!TAB  Basisauthentificatie ]
 
 >[!WARNING]
 >
->De basisauthentificatie (of de authentificatie van de rekeningssleutel) voor [!DNL Snowflake] bron zal op November 2025 worden afgekeurd. U moet naar op sleutel-paar gebaseerde authentificatie bewegen om de bron te blijven gebruiken en gegevens van uw gegevensbestand in te voeren aan Experience Platform. Voor meer informatie over de veroudering, lees de [[!DNL Snowflake]  beste praktijkgids bij het verlichten van de risico&#39;s van credentieel compromis ](https://www.snowflake.com/en/resources/white-paper/best-practices-to-mitigate-the-risk-of-credential-compromise/).
+>De basisauthentificatie (of de authentificatie van de rekeningssleutel) voor [!DNL Snowflake] bron zal op November 2025 worden afgekeurd. U moet naar op sleutel-paar gebaseerde authentificatie bewegen om de bron te blijven gebruiken en gegevens van uw gegevensbestand in te voeren aan Experience Platform. Voor meer informatie over de veroudering, lees de [[!DNL Snowflake]  beste praktijkgids bij het verlichten van de risico&#39;s van credentieel compromis &#x200B;](https://www.snowflake.com/en/resources/white-paper/best-practices-to-mitigate-the-risk-of-credential-compromise/).
 
-Als u verbinding wilt maken met een combinatie van gebruikersnaam en wachtwoord, selecteert u **[!UICONTROL Basic authentication]** , geeft u de verificatiegegevens op en selecteert u **[!UICONTROL Connect to source]** . Voor meer informatie over deze geloofsbrieven, lees het [[!DNL Snowflake]  partijoverzicht ](../../../../connectors/databases/snowflake.md#gather-required-credentials).
+Als u verbinding wilt maken met een combinatie van gebruikersnaam en wachtwoord, selecteert u **[!UICONTROL Basic authentication]** , geeft u de verificatiegegevens op en selecteert u **[!UICONTROL Connect to source]** . Voor meer informatie over deze geloofsbrieven, lees het [[!DNL Snowflake]  partijoverzicht &#x200B;](../../../../connectors/databases/snowflake.md#gather-required-credentials).
 
-![ de nieuwe rekeningsstap in het bronwerkschema waar u Snowflake met Experience Platform op AWS kunt verbinden.](../../../../images/tutorials/create/snowflake/aws-auth.png)
+![&#x200B; de nieuwe rekeningsstap in het bronwerkschema waar u Snowflake met Experience Platform op AWS kunt verbinden.](../../../../images/tutorials/create/snowflake/aws-auth.png)
 
 >[!ENDTABS]
 
@@ -139,4 +139,4 @@ De rest van de workflow blijft ongewijzigd. Het enige voorbehoud is dat bij het 
 
 ## Volgende stappen
 
-Door deze zelfstudie te volgen, hebt u een verbinding met uw Snowflake-account tot stand gebracht. U kunt nu aan het volgende leerprogramma verdergaan en [ een dataflow vormen om gegevens in  [!DNL Experience Platform]](../../dataflow/databases.md) te brengen.
+Door deze zelfstudie te volgen, hebt u een verbinding met uw Snowflake-account tot stand gebracht. U kunt nu aan het volgende leerprogramma verdergaan en [&#x200B; een dataflow vormen om gegevens in  [!DNL Experience Platform]](../../dataflow/databases.md) te brengen.
