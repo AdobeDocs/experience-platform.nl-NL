@@ -4,9 +4,9 @@ type: Tutorial
 description: Leer hoe u een Snowflake-bronverbinding maakt met de interface van Adobe Experience Platform.
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: fb2038b9-7f27-4818-b5de-cc8072122127
-source-git-commit: d8d9303e358c66c4cd891d6bf59a801c09a95f8e
+source-git-commit: 80ea8b5aa46e7aa4fdecfee3c962a77989a9b191
 workflow-type: tm+mt
-source-wordcount: '1183'
+source-wordcount: '1213'
 ht-degree: 1%
 
 ---
@@ -111,17 +111,25 @@ Voor meer informatie over deze waarden, verwijs naar [ dit document van Snowflak
 
 Als u een nieuwe [!DNL Snowflake] -account wilt maken en verbinding wilt maken met Experience Platform op AWS, controleert u of u zich in een VA6-sandbox bevindt en geeft u vervolgens de vereiste gegevens voor verificatie op.
 
+>[!BEGINTABS]
+
+>[!TAB  zeer belangrijk-paar authentificatie ]
+
+Als u verbinding wilt maken met behulp van sleutelparen, selecteert u **[!UICONTROL KeyPair Authentication]** , geeft u de verificatiereferenties op en selecteert u **[!UICONTROL Connect to source]** . Voor meer informatie over deze geloofsbrieven, lees het [[!DNL Snowflake]  partijoverzicht ](../../../../connectors/databases/snowflake.md#gather-required-credentials).
+
+![ de nieuwe stap van de rekeningsverwezenlijking voor zeer belangrijke paarauthentificatie.](../../../../images/tutorials/create/snowflake/key-pair-aws.png)
+
+>[!TAB  Basisauthentificatie ]
+
+>[!WARNING]
+>
+>De basisauthentificatie (of de authentificatie van de rekeningssleutel) voor [!DNL Snowflake] bron zal op November 2025 worden afgekeurd. U moet naar op sleutel-paar gebaseerde authentificatie bewegen om de bron te blijven gebruiken en gegevens van uw gegevensbestand in te voeren aan Experience Platform. Voor meer informatie over de veroudering, lees de [[!DNL Snowflake]  beste praktijkgids bij het verlichten van de risico&#39;s van credentieel compromis ](https://www.snowflake.com/en/resources/white-paper/best-practices-to-mitigate-the-risk-of-credential-compromise/).
+
+Als u verbinding wilt maken met een combinatie van gebruikersnaam en wachtwoord, selecteert u **[!UICONTROL Basic authentication]** , geeft u de verificatiegegevens op en selecteert u **[!UICONTROL Connect to source]** . Voor meer informatie over deze geloofsbrieven, lees het [[!DNL Snowflake]  partijoverzicht ](../../../../connectors/databases/snowflake.md#gather-required-credentials).
+
 ![ de nieuwe rekeningsstap in het bronwerkschema waar u Snowflake met Experience Platform op AWS kunt verbinden.](../../../../images/tutorials/create/snowflake/aws-auth.png)
 
-| Credentials | Beschrijving |
-| --- | --- |
-| Host | De host-URL waarmee uw [!DNL Snowflake] -account verbinding maakt. |
-| Poort | Het poortnummer dat door [!DNL Snowflake] wordt gebruikt wanneer verbinding wordt gemaakt met een server via internet. |
-| Gebruikersnaam | De gebruikersnaam die aan uw [!DNL Snowflake] -account is gekoppeld. |
-| Wachtwoord | Het wachtwoord dat aan uw [!DNL Snowflake] account is gekoppeld. |
-| Database | De [!DNL Snowflake] -database vanwaar de gegevens worden opgehaald. |
-| Schema | De naam van het schema dat aan uw [!DNL Snowflake] database is gekoppeld. U moet ervoor zorgen dat de gebruiker u gegevensbestandtoegang tot wilt geven, ook toegang tot dit schema heeft. |
-| Warehouse | Het [!DNL Snowflake] -pakhuis dat u gebruikt. |
+>[!ENDTABS]
 
 ### Voorvertoning van voorbeeldgegevens overslaan {#skip-preview-of-sample-data}
 
