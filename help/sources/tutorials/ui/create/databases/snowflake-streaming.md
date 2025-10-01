@@ -17,14 +17,14 @@ Lees deze handleiding voor informatie over het streamen van gegevens van uw [!DN
 
 Deze zelfstudie vereist een goed begrip van de volgende onderdelen van Experience Platform:
 
-* [[!DNL Experience Data Model (XDM)]  Systeem ](../../../../../xdm/home.md): Het gestandaardiseerde kader waardoor [!DNL Experience Platform] gegevens van de klantenervaring organiseert.
-   * [ Grondbeginselen van schemacompositie ](../../../../../xdm/schema/composition.md): Leer over de basisbouwstenen van schema&#39;s XDM, met inbegrip van zeer belangrijke principes en beste praktijken in schemacompositie.
-   * [ het leerprogramma van de Redacteur van het Schema ](../../../../../xdm/tutorials/create-schema-ui.md): Leer hoe te om douaneschema&#39;s tot stand te brengen gebruikend de Redacteur UI van het Schema.
+* [[!DNL Experience Data Model (XDM)]  Systeem &#x200B;](../../../../../xdm/home.md): Het gestandaardiseerde kader waardoor [!DNL Experience Platform] gegevens van de klantenervaring organiseert.
+   * [&#x200B; Grondbeginselen van schemacompositie &#x200B;](../../../../../xdm/schema/composition.md): Leer over de basisbouwstenen van schema&#39;s XDM, met inbegrip van zeer belangrijke principes en beste praktijken in schemacompositie.
+   * [&#x200B; het leerprogramma van de Redacteur van het Schema &#x200B;](../../../../../xdm/tutorials/create-schema-ui.md): Leer hoe te om douaneschema&#39;s tot stand te brengen gebruikend de Redacteur UI van het Schema.
 * [[!DNL Real-Time Customer Profile]](../../../../../profile/home.md): biedt een uniform, real-time consumentenprofiel dat is gebaseerd op geaggregeerde gegevens van meerdere bronnen.
 
 ### Verificatie
 
-Lees de gids op [ eerste vereiste opstelling voor  [!DNL Snowflake]  het stromen gegevens ](../../../../connectors/databases/snowflake-streaming.md) voor informatie over de stappen die u moet voltooien alvorens u het stromen gegevens van [!DNL Snowflake] aan Experience Platform kunt opnemen.
+Lees de gids op [&#x200B; eerste vereiste opstelling voor  [!DNL Snowflake]  het stromen gegevens &#x200B;](../../../../connectors/databases/snowflake-streaming.md) voor informatie over de stappen die u moet voltooien alvorens u het stromen gegevens van [!DNL Snowflake] aan Experience Platform kunt opnemen.
 
 ## Gebruik de [!DNL Snowflake Streaming] -bron om [!DNL Snowflake] -gegevens te streamen naar Experience Platform
 
@@ -36,7 +36,7 @@ Onder de *categorie van Gegevensbestanden*, selecteer **[!DNL Snowflake Streamin
 >
 >Bronnen zonder geverifieerde account in de broncatalogus geven de optie **[!UICONTROL Set up]** weer. Zodra een geverifieerd account bestaat, verandert deze optie in **[!UICONTROL Add data]** .
 
-![ de broncatalogus in Experience Platform UI, met de Snowflake die bronkaart stroomt geselecteerd.](../../../../images/tutorials/create/snowflake-streaming/catalog.png)
+![&#x200B; de broncatalogus in Experience Platform UI, met de Snowflake die bronkaart stroomt geselecteerd.](../../../../images/tutorials/create/snowflake-streaming/catalog.png)
 
 De pagina **[!UICONTROL Connect Snowflake Streaming account]** wordt weergegeven. Op deze pagina kunt u nieuwe of bestaande referenties gebruiken.
 
@@ -44,7 +44,7 @@ De pagina **[!UICONTROL Connect Snowflake Streaming account]** wordt weergegeven
 
 Als u een nieuwe account wilt maken, selecteert u **[!UICONTROL New account]** en geeft u een naam en een optionele beschrijving voor uw account.
 
-![ de nieuwe interface van de rekeningsverwezenlijking van het bronwerkschema.](../../../../images/tutorials/create/snowflake-streaming/new.png)
+![&#x200B; de nieuwe interface van de rekeningsverwezenlijking van het bronwerkschema.](../../../../images/tutorials/create/snowflake-streaming/new.png)
 
 >[!BEGINTABS]
 
@@ -52,17 +52,17 @@ Als u een nieuwe account wilt maken, selecteert u **[!UICONTROL New account]** e
 
 Als u [!UICONTROL Basic authentication] wilt gebruiken, selecteert u **[!UICONTROL Basic Authentication for Snowflake]** en geeft u referenties voor uw [!DNL Snowflake] -account op. Als u klaar bent, selecteert u **[!UICONTROL Connect to source]** en laat de verbinding enkele ogenblikken tot stand komen.
 
-Lees het [!DNL Snowflake Streaming] overzicht voor meer informatie over [ verzamelen vereiste geloofsbrieven ](../../../../connectors/databases/snowflake-streaming.md#gather-required-credentials).
+Lees het [!DNL Snowflake Streaming] overzicht voor meer informatie over [&#x200B; verzamelen vereiste geloofsbrieven &#x200B;](../../../../connectors/databases/snowflake-streaming.md#gather-required-credentials).
 
-![ de nieuwe rekeningsinterface in het bronwerkschema, met geselecteerde basisauthentificatie.](../../../../images/tutorials/create/snowflake-streaming/basic-auth.png)
+![&#x200B; de nieuwe rekeningsinterface in het bronwerkschema, met geselecteerde basisauthentificatie.](../../../../images/tutorials/create/snowflake-streaming/basic-auth.png)
 
 >[!TAB  authentificatie KeyPair ]
 
 Als u [!UICONTROL KeyPair authentication] wilt gebruiken, selecteert u **[!UICONTROL KeyPair Authentication for Snowflake]** en geeft u referenties voor uw [!DNL Snowflake] -account op. Als u klaar bent, selecteert u **[!UICONTROL Connect to source]** en laat de verbinding enkele ogenblikken tot stand komen.
 
-Lees het [!DNL Snowflake Streaming] overzicht voor meer informatie over [ verzamelen vereiste geloofsbrieven ](../../../../connectors/databases/snowflake-streaming.md#gather-required-credentials).
+Lees het [!DNL Snowflake Streaming] overzicht voor meer informatie over [&#x200B; verzamelen vereiste geloofsbrieven &#x200B;](../../../../connectors/databases/snowflake-streaming.md#gather-required-credentials).
 
-![ de nieuwe rekeningsinterface in het bronwerkschema, sleutel-paar geselecteerde authentificatie ](../../../../images/tutorials/create/snowflake-streaming/key-pair.png)
+![&#x200B; de nieuwe rekeningsinterface in het bronwerkschema, sleutel-paar geselecteerde authentificatie &#x200B;](../../../../images/tutorials/create/snowflake-streaming/key-pair.png)
 
 >[!ENDTABS]
 
@@ -74,25 +74,25 @@ Als u een bestaande account wilt gebruiken, kiest u **[!UICONTROL Existing accou
 >
 >* Er moet een tijdstempelkolom in de brontabel staan om een streaminggegevensstroom te kunnen maken. Experience Platform moet de tijdstempel hebben om te weten wanneer gegevens worden ingevoerd en wanneer incrementele gegevens worden gestreamd. U kunt met terugwerkende kracht een tijdstempelkolom toevoegen voor een bestaande verbinding en een nieuwe gegevensstroom creëren.
 >
->* Zorg ervoor dat het hoofdlettergebruik van de gegevensvelden in het bestand met voorbeeldbrongegevens in overeenstemming is met de [!DNL Snowflake] -richtlijnen voor de oplossing van hoofdletters en kleine letters voor id&#39;s. Lees het [[!DNL Snowflake]  document op herkenningsteken casing ](https://docs.snowflake.com/en/sql-reference/identifiers-syntax#label-identifier-casing) voor meer informatie.
+>* Zorg ervoor dat het hoofdlettergebruik van de gegevensvelden in het bestand met voorbeeldbrongegevens in overeenstemming is met de [!DNL Snowflake] -richtlijnen voor de oplossing van hoofdletters en kleine letters voor id&#39;s. Lees het [[!DNL Snowflake]  document op herkenningsteken casing &#x200B;](https://docs.snowflake.com/en/sql-reference/identifiers-syntax#label-identifier-casing) voor meer informatie.
 
 De stap [!UICONTROL Select data] wordt weergegeven. In deze stap moet u de gegevens selecteren die u in Experience Platform wilt importeren, tijdstempels en tijdzones configureren en een bestand met voorbeeldbrongegevens opgeven voor de invoer van onbewerkte gegevens.
 
 Gebruik de databasemap links op het scherm en selecteer de tabel die u naar Experience Platform wilt importeren.
 
-Selecteer vervolgens het kolomtype voor de tijdstempel van de tabel. U kunt kiezen uit twee typen tijdstempelkolommen: `TIMESTAMP_NTZ` of `TIMESTAMP_LTZ` . Als u een kolomtype `TIMESTAMP_NTZ` selecteert, moet u ook een tijdzone opgeven. De kolommen moeten een beperking hebben die niet null is. Voor meer informatie, lees de sectie over [ beperkingen en vaak gestelde vragen ](../../../../connectors/databases/snowflake-streaming.md#limitations-and-frequently-asked-questions).
+Selecteer vervolgens het kolomtype voor de tijdstempel van de tabel. U kunt kiezen uit twee typen tijdstempelkolommen: `TIMESTAMP_NTZ` of `TIMESTAMP_LTZ` . Als u een kolomtype `TIMESTAMP_NTZ` selecteert, moet u ook een tijdzone opgeven. De kolommen moeten een beperking hebben die niet null is. Voor meer informatie, lees de sectie over [&#x200B; beperkingen en vaak gestelde vragen &#x200B;](../../../../connectors/databases/snowflake-streaming.md#limitations-and-frequently-asked-questions).
 
 Tijdens deze stap kunt u ook instellingen voor backfill configureren. Met Backfill wordt bepaald welke gegevens in eerste instantie worden ingevoerd. Als backfill is ingeschakeld, worden alle huidige bestanden in het opgegeven pad tijdens de eerste geplande inname opgenomen. Als dat niet het geval is, worden alleen de bestanden opgenomen die tussen de eerste opname en de begintijd worden geladen. Bestanden die vóór de begintijd zijn geladen, worden niet opgenomen.
 
 Selecteer de schakeloptie **[!UICONTROL Backfill]** om terugvullen in te schakelen.
 
-![ timestamp, timezone, en backfill configuratiestappen.](../../../../images/tutorials/create/snowflake-streaming/timezone.png)
+![&#x200B; timestamp, timezone, en backfill configuratiestappen.](../../../../images/tutorials/create/snowflake-streaming/timezone.png)
 
 Tot slot selecteert u **[!UICONTROL Choose file]** om een voorbeeldbrongegevens te uploaden om de set toewijzingen te maken. Deze set wordt in een latere stap gebruikt om uw oorspronkelijke gegevens toe te wijzen aan het XDM-model (Experience Data Model).
 
 Als u klaar bent, selecteert u **[!UICONTROL Next]** om door te gaan.
 
-![ de voorproef van de bronsteekproefgegevens.](../../../../images/tutorials/create/snowflake-streaming/preview.png)
+![&#x200B; de voorproef van de bronsteekproefgegevens.](../../../../images/tutorials/create/snowflake-streaming/preview.png)
 
 ## Gegevensset en gegevens over gegevensstroom opgeven {#provide-dataset-and-dataflow-details}
 
@@ -104,7 +104,7 @@ Een dataset is een opslag en beheersconstructie voor een inzameling van gegevens
 
 Als u een bestaande dataset hebt, selecteert u **[!UICONTROL Existing dataset]** en gebruikt u vervolgens de optie **[!UICONTROL Advanced search]** om een venster weer te geven met alle datasets in uw organisatie, inclusief de respectievelijke details, zoals of deze zijn ingeschakeld voor opname in Real-Time Klantprofiel.
 
-![ de bestaande interface van de datasetselectie.](../../../../images/tutorials/create/snowflake-streaming/dataset.png)
+![&#x200B; de bestaande interface van de datasetselectie.](../../../../images/tutorials/create/snowflake-streaming/dataset.png)
 
 Als u een nieuwe gegevensset wilt gebruiken, selecteert u **[!UICONTROL New dataset]** en geeft u vervolgens een naam en een optionele beschrijving voor de gegevensset op. U moet ook een schema van het Model van de Gegevens van de Ervaring (XDM) selecteren dat uw dataset volgt aan.
 
@@ -112,27 +112,27 @@ Als u een nieuwe gegevensset wilt gebruiken, selecteert u **[!UICONTROL New data
 | --- | --- |
 | Naam uitvoergegevensset | De naam van uw nieuwe dataset. |
 | Beschrijving | (Optioneel) Een kort overzicht van de nieuwe gegevensset. |
-| Schema | Een vervolgkeuzelijst met schema&#39;s die in uw organisatie bestaan. U kunt ook uw eigen schema vóór het proces van de bronconfiguratie maken. Voor meer informatie, lees de gids op [ creërend een schema XDM in UI ](../../../../../xdm/tutorials/create-schema-ui.md). |
+| Schema | Een vervolgkeuzelijst met schema&#39;s die in uw organisatie bestaan. U kunt ook uw eigen schema vóór het proces van de bronconfiguratie maken. Voor meer informatie, lees de gids op [&#x200B; creërend een schema XDM in UI &#x200B;](../../../../../xdm/tutorials/create-schema-ui.md). |
 
 ### Gegevens gegevensstroom {#dataflow-details}
 
 Zodra uw dataset wordt gevormd, moet u details op uw gegevensstroom, met inbegrip van een naam, een facultatieve beschrijving, en waakzame configuraties dan verstrekken.
 
-![ de stap van de de detailconfiguratie van de gegevensstroom.](../../../../images/tutorials/create/snowflake-streaming/dataflow-detail.png)
+![&#x200B; de stap van de de detailconfiguratie van de gegevensstroom.](../../../../images/tutorials/create/snowflake-streaming/dataflow-detail.png)
 
 | Dataflow-configuraties | Beschrijving |
 | --- | --- |
 | Naam gegevensstroom | De naam van de gegevensstroom.  Standaard wordt hiervoor de naam gebruikt van het bestand dat wordt geïmporteerd. |
 | Beschrijving | (Optioneel) Een korte beschrijving van uw gegevensstroom. |
-| Waarschuwingen | Experience Platform kan op gebeurtenissen gebaseerde waarschuwingen produceren waarop gebruikers zich kunnen abonneren. Deze opties vereisen een lopende gegevensstroom om hen teweeg te brengen. Voor meer informatie, lees het [ alarm overzicht ](../../alerts.md) <ul><li>**het Begin van de Looppas van Bronnen Dataflow**: Selecteer dit alarm om een bericht te ontvangen wanneer uw dataflow looppas begint.</li><li>**Bronnen Dataflow de Succes van de Looppas**: Selecteer dit alarm om een bericht te ontvangen als uw dataflow zonder enige fouten beëindigt.</li><li>**de Uitval van de Looppas van Gegevensstroom van Bronnen**: Selecteer dit alarm om een bericht te ontvangen als uw dataflow looppas met om het even welke fouten beëindigt.</li></ul> |
+| Waarschuwingen | Experience Platform kan op gebeurtenissen gebaseerde waarschuwingen produceren waarop gebruikers zich kunnen abonneren. Deze opties vereisen een lopende gegevensstroom om hen teweeg te brengen. Voor meer informatie, lees het [&#x200B; alarm overzicht &#x200B;](../../alerts.md) <ul><li>**het Begin van de Looppas van Bronnen Dataflow**: Selecteer dit alarm om een bericht te ontvangen wanneer uw dataflow looppas begint.</li><li>**Bronnen Dataflow de Succes van de Looppas**: Selecteer dit alarm om een bericht te ontvangen als uw dataflow zonder enige fouten beëindigt.</li><li>**de Uitval van de Looppas van Gegevensstroom van Bronnen**: Selecteer dit alarm om een bericht te ontvangen als uw dataflow looppas met om het even welke fouten beëindigt.</li></ul> |
 
 Als u klaar bent, selecteert u **[!UICONTROL Next]** om door te gaan.
 
 ## Velden toewijzen aan een XDM-schema {#mapping}
 
-De stap [!UICONTROL Mapping] wordt weergegeven. Gebruik de toewijzingsinterface om uw brongegevens toe te wijzen aan de aangewezen schemagebieden alvorens die gegevens in Experience Platform op te nemen, dan uitgezocht **[!UICONTROL Next]**. Voor een uitgebreide gids op hoe te om de kaartinterface te gebruiken, lees de [ gids UI van de Prep van Gegevens ](../../../../../data-prep/ui/mapping.md) voor meer informatie.
+De stap [!UICONTROL Mapping] wordt weergegeven. Gebruik de toewijzingsinterface om uw brongegevens toe te wijzen aan de aangewezen schemagebieden alvorens die gegevens in Experience Platform op te nemen, dan uitgezocht **[!UICONTROL Next]**. Voor een uitgebreide gids op hoe te om de kaartinterface te gebruiken, lees de [&#x200B; gids UI van de Prep van Gegevens &#x200B;](../../../../../data-prep/ui/mapping.md) voor meer informatie.
 
-![ de afbeeldingsinterface van het bronwerkschema.](../../../../images/tutorials/create/snowflake-streaming/mapping.png)
+![&#x200B; de afbeeldingsinterface van het bronwerkschema.](../../../../images/tutorials/create/snowflake-streaming/mapping.png)
 
 ## Controleer uw gegevensstroom {#review}
 
@@ -143,7 +143,7 @@ De laatste stap in het proces voor het maken van een gegevensstroom is het contr
 
 Nadat u de gegevensstroom hebt gereviseerd, selecteert u **[!UICONTROL Finish]** en laat u enige tijd over om de gegevensstroom te maken.
 
-![ de stap van het Overzicht van het bronwerkschema.](../../../../images/tutorials/create/snowflake-streaming/review.png)
+![&#x200B; de stap van het Overzicht van het bronwerkschema.](../../../../images/tutorials/create/snowflake-streaming/review.png)
 
 ## Volgende stappen
 
@@ -151,12 +151,12 @@ Aan de hand van deze zelfstudie hebt u een streaminggegevensstroom voor [!DNL Sn
 
 ### Uw gegevensstroom controleren
 
-Zodra uw gegevensstroom is gecreeerd, kunt u de gegevens controleren die door het worden opgenomen om informatie over innamesnelheden, succes, en fouten te bekijken. Voor meer informatie over hoe te om het stromen dataflows te controleren, bezoek het leerprogramma op [ het stromen dataflows in UI ](../../monitor-streaming.md).
+Zodra uw gegevensstroom is gecreeerd, kunt u de gegevens controleren die door het worden opgenomen om informatie over innamesnelheden, succes, en fouten te bekijken. Voor meer informatie over hoe te om het stromen dataflows te controleren, bezoek het leerprogramma op [&#x200B; het stromen dataflows in UI &#x200B;](../../monitor-streaming.md).
 
 ### Uw gegevensstroom bijwerken
 
-Om configuraties voor uw dataflows bij te werken die, afbeelding, en algemene informatie plannen, bezoek het leerprogramma op [ bijwerken brondataflows in UI ](../../update-dataflows.md).
+Om configuraties voor uw dataflows bij te werken die, afbeelding, en algemene informatie plannen, bezoek het leerprogramma op [&#x200B; bijwerken brondataflows in UI &#x200B;](../../update-dataflows.md).
 
 ### Uw gegevensstroom verwijderen
 
-U kunt gegevensstromen verwijderen die niet meer nodig zijn of die onjuist zijn gemaakt met de functie **[!UICONTROL Delete]** die beschikbaar is in de **[!UICONTROL Dataflows]** -werkruimte. Voor meer informatie over hoe te om dataflows te schrappen, bezoek het leerprogramma bij [ het schrappen van dataflows in UI ](../../delete.md).
+U kunt gegevensstromen verwijderen die niet meer nodig zijn of die onjuist zijn gemaakt met de functie **[!UICONTROL Delete]** die beschikbaar is in de **[!UICONTROL Dataflows]** -werkruimte. Voor meer informatie over hoe te om dataflows te schrappen, bezoek het leerprogramma bij [&#x200B; het schrappen van dataflows in UI &#x200B;](../../delete.md).

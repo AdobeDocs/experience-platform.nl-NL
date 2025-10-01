@@ -17,22 +17,22 @@ ht-degree: 0%
 >
 > De [!DNL Snowflake] -streamingbron is in de API beschikbaar voor gebruikers die Real-Time Customer Data Platform Ultimate hebben aangeschaft.
 
-Dit leerprogramma verstrekt stappen op hoe te om gegevens van uw [!DNL Snowflake] rekening met Adobe Experience Platform te verbinden en te stromen gebruikend [[!DNL Flow Service]  API ](<https://www.adobe.io/experience-platform-apis/references/flow-service/>).
+Dit leerprogramma verstrekt stappen op hoe te om gegevens van uw [!DNL Snowflake] rekening met Adobe Experience Platform te verbinden en te stromen gebruikend [[!DNL Flow Service]  API &#x200B;](<https://www.adobe.io/experience-platform-apis/references/flow-service/>).
 
 ## Aan de slag
 
 Deze handleiding vereist een goed begrip van de volgende onderdelen van Adobe Experience Platform:
 
-* [ Bronnen ](../../../../home.md): [!DNL Experience Platform] staat gegevens toe om van diverse bronnen worden opgenomen terwijl het voorzien van u van de capaciteit om, inkomende gegevens te structureren te etiketteren en te verbeteren gebruikend [!DNL Experience Platform] diensten.
-* [ Sandboxen ](../../../../../sandboxes/home.md): [!DNL Experience Platform] verstrekt virtuele zandbakken die één enkele [!DNL Experience Platform] instantie in afzonderlijke virtuele milieu&#39;s verdelen helpen digitale ervaringstoepassingen ontwikkelen en ontwikkelen.
+* [&#x200B; Bronnen &#x200B;](../../../../home.md): [!DNL Experience Platform] staat gegevens toe om van diverse bronnen worden opgenomen terwijl het voorzien van u van de capaciteit om, inkomende gegevens te structureren te etiketteren en te verbeteren gebruikend [!DNL Experience Platform] diensten.
+* [&#x200B; Sandboxen &#x200B;](../../../../../sandboxes/home.md): [!DNL Experience Platform] verstrekt virtuele zandbakken die één enkele [!DNL Experience Platform] instantie in afzonderlijke virtuele milieu&#39;s verdelen helpen digitale ervaringstoepassingen ontwikkelen en ontwikkelen.
 
 ### Experience Platform API&#39;s gebruiken
 
-Voor informatie over hoe te om vraag aan Experience Platform APIs met succes te maken, zie de gids op [ begonnen wordt met Experience Platform APIs ](../../../../../landing/api-guide.md).
+Voor informatie over hoe te om vraag aan Experience Platform APIs met succes te maken, zie de gids op [&#x200B; begonnen wordt met Experience Platform APIs &#x200B;](../../../../../landing/api-guide.md).
 
 ### Vereiste referenties verzamelen
 
-Lees het [[!DNL Snowflake]  overzicht ](../../../../connectors/databases/snowflake-streaming.md#prerequisites) voor informatie over authentificatie.
+Lees het [[!DNL Snowflake]  overzicht &#x200B;](../../../../connectors/databases/snowflake-streaming.md#prerequisites) voor informatie over authentificatie.
 
 ## Een basisverbinding maken {#create-a-base-connection}
 
@@ -199,7 +199,7 @@ curl -X POST \
 | `connectionSpec.id` | De verbindingsspecificatie-id voor de [!DNL Snowflake] streamingbron. |
 | `params.tableName` | De naam van de tabel in uw [!DNL Snowflake] -database die u naar Experience Platform wilt verzenden. |
 | `params.timestampColumn` | De naam van de tijdstempelkolom die wordt gebruikt om incrementele waarden op te halen. |
-| `params.backfill` | Een booleaanse vlag die bepaalt of de gegevens van het begin (0 epoche tijd) of van de tijd worden gehaald de bron in werking wordt gesteld. Voor meer informatie over deze waarde, lees het [[!DNL Snowflake]  stromen bronoverzicht ](../../../../connectors/databases/snowflake-streaming.md). |
+| `params.backfill` | Een booleaanse vlag die bepaalt of de gegevens van het begin (0 epoche tijd) of van de tijd worden gehaald de bron in werking wordt gesteld. Voor meer informatie over deze waarde, lees het [[!DNL Snowflake]  stromen bronoverzicht &#x200B;](../../../../connectors/databases/snowflake-streaming.md). |
 | `params.timezoneValue` | De tijdzonewaarde geeft aan welke tijd van de tijdzone moet worden opgehaald tijdens het opvragen van de [!DNL Snowflake] -database. Deze parameter moet worden opgegeven als de tijdstempelkolom in de config is ingesteld op `TIMESTAMP_NTZ` . Als deze optie niet is opgegeven, wordt voor `timezoneValue` standaard UTC gebruikt. |
 
 **Reactie**
