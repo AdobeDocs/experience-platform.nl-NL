@@ -3,9 +3,9 @@ title: Sluit uw Snowflake Streaming-account aan op Adobe Experience Platform
 description: Leer hoe u Adobe Experience Platform verbindt met Snowflake Streaming met behulp van de Flow Service API.
 badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 3fc225a4-746c-4a91-aa77-bbeb091ec364
-source-git-commit: bad1e0a9d86dcce68f1a591060989560435070c5
+source-git-commit: a4a464f1f3b61311754a39f2a6e6a4ef21af3ab0
 workflow-type: tm+mt
-source-wordcount: '880'
+source-wordcount: '874'
 ht-degree: 0%
 
 ---
@@ -26,11 +26,13 @@ Deze handleiding vereist een goed begrip van de volgende onderdelen van Adobe Ex
 * [ Bronnen ](../../../../home.md): [!DNL Experience Platform] staat gegevens toe om van diverse bronnen worden opgenomen terwijl het voorzien van u van de capaciteit om, inkomende gegevens te structureren te etiketteren en te verbeteren gebruikend [!DNL Experience Platform] diensten.
 * [ Sandboxen ](../../../../../sandboxes/home.md): [!DNL Experience Platform] verstrekt virtuele zandbakken die één enkele [!DNL Experience Platform] instantie in afzonderlijke virtuele milieu&#39;s verdelen helpen digitale ervaringstoepassingen ontwikkelen en ontwikkelen.
 
-Voor de vereiste configuratie en informatie over de [!DNL Snowflake] streamingbron. Gelieve te lezen het [[!DNL Snowflake]  stromen bronoverzicht ](../../../../connectors/databases/snowflake-streaming.md).
-
 ### Experience Platform API&#39;s gebruiken
 
 Voor informatie over hoe te om vraag aan Experience Platform APIs met succes te maken, zie de gids op [ begonnen wordt met Experience Platform APIs ](../../../../../landing/api-guide.md).
+
+### Vereiste referenties verzamelen
+
+Lees het [[!DNL Snowflake]  overzicht ](../../../../connectors/databases/snowflake-streaming.md#prerequisites) voor informatie over authentificatie.
 
 ## Een basisverbinding maken {#create-a-base-connection}
 
