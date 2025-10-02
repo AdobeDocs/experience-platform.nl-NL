@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Overzicht van toewijzingssets
 description: Leer hoe u toewijzingssets kunt gebruiken met Adobe Experience Platform Data Prep.
 exl-id: b45545b7-3ae7-400d-b6fd-b2cb76061093
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: bb0366284f1850bd9742b18d95608f901319f642
 workflow-type: tm+mt
-source-wordcount: '960'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
@@ -82,6 +82,10 @@ De volgende JSON is een voorbeeld van een typische toewijzingenset:
 ## Toewijzingsbronnen configureren
 
 In een afbeelding kan de `source` een veld, expressie of statische waarde zijn. Op basis van het opgegeven brontype kan de waarde op verschillende manieren worden geëxtraheerd.
+
+>[!TIP]
+>
+>Wacht maximaal 10 minuten nadat u de toewijzingen hebt opgeslagen voordat u de gegevensinvoer start om te controleren of deze volledig is opgeslagen.
 
 ### Veld in kolomgegevens
 
