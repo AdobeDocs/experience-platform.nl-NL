@@ -3,9 +3,9 @@ keywords: reclamebestemmingen;bestemmingen;platformbestemmingen
 title: Overzicht Advertising-bestemmingen
 description: Verbind Adobe Experience Platform met een platform van de derdereclame (b.v. DSP, en netwerk, SSP) en deel pseudoniem publiek aan deze platforms.
 exl-id: 072743a4-fc62-4a61-92ec-8f9640a47ab2
-source-git-commit: a0c1ddc5bcdd8b89e7605491441d56199f301e9e
+source-git-commit: d8a4d292747f8ea29709eb13c3344baadba1b6f5
 workflow-type: tm+mt
-source-wordcount: '286'
+source-wordcount: '283'
 ht-degree: 0%
 
 ---
@@ -59,7 +59,6 @@ Om het verschil tussen verbindingen en uitbreidingen te begrijpen, zie [ Verbind
 * [DoubleClick-extensie Floodlight](doubleclick-floodlight.md)
 * [Facebook Pixel Extension](facebook-pixel.md)
 * [OneTag-extensie knipperen](flashtalking.md)
-* [Google Ads-extensie](google-ads-extension.md)
 * [Google-tag-extensie](gtag-advertising.md)
 * [LinkedIn Insight-tagextensie](linkedin.md)
 * [Pinterest Conversion Tracking-extensie](pinterest-extension.md)
