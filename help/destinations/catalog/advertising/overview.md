@@ -22,7 +22,7 @@ Wanneer het verbinden met een reclamebestemming, worden uw publiek verzonden als
 
 Momenteel ondersteunt Experience Platform de hieronder vermelde reclamebestemmingen.
 
-Om het verschil tussen verbindingen en uitbreidingen te begrijpen, zie [ Verbindingen ](../../destination-types.md#connections) in de Types van Bestemming en de pagina van Categorieën.
+Om het verschil tussen verbindingen en uitbreidingen te begrijpen, zie [&#x200B; Verbindingen &#x200B;](../../destination-types.md#connections) in de Types van Bestemming en de pagina van Categorieën.
 
 ### Verbindingen
 
@@ -66,4 +66,4 @@ Om het verschil tussen verbindingen en uitbreidingen te begrijpen, zie [ Verbind
 
 ## Verbinding maken met een nieuwe advertentiebestemming {#connect-destination}
 
-Experience Platform moet eerst verbinding maken met het doel om een publiek naar advertentiebestemmingen voor uw campagnes te sturen. Zie het [ leerprogramma van de bestemmingsverwezenlijking ](../../ui/connect-destination.md) voor gedetailleerde informatie bij vestiging een nieuwe bestemming.
+Experience Platform moet eerst verbinding maken met het doel om een publiek naar advertentiebestemmingen voor uw campagnes te sturen. Zie het [&#x200B; leerprogramma van de bestemmingsverwezenlijking &#x200B;](../../ui/connect-destination.md) voor gedetailleerde informatie bij vestiging een nieuwe bestemming.
