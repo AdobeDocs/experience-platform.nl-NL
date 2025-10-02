@@ -2,11 +2,12 @@
 title: Snowflake Streaming-verbinding
 description: Exporteer gegevens naar je Snowflake-account met privéaanbiedingen.
 badgeBeta: label="Beta" type="Informative"
+badgeUltimate: label="Ultimate" type="Positive"
 exl-id: 4a00e46a-dedb-4dd3-b496-b0f4185ea9b0
-source-git-commit: 183858daac3a2471cb842f1d7308f91cf514c5ee
+source-git-commit: eed90a5ce988acafface0bac9191f1b3ae28f90c
 workflow-type: tm+mt
-source-wordcount: '1407'
-ht-degree: 1%
+source-wordcount: '1411'
+ht-degree: 0%
 
 ---
 
@@ -14,7 +15,7 @@ ht-degree: 1%
 
 >[!IMPORTANT]
 >
->Deze bestemmingsconnector bevindt zich in de bètafase en is alleen beschikbaar voor geselecteerde klanten. Neem contact op met uw Adobe-vertegenwoordiger om toegang aan te vragen.
+>Deze doelconnector is in bèta beschikbaar voor Real-Time CDP Ultimate-klanten. De functionaliteit en documentatie kunnen worden gewijzigd.
 
 ## Overzicht {#overview}
 
@@ -83,7 +84,7 @@ In deze sectie wordt beschreven welke soorten publiek u naar dit doel kunt expor
 
 | Oorsprong publiek | Ondersteund | Beschrijving |
 |---------|----------|----------|
-| [!DNL Segmentation Service] | ✓ | Het publiek produceerde door de Dienst van de Segmentatie van Experience Platform [&#128279;](../../../segmentation/home.md). |
+| [!DNL Segmentation Service] | ✓ | Het publiek produceerde door de Dienst van de Segmentatie van Experience Platform [ ](../../../segmentation/home.md). |
 | Alle andere doelgroepen | ✓ | Deze categorie omvat alle oorsprong van het publiek buiten het publiek dat via [!DNL Segmentation Service] wordt gegenereerd. Lees over de [ diverse publieksoorsprong ](/help/segmentation/ui/audience-portal.md#customize). Voorbeelden zijn: <ul><li> de douane uploadt publiek [ ingevoerde ](../../../segmentation/ui/audience-portal.md#import-audience) in Experience Platform van Csv- dossiers,</li><li> gelijksoortige doelgroepen, </li><li> federaal publiek, </li><li> publiek dat wordt gegenereerd in andere Experience Platform-apps, zoals Adobe Journey Optimizer; </li><li> en meer. </li></ul> |
 
 {style="table-layout:auto"}
