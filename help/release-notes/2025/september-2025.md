@@ -2,10 +2,10 @@
 title: Aanvullende informatie van september 2025 voor Adobe Experience Platform
 description: Aanvullende informatie voor de versie van september 2025 voor Adobe Experience Platform.
 exl-id: 9c5ab487-22b8-4590-b4ea-abec0f377703
-source-git-commit: bd5611b23740f16e41048f3bc65f62312593a075
+source-git-commit: d2694170e2860bd32783ad3f1860b0397e847289
 workflow-type: tm+mt
-source-wordcount: '1406'
-ht-degree: 43%
+source-wordcount: '1413'
+ht-degree: 98%
 
 ---
 
@@ -15,13 +15,13 @@ ht-degree: 43%
 >
 >Raadpleeg de volgende documentatie voor aanvullende informatie voor andere Adobe Experience Platform-toepassingen:
 >
->- [Adobe Journey Optimizer](https://experienceleague.adobe.com/nl/docs/journey-optimizer/using/whats-new/release-notes)
->- [Adobe Journey Optimizer B2B](https://experienceleague.adobe.com/nl/docs/journey-optimizer-b2b/user/release-notes)
+>- [Adobe Journey Optimizer](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/whats-new/release-notes)
+>- [Adobe Journey Optimizer B2B](https://experienceleague.adobe.com/en/docs/journey-optimizer-b2b/user/release-notes)
 >- [Customer Journey Analytics](https://experienceleague.adobe.com/nl/docs/analytics-platform/using/releases/pre-release-notes)
 >- [Samenstelling van Federated-doelgroep](https://experienceleague.adobe.com/nl/docs/federated-audience-composition/using/e-release-notes)
 >- [Real-Time CDP Collaboration](https://experienceleague.adobe.com/nl/docs/real-time-cdp-collaboration/using/latest)
 
-**Releasedatum: woensdag 23 september 2025**
+**Releasedatum: 23 september 2025**
 
 Nieuwe functies en updates van bestaande functies in Adobe Experience Platform:
 
@@ -35,16 +35,16 @@ Nieuwe functies en updates van bestaande functies in Adobe Experience Platform:
 
 ## Agent Orchestrator {#agent-orchestrator}
 
-Adobe Experience Platform Agent Orchestrator is de nieuwe agentische laag in Adobe Experience Platform.
+Adobe Experience Platform Agent Orchestrator is de nieuwe laag op agentbasis in Adobe Experience Platform.
 
 **Nieuwe functies**
 
 | Functie | Beschrijving |
 | --- | --- |
-| Agent Orchestrator | Adobe Experience Platform Agent Orchestrator is de nieuwe agentische laag in Adobe Experience Platform. Experience Platform Agent Orchestrator is ontworpen om de rijke gegevens en de kennis van klanten van het platform te benutten en biedt de kracht om de intelligentie en redenering achter speciaal ontwikkelde Adobe Experience Platform Agents te gebruiken, waardoor ze complexe besluitvormings- en probleemoplossende taken op snelheid en schaal kunnen uitvoeren — allemaal met menselijk toezicht. Wanneer u vragen stelt of hulp via natuurlijke taal in een gespreksinterface zoals AI Medewerker verzoekt, roept Agent Orchestrator automatisch op gespecialiseerde agenten om u de juiste antwoorden te krijgen. Agent Orchestrator herinnert uw gespreksgeschiedenis, toelatend u om op vorige vragen te bouwen natuurlijk zonder herhalende context, en combineert inzichten van veelvoudige agenten om u met duidelijke, verenigde reacties te presenteren. Voor meer informatie, lees de [ documentatie van Agent Orchestrator ](https://experienceleague.adobe.com/nl/docs/experience-cloud-ai/experience-cloud-ai/agents/agent-orchestrator). |
-| Audience Agent | In de Audience Agent kunt u inzichten weergeven over het publiek, zoals het detecteren van belangrijke wijzigingen in de publieksgrootte, het detecteren van dubbele doelgroepen, het verkennen van uw publieksoverzicht en het ophalen van de grootte van uw publiek. Voor meer informatie, lees de [ documentatie van Audience Agent ](https://experienceleague.adobe.com/nl/docs/experience-cloud-ai/experience-cloud-ai/agents/audience). |
+| Agent Orchestrator | Adobe Experience Platform Agent Orchestrator is de nieuwe laag op agentbasis in Adobe Experience Platform. Experience Platform Agent Orchestrator is ontworpen om de uitgebreide kennis van gegevens en klanten van het platform te benutten. De tool stuurt de intelligentie en redenering aan achter speciaal ontwikkelde, deskundige Adobe Experience Platform Agents. Deze kunnen hierdoor complexe besluitvormings- en probleemoplossingstaken snel en op grote schaal uitvoeren, allemaal onder menselijk toezicht. Wanneer u in natuurlijke taal vragen stelt of om hulp vraagt in een gespreksinterface zoals AI Assistant, roept Agent Orchestrator automatisch gespecialiseerde agenten op om u de juiste antwoorden te geven. Agent Orchestrator herinnert zich uw gespreksgeschiedenis, zodat u op een natuurlijke manier kunt voortbouwen op eerdere vragen zonder de context te hoeven herhalen. Ook combineert Agent Orchestrator inzichten van meerdere agenten om u duidelijke, uniforme antwoorden te bieden. Raadpleeg de [documentatie over Agent Orchestrator](https://experienceleague.adobe.com/nl/docs/experience-cloud-ai/experience-cloud-ai/agents/agent-orchestrator) voor meer informatie. |
+| Audience-agent | Met de Audience -agent kunt u inzicht krijgen in doelgroepen, zoals het detecteren van belangrijke wijzigingen in de omvang van doelgroepen, het detecteren van dubbele doelgroepen, het verkennen van uw doelgroepsvoorraad en het ophalen van de omvang van uw doelgroepen. Raadpleeg voor meer informatie de [documentatie over Audience-agent](https://experienceleague.adobe.com/nl/docs/experience-cloud-ai/experience-cloud-ai/agents/audience). |
 
-Voor meer informatie, lees de [ documentatie van Agent Orchestrator ](https://experienceleague.adobe.com/nl/docs/experience-cloud-ai/experience-cloud-ai/home).
+Raadpleeg de [documentatie over Agent Orchestrator](https://experienceleague.adobe.com/nl/docs/experience-cloud-ai/experience-cloud-ai/home) voor meer informatie.
 
 ## Waarschuwingen {#alerts}
 
@@ -54,7 +54,7 @@ Met Experience Platform kunt u zich aanmelden voor gebeurtenisgebaseerde waarsch
 
 | Functie | Beschrijving |
 | --- | --- |
-| Waarschuwing bij opnemen van streaming profiel | U kunt zich nu abonneren op twee nieuwe waarschuwingen voor het streamen van opname op gegevensstroomniveau: <ul><li>Streaming-insluitingsfout overschreden</li><li>Streaming inscriptie overgeslagen snelheid</li></ul> Waarschuwingen op het platform of in e-mailberichten geven een melding wanneer de drempelwaarden voor de standaarddrempel worden overschreden, of als er een aangepaste drempel wordt opgegeven. Voor meer informatie, lees het [ alarm van het Profiel ](../../observability/alerts/rules.md#profile) gids. |
+| Waarschuwingen voor het opnemen van streamingprofielen | U kunt zich nu abonneren op twee nieuwe waarschuwingen voor streamingopname op gegevensstroomniveau: <ul><li>Foutpercentage van streamingopname overschreden</li><li>Overgeslagen percentage van streamingopname overschreden</li></ul> U ontvangt waarschuwingen op het platform of per e-mail wanneer de drempelwaarden voor de standaarddrempel of een door u gedefinieerde drempelwaarde worden overschreden. Voor meer informatie raadpleegt u de handleiding [Profielwaarschuwingen](../../observability/alerts/rules.md#profile). |
 
 {style="table-layout:auto"}
 
@@ -68,16 +68,16 @@ Raadpleeg het [[!DNL Observability Insights] overzicht](../../observability/home
 
 | Bestemming | Beschrijving |
 | --- | --- |
-| [!BADGE &#x200B; Beta &#x200B;]{type=Informative} [[!DNL Snowflake Batch]](../../destinations/catalog/cloud-storage/snowflake-batch.md) schakelaar | Er is nu een nieuwe [!DNL Snowflake Batch] -connector beschikbaar die een alternatief biedt voor de streamingconnector voor specifieke gebruiksgevallen. |
-| [[!DNL Data Landing Zone]](../../destinations/catalog/cloud-storage/data-landing-zone.md) ondersteuning voor codering | U kunt nu openbare sleutels met RSA-indeling koppelen om uw geëxporteerde bestanden te coderen, zodat u over hetzelfde beveiligingsniveau beschikt als andere bestemmingen voor cloudopslag voor uw vertrouwelijke gegevens. |
-| Gegevens over vervaldatum van verificatie voor [[!DNL Pinterest]](../../destinations/catalog/advertising/pinterest.md) doelen | Informatie over de verloopdatum van de verificatie voor [!DNL Pinterest]-bestemmingen is nu rechtstreeks zichtbaar in de Experience Platform-interface. Zo kunt u zien wanneer uw verificatie verloopt en deze vernieuwen voordat er verstoringen in uw gegevensstromen ontstaan. U kunt de vervaldatums van uw tokens controleren in de kolom **[!UICONTROL Account expiration date]** op de tabbladen **[[!UICONTROL Accounts]](../../destinations/ui/destinations-workspace.md#accounts)** of **[[!UICONTROL Browse]](../../destinations/ui/destinations-workspace.md#browse)** . |
+| [!BADGE Beta]{type=Informative} [[!DNL Snowflake Batch]](../../destinations/catalog/cloud-storage/snowflake-batch.md) connector | Er is nu een nieuwe [!DNL Snowflake Batch]-connector beschikbaar die een alternatief biedt voor de streamingconnector voor specifieke gebruiksscenario&#39;s. |
+| [[!DNL Data Landing Zone]](../../destinations/catalog/cloud-storage/data-landing-zone.md) ondersteuning voor versleuteling | U kunt nu openbare sleutels in RSA-formaat toevoegen om uw geëxporteerde bestanden te versleutelen. Zo heeft uhetzelfde beveiligingsniveau als andere cloudopslaglocaties voor gevoelige informatie. |
+| Informatie over de vervaldatum van de authenticatie voor [[!DNL Pinterest]](../../destinations/catalog/advertising/pinterest.md)-bestemmingen | Informatie over de verloopdatum van de verificatie voor [!DNL Pinterest]-bestemmingen is nu rechtstreeks zichtbaar in de Experience Platform-interface. Zo kunt u zien wanneer uw verificatie verloopt en deze vernieuwen voordat er verstoringen in uw gegevensstromen ontstaan. U kunt de vervaldatums van uw tokens controleren in de kolom **[!UICONTROL Account expiration date]** op de tabbladen **[[!UICONTROL Accounts]](../../destinations/ui/destinations-workspace.md#accounts)** of **[[!UICONTROL Browse]](../../destinations/ui/destinations-workspace.md#browse)** . |
 
 **Nieuwe of bijgewerkte functionaliteit**
 
 | Functie | Beschrijving |
 | --- | --- |
-| Verbeterde mogelijkheden voor bestemmingsbeheer in de gebruikersinterface van Experience Platform | Verbeter uw workflow voor bestemmingsbeheer met nieuwe sorteermogelijkheden op de tabbladen [[!UICONTROL Browse]](../../destinations/ui/destinations-workspace.md#browse) en [[!UICONTROL Accounts]](../../destinations/ui/destinations-workspace.md#accounts) . U kunt nu ook een visuele indicator zien wanneer uw accountverificatie bijna verloopt. <br> ![](../../destinations/assets/ui/workspace/expired-accounts.png){width="100" zoomable="yes"} |
-| Instellingen voor permanente kolombreedte | De instellingen voor kolombreedte blijven nu behouden wanneer u van een pagina af navigeert en ernaar terugkeert. Als u bijvoorbeeld een kolombreedte aanpast op het tabblad [[!UICONTROL Browse]](../../destinations/ui/destinations-workspace.md#browse) , blijft de aangepaste kolombreedte ongewijzigd wanneer u wegnavigeert en terugkeert naar dat tabblad. |
+| Verbeterde mogelijkheden voor bestemmingsbeheer in de gebruikersinterface van het Experience Platform | Verbeter uw workflow voor het beheer van doelen met nieuwe sorteermogelijkheden op de tabbladen [[!UICONTROL Browse]](../../destinations/ui/destinations-workspace.md#browse) en [[!UICONTROL Accounts]](../../destinations/ui/destinations-workspace.md#accounts). U kunt nu ook een visuele indicator zien wanneer uw accountverificatie bijna verloopt. <br> ![](../../destinations/assets/ui/workspace/expired-accounts.png){width="100" zoomable="yes"} |
+| Instellingen voor permanente kolombreedte | De instellingen voor kolombreedte blijven nu behouden wanneer u een pagina verlaat en ernaar terugkeert. Als u bijvoorbeeld een kolombreedte aanpast op het tabblad [[!UICONTROL Browse]](../../destinations/ui/destinations-workspace.md#browse) , blijft de aangepaste kolombreedte ongewijzigd wanneer u dat tabblad verlaat en er vervolgens weer naar terugkeert. |
 
 Voor meer informatie leest u het [overzicht van bestemmingen](../../destinations/home.md).
 
@@ -89,7 +89,7 @@ XDM is een open-bronspecificatie die algemene structuren en definities (schema&#
 
 | Functie | Beschrijving |
 | ------- | ----------- |
-| Op modellen gebaseerde schema&#39;s | Vereenvoudig uw gegevensmodellering met op modellen gebaseerde schema&#39;s. U kunt nu eenvoudiger schema&#39;s maken met uitgebreide voorbeelden en richtlijnen. Deze functie is momenteel beschikbaar voor Campaign Orchestration-licentiehouders en zal worden uitgebreid naar Distiller-klanten van Data bij GA, waardoor gegevensmodellering toegankelijker en efficiënter wordt. De functie biedt ondersteuning voor gegevens uit tijdreeksen en mogelijkheden voor het vastleggen van gegevens wijzigen. |
+| Op modellen gebaseerde schema&#39;s | Vereenvoudig uw gegevensmodellering met op modellen gebaseerde schema&#39;s. U kunt nu eenvoudiger schema&#39;s maken met uitgebreide voorbeelden en richtlijnen. Deze functie is momenteel beschikbaar voor Campaign Orchestration-licentiehouders en zal worden uitgebreid naar Data Distiller-klanten bij GA, waardoor gegevensmodellering toegankelijker en efficiënter wordt. De functie biedt ondersteuning voor gegevens uit tijdreeksen en mogelijkheden voor het vastleggen van gewijzigde gegevens. |
 
 Voor meer informatie raadpleegt u het [overzicht van XDM](../../xdm/home.md).
 
@@ -106,9 +106,9 @@ Met Adobe Experience Platform kunt u uw klanten gecoördineerde, consistente en 
 
 | Functie | Beschrijving |
 | ------- | ----------- |
-| Verbeteringen voor profielviewer | In de release van september 2025 zijn de volgende verbeteringen aangebracht in de profielviewer. <ul><li>**Gecombineerde mening**: Attributen, gebeurtenissen, en inzichten zijn gecombineerd in één enkele mening.</li><li>**AI-Gegenereerde inzichten**: De pagina van profieldetails toont nu AI-Gegenereerde inzichten, latend u details die van uw profiel worden geproduceerd. Deze inzichten kunnen informatie omvatten zoals protiliteitsscores en trendanalyse.</li><li>**update van de Stijl**: De pagina van profieldetails is visueel verfrist.</li><li>**doorbladert**: U kunt uw profielen door een interactieve kaart-gebaseerde carrousel met onderzoek en aanpassing nu onderzoeken.</li></ul> |
+| [!BADGE  Alpha ]{type=Informative} Deze eigenschap is momenteel in Alpha. Verbeteringen voor profielviewer | In de release van september 2025 zijn de volgende verbeteringen aangebracht in de profielviewer. <ul><li>**Gecombineerde weergave**: kenmerken, gebeurtenissen, en inzichten zijn gecombineerd in één enkele weergave.</li><li>**Door AI gegenereerde inzichten**: op de pagina met profielgegevens worden nu door AI gegenereerde inzichten weergegeven, zodat u weet welke gegevens uit uw profiel zijn gegenereerd. Deze inzichten kunnen informatie omvatten zoals propensity-scores en trendanalyse.</li><li>**Stijlupdate**: de pagina met profielgegevens is visueel vernieuwd.</li><li>**Bladeren**: u kunt nu uw profielen verkennen via een interactieve, op kaarten gebaseerde carrousel met zoek- en aanpassingsmogelijkheden.</li></ul> |
 
-Voor meer informatie, lees het [ overzicht van het Profiel van de Klant in real time ](../../profile/home.md).
+Voor meer informatie raadpleegt u het [overzicht van het realtime-klantenprofiel](../../profile/home.md).
 
 ## Segmentatieservice {#segmentation-service}
 
@@ -118,14 +118,14 @@ Voor meer informatie, lees het [ overzicht van het Profiel van de Klant in real 
 
 | Functie | Beschrijving |
 | ------- | ----------- |
-| Accountpubliek met veroudering van ervaringsgebeurtenissen | Na de upgrade van de B2B-architectuur wordt het accountpubliek met ervaringsgebeurtenissen niet meer ondersteund. Gebruik in plaats daarvan het nieuwe segment van de segmentbenadering: maak een publiek Personen met Experience Events en verwijs naar het publiek Personen wanneer u een accountpubliek maakt. Dit biedt een flexibelere en onderhoudsvriendelijkere benadering van het creëren van B2B-publiek. |
+| Accountdoelgroepen met beëindiging van ervaringsgebeurtenissen | Na de upgrade van de B2B-architectuur worden accountdoelgroepen met ervaringsgebeurtenissen niet meer ondersteund. Gebruik in plaats daarvan het nieuwe segment van de segmentbenadering: maak een personendoelgroep met ervaringsgebeurtenissen en verwijs vervolgens naar die personendoelgroep wanneer u een accountdoelgroep maakt. Dit biedt een flexibelere en eenvoudigere benadering voor het maken van B2B-doelgroepen. |
 
 **Belangrijke updates**
 
 | Bijwerken | Beschrijving |
 | ------- | ----------- |
-| Audience schat auto-refresh revert | De auto-verfrissingsverhoging voor publieksramingen is teruggekeerd. De schattingen van het publiek zullen binnen de Bouwer van het Segment verder worden geproduceerd, maar de automatische verfrissingsfunctionaliteit is verwijderd. |
-| Extern publiek | Vanaf 30 september wordt het externe publiek opgehaald via Unified Search in Segment Builder. Als u de Gelijke van het Segment gebruikt, kunt u de erfenis binnen de Bouwer van het Segment toelaten. |
+| Automatisch vernieuwen van doelgroepschattingen is teruggezet | De verbeterde automatische vernieuwing van doelgroepinschattingen is teruggezet. Doelgroepinschattingen worden nog steeds binnen Segment Builder gegenereerd, maar de automatische vernieuwingsfunctie is teruggezet. |
+| Externe doelgroep | Vanaf 30 september worden externe doelgroepen opgehaald via Unified Search in Segment Builder. Als u Segment Match gebruikt, kunt u de oude ervaring binnen Segment Builder inschakelen. |
 
 Voor meer informatie raadpleegt u het [[!DNL Segmentation Service] overzicht](../../segmentation/home.md).
 
@@ -137,10 +137,10 @@ Experience Platform biedt een RESTful-API en een interactieve gebruikersinterfac
 
 | Functie | Beschrijving |
 | --- | --- |
-| Nieuwe bronnen in algemene beschikbaarheid | De volgende bronnen zijn nu beschikbaar in algemene beschikbaarheid: verschillende bronconnectors zijn bijgewerkt van Beta naar GA: <ul><li>[ de Ingestie van Gegevens van Acxiom ](../../sources/connectors/data-partners/acxiom-data-ingestion.md)</li><li>[ de Ingestie van Gegevens van het Vooruitzicht van Acxiom ](../../sources/connectors/data-partners/acxiom-prospecting-data-import.md)</li><li>[ Merkury Onderneming ](../../sources/connectors/data-partners/merkury.md)</li><li>[ SAP Commerce ](../../sources/connectors/ecommerce/sap-commerce.md)</li></ul>. Deze bronnen worden nu volledig ondersteund en zijn klaar voor gebruik bij de productie. |
-| [!DNL Snowflake] ondersteuning voor sleutelpaarverificatie | Uitgebreide beveiliging voor Snowflake-verbindingen met ondersteuning voor sleutelpaarverificatie. De basisauthentificatie (gebruikersbenaming/wachtwoord) zal tegen November 2025 worden afgekeurd, zodat worden de klanten aangemoedigd om aan zeer belangrijk-paarauthentificatie voor betere veiligheid te migreren. Raadpleeg de [[!DNL Snowflake] documentatie](../../sources/connectors/databases/snowflake.md) voor meer informatie. |
-| [!BADGE Beta]{type=Informative} [!DNL Capillary Streaming Events] | Gebruik de [[!DNL Capillary Streaming Events]  bron ](../../sources/connectors/loyalty/capillary.md) aan stroom loyaliteitsgegevens van uw [!DNL Capillary] rekening aan Experience Platform. |
+| Nieuwe bronnen in algemene beschikbaarheid | De volgende bronnen zijn nu beschikbaar in algemene beschikbaarheid: verschillende bronconnectoren zijn bijgewerkt van Beta naar GA: <ul><li>[Acxiom Data-opname](../../sources/connectors/data-partners/acxiom-data-ingestion.md)</li><li>[Acxiom Prospect Data-opname](../../sources/connectors/data-partners/acxiom-prospecting-data-import.md)</li><li>[Merkury Enterprise](../../sources/connectors/data-partners/merkury.md)</li><li>[SAP Commerce](../../sources/connectors/ecommerce/sap-commerce.md)</li></ul>. Deze bronnen worden nu volledig ondersteund en zijn klaar voor gebruik bij de productie. |
+| [!DNL Snowflake] ondersteuning voor sleutelpaarverificatie | Uitgebreide beveiliging voor Snowflake-verbindingen met ondersteuning voor sleutelpaarverificatie. Basisverificatie (gebruikersnaam/wachtwoord) wordt vanaf november 2025 afgeschaft. Klanten worden daarom aangeraden om over te stappen op sleutelpaarverificatie voor een betere beveiliging. Raadpleeg de [[!DNL Snowflake] documentatie](../../sources/connectors/databases/snowflake.md) voor meer informatie. |
+| [!BADGE Beta]{type=Informative} [!DNL Capillary Streaming Events] | Gebruik de [[!DNL Capillary Streaming Events] bron](../../sources/connectors/loyalty/capillary.md) om loyaliteitsgegevens van uw [!DNL Capillary]-account naar Experience Platform te streamen. |
 | [!BADGE Beta]{type=Informative} [!DNL Relay Connector] | Gebruik [[!DNL Relay Connector]](../../sources/tutorials/ui/create/marketing-automation/relay-connector.md) om gebeurtenisgegevens te streamen vanaf uw [!DNL Relay Network] -integratie naar Experience Platform. |
-| Algemene Beschikbaarheid van Steun van de Privé Verbinding in bronnen | U kunt **privé verbindingen** voor een uitgezochte groep bronnen nu gebruiken. Met deze functie kunt u een privé-eindpunt maken waarmee uw bron verbinding kan maken. Met privé-eindpunten kunt u verbindingen en gegevensstromen instellen die het openbare internet omzeilen. Zo profiteert u van een betere beveiliging en netwerkisolatie voor uw gevoelige gegevens. De steun voor privé verbindingen is beschikbaar aan de volgende bronnen: <ul><li>[[!DNL Azure Blob Storage]](../../sources/connectors/cloud-storage/blob.md)</li><li>[[!DNL ADLS Gen2]](../../sources/connectors/cloud-storage/adls-gen2.md)</li><li>[[!DNL Azure File Storage]](../../sources/connectors/cloud-storage/azure-file-storage.md)</li></ul>. Voor meer informatie lees de gidsen bij het creëren van privé verbindingen [ in API ](../../sources/tutorials/api/private-link.md) en [ in UI ](../../sources/tutorials/ui/private-link.md). |
+| Algemene beschikbaarheid van ondersteuning voor privékoppelingen in bronnen | U kunt nu **privékoppelingen** gebruiken voor een geselecteerde groep bronnen. Met deze functie kunt u een privé-eindpunt maken waarmee uw bron verbinding kan maken. Met privé-eindpunten kunt u verbindingen en gegevensstromen instellen die het openbare internet omzeilen. Zo profiteert u van een betere beveiliging en netwerkisolatie voor uw gevoelige gegevens. Ondersteuning voor privékoppelingen is beschikbaar voor de volgende bronnen: <ul><li>[[!DNL Azure Blob Storage]](../../sources/connectors/cloud-storage/blob.md)</li><li>[[!DNL ADLS Gen2]](../../sources/connectors/cloud-storage/adls-gen2.md)</li><li>[[!DNL Azure File Storage]](../../sources/connectors/cloud-storage/azure-file-storage.md)</li></ul>. Voor meer informatie raadpleegt u de handleidingen over het maken van privékoppelingen [in de API](../../sources/tutorials/api/private-link.md) en [in de gebruikersinterface](../../sources/tutorials/ui/private-link.md). |
 
 Voor meer informatie raadpleegt u het [overzicht van bronnen](../../sources/home.md).

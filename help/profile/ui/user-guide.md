@@ -3,9 +3,9 @@ keywords: Experience Platform;profiel;real-time klantprofiel;problemen;API;veren
 title: Gebruikersgids voor realtime gebruikersprofiel
 description: Het profiel van de Klant in real time leidt tot een holistische mening van elk van uw individuele klanten, die gegevens van veelvoudige kanalen met inbegrip van online, off-line, CRM, en derdegegevens combineren. Dit document fungeert als richtlijn voor de interactie met Real-Time Klantprofiel in de Adobe Experience Platform-gebruikersinterface.
 exl-id: 792a3a73-58a4-4163-9212-4d43d24c2770
-source-git-commit: e4f303f9de2d36717288d2119458c8df95fc01bf
+source-git-commit: d2694170e2860bd32783ad3f1860b0397e847289
 workflow-type: tm+mt
-source-wordcount: '1907'
+source-wordcount: '1921'
 ht-degree: 0%
 
 ---
@@ -127,7 +127,9 @@ In de sectie **[!UICONTROL Customer profile insights]** wordt een korte inleidin
 
 #### AI insight-widgets {#ai-insight-widgets}
 
-In de sectie **[!UICONTROL AI insight widgets]** worden widgets weergegeven die door AI zijn gegenereerd. Deze widgets bieden snel inzicht in het profiel, op basis van de profielgegevens, zoals demografie (zoals leeftijd, geslacht of locatie), gebruikersgedrag (zoals de aankoopgeschiedenis, de activiteiten van de website of betrokkenheid van sociale media), en psychografie (zoals interesses, voorkeur of keuzes in levensstijl). Alle AI widgets gebruiken gegevens die **&#x200B;**&#x200B;reeds in het profiel bestaat.
+[!BADGE  Alpha ]{type=Informative} Deze eigenschap is momenteel in Alpha.
+
+In de sectie **[!UICONTROL AI insight widgets]** worden widgets weergegeven die door AI zijn gegenereerd. Deze widgets bieden snel inzicht in het profiel, op basis van de profielgegevens, zoals demografie (zoals leeftijd, geslacht of locatie), gebruikersgedrag (zoals de aankoopgeschiedenis, de activiteiten van de website of betrokkenheid van sociale media), en psychografie (zoals interesses, voorkeur of keuzes in levensstijl). Alle AI widgets gebruiken gegevens die **** reeds in het profiel bestaat.
 
 ![ wordt de AI insight widgets sectie getoond.](../images/user-guide/ai-insight-widgets.png)
 
@@ -144,6 +146,8 @@ U kunt ook schakelen tussen het weergeven van de kenmerknamen als hun weergavena
 ![ de knevel van de showvertoningsnamen wordt benadrukt.](../images/user-guide/show-display-names.png)
 
 #### Automatisch geclassificeerde widgets {#auto-classified-widgets}
+
+[!BADGE  Alpha ]{type=Informative} Deze eigenschap is momenteel in Alpha.
 
 In de sectie **[!UICONTROL Auto-classified widgets]** worden widgets weergegeven die gebruikmaken van het samenvoegingsschema om te bepalen tot welke bronveldgroepen een kenmerk behoort. Hierdoor krijgt u een duidelijkere context waarin de gegevens afkomstig zijn. U kunt de zoekbalk gebruiken om gemakkelijker naar trefwoorden in uw widgets te zoeken.
 
