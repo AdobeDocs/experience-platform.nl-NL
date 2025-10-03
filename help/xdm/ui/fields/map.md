@@ -17,15 +17,15 @@ U kunt kaartgebieden in de Redacteur van het Schema ook bepalen om een inzamelin
 
 Wanneer u een nieuw veld in de gebruikersinterface van Experience Platform (UI) definieert, gebruikt u het vervolgkeuzemenu **[!UICONTROL Type]** en selecteert u &quot;**[!UICONTROL Map]**&quot; in de lijst.
 
-![ de Redacteur van Schema&#39;s met het Type dropdown en benadrukte waarde van de Kaart.](../../images/ui/fields/special/map.png)
+![&#x200B; de Redacteur van Schema&#39;s met het Type dropdown en benadrukte waarde van de Kaart.](../../images/ui/fields/special/map.png)
 
 Er wordt een eigenschap [!UICONTROL Map value type] weergegeven. Deze waarde is vereist voor [!UICONTROL Map] -gegevenstypen. Beschikbare waarden voor de kaart zijn [!UICONTROL String] en [!UICONTROL Integer] . Selecteer een waarde in de vervolgkeuzelijst met beschikbare opties.
 
-![ de Redacteur van Schema met [!UICONTROL Map value type] benadrukt dropdown.](../../images/ui/fields/special/map-value-type.png)
+![&#x200B; de Redacteur van Schema met [!UICONTROL Map value type] benadrukt dropdown.](../../images/ui/fields/special/map-value-type.png)
 
 Nadat u het subveld hebt geconfigureerd, moet u het aan een veldgroep toewijzen. Gebruik de vervolgkeuzelijst **[!UICONTROL Field Group]** of het zoekveld en selecteer **[!UICONTROL Apply]** . U kunt velden aan het object blijven toevoegen met hetzelfde proces of u kunt **[!UICONTROL Save]** selecteren om uw instellingen te bevestigen.
 
-![ een opname van de selectie van de gebiedsgroep en montages die worden toegepast.](../../images/ui/fields/special/assign-to-field-group.gif)
+![&#x200B; een opname van de selectie van de gebiedsgroep en montages die worden toegepast.](../../images/ui/fields/special/assign-to-field-group.gif)
 
 ## Gebruiksbeperkingen {#restrictions}
 
@@ -41,7 +41,7 @@ XDM plaatst de volgende beperkingen op het gebruik van dit gegevenstype:
 
 Zorg ervoor dat u kaart-type gebieden wanneer absoluut noodzakelijk slechts gebruikt, aangezien zij de volgende prestatiesnadelen dragen:
 
-* De tijd van de reactie van [ de Dienst van de Vraag van Adobe Experience Platform ](../../../query-service/home.md) degradeert van drie seconden aan tien seconden voor 100 miljoen verslagen.
+* De tijd van de reactie van [&#x200B; de Dienst van de Vraag van Adobe Experience Platform &#x200B;](../../../query-service/home.md) degradeert van drie seconden aan tien seconden voor 100 miljoen verslagen.
 * Kaarten moeten minder dan 16 sleutels hebben of anders risico op verdere afbraak.
 
 >[!NOTE]
@@ -50,6 +50,6 @@ Zorg ervoor dat u kaart-type gebieden wanneer absoluut noodzakelijk slechts gebr
 
 ## Volgende stappen
 
-Nadat u dit document hebt gelezen, kunt u nu kaartvelden definiëren in de gebruikersinterface van Experience Platform. U kunt alleen klassen en veldgroepen gebruiken om velden aan schema&#39;s toe te voegen. Meer over leren hoe te om deze middelen in UI te beheren, zie de gidsen bij het creëren van en het uitgeven van [ klassen ](../resources/classes.md) en [ gebiedsgroepen ](../resources/field-groups.md).
+Nadat u dit document hebt gelezen, kunt u nu kaartvelden definiëren in de gebruikersinterface van Experience Platform. U kunt alleen klassen en veldgroepen gebruiken om velden aan schema&#39;s toe te voegen. Meer over leren hoe te om deze middelen in UI te beheren, zie de gidsen bij het creëren van en het uitgeven van [&#x200B; klassen &#x200B;](../resources/classes.md) en [&#x200B; gebiedsgroepen &#x200B;](../resources/field-groups.md).
 
-Voor meer informatie over de mogelijkheden van de [!UICONTROL Schemas] werkruimte, zie het [[!UICONTROL Schemas] overzicht van de werkruimte ](../overview.md).
+Voor meer informatie over de mogelijkheden van de [!UICONTROL Schemas] werkruimte, zie het [[!UICONTROL Schemas] overzicht van de werkruimte &#x200B;](../overview.md).
