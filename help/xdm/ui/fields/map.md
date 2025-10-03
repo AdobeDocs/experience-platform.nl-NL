@@ -2,9 +2,9 @@
 title: Kaartvelden definiëren in de gebruikersinterface
 description: Leer hoe u een kaartveld definieert in de Experience Platform-gebruikersinterface.
 exl-id: 657428a2-f184-4d7c-b657-4fc60d77d5c6
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: c0421974493884488e4d639278106835ad1d8b1b
 workflow-type: tm+mt
-source-wordcount: '437'
+source-wordcount: '469'
 ht-degree: 0%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 Adobe Experience Platform staat u toe om de structuur van uw klassen van het Model van de Gegevens van de Ervaring (XDM), schema gebiedsgroepen, en gegevenstypes volledig aan te passen.
 
-U kunt kaartgebieden in de Redacteur van het Schema ook bepalen om flexibele en dynamische gegevensstructuren te modelleren of een inzameling van sleutel-waardeparen op te slaan.
+U kunt kaartgebieden in de Redacteur van het Schema ook bepalen om een inzameling van zeer belangrijk-waardeparen met flexibele, dynamische sleutels op te slaan.
 
 Wanneer u een nieuw veld in de gebruikersinterface van Experience Platform (UI) definieert, gebruikt u het vervolgkeuzemenu **[!UICONTROL Type]** en selecteert u &quot;**[!UICONTROL Map]**&quot; in de lijst.
 
@@ -36,6 +36,8 @@ XDM plaatst de volgende beperkingen op het gebruik van dit gegevenstype:
 * Kaarttypen MOETEN een `additionalProperties.type` -veld bevatten dat de waarden beschrijft die binnen de kaart kunnen worden geplaatst, `string` of `integer` .
 * Segmentatie tussen meerdere entiteiten kan alleen worden gedefinieerd op basis van de kaarttoetsen en niet op basis van de waarden.
 * Kaarten worden niet ondersteund voor accountpubliek.
+* Kaarten die zijn gedefinieerd in aangepaste XDM-objecten, zijn beperkt tot één niveau. Geneste kaarten kunnen niet worden gemaakt. Deze beperking geldt niet voor kaarten die zijn gedefinieerd in standaard XDM-objecten.
+* Arrays met kaarten worden niet ondersteund.
 
 Zorg ervoor dat u kaart-type gebieden wanneer absoluut noodzakelijk slechts gebruikt, aangezien zij de volgende prestatiesnadelen dragen:
 

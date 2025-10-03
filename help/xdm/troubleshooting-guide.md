@@ -4,9 +4,9 @@ solution: Experience Platform
 title: XDM System Troubleshooting Guide
 description: Hier vindt u antwoorden op veelgestelde vragen over het XDM (Experience Data Model), inclusief stappen voor het oplossen van veelvoorkomende API-fouten.
 exl-id: a0c7c661-bee8-4f66-ad5c-f669c52c9de3
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: fa856644a106469f0cafe7f8c0a61219dc7deac7
 workflow-type: tm+mt
-source-wordcount: '2338'
+source-wordcount: '2368'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 Dit document bevat antwoorden op veelgestelde vragen over [!DNL Experience Data Model] (XDM) en XDM System in Adobe Experience Platform, waaronder een gids voor probleemoplossing voor algemene fouten. Voor vragen en het oplossen van problemen met betrekking tot andere diensten van Experience Platform, gelieve te verwijzen naar de [ het oplossen van problemengids van Experience Platform ](../landing/troubleshooting.md).
 
-**[!DNL Experience Data Model] (XDM)** is een open-bronspecificatie die gestandaardiseerde schema&#39;s voor het beheer van de klantenervaring bepaalt. De methodologie waarop [!DNL Experience Platform] wordt gebouwd, **XDM Systeem**, exploiteert [!DNL Experience Data Model] schema&#39;s voor gebruik door [!DNL Experience Platform] diensten. De **[!DNL Schema Registry]** biedt een gebruikersinterface en een RESTful-API voor toegang tot de **[!DNL Schema Library]** within [!DNL Experience Platform] -API. Zie de [ documentatie XDM ](home.md) voor meer informatie.
+**[!DNL Experience Data Model](XDM)** is een open-bronspecificatie die gestandaardiseerde schema&#39;s voor het beheer van de klantenervaring bepaalt. De methodologie waarop [!DNL Experience Platform] wordt gebouwd, **XDM Systeem**, exploiteert [!DNL Experience Data Model] schema&#39;s voor gebruik door [!DNL Experience Platform] diensten. De **[!DNL Schema Registry]** biedt een gebruikersinterface en een RESTful-API voor toegang tot de **[!DNL Schema Library]** within [!DNL Experience Platform] -API. Zie de [ documentatie XDM ](home.md) voor meer informatie.
 
 ## Veelgestelde vragen
 
@@ -49,7 +49,7 @@ Een lang veldtype is een geheel getal met een maximale grootte van 53(+1) bits, 
 
 Voor meer informatie over gebiedstypes, zie het document op [ XDM gebied typegrenzen ](./schema/field-constraints.md).
 
-### Wat is meta:AltId?
+### Wat is meta :AltId?
 
 `meta:altId` is een unieke id voor een schema. `meta:altId` verstrekt gemakkelijk om identiteitskaart voor gebruik in API vraag van verwijzingen te voorzien. Met deze id vermijdt u dat deze telkens moet worden gecodeerd/gedecodeerd als deze wordt gebruikt, net als bij de JSON URI-indeling.
 <!-- (Needs clarification - How do I retrieve it INCOMPLETE) ... -->
@@ -63,11 +63,13 @@ Voor meer informatie over gebiedstypes, zie het document op [ XDM gebied typegre
 
 XDM plaatst de volgende beperkingen op het gebruik van dit gegevenstype:
 
-- Kaarttypen MOETEN van het type object zijn.
+- Kaarttypen MOETEN van het type `object` zijn.
 - Voor typen toewijzingen MOET GEEN eigenschap zijn gedefinieerd (met andere woorden, ze definiëren &quot;lege&quot; objecten).
-- De types van kaart MOETEN een extraProperties.type gebied omvatten dat de waarden beschrijft die binnen de kaart, of koord of geheel kunnen worden geplaatst.
+- Kaarttypen MOETEN een `additionalProperties.type` -veld bevatten dat de waarden beschrijft die binnen de kaart kunnen worden geplaatst, `string` of `integer` .
 - Segmentatie tussen meerdere entiteiten kan alleen worden gedefinieerd op basis van de kaarttoetsen en niet op basis van de waarden.
 - Kaarten worden niet ondersteund voor accountpubliek.
+- Kaarten die zijn gedefinieerd in aangepaste XDM-objecten, zijn beperkt tot één niveau. Geneste kaarten kunnen niet worden gemaakt. Deze beperking geldt niet voor kaarten die zijn gedefinieerd in standaard XDM-objecten.
+- Arrays met kaarten worden niet ondersteund.
 
 Zie de [ gebruiksbeperkingen voor kaartvoorwerpen ](./ui/fields/map.md#restrictions) voor meer details.
 
@@ -92,7 +94,7 @@ Deze sectie bevat antwoorden op veelgestelde vragen over het definiëren en behe
 
 ### Hoe definieer ik identiteiten voor mijn schema?
 
-In [!DNL Experience Platform] worden identiteiten gebruikt om een onderwerp (doorgaans een individuele persoon) te identificeren, ongeacht de bronnen van gegevens die worden geïnterpreteerd. Ze worden in schema&#39;s gedefinieerd door de sleutelvelden als &quot;Identiteit&quot; te markeren. Veelgebruikte gebieden voor identiteit omvatten e-mailadres, telefoonaantal, [[!DNL Experience Cloud ID (ECID)] ](https://experienceleague.adobe.com/docs/id-service/using/home.html?lang=nl-NL), identiteitskaart van CRM, en andere unieke gebieden van identiteitskaart
+In [!DNL Experience Platform] worden identiteiten gebruikt om een onderwerp (doorgaans een individuele persoon) te identificeren, ongeacht de bronnen van gegevens die worden geïnterpreteerd. Ze worden in schema&#39;s gedefinieerd door de sleutelvelden als &quot;Identiteit&quot; te markeren. Veelgebruikte gebieden voor identiteit omvatten e-mailadres, telefoonaantal, [[!DNL Experience Cloud ID (ECID)] ](https://experienceleague.adobe.com/docs/id-service/using/home.html), identiteitskaart van CRM, en andere unieke gebieden van identiteitskaart
 
 Velden kunnen als id&#39;s worden gemarkeerd met de API of de gebruikersinterface.
 
@@ -130,7 +132,7 @@ Voor meer informatie bij het gebruiken van API om een schema voor gebruik in [!D
 
 ### Bezig met inschakelen van een bestaand schema voor [!DNL Profile] via de gebruikersinterface
 
-Selecteer **[!UICONTROL Schemas]** in [!DNL Experience Platform] in de linkernavigatie en selecteer in de lijst met schema&#39;s de naam van het schema dat u wilt inschakelen. Selecteer vervolgens aan de rechterkant van de editor onder **[!UICONTROL Schema Properties]** de optie **[!UICONTROL Profile]** om deze in of uit te schakelen.
+Selecteer [!DNL Experience Platform] in **[!UICONTROL Schemas]** in de linkernavigatie en selecteer in de lijst met schema&#39;s de naam van het schema dat u wilt inschakelen. Selecteer vervolgens aan de rechterkant van de editor onder **[!UICONTROL Schema Properties]** de optie **[!UICONTROL Profile]** om deze in of uit te schakelen.
 
 Voor meer informatie, zie de sectie over [ gebruik in het Profiel van de Klant in real time ](./tutorials/create-schema-ui.md#profile) in het [!UICONTROL Schema Editor] leerprogramma.
 
@@ -140,7 +142,7 @@ Het schema wordt niet automatisch toegelaten voor het Profiel van de Klant in re
 
 ### Kan ik profiel-toegelaten schema&#39;s schrappen?
 
-U kunt geen schema schrappen nadat het voor het Profiel van de Klant in real time is toegelaten. Als een schema eenmaal is ingeschakeld voor Profiel, kan het niet worden uitgeschakeld of verwijderd en kunnen velden niet uit het schema worden verwijderd. Daarom is het essentieel om de schemaconfiguratie zorgvuldig te plannen en te verifiëren alvorens het voor Profiel toe te laten. U kunt een profiel-Toegelaten dataset echter schrappen. Hier vindt u informatie: <https://experienceleague.adobe.com/nl/docs/experience-platform/catalog/datasets/user-guide#delete-a-profile-enabled-dataset>
+U kunt geen schema schrappen nadat het voor het Profiel van de Klant in real time is toegelaten. Als een schema eenmaal is ingeschakeld voor Profiel, kan het niet worden uitgeschakeld of verwijderd en kunnen velden niet uit het schema worden verwijderd. Daarom is het essentieel om de schemaconfiguratie zorgvuldig te plannen en te verifiëren alvorens het voor Profiel toe te laten. U kunt een profiel-Toegelaten dataset echter schrappen. Hier vindt u informatie: <https://experienceleague.adobe.com/en/docs/experience-platform/catalog/datasets/user-guide#delete-a-profile-enabled-dataset>
 
 Als u niet meer voor een profiel-toegelaten schema wenst te worden gebruikt, adviseert het om het schema anders te noemen om **te omvatten** of **niet Inactief** gebruiken.
 
