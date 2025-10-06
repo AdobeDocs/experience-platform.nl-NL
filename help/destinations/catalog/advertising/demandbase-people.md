@@ -1,13 +1,13 @@
 ---
 title: Demandbase People-verbinding
 description: Gebruik deze bestemming om uw publiek te activeren en hen te verrijken met de gegevens van de derde partij van de Vraag, voor andere downstreamgebruik-gevallen in marketing en verkoop.
-source-git-commit: df2cb1edbf998082fca961e6d9bb567a1ad3b7e6
+exl-id: 748f5518-7cc1-4d65-ab70-4a129d9e2066
+source-git-commit: ab29c1113dbbd1811acd3d5add5a247cb2703884
 workflow-type: tm+mt
-source-wordcount: '723'
-ht-degree: 0%
+source-wordcount: '797'
+ht-degree: 1%
 
 ---
-
 
 # Demandbase People-verbinding {#demandbase-people}
 
@@ -15,7 +15,7 @@ Activeer profielen voor uw Demandbase-campagnes voor doelgroepen, personalisatie
 
 >[!IMPORTANT]
 >
->Voor B2B gebruiksgevallen waar u rekeningspubliek [&#128279;](../../ui/activate-account-audiences.md) moet  activeren, gebruik in plaats daarvan de [ Demandbase ](demandbase.md) bestemmingsschakelaar.
+>Voor B2B gebruiksgevallen waar u rekeningspubliek [ moet ](../../ui/activate-account-audiences.md) activeren, gebruik in plaats daarvan de [ Demandbase ](demandbase.md) bestemmingsschakelaar.
 
 ## Gebruiksscenario {#use-case}
 
@@ -41,7 +41,7 @@ In deze sectie wordt beschreven welk type publiek u naar dit doel kunt exportere
 
 | Oorsprong publiek | Ondersteund | Beschrijving |
 ---------|----------|----------|
-| [!DNL Segmentation Service] | ✓ | Het publiek produceerde door de Dienst van de Segmentatie van Experience Platform [&#128279;](../../../segmentation/home.md). |
+| [!DNL Segmentation Service] | ✓ | Het publiek produceerde door de Dienst van de Segmentatie van Experience Platform [ ](../../../segmentation/home.md). |
 | Aangepaste uploads | X | Het publiek [ ingevoerde ](../../../segmentation/ui/overview.md#import-audience) in Experience Platform van Csv- dossiers. |
 
 {style="table-layout:auto"}
@@ -99,6 +99,21 @@ Nu ben je klaar om je publiek te activeren in Demandbase People.
 >* Om *identiteiten* uit te voeren, hebt u de **[!UICONTROL View Identity Graph]** [ toegangsbeheertoestemming ](/help/access-control/home.md#permissions) nodig. <br> ![ Uitgezochte identiteit namespace die in het werkschema wordt benadrukt om publiek aan bestemmingen te activeren.](/help/destinations/assets/overview/export-identities-to-destination.png " Uitgezochte identiteit namespace die in het werkschema wordt benadrukt om publiek aan bestemmingen te activeren."){width="100" zoomable="yes"}
 
 Lees [ activeer profielen en publiek aan het stromen publiek uitvoerbestemmingen ](/help/destinations/ui/activate-segment-streaming-destinations.md) voor instructies bij het activeren van publiek aan deze bestemming.
+
+### Verplichte toewijzingen {#mandatory-mappings}
+
+Wanneer u een publiek activeert naar de [!DNL Demandbase People] -bestemming, moet u de volgende verplichte veldtoewijzingen configureren in de toewijzingsstap:
+
+| Source-veld | Doelveld | Beschrijving |
+|--------------|--------------|-------------|
+| `xdm: b2b.personKey.sourceKey` | `xdm: externalPersonId` | De unieke id van de persoon |
+| `xdm: person.name.lastName` | `xdm: lastName` | De achternaam van de persoon |
+| `xdm: person.name.firstName` | `xdm: firstName` | De voornaam van de persoon |
+| `xdm: workEmail.address` | `Identity: email` | Het werk-e-mailadres van de persoon |
+
+![ De afbeeldingen van Mensen van de Demandbase ](/help/destinations/assets/catalog/advertising/demandbase-people/demandbase-people-mapping.png)
+
+Deze toewijzingen zijn vereist voor de bestemming behoorlijk te functioneren en moeten worden gevormd alvorens u met het activeringswerkschema kunt te werk gaan.
 
 ## Aanvullende opmerkingen en belangrijke bijschriften {#additional-notes}
 
