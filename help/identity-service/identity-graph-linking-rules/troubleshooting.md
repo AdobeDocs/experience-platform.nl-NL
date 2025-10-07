@@ -2,7 +2,7 @@
 title: De Gids van het oplossen van problemen voor de Regels van de Verbinding van de Grafiek van de Identiteit
 description: Leer hoe te om gemeenschappelijke kwesties in de grafiek van de Identiteit problemen op te lossen die Regels verbindt.
 exl-id: 98377387-93a8-4460-aaa6-1085d511cacc
-source-git-commit: 0381940206d8730f2f7ae2dce849d943316b0451
+source-git-commit: 10cdbef8281ec43a21af9fead80345f1c78b9d2c
 workflow-type: tm+mt
 source-wordcount: '3444'
 ht-degree: 0%
@@ -162,11 +162,11 @@ Voor elk scenario, veronderstel dat de Gebeurtenissen van de Ervaring de volgend
 
 **Scenario 2: 2 CRMIDs, 1 GAID**
 
-* In dit scenario, bevat een inkomende Gebeurtenis van de Ervaring 2 CRMIDs en 1 GAID. Tussen deze naamruimten wordt CRMID geconfigureerd als de naamruimte met de hoogste naamruimteprioriteit. Nochtans, omdat er 2 GAIDs zijn, slaat het Profiel **niet** deze Gebeurtenis van de Ervaring op.
+* In dit scenario, bevat een inkomende Gebeurtenis van de Ervaring 2 CRMIDs en 1 GAID. Tussen deze naamruimten wordt CRMID geconfigureerd als de naamruimte met de hoogste naamruimteprioriteit. Nochtans, omdat er 2 CRMIDs zijn, slaat het Profiel **niet** deze Gebeurtenis van de Ervaring op.
 
 **Scenario 3: 1 CRMID, 2 GAIDs**
 
-* In dit scenario bevat een binnenkomende Experience-gebeurtenis 1 CRMID en 2 GAID&#39;s. Tussen deze naamruimten wordt CRMID geconfigureerd als de naamruimte met de hoogste naamruimteprioriteit. Aangezien er slechts één CRMID is, zal het Profiel de Gebeurtenissen van de Ervaring opnemen omdat er slechts één geval van namespace met de hoogste namespaceprioriteit is.
+* In dit scenario bevat een binnenkomende Experience-gebeurtenis 1 CRMID en 2 GAID&#39;s. Tussen deze naamruimten wordt CRMID geconfigureerd als de naamruimte met de hoogste naamruimteprioriteit. Aangezien er slechts één CRMID is, zal het Profiel de Gebeurtenissen van de Ervaring opnemen omdat er slechts één identiteit van namespace met de hoogste namespaceprioriteit is.
 
 **de stappen van het Oplossen van problemen**
 
