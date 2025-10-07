@@ -5,9 +5,9 @@ breadcrumb-title: Gids voor Segmentation Service
 user-guide-description: Stel doelgroepen samen op basis van uw gegevens voor realtimeklantprofielen met behulp van door Adobe Experience Platform gegenereerde segmentdefinities of externe bronnen.
 feature: Segments
 role: User
-source-git-commit: 74fa66e78ac36c8007eb89e8c271d989845c96f0
+source-git-commit: 043e0c930b30dc4f04acdcab88a5d63ad044fbfc
 workflow-type: tm+mt
-source-wordcount: '208'
+source-wordcount: '207'
 ht-degree: 24%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 24%
 
 - [Overzicht van segmentatieservice](home.md)
 - [Segmenteringsgegevenstypen](data-types.md)
-- [ de gidsen van de segmentatie ](https://experienceleague.adobe.com/docs/experience-platform/profile/guardrails.html?lang=nl-NL#segmentation-guardrails)
+- [ de gidsen van de segmentatie ](https://experienceleague.adobe.com/docs/experience-platform/profile/guardrails.html#segmentation-guardrails)
 - Segmentatie-API {#api}
    - [Overzicht](api/overview.md)
    - [Aan de slag](api/getting-started.md)
@@ -62,7 +62,7 @@ ht-degree: 24%
    - [Segmentatie van meerdere entiteiten](tutorials/multi-entity-segmentation.md)
    - [Erkenning](tutorials/consents.md)
    - [Een segmentdefinitie evalueren](tutorials/evaluate-a-segment.md)
-   - [Extern publiek importeren en gebruiken](tutorials/using-external-audiences.md)
+   - [Een extern publiek maken](tutorials/create-external-audience.md)
    - [Een gegevensset maken om gegevens te exporteren](tutorials/create-dataset-export-segment.md)
    - [Compatibiliteit van gegevensgebruik voor publiek afdwingen](tutorials/governance.md)
 - Profile Query Language {#pql}
@@ -82,4 +82,4 @@ ht-degree: 24%
 - [Update voor kwalificatiecriteria](./eligibility-criteria-update.md)
 - [Veelgestelde vragen](./faq.md)
 - [ API verwijzing ](https://www.adobe.io/experience-platform-apis/references/segmentation/)
-- [ de versienota&#39;s van het Platform ](https://experienceleague.adobe.com/nl/docs/experience-platform/release-notes/latest)
+- [ de versienota&#39;s van het Platform ](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)

@@ -3,17 +3,17 @@ title: API-eindpunt voor publiek maken
 description: Leer hoe u de metagegevens voor een extern publiek maakt met de API.
 hide: true
 hidefromtoc: true
-source-git-commit: 74fa66e78ac36c8007eb89e8c271d989845c96f0
+exl-id: e841a5f6-f406-4e1d-9e8a-acb861ba6587
+source-git-commit: bf90b09693c7b9b7d3ad6ccc6940d255bf7bf4cb
 workflow-type: tm+mt
-source-wordcount: '237'
+source-wordcount: '246'
 ht-degree: 2%
 
 ---
 
-
 # Het eindpunt voor het publiek maken
 
-Met het POST `/audiences` -eindpunt kunt u de metagegevens voor een extern publiek maken. U zou dit eindpunt moeten gebruiken als de publieksinname in de afzonderlijke dienst, zoals partijingestie zal worden beheerd.
+Het POST `/audiences` eindpunt kan worden gebruikt creeert de meta-gegevens voor een extern publiek, dat het publiek in de Portaal van de Publiek zichtbaar laat zijn. U zou dit eindpunt moeten gebruiken als de publieksinname in de afzonderlijke dienst, zoals partijingestie zal worden beheerd.
 
 ## Aan de slag
 
