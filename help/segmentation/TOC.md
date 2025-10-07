@@ -17,7 +17,7 @@ ht-degree: 24%
 
 - [Overzicht van segmentatieservice](home.md)
 - [Segmenteringsgegevenstypen](data-types.md)
-- [ de gidsen van de segmentatie ](https://experienceleague.adobe.com/docs/experience-platform/profile/guardrails.html#segmentation-guardrails)
+- [&#x200B; de gidsen van de segmentatie &#x200B;](https://experienceleague.adobe.com/docs/experience-platform/profile/guardrails.html#segmentation-guardrails)
 - Segmentatie-API {#api}
    - [Overzicht](api/overview.md)
    - [Aan de slag](api/getting-started.md)
@@ -40,7 +40,7 @@ ht-degree: 24%
    - [Update voor jaartijdbeperking negeren](ui/ignore-year.md)
    - [Tijd beperkingen refactoring](ui/segment-refactoring.md)
    - Segmentovereenkomst {#segment-match}
-      - [ Overzicht van de Gelijke van het Segment ](ui/segment-match/overview.md)
+      - [&#x200B; Overzicht van de Gelijke van het Segment &#x200B;](ui/segment-match/overview.md)
       - [Problemen oplossen](ui/segment-match/troubleshooting.md)
 - Segmenteringsmethoden {#methods}
    - [Overzicht](methods/overview.md)
@@ -81,5 +81,5 @@ ht-degree: 24%
    - [Diverse functies](pql/misc-functions.md)
 - [Update voor kwalificatiecriteria](./eligibility-criteria-update.md)
 - [Veelgestelde vragen](./faq.md)
-- [ API verwijzing ](https://www.adobe.io/experience-platform-apis/references/segmentation/)
-- [ de versienota&#39;s van het Platform ](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)
+- [&#x200B; API verwijzing &#x200B;](https://www.adobe.io/experience-platform-apis/references/segmentation/)
+- [&#x200B; de versienota&#39;s van het Platform &#x200B;](https://experienceleague.adobe.com/en/docs/experience-platform/release-notes/latest)
