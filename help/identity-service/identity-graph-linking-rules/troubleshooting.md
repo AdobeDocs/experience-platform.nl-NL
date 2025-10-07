@@ -17,7 +17,7 @@ Terwijl u [!DNL Identity Graph Linking Rules] test en valideert, kan het gebeure
 
 Het volgende diagram is een vereenvoudigde weergave van hoe gegevens stromen naar Adobe Experience Platform en Toepassingen. Gebruik dit diagram als verwijzing om u te helpen een beter inzicht in de inhoud van deze pagina krijgen.
 
-![ een diagram van hoe de gegevensopname in de Dienst van de Identiteit stroomt.](../images/troubleshooting/dataflow_in_identity.png " een diagram van hoe de gegevensopname in de Dienst van de Identiteit stroomt."){zoomable="yes"}
+![&#x200B; een diagram van hoe de gegevensopname in de Dienst van de Identiteit stroomt.](../images/troubleshooting/dataflow_in_identity.png " een diagram van hoe de gegevensopname in de Dienst van de Identiteit stroomt."){zoomable="yes"}
 
 Het is van belang de volgende factoren in aanmerking te nemen:
 
@@ -44,12 +44,12 @@ Het is van belang de volgende factoren in aanmerking te nemen:
 
 Er zijn verschillende redenen waarom dit zou kunnen gebeuren, waaronder, maar niet beperkt tot:
 
-* [ De dataset wordt niet toegelaten voor Profiel ](../../catalog/datasets/enable-for-profile.md).
+* [&#x200B; De dataset wordt niet toegelaten voor Profiel &#x200B;](../../catalog/datasets/enable-for-profile.md).
 * De record wordt overgeslagen omdat de gebeurtenis slechts één identiteit bevat.
-* [ de bevestigingsmislukking van A kwam in de Dienst van de Identiteit voor ](../guardrails.md#identity-value-validation).
+* [&#x200B; de bevestigingsmislukking van A kwam in de Dienst van de Identiteit voor &#x200B;](../guardrails.md#identity-value-validation).
    * Een ECID kan bijvoorbeeld langer zijn dan 38 tekens.
-* Door gebrek, [ worden AIDs geblokkeerd van opname ](../guardrails.md#identity-namespace-ingestion).
-* De identiteit wordt verwijderd wegens [ systeemgidsen ](../guardrails.md#understanding-the-deletion-logic-when-an-identity-graph-at-capacity-is-updated).
+* Door gebrek, [&#x200B; worden AIDs geblokkeerd van opname &#x200B;](../guardrails.md#identity-namespace-ingestion).
+* De identiteit wordt verwijderd wegens [&#x200B; systeemgidsen &#x200B;](../guardrails.md#understanding-the-deletion-logic-when-an-identity-graph-at-capacity-is-updated).
 
 Binnen de context van [!DNL Identity Graph Linking Rules] kan een record van Identity Service worden geweigerd omdat de inkomende gebeurtenis twee of meer identiteiten heeft met dezelfde unieke naamruimte maar andere identiteitswaarde. Dit scenario gebeurt gewoonlijk als gevolg van implementatiefouten.
 
@@ -98,7 +98,7 @@ Om deze fout op te lossen, moet u eerst de volgende informatie verzamelen:
 * De identiteitswaarde (`identity_value`) u verwachtte om in de identiteitsgrafiek worden opgenomen.
 * De dataset (`dataset_name`) waarin de gebeurtenis binnen werd verzonden.
 
-Daarna, gebruik [ de Dienst van de Vraag van Adobe Experience Platform ](../../query-service/home.md) en stel de volgende vraag in werking:
+Daarna, gebruik [&#x200B; de Dienst van de Vraag van Adobe Experience Platform &#x200B;](../../query-service/home.md) en stel de volgende vraag in werking:
 
 >[!TIP]
 >
@@ -113,7 +113,7 @@ Daarna, gebruik [ de Dienst van de Vraag van Adobe Experience Platform ](../../q
 
 Nadat u de query hebt uitgevoerd, zoekt u de gebeurtenisrecord die u had verwacht om een grafiek te genereren en controleert u vervolgens of de identiteitswaarden in dezelfde rij verschillend zijn. Bekijk de volgende afbeelding voor een voorbeeld:
 
-![ een naamloze vraag die in gedupliceerde namespaces resulteerde.](../images/troubleshooting/duplicated_unique_namespace.png)
+![&#x200B; een naamloze vraag die in gedupliceerde namespaces resulteerde.](../images/troubleshooting/duplicated_unique_namespace.png)
 
 >[!NOTE]
 >
@@ -123,26 +123,26 @@ Nadat u de query hebt uitgevoerd, zoekt u de gebeurtenisrecord die u had verwach
 
 De prioriteit Namespace speelt een belangrijke rol in hoe de gebeurtenisfragmenten primaire identiteit bepalen.
 
-* Zodra u hebt gevormd en uw [ identiteitsmontages ](./identity-settings-ui.md) voor een bepaalde zandbak opgeslagen, zal het Profiel dan [ namespace prioriteit ](namespace-priority.md#real-time-customer-profile-primary-identity-determination-for-experience-events) gebruiken om de primaire identiteit te bepalen. In het geval van identityMap gebruikt Profile de markering `primary=true` niet meer.
+* Zodra u hebt gevormd en uw [&#x200B; identiteitsmontages &#x200B;](./identity-settings-ui.md) voor een bepaalde zandbak opgeslagen, zal het Profiel dan [&#x200B; namespace prioriteit &#x200B;](namespace-priority.md#real-time-customer-profile-primary-identity-determination-for-experience-events) gebruiken om de primaire identiteit te bepalen. In het geval van identityMap gebruikt Profile de markering `primary=true` niet meer.
 * Hoewel Profiel niet langer naar deze markering verwijst, kunnen andere services op Experience Platform de markering `primary=true` blijven gebruiken.
 
-Opdat [ voor authentiek verklaarde gebruikersgebeurtenissen ](implementation-guide.md#ingest-your-data) aan de persoon worden gebonden namespace, moeten alle voor authentiek verklaarde gebeurtenissen de persoon namespace (CRMID) bevatten. Dit betekent dat zelfs nadat een gebruiker zich aanmeldt, de naamruimte van de persoon nog steeds aanwezig moet zijn op elke geverifieerde gebeurtenis.
+Opdat [&#x200B; voor authentiek verklaarde gebruikersgebeurtenissen &#x200B;](implementation-guide.md#ingest-your-data) aan de persoon worden gebonden namespace, moeten alle voor authentiek verklaarde gebeurtenissen de persoon namespace (CRMID) bevatten. Dit betekent dat zelfs nadat een gebruiker zich aanmeldt, de naamruimte van de persoon nog steeds aanwezig moet zijn op elke geverifieerde gebeurtenis.
 
 U kunt de markering `primary=true` &#39;events&#39; blijven zien wanneer u een profiel opzoekt in de profielviewer. Dit wordt echter genegeerd en wordt niet gebruikt door Profiel.
 
-HULP&#39;s worden standaard geblokkeerd. Daarom als u de [ bronVerbinding van Adobe Analytics ](../../sources/tutorials/ui/create/adobe-applications/analytics.md) gebruikt, moet u ervoor zorgen dat ECID aan hoger dan ECID wordt voorrang gegeven zodat de unauthenticated gebeurtenissen een primaire identiteit van ECID zullen hebben.
+HULP&#39;s worden standaard geblokkeerd. Daarom als u de [&#x200B; bronVerbinding van Adobe Analytics &#x200B;](../../sources/tutorials/ui/create/adobe-applications/analytics.md) gebruikt, moet u ervoor zorgen dat ECID aan hoger dan ECID wordt voorrang gegeven zodat de unauthenticated gebeurtenissen een primaire identiteit van ECID zullen hebben.
 
 **de stappen van het Oplossen van problemen**
 
-1. Om te bevestigen dat de voor authentiek verklaarde gebeurtenissen zowel de persoon als koekjesnamespace bevatten, lees de stappen die in de sectie over [ worden geschetst het oplossen van problemenfouten betreffende gegevens die niet aan de Dienst van de Identiteit worden opgenomen ](#my-identities-are-not-getting-ingested-into-identity-service).
+1. Om te bevestigen dat de voor authentiek verklaarde gebeurtenissen zowel de persoon als koekjesnamespace bevatten, lees de stappen die in de sectie over [&#x200B; worden geschetst het oplossen van problemenfouten betreffende gegevens die niet aan de Dienst van de Identiteit worden opgenomen &#x200B;](#my-identities-are-not-getting-ingested-into-identity-service).
 2. Om te bevestigen dat de voor authentiek verklaarde gebeurtenissen de primaire identiteit van de persoon namespace (b.v. CRMID) hebben, onderzoek persoonnamespace op profielkijker gebruikend het geen-aaneenschakeling fusiebeleid (dit is het fusiebeleid dat geen privé grafiek gebruikt). Deze zoekopdracht retourneert alleen gebeurtenissen die zijn gekoppeld aan de naamruimte van de persoon.
 
 ### Mijn ervaring is dat gebeurtenisfragmenten niet in het profiel worden opgenomen {#my-experience-event-fragments-are-not-getting-ingested-into-profile}
 
 Er zijn verschillende redenen die ertoe bijdragen waarom uw ervaringsfragmenten niet in Profiel worden opgenomen, met inbegrip van maar niet beperkt tot:
 
-* [ De dataset wordt niet toegelaten voor Profiel ](../../catalog/datasets/enable-for-profile.md).
-* [ de bevestigingsmislukking van A kan op Profiel ](../../xdm/classes/experienceevent.md) zijn voorgekomen.
+* [&#x200B; De dataset wordt niet toegelaten voor Profiel &#x200B;](../../catalog/datasets/enable-for-profile.md).
+* [&#x200B; de bevestigingsmislukking van A kan op Profiel &#x200B;](../../xdm/classes/experienceevent.md) zijn voorgekomen.
    * Een ervaringsgebeurtenis moet bijvoorbeeld zowel een `_id` als een `timestamp` bevatten.
    * Bovendien moet `_id` uniek zijn voor elke gebeurtenis (record).
 
@@ -202,7 +202,7 @@ In deze sectie worden algemene problemen beschreven die u kunt tegenkomen met be
 
 ### Unauthenticated ExperienceEvents worden gekoppeld aan het verkeerde geverifieerde profiel
 
-Het algoritme van de Optimalisering van de Identiteit zal [ de onlangs gevestigde verbindingen respecteren en de oudste verbindingen ](./identity-optimization-algorithm.md#identity-optimization-algorithm-details) verwijderen. Daarom is het mogelijk dat, zodra deze functie is ingeschakeld, ECID&#39;s opnieuw van de ene persoon naar de andere worden toegewezen (opnieuw gekoppeld). Volg onderstaande stappen om te begrijpen hoe een identiteit in de loop der tijd gekoppeld wordt:
+Het algoritme van de Optimalisering van de Identiteit zal [&#x200B; de onlangs gevestigde verbindingen respecteren en de oudste verbindingen &#x200B;](./identity-optimization-algorithm.md#identity-optimization-algorithm-details) verwijderen. Daarom is het mogelijk dat, zodra deze functie is ingeschakeld, ECID&#39;s opnieuw van de ene persoon naar de andere worden toegewezen (opnieuw gekoppeld). Volg onderstaande stappen om te begrijpen hoe een identiteit in de loop der tijd gekoppeld wordt:
 
 **de stappen van het Oplossen van problemen**
 
@@ -212,7 +212,7 @@ Het algoritme van de Optimalisering van de Identiteit zal [ de onlangs gevestigd
 >
 >* Één enkele dataset is in gebruik (dit zal niet veelvoudige datasets) vragen.
 >
->* Het gegeven wordt niet geschrapt van het gegevensmeer toe te schrijven aan schrapping door [ het Geavanceerde Beheer van de Levenscyclus van Gegevens ](../../hygiene/home.md), [ Privacy Service ](../../privacy-service/home.md), of andere diensten die schrapping leiden.
+>* Het gegeven wordt niet geschrapt van het gegevensmeer toe te schrijven aan schrapping door [&#x200B; het Geavanceerde Beheer van de Levenscyclus van Gegevens &#x200B;](../../hygiene/home.md), [&#x200B; Privacy Service &#x200B;](../../privacy-service/home.md), of andere diensten die schrapping leiden.
 
 Eerst moet u de volgende informatie verzamelen:
 
@@ -278,16 +278,16 @@ ORDER BY timestamp desc
 
 **de stappen van het Oplossen van problemen**
 
-Verwijs naar de documentatie over [ Algoritme van de Optimalisering van de Identiteit ](./identity-optimization-algorithm.md), evenals de types van grafiekstructuren die worden gesteund.
+Verwijs naar de documentatie over [&#x200B; Algoritme van de Optimalisering van de Identiteit &#x200B;](./identity-optimization-algorithm.md), evenals de types van grafiekstructuren die worden gesteund.
 
-* Lees de [ gids van de grafiekconfiguratie ](./example-configurations.md) voor voorbeelden van gesteunde grafiekstructuren.
-* U kunt de [ implementatiegids ](./implementation-guide.md#appendix) voor voorbeelden van niet gesteunde grafiekstructuren ook lezen. Er zijn twee scenario&#39;s die zouden kunnen gebeuren:
+* Lees de [&#x200B; gids van de grafiekconfiguratie &#x200B;](./example-configurations.md) voor voorbeelden van gesteunde grafiekstructuren.
+* U kunt de [&#x200B; implementatiegids &#x200B;](./implementation-guide.md#appendix) voor voorbeelden van niet gesteunde grafiekstructuren ook lezen. Er zijn twee scenario&#39;s die zouden kunnen gebeuren:
    * Geen enkele naamruimte in al uw profielen.
-   * Een [ &quot;gevaarlijk identiteitskaart&quot;](./implementation-guide.md#dangling-loginid-scenario) scenario komt voor. In dit scenario kan de Identiteitsdienst niet bepalen of de gevaarlijke id is gekoppeld aan een van de personen-entiteiten in de grafieken.
+   * Een [&#x200B; &quot;gevaarlijk identiteitskaart&quot;](./implementation-guide.md#dangling-loginid-scenario) scenario komt voor. In dit scenario kan de Identiteitsdienst niet bepalen of de gevaarlijke id is gekoppeld aan een van de personen-entiteiten in de grafieken.
 
-U kunt het [ hulpmiddel van de grafieksimulatie in UI ](./graph-simulation.md) ook gebruiken om gebeurtenissen te simuleren en uw eigen unieke namespace en namespace prioritaire montages te vormen. Dit kan u helpen een basislijninzicht in geven hoe het Algoritme van de Optimalisering van de Identiteit zich zou moeten gedragen.
+U kunt het [&#x200B; hulpmiddel van de grafieksimulatie in UI &#x200B;](./graph-simulation.md) ook gebruiken om gebeurtenissen te simuleren en uw eigen unieke namespace en namespace prioritaire montages te vormen. Dit kan u helpen een basislijninzicht in geven hoe het Algoritme van de Optimalisering van de Identiteit zich zou moeten gedragen.
 
-Als uw simulatieresultaten uw verwachtingen van het grafiekgedrag aanpassen, dan kunt u controleren en zien als uw [ identiteitsmontages ](./identity-settings-ui.md) de montages aanpast die u in uw simulatie hebt gevormd.
+Als uw simulatieresultaten uw verwachtingen van het grafiekgedrag aanpassen, dan kunt u controleren en zien als uw [&#x200B; identiteitsmontages &#x200B;](./identity-settings-ui.md) de montages aanpast die u in uw simulatie hebt gevormd.
 
 ### Ik zie samengevouwen grafieken in mijn zandbak zelfs na het vormen van identiteitsmontages
 
@@ -295,17 +295,17 @@ De grafieken van de identiteit zullen aan uw gevormde unieke namespace en namesp
 
 **de stappen van het Oplossen van problemen**
 
-U kunt de [ kijker van de identiteitsgrafiek ](../features/identity-graph-viewer.md) gebruiken om te controleren of uw grafiek vóór of na uw montages werd opgenomen. Controleer de laatst bijgewerkte tijdstempel onder [!UICONTROL Link properties] om te zien wanneer Identity Service de grafiek heeft opgenomen. Als de tijdstempel zich vóór de configuratie bevindt, geeft dat aan dat de grafiek is samengevouwen voordat de functie is ingeschakeld.
+U kunt de [&#x200B; kijker van de identiteitsgrafiek &#x200B;](../features/identity-graph-viewer.md) gebruiken om te controleren of uw grafiek vóór of na uw montages werd opgenomen. Controleer de laatst bijgewerkte tijdstempel onder [!UICONTROL Link properties] om te zien wanneer Identity Service de grafiek heeft opgenomen. Als de tijdstempel zich vóór de configuratie bevindt, geeft dat aan dat de grafiek is samengevouwen voordat de functie is ingeschakeld.
 
-![ de kijker van de identiteitsgrafiek met een voorbeeldgrafiek.](../images/troubleshooting/graph_viewer.png)
+![&#x200B; de kijker van de identiteitsgrafiek met een voorbeeldgrafiek.](../images/troubleshooting/graph_viewer.png)
 
 ### Ik wil weten hoeveel &#39;samengevouwen&#39; grafieken er in mijn sandbox staan
 
 Gebruik het identiteitsdashboard voor inzicht in de staat van uw identiteitsgrafiek, zoals het aantal identiteiten en grafieken. Verwijs naar metrisch, &quot;Aantal van de Grafiek met veelvoudige namespaces&quot;voor een telling van grafieken die zijn doen ineenstorten - dit zijn grafieken die twee of meer identiteiten met zelfde namespace bevatten. Ervan uitgaande dat de sandbox geen gegevens heeft en dat u een naamruimte (bijvoorbeeld CRMID) hebt geconfigureerd om uniek te zijn, wordt verwacht dat er geen grafieken met twee of meer CRMID&#39;s moeten zijn. In het onderstaande voorbeeld zijn er twee grafieken die twee of meer e-mailadressen bevatten.
 
-![ het identiteitsdashboard met metriek op identiteitstelling, grafiektelling, telling door namespace, grafiektelling door grootte en grafiektelling van grafieken meer dan twee namespaces.](../images/troubleshooting/identity_dashboard.png)
+![&#x200B; het identiteitsdashboard met metriek op identiteitstelling, grafiektelling, telling door namespace, grafiektelling door grootte en grafiektelling van grafieken meer dan twee namespaces.](../images/troubleshooting/identity_dashboard.png)
 
-U kunt een gedetailleerde uitsplitsing in de [ de uitvoerdataset van de profielmomentopname ](../../dashboards/query.md) in gegevensmeer vinden door de hieronder vraag in werking te stellen:
+U kunt een gedetailleerde uitsplitsing in de [&#x200B; de uitvoerdataset van de profielmomentopname &#x200B;](../../dashboards/query.md) in gegevensmeer vinden door de hieronder vraag in werking te stellen:
 
 >[!NOTE]
 >
@@ -342,11 +342,11 @@ In deze sectie wordt een lijst met antwoorden op veelgestelde vragen over [!DNL 
 
 ## Algoritme voor identiteitsoptimalisatie {#identity-optimization-algorithm}
 
-Lees deze sectie voor antwoorden op vaak gestelde vragen over het [ Algoritme van de Optimalisering van de Identiteit ](./identity-optimization-algorithm.md).
+Lees deze sectie voor antwoorden op vaak gestelde vragen over het [&#x200B; Algoritme van de Optimalisering van de Identiteit &#x200B;](./identity-optimization-algorithm.md).
 
 ### Ik heb een CRMID voor elk van mijn zaken verenigt (B2C CRMID, B2B CRMID), maar ik heb geen unieke namespace over al mijn profielen. Wat zal gebeuren als ik B2C CRMID en B2B CRMID als uniek merk, en mijn identiteitsmontages toelaat?
 
-Dit scenario wordt niet ondersteund. Daarom kunt u grafieken zien ineenstorten in gevallen waar een gebruiker hun B2C CRMID aan login gebruikt, en een andere gebruiker hun B2B CRMID aan login gebruikt. Voor meer informatie, lees de sectie over [ enige persoon namespace vereiste ](./implementation-guide.md#single-person-namespace-requirement) in de implementatiepagina.
+Dit scenario wordt niet ondersteund. Daarom kunt u grafieken zien ineenstorten in gevallen waar een gebruiker hun B2C CRMID aan login gebruikt, en een andere gebruiker hun B2B CRMID aan login gebruikt. Voor meer informatie, lees de sectie over [&#x200B; enige persoon namespace vereiste &#x200B;](./implementation-guide.md#single-person-namespace-requirement) in de implementatiepagina.
 
 ### Herstelt het algoritme voor identiteitsoptimalisatie bestaande samengevouwen grafieken?
 
@@ -357,7 +357,7 @@ Bestaande samengevouwen grafieken worden alleen door het grafiekalgoritme beïnv
 * Anonieme gebeurtenissen (gebeurtenissen met ECID als primaire identiteit in Real-Time klantprofiel) worden overgedragen naar de laatst geverifieerde gebruiker. De reden hiervoor is dat de ECID wordt gekoppeld aan de CRMID van de laatst geverifieerde gebruiker (op Identity Service).
 * Alle geverifieerde gebeurtenissen (gebeurtenissen met CRMID die als primaire identiteit zijn gedefinieerd) blijven bij de persoon.
 
-Voor meer informatie, lees de gids bij [ bepalend de primaire identiteit voor ervaringsgebeurtenissen ](../identity-graph-linking-rules/namespace-priority.md#real-time-customer-profile-primary-identity-determination-for-experience-events).
+Voor meer informatie, lees de gids bij [&#x200B; bepalend de primaire identiteit voor ervaringsgebeurtenissen &#x200B;](../identity-graph-linking-rules/namespace-priority.md#real-time-customer-profile-primary-identity-determination-for-experience-events).
 
 ### Hoe zullen de verplaatsingen in Adobe Journey Optimizer worden beïnvloed wanneer de ECID van de ene persoon naar de andere overgaat?
 
@@ -385,7 +385,7 @@ De belangrijkste punten om te benadrukken zijn als volgt:
 
 ## Prioriteit naamruimte
 
-Lees deze sectie voor antwoorden op vaak gestelde vragen over [ namespace prioriteit ](./namespace-priority.md).
+Lees deze sectie voor antwoorden op vaak gestelde vragen over [&#x200B; namespace prioriteit &#x200B;](./namespace-priority.md).
 
 ### Ik heb mijn identiteitsinstellingen ingeschakeld. Wat gebeurt er met mijn instellingen als ik een aangepaste naamruimte wil toevoegen nadat de instellingen zijn ingeschakeld?
 
@@ -393,7 +393,7 @@ Er zijn twee &#39;emmers&#39; van naamruimten: naamruimten van personen en naamr
 
 ### Als het Profiel van de Klant in real time niet meer de &quot;primaire&quot;vlag op identityMap gebruikt, moet deze waarde nog worden verzonden?
 
-Ja, de &quot;primaire&quot;vlag op identityMap wordt gebruikt door andere diensten. Voor meer informatie, lees de gids op [ de implicaties van namespaceprioriteit op andere diensten van Experience Platform ](../identity-graph-linking-rules/namespace-priority.md#implications-on-other-experience-platform-services).
+Ja, de &quot;primaire&quot;vlag op identityMap wordt gebruikt door andere diensten. Voor meer informatie, lees de gids op [&#x200B; de implicaties van namespaceprioriteit op andere diensten van Experience Platform &#x200B;](../identity-graph-linking-rules/namespace-priority.md#implications-on-other-experience-platform-services).
 
 ### Zal naamruimteprioriteit van toepassing zijn op de gegevenssets van het profielrecord in Real-Time Klantprofiel?
 
@@ -401,7 +401,7 @@ Nee. De prioriteit Namespace zal slechts op de datasets van de Gebeurtenis van d
 
 ### Hoe werkt deze functie in overeenstemming met de identiteitsgrafiekinstructies van 50 identiteiten per grafiek? Heeft naamruimteprioriteit invloed op deze door het systeem gedefinieerde hulplijn?
 
-Het algoritme van de Optimalisering van de Identiteit zal eerst worden toegepast om de vertegenwoordiging van de persoonentiteit te verzekeren. Nadien, als de grafiek probeert om de [ graadmeter van de identiteitsgrafiek ](../guardrails.md) (50 identiteiten per grafiek) te overschrijden, dan zal deze logica worden toegepast. De prioriteit Namespace beïnvloedt niet de schrappingslogica van de 50 identiteit/grafiekbegeleiding.
+Het algoritme van de Optimalisering van de Identiteit zal eerst worden toegepast om de vertegenwoordiging van de persoonentiteit te verzekeren. Nadien, als de grafiek probeert om de [&#x200B; graadmeter van de identiteitsgrafiek &#x200B;](../guardrails.md) (50 identiteiten per grafiek) te overschrijden, dan zal deze logica worden toegepast. De prioriteit Namespace beïnvloedt niet de schrappingslogica van de 50 identiteit/grafiekbegeleiding.
 
 ## Testen
 
@@ -421,6 +421,6 @@ In het algemeen geldt dat het testen op een ontwikkelingssandbox de gebruiksgeva
 
 ### Hoe kan ik controleren of deze functie naar behoren functioneert?
 
-Gebruik het [ hulpmiddel van de grafieksimulatie ](./graph-simulation.md) om te bevestigen dat de eigenschap op een individueel grafiekniveau werkt.
+Gebruik het [&#x200B; hulpmiddel van de grafieksimulatie &#x200B;](./graph-simulation.md) om te bevestigen dat de eigenschap op een individueel grafiekniveau werkt.
 
 Als u de functie wilt valideren op sandboxniveau, raadpleegt u de sectie [!UICONTROL Graph count with multiple namespaces] in het identiteitsdashboard.
