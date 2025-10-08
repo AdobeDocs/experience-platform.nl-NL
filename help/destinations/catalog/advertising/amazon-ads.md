@@ -1,11 +1,11 @@
 ---
 title: Amazon Adds
 description: Amazon Ads biedt verschillende opties om geregistreerde verkopers, verkopers, verkopers van boeken, Kindle Direct Publishing-auteurs (KDP), ontwikkelaars van apps en/of bureaus te helpen uw reclamedoelstellingen te bereiken. De integratie van Amazon Ads met Adobe Experience Platform biedt kant-en-klare integratie voor Amazon Ads-producten, waaronder de Amazon DSP (ADSP). Met de Amazon Ads-bestemming in Adobe Experience Platform kunnen gebruikers adverteerdersoorten definiëren voor doelwitten en activering op de Amazon DSP.
-last-substantial-update: 2025-01-07T00:00:00Z
+last-substantial-update: 2025-10-08T00:00:00Z
 exl-id: 724f3d32-65e0-4612-a882-33333e07c5af
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: 6afb8d56b8af8e5b0450f769414d3afcac1d58eb
 workflow-type: tm+mt
-source-wordcount: '1771'
+source-wordcount: '1977'
 ht-degree: 1%
 
 ---
@@ -57,6 +57,13 @@ De *[!DNL Amazon Ads]* -verbinding ondersteunt de activering van identiteiten di
 |---|---|---|
 | phone_sha256 | Telefoonnummers die zijn hashed met het SHA256-algoritme | Adobe Experience Platform biedt ondersteuning voor zowel platte tekst- als SHA256-telefoonnummers. Wanneer het bronveld hashingkenmerken bevat, schakelt u de optie **[!UICONTROL Apply transformation]** in om de gegevens automatisch te laten hashen bij activering door [!DNL Experience Platform] . |
 | email_lc_sha256 | E-mailadressen die met het algoritme SHA256 worden gehasht | Adobe Experience Platform biedt ondersteuning voor zowel platte tekst- als SHA256-e-mailadressen met hashing. Wanneer het bronveld hashingkenmerken bevat, schakelt u de optie **[!UICONTROL Apply transformation]** in om de gegevens automatisch te laten hashen bij activering door [!DNL Experience Platform] . |
+| `firstName` | Voornaam gebruiker | Ondersteunt platte tekst of SHA256. Als onbewerkte tekst wordt gebruikt, schakelt u [!UICONTROL Apply transformation] in de gebruikersinterface van Adobe in. |
+| `lastName` | Achternaam van de gebruiker | Ondersteunt platte tekst of SHA256. Als onbewerkte tekst wordt gebruikt, schakelt u [!UICONTROL Apply transformation] in de gebruikersinterface van Adobe in. |
+| `street` | Adres van de gebruiker op straatniveau | Alleen SHA256-invoer met hashing wordt ondersteund. Normaliseren voor hashing. Laat **** geen transformatie aan de kant van Adobe toe. |
+| `city` | Plaats van de gebruiker | Ondersteunt platte tekst of SHA256. Als onbewerkte tekst wordt gebruikt, schakelt u [!UICONTROL Apply transformation] in de gebruikersinterface van Adobe in. |
+| `state` | Staat of provincie van de gebruiker | Ondersteunt platte tekst of SHA256. Als onbewerkte tekst wordt gebruikt, schakelt u [!UICONTROL Apply transformation] in de gebruikersinterface van Adobe in. |
+| `zip` | Postcode van de gebruiker | Ondersteunt platte tekst of SHA256. Als onbewerkte tekst wordt gebruikt, schakelt u [!UICONTROL Apply transformation] in de gebruikersinterface van Adobe in. |
+| `country` | Land van de gebruiker | Ondersteunt platte tekst of SHA256. Als onbewerkte tekst wordt gebruikt, schakelt u [!UICONTROL Apply transformation] in de gebruikersinterface van Adobe in. |
 
 {style="table-layout:auto"}
 
@@ -65,7 +72,7 @@ De *[!DNL Amazon Ads]* -verbinding ondersteunt de activering van identiteiten di
 Raadpleeg de onderstaande tabel voor informatie over het exporttype en de exportfrequentie van de bestemming.
 
 | Item | Type | Notities |
----------|----------|---------|
+| ---------|----------|---------|
 | Exporttype | **[!UICONTROL Audience export]** | U exporteert alle leden van een publiek met de id&#39;s (naam, telefoonnummer of andere) die in de *[!DNL Amazon Ads]* -bestemming worden gebruikt. |
 | Exportfrequentie | **[!UICONTROL Streaming]** | Streaming doelen zijn &quot;altijd aan&quot; API-verbindingen. Zodra een profiel in Experience Platform wordt bijgewerkt dat op publieksevaluatie wordt gebaseerd, verzendt de schakelaar de update stroomafwaarts naar het bestemmingsplatform. Lees meer over [ het stromen bestemmingen ](/help/destinations/destination-types.md#streaming-destinations). |
 
@@ -129,6 +136,14 @@ De verbinding van [!DNL Amazon Ads] steunt gehakt e-mailadres en gehashte telefo
 * Als u ongehashte e-mailadressen of telefoonnummers wilt toewijzen, selecteert u de bijbehorende naamruimten als bronvelden en schakelt u de optie `Apply Transformation` in om Experience Platform de identiteiten bij activering te laten hashen.
 * *NIEUW die met de versie van September 2024* begint: Amazon Ads vereist u om een gebied in kaart te brengen dat een `countryCode` waarde in het 2 karakterISO formaat bevat om het proces van de identiteitsresolutie (bijvoorbeeld: US, GB, MX, CA, etc.) te vergemakkelijken. Verbindingen zonder `countryCode` toewijzingen hebben een negatief effect op overeenkomende identiteiten.
 
+>[!NOTE]
+>
+>Deze velden gebruiken:
+> 
+>* Alle identiteitswaarden moeten vóór inname worden genormaliseerd. Verwijs naar de [ normalisatiegids ](https://advertising.amazon.com/help/GCCXMZYCK4RXWS6C).
+>* SHA256 hashing wordt vereist, of op de cliëntkant of door het toelaten van de transformatie van Adobe plaatsen.
+>* Adobe UI verstrekt checkbox om transformatie per identiteitsgebied tijdens schakelaaropstelling toe te passen.
+
 U selecteert slechts één keer een bepaald doelgebied in een bestemmingsconfiguratie van de [!DNL Amazon Ads] schakelaar.  Als u bijvoorbeeld bedrijfs-e-mail verzendt, kunt u persoonlijke e-mail niet ook toewijzen in dezelfde doelconfiguratie.
 
 U wordt ten zeerste aangeraden om zoveel velden in kaart te brengen als u hebt. Als er slechts één bronkenmerk beschikbaar is, kunt u één veld toewijzen. Het doel [!DNL Amazon Ads] gebruikt alle toegewezen velden voor toewijzingsdoeleinden, wat hogere overeenkomende snelheden oplevert als er meer velden zijn opgegeven. Voor meer informatie over de toegelaten herkenningstekens, bezoek de [ Amazon Ads hakte pagina van de publiekshulp ](https://advertising.amazon.com/dsp/help/ss/en/audiences#GA6BC9BW52YFXBNE).
@@ -159,7 +174,7 @@ Alle [!DNL Adobe Experience Platform] -doelen zijn compatibel met het beleid voo
 
 Raadpleeg de volgende [!DNL Amazon Ads] Help-bronnen voor aanvullende Help-documentatie:
 
-* [ Amazon DSP Help Center ](https://www.amazon.com/ap/signin?openid.pape.max_auth_age=28800&amp;openid.return_to=https%3A%2F%2Fadvertising.amazon.com%2Fdsp%2Fhelp%2Fss%2Fen%2Faudiences&amp;openid.identity=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&amp;openid.assoc_handle=amzn_bt_desktop_us&amp;openid.mode=checkid_setup&amp;openid.claimed_id=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&amp;openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0)
+* [ Amazon DSP Help Center ](https://www.amazon.com/ap/signin?openid.pape.max_auth_age=28800&openid.return_to=https%3A%2F%2Fadvertising.amazon.com%2Fdsp%2Fhelp%2Fss%2Fen%2Faudiences&openid.identity=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.assoc_handle=amzn_bt_desktop_us&openid.mode=checkid_setup&openid.claimed_id=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0)
 
 ## Changelog {#changelog}
 
@@ -169,6 +184,7 @@ Deze sectie vangt de functionaliteit en de significante documentatieupdates aan 
 
 | Releasedatum | Type bijwerken | Beschrijving |
 |---|---|---|
+| Oktober 2025 | Ondersteuning toegevoegd aan extra identiteitsvelden | Extra persoonlijke id&#39;s worden ondersteund, zoals `firstName` , `lastName` , `street` , `city` , `state` , `zip` en `country` . Door deze velden toe te wijzen, kunt u de weergavesnelheid voor de doelgroep verbeteren. |
 | Februari 2025 | De vereiste om **[!UICONTROL Amazon Ads Consent Signal]** toe te voegen aan het exporteren van gegevens is toegevoegd en de bestemming van bèta naar algemeen beschikbaar bevorderd. |
 | Mei 2024 | Bijwerken van functionaliteit en documentatie | De toewijzingsoptie voor het exporteren van de parameter `countryCode` naar Amazon Ads is toegevoegd. Gebruik `countryCode` in de [toewijzingsstap](#map) om uw afstemmingspercentages voor identiteiten met Amazon te verbeteren. |
 | Maart 2024 | Bijwerken van functionaliteit en documentatie | De optie voor het exporteren van soorten publiek die in [!DNL Amazon Marketing Cloud] (AMC) moeten worden gebruikt, is toegevoegd. |
