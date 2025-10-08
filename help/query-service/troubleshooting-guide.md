@@ -4,9 +4,9 @@ solution: Experience Platform
 title: Query Service en Data Distiller hebben vaak vragen gesteld
 description: Dit document bevat algemene vragen en antwoorden met betrekking tot Query Service en Data Distiller. De onderwerpen omvatten, het uitvoeren van gegevens, derdehulpmiddelen, en fouten PSQL.
 exl-id: 14cdff7a-40dd-4103-9a92-3f29fa4c0809
-source-git-commit: f0656fcde077fc6c983a7a2d8dc21d2548fa7605
+source-git-commit: f072f95823768d5b65169b56bb874ae9c3986c44
 workflow-type: tm+mt
-source-wordcount: '5168'
+source-wordcount: '5423'
 ht-degree: 0%
 
 ---
@@ -573,18 +573,6 @@ Er zijn drie manieren om de toegang te beperken. Deze zijn als volgt:
 Ja, SSL-modi worden ondersteund. Zie de [ SSL wijzedocumentatie ](./clients/ssl-modes.md) voor een uitsplitsing van de verschillende beschikbare SSL wijzen en het niveau van bescherming zij verstrekken.
 +++
 
-### Gebruiken wij TLS 1.2 voor alle verbindingen van de cliënten van Power BI aan de vraagdienst?
-
-+++Antwoord
-Ja. Doorvoergegevens zijn altijd compatibel met HTTPS. De momenteel ondersteunde versie is TLS1.2.
-+++
-
-### Gebruikt een verbinding gemaakt op poort 80 nog https?
-
-+++Antwoord
-Ja, een verbinding gemaakt op poort 80 gebruikt nog steeds SSL. U kunt ook poort 5432 gebruiken.
-+++
-
 ### Kan ik toegang tot specifieke datasets en kolommen voor een bepaalde verbinding controleren? Hoe wordt dit gevormd?
 
 +++Antwoord
@@ -615,35 +603,73 @@ Ja, u kunt de opdracht `CREATE VIEW` gebruiken zonder Data Distiller-toegang. Di
 Ja. Hoewel, bepaalde derdecliënten, zoals DbVisualizer, een afzonderlijke herkenningsteken voor en na een SQL blok kunnen vereisen om erop te wijzen dat een deel van een manuscript als één enkele verklaring zou moeten worden behandeld. Meer details kunnen in de [ anonieme blokdocumentatie ](./key-concepts/anonymous-block.md) of in [ de officiële documentatie DbVisualizer ](https://confluence.dbvis.com/display/UG120/Executing+Complex+Statements#ExecutingComplexStatements-UsinganSQLDialect) worden gevonden.
 +++
 
+## TLS, de Toegang van de Haven, en de Encryptie {#tls-port-questions}
+
+### Gebruikt een verbinding die op poort 80 wordt gemaakt nog steeds HTTPS- en TLS-codering?
+
++++Antwoord
+Ja. Verbindingen op poort 80 worden beveiligd met TLS-codering en TLS-handhaving wordt vereist door de service. Onbewerkte HTTP-verbindingen worden niet geaccepteerd. Poort 80 steun bestaat om bepaalde beleid van het klantennetwerk aan te passen. Als uw organisatie poort 80 blokkeert, gebruikt u in plaats daarvan poort 5432. Beide havens vereisen TLS en verstrekken de zelfde veiligheidshouding.
++++
+
+### Maakt Adobe Query Service gegevens beschikbaar via niet-gecodeerde HTTP (poort 80)?
+
++++Antwoord
+Nee. Verbindingen op poort 80 vereisen TLS en HTTP-aanvragen voor gewone tekst worden afgewezen op de server. Poort 5432 wordt ook ondersteund en is met TLS gecodeerd.
++++
+
+### Is het gebruik van haven 80 voor de Dienst van de Vraag en Gegevens Distiller een erfenisconfiguratie?
+
++++Antwoord
+Nee. Poort 80 met verplicht TLS is een ondersteunde configuratie die is ontworpen voor klanten met specifieke netwerkvereisten. Het is geen verouderde of onveilige modus. Als uw milieu uitgaande verbindingen op haven 80 beperkt, gebruik haven 5432 in plaats daarvan; beide havens dwingen TLS af.
++++
+
+### Gebruiken wij TLS 1.2 voor alle verbindingen van de cliënten van Power BI aan de Dienst van de Vraag?
+
++++Antwoord
+Ja. Gegevens in doorvoer worden altijd beveiligd met HTTPS en de versie die momenteel wordt ondersteund, is TLS 1.2. Alle Power BI-verbindingen met Query Service vereisen gecodeerd transport.
++++
+
+### Is poort 80 niet gecodeerd bij gebruik met Data Distiller?
+
++++Antwoord
+Nee. Data Distiller dwingt TLS af op poort 80 en verwerpt alle HTTP-aanvragen voor platte tekst. Poort 5432 wordt ook ondersteund en is met TLS gecodeerd.
++++
+
+### Zijn er om het even welke risico&#39;s of beperkingen wanneer het gebruiken van haven 80 met de Dienst van de Vraag of Gegevens Distiller?
+
++++Antwoord
+Ja. TLS wordt afgedwongen op poort 80 en niet-gecodeerde verbindingen worden niet ondersteund. Sommige organisaties blokkeren uitgaand verkeer op haven 80 toe te schrijven aan beleidsbeperkingen. Als dit op uw netwerk van toepassing is, gebruik in plaats daarvan haven 5432. Beide poorten bieden hetzelfde beveiligingsniveau, omdat TLS in alle gevallen verplicht is.
++++
+
 ## Data Distiller {#data-distiller}
 
 ### Hoe wordt het gebruik van een Distiller-licentie voor gegevens bijgehouden en waar kan ik deze informatie zien?
 
-+++Antwoord\
++++Antwoord  
 Het belangrijkste metrisch wordt gebruikt om partijvraaggebruik te volgen is de Rekte Uur. U hebt toegang tot deze informatie en uw huidige consumptie door het [ dashboard van het gebruiksdashboard van de Vergunning ](../dashboards/guides/license-usage.md).
 +++
 
 ### Wat is een rekenuur?
 
-+++Antwoord\
++++Antwoord  
 Compute hours is de maatregel van tijd die door de motoren van de Dienst van de Vraag wordt genomen om, gegevens terug in het gegevensmeer te lezen te verwerken en te schrijven wanneer een partijvraag wordt uitgevoerd.
 +++
 
 ### Hoe worden de Compute Uren gemeten?
 
-+++Antwoord\
++++Antwoord  
 Rekenuren worden cumulatief gemeten over al uw geoorloofde Sandboxen.
 +++
 
 ### Waarom zie ik soms een variatie in Compute het verbruik van Uur zelfs wanneer ik de zelfde vraag achtereenvolgens in werking stel?
 
-+++Antwoord\
++++Antwoord  
 De rekenuren voor een vraag kunnen als gevolg van veelvoudige factoren fluctueren. Deze omvatten het verwerkte gegevensvolume, de ingewikkeldheid van transformatieverrichtingen binnen de SQL vraag, etc. De Dienst van de vraag schaalt de cluster die op de bovengenoemde parameters voor elke vraag wordt gebaseerd, die tot verschillen in Compute Uren kan leiden.
 +++
 
 ### Is het normaal om een vermindering in Compute Uren op te merken wanneer ik de zelfde vraag gebruikend de zelfde gegevens over een lange periode in werking stel? Waarom zou dit gebeuren?
 
-+++Antwoord\
++++Antwoord  
 De achtergrondinfrastructuur wordt constant verbeterd om het gebruik en de verwerkingstijd van de Rekenuren te optimaliseren. Hierdoor kunnen er na verloop van tijd wijzigingen optreden wanneer prestatieverbeteringen worden geïmplementeerd.
 +++
 
