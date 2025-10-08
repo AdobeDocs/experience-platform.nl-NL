@@ -58,7 +58,7 @@ Binnen deze diensten, worden de volgende gidsen gevolgd:
    - Van deze 500 streamingdeelnemers is het maximumaantal randsoorten 150
 - De aanvankelijke gecombineerde productie voor het stromen opname is 1500 verslagen per seconde (rps)
    - Deze gecombineerde stroomproductie meet de gecombineerde piekbinnenkomende gebeurtenissen per seconde voor het stromen van opname in het Profiel van de Klant in real time over uw productie en ontwikkelingszandbakken.
-   - U kunt extra ondersteuning voor streamingsegmentatie aanschaffen voor maximaal 13.500 records per seconde. Meer informatie over het kopen van extra rechten kan in de [&#x200B; het productbeschrijving van Real-Time CDP &#x200B;](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html) worden gevonden.
+   - U kunt extra ondersteuning voor streamingsegmentatie aanschaffen voor maximaal 13.500 records per seconde. Meer informatie over het kopen van extra rechten kan in de [&#x200B; het productbeschrijving van Real-Time CDP &#x200B;](https://helpx.adobe.com/nl/legal/product-descriptions/real-time-customer-data-platform-b2c-edition-prime-and-ultimate-packages.html) worden gevonden.
 
 De publiekscapaciteit is op a **zandbak** niveau. Dit betekent dat u voor elke sandbox die u in uw organisatie hebt, 500 streaming publiek kunt hebben, waarvan 150 Edge-publiek.
 
