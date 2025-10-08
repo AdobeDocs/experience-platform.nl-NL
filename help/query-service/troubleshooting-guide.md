@@ -13,7 +13,7 @@ ht-degree: 0%
 
 # Query Service en Data Distiller hebben vaak vragen gesteld
 
-In dit document worden veelgestelde vragen over Query Service en Data Distiller beantwoord. Het omvat ook algemeen gezien foutencodes terwijl het gebruiken van het product van &quot;Vragen&quot;voor gegevensbevestiging of het schrijven van getransformeerde gegevens terug naar het gegevenspeer. Voor vragen en het oplossen van problemen andere diensten van Adobe Experience Platform, gelieve te verwijzen naar de [ het oplossen van problemengids van Experience Platform ](../landing/troubleshooting.md).
+In dit document worden veelgestelde vragen over Query Service en Data Distiller beantwoord. Het omvat ook algemeen gezien foutencodes terwijl het gebruiken van het product van &quot;Vragen&quot;voor gegevensbevestiging of het schrijven van getransformeerde gegevens terug naar het gegevenspeer. Voor vragen en het oplossen van problemen andere diensten van Adobe Experience Platform, gelieve te verwijzen naar de [&#x200B; het oplossen van problemengids van Experience Platform &#x200B;](../landing/troubleshooting.md).
 
 Om te verduidelijken hoe de Dienst van de Vraag en Gegevens Distiller binnen Adobe Experience Platform samenwerken, zijn hier twee grondvragen.
 
@@ -29,7 +29,7 @@ Samen maakt Query Service snel inzicht mogelijk, terwijl Data Distiller diepgaan
 
 **Gegevens Distiller**: Laat partijvragen toe die, gegevens verwerken, schoonmaken en verrijken, met resultaten die terug in het gegevensmeer worden opgeslagen. Deze vragen steunen langere uitvoering (tot 24 uren) en extra eigenschappen zoals het plannen, controle, en versnelde rapportering. Data Distiller is ideaal voor uitgebreide gegevensmanipulatie en geplande gegevensverwerkingstaken.
 
-Zie het [ het verpakken document van de Dienst van de Vraag ](./packaging.md) voor meer gedetailleerde informatie.
+Zie het [&#x200B; het verpakken document van de Dienst van de Vraag &#x200B;](./packaging.md) voor meer gedetailleerde informatie.
 
 ## Categorieën vragen {#categories}
 
@@ -40,8 +40,8 @@ De volgende lijst met antwoorden op veelgestelde vragen is onderverdeeld in de v
 - [Gebruikersinterface voor query&#39;s](#queries-ui)
 - [Gegevenssetvoorbeelden](#dataset-samples)
 - [Gegevens exporteren](#exporting-data)
-- [ SQL Syntaxis ](#sql-syntax) 
-- [ ITAS Vragen ](#itas-queries)
+- [&#x200B; SQL Syntaxis &#x200B;](#sql-syntax) 
+- [&#x200B; ITAS Vragen &#x200B;](#itas-queries)
 - [Gereedschappen van derden](#third-party-tools)
 - [PostSQL API-fouten](#postgresql-api-errors)
 - [REST API-fouten](#rest-api-errors)
@@ -65,13 +65,13 @@ Een mogelijke oorzaak is de functie voor automatisch aanvullen. De eigenschap ve
 ### Kan ik [!DNL Postman] gebruiken voor de API van de Query-service?
 
 +++Antwoord
-Ja, u kunt alle Adobe API-services visualiseren en interactief gebruiken met [!DNL Postman] (een gratis toepassing van derden). Bekijk de [[!DNL Postman]  opstellingsgids ](https://video.tv.adobe.com/v/28832) voor geleidelijke instructies op hoe te opstelling een project in Adobe Developer Console en alle noodzakelijke geloofsbrieven voor gebruik met [!DNL Postman] te verkrijgen. Zie de officiële documentatie voor [ begeleiding bij het beginnen, het lopen, en het delen van  [!DNL Postman]  inzamelingen ](https://learning.postman.com/docs/running-collections/intro-to-collection-runs/).
+Ja, u kunt alle Adobe API-services visualiseren en interactief gebruiken met [!DNL Postman] (een gratis toepassing van derden). Bekijk de [[!DNL Postman]  opstellingsgids &#x200B;](https://video.tv.adobe.com/v/28832) voor geleidelijke instructies op hoe te opstelling een project in Adobe Developer Console en alle noodzakelijke geloofsbrieven voor gebruik met [!DNL Postman] te verkrijgen. Zie de officiële documentatie voor [&#x200B; begeleiding bij het beginnen, het lopen, en het delen van  [!DNL Postman]  inzamelingen &#x200B;](https://learning.postman.com/docs/running-collections/intro-to-collection-runs/).
 +++
 
 ### Is er een grens aan het maximumaantal rijen die van een vraag door UI zijn teruggekeerd?
 
 +++Antwoord
-Ja, past de Dienst van de Vraag intern een grens van 50.000 rijen toe tenzij een expliciete grens extern wordt gespecificeerd. Zie de begeleiding bij [ interactieve vraaguitvoering ](./best-practices/writing-queries.md#interactive-query-execution) voor meer details.
+Ja, past de Dienst van de Vraag intern een grens van 50.000 rijen toe tenzij een expliciete grens extern wordt gespecificeerd. Zie de begeleiding bij [&#x200B; interactieve vraaguitvoering &#x200B;](./best-practices/writing-queries.md#interactive-query-execution) voor meer details.
 +++
 
 ### Kan ik query&#39;s gebruiken om rijen bij te werken?
@@ -83,7 +83,7 @@ In partijvragen, wordt het bijwerken van een rij binnen de dataset niet gesteund
 ### Is er een grens van de gegevensgrootte voor de resulterende output van een vraag?
 
 +++Antwoord
-Nee. De gegevensgrootte is niet beperkt, maar er geldt een time-outlimiet van 10 minuten voor de query voor een interactieve sessie. Als de vraag als partij CTAS wordt uitgevoerd dan is een 10 minieme onderbreking niet van toepassing. Zie de begeleiding bij [ interactieve vraaguitvoering ](./best-practices/writing-queries.md#interactive-query-execution) voor meer details.
+Nee. De gegevensgrootte is niet beperkt, maar er geldt een time-outlimiet van 10 minuten voor de query voor een interactieve sessie. Als de vraag als partij CTAS wordt uitgevoerd dan is een 10 minieme onderbreking niet van toepassing. Zie de begeleiding bij [&#x200B; interactieve vraaguitvoering &#x200B;](./best-practices/writing-queries.md#interactive-query-execution) voor meer details.
 +++
 
 ### Hoe kan ik voorkomen dat mijn vragen over 10 minuten worden uitgesteld?
@@ -91,11 +91,11 @@ Nee. De gegevensgrootte is niet beperkt, maar er geldt een time-outlimiet van 10
 +++Antwoord
 Één of meerdere van de volgende oplossingen worden geadviseerd in het geval van vraagtiming uit.
 
-- [ zet de vraag in een vraag CTAS ](./sql/syntax.md#create-table-as-select) om en plant de looppas. Het plannen van een looppas kan of [ door UI ](./ui/user-guide.md#scheduled-queries) of [ worden gedaan API ](./api/scheduled-queries.md#create).
-- Voer de vraag op een kleiner gegevenssegment uit door extra [ filtervoorwaarden ](https://spark.apache.org/docs/latest/api/sql/index.html#filter) toe te passen.
-- [ voert het bevel EXPLAIN ](./sql/syntax.md#explain) uit om meer details te verzamelen.
+- [&#x200B; zet de vraag in een vraag CTAS &#x200B;](./sql/syntax.md#create-table-as-select) om en plant de looppas. Het plannen van een looppas kan of [&#x200B; door UI &#x200B;](./ui/user-guide.md#scheduled-queries) of [&#x200B; worden gedaan API &#x200B;](./api/scheduled-queries.md#create).
+- Voer de vraag op een kleiner gegevenssegment uit door extra [&#x200B; filtervoorwaarden &#x200B;](https://spark.apache.org/docs/latest/api/sql/index.html#filter) toe te passen.
+- [&#x200B; voert het bevel EXPLAIN &#x200B;](./sql/syntax.md#explain) uit om meer details te verzamelen.
 - Herzie de statistieken van de gegevens binnen de dataset.
-- Zet de vraag in een vereenvoudigde vorm om en re-looppas gebruikend [ voorbereide verklaringen ](./sql/prepared-statements.md).
+- Zet de vraag in een vereenvoudigde vorm om en re-looppas gebruikend [&#x200B; voorbereide verklaringen &#x200B;](./sql/prepared-statements.md).
 +++
 
 ### Is er om het even welke kwestie of effect op de prestaties van de Dienst van de Vraag als de veelvoudige vragen gelijktijdig lopen?
@@ -118,23 +118,23 @@ De volgende stappen beschrijven hoe te om een tabelmening van een dataset door U
 - Nadat u zich hebt aangemeld bij Experience Platform, selecteert u **[!UICONTROL Datasets]** in de linkernavigatie van de gebruikersinterface om naar het [!UICONTROL Datasets] -dashboard te navigeren.
 - Het tabblad Gegevenssets [!UICONTROL Browse] wordt geopend. Met de zoekbalk kunt u de beschikbare opties verfijnen. Selecteer een dataset van de getoonde lijst.
 
-![ het dashboard van Datasets in Experience Platform UI met de onderzoeksbar en een benadrukt dataset.](./images/troubleshooting/dataset-selection.png)
+![&#x200B; het dashboard van Datasets in Experience Platform UI met de onderzoeksbar en een benadrukt dataset.](./images/troubleshooting/dataset-selection.png)
 
-- Het scherm [!UICONTROL Datasets activity] wordt weergegeven. Selecteer **[!UICONTROL Preview dataset]** om een dialoog van het schema XDM en tabelmening van samengevoegde gegevens van de geselecteerde dataset te openen. Meer details kunnen in de [ voorproef worden gevonden een documentatie van de dataset ](../catalog/datasets/user-guide.md#preview-a-dataset)
+- Het scherm [!UICONTROL Datasets activity] wordt weergegeven. Selecteer **[!UICONTROL Preview dataset]** om een dialoog van het schema XDM en tabelmening van samengevoegde gegevens van de geselecteerde dataset te openen. Meer details kunnen in de [&#x200B; voorproef worden gevonden een documentatie van de dataset &#x200B;](../catalog/datasets/user-guide.md#preview-a-dataset)
 
-![ het de activiteitenlusje van de Dataset van het dashboard van Datasets met benadrukte dataset van de Voorproef.](./images/troubleshooting/dataset-preview.png)
+![&#x200B; het de activiteitenlusje van de Dataset van het dashboard van Datasets met benadrukte dataset van de Voorproef.](./images/troubleshooting/dataset-preview.png)
 
 - Selecteer een veld in het schema om de inhoud ervan in een samengevoegde kolom weer te geven. De naam van de kolom wordt boven de inhoud weergegeven aan de rechterkant van de pagina. Kopieer deze naam voor het opvragen van deze gegevensset.
 
-![ het schema XDM en de tabelvormige mening van de samengevoegde gegevens. De kolomnaam van een genestelde dataset wordt benadrukt in UI.](./images/troubleshooting/column-name.png)
+![&#x200B; het schema XDM en de tabelvormige mening van de samengevoegde gegevens. De kolomnaam van een genestelde dataset wordt benadrukt in UI.](./images/troubleshooting/column-name.png)
 
-Zie de documentatie voor volledige begeleiding op [ hoe te met genestelde gegevensstructuren ](./key-concepts/nested-data-structures.md) werken gebruikend de Redacteur van de Vraag of een derdecliënt.
+Zie de documentatie voor volledige begeleiding op [&#x200B; hoe te met genestelde gegevensstructuren &#x200B;](./key-concepts/nested-data-structures.md) werken gebruikend de Redacteur van de Vraag of een derdecliënt.
 +++
 
 ### Hoe kan ik een vraag over een dataset versnellen die series bevat?
 
 +++Antwoord
-Om de prestaties van vragen op datasets te verbeteren die series bevatten, zou u de serie [ als vraag van a ](https://spark.apache.org/docs/latest/api/sql/index.html#explode) CTAS [ op runtime moeten ontploffen, en dan het voor verdere kansen onderzoeken om zijn verwerkingstijd te verbeteren.](./sql/syntax.md#create-table-as-select)
+Om de prestaties van vragen op datasets te verbeteren die series bevatten, zou u de serie [&#x200B; als vraag van a &#x200B;](https://spark.apache.org/docs/latest/api/sql/index.html#explode) CTAS [&#x200B; op runtime moeten ontploffen, en dan het voor verdere kansen onderzoeken om zijn verwerkingstijd te verbeteren.](./sql/syntax.md#create-table-as-select)
 +++
 
 ### Waarom verwerkt mijn vraag CTAS nog na vele uren voor slechts een klein aantal rijen?
@@ -142,23 +142,23 @@ Om de prestaties van vragen op datasets te verbeteren die series bevatten, zou u
 +++Antwoord
 Als de vraag lange tijd op een zeer kleine dataset heeft geduurd, gelieve klantensteun te contacteren.
 
-Een query kan om het even welk aantal redenen vastlopen tijdens de verwerking. Om de precieze oorzaak te bepalen, is een grondige analyse per geval nodig. [ de klantensteun van Adobe van het Contact ](#customer-support) aan zijn dit proces.
+Een query kan om het even welk aantal redenen vastlopen tijdens de verwerking. Om de precieze oorzaak te bepalen, is een grondige analyse per geval nodig. [&#x200B; de klantensteun van Adobe van het Contact &#x200B;](#customer-support) aan zijn dit proces.
 +++
 
 ### Hoe kan ik contact opnemen met de klantenondersteuning van Adobe? {#customer-support}
 
 +++Antwoord
-[ een volledige lijst van de telefoonaantallen van de klantensteun van Adobe ](https://helpx.adobe.com/ca/contact/phone.html) is beschikbaar op de de hulppagina van Adobe. U kunt de Help ook online vinden door de volgende stappen uit te voeren:
+[&#x200B; een volledige lijst van de telefoonaantallen van de klantensteun van Adobe &#x200B;](https://helpx.adobe.com/ca/contact/phone.html) is beschikbaar op de de hulppagina van Adobe. U kunt de Help ook online vinden door de volgende stappen uit te voeren:
 
-- Navigeer aan [ https://www.adobe.com/ ](https://www.adobe.com/) in uw Webbrowser.
+- Navigeer aan [&#x200B; https://www.adobe.com/ &#x200B;](https://www.adobe.com/) in uw Webbrowser.
 - Selecteer **[!UICONTROL Sign In]** rechts van de bovenste navigatiebalk.
 
-![ de website van Adobe met Onderteken binnen benadrukt.](./images/troubleshooting/adobe-sign-in.png)
+![&#x200B; de website van Adobe met Onderteken binnen benadrukt.](./images/troubleshooting/adobe-sign-in.png)
 
 - Gebruik uw Adobe ID en wachtwoord die bij uw Adobe-licentie zijn geregistreerd.
 - Selecteer **[!UICONTROL Help & Support]** in de bovenste navigatiebalk.
 
-![ het hoogste drop-down menu van de navigatiebar met Hulp en steun, de steun van de Onderneming en het Contact ons benadrukte.](./images/troubleshooting/help-and-support.png)
+![&#x200B; het hoogste drop-down menu van de navigatiebar met Hulp en steun, de steun van de Onderneming en het Contact ons benadrukte.](./images/troubleshooting/help-and-support.png)
 
 Er wordt een vervolgkeuzelijst met een sectie [!UICONTROL Help and support] weergegeven. Selecteer **[!UICONTROL Contact us]** om de Adobe Customer Care Virtual Assistant te openen of selecteer **[!UICONTROL Enterprise support]** voor speciale hulp voor grote organisaties.
 +++
@@ -168,7 +168,7 @@ Er wordt een vervolgkeuzelijst met een sectie [!UICONTROL Help and support] weer
 +++Antwoord
 Met de functie voor anonieme blokken kunt u een of meer SQL-instructies ketenen die op volgorde worden uitgevoerd. Zij bieden ook de mogelijkheid om uitzonderingen af te handelen.
 
-Zie de [ anonieme blokdocumentatie ](./key-concepts/anonymous-block.md) voor meer details.
+Zie de [&#x200B; anonieme blokdocumentatie &#x200B;](./key-concepts/anonymous-block.md) voor meer details.
 +++
 
 ### Hoe voer ik douaneattributie in de Dienst van de Vraag uit?
@@ -176,14 +176,14 @@ Zie de [ anonieme blokdocumentatie ](./key-concepts/anonymous-block.md) voor mee
 +++Antwoord
 Er zijn twee manieren om aangepaste toewijzing te implementeren:
 
-1. Gebruik een combinatie bestaande [ Adobe-bepaalde functies ](./sql/adobe-defined-functions.md) om te identificeren als de gebruik-geval behoeften worden voldaan aan.
-1. Als de vorige suggestie uw gebruiksgeval niet tevredenstelt, zou u een combinatie [ vensterfuncties ](./sql/adobe-defined-functions.md#window-functions) moeten gebruiken. Vensterfuncties kijken naar alle gebeurtenissen in een reeks. Met deze gegevens kunt u ook de historische gegevens beoordelen en deze kunnen in elke combinatie worden gebruikt.
+1. Gebruik een combinatie bestaande [&#x200B; Adobe-bepaalde functies &#x200B;](./sql/adobe-defined-functions.md) om te identificeren als de gebruik-geval behoeften worden voldaan aan.
+1. Als de vorige suggestie uw gebruiksgeval niet tevredenstelt, zou u een combinatie [&#x200B; vensterfuncties &#x200B;](./sql/adobe-defined-functions.md#window-functions) moeten gebruiken. Vensterfuncties kijken naar alle gebeurtenissen in een reeks. Met deze gegevens kunt u ook de historische gegevens beoordelen en deze kunnen in elke combinatie worden gebruikt.
 +++
 
 ### Mag ik mijn vragen templatiseren zodat ik ze gemakkelijk kan hergebruiken?
 
 +++Antwoord
-Ja, u kunt vragen door het gebruik van voorbereide verklaringen templatiseren. Bereide instructies kunnen de prestaties optimaliseren en voorkomen dat een query herhaaldelijk wordt geparseerd. Zie de [ voorbereide verklaringen documentatie ](./sql/prepared-statements.md) voor meer details.
+Ja, u kunt vragen door het gebruik van voorbereide verklaringen templatiseren. Bereide instructies kunnen de prestaties optimaliseren en voorkomen dat een query herhaaldelijk wordt geparseerd. Zie de [&#x200B; voorbereide verklaringen documentatie &#x200B;](./sql/prepared-statements.md) voor meer details.
 +++
 
 ### Hoe wint ik foutenlogboeken voor een vraag terug? {#error-logs}
@@ -191,9 +191,9 @@ Ja, u kunt vragen door het gebruik van voorbereide verklaringen templatiseren. B
 +++Antwoord
 Om foutenlogboeken voor een specifieke vraag terug te winnen, moet u eerst de Dienst API van de Vraag gebruiken om de details van het vraaglogboek te halen. De reactie van HTTP bevat vraag IDs die worden vereist om een vraagfout te onderzoeken.
 
-Gebruik de opdracht GET om meerdere query&#39;s op te halen. De informatie over hoe te om een vraag aan API te maken kan in de [ steekproefAPI vraagdocumentatie ](./api/queries.md#sample-api-calls) worden gevonden.
+Gebruik de opdracht GET om meerdere query&#39;s op te halen. De informatie over hoe te om een vraag aan API te maken kan in de [&#x200B; steekproefAPI vraagdocumentatie &#x200B;](./api/queries.md#sample-api-calls) worden gevonden.
 
-In de reactie identificeert u de query die u wilt onderzoeken en maakt u een andere GET-aanvraag met behulp van de `id` -waarde. De volledige instructies kunnen in [ worden gevonden wint een vraag door identiteitskaart documentatie ](./api/queries.md#retrieve-a-query-by-id) terug.
+In de reactie identificeert u de query die u wilt onderzoeken en maakt u een andere GET-aanvraag met behulp van de `id` -waarde. De volledige instructies kunnen in [&#x200B; worden gevonden wint een vraag door identiteitskaart documentatie &#x200B;](./api/queries.md#retrieve-a-query-by-id) terug.
 
 Een geslaagde reactie retourneert HTTP-status 200 en bevat de array `errors` . De reactie is verkort vanwege de beknoptheid.
 
@@ -218,13 +218,13 @@ Een geslaagde reactie retourneert HTTP-status 200 en bevat de array `errors` . D
 }
 ```
 
-De [ de verwijzingsdocumentatie van de Dienst API van de Vraag ](https://www.adobe.io/experience-platform-apis/references/query-service/) verstrekt meer informatie over alle beschikbare eindpunten.
+De [&#x200B; de verwijzingsdocumentatie van de Dienst API van de Vraag &#x200B;](https://www.adobe.io/experience-platform-apis/references/query-service/) verstrekt meer informatie over alle beschikbare eindpunten.
 +++
 
 ### Wat betekent &quot;Fout bij valideren van schema&quot;?
 
 +++Antwoord
-Het bericht &#39;Fout bij het valideren van het schema&#39; betekent dat het systeem een veld in het schema niet kan vinden. U zou het beste praktijkdocument voor [ moeten lezen organiserend gegevensactiva in de Dienst van de Vraag ](./best-practices/organize-data-assets.md) die door [ wordt gevolgd creeert Lijst als Uitgezochte documentatie ](./sql/syntax.md#create-table-as-select).
+Het bericht &#39;Fout bij het valideren van het schema&#39; betekent dat het systeem een veld in het schema niet kan vinden. U zou het beste praktijkdocument voor [&#x200B; moeten lezen organiserend gegevensactiva in de Dienst van de Vraag &#x200B;](./best-practices/organize-data-assets.md) die door [&#x200B; wordt gevolgd creeert Lijst als Uitgezochte documentatie &#x200B;](./sql/syntax.md#create-table-as-select).
 
 In het volgende voorbeeld wordt het gebruik van een CTAS-syntaxis en een struct-gegevenstype getoond:
 
@@ -257,7 +257,7 @@ AS SELECT '1' as _id,
 ### Hoe kan ik de nieuwe gegevens die dagelijks in het systeem komen, snel verwerken?
 
 +++Antwoord
-De [`SNAPSHOT`](./sql/syntax.md#snapshot-clause) -component kan worden gebruikt voor het incrementeel lezen van gegevens in een tabel op basis van een opname-id. Dit is ideaal voor gebruik met het [ stijgende ladings ](./key-concepts/incremental-load.md) ontwerppatroon dat slechts informatie in de dataset verwerkt die sinds de laatste ladingsuitvoering is gecreeerd of gewijzigd. Hierdoor neemt de verwerkingsefficiëntie toe en kan deze zowel bij het streamen als bij het verwerken van batchgegevens worden gebruikt.
+De [`SNAPSHOT`](./sql/syntax.md#snapshot-clause) -component kan worden gebruikt voor het incrementeel lezen van gegevens in een tabel op basis van een opname-id. Dit is ideaal voor gebruik met het [&#x200B; stijgende ladings &#x200B;](./key-concepts/incremental-load.md) ontwerppatroon dat slechts informatie in de dataset verwerkt die sinds de laatste ladingsuitvoering is gecreeerd of gewijzigd. Hierdoor neemt de verwerkingsefficiëntie toe en kan deze zowel bij het streamen als bij het verwerken van batchgegevens worden gebruikt.
 +++
 
 ### Waarom is er een verschil tussen de aantallen die in Profiel UI worden getoond en de aantallen die van de dataset van de profieluitvoer worden berekend?
@@ -287,19 +287,19 @@ SELECT count(1) FROM myTableName
 ### Kan ik mijn gegevens bemonsteren?
 
 +++Antwoord
-Deze functie is momenteel in uitvoering. De details zullen beschikbaar in [ versienota&#39;s ](../release-notes/latest/latest.md) en door de dialogen van UI van Experience Platform worden gemaakt zodra de eigenschap klaar voor versie is.
+Deze functie is momenteel in uitvoering. De details zullen beschikbaar in [&#x200B; versienota&#39;s &#x200B;](../release-notes/latest/latest.md) en door de dialogen van UI van Experience Platform worden gemaakt zodra de eigenschap klaar voor versie is.
 +++
 
 ### Welke hulpfuncties worden gesteund door de Dienst van de Vraag?
 
 +++Antwoord
-De Dienst van de vraag verstrekt verscheidene ingebouwde SQL helperfuncties om SQL functionaliteit uit te breiden. Zie het document voor een volledige lijst van de [ SQL functies die door de Dienst van de Vraag ](./sql/spark-sql-functions.md) worden gesteund.
+De Dienst van de vraag verstrekt verscheidene ingebouwde SQL helperfuncties om SQL functionaliteit uit te breiden. Zie het document voor een volledige lijst van de [&#x200B; SQL functies die door de Dienst van de Vraag &#x200B;](./sql/spark-sql-functions.md) worden gesteund.
 +++
 
 ### Worden alle native [!DNL Spark SQL] functies ondersteund of zijn gebruikers beperkt tot alleen de omvattende [!DNL Spark SQL] -functies die door Adobe worden geboden?
 
 +++Antwoord
-Tot nu toe zijn niet alle open-source [!DNL Spark SQL] -functies getest op data Lake data. Nadat de tests en bevestigingen zijn uitgevoerd, worden ze toegevoegd aan de lijst met ondersteunde items. Gelieve te verwijzen de [ lijst van gesteunde  [!DNL Spark SQL]  functies ](./sql/spark-sql-functions.md) om voor een specifieke functie te controleren.
+Tot nu toe zijn niet alle open-source [!DNL Spark SQL] -functies getest op data Lake data. Nadat de tests en bevestigingen zijn uitgevoerd, worden ze toegevoegd aan de lijst met ondersteunde items. Gelieve te verwijzen de [&#x200B; lijst van gesteunde  [!DNL Spark SQL]  functies &#x200B;](./sql/spark-sql-functions.md) om voor een specifieke functie te controleren.
 +++
 
 ### Kunnen de gebruikers hun eigen user-defined functies (UDF) bepalen die over andere vragen kunnen worden gebruikt?
@@ -311,9 +311,9 @@ Vanwege gegevensbeveiligingsoverwegingen is de aangepaste definitie van UDF&#39;
 ### Wat moet ik doen als mijn geplande query mislukt?
 
 +++Antwoord
-Controleer eerst de logboeken om de details van de fout te achterhalen. De sectie FAQ op [ het vinden fouten binnen logboeken ](#error-logs) verstrekt meer informatie over hoe te om dit te doen.
+Controleer eerst de logboeken om de details van de fout te achterhalen. De sectie FAQ op [&#x200B; het vinden fouten binnen logboeken &#x200B;](#error-logs) verstrekt meer informatie over hoe te om dit te doen.
 
-U zou de documentatie voor begeleiding ook moeten controleren hoe te om [ geplande vragen in UI ](./ui/user-guide.md#scheduled-queries) en door [ API ](./api/scheduled-queries.md) uit te voeren.
+U zou de documentatie voor begeleiding ook moeten controleren hoe te om [&#x200B; geplande vragen in UI &#x200B;](./ui/user-guide.md#scheduled-queries) en door [&#x200B; API &#x200B;](./api/scheduled-queries.md) uit te voeren.
 
 Houd er rekening mee dat u bij het gebruik van de [!DNL Query Editor] alleen een schema kunt toevoegen aan een query die al is gemaakt en opgeslagen. Dit is niet van toepassing op de [!DNL Query Service] API.
 +++
@@ -380,7 +380,7 @@ De Dienst van de vraag steunt ingebouwde SQL functies om een bepaalde timestamp 
 | Parameter | Beschrijving |
 |-----------|---------------|
 | Tijdstempel | De tijdstempel kan in UTC- of eenvoudige `{year-month-day}` -indeling worden geschreven. Als er geen tijd is opgegeven, is de standaardwaarde middernacht op de ochtend van de opgegeven dag. |
-| Tijdzone | De tijdzone wordt geschreven in een `{continent/city})` -indeling. Het moet één van de erkende timezone codes zijn zoals die in het [ publiek-domeinTZ gegevensbestand ](https://data.iana.org/time-zones/tz-link.html#tzdb) worden gevonden. |
+| Tijdzone | De tijdzone wordt geschreven in een `{continent/city})` -indeling. Het moet één van de erkende timezone codes zijn zoals die in het [&#x200B; publiek-domeinTZ gegevensbestand &#x200B;](https://data.iana.org/time-zones/tz-link.html#tzdb) worden gevonden. |
 
 #### Omzetten in UTC-tijdstempel
 
@@ -519,7 +519,7 @@ Er is geen grens van de vraaggelijktijdig aangezien de partijvragen als achterst
 ### Is er een activiteitendashboard waar u vraagactiviteiten en status kunt zien?
 
 +++Antwoord
-Er zijn controle en alarmeringsmogelijkheden om vraagactiviteiten en statussen te controleren. Zie de [ integratie van het de controlelogboek van de Dienst van de Vraag ](./data-governance/audit-log-guide.md) en [ vraaglogboeken ](./ui/overview.md#log) documenten voor meer informatie.
+Er zijn controle en alarmeringsmogelijkheden om vraagactiviteiten en statussen te controleren. Zie de [&#x200B; integratie van het de controlelogboek van de Dienst van de Vraag &#x200B;](./data-governance/audit-log-guide.md) en [&#x200B; vraaglogboeken &#x200B;](./ui/overview.md#log) documenten voor meer informatie.
 +++
 
 ### Is er een manier om updates terug te draaien? Bijvoorbeeld, als er een fout is of sommige berekeningen moeten aanpassen wanneer het schrijven van gegevens terug naar Experience Platform, hoe zou dat scenario moeten worden behandeld?
@@ -570,13 +570,13 @@ Er zijn drie manieren om de toegang te beperken. Deze zijn als volgt:
 ### Kan ik een SSL-modus opgeven voor de verbinding met een externe client? Kan ik bijvoorbeeld &#39;verify-full&#39; gebruiken bij Power BI?
 
 +++Antwoord
-Ja, SSL-modi worden ondersteund. Zie de [ SSL wijzedocumentatie ](./clients/ssl-modes.md) voor een uitsplitsing van de verschillende beschikbare SSL wijzen en het niveau van bescherming zij verstrekken.
+Ja, SSL-modi worden ondersteund. Zie de [&#x200B; SSL wijzedocumentatie &#x200B;](./clients/ssl-modes.md) voor een uitsplitsing van de verschillende beschikbare SSL wijzen en het niveau van bescherming zij verstrekken.
 +++
 
 ### Kan ik toegang tot specifieke datasets en kolommen voor een bepaalde verbinding controleren? Hoe wordt dit gevormd?
 
 +++Antwoord
-Ja, op attribuut-gebaseerde toegangsbeheer wordt afgedwongen als gevormd. Zie het [ op attributen-gebaseerde overzicht van de toegangscontrole ](../access-control/abac/overview.md) voor meer informatie.
+Ja, op attribuut-gebaseerde toegangsbeheer wordt afgedwongen als gevormd. Zie het [&#x200B; op attributen-gebaseerde overzicht van de toegangscontrole &#x200B;](../access-control/abac/overview.md) voor meer informatie.
 +++
 
 ### Steunt de Dienst van de Vraag het &quot;TUSSENVOEGSEL OVERSCHRIJVEN IN&quot;bevel?
@@ -600,7 +600,7 @@ Ja, u kunt de opdracht `CREATE VIEW` gebruiken zonder Data Distiller-toegang. Di
 ### Kan ik anonieme blokken gebruiken in DbVisualizer?
 
 +++Antwoord
-Ja. Hoewel, bepaalde derdecliënten, zoals DbVisualizer, een afzonderlijke herkenningsteken voor en na een SQL blok kunnen vereisen om erop te wijzen dat een deel van een manuscript als één enkele verklaring zou moeten worden behandeld. Meer details kunnen in de [ anonieme blokdocumentatie ](./key-concepts/anonymous-block.md) of in [ de officiële documentatie DbVisualizer ](https://confluence.dbvis.com/display/UG120/Executing+Complex+Statements#ExecutingComplexStatements-UsinganSQLDialect) worden gevonden.
+Ja. Hoewel, bepaalde derdecliënten, zoals DbVisualizer, een afzonderlijke herkenningsteken voor en na een SQL blok kunnen vereisen om erop te wijzen dat een deel van een manuscript als één enkele verklaring zou moeten worden behandeld. Meer details kunnen in de [&#x200B; anonieme blokdocumentatie &#x200B;](./key-concepts/anonymous-block.md) of in [&#x200B; de officiële documentatie DbVisualizer &#x200B;](https://confluence.dbvis.com/display/UG120/Executing+Complex+Statements#ExecutingComplexStatements-UsinganSQLDialect) worden gevonden.
 +++
 
 ## TLS, de Toegang van de Haven, en de Encryptie {#tls-port-questions}
@@ -646,7 +646,7 @@ Ja. TLS wordt afgedwongen op poort 80 en niet-gecodeerde verbindingen worden nie
 ### Hoe wordt het gebruik van een Distiller-licentie voor gegevens bijgehouden en waar kan ik deze informatie zien?
 
 +++Antwoord  
-Het belangrijkste metrisch wordt gebruikt om partijvraaggebruik te volgen is de Rekte Uur. U hebt toegang tot deze informatie en uw huidige consumptie door het [ dashboard van het gebruiksdashboard van de Vergunning ](../dashboards/guides/license-usage.md).
+Het belangrijkste metrisch wordt gebruikt om partijvraaggebruik te volgen is de Rekte Uur. U hebt toegang tot deze informatie en uw huidige consumptie door het [&#x200B; dashboard van het gebruiksdashboard van de Vergunning &#x200B;](../dashboards/guides/license-usage.md).
 +++
 
 ### Wat is een rekenuur?
@@ -678,7 +678,7 @@ De achtergrondinfrastructuur wordt constant verbeterd om het gebruik en de verwe
 +++Antwoord
 U kunt vergelijkbare prestaties verwachten wanneer u query&#39;s uitvoert in zowel ontwikkelings- als productiesandboxen. Beide omgevingen zijn ontworpen om hetzelfde niveau van verwerkingscapaciteit te bieden. Nochtans, kunnen de verschillen in gegevens verwerken uren voorkomen, afhankelijk van de hoeveelheid gegevens u verwerkt en algemene systeemactiviteit op het tijdstip dat u uw vraag in werking stelt.
 
-Houd uw gegevens verwerkt uurgebruik in het [ dashboard van het Gebruik van de Vergunning ](../dashboards/guides/license-usage.md) in Experience Platform UI bij.
+Houd uw gegevens verwerkt uurgebruik in het [&#x200B; dashboard van het Gebruik van de Vergunning &#x200B;](../dashboards/guides/license-usage.md) in Experience Platform UI bij.
 +++
 
 ## Gebruikersinterface voor query&#39;s
@@ -714,7 +714,7 @@ FROM <table_name>
 \g <table_name>.out
 ```
 
-[ Begeleiding op het gebruik van het `COPY TO` bevel ](./sql/syntax.md#copy) kan in de SQL documentatie van de syntaxisverwijzing worden gevonden.
+[&#x200B; Begeleiding op het gebruik van het `COPY TO` bevel &#x200B;](./sql/syntax.md#copy) kan in de SQL documentatie van de syntaxisverwijzing worden gevonden.
 +++
 
 ### Kan ik de inhoud van de definitieve dataset halen die door CTAS vragen is opgenomen (veronderstellend zijn deze grotere hoeveelheden gegevens zoals Terabytes)?
@@ -772,20 +772,20 @@ Deze sectie bevat informatie over het gebruik van hulpmiddelen van derden, zoals
 ### Kan ik de Dienst van de Vraag met een derdehulpmiddel verbinden?
 
 +++Antwoord
-Ja, u kunt veelvoudige derdeDesktopcliënten met de Dienst van de Vraag verbinden. Zie de documentatie voor [ volledige details over de beschikbare cliënten en hoe te om hen met de dienst van de Vraag ](./clients/overview.md) te verbinden.
+Ja, u kunt veelvoudige derdeDesktopcliënten met de Dienst van de Vraag verbinden. Zie de documentatie voor [&#x200B; volledige details over de beschikbare cliënten en hoe te om hen met de dienst van de Vraag &#x200B;](./clients/overview.md) te verbinden.
 +++
 
 ### Is er een manier om de Dienst van de Vraag eenmaal voor ononderbroken gebruik met een derdehulpmiddel aan te sluiten?
 
 +++Antwoord
-Ja, kunnen de derdeDesktopcliënten met de Dienst van de Vraag door een éénmalige opstelling van niet-vervallende geloofsbrieven worden verbonden. Niet-vervallende gegevens kunnen worden gegenereerd door een geautoriseerde gebruiker en worden ontvangen in een JSON-bestand dat automatisch wordt gedownload naar de lokale computer. De volledige [ begeleiding op hoe te om niet-vervallende geloofsbrieven ](./ui/credentials.md#non-expiring-credentials) tot stand te brengen en te downloaden kan in de documentatie worden gevonden.
+Ja, kunnen de derdeDesktopcliënten met de Dienst van de Vraag door een éénmalige opstelling van niet-vervallende geloofsbrieven worden verbonden. Niet-vervallende gegevens kunnen worden gegenereerd door een geautoriseerde gebruiker en worden ontvangen in een JSON-bestand dat automatisch wordt gedownload naar de lokale computer. De volledige [&#x200B; begeleiding op hoe te om niet-vervallende geloofsbrieven &#x200B;](./ui/credentials.md#non-expiring-credentials) tot stand te brengen en te downloaden kan in de documentatie worden gevonden.
 +++
 
 ### Waarom werken mijn niet-vervallende geloofsbrieven niet?
 
 +++Antwoord
 De waarde voor niet-verlopen referenties zijn de samengevoegde argumenten van de `technicalAccountID` en de `credential` die uit het JSON-configuratiebestand zijn genomen. De wachtwoordwaarde heeft de notatie: `{{technicalAccountId}:{credential}}`.
-Zie de documentatie voor meer informatie over hoe te [ met externe cliënten met geloofsbrieven ](./ui/credentials.md#using-credentials-to-connect-to-external-clients) verbinden.
+Zie de documentatie voor meer informatie over hoe te [&#x200B; met externe cliënten met geloofsbrieven &#x200B;](./ui/credentials.md#using-credentials-to-connect-to-external-clients) verbinden.
 +++
 
 ### Zijn er om het even welke beperkingen op speciale karakters voor niet vervallende geloofsbrieven wachtwoorden?
@@ -797,13 +797,13 @@ Ja. Wanneer u een wachtwoord instelt voor referenties die niet verlopen, moet u 
 ### Welk soort redacteurs van derdeSQL kan ik met de Redacteur van de Dienst van de Vraag verbinden?
 
 +++Antwoord
-Om het even welke derde SQL redacteur die PSQL of [!DNL Postgres] cliënt volgzaam is kan met de Redacteur van de Dienst van de Vraag worden verbonden. Zie de documentatie voor [ verbindend cliënten met de Dienst van de Vraag ](./clients/overview.md) voor een lijst van beschikbare instructies.
+Om het even welke derde SQL redacteur die PSQL of [!DNL Postgres] cliënt volgzaam is kan met de Redacteur van de Dienst van de Vraag worden verbonden. Zie de documentatie voor [&#x200B; verbindend cliënten met de Dienst van de Vraag &#x200B;](./clients/overview.md) voor een lijst van beschikbare instructies.
 +++
 
 ### Kan ik het Power BI-hulpprogramma verbinden met Query Service?
 
 +++Antwoord
-Ja, u kunt Power BI verbinden met Query Service. Zie de documentatie voor [ instructies bij het aansluiten van de Desktopapp van Power BI aan de Dienst van de Vraag ](./clients/power-bi.md).
+Ja, u kunt Power BI verbinden met Query Service. Zie de documentatie voor [&#x200B; instructies bij het aansluiten van de Desktopapp van Power BI aan de Dienst van de Vraag &#x200B;](./clients/power-bi.md).
 +++
 
 ### Waarom duurt het lang om de dashboards te laden wanneer verbonden met de Dienst van de Vraag?
@@ -819,7 +819,7 @@ Het doel om de laag van de geheim voorgeheugenserver toe te voegen is de gegeven
 ### Is het mogelijk om tot de Dienst van de Vraag toegang te hebben gebruikend het pgAdmin verbindingshulpmiddel?
 
 +++Antwoord
-Nee, pgAdmin-connectiviteit wordt niet ondersteund. A [ lijst van beschikbare derdecliënten en instructies op hoe te om hen met de Dienst van de Vraag te verbinden ](./clients/overview.md) kan in de documentatie worden gevonden.
+Nee, pgAdmin-connectiviteit wordt niet ondersteund. A [&#x200B; lijst van beschikbare derdecliënten en instructies op hoe te om hen met de Dienst van de Vraag te verbinden &#x200B;](./clients/overview.md) kan in de documentatie worden gevonden.
 +++
 
 ## PostSQL API-fouten {#postgresql-api-errors}
