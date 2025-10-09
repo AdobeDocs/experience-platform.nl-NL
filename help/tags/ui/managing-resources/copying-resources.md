@@ -2,9 +2,9 @@
 title: Bronnen kopiëren
 description: Leer hoe u een nieuwe tagbron maakt met behulp van de instellingen van een bestaande tagbron in Adobe Experience Platform.
 exl-id: 7e52ceae-97df-4c64-aba3-4f5ba6018a47
-source-git-commit: f129c215ebc5dc169b9a7ef9b3faa3463ab413f3
+source-git-commit: a4e4fe0ae0f52a3b4b5bfa2c42ef4dce7f2a6a59
 workflow-type: tm+mt
-source-wordcount: '777'
+source-wordcount: '831'
 ht-degree: 5%
 
 ---
@@ -42,6 +42,10 @@ Selecteer **[!UICONTROL Copy]** nadat u het gewenste gedrag hebt geconfigureerd.
 ## Eigenschappen kopiëren
 
 Wanneer u een kopie van een volledige eigenschap maakt, zijn er een paar dingen die u over het proces moet begrijpen.
+
+>[!IMPORTANT]
+>
+>De middelen die het veranderlijke type gebruiken van de gegevenselement bijwerken zullen extra stappen na het kopiëren vereisen. Bewerk elke actie voor een updatevariabele, bewerk de waarde in het gegevens- of XDM-object en sla de wijzigingen op. De gepubliceerde bibliotheek zou dan zoals verwacht moeten werken. Neem contact op met Technische ondersteuning als u vragen hebt over dit proces.
 
 * De eigenschapinstellingen worden op exact dezelfde wijze gekopieerd (domeinen, geavanceerde instellingen, enz.)
 * Regels, gegevenselementen en extensies vanuit de oorspronkelijke eigenschap worden naar de nieuwe doeleigenschap gekopieerd.  Adapters, omgevingen en bibliotheken worden niet gekopieerd.
