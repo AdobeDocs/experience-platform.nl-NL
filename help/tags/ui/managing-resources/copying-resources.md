@@ -13,7 +13,7 @@ ht-degree: 5%
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch is omgedoopt tot een reeks technologieën voor dataverzameling in Adobe Experience Platform.  Als gevolg hiervan zijn er verschillende terminologiewijzigingen in de productdocumentatie doorgevoerd. Raadpleeg het volgende [ document ](../../term-updates.md) voor een geconsolideerde referentie van de terminologiewijzigingen.
+>Adobe Experience Platform Launch is omgedoopt tot een reeks technologieën voor dataverzameling in Adobe Experience Platform.  Als gevolg hiervan zijn er verschillende terminologiewijzigingen in de productdocumentatie doorgevoerd. Raadpleeg het volgende [&#x200B; document &#x200B;](../../term-updates.md) voor een geconsolideerde referentie van de terminologiewijzigingen.
 
 Soms is het handig om een nieuwe bron te maken met behulp van de instellingen van een bestaande bron. In deze gevallen kunt u een kopie maken.
 
@@ -25,11 +25,11 @@ Het kopiëren van een middel leidt tot een duplicaat van dat middel in de gespec
 
 U kunt een kopie van een extensie starten door de geïnstalleerde extensies te bekijken, de vervolgkeuzepijl op de knop **[!UICONTROL Configure]** te selecteren en **[!UICONTROL Copy]** te selecteren.
 
-![ het Kopiëren van de uitbreiding van Analytics ](../../images/copy-initiate-extension.png)
+![&#x200B; het Kopiëren van de uitbreiding van Analytics &#x200B;](../../images/copy-initiate-extension.png)
 
 Voor eigenschappen, regels, en gegevenselementen, selecteer eenvoudig de bron u wilt kopiëren en dan **[!UICONTROL Copy]** in het actiemenu selecteren.
 
-![ Kopend mijn regel van Analytics ](../../images/copy-initiate-rule.png)
+![&#x200B; Kopend mijn regel van Analytics &#x200B;](../../images/copy-initiate-rule.png)
 
 Als u een regel of een gegevenselement kopieert, kunt u in het dialoogvenster Kopiëren het vervolgkeuzemenu gebruiken om een eigenschap Doel te selecteren waarnaar u wilt kopiëren (standaardinstelling is de huidige eigenschap). Extensies kunnen niet naar dezelfde eigenschap worden gekopieerd, zodat deze optie niet beschikbaar is.
 
@@ -66,7 +66,7 @@ Wanneer u een extensie naar een andere eigenschap kopieert, zijn er een paar din
 
 Alle regels en gegevenselementen worden verstrekt door een uitbreiding, zodat wanneer u over eigenschappen kopieert, Experience Platform deze onderliggende uitbreidingen moet rekenschap geven.
 
-![ het kopiëren van een Regel aan mijn Bezit van de Demo ](../../images/copy-rules-dialog1.png)
+![&#x200B; het kopiëren van een Regel aan mijn Bezit van de Demo &#x200B;](../../images/copy-rules-dialog1.png)
 
 Het dialoogvenster Kopiëren bevat een uitleg van wat er precies zal gebeuren voordat u begint met kopiëren. Het bovenstaande dialoogvenster is bedoeld voor een regel, maar hetzelfde geldt voor gegevenselementen.
 
