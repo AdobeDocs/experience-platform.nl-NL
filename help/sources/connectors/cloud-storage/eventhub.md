@@ -16,7 +16,7 @@ ht-degree: 0%
 >
 >* De [!DNL Azure Event Hubs] -bron is in de broncatalogus beschikbaar voor gebruikers die Real-Time CDP Ultimate hebben aangeschaft.
 >
->* U kunt nu de [!DNL Azure Event Hubs] -bron gebruiken wanneer u Adobe Experience Platform uitvoert op Amazon Web Services (AWS). Experience Platform die op AWS wordt uitgevoerd, is momenteel beschikbaar voor een beperkt aantal klanten. Meer over de gesteunde infrastructuur van Experience Platform leren, zie het [ multi-wolkenoverzicht van Experience Platform ](../../../landing/multi-cloud.md).
+>* U kunt nu de [!DNL Azure Event Hubs] -bron gebruiken wanneer u Adobe Experience Platform uitvoert op Amazon Web Services (AWS). Experience Platform die op AWS wordt uitgevoerd, is momenteel beschikbaar voor een beperkt aantal klanten. Meer over de gesteunde infrastructuur van Experience Platform leren, zie het [&#x200B; multi-wolkenoverzicht van Experience Platform &#x200B;](../../../landing/multi-cloud.md).
 
 Adobe Experience Platform biedt native connectiviteit voor cloudproviders zoals AWS, [!DNL Google Cloud Platform] en [!DNL Azure] . U kunt uw gegevens van deze systemen naar Experience Platform overbrengen.
 
@@ -32,7 +32,7 @@ Het maximale gegevensvolume dat u van uw [!DNL Event Hubs] -account naar Experie
 
 ### Parallelisme vergroten voor [!DNL Event Hubs] en Experience Platform
 
-Parallelisme verwijst naar de gelijktijdige uitvoering van dezelfde taken op meerdere verwerkingseenheden om de snelheid en prestaties te verhogen. U kunt het parallellisme aan de [!DNL Event Hubs] zijde verhogen door verdeling te verhogen of door meer verwerkingseenheden voor uw [!DNL Event Hubs] rekening te verwerven. Zie dit [[!DNL Event Hubs]  document op het schrapen ](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-scalability) voor meer informatie.
+Parallelisme verwijst naar de gelijktijdige uitvoering van dezelfde taken op meerdere verwerkingseenheden om de snelheid en prestaties te verhogen. U kunt het parallellisme aan de [!DNL Event Hubs] zijde verhogen door verdeling te verhogen of door meer verwerkingseenheden voor uw [!DNL Event Hubs] rekening te verwerven. Zie dit [[!DNL Event Hubs]  document op het schrapen &#x200B;](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-scalability) voor meer informatie.
 
 Experience Platform moet het aantal taken in de bronconnector verhogen om te kunnen lezen vanaf uw [!DNL Event Hubs] -partities om de snelheid van inname aan de Experience Platform-zijde te verhogen. Nadat u het parallellisme aan de [!DNL Event Hubs] zijde hebt vergroot, neemt u contact op met uw Adobe-vertegenwoordiger om Experience Platform-taken op basis van uw nieuwe partitie te schalen. Dit proces is momenteel niet geautomatiseerd.
 
@@ -40,7 +40,7 @@ Experience Platform moet het aantal taken in de bronconnector verhogen om te kun
 
 Experience Platform ondersteunt het verbinden met [!DNL Event Hubs] via een virtueel netwerk. Hiermee kunt u gegevens overbrengen via een beveiligde, persoonlijke verbinding in plaats van via het openbare internet. U kunt Experience Platform VNet lijsten van gewenste personen om [!DNL Event Hubs] verkeer door de [!DNL Azure] privé backbone veilig te leiden terwijl het handhaven van uw bestaande firewallbescherming.
 
-Aan opstelling een virtueel netwerk, hoofd aan dit [[!DNL Event Hubs]  document van de de netwerkregelreeks ](https://learn.microsoft.com/en-us/azure/event-hubs/network-security) en volg de hieronder vermelde stappen:
+Aan opstelling een virtueel netwerk, hoofd aan dit [[!DNL Event Hubs]  document van de de netwerkregelreeks &#x200B;](https://learn.microsoft.com/en-us/azure/event-hubs/network-security) en volg de hieronder vermelde stappen:
 
 * Selecteer **probeert het** van het REST API paneel;
 * Verifieer uw [!DNL Azure] rekening gebruikend uw geloofsbrieven in zelfde browser;
@@ -121,7 +121,7 @@ Zie de onderstaande lijst voor verschillende gebieden van Experience Platform-su
 }
 ```
 
-Zie het volgende [[!DNL Event Hubs]  document ](https://learn.microsoft.com/en-us/azure/event-hubs/network-security) voor meer informatie over de reeksen van de netwerkregel.
+Zie het volgende [[!DNL Event Hubs]  document &#x200B;](https://learn.microsoft.com/en-us/azure/event-hubs/network-security) voor meer informatie over de reeksen van de netwerkregel.
 
 ## Verbinden [!DNL Event Hubs] met Experience Platform
 
